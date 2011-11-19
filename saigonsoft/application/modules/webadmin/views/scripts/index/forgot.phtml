@@ -1,0 +1,16 @@
+<div id="main">
+    <div id="content">
+      <div id="login">
+        <div id="logo"><a href="<?php echo $this->baseUrl()?>/webadmin" title="Great Admin"><span>Great Admin</span></a></div>  
+        <form method="post" action="" id="form-login" class="formBox">
+          <fieldset>
+            <div class="form-col">
+                <label for="email" class="lab">Email <span class="warning"></span></label>
+                <input type="text" name="email" class="input" id="email" value="<?php echo $this->item['email']; ?>" />
+                <input type="submit" name="" value="Send" class="submit" />
+            </div>          
+          </fieldset>
+        </form>
+      </div>
+    </div><!-- /content -->    
+</div><!-- /main -->

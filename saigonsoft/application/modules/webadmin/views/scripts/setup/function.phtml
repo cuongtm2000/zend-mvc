@@ -1,0 +1,30 @@
+<div class="content">
+	<script type="text/javascript">
+	$(document).ready(function(){
+	    $("#add-rows").click(function(){
+	        $(".rows").before('<p><label>Function</label><input name="model_name[]" value="" maxlength="20" class="txt-tiny" />	<input name="model_load[]" value="" maxlength="45" class="txt-large" /> <input name="action_func[]" value="" maxlength="45" class="txt-tiny" /> <input name="varname[]" value="" maxlength="45" class="txt-small" /> <input name="function_load[]" value="" maxlength="45" class="txt-small" /></p>');
+	        return false;
+	    });
+	});
+	</script>
+	<form action="" method="post" enctype="multipart/form-data" id="frmsignup" name="frmsignup">
+	<fieldset>
+		<legend>Cấu hình chức năng</legend>
+		<p class="rows"><a href="#" id="add-rows">Thêm dòng</a></p>
+	    <?php
+	        foreach($this->function as $item){
+	        	echo '<p><label>Function</label>
+	                    <input name="model_name[]" value="'.$item['model_name'].'" maxlength="20" class="txt-tiny" />
+	                    <input name="model_load[]" value="'.$item['model_load'].'" maxlength="45" class="txt-large" />
+	                    <input name="action_func[]" value="'.$item['action'].'" maxlength="45" class="txt-tiny" />
+	                    <input name="varname[]" value="'.$item['varname'].'" maxlength="45" class="txt-small" />
+	                    <input name="function_load[]" value="'.$item['function_load'].'" maxlength="45" class="txt-small" /></p>';
+	        }
+		?>
+		<p>
+			<label>&nbsp;</label>
+			<input type="submit" name="btnfunction" value="  Chỉnh sửa  " class="login" /> <a href="/" class="login-a">Hủy bỏ</a>
+		</p>
+	</fieldset>
+	</form>
+</div>

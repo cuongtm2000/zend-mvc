@@ -1,0 +1,14 @@
+
+<h1 class="title"><?php echo $this->lang['handbook']?></h1>
+<?php if(is_array($this->list_handbook_new)):?>
+	<?php foreach ($this->list_handbook_new as $value):?>
+		<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/handbook/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg'; ?>
+				<div class="masuring">
+                	<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>handbook/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo $this->baseUrl().$picthumb ?>" class="imgcon" style="float:left;" alt="<?php echo $value['title'.LANG] ?>" /></a>
+                    <h3><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>handbook/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h3>
+                    <?php echo html_entity_decode($value['preview'.LANG]) ?>
+                </div>
+			<?php endforeach;?>
+<?php else: ?>
+	<?php echo $this->list_news_new?>
+<?php endif;?>

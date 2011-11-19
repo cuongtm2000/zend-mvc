@@ -1,0 +1,26 @@
+<div id="main">
+    <div id="content">
+      <div id="login">
+        <div id="logo"><a href="<?php echo $this->baseUrl()?>" title="Webadmin - Azweb.vn"><span>Webadmin - Azweb.vn</span></a></div>  
+        <form method="post" action="" id="form-login" class="formBox" onsubmit="return validateFormOnSubmit(this)">
+          <fieldset>
+            <div class="form-col">
+                <label for="username" class="lab">Username <span class="warning"></span></label>
+                <input type="text" name="username" class="input" id="username" value="<?php echo $this->user; ?>" />
+            </div>
+            <div class="form-col form-col-right">
+                <label for="password" class="lab">Password <span class="warning"></span></label>
+                <input type="password" name="password" class="input" id="password" value="<?php echo $this->pass; ?>" />
+            </div>
+            <div class="form-col form-col-check">
+              <label><input type="checkbox" name="forgot" onclick="location='forgot'" class="checkbox" />Quên mật khẩu</label> 
+            </div>
+            <div class="form-col form-col-right"> 
+              <input type="submit" name="" value="Login" class="submit" />
+            </div>                 
+          </fieldset>
+        </form> 
+        <script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE_ADMIN ?>/js/validate-login.js"></script>
+      </div>
+    </div><!-- /content -->    
+</div><!-- /main -->
