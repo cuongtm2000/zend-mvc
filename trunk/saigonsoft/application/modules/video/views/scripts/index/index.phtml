@@ -1,0 +1,25 @@
+<h2><?php echo $this->lang['video']?></h2>
+<div id="listfood2">
+	<?php if(is_array($this->list_items_new)): ?>
+	<ul>
+		<?php foreach ($this->list_items_new as $value):
+			$pic = ($value['pic_full']) ? $this->baseUrl().'/public/userfiles/images/video/'.$value['pic_full'] : $this->baseUrl().TEMPLATE.'/images/no-gallery-thumb.jpg';
+		?>
+		<li>
+			<a href="<?php echo $value['url']?>" rel="prettyPhoto" title=""><img src="<?php echo $pic?>" alt="<?php echo $value['title'.LANG]?>" /></a>
+			<h6><?php echo $value['title'.LANG]?></h6>
+		</li>
+		<?php endforeach;?>
+		<script type="text/javascript" charset="utf-8">
+		  $(document).ready(function(){
+			$("#listfood2 a[rel^='prettyPhoto']").prettyPhoto();
+		  });
+		</script>
+	</ul>
+	<?php	
+		echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml');
+	?>
+	<?php else: ?>
+		<p><?php echo $this->list_items_new; ?></p>
+	<?php endif;?>
+</div>

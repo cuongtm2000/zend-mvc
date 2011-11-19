@@ -1,0 +1,104 @@
+<div class="content">
+	<form action="" method="post" name="frm">
+		<fieldset>
+			<legend><?php echo $this->lang['sys_delete'] ?></legend>
+			
+			<div class="col-left"><strong>Tên phân loại:</strong></div>
+		    <div class="col-right">
+		        <strong><?php echo $this->infocat['cat_title'.LANG] ?></strong>
+		    </div>
+		    <div class="clear space"></div>
+		    
+		    <div class="col-left">Số sản phẩm thuộc phân loại này:</div>
+		    <div class="col-right">
+		        <strong><?php echo $this->numcat ?></strong>
+		    </div>
+		    <div class="clear space"></div>
+		    
+		    <div class="col-left"><strong>Các phân loại con:</strong></div>
+		    <div class="col-right">
+		        <strong><?php echo $this->subcat['numcat']; ?></strong>
+		    </div>
+		    <div class="clear space"></div>
+		    
+		    <div class="col-left">Số sản phẩm thuộc các con:</div>
+		    <div class="col-right">
+		        <strong><?php echo $this->subcat['numitemcat'] ?></strong>
+		    </div>
+		    <div class="clear space"></div>
+			
+			<div class="col-left"><strong>Xóa sản phẩm</strong></div>
+		    <div class="col-right"></div>
+		    <div class="clear space"></div>
+		    
+		    <div class="col-left"><label style="width:340px"><input type="radio" name="delproduct" checked="checked" value="del" /> Xóa tất cả sản phẩm của phân loại này</label></div>
+		    <div class="col-right"></div>
+		    <div class="clear space"></div>
+		    
+		    <div class="col-left"><label style="width:340px"><input type="radio" name="delproduct" value="move" /> Di chuyển tất cả sản phẩm này đến phân loại</label></div>
+		    <div class="col-right">
+		    	<?php if($this->listcat): ?>
+		    	<select name="catmove">
+					<?php 
+						foreach ($this->listcat as $value){
+							echo '<option value="'.$value['cat_id'].'">'.$value['title_prefix'].$value['cat_title'.LANG].'</option>';
+						}
+					?>
+				</select>
+				<?php endif;?>
+		    </div>
+		    <div class="clear space"></div>
+		    
+		    <div class="col-left"><strong>Xóa Các phân loại con</strong></div>
+		    <div class="col-right"></div>
+		    <div class="clear space"></div>
+		    
+		    <div class="col-left"><label style="width:340px"><input type="radio" name="delcat" value="del" checked="checked" /> Xóa tất cả các phân loại con: </label></div>
+		    <div class="col-right"></div>
+		    <div class="clear space"></div>
+		    
+		    	<div style="margin-left:20px">
+				    <div class="col-left"><label style="width:340px"><input type="radio" name="movecat" value="del" checked="checked" />Xóa tất cả sản phẩm của phân loại con</label></div>
+				    <div class="col-right"></div>
+				    <div class="clear space"></div>
+			    </div>
+			    
+			    <div style="margin-left:20px">
+				    <div class="col-left"><label style="width:340px"><input type="radio" name="movecat" value="move" />Di chuyển tất cả sản phẩm của phân loại con đến phân loại:</label></div>
+				    <div class="col-right">
+				    	<?php if($this->listcat): ?>
+				    	<select name="moveprotocat">
+							<?php 
+								foreach ($this->listcat as $value){
+									echo '<option value="'.$value['cat_id'].'">'.$value['title_prefix'].$value['cat_title'.LANG].'</option>';
+								}
+							?>
+						</select>
+						<?php endif;?>
+				    </div>
+				    <div class="clear space"></div>
+			    </div>
+		    
+		    
+		    <div class="col-left"><label style="width:340px"><input type="radio" name="delcat" value="move" /> Di chuyển tất cả các phân loại con này đến phân loại:</label></div>
+		    <div class="col-right">
+		    	<?php if($this->listcat): ?>
+		    	<select name="movetocat">
+					<?php 
+						foreach ($this->listcat as $value){
+							echo '<option value="'.$value['cat_id'].'">'.$value['title_prefix'].$value['cat_title'.LANG].'</option>';
+						}
+					?>
+				</select>
+				<?php endif;?>
+		    </div>
+		    <div class="clear space"></div>
+		    
+		    <div class="col-left"><label></label></div>
+		    <div class="col-right">
+		    	<input type="submit" onclick="return confirm('<?php echo $this->lang['confirmdel']; ?>')" value="     Xóa     " />
+		    </div>
+		    <div class="clear space"></div>
+		</fieldset>
+	</form>
+</div>
