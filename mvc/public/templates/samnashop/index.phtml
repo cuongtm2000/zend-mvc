@@ -1,0 +1,296 @@
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="SHORTCUT ICON" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/gif" />
+<link href="<?php echo $this->baseUrl().TEMPLATE ?>/css/dosvn.css" rel="stylesheet" type="text/css" />
+
+<?php echo $this->headTitle() ?>
+<?php echo $this->headMeta() ?>
+<?php echo $this->headLink() ?>
+<?php echo $this->headScript() ?>
+
+<?php echo $this->google_analytic; ?>
+</head>
+<body>
+ <div id="wrapper">
+	<div id="header">
+    	<div class="left">
+    		<?php if($this->logo):?>
+				<a href="<?php echo $this->baseUrl()?>/" title="<?php echo $this->logo['banner_name']?> <?php echo $this->web['titleweb']?>"><img src="<?php echo $this->baseUrl().'/public/userfiles/images/banner/'.$this->logo['banner_url'] ?>" alt="<?php echo $this->logo['banner_name']?> <?php echo $this->web['titleweb']?>" /></a>
+			<?php else:?>
+				<a href="<?php echo $this->baseUrl()?>/" title="Logo <?php echo $this->web['titleweb']?>"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/logo.png" alt="Logo <?php echo $this->web['titleweb']?>" /></a>
+			<?php endif;?>
+    	</div>
+        <!-- <div class="hdrright">
+        	<div class="lang"><img src="images/vn.gif" alt="Tiếng việt" /> <a href="#" title="">Tiếng Việt</a> <img src="images/en.gif" alt="English" /> <a href="#" title="">English</a></div>
+        	<div class="buy"><img src="images/corsina.png" alt="Buy"  /> Your Cart is: <a href="#" title="">0 items</a></div>
+        </div> -->
+         <div class="clear"></div>
+    </div><!--End header-->
+    <div id="allmenu">
+            <div class="leftmenu"></div>
+            <ul class="menu">
+            	<?php
+					$folders = $this->menubar();
+					foreach($folders as $models){		
+						$target = ($models['target']=='') ? '' : ' target="'.$models['target'].'"';
+						$select =($this->module==$models['url']) ? ' class="select"': '';
+						echo '<li'.$select.'><a href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.'>'.html_entity_decode($models['module'.LANG]).'</a></li>';
+					}
+				?>
+                <!-- <li><a href="index.html" title="">Home Page</a></li>
+                <li><a href="catalog.html" title="">Catalog</a></li>   
+                <li><a href="specials.html" title="">Specials</a></li>
+                <li><a href="new-product.html" title="">News Product</a></li>
+                <li><a href="login.html" title="">My Account</a></li>
+                <li style="background:none"><a href="login.html" title="" >Login</a></li> -->
+                <li id="search" style="background:none">
+                    <form  id="frsearch" name="search" action="<?php echo $this->baseUrl()?>/product/search" method="post">
+                        <input type="text" name="txtsearch" class="input"/>
+                        <input type="image" src="<?php echo $this->baseUrl().TEMPLATE ?>/images/search.jpg" alt="Search" />
+                    </form>
+                </li>
+            </ul>
+    </div><!--END  menu -->
+    <div class="clear"></div>
+    <div id="allbanner">
+    	<div class="banner">
+        	<div class="container">
+	        	<?php if($this->banner):?>
+					<div class="wt-rotator">
+						<a href="#"></a>   
+						<div class="thumbnails"> 
+							  <ul> 
+									<?php foreach($this->banner as $value):?>
+										<li><a href="<?php echo $this->baseUrl()?>/public/userfiles/images/banner/<?php echo $value['banner_url']?>" title="<?php echo $value['banner_name']?>"></a></li>
+									<?php endforeach;?>
+							  </ul>
+							  	<?php $banner_size = explode('x', $this->banner[0]['banner_size']); ?>
+								<script type="text/javascript">
+									$(document).ready(function(){
+										runbanner(<?php echo $banner_size[0] ?>, <?php echo $banner_size[1] ?>);
+									});
+								</script>
+						</div>  
+					</div>
+				<?php endif;?>
+            </div>
+        </div>
+    </div><!--End Banner-->
+    <!-- <div class="clear"></div> -->
+	<?php if(is_array($this->product_hot)):?>
+		<div class="clear slaids">
+			<div class="slaids_left">
+				<div class="slaids_right">
+					<span class="prev left_bat"></span>
+					<span  class="next right_bat"></span>
+					<div class="gallery">
+						<ul>
+							<?php foreach ($this->product_hot as $value):?>
+								<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/product/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg';?>
+								<li class="li_img">
+									<div class="im">
+										<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG]?>"><img src="<?php echo $this->baseUrl().$picthumb ?>" alt="<?php echo $value['title'.LANG]?>" /></a>
+										<!-- <a  href="#" title=""><img src="images/img-7.jpg" alt="Robin Synthetic Wig by Noriko" title=" Robin Synthetic Wig by Noriko " width="175" height="145" /></a> -->
+									</div>		  
+									<div class="scrol_inf"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG]?>" class="prod"><?php echo $value['title'.LANG]?></a>
+										<div class="clear"></div>
+										<span class="price_scroler">500.20</span>						
+									</div>		  
+										<span class="scroler_details"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG]?>">
+										Details</a></span>		
+								</li>
+							<?php endforeach;?>
+						</ul>
+					</div>
+				</div>
+			</div>  
+		</div><!--End slaids Gallery-->
+		<div class="clear"></div>
+	<?php endif;?>
+    <div id="allcontent">
+    	<div id="leftcontent">
+    		<?php if(isset($this->menu_about)): ?>
+	        	<h1 class="title-h1"><?php echo $this->lang['about'] ?></h1>
+	            <ul class="categories">
+	            	<?php 
+						foreach($this->menu_about as $value){
+							echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'about'.'/index/view/id/'.$value['record_id'].'/'.$this->noneUnicode($value['title'.LANG]).'" title="'.$this->escape($value['title'.LANG]).'">'.$this->escape($value['title'.LANG]).'</a></li>';
+						}
+					?>
+	            </ul>
+	            <div class="bt-list"></div>
+	        <?php endif;?>
+	        
+	        <?php if(isset($this->menu_services)): ?>
+	        	<h1 class="title-h1"><?php echo $this->lang['services'] ?></h1>
+	            <ul class="categories">
+	            	<?php 
+						foreach($this->menu_services as $value){
+							echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'services'.'/index/view/id/'.$value['record_id'].'/'.$this->noneUnicode($value['title'.LANG]).'" title="'.$this->escape($value['title'.LANG]).'">'.$this->escape($value['title'.LANG]).'</a></li>';
+						}
+					?>
+	            </ul>
+	            <div class="bt-list"></div>
+	        <?php endif;?>
+			
+			<?php if($this->menu_product): ?>
+				<h1 class="title-h1"><?php echo $this->lang['product'] ?></h1>
+				<ul class="categories">
+					<?php 
+						$rowsize = count($this->menu_product);
+						$params = Zend_Controller_Front::getInstance()->getRequest()->getParams();
+						$cat_id = isset($params['cid']) ? intval($params['cid']) : 0;
+						
+						//Find parent_id
+						$parent_id	= $cat_id;
+						if ( $cat_id ){
+							for ($i=0; $i < $rowsize; $i++){
+								if ($cat_id == $this->menu_product[$i]['cat_id']){
+									if ( $this->menu_product[$i]['cat_parent_id'] ){
+										$parent_id = $this->menu_product[$i]['cat_parent_id'];
+									}
+									break;
+								}
+							}
+						}
+						
+						//Display cat menu
+						for ($i=0; $i < $rowsize; $i++){
+							if ( $this->menu_product[$i]['cat_parent_id'] == 0 ){
+								//Parent categories
+								echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'product/index/cat/cid/'.$this->menu_product[$i]['cat_id'].'" title="'.$this->menu_product[$i]['cat_title'.LANG].'">'.$this->menu_product[$i]['cat_title'.LANG].'</a>';
+								//Sub categories
+								if ( $parent_id && ($parent_id == $this->menu_product[$i]['cat_id']) ){
+									for ($j=0; $j < $rowsize; $j++){
+										if ( $this->menu_product[$j]['cat_parent_id'] == $this->menu_product[$i]['cat_id'] ){
+											echo '<ul>';
+												for ($j=0; $j < $rowsize; $j++){
+													if ( $this->menu_product[$j]['cat_parent_id'] == $this->menu_product[$i]['cat_id'] ){
+														echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'product/index/cat/cid/'.$this->menu_product[$j]['cat_id'].'" title="'.$this->menu_product[$j]['cat_title'.LANG].'">'.$this->menu_product[$j]['cat_title'.LANG].'</a></li>';
+													}
+												}
+											echo '</ul>';
+										}
+									}
+								}
+								echo '</li>';
+							}
+						}
+					?>
+				</ul>
+				<div class="bt-list"></div>
+			<?php endif;?>
+            
+			<?php if($this->list_adv_left):?>
+			<div class="best">
+				<?php foreach ($this->list_adv_left as $value):?>
+					<a href="<?php echo $value['url']?>" target="<?php echo $value['type']?>" title="<?php echo $value['title'.LANG].' '.$value['description']?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['title'.LANG].' '.$value['description']?>"/></a>
+				<?php endforeach;?>
+			</div>
+			<?php endif;?>
+			
+			<?php if($this->product_specials):?>
+            <h1 class="title-h1"><?php echo $this->lang['product_specials']?></h1>
+            <ul class="specials">
+				<?php foreach($this->product_specials as $value):?>
+					<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/product/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg';?>			
+					<li>
+						<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG]?>"><img src="<?php echo $this->baseUrl().$picthumb ?>" alt="<?php echo $value['title'.LANG]?>" title="<?php echo $value['title'.LANG]?>" /></a>
+						<h1 class="title-h2"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></h1>
+						<?php echo html_entity_decode($value['preview'.LANG])?>
+						<!-- <p><span><?php echo $value['unit']?></span></p> -->
+						<p><strong><?php echo $value['unit']?></strong></p>
+						<p class="all"><a href="<?php echo $this->baseUrl()?>/product/index/order/id/<?php echo $value['record_id'] ?>" title="Mua hàng <?php echo $value['title'.LANG]?>">Mua hàng</a></p>
+						<div class="clear"></div>
+					</li>
+				<?php endforeach;?>
+            </ul>
+            <div class="bt-list"></div>
+			<?php endif;?>
+        </div><!--End Left content-->
+        <div id="ctercontent">
+			<?php echo $this->layout()->content ?>
+        </div>
+        <!--End CenterContent-->
+		<div id="rightcontent">
+			<h1 class="title-h3"><?php echo $this->lang['product_cartitem']?></h1>
+			<ul class="shopcart">
+				<li>Giỏ hàng: <a href="<?php echo $this->baseUrl()?>/product/index/cart-item" title="<?php echo $this->lang['product_cartitem']?>">
+					<?php 
+						$cartSession = new Zend_Session_Namespace('cart');
+						$ssInfo = $cartSession->getIterator();
+						echo isset($ssInfo['cart']) ? count($ssInfo['cart']) : 0;
+					?> items </a>
+				</li>
+				<li><a href="<?php echo $this->baseUrl()?>/product/index/del-all-cart" title="Xóa giỏ hàng">Xóa giỏ hàng</a></li>
+			</ul>
+			<div class="bt-list-h3"></div>
+			
+			<?php if($this->list_adv_right):?>
+			<div class="best">
+				<?php foreach ($this->list_adv_right as $value):?>
+					<a href="<?php echo $value['url']?>" target="<?php echo $value['type']?>" title="<?php echo $value['title'.LANG].' '.$value['description']?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['title'.LANG].' '.$value['description']?>"/></a>
+				<?php endforeach;?>
+			</div>
+			<?php endif;?>
+			
+			<!-- <h1 class="title-h3">Manufacturers</h1>
+			<ul class="manutures">
+				<li><form  class="frmmanu" action="" name="Manufactures" method="get">
+						<select size="1" name="Manufantures">
+							<option value="0">Please Select</option>
+							<option value="1">Example-1</option>
+							<option value="2">Example-2</option>
+							<option value="3">Example-3</option>
+							<option value="4">Example-4</option>
+						</select>
+					</form>
+				</li>
+			</ul>
+			<div class="bt-list-h3"></div> -->
+			
+			<?php if($this->product_top_hit_view):?>
+				<h1 class="title-h3">Bestsellers</h1>
+				<ul class="bestseller">
+					<?php foreach($this->product_top_hit_view as $value):?>
+					<li><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
+					<?php endforeach;?>
+				</ul>
+				<div class="bt-list-h3"></div>
+			<?php endif;?>
+			
+			<?php if($this->menu_support):?>
+				<h1 class="title-h3"><?php echo $this->lang['support']?></h1>
+				<ul class="support">
+					<?php foreach($this->menu_support as $value):?>
+						<li><?php echo $value['support_name'] ?></li>
+	                    <li><a href="ymsgr:sendim?<?php echo $value['support_value'] ?>&amp;m=<?php echo $this->lang['welcome_chat']?>" title="Chat <?php echo $value['support_value'] ?>"><img src="http://opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2&amp;l=us" alt="<?php echo $value['support_value'] ?>" /></a></li>
+					<?php endforeach;?>
+				</ul>
+				<div class="bt-list-h3"></div>
+			<?php endif;?>
+		</div><!--End Right content-->
+    </div><!--End ALL Content-->
+    <div class="clear"></div>
+    <!--Footer-->
+    <div id="footer">
+    	<ul class="ftmenu">
+    		<?php
+				foreach($folders as $models){		
+					$target = ($models['target']=='') ? '' : ' target="'.$models['target'].'"';
+					echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.'><strong>'.html_entity_decode($models['module'.LANG]).'</strong></a></li>';
+				}
+			?>
+        </ul>
+        <div class="cpright">
+        	<p><?php echo $this->lang['copyright']?></p>
+            <p><?php echo $this->lang['developed']?> <a href="http://azweb.vn" title="Azweb.vn">azweb.vn</a></p>
+        </div>
+    </div><!--End Footer-->
+</div><!--End wrapper-->
+</body>
+</html>

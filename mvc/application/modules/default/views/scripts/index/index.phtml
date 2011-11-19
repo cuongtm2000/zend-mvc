@@ -1,0 +1,50 @@
+<?php if($this->about_home):?>
+	<h1 class="title-pr"><?php echo $this->about_home['title'.LANG] ?></h1>
+	<?php echo html_entity_decode($this->about_home['content'.LANG]) ?>
+<?php endif;?>
+
+<?php if($this->product_new):?>
+	<h1 class="title-pr"><?php echo $this->lang['product_new']?></h1>
+	<div id="allproduct">
+		<?php foreach ($this->product_new as $value):?>
+			<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/product/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg';?>			
+			<div class="bg-product">
+				<div class="bd-top-pr"></div>
+				<div class="product">
+					<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG]?>"><img src="<?php echo $this->baseUrl().$picthumb ?>" alt="<?php echo $value['title'.LANG]?>" title="<?php echo $value['title'.LANG]?>" /></a>
+					<h3 class="title-h3-pr"><a href="new-product-info.html" title=""><?php echo $value['title'.LANG]?></a></h3>
+					<?php echo html_entity_decode($value['preview'.LANG])?>
+					<div class="all-buy">
+						<div class="all-pr"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/order/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="Mua hàng <?php echo $value['title'.LANG]?>">Mua hàng</a></div>
+						<div class="price">
+							<div class="left-price"></div>
+							<div class="right-price"><span><?php echo $value['unit']?></span></div>
+						</div>
+					</div>
+				</div>
+				<div class="bd-btom-pr"></div>
+			</div>
+		<?php endforeach;?>
+	</div><!--End All product-->
+<?php endif;?>
+
+<h1 class="title-pr"><?php echo $this->lang['services']?></h1>
+<div class="services-home">
+	<?php if($this->service_home):?>
+		<?php if($this->service_home['pic_full']):?>
+			<a href="<?php echo $this->baseUrl().'/'.LANGURL.'services'.'/index/view/id/'.$this->service_home['record_id'].'/'.$this->noneUnicode($value['title'.LANG])?>" title="<?php echo $this->service_home['title'.LANG]?>"><img src="<?php echo $this->baseUrl()?>/public/userfiles/images/services/<?php echo $this->service_home['pic_full']?>" alt="<?php echo $this->service_home['title'.LANG]?>" class="img-new"/></a>
+		<?php endif?>
+		
+		<h2 class="title-h3-pr"><a href="<?php echo $this->baseUrl().'/'.LANGURL.'services'.'/index/view/id/'.$this->service_home['record_id'].'/'.$this->noneUnicode($value['title'.LANG])?>" title="<?php echo $this->service_home['title'.LANG]?>"><?php echo $this->service_home['title'.LANG]?></a></h2>
+		<?php echo html_entity_decode($this->service_home['preview'.LANG])?>
+		<div class="clear"></div>
+	<?php endif;?>
+
+	<?php if($this->services_item_other):?>
+			<ul class="sub-new">
+				<?php foreach ($this->services_item_other as $value):?>
+					<li><a href="<?php echo $this->baseUrl().'/'.LANGURL.'services'.'/index/view/id/'.$value['record_id'].'/'.$this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
+				<?php endforeach;?>
+			</ul>
+	<?php endif;?>
+</div>

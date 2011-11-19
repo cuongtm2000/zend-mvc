@@ -1,0 +1,16 @@
+<h1 class="title-pr"><?php echo $this->item['title'.LANG] ?></h1>
+<?php echo html_entity_decode($this->item['content'.LANG]); ?>
+
+<p>Quý khách có thể liên hệ với chúng tôi bằng cách điền đầy đủ thông tin vào mẫu sau:</p>
+<form id="contact" method="post" action="" name="frm" onsubmit="return validatecheck();">
+<ul>
+	<li><label><span>*</span> họ tên: </label><input name="fullname" id="fullname" type="text" /><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/contact.png" alt="Send mail" style="float:right; margin-right:75px; *_margin-right:25px" /></li>
+	<li><label>công ty: </label><input type="text" name="company" value="" /></li>
+	<li><label><span>*</span> địa chỉ: </label><input name="address" id="address" type="text" /></li>
+	<li><label><span>*</span> điện thoại: </label><input name="phone" id="phone" type="text" /></li>
+	<li><label><span>*</span> email: </label><input name="email" id="email" type="text" /></li>
+	<li><label><span>*</span> nội dung:</label><textarea rows="10" cols="55" name="content"></textarea></li>
+	<li><label></label><input type="submit" value=" Gửi " class="send-clear"/><input type="reset" value="Xoá" class="send-clear"/></li>
+</ul>
+</form>
+<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/contact.js"></script>
