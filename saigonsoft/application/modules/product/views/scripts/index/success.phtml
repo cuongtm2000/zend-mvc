@@ -1,2 +1,0 @@
-<h1 class="title-pr"><?php echo $this->lang['contact_success']?></h1>
-<p>Email của quý khách đã được gửi đến chúng tôi thành công.<br />Chúng tôi sẽ có phản hồi cho quý khách trong thời gian sớm nhất.<br /><br />Chân thành cảm ơn quý khách!</p>
