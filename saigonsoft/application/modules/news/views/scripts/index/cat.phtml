@@ -1,0 +1,14 @@
+<h1 class="title-right"><span><?php echo $this->lang['news']?> &raquo; <?php echo $this->detailcat['cat_title'.LANG] ?></span></h1>
+	<?php if(is_array($this->items)):?>
+		<?php foreach ($this->items as $value): ?>
+		<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/news/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg'; ?>
+		 <div class="masuring">
+			<img class="imgcon" style="float:left;" src="<?php echo $this->baseUrl().$picthumb ?>" alt="<?php echo $value['title'.LANG] ?>" />
+			<h3><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h3>
+			<?php echo html_entity_decode($value['preview'.LANG]) ?>
+	     </div><div class="clear"></div>
+		<?php endforeach; ?>
+	<?php echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml'); ?>
+	<?php else:?>
+		<?php echo $this->items; ?>
+	<?php endif;?>

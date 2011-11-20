@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="<?php echo $this->baseUrl().TEMPLATE ?>/css/dosvn.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl().TEMPLATE ?>/css/wt-rotator.css" /> 
+<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jcarousellite.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/special-block.js"></script> 
+<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery-banner-rotato.js"></script> 
+<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery-banner-rotato.effect.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		runbanner(980,320);
+	});
+</script>
+<?php echo $this->headTitle() ?>
+<?php echo $this->headMeta() ?>
+<?php echo $this->headLink() ?>
+<?php echo $this->headScript() ?>
+
+<?php echo $this->google_analytic; ?>
+
+</head>
+
+<body>
+<div id="wrapper">
+		<div id="header">
+        	<div id="header-left">
+        		<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/logo.png" alt="Logo SaigonSoft"/>
+    
+        	</div><!--End header left-->
+            <div class="lang">
+            	<a href="<?php echo $this->baseUrl() ?>/" title="Tiếng Việt">Tiếng Việt</a> 
+            	<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/vn.gif" alt="Việt Nam" />
+            	<a href="<?php echo $this->baseUrl()?>/en" title="English">English</a> 
+            	<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/en.gif" alt="English" />
+            </div>
+            <div class="title-cty">CÔNG TY PHẦN MỀM SGS</div>
+            
+          	<ul class="nav">
+        		<?php 
+					$folders = $this->menubar();
+					$rowsize = count($folders);
+					for($i=0; $i < $rowsize; $i++){
+						$target = ($folders[$i]['target']=='') ? '' : ' target="'.$folders[$i]['target'].'"';
+						echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.$folders[$i]['url'].'" title="'.$folders[$i]['module'.LANG].'"'.$target.'>'.html_entity_decode($folders[$i]['module'.LANG]).'</a></li>';
+					}
+				?>
+            </ul>  <div class="clear"></div>
+        </div><!--End header-->
+       <?php if($this->banner):?>
+       <div id="banner">
+        	<div class="container"> 
+                <div class="wt-rotator">
+                    <a href="#"></a>   
+                    <div class="thumbnails"> 
+                          <ul> 
+                          	
+                       	  		<?php foreach($this->banner as $value):?>
+									<li><a href="<?php echo $this->baseUrl()?>/public/userfiles/images/banner/<?php echo $value['banner_url']?>"></a></li>
+								<?php endforeach;?>
+							
+                          </ul> 
+                    </div>  
+                </div> 
+            </div>
+        </div><!--End banner-->
+        <?php else:?>
+			<!--  img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/banner.jpg" alt="Banner" / -->
+		<?php endif;?> 
+        
+        <div id="content">
+        	<div id="left-content">
+               
+               
+            <?php if(isset($this->menu_about)): ?>
+	        	<h1 class="title-left"><?php echo $this->lang['about'] ?></h1>
+	            <ul class="sub-pro">
+	            	<?php 
+						foreach($this->menu_about as $value){
+							echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'about'.'/index/view/id/'.$value['record_id'].'/'.$this->noneUnicode($value['title'.LANG]).'" title="'.$this->escape($value['title'.LANG]).'">'.$this->escape($value['title'.LANG]).'</a></li>';
+						}
+					?>
+	            </ul>
+	            <div class="bt-list"></div>
+	        <?php endif;?>
+            <?php if(isset($this->menu_news)): ?>
+	        	<h1 class="title-left"><?php echo $this->lang['news'] ?></h1>
+	            <ul class="sub-pro">
+	            	<?php 
+						foreach($this->menu_news as $value){
+							echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'news/index/cat/id/'.$value['cat_id'].'/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
+						}
+					?>
+	            </ul>
+	            <div class="bt-list"></div>
+	       
+	        <?php endif;?>
+	            <?php if(isset($this->menu_services)): ?>
+	        	<h1 class="title-left"><?php echo $this->lang['services'] ?></h1>
+	            <ul class="sub-pro">
+	            	<?php 
+						foreach($this->menu_services as $value){
+							echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'services'.'/index/view/id/'.$value['record_id'].'/'.$this->noneUnicode($value['title'.LANG]).'" title="'.$this->escape($value['title'.LANG]).'">'.$this->escape($value['title'.LANG]).'</a></li>';
+						}
+					?>
+	            </ul>
+	            <div class="bt-list"></div>
+	        <?php endif;?>
+   
+       		<?php if($this->menu_product): ?>
+				<h1 class="title-left"><?php echo $this->lang['product'] ?></h1>
+				<ul class="sub-pro">
+	            	<?php 
+						foreach($this->menu_product as $value){
+							echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'product/index/view/id/'.$value['record_id'].'/'.$this->noneUnicode($value['title'.LANG]).'" title="'.$this->escape($value['title'.LANG]).'">'.$this->escape($value['title'.LANG]).'</a></li>';
+						}
+					?>
+	            </ul>
+				<div class="bt-list"></div>
+			<?php endif;?>
+                
+               <?php if($this->menu_support):?>
+				<h1 class="title-left"><span><?php echo $this->lang['support']?></span></h1>
+				<ul class="support">
+					<li><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/img-support.jpg" alt="Support" class="left"/>
+					<?php foreach($this->menu_support as $value):?>
+					
+					<li><?php echo $value['support_name'].' - '.$value['support_phone'] ?></li>
+                    <li >
+                    	<?php if ($value['support_type'] == 'yahoo'):?>
+	                    	<a href="ymsgr:sendim?<?php echo $value['support_value'] ?>&amp;m=<?php echo $this->lang['welcome_chat']?>" title="Chat <?php echo $value['support_value'] ?>">
+	                    		<img src="http://opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2&amp;l=us" alt="<?php echo $value['support_value'] ?>" />
+	                    	</a>
+	                    <?php else :?>
+	                    	<a href="skype:<?php  echo $value['support_value'] ?>?chat" title="Chat với <?php  echo $value['support_name'] ?>">
+	                    		<img  src="<?php echo $this->baseUrl().TEMPLATE ?>/images/skype.gif" alt="<?php  echo $value['support_name'] ?>" />
+	                    	</a>
+	                    <?php endif;?>
+                    </li>
+					<?php endforeach;?>
+				</ul>
+				<div class="bt-list-h3"></div>
+			<?php endif;?>
+    
+            </div><!--End left content-->	
+        	<div id="right-content">
+            	<?php echo $this->layout()->content ?>
+            </div><!--End right content-->   <div class="clear"></div>
+        </div><!--End content-->
+</div><!--End wrapper-->
+
+<!--Footer-->
+<div id="bg-fter">
+	<div id="footer">
+    	<ul class="nav-fter">
+        <?php 
+			$folders = $this->menubar();
+			$rowsize = count($folders);
+			for($i=0; $i < $rowsize; $i++){
+				$target = ($folders[$i]['target']=='') ? '' : ' target="'.$folders[$i]['target'].'"';
+				echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.$folders[$i]['url'].'" title="'.$folders[$i]['module'.LANG].'"'.$target.'>'.html_entity_decode($folders[$i]['module'.LANG]).'</a></li>';
+			}
+		?>
+        </ul>
+        <p>&copy; 2011 - SGS.VN Corp - All right reserved</p>
+    </div><!--End footer-->
+</div><!--End Bg Footer-->
+</body>
+</html>
+
