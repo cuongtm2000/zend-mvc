@@ -39,19 +39,24 @@ class Solution_Model_SolutionCat extends Zend_Db_Table{
     }
     
 	public function listCatParent($cid = 0){
-		$select = $this->select()->from($this->_name, array('cat_id', 'cat_title'.LANG, 'cat_parent_id', 'cat_order', 'cat_enable'))->order('cat_order DESC');
-		$result = $this->fetchAll($select);
-    	if(count($result)){
-    		$this->_catdata = $result->toArray();
-    		$this->_cat_count = count($this->_catdata);
-    		
-    		$this->listSubcat($cid);
-    		
-    		return $this->_subcat_data;
-    	}else{
-			$lang = Zend_Registry::get("lang");
-    		return $lang['norecord'];    		
-    	}
+		try {
+			$select = $this->select()->from($this->_name, array('cat_id', 'cat_title'.LANG, 'cat_parent_id', 'cat_order', 'cat_enable'))->order('cat_order DESC');
+			$result = $this->fetchAll($select);
+	    	if(count($result)){
+	    		$this->_catdata = $result->toArray();
+	    		$this->_cat_count = count($this->_catdata);
+	    		
+	    		$this->listSubcat($cid);
+	    		
+	    		return $this->_subcat_data;
+	    	}else{
+				$lang = Zend_Registry::get("lang");
+	    		return $lang['norecord'];    		
+	    	}
+		} catch (Exception $e) {
+			echo '<pre>';print_r($e); echo '</pre>';
+		}
+	
     }
 	private function listSubcat($cid = 0, $getall = 1, $parent_id = 0, $level = 1, $str = "", $parent_enabled = 1){
 		$cat_level = 2;

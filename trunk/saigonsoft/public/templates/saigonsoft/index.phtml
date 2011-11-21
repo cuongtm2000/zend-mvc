@@ -74,7 +74,17 @@
         <div id="content">
         	<div id="left-content">
                
-               
+                 <?php if(isset($this->menu_solution)): ?>
+	        	<h1 class="title-left"><?php echo $this->lang['solution'] ?></h1>
+	            <ul class="sub-pro">
+	            	<?php 
+						foreach($this->menu_solution as $value){
+							echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'solution'.'/index/cat/cid/'.$value['cat_id'].'/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
+						}
+					?>
+	            </ul>
+	            <div class="bt-list"></div>
+	        <?php endif;?>
             <?php if(isset($this->menu_about)): ?>
 	        	<h1 class="title-left"><?php echo $this->lang['about'] ?></h1>
 	            <ul class="sub-pro">
