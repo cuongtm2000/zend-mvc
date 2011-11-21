@@ -1,5 +1,5 @@
+<h1 class="title-right"><span><?php echo $this->lang['solution']?> &raquo; <?php echo $this->detailcat['cat_title'.LANG] ?></span></h1>
 
-				<h1 class="title"><?php echo $this->lang['solution']?> &raquo; <?php echo $this->detailcat['cat_title'.LANG] ?></h1>
 				<?php if(is_array($this->items)):?>
 						<?php foreach ($this->items as $value): ?>
 						<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/solution/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg'; ?>
@@ -7,7 +7,7 @@
 		                	<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>solution/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo $this->baseUrl().$picthumb ?>" class="imgcon" style="float:left;" alt="<?php echo $value['title'.LANG] ?>" /></a>
 		                    <h3><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>solution/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h3>
 		                    <?php echo html_entity_decode($value['preview'.LANG]) ?>
-		                </div>
+		                </div><div class="clear"></div>
 						<?php endforeach; ?>
 					<?php else:?>
 						<?php echo $this->items; ?>
@@ -20,10 +20,10 @@
 		                	<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>solution/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo $this->baseUrl().$picthumb ?>" class="imgcon" style="float:left;" alt="<?php echo $value['title'.LANG] ?>" /></a>
 		                    <h3><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>solution/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h3>
 		                    <?php echo html_entity_decode($value['preview'.LANG]) ?>
-		                </div>
+		                </div><div class="clear"></div>
 					<?php endforeach;?>
 				<?php else: ?>
-					<?php echo $this->list_news_new?>
+					<?php echo $this->list_solution_new?>
 				<?php endif;?>
                 <?php echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml'); ?>
 		
