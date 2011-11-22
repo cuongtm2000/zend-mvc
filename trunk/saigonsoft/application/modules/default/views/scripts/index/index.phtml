@@ -1,5 +1,4 @@
 <?php if($this->about_home):?>
-	
 	<h1 class="title-right"><span><?php echo $this->about_home['title'.LANG] ?></span></h1>
 	<div class="rows-first">
 		<?php echo html_entity_decode($this->about_home['content'.LANG]) ?>
@@ -7,7 +6,7 @@
 <?php endif;?>
 
 <?php if(isset($this->list_adv_bottom) && sizeof($this->list_adv_bottom) > 0):?>
-	<h1 class="title-right"><span>Các đối tác</span></h1>
+	<h1 class="title-right"><span><?php echo $this->lang['partner']?></span></h1>
   	<div class="rows-two">
   		<div class="slaids">
     		<div class="slaids_left">

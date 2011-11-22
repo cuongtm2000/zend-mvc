@@ -6,17 +6,19 @@ class GLT_Controller_Action extends Zend_Controller_Action{
 		//$this->view->config = Zend_Registry::get("config"); //load config
 		$this->view->web = Zend_Registry::get("web"); //load web
 		
-		$pro=new Product_Model_Product();
+		$pro = new Product_Model_Product();
 		$paginator['itemCountPerPage'] =100;
         $paginator['pageRange'] = 10;
         $paginator['currentPage'] =1;
         
-		$this->view->menu_product=$pro->productByCat(array('cid'=>10, 'paginator'=> $paginator));
+		$this->view->menu_product = $pro->productByCat(array('cid'=>10, 'paginator'=> $paginator));
 
-		
+		//Support
 		$support=new Support_Model_Support();
 		$this->view->menu_support=$support->getListmenu();
-	
+		//Contact
+		$contact = new Contact_Model_Contact();
+		$this->view->contact_home = $contact->getHomeRecord();
 		
         //Request
         $request = $this->_request->getParams();

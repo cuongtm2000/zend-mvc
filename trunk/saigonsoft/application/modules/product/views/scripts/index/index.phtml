@@ -4,7 +4,7 @@
 	<?php foreach ($this->listcat as $value): ?>
 		<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/product/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg';?>
 		 <div class="masuring">
-			<img class="imgcon" style="float:left;" src="/zend/saigonsoft/public/templates/saigonsoft/images/no-images.jpg" alt="safa" />
+			<img class="imgcon" style="float:left;" src="<?php echo $this->baseUrl().TEMPLATE?>/images/no-images.jpg" alt="safa" />
 			<h3><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h3>
 			<?php echo html_entity_decode($value['preview'.LANG]) ?>
 		</div><div class="clear"></div>

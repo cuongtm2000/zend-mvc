@@ -16,9 +16,9 @@ a:hover{color:#000;}
 .title-cty{color:#fff; font-size:16pt; font-weight:700; position:absolute; top:20px; left:220px; *_left:20px}
 
 /*Lang*/
-.lang{ text-align:right;}
+.lang{text-align:right;}
 .lang a{color:#fff; margin:0 5px 0  10px}
-.lang a:hover{color:#000}
+.lang a:hover{color:#eee}
 /*Nav*/
 .nav{list-style:none; float:right;position:relative; top:35px; }
 .nav li{float:left; position:relative;}
@@ -29,13 +29,11 @@ a:hover{color:#000;}
 .nav li ul li{ width:100%}
 .nav li ul li a{ background:none; font-weight:normal;color:#fff; padding:5px 0;}
 
-
 /*Banner*/
 #banner{margin:5px 0 25px 0;border:1px solid #ccc; -webkit-border-radius:3px; -moz-boder-radius:3px}
 
 /*Content*/
 #content{ margin:0 0 30px 0;}
-
 
 /*Left content*/
 #left-content{float:left; width:255px; }
@@ -93,9 +91,9 @@ a:hover{color:#000;}
 .frame-contact input{ margin:0 20px 0 0; width:220px; height:22px; border:1px solid #ddd}
 .frame-contact textarea{border:1px solid #ddd; width:460px}
 .frame-contact span{ color:#F00}
-.frame-contact{margin:0 0 10px 0;border-bottom:1px solid #E4E4E4; padding:0 0 20px 0}
-.singin{float:right;background:#717171; color:#fff;padding:7px 0px; text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold;-webkit-border-radius:4px;-moz-border-radius:4px}
-
+.frame-contact{margin:0 0 10px 0; padding:0 0 5px 0}
+.singin{background:#717171; color:#fff;padding:7px 0px; text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold;-webkit-border-radius:4px;-moz-border-radius:4px}
+.input-contact{float:right;margin:0 215px 0 0}
 /*Page Tin tuc and giai phap*/
 .masuring{text-align:justify;font-size:10pt; color:#666;line-height:1.5em; margin-bottom:20px; }
 .masuring img{margin:2px 10px 5px 2px}
@@ -108,7 +106,6 @@ a:hover{color:#000;}
 .nav-fter{list-style:none; margin:0 0 5px 0}
 .nav-fter li{display:inline}
 .nav-fter li a{color:#1A4C98; padding:0 5px; background:url(../images/bkg-pipe2.gif) no-repeat right}
-
 
 /* ------------------ Logo Các Đối tác------------------------ Scroler Header -----------------  */
 .rows-two { border:2px solid #C4C4C4; -webkit-border-radius:5px; -moz-border-radius:5px; width:670px; margin:0 0 20px 20px; }
@@ -127,10 +124,9 @@ a:hover{color:#000;}
 
  /*------------------------------------------------------- End --------------------------*/
 
-
-
-
-
-
-
-
+/* paging */
+.paging{margin:15px 10px 10px 0; text-align:right;}
+.paging a{color:#f90}
+.paging a:hover{background:#f90; color:#fff}
+.pagenav , .pageactive{border: 1px solid #ccc; padding: 2px 5px; color:#FFF; -moz-border-radius: 2px; -webkit-border-radius: 2px;}
+.pagecureent{border: 1px solid #ccc; padding: 2px 5px; background:#f90; color:#fff; font-weight:bold; -moz-border-radius: 2px; -webkit-border-radius: 2px}
