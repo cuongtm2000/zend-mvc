@@ -297,7 +297,7 @@ class User_Model_User extends Zend_Db_Table{
 				$tk=$this->getTK($nguoiGT);
 				$this->addTK($nguoiGT, $tk+400);///
 				$log= new User_Model_Log();
-				$log->addItem("Hoa hồng trực tiếp", 'viptamnhinviet',$this->_username, 400);
+				$log->addItem("Hoa hồng trực tiếp", '  -  ',$nguoiGT, 400);
 				
 				$this->addQuanly($nguoiGT);
 				//add quan ly tv cấp trên
@@ -367,7 +367,7 @@ class User_Model_User extends Zend_Db_Table{
 				$tk=$this->getTK($user);
 				$this->addTK($user, $tk+$value);///		
 				$log= new User_Model_Log();
-				$log->addItem("Hoa hồng hoa hồng quản lý lần ".$k, 'viptamnhinviet',$this->_username, $value);
+				$log->addItem("Hoa hồng hoa hồng quản lý lần ".$k, '  -  ',$user, $value);
 			}	
 		}	
 	}
