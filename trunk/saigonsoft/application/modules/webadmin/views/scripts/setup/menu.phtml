@@ -11,20 +11,31 @@
 	<form action="" method="post" enctype="multipart/form-data" id="frmsignup" name="frmsignup">
 	<fieldset>
 		<legend><?php echo $this->lang['sys_menu']?></legend>
-		<p class="rows"><a href="#" id="add-rows"><?php echo $this->lang['sys_addrow']?></a></p>
+		<?php if($this->infouser('user_group')=='administrator'):?>
+			<p class="rows"><a href="#" id="add-rows"><?php echo $this->lang['sys_addrow']?></a></p>
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$("#add-rows").click(function(){
+					$(".rows").before('<p><label>Module</label><input name="modelidnew[]" value="" maxlength="20" class="txt-tiny-x" /> <?php foreach($lang as $values):?> <input name="modelnew<?php echo $values?>[]" value="" maxlength="20" class="txt-small" /> <?php endforeach;?><input name="urlnew[]" value="" maxlength="100" class="txt-small" /> <input name="targetnew[]" value="" maxlength="20" class="txt-tiny" /> <input name="posnew[]" value="" maxlength="2" class="txt-very-tiny" /></p>');
+					return false;
+				});
+			});
+			</script>
+		<?php endif;?>
 	    <?php
 	        $i = 1;
 	        $lang = $this->langlist(); //num language
+			$readonly = ($this->infouser('user_group')=='administrator') ? '' : ' readonly="readonly"';
 
 	        foreach($this->listmodule as $value){
 	            echo '<p>
 	        		<label for="module'.$i.'">Module '.$i.'</label>
-	                <input name="modelid[]" id="moduleid'.$i.'" value="'.$value['moduleid'].'" maxlength="20" class="txt-tiny-x" /> ';
+	                <input name="modelid[]" id="moduleid'.$i.'"'.$readonly.' value="'.$value['moduleid'].'" maxlength="20" class="txt-tiny-x" /> ';
 	            foreach($lang as $values){
 	            	echo '<input name="model'.$values.'[]" id="module'.$values.$i.'" value="'.$value['module'.$values].'" maxlength="50" class="txt-small" /> ';
 	            }
-	                echo '<input name="url[]" id="url'.$i.'" value="'.$value['url'].'" maxlength="100" class="txt-small" />
-	                <input name="target[]" id="target'.$i.'" value="'.$value['target'].'" maxlength="20" class="txt-tiny" />
+	                echo '<input name="url[]" id="url'.$i.'"'.$readonly.' value="'.$value['url'].'" maxlength="100" class="txt-small" />
+	                <input name="target[]" id="target'.$i.'"'.$readonly.' value="'.$value['target'].'" maxlength="20" class="txt-tiny" />
 	                <input name="pos[]" id="pos'.$i.'" value="'.$value['position'].'" maxlength="2" class="txt-very-tiny" />
 	        	</p>';
 	            $i++;
@@ -36,12 +47,4 @@
 		</p>
 	</fieldset>
 	</form>
-	<script type="text/javascript">
-	$(document).ready(function(){
-	    $("#add-rows").click(function(){
-	        $(".rows").before('<p><label>Module</label><input name="modelidnew[]" value="" maxlength="20" class="txt-tiny-x" /> <?php foreach($lang as $values):?> <input name="modelnew<?php echo $values?>[]" value="" maxlength="20" class="txt-small" /> <?php endforeach;?><input name="urlnew[]" value="" maxlength="100" class="txt-small" /> <input name="targetnew[]" value="" maxlength="20" class="txt-tiny" /> <input name="posnew[]" value="" maxlength="2" class="txt-very-tiny" /></p>');
-	        return false;
-	    });
-	});
-	</script>
 </div>
