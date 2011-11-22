@@ -1,0 +1,99 @@
+<h1 class="title-right"><span>Quảng cáo doanh nghiệp</span></h1>
+<div class="bg-pr">
+	<div class="bd-top-pr"></div>
+	<div class="slaids">
+		<?php if($this->adv_center):?>
+			<div class="slaids_left">
+				<div class="slaids_right">
+					<span class="prev left_bat"></span>
+					<span  class="next right_bat"></span>
+					<div class="gallery">
+						<ul>
+							<?php foreach ($this->adv_center as $value):?>
+							<li class="li_img">
+								<div class="im">
+									<a target="_blank" href="<?php echo $value['url']?>" title="<?php echo $value['title'.LANG]?>"><img src="<?php echo $this->baseUrl()?>/public/userfiles/images/adv/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['title'.LANG]?>" title="<?php echo $value['title'.LANG]?>" width="175" height="145" /></a>
+								</div>		  
+								<div class="scrol_inf"><a class="prod" target="_blank" href="<?php echo $value['url']?>" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></div>
+							</li>
+							<?php endforeach;?>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<?php else:?>
+			Chưa có đối tác nào tại đây cả!
+		<?php endif;?>
+	</div><!--End slaids Gallery-->
+	<div class="bd-bt-pr"></div>
+</div><!--End quang cao-->
+
+<?php if($this->product_hot): ?>
+<h1 class="title-right"><span><?php echo $this->lang['product_hot']?></span></h1>
+<div class="bg-pr">
+	<div class="bd-top-pr"></div>
+		<div class="bg-product">
+			<?php foreach($this->product_hot as $value): ?>
+				<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/product/'.$value['pic_thumb'] : TEMPLATE.'/images/no-product.jpg';?>			
+				<div class="product">
+					<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG]?>"><img src="<?php echo $this->baseUrl().$picthumb ?>" alt="<?php echo $value['title'.LANG]?>" title="<?php echo $value['title'.LANG]?>" /></a>
+					<h2><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></h2>
+					<p><?php echo number_format($value['unit'], 0 , ',' , '.' )?> VNĐ</p>
+				</div>
+			<?php endforeach; ?>
+			<div class="clear"></div>
+		</div>
+	<div class="bd-bt-pr"></div>
+</div><!--End bg pr-->
+<?php endif; ?>
+
+<div class="new-event">
+	<h1 class="title-new"><span><?php echo $this->lang['news']?></span></h1>
+	<div class="bg-new">
+		<div class="top-bg-new"></div>
+			<div class="tent-new">
+				<?php if($this->news_first):?>
+					<?php if($this->news_first['pic_thumb']):?>
+						<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $this->news_first['record_id'] ?>/<?php echo $this->noneUnicode($this->news_first['title'.LANG])?>" title="<?php echo $this->news_first['title'.LANG]?>"><img src="<?php echo $this->baseUrl()?>/public/userfiles/images/news/<?php echo $this->news_first['pic_thumb']?>" alt="<?php echo $this->news_first['title'.LANG]?>" style="float:left" /></a>
+					<?php endif;?>
+					<h2 class="title-h2"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $this->news_first['record_id'] ?>/<?php echo $this->noneUnicode($this->news_first['title'.LANG])?>" title="<?php echo $this->news_first['title'.LANG]?>"><?php echo $this->news_first['title'.LANG]?></a></h2>
+					<?php echo strip_tags(html_entity_decode($this->news_first['preview'.LANG]), '<b><strong><p>')?>
+				<?php endif;?>
+				<div class="clear"></div>
+				
+				<?php if($this->news_other):?>
+				<h3 class="title-h3"><?php echo $this->lang['news']?> khác:</h3>
+				<ul class="sub-new">
+					<?php foreach($this->news_other as $value):?>
+						<li><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></li>
+					<?php endforeach;?>
+				</ul>
+				<?php endif;?>
+			</div>
+		<div class="bt-bg-new"></div>
+	</div>
+</div>
+<div class="hdbook">
+	<h1 class="title-hdbook"><span><?php echo $this->lang['handbook']?></span></h1>
+	<div class="bg-hdbook">
+		<div class="tent-hdbook">
+			<?php if($this->handbook_first):?>
+				<?php if($this->handbook_first['pic_thumb']):?>
+					<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>handbook/index/view/id/<?php echo $this->handbook_first['record_id'] ?>/<?php echo $this->noneUnicode($this->handbook_first['title'.LANG])?>" title="<?php echo $this->handbook_first['title'.LANG]?>"><img src="<?php echo $this->baseUrl()?>/public/userfiles/images/handbook/<?php echo $this->handbook_first['pic_thumb']?>" alt="<?php echo $this->handbook_first['title'.LANG]?>" style="float:left" /></a>
+				<?php endif;?>
+				<h2 class="title-h2"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>handbook/index/view/id/<?php echo $this->handbook_first['record_id'] ?>/<?php echo $this->noneUnicode($this->handbook_first['title'.LANG])?>" title="<?php echo $this->handbook_first['title'.LANG]?>"><?php echo $this->handbook_first['title'.LANG]?></a></h2>
+				<?php echo strip_tags(html_entity_decode($this->handbook_first['preview'.LANG]), '<b><strong><p>')?>
+			<?php endif;?>
+			<div class="clear"></div>
+			
+			<?php if($this->handbook_other):?>
+			<h3 class="title-h3"><?php echo $this->lang['handbook']?> khác:</h3>
+			<ul class="sub-new">
+				<?php foreach($this->handbook_other as $value):?>
+					<li><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>handbook/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></li>
+				<?php endforeach;?>
+			</ul>
+			<?php endif;?>
+		</div>
+	</div>
+</div>

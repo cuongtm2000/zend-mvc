@@ -1,0 +1,47 @@
+<?php if ($this->lsPostItem): ?>
+	<table>
+		<thead>
+			<tr>
+				<th>STT</th>
+				<th>Hình sản phẩm</th>
+				<th>Tiêu đề</th>
+				<th>Ngày gửi</th>
+				<th>Lần xem</th>
+				<th>Trạng thái</th>
+				<th>Thao tác</th>
+			</tr>
+		</thead>
+			<tbody>
+			
+			<?php 
+				$i=1;
+				foreach ($this->lsPostItem as $value){
+					if($value['enable'] == 0){
+			    		$class = ' class="disable"';
+			    	}else{
+			        	$class = ($i%2==0) ? '' : ' class="alt"';
+			    	}
+					$picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/product/'.$value['pic_thumb'] : TEMPLATE.'/images/no-product.jpg';?>
+				
+				<tr<?php echo $class?>>
+			   		<td><?php echo $i++?></td>
+			 		<td><img src="<?php echo $this->baseUrl().$picthumb ?>" alt="<?php echo $value['title'.LANG] ?>" /></td>
+					<td><?php if($value['enable']==1):?>
+							<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG]?></a>
+						<?php else:?>
+						<?php echo $value['title'.LANG];?>
+						<?php endif;?>
+					</td>
+					<td><?php echo date('d-m-Y', strtotime($value['postdate']))?></td>
+					
+					<td><?php echo $value['hits'] ?> </td>
+					<td><?php echo ($value['enable']==1) ? 'Đã hiển thị' : 'Đang chờ duyệt';?></td>
+					<td><a href="#" title="Chỉnh sửa">Chỉnh sửa</a></td>				
+				</tr>	
+		<?php } ?>
+			
+		</tbody>
+	</table>
+<?php else: ?>
+	Bạn chưa đăng bài nào.
+<?php endif;?> 

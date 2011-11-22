@@ -1,0 +1,41 @@
+<div id="treecontrol">
+	<a class="login" title="Hộp thư  đến" href="<?php echo $this->baseUrl()?>/message/inbox"> Inbox<?php  if($this->unread != 0) echo ' ('.$this->unread.')'; ?></a>
+	<a class="login" title="Hộp thư đi" href="<?php echo $this->baseUrl()?>/message/outbox"> Outbox</a>
+	<a class="login" title="Viết thư mới" href="<?php echo $this->baseUrl()?>/message/compose">Compose</a>
+</div>
+	<div class="clear space"></div>
+
+<form action="" method="post" enctype="multipart/form-data" id="frm" name="frm">
+<fieldset>
+
+
+	<div class="col1">Người nhận</div>
+	<div class="col2"><input readonly="readonly" value="<?php echo $this->item['recipient']?>" class="txt-very-large" /></div>
+	<div class="clear space"></div>
+	
+	<div class="col1">Tiêu đề</div>
+	<div class="col2">
+		<input readonly="readonly" maxlength="100" value="<?php echo $this->item['title']?>"  class="txt-very-large" />
+	</div>
+	<div class="clear space"></div>
+	
+	<div class="col1">Ngày gửi</div>
+	<div class="col2">
+		<input readonly="readonly" maxlength="100" value="<?php echo $this->item['datetime']?>"  class="txt-very-large" />
+	</div>
+	<div class="clear space"></div>
+	<div class="col1">Nội dung</div>
+	<div class="col2">
+		<div style=" -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;"><?php echo html_entity_decode($this->item['content'])?></div>
+
+	</div>
+	<div class="clear space"></div>
+				
+	<div class="col1">&nbsp;</div>
+	<div class="col2"> 
+		<a href="javascript:history.back()" class="login-a">Trở lại</a>
+		
+	</div>
+	<div class="clear space"></div>
+</fieldset>
+</form>

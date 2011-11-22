@@ -1,0 +1,28 @@
+<h1 class="title-right"><span><?php echo $this->lang['news']?></span></h1>
+<div class="bg-pr">
+    <div class="bd-top-pr"></div>
+		<div class="tent-right">
+		
+			<?php if(is_array($this->list_news_new)):?>
+			
+				<?php foreach ($this->list_news_new as $value):?>
+					<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/news/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg'; ?>
+						<div class="masuring">
+							<img class="imgcon" style="float:left;" src="<?php echo $this->baseUrl().$picthumb ?>" alt="<?php echo $value['title'.LANG] ?>" />
+							<h3>
+								<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $value['record_id'].'/'.$this->noneUnicode($value['title'.LANG])  ?>" title="<?php echo $value['title'.LANG] ?>">
+									<?php echo $value['title'.LANG] ?>
+								</a>
+							</h3>
+							<?php echo html_entity_decode($value['preview'.LANG]) ?>
+						</div>
+				<?php endforeach;?>
+				<div class="clear"></div>
+			<?php else: ?>
+				<?php echo $this->list_news_new?>
+			<?php endif;?>
+			
+		</div><!--End tent right-->
+    <div class="bd-bt-pr"></div>
+</div><!--End bg pr-->
+	

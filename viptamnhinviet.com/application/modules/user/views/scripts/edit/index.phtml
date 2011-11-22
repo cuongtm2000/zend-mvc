@@ -1,0 +1,51 @@
+<h1 class="title-right"><span>Chỉnh sửa thông tin cá nhân</span></h1>
+<div class="bg-pr">
+	<div class="bd-top-pr"></div>
+		<div class="tent-right">
+			 <form action="" id="dangky" method="post">
+				<?php if($this->error ):?>
+					<ul style="color:#ff0000; border: 0.2em dotted #ff0000;">
+						<?php foreach($this->error as $er):?>
+							<li><?php echo $er?></li>
+						<?php endforeach ?>
+					</ul>
+				<?php endif;?>
+				<ul>
+					<li><label>Tên đăng nhập<span>*</span> : </label><input readonly="readonly" name="username" value="<?php echo $this->items['username'] ?>" /></li>
+					<li><label>Email<span>*</span> : </label><input  name="email" value="<?php echo $this->items['email'] ?>" /></li>
+					<li><label>Mật khẩu<span>*</span> : </label><input type="password" name="password" /></li>
+					<li><label>Xác nhận mật khẩu<span>*</span> : </label><input type="password" name="password1" /></li>
+					<li><label>Họ và tên<span>*</span> : </label><input name="full_name" value="<?php echo $this->items['full_name'] ?>" /></li>
+					<li class="select-date"><label>Ngày sinh<span>*</span> : </label>
+						<input name="day" value="<?php echo substr($this->items['birthday'] ,8)?>" onblur="if(this.value=='') this.value='Ngày'" onfocus="if(this.value =='Ngày' ) this.value=''"/> 
+
+						<select size="1" name="month">
+							<option value="0">Chọn tháng</option>
+							<?php 	
+								$m=substr($this->items['birthday'] ,6,2);
+								for($i=1;$i<=12;$i++){
+									$selected= ($m == $i) ? 'selected="selected"':''; 
+									echo '<option '.$selected.' value="'.$i.'">Tháng '.$i.'</option>';
+								}
+							?>
+						</select>
+
+						<input name="year" value="<?php echo substr($this->items['birthday'] ,0,4); ?>" onblur="if(this.value=='') this.value='Năm'" onfocus="if(this.value =='Năm' ) this.value=''" />
+					</li>
+					<li><label>Địa chỉ<span>*</span> : </label><input name="address" value="<?php echo $this->items['address'] ?>" /></li>
+					<li><label>Số CMND<span>*</span> : </label><input name="cmnd" value="<?php echo $this->items['cmnd'] ?>" /></li>
+					<li><label>Di động<span>*</span> : </label><input name="phone" value="<?php echo $this->items['phone'] ?>" /></li>
+					<li><label>Số tài khoản<span>*</span> : </label><input name="bank_number" value="<?php echo $this->items['bank_number'] ?>" /></li>
+					<li><label>Ngân hàng<span>*</span> : </label><input name="bank_name" value="<?php echo $this->items['bank_name'] ?>" /></li>
+					<li><label>Người giới thiệu<span>*</span> : </label><input readonly="readonly" name="user_gioithieu" value="<?php echo $this->items['user_gioithieu'] ?>" /></li>
+					<li><label>Người thụ hưởng<span>*</span> : </label><input readonly="readonly" name="user_baotro" value="<?php echo $this->items['user_baotro'] ?>" /></li>
+					<li class="bg-singin">
+						<label></label>
+						<input class="singin" type="submit" value="Đăng ký" />
+						<input class="singin" type="reset" value="Hủy bỏ" />
+					</li>
+				</ul>
+			</form>
+			</div><!--End tent right-->
+	<div class="bd-bt-pr"></div>
+</div><!--End bg pr-->

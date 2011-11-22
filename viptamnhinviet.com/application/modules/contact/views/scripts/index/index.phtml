@@ -1,0 +1,26 @@
+<h1 class="title-right"><span><?php echo $this->item['title'.LANG] ?></span></h1>
+<div class="bg-pr">
+	<div class="bd-top-pr"></div>
+			<div class="tent-right">
+				<div class="frame-contact">
+					<div class="info">
+						<?php echo html_entity_decode($this->item['content'.LANG]); ?>
+					</div>
+
+					<p>Quý khách có thể liên hệ với chúng tôi bằng cách điền đầy đủ thông tin vào mẫu sau:</p>
+					<form id="contact" method="post" action="" name="frm" onsubmit="return validatecheck();">
+						<ul>
+							<li><label><span>*</span> họ tên: </label><input name="fullname" id="fullname" type="text" /></li>
+							<li><label>công ty: </label><input type="text" name="company" value="" /></li>
+							<li><label><span>*</span> địa chỉ: </label><input name="address" id="address" type="text" /></li>
+							<li><label><span>*</span> điện thoại: </label><input name="phone" id="phone" type="text" /></li>
+							<li><label><span>*</span> email: </label><input name="email" id="email" type="text" /></li>
+							<li><label><span>*</span> nội dung:</label><textarea rows="10" cols="55" name="content"></textarea><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/image11.jpg" alt="Noidung" width="160" style="float:right;"  /></li>
+							<li><label></label><input type="submit" value="Gửi" name="submit_contact" class="submit-clear"/><input type="reset" value="Xoá" class="submit-clear"/></li>
+						</ul>
+						<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/contact.js"></script>
+					</form>
+				</div>
+			</div><!--End Tent right-->
+	<div class="bd-bt-pr"></div>
+</div><!--End bg pr-->

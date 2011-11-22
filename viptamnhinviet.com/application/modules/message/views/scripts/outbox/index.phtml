@@ -1,0 +1,58 @@
+<div id="treecontrol">
+	<a class="login" title="Hộp thư  đến" href="<?php echo $this->baseUrl()?>/message/inbox"> Inbox<?php  if($this->unread != 0) echo ' ('.$this->unread.')'; ?></a>
+	<a class="login" title="Hộp thư đi" href="<?php echo $this->baseUrl()?>/message/outbox"> Outbox</a>
+	<a class="login" title="Viết thư mới" href="<?php echo $this->baseUrl()?>/message/compose">Compose</a>
+</div><div class="clear space"></div>
+
+<form action="" method="post" enctype="multipart/form-data" id="frm" name="frm">
+<fieldset>
+	<legend>Hộp thư đi</legend>	<div class="clear space"></div>
+	<table>
+	<thead>
+		<tr>
+			<th class="txt15"><input onclick="javascript: select_switch(this.checked);" type="checkbox" name="checkall" /></th>
+			<th class="txt60">Người nhận</th>
+			<th>Tiêu đề</th>
+	        <th>Ngày gửi</th>
+			<th>Nội dung</th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php
+		if(is_array($this->allMess)){
+			$k=0;
+		    foreach($this->allMess as $value){
+		    	$class='';
+		    	if($k%2==1)
+		    		$class='class="alt"';
+		    	$k++;
+		    	
+		    	$cont=substr(strip_tags($value['content']),0,80);
+		    	if($value['status']==0){
+		    		$value['title']='<b>'.$value['title'].'</b>';
+		    		$cont='<b>'.$cont.'</b>';
+		    	}
+		    	
+		      echo '<tr '.$class.'>
+		               <td><input type="checkbox" name="ids[]" value="'.$value['record_id'].'" /></td>
+		               <td>'.$value['recipient'].'</td>
+		               <td><a href="'.$this->baseUrl().'/message/outbox/view/id/'.$value['record_id'].'">'.$value['title'].'</a></td>
+		               
+		               <td>'.$value['datetime'].'</td>
+		               <td>'.$cont.'...</td>
+		               
+		            </tr>';
+		        
+		    }
+		}else{
+			echo '<tr><td colspan="6">'.'Chưa có tin nhắn nào được gửi đi'.'</td></tr>';
+		}
+	    
+	?>
+	</tbody>
+	</table>
+<?php echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml'); ?>
+</fieldset>
+
+</form>
+<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE_ADMIN ?>/js/common.js"></script>

@@ -1,0 +1,18 @@
+<div class="frame">
+	<h1 class="title-right"><span><?php echo $this->lang['product']?></span></h1>
+	<div class="frame-gallery">
+		<?php if (is_array($this->listcat)): ?>
+			<?php foreach ($this->listcat as $value): ?>
+				<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/product_cat/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg';?>
+				<div class="product">
+					<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/cat/cid/<?php echo $value['cat_id'] ?>" title="<?php echo $value['cat_title'.LANG] ?>"><img src="<?php echo $this->baseUrl().$picthumb ?>" alt="<?php echo $value['cat_title'.LANG] ?>" class="img-product" /></a>
+					<p><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/cat/cid/<?php echo $value['cat_id'] ?>" title="<?php echo $value['cat_title'.LANG] ?>"><?php echo $value['cat_title'.LANG]?></a></p>
+				</div>
+			<?php endforeach;?>
+			<div class="clear"></div>
+		<?php else: ?>
+			<?php echo $this->listcat ?>
+		<?php endif;?>    
+	</div><!--End Fram gallery-->
+	<div class="bt-title-right"></div>
+</div><!--End frame-->

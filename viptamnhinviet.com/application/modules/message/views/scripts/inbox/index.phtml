@@ -1,0 +1,64 @@
+<div id="treecontrol">
+	<a class="login" title="Hộp thư  đến" href="<?php echo $this->baseUrl()?>/message/inbox"> Inbox<?php  if($this->unread != 0) echo ' ('.$this->unread.')'; ?></a>
+	<a class="login" title="Hộp thư đi" href="<?php echo $this->baseUrl()?>/message/outbox"> Outbox</a>
+	<a class="login" title="Viết thư mới" href="<?php echo $this->baseUrl()?>/message/compose">Compose</a>
+</div><div class="clear space"></div>
+
+<form action="" method="post" enctype="multipart/form-data" id="frm" name="frm">
+<fieldset>
+	<legend>Hộp thư đến</legend>	<div class="clear space"></div>
+	<table>
+	<thead>
+		<tr>
+			<th class="txt15"><input onclick="javascript: select_switch(this.checked);" type="checkbox" name="checkall" /></th>
+			<th class="txt60">Người gửi</th>
+			<th>Tiêu đề</th>
+	        <th>Ngày gửi</th>
+			<th>Nội dung</th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php
+		if(is_array($this->allMess)){
+			$k=0;
+		    foreach($this->allMess as $value){
+		    	$cont=substr(strip_tags($value['content']),0,100);
+		    	if($value['status']==0){
+		    		$value['title']='<b>'.$value['title'].'</b>';
+		    		$cont='<b>'.$cont.'</b>';
+		    	}
+		    	$class='';
+		    	if($k%2==1)
+		    		$class='class="alt"';
+		    	$k++;
+		    		
+		        echo '<tr '.$class.'>
+		               <td><input type="checkbox" name="ids[]" value="'.$value['record_id'].'" /></td>
+		               <td>'.$value['sender'].'</td>
+		               <td><a href="'.$this->baseUrl().'/message/inbox/view/id/'.$value['record_id'].'">'.$value['title'].'</a></td>
+		               
+		               <td>'.$value['datetime'].'</td>
+		               <td>'.$cont.'...</td>
+		               
+		            </tr>';
+		        
+		    }
+		}else{
+			echo '<tr><td colspan="6">'.'Hiện tại bạn không có tin nhắn nào'.'</td></tr>';
+		}
+	    
+	?>
+	</tbody>
+	</table>
+	
+	<div class="control-button">
+		<img src="<?php echo $this->baseUrl().TEMPLATE_ADMIN ?>/images/delete.png" alt="<?php echo $this->lang['sys_delete'] ?>" align="left" /> 
+		<a href="javascript:delete_list('');" title="<?php echo $this->lang['sys_delete'] ?>">
+			<?php echo $this->lang['sys_delete'] ?>
+		</a>
+	</div>
+	<?php echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml'); ?>
+</fieldset>
+
+</form>
+<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE_ADMIN ?>/js/common.js"></script>
