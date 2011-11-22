@@ -1,0 +1,3 @@
+1. Trong webadmin, giai phap co van de
+2. Giai phap o Front-end chua hien thi, huynh lam giong nhu module Tintuc nha
+3. Module Product, upload anh thu nho nhung khong hien thi, va upload anh lon cung khong. Ninh hay kiem tra "pic_full" neu co thi hien, ko thi im luon hihi
