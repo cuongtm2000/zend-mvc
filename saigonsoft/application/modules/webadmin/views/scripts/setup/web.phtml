@@ -8,23 +8,27 @@
 			?>
 		</ul>
 	<?php endif; ?>
-	<script type="text/javascript">
-	$(document).ready(function(){
-	    $("#add-rows").click(function(){
-	        $(".rows").before('<p><label>Config web</label><input name="web_namenew[]" value="" maxlength="45" class="txt-large" /> <input name="web_valuenew[]" value="" maxlength="45" class="txt-large" /></p>');
-	        return false;
-	    });
-	});
-	</script>
+	
 	<form action="" method="post" enctype="multipart/form-data" id="frm" name="frm">
 	<fieldset>
 		<legend><?php echo $this->lang['sys_web']?></legend>
+		<?php if($this->infouser('user_group')=='administrator'):?>
 		<p class="rows"><a href="#" id="add-rows"><?php echo $this->lang['sys_addrow']?></a></p>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("#add-rows").click(function(){
+				$(".rows").before('<p><label>Config web</label><input name="web_namenew[]" value="" maxlength="45" class="txt-large" /> <input name="web_valuenew[]" value="" maxlength="45" class="txt-large" /></p>');
+				return false;
+			});
+		});
+		</script>
+		<?php endif;?>
 	    <?php
+			$readonly = ($this->infouser('user_group')=='administrator') ? '' : ' readonly="readonly"';
 	        foreach($this->items as $item){
 	        	echo '<p><label>Config web</label>
-	                    <input name="web_name[]" value="'.$item['web_name'].'" maxlength="45" class="txt-large" />
-	                    <input name="web_value[]" value="'.$item['web_value'].'" maxlength="200" class="txt-large" />';
+	                    <input name="web_name[]" value="'.$item['web_name'].'"'.$readonly.' maxlength="45" class="txt-large" />
+	                    <input name="web_value[]" value="'.$item['web_value'].'" maxlength="200" class="txt-large" /></p>';
 	        }
 		?>
 		<p>

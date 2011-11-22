@@ -8,23 +8,26 @@
 			?>
 		</ul>
 	<?php endif; ?>
-	<script type="text/javascript">
-	$(document).ready(function(){
-	    $("#add-rows").click(function(){
-	        $(".rows").before('<p><label>Language</label><input name="langnamenew[]" value="" maxlength="30" class="txt-small" /> <?php $lang = $this->langlist(); foreach($lang as $value){echo '<input name="langnew'.$value.'[]" value="" maxlength="200" class="txt-small-x" /> '; }?></p>');
-	        return false;
-	    });
-	});
-	</script>
 	<form action="" method="post" enctype="multipart/form-data" id="frmsignup" name="frmsignup">
 	<fieldset>
 		<legend><?php echo $this->lang['sys_lang']?></legend>
-		<p class="rows"><a href="#" id="add-rows"><?php echo $this->lang['sys_addrow']?></a></p>
+		<?php if($this->infouser('user_group')=='administrator'):?>
+			<p class="rows"><a href="#" id="add-rows"><?php echo $this->lang['sys_addrow']?></a></p>
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$("#add-rows").click(function(){
+					$(".rows").before('<p><label>Language</label><input name="langnamenew[]" value="" maxlength="30" class="txt-small" /> <?php $lang = $this->langlist(); foreach($lang as $value){echo '<input name="langnew'.$value.'[]" value="" maxlength="200" class="txt-small-x" /> '; }?></p>');
+					return false;
+				});
+			});
+			</script>
+		<?php endif;?>
 	    <?php
+			$readonly = ($this->infouser('user_group')=='administrator') ? '' : ' readonly="readonly"';
 	    	$lang = $this->langlist(); //num language
 	        foreach($this->listlang as $item){
 	            echo '<p><label>Language</label>
-	                    <input name="langname[]" value="'.$item['lang_name'].'" maxlength="30" class="txt-small" /> ';
+	                    <input name="langname[]"'.$readonly.' value="'.$item['lang_name'].'" maxlength="30" class="txt-small" /> ';
 	            foreach($lang as $value){
 				     echo '<input name="lang'.$value.'[]" value="'.$item['lang'.$value].'" maxlength="200" class="txt-small-x" /> ';
 				}
