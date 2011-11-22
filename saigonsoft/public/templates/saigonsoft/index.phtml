@@ -23,13 +23,11 @@
 <?php echo $this->google_analytic; ?>
 
 </head>
-
 <body>
 <div id="wrapper">
 		<div id="header">
         	<div id="header-left">
-        		<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/logo.png" alt="Logo SaigonSoft"/>
-    
+        		<a href="<?php echo $this->baseUrl()?>/" title="<?php echo $this->lang['company']?>"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/logo.png" alt="Logo <?php echo $this->lang['company']?>" title="Logo <?php echo $this->lang['company']?>"/></a>
         	</div><!--End header left-->
             <div class="lang">
             	<a href="<?php echo $this->baseUrl() ?>/" title="Tiếng Việt">Tiếng Việt</a> 
@@ -37,7 +35,7 @@
             	<a href="<?php echo $this->baseUrl()?>/en" title="English">English</a> 
             	<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/en.gif" alt="English" />
             </div>
-            <div class="title-cty">CÔNG TY PHẦN MỀM SGS</div>
+            <div class="title-cty"><?php echo $this->lang['company']?></div>
             
           	<ul class="nav">
         		<?php 
@@ -57,11 +55,9 @@
                     <a href="#"></a>   
                     <div class="thumbnails"> 
                           <ul> 
-                          	
                        	  		<?php foreach($this->banner as $value):?>
 									<li><a href="<?php echo $this->baseUrl()?>/public/userfiles/images/banner/<?php echo $value['banner_url']?>"></a></li>
 								<?php endforeach;?>
-							
                           </ul> 
                     </div>  
                 </div> 
@@ -135,18 +131,23 @@
                <?php if($this->menu_support):?>
 				<h1 class="title-left"><span><?php echo $this->lang['support']?></span></h1>
 				<ul class="support">
-					<li><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/img-support.jpg" alt="Support" class="left"/>
-					<?php foreach($this->menu_support as $value):?>
+					<?php if($this->contact_home):?>
+					<li>
+						<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/img-support.jpg" alt="Support" class="left" />
+						<?php echo html_entity_decode($this->contact_home['content'.LANG])?>
+					</li>
+					<?php endif;?>
 					
-					<li><?php echo $value['support_name'].' - '.$value['support_phone'] ?></li>
-                    <li >
+					<?php foreach($this->menu_support as $value):?>
+					<li class="clear"><?php echo $value['support_name'].' - '.$value['support_phone'] ?></li>
+                    <li>
                     	<?php if ($value['support_type'] == 'yahoo'):?>
 	                    	<a href="ymsgr:sendim?<?php echo $value['support_value'] ?>&amp;m=<?php echo $this->lang['welcome_chat']?>" title="Chat <?php echo $value['support_value'] ?>">
 	                    		<img src="http://opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2&amp;l=us" alt="<?php echo $value['support_value'] ?>" />
 	                    	</a>
 	                    <?php else :?>
-	                    	<a href="skype:<?php  echo $value['support_value'] ?>?chat" title="Chat với <?php  echo $value['support_name'] ?>">
-	                    		<img  src="<?php echo $this->baseUrl().TEMPLATE ?>/images/skype.gif" alt="<?php  echo $value['support_name'] ?>" />
+	                    	<a href="skype:<?php  echo $value['support_value'] ?>?chat" title="Chat <?php  echo $value['support_name'] ?>">
+	                    		<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/skype.gif" alt="<?php  echo $value['support_name'] ?>" />
 	                    	</a>
 	                    <?php endif;?>
                     </li>
@@ -175,7 +176,7 @@
 			}
 		?>
         </ul>
-        <p>&copy; 2011 - SGS.VN Corp - All right reserved</p>
+        <p><?php echo $this->lang['copyright']?>. <?php echo $this->lang['developed']?> <a href="http://azweb.vn" title="azweb.vn">azweb.vn</a></p>
     </div><!--End footer-->
 </div><!--End Bg Footer-->
 </body>

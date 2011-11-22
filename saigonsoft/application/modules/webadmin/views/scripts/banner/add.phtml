@@ -32,16 +32,11 @@
 	    </div>
 	    <div class="clear space"></div>
 	    
-	    <?php
-	        $lang = $this->langlist();
-	        foreach($lang as $value){
-	            echo '<div class="col1">'.$this->lang['sys_title'].' '.strtoupper($value).'</div>
-	                <div class="col2">
-	                    <input name="title'.$value.'" value="'.$this->item['title'.$value].'" maxlength="45" class="txt-very-large" />
-	                </div>
-	                <div class="clear space"></div>';
-	        }
-	    ?>
+	    <div class="col1"><?php echo $this->lang['sys_title']?></div>
+		<div class="col2">
+			<input name="title" value="<?php echo $this->item['title'.$value]?>" maxlength="45" class="txt-very-large" />
+		</div>
+		<div class="clear space"></div>
 	    
 	    <div class="col1"><?php echo $this->lang['sys_picture'] ?> <span class="error">*</span></div>
 	    <div class="col2">
