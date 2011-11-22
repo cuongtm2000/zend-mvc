@@ -1,0 +1,67 @@
+<h1 class="title-right"><span><?php echo $this->lang['register'.LANG]?></span></h1>
+<div class="bg-pr">
+	<div class="bd-top-pr"></div>
+		<div class="tent-right">
+			 <form action="" id="dangky" method="post">
+				<p>Cám ơn bạn đã dành thời gian đăng ký gia nhập VIP Tầm nhìn Việt, thông tin càng chính xác sẽ giúp chúng tôi phân phối nhóm và được hỗ trợ từ các thành viên khác. Những thông tin không đầy đủ người quản lý sẽ xóa mà không cần thông báo.</p>
+				<?php if($this->error ):?>
+					<ul style="color:#ff0000; border: 0.2em dotted #ff0000;">
+						<?php foreach($this->error as $er):?>
+							<li><?php echo $er?></li>
+						<?php endforeach ?>
+					</ul>
+				<?php endif;?>
+				<ul>
+					<li><label>Tên đăng nhập<span>*</span> : </label><input name="username" value="<?php echo $this->items['username'] ?>" /></li>
+					<li><label>Email<span>*</span> : </label><input  name="email" value="<?php echo $this->items['email'] ?>" /></li>
+					<li><label>Mật khẩu<span>*</span> : </label><input type="password" name="password" /></li>
+					<li><label>Xác nhận mật khẩu<span>*</span> : </label><input type="password" name="password1" /></li>
+					<li><label>Họ và tên<span>*</span> : </label><input name="full_name" value="<?php echo $this->items['full_name'] ?>" /></li>
+					<li class="select-date"><label>Ngày sinh<span>*</span> : </label>
+                        <select size="1" name="day">
+							<option value="0">Ngày</option>
+							<?php 	
+								for($i=1;$i<=31;$i++){
+									$selected= ($this->items['day'] == $i) ? 'selected="selected"':''; 
+									echo '<option '.$selected.' value="'.$i.'">'.$i.'</option>';
+								}
+							?>
+						</select>
+                        
+						<select size="1" name="month">
+							<option value="0">Tháng</option>
+							<?php 	
+								for($i=1;$i<=12;$i++){
+									$selected= ($this->items['month'] == $i) ? 'selected="selected"':''; 
+									echo '<option '.$selected.' value="'.$i.'">'.$i.'</option>';
+								}
+							?>
+						</select>
+                        
+                        <select size="1" name="year">
+							<option value="0">Năm</option>
+							<?php 	
+								for($i=1945;$i<=2005;$i++){
+									$selected= ($this->items['year'] == $i) ? 'selected="selected"':''; 
+									echo '<option '.$selected.' value="'.$i.'">'.$i.'</option>';
+								}
+							?>
+						</select>
+					</li>
+					<li><label>Địa chỉ<span>*</span> : </label><input name="address" value="<?php echo $this->items['address'] ?>" /></li>
+					<li><label>Số CMND<span>*</span> : </label><input name="cmnd" value="<?php echo $this->items['cmnd'] ?>" /></li>
+					<li><label>Di động<span>*</span> : </label><input name="phone" value="<?php echo $this->items['phone'] ?>" /></li>
+					<li><label>Số tài khoản<span>*</span> : </label><input name="bank_number" value="<?php echo $this->items['bank_number'] ?>" /></li>
+					<li><label>Ngân hàng<span>*</span> : </label><input name="bank_name" value="<?php echo $this->items['bank_name'] ?>" /></li>
+					<li><label>Người giới thiệu<span>*</span> : </label><input name="user_gioithieu" value="<?php echo $this->items['user_gioithieu'] ?>" /></li>
+					<li><label>Người bảo trợ<span>*</span> : </label><input name="user_baotro" value="<?php echo $this->items['user_baotro'] ?>" /></li>
+					<li class="bg-singin">
+						<label></label>
+						<input class="singin" type="submit" value="Đăng ký" />
+						<input class="singin" type="reset" value="Hủy bỏ" />
+					</li>
+				</ul>
+			</form>
+			</div><!--End tent right-->
+	<div class="bd-bt-pr"></div>
+</div><!--End bg pr-->

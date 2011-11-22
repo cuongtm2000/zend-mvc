@@ -1,0 +1,70 @@
+<form action="" method="post" enctype="multipart/form-data" id="frm" name="frm">
+<fieldset>
+	<legend>Mua thẻ cào điện thoại</legend>	<div class="clear space"></div>
+	<?php if(count($this->error) > 0): ?>
+	<ul class="error">
+		<?php 
+		foreach ($this->error as $value){
+			echo '<li>'.$value.'</li>';
+		}
+		?>
+	</ul>
+	<?php endif; ?>	<div class="clear space"></div>
+	<div class="col1">Người nhận</div>
+	<div class="col2"><input name="recipient" value="<?php echo $this->item['recipient']?>" class="txt-very-large" /></div>
+	<div class="clear space"></div>
+	
+	<div class="col1">Tiêu đề</div>
+	<div class="col2">
+		<input name="title" maxlength="100" value="<?php echo $this->item['title']?>"  class="txt-very-large" />
+	</div>
+	<div class="clear space"></div>
+		
+	<div class="col1">Nội dung</div>
+	<div class="col2">
+		<textarea name="detail" cols="70" rows="10"><?php echo $this->item['detail']?></textarea>
+		
+	</div>
+	<div class="clear space"></div>
+	
+	<div class="col1">Nhà cung cấp</div>
+	<div class="col2">
+		<select>
+			<option value="0">---Chọn nhà cung cấp---</option>
+			<option value="0">Mobifone</option>
+			<option value="0">Vinaphone</option>
+			<option value="0">S-Fone</option>
+			<option value="0">Beeline</option>
+			<option value="0">Viettel</option>
+			<option value="0">Vietnammobile</option>
+		
+		</select>
+		
+	</div>
+	<div class="clear space"></div>
+		<div class="col1">Mệnh giá thẻ</div>
+	<div class="col2">
+		<select>
+			<option value="0">---Chọn mệnh giá---</option>
+			<option value="0">10.000</option>
+			<option value="0">20.000</option>
+			<option value="0">50.000</option>
+			<option value="0">100.000</option>
+			<option value="0">200.000</option>
+			<option value="0">300.000</option>
+			<option value="0">500.000</option>
+		
+		</select>
+		
+	</div>
+	<div class="clear space"></div>			
+				
+				
+	<div class="col1">&nbsp;</div>
+	<div class="col2">
+		<input type="submit" name="submit" value="  Mua " class="login" />
+		 <a href="javascript:history.back()" class="login-a">Trở lại</a>
+	</div>
+	<div class="clear space"></div>
+</fieldset>
+</form>

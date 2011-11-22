@@ -1,0 +1,38 @@
+<?php if (is_array($this->listsubcat)): ?>
+<div class="frame">
+	<h1 class="title-right"><span><?php echo $this->lang['product']?> &raquo; <?php echo $this->infocat['cat_title'.LANG] ?></span></h1>
+	<div class="frame-gallery">
+		
+			<?php foreach ($this->listsubcat as $value): ?>
+				<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/product_cat/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg';?>
+				<div class="product">
+					<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/cat/cid/<?php echo $value['cat_id'] ?>" title="<?php echo $value['cat_title'.LANG] ?>"><img src="<?php echo $this->baseUrl().$picthumb ?>" alt="<?php echo $value['cat_title'.LANG] ?>" class="img-product" /></a>
+					<p><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/cat/cid/<?php echo $value['cat_id'] ?>" title="<?php echo $value['cat_title'.LANG] ?>"><?php echo $value['cat_title'.LANG]?></a></p>
+				</div>
+			<?php endforeach;?>
+			<div class="clear"></div>
+  
+	</div><!--End Fram gallery-->
+	<div class="bt-title-right"></div>
+</div><!--End frame-->
+<?php endif;?>
+
+<div class="frame">
+	<h1 class="title-right"><span><?php echo $this->lang['product']?> &raquo; <?php echo $this->infocat['cat_title'.LANG] ?></span></h1>
+	<div class="frame-gallery">
+		<?php if (is_array($this->productcat)): ?>
+			<?php foreach ($this->productcat as $value): ?>
+				<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/product/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg';?>
+				<div class="product">
+					<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo $this->baseUrl().$picthumb ?>" alt="<?php echo $value['title'.LANG] ?>" /></a>
+					<p><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG]?></a></p>
+				</div>
+			<?php endforeach;?>
+			<div class="clear"></div>
+			<?php echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml');?>
+		<?php else: ?>
+			<?php echo $this->productcat ?>
+		<?php endif;?>    
+	</div><!--End Fram gallery-->
+	<div class="bt-title-right"></div>
+</div><!--End frame-->

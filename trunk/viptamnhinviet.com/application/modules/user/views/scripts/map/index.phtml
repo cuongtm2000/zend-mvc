@@ -1,0 +1,54 @@
+<div class="bg-pr">
+    <div class="bd-top-pr"></div>
+		<div class="tent-right">
+
+		
+
+<?php 
+	function drawTree($tree,$id,$list){
+		echo '<ul id="'.$id.'" class="filetree">';
+			drawNode($tree,$list);
+		echo '</ul>';
+	}
+	function drawNode($tree,$lst){
+		$class= isset($tree[0])? 'folder': 'file';
+		if (in_array($tree['value'], $lst))
+			$style=' style ="color: #FF20FF;" ';
+		else 
+			$style='';
+		
+		echo '<li><span  class="'.$class.'"'.$style.'><b>'.$tree['value'].'</b> (Trái:<b>'.$tree['c0'].'</b> - Phải:<b>'.$tree['c1'].'</b>)</span>';
+		if($class == 'folder'){
+			echo '<ul>';
+			$i=0;
+			while(isset($tree[$i])){
+				drawNode($tree[$i],$lst);
+				$i++;
+			}			
+			echo '</ul>';
+		}
+		echo '</li>';	
+	}
+?>
+<script >
+	$(document).ready(function(){
+	$("#browser").treeview({
+		control: "#treecontrol",
+		animated:"normal"		
+	});	});
+</script>
+	<div id="treecontrol">
+		<a class="login" title="Collapse the entire tree below" href="#"> Collapse All</a>
+		<a class="login" title="Expand the entire tree below" href="#"> Expand All</a>
+		<a class="login" title="Toggle the tree below, opening closed branches, closing open branches" href="#">Toggle All</a>
+	</div>
+	<p>
+		<?php $lst=explode('|',$this->listUserQuanly); ?>
+		<b><?php echo $this->tree['value']?></b> hiện đang là quản lí cấp <?php echo number_format(count($lst)/30,0)?>
+	</p><br />
+		
+	<?php		drawTree($this->tree,'browser',$lst)?>
+		
+		</div><!--End tent right-->
+    <div class="bd-bt-pr"></div>
+</div><!--End bg pr-->

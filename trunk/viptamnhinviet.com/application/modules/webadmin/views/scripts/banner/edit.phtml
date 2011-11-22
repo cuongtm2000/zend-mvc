@@ -1,0 +1,77 @@
+<div class="content">
+	<?php if(count($this->error) > 0): ?>
+		<ul class="error-li">
+			<?php 
+			foreach ($this->error as $value){
+				echo '<li>'.$value.'</li>';
+			}
+			?>
+		</ul>
+	<?php endif; ?>
+	
+	<?php if(count($this->item)): ?>
+	<form action="" method="post" enctype="multipart/form-data" id="frm" name="frm">
+	<fieldset>
+		<legend><?php echo $this->lang['sys_editpost']?></legend>
+		<div class="col1"><?php echo $this->lang['catparent'] ?></div>
+	    <div class="col2">
+	        <select name="parentcat" id="parentcat">
+	        	<option value="banner">Banner</option>
+	        	<option value="logo">Logo</option>
+	        </select>
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <?php
+	        $lang = $this->langlist();
+	        foreach($lang as $value){
+	            echo '<div class="col1">'.$this->lang['sys_title'].' '.strtoupper($value).'</div>
+	                <div class="col2">
+	                    <input name="title'.$value.'" value="'.$this->item['banner_name'.$value].'" maxlength="45" class="txt-very-large" />
+	                </div>
+	                <div class="clear space"></div>';
+	        }
+	    ?>
+	    
+	    <div class="col1"><?php echo $this->lang['sys_picture'] ?> <span class="error">*</span></div>
+	    <div class="col2">
+	    	<?php if($this->item['banner_url'] != null): ?>
+	    		<input type="hidden" name="fileold" value="<?php echo $this->item['banner_url'] ?>" />
+	    		<div class="border-img"><a href="<?php echo $this->baseUrl().'/public/userfiles/images/'.$this->controller.'/'.$this->item['banner_url'] ?>" class="nyroModal" title="<?php echo $this->item['banner_name']?>"><img src="<?php echo $this->baseUrl().'/public/userfiles/images/'.$this->controller.'/'.$this->item['banner_url'] ?>" alt="<?php echo $this->item['banner_name']?>" /></a></div>
+	    		<script type="text/javascript">
+					$(function() {
+					  $('.nyroModal').nyroModal();
+					});
+				</script>
+	    	<?php endif; ?>
+	        <input type="file" name="file" size="48%" />
+	        <h6><strong>Banner</strong>: <?php echo $this->config['banner_width']?> x <?php echo $this->config['banner_height']?> &nbsp; &amp; &nbsp; <strong>Logo</strong>: <?php echo $this->config['logo_width']?> x <?php echo $this->config['logo_height']?></h6>
+	    </div>
+	    <div class="clear space"></div>
+	
+	    <div class="col1"><?php echo $this->lang['banner_link'] ?></div>
+	    <div class="col2">
+	        <input name="banner_link" value="<?php echo $this->item['banner_link'] ?>" maxlength="200" class="txt-very-large" />
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <div class="col1"><?php echo $this->lang['sys_active'] ?></div>
+	    <div class="col2 radio">
+	        <input type="radio" checked="checked" name="active" id="active" value="1" /> <label for="active"><?php echo $this->lang['sys_active'] ?></label> &nbsp;&nbsp; <input type="radio"  name="active" id="deactive" value="0" /> <label for="deactive"><?php echo $this->lang['sys_hidden'] ?></label>
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <div class="col1">&nbsp;</div>
+	    <div class="col2">
+	        <input type="submit" name="submit" value="  <?php echo $this->lang['sys_edit'] ?>  " class="login" /> <a href="javascript:history.back()" class="login-a"><?php echo $this->lang['sys_cancel'] ?></a>
+	    </div>
+	    <div class="clear space"></div>
+	</fieldset>
+	</form>
+	<script type="text/javascript">
+		var the_form = window.document.frm;
+		radio_list("<?php echo $this->item['enable'] ?>", the_form.active);
+		select_list("<?php echo $this->item['position'] ?>", the_form.parentcat);
+	</script>
+	<?php endif; ?>
+</div>

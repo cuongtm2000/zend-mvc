@@ -1,0 +1,24 @@
+<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE?>/js/validate-login.js"></script>
+<?php if (count($this->messages)) : ?>
+<script type="text/javascript">
+   		<?php $str = ''; foreach ($this->messages as $message) : ?>
+   			<?php $str .= $this->escape($message).'\n'; ?>
+   		<?php endforeach; ?>
+   		<?php echo 'alert("'.$str.'")'; ?>
+    </script>
+	<?php endif; ?>
+
+<h1 class="title-right"><span>ĐĂNG NHẬP</span></h1>
+<div class="bg-pr">
+	<div class="bd-top-pr"></div>
+		<div class="tent-right">
+			<form action="" id="dangky" method="post">
+				<ul>
+					<li><label>Tên đăng nhập<span>*</span> : </label><input name="username" value="<?php echo $this->items['username'] ?>" /></li>
+					<li><label>Mật khẩu<span>*</span> : </label><input type="password" name="password" value="" /></li>
+					<li class="bg-singin"><label></label><input type="submit" value="Đăng nhập" class="singin" /> </li>
+				</ul>
+			</form>
+		</div><!--End tent right-->
+	<div class="bd-bt-pr"></div>
+</div><!--End bg pr-->

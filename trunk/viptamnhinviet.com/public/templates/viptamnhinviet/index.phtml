@@ -1,0 +1,293 @@
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="SHORTCUT ICON" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/gif" />
+
+<link href="<?php echo $this->baseUrl().TEMPLATE ?>/css/dosvn.css" rel="stylesheet" type="text/css" />
+
+<?php echo $this->headTitle()?>
+<?php echo $this->headMeta() ?>
+<?php echo $this->headLink() ?>
+<?php echo $this->headScript() ?>
+<?php echo $this->google_analytic; ?>
+</head>
+<body>
+<div id="wrapper">
+    	<div id="hd-left">
+			<a href="<?php echo $this->baseUrl() ?>/" title="Logo <?php echo $this->web['titleweb']?>">
+				<?php if($this->logo):?>
+					<img src="<?php echo $this->baseUrl().'/public/userfiles/images/banner/'.$this->logo['banner_url']?>" alt="<?php echo $this->logo['banner_name']?> <?php echo $this->web['titleweb']?>" />
+				<?php else : ?>
+					<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/logo.png" alt="Logo <?php echo $this->web['titleweb']?>" />
+				<?php endif ?>
+			</a>
+		</div>
+            <div id="hd-right">
+            	<div class="menu-frm">
+                    <ul class="menu">
+						<?php 
+							$folders = $this->menubar();
+							foreach($folders as $m){		
+								$target = ($m['target']=='') ? '' : ' target="'.$m['target'].'"';
+								$select =($this->module==$m['url']) ? ' class="select"': '';
+								echo '<li'.$select.'><a href="'.$this->baseUrl().'/'.LANGURL.$m['url'].'" title="'.$m['module'.LANG].'"'.$target.'>'.html_entity_decode($m['module'.LANG]).'</a></li>';
+							}
+						?>                        
+                    </ul>
+                    <div class="clear"></div>
+					
+					<?php if(!$this->checklogin()): ?>		
+						<form action="<?php echo $this->baseUrl()?>/user/login" class="frm-login" name="frm-login" method="post">
+							<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/user.gif" alt="ico user" /><input name="username" value="Username" onblur="if(this.value=='') this.value='Username'" onfocus="if(this.value =='Username' ) this.value=''" />
+							<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/key.gif" alt="ico key" /><input type="password" name="password" value="Password" onblur="if(this.value=='') this.value='Password'" onfocus="if(this.value =='Password' ) this.value=''"/>
+							<input type="submit"  title="Login" value="Login" class="login" />
+							<p class="forget"><a href="<?php echo $this->baseUrl()?>/user/forgot" title="Quên mật khẩu" class="forget-1">Quên mật khẩu</a> <a href="<?php echo $this->baseUrl()?>/user/register" title="Đăng ký thành viên" class="forget-2">Đăng ký thành viên</a></p>
+						</form>
+					<?php else:?>
+						<?php $mess =new Message_Model_Message();?>	
+						<p class="logged">
+							Chào <strong><?php echo $this->infouser('full_name')?></strong> 
+							<a href="<?php echo $this->baseUrl()?>/message/inbox" title="Hộp thư">
+								Hộp thư (<?php echo $mess->countUnread() ?>)
+							</a> 
+							<a href="<?php echo $this->baseUrl()?>/user/logout" title="Thoát">Thoát</a>
+						</p>
+					<?php endif;?>	
+                   
+                </div>
+                <ul class="nav">
+                	<li><a href="<?php echo $this->baseUrl() ?>/product" title=""><span>Giới thiệu sản phẩm  </span></a></li>
+                    <li><a href="<?php echo $this->baseUrl() ?>/handbook" title=""><span>Kiến thức TMĐT</span></a></li>
+                </ul>
+            </div><!--End header Right-->
+    <div class="clear"></div>
+    <div id="content">
+    	<div id="leftcontent">	
+		<?php if($this->checklogin()): ?>		
+			<h1 class="title-list">Bảng điều khiển</h1>
+			<div class="bg-list">
+				<ul class="sub-list">
+					<li><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-2.gif" alt="" /> <a href="<?php echo $this->baseUrl() ?>/product/list" title="">Sản phẩm đã đăng</a></li>
+					<li><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-2.gif" alt="" /> <a href="<?php echo $this->baseUrl() ?>/product/add" title="">Đăng sản phẩm</a></li>
+					<li><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-2.gif" alt="" /> <a href="<?php echo $this->baseUrl() ?>/user/map" title="">Sơ đồ mạng lưới</a></li>
+					<li><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-2.gif" alt="" /> <a href="<?php echo $this->baseUrl() ?>/user/log" title="">Lịch sử giao dịch</a></li>
+					<li><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-3.gif" alt="" /> <a href="<?php echo $this->baseUrl() ?>/user/edit" title="">Thay đổi thông tin cá nhân</a></li>
+					<li><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-4.gif" alt="" /> <a href="#" title="">Số tiền tích lũy: <span class="error"><?php echo $this->infouser('balance')?> V</span></a></li>
+				</ul>
+			</div><!--End bg list-->
+			<div class="bt-title-list"></div>
+		<?php endif;?>	
+		
+		<?php if(isset($this->menu_about)): ?>
+			<h1 class="title-list"><?php echo $this->lang['about'] ?></h1>
+			<div class="bg-list">
+				<ul class="sub-list">
+				<?php 
+					foreach($this->menu_about as $value){
+						echo '<li><img src="'.$this->baseUrl().TEMPLATE.'/images/ico-4.gif" alt="" /> <a href="'.$this->baseUrl().'/'.LANGURL.'about'.'/index/view/id/'.$value['record_id'].'/'.$this->noneUnicode($value['title'.LANG]).'" title="'.$this->escape($value['title'.LANG]).'">'.$this->escape($value['title'.LANG]).'</a></li>';
+					}
+				?>
+				</ul>
+			</div><!--End bg list-->
+			<div class="bt-title-list"></div>
+		<?php endif;?>
+		
+		<?php if(isset($this->menu_news)): ?>
+			<h1 class="title-list"><?php echo $this->lang['news'] ?></h1>
+			<div class="bg-list">
+				<ul class="sub-list">
+				<?php 
+					foreach($this->menu_news as $value){
+						echo '<li><img src="'.$this->baseUrl().TEMPLATE.'/images/ico-4.gif" alt="" /> <a href="'.$this->baseUrl().'/'.LANGURL.'news'.'/index/cat/id/'.$value['cat_id'].'/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
+					}
+				?>
+				</ul>
+			</div><!--End bg list-->
+			<div class="bt-title-list"></div>
+		<?php endif;?>
+		
+		<?php if(isset($this->menu_handbook)): ?>
+			<h1 class="title-list"><?php echo $this->lang['handbook'] ?></h1>
+			<div class="bg-list">
+				<ul class="sub-list">
+				<?php 
+					foreach($this->menu_handbook as $value){
+						echo '<li><img src="'.$this->baseUrl().TEMPLATE.'/images/ico-4.gif" alt="" /> <a href="'.$this->baseUrl().'/'.LANGURL.'handbook'.'/index/cat/cid/'.$value['cat_id'].'/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
+					}
+				?>
+				</ul>
+			</div><!--End bg list-->
+			<div class="bt-title-list"></div>
+		<?php endif;?>
+		
+		<?php if(isset($this->listProductCat) && is_array($this->listProductCat)): ?>
+			<h1 class="title-list"><?php echo $this->lang['product'] ?></h1>
+			<div class="bg-list">
+				<ul class="sub-list">
+				<?php 
+					$rowsize = count($this->listProductCat);
+					$params = Zend_Controller_Front::getInstance()->getRequest()->getParams();
+					$cat_id = isset($params['cid']) ? intval($params['cid']) : 0;
+					
+					//Find parent_id
+					$parent_id	= $cat_id;
+					if ( $cat_id ){
+						for ($i=0; $i < $rowsize; $i++){
+							if ($cat_id == $this->listProductCat[$i]['cat_id']){
+								if ( $this->listProductCat[$i]['cat_parent_id'] ){
+									$parent_id = $this->listProductCat[$i]['cat_parent_id'];
+								}
+								break;
+							}
+						}
+					}
+					
+					//Display cat menu
+					for ($i=0; $i < $rowsize; $i++){
+						if ( $this->listProductCat[$i]['cat_parent_id'] == 0 ){
+							//Parent categories
+							echo '<li><img src="'.$this->baseUrl().TEMPLATE.'/images/ico-4.gif" alt="" /> <a href="'.$this->baseUrl().'/'.LANGURL.'product/index/cat/cid/'.$this->listProductCat[$i]['cat_id'].'" title="'.$this->listProductCat[$i]['cat_title'.LANG].'">'.$this->listProductCat[$i]['cat_title'.LANG].'</a>';
+							//Sub categories
+							if ( $parent_id && ($parent_id == $this->listProductCat[$i]['cat_id']) ){
+								for ($j=0; $j < $rowsize; $j++){
+									if ( $this->listProductCat[$j]['cat_parent_id'] == $this->listProductCat[$i]['cat_id'] ){
+										echo '<ul class="sub">';
+											for ($j=0; $j < $rowsize; $j++){
+												if ( $this->listProductCat[$j]['cat_parent_id'] == $this->listProductCat[$i]['cat_id'] ){
+													echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'product/index/cat/cid/'.$this->listProductCat[$j]['cat_id'].'" title="'.$this->listProductCat[$j]['cat_title'.LANG].'">'.$this->listProductCat[$j]['cat_title'.LANG].'</a></li>';
+												}
+											}
+										echo '</ul>';
+									}
+								}
+							}
+							echo '</li>';
+						}
+					}
+				?>
+				</ul>
+			</div><!--End bg list-->
+			<div class="bt-title-list"></div>
+		<?php endif;?>
+		
+		<?php if($this->adv):?>	
+            <h1 class="title-left">Đối tác vàng</h1>
+            <div class="bg-left-tent">
+                <ul class="partner">
+					<?php foreach ($this->adv as $value):?>
+						<li><a href="<?php echo $value['url']?>" target="<?php echo $value['type']?>" title="<?php echo $value['title'.LANG].' - '.$value['description']?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['title'.LANG].' - '.$value['description']?>"/></a></li>
+					<?php endforeach;?>					
+                </ul>
+            </div>
+            <div class="bt-title-left"></div>
+       	<?php endif;?>  
+
+		<?php if(isset($this->menu_support)): ?>					  
+			<h1 class="title-support"><?php echo $this->lang['support']?> </h1>
+			<div class="bg-left-tent">
+				<ul class="support">
+					<?php foreach ($this->menu_support as $value): ?>
+						<li><?php echo $value['support_name'] ?><br />
+						<a href="ymsgr:sendim?<?php echo $value['support_value'] ?>&amp;m=<?php echo $this->lang['welcome_chat']?>" title="Chat <?php echo $value['support_value'] ?>"><img src="http://opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2&amp;l=us" alt="<?php echo $value['support_value'] ?>" /></a></li>
+					<?php endforeach;?>
+				</ul>
+			</div>
+			<div class="bt-title-sport"></div>	
+		<?php endif;?>		 
+			 
+		<?php $sc = new GLT_System_SmartCounter();?>
+		<h1 class="title-support"><?php echo $this->lang['counter']?> </h1>
+		<div class="bg-left-tent">	
+			<ul class="statistics">
+				<li><a><?php echo $this->lang['counter_today']?>: <?php echo $sc->visit_today();?></a></li>
+				<li><a><?php echo $this->lang['counter_online']?>: <?php echo $sc->visit_online();?></a></li>
+				<li><a><?php echo $this->lang['counter_total']?>: <?php echo $sc->visit_total();?></a></li>
+			</ul>
+		</div>	
+		<div class="bt-title-sport"></div>
+		
+		<!-- <h1 class="title-support">Liên hệ</h1>
+		<div class="bg-left-tent">
+			<ul class="sub-contact">
+				<li class="sub-tact1"><span>Kinh doanh</span> : 0987.654.321</li>
+				<li class="sub-tact2"><span>Kỹ thuật</span> : 0979.779.779</li>
+				<li class="sub-tact3"><span>Tư vấn</span> : 0613.987.001</li>
+			</ul>
+		</div>
+		<div class="bt-title-sport"></div> -->
+        </div><!--End leftcontent-->
+        
+        <div id="rightcontent">
+        	<div id="banner">
+            	<div class="left">
+                	<div class="container">
+                		<?php if($this->banner):?>
+                        <div class="wt-rotator">
+                            <a href="#"></a>   
+                            <div class="thumbnails"> 
+                                  <ul> 
+								   <?php foreach($this->banner as $b):?>
+										<li>
+											<a href="<?php echo $this->baseUrl().'/public/userfiles/images/banner/'.$b['banner_url']?>" title="<?php echo $b['banner_name'] ?>"> </a>
+										</li>							
+									<?php endforeach ?> 
+                                  </ul> 
+                                  <script type="text/javascript">
+									$(document).ready(function(){
+										runbanner(<?php echo $this->config['banner_width']?>,<?php echo $this->config['banner_height']?>);
+									});
+								</script>
+                            </div>  
+                        </div>
+                        <?php else:?>
+                        	<img src="<?php echo $this->baseUrl().TEMPLATE?>/images/banner.jpg" alt="Banner" />
+                        <?php endif;?>
+                    </div>
+              
+				</div>
+				<?php if($this->video_home):?>
+                <div class="video">
+                	<a href="<?php echo $this->video_home['url']?>" rel="prettyPhoto" title="<?php echo $this->video_home['title'.LANG]?>"><img src="<?php echo $this->baseUrl().TEMPLATE?>/images/no-videos.png" alt="<?php echo $this->video_home['title'.LANG]?>" /></a>
+                	<script type="text/javascript" charset="utf-8">
+					  $(document).ready(function(){
+						$(".video a[rel^='prettyPhoto']").prettyPhoto();
+					  });
+					</script>
+            	</div>
+            	<?php endif;?>
+                <div class="clear"></div>
+            </div><!--End banner-->	
+			
+			<?php echo $this->layout()->content;?>
+        </div><!--End rightcontent-->
+		<div class="clear"></div>
+    </div><!--End Content-->	
+    <div class="clear"></div>
+</div><!--End wrapper-->
+
+<!--Footer-->
+<div id="footer">
+	<div class="tent-fter">
+    	<ul class="menu-fter">
+		<?php 
+			$folders = $this->menubar();
+			foreach($folders as $m){		
+				$target = ($m['target']=='') ? '' : ' target="'.$m['target'].'"';
+				$select =($this->module==$m['url']) ? ' class="select"': '';
+				echo '<li'.$select.'><a href="'.$this->baseUrl().'/'.LANGURL.$m['url'].'" title="'.$m['module'.LANG].'"'.$target.'>'.html_entity_decode($m['module'.LANG]).'</a></li>';
+			}
+		?> 
+        </ul>
+		
+        <div class="clear"></div>
+        <?php if($this->contact_home):?>
+        	<?php echo html_entity_decode($this->contact_home['content'.LANG])?>
+        <?php endif;?>
+    </div>
+</div>
+<!--End footer-->
+</body>
+</html>

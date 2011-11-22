@@ -1,0 +1,51 @@
+<div id="treecontrol">
+	<a class="login" title="Hộp thư  đến" href="<?php echo $this->baseUrl()?>/message/inbox"> Inbox<?php  if($this->unread != 0) echo ' ('.$this->unread.')'; ?></a>
+	<a class="login" title="Hộp thư đi" href="<?php echo $this->baseUrl()?>/message/outbox"> Outbox</a>
+	<a class="login" title="Viết thư mới" href="<?php echo $this->baseUrl()?>/message/compose">Compose</a>
+</div>
+
+
+	<div class="clear space"></div>
+
+<script type="text/javascript" src="<?php echo $this->baseUrl() ?>/public/plugin/ckeditor/ckeditor.js"></script>
+<form action="" method="post" enctype="multipart/form-data" id="frm" name="frm">
+<fieldset>
+	<legend>Viết thư</legend>	<div class="clear space"></div>
+	<?php if(count($this->error) > 0): ?>
+	<ul class="error">
+		<?php 
+		foreach ($this->error as $value){
+			echo '<li>'.$value.'</li>';
+		}
+		?>
+	</ul>
+	<?php endif; ?>	<div class="clear space"></div>
+	<div class="col1">Người nhận</div>
+	<div class="col2"><input name="recipient" value="<?php echo $this->item['recipient']?>" class="txt-very-large" />	(Cách nhau bởi dấu ';')</div>
+	<div class="clear space"></div>
+	
+	<div class="col1">Tiêu đề</div>
+	<div class="col2">
+		<input name="title" maxlength="100" value="<?php echo $this->item['title']?>"  class="txt-very-large" />
+	</div>
+	<div class="clear space"></div>
+		
+	<div class="col1">Nội dung</div>
+	<div class="col2">
+		<textarea name="detail" cols="70" rows="10"><?php echo $this->item['detail']?></textarea>
+		<script type="text/javascript">
+		//<![CDATA[
+			CKEDITOR.replace('detail');
+		//]]>
+		</script>
+	</div>
+	<div class="clear space"></div>
+				
+	<div class="col1">&nbsp;</div>
+	<div class="col2">
+		<input type="submit" name="submit" value="   Gửi thư " class="login" />
+		 <a href="javascript:history.back()" class="login-a"><?php echo $this->lang['sys_cancel'] ?></a>
+	</div>
+	<div class="clear space"></div>
+</fieldset>
+</form>

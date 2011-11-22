@@ -1,0 +1,89 @@
+<?php
+class Webadmin_IndexController extends GLT_Controller_Backend {
+	private $_data;
+		
+	public function init(){        
+        $this->view->lang = Zend_Registry::get("lang"); //load language
+        //List menu
+        $listmenu = Zend_Registry::get("listmenu");
+        $this->view->listmenu = $listmenu;
+        
+        $this->view->selecthome = ' class="selected"'; 
+
+        $this->_data = $this->_request->getParams();
+	}
+	public function indexAction() {
+        $numuser = new Webadmin_Model_Account();
+        $this->view->numuser = $numuser->countUser();
+	}
+    public function loginAction() {
+        if ($this->_request->isPost()) {
+        	$user = new Webadmin_Model_Account();
+        	if($user->checkLogin($this->_data['username'], $this->_data['password'])){
+        		$session = new Zend_Session_Namespace('logged');
+                $session->loginok = '1'; //session logged
+                $path = $this->get_between($this->_request->getRequestUri(), '/', '/webadmin');
+                $session->path = ($path) ? '/'.$path : '';
+                $this->_redirect('/webadmin');
+        	}else{
+        		$error[] = 'Đăng nhập thất bại:';
+            	$error[] = '- Vui lòng kiểm tra Username và Password';
+				$this->view->messages = $error; 
+				//parse to textbox
+				$this->view->user = $this->_data['username'];
+				$this->view->pass = $this->_data['password'];
+        	}
+        }
+        //Start layout
+        $layoutPath = PUBLIC_PATH .'/templates' . TEM_ADMIN;
+        $option = array ('layout' => 'login', 'layoutPath' => $layoutPath );
+        Zend_Layout::startMvc ( $option );
+	}
+	public function forgotAction() {
+		if ($this->_request->isPost()) {
+			$validate  = new Webadmin_Form_ValidateForgot($this->_data);
+			if($validate->isError()==true){
+    			$this->view->messages = $validate->getError();
+				$this->view->item = $validate->getData();
+    		}else{
+    			$record = new Webadmin_Model_Account();
+    			$record->requestCodeUser($this->_data, $_SERVER['HTTP_HOST'].$this->_request->getrequestUri());
+        		//$this->_redirect($this->_module.'/'.$this->_controller);
+    		}
+		}
+		if(isset($this->_data['code'])){
+			$validate  = new Webadmin_Form_ValidateForgotGetPass($this->_data);
+			if($validate->isError()==true){
+    			die();
+    		}else{
+    			$record = new Webadmin_Model_Account();
+    			$record->requestUpdateUser($this->_data, $_SERVER['HTTP_HOST'].$this->_request->getrequestUri());
+        		//$this->_redirect($this->_module.'/'.$this->_controller);
+    		}
+    		
+			$this->_helper->viewRenderer->setNoRender(); // Disable the viewscript
+		}
+
+    	//Start layout
+        $layoutPath = PUBLIC_PATH .'/templates' . TEM_ADMIN;
+        $option = array ('layout' => 'login', 'layoutPath' => $layoutPath );
+        Zend_Layout::startMvc ( $option );
+    }
+    public function logoutAction() {
+        $auth = Zend_Auth::getInstance();
+        $auth->clearIdentity();
+        $this->_redirect('/webadmin');
+    }
+	private function get_between($input, $start, $end){
+        $substr = substr($input, strlen($start)+strpos($input, $start), (strlen($input) - strpos($input, $end))*(-1));
+        return $substr;
+	}
+    public function alexaAction(){
+    	$p = array();
+        preg_match( '#<POPULARITY URL="(.*?)" TEXT="([0-9]+){1,}"/>#si', file_get_contents('http://data.alexa.com/data?cli=10&dat=s&url=' . $_SERVER['HTTP_HOST']), $p );
+        echo isset($p[2]) ? number_format(intval($p[2])):0;
+        $this->_helper->viewRenderer->setNoRender(); // Disable the viewscript
+        $this->_helper->layout->disableLayout();  // Disable the layout
+    }
+
+}

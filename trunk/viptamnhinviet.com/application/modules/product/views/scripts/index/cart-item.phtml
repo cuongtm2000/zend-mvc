@@ -1,0 +1,53 @@
+<div class="product-content">
+	<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
+	<div class="contentb">
+		<div class="content-conner-panel">
+            <h4 class="title-product-order">Thông tin đặt phòng</h4>
+            <form name="order" action="" method="post">
+				<table align="center" class="form_order" cellspacing="0" cellpadding="5">
+				<thead>
+				  <tr align="center">
+					<td width="150">Hình ảnh phòng</td>
+					<td>Tên phòng</td>
+					<td>Đơn giá</td>
+					<td width="80">Số ngày ở</td>
+					<td>Thành tiền</td>
+					<td width="100">Hủy phòng</td>
+				  </tr>
+				</thead>
+				<tbody>
+					<?php 
+					if(!empty($this->Items)){
+						foreach ($this->Items as $k => $v):
+							$pic = '<img src="'.$this->baseUrl().'/public/userfiles/images/product/'.$v['pic_thumb'].'" class="img-border img-product" alt="'.$v['cat_title'].'" />';
+							$name = '<a href="'.$this->baseUrl('/product/index/view/id/'.$v['record_id']).'">'.$v['title'.LANG] .' - '. $v['cat_title'.LANG].'</a>';
+							$price = $v['unit'];
+							$num_of_dates = $this->formText('num_of_dates['.$v['record_id'].']', $this->cart[$v['record_id']], array('style'=>'width:30px;text-align: center;', 'maxlength'=>3));
+							$total_item = $price * $this->cart[$v['record_id']];
+							
+							$img_del = '<img src="'.$this->baseUrl().TEMPLATE.'/images/Fromdatphong_del.png" alt="del" />';
+							$link_del = '<a href="'.$this->baseUrl('/product/index/cart-delete/id/'.$v['record_id']).'">'.$img_del.'</a>';
+					?>
+					<tr align="center">
+						<td><?php echo $pic?></td>
+						<td><strong><?php echo $name?></strong></td>
+						<td><?php echo number_format($price, 3)?></td>
+						<td><?php echo $num_of_dates?></td>
+						<td><?php echo number_format($total_item, 3) ?> VND</td>
+						<td><?php echo $link_del?></td>
+					</tr>
+					<?php 
+						endforeach;
+					}else {
+						echo '<tr align="center"><td colspan="6" style="text-align:center">Danh sách trống</td></tr>';
+					}
+					?>
+				</tbody>
+			</table>
+				<input type="submit" value=" THANH TOÁN " class="btn_order-submit" />
+				<a href="javascript:history.back()" class="btn_order">TIẾP TỤC ĐẶT PHÒNG</a>
+			</form>
+		</div>
+	</div>
+	<b class="b4"></b><b class="b3"></b><b class="b2"></b><b class="b1"></b>
+</div>

@@ -1,0 +1,10 @@
+<?php if(is_array($this->item)): ?>
+	<h1 class="title-right"><span><?php echo $this->lang['handbook']?> &raquo; <?php echo $this->item['title'.LANG] ?></span></h1>
+	<div class="bg-pr">
+		<div class="bd-top-pr"></div>
+			<div class="tent-right">
+				<?php echo html_entity_decode($this->item['content'.LANG]) ?>
+			</div><!--End tent right-->
+		<div class="bd-bt-pr"></div>
+	</div><!--End bg pr-->
+<?php endif;?>

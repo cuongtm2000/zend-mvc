@@ -1,0 +1,103 @@
+<div class="product-content">
+	<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
+	<div class="contentb">
+		<div class="content-conner-panel">
+            <h4 class="title-product-order">ĐẶT PHÒNG</h4>
+			<table align="center" class="form_order" width="600" cellspacing="0" cellpadding="5">
+				<thead>
+				  <tr align="center">
+					<td width="165">Hình ảnh phòng</td>
+					<td width="400">Tên phòng</td>
+					<td width="60">Đơn giá</td>
+					<td width="80">Số ngày ở</td>
+					<td width="100">Thành tiền</td>
+					<td width="100">Hủy phòng</td>
+				  </tr>
+				</thead>
+				<tbody>
+				<?php 
+				if(!empty($this->Items)){
+					$total = 0;
+					foreach ($this->Items as $k => $v):
+						$pic = '<img src="'.$this->baseUrl().'/public/userfiles/images/product/'.$v['pic_thumb'].'" class="img-border img-product" alt="'.$v['cat_title'].'">';
+						$name = '<a href="'.$this->baseUrl('/product/index/view/id/'.$v['record_id']).'">'.$v['title'.LANG].'-'.$v['cat_title'.LANG].'</a>';
+						$price = $v['unit'];
+						$num_of_dates = $this->cart[$v['record_id']];
+						$total_item = $price * $num_of_dates;
+						$total = $total + $total_item;
+						
+						$img_del = '<img src="'.$this->baseUrl().TEMPLATE.'/images/Fromdatphong_del.png" alt="del">';
+						$link_del = '<a href="'.$this->baseUrl('/product/index/cart-delete/id/'.$v['record_id']).'">'.$img_del.'</a>';
+				?>
+				<tr align="center">
+					<td><?php echo $pic?></td>
+					<td><?php echo $name?></td>
+					<td><?php echo number_format($price, 3)?></td>
+					<td><?php echo $num_of_dates?></td>
+					<td><?php echo number_format($total_item, 3)?> VND</td>
+					<td><?php echo $link_del?></td>
+				</tr>
+				<?php 
+					endforeach;
+				}else {
+					echo '<tr align="center"><td colspan="6" style="text-align:center">Danh sách trống</tr>';
+				}
+				?>
+				<tr style="color:#006600">
+					<td colspan="4" align="left">Tổng cộng</td>
+					<td align="center"><strong><?php echo number_format($total, 3); ?></strong> VND</td>
+					<td></td>
+				</tr>
+				</tbody>
+			</table>
+			
+			<div id="notificaion">
+				<?php 
+					echo html_entity_decode($this->info_payment['content'.LANG]);
+				?>
+			</div>
+			 
+			 <div id="payment_form">
+				<?php
+					if(isset($this->messageError)){
+						echo '<div class="red">';
+						foreach ($this->messageError as $value){
+							echo '<p>'.$value.'</p>';
+						}
+						echo '</div>';
+					}
+				?>
+				<?php 
+					$fullname 	= $this->formText('fullname',$this->FormInfo['fullname'], array('class'=>'input_text'));
+					$address 	= $this->formText('address',$this->FormInfo['address'], array('class'=>'input_text'));
+					$phone 		= $this->formText('phone',$this->FormInfo['phone'], array('class'=>'input_text'));
+					$email 		= $this->formText('email',$this->FormInfo['email'], array('class'=>'input_text'));
+					$adults 	= $this->formText('adults',$this->FormInfo['adults'], array('class'=>'input_text'));
+					$children 	= $this->formText('children',$this->FormInfo['children'], array('class'=>'input_text'));
+					$date_start = $this->formText('date_start',$this->FormInfo['date_start'], array('class'=>'input_text'));
+					$date_end 	= $this->formText('date_end',$this->FormInfo['date_end'], array('class'=>'input_text'));
+				?>
+										 
+					 <form name="payment" action="" method="post">
+						<h4  class="title-product-order">THÔNG TIN ĐẶT PHÒNG</h4>
+						<ul>
+							<li><label>Ngày đến(<span class="red">*</span>):</label><?php echo $date_start?></li>
+							<li><label>Họ và tên(<span class="red">*</span>):</label><?php echo $fullname?></li>
+							<li><label>Địa chỉ(<span class="red">*</span>):</label><?php echo $address?></li>
+							<li><label>Người lớn(<span class="red">*</span>):</label><?php echo $adults?></li>
+						</ul>
+						<ul>
+							<li><label>Ngày đến(<span class="red">*</span>):</label><?php echo $date_end?></li>
+							<li><label>Điện thoại(<span class="red">*</span>):</label><?php echo $phone?></li>
+							<li><label>Email(<span class="red">*</span>):</label><?php echo $email?></li>
+							<li><label>Trẻ em (<span class="red">*</span>):</label><?php echo $children?></li>
+						</ul>
+						<div align="center" style="float:left; width:100%; padding:10px;">
+							<input name="submit" class="submit_order" type="submit" value="HOÀN THÀNH">
+						</div>
+					  </form>
+				</div>
+		</div>
+	</div>
+	<b class="b4"></b><b class="b3"></b><b class="b2"></b><b class="b1"></b>
+</div>
