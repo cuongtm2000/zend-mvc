@@ -13,10 +13,9 @@
 			<tbody>
 			
 			<?php 
-				$i=0;
+				$i=1;
 				foreach ($this->listLog as $value){
-					$class = ($i%2==0) ? '' : ' class="alt"';
-			    	$i++;
+					$class = ($i%2==1) ? '' : ' class="alt"';
 			   
 			    	if($this->user == $value['username']){
 						$u= $value['user_receive'];
