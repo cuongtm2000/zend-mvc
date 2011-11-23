@@ -13,8 +13,9 @@
 				<ul>
 					<li><label>Tên đăng nhập<span>*</span> : </label><input readonly="readonly" name="username" value="<?php echo $this->items['username'] ?>" /></li>
 					<li><label>Email<span>*</span> : </label><input  name="email" value="<?php echo $this->items['email'] ?>" /></li>
-					<li><label>Mật khẩu<span>*</span> : </label><input type="password" name="password" /></li>
-					<li><label>Xác nhận mật khẩu<span>*</span> : </label><input type="password" name="password1" /></li>
+					<li><label>Mật khẩu cũ : </label><input type="password" name="oldpass" />(Để trống nếu không đổi mật khẩu)</li>
+					<li><label>Mật khẩu mới : </label><input type="password" name="password" /></li>
+					<li><label>Xác nhận mật khẩu mới : </label><input type="password" name="password1" /></li>
 					<li><label>Họ và tên<span>*</span> : </label><input name="full_name" value="<?php echo $this->items['full_name'] ?>" /></li>
 					<li class="select-date"><label>Ngày sinh<span>*</span> : </label>
 						<input name="day" value="<?php echo substr($this->items['birthday'] ,8)?>" onblur="if(this.value=='') this.value='Ngày'" onfocus="if(this.value =='Ngày' ) this.value=''"/> 
@@ -37,11 +38,11 @@
 					<li><label>Di động<span>*</span> : </label><input name="phone" value="<?php echo $this->items['phone'] ?>" /></li>
 					<li><label>Số tài khoản<span>*</span> : </label><input name="bank_number" value="<?php echo $this->items['bank_number'] ?>" /></li>
 					<li><label>Ngân hàng<span>*</span> : </label><input name="bank_name" value="<?php echo $this->items['bank_name'] ?>" /></li>
-					<li><label>Người giới thiệu<span>*</span> : </label><input readonly="readonly" name="user_gioithieu" value="<?php echo $this->items['user_gioithieu'] ?>" /></li>
-					<li><label>Người thụ hưởng<span>*</span> : </label><input readonly="readonly" name="user_baotro" value="<?php echo $this->items['user_baotro'] ?>" /></li>
+					<li><label>Người giới thiệu : </label><input readonly="readonly" name="user_gioithieu" value="<?php echo $this->items['user_gioithieu'] ?>" /></li>
+					<li><label>Người bảo trợ : </label><input readonly="readonly" name="user_baotro" value="<?php echo $this->items['user_baotro'] ?>" /></li>
 					<li class="bg-singin">
 						<label></label>
-						<input class="singin" type="submit" value="Đăng ký" />
+						<input class="singin" type="submit" value="  Thay đổi " />
 						<input class="singin" type="reset" value="Hủy bỏ" />
 					</li>
 				</ul>
