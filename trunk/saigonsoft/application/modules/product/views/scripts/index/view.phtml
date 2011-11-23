@@ -2,9 +2,17 @@
 
 <div class="all-pg-info">
 	<div class="prod_detail">
+		<?php //echo '<pre>';print_r($this->productdetail);echo '</pre>';?>	
+		
+		<?php if($this->productdetail['pic_full'] != ''):?>
+			<?php  $picthumb = $this->baseUrl().'/public/userfiles/images/product/'.$this->productdetail['pic_full'] ?>
+			<div style="text-align:center;">
+				<img class="imgcon" src="<?php echo $picthumb?>" alt="<?php echo $this->productdetail['title'.LANG] ?>" />
+			</div>
+			<div class="clear"></div>
+		<?php endif;?>
 
-	
-				<?php echo html_entity_decode($this->productdetail['detail'.LANG]) ?>
+		<?php echo html_entity_decode($this->productdetail['detail'.LANG]) ?>
 
    </div><!--End All pg info-->   
 
