@@ -1,8 +1,8 @@
 <?php
 class User_LogController extends GLT_Controller_Action {
     private $_data; 
-   protected $_config;
-    protected $_paginator;
+    private $_config;
+    private $_paginator;
     private $_username;
     
     public function init(){
