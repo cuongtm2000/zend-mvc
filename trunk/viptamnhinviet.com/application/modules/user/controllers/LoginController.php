@@ -1,23 +1,23 @@
 <?php
 class User_LoginController extends GLT_Controller_Action {
- 	protected $_data;
+ 	private $_data;
 	public function init(){
 		$this->_data = $this->_request->getParams();
 	}
 		
-	public function indexAction() {	
+	public function indexAction() {
+        //Check login
 		$auth = Zend_Auth::getInstance();
 		if ($auth->hasIdentity()) {
 	       $this->_redirect('/');
 	    }
 	
-		if($this->_request->isPost()){	
+		if($this->_request->isPost()){
 			$validate = new User_Form_ValidateLogin($this->_data);
 			if($validate->isError() == true){
-				$this->view->error = $validate->getError();
+				$this->view->messages = $validate->getError();
 				$this->view->items = $validate->getData();
 			}else{
-				//Login
 				$db = Zend_Registry::get('connectDb');
 				
 				$authAdapter = new Zend_Auth_Adapter_DbTable($db);
@@ -34,19 +34,27 @@ class User_LoginController extends GLT_Controller_Action {
 				$result = $auth->authenticate($authAdapter);
 				
 				if(!$result->isValid()){
-						$error[] = 'Đăng nhập thất bại:';
-		            	$error[] = '- Vui lòng kiểm tra tên đăng nhập và mật khẩu';
-						$this->view->messages = $error; 
-						//parse to textbox
-						$this->view->username = $user_name;
-						$this->view->password = $password;
+                    $error[] = 'Đăng nhập thất bại:';
+   	                $error[] = '- Vui lòng kiểm tra tên đăng nhập hoặc mật khẩu';
+					$this->view->messages = $error; 
+                    $this->view->items = array('username' => $user_name, 'password' => $password);
 				}else{			
 					$omitColumns = array('password');
 					$data = $authAdapter->getResultRowObject(null, $omitColumns);	
 					$auth->getStorage()->write($data);
+                    
+                    $session = new Zend_Session_Namespace('logged');
+                    $session->loginok = '1'; //session logged
+                    $path = $this->get_between($this->_request->getRequestUri(), '/', '/user');
+                    $session->path = ($path) ? '/'.$path : '';
 					$this->_redirect('http://'.$_SERVER["SERVER_NAME"].$this->_request->getRequestUri());
 				}
 			}
 		}
+        $this->webTitle('Đăng nhập hệ thống');
+	}
+    private function get_between($input, $start, $end){
+        $substr = substr($input, strlen($start)+strpos($input, $start), (strlen($input) - strpos($input, $end))*(-1));
+        return $substr;
 	}
 }

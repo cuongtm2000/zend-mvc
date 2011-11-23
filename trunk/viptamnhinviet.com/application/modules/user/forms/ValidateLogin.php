@@ -1,27 +1,27 @@
 <?php
 class User_Form_ValidateLogin{
 	private $_error = null;
-	private $_arrData;
+	private $_data;
 		
-	public function __construct($arrParam = array()){
+	public function __construct($data = array()){
 		//Validate username
 		$validator = new Zend_Validate();
 		$validator->addValidator(new Zend_Validate_Regex('#^[A-Za-z0-9_-]+$#'));
 		
-		if (!$validator->isValid($arrParam['username'])) {
-			$this->_error['username'] ='Tên đăng nhập không hợp lệ, bao gồm ký tự, -, _ và số. Ví dụ: thuonghoi, thuonghoi2011, thuong_hoi';
+		if (!$validator->isValid($data['username'])) {
+			$this->_error['username'] ='- Tên đăng nhập không hợp lệ, bao gồm ký tự, -, _ và số. Ví dụ: thuonghoi, thuonghoi2011, thuong_hoi';
 		}
 		
 		//Validate password
 		$validator = new Zend_Validate();
 		$validator->addValidator(new Zend_Validate_NotEmpty())
-				  ->addValidator(new Zend_Validate_StringLength(array('min' => 3, 'max' => 45)));
+				  ->addValidator(new Zend_Validate_StringLength(array('min' => 6)));
 		
-		if (!$validator->isValid($arrParam['password'])) {
-			$this->_error['password'] ='Mật khẩu không được rỗng và từ 3 - 45 ký tự';
+		if (!$validator->isValid($data['password'])) {
+			$this->_error['password'] ='- Mật khẩu không được rỗng và từ 6 ký tự trở lên';
 		}
 
-		$this->_arrData = $arrParam;
+		$this->_data = $data;
 	}
 
 	public function isError(){
@@ -33,6 +33,6 @@ class User_Form_ValidateLogin{
 	}
 	
 	public function getData(){
-		return $this->_arrData;
+		return $this->_data;
 	}
 }

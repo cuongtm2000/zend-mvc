@@ -74,7 +74,7 @@ include ('../../../../../config.php');
 $config2= new Config();
 $baseUrl = $config2->livesite.'media/editor/';*/
 
-$baseUrl = $_SESSION['logged']['path'].'/public/userfiles/';
+$baseUrl = $_SESSION['logged']['path'].'/public/userfiles/images/'.$_SESSION['Zend_Auth']['storage']->username.'/';
 
 /*
 $baseDir : the path to the local directory (in the server) which points to the
