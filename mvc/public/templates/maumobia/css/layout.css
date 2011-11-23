@@ -1,0 +1,152 @@
+body { margin:0; padding:0; background: url(../images/bg.gif) repeat-x;font-family:Tahoma, Geneva, sans-serif; font-size:9pt;}
+.left{float: left;}
+.right{float:right}
+.clear{clear: both;}
+a{text-decoration:none; color:#720E3B}
+a:hover{color:#000;}
+ul{list-style:none;margin:0; padding:0}
+/*layout*/
+*{margin:0; padding:0}
+
+#wrapper {margin:auto; width:980px; }
+
+/*Header*/
+#header{ margin:45px 0px 40px 0; float:left}
+#header-left{float:left; margin:15px 0;}
+#header-right{float:left; margin:0 0 0 30px; }
+
+/*Page*/
+#page{border:3px solid #DAD8A8;  width:980px; margin:0 0 20px 0;-moz-border-radius:5px; -webkit-border-radius: 5px;}
+
+/*menu*/
+#bg-menu{background:url(../images/bg-menu.gif) no-repeat; height:58px; }
+.menu{ float:right}
+.menu li{ float:left }
+.menu li a{ padding:16px 30px; display:block; background:url(../images/line-menu.gif) no-repeat right;color:#000; font-weight:bold; font-size:10.5pt; text-transform: uppercase;}
+.menu li a:hover{background:#fff}
+.select{background:#fff}
+
+/*Content*/
+.title-left{ padding:12px 0 15px 0px; color:#D98F00; font-size:10pt; font-weight:700; text-transform:uppercase;background:url(../images/bg-title-left.gif) no-repeat; width:213px;}
+.title-left span{padding-left:35px}
+.bt-bder-left{margin:0 0 10px 0;background:url(../images/bt-titile-left.gif) no-repeat; width:213px; height:8px}
+
+#allcontent{padding:0 5px 0 5px; *_position:relative; width:980px; *_padding:0 0 0 5px;*_width:975px;}
+
+/*left content*/
+#leftcontent{float:left; width:213px;color:#7a7a7a;}
+
+/*Danh mục*/
+.list{ padding:10px 5px 10px 40px;border-left:1px solid #D9D8A8; border-right:1px solid #D9D8A8;*_padding:10px 5px 0px 40px;}
+.list li{list-style:disc; color:#7a7a7a;}
+.list li a{color:#7a7a7a; font-weight:600; display:block; padding:3px 0; *_padding:0}
+.list li a:hover{color:#D98F00}
+.list .sub{margin-left: 15px; font-size: 8pt}
+
+
+/*Danh mục giới thiệu*/
+.about-list{padding:10px 5px 10px 40px;border-left:1px solid #D9D8A8; border-right:1px solid #D9D8A8;*_padding:10px 5px 0px 40px;}
+.about-list li{list-style:disc; color:#7a7a7a;}
+.about-list li a{color:#7a7a7a; font-weight:600; display:block; padding:3px 0}
+.about-list li a:hover{color:#D98F00}
+
+/*Hinh Anh*/
+.img-list{padding:10px 0px 10px 0px;border-left:1px solid #D9D8A8; border-right:1px solid #D9D8A8; text-align:center;*_padding:10px 0px 0px 0px}
+.img-list li{ line-height:2em}
+.img-list li img{width: 209px}
+
+/*Ho tro truc tuyen*/
+.support{padding:10px 0px 10px 0px;border-left:1px solid #D9D8A8; border-right:1px solid #D9D8A8; text-align:center;*_padding:10px 0px 0px 0px;}
+.support li{ line-height:1.8em; margin:0 0 2px 0; *_margin:0}
+/*Thong ke truy cap*/
+.statistics{padding:10px 5px 10px 25px;border-left:1px solid #D9D8A8; border-right:1px solid #D9D8A8;*_padding:10px 5px 0px 25px; }
+.statistics li{ line-height:1.75em}
+
+/*Right conetent*/
+#rightcontent{float:right; width:745px;color:#7a7a7a;padding:0 5px 0 0;*_padding:0 2px 0 0}
+.title-right{ background:url(../images/bg-title-center.gif) no-repeat; width:737px;padding:12px 0 12px 0px; color:#D98F00; font-size:10pt; font-weight:700; text-transform:uppercase;}
+.title-right span{padding-left:35px}
+.bt-title-right{margin:0 0 10px 0; background:url(../images/bt-title-right.gif) no-repeat; width:737px; height:11px; position:relative; left:-1px}
+/*Banner*/
+#banner{ border:2px solid #DAD8A8;-webkit-border-radius:5px; margin:0 0 10px 0}
+.frame{width:736px}
+.about-content{line-height:1.8em;border-left:1px solid #D9D8A8; border-right:1px solid #D9D8A8;  padding:10px 5px 0px 10px}
+.about-content img{ margin:10px 5px 5px 0; border:3px solid #D9D8A8;-moz-border-radius: 5px; -webkit-border-radius: 5px}
+/* ------------------------------------------- Scroler Header -----------------  */
+
+.gallery ul {margin:0px;padding:0px; }
+.gallery li{float:left;list-style-type:none;margin:0px;padding:0px;}
+.gallery {float:left;width:680px !important;margin-left:25px;padding-top:10px;*_margin-left:11px}
+.li_img {width:165px;padding-left:5px !important;}
+.im img {width:auto;height:124px;border:1px solid #C3C3C3;}
+
+.slaids {height:170px;  border-left:1px solid #D9D8A8;border-right:1px solid #D9D8A8;}
+.slaids_left {height:186px;  background:url(../images/prev-bg2.png) no-repeat left 55px; position:relative;}
+.slaids_right {height:186px;  background:url(../images/next-bg2.png) no-repeat right 55px;position:relative;}
+.left_bat {height:186px;width:35px;position:absolute;left:0px;cursor:pointer;}
+.right_bat {height:186px;width:35px;position:absolute;right:0px;cursor:pointer;}
+.prod {font:bold 12px Arial;color:#353535;text-decoration:none;float:left;position:relative;}
+.scroler_details {margin-top:4px; text-align: center;}
+.scroler_details a {font:13px Arial;text-align:center;color:#3D3D3D;display:inline-block;padding:5px 0px 2px 0px;}
+.price_scroler{font:bold 15px Arial;color:#525151;float:left;position:relative;padding-top:3px;}
+.scrol_inf {float:left;background: url(../images/scrol-inf.png) repeat-x left top;position:relative;margin-top:-15px;width:154px;display:none;padding-left:10px;}
+.li_img:hover .scrol_inf{ display:block;}
+ /*------------------------------------------------------- End --------------------------*/
+
+/***********    Page New Product Info    ***********/
+.pg-info-price{float:right;color:#3B3B3B; padding:0 20px 0 0; font-size:15px; font-weight:700; font-family:Verdana, Geneva, sans-serif }
+.all-pg-info{padding:20px 0 0 30px; border-left:1px solid #D9D8A8; border-right:1px solid #D9D8A8; }
+.title-info{  font-size:11pt; font-weight:bold; margin-bottom:15px;color:#0F0;}
+.title-info a{color:#f80;}
+.title-info a:hover{color:#008080;}
+.right-detail{float:left; width:340px;}
+.right-detail-info p{ margin:10px 0 0px 0; padding:0; color:#999}
+
+
+
+/*Tin tuc*/
+.new-index{border-left:1px solid #D9D8A8;border-right:1px solid #D9D8A8; padding:10px 5px 0px 10px}
+.img-new {float:left; margin:0 10px 5px 2px; border:2px solid #D9D8A8}
+
+.title-new{ color:#D98F00; font-size:10pt; font-weight:700; margin:0 0 5px 0}
+.title-new a{color:#D98F00;}
+.title-new a:hover{ color:#0FF}
+.new-index p{ line-height:2em}
+.sub-new{ padding:10px 0 0 20px}
+.sub-new li{list-style:disc; color:#D98F00; line-height:1.75em}
+.sub-new a{ color:#D98F00}
+.sub-new a:hover{text-decoration:underline}
+
+/*Page Gallery*/
+.frame-gallery{border-left:1px solid #D9D8A8;border-right:1px solid #D9D8A8;padding:5px 0 0 53px; }
+.product{display:inline-block; vertical-align:text-top; width:290px;text-align:center; margin:10px 40px 20px 0;*float:left;*margin:0 50px 0 0;*_margin:0 40px 0px 0;}
+.product img{-moz-border-radius: 3px; -webkit-border-radius: 3px; border:2px solid #ccc; }
+.product img:hover{border:2px solid #f90;}
+.product p{ margin:10px 0 0 0}
+.product a{ color:#555; font-size:10pt; font-weight:bold}
+.product a:hover{ text-decoration:underline}
+
+/* paging */
+.paging{padding:15px 10px 10px 0; text-align:right;}
+.paging a{color:#42342C}
+.paging a:hover{background:#A18852; color:#fff}
+.pagenav , .pageactive{border: 1px solid #ccc; padding: 2px 5px; color:#FFF; -moz-border-radius: 2px; -webkit-border-radius: 2px;}
+.pagecureent{border: 1px solid #ccc; padding: 2px 5px; background:#A18852; color:#42342C; font-weight:bold; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+
+/*Liên hệ*/
+.info{ margin:0 0 20px 40px}
+.frame-contact{border-left:1px solid #D9D8A8;border-right:1px solid #D9D8A8; padding:20px 2px 20px 20px; *_padding:20px 2px 0px 20px; }
+.frame-contact p{line-height:1.75em}
+#contact{ color:#666; padding:20px 2px 20p 0; margin-left:70px}
+
+#contact ul li{margin-left:-40px; padding:10px 0 0 0}
+#contact ul li label{float:left; width:100px; padding-top:2px;color:#666;  font-size:11px; text-transform:capitalize; text-align:right; margin-right:10px}
+#contact ul li input{ width:250px; border:1px solid #ccc; margin-right:20px; height:20px;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+#contact ul li textarea{-moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; width:350px}
+#contact .guixoa{ width:70px}
+#contact span{color:red}
+
+/*Footer*/
+#footer{background:#D9D8A8; text-align:center; line-height:1.8em; padding:15px 0; font-weight:bold;color:#575753; font-size:10pt}
+#footer a{color:#575753}
+#footer a:hover{text-decoration:underline}

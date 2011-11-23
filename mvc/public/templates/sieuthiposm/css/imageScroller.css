@@ -1,0 +1,11 @@
+/* js-disabled class - set image sizes so they all fit in the viewer */
+.js-disabled img { width:100px; height:100px; display:block; float:left; margin:30px 0 0; }
+
+#outerContainer { width:542px; height:100px; margin:auto; }
+#imageScroller { width:542px; height:100px; border:2px solid #D4D4D4;-moz-border-radius: 3px; -webkit-border-radius: 3px;}
+#viewer { width:522px; height:182px; overflow:hidden; margin:auto; position:relative; top:20px; }
+#list{ width:522px; height:182px; overflow:hidden; margin:auto; position:relative; top:2px;}
+#imageScroller a:active, #imageScroller a:visited { color:#000000; }
+#imageScroller a img { border:0; margin:0 5px}
+
+

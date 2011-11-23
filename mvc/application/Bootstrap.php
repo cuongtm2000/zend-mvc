@@ -10,7 +10,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 		$dbOption['params']['host'] = 'localhost';
 		$dbOption['params']['username'] = 'root';
 		$dbOption['params']['password'] = '';
-		$dbOption['params']['dbname'] = 'fashion';
+		$dbOption['params']['dbname'] = 'mvc';
 		
 		$adapter = $dbOption['adapter'];
 		$config = $dbOption['params'];
