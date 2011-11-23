@@ -22,7 +22,7 @@
 		if(is_array($this->allMess)){
 			$k=0;
 		    foreach($this->allMess as $value){
-		    	$cont=substr(strip_tags($value['content']),0,100);
+		    	$cont=substr(strip_tags(html_entity_decode($value['content'])),0,80);
 		    	if($value['status']==0){
 		    		$value['title']='<b>'.$value['title'].'</b>';
 		    		$cont='<b>'.$cont.'</b>';
@@ -38,7 +38,7 @@
 		               <td><a href="'.$this->baseUrl().'/message/inbox/view/id/'.$value['record_id'].'">'.$value['title'].'</a></td>
 		               
 		               <td>'.$value['datetime'].'</td>
-		               <td>'.$cont.'...</td>
+		               <td>'.($cont).'...</td>
 		               
 		            </tr>';
 		        
