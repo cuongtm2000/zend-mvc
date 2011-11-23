@@ -75,7 +75,7 @@
 					<li><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-2.gif" alt="" /> <a href="<?php echo $this->baseUrl() ?>/user/map" title="">Sơ đồ mạng lưới</a></li>
 					<li><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-2.gif" alt="" /> <a href="<?php echo $this->baseUrl() ?>/user/log" title="">Lịch sử giao dịch</a></li>
 					<li><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-3.gif" alt="" /> <a href="<?php echo $this->baseUrl() ?>/user/edit" title="">Thay đổi thông tin cá nhân</a></li>
-					<li><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-4.gif" alt="" /> <a href="#" title="">Số tiền tích lũy: <span class="error"><?php echo $this->infouser('balance')?> V</span></a></li>
+					<li class="border-none"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-4.gif" alt="" /> <a href="#" title="">Số tiền tích lũy: <span class="error"><?php echo $this->infouser('balance')?> V</span></a></li>
 				</ul>
 			</div><!--End bg list-->
 			<div class="bt-title-list"></div>
@@ -86,8 +86,12 @@
 			<div class="bg-list">
 				<ul class="sub-list">
 				<?php 
+					$rowsize = count($this->menu_about);
+					$i=0;
 					foreach($this->menu_about as $value){
-						echo '<li><img src="'.$this->baseUrl().TEMPLATE.'/images/ico-4.gif" alt="" /> <a href="'.$this->baseUrl().'/'.LANGURL.'about'.'/index/view/id/'.$value['record_id'].'/'.$this->noneUnicode($value['title'.LANG]).'" title="'.$this->escape($value['title'.LANG]).'">'.$this->escape($value['title'.LANG]).'</a></li>';
+						$border = ($i==$rowsize-1) ? ' class="border-none"' : '';
+						$i++;
+						echo '<li'.$border.'><img src="'.$this->baseUrl().TEMPLATE.'/images/ico-4.gif" alt="" /><a href="'.$this->baseUrl().'/'.LANGURL.'about'.'/index/view/id/'.$value['record_id'].'/'.$this->noneUnicode($value['title'.LANG]).'" title="'.$this->escape($value['title'.LANG]).'">'.$this->escape($value['title'.LANG]).'</a></li>';
 					}
 				?>
 				</ul>
@@ -99,9 +103,13 @@
 			<h1 class="title-list"><?php echo $this->lang['news'] ?></h1>
 			<div class="bg-list">
 				<ul class="sub-list">
-				<?php 
+				<?php
+					$rowsize = count($this->menu_news);
+					$i=0;
 					foreach($this->menu_news as $value){
-						echo '<li><img src="'.$this->baseUrl().TEMPLATE.'/images/ico-4.gif" alt="" /> <a href="'.$this->baseUrl().'/'.LANGURL.'news'.'/index/cat/id/'.$value['cat_id'].'/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
+						$border = ($i==$rowsize-1) ? ' class="border-none"' : '';
+						$i++;
+						echo '<li'.$border.'><img src="'.$this->baseUrl().TEMPLATE.'/images/ico-4.gif" alt="" /><a href="'.$this->baseUrl().'/'.LANGURL.'news'.'/index/cat/id/'.$value['cat_id'].'/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
 					}
 				?>
 				</ul>
@@ -114,8 +122,12 @@
 			<div class="bg-list">
 				<ul class="sub-list">
 				<?php 
+					$rowsize = count($this->menu_handbook);
+					$i=0;
 					foreach($this->menu_handbook as $value){
-						echo '<li><img src="'.$this->baseUrl().TEMPLATE.'/images/ico-4.gif" alt="" /> <a href="'.$this->baseUrl().'/'.LANGURL.'handbook'.'/index/cat/cid/'.$value['cat_id'].'/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
+						$border = ($i==$rowsize-1) ? ' class="border-none"' : '';
+						$i++;
+						echo '<li'.$border.'><img src="'.$this->baseUrl().TEMPLATE.'/images/ico-4.gif" alt="" /> <a href="'.$this->baseUrl().'/'.LANGURL.'handbook'.'/index/cat/cid/'.$value['cat_id'].'/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
 					}
 				?>
 				</ul>
@@ -148,8 +160,9 @@
 					//Display cat menu
 					for ($i=0; $i < $rowsize; $i++){
 						if ( $this->listProductCat[$i]['cat_parent_id'] == 0 ){
+							$border = ($i==$rowsize-1) ? ' class="border-none"' : '';
 							//Parent categories
-							echo '<li><img src="'.$this->baseUrl().TEMPLATE.'/images/ico-4.gif" alt="" /> <a href="'.$this->baseUrl().'/'.LANGURL.'product/index/cat/cid/'.$this->listProductCat[$i]['cat_id'].'" title="'.$this->listProductCat[$i]['cat_title'.LANG].'">'.$this->listProductCat[$i]['cat_title'.LANG].'</a>';
+							echo '<li'.$border.'><img src="'.$this->baseUrl().TEMPLATE.'/images/ico-4.gif" alt="" /> <a href="'.$this->baseUrl().'/'.LANGURL.'product/index/cat/cid/'.$this->listProductCat[$i]['cat_id'].'" title="'.$this->listProductCat[$i]['cat_title'.LANG].'">'.$this->listProductCat[$i]['cat_title'.LANG].'</a>';
 							//Sub categories
 							if ( $parent_id && ($parent_id == $this->listProductCat[$i]['cat_id']) ){
 								for ($j=0; $j < $rowsize; $j++){
