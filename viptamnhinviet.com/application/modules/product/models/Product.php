@@ -20,7 +20,7 @@ class Product_Model_Product extends Zend_Db_Table{
     						   ->where('enable=1')
 							   ->order('record_order DESC')
 							   ->order('postdate DESC')
-							   ->limit(16, 0);
+							   ->limit(24, 0);
 		return $db->query($select)->fetchAll();
     }
 	//-----------------------------------------

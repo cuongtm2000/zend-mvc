@@ -14,7 +14,7 @@
 									<?php echo $value['title'.LANG] ?>
 								</a>
 							</h3>
-							<?php echo html_entity_decode($value['preview'.LANG]) ?>
+							<?php echo strip_tags(html_entity_decode($value['preview'.LANG]), '<b><strong><p>')?>
 						</div>
 				<?php endforeach;?>
 				<div class="clear"></div>

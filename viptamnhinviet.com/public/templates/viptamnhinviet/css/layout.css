@@ -72,6 +72,7 @@ a:hover{color:#000;}
 .bg-list{padding:0 5px;background:#E3E3E3; border-left:1px solid #CCC; border-right:1px solid #CCC}
 .sub-list{background:#fff; padding:10px 5px 0 5px;list-style:none}
 .sub-list li{border-bottom:1px solid #CCC;padding:10px 0;*_padding:4px 0 8px 0}
+.sub-list li.border-none{border-bottom:none}
 .sub-list li a{color:#0086BB; font-weight:bold;}
 .sub-list li a:hover{color:#720E3B}
 .sub-list img{margin:0 5px 0 0}
