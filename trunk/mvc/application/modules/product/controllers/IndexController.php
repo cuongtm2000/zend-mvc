@@ -120,7 +120,6 @@ class Product_IndexController extends GLT_Controller_Action {
 			//redirect
 			$this->_redirect('/product/index/ordering');
 		}
-		// echo '<pre>';    	 print_r( $cartSession->cart);    	 echo '<pre>';
 		
 		$this->webTitle($this->view->lang['product_cartitem']);
     }
@@ -134,17 +133,6 @@ class Product_IndexController extends GLT_Controller_Action {
 		$tmp = $ssInfo['cart'];
 		unset($tmp[$id]);
 		$cartSession->cart = $tmp;
-		$this->_redirect('/product/index/cart-item');
-		$this->_helper->viewRenderer->setNoRender();
-    }
-    
-    // delete all item in cart
-    public function delAllCartAction(){
-
-    	$cartSession = new Zend_Session_Namespace('cart');
-    	$cartSession->unsetAll();
-		$cartSession->cart=NULL;
-		
 		$this->_redirect('/product/index/cart-item');
 		$this->_helper->viewRenderer->setNoRender();
     }

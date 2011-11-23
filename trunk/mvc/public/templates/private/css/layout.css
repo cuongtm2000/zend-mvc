@@ -1,0 +1,157 @@
+body{font-family:Tahoma, Geneva, sans-serif; font-size:9pt; background:url(../images/bg.gif) repeat-x; height:800px;width:100%}
+.left{float: left;}
+.right{float:right}
+.clear{clear: both;}
+a{text-decoration:none; color:#720E3B}
+a:hover{color:#000;}
+ul{list-style:none}
+/*layout*/
+*{ margin:0; padding:0}
+#wrapper{ width:auto}
+
+/*header*/
+#topheader{ background:#F00;color:#fff; font-weight:bold; text-align:center;}
+#logo{width:980px; margin:auto; padding:5px  0 7px 0}
+
+/*Banner*/
+#header-bg{background:url(../images/header_bg_all.jpg) repeat-x; float:left; width:100%;}
+#header-all{ width:980px; margin:auto}
+#header-all-left{ float:left;position:absolute; z-index:1}
+#header-all-right{float:right; position:relative; z-index:200}
+#header-all-right li{ margin:0px 0 1px 0; text-align:center;}
+
+#header-all-right h2{font-size:24pt; font-weight:bold; color:#FFF; }
+#header-all-right p{ color:#FFF; font-size:14pt}
+.banner1{background:url(../images/banner1.png) no-repeat; height:137px; width:428px;}
+.banner2{background:url(../images/banner2.png) no-repeat; height:137px; width:428px}
+.banner3{background:url(../images/banner3.png) no-repeat; height:134px; width:428px;}
+.pdtner{padding:40px 0 }
+.pdtner a{ display:block;color:#FFF;text-transform:capitalize}
+/*Menu*/
+#bgmenu{position:relative; top:-1px;background:url(../images/bg-menu.gif) repeat-x left top; height:57px}
+ul#nav{width:980px; margin:auto; }
+ul#nav li{overflow:hidden;float:left;height:57px; }
+ul#nav a, ul#nav span {padding:19px 30px; float:left;clear: both; color:#FFF; font-weight:bold; font-size:12pt;line-height:20px;width:100%; height:20px; background:url(../images/bg-menu.gif) repeat-x top left;}
+ul#nav a {color: #fff;background-position: left bottom;}
+ul#nav span {background-position: left top;}
+
+/*Drop down menu*/
+ul#nav li ul{position:absolute; z-index:200;top:55px;display:none;width:180px; cursor:pointer}
+ul#nav li:hover ul{display:block;background:#3C3A32;padding:5px 5px 1px 10px}
+ul#nav li ul li{width:100%;overflow:visible;height:inherit; margin:5px 0 1px 0 ; padding:0px  0 5px 0px;border-bottom:1px solid #FFF}
+ul#nav li ul li a{float:none;padding:0;font-size:10pt;font-weight:normal; background:none}
+ul#nav li ul li a:hover{ color:#F90}
+
+/*ALL Conent*/
+#allcontent{width:980px; margin:35px auto;}
+.title{font-size:18pt;text-transform:capitalize; color:#404040;margin:0px 0 20px 0}
+.titleh2{ font-weight:bold; color:#404040}
+.titleh3{color:#404040; margin:15px 0 0px 0;font-size:12pt; font-weight:bold; text-transform:capitalize}
+/*Left content*/
+#leftcontent{ float:left; width:640px;}
+#leftcontent a:hover{text-decoration:none;}
+.wlcome{width:615px;margin:0px 0 10px 0; padding:0 0 20px 10px;border-bottom:2px solid #E0DFD9; text-align:justify}
+.wlcome h1:first-letter{text-transform:capitalize}
+.wlcome h1{ color:#404040; font-size:18pt; margin:5px 0 20px 0}
+.wlcome img{margin:0 10px 10px 0px}
+
+/*Content wlcom and link*/
+.dtcome{float:left; width:425px}
+.more{float:right; color:#6A6343; font-weight:bold; text-decoration:underline; margin:10px 0}
+
+/*Doi tac*/
+#partners{float:left;width:300px;color:#404040; border-right:1px solid #E0DFD9; padding:0 10px 0 5px;}
+#partners h2{ text-transform:capitalize; font-size:16pt; }
+#subpartners li{ margin:15px 0; border-top:1px dotted #404040; padding:5px 0}
+#subpartners .dtpner{float:left; width:240px}
+#subpartners img{margin:0 10px 5px 0}
+#subpartners a{ color:#404040}
+#subpartners h3{text-transform:capitalize; margin:3px 0; font-size:11pt; font-weight:bold}
+#subpartners  p:first-letter{ text-transform:capitalize}
+
+/*Cam nang*/
+#manual{float:left; width:300px;color:#404040; padding:0 2px;border-right:1px solid #E0DFD9}
+#manual h2{text-transform:capitalize; font-size:16pt; padding:0 0 0 10px}
+#submanual{ padding:0 0 0 30px}
+#submanual li{margin:12px 0; list-style-image:url(../images/list-marker.gif)}
+#submanual a{ color:#404040}
+#submanual a:hover{color:#F90}
+
+/*Page Chia se kinh nghiem*/
+.masuring{ padding:0 15px 0 0;text-align:justify; font-size:10pt; color:#666;line-height:1.5em; margin-bottom:15px; overflow:hidden}
+.masuring p:first-letter{ text-transform:capitalize; }
+.masuring h3:first-letter{ text-transform:capitalize; }
+.masuring img{margin:2px 10px 5px 2px}
+.masuring a{color:#208FFF; font-size:10pt; font-weight:700; position:relative; top:-5px; padding-bottom:5px}
+.masuring a:hover{color:#F90}
+
+/* paging */
+.paging{ margin:30px 0 20px 0; text-align:right;}
+.paging a{color:#008000}
+.paging a:hover{background:#CCC; color:#F60}
+.pagenav , .pageactive{border: 1px solid #ccc; padding: 2px 5px; color:#F00; -moz-border-radius: 2px; -webkit-border-radius: 2px;}
+.pagecureent{border: 1px solid #ccc; padding: 2px 5px; background:#CCC; color:#008000; font-weight:bold; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+
+/*Right content*/
+#rightcontent{float:right; width:320px;color:#404040;}
+#rightcontent a:hover{text-decoration:none}
+/*Lien he*/
+#contact{margin-bottom:20px;padding:0 10px 17px 20px}
+#contact h1{margin:0px 0 20px 0}
+#contact p{text-transform:capitalize; margin:2px 0}
+
+/*Page Giới thiệu*/
+.infoabout{ text-align:justify}
+.infoabout img{margin:5px 10px 5px 2px}
+.infoabout p{margin:0px 0 20px 0}
+
+/*PAGE Liên hệ*/
+.contact{color:#666; margin:0 50px}
+.contact p{ margin:20px 0;color:#666; font-size:10pt; font-family:Tahoma, Geneva, sans-serif}
+.contact p:first-letter{text-transform:capitalize}
+.contact ul{margin:10px 0; padding:0; list-style:none}
+.contact ul li{padding:5px 0; margin-left:-40px}
+.contact ul li label{float:left; width:100px; padding-top:2px; color:#666; font-family:Tahoma, Geneva, sans-serif; font-size:11px; text-transform:capitalize; text-align:right; margin-right:10px}
+.contact ul li input{ width:250px; border:1px solid #ccc; margin-right:20px; height:20px}
+.contact ul li textarea{-moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc;}
+.contact .guixoa{ width:70px}
+.contact span{color:#F00}
+.imgcontact{float:right; position:relative;}
+
+/*Chia se kinh nghiem*/
+#subexperience li{ margin:20px 0 30px 0}
+#subexperience h2{font-weight:bold}
+#subexperience a{text-decoration:underline; color:#6A6343; margin:5px 0; font-weight:bold}
+
+/*Sub menu Hanbook*/
+.tlsubmenu{font-size:16pt;text-transform:capitalize;color:#404040}
+#subhandbook{padding:10px 2px 5px 25px}
+#subhandbook li{list-style-image:url(../images/icon-submenu.gif); line-height:2em;padding:0 2px 0 2px}
+#subhandbook li a{color:#404040;}
+#subhandbook li a:hover{color:#F90}
+/*Submenu Right Page Experience*/
+#allinfo{padding:5px 30px 20px 30px; width:230px;}
+#allinfo h3{text-align:center;background:url(../images/bg-submenu.gif) no-repeat; color:#FFF; height:39px; padding:3px 0 3px 0;}
+#allinfo ul{position:relative; top:-15px;border-bottom:1px solid #D8D6D7; border-left:1px solid #D8D6D7; border-right:1px solid #D8D6D7}
+/*Sub menu kinh nghiem*/
+.submenu{padding:15px 5px 10px 25px;}
+.submenu li{list-style-image:url(../images/icon-submenu.gif); line-height:2.5em; padding:0 5px 0 2px}
+.submenu li a{color:#404040; display:block;}
+.submenu li a:hover{color:#F90}
+.submenu li ul{margin-left:12px; border-bottom: none}
+/*Ho tro truc tuyen*/
+#subsupport{padding:15px 0 10px 0;text-align:center;}
+#subsupport li{margin:5px 0 5px 0; color:#000}
+#subsupport img{margin:0 0 5px 0 }
+/*Thong ke truy cap*/
+#substatistics{padding:15px 2px 10px 15px;  line-height:1.75em}
+
+/*Doi tac khach hang*/
+#subcustomer{padding:15px 3px 10px 3px;text-align:center;}
+
+/*Footer*/
+#bg-footer{background:#EAEAE5; color:#3C3A32; margin:20px 0 0 0}
+#footer{background:#EAEAE5;line-height:1.75em; padding:10px 0;width:980px; margin:auto; text-align:center}
+
+.list{margin:0; padding:0}
+.list li{display: inline-table; width: 192px; margin-right:18px; text-align:center}

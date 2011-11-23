@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link type="text/css" rel="stylesheet" href="<?php echo $this->baseUrl().TEMPLATE ?>/css/dosvn.css" />
+<link type="text/css" rel="stylesheet" href="<?php echo $this->baseUrl().TEMPLATE?>/css/wt-rotator.css" />
+<link rel="SHORTCUT ICON" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/gif" />
+
+<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/dropdown.js"></script>
+<?php echo $this->headTitle() ?>
+<?php echo $this->headMeta() ?>
+<?php echo $this->headLink() ?>
+<?php echo $this->headScript() ?>
+
+<?php echo $this->google_analytic; ?>
+</head>
+<body>
+<!--Wrapper-->
+<div id="wrapper">
+    <div style="background:#EBEBE4">
+    	<div id="logo">
+    		<?php if($this->logo):?>
+				<a href="<?php echo $this->baseUrl()?>/"><img src="<?php echo $this->baseUrl().'/public/userfiles/images/banner/'.$this->logo['banner_url'] ?>" alt="<?php echo $this->logo['banner_name']?>" /></a>
+			<?php else:?>
+				<a href="<?php echo $this->baseUrl()?>/"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/logo.png" alt="Logo" /></a>
+			<?php endif;?>
+        </div>
+        <!--Header-bg-->
+        <div id="header-bg">
+            <div id="header-all">
+                <div id="header-all-left">
+                	<div class="container">
+                        <?php if($this->banner):?>
+                        	<div class="wt-rotator">
+	                            <a href="#"></a>   
+	                            <div class="thumbnails"> 
+	                                  <ul> 
+	                                 	<?php foreach($this->banner as $value):?>
+											<li><a href="<?php echo $this->baseUrl()?>/public/userfiles/images/banner/<?php echo $value['banner_url']?>" title="<?php echo $value['banner_name']?>"></a></li>
+										<?php endforeach;?>
+	                                  </ul> 
+	                            </div>  
+	                        </div>
+	                        
+                        	<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE?>/js/jquery-banner-rotato.js"></script> 
+							<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE?>/js/jquery-banner-rotato.effect.js"></script> 
+							<script type="text/javascript">
+								$(document).ready(function(){
+									runbanner(<?php echo $this->config['banner_width']?>, <?php echo $this->config['banner_height']?>);
+								});
+							</script>
+						<?php else:?>
+							<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/banner.jpg" alt="Banner" />
+						<?php endif;?>
+                    </div>
+                </div>
+                <ul id="header-all-right">
+                    <li class="banner1">
+                    	<div class="pdtner"><h2><a href="<?php echo $this->baseUrl()?>/about" title="Về chúng tôi">giới thiệu</a></h2>
+                        	<p><a href="<?php echo $this->baseUrl()?>/about" title="Về chúng tôi">Về chúng tôi</a></p>
+                        </div>
+                    </li>
+                    <li class="banner2">
+                    	<div class="pdtner"><h2><a href="<?php echo $this->baseUrl()?>/handbook" title="Khởi sự">cẩm nang</a></h2>
+                        	<p><a href="<?php echo $this->baseUrl()?>/handbook" title="Khởi sự">Khởi sự</a></p>
+                        </div>
+                    </li>
+                    <li class="banner3">
+                    	<div class="pdtner"><h2><a href="<?php echo $this->baseUrl()?>/experiences" title="Kinh nghiệm">chia sẻ</a></h2>
+                        	<p><a href="<?php echo $this->baseUrl()?>/experiences" title="Kinh nghiệm">Kinh nghiệm</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div><!--End Header-bg-->
+       
+     </div>
+       <div class="clear"></div>
+	 <!--Menu-->
+	 <div id="bgmenu">
+     	<ul id="nav">
+     		<?php 
+				$folders = $this->menubar();
+				$rowsize = count($folders);
+				for($i=0; $i < $rowsize; $i++){
+					$target = ($folders[$i]['target']=='') ? '' : ' target="'.$folders[$i]['target'].'"';
+					echo '<li><a class="linknav" href="'.$this->baseUrl().'/'.LANGURL.$folders[$i]['url'].'" title="'.$folders[$i]['module'.LANG].'"'.$target.'>'.html_entity_decode($folders[$i]['module'.LANG]).'</a></li>';
+				}
+			?>
+        	<!--<li><a href="index.html" title="" class="linknav">Trang chủ</a></li>
+            <li><a href="about.html" title="" class="linknav">Giới thiệu</a>
+            	<ul>
+                	<li><a href="#" title="">Công ty tổng quan Công ty tổng quan Công ty tổng quan</a></li>
+                    <li><a href="#" title="">Các khu vực</a></li>
+                    <li><a href="#" title="">Tin tức</a></li>
+                    <li><a href="#" title="">Gần đây trường hợp</a></li>
+                </ul>
+            </li>
+            <li><a href="handbook.html" title="" class="linknav">Cẩm nang</a>
+            	<ul>
+                	<li><a href="#" title="">Cẩm nang 1</a></li>
+                    <li><a href="#" title="">Cẩm nang 2</a></li>
+                    <li><a href="#" title="">Cẩm nang 3</a></li>
+                    <li><a href="#" title="">Cẩm nang 4</a></li>
+                </ul>
+            </li>
+            <li><a href="experience.html" title="" class="linknav">Kinh nghiệm</a></li>
+            <li><a href="partners.html" title="" class="linknav">Đối tác</a></li>
+            <li><a href="contact.html" title="" class="linknav">Liên hệ</a></li> -->
+     	</ul>
+	 </div><!--End Menu-->
+     <div class="clear"></div>
+     
+     <?php echo $this->layout()->content ?>
+     
+    <div class="clear"></div>
+    <!--Footer-->
+    <div id="bg-footer">
+    	<div id="footer">
+        	<p><?php echo $this->lang['copyright']?></p>
+            <p><?php echo $this->lang['developed']?> <a href="http://azweb.vn" title="Azweb.vn">Azweb.vn</a> </p>
+        </div>
+    </div><!--End Footer-->
+</div><!--End wrapper-->
+</body>
+</html>

@@ -1,0 +1,117 @@
+body{font-family:Tahoma, Geneva, sans-serif; background: #f9fafc url(../images/bgpages.gif) repeat-x; font-size:12px}
+
+a{text-decoration:none; color:#333}
+a:hover{color:#0193DE}
+.clear{clear:both}
+.selected{color:#0294DD}
+.red{color:red}
+
+/*layout*/
+#wapper{width: 950px; margin: auto}
+
+#header{width:950px; height:109px; position:relative}
+#header .logo{position:absolute; top:6px; left:10px}
+.lang {position:absolute; top:10px; right:50px; font-size:9pt; font-weight:bold}
+.lang img{margin-left:5px}
+
+#header .main-menu {position:absolute; bottom:-25px; right:30px}
+.left2{float:left;background:url(../images/left_topmenu.jpg) no-repeat left; height:57px; width:16px; padding-top:26px}
+.center{float:left}
+.center ul{background:url(../images/topmenu_bg.jpg) center center repeat-x; height:59px; margin:0; padding:0; margin-top:12px}
+.center ul li{display:inline; list-style:none; font-family:Tahoma; font-size:13px; background:url(../images/space_menu.gif) no-repeat right; height:43px; float:left; padding:22px 24px 0 24px}
+.center ul li a{font-weight:bold}
+.center .end{background:none}
+
+.right2{float:right; background:url(../images/right_topmenu.jpg) no-repeat left; height:57px; width:16px;padding-top:26px}
+
+#banner {background:url(../images/bg_shadow.jpg) repeat-y; width: 950px; margin-left:15px; margin-top:23px}
+#banner img{width:920px; margin-left:15px}
+
+#content{background:url(../images/bg_shadow2.gif) repeat-y; width: 950px; padding: 15px 32px}
+#content .leftCol {width:204px; float:left; text-align:left}
+
+.leftMenu {	padding-bottom:15px; background:url(../images/bottom_leftmenu.gif) bottom center no-repeat; min-height:50px; height:auto !important; height:50px}
+.leftMenu .title {background:url(../images/topleft_menu.gif) top center; height:27px; color:#fff; text-transform:uppercase; font-weight:bold; text-align:center; padding-top:18px}
+.leftMenu ul {padding:0 20px}
+.leftMenu ul li { background:url(../images/arrow_leftmenu.gif) left 11px no-repeat; border-bottom:1px #ccc dotted; padding:4px 0 4px 10px; list-style:none}
+.leftMenu ul li.last {border-bottom:none}
+.leftMenu ul li a {color:#232323; font-weight:bold; display: block;}
+.leftMenu ul li a:hover, .leftMenu ul li a.active {color:#c00; text-decoration:none}
+
+ul .sub li{border-bottom:none;background:none; list-style-image:url(../images/reddot.gif);padding:5px 0 5px 0}
+
+#advBox .title { background:url(../images/top_advbox.gif) no-repeat top center; color:#fff; font-weight:bold; height:25px; text-align:center; padding-top:19px;}
+#advBox .title2 { background:url(../images/hotrotructuyen_title.gif) no-repeat; width:204px; height:47px; padding-top:19px; text-align:center; font-weight:bold; color:#fff}
+#advBox .hinhquangcao{ padding-left:3px; margin:auto; width:170px;}
+#advBox .line-support img{padding-left:3px; margin-top:-2px; border:0; width:198px}
+#advBox {background:url(../images/bgsupport.gif) center repeat-y; min-height:90px; height:auto !important; height:90px;}
+#advBox .bottom { background:url(../images/bottom_hotrotructuyen.gif) bottom no-repeat; height:35px;}
+
+.support{color:#0096EA; font-size:11pt;  margin-top:-25px; text-align:center;}
+
+/* Right Colum */
+
+.rightCol {width:706px; float:right; text-align:left; margin-left:10px; padding-left:20px; padding-top:6px; /*border-left:1px #CCC dashed; */position:relative;}
+.rightCol .aboutBox{border-bottom:1px #CCC dashed; padding-bottom:12px; margin-right:68px}
+.rightCol .aboutBox .title{color:#CA4445; font-size:11pt; border-bottom:1px #CCCDCF solid; margin-bottom:18px; padding-bottom:6px}
+.rightCol .aboutBox .thumnail { float:left;display:block; border:1px #fff solid; margin-right:15px;}
+.rightCol .aboutBox .more{text-align:right; display: block}
+.rightCol .proList{ margin-right:68px}
+.rightCol .proList .title{border-bottom:1px #CCC solid; color:#FFF; font-weight:bold; margin-bottom:20px; height:30px}
+.proList .title .left { float:left; background:url(../images/left_titlebox.jpg) no-repeat; height:30px; width:28px;}
+.proList .title .right {float:left; background:url(../images/right_titlebox.jpg) right no-repeat; padding-right:45px; padding-left:15px; padding-top:10px; height:20px;}
+/*.proList ul{margin:0; padding:0}
+.proList ul li{float:left; width:128px; display: inline-block}
+.proList ul p{margin:3px 0 18px 3px}*/
+
+/* Product */
+.list-product{width: 142px; display: inline-table; margin-left: 5px; margin-bottom:10px}
+.list-product .img-product{width: 142px; margin-right:5px; border:1px solid #eee; padding:1px}
+.list-product p{margin:3px 0; padding:0}
+.title-product{font-size: 12pt; font-weight: bold; color: #0091DC; margin-left: 10px}
+.product-left{float: left; width: 405px}
+.product-left-col2{float: left}
+.img-border{border: 1px solid #ccc; padding:1px}
+
+/*Gioi thieu - chi tiet*/
+.rightCol .aboutBox-detail{padding-bottom:12px; margin-right:68px}
+.rightCol .aboutBox-detail .title{color:#CA4445; font-size:11pt; border-bottom:1px #CCCDCF solid; margin-bottom:18px; padding-bottom:6px}
+.rightCol .aboutBox-detail .thumnail { float:left;display:block; border:1px #fff solid; margin-right:15px;}
+
+/* Tin tuc lien quan*/
+.related{margin-left:15px;margin-right:68px}
+.related .news{color:#CF4445; font-weight:bold}
+.related .news p{color:#000; padding-left:20px; margin:2px 0 2px 0}
+
+/* Lien he */
+fieldset{padding:15px; margin-right:68px; border : 1px solid #E4E3E3; background:#F9FAFC; -moz-border-radius:3px; -webkit-border-radius:3px ; font-family:Arial, Helvetica, sans-serif; font-size:9pt}
+legend{color:#720E3B; font-weight:bold; font-size:10pt}
+fieldset div.info{margin:5px 0 10px 0; float: none; width: 600px;}
+fieldset div.info p{padding: 5px 0}
+fieldset label{padding-bottom:5px}
+fieldset div{float:left; width:230px}
+fieldset div p{margin:0; padding:0}
+fieldset div input{width:171px; margin:5px 0; background: url(../images/bg_input.png) no-repeat; border:none; padding:6px}
+fieldset div textarea{width:407px; height:122px; margin:5px 0; background: url(../images/bg_textarea.png) no-repeat; border:none; padding: 7px 5px; overflow:auto}
+fieldset div .submit{width:90px; background:url(../images/btn.jpg) no-repeat; color:#fff; font-weight:bold; text-align:left; cursor:pointer; height: 31px;}
+fieldset div .submit:hover{background:url(../images/btn_hover.jpg) no-repeat}
+
+#footer{background-color:#000; color:#FFF;height:81px; margin:0; padding:0}
+.menu-bottom{width: 920px; padding-top:15px; margin: auto}
+.menu-bottom a{text-decoration:none; color:#FFF}
+.menu-bottom a:hover{color:#FFF}
+.menu-bottom .menu{float:left;}
+.menu-bottom .menu a{ text-transform:uppercase;}
+.menu-bottom .dev{float:right}
+
+/* News */
+.news-list{margin: 0; padding:0}
+.news-list li{clear: both; list-style: none}
+.news-list li h2{font-size: 13px; font-weight: bold}
+.news-list li img{float: left; width: 150px; margin-right:5px; margin-bottom: 5px; border: 1px solid #eee; padding:1px}
+
+/* paging */
+.paging{clear:both; text-align: right; margin: 10px 0 5px 0}
+.pagenav , .pageactive{border: 1px solid #ccc; padding: 2px 5px; color: #036CB4; -moz-border-radius:2px; -webkit-border-radius:2px}
+.pagenav:hover{background: #0066a7}
+.pagecureent{border: 1px solid #ccc; padding: 2px 5px; background:#036CB4; color:#fff; font-weight:bold; -moz-border-radius:2px; -webkit-border-radius:2px}

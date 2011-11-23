@@ -1,0 +1,243 @@
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link type="text/css" rel="stylesheet" href="<?php echo $this->baseUrl().TEMPLATE ?>/css/dosvn.css" />
+<link rel="SHORTCUT ICON" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/gif" />
+
+<?php echo $this->headTitle() ?>
+<?php echo $this->headMeta() ?>
+<?php echo $this->headLink() ?>
+<?php echo $this->headScript() ?>
+
+<?php echo $this->google_analytic; ?>
+</head>
+<body>
+<div id="wapper">
+	<div id="header">
+		<div class="logo">
+			<?php if($this->logo):?>
+				<a href="<?php echo $this->baseUrl()?>/"><img src="<?php echo $this->baseUrl().'/public/userfiles/images/banner/'.$this->logo['banner_url'] ?>" alt="<?php echo $this->logo['banner_name']?>" /></a>
+			<?php else:?>
+				<a href="<?php echo $this->baseUrl()?>/"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/logo.png" alt="Logo" /></a>
+			<?php endif;?>
+			<div class="lang"><a href="<?php echo $this->baseUrl()?>/en"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/en.jpg" alt="" /> English</a> <a href="<?php echo $this->baseUrl()?>/vi"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/vi.jpg" alt="" /> Tiếng Việt</a> <a href="<?php echo $this->baseUrl()?>/fr"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/korean.jpg" alt="" /> Korean</a></div>
+		</div>
+		<div class="main-menu">
+			<div class="left2"></div>
+			<div class="center">
+				<ul>
+					<?php 
+						$folders = $this->menubar();
+						$rowsize = count($folders);
+						for($i=0; $i < $rowsize; $i++){
+							$target = ($folders[$i]['target']=='') ? '' : ' target="'.$folders[$i]['target'].'"';
+							echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.$folders[$i]['url'].'" title="'.$folders[$i]['module'.LANG].'"'.$target.'>'.html_entity_decode($folders[$i]['module'.LANG]).'</a></li>';
+						}
+					?>
+				</ul>
+			</div>
+			<div class="right2"></div>
+		</div>	
+	</div>
+	<div id="banner">
+		<?php if($this->banner):?>
+			<?php foreach($this->banner as $value):?>
+				<a href="<?php echo $value['banner_link']?>"><img src="<?php echo $this->baseUrl()?>/public/userfiles/images/banner/<?php echo $value['banner_url']?>" alt="<?php echo $value['banner_name']?>" /></a>
+			<?php endforeach;?>
+			<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE?>/js/jquery-1.2.6.min.js"></script>
+			<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE?>/js/jqFancyTransitions.1.8.min.js"></script>
+			<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE?>/js/jqFancyTransitions.effect.js"></script>
+		<?php else:?>
+			<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/banner.jpg" alt="Banner" />
+		<?php endif;?>
+	</div>
+	<div id="content">
+		<div class="leftCol">
+			<div class="leftMenu">
+				<?php if(isset($this->menu_about)): ?>
+				<div class="title"><?php echo $this->lang['about'] ?></div>
+				<ul>
+					<?php 
+						foreach($this->menu_about as $value){
+							echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'about'.'/index/view/id/'.$value['record_id'].'/'.$this->noneUnicode($value['title'.LANG]).'" title="'.$this->escape($value['title'.LANG]).'">'.$this->escape($value['title'.LANG]).'</a></li>';
+						}
+					?>
+				</ul>
+				<?php endif;?>
+				
+				<?php if(isset($this->menu_job)): ?>
+				<div class="title"><?php echo $this->lang['job'] ?></div>
+				<ul>
+					<?php 
+						foreach($this->menu_job as $value){
+							echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'job'.'/index/view/id/'.$value['record_id'].'/'.$this->noneUnicode($value['title'.LANG]).'" title="'.$this->escape($value['title'.LANG]).'">'.$this->escape($value['title'.LANG]).'</a></li>';
+						}
+					?>
+				</ul>
+				<?php endif;?>
+				
+				<?php if(isset($this->menu_product) && is_array($this->menu_product)): ?>
+					<div class="title"><?php echo $this->lang['product'] ?></div>
+					<ul>
+						<?php 
+							$rowsize = count($this->menu_product);
+							$params = Zend_Controller_Front::getInstance()->getRequest()->getParams();
+							$cat_id = isset($params['cid']) ? intval($params['cid']) : 0;
+							
+							//Find parent_id
+							$parent_id	= $cat_id;
+			            	if ( $cat_id ){
+			            		for ($i=0; $i < $rowsize; $i++){
+			            			if ($cat_id == $this->menu_product[$i]['cat_id']){
+			            				if ( $this->menu_product[$i]['cat_parent_id'] ){
+			            					$parent_id = $this->menu_product[$i]['cat_parent_id'];
+			            				}
+			            				break;
+			            			}
+			            		}
+			            	}
+			            	
+			            	//Display cat menu
+			            	for ($i=0; $i < $rowsize; $i++){
+			            		if ( $this->menu_product[$i]['cat_parent_id'] == 0 ){
+			            			//Parent categories
+			            			echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'product/index/cat/id/'.$this->menu_product[$i]['cat_id'].'" title="'.$this->menu_product[$i]['cat_title'.LANG].'">'.$this->menu_product[$i]['cat_title'.LANG].'</a></li>';
+				            		//Sub categories
+			            			if ( $parent_id && ($parent_id == $this->menu_product[$i]['cat_id']) ){
+			            				for ($j=0; $j < $rowsize; $j++){
+			            					if ( $this->menu_product[$j]['cat_parent_id'] == $this->menu_product[$i]['cat_id'] ){
+			            						echo '<ul class="sub">';
+					            					for ($j=0; $j < $rowsize; $j++){
+					            						if ( $this->menu_product[$j]['cat_parent_id'] == $this->menu_product[$i]['cat_id'] ){
+				                                            echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'product/index/cat/id/'.$this->menu_product[$j]['cat_id'].'" title="'.$this->menu_product[$j]['cat_title'.LANG].'">'.$this->menu_product[$j]['cat_title'.LANG].'</a></li>';
+				                                        }
+				                                    }
+			                                    echo '</ul>';
+			            					}
+			            				}
+			            			}
+			            		}
+			            	}
+						?>
+					</ul>
+				<?php endif;?>
+				
+				<!-- Danh muc tin tức -->
+				<?php if(isset($this->menu_news) && is_array($this->menu_news)): ?>
+					<div class="title"><?php echo $this->lang['news'] ?></div>
+					<ul>
+						<?php 
+							$rowsize = count($this->menu_news);
+							$params = Zend_Controller_Front::getInstance()->getRequest()->getParams();
+							$cat_id = isset($params['cid']) ? intval($params['cid']) : 0;
+							
+							//For item detail
+							$id = isset($params['id']) ? intval($params['id']) : 0;
+							if($id){
+			                    $cat_id = $this->item['dos_module_news_cat_cat_id'];
+			                }
+							
+			                //Find parent_id
+							$parent_id	= $cat_id;
+			            	if ( $cat_id ){
+			            		for ($i=0; $i < $rowsize; $i++){
+			            			if ($cat_id == $this->menu_news[$i]['cat_id']){
+			            				if ( $this->menu_news[$i]['cat_parent_id'] ){
+			            					$parent_id = $this->menu_news[$i]['cat_parent_id'];
+			            				}
+			            				break;
+			            			}
+			            		}
+			            	}
+			            	
+			            	//Display cat menu
+			            	for ($i=0; $i < $rowsize; $i++){
+			            		if ( $this->menu_news[$i]['cat_parent_id'] == 0 ){
+			            			//Parent categories
+			            			echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'news/index/cat/id/'.$this->menu_news[$i]['cat_id'].'" title="'.$this->menu_news[$i]['cat_title'.LANG].'">'.$this->menu_news[$i]['cat_title'.LANG].'</a></li>';
+				            		//Sub categories
+			            			if ( $parent_id && ($parent_id == $this->menu_news[$i]['cat_id']) ){
+			            				for ($j=0; $j < $rowsize; $j++){
+			            					if ( $this->menu_news[$j]['cat_parent_id'] == $this->menu_news[$i]['cat_id'] ){
+			            						echo '<ul class="sub">';
+					            					for ($j=0; $j < $rowsize; $j++){
+					            						if ( $this->menu_news[$j]['cat_parent_id'] == $this->menu_news[$i]['cat_id'] ){
+				                                            echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'news/index/cat/id/'.$this->menu_news[$j]['cat_id'].'" title="'.$this->menu_news[$j]['cat_title'.LANG].'">'.$this->menu_news[$j]['cat_title'.LANG].'</a></li>';
+				                                        }
+				                                    }
+			                                    echo '</ul>';
+			            					}
+			            				}
+			            			}
+			            		}
+			            	}
+						?>
+					</ul>
+					<!-- <ul>
+						<li>
+							<a href="#">Giấy dán tường</a>
+							<ul class="sub">
+								<li>Sub Menu 1</li>
+								<li>Sub Menu 2</li>
+								<li>Sub Menu 3</li>
+								<li>Sub Menu 4</li>
+							</ul>
+						</li>
+						<li class="last"><a href="#">Giấy dán tường</a></li>
+					</ul> -->
+				<?php endif;?>
+			</div>
+			<div><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/leftcol_line.gif" alt="" /></div>
+			
+			
+			<div id="advBox">
+			<?php if(isset($this->list_adv)): ?>
+			  <div class="title"><?php echo $this->lang['adv'] ?></div>
+			  <div class="hinhquangcao">
+				<?php foreach ($this->list_adv as $value): ?>
+						<a href="<?php echo $value['url']?>" target="<?php echo $value['type']?>" title="<?php echo $value['title'.LANG].' - '.$value['description']?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG].' - '.$value['description']?>" /></a>
+					<?php endforeach;?>
+			  </div>
+			  <?php endif;?>
+			  
+			  <?php if(isset($this->menu_support)): ?>
+			  <div class="line-support"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/leftcol_line2.gif" alt="" /></div>
+			  <div class="title2"><?php echo $this->lang['support'] ?></div>
+				  <div class="support">
+					<?php foreach ($this->menu_support as $value): ?>
+						<p><?php echo $value['support_name'] ?></p>
+						<a href="ymsgr:sendim?<?php echo $value['support_value'] ?>&amp;m=Xin chào, tôi muốn hỏi về sản phẩm của bạn" title="Chat <?php echo $value['support_value'] ?>"><img src="http://opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2&amp;l=us" alt="<?php echo $value['support_value'] ?>" /></a>
+					<?php endforeach;?>
+				  </div>
+			  <div class="bottom">&nbsp;</div>
+				<?php endif;?>
+			</div>
+		</div>
+		<div class="rightCol">
+			<?php echo $this->layout()->content ?>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div id="footer">
+	<div class="menu-bottom">
+		<div class="menu">
+			<?php 
+				$folders = $this->menubar();
+				$rowsize = count($folders);
+				for($i=0; $i < $rowsize; $i++){
+					$target = ($folders[$i]['target']=='') ? '' : ' target="'.$folders[$i]['target'].'"';
+					echo '<a href="'.$this->baseUrl().'/'.LANGURL.$folders[$i]['url'].'" title="'.$folders[$i]['module'.LANG].'"'.$target.'>'.html_entity_decode($folders[$i]['module'.LANG]).'</a> | ';
+				}
+			?>
+			<p><?php echo $this->lang['copyright']?></p>
+		</div>
+		<div class="dev"><a href="http://dos.vn">Developed by Dos.vn</a></div>
+		<div class="clear"></div>
+	</div>
+</div>
+</body>
+</html>
