@@ -29,15 +29,13 @@ class User_EditController extends GLT_Controller_Action {
 		$this->view->items=$user->getItem($username);
 		
 		if($this->_request->isPost()){	
-			$validate = new User_Form_Validate($this->_data);
+			$validate = new User_Form_EditValidate($this->_data);
 			
 			if($validate->isError() == true){
 				$this->view->error = $validate->getError();
 				$this->view->items = $this->_data;
 			}else{
-				
-				$user->addItem($this->_data);
-				$this->_redirect('/');
+				$user->updateItem($this->_data);
 			}
 		}
 		$this->webTitle($this->view->lang[$this->_data['module']]);

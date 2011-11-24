@@ -38,13 +38,13 @@ class Webadmin_Model_Account extends Zend_Db_Table{
 		return false;
     }
 	//Back end - Check passold
-	private function checkPassold($user, $pass){
+	public   function checkPassold($user, $pass){
 		$db = $this->getAdapter();
 		$select = $db->select()->from($this->_name, array('username'))
     						   ->where('username =?', $user)
     						   ->where('password =?', md5($pass));
 		$result = $db->fetchOne($select);
-		if(count($result) > 0){
+		if($result != ''){
 			return true;
 		}
 		return false;
@@ -54,7 +54,6 @@ class Webadmin_Model_Account extends Zend_Db_Table{
         $username = Zend_Auth::getInstance()->getIdentity()->username;
 		
 		if($this->checkPassold($username, trim($data['passold']))){
-			//Update password
 	    	$bind = array('password' => md5(trim($data['passnew'])));
 	    	$this->update($bind, "username='".$username."'");
     	

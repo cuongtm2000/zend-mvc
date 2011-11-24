@@ -55,17 +55,18 @@ class User_Model_User extends Zend_Db_Table{
 		
 		try{
 			$bind = array('email' => htmlspecialchars($this->_xss->purify($data['email'])),  			  
-						  'password' => md5($data['password']),    				  
 						  'full_name' => htmlspecialchars($this->_xss->purify($data['full_name'])),				  
 						  'birthday' => $day->get('yyyy-MM-dd'),				  
 						  'address' => htmlspecialchars($this->_xss->purify($data['address'])),				  
 						  'cmnd' => htmlspecialchars($this->_xss->purify($data['cmnd'])),				  
 						  'phone' => htmlspecialchars($this->_xss->purify($data['phone'])),				  
 						  'bank_number' => htmlspecialchars($this->_xss->purify($data['bank_number'])),				  
-						  'bank_name' => htmlspecialchars($this->_xss->purify($data['bank_name'])),				  
-						  		
+						  'bank_name' => htmlspecialchars($this->_xss->purify($data['bank_name'])),				  		
 						  );
-			$this->update($bind);		
+			$this->update($bind,'username = \''.$this->_username.'\'');		
+			
+			if($data['oldpass'] != '')
+				$this->update(array('password'=>md5($data['password'])),'username = \''.$this->_username.'\'');
 		}catch(Exception $e){
 			/*echo '<pre>'; print_r($e); echo '</pre>'; */
 		}

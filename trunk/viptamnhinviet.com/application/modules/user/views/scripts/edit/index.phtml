@@ -10,28 +10,37 @@
 						<?php endforeach ?>
 					</ul>
 				<?php endif;?>
+				<?php 
+					if(!isset($this->items['day']))
+						$this->items['day']=substr($this->items['birthday'] ,8);
+					if(!isset($this->items['month']))
+						$this->items['month']=substr($this->items['birthday'] ,6,2);
+					if(!isset($this->items['year']))
+						$this->items['year']=substr($this->items['birthday'] ,0,4);
+				?>
+				
+				
 				<ul>
 					<li><label>Tên đăng nhập<span>*</span> : </label><input readonly="readonly" name="username" value="<?php echo $this->items['username'] ?>" /></li>
-					<li><label>Email<span>*</span> : </label><input  name="email" value="<?php echo $this->items['email'] ?>" /></li>
-					<li><label>Mật khẩu cũ : </label><input type="password" name="oldpass" />(Để trống nếu không đổi mật khẩu)</li>
-					<li><label>Mật khẩu mới : </label><input type="password" name="password" /></li>
-					<li><label>Xác nhận mật khẩu mới : </label><input type="password" name="password1" /></li>
+					<li><label>Email<span>*</span>: </label><input  name="email" value="<?php echo $this->items['email'] ?>" /></li>
+					<li><label>Mật khẩu cũ: </label><input type="password" name="oldpass" />(Để trống nếu không đổi mật khẩu)</li>
+					<li><label>Mật khẩu mới: </label><input type="password" name="password" /></li>
+					<li><label>Xác nhận mật khẩu mới </label><input type="password" name="password1" /></li>
 					<li><label>Họ và tên<span>*</span> : </label><input name="full_name" value="<?php echo $this->items['full_name'] ?>" /></li>
 					<li class="select-date"><label>Ngày sinh<span>*</span> : </label>
-						<input name="day" value="<?php echo substr($this->items['birthday'] ,8)?>" onblur="if(this.value=='') this.value='Ngày'" onfocus="if(this.value =='Ngày' ) this.value=''"/> 
+						<input name="day" value="<?php echo $this->items['day']?>" onblur="if(this.value=='') this.value='Ngày'" onfocus="if(this.value =='Ngày' ) this.value=''"/> 
 
 						<select size="1" name="month">
 							<option value="0">Chọn tháng</option>
 							<?php 	
-								$m=substr($this->items['birthday'] ,6,2);
 								for($i=1;$i<=12;$i++){
-									$selected= ($m == $i) ? 'selected="selected"':''; 
+									$selected= ($this->items['month'] == $i) ? 'selected="selected"':''; 
 									echo '<option '.$selected.' value="'.$i.'">Tháng '.$i.'</option>';
 								}
 							?>
 						</select>
 
-						<input name="year" value="<?php echo substr($this->items['birthday'] ,0,4); ?>" onblur="if(this.value=='') this.value='Năm'" onfocus="if(this.value =='Năm' ) this.value=''" />
+						<input name="year" value="<?php echo $this->items['year']; ?>" onblur="if(this.value=='') this.value='Năm'" onfocus="if(this.value =='Năm' ) this.value=''" />
 					</li>
 					<li><label>Địa chỉ<span>*</span> : </label><input name="address" value="<?php echo $this->items['address'] ?>" /></li>
 					<li><label>Số CMND<span>*</span> : </label><input name="cmnd" value="<?php echo $this->items['cmnd'] ?>" /></li>
