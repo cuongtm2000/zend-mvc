@@ -1,0 +1,28 @@
+<h1 class="title-right"><span>Chuyển khoản nội bộ<?php // echo $this->lang['register'.LANG]?></span></h1>
+
+<div class="bg-pr">
+	<div class="bd-top-pr"></div>
+		<div class="tent-right">
+			 <form action="" id="dangky" method="post">
+					<?php if($this->error ):?>
+					<ul style="color:#ff0000; border: 0.2em dotted #ff0000;">
+						<?php foreach($this->error as $er):?>
+							<li><?php echo $er?></li>
+						<?php endforeach ?>
+					</ul>
+				<?php endif;?>
+				<ul>
+					<li><b>Số tiền hiện tại trong tài khoản bạn là : <span><?php echo $this->balance?></span>.</b></li>
+					<li><label>Mật khẩu hiện tại<span>*</span> : </label><input type="password" name="password" /></li>
+					<li><label>Người nhận<span>*</span> : </label><input name="reciever" value="<?php echo $this->items['reciever'] ?>" /></li>
+					<li><label>Số tiền (V) <span>*</span> : </label><input name="money" value="<?php echo $this->items['money'] ?>" /></li>
+					<li class="bg-singin">
+						<label></label>
+						<input class="singin" type="submit" value=" Chuyển khoản " />
+						<input class="singin" type="reset" value="Hủy bỏ" />
+					</li>
+				</ul>
+			</form>
+			</div><!--End tent right-->
+	<div class="bd-bt-pr"></div>
+</div><!--End bg pr-->

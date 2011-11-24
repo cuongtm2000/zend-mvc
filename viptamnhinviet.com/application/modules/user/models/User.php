@@ -71,6 +71,18 @@ class User_Model_User extends Zend_Db_Table{
 			/*echo '<pre>'; print_r($e); echo '</pre>'; */
 		}
     }
+    public function transferV($data= NULL){
+    	$money=trim($data['money']);
+    	
+    	$tk=$this->getTK($this->_username);
+		$this->addTK($this->_username, $tk- $money);///
+		
+		$tk=$this->getTK($data['reciever']);
+		$this->addTK($data['reciever'], $tk + $money);///
+		
+		$log =new User_Model_Log();
+		$log->addItem('Chuyển khoản nội bộ', $this->_username, $data['reciever'], $money);
+    }
 	
 	public function getChild($user)	{
 		$select = $this->select()->from($this->_name,array('username'))
