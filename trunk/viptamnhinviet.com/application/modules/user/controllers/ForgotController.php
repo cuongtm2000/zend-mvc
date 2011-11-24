@@ -1,5 +1,5 @@
 <?php
-class User_RegisterController extends GLT_Controller_Action {
+class User_ForgotController extends GLT_Controller_Action {
     private $_data;    
     public function init(){
         //Load function for module

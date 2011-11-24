@@ -1,7 +1,14 @@
 <?php
-class User_EditController extends GLT_Controller_Action {
-    private $_data;    
+class User_TransferVController extends GLT_Controller_Action {
+    private $_data; 
+	private $_username;
+    
     public function init(){
+    	$auth = Zend_Auth::getInstance();
+        if (!$auth->hasIdentity()) {
+        	$this->_redirect('/');
+        }
+        $this->_username = $auth->getIdentity()->username;
         //Load function for module
 		$this->_data = $this->_request->getParams();
 
@@ -14,26 +21,20 @@ class User_EditController extends GLT_Controller_Action {
         }
     }
 	public function indexAction() {
-		//Get info login
-    	$auth = Zend_Auth::getInstance();
-    	if ($auth->hasIdentity()){
-			$username = $auth->getIdentity()->username;
-    	}else{
-			$this->_redirect('/');
-		}
-		$user = new User_Model_User();
-		$this->view->items=$user->getItem($username);
+		$user= new User_Model_User();
+		$this->view->balance=$user->getTK($this->_username);
 		
 		if($this->_request->isPost()){	
-			$validate = new User_Form_EditValidate($this->_data);
+			$validate = new User_Form_TransferValidate($this->_data);
 			
 			if($validate->isError() == true){
 				$this->view->error = $validate->getError();
 				$this->view->items = $this->_data;
 			}else{
-				$user->updateItem($this->_data);
+				$user->transferV($this->_data);
 			}
 		}
-		$this->webTitle($this->view->lang[$this->_data['module']]);
+		
+	
 	}
 }
