@@ -1,29 +1,34 @@
 <?php
-class User_Form_Validate{
+class User_Form_EditValidate{
 	private $_error = null;
 	
 	public function __construct($data = array()){
+		
 		//Validate username
 		$validator = new Zend_Validate();
 		$validator->addValidator(new Zend_Validate_Regex('#^[A-Za-z0-9_-]+$#'));
 		
 		if (!$validator->isValid($data['username'])) {
-			$this->_error['userid'] ='Tên đăng nhập không hợp lệ, bao gồm các ký tự, -, _ và số. Ví dụ: viptamnhinviet, tamnhinviet2012, tam_nhin_viet';
-		}else{
-			$validator->addValidator(new Zend_Validate_Db_RecordExists(array('table' => 'dos_sys_users', 'field' => 'username')));
-			if ($validator->isValid($data['username'])) {
-			    $this->_error['username'] ='Tên đăng nhập <strong>'.$data['username'].'</strong> đã có người sử dụng, vui lòng chọn tên khác.';
-			}
+			$this->_error['userid'] ='Hacker get out';
 		}
 		
-		//Validate compare pass
-		$validator = new Zend_Validate();
-		$validator ->addValidator(new Zend_Validate_StringLength(array('min' => 6)));;
-		if (!$validator->isValid($data['password'])) {
-			$this->_error['pass'] = 'Mật khẩu phải trên 6 ký tự.';
-		}
-		if($data['password'] != $data['password1']){
-			$this->_error['pass1'] = 'Hai mật khẩu không trùng nhau.';
+		if($data['oldpass'] != ''){
+			$acc = new Webadmin_Model_Account();
+			if ($acc->checkPassold($data['username'], $data['oldpass'])) {
+				//Validate compare pass
+				$validator = new Zend_Validate();
+				$validator ->addValidator(new Zend_Validate_StringLength(array('min' => 6)));;
+				if (!$validator->isValid($data['password'])) {
+					$this->_error['pass'] = 'Mật khẩu phải trên 6 ký tự.';
+				}
+				if($data['password'] != $data['password1']){
+					$this->_error['pass1'] = 'Hai mật khẩu không trùng nhau.';
+				}
+			}
+			else {
+				$this->_error['oldpass'] ='Mật khẩu cũ không đúng';
+			}
+			
 		}
 		
 		//Validate Email	
@@ -40,8 +45,7 @@ class User_Form_Validate{
 		if (!$validator->isValid($data['full_name'])) {
 			$this->_error['full_name'] ='Họ và tên phải trên 4 kí tự.';
 		}		
-		
-		
+				
 		//Validate birthday
 		$validator = new Zend_Validate();
 		$validator->addValidator(new Zend_Validate_Date(array('format' => 'yyyy-M-d')));
@@ -71,8 +75,7 @@ class User_Form_Validate{
 				  ->addValidator(new Zend_Validate_StringLength(array('min' => 9)));
 		if (!$validator->isValid($data['cmnd'])) {
 			$this->_error['cmdn'] ='Số CMND không hợp lệ.';
-		}	
-	
+		}		
 	
 		//Validate phone
 		$validator = new Zend_Validate();
@@ -106,11 +109,6 @@ class User_Form_Validate{
 			$validator->addValidator(new Zend_Validate_Db_RecordExists(array('table' => 'dos_sys_users', 'field' => 'username')));
 			if (!$validator->isValid($data['user_baotro'])) {
 			    $this->_error['username2'] ='Người bảo trợ <strong>'.$data['user_baotro'].'</strong> không tồn tại. Hãy liên hệ với người bảo trợ để lấy thông tin chính xác';
-			}else{
-				$user=new User_Model_User();
-				$child=$user->getChild($data['user_baotro']);
-				if(sizeof($child)>=2)
-					$this->_error['username21'] ='Người bảo trợ <strong>'.$data['user_baotro'].'</strong> đã bảo trợ 2 người. Hãy liên hệ với người bảo trợ để lấy thông tin chính xác';
 			}
 		}
 	
