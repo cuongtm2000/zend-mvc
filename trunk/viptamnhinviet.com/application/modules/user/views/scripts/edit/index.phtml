@@ -28,8 +28,16 @@
 					<li><label>Xác nhận mật khẩu mới </label><input type="password" name="password1" /></li>
 					<li><label>Họ và tên<span>*</span> : </label><input name="full_name" value="<?php echo $this->items['full_name'] ?>" /></li>
 					<li class="select-date"><label>Ngày sinh<span>*</span> : </label>
-						<input name="day" value="<?php echo $this->items['day']?>" onblur="if(this.value=='') this.value='Ngày'" onfocus="if(this.value =='Ngày' ) this.value=''"/> 
-
+												
+						<select size="1" name="day">
+							<option value="0">Ngày</option>
+							<?php 	
+								for($i=1;$i<=31;$i++){
+									$selected= ($this->items['day'] == $i) ? 'selected="selected"':''; 
+									echo '<option '.$selected.' value="'.$i.'">'.$i.'</option>';
+								}
+							?>
+						</select>
 						<select size="1" name="month">
 							<option value="0">Chọn tháng</option>
 							<?php 	
@@ -39,8 +47,16 @@
 								}
 							?>
 						</select>
-
-						<input name="year" value="<?php echo $this->items['year']; ?>" onblur="if(this.value=='') this.value='Năm'" onfocus="if(this.value =='Năm' ) this.value=''" />
+						        <select size="1" name="year">
+							<option value="0">Năm</option>
+							<?php 	
+								for($i=1945;$i<=2005;$i++){
+									$selected= ($this->items['year'] == $i) ? 'selected="selected"':''; 
+									echo '<option '.$selected.' value="'.$i.'">'.$i.'</option>';
+								}
+							?>
+						</select>
+						
 					</li>
 					<li><label>Địa chỉ<span>*</span> : </label><input name="address" value="<?php echo $this->items['address'] ?>" /></li>
 					<li><label>Số CMND<span>*</span> : </label><input name="cmnd" value="<?php echo $this->items['cmnd'] ?>" /></li>

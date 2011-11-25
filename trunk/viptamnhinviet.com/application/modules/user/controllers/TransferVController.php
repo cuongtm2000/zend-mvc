@@ -29,12 +29,11 @@ class User_TransferVController extends GLT_Controller_Action {
 			
 			if($validate->isError() == true){
 				$this->view->error = $validate->getError();
-				$this->view->items = $this->_data;
 			}else{
 				$user->transferV($this->_data);
+				$this->view->success=true;
 			}
-		}
-		
-	
+			$this->view->items = $this->_data;
+		}	
 	}
 }
