@@ -84,33 +84,6 @@ class User_Form_EditValidate{
 		if (!$validator->isValid($data['phone'])) {
 			$this->_error['phone'] ='Số điện thoại phải trên 10 ký tự.';
 		}
-		
-		
-		//Validate user_gioithieu
-		$validator = new Zend_Validate();
-		$validator->addValidator(new Zend_Validate_Regex('#^[A-Za-z0-9_-]+$#'));
-		
-		if (!$validator->isValid($data['user_gioithieu'])) {
-			$this->_error['userid1'] ='Tên người giới thiệu không hợp lệ';
-		}else{
-			$validator->addValidator(new Zend_Validate_Db_RecordExists(array('table' => 'dos_sys_users', 'field' => 'username')));
-			if (!$validator->isValid($data['user_gioithieu'])) {
-			    $this->_error['username1'] ='Người giới thiệu <strong>'.$data['user_gioithieu'].'</strong> không tồn tại. Hãy liên hệ với người giới thiệu để lấy thông tin chính xác';
-			}
-		}
-		
-		//Validate user_baotro
-		$validator = new Zend_Validate();
-		$validator->addValidator(new Zend_Validate_Regex('#^[A-Za-z0-9_-]+$#'));
-		
-		if (!$validator->isValid($data['user_baotro'])) {
-			$this->_error['userid2'] ='Tên người bảo trợ không hợp lệ';
-		}else{
-			$validator->addValidator(new Zend_Validate_Db_RecordExists(array('table' => 'dos_sys_users', 'field' => 'username')));
-			if (!$validator->isValid($data['user_baotro'])) {
-			    $this->_error['username2'] ='Người bảo trợ <strong>'.$data['user_baotro'].'</strong> không tồn tại. Hãy liên hệ với người bảo trợ để lấy thông tin chính xác';
-			}
-		}
 	
 	}
 

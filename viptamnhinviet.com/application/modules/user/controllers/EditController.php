@@ -22,7 +22,7 @@ class User_EditController extends GLT_Controller_Action {
 			$this->_redirect('/');
 		}
 		$user = new User_Model_User();
-		$this->view->items=$user->getItem($username);
+		
 		
 		if($this->_request->isPost()){	
 			$validate = new User_Form_EditValidate($this->_data);
@@ -32,8 +32,10 @@ class User_EditController extends GLT_Controller_Action {
 				$this->view->items = $this->_data;
 			}else{
 				$user->updateItem($this->_data);
+				$this->view->error = array('Đã chỉnh sửa thông tin thành công. Nhấp vào <a href="'.$this->view->baseUrl().'">đây</a> để trở về trang chủ');
 			}
 		}
+		$this->view->items=$user->getItem($username);
 		$this->webTitle($this->view->lang[$this->_data['module']]);
 	}
 }
