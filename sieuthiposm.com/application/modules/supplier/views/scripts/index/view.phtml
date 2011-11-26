@@ -1,0 +1,90 @@
+<?php if(is_array($this->item)):?>
+	<h2>
+		<?php 
+			echo $this->lang['supplier'];
+			if(is_array($this->itemCat))
+				foreach ($this->itemCat as $value) {
+					echo ' &raquo; '. $value;
+				}	
+			echo ' &raquo; '. $this->item['title'.LANG];
+		?>
+	</h2>
+
+	<div class="tieude">
+		<h1><span><?php echo $this->item['title'.LANG] ?></span><b><?php echo ' - '.$this->item['slogan'] ?></b></h1>
+		<p><?php echo $this->item['expert'] ?></p>
+		<ul>
+			<li><label>Địa chỉ:</label> <?php echo $this->item['address'] ?></li>
+			<li><label>Liên hệ:</label> <?php echo $this->item['contact'] ?></li>
+			<li><label>Điện thoại:</label> <?php echo $this->item['phone'] ?></li>
+			<li><label>Fax:</label> <?php echo $this->item['fax'] ?></li>
+			<li><label>Di động:</label> <?php echo $this->item['tel'] ?></li>
+			<li><label>Website:</label> <?php if($this->item['website']):?><a href="<?php echo (strpos($this->item['website'], 'http://') === false) ? 'http://'.$this->item['website'] : $this->item['website']?>" target="_blank" title="Visit: <?php echo $this->item['website']?>"><?php echo $this->item['website']?></a><?php endif;?></li>
+			<li><label>Email:</label> <?php echo ($this->item['email']) ? '<a href="mailto:'.$this->item['email'].'" title="Mail to: '.$this->item['email'].'">'.$this->item['email'].'</a>' : '' ?></li>
+			<li><label>Logo:</label> <?php echo ($this->item['pic_thumb']) ? '<img src="'.$this->baseUrl().'/public/userfiles/images/supplier/'.$this->item['pic_thumb'].'" alt="Logo '.$this->item['title'.LANG].'" />' : '' ?></li>
+		</ul>
+	</div><br class="clear" />
+
+	<div id="presented">
+		<?php echo html_entity_decode($this->item['content'.LANG]) ?>
+	</div>
+	
+	<?php echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml'); ?>
+	
+	<?php if($this->item['pic_desc']):?>
+		<h2>Hình mô tả về <?php echo $this->item['title'.LANG] ?></h2>
+		<div id="doitac">
+			<div id="mygallery" class="stepcarousel">
+				<div class="belt">
+					<?php $str = explode('|', $this->item['pic_desc']);foreach ($str as $value):?>
+					<div class="panel">
+						<div class="border"><a href="<?php echo $this->baseUrl() ?>/public/userfiles/images/supplier/<?php echo $value ?>" class="gallery-detail"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/supplier/<?php echo $value ?>" alt="<?php echo $this->item['title'.LANG] ?>" /></a></div>
+						<!-- <div style="text-align:center; font-weight:bold; padding-top: 5px"><a href="/vi/product/cat/view/924">Đất cấp nhà cấp 4, đất khai thác chưa sử dụng</a></div> -->
+					</div>
+					<?php endforeach;?>
+				</div>
+			</div>
+			<script type="text/javascript">
+				stepcarousel.setup({
+					galleryid: 'mygallery', //id of carousel DIV
+					beltclass: 'belt', //class of inner "belt" DIV containing all the panel DIVs
+					panelclass: 'panel', //class of panel DIVs each holding content
+					autostep: {enable:true, moveby:1, pause:3000},
+					panelbehavior: {speed:500, wraparound:true, persist:false},
+					defaultbuttons: {enable: true, moveby: 1, leftnav: ['<?php echo $this->baseUrl().TEMPLATE?>/images/left.gif', -19, 6], rightnav: ['<?php echo $this->baseUrl().TEMPLATE?>/images/right.gif', -2, 6]},
+					statusvars: ['statusA', 'statusB', 'statusC'], //register 3 variables that contain current panel (start), current panel (last), and total panels
+					contenttype: ['inline'] //content setting ['inline'] or ['ajax', 'path_to_external_file']
+				})
+			</script>
+			<script type="text/javascript">
+				jQuery.noConflict();
+				jQuery(function() {
+					jQuery('.belt .gallery-detail').lightBox({
+					imageLoading: '<?php echo $this->baseUrl().TEMPLATE ?>/images/lightbox-ico-loading.gif',
+					imageBtnClose: '<?php echo $this->baseUrl().TEMPLATE ?>/images/lightbox-btn-close.gif',
+					imageBtnPrev: '<?php echo $this->baseUrl().TEMPLATE ?>/images/lightbox-btn-prev.gif',
+					imageBtnNext: '<?php echo $this->baseUrl().TEMPLATE ?>/images/lightbox-btn-next.gif',
+					imageBlank: '<?php echo $this->baseUrl().TEMPLATE ?>/images/lightbox-blank.gif',
+					});
+				});
+			</script>
+		 </div><!--End cac doi tac--> 
+	<?php endif;?>
+<?php else:?>
+	<h2>
+		<?php echo $this->lang['supplier'];
+				if(is_array($this->itemCat))
+					foreach ($this->itemCat as $value) {
+					echo ' &raquo; '. $value;
+				}	
+		?>
+	</h2>
+	<?php echo $this->item;?>
+<?php endif;?>
+
+<!-- <ul class="menusmall">
+	<li><img src="<?php echo $this->baseUrl().TEMPLATE?>/images/icon-1.gif" alt="home" /><a href="index.html" title="Trang chủ">trang chủ</a></li>
+	<li><img src="<?php echo $this->baseUrl().TEMPLATE?>/images/icon-2.gif" alt="Email" />email</li>
+	<li><img src="<?php echo $this->baseUrl().TEMPLATE?>/images/icon-3.gif" alt="Print" />print</li>
+	<li><img src="<?php echo $this->baseUrl().TEMPLATE?>/images/icon-4.gif" alt="Save" />save</li>
+</ul> -->
