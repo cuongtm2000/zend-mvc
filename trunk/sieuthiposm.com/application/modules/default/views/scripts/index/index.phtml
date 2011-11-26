@@ -1,0 +1,79 @@
+<h2><?php echo $this->lang['studies']?></h2>
+	<!--Tin tuc moi-->
+	<div id="newupdate">
+		<h1><?php echo $this->lang['studies_new']?></h1>
+			<?php if($this->studies_hot2):?>
+			<ul>
+				<?php foreach ($this->studies_hot2 as $value):?>
+				<li><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>studies/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></li>
+				<?php endforeach;?>
+			</ul>
+			<?php endif;?>
+	</div><!--END tin tuc moi-->
+	
+	<?php if($this->studies_hot):?>
+		<?php foreach ($this->studies_hot as $value):?>
+			<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/studies/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg'; ?>
+			<div class="masuring">
+				<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>studies/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo $this->baseUrl().$picthumb ?>" class="imgcon" style="float:left;" alt="<?php echo $value['title'.LANG] ?>" /></a>
+			    <h1><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>studies/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h1>
+			 	<?php echo html_entity_decode($value['preview'.LANG]) ?>
+			</div>
+		<?php endforeach;?>
+	<?php endif;?>
+	<?php if($this->marketing_hot):?>
+		<?php foreach ($this->marketing_hot as $value):?>
+			<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/marketing/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg'; ?>
+			<div class="masuring">
+				<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>marketing/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo $this->baseUrl().$picthumb ?>" class="imgcon" style="float:left;" alt="<?php echo $value['title'.LANG] ?>" /></a>
+			    <h1><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>marketing/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h1>
+			 	<?php echo html_entity_decode($value['preview'.LANG]) ?>
+			</div>
+		<?php endforeach;?>
+	<?php endif;?>
+		
+<div class="clear"></div>
+<!--Cac doi tac-->
+<!--<div id="doitac">
+<h2>các đối tác</h2>
+   <div id="mygallery" class="stepcarousel">
+			<div class="belt">
+				<div class="panel">
+					<div class="border"><a href="#"><img src="<?php echo $this->baseUrl().TEMPLATE?>/images/no-images.jpg" alt="" /></a></div>
+					<div style="text-align:center; font-weight:bold; padding-top: 5px"><a href="#">Đất cấp nhà cấp 4</a></div>
+				</div>
+				<div class="panel">
+					<div class="border"><a href="#"><img src="<?php echo $this->baseUrl().TEMPLATE?>/images/no-images.jpg" alt="" /></a></div>
+					<div style="text-align:center; font-weight:bold; padding-top: 5px"><a href="#">Đất cấp nhà cấp 4</a></div>
+				</div>
+				<div class="panel">
+					<div class="border"><a href="#"><img src="<?php echo $this->baseUrl().TEMPLATE?>/images/no-images.jpg" alt="" /></a></div>
+					<div style="text-align:center; font-weight:bold; padding-top: 5px"><a href="#">Đất cấp nhà cấp 4</a></div>
+				</div>
+				<div class="panel">
+					<div class="border"><a href="#"><img src="<?php echo $this->baseUrl().TEMPLATE?>/images/no-images.jpg" alt="" /></a></div>
+					<div style="text-align:center; font-weight:bold; padding-top: 5px"><a href="#">Đất cấp nhà cấp 4</a></div>
+				</div>
+				<div class="panel">
+					<div class="border"><a href="#"><img src="<?php echo $this->baseUrl().TEMPLATE?>/images/no-images.jpg" alt="" /></a></div>
+					<div style="text-align:center; font-weight:bold; padding-top: 5px"><a href="#">Đất cấp nhà cấp 4</a></div>
+				</div>
+				<div class="panel">
+					<div class="border"><a href="#"><img src="<?php echo $this->baseUrl().TEMPLATE?>/images/no-images.jpg" alt="" /></a></div>
+					<div style="text-align:center; font-weight:bold; padding-top: 5px"><a href="#">Đất cấp nhà cấp 4</a></div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		stepcarousel.setup({
+			galleryid: 'mygallery', //id of carousel DIV
+			beltclass: 'belt', //class of inner "belt" DIV containing all the panel DIVs
+			panelclass: 'panel', //class of panel DIVs each holding content
+			autostep: {enable:true, moveby:1, pause:3000},
+			panelbehavior: {speed:500, wraparound:true, persist:false},
+			defaultbuttons: {enable: true, moveby: 1, leftnav: ['<?php echo $this->baseUrl().TEMPLATE?>/images/left.gif', -19, 6], rightnav: ['<?php echo $this->baseUrl().TEMPLATE?>/images/right.gif', -2, 6]},
+			statusvars: ['statusA', 'statusB', 'statusC'], //register 3 variables that contain current panel (start), current panel (last), and total panels
+			contenttype: ['inline'] //content setting ['inline'] or ['ajax', 'path_to_external_file']
+		})
+		</script>
+ </div>--><!--End cac doi tac-->

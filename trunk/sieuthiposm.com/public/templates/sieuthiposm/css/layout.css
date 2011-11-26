@@ -1,0 +1,212 @@
+body{font-family:Verdana, Geneva, sans-serif; font-size:9pt; background:url(../images/bg.jpg) no-repeat; height:125px;}
+.left{float: left;}
+.right{float:right}
+.clear{clear: both;}
+a{text-decoration:none; color:#720E3B}
+a:hover{color:#000;}
+
+/*layout*/
+*{ margin:0; padding:0}
+.center{text-align:center}
+.red{color:red}
+
+#wapper{width:980px; margin: auto;}
+#header{position: relative;}
+#header .clock{position: absolute; top:-2px; right:3px; text-align: center; z-index:1}
+#header .clock p{margin-top:-14px; z-index:9}
+#header .clock p a{color: #333}
+#header .clock p a:hover{color: #D70303}
+
+#all{position:relative;}
+#menu{position:relative; top:-5px;background:url(../images/menu.gif); height:42px; width:983px; margin-bottom:5px}
+#menu ul{padding:13px 0 0 16px; margin:0}
+#menu ul li{display:inline; margin:0 25px}
+#menu ul li a{color:#fff; text-transform:uppercase; font-size:9pt; font-weight:700;}
+#menu ul li a:hover{color: #333}
+#menu ul li.select a{color: #333}
+
+#banner{ height:190px; width:560px}
+
+/*Content*/
+#content {width:980px; margin:auto;border-left:1px solid #D4D4D4; border-right:1px solid #D4D4D4}
+.topborder{ position:relative;top:-4px; left:-2px}
+.topborder img{ width:983px}
+.btborder{ position:relative; left:-1px}
+.btborder img{width:983px}
+.btmenu{padding-bottom:10px}
+.btmenu img{ margin-top:0px; width:188px;}
+
+/*Left content*/
+#lcon{ float:left; width:185px; padding:0px 15px 0 4px; position:relative; top:-7px;}
+#lcon h1{background:url(../images/bg-menu-list.gif); height:50px; width:185px; font-size:8pt; color:#fff; text-transform:uppercase; text-align:center; font-weight:700;border-left:1px solid #D4D4D4; border-right:1px solid #D4D4D4}
+#lcon h1 span{ position:relative; top:20px;}
+#lcon a:hover{text-decoration:underline}
+
+#login ul, .statistics{list-style: none}
+#login a{ text-transform:uppercase; font-family:Tahoma, Geneva, sans-serif; font-weight:normal; font-size:8pt}
+#login li{ font-weight:bold; text-transform:capitalize;}
+#login li.login{text-align: right; margin-right: 15px; margin-top: 5px}
+
+#frm-login ul li{list-style: none; margin: 5px 0 10px 0}
+#frm-login ul li label{font-weight: bold; width: 117px; float: left}
+#frm-login ul li label span{color: red}
+#frm-login ul li input{padding: 3px 0; width: 200px; -moz-border-radius: 2px; -webkit-border-radius: 2px; border: 1px solid #ccc}
+#frm-login ul li .submit{width: inherit; border: none}
+
+.statistics li:first-letter{text-transform:capitalize}
+.statistics{margin:0; padding:0}
+.statistics li{font-family:Tahoma, Geneva, sans-serif; padding-left:5px}
+
+.pass{position:relative;background:url(../images/pass.jpg); width:160px; height:30px;}
+.user{ position:relative;background:url(../images/input.jpg); width:160px; height:30px;}
+.user input{ border:none;margin:0 0 0 25px; position:relative; top:4px }
+.pass input{ border:none;margin:0 0 0 25px; position:relative; top:4px }
+.button{background:url(../images/login.jpg); height:30px; width:65px;}
+.ngang{ border:1px solid #999; width:160px;}
+#lcon ul{ margin:0 -2px 0 0; padding:10px 0;border-left:1px solid #D4D4D4; border-right:1px solid #D4D4D4;}
+#lcon ul li{ margin:0px 10px 0 10px; line-height:2em;}
+#lcon ul li a{color:#000; display:block}
+#lcon .list{ padding-left:10px; text-transform:capitalize}
+#lcon .list li {list-style-image:url(../images/icon.gif); border-bottom:1px dotted #999; }
+#lcon .list li ul{border: none; margin:0 0 0 5px; padding:0}
+#lcon .list li ul li{border-bottom:none}
+
+/*ALL rifht content*/
+#allrightcon{float:left;width:770px; position:relative; top:-7px}
+
+/*left allright content*/
+#centercon{float:left; width:560px; margin-left:5px;text-align:justify}
+.img{border:2px solid #CCC;-moz-border-radius: 2px; -webkit-border-radius: 2px; margin:0 10px 5px 0px}
+.imgcon{border:3px solid #DCDBAD;-moz-border-radius: 2px; -webkit-border-radius: 2px; margin:0 10px 5px 0px}
+#centercon h2{color:#F00; font-size:11pt; font-weight:700; border-bottom:1px solid #ccc; padding-bottom:5px; margin:20px 0}
+#centercon h3:first-letter{text-transform:capitalize}
+#centercon h3{ color:#F00; font-weight:bold}
+
+/*masuring*/
+.masuring{font-size:10pt; color:#666; line-height:1.5em; margin-bottom:20px}
+.masuring p:first-letter{ text-transform:capitalize; }
+.masuring a{color:#F00; font-weight:700; position:relative; top:-5px; padding-bottom:5px}
+.masuring a:hover{color: #333}
+
+#presented p:first-letter{ text-transform:capitalize; }
+#presented {font-size:10pt; color:#666; line-height:1.5em; margin-bottom:20px}
+.extract{text-align:right; text-transform:capitalize}
+.posts a{ text-transform:capitalize; color:#000; font-family:Tahoma, Geneva, sans-serif}
+.posts span{color:#666}
+.posts li{list-style:disc; margin-left:30px; line-height:1.5em}
+
+/* paging */
+.paging{clear:both; margin:30px 0 20px 0; text-align:right}
+.paging a:hover{background:#FD0000; color:#fff}
+.pagenav , .pageactive{border: 1px solid #ccc; padding: 2px 5px; color:#F00; -moz-border-radius: 2px; -webkit-border-radius: 2px;}
+.pagecureent{border: 1px solid #ccc; padding: 2px 5px; background:#FF2828; color:#fff; font-weight:bold; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+
+/*Tin moi cap nhat*/
+#newupdate{float:right; width:170px; margin:0 0 0 10px; border:1px solid #D4D4D4}
+#newupdate a{ color:#000; display:block}
+#newupdate span{color:#666}
+#newupdate a:hover{text-decoration:underline}
+#newupdate li:first-letter{ text-transform:capitalize}
+#newupdate li{padding:0 4px; margin:10px 0; font-size:10pt; list-style: none}
+#newupdate h1{ font-size:10pt; margin:0; text-align:center;background:url(../images/bg-new.gif); color:#FFF; width:170px; padding:5px 0  ; text-transform:capitalize; border-bottom:none}
+
+/*Dang ky*/
+#register{margin:10px 10px 0 0}
+#register a{ font-weight:bold; color:#000}
+#register p{ margin:20px 0; color:#666; font-size:10pt}
+#register span{color:#F00}
+#register ul.form{margin:0; padding:0; list-style:none}
+#register ul.form li{padding:5px 0;}
+#register ul.form li label{float:left; width:130px; padding-top:2px; font-family:Tahoma, Geneva, sans-serif; margin-right:10px}
+#register ul.form li input{ width:200px;-moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
+#register select{width:208px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
+#register ul.form .guixoa{width:87px; border:none; padding-bottom:15px}
+
+/* Error */
+ul.error-li{margin:0; padding:2px; margin-bottom:10px; margin-left: 12px}
+ul.error-li li{padding:2px 0; color: red}
+
+.tieude{color:#666; line-height:2em; text-align: center;}
+.tieude span{ font-size:19pt; color:#F00}
+.tieude b{ font-size:12pt; color:#666}
+.tieude ul{text-align: left; margin:0; padding:0; margin-left: 118px; list-style: none}
+.tieude ul li{clear: both}
+.tieude ul li label{width: 90px; float: left}
+
+/*Liên hệ*/
+#contact{color:#666;}
+#contact p{ margin:20px 0; color:#666; font-size:10pt; font-family:Tahoma, Geneva, sans-serif}
+#contact p:first-letter{text-transform:capitalize}
+#contact ul{margin:10px 0; padding:0; list-style:none}
+#contact ul li{padding:5px 0; margin-left:-40px}
+#contact ul li label{float:left; width:100px; padding-top:2px; color:#666; font-family:Tahoma, Geneva, sans-serif; font-size:11px; text-transform:capitalize; text-align:right; margin-right:10px}
+#contact ul li input{ width:250px; border:1px solid #ccc; margin-right:20px; height:20px}
+#contact ul li textarea{-moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc;}
+#contact .guixoa{ width:70px}
+#contact .btloibinh{width:89px; height:28px; border:none}
+
+/*cac doi tac*/
+#doitac h2{ border:none; margin:0}
+.stepcarousel{
+position: relative; /*leave this value alone*/
+overflow:scroll; /*leave this value alone*/
+width: 540px; /*Width of Carousel Viewer itself*/
+height: 130px; /*Height should enough to fit largest content's height*/
+margin-bottom: 5px;
+margin-left:14px;
+}
+.stepcarousel .belt{
+position: absolute; /*leave this value alone*/
+left: 0;
+top: 0;
+}
+.stepcarousel .panel{
+float: left; /*leave this value alone*/
+overflow: hidden;/*clip content that go outside dimensions of holding panel DIV*/
+margin: 18px 7px; /*margin around each panel*/
+margin-top: 7px;
+width: 100px; /*Width of each panel holding each content. If removed, widths should be individually defined on each content DIV then. */
+}
+.stepcarousel .panel img{ width: 95px; height: 77px;}
+
+/*Loi binh*/
+.binhluan{background:#fff; border:2px solid #D1D1D1; border-left:6px solid #CDDEEE; padding: 5px 7px; font-size:8pt; color:#BC2A4D; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin: 0px 0 8px 0}
+.binhluan span{ color:#999; font-weight:normal}
+
+#loibinh ul{border-left:1px solid #D4D4D4; border-right:1px solid #D4D4D4; margin-top:0; border-bottom:1px solid #D4D4D4; padding-top:5px}
+#bgloibinh{background:url(../images/bg-loibinh.gif) no-repeat; height:32px; color:#fff; font-weight: bold}
+#bgloibinh p{position:relative; top:5px; margin-left:20px; text-transform:capitalize;}
+
+/*Supperlist*/
+#supperlist{color:#666}
+#supperlist h2:first-letter{ text-transform:capitalize}
+#supperlist h2{ border:none; color:#666; font-size:9pt; text-transform:none; margin:0}
+#supperlist li:first-letter{ text-transform:capitalize}
+#supperlist p{ margin:5px 0}
+#supperlist p:first-letter{text-transform:capitalize}
+#supperlist li{list-style:decimal; margin-left:20px; color:#666}
+
+/*menusmall*/
+.menusmall a{color:#666}
+.menusmall{padding:0 0 30px 0; margin:10px 0 0 0;border-top:1px solid #D4D4D4}
+.menusmall li{display:inline; text-transform:capitalize; color:#666}
+.menusmall img{margin:0 5px}
+
+/*Page Dieu Khoan su dung*/
+#dieukhoan{ color:#666; line-height:1.75em}
+#dieukhoan p:first-letter{ text-transform:capitalize}
+#dieukhoan span, h1:first-letter{ text-transform:capitalize;}
+.btdieukhoan{text-transform:capitalize; color:#F00}
+.quydinh{ list-style:decimal; margin:0 0 0px 20px}
+.quydinh li:first-letter{text-transform:capitalize}
+
+/*Right all right content*/
+#rightcon{ float:right;width:185px; color:#0FF;text-align:center}
+#rightcon h1{background:url(../images/bg-menu-list.gif);height:50px; width:185px; font-size:8pt; color:#fff; text-transform:uppercase; text-align:center; font-weight:700;border-left:1px solid #D4D4D4; border-right:1px solid #D4D4D4}
+#rightcon h1 span{position:relative; top:20px;}
+
+#rightcon ul{ margin:0 -2px 0 0; padding:10px 0;border-left:1px solid #D4D4D4; border-right:1px solid #D4D4D4;}
+#rightcon ul li{border-bottom:1px solid #D4D4D4; border-top:1px solid #D4D4D4; list-style: none; margin: 7px 0 0 0}
+
+/*Footer*/
+#footer{ text-align:center; text-transform:capitalize; padding:20px 0; font-size:9pt; color:#666; font-weight:bold} 

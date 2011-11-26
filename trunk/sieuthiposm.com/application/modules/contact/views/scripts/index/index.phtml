@@ -1,0 +1,16 @@
+<h2><?php echo $this->item['title'.LANG] ?></h2>
+<div class="tieude"><?php echo html_entity_decode($this->item['content'.LANG]); ?></div>
+	
+<form action="" method="post" id="contact" name="frm" onsubmit="return validatecheck();">
+<p>quý khách có thể liên hệ với chúng tôi bằng cách điền đầy đủ thông tin vào mẫu sau:</p>
+<ul>
+	<li><label><span class="red">*</span> họ tên: </label><input name="fullname" id="fullname" type="text" /><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/contact.jpg" alt="contact" width="160" style="float:right;"  /></li>
+	<li><label>công ty: </label><input type="text" name="company" value="" /></li>
+	<li><label><span class="red">*</span> địa chỉ: </label><input name="address" id="address" type="text" /></li>
+	<li><label><span class="red">*</span> điện thoại: </label><input name="phone" id="phone" type="text" /></li>
+	<li><label><span class="red">*</span> email: </label><input name="email" id="email" type="text" /></li>
+	<li><label><span class="red">*</span> nội dung:</label><textarea rows="10" cols="55" name="content"></textarea></li>
+	<li><label></label><input type="submit" value="Gửi"  name="submit_contact" class="guixoa"/><input type="reset" value="Xoá" name="xoa"  class="guixoa"/></li>
+</ul>
+</form>
+<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/contact.js"></script>

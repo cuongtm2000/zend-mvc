@@ -1,0 +1,103 @@
+<div class="content">
+	<?php if(count($this->error) > 0): ?>
+		<ul class="error-li">
+			<?php 
+			foreach ($this->error as $value){
+				echo '<li>'.$value.'</li>';
+			}
+			?>
+		</ul>
+	<?php endif; ?>
+	
+	<form action="" method="post" enctype="multipart/form-data" id="frm" name="frm">
+	<fieldset>
+		<legend><?php  echo $this->lang['sys_addpost'] ?></legend>
+	    <?php
+	        $lang = $this->langlist();
+	        $i = 0;
+	        foreach($lang as $value){
+	        	$request = '';
+	        	$request = ($i == 0) ? '<span class="error">*</span>' : '';
+	            echo '<div class="col1">'.$this->lang['sys_title'].' '.$value.' '.$request.'</div>
+	                <div class="col2">
+	                    <input name="title'.$value.'" value="'.$this->item['title'.$value].'" maxlength="45" class="txt-very-large" />
+	                </div>
+	                <div class="clear space"></div>';
+	            $i++;
+	        }
+	    ?>
+	    
+	    <div class="col1"><?php echo $this->lang['sys_picture'] ?> <span class="error">*</span></div>
+	    <div class="col2">
+	    	<?php if($this->item['pic_thumb'] != null): ?>
+	    		<div class="border-img"><img src="<?php echo $this->baseUrl().'/public/userfiles/images/'.$this->controller.'/'.$this->item['pic_thumb'] ?>" alt="" /></div>
+	    	<?php endif; ?>
+	        <input type="file" name="file" />
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <div class="col1"><?php echo $this->lang['adv_url'] ?> <span class="error">*</span></div>
+	    <div class="col2">
+	        <input name="url" value="<?php echo $this->item['url'] ?>" maxlength="45" class="txt-very-large" />
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <div class="col1"><?php echo $this->lang['adv_description'] ?></div>
+	    <div class="col2">
+	        <input name="description" value="<?php echo $this->item['description'] ?>" maxlength="1000" class="txt-very-large" />
+	    </div>
+	    <div class="clear space"></div>
+	
+	    <div class="col1"><?php echo $this->lang['adv_start_date'] ?> <span class="error">*</span></div>
+	    <div class="col2">
+	        <input name="start_date" value="<?php echo $this->item['start_date'] ?>" maxlength="45" class="txt-very-large" /> <span class="readme">(dd-mm-YYYY)</span>
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <div class="col1"><?php echo $this->lang['adv_end_date'] ?> <span class="error">*</span></div>
+	    <div class="col2">
+	        <input name="end_date" value="<?php echo $this->item['end_date'] ?>" maxlength="45" class="txt-very-large" /> <span class="readme">(dd-mm-YYYY)</span>
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <div class="col1"><?php echo $this->lang['adv_position'] ?></div>
+	    <div class="col2 radio">
+	        <select name="position">
+	        	<option value="left"><?php echo $this->lang['adv_position_left'] ?></option>
+	        	<option value="center"><?php echo $this->lang['adv_position_center'] ?></option>
+	        	<option value="right"><?php echo $this->lang['adv_position_right'] ?></option>
+	        	<option value="right-top"><?php echo $this->lang['adv_position_right_top'] ?></option>
+	        	<option value="right-bottom"><?php echo $this->lang['adv_position_right_bottom'] ?></option>
+	        </select>
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <div class="col1"><?php echo $this->lang['adv_type'] ?></div>
+	    <div class="col2 radio">
+	        <select name="type">
+	        	<option value="_bank"><?php echo $this->lang['adv_type_new'] ?></option>
+	        	<option value="_parent"><?php echo $this->lang['adv_type_current'] ?></option>
+	        </select>
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <div class="col1"><?php echo $this->lang['sys_active'] ?></div>
+	    <div class="col2 radio">
+	        <input type="radio" checked="checked" name="active" id="active" value="1" /> <label for="active"><?php echo $this->lang['sys_active'] ?></label> &nbsp;&nbsp; <input type="radio"  name="active" id="deactive" value="0" /> <label for="deactive"><?php echo $this->lang['sys_hidden'] ?></label>
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <div class="col1">&nbsp;</div>
+	    <div class="col2">
+	        <input type="submit" name="submit" value="  <?php echo $this->lang['sys_add'] ?>  " class="login" /> <a href="/" class="login-a"><?php echo $this->lang['sys_cancel'] ?></a>
+	    </div>
+	    <div class="clear space"></div>
+	</fieldset>
+	</form>
+	<script type="text/javascript">
+		var the_form = window.document.frm;		
+		radio_list("<?php echo $this->item['active'] ?>", the_form.active);
+		select_list("<?php echo $this->item['position'] ?>", the_form.position);
+		select_list("<?php echo $this->item['type'] ?>", the_form.type);
+	</script>
+</div>

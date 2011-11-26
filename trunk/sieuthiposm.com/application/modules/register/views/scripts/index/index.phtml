@@ -1,0 +1,34 @@
+<h2>Đăng ký thành viên</h2>
+<div class="tieude center"><span>SieuthiPOSM - </span><b>nơi niềm tin hội tụ</b></div>
+
+<form  id="register" method="post" action="">
+<p>Hãy trở thành thành viên của <strong>SieuthiPOSM</strong>, để chúng tôi có thể gởi tới bạn những thông tin mới nhất về các hoạt động marketing đang diễn ra, những sản phẩm, dịch vụ của những nhà cung cấp uy tín, có thể bạn cần nó trong các chiến dịch quảng cáo của mình</p>
+	<?php if($this->error ):?>
+		<ul class="error-li">
+			<?php foreach($this->error as $er):?>
+				<li><?php echo $er?></li>
+			<?php endforeach ?>
+		</ul>
+	<?php endif;?>
+	<ul class="form">
+		<li><label>Tên thành viên<span>*</span> : </label><input name="username" value="<?php echo $this->items['username'] ?>" /></li>
+		<li><label>Mật khẩu<span>*</span> : </label><input type="password" name="password" value="" /></li>
+		<li><label>Xác nhận mật khẩu<span>*</span> : </label><input type="password" name="password1" value="" /></li>
+		<li><label>Email<span>*</span> : </label><input name="email" value="<?php echo $this->items['email'] ?>" /></li>
+		<li><label>Tỉnh thành<span>*</span> : </label>
+			<select name="province">
+				<option value="0">--- Chọn tỉnh thành ---</option>
+				<?php foreach ($this->province as $value):?>
+					<option value="<?php echo $value['province_id']?>"><?php echo $value['province_name']?></option>
+				<?php endforeach;?>
+			</select>
+		</li>
+		<li><label>Phone<span>*</span> : </label><input name="phone" value="<?php echo $this->items['phone'] ?>" /></li>
+		<li>
+			<label></label>
+			<input type="image" src="<?php echo $this->baseUrl().TEMPLATE ?>/images/btton-register.gif" class="guixoa"/>
+			<input type="image" src="<?php echo $this->baseUrl().TEMPLATE ?>/images/btton-reset.gif" class="guixoa"/>
+		</li>
+	</ul>
+	<div>Khi bấm vào nút "Đăng ký", bãn đã chấp nhận các điều khoản trong <a href="<?php echo $this->baseUrl()?>/termsofuse" title="Điều khoản sử dụng của SieuthiPOSM.coom"><strong>Điều khoản sử dụng của SieuthiPOSM.coom</strong></a></div>
+</form>
