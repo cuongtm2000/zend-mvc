@@ -8,9 +8,9 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 		$optionResources = $this->getOption('resources');
 		$dbOption = $optionResources['db'];
 		$dbOption['params']['host'] = 'localhost';
-		$dbOption['params']['username'] = 'sieuthipos_ecom';
-		$dbOption['params']['password'] = 'tFBp2q0P';
-		$dbOption['params']['dbname'] = 'sieuthipos_ecom';
+		$dbOption['params']['username'] = 'root';
+		$dbOption['params']['password'] = '';
+		$dbOption['params']['dbname'] = 'sieuthiposm';
 		
 		$adapter = $dbOption['adapter'];
 		$config = $dbOption['params'];
