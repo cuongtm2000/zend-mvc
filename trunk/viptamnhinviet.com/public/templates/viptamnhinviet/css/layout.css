@@ -1,4 +1,4 @@
-body { margin:0; padding:0; background:#fff url(../images/bg.gif) repeat-x;font-family:Tahoma, Geneva, sans-serif; font-size:9pt;}
+﻿body { margin:0; padding:0; background:#fff url(../images/bg.gif) repeat-x;font-family:Tahoma, Geneva, sans-serif; font-size:9pt;}
 .left{float: left;}
 .right{float:right}
 .clear{clear: both;}
@@ -122,12 +122,19 @@ a:hover{color:#000;}
 
 /*PAGE GALLERY*/
 .list-gallery{padding:0 0 0 8px}
-
-
 .list-web{ display:inline-block;vertical-align:top;text-align:center; width:130px;*float:left; margin:0px 10px 20px 0; *_margin:0 10px 0 0}
 .list-web img{ margin:0 0 5px 0; border:2px solid #ccc;-moz-border-radius: 2px; -webkit-border-radius: 2px;}
 .list-web p{ color:#A10F30; font-weight:bold; margin:5px 0 0 0}
 .list-web a{color:#989A98; font-size:10pt; font-weight:700;}
+
+/* gallery*/
+#all-product{ width:745px}
+.product-bg-img{width:160px;text-align:center;margin:0 23px 10px 0; display:inline-block; vertical-align:top;*float:left;*margin:0 5px 10px 0; }
+.product-img{width:160px;display:table-cell;vertical-align:bottom}
+.title-pro{ font-size:10pt;margin:5px 0}
+.title-pro a{color:#DBA067;}
+.title-pro a:hover{color:#444}
+
 
 /*Product*/
 .bg-product{border-left:2px solid #ccc ; padding:0 0 10px 40px;border-right:2px solid #ccc;*width:701px}
