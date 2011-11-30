@@ -38,11 +38,20 @@
 	            echo '<div class="col1">'.$this->lang['sys_detail'].' '.strtoupper($value).'</div>
 	                <div class="col2">
 	                    <textarea name="detail'.$value.'" cols="70" rows="10">'.$this->items['detail'.$value].'</textarea>
-	                    <script type="text/javascript">
-	                    //<![CDATA[
-	                    	CKEDITOR.replace( \'detail'.$value.'\' );
-	                    //]]>
-	                    </script>
+						<script type="text/javascript">
+							var sPath = window.location.pathname;
+							var sPage = sPath.substring(sPath.lastIndexOf(\'webadmin\'), 0);
+						//<![CDATA[
+							CKEDITOR.replace( \'detail'.$value.'\',{
+							filebrowserBrowseUrl : sPage+\'public/plugin/ckfinder/ckfinder.html\',
+							filebrowserImageBrowseUrl :  sPage+\'public/plugin/ckfinder/ckfinder.html?Type=Images\',
+							filebrowserFlashBrowseUrl :  sPage+\'public/plugin/ckfinder/ckfinder.html?Type=Flash\',
+							filebrowserUploadUrl :  sPage+\'public/plugin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files\',
+							filebrowserImageUploadUrl :  sPage+\'public/plugin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images\',
+							filebrowserFlashUploadUrl :  sPage+\'public/plugin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash\',
+							} );
+						//]]>
+						</script>
 	                </div><div class="clear space"></div>';
 	        }
 	    ?>
