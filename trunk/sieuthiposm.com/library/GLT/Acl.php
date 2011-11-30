@@ -6,6 +6,7 @@ class GLT_Acl extends Zend_Acl{
     	$this->add(new Zend_Acl_Resource('setup')); // this is controller
         $this->add(new Zend_Acl_Resource('tool')); // this is controller
         $this->add(new Zend_Acl_Resource('account')); // this is controller
+         $this->add(new Zend_Acl_Resource('user')); // this is controller
         
         /* this is controller user */
         //$this->add(new Zend_Acl_Resource('about')); // this is controller
@@ -24,6 +25,7 @@ class GLT_Acl extends Zend_Acl{
         $this->allow('member', 'setup');
    		$this->allow('member', 'tool');
    		$this->allow('member', 'account');
+   		$this->allow('member', 'user');
    		
    		/*$this->allow('member', 'about'); */
     	$select = $db->select()->from('dos_sys_groups_has_dos_sys_models');

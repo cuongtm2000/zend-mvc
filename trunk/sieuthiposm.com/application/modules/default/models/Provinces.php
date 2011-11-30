@@ -7,4 +7,10 @@ class Default_Model_Provinces extends Zend_Db_Table{
     	$select = $this->select()->from($this->_name, array('province_id', 'province_name'));
         return $this->fetchAll($select)->toArray();
     }
+ 	public function getName($id){
+    	$select = $this->select()->from($this->_name, array( 'province_name'))
+    		->where('province_id=?',$id);
+        $r= $this->fetchRow($select);
+        return $r['province_name'];
+    }
 }

@@ -36,7 +36,7 @@ class Webadmin_Model_Account extends Zend_Db_Table{
     						   ->where('username =?', $user)
     						   ->where('password =?', md5($pass));
 		$result = $db->fetchOne($select);
-		if(count($result) > 0){
+		if($result != ''){
 			return true;
 		}
 		return false;
