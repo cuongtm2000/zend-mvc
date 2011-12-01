@@ -48,13 +48,22 @@ class Webadmin_UserController extends GLT_Controller_Backend {
 		$totalItem = $user->countUser();
 		$paginator = new GLT_Paginator();
 		$this->view->paginator = $paginator->createPaginator($totalItem, $this->_paginator);
-		$list=$user->getListmenu($this->_data);
+		$list=$user->getAll($this->_data);
 		if (sizeof($list)>0) {
 			foreach ($list as &$value) {
 				$value['dos_module_provinces_province_id']=$province->getName($value['dos_module_provinces_province_id']);
 			}
 		}
     	$this->view->list=$list;
+        
+    }
+    public function mailAction(){
+    	$user=new Webadmin_Model_User();
+       	$this->view->listUser=$user->getAll($this->_data);
+    
+    	if($this->_request->isPost()){
+        	$user->sendMail($this->_data);
+        }
         
     }
 }

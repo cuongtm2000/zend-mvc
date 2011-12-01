@@ -15,6 +15,11 @@ class Webadmin_Model_User extends Zend_Db_Table{
     						array('count(username) as totalItem'))->where('user_group =?', 'member');
 		return $db->fetchOne($select);
     }
+    public function getListmenu(){
+        $data[] = array('url'=>'', 'name'=>'Danh sách thành viên');
+        $data[] = array('url'=>'mail', 'name'=>'Gửi thư');
+        return $data;
+    }
 
     public function init(){
     	$this->_config = Zend_Registry::get("config");
@@ -22,7 +27,7 @@ class Webadmin_Model_User extends Zend_Db_Table{
         $this->_web = Zend_Registry::get("web");
     }
     
-	public function getListmenu($data = NULL)	{
+	public function getAll($data = NULL)	{
 	
 		//Get paging number
     	$paginator = $data['paginator'];
@@ -66,5 +71,24 @@ class Webadmin_Model_User extends Zend_Db_Table{
 			}
 		}	
     }
-
+    public function sendMail($data){
+    	//echo '<pre>';print_r($data);  echo '<pre>';
+    	$mail = new GLT_System_Mail();
+    	$validate=new Zend_Validate();
+    	$validate->addValidator(new Zend_Validate_EmailAddress());
+    	
+    	 $repc = str_replace(' ', '', $data['recipient']);
+         $repc = explode(';', $repc);
+         $repc = array_unique($repc);
+    	foreach ($repc as $value) {
+			if (!$validate->isValid($value)) {
+				continue;			}
+    		
+    		if($this->_web['type'] == 1){
+	    		$mail->sendMailSmtp($this->_web['admin_email'], $value, $data['fullname'], $this->_web['admin_name'], $data['title'], $data['detail']);	
+	    	}else{
+	    		$mail->sendMailLocal($this->_web['admin_email'],$value , $data['fullname'], $this->_web['admin_name'], $data['title'],  $data['detail']);
+	    	}
+    	}	
+    }
 }

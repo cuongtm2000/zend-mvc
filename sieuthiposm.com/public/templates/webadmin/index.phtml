@@ -68,7 +68,16 @@
                         }
                         echo '</ul>';
                     }
-                    
+
+                    $rowsize = count($this->menu_user);
+                    if($rowsize >0){
+                        echo '<h3 class="headerbar"><a href="#">'.$this->lang['user'].'</a></h3>';
+                        echo '<ul class="submenu">';
+                        for($i=0; $i<$rowsize; $i++){
+                            echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'webadmin/user/'.$this->menu_user[$i]['url'].'">'.$this->menu_user[$i]['name'].'</a></li>';
+                        }
+                        echo '</ul>';
+                    }
                     $rowsize = count($this->menu_tool);
                     if($rowsize >0){
                         echo '<h3 class="headerbar"><a href="#">'.$this->lang['sys_tool'].'</a></h3>';
