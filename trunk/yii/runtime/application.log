@@ -1,0 +1,2177 @@
+2011/12/02 15:09:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 15:10:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 15:10:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 15:10:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 15:10:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 15:10:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 15:10:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 15:10:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 15:10:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 15:10:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 15:10:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 15:10:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 15:10:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 15:10:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 15:10:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 15:11:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 15:11:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 15:11:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 15:12:05 [error] [php] get_class() expects parameter 1 to be object, array given (C:\xampp\htdocs\protected\modules\admin\views\about\index.php:2)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CBaseController.php(88): AboutController->renderInternal()
+#1 C:\xampp\htdocs\framework\web\CController.php(866): AboutController->renderFile()
+#2 C:\xampp\htdocs\framework\web\CController.php(779): AboutController->renderPartial()
+#3 C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php(49): AboutController->render()
+#4 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): AboutController->actionIndex()
+#5 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(134): AboutController->runAction()
+#7 C:\xampp\htdocs\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\xampp\htdocs\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#9 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(59): AboutController->filterAccessControl()
+#10 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#11 C:\xampp\htdocs\framework\web\CController.php(283): CFilterChain->run()
+#12 C:\xampp\htdocs\framework\web\CController.php(257): AboutController->runActionWithFilters()
+#13 C:\xampp\htdocs\framework\web\CWebApplication.php(277): AboutController->run()
+#14 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#15 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/about/index
+in C:\xampp\htdocs\protected\modules\admin\views\about\index.php (2)
+in C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php (49)
+in C:\xampp\htdocs\index.php (13)
+2011/12/02 15:12:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 15:12:07 [error] [php] get_class() expects parameter 1 to be object, array given (C:\xampp\htdocs\protected\modules\admin\views\about\index.php:2)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CBaseController.php(88): AboutController->renderInternal()
+#1 C:\xampp\htdocs\framework\web\CController.php(866): AboutController->renderFile()
+#2 C:\xampp\htdocs\framework\web\CController.php(779): AboutController->renderPartial()
+#3 C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php(49): AboutController->render()
+#4 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): AboutController->actionIndex()
+#5 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(134): AboutController->runAction()
+#7 C:\xampp\htdocs\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\xampp\htdocs\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#9 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(59): AboutController->filterAccessControl()
+#10 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#11 C:\xampp\htdocs\framework\web\CController.php(283): CFilterChain->run()
+#12 C:\xampp\htdocs\framework\web\CController.php(257): AboutController->runActionWithFilters()
+#13 C:\xampp\htdocs\framework\web\CWebApplication.php(277): AboutController->run()
+#14 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#15 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/about/index
+in C:\xampp\htdocs\protected\modules\admin\views\about\index.php (2)
+in C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php (49)
+in C:\xampp\htdocs\index.php (13)
+2011/12/02 15:12:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 15:12:20 [error] [php] get_class() expects parameter 1 to be object, array given (C:\xampp\htdocs\protected\modules\admin\views\about\index.php:2)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CBaseController.php(88): AboutController->renderInternal()
+#1 C:\xampp\htdocs\framework\web\CController.php(866): AboutController->renderFile()
+#2 C:\xampp\htdocs\framework\web\CController.php(779): AboutController->renderPartial()
+#3 C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php(49): AboutController->render()
+#4 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): AboutController->actionIndex()
+#5 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(134): AboutController->runAction()
+#7 C:\xampp\htdocs\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\xampp\htdocs\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#9 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(59): AboutController->filterAccessControl()
+#10 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#11 C:\xampp\htdocs\framework\web\CController.php(283): CFilterChain->run()
+#12 C:\xampp\htdocs\framework\web\CController.php(257): AboutController->runActionWithFilters()
+#13 C:\xampp\htdocs\framework\web\CWebApplication.php(277): AboutController->run()
+#14 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#15 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/about/index
+in C:\xampp\htdocs\protected\modules\admin\views\about\index.php (2)
+in C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php (49)
+in C:\xampp\htdocs\index.php (13)
+2011/12/02 15:12:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 15:12:40 [error] [php] Object of class AboutController could not be converted to string (C:\xampp\htdocs\protected\modules\admin\views\about\index.php:2)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(866): AboutController->renderFile()
+#1 C:\xampp\htdocs\framework\web\CController.php(779): AboutController->renderPartial()
+#2 C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php(49): AboutController->render()
+#3 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): AboutController->actionIndex()
+#4 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(134): AboutController->runAction()
+#6 C:\xampp\htdocs\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(59): AboutController->filterAccessControl()
+#9 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\xampp\htdocs\framework\web\CController.php(283): CFilterChain->run()
+#11 C:\xampp\htdocs\framework\web\CController.php(257): AboutController->runActionWithFilters()
+#12 C:\xampp\htdocs\framework\web\CWebApplication.php(277): AboutController->run()
+#13 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#14 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/about/index
+in C:\xampp\htdocs\protected\modules\admin\views\about\index.php (2)
+in C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php (49)
+in C:\xampp\htdocs\index.php (13)
+2011/12/02 15:12:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 15:12:41 [error] [php] Object of class AboutController could not be converted to string (C:\xampp\htdocs\protected\modules\admin\views\about\index.php:2)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(866): AboutController->renderFile()
+#1 C:\xampp\htdocs\framework\web\CController.php(779): AboutController->renderPartial()
+#2 C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php(49): AboutController->render()
+#3 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): AboutController->actionIndex()
+#4 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(134): AboutController->runAction()
+#6 C:\xampp\htdocs\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(59): AboutController->filterAccessControl()
+#9 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\xampp\htdocs\framework\web\CController.php(283): CFilterChain->run()
+#11 C:\xampp\htdocs\framework\web\CController.php(257): AboutController->runActionWithFilters()
+#12 C:\xampp\htdocs\framework\web\CWebApplication.php(277): AboutController->run()
+#13 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#14 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/about/index
+in C:\xampp\htdocs\protected\modules\admin\views\about\index.php (2)
+in C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php (49)
+in C:\xampp\htdocs\index.php (13)
+2011/12/02 15:12:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 15:12:48 [error] [php] Object of class AboutController could not be converted to string (C:\xampp\htdocs\protected\modules\admin\views\about\index.php:2)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(866): AboutController->renderFile()
+#1 C:\xampp\htdocs\framework\web\CController.php(779): AboutController->renderPartial()
+#2 C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php(49): AboutController->render()
+#3 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): AboutController->actionIndex()
+#4 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(134): AboutController->runAction()
+#6 C:\xampp\htdocs\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(59): AboutController->filterAccessControl()
+#9 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\xampp\htdocs\framework\web\CController.php(283): CFilterChain->run()
+#11 C:\xampp\htdocs\framework\web\CController.php(257): AboutController->runActionWithFilters()
+#12 C:\xampp\htdocs\framework\web\CWebApplication.php(277): AboutController->run()
+#13 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#14 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/about/index
+in C:\xampp\htdocs\protected\modules\admin\views\about\index.php (2)
+in C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php (49)
+in C:\xampp\htdocs\index.php (13)
+2011/12/02 15:12:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 15:13:00 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "getActiveModels".' in C:\xampp\htdocs\framework\base\CComponent.php:269
+Stack trace:
+#0 C:\xampp\htdocs\protected\modules\admin\views\about\index.php(2): CComponent->__call('getActiveModels', Array)
+#1 C:\xampp\htdocs\protected\modules\admin\views\about\index.php(2): CWebApplication->getActiveModels()
+#2 C:\xampp\htdocs\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\framework\web\CController.php(779): CController->renderPartial('index', Array, true)
+#6 C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php(49): CController->render('index', Array)
+#7 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): AboutController->actionIndex()
+#8 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\xampp\htdocs\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\framework\web\CController.php(283): CFilterChain->run()
+#15 C:\xampp\htdocs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('index')
+#17 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/ind...')
+#18 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\index.php(13): CApplication->run()
+#20 {main} REQUEST_URI=/admin/about/index
+2011/12/02 15:13:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 15:13:28 [error] [php] Object of class AboutController could not be converted to string (C:\xampp\htdocs\protected\modules\admin\views\about\index.php:2)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(866): AboutController->renderFile()
+#1 C:\xampp\htdocs\framework\web\CController.php(779): AboutController->renderPartial()
+#2 C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php(49): AboutController->render()
+#3 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): AboutController->actionIndex()
+#4 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(134): AboutController->runAction()
+#6 C:\xampp\htdocs\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(59): AboutController->filterAccessControl()
+#9 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\xampp\htdocs\framework\web\CController.php(283): CFilterChain->run()
+#11 C:\xampp\htdocs\framework\web\CController.php(257): AboutController->runActionWithFilters()
+#12 C:\xampp\htdocs\framework\web\CWebApplication.php(277): AboutController->run()
+#13 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#14 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/about/index
+in C:\xampp\htdocs\protected\modules\admin\views\about\index.php (2)
+in C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php (49)
+in C:\xampp\htdocs\index.php (13)
+2011/12/02 15:13:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 15:14:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 15:14:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 15:14:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 15:14:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 15:14:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 15:14:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 15:14:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 15:16:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 15:16:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 15:16:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 15:16:29 [error] [php] Declaration of AboutController::beforeAction() should be compatible with that of CController::beforeAction() (C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php:2)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(271): CWebApplication->createController()
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#2 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#3 C:\xampp\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/about/index
+in C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php (2)
+in C:\xampp\htdocs\index.php (13)
+2011/12/02 15:16:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 15:16:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 15:16:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 15:16:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 15:16:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 15:16:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:24:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 16:24:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('loading2.gif')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/loading2.gif
+2011/12/02 16:24:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:24:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('loading2.gif')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/loading2.gif
+2011/12/02 16:24:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:24:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:24:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:24:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:24:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:24:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:24:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:24:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/loading2....')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/admin/loading2.gif
+2011/12/02 16:24:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:24:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/loading2....')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/admin/loading2.gif
+2011/12/02 16:24:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/loading2....')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/admin/loading2.gif
+2011/12/02 16:24:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:24:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/loading2....')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/admin/loading2.gif
+2011/12/02 16:24:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:24:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/loading2....')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/admin/loading2.gif
+2011/12/02 16:24:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:24:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/loading2....')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/admin/loading2.gif
+2011/12/02 16:24:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:24:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/loading2....')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/admin/loading2.gif
+2011/12/02 16:24:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:24:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/loading2....')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/admin/loading2.gif
+2011/12/02 16:24:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:24:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/loading2....')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/admin/loading2.gif
+2011/12/02 16:24:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:25:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/loading2....')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/admin/loading2.gif
+2011/12/02 16:25:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:25:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:25:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:25:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:25:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:25:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:25:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:25:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:25:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:25:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:25:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:25:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:25:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:25:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:25:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:25:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:25:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:25:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:26:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:26:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:26:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:26:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:26:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:26:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:27:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:27:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:27:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:27:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:28:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:28:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:28:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:28:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:28:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:28:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:28:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:28:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:28:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:28:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:28:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:28:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:28:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:28:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:28:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:28:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/loading2....')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/admin/loading2.gif
+2011/12/02 16:28:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/loading2....')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/admin/loading2.gif
+2011/12/02 16:28:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:28:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:28:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:29:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:29:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:30:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:30:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:30:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:30:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:30:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:30:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:30:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:30:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:30:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:30:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:30:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:30:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:30:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:32:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:32:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:32:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:32:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:32:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:32:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:32:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:32:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:33:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 16:33:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 16:33:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 16:33:26 [error] [php] include(ucfirst.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): AboutController->actionIndex()
+#2 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(134): AboutController->runAction()
+#4 C:\xampp\htdocs\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\xampp\htdocs\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(59): AboutController->filterAccessControl()
+#7 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#8 C:\xampp\htdocs\framework\web\CController.php(283): CFilterChain->run()
+#9 C:\xampp\htdocs\framework\web\CController.php(257): AboutController->runActionWithFilters()
+#10 C:\xampp\htdocs\framework\web\CWebApplication.php(277): AboutController->run()
+#11 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#12 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/about/index
+in C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php (27)
+in C:\xampp\htdocs\index.php (13)
+2011/12/02 16:33:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 16:33:28 [error] [php] include(ucfirst.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): AboutController->actionIndex()
+#2 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(134): AboutController->runAction()
+#4 C:\xampp\htdocs\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\xampp\htdocs\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(59): AboutController->filterAccessControl()
+#7 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#8 C:\xampp\htdocs\framework\web\CController.php(283): CFilterChain->run()
+#9 C:\xampp\htdocs\framework\web\CController.php(257): AboutController->runActionWithFilters()
+#10 C:\xampp\htdocs\framework\web\CWebApplication.php(277): AboutController->run()
+#11 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#12 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/about/index
+in C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php (27)
+in C:\xampp\htdocs\index.php (13)
+2011/12/02 16:33:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 16:33:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:33:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:33:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:33:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:33:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:33:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:33:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:33:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:33:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:33:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:34:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:34:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:34:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:34:49 [error] [exception.CException] exception 'CException' with message 'Property "AboutController.getId" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php(27): CComponent->__get('getId')
+#1 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): AboutController->actionIndex()
+#2 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\xampp\htdocs\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\framework\web\CController.php(283): CFilterChain->run()
+#9 C:\xampp\htdocs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('index')
+#11 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/ind...')
+#12 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\index.php(13): CApplication->run()
+#14 {main} REQUEST_URI=/admin/about/index
+2011/12/02 16:34:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 16:35:04 [error] [php] include(ucfirst.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): AboutController->actionIndex()
+#2 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(134): AboutController->runAction()
+#4 C:\xampp\htdocs\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\xampp\htdocs\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(59): AboutController->filterAccessControl()
+#7 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#8 C:\xampp\htdocs\framework\web\CController.php(283): CFilterChain->run()
+#9 C:\xampp\htdocs\framework\web\CController.php(257): AboutController->runActionWithFilters()
+#10 C:\xampp\htdocs\framework\web\CWebApplication.php(277): AboutController->run()
+#11 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#12 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/about/index
+in C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php (27)
+in C:\xampp\htdocs\index.php (13)
+2011/12/02 16:35:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 16:35:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 16:35:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 16:36:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 16:36:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:36:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:36:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:39:32 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':user' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `dos_module_abouts` `t` WHERE dos_usernames_username:user.
+in C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php (38)
+in C:\xampp\htdocs\index.php (13)
+2011/12/02 16:39:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':user' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `dos_module_abouts` `t` WHERE dos_usernames_username:user' in C:\xampp\htdocs\framework\db\CDbCommand.php:516
+Stack trace:
+#0 C:\xampp\htdocs\framework\db\CDbCommand.php(411): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(1540): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php(38): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): AboutController->actionIndex()
+#4 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\framework\web\CController.php(283): CFilterChain->run()
+#11 C:\xampp\htdocs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('index')
+#13 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/ind...')
+#14 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\index.php(13): CApplication->run()
+#16 {main} REQUEST_URI=/admin/about/index
+2011/12/02 16:39:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/02 16:39:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:39:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:39:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:39:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/02 16:39:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/02 16:39:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 01:22:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 01:22:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('loading2.gif')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/loading2.gif
+2011/12/03 01:22:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 01:22:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('loading2.gif')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/loading2.gif
+2011/12/03 01:22:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 01:22:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 01:22:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 01:22:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 01:22:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 01:22:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 01:22:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 01:22:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 01:22:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 01:22:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 01:22:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 01:23:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 01:23:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 01:23:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 01:23:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 01:23:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 01:23:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 01:23:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 01:24:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 01:24:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 01:24:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 01:24:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 01:24:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "about".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('about')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('about')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/abo...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/about/edit/id/76
+2011/12/03 01:24:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 01:24:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 01:25:25 [error] [exception.CException] exception 'CException' with message 'Property "AboutController.moduleID" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\protected\modules\admin\views\about\index.php(2): CComponent->__get('moduleID')
+#1 C:\xampp\htdocs\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#3 C:\xampp\htdocs\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\framework\web\CController.php(779): CController->renderPartial('index', Array, true)
+#5 C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php(51): CController->render('index', Array)
+#6 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): AboutController->actionIndex()
+#7 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\xampp\htdocs\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\framework\web\CController.php(283): CFilterChain->run()
+#14 C:\xampp\htdocs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('index')
+#16 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/ind...')
+#17 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\index.php(13): CApplication->run()
+#19 {main} REQUEST_URI=/admin/about/index
+2011/12/03 01:25:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 01:25:39 [error] [exception.CException] exception 'CException' with message 'Property "AboutController.modules" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\protected\modules\admin\views\about\index.php(2): CComponent->__get('modules')
+#1 C:\xampp\htdocs\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#3 C:\xampp\htdocs\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\framework\web\CController.php(779): CController->renderPartial('index', Array, true)
+#5 C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php(51): CController->render('index', Array)
+#6 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): AboutController->actionIndex()
+#7 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\xampp\htdocs\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\framework\web\CController.php(283): CFilterChain->run()
+#14 C:\xampp\htdocs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('index')
+#16 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/ind...')
+#17 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\index.php(13): CApplication->run()
+#19 {main} REQUEST_URI=/admin/about/index
+2011/12/03 01:25:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 01:25:52 [error] [exception.CException] exception 'CException' with message 'Property "AboutController.modules" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\protected\modules\admin\views\about\index.php(2): CComponent->__get('modules')
+#1 C:\xampp\htdocs\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#3 C:\xampp\htdocs\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\framework\web\CController.php(779): CController->renderPartial('index', Array, true)
+#5 C:\xampp\htdocs\protected\modules\admin\controllers\AboutController.php(51): CController->render('index', Array)
+#6 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): AboutController->actionIndex()
+#7 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\xampp\htdocs\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\framework\web\CController.php(283): CFilterChain->run()
+#14 C:\xampp\htdocs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('index')
+#16 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/ind...')
+#17 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\index.php(13): CApplication->run()
+#19 {main} REQUEST_URI=/admin/about/index
+2011/12/03 01:25:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 01:26:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 01:26:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 01:26:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 01:27:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 01:27:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 01:27:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 01:28:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 01:28:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 01:28:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 01:28:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "edit".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('edit')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('edit')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/edi...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/edit/id/76
+2011/12/03 01:28:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 01:28:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 02:50:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 04:05:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 04:05:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('loading2.gif')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/loading2.gif
+2011/12/03 04:05:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 04:05:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('loading2.gif')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/loading2.gif
+2011/12/03 04:05:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 04:05:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 04:05:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 04:05:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 04:05:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 04:05:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 04:05:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 04:23:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 04:23:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 04:23:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 04:23:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 04:23:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 04:23:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 04:23:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 04:23:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 04:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 04:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 04:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 04:24:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:06:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:07:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('loading2.gif')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/loading2.gif
+2011/12/03 08:07:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 08:07:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loading2.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('loading2.gif')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/loading2.gif
+2011/12/03 08:09:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 08:09:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 08:17:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 08:17:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 08:17:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loading2.gif".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('loading2.gif')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('loading2.gif')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/loa...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/loading2.gif
+2011/12/03 08:17:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-blue/images/arrow.png
+2011/12/03 08:19:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "edit".' in C:\xampp\htdocs\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(262): CController->missingAction('edit')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('edit')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/about/edi...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/admin/about/edit/id/81
+2011/12/03 08:19:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:19:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:19:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:19:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:19:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:19:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:19:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:19:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:19:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:19:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:19:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:19:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:20:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:20:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:20:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:20:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/03 08:20:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
