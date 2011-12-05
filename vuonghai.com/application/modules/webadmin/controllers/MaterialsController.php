@@ -188,6 +188,10 @@ class Webadmin_MaterialsController extends GLT_Controller_Backend{
 		//echo'<pre>';		print_r($this->_data);		echo'</pre>';
     	$cmt=new Materials_Model_Comments();
 		$stu=new Materials_Model_Materials();
+
+		$this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE.'/js/jquery.prettyPhoto.js');
+		$this->view->headLink()->appendStylesheet($this->_request->getBaseUrl().TEMPLATE.'/css/prettyPhoto.css');
+	
 		if(isset($this->_data['id'])){			
 			if ($this->_request->isPost()) {
 				$cmt->updateItem($this->_data);
@@ -216,9 +220,11 @@ class Webadmin_MaterialsController extends GLT_Controller_Backend{
 			}
 		}			
 		$allCmt=$cmt->listItems($this->_data);
+		
 		foreach($allCmt as  &$value){
-			$value['dos_module_item_record_id']=$stu->getItem($value['dos_module_item_record_id']);
+			$value['dos_module_item_record_name']=$stu->getItem($value['dos_module_item_record_id']);
 		}
+		
 		$this->view->items=$allCmt;
 		$totalItem = $cmt->countItem();
 		$paginator = new GLT_Paginator();

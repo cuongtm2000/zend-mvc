@@ -21,7 +21,9 @@ class Materials_Model_Comments extends Zend_Db_Table{
 			$bind = array('comment_title' => htmlspecialchars($this->_xss->purify(trim($data['commenttitle']))), 
 						  'comment_content' => htmlspecialchars($this->_xss->purify($data['commentdetail'])),    				  
 						  'dos_module_item_record_id' => htmlspecialchars($this->_xss->purify($data['id'])),    				  
-						  'dos_sys_users_username' => htmlspecialchars($this->_xss->purify($this->_username)));
+						  'dos_sys_users_username' => htmlspecialchars($this->_xss->purify($this->_username)),
+							'comment_enable' => 0)
+			;
 			return $this->insert($bind);
 		
 		}catch(Exception $e){
@@ -45,6 +47,7 @@ class Materials_Model_Comments extends Zend_Db_Table{
     						   ->order('comment_date ASC')
     						   //->limitPage($page,$rowCount)
 							   ;
+		
         $result = $this->fetchAll($select)->toArray();
         return $result;
     }
@@ -60,8 +63,10 @@ class Materials_Model_Comments extends Zend_Db_Table{
     						   ->order('comment_date DESC')
     						   ->limitPage($page,$rowCount)
 							   ;
-        $result = $this->fetchAll($select)->toArray();
-        return $result;
+        
+		$result = $this->fetchAll($select)->toArray();
+        
+		return $result;
     }
 	public function getItem($id){
 		$db = $this->getAdapter();
