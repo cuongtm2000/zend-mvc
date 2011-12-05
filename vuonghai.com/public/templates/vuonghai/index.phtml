@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="vi" />
+<meta name="keywords" content="Công trình dân dụng - Sản xuất gạch bêtông khí chưng áp, tấm panel bêtông nhẹ và các sản phẩm v gạch bêtông nhẹ khí chưng áp AAC V-block, tấm panel bêtông nhẹ và các sản phẩm vữa xây, keo dán gạch phục vụ cho ngành xây dựng. http://vuonghai.com" />
+<meta name="description" content="Công trình dân dụng  -Sản xuất gạch bêtông khí chưng áp, tấm panel bêtông nhẹ và các sản phẩm v gạch bêtông nhẹ khí chưng áp AAC V-block, tấm panel bêtông nhẹ và các sản phẩm vữa xây, keo dán gạch phục vụ cho ngành xây dựng. http://vuonghai.com" /> 
+<meta name="revisit-after" content="1 days" />
+<meta name="robots" content="noodp,index,follow" />
+<link rel="SHORTCUT ICON" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/gif" />
+
+
+<link href="<?php echo $this->baseUrl().TEMPLATE ?>/css/dosvn.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo $this->baseUrl().TEMPLATE ?>/css/wt-rotator.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery-1.6.4.min.js"></script> 
+<script type='text/javascript' src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery.imageScroller.js"></script>
+<script type='text/javascript' src="<?php echo $this->baseUrl().TEMPLATE ?>/js/adv.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery-banner-rotato.js"></script> 
+<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery-banner-rotato.effect.js"></script>
+
+<?php echo $this->headTitle() ?>
+<?php echo $this->headMeta() ?>
+<?php echo $this->headLink() ?>
+<?php echo $this->headScript() ?>
+<?php echo $this->google_analytic; ?>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		runbanner(566,190);
+	});
+</script>
+
+</head>
+<body>
+<div id="wrapper">
+    	<div id="header">
+        	<div id="header-left">
+        		<a href="<?php echo $this->baseUrl() ?>" title="Logo <?php echo $this->web['titleweb']?>">
+        			<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/logo.png" alt="Logo" />
+        		</a>
+        	</div><!--End left header-->
+            <div id="header-right"><p class="link-right">
+            	<?php if(!$this->checklogin()): ?>
+					
+	                 	<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/icon-register.png" alt="Registration" />
+	                 	<a href="<?php echo $this->baseUrl() ?>/register" title="Tạo tài khoản">Tạo tài khoản</a> 
+	                 	<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/icon-login.png" alt="Login" />
+	                 	<a href="<?php echo $this->baseUrl()?>/login" title="Đăng nhập">Đăng nhập</a>
+                 	
+                 <?php else: ?>
+                 	Chào <strong><?php echo $this->infouser('username')?></strong>
+                 	<a href="<?php echo $this->baseUrl()?>/login/index/logout" title="Thoát"><img src="<?php echo $this->baseUrl().TEMPLATE?>/images/icon-login.png" alt="Thoát" />Thoát</a>
+				<?php endif;?>
+               </p>
+            </div><!--End right header-->
+            <div class="clear"></div>
+        </div><!--End header--> 
+    		
+     
+        <ul class="menu">
+        	<?php 
+        			$folders = $this->menubar();
+        			$n=sizeof($folders); 			$i=0;
+        			
+					foreach($folders as $models){		
+						if($i++ ==$n-1)
+							$style='style="background:none"';
+						else
+							$style=''; 
+						$target = ($models['target']=='') ? '' : ' target="'.$models['target'].'"';
+						$select =($this->module==$models['url']) ? ' class="select"': '';
+						echo '<li'.$select.'><a '.$style.' href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.'>'.html_entity_decode($models['module'.LANG]).'</a></li>';
+					}
+				?>
+        </ul><!--End menu-->        <div class="clear"></div>
+        
+     
+        
+        
+        
+        
+        
+        
+        <div class="bd-top-content"></div>
+        <div id="content">
+        	<div id="leftcontent">
+        	
+        		   <?php if(isset($this->list_cat_video)):?>
+		       		<h1 class="title-box"><?php echo $this->lang['video'] ?></h1>
+		        	 <div class="bd-frame-box"></div><!--End Bd bt frame box-->
+						<ul class="subcate">
+							<?php 
+								if(is_array($this->list_cat_video))
+									foreach($this->list_cat_video as $value){
+										echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'video'.'/index/cat/id/'.$value['cat_id'].'/title/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
+									}
+							?>
+						</ul>
+				<?php endif;?>
+				
+				<?php if(isset($this->menu_cat_news)):?>
+		       		<h1 class="title-box"><?php echo $this->lang['news'] ?></h1>
+		        	 <div class="bd-frame-box"></div><!--End Bd bt frame box-->
+						<ul class="subcate">
+							<?php 
+								if(is_array($this->menu_cat_news))
+									foreach($this->menu_cat_news as $value){
+										echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'news'.'/index/cat/id/'.$value['cat_id'].'/title/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
+									}
+							?>
+						</ul>
+				<?php endif;?>
+				<?php if(isset($this->menu_cat_materials)):?>
+		       		<h1 class="title-box"><?php echo $this->lang['materials'] ?></h1>
+		        	 <div class="bd-frame-box"></div><!--End Bd bt frame box-->
+						<ul class="subcate">
+							<?php 
+								if(is_array($this->menu_cat_materials))
+									foreach($this->menu_cat_materials as $value){
+										echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'materials'.'/index/cat/cid/'.$value['cat_id'].'/title/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
+									}
+							?>
+						</ul>
+				<?php endif;?>
+				
+            
+				
+				
+				<?php if(isset($this->menu_support)): ?>
+					<div class="bd-frame-box"></div><!--Bd frame box-->
+                		<h1 class="title-box"><?php echo $this->lang['support'] ?></h1>
+				    
+					<ul class="support">
+						<?php foreach ($this->menu_support as $value): ?>
+							<li><?php echo $value['support_name'] ?></li>
+							<li><a href="ymsgr:sendim?<?php echo $value['support_value'] ?>&amp;m=<?php echo $this->lang['welcome_chat']?>" title="Chat <?php echo $value['support_value'] ?>"><img src="http://opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2&amp;l=us" alt="<?php echo $value['support_value'] ?>" /></a></li>
+						<?php endforeach;?>
+					</ul>
+			    <?php endif;?>
+								
+                <div class="bd-frame-box"></div><!--End Bd bt frame box-->
+				<h1 class="title-box">Thống kê truy cập</h1>
+				<ul class="statistics">
+					<li>Truy cập trong ngày: <?php echo $this->onlinetoday?></li>
+					<li>Đang online: <?php echo $this->online?></li>
+					<li>Tổng lượt truy cập: <?php echo $this->onlinetotal?></li>
+				</ul>
+                <div class="bd-frame-box"></div><!--End Bd bt frame box-->
+                 <?php if($this->list_adv_left):?>
+	                <h1 class="title-box"><?php echo $this->lang['adv'] ?></h1>
+	                <ul class="top">
+						<?php foreach ($this->list_adv_left as $value):?>
+							<li><img  src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['title'.LANG].' - '.$value['description']?>"/></li>
+						<?php endforeach;?>
+					</ul>
+	                <div class="bd-frame-box"></div><!--End Bd bt frame box-->
+                <?php endif;?> 
+               
+            </div><!--End left content-->
+            <div id="rightcontent">
+            	<div class="container"> 
+                    <div class="wt-rotator">
+                        <a href="#"></a>   
+                        <div class="thumbnails"> 
+                              <ul> 
+                              	<?php if($this->banner):?>
+									<?php foreach($this->banner as $value):?>
+										  <li><a href="<?php echo $this->baseUrl()?>/public/userfiles/images/banner/<?php echo $value['banner_url']?>"></a></li> 
+									<?php endforeach;?>
+								
+								<?php else:?>
+							  		<li><a href="<?php echo $this->baseUrl().TEMPLATE ?>/images/banner.jpg" ></a></li> 
+								<?php endif;?>
+                               </ul> 
+                        </div>  
+                    </div> 
+                </div> <!--End banner-->
+    			<?php echo $this->layout()->content ?>
+            </div><!--End right content-->
+            
+            
+            <div id="columns3">
+                <?php if($this->list_adv_right):?>
+                <h1 class="title-box"><?php echo $this->lang['adv'] ?></h1>
+                <ul class="top">
+					<?php foreach ($this->list_adv_right as $value):?>
+						<li><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['title'.LANG].' - '.$value['description']?>"/></li>
+					<?php endforeach;?>
+				</ul>
+                <div class="bd-frame-box"></div><!--End Bd bt frame box-->
+                <?php endif;?> 
+			</div><!--End colums3-->      <div class="clear"></div>
+            
+        </div><!--End content-->
+        <div class="bd-bt-content"></div>
+		<div id="footer">
+            <ul class="menu-fter">
+                <?php 
+        			$folders = $this->menubar();
+        			$n=sizeof($folders); 			$i=0;
+        			
+					foreach($folders as $models){		
+						if($i++ ==$n-1)
+							$style='style="background:none"';
+						else
+							$style=''; 
+						$target = ($models['target']=='') ? '' : ' target="'.$models['target'].'"';
+						$select =($this->module==$models['url']) ? ' class="select"': '';
+						echo '<li'.$select.'><a '.$style.' href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.'>'.html_entity_decode($models['module'.LANG]).'</a></li>';
+					}
+				?>
+            </ul>
+			<p>VUONG HAI CORPORATION Copyright &copy; 2011. Develop by <a href="#" title="">Dos.vn</a></p>
+			<p>Office: C1B Dong Khoi, hamlet 4, Tan Hiep ward, Bien Hoa city, Dong Nai province</p>
+			<p>Factory: Ong Huong Hamlet, Thien Tan commune, Vinh Cuu district, Dong Nai province</p>
+			<p>Phone: (+8461) 3895 060 - (+8461) 3865 819</p>
+			<p>Fax: (+8461) 3895 573 - (+8461) 3865 8219</p>
+			<p>Website: <a href="http://vuonghai.com" title="Vuonghai.com">www.vuonghai.com</a> - <a href="http://block-betongnhe.com" title="Block betongnhe.com">www.block-betongnhe.com</a></p>
+    </div><!--End Footer-->
+</div><!--End wrapper-->
+</body>
+</html>
+
