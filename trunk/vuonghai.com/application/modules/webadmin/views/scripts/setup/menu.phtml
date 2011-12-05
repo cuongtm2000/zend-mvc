@@ -1,0 +1,47 @@
+<div class="content">
+	<?php if(count($this->error) > 0): ?>
+		<ul class="error-li">
+			<?php 
+			foreach ($this->error as $value){
+				echo '<li>'.$value.'</li>';
+			}
+			?>
+		</ul>
+	<?php endif; ?>
+	<script type="text/javascript">
+	$(document).ready(function(){
+	    $("#add-rows").click(function(){
+	        $(".rows").before('<p><label>Module</label><input name="modelidnew[]" value="" maxlength="20" class="txt-tiny-x" /> <input name="modelnew[]" value="" maxlength="20" class="txt-small" /> <input name="modelnewen[]" value="" maxlength="20" class="txt-small" /> <input name="modelnewfr[]" value="" maxlength="20" class="txt-small" /> <input name="urlnew[]" value="" maxlength="100" class="txt-small" /> <input name="targetnew[]" value="" maxlength="20" class="txt-tiny" /> <input name="posnew[]" value="" maxlength="2" class="txt-very-tiny" /></p>');
+	        return false;
+	    });
+	});
+	</script>
+	<form action="" method="post" enctype="multipart/form-data" id="frmsignup" name="frmsignup">
+	<fieldset>
+		<legend><?php echo $this->lang['sys_menu']?></legend>
+		<p class="rows"><a href="#" id="add-rows"><?php echo $this->lang['sys_addrow']?></a></p>
+	    <?php
+	        $i = 1;
+	        $lang = $this->langlist(); //num language
+
+	        foreach($this->listmodule as $value){
+	            echo '<p>
+	        		<label for="module'.$i.'">Module '.$i.'</label>
+	                <input name="modelid[]" id="moduleid'.$i.'" value="'.$value['moduleid'].'" maxlength="20" class="txt-tiny-x" /> ';
+	            foreach($lang as $values){
+	            	echo '<input name="model'.$values.'[]" id="module'.$values.$i.'" value="'.$value['module'.$values].'" maxlength="20" class="txt-small" /> ';
+	            }
+	                echo '<input name="url[]" id="url'.$i.'" value="'.$value['url'].'" maxlength="100" class="txt-small" />
+	                <input name="target[]" id="target'.$i.'" value="'.$value['target'].'" maxlength="20" class="txt-tiny" />
+	                <input name="pos[]" id="pos'.$i.'" value="'.$value['position'].'" maxlength="2" class="txt-very-tiny" />
+	        	</p>';
+	            $i++;
+	        }
+	    ?>
+		<p>
+			<label>&nbsp;</label>
+			<input type="submit" name="btnregister" value="  <?php echo $this->lang['sys_edit'] ?>  " class="login" /> <a href="javascript:history.back()" class="login-a"><?php echo $this->lang['sys_cancel'] ?></a>
+		</p>
+	</fieldset>
+	</form>
+</div>

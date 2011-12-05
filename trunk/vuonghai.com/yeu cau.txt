@@ -1,0 +1,11 @@
+Mô tả các tính năng của web block-betongnhe.com
+1.	Đăng ký thành viên, cho các thành viên viết phản hồi, các phản hội được webadmin duyệt mới xuất hiện ra ngoài.
+a.	Thông tin thành viên cho phép chọn theo tỉnh thành nào
+b.	Thay đổi thông tin thành viên và mật khẩu, quên mật khẩu,..liên quan đến thông tin thành viên
+2.	Cho phép thành viên tải file đính kèm (cuối mỗi bài viết có cho kèm file, chỉ có thành viên đăng nhập mới được tải file này về )
+3.	Có 3 chuyên mục tin tức chính: (dạng tin tức, menu 1 cấp)
+a.	Ứng dụng gạch nhẹ 
+b.	Kỹ thuật sử dụng   
+c.	Công nghệ sản xuất  
+
+Trong web quản trị, cuối mỗi bài viết cho phép chèn file theo hay không (không bắt buộc), phân quyềnn cho mục này chỉ cho thành viên mới được phép thấy và tải về file này
