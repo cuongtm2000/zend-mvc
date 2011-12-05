@@ -81,7 +81,7 @@ class Materials_IndexController extends GLT_Controller_Action {
 				$this->view->items = $this->_data;
 			}else{
 				$giay=$this->checkcommment('last_commnent',30);
-				echo $giay;
+			//	echo $giay;
 				if($giay < 0){
 					$this->view->error= array('*Bạn gửi bình luận quá nhanh. Hãy thử lại sau '.(-$giay).' giây!');	
 					$this->view->items=$this->_data;
