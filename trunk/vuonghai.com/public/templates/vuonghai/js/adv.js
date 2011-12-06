@@ -1,8 +1,5 @@
 $(
-	function () {
-
-		
-		$( ".top" ).imageScroller( {speed:'5000',direction:'top'} );
-
+	function () {		
+		$( ".top" ).imageScroller( {speed:'5000', direction:'top'} );
 	}
 )
