@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 3.4.7
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 06, 2011 at 03:40 PM
--- Server version: 5.5.16
--- PHP Version: 5.3.8
+-- Generation Time: Dec 06, 2011 at 07:22 PM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -700,6 +700,104 @@ INSERT INTO `dos_module_product` (`record_id`, `postdate`, `pic_thumb`, `pic_ful
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `dos_module_productions`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_productions` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `pic_thumb` varchar(45) DEFAULT NULL,
+  `title` varchar(100) NOT NULL,
+  `titleen` varchar(100) DEFAULT NULL,
+  `titlefr` varchar(100) DEFAULT NULL,
+  `preview` text NOT NULL,
+  `previewen` text,
+  `previewfr` text,
+  `content` text NOT NULL,
+  `contenten` text,
+  `contentfr` text,
+  `author` varchar(45) DEFAULT NULL,
+  `hits` int(11) NOT NULL DEFAULT '1',
+  `postdate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `record_order` int(11) NOT NULL DEFAULT '1',
+  `record_type` tinyint(1) NOT NULL DEFAULT '0',
+  `extra_field1` varchar(45) DEFAULT NULL,
+  `extra_field2` varchar(45) DEFAULT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_module_item_cat_cat_id` int(11) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `fk_dos_module_studies_dos_module_studies_cat` (`dos_module_item_cat_cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `dos_module_productions`
+--
+
+INSERT INTO `dos_module_productions` (`record_id`, `pic_thumb`, `title`, `titleen`, `titlefr`, `preview`, `previewen`, `previewfr`, `content`, `contenten`, `contentfr`, `author`, `hits`, `postdate`, `record_order`, `record_type`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(1, 'hinh-nho.jpg', 'Cách âm -1111', '', '', '&lt;p&gt;\r\n	Khong nghe thay gi het&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Khong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi het&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-04 17:48:26', 1, 0, NULL, NULL, 1, 3),
+(2, 'moc-khoa-hoi-00021.jpg', 'Giới thiệu sản phẩm lần 2', '', '', '&lt;p&gt;\r\n	Giới thiệu sản phẩm lần 2Giới thiệu sản phẩm lần 2&lt;/p&gt;\r\n&lt;p&gt;\r\n	Giới thiệu sản phẩm lần 2&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Giới thiệu sản phẩm lần 2Giới thiệu sản phẩm lần 2Giới thiệu sản phẩm lần 2&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Giới thiệu sản phẩm lần 2Giới thiệu sản phẩm lần 2Giới thiệu sản phẩm lần 2&lt;/strong&gt;&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Giới thiệu sản phẩm lần 2Giới thiệu sản phẩm lần 2&lt;/strong&gt;&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Giới thiệu sản phẩm lần 2Giới thiệu sản phẩm lần 2&lt;/strong&gt;&lt;/p&gt;\r\n&lt;p&gt;\r\n	Giới thiệu sản phẩm lần 2&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-04 19:56:41', 1, 0, NULL, NULL, 1, 3),
+(3, NULL, 'Giới thiệu sản phẩm lần 3', '', '', '&lt;p&gt;\r\n	ghgfhghfgh&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	hgfjkhg;kdsfhg;dkshgk&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 01:34:33', 1, 0, NULL, NULL, 1, 3),
+(4, NULL, 'gfhjklkj', '', '', '&lt;p&gt;\r\n	cbchgjhjl;&lt;/p&gt;\r\n&lt;p&gt;\r\n	 &lt;/p&gt;\r\n', '&lt;p&gt;\r\n	ghjkll;lkvcbchgjhkjljkjhcghj&lt;/p&gt;\r\n', '', '&lt;p&gt;\r\n	bfjkdhjkfhgdf&lt;/p&gt;\r\n&lt;p&gt;\r\n	hkd;&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 17:30:27', 1, 0, NULL, NULL, 1, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_productions_cat`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_productions_cat` (
+  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_parent_id` int(11) NOT NULL DEFAULT '0',
+  `cat_title` varchar(45) NOT NULL,
+  `cat_titleen` varchar(45) DEFAULT NULL,
+  `cat_titlefr` varchar(45) DEFAULT NULL,
+  `cat_order` int(11) NOT NULL DEFAULT '1',
+  `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `dos_module_productions_cat`
+--
+
+INSERT INTO `dos_module_productions_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `cat_titlefr`, `cat_order`, `cat_enable`) VALUES
+(1, 0, 'Ứng dụng kinh tế', '', '', 1, 1),
+(2, 0, 'Ứng dụng cách  nhiệt', '', '', 2, 1),
+(3, 0, 'Ứng dụng cách  âm', '', '', 3, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_productions_comments`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_productions_comments` (
+  `comment_id` int(11) NOT NULL AUTO_INCREMENT,
+  `comment_title` varchar(50) NOT NULL,
+  `comment_content` varchar(1000) NOT NULL,
+  `comment_enable` tinyint(1) DEFAULT '1',
+  `comment_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `dos_sys_users_username` varchar(45) NOT NULL,
+  `dos_module_item_record_id` int(11) NOT NULL,
+  PRIMARY KEY (`comment_id`),
+  KEY `fk_dos_module_studies_comments_dos_sys_users` (`dos_sys_users_username`),
+  KEY `fk_dos_module_studies_comments_dos_module_studies1` (`dos_module_item_record_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `dos_module_productions_comments`
+--
+
+INSERT INTO `dos_module_productions_comments` (`comment_id`, `comment_title`, `comment_content`, `comment_enable`, `comment_date`, `dos_sys_users_username`, `dos_module_item_record_id`) VALUES
+(1, 'fgdggfdg', 'gfdgdsgdsfgdsfg', 1, '2011-12-04 17:55:32', 'grouplaptrinh', 1),
+(2, 'Hay quá', ' &lt;div class=&quot;bd-bt-boxright&quot;&gt;&lt;/div&gt; &lt;div class=&quot;bd-bt-boxright&quot;&gt;&lt;/div&gt; &lt;div class=&quot;bd-bt-boxright&quot;&gt;&lt;/div&gt;', 1, '2011-12-04 18:00:43', 'grouplaptrinh', 1),
+(3, 'fgdggfdg', ' &lt;div class=&quot;bd-bt-boxright&quot;&gt;&lt;/div&gt; &lt;div class=&quot;bd-bt-boxright&quot;&gt;&lt;/div&gt; &lt;div class=&quot;bd-bt-boxright&quot;&gt;&lt;/div&gt;', 1, '2011-12-04 18:03:21', 'grouplaptrinh', 1),
+(4, 'Hay quá', 'Giới thiệu sản phẩm lần 2Giới thiệu sản phẩm lần 2', 1, '2011-12-04 19:57:23', 'grouplaptrinh', 2),
+(5, 'Làm sai rồi', 'Kiểm tra lại đi ', 1, '2011-12-05 07:42:20', 'grouplaptrinh', 2),
+(6, 'quảng cáo', 'Ứng dụng VLXD nhẹ » Ứng dụng cách âmỨng dụng VLXD nhẹ » Ứng dụng cách âmỨng dụng VLXD nhẹ » Ứng dụng cách âm', 1, '2011-12-06 01:38:45', 'grouplaptrinh', 3);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `dos_module_product_cat`
 --
 
@@ -1094,6 +1192,103 @@ INSERT INTO `dos_module_support` (`support_id`, `support_name`, `support_phone`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `dos_module_techniques`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_techniques` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `pic_thumb` varchar(45) DEFAULT NULL,
+  `title` varchar(100) NOT NULL,
+  `titleen` varchar(100) DEFAULT NULL,
+  `titlefr` varchar(100) DEFAULT NULL,
+  `preview` text NOT NULL,
+  `previewen` text,
+  `previewfr` text,
+  `content` text NOT NULL,
+  `contenten` text,
+  `contentfr` text,
+  `author` varchar(45) DEFAULT NULL,
+  `hits` int(11) NOT NULL DEFAULT '1',
+  `postdate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `record_order` int(11) NOT NULL DEFAULT '1',
+  `record_type` tinyint(1) NOT NULL DEFAULT '0',
+  `extra_field1` varchar(45) DEFAULT NULL,
+  `extra_field2` varchar(45) DEFAULT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_module_item_cat_cat_id` int(11) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `fk_dos_module_studies_dos_module_studies_cat` (`dos_module_item_cat_cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `dos_module_techniques`
+--
+
+INSERT INTO `dos_module_techniques` (`record_id`, `pic_thumb`, `title`, `titleen`, `titlefr`, `preview`, `previewen`, `previewfr`, `content`, `contenten`, `contentfr`, `author`, `hits`, `postdate`, `record_order`, `record_type`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(1, 'hinh-nho.jpg', 'Cách âm -1111', '', '', '&lt;p&gt;\r\n	Khong nghe thay gi het&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Khong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi hetKhong nghe thay gi het&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-04 17:48:26', 1, 0, NULL, NULL, 1, 3),
+(2, 'moc-khoa-hoi-00021.jpg', 'Giới thiệu sản phẩm lần 2', '', '', '&lt;p&gt;\r\n	Giới thiệu sản phẩm lần 2Giới thiệu sản phẩm lần 2&lt;/p&gt;\r\n&lt;p&gt;\r\n	Giới thiệu sản phẩm lần 2&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Giới thiệu sản phẩm lần 2Giới thiệu sản phẩm lần 2Giới thiệu sản phẩm lần 2&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Giới thiệu sản phẩm lần 2Giới thiệu sản phẩm lần 2Giới thiệu sản phẩm lần 2&lt;/strong&gt;&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Giới thiệu sản phẩm lần 2Giới thiệu sản phẩm lần 2&lt;/strong&gt;&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Giới thiệu sản phẩm lần 2Giới thiệu sản phẩm lần 2&lt;/strong&gt;&lt;/p&gt;\r\n&lt;p&gt;\r\n	Giới thiệu sản phẩm lần 2&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-04 19:56:41', 1, 0, NULL, NULL, 1, 3),
+(3, NULL, 'Giới thiệu sản phẩm lần 3', '', '', '&lt;p&gt;\r\n	ghgfhghfgh&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	hgfjkhg;kdsfhg;dkshgk&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 01:34:33', 1, 0, NULL, NULL, 1, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_techniques_cat`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_techniques_cat` (
+  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_parent_id` int(11) NOT NULL DEFAULT '0',
+  `cat_title` varchar(45) NOT NULL,
+  `cat_titleen` varchar(45) DEFAULT NULL,
+  `cat_titlefr` varchar(45) DEFAULT NULL,
+  `cat_order` int(11) NOT NULL DEFAULT '1',
+  `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `dos_module_techniques_cat`
+--
+
+INSERT INTO `dos_module_techniques_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `cat_titlefr`, `cat_order`, `cat_enable`) VALUES
+(1, 0, 'Ứng dụng kinh tế', '', '', 1, 1),
+(2, 0, 'Ứng dụng cách  nhiệt', '', '', 2, 1),
+(3, 0, 'Ứng dụng cách  âm', '', '', 3, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_techniques_comments`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_techniques_comments` (
+  `comment_id` int(11) NOT NULL AUTO_INCREMENT,
+  `comment_title` varchar(50) NOT NULL,
+  `comment_content` varchar(1000) NOT NULL,
+  `comment_enable` tinyint(1) DEFAULT '1',
+  `comment_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `dos_sys_users_username` varchar(45) NOT NULL,
+  `dos_module_item_record_id` int(11) NOT NULL,
+  PRIMARY KEY (`comment_id`),
+  KEY `fk_dos_module_studies_comments_dos_sys_users` (`dos_sys_users_username`),
+  KEY `fk_dos_module_studies_comments_dos_module_studies1` (`dos_module_item_record_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `dos_module_techniques_comments`
+--
+
+INSERT INTO `dos_module_techniques_comments` (`comment_id`, `comment_title`, `comment_content`, `comment_enable`, `comment_date`, `dos_sys_users_username`, `dos_module_item_record_id`) VALUES
+(1, 'fgdggfdg', 'gfdgdsgdsfgdsfg', 1, '2011-12-04 17:55:32', 'grouplaptrinh', 1),
+(2, 'Hay quá', ' &lt;div class=&quot;bd-bt-boxright&quot;&gt;&lt;/div&gt; &lt;div class=&quot;bd-bt-boxright&quot;&gt;&lt;/div&gt; &lt;div class=&quot;bd-bt-boxright&quot;&gt;&lt;/div&gt;', 1, '2011-12-04 18:00:43', 'grouplaptrinh', 1),
+(3, 'fgdggfdg', ' &lt;div class=&quot;bd-bt-boxright&quot;&gt;&lt;/div&gt; &lt;div class=&quot;bd-bt-boxright&quot;&gt;&lt;/div&gt; &lt;div class=&quot;bd-bt-boxright&quot;&gt;&lt;/div&gt;', 1, '2011-12-04 18:03:21', 'grouplaptrinh', 1),
+(4, 'Hay quá', 'Giới thiệu sản phẩm lần 2Giới thiệu sản phẩm lần 2', 1, '2011-12-04 19:57:23', 'grouplaptrinh', 2),
+(5, 'Làm sai rồi', 'Kiểm tra lại đi ', 1, '2011-12-05 07:42:20', 'grouplaptrinh', 2),
+(6, 'quảng cáo', 'Ứng dụng VLXD nhẹ » Ứng dụng cách âmỨng dụng VLXD nhẹ » Ứng dụng cách âmỨng dụng VLXD nhẹ » Ứng dụng cách âm', 0, '2011-12-06 01:38:45', 'grouplaptrinh', 3);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `dos_module_termsofuse`
 --
 
@@ -1241,6 +1436,8 @@ INSERT INTO `dos_sys_configs` (`config_name`, `config_value`, `config_choices`) 
 ('materials_width_thumb', '145', ''),
 ('news_height_thumb', '248', ''),
 ('news_width_thumb', '330', ''),
+('productions_height_thumb', '90', ''),
+('productions_width_thumb', '145', ''),
 ('studies_height_thumb', '98', ''),
 ('studies_width_thumb', '158', ''),
 ('supplier_height', '500', ''),
@@ -1250,7 +1447,9 @@ INSERT INTO `dos_sys_configs` (`config_name`, `config_value`, `config_choices`) 
 ('sys_key', 'OE3GsQrrfmGbhzyh0MV/LC1tR3EaISrnIYVjq9+w2ZE=', ''),
 ('sys_num_pagerange', '5', ''),
 ('sys_num_paging', '7', 'Phân trang'),
-('sys_size_upload', '5000', 'Kích cỡ upload');
+('sys_size_upload', '5000', 'Kích cỡ upload'),
+('techniques_height_thumb', '90', ''),
+('techniques_width_thumb', '145', '');
 
 -- --------------------------------------------------------
 
@@ -1267,38 +1466,44 @@ CREATE TABLE IF NOT EXISTS `dos_sys_functions` (
   `function_load` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`function_id`),
   KEY `fk_dos_sys_functions_dos_sys_modules` (`model_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10263 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10350 ;
 
 --
 -- Dumping data for table `dos_sys_functions`
 --
 
 INSERT INTO `dos_sys_functions` (`function_id`, `model_name`, `model_load`, `action`, `varname`, `function_load`) VALUES
-(10238, 'default', 'News_Model_News', 'index', 'news_hot_first', 'listNewsHotFirst'),
-(10239, 'about', 'About_Model_About', 'view', 'menu_about', 'getListmenu'),
-(10240, 'account', 'Webadmin_Model_Account', 'add', 'menu_account', 'getListmenu'),
-(10241, 'account', 'Webadmin_Model_Account', 'changepass', 'menu_account', 'getListmenu'),
-(10242, 'account', 'Webadmin_Model_Account', 'index', 'menu_account', 'getListmenu'),
-(10243, 'default', 'News_Model_News', 'index', 'news_hots', 'listNewsHots'),
-(10244, 'default', 'Materials_Model_MaterialsCat', 'index', 'menu_cat_materials', 'getListmenu'),
-(10245, 'materials', 'Materials_Model_MaterialsCat', 'cat', 'menu_cat_materials', 'getListmenu'),
-(10246, 'materials', 'Materials_Model_MaterialsCat', 'index', 'menu_cat_materials', 'getListmenu'),
-(10247, 'materials', 'Materials_Model_MaterialsCat', 'view', 'menu_cat_materials', 'getListmenu'),
-(10248, 'news', 'News_Model_NewsCat', 'cat', 'menu_cat_news', 'getListmenu'),
-(10249, 'news', 'News_Model_NewsCat', 'index', 'menu_cat_news', 'getListmenu'),
-(10250, 'news', 'News_Model_NewsCat', 'view', 'menu_cat_news', 'getListmenu'),
-(10251, 'setup', 'Webadmin_Model_Setup', 'config', 'menu_setup', 'getListmenu'),
-(10252, 'setup', 'Webadmin_Model_Setup', 'function', 'menu_setup', 'getListmenu'),
-(10253, 'setup', 'Webadmin_Model_Setup', 'index', 'menu_setup', 'getListmenu'),
-(10254, 'setup', 'Webadmin_Model_Setup', 'lang', 'menu_setup', 'getListmenu'),
-(10255, 'setup', 'Webadmin_Model_Setup', 'menu', 'menu_setup', 'getListmenu'),
-(10256, 'setup', 'Webadmin_Model_Setup', 'title', 'menu_setup', 'getListmenu'),
-(10257, 'setup', 'Webadmin_Model_Setup', 'web', 'menu_setup', 'getListmenu'),
-(10258, 'tool', 'Webadmin_Model_Tool', 'analytics', 'menu_tool', 'getListmenu'),
-(10259, 'tool', 'Webadmin_Model_Tool', 'index', 'menu_tool', 'getListmenu'),
-(10260, 'tool', 'Webadmin_Model_Tool', 'seo', 'menu_tool', 'getListmenu'),
-(10261, 'video', 'Video_Model_VideoCat', 'cat', 'list_cat_video', 'getListmenu'),
-(10262, 'video', 'Video_Model_VideoCat', 'index', 'list_cat_video', 'getListmenu');
+(10319, 'techniques', 'Techniques_Model_TechniquesCat', 'index', 'menu_cat_techniques', 'getListmenu'),
+(10320, 'techniques', 'Techniques_Model_TechniquesCat', 'cat', 'menu_cat_techniques', 'getListmenu'),
+(10321, 'techniques', 'Techniques_Model_TechniquesCat', 'view', 'menu_cat_techniques', 'getListmenu'),
+(10322, 'about', 'About_Model_About', 'view', 'menu_about', 'getListmenu'),
+(10323, 'account', 'Webadmin_Model_Account', 'add', 'menu_account', 'getListmenu'),
+(10324, 'account', 'Webadmin_Model_Account', 'changepass', 'menu_account', 'getListmenu'),
+(10325, 'account', 'Webadmin_Model_Account', 'index', 'menu_account', 'getListmenu'),
+(10326, 'default', 'Materials_Model_MaterialsCat', 'index', 'menu_cat_materials', 'getListmenu'),
+(10327, 'default', 'News_Model_News', 'index', 'news_hot_first', 'listNewsHotFirst'),
+(10328, 'default', 'News_Model_News', 'index', 'news_hots', 'listNewsHots'),
+(10329, 'materials', 'Materials_Model_MaterialsCat', 'cat', 'menu_cat_materials', 'getListmenu'),
+(10330, 'materials', 'Materials_Model_MaterialsCat', 'index', 'menu_cat_materials', 'getListmenu'),
+(10331, 'materials', 'Materials_Model_MaterialsCat', 'view', 'menu_cat_materials', 'getListmenu'),
+(10332, 'news', 'News_Model_NewsCat', 'cat', 'menu_cat_news', 'getListmenu'),
+(10333, 'news', 'News_Model_NewsCat', 'index', 'menu_cat_news', 'getListmenu'),
+(10334, 'news', 'News_Model_NewsCat', 'view', 'menu_cat_news', 'getListmenu'),
+(10335, 'productions', 'Productions_Model_ProductionsCat', 'cat', 'menu_cat_productions', 'getListmenu'),
+(10336, 'productions', 'Productions_Model_ProductionsCat', 'index', 'menu_cat_productions', 'getListmenu'),
+(10337, 'productions', 'Productions_Model_ProductionsCat', 'view', 'menu_cat_productions', 'getListmenu'),
+(10338, 'setup', 'Webadmin_Model_Setup', 'config', 'menu_setup', 'getListmenu'),
+(10339, 'setup', 'Webadmin_Model_Setup', 'function', 'menu_setup', 'getListmenu'),
+(10340, 'setup', 'Webadmin_Model_Setup', 'index', 'menu_setup', 'getListmenu'),
+(10341, 'setup', 'Webadmin_Model_Setup', 'lang', 'menu_setup', 'getListmenu'),
+(10342, 'setup', 'Webadmin_Model_Setup', 'menu', 'menu_setup', 'getListmenu'),
+(10343, 'setup', 'Webadmin_Model_Setup', 'title', 'menu_setup', 'getListmenu'),
+(10344, 'setup', 'Webadmin_Model_Setup', 'web', 'menu_setup', 'getListmenu'),
+(10345, 'tool', 'Webadmin_Model_Tool', 'analytics', 'menu_tool', 'getListmenu'),
+(10346, 'tool', 'Webadmin_Model_Tool', 'index', 'menu_tool', 'getListmenu'),
+(10347, 'tool', 'Webadmin_Model_Tool', 'seo', 'menu_tool', 'getListmenu'),
+(10348, 'video', 'Video_Model_VideoCat', 'cat', 'list_cat_video', 'getListmenu'),
+(10349, 'video', 'Video_Model_VideoCat', 'index', 'list_cat_video', 'getListmenu');
 
 -- --------------------------------------------------------
 
@@ -1345,7 +1550,9 @@ INSERT INTO `dos_sys_groups_has_dos_sys_models` (`dos_sys_groups_group_name`, `d
 ('member', 'contact', 'allow'),
 ('member', 'materials', 'allow'),
 ('member', 'news', 'allow'),
-('member', 'support', 'allow');
+('member', 'productions', 'allow'),
+('member', 'support', 'allow'),
+('member', 'techniques', 'allow');
 
 -- --------------------------------------------------------
 
@@ -1411,6 +1618,7 @@ INSERT INTO `dos_sys_langs` (`lang_name`, `lang`, `langen`, `langfr`) VALUES
 ('philosophy', 'Triết lý', '', ''),
 ('picture_thumb', 'Hình thu nhỏ', '', ''),
 ('previous', 'Lùi', '', ''),
+('productions', 'Công nghệ sản xuất', '', ''),
 ('productnum', 'Số sản phẩm', '', ''),
 ('register', 'Đăng ký thành viên', '', ''),
 ('root', 'Gốc', '', ''),
@@ -1446,6 +1654,7 @@ INSERT INTO `dos_sys_langs` (`lang_name`, `lang`, `langen`, `langfr`) VALUES
 ('sys_title_cmt', 'Tiêu đề bình luận', '', ''),
 ('sys_tool', 'Công cụ &amp;amp; Báo cáo', '', ''),
 ('sys_web', 'Cấu hình website', '', ''),
+('techniques', 'Kỹ thuật xây dựng', '', ''),
 ('time', 'Thời gian', '', ''),
 ('user_cmt', 'Người bình luận', '', ''),
 ('video', 'Video', '', ''),
@@ -1482,11 +1691,13 @@ INSERT INTO `dos_sys_models` (`model_id`, `record_order`) VALUES
 ('payment', 8),
 ('philosophy', 2),
 ('product', 3),
+('productions', 22),
 ('promotions', 13),
 ('services', 4),
 ('studies', 16),
 ('supplier', 17),
 ('support', 9),
+('techniques', 23),
 ('termsofuse', 12),
 ('video', 10),
 ('wedding', 13);
@@ -1557,7 +1768,7 @@ CREATE TABLE IF NOT EXISTS `dos_sys_statistics` (
 --
 
 INSERT INTO `dos_sys_statistics` (`session_id`, `time`) VALUES
-('hlqpoyw2r', 1323182401);
+('ewfs7boli', 1323195707);
 
 -- --------------------------------------------------------
 
@@ -1609,10 +1820,10 @@ INSERT INTO `dos_sys_webs` (`web_name`, `web_value`) VALUES
 ('description', 'Công trình dân dụng  - Sản xuất gạch bêtông khí chưng áp, tấm panel bêtông nhẹ và các sản phẩm v gạch bêtông nhẹ khí chưng áp AAC V-block, tấm panel bêtông nhẹ và các sản phẩm vữa xây, keo dán gạch phục vụ cho ngành xây dựng'),
 ('email_subject', 'Liên hệ từ website'),
 ('keywords', 'Công trình dân dụng, sản xuất gạch bêtông khí chưng áp, tấm panel bêtông nhẹ và các sản phẩm v gạch bêtông nhẹ khí chưng áp AAC V-block'),
-('timestamp_today', '1323104400'),
+('timestamp_today', '1323190800'),
 ('titleweb', 'Block-betongnhe.com'),
-('total_visit', '13'),
-('total_visit_today', '6'),
+('total_visit', '14'),
+('total_visit_today', '0'),
 ('type', '1');
 
 --

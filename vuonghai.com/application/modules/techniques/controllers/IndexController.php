@@ -1,5 +1,5 @@
 <?php
-class Materials_IndexController extends GLT_Controller_Action {
+class Techniques_IndexController extends GLT_Controller_Action {
     private $_data;
     protected $_config;
     protected $_paginator;
@@ -26,7 +26,7 @@ class Materials_IndexController extends GLT_Controller_Action {
         }
     }
 	public function catAction() {
-		$itemCat=new Materials_Model_MaterialsCat();
+		$itemCat=new Techniques_Model_TechniquesCat();
 		$cid=$this->_data['cid'];	
 		while ($cid !=0 ) {
 			$listCatParent[] =	$itemCat->getDetailCatFromCid($cid);
@@ -35,7 +35,7 @@ class Materials_IndexController extends GLT_Controller_Action {
 		}	
 		$this->view->itemCat=array_reverse($listCatParent);
 		
-		$item = new Materials_Model_Materials();
+		$item = new Techniques_Model_Techniques();
 		$this->view->items = $item->listNewsbyCat($this->_data);
 		
 		//paging
@@ -46,7 +46,7 @@ class Materials_IndexController extends GLT_Controller_Action {
 		$this->webTitle($this->view->lang[$this->_data['module']]);
 	}
 	public function indexAction() {
-		$item = new Materials_Model_Materials();
+		$item = new Techniques_Model_Techniques();
 		$this->view->items = $item->listItemnew($this->_data);
 		
 		//paging
@@ -57,11 +57,11 @@ class Materials_IndexController extends GLT_Controller_Action {
 		$this->webTitle($this->view->lang[$this->_data['module']]);
 	}
 	public function viewAction(){
-		$item = new Materials_Model_Materials();
+		$item = new Techniques_Model_Techniques();
 		$detail = $item->detailItem($this->_data);
 		$this->view->item = $detail;
 		
-		$itemCat=new Materials_Model_MaterialsCat();
+		$itemCat=new Techniques_Model_TechniquesCat();
 		$cid=$detail['dos_module_item_cat_cat_id'];	
 		while ($cid !=0 ) {
 			$listCatParent[] =	$itemCat->getDetailCatFromCid($cid);
@@ -72,9 +72,9 @@ class Materials_IndexController extends GLT_Controller_Action {
 		
 		$this->webTitle($detail['title'.LANG]. ' - '.$this->view->lang[$this->_data['module']]);
 		
-		$cmt= new Materials_Model_Comments();
+		$cmt= new Techniques_Model_Comments();
 		if($this->_request->isPost()){	
-			$validate = new Materials_Form_ValidateComment($this->_data);
+			$validate = new Techniques_Form_ValidateComment($this->_data);
 			
 			if($validate->isError() == true){
 				$this->view->error = $validate->getError();
@@ -87,7 +87,7 @@ class Materials_IndexController extends GLT_Controller_Action {
 					$this->view->items=$this->_data;
 				}else{
 					$this->view->error= array('* Bình luận của bạn đã được gửi thành công.');
-					//$id=$cmt->addItem($this->_data);
+					$id=$cmt->addItem($this->_data);
 					//$this->_redirect('http://'.$_SERVER["SERVER_NAME"].$this->_request->getRequestUri().'#comment'.$id);
 				}			
 			}

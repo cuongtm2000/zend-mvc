@@ -86,8 +86,8 @@ class Materials_IndexController extends GLT_Controller_Action {
 					$this->view->error= array('*Bạn gửi bình luận quá nhanh. Hãy thử lại sau '.(-$giay).' giây!');	
 					$this->view->items=$this->_data;
 				}else{
+					$id=$cmt->addItem($this->_data);
 					$this->view->error= array('* Bình luận của bạn đã được gửi thành công.');
-					//$id=$cmt->addItem($this->_data);
 					//$this->_redirect('http://'.$_SERVER["SERVER_NAME"].$this->_request->getRequestUri().'#comment'.$id);
 				}			
 			}

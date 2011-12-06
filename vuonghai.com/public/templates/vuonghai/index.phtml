@@ -112,6 +112,28 @@
 							?>
 						</ul>
 				<?php endif;?>
+				<?php if(isset($this->menu_cat_productions)):?>
+		       		<h1 class="title-box"><?php echo $this->lang['productions'] ?></h1>
+					<ul class="subcate">
+						<?php 
+							if(is_array($this->menu_cat_productions))
+							foreach($this->menu_cat_productions as $value){
+								echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'productions'.'/index/cat/cid/'.$value['cat_id'].'/title/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
+							}
+						?>
+					</ul>
+				<?php endif;?>
+				<?php if(isset($this->menu_cat_techniques)):?>
+		       		<h1 class="title-box"><?php echo $this->lang['techniques'] ?></h1>
+					<ul class="subcate">
+						<?php 
+							if(is_array($this->menu_cat_techniques))
+							foreach($this->menu_cat_techniques as $value){
+								echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'techniques'.'/index/cat/cid/'.$value['cat_id'].'/title/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
+							}
+						?>
+					</ul>
+				<?php endif;?>
 				<?php if(isset($this->menu_cat_materials)):?>
 		       		<h1 class="title-box"><?php echo $this->lang['materials'] ?></h1>
 		        	 <div class="bd-frame-box"></div><!--End Bd bt frame box-->

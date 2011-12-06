@@ -1,6 +1,6 @@
 <?php
-class Materials_Model_Comments extends Zend_Db_Table{
-	protected $_name = 'dos_module_materials_comments';
+class Techniques_Model_Comments extends Zend_Db_Table{
+	protected $_name = 'dos_module_techniques_comments';
     protected $_primary = 'comment_id';
     protected $_config = null;
     private $_xss = NULL;
