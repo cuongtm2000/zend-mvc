@@ -2,14 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="content-language" content="vi" />
-<meta name="keywords" content="Công trình dân dụng - Sản xuất gạch bêtông khí chưng áp, tấm panel bêtông nhẹ và các sản phẩm v gạch bêtông nhẹ khí chưng áp AAC V-block, tấm panel bêtông nhẹ và các sản phẩm vữa xây, keo dán gạch phục vụ cho ngành xây dựng. http://vuonghai.com" />
-<meta name="description" content="Công trình dân dụng  -Sản xuất gạch bêtông khí chưng áp, tấm panel bêtông nhẹ và các sản phẩm v gạch bêtông nhẹ khí chưng áp AAC V-block, tấm panel bêtông nhẹ và các sản phẩm vữa xây, keo dán gạch phục vụ cho ngành xây dựng. http://vuonghai.com" /> 
+<meta http-equiv="content-language" content="vi" /> 
 <meta name="revisit-after" content="1 days" />
 <meta name="robots" content="noodp,index,follow" />
 <link rel="SHORTCUT ICON" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/x-icon" />
 <link rel="icon" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/gif" />
-
 
 <link href="<?php echo $this->baseUrl().TEMPLATE ?>/css/dosvn.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo $this->baseUrl().TEMPLATE ?>/css/wt-rotator.css" rel="stylesheet" type="text/css" />
@@ -28,7 +25,7 @@
 
 <script type="text/javascript">
 	$(document).ready(function(){
-		runbanner(566,190);
+		runbanner(<?php echo $this->config['banner_width'] ?>, <?php echo $this->config['banner_height'] ?>);
 	});
 </script>
 
@@ -58,11 +55,10 @@
             <div class="clear"></div>
         </div><!--End header--> 
     		
-     
         <ul class="menu">
         	<?php 
         			$folders = $this->menubar();
-        			$n=sizeof($folders); 			$i=0;
+        			$n=sizeof($folders); $i=0;
         			
 					foreach($folders as $models){		
 						if($i++ ==$n-1)
@@ -75,15 +71,8 @@
 					}
 				?>
         </ul><!--End menu-->        <div class="clear"></div>
-        
-     
-        
-        
-        
-        
-        
-        
-        <div class="bd-top-content"></div>
+       
+       <div class="bd-top-content"></div>
         <div id="content">
         	<div id="leftcontent">
         	
@@ -124,10 +113,7 @@
 							?>
 						</ul>
 				<?php endif;?>
-				
-            
-				
-				
+
 				<?php if(isset($this->menu_support)): ?>
 					<div class="bd-frame-box"></div><!--Bd frame box-->
                 		<h1 class="title-box"><?php echo $this->lang['support'] ?></h1>
@@ -152,7 +138,7 @@
 	                <h1 class="title-box"><?php echo $this->lang['adv'] ?></h1>
 	                <ul class="top">
 						<?php foreach ($this->list_adv_left as $value):?>
-							<li><img  src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['title'.LANG].' - '.$value['description']?>"/></li>
+							<li><a href="<?php echo $value['url'] ?>" target="_blank" title="<?php echo $value['title'.LANG].' - '.$value['description']?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['title'.LANG].' - '.$value['description']?>"/></a></li>
 						<?php endforeach;?>
 					</ul>
 	                <div class="bd-frame-box"></div><!--End Bd bt frame box-->
@@ -169,7 +155,6 @@
 									<?php foreach($this->banner as $value):?>
 										  <li><a href="<?php echo $this->baseUrl()?>/public/userfiles/images/banner/<?php echo $value['banner_url']?>"></a></li> 
 									<?php endforeach;?>
-								
 								<?php else:?>
 							  		<li><a href="<?php echo $this->baseUrl().TEMPLATE ?>/images/banner.jpg" ></a></li> 
 								<?php endif;?>
@@ -186,12 +171,12 @@
                 <h1 class="title-box"><?php echo $this->lang['adv'] ?></h1>
                 <ul class="top">
 					<?php foreach ($this->list_adv_right as $value):?>
-						<li><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['title'.LANG].' - '.$value['description']?>"/></li>
+						<li><a href="<?php echo $value['url'] ?>" target="_blank" title="<?php echo $value['title'.LANG].' - '.$value['description']?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['title'.LANG].' - '.$value['description']?>"/></a></li>
 					<?php endforeach;?>
 				</ul>
                 <div class="bd-frame-box"></div><!--End Bd bt frame box-->
                 <?php endif;?> 
-			</div><!--End colums3-->      <div class="clear"></div>
+			</div><!--End colums3--><div class="clear"></div>
             
         </div><!--End content-->
         <div class="bd-bt-content"></div>
@@ -199,7 +184,7 @@
             <ul class="menu-fter">
                 <?php 
         			$folders = $this->menubar();
-        			$n=sizeof($folders); 			$i=0;
+        			$n=sizeof($folders); $i=0;
         			
 					foreach($folders as $models){		
 						if($i++ ==$n-1)
@@ -212,12 +197,7 @@
 					}
 				?>
             </ul>
-			<p>VUONG HAI CORPORATION Copyright &copy; 2011. Develop by <a href="#" title="">Dos.vn</a></p>
-			<p>Office: C1B Dong Khoi, hamlet 4, Tan Hiep ward, Bien Hoa city, Dong Nai province</p>
-			<p>Factory: Ong Huong Hamlet, Thien Tan commune, Vinh Cuu district, Dong Nai province</p>
-			<p>Phone: (+8461) 3895 060 - (+8461) 3865 819</p>
-			<p>Fax: (+8461) 3895 573 - (+8461) 3865 8219</p>
-			<p>Website: <a href="http://vuonghai.com" title="Vuonghai.com">www.vuonghai.com</a> - <a href="http://block-betongnhe.com" title="Block betongnhe.com">www.block-betongnhe.com</a></p>
+			<?php echo html_entity_decode($this->contact_home['content']) ?>
     </div><!--End Footer-->
 </div><!--End wrapper-->
 </body>

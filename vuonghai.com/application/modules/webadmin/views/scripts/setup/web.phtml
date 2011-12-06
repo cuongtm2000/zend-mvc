@@ -11,7 +11,7 @@
 	<script type="text/javascript">
 	$(document).ready(function(){
 	    $("#add-rows").click(function(){
-	        $(".rows").before('<p><label>Config web</label><input name="web_namenew[]" value="" maxlength="45" class="txt-large" /> <input name="web_valuenew[]" value="" maxlength="45" class="txt-large" /></p>');
+	        $(".rows").before('<p><label>Config web</label><input name="web_namenew[]" value="" maxlength="45" class="txt-large" /> <input name="web_valuenew[]" value="" maxlength="250" class="txt-large" /></p>');
 	        return false;
 	    });
 	});
@@ -24,7 +24,7 @@
 	        foreach($this->items as $item){
 	        	echo '<p><label>Config web</label>
 	                    <input readonly="readonly" name="web_name[]" value="'.$item['web_name'].'" maxlength="45" class="txt-large" />
-	                    <input name="web_value[]" value="'.$item['web_value'].'" maxlength="200" class="txt-large" />';
+	                    <input name="web_value[]" value="'.$item['web_value'].'" maxlength="250" class="txt-large" />';
 	        }
 		?>
 		<p>
