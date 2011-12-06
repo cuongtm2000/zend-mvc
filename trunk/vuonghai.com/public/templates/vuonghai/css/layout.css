@@ -133,9 +133,8 @@ a:hover{color:#000;}
 .comment h3{ color:#3F9C00; font-weight:bold}
 .comment span{ color:#999; font-weight:normal}
 .comment p{margin:5px 0 !important}
-.frm-comment{list-style:none}
+.frm-comment{ list-style:none}
 .frm-comment label{width:100px;float:left;padding-top:2px; color:#333; font-weight:700;}
-.frm-comment label span{color: red;}
 .frm-comment input{padding:5px;width:220px;border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
 .frm-comment textarea{border:1px solid #ddd; width:350px;-moz-border-radius: 3px; -webkit-border-radius:3px}
 .frm-comment .bton-comment{background:url(../images/button.gif) no-repeat;color:#fff;padding:7px 0px; text-align:center; cursor:pointer;width:100px;border:none;font-weight:bold}
