@@ -71,6 +71,30 @@ class News_Model_News extends Zend_Db_Table{
 		}
     }
     
+    //Front end - Get Bản tin bởi cat_id
+	public function listItemIndex($data = NULL){
+		//Get paging number
+    	$paginator = $data['paginator'];
+    	if ($paginator['itemCountPerPage']>0){
+			$page = $paginator['currentPage'];
+			$rowCount = $paginator['itemCountPerPage'];
+		}
+		
+		$db = Zend_Registry::get('connectDb');
+    	$select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG))
+							   ->where('enable = 1')
+							   ->order('record_order ASC')
+							   ->order('postdate DESC')
+							   ->limitPage($page, $rowCount);
+		$result = $db->query($select)->fetchAll();
+		if(count($result) > 0){
+			return $db->query($select)->fetchAll();
+		}else{
+			$lang = Zend_Registry::get("lang");
+    		return $lang['norecord'];
+		}
+    }
+    
 	//Front end - Count bản tin bởi cat_id
 	public function countNewsbyCat($data = NULL){
 		$db = Zend_Registry::get('connectDb');

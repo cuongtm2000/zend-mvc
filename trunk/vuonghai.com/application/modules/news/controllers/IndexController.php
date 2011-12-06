@@ -1,8 +1,8 @@
 <?php
 class News_IndexController extends GLT_Controller_Action {
     private $_data;
-    protected $_config;
-    protected $_paginator;
+    private $_config;
+    private $_paginator;
     
     public function init(){        
         //Load config
@@ -41,6 +41,14 @@ class News_IndexController extends GLT_Controller_Action {
 	}
 	public function indexAction() {
 		$this->webTitle($this->view->lang[$this->_data['module']]);
+        
+        $item = new News_Model_News();
+		$this->view->items = $item->listItemIndex($this->_data);
+        
+        //paging
+		$totalItem = $item->countItemadmin();
+		$paginator = new GLT_Paginator();
+		$this->view->paginator = $paginator->createPaginator($totalItem, $this->_paginator);
 	}
 	public function viewAction(){
 		$item = new News_Model_News();
