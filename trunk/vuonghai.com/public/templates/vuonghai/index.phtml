@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="content-language" content="vi" /> 
+<meta http-equiv="content-language" content="vi, en" /> 
 <meta name="revisit-after" content="1 days" />
 <meta name="robots" content="noodp,index,follow" />
 <link rel="SHORTCUT ICON" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/x-icon" />
@@ -57,67 +57,59 @@
     		
         <ul class="menu">
         	<?php 
-        			$folders = $this->menubar();
-        			$n=sizeof($folders); $i=0;
-        			
-					foreach($folders as $models){		
-						if($i++ ==$n-1)
-							$style='style="background:none"';
-						else
-							$style=''; 
-						$target = ($models['target']=='') ? '' : ' target="'.$models['target'].'"';
-						$select =($this->module==$models['url']) ? ' class="select"': '';
-						echo '<li'.$select.'><a '.$style.' href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.'>'.html_entity_decode($models['module'.LANG]).'</a></li>';
-					}
-				?>
-        </ul><!--End menu-->        <div class="clear"></div>
+				$folders = $this->menubar();
+				$n = sizeof($folders); $i=0;
+				
+				foreach($folders as $models){		
+					$style = ($i++ ==$n-1) ? ' style="background:none"' : $style=''; 
+					$target = ($models['target']=='') ? '' : ' target="'.$models['target'].'"';
+					$select = ($this->module==$models['url']) ? ' class="select"': '';
+					echo '<li><a'.$style.' href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.''.$select.'>'.html_entity_decode($models['module'.LANG]).'</a></li>';
+				}
+			?>
+        </ul><!--End menu--><div class="clear"></div>
        
        <div class="bd-top-content"></div>
         <div id="content">
         	<div id="leftcontent">
-        	
-        		   <?php if(isset($this->list_cat_video)):?>
+				<?php if(isset($this->list_cat_video)):?>
 		       		<h1 class="title-box"><?php echo $this->lang['video'] ?></h1>
-		        	 <div class="bd-frame-box"></div><!--End Bd bt frame box-->
-						<ul class="subcate">
-							<?php 
-								if(is_array($this->list_cat_video))
-									foreach($this->list_cat_video as $value){
-										echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'video'.'/index/cat/id/'.$value['cat_id'].'/title/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
-									}
-							?>
-						</ul>
+					<ul class="subcate">
+						<?php 
+							if(is_array($this->list_cat_video))
+								foreach($this->list_cat_video as $value){
+									echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'video'.'/index/cat/id/'.$value['cat_id'].'/title/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
+								}
+						?>
+					</ul>
 				<?php endif;?>
 				
 				<?php if(isset($this->menu_cat_news)):?>
 		       		<h1 class="title-box"><?php echo $this->lang['news'] ?></h1>
-		        	 <div class="bd-frame-box"></div><!--End Bd bt frame box-->
-						<ul class="subcate">
-							<?php 
-								if(is_array($this->menu_cat_news))
-									foreach($this->menu_cat_news as $value){
-										echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'news'.'/index/cat/id/'.$value['cat_id'].'/title/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
-									}
-							?>
-						</ul>
+					<ul class="subcate">
+						<?php 
+							if(is_array($this->menu_cat_news))
+							foreach($this->menu_cat_news as $value){
+								echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'news'.'/index/cat/id/'.$value['cat_id'].'/title/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
+							}
+						?>
+					</ul>
 				<?php endif;?>
 				<?php if(isset($this->menu_cat_materials)):?>
 		       		<h1 class="title-box"><?php echo $this->lang['materials'] ?></h1>
-		        	 <div class="bd-frame-box"></div><!--End Bd bt frame box-->
-						<ul class="subcate">
-							<?php 
-								if(is_array($this->menu_cat_materials))
-									foreach($this->menu_cat_materials as $value){
-										echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'materials'.'/index/cat/cid/'.$value['cat_id'].'/title/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
-									}
-							?>
-						</ul>
+					<ul class="subcate">
+						<?php 
+							if(is_array($this->menu_cat_materials))
+								foreach($this->menu_cat_materials as $value){
+									echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'materials'.'/index/cat/cid/'.$value['cat_id'].'/title/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
+								}
+						?>
+					</ul>
 				<?php endif;?>
 
 				<?php if(isset($this->menu_support)): ?>
 					<div class="bd-frame-box"></div><!--Bd frame box-->
-                		<h1 class="title-box"><?php echo $this->lang['support'] ?></h1>
-				    
+                	<h1 class="title-box"><?php echo $this->lang['support'] ?></h1>
 					<ul class="support">
 						<?php foreach ($this->menu_support as $value): ?>
 							<li><?php echo $value['support_name'] ?></li>
@@ -182,18 +174,10 @@
         <div class="bd-bt-content"></div>
 		<div id="footer">
             <ul class="menu-fter">
-                <?php 
-        			$folders = $this->menubar();
-        			$n=sizeof($folders); $i=0;
-        			
+                <?php    			
 					foreach($folders as $models){		
-						if($i++ ==$n-1)
-							$style='style="background:none"';
-						else
-							$style=''; 
 						$target = ($models['target']=='') ? '' : ' target="'.$models['target'].'"';
-						$select =($this->module==$models['url']) ? ' class="select"': '';
-						echo '<li'.$select.'><a '.$style.' href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.'>'.html_entity_decode($models['module'.LANG]).'</a></li>';
+						echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.'>'.html_entity_decode($models['module'.LANG]).'</a></li>';
 					}
 				?>
             </ul>

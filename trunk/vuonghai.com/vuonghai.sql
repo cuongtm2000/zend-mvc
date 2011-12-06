@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 06, 2011 at 10:24 AM
+-- Generation Time: Dec 06, 2011 at 03:40 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -1235,10 +1235,10 @@ INSERT INTO `dos_sys_configs` (`config_name`, `config_value`, `config_choices`) 
 ('banner_width', '566', 'Banner - Chiều ngang'),
 ('logo_height', '159', 'Logo - Chiều cao'),
 ('logo_width', '950', 'Logo - Chiều ngang'),
-('marketing_height_thumb', '98', ''),
-('marketing_width_thumb', '158', ''),
-('materials_height_thumb', '98', ''),
-('materials_width_thumb', '158', ''),
+('marketing_height_thumb', '90', ''),
+('marketing_width_thumb', '143', ''),
+('materials_height_thumb', '90', ''),
+('materials_width_thumb', '145', ''),
 ('news_height_thumb', '248', ''),
 ('news_width_thumb', '330', ''),
 ('studies_height_thumb', '98', ''),
@@ -1557,8 +1557,7 @@ CREATE TABLE IF NOT EXISTS `dos_sys_statistics` (
 --
 
 INSERT INTO `dos_sys_statistics` (`session_id`, `time`) VALUES
-('coz145e9j', 1323163391),
-('eawl0f8i4', 1323162340);
+('hlqpoyw2r', 1323182401);
 
 -- --------------------------------------------------------
 
@@ -1612,8 +1611,8 @@ INSERT INTO `dos_sys_webs` (`web_name`, `web_value`) VALUES
 ('keywords', 'Công trình dân dụng, sản xuất gạch bêtông khí chưng áp, tấm panel bêtông nhẹ và các sản phẩm v gạch bêtông nhẹ khí chưng áp AAC V-block'),
 ('timestamp_today', '1323104400'),
 ('titleweb', 'Block-betongnhe.com'),
-('total_visit', '12'),
-('total_visit_today', '5'),
+('total_visit', '13'),
+('total_visit_today', '6'),
 ('type', '1');
 
 --
