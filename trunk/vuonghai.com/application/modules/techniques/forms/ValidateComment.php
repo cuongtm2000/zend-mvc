@@ -1,5 +1,5 @@
 <?php
-class Materials_Form_ValidateComment{
+class Techniques_Form_ValidateComment{
 	private $_error = null;
 	public function __construct($arrParam = array()){		
 		
