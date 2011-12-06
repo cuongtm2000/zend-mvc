@@ -25,7 +25,7 @@ class News_Model_News extends Zend_Db_Table{
 	//Front end - Get Bản tin Hot mới nhất
 	public function listNewsHots(){
 		$db = Zend_Registry::get('connectDb');
-    	$select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG))
+    	$select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG,'preview'.LANG))
 							   ->where('enable = 1')
 							   ->where('record_type = 1')
 							   ->order('record_order DESC')
