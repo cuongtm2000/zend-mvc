@@ -51,7 +51,7 @@ class GLT_System_SmartCounter extends Zend_Db_Table{
 
 	private function updateOnlineToday($value ){
 	 	if($value==0){
-	 		$count=0;
+	 		$count=1;
 		}
 	 	else{
 	 		$count=$this->getOnlineToday()+1; 
@@ -108,6 +108,7 @@ class GLT_System_SmartCounter extends Zend_Db_Table{
     	}
     	    	
         $staSession = new Zend_Session_Namespace('statistics');
+       
         $sid = $staSession->statistics;
         
         if ($sid == '') {

@@ -1,0 +1,67 @@
+<h1 class="title-right">
+	<?php 
+		echo $this->lang['materials'];
+		if(is_array($this->itemCat))
+			foreach ( $this->itemCat as $value) {
+				echo ' &raquo; '. $value;
+			} 	
+		echo ' &raquo; '. $this->item['title'.LANG];
+	?>
+</h1>
+
+	<?php echo html_entity_decode($this->item['content'.LANG]) ?>
+	
+	
+	<div class="clear"></div>
+	<!--Binh luan-->
+	<?php if(sizeof($this->comments)>0) foreach($this->comments as $cmt):?>
+		 <div class="comment">
+				<h3><a href="#" name="comment<?php echo $cmt['comment_id']?>"><?php echo $cmt['comment_title']?></a> - <?php echo $cmt['dos_sys_users_username']?> ( <?php echo $cmt['comment_date']?> )</h3>
+				<?php echo $cmt['comment_content']?>
+		</div>	
+	<?php endforeach?>
+	<!-- list comment -->
+	<!--End binh luan-->
+	<!-- <div class="paging"><a class="pagenav" href="#">Start</a> <a class="pagenav" href="#">Previous</a><b class="pagecureent">1</b> <a class="pagenav" href="#">2</a> <a class="pagenav" href="#">3</a>  <a class="pageactive" href="#">Next</a> <a class="pagenav" href="#">End</a></div> --> 
+
+<div class="clear"></div>
+<!-- <ul class="menusmall">
+	<li><img src="images/icon-1.gif" alt="home" /><a href="index.html" title="Trang chủ">trang chủ</a></li>
+	<li><img src="images/icon-2.gif" alt="Email" />email</li>
+	<li><img src="images/icon-3.gif" alt="Print" />print</li>
+	<li><img src="images/icon-4.gif" alt="Save" />save</li>
+</ul> -->
+<!--Loi binh-->
+	<!-- list comment -->
+	<?php if(!$this->checklogin()): ?>
+		<div class="binhluan">Vui lòng <a href="<?php echo $this->baseUrl()?>/login<?php echo $this->urlcurrent?>" title="Đăng nhập">đăng nhập</a> để bình luận, nếu bạn chưa có tài khoản vui lòng <a href="<?php echo $this->baseUrl()?>/register<?php echo $this->urlcurrent?>" title="Đăng ký thành viên">đăng ký thành viên</a></div>
+	<?php else: ?>
+		<?php if($this->item['record_type']!=1):?>
+			 <h2 class="title-box-right"><span>Gửi Lời Bình</span></h2>
+			<div class="mid-boxright">
+				<form id="contact" method="post" name="dangky" class="frame-frm-comment" action="">
+					<ul class="frm-comment">
+						<li><label>Tiêu đề: </label><input type="text" name="commenttitle" id="commenttitle" value="<?php echo $this->items['commenttitle']?>" /></li>
+						<li><label>Nội dung:</label><textarea name="commentdetail" id="commentdetail" rows="10" cols="70"><?php echo $this->items['commentdetail']?></textarea></li>
+						<?php if($this->error ) foreach($this->error as $er):?>
+							<li><label></label><div style="color:#ff0000;"><?php echo $er?></div></li>
+						<?php endforeach ?>
+						<li><label></label><input type="submit" value="Gửi lời bình" class="bton-comment"/></li>
+						
+					</ul>
+				</form>
+			
+                    </div><!--End bg binh luan-->
+                     <div class="bd-bt-boxright"></div>
+		<?php endif;?>
+	<?php endif; ?>
+<!--End loi binh-->
+
+<!-- <h3>các bài viết liên quan:</h3>
+<ul class="posts">
+	<li><a href="#" title="">nhà đầu tư hào hứng mua "chứng" </a><span> - Diễn đàn Doanh nghiệp</span></li>
+	<li><a href="#" title="">"mưa tiền" đang đổ về thị trường chứng khoán </a><span> - vietnam plus</span></li>
+	<li><a href="#" title="">TT, VRC, SDN, VSI: lịch trả cổ tức</a><span> - cafeF</span></li>
+	<li><a href="#" title="">thuế thu nhập doanh nghiệp: Hồi hộp chờ sữa Nghị định 124 </a><span> - VnEconomy</span></li>
+	<li><a href="#" title="">nhà đầu tư tăng mua chứng khoán</a><span> - VnExpress</span></li>
+</ul> -->

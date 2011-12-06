@@ -52,7 +52,7 @@
 				
 		        echo '<tr'.$rowclass.'>
 		               <td><input type="checkbox" name="ids[]" value="'.$value['comment_id'].'" /></td>
-		               <td  class="tdcommment"><a rel="prettyPhoto[iframes]"  href="'.$this->baseUrl().'/materials/index/view/id/'.$value['dos_module_item_record_id'].'#'.$value['comment_id'].'?iframe=true&width=80%&height=100%">'.$title.'</a></td>
+		               <td  class="tdcommment"><a rel="prettyPhoto[iframes]"  href="'.$this->baseUrl().'/materials/index/view/id/'.$value['dos_module_item_record_id'].'#comment'.$value['comment_id'].'?iframe=true&width=100%&height=100%">'.$title.'</a></td>
 		               <td>'.$value['comment_content'].'</td>
 		               <td>'.$value['dos_module_item_record_name'].'</td>
 		               <td>'.$value['dos_sys_users_username'].'</td>
