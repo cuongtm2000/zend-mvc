@@ -1,47 +1,49 @@
-<h1 class="title-box-right"><span>TIN NỔI BẬT</span></h1>
-<div class="mid-boxright">
-	<div class="frame-focus">
-        <?php if($this->news_hots): ?>
-		<h1 class="title-focus">TIÊU ĐIỂM</h1>
-		<ul class="fucus-tent">
-            <?php foreach($this->news_hots as $value): ?>
-			<li><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG]) ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></li>
-            <?php endforeach; ?>
-		</ul>
-		<div class="bd-bt-focus"></div>
-        <?php endif; ?>
-	</div> <!--End Frame focus-->
-    
-    <?php if($this->news_hot_first): ?>
-        <?php if($this->news_hot_first['pic_thumb']): ?><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $this->news_hot_first['record_id'] ?>/<?php echo $this->noneUnicode($this->news_hot_first['title'.LANG]) ?>" title="<?php echo $this->news_hot_first['title'.LANG] ?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/news/<?php echo $this->news_hot_first['pic_thumb'] ?>" alt="<?php echo $this->news_hot_first['title'.LANG] ?>" /></a><?php endif; ?>
-    	<h2 class="title-h2"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $this->news_hot_first['record_id'] ?>/<?php echo $this->noneUnicode($this->news_hot_first['title'.LANG]) ?>" title="<?php echo $this->news_hot_first['title'.LANG] ?>"><?php echo $this->news_hot_first['title'.LANG] ?></a></h2>
-    	<?php echo html_entity_decode($this->news_hot_first['preview'.LANG]) ?>
-    <?php endif; ?>
-</div>
-<div class="bd-bt-boxright"></div>
-<h1 class="title-box-right"><span>ỨNG DỤNG VLXD NHẸ</span></h1>
-<div class="mid-boxright">
-	<div class="tent-new">
-		<h2 class="title-h2"><a href="#" title="">Để phát triển nông nghiệp theo hướng hiện đại, bền vững</a></h2>
-		<p>QĐND - Nông nghiệp là ngành sản xuất truyền thống của nước ta từ ngàn đời nay và là lĩnh vực luôn được Đảng, Nhà nước ta đặc biệt coi trọng, là nền tảng có tính chiến lược trong thực hiện các mục tiêu kinh tế - xã hội, bảo đảm an ninh lương thực... </p>
-	</div><!--End tent new-->
-	<ul class="sub-new">
-		<li style="list-style:none"><a href="#" title=""><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/betong.jpg" alt="Betong" title="betong" style="float:left;"/></a><a href="#" title="">Giới thiệu công nghệ, thiết bị hiện đại phục vụ phòng chống thiên tai</a><div class="clear"></div></li>
-		<li><a href="#" title="">Giới thiệu công nghệ, thiết bị hiện đại phục vụ phòng chống thiên tai</a></li>
-		<li><a href="#" title="">Ngành nông nghiệp xuất siêu 8.2 tỷ USD</a></li>
-	</ul>  <!--End sub new--> <div class="clear"></div>
-</div>
-<div class="bd-bt-boxright"></div>
-<h1 class="title-box-right"><span>KỸ THUẬT ỨNG DỤNG</span></h1>
-<div class="mid-boxright">
-	<div class="tent-new">
-		<h2 class="title-h2"><a href="#" title="">Để phát triển nông nghiệp theo hướng hiện đại, bền vững</a></h2>
-		<p>QĐND - Nông nghiệp là ngành sản xuất truyền thống của nước ta từ ngàn đời nay và là lĩnh vực luôn được Đảng, Nhà nước ta đặc biệt coi trọng, là nền tảng có tính chiến lược trong thực hiện các mục tiêu kinh tế - xã hội, bảo đảm an ninh lương thực... </p>
-	</div><!--End tent new-->
-	<ul class="sub-new">
-		<li style="list-style:none"><a href="#" title=""><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/betong.jpg" alt="Betong" title="betong" style="float:left;"/></a><a href="#" title="">Giới thiệu công nghệ, thiết bị hiện đại phục vụ phòng chống thiên tai</a><div class="clear"></div></li>
-		<li><a href="#" title="">Giới thiệu công nghệ, thiết bị hiện đại phục vụ phòng chống thiên tai</a></li>
-		<li><a href="#" title="">Ngành nông nghiệp xuất siêu 8.2 tỷ USD</a></li>
-	</ul>  <!--End sub new--> <div class="clear"></div>
-</div>
-<div class="bd-bt-boxright"></div>
+            
+            	<h1 class="title-box-right"><span>TIN NỔI BẬT</span></h1>
+                <div class="mid-boxright">
+                	<div class="frame-focus">
+                    	<h1 class="title-focus">TIÊU ĐIỂM</h1>
+                        <ul class="fucus-tent">
+                        	<li><a href="#" title="">Bài viết về Activation</a></li>
+                            <li><a href="#" title="">Sự kiện của Sony</a></li>
+                            <li><a href="#" title="">Chuyên gia Marketing thư giãn</a></li>
+                            <li><a href="#" title="">Wobbler trong chiến dịch "1 triệu ly sữa" Campaign</a></li>
+                        	<li><a href="#" title="">Bài viết về Activation</a></li>
+                            <li><a href="#" title="">Sự kiện của Sony</a></li>
+                            <li><a href="#" title="">Chuyên gia Marketing thư giãn</a></li>
+                            <li><a href="#" title="">Wobbler trong chiến dịch "1 triệu ly sữa" Campaign</a></li>
+                        </ul>
+                        <div class="bd-bt-focus"></div>
+                    </div> <!--End Frame focus--> 
+                	<img src="images/image-new.jpg" alt="Hinh anh betong" />
+                	<h2 class="title-h2"><a href="#" title="">Phát triển gạch AAC: Hướng tới "vật liệu xanh"</a></h2>
+                    <p>Hiểu được tính ưu điểm vượt trội của "sản phẩm xanh" nên các DN hưởng ứng nhiệt tình chương trình phát triển vật liệu xây không nung (VLXKN)trong đó có thể kể đến sự phát triển mạnh mẽ của bê tông nhẹ. Đến nay đã có 8 nhà máy bê 
+tông khí chưng áp AAC đi vào sản xuất và 1 nhà máy chuẩn bị đi vào sản xuất với tổng công suất thiết kế 1,5 triệu m3/năm...</p>
+                </div>
+                <div class="bd-bt-boxright"></div>
+                <h1 class="title-box-right"><span>ỨNG DỤNG VLXD NHẸ</span></h1>
+            	<div class="mid-boxright">
+                	<div class="tent-new">
+                    	<h2 class="title-h2"><a href="#" title="">Để phát triển nông nghiệp theo hướng hiện đại, bền vững</a></h2>
+                    	<p>QĐND - Nông nghiệp là ngành sản xuất truyền thống của nước ta từ ngàn đời nay và là lĩnh vực luôn được Đảng, Nhà nước ta đặc biệt coi trọng, là nền tảng có tính chiến lược trong thực hiện các mục tiêu kinh tế - xã hội, bảo đảm an ninh lương thực... </p>
+                    </div><!--End tent new-->
+                    <ul class="sub-new">
+                    	<li style="list-style:none"><a href="#" title=""><img src="images/betong.jpg" alt="Betong" title="betong" style="float:left;"/></a><a href="#" title="">Giới thiệu công nghệ, thiết bị hiện đại phục vụ phòng chống thiên tai</a><div class="clear"></div></li>
+                    	<li><a href="#" title="">Giới thiệu công nghệ, thiết bị hiện đại phục vụ phòng chống thiên tai</a></li>
+                    	<li><a href="#" title="">Ngành nông nghiệp xuất siêu 8.2 tỷ USD</a></li>
+                    </ul>  <!--End sub new--> <div class="clear"></div>
+                </div>
+                <div class="bd-bt-boxright"></div>
+                <h1 class="title-box-right"><span>KỸ THUẬT ỨNG DỤNG</span></h1>
+            	<div class="mid-boxright">
+                	<div class="tent-new">
+                    	<h2 class="title-h2"><a href="#" title="">Để phát triển nông nghiệp theo hướng hiện đại, bền vững</a></h2>
+                    	<p>QĐND - Nông nghiệp là ngành sản xuất truyền thống của nước ta từ ngàn đời nay và là lĩnh vực luôn được Đảng, Nhà nước ta đặc biệt coi trọng, là nền tảng có tính chiến lược trong thực hiện các mục tiêu kinh tế - xã hội, bảo đảm an ninh lương thực... </p>
+                    </div><!--End tent new-->
+                    <ul class="sub-new">
+                    	<li style="list-style:none"><a href="#" title=""><img src="images/betong.jpg" alt="Betong" title="betong" style="float:left;"/></a><a href="#" title="">Giới thiệu công nghệ, thiết bị hiện đại phục vụ phòng chống thiên tai</a><div class="clear"></div></li>
+                    	<li><a href="#" title="">Giới thiệu công nghệ, thiết bị hiện đại phục vụ phòng chống thiên tai</a></li>
+                    	<li><a href="#" title="">Ngành nông nghiệp xuất siêu 8.2 tỷ USD</a></li>
+                    </ul>  <!--End sub new--> <div class="clear"></div>
+                </div>
+                <div class="bd-bt-boxright"></div>

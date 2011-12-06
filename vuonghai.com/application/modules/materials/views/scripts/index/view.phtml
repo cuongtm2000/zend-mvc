@@ -39,18 +39,20 @@
 		<?php if($this->item['record_type']!=1):?>
 			 <h2 class="title-box-right"><span>Gửi Lời Bình</span></h2>
 			<div class="mid-boxright">
-				<form id="contact" method="post" class="frame-frm-comment" action="">
+				<form id="contact" method="post" name="dangky" class="frame-frm-comment" action="">
 					<ul class="frm-comment">
-						<li><label>Tiêu đề <span>*</span></label><input type="text" name="commenttitle" id="commenttitle" value="<?php echo $this->items['commenttitle']?>" /></li>
-						<li><label>Nội dung <span>*</span></label><textarea name="commentdetail" id="commentdetail" rows="10" cols="70"><?php echo $this->items['commentdetail']?></textarea></li>
+						<li><label>Tiêu đề: </label><input type="text" name="commenttitle" id="commenttitle" value="<?php echo $this->items['commenttitle']?>" /></li>
+						<li><label>Nội dung:</label><textarea name="commentdetail" id="commentdetail" rows="10" cols="70"><?php echo $this->items['commentdetail']?></textarea></li>
 						<?php if($this->error ) foreach($this->error as $er):?>
 							<li><label></label><div style="color:#ff0000;"><?php echo $er?></div></li>
 						<?php endforeach ?>
 						<li><label></label><input type="submit" value="Gửi lời bình" class="bton-comment"/></li>
+						
 					</ul>
 				</form>
-            </div><!--End bg binh luan-->
-            <div class="bd-bt-boxright"></div>
+			
+                    </div><!--End bg binh luan-->
+                     <div class="bd-bt-boxright"></div>
 		<?php endif;?>
 	<?php endif; ?>
 <!--End loi binh-->

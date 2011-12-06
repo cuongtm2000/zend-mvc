@@ -2,7 +2,7 @@
 class News_Model_News extends Zend_Db_Table{
 	protected $_name = 'dos_module_news';
     protected $_primary = 'record_id';
-    private $_config = null;
+    protected $_config = null;
     private $_xss = NULL;
 	
     public function init(){
@@ -11,27 +11,39 @@ class News_Model_News extends Zend_Db_Table{
     }
     
     //Front end - Get bản tin mới nhất
-	public function listNewsHotFirst(){
-    	$db = Zend_Registry::get('connectDb');
-    	$select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG))
+	public function listNewsnew(){
+		$db = Zend_Registry::get('connectDb');
+    	$select = $db->select()->from(array('n' => $this->_name), array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG))
+							   ->join(array('c' => $this->_name.'_cat'),'n.dos_module_news_cat_cat_id = c.cat_id', array('cat_title'.LANG))
 							   ->where('enable = 1')
-							   ->where('record_type = 1')
-							   ->order('record_order DESC')
+							   ->order('record_order ASC')
 							   ->order('postdate DESC')
-                               ->limit(1, 0);
-		return $db->fetchRow($select);
+							   ->limitPage(0, 3);
+		$result = $db->query($select)->fetchAll();
+		if(count($result) > 0){
+			return $db->query($select)->fetchAll();
+		}else{
+			$lang = Zend_Registry::get("lang");
+    		return $lang['norecord'];
+		}
     }
     
 	//Front end - Get Bản tin Hot mới nhất
-	public function listNewsHots(){
+	public function listNewsHot(){
 		$db = Zend_Registry::get('connectDb');
     	$select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG))
 							   ->where('enable = 1')
 							   ->where('record_type = 1')
-							   ->order('record_order DESC')
+							   ->order('record_order ASC')
 							   ->order('postdate DESC')
-							   ->limit(7, 1);
-		return $db->query($select)->fetchAll();
+							   ->limitPage(0, 3);
+		$result = $db->query($select)->fetchAll();
+		if(count($result) > 0){
+			return $db->query($select)->fetchAll();
+		}else{
+			$lang = Zend_Registry::get("lang");
+    		return $lang['norecord'];
+		}
     }
     
     //Front end - Get Bản tin bởi cat_id
@@ -47,30 +59,6 @@ class News_Model_News extends Zend_Db_Table{
     	$select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG))
 							   ->where('enable = 1')
 							   ->where('dos_module_news_cat_cat_id =?', $data['id'])
-							   ->order('record_order ASC')
-							   ->order('postdate DESC')
-							   ->limitPage($page, $rowCount);
-		$result = $db->query($select)->fetchAll();
-		if(count($result) > 0){
-			return $db->query($select)->fetchAll();
-		}else{
-			$lang = Zend_Registry::get("lang");
-    		return $lang['norecord'];
-		}
-    }
-    
-    //Front end - Get Bản tin bởi cat_id
-	public function listItemIndex($data = NULL){
-		//Get paging number
-    	$paginator = $data['paginator'];
-    	if ($paginator['itemCountPerPage']>0){
-			$page = $paginator['currentPage'];
-			$rowCount = $paginator['itemCountPerPage'];
-		}
-		
-		$db = Zend_Registry::get('connectDb');
-    	$select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG))
-							   ->where('enable = 1')
 							   ->order('record_order ASC')
 							   ->order('postdate DESC')
 							   ->limitPage($page, $rowCount);
