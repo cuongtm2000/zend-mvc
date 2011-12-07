@@ -9,11 +9,17 @@ a:hover{color:#000;}
 
 #wrapper {width:980px;margin:auto;}
 /*Header*/
-#header{padding:20px 0 30px}
+#header{padding:10px 0 40px}
 #header-left{float:left; margin:10px 0 0 0}
 #header-right{float:right; text-align:right}
 
-.link-right {margin:50px 0 0 0}
+/*Lang */
+.lang{}
+.lang img{ margin:0 15px 0 5px;position:relative; top:2px}
+.lang a{ color:#41A000; font-weight:bold}
+
+
+.link-right {margin:35px 0 0 0}
 .link-right img{margin:0 5px 0 10px; position:relative; top:2px;*margin:0}
 .link-right a{color:#41A000; margin:0 5px}
 .link-right a:hover{text-decoration:underline;}
@@ -24,13 +30,7 @@ a:hover{color:#000;}
 .menu li a{padding:15px 25px; display:block;background:url(../images/nav-line.gif) no-repeat right; color:#fff;font-size:10pt; font-weight:bold}
 .menu li a:hover{color:#444}
 .menu li ul{ display:none}
-/*.menu li:hover > a{color:#EE6B11}
-.menu li:hover ul{ list-style:none;display:block; position:absolute; z-index:20000; top:42px; width:180px; border-bottom:1px solid #E5DBB8; border-left:1px solid #E5DBB8; border-right:1px solid #E5DBB8; *top:41px}
-.menu li ul li{width:100%;}
-.menu li ul li a{font-weight:normal;background:#fff; color:#555; padding:3px 11px; font-size:9pt}
-.menu li ul li a:hover{ background:#FF870F; color:#fff}*/
 .menu .select{color:#444}
-
 
 /** Banner **/
 .container {margin:0 0 5px 0}
@@ -90,7 +90,7 @@ a:hover{color:#000;}
 .tent-new{float:left; width:325px}
 
 .sub-new{float:right; width:230px}
-.sub-new img{margin:0 5px 5px 0 !important}
+.sub-new img{margin:0 5px 5px 0 !important; width: 65px}
 .sub-new li{padding:3px 0;list-style-image:url(../images/ico-new.gif)}
 .sub-new li a{color:#3C9703}
 
@@ -185,21 +185,3 @@ a:hover{color:#000;}
 .menu-fter{text-align:center; margin:0 0 20px 0}
 .menu-fter li{ list-style:none; display:inline}
 .menu-fter li a{ font-size:10pt; font-weight:bold;padding:0 7px; background:url(../images/bkg-pipe2.gif) no-repeat right;color:#fff}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
