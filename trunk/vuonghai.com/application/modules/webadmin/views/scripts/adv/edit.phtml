@@ -48,13 +48,13 @@
 	
 	    <div class="col1"><?php echo $this->lang['adv_start_date'] ?> <span class="error">*</span></div>
 	    <div class="col2">
-	        <input name="start_date" value="<?php echo date("d-m-Y", strtotime($this->item['start_date'])) ?>" maxlength="10" class="txt-very-large" />
+	        <input name="start_date" id="start_date" value="<?php echo date("d-m-Y", strtotime($this->item['start_date'])) ?>" maxlength="10" class="txt-very-large" />
 	    </div>
 	    <div class="clear space"></div>
 	    
 	    <div class="col1"><?php echo $this->lang['adv_end_date'] ?> <span class="error">*</span></div>
 	    <div class="col2">
-	        <input name="end_date" value="<?php echo date("d-m-Y", strtotime($this->item['end_date'])) ?>" maxlength="10" class="txt-very-large" />
+	        <input name="end_date" id="end_date" value="<?php echo date("d-m-Y", strtotime($this->item['end_date'])) ?>" maxlength="10" class="txt-very-large" />
 	    </div>
 	    <div class="clear space"></div>
 	    

@@ -86,8 +86,8 @@
 								}
 								
 								
-								$( '.top li' ).css({
-									  margin:  "10px 0"
+								$( '.top a' ).css({
+									  margin:  "5px 0"
 									, padding: "0px"
 									, clear:   "both"
 								});

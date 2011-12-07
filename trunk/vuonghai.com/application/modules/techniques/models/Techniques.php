@@ -10,6 +10,28 @@ class Techniques_Model_Techniques extends Zend_Db_Table{
         $this->_xss = Zend_Registry::get('xss');
     }
     
+    //Front end - Get bản tin mới nhất
+	public function listItemHotFirst(){
+    	$db = Zend_Registry::get('connectDb');
+    	$select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG))
+							   ->where('enable = 1')
+							   ->order('record_order DESC')
+							   ->order('postdate DESC')
+                               ->limit(1, 0);
+		return $db->fetchRow($select);
+    }
+    
+    //Front end - Get Bản tin mới nhất
+	public function listItemHots(){
+		$db = Zend_Registry::get('connectDb');
+    	$select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG,'preview'.LANG))
+							   ->where('enable = 1')
+							   ->order('record_order DESC')
+							   ->order('postdate DESC')
+							   ->limit(3, 1);
+		return $db->query($select)->fetchAll();
+    }
+    
 	//Front end - Get bản tin mới nhất
 	public function listItemnew($data = NULL){
 		//Get paging number

@@ -49,6 +49,10 @@ class Webadmin_AdvController extends GLT_Controller_Backend{
     }
     public function addAction(){
     	$this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE_ADMIN.'/js/checklist.js');
+    	$this->view->headLink()->appendStylesheet($this->_request->getBaseUrl().TEMPLATE_ADMIN.'/css/jquery-ui-1.8.14.custom.css');
+        $this->view->headScript()->appendFile($this->_request->getBaseUrl() .TEMPLATE_ADMIN. '/js/jquery-ui-1.8.14.custom.min.js');
+        $this->view->headScript()->appendFile($this->_request->getBaseUrl() .TEMPLATE_ADMIN. '/js/jquery.ui.datepicker-vi.js');
+        $this->view->headScript()->appendFile($this->_request->getBaseUrl() .TEMPLATE_ADMIN. '/js/jquery.datepicker.config.js');	
     	
     	$record = new Adv_Model_Adv();
 	    if ($this->_request->isPost()) {
@@ -64,6 +68,10 @@ class Webadmin_AdvController extends GLT_Controller_Backend{
     }
     public function editAction(){
     	$this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE_ADMIN.'/js/checklist.js');
+    	$this->view->headLink()->appendStylesheet($this->_request->getBaseUrl().TEMPLATE_ADMIN.'/css/jquery-ui-1.8.14.custom.css');
+        $this->view->headScript()->appendFile($this->_request->getBaseUrl() .TEMPLATE_ADMIN. '/js/jquery-ui-1.8.14.custom.min.js');
+        $this->view->headScript()->appendFile($this->_request->getBaseUrl() .TEMPLATE_ADMIN. '/js/jquery.ui.datepicker-vi.js');
+        $this->view->headScript()->appendFile($this->_request->getBaseUrl() .TEMPLATE_ADMIN. '/js/jquery.datepicker.config.js');
     	
     	$record = new Adv_Model_Adv();
 		$this->view->item = $record->editItem($this->_data);
