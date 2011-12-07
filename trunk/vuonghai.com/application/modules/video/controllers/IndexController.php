@@ -31,7 +31,7 @@ class Video_IndexController extends GLT_Controller_Action {
     }
 	public function indexAction() {
 		$this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE.'/js/jquery.prettyPhoto.js');
-		$this->view->headLink()->appendStylesheet($this->_request->getBaseUrl().TEMPLATE.'/css/prettyPhoto.css');
+		$this->view->headLink()->appendStylesheet($this->_request->getBaseUrl().TEMPLATE.'/css/prettyphoto.css');
 		
 		$item = new Video_Model_Video();
 		$this->view->list_items_new = $item->listItemsNew($this->_data);
