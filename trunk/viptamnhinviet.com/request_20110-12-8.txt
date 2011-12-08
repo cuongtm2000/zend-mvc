@@ -1,0 +1,6 @@
+1. Adv-left trên hỗ trợ truc tuyến Action.php
+2. Them file promotion cho Module product, chỉ thêm, sửa trong webadmin và show ra default
+
+
+Kiem tra neu da kich hoat roi thi ko kich hoat lan nua... Sau khi kich hoat redirect về chính trang đó, sửa dự liệu cho "dongvu"
+Bo sung log nhan hoa hong truc tiep do gioi thieu ai?
