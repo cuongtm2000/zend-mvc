@@ -189,8 +189,8 @@ class Webadmin_TechniquesController extends GLT_Controller_Backend{
     	$cmt=new Techniques_Model_Comments();
 		$stu=new Techniques_Model_Techniques();
 
-		$this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE.'/js/jquery.prettyPhoto.js');
-		$this->view->headLink()->appendStylesheet($this->_request->getBaseUrl().TEMPLATE.'/css/prettyPhoto.css');
+		$this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE.'/js/jquery.prettyphoto.js');
+		$this->view->headLink()->appendStylesheet($this->_request->getBaseUrl().TEMPLATE.'/css/prettyphoto.css');
 	
 		if(isset($this->_data['id'])){			
 			if ($this->_request->isPost()) {
