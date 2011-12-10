@@ -30,6 +30,7 @@ class GLT_Controller_Action extends Zend_Controller_Action{
 		//Get Adv
 		$adv = new Adv_Model_Adv();
 		$this->view->adv = $adv->getListAdvLeft();
+	
 		
 		//Get contact_home
 		$contact = new Contact_Model_Contact();

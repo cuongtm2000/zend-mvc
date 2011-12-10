@@ -288,9 +288,24 @@ class User_Model_User extends Zend_Db_Table{
 			echo '<pre>'; print_r($e); echo '</pre>'; 
 		}
     }
-    
+    public function isActived($username) {
+    	$db = Zend_Registry::get('connectDb');
+		try{
+			$select = $this->select()
+							->from($this->_name, array('count(username)'))
+							->where('actived= 1')
+							->where('username= ?',$username);
+            if ($db->fetchOne($select) > 0) {
+            	return true;
+            }
+            return false;
+		}catch(Exception $e){
+			echo '<pre>'; print_r($e); echo '</pre>'; 
+		}
+    }
     
 	public function activedItem($data = NULL){	
+		
 		try{
 		$flag = isset($data['factive']) ? $data['factive'] : 'disable';
 		$ids  = isset($data['ids']) ? $data['ids'] : '';
@@ -305,12 +320,14 @@ class User_Model_User extends Zend_Db_Table{
 			
 			$where = 'username = -1';
 			foreach ($record_id as $value){
+				if($this->isActived($value))
+					continue;
 				$where .= ' OR username= \''.$value.'\'';
 				$nguoiGT=$this->getNguoiGT($value);
 				$tk=$this->getTK($nguoiGT);
 				$this->addTK($nguoiGT, $tk+400);///
 				$log= new User_Model_Log();
-				$log->addItem("Hoa hồng trực tiếp", '  -  ',$nguoiGT, 400);
+				$log->addItem("Hoa hồng trực tiếp do giới thiệu <b>".$value.'</b>', '  -  ',$nguoiGT, 400);
 				
 				$this->addQuanly($nguoiGT);
 				//add quan ly tv cấp trên
@@ -326,6 +343,7 @@ class User_Model_User extends Zend_Db_Table{
 			}else{				//delete
 				$this->delete($where);
 			}
+			
 		}
 	}catch(Exception $e){
 			echo '<pre>'; print_r($e); echo '</pre>'; 

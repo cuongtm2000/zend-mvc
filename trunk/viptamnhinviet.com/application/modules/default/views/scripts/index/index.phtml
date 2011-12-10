@@ -28,6 +28,26 @@
 	<div class="bd-bt-pr"></div>
 </div><!--End quang cao-->
 
+<?php if($this->menu_promotion): ?>
+<h1 class="title-right"><span>Sản phẩm khuyến mãi</span></h1>
+<div class="bg-pr">
+	<div class="bd-top-pr"></div>
+		<div class="bg-product">
+			<?php foreach($this->menu_promotion as $value): ?>
+				<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/product/'.$value['pic_thumb'] : TEMPLATE.'/images/no-product.jpg';?>			
+				<div class="product">
+					<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG]?>"><img src="<?php echo $this->baseUrl().$picthumb ?>" alt="<?php echo $value['title'.LANG]?>" title="<?php echo $value['title'.LANG]?>" /></a>
+					<h2><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></h2>
+					<p><?php echo number_format($value['unit'], 0 , ',' , '.' )?> VNĐ</p>
+				</div>
+			<?php endforeach; ?>
+			<div class="clear"></div>
+		</div>
+	<div class="bd-bt-pr"></div>
+</div><!--End bg pr-->
+<?php endif; ?>
+
+
 <?php if($this->product_hot): ?>
 <h1 class="title-right"><span><?php echo $this->lang['product_hot']?></span></h1>
 <div class="bg-pr">

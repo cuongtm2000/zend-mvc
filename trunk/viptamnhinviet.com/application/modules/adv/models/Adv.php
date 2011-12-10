@@ -31,7 +31,7 @@ class Adv_Model_Adv extends Zend_Db_Table{
     public function getListAdvLeft(){	
          $select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'title'.LANG, 'url', 'description', 'position', 'type'))
          						  ->where('position =?', 'left')
-                                  ->where('enable = ?',1)
+                                  ->where('enable = 1')
                                   ->where('start_date <= NOW()')
                                   ->where('end_date >= NOW()')
                                   ->order('record_order ASC');

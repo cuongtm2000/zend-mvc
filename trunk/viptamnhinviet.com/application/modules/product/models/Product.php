@@ -12,6 +12,20 @@ class Product_Model_Product extends Zend_Db_Table{
     	$this->_web = Zend_Registry::get("web");
         $this->_xss = Zend_Registry::get('xss');
     }
+    public function listPromotionItem(){
+		$db = Zend_Registry::get('connectDb');
+    	$select = $db->select()->from($this->_name, array('record_id', 'postdate', 'pic_thumb', 'title'.LANG, 'unit'))
+    						   ->where('promotion=1')
+    						   ->where('enable=1')
+							   ->order('record_order DESC')
+							   ->order('postdate DESC')
+							   ->limit(12, 0);
+		return $db->query($select)->fetchAll();
+    }
+    
+    
+    
+    
 	//Front end - Danh sách bản tin Hot=1
     public function listHotItem(){
 		$db = Zend_Registry::get('connectDb');
@@ -180,13 +194,40 @@ class Product_Model_Product extends Zend_Db_Table{
 			}
     	}
     	
+    	if (!isset($data['promotion'])) {
+    		$data['promotion']=0;
+    	}
+    	
     	//Get max record
 		$db = $this->getAdapter();
 		$select = $db->select()->from($this->_name, array('max(record_order) as max'));
 		$max_record = $db->fetchOne($select)+1;
 		
-    	$bind = array('pic_thumb' => $file_thumb, 'pic_full' => $file_full, 'pic_desc' => implode("|", $file_desc_multi), 'title' => htmlspecialchars($this->_xss->purify($data['title'])), 'titleen' => htmlspecialchars($this->_xss->purify($data['titleen'])), 'titlefr' => htmlspecialchars($this->_xss->purify($data['titlefr'])), 'detail' => htmlspecialchars($this->_xss->purify($data['detail'])), 'detailen' => htmlspecialchars($this->_xss->purify($data['detailen'])), 'detailfr' => htmlspecialchars($this->_xss->purify($data['detailfr'])), 'record_order' => $max_record, 'extra_field1' => htmlspecialchars($this->_xss->purify($data['extra1'])), 'extra_field2' => htmlspecialchars($this->_xss->purify($data['extra2'])), 'extra_field3' => htmlspecialchars($this->_xss->purify($data['extra3'])), 'extra_field4' => htmlspecialchars($this->_xss->purify($data['extra4'])), 'unit' => htmlspecialchars($this->_xss->purify($data['unit'])), 'hot' => htmlspecialchars($this->_xss->purify($data['hot'])), 'enable' => htmlspecialchars($this->_xss->purify($data['active'])), 'dos_module_product_cat_cat_id' => htmlspecialchars($this->_xss->purify($data['parentcat'])));
-    	$this->insert($bind);
+    	$bind = array('pic_thumb' => $file_thumb, 
+    					'pic_full' => $file_full, 
+    					'pic_desc' => implode("|", $file_desc_multi), 
+    					'title' => htmlspecialchars($this->_xss->purify($data['title'])), 
+    					'titleen' => htmlspecialchars($this->_xss->purify($data['titleen'])), 
+    					'titlefr' => htmlspecialchars($this->_xss->purify($data['titlefr'])), 
+    					'detail' => htmlspecialchars($this->_xss->purify($data['detail'])), 
+    					'detailen' => htmlspecialchars($this->_xss->purify($data['detailen'])), 
+    					'detailfr' => htmlspecialchars($this->_xss->purify($data['detailfr'])), 
+    					'record_order' => $max_record, 
+    					'extra_field1' => htmlspecialchars($this->_xss->purify($data['extra1'])), 
+    					'extra_field2' => htmlspecialchars($this->_xss->purify($data['extra2'])), 
+    					'extra_field3' => htmlspecialchars($this->_xss->purify($data['extra3'])), 
+    					'extra_field4' => htmlspecialchars($this->_xss->purify($data['extra4'])), 
+    					'unit' => htmlspecialchars($this->_xss->purify($data['unit'])), 
+    					'hot' => htmlspecialchars($this->_xss->purify($data['hot'])), 
+    					'promotion' => htmlspecialchars($this->_xss->purify($data['promotion'])), 
+    					'enable' => htmlspecialchars($this->_xss->purify($data['active'])), 
+    					'dos_module_product_cat_cat_id' => htmlspecialchars($this->_xss->purify($data['parentcat'])));
+    	try {
+    		$this->insert($bind);
+    	} catch (Exception $e) {
+    		echo '<pre>'; print_r($e); echo '</pre>'; 
+    	}
+    	
     }
 	public function editItem($data = NULL){
     	$where = 'record_id = '.$data['id'];
@@ -313,6 +354,10 @@ class Product_Model_Product extends Zend_Db_Table{
 		$select = $db->select()->from($this->_name, array('max(record_order) as max'));
 		$max_record = $db->fetchOne($select)+1;
 		
+		if (!isset($data['promotion'])) {
+    		$data['promotion']=0;
+    	}
+		
     	$bind = array(	'pic_thumb' => $file_thumb, 
 						'pic_full' => $file_full, 
 						'pic_desc' => implode("|", $file_desc_multi), 
@@ -328,7 +373,8 @@ class Product_Model_Product extends Zend_Db_Table{
 						'extra_field3' => htmlspecialchars($this->_xss->purify($data['extra3'])), 
 						'extra_field4' => htmlspecialchars($this->_xss->purify($data['extra4'])), 
 						'unit' => htmlspecialchars($this->_xss->purify($data['unit'])), 
-						'hot' => htmlspecialchars($this->_xss->purify($data['hot'])), 
+						'hot' => htmlspecialchars($this->_xss->purify($data['hot'])),
+    					'promotion' => htmlspecialchars($this->_xss->purify($data['promotion'])),  
 						'enable' => 0,
 						'dos_sys_users_username' => $_username,
 						'dos_module_product_cat_cat_id' => htmlspecialchars($this->_xss->purify($data['parentcat'])));
