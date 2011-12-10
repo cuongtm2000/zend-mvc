@@ -1,0 +1,17 @@
+ <form action="" id="dangky" method="post">
+	<fieldset>
+		<legend>Quên mật khẩu</legend>
+		<p>Hãy nhập email của bạn vào khung bên dưới.</p>
+		<?php if($this->error ):?>
+			<ul style="color:#ff0000; border: 0.2em dotted #ff0000;">
+				<?php foreach($this->error as $er):?>
+					<li><?php echo $er?></li>
+				<?php endforeach ?>
+			</ul>
+		<?php endif;?>
+		<ul>
+			<li><label></label><input name="email" value="<?php echo $this->item['email'] ?>" /></li>
+			<li class="bg-singin"><label></label><input class="singin" type="submit" value="Gửi mail" /></li>
+		</ul>			 
+	</fieldset>
+</form>

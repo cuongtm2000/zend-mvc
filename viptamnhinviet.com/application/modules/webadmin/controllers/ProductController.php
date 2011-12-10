@@ -161,7 +161,7 @@ class Webadmin_ProductController extends GLT_Controller_Backend{
 				$this->view->items = $validate->getData();
     		}else{
     			$record = new Product_Model_Product();
-    			$record->addItem($this->_data);
+    			$record->addItem2($this->_data);
     			$this->_redirect($this->_module.'/'.$this->_controller.'/index');
     		}
     	}
