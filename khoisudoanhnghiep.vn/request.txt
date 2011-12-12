@@ -1,0 +1,1 @@
+Đây là project cho khách hàng mới, các module ở dây đều là dạng TIN TỨC. Ninh tranh thủ tạo SVN và code cho nó nha.

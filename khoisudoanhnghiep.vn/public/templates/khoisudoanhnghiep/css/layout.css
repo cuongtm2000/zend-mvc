@@ -1,0 +1,231 @@
+body {background:#fff url(../images/bg-body.gif) repeat-x;font-family:Tahoma, Geneva, sans-serif;font-size:9pt;}
+.left{float: left;}
+.right{float:right}
+.clear{clear: both;}
+a{text-decoration:none; color:#720E3B}
+
+/*layout*/
+*{margin:0; padding:0}
+
+#wrapper {margin:auto; width:970px;}
+
+/*Header*/
+#header{ padding:10px 0 5px 0; *padding:9px 0 0 0}
+.logo{float:left}
+
+/*Header Right */
+#header-right{float:right; text-align:right}
+.menu-hd-right{list-style:none}
+.menu-hd-right li{ display:inline}
+.menu-hd-right li a{padding:0 0 0 20px;color:#AA8D77;}
+.menu-hd-right li a:hover{color:#000}
+
+/***** Form Login
+.frm-login{list-style:none}
+.frm-login li{padding:3px 0 }
+.frm-login input{padding:4px; width:130px; border:1px solid #0083FF;-webkit-border-radius:3px;-moz-border-radius:3px}
+.frm-login label{float:left; width:100px}
+.frm-login label{color:#0083FF; font-weight:bold; margin:0 10px 0 0}
+.frm-login span{color:#0083FF;margin:0 5px 0 0}
+.frm-login a{color:#0083FF; font-weight:bold; margin:0 5px}
+.frm-login a:hover{color:#FB7D00}
+.frm-login .btn-login{width:70px; background:none; border:none;color:#0083FF; font-weight:bold; cursor:pointer;*position:relative;*top:5px}
+*****   END FORM LOGIN   *****/
+
+/**  Menu **/
+.bg-nav-hover{background:url(../images/nav-link.gif) no-repeat bottom; height:30px}
+.bg-nav-hover a{color:#3C22EE;font-weight:bold;margin:0 0 0 45px; display:block; padding:5px 0 0 0}
+#nav .home{background:none}
+#nav .home a{padding:5px 5px}
+#nav .home a:hover{background:none; padding:0 5px; margin:5px 0 0 0}
+
+#nav { list-style:none;width: 970px;position: relative;height: 36px;background:url(../images/nav-bg.gif) repeat-x;}
+ul#nav li  {float: left;height:36px; background:url(../images/nav-line.gif) no-repeat right}
+ul#nav li a {padding:11px 10px;display: block;color:#fff;}
+ul#nav li:hover >a{background:#FBF8F8;color:#406B96; margin:5px 0 0 0;padding:6px 10px 11px 10px;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;}
+ul#nav a:hover{background:#FBF8F8;color:#406B96;margin:5px 0 0 0;padding:6px 10px 11px 10px;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;}
+
+ul#nav li ul {list-style:none; padding:10px 0 0 0;float: left;position: absolute;left:40px; top: 35px;display: none;width:970px;height:20px}
+ul#nav li:hover ul {display: block;}
+ul#nav li ul a {display: inline; color:#3C22EE; font-weight:bold}
+ul#nav li ul a:hover {background:none; color:#009100}
+ul#nav li ul li{background: none}
+
+ul#nav .select{background:#FBF8F8;color:#406B96;margin:5px 0 0 0;padding:6px 10px 11px 10px;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;}
+ul#nav .select:hover{background:#FBF8F8;color:#406B96;margin:5px 0 0 0;padding:6px 10px 11px 10px;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;}
+
+/* Content*/
+#content{ margin:10px 0 0 0}
+
+/*Left content*/
+#leftcontent{float:left;width:543px}
+#leftcontent p{ margin:10px 0; line-height:1.6em}
+#leftcontent ul li{margin:0 0 0 15px}
+.title-box{color:#e02525; font-weight:bold; font-size:11pt}
+.title-box a{color:#e02525}
+
+.title-left{font-weight:600;font-size:11pt;color:#3C22EE;background:url(../images/bg-title-index.gif) no-repeat; padding:7px 0}
+.title-left span{padding:0 0 0 10px}
+
+.frame-tent-left{padding:10px;background:#fff; border-left:1px solid #D0D0D0; border-right:1px solid #D0D0D0}
+.bd-bt-tenf-left{background:url(../images/bd-bt-left.gif) no-repeat; height:10px; width:543px; margin:0 0 5px 0}
+
+.frame-tent-left img{margin:0 0 10px 0}
+.frame-focus{width:220px;float:right;border:1px solid #E5E5E5; margin:0 0 0 5px}
+.title-focus{padding:5px 0;font-size:10pt;color:#3C22EE; background:#EAEAEA;font-size:11pt; font-weight:bold}
+.title-focus span{padding:0 0 0 10px}
+
+/**  sub fucus tent**/
+.fucus-tent{padding:10px 0 0 0;list-style:none}
+.fucus-tent li{padding:3px 0; margin:0 !important}
+.fucus-tent p{background:#E5E5E5; margin:0 !important}
+.fucus-tent li a{color:#000;display:block;background:url(../images/ico-new.gif) no-repeat 4px 4px; padding:0 0 0 20px}
+.fucus-tent li a:hover{color:#00F}
+
+/**  Tin lien quan  **/
+.related-news{list-style:none}
+.related-news li{list-style-image:url(../images/bull.gif); padding:3px 0}
+.related-news li a{color:#114467;font-weight:bold}
+.related-news li a:hover{color:#0000FD}
+
+/*Frame Content new*/
+.tent-new{padding:5px 0;color:#666666;background:#fff; border-left:1px solid #D0D0D0; border-right:1px solid #D0D0D0}
+.tent-new p{margin:0 0 5px !important; line-height:1.6em}
+.tent-new a:hover{color:#f90}
+.tent-new img{margin:0 10px 2px 0}
+
+.title-new{background:url(../images/bg-title-index.gif) no-repeat; padding:7px 0;color:#a80000}
+.title-new span{padding:7px 10px 7px 10px; background:url(../images/bg-select-title.gif) no-repeat;border-right:1px solid #D0D0D0; -webkit-border-radius:0 10px 0 0}
+.title-new a{color:#A80000; font-weight:bold}
+
+/**  Sub tent hot   **/
+.sub-top-tent{list-style:none;background:#EBEBEB;padding:10px 0; margin:0 0 5px 0}
+.sub-top-tent li{display:inline; margin:0 !important;border-right:1px solid #2F15F1}
+.sub-top-tent li a{ padding:5px 5px;color:#2F15F1}
+
+
+/** frame box left tent new **/
+.title-box-left{font-size:10pt; font-weight:bold;margin:5px 0 10px 0}
+.title-box-left a{color:#2206f3}
+.tent-new-left{float:left;width:290px;text-align:justify; margin:0 0 0 10px}
+
+/**  Sub tent new hot **/
+.sub-tent-new{float:right; width:220px; margin:0 5px 0 0}
+.sub-tent-new li{ margin:0 0 0 15px; padding:2px 0; list-style:disc; color:#406B96}
+.sub-tent-new a{color:#2F15F1}
+
+
+/*Right content*/
+#rightcontent{float:right;width:423px}
+.title-right{font-weight:bold;font-size:11pt;color:#3C22EE;background:url(../images/bg-title-right.gif) no-repeat; padding:7px 0}
+.title-right span{padding:0 0 0 15px}
+
+.bd-bt-scroll{background:url(../images/bd-bt-scroll.gif) no-repeat; height:4px; width:423px;margin:0 0 10px 0}
+
+/*** Form search ***/
+.frm-search{background:url(../images/bg-frm-search.gif) no-repeat; margin:0 0 5px 0;height:39px;padding:5px 0 0 7px}
+.title-search{float:left;background:#0995F1;color:#fff;padding:8px 15px; font-weight:bold;-webkit-border-radius:4px;-moz-border-radius:4px;margin:0 10px 0 0}
+.input{border:1px solid #0995F1;padding:7px 5px;width:280px;-webkit-border-radius:4px;-moz-border-radius:4px; float:left}
+.bt-go{float:right;border:none; background:url(../images/btn-go.gif) no-repeat center;height:32px;width:31px;cursor:pointer; position:relative; right:10px}
+
+/*Page Tin tuc*/
+.masuring{text-align:justify;font-size:10pt;color:#666;margin-bottom:20px; }
+.masuring img{margin:0 10px 5px 2px}
+.masuring p{line-height:1.4em; margin:5px 0 !important}
+.title-masuring {color:#00F;font-size:10pt; font-weight:700;}
+.title-masuring a{color:#00F;font-size:10pt; font-weight:700;}
+.masuring a:hover{color:#F90}
+
+/*  Cac tin khac*/
+.title-others{margin:20px 0 0 0;color:#00F;font-size:11pt; font-weight:700; border-bottom:1px dashed #ccc; padding:0 0 5px 0}
+.sub-others{padding:10px 0 0 0;list-style:none}
+.sub-others li{padding:4px 0; margin:0 !important}
+.sub-others p{background:#F6F6F6; margin:0 !important}
+.sub-others li a{color:#000;display:block;background:url(../images/dot-blue.jpg) no-repeat 4px 8px; padding:5px 0 5px 20px}
+.sub-others li a:hover{color:#00F}
+
+/** Row 2 Thong tin can biet va support**/
+.row2{}
+.info-know{float:left; width:213px}
+.title-info{background:url(../images/bg-title-info.gif) no-repeat; padding:8px 10px;font-weight:bold}
+.bd-bt-info{background:url(../images/bd-bt-info.gif) no-repeat;height:6px;width:213px}
+.sub-info{list-style:none;padding:10px 2px 0 2px;background:url(../images/mid-info.gif) repeat-y}
+.sub-info li{padding:5px 0;border-bottom:1px solid #ccc}
+.sub-info li img{margin:0 10px}
+.sub-info li a{display:block}
+.info-1 a{color:#83E193}
+.info-2 a{color:#7C8C71}
+.info-3 a{color:#E4BA68}
+.info-1 a:hover, .info-2 a:hover, .info-3 a:hover{color:#00F}
+
+.video{margin:0 0 10px 0}
+
+/*Ho tro truc tuyen*/
+.bg-support{float:right;width:200px;background:url(../images/bg-support.jpg) no-repeat; padding:25px 0 35px 0}
+.bg-support h1{text-align:center;font-size:11pt;color:#fff;font-weight:bold}
+.support{list-style:none;padding:10px 0 0;text-align:center;color:#fff; font-weight:bold}
+.support li{padding:7px 0}
+.support img{position:relative;left:-20px}
+
+/***  Quang cao  **/
+.bg-sub-ad{padding:5px 0;border-left:1px solid #D1D1D1;border-right:1px solid #D1D1D1}
+.sub-ad-1{float:left;width:180px;text-align:center;list-style:none;margin:0 0 0 25px;*_margin:0 0 0 10px}
+.sub-ad-2{float:right;width:180px;text-align:center;list-style:none;margin:0 25px 0 0;*_margin:0 10px 0 0}
+.sub-ad-1 li, .sub-ad-2 li{margin:0 0 2px 0}
+
+/** Rao vat 
+.info-ad{padding:10px 0 10px 20px; background:#EBFFFF;list-style:none;border-left:1px solid #D1D1D1;border-right:1px solid #D1D1D1}
+.info-ad li{list-style-image:url(../images/bull.gif); padding:4px 0}
+.info-ad li a{color:#3C22EE;padding:0 0 0 5px}
+.info-ad li a:hover{color:#f00} 
+****   End rao vat  ****/
+
+/*Thong ke truy cap*/
+.statistics{list-style:none; float:right}
+.statistics li {color:#0080FF}
+
+/**  Mua quảng cáo tại đây    **/
+.title-buy-ad{background:url(../images/bg-title-buy-ad.gif) no-repeat;padding:7px 0;color:#AA0000;font-weight:bold}
+.title-buy-ad span{padding:0 0 0 15px}
+.mid-buy-ad{background:url(../images/mid-buy-ad.gif) repeat-y; padding:5px 0 5px 5px}
+.title-sub-buy{color:#006cd4; margin:0 0 5px 0}
+.title-sub-buy a{color:#006cd4}
+.link-buy a{color:#00c818}
+.link-buy{margin:0 0 5px 0}
+.mid-buy-ad a:hover{color:#f90}
+.sub-buy-ad{list-style:none;padding:10px 1px}
+.sub-buy-ad img{margin:0 5px 5px 0}
+.sub-buy-ad li{width:225px;border-right:1px solid #ccc; float:left; padding:0 10px 0 0; margin:0 5px 0 0}
+.bd-bt-buy-ad{background:url(../images/bd-bt-buy-ad.gif) no-repeat;height:10px;width:968px;margin:0 0 10px 0}
+
+/**   Tin tuc hot **/
+.frame-new-fter{border:1px solid #ccc;padding:10px 0; width:970px}
+.sub-new-fter{list-style:none;padding:0 0 0 15px}
+.sub-new-fter li{width:125px; float:left; margin:0 10px 10px 0}
+.sub-new-fter img{width:125px}
+.sub-new-fter li a{color:#006595}
+.sub-new-fter li a:hover{color:#840}
+
+/*Footer*/
+#bg-fter{background:#E8E8E8;margin:20px 0 0 0;min-width:970px}
+#footer{width:970px; margin:auto; padding:10px 0}
+#footer a:hover{color:#06C}
+.fter-left{float:left;font-weight:bold;line-height:1.6em}
+.copyright {text-align:center;}
+.copyright a{color:#000}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
