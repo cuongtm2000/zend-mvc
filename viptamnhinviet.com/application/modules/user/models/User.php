@@ -371,6 +371,9 @@ class User_Model_User extends Zend_Db_Table{
 		else {
 			$listUserQuanly=explode('|',$listUserQuanly);			
 		}
+		//--------------------------------------
+		$size_old=sizeof( $listUserQuanly);
+		//-------------------------------------------
 		$child_L= array_diff($child_L, $listUserQuanly);//bỏ đi các user đã tính tiền
 		$child_R= array_diff($child_R, $listUserQuanly);
 		
