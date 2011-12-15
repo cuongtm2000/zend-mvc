@@ -55,8 +55,7 @@ class Webadmin_UserController extends GLT_Controller_Backend {
     	
     	if($this->_request->isPost()){
         	$user->activedItem($this->_data);
-        //	$this->_redirect('http://'.$_SERVER["SERVER_NAME"].$this->_request->getRequestUri());
-	
+        	$this->_redirect('http://'.$_SERVER["SERVER_NAME"].$this->_request->getRequestUri());
         }
     	
     	   		//paging

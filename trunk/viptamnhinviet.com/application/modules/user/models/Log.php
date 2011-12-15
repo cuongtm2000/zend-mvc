@@ -16,16 +16,25 @@ class User_Model_Log extends Zend_Db_Table{
     	}
         
     }
-	public function addItem($detail,$user,$user_r,$value){
+	public function addItem($detail,$user,$user_r,$value,$type){
 	   	try {
 	   		$data = array(	'detail' => $detail, 
 	   						'username' => $user, 
 	   						'user_receive' => $user_r, 
-	   						'value' => $value	 		);
+	   						'value' => $value,
+	   						'record_type'=>$type);
     		$this->insert($data);
 	   	} catch (Exception $e) {
 	   		echo '<pre>';print_r($e);echo '</pre>';
 	   	}	
+    }
+    public function getSolanQuanlyThang($user) {
+    	$db = Zend_Registry::get('connectDb');
+    	$select = $db->select()->from($this->_name, array('COUNT(record_id)'))
+					->where('user_receive =?',$this->_username)
+					->where('record_type =1')
+					->where('month(time) =?',date('n'));		   
+		return $db->fetchOne($select);
     }
 
 	public function listAll($data= NULL){
