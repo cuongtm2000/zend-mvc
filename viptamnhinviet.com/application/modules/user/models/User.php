@@ -81,7 +81,7 @@ class User_Model_User extends Zend_Db_Table{
 		$this->addTK($data['reciever'], $tk + $money);///
 		
 		$log =new User_Model_Log();
-		$log->addItem('Chuyển khoản nội bộ', $this->_username, $data['reciever'], $money);
+		$log->addItem('Chuyển khoản nội bộ', $this->_username, $data['reciever'], $money,2);
     }
 	
 	public function getChild($user)	{
@@ -167,6 +167,7 @@ class User_Model_User extends Zend_Db_Table{
 		}        
     }
 	public function getTK($user){
+		
 		try{
 			$db = Zend_Registry::get('connectDb');
 			$select = $this->select()
@@ -327,7 +328,7 @@ class User_Model_User extends Zend_Db_Table{
 				$tk=$this->getTK($nguoiGT);
 				$this->addTK($nguoiGT, $tk+400);///
 				$log= new User_Model_Log();
-				$log->addItem("Hoa hồng trực tiếp do giới thiệu <b>".$value.'</b>', '  -  ',$nguoiGT, 400);
+				$log->addItem("Hoa hồng trực tiếp do giới thiệu <b>".$value.'</b>', '  -  ',$nguoiGT, 400,0);
 				
 				$this->addQuanly($nguoiGT);
 				//add quan ly tv cấp trên
@@ -371,9 +372,7 @@ class User_Model_User extends Zend_Db_Table{
 		else {
 			$listUserQuanly=explode('|',$listUserQuanly);			
 		}
-		//--------------------------------------
-		$size_old=sizeof( $listUserQuanly);
-		//-------------------------------------------
+
 		$child_L= array_diff($child_L, $listUserQuanly);//bỏ đi các user đã tính tiền
 		$child_R= array_diff($child_R, $listUserQuanly);
 		
@@ -386,22 +385,29 @@ class User_Model_User extends Zend_Db_Table{
 			$listUserQuanly=array_merge($listUserQuanly,$right[0]);
 			
 			$this->setUser_Quanly($user, implode('|',$listUserQuanly));
+			$k=count($listUserQuanly)/($_No_User*2);
 			
-			$k=0;
-			switch (count($listUserQuanly)/($_No_User*2)) {
-				case 3:		$value= 5000; $k=3;		break;
-				case 6:		$value= 10000;$k=6;		break;
-				case 12:	$value= 15000;$k=12;	break;	
-				case 24:	$value= 30000;$k=24;	break;
-				case 48:	$value= 50000;$k=48;	break;
-				case 80:	$value= 100000;$k=80;	break;
-				default:	$value=0;				break;
+			$log= new User_Model_Log();
+			$solanquanlythang= $log->getSolanQuanlyThang($user);
+			if ($solanquanlythang   < 4) {
+				$tk=$this->getTK($user);
+				$this->addTK($user, $tk+10000);///				
+				$log->addItem("Đạt quản lý cấp ".$k, '  -  ',$user, 10000,1);
+			}
+			
+			switch ($k) {
+				case 3:		$value= 5000; 	break;
+				case 6:		$value= 10000;	break;
+				case 12:	$value= 15000;	break;	
+				case 24:	$value= 30000;	break;
+				case 48:	$value= 50000;	break;
+				case 80:	$value= 100000;	break;
+				default:	$value=0;		break;
 			}
 			if($value >0){
 				$tk=$this->getTK($user);
 				$this->addTK($user, $tk+$value);///		
-				$log= new User_Model_Log();
-				$log->addItem("Hoa hồng hoa hồng quản lý lần ".$k, '  -  ',$user, $value);
+				$log->addItem("Hoa hồng quản lý lần ".$k, '  -  ',$user, $value,0);
 			}	
 		}	
 	}
