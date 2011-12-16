@@ -1,11 +1,10 @@
 <h1 class="title-right">
 	<?php 
-		echo $this->lang['techniques'];
+		echo '<a href="'.$this->baseUrl().'/techniques" title="'.$this->lang['techniques'].'">'.$this->lang['techniques'].'</a>';
 		if(is_array($this->itemCat))
 			foreach ( $this->itemCat as $value) {
-				echo ' &raquo; '. $value;
-			} 	
-		//echo ' &raquo; '. $this->item['title'.LANG];
+				echo ' &raquo; <a href="'.$this->baseUrl().'/techniques/index/cat/cid/'.$value['cat_id'].'/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$value['cat_title'.LANG].'">'. $value['cat_title'.LANG].'</a>';
+			}
 	?>
 </h1>
 <?php if(is_array($this->items)):?>

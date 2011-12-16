@@ -29,10 +29,10 @@ class Techniques_IndexController extends GLT_Controller_Action {
 		$itemCat=new Techniques_Model_TechniquesCat();
 		$cid=$this->_data['cid'];	
 		while ($cid !=0 ) {
-			$listCatParent[] =	$itemCat->getDetailCatFromCid($cid);
+			$listCatParent[] = $itemCat->getDetailCatFromCid($cid);
 			$pcid=$itemCat->getCatParent_CatOrder($cid);
 			$cid=$pcid['cat_parent_id'];
-		}	
+		}
 		$this->view->itemCat=array_reverse($listCatParent);
 		
 		$item = new Techniques_Model_Techniques();

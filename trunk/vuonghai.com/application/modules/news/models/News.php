@@ -11,6 +11,38 @@ class News_Model_News extends Zend_Db_Table{
     }
     
     //Front end - Get bản tin mới nhất
+	public function listItemnew($data = NULL){
+		//Get paging number
+    	$paginator = $data['paginator'];
+    	if ($paginator['itemCountPerPage']>0){
+			$page = $paginator['currentPage'];
+			$rowCount = $paginator['itemCountPerPage'];
+		}
+		
+		$db = Zend_Registry::get('connectDb');
+    	$select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG))
+							   ->where('enable = 1')
+							   ->order('record_order ASC')
+							   ->order('postdate DESC')
+							   ->limitPage($page, $rowCount);
+		$result = $db->query($select)->fetchAll();
+		if(count($result) > 0){
+			return $db->query($select)->fetchAll();
+		}else{
+			$lang = Zend_Registry::get("lang");
+    		return $lang['norecord'];
+		}
+    }
+    
+    //Front end - Count bản tin mới nhất
+	public function countItemnew(){
+		$db = Zend_Registry::get('connectDb');
+    	$select = $db->select()->from($this->_name, array('COUNT(record_id) AS total'))
+							   ->where('enable = 1');
+		return $db->fetchOne($select);
+    }
+    
+    //Front end - Get bản tin mới nhất
 	public function listNewsHotFirst(){
     	$db = Zend_Registry::get('connectDb');
     	$select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG))
@@ -46,7 +78,7 @@ class News_Model_News extends Zend_Db_Table{
 		$db = Zend_Registry::get('connectDb');
     	$select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG))
 							   ->where('enable = 1')
-							   ->where('dos_module_news_cat_cat_id =?', $data['id'])
+							   ->where('dos_module_news_cat_cat_id =?', $data['cid'])
 							   ->order('record_order ASC')
 							   ->order('postdate DESC')
 							   ->limitPage($page, $rowCount);
@@ -88,7 +120,7 @@ class News_Model_News extends Zend_Db_Table{
 		$db = Zend_Registry::get('connectDb');
     	$select = $db->select()->from($this->_name, array('COUNT(record_id) AS total'))
 							   ->where('enable = 1')
-							   ->where('dos_module_news_cat_cat_id =?', $data['id']);
+							   ->where('dos_module_news_cat_cat_id =?', $data['cid']);
 		$result = $db->fetchOne($select);
 		if(count($result) > 0){
 			return $result;

@@ -21,7 +21,7 @@ class News_Model_NewsCat extends Zend_Db_Table{
     
 	// Front end - Get tất cả Danh mục tin tức
 	public function getListmenu(){
-    	$select = $this->select()->from($this->_name, array('cat_id', 'cat_title'.LANG, 'cat_parent_id'))->where('cat_enable = 1')->order('cat_order ASC');
+    	$select = $this->select()->from($this->_name, array('cat_id', 'cat_title'.LANG, 'cat_parent_id'))->where('cat_enable = 1')->order('cat_order DESC');
     	$result = $this->fetchAll($select);
     	if(count($result)){
     		return $result->toArray();
@@ -33,7 +33,7 @@ class News_Model_NewsCat extends Zend_Db_Table{
     // Front end - Get chi tiết danh mục
     public function getDetailCat($data = NULL){
     	$db = Zend_Registry::get('connectDb');
-    	$select = $db->select()->from($this->_name, array('cat_title'.LANG))->where('cat_id = ?', $data['id']);
+    	$select = $db->select()->from($this->_name, array('cat_title'.LANG))->where('cat_id = ?', $data['cid']);
 		$result = $db->fetchRow($select);
 		return $result;
     }

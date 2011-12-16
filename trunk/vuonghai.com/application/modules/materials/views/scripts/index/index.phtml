@@ -1,4 +1,4 @@
-<h1 class="title-right"><?php echo $this->lang['materials']?></h1>
+<h1 class="title-right"><?php echo '<a href="'.$this->baseUrl().'/materials" title="'.$this->lang['materials'].'">'.$this->lang['materials'].'</a>';?></h1>
 <?php if(is_array($this->items)):?>
 	<?php foreach ($this->items as $value):?>
 		<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/materials/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg'; ?>
