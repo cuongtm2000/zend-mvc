@@ -39,10 +39,10 @@
         		</a>
         	</div><!--End left header-->
             <div id="header-right">
-                <div class="lang">
+                <!-- <div class="lang">
                    <a href="<?php echo $this->baseUrl() ?>/" title="Tiếng Việt">Tiếng Việt <img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/vn.gif" alt="Việt Nam" class="lang-vn"/></a>
                    <a href="<?php echo $this->baseUrl() ?>/en" title="English">English <img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/en.gif" alt="English" /></a>
-                </div>
+                </div> -->
                 <p class="link-right">
             	<?php if(!$this->checklogin()): ?>
 	                 	<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/icon-register.png" alt="Registration" />
@@ -90,45 +90,185 @@
 				<?php if(isset($this->menu_cat_news)):?>
 		       		<h1 class="title-box"><?php echo $this->lang['news'] ?></h1>
 					<ul class="subcate">
-						<?php 
-							if(is_array($this->menu_cat_news))
-							foreach($this->menu_cat_news as $value){
-								echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'news'.'/index/cat/id/'.$value['cat_id'].'/title/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
-							}
-						?>
+                        <?php 
+								$rowsize = count($this->menu_cat_news);
+								$params = Zend_Controller_Front::getInstance()->getRequest()->getParams();
+								$cat_id = isset($params['cid']) ? intval($params['cid']) : 0;
+								
+								//Find parent_id
+								$parent_id	= $cat_id;
+				            	if ( $cat_id ){
+				            		for ($i=0; $i < $rowsize; $i++){
+				            			if ($cat_id == $this->menu_cat_news[$i]['cat_id']){
+				            				if ( $this->menu_cat_news[$i]['cat_parent_id'] ){
+				            					$parent_id = $this->menu_cat_news[$i]['cat_parent_id'];
+				            				}
+				            				break;
+				            			}
+				            		}
+				            	}
+				            	
+				            	//Display cat menu
+				            	for ($i=0; $i < $rowsize; $i++){
+				            		if ( $this->menu_cat_news[$i]['cat_parent_id'] == 0 ){
+				            			//Parent categories
+				            			echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'news/index/cat/cid/'.$this->menu_cat_news[$i]['cat_id'].'/'.$this->noneUnicode($this->menu_cat_news[$i]['cat_title'.LANG]).'" title="'.$this->menu_cat_news[$i]['cat_title'.LANG].'">'.$this->menu_cat_news[$i]['cat_title'.LANG].'</a>';
+					            		//Sub categories
+				            			if ( $parent_id && ($parent_id == $this->menu_cat_news[$i]['cat_id']) ){
+				            				for ($j=0; $j < $rowsize; $j++){
+				            					if ( $this->menu_cat_news[$j]['cat_parent_id'] == $this->menu_cat_news[$i]['cat_id'] ){
+				            						echo '<ul>';
+						            					for ($j=0; $j < $rowsize; $j++){
+						            						if ( $this->menu_cat_news[$j]['cat_parent_id'] == $this->menu_cat_news[$i]['cat_id'] ){
+					                                            echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'news/index/cat/cid/'.$this->menu_cat_news[$j]['cat_id'].'/'.$this->noneUnicode($this->menu_cat_news[$j]['cat_title'.LANG]).'" title="'.$this->menu_cat_news[$j]['cat_title'.LANG].'">'.$this->menu_cat_news[$j]['cat_title'.LANG].'</a></li>';
+					                                        }
+					                                    }
+				                                    echo '</ul>';
+				            					}
+				            				}
+				            			}
+				            			echo '</li>';
+				            		}
+				            	}
+							?>
 					</ul>
 				<?php endif;?>
 				<?php if(isset($this->menu_cat_materials)):?>
 		       		<h1 class="title-box"><?php echo $this->lang['materials'] ?></h1>
 					<ul class="subcate">
-						<?php 
-							if(is_array($this->menu_cat_materials))
-								foreach($this->menu_cat_materials as $value){
-									echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'materials'.'/index/cat/cid/'.$value['cat_id'].'/title/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
-								}
-						?>
+                        <?php 
+								$rowsize = count($this->menu_cat_materials);
+								$params = Zend_Controller_Front::getInstance()->getRequest()->getParams();
+								$cat_id = isset($params['cid']) ? intval($params['cid']) : 0;
+								
+								//Find parent_id
+								$parent_id	= $cat_id;
+				            	if ( $cat_id ){
+				            		for ($i=0; $i < $rowsize; $i++){
+				            			if ($cat_id == $this->menu_cat_materials[$i]['cat_id']){
+				            				if ( $this->menu_cat_materials[$i]['cat_parent_id'] ){
+				            					$parent_id = $this->menu_cat_materials[$i]['cat_parent_id'];
+				            				}
+				            				break;
+				            			}
+				            		}
+				            	}
+				            	
+				            	//Display cat menu
+				            	for ($i=0; $i < $rowsize; $i++){
+				            		if ( $this->menu_cat_materials[$i]['cat_parent_id'] == 0 ){
+				            			//Parent categories
+				            			echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'materials/index/cat/cid/'.$this->menu_cat_materials[$i]['cat_id'].'/'.$this->noneUnicode($this->menu_cat_materials[$i]['cat_title'.LANG]).'" title="'.$this->menu_cat_materials[$i]['cat_title'.LANG].'">'.$this->menu_cat_materials[$i]['cat_title'.LANG].'</a>';
+					            		//Sub categories
+				            			if ( $parent_id && ($parent_id == $this->menu_cat_materials[$i]['cat_id']) ){
+				            				for ($j=0; $j < $rowsize; $j++){
+				            					if ( $this->menu_cat_materials[$j]['cat_parent_id'] == $this->menu_cat_materials[$i]['cat_id'] ){
+				            						echo '<ul>';
+						            					for ($j=0; $j < $rowsize; $j++){
+						            						if ( $this->menu_cat_materials[$j]['cat_parent_id'] == $this->menu_cat_materials[$i]['cat_id'] ){
+					                                            echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'materials/index/cat/cid/'.$this->menu_cat_materials[$j]['cat_id'].'/'.$this->noneUnicode($this->menu_cat_materials[$j]['cat_title'.LANG]).'" title="'.$this->menu_cat_materials[$j]['cat_title'.LANG].'">'.$this->menu_cat_materials[$j]['cat_title'.LANG].'</a></li>';
+					                                        }
+					                                    }
+				                                    echo '</ul>';
+				            					}
+				            				}
+				            			}
+				            			echo '</li>';
+				            		}
+				            	}
+							?>
 					</ul>
 				<?php endif;?>
-								<?php if(isset($this->menu_cat_productions)):?>
+                <?php if(isset($this->menu_cat_productions)):?>
 		       		<h1 class="title-box"><?php echo $this->lang['productions'] ?></h1>
 					<ul class="subcate">
-						<?php 
-							if(is_array($this->menu_cat_productions))
-							foreach($this->menu_cat_productions as $value){
-								echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'productions'.'/index/cat/cid/'.$value['cat_id'].'/title/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
-							}
-						?>
+                        <?php 
+								$rowsize = count($this->menu_cat_productions);
+								$params = Zend_Controller_Front::getInstance()->getRequest()->getParams();
+								$cat_id = isset($params['cid']) ? intval($params['cid']) : 0;
+								
+								//Find parent_id
+								$parent_id	= $cat_id;
+				            	if ( $cat_id ){
+				            		for ($i=0; $i < $rowsize; $i++){
+				            			if ($cat_id == $this->menu_cat_productions[$i]['cat_id']){
+				            				if ( $this->menu_cat_productions[$i]['cat_parent_id'] ){
+				            					$parent_id = $this->menu_cat_productions[$i]['cat_parent_id'];
+				            				}
+				            				break;
+				            			}
+				            		}
+				            	}
+				            	
+				            	//Display cat menu
+				            	for ($i=0; $i < $rowsize; $i++){
+				            		if ( $this->menu_cat_productions[$i]['cat_parent_id'] == 0 ){
+				            			//Parent categories
+				            			echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'productions/index/cat/cid/'.$this->menu_cat_productions[$i]['cat_id'].'/'.$this->noneUnicode($this->menu_cat_productions[$i]['cat_title'.LANG]).'" title="'.$this->menu_cat_productions[$i]['cat_title'.LANG].'">'.$this->menu_cat_productions[$i]['cat_title'.LANG].'</a>';
+					            		//Sub categories
+				            			if ( $parent_id && ($parent_id == $this->menu_cat_productions[$i]['cat_id']) ){
+				            				for ($j=0; $j < $rowsize; $j++){
+				            					if ( $this->menu_cat_productions[$j]['cat_parent_id'] == $this->menu_cat_productions[$i]['cat_id'] ){
+				            						echo '<ul>';
+						            					for ($j=0; $j < $rowsize; $j++){
+						            						if ( $this->menu_cat_productions[$j]['cat_parent_id'] == $this->menu_cat_productions[$i]['cat_id'] ){
+					                                            echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'productions/index/cat/cid/'.$this->menu_cat_productions[$j]['cat_id'].'/'.$this->noneUnicode($this->menu_cat_productions[$j]['cat_title'.LANG]).'" title="'.$this->menu_cat_productions[$j]['cat_title'.LANG].'">'.$this->menu_cat_productions[$j]['cat_title'.LANG].'</a></li>';
+					                                        }
+					                                    }
+				                                    echo '</ul>';
+				            					}
+				            				}
+				            			}
+				            			echo '</li>';
+				            		}
+				            	}
+							?>
 					</ul>
 				<?php endif;?>
 				<?php if(isset($this->menu_cat_techniques)):?>
 		       		<h1 class="title-box"><?php echo $this->lang['techniques'] ?></h1>
 					<ul class="subcate">
-						<?php 
-							if(is_array($this->menu_cat_techniques))
-							foreach($this->menu_cat_techniques as $value){
-								echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'techniques'.'/index/cat/cid/'.$value['cat_id'].'/title/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
-							}
-						?>
+                        <?php 
+								$rowsize = count($this->menu_cat_techniques);
+								$params = Zend_Controller_Front::getInstance()->getRequest()->getParams();
+								$cat_id = isset($params['cid']) ? intval($params['cid']) : 0;
+								
+								//Find parent_id
+								$parent_id	= $cat_id;
+				            	if ( $cat_id ){
+				            		for ($i=0; $i < $rowsize; $i++){
+				            			if ($cat_id == $this->menu_cat_techniques[$i]['cat_id']){
+				            				if ( $this->menu_cat_techniques[$i]['cat_parent_id'] ){
+				            					$parent_id = $this->menu_cat_techniques[$i]['cat_parent_id'];
+				            				}
+				            				break;
+				            			}
+				            		}
+				            	}
+				            	
+				            	//Display cat menu
+				            	for ($i=0; $i < $rowsize; $i++){
+				            		if ( $this->menu_cat_techniques[$i]['cat_parent_id'] == 0 ){
+				            			//Parent categories
+				            			echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'techniques/index/cat/cid/'.$this->menu_cat_techniques[$i]['cat_id'].'/'.$this->noneUnicode($this->menu_cat_techniques[$i]['cat_title'.LANG]).'" title="'.$this->menu_cat_techniques[$i]['cat_title'.LANG].'">'.$this->menu_cat_techniques[$i]['cat_title'.LANG].'</a>';
+					            		//Sub categories
+				            			if ( $parent_id && ($parent_id == $this->menu_cat_techniques[$i]['cat_id']) ){
+				            				for ($j=0; $j < $rowsize; $j++){
+				            					if ( $this->menu_cat_techniques[$j]['cat_parent_id'] == $this->menu_cat_techniques[$i]['cat_id'] ){
+				            						echo '<ul>';
+						            					for ($j=0; $j < $rowsize; $j++){
+						            						if ( $this->menu_cat_techniques[$j]['cat_parent_id'] == $this->menu_cat_techniques[$i]['cat_id'] ){
+					                                            echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'techniques/index/cat/cid/'.$this->menu_cat_techniques[$j]['cat_id'].'/'.$this->noneUnicode($this->menu_cat_techniques[$j]['cat_title'.LANG]).'" title="'.$this->menu_cat_techniques[$j]['cat_title'.LANG].'">'.$this->menu_cat_techniques[$j]['cat_title'.LANG].'</a></li>';
+					                                        }
+					                                    }
+				                                    echo '</ul>';
+				            					}
+				            				}
+				            			}
+				            			echo '</li>';
+				            		}
+				            	}
+							?>
 					</ul>
 				<?php endif;?>
 
