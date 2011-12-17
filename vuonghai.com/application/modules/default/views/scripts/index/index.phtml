@@ -67,3 +67,27 @@
     <?php endif; ?>
 </div>
 <div class="bd-bt-boxright"></div>
+
+<h1 class="title-box-right"><span><?php echo $this->lang['productions'] ?></span></h1>
+<div class="mid-boxright">
+    <?php if($this->productions_hot_first): ?>
+    	<div class="tent-new">
+    		<h2 class="title-h2"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>productions/index/view/id/<?php echo $this->productions_hot_first['record_id'] ?>/<?php echo $this->noneUnicode($this->productions_hot_first['title'.LANG]) ?>" title="<?php echo $this->productions_hot_first['title'.LANG] ?>"><?php echo $this->productions_hot_first['title'.LANG] ?></a></h2>
+    		<?php echo html_entity_decode($this->productions_hot_first['preview'.LANG]) ?>
+    	</div><!--End tent new-->
+    <?php endif; ?>
+	
+    <?php if($this->productions_hots): ?>
+	<ul class="sub-new">
+        <?php foreach($this->productions_hots as $value): ?>
+		  <li<?php echo ($value['pic_thumb']) ? ' style="list-style:none"' : '' ?>>
+            <?php if($value['pic_thumb']):?>
+                <a href="<?php echo $this->baseUrl().'/'.LANGURL ?>productions/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG]) ?>" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/techniques/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" title="<?php echo $value['title'.LANG] ?>" style="float:left;"/></a>
+            <?php endif; ?>
+            <a href="<?php echo $this->baseUrl().'/'.LANGURL ?>productions/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG]) ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a><div class="clear"></div>
+          </li>
+        <?php endforeach ?>
+	</ul> <!--End sub new--> <div class="clear"></div>
+    <?php endif; ?>
+</div>
+<div class="bd-bt-boxright"></div>
