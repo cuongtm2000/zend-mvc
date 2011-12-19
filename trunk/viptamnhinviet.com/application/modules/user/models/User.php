@@ -389,12 +389,13 @@ class User_Model_User extends Zend_Db_Table{
 			
 			$log= new User_Model_Log();
 			$solanquanlythang= $log->getSolanQuanlyThang($user);
+			echo $solanquanlythang;
 			if ($solanquanlythang   < 4) {
+				echo 'aaaaaaaaaaaaa';
 				$tk=$this->getTK($user);
 				$this->addTK($user, $tk+10000);///				
 				$log->addItem("Đạt quản lý cấp ".$k, '  -  ',$user, 10000,1);
-			}
-			
+			}			
 			switch ($k) {
 				case 3:		$value= 5000; 	break;
 				case 6:		$value= 10000;	break;
