@@ -20,7 +20,6 @@ class Webadmin_UserController extends GLT_Controller_Backend {
                 $this->view->$value['varname'] = $load->$value['function_load']();
             }
         }
-
         $this->view->lang = Zend_Registry::get("lang"); //load language
         
         //List menu
@@ -57,8 +56,7 @@ class Webadmin_UserController extends GLT_Controller_Backend {
         	$user->activedItem($this->_data);
         	$this->_redirect('http://'.$_SERVER["SERVER_NAME"].$this->_request->getRequestUri());
         }
-    	
-    	   		//paging
+    	//paging
 		$totalItem = $user->countUnActived();
 		$paginator = new GLT_Paginator();
 		$this->view->paginator = $paginator->createPaginator($totalItem, $this->_paginator);

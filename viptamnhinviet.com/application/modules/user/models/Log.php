@@ -32,7 +32,7 @@ class User_Model_Log extends Zend_Db_Table{
     	$db = Zend_Registry::get('connectDb');
     	$select = $db->select()->from($this->_name, array('COUNT(record_id)'))
 					->where('user_receive =?',$this->_username)
-					->where('record_type =1')
+					->where('record_type = 1')
 					->where('month(time) =?',date('n'));		   
 		return $db->fetchOne($select);
     }
@@ -43,8 +43,7 @@ class User_Model_Log extends Zend_Db_Table{
     	if ($paginator['itemCountPerPage']>0){
 			$page = $paginator['currentPage'];
 			$rowCount = $paginator['itemCountPerPage'];
-		}
-		
+		}		
     	$select = $this->select()->from($this->_name, array('*'))
 							   ->order('time DESC')
 							   ->where('username =?',$this->_username)
