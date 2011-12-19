@@ -1,0 +1,50 @@
+<div id="content" class="c_villa">
+	<div id="c_top">
+	   <div id="box_left_villa" >
+			<?php if(isset($this->menu_about)): ?>
+				<div class="category_villa">
+					<h3><?php echo $this->lang['about'] ?></h3>
+					<ul>
+						<?php 
+							foreach($this->menu_about as $value){
+								echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'about'.'/index/view/id/'.$value['record_id'].'/'.$this->noneUnicode($value['title'.LANG]).'" title="'.$this->escape($value['title'.LANG]).'">'.$this->escape($value['title'.LANG]).'</a></li>';
+							}
+						?>
+					</ul>
+				</div>
+			<?php endif; ?>
+			
+			<?php if(isset($this->menu_payment)): ?>
+				<div class="category_villa">
+					<h3><?php echo $this->lang['payment'] ?></h3>
+					<ul>
+						<?php 
+							foreach($this->menu_payment as $value){
+								echo '<li><a href="'.$this->baseUrl().'/'.LANGURL. 'payment'.'/index/view/id/'.$value['record_id'].'/'.$this->noneUnicode($value['title'.LANG]).'" title="'.$this->escape($value['title'.LANG]).'">'.$this->escape($value['title'.LANG]).'</a></li>';
+							}
+						?>
+					</ul>
+				</div>
+			<?php endif; ?>
+          
+		   <?php if(isset($this->menu_support)): ?>
+				<div class="line_space_villa"></div>
+				<div id="box_left_mod_2">   
+					<h3><?php echo $this->lang['support'] ?></h3>
+					<?php 
+						foreach ($this->menu_support as $value){
+							echo '<p><a href="ymsgr:sendim?'.$value['support_value'].'&amp;m=Xin chào, tôi muốn hỏi về sản phẩm của bạn" title="Chat '.$value['support_value'].'"><img src="http://opi.yahoo.com/online?u='.$value['support_value'].'&amp;m=g&amp;t=2&amp;l=us" alt="'.$value['support_value'].'" /></a></p>';
+						}
+					?>
+				</div>
+			<?php endif; ?>
+	   </div>
+	   
+	   <div id="content_villa">
+			<?php 
+				echo '<h1 class="about">'.$this->escape($this->item[0]['title'.LANG]).'</h1>';
+				echo $this->xss($this->item[0]['content'.LANG]);
+			?>
+	   </div>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+
+<h1 class="title-right"><?php echo $this->item['title'.LANG] ?></h1> 
+<div class="tieude"><?php echo html_entity_decode($this->item['content'.LANG]); ?></div>
+	
+<form action="" method="post" id="contact" name="frm" onsubmit="return validatecheck();">
+<p>Quý khách có thể liên hệ với chúng tôi bằng cách điền đầy đủ thông tin vào mẫu sau:</p>
+ <ul class="bt-frm-login">
+	<li><label><span class="red">*</span> Họ và tên: </label><input name="fullname" id="fullname" type="text" /></li>
+	<li><label><span class="red">*</span> Công ty: </label><input type="text" name="company" value="" /></li>
+	<li><label><span class="red">*</span> Địa chỉ: </label><input name="address" id="address" type="text" /></li>
+	<li><label><span class="red">*</span> Điện thoại: </label><input name="phone" id="phone" type="text" /></li>
+	<li><label><span class="red">*</span> Email: </label><input name="email" id="email" type="text" /></li>
+	<li><label><span class="red">*</span> Nội dung:</label><textarea rows="10" cols="55" name="content"></textarea></li>
+	<li class="bg-singin"><label></label><input type="submit" value="Gửi"  name="submit_contact" class="bton-dk"/>
+		<input type="reset" value="Xoá" name="xoa"  class="bton-dk"/></li>
+</ul>
+</form>
+<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/contact.js"></script>
