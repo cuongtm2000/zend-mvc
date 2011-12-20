@@ -7,8 +7,8 @@ class GLT_Controller_Action extends Zend_Controller_Action{
         
         ///adv
 		$adv=new Adv_Model_Adv();
-		$this->view->list_adv_right=$adv->getListAdvRightTop();
-		$this->view->list_adv_left=$adv->getListAdvLeft();
+		$this->view->list_adv_right = $adv->getListAdvRight();
+        
 		//support
 		$support=new Support_Model_Support();
 		$this->view->menu_support=$support->getListmenu();
