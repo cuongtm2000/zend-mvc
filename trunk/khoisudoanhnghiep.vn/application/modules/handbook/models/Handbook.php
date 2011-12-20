@@ -1,6 +1,6 @@
 <?php
-class News_Model_News extends Zend_Db_Table{
-	protected $_module = 'news';
+class Handbook_Model_Handbook extends Zend_Db_Table{
+	protected $_module = 'handbook';
 	protected $_name;
 	protected $_modelCat;
     protected $_primary = 'record_id';
@@ -28,14 +28,15 @@ class News_Model_News extends Zend_Db_Table{
     
 	//Front end - Get Bản tin Hot mới nhất
 	public function listItemsHot(){
-		$db = Zend_Registry::get('connectDb');
-    	$select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG,'preview'.LANG))
-							   ->where('enable = 1')
-							   ->where('record_type = 1')
+	//	$db = Zend_Registry::get('connectDb');
+    	$select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG,'preview'.LANG))
+							   ->where('enable = ?',1)
+							   ->where('record_type = ?',1)
 							   ->order('record_order DESC')
 							   ->order('postdate DESC')
 							   ->limit(7);
-		return $db->query($select)->fetchAll();
+							 //  echo $select->__toString();
+		return $this->fetchAll($select)->toArray();
     }
     
     //Front end - Get Bản tin bởi cat_id

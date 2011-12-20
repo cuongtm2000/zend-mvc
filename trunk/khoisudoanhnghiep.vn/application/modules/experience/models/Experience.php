@@ -1,6 +1,6 @@
 <?php
-class News_Model_News extends Zend_Db_Table{
-	protected $_module = 'news';
+class Experience_Model_Experience extends Zend_Db_Table{
+	protected $_module = 'experience';
 	protected $_name;
 	protected $_modelCat;
     protected $_primary = 'record_id';
