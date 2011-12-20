@@ -27,6 +27,14 @@ class Adv_Model_Adv extends Zend_Db_Table{
         $result= $this->fetchAll($select)->toArray();
         return $result;
     }
+    //Front end - Danh sách quảng cáo Right
+    public function getListAdvRight(){
+         $select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'title'.LANG, 'url', 'description', 'type'))
+         						  ->where('position =?', 'right')
+                                  ->where('enable = ?',1)
+                                  ->order('record_order ASC');
+        return $this->fetchAll($select)->toArray();
+    }
 	//Front end - Danh sách quảng cáo Right Top
     public function getListAdvRightTop(){
          $select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'title'.LANG, 'url', 'description', 'type'))

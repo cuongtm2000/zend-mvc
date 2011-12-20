@@ -70,9 +70,9 @@
                     	<div class="info-know">
                         	<h1 class="title-info">Thông tin cần biết</h1>
                             <ul class="sub-info">
-                            	<li><p class="info-1"><a href="http://finance.vietstock.vn/default.aspx" title="Chứng khoán"><img src="images/ico-info1.gif" alt="Chứng khoán" />Chứng khoán</a></p></li>
-                                <li><p class="info-2"><a href="http://vov.vn/Services/Infopage.aspx?svc=exchangerates" title="Tỷ giá"><img src="images/ico-info2.gif" alt="Tỷ giá" />Tỷ giá</a></p></li>
-                                <li style="border:none"><p class="info-3"><a href="http://giavanghomnay.net/" title="Giá vàng"><img src="images/ico-info3.gif" alt="giá vàng" />Giá vàng</a></p></li>
+                            	<li><p class="info-1"><a href="http://finance.vietstock.vn/default.aspx" title="Chứng khoán"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-info1.gif" alt="Chứng khoán" />Chứng khoán</a></p></li>
+                                <li><p class="info-2"><a href="http://vov.vn/Services/Infopage.aspx?svc=exchangerates" title="Tỷ giá"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-info2.gif" alt="Tỷ giá" />Tỷ giá</a></p></li>
+                                <li style="border:none"><p class="info-3"><a href="http://giavanghomnay.net/" title="Giá vàng"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-info3.gif" alt="giá vàng" />Giá vàng</a></p></li>
                             </ul>
                             <div class="bd-bt-info"></div>
                         </div><!--End info know-->
@@ -83,7 +83,7 @@
 									<?php foreach ($this->menu_support as $value): ?>
 										<li>
 											<a href="ymsgr:sendim?<?php echo $value['support_value'] ?>&amp;m=<?php echo $this->lang['welcome_chat']?>" title="Chat <?php echo $value['support_value'] ?>">
-												<img src="http://opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2&amp;l=us" alt="<?php echo $value['support_value'] ?>" />
+												<img src="http://opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=1&amp;l=us" alt="<?php echo $value['support_value'] ?>" />
 											</a>
 											<?php echo $value['support_name'] ?>
 										</li>
@@ -94,29 +94,34 @@
                     	
                     </div><!--End row 2-->
                     <div class="video">
-                        <a href="http://youtu.be/MHKpVVe5QZA" rel="prettyPhoto" title="iPhone 4 Tutorial Part 4"><img src="images/bg-video.jpg" alt="iPhone 4 Tutorial Part 4" /></a>
+                        <a href="http://youtu.be/MHKpVVe5QZA" rel="prettyPhoto" title="iPhone 4 Tutorial Part 4"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/bg-video.jpg" alt="iPhone 4 Tutorial Part 4" /></a>
                         <script type="text/javascript" charset="utf-8">
                           $(document).ready(function(){
                             $(".video a[rel^='prettyPhoto']").prettyPhoto();
                           });
                         </script>
             		</div>
-                    <h1 class="title-right"><span>Quảng Cáo</span></h1>
+                    
+                    <?php if($this->list_adv_right): ?>
+                    <h1 class="title-right"><span><?php echo $this->lang['adv'] ?></span></h1>
                     <div class="bg-sub-ad">
                         <ul class="sub-ad-1">
-                            <li><a href="#" title=""><img src="images/ttnn.gif" alt="Dong a" title="Dong A" width="180"/></a></li>
-                            <li><a href="#" title=""><img src="images/nang-luong-toan-cau.jpg" alt="Nuong Luong toan cau" title="Nang luong toan cau" width="180"/></a></li>
-                            <li><a href="#" title=""><img src="images/cty-nang-luong-toan-cau.jpg" alt="Cong ty nang luong toan cau" title="Cong ty nang luong toan cau" width="180"/></a></li>
-                            <li><a href="#" title=""><img src="images/hlbay9.jpg" alt="Du lich quoc te Dong A" title="Du lich quoc teDong A" width="180"/></a></li>
+                            <?php $i=0; foreach($this->list_adv_right as $value): ?>
+                                <?php if(($i%2)==0): ?>
+                                <li><a href="<?php echo $value['url']?>" target="<?php echo $value['type']?>" title="<?php echo $value['title'.LANG].' '.$value['description']?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['title'.LANG].' '.$value['description']?>"/></a></li>
+                                <?php endif; ?>
+                            <?php $i++; endforeach; ?>
                         </ul>
                         <ul class="sub-ad-2">
-                            <li><a href="#" title=""><img src="images/ttnn.gif" alt="Dong a" title="Dong A" width="180"/></a></li>
-                            <li><a href="#" title=""><img src="images/nang-luong-toan-cau.jpg" alt="Nuong Luong toan cau" title="Nang luong toan cau" width="180"/></a></li>
-                            <li><a href="#" title=""><img src="images/cty-nang-luong-toan-cau.jpg" alt="Cong ty nang luong toan cau" title="Cong ty nang luong toan cau" width="180"/></a></li>
-                            <li><a href="#" title=""><img src="images/hlbay9.jpg" alt="Du lich quoc te Dong A" title="Du lich quoc teDong A" width="180"/></a></li>
+                            <?php $i=0; foreach($this->list_adv_right as $value): ?>
+                                <?php if(($i%2)!=0): ?>
+                                <li><a href="<?php echo $value['url']?>" target="<?php echo $value['type']?>" title="<?php echo $value['title'.LANG].' '.$value['description']?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['title'.LANG].' '.$value['description']?>"/></a></li>
+                                <?php endif; ?>
+                            <?php $i++; endforeach; ?>
                         </ul>  <div class="clear"></div>
                     </div>
                     <div class="bd-bt-scroll"></div>
+                    <?php endif; ?>
                </div><!--End right content-->
                <div class="clear"></div>
         </div><!--End content-->
