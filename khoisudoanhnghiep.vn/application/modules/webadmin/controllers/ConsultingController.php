@@ -1,5 +1,5 @@
 <?php
-class Webadmin_ExperiencesController extends GLT_Controller_Backend{
+class Webadmin_ConsultingController extends GLT_Controller_Backend{
 	private $_data;
 	private $_module;
 	private $_controller;
@@ -7,6 +7,8 @@ class Webadmin_ExperiencesController extends GLT_Controller_Backend{
 	private $_currentController;
 	private $_config;
 	private $_paginator;
+	private $_model;
+	private $_modelCat;
 	
     public function init(){    	
     	//load language
@@ -20,6 +22,9 @@ class Webadmin_ExperiencesController extends GLT_Controller_Backend{
         $this->_controller = $this->_data['controller']; //Get controller
         $this->_action = $this->_data['action']; //Get action
         $this->_currentController = '/' . $this->_data['module'].'/' . $this->_data['controller'];
+        
+        $this->_model=ucfirst($this->_controller).'_Model_'.ucfirst($this->_controller);
+        $this->_modelCat=$this->_model.'Cat';        
         
         $this->_paginator['itemCountPerPage'] = $this->_config['sys_num_paging'];
         $this->_paginator['pageRange'] = $this->_config['sys_num_pagerange'];
@@ -36,16 +41,16 @@ class Webadmin_ExperiencesController extends GLT_Controller_Backend{
         $this->view->selecthome = ' class="selected"';
     }
     public function catAction(){
-    	$cat = new Experiences_Model_ExperiencesCat();  
+    	$cat = new $this->_modelCat();  
 		$this->view->items = $cat->listCatParent();
-		
+		$this->view->model=$this->_model;
     	if($this->_request->isPost()){
         	$cat->activeItem($this->_data);
         	$this->_redirect('http://'.$_SERVER["SERVER_NAME"].$this->_request->getRequestUri());
         }
     }
 	public function catupAction(){
-    	$cat = new Experiences_Model_ExperiencesCat();
+    	$cat = new $this->_modelCat();
     	//Cat info
     	$cat_info = $cat->getCatParent_CatOrder($this->_data['id'])  ;
     	
@@ -63,7 +68,7 @@ class Webadmin_ExperiencesController extends GLT_Controller_Backend{
 		$this->_redirect($this->_module.'/'.$this->_controller.'/cat');
     }
     public function catdownAction(){
-    	$cat = new Experiences_Model_ExperiencesCat();
+    	$cat = new $this->_modelCat();
     	//Cat info
     	$cat_info = $cat->getCatParent_CatOrder($this->_data['id'])  ;
     	
@@ -81,11 +86,12 @@ class Webadmin_ExperiencesController extends GLT_Controller_Backend{
 		$this->_redirect($this->_module.'/'.$this->_controller.'/cat');
     }
 	public function addcatAction(){
-    	$cat = new Experiences_Model_ExperiencesCat();
+    	$cat = new $this->_modelCat();
     	$this->view->listcat = $cat->listCatParent();
     	
     	if ($this->_request->isPost()) {
-    		$validate  = new Experiences_Form_ExperiencesCatValidate($this->_data);
+    		$validateForm = ucfirst($this->_controller).'_Form_CatValidate';
+    		$validate  = new $validateForm($this->_data);
     		if($validate->isError()==true){
     			$this->view->error = $validate->getError();
 				$this->view->items = $validate->getData();
@@ -98,12 +104,14 @@ class Webadmin_ExperiencesController extends GLT_Controller_Backend{
 	public function editcatAction(){
 		$this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE_ADMIN.'/js/checklist.js');
     	
-        $cat = new Experiences_Model_ExperiencesCat();
+        $cat = new $this->_modelCat();
         $this->view->listcat = $cat->listCatParent($this->_data['id']);
 		$this->view->item = $cat->editItem($this->_data);
 		
 		if ($this->_request->isPost()) {
-			$validate  = new Experiences_Form_ExperiencesCatValidate($this->_data);
+			$validateForm = ucfirst($this->_controller).'_Form_CatValidate';
+    		$validate  = new $validateForm($this->_data);
+			
     		if($validate->isError()==true){
     			$this->view->error = $validate->getError();
 				$this->view->items = $validate->getData();
@@ -114,7 +122,7 @@ class Webadmin_ExperiencesController extends GLT_Controller_Backend{
         }
     }
 	public function delcatAction(){
-    	$cat = new Experiences_Model_ExperiencesCat();
+    	$cat = new $this->_modelCat();
     	
     	//cat_id for delete
     	$this->view->infocat = $cat->getInfoCat($this->_data); //Tên phân loại
@@ -126,13 +134,13 @@ class Webadmin_ExperiencesController extends GLT_Controller_Backend{
 		$this->view->listcat = $cat->listCatParent($this->_data['id']);
     	
     	if($this->_request->isPost()){
-    		$item = new Experiences_Model_Experiences();
+    		$item = new $this->_model();
     		$item->delItembyCat($this->_data);
     		$this->_redirect($this->_module.'/'.$this->_controller.'/cat');
     	}
     }
 	public function indexAction(){
-		$item = new Experiences_Model_Experiences();    
+		$item = new $this->_model();   
 		$this->view->items = $item->listItemadmin($this->_data);
 
 		$totalItem = $item->countItemadmin();
@@ -147,16 +155,18 @@ class Webadmin_ExperiencesController extends GLT_Controller_Backend{
 	public function addAction(){
 		$this->view->headScript()->appendFile($this->_request->getBaseUrl().'/public/plugin/ckeditor/ckeditor.js');
 		
-    	$cat = new Experiences_Model_ExperiencesCat();
+    	$cat = new $this->_modelCat();
 		$this->view->cat = $cat->listCatParent();
 		
     	if($this->_request->isPost()){
-    		$validate  = new Experiences_Form_ExperiencesValidate($this->_data);
+    		$validateForm = ucfirst($this->_controller).'_Form_Validate';
+    		$validate  = new $validateForm($this->_data);
+
     		if($validate->isError()==true){
     			$this->view->error = $validate->getError();
 				$this->view->items = $validate->getData();
     		}else{
-    			$item = new Experiences_Model_Experiences();
+    			$item = new $this->_model();
     			$item->addItem($this->_data);
     			$this->_redirect($this->_module.'/'.$this->_controller);
     		}
@@ -166,14 +176,15 @@ class Webadmin_ExperiencesController extends GLT_Controller_Backend{
     	$this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE_ADMIN.'/js/checklist.js');
     	$this->view->headScript()->appendFile($this->_request->getBaseUrl().'/public/plugin/ckeditor/ckeditor.js');
 
-    	$item = new Experiences_Model_Experiences();
+    	$item = new $this->_model();
 		$this->view->item = $item->editItem($this->_data);
 		
-		$cat = new Experiences_Model_ExperiencesCat();
+		$cat = new $this->_modelCat();
 		$this->view->cat = $cat->listCatParent();
 		
     	if ($this->_request->isPost()) {
-    		$validate  = new Experiences_Form_ExperiencesValidate($this->_data);
+    		$validateForm = ucfirst($this->_controller).'_Form_Validate';
+    		$validate  = new $validateForm($this->_data);
     		if($validate->isError()==true){
     			$this->view->error = $validate->getError();
 				$this->view->item = $item->editItem($this->_data);

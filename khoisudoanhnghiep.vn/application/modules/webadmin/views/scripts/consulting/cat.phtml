@@ -15,7 +15,7 @@
 	<tbody>
 	<?php
 		if(is_array($this->items)){
-			$numitem = new Experiences_Model_Experiences();
+			$numitem = new $this->model();
 			$k = 1;
 		    foreach($this->items as $value){
 		    	if($value['cat_enable'] == 0){

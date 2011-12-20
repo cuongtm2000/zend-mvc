@@ -1,5 +1,5 @@
 <?php
-class News_Model_News extends Zend_Db_Table{
+class Knows_Model_Knows extends Zend_Db_Table{
 	protected $_module = 'news';
 	protected $_name;
 	protected $_modelCat;

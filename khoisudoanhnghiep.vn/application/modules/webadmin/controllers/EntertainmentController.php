@@ -1,5 +1,5 @@
 <?php
-class Webadmin_HandbookController extends GLT_Controller_Backend{
+class Webadmin_EntertainmentController extends GLT_Controller_Backend{
 	private $_data;
 	private $_module;
 	private $_controller;
