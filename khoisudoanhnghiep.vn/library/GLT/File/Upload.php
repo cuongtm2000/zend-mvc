@@ -88,7 +88,7 @@ class GLT_File_Upload extends Zend_File_Transfer_Adapter_Http{
     }
 	private function setUploadFile($value){
 		while(file_exists($this->_uploadDir . $value)){
-			$value = str_replace('.', rand(1, 99) . '.', $value);
+			$value = str_replace('.', rand(1, 9) . '.', $value);
 		}
 		return $value;
 	}
