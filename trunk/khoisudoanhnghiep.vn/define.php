@@ -15,6 +15,8 @@ define('TEMPLATE_DIR', '/public/templates');
 define('TEM_INDEX', '/khoisudoanhnghiep'); //Template Front end
 define('TEM_ADMIN', '/webadmin'); //Template Back end
 
+
+define('REAL_PATH', realpath(dirname(__FILE__)));
 define('PUBLIC_PATH', realpath(dirname(__FILE__) . '/public'));
-define('IMAGES_PATH', PUBLIC_PATH .'/userfiles/images/');
+define('IMAGES_PATH',  '/public/userfiles/images/');
 define('TEMPLATE_PATH', PUBLIC_PATH .'/templates'. TEM_INDEX);

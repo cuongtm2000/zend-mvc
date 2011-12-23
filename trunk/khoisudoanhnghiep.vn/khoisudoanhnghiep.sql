@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 3.4.8
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 20, 2011 at 08:33 AM
--- Server version: 5.5.16
--- PHP Version: 5.3.8
+-- Generation Time: Dec 23, 2011 at 07:09 PM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -75,16 +75,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_adv` (
   `type` varchar(45) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `dos_module_adv`
 --
 
 INSERT INTO `dos_module_adv` (`record_id`, `pic_thumb`, `title`, `titleen`, `titlefr`, `url`, `description`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`) VALUES
-(10, 'alo123ma.jpg', 'Banner', '', '', 'http://nhantriviet.vn', 'Nhà tư vấn khởi sự kinh doanh hàng đầu', '2011-12-20 06:58:09', '2011-12-19 17:00:00', '2012-01-30 17:00:00', 0, 1, 'right', '_bank', 1),
-(11, 'logo.jpg', 'Banner 2', '', '', 'http://grouplaptrinh.com', 'Nhà tư vấn khởi sự kinh doanh hàng đầu', '2011-12-20 06:58:32', '2011-12-19 17:00:00', '2012-01-24 17:00:00', 0, 1, 'right', '_bank', 1),
-(12, 'antivirussoftware.jpg', 'Banner', '', '', 'http://nhantriviet.vn', 'Nhà tư vấn khởi sự kinh doanh hàng đầu', '2011-12-20 07:15:04', '2011-12-19 17:00:00', '2012-01-25 17:00:00', 0, 1, 'right', '_bank', 1);
+(8, 'logo.jpg', 'Banner', '', '', 'http://grouplaptrinh.com', '', '2011-12-06 09:22:29', '2011-11-20 17:00:00', '2011-11-22 17:00:00', 0, 1, 'right', '_bank', 1),
+(9, 'alo123ma.jpg', 'Banner', '', '', 'http://grouplaptrinh.com', '', '2011-12-06 09:23:07', '2011-11-20 17:00:00', '2011-12-22 17:00:00', 0, 1, 'right', '_bank', 1);
 
 -- --------------------------------------------------------
 
@@ -246,6 +245,76 @@ CREATE TABLE IF NOT EXISTS `dos_module_contact` (
 INSERT INTO `dos_module_contact` (`record_id`, `create_date`, `title`, `titleen`, `titlefr`, `content`, `contenten`, `contentfr`, `hot`, `enable`) VALUES
 (7, '2011-06-17 03:52:09', 'Liên hệ với chúng tôi', '', '', '&lt;p&gt;\r\n	VUONG HAI CORPORATION Copyright © 2011. Develop by Dos.vn&lt;br /&gt;\r\n	Office: C1B Dong Khoi, hamlet 4, Tan Hiep ward, Bien Hoa city, Dong Nai province&lt;br /&gt;\r\n	Factory: Ong Huong Hamlet, Thien Tan commune, Vinh Cuu district, Dong Nai province&lt;br /&gt;\r\n	Phone: (+8461) 3895 060 - (+8461) 3865 819&lt;br /&gt;\r\n	Fax: (+8461) 3895 573 - (+8461) 3865 8219&lt;br /&gt;\r\n	Website: www.vuonghai.com - www.block-betongnhe.com&lt;/p&gt;\r\n', '', '', 0, 1),
 (8, '2011-12-06 07:07:19', 'Liên hệ Home', '', '', '&lt;p style=&quot;text-align:center;&quot;&gt;\r\n	VUONG HAI CORPORATION Copyright © 2011. Develop by Dos.vn&lt;br /&gt;\r\n	Office: C1B Dong Khoi, hamlet 4, Tan Hiep ward, Bien Hoa city, Dong Nai province&lt;br /&gt;\r\n	Factory: Ong Huong Hamlet, Thien Tan commune, Vinh Cuu district, Dong Nai province&lt;br /&gt;\r\n	Phone: (+8461) 3895 060 - (+8461) 3865 819&lt;br /&gt;\r\n	Fax: (+8461) 3895 573 - (+8461) 3865 8219&lt;br /&gt;\r\n	Website: &lt;a href=&quot;http://vuonghai.com&quot;&gt;www.vuonghai.com&lt;/a&gt; - www.&lt;a href=&quot;http://block-betongnhe.com&quot;&gt;block-betongnhe.com&lt;/a&gt;&lt;/p&gt;\r\n', '', '', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_corporate-culture`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_corporate-culture` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `pic_thumb` varchar(45) DEFAULT NULL,
+  `title` varchar(100) NOT NULL,
+  `titleen` varchar(100) DEFAULT NULL,
+  `titlefr` varchar(100) DEFAULT NULL,
+  `preview` text NOT NULL,
+  `previewen` text,
+  `previewfr` text,
+  `content` text NOT NULL,
+  `contenten` text,
+  `contentfr` text,
+  `author` varchar(45) DEFAULT NULL,
+  `hits` int(11) NOT NULL DEFAULT '1',
+  `postdate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `record_order` int(11) NOT NULL DEFAULT '1',
+  `record_type` tinyint(1) NOT NULL DEFAULT '0',
+  `extra_field1` varchar(45) DEFAULT NULL,
+  `extra_field2` varchar(45) DEFAULT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_module_item_cat_cat_id` int(11) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `fk_dos_module_news_dos_module_news_cat` (`dos_module_item_cat_cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+
+--
+-- Dumping data for table `dos_module_corporate-culture`
+--
+
+INSERT INTO `dos_module_corporate-culture` (`record_id`, `pic_thumb`, `title`, `titleen`, `titlefr`, `preview`, `previewen`, `previewfr`, `content`, `contenten`, `contentfr`, `author`, `hits`, `postdate`, `record_order`, `record_type`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(8, NULL, 'sddssd', '', '', '&lt;p&gt;\r\n	dsdsdsds&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	dssddsds&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:27', 7, 1, NULL, NULL, 1, 12),
+(9, NULL, 'tiêu đề', '', '', '&lt;p&gt;\r\n	tetset&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setstset&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:41', 8, 1, NULL, NULL, 1, 12),
+(10, '', 'tieu de 2', '', '', '&lt;p&gt;\r\n	tesseet&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setsetst&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:54', 9, 1, NULL, NULL, 1, 12),
+(11, 'teamwork59.jpg', 'Bài viết số 12', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n&lt;p&gt;\r\n	fdsg&lt;/p&gt;\r\n&lt;p&gt;\r\n	sdf&lt;/p&gt;\r\n&lt;p&gt;\r\n	g&lt;/p&gt;\r\n&lt;p&gt;\r\n	dsf&lt;/p&gt;\r\n&lt;p&gt;\r\n	g&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-20 02:14:07', 10, 1, NULL, NULL, 1, 13),
+(12, 'teamwork.jpg', 'Lợi ích của làm việc theo nhóm', '', '', '&lt;p&gt;\r\n	 Mọi thành viên trong tổ chức sẽ càng đồng lòng hướng tới mục tiêu và dốc sức cho thành công chung của tập thể khi họ cùng nhau xác định và vạch ra phương pháp đạt được chúng&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	1. Mọi thành viên trong tổ chức sẽ càng đồng lòng hướng tới mục tiêu và dốc sức cho thành công chung của tập thể khi họ cùng nhau xác định và vạch ra phương pháp đạt được chúng.&lt;/p&gt;\r\n&lt;p&gt;\r\n	2. Là thành viên của một nhóm, họ có cảm giác kiểm soát được cuộc sống của mình tốt hơn và không phải chịu đựng sự chuyên quyền của bất cứ người lãnh đạo nào.&lt;/p&gt;\r\n&lt;p&gt;\r\n	3. Khi các thành viên cùng góp sức giải quyết một vấn đề chung, họ học hỏi được cách xử lý mọi nhiệm vụ đơn giản hay khó khăn; họ học hỏi từ những thành viên khác và cả người lãnh đạo. Thúc đẩy quản lý theo nhóm là cách tốt nhất để phát huy năng lực của các nhân viên (một hình thức đào tạo tại chức).&lt;/p&gt;\r\n&lt;p&gt;\r\n	4. Hoạt động theo nhóm mang lại cơ hội cho các thành viên thoả mãn những nhu cầu về bản ngã, được đón nhận và thể hiện mọi tiềm năng.&lt;/p&gt;\r\n&lt;p&gt;\r\n	5. Quản lý theo nhóm giúp phá vỡ bức tường ngăn cách, tạo sự cởi mở và thân thiện giữa các thành viên và người lãnh đạo.&lt;/p&gt;\r\n&lt;p&gt;\r\n	6. Thông qua việc quản lý theo nhóm, các thành viên có thể học hỏi và vận dụng phong cách lãnh đạo từ cấp trên của mình. Điều đó tạo sự thống nhất về cách quản lý trong tổ chức.&lt;/p&gt;\r\n&lt;p&gt;\r\n	7. Hoạt động theo nhóm giúp phát huy khả năng phối hợp những bộ óc sáng tạo để đưa các quyết định đúng đắn.&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-23 02:10:08', 11, 1, NULL, NULL, 1, 15);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_corporate-culture_cat`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_corporate-culture_cat` (
+  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_parent_id` int(11) NOT NULL DEFAULT '0',
+  `cat_title` varchar(45) NOT NULL,
+  `cat_titleen` varchar(45) DEFAULT NULL,
+  `cat_titlefr` varchar(45) DEFAULT NULL,
+  `cat_order` int(11) NOT NULL DEFAULT '1',
+  `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+
+--
+-- Dumping data for table `dos_module_corporate-culture_cat`
+--
+
+INSERT INTO `dos_module_corporate-culture_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `cat_titlefr`, `cat_order`, `cat_enable`) VALUES
+(11, 0, 'Test', '', '', 1, 1),
+(12, 0, 'Tin tuc 1', '', '', 2, 1),
+(13, 0, 'Con 123', '', '', 3, 1),
+(14, 12, 'Tin tuc 1-1', '', '', 4, 1),
+(15, 0, 'Văn hóa làm việc nhóm', '', '', 5, 1);
 
 -- --------------------------------------------------------
 
@@ -1708,6 +1777,74 @@ INSERT INTO `dos_module_wedding` (`record_id`, `title`, `titleen`, `titlefr`, `c
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `dos_module_world-business`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_world-business` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `pic_thumb` varchar(45) DEFAULT NULL,
+  `title` varchar(100) NOT NULL,
+  `titleen` varchar(100) DEFAULT NULL,
+  `titlefr` varchar(100) DEFAULT NULL,
+  `preview` text NOT NULL,
+  `previewen` text,
+  `previewfr` text,
+  `content` text NOT NULL,
+  `contenten` text,
+  `contentfr` text,
+  `author` varchar(45) DEFAULT NULL,
+  `hits` int(11) NOT NULL DEFAULT '1',
+  `postdate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `record_order` int(11) NOT NULL DEFAULT '1',
+  `record_type` tinyint(1) NOT NULL DEFAULT '0',
+  `extra_field1` varchar(45) DEFAULT NULL,
+  `extra_field2` varchar(45) DEFAULT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_module_item_cat_cat_id` int(11) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `fk_dos_module_news_dos_module_news_cat` (`dos_module_item_cat_cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+
+--
+-- Dumping data for table `dos_module_world-business`
+--
+
+INSERT INTO `dos_module_world-business` (`record_id`, `pic_thumb`, `title`, `titleen`, `titlefr`, `preview`, `previewen`, `previewfr`, `content`, `contenten`, `contentfr`, `author`, `hits`, `postdate`, `record_order`, `record_type`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(8, NULL, 'sddssd', '', '', '&lt;p&gt;\r\n	dsdsdsds&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	dssddsds&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:27', 7, 1, NULL, NULL, 1, 12),
+(9, NULL, 'tiêu đề', '', '', '&lt;p&gt;\r\n	tetset&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setstset&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:41', 8, 1, NULL, NULL, 1, 12),
+(10, '', 'tieu de 2', '', '', '&lt;p&gt;\r\n	tesseet&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setsetst&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:54', 9, 1, NULL, NULL, 1, 12),
+(11, NULL, 'Bài viết số 12', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n&lt;p&gt;\r\n	fdsg&lt;/p&gt;\r\n&lt;p&gt;\r\n	sdf&lt;/p&gt;\r\n&lt;p&gt;\r\n	g&lt;/p&gt;\r\n&lt;p&gt;\r\n	dsf&lt;/p&gt;\r\n&lt;p&gt;\r\n	g&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-20 02:14:07', 10, 1, NULL, NULL, 1, 13);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_world-business_cat`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_world-business_cat` (
+  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_parent_id` int(11) NOT NULL DEFAULT '0',
+  `cat_title` varchar(45) NOT NULL,
+  `cat_titleen` varchar(45) DEFAULT NULL,
+  `cat_titlefr` varchar(45) DEFAULT NULL,
+  `cat_order` int(11) NOT NULL DEFAULT '1',
+  `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+
+--
+-- Dumping data for table `dos_module_world-business_cat`
+--
+
+INSERT INTO `dos_module_world-business_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `cat_titlefr`, `cat_order`, `cat_enable`) VALUES
+(11, 0, 'Test', '', '', 1, 1),
+(12, 0, 'Tin tuc 1', '', '', 2, 1),
+(13, 0, 'Con 123', '', '', 3, 1),
+(14, 12, 'Tin tuc 1-1', '', '', 4, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `dos_sys_configs`
 --
 
@@ -1723,10 +1860,22 @@ CREATE TABLE IF NOT EXISTS `dos_sys_configs` (
 --
 
 INSERT INTO `dos_sys_configs` (`config_name`, `config_value`, `config_choices`) VALUES
-('adv_height', '200', 'Quảng cáo - chiều cao'),
+('adv_height', '192', 'Quảng cáo - chiều cao'),
 ('adv_width', '192', 'Quảng cáo - chiều ngang'),
 ('banner_height', '190', 'Banner - Chiều cao'),
 ('banner_width', '566', 'Banner - Chiều ngang'),
+('consulting_height_thumb', '90', ''),
+('consulting_width_thumb', '158', ''),
+('corporate-culture_height_thumb', '90', ''),
+('corporate-culture_width_thumb', '158', ''),
+('entertainment_height_thumb', '90', ''),
+('entertainment_width_thumb', '158', ''),
+('experience_height_thumb', '90', ''),
+('experience_width_thumb', '158', ''),
+('handbook_height_thumb', '90', ''),
+('handbook_width_thumb', '158', ''),
+('knows_height_thumb', '90', ''),
+('knows_width_thumb', '158', ''),
 ('logo_height', '159', 'Logo - Chiều cao'),
 ('logo_width', '950', 'Logo - Chiều ngang'),
 ('marketing_height_thumb', '90', ''),
@@ -1748,7 +1897,9 @@ INSERT INTO `dos_sys_configs` (`config_name`, `config_value`, `config_choices`) 
 ('sys_num_paging', '7', 'Phân trang'),
 ('sys_size_upload', '5000', 'Kích cỡ upload'),
 ('techniques_height_thumb', '90', ''),
-('techniques_width_thumb', '145', '');
+('techniques_width_thumb', '145', ''),
+('world-business_height_thumb', '90', ''),
+('world-business_width_thumb', '158', '');
 
 -- --------------------------------------------------------
 
@@ -1836,13 +1987,15 @@ INSERT INTO `dos_sys_groups_has_dos_sys_models` (`dos_sys_groups_group_name`, `d
 ('member', 'banner', 'allow'),
 ('member', 'consulting', 'allow'),
 ('member', 'contact', 'allow'),
+('member', 'corporate-culture', 'allow'),
 ('member', 'entertainment', 'allow'),
 ('member', 'experience', 'allow'),
 ('member', 'handbook', 'allow'),
 ('member', 'knows', 'allow'),
 ('member', 'news', 'allow'),
 ('member', 'productions', 'allow'),
-('member', 'support', 'allow');
+('member', 'support', 'allow'),
+('member', 'world-business', 'allow');
 
 -- --------------------------------------------------------
 
@@ -1889,6 +2042,7 @@ INSERT INTO `dos_sys_langs` (`lang_name`, `lang`, `langen`, `langfr`) VALUES
 ('consulting', 'Góc tư vấn', '', ''),
 ('contact', 'Liên hệ', '', ''),
 ('copyright', 'Copyright © 2011 by Sieuthiposm.com. All rights reserved', '', ''),
+('corporate-culture', 'Văn hóa doanh nghiệp', '', ''),
 ('createdate', 'Ngày tạo', '', ''),
 ('default', 'Trang chủ', '', ''),
 ('developed', 'Developed by dos.vn', '', ''),
@@ -1953,7 +2107,8 @@ INSERT INTO `dos_sys_langs` (`lang_name`, `lang`, `langen`, `langfr`) VALUES
 ('time', 'Thời gian', '', ''),
 ('user_cmt', 'Người bình luận', '', ''),
 ('video', 'Video', '', ''),
-('welcome_chat', 'Xin chào, tôi muốn hỏi về sản phẩm - dịch vụ của công ty bạn', '', '');
+('welcome_chat', 'Xin chào, tôi muốn hỏi về sản phẩm - dịch vụ của công ty bạn', '', ''),
+('world-business', 'Thế giới doanh nhân', '', '');
 
 -- --------------------------------------------------------
 
@@ -1978,6 +2133,7 @@ INSERT INTO `dos_sys_models` (`model_id`, `record_order`) VALUES
 ('conference', 14),
 ('consulting', 25),
 ('contact', 2),
+('corporate-culture', 28),
 ('entertainment', 26),
 ('experience', 23),
 ('gallery', 6),
@@ -1999,7 +2155,8 @@ INSERT INTO `dos_sys_models` (`model_id`, `record_order`) VALUES
 ('techniques', 23),
 ('termsofuse', 12),
 ('video', 10),
-('wedding', 13);
+('wedding', 13),
+('world-business', 27);
 
 -- --------------------------------------------------------
 
@@ -2068,7 +2225,7 @@ CREATE TABLE IF NOT EXISTS `dos_sys_statistics` (
 --
 
 INSERT INTO `dos_sys_statistics` (`session_id`, `time`) VALUES
-('d35ba4yu7', 1324366364);
+('uxfd80qrb', 1324663282);
 
 -- --------------------------------------------------------
 
@@ -2120,10 +2277,10 @@ INSERT INTO `dos_sys_webs` (`web_name`, `web_value`) VALUES
 ('description', 'Khởi sự doanh nghiệp,cẩm nang doanh nghiệp,kinh nghiệm thương trường'),
 ('email_subject', 'Liên hệ từ website'),
 ('keywords', 'Khởi sự doanh nghiệp,cẩm nang doanh nghiệp,kinh nghiệm thương trường'),
-('timestamp_today', '1324314000'),
+('timestamp_today', '1324659600'),
 ('titleweb', 'khoisudoanhnghiep.vn'),
-('total_visit', '27'),
-('total_visit_today', '4'),
+('total_visit', '29'),
+('total_visit_today', '1'),
 ('type', '1');
 
 --

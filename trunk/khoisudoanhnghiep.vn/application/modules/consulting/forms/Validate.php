@@ -6,7 +6,7 @@ class Consulting_Form_Validate{
 		
 	public function __construct($data = array()){		
 		$this->_config = Zend_Registry::get("config");
-		$module=$data['module'];
+		$module=$data['controller'];
 		
 		//Validate parentcat
 		if (!isset($data['parentcat'])) {
@@ -43,7 +43,11 @@ class Consulting_Form_Validate{
 		//validate pic_thumb
 		if (!empty($_FILES['file_thumb']['name'])){
     		$upload = new GLT_File_Upload();
-    		$upload->upload($_FILES['file_thumb'], $this->_config[$module.'_width_thumb'], $this->_config[$module.'_height_thumb'], $this->_config['sys_size_upload'], PUBLIC_PATH.'/userfiles/images/'.$module.'/');
+    		$upload->upload($_FILES['file_thumb'],
+    						 $this->_config[$module.'_width_thumb'], 
+    						 $this->_config[$module.'_height_thumb'],
+    						  $this->_config['sys_size_upload'], 
+    						  REAL_PATH.IMAGES_PATH.$module.'/');
     		
 	    	if($upload->isVail() == true){
 	    		$i = 0;

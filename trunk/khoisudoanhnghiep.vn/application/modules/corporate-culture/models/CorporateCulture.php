@@ -1,6 +1,6 @@
 <?php
 class CorporateCulture_Model_CorporateCulture extends Zend_Db_Table{
-	protected $_module = 'corporate-culture';
+	protected $__mod = 'corporate-culture';
 	protected $_name;
 	protected $_modelCat;
     protected $_primary = 'record_id';
@@ -8,7 +8,7 @@ class CorporateCulture_Model_CorporateCulture extends Zend_Db_Table{
     private $_xss = NULL;
 	
     public function init(){
-    	$this->_name = 'dos_module_'.$this->_module;
+    	$this->_name = 'dos_module_'.$this->__mod;
     	$this->_modelCat='CorporateCulture_Model_CorporateCultureCat';
     	$this->_config = Zend_Registry::get("config");
         $this->_xss = Zend_Registry::get('xss');
@@ -170,12 +170,12 @@ class CorporateCulture_Model_CorporateCulture extends Zend_Db_Table{
     }
 	public function menuAdmin(){
 		$cat = new $this->_modelCat();
-        $menu[] = array('url'=>$this->_module.'/cat',
+        $menu[] = array('url'=>$this->__mod.'/cat',
         				 'name'=>'Danh mục', 
         				 'nameen'=>'Category', 
         				 'namefr'=>'Category', 
         				 'num'=>$cat->countCat());
-        $menu[] = array('url'=>$this->_module, 
+        $menu[] = array('url'=>$this->__mod, 
         				'name'=>'Bài viết', 
         				'nameen'=>'Post', 
         				'namefr'=>'Post', 
@@ -242,7 +242,7 @@ class CorporateCulture_Model_CorporateCulture extends Zend_Db_Table{
 		$result = $this->fetchRow($select)->toArray();
 		
 		if($result['pic_thumb']){
-			@unlink(IMAGES_PATH.$this->_module.'/'.$result['pic_thumb']);
+			@unlink(REAL_PATH.IMAGES_PATH.$this->__mod.'/'.$result['pic_thumb']);
 		}
     }
     
@@ -252,10 +252,10 @@ class CorporateCulture_Model_CorporateCulture extends Zend_Db_Table{
     	if (!empty($_FILES['file_thumb']['name'])){
     		$upload = new GLT_File_Upload();
     		$upload->upload($_FILES['file_thumb'], 
-    						$this->_config[$this->_module.'_width_thumb'], 
-    						$this->_config[$this->_module.'_height_thumb'], 
+    						$this->_config[$this->__mod.'_width_thumb'], 
+    						$this->_config[$this->__mod.'_height_thumb'], 
     						$this->_config['sys_size_upload'], 
-    						IMAGES_PATH.$this->_module.'/');
+    						REAL_PATH.IMAGES_PATH.$this->__mod.'/');
     		
 	    	if($upload->isVail() == false){
 				$file_thumb = $upload->transferFile(); //upload file
@@ -267,7 +267,20 @@ class CorporateCulture_Model_CorporateCulture extends Zend_Db_Table{
 		$select = $db->select()->from($this->_name, array('max(record_order) as max'));
 		$max_record = $db->fetchOne($select)+1;
 		
-    	$data = array('pic_thumb' => $file_thumb, 'title' => htmlspecialchars($this->_xss->purify($data['title'])), 'titleen' => htmlspecialchars($this->_xss->purify($data['titleen'])), 'titlefr' => htmlspecialchars($this->_xss->purify($data['titlefr'])), 'preview' => htmlspecialchars($this->_xss->purify($data['preview'])), 'previewen' => htmlspecialchars($this->_xss->purify($data['previewen'])), 'previewfr' => htmlspecialchars($this->_xss->purify($data['previewfr'])), 'content' => htmlspecialchars($this->_xss->purify($data['detail'])), 'contenten' => htmlspecialchars($this->_xss->purify($data['detailen'])), 'contentfr' => htmlspecialchars($this->_xss->purify($data['detailfr'])), 'record_order' => $max_record, 'record_type' => htmlspecialchars($this->_xss->purify($data['hot'])), 'enable' => htmlspecialchars($this->_xss->purify($data['active'])), 'dos_module_item_cat_cat_id' => htmlspecialchars($this->_xss->purify($data['parentcat'])));
+    	$data = array('pic_thumb' => $file_thumb, 
+    				'title' => htmlspecialchars($this->_xss->purify($data['title'])), 
+    				'titleen' => htmlspecialchars($this->_xss->purify($data['titleen'])), 
+    				'titlefr' => htmlspecialchars($this->_xss->purify($data['titlefr'])), 
+    				'preview' => htmlspecialchars($this->_xss->purify($data['preview'])), 
+    				'previewen' => htmlspecialchars($this->_xss->purify($data['previewen'])), 
+    				'previewfr' => htmlspecialchars($this->_xss->purify($data['previewfr'])), 
+    				'content' => htmlspecialchars($this->_xss->purify($data['detail'])), 
+    				'contenten' => htmlspecialchars($this->_xss->purify($data['detailen'])), 
+    				'contentfr' => htmlspecialchars($this->_xss->purify($data['detailfr'])), 
+    				'record_order' => $max_record, 
+    				'record_type' => htmlspecialchars($this->_xss->purify($data['hot'])), 
+    				'enable' => htmlspecialchars($this->_xss->purify($data['active'])), 
+    				'dos_module_item_cat_cat_id' => htmlspecialchars($this->_xss->purify($data['parentcat'])));
     	$this->insert($data);
     }
 	public function editItem($data = NULL){
@@ -284,14 +297,14 @@ class CorporateCulture_Model_CorporateCulture extends Zend_Db_Table{
     	if (!empty($_FILES['file_thumb']['name'])){
     		$upload = new GLT_File_Upload();
     		$upload->upload($_FILES['file_thumb'], 
-    							$this->_config[$this->_module.'_width_thumb'], 
-    							$this->_config[$this->_module.'_height_thumb'], 
+    							$this->_config[$this->__mod.'_width_thumb'], 
+    							$this->_config[$this->__mod.'_height_thumb'], 
     							$this->_config['sys_size_upload'], 
-    							IMAGES_PATH.$this->_module.'/');
+    							REAL_PATH.IMAGES_PATH.$this->__mod.'/');
     		
 	    	if($upload->isVail() == false){
 				$file_thumb = $upload->transferFile(); //upload file
-				$upload->removeFile(IMAGES_PATH.$this->_module.'/'.$data['fileold_thumb']);
+				$upload->removeFile(REAL_PATH.IMAGES_PATH.$this->__mod.'/'.$data['fileold_thumb']);
 			}
     	}
 		

@@ -243,7 +243,7 @@ class Handbook_Model_Handbook extends Zend_Db_Table{
 		$result = $this->fetchRow($select)->toArray();
 		
 		if($result['pic_thumb']){
-			@unlink(IMAGES_PATH.$this->_module.'/'.$result['pic_thumb']);
+			@unlink(REAL_PATH.IMAGES_PATH.$this->_module.'/'.$result['pic_thumb']);
 		}
     }
     
@@ -256,7 +256,7 @@ class Handbook_Model_Handbook extends Zend_Db_Table{
     						$this->_config[$this->_module.'_width_thumb'], 
     						$this->_config[$this->_module.'_height_thumb'], 
     						$this->_config['sys_size_upload'], 
-    						IMAGES_PATH.$this->_module.'/');
+    						REAL_PATH.IMAGES_PATH.$this->_module.'/');
     		
 	    	if($upload->isVail() == false){
 				$file_thumb = $upload->transferFile(); //upload file
@@ -288,11 +288,11 @@ class Handbook_Model_Handbook extends Zend_Db_Table{
     							$this->_config[$this->_module.'_width_thumb'], 
     							$this->_config[$this->_module.'_height_thumb'], 
     							$this->_config['sys_size_upload'], 
-    							IMAGES_PATH.$this->_module.'/');
+    							REAL_PATH.IMAGES_PATH.$this->_module.'/');
     		
 	    	if($upload->isVail() == false){
 				$file_thumb = $upload->transferFile(); //upload file
-				$upload->removeFile(IMAGES_PATH.$this->_module.'/'.$data['fileold_thumb']);
+				$upload->removeFile(REAL_PATH.IMAGES_PATH.$this->_module.'/'.$data['fileold_thumb']);
 			}
     	}
 		

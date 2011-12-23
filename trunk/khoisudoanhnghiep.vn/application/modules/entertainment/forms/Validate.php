@@ -6,7 +6,7 @@ class Entertainment_Form_Validate{
 		
 	public function __construct($data = array()){		
 		$this->_config = Zend_Registry::get("config");
-		$module=$data['module'];
+		$module=$data['controller'];
 		
 		//Validate parentcat
 		if (!isset($data['parentcat'])) {
