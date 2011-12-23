@@ -1,7 +1,7 @@
 RewriteEngine On
 #non www
-RewriteCond %{HTTP_HOST} ^www.thanhansoft.com [NC]
-RewriteRule ^(.*)$ http://thanhansoft.com/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^www.sieuthiposm.com [NC]
+RewriteRule ^(.*)$ http://sieuthiposm.com/$1 [L,R=301]
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d

@@ -12,7 +12,13 @@
 			foreach($this->listmenu as $value){
 				if($value['name'] != 'webadmin' && $value['name'] != 'default'){
 					echo '<p><label>'.$this->lang[$value['name']].':</label>&nbsp;</p>';
-					$module = ucfirst($value['name']).'_Model_'.ucfirst($value['name']);
+					
+					if($value['name'] == 'world-business')
+						$module ='WorldBusiness_Model_WorldBusiness';
+					elseif ($value['name'] == 'corporate-culture')
+						$module ='CorporateCulture_Model_CorporateCulture';
+					else 
+						$module = ucfirst($value['name']).'_Model_'.ucfirst($value['name']);
 					$model = new $module();
 					$list = $model->menuAdmin();
 					

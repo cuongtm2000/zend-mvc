@@ -104,8 +104,14 @@
                     foreach($this->listmenu as $value){
                         if($value['name'] != 'webadmin' && $value['name'] != 'default'){
                             echo '<h3 class="headerbar"><a href="#">'. $this->lang[$value['name']].'</a></h3>';
-                            
-                            $module = ucfirst($value['name']).'_Model_'.ucfirst($value['name']);
+
+                        if($value['name'] == 'world-business')
+							$module ='WorldBusiness_Model_WorldBusiness';
+						elseif ($value['name'] == 'corporate-culture')
+							$module ='CorporateCulture_Model_CorporateCulture';
+						else 
+							$module = ucfirst($value['name']).'_Model_'.ucfirst($value['name']);
+							
                             $model = new $module();
                             $list = $model->menuAdmin();
                             $num_record = count($list);
