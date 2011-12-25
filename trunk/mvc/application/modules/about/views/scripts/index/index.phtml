@@ -1,2 +1,2 @@
-<h1 class="title-pr"><?php echo $this->item['title'.LANG]?></h1>
-<?php echo html_entity_decode($this->item['content'.LANG]); ?>
+<h1 class="title-pr"><?php echo $this->escape($this->item['title'.LANG])?></h1>
+<?php echo $this->item['content'.LANG]; ?>
