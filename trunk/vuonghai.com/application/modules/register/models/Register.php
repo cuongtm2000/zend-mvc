@@ -13,19 +13,16 @@ class Register_Model_Register extends Zend_Db_Table{
     
 	 public function addItem($data=NULL){
 		try{
-			$bind = array('username' => htmlspecialchars($this->_xss->purify(trim($data['username']))), 
-						  'email' => htmlspecialchars($this->_xss->purify($data['email'])),  			  
+			$bind = array('username' => $this->_xss->purify(trim($data['username'])), 
+						  'email' => $this->_xss->purify($data['email']),  			  
 						  'password' => md5($data['password']),    				  
-						  'phone' => htmlspecialchars($this->_xss->purify($data['phone'])),				  
+						  'phone' => $this->_xss->purify($data['phone']),				  
 						  'user_group' => 'user',
 						  'enable' => 1,
 						  'dos_module_provinces_province_id' => $data['province']
 						  );
 			$this->insert($bind);		
 		}catch(Exception $e){
-			/*echo '<pre>';
-			print_r($e);
-			echo '</pre>'; */
 		}
     }
 	/*public function isExist($username)

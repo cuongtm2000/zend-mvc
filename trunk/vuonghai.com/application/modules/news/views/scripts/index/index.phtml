@@ -3,7 +3,7 @@
 	<?php foreach ($this->items as $value):?>
 		<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/news/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg'; ?>
 		<div class="masuring">
-			<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo $this->baseUrl().$picthumb ?>" class="imgcon" style="float:left;" alt="<?php echo $value['title'.LANG] ?>" /></a>
+			<div class="frame-img"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo $this->baseUrl().$picthumb ?>" class="imgcon" alt="<?php echo $value['title'.LANG] ?>" /></a></div>
 		    <h2 class="title-masuring"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h2>
 		 	<?php echo html_entity_decode($value['preview'.LANG]) ?>
 		</div><div class="clear"></div>

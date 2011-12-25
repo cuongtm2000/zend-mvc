@@ -37,7 +37,7 @@ class Webadmin_Model_Setup extends Zend_Db_Table{
     	$i = 0;
 		foreach($moduleid as $value){
 			if(!empty($moduleid[$i]) && !empty($module[$i]) && !empty($url[$i])){
-                    $data = array('moduleid' => htmlspecialchars($this->_xss->purify($moduleid[$i])), 'module' => htmlspecialchars($this->_xss->purify($module[$i])), 'moduleen' => htmlspecialchars($this->_xss->purify($moduleen[$i])), 'modulefr' => htmlspecialchars($this->_xss->purify($modulefr[$i])), 'url' => htmlspecialchars($this->_xss->purify($url[$i])), 'target' => htmlspecialchars($this->_xss->purify($target[$i])), 'position' => htmlspecialchars($this->_xss->purify($position[$i])));
+                    $data = array('moduleid' => $this->_xss->purify($moduleid[$i]), 'module' => $this->_xss->purify($module[$i]), 'moduleen' => $this->_xss->purify($moduleen[$i]), 'modulefr' => $this->_xss->purify($modulefr[$i]), 'url' => $this->_xss->purify($url[$i]), 'target' => $this->_xss->purify($target[$i]), 'position' => $this->_xss->purify($position[$i]));
         			$this->insert($data);
             }
             $i++;
@@ -46,7 +46,7 @@ class Webadmin_Model_Setup extends Zend_Db_Table{
     	$j = 0;
 		foreach($modelidnew as $value){
 			if(!empty($modelidnew[$j]) && !empty($modelnew[$j]) && !empty($urlnew[$j])){
-                    $data = array('moduleid' => htmlspecialchars($this->_xss->purify($modelidnew[$j])), 'module' => htmlspecialchars($this->_xss->purify($modelnew[$j])), 'moduleen' => htmlspecialchars($this->_xss->purify($modelnewen[$j])), 'modulefr' => htmlspecialchars($this->_xss->purify($modelnewfr[$j])), 'url' => htmlspecialchars($this->_xss->purify($urlnew[$j])), 'target' => htmlspecialchars($this->_xss->purify($targetnew[$j])), 'position' => htmlspecialchars($this->_xss->purify($posnew[$j])));
+                    $data = array('moduleid' => $this->_xss->purify($modelidnew[$j]), 'module' => $this->_xss->purify($modelnew[$j]), 'moduleen' => $this->_xss->purify($modelnewen[$j]), 'modulefr' => $this->_xss->purify($modelnewfr[$j]), 'url' => $this->_xss->purify($urlnew[$j]), 'target' => $this->_xss->purify($targetnew[$j]), 'position' => $this->_xss->purify($posnew[$j]));
         			$this->insert($data);
             }
             $j++;

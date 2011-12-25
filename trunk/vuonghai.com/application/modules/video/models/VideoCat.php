@@ -3,6 +3,7 @@ class Video_Model_VideoCat extends Zend_Db_Table{
 	protected $_name = 'dos_module_video_cat';
     protected $_primary = 'cat_id';
     protected $_config = null;
+    private $_xss = NULL;
     
     private $_cat_id = 0; //cat_id coi lai
     private $_numitem = 0; //numitem for cat coi lai
@@ -16,6 +17,7 @@ class Video_Model_VideoCat extends Zend_Db_Table{
 
 	public function init(){
     	$this->_config = Zend_Registry::get("config");
+        $this->_xss = Zend_Registry::get('xss');
     }
     
     // Front end - Get danh mục
@@ -160,7 +162,7 @@ class Video_Model_VideoCat extends Zend_Db_Table{
 		$select = $db->select()->from($this->_name, array('max(cat_order) as max'));
 		$max_record = $db->fetchOne($select)+1;
     	
-    	$data = array('pic_thumb' => $file_thumb, 'cat_parent_id' => $data['parent_id'], 'cat_title' => $data['cat_title'], 'cat_titleen' => $data['cat_titleen'], 'cat_titlefr' => $data['cat_titlefr'], 'cat_order' => $max_record, 'cat_enable' => $data['active']);
+    	$data = array('pic_thumb' => $this->_xss->purify($file_thumb), 'cat_parent_id' => $data['parent_id'], 'cat_title' => $this->_xss->purify($data['cat_title']), 'cat_titleen' => $this->_xss->purify($data['cat_titleen']), 'cat_titlefr' => $this->_xss->purify($data['cat_titlefr']), 'cat_order' => $max_record, 'cat_enable' => $data['active']);
     	$this->insert($data);
     }
 	public function editItem($data = NULL){
@@ -187,7 +189,7 @@ class Video_Model_VideoCat extends Zend_Db_Table{
     	}
     	
     	$where = 'cat_id = '.$data['id'];
-    	$data = array('pic_thumb' => $file_thumb, 'cat_parent_id' => $data['parent_id'], 'cat_title' => $data['cat_title'], 'cat_titleen' => $data['cat_titleen'], 'cat_titlefr' => $data['cat_titlefr'], 'cat_enable' => $data['active']);
+    	$data = array('pic_thumb' => $this->_xss->purify($file_thumb), 'cat_parent_id' => $data['parent_id'], 'cat_title' => $this->_xss->purify($data['cat_title']), 'cat_titleen' => $this->_xss->purify($data['cat_titleen']), 'cat_titlefr' => $this->_xss->purify($data['cat_titlefr']), 'cat_enable' => $data['active']);
     	$this->update($data, $where);
     }
 	public function productCat(){

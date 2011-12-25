@@ -18,6 +18,11 @@ class Techniques_Model_TechniquesCat extends Zend_Db_Table{
     	$this->_config = Zend_Registry::get("config");
         $this->_xss = Zend_Registry::get('xss');
     }
+    // Front end - Get tất cả Danh mục cat_parent_id=0
+	public function getListCat(){
+    	$select = $this->select()->from($this->_name, array('cat_id', 'cat_title'.LANG))->where('cat_enable = 1')->where('cat_parent_id=0')->order('cat_order DESC');
+    	return $this->fetchAll($select)->toArray();
+    }
     
 	// Front end - Get tất cả Danh mục tin tức
 	public function getListmenu(){
@@ -91,7 +96,7 @@ class Techniques_Model_TechniquesCat extends Zend_Db_Table{
 		$select = $db->select()->from($this->_name, array('max(cat_order) as max'));
 		$max_record = $db->fetchOne($select)+1;
 		
-    	$data = array('cat_parent_id' => htmlspecialchars($this->_xss->purify($data['parent_id'])), 'cat_title' => htmlspecialchars($this->_xss->purify($data['cat_title'])), 'cat_titleen' => htmlspecialchars($this->_xss->purify($data['cat_titleen'])), 'cat_titlefr' => htmlspecialchars($this->_xss->purify($data['cat_titlefr'])), 'cat_order' => $max_record);
+    	$data = array('cat_parent_id' => $this->_xss->purify($data['parent_id']), 'cat_title' => $this->_xss->purify($data['cat_title']), 'cat_titleen' => $this->_xss->purify($data['cat_titleen']), 'cat_titlefr' => $this->_xss->purify($data['cat_titlefr']), 'cat_order' => $max_record);
     	$this->insert($data);
     }
 	public function editItem($data = NULL){
@@ -105,7 +110,7 @@ class Techniques_Model_TechniquesCat extends Zend_Db_Table{
     }
 	public function saveItem($data = NULL){
     	$where = 'cat_id = '.$data['id'];
-    	$data = array('cat_parent_id' => htmlspecialchars($this->_xss->purify($data['parent_id'])), 'cat_title' => htmlspecialchars($this->_xss->purify($data['cat_title'])), 'cat_titleen' => htmlspecialchars($this->_xss->purify($data['cat_titleen'])), 'cat_titlefr' => htmlspecialchars($this->_xss->purify($data['cat_titlefr'])));
+    	$data = array('cat_parent_id' => $this->_xss->purify($data['parent_id']), 'cat_title' => $this->_xss->purify($data['cat_title']), 'cat_titleen' => $this->_xss->purify($data['cat_titleen']), 'cat_titlefr' => $this->_xss->purify($data['cat_titlefr']));
     	$this->update($data, $where);
     }
     

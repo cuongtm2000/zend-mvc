@@ -46,15 +46,12 @@ class Techniques_IndexController extends GLT_Controller_Action {
 		$this->webTitle($this->view->lang[$this->_data['module']]);
 	}
 	public function indexAction() {
+        $cat_class = new Techniques_Model_TechniquesCat();
+		$this->view->list_cats = $cat_class->getListCat();
+	
 		$item = new Techniques_Model_Techniques();
-		$this->view->items = $item->listItemnew($this->_data);
-		
-		//paging
-		$totalItem = $item->countItemnew();
-		$paginator = new GLT_Paginator();
-		$this->view->paginator = $paginator->createPaginator($totalItem, $this->_paginator);
-		
-		$this->webTitle($this->view->lang[$this->_data['module']]);
+		$this->view->cat = $item;
+        $this->webTitle($this->view->lang[$this->_data['module']]);
 	}
 	public function viewAction(){
 		$item = new Techniques_Model_Techniques();

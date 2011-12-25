@@ -1,2 +1,5 @@
-<h2><?php echo $this->item['title'.LANG]?></h2>
-<?php echo html_entity_decode($this->item['content'.LANG]); ?>
+<h1 class="title-box-right"><span><a href="<?php echo $this->baseUrl()?>/about" title="<?php echo $this->item['title'.LANG]?>"><?php echo $this->item['title'.LANG]?></a></span></h1>
+<div class="mid-boxright">
+	<?php echo $this->item['content'.LANG]; ?>
+</div>
+<div class="bd-bt-boxright"></div>
