@@ -18,10 +18,10 @@ class Materials_Model_Comments extends Zend_Db_Table{
     
 	 public function addItem($data=NULL){
 		try{
-			$bind = array('comment_title' => htmlspecialchars($this->_xss->purify(trim($data['commenttitle']))), 
-						  'comment_content' => htmlspecialchars($this->_xss->purify($data['commentdetail'])),    				  
-						  'dos_module_item_record_id' => htmlspecialchars($this->_xss->purify($data['id'])),    				  
-						  'dos_sys_users_username' => htmlspecialchars($this->_xss->purify($this->_username)),
+			$bind = array('comment_title' => $this->_xss->purify(trim($data['commenttitle'])), 
+						  'comment_content' => $this->_xss->purify($data['commentdetail']),    				  
+						  'dos_module_item_record_id' => $this->_xss->purify($data['id']),    				  
+						  'dos_sys_users_username' => $this->_xss->purify($this->_username),
 							'comment_enable' => 0)
 			;
 			return $this->insert($bind);
@@ -95,8 +95,8 @@ class Materials_Model_Comments extends Zend_Db_Table{
 	public function updateItem($data=NULL){
 		try{
 			$r=$this->update(array(
-				'comment_title' => htmlspecialchars($this->_xss->purify(trim($data['commenttitle']))), 
-				'comment_content' => htmlspecialchars($this->_xss->purify($data['commentdetail']))
+				'comment_title' => $this->_xss->purify(trim($data['commenttitle'])), 
+				'comment_content' => $this->_xss->purify($data['commentdetail'])
 				),'comment_id=\''.$data['id'].'\'');
 		}catch( Exception $e){
 			echo '<pre>';print_r($e);echo '</pre>';	

@@ -24,7 +24,7 @@ class Webadmin_Model_Function extends Zend_Db_Table{
     	$i = 0;
 		foreach($model_name as $value){
 			if(!empty($model_name[$i]) && !empty($model_load[$i]) && !empty($action[$i]) && !empty($varname[$i]) && !empty($function_load[$i])){
-				$data = array('model_name' => htmlspecialchars($this->_xss->purify($model_name[$i])), 'model_load' => htmlspecialchars($this->_xss->purify($model_load[$i])), 'action' => htmlspecialchars($this->_xss->purify($action[$i])), 'varname' => htmlspecialchars($this->_xss->purify($varname[$i])), 'function_load' => htmlspecialchars($this->_xss->purify($function_load[$i])));
+				$data = array('model_name' => $this->_xss->purify($model_name[$i]), 'model_load' => $this->_xss->purify($model_load[$i]), 'action' => $this->_xss->purify($action[$i]), 'varname' => $this->_xss->purify($varname[$i]), 'function_load' => $this->_xss->purify($function_load[$i]));
         		$this->insert($data);
 			}
 			$i++;

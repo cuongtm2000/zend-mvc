@@ -38,7 +38,7 @@ class GLT_System_SmartCounter extends Zend_Db_Table{
 	private function isExist($sid){
 		$db = $this->getAdapter();
 		$select = $db->select()->from($this->_name, array('count(session_id)'))
-			->where('session_id=?',htmlspecialchars($this->_xss->purify($sid)));	
+			->where('session_id=?',$this->_xss->purify($sid));	
 		return ($db->fetchOne($select)>0 )? true:false;
 	}
 
@@ -51,7 +51,7 @@ class GLT_System_SmartCounter extends Zend_Db_Table{
 
 	private function updateOnlineToday($value ){
 	 	if($value==0){
-	 		$count=1;
+	 		$count=0;
 		}
 	 	else{
 	 		$count=$this->getOnlineToday()+1; 
@@ -90,7 +90,7 @@ class GLT_System_SmartCounter extends Zend_Db_Table{
 
 	private function add($sesstion_id){
 		$this->insert(array(
-			'session_id' => htmlspecialchars($this->_xss->purify($sesstion_id))
+			'session_id' => $this->_xss->purify($sesstion_id)
 			,'time'=>time()));
     }
     
@@ -108,7 +108,6 @@ class GLT_System_SmartCounter extends Zend_Db_Table{
     	}
     	    	
         $staSession = new Zend_Session_Namespace('statistics');
-       
         $sid = $staSession->statistics;
         
         if ($sid == '') {

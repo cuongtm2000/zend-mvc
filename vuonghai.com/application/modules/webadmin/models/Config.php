@@ -27,7 +27,7 @@ class Webadmin_Model_Config extends Zend_Db_Table{
     	$i = 0;
 		foreach($config_name as $value){
 			if(!empty($config_name[$i]) && !empty($config_value[$i])){
-				$data = array('config_name' => htmlspecialchars($this->_xss->purify($config_name[$i])), 'config_value' => htmlspecialchars($this->_xss->purify($config_value[$i])), 'config_choices' => htmlspecialchars($this->_xss->purify($config_choices[$i])));
+				$data = array('config_name' => $this->_xss->purify($config_name[$i]), 'config_value' => $this->_xss->purify($config_value[$i]), 'config_choices' => $this->_xss->purify($config_choices[$i]));
         		$this->insert($data);
 			}
 			$i++;
@@ -36,7 +36,7 @@ class Webadmin_Model_Config extends Zend_Db_Table{
     	$j = 0;
 		foreach($config_namenew as $value){
 			if(!empty($config_namenew[$j]) && !empty($config_valuenew[$j])){
-				$data = array('config_name' => htmlspecialchars($this->_xss->purify($config_namenew[$j])), 'config_value' => htmlspecialchars($this->_xss->purify($config_valuenew[$j])), 'config_choices' => htmlspecialchars($this->_xss->purify($config_choicesnew[$j])));
+				$data = array('config_name' => $this->_xss->purify($config_namenew[$j]), 'config_value' => $this->_xss->purify($config_valuenew[$j]), 'config_choices' => $this->_xss->purify($config_choicesnew[$j]));
         		$this->insert($data);
 			}
 			$j++;

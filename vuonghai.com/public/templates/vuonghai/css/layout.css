@@ -61,10 +61,6 @@ a:hover{color:#000;}
 .statistics{list-style:none;padding:10px 3px 10px 15px; background:url(../images/mid-left.gif) repeat-y  }
 .statistics li {color:#000; line-height:1.75em;}
 
-/** Quang cao**/
-.top {margin:0 0 0 1px;width:185px;border-left:3px solid #E5E5E5; border-right:3px solid #E5E5E5;list-style:none; text-align:center;height:265px;overflow:hidden}
-.top img{border:none}
-
 /*Right content*/
 #rightcontent{float:left; width:575px; margin:0 0 0 5px}
 #rightcontent p{margin:10px 0; line-height:1.5em; text-align:justify}
@@ -74,6 +70,8 @@ a:hover{color:#000;}
 .title-right a{color:#3F9C00}
 .title-box-right{ background:url(../images/bg-box-right.gif) no-repeat; padding:10px 0;color:#296900; font-size:10pt; font-weight:700}
 .title-box-right span{padding:0 0 0 18px}
+.title-box-right span a{color:#296900}
+.title-box-right span a:hover{color:#333}
 .title-h2{ margin:0 0 10px 0;color:#296900; font-weight:bold}
 .title-h2 a{color:#296900}
 .title-h2 a:hover{color:#009BE6}
@@ -82,7 +80,7 @@ a:hover{color:#000;}
 .bd-bt-boxright{margin:0 0 10px 0;background:url(../images/bt-bg-boxright.gif) no-repeat; width:575px; height:14px}
 
 /*  Tieu Diem focus*/
-.frame-focus{width:215px; float:right}
+.frame-focus{width:215px; float:right;margin:0 0 0 15px}
 .title-focus{ text-align:center;background:url(../images/title-box-focus.gif) no-repeat; width:215px;padding:9px 0;font-size:10pt;color:#296900; font-size:10pt; font-weight:bold}
 .bd-bt-focus{ background:url(../images/bd-bt-focus.gif) no-repeat; height:10px; width:215px}
 
@@ -91,13 +89,13 @@ a:hover{color:#000;}
 
 .sub-new{float:right; width:230px}
 .sub-new img{margin:0 5px 5px 0 !important; width: 65px}
-.sub-new li{padding:3px 0;list-style-image:url(../images/ico-new.gif)}
+.sub-new li{padding:3px 0;list-style-image:url(../images/ico-new.gif); clear:both}
 .sub-new li a{color:#3C9703}
 
 /*Sub focus tent*/
 .fucus-tent{padding:10px 0 0 5px; line-height:1.5em;background:url(../images/mid-box-focus.gif) repeat-y; list-style:none}
 .fucus-tent li{list-style-image:url(../images/bull.gif); padding:5px 5px}
-.fucus-tent li a{color:#000;}
+.fucus-tent li a{color:#000; display:block}
 .fucus-tent li a:hover{color:#008080}
 
 /**  Link **/
@@ -108,7 +106,7 @@ a:hover{color:#000;}
 
 /*Page New*/
 .masuring{text-align:justify;font-size:10pt;color:#666;margin-bottom:20px}
-.masuring img{margin:0 10px 5px 2px}
+.frame-img{float:left;width:143px;height:90px;margin:0 10px 5px 2px}
 .title-masuring  a{color:#208FFF;font-size:10pt; font-weight:700}
 .masuring a:hover{color:#F90}
 

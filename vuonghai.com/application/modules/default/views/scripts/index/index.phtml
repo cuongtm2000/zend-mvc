@@ -1,3 +1,11 @@
+<?php if($this->about_home):?>
+<h1 class="title-box-right"><span><a href="<?php echo $this->baseUrl()?>/about" title="<?php echo $this->about_home['title'.LANG]?>"><?php echo $this->about_home['title'.LANG]?></a></span></h1>
+<div class="mid-boxright">
+	<?php echo $this->about_home['content'.LANG]?>
+</div>
+<div class="bd-bt-boxright"></div>
+<?php endif;?>
+
 <h1 class="title-box-right"><span>TIN NỔI BẬT</span></h1>
 <div class="mid-boxright">
 	<div class="frame-focus">
@@ -13,8 +21,8 @@
 	</div> <!--End Frame focus-->
     
     <?php if($this->news_hot_first): ?>
-        <?php if($this->news_hot_first['pic_thumb']): ?><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $this->news_hot_first['record_id'] ?>/<?php echo $this->noneUnicode($this->news_hot_first['title'.LANG]) ?>" title="<?php echo $this->news_hot_first['title'.LANG] ?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/news/<?php echo $this->news_hot_first['pic_thumb'] ?>" alt="<?php echo $this->news_hot_first['title'.LANG] ?>" /></a><?php endif; ?>
-    	<h2 class="title-h2"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $this->news_hot_first['record_id'] ?>/<?php echo $this->noneUnicode($this->news_hot_first['title'.LANG]) ?>" title="<?php echo $this->news_hot_first['title'.LANG] ?>"><?php echo $this->news_hot_first['title'.LANG] ?></a></h2>
+		<h2 class="title-h2"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $this->news_hot_first['record_id'] ?>/<?php echo $this->noneUnicode($this->news_hot_first['title'.LANG]) ?>" title="<?php echo $this->news_hot_first['title'.LANG] ?>"><?php echo $this->news_hot_first['title'.LANG] ?></a></h2>
+        <!--<?php if($this->news_hot_first['pic_thumb']): ?><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $this->news_hot_first['record_id'] ?>/<?php echo $this->noneUnicode($this->news_hot_first['title'.LANG]) ?>" title="<?php echo $this->news_hot_first['title'.LANG] ?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/news/<?php echo $this->news_hot_first['pic_thumb'] ?>" alt="<?php echo $this->news_hot_first['title'.LANG] ?>" style="float:left" /></a><?php endif; ?>-->
     	<?php echo html_entity_decode($this->news_hot_first['preview'.LANG]) ?>
     <?php endif; ?>
     <div class="clear"></div>
@@ -26,6 +34,7 @@
     <?php if($this->materials_hot_first): ?>
 	<div class="tent-new">
 		<h2 class="title-h2"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>materials/index/view/id/<?php echo $this->materials_hot_first['record_id'] ?>/<?php echo $this->noneUnicode($this->materials_hot_first['title'.LANG]) ?>" title="<?php echo $this->materials_hot_first['title'.LANG] ?>"><?php echo $this->materials_hot_first['title'.LANG] ?></a></h2>
+		<?php if($this->materials_hot_first['pic_thumb']): ?><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>materials/index/view/id/<?php echo $this->materials_hot_first['record_id'] ?>/<?php echo $this->noneUnicode($this->materials_hot_first['title'.LANG]) ?>" title="<?php echo $this->materials_hot_first['title'.LANG] ?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/materials/<?php echo $this->materials_hot_first['pic_thumb'] ?>" alt="<?php echo $this->materials_hot_first['title'.LANG] ?>" style="float:left" /></a><?php endif; ?>
 		<?php echo html_entity_decode($this->materials_hot_first['preview'.LANG]) ?>
 	</div><!--End tent new-->
     <?php endif; ?>
@@ -33,7 +42,7 @@
     <?php if($this->materials_hots): ?>
 	<ul class="sub-new">
         <?php foreach($this->materials_hots as $value): ?>
-		  <li<?php echo ($value['pic_thumb']) ? ' style="list-style:none"' : '' ?>>
+		  <li <?php echo ($value['pic_thumb']) ? ' style="list-style:none"' : '' ?>>
             <?php if($value['pic_thumb']):?>
                 <a href="<?php echo $this->baseUrl().'/'.LANGURL ?>materials/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG]) ?>" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/materials/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" title="<?php echo $value['title'.LANG] ?>" style="float:left;"/></a>
             <?php endif; ?>
@@ -49,7 +58,8 @@
     <?php if($this->techniques_hot_first): ?>
     	<div class="tent-new">
     		<h2 class="title-h2"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>techniques/index/view/id/<?php echo $this->techniques_hot_first['record_id'] ?>/<?php echo $this->noneUnicode($this->techniques_hot_first['title'.LANG]) ?>" title="<?php echo $this->techniques_hot_first['title'.LANG] ?>"><?php echo $this->techniques_hot_first['title'.LANG] ?></a></h2>
-    		<?php echo html_entity_decode($this->techniques_hot_first['preview'.LANG]) ?>
+    		<?php if($this->techniques_hot_first['pic_thumb']): ?><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>techniques/index/view/id/<?php echo $this->techniques_hot_first['record_id'] ?>/<?php echo $this->noneUnicode($this->techniques_hot_first['title'.LANG]) ?>" title="<?php echo $this->techniques_hot_first['title'.LANG] ?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/techniques/<?php echo $this->techniques_hot_first['pic_thumb'] ?>" alt="<?php echo $this->techniques_hot_first['title'.LANG] ?>" style="float:left" /></a><?php endif; ?>
+			<?php echo html_entity_decode($this->techniques_hot_first['preview'.LANG]) ?>
     	</div><!--End tent new-->
     <?php endif; ?>
 	
@@ -82,7 +92,7 @@
         <?php foreach($this->productions_hots as $value): ?>
 		  <li<?php echo ($value['pic_thumb']) ? ' style="list-style:none"' : '' ?>>
             <?php if($value['pic_thumb']):?>
-                <a href="<?php echo $this->baseUrl().'/'.LANGURL ?>productions/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG]) ?>" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/techniques/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" title="<?php echo $value['title'.LANG] ?>" style="float:left;"/></a>
+                <a href="<?php echo $this->baseUrl().'/'.LANGURL ?>productions/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG]) ?>" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/productions/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" title="<?php echo $value['title'.LANG] ?>" style="float:left;"/></a>
             <?php endif; ?>
             <a href="<?php echo $this->baseUrl().'/'.LANGURL ?>productions/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG]) ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a><div class="clear"></div>
           </li>

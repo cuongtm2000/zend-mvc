@@ -10,9 +10,10 @@
 
 <link href="<?php echo $this->baseUrl().TEMPLATE ?>/css/dosvn.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo $this->baseUrl().TEMPLATE ?>/css/wt-rotator.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo $this->baseUrl().TEMPLATE ?>/css/skin.css" rel="stylesheet" type="text/css" />
+
 <script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery-1.6.4.min.js"></script> 
-<script type='text/javascript' src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery.imageScroller.js"></script>
-<script type='text/javascript' src="<?php echo $this->baseUrl().TEMPLATE ?>/js/adv.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery.jcarousel.min.js"></script> 
 <script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery-banner-rotato.js"></script> 
 <script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery-banner-rotato.effect.js"></script>
 
@@ -28,7 +29,18 @@
 		runbanner(<?php echo $this->config['banner_width'] ?>, <?php echo $this->config['banner_height'] ?>);
 	});
 </script>
+<script type="text/javascript">
 
+jQuery(document).ready(function() {
+    jQuery('.mycarousel').jcarousel({
+		auto:2,
+		scroll:1,
+		vertical: true,
+		wrap: 'circular',
+    });
+});
+
+</script>
 </head>
 <body>
 <div id="wrapper">
@@ -39,10 +51,10 @@
         		</a>
         	</div><!--End left header-->
             <div id="header-right">
-                <!-- <div class="lang">
+                <div class="lang">
                    <a href="<?php echo $this->baseUrl() ?>/" title="Tiếng Việt">Tiếng Việt <img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/vn.gif" alt="Việt Nam" class="lang-vn"/></a>
                    <a href="<?php echo $this->baseUrl() ?>/en" title="English">English <img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/en.gif" alt="English" /></a>
-                </div> -->
+                </div>
                 <p class="link-right">
             	<?php if(!$this->checklogin()): ?>
 	                 	<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/icon-register.png" alt="Registration" />
@@ -293,12 +305,12 @@
 
                 <?php if($this->list_adv_left):?>
                     <h1 class="title-box"><?php echo $this->lang['adv'] ?></h1>
-                    <div class="top">
-                        <?php foreach ($this->list_adv_left as $value):?>
-                            <a href="<?php echo $value['url']?>" target="_blank" title="<?php echo $value['title'.LANG].' - '.$value['description']?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['title'.LANG].' - '.$value['description']?>" title="<?php echo $value['title'.LANG].' - '.$value['description']?>"  /></a>
+					<ul class="mycarousel jcarousel jcarousel-skin-tango">
+						<?php foreach ($this->list_adv_left as $value):?>
+							<li><a href="<?php echo $value['url']?>" target="_blank" title="<?php echo $value['title'.LANG].' - '.$value['description']?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['title'.LANG].' - '.$value['description']?>" title="<?php echo $value['title'.LANG].' - '.$value['description']?>"  /></a></li>
                         <?php endforeach;?>
-                    </div>
-                    <div class="bd-frame-box"></div><!--End Bd bt frame box-->
+					</ul>
+					<div class="bd-frame-box"></div><!--End Bd bt frame box-->
                <?php endif;?> 
             </div><!--End left content-->
             <div id="rightcontent">
@@ -324,12 +336,12 @@
             <div id="columns3">
                 <?php if($this->list_adv_right):?>
                     <h1 class="title-box"><?php echo $this->lang['adv'] ?></h1>
-                     <div class="top">
-                        <?php foreach ($this->list_adv_right as $value):?>
-                            <a href="<?php echo $value['url'] ?>" target="_blank" title="<?php echo $value['title'.LANG].' - '.$value['description']?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['title'.LANG].' - '.$value['description']?>" /></a>
-    					<?php endforeach;?>
-                    </div>
-                    <div class="bd-frame-box"></div><!--End Bd bt frame box-->
+					<ul class="mycarousel jcarousel jcarousel-skin-tango">
+						<?php foreach ($this->list_adv_right as $value):?>
+							<li><a href="<?php echo $value['url']?>" target="_blank" title="<?php echo $value['title'.LANG].' - '.$value['description']?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['title'.LANG].' - '.$value['description']?>" title="<?php echo $value['title'.LANG].' - '.$value['description']?>"  /></a></li>
+                        <?php endforeach;?>
+					</ul>
+					<div class="bd-frame-box"></div><!--End Bd bt frame box-->
                 <?php endif;?> 
 			</div><!--End colums3--><div class="clear"></div>
             
@@ -344,7 +356,7 @@
 					}
 				?>
             </ul>
-			<?php echo html_entity_decode($this->contact_home['content']) ?>
+			<?php echo $this->contact_home['content'] ?>
     </div><!--End Footer-->
 </div><!--End wrapper-->
 </body>

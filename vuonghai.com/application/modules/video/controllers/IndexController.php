@@ -40,6 +40,7 @@ class Video_IndexController extends GLT_Controller_Action {
 		$totalItem = $item->countItem();
 		$paginator = new GLT_Paginator();
 		$this->view->paginator = $paginator->createPaginator($totalItem, $this->_paginator);
+        $this->webTitle($this->view->lang[$this->_data['module']]);
 	}
     public function viewAction(){
 		$record = new Video_Model_Video();
@@ -51,14 +52,11 @@ class Video_IndexController extends GLT_Controller_Action {
 
     public function catAction(){
 		$this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE.'/js/jquery.prettyPhoto.js');
-		$this->view->headLink()->appendStylesheet($this->_request->getBaseUrl().TEMPLATE.'/css/prettyPhoto.css');
+		$this->view->headLink()->appendStylesheet($this->_request->getBaseUrl().TEMPLATE.'/css/prettyphoto.css');
 		
 		$this->view->catid = $this->_data['id'];
 		
     	$record = new Video_Model_Video();
     	$this->view->items = $record->itemByCat($this->_data['id']);
-    	
-    	//$cat = new Video_Model_VideoCat();
-    	//$this->view->infocat = $cat->getCatbyId($this->_data['id']);
     }
 }

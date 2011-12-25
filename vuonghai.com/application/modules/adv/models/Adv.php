@@ -71,7 +71,7 @@ class Adv_Model_Adv extends Zend_Db_Table{
 			}
     	}
 
-    	$data = array('title' => htmlspecialchars($this->_xss->purify($data['title'])), 'titleen' => htmlspecialchars($this->_xss->purify($data['titleen'])), 'titlefr' => htmlspecialchars($this->_xss->purify($data['titlefr'])), 'pic_thumb' => $filename, 'url' => htmlspecialchars($this->_xss->purify($data['url'])), 'description' => htmlspecialchars($this->_xss->purify($data['description'])), 'start_date' => htmlspecialchars($this->_xss->purify(date('Y-m-d', strtotime($data['start_date'])))), 'end_date' => htmlspecialchars($this->_xss->purify(date('Y-m-d', strtotime($data['end_date'])))), 'position' => htmlspecialchars($this->_xss->purify($data['position'])), 'type' => htmlspecialchars($this->_xss->purify($data['type'])), 'enable' => htmlspecialchars($this->_xss->purify($data['active'])));
+    	$data = array('title' => $this->_xss->purify($data['title']), 'titleen' => $this->_xss->purify($data['titleen']), 'titlefr' => $this->_xss->purify($data['titlefr']), 'pic_thumb' => $filename, 'url' => $this->_xss->purify($data['url']), 'description' => $this->_xss->purify($data['description']), 'start_date' => $this->_xss->purify(date('Y-m-d', strtotime($data['start_date']))), 'end_date' => $this->_xss->purify(date('Y-m-d', strtotime($data['end_date']))), 'position' => $this->_xss->purify($data['position']), 'type' => $this->_xss->purify($data['type']), 'enable' => $this->_xss->purify($data['active']));
     	$this->insert($data);
     }
     //Back end - Get chi tiết bản tin
@@ -100,7 +100,7 @@ class Adv_Model_Adv extends Zend_Db_Table{
 			}
     	}
     	$where = 'record_id = '.$data['id'];
-    	$data = array('title' => htmlspecialchars($this->_xss->purify($data['title'])), 'titleen' => htmlspecialchars($this->_xss->purify($data['titleen'])), 'titlefr' => htmlspecialchars($this->_xss->purify($data['titlefr'])), 'pic_thumb' => $filename, 'url' => htmlspecialchars($this->_xss->purify($data['url'])), 'description' => htmlspecialchars($this->_xss->purify($data['description'])), 'start_date' => htmlspecialchars($this->_xss->purify(date('Y-m-d', strtotime($data['start_date'])))), 'end_date' => htmlspecialchars($this->_xss->purify(date('Y-m-d', strtotime($data['end_date'])))), 'position' => htmlspecialchars($this->_xss->purify($data['position'])), 'type' => htmlspecialchars($this->_xss->purify($data['type'])), 'enable' => htmlspecialchars($this->_xss->purify($data['active'])));
+    	$data = array('title' => $this->_xss->purify($data['title']), 'titleen' => $this->_xss->purify($data['titleen']), 'titlefr' => $this->_xss->purify($data['titlefr']), 'pic_thumb' => $filename, 'url' => $this->_xss->purify($data['url']), 'description' => $this->_xss->purify($data['description']), 'start_date' => $this->_xss->purify(date('Y-m-d', strtotime($data['start_date']))), 'end_date' => $this->_xss->purify(date('Y-m-d', strtotime($data['end_date']))), 'position' => $this->_xss->purify($data['position']), 'type' => $this->_xss->purify($data['type']), 'enable' => $this->_xss->purify($data['active']));
     	$this->update($data, $where);
     }   
     //Back end - Đếm tổng số mẫu tin
