@@ -65,7 +65,7 @@ class Contact_Model_Contact extends Zend_Db_Table{
 		return $db->fetchOne($select);
     }
 	public function addItem($data = NULL){   	
-    	$data = array('title' => htmlspecialchars($this->_xss->purify($data['title'])), 'titleen' => htmlspecialchars($this->_xss->purify($data['titleen'])), 'titlefr' => htmlspecialchars($this->_xss->purify($data['titlefr'])), 'content' => htmlspecialchars($this->_xss->purify($data['detail'])), 'contenten' => htmlspecialchars($this->_xss->purify($data['detailen'])), 'contentfr' => htmlspecialchars($this->_xss->purify($data['detailfr'])), 'hot' => htmlspecialchars($this->_xss->purify($data['hot'])), 'enable' => htmlspecialchars($this->_xss->purify($data['active'])));
+    	$data = array('title' => $this->_xss->purify($data['title']), 'titleen' => $this->_xss->purify($data['titleen']), 'titlefr' => $this->_xss->purify($data['titlefr']), 'content' => $this->_xss->purify($data['detail']), 'contenten' => $this->_xss->purify($data['detailen']), 'contentfr' => $this->_xss->purify($data['detailfr']), 'hot' => $this->_xss->purify($data['hot']), 'enable' => $this->_xss->purify($data['active']));
     	$this->insert($data);
     }
 	public function editItem($data = NULL){
@@ -79,7 +79,7 @@ class Contact_Model_Contact extends Zend_Db_Table{
     }
 	public function saveItem($data = NULL){
     	$where = 'record_id = '.$data['id'];
-    	$data = array('title' => htmlspecialchars($this->_xss->purify($data['title'])), 'titleen' => htmlspecialchars($this->_xss->purify($data['titleen'])), 'titlefr' => htmlspecialchars($this->_xss->purify($data['titlefr'])), 'content' => htmlspecialchars($this->_xss->purify($data['detail'])), 'contenten' => htmlspecialchars($this->_xss->purify($data['detailen'])), 'contentfr' => htmlspecialchars($this->_xss->purify($data['detailfr'])), 'hot' => htmlspecialchars($this->_xss->purify($data['hot'])), 'enable' => htmlspecialchars($this->_xss->purify($data['active'])));
+    	$data = array('title' => $this->_xss->purify($data['title']), 'titleen' => $this->_xss->purify($data['titleen']), 'titlefr' => $this->_xss->purify($data['titlefr']), 'content' => $this->_xss->purify($data['detail']), 'contenten' => $this->_xss->purify($data['detailen']), 'contentfr' => $this->_xss->purify($data['detailfr']), 'hot' => $this->_xss->purify($data['hot']), 'enable' => $this->_xss->purify($data['active']));
     	$this->update($data, $where);
     }
 	public function activeItem($data = NULL){

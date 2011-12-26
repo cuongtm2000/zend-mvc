@@ -188,7 +188,7 @@ class Gallery_Model_Gallery extends Zend_Db_Table{
 		$select = $db->select()->from($this->_name, array('max(record_order) as max'));
 		$max_record = $db->fetchOne($select)+1;
 		
-    	$data = array('pic_thumb' => $file_thumb, 'pic_full' => $file_full, 'title' => htmlspecialchars($this->_xss->purify($data['title'])), 'titleen' => htmlspecialchars($this->_xss->purify($data['titleen'])), 'titlefr' => htmlspecialchars($this->_xss->purify($data['titlefr'])), 'record_order' => $max_record, 'enable' => htmlspecialchars($this->_xss->purify($data['active'])), 'dos_module_gallery_cat_cat_id' => htmlspecialchars($this->_xss->purify($data['parentcat'])));
+    	$data = array('pic_thumb' => $file_thumb, 'pic_full' => $file_full, 'title' => $this->_xss->purify($data['title']), 'titleen' => $this->_xss->purify($data['titleen']), 'titlefr' => $this->_xss->purify($data['titlefr']), 'record_order' => $max_record, 'enable' => $this->_xss->purify($data['active']), 'dos_module_gallery_cat_cat_id' => $this->_xss->purify($data['parentcat']));
     	$this->insert($data);
     }
 	public function editItem($data = NULL){
@@ -224,7 +224,7 @@ class Gallery_Model_Gallery extends Zend_Db_Table{
     	}
 		
     	$where = 'record_id = '.$data['id'];
-    	$data = array('pic_thumb' => $file_thumb, 'pic_full' => $file_full, 'title' => htmlspecialchars($this->_xss->purify($data['title'])), 'titleen' => htmlspecialchars($this->_xss->purify($data['titleen'])), 'titlefr' => htmlspecialchars($this->_xss->purify($data['titlefr'])), 'enable' => htmlspecialchars($this->_xss->purify($data['active'])), 'dos_module_gallery_cat_cat_id' => htmlspecialchars($this->_xss->purify($data['parentcat'])));
+    	$data = array('pic_thumb' => $file_thumb, 'pic_full' => $file_full, 'title' => $this->_xss->purify($data['title']), 'titleen' => $this->_xss->purify($data['titleen']), 'titlefr' => $this->_xss->purify($data['titlefr']), 'enable' => $this->_xss->purify($data['active']), 'dos_module_gallery_cat_cat_id' => $this->_xss->purify($data['parentcat']));
     	$this->update($data, $where);
     }
 	public function delPic($id){

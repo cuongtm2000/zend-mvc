@@ -69,7 +69,7 @@ class Conference_Model_Conference extends Zend_Db_Table{
 		$select = $db->select()->from($this->_name, array('max(record_order) as max'));
 		$max_record = $db->fetchOne($select)+1;
 		
-    	$data = array('title' => htmlspecialchars($this->_xss->purify($data['title'])), 'titleen' => htmlspecialchars($this->_xss->purify($data['titleen'])), 'titlefr' => htmlspecialchars($this->_xss->purify($data['titlefr'])), 'content' => htmlspecialchars($this->_xss->purify($data['detail'])), 'contenten' => htmlspecialchars($this->_xss->purify($data['detailen'])), 'contentfr' => htmlspecialchars($this->_xss->purify($data['detailfr'])), 'record_order' => $max_record, 'extra_field1' => htmlspecialchars($this->_xss->purify($data['extra1'])), 'extra_field2' => htmlspecialchars($this->_xss->purify($data['extra2'])), 'hot' => htmlspecialchars($this->_xss->purify($data['hot'])), 'enable' => htmlspecialchars($this->_xss->purify($data['active'])));
+    	$data = array('title' => $this->_xss->purify($data['title']), 'titleen' => $this->_xss->purify($data['titleen']), 'titlefr' => $this->_xss->purify($data['titlefr']), 'content' => $this->_xss->purify($data['detail']), 'contenten' => $this->_xss->purify($data['detailen']), 'contentfr' => $this->_xss->purify($data['detailfr']), 'record_order' => $max_record, 'extra_field1' => $this->_xss->purify($data['extra1']), 'extra_field2' => $this->_xss->purify($data['extra2']), 'hot' => $this->_xss->purify($data['hot']), 'enable' => $this->_xss->purify($data['active']));
     	$this->insert($data);
     }
     //Back end - Sửa bản tin
@@ -85,7 +85,7 @@ class Conference_Model_Conference extends Zend_Db_Table{
     //Back end - Save bản tin
     public function saveItem($data = NULL){
     	$where = 'record_id = '.$data['id'];
-    	$data = array('title' => htmlspecialchars($this->_xss->purify($data['title'])), 'titleen' => htmlspecialchars($this->_xss->purify($data['titleen'])), 'titlefr' => htmlspecialchars($this->_xss->purify($data['titlefr'])), 'content' => htmlspecialchars($this->_xss->purify($data['detail'])), 'contenten' => htmlspecialchars($this->_xss->purify($data['detailen'])), 'contentfr' => htmlspecialchars($this->_xss->purify($data['detailfr'])), 'extra_field1' => htmlspecialchars($this->_xss->purify($data['extra1'])), 'extra_field2' => htmlspecialchars($this->_xss->purify($data['extra2'])), 'hot' => htmlspecialchars($this->_xss->purify($data['hot'])), 'enable' => htmlspecialchars($this->_xss->purify($data['active'])));
+    	$data = array('title' => $this->_xss->purify($data['title']), 'titleen' => $this->_xss->purify($data['titleen']), 'titlefr' => $this->_xss->purify($data['titlefr']), 'content' => $this->_xss->purify($data['detail']), 'contenten' => $this->_xss->purify($data['detailen']), 'contentfr' => $this->_xss->purify($data['detailfr']), 'extra_field1' => $this->_xss->purify($data['extra1']), 'extra_field2' => $this->_xss->purify($data['extra2']), 'hot' => $this->_xss->purify($data['hot']), 'enable' => $this->_xss->purify($data['active']));
     	$this->update($data, $where);
     }
     //Back end - Dem tổng số mẫu tin

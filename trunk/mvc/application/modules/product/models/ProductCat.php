@@ -3,6 +3,7 @@ class Product_Model_ProductCat extends Zend_Db_Table{
 	protected $_name = 'dos_module_product_cat';
     protected $_primary = 'cat_id';
     protected $_config = null;
+	private $_xss = NULL;
     
     private $_cat_id = 0; //cat_id coi lai
     private $_numitem = 0; //numitem for cat coi lai
@@ -16,6 +17,7 @@ class Product_Model_ProductCat extends Zend_Db_Table{
 
 	public function init(){
     	$this->_config = Zend_Registry::get("config");
+		$this->_xss = Zend_Registry::get('xss');
     }
     
     // Front end - Get danh mục sản phẩm
@@ -212,7 +214,7 @@ class Product_Model_ProductCat extends Zend_Db_Table{
 		$select = $db->select()->from($this->_name, array('max(cat_order) as max'));
 		$max_record = $db->fetchOne($select)+1;
     	
-    	$data = array('pic_thumb' => $file_thumb, 'pic_full' => $file_full, 'pic_desc' => implode("|", $file_desc_multi), 'cat_parent_id' => $data['parent_id'], 'cat_title' => $data['cat_title'], 'cat_titleen' => $data['cat_titleen'], 'cat_titlefr' => $data['cat_titlefr'], 'preview' => $data['preview'], 'previewen' => $data['previewen'], 'previewfr' => $data['previewfr'], 'cat_order' => $max_record, 'cat_extra1' => $data['extra1'], 'cat_extra2' => $data['extra2'], 'cat_extra3' => $data['extra3'], 'cat_extra4' => $data['extra4'], 'cat_enable' => $data['active']);
+    	$data = array('pic_thumb' => $file_thumb, 'pic_full' => $file_full, 'pic_desc' => implode("|", $file_desc_multi), 'cat_parent_id' => $data['parent_id'], 'cat_title' => $this->_xss->purify($data['cat_title']), 'cat_titleen' => $this->_xss->purify($data['cat_titleen']), 'cat_titlefr' => $this->_xss->purify($data['cat_titlefr']), 'preview' => $this->_xss->purify($data['preview']), 'previewen' => $this->_xss->purify($data['previewen']), 'previewfr' => $this->_xss->purify($data['previewfr']), 'cat_order' => $max_record, 'cat_extra1' => $this->_xss->purify($data['extra1']), 'cat_extra2' => $this->_xss->purify($data['extra2']), 'cat_extra3' => $this->_xss->purify($data['extra3']), 'cat_extra4' => $this->_xss->purify($data['extra4']), 'cat_enable' => $data['active']);
     	$this->insert($data);
     }
 	public function editItem($data = NULL){
@@ -289,7 +291,7 @@ class Product_Model_ProductCat extends Zend_Db_Table{
     	}
     	
     	$where = 'cat_id = '.$data['id'];
-    	$data = array('pic_thumb' => $file_thumb, 'pic_full' => $file_full, 'pic_desc' => implode("|", $file_upload_new), 'cat_parent_id' => $data['parent_id'], 'cat_title' => $data['cat_title'], 'cat_titleen' => $data['cat_titleen'], 'cat_titlefr' => $data['cat_titlefr'], 'preview' => $data['preview'], 'previewen' => $data['previewen'], 'previewfr' => $data['previewfr'], 'cat_extra1' => $data['extra1'], 'cat_extra2' => $data['extra2'], 'cat_extra3' => $data['extra3'], 'cat_extra4' => $data['extra4'], 'cat_enable' => $data['active']);
+    	$data = array('pic_thumb' => $file_thumb, 'pic_full' => $file_full, 'pic_desc' => implode("|", $file_upload_new), 'cat_parent_id' => $data['parent_id'], 'cat_title' => $this->_xss->purify($data['cat_title']), 'cat_titleen' => $this->_xss->purify($data['cat_titleen']), 'cat_titlefr' => $this->_xss->purify($data['cat_titlefr']), 'preview' => $this->_xss->purify($data['preview']), 'previewen' => $this->_xss->purify($data['previewen']), 'previewfr' => $this->_xss->purify($data['previewfr']), 'cat_extra1' => $this->_xss->purify($data['extra1']), 'cat_extra2' => $this->_xss->purify($data['extra2']), 'cat_extra3' => $this->_xss->purify($data['extra3']), 'cat_extra4' => $this->_xss->purify($data['extra4']), 'cat_enable' => $data['active']);
     	$this->update($data, $where);
     }
 	public function productCat(){

@@ -52,7 +52,7 @@ class Banner_Model_Banner extends Zend_Db_Table{
 		$select = $db->select()->from($this->_name, array('max(banner_order) as max'));
 		$max_record = $db->fetchOne($select)+1;
     	
-    	$data = array('banner_name' => htmlspecialchars($this->_xss->purify($data['title'])), 'banner_url' => $filename, 'banner_link' => htmlspecialchars($this->_xss->purify($data['banner_link'])), 'banner_order' => $max_record, 'enable' => htmlspecialchars($this->_xss->purify($data['active'])), 'position' => htmlspecialchars($this->_xss->purify($data['parentcat'])), 'page_position' => htmlspecialchars($this->_xss->purify($data['position'])), 'banner_size' => $width.'x'.$height);
+    	$data = array('banner_name' => $this->_xss->purify($data['title']), 'banner_url' => $filename, 'banner_link' => $this->_xss->purify($data['banner_link']), 'banner_order' => $max_record, 'enable' => $this->_xss->purify($data['active']), 'position' => $this->_xss->purify($data['parentcat']), 'page_position' => $this->_xss->purify($data['position']), 'banner_size' => $width.'x'.$height);
     	$this->insert($data);
     }
     public function editItem($data = NULL){
@@ -81,7 +81,7 @@ class Banner_Model_Banner extends Zend_Db_Table{
 			}
     	}
     	$where = 'banner_id = '.$data['id'];
-    	$data = array('banner_name' => htmlspecialchars($this->_xss->purify($data['title'])), 'banner_url' => $filename, 'banner_link' => htmlspecialchars($this->_xss->purify($data['banner_link'])), 'enable' => htmlspecialchars($this->_xss->purify($data['active'])), 'position' => htmlspecialchars($this->_xss->purify($data['parentcat'])), 'page_position' => htmlspecialchars($this->_xss->purify($data['position'])), 'banner_size' => $sizefilename);
+    	$data = array('banner_name' => $this->_xss->purify($data['title']), 'banner_url' => $filename, 'banner_link' => $this->_xss->purify($data['banner_link']), 'enable' => $this->_xss->purify($data['active']), 'position' => $this->_xss->purify($data['parentcat']), 'page_position' => $this->_xss->purify($data['position']), 'banner_size' => $sizefilename);
     	$this->update($data, $where);
     }
 

@@ -25,7 +25,7 @@ class Webadmin_Model_Web extends Zend_Db_Table{
     	$i = 0;
 		foreach($web_name as $value){
 			if(!empty($web_name[$i]) && !empty($web_value[$i])){
-				$bind = array('web_name' => htmlspecialchars($this->_xss->purify(trim($web_name[$i]))), 'web_value' => htmlspecialchars($this->_xss->purify(trim($web_value[$i]))));
+				$bind = array('web_name' => $this->_xss->purify(trim($web_name[$i])), 'web_value' => $this->_xss->purify(trim($web_value[$i])));
         		$this->insert($bind);
 			}
 			$i++;
@@ -35,7 +35,7 @@ class Webadmin_Model_Web extends Zend_Db_Table{
     	if($web_namenew){
 			foreach($web_namenew as $value){
 				if(!empty($web_namenew[$j]) && !empty($web_valuenew[$j])){
-					$bind = array('web_name' => htmlspecialchars($this->_xss->purify(trim($web_namenew[$j]))), 'web_value' => htmlspecialchars($this->_xss->purify(trim($web_valuenew[$j]))));
+					$bind = array('web_name' => $this->_xss->purify(trim($web_namenew[$j])), 'web_value' => $this->_xss->purify(trim($web_valuenew[$j])));
 	        		$this->insert($bind);
 				}
 				$j++;
