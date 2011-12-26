@@ -34,7 +34,7 @@ class Webadmin_Model_Lang extends Zend_Db_Table{
     	$i = 0;
         foreach($langname as $value){
         	if(!empty($langname[$i])){
-            	$bind = array('lang_name' => isset($langname[$i]) ? htmlspecialchars($this->_xss->purify(trim($langname[$i]))) : '', 'lang' => isset($lang[$i]) ? htmlspecialchars($this->_xss->purify(trim($lang[$i]))) : '', 'langen' => isset($langen[$i]) ? htmlspecialchars($this->_xss->purify(trim($langen[$i]))) : '', 'langfr' => isset($langfr[$i]) ? htmlspecialchars($this->_xss->purify(trim($langfr[$i]))) : '');
+            	$bind = array('lang_name' => isset($langname[$i]) ? $this->_xss->purify(trim($langname[$i])) : '', 'lang' => isset($lang[$i]) ? $this->_xss->purify(trim($lang[$i])) : '', 'langen' => isset($langen[$i]) ? $this->_xss->purify(trim($langen[$i])) : '', 'langfr' => isset($langfr[$i]) ? $this->_xss->purify(trim($langfr[$i])) : '');
         		$this->insert($bind);
             }
             $i++;
@@ -44,7 +44,7 @@ class Webadmin_Model_Lang extends Zend_Db_Table{
     	if($langnamenew){
 	        foreach($langnamenew as $value){
 	        	if(!empty($langnamenew[$j])){
-	            	$bind = array('lang_name' => isset($langnamenew[$j]) ? htmlspecialchars($this->_xss->purify(trim($langnamenew[$j]))) : '', 'lang' => isset($langnew[$j]) ? htmlspecialchars($this->_xss->purify(trim($langnew[$j]))) : '', 'langen' => isset($langnewen[$j]) ? htmlspecialchars($this->_xss->purify(trim($langnewen[$j]))) : '', 'langfr' => isset($langnewfr[$j]) ? htmlspecialchars($this->_xss->purify(trim($langnewfr[$j]))) : '');
+	            	$bind = array('lang_name' => isset($langnamenew[$j]) ? $this->_xss->purify(trim($langnamenew[$j])) : '', 'lang' => isset($langnew[$j]) ? $this->_xss->purify(trim($langnew[$j])) : '', 'langen' => isset($langnewen[$j]) ? $this->_xss->purify(trim($langnewen[$j])) : '', 'langfr' => isset($langnewfr[$j]) ? $this->_xss->purify(trim($langnewfr[$j])) : '');
 	        		$this->insert($bind);
 	            }
 	            $j++;

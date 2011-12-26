@@ -35,7 +35,7 @@ class GLT_Controller_Plugin_Lang extends Zend_Controller_Plugin_Abstract{
         $stmt = $db->query('SELECT lang_name, lang'.LANG.' FROM dos_sys_langs');
         $data = $stmt->fetchAll();
         foreach($data as $value){
-            $lang[$value['lang_name']] = html_entity_decode($value['lang'.LANG]);
+            $lang[$value['lang_name']] = $value['lang'.LANG];
         }
         return $lang;
     }

@@ -17,7 +17,7 @@ class Statistics_Model_Statistics extends Zend_Db_Table{
 	{
 		$db = $this->getAdapter();
 		$select = $db->select()->from($this->_name, array('count(session_id)'))
-			->where('session_id=?',htmlspecialchars($this->_xss->purify($sid)));	
+			->where('session_id=?',$this->_xss->purify($sid));	
 		return ($db->fetchOne($select)>0 )? true:false;
 	}
     
@@ -90,7 +90,7 @@ class Statistics_Model_Statistics extends Zend_Db_Table{
 
 	public function add($sesstion_id){
 		$this->insert(array(
-			'session_id' => htmlspecialchars($this->_xss->purify($sesstion_id))
+			'session_id' => $this->_xss->purify($sesstion_id)
 			,'time'=>time()));
     }
     

@@ -35,7 +35,7 @@ class Support_Model_Support extends Zend_Db_Table{
 		foreach($support_value as $value){
 			if($i<6){
 				if(!empty($value[$i]) && !empty($type[$i])){
-					$this->insert(array('support_name' => htmlspecialchars($this->_xss->purify($fullname[$i])), 'support_phone' => htmlspecialchars($this->_xss->purify($support_phone[$i])), 'support_value' => htmlspecialchars($this->_xss->purify($support_value[$i])), 'support_order' => htmlspecialchars($this->_xss->purify($order[$i])), 'support_type' => htmlspecialchars($this->_xss->purify($type[$i])), 'support_part' => htmlspecialchars($this->_xss->purify($support_part[$i])),));
+					$this->insert(array('support_name' => $this->_xss->purify($fullname[$i]), 'support_phone' => $this->_xss->purify($support_phone[$i]), 'support_value' => $this->_xss->purify($support_value[$i]), 'support_order' => $this->_xss->purify($order[$i]), 'support_type' => $this->_xss->purify($type[$i]), 'support_part' => $this->_xss->purify($support_part[$i])));
 				}
 				$i++;
 			}

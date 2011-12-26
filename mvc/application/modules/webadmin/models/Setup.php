@@ -37,7 +37,7 @@ class Webadmin_Model_Setup extends Zend_Db_Table{
     	$i = 0;
 		foreach($moduleid as $value){
 			if(!empty($moduleid[$i]) && !empty($module[$i]) && !empty($url[$i])){
-            	$bind = array('moduleid' => htmlspecialchars($this->_xss->purify(trim($moduleid[$i]))), 'module' => htmlspecialchars($this->_xss->purify(trim($module[$i]))), 'moduleen' => isset($moduleen[$i]) ? htmlspecialchars($this->_xss->purify(trim($moduleen[$i]))) : '', 'modulefr' => isset($modulefr[$i]) ? htmlspecialchars($this->_xss->purify(trim($modulefr[$i]))) : '', 'url' => htmlspecialchars($this->_xss->purify(trim($url[$i]))), 'target' => htmlspecialchars($this->_xss->purify(trim($target[$i]))), 'position' => htmlspecialchars($this->_xss->purify(trim($position[$i]))));
+            	$bind = array('moduleid' => $this->_xss->purify(trim($moduleid[$i])), 'module' => $this->_xss->purify(trim($module[$i])), 'moduleen' => isset($moduleen[$i]) ? $this->_xss->purify(trim($moduleen[$i])) : '', 'modulefr' => isset($modulefr[$i]) ? $this->_xss->purify(trim($modulefr[$i])) : '', 'url' => $this->_xss->purify(trim($url[$i])), 'target' => $this->_xss->purify(trim($target[$i])), 'position' => $this->_xss->purify(trim($position[$i])));
         		$this->insert($bind);
             }
             $i++;
@@ -47,7 +47,7 @@ class Webadmin_Model_Setup extends Zend_Db_Table{
     	if($modelidnew){
 			foreach($modelidnew as $value){
 				if(!empty($modelidnew[$j]) && !empty($modelnew[$j]) && !empty($urlnew[$j])){
-	            	$bind = array('moduleid' => isset($modelidnew[$j]) ? htmlspecialchars($this->_xss->purify(trim($modelidnew[$j]))) : '', 'module' => isset($modelnew[$j]) ? htmlspecialchars($this->_xss->purify(trim($modelnew[$j]))) : '', 'moduleen' => isset($modelnewen[$j]) ? htmlspecialchars($this->_xss->purify(trim($modelnewen[$j]))) : '', 'modulefr' => isset($modelnewfr[$j]) ? htmlspecialchars($this->_xss->purify(trim($modelnewfr[$j]))) : '', 'url' => isset($urlnew[$j]) ? htmlspecialchars($this->_xss->purify(trim($urlnew[$j]))) : '', 'target' => isset($targetnew[$j]) ? htmlspecialchars($this->_xss->purify(trim($targetnew[$j]))) : '', 'position' => isset($posnew[$j]) ? htmlspecialchars($this->_xss->purify(trim($posnew[$j]))) : '');
+	            	$bind = array('moduleid' => isset($modelidnew[$j]) ? $this->_xss->purify(trim($modelidnew[$j])) : '', 'module' => isset($modelnew[$j]) ? $this->_xss->purify(trim($modelnew[$j])) : '', 'moduleen' => isset($modelnewen[$j]) ? $this->_xss->purify(trim($modelnewen[$j])) : '', 'modulefr' => isset($modelnewfr[$j]) ? $this->_xss->purify(trim($modelnewfr[$j])) : '', 'url' => isset($urlnew[$j]) ? $this->_xss->purify(trim($urlnew[$j])) : '', 'target' => isset($targetnew[$j]) ? $this->_xss->purify(trim($targetnew[$j])) : '', 'position' => isset($posnew[$j]) ? $this->_xss->purify(trim($posnew[$j])) : '');
 	        		$this->insert($bind);
 	            }
 	            $j++;
