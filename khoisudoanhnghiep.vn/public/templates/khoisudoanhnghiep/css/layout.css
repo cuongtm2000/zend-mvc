@@ -36,14 +36,14 @@ a{text-decoration:none; color:#720E3B}
 .bg-nav-hover{background:url(../images/nav-link.gif) no-repeat bottom; height:30px}
 .bg-nav-hover a{color:#3C22EE;font-weight:bold;margin:0 0 0 45px; display:block; padding:5px 0 0 0}
 #nav .home{background:none}
-#nav .home a{padding:5px 5px}
-#nav .home a:hover{background:none; padding:0 5px; margin:5px 0 0 0}
+#nav .home a{padding:0 5px}
+#nav .home a:hover{background:none;padding:0 5px !important}
 
-#nav { list-style:none;width: 970px;position: relative;height: 36px;background:url(../images/nav-bg.gif) repeat-x;}
-ul#nav li  {float: left;height:36px; background:url(../images/nav-line.gif) no-repeat right}
-ul#nav li a {padding:11px 10px;display: block;color:#fff;}
-ul#nav li:hover >a{background:#FBF8F8;color:#406B96; margin:5px 0 0 0;padding:6px 10px 11px 10px;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;}
-ul#nav a:hover{background:#FBF8F8;color:#406B96;margin:5px 0 0 0;padding:6px 10px 11px 10px;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;}
+#nav { list-style:none;width: 970px;position: relative;height: 36px;background:url(../images/nav-bg.gif) repeat-x;margin:0 0 40px 0}
+ul#nav li  {float: left;background:url(../images/nav-line.gif) no-repeat right;margin:5px 0 0 0}
+ul#nav li a {padding:7px 9px 10px 9px;display: block;color:#fff;}
+
+ul#nav a:hover{background:#FBF8F8;color:#406B96;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;}
 
 ul#nav li ul {list-style:none; padding:10px 0 0 0;float: left;position: absolute;left:40px; top: 35px;display: none;width:970px;height:20px}
 ul#nav li:hover ul {display: block;}
@@ -51,8 +51,8 @@ ul#nav li ul a {display: inline; color:#3C22EE; font-weight:bold}
 ul#nav li ul a:hover {background:none; color:#009100}
 ul#nav li ul li{background: none}
 
-ul#nav .select{background:#FBF8F8;color:#406B96;margin:5px 0 0 0;padding:6px 10px 11px 10px;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;}
-ul#nav .select:hover{background:#FBF8F8;color:#406B96;margin:5px 0 0 0;padding:6px 10px 11px 10px;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;}
+ul#nav .select{background:#FBF8F8;color:#406B96;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;}
+ul#nav .select:hover{background:#FBF8F8;color:#406B96;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;}
 
 /* Content*/
 #content{ margin:10px 0 0 0}
