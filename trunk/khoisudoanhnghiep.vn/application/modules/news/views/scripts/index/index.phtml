@@ -5,8 +5,7 @@
 		<?php $picthumb = ($value['pic_thumb']!='') ? IMAGES_PATH.$this->module.'/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg'; ?>
 	 		<div class="masuring">
 				<a href="<?php echo $this->baseUrl().'/'.LANGURL.$this->module ?>/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>">
-					<img src="<?php echo $this->baseUrl().$picthumb ?>" class="imgcon" style="float:left; alt="<?php echo $value['title'.LANG] ?>" /></a>
-                   
+					<img src="<?php echo $this->baseUrl().$picthumb ?>" class="imgcon" style="float:left" alt="<?php echo $value['title'.LANG] ?>" /></a>
                 <h2 class="title-masuring"><a href="<?php echo $this->baseUrl().'/'.LANGURL.$this->module ?>/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h2>
      			<?php echo $value['preview'.LANG] ?>
      		</div><div class="clear"></div>
