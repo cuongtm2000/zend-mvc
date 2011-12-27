@@ -50,7 +50,12 @@ class Banner_Model_Banner extends Zend_Db_Table{
 		$select = $db->select()->from($this->_name, array('max(banner_order) as max'));
 		$max_record = $db->fetchOne($select)+1;
     	
-    	$data = array('banner_name' => $this->_xss->purify($data['title'])) 'banner_url' => $filename, 'banner_link' => $this->_xss->purify($data['banner_link']), 'banner_order' => $max_record, 'enable' => $this->_xss->purify($data['active']), 'position' => $this->_xss->purify($data['parentcat']));
+    	$data = array('banner_name' => $this->_xss->purify($data['title']),
+						'banner_url' => $filename, 
+						'banner_link' => $this->_xss->purify($data['banner_link']), 
+						'banner_order' => $max_record, 
+						'enable' => $this->_xss->purify($data['active']), 
+						'position' => $this->_xss->purify($data['parentcat']));
     	$this->insert($data);
     }
     public function editItem($data = NULL){
