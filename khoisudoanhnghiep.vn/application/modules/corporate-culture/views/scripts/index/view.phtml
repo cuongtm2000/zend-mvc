@@ -2,7 +2,7 @@
 <div class="frame-tent-left">
 	<?php if(is_array($this->item)): ?>
  		<h2 class="title-masuring"><?php echo $this->item['title'.LANG]?></h2>
-        <?php echo html_entity_decode($this->item['content'.LANG]) ?>        
+        <?php echo $this->item['content'.LANG] ?>        
     <?php endif;?>
     
     <?php if(is_array($this->otherItem)){ ?>

@@ -88,7 +88,7 @@ class Entertainment_Model_EntertainmentCat extends Zend_Db_Table{
 		$select = $db->select()->from($this->_name, array('max(cat_order) as max'));
 		$max_record = $db->fetchOne($select)+1;
 		
-    	$data = array('cat_parent_id' => htmlspecialchars($this->_xss->purify($data['parent_id'])), 'cat_title' => htmlspecialchars($this->_xss->purify($data['cat_title'])), 'cat_titleen' => htmlspecialchars($this->_xss->purify($data['cat_titleen'])), 'cat_titlefr' => htmlspecialchars($this->_xss->purify($data['cat_titlefr'])), 'cat_order' => $max_record);
+    	$data = array('cat_parent_id' => $this->_xss->purify($data['parent_id']), 'cat_title' => $this->_xss->purify($data['cat_title']), 'cat_titleen' => $this->_xss->purify($data['cat_titleen']), 'cat_titlefr' => $this->_xss->purify($data['cat_titlefr']), 'cat_order' => $max_record);
     	$this->insert($data);
     }
 	public function editItem($data = NULL){
@@ -102,7 +102,7 @@ class Entertainment_Model_EntertainmentCat extends Zend_Db_Table{
     }
 	public function saveItem($data = NULL){
     	$where = 'cat_id = '.$data['id'];
-    	$data = array('cat_parent_id' => htmlspecialchars($this->_xss->purify($data['parent_id'])), 'cat_title' => htmlspecialchars($this->_xss->purify($data['cat_title'])), 'cat_titleen' => htmlspecialchars($this->_xss->purify($data['cat_titleen'])), 'cat_titlefr' => htmlspecialchars($this->_xss->purify($data['cat_titlefr'])));
+    	$data = array('cat_parent_id' => $this->_xss->purify($data['parent_id']), 'cat_title' => $this->_xss->purify($data['cat_title']), 'cat_titleen' => $this->_xss->purify($data['cat_titleen']), 'cat_titlefr' => $this->_xss->purify($data['cat_titlefr']));
     	$this->update($data, $where);
     }
     

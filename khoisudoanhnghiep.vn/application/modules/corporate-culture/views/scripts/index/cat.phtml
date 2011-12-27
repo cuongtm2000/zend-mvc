@@ -8,7 +8,7 @@
 					<img src="<?php echo $this->baseUrl().$picthumb ?>" class="imgcon" style="float:left; alt="<?php echo $value['title'.LANG] ?>" /></a>
                    
                 <h2 class="title-masuring"><a href="<?php echo $this->baseUrl().'/'.LANGURL.$this->module ?>/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h2>
-     			<?php echo html_entity_decode($value['preview'.LANG]) ?>
+     			<?php echo $value['preview'.LANG] ?>
      		</div><div class="clear"></div>
 		<?php endforeach;?>
 		<?php echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml'); ?>
