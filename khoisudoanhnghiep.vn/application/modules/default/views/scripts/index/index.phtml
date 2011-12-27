@@ -1,39 +1,59 @@
-<h1 class="title-left"><span>Tin, Bài Nổi Bật</span></h1>
+<h1 class="title-left"><span>Tin, Bài nổi bật</span></h1>
                     <div class="frame-tent-left">
-                    	<div class="frame-focus">
-                        	<h1 class="title-focus"><span>Tin Nhiều Người Đọc</span></h1>
-                            <ul class="fucus-tent">
-                            	<li><a href="#" title="">Đề xuất nghỉ Tết Nhâm Thìn 9 ngày</a></li>
-                                <li><p><a href="#" title="">S&amp;P hạ mức tín nhiệm các ngân hàng lớn của Mỹ</a></p></li>
-                                <li><a href="#" title="">Các chức giám đốc điều hành Dự án Đường cao tốc Thành Phố Hồ Chí Minh - Trung Lương</a></li>
-                                <li><p><a href="#" title="">Hòa thượng Thích Thanh Tứ - nhà sư nối tiếp truyền thống "Hộ Quốc an Dân" của Phật Giáo Việt Nam</a></p></li>
-                                <li><a href="#" title="">Lãnh đạo nước ta đoán tiếp hội đàm với Thủ Tướng Bê-la-rút</a></li>
-                                <li><p><a href="#" title="">Tham gia ý kiến vào dự thảo pháp lệnh Ưu đãi người có công với cách mạng</a></p></li>
-                                <li><a href="#" title="">Gắn phong trào phụ nữ với thực hiện các mục tiêu, nhiệm vụ chung của đất nước</a></li>
-                            </ul>
-                        </div><!--End frame fucus-->  
-                        <img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/img-new.jpg" alt="Quân đội" title="" />
-                        <h2 class="title-box"><a href="#" title="">Giới thiệu công nghệ, thiết bị hiện đại phục vụ phòng, chống thiên tai</a></h2>
-                   		<p>QĐND Online -sáng 30-11, binh chủng thông tin liên
-lạc (TTLL) đã tổ chức giới thiệu một số trang bị, khí
-tài phục vụ nhiệm vụ phòng chống, giảm nhẹ thiên
-tai, tìm kiếm cứu nạn và thông báo công tác bảo đảm
-TTLL. Trung tướng Trần Quang khuê, phó tổng Tham</p>
+                    	<?php if(isset($this->list_top_hits)and count($this->list_top_hits)>0):?>
+	                    	<div class="frame-focus">
+	                        	<h1 class="title-focus"><span>Tin Nhiều Người Đọc</span></h1>
+	                            <ul class="fucus-tent">
+	                            	<?php 
+	                            		$i=0;
+	                            		foreach ($this->list_top_hits as $value) {
+	                            	 		$p=($i%2==1)?'<p>':'';
+	                            	 		$cp=($i%2==1)?'</p>':'';
+	                            	 		$i++;
+	                            	 	?>
+		                            		<li><?php echo $p?>
+		                            			<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>">
+		                            				<?php echo $value['title'.LANG] ?>
+		                            			</a>
+		                            		<?php echo $cp?></li>                   
+	                            	<?php }?>
+	                            </ul>
+							 </div><!--End frame fucus-->  
+                        <?php endif;?>
+                        
+                        <?php $value=$this->hot_news_item;?>
+                        <?php $picthumb = ($value['pic_thumb']!='') ? 
+                        			IMAGES_PATH.'news/'.$value['pic_thumb'] : 
+                        			TEMPLATE.'/images/no-images.jpg'; 
+                        ?>
+	 	                <img src="<?php echo $this->baseUrl().$picthumb ?>" class="imgcon"  alt="<?php echo $value['title'.LANG] ?>" />
+
+                        <h2 class="title-box"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h2>
+                   		<?php echo $value['preview'.LANG] ?>
+                   		
                         <ul class="related-news">
                         	<li><a href="#" title="">Tiếp xúc cử tri và thăm, tặng quà đối tượng chính sách ở tỉnh Bình Phước</a></li>
                             <li><a href="#" title="">Mở đường bay thẳng Việt Nam -  Vương quốc Anh</a></li>
                         </ul>  <div class="clear"></div>
                     </div><!--End frame tent-->
                     <div class="bd-bt-tenf-left"></div>
+                   
+                   
+                       
                     <h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Cẩm nang khởi sự</span></a></h1>
                    	<div class="tent-new">
-                    	<ul class="sub-top-tent">
-                        	<li><a href="#" title="">Gương mặt khởi sự DN</a></li>
-                            <li><a href="#" title="">Tài liệu tham khảo</a></li>
-							<li><a href="#" title="">Hồ sơ doanh nghiệp</a></li>
-                            <li style="border:none"><a href="#" title="">Ý tưởng kinh doanh</a></li>
-                        </ul> <div class="clear"></div>
-                        <div class="tent-new-left"><h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>
+                   	
+                   		<?php  if(isset($this->menu_cat_handbook)):?>
+		                   	<ul class="sub-top-tent">
+		                   		<?php foreach ($this->menu_cat_handbook as $value) :?>
+	                             <li style="border:none"><a href="#" title=""><?php echo $value['title'.LANG] ?></a></li>
+	                             <?php endforeach;?>
+	                        </ul> <div class="clear"></div>
+                       	<?php endif;?>
+                       
+                        <div class="tent-new-left">
+                        
+                        <h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>
                             <img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/157cechirwlarge.jpg" alt="Marketing xã hội chưa bao giờ lỗi thời" style="float:left" />                  
                             <p>
         Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho việc bán hàng thì rất nhiều phương tiện truyền thông quảng cáo đã liên tục ra đời để phục vụ cho mục tiêu của marketing nhưng hình như việc sử dụng quá nhiều một vài công cụ marketing đã làm người tiêu dùng luôn nghi ngờ mọi thứ đến với họ đều mang tính chất quảng cáo, do đó sẽ bị từ chối khỏi tâm trí khách hàng ngay tức khắc làm giảm hiệu quả của marketing rất nhiều.</p>
@@ -49,6 +69,15 @@ TTLL. Trung tướng Trần Quang khuê, phó tổng Tham</p>
                         <div class="clear"></div>
                 	</div><!--End tent new-->
                     <div class="bd-bt-tenf-left"></div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     <h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Kinh nghiệm thương trường </span></a></h1>
                    	<div class="tent-new">
                     	<ul class="sub-top-tent">
