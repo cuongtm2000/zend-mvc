@@ -13,16 +13,28 @@ class GLT_Model_News extends Zend_Db_Table{
         $this->_name = 'dos_module_'.$this->_module;
     }
     
+    
+   //Front end - Get bản tin mới nhất
+	public function listTopHits(){
+    	$select = $this->select()->from($this->_name, 
+    				array('record_id',  'title'.LANG))
+							   ->where('enable = 1')
+							   ->order('hits DESC')
+							   ->order('postdate DESC')
+                               ->limit(7);
+		return $this->fetchAll($select)->toArray();
+    }
+    
     //Front end - Get bản tin mới nhất
 	public function listItemHotFirst(){
-    	$db = Zend_Registry::get('connectDb');
-    	$select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG))
+    	$select = $this->select()->from($this->_name, 
+    				array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG))
 							   ->where('enable = 1')
 							   ->where('record_type = 1')
 							   ->order('record_order DESC')
 							   ->order('postdate DESC')
                                ->limit(1);
-		return $db->fetchRow($select);
+		return $this->fetchRow($select);
     }
     
 	//Front end - Get Bản tin Hot mới nhất
@@ -32,7 +44,7 @@ class GLT_Model_News extends Zend_Db_Table{
 							   ->where('record_type = 1')
 							   ->order('record_order DESC')
 							   ->order('postdate DESC')
-							   ->limit(7);
+							   ->limit(7,1);
 		return $this->fetchAll($select)->toArray();
     }
     
