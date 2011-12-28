@@ -1,0 +1,40 @@
+<div class="proList">
+	<div class="title">
+		<div class="left"></div><div class="right"><?php echo $this->lang['product']?> &raquo; <?php echo $this->productdetail['title'.LANG] ?></div>
+	</div>
+	<div class="product-left">
+		<?php
+			$pic_full = ($this->productdetail['pic_full']) ? '/public/userfiles/images/product/'.$this->productdetail['pic_full'] : TEMPLATE.'/images/no-images.jpg';
+		?>
+		<img src="<?php echo $this->baseUrl().$pic_full ?>" alt="<?php echo $this->productdetail['title'.LANG] ?>" class="img-border" />
+	</div>
+	<div class="product-left-col2">
+		<h2 class="title-product"><?php echo $this->productdetail['title'.LANG] ?></h2>
+		<ul class="product-cat-info">
+			<li><?php echo $this->lang['product_extra1']; ?> : <?php echo $this->productdetail['extra_field1'] ?></li>
+			<li><?php echo $this->lang['product_extra2']; ?> : <?php echo $this->productdetail['extra_field2'] ?></li>
+			<li><?php echo $this->lang['product_extra3']; ?> : <?php echo $this->productdetail['extra_field3'] ?></li>
+			<li><?php echo $this->lang['product_extra4']; ?> : <?php echo $this->productdetail['extra_field4'] ?></li>
+		</ul>
+	</div>
+	<div class="clear"></div>         
+	<div style="padding:0 4px"><?php echo html_entity_decode($this->productdetail['detail'.LANG]) ?></div>
+	
+	<div class="title">
+		<div class="left"></div><div class="right"><?php echo $this->lang['product_other']?></div>
+	</div>
+	<?php if (is_array($this->productcat)): ?>
+		<?php foreach ($this->productcat as $value): ?>
+			<?php 
+				$picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/product/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg';
+			?>
+			<div class="list-product">
+				<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo $this->baseUrl().$picthumb ?>" alt="<?php echo $value['title'.LANG] ?>" /></a>
+				<p><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/point.jpg" alt="" /><strong>Model:</strong> <?php echo $value['title'.LANG] ?></p>
+			</div>
+		<?php endforeach;?>
+	<?php else: ?>
+		<?php echo $this->productcat ?>
+	<?php endif;?>
+	<div class="clear"></div>
+</div>

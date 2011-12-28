@@ -1,0 +1,31 @@
+<h1 class="title-right"><?php echo $this->lang['register']?></h1>
+<form  id="register" method="post" action="">
+	<?php if($this->error ):?>
+		<ul class="error-li">
+			<?php foreach($this->error as $er):?>
+				<li><?php echo $er?></li>
+			<?php endforeach ?>
+		</ul>
+	<?php endif;?>
+	<ul class="bt-frm-login">
+		<li><label>Tên thành viên<span>*</span> : </label><input name="username" value="<?php echo $this->items['username'] ?>" /></li>
+		<li><label>Mật khẩu<span>*</span> : </label><input type="password" name="password" value="" /></li>
+		<li><label>Xác nhận mật khẩu<span>*</span> : </label><input type="password" name="password1" value="" /></li>
+		<li><label>Email<span>*</span> : </label><input name="email" value="<?php echo $this->items['email'] ?>" /></li>
+		<li><label>Tỉnh thành<span>*</span> : </label>
+			<select name="province" class="select-date">
+				<option value="0">--- Chọn tỉnh thành ---</option>
+				<?php foreach ($this->province as $value):?>
+					<option value="<?php echo $value['province_id']?>"><?php echo $value['province_name']?></option>
+				<?php endforeach;?>
+			</select>
+		</li>
+		<li><label>Phone<span>*</span> : </label><input name="phone" value="<?php echo $this->items['phone'] ?>" /></li>
+		<li>
+			<label></label>
+			<input type="submit" class="bton-dk"/>
+			<input type="reset" class="bton-dk"/>
+		</li>
+	</ul>
+	
+</form>
