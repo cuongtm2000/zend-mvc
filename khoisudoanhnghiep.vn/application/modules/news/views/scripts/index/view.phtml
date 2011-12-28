@@ -5,14 +5,10 @@
         <?php echo $this->item['content'.LANG] ?>        
     <?php endif;?>
     
-    <?php if(is_array($this->otherItem)){ ?>
+    <?php if($this->otherItem){ ?>
     	<h2 class="title-others">Các Tin khác</h2>
 		<ul class="sub-others">
-    	<?php
-    		$i=0; 
-    		foreach ($this->otherItem as $value){ 
-				if($i++ % 2==0)    {		
-    	?>
+    	<?php $i=0;	foreach ($this->otherItem as $value){if($i++ % 2==0){?>
         	<li>
         		<a href="<?php echo $this->baseUrl().'/'.LANGURL.$this->module ?>/index/view/id/<?php echo $value['record_id'] ?>/<?php echo $this->noneUnicode($value['title'.LANG])?>" title="<?php echo $value['title'.LANG]?>">
         			<?php echo $value['title'.LANG]?>

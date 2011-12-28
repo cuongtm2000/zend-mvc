@@ -19,14 +19,9 @@ class GLT_Controller_Action extends Zend_Controller_Action{
 		$this->view->online = $statistics->getOnline();
 		$this->view->onlinetotal = $statistics->visit_total();
 		
-		//Get Logo và banner
-        $banner = new Banner_Model_Banner();
-        $this->view->logo = $banner->getLogo();
-        $this->view->banner = $banner->getAllBanner();
-		
-        //contact home
-        $contact = new Contact_Model_Contact();
-        $this->view->contact_home = $contact->getHomeRecord();
+		//handbook
+		$handbook_cat_class = new Handbook_Model_HandbookCat();
+		$this->view->menu_cat_handbook = $handbook_cat_class->getListmenu();
 		
         //Request
         $request = $this->_request->getParams();

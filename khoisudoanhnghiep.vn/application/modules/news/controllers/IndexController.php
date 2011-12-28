@@ -45,7 +45,7 @@ class News_IndexController extends GLT_Controller_Action {
 	}
 	public function indexAction() {
 		$item = new $this->_model();
-		$this->view->list_news_new = $item->listItemsHot($this->_data);
+		//$this->view->list_news_new = $item->listItemsHot($this->_data);
 		
 		//paging
 		//$totalItem = $item->countItemnew();
@@ -57,9 +57,8 @@ class News_IndexController extends GLT_Controller_Action {
 		$item = new $this->_model();
 		$detail = $item->detailItem($this->_data);
 		$this->view->item = $detail;
-		$this->view->otherItem = $item->itemByCatNoneid(
-									$detail['dos_module_item_cat_cat_id'], 
-									$this->_data['id']);
-		$this->webTitle($detail['title'.LANG]. ' - '.$this->view->lang[$this->_data['module']]);
+		
+        $this->view->otherItem = $item->itemByCatNoneid($detail['dos_module_item_cat_cat_id'], $this->_data['id']);
+		$this->webTitle($detail['title']. ' - '.$this->view->lang[$this->_data['module']]);
 	}
 }
