@@ -21,7 +21,7 @@
 			 </div><!--End frame fucus-->  
 		<?php endif;?>
 		
-		<?php $value=$this->hot_news_item;?>
+		<?php $value=$this->news_hot_first;?>
 		<?php $picthumb = ($value['pic_thumb']!='') ? 
 					IMAGES_PATH.'news/'.$value['pic_thumb'] : 
 					TEMPLATE.'/images/no-images.jpg'; 
@@ -31,10 +31,13 @@
 		<h2 class="title-box"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h2>
 		<?php echo $value['preview'.LANG] ?>
 		
+		<?php if($this->news_hots):?>
 		<ul class="related-news">
-			<li><a href="#" title="">Tiếp xúc cử tri và thăm, tặng quà đối tượng chính sách ở tỉnh Bình Phước</a></li>
-			<li><a href="#" title="">Mở đường bay thẳng Việt Nam -  Vương quốc Anh</a></li>
-		</ul>  <div class="clear"></div>
+			<?php foreach($this->news_hots as $value):?>
+				<li><a href="<?php echo $this->baseUrl() ?>/news/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></li>
+			<?php endforeach;?>
+		</ul><div class="clear"></div>
+		<?php endif; ?>
 	</div><!--End frame tent-->
 	<div class="bd-bt-tenf-left"></div>
    

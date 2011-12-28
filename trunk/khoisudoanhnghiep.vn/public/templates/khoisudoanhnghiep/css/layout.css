@@ -85,7 +85,7 @@ ul#nav .select:hover{background:#FBF8F8;color:#406B96;-webkit-border-radius:4px 
 /**  Tin lien quan  **/
 .related-news{list-style:none}
 .related-news li{list-style-image:url(../images/bull.gif); padding:3px 0}
-.related-news li a{color:#114467;font-weight:bold}
+.related-news li a{color:#114467;font-weight:bold; display:block}
 .related-news li a:hover{color:#0000FD}
 
 /*Frame Content new*/
