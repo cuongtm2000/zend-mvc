@@ -1,213 +1,213 @@
 <h1 class="title-left"><span>Tin, Bài nổi bật</span></h1>
-                    <div class="frame-tent-left">
-                    	<?php if(isset($this->list_top_hits)and count($this->list_top_hits)>0):?>
-	                    	<div class="frame-focus">
-	                        	<h1 class="title-focus"><span>Tin Nhiều Người Đọc</span></h1>
-	                            <ul class="fucus-tent">
-	                            	<?php 
-	                            		$i=0;
-	                            		foreach ($this->list_top_hits as $value) {
-	                            	 		$p=($i%2==1)?'<p>':'';
-	                            	 		$cp=($i%2==1)?'</p>':'';
-	                            	 		$i++;
-	                            	 	?>
-		                            		<li><?php echo $p?>
-		                            			<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>">
-		                            				<?php echo $value['title'.LANG] ?>
-		                            			</a>
-		                            		<?php echo $cp?></li>                   
-	                            	<?php }?>
-	                            </ul>
-							 </div><!--End frame fucus-->  
-                        <?php endif;?>
-                        
-                        <?php $value=$this->hot_news_item;?>
-                        <?php $picthumb = ($value['pic_thumb']!='') ? 
-                        			IMAGES_PATH.'news/'.$value['pic_thumb'] : 
-                        			TEMPLATE.'/images/no-images.jpg'; 
-                        ?>
-	 	                <img src="<?php echo $this->baseUrl().$picthumb ?>" class="imgcon"  alt="<?php echo $value['title'.LANG] ?>" />
+	<div class="frame-tent-left">
+		<?php if(isset($this->list_top_hits)and count($this->list_top_hits)>0):?>
+			<div class="frame-focus">
+				<h1 class="title-focus"><span>Tin Nhiều Người Đọc</span></h1>
+				<ul class="fucus-tent">
+					<?php 
+						$i=0;
+						foreach ($this->list_top_hits as $value) {
+							$p=($i%2==1)?'<p>':'';
+							$cp=($i%2==1)?'</p>':'';
+							$i++;
+						?>
+							<li><?php echo $p?>
+								<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>">
+									<?php echo $value['title'.LANG] ?>
+								</a>
+							<?php echo $cp?></li>                   
+					<?php }?>
+				</ul>
+			 </div><!--End frame fucus-->  
+		<?php endif;?>
+		
+		<?php $value=$this->hot_news_item;?>
+		<?php $picthumb = ($value['pic_thumb']!='') ? 
+					IMAGES_PATH.'news/'.$value['pic_thumb'] : 
+					TEMPLATE.'/images/no-images.jpg'; 
+		?>
+		<img src="<?php echo $this->baseUrl().$picthumb ?>" class="imgcon"  alt="<?php echo $value['title'.LANG] ?>" />
 
-                        <h2 class="title-box"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h2>
-                   		<?php echo $value['preview'.LANG] ?>
-                   		
-                        <ul class="related-news">
-                        	<li><a href="#" title="">Tiếp xúc cử tri và thăm, tặng quà đối tượng chính sách ở tỉnh Bình Phước</a></li>
-                            <li><a href="#" title="">Mở đường bay thẳng Việt Nam -  Vương quốc Anh</a></li>
-                        </ul>  <div class="clear"></div>
-                    </div><!--End frame tent-->
-                    <div class="bd-bt-tenf-left"></div>
-                   
-                   
-                       
-                    <h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Cẩm nang khởi sự</span></a></h1>
-                   	<div class="tent-new">
-                   	
-                   		<?php  if(isset($this->menu_cat_handbook)):?>
-		                   	<ul class="sub-top-tent">
-		                   		<?php foreach ($this->menu_cat_handbook as $value) :?>
-	                             <li style="border:none"><a href="#" title=""><?php echo $value['title'.LANG] ?></a></li>
-	                             <?php endforeach;?>
-	                        </ul> <div class="clear"></div>
-                       	<?php endif;?>
-                       
-                        <div class="tent-new-left">
-                        
-                        <h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>
-                            <img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/157cechirwlarge.jpg" alt="Marketing xã hội chưa bao giờ lỗi thời" style="float:left" />                  
-                            <p>
-        Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho việc bán hàng thì rất nhiều phương tiện truyền thông quảng cáo đã liên tục ra đời để phục vụ cho mục tiêu của marketing nhưng hình như việc sử dụng quá nhiều một vài công cụ marketing đã làm người tiêu dùng luôn nghi ngờ mọi thứ đến với họ đều mang tính chất quảng cáo, do đó sẽ bị từ chối khỏi tâm trí khách hàng ngay tức khắc làm giảm hiệu quả của marketing rất nhiều.</p>
-                        </div>
-                        <ul class="sub-tent-new">
-                            <li style="list-style:none"><a href="#" title="Kiểm soát ngân sách hiệu quả"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/pic-small.jpg" alt="pic small" style="float:left"/>Kiểm soát ngân sách hiệu quả</a>
-                            	<div class="clear"></div>
-                            </li>
-                            <li><a href="#" title="Non sông dễ đổi, bản tính khó dời">Non sông dễ đổi, bản tính khó dời</a></li>
-                            <li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II</a></li>
-                            <li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I</a></li>
-                        </ul>
-                        <div class="clear"></div>
-                	</div><!--End tent new-->
-                    <div class="bd-bt-tenf-left"></div>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Kinh nghiệm thương trường </span></a></h1>
-                   	<div class="tent-new">
-                    	<ul class="sub-top-tent">
-                        	<li><a href="#" title="">Kinh nghiệm</a></li>
-                            <li><a href="#" title="">Mẹo vật</a></li>
-                            <li style="border:none"><a href="#" title="">Cảnh giác</a></li>
-                        </ul> <div class="clear"></div>
-                        <div class="tent-new-left"><h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>
-                            <img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/157cechirwlarge.jpg" alt="Marketing xã hội chưa bao giờ lỗi thời" style="float:left" />                  
-                            <p>
-        Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho việc bán hàng thì rất nhiều phương tiện truyền thông quảng cáo đã liên tục ra đời để phục vụ cho mục tiêu của marketing nhưng hình như việc sử dụng quá nhiều một vài công cụ marketing đã làm người tiêu dùng luôn nghi ngờ mọi thứ đến với họ đều mang tính chất quảng cáo, do đó sẽ bị từ chối khỏi tâm trí khách hàng ngay tức khắc làm giảm hiệu quả của marketing rất nhiều.</p>
-                        </div>
-                        <ul class="sub-tent-new">
-                            <li style="list-style:none"><a href="#" title="Kiểm soát ngân sách hiệu quả"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/pic-small.jpg" alt="pic small" style="float:left"/>Kiểm soát ngân sách hiệu quả</a>
-                            	<div class="clear"></div>
-                            </li>
-                            <li><a href="#" title="Non sông dễ đổi, bản tính khó dời">Non sông dễ đổi, bản tính khó dời</a></li>
-                            <li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II</a></li>
-                            <li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I</a></li>
-                        </ul>
-                        <div class="clear"></div>
-                	</div><!--End tent new-->
-                    <div class="bd-bt-tenf-left"></div>
-                    <h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Kiến thức quản lý</span></a></h1>
-                   	<div class="tent-new">
-                    	<ul class="sub-top-tent">
-                        	<li><a href="#" title="">Sổ tay giám đốc </a></li>
-                            <li><a href="#" title="">Kiến thức kinh tế</a></li>
-                            <li style="border:none"><a href="#" title="">Kiến thức pháp luật</a></li>
-                        </ul> <div class="clear"></div>
-                        <div class="tent-new-left"><h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>
-                            <img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/157cechirwlarge.jpg" alt="Marketing xã hội chưa bao giờ lỗi thời" style="float:left" />                  
-                            <p>
-        Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho việc bán hàng thì rất nhiều phương tiện truyền thông quảng cáo đã liên tục ra đời để phục vụ cho mục tiêu của marketing nhưng hình như việc sử dụng quá nhiều một vài công cụ marketing đã làm người tiêu dùng luôn nghi ngờ mọi thứ đến với họ đều mang tính chất quảng cáo, do đó sẽ bị từ chối khỏi tâm trí khách hàng ngay tức khắc làm giảm hiệu quả của marketing rất nhiều.</p>
-                        </div>
-                        <ul class="sub-tent-new">
-                            <li style="list-style:none"><a href="#" title="Kiểm soát ngân sách hiệu quả"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/pic-small.jpg" alt="pic small" style="float:left"/>Kiểm soát ngân sách hiệu quả</a>
-                            	<div class="clear"></div>
-                            </li>
-                            <li><a href="#" title="Non sông dễ đổi, bản tính khó dời">Non sông dễ đổi, bản tính khó dời</a></li>
-                            <li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II</a></li>
-                            <li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I</a></li>
-                        </ul>
-                        <div class="clear"></div>
-                	</div><!--End tent new-->
-                    <div class="bd-bt-tenf-left"></div>
-                    <h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Góc tư vấn</span></a></h1>
-                   	<div class="tent-new">
-                    	<ul class="sub-top-tent">
-                        	<li><a href="#" title="">Pháp luật</a></li>
-                            <li><a href="#" title="">Tài chính &amp; Tiền tệ </a></li>
-                            <li><a href="#" title="">Thuế &amp; Kế toán </a></li>
-                            <li style="border:none"><a href="#" title="">Khởi nghiệp</a></li>
-                        </ul> <div class="clear"></div>
-                        <div class="tent-new-left"><h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>
-                            <img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/157cechirwlarge.jpg" alt="Marketing xã hội chưa bao giờ lỗi thời" style="float:left" />                  
-                            <p>
-        Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho việc bán hàng thì rất nhiều phương tiện truyền thông quảng cáo đã liên tục ra đời để phục vụ cho mục tiêu của marketing nhưng hình như việc sử dụng quá nhiều một vài công cụ marketing đã làm người tiêu dùng luôn nghi ngờ mọi thứ đến với họ đều mang tính chất quảng cáo, do đó sẽ bị từ chối khỏi tâm trí khách hàng ngay tức khắc làm giảm hiệu quả của marketing rất nhiều.</p>
-                        </div>
-                        <ul class="sub-tent-new">
-                            <li style="list-style:none"><a href="#" title="Kiểm soát ngân sách hiệu quả"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/pic-small.jpg" alt="pic small" style="float:left"/>Kiểm soát ngân sách hiệu quả</a>
-                            	<div class="clear"></div>
-                            </li>
-                            <li><a href="#" title="Non sông dễ đổi, bản tính khó dời">Non sông dễ đổi, bản tính khó dời</a></li>
-                            <li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II</a></li>
-                            <li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I</a></li>
-                        </ul>
-                        <div class="clear"></div>
-                	</div><!--End tent new-->
-                    <div class="bd-bt-tenf-left"></div>
-                    <h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Thế giới doanh nhân</span></a></h1>
-                   	<div class="tent-new">
-                    	<ul class="sub-top-tent">
-                        	<li><a href="#" title="">Tiếng nói doanh nhân </a></li>
-                            <li><a href="#" title="">Tìm đối tác</a></li>
-                            <li style="border:none"><a href="#" title="">Tuyển dụng</a></li>
-                        </ul> <div class="clear"></div>
-                        <div class="tent-new-left"><h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>
-                            <img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/157cechirwlarge.jpg" alt="Marketing xã hội chưa bao giờ lỗi thời" style="float:left" />                  
-                            <p>
-        Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho việc bán hàng thì rất nhiều phương tiện truyền thông quảng cáo đã liên tục ra đời để phục vụ cho mục tiêu của marketing nhưng hình như việc sử dụng quá nhiều một vài công cụ marketing đã làm người tiêu dùng luôn nghi ngờ mọi thứ đến với họ đều mang tính chất quảng cáo, do đó sẽ bị từ chối khỏi tâm trí khách hàng ngay tức khắc làm giảm hiệu quả của marketing rất nhiều.</p>
-                        </div>
-                        <ul class="sub-tent-new">
-                            <li style="list-style:none"><a href="#" title="Kiểm soát ngân sách hiệu quả"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/pic-small.jpg" alt="pic small" style="float:left"/>Kiểm soát ngân sách hiệu quả</a>
-                            	<div class="clear"></div>
-                            </li>
-                            <li><a href="#" title="Non sông dễ đổi, bản tính khó dời">Non sông dễ đổi, bản tính khó dời</a></li>
-                            <li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II</a></li>
-                            <li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I</a></li>
-                        </ul>
-                        <div class="clear"></div>
-                	</div><!--End tent new-->
-                    <div class="bd-bt-tenf-left"></div>
-                    <h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Văn hóa doanh nghiệp</span></a></h1>
-                   	<div class="tent-new">
-                        <div class="tent-new-left"><h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>
-                            <img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/157cechirwlarge.jpg" alt="Marketing xã hội chưa bao giờ lỗi thời" style="float:left" />                  
-                            <p>
-        Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho việc bán hàng thì rất nhiều phương tiện truyền thông quảng cáo đã liên tục ra đời để phục vụ cho mục tiêu của marketing nhưng hình như việc sử dụng quá nhiều một vài công cụ marketing đã làm người tiêu dùng luôn nghi ngờ mọi thứ đến với họ đều mang tính chất quảng cáo, do đó sẽ bị từ chối khỏi tâm trí khách hàng ngay tức khắc làm giảm hiệu quả của marketing rất nhiều.</p>
-                        </div>
-                        <ul class="sub-tent-new">
-                            <li style="list-style:none"><a href="#" title="Kiểm soát ngân sách hiệu quả"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/pic-small.jpg" alt="pic small" style="float:left"/>Kiểm soát ngân sách hiệu quả</a>
-                            	<div class="clear"></div>
-                            </li>
-                            <li><a href="#" title="Non sông dễ đổi, bản tính khó dời">Non sông dễ đổi, bản tính khó dời</a></li>
-                            <li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II</a></li>
-                            <li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I</a></li>
-                        </ul>
-                        <div class="clear"></div>
-                	</div><!--End tent new-->
-                    <div class="bd-bt-tenf-left"></div>
-                    <h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Giải trí</span></a></h1>
-                   	<div class="tent-new">
-                    	<ul class="sub-top-tent">
-                        	<li><a href="#" title="">Tranh - ảnh vui</a></li>
-                            <li style="border:none"><a href="#" title="">Truyện vui</a></li>
-                        </ul> <div class="clear"></div>
-                        <div class="tent-new-left"><h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>
-                            <img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/157cechirwlarge.jpg" alt="Marketing xã hội chưa bao giờ lỗi thời" style="float:left" />                  
-                            <p>
-        Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho việc bán hàng thì rất nhiều phương tiện truyền thông quảng cáo đã liên tục ra đời để phục vụ cho mục tiêu của marketing nhưng hình như việc sử dụng quá nhiều một vài công cụ marketing đã làm người tiêu dùng luôn nghi ngờ mọi thứ đến với họ đều mang tính chất quảng cáo, do đó sẽ bị từ chối khỏi tâm trí khách hàng ngay tức khắc làm giảm hiệu quả của marketing rất nhiều.</p>
-                        </div>
-                        <ul class="sub-tent-new">
-                            <li style="list-style:none"><a href="#" title="Kiểm soát ngân sách hiệu quả"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/pic-small.jpg" alt="pic small" style="float:left"/>Kiểm soát ngân sách hiệu quả</a>
-                            	<div class="clear"></div>
-                            </li>
-                            <li><a href="#" title="Non sông dễ đổi, bản tính khó dời">Non sông dễ đổi, bản tính khó dời</a></li>
-                            <li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II</a></li>
-                            <li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I</a></li>
-                        </ul>
-                        <div class="clear"></div>
-                	</div><!--End tent new-->
-                    <div class="bd-bt-tenf-left"></div>
+		<h2 class="title-box"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h2>
+		<?php echo $value['preview'.LANG] ?>
+		
+		<ul class="related-news">
+			<li><a href="#" title="">Tiếp xúc cử tri và thăm, tặng quà đối tượng chính sách ở tỉnh Bình Phước</a></li>
+			<li><a href="#" title="">Mở đường bay thẳng Việt Nam -  Vương quốc Anh</a></li>
+		</ul>  <div class="clear"></div>
+	</div><!--End frame tent-->
+	<div class="bd-bt-tenf-left"></div>
+   
+   
+	   
+	<h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Cẩm nang khởi sự</span></a></h1>
+	<div class="tent-new">
+	
+		<?php  if(isset($this->menu_cat_handbook)):?>
+			<ul class="sub-top-tent">
+				<?php foreach ($this->menu_cat_handbook as $value) :?>
+				 <li style="border:none"><a href="#" title=""><?php echo $value['title'.LANG] ?></a></li>
+				 <?php endforeach;?>
+			</ul> <div class="clear"></div>
+		<?php endif;?>
+	   
+		<div class="tent-new-left">
+		
+		<h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>
+			<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/157cechirwlarge.jpg" alt="Marketing xã hội chưa bao giờ lỗi thời" style="float:left" />                  
+			<p>
+Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho việc bán hàng thì rất nhiều phương tiện truyền thông quảng cáo đã liên tục ra đời để phục vụ cho mục tiêu của marketing nhưng hình như việc sử dụng quá nhiều một vài công cụ marketing đã làm người tiêu dùng luôn nghi ngờ mọi thứ đến với họ đều mang tính chất quảng cáo, do đó sẽ bị từ chối khỏi tâm trí khách hàng ngay tức khắc làm giảm hiệu quả của marketing rất nhiều.</p>
+		</div>
+		<ul class="sub-tent-new">
+			<li style="list-style:none"><a href="#" title="Kiểm soát ngân sách hiệu quả"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/pic-small.jpg" alt="pic small" style="float:left"/>Kiểm soát ngân sách hiệu quả</a>
+				<div class="clear"></div>
+			</li>
+			<li><a href="#" title="Non sông dễ đổi, bản tính khó dời">Non sông dễ đổi, bản tính khó dời</a></li>
+			<li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II</a></li>
+			<li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I</a></li>
+		</ul>
+		<div class="clear"></div>
+	</div><!--End tent new-->
+	<div class="bd-bt-tenf-left"></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Kinh nghiệm thương trường </span></a></h1>
+	<div class="tent-new">
+		<ul class="sub-top-tent">
+			<li><a href="#" title="">Kinh nghiệm</a></li>
+			<li><a href="#" title="">Mẹo vật</a></li>
+			<li style="border:none"><a href="#" title="">Cảnh giác</a></li>
+		</ul> <div class="clear"></div>
+		<div class="tent-new-left"><h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>
+			<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/157cechirwlarge.jpg" alt="Marketing xã hội chưa bao giờ lỗi thời" style="float:left" />                  
+			<p>
+Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho việc bán hàng thì rất nhiều phương tiện truyền thông quảng cáo đã liên tục ra đời để phục vụ cho mục tiêu của marketing nhưng hình như việc sử dụng quá nhiều một vài công cụ marketing đã làm người tiêu dùng luôn nghi ngờ mọi thứ đến với họ đều mang tính chất quảng cáo, do đó sẽ bị từ chối khỏi tâm trí khách hàng ngay tức khắc làm giảm hiệu quả của marketing rất nhiều.</p>
+		</div>
+		<ul class="sub-tent-new">
+			<li style="list-style:none"><a href="#" title="Kiểm soát ngân sách hiệu quả"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/pic-small.jpg" alt="pic small" style="float:left"/>Kiểm soát ngân sách hiệu quả</a>
+				<div class="clear"></div>
+			</li>
+			<li><a href="#" title="Non sông dễ đổi, bản tính khó dời">Non sông dễ đổi, bản tính khó dời</a></li>
+			<li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II</a></li>
+			<li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I</a></li>
+		</ul>
+		<div class="clear"></div>
+	</div><!--End tent new-->
+	<div class="bd-bt-tenf-left"></div>
+	<h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Kiến thức quản lý</span></a></h1>
+	<div class="tent-new">
+		<ul class="sub-top-tent">
+			<li><a href="#" title="">Sổ tay giám đốc </a></li>
+			<li><a href="#" title="">Kiến thức kinh tế</a></li>
+			<li style="border:none"><a href="#" title="">Kiến thức pháp luật</a></li>
+		</ul> <div class="clear"></div>
+		<div class="tent-new-left"><h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>
+			<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/157cechirwlarge.jpg" alt="Marketing xã hội chưa bao giờ lỗi thời" style="float:left" />                  
+			<p>
+Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho việc bán hàng thì rất nhiều phương tiện truyền thông quảng cáo đã liên tục ra đời để phục vụ cho mục tiêu của marketing nhưng hình như việc sử dụng quá nhiều một vài công cụ marketing đã làm người tiêu dùng luôn nghi ngờ mọi thứ đến với họ đều mang tính chất quảng cáo, do đó sẽ bị từ chối khỏi tâm trí khách hàng ngay tức khắc làm giảm hiệu quả của marketing rất nhiều.</p>
+		</div>
+		<ul class="sub-tent-new">
+			<li style="list-style:none"><a href="#" title="Kiểm soát ngân sách hiệu quả"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/pic-small.jpg" alt="pic small" style="float:left"/>Kiểm soát ngân sách hiệu quả</a>
+				<div class="clear"></div>
+			</li>
+			<li><a href="#" title="Non sông dễ đổi, bản tính khó dời">Non sông dễ đổi, bản tính khó dời</a></li>
+			<li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II</a></li>
+			<li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I</a></li>
+		</ul>
+		<div class="clear"></div>
+	</div><!--End tent new-->
+	<div class="bd-bt-tenf-left"></div>
+	<h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Góc tư vấn</span></a></h1>
+	<div class="tent-new">
+		<ul class="sub-top-tent">
+			<li><a href="#" title="">Pháp luật</a></li>
+			<li><a href="#" title="">Tài chính &amp; Tiền tệ </a></li>
+			<li><a href="#" title="">Thuế &amp; Kế toán </a></li>
+			<li style="border:none"><a href="#" title="">Khởi nghiệp</a></li>
+		</ul> <div class="clear"></div>
+		<div class="tent-new-left"><h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>
+			<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/157cechirwlarge.jpg" alt="Marketing xã hội chưa bao giờ lỗi thời" style="float:left" />                  
+			<p>
+Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho việc bán hàng thì rất nhiều phương tiện truyền thông quảng cáo đã liên tục ra đời để phục vụ cho mục tiêu của marketing nhưng hình như việc sử dụng quá nhiều một vài công cụ marketing đã làm người tiêu dùng luôn nghi ngờ mọi thứ đến với họ đều mang tính chất quảng cáo, do đó sẽ bị từ chối khỏi tâm trí khách hàng ngay tức khắc làm giảm hiệu quả của marketing rất nhiều.</p>
+		</div>
+		<ul class="sub-tent-new">
+			<li style="list-style:none"><a href="#" title="Kiểm soát ngân sách hiệu quả"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/pic-small.jpg" alt="pic small" style="float:left"/>Kiểm soát ngân sách hiệu quả</a>
+				<div class="clear"></div>
+			</li>
+			<li><a href="#" title="Non sông dễ đổi, bản tính khó dời">Non sông dễ đổi, bản tính khó dời</a></li>
+			<li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II</a></li>
+			<li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I</a></li>
+		</ul>
+		<div class="clear"></div>
+	</div><!--End tent new-->
+	<div class="bd-bt-tenf-left"></div>
+	<h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Thế giới doanh nhân</span></a></h1>
+	<div class="tent-new">
+		<ul class="sub-top-tent">
+			<li><a href="#" title="">Tiếng nói doanh nhân </a></li>
+			<li><a href="#" title="">Tìm đối tác</a></li>
+			<li style="border:none"><a href="#" title="">Tuyển dụng</a></li>
+		</ul> <div class="clear"></div>
+		<div class="tent-new-left"><h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>
+			<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/157cechirwlarge.jpg" alt="Marketing xã hội chưa bao giờ lỗi thời" style="float:left" />                  
+			<p>
+Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho việc bán hàng thì rất nhiều phương tiện truyền thông quảng cáo đã liên tục ra đời để phục vụ cho mục tiêu của marketing nhưng hình như việc sử dụng quá nhiều một vài công cụ marketing đã làm người tiêu dùng luôn nghi ngờ mọi thứ đến với họ đều mang tính chất quảng cáo, do đó sẽ bị từ chối khỏi tâm trí khách hàng ngay tức khắc làm giảm hiệu quả của marketing rất nhiều.</p>
+		</div>
+		<ul class="sub-tent-new">
+			<li style="list-style:none"><a href="#" title="Kiểm soát ngân sách hiệu quả"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/pic-small.jpg" alt="pic small" style="float:left"/>Kiểm soát ngân sách hiệu quả</a>
+				<div class="clear"></div>
+			</li>
+			<li><a href="#" title="Non sông dễ đổi, bản tính khó dời">Non sông dễ đổi, bản tính khó dời</a></li>
+			<li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II</a></li>
+			<li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I</a></li>
+		</ul>
+		<div class="clear"></div>
+	</div><!--End tent new-->
+	<div class="bd-bt-tenf-left"></div>
+	<h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Văn hóa doanh nghiệp</span></a></h1>
+	<div class="tent-new">
+		<div class="tent-new-left"><h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>
+			<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/157cechirwlarge.jpg" alt="Marketing xã hội chưa bao giờ lỗi thời" style="float:left" />                  
+			<p>
+Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho việc bán hàng thì rất nhiều phương tiện truyền thông quảng cáo đã liên tục ra đời để phục vụ cho mục tiêu của marketing nhưng hình như việc sử dụng quá nhiều một vài công cụ marketing đã làm người tiêu dùng luôn nghi ngờ mọi thứ đến với họ đều mang tính chất quảng cáo, do đó sẽ bị từ chối khỏi tâm trí khách hàng ngay tức khắc làm giảm hiệu quả của marketing rất nhiều.</p>
+		</div>
+		<ul class="sub-tent-new">
+			<li style="list-style:none"><a href="#" title="Kiểm soát ngân sách hiệu quả"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/pic-small.jpg" alt="pic small" style="float:left"/>Kiểm soát ngân sách hiệu quả</a>
+				<div class="clear"></div>
+			</li>
+			<li><a href="#" title="Non sông dễ đổi, bản tính khó dời">Non sông dễ đổi, bản tính khó dời</a></li>
+			<li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II</a></li>
+			<li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I</a></li>
+		</ul>
+		<div class="clear"></div>
+	</div><!--End tent new-->
+	<div class="bd-bt-tenf-left"></div>
+	<h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Giải trí</span></a></h1>
+	<div class="tent-new">
+		<ul class="sub-top-tent">
+			<li><a href="#" title="">Tranh - ảnh vui</a></li>
+			<li style="border:none"><a href="#" title="">Truyện vui</a></li>
+		</ul> <div class="clear"></div>
+		<div class="tent-new-left"><h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>
+			<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/157cechirwlarge.jpg" alt="Marketing xã hội chưa bao giờ lỗi thời" style="float:left" />                  
+			<p>
+Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho việc bán hàng thì rất nhiều phương tiện truyền thông quảng cáo đã liên tục ra đời để phục vụ cho mục tiêu của marketing nhưng hình như việc sử dụng quá nhiều một vài công cụ marketing đã làm người tiêu dùng luôn nghi ngờ mọi thứ đến với họ đều mang tính chất quảng cáo, do đó sẽ bị từ chối khỏi tâm trí khách hàng ngay tức khắc làm giảm hiệu quả của marketing rất nhiều.</p>
+		</div>
+		<ul class="sub-tent-new">
+			<li style="list-style:none"><a href="#" title="Kiểm soát ngân sách hiệu quả"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/pic-small.jpg" alt="pic small" style="float:left"/>Kiểm soát ngân sách hiệu quả</a>
+				<div class="clear"></div>
+			</li>
+			<li><a href="#" title="Non sông dễ đổi, bản tính khó dời">Non sông dễ đổi, bản tính khó dời</a></li>
+			<li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II</a></li>
+			<li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I</a></li>
+		</ul>
+		<div class="clear"></div>
+	</div><!--End tent new-->
+	<div class="bd-bt-tenf-left"></div>
