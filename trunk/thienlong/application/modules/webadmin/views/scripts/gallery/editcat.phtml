@@ -1,0 +1,70 @@
+<div class="content">
+	<?php if(count($this->item)): ?>
+	<form action="" method="post" enctype="multipart/form-data" id="frm" name="frm">
+	<fieldset>
+		<legend><?php echo $this->lang['sys_editcat'] ?></legend>
+		<div class="col1"><?php echo $this->lang['catparent'] ?></div>
+	    <div class="col2">
+	        <select name="parent_id">
+	        	<option value="0"><?php echo $this->lang['root'] ?></option>
+	        	<?php 
+	        		foreach($this->listcat as $value){
+	        			echo '<option value="'.$value['cat_id'].'">'.$value['title_prefix'].$value['cat_title'.LANG].'</option>';
+	        		}
+	        	?>
+	        </select>
+	    </div>
+	    <div class="clear space"></div>
+		
+	    <?php
+	        $lang = $this->langlist();
+	        foreach($lang as $value){
+	            echo '<div class="col1">'.$this->lang['sys_title'].' '.$value.'</div>
+	                <div class="col2">
+	                    <input name="cat_title'.$value.'" value="'.$this->item['cat_title'.$value].'" maxlength="45" class="txt-very-large" />
+	                </div>
+	                <div class="clear space"></div>';
+	        }
+	        /*foreach($lang as $value){
+	            echo '<div class="col1">'.$this->lang['sys_preview'].' '.$value.'</div>
+	                <div class="col2">
+	                    <textarea name="preview'.$value.'" cols="70" rows="10">'.$this->item['preview'.$value].'</textarea>
+	                    <script type="text/javascript">
+	                    //<![CDATA[
+	                    	CKEDITOR.replace( \'preview'.$value.'\' );
+	                    //]]>
+	                    </script>
+	                </div><div class="clear space"></div>';
+	        }*/
+	    ?>
+	    
+	    <div class="col1"><?php echo $this->lang['picture_thumb'] ?></div>
+	    <div class="col2">
+	    	<?php if($this->item['pic_thumb'] != null): ?>
+	    		<input type="hidden" name="fileold_thumb" value="<?php echo $this->item['pic_thumb'] ?>" />
+	    		<div class="border-img"><img src="<?php echo $this->baseUrl().'/public/userfiles/images/'.$this->controller.'_cat/'.$this->item['pic_thumb'] ?>" alt="" /></div>
+	    	<?php endif; ?>
+	        <input type="file" name="file_thumb" size="48%" />
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <div class="col1"><?php echo $this->lang['sys_hot'] ?></div>
+	    <div class="col2 radio">
+	        <input type="radio" checked="checked" name="hot" id="nohot" value="0" /> <label for="nohot"><?php echo $this->lang['sys_nohot'] ?></label> &nbsp;&nbsp; <input type="radio" name="hot" id="hot" value="1" /> <label for="hot"><?php echo $this->lang['sys_hot'] ?></label>
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <div class="col1">&nbsp;</div>
+	    <div class="col2">
+	        <input type="submit" name="submit" value="  <?php echo $this->lang['sys_edit'] ?>  " class="login" /> <a href="javascript:history.back()" class="login-a"><?php echo $this->lang['sys_cancel'] ?></a>
+	    </div>
+	    <div class="clear space"></div>
+	</fieldset>
+	</form>
+	<script type="text/javascript">
+		var the_form = window.document.frm;
+		radio_list("<?php echo $this->item['cat_hot'] ?>", the_form.hot);
+		select_list("<?php echo $this->item['cat_parent_id'] ?>", the_form.parent_id);
+	</script>
+	<?php endif; ?>
+</div>

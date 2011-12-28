@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="vi" />
+<meta name="revisit-after" content="1 days" />
+<meta name="robots" content="noodp,index,follow" />
+<?php echo $this->headTitle() ?>
+<?php echo $this->headMeta() ?>
+<?php echo $this->headLink() ?>
+<?php echo $this->headScript() ?>
+
+<?php echo $this->google_analytic; ?>
+
+<link rel="SHORTCUT ICON" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/gif" />
+<link href="<?php echo $this->baseUrl().TEMPLATE ?>/css/dosvn.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="wrapper">
+		<div id="header">
+        	<div id="header-left"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/logo.png" alt="Logo" /></div><!--End header left-->
+            <div class="lang"><a href="<?php echo $this->baseUrl()?>/" title="Tiếng Việt">Tiếng Việt <img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/vn.gif" alt="Việt Nam" /></a> <a href="<?php echo $this->baseUrl() ?>/en" title="English">English <img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/en.gif" alt="English" /></a></div>
+           	<div class="clear"></div>
+        </div><!--End header-->
+		    <ul class="nav">
+        		<?php 
+        			$folders = $this->menubar();
+					foreach($folders as $models){		
+						$target = ($models['target']=='') ? '' : ' target="'.$models['target'].'"';
+						$select =($this->module==$models['url']) ? ' class="select"': '';
+						echo '<li'.$select.'><a href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.'>'.$models['module'.LANG].'</a></li>';
+					}
+				?>
+            </ul>
+     	 <div class="clear"></div>
+       <div id="banner">
+			<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/banner.jpg" alt="banner" title="architecture" />
+        </div><!--End banner-->
+        <div id="content">
+        	<div id="left-content">
+            	<h1 class="title-left"><span>VỀ CÔNG TY</span></h1>
+                <ul class="sub-pro">
+                	<li><a href="#" title="">Tổng quan về công ty</a></li>
+                	<li><a href="#" title="">Xưởng sản xuất</a></li>
+                    <li><a href="#" title="">Phòng thí nghiệm</a></li>
+                    <li><a href="#" title="">Máy làm gỗ</a></li>
+                    <li><a href="#" title="">Kho thành phẩm</a></li>  
+                    <li><a href="#" title="">Khối thành phẩm</a></li>   
+                </ul>
+                <h1 class="title-left"><span>HỖ TRỢ TRỰC TUYẾN</span></h1>
+				<ul class="support">
+						<?php foreach ($this->menu_support as $value): ?>
+							<li><?php echo $value['support_name'] ?></li>
+							<li><a href="ymsgr:sendim?<?php echo $value['support_value'] ?>&amp;m=<?php echo $this->lang['welcome_chat']?>" title="Chat <?php echo $value['support_value'] ?>"><img src="http://opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2&amp;l=us" alt="<?php echo $value['support_value'] ?>" /></a></li>
+						<?php endforeach;?>
+				</ul>
+			
+				<h1 class="title-left"><span>THỐNG KÊ TRUY CẬP</span></h1>
+				<ul class="statistics">
+					<li>Truy cập trong ngày: <?php echo $this->onlinetoday?></li>
+					<li>Đang online: <?php echo $this->online?></li>
+					<li>Tổng lượt truy cập: <?php echo $this->onlinetotal?></li>
+				</ul>
+            </div><!--End left content-->	
+        	<div id="right-content">
+            	<?php echo $this->layout()->content ?>
+            </div><!--End right content-->   <div class="clear"></div>
+        </div><!--End content-->
+    <div id="footer">
+        <ul class="nav-fter">
+        		<?php 
+        			$folders = $this->menubar();
+					foreach($folders as $models){		
+						$target = ($models['target']=='') ? '' : ' target="'.$models['target'].'"';
+						$select =($this->module==$models['url']) ? ' class="select"': '';
+						echo '<li'.$select.'><a href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.'>'.$models['module'.LANG].'</a></li>';
+					}
+				?>
+            </ul>
+        <div class="frame-info">
+            <p>&copy; Bản quyền thuộc <b>CÔNG TY TNHH THƯƠNG MẠI - QUỐC TẾ THIÊN LONG</b></p>
+            <p>Địa chỉ: Xã Vĩnh Khúc, Huyện Văn Giang, Tỉnh Hưng Yên, Việt Nam (Km 20, Quốc lộ 5, đối diện Khu Công nghiệp Phố Nối A) </p>
+            <p><span>Tel: +84 321 3729462</span> <span>Fax: +84 321 3729463</span> <span>Email:info@thienlong.vn</span></p>
+    	</div> <!--End frame info-->
+    </div><!--End footer-->
+</div><!--End wrapper-->
+</body>
+</html>
+

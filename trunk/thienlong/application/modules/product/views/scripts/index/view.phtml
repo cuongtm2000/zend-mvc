@@ -1,0 +1,115 @@
+<h1 class="title-pr title-new-pr"><?echo $this->lang['product']?> &raquo; <?php echo $this->productdetail['title'.LANG] ?></h1>
+<div class="all-pg-info">
+	<div class="prod_detail">
+		<!--Slide show Jquery Lightbox-->
+		<div class="big_thumb">
+			<div id="slider2">
+				<?php if($this->productdetail['pic_thumb']):?>
+					<div class="contentdiv">
+						<img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/product/<?php echo $this->productdetail['pic_thumb'] ?>" alt="<?php echo $this->productdetail['title'.LANG] ?>" />
+						<a rel="example_group" href="<?php echo $this->baseUrl() ?>/public/userfiles/images/product/<?php echo $this->productdetail['pic_thumb'] ?>" title="<?php echo $this->productdetail['title'.LANG] ?>" class="zoom">&nbsp;</a>
+					</div>
+				<?php else: ?>
+					<div class="contentdiv">
+						<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/no-images.jpg" alt="<?php echo $this->productdetail['title'.LANG] ?>" />
+						<a rel="example_group" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/no-images.jpg" title="<?php echo $this->productdetail['title'.LANG] ?>" class="zoom">&nbsp;</a>
+					</div>
+				<?php endif;?>
+				<?php 
+					if($this->productdetail['pic_desc']):
+						$str = explode('|', $this->productdetail['pic_desc']);
+						foreach ($str as $value):?>
+							<div class="contentdiv">
+								<img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/product/<?php echo $value ?>" alt="<?php echo $this->productdetail['title'.LANG] ?>" />
+								<a rel="example_group" href="<?php echo $this->baseUrl() ?>/public/userfiles/images/product/<?php echo $value ?>" title="<?php echo $this->productdetail['title'.LANG] ?>" class="zoom">&nbsp;</a>
+							</div>
+						<?php endforeach;?>
+				<?php endif;?>
+			</div>
+			<!--Slide Prev-->
+			<span class="prevsmall"><img src="<?php echo $this->baseUrl().TEMPLATE?>/images/prev.gif" alt="Lùi lại" /></span>
+			<div style="float:left; width:189px; overflow:hidden;">
+				<div class="anyClass" id="paginate-slider2">
+					<ul>
+						<?php if($this->productdetail['pic_thumb']):?>
+							<li><a href="#" class="toc"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/product/<?php echo $this->productdetail['pic_thumb'] ?>" alt="<?php echo $this->productdetail['title'.LANG] ?>" /></a></li>
+						<?php else: ?>
+							<li><a href="#" class="toc"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/no-images.jpg" alt="<?php echo $this->productdetail['title'.LANG] ?>" /></a></li>
+						<?php endif;?>
+						<?php 
+							if($this->productdetail['pic_desc']):
+								$str = explode('|', $this->productdetail['pic_desc']);
+								foreach ($str as $value):?>
+									<li><a href="#" class="toc"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/product/<?php echo $value ?>" alt="<?php echo $this->productdetail['title'.LANG] ?>" /></a></li>
+								<?php endforeach;?>
+						<?php endif;?>
+					</ul>
+				</div>
+			</div>
+			<span class="nextsmall"><img src="<?php echo $this->baseUrl().TEMPLATE?>/images/next.gif" alt="TIếp tục" /></span>
+			<!--Slide Next-->
+			<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE?>/js/cont_slidr.js"></script>
+		</div><!--END Slide show Jquery Lightbox-->
+	</div>
+	<div class="right-detail">
+		<ul class="right-detail-info">
+			<li>
+				<h3 class="title-info"><a href="" title="<?php echo $this->lang['product_detail']?> <?php echo $this->productdetail['title'.LANG] ?>"><?php echo $this->lang['product_detail']?>:</a></h3>
+				,<div class="price-product">Giá: <b><?php echo $this->productdetail['unit'] ?></b></div>
+			</li>
+			<li>
+				<?php echo html_entity_decode($this->productdetail['detail'.LANG]) ?>
+			</li>
+			<li>
+				<!-- <p class="pg-info-revi"><a href="#" title="">Reviews</a></p> -->
+				<p class="pg-info-all"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/order/id/<?php echo $this->productdetail['record_id'] ?>" title="Mua hàng">Mua hàng</a></p><div class="clear"></div>
+			</li>
+		</ul>
+	</div><!--End Right Detail-->
+   </div><!--End All pg info-->   
+   <!-- <div class="infotab">
+		<ul class="tabs">
+			<li><a href="#tab1">Thông tin 1</a></li>
+			<li><a href="#tab2">Thông tin 2</a></li>
+			<li><a href="#tab3">Thông tin 3</a></li>
+		</ul>
+		
+		<div class="tab_container">
+			<div id="tab1" class="tab_content">
+				Content tab 1	Content tab 1	Content tab 1	Content tab 1	Content tab 1	Content tab 1	Content tab 1	Content tab 1
+			</div>
+			<div id="tab2" class="tab_content">
+					Content tab 2	Content tab 2	Content tab 2	Content tab 2	Content tab 2	Content tab 2 Content tab 2
+			</div>
+			<div id="tab3" class="tab_content">
+					Content tab 3	Content tab 3	Content tab 3	Content tab 3	Content tab 3	Content tab 3 Content tab 3
+			</div>
+		</div>
+   </div> -->
+
+<div class="clear"></div>
+<h1 class="title-pr" style="margin-top: 15px"><?php echo $this->lang['product_other']?></h1>
+<div id="allproduct">
+<?php if (is_array($this->productcat)): ?>
+	<?php foreach ($this->productcat as $value): ?>
+		<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/product/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg';?>
+		<div class="bg-product">
+			<div class="bd-top-pr"></div>
+			<div class="product">
+				<a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo $this->baseUrl().$picthumb ?>" alt="<?php echo $value['title'.LANG] ?>" /></a>
+				<h3 class="title-h3-pr"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h3>
+				<?php echo html_entity_decode($value['preview'.LANG]) ?>
+				<!-- <p><s>$35.99</s></p> -->
+				<div class="all-buy">
+					<div class="all-pr"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>" title="Mua hàng <?php echo $value['title'.LANG] ?>">Mua hàng</a></div>
+					<div class="spe-price">
+						<div class="spe-left-price"></div>
+						<div class="spe-right-price"><span><?php echo $value['unit'] ?></span></div>
+					</div>
+				</div>
+			</div>
+			<div class="bd-btom-pr"></div>
+		</div>
+	<?php endforeach;?>
+<?php endif;?>
+</div><!--End All product-->
