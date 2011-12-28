@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 23, 2011 at 07:09 PM
+-- Generation Time: Dec 28, 2011 at 01:06 AM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -190,7 +190,7 @@ INSERT INTO `dos_module_consulting` (`record_id`, `pic_thumb`, `title`, `titleen
 (8, NULL, 'sddssd', '', '', '&lt;p&gt;\r\n	dsdsdsds&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	dssddsds&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:27', 7, 1, NULL, NULL, 1, 12),
 (9, NULL, 'tiêu đề', '', '', '&lt;p&gt;\r\n	tetset&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setstset&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:41', 8, 1, NULL, NULL, 1, 12),
 (10, '', 'tieu de 2', '', '', '&lt;p&gt;\r\n	tesseet&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setsetst&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:54', 9, 1, NULL, NULL, 1, 12),
-(11, NULL, 'Bài viết số 12', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	Bài viết số 12&lt;/p&gt;\r\n', '', NULL, 1, '2011-12-20 02:14:07', 10, 1, NULL, NULL, 1, 13);
+(11, NULL, 'Bài viết số 12', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	Bài viết số 12&lt;/p&gt;\r\n', '', NULL, 4, '2011-12-20 02:14:07', 10, 1, NULL, NULL, 1, 13);
 
 -- --------------------------------------------------------
 
@@ -207,7 +207,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_consulting_cat` (
   `cat_order` int(11) NOT NULL DEFAULT '1',
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `dos_module_consulting_cat`
@@ -216,7 +216,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_consulting_cat` (
 INSERT INTO `dos_module_consulting_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `cat_titlefr`, `cat_order`, `cat_enable`) VALUES
 (11, 0, 'Test', '', '', 1, 1),
 (12, 0, 'Tin tuc 1', '', '', 2, 1),
-(13, 0, 'Con 123', '', '', 3, 1);
+(13, 0, 'Con 123', '', '', 3, 1),
+(14, 12, 'Tin tức hay', '', '', 4, 1);
 
 -- --------------------------------------------------------
 
@@ -275,7 +276,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_corporate-culture` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `dos_module_corporate-culture`
@@ -284,9 +285,10 @@ CREATE TABLE IF NOT EXISTS `dos_module_corporate-culture` (
 INSERT INTO `dos_module_corporate-culture` (`record_id`, `pic_thumb`, `title`, `titleen`, `titlefr`, `preview`, `previewen`, `previewfr`, `content`, `contenten`, `contentfr`, `author`, `hits`, `postdate`, `record_order`, `record_type`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
 (8, NULL, 'sddssd', '', '', '&lt;p&gt;\r\n	dsdsdsds&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	dssddsds&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:27', 7, 1, NULL, NULL, 1, 12),
 (9, NULL, 'tiêu đề', '', '', '&lt;p&gt;\r\n	tetset&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setstset&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:41', 8, 1, NULL, NULL, 1, 12),
-(10, '', 'tieu de 2', '', '', '&lt;p&gt;\r\n	tesseet&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setsetst&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:54', 9, 1, NULL, NULL, 1, 12),
+(10, '', 'tieu de 2', '', '', '&lt;p&gt;\r\n	tesseet&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setsetst&lt;/p&gt;\r\n', '', '', NULL, 2, '2011-12-06 08:48:54', 9, 1, NULL, NULL, 1, 12),
 (11, 'teamwork59.jpg', 'Bài viết số 12', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n&lt;p&gt;\r\n	fdsg&lt;/p&gt;\r\n&lt;p&gt;\r\n	sdf&lt;/p&gt;\r\n&lt;p&gt;\r\n	g&lt;/p&gt;\r\n&lt;p&gt;\r\n	dsf&lt;/p&gt;\r\n&lt;p&gt;\r\n	g&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-20 02:14:07', 10, 1, NULL, NULL, 1, 13),
-(12, 'teamwork.jpg', 'Lợi ích của làm việc theo nhóm', '', '', '&lt;p&gt;\r\n	 Mọi thành viên trong tổ chức sẽ càng đồng lòng hướng tới mục tiêu và dốc sức cho thành công chung của tập thể khi họ cùng nhau xác định và vạch ra phương pháp đạt được chúng&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	1. Mọi thành viên trong tổ chức sẽ càng đồng lòng hướng tới mục tiêu và dốc sức cho thành công chung của tập thể khi họ cùng nhau xác định và vạch ra phương pháp đạt được chúng.&lt;/p&gt;\r\n&lt;p&gt;\r\n	2. Là thành viên của một nhóm, họ có cảm giác kiểm soát được cuộc sống của mình tốt hơn và không phải chịu đựng sự chuyên quyền của bất cứ người lãnh đạo nào.&lt;/p&gt;\r\n&lt;p&gt;\r\n	3. Khi các thành viên cùng góp sức giải quyết một vấn đề chung, họ học hỏi được cách xử lý mọi nhiệm vụ đơn giản hay khó khăn; họ học hỏi từ những thành viên khác và cả người lãnh đạo. Thúc đẩy quản lý theo nhóm là cách tốt nhất để phát huy năng lực của các nhân viên (một hình thức đào tạo tại chức).&lt;/p&gt;\r\n&lt;p&gt;\r\n	4. Hoạt động theo nhóm mang lại cơ hội cho các thành viên thoả mãn những nhu cầu về bản ngã, được đón nhận và thể hiện mọi tiềm năng.&lt;/p&gt;\r\n&lt;p&gt;\r\n	5. Quản lý theo nhóm giúp phá vỡ bức tường ngăn cách, tạo sự cởi mở và thân thiện giữa các thành viên và người lãnh đạo.&lt;/p&gt;\r\n&lt;p&gt;\r\n	6. Thông qua việc quản lý theo nhóm, các thành viên có thể học hỏi và vận dụng phong cách lãnh đạo từ cấp trên của mình. Điều đó tạo sự thống nhất về cách quản lý trong tổ chức.&lt;/p&gt;\r\n&lt;p&gt;\r\n	7. Hoạt động theo nhóm giúp phát huy khả năng phối hợp những bộ óc sáng tạo để đưa các quyết định đúng đắn.&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-23 02:10:08', 11, 1, NULL, NULL, 1, 15);
+(12, 'teamwork.jpg', 'Lợi ích của làm việc theo nhóm', '', '', '&lt;p&gt;\r\n	 Mọi thành viên trong tổ chức sẽ càng đồng lòng hướng tới mục tiêu và dốc sức cho thành công chung của tập thể khi họ cùng nhau xác định và vạch ra phương pháp đạt được chúng&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	1. Mọi thành viên trong tổ chức sẽ càng đồng lòng hướng tới mục tiêu và dốc sức cho thành công chung của tập thể khi họ cùng nhau xác định và vạch ra phương pháp đạt được chúng.&lt;/p&gt;\r\n&lt;p&gt;\r\n	2. Là thành viên của một nhóm, họ có cảm giác kiểm soát được cuộc sống của mình tốt hơn và không phải chịu đựng sự chuyên quyền của bất cứ người lãnh đạo nào.&lt;/p&gt;\r\n&lt;p&gt;\r\n	3. Khi các thành viên cùng góp sức giải quyết một vấn đề chung, họ học hỏi được cách xử lý mọi nhiệm vụ đơn giản hay khó khăn; họ học hỏi từ những thành viên khác và cả người lãnh đạo. Thúc đẩy quản lý theo nhóm là cách tốt nhất để phát huy năng lực của các nhân viên (một hình thức đào tạo tại chức).&lt;/p&gt;\r\n&lt;p&gt;\r\n	4. Hoạt động theo nhóm mang lại cơ hội cho các thành viên thoả mãn những nhu cầu về bản ngã, được đón nhận và thể hiện mọi tiềm năng.&lt;/p&gt;\r\n&lt;p&gt;\r\n	5. Quản lý theo nhóm giúp phá vỡ bức tường ngăn cách, tạo sự cởi mở và thân thiện giữa các thành viên và người lãnh đạo.&lt;/p&gt;\r\n&lt;p&gt;\r\n	6. Thông qua việc quản lý theo nhóm, các thành viên có thể học hỏi và vận dụng phong cách lãnh đạo từ cấp trên của mình. Điều đó tạo sự thống nhất về cách quản lý trong tổ chức.&lt;/p&gt;\r\n&lt;p&gt;\r\n	7. Hoạt động theo nhóm giúp phát huy khả năng phối hợp những bộ óc sáng tạo để đưa các quyết định đúng đắn.&lt;/p&gt;\r\n', '', '', NULL, 3, '2011-12-23 02:10:08', 11, 1, NULL, NULL, 1, 15),
+(13, NULL, 'Công nghệ mới', '', '', '&lt;p&gt;\r\n	Tối ưu hóaTối ưu hóa&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Tối ưu hóaTối ưu hóaTối ưu hóaTối ưu hóaTối ưu hóaTối ưu hóa&lt;/p&gt;\r\n&lt;p&gt;\r\n	Tối ưu hóaTối ưu hóaTối ưu hóaTối ưu hóaTối ưu hóaTối ưu hóa&lt;/p&gt;\r\n&lt;p&gt;\r\n	 &lt;/p&gt;\r\n', '', '', NULL, 3, '2011-12-26 17:26:38', 12, 1, NULL, NULL, 1, 15);
 
 -- --------------------------------------------------------
 
@@ -314,7 +316,7 @@ INSERT INTO `dos_module_corporate-culture_cat` (`cat_id`, `cat_parent_id`, `cat_
 (12, 0, 'Tin tuc 1', '', '', 2, 1),
 (13, 0, 'Con 123', '', '', 3, 1),
 (14, 12, 'Tin tuc 1-1', '', '', 4, 1),
-(15, 0, 'Văn hóa làm việc nhóm', '', '', 5, 1);
+(15, 0, 'Văn hóa làm việc nhóm(fix)', '', '', 5, 1);
 
 -- --------------------------------------------------------
 
@@ -345,7 +347,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_entertainment` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `dos_module_entertainment`
@@ -362,7 +364,9 @@ INSERT INTO `dos_module_entertainment` (`record_id`, `pic_thumb`, `title`, `titl
 (8, NULL, 'sddssd', '', '', '&lt;p&gt;\r\n	dsdsdsds&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	dssddsds&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:27', 7, 1, NULL, NULL, 1, 12),
 (9, NULL, 'tiêu đề', '', '', '&lt;p&gt;\r\n	tetset&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setstset&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:41', 8, 1, NULL, NULL, 1, 12),
 (10, '', 'tieu de 2', '', '', '&lt;p&gt;\r\n	tesseet&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setsetst&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:54', 9, 1, NULL, NULL, 1, 12),
-(11, NULL, 'Bài viết số 12', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	Bài viết số 12&lt;/p&gt;\r\n', '', NULL, 1, '2011-12-20 02:14:07', 10, 1, NULL, NULL, 1, 13);
+(11, NULL, 'Bài viết số 12', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	Bài viết số 12&lt;/p&gt;\r\n', '', NULL, 2, '2011-12-20 02:14:07', 10, 1, NULL, NULL, 1, 13),
+(12, NULL, 'Công nghệ tiết kiệm xăng, dầu', '', '', '&lt;h3&gt;\r\n	Type the title here&lt;/h3&gt;\r\n&lt;p&gt;\r\n	Type the text here&lt;/p&gt;\r\n', '', '', '&lt;div style=&quot;width:80%;&quot;&gt;\r\n	&lt;h3&gt;\r\n		Title goes here&lt;/h3&gt;\r\n	&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:150px;float:right;&quot;&gt;&lt;caption style=&quot;border:solid 1px #000000;&quot;&gt;\r\n			&lt;strong&gt;Table title&lt;/strong&gt;&lt;/caption&gt;\r\n		&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;\r\n					 &lt;/td&gt;\r\n				&lt;td&gt;\r\n					 &lt;/td&gt;\r\n				&lt;td&gt;\r\n					 &lt;/td&gt;\r\n			&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;\r\n					 &lt;/td&gt;\r\n				&lt;td&gt;\r\n					 &lt;/td&gt;\r\n				&lt;td&gt;\r\n					 &lt;/td&gt;\r\n			&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;\r\n					 &lt;/td&gt;\r\n				&lt;td&gt;\r\n					 &lt;/td&gt;\r\n				&lt;td&gt;\r\n					 &lt;/td&gt;\r\n			&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;\r\n		Type the text here&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', NULL, 4, '2011-12-26 17:34:15', 11, 1, NULL, NULL, 1, 13),
+(13, NULL, 'Lợi ích của làm việc ', '', '', '&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:100%;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;width:50%;&quot;&gt;\r\n				&lt;h3&gt;\r\n					Title 1&lt;/h3&gt;\r\n			&lt;/td&gt;\r\n			&lt;td&gt;\r\n				 &lt;/td&gt;\r\n			&lt;td style=&quot;width:50%;&quot;&gt;\r\n				&lt;h3&gt;\r\n					Title 2&lt;/h3&gt;\r\n			&lt;/td&gt;\r\n		&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;\r\n				Text 1&lt;/td&gt;\r\n			&lt;td&gt;\r\n				 &lt;/td&gt;\r\n			&lt;td&gt;\r\n				Text 2&lt;/td&gt;\r\n		&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;\r\n	More text goes here.&lt;/p&gt;\r\n', '', '', '&lt;div style=&quot;width:80%;&quot;&gt;\r\n	&lt;h3&gt;\r\n		Title goes here&lt;/h3&gt;\r\n	&lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;width:150px;float:right;&quot;&gt;&lt;caption style=&quot;border:solid 1px #000000;&quot;&gt;\r\n			&lt;strong&gt;Table title&lt;/strong&gt;&lt;/caption&gt;\r\n		&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;\r\n					 &lt;/td&gt;\r\n				&lt;td&gt;\r\n					 &lt;/td&gt;\r\n				&lt;td&gt;\r\n					 &lt;/td&gt;\r\n			&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;\r\n					 &lt;/td&gt;\r\n				&lt;td&gt;\r\n					 &lt;/td&gt;\r\n				&lt;td&gt;\r\n					 &lt;/td&gt;\r\n			&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;\r\n					 &lt;/td&gt;\r\n				&lt;td&gt;\r\n					 &lt;/td&gt;\r\n				&lt;td&gt;\r\n					 &lt;/td&gt;\r\n			&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;\r\n		Type the text herehhdfg&lt;/p&gt;\r\n	&lt;p&gt;\r\n		gfghjkl;''&lt;/p&gt;\r\n	&lt;p&gt;\r\n		ggv&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', NULL, 4, '2011-12-26 17:37:13', 12, 1, NULL, NULL, 1, 13);
 
 -- --------------------------------------------------------
 
@@ -431,11 +435,11 @@ INSERT INTO `dos_module_experience` (`record_id`, `pic_thumb`, `title`, `titleen
 (3, NULL, 'adasd', '', '', '&lt;p&gt;\r\n	sdsad&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sdasd&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-09-23 01:48:31', 2, 1, NULL, NULL, 1, 11),
 (4, NULL, 'assa', '', '', '&lt;p&gt;\r\n	saassa&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sasasa&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:46:33', 3, 1, NULL, NULL, 1, 12),
 (5, NULL, 'dfdffd', '', '', '&lt;p&gt;\r\n	dfdf&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	dffddf&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:02', 4, 1, NULL, NULL, 1, 12),
-(6, NULL, 'ssddsds', '', '', '&lt;p&gt;\r\n	dsdsds&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	dssdds&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:13', 5, 1, NULL, NULL, 1, 12),
-(7, NULL, 'sddsdsd', '', '', '&lt;p&gt;\r\n	ssddssd&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sdsdds&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:20', 6, 1, NULL, NULL, 1, 12),
+(6, NULL, 'ssddsds', '', '', '&lt;p&gt;\r\n	dsdsds&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	dssdds&lt;/p&gt;\r\n', '', '', NULL, 2, '2011-12-06 08:48:13', 5, 1, NULL, NULL, 1, 12),
+(7, NULL, 'sddsdsd', '', '', '&lt;p&gt;\r\n	ssddssd&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sdsdds&lt;/p&gt;\r\n', '', '', NULL, 2, '2011-12-06 08:48:20', 6, 1, NULL, NULL, 1, 12),
 (8, NULL, 'sddssd', '', '', '&lt;p&gt;\r\n	dsdsdsds&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	dssddsds&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:27', 7, 1, NULL, NULL, 1, 12),
 (9, NULL, 'tiêu đề', '', '', '&lt;p&gt;\r\n	tetset&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setstset&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:41', 8, 1, NULL, NULL, 1, 12),
-(10, '', 'tieu de 2', '', '', '&lt;p&gt;\r\n	tesseet&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setsetst&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:54', 9, 1, NULL, NULL, 1, 12);
+(10, '', 'tieu de 2', '', '', '&lt;p&gt;\r\n	tesseet&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setsetst&lt;/p&gt;\r\n', '', '', NULL, 2, '2011-12-06 08:48:54', 9, 1, NULL, NULL, 1, 12);
 
 -- --------------------------------------------------------
 
@@ -566,7 +570,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_handbook` (
 
 INSERT INTO `dos_module_handbook` (`record_id`, `pic_thumb`, `title`, `titleen`, `titlefr`, `preview`, `previewen`, `previewfr`, `content`, `contenten`, `contentfr`, `author`, `hits`, `postdate`, `record_order`, `record_type`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
 (5, NULL, 'dasdsadsa', '', '', '&lt;p&gt;\r\n	ttt&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sdfsdfsdf&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-09-12 03:46:55', 1, 0, NULL, NULL, 1, 14),
-(6, NULL, 'Bài viết số 2', '', '', '&lt;p&gt;\r\n	Bài viết số 2Bài viết số 2&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-19 23:47:13', 2, 1, NULL, NULL, 1, 14);
+(6, NULL, 'Bài viết số 2', '', '', '&lt;p&gt;\r\n	Bài viết số 2Bài viết số 2&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2Bài viết số 2&lt;/p&gt;\r\n', '', '', NULL, 2, '2011-12-19 23:47:13', 2, 1, NULL, NULL, 1, 14);
 
 -- --------------------------------------------------------
 
@@ -926,16 +930,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
 
 INSERT INTO `dos_module_news` (`record_id`, `pic_thumb`, `title`, `titleen`, `titlefr`, `preview`, `previewen`, `previewfr`, `content`, `contenten`, `contentfr`, `author`, `hits`, `postdate`, `record_order`, `record_type`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
 (1, NULL, 'dasdsadsa', '', '', '&lt;p&gt;\r\n	test&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	test&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-09-09 08:28:58', 1, 1, NULL, NULL, 1, 11),
-(2, NULL, 'safa', '', '', '&lt;p&gt;\r\n	asf&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	asf&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-09-09 14:36:00', 1, 0, NULL, NULL, 1, 11),
+(2, NULL, 'safa', '', '', '&lt;p&gt;\r\n	asf&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	asf&lt;/p&gt;\r\n', '', '', NULL, 3, '2011-09-09 14:36:00', 1, 0, NULL, NULL, 1, 11),
 (3, NULL, 'adasd', '', '', '&lt;p&gt;\r\n	sdsad&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sdasd&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-09-23 01:48:31', 2, 1, NULL, NULL, 1, 11),
 (4, NULL, 'assa', '', '', '&lt;p&gt;\r\n	saassa&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sasasa&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:46:33', 3, 1, NULL, NULL, 1, 12),
 (5, NULL, 'dfdffd', '', '', '&lt;p&gt;\r\n	dfdf&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	dffddf&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:02', 4, 1, NULL, NULL, 1, 12),
 (6, NULL, 'ssddsds', '', '', '&lt;p&gt;\r\n	dsdsds&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	dssdds&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:13', 5, 1, NULL, NULL, 1, 12),
 (7, NULL, 'sddsdsd', '', '', '&lt;p&gt;\r\n	ssddssd&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sdsdds&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:20', 6, 1, NULL, NULL, 1, 12),
 (8, NULL, 'sddssd', '', '', '&lt;p&gt;\r\n	dsdsdsds&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	dssddsds&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:27', 7, 1, NULL, NULL, 1, 12),
-(9, NULL, 'tiêu đề', '', '', '&lt;p&gt;\r\n	tetset&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setstset&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:41', 8, 1, NULL, NULL, 1, 12),
+(9, NULL, 'tiêu đề', '', '', '&lt;p&gt;\r\n	tetset&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setstset&lt;/p&gt;\r\n', '', '', NULL, 2, '2011-12-06 08:48:41', 8, 1, NULL, NULL, 1, 12),
 (10, '', 'tieu de 2', '', '', '&lt;p&gt;\r\n	tesseet&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setsetst&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:54', 9, 1, NULL, NULL, 1, 12),
-(11, NULL, 'Bài viết số 12', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	Bài viết số 12&lt;/p&gt;\r\n', '', NULL, 1, '2011-12-20 02:14:07', 10, 1, NULL, NULL, 1, 13);
+(11, NULL, 'Bài viết số 12', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	Bài viết số 12&lt;/p&gt;\r\n', '', NULL, 19, '2011-12-20 02:14:07', 10, 1, NULL, NULL, 1, 13);
 
 -- --------------------------------------------------------
 
@@ -1803,7 +1807,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_world-business` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `dos_module_world-business`
@@ -1813,7 +1817,7 @@ INSERT INTO `dos_module_world-business` (`record_id`, `pic_thumb`, `title`, `tit
 (8, NULL, 'sddssd', '', '', '&lt;p&gt;\r\n	dsdsdsds&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	dssddsds&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:27', 7, 1, NULL, NULL, 1, 12),
 (9, NULL, 'tiêu đề', '', '', '&lt;p&gt;\r\n	tetset&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setstset&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:41', 8, 1, NULL, NULL, 1, 12),
 (10, '', 'tieu de 2', '', '', '&lt;p&gt;\r\n	tesseet&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setsetst&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:54', 9, 1, NULL, NULL, 1, 12),
-(11, NULL, 'Bài viết số 12', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n&lt;p&gt;\r\n	fdsg&lt;/p&gt;\r\n&lt;p&gt;\r\n	sdf&lt;/p&gt;\r\n&lt;p&gt;\r\n	g&lt;/p&gt;\r\n&lt;p&gt;\r\n	dsf&lt;/p&gt;\r\n&lt;p&gt;\r\n	g&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-20 02:14:07', 10, 1, NULL, NULL, 1, 13);
+(11, NULL, 'Bài viết số 12', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n&lt;p&gt;\r\n	fdsg&lt;/p&gt;\r\n&lt;p&gt;\r\n	sdf&lt;/p&gt;\r\n&lt;p&gt;\r\n	g&lt;/p&gt;\r\n&lt;p&gt;\r\n	dsf&lt;/p&gt;\r\n&lt;p&gt;\r\n	g&lt;/p&gt;\r\n', '', '', NULL, 2, '2011-12-20 02:14:07', 10, 1, NULL, NULL, 1, 13);
 
 -- --------------------------------------------------------
 
@@ -1916,32 +1920,30 @@ CREATE TABLE IF NOT EXISTS `dos_sys_functions` (
   `function_load` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`function_id`),
   KEY `fk_dos_sys_functions_dos_sys_modules` (`model_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10427 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10505 ;
 
 --
 -- Dumping data for table `dos_sys_functions`
 --
 
 INSERT INTO `dos_sys_functions` (`function_id`, `model_name`, `model_load`, `action`, `varname`, `function_load`) VALUES
-(10408, 'about', 'About_Model_About', 'view', 'menu_about', 'getListmenu'),
-(10409, 'account', 'Webadmin_Model_Account', 'add', 'menu_account', 'getListmenu'),
-(10410, 'account', 'Webadmin_Model_Account', 'changepass', 'menu_account', 'getListmenu'),
-(10411, 'account', 'Webadmin_Model_Account', 'index', 'menu_account', 'getListmenu'),
-(10412, 'news', 'News_Model_NewsCat', 'cat', 'menu_cat_news', 'getListmenu'),
-(10413, 'news', 'News_Model_NewsCat', 'index', 'menu_cat_news', 'getListmenu'),
-(10414, 'news', 'News_Model_NewsCat', 'view', 'menu_cat_news', 'getListmenu'),
-(10415, 'setup', 'Webadmin_Model_Setup', 'config', 'menu_setup', 'getListmenu'),
-(10416, 'setup', 'Webadmin_Model_Setup', 'function', 'menu_setup', 'getListmenu'),
-(10417, 'setup', 'Webadmin_Model_Setup', 'index', 'menu_setup', 'getListmenu'),
-(10418, 'setup', 'Webadmin_Model_Setup', 'lang', 'menu_setup', 'getListmenu'),
-(10419, 'setup', 'Webadmin_Model_Setup', 'menu', 'menu_setup', 'getListmenu'),
-(10420, 'setup', 'Webadmin_Model_Setup', 'title', 'menu_setup', 'getListmenu'),
-(10421, 'setup', 'Webadmin_Model_Setup', 'web', 'menu_setup', 'getListmenu'),
-(10422, 'tool', 'Webadmin_Model_Tool', 'analytics', 'menu_tool', 'getListmenu'),
-(10423, 'tool', 'Webadmin_Model_Tool', 'index', 'menu_tool', 'getListmenu'),
-(10424, 'tool', 'Webadmin_Model_Tool', 'seo', 'menu_tool', 'getListmenu'),
-(10425, 'video', 'Video_Model_VideoCat', 'cat', 'list_cat_video', 'getListmenu'),
-(10426, 'video', 'Video_Model_VideoCat', 'index', 'list_cat_video', 'getListmenu');
+(10488, 'account', 'Webadmin_Model_Account', 'add', 'menu_account', 'getListmenu'),
+(10489, 'account', 'Webadmin_Model_Account', 'changepass', 'menu_account', 'getListmenu'),
+(10490, 'account', 'Webadmin_Model_Account', 'index', 'menu_account', 'getListmenu'),
+(10491, 'default', 'Handbook_Model_HandbookCat', 'index', 'menu_cat_handbook', 'getListmenu'),
+(10492, 'default', 'News_Model_News', 'index', 'list_top_hits', 'listTopHits'),
+(10493, 'default', 'News_Model_News', 'index', 'hot_news_item', 'listItemHotFirst'),
+(10494, 'default', 'News_Model_News', 'index', 'list_hot_news_item', 'listItemsHot'),
+(10495, 'setup', 'Webadmin_Model_Setup', 'config', 'menu_setup', 'getListmenu'),
+(10496, 'setup', 'Webadmin_Model_Setup', 'function', 'menu_setup', 'getListmenu'),
+(10497, 'setup', 'Webadmin_Model_Setup', 'index', 'menu_setup', 'getListmenu'),
+(10498, 'setup', 'Webadmin_Model_Setup', 'lang', 'menu_setup', 'getListmenu'),
+(10499, 'setup', 'Webadmin_Model_Setup', 'menu', 'menu_setup', 'getListmenu'),
+(10500, 'setup', 'Webadmin_Model_Setup', 'title', 'menu_setup', 'getListmenu'),
+(10501, 'setup', 'Webadmin_Model_Setup', 'web', 'menu_setup', 'getListmenu'),
+(10502, 'tool', 'Webadmin_Model_Tool', 'analytics', 'menu_tool', 'getListmenu'),
+(10503, 'tool', 'Webadmin_Model_Tool', 'index', 'menu_tool', 'getListmenu'),
+(10504, 'tool', 'Webadmin_Model_Tool', 'seo', 'menu_tool', 'getListmenu');
 
 -- --------------------------------------------------------
 
@@ -2225,7 +2227,7 @@ CREATE TABLE IF NOT EXISTS `dos_sys_statistics` (
 --
 
 INSERT INTO `dos_sys_statistics` (`session_id`, `time`) VALUES
-('uxfd80qrb', 1324663282);
+('zc4wo75jb', 1325030231);
 
 -- --------------------------------------------------------
 
@@ -2277,9 +2279,9 @@ INSERT INTO `dos_sys_webs` (`web_name`, `web_value`) VALUES
 ('description', 'Khởi sự doanh nghiệp,cẩm nang doanh nghiệp,kinh nghiệm thương trường'),
 ('email_subject', 'Liên hệ từ website'),
 ('keywords', 'Khởi sự doanh nghiệp,cẩm nang doanh nghiệp,kinh nghiệm thương trường'),
-('timestamp_today', '1324659600'),
+('timestamp_today', '1325005200'),
 ('titleweb', 'khoisudoanhnghiep.vn'),
-('total_visit', '29'),
+('total_visit', '36'),
 ('total_visit_today', '1'),
 ('type', '1');
 
