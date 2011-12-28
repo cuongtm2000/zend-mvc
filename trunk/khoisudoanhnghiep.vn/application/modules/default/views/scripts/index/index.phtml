@@ -1,8 +1,8 @@
-<h1 class="title-left"><span>Tin, Bài nổi bật</span></h1>
+<h1 class="title-left"><span>Tin tức &amp; Sự kiện</span></h1>
 	<div class="frame-tent-left">
 		<?php if(isset($this->list_top_hits)and count($this->list_top_hits)>0):?>
 			<div class="frame-focus">
-				<h1 class="title-focus"><span>Tin Nhiều Người Đọc</span></h1>
+				<h1 class="title-focus"><span>Tin, bài nổi bật</span></h1>
 				<ul class="fucus-tent">
 					<?php 
 						$i=0;
@@ -21,19 +21,17 @@
 			 </div><!--End frame fucus-->  
 		<?php endif;?>
 		
-		<?php $value=$this->news_hot_first;?>
-		<?php $picthumb = ($value['pic_thumb']!='') ? 
-					IMAGES_PATH.'news/'.$value['pic_thumb'] : 
-					TEMPLATE.'/images/no-images.jpg'; 
-		?>
-		<img src="<?php echo $this->baseUrl().$picthumb ?>" class="imgcon"  alt="<?php echo $value['title'.LANG] ?>" />
-
-		<h2 class="title-box"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>news/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h2>
-		<?php echo $value['preview'.LANG] ?>
+		<?php if($this->news_item_first):?>
+			<?php if($this->news_item_first['pic_thumb']):?>
+				<img src="<?php echo $this->baseUrl().IMAGES_PATH.'news/'.$this->news_item_first['pic_thumb'] ?>" class="imgcon"  alt="<?php echo $this->news_item_first['title'.LANG] ?>" />
+			<?php endif;?>
+			<h2 class="title-box"><a href="<?php echo $this->baseUrl() ?>/tin-tuc/<?php echo $this->news_item_first['tag'] ?>.html" title="<?php echo $this->news_item_first['title'.LANG] ?>"><?php echo $this->news_item_first['title'.LANG] ?></a></h2>
+			<?php echo $this->news_item_first['preview'.LANG] ?>
+		<?php endif;?>
 		
-		<?php if($this->news_hots):?>
+		<?php if($this->news_items):?>
 		<ul class="related-news">
-			<?php foreach($this->news_hots as $value):?>
+			<?php foreach($this->news_items as $value):?>
 				<li><a href="<?php echo $this->baseUrl() ?>/news/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></li>
 			<?php endforeach;?>
 		</ul><div class="clear"></div>
@@ -49,7 +47,7 @@
 		<?php  if(isset($this->menu_cat_handbook)):?>
 			<ul class="sub-top-tent">
 				<?php foreach ($this->menu_cat_handbook as $value) :?>
-				 <li style="border:none"><a href="#" title=""><?php echo $value['title'.LANG] ?></a></li>
+				 <li style="border:none"><a href="#" title=""><?php echo $value['cat_title'] ?></a></li>
 				 <?php endforeach;?>
 			</ul> <div class="clear"></div>
 		<?php endif;?>
@@ -85,7 +83,7 @@ Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho vi
 	<div class="tent-new">
 		<ul class="sub-top-tent">
 			<li><a href="#" title="">Kinh nghiệm</a></li>
-			<li><a href="#" title="">Mẹo vật</a></li>
+			<li><a href="#" title="">Mẹo vặt</a></li>
 			<li style="border:none"><a href="#" title="">Cảnh giác</a></li>
 		</ul> <div class="clear"></div>
 		<div class="tent-new-left"><h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>

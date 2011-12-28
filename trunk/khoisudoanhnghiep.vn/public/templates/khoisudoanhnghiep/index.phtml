@@ -44,7 +44,8 @@
 						$style = ($i++ ==$n-1) ? ' style="background:none"' : $style=''; 
 						$target = ($models['target']=='') ? '' : ' target="'.$models['target'].'"';
 						$select = ($this->module==$models['url']) ? ' class="select"': '';
-						echo '<li '.$style.'><a href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.''.$select.'>'.html_entity_decode($models['module'.LANG]).'</a></li>';
+						echo '<li'.$style.'><a href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.''.$select.'>'.html_entity_decode($models['module'.LANG]).'</a>';
+						echo '</li>';
 					}
 				?>
 				<!-- li style="background:none"><a href="entertainment.html" title="Giải trí">Giải trí</a>
@@ -192,4 +193,3 @@
 </div><!--End bg fter-->
 </body>
 </html>
-

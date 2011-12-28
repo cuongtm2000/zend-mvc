@@ -24,6 +24,14 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 		Zend_Db_Table::setDefaultAdapter($db);
 		return $db;
 	}
+	protected function _initLoadRouter(){
+		$config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/app-router.ini');
+		$objRouter = new Zend_Controller_Router_Rewrite();
+		$router = $objRouter->addConfig($config,'routes');
+		
+		$front = Zend_Controller_Front::getInstance();
+		$front->setRouter($router);
+	}
 	public function _initFilter(){
         HTMLPurifier_Bootstrap::registerAutoload();
         $config = HTMLPurifier_Config::createDefault();

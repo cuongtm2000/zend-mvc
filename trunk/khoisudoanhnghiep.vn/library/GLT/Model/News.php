@@ -4,13 +4,15 @@ class GLT_Model_News extends Zend_Db_Table{
 	protected $_name;
 	protected $_modelCat;
     protected $_primary = 'record_id';
-    public  $_config;
-    public  $_xss;
+    protected $_db;
+    public $_config;
+    public $_xss;
     
     public function init(){
     	$this->_config = Zend_Registry::get("config");
         $this->_xss = Zend_Registry::get('xss');
         $this->_name = 'dos_module_'.$this->_module;
+        $this->_db = Zend_Registry::get('connectDb');
     }
     
     
@@ -27,12 +29,11 @@ class GLT_Model_News extends Zend_Db_Table{
     
     //Front end - Get bản tin đầu tiên mới nhất
 	public function listItemNewFirst(){
-    	$select = $this->select()->from($this->_name, 
-    				array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG))
-							   ->where('enable = 1')
-							   ->order('record_order DESC')
-							   ->order('postdate DESC')
-                               ->limit(1);
+    	$select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG, 'tag', 'description'))
+							     ->where('enable = 1')
+							     ->order('record_order DESC')
+							     ->order('postdate DESC')
+							     ->limit(1);
 		return $this->fetchRow($select);
     }
     
@@ -42,7 +43,7 @@ class GLT_Model_News extends Zend_Db_Table{
 							   ->where('enable = 1')
 							   ->order('record_order DESC')
 							   ->order('postdate DESC')
-							   ->limit(7,1);
+							   ->limit(5, 1);
 		return $this->fetchAll($select)->toArray();
     }
 	
@@ -88,15 +89,8 @@ class GLT_Model_News extends Zend_Db_Table{
     }
 	// Product by cat_id other
     public function itemByCatNoneid($cid, $id){
-    	$select = $this->select()->from($this->_name, 
-    					array('record_id', 'pic_thumb', 'postdate', 'title'.LANG,'preview'.LANG))
-    				->where('dos_module_item_cat_cat_id =?', $cid)
-    				->where('record_id NOT IN (?)', $id)
-    				->order('record_order ASC')
-					->order('postdate DESC')
-    				->where('enable = 1')
-    				->limit(5, 1);
-		return $this->fetchAll($select)->toArray();
+        $sql = "SELECT record_id, pic_thumb, postdate, title".LANG.", preview".LANG." FROM ".$this->_name." WHERE dos_module_item_cat_cat_id =? AND record_id NOT IN (?) AND enable = 1 ORDER BY record_order DESC, postdate DESC";
+        return $this->_db->fetchAll($sql, array($cid, $this->getRecordByTag($id)));
     }
     
     //Front end - Get Bản tin bởi cat_id
@@ -126,13 +120,15 @@ class GLT_Model_News extends Zend_Db_Table{
     
     //Front end - Get detail new
 	public function detailItem($data = NULL){
-    	$where = 'record_id = '.$data['id'];
-    	$result=$this->fetchRow($where);
-    	
+        $result = $this->fetchRow($this->select()->where('tag = ?', $data['id']));
     	if(count($result)){
-    		$this->updateHits($data['id']);
+    		$this->updateHits($result['record_id']);
     		return $result->toArray();
     	}
+    }
+    //Front end - Get record_id by tag
+    private function getRecordByTag($tag){
+        return $this->_db->fetchOne("SELECT record_id FROM ".$this->_name." WHERE tag = ?", array($tag));
     }
     //Back end - Danh sách Item admin
 	public function listItemadmin($data = NULL){
@@ -269,7 +265,7 @@ class GLT_Model_News extends Zend_Db_Table{
 		$select = $db->select()->from($this->_name, array('max(record_order) as max'));
 		$max_record = $db->fetchOne($select)+1;
 		
-    	$data = array('pic_thumb' => $file_thumb, 'title' => htmlspecialchars($this->_xss->purify($data['title'])), 'titleen' => htmlspecialchars($this->_xss->purify($data['titleen'])), 'titlefr' => htmlspecialchars($this->_xss->purify($data['titlefr'])), 'preview' => htmlspecialchars($this->_xss->purify($data['preview'])), 'previewen' => htmlspecialchars($this->_xss->purify($data['previewen'])), 'previewfr' => htmlspecialchars($this->_xss->purify($data['previewfr'])), 'content' => htmlspecialchars($this->_xss->purify($data['detail'])), 'contenten' => htmlspecialchars($this->_xss->purify($data['detailen'])), 'contentfr' => htmlspecialchars($this->_xss->purify($data['detailfr'])), 'record_order' => $max_record, 'record_type' => htmlspecialchars($this->_xss->purify($data['hot'])), 'enable' => htmlspecialchars($this->_xss->purify($data['active'])), 'dos_module_item_cat_cat_id' => htmlspecialchars($this->_xss->purify($data['parentcat'])));
+    	$data = array('pic_thumb' => $file_thumb, 'title' => $this->_xss->purify($data['title']), 'titleen' => $this->_xss->purify($data['titleen']), 'titlefr' => $this->_xss->purify($data['titlefr']), 'preview' => $this->_xss->purify($data['preview']), 'previewen' => $this->_xss->purify($data['previewen']), 'previewfr' => $this->_xss->purify($data['previewfr']), 'content' => $this->_xss->purify($data['detail']), 'contenten' => $this->_xss->purify($data['detailen']), 'contentfr' => $this->_xss->purify($data['detailfr']), 'tag' => $this->_xss->purify($data['tag']), 'description' => $this->_xss->purify($data['description']), 'record_order' => $max_record, 'record_type' => $this->_xss->purify($data['hot']), 'enable' => $this->_xss->purify($data['active']), 'dos_module_item_cat_cat_id' => $this->_xss->purify($data['parentcat']));
     	$this->insert($data);
     }
 	public function editItem($data = NULL){
@@ -298,7 +294,7 @@ class GLT_Model_News extends Zend_Db_Table{
     	}
 		
     	$where = 'record_id = '.$data['id'];
-    	$data = array('pic_thumb' => $file_thumb, 'title' => htmlspecialchars($this->_xss->purify($data['title'])), 'titleen' => htmlspecialchars($this->_xss->purify($data['titleen'])), 'titlefr' => htmlspecialchars($this->_xss->purify($data['titlefr'])), 'preview' => htmlspecialchars($this->_xss->purify($data['preview'])), 'previewen' => htmlspecialchars($this->_xss->purify($data['previewen'])), 'previewfr' => htmlspecialchars($this->_xss->purify($data['previewfr'])), 'content' => htmlspecialchars($this->_xss->purify($data['detail'])), 'contenten' => htmlspecialchars($this->_xss->purify($data['detailen'])), 'contentfr' => htmlspecialchars($this->_xss->purify($data['detailfr'])), 'record_type' => htmlspecialchars($this->_xss->purify($data['hot'])), 'enable' => htmlspecialchars($this->_xss->purify($data['active'])), 'dos_module_item_cat_cat_id' => htmlspecialchars($this->_xss->purify($data['parentcat'])));
+    	$data = array('pic_thumb' => $file_thumb, 'title' => $this->_xss->purify($data['title']), 'titleen' => $this->_xss->purify($data['titleen']), 'titlefr' => $this->_xss->purify($data['titlefr']), 'preview' => $this->_xss->purify($data['preview']), 'previewen' => $this->_xss->purify($data['previewen']), 'previewfr' => $this->_xss->purify($data['previewfr']), 'content' => $this->_xss->purify($data['detail']), 'contenten' => $this->_xss->purify($data['detailen']), 'contentfr' => $this->_xss->purify($data['detailfr']), 'tag' => $this->_xss->purify($data['tag']), 'description' => $this->_xss->purify($data['description']), 'record_type' => $this->_xss->purify($data['hot']), 'enable' => $this->_xss->purify($data['active']), 'dos_module_item_cat_cat_id' => $this->_xss->purify($data['parentcat']));
     	$this->update($data, $where);
     }
     //Back end - Delete for cat

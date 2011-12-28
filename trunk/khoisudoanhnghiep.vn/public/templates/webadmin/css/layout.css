@@ -98,6 +98,7 @@ fieldset input.login {cursor:pointer; width:80px; height:24px; color:#fff; borde
 fieldset input.login:hover, .login-a:hover{background:#5184D2}
 fieldset .login-a {cursor:pointer; width:80px; height:24px; color:#fff; border:1px solid #ccc; background:#3A6AAD; -moz-border-radius: 3px; -webkit-border-radius: 3px; display:inline; margin-right:6px; padding:3px 18px 4px 18px}
 fieldset .login-a:hover{text-decoration:none}
+fieldset textarea{-moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; width:55.5%; padding:1px 3px}
 
 fieldset .txt-very-tiny{width:22px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
 fieldset .txt-tiny{width:70px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
