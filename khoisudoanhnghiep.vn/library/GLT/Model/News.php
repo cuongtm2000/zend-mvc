@@ -14,7 +14,7 @@ class GLT_Model_News extends Zend_Db_Table{
     }
     
     
-   //Front end - Get bản tin mới nhất
+   //Front end - Get bản tin nhiều người xem
 	public function listTopHits(){
     	$select = $this->select()->from($this->_name, 
     				array('record_id',  'title'.LANG))
@@ -25,23 +25,21 @@ class GLT_Model_News extends Zend_Db_Table{
 		return $this->fetchAll($select)->toArray();
     }
     
-    //Front end - Get bản tin mới nhất
-	public function listItemHotFirst(){
+    //Front end - Get bản tin đầu tiên mới nhất
+	public function listItemNewFirst(){
     	$select = $this->select()->from($this->_name, 
     				array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG))
 							   ->where('enable = 1')
-							   ->where('record_type = 1')
 							   ->order('record_order DESC')
 							   ->order('postdate DESC')
                                ->limit(1);
 		return $this->fetchRow($select);
     }
     
-	//Front end - Get Bản tin Hot mới nhất
-	public function listItemsHot(){
+	//Front end - Get Danh sách Bản tin mới nhất
+	public function listItemsNew(){
 		$select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG,'preview'.LANG))
 							   ->where('enable = 1')
-							   ->where('record_type = 1')
 							   ->order('record_order DESC')
 							   ->order('postdate DESC')
 							   ->limit(7,1);
@@ -112,7 +110,7 @@ class GLT_Model_News extends Zend_Db_Table{
     		return $result->toArray();
     	}
     }
-    
+    //Back end - Danh sách Item admin
 	public function listItemadmin($data = NULL){
 		//get paging number
     	$paginator = $data['paginator'];
