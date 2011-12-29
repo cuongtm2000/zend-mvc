@@ -247,7 +247,20 @@ class GLT_Model_News extends Zend_Db_Table{
 		$select = $db->select()->from($this->_name, array('max(record_order) as max'));
 		$max_record = $db->fetchOne($select)+1;
 		
-    	$data = array('pic_thumb' => $file_thumb, 'title' => htmlspecialchars($this->_xss->purify($data['title'])), 'titleen' => htmlspecialchars($this->_xss->purify($data['titleen'])), 'titlefr' => htmlspecialchars($this->_xss->purify($data['titlefr'])), 'preview' => htmlspecialchars($this->_xss->purify($data['preview'])), 'previewen' => htmlspecialchars($this->_xss->purify($data['previewen'])), 'previewfr' => htmlspecialchars($this->_xss->purify($data['previewfr'])), 'content' => htmlspecialchars($this->_xss->purify($data['detail'])), 'contenten' => htmlspecialchars($this->_xss->purify($data['detailen'])), 'contentfr' => htmlspecialchars($this->_xss->purify($data['detailfr'])), 'record_order' => $max_record, 'record_type' => htmlspecialchars($this->_xss->purify($data['hot'])), 'enable' => htmlspecialchars($this->_xss->purify($data['active'])), 'dos_module_item_cat_cat_id' => htmlspecialchars($this->_xss->purify($data['parentcat'])));
+    	$data = array( 'pic_thumb' => $file_thumb, 
+                        'title' => $this->_xss->purify($data['title']), 
+                        'titleen' => $this->_xss->purify($data['titleen']), 
+                        'titlefr' => $this->_xss->purify($data['titlefr']), 
+                        'preview' => $this->_xss->purify($data['preview']), 
+                        'previewen' => $this->_xss->purify($data['previewen']), 
+                        'previewfr' => $this->_xss->purify($data['previewfr']), 
+                        'content' => $this->_xss->purify($data['detail']), 
+                        'contenten' => $this->_xss->purify($data['detailen']), 
+                        'contentfr' => $this->_xss->purify($data['detailfr']), 
+                        'record_order' => $max_record, 
+                        'record_type' => $this->_xss->purify($data['hot']), 
+                        'enable' => $this->_xss->purify($data['active']), 
+                        'dos_module_item_cat_cat_id' => $this->_xss->purify($data['parentcat']));
     	$this->insert($data);
     }
 	public function editItem($data = NULL){
@@ -276,7 +289,19 @@ class GLT_Model_News extends Zend_Db_Table{
     	}
 		
     	$where = 'record_id = '.$data['id'];
-    	$data = array('pic_thumb' => $file_thumb, 'title' => htmlspecialchars($this->_xss->purify($data['title'])), 'titleen' => htmlspecialchars($this->_xss->purify($data['titleen'])), 'titlefr' => htmlspecialchars($this->_xss->purify($data['titlefr'])), 'preview' => htmlspecialchars($this->_xss->purify($data['preview'])), 'previewen' => htmlspecialchars($this->_xss->purify($data['previewen'])), 'previewfr' => htmlspecialchars($this->_xss->purify($data['previewfr'])), 'content' => htmlspecialchars($this->_xss->purify($data['detail'])), 'contenten' => htmlspecialchars($this->_xss->purify($data['detailen'])), 'contentfr' => htmlspecialchars($this->_xss->purify($data['detailfr'])), 'record_type' => htmlspecialchars($this->_xss->purify($data['hot'])), 'enable' => htmlspecialchars($this->_xss->purify($data['active'])), 'dos_module_item_cat_cat_id' => htmlspecialchars($this->_xss->purify($data['parentcat'])));
+    	$data = array( 'pic_thumb' => $file_thumb, 
+                        'title' => $this->_xss->purify($data['title']), 
+                        'titleen' => $this->_xss->purify($data['titleen']), 
+                        'titlefr' => $this->_xss->purify($data['titlefr']), 
+                        'preview' => $this->_xss->purify($data['preview']), 
+                        'previewen' => $this->_xss->purify($data['previewen']), 
+                        'previewfr' => $this->_xss->purify($data['previewfr']), 
+                        'content' => $this->_xss->purify($data['detail']), 
+                        'contenten' => $this->_xss->purify($data['detailen']), 
+                        'contentfr' => $this->_xss->purify($data['detailfr']), 
+                        'record_type' => $this->_xss->purify($data['hot']), 
+                        'enable' => $this->_xss->purify($data['active']), 
+                        'dos_module_item_cat_cat_id' => $this->_xss->purify($data['parentcat']));
     	$this->update($data, $where);
     }
     //Back end - Delete for cat
