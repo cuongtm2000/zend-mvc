@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 28, 2011 at 05:21 AM
+-- Generation Time: Dec 29, 2011 at 06:50 PM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -49,8 +49,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_about` (
 --
 
 INSERT INTO `dos_module_about` (`record_id`, `title`, `titleen`, `titlefr`, `content`, `contenten`, `contentfr`, `hits`, `posted_date`, `record_order`, `extra_field1`, `extra_field2`, `hot`, `enable`) VALUES
-(27, 'Giới Thiệu công ty', '', '', '&lt;p&gt;\r\n	&lt;strong&gt;13 Với hơn 20 năm kinh nghiệm trong ngành ẩm thực, cho đến ngày hôm nay chúng tôi mới mạnh dạn hình thành Công ty nhằm đáp ứng yêu cầu ngày càng cao trong lĩnh vực nhà hàng khách sạn. Nhờ vào tinh thần đoàn kết của một tập thể năng động,chuyên nghiệp và không ngừng học hỏi, chúng tôi hy vọng sẽ làm hài lòng Quý khách hàng.&lt;/strong&gt;&lt;/p&gt;\r\n&lt;p&gt;\r\n	Công ty TNHH TRẦN PHẠM {TRANPHAM LTD CO.} chúng tôi chuyên hoạt động trong lĩnh vực: Set up Nhà hàng, Công Nghệ Tiệc cưới, và hoạt động mạnh nhất là đào tạo và cung cấp đầu bếp cũng như chuyên giảng dạy nấu ăn theo yêu cầu của Quý khách.&lt;/p&gt;\r\n&lt;p&gt;\r\n	          Với mong muốn mang lại kỹ thuật chế biến món ăn đậm đà và đặc sắc nhất cho quý khách..chúng tôi còn đưa vệ sinh an toàn thực phẩm lên hàng  đầu là kim chỉ nam giúp chúng tôi tiến bước phía trước.Đội ngũ nhân viên của chúng tôi chuyên nấu các món ăn Âu, Á, Hải sản, Đặc sản 3 miền. Ngoài ra luôn nhận tổ chức Tiệc cưới, Buffet, Tea break, Finger food, Tiệc outside catering…..Chúng tôi sẳn sàng đáp ứng mọi yêu cầu từ  phía các đối tác một cách chu đáo và chuyên nghiệp.&lt;/p&gt;\r\n&lt;p&gt;\r\n	Tự hào với thành tích của mình, song chúng tôi hiểu rằng tất cả còn đang ở phía trước. Chúng tôi đang từng ngày bằng tâm huyết, say mê nghiên cứu, sáng tạo ra những món ăn mang tầm quốc tế.&lt;/p&gt;\r\n&lt;p&gt;\r\n	Rất mong nhận được sự hợp tác của Quý vị, những bạn hàng, khách hàng đã và sẽ đến với Công ty. Quý vị chính là nguồn động lực mạnh mẽ cho sự  phát triển và thành công của chúng tôi.&lt;/p&gt;\r\n&lt;p&gt;\r\n	Chúc sức khoẻ và thành công.&lt;/p&gt;\r\n&lt;p style=&quot;text-align:right;&quot;&gt;\r\n	Giám đốc&lt;/p&gt;\r\n', '', '', 555, '2011-08-16 02:32:39', 1, '', '', 0, 1),
-(28, 'Gioi thieu so luoc', '', '', '&lt;p&gt;\r\n	&lt;span style=&quot;font-size:14px;&quot;&gt;&lt;strong&gt;Danh hiệu đầu bếp được trao cho những người có kiến thức chuyên môn cao và nhiều kinh nghiệp trong lĩnh vực nấu ăn. Đứng ở vị trí cáo nhất kà bếp trưởng - người quản lý toàn bộ hoạt động của bếp. Đó cũng là người giàu kinh nghiệm và có khả năng tổ chức để công việc được chạy đều, đảm bảo bữa ăn ngon lành, sạch sẽ, đúng giới, nóng suốt và trình bày đẹp nhất&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\r\n', '', '', 1028, '2011-08-16 03:35:14', 1, '', '', 1, 1);
+(27, 'Giới Thiệu công ty', '', '', '<p>\r\n	<strong>13 Với hơn 20 năm kinh nghiệm trong ngành ẩm thực, cho đến ngày hôm nay chúng tôi mới mạnh dạn hình thành Công ty nhằm đáp ứng yêu cầu ngày càng cao trong lĩnh vực nhà hàng khách sạn. Nhờ vào tinh thần đoàn kết của một tập thể năng động,chuyên nghiệp và không ngừng học hỏi, chúng tôi hy vọng sẽ làm hài lòng Quý khách hàng.</strong></p>\r\n<p>\r\n	Công ty TNHH TRẦN PHẠM {TRANPHAM LTD CO.} chúng tôi chuyên hoạt động trong lĩnh vực: Set up Nhà hàng, Công Nghệ Tiệc cưới, và hoạt động mạnh nhất là đào tạo và cung cấp đầu bếp cũng như chuyên giảng dạy nấu ăn theo yêu cầu của Quý khách.</p>\r\n<p>\r\n	          Với mong muốn mang lại kỹ thuật chế biến món ăn đậm đà và đặc sắc nhất cho quý khách..chúng tôi còn đưa vệ sinh an toàn thực phẩm lên hàng  đầu là kim chỉ nam giúp chúng tôi tiến bước phía trước.Đội ngũ nhân viên của chúng tôi chuyên nấu các món ăn Âu, Á, Hải sản, Đặc sản 3 miền. Ngoài ra luôn nhận tổ chức Tiệc cưới, Buffet, Tea break, Finger food, Tiệc outside catering…..Chúng tôi sẳn sàng đáp ứng mọi yêu cầu từ  phía các đối tác một cách chu đáo và chuyên nghiệp.</p>\r\n<p>\r\n	Tự hào với thành tích của mình, song chúng tôi hiểu rằng tất cả còn đang ở phía trước. Chúng tôi đang từng ngày bằng tâm huyết, say mê nghiên cứu, sáng tạo ra những món ăn mang tầm quốc tế.</p>\r\n<p>\r\n	Rất mong nhận được sự hợp tác của Quý vị, những bạn hàng, khách hàng đã và sẽ đến với Công ty. Quý vị chính là nguồn động lực mạnh mẽ cho sự  phát triển và thành công của chúng tôi.</p>\r\n<p>\r\n	Chúc sức khoẻ và thành công.</p>\r\n<p style="text-align:right;">\r\n	Giám đốc</p>\r\n', '', '', 571, '2011-08-16 02:32:39', 1, '', '', 0, 1),
+(28, 'Gioi thieu so luoc', '', '', '<p>\r\n	<span style="font-size:14px;"><strong>Danh hiệu đầu bếp được trao cho những người có kiến thức chuyên môn cao và nhiều kinh nghiệp trong lĩnh vực nấu ăn. Đứng ở vị trí cáo nhất kà bếp trưởng - người quản lý toàn bộ hoạt động của bếp. Đó cũng là người giàu kinh nghiệm và có khả năng tổ chức để công việc được chạy đều, đảm bảo bữa ăn ngon lành, sạch sẽ, đúng giới, nóng suốt và trình bày đẹp nhất</strong></span></p>\r\n', '', '', 1031, '2011-08-16 03:35:14', 1, '', '', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -244,8 +244,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_contact` (
 --
 
 INSERT INTO `dos_module_contact` (`record_id`, `create_date`, `title`, `titleen`, `titlefr`, `content`, `contenten`, `contentfr`, `hot`, `enable`) VALUES
-(7, '2011-06-17 03:52:09', 'Liên hệ với chúng tôi', '', '', '&lt;p&gt;\r\n	VUONG HAI CORPORATION Copyright © 2011. Develop by Dos.vn&lt;br /&gt;\r\n	Office: C1B Dong Khoi, hamlet 4, Tan Hiep ward, Bien Hoa city, Dong Nai province&lt;br /&gt;\r\n	Factory: Ong Huong Hamlet, Thien Tan commune, Vinh Cuu district, Dong Nai province&lt;br /&gt;\r\n	Phone: (+8461) 3895 060 - (+8461) 3865 819&lt;br /&gt;\r\n	Fax: (+8461) 3895 573 - (+8461) 3865 8219&lt;br /&gt;\r\n	Website: www.vuonghai.com - www.block-betongnhe.com&lt;/p&gt;\r\n', '', '', 0, 1),
-(8, '2011-12-06 07:07:19', 'Liên hệ Home', '', '', '&lt;p style=&quot;text-align:center;&quot;&gt;\r\n	VUONG HAI CORPORATION Copyright © 2011. Develop by Dos.vn&lt;br /&gt;\r\n	Office: C1B Dong Khoi, hamlet 4, Tan Hiep ward, Bien Hoa city, Dong Nai province&lt;br /&gt;\r\n	Factory: Ong Huong Hamlet, Thien Tan commune, Vinh Cuu district, Dong Nai province&lt;br /&gt;\r\n	Phone: (+8461) 3895 060 - (+8461) 3865 819&lt;br /&gt;\r\n	Fax: (+8461) 3895 573 - (+8461) 3865 8219&lt;br /&gt;\r\n	Website: &lt;a href=&quot;http://vuonghai.com&quot;&gt;www.vuonghai.com&lt;/a&gt; - www.&lt;a href=&quot;http://block-betongnhe.com&quot;&gt;block-betongnhe.com&lt;/a&gt;&lt;/p&gt;\r\n', '', '', 1, 1);
+(7, '2011-06-17 03:52:09', 'Liên hệ với chúng tôi', '', '', '<p>\r\n	<span style="color:#0000ff;">CÔNG TY TNHH THƯƠNG MẠI - QUỐC TẾ THIÊN LONG</span></p>\r\n<p>\r\n	<span style="color:#0000ff;">Địa chỉ: Xã Vĩnh Khúc, Huyện Văn Giang, Tỉnh Hưng Yên, Việt Nam (Km 20, Quốc lộ 5, đối diện Khu Công nghiệp Phố Nối A)</span></p>\r\n<p>\r\n	<span style="color:#0000ff;">Tel: +84 321 3729462 Fax: +84 321 3729463 </span></p>\r\n<p>\r\n	<span style="color:#0000ff;">Email:info@thienlong.vn</span></p>\r\n', '', '', 0, 1),
+(8, '2011-12-06 07:07:19', 'Liên hệ Home', '', '', '<p style="text-align:center;">\r\n	CÔNG TY TNHH THƯƠNG MẠI - QUỐC TẾ THIÊN LONG<br />\r\n	Địa chỉ: Xã Vĩnh Khúc, Huyện Văn Giang, Tỉnh Hưng Yên, Việt Nam (Km 20, Quốc lộ 5, đối diện Khu Công nghiệp Phố Nối A)<br />\r\n	Tel: +84 321 3729462 Fax: +84 321 3729463 Email:info@thienlong.vn</p>\r\n', '', '', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -931,15 +931,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
 INSERT INTO `dos_module_news` (`record_id`, `pic_thumb`, `title`, `titleen`, `titlefr`, `preview`, `previewen`, `previewfr`, `content`, `contenten`, `contentfr`, `author`, `hits`, `postdate`, `record_order`, `record_type`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
 (1, NULL, 'dasdsadsa', '', '', '&lt;p&gt;\r\n	test&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	test&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-09-09 08:28:58', 1, 1, NULL, NULL, 1, 11),
 (2, NULL, 'safa', '', '', '&lt;p&gt;\r\n	asf&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	asf&lt;/p&gt;\r\n', '', '', NULL, 3, '2011-09-09 14:36:00', 1, 0, NULL, NULL, 1, 11),
-(3, NULL, 'adasd', '', '', '&lt;p&gt;\r\n	sdsad&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sdasd&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-09-23 01:48:31', 2, 1, NULL, NULL, 1, 11),
-(4, NULL, 'assa', '', '', '&lt;p&gt;\r\n	saassa&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sasasa&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:46:33', 3, 1, NULL, NULL, 1, 12),
+(3, NULL, 'adasd', '', '', '&lt;p&gt;\r\n	sdsad&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sdasd&lt;/p&gt;\r\n', '', '', NULL, 3, '2011-09-23 01:48:31', 2, 1, NULL, NULL, 1, 11),
+(4, NULL, 'assa', '', '', '&lt;p&gt;\r\n	saassa&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sasasa&lt;/p&gt;\r\n', '', '', NULL, 2, '2011-12-06 08:46:33', 3, 1, NULL, NULL, 1, 12),
 (5, NULL, 'dfdffd', '', '', '&lt;p&gt;\r\n	dfdf&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	dffddf&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:02', 4, 1, NULL, NULL, 1, 12),
 (6, NULL, 'ssddsds', '', '', '&lt;p&gt;\r\n	dsdsds&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	dssdds&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:13', 5, 1, NULL, NULL, 1, 12),
 (7, NULL, 'sddsdsd', '', '', '&lt;p&gt;\r\n	ssddssd&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sdsdds&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:20', 6, 1, NULL, NULL, 1, 12),
 (8, NULL, 'sddssd', '', '', '&lt;p&gt;\r\n	dsdsdsds&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	dssddsds&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-12-06 08:48:27', 7, 1, NULL, NULL, 1, 12),
-(9, NULL, 'tiêu đề', '', '', '&lt;p&gt;\r\n	tetset&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setstset&lt;/p&gt;\r\n', '', '', NULL, 2, '2011-12-06 08:48:41', 8, 1, NULL, NULL, 1, 12),
-(10, '', 'tieu de 2', '', '', '&lt;p&gt;\r\n	tesseet&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setsetst&lt;/p&gt;\r\n', '', '', NULL, 2, '2011-12-06 08:48:54', 9, 1, NULL, NULL, 1, 12),
-(11, NULL, 'Bài viết số 12', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	Bài viết số 12&lt;/p&gt;\r\n', '', NULL, 19, '2011-12-20 02:14:07', 10, 1, NULL, NULL, 1, 13);
+(9, NULL, 'tiêu đề', '', '', '&lt;p&gt;\r\n	tetset&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	setstset&lt;/p&gt;\r\n', '', '', NULL, 7, '2011-12-06 08:48:41', 8, 1, NULL, NULL, 1, 12),
+(10, NULL, 'DB MS', '', '', '&lt;p&gt;\r\n	 &lt;/p&gt;\r\n&lt;ol&gt;&lt;li&gt;\r\n		dos_module_studies_cat  Browse  &lt;/li&gt;\r\n	&lt;li&gt;\r\n		Structure  Search   Insert &lt;/li&gt;\r\n	&lt;li&gt;\r\n		Empty   Drop 0 16.0 KiB -D&lt;/li&gt;\r\n&lt;/ol&gt;', '', '', '<div style="width:80%;">\r\n	<h3>\r\n		Title goes here</h3>\r\n	<table border="1" cellpadding="0" cellspacing="0" style="width:150px;float:right;"><caption style="border:solid 1px #000000;">\r\n			<strong>Table title</strong></caption>\r\n		<tbody><tr><td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n			</tr><tr><td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n			</tr><tr><td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n			</tr></tbody></table><p>\r\n		Type the text here</p>\r\n</div>\r\n', '', '', NULL, 9, '2011-12-06 08:48:54', 9, 0, NULL, NULL, 1, 12),
+(11, NULL, 'Bài viết số 12', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	Bài viết số 12&lt;/p&gt;\r\n', '', NULL, 20, '2011-12-20 02:14:07', 10, 1, NULL, NULL, 1, 13);
 
 -- --------------------------------------------------------
 
@@ -1349,7 +1349,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `titlefr`, `pic_full`, `preview`, `previewen`, `previewfr`, `content`, `contenten`, `contentfr`, `hits`, `posted_date`, `record_order`, `extra_field1`, `extra_field2`, `hot`, `enable`) VALUES
-(10, 'dasdsadsa', '', '', NULL, '&lt;p&gt;\r\n	rrrrr&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	ewrwr&lt;/p&gt;\r\n', '', '', 16, '2011-09-12 08:34:51', 1, '', '', 0, 1);
+(10, 'Good good', '', '', NULL, '<p>\r\n	rrrrr</p>\r\n', '', '', '<p>\r\n	 default about product</p>\r\n<ol><li>\r\n		Danh mục SP   </li>\r\n	<li>\r\n		Danh mục</li>\r\n	<li>\r\n		giới thiệu   </li>\r\n	<li>\r\n		   </li>\r\n</ol><p>\r\n	   <br />\r\n	   </p>\r\n', '', '', 30, '2011-09-12 08:34:51', 1, '', '', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -1551,15 +1551,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_support` (
   `support_type` varchar(45) NOT NULL DEFAULT 'yahoo',
   `support_part` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`support_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=50 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=51 ;
 
 --
 -- Dumping data for table `dos_module_support`
 --
 
 INSERT INTO `dos_module_support` (`support_id`, `support_name`, `support_phone`, `support_value`, `support_order`, `support_type`, `support_part`) VALUES
-(48, 'Marketing', '0908 340 939', 'pmtienpos', 1, 'yahoo', 1),
-(49, 'Kỷ Thuật', '0929 001 001', 'thanhansoft', 1, 'yahoo', 1);
+(50, 'Kỹ  thuật', '0929 001 001', 'thanhansoft', 1, 'yahoo', 1);
 
 -- --------------------------------------------------------
 
@@ -1920,26 +1919,41 @@ CREATE TABLE IF NOT EXISTS `dos_sys_functions` (
   `function_load` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`function_id`),
   KEY `fk_dos_sys_functions_dos_sys_modules` (`model_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10518 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10690 ;
 
 --
 -- Dumping data for table `dos_sys_functions`
 --
 
 INSERT INTO `dos_sys_functions` (`function_id`, `model_name`, `model_load`, `action`, `varname`, `function_load`) VALUES
-(10505, 'account', 'Webadmin_Model_Account', 'add', 'menu_account', 'getListmenu'),
-(10506, 'account', 'Webadmin_Model_Account', 'changepass', 'menu_account', 'getListmenu'),
-(10507, 'account', 'Webadmin_Model_Account', 'index', 'menu_account', 'getListmenu'),
-(10508, 'setup', 'Webadmin_Model_Setup', 'config', 'menu_setup', 'getListmenu'),
-(10509, 'setup', 'Webadmin_Model_Setup', 'function', 'menu_setup', 'getListmenu'),
-(10510, 'setup', 'Webadmin_Model_Setup', 'index', 'menu_setup', 'getListmenu'),
-(10511, 'setup', 'Webadmin_Model_Setup', 'lang', 'menu_setup', 'getListmenu'),
-(10512, 'setup', 'Webadmin_Model_Setup', 'menu', 'menu_setup', 'getListmenu'),
-(10513, 'setup', 'Webadmin_Model_Setup', 'title', 'menu_setup', 'getListmenu'),
-(10514, 'setup', 'Webadmin_Model_Setup', 'web', 'menu_setup', 'getListmenu'),
-(10515, 'tool', 'Webadmin_Model_Tool', 'analytics', 'menu_tool', 'getListmenu'),
-(10516, 'tool', 'Webadmin_Model_Tool', 'index', 'menu_tool', 'getListmenu'),
-(10517, 'tool', 'Webadmin_Model_Tool', 'seo', 'menu_tool', 'getListmenu');
+(10662, 'product', 'Product_Model_ProductCat', 'cat', 'menu_product', 'getListmenu'),
+(10663, 'product', 'Product_Model_ProductCat', 'view', 'menu_product', 'getListmenu'),
+(10664, 'product', 'Product_Model_ProductCat', 'index', 'menu_product', 'getListmenu'),
+(10665, 'about', 'About_Model_About', 'index', 'menu_about', 'getListmenu'),
+(10666, 'about', 'About_Model_About', 'view', 'menu_about', 'getListmenu'),
+(10667, 'account', 'Webadmin_Model_Account', 'add', 'menu_account', 'getListmenu'),
+(10668, 'account', 'Webadmin_Model_Account', 'changepass', 'menu_account', 'getListmenu'),
+(10669, 'account', 'Webadmin_Model_Account', 'index', 'menu_account', 'getListmenu'),
+(10670, 'contact', 'About_Model_About', 'index', 'menu_about', 'getListmenu'),
+(10671, 'contact', 'About_Model_About', 'success', 'menu_about', 'getListmenu'),
+(10672, 'default', 'Contact_Model_Contact', 'index', 'contact_home', 'getHomeRecord'),
+(10673, 'default', 'About_Model_About', 'index', 'menu_about', 'getListmenu'),
+(10674, 'default', 'About_Model_About', 'index', 'about_home', 'getHomeRecord'),
+(10675, 'news', 'News_Model_NewsCat', 'cat', 'menu_news', 'getListmenu'),
+(10676, 'news', 'News_Model_NewsCat', 'index', 'menu_news', 'getListmenu'),
+(10677, 'news', 'News_Model_NewsCat', 'view', 'menu_news', 'getListmenu'),
+(10678, 'services', 'Services_Model_Services', 'index', 'menu_services', 'getListmenu'),
+(10679, 'services', 'Services_Model_Services', 'view', 'menu_services', 'getListmenu'),
+(10680, 'setup', 'Webadmin_Model_Setup', 'config', 'menu_setup', 'getListmenu'),
+(10681, 'setup', 'Webadmin_Model_Setup', 'function', 'menu_setup', 'getListmenu'),
+(10682, 'setup', 'Webadmin_Model_Setup', 'index', 'menu_setup', 'getListmenu'),
+(10683, 'setup', 'Webadmin_Model_Setup', 'lang', 'menu_setup', 'getListmenu'),
+(10684, 'setup', 'Webadmin_Model_Setup', 'menu', 'menu_setup', 'getListmenu'),
+(10685, 'setup', 'Webadmin_Model_Setup', 'title', 'menu_setup', 'getListmenu'),
+(10686, 'setup', 'Webadmin_Model_Setup', 'web', 'menu_setup', 'getListmenu'),
+(10687, 'tool', 'Webadmin_Model_Tool', 'analytics', 'menu_tool', 'getListmenu'),
+(10688, 'tool', 'Webadmin_Model_Tool', 'index', 'menu_tool', 'getListmenu'),
+(10689, 'tool', 'Webadmin_Model_Tool', 'seo', 'menu_tool', 'getListmenu');
 
 -- --------------------------------------------------------
 
@@ -2038,28 +2052,21 @@ INSERT INTO `dos_sys_langs` (`lang_name`, `lang`, `langen`, `langfr`) VALUES
 ('default', 'Trang chủ', '', ''),
 ('developed', 'Developed by dos.vn', '', ''),
 ('end', 'Cuối cùng', '', ''),
-('entertainment', 'Giải trí', '', ''),
 ('entry', 'Bài viết', '', ''),
-('experience', 'Kinh nghiệm thương trường', '', ''),
-('handbook', 'Cẩm nang khởi sự', '', ''),
 ('hit', 'Lần xem', '', ''),
 ('home', 'Trang chủ', '', ''),
 ('inbox', 'Hộp thư', '', ''),
 ('interests', 'Quyền lợi thành viên', '', ''),
-('knows', 'Kiến thức quản lý', '', ''),
 ('login', 'Đăng nhập', '', ''),
 ('logout', 'Thoát', '', ''),
-('materials', 'Ứng dụng VLXD nhẹ', '', ''),
 ('namecat', 'Tên phân loại', '', ''),
-('news', 'Tin tức &amp;amp; Sự kiện', '', ''),
+('news', 'Tin tức', '', ''),
 ('next', 'Tiếp', '', ''),
 ('norecord', 'Không tồn tại mẫu tin', '', ''),
 ('payment', 'Thanh toán', '', ''),
-('philosophy', 'Triết lý', '', ''),
 ('picture_thumb', 'Hình thu nhỏ', '', ''),
 ('previous', 'Lùi', '', ''),
 ('product', 'Sản phẩm', '', ''),
-('productions', 'Công nghệ sản xuất', '', ''),
 ('productnum', 'Số sản phẩm', '', ''),
 ('register', 'Đăng ký thành viên', '', ''),
 ('root', 'Gốc', '', ''),
@@ -2214,7 +2221,7 @@ CREATE TABLE IF NOT EXISTS `dos_sys_statistics` (
 --
 
 INSERT INTO `dos_sys_statistics` (`session_id`, `time`) VALUES
-('tl8svf9uo', 1325040865);
+('7fx1c3uok', 1325180845);
 
 -- --------------------------------------------------------
 
@@ -2263,13 +2270,13 @@ CREATE TABLE IF NOT EXISTS `dos_sys_webs` (
 INSERT INTO `dos_sys_webs` (`web_name`, `web_value`) VALUES
 ('admin_email', 'info@khoisudoanhnghiep.vn'),
 ('admin_name', 'khoisudoanhnghiep.vn'),
-('description', 'Khởi sự doanh nghiệp,cẩm nang doanh nghiệp,kinh nghiệm thương trường'),
+('description', 'thienlong'),
 ('email_subject', 'Liên hệ từ website'),
-('keywords', 'Khởi sự doanh nghiệp,cẩm nang doanh nghiệp,kinh nghiệm thương trường'),
-('timestamp_today', '1325005200'),
-('titleweb', 'khoisudoanhnghiep.vn'),
-('total_visit', '37'),
-('total_visit_today', '2'),
+('keywords', 'thienlong'),
+('timestamp_today', '1325178000'),
+('titleweb', 'Quốc tế Thiên Long'),
+('total_visit', '39'),
+('total_visit_today', '1'),
 ('type', '1');
 
 --

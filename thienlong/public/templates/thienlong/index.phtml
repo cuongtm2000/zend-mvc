@@ -19,7 +19,7 @@
 <body>
 <div id="wrapper">
 		<div id="header">
-        	<div id="header-left"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/logo.png" alt="Logo" /></div><!--End header left-->
+        	<div id="header-left"><a href="<?php echo $this->baseUrl()?>/"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/logo.png" alt="Logo" /></a></div><!--End header left-->
             <div class="lang"><a href="<?php echo $this->baseUrl()?>/" title="Tiếng Việt">Tiếng Việt <img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/vn.gif" alt="Việt Nam" /></a> <a href="<?php echo $this->baseUrl() ?>/en" title="English">English <img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/en.gif" alt="English" /></a></div>
            	<div class="clear"></div>
         </div><!--End header-->
@@ -28,8 +28,8 @@
         			$folders = $this->menubar();
 					foreach($folders as $models){		
 						$target = ($models['target']=='') ? '' : ' target="'.$models['target'].'"';
-						$select =($this->module==$models['url']) ? ' class="select"': '';
-						echo '<li'.$select.'><a href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.'>'.$models['module'.LANG].'</a></li>';
+						$select =($this->module==$models['url']) ? ' class="select-nav"': '';
+						echo '<li><a '.$select.' href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.'>'.$models['module'.LANG].'</a></li>';
 					}
 				?>
             </ul>
@@ -39,15 +39,43 @@
         </div><!--End banner-->
         <div id="content">
         	<div id="left-content">
-            	<h1 class="title-left"><span>VỀ CÔNG TY</span></h1>
-                <ul class="sub-pro">
-                	<li><a href="#" title="">Tổng quan về công ty</a></li>
-                	<li><a href="#" title="">Xưởng sản xuất</a></li>
-                    <li><a href="#" title="">Phòng thí nghiệm</a></li>
-                    <li><a href="#" title="">Máy làm gỗ</a></li>
-                    <li><a href="#" title="">Kho thành phẩm</a></li>  
-                    <li><a href="#" title="">Khối thành phẩm</a></li>   
-                </ul>
+			<?php if(isset($this->menu_about)): ?>
+				<h1 class="title-left"><span><?php echo $this->lang['about'] ?></span></h1>
+	            <ul class="sub-pro">
+	            	<?php 
+						foreach($this->menu_about as $value){
+							echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'about'.'/index/view/id/'.$value['record_id'].'/'.$this->noneUnicode($value['title'.LANG]).'" title="'.$this->escape($value['title'.LANG]).'">'.$this->escape($value['title'.LANG]).'</a></li>';
+						}
+					?>
+	            </ul>
+	        <?php endif;?>
+				
+			<?php if(isset($this->menu_services)): ?>
+				<h1 class="title-left"><span><?php echo $this->lang['services'] ?></span></h1>
+	            <ul class="sub-pro">
+	            	<?php 
+						foreach($this->menu_services as $value){
+							echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'services'.'/index/view/id/'.$value['record_id'].'/'.$this->noneUnicode($value['title'.LANG]).'" title="'.$this->escape($value['title'.LANG]).'">'.$this->escape($value['title'.LANG]).'</a></li>';
+						}
+					?>
+	            </ul>
+	        <?php endif;?>	
+				
+			<?php if(isset($this->menu_news)): ?>
+				<h1 class="title-left"><span><?php echo $this->lang['news'] ?></span></h1>
+				<ul class="sub-pro">
+					<?php 
+						foreach($this->menu_news as $value){
+							echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.'news'.'/index/cat/id/'.$value['cat_id'].'/'.$this->noneUnicode($value['cat_title'.LANG]).'" title="'.$this->escape($value['cat_title'.LANG]).'">'.$this->escape($value['cat_title'.LANG]).'</a></li>';
+						}
+					?>
+				</ul>
+			<?php endif;?>	
+				
+				
+				
+				
+				
                 <h1 class="title-left"><span>HỖ TRỢ TRỰC TUYẾN</span></h1>
 				<ul class="support">
 						<?php foreach ($this->menu_support as $value): ?>
@@ -70,18 +98,14 @@
     <div id="footer">
         <ul class="nav-fter">
         		<?php 
-        			$folders = $this->menubar();
-					foreach($folders as $models){		
-						$target = ($models['target']=='') ? '' : ' target="'.$models['target'].'"';
-						$select =($this->module==$models['url']) ? ' class="select"': '';
-						echo '<li'.$select.'><a href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.'>'.$models['module'.LANG].'</a></li>';
+					foreach($this->menubar() as $models){		
+						$target = ($models['target']=='') ? '' : ' target="'.$models['target'].'"';		
+						echo '<li><a href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.'>'.$models['module'.LANG].'</a></li>';
 					}
 				?>
             </ul>
         <div class="frame-info">
-            <p>&copy; Bản quyền thuộc <b>CÔNG TY TNHH THƯƠNG MẠI - QUỐC TẾ THIÊN LONG</b></p>
-            <p>Địa chỉ: Xã Vĩnh Khúc, Huyện Văn Giang, Tỉnh Hưng Yên, Việt Nam (Km 20, Quốc lộ 5, đối diện Khu Công nghiệp Phố Nối A) </p>
-            <p><span>Tel: +84 321 3729462</span> <span>Fax: +84 321 3729463</span> <span>Email:info@thienlong.vn</span></p>
+          <?php echo $this->contact_home['content'] ?>
     	</div> <!--End frame info-->
     </div><!--End footer-->
 </div><!--End wrapper-->

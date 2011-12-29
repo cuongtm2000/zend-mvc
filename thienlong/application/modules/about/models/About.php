@@ -40,7 +40,6 @@ class About_Model_About extends Zend_Db_Table{
 	//Front end - Get danh sách item
     public function getListmenu(){
          $select = $this->select()->from($this->_name, array('record_id', 'title'.LANG))
-         						  ->where('hot = ?', 0)
                                   ->where('enable = ?', 1)
                                   ->order('record_order DESC');
         $result= $this->fetchAll($select)->toArray();
