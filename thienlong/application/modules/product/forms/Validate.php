@@ -1,14 +1,15 @@
 <?php
-class Product_Form_ProductValidate{
+class Product_Form_Validate{
 	private $_error = null;
-	private $_arrData;
-	protected $_config = null;
+	private $_data;
+	private $_config = null;
 		
-	public function __construct($arrParam = array()){		
+	public function __construct($data = array()){		
 		$this->_config = Zend_Registry::get("config");
+		$module=$data['controller'];
 		
 		//Validate parentcat
-		if (!isset($arrParam['parentcat'])) {
+		if (!isset($data['parentcat'])) {
 			$this->_error['parentcat'] = 'Danh mục cha chưa được chọn, bạn phải tạo Danh mục trước khi tạo sản phẩm';
 		}
 		
@@ -17,38 +18,32 @@ class Product_Form_ProductValidate{
 		$validator->addValidator(new Zend_Validate_NotEmpty())
 				  ->addValidator(new Zend_Validate_StringLength(array('min' => 3, 'max' => 100)));
 		
-		if (!$validator->isValid($arrParam['title'])) {
+		if (!$validator->isValid($data['title'])) {
 			$this->_error['title'] ='Tiêu đề không được rỗng và từ 3 - 100 ký tự';
 		}
-
+		
+		//Validate preview
+		$validator = new Zend_Validate();
+		$validator->addValidator(new Zend_Validate_NotEmpty())
+				  ->addValidator(new Zend_Validate_StringLength(array('min' => 3)));
+		
+		if (!$validator->isValid($data['preview'])) {
+			$this->_error['preview'] ='Mô tả không được rỗng và phải từ 3 ký tự trở lên';
+		}
 		
 		//Validate detail
 		$validator = new Zend_Validate();
 		$validator->addValidator(new Zend_Validate_NotEmpty())
 				  ->addValidator(new Zend_Validate_StringLength(array('min' => 3)));
 		
-		if (!$validator->isValid($arrParam['detail'])) {
+		if (!$validator->isValid($data['detail'])) {
 			$this->_error['detail'] ='Chi tiết không được rỗng và phải từ 3 ký tự trở lên';
 		}
 		
 		//validate pic_thumb
 		if (!empty($_FILES['file_thumb']['name'])){
     		$upload = new GLT_File_Upload();
-    		$upload->upload($_FILES['file_thumb'], $this->_config['product_width_thumb'], $this->_config['product_height_thumb'], $this->_config['sys_size_upload'], PUBLIC_PATH.'/userfiles/images/product/');
-    		
-	    	if($upload->isVail() == true){
-	    		$i = 0;
-	    		foreach($upload->_errors as $value){
-	    			$this->_error[$i] = $value;
-	    			$i++;
-	    		}
-			}
-    	}
-    	
-		//validate pic_full
-		if (!empty($_FILES['file_full']['name'])){
-    		$upload = new GLT_File_Upload();
-    		$upload->upload($_FILES['file_full'], $this->_config['product_width'], $this->_config['product_height'], $this->_config['sys_size_upload'], PUBLIC_PATH.'/userfiles/images/product/');
+    		$upload->upload($_FILES['file_thumb'], $this->_config[$module.'_width_thumb'], $this->_config[$module.'_height_thumb'], $this->_config['sys_size_upload'], PUBLIC_PATH.'/userfiles/images/'.$module.'/');
     		
 	    	if($upload->isVail() == true){
 	    		$i = 0;
@@ -59,7 +54,7 @@ class Product_Form_ProductValidate{
 			}
     	}
 		
-		$this->_arrData = $arrParam;
+		$this->_data = $data;
 	}
 
 	public function isError(){
@@ -74,6 +69,6 @@ class Product_Form_ProductValidate{
 	}
 	
 	public function getData(){
-		return $this->_arrData;
+		return $this->_data;
 	}
 }

@@ -71,12 +71,18 @@
 					?>
 				</ul>
 			<?php endif;?>	
+            
+		     <?php if($this->menu_product): ?>
+                 <h1 class="title-left"><span><?php echo $this->lang['product'] ?></span></h1>
+				<ul class="sub-pro">
+			         <?php $this->showmenu($this->menu_product,'product') ?>
+				</ul>
+			<?php endif;?>		
 				
 				
 				
 				
-				
-                <h1 class="title-left"><span>HỖ TRỢ TRỰC TUYẾN</span></h1>
+                <h1 class="title-left"><span><?php echo $this->lang['support'] ?></span></h1>
 				<ul class="support">
 						<?php foreach ($this->menu_support as $value): ?>
 							<li><?php echo $value['support_name'] ?></li>

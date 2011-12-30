@@ -23,7 +23,11 @@
 		    	}else{
 		        	$rowclass = ($k%2==0) ? '' : ' class="alt"';
 		    	}
-		    	$title = ($value['hot']==1) ? '<strong>'.$value['title'.LANG].'</strong> <img src="'.$this->baseUrl().TEMPLATE_ADMIN.'/images/hot.gif" alt="Hot" />' : $value['title'.LANG];
+			    if($value['record_type'] == 1){
+		    		$title = '<b>'.$this->escape($value['title'.LANG]).'</b> <img src="'.$this->baseUrl().TEMPLATE_ADMIN.'/images/hot.gif" alt="Hot" />';
+		    	}else{
+		        	$title = $this->escape($value['title'.LANG]);
+		    	}
 		        echo '<tr'.$rowclass.'>
 		               <td><input type="checkbox" name="ids[]" value="'.$value['record_id'].'" /></td>
 		               <td><input type="text" name="orders['.$value['record_id'].']" maxlength="3" class="txt-sort" value="'.$value['record_order'].'" /></td>

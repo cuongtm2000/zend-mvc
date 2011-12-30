@@ -1,21 +1,18 @@
-<h1 class="title-pr title-new-pr"><?php echo $this->lang['product']?></h1>
-<?php if (is_array($this->listcat)): ?>
-	<?php foreach ($this->listcat as $value): ?>
-		<?php $picthumb = ($value['pic_thumb']!='') ? '/public/userfiles/images/product_cat/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg';?>
-		<div class="new-pr">
-			<div class="left-new-pr"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/cat/cid/<?php echo $value['cat_id'] ?>" title="<?php echo $value['cat_title'.LANG] ?>"><img src="<?php echo $this->baseUrl().$picthumb ?>" alt="<?php echo $value['cat_title'.LANG] ?>" /></a></div>
-			<div class="right-new-pr">
-				<ul>
-					<li><h1 class="title-h1-product"><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/cat/cid/<?php echo $value['cat_id'] ?>" title="<?php echo $value['cat_title'.LANG] ?>"><strong><?php echo $value['cat_title'.LANG]?></strong></strong></a></h1>
-						<!-- <p><span>Manufacture:</span> Example -1</p>
-						<p><strong>Price:</strong> <b>$30.00</b></p> -->
-					</li>
-					<li><?php echo $value['preview'.LANG] ?></li>
-					<li><p class="all-pr" ><a href="<?php echo $this->baseUrl().'/'.LANGURL ?>product/index/cat/cid/<?php echo $value['cat_id'] ?>" title="<?php echo $value['cat_title'.LANG] ?>">Chi tiết</a></p></li>
-				</ul>
-			</div>
-		</div>
-	<?php endforeach;?>
-<?php else: ?>
-	<?php echo $this->listcat ?>
-<?php endif;?>
+<h1 class="title-right"><span><?php echo $this->lang[$this->module]?></span></h1>
+<div class="frame-tent-right">	
+	<?php if(is_array($this->list_news_new)):?>
+	 <?php foreach ($this->list_news_new as $value):?>
+		<?php $picthumb = ($value['pic_thumb']!='') ? IMAGES_PATH.$this->module.'/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg'; ?>
+	 		<div class="masuring">
+				<div class="frame-img"><a href="<?php echo $this->baseUrl().'/'.LANGURL.$this->module ?>/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>">
+					<img src="<?php echo $this->baseUrl().$picthumb ?>" class="imgcon" style="float:left; alt="<?php echo $value['title'.LANG] ?>" /></a>
+                  </div> 
+                <h2 class="title-masuring"><a href="<?php echo $this->baseUrl().'/'.LANGURL.$this->module ?>/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h2>
+     			<?php echo $value['preview'.LANG] ?>
+     		</div><div class="clear"></div>
+		<?php endforeach;?>
+	<?php else: ?>
+		<?php echo $this->list_news_new?>
+	<?php endif;?>	
+</div><!--End frame tent-->
+
