@@ -154,6 +154,8 @@ class Webadmin_KnowsController extends GLT_Controller_Backend{
     }
 	public function addAction(){
 		$this->view->headScript()->appendFile($this->_request->getBaseUrl().'/public/plugin/ckeditor/ckeditor.js');
+        $this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE_ADMIN.'/js/jquery.seoAlias.js');
+        $this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE_ADMIN.'/js/string.seoAlias.js');
 		
     	$cat = new $this->_modelCat();
 		$this->view->cat = $cat->listCatParent();
@@ -175,6 +177,8 @@ class Webadmin_KnowsController extends GLT_Controller_Backend{
 	public function editAction(){
     	$this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE_ADMIN.'/js/checklist.js');
     	$this->view->headScript()->appendFile($this->_request->getBaseUrl().'/public/plugin/ckeditor/ckeditor.js');
+        $this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE_ADMIN.'/js/jquery.seoAlias.js');
+        $this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE_ADMIN.'/js/string.seoAlias.js');
 
     	$item = new $this->_model();
 		$this->view->item = $item->editItem($this->_data);
