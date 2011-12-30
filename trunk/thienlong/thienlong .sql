@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 29, 2011 at 06:50 PM
+-- Generation Time: Dec 30, 2011 at 07:32 PM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_about` (
 
 INSERT INTO `dos_module_about` (`record_id`, `title`, `titleen`, `titlefr`, `content`, `contenten`, `contentfr`, `hits`, `posted_date`, `record_order`, `extra_field1`, `extra_field2`, `hot`, `enable`) VALUES
 (27, 'Giới Thiệu công ty', '', '', '<p>\r\n	<strong>13 Với hơn 20 năm kinh nghiệm trong ngành ẩm thực, cho đến ngày hôm nay chúng tôi mới mạnh dạn hình thành Công ty nhằm đáp ứng yêu cầu ngày càng cao trong lĩnh vực nhà hàng khách sạn. Nhờ vào tinh thần đoàn kết của một tập thể năng động,chuyên nghiệp và không ngừng học hỏi, chúng tôi hy vọng sẽ làm hài lòng Quý khách hàng.</strong></p>\r\n<p>\r\n	Công ty TNHH TRẦN PHẠM {TRANPHAM LTD CO.} chúng tôi chuyên hoạt động trong lĩnh vực: Set up Nhà hàng, Công Nghệ Tiệc cưới, và hoạt động mạnh nhất là đào tạo và cung cấp đầu bếp cũng như chuyên giảng dạy nấu ăn theo yêu cầu của Quý khách.</p>\r\n<p>\r\n	          Với mong muốn mang lại kỹ thuật chế biến món ăn đậm đà và đặc sắc nhất cho quý khách..chúng tôi còn đưa vệ sinh an toàn thực phẩm lên hàng  đầu là kim chỉ nam giúp chúng tôi tiến bước phía trước.Đội ngũ nhân viên của chúng tôi chuyên nấu các món ăn Âu, Á, Hải sản, Đặc sản 3 miền. Ngoài ra luôn nhận tổ chức Tiệc cưới, Buffet, Tea break, Finger food, Tiệc outside catering…..Chúng tôi sẳn sàng đáp ứng mọi yêu cầu từ  phía các đối tác một cách chu đáo và chuyên nghiệp.</p>\r\n<p>\r\n	Tự hào với thành tích của mình, song chúng tôi hiểu rằng tất cả còn đang ở phía trước. Chúng tôi đang từng ngày bằng tâm huyết, say mê nghiên cứu, sáng tạo ra những món ăn mang tầm quốc tế.</p>\r\n<p>\r\n	Rất mong nhận được sự hợp tác của Quý vị, những bạn hàng, khách hàng đã và sẽ đến với Công ty. Quý vị chính là nguồn động lực mạnh mẽ cho sự  phát triển và thành công của chúng tôi.</p>\r\n<p>\r\n	Chúc sức khoẻ và thành công.</p>\r\n<p style="text-align:right;">\r\n	Giám đốc</p>\r\n', '', '', 571, '2011-08-16 02:32:39', 1, '', '', 0, 1),
-(28, 'Gioi thieu so luoc', '', '', '<p>\r\n	<span style="font-size:14px;"><strong>Danh hiệu đầu bếp được trao cho những người có kiến thức chuyên môn cao và nhiều kinh nghiệp trong lĩnh vực nấu ăn. Đứng ở vị trí cáo nhất kà bếp trưởng - người quản lý toàn bộ hoạt động của bếp. Đó cũng là người giàu kinh nghiệm và có khả năng tổ chức để công việc được chạy đều, đảm bảo bữa ăn ngon lành, sạch sẽ, đúng giới, nóng suốt và trình bày đẹp nhất</strong></span></p>\r\n', '', '', 1031, '2011-08-16 03:35:14', 1, '', '', 1, 1);
+(28, 'Gioi thieu so luoc', '', '', '<p>\r\n	<span style="font-size:14px;"><strong>Danh hiệu đầu bếp được trao cho những người có kiến thức chuyên môn cao và nhiều kinh nghiệp trong lĩnh vực nấu ăn. Đứng ở vị trí cáo nhất kà bếp trưởng - người quản lý toàn bộ hoạt động của bếp. Đó cũng là người giàu kinh nghiệm và có khả năng tổ chức để công việc được chạy đều, đảm bảo bữa ăn ngon lành, sạch sẽ, đúng giới, nóng suốt và trình bày đẹp nhất</strong></span></p>\r\n', '', '', 1032, '2011-08-16 03:35:14', 1, '', '', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1037,37 +1037,37 @@ INSERT INTO `dos_module_philosophy` (`record_id`, `title`, `titleen`, `titlefr`,
 
 CREATE TABLE IF NOT EXISTS `dos_module_product` (
   `record_id` int(11) NOT NULL AUTO_INCREMENT,
-  `postdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `pic_thumb` varchar(45) DEFAULT NULL,
-  `pic_full` varchar(45) DEFAULT NULL,
-  `pic_desc` varchar(1000) DEFAULT NULL,
   `title` varchar(100) NOT NULL,
   `titleen` varchar(100) DEFAULT NULL,
   `titlefr` varchar(100) DEFAULT NULL,
-  `detail` text NOT NULL,
-  `detailen` text,
-  `detailfr` text,
-  `hits` int(11) DEFAULT '0',
-  `record_order` int(11) DEFAULT '1',
+  `preview` text NOT NULL,
+  `previewen` text,
+  `previewfr` text,
+  `content` text NOT NULL,
+  `contenten` text,
+  `contentfr` text,
+  `author` varchar(45) DEFAULT NULL,
+  `hits` int(11) NOT NULL DEFAULT '1',
+  `postdate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `record_order` int(11) NOT NULL DEFAULT '1',
+  `record_type` tinyint(1) NOT NULL DEFAULT '0',
   `extra_field1` varchar(45) DEFAULT NULL,
   `extra_field2` varchar(45) DEFAULT NULL,
-  `extra_field3` varchar(45) DEFAULT NULL,
-  `extra_field4` varchar(45) DEFAULT NULL,
-  `unit` int(11) NOT NULL DEFAULT '0',
-  `hot` tinyint(1) DEFAULT '0',
-  `enable` tinyint(1) DEFAULT '1',
-  `dos_module_product_cat_cat_id` int(11) NOT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
-  KEY `fk_dos_module_product_dos_module_product_cat` (`dos_module_product_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+  KEY `fk_dos_module_news_dos_module_news_cat` (`dos_module_item_cat_cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `dos_module_product`
 --
 
-INSERT INTO `dos_module_product` (`record_id`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `title`, `titleen`, `titlefr`, `detail`, `detailen`, `detailfr`, `hits`, `record_order`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `unit`, `hot`, `enable`, `dos_module_product_cat_cat_id`) VALUES
-(1, '2011-09-18 00:05:23', NULL, NULL, NULL, 'test', '', '', '&lt;p&gt;\r\n	test&lt;/p&gt;\r\n', '', '', 0, 1, '', '', '', '', 0, 1, 1, 1),
-(2, '2011-09-23 01:50:44', NULL, NULL, '', 'asd', '', '', '&lt;p&gt;\r\n	asdasdasd&lt;/p&gt;\r\n', '', '', 0, 2, '', '', '', '', 0, 0, 1, 1);
+INSERT INTO `dos_module_product` (`record_id`, `pic_thumb`, `title`, `titleen`, `titlefr`, `preview`, `previewen`, `previewfr`, `content`, `contenten`, `contentfr`, `author`, `hits`, `postdate`, `record_order`, `record_type`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(4, NULL, 'assa', '', '', '&lt;p&gt;\r\n	saassa&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sasasa&lt;/p&gt;\r\n', '', '', NULL, 4, '2011-12-06 08:46:33', 3, 1, NULL, NULL, 1, 12),
+(10, NULL, 'DB MS', '', '', '&lt;p&gt;\r\n	 &lt;/p&gt;\r\n&lt;ol&gt;&lt;li&gt;\r\n		dos_module_studies_cat  Browse  &lt;/li&gt;\r\n	&lt;li&gt;\r\n		Structure  Search   Insert &lt;/li&gt;\r\n	&lt;li&gt;\r\n		Empty   Drop 0 16.0 KiB -D&lt;/li&gt;\r\n&lt;/ol&gt;', '', '', '<div style="width:80%;">\r\n	<h3>\r\n		Title goes here</h3>\r\n	<table border="1" cellpadding="0" cellspacing="0" style="width:150px;float:right;"><caption style="border:solid 1px #000000;">\r\n			<strong>Table title</strong></caption>\r\n		<tbody><tr><td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n			</tr><tr><td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n			</tr><tr><td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n			</tr></tbody></table><p>\r\n		Type the text here</p>\r\n</div>\r\n', '', '', NULL, 10, '2011-12-06 08:48:54', 9, 0, NULL, NULL, 1, 12),
+(11, NULL, 'Bài viết số 12', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12Bài viết số 12&lt;/p&gt;\r\n', '&lt;p&gt;\r\n	Bài viết số 12&lt;/p&gt;\r\n', '', NULL, 20, '2011-12-20 02:14:07', 10, 1, NULL, NULL, 1, 13);
 
 -- --------------------------------------------------------
 
@@ -1176,31 +1176,23 @@ INSERT INTO `dos_module_productions_comments` (`comment_id`, `comment_title`, `c
 CREATE TABLE IF NOT EXISTS `dos_module_product_cat` (
   `cat_id` int(11) NOT NULL AUTO_INCREMENT,
   `cat_parent_id` int(11) NOT NULL DEFAULT '0',
-  `pic_thumb` varchar(45) DEFAULT NULL,
-  `pic_full` varchar(45) DEFAULT NULL,
-  `pic_desc` varchar(1000) DEFAULT NULL,
   `cat_title` varchar(45) NOT NULL,
   `cat_titleen` varchar(45) DEFAULT NULL,
   `cat_titlefr` varchar(45) DEFAULT NULL,
-  `preview` text,
-  `previewen` text,
-  `previewfr` text,
   `cat_order` int(11) NOT NULL DEFAULT '1',
-  `cat_extra1` varchar(45) DEFAULT NULL,
-  `cat_extra2` varchar(45) DEFAULT NULL,
-  `cat_extra3` varchar(45) DEFAULT NULL,
-  `cat_extra4` varchar(45) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `dos_module_product_cat`
 --
 
-INSERT INTO `dos_module_product_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `pic_full`, `pic_desc`, `cat_title`, `cat_titleen`, `cat_titlefr`, `preview`, `previewen`, `previewfr`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_extra3`, `cat_extra4`, `cat_enable`) VALUES
-(1, 0, NULL, NULL, '', 'test', '', '', NULL, NULL, NULL, 1, '', '', '', '', 1),
-(2, 1, NULL, NULL, '', 'test 2', '', '', NULL, NULL, NULL, 2, '', '', '', '', 1);
+INSERT INTO `dos_module_product_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `cat_titlefr`, `cat_order`, `cat_enable`) VALUES
+(11, 0, 'Test', '', '', 1, 1),
+(12, 0, 'Sản phẩm loại 2', '', '', 2, 1),
+(13, 0, 'Con 123', '', '', 3, 1),
+(14, 12, 'Sản phẩm 2.1', '', '', 4, 1);
 
 -- --------------------------------------------------------
 
@@ -1349,7 +1341,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `titlefr`, `pic_full`, `preview`, `previewen`, `previewfr`, `content`, `contenten`, `contentfr`, `hits`, `posted_date`, `record_order`, `extra_field1`, `extra_field2`, `hot`, `enable`) VALUES
-(10, 'Good good', '', '', NULL, '<p>\r\n	rrrrr</p>\r\n', '', '', '<p>\r\n	 default about product</p>\r\n<ol><li>\r\n		Danh mục SP   </li>\r\n	<li>\r\n		Danh mục</li>\r\n	<li>\r\n		giới thiệu   </li>\r\n	<li>\r\n		   </li>\r\n</ol><p>\r\n	   <br />\r\n	   </p>\r\n', '', '', 30, '2011-09-12 08:34:51', 1, '', '', 0, 1);
+(10, 'Good good', '', '', NULL, '<p>\r\n	rrrrr</p>\r\n', '', '', '<p>\r\n	 default about product</p>\r\n<ol><li>\r\n		Danh mục SP   </li>\r\n	<li>\r\n		Danh mục</li>\r\n	<li>\r\n		giới thiệu   </li>\r\n	<li>\r\n		   </li>\r\n</ol><p>\r\n	   <br />\r\n	   </p>\r\n', '', '', 31, '2011-09-12 08:34:51', 1, '', '', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -2221,7 +2213,7 @@ CREATE TABLE IF NOT EXISTS `dos_sys_statistics` (
 --
 
 INSERT INTO `dos_sys_statistics` (`session_id`, `time`) VALUES
-('7fx1c3uok', 1325180845);
+('6b0huczvk', 1325269856);
 
 -- --------------------------------------------------------
 
@@ -2273,9 +2265,9 @@ INSERT INTO `dos_sys_webs` (`web_name`, `web_value`) VALUES
 ('description', 'thienlong'),
 ('email_subject', 'Liên hệ từ website'),
 ('keywords', 'thienlong'),
-('timestamp_today', '1325178000'),
+('timestamp_today', '1325264400'),
 ('titleweb', 'Quốc tế Thiên Long'),
-('total_visit', '39'),
+('total_visit', '42'),
 ('total_visit_today', '1'),
 ('type', '1');
 
@@ -2300,12 +2292,6 @@ ALTER TABLE `dos_module_handbook`
 --
 ALTER TABLE `dos_module_news`
   ADD CONSTRAINT `dos_module_news_ibfk_1` FOREIGN KEY (`dos_module_item_cat_cat_id`) REFERENCES `dos_module_news_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `dos_module_product`
---
-ALTER TABLE `dos_module_product`
-  ADD CONSTRAINT `fk_dos_module_product_dos_module_product_cat` FOREIGN KEY (`dos_module_product_cat_cat_id`) REFERENCES `dos_module_product_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `dos_module_studies`
