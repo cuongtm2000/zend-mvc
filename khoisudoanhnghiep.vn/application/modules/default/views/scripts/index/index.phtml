@@ -23,7 +23,7 @@
 		
 		<?php if($this->news_item_first):?>
 			<?php if($this->news_item_first['pic_thumb']):?>
-				<img src="<?php echo $this->baseUrl().IMAGES_PATH.'news/'.$this->news_item_first['pic_thumb'] ?>" class="imgcon"  alt="<?php echo $this->news_item_first['title'.LANG] ?>" />
+				<a href="<?php echo $this->baseUrl() ?>/tin-tuc/<?php echo $this->news_item_first['tag'] ?>.html" title="<?php echo $this->news_item_first['title'.LANG] ?>"><img src="<?php echo $this->baseUrl().IMAGES_PATH.'news/'.$this->news_item_first['pic_thumb'] ?>" class="imgcon"  alt="<?php echo $this->news_item_first['title'.LANG] ?>" /></a>
 			<?php endif;?>
 			<h2 class="title-box"><a href="<?php echo $this->baseUrl() ?>/tin-tuc/<?php echo $this->news_item_first['tag'] ?>.html" title="<?php echo $this->news_item_first['title'.LANG] ?>"><?php echo $this->news_item_first['title'.LANG] ?></a></h2>
 			<?php echo $this->news_item_first['preview'.LANG] ?>
@@ -32,7 +32,7 @@
 		<?php if($this->news_items):?>
 		<ul class="related-news">
 			<?php foreach($this->news_items as $value):?>
-				<li><a href="<?php echo $this->baseUrl() ?>/news/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></li>
+				<li><a href="<?php echo $this->baseUrl() ?>/tin-tuc/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></li>
 			<?php endforeach;?>
 		</ul><div class="clear"></div>
 		<?php endif; ?>
@@ -41,7 +41,7 @@
    
    
 	   
-	<h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Cẩm nang khởi sự</span></a></h1>
+	<h1 class="title-new"><a href="<?php echo $this->baseUrl()?>/cam-nang-khoi-su" title="<?php echo $this->lang['handbook'] ?>"><span><?php echo $this->lang['handbook'] ?></span></a></h1>
 	<div class="tent-new">
 	
 		<?php  if(isset($this->menu_cat_handbook)):?>
@@ -51,34 +51,32 @@
 				 <?php endforeach;?>
 			</ul> <div class="clear"></div>
 		<?php endif;?>
-	   
+        
+        <?php if($this->handbook_item_first): ?>
 		<div class="tent-new-left">
-		
-		<h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>
-			<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/157cechirwlarge.jpg" alt="Marketing xã hội chưa bao giờ lỗi thời" style="float:left" />                  
-			<p>
-Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho việc bán hàng thì rất nhiều phương tiện truyền thông quảng cáo đã liên tục ra đời để phục vụ cho mục tiêu của marketing nhưng hình như việc sử dụng quá nhiều một vài công cụ marketing đã làm người tiêu dùng luôn nghi ngờ mọi thứ đến với họ đều mang tính chất quảng cáo, do đó sẽ bị từ chối khỏi tâm trí khách hàng ngay tức khắc làm giảm hiệu quả của marketing rất nhiều.</p>
+            <h3 class="title-box-left"><a href="<?php echo $this->baseUrl()?>/cam-nang-khoi-su/<?php echo $this->handbook_item_first['tag'] ?>.html" title="<?php echo $this->handbook_item_first['title'] ?>"><?php echo $this->handbook_item_first['title'] ?></a></h3>
+            <?php if($this->handbook_item_first['pic_thumb']): ?>
+                <a href="<?php echo $this->baseUrl()?>/cam-nang-khoi-su/<?php echo $this->handbook_item_first['tag'] ?>.html" title="<?php echo $this->handbook_item_first['title'] ?>"><img src="<?php echo $this->baseUrl().IMAGES_PATH?>/handbook/<?php echo $this->handbook_item_first['pic_thumb'] ?>" alt="<?php echo $this->handbook_item_first['title'] ?>" style="float:left" /></a>
+            <?php endif; ?>
+            <?php echo $this->handbook_item_first['preview'] ?>             
 		</div>
-		<ul class="sub-tent-new">
-			<li style="list-style:none"><a href="#" title="Kiểm soát ngân sách hiệu quả"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/pic-small.jpg" alt="pic small" style="float:left"/>Kiểm soát ngân sách hiệu quả</a>
-				<div class="clear"></div>
-			</li>
-			<li><a href="#" title="Non sông dễ đổi, bản tính khó dời">Non sông dễ đổi, bản tính khó dời</a></li>
-			<li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II</a></li>
-			<li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần I</a></li>
+        <?php endif; ?>
+		
+        <?php if($this->handbook_items): ?>
+        <ul class="sub-tent-new">
+            <?php foreach($this->handbook_items as $value): ?>
+                <?php if($value['pic_thumb']): ?>
+                    <li style="list-style:none"><a href="<?php echo $this->baseUrl()?>/cam-nang-khoi-su/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'] ?>"><img src="<?php echo $this->baseUrl().IMAGES_PATH ?>/handbook/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>" style="float:left"/><?php echo $value['title'] ?></a></li>
+                <?php else: ?>
+                    <li><a href="<?php echo $this->baseUrl()?>/cam-nang-khoi-su/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'] ?>"><?php echo $value['title'] ?></a></li>
+                <?php endif; ?>
+            <?php endforeach; ?>
 		</ul>
+        <?php endif; ?>
 		<div class="clear"></div>
 	</div><!--End tent new-->
 	<div class="bd-bt-tenf-left"></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	<h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Kinh nghiệm thương trường </span></a></h1>
 	<div class="tent-new">
 		<ul class="sub-top-tent">
@@ -86,14 +84,19 @@ Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho vi
 			<li><a href="#" title="">Mẹo vặt</a></li>
 			<li style="border:none"><a href="#" title="">Cảnh giác</a></li>
 		</ul> <div class="clear"></div>
-		<div class="tent-new-left"><h3 class="title-box-left"><a href="#" title="">Marketing xã hội chưa bao giờ lỗi thời</a></h3>
-			<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/157cechirwlarge.jpg" alt="Marketing xã hội chưa bao giờ lỗi thời" style="float:left" />                  
-			<p>
-Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho việc bán hàng thì rất nhiều phương tiện truyền thông quảng cáo đã liên tục ra đời để phục vụ cho mục tiêu của marketing nhưng hình như việc sử dụng quá nhiều một vài công cụ marketing đã làm người tiêu dùng luôn nghi ngờ mọi thứ đến với họ đều mang tính chất quảng cáo, do đó sẽ bị từ chối khỏi tâm trí khách hàng ngay tức khắc làm giảm hiệu quả của marketing rất nhiều.</p>
+        
+        <?php if($this->experience_item_first): ?>
+		<div class="tent-new-left">
+            <h3 class="title-box-left"><a href="<?php echo $this->baseUrl()?>/kinh-nghiem-thuong-truong/<?php echo $this->experience_item_first['tag'] ?>.html" title="<?php echo $this->experience_item_first['title'] ?>"><?php echo $this->experience_item_first['title'] ?></a></h3>
+            <?php if($this->experience_item_first['pic_thumb']): ?>
+                <a href="<?php echo $this->baseUrl()?>/kinh-nghiem-thuong-truong/<?php echo $this->experience_item_first['tag'] ?>.html" title="<?php echo $this->experience_item_first['title'] ?>"><img src="<?php echo $this->baseUrl().IMAGES_PATH?>/handbook/<?php echo $this->experience_item_first['pic_thumb'] ?>" alt="<?php echo $this->experience_item_first['title'] ?>" style="float:left" /></a>
+            <?php endif; ?>
+            <?php echo $this->experience_item_first['preview'] ?>             
 		</div>
+        <?php endif; ?>
+        
 		<ul class="sub-tent-new">
 			<li style="list-style:none"><a href="#" title="Kiểm soát ngân sách hiệu quả"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/pic-small.jpg" alt="pic small" style="float:left"/>Kiểm soát ngân sách hiệu quả</a>
-				<div class="clear"></div>
 			</li>
 			<li><a href="#" title="Non sông dễ đổi, bản tính khó dời">Non sông dễ đổi, bản tính khó dời</a></li>
 			<li><a href="#" title="Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II">Nhượng quyền kinh doanh độc đáo và ưu việt - Phần II</a></li>
@@ -102,6 +105,7 @@ Khi marketing đã trở thành một công cụ trợ giúp đắc lực cho vi
 		<div class="clear"></div>
 	</div><!--End tent new-->
 	<div class="bd-bt-tenf-left"></div>
+    
 	<h1 class="title-new"><a href="#" title="Kiến thức quản lý"><span>Kiến thức quản lý</span></a></h1>
 	<div class="tent-new">
 		<ul class="sub-top-tent">

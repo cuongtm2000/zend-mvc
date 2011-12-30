@@ -111,7 +111,7 @@ ul#nav .select:hover{background:#FBF8F8;color:#406B96;-webkit-border-radius:4px 
 
 /**  Sub tent new hot **/
 .sub-tent-new{float:right; width:220px; margin:0 5px 0 0}
-.sub-tent-new li{ margin:0 0 0 15px; padding:2px 0; list-style:disc; color:#406B96}
+.sub-tent-new li{ margin:0 0 0 15px; padding:2px 0; list-style:disc; color:#406B96; clear: both}
 .sub-tent-new a{color:#2F15F1}
 
 
