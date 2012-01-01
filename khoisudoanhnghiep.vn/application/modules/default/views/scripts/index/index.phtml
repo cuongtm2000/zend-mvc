@@ -47,7 +47,7 @@
 		<?php  if(isset($this->menu_cat_handbook)):?>
 			<ul class="sub-top-tent">
 				<?php foreach ($this->menu_cat_handbook as $value) :?>
-				 <li style="border:none"><a href="#" title=""><?php echo $value['cat_title'] ?></a></li>
+				 <li style="border:none"><a href="<?php echo $this->baseUrl() ?>/cam-nang-khoi-su/<?php echo $value['tag'] ?>" title=""><?php echo $value['cat_title'] ?></a></li>
 				 <?php endforeach;?>
 			</ul> <div class="clear"></div>
 		<?php endif;?>

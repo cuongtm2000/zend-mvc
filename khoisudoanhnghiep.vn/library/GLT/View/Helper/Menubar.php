@@ -17,7 +17,7 @@ class GLT_View_Helper_Menubar extends Zend_View_Helper_Abstract{
     }
     private function getModule(){
     	$db = Zend_Db_Table_Abstract::getDefaultAdapter();
-        $stmt = $db->query('SELECT module, moduleen, modulefr, url, target FROM dos_sys_modules ORDER BY position ASC LIMIT 0, 30');
+        $stmt = $db->query('SELECT moduleid, module, moduleen, modulefr, url, target FROM dos_sys_modules ORDER BY position ASC LIMIT 0, 30');
         return $stmt->fetchAll();
     }
 }

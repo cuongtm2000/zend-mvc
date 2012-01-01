@@ -43,12 +43,12 @@
 					foreach($folders as $models){		
 						$style = ($i++ ==$n-1) ? ' style="background:none"' : $style=''; 
 						$target = ($models['target']=='') ? '' : ' target="'.$models['target'].'"';
-						$select = ($this->module==$models['url']) ? ' class="select"': '';
+						$select = ($this->module==$models['moduleid']) ? ' class="select"': '';
 						echo '<li'.$style.'><a href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.''.$select.'>'.html_entity_decode($models['module'.LANG]).'</a>';
-                        if($models['url']=='handbook'){
+                        if($models['moduleid']=='handbook'){
                             echo '<ul>';
                             foreach($this->menu_cat_handbook as $value){
-                                echo '<li><a href="'.$this->baseUrl().'/cam-nang-khoi-su/" title="'.$value['cat_title'].'">'.$value['cat_title'].'</a></li>';
+                                echo '<li><a href="'.$this->baseUrl().'/cam-nang-khoi-su/'.$value['tag'].'" title="'.$value['cat_title'].'">'.$value['cat_title'].'</a></li>';
                             }
                             echo '</ul>';
                         }
