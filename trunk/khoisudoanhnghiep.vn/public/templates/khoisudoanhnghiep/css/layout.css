@@ -20,18 +20,6 @@ a{text-decoration:none; color:#720E3B}
 .menu-hd-right li a{padding:0 0 0 20px;color:#AA8D77;}
 .menu-hd-right li a:hover{color:#000}
 
-/***** Form Login
-.frm-login{list-style:none}
-.frm-login li{padding:3px 0 }
-.frm-login input{padding:4px; width:130px; border:1px solid #0083FF;-webkit-border-radius:3px;-moz-border-radius:3px}
-.frm-login label{float:left; width:100px}
-.frm-login label{color:#0083FF; font-weight:bold; margin:0 10px 0 0}
-.frm-login span{color:#0083FF;margin:0 5px 0 0}
-.frm-login a{color:#0083FF; font-weight:bold; margin:0 5px}
-.frm-login a:hover{color:#FB7D00}
-.frm-login .btn-login{width:70px; background:none; border:none;color:#0083FF; font-weight:bold; cursor:pointer;*position:relative;*top:5px}
-*****   END FORM LOGIN   *****/
-
 /**  Menu **/
 .bg-nav-hover{background:url(../images/nav-link.gif) no-repeat bottom; height:30px}
 .bg-nav-hover a{color:#3C22EE;font-weight:bold;margin:0 0 0 45px; display:block; padding:5px 0 0 0}
@@ -112,7 +100,7 @@ ul#nav .select:hover{background:#FBF8F8;color:#406B96;-webkit-border-radius:4px 
 /**  Sub tent new hot **/
 .sub-tent-new{float:right; width:220px; margin:0 5px 0 0}
 .sub-tent-new li{ margin:0 0 0 15px; padding:2px 0; list-style:disc; color:#406B96; clear: both}
-.sub-tent-new a{color:#2F15F1}
+.sub-tent-new a{color:#2F15F1; display: block;}
 
 
 /*Right content*/
@@ -173,13 +161,6 @@ ul#nav .select:hover{background:#FBF8F8;color:#406B96;-webkit-border-radius:4px 
 .sub-ad-2{float:right;width:192px;text-align:center;list-style:none;margin:0 10px 0 0;*_margin:0 5px 0 0}
 .sub-ad-1 li, .sub-ad-2 li{margin:0 0 2px 0}
 
-/** Rao vat 
-.info-ad{padding:10px 0 10px 20px; background:#EBFFFF;list-style:none;border-left:1px solid #D1D1D1;border-right:1px solid #D1D1D1}
-.info-ad li{list-style-image:url(../images/bull.gif); padding:4px 0}
-.info-ad li a{color:#3C22EE;padding:0 0 0 5px}
-.info-ad li a:hover{color:#f00} 
-****   End rao vat  ****/
-
 /*Thong ke truy cap*/
 .statistics{list-style:none; float:right}
 .statistics li {color:#0080FF}
@@ -214,18 +195,9 @@ ul#nav .select:hover{background:#FBF8F8;color:#406B96;-webkit-border-radius:4px 
 .copyright {text-align:center;}
 .copyright a{color:#000}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* paging */
+.paging{padding:15px 10px 10px 0; text-align:right;}
+.paging a{color:#42342C}
+.paging a:hover{background:#A18852; color:#fff}
+.pagenav , .pageactive{border: 1px solid #ccc; padding: 2px 5px; color:#FFF; -moz-border-radius: 2px; -webkit-border-radius: 2px;}
+.pagecureent{border: 1px solid #ccc; padding: 2px 5px; background:#0C87D9; color:#42342C; font-weight:bold; -moz-border-radius: 2px; -webkit-border-radius: 2px}

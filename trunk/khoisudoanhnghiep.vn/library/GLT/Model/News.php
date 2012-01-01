@@ -15,7 +15,6 @@ class GLT_Model_News extends Zend_Db_Table{
         $this->_db = Zend_Registry::get('connectDb');
     }
     
-    
    //Front end - Get bản tin nhiều người xem
 	public function listTopHits(){
     	$select = $this->select()->from($this->_name, array('record_id',  'title'.LANG))
@@ -48,40 +47,38 @@ class GLT_Model_News extends Zend_Db_Table{
 	
 	//Front end - Get bản tin Hot mới nhất
 	public function listItemNewHotFirst(){
-    	$db = Zend_Registry::get('connectDb');
-    	$select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG))
+    	$select = $this->_db->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG))
 							   ->where('enable = 1')
 							   ->where('record_type = 1')
 							   ->order('record_order DESC')
 							   ->order('postdate DESC')
                                ->limit(1, 0);
-		return $db->fetchRow($select);
+		return $this->_db->fetchRow($select);
     }
     
 	//Front end - Get Bản tin Hot mới nhất
 	public function listItemNewHots(){
-		$db = Zend_Registry::get('connectDb');
-    	$select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG,'preview'.LANG))
+    	$select = $this->_db->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG,'preview'.LANG))
 							   ->where('enable = 1')
 							   ->where('record_type = 1')
 							   ->order('record_order DESC')
 							   ->order('postdate DESC')
 							   ->limit(3, 1);
-		return $db->query($select)->fetchAll();
+		return $this->_db->query($select)->fetchAll();
     }
     
     //Front end - Get Bản tin bởi cat_id
-	public function listItembyCat($data = NULL){
+	public function listItembyCat($data = NULL){	   
 		//Get paging number
     	$paginator = $data['paginator'];
     	if ($paginator['itemCountPerPage']>0){
 			$page = $paginator['currentPage'];
 			$rowCount = $paginator['itemCountPerPage'];
 		}		
-    	$select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG))
+    	$select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG, 'tag'))
 							   ->where('enable = 1')
-							   ->where('dos_module_item_cat_cat_id =?', $data['id'])
-							   ->order('record_order ASC')
+							   ->where('dos_module_item_cat_cat_id =?', $this->getCatIDByTag($data['id']))
+							   ->order('record_order DESC')
 							   ->order('postdate DESC')
 							   ->limitPage($page, $rowCount);
 		return $this->fetchAll($select)->toArray();		
@@ -100,21 +97,26 @@ class GLT_Model_News extends Zend_Db_Table{
 			$page = $paginator['currentPage'];
 			$rowCount = $paginator['itemCountPerPage'];
 		}
-    	$select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG))
+    	$select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title'.LANG, 'preview'.LANG, 'tag'))
 							   ->where('enable = 1')
-							   ->order('record_order ASC')
+							   ->order('record_order DESC')
 							   ->order('postdate DESC')
 							   ->limitPage($page, $rowCount);
-		return  $this->fetchAll($select)->toArray();
+		return $this->fetchAll($select)->toArray();
+    }
+    
+    //Front end - Count bản tin
+	public function countItemIndex(){
+    	$select = $this->_db->select()->from($this->_name, array('COUNT(record_id) AS total'))->where('enable = 1');
+		return  $this->_db->fetchOne($select);
     }
     
 	//Front end - Count bản tin bởi cat_id
 	public function countItembyCat($data = NULL){
-		$db = Zend_Registry::get('connectDb');
-    	$select = $db->select()->from($this->_name, array('COUNT(record_id) AS total'))
+    	$select = $this->_db->select()->from($this->_name, array('COUNT(record_id) AS total'))
 							   ->where('enable = 1')
 							   ->where('dos_module_item_cat_cat_id =?', $data['id']);
-		return  $db->fetchOne($select);
+		return  $this->_db->fetchOne($select);
     }
     
     //Front end - Get detail new
@@ -129,6 +131,11 @@ class GLT_Model_News extends Zend_Db_Table{
     private function getRecordByTag($tag){
         return $this->_db->fetchOne("SELECT record_id FROM ".$this->_name." WHERE tag = ?", array($tag));
     }
+    //Front end - Get cat_id by tag
+    private function getCatIDByTag($tag){
+        $cat = new GLT_Model_Cat();
+        return $cat->getRecordByTag($tag, $this->_name.'_cat');
+    }    
     //Back end - Danh sách Item admin
 	public function listItemadmin($data = NULL){
 		//get paging number
@@ -138,12 +145,11 @@ class GLT_Model_News extends Zend_Db_Table{
 			$rowCount = $paginator['itemCountPerPage'];
 		}
 		
-		$db = Zend_Registry::get('connectDb');
-    	$select = $db->select()->from(array('n' => $this->_name), array('record_id', 'postdate', 'title'.LANG, 'hits', 'record_order', 'record_type', 'enable'))
+    	$select = $this->_db->select()->from(array('n' => $this->_name), array('record_id', 'postdate', 'title'.LANG, 'hits', 'record_order', 'record_type', 'enable'))
 							   ->join(array('c' => $this->_name.'_cat'),'n.dos_module_item_cat_cat_id = c.cat_id', array('cat_title'.LANG))
 							   ->order('record_order DESC')
 							   ->limitPage($page, $rowCount);
-		$result = $db->query($select)->fetchAll();
+		$result = $this->_db->query($select)->fetchAll();
 		if(count($result) > 0){
 			return $result;
 		}else{
@@ -154,16 +160,14 @@ class GLT_Model_News extends Zend_Db_Table{
     
 	//Back end - Đếm số mẩu tin Danh mục
     public function countItembyCatID($cid){
-    	$db = Zend_Registry::get('connectDb');
-		$select = $db->select()->from($this->_name, array('COUNT(record_id) AS num'))
+		$select = $this->_db->select()->from($this->_name, array('COUNT(record_id) AS num'))
                                ->where('dos_module_item_cat_cat_id = ?', $cid);
-        return $db->fetchOne($select);
+        return $this->_db->fetchOne($select);
     }
     
 	public function countItemadmin(){
-    	$db = $this->getAdapter();
-    	$select = $db->select()->from($this->_name, array('count(record_id) as totalItem'));
-		return $db->fetchOne($select);
+    	$select = $this->_db->select()->from($this->_name, array('count(record_id) as totalItem'));
+		return $this->_db->fetchOne($select);
     }
 	public function menuAdmin(){
 		$cat = new $this->_modelCat();
@@ -298,9 +302,8 @@ class GLT_Model_News extends Zend_Db_Table{
     }
     //Back end - Delete for cat
 	public function delItembyCat($data = NULL){
-    	$db = Zend_Registry::get('connectDb');
-    	$select = $db->select()->from($this->_name, array('record_id'))->where('dos_module_item_cat_cat_id =?', $data['id']);
-		$result = $db->query($select)->fetchAll();
+    	$select = $this->_db->select()->from($this->_name, array('record_id'))->where('dos_module_item_cat_cat_id =?', $data['id']);
+		$result = $this->_db->query($select)->fetchAll();
 		
     	if($data['delproduct'] == 'del'){
 	    	foreach ($result as $value){
@@ -351,8 +354,7 @@ class GLT_Model_News extends Zend_Db_Table{
 		$this->update(array('dos_module_item_cat_cat_id' => $cat_id_new), $where);
     }
     public function updateHits($record_id) {
-    	$db = Zend_Registry::get('connectDb');
     	$sql = "UPDATE `".$this->_name."` SET `hits` = `hits`+1 WHERE `record_id` = ".$record_id.";";
-    	$db->query($sql);
+    	$this->_db->query($sql);
     }
 }
