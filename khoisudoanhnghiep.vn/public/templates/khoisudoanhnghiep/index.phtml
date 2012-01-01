@@ -45,14 +45,16 @@
 						$target = ($models['target']=='') ? '' : ' target="'.$models['target'].'"';
 						$select = ($this->module==$models['url']) ? ' class="select"': '';
 						echo '<li'.$style.'><a href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.''.$select.'>'.html_entity_decode($models['module'.LANG]).'</a>';
+                        if($models['url']=='handbook'){
+                            echo '<ul>';
+                            foreach($this->menu_cat_handbook as $value){
+                                echo '<li><a href="'.$this->baseUrl().'/cam-nang-khoi-su/" title="'.$value['cat_title'].'">'.$value['cat_title'].'</a></li>';
+                            }
+                            echo '</ul>';
+                        }
 						echo '</li>';
 					}
 				?>
-				<!-- li style="background:none"><a href="entertainment.html" title="Giải trí">Giải trí</a>
-					<ul>
-					   <li><a href="#">Game mini</a></li>
-					</ul>
-				</li  -->
             </ul><div class="clear"></div>            
             <div id="content">
             	<div id="leftcontent">
