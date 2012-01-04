@@ -26,8 +26,8 @@ class Consulting_IndexController extends GLT_Controller_Action {
                 $this->view->$value['varname'] = $load->$value['function_load']();
             }
         }
-        $this->_model=ucfirst($this->_data['module']).'_Model_'.ucfirst($this->_data['module']);
-        $this->_modelCat=$this->_model.'Cat';
+        $this->_model = ucfirst($this->_data['module']).'_Model_'.ucfirst($this->_data['module']);
+        $this->_modelCat = $this->_model.'Cat';
     }
 	public function catAction() {
 		$cat = new $this->_modelCat();
@@ -45,13 +45,14 @@ class Consulting_IndexController extends GLT_Controller_Action {
 	}
 	public function indexAction() {
 		$item = new $this->_model();
-		$this->view->list_news_new = $item->listItemsHot($this->_data);
+		$this->view->list_items_index = $item->listItemIndex($this->_data);
 		
 		//paging
-		//$totalItem = $item->countItemnew();
-		//$paginator = new GLT_Paginator();
-		//$this->view->paginator = $paginator->createPaginator($totalItem, $this->_paginator);
-		$this->webTitle($this->view->lang[$this->_data['module']]);
+		$totalItem = $item->countItemIndex();
+		$paginator = new GLT_Paginator();
+		$this->view->paginator = $paginator->createPaginator($totalItem, $this->_paginator);
+		
+        $this->webTitle($this->view->lang[$this->_data['module']]);
 	}
 	public function viewAction(){
 		$item = new $this->_model();

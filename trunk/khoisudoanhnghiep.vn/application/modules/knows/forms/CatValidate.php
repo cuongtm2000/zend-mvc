@@ -15,6 +15,17 @@ class Knows_Form_CatValidate{
 		if (!$validator->isValid($data['cat_title'])) {
 			$this->_error['cat_title'] ='Tiêu đề không được rỗng và từ 3 - 45 ký tự';
 		}
+        
+        //Validate tag, description
+		$validator = new Zend_Validate();
+		$validator->addValidator(new Zend_Validate_NotEmpty());
+		
+		if (!$validator->isValid($data['tag'])) {
+			$this->_error['tag'] ='Liên kết không được rỗng';
+		}
+        if (!$validator->isValid($data['description'])) {
+			$this->_error['description'] ='Mô tả không được rỗng';
+		}
 		
 		$this->_data = $data;
 	}

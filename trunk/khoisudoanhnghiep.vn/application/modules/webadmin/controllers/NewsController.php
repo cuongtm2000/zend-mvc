@@ -86,6 +86,9 @@ class Webadmin_NewsController extends GLT_Controller_Backend{
 		$this->_redirect($this->_module.'/'.$this->_controller.'/cat');
     }
 	public function addcatAction(){
+        $this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE_ADMIN.'/js/jquery.seoAlias.js');
+        $this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE_ADMIN.'/js/string.seoAlias.js');
+        
     	$cat = new $this->_modelCat();
     	$this->view->listcat = $cat->listCatParent();
     	
@@ -103,6 +106,8 @@ class Webadmin_NewsController extends GLT_Controller_Backend{
     }
 	public function editcatAction(){
 		$this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE_ADMIN.'/js/checklist.js');
+        $this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE_ADMIN.'/js/jquery.seoAlias.js');
+        $this->view->headScript()->appendFile($this->_request->getBaseUrl().TEMPLATE_ADMIN.'/js/string.seoAlias.js');
     	
         $cat = new $this->_modelCat();
         $this->view->listcat = $cat->listCatParent($this->_data['id']);

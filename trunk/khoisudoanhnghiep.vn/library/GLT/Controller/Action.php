@@ -21,7 +21,31 @@ class GLT_Controller_Action extends Zend_Controller_Action{
 		
 		//handbook
 		$handbook_cat_class = new Handbook_Model_HandbookCat();
-		$this->view->menu_cat_handbook = $handbook_cat_class->getListmenu();
+		$this->view->menu_cat_handbook = $handbook_cat_class->getListmenuParentID(0);
+        
+        //experience
+        $experience_cat_class = new Experience_Model_ExperienceCat();
+		$this->view->menu_cat_experience = $experience_cat_class->getListmenuParentID(0);
+        
+        //knows
+        $knows_cat_class = new Knows_Model_KnowsCat();
+		$this->view->menu_cat_knows = $knows_cat_class->getListmenuParentID(0);
+        
+        //consulting
+        $consulting_cat_class = new Consulting_Model_ConsultingCat();
+		$this->view->menu_cat_consulting = $consulting_cat_class->getListmenuParentID(0);
+        
+        //worldbusiness
+        $worldbusiness_cat_class = new WorldBusiness_Model_WorldBusinessCat();
+		$this->view->menu_cat_worldbusiness = $worldbusiness_cat_class->getListmenuParentID(0);
+        
+        //corporateculture
+        $corporateculture_cat_class = new CorporateCulture_Model_CorporateCultureCat();
+		$this->view->menu_cat_corporateculture = $corporateculture_cat_class->getListmenuParentID(0);
+        
+        //worldbusiness
+        $entertainment_cat_class = new Entertainment_Model_EntertainmentCat();
+		$this->view->menu_cat_entertainment = $entertainment_cat_class->getListmenuParentID(0);
 		
         //Request
         $request = $this->_request->getParams();

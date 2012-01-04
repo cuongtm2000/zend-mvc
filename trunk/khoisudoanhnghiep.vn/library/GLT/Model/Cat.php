@@ -26,12 +26,17 @@ class GLT_Model_Cat extends Zend_Db_Table{
     
 	// Front end - Get tất cả Danh mục tin tức
 	public function getListmenu(){
-    	$select = $this->select()->from($this->_name, array('cat_id', 'cat_title'.LANG, 'cat_parent_id', 'tag'))->where('cat_enable = 1')->order('cat_order ASC');
+        $select = $this->select()->from($this->_name, array('cat_id', 'cat_title'.LANG, 'cat_parent_id', 'tag'))->where('cat_enable = 1')->order('cat_order ASC');
+    	return $this->fetchAll($select)->toArray();
+    }
+    // Front end - Get tất cả Danh mục cat_parent_id
+	public function getListmenuParentID($cid){
+        $select = $this->select()->from($this->_name, array('cat_id', 'cat_title'.LANG, 'tag'))->where('cat_parent_id =?', $cid)->where('cat_enable = 1')->order('cat_order ASC');
     	return $this->fetchAll($select)->toArray();
     }
     // Front end - Get chi tiết danh mục
     public function getDetailCat($data = NULL){
-    	$select = $this->select()->from($this->_name, array('cat_title'.LANG))->where('cat_id = ?', $this->getRecordByTag($data['id']));
+    	$select = $this->select()->from($this->_name, array('cat_title'.LANG, 'tag'))->where('cat_id = ?', $this->getRecordByTag($data['id']));
 		return $this->fetchRow($select);
     }
     //Front end - Get cat_id by tag

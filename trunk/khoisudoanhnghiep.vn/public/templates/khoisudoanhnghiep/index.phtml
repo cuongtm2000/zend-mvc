@@ -52,6 +52,49 @@
                             }
                             echo '</ul>';
                         }
+                        if($models['moduleid']=='experience'){
+                            echo '<ul>';
+                            foreach($this->menu_cat_experience as $value){
+                                echo '<li><a href="'.$this->baseUrl().'/kinh-nghiem-thuong-truong/'.$value['tag'].'" title="'.$value['cat_title'].'">'.$value['cat_title'].'</a></li>';
+                            }
+                            echo '</ul>';
+                        }
+                        if($models['moduleid']=='knows'){
+                            echo '<ul>';
+                            foreach($this->menu_cat_knows as $value){
+                                echo '<li><a href="'.$this->baseUrl().'/kien-thuc-quan-ly/'.$value['tag'].'" title="'.$value['cat_title'].'">'.$value['cat_title'].'</a></li>';
+                            }
+                            echo '</ul>';
+                        }
+                        if($models['moduleid']=='consulting'){
+                            echo '<ul>';
+                            foreach($this->menu_cat_consulting as $value){
+                                echo '<li><a href="'.$this->baseUrl().'/goc-tu-van/'.$value['tag'].'" title="'.$value['cat_title'].'">'.$value['cat_title'].'</a></li>';
+                            }
+                            echo '</ul>';
+                        }
+                        if($models['moduleid']=='world-business'){
+                            echo '<ul>';
+                            foreach($this->menu_cat_worldbusiness as $value){
+                                echo '<li><a href="'.$this->baseUrl().'/the-gioi-doanh-nhan/'.$value['tag'].'" title="'.$value['cat_title'].'">'.$value['cat_title'].'</a></li>';
+                            }
+                            echo '</ul>';
+                        }
+                        if($models['moduleid']=='corporate-culture'){
+                            echo '<ul>';
+                            foreach($this->menu_cat_corporateculture as $value){
+                                echo '<li><a href="'.$this->baseUrl().'/van-hoa-doanh-nghiep/'.$value['tag'].'" title="'.$value['cat_title'].'">'.$value['cat_title'].'</a></li>';
+                            }
+                            echo '</ul>';
+                        }
+                        if($models['moduleid']=='entertainment'){
+                            echo '<ul>';
+                            foreach($this->menu_cat_entertainment as $value){
+                                echo '<li><a href="'.$this->baseUrl().'/giai-tri/'.$value['tag'].'" title="'.$value['cat_title'].'">'.$value['cat_title'].'</a></li>';
+                            }
+                            echo '</ul>';
+                        }
+                        
 						echo '</li>';
 					}
 				?>
@@ -94,14 +137,17 @@
                     	</div><!--End bg support-->  <div class="clear"></div>
                     	
                     </div><!--End row 2-->
+                    
+                    <?php if($this->video_first): ?>
                     <div class="video">
-                        <a href="http://youtu.be/MHKpVVe5QZA" rel="prettyPhoto" title="iPhone 4 Tutorial Part 4"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/bg-video.jpg" alt="iPhone 4 Tutorial Part 4" /></a>
+                        <a href="<?php echo $this->video_first['url'] ?>" rel="prettyPhoto" title="<?php echo $this->video_first['title'] ?>"><img src="<?php echo $this->baseUrl().IMAGES_PATH ?>/video/<?php echo $this->video_first['pic_full'] ?>" alt="<?php echo $this->video_first['title'] ?>" /></a>
                         <script type="text/javascript" charset="utf-8">
                           $(document).ready(function(){
                             $(".video a[rel^='prettyPhoto']").prettyPhoto();
                           });
                         </script>
             		</div>
+                    <?php endif; ?>
                     
                     <?php if($this->list_adv_right): ?>
                     <h1 class="title-right"><span><?php echo $this->lang['adv'] ?></span></h1>

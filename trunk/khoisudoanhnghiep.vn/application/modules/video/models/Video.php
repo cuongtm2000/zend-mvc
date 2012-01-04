@@ -12,7 +12,12 @@ class Video_Model_Video extends Zend_Db_Table{
     	$this->_web = Zend_Registry::get("web");
         $this->_xss = Zend_Registry::get('xss');
     }
-    
+    //Front end - Get item đầu tiên
+	public function getFristRecord(){
+		$where = 'enable = 1';
+		$order = 'record_order DESC';        
+		return $this->fetchRow($where, $order, 0, 1);
+	}
 	//Front end - Danh sách mẫu tin mới nhất
 	public function listItemsNew($data = NULL){
 		//Get paging number
@@ -156,7 +161,7 @@ class Video_Model_Video extends Zend_Db_Table{
 			}
     	}
 		
-    	$data = array('pic_full' => $file_full, 'title' => htmlspecialchars($this->_xss->purify($data['title'])), 'titleen' => htmlspecialchars($this->_xss->purify($data['titleen'])), 'titlefr' => htmlspecialchars($this->_xss->purify($data['titlefr'])), 'url' => htmlspecialchars($this->_xss->purify($data['url'])), 'hot' => htmlspecialchars($this->_xss->purify($data['hot'])), 'enable' => htmlspecialchars($this->_xss->purify($data['active'])), 'dos_module_video_cat_cat_id' => htmlspecialchars($this->_xss->purify($data['parentcat'])));
+    	$data = array('pic_full' => $file_full, 'title' => $this->_xss->purify($data['title']), 'titleen' => $this->_xss->purify($data['titleen']), 'titlefr' => $this->_xss->purify($data['titlefr']), 'url' => $this->_xss->purify($data['url']), 'hot' => $this->_xss->purify($data['hot']), 'enable' => $this->_xss->purify($data['active']), 'dos_module_video_cat_cat_id' => $this->_xss->purify($data['parentcat']));
     	$this->insert($data);
     }
 	public function editItem($data = NULL){
@@ -181,7 +186,7 @@ class Video_Model_Video extends Zend_Db_Table{
     	}
 		
     	$where = 'record_id = '.$data['id'];
-    	$data = array('pic_full' => $file_full, 'title' => htmlspecialchars($this->_xss->purify($data['title'])), 'titleen' => htmlspecialchars($this->_xss->purify($data['titleen'])), 'titlefr' => htmlspecialchars($this->_xss->purify($data['titlefr'])), 'url' => htmlspecialchars($this->_xss->purify($data['url'])), 'hot' => htmlspecialchars($this->_xss->purify($data['hot'])), 'enable' => htmlspecialchars($this->_xss->purify($data['active'])), 'dos_module_video_cat_cat_id' => htmlspecialchars($this->_xss->purify($data['parentcat'])));
+    	$data = array('pic_full' => $file_full, 'title' => $this->_xss->purify($data['title']), 'titleen' => $this->_xss->purify($data['titleen']), 'titlefr' => $this->_xss->purify($data['titlefr']), 'url' => $this->_xss->purify($data['url']), 'hot' => $this->_xss->purify($data['hot']), 'enable' => $this->_xss->purify($data['active']), 'dos_module_video_cat_cat_id' => $this->_xss->purify($data['parentcat']));
     	$this->update($data, $where);
     }
 	public function menuAdmin(){
