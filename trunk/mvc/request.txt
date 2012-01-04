@@ -4,3 +4,5 @@
 4. Dat ten cac model, form de hinh dung (Models->News.php, Models->News_Cat.php
 5. Tuong tu form
 6. Rut gon menu_product, menu_news
+7. File word mô tả cac "biến" hiển thị tại trang nào.
+8. Xóa ngon ngữ, file module dư thừa, chức năng
