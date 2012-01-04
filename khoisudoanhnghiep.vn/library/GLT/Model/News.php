@@ -115,7 +115,7 @@ class GLT_Model_News extends Zend_Db_Table{
 	public function countItembyCat($data = NULL){
     	$select = $this->_db->select()->from($this->_name, array('COUNT(record_id) AS total'))
 							   ->where('enable = 1')
-							   ->where('dos_module_item_cat_cat_id =?', $data['id']);
+							   ->where('dos_module_item_cat_cat_id =?', $this->getCatIDByTag($data['id']));
 		return  $this->_db->fetchOne($select);
     }
     

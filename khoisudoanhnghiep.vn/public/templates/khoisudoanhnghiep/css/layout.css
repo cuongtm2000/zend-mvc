@@ -54,6 +54,7 @@ ul#nav .select:hover{background:#FBF8F8;color:#406B96;-webkit-border-radius:4px 
 
 .title-left{font-weight:600;font-size:11pt;color:#3C22EE;background:url(../images/bg-title-index.gif) no-repeat; padding:7px 0}
 .title-left span{padding:0 0 0 10px}
+.title-left span a{color:#0000FF}
 
 .frame-tent-left{padding:10px;background:#fff; border-left:1px solid #D0D0D0; border-right:1px solid #D0D0D0}
 .bd-bt-tenf-left{background:url(../images/bd-bt-left.gif) no-repeat; height:10px; width:543px; margin:0 0 5px 0}

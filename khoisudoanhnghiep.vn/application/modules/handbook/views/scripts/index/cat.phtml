@@ -1,4 +1,4 @@
-<h1 class="title-left"><span><?php echo $this->lang[$this->module]?> &raquo; <?php echo $this->detailcat['cat_title'.LANG] ?></span></h1>
+<h1 class="title-left"><span><a href="<?php echo $this->baseUrl() ?>/cam-nang-khoi-su" title="<?php echo $this->lang[$this->module]?>"><?php echo $this->lang[$this->module]?></a> &raquo; <a href="<?php echo $this->detailcat['tag'] ?>" title="<?php echo $this->detailcat['cat_title'] ?>"><?php echo $this->detailcat['cat_title'] ?></a></span></h1>
 <div class="frame-tent-left">
 	<?php if($this->items):?>
 	 <?php foreach ($this->items as $value):?>
@@ -16,4 +16,3 @@
 	<?php endif;?>
 </div><!--End frame tent-->
 <div class="bd-bt-tenf-left"></div>
-	

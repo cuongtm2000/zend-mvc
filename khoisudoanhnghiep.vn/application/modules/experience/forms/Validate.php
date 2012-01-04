@@ -53,6 +53,17 @@ class Experience_Form_Validate{
 	    		}
 			}
     	}
+        
+        //Validate tag, description
+		$validator = new Zend_Validate();
+		$validator->addValidator(new Zend_Validate_NotEmpty());
+		
+		if (!$validator->isValid($data['tag'])) {
+			$this->_error['tag'] ='Liên kết không được rỗng';
+		}
+        if (!$validator->isValid($data['description'])) {
+			$this->_error['description'] ='Mô tả không được rỗng';
+		}
 		
 		$this->_data = $data;
 	}
