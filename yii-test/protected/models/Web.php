@@ -1,0 +1,100 @@
+<?php
+
+/**
+ * This is the model class for table "dos_module_webs".
+ *
+ * The followings are the available columns in table 'dos_module_webs':
+ * @property string $web_name
+ * @property string $web_value
+ * @property string $dos_usernames_username
+ *
+ * The followings are the available model relations:
+ * @property DosUsernames $dosUsernamesUsername
+ */
+class Web extends CActiveRecord
+{
+	/**
+	 * Returns the static model of the specified AR class.
+	 * @return Web the static model class
+	 */
+	public static function model($className=__CLASS__)
+	{
+		return parent::model($className);
+	}
+
+	/**
+	 * @return string the associated database table name
+	 */
+	public function tableName()
+	{
+		return 'dos_module_webs';
+	}
+
+	/**
+	 * @return array validation rules for model attributes.
+	 */
+	public function rules()
+	{
+		// NOTE: you should only define rules for those attributes that
+		// will receive user inputs.
+		return array(
+			array('web_name, dos_usernames_username', 'required'),
+			array('web_name, dos_usernames_username', 'length', 'max'=>45),
+			array('web_value', 'length', 'max'=>1000),
+			// The following rule is used by search().
+			// Please remove those attributes that should not be searched.
+			array('web_name, web_value, dos_usernames_username', 'safe', 'on'=>'search'),
+		);
+	}
+
+	/**
+	 * @return array relational rules.
+	 */
+	public function relations()
+	{
+		// NOTE: you may need to adjust the relation name and the related
+		// class name for the relations automatically generated below.
+		return array(
+			'dosUsernamesUsername' => array(self::BELONGS_TO, 'DosUsernames', 'dos_usernames_username'),
+		);
+	}
+
+	/**
+	 * @return array customized attribute labels (name=>label)
+	 */
+	public function attributeLabels()
+	{
+		return array(
+			'web_name' => 'Web Name',
+			'web_value' => 'Web Value',
+			'dos_usernames_username' => 'Dos Usernames Username',
+		);
+	}
+
+	/**
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function search()
+	{
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('web_name',$this->web_name,true);
+		$criteria->compare('web_value',$this->web_value,true);
+		$criteria->compare('dos_usernames_username',$this->dos_usernames_username,true);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+    public function setWebValue($tag, $username){
+		$sql = 'SELECT web_value FROM '.$this->tableName().' WHERE web_name=:tag AND dos_usernames_username=:username';
+        $command = Yii::app()->db->createCommand($sql);
+        $command->bindParam(":tag", $tag, PDO::PARAM_STR);
+        $command->bindParam(":username", $username, PDO::PARAM_STR);
+		return $command->queryScalar();
+	}
+}
