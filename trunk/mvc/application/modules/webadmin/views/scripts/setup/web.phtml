@@ -23,7 +23,7 @@
 	    <?php
 	        foreach($this->items as $item){
 	        	echo '<p><label>Config web</label>
-	                    <input name="web_name[]" value="'.$item['web_name'].'" maxlength="45" class="txt-large" />
+	                    <input name="web_name[]" readonly="readonly" value="'.$item['web_name'].'" maxlength="45" class="txt-large" />
 	                    <input name="web_value[]" value="'.$item['web_value'].'" maxlength="200" class="txt-large" />';
 	        }
 		?>
