@@ -1,9 +1,9 @@
 <?php
 class GLT_Controller_Plugin_Lang extends Zend_Controller_Plugin_Abstract{
     public function preDispatch(Zend_Controller_Request_Abstract $request){
-        $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/application.ini', 'production');
-        $langdefault = $config->resources->router->routes->language->defaults->language;
-
+        $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/app-router.ini', 'lang');
+        $langdefault = $config->routes->language->defaults->language;
+       
         $lang = $this->getRequest()->getParam('language');
         $langurl = '';
         if($lang == $langdefault || $lang == ''){

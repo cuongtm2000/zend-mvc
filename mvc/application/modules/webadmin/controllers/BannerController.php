@@ -74,7 +74,7 @@ class Webadmin_BannerController extends GLT_Controller_Backend{
     	
     	$record = new Banner_Model_Banner();
 		$this->view->item = $record->editItem($this->_data);
-		
+		var_dump($this->view->item);
 		if ($this->_request->isPost()) {
 			$validate  = new Banner_Form_BannerEditValidate($this->_data);
     		if($validate->isError()==true){

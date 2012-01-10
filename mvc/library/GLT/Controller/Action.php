@@ -20,6 +20,20 @@ class GLT_Controller_Action extends Zend_Controller_Action{
         $banner = new Banner_Model_Banner();
         $this->view->logo = $banner->getLogo();
         $this->view->banner = $banner->getAllBanner($this->view->module);
+        
+		//support
+		$support=new Support_Model_Support();
+		$this->view->menu_support=$support->getListmenu();
+
+        	//static
+		$statistics = new GLT_System_SmartCounter();
+		$this->view->onlinetoday = $statistics->getOnlineToday();
+		$this->view->online = $statistics->getOnline();
+		$this->view->onlinetotal = $statistics->visit_total();
+        
+        //contact home
+        $contact = new Contact_Model_Contact();
+        $this->view->contact_home = $contact->getHomeRecord();
 
         //Google analytic
         $db = Zend_Registry::get('connectDb');
