@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 10, 2012 at 11:02 AM
+-- Generation Time: Jan 12, 2012 at 04:10 AM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_about` (
 --
 
 INSERT INTO `dos_module_about` (`record_id`, `title`, `titleen`, `titlefr`, `content`, `contenten`, `contentfr`, `hits`, `posted_date`, `record_order`, `extra_field1`, `extra_field2`, `hot`, `enable`) VALUES
-(27, 'Enter your replacement text here...', '', '', '&lt;p&gt;\r\n	Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... &lt;/p&gt;\r\n&lt;p&gt;\r\n	Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... &lt;/p&gt;\r\n', '', '', 814, '2011-08-16 02:32:39', 1, '', '', 0, 1),
+(27, 'Enter your replacement text here...', '', '', '&lt;p&gt;\r\n	Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... &lt;/p&gt;\r\n&lt;p&gt;\r\n	Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... &lt;/p&gt;\r\n', '', '', 848, '2011-08-16 02:32:39', 1, '', '', 0, 1),
 (28, 'Enter your replacement text here...', '', '', '&lt;p&gt;\r\n	Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... &lt;/p&gt;\r\n', '', '', 1583, '2011-08-16 03:35:14', 1, '', '', 1, 1);
 
 -- --------------------------------------------------------
@@ -438,7 +438,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
 
 INSERT INTO `dos_module_news` (`record_id`, `pic_thumb`, `title`, `titleen`, `titlefr`, `preview`, `previewen`, `previewfr`, `content`, `contenten`, `contentfr`, `author`, `hits`, `postdate`, `record_order`, `record_type`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
 (1, NULL, 'dasdsadsa', '', '', '&lt;p&gt;\r\n	test&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	test&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-09-09 08:28:58', 1, 0, NULL, NULL, 1, 11),
-(2, NULL, 'safa', '', '', '&lt;p&gt;\r\n	asf&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	asf&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-09-09 14:36:00', 1, 0, NULL, NULL, 1, 11),
+(2, NULL, 'safa', '', '', '&lt;p&gt;\r\n	asf&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	asf&lt;/p&gt;\r\n', '', '', NULL, 2, '2011-09-09 14:36:00', 1, 0, NULL, NULL, 1, 11),
 (3, NULL, 'adasd', '', '', '&lt;p&gt;\r\n	sdsad&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sdasd&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-09-23 01:48:31', 2, 0, NULL, NULL, 1, 11);
 
 -- --------------------------------------------------------
@@ -456,14 +456,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `cat_order` int(11) NOT NULL DEFAULT '1',
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `dos_module_news_cat`
 --
 
 INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `cat_titlefr`, `cat_order`, `cat_enable`) VALUES
-(11, 0, 'Test', '', '', 1, 1);
+(11, 0, 'Test', '', '', 1, 1),
+(12, 0, 'Sản phẩm loại 2', '', '', 2, 1),
+(13, 12, 'Sản phẩm loại 2.2', '', '', 3, 1);
 
 -- --------------------------------------------------------
 
@@ -657,14 +659,10 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `title` varchar(45) DEFAULT NULL,
   `titleen` varchar(45) DEFAULT NULL,
   `titlefr` varchar(45) DEFAULT NULL,
-  `pic_full` varchar(100) DEFAULT NULL,
-  `preview` text,
-  `previewen` text,
-  `previewfr` text,
   `content` text,
   `contenten` text,
   `contentfr` text,
-  `hits` int(11) NOT NULL DEFAULT '1',
+  `hits` int(11) DEFAULT '1',
   `posted_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `record_order` int(11) DEFAULT '1',
   `extra_field1` varchar(45) DEFAULT NULL,
@@ -672,16 +670,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `hot` tinyint(1) NOT NULL DEFAULT '0',
   `enable` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
 
 --
 -- Dumping data for table `dos_module_services`
 --
 
-INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `titlefr`, `pic_full`, `preview`, `previewen`, `previewfr`, `content`, `contenten`, `contentfr`, `hits`, `posted_date`, `record_order`, `extra_field1`, `extra_field2`, `hot`, `enable`) VALUES
-(10, 'dasdsadsa', '', '', NULL, '&lt;p&gt;\r\n	rrrrr&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	ewrwr&lt;/p&gt;\r\n', '', '', 100, '2011-09-12 08:34:51', 1, '', '', 0, 1),
-(11, 'asdasdas', '', '', NULL, '&lt;p&gt;\r\n	sadasd&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	dasdasdsdd&lt;/p&gt;\r\n', '', '', 40, '2011-10-21 09:11:37', 2, '', '', 0, 1),
-(12, 'sadasda', '', '', 'image5.jpg', '&lt;p&gt;\r\n	dsadasd&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	dasdasd&lt;/p&gt;\r\n', '', '', 449, '2011-10-21 09:11:47', 3, '', '', 1, 1);
+INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `titlefr`, `content`, `contenten`, `contentfr`, `hits`, `posted_date`, `record_order`, `extra_field1`, `extra_field2`, `hot`, `enable`) VALUES
+(29, 'abcde', '', '', '<p>\r\n	abcdeabcde</p>\r\n', '', '', 3, '2012-01-11 16:26:18', 1, '', '', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -996,26 +992,33 @@ CREATE TABLE IF NOT EXISTS `dos_sys_functions` (
   `function_load` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`function_id`),
   KEY `fk_dos_sys_functions_dos_sys_modules` (`model_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13826 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13913 ;
 
 --
 -- Dumping data for table `dos_sys_functions`
 --
 
 INSERT INTO `dos_sys_functions` (`function_id`, `model_name`, `model_load`, `action`, `varname`, `function_load`) VALUES
-(13722, 'account', 'Webadmin_Model_Account', 'add', 'menu_account', 'getListmenu'),
-(13723, 'account', 'Webadmin_Model_Account', 'changepass', 'menu_account', 'getListmenu'),
-(13724, 'account', 'Webadmin_Model_Account', 'index', 'menu_account', 'getListmenu'),
-(13808, 'setup', 'Webadmin_Model_Setup', 'config', 'menu_setup', 'getListmenu'),
-(13809, 'setup', 'Webadmin_Model_Setup', 'function', 'menu_setup', 'getListmenu'),
-(13810, 'setup', 'Webadmin_Model_Setup', 'index', 'menu_setup', 'getListmenu'),
-(13811, 'setup', 'Webadmin_Model_Setup', 'lang', 'menu_setup', 'getListmenu'),
-(13812, 'setup', 'Webadmin_Model_Setup', 'menu', 'menu_setup', 'getListmenu'),
-(13813, 'setup', 'Webadmin_Model_Setup', 'title', 'menu_setup', 'getListmenu'),
-(13814, 'setup', 'Webadmin_Model_Setup', 'web', 'menu_setup', 'getListmenu'),
-(13823, 'tool', 'Webadmin_Model_Tool', 'analytics', 'menu_tool', 'getListmenu'),
-(13824, 'tool', 'Webadmin_Model_Tool', 'index', 'menu_tool', 'getListmenu'),
-(13825, 'tool', 'Webadmin_Model_Tool', 'seo', 'menu_tool', 'getListmenu');
+(13893, 'about', 'About_Model_About', 'index', 'menu_about', 'getListmenu'),
+(13894, 'about', 'About_Model_About', 'view', 'menu_about', 'getListmenu'),
+(13895, 'account', 'Webadmin_Model_Account', 'add', 'menu_account', 'getListmenu'),
+(13896, 'account', 'Webadmin_Model_Account', 'changepass', 'menu_account', 'getListmenu'),
+(13897, 'account', 'Webadmin_Model_Account', 'index', 'menu_account', 'getListmenu'),
+(13898, 'news', 'News_Model_NewsCat', 'cat', 'menu_news', 'getListmenu'),
+(13899, 'news', 'News_Model_NewsCat', 'index', 'menu_news', 'getListmenu'),
+(13900, 'news', 'News_Model_NewsCat', 'view', 'menu_news', 'getListmenu'),
+(13901, 'services', 'Services_Model_Services', 'index', 'menu_services', 'getListmenu'),
+(13902, 'services', 'Services_Model_Services', 'view', 'menu_services', 'getListmenu'),
+(13903, 'setup', 'Webadmin_Model_Setup', 'config', 'menu_setup', 'getListmenu'),
+(13904, 'setup', 'Webadmin_Model_Setup', 'function', 'menu_setup', 'getListmenu'),
+(13905, 'setup', 'Webadmin_Model_Setup', 'index', 'menu_setup', 'getListmenu'),
+(13906, 'setup', 'Webadmin_Model_Setup', 'lang', 'menu_setup', 'getListmenu'),
+(13907, 'setup', 'Webadmin_Model_Setup', 'menu', 'menu_setup', 'getListmenu'),
+(13908, 'setup', 'Webadmin_Model_Setup', 'title', 'menu_setup', 'getListmenu'),
+(13909, 'setup', 'Webadmin_Model_Setup', 'web', 'menu_setup', 'getListmenu'),
+(13910, 'tool', 'Webadmin_Model_Tool', 'analytics', 'menu_tool', 'getListmenu'),
+(13911, 'tool', 'Webadmin_Model_Tool', 'index', 'menu_tool', 'getListmenu'),
+(13912, 'tool', 'Webadmin_Model_Tool', 'seo', 'menu_tool', 'getListmenu');
 
 -- --------------------------------------------------------
 
@@ -1084,7 +1087,7 @@ CREATE TABLE IF NOT EXISTS `dos_sys_langs` (
 --
 
 INSERT INTO `dos_sys_langs` (`lang_name`, `lang`, `langen`, `langfr`) VALUES
-('about', 'Giới thiệu', '', ''),
+('about', 'Giới thiệu', 'Introduction', '소개'),
 ('about_extra1', 'Thông tin phụ 1', '', ''),
 ('about_extra2', 'Thông tin phụ 2', '', ''),
 ('action', 'Thao tác', '', ''),
@@ -1165,8 +1168,8 @@ INSERT INTO `dos_sys_langs` (`lang_name`, `lang`, `langen`, `langfr`) VALUES
 ('services_extra2', 'Thông tin phụ 2', '', ''),
 ('setup', 'Cài đặt &amp; cấu hình', '', ''),
 ('start', 'Đầu tiên', '', ''),
-('statistics', 'Thống kê truy cập', 'Statistics', ''),
-('support', 'Hỗ trợ trực tuyến', '', ''),
+('statistics', 'Thống kê truy cập', 'Statistics', '통계량'),
+('support', 'Hỗ trợ trực tuyến', 'Support', '지원'),
 ('sys_account', 'Tài khoản của tôi', '', ''),
 ('sys_active', 'Hiển thị', '', ''),
 ('sys_add', 'Thêm mới', '', ''),
@@ -1306,7 +1309,8 @@ CREATE TABLE IF NOT EXISTS `dos_sys_statistics` (
 --
 
 INSERT INTO `dos_sys_statistics` (`session_id`, `time`) VALUES
-('uaf69okin', 1326189623);
+('jr7cs16d0', 1326337038),
+('puswdq24g', 1326337395);
 
 -- --------------------------------------------------------
 
@@ -1357,9 +1361,9 @@ INSERT INTO `dos_sys_webs` (`web_name`, `web_value`) VALUES
 ('description', 'Web - Dịch vụ - Azweb.vn'),
 ('email_subject', 'Liên hệ từ website'),
 ('keywords', 'Web - Dịch vụ - Azweb.vn'),
-('timestamp_today', '1326128400'),
+('timestamp_today', '1326301200'),
 ('titleweb', 'Azweb.vn'),
-('total_visit', '103'),
+('total_visit', '109'),
 ('total_visit_today', '2'),
 ('type', '1');
 
