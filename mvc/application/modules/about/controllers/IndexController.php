@@ -24,11 +24,9 @@ class About_IndexController extends GLT_Controller_Action {
 	}
     public function viewAction(){
         $record = new About_Model_About();
-        
         $detail = $record->getDetail($this->_data['id']);
         $this->view->item = $detail;
-
         //parse title
-		$this->webTitle($detail['title'.LANG].' - '.$this->view->lang[$this->_data['module']]);
+        $this->webTitle($detail['title'.LANG].' - '.$this->view->lang[$this->_data['module']]);
     }
 }

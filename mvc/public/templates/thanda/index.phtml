@@ -1,137 +1,146 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="content-language" content="vi" />
-<meta name="revisit-after" content="1 days" />
-<meta name="robots" content="noodp,index,follow" />
-<link rel="SHORTCUT ICON" href="images/favicon.ico" type="image/x-icon" />
-<link rel="icon" href="images/favicon.ico" type="image/gif" />
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="content-language" content="vi" />
+        <meta name="revisit-after" content="1 days" />
+        <meta name="robots" content="noodp,index,follow" />
+        <link rel="SHORTCUT ICON" href="images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="images/favicon.ico" type="image/gif" />
 
+        <?php echo $this->headTitle() ?>
+        <?php echo $this->headMeta() ?>
+        <?php echo $this->headLink() ?>
+        <?php echo $this->headScript() ?>
+        <?php echo $this->google_analytic; ?>
 
-<?php echo $this->headTitle() ?>
-<?php echo $this->headMeta() ?>
-<?php echo $this->headLink() ?>
-<?php echo $this->headScript() ?>
+        <link href="<?php echo $this->baseUrl() . TEMPLATE ?>/css/dosvn.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo $this->baseUrl() . TEMPLATE ?>/css/wt-rotator.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="<?php echo $this->baseUrl() . TEMPLATE ?>/js/jquery-1.6.4.min.js"></script> 
+        <script type="text/javascript" src="<?php echo $this->baseUrl() . TEMPLATE ?>/js/jquery-banner-rotato.js"></script> 
+        <script type="text/javascript" src="<?php echo $this->baseUrl() . TEMPLATE ?>/js/jquery-banner-rotato.effect.js"></script>
 
-<?php echo $this->google_analytic; ?>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <div id="logo"><a href="<?php echo $this->baseUrl() ?>/" title=""><img src="<?php echo $this->baseUrl() . TEMPLATE ?>/images/logo.png" alt="Logo" /></a></div><!--End logo-->
+                <div class="frame-title-pany"><h1 class="title-city">CÔNG TY TNHH MTV THAN PHÚC AN</h1></div> <!--End title company-->
+                <div class="lang"><a href="<?php echo $this->baseUrl() ?>/en" title="English"><img src="<?php echo $this->baseUrl() . TEMPLATE ?>/images/en.gif" alt="English" /> English</a>
+                    <a href="<?php echo $this->baseUrl() ?>/" title="Tiếng Việt"><img src="<?php echo $this->baseUrl() . TEMPLATE ?>/images/vn.gif" alt="Việt Nam" /> Tiếng Việt</a> 
+                    <a href="<?php echo $this->baseUrl() ?>/kr" title="Korea"><img src="<?php echo $this->baseUrl() . TEMPLATE ?>/images/korea.gif" alt="Korea" /> Korea</a>
+                    <p class="tent-lang">Tư vấn : 0933 472 626 (Mr Hạnh)</p> 
+                </div> <!--End lang-->	<div class="clear"></div>
+            </div><!--End header-->
+            <div class="all-nav">
+                <ul class="nav">
+                    <?php
+                    $folders = $this->menubar();
+                    foreach ($folders as $models) {
+                        $target = ($models['target'] == '') ? '' : ' target="' . $models['target'] . '"';
+                        $select = ($this->module == $models['url']) ? ' class="select-nav"' : '';
+                        echo '<li><a ' . $select . ' href="' . $this->baseUrl() . '/' . LANGURL . $models['url'] . '" title="' . $models['module' . LANG] . '"' . $target . '>' . $models['module' . LANG] . '</a></li>';
+                    }
+                    ?>
+                </ul>	
+            </div> <!--End all nav--><div class="clear"></div>
+            <div class="container"> 
+                <?php if ($this->banner): ?>
+                    <div class="wt-rotator">
+                        <a href="#"></a>   
+                        <div class="thumbnails"> 
+                            <ul> 
+                                <?php foreach ($this->banner as $value): ?>
+                                    <li><a href="<?php echo $this->baseUrl() ?>/public/userfiles/images/banner/<?php echo $value['banner_url'] ?>" title="<?php echo $value['banner_name'] ?>"></a></li>
+                                <?php endforeach; ?>
+                            </ul>
+                            <?php $banner_size = explode('x', $this->banner[0]['banner_size']); ?>
+                            <script type="text/javascript">
+                                $(document).ready(function(){
+                                    runbanner(<?php echo $banner_size[0] ?>, <?php echo $banner_size[1] ?>);
+                                });
+                            </script>
+                        </div>  
+                    </div>
+                <?php else: ?>
+                    <img src="<?php echo $this->baseUrl() . TEMPLATE ?>/images/banner.jpg" alt="banner" title="architecture" />
+                <?php endif; ?>
 
-<link href="<?php echo $this->baseUrl().TEMPLATE ?>/css/dosvn.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo $this->baseUrl().TEMPLATE ?>/css/wt-rotator.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery-1.6.4.min.js"></script> 
-<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery-banner-rotato.js"></script> 
-<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery-banner-rotato.effect.js"></script>
+                <div id="content">
+                    <div id="left-content">
+                        <?php if (isset($this->menu_about)): ?>
+                            <h1 class="title-box"><span><?php echo $this->lang['about'] ?></span></h1>
+                            <ul class="sub-pro">
+                                <?php
+                                foreach ($this->menu_about as $value) {
+                                    echo '<li><a href="' . $this->baseUrl() . '/' . LANGURL . 'about' . '/index/view/id/' . $value['record_id'] . '/' . $this->noneUnicode($value['title' . LANG]) . '" title="' . $this->escape($value['title' . LANG]) . '">' . $this->escape($value['title' . LANG]) . '</a></li>';
+                                }
+                                ?>
+                            </ul>
+                        <?php endif; ?>
 
-</head>
-<body>
-<div id="wrapper">
-		<div id="header">
-        	<div id="logo"><a href="<?php echo $this->baseUrl() ?>/" title=""><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/logo.png" alt="Logo" /></a></div><!--End logo-->
-            <div class="frame-title-pany"><h1 class="title-city">CÔNG TY TNHH MTV THAN PHÚC AN</h1></div> <!--End title company-->
-            <div class="lang"><a href="<?php echo $this->baseUrl() ?>/en" title="English"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/en.gif" alt="English" /> English</a>
-            				<a href="<?php echo $this->baseUrl() ?>/" title="Tiếng Việt"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/vn.gif" alt="Việt Nam" /> Tiếng Việt</a> 
-                            <a href="<?php echo $this->baseUrl() ?>/kr" title="Korea"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/korea.gif" alt="Korea" /> Korea</a>
-                            <p class="tent-lang">Tư vấn : 0933 472 626 (Mr Hạnh)</p> 
-            </div> <!--End lang-->	<div class="clear"></div>
-        </div><!--End header-->
-        <div class="all-nav">
-     	   <ul class="nav">
-                <?php 
-        			$folders = $this->menubar();
-					foreach($folders as $models){		
-						$target = ($models['target']=='') ? '' : ' target="'.$models['target'].'"';
-						$select =($this->module==$models['url']) ? ' class="select-nav"': '';
-						echo '<li><a '.$select.' href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.'>'.$models['module'.LANG].'</a></li>';
-					}
-				?>
-            </ul>	
-        </div> <!--End all nav--><div class="clear"></div>
-        <div class="container"> 
-            
-			 <?php if($this->banner):?>
-				<div class="wt-rotator">
-					<a href="#"></a>   
-					<div class="thumbnails"> 
-						  <ul> 
-								<?php foreach($this->banner as $value):?>
-									<li><a href="<?php echo $this->baseUrl()?>/public/userfiles/images/banner/<?php echo $value['banner_url']?>" title="<?php echo $value['banner_name']?>"></a></li>
-								<?php endforeach;?>
-						  </ul>
-						  	<?php $banner_size = explode('x', $this->banner[0]['banner_size']); ?>
-							<script type="text/javascript">
-								$(document).ready(function(){
-									runbanner(<?php echo $banner_size[0] ?>, <?php echo $banner_size[1] ?>);
-								});
-							</script>
-					</div>  
-				</div>
-			<?php else:?>
-				<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/banner.jpg" alt="banner" title="architecture" />
-			<?php endif;?>
-	
-        <div id="content">
-        	<div id="left-content">
-            	<h1 class="title-box"><span>DANH MỤC SẢN PHẨM</span></h1>
-                <ul class="sub-pro">
-                	<li>THAN CỤC
-                    	<ul>
-                        	<li><a href="#" title="">Cục 1</a></li>
-                 
+                        <?php if (isset($this->menu_services)): ?>
+                            <h1 class="title-box"><span><?php echo $this->lang['services'] ?></span></h1>
+                            <ul class="sub-pro">
+                                <?php
+                                foreach ($this->menu_services as $value) {
+                                    echo '<li><a href="' . $this->baseUrl() . '/' . LANGURL . 'services' . '/index/view/id/' . $value['record_id'] . '/' . $this->noneUnicode($value['title' . LANG]) . '" title="' . $this->escape($value['title' . LANG]) . '">' . $this->escape($value['title' . LANG]) . '</a></li>';
+                                }
+                                ?>
+                            </ul>
+                        <?php endif; ?>
+                            
+                        <?php if ($this->menu_news): ?>
+                            <h1 class="title-box"><span><?php echo $this->lang['news'] ?></span></h1>
+                            <ul class="sub-pro">
+                                <?php $this->showmenu($this->menu_news, 'news') ?>
+                            </ul>
+                        <?php endif; ?>
+                            
+                        <?php if ($this->menu_product): ?>
+                            <h1 class="title-box"><span><?php echo $this->lang['product'] ?></span></h1>
+                            <ul class="sub-pro">
+                                <?php $this->showmenu($this->menu_product, 'product') ?>
+                            </ul>
+                        <?php endif; ?>
+
+                        <h1 class="title-box"><span><?php echo $this->lang['support'] ?></span></h1>
+                        <ul class="support">
+                            <?php foreach ($this->menu_support as $value): ?>
+                                <li><?php echo $value['support_name'] ?></li>
+                                <li><a href="ymsgr:sendim?<?php echo $value['support_value'] ?>&amp;m=<?php echo $this->lang['welcome_chat'] ?>" title="Chat <?php echo $value['support_value'] ?>"><img src="http://opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2&amp;l=us" alt="<?php echo $value['support_value'] ?>" /></a></li>
+                            <?php endforeach; ?>
                         </ul>
-                    </li>
-                    <li>THAN CÁM
-                    	<ul>
-                        	<li><a href="#" title="">Cám miểng</a></li>
-                            <li><a href="#" title="">Cám 3A</a></li>
-                        </ul>
-                    </li>
-                    <li>THAN BÙN
-                    	<ul>
-                        	<li><a href="#" title="">Than bùn ép cô</a></li>
-                        </ul>
-                    </li>
-                </ul>
 
-                <h1 class="title-box"><span><?php echo $this->lang['support'] ?></span></h1>
-				<ul class="support">
-						<?php foreach ($this->menu_support as $value): ?>
-							<li><?php echo $value['support_name'] ?></li>
-							<li><a href="ymsgr:sendim?<?php echo $value['support_value'] ?>&amp;m=<?php echo $this->lang['welcome_chat']?>" title="Chat <?php echo $value['support_value'] ?>"><img src="http://opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2&amp;l=us" alt="<?php echo $value['support_value'] ?>" /></a></li>
-						<?php endforeach;?>
-				</ul>
-			
-				<h1 class="title-box"><span><?php echo $this->lang['statistics'] ?></span></h1>
-				<ul class="statistics">
-					<li>Truy cập trong ngày: <?php echo $this->onlinetoday?></li>
-					<li>Đang online: <?php echo $this->online?></li>
-					<li>Tổng lượt truy cập: <?php echo $this->onlinetotal?></li>
-				</ul>
-            </div><!--End left content-->	
-        	<div id="right-content">
-                <?php echo $this->layout()->content ?>
-            </div><!--End right content-->
-            <div id="colum3">
-            	<h1 class="title-box"><span>TIN TỨC</span></h1>
-            	<ul class="sub-new">
-                    <li><a href="#" title="">Thịt bò Kobe từ Nhật vào Việt Nam sẽ bị tiêu hủy</a></li>
-                    <li><a href="#" title="">Cuộc tập trận hải quân hoành tráng nhất trên biển của Iran</a></li>
-                    <li><a href="#" title="">Liên tiếp nhiều vụ chạy xe, nhiều nhất là hãng Honda</a></li>
-                    <li><a href="#" title="">Thịt bò Kobe từ Nhật vào Việt Nam sẽ bị tiêu hủy</a></li>
-                    <li><a href="#" title="">Cuộc tập trận hải quân hoành tráng nhất trên biển của Iran</a></li>
-            	</ul>
-                <h1 class="title-box"><span>SẢN PHẨM TIÊU BIỂU</span></h1>
-                <ul class="typical-product">
-                	<li><img src="images/pro-img.jpg" alt="product" /></li>
-                    <li><img src="images/pro-img.jpg" alt="product" /></li>
-                </ul>
-            </div> <!--End colum3--> <div class="clear"></div>
-        </div><!--End content-->
-</div><!--End wrapper-->
-<div id="bg-footer">
-    <div id="footer">
-        <?php echo $this->contact_home['content'.LANG] ?>        
-    </div><!--End footer-->
-</div> <!--End bg footer-->
-</body>
+                        <h1 class="title-box"><span><?php echo $this->lang['statistics'] ?></span></h1>
+                        <ul class="statistics">
+                            <li>Truy cập trong ngày: <?php echo $this->onlinetoday ?></li>
+                            <li>Đang online: <?php echo $this->online ?></li>
+                            <li>Tổng lượt truy cập: <?php echo $this->onlinetotal ?></li>
+                        </ul>
+                    </div><!--End left content-->	
+                    <div id="right-content">
+                        <?php echo $this->layout()->content ?>
+                    </div><!--End right content-->
+                    <div id="colum3">
+                        <h1 class="title-box"><span>TIN TỨC</span></h1>
+                        <ul class="sub-new">
+                            <li><a href="#" title="">Thịt bò Kobe từ Nhật vào Việt Nam sẽ bị tiêu hủy</a></li>
+                            <li><a href="#" title="">Cuộc tập trận hải quân hoành tráng nhất trên biển của Iran</a></li>
+                        </ul>
+                        <h1 class="title-box"><span>SẢN PHẨM TIÊU BIỂU</span></h1>
+                        <ul class="typical-product">
+                            <li><img src="images/pro-img.jpg" alt="product" /></li>
+                            <li><img src="images/pro-img.jpg" alt="product" /></li>
+                        </ul>
+                    </div> <!--End colum3--> <div class="clear"></div>
+                </div><!--End content-->
+            </div><!--End wrapper-->
+            <div id="bg-footer">
+                <div id="footer">
+                    <?php echo $this->contact_home['content' . LANG] ?>        
+                </div><!--End footer-->
+            </div> <!--End bg footer-->
+    </body>
 </html>
 

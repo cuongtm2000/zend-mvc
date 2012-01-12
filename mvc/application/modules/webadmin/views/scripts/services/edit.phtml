@@ -22,17 +22,17 @@
 	                </div>
 	                <div class="clear space"></div>';
 	        }
-	        foreach($lang as $value){
-	            echo '<div class="col1">'.$this->lang['sys_preview'].' '.strtoupper($value).'</div>
-	                <div class="col2">
-	                    <textarea name="preview'.$value.'" cols="70" rows="10">'.$this->item['preview'.$value].'</textarea>
-	                    <script type="text/javascript">
-	                    //<![CDATA[
-	                    	CKEDITOR.replace( \'preview'.$value.'\' );
-	                    //]]>
-	                    </script>
-	                </div><div class="clear space"></div>';
-	        }
+//	        foreach($lang as $value){
+//	            echo '<div class="col1">'.$this->lang['sys_preview'].' '.strtoupper($value).'</div>
+//	                <div class="col2">
+//	                    <textarea name="preview'.$value.'" cols="70" rows="10">'.$this->item['preview'.$value].'</textarea>
+//	                    <script type="text/javascript">
+//	                    //<![CDATA[
+//	                    	CKEDITOR.replace( \'preview'.$value.'\' );
+//	                    //]]>
+//	                    </script>
+//	                </div><div class="clear space"></div>';
+//	        }
 	        foreach($lang as $value){
 	            echo '<div class="col1">'.$this->lang['sys_detail'].' '.strtoupper($value).'</div>
 	                <div class="col2">
@@ -46,7 +46,7 @@
 	        }
 	    ?>
 	    
-	    <div class="col1"><?php echo $this->lang['sys_picture'] ?></div>
+<!--	    <div class="col1"><?php echo $this->lang['sys_picture'] ?></div>
 	    <div class="col2">
 	    	<?php if($this->item['pic_full'] != null): ?>
 	    		<input type="hidden" name="fileold" value="<?php echo $this->item['pic_full'] ?>" />
@@ -54,7 +54,7 @@
 	    	<?php endif; ?>
 	        <input type="file" name="file" size="48%" />
 	    </div>
-	    <div class="clear space"></div>
+	    <div class="clear space"></div>-->
 	
 	    <div class="col1"><?php echo $this->lang['services_extra1'] ?></div>
 	    <div class="col2">
