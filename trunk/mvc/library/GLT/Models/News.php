@@ -43,7 +43,7 @@ class GLT_Models_News extends Zend_Db_Table {
                 ->where('record_type = 1')
                 ->order('record_order DESC')
                 ->order('postdate DESC')
-                ->limit(7, 1);
+                ->limit(7);
         return $this->fetchAll($select)->toArray();
     }
 

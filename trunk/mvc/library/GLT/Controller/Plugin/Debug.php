@@ -4,7 +4,7 @@ class GLT_Controller_Plugin_Debug extends Zend_Controller_Plugin_Abstract{
         
         $data=$this->getRequest()->getParams();
         if(DEBUG_MODE && $data['module']!= 'webadmin'){
-            var_dump($this->getRequest()->getParams());
+            var_dump($this->getRequest()->getParams());   
         }
     }
 

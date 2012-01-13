@@ -5,6 +5,8 @@ class News_IndexController extends GLT_Controller_Action {
     private $_data;
     protected $_config;
     protected $_paginator;
+    protected $_model;
+    protected $_modelCat;
 
     public function init() {
         //Load config
@@ -26,13 +28,15 @@ class News_IndexController extends GLT_Controller_Action {
                 $this->view->$value['varname'] = $load->$value['function_load']();
             }
         }
+        $this->_model = ucfirst($this->_data['module']) . '_Model_' . ucfirst($this->_data['module']);
+        $this->_modelCat = $this->_model . 'Cat';
     }
 
     public function catAction() {
-        $cat = new News_Model_NewsCat();
+        $cat = new $this->_modelCat();
         $this->view->detailcat = $cat->getDetailCat($this->_data);
 
-        $item = new News_Model_News();
+        $item = new $this->_model();
         $this->view->items = $item->listItembyCat($this->_data);
 
         //paging
@@ -48,10 +52,11 @@ class News_IndexController extends GLT_Controller_Action {
     }
 
     public function viewAction() {
-        $item = new News_Model_News();
+        $item = new $this->_model();
         $detail = $item->detailItem($this->_data);
         $this->view->item = $detail;
-
+        $this->view->otherItem = $item->itemByCatNoneid(
+                $detail['dos_module_item_cat_cat_id'], $this->_data['id']);
         $this->webTitle($detail['title' . LANG] . ' - ' . $this->view->lang[$this->_data['module']]);
     }
 

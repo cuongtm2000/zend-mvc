@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 12, 2012 at 04:10 AM
+-- Generation Time: Jan 13, 2012 at 01:32 AM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -437,9 +437,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
 --
 
 INSERT INTO `dos_module_news` (`record_id`, `pic_thumb`, `title`, `titleen`, `titlefr`, `preview`, `previewen`, `previewfr`, `content`, `contenten`, `contentfr`, `author`, `hits`, `postdate`, `record_order`, `record_type`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(1, NULL, 'dasdsadsa', '', '', '&lt;p&gt;\r\n	test&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	test&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-09-09 08:28:58', 1, 0, NULL, NULL, 1, 11),
-(2, NULL, 'safa', '', '', '&lt;p&gt;\r\n	asf&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	asf&lt;/p&gt;\r\n', '', '', NULL, 2, '2011-09-09 14:36:00', 1, 0, NULL, NULL, 1, 11),
-(3, NULL, 'adasd', '', '', '&lt;p&gt;\r\n	sdsad&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sdasd&lt;/p&gt;\r\n', '', '', NULL, 1, '2011-09-23 01:48:31', 2, 0, NULL, NULL, 1, 11);
+(1, NULL, 'dasdsadsa', '', '', '<p>\r\n	test</p>\r\n', '', '', '<p>\r\n	test</p>\r\n', '', '', NULL, 2, '2011-09-09 08:28:58', 1, 1, NULL, NULL, 1, 12),
+(2, NULL, 'safa', '', '', '<p>\r\n	asf</p>\r\n', '', '', '<blockquote>\r\n	<p>\r\n		&lt;?php if (DEBUG_MODE) var_dump($this-&gt;item); ?&gt;</p>\r\n	<p>\r\n		 </p>\r\n	<p>\r\n		&lt;div class="frame-tent-right"&gt;<br />\r\n		    &lt;?php if (is_array($this-&gt;item)): ?&gt;<br />\r\n		        &lt;h1 class="title-box"&gt;&lt;span&gt;&lt;?php echo $this-&gt;lang[$this-&gt;module] ?&gt; &amp;raquo; &lt;?php echo $this-&gt;item[''title'' . LANG] ?&gt;&lt;/span&gt;&lt;/h1&gt;<br />\r\n		        &lt;?php echo $this-&gt;item[''content'' . LANG] ?&gt;<br />\r\n		    &lt;?php endif; ?&gt;<br />\r\n		&lt;/div&gt;</p>\r\n</blockquote>\r\n', '', '', NULL, 6, '2011-09-09 14:36:00', 1, 1, NULL, NULL, 1, 12),
+(3, NULL, 'adasd', '', '', '&lt;p&gt;\r\n	sdsad&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sdasd&lt;/p&gt;\r\n', '', '', NULL, 3, '2011-09-23 01:48:31', 2, 0, NULL, NULL, 1, 11);
 
 -- --------------------------------------------------------
 
@@ -677,7 +677,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `titlefr`, `content`, `contenten`, `contentfr`, `hits`, `posted_date`, `record_order`, `extra_field1`, `extra_field2`, `hot`, `enable`) VALUES
-(29, 'abcde', '', '', '<p>\r\n	abcdeabcde</p>\r\n', '', '', 3, '2012-01-11 16:26:18', 1, '', '', 0, 1);
+(29, 'abcde', '', '', '<p>\r\n	abcdeabcde</p>\r\n', '', '', 7, '2012-01-11 16:26:18', 1, '', '', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -992,33 +992,34 @@ CREATE TABLE IF NOT EXISTS `dos_sys_functions` (
   `function_load` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`function_id`),
   KEY `fk_dos_sys_functions_dos_sys_modules` (`model_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13913 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13934 ;
 
 --
 -- Dumping data for table `dos_sys_functions`
 --
 
 INSERT INTO `dos_sys_functions` (`function_id`, `model_name`, `model_load`, `action`, `varname`, `function_load`) VALUES
-(13893, 'about', 'About_Model_About', 'index', 'menu_about', 'getListmenu'),
-(13894, 'about', 'About_Model_About', 'view', 'menu_about', 'getListmenu'),
-(13895, 'account', 'Webadmin_Model_Account', 'add', 'menu_account', 'getListmenu'),
-(13896, 'account', 'Webadmin_Model_Account', 'changepass', 'menu_account', 'getListmenu'),
-(13897, 'account', 'Webadmin_Model_Account', 'index', 'menu_account', 'getListmenu'),
-(13898, 'news', 'News_Model_NewsCat', 'cat', 'menu_news', 'getListmenu'),
-(13899, 'news', 'News_Model_NewsCat', 'index', 'menu_news', 'getListmenu'),
-(13900, 'news', 'News_Model_NewsCat', 'view', 'menu_news', 'getListmenu'),
-(13901, 'services', 'Services_Model_Services', 'index', 'menu_services', 'getListmenu'),
-(13902, 'services', 'Services_Model_Services', 'view', 'menu_services', 'getListmenu'),
-(13903, 'setup', 'Webadmin_Model_Setup', 'config', 'menu_setup', 'getListmenu'),
-(13904, 'setup', 'Webadmin_Model_Setup', 'function', 'menu_setup', 'getListmenu'),
-(13905, 'setup', 'Webadmin_Model_Setup', 'index', 'menu_setup', 'getListmenu'),
-(13906, 'setup', 'Webadmin_Model_Setup', 'lang', 'menu_setup', 'getListmenu'),
-(13907, 'setup', 'Webadmin_Model_Setup', 'menu', 'menu_setup', 'getListmenu'),
-(13908, 'setup', 'Webadmin_Model_Setup', 'title', 'menu_setup', 'getListmenu'),
-(13909, 'setup', 'Webadmin_Model_Setup', 'web', 'menu_setup', 'getListmenu'),
-(13910, 'tool', 'Webadmin_Model_Tool', 'analytics', 'menu_tool', 'getListmenu'),
-(13911, 'tool', 'Webadmin_Model_Tool', 'index', 'menu_tool', 'getListmenu'),
-(13912, 'tool', 'Webadmin_Model_Tool', 'seo', 'menu_tool', 'getListmenu');
+(13913, 'news', 'News_Model_News', 'index', 'list_news_new', 'listItemsHot'),
+(13914, 'about', 'About_Model_About', 'index', 'menu_about', 'getListmenu'),
+(13915, 'about', 'About_Model_About', 'view', 'menu_about', 'getListmenu'),
+(13916, 'account', 'Webadmin_Model_Account', 'add', 'menu_account', 'getListmenu'),
+(13917, 'account', 'Webadmin_Model_Account', 'changepass', 'menu_account', 'getListmenu'),
+(13918, 'account', 'Webadmin_Model_Account', 'index', 'menu_account', 'getListmenu'),
+(13919, 'news', 'News_Model_NewsCat', 'cat', 'menu_news', 'getListmenu'),
+(13920, 'news', 'News_Model_NewsCat', 'index', 'menu_news', 'getListmenu'),
+(13921, 'news', 'News_Model_NewsCat', 'view', 'menu_news', 'getListmenu'),
+(13922, 'services', 'Services_Model_Services', 'index', 'menu_services', 'getListmenu'),
+(13923, 'services', 'Services_Model_Services', 'view', 'menu_services', 'getListmenu'),
+(13924, 'setup', 'Webadmin_Model_Setup', 'config', 'menu_setup', 'getListmenu'),
+(13925, 'setup', 'Webadmin_Model_Setup', 'function', 'menu_setup', 'getListmenu'),
+(13926, 'setup', 'Webadmin_Model_Setup', 'index', 'menu_setup', 'getListmenu'),
+(13927, 'setup', 'Webadmin_Model_Setup', 'lang', 'menu_setup', 'getListmenu'),
+(13928, 'setup', 'Webadmin_Model_Setup', 'menu', 'menu_setup', 'getListmenu'),
+(13929, 'setup', 'Webadmin_Model_Setup', 'title', 'menu_setup', 'getListmenu'),
+(13930, 'setup', 'Webadmin_Model_Setup', 'web', 'menu_setup', 'getListmenu'),
+(13931, 'tool', 'Webadmin_Model_Tool', 'analytics', 'menu_tool', 'getListmenu'),
+(13932, 'tool', 'Webadmin_Model_Tool', 'index', 'menu_tool', 'getListmenu'),
+(13933, 'tool', 'Webadmin_Model_Tool', 'seo', 'menu_tool', 'getListmenu');
 
 -- --------------------------------------------------------
 
@@ -1309,8 +1310,8 @@ CREATE TABLE IF NOT EXISTS `dos_sys_statistics` (
 --
 
 INSERT INTO `dos_sys_statistics` (`session_id`, `time`) VALUES
-('jr7cs16d0', 1326337038),
-('puswdq24g', 1326337395);
+('0imy7znut', 1326414724),
+('7a2jqg6r1', 1326414724);
 
 -- --------------------------------------------------------
 
@@ -1361,10 +1362,10 @@ INSERT INTO `dos_sys_webs` (`web_name`, `web_value`) VALUES
 ('description', 'Web - Dịch vụ - Azweb.vn'),
 ('email_subject', 'Liên hệ từ website'),
 ('keywords', 'Web - Dịch vụ - Azweb.vn'),
-('timestamp_today', '1326301200'),
+('timestamp_today', '1326387600'),
 ('titleweb', 'Azweb.vn'),
-('total_visit', '109'),
-('total_visit_today', '2'),
+('total_visit', '116'),
+('total_visit_today', '3'),
 ('type', '1');
 
 --
