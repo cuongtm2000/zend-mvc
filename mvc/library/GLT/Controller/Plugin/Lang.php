@@ -3,8 +3,6 @@ class GLT_Controller_Plugin_Lang extends Zend_Controller_Plugin_Abstract{
     public function preDispatch(Zend_Controller_Request_Abstract $request){
         //$config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/app-router.ini');
         $langdefault = 'vi';
-      
-//        var_dump($this->getRequest()->getParams());
     
         $lang = $this->getRequest()->getParam('language');
         $langurl = '';
