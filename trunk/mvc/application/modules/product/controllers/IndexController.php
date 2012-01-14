@@ -27,9 +27,6 @@ class Product_IndexController extends GLT_Controller_Action {
     }
 
     public function indexAction() {
-        $record = new Product_Model_ProductCat();
-        $this->view->listcat = $record->getListCat();
-
         $this->webTitle($this->view->lang[$this->_data['module']]);
     }
 
