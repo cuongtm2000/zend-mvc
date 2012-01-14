@@ -17,4 +17,4 @@ define('TEM_ADMIN', '/webadmin'); //Template Back end
 
 define('PUBLIC_PATH', realpath(dirname(__FILE__) . '/public'));
 define('TEMPLATE_PATH', PUBLIC_PATH .'/templates'. TEM_INDEX);
-define('DEBUG_MODE', true);
+define('DEBUG_MODE', 1);
