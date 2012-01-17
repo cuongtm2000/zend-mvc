@@ -31,16 +31,6 @@ class Product_IndexController extends GLT_Controller_Action {
     }
 
     public function viewAction() {
-//        $this->view->headLink()->appendStylesheet($this->_request->getBaseUrl() . TEMPLATE . '/css/product-detail.css');
-//        $this->view->headLink()->appendStylesheet($this->_request->getBaseUrl() . TEMPLATE . '/css/jquery.fancybox-1.3.1.css');
-//        $this->view->headScript()->appendFile($this->_request->getBaseUrl() . TEMPLATE . '/js/tab-detail.js');
-//        $this->view->headScript()->appendFile($this->_request->getBaseUrl() . TEMPLATE . '/js/jcarousellite_1.0.1.js');
-//        $this->view->headScript()->appendFile($this->_request->getBaseUrl() . TEMPLATE . '/js/special-block.js');
-//        $this->view->headScript()->appendFile($this->_request->getBaseUrl() . TEMPLATE . '/js/contentslider.js');
-//        $this->view->headScript()->appendFile($this->_request->getBaseUrl() . TEMPLATE . '/js/scroller.js');
-//        $this->view->headScript()->appendFile($this->_request->getBaseUrl() . TEMPLATE . '/js/jquery.fancybox-1.3.1.js');
-//        $this->view->headScript()->appendFile($this->_request->getBaseUrl() . TEMPLATE . '/js/lightbox.js');
-
         $record = new Product_Model_Product();
         $result = $record->getDetail($this->_data['id']);
         $this->view->productdetail = $result;

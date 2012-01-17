@@ -20,7 +20,6 @@ class GLT_Models_About extends Zend_Db_Table {
         $order = 'record_order DESC';
         $count = 0;
         $offset = 1;
-
         $result = $this->fetchRow($where, $order, $count, $offset);
         if (count($result) > 0) {
             //Update hits

@@ -1,54 +1,21 @@
-	<h1 class="title-box"><span>GIỚI THIỆU TẬP ĐOÀN</span></h1>
-				<div class="frame-tent-right">
-                	<b>Chào mừng quý khách đến với tập đoàn than khoáng sản VN TKV</b>
-					<p>
-Được thành lập năm 1994, Bề dày kinh nghiệm 17 năm luôn tiên phong đầu tư khoa học, 
-nghiên cứu phát triển sản phẩm, có máy móc thiết bị loại tốt và đội ngũ nhân lực tâm huyết, 
-có trình độ chuyên môn cao, thạo việc để sản phẩm có tính năng tốt, bền bỉ, tinh xảo, giá 
-thành thấp đồng thời đáp ứng được đơn hàng số lượng lớn. </p>
-				</div> <!--End frame tent right-->
-                <div class="all-product">
-                	<h1 class="title-all-pro"><span>SẢN PHẨM NỔI BẬT</span></h1>
-                	<div class="product">
-                    	<div class="tent-product">
-                            <div class="product-img"><a href="product-info.html" title=""><img src="images/pro-img.jpg" alt="Product" /></a></div><div class="clear"></div>
-                            <h2 class="title-pro"><a href="product-info.html" title="">Thông tin tóm tắt sản phẩm 1</a></h2>
-                            <p class="bton-pro"><a href="product-info.html" title="CHI TIẾT" class="bton-detail">CHI TIẾT</a> <a href="order.html" title="ĐẶT HÀNG" class="bton-order">ĐẶT HÀNG</a> </p>
-                    	</div>
-                    </div>
-                    <div class="product">
-                    	<div class="tent-product">
-                            <div class="product-img"><a href="product-info.html" title=""><img src="images/pro-img.jpg" alt="Product" /></a></div><div class="clear"></div>
-                            <h2 class="title-pro"><a href="product-info.html" title="">Thông tin tóm tắt sản phẩm 2</a></h2>
-                            <p class="bton-pro"><a href="product-info.html" title="CHI TIẾT" class="bton-detail">CHI TIẾT</a> <a href="order.html" title="ĐẶT HÀNG" class="bton-order">ĐẶT HÀNG</a> </p>
-                    	</div>
-                    </div>
-                    <div class="product">
-                    	<div class="tent-product">
-                            <div class="product-img"><a href="product-info.html" title=""><img src="images/pro-img.jpg" alt="Product" /></a></div><div class="clear"></div>
-                            <h2 class="title-pro"><a href="product-info.html" title="">Thông tin tóm tắt sản phẩm 3</a></h2>
-                            <p class="bton-pro"><a href="product-info.html" title="CHI TIẾT" class="bton-detail">CHI TIẾT</a> <a href="order.html" title="ĐẶT HÀNG" class="bton-order">ĐẶT HÀNG</a> </p>
-                    	</div>
-                    </div>
-                    <div class="product">
-                    	<div class="tent-product">
-                            <div class="product-img"><a href="product-info.html" title=""><img src="images/pro-img.jpg" alt="Product" /></a></div><div class="clear"></div>
-                            <h2 class="title-pro"><a href="product-info.html" title="">Thông tin tóm tắt sản phẩm 4</a></h2>
-                            <p class="bton-pro"><a href="product-info.html" title="CHI TIẾT" class="bton-detail">CHI TIẾT</a> <a href="order.html" title="ĐẶT HÀNG" class="bton-order">ĐẶT HÀNG</a> </p>
-                    	</div>
-                    </div>
-                    <div class="product">
-                    	<div class="tent-product">
-                            <div class="product-img"><a href="product-info.html" title=""><img src="images/pro-img.jpg" alt="Product" /></a></div><div class="clear"></div>
-                            <h2 class="title-pro"><a href="product-info.html" title="">Thông tin tóm tắt sản phẩm 5</a></h2>
-                            <p class="bton-pro"><a href="product-info.html" title="CHI TIẾT" class="bton-detail">CHI TIẾT</a> <a href="order.html" title="ĐẶT HÀNG" class="bton-order">ĐẶT HÀNG</a> </p>
-                    	</div>
-                    </div>
-                    <div class="product">
-                    	<div class="tent-product">
-                            <div class="product-img"><a href="product-info.html" title=""><img src="images/pro-img.jpg" alt="Product" /></a></div><div class="clear"></div>
-                            <h2 class="title-pro"><a href="product-info.html" title="">Thông tin tóm tắt sản phẩm 6</a></h2>
-                            <p class="bton-pro"><a href="product-info.html" title="CHI TIẾT" class="bton-detail">CHI TIẾT</a> <a href="order.html" title="ĐẶT HÀNG" class="bton-order">ĐẶT HÀNG</a> </p>
-                    	</div>
-                    </div>
-                </div> <!--End all product-->
+<?php if(isset($this->menu_about_home)): ?>
+    <h1 class="title-box"><span><?php echo $this->lang['about_coperation']?></span></h1>
+    <div class="frame-tent-right">
+        <b><?php echo $this->menu_about_home['title'] ?></b>
+        <?php echo $this->menu_about_home['content'] ?>
+    </div> <!--End frame tent right-->
+<?php endif;?>
+<?php
+if (DEBUG_MODE)
+    var_dump($this->menu_about_home);?>
+    
+<div class="all-product">
+    <h1 class="title-all-pro"><span>SẢN PHẨM NỔI BẬT</span></h1>
+    <div class="product">
+        <div class="tent-product">
+            <div class="product-img"><a href="product-info.html" title=""><img src="images/pro-img.jpg" alt="Product" /></a></div><div class="clear"></div>
+            <h2 class="title-pro"><a href="product-info.html" title="">Thông tin tóm tắt sản phẩm 1</a></h2>
+            <p class="bton-pro"><a href="product-info.html" title="CHI TIẾT" class="bton-detail">CHI TIẾT</a> <a href="order.html" title="ĐẶT HÀNG" class="bton-order">ĐẶT HÀNG</a> </p>
+        </div>
+    </div>
+</div> <!--End all product-->
