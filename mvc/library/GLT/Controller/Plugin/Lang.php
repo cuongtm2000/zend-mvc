@@ -5,13 +5,19 @@ class GLT_Controller_Plugin_Lang extends Zend_Controller_Plugin_Abstract{
         $langdefault = 'vi';
     
         $lang = $this->getRequest()->getParam('language');
+        if($lang== 'kr')
+            $lang='fr';
         $langurl = '';
         if($lang == $langdefault || $lang == ''){
             $lang = '';
             $langurl = '';
         }else{
             //$lang = $lang; de y code nay
-            $langurl = $lang.'/';
+            if($lang=='fr')
+                $langurl = 'kr/';
+            else 
+                $langurl = $lang.'/';
+          
         }
 
         define('LANG', $lang);
