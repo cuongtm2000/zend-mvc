@@ -1,0 +1,40 @@
+.input_field label {display : block; width : 120px; float : left; position : relative; padding-right : 25px; top:5px; font-size: 11pt}
+.input_field .smallfield2{width: 100px;cursor:pointer}
+.input_field .smallfield3{width: 124px;cursor:pointer}
+.input_field .login{width: 80px; padding: 2px; margin-left: 15px; cursor: pointer}
+.input_field .login1{width: 80px; padding: 2px; margin-left: 2px; cursor: pointer}
+.input_field select{width: 175px; padding: 5px 6px; cursor: pointer; background: #F8F7F3; border-color: #E4E3E3; border-width:3px; border-style:double; color: #333; font-size: 10pt; font-weight: bold}
+
+input.smallfield {width : 350px; padding: 6px; background: #F8F7F3; border-color: #E4E3E3; border-width:3px; border-style:double; color: #333; font-size: 10pt; font-weight: bold}
+input.smallfield-name {width : 290px; padding: 6px; background: #F8F7F3; border-color: #E4E3E3; border-width:3px; border-style:double; color: #333; text-align: right; border-right:none; font-size: 10pt; font-weight: bold}
+input.smallfield-dos {padding: 6px; background: #F8F7F3; border-color: #E4E3E3; border-width:3px; border-style:double; color: #333; width: 47px; border-left:none; font-size: 10pt; font-weight: bold}
+
+.border-image{width: 865px; margin: 15px 0 0 31px; border: 1px solid #D7D3C4; background: #F7F6F2;}
+.border-image .border-heading{background: #252525; padding:7px 0; color: #fff; text-indent: 10px}
+.stepcarousel{
+    position: relative; /*leave this value alone*/
+    margin-left: 12px;
+    overflow: scroll; /*leave this value alone*/
+    width: 840px; /*Width of Carousel Viewer itself*/
+    height: 235px; /*Height should enough to fit largest content's height*/    
+}
+
+.stepcarousel .belt{
+    position: absolute; /*leave this value alone*/
+    left: 0;
+    top: 0;
+}
+
+.stepcarousel .panel{
+    float: left; /*leave this value alone*/
+    overflow: hidden; /*clip content that go outside dimensions of holding panel DIV*/
+    margin: 10px 15px; /*margin around each panel*/
+    width: 260px; /*Width of each panel holding each content. If removed, widths should be individually defined on each content DIV then. */
+}
+.stepcarousel .panel div{ padding: 5px; background: #fff; margin: 0 0 10px 0; border: 1px solid #eee;-webkit-box-shadow: 0 8px 6px -6px black; -moz-box-shadow: 0 8px 6px -6px black; box-shadow: 0 8px 6px -6px black;}
+.stepcarousel .panel p{text-align: center; margin-top: 2px; margin-bottom: 7px}
+.stepcarousel .panel label, .choose-page label{cursor: pointer}
+#gallerya-paginate{width: 840px; text-align: center; margin-left: 13px; margin-bottom: 5px}
+
+.submit{margin-left: 350px; margin-top:12px;background:#63C600; cursor:pointer;font-weight:600;width:auto;font-size:19pt;color:#fff;border:none; -webkit-border-radius:4px; -moz-border-radius:4px; *_width:190px; padding:2px 10px}
+.submit:hover{background:#f90}
