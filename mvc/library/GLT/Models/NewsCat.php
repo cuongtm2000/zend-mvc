@@ -22,19 +22,27 @@ class GLT_Models_NewsCat extends Zend_Db_Table {
         $this->_name = 'dos_module_' . $this->_module . '_cat';
     }
 
-    // Front end - Get tất cả Danh mục tin tức
     public function getListmenu() {
-        $select = $this->select()->from($this->_name, array('cat_id', 'cat_title' . LANG, 'cat_parent_id'))
-                ->where('cat_enable = 1')
-                ->order('cat_order ASC');
+        $select = $this->select()->from($this->_name, array('cat_id', 'cat_title' . LANG, 'cat_parent_id', 'tag'))->where('cat_enable = 1')->order('cat_order ASC');
+        return $this->fetchAll($select)->toArray();
+    }
+
+    // Front end - Get tất cả Danh mục cat_parent_id
+    public function getListmenuParentID($cid) {
+        $select = $this->select()->from($this->_name, array('cat_id', 'cat_title' . LANG, 'tag'))->where('cat_parent_id =?', $cid)->where('cat_enable = 1')->order('cat_order ASC');
         return $this->fetchAll($select)->toArray();
     }
 
     // Front end - Get chi tiết danh mục
     public function getDetailCat($data = NULL) {
-        $select = $this->select()->from($this->_name, array('cat_title' . LANG))
-                ->where('cat_id = ?', $data['id']);
-        return $this->fetchRow($select);
+        $select = $this->select()->from($this->_name, array('cat_title' . LANG, 'tag'))->where('cat_id = ?', $this->getRecordByTag($data['id']));
+        return $this->fetchRow($select)->toArray();
+    }
+
+    //Front end - Get cat_id by tag
+    public function getRecordByTag($tag, $table = NULL) {
+        $table = ($table) ? $table : $this->_name;
+        return $this->_db->fetchOne("SELECT cat_id FROM " . $table . " WHERE tag = ?", array($tag));
     }
 
     public function listCatParent($cid = 0) {
@@ -80,11 +88,10 @@ class GLT_Models_NewsCat extends Zend_Db_Table {
 
     public function addItem($data = NULL) {
         //Get max record
-        $db = $this->getAdapter();
-        $select = $db->select()->from($this->_name, array('max(cat_order) as max'));
-        $max_record = $db->fetchOne($select) + 1;
+        $select = $this->_db->select()->from($this->_name, array('max(cat_order) as max'));
+        $max_record = $this->_db->fetchOne($select) + 1;
 
-        $data = array('cat_parent_id' => $this->_xss->purify($data['parent_id']), 'cat_title' => $this->_xss->purify($data['cat_title']), 'cat_titleen' => $this->_xss->purify($data['cat_titleen']), 'cat_titlefr' => $this->_xss->purify($data['cat_titlefr']), 'cat_order' => $max_record);
+        $data = array('cat_parent_id' => $this->_xss->purify($data['parent_id']), 'cat_title' => $this->_xss->purify($data['cat_title']), 'cat_titleen' => $this->_xss->purify($data['cat_titleen']), 'cat_titlefr' => $this->_xss->purify($data['cat_titlefr']), 'tag' => $this->_xss->purify($data['tag']), 'description' => $this->_xss->purify($data['description']), 'cat_order' => $max_record);
         $this->insert($data);
     }
 
@@ -95,30 +102,26 @@ class GLT_Models_NewsCat extends Zend_Db_Table {
 
     public function saveItem($data = NULL) {
         $where = 'cat_id = ' . $data['id'];
-        $data = array('cat_parent_id' => $this->_xss->purify($data['parent_id']), 'cat_title' => $this->_xss->purify($data['cat_title']), 'cat_titleen' => $this->_xss->purify($data['cat_titleen']), 'cat_titlefr' => $this->_xss->purify($data['cat_titlefr']));
+        $data = array('cat_parent_id' => $this->_xss->purify($data['parent_id']), 'cat_title' => $this->_xss->purify($data['cat_title']), 'cat_titleen' => $this->_xss->purify($data['cat_titleen']), 'cat_titlefr' => $this->_xss->purify($data['cat_titlefr']), 'tag' => $this->_xss->purify($data['tag']), 'description' => $this->_xss->purify($data['description']),);
         $this->update($data, $where);
     }
 
     //functions for delete Cat
     public function getInfoCat($data = NULL) {
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('cat_title' . LANG))
-                ->where('cat_id = ?', $data['id']);
-        return $db->fetchRow($select);
+        $select = $this->_db->select()->from($this->_name, array('cat_title' . LANG))->where('cat_id = ?', $data['id']);
+        return $this->_db->fetchRow($select);
     }
 
     public function countItemSub($data = NULL) {
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from(array('p' => 'dos_module_' . $this->_module), array('COUNT(record_id) AS numcat'))
+        $select = $this->_db->select()->from(array('p' => 'dos_module_' . $this->_module), array('COUNT(record_id) AS numcat'))
                 ->join(array('c' => $this->_name), 'p.dos_module_item_cat_cat_id = c.cat_id', array())
                 ->where('cat_id = ?', $data['id']);
-        return $db->fetchOne($select);
+        return $this->_db->fetchOne($select);
     }
 
     public function countCat() {
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('count(cat_id) as totalItem'));
-        return $db->fetchOne($select);
+        $select = $this->_db->select()->from($this->_name, array('count(cat_id) as totalItem'));
+        return $this->_db->fetchOne($select);
     }
 
     public function countSubcat($cat_id) {
@@ -130,9 +133,8 @@ class GLT_Models_NewsCat extends Zend_Db_Table {
     }
 
     private function loopCat($cat_id) {
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('cat_id'))->where('cat_parent_id = ?', $cat_id);
-        $result = $db->fetchAll($select);
+        $select = $this->_db->select()->from($this->_name, array('cat_id'))->where('cat_parent_id = ?', $cat_id);
+        $result = $this->_db->fetchAll($select);
 
         foreach ($result as $value) {
             $this->_cat_id++;
@@ -142,15 +144,13 @@ class GLT_Models_NewsCat extends Zend_Db_Table {
     }
 
     private function countItembyCat($id) {
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from('dos_module_' . $this->_module, array('COUNT(record_id) AS numitem'))->where('dos_module_item_cat_cat_id = ?', $id);
-        return $db->fetchOne($select);
+        $select = $this->_db->select()->from('dos_module_' . $this->_module, array('COUNT(record_id) AS numitem'))->where('dos_module_item_cat_cat_id = ?', $id);
+        return $this->_db->fetchOne($select);
     }
 
     public function findcatParent($cat_id, $cat_parent_id) {
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('cat_id'))->where('cat_parent_id = ?', $cat_id);
-        $result = $db->fetchAll($select);
+        $select = $this->_db->select()->from($this->_name, array('cat_id'))->where('cat_parent_id = ?', $cat_id);
+        $result = $this->_db->fetchAll($select);
 
         foreach ($result as $value) {
             $where = 'cat_id = ' . $value['cat_id'];
@@ -160,9 +160,8 @@ class GLT_Models_NewsCat extends Zend_Db_Table {
 
     //Xóa tất cả sản phẩm của phân loại con
     public function loopDelItemtoCat($cat_id) {
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('cat_id'))->where('cat_parent_id = ?', $cat_id);
-        $result = $db->fetchAll($select);
+        $select = $this->_db->select()->from($this->_name, array('cat_id'))->where('cat_parent_id = ?', $cat_id);
+        $result = $this->_db->fetchAll($select);
 
         $item = new $this->_model();
         foreach ($result as $value) {
@@ -175,9 +174,8 @@ class GLT_Models_NewsCat extends Zend_Db_Table {
 
     //Di chuyển tất cả sản phẩm của phân loại con đến phân loại:
     public function loopMoveItemtoCat($cat_id, $cat_id_new) {
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('cat_id'))->where('cat_parent_id = ?', $cat_id);
-        $result = $db->fetchAll($select);
+        $select = $this->_db->select()->from($this->_name, array('cat_id'))->where('cat_parent_id = ?', $cat_id);
+        $result = $this->_db->fetchAll($select);
 
         $item = new Gallery_Model_Gallery();
         foreach ($result as $value) {
@@ -190,9 +188,8 @@ class GLT_Models_NewsCat extends Zend_Db_Table {
 
     //xóa phân loại con
     public function loopDelSubCat($cat_id) {
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('cat_id'))->where('cat_parent_id = ?', $cat_id);
-        $result = $db->fetchAll($select);
+        $select = $this->_db->select()->from($this->_name, array('cat_id'))->where('cat_parent_id = ?', $cat_id);
+        $result = $this->_db->fetchAll($select);
 
         foreach ($result as $value) {
             $where = 'cat_id = ' . $value['cat_id'];
@@ -231,7 +228,6 @@ class GLT_Models_NewsCat extends Zend_Db_Table {
                         $where .= ' OR cat_id=' . $id;
                     }
                 }
-
                 $this->update($data, $where);
             }
         }
@@ -239,8 +235,7 @@ class GLT_Models_NewsCat extends Zend_Db_Table {
 
     // Back end - Get cat_parent_id, cat_order
     public function getCatParent_CatOrder($cid) {
-        $select = $this->select()->from($this->_name, array('cat_parent_id', 'cat_order'))
-                ->where('cat_id = ?', $cid);
+        $select = $this->select()->from($this->_name, array('cat_parent_id', 'cat_order'))->where('cat_id = ?', $cid);
         return $this->fetchRow($select);
     }
 

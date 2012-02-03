@@ -27,7 +27,7 @@ class GLT_Models_News extends Zend_Db_Table {
 
     //Front end - Get bản tin mới nhất
     public function listItemHotFirst() {
-        $select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title' . LANG, 'preview' . LANG))
+        $select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title' . LANG, 'preview' . LANG,'tag'))
                 ->where('enable = 1')
                 ->where('record_type = 1')
                 ->order('record_order DESC')
@@ -38,13 +38,24 @@ class GLT_Models_News extends Zend_Db_Table {
 
     //Front end - Get Bản tin Hot mới nhất
     public function listItemsHot() {
-        $select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title' . LANG, 'preview' . LANG))
+        $select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title' . LANG, 'preview' . LANG, 'tag'))
                 ->where('enable = 1')
                 ->where('record_type = 1')
                 ->order('record_order DESC')
                 ->order('postdate DESC')
                 ->limit(7);
         return $this->fetchAll($select)->toArray();
+    }
+
+    //Front end - Get record_id by tag
+    private function getRecordByTag($tag) {
+        return $this->_db->fetchOne("SELECT record_id FROM " . $this->_name . " WHERE tag = ?", array($tag));
+    }
+
+    //Front end - Get cat_id by tag
+    private function getCatIDByTag($tag) {
+        $cat = new GLT_Models_NewsCat();
+        return $cat->getRecordByTag($tag, $this->_name . '_cat');
     }
 
     //Front end - Get Bản tin bởi cat_id
@@ -55,25 +66,19 @@ class GLT_Models_News extends Zend_Db_Table {
             $page = $paginator['currentPage'];
             $rowCount = $paginator['itemCountPerPage'];
         }
-        $select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title' . LANG, 'preview' . LANG))
+        $select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title' . LANG, 'preview' . LANG, 'tag'))
                 ->where('enable = 1')
-                ->where('dos_module_item_cat_cat_id =?', $data['id'])
-                ->order('record_order ASC')
+                ->where('dos_module_item_cat_cat_id =?', $this->getCatIDByTag($data['id']))
+                ->order('record_order DESC')
                 ->order('postdate DESC')
                 ->limitPage($page, $rowCount);
         return $this->fetchAll($select)->toArray();
     }
 
     // Product by cat_id other
-    public function itemByCatNoneid($cid, $id) {
-        $select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title' . LANG, 'preview' . LANG))
-                ->where('dos_module_item_cat_cat_id =?', $cid)
-                ->where('record_id NOT IN (?)', $id)
-                ->order('record_order ASC')
-                ->order('postdate DESC')
-                ->where('enable = 1')
-                ->limit(5, 1);
-        return $this->fetchAll($select)->toArray();
+    public function itemByCatNoneid($cid, $id){
+        $sql = "SELECT record_id, pic_thumb, postdate, title".LANG.", preview".LANG.", tag FROM ".$this->_name." WHERE dos_module_item_cat_cat_id =? AND record_id NOT IN (?) AND enable = 1 ORDER BY record_order DESC, postdate DESC";
+        return $this->_db->fetchAll($sql, array($cid, $this->getRecordByTag($id)));
     }
 
     //Front end - Get Bản tin bởi cat_id
@@ -84,7 +89,7 @@ class GLT_Models_News extends Zend_Db_Table {
             $page = $paginator['currentPage'];
             $rowCount = $paginator['itemCountPerPage'];
         }
-        $select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title' . LANG, 'preview' . LANG))
+        $select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'postdate', 'title' . LANG, 'preview' . LANG, 'tag'))
                 ->where('enable = 1')
                 ->order('record_order ASC')
                 ->order('postdate DESC')
@@ -95,19 +100,18 @@ class GLT_Models_News extends Zend_Db_Table {
     //Front end - Count bản tin bởi cat_id
     public function countItembyCat($data = NULL) {
         $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('COUNT(record_id) AS total'))
+        $select = $db->select()->from($this->_name, array('COUNT(record_id)'))
                 ->where('enable = 1')
-                ->where('dos_module_item_cat_cat_id =?', $data['id']);
+                ->where('dos_module_item_cat_cat_id =?', $this->getCatIDByTag($data['id']));
+       // echo $select->__toString();
         return $db->fetchOne($select);
     }
 
     //Front end - Get detail new
     public function detailItem($data = NULL) {
-        $where = 'record_id = ' . $data['id'];
-        $result = $this->fetchRow($where);
-
+        $result = $this->fetchRow($this->select()->where('tag = ?', $data['id']));
         if (count($result)) {
-            $this->updateHits($data['id']);
+            $this->updateHits($result['record_id']);
             return $result->toArray();
         }
     }
@@ -254,6 +258,8 @@ class GLT_Models_News extends Zend_Db_Table {
             'content' => $this->_xss->purify($data['detail']),
             'contenten' => $this->_xss->purify($data['detailen']),
             'contentfr' => $this->_xss->purify($data['detailfr']),
+            'tag' => $this->_xss->purify(trim($data['tag'])),
+            'description' => $this->_xss->purify($data['description']),
             'record_order' => $max_record,
             'record_type' => $this->_xss->purify($data['hot']),
             'enable' => $this->_xss->purify($data['active']),
@@ -285,15 +291,17 @@ class GLT_Models_News extends Zend_Db_Table {
 
         $where = 'record_id = ' . $data['id'];
         $data = array('pic_thumb' => $file_thumb,
-            'title' => $this->_xss->purify($data['title']),
-            'titleen' => $this->_xss->purify($data['titleen']),
-            'titlefr' => $this->_xss->purify($data['titlefr']),
+            'title' => $this->_xss->purify(trim($data['title'])),
+            'titleen' => $this->_xss->purify(trim($data['titleen'])),
+            'titlefr' => $this->_xss->purify(trim($data['titlefr'])),
             'preview' => $this->_xss->purify($data['preview']),
             'previewen' => $this->_xss->purify($data['previewen']),
             'previewfr' => $this->_xss->purify($data['previewfr']),
             'content' => $this->_xss->purify($data['detail']),
             'contenten' => $this->_xss->purify($data['detailen']),
             'contentfr' => $this->_xss->purify($data['detailfr']),
+            'tag' => $this->_xss->purify(trim($data['tag'])),
+            'description' => $this->_xss->purify($data['description']),
             'record_type' => $this->_xss->purify($data['hot']),
             'enable' => $this->_xss->purify($data['active']),
             'dos_module_item_cat_cat_id' => $this->_xss->purify($data['parentcat']));

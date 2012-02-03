@@ -32,6 +32,9 @@ class Webadmin_AboutController extends GLT_Controller_Backend{
         $this->view->currentController = $this->_currentController;
         $this->view->controller = $this->_controller;
         $this->view->selecthome = ' class="selected"';
+        
+             $this->view->headScript()->appendFile($this->_request->getBaseUrl() . TEMPLATE_ADMIN . '/js/jquery.seoAlias.js');
+        $this->view->headScript()->appendFile($this->_request->getBaseUrl() . TEMPLATE_ADMIN . '/js/string.seoAlias.js');
     }
     public function indexAction(){
         $record = new About_Model_About();    
