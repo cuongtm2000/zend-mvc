@@ -39,13 +39,12 @@ class GLT_Models_About extends Zend_Db_Table {
         $result = $this->fetchRow($where, $order, $count, $offset);
         //Update hits
         $this->update(array('hits' => $result['hits'] + 1), 'record_id =' . $result['record_id']);
-
         return $result;
     }
 
     //Front end - Get danh sách item
     public function getListmenu() {
-        $select = $this->select()->from($this->_name, array('record_id', 'title' . LANG))
+        $select = $this->select()->from($this->_name, array('record_id', 'title' . LANG,'tag'))
                 ->where('hot = ?', 0)
                 ->where('enable = ?', 1)
                 ->order('record_order DESC');
@@ -54,12 +53,13 @@ class GLT_Models_About extends Zend_Db_Table {
 
     //Front end - get chi tiết bản tin
     public function getDetail($id) {
-        $select = $this->select()->from($this->_name, array('title' . LANG, 'content' . LANG, 'hits'))
+        $select = $this->select()->from($this->_name, array('title' . LANG, 'content' . LANG, 'hits','tag'))
                 ->where('enable = ?', 1)
-                ->where('record_id = ?', $id);
-        $result = $this->fetchRow($select)->toArray();
-        //Update hits
-        $this->update(array('hits' => $result['hits'] + 1), 'record_id =' . $id);
+                ->where('tag = ?', $id);
+      //echo $select->__toString();   
+      $result = $this->fetchRow($select);
+         //   Update hits
+         $this->update(array('hits' => $result['hits'] + 1), 'tag =' . "'".$id."'");
         return $result;
     }
 
@@ -86,6 +86,8 @@ class GLT_Models_About extends Zend_Db_Table {
                         'content' => $this->_xss->purify($data['detail']), 
                         'contenten' => $this->_xss->purify($data['detailen']), 
                         'contentfr' => $this->_xss->purify($data['detailfr']), 
+                        'tag' => $this->_xss->purify(trim($data['tag'])),
+                        'description' => $this->_xss->purify($data['description']),
                         'record_order' => $max_record, 
                         'extra_field1' => $this->_xss->purify($data['extra1']), 
                         'extra_field2' => $this->_xss->purify($data['extra2']), 
@@ -115,6 +117,8 @@ class GLT_Models_About extends Zend_Db_Table {
                         'content' => $this->_xss->purify($data['detail']), 
                         'contenten' => $this->_xss->purify($data['detailen']), 
                         'contentfr' => $this->_xss->purify($data['detailfr']), 
+                        'tag' => $this->_xss->purify(trim($data['tag'])),
+                        'description' => $this->_xss->purify($data['description']),
                         'extra_field1' => $this->_xss->purify($data['extra1']), 
                         'extra_field2' => $this->_xss->purify($data['extra2']), 
                         'hot' => $this->_xss->purify($data['hot']), 
@@ -139,7 +143,7 @@ class GLT_Models_About extends Zend_Db_Table {
             $rowCount = $paginator['itemCountPerPage'];
         }
 
-        $select = $this->select()->from($this->_name, array('record_id', 'title' . LANG, 'hits', 'posted_date', 'record_order', 'hot', 'enable'))
+        $select = $this->select()->from($this->_name, array('record_id', 'title' . LANG, 'hits', 'posted_date', 'record_order', 'hot', 'enable','tag'))
                 ->order('record_order DESC')
                 ->limitPage($page, $rowCount);
         $result = $this->fetchAll($select);

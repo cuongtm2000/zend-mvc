@@ -1,8 +1,14 @@
-1. Seo Url (cho nhieu ngon ngu)
-2. Don models (giong nhau)
+B1
 
-4. Dat ten cac model, form de hinh dung (Models->News.php, Models->News_Cat.php
+ALTER TABLE `dos_module_product_cat` add `tag` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER  `cat_titlefr`, add `description` VARCHAR(250) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER  `tag`
 
-6. Rut gon menu_product, menu_news
-7. File word mô tả cac "biến" hiển thị tại trang nào.
-8. Xóa ngon ngữ, file module dư thừa, chức năng
+ALTER TABLE  `dos_module_about` add  `tag` VARCHAR( 100 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL after `contentfr` ,
+add `description` VARCHAR( 250 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER  `tag`
+
+
+
+
+ALTER TABLE `dos_module_product_cat` add `tag` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER  `cat_titlefr`, add `description` VARCHAR(250) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER  `tag`;
+
+ALTER TABLE  `dos_module_product` add  `tag` VARCHAR( 100 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL after `detailfr` ,
+add `description` VARCHAR( 250 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER  `tag`

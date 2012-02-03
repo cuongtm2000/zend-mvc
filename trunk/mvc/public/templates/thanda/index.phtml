@@ -73,7 +73,7 @@
                             <ul class="sub-pro">
                                 <?php
                                 foreach ($this->menu_about as $value) {
-                                    echo '<li><a href="' . $this->baseUrl() . '/' . LANGURL . 'about' . '/index/view/id/' . $value['record_id'] . '/' . $this->noneUnicode($value['title' . LANG]) . '" title="' . $this->escape($value['title' . LANG]) . '">' . $this->escape($value['title' . LANG]) . '</a></li>';
+                                    echo '<li><a href="' . $this->baseUrl() . '/' . LANGURL . 'gioi-thieu/'  . $value['tag'] . '.html' . '" title="' . $value['tag'] . '">' . $this->escape($value['title' . LANG]) . '</a></li>';
                                 }
                                 ?>
                             </ul>
@@ -84,7 +84,7 @@
                             <ul class="sub-pro">
                                 <?php
                                 foreach ($this->menu_services as $value) {
-                                    echo '<li><a href="' . $this->baseUrl() . '/' . LANGURL . 'services' . '/index/view/id/' . $value['record_id'] . '/' . $this->noneUnicode($value['title' . LANG]) . '" title="' . $this->escape($value['title' . LANG]) . '">' . $this->escape($value['title' . LANG]) . '</a></li>';
+                                    echo '<li><a href="' . $this->baseUrl() . '/' . LANGURL . 'dich-vu/' . $value['tag'] . '.html' . '" title="' . $value['tag'] . '">' . $this->escape($value['title' . LANG]) . '</a></li>';
                                 }
                                 ?>
                             </ul>
@@ -93,14 +93,14 @@
                         <?php if ($this->menu_news): ?>
                             <h1 class="title-box"><span><?php echo $this->lang['news'] ?></span></h1>
                             <ul class="sub-pro">
-                                <?php $this->showmenu($this->menu_news, 'news') ?>
+                                <?php $this->showmenu($this->menu_news, 'news','tin-tuc') ?>
                             </ul>
                         <?php endif; ?>
                             
                         <?php if ($this->menu_product): ?>
                             <h1 class="title-box"><span><?php echo $this->lang['product'] ?></span></h1>
                             <ul class="sub-pro">
-                                <?php $this->showmenu($this->menu_product, 'product') ?>
+                                <?php $this->showmenu($this->menu_product, 'product','san-pham') ?>
                             </ul>
                         <?php endif; ?>
 

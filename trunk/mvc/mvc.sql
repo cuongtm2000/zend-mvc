@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.8
+-- version 3.4.9
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 13, 2012 at 01:32 AM
+-- Generation Time: Feb 03, 2012 at 10:20 AM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -34,6 +34,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_about` (
   `content` text,
   `contenten` text,
   `contentfr` text,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) NOT NULL,
   `hits` int(11) DEFAULT '1',
   `posted_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `record_order` int(11) DEFAULT '1',
@@ -48,9 +50,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_about` (
 -- Dumping data for table `dos_module_about`
 --
 
-INSERT INTO `dos_module_about` (`record_id`, `title`, `titleen`, `titlefr`, `content`, `contenten`, `contentfr`, `hits`, `posted_date`, `record_order`, `extra_field1`, `extra_field2`, `hot`, `enable`) VALUES
-(27, 'Enter your replacement text here...', '', '', '&lt;p&gt;\r\n	Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... &lt;/p&gt;\r\n&lt;p&gt;\r\n	Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... &lt;/p&gt;\r\n', '', '', 848, '2011-08-16 02:32:39', 1, '', '', 0, 1),
-(28, 'Enter your replacement text here...', '', '', '&lt;p&gt;\r\n	Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... &lt;/p&gt;\r\n', '', '', 1583, '2011-08-16 03:35:14', 1, '', '', 1, 1);
+INSERT INTO `dos_module_about` (`record_id`, `title`, `titleen`, `titlefr`, `content`, `contenten`, `contentfr`, `tag`, `description`, `hits`, `posted_date`, `record_order`, `extra_field1`, `extra_field2`, `hot`, `enable`) VALUES
+(27, 'Enter your replacement text here...', '', '', '<p>\r\n	Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... </p>\r\n<p>\r\n	Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... </p>\r\n', '', '', 'enter-your-replacement-text-here', '', 866, '2011-08-16 02:32:39', 1, '', '', 0, 1),
+(28, 'Enter your replacement text here...', '', '', '<p>\r\n	Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... </p>\r\n', '', '', 'enter-your-replacement-text-here', '', 865, '2011-08-16 03:35:14', 1, '', '', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -419,6 +421,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `content` text NOT NULL,
   `contenten` text,
   `contentfr` text,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) NOT NULL,
   `author` varchar(45) DEFAULT NULL,
   `hits` int(11) NOT NULL DEFAULT '1',
   `postdate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
@@ -430,16 +434,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `dos_module_news`
 --
 
-INSERT INTO `dos_module_news` (`record_id`, `pic_thumb`, `title`, `titleen`, `titlefr`, `preview`, `previewen`, `previewfr`, `content`, `contenten`, `contentfr`, `author`, `hits`, `postdate`, `record_order`, `record_type`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(1, NULL, 'dasdsadsa', '', '', '<p>\r\n	test</p>\r\n', '', '', '<p>\r\n	test</p>\r\n', '', '', NULL, 2, '2011-09-09 08:28:58', 1, 1, NULL, NULL, 1, 12),
-(2, NULL, 'safa', '', '', '<p>\r\n	asf</p>\r\n', '', '', '<blockquote>\r\n	<p>\r\n		&lt;?php if (DEBUG_MODE) var_dump($this-&gt;item); ?&gt;</p>\r\n	<p>\r\n		 </p>\r\n	<p>\r\n		&lt;div class="frame-tent-right"&gt;<br />\r\n		    &lt;?php if (is_array($this-&gt;item)): ?&gt;<br />\r\n		        &lt;h1 class="title-box"&gt;&lt;span&gt;&lt;?php echo $this-&gt;lang[$this-&gt;module] ?&gt; &amp;raquo; &lt;?php echo $this-&gt;item[''title'' . LANG] ?&gt;&lt;/span&gt;&lt;/h1&gt;<br />\r\n		        &lt;?php echo $this-&gt;item[''content'' . LANG] ?&gt;<br />\r\n		    &lt;?php endif; ?&gt;<br />\r\n		&lt;/div&gt;</p>\r\n</blockquote>\r\n', '', '', NULL, 6, '2011-09-09 14:36:00', 1, 1, NULL, NULL, 1, 12),
-(3, NULL, 'adasd', '', '', '&lt;p&gt;\r\n	sdsad&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sdasd&lt;/p&gt;\r\n', '', '', NULL, 3, '2011-09-23 01:48:31', 2, 0, NULL, NULL, 1, 11);
+INSERT INTO `dos_module_news` (`record_id`, `pic_thumb`, `title`, `titleen`, `titlefr`, `preview`, `previewen`, `previewfr`, `content`, `contenten`, `contentfr`, `tag`, `description`, `author`, `hits`, `postdate`, `record_order`, `record_type`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(3, NULL, 'adasd', '', '', '&lt;p&gt;\r\n	sdsad&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	sdasd&lt;/p&gt;\r\n', '', '', '', '', NULL, 3, '2011-09-23 01:48:31', 2, 0, NULL, NULL, 1, 11),
+(5, NULL, 'bai viet 1', 'Post 1', '', '<p>\r\n	<br />\r\n	Field_name Min_value Max_value Min_length Max_length Empties_or_zeros Nulls Avg_value_or_avg_length Std Optimal_fieldtype<br />\r\n	mvc.dos_module_services.record_id 29 30 2 2 0 0 29.5000 0.5000 ENUM(''29'',''30'') NOT NULL<br />\r\n	mvc.dos_module_services.title abcdedd Dịch vụ cung cấp thư ký 7 31 0 0 19.0000 NULL ENUM(''abcdedd'',''Dịch vụ cung cấp thư ký'') NOT NULL<br />\r\n	mvc.dos_module_services.titleen   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.titlefr   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.content &lt;p&gt;<br />\r\n	   abcdeabcde&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buffett sẽ hát mừng năm mới TQ... 22 644 0 0 333.0000 NULL ENUM(''&lt;p&gt;<br />\r\n	   abcdeabcde&lt;/p&gt;<br />\r\n	'',''&lt;p&gt;<br />\r\n	   Tỷ phú Warren...<br />\r\n	mvc.dos_module_services.contenten  &lt;p&gt;<br />\r\n	   EN&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buffett sẽ hát m... 0 658 1 0 329.0000 NULL ENUM('''',''&lt;p&gt;<br />\r\n	   EN&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buffett...<br />\r\n	mvc.dos_module_services.contentfr  &lt;p&gt;<br />\r\n	   KR&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	    &lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buf... 0 672 1 0 336.0000 NULL ENUM('''',''&lt;p&gt;<br />\r\n	   KR&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	    &lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú W...<br />\r\n	mvc.dos_module_services.tag abcdedd dich-vu-cung-cap-thu-ky 7 23 0 0 15.0000 NULL ENUM(''abcdedd'',''dich-vu-cung-cap-thu-ky'') NOT NULL<br />\r\n	mvc.dos_module_services.description   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hits 6 37 1 2 0 0 21.5000 15.5000 ENUM(''6'',''37'') NOT NULL<br />\r\n	mvc.dos_module_services.posted_date 2012-01-11 23:26:18 2012-02-02 23:56:53 19 19 0 0 19.0000 NULL ENUM(''2012-01-11 23:26:18'',''2012-02-02 23:56:53'') ...<br />\r\n	mvc.dos_module_services.record_order 1 2 1 1 0 0 1.5000 0.5000 ENUM(''1'',''2'') NOT NULL<br />\r\n	mvc.dos_module_services.extra_field1   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.extra_field2   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hot 0 0 1 1 2 0 0.0000 0.0000 ENUM(''0'') NOT NULL<br />\r\n	mvc.dos_module_services.enable 1 1 1 1 0 0 1.0000 0.0000 ENUM(''1'') NOT NULL</p>\r\n<p>\r\n	Query results operations</p>\r\n', '<p>\r\n	<br />\r\n	Field_name Min_value Max_value Min_length Max_length Empties_or_zeros Nulls Avg_value_or_avg_length Std Optimal_fieldtype<br />\r\n	mvc.dos_module_services.record_id 29 30 2 2 0 0 29.5000 0.5000 ENUM(''29'',''30'') NOT NULL<br />\r\n	mvc.dos_module_services.title abcdedd Dịch vụ cung cấp thư ký 7 31 0 0 19.0000 NULL ENUM(''abcdedd'',''Dịch vụ cung cấp thư ký'') NOT NULL<br />\r\n	mvc.dos_module_services.titleen   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.titlefr   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.content &lt;p&gt;<br />\r\n	   abcdeabcde&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buffett sẽ hát mừng năm mới TQ... 22 644 0 0 333.0000 NULL ENUM(''&lt;p&gt;<br />\r\n	   abcdeabcde&lt;/p&gt;<br />\r\n	'',''&lt;p&gt;<br />\r\n	   Tỷ phú Warren...<br />\r\n	mvc.dos_module_services.contenten  &lt;p&gt;<br />\r\n	   EN&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buffett sẽ hát m... 0 658 1 0 329.0000 NULL ENUM('''',''&lt;p&gt;<br />\r\n	   EN&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buffett...<br />\r\n	mvc.dos_module_services.contentfr  &lt;p&gt;<br />\r\n	   KR&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	    &lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buf... 0 672 1 0 336.0000 NULL ENUM('''',''&lt;p&gt;<br />\r\n	   KR&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	    &lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú W...<br />\r\n	mvc.dos_module_services.tag abcdedd dich-vu-cung-cap-thu-ky 7 23 0 0 15.0000 NULL ENUM(''abcdedd'',''dich-vu-cung-cap-thu-ky'') NOT NULL<br />\r\n	mvc.dos_module_services.description   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hits 6 37 1 2 0 0 21.5000 15.5000 ENUM(''6'',''37'') NOT NULL<br />\r\n	mvc.dos_module_services.posted_date 2012-01-11 23:26:18 2012-02-02 23:56:53 19 19 0 0 19.0000 NULL ENUM(''2012-01-11 23:26:18'',''2012-02-02 23:56:53'') ...<br />\r\n	mvc.dos_module_services.record_order 1 2 1 1 0 0 1.5000 0.5000 ENUM(''1'',''2'') NOT NULL<br />\r\n	mvc.dos_module_services.extra_field1   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.extra_field2   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hot 0 0 1 1 2 0 0.0000 0.0000 ENUM(''0'') NOT NULL<br />\r\n	mvc.dos_module_services.enable 1 1 1 1 0 0 1.0000 0.0000 ENUM(''1'') NOT NULL</p>\r\n<p>\r\n	Query results operations</p>\r\n', '<p>\r\n	<br />\r\n	Field_name Min_value Max_value Min_length Max_length Empties_or_zeros Nulls Avg_value_or_avg_length Std Optimal_fieldtype<br />\r\n	mvc.dos_module_services.record_id 29 30 2 2 0 0 29.5000 0.5000 ENUM(''29'',''30'') NOT NULL<br />\r\n	mvc.dos_module_services.title abcdedd Dịch vụ cung cấp thư ký 7 31 0 0 19.0000 NULL ENUM(''abcdedd'',''Dịch vụ cung cấp thư ký'') NOT NULL<br />\r\n	mvc.dos_module_services.titleen   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.titlefr   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.content &lt;p&gt;<br />\r\n	   abcdeabcde&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buffett sẽ hát mừng năm mới TQ... 22 644 0 0 333.0000 NULL ENUM(''&lt;p&gt;<br />\r\n	   abcdeabcde&lt;/p&gt;<br />\r\n	'',''&lt;p&gt;<br />\r\n	   Tỷ phú Warren...<br />\r\n	mvc.dos_module_services.contenten  &lt;p&gt;<br />\r\n	   EN&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buffett sẽ hát m... 0 658 1 0 329.0000 NULL ENUM('''',''&lt;p&gt;<br />\r\n	   EN&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buffett...<br />\r\n	mvc.dos_module_services.contentfr  &lt;p&gt;<br />\r\n	   KR&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	    &lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buf... 0 672 1 0 336.0000 NULL ENUM('''',''&lt;p&gt;<br />\r\n	   KR&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	    &lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú W...<br />\r\n	mvc.dos_module_services.tag abcdedd dich-vu-cung-cap-thu-ky 7 23 0 0 15.0000 NULL ENUM(''abcdedd'',''dich-vu-cung-cap-thu-ky'') NOT NULL<br />\r\n	mvc.dos_module_services.description   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hits 6 37 1 2 0 0 21.5000 15.5000 ENUM(''6'',''37'') NOT NULL<br />\r\n	mvc.dos_module_services.posted_date 2012-01-11 23:26:18 2012-02-02 23:56:53 19 19 0 0 19.0000 NULL ENUM(''2012-01-11 23:26:18'',''2012-02-02 23:56:53'') ...<br />\r\n	mvc.dos_module_services.record_order 1 2 1 1 0 0 1.5000 0.5000 ENUM(''1'',''2'') NOT NULL<br />\r\n	mvc.dos_module_services.extra_field1   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.extra_field2   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hot 0 0 1 1 2 0 0.0000 0.0000 ENUM(''0'') NOT NULL<br />\r\n	mvc.dos_module_services.enable 1 1 1 1 0 0 1.0000 0.0000 ENUM(''1'') NOT NULL</p>\r\n<p>\r\n	Query results operations</p>\r\n', '<p>\r\n	<br />\r\n	Field_name Min_value Max_value Min_length Max_length Empties_or_zeros Nulls Avg_value_or_avg_length Std Optimal_fieldtype<br />\r\n	mvc.dos_module_services.record_id 29 30 2 2 0 0 29.5000 0.5000 ENUM(''29'',''30'') NOT NULL<br />\r\n	mvc.dos_module_services.title abcdedd Dịch vụ cung cấp thư ký 7 31 0 0 19.0000 NULL ENUM(''abcdedd'',''Dịch vụ cung cấp thư ký'') NOT NULL<br />\r\n	mvc.dos_module_services.titleen   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.titlefr   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.content &lt;p&gt;<br />\r\n	   abcdeabcde&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buffett sẽ hát mừng năm mới TQ... 22 644 0 0 333.0000 NULL ENUM(''&lt;p&gt;<br />\r\n	   abcdeabcde&lt;/p&gt;<br />\r\n	'',''&lt;p&gt;<br />\r\n	   Tỷ phú Warren...<br />\r\n	mvc.dos_module_services.contenten  &lt;p&gt;<br />\r\n	   EN&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buffett sẽ hát m... 0 658 1 0 329.0000 NULL ENUM('''',''&lt;p&gt;<br />\r\n	   EN&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buffett...<br />\r\n	mvc.dos_module_services.contentfr  &lt;p&gt;<br />\r\n	   KR&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	    &lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buf... 0 672 1 0 336.0000 NULL ENUM('''',''&lt;p&gt;<br />\r\n	   KR&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	    &lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú W...<br />\r\n	mvc.dos_module_services.tag abcdedd dich-vu-cung-cap-thu-ky 7 23 0 0 15.0000 NULL ENUM(''abcdedd'',''dich-vu-cung-cap-thu-ky'') NOT NULL<br />\r\n	mvc.dos_module_services.description   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hits 6 37 1 2 0 0 21.5000 15.5000 ENUM(''6'',''37'') NOT NULL<br />\r\n	mvc.dos_module_services.posted_date 2012-01-11 23:26:18 2012-02-02 23:56:53 19 19 0 0 19.0000 NULL ENUM(''2012-01-11 23:26:18'',''2012-02-02 23:56:53'') ...<br />\r\n	mvc.dos_module_services.record_order 1 2 1 1 0 0 1.5000 0.5000 ENUM(''1'',''2'') NOT NULL<br />\r\n	mvc.dos_module_services.extra_field1   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.extra_field2   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hot 0 0 1 1 2 0 0.0000 0.0000 ENUM(''0'') NOT NULL<br />\r\n	mvc.dos_module_services.enable 1 1 1 1 0 0 1.0000 0.0000 ENUM(''1'') NOT NULL</p>\r\n<p>\r\n	Query results operations</p>\r\n', '<p>\r\n	<br />\r\n	Field_name Min_value Max_value Min_length Max_length Empties_or_zeros Nulls Avg_value_or_avg_length Std Optimal_fieldtype<br />\r\n	mvc.dos_module_services.record_id 29 30 2 2 0 0 29.5000 0.5000 ENUM(''29'',''30'') NOT NULL<br />\r\n	mvc.dos_module_services.title abcdedd Dịch vụ cung cấp thư ký 7 31 0 0 19.0000 NULL ENUM(''abcdedd'',''Dịch vụ cung cấp thư ký'') NOT NULL<br />\r\n	mvc.dos_module_services.titleen   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.titlefr   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.content &lt;p&gt;<br />\r\n	   abcdeabcde&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buffett sẽ hát mừng năm mới TQ... 22 644 0 0 333.0000 NULL ENUM(''&lt;p&gt;<br />\r\n	   abcdeabcde&lt;/p&gt;<br />\r\n	'',''&lt;p&gt;<br />\r\n	   Tỷ phú Warren...<br />\r\n	mvc.dos_module_services.contenten  &lt;p&gt;<br />\r\n	   EN&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buffett sẽ hát m... 0 658 1 0 329.0000 NULL ENUM('''',''&lt;p&gt;<br />\r\n	   EN&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buffett...<br />\r\n	mvc.dos_module_services.contentfr  &lt;p&gt;<br />\r\n	   KR&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	    &lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buf... 0 672 1 0 336.0000 NULL ENUM('''',''&lt;p&gt;<br />\r\n	   KR&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	    &lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú W...<br />\r\n	mvc.dos_module_services.tag abcdedd dich-vu-cung-cap-thu-ky 7 23 0 0 15.0000 NULL ENUM(''abcdedd'',''dich-vu-cung-cap-thu-ky'') NOT NULL<br />\r\n	mvc.dos_module_services.description   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hits 6 37 1 2 0 0 21.5000 15.5000 ENUM(''6'',''37'') NOT NULL<br />\r\n	mvc.dos_module_services.posted_date 2012-01-11 23:26:18 2012-02-02 23:56:53 19 19 0 0 19.0000 NULL ENUM(''2012-01-11 23:26:18'',''2012-02-02 23:56:53'') ...<br />\r\n	mvc.dos_module_services.record_order 1 2 1 1 0 0 1.5000 0.5000 ENUM(''1'',''2'') NOT NULL<br />\r\n	mvc.dos_module_services.extra_field1   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.extra_field2   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hot 0 0 1 1 2 0 0.0000 0.0000 ENUM(''0'') NOT NULL<br />\r\n	mvc.dos_module_services.enable 1 1 1 1 0 0 1.0000 0.0000 ENUM(''1'') NOT NULL</p>\r\n<p>\r\n	Query results operations</p>\r\n', '<p>\r\n	<br />\r\n	Field_name Min_value Max_value Min_length Max_length Empties_or_zeros Nulls Avg_value_or_avg_length Std Optimal_fieldtype<br />\r\n	mvc.dos_module_services.record_id 29 30 2 2 0 0 29.5000 0.5000 ENUM(''29'',''30'') NOT NULL<br />\r\n	mvc.dos_module_services.title abcdedd Dịch vụ cung cấp thư ký 7 31 0 0 19.0000 NULL ENUM(''abcdedd'',''Dịch vụ cung cấp thư ký'') NOT NULL<br />\r\n	mvc.dos_module_services.titleen   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.titlefr   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.content &lt;p&gt;<br />\r\n	   abcdeabcde&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buffett sẽ hát mừng năm mới TQ... 22 644 0 0 333.0000 NULL ENUM(''&lt;p&gt;<br />\r\n	   abcdeabcde&lt;/p&gt;<br />\r\n	'',''&lt;p&gt;<br />\r\n	   Tỷ phú Warren...<br />\r\n	mvc.dos_module_services.contenten  &lt;p&gt;<br />\r\n	   EN&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buffett sẽ hát m... 0 658 1 0 329.0000 NULL ENUM('''',''&lt;p&gt;<br />\r\n	   EN&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buffett...<br />\r\n	mvc.dos_module_services.contentfr  &lt;p&gt;<br />\r\n	   KR&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	    &lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú Warren Buf... 0 672 1 0 336.0000 NULL ENUM('''',''&lt;p&gt;<br />\r\n	   KR&lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	    &lt;/p&gt;<br />\r\n	&lt;p&gt;<br />\r\n	   Tỷ phú W...<br />\r\n	mvc.dos_module_services.tag abcdedd dich-vu-cung-cap-thu-ky 7 23 0 0 15.0000 NULL ENUM(''abcdedd'',''dich-vu-cung-cap-thu-ky'') NOT NULL<br />\r\n	mvc.dos_module_services.description   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hits 6 37 1 2 0 0 21.5000 15.5000 ENUM(''6'',''37'') NOT NULL<br />\r\n	mvc.dos_module_services.posted_date 2012-01-11 23:26:18 2012-02-02 23:56:53 19 19 0 0 19.0000 NULL ENUM(''2012-01-11 23:26:18'',''2012-02-02 23:56:53'') ...<br />\r\n	mvc.dos_module_services.record_order 1 2 1 1 0 0 1.5000 0.5000 ENUM(''1'',''2'') NOT NULL<br />\r\n	mvc.dos_module_services.extra_field1   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.extra_field2   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hot 0 0 1 1 2 0 0.0000 0.0000 ENUM(''0'') NOT NULL<br />\r\n	mvc.dos_module_services.enable 1 1 1 1 0 0 1.0000 0.0000 ENUM(''1'') NOT NULL</p>\r\n<p>\r\n	Query results operations</p>\r\n', '', '', NULL, 1, '2012-02-02 18:44:29', 3, 1, NULL, NULL, 1, 15);
 
 -- --------------------------------------------------------
 
@@ -453,19 +456,22 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `cat_title` varchar(45) NOT NULL,
   `cat_titleen` varchar(45) DEFAULT NULL,
   `cat_titlefr` varchar(45) DEFAULT NULL,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) NOT NULL,
   `cat_order` int(11) NOT NULL DEFAULT '1',
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
 -- Dumping data for table `dos_module_news_cat`
 --
 
-INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `cat_titlefr`, `cat_order`, `cat_enable`) VALUES
-(11, 0, 'Test', '', '', 1, 1),
-(12, 0, 'Sản phẩm loại 2', '', '', 2, 1),
-(13, 12, 'Sản phẩm loại 2.2', '', '', 3, 1);
+INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `cat_titlefr`, `tag`, `description`, `cat_order`, `cat_enable`) VALUES
+(11, 13, 'Test ', '', '', 'test', '', 1, 1),
+(13, 0, 'Sản phẩm loại 2.2', '', '', 'san-pham-loai-22', '', 3, 1),
+(14, 0, 'Sản phẩm loại 3', 'Cat 3', '3 CAT', 'san-pham-loai-3', '', 4, 1),
+(15, 0, 'Sản phẩm loại vv', '', '', 'san-pham-loai-vv', '', 5, 1);
 
 -- --------------------------------------------------------
 
@@ -551,6 +557,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_product` (
   `detail` text NOT NULL,
   `detailen` text,
   `detailfr` text,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) NOT NULL,
   `hits` int(11) DEFAULT '0',
   `record_order` int(11) DEFAULT '1',
   `extra_field1` varchar(200) DEFAULT NULL,
@@ -570,13 +578,13 @@ CREATE TABLE IF NOT EXISTS `dos_module_product` (
 -- Dumping data for table `dos_module_product`
 --
 
-INSERT INTO `dos_module_product` (`record_id`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `title`, `titleen`, `titlefr`, `preview`, `previewen`, `previewfr`, `detail`, `detailen`, `detailfr`, `hits`, `record_order`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `unit`, `hot`, `specials`, `enable`, `dos_module_product_cat_cat_id`) VALUES
-(11, '2011-10-29 03:53:39', 'img11.jpg', NULL, NULL, 'Sản phẩm', '', '', '', '', '', '&lt;p&gt;\r\n	testing&lt;/p&gt;\r\n', '', '', 0, 1, '', '', '', '', 0, 0, 1, 1, 7),
-(12, '2011-10-29 04:04:04', 'img12.jpg', NULL, NULL, 'Sản phẩm', '', '', NULL, NULL, NULL, '&lt;p&gt;\r\n	testing&lt;/p&gt;\r\n', '', '', 0, 2, 'Sed vel mi a turpis condimentum sagittis quis vitae augue.', '', '', '', 0, 0, 0, 1, 7),
-(13, '2011-10-29 04:18:13', NULL, NULL, NULL, 'sadsa', '', '', '&lt;p&gt;\r\n	adas&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	asdasd&lt;/p&gt;\r\n', '', '', 0, 3, '', '', '', '', 0, 0, 1, 1, 7),
-(14, '2011-10-29 07:27:13', NULL, NULL, '', 'asdas', '', '', '&lt;p&gt;\r\n	dadasd&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	asdasdas&lt;/p&gt;\r\n', '', '', 0, 4, '', '', '', '', 0, 0, 0, 1, 7),
-(15, '2011-10-29 07:27:22', NULL, NULL, '', 'asdasd', '', '', '&lt;p&gt;\r\n	asdasd&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	asdasd&lt;/p&gt;\r\n', '', '', 0, 5, '', '', '', '', 0, 0, 0, 1, 7),
-(16, '2011-10-29 07:27:39', 'img5.jpg', NULL, '', 'asdas', '', '', '&lt;p&gt;\r\n	asdasd&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	asdasd&lt;/p&gt;\r\n', '', '', 0, 6, '', '', '', '', 0, 0, 0, 1, 7);
+INSERT INTO `dos_module_product` (`record_id`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `title`, `titleen`, `titlefr`, `preview`, `previewen`, `previewfr`, `detail`, `detailen`, `detailfr`, `tag`, `description`, `hits`, `record_order`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `unit`, `hot`, `specials`, `enable`, `dos_module_product_cat_cat_id`) VALUES
+(11, '2011-10-29 03:53:39', 'img11.jpg', 'chrysanthemum.jpg', NULL, 'Sản phẩm', '', '', '', '', '', '<p>\r\n	testing</p>\r\n', '', '', '', '', 0, 1, '', '', '', '', 0, 0, 1, 1, 7),
+(12, '2011-10-29 04:04:04', 'img12.jpg', NULL, NULL, 'Sản phẩm', '', '', NULL, NULL, NULL, '&lt;p&gt;\r\n	testing&lt;/p&gt;\r\n', '', '', '', '', 0, 2, 'Sed vel mi a turpis condimentum sagittis quis vitae augue.', '', '', '', 0, 0, 0, 1, 7),
+(13, '2011-10-29 04:18:13', NULL, NULL, NULL, 'sadsa', '', '', '<p>\r\n	adas</p>\r\n', '', '', '<p>\r\n	Overview|QuickStart|APIs|Reference Guide|Translations|Multimedia<br />\r\n	The Request Object<br />\r\n	Zend_Controller<br />\r\n	Programmer''s Reference Guide<br />\r\n	The Dispatcher<br />\r\n	The Standard Router<br />\r\n	Introduction</p>\r\n<p>\r\n	Zend_Controller_Router_Rewrite is the standard framework router. Routing is the process of taking a URI endpoint (that part of the URI which comes after the base URL) and decomposing it into parameters to determine which module, controller, and action of that controller should receive the request. This values of the module, controller, action and other parameters are packaged into a Zend_Controller_Request_Http object which is then processed by Zend_Controller_Dispatcher_Standard. Routing occurs only once: when the request is initially received and before the first controller is dispatched.</p>\r\n<p>\r\n	Zend_Controller_Router_Rewrite is designed to allow for mod_rewrite-like functionality using pure PHP structures. It is very loosely based on Ruby on Rails routing and does not require any prior knowledge of webserver URL rewriting. It is designed to work with a single Apache mod_rewrite rule (one of):</p>\r\n<p>\r\n	RewriteEngine on</p>\r\n', '', '', '', '', 0, 3, '', '', '', '', 0, 0, 1, 1, 7),
+(14, '2011-10-29 07:27:13', NULL, NULL, NULL, 'Thu viet bai', '', '', '<p>\r\n	dadasd</p>\r\n', '', '', '<div style="width:80%;">\r\n	<h3>\r\n		Title goes here</h3>\r\n	<table border="1" cellpadding="0" cellspacing="0" style="width:150px;float:right;"><caption style="border:solid 1px #000000;">\r\n			<strong>Table title</strong></caption>\r\n		<tbody><tr><td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n			</tr><tr><td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n			</tr><tr><td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n			</tr></tbody></table><p>\r\n		       </p>\r\n	<div class="tent-product">\r\n		<br />\r\n		                       \r\n		<div class="product-img">\r\n			<br />\r\n			                            <a href="" title="&lt;?php echo $value[''cat_title'' . LANG] ?&gt;"><br />\r\n			                                <img alt="&lt;?php echo $value[''cat_title'' . LANG] ?&gt;" src="" /><br />\r\n			                            </a><br />\r\n			                       </div>\r\n		<div class="clear">\r\n			 </div>\r\n		<p>\r\n			 </p>\r\n		<p>\r\n			                       </p>\r\n		<h2 class="title-pro">\r\n			<br />\r\n			                            <a href="" title="&lt;?php echo $value[''cat_title'' . LANG] ?&gt;"><br />\r\n			                                <strong></strong><br />\r\n			                            </a><br />\r\n			                       </h2>\r\n		<br />\r\n		                       \r\n		<p class="bton-pro">\r\n			<br />\r\n			                            <a class="bton-detail" href="" title="&lt;?php echo $value[''cat_title'' . LANG] ?&gt;"><br />\r\n			                                Chi tiết<br />\r\n			                            </a><br />\r\n			                            <a class="bton-order" href="order.html" title="ĐẶT HÀNG"><br />\r\n			                                ĐẶT HÀNG</a></p>\r\n		<a class="bton-order" href="order.html" title="ĐẶT HÀNG"> </a></div>\r\n	<a class="bton-order" href="order.html" title="ĐẶT HÀNG"> </a></div>\r\n', '', '', '', '', 0, 4, '', '', '', '', 0, 1, 0, 1, 8),
+(15, '2011-10-29 07:27:22', NULL, NULL, '', 'asdasd', '', '', '&lt;p&gt;\r\n	asdasd&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	asdasd&lt;/p&gt;\r\n', '', '', '', '', 0, 5, '', '', '', '', 0, 0, 0, 1, 7),
+(16, '2011-10-29 07:27:39', 'img5.jpg', NULL, '', 'asdas', '', '', '&lt;p&gt;\r\n	asdasd&lt;/p&gt;\r\n', '', '', '&lt;p&gt;\r\n	asdasd&lt;/p&gt;\r\n', '', '', '', '', 0, 6, '', '', '', '', 0, 0, 0, 1, 7);
 
 -- --------------------------------------------------------
 
@@ -593,6 +601,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_product_cat` (
   `cat_title` varchar(45) NOT NULL,
   `cat_titleen` varchar(45) DEFAULT NULL,
   `cat_titlefr` varchar(45) DEFAULT NULL,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) NOT NULL,
   `preview` text,
   `previewen` text,
   `previewfr` text,
@@ -609,11 +619,11 @@ CREATE TABLE IF NOT EXISTS `dos_module_product_cat` (
 -- Dumping data for table `dos_module_product_cat`
 --
 
-INSERT INTO `dos_module_product_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `pic_full`, `pic_desc`, `cat_title`, `cat_titleen`, `cat_titlefr`, `preview`, `previewen`, `previewfr`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_extra3`, `cat_extra4`, `cat_enable`) VALUES
-(6, 0, NULL, NULL, NULL, 'Danh mục', NULL, NULL, '<p>\r\n	teteset</p>\r\n', NULL, NULL, 1, NULL, NULL, NULL, NULL, 1),
-(7, 0, NULL, NULL, '', 'Danh mục 2', NULL, NULL, NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, 1),
-(8, 6, NULL, NULL, NULL, 'Danh mục con', NULL, NULL, '<p>\r\n	testsetestse</p>\r\n', NULL, NULL, 3, NULL, NULL, NULL, NULL, 1),
-(9, 0, 'img2.jpg', NULL, NULL, 'Danh mục', NULL, NULL, '<p>\r\n	test</p>\r\n', NULL, NULL, 4, NULL, NULL, NULL, NULL, 1);
+INSERT INTO `dos_module_product_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `pic_full`, `pic_desc`, `cat_title`, `cat_titleen`, `cat_titlefr`, `tag`, `description`, `preview`, `previewen`, `previewfr`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_extra3`, `cat_extra4`, `cat_enable`) VALUES
+(6, 0, NULL, NULL, NULL, 'Danh mục', NULL, NULL, '', '', '<p>\r\n	teteset</p>\r\n', NULL, NULL, 1, NULL, NULL, NULL, NULL, 1),
+(7, 0, NULL, NULL, '', 'Danh mục 2', NULL, NULL, '', '', NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, 1),
+(8, 6, NULL, NULL, NULL, 'Danh mục con', NULL, NULL, '', '', '<p>\r\n	testsetestse</p>\r\n', NULL, NULL, 3, NULL, NULL, NULL, NULL, 1),
+(9, 0, 'img2.jpg', NULL, NULL, 'Danh mục', NULL, NULL, '', '', '<p>\r\n	test</p>\r\n', NULL, NULL, 4, NULL, NULL, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -662,6 +672,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `content` text,
   `contenten` text,
   `contentfr` text,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) NOT NULL,
   `hits` int(11) DEFAULT '1',
   `posted_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `record_order` int(11) DEFAULT '1',
@@ -670,14 +682,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `hot` tinyint(1) NOT NULL DEFAULT '0',
   `enable` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
 
 --
 -- Dumping data for table `dos_module_services`
 --
 
-INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `titlefr`, `content`, `contenten`, `contentfr`, `hits`, `posted_date`, `record_order`, `extra_field1`, `extra_field2`, `hot`, `enable`) VALUES
-(29, 'abcde', '', '', '<p>\r\n	abcdeabcde</p>\r\n', '', '', 7, '2012-01-11 16:26:18', 1, '', '', 0, 1);
+INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `titlefr`, `content`, `contenten`, `contentfr`, `tag`, `description`, `hits`, `posted_date`, `record_order`, `extra_field1`, `extra_field2`, `hot`, `enable`) VALUES
+(29, 'abcdedd', '', '', '<p>\r\n	abcdeabcde</p>\r\n', '', '', 'abcdedd', '', 37, '2012-01-11 16:26:18', 1, '', '', 0, 1),
+(30, 'Dịch vụ cung cấp thư ký', '', '', '<p>\r\n	Tỷ phú Warren Buffett sẽ hát mừng năm mới TQ<br />\r\n	Nhà đầu tư huyền thoại thế giới Warren Buffett dự kiến sẽ góp mặt tại Lễ hội Mùa Xuân truyền thống của Trung Quốc trong một gala trực tuyến bằng một tiết mục âm nhạc.</p>\r\n<p>\r\n	Tôn vinh quốc gia, DN uy tín trên truyền thông quốc tế<br />\r\n	CEO Nokia phủ nhận tin ''bán mình'' cho Microsoft<br />\r\n	Ấn Độ: Mất một phần ba tỷ phú vì khủng hoảng<br />\r\n	Petrolimex: Đề nghị khởi tố nhân viên "rút ruột" xăng dầu<br />\r\n	Khởi kiện đòi lại thương hiệu c</p>\r\n', '<p>\r\n	EN</p>\r\n<p>\r\n	Tỷ phú Warren Buffett sẽ hát mừng năm mới TQ<br />\r\n	Nhà đầu tư huyền thoại thế giới Warren Buffett dự kiến sẽ góp mặt tại Lễ hội Mùa Xuân truyền thống của Trung Quốc trong một gala trực tuyến bằng một tiết mục âm nhạc.</p>\r\n<p>\r\n	Tôn vinh quốc gia, DN uy tín trên truyền thông quốc tế<br />\r\n	CEO Nokia phủ nhận tin ''bán mình'' cho Microsoft<br />\r\n	Ấn Độ: Mất một phần ba tỷ phú vì khủng hoảng<br />\r\n	Petrolimex: Đề nghị khởi tố nhân viên "rút ruột" xăng dầu<br />\r\n	Khởi kiện đòi lại thương hiệu c</p>\r\n', '<p>\r\n	KR</p>\r\n<p>\r\n	 </p>\r\n<p>\r\n	Tỷ phú Warren Buffett sẽ hát mừng năm mới TQ<br />\r\n	Nhà đầu tư huyền thoại thế giới Warren Buffett dự kiến sẽ góp mặt tại Lễ hội Mùa Xuân truyền thống của Trung Quốc trong một gala trực tuyến bằng một tiết mục âm nhạc.</p>\r\n<p>\r\n	Tôn vinh quốc gia, DN uy tín trên truyền thông quốc tế<br />\r\n	CEO Nokia phủ nhận tin ''bán mình'' cho Microsoft<br />\r\n	Ấn Độ: Mất một phần ba tỷ phú vì khủng hoảng<br />\r\n	Petrolimex: Đề nghị khởi tố nhân viên "rút ruột" xăng dầu<br />\r\n	Khởi kiện đòi lại thương hiệu c</p>\r\n', 'dich-vu-cung-cap-thu-ky', '', 6, '2012-02-02 16:56:53', 2, '', '', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -970,7 +983,7 @@ INSERT INTO `dos_sys_configs` (`config_name`, `config_value`, `config_choices`) 
 ('studies_width_thumb', '158', ''),
 ('sys_key', 'OE3GsQrrfmGbhzyh0MV/LC1tR3EaISrnIYVjq9+w2ZE=', ''),
 ('sys_num_pagerange', '5', ''),
-('sys_num_paging', '9', 'Phân trang'),
+('sys_num_paging', '1', 'Phân trang'),
 ('sys_size_upload', '5000', 'Kích cỡ upload'),
 ('video_height', '124', 'Video - Chiều cao'),
 ('video_height_cat_thumb', '124', 'Video - Danh mục - Thu nhỏ - Chiều cao'),
@@ -992,34 +1005,36 @@ CREATE TABLE IF NOT EXISTS `dos_sys_functions` (
   `function_load` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`function_id`),
   KEY `fk_dos_sys_functions_dos_sys_modules` (`model_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13934 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14046 ;
 
 --
 -- Dumping data for table `dos_sys_functions`
 --
 
 INSERT INTO `dos_sys_functions` (`function_id`, `model_name`, `model_load`, `action`, `varname`, `function_load`) VALUES
-(13913, 'news', 'News_Model_News', 'index', 'list_news_new', 'listItemsHot'),
-(13914, 'about', 'About_Model_About', 'index', 'menu_about', 'getListmenu'),
-(13915, 'about', 'About_Model_About', 'view', 'menu_about', 'getListmenu'),
-(13916, 'account', 'Webadmin_Model_Account', 'add', 'menu_account', 'getListmenu'),
-(13917, 'account', 'Webadmin_Model_Account', 'changepass', 'menu_account', 'getListmenu'),
-(13918, 'account', 'Webadmin_Model_Account', 'index', 'menu_account', 'getListmenu'),
-(13919, 'news', 'News_Model_NewsCat', 'cat', 'menu_news', 'getListmenu'),
-(13920, 'news', 'News_Model_NewsCat', 'index', 'menu_news', 'getListmenu'),
-(13921, 'news', 'News_Model_NewsCat', 'view', 'menu_news', 'getListmenu'),
-(13922, 'services', 'Services_Model_Services', 'index', 'menu_services', 'getListmenu'),
-(13923, 'services', 'Services_Model_Services', 'view', 'menu_services', 'getListmenu'),
-(13924, 'setup', 'Webadmin_Model_Setup', 'config', 'menu_setup', 'getListmenu'),
-(13925, 'setup', 'Webadmin_Model_Setup', 'function', 'menu_setup', 'getListmenu'),
-(13926, 'setup', 'Webadmin_Model_Setup', 'index', 'menu_setup', 'getListmenu'),
-(13927, 'setup', 'Webadmin_Model_Setup', 'lang', 'menu_setup', 'getListmenu'),
-(13928, 'setup', 'Webadmin_Model_Setup', 'menu', 'menu_setup', 'getListmenu'),
-(13929, 'setup', 'Webadmin_Model_Setup', 'title', 'menu_setup', 'getListmenu'),
-(13930, 'setup', 'Webadmin_Model_Setup', 'web', 'menu_setup', 'getListmenu'),
-(13931, 'tool', 'Webadmin_Model_Tool', 'analytics', 'menu_tool', 'getListmenu'),
-(13932, 'tool', 'Webadmin_Model_Tool', 'index', 'menu_tool', 'getListmenu'),
-(13933, 'tool', 'Webadmin_Model_Tool', 'seo', 'menu_tool', 'getListmenu');
+(14023, 'about', 'About_Model_About', 'index', 'menu_about', 'getListmenu'),
+(14024, 'about', 'About_Model_About', 'view', 'menu_about', 'getListmenu'),
+(14025, 'account', 'Webadmin_Model_Account', 'add', 'menu_account', 'getListmenu'),
+(14026, 'account', 'Webadmin_Model_Account', 'changepass', 'menu_account', 'getListmenu'),
+(14027, 'account', 'Webadmin_Model_Account', 'index', 'menu_account', 'getListmenu'),
+(14028, 'default', 'About_Model_About', 'index', 'menu_about_home', 'getHomeRecord'),
+(14029, 'news', 'News_Model_NewsCat', 'cat', 'menu_news', 'getListmenu'),
+(14030, 'news', 'News_Model_NewsCat', 'index', 'menu_news', 'getListmenu'),
+(14031, 'news', 'News_Model_News', 'index', 'list_news_new', 'listItemsHot'),
+(14032, 'news', 'News_Model_NewsCat', 'view', 'menu_news', 'getListmenu'),
+(14033, 'product', 'Product_Model_Product', 'index', 'menu_product_hot', 'listHotItem'),
+(14034, 'services', 'Services_Model_Services', 'index', 'menu_services', 'getListmenu'),
+(14035, 'services', 'Services_Model_Services', 'view', 'menu_services', 'getListmenu'),
+(14036, 'setup', 'Webadmin_Model_Setup', 'config', 'menu_setup', 'getListmenu'),
+(14037, 'setup', 'Webadmin_Model_Setup', 'function', 'menu_setup', 'getListmenu'),
+(14038, 'setup', 'Webadmin_Model_Setup', 'index', 'menu_setup', 'getListmenu'),
+(14039, 'setup', 'Webadmin_Model_Setup', 'lang', 'menu_setup', 'getListmenu'),
+(14040, 'setup', 'Webadmin_Model_Setup', 'menu', 'menu_setup', 'getListmenu'),
+(14041, 'setup', 'Webadmin_Model_Setup', 'title', 'menu_setup', 'getListmenu'),
+(14042, 'setup', 'Webadmin_Model_Setup', 'web', 'menu_setup', 'getListmenu'),
+(14043, 'tool', 'Webadmin_Model_Tool', 'analytics', 'menu_tool', 'getListmenu'),
+(14044, 'tool', 'Webadmin_Model_Tool', 'index', 'menu_tool', 'getListmenu'),
+(14045, 'tool', 'Webadmin_Model_Tool', 'seo', 'menu_tool', 'getListmenu');
 
 -- --------------------------------------------------------
 
@@ -1089,6 +1104,7 @@ CREATE TABLE IF NOT EXISTS `dos_sys_langs` (
 
 INSERT INTO `dos_sys_langs` (`lang_name`, `lang`, `langen`, `langfr`) VALUES
 ('about', 'Giới thiệu', 'Introduction', '소개'),
+('about_coperation', 'GIỚI THIỆU TẬP ĐOÀN', '', ''),
 ('about_extra1', 'Thông tin phụ 1', '', ''),
 ('about_extra2', 'Thông tin phụ 2', '', ''),
 ('action', 'Thao tác', '', ''),
@@ -1113,7 +1129,7 @@ INSERT INTO `dos_sys_langs` (`lang_name`, `lang`, `langen`, `langfr`) VALUES
 ('catparent', 'Phân loại cha', '', ''),
 ('conference', 'Tiệc &amp; Hội nghị', '', ''),
 ('confirmdel', 'Bạn có chắc chắn xóa', '', ''),
-('contact', 'Liên hệ', '', ''),
+('contact', 'Liên hệ', 'Contact', ''),
 ('contact_msg', 'Quý khách có thể liên hệ với chúng tôi bằng cách điền đầy đủ thông tin vào mẫu sau:', '', ''),
 ('contact_success', 'Liên hệ thành công', '', ''),
 ('copyright', 'Copyright © 2011 by Azweb.vn. All rights reserved', '', ''),
@@ -1123,6 +1139,7 @@ INSERT INTO `dos_sys_langs` (`lang_name`, `lang`, `langen`, `langfr`) VALUES
 ('counter_total', 'Tổng số lượt truy cập', '', ''),
 ('createdate', 'Ngày tạo', '', ''),
 ('default', 'Trang chủ', '', ''),
+('detail', 'Chi tiết', 'Detail', ''),
 ('developed', 'Developed by', '', ''),
 ('end', 'Cuối cùng', '', ''),
 ('experiences', 'Kinh nghiệm', '', ''),
@@ -1267,12 +1284,12 @@ CREATE TABLE IF NOT EXISTS `dos_sys_modules` (
 --
 
 INSERT INTO `dos_sys_modules` (`moduleid`, `module`, `moduleen`, `modulefr`, `url`, `target`, `position`) VALUES
-('about', 'Giới thiệu', '', '', 'about', '', 1),
-('contact', 'Liên hệ', '', '', 'contact', '', 5),
-('default', 'Trang chủ', '', '', 'default', '', 0),
-('news', 'Tin tức', '', '', 'news', '', 4),
-('product', 'Sản phẩm', '', '', 'product', '', 2),
-('services', 'Dịch vụ', '', '', 'services', '', 3);
+('about', 'Giới thiệu', '', '', 'gioi-thieu', '', 1),
+('contact', 'Liên hệ', '', '', 'lien-he', '', 5),
+('default', 'Trang chủ', '', '', 'trang-chu', '', 0),
+('news', 'Tin tức', '', '', 'tin-tuc', '', 4),
+('product', 'Sản phẩm', '', '', 'san-pham', '', 2),
+('services', 'Dịch vụ', '', '', 'dich-vu', '', 3);
 
 -- --------------------------------------------------------
 
@@ -1310,8 +1327,7 @@ CREATE TABLE IF NOT EXISTS `dos_sys_statistics` (
 --
 
 INSERT INTO `dos_sys_statistics` (`session_id`, `time`) VALUES
-('0imy7znut', 1326414724),
-('7a2jqg6r1', 1326414724);
+('0cbtrd27p', 1328260647);
 
 -- --------------------------------------------------------
 
@@ -1362,10 +1378,10 @@ INSERT INTO `dos_sys_webs` (`web_name`, `web_value`) VALUES
 ('description', 'Web - Dịch vụ - Azweb.vn'),
 ('email_subject', 'Liên hệ từ website'),
 ('keywords', 'Web - Dịch vụ - Azweb.vn'),
-('timestamp_today', '1326387600'),
+('timestamp_today', '1328202000'),
 ('titleweb', 'Azweb.vn'),
-('total_visit', '116'),
-('total_visit_today', '3'),
+('total_visit', '137'),
+('total_visit_today', '2'),
 ('type', '1');
 
 --

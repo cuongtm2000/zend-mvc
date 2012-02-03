@@ -22,7 +22,7 @@ class Product_Model_ProductCat extends Zend_Db_Table {
     // Front end - Get danh mục sản phẩm
     public function getListmenu() {
         $select = $this->select()->from($this->_name, array('cat_id', 
-                'cat_title' . LANG, 'cat_parent_id', 'pic_thumb', 'cat_extra1'))
+                'cat_title' . LANG, 'cat_parent_id', 'pic_thumb', 'cat_extra1', 'tag'))
             ->where('cat_enable = 1')
             ->order('cat_order ASC');
         return $this->fetchAll($select)->toArray();
