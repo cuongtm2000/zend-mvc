@@ -6,16 +6,40 @@
     </div> <!--End frame tent right-->
 <?php endif;?>
 <?php
-if (DEBUG_MODE)
-    var_dump($this->menu_about_home);?>
-    
-<div class="all-product">
-    <h1 class="title-all-pro"><span>SẢN PHẨM NỔI BẬT</span></h1>
-    <div class="product">
-        <div class="tent-product">
-            <div class="product-img"><a href="product-info.html" title=""><img src="images/pro-img.jpg" alt="Product" /></a></div><div class="clear"></div>
-            <h2 class="title-pro"><a href="product-info.html" title="">Thông tin tóm tắt sản phẩm 1</a></h2>
-            <p class="bton-pro"><a href="product-info.html" title="CHI TIẾT" class="bton-detail">CHI TIẾT</a> <a href="order.html" title="ĐẶT HÀNG" class="bton-order">ĐẶT HÀNG</a> </p>
-        </div>
+if (DEBUG_MODE)    var_dump($this->menu_about_home);?>
+
+<?php if (is_array($this->menu_product_special)): ?>
+    <div class="all-product">
+        <h1 class="title-all-pro"><span>SẢN PHẨM NỔI BẬT</span></h1>
+        <?php foreach ($this->menu_product_special as $value): ?>
+            <?php
+            $picthumb = ($value['pic_thumb'] != '') ? '/public/userfiles/images/' . $this->module . '/' . $value['pic_thumb'] : TEMPLATE . '/images/no-images.jpg';
+            ?>
+            <div class="product">
+                <div class="tent-product">
+                    <div class="product-img">
+                        <a href="<?php echo $this->baseUrl() ?>/san-pham/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title' . LANG] ?>">
+                            <img src="<?php echo $this->baseUrl() . $picthumb ?>" alt="<?php echo $value['title' . LANG] ?>" />
+                        </a>
+                    </div><div class="clear"></div>
+
+                    <h2 class="title-pro">
+                        <a href="<?php echo $this->baseUrl() ?>/san-pham/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title' . LANG] ?>">
+                            <strong><?php echo $value['title' . LANG] ?></strong>
+                        </a>
+                    </h2>
+                    <p class="bton-pro">
+                        <a class="bton-detail" href="<?php echo $this->baseUrl() ?>/san-pham/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title' . LANG] ?>">                             
+                            <?php echo $this->lang['detail'] ?>
+                        </a> 
+
+                        <a href="<?php echo $this->baseUrl() . '/' . LANGURL ?>lien-he" title="<?php echo $this->lang['contact'] ?>" class="bton-order">
+                            <?php echo $this->lang['contact'] ?>
+                        </a> 
+                    </p>
+                </div>
+            </div>
+
+        <?php endforeach; ?>
     </div>
-</div> <!--End all product-->
+<?php endif; ?>

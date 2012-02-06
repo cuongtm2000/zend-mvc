@@ -34,6 +34,13 @@ class GLT_Controller_Action extends Zend_Controller_Action {
         //product
         $product = new Product_Model_ProductCat();
         $this->view->menu_product = $product->getListmenu();
+        $pro = new Product_Model_Product();
+        $this->view->menu_product_tophit = $pro->listTopHitView();
+        
+        //news
+        $news=new News_Model_News();
+        $this->view->menu_news_tophit=$news->listTopHits();
+        
         //contact home
         $contact = new Contact_Model_Contact();
         $this->view->contact_home = $contact->getHomeRecord();

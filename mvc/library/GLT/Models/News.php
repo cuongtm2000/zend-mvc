@@ -17,11 +17,11 @@ class GLT_Models_News extends Zend_Db_Table {
 
     //Front end - Get bản tin mới nhất
     public function listTopHits() {
-        $select = $this->select()->from($this->_name, array('record_id', 'title' . LANG))
+        $select = $this->select()->from($this->_name, array('record_id', 'title' . LANG, 'tag'))
                 ->where('enable = 1')
                 ->order('hits DESC')
                 ->order('postdate DESC')
-                ->limit(7);
+                ->limit(4);
         return $this->fetchAll($select)->toArray();
     }
 
