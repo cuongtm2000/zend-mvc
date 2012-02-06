@@ -1,0 +1,1191 @@
+2012/02/06 02:40:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "php".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('php')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/php
+2012/02/06 02:48:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 02:48:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 02:48:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 02:48:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 02:48:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 02:53:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 02:53:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 02:54:57 [error] [exception.CException] exception 'CException' with message 'AdministratorModule and its behaviors do not have a method or closure named "redirect".' in C:\xampp\htdocs\framework\base\CComponent.php:269
+Stack trace:
+#0 C:\xampp\htdocs\protected\modules\administrator\AdministratorModule.php(16): CComponent->__call('redirect', Array)
+#1 C:\xampp\htdocs\protected\modules\administrator\AdministratorModule.php(16): AdministratorModule->redirect('administrator/l...')
+#2 C:\xampp\htdocs\framework\base\CModule.php(73): AdministratorModule->init()
+#3 C:\xampp\htdocs\framework\YiiBase.php(211): CModule->__construct('administrator', NULL, Array)
+#4 C:\xampp\htdocs\framework\base\CModule.php(266): YiiBase::createComponent('administrator.A...', 'administrator', NULL, Array)
+#5 C:\xampp\htdocs\framework\web\CWebApplication.php(332): CModule->getModule('administrator')
+#6 C:\xampp\htdocs\framework\web\CWebApplication.php(271): CWebApplication->createController('administrator')
+#7 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('administrator')
+#8 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/administrator
+2012/02/06 02:54:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 02:56:05 [error] [exception.CException] exception 'CException' with message 'AdministratorModule and its behaviors do not have a method or closure named "redirect".' in C:\xampp\htdocs\framework\base\CComponent.php:269
+Stack trace:
+#0 C:\xampp\htdocs\protected\modules\administrator\AdministratorModule.php(16): CComponent->__call('redirect', Array)
+#1 C:\xampp\htdocs\protected\modules\administrator\AdministratorModule.php(16): AdministratorModule->redirect('administrator/l...')
+#2 C:\xampp\htdocs\framework\base\CModule.php(73): AdministratorModule->init()
+#3 C:\xampp\htdocs\framework\YiiBase.php(211): CModule->__construct('administrator', NULL, Array)
+#4 C:\xampp\htdocs\framework\base\CModule.php(266): YiiBase::createComponent('administrator.A...', 'administrator', NULL, Array)
+#5 C:\xampp\htdocs\framework\web\CWebApplication.php(332): CModule->getModule('administrator')
+#6 C:\xampp\htdocs\framework\web\CWebApplication.php(271): CWebApplication->createController('administrator')
+#7 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('administrator')
+#8 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/administrator
+2012/02/06 02:56:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 02:57:02 [error] [exception.CException] exception 'CException' with message 'Property "AdministratorModule.loginUrl" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\xampp\htdocs\protected\modules\administrator\AdministratorModule.php(16): CComponent->__set('loginUrl', 'adminnisa')
+#1 C:\xampp\htdocs\framework\base\CModule.php(73): AdministratorModule->init()
+#2 C:\xampp\htdocs\framework\YiiBase.php(211): CModule->__construct('administrator', NULL, Array)
+#3 C:\xampp\htdocs\framework\base\CModule.php(266): YiiBase::createComponent('administrator.A...', 'administrator', NULL, Array)
+#4 C:\xampp\htdocs\framework\web\CWebApplication.php(332): CModule->getModule('administrator')
+#5 C:\xampp\htdocs\framework\web\CWebApplication.php(271): CWebApplication->createController('administrator')
+#6 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('administrator')
+#7 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\index.php(13): CApplication->run()
+#9 {main} REQUEST_URI=/administrator
+2012/02/06 02:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 02:57:25 [error] [exception.CException] exception 'CException' with message 'Property "AdministratorModule.loginUrl" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\xampp\htdocs\protected\modules\administrator\AdministratorModule.php(16): CComponent->__set('loginUrl', 'adminnisa')
+#1 C:\xampp\htdocs\framework\base\CModule.php(73): AdministratorModule->init()
+#2 C:\xampp\htdocs\framework\YiiBase.php(211): CModule->__construct('administrator', NULL, Array)
+#3 C:\xampp\htdocs\framework\base\CModule.php(266): YiiBase::createComponent('administrator.A...', 'administrator', NULL, Array)
+#4 C:\xampp\htdocs\framework\web\CWebApplication.php(332): CModule->getModule('administrator')
+#5 C:\xampp\htdocs\framework\web\CWebApplication.php(271): CWebApplication->createController('administrator')
+#6 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('administrator')
+#7 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\index.php(13): CApplication->run()
+#9 {main} REQUEST_URI=/administrator
+2012/02/06 02:57:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 03:05:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 03:06:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('css/screen.css')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/css/screen.css
+2012/02/06 03:06:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/main.css".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('css/main.css')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/css/main.css
+2012/02/06 03:06:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/form.css".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('css/form.css')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/css/form.css
+2012/02/06 03:06:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/print.css".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('css/print.css')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/css/print.css
+2012/02/06 03:06:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 03:06:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 03:06:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/main.css".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('css/main.css')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/css/main.css
+2012/02/06 03:06:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/form.css".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('css/form.css')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/css/form.css
+2012/02/06 03:06:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('css/screen.css')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/css/screen.css
+2012/02/06 03:06:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/print.css".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('css/print.css')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/css/print.css
+2012/02/06 03:06:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 03:06:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/print.css".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('css/print.css')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/css/print.css
+2012/02/06 03:09:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 03:09:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/main.css".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('css/main.css')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/css/main.css
+2012/02/06 03:09:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('css/screen.css')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/css/screen.css
+2012/02/06 03:09:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/form.css".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('css/form.css')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/css/form.css
+2012/02/06 03:09:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/print.css".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('css/print.css')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/css/print.css
+2012/02/06 03:09:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 03:09:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 03:10:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 03:10:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 03:10:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/js/ddaccordion.effect.js".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/js/ddaccordion.effect.js
+2012/02/06 03:10:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/js/ddaccordion.js".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/js/ddaccordion.js
+2012/02/06 03:10:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/vn.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/vn.gif
+2012/02/06 03:10:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/en.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/en.gif
+2012/02/06 03:10:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 03:11:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/js/ddaccordion.js".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/js/ddaccordion.js
+2012/02/06 03:11:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/js/ddaccordion.effect.js".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/js/ddaccordion.effect.js
+2012/02/06 03:11:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/en.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/en.gif
+2012/02/06 03:11:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/vn.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/vn.gif
+2012/02/06 03:11:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 03:17:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 03:18:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 03:20:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 03:21:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/js/ddaccordion.js".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/js/ddaccordion.js
+2012/02/06 03:21:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/js/ddaccordion.effect.js".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/js/ddaccordion.effect.js
+2012/02/06 03:21:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 03:21:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/vn.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/vn.gif
+2012/02/06 03:21:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/en.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/en.gif
+2012/02/06 03:29:14 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\framework\web\auth\CAccessControlFilter.php:301)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter()
+#1 C:\xampp\htdocs\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#2 C:\xampp\htdocs\framework\web\filters\CInlineFilter.php(59): DefaultController->filterAccessControl()
+#3 C:\xampp\htdocs\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#4 C:\xampp\htdocs\framework\web\CController.php(283): CFilterChain->run()
+#5 C:\xampp\htdocs\framework\web\CController.php(257): DefaultController->runActionWithFilters()
+#6 C:\xampp\htdocs\framework\web\CWebApplication.php(277): DefaultController->run()
+#7 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#8 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/administrator
+in C:\xampp\htdocs\index.php (13)
+2012/02/06 03:52:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/060212/images/tiny.jpg".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/060212/i...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/060212/images/tiny.jpg
+2012/02/06 03:56:48 [error] [php] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists (C:\xampp\htdocs\protected\models\Username.php:169)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): SiteController->actionsignup()
+#1 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\framework\web\CController.php(278): SiteController->runAction()
+#3 C:\xampp\htdocs\framework\web\CController.php(257): SiteController->runActionWithFilters()
+#4 C:\xampp\htdocs\framework\web\CWebApplication.php(277): SiteController->run()
+#5 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#6 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/site/signup
+in C:\xampp\htdocs\protected\models\Username.php (169)
+in C:\xampp\htdocs\protected\controllers\SiteController.php (57)
+in C:\xampp\htdocs\index.php (13)
+2012/02/06 03:56:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 03:57:35 [error] [exception.CException] exception 'CException' with message 'DefaultController cannot find the requested view "060212/index".' in C:\xampp\htdocs\framework\web\CController.php:875
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(779): CController->renderPartial('060212/index', NULL, true)
+#1 C:\xampp\htdocs\protected\modules\default\controllers\DefaultController.php(5): CController->render('060212/index')
+#2 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\framework\web\CWebApplication.php(277): CController->run('')
+#7 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('default/default')
+#8 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/
+2012/02/06 04:07:26 [error] [php] Undefined index: banner_width (C:\xampp\htdocs\themes\060212\views\layouts\main.php:20)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(781): DefaultController->renderFile()
+#1 C:\xampp\htdocs\protected\modules\default\controllers\DefaultController.php(5): DefaultController->render()
+#2 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\framework\web\CController.php(278): DefaultController->runAction()
+#5 C:\xampp\htdocs\framework\web\CController.php(257): DefaultController->runActionWithFilters()
+#6 C:\xampp\htdocs\framework\web\CWebApplication.php(277): DefaultController->run()
+#7 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#8 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\xampp\htdocs\themes\060212\views\layouts\main.php (20)
+in C:\xampp\htdocs\protected\modules\default\controllers\DefaultController.php (5)
+in C:\xampp\htdocs\index.php (13)
+2012/02/06 04:19:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 04:19:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 04:19:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 04:20:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 04:20:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 04:23:53 [error] [php] Undefined index: banner_width (C:\xampp\htdocs\themes\111120\views\layouts\main.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(781): DefaultController->renderFile()
+#1 C:\xampp\htdocs\protected\modules\default\controllers\DefaultController.php(5): DefaultController->render()
+#2 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\htdocs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\framework\web\CController.php(278): DefaultController->runAction()
+#5 C:\xampp\htdocs\framework\web\CController.php(257): DefaultController->runActionWithFilters()
+#6 C:\xampp\htdocs\framework\web\CWebApplication.php(277): DefaultController->run()
+#7 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#8 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\xampp\htdocs\themes\111120\views\layouts\main.php (23)
+in C:\xampp\htdocs\protected\modules\default\controllers\DefaultController.php (5)
+in C:\xampp\htdocs\index.php (13)
+2012/02/06 04:52:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/en.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/en.gif
+2012/02/06 04:52:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/js/ddaccordion.js".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/js/ddaccordion.js
+2012/02/06 04:52:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/js/ddaccordion.effect.js".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/js/ddaccordion.effect.js
+2012/02/06 04:52:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/vn.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/vn.gif
+2012/02/06 04:52:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/en.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/en.gif
+2012/02/06 04:52:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 04:52:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/js/ddaccordion.js".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/js/ddaccordion.js
+2012/02/06 04:52:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/vn.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/vn.gif
+2012/02/06 04:52:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/js/ddaccordion.effect.js".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/js/ddaccordion.effect.js
+2012/02/06 04:52:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/en.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/en.gif
+2012/02/06 04:52:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 04:52:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/vn.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/vn.gif
+2012/02/06 06:50:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=0&downloaded=36700160&left=456323936&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 06:51:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=0&downloaded=36700160&left=456635232&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 06:54:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=0&downloaded=85458944&left=408400736&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 06:54:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=0&downloaded=85458944&left=408105824&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 07:25:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=0&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 07:25:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=0&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 07:35:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=0&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 07:35:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=0&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=fe80%3a%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 07:59:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=23134208&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 07:59:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=23134208&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 08:09:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=25575424&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 08:09:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=25575424&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 08:20:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 08:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/js/ddaccordion.effect.js".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/js/ddaccordion.effect.js
+2012/02/06 08:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/js/ddaccordion.js".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/js/ddaccordion.js
+2012/02/06 08:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/vn.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/vn.gif
+2012/02/06 08:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/en.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/en.gif
+2012/02/06 08:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 08:34:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=43319296&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 08:34:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=43319296&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 08:44:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=46170112&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 08:44:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=46170112&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 09:08:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=47841280&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 09:08:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=47874048&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 09:19:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=49594368&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 09:19:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=49594368&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 09:31:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/js/ddaccordion.js".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/js/ddaccordion.js
+2012/02/06 09:31:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/js/ddaccordion.effect.js".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/js/ddaccordion.effect.js
+2012/02/06 09:31:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/en.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/en.gif
+2012/02/06 09:31:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/vn.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/vn.gif
+2012/02/06 09:31:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:31:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/en.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/en.gif
+2012/02/06 09:31:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/vn.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/vn.gif
+2012/02/06 09:31:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:32:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:32:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/en.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/en.gif
+2012/02/06 09:32:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/vn.gif".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/vn.gif
+2012/02/06 09:32:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('images/logo.png')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/images/logo.png
+2012/02/06 09:32:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/dosvn.css".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('css/dosvn.css')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/css/dosvn.css
+2012/02/06 09:32:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 09:34:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('images/logo.png')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/images/logo.png
+2012/02/06 09:34:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:34:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('images/logo.png')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/images/logo.png
+2012/02/06 09:34:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:34:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 09:36:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('images/logo.png')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/images/logo.png
+2012/02/06 09:36:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:36:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:36:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('images/logo.png')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/images/logo.png
+2012/02/06 09:37:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('images/logo.png')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/images/logo.png
+2012/02/06 09:37:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:37:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:37:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:43:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=54657024&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 09:43:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=54657024&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 09:43:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:43:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:44:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:47:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 09:47:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 09:47:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 09:47:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 09:47:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 09:47:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:47:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2012/02/06 09:47:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:47:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:47:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:48:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:48:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:49:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:50:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:50:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:50:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:51:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:51:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:51:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:51:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:52:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:53:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:53:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:53:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=54886400&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 09:53:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=54886400&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 09:54:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:54:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:55:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:55:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:55:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 09:56:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 10:00:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 10:00:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 10:00:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 10:01:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 10:13:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 10:18:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=54919168&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 10:18:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=54919168&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 10:22:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 10:28:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=54919168&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 10:28:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=54919168&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 10:52:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=54919168&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 10:52:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "announce".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('announce')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/announce?info_hash=B%7bN%fc%d6%d1%cb%9d%b7%91%c8%bfVW%2c%3ck%13%d0%e6&peer_id=-UT3120-Vh%f5%14%0bs%ac%10%e4%29%85%f2&port=10576&uploaded=54919168&downloaded=500839264&left=0&corrupt=0&key=AB3E0639&event=started&numwant=200&compact=1&no_peer_id=1&ipv6=2001%3a0%3a4137%3a9e76%3a1c5f%3a28d5%3ad588%3a2333
+2012/02/06 10:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-green/images/arrow.png".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('themes/admin-gr...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/themes/admin-green/images/arrow.png
+2012/02/06 10:58:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "exist".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('exist')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/exist
+2012/02/06 10:58:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "exist".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('exist')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/exist
+2012/02/06 10:58:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "exist".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('exist')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/exist
+2012/02/06 11:15:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request ".well-known/autoconfig/mail/config-v1.1.xml".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('.well-known/aut...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/.well-known/autoconfig/mail/config-v1.1.xml?emailaddress=domain%40dos.vn
+2012/02/06 11:23:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request ".well-known/autoconfig/mail/config-v1.1.xml".' in C:\xampp\htdocs\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CWebApplication.php(136): CWebApplication->runController('.well-known/aut...')
+#1 C:\xampp\htdocs\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/.well-known/autoconfig/mail/config-v1.1.xml?emailaddress=info%40dos.vn
