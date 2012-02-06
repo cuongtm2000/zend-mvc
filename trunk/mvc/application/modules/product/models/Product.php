@@ -17,67 +17,43 @@ class Product_Model_Product extends Zend_Db_Table {
 
     //Front end - Danh sách bản tin Hot=1
     public function listHotItem() {
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('record_id', 'postdate', 'pic_thumb', 'title' . LANG, 'hits'))
+        $select = $this->select()
+                ->from($this->_name, array('record_id', 'postdate', 'pic_thumb', 'title' . LANG, 'hits', 'tag'))
                 ->where('hot=1')
                 ->where('enable=1')
                 ->order('record_order DESC');
-        $result = $db->query($select)->fetchAll();
-        if (count($result) > 0) {
-            return $db->query($select)->fetchAll();
-        } else {
-            $lang = Zend_Registry::get("lang");
-            return $lang['norecord'];
-        }
+        return $this->fetchAll($select)->toArray();
     }
 
     //Front end - Danh sách bản tin đặc biệt
     public function listSpecials() {
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('record_id', 'postdate', 'pic_thumb', 'title' . LANG, 'preview' . LANG, 'unit'))
+        $select = $this->select()
+                ->from($this->_name, array('record_id', 'postdate', 'pic_thumb', 'title' . LANG, 'preview' . LANG, 'unit', 'tag'))
                 ->where('specials=1')
                 ->where('enable=1')
-                ->order('record_order DESC');
-        $result = $db->query($select)->fetchAll();
-        if (count($result) > 0) {
-            return $db->query($select)->fetchAll();
-        } else {
-            $lang = Zend_Registry::get("lang");
-            return $lang['norecord'];
-        }
+                ->order('record_order DESC')
+                ->limit(4);
+        return $this->fetchAll($select)->toArray();
     }
 
     //Front end - Danh sách bản tin nhiều người xem
     public function listTopHitView() {
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('record_id', 'postdate', 'pic_thumb', 'title' . LANG))
+        $select = $this->select()
+                ->from($this->_name, array('record_id', 'postdate', 'pic_thumb', 'title' . LANG, 'tag'))
                 ->where('enable=1')
                 ->order('hits DESC')
-                ->limitPage(0, 10);
-        ;
-        $result = $db->query($select)->fetchAll();
-        if (count($result) > 0) {
-            return $db->query($select)->fetchAll();
-        } else {
-            $lang = Zend_Registry::get("lang");
-            return $lang['norecord'];
-        }
+                ->limit(4);
+        return $this->fetchAll($select)->toArray();
     }
 
     //Front end - Danh sách bản tin mới nhất
     public function listItemNew() {
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('record_id', 'postdate', 'pic_thumb', 'title' . LANG, 'preview' . LANG, 'unit'))
+        $select = $this->select()
+                ->from($this->_name, array('record_id', 'postdate', 'pic_thumb', 'title' . LANG, 'preview' . LANG, 'unit', 'tag'))
                 ->where('enable=1')
                 ->order('record_order DESC')
                 ->limitPage(0, 6);
-        $result = $db->query($select)->fetchAll();
-        if (count($result) > 0) {
-            return $db->query($select)->fetchAll();
-        } else {
-            $lang = Zend_Registry::get("lang");
-            return $lang['norecord'];
-        }
+        return $this->fetchAll($select)->toArray();
     }
 
     //Back end - List Item admin
@@ -89,32 +65,23 @@ class Product_Model_Product extends Zend_Db_Table {
             $rowCount = $paginator['itemCountPerPage'];
         }
 
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from(array('p' => $this->_name), array('record_id', 'postdate', 'title' . LANG, 'hits', 'record_order', 'hot', 'enable'))
+        $select = $this->_db->select()->from(array('p' => $this->_name), array('record_id', 'postdate', 'title' . LANG, 'hits', 'record_order', 'hot', 'enable'))
                 ->join(array('c' => $this->_name . '_cat'), 'p.dos_module_product_cat_cat_id = c.cat_id', array('cat_title' . LANG))
                 ->order('record_order DESC')
                 ->limitPage($page, $rowCount);
-        $result = $db->query($select)->fetchAll();
-        if (count($result) > 0) {
-            return $db->query($select)->fetchAll();
-        } else {
-            $lang = Zend_Registry::get("lang");
-            return $lang['norecord'];
-        }
+        return $this->_db->query($select)->fetchAll();
     }
 
     //Back end - Đếm số mẩu tin Danh mục
     public function countItembyCatID($cid) {
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('COUNT(record_id) AS num'))
-                ->where('dos_module_product_cat_cat_id = ?', $cid);
-        return $db->fetchOne($select);
+        $select = $this->_db->select()->from($this->_name, array('COUNT(record_id)'))
+                ->where('dos_module_product_cat_cat_id = ?', $this->getCatIDByTag($cid));
+        return $this->_db->fetchOne($select);
     }
 
     public function countItemadmin() {
-        $db = $this->getAdapter();
-        $select = $db->select()->from($this->_name, array('count(record_id) as totalItem'));
-        return $db->fetchOne($select);
+        $select = $this->_db->select()->from($this->_name, array('count(record_id)'));
+        return $this->_db->fetchOne($select);
     }
 
     public function activeItem($data = NULL) {
@@ -219,7 +186,30 @@ class Product_Model_Product extends Zend_Db_Table {
         $select = $db->select()->from($this->_name, array('max(record_order) as max'));
         $max_record = $db->fetchOne($select) + 1;
 
-        $bind = array('pic_thumb' => $file_thumb, 'pic_full' => $file_full, 'pic_desc' => implode("|", $file_desc_multi), 'title' => $this->_xss->purify($data['title']), 'titleen' => $this->_xss->purify($data['titleen']), 'titlefr' => $this->_xss->purify($data['titlefr']), 'preview' => $this->_xss->purify($data['preview']), 'previewen' => $this->_xss->purify($data['previewen']), 'previewfr' => $this->_xss->purify($data['previewfr']), 'detail' => $this->_xss->purify($data['detail']), 'detailen' => $this->_xss->purify($data['detailen']), 'detailfr' => $this->_xss->purify($data['detailfr']), 'record_order' => $max_record, 'extra_field1' => $this->_xss->purify($data['extra1']), 'extra_field2' => $this->_xss->purify($data['extra2']), 'extra_field3' => $this->_xss->purify($data['extra3']), 'extra_field4' => $this->_xss->purify($data['extra4']), 'unit' => $this->_xss->purify($data['unit']), 'hot' => $this->_xss->purify($data['hot']), 'specials' => $this->_xss->purify($data['specials']), 'enable' => $this->_xss->purify($data['active']), 'dos_module_product_cat_cat_id' => $this->_xss->purify($data['parentcat']));
+        $bind = array('pic_thumb' => $file_thumb,
+            'pic_full' => $file_full,
+            'pic_desc' => implode("|", $file_desc_multi),
+            'title' => $this->_xss->purify($data['title']),
+            'titleen' => $this->_xss->purify($data['titleen']),
+            'titlefr' => $this->_xss->purify($data['titlefr']),
+            'preview' => $this->_xss->purify($data['preview']),
+            'previewen' => $this->_xss->purify($data['previewen']),
+            'previewfr' => $this->_xss->purify($data['previewfr']),
+            'detail' => $this->_xss->purify($data['detail']),
+            'detailen' => $this->_xss->purify($data['detailen']),
+            'detailfr' => $this->_xss->purify($data['detailfr']),
+            'tag' => $this->_xss->purify($data['tag']),
+            'description' => $this->_xss->purify($data['description']),
+            'record_order' => $max_record,
+            'extra_field1' => $this->_xss->purify($data['extra1']),
+            'extra_field2' => $this->_xss->purify($data['extra2']),
+            'extra_field3' => $this->_xss->purify($data['extra3']),
+            'extra_field4' => $this->_xss->purify($data['extra4']),
+            'unit' => $this->_xss->purify($data['unit']),
+            'hot' => $this->_xss->purify($data['hot']),
+            'specials' => $this->_xss->purify($data['specials']),
+            'enable' => $this->_xss->purify($data['active']),
+            'dos_module_product_cat_cat_id' => $this->_xss->purify($data['parentcat']));
         $this->insert($bind);
     }
 
@@ -294,7 +284,29 @@ class Product_Model_Product extends Zend_Db_Table {
         }
 
         $where = 'record_id = ' . $data['id'];
-        $data = array('pic_thumb' => $file_thumb, 'pic_full' => $file_full, 'pic_desc' => implode("|", $file_upload_new), 'title' => $this->_xss->purify($data['title']), 'titleen' => $this->_xss->purify($data['titleen']), 'titlefr' => $this->_xss->purify($data['titlefr']), 'preview' => $this->_xss->purify($data['preview']), 'previewen' => $this->_xss->purify($data['previewen']), 'previewfr' => $this->_xss->purify($data['previewfr']), 'detail' => $this->_xss->purify($data['detail']), 'detailen' => $this->_xss->purify($data['detailen']), 'detailfr' => $this->_xss->purify($data['detailfr']), 'extra_field1' => $this->_xss->purify($data['extra1']), 'extra_field2' => $this->_xss->purify($data['extra2']), 'extra_field3' => $this->_xss->purify($data['extra3']), 'extra_field4' => $this->_xss->purify($data['extra4']), 'unit' => $this->_xss->purify($data['unit']), 'hot' => $this->_xss->purify($data['hot']), 'specials' => $this->_xss->purify($data['specials']), 'enable' => $this->_xss->purify($data['active']), 'dos_module_product_cat_cat_id' => $this->_xss->purify($data['parentcat']));
+        $data = array('pic_thumb' => $file_thumb,
+            'pic_full' => $file_full,
+            'pic_desc' => implode("|", $file_upload_new),
+            'title' => $this->_xss->purify($data['title']),
+            'titleen' => $this->_xss->purify($data['titleen']),
+            'titlefr' => $this->_xss->purify($data['titlefr']),
+            'preview' => $this->_xss->purify($data['preview']),
+            'previewen' => $this->_xss->purify($data['previewen']),
+            'previewfr' => $this->_xss->purify($data['previewfr']),
+            'detail' => $this->_xss->purify($data['detail']),
+            'detailen' => $this->_xss->purify($data['detailen']),
+            'detailfr' => $this->_xss->purify($data['detailfr']),
+            'tag' => $this->_xss->purify($data['tag']),
+            'description' => $this->_xss->purify($data['description']),
+            'extra_field1' => $this->_xss->purify($data['extra1']),
+            'extra_field2' => $this->_xss->purify($data['extra2']),
+            'extra_field3' => $this->_xss->purify($data['extra3']),
+            'extra_field4' => $this->_xss->purify($data['extra4']),
+            'unit' => $this->_xss->purify($data['unit']),
+            'hot' => $this->_xss->purify($data['hot']),
+            'specials' => $this->_xss->purify($data['specials']),
+            'enable' => $this->_xss->purify($data['active']),
+            'dos_module_product_cat_cat_id' => $this->_xss->purify($data['parentcat']));
         $this->update($data, $where);
     }
 
@@ -314,42 +326,42 @@ class Product_Model_Product extends Zend_Db_Table {
             $rowCount = $paginator['itemCountPerPage'];
         }
 
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'title' . LANG, 'preview' . LANG, 'unit'))
-                ->where('dos_module_product_cat_cat_id =?', $data['id'])
+        $select = $this->select()
+                ->from($this->_name, array('record_id', 'pic_thumb', 'title' . LANG, 'preview' . LANG, 'unit', 'tag'))
+                ->where('dos_module_product_cat_cat_id =?', $this->getCatIDByTag($data['id']))
                 ->where('enable = 1')
                 ->limitPage($page, $rowCount);
-        $result = $db->query($select)->fetchAll();
+        return $this->fetchAll($select)->toArray();
+    }
 
-        if (count($result) > 0) {
-            return $result;
-        } else {
-            $lang = Zend_Registry::get("lang");
-            return $lang['norecord'];
-        }
+    private function getCatIDByTag($tag) {
+        return $this->_db->fetchOne("SELECT cat_id FROM dos_module_product_cat  WHERE tag = ?", array($tag));
+    }
+    private function getRecordByTag($tag){
+        return $this->_db->fetchOne("SELECT record_id FROM ".$this->_name." WHERE tag = ?", array($tag));
     }
 
     // Product by cat_id other
     public function productByCatNoneid($cid, $id) {
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'title' . LANG, 'preview' . LANG, 'unit'))->where('dos_module_product_cat_cat_id =?', $cid)->where('record_id NOT IN (?)', $id)->where('enable = 1');
-        $result = $db->query($select)->fetchAll();
-
-        if (count($result) > 0) {
-            return $result;
-        } else {
-            $lang = Zend_Registry::get("lang");
-            return $lang['norecord'];
-        }
+        $select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'title' . LANG, 'preview' . LANG, 'unit', 'tag'))
+                ->where('dos_module_product_cat_cat_id =?', $cid)
+                ->where('record_id NOT IN (?)', $this->getRecordByTag($id))
+                ->where('enable = 1');
+        return $this->fetchAll($select)->toArray();
     }
 
     // Get detail product
     public function getDetail($id) {
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('record_id', 'pic_thumb', 'pic_full', 'pic_desc', 'title' . LANG, 'detail' . LANG, 'extra_field1', 'extra_field2', 'extra_field3', 'extra_field4', 'unit', 'dos_module_product_cat_cat_id'))
+        $select = $this->select()
+                ->from($this->_name, array('record_id', 'pic_thumb', 'pic_full', 'pic_desc', 'title' . LANG, 'detail' . LANG, 'extra_field1', 'extra_field2', 'extra_field3', 'extra_field4', 'unit', 'dos_module_product_cat_cat_id', 'tag'))
                 ->where('enable = ?', 1)
-                ->where('record_id = ?', $id);
-        return $db->fetchRow($select);
+                ->where('tag = ?', $id);
+         $result = $this->fetchRow($select);
+        
+        if (count($result)) {
+            $this->updateHits($result['record_id']);
+            return $result->toArray();
+        }
     }
 
     //send mail
@@ -403,7 +415,8 @@ class Product_Model_Product extends Zend_Db_Table {
     }
 
     public function delPic($id) {
-        $select = $this->select()->from($this->_name, array('pic_thumb', 'pic_full'))->where('record_id =?', $id);
+        $select = $this->select()
+                ->from($this->_name, array('pic_thumb', 'pic_full'))->where('record_id =?', $id);
         $result = $this->fetchRow($select)->toArray();
 
         foreach ($result as $value) {
@@ -458,7 +471,6 @@ class Product_Model_Product extends Zend_Db_Table {
             //delete all subcat
             $cat->loopDelSubCat($data['id']);
         }
-
         //delete cat
         $cat->delCat($data['id']);
     }
@@ -486,19 +498,17 @@ class Product_Model_Product extends Zend_Db_Table {
         if (empty($arrParam))
             return;
         $ids = implode(',', array_keys($arrParam));
-        $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from(array('p' => $this->_name), array('record_id', 'pic_thumb', 'title' . LANG, 'unit', 'hot', 'enable'))
+        $select = $this->_db->select()->from(array('p' => $this->_name), array('record_id', 'pic_thumb', 'title' . LANG, 'unit', 'hot', 'enable'))
                 ->joinLeft(array('c' => $this->_name . '_cat'), 'p.dos_module_product_cat_cat_id = c.cat_id', array('cat_title' . LANG))
                 ->where('enable = 1')
                 ->where('p.record_id IN(' . $ids . ')');
 
-        $result = $db->fetchAll($select);
-
-        return $result;
+        return $this->_db->fetchAll($select);
+    }
+    public function updateHits($record_id) {
+        $db = Zend_Registry::get('connectDb');
+        $sql = "UPDATE `" . $this->_name . "` SET `hits` = `hits`+1 WHERE `record_id` = " . $record_id . ";";
+        $db->query($sql);
     }
 
-    
-    
-    
-    
 }

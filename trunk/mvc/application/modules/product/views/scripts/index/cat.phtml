@@ -9,29 +9,30 @@
                 <div class="product">
                     <div class="tent-product">
                         <div class="product-img">
-                            <a href="<?php echo $this->baseUrl().'/'. LANGURL . $this->module ?>/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title' . LANG] ?>">
+                            <a href="<?php echo $this->baseUrl() ?>/san-pham/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title' . LANG] ?>">
                                 <img src="<?php echo $this->baseUrl() . $picthumb ?>" alt="<?php echo $value['title' . LANG] ?>" />
                             </a>
                         </div><div class="clear"></div>
 
                         <h2 class="title-pro">
-                            <a href="<?php echo $this->baseUrl().'/'. LANGURL .$this->module ?>/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title' . LANG] ?>">
+                            <a href="<?php echo $this->baseUrl() ?>/san-pham/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title' . LANG] ?>">
                                 <strong><?php echo $value['title' . LANG] ?></strong>
                             </a>
                         </h2>
                         <p class="bton-pro">
-                            <a class="bton-detail" href="<?php echo $this->baseUrl().'/'. LANGURL .$this->module ?>/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $this->lang['detail'] ?>">
-                                 <?php echo $this->lang['detail'] ?>
+                            <a class="bton-detail" href="<?php echo $this->baseUrl() ?>/san-pham/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title' . LANG] ?>">                             
+                                <?php echo $this->lang['detail'] ?>
                             </a> 
 
-                            <a href="<?php echo $this->baseUrl().'/'. LANGURL?>contact" title="<?php echo $this->lang['contact'] ?>" class="bton-order">
-                               <?php echo $this->lang['contact'] ?>
+                            <a href="<?php echo $this->baseUrl() . '/' . LANGURL ?>lien-he" title="<?php echo $this->lang['contact'] ?>" class="bton-order">
+                                <?php echo $this->lang['contact'] ?>
                             </a> 
                         </p>
                     </div>
                 </div>
 
             <?php endforeach; ?>
+             <?php echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml'); ?>
         </div>
     <?php else: ?>
         <?php echo $this->productcat ?>
@@ -39,5 +40,4 @@
 </div>
 
 <?php
-if (DEBUG_MODE)
-    var_dump($this->productcat);?>
+if (DEBUG_MODE)    var_dump($this->productcat);?>

@@ -29,7 +29,7 @@
 	        foreach($lang as $value){
 	            echo '<div class="col1">'.$this->lang['sys_title'].' '.$value.'</div>
 	                <div class="col2">
-	                    <input name="cat_title'.$value.'" value="'.$this->item['cat_title'.$value].'" maxlength="45" class="txt-very-large" />
+	                    <input name="cat_title'.$value.'" id="cat_title'.$value.'" value="'.$this->item['cat_title'.$value].'" maxlength="45" class="txt-very-large" />
 	                </div>
 	                <div class="clear space"></div>';
 	        }
@@ -45,7 +45,17 @@
 	                </div><div class="clear space"></div>';
 	        }
 	    ?>
-	    
+	      <div class="col1">Liên kết</div>
+            <div class="col2">
+                <input name="tag" id="tag" value="<?php echo $this->item['tag'] ?>" maxlength="100" class="txt-very-large" />
+            </div>
+            <div class="clear space"></div>
+
+            <div class="col1">Mô tả</div>
+            <div class="col2">
+                <textarea cols="89" rows="5" name="description" id="description"><?php echo $this->item['description'] ?></textarea> <span class="info-keyup">0</span>
+            </div>
+            <div class="clear space"></div>
 	    <!-- <div class="col1"><?php echo $this->lang['product_cat_extra1'] ?></div>
 	    <div class="col2">
 	        <input name="extra1" maxlength="45" class="txt-very-large" value="<?php echo $this->item['extra1'] ?>" />
@@ -102,12 +112,10 @@
 		radio_list("<?php echo $this->item['active'] ?>", the_form.active);
 		select_list("<?php echo $this->item['parent_id'] ?>", the_form.parent_id);
 	</script>
-	<!-- <script type="text/javascript">
-	$(document).ready(function(){
-	    $("#add-rows").click(function(){
-	        $(".rows").before('<div class="col1"><?php echo $this->lang['sys_picture'] ?></div><div class="col2"><input type="file" name="file_desc[]" size="48%" /></div><div class="clear space"></div>');
-	        return false;
-	    });
-	});
-	</script> -->
+            <script type="text/javascript">
+        jQuery(function($) {
+            $('#description').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});
+            $('#cat_title').seoAlias({target:'#tag'});
+        });
+    </script>
 </div>

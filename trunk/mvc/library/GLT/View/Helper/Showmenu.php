@@ -40,6 +40,7 @@ class GLT_View_Helper_Showmenu extends Zend_View_Helper_Abstract {
                                 }
                             }
                             echo '</ul>';
+                            break;
                         }
                     }
                 }

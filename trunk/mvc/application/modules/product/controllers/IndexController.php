@@ -34,9 +34,7 @@ class Product_IndexController extends GLT_Controller_Action {
         $record = new Product_Model_Product();
         $result = $record->getDetail($this->_data['id']);
         $this->view->productdetail = $result;
-
         $this->view->productcat = $record->productByCatNoneid($result['dos_module_product_cat_cat_id'], $this->_data['id']);
-
         $this->webTitle($result['title' . LANG] . ' - ' . $this->view->lang[$this->_data['module']]);
     }
 

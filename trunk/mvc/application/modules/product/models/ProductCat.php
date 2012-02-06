@@ -21,16 +21,20 @@ class Product_Model_ProductCat extends Zend_Db_Table {
 
     // Front end - Get danh mục sản phẩm
     public function getListmenu() {
-        $select = $this->select()->from($this->_name, array('cat_id', 
-                'cat_title' . LANG, 'cat_parent_id', 'pic_thumb', 'cat_extra1', 'tag'))
-            ->where('cat_enable = 1')
-            ->order('cat_order ASC');
+        $select = $this->select()->from($this->_name, array('cat_id',
+                    'cat_title' . LANG, 'cat_parent_id', 'pic_thumb', 'cat_extra1', 'tag'))
+                ->where('cat_enable = 1')
+                ->order('cat_order ASC');
         return $this->fetchAll($select)->toArray();
     }
 
     // Front end - ListCat cat_parent_id = 0
     public function getListCat() {
-        $select = $this->select()->from($this->_name, array('cat_id', 'pic_thumb', 'cat_title' . LANG, 'preview' . LANG))->where('cat_parent_id = 0')->where('cat_enable = 1')->order('cat_order ASC');
+        $select = $this->select()
+                ->from($this->_name, array('cat_id', 'pic_thumb', 'cat_title' . LANG, 'preview' . LANG))
+                ->where('cat_parent_id = 0')
+                ->where('cat_enable = 1')
+                ->order('cat_order ASC');
         $result = $this->fetchAll($select);
         if (count($result)) {
             return $result->toArray();
@@ -58,10 +62,14 @@ class Product_Model_ProductCat extends Zend_Db_Table {
 
     // Get info Cat by id
     public function getCatbyId($cid) {
-        $select = $this->select()->from($this->_name, array('pic_full', 'pic_desc', 'cat_title' . LANG, 'preview' . LANG, 'cat_extra1', 'cat_extra2', 'cat_extra3', 'cat_extra4'))->where('cat_id = ?', $cid);
+        $select = $this->select()
+                ->from($this->_name, array('pic_full', 'pic_desc', 'cat_title' . LANG, 'preview' . LANG, 'cat_extra1', 'cat_extra2', 'cat_extra3', 'cat_extra4'))
+                ->where('cat_id = ?',$this->getCatIDByTag($cid));
         return $this->fetchRow($select)->toArray();
     }
-
+    private function getCatIDByTag($tag) {
+        return $this->_db->fetchOne("SELECT cat_id FROM dos_module_product_cat  WHERE tag = ?", array($tag));
+    }
     //Back end - Kich hoat mẫu tin
     public function activeItem($data = NULL) {
         $flag = isset($data['factive']) ? $data['factive'] : 'disable';
@@ -219,7 +227,24 @@ class Product_Model_ProductCat extends Zend_Db_Table {
         $select = $db->select()->from($this->_name, array('max(cat_order) as max'));
         $max_record = $db->fetchOne($select) + 1;
 
-        $data = array('pic_thumb' => $file_thumb, 'pic_full' => $file_full, 'pic_desc' => implode("|", $file_desc_multi), 'cat_parent_id' => $data['parent_id'], 'cat_title' => $this->_xss->purify($data['cat_title']), 'cat_titleen' => $this->_xss->purify($data['cat_titleen']), 'cat_titlefr' => $this->_xss->purify($data['cat_titlefr']), 'preview' => $this->_xss->purify($data['preview']), 'previewen' => $this->_xss->purify($data['previewen']), 'previewfr' => $this->_xss->purify($data['previewfr']), 'cat_order' => $max_record, 'cat_extra1' => $this->_xss->purify($data['extra1']), 'cat_extra2' => $this->_xss->purify($data['extra2']), 'cat_extra3' => $this->_xss->purify($data['extra3']), 'cat_extra4' => $this->_xss->purify($data['extra4']), 'cat_enable' => $data['active']);
+        $data = array('pic_thumb' => $file_thumb,
+            'pic_full' => $file_full, 
+            'pic_desc' => implode("|", $file_desc_multi), 
+            'cat_parent_id' => $data['parent_id'], 
+            'cat_title' => $this->_xss->purify($data['cat_title']), 
+            'cat_titleen' => $this->_xss->purify($data['cat_titleen']), 
+            'cat_titlefr' => $this->_xss->purify($data['cat_titlefr']), 
+            'preview' => $this->_xss->purify($data['preview']), 
+            'previewen' => $this->_xss->purify($data['previewen']), 
+            'previewfr' => $this->_xss->purify($data['previewfr']), 
+            'tag' => $this->_xss->purify($data['tag']), 
+            'description' => $this->_xss->purify($data['description']),
+            'cat_order' => $max_record, 
+            'cat_extra1' => $this->_xss->purify($data['extra1']),
+            'cat_extra2' => $this->_xss->purify($data['extra2']), 
+            'cat_extra3' => $this->_xss->purify($data['extra3']), 
+            'cat_extra4' => $this->_xss->purify($data['extra4']), 
+            'cat_enable' => $data['active']);
         $this->insert($data);
     }
 
@@ -298,13 +323,34 @@ class Product_Model_ProductCat extends Zend_Db_Table {
         }
 
         $where = 'cat_id = ' . $data['id'];
-        $data = array('pic_thumb' => $file_thumb, 'pic_full' => $file_full, 'pic_desc' => implode("|", $file_upload_new), 'cat_parent_id' => $data['parent_id'], 'cat_title' => $this->_xss->purify($data['cat_title']), 'cat_titleen' => $this->_xss->purify($data['cat_titleen']), 'cat_titlefr' => $this->_xss->purify($data['cat_titlefr']), 'preview' => $this->_xss->purify($data['preview']), 'previewen' => $this->_xss->purify($data['previewen']), 'previewfr' => $this->_xss->purify($data['previewfr']), 'cat_extra1' => $this->_xss->purify($data['extra1']), 'cat_extra2' => $this->_xss->purify($data['extra2']), 'cat_extra3' => $this->_xss->purify($data['extra3']), 'cat_extra4' => $this->_xss->purify($data['extra4']), 'cat_enable' => $data['active']);
+        $data = array(
+            'pic_thumb' => $file_thumb, 
+            'pic_full' => $file_full, 
+            'pic_desc' => implode("|", $file_upload_new),
+            'cat_parent_id' => $data['parent_id'], 
+            'cat_title' => $this->_xss->purify($data['cat_title']), 
+            'cat_titleen' => $this->_xss->purify($data['cat_titleen']), 
+            'cat_titlefr' => $this->_xss->purify($data['cat_titlefr']), 
+            'preview' => $this->_xss->purify($data['preview']), 
+            'previewen' => $this->_xss->purify($data['previewen']), 
+            'previewfr' => $this->_xss->purify($data['previewfr']), 
+            'tag' => $this->_xss->purify($data['tag']), 
+            'description' => $this->_xss->purify($data['description']),
+            'cat_extra1' => $this->_xss->purify($data['extra1']), 
+            'cat_extra2' => $this->_xss->purify($data['extra2']), 
+            'cat_extra3' => $this->_xss->purify($data['extra3']), 
+            'cat_extra4' => $this->_xss->purify($data['extra4']), 
+            'cat_enable' => $data['active']);
         $this->update($data, $where);
     }
 
     public function productCat() {
         $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('cat_id', 'pic_thumb', 'pic_full', 'cat_title' . LANG))->where('cat_parent_id = ?', 0)->where('cat_enable = ?', 1)->order('cat_order ASC');
+        $select = $db->select()
+                ->from($this->_name, array('cat_id', 'pic_thumb', 'pic_full', 'cat_title' . LANG))
+                ->where('cat_parent_id = ?', 0)
+                ->where('cat_enable = ?', 1)
+                ->order('cat_order ASC');
 
         $result = $db->query($select)->fetchAll();
         if (count($result) > 0) {
@@ -324,7 +370,8 @@ class Product_Model_ProductCat extends Zend_Db_Table {
 
     public function countItemSub($data = NULL) {
         $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from(array('p' => 'dos_module_product'), array('COUNT(record_id) AS numcat'))
+        $select = $db->select()
+                ->from(array('p' => 'dos_module_product'), array('COUNT(record_id) AS numcat'))
                 ->join(array('c' => $this->_name), 'p.dos_module_product_cat_cat_id = c.cat_id', array())
                 ->where('cat_id = ?', $data['id']);
         return $db->fetchOne($select);
@@ -340,7 +387,8 @@ class Product_Model_ProductCat extends Zend_Db_Table {
 
     private function loopCat($cat_id) {
         $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('cat_id'))->where('cat_parent_id = ?', $cat_id);
+        $select = $db->select()->from($this->_name, array('cat_id'))
+                ->where('cat_parent_id = ?', $cat_id);
         $result = $db->fetchAll($select);
 
         foreach ($result as $value) {
@@ -352,13 +400,16 @@ class Product_Model_ProductCat extends Zend_Db_Table {
 
     private function countItembyCat($id) {
         $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from('dos_module_product', array('COUNT(record_id) AS numitem'))->where('dos_module_product_cat_cat_id = ?', $id);
+        $select = $db->select()
+                ->from('dos_module_product', array('COUNT(record_id)'))
+                ->where('dos_module_product_cat_cat_id = ?', $id);
         return $db->fetchOne($select);
     }
 
     public function findcatParent($cat_id, $cat_parent_id) {
         $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('cat_id'))->where('cat_parent_id = ?', $cat_id);
+        $select = $db->select()->from($this->_name, array('cat_id'))
+                ->where('cat_parent_id = ?', $cat_id);
         $result = $db->fetchAll($select);
 
         foreach ($result as $value) {
@@ -370,7 +421,8 @@ class Product_Model_ProductCat extends Zend_Db_Table {
     //Di chuyển tất cả sản phẩm của phân loại con đến phân loại:
     public function loopMoveProducttoCat($cat_id, $cat_id_new) {
         $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('cat_id'))->where('cat_parent_id = ?', $cat_id);
+        $select = $db->select()->from($this->_name, array('cat_id'))
+                ->where('cat_parent_id = ?', $cat_id);
         $result = $db->fetchAll($select);
 
         $product = new Product_Model_Product();
@@ -385,7 +437,8 @@ class Product_Model_ProductCat extends Zend_Db_Table {
     //Xóa tất cả sản phẩm của phân loại con
     public function loopDelProducttoCat($cat_id) {
         $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('cat_id'))->where('cat_parent_id = ?', $cat_id);
+        $select = $db->select()->from($this->_name, array('cat_id'))
+                ->where('cat_parent_id = ?', $cat_id);
         $result = $db->fetchAll($select);
 
         $product = new Product_Model_Product();
@@ -400,7 +453,8 @@ class Product_Model_ProductCat extends Zend_Db_Table {
     //xóa phân loại con
     public function loopDelSubCat($cat_id) {
         $db = Zend_Registry::get('connectDb');
-        $select = $db->select()->from($this->_name, array('cat_id'))->where('cat_parent_id = ?', $cat_id);
+        $select = $db->select()->from($this->_name, array('cat_id'))
+                ->where('cat_parent_id = ?', $cat_id);
         $result = $db->fetchAll($select);
 
         foreach ($result as $value) {
@@ -414,7 +468,9 @@ class Product_Model_ProductCat extends Zend_Db_Table {
 
     //xóa hình ảnh của phân loại
     private function delPic($cid) {
-        $select = $this->select()->from($this->_name, array('pic_thumb', 'pic_full'))->where('cat_id =?', $cid);
+        $select = $this->select()
+                ->from($this->_name, array('pic_thumb','pic_full'))
+                ->where('cat_id =?', $cid);
         $result = $this->fetchRow($select)->toArray();
 
         foreach ($result as $value) {
@@ -425,7 +481,8 @@ class Product_Model_ProductCat extends Zend_Db_Table {
     }
 
     private function delPicMulti($cid) {
-        $select = $this->select()->from($this->_name, array('pic_desc'))->where('cat_id =?', $cid);
+        $select = $this->select()->from($this->_name, array('pic_desc'))
+                ->where('cat_id =?', $cid);
         $result = $this->fetchRow($select)->toArray();
 
         $str = explode('|', $result['pic_desc']);
@@ -440,4 +497,5 @@ class Product_Model_ProductCat extends Zend_Db_Table {
         $where = 'cat_id = ' . $cid;
         $this->delete($where);
     }
+
 }

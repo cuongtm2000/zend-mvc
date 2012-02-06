@@ -3,10 +3,10 @@
      <?php $pic = ($this->productdetail['pic_full']!= '') ? '/public/userfiles/images/product/' . $this->productdetail['pic_full'] : ''?>
     <?php if($pic):?>
         <div class="frame-img-info">
-            <img src="<?php echo $this->baseUrl() . $pic ?>"" />
+            <img src="<?php echo $this->baseUrl() . $pic ?>"/>
         </div>
     <?php endif ?>
-    <?php echo html_entity_decode($this->productdetail['detail' . LANG]) ?>
+    <?php echo $this->productdetail['detail' . LANG] ?>
     <p class="black"><a href="javascript: history.go(-1)" title="Trở lại" >Trở lại</a></p>
 </div> <div class="clear"></div>
 
@@ -22,7 +22,8 @@ if (DEBUG_MODE)
         <?php foreach ($this->productcat as $value): ?>
         <?php $picthumb = ($value['pic_thumb'] != '') ? '/public/userfiles/images/product/' . $value['pic_thumb'] : TEMPLATE . '/images/no-images.jpg'; ?>
             <div class="product-new">
-                <div class="product-img-new"><a href="<?php echo $this->baseUrl() . '/' . LANGURL ?>product/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title' . LANG] ?>">
+                <div class="product-img-new">
+                    <a href="<?php echo $this->baseUrl() ?>/san-pham/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title' . LANG] ?>">
                         <img src="<?php echo $this->baseUrl() . $picthumb ?>" alt="<?php echo $value['title' . LANG] ?>" />
                     </a>
                 </div><div class="clear"></div>
