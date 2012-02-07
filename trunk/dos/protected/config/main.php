@@ -16,7 +16,7 @@ return array(
         'application.components.*',
     ),
     'modules' => array(
-        'default', 'about', 'products', 'services', 'contact', 'banner', 'admin',
+        'default', 'about', 'products', 'services', 'contact', 'banner', 'admin', 'administrator',
         // uncomment the following to enable the Gii tool
 
         'gii' => array(
@@ -61,6 +61,8 @@ return array(
                 '<language:(vi|en)>/<module:\w+>/<controller:\w+>/<id:\d+>' => '<module>/<controller>/view',
                 '<language:(vi|en)>/<module:\w+>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<module>/<controller>/<action>',
                 '<language:(vi|en)>/<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
+                
+                'activate/<email:.*?>/<code:[A-Za-z0-9]+>' => 'activate/index', //activate user
             ),
         ),
         // uncomment the following to use a MySQL database
@@ -72,7 +74,7 @@ return array(
             'charset' => 'utf8',
             'enableProfiling' => true,
             'enableParamLogging' => true,
-        //'schemaCachingDuration'=>60*60,
+            //'schemaCachingDuration'=>60*60,
         ),
         'errorHandler' => array(
             // use 'site/error' action to display errors

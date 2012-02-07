@@ -42,7 +42,7 @@ class SiteController extends Controller {
         Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/stepcarousel.js');
         Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/stepcarousel.config.js');
         
-        $model = new Username;
+        $model = new Username('register');
         if (isset($_POST['Username'])) {
             $model->attributes = $_POST['Username'];
             if ($model->validate()) {
@@ -55,7 +55,8 @@ class SiteController extends Controller {
                     $model_menu->addModuleMenu($model->username, $model->choose_modules);
                     //Create folder for user
                     $model->createFolderUser($model->username);
-                    //Send mail for active
+                    //Create code and Send mail for active
+                    //$model->sendMailActive($model->username);
                     Yii::app()->session['user_registed'] = $model->username;
                 }
                 $this->redirect(array('success'));

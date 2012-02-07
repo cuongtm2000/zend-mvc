@@ -177,14 +177,14 @@ class Banner extends CActiveRecord {
         $criteria->order = 'banner_order DESC, banner_date DESC';
         $criteria->condition = 'dos_usernames_username=:user';
         $criteria->params = array(':user' => Yii::app()->user->id);
-        $count = $this::model()->count($criteria);
+        $count = Banner::model()->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
         $pages->pageSize = 15;
         $pages->applyLimit($criteria);
 
-        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => Banner::model()->findAll($criteria), 'pages' => $pages);
     }
 
     //Back end - Update Record
@@ -205,11 +205,11 @@ class Banner extends CActiveRecord {
 
     //Back end - Delete Record
     private function deleteRecord($id) {
-        $item = $this::model()->find('banner_id=:id', array(':id' => $id));
+        $item = Banner::model()->find('banner_id=:id', array(':id' => $id));
         if (($item->banner_url && file_exists(YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . '/' . $item->banner_url))) {
             unlink(YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . '/' . $item->banner_url);
         }
-        $this::model()->findByPk($id)->delete(); //delete record_id
+        Banner::model()->findByPk($id)->delete(); //delete record_id
     }
 
     //Back end - Active Item
@@ -236,11 +236,11 @@ class Banner extends CActiveRecord {
             $criteria->condition = 'dos_usernames_username=:user';
             $criteria->params = array(':user' => Yii::app()->user->id);
 
-            $models = $this::model()->findAll($criteria);
+            $models = Banner::model()->findAll($criteria);
 
             $i = 1;
             foreach ($models as $model) {
-                $this::model()->updateByPk($model['banner_id'], array('banner_order' => $i));
+                Banner::model()->updateByPk($model['banner_id'], array('banner_order' => $i));
                 $i++;
             }
         } else {
@@ -295,7 +295,7 @@ class Banner extends CActiveRecord {
         $criteria->condition = 'dos_usernames_username=:user';
         $criteria->params = array(':user' => Yii::app()->user->id);
 
-        $this->_model = $this::model()->findByPk($id, $criteria);
+        $this->_model = Banner::model()->findByPk($id, $criteria);
 
         if ($this->_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');

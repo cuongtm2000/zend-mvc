@@ -1,8 +1,10 @@
 <?php
-class LogoutController extends Controller{
 
-	public function actionIndex(){
+class LogoutController extends Controller {
+
+    public function actionIndex() {
         Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
-	}
+        $this->redirect(Yii::app()->homeUrl);
+    }
+
 }

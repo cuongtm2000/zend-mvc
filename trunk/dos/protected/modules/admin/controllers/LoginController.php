@@ -10,7 +10,8 @@ class LoginController extends Controller {
             // validate user input and redirect to the previous page if valid
             if ($model->validate() && $model->login()) {
                 Yii::app()->session['logged'] = 1; //session for ckfinder
-                $this->redirect(Yii::app()->request->baseUrl . '/admin');
+                //$this->redirect(Yii::app()->request->baseUrl . '/admin');
+                Yii::app()->request->redirect(Yii::app()->user->returnUrl);
             }
         }
         $this->render('index', array('model' => $model));

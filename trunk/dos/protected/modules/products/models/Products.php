@@ -262,14 +262,14 @@ class Products extends CActiveRecord {
         $criteria->condition = 'enable=1 AND dos_module_product_cats_cat_id=:cid';
         $criteria->params = array(':cid' => $cid);
 
-        $count = $this::model()->count($criteria);
+        $count = Products::model()->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
         $pages->pageSize = 8;
         $pages->applyLimit($criteria);
 
-        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => Products::model()->findAll($criteria), 'pages' => $pages);
     }
 
     //Front end - get detail item
@@ -295,14 +295,14 @@ class Products extends CActiveRecord {
         $criteria->condition = 'dos_usernames_username=:user';
         $criteria->params = array(':user' => Yii::app()->user->id);
 
-        $count = $this::model()->count($criteria);
+        $count = Products::model()->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
         $pages->pageSize = 15;
         $pages->applyLimit($criteria);
 
-        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => Products::model()->findAll($criteria), 'pages' => $pages);
     }
 
     //Back end - Update Record
@@ -342,14 +342,14 @@ class Products extends CActiveRecord {
 
     //Back end - Delete Record
     public function deleteRecord($id) {
-        $item = $this::model()->find('record_id=:id', array(':id' => $id));
+        $item = Products::model()->find('record_id=:id', array(':id' => $id));
         //Del pic_thumb field
         $this->removePic($item->pic_thumb);
         //Del pic_full field
         $this->removePic($item->pic_full);
         //Del pic_desc field
         $this->removePic($item->pic_desc, 1);
-        $this::model()->findByPk($id)->delete(); //delete record_id
+        Products::model()->findByPk($id)->delete(); //delete record_id
     }
 
     //Back end - Active Item
@@ -378,11 +378,11 @@ class Products extends CActiveRecord {
             $criteria->condition = 'dos_usernames_username=:user';
             $criteria->params = array(':user' => Yii::app()->user->id);
 
-            $models = $this::model()->findAll($criteria);
+            $models = Products::model()->findAll($criteria);
 
             $i = 1;
             foreach ($models as $model) {
-                $this::model()->updateByPk($model['record_id'], array('record_order' => $i));
+                Products::model()->updateByPk($model['record_id'], array('record_order' => $i));
                 $i++;
             }
         } else {
@@ -439,7 +439,7 @@ class Products extends CActiveRecord {
         $criteria->condition = 'dos_usernames_username=:user';
         $criteria->params = array(':user' => Yii::app()->user->id);
 
-        $this->_model = $this::model()->findByPk($id, $criteria);
+        $this->_model = Products::model()->findByPk($id, $criteria);
 
         if ($this->_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');

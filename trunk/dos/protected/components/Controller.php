@@ -50,7 +50,7 @@ class Controller extends CController {
         //Check exist user
         if ($username->checkExistUser($user)) {
             //Check set theme for user
-            if ($this->module->id != 'admin') {
+            if ($this->module->id != 'admin' && $this->module->id != 'administrator') {
                 Yii::app()->theme = $username->template;
             }
 

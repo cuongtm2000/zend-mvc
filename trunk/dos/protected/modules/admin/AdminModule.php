@@ -17,6 +17,7 @@ class AdminModule extends CWebModule {
         } else {
             Yii::app()->clientScript->registerCoreScript('jquery');
             Yii::app()->theme = 'admin-blue';
+            $this->layout = '//layouts/column1';
         }
     }
 

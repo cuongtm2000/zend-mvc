@@ -60,12 +60,11 @@ ul.menu-li li ul li a:hover{;-moz-border-radius: 2px; -webkit-border-radius: 2px
 ul#tabs{margin:0 10px;padding:5px 10px 0 5px;list-style:none; overflow:hidden; background:#5184D2; margin-bottom:8px; height:29px;-webkit-border-radius:3px; -moz-border-radius:3px}
 ul#tabs li {display:inline}
 ul#tabs a {float:left;background:url(../images/left.png) no-repeat left top;margin:0;padding:0 0 0 6px; text-decoration:none; margin-left:3px}
-ul#tabs a span {float:left;display:block;	background:url(../images/right.png) no-repeat right top; padding:6px 15px 8px 6px; margin-right:2px;	color:#FFF}
+ul#tabs a span {float:left;display:block; background:url(../images/right.png) no-repeat right top; padding:6px 15px 8px 6px; margin-right:2px;	color:#FFF}
 
 /* Commented Backslash Hack hides rule from IE5-Mac \*/
 ul#tabs a span {float:none;}
 /* End IE5-Mac hack */
-ul#tabs a:hover span {}
 ul#tabs a:hover {background-position:0% -42px; }
 ul#tabs a:hover span {background-position:100% -42px;color:#444}
 ul#tabs .select {background-position:0% -42px; }
@@ -107,9 +106,10 @@ tbody tr.green td, tbody tr.green a{background: #c2ecb7; color : #aaa}
 
 legend{color:#0066CC; font-weight:bold; font-size:11pt}
 fieldset{padding:15px; border : 1px solid #E4E3E3; background:#F9F9FB; -moz-border-radius:3px; -webkit-border-radius:3px; margin:5px}
-fieldset p{clear: both}
+fieldset p{clear: both; margin: 4px auto; padding-bottom: 0}
 fieldset label{float:left; width:90px; padding:3px}
 fieldset label.remove{float: none}
+fieldset .txt-large-x{width:40%; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
 fieldset .txt-very-large{width:55%; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
 fieldset input.login {cursor:pointer; width:80px; height:24px; color:#fff; border:1px solid #ccc; background:#3A6AAD; -moz-border-radius: 3px; -webkit-border-radius: 3px; display:inline; margin-right:6px}
 fieldset input.login:hover, .login-a:hover{background:#5184D2}

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 02, 2012 at 10:50 AM
+-- Generation Time: Feb 07, 2012 at 10:13 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `dos_configs` (
   `config_value` int(11) NOT NULL,
   `config_desc` varchar(50) DEFAULT NULL,
   `dos_templates_template` varchar(6) NOT NULL,
-  PRIMARY KEY (`config_name`),
+  PRIMARY KEY (`config_name`,`dos_templates_template`),
   KEY `fk_dos_configs_dos_templates1` (`dos_templates_template`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -42,7 +42,9 @@ CREATE TABLE IF NOT EXISTS `dos_configs` (
 INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES
 ('advs_height', 200, NULL, '111120'),
 ('advs_width', 224, NULL, '111120'),
+('banner_height', 320, NULL, '060212'),
 ('banner_height', 297, NULL, '111120'),
+('banner_width', 980, NULL, '060212'),
 ('banner_width', 709, NULL, '111120'),
 ('logo_height', 65, NULL, '111120'),
 ('logo_width', 310, NULL, '111120'),
@@ -103,6 +105,7 @@ INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('tag', 'liên kết', 'Link', 1),
 ('title', 'Tiêu đề', 'Title', 1),
 ('titleen', 'Tiêu đề EN', 'Title EN', 1),
+('update', 'Cập nhật', 'Update', 1),
 ('views', 'Lượt xem', 'Views', 1);
 
 -- --------------------------------------------------------
@@ -154,44 +157,58 @@ CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
 
 INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
 ('about', 'bao'),
+('about', 'dos'),
 ('about', 'mvc'),
 ('about', 'root'),
 ('about', 'test'),
+('about', 'thanhan'),
 ('about', 'thanhansoft'),
 ('about', 'vanhong'),
 ('advs', 'bao'),
+('advs', 'dos'),
 ('advs', 'mvc'),
 ('advs', 'root'),
 ('advs', 'test'),
+('advs', 'thanhan'),
 ('advs', 'thanhansoft'),
 ('advs', 'vanhong'),
 ('banner', 'bao'),
+('banner', 'dos'),
 ('banner', 'mvc'),
 ('banner', 'root'),
 ('banner', 'test'),
+('banner', 'thanhan'),
 ('banner', 'thanhansoft'),
 ('banner', 'vanhong'),
 ('contact', 'bao'),
+('contact', 'dos'),
 ('contact', 'mvc'),
 ('contact', 'root'),
 ('contact', 'test'),
+('contact', 'thanhan'),
 ('contact', 'thanhansoft'),
 ('contact', 'vanhong'),
 ('products', 'bao'),
+('products', 'dos'),
 ('products', 'mvc'),
 ('products', 'root'),
 ('products', 'test'),
+('products', 'thanhan'),
 ('products', 'thanhansoft'),
 ('products', 'vanhong'),
 ('services', 'bao'),
+('services', 'dos'),
 ('services', 'mvc'),
 ('services', 'root'),
 ('services', 'test'),
+('services', 'thanhan'),
 ('services', 'thanhansoft'),
 ('services', 'vanhong'),
+('supports', 'dos'),
 ('supports', 'mvc'),
 ('supports', 'root'),
 ('supports', 'test'),
+('supports', 'thanhan'),
 ('supports', 'thanhansoft'),
 ('supports', 'vanhong');
 
@@ -229,7 +246,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `description`, `activated`, `dos_usernames_username`) VALUES
 (119, 'tiêu', NULL, '<p>\r\n	tiêu đề</p>\r\n', NULL, 45, '2011-12-19 15:00:29', 1, 0, NULL, NULL, 'tieu', 'chi iết', 1, 'test'),
 (120, 'tiêu đềsas', 'title', '<p>\r\n	tieu deas</p>\r\n', '<p>\r\n	chi testsetsetes</p>\r\n', 5, '2011-12-23 14:50:21', 2, 0, NULL, NULL, 'tieu-desas', 'testsetestse', 1, 'test'),
-(121, 'home', '', '<p>\r\n	You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.</p>\r\n', '<p>\r\n	asass</p>\r\n', 231, '2012-01-07 03:31:48', 3, 1, NULL, NULL, 'home', 'asaassasa', 1, 'test'),
+(121, 'home', '', '<p>\r\n	You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.</p>\r\n', '<p>\r\n	asass</p>\r\n', 276, '2012-01-07 03:31:48', 3, 1, NULL, NULL, 'home', 'asaassasa', 1, 'test'),
 (122, 'adasdasd', 'dasdas', '<p>\r\n	sdasdsa</p>\r\n', '', 0, '2012-01-23 02:32:56', 4, 0, NULL, NULL, 'adasdasd', 'asdsad', 1, 'test'),
 (123, 'adasd', '', '<p>\r\n	sdasd</p>\r\n', '', 0, '2012-01-23 02:33:02', 5, 0, NULL, NULL, 'adasd', 'asdasd', 1, 'test'),
 (124, 'asdasdas', '', '<p>\r\n	asdasdasd</p>\r\n', '', 0, '2012-01-23 02:33:07', 6, 0, NULL, NULL, 'asdasdas', 'asdasd', 1, 'test'),
@@ -242,7 +259,7 @@ INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `co
 (131, 'asdasd', '', '<p>\r\n	asdas</p>\r\n', '', 0, '2012-01-23 02:33:51', 13, 0, NULL, NULL, 'asdasd-2', 'asdasd', 1, 'test'),
 (132, 'asda', '', '<p>\r\n	adsa</p>\r\n', '', 0, '2012-01-23 02:33:57', 14, 0, NULL, NULL, 'asda', 'asda', 1, 'test'),
 (133, 'asdas', '', '<p>\r\n	asdasd</p>\r\n', '', 0, '2012-01-23 02:34:04', 15, 0, NULL, NULL, 'asdas', 'sd', 1, 'test'),
-(134, 'asdas', '', '<p>\r\n	asda</p>\r\n', '', 23, '2012-01-23 02:34:10', 16, 0, NULL, NULL, 'asdas-2', 'sd', 1, 'test');
+(134, 'asdas', '', '<p>\r\n	asda</p>\r\n', '', 42, '2012-01-23 02:34:10', 16, 0, NULL, NULL, 'asdas-2', 'sd', 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -296,7 +313,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `dos_module_banners`
@@ -306,7 +323,11 @@ INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `ba
 (1, '2012-01-10 09:56:42', 'Banner cafe tự động', 'banner-cafe-tu-dong.jpg', 'http://grouplaptrinh.com', 1, 'banner', 'default', 1, 'test'),
 (2, '2012-01-10 09:57:28', 'Banner cafe tự nhập', 'tu-nhap.jpg', 'http://grouplaptrinh.com', 2, 'banner', 'default', 1, 'test'),
 (4, '2012-02-01 04:08:53', 'Logo', 'logo.png', '', 1, 'logo', 'default', 1, 'thanhansoft'),
-(5, '2012-02-01 04:45:20', 'Banner', 'banner.jpg', '', 1, 'banner', 'default', 1, 'root');
+(5, '2012-02-01 04:45:20', 'Banner', 'banner.jpg', '', 1, 'banner', 'default', 1, 'root'),
+(6, '2012-02-06 03:31:50', 'Banner', 'banner.jpg', 'http://grouplaptrinh.com', 1, 'banner', 'default', 1, 'mvc'),
+(7, '2012-02-06 03:32:08', 'Banner 1', 'banner-1.jpg', '', 2, 'banner', 'default', 1, 'mvc'),
+(8, '2012-02-06 03:32:15', 'banner 2', 'banner-2.jpg', '', 3, 'banner', 'default', 1, 'mvc'),
+(9, '2012-02-06 03:32:27', 'Banner 3', 'banner-3.jpg', '', 4, 'banner', 'default', 1, 'mvc');
 
 -- --------------------------------------------------------
 
@@ -330,7 +351,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_contacts_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `dos_module_contacts`
@@ -338,8 +359,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
 
 INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `description`, `enable`, `dos_usernames_username`) VALUES
 (1, 'Tieu de', '', '<p>\r\n	Chi tiet</p>\r\n', '', '2012-02-02 02:30:54', 1, 0, 1, '', 'test', '1', 'test'),
-(2, 'Tieu đề nguyend', 'Title', '<p>\r\n	Chi tiet</p>\r\n', '<p>\r\n	Chi tiet</p>\r\n', '2012-02-02 02:32:02', 2, 0, 0, '', 'test', '1', 'test'),
-(3, 'Lien he hee', '', '<p>\r\n	Chi tiet 123</p>\r\n', '', '2012-02-02 03:53:09', 1, 0, 0, 'lien-he-hee', 'Mô tả', '1', 'mvc');
+(2, 'Tieu đề nguyend', 'Title', '<p>\r\n	Chi tiet</p>\r\n', '<p>\r\n	Chi tiet</p>\r\n', '2012-02-02 02:32:02', 2, 0, 0, '', 'test', '1', 'test');
 
 -- --------------------------------------------------------
 
@@ -362,10 +382,6 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 --
 
 INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `dos_usernames_username`) VALUES
-('Trang chủ', 'Home page', 'default', '', 1, 'test'),
-('Giới thiệu', 'About', 'about', NULL, 2, 'test'),
-('Dịch vụ', 'Services', 'services', NULL, 4, 'test'),
-('Sản phẩm', 'Products', 'products', NULL, 3, 'test'),
 ('Trang chủ', NULL, 'default', NULL, 1, 'thanhansoft'),
 ('Giới thiệu', NULL, 'about', NULL, 2, 'thanhansoft'),
 ('Dịch vụ', NULL, 'services', NULL, 3, 'thanhansoft'),
@@ -385,11 +401,26 @@ INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `
 ('Sản phẩm', NULL, 'products', NULL, 3, 'vanhong'),
 ('Dịch vụ', NULL, 'services', NULL, 4, 'vanhong'),
 ('Liên hệ', NULL, 'contact', NULL, 5, 'vanhong'),
+('Trang chủ', 'Home page', 'default', '', 1, 'test'),
+('Giới thiệu', 'About us', 'about', '', 2, 'test'),
+('Sản phẩm', 'Products', 'products', '', 3, 'test'),
+('Dịch vụ', 'Services', 'services', '', 4, 'test'),
+('Liên hệ', 'Contact', 'contact', '', 5, 'test'),
+('Trang chủ', NULL, 'default', NULL, 1, 'thanhan'),
+('Giới thiệu', NULL, 'about', NULL, 2, 'thanhan'),
+('Sản phẩm', NULL, 'products', NULL, 3, 'thanhan'),
+('Dịch vụ', NULL, 'services', NULL, 4, 'thanhan'),
+('Liên hệ', NULL, 'contact', NULL, 5, 'thanhan'),
 ('Trang chủ', NULL, 'default', NULL, 1, 'mvc'),
 ('Giới thiệu', NULL, 'about', NULL, 2, 'mvc'),
 ('Sản phẩm', NULL, 'products', NULL, 3, 'mvc'),
 ('Dịch vụ', NULL, 'services', NULL, 4, 'mvc'),
-('Liên hệ', NULL, 'contact', NULL, 5, 'mvc');
+('Liên hệ', NULL, 'contact', NULL, 5, 'mvc'),
+('Trang chủ', NULL, 'default', NULL, 1, 'dos'),
+('Giới thiệu', NULL, 'about', NULL, 2, 'dos'),
+('Sản phẩm', NULL, 'products', NULL, 3, 'dos'),
+('Dịch vụ', NULL, 'services', NULL, 4, 'dos'),
+('Liên hệ', NULL, 'contact', NULL, 5, 'dos');
 
 -- --------------------------------------------------------
 
@@ -409,9 +440,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_usernames_username`) VALUES
-('day_time', 2455960, 'test'),
+('day_time', 2455965, 'test'),
 ('max_count', 1, 'test'),
-('counter', 27, 'test'),
+('counter', 31, 'test'),
 ('yesterday', 1, 'test'),
 ('day_time', 2455959, 'thanhansoft'),
 ('max_count', 0, 'thanhansoft'),
@@ -424,11 +455,7 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('day_time', 2455959, 'root'),
 ('max_count', 0, 'root'),
 ('counter', 0, 'root'),
-('yesterday', 0, 'root'),
-('day_time', 2455960, 'mvc'),
-('max_count', 0, 'mvc'),
-('counter', 0, 'mvc'),
-('yesterday', 0, 'mvc');
+('yesterday', 0, 'root');
 
 -- --------------------------------------------------------
 
@@ -448,8 +475,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1328163415, 'mvc'),
-('''127.0.0.1''', 1328176082, 'test');
+('''127.0.0.1''', 1328584206, 'test');
 
 -- --------------------------------------------------------
 
@@ -557,7 +583,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 -- --------------------------------------------------------
 
@@ -602,9 +628,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
 --
 
 INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
-('keywords', 'keywords 123', 'test'),
-('description', 'description 456', 'test'),
-('title', 'Title', 'test');
+('keywords', 'Tu khoa', 'test'),
+('description', 'Mo ta', 'test'),
+('title', 'Tieu de', 'test');
 
 -- --------------------------------------------------------
 
@@ -665,6 +691,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 --
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
+('060212', 'Mẫu số 060212', '2012-02-06 02:51:59', NULL),
 ('111120', 'Mẫu số 111120', '2011-11-21 02:40:10', NULL);
 
 -- --------------------------------------------------------
@@ -712,6 +739,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
   `company` varchar(100) DEFAULT NULL,
   `role` varchar(45) NOT NULL,
   `language` varchar(20) NOT NULL,
+  `code` varchar(15) DEFAULT NULL,
   `activated` tinyint(1) NOT NULL,
   `dos_templates_template` varchar(6) NOT NULL,
   `dos_provinces_province_id` int(11) NOT NULL,
@@ -724,13 +752,15 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 -- Dumping data for table `dos_usernames`
 --
 
-INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `activated`, `dos_templates_template`, `dos_provinces_province_id`) VALUES
-('bao', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-02-01 04:42:45', NULL, NULL, NULL, 'user', 'vi', 1, '111120', 2),
-('mvc', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-02-02 03:50:53', NULL, NULL, NULL, 'user', 'vi', 1, '111120', 2),
-('root', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-02-01 04:38:10', NULL, NULL, NULL, 'user', 'vi', 1, '111120', 2),
-('test', 'test@test.com', '098f6bcd4621d373cade4e832627b4f6', '2011-11-21 02:40:55', 'Test', '0929001001', 'ThuongHoi', 'user', 'vi|en', 1, '111120', 2),
-('thanhansoft', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-02-01 03:57:44', NULL, NULL, NULL, 'user', 'vi', 1, '111120', 2),
-('vanhong', 'info@thuonghoi.com', 'cafaa18efcc58e9c99e4cdd79fb7672d', '2012-02-01 07:38:42', NULL, NULL, NULL, 'user', 'vi', 1, '111120', 2);
+INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `activated`, `dos_templates_template`, `dos_provinces_province_id`) VALUES
+('bao', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-02-01 04:42:45', NULL, NULL, NULL, 'user', 'vi', NULL, 1, '111120', 2),
+('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', NULL, NULL, NULL, 'administrator', 'vi', NULL, 1, '111120', 2),
+('mvc', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-02-06 02:57:33', NULL, NULL, NULL, 'user', 'vi', NULL, 1, '060212', 2),
+('root', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-02-01 04:38:10', NULL, NULL, NULL, 'user', 'vi', NULL, 1, '111120', 2),
+('test', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2011-11-21 02:40:55', 'Nguyễn An', '0929001001', 'ThuongHoi', 'user', 'vi', NULL, 1, '111120', 2),
+('thanhan', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-02-04 02:35:42', NULL, NULL, NULL, 'user', 'vi', 'Z43dCG5', 1, '111120', 2),
+('thanhansoft', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-02-01 03:57:44', NULL, NULL, NULL, 'user', 'vi', NULL, 1, '111120', 2),
+('vanhong', 'info@thuonghoi.com', 'cafaa18efcc58e9c99e4cdd79fb7672d', '2012-02-01 07:38:42', NULL, NULL, NULL, 'user', 'vi', NULL, 1, '111120', 2);
 
 -- --------------------------------------------------------
 
