@@ -127,7 +127,7 @@
                         <ul class="sub-new">
                              <?php foreach ($this->menu_news_tophit as $value): ?>
                                 <li> 
-                                    <a href="<?php echo $this->baseUrl() ?>/tin-tuc/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title' . LANG] ?>">
+                                    <a href="<?php echo $this->baseUrl().'/'.LANGURL ?>tin-tuc/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title' . LANG] ?>">
                                         <?php echo $value['title' . LANG] ?>
                                     </a>
                             </li>
@@ -140,7 +140,7 @@
                                     $picthumb = ($value['pic_thumb'] != '') ? '/public/userfiles/images/' . 'product/'. $value['pic_thumb'] : TEMPLATE . '/images/no-images.jpg';
                                 ?>
                                        
-                            <li> <a href="<?php echo $this->baseUrl() ?>/san-pham/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title' . LANG] ?>">
+                            <li> <a href="<?php echo $this->baseUrl().'/'.LANGURL ?>san-pham/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title' . LANG] ?>">
                                                 <img src="<?php echo $this->baseUrl() . $picthumb ?>" alt="<?php echo $value['title' . LANG] ?>" />
                                             </a>
                             </li>
