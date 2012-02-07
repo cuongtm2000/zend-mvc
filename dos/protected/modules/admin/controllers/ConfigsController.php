@@ -22,7 +22,27 @@ class ConfigsController extends Controller {
     public function actionIndex() {
         $this->render('index');
     }
+
     public function actionMenu() {
-        $this->render('menu');
+        $model = new Menus;
+        //Submit
+        if (Yii::app()->request->getIsPostRequest()) {
+            $model->addItem(Yii::app()->request);
+        }
+        $this->render('menu', array('models' => $model->listMenuByAdmin()));
     }
+
+    public function actionWeb() {
+        $model = new Web;
+        //Submit
+        if (Yii::app()->request->getIsPostRequest()) {
+            $model->addItem(Yii::app()->request);
+        }
+        $this->render('web', array('models' => $model->listRecord()));
+    }
+
+    public function actionLangs() {
+        $this->render('langs');
+    }
+
 }

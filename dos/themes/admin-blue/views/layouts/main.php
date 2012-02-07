@@ -3,14 +3,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="content-language" content="vi, en" /> 
-        <meta name="revisit-after" content="1 days" />
-        <meta name="robots" content="noodp,index,follow" />
         <link rel="SHORTCUT ICON" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/gif" />
 
-        <title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->title) ? ' - ' . CHtml::encode($this->title) : '' ?></title>
-        <meta name="keywords" content="<?php echo $this->keywords ?>" /> 
-        <meta name="description" content="<?php echo $this->description ?>" />
+        <title><?php echo CHtml::encode($this->pageTitle); ?></title>
         <link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" />
 
         <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/ddaccordion.js"></script>
@@ -35,20 +31,34 @@
             <div class="lang"><a href="<?php echo Yii::app()->request->baseUrl ?>/admin" title="Viet nam"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/vn.gif" alt="Viet nam" /></a> <a href="<?php echo Yii::app()->request->baseUrl ?>/en/admin" title="English"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/en.gif" alt="English" /></a></div>
         </div>
         <ul id="tabs">
-            <li><a href="/admin"><span>Trang chủ</span></a></li>
-            <li><a href="/admin/configs"><span>Cấu hình &amp; cài đặt</span></a></li>
-            <li><a href="#"><span>Báo cáo &amp; công cụ</span></a></li>
+            <li><a href="/admin"<?php echo ($this->id =='default') ? ' class="select"' : ''?>><span>Trang chủ</span></a></li>
+            <li><a href="/admin/configs"<?php echo ($this->id =='configs') ? ' class="select"' : ''?>><span>Cấu hình &amp; cài đặt</span></a></li>
+            <li><a href="/admin/report"<?php echo ($this->id =='report') ? ' class="select"' : ''?>><span>Báo cáo &amp; công cụ</span></a></li>
             <li><a href="#"><span>Thanh toán</span></a></li>
-            <li><a href="#"><span>Tài khoản của tôi</span></a></li>
+            <li><a href="/admin/account"<?php echo ($this->id =='account') ? ' class="select"' : ''?>><span>Tài khoản của tôi</span></a></li>
         </ul><div class="clear"></div>
         <div class="paddinglr10">
             <div class="menu-bar">
+                <?php if($this->id=='account'):?>
+                <div id="catmenu">
+                    <ul class="menu-li"> 
+                        <li><a class="headerbar" href="#">Tài khoản của tôi</a>
+                            <ul class="submenu">
+                                <li><a href="/admin/account">Thay đổi thông tin</a></li>
+                                <li><a href="/admin/account/changepass">Thay đổi mật khẩu</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <?php endif;?>
                 <?php if($this->id=='configs'):?>
                 <div id="catmenu">
                     <ul class="menu-li"> 
                         <li><a class="headerbar" href="#">Cài đặt &amp; cấu hình</a>
                             <ul class="submenu">
+                                <li><a href="/admin/configs/web">Tiêu đề website</a></li>
                                 <li><a href="/admin/configs/menu">Cấu hình Menu</a></li>
+                                <li><a href="/admin/configs/langs">Cấu hình ngôn ngữ</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -72,7 +82,7 @@
             <div class="contenter">
                 <?php echo $content ?>
                 <div id="footer">
-                    <p>Copyright &copy; 2011 by Azweb.vn. All rights reserved</p>
+                    <p>Copyright &copy; <?php echo date('Y'); ?> by Dos.vn. All rights reserved</p>
                 </div>
             </div>
         </div>

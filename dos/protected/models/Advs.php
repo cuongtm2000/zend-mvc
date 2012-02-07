@@ -189,14 +189,14 @@ class Advs extends CActiveRecord {
         $criteria->order = 'record_order DESC, create_date DESC';
         $criteria->condition = 'dos_usernames_username=:user';
         $criteria->params = array(':user' => Yii::app()->user->id);
-        $count = $this::model()->count($criteria);
+        $count = Advs::model()->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
         $pages->pageSize = 15;
         $pages->applyLimit($criteria);
 
-        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => Advs::model()->findAll($criteria), 'pages' => $pages);
     }
 
     //Back end - Update Record
@@ -217,11 +217,11 @@ class Advs extends CActiveRecord {
 
     //Back end - Delete Record
     private function deleteRecord($id) {
-        $item = $this::model()->find('record_id=:id', array(':id' => $id));
+        $item = Advs::model()->find('record_id=:id', array(':id' => $id));
         if (($item->pic_thumb && file_exists(YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . '/' . $item->pic_thumb))) {
             unlink(YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . '/' . $item->pic_thumb);
         }
-        $this::model()->findByPk($id)->delete(); //delete record_id
+        Advs::model()->findByPk($id)->delete(); //delete record_id
     }
 
     //Back end - Active Item
@@ -248,11 +248,11 @@ class Advs extends CActiveRecord {
             $criteria->condition = 'dos_usernames_username=:user';
             $criteria->params = array(':user' => Yii::app()->user->id);
 
-            $models = $this::model()->findAll($criteria);
+            $models = Advs::model()->findAll($criteria);
 
             $i = 1;
             foreach ($models as $model) {
-                $this::model()->updateByPk($model['record_id'], array('record_order' => $i));
+                Advs::model()->updateByPk($model['record_id'], array('record_order' => $i));
                 $i++;
             }
         } else {
@@ -300,7 +300,7 @@ class Advs extends CActiveRecord {
         $criteria->condition = 'dos_usernames_username=:user';
         $criteria->params = array(':user' => Yii::app()->user->id);
 
-        $this->_model = $this::model()->findByPk($id, $criteria);
+        $this->_model = Advs::model()->findByPk($id, $criteria);
 
         if ($this->_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');

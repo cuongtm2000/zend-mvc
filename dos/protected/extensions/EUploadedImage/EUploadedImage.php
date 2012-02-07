@@ -362,15 +362,15 @@ class EUploadedImage extends CComponent {
         return $value;
     }
 
-    public function processUpload($maxwidth, $maxheight, $path, $filename = '', $file_old = '', $type = 0, $txt_new_name) {
+    public function processUpload($maxwidth, $maxheight, $path, $filename = '', $file_old = '', $type = 0, $txt_new_name='') {
         $this->maxWidth = (int) $maxwidth;
         $this->maxHeight = (int) $maxheight;
         //path and filename
-        $path_upload = YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . $path . '/';
+        $path_upload = YiiBase::getPathOfAlias('webroot') . $path . '/';
         
         //check Directory Exists
         if(!is_dir($path_upload)){
-            mkdir($path_upload, 0777);
+            mkdir($path_upload, 0777, true);
             //chmod($path_upload, 0777);
         }
         

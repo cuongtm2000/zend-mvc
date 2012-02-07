@@ -16,6 +16,8 @@
  */
 class Templates extends CActiveRecord {
 
+    public $fileupload;
+
     /**
      * Returns the static model of the specified AR class.
      * @return Templates the static model class
@@ -38,10 +40,11 @@ class Templates extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('template, template_name, created', 'required'),
+            array('template, template_name', 'required'),
             array('template', 'length', 'max' => 6),
             array('template_name', 'length', 'max' => 45),
             array('description', 'length', 'max' => 1000),
+            array('fileupload', 'file', 'types' => 'gif,png,jpg,jpeg,icon', 'allowEmpty' => false, 'maxSize' => 1024 * 1024 * 5, 'on' => 'add'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
             array('template, template_name, created, description', 'safe', 'on' => 'search'),
@@ -70,6 +73,7 @@ class Templates extends CActiveRecord {
             'template_name' => 'Template Name',
             'created' => 'Created',
             'description' => 'Description',
+            'fileupload' => 'File images'
         );
     }
 
@@ -91,6 +95,22 @@ class Templates extends CActiveRecord {
         return new CActiveDataProvider($this, array(
                     'criteria' => $criteria,
                 ));
+    }
+    public function beforeSave() {
+        $purifier = new CHtmlPurifier();
+        $this->template = $purifier->purify($this->template);
+        $this->template_name = $purifier->purify($this->template_name);
+        $this->description = $purifier->purify($this->description);
+        
+        if ($this->isNewRecord) {
+            if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['fileupload']) {
+                //import class upload images
+                Yii::import('ext.EUploadedImage.EUploadedImage');
+                EUploadedImage::getInstance($this, 'fileupload')->processUpload(250, 175, '/themes/' . $this->template . '/images', 'tiny');
+            }
+        }
+
+        return parent::beforeSave();
     }
     public function listTemplates(){
         $command = Yii::app()->db->createCommand('SELECT template, template_name, description FROM ' . $this->tableName() . ' ORDER BY created DESC');

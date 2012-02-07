@@ -159,7 +159,7 @@ class Services extends CActiveRecord {
             if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full']) {
                 //import class upload images
                 Yii::import('ext.EUploadedImage.EUploadedImage');
-                $this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(Configs::configTemplate('services_width', Yii::app()->session['template']), Configs::configTemplate('services_height', Yii::app()->session['template']), Yii::app()->controller->id, $this->_oldImage);
+                $this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(Configs::configTemplate('services_width', Yii::app()->session['template']), Configs::configTemplate('services_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id, $this->title, $this->_oldImage);
             } else {
                 $this->pic_full = $this->_oldImage;
             }
@@ -169,7 +169,7 @@ class Services extends CActiveRecord {
             if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full']) {
                 //import class upload images
                 Yii::import('ext.EUploadedImage.EUploadedImage');
-                $this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(Configs::configTemplate('services_width', Yii::app()->session['template']), Configs::configTemplate('services_height', Yii::app()->session['template']), Yii::app()->controller->id);
+                $this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(Configs::configTemplate('services_width', Yii::app()->session['template']), Configs::configTemplate('services_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id, $this->title);
             }
         }
 
@@ -204,14 +204,14 @@ class Services extends CActiveRecord {
         $criteria->order = 'record_order DESC, created DESC';
         $criteria->condition = 'dos_usernames_username=:user';
         $criteria->params = array(':user' => Yii::app()->user->id);
-        $count = $this::model()->count($criteria);
+        $count = Services::model()->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
         $pages->pageSize = 15;
         $pages->applyLimit($criteria);
 
-        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => Services::model()->findAll($criteria), 'pages' => $pages);
     }
 
     //Back end - Update Record
@@ -232,12 +232,12 @@ class Services extends CActiveRecord {
 
     //Back end - Delete Record
     private function deleteRecord($id) {
-        $item = $this::model()->find('record_id=:id', array(':id' => $id));
+        $item = Services::model()->find('record_id=:id', array(':id' => $id));
         $path = YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . '/';
         if ($item->pic_full && file_exists($path . $item->pic_full)) {
             unlink($path . $item->pic_full);
         }
-        $this::model()->findByPk($id)->delete(); //delete record_id
+        Services::model()->findByPk($id)->delete(); //delete record_id
     }
 
     //Back end - Active Item
@@ -264,11 +264,11 @@ class Services extends CActiveRecord {
             $criteria->condition = 'dos_usernames_username=:user';
             $criteria->params = array(':user' => Yii::app()->user->id);
 
-            $models = $this::model()->findAll($criteria);
+            $models = Services::model()->findAll($criteria);
 
             $i = 1;
             foreach ($models as $model) {
-                $this::model()->updateByPk($model['record_id'], array('record_order' => $i));
+                Services::model()->updateByPk($model['record_id'], array('record_order' => $i));
                 $i++;
             }
         } else {
@@ -317,7 +317,7 @@ class Services extends CActiveRecord {
         $criteria->condition = 'dos_usernames_username=:user';
         $criteria->params = array(':user' => Yii::app()->user->id);
 
-        $this->_model = $this::model()->findByPk($id, $criteria);
+        $this->_model = Services::model()->findByPk($id, $criteria);
 
         if ($this->_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');

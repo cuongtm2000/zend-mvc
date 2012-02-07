@@ -11,6 +11,7 @@
  * @property string $fullname
  * @property string $phone
  * @property string $company
+ * @property string $code
  * @property integer $activated
  * @property string $dos_templates_template
  * @property integer $dos_provinces_province_id
@@ -21,6 +22,8 @@
  * @property DosProvinces $dosProvincesProvince
  */
 class Username extends CActiveRecord {
+    
+    private $_model;
     public $choose_modules;
     public $choose_feature;
     public $template = '';
@@ -47,21 +50,22 @@ class Username extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('username, email, password, dos_templates_template, dos_provinces_province_id, choose_modules, choose_feature', 'required'),
+            array('username, email, password, dos_templates_template, dos_provinces_province_id, choose_modules, choose_feature', 'required', 'on'=>'register'),
+            array('email, fullname, phone, company, dos_provinces_province_id', 'required', 'on'=>'changeInfo'),
             array('activated, dos_provinces_province_id', 'numerical', 'integerOnly' => true),
             array('username, email, password, fullname', 'length', 'max' => 45),
-            array('username', 'checkExistsUsername'),
+            array('username', 'checkExistsUsername', 'on'=>'register'),
             array('email', 'email'),
-            array('phone', 'length', 'max' => 15),
+            array('phone, code', 'length', 'max' => 15),
             array('company', 'length', 'max' => 100),
             array('dos_templates_template', 'length', 'max' => 6),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('username, email, password, created, fullname, phone, company, activated, dos_templates_template, dos_provinces_province_id', 'safe', 'on' => 'search'),
+            array('username, email, created, fullname, phone, company, activated, dos_templates_template, dos_provinces_province_id', 'safe', 'on' => 'search'),
         );
     }
     public function checkExistsUsername($attribute) {
-        if ($this::model()->findByPk($this->username)) {
+        if (Username::model()->findByPk($this->username)) {
             $this->addError($attribute, '<strong>' . $this->username . '</strong> ' . $attribute . ' already exists please choose another user');
         }
     }
@@ -91,6 +95,7 @@ class Username extends CActiveRecord {
             'fullname' => 'Fullname',
             'phone' => 'Phone',
             'company' => 'Company',
+            'code' => 'Code',
             'activated' => 'Activated',
             'dos_templates_template' => 'Dos Templates Template',
             'dos_provinces_province_id' => 'Dos Provinces Province',
@@ -163,5 +168,46 @@ class Username extends CActiveRecord {
         $path = YiiBase::getPathOfAlias('webroot') . '/public/userfiles/images/' . $user . '/images/';
         mkdir($path, 0777, true);
         //chmod($path . 'banner', 0777);
+    }
+    //Back end - Change password
+    public function changePass($password) {
+        $purifier = new CHtmlPurifier();
+        $password = md5($purifier->purify($password));
+        
+        $user = Yii::app()->user->id;
+        $command = Yii::app()->db->createCommand('UPDATE '.$this->tableName().' SET password=:password WHERE username=:user');
+        $command->bindParam(":user", $user, PDO::PARAM_STR);
+        $command->bindParam(":password", $password, PDO::PARAM_STR);
+        $command->execute();
+    }
+    private function createCode() {
+        $activatecode = '';
+        $base = 'ABCDEFGHKLMNOPQRSTWXYZabcdefghjkmnpqrstwxyz0123456789';
+        $len = 6;
+        $max = strlen($base) - 1;
+
+        mt_srand((double) microtime() * 1000000);
+
+        while (strlen($activatecode) < $len + 1){
+            $activatecode.=$base{mt_rand(0, $max)};
+        }
+        return $activatecode;
+    }
+    public function sendMailActive($username){
+        $code = 'REG-' . $this->createCode();
+        Username::model()->updateByPk($username, array('code' => $code));
+        Yii::import('application.extensions.phpmailer.JPhpMailer');
+        $mail = new JPhpMailer;
+        $html = 'Xin chào <b>' . $username . '</b>,<br /><br />Website của bạn đã được khởi tạo thành công. Email này giúp chúng tôi xác nhận bạn là chủ sỡ hữu web http://'. $username.'.dos.vn. Vui lòng click vào liên kết bên dưới để kích hoạt tài khoản của bạn.<br /><br />Liên kết: <a href="http://dos.vn/register/">http://dos.vn/activate/test@test.com/'.$code.'</a><br />Trân trọng<br />---<br />Dos.vn';
+        $mail->sendMailSmtp('support@thuonghoi.com', $model->email, 'Dos.vn', $model->username, 'Thông tin tài khoản ' . $username . ' tại Dos.vn', $html);
+    }
+    //Back end - Get record to Edit
+    public function loadEdit() {
+        $this->_model = Username::model()->findByPk(Yii::app()->user->id);
+
+        if ($this->_model === null) {
+            throw new CHttpException(404, 'The requested page does not exist.');
+        }
+        return $this->_model;
     }
 }

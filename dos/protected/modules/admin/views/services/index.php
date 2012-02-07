@@ -1,4 +1,3 @@
-<div class="content">
 <ul class="modals"><li><a href="<?php echo Yii::app()->request->baseUrl ?>/<?php echo $this->module->getName() ?>/<?php echo $this->ID ?>/add" title="Thêm mới"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/add.png" alt="Thêm mới" /><span>Thêm mới</span></a></li></ul><div class="clear"></div>
 <form name="frm" id="frm" action="" method="post">
     <input type="hidden" name="factive" value="" />
@@ -51,4 +50,3 @@
     <?php $this->widget('CLinkPager', array('pages' => $pages, 'header'=>'', 'htmlOptions'=>array('class'=>'yiiPager paging')))?>
     <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/common.js"></script>
 </form><div class="clear"></div>
-</div>

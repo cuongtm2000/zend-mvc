@@ -13,8 +13,8 @@
             <li><p>Email: <span>*</span></p><input type="text" name="email" value="" /></li>
             <li><p>Telephone: <span>*</span></p><input type="text" name="phone" value="" /></li>
             <li><p>Content: <span>*</span></p><textarea name="content" rows="10" cols="" ></textarea></li>						
+            <li><input type="submit" class="singin" title="Submit"  value="Submit"/></li>
         </ul>                  
-        <input type="submit" class="singin" title="Submit"  value="Submit"/>  
     </form>
     <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl ?>/js/contact.js"></script>
     <!--End Page tent right-->

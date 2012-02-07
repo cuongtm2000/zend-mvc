@@ -203,14 +203,14 @@ class About extends CActiveRecord {
         $criteria->order = 'record_order DESC, created DESC';
         $criteria->condition = 'dos_usernames_username=:user';
         $criteria->params = array(':user' => Yii::app()->user->id);
-        $count = $this::model()->count($criteria);
+        $count = About::model()->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
         $pages->pageSize = 15;
         $pages->applyLimit($criteria);
 
-        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => About::model()->findAll($criteria), 'pages' => $pages);
     }
 
     //Back end - Update Record
@@ -260,11 +260,11 @@ class About extends CActiveRecord {
             $criteria->condition = 'dos_usernames_username=:user';
             $criteria->params = array(':user' => Yii::app()->user->id);
 
-            $models = $this::model()->findAll($criteria);
+            $models = About::model()->findAll($criteria);
 
             $i = 1;
             foreach ($models as $model) {
-                $this::model()->updateByPk($model['record_id'], array('record_order' => $i));
+                About::model()->updateByPk($model['record_id'], array('record_order' => $i));
                 $i++;
             }
         } else {
@@ -313,7 +313,7 @@ class About extends CActiveRecord {
         $criteria->condition = 'dos_usernames_username=:user';
         $criteria->params = array(':user' => Yii::app()->user->id);
 
-        $this->_model = $this::model()->findByPk($id, $criteria);
+        $this->_model = About::model()->findByPk($id, $criteria);
 
         if ($this->_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');

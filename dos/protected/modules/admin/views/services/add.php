@@ -1,4 +1,3 @@
-<div class="content">
     <?php $form = $this->beginWidget('CActiveForm', array('id'=>'frm', 'enableAjaxValidation'=>true, 'enableClientValidation' =>true, 'htmlOptions'=>array('enctype' =>'multipart/form-data')));?>
     <?php echo $form->errorSummary($model, ''); ?>
     <fieldset>
@@ -59,4 +58,3 @@
     </fieldset>
     <?php $this->endWidget();?>
     <?php $this->widget('ext.seoAlias.seoAlias', array('model'=>$model, 'source'=>'title', 'target'=>'tag')); ?>
-</div>

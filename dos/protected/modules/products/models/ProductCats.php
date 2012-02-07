@@ -197,14 +197,14 @@ class ProductCats extends CActiveRecord {
         $criteria->order = 'cat_order DESC';
         $criteria->condition = 'dos_usernames_username=:user';
         $criteria->params = array(':user' => Yii::app()->user->id);
-        $count = $this::model()->count($criteria);
+        $count = ProductCats::model()->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
         $pages->pageSize = 15;
         $pages->applyLimit($criteria);
 
-        $this->_cat_data = $this::model()->findAll($criteria);
+        $this->_cat_data = ProductCats::model()->findAll($criteria);
         $this->listSubItem($cid);
 
         return array('models' => $this->_sub_cat_data, 'pages' => $pages);
@@ -243,7 +243,7 @@ class ProductCats extends CActiveRecord {
         $criteria->condition = 'cat_enable=1 AND dos_usernames_username=:user';
         $criteria->params = array(':user' => Yii::app()->user->id);
 
-        $this->_cat_data = $this::model()->findAll($criteria);
+        $this->_cat_data = ProductCats::model()->findAll($criteria);
 
         if ($cat == 1) {
             $this->_sub_cat_data[0]['cat_id'] = 0;
@@ -293,11 +293,11 @@ class ProductCats extends CActiveRecord {
             $criteria->condition = 'dos_usernames_username=:user';
             $criteria->params = array(':user' => Yii::app()->user->id);
 
-            $models = $this::model()->findAll($criteria);
+            $models = ProductCats::model()->findAll($criteria);
 
             $i = 1;
             foreach ($models as $model) {
-                $this::model()->updateByPk($model['cat_id'], array('cat_order' => $i));
+                ProductCats::model()->updateByPk($model['cat_id'], array('cat_order' => $i));
                 $i++;
             }
         } else {
@@ -338,7 +338,7 @@ class ProductCats extends CActiveRecord {
         $criteria->condition = 'dos_usernames_username=:user';
         $criteria->params = array(':user' => Yii::app()->user->id);
 
-        $this->_model = $this::model()->findByPk($id, $criteria);
+        $this->_model = ProductCats::model()->findByPk($id, $criteria);
 
         if ($this->_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');
@@ -436,7 +436,7 @@ class ProductCats extends CActiveRecord {
 
     //Back end - Delete Record
     public function deleteRecord($id) {
-        $item = $this::model()->find('cat_id=:id', array(':id' => $id));
+        $item = ProductCats::model()->find('cat_id=:id', array(':id' => $id));
         $path = YiiBase::getPathOfAlias('webroot') . '/public/userfiles/images/productCats/';
         //Del pic_full field
         if (($item->pic_full)) {
@@ -453,7 +453,7 @@ class ProductCats extends CActiveRecord {
                 }
             }
         }
-        $this::model()->findByPk($id)->delete(); //delete record
+        ProductCats::model()->findByPk($id)->delete(); //delete record
     }
 
     //Xóa tất cả item của phân loại con
