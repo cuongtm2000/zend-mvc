@@ -104,6 +104,7 @@ class GLT_Models_NewsCat extends Zend_Db_Table {
             'cat_title' => $this->_xss->purify($data['cat_title']), 
             'cat_titleen' => $this->_xss->purify($data['cat_titleen']), 
             'cat_titlefr' => $this->_xss->purify($data['cat_titlefr']), 
+            'cat_titlekr' => $this->_xss->purify($data['cat_titlekr']), 
             'tag' => $this->_xss->purify($data['tag']), 
             'description' => $this->_xss->purify($data['description']), 
             'cat_order' => $max_record);
@@ -121,6 +122,7 @@ class GLT_Models_NewsCat extends Zend_Db_Table {
             'cat_title' => $this->_xss->purify($data['cat_title']), 
             'cat_titleen' => $this->_xss->purify($data['cat_titleen']), 
             'cat_titlefr' => $this->_xss->purify($data['cat_titlefr']),
+            'cat_titlekr' => $this->_xss->purify($data['cat_titlekr']),
             'tag' => $this->_xss->purify($data['tag']), 
             'description' => $this->_xss->purify($data['description'])
          );

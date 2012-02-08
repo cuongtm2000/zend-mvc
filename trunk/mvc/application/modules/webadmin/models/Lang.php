@@ -21,12 +21,14 @@ class Webadmin_Model_Lang extends Zend_Db_Table{
         $lang = $data['lang'];
         $langen = isset($data['langen']) ? $data['langen'] : '';
         $langfr = isset($data['langfr']) ? $data['langfr'] : '';
+        $langkr = isset($data['langkr']) ? $data['langkr'] : '';
         
         //add new langname
     	$langnamenew = isset($data['langnamenew']) ? $data['langnamenew'] : '';
         $langnew = isset($data['langnew']) ? $data['langnew'] : '';
         $langnewen = isset($data['langnewen']) ? $data['langnewen'] : '';
         $langnewfr = isset($data['langnewfr']) ? $data['langnewfr'] : '';
+        $langnewkr = isset($data['langnewkr']) ? $data['langnewkr'] : '';
         
         //delete all item
     	$this->delListlang();
@@ -34,7 +36,7 @@ class Webadmin_Model_Lang extends Zend_Db_Table{
     	$i = 0;
         foreach($langname as $value){
         	if(!empty($langname[$i])){
-            	$bind = array('lang_name' => isset($langname[$i]) ? $this->_xss->purify(trim($langname[$i])) : '', 'lang' => isset($lang[$i]) ? $this->_xss->purify(trim($lang[$i])) : '', 'langen' => isset($langen[$i]) ? $this->_xss->purify(trim($langen[$i])) : '', 'langfr' => isset($langfr[$i]) ? $this->_xss->purify(trim($langfr[$i])) : '');
+            	$bind = array('lang_name' => isset($langname[$i]) ? $this->_xss->purify(trim($langname[$i])) : '', 'lang' => isset($lang[$i]) ? $this->_xss->purify(trim($lang[$i])) : '', 'langen' => isset($langen[$i]) ? $this->_xss->purify(trim($langen[$i])) : '', 'langfr' => isset($langfr[$i]) ? $this->_xss->purify(trim($langfr[$i])) : '', 'langkr' => isset($langkr[$i]) ? $this->_xss->purify(trim($langkr[$i])) : '');
         		$this->insert($bind);
             }
             $i++;
@@ -44,7 +46,7 @@ class Webadmin_Model_Lang extends Zend_Db_Table{
     	if($langnamenew){
 	        foreach($langnamenew as $value){
 	        	if(!empty($langnamenew[$j])){
-	            	$bind = array('lang_name' => isset($langnamenew[$j]) ? $this->_xss->purify(trim($langnamenew[$j])) : '', 'lang' => isset($langnew[$j]) ? $this->_xss->purify(trim($langnew[$j])) : '', 'langen' => isset($langnewen[$j]) ? $this->_xss->purify(trim($langnewen[$j])) : '', 'langfr' => isset($langnewfr[$j]) ? $this->_xss->purify(trim($langnewfr[$j])) : '');
+	            	$bind = array('lang_name' => isset($langnamenew[$j]) ? $this->_xss->purify(trim($langnamenew[$j])) : '', 'lang' => isset($langnew[$j]) ? $this->_xss->purify(trim($langnew[$j])) : '', 'langen' => isset($langnewen[$j]) ? $this->_xss->purify(trim($langnewen[$j])) : '', 'langfr' => isset($langnewfr[$j]) ? $this->_xss->purify(trim($langnewfr[$j])) : '', 'langkr' => isset($langnewkr[$j]) ? $this->_xss->purify(trim($langnewkr[$j])) : '');
 	        		$this->insert($bind);
 	            }
 	            $j++;
