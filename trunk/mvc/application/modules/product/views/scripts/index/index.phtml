@@ -1,33 +1,25 @@
 <h1 class="title-box"><span><?php echo $this->lang[$this->module] ?></span></h1>
 <div class="frame-tent-right">
-    <?php if (is_array($this->menu_product_hot)): ?>
+    <?php if (is_array($this->menu_product_cat)): ?>
         <div class="all-product">
-            <?php foreach ($this->menu_product_hot as $value): ?>
+            <?php foreach ($this->menu_product_cat as $value): ?>
                 <?php
                 $picthumb = ($value['pic_thumb'] != '') ? '/public/userfiles/images/' . $this->module . '/' . $value['pic_thumb'] : TEMPLATE . '/images/no-images.jpg';
                 ?>
                 <div class="product">
                     <div class="tent-product">
                         <div class="product-img">
-                            <a href="<?php echo $this->baseUrl().'/'. LANGURL . $this->module ?>/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title' . LANG] ?>">
-                                <img src="<?php echo $this->baseUrl() . $picthumb ?>" alt="<?php echo $value['title' . LANG] ?>" />
+                            <a href="<?php echo $this->baseUrl() ?>/san-pham/<?php echo $value['tag'] ?>" title="<?php echo $value['cat_title' . LANG] ?>">
+                                <img src="<?php echo $this->baseUrl() . $picthumb ?>" alt="<?php echo $value['cat_title' . LANG] ?>" />
                             </a>
                         </div><div class="clear"></div>
 
                         <h2 class="title-pro">
-                            <a href="<?php echo $this->baseUrl().'/'. LANGURL .$this->module ?>/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $value['title' . LANG] ?>">
-                                <strong><?php echo $value['title' . LANG] ?></strong>
+                            <a href="<?php echo $this->baseUrl() ?>/san-pham/<?php echo $value['tag'] ?>" title="<?php echo $value['cat_title' . LANG] ?>">
+                                <strong><?php echo $value['cat_title' . LANG] ?></strong>
                             </a>
                         </h2>
-                        <p class="bton-pro">
-                            <a class="bton-detail" href="<?php echo $this->baseUrl().'/'. LANGURL .$this->module ?>/index/view/id/<?php echo $value['record_id'] ?>" title="<?php echo $this->lang['detail'] ?>">
-                                 <?php echo $this->lang['detail'] ?>
-                            </a> 
-
-                            <a href="<?php echo $this->baseUrl().'/'. LANGURL?>lien-he" title="<?php echo $this->lang['contact'] ?>" class="bton-order">
-                               <?php echo $this->lang['contact'] ?>
-                            </a> 
-                        </p>
+       
                     </div>
                 </div>
 

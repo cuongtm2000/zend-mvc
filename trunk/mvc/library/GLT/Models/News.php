@@ -115,6 +115,20 @@ class GLT_Models_News extends Zend_Db_Table {
             return $result->toArray();
         }
     }
+    
+    public function listAll($data = NULL) {
+        //Get paging number
+        $paginator = $data['paginator'];
+        if ($paginator['itemCountPerPage'] > 0) {
+            $page = $paginator['currentPage'];
+            $rowCount = $paginator['itemCountPerPage'];
+        }
+        $select = $this->select()->from($this->_name, array('pic_thumb', 'title' . LANG, 'preview' . LANG, 'tag'))
+                ->where('enable = 1')
+                ->order('postdate DESC')
+                ->limitPage($page, $rowCount);
+        return $this->fetchAll($select)->toArray();
+    }
 
     public function listItemadmin($data = NULL) {
         //get paging number

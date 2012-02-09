@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 3.4.9
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 08, 2012 at 08:58 AM
--- Server version: 5.5.16
--- PHP Version: 5.3.8
+-- Generation Time: Feb 09, 2012 at 01:31 PM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -53,9 +53,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_about` (
 --
 
 INSERT INTO `dos_module_about` (`record_id`, `title`, `titleen`, `titlefr`, `titlekr`, `content`, `contenten`, `contentfr`, `contentkr`, `tag`, `description`, `hits`, `posted_date`, `record_order`, `extra_field1`, `extra_field2`, `hot`, `enable`) VALUES
-(27, 'Enter your replacement text here...', '', '', NULL, '<p>\r\n	Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... </p>\r\n<p>\r\n	Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... </p>\r\n', '', '', NULL, 'enter-your-replacement-text-here', '', 868, '2011-08-16 02:32:39', 1, '', '', 0, 1),
-(28, 'Enter your replacement text here...', '', '', NULL, '<p>\r\n	Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... Enter your replacement text here... </p>\r\n', '', '', NULL, 'enter-your-replacement-text-here', '', 904, '2011-08-16 03:35:14', 1, '', '', 1, 1),
-(29, 'Teiu de', 'en', '', 'asdasdsa', '<p>\r\n	Chi tiet</p>\r\n', '<p>\r\n	chi</p>\r\n', '', '<p>\r\n	zxzxxzasdasd</p>\r\n', 'teiu-de', '', 1, '2012-02-08 06:59:26', 2, '', '', 0, 1);
+(27, 'Lĩnh vực hoạt động', '', '', '', '<p>\n	Công ty TNHH MTV Than Phúc An hoạt động lĩnh vực chủ yếu liên quan đến than đá các loại ....</p>\n', '', '', '', 'linh-vuc-hoat-dong', '', 884, '2011-08-16 02:32:39', 1, '', '', 0, 1),
+(28, 'Giới thiệu chung', '', '', '', '<p style="text-align:justify;">\n	Kính thưa quý khách hàng !</p>\n<p style="text-align:justify;">\n	Như chúng ta đã biết Quảng Ninh - nổi tiếng với du lịch, nổi tiếng với non nước, hang động, đảo đá Vịnh Hạ Long, nổi tiếng với than - vàng đen Tổ quốc. Bởi thế, Quảng Ninh đã được Bác Hồ gọi bằng một cái tên đầy thân thương - đất Mỏ. Nhắc đến than, người ta không chỉ nghĩ đến ngành công nghiệp khai thác và năng lượng từ than đá</p>\n<p style="text-align:justify;">\n	Than Phúc An đang xúc tiến mở rộng quy mô sản xuất, mạng lưới phân phối, và tìm đối tác xuất khẩu sản phẩm này.</p>\n<p style="text-align:justify;">\n	Hãy đến với chúng tôi</p>\n<p style="text-align:justify;">\n	Vui lòng liên hệ để biết thêm chi tiết:</p>\n<p style="text-align:justify;">\n	<span style="color:#0000cd;"><strong>CÔNG TY TNHH MTV THAN PHÚC AN</strong></span></p>\n<p>\n	Địa chỉ: xã Hóa An - Biên Hòa - Đồng Nai</p>\n<p>\n	Điện thoại: 0613 955 688</p>\n<p style="text-align:justify;">\n	Email: thanphucan@gmail.com</p>\n<p style="text-align:justify;">\n	 </p>\n', '', '', '', 'gioi-thieu-chung', '', 1036, '2011-08-16 03:35:14', 1, '', '', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -109,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_banner` (
   `page_position` varchar(45) NOT NULL,
   `banner_size` varchar(9) DEFAULT NULL,
   PRIMARY KEY (`banner_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `dos_module_banner`
@@ -118,7 +117,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_banner` (
 INSERT INTO `dos_module_banner` (`banner_id`, `banner_date`, `banner_name`, `banner_url`, `banner_link`, `banner_order`, `enable`, `position`, `page_position`, `banner_size`) VALUES
 (9, '2012-02-08 06:48:58', 'Banner', 'banner.jpg', '', 1, 1, 'banner', 'default', '951x332'),
 (10, '2012-02-08 06:49:20', 'Banner 1', 'banner1.jpg', '', 2, 1, 'banner', 'default', '951x332'),
-(11, '2012-02-08 06:55:10', 'Banner 2', 'banner2.jpg', '', 3, 1, 'banner', 'default', '951x332');
+(11, '2012-02-08 06:55:10', 'Banner 2', 'banner2.jpg', '', 3, 1, 'banner', 'default', '951x332'),
+(12, '2012-02-08 08:41:12', 'Logo', 'logo.png', '', 4, 1, 'logo', 'default', '155x108');
 
 -- --------------------------------------------------------
 
@@ -172,16 +172,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_contact` (
   `hot` tinyint(1) NOT NULL DEFAULT '0',
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `dos_module_contact`
 --
 
 INSERT INTO `dos_module_contact` (`record_id`, `create_date`, `title`, `titleen`, `titlefr`, `titlekr`, `content`, `contenten`, `contentfr`, `contentkr`, `hot`, `enable`) VALUES
-(7, '2011-06-17 03:52:09', 'Liên hệ với chúng tôi', '', '', NULL, '&lt;p&gt;\r\n	test&lt;/p&gt;\r\n', '', '', NULL, 0, 1),
-(8, '2011-10-06 08:44:49', 'Liên hệ', '', '', NULL, '&lt;p&gt;\r\n	Luật Văn Phòng&lt;br /&gt;\r\n	1234 Tòa Án New York, Suite 140&lt;br /&gt;\r\n	Điện Thoại: (813) 246-2358&lt;br /&gt;\r\n	Fax: (813) 247-9815&lt;br /&gt;\r\n	Website: Azweb.Com&lt;/p&gt;\r\n', '', '', NULL, 1, 1),
-(9, '2012-02-08 07:08:14', 'asdasd', 'asdasdas', '', 'sdsdds', '<p>\r\n	asd</p>\r\n', '<p>\r\n	asd</p>\r\n', '', '<p>\r\n	sdsd</p>\r\n', 0, 1);
+(7, '2011-06-17 03:52:09', 'Liên hệ với chúng tôi', '', '', '', '<p>\n	<span style="color:#ff0000;"><strong>TẬP ĐOÀN CÔNG NGHIỆP THAN KHOÁNG SẢN VN TKV</strong></span></p>\n<p>\n	<span style="color:#0000cd;"><strong>CÔNG TY TNHH MTV THAN PHÚC AN</strong></span></p>\n<p>\n	Địa chỉ: xã Hóa An - Biên Hòa - Đồng Nai</p>\n<p>\n	Điện thoại: 0613 955 688</p>\n<p>\n	Email: thanphucan@gmail.com</p>\n', '<p>\n	<strong><span style="color:#0000cd;">PHUC AN STONE COAL COMPANY  LIMITED</span></strong></p>\n<p>\n	Address: Hoa An - Bien Hoa - Dong Nai</p>\n<p>\n	Tel: 0613 955 688</p>\n<p>\n	Email: thanphucan@gmail.com</p>\n', '', '', 0, 1),
+(10, '2012-02-08 08:41:42', 'Liên hệ', 'Contact', '', '접촉', '<p style="text-align:center;">\n	<strong>CÔNG TY TNHH MTV THAN PHÚC AN</strong></p>\n<p style="text-align:center;">\n	Địa chỉ: xã Hóa An - Biên Hòa - Đồng Nai</p>\n<p style="text-align:center;">\n	Điện thoại: 0613 955 688</p>\n', '<p style="text-align:center;">\n	<strong>PHUC AN </strong><strong>STONE COAL</strong><strong> COMPANY  LIMITED</strong></p>\n<p style="text-align:center;">\n	<strong>Address: Hoa An - Bien Hoa - Dong Nai</strong></p>\n<p style="text-align:center;">\n	<strong>Tel: 0613 955 688</strong></p>\n', '', '', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -444,16 +443,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `dos_module_news`
 --
 
 INSERT INTO `dos_module_news` (`record_id`, `pic_thumb`, `title`, `titleen`, `titlefr`, `titlekr`, `preview`, `previewen`, `previewfr`, `previewkr`, `content`, `contenten`, `contentfr`, `contentkr`, `tag`, `description`, `author`, `hits`, `postdate`, `record_order`, `record_type`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(3, NULL, 'Thử nghiệm', '', '', NULL, '<p>\r\n	sdsad</p>\r\n', '', '', NULL, '<p>\r\n	sdasd</p>\r\n', '', '', NULL, 'thu-nghiem', '', NULL, 9, '2011-09-23 01:48:31', 2, 0, NULL, NULL, 1, 11),
-(5, NULL, 'bai viet 1', 'Post 1', '', NULL, '<p>\r\n	<br />\r\n	Field_name Min_value Max_value Min_length Max_length Empties_or_zeros Nulls Avg_value_or_avg_length Std Optimal_fieldtype<br />\r\n	mvc.dos_module_services.record_id 29 30 2 2 0 0 29.5000 0.5000 ENUM(''29'',''30'') NOT NULL<br />\r\n	mvc.dos_module_services.title abcdedd Dịch vụ cung cấp thư ký 7 31 0 0 19.0000 NULL ENUM(''abcdedd'',''Dịch vụ cung cấp thư ký'') NOT NULL<br />\r\n	mvc.dos_module_services.titleen   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.titlefr   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.content</p>\r\n<p>\r\n	<br />\r\n	   abcdeabcde</p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buffett sẽ hát mừng năm mới TQ... 22 644 0 0 333.0000 NULL ENUM(''</p>\r\n<p>\r\n	<br />\r\n	   abcdeabcde</p>\r\n<br /><p>\r\n	'',''</p>\r\n<p>\r\n	<br />\r\n	   Tỷ phú Warren...<br />\r\n	mvc.dos_module_services.contenten </p>\r\n<p>\r\n	<br />\r\n	   EN</p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buffett sẽ hát m... 0 658 1 0 329.0000 NULL ENUM('''',''</p>\r\n<p>\r\n	<br />\r\n	   EN</p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buffett...<br />\r\n	mvc.dos_module_services.contentfr </p>\r\n<p>\r\n	<br />\r\n	   KR</p>\r\n<br /><p>\r\n	<br />\r\n	   </p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buf... 0 672 1 0 336.0000 NULL ENUM('''',''</p>\r\n<p>\r\n	<br />\r\n	   KR</p>\r\n<br /><p>\r\n	<br />\r\n	   </p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú W...<br />\r\n	mvc.dos_module_services.tag abcdedd dich-vu-cung-cap-thu-ky 7 23 0 0 15.0000 NULL ENUM(''abcdedd'',''dich-vu-cung-cap-thu-ky'') NOT NULL<br />\r\n	mvc.dos_module_services.description   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hits 6 37 1 2 0 0 21.5000 15.5000 ENUM(''6'',''37'') NOT NULL<br />\r\n	mvc.dos_module_services.posted_date 2012-01-11 23:26:18 2012-02-02 23:56:53 19 19 0 0 19.0000 NULL ENUM(''2012-01-11 23:26:18'',''2012-02-02 23:56:53'') ...<br />\r\n	mvc.dos_module_services.record_order 1 2 1 1 0 0 1.5000 0.5000 ENUM(''1'',''2'') NOT NULL<br />\r\n	mvc.dos_module_services.extra_field1   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.extra_field2   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hot 0 0 1 1 2 0 0.0000 0.0000 ENUM(''0'') NOT NULL<br />\r\n	mvc.dos_module_services.enable 1 1 1 1 0 0 1.0000 0.0000 ENUM(''1'') NOT NULL</p>\r\n<p>\r\n	Query results operations</p>\r\n', '<p>\r\n	<br />\r\n	Field_name Min_value Max_value Min_length Max_length Empties_or_zeros Nulls Avg_value_or_avg_length Std Optimal_fieldtype<br />\r\n	mvc.dos_module_services.record_id 29 30 2 2 0 0 29.5000 0.5000 ENUM(''29'',''30'') NOT NULL<br />\r\n	mvc.dos_module_services.title abcdedd Dịch vụ cung cấp thư ký 7 31 0 0 19.0000 NULL ENUM(''abcdedd'',''Dịch vụ cung cấp thư ký'') NOT NULL<br />\r\n	mvc.dos_module_services.titleen   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.titlefr   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.content</p>\r\n<p>\r\n	<br />\r\n	   abcdeabcde</p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buffett sẽ hát mừng năm mới TQ... 22 644 0 0 333.0000 NULL ENUM(''</p>\r\n<p>\r\n	<br />\r\n	   abcdeabcde</p>\r\n<br /><p>\r\n	'',''</p>\r\n<p>\r\n	<br />\r\n	   Tỷ phú Warren...<br />\r\n	mvc.dos_module_services.contenten </p>\r\n<p>\r\n	<br />\r\n	   EN</p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buffett sẽ hát m... 0 658 1 0 329.0000 NULL ENUM('''',''</p>\r\n<p>\r\n	<br />\r\n	   EN</p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buffett...<br />\r\n	mvc.dos_module_services.contentfr </p>\r\n<p>\r\n	<br />\r\n	   KR</p>\r\n<br /><p>\r\n	<br />\r\n	   </p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buf... 0 672 1 0 336.0000 NULL ENUM('''',''</p>\r\n<p>\r\n	<br />\r\n	   KR</p>\r\n<br /><p>\r\n	<br />\r\n	   </p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú W...<br />\r\n	mvc.dos_module_services.tag abcdedd dich-vu-cung-cap-thu-ky 7 23 0 0 15.0000 NULL ENUM(''abcdedd'',''dich-vu-cung-cap-thu-ky'') NOT NULL<br />\r\n	mvc.dos_module_services.description   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hits 6 37 1 2 0 0 21.5000 15.5000 ENUM(''6'',''37'') NOT NULL<br />\r\n	mvc.dos_module_services.posted_date 2012-01-11 23:26:18 2012-02-02 23:56:53 19 19 0 0 19.0000 NULL ENUM(''2012-01-11 23:26:18'',''2012-02-02 23:56:53'') ...<br />\r\n	mvc.dos_module_services.record_order 1 2 1 1 0 0 1.5000 0.5000 ENUM(''1'',''2'') NOT NULL<br />\r\n	mvc.dos_module_services.extra_field1   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.extra_field2   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hot 0 0 1 1 2 0 0.0000 0.0000 ENUM(''0'') NOT NULL<br />\r\n	mvc.dos_module_services.enable 1 1 1 1 0 0 1.0000 0.0000 ENUM(''1'') NOT NULL</p>\r\n<p>\r\n	Query results operations</p>\r\n', '<p>\r\n	<br />\r\n	Field_name Min_value Max_value Min_length Max_length Empties_or_zeros Nulls Avg_value_or_avg_length Std Optimal_fieldtype<br />\r\n	mvc.dos_module_services.record_id 29 30 2 2 0 0 29.5000 0.5000 ENUM(''29'',''30'') NOT NULL<br />\r\n	mvc.dos_module_services.title abcdedd Dịch vụ cung cấp thư ký 7 31 0 0 19.0000 NULL ENUM(''abcdedd'',''Dịch vụ cung cấp thư ký'') NOT NULL<br />\r\n	mvc.dos_module_services.titleen   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.titlefr   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.content</p>\r\n<p>\r\n	<br />\r\n	   abcdeabcde</p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buffett sẽ hát mừng năm mới TQ... 22 644 0 0 333.0000 NULL ENUM(''</p>\r\n<p>\r\n	<br />\r\n	   abcdeabcde</p>\r\n<br /><p>\r\n	'',''</p>\r\n<p>\r\n	<br />\r\n	   Tỷ phú Warren...<br />\r\n	mvc.dos_module_services.contenten </p>\r\n<p>\r\n	<br />\r\n	   EN</p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buffett sẽ hát m... 0 658 1 0 329.0000 NULL ENUM('''',''</p>\r\n<p>\r\n	<br />\r\n	   EN</p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buffett...<br />\r\n	mvc.dos_module_services.contentfr </p>\r\n<p>\r\n	<br />\r\n	   KR</p>\r\n<br /><p>\r\n	<br />\r\n	   </p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buf... 0 672 1 0 336.0000 NULL ENUM('''',''</p>\r\n<p>\r\n	<br />\r\n	   KR</p>\r\n<br /><p>\r\n	<br />\r\n	   </p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú W...<br />\r\n	mvc.dos_module_services.tag abcdedd dich-vu-cung-cap-thu-ky 7 23 0 0 15.0000 NULL ENUM(''abcdedd'',''dich-vu-cung-cap-thu-ky'') NOT NULL<br />\r\n	mvc.dos_module_services.description   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hits 6 37 1 2 0 0 21.5000 15.5000 ENUM(''6'',''37'') NOT NULL<br />\r\n	mvc.dos_module_services.posted_date 2012-01-11 23:26:18 2012-02-02 23:56:53 19 19 0 0 19.0000 NULL ENUM(''2012-01-11 23:26:18'',''2012-02-02 23:56:53'') ...<br />\r\n	mvc.dos_module_services.record_order 1 2 1 1 0 0 1.5000 0.5000 ENUM(''1'',''2'') NOT NULL<br />\r\n	mvc.dos_module_services.extra_field1   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.extra_field2   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hot 0 0 1 1 2 0 0.0000 0.0000 ENUM(''0'') NOT NULL<br />\r\n	mvc.dos_module_services.enable 1 1 1 1 0 0 1.0000 0.0000 ENUM(''1'') NOT NULL</p>\r\n<p>\r\n	Query results operations</p>\r\n', NULL, '<p>\r\n	<br />\r\n	Field_name Min_value Max_value Min_length Max_length Empties_or_zeros Nulls Avg_value_or_avg_length Std Optimal_fieldtype<br />\r\n	mvc.dos_module_services.record_id 29 30 2 2 0 0 29.5000 0.5000 ENUM(''29'',''30'') NOT NULL<br />\r\n	mvc.dos_module_services.title abcdedd Dịch vụ cung cấp thư ký 7 31 0 0 19.0000 NULL ENUM(''abcdedd'',''Dịch vụ cung cấp thư ký'') NOT NULL<br />\r\n	mvc.dos_module_services.titleen   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.titlefr   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.content</p>\r\n<p>\r\n	<br />\r\n	   abcdeabcde</p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buffett sẽ hát mừng năm mới TQ... 22 644 0 0 333.0000 NULL ENUM(''</p>\r\n<p>\r\n	<br />\r\n	   abcdeabcde</p>\r\n<br /><p>\r\n	'',''</p>\r\n<p>\r\n	<br />\r\n	   Tỷ phú Warren...<br />\r\n	mvc.dos_module_services.contenten </p>\r\n<p>\r\n	<br />\r\n	   EN</p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buffett sẽ hát m... 0 658 1 0 329.0000 NULL ENUM('''',''</p>\r\n<p>\r\n	<br />\r\n	   EN</p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buffett...<br />\r\n	mvc.dos_module_services.contentfr </p>\r\n<p>\r\n	<br />\r\n	   KR</p>\r\n<br /><p>\r\n	<br />\r\n	   </p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buf... 0 672 1 0 336.0000 NULL ENUM('''',''</p>\r\n<p>\r\n	<br />\r\n	   KR</p>\r\n<br /><p>\r\n	<br />\r\n	   </p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú W...<br />\r\n	mvc.dos_module_services.tag abcdedd dich-vu-cung-cap-thu-ky 7 23 0 0 15.0000 NULL ENUM(''abcdedd'',''dich-vu-cung-cap-thu-ky'') NOT NULL<br />\r\n	mvc.dos_module_services.description   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hits 6 37 1 2 0 0 21.5000 15.5000 ENUM(''6'',''37'') NOT NULL<br />\r\n	mvc.dos_module_services.posted_date 2012-01-11 23:26:18 2012-02-02 23:56:53 19 19 0 0 19.0000 NULL ENUM(''2012-01-11 23:26:18'',''2012-02-02 23:56:53'') ...<br />\r\n	mvc.dos_module_services.record_order 1 2 1 1 0 0 1.5000 0.5000 ENUM(''1'',''2'') NOT NULL<br />\r\n	mvc.dos_module_services.extra_field1   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.extra_field2   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hot 0 0 1 1 2 0 0.0000 0.0000 ENUM(''0'') NOT NULL<br />\r\n	mvc.dos_module_services.enable 1 1 1 1 0 0 1.0000 0.0000 ENUM(''1'') NOT NULL</p>\r\n<p>\r\n	Query results operations</p>\r\n', '<p>\r\n	<br />\r\n	Field_name Min_value Max_value Min_length Max_length Empties_or_zeros Nulls Avg_value_or_avg_length Std Optimal_fieldtype<br />\r\n	mvc.dos_module_services.record_id 29 30 2 2 0 0 29.5000 0.5000 ENUM(''29'',''30'') NOT NULL<br />\r\n	mvc.dos_module_services.title abcdedd Dịch vụ cung cấp thư ký 7 31 0 0 19.0000 NULL ENUM(''abcdedd'',''Dịch vụ cung cấp thư ký'') NOT NULL<br />\r\n	mvc.dos_module_services.titleen   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.titlefr   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.content</p>\r\n<p>\r\n	<br />\r\n	   abcdeabcde</p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buffett sẽ hát mừng năm mới TQ... 22 644 0 0 333.0000 NULL ENUM(''</p>\r\n<p>\r\n	<br />\r\n	   abcdeabcde</p>\r\n<br /><p>\r\n	'',''</p>\r\n<p>\r\n	<br />\r\n	   Tỷ phú Warren...<br />\r\n	mvc.dos_module_services.contenten </p>\r\n<p>\r\n	<br />\r\n	   EN</p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buffett sẽ hát m... 0 658 1 0 329.0000 NULL ENUM('''',''</p>\r\n<p>\r\n	<br />\r\n	   EN</p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buffett...<br />\r\n	mvc.dos_module_services.contentfr </p>\r\n<p>\r\n	<br />\r\n	   KR</p>\r\n<br /><p>\r\n	<br />\r\n	   </p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buf... 0 672 1 0 336.0000 NULL ENUM('''',''</p>\r\n<p>\r\n	<br />\r\n	   KR</p>\r\n<br /><p>\r\n	<br />\r\n	   </p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú W...<br />\r\n	mvc.dos_module_services.tag abcdedd dich-vu-cung-cap-thu-ky 7 23 0 0 15.0000 NULL ENUM(''abcdedd'',''dich-vu-cung-cap-thu-ky'') NOT NULL<br />\r\n	mvc.dos_module_services.description   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hits 6 37 1 2 0 0 21.5000 15.5000 ENUM(''6'',''37'') NOT NULL<br />\r\n	mvc.dos_module_services.posted_date 2012-01-11 23:26:18 2012-02-02 23:56:53 19 19 0 0 19.0000 NULL ENUM(''2012-01-11 23:26:18'',''2012-02-02 23:56:53'') ...<br />\r\n	mvc.dos_module_services.record_order 1 2 1 1 0 0 1.5000 0.5000 ENUM(''1'',''2'') NOT NULL<br />\r\n	mvc.dos_module_services.extra_field1   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.extra_field2   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hot 0 0 1 1 2 0 0.0000 0.0000 ENUM(''0'') NOT NULL<br />\r\n	mvc.dos_module_services.enable 1 1 1 1 0 0 1.0000 0.0000 ENUM(''1'') NOT NULL</p>\r\n<p>\r\n	Query results operations</p>\r\n', '<p>\r\n	<br />\r\n	Field_name Min_value Max_value Min_length Max_length Empties_or_zeros Nulls Avg_value_or_avg_length Std Optimal_fieldtype<br />\r\n	mvc.dos_module_services.record_id 29 30 2 2 0 0 29.5000 0.5000 ENUM(''29'',''30'') NOT NULL<br />\r\n	mvc.dos_module_services.title abcdedd Dịch vụ cung cấp thư ký 7 31 0 0 19.0000 NULL ENUM(''abcdedd'',''Dịch vụ cung cấp thư ký'') NOT NULL<br />\r\n	mvc.dos_module_services.titleen   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.titlefr   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.content</p>\r\n<p>\r\n	<br />\r\n	   abcdeabcde</p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buffett sẽ hát mừng năm mới TQ... 22 644 0 0 333.0000 NULL ENUM(''</p>\r\n<p>\r\n	<br />\r\n	   abcdeabcde</p>\r\n<br /><p>\r\n	'',''</p>\r\n<p>\r\n	<br />\r\n	   Tỷ phú Warren...<br />\r\n	mvc.dos_module_services.contenten </p>\r\n<p>\r\n	<br />\r\n	   EN</p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buffett sẽ hát m... 0 658 1 0 329.0000 NULL ENUM('''',''</p>\r\n<p>\r\n	<br />\r\n	   EN</p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buffett...<br />\r\n	mvc.dos_module_services.contentfr </p>\r\n<p>\r\n	<br />\r\n	   KR</p>\r\n<br /><p>\r\n	<br />\r\n	   </p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú Warren Buf... 0 672 1 0 336.0000 NULL ENUM('''',''</p>\r\n<p>\r\n	<br />\r\n	   KR</p>\r\n<br /><p>\r\n	<br />\r\n	   </p>\r\n<br /><p>\r\n	<br />\r\n	   Tỷ phú W...<br />\r\n	mvc.dos_module_services.tag abcdedd dich-vu-cung-cap-thu-ky 7 23 0 0 15.0000 NULL ENUM(''abcdedd'',''dich-vu-cung-cap-thu-ky'') NOT NULL<br />\r\n	mvc.dos_module_services.description   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hits 6 37 1 2 0 0 21.5000 15.5000 ENUM(''6'',''37'') NOT NULL<br />\r\n	mvc.dos_module_services.posted_date 2012-01-11 23:26:18 2012-02-02 23:56:53 19 19 0 0 19.0000 NULL ENUM(''2012-01-11 23:26:18'',''2012-02-02 23:56:53'') ...<br />\r\n	mvc.dos_module_services.record_order 1 2 1 1 0 0 1.5000 0.5000 ENUM(''1'',''2'') NOT NULL<br />\r\n	mvc.dos_module_services.extra_field1   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.extra_field2   0 0 2 0 0.0000 NULL CHAR(0) NOT NULL<br />\r\n	mvc.dos_module_services.hot 0 0 1 1 2 0 0.0000 0.0000 ENUM(''0'') NOT NULL<br />\r\n	mvc.dos_module_services.enable 1 1 1 1 0 0 1.0000 0.0000 ENUM(''1'') NOT NULL</p>\r\n<p>\r\n	Query results operations</p>\r\n', NULL, 'bai-viet-1', '', NULL, 12, '2012-02-02 18:44:29', 3, 1, NULL, NULL, 1, 15),
-(6, NULL, 'assaas', 'assa', '', 'sa', '<p>\r\n	asas</p>\r\n', '<p>\r\n	sasa</p>\r\n', '', '', '<p>\r\n	asa</p>\r\n', '<p>\r\n	as</p>\r\n', '', '', '', '', NULL, 1, '2012-02-08 07:20:36', 4, 0, NULL, NULL, 1, 16);
+(7, NULL, 'PHÁT HIỆN THAN ĐÁ CỔ NIÊN ĐẠI HƠN 4.000 NĂM', '', '', '', '<p style="text-align:justify;">\n	Trong đợt khai quật từ đầu năm 2009 đến nay tại di chỉ Bí Lấp và động Đông Trong II, đoàn khai quật khảo cổ học tại Vân Đồn (Quảng Ninh) phát hiện được 2 viên than đá cổ của tiền sử Hạ Long sử dụng, có niên đại khoảng 4.000 đến 4.200 năm.</p>\n', '', '', '', '<p style="text-align:justify;">\n	Trong đợt khai quật từ đầu năm 2009 đến nay tại di chỉ Bí Lấp và động Đông Trong II, đoàn khai quật khảo cổ học tại Vân Đồn (Quảng Ninh) phát hiện được 2 viên than đá cổ của tiền sử Hạ Long sử dụng, có niên đại khoảng 4.000 đến 4.200 năm.</p>\n<p>\n	 </p>\n<p style="text-align:justify;">\n	Than đá hình bình hành và hình thoi, có kích thước 4,5 (6,5) x 4,0 x 3,5 cm. Đây là những viên than được người tiền sử Hạ Long sử dụng như một loại đá quý chôn theo người chết.</p>\n<p style="text-align:justify;">\n	Đoàn khai quật khảo cổ học tại Vân Đồn xác định được ít nhất 7 ngôi mộ cổ tại địa điểm trên. Các di cốt trong mộ không được chôn theo tư thế giải phẫu, mà chỉ là những đống xương đã gãy vụn co cụm lại từng chỗ.<br /><br />\n	Các di cốt bao gồm những mảnh sọ, răng lẻ cùng nhiều xương chi khác. Hầu hết mộ táng này chôn cải táng, không có biên mộ, có táng tục chôn trong nồi vò gốm và chôn kèm theo đồ tùy táng là những công cụ lao động và đồ trang sức.<br /><br />\n	Tại ngôi mộ số 4, các nhà khảo cổ đã phát hiện thấy hai viên đá cổ nói trên.</p>\n<p>\n	 </p>\n<p style="text-align:justify;">\n	Ngoài ra trong mộ cũng có nhiều viên thổ hoàng, loại khoáng chất thường được người xưa nghiền nhỏ, hòa nước để bôi vào cơ thể người sống hoặc người chết với ý niệm làm đẹp cơ thể.<br /><br />\n	Dựa vào các di tích, di vật thu được dưới và trên bề mặt cho thấy đây là một di tích điển hình thuộc văn hóa Hạ Long nổi tiếng, phân bố rộng rãi ở miền duyên hải Đông Bắc./.</p>\n', '', '', '', 'phat-hien-than-da-co-nien-dai-hon-4000-nam', '', NULL, 2, '2012-02-08 10:15:20', 1, 0, NULL, NULL, 1, 13),
+(8, NULL, 'THAN MIỀN NAM SẼ KHÔNG SỐT TRONG DỊP CUỐI NĂM', '', '', '', '<p>\n	Bên cạnh đó, lượng than khai thác tại ba mỏ than Đèo Nai, Cọc Sáu và Thống Nhất (dự kiến năm 2003 khoảng 270.000 tấn) chủ yếu dành để cung cấp cho Công ty phân đạm và hóa chất Hà Bắc khoảng 110.000 tấn/năm. Trong khi đó, tỷ lệ than cục thu hồi được từ khai thác than nguyên khai chỉ từ 3-5%, vì vậy Tổng Công ty Than Việt Nam không thể đáp ứng nhu cầu cho tất cả các khách hàng.</p>\n', '', '', '', '<p>\n	Phó Tổng Giám đốc Tổng Công ty Than Việt Nam, Ông Hoàng Văn Thái cho biết TCT đang tập trung khắc phục sự mất cân đối giữa cung và cầu ở các tỉnh phía Nam, đảm bảo cung ứng đủ than cho các cơ sở sản xuất, không để tình trạng \\"sốt\\" than miền nam vào dịp cuối năm đồng thời đã chỉ đạo các đơn vị trực thuộc chuyển gần 30.000 tấn than vào thị trường miền Nam. TCT than đang tiến hành cân đối nguồn hàng để đảm bảo cung cấp than cục cho sản xuất phân đạm và xuất khẩu theo đúng kế hoạch. Riêng công ty than Hà Tu, Núi Béo sẽ được hỗ trợ kinh phí vận chuyển (khoảng 10.000 đồng/tấn) để đảm bảo cung ứng than kịp thời cho các khách hàng nhận than bằng tàu biển.</p>\n<p style="text-align:justify;">\n	 </p>\n<p>\n	Thời gian gần đây, lợi dụng sự mất cân đối cục bộ giữa cung và cầu trong ngành than, các doanh nghiệp tư nhân đã đẩy giá bán than lên tới 1,4 triệu đồng/tấn, tăng 200-300.000 đồng/tấn so với quy định, khiến thị trường than mien nam đang lâm vào cơn \\"sốt\\". Theo ông Thái, nguyên nhân đầu tiên khiến nhu cầu than cục ở miền Nam trở nên căng thẳng, đặc biệt vào dịp cuối năm là do thời tiết xấu nên một số chuyến tàu nhận và giao hàng không đúng thời gian. Trong khi đó, nhiều tỉnh phía Nam đang bước vào mùa mưa, nhu cầu sao sấy nông sản, thực phẩm tăng lên, dẫn đến nhu cầu than tăng cao. Mặt khác theo yêu cầu của UBND TP.HCM, ngay từ đầu năm Công ty Chế biến và kinh doanh than mien nam phải bán gấp 20.000 tấn than tại kho Tân Cảng (có 1.500 tấn than cục) để di dời kho nên vào thời điểm này công ty không thể tiếp nhận than.</p>\n<p>\n	Bên cạnh đó, lượng than khai thác tại ba mỏ than Đèo Nai, Cọc Sáu và Thống Nhất (dự kiến năm 2003 khoảng 270.000 tấn) chủ yếu dành để cung cấp cho Công ty phân đạm và hóa chất Hà Bắc khoảng 110.000 tấn/năm. Trong khi đó, tỷ lệ than cục thu hồi được từ khai thác than nguyên khai chỉ từ 3-5%, vì vậy Tổng Công ty Than Việt Nam không thể đáp ứng nhu cầu cho tất cả các khách hàng.</p>\n<p style="text-align:justify;">\n	 </p>\n<p>\n	Theo TCT Than Việt Nam, nhu cầu tiêu thụ than ở các tỉnh phía Nam tăng khoảng 5%/năm. Riêng năm nay dự kiến tiêu thụ than ở phía Nam là 356.800 tấn, tăng trên 40% so với năm 2002. Trong đó, than cục là 107.900 tấn, tăng gần 47%. Các ngành sản xuất có mức tiêu thụ than lớn là xi măng (khoảng 200.000 tấn), sao sấy nông sản, thực phẩm, làm chất đốt sinh hoạt. Tính đến đầu tháng 10/2003, các đơn vị trên đã bán ra 80.300 tấn than cục.</p>\n<p>\n	Một nguyên nhân khác dẫn đến tình trạng khan hiếm than ở thị trường miền Nam là do TCT Than Việt Nam chỉ có 3 đơn vị chế biến và kinh doanh than là Công ty Chế biến và kinh doanh than miền Nam, Công ty Than Đông Bắc, Công ty Đầu tư, thương mại và dịch vụ, chiếm 50% thị phần. Phần còn lại là do các đơn vị kinh doanh than thuộc các thành phần kinh tế khác nắm giữ, nên khả năng quản lý và kiểm soát thị trường của CTC Than Việt Nam bị hạn chế.</p>\n', '', '', '', 'than-mien-nam-se-khong-sot-trong-dip-cuoi-nam', '', NULL, 3, '2012-02-08 10:19:24', 2, 0, NULL, NULL, 1, 13);
 
 -- --------------------------------------------------------
 
@@ -480,11 +478,11 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
 --
 
 INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `cat_titlefr`, `cat_titlekr`, `tag`, `description`, `cat_order`, `cat_enable`) VALUES
-(11, 13, 'Test ', '', '', NULL, 'test', '', 1, 1),
-(13, 0, 'Sản phẩm loại 2.2', '', '', NULL, 'san-pham-loai-22', '', 3, 1),
-(14, 0, 'Sản phẩm loại 3', 'Cat 3', '3 CAT', NULL, 'san-pham-loai-3', '', 4, 1),
-(15, 0, 'Sản phẩm loại vv', '', '', NULL, 'san-pham-loai-vv', '', 5, 1),
-(16, 0, 'asd', 'asdasd', '', 'zxzx', 'asd', '', 6, 1);
+(11, 0, 'Tuyển dụng', '', '', '', 'tuyen-dung', '', 1, 1),
+(13, 0, 'Tin tức chuyên ngành', '', '', '', 'tin-tuc-chuyen-nganh', '', 3, 1),
+(14, 0, 'Tin thế giới', '', '', '', 'tin-the-gioi', '', 4, 1),
+(15, 0, 'Tin trong nước', '', '', '', 'tin-trong-nuoc', '', 5, 1),
+(16, 0, 'Tin công ty', '', '', '', 'tin-cong-ty', '', 6, 1);
 
 -- --------------------------------------------------------
 
@@ -588,21 +586,23 @@ CREATE TABLE IF NOT EXISTS `dos_module_product` (
   `dos_module_product_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_product_dos_module_product_cat` (`dos_module_product_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
 
 --
 -- Dumping data for table `dos_module_product`
 --
 
 INSERT INTO `dos_module_product` (`record_id`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `title`, `titleen`, `titlefr`, `titlekr`, `preview`, `previewen`, `previewfr`, `previewkr`, `detail`, `detailen`, `detailfr`, `detailkr`, `tag`, `description`, `hits`, `record_order`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `unit`, `hot`, `specials`, `enable`, `dos_module_product_cat_cat_id`) VALUES
-(11, '2011-10-29 03:53:39', 'img11.jpg', NULL, NULL, 'Sản phẩm 3', '', '', NULL, '', '', '', NULL, '<p>\r\n	testing</p>\r\n', '', '', NULL, 'san-pham-3', '', 0, 1, '', '', '', '', 0, 0, 0, 1, 9),
-(12, '2011-10-29 04:04:04', 'img12.jpg', NULL, NULL, 'Sản phẩm 7', '', '', NULL, '', '', '', NULL, '<p>\r\n	testing</p>\r\n', '', '', NULL, 'san-pham-7', '', 2, 2, '', '', '', '', 0, 0, 0, 1, 9),
-(13, '2011-10-29 04:18:13', NULL, NULL, NULL, 'San pham cua abc', '', '', NULL, '<p>\r\n	adas</p>\r\n', '', '', NULL, '<p>\r\n	Overview|QuickStart|APIs|Reference Guide|Translations|Multimedia<br />\r\n	The Request Object<br />\r\n	Zend_Controller<br />\r\n	Programmer''s Reference Guide<br />\r\n	The Dispatcher<br />\r\n	The Standard Router<br />\r\n	Introduction</p>\r\n<p>\r\n	Zend_Controller_Router_Rewrite is the standard framework router. Routing is the process of taking a URI endpoint (that part of the URI which comes after the base URL) and decomposing it into parameters to determine which module, controller, and action of that controller should receive the request. This values of the module, controller, action and other parameters are packaged into a Zend_Controller_Request_Http object which is then processed by Zend_Controller_Dispatcher_Standard. Routing occurs only once: when the request is initially received and before the first controller is dispatched.</p>\r\n<p>\r\n	Zend_Controller_Router_Rewrite is designed to allow for mod_rewrite-like functionality using pure PHP structures. It is very loosely based on Ruby on Rails routing and does not require any prior knowledge of webserver URL rewriting. It is designed to work with a single Apache mod_rewrite rule (one of):</p>\r\n<p>\r\n	RewriteEngine on</p>\r\n', '', '', NULL, 'san-pham-cua-abc', '', 0, 3, '', '', '', '', 0, 0, 0, 1, 9),
-(14, '2011-10-29 07:27:13', NULL, NULL, NULL, 'Thu viet bai ', '', '', NULL, '<p>\r\n	dadasd</p>\r\n', '', '', NULL, '<div style="width:80%;">\r\n	<h3>\r\n		Title goes here</h3>\r\n	<table border="1" cellpadding="0" cellspacing="0" style="width:150px;float:right;"><caption style="border:solid 1px #000000;">\r\n			<strong>Table title</strong></caption>\r\n		<tbody><tr><td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n			</tr><tr><td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n			</tr><tr><td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n				<td>\r\n					 </td>\r\n			</tr></tbody></table><p>\r\n		       </p>\r\n	<div class="tent-product">\r\n		<br />\r\n		                       \r\n		<div class="product-img">\r\n			<br />\r\n			                            <a href="" title="&lt;?php echo $value[''cat_title'' . LANG] ?&gt;"><br />\r\n			                                <img alt="&lt;?php echo $value[''cat_title'' . LANG] ?&gt;" src="" /><br />\r\n			                            </a><br />\r\n			                       </div>\r\n		<div class="clear">\r\n			 </div>\r\n		<p>\r\n			 </p>\r\n		<p>\r\n			                       </p>\r\n		<h2 class="title-pro">\r\n			<br />\r\n			                            <a href="" title="&lt;?php echo $value[''cat_title'' . LANG] ?&gt;"><br />\r\n			                               <br />\r\n			                            </a><br />\r\n			                       </h2>\r\n		<br />\r\n		                       \r\n		<p class="bton-pro">\r\n			<br />\r\n			                            <a class="bton-detail" href="" title="&lt;?php echo $value[''cat_title'' . LANG] ?&gt;"><br />\r\n			                                Chi tiết<br />\r\n			                            </a><br />\r\n			                            <a class="bton-order" href="order.html" title="ĐẶT HÀNG"><br />\r\n			                                ĐẶT HÀNG</a></p>\r\n		<a class="bton-order" href="order.html" title="ĐẶT HÀNG"> </a></div>\r\n	<a class="bton-order" href="order.html" title="ĐẶT HÀNG"> </a></div>\r\n', '', '', NULL, 'thu-viet-bai', '', 0, 4, '', '', '', '', 0, 1, 0, 1, 9),
-(15, '2011-10-29 07:27:22', NULL, NULL, NULL, 'tai khoan', '', '', NULL, '<p>\r\n	asdasd</p>\r\n', '', '', NULL, '<p>\r\n	asdasd</p>\r\n', '', '', NULL, 'tai-khoan', '', 0, 5, '', '', '', '', 0, 0, 1, 1, 9),
-(16, '2011-10-29 07:27:39', 'img5.jpg', NULL, NULL, 'asdas ', '', '', NULL, '<p>\r\n	asdasd</p>\r\n', '', '', NULL, '<p>\r\n	asdasd</p>\r\n', '', '', NULL, 'asdas', '', 0, 6, '', '', '', '', 0, 0, 0, 1, 7),
-(17, '2012-02-03 15:29:15', NULL, NULL, NULL, 'Sản phẩm than đá  ', 'Coat', '', NULL, '<p>\r\n	sscs</p>\r\n', '', '', NULL, '<p>\r\n	sccccccccccccccccccccccccccccccccccccccccccc</p>\r\n', '', '', NULL, 'san-pham-than-da', '', 0, 7, '', '', '', '', 0, 0, 0, 1, 7),
-(18, '2012-02-08 07:14:35', NULL, NULL, NULL, 'asa', 'asdasdas', '', 'asas', '<p>\r\n	as</p>\r\n', '<p>\r\n	as</p>\r\n', '', '<p>\r\n	as</p>\r\n', '<p>\r\n	asasa</p>\r\n', '<p>\r\n	a</p>\r\n', '', '<p>\r\n	as</p>\r\n', 'asa', '', 0, 8, '', '', '', '', 0, 0, 0, 1, 10);
+(16, '2011-10-29 07:27:39', 'images.jpg', NULL, NULL, 'CỤC 1', '', '', '', '<table border="1" cellpadding="1" cellspacing="1" style="width:500px;"><tbody><tr><td>\n				<p style="text-align:center;">\n					<strong>CỠ HẠT </strong></p>\n				<p style="text-align:center;">\n					(mm)</p>\n			</td>\n			<td>\n				<p style="text-align:center;">\n					<strong>NHIỆT LƯỢNG </strong></p>\n				<p style="text-align:center;">\n					(cal/g)</p>\n			</td>\n			<td>\n				<p style="text-align:center;">\n					<strong>ĐỘ TRO </strong></p>\n				<p style="text-align:center;">\n					(%)</p>\n			</td>\n		</tr><tr><td style="text-align:center;">\n				<p>\n					<strong>100 - 250</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<strong>8.200 max</strong></td>\n			<td style="text-align:center;">\n				<strong>13 max</strong></td>\n		</tr></tbody></table><p>\n	 </p>\n<p>\n	 </p>\n<br /><p>\n	 </p>\n<p>\n	 </p>\n', '', '', '', '<table border="1" cellpadding="1" cellspacing="1" style="width:500px;"><tbody><tr><td>\n				<p style="text-align:center;">\n					<strong>CỠ HẠT </strong></p>\n				<p style="text-align:center;">\n					(mm)</p>\n			</td>\n			<td>\n				<p style="text-align:center;">\n					<strong>NHIỆT LƯỢNG </strong></p>\n				<p style="text-align:center;">\n					(cal/g)</p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>ĐỘ TRO </strong></p>\n				<p>\n					(%)</p>\n			</td>\n		</tr><tr><td style="text-align:center;">\n				<p>\n					<b>100 - 250</b></p>\n			</td>\n			<td style="text-align:center;">\n				<strong>8.200 max</strong></td>\n			<td style="text-align:center;">\n				<strong>13 max</strong></td>\n		</tr></tbody></table><p>\n	 </p>\n', '', '', '', 'cuc-1', '', 29, 1, '', '', '', '', 0, 0, 0, 1, 7),
+(17, '2012-02-03 15:29:15', 'images-1.jpg', NULL, NULL, 'CỤC 1 LỞ', '', '', '', '<table border="1" cellpadding="1" cellspacing="1" style="width:500px;"><tbody><tr><td style="text-align:center;">\n				<p>\n					<strong>CỠ HẠT </strong></p>\n				<p>\n					<strong>(mm)</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>NHIỆT LƯỢNG </strong></p>\n				<p>\n					<strong>(cal/g)</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>ĐỘ TRO </strong></p>\n				<p>\n					<strong>(%)</strong></p>\n			</td>\n		</tr><tr><td style="text-align:center;">\n				<p>\n					<strong>100 - 150</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<strong>8.200 max</strong></td>\n			<td style="text-align:center;">\n				<strong>13 max</strong></td>\n		</tr></tbody></table><p>\n	 </p>\n<br /><p>\n	 </p>\n<br /><p>\n	 </p>\n<br /><p>\n	 </p>\n', '', '', '', '<table border="1" cellpadding="1" cellspacing="1" style="width:500px;"><tbody><tr><td style="text-align:center;">\n				<p>\n					<strong>CỠ HẠT </strong></p>\n				<p>\n					(mm)</p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>NHIỆT LƯỢNG </strong></p>\n				<p>\n					(cal/g)</p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>ĐỘ TRO</strong></p>\n				<p>\n					(%)</p>\n			</td>\n		</tr><tr><td style="text-align:center;">\n				<p>\n					<strong>100 - 150</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<strong>8.200 max</strong></td>\n			<td style="text-align:center;">\n				<strong>13 max</strong></td>\n		</tr></tbody></table><p>\n	 </p>\n<br /><p>\n	 </p>\n<br /><p>\n	 </p>\n<br /><p>\n	 </p>\n', '', '', '', 'cuc-1-lo', '', 8, 2, '', '', '', '', 0, 0, 0, 1, 7),
+(19, '2012-02-08 09:31:49', 'images-25.jpg', NULL, NULL, 'CỤC 2', '', '', '', '<table border="1" cellpadding="1" cellspacing="1" style="width:500px;"><tbody><tr><td style="text-align:center;">\n				<p>\n					<strong>CỠ HẠT </strong></p>\n				<p>\n					<strong>(mm)</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>NHIỆT LƯỢNG </strong></p>\n				<p>\n					<strong>(cal/g)</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>ĐỘ TRO </strong></p>\n				<p>\n					<strong>(%)</strong></p>\n			</td>\n		</tr><tr><td style="text-align:center;">\n				<p>\n					<strong>50 - 100</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<strong>8.200 max</strong></td>\n			<td style="text-align:center;">\n				<strong>13 max</strong></td>\n		</tr></tbody></table><p>\n	 </p>\n<br /><p>\n	 </p>\n<br /><p>\n	 </p>\n<br /><p>\n	 </p>\n', '', '', '', '<table border="1" cellpadding="1" cellspacing="1" style="width:500px;"><tbody><tr><td style="text-align:center;">\n				<strong>CỠ HẠT (mm)</strong></td>\n			<td style="text-align:center;">\n				<strong>NHIỆT LƯỢNG (cal/g)</strong></td>\n			<td style="text-align:center;">\n				<strong>ĐỘ TRO (%)</strong></td>\n		</tr><tr><td style="text-align:center;">\n				<p>\n					<strong>50 - 100</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<strong>8.200 max</strong></td>\n			<td style="text-align:center;">\n				<strong>13 max</strong></td>\n		</tr></tbody></table><p>\n	 </p>\n<br /><p>\n	 </p>\n<br /><p>\n	 </p>\n<br /><p>\n	 </p>\n', '', '', '', 'cuc-2', '', 3, 3, '', '', '', '', 0, 0, 0, 1, 7),
+(20, '2012-02-08 09:35:38', 'download.jpg', NULL, '', 'CỤC 3', '', '', '', '<table border="1" cellpadding="1" cellspacing="1" style="width:500px;"><tbody><tr><td style="text-align:center;">\n				<p>\n					<strong>CỠ HẠT </strong></p>\n				<p>\n					<strong>(mm)</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>NHIỆT LƯỢNG </strong></p>\n				<p>\n					<strong>(cal/g)</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>ĐỘ TRO</strong></p>\n				<p>\n					<strong>(%)</strong></p>\n			</td>\n		</tr><tr><td style="text-align:center;">\n				<strong>25 - 100</strong></td>\n			<td style="text-align:center;">\n				<p>\n					<strong>8.200 max</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<strong>13 max</strong></td>\n		</tr></tbody></table><p>\n	 </p>\n<br /><p>\n	 </p>\n<br /><p>\n	 </p>\n<br /><p>\n	 </p>\n', '', '', '', '<table border="1" cellpadding="1" cellspacing="1" style="width:500px;"><tbody><tr><td style="text-align:center;">\n				<p>\n					<strong>CỠ HẠT </strong></p>\n				<p>\n					<strong>(mm)</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>NHIỆT LƯỢNG </strong></p>\n				<p>\n					<strong>(cal/g)</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>ĐỘ TRO</strong></p>\n				<p>\n					<strong>(%)</strong></p>\n			</td>\n		</tr><tr><td style="text-align:center;">\n				<p>\n					<strong>25 - 100</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<strong>8.200 max</strong></td>\n			<td style="text-align:center;">\n				<strong>13 max</strong></td>\n		</tr></tbody></table><p>\n	 </p>\n<br /><p>\n	 </p>\n<br /><p>\n	 </p>\n<br /><p>\n	 </p>\n', '', '', '', 'cuc-3', '', 1, 4, '', '', '', '', 0, 0, 0, 1, 7),
+(21, '2012-02-08 09:39:15', 'download-1.jpg', NULL, '', 'CÁM MIỂNG', '', '', '', '<table border="1" cellpadding="1" cellspacing="1" style="width:500px;"><tbody><tr><td style="text-align:center;">\n				<p>\n					<strong>CỠ HẠT </strong></p>\n				<p>\n					<strong>(mm)</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>NHIỆT LƯỢNG </strong></p>\n				<p>\n					<strong>(cal/g)</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>ĐỘ TRO</strong></p>\n				<p>\n					<strong>(%)</strong></p>\n			</td>\n		</tr><tr><td style="text-align:center;">\n				<p>\n					<strong>0 - 15</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<strong>7.500 max</strong></td>\n			<td style="text-align:center;">\n				<strong>13 max</strong></td>\n		</tr></tbody></table><p>\n	 </p>\n<br /><p>\n	 </p>\n<br /><p>\n	 </p>\n', '', '', '', '<table border="1" cellpadding="1" cellspacing="1" style="width:500px;"><tbody><tr><td style="text-align:center;">\n				<p>\n					<strong>CỠ HẠT </strong></p>\n				<p>\n					<strong>(mm)</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>NHIỆT LƯỢNG </strong></p>\n				<p>\n					<strong>(cal/g)</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>ĐỘ TRO </strong></p>\n				<p>\n					<strong>(%)</strong></p>\n			</td>\n		</tr><tr><td style="text-align:center;">\n				<strong>0 - 15</strong></td>\n			<td style="text-align:center;">\n				<p>\n					<strong>7.500 max</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<strong>13 max</strong></td>\n		</tr></tbody></table><p>\n	 </p>\n<br /><br /><p>\n	 </p>\n<br /><p>\n	 </p>\n<br /><p>\n	 </p>\n', '', '', '', 'cam-mieng', '', 2, 5, '', '', '', '', 0, 0, 0, 1, 11),
+(22, '2012-02-08 09:44:31', 'download-2.jpg', NULL, '', 'CÁM 3A', '', '', '', '<p style="text-align:center;">\n	<strong>CÁM 3A</strong></p>\n<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto;margin-right:auto;width:500px;"><tbody><tr><td style="text-align:center;">\n				<strong>CỠ HẠT (mm)</strong></td>\n			<td style="text-align:center;">\n				<strong>NHIỆT LƯỢNG (cal/g)</strong></td>\n			<td style="text-align:center;">\n				<strong>ĐỘ TRO (%)</strong></td>\n		</tr><tr><td style="text-align:center;">\n				<strong>0 - 15</strong></td>\n			<td style="text-align:center;">\n				<strong>7.350 max</strong></td>\n			<td style="text-align:center;">\n				<strong>13 max</strong></td>\n		</tr></tbody></table><p style="text-align:center;">\n	 </p>\n<p>\n	 </p>\n<br /><p>\n	 </p>\n', '', '', '', '<p style="text-align:center;">\n	<strong>CÁM 3A</strong></p>\n<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto;margin-right:auto;width:500px;"><tbody><tr><td style="text-align:center;">\n				<strong>CỠ HẠT (mm)</strong></td>\n			<td style="text-align:center;">\n				<strong>NHIỆT LƯỢNG (cal/g)</strong></td>\n			<td style="text-align:center;">\n				<strong>ĐỘ TRO (%)</strong></td>\n		</tr><tr><td style="text-align:center;">\n				<strong>0 - 15</strong></td>\n			<td style="text-align:center;">\n				<strong>7.350 max</strong></td>\n			<td style="text-align:center;">\n				<strong>13 max</strong></td>\n		</tr></tbody></table><p>\n	 </p>\n<p>\n	<br />\n	  <br />\n	 </p>\n', '', '', '', 'cam-3a', '', 0, 6, '', '', '', '', 0, 0, 0, 1, 11),
+(23, '2012-02-08 09:44:31', 'download-3.jpg', NULL, NULL, 'CÁM 3B', '', '', '', '<p style="text-align:center;">\n	<strong>CÁM 3B</strong></p>\n<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto;margin-right:auto;width:500px;"><tbody><tr><td style="text-align:center;">\n				<strong>CỠ HẠT (mm)</strong></td>\n			<td style="text-align:center;">\n				<strong>NHIỆT LƯỢNG (cal/g)</strong></td>\n			<td style="text-align:center;">\n				<strong>ĐỘ TRO (%)</strong></td>\n		</tr><tr><td style="text-align:center;">\n				<strong>0 - 15</strong></td>\n			<td style="text-align:center;">\n				<strong>7.050 max</strong></td>\n			<td style="text-align:center;">\n				<strong>13 max</strong></td>\n		</tr></tbody></table><p>\n	 </p>\n', '', '', '', '<p style="text-align:center;">\n	<strong>CÁM 3B</strong></p>\n<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto;margin-right:auto;width:500px;"><tbody><tr><td style="text-align:center;">\n				<strong>CỠ HẠT (mm)</strong></td>\n			<td style="text-align:center;">\n				<strong>NHIỆT LƯỢNG (cal/g)</strong></td>\n			<td style="text-align:center;">\n				<strong>ĐỘ TRO (%)</strong></td>\n		</tr><tr><td style="text-align:center;">\n				<strong>0 - 15</strong></td>\n			<td style="text-align:center;">\n				<strong>7.050 max</strong></td>\n			<td style="text-align:center;">\n				<strong>13 max</strong></td>\n		</tr></tbody></table><p>\n	 </p>\n<p>\n	<br />\n	  <br />\n	 </p>\n', '', '', '', 'cam-3b', '', 1, 7, '', '', '', '', 0, 0, 0, 1, 11),
+(24, '2012-02-08 09:44:32', 'download-41.jpg', NULL, NULL, 'CÁM 4A  ', '', '', '', '<p style="text-align:center;">\n	<strong>CÁM 4A</strong></p>\n<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto;margin-right:auto;width:500px;"><tbody><tr><td style="text-align:center;">\n				<strong>CỠ HẠT (mm)</strong></td>\n			<td style="text-align:center;">\n				<strong>NHIỆT LƯỢNG (cal/g)</strong></td>\n			<td style="text-align:center;">\n				<strong>ĐỘ TRO (%)</strong></td>\n		</tr><tr><td style="text-align:center;">\n				<strong>0 - 15</strong></td>\n			<td style="text-align:center;">\n				<strong>6.560 max</strong></td>\n			<td style="text-align:center;">\n				<strong>22 max</strong></td>\n		</tr></tbody></table><p style="text-align:center;">\n	 </p>\n<p>\n	 </p>\n<br /><p>\n	 </p>\n<p>\n	 </p>\n', '', '', '', '<p style="text-align:center;">\n	<strong>CÁM 4A</strong></p>\n<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto;margin-right:auto;width:500px;"><tbody><tr><td style="text-align:center;">\n				<strong>CỠ HẠT (mm)</strong></td>\n			<td style="text-align:center;">\n				<strong>NHIỆT LƯỢNG (cal/g)</strong></td>\n			<td style="text-align:center;">\n				<strong>ĐỘ TRO (%)</strong></td>\n		</tr><tr><td style="text-align:center;">\n				<strong>0 - 15</strong></td>\n			<td style="text-align:center;">\n				<strong>6.560 max</strong></td>\n			<td style="text-align:center;">\n				<strong>22 max</strong></td>\n		</tr></tbody></table><p>\n	 </p>\n<p>\n	<br />\n	  <br />\n	 </p>\n', '', '', '', 'cam-4a', '', 21, 8, '', '', '', '', 0, 0, 0, 1, 11),
+(25, '2012-02-08 09:54:02', 'images-4.jpg', NULL, '', 'CÁM 4B', '', '', '', '<p style="text-align:center;">\n	<strong>CÁM 4B</strong></p>\n<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto;margin-right:auto;width:500px;"><tbody><tr><td style="text-align:center;">\n				<strong>CỠ HẠT (mm)</strong></td>\n			<td style="text-align:center;">\n				<strong>NHIỆT LƯỢNG (cal/g)</strong></td>\n			<td style="text-align:center;">\n				<strong>ĐỘ TRO (%)</strong></td>\n		</tr><tr><td style="text-align:center;">\n				<strong>0 - 15</strong></td>\n			<td style="text-align:center;">\n				<strong>6.050 max</strong></td>\n			<td style="text-align:center;">\n				<strong>26 max</strong></td>\n		</tr></tbody></table><p>\n	 </p>\n<p>\n	 </p>\n<br /><p>\n	 </p>\n', '', '', '', '<p style="text-align:center;">\n	<strong>CÁM 4B</strong></p>\n<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto;margin-right:auto;width:500px;"><tbody><tr><td style="text-align:center;">\n				<p>\n					<strong>CỠ HẠT </strong></p>\n				<p>\n					<strong>(mm)</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>NHIỆT LƯỢNG </strong></p>\n				<p>\n					<strong>(cal/g)</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>ĐỘ TRO</strong></p>\n				<p>\n					<strong>(%)</strong></p>\n			</td>\n		</tr><tr><td style="text-align:center;">\n				<p>\n					<strong>0 - 15</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<strong>6.050 max </strong></td>\n			<td style="text-align:center;">\n				<strong>26 max</strong></td>\n		</tr></tbody></table><p>\n	 </p>\n<p>\n	 </p>\n<p>\n	  <br />\n	 </p>\n', '', '', '', 'cam-4b', '', 2, 9, '', '', '', '', 0, 0, 0, 1, 11),
+(26, '2012-02-08 09:57:59', 'images-5.jpg', NULL, '', 'CÁM 5', '', '', '', '<p style="text-align:center;">\n	<strong>CÁM 5</strong></p>\n<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto;margin-right:auto;width:500px;"><tbody><tr><td style="text-align:center;">\n				<strong>CỠ HẠT (mm)</strong></td>\n			<td style="text-align:center;">\n				<strong>NHIỆT LƯỢNG (cal/g)</strong></td>\n			<td style="text-align:center;">\n				<strong>ĐỘ TRO (%)</strong></td>\n		</tr><tr><td style="text-align:center;">\n				<strong>0 - 15</strong></td>\n			<td style="text-align:center;">\n				<strong>5.500 max</strong></td>\n			<td style="text-align:center;">\n				<strong>36 max</strong></td>\n		</tr></tbody></table><p>\n	 </p>\n<br /><p>\n	 </p>\n<br /><p>\n	 </p>\n', '', '', '', '<p style="text-align:center;">\n	<strong>CÁM 5</strong></p>\n<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto;margin-right:auto;width:500px;"><tbody><tr><td style="text-align:center;">\n				<p>\n					<strong>CỠ HẠT </strong></p>\n				<p>\n					<strong>(mm) </strong></p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>NHIỆT LƯỢNG </strong></p>\n				<p>\n					<strong>(cal/g)</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<p>\n					<strong>ĐỘ TRO </strong></p>\n				<p>\n					<strong>(%)</strong></p>\n			</td>\n		</tr><tr><td style="text-align:center;">\n				<p>\n					<strong>0 - 15</strong></p>\n			</td>\n			<td style="text-align:center;">\n				<strong>5.500 max</strong></td>\n			<td style="text-align:center;">\n				<strong>36 max</strong></td>\n		</tr></tbody></table><p>\n	 </p>\n', '', '', '', 'cam-5', '', 0, 10, '', '', '', '', 0, 0, 0, 1, 11);
 
 -- --------------------------------------------------------
 
@@ -633,18 +633,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_product_cat` (
   `cat_extra4` varchar(45) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `dos_module_product_cat`
 --
 
 INSERT INTO `dos_module_product_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `pic_full`, `pic_desc`, `cat_title`, `cat_titleen`, `cat_titlefr`, `cat_titlekr`, `tag`, `description`, `preview`, `previewen`, `previewfr`, `previewkr`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_extra3`, `cat_extra4`, `cat_enable`) VALUES
-(6, 0, NULL, NULL, NULL, 'Danh mục ff', '', '', NULL, 'danh-muc-ff', '', '<p>\r\n	teteset</p>\r\n', '', '', NULL, 1, '', '', '', '', 1),
-(7, 0, NULL, NULL, NULL, 'Danh mục cde', '', '', NULL, 'danh-muc-cde', '', '', '', '', NULL, 2, '', '', '', '', 1),
-(8, 6, NULL, NULL, NULL, 'Danh mục con ', '', '', NULL, 'danh-muc-con', '', '<p>\r\n	testsetestse</p>\r\n', '', '', NULL, 3, '', '', '', '', 1),
-(9, 6, 'img2.jpg', NULL, NULL, 'Danh mục abc', '', '', NULL, 'danh-muc-abc', '', '<p>\r\n	test</p>\r\n', '', '', NULL, 4, '', '', '', '', 1),
-(10, 0, NULL, NULL, NULL, 'sdsd', 'sdds', '', 'xz', 'sdsd', '', '<p>\r\n	sdds</p>\r\n', '<p>\r\n	dsds</p>\r\n', '', '<p>\r\n	zx</p>\r\n', 5, '', '', '', '', 1);
+(7, 0, NULL, NULL, NULL, 'THAN CỤC', '', '', '', 'than-cuc', '', '', '', '', '', 2, '', '', '', '', 1),
+(11, 0, NULL, NULL, '', 'THAN CÁM', '', '', '', 'than-cam', '', '', '', '', '', 3, '', '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -712,9 +709,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `titlefr`, `titlekr`, `content`, `contenten`, `contentfr`, `contentkr`, `tag`, `description`, `hits`, `posted_date`, `record_order`, `extra_field1`, `extra_field2`, `hot`, `enable`) VALUES
-(29, 'abcdedd', '', '', NULL, '<p>\r\n	abcdeabcde</p>\r\n', '', '', NULL, 'abcdedd', '', 42, '2012-01-11 16:26:18', 1, '', '', 0, 1),
-(30, 'Dịch vụ cung cấp thư ký', '', '', NULL, '<p>\r\n	Tỷ phú Warren Buffett sẽ hát mừng năm mới TQ<br />\r\n	Nhà đầu tư huyền thoại thế giới Warren Buffett dự kiến sẽ góp mặt tại Lễ hội Mùa Xuân truyền thống của Trung Quốc trong một gala trực tuyến bằng một tiết mục âm nhạc.</p>\r\n<p>\r\n	Tôn vinh quốc gia, DN uy tín trên truyền thông quốc tế<br />\r\n	CEO Nokia phủ nhận tin ''bán mình'' cho Microsoft<br />\r\n	Ấn Độ: Mất một phần ba tỷ phú vì khủng hoảng<br />\r\n	Petrolimex: Đề nghị khởi tố nhân viên "rút ruột" xăng dầu<br />\r\n	Khởi kiện đòi lại thương hiệu c</p>\r\n', '<p>\r\n	EN</p>\r\n<p>\r\n	Tỷ phú Warren Buffett sẽ hát mừng năm mới TQ<br />\r\n	Nhà đầu tư huyền thoại thế giới Warren Buffett dự kiến sẽ góp mặt tại Lễ hội Mùa Xuân truyền thống của Trung Quốc trong một gala trực tuyến bằng một tiết mục âm nhạc.</p>\r\n<p>\r\n	Tôn vinh quốc gia, DN uy tín trên truyền thông quốc tế<br />\r\n	CEO Nokia phủ nhận tin ''bán mình'' cho Microsoft<br />\r\n	Ấn Độ: Mất một phần ba tỷ phú vì khủng hoảng<br />\r\n	Petrolimex: Đề nghị khởi tố nhân viên "rút ruột" xăng dầu<br />\r\n	Khởi kiện đòi lại thương hiệu c</p>\r\n', '<p>\r\n	KR</p>\r\n<p>\r\n	 </p>\r\n<p>\r\n	Tỷ phú Warren Buffett sẽ hát mừng năm mới TQ<br />\r\n	Nhà đầu tư huyền thoại thế giới Warren Buffett dự kiến sẽ góp mặt tại Lễ hội Mùa Xuân truyền thống của Trung Quốc trong một gala trực tuyến bằng một tiết mục âm nhạc.</p>\r\n<p>\r\n	Tôn vinh quốc gia, DN uy tín trên truyền thông quốc tế<br />\r\n	CEO Nokia phủ nhận tin ''bán mình'' cho Microsoft<br />\r\n	Ấn Độ: Mất một phần ba tỷ phú vì khủng hoảng<br />\r\n	Petrolimex: Đề nghị khởi tố nhân viên "rút ruột" xăng dầu<br />\r\n	Khởi kiện đòi lại thương hiệu c</p>\r\n', NULL, 'dich-vu-cung-cap-thu-ky', '', 6, '2012-02-02 16:56:53', 2, '', '', 0, 1),
-(31, 'asdsa', 'asdasdasdas', '', 'dasd', '<p>\r\n	asd</p>\r\n', '<p>\r\n	asd</p>\r\n', '', '<p>\r\n	asd</p>\r\n', 'asdsa', '', 1, '2012-02-08 07:18:32', 3, '', '', 0, 1);
+(30, 'Dịch vụ giao hàng', '', '', '', '<p>\n	Chúng tôi có dịch vụ giao hàng tận nơi với số lượng lớn cho quý khách ...</p>\n', '', '', '', 'dich-vu-giao-hang', '', 18, '2012-02-02 16:56:53', 1, '', '', 0, 1),
+(31, 'Cung cấp than đá các loại', '', '', '', '<p>\n	Chuyên cung cấp các loại than trong và ngoài nước ...</p>\n', '<p>\n	asd</p>\n', '', '<p>\n	asd</p>\n', 'cung-cap-than-da-cac-loai', '', 4, '2012-02-08 07:18:32', 2, '', '', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -795,15 +791,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_support` (
   `support_type` varchar(45) NOT NULL DEFAULT 'yahoo',
   `support_part` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`support_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=50 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=52 ;
 
 --
 -- Dumping data for table `dos_module_support`
 --
 
 INSERT INTO `dos_module_support` (`support_id`, `support_name`, `support_phone`, `support_value`, `support_order`, `support_type`, `support_part`) VALUES
-(48, '0987 001001', '', 'hongvietsoft', 1, 'yahoo', 1),
-(49, '0929 001001', '', 'thanhansoft', 1, 'yahoo', 1);
+(50, '0987 001 001', '', 'hongvietsoft', 1, 'yahoo', 1),
+(51, '0929 001 001', '', 'thanhansoft', 1, 'yahoo', 1);
 
 -- --------------------------------------------------------
 
@@ -992,13 +988,13 @@ INSERT INTO `dos_sys_configs` (`config_name`, `config_value`, `config_choices`) 
 ('news_height_thumb', '115', 'Tin tức - Thu nhỏ - Chiều cao'),
 ('news_width_thumb', '200', 'Tin tức - Thu nhỏ - Chiều ngang'),
 ('product_height', '251', 'Sản phẩm - Chiều cao'),
-('product_height_cat', '200', 'Sản phẩm - Danh mục - Chiều cao'),
+('product_height_cat', '204', 'Sản phẩm - Danh mục - Chiều cao'),
 ('product_height_cat_thumb', '147', 'Sản phẩm - Danh mục - Thu nhỏ - Chiều cao'),
-('product_height_thumb', '147', 'Sản phẩm - Thu nhỏ - Chiều cao'),
+('product_height_thumb', '121', 'Sản phẩm - Thu nhỏ - Chiều cao'),
 ('product_width', '401', 'Sản phẩm - Chiều ngang'),
-('product_width_cat', '288', 'Sản phẩm - Danh mục - Chiều ngang'),
+('product_width_cat', '200', 'Sản phẩm - Danh mục - Chiều ngang'),
 ('product_width_cat_thumb', '177', 'Sản phẩm - Danh mục - Thu nhỏ - Chiều ngang'),
-('product_width_thumb', '177', 'Sản phẩm - Thu nhỏ - Chiều ngang'),
+('product_width_thumb', '152', 'Sản phẩm - Thu nhỏ - Chiều ngang'),
 ('promotions_height_thumb', '109', 'Khuyến mãi - Thu nhỏ- Chiều cao'),
 ('promotions_width_thumb', '107', 'Khuyến mãi - Thu nhỏ- Chiều ngang'),
 ('services_height_thumb', '98', 'Dịch vụ - Thu nhỏ - Chiều cao'),
@@ -1029,37 +1025,37 @@ CREATE TABLE IF NOT EXISTS `dos_sys_functions` (
   `function_load` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`function_id`),
   KEY `fk_dos_sys_functions_dos_sys_modules` (`model_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14070 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14142 ;
 
 --
 -- Dumping data for table `dos_sys_functions`
 --
 
 INSERT INTO `dos_sys_functions` (`function_id`, `model_name`, `model_load`, `action`, `varname`, `function_load`) VALUES
-(14046, 'default', 'Product_Model_Product', 'index', 'menu_product_special', 'listSpecials'),
-(14047, 'about', 'About_Model_About', 'index', 'menu_about', 'getListmenu'),
-(14048, 'about', 'About_Model_About', 'view', 'menu_about', 'getListmenu'),
-(14049, 'account', 'Webadmin_Model_Account', 'add', 'menu_account', 'getListmenu'),
-(14050, 'account', 'Webadmin_Model_Account', 'changepass', 'menu_account', 'getListmenu'),
-(14051, 'account', 'Webadmin_Model_Account', 'index', 'menu_account', 'getListmenu'),
-(14052, 'default', 'About_Model_About', 'index', 'menu_about_home', 'getHomeRecord'),
-(14053, 'news', 'News_Model_NewsCat', 'cat', 'menu_news', 'getListmenu'),
-(14054, 'news', 'News_Model_NewsCat', 'index', 'menu_news', 'getListmenu'),
-(14055, 'news', 'News_Model_News', 'index', 'list_news_new', 'listItemsHot'),
-(14056, 'news', 'News_Model_NewsCat', 'view', 'menu_news', 'getListmenu'),
-(14057, 'product', 'Product_Model_Product', 'index', 'menu_product_hot', 'listHotItem'),
-(14058, 'services', 'Services_Model_Services', 'index', 'menu_services', 'getListmenu'),
-(14059, 'services', 'Services_Model_Services', 'view', 'menu_services', 'getListmenu'),
-(14060, 'setup', 'Webadmin_Model_Setup', 'config', 'menu_setup', 'getListmenu'),
-(14061, 'setup', 'Webadmin_Model_Setup', 'function', 'menu_setup', 'getListmenu'),
-(14062, 'setup', 'Webadmin_Model_Setup', 'index', 'menu_setup', 'getListmenu'),
-(14063, 'setup', 'Webadmin_Model_Setup', 'lang', 'menu_setup', 'getListmenu'),
-(14064, 'setup', 'Webadmin_Model_Setup', 'menu', 'menu_setup', 'getListmenu'),
-(14065, 'setup', 'Webadmin_Model_Setup', 'title', 'menu_setup', 'getListmenu'),
-(14066, 'setup', 'Webadmin_Model_Setup', 'web', 'menu_setup', 'getListmenu'),
-(14067, 'tool', 'Webadmin_Model_Tool', 'analytics', 'menu_tool', 'getListmenu'),
-(14068, 'tool', 'Webadmin_Model_Tool', 'index', 'menu_tool', 'getListmenu'),
-(14069, 'tool', 'Webadmin_Model_Tool', 'seo', 'menu_tool', 'getListmenu');
+(14118, 'about', 'About_Model_About', 'index', 'menu_about', 'getListmenu'),
+(14119, 'about', 'About_Model_About', 'view', 'menu_about', 'getListmenu'),
+(14120, 'account', 'Webadmin_Model_Account', 'add', 'menu_account', 'getListmenu'),
+(14121, 'account', 'Webadmin_Model_Account', 'changepass', 'menu_account', 'getListmenu'),
+(14122, 'account', 'Webadmin_Model_Account', 'index', 'menu_account', 'getListmenu'),
+(14123, 'default', 'Product_Model_Product', 'index', 'menu_product_special', 'listHotItem'),
+(14124, 'default', 'About_Model_About', 'index', 'menu_about_home', 'getHomeRecord'),
+(14125, 'news', 'News_Model_NewsCat', 'cat', 'menu_news', 'getListmenu'),
+(14126, 'news', 'News_Model_NewsCat', 'index', 'menu_news', 'getListmenu'),
+(14127, 'news', 'News_Model_News', 'index', 'list_news_new', 'listItemsHot'),
+(14128, 'news', 'News_Model_NewsCat', 'view', 'menu_news', 'getListmenu'),
+(14129, 'product', 'Product_Model_ProductCat', 'index', 'menu_product_cat', 'getListCat'),
+(14130, 'services', 'Services_Model_Services', 'index', 'menu_services', 'getListmenu'),
+(14131, 'services', 'Services_Model_Services', 'view', 'menu_services', 'getListmenu'),
+(14132, 'setup', 'Webadmin_Model_Setup', 'config', 'menu_setup', 'getListmenu'),
+(14133, 'setup', 'Webadmin_Model_Setup', 'function', 'menu_setup', 'getListmenu'),
+(14134, 'setup', 'Webadmin_Model_Setup', 'index', 'menu_setup', 'getListmenu'),
+(14135, 'setup', 'Webadmin_Model_Setup', 'lang', 'menu_setup', 'getListmenu'),
+(14136, 'setup', 'Webadmin_Model_Setup', 'menu', 'menu_setup', 'getListmenu'),
+(14137, 'setup', 'Webadmin_Model_Setup', 'title', 'menu_setup', 'getListmenu'),
+(14138, 'setup', 'Webadmin_Model_Setup', 'web', 'menu_setup', 'getListmenu'),
+(14139, 'tool', 'Webadmin_Model_Tool', 'analytics', 'menu_tool', 'getListmenu'),
+(14140, 'tool', 'Webadmin_Model_Tool', 'index', 'menu_tool', 'getListmenu'),
+(14141, 'tool', 'Webadmin_Model_Tool', 'seo', 'menu_tool', 'getListmenu');
 
 -- --------------------------------------------------------
 
@@ -1129,8 +1125,8 @@ CREATE TABLE IF NOT EXISTS `dos_sys_langs` (
 --
 
 INSERT INTO `dos_sys_langs` (`lang_name`, `lang`, `langen`, `langfr`, `langkr`) VALUES
-('about', 'Giới thiệu', 'Introduction', '', 'd'),
-('about_coperation', 'GIỚI THIỆU TẬP ĐOÀN', '', '', ''),
+('about', 'Giới thiệu', 'Home', '', '홈'),
+('about_coperation', 'GIỚI THIỆU TẬP ĐOÀN', 'About', '', '소개'),
 ('about_extra1', 'Thông tin phụ 1', '', '', ''),
 ('about_extra2', 'Thông tin phụ 2', '', '', ''),
 ('action', 'Thao tác', '', '', ''),
@@ -1155,14 +1151,14 @@ INSERT INTO `dos_sys_langs` (`lang_name`, `lang`, `langen`, `langfr`, `langkr`) 
 ('catparent', 'Phân loại cha', '', '', ''),
 ('conference', 'Tiệc &amp; Hội nghị', '', '', ''),
 ('confirmdel', 'Bạn có chắc chắn xóa', '', '', ''),
-('contact', 'Liên hệ', 'Contact', '', ''),
+('contact', 'Liên hệ', 'Contact', '', '접촉'),
 ('contact_msg', 'Quý khách có thể liên hệ với chúng tôi bằng cách điền đầy đủ thông tin vào mẫu sau:', '', '', ''),
 ('contact_success', 'Liên hệ thành công', '', '', ''),
 ('copyright', 'Copyright © 2011 by Azweb.vn. All rights reserved', '', '', ''),
 ('counter', 'Thống kê truy cập', '', '', ''),
-('counter_online', 'Đang truy cập', '', '', ''),
-('counter_today', 'Truy cập trong ngày', '', '', ''),
-('counter_total', 'Tổng số lượt truy cập', '', '', ''),
+('counter_online', 'Đang truy cập', 'Online', '', ''),
+('counter_today', 'Truy cập trong ngày', 'Access during the day', '', ''),
+('counter_total', 'Tổng số lượt truy cập', 'Visitor', '', ''),
 ('createdate', 'Ngày tạo', '', '', ''),
 ('default', 'Trang chủ', '', '', ''),
 ('detail', 'Chi tiết', 'Detail', '', ''),
@@ -1179,14 +1175,14 @@ INSERT INTO `dos_sys_langs` (`lang_name`, `lang`, `langen`, `langfr`, `langkr`) 
 ('job_extra2', 'Thông tin phụ 2', '', '', ''),
 ('logout', 'Thoát', '', '', ''),
 ('namecat', 'Tên phân loại', '', '', ''),
-('news', 'Tin tức', '', '', ''),
+('news', 'Tin tức', 'News', '', '뉴스'),
 ('news_tophit', 'Tin tức xem nhiều nhất', '', '', ''),
 ('next', 'Tiếp', '', '', ''),
 ('norecord', 'Không tồn tại mẫu tin', '', '', ''),
 ('payment', 'Thanh toán', '', '', ''),
 ('picture_thumb', 'Hình thu nhỏ', '', '', ''),
 ('previous', 'Lùi', '', '', ''),
-('product', 'Sản phẩm', '', '', ''),
+('product', 'Sản phẩm', 'Products', '', '제품'),
 ('productnum', 'Số sản phẩm', '', '', ''),
 ('product_cartitem', 'Thông tin giỏ hàng', '', '', ''),
 ('product_cat_extra1', 'Thông tin phụ 1', '', '', ''),
@@ -1198,7 +1194,7 @@ INSERT INTO `dos_sys_langs` (`lang_name`, `lang`, `langen`, `langfr`, `langkr`) 
 ('product_extra2', 'Thông tin phụ 2', '', '', ''),
 ('product_extra3', 'Thông tin phụ 3', '', '', ''),
 ('product_extra4', 'Thông tin phụ 4', '', '', ''),
-('product_hot', 'Sản phẩm nổi bật', '', '', ''),
+('product_hot', 'Sản phẩm nổi bật', 'Hot Product', '', '핫 제품'),
 ('product_new', 'Sản phẩm mới', '', '', ''),
 ('product_ordering', 'Thông tin đặt hàng', '', '', ''),
 ('product_other', 'Sản phẩm khác', '', '', ''),
@@ -1209,13 +1205,13 @@ INSERT INTO `dos_sys_langs` (`lang_name`, `lang`, `langen`, `langfr`, `langkr`) 
 ('root', 'Gốc', '', '', ''),
 ('sale_booking', 'Phòng đặt vé', '', '', ''),
 ('sale_business', 'Phòng kinh doanh', '', '', ''),
-('services', 'Dịch vụ', '', '', ''),
+('services', 'Dịch vụ', 'Services', '', '서비스'),
 ('services_extra1', 'Thông tin phụ 1', '', '', ''),
 ('services_extra2', 'Thông tin phụ 2', '', '', ''),
 ('setup', 'Cài đặt &amp; cấu hình', '', '', ''),
 ('start', 'Đầu tiên', '', '', ''),
-('statistics', 'Thống kê truy cập', 'Statistics', '', ''),
-('support', 'Hỗ trợ trực tuyến', 'Support', '', ''),
+('statistics', 'Thống kê truy cập', 'Statistics', '', '통계'),
+('support', 'Hỗ trợ trực tuyến', 'Support', '', '지원'),
 ('sys_account', 'Tài khoản của tôi', '', '', ''),
 ('sys_active', 'Hiển thị', '', '', ''),
 ('sys_add', 'Thêm mới', '', '', ''),
@@ -1250,7 +1246,7 @@ INSERT INTO `dos_sys_langs` (`lang_name`, `lang`, `langen`, `langfr`, `langkr`) 
 ('weblink', 'Liên kết web', '', '', ''),
 ('weblink_name', 'Tên website', '', '', ''),
 ('weblink_url', 'Địa chỉ web', '', '', ''),
-('welcome_chat', 'Xin chào, tôi muốn hỏi về sản phẩm - dịch vụ của công ty bạn', '', '', '');
+('welcome_chat', 'Xin chào, tôi muốn hỏi về sản phẩm - dịch vụ của công ty bạn', 'Hello, I want to ask about products and services your company', '', '안녕하세요, 전 제품 및 서비스 회사에 대해 묻고 싶은');
 
 -- --------------------------------------------------------
 
@@ -1314,12 +1310,12 @@ CREATE TABLE IF NOT EXISTS `dos_sys_modules` (
 --
 
 INSERT INTO `dos_sys_modules` (`moduleid`, `module`, `moduleen`, `modulefr`, `modulekr`, `url`, `target`, `position`) VALUES
-('about', 'Giới thiệu', '', '', '', 'gioi-thieu', '', 1),
-('contact', 'Liên hệ', '', '', '', 'lien-he', '', 5),
-('default', 'Trang chủ', '', '', '', 'trang-chu', '', 0),
-('news', 'Tin tức', '', '', '', 'tin-tuc', '', 4),
-('product', 'Sản phẩm', '', '', '', 'san-pham', '', 2),
-('services', 'Dịch vụ', '', '', '', 'dich-vu', '', 3);
+('about', 'Giới thiệu', 'About', '', '소개', 'gioi-thieu', '', 1),
+('contact', 'Liên hệ', 'Contact Us', '', '접촉', 'lien-he', '', 5),
+('default', 'Trang chủ', 'Home', '', '홈', 'trang-chu', '', 0),
+('news', 'Tin tức', 'News', '', '뉴스', 'tin-tuc', '', 4),
+('product', 'Sản phẩm', 'Products', '', '제품', 'san-pham', '', 2),
+('services', 'Dịch vụ', 'Services', '', '서비스', 'dich-vu', '', 3);
 
 -- --------------------------------------------------------
 
@@ -1338,7 +1334,7 @@ CREATE TABLE IF NOT EXISTS `dos_sys_seos` (
 --
 
 INSERT INTO `dos_sys_seos` (`seo_name`, `seo_content`) VALUES
-('google_analytic', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-25177991-7'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>');
+('google_analytic', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-25177991-36'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>');
 
 -- --------------------------------------------------------
 
@@ -1357,7 +1353,7 @@ CREATE TABLE IF NOT EXISTS `dos_sys_statistics` (
 --
 
 INSERT INTO `dos_sys_statistics` (`session_id`, `time`) VALUES
-('zln0uq6rd', 1328687723);
+('5yjd4ktnc', 1328790632);
 
 -- --------------------------------------------------------
 
@@ -1406,10 +1402,10 @@ INSERT INTO `dos_sys_webs` (`web_name`, `web_value`) VALUES
 ('description', 'Web - Dịch vụ - Azweb.vn'),
 ('email_subject', 'Liên hệ từ website'),
 ('keywords', 'Web - Dịch vụ - Azweb.vn'),
-('timestamp_today', '1328634000'),
+('timestamp_today', '1328720400'),
 ('titleweb', 'Azweb.vn'),
-('total_visit', '145'),
-('total_visit_today', '3'),
+('total_visit', '291'),
+('total_visit_today', '53'),
 ('type', '1');
 
 --

@@ -1,7 +1,7 @@
 <h1 class="title-box"><span><?php echo $this->lang[$this->module] ?> </span></h1>
 <div class="frame-tent-right">
-    <?php if(is_array($this->list_news_new)):?>
-        <?php foreach ($this->list_news_new as $value):?>
+    <?php if(is_array($this->items)):?>
+        <?php foreach ($this->items as $value):?>
             <?php
                 $picthumb = ($value['pic_thumb'] != '') ? '/public/userfiles/images/' . $this->module . '/' . $value['pic_thumb'] : TEMPLATE . '/images/no-images.jpg';
                 $url = (LANGURL != '') ? '/' .LANGURL.$this->module : '/' . $this->module;
@@ -14,10 +14,11 @@
                 <?php echo $value['preview' . LANG] ?>
             </div><div class="clear"></div>
         <?php endforeach; ?>
+       <?php echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml'); ?>
     <?php else: ?>
-        <?php echo $this->list_news_new?>
+        <?php echo $this->items?>
     <?php endif; ?>
 </div>
 
-<?php     if(DEBUG_MODE)  var_dump($this->list_news_new);?>	
+<?php     if(DEBUG_MODE)  var_dump($this->items);?>	
 

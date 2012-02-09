@@ -21,7 +21,8 @@ class Product_Model_Product extends Zend_Db_Table {
                 ->from($this->_name, array('record_id', 'postdate', 'pic_thumb', 'title' . LANG, 'hits', 'tag'))
                 ->where('hot=1')
                 ->where('enable=1')
-                ->order('record_order DESC');
+                ->order('record_order DESC')
+                ->limit(4);
         return $this->fetchAll($select)->toArray();
     }
 
