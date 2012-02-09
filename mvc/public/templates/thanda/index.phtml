@@ -65,7 +65,7 @@
                 <?php else: ?>
                     <img src="<?php echo $this->baseUrl() . TEMPLATE ?>/images/banner.jpg" alt="banner" title="architecture" />
                 <?php endif; ?>
-
+			</div>
                 <div id="content">
                     <div id="left-content">
                         <?php if (isset($this->menu_about)): ?>
@@ -114,9 +114,9 @@
 
                         <h1 class="title-box"><span><?php echo $this->lang['statistics'] ?></span></h1>
                         <ul class="statistics">
-                            <li>Truy cập trong ngày: <?php echo $this->onlinetoday ?></li>
-                            <li>Đang online: <?php echo $this->online ?></li>
-                            <li>Tổng lượt truy cập: <?php echo $this->onlinetotal ?></li>
+                            <li><?php echo $this->lang['counter_today'] ?>: <?php echo $this->onlinetoday ?></li>
+                            <li><?php echo $this->lang['counter_online'] ?>: <?php echo $this->online ?></li>
+                            <li><?php echo $this->lang['counter_total'] ?>: <?php echo $this->onlinetotal ?></li>
                         </ul>
                     </div><!--End left content-->	
                     <div id="right-content">

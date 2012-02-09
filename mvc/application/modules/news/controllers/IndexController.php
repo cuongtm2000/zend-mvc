@@ -49,6 +49,15 @@ class News_IndexController extends GLT_Controller_Action {
 
     public function indexAction() {
         $this->webTitle($this->view->lang[$this->_data['module']]);
+        
+        $item = new $this->_model();
+        $this->view->items = $item->listAll($this->_data);
+
+        //paging
+        $totalItem = $item->countItemadmin();
+        $paginator = new GLT_Paginator();
+        $this->view->paginator = $paginator->createPaginator($totalItem, $this->_paginator);
+
     }
 
     public function viewAction() {

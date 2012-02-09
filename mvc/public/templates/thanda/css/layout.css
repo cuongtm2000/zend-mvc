@@ -88,7 +88,7 @@ a:hover{color:#000;}
 
 /** Tent product and frame product img **/
 .tent-product{padding:10px}
-.product-img{height:204px; width:215px;display:table-cell;vertical-align:bottom}
+.product-img{height:140px; width:215px;text-align:center; display:table-cell;vertical-align:bottom}
 
 /****  Tieu đề sản phẩm    ****/
 .title-pro{ font-size:10pt;margin:10px 0 0 0;font-weight:bold}
@@ -124,7 +124,7 @@ a:hover{color:#000;}
 .sub-new li a:hover{color:#f90}
 
 /**		Sản phẩm tieu biểu (typical-product)		**/
-.typical-product{list-style:none}
+.typical-product{list-style:none;text-align:center}
 .typical-product li{margin:0 0 5px 0}
 
 /**  Page order ( đặt hàng )      **/
@@ -184,7 +184,7 @@ a:hover{color:#000;}
 
 /*Footer*/
 #bg-footer{background:url(../images/bg-footer.gif) repeat-x; min-width:957px;margin:0 0 10px 0}
-#footer{text-align:center;margin:auto; width:957px;padding:14px 0;color:#fff; line-height:1.7em;font-weight:bold;font-size:10pt}
+#footer{text-align:center;margin:auto; width:957px;padding:5px 0 0px 0;color:#fff; line-height:1.5em;font-weight:bold;font-size:10pt}
 
 
 

@@ -31,7 +31,7 @@ class Product_Model_ProductCat extends Zend_Db_Table {
     // Front end - ListCat cat_parent_id = 0
     public function getListCat() {
         $select = $this->select()
-                ->from($this->_name, array('cat_id', 'pic_thumb', 'cat_title' . LANG, 'preview' . LANG))
+                ->from($this->_name, array('cat_id', 'pic_thumb', 'cat_title' . LANG, 'preview' . LANG,'tag'))
                 ->where('cat_parent_id = 0')
                 ->where('cat_enable = 1')
                 ->order('cat_order ASC');
@@ -129,7 +129,9 @@ class Product_Model_ProductCat extends Zend_Db_Table {
     }
 
     public function listCatParent($cid = 0) {
-        $select = $this->select()->from($this->_name, array('cat_id', 'cat_title' . LANG, 'cat_parent_id', 'pic_thumb', 'cat_order', 'cat_enable'))->order('cat_order DESC');
+        $select = $this->select()
+                ->from($this->_name, array('cat_id', 'cat_title' . LANG, 'cat_parent_id', 'pic_thumb', 'cat_order', 'cat_enable'))
+                ->order('cat_order DESC');
         $result = $this->fetchAll($select);
         if (count($result)) {
             $this->_catdata = $result->toArray();

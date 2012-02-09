@@ -29,7 +29,7 @@
 	        foreach($lang as $value){
 	            echo '<div class="col1">'.$this->lang['sys_title'].' '.$value.'</div>
 	                <div class="col2">
-	                    <input name="title'.$value.'" value="'.$this->items['title'.$value].'" maxlength="100" class="txt-very-large" />
+	                    <input id="title'.$value.'" name="title'.$value.'" value="'.$this->items['title'.$value].'" maxlength="100" class="txt-very-large" />
 	                </div>
 	                <div class="clear space"></div>';
 	        }
@@ -57,6 +57,18 @@
 	        }
 	    ?>
 	    
+            <div class="col1">Liên kết</div>
+            <div class="col2">
+                <input name="tag" id="tag" readonly="readonly" value="<?php echo $this->item['tag'] ?>" maxlength="100" class="txt-very-large" />
+            </div>
+            <div class="clear space"></div>
+
+            <div class="col1">Mô tả</div>
+            <div class="col2">
+                <textarea cols="89" rows="5" name="description" id="description"><?php echo $this->item['description'] ?></textarea> <span class="info-keyup">0</span>
+            </div>
+            <div class="clear space"></div>
+            
 	    <div class="col1"><?php echo $this->lang['picture_thumb'] ?></div>
 	    <div class="col2">
 	        <input type="file" name="file_thumb" size="48%" />
@@ -82,4 +94,10 @@
 	    <div class="clear space"></div>
 	</fieldset>
 	</form>
+        <script type="text/javascript">
+        jQuery(function($) {
+            $('#description').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});
+            $('#title').seoAlias({target:'#tag'});
+        });
+    </script>
 </div>
