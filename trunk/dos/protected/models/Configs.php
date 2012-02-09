@@ -111,7 +111,7 @@ class Configs extends CActiveRecord {
     }
     //Back end - Add item
     public function addItem($data = NULL, $template) {
-        //$this->deleteItem($template); //delete
+        $this->deleteItem($template); //delete
 
         $config_name = $data->getPost('config_name', '');
         $config_value = $data->getPost('config_value', '');
@@ -137,5 +137,11 @@ class Configs extends CActiveRecord {
         $command = Yii::app()->db->createCommand('DELETE FROM ' . $this->tableName() . ' WHERE dos_templates_template=:template');
         $command->bindParam(":template", $template, PDO::PARAM_STR);
         $command->execute();
+    }
+    //Back end - Config by Template
+    public function configByTemplate($template){
+        $command = Yii::app()->db->createCommand('SELECT config_name, config_value, config_desc FROM '.$this->tableName().' WHERE dos_templates_template=:template');
+        $command->bindParam(":template", $template, PDO::PARAM_STR);
+        return $command->queryAll();
     }
 }

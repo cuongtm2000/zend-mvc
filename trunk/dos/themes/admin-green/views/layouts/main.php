@@ -34,6 +34,7 @@
                         <ul class="menu-li"> 
                             <li><a href="/administrator/templates">Templates</a>
                                 <ul>
+                                    <li><a href="/administrator/templates">List template</a></li>
                                     <li><a href="/administrator/templates/add">Add template</a></li>
                                 </ul>
                             </li>

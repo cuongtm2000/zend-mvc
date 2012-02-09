@@ -7,29 +7,24 @@
 <meta name="robots" content="noodp,index,follow" />
 <link rel="SHORTCUT ICON" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/x-icon" />
 <link rel="icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/gif" />
+
+<link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.6.4.min.js"></script>
+
 <title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->title) ? ' - '.CHtml::encode($this->title) : '' ?></title>
 <meta name="keywords" content="<?php echo $this->keywords ?>" /> 
 <meta name="description" content="<?php echo $this->description ?>" />
-<link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/product-detail.css" rel="stylesheet" type="text/css" /> 
-<link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/jquery.fancybox-1.3.1.css" rel="stylesheet" type="text/css" />
 
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/wt-rotator.css" /> 
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.6.4.min.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-banner-rotato.js"></script> 
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-banner-rotato.effect.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		runbanner(<?php echo $this->configs['banner_width'] ?>, <?php echo $this->configs['banner_height'] ?>);
-	});
-</script>
-
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jcarousellite.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/contentslider.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/scroller.js"></script>
-<!--Light box and fancybox-->
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.fancybox-1.3.1.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/lightbox.js"></script> 
+<?php if($this->banner):?>
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/wt-rotator.css" /> 
+    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-banner-rotato.js"></script> 
+    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-banner-rotato.effect.js"></script>
+    <script type="text/javascript">
+            $(document).ready(function(){
+                    runbanner(<?php echo $this->configs['banner_width'] ?>, <?php echo $this->configs['banner_height'] ?>);
+            });
+    </script>
+<?php endif;?>
 </head>
 <body>
 <div id="wrapper">
