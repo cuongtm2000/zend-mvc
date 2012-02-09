@@ -81,14 +81,20 @@ fieldset .txt-very-large{width:55%; -moz-border-radius: 3px; -webkit-border-radi
 fieldset input.login {cursor:pointer; width:80px; height:24px; color:#fff; border:1px solid #ccc; background:#3A6AAD; -moz-border-radius: 3px; -webkit-border-radius: 3px; display:inline; margin-right:6px}
 fieldset input.login:hover, .login-a:hover{background:#5184D2}
 fieldset textarea{-moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; width:55.5%; padding:1px 3px}
-fieldset select{border:1px solid #ccc; padding:3px; cursor:pointer; -moz-border-radius: 3px; -webkit-border-radius: 3px; width:258px}
+fieldset select{border:1px solid #ccc; padding:3px; cursor:pointer; -moz-border-radius: 3px; -webkit-border-radius: 3px; width:220px}
 fieldset .fileupload{width:30%}
+fieldset .fileupload-img{margin-left: 111px}
 fieldset .login-a {cursor:pointer; width:80px; height:24px; color:#fff; border:1px solid #ccc; background:#3A6AAD; -moz-border-radius: 3px; -webkit-border-radius: 3px; display:inline; margin-right:6px; padding:3px 18px 4px 18px}
 fieldset .login-a:hover{text-decoration:none}
 
-fieldset .txt-small{width:100px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
+fieldset .txt-tiny{width:50px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
+fieldset .txt-small{width:90px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
+fieldset .txt-small-x{width:250px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
 fieldset .txt-very-tiny{width:22px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
-fieldset .txt-large{width:290px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
+fieldset .txt-large{width:210px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
+
+fieldset .select-100{width: 100px;}
+fieldset .select-130{width: 130px;}
 
 span.required, .errorMessage{color: red;}
 
@@ -96,3 +102,35 @@ span.required, .errorMessage{color: red;}
 .errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:5px}
 .errorSummary ul{margin:0 32px; padding:0}
 .errorSummary ul li{padding:2px 0; color: red}
+
+/* modals */
+ul.modals {float:left; list-style:none; padding:0; margin:0; margin-bottom:5px;}
+ul.modals li {float:left; display:inline; width:90px; height:90px; background:#E1E3EC; padding:5px; text-align:center; margin:0 15px 5px 0; -moz-border-radius:5px; -webkit-border-radius:5px;}
+ul.modals li a {width:90px; height:90px; text-align:center; color: #333; font-weight: bold;}
+ul.modals li a:hover{color: #DB3E11;}
+ul.modals li a img {float:left; display:inline; width:48px; height:48px; margin-left:21px; margin-top:8px; margin-bottom:4px;}
+
+/* table format */
+table{border-collapse : separate; border-spacing : 0;}
+caption, th, td {text-align : left; font-weight : normal;}
+table, td, th {vertical-align : middle;}
+table {width : 100%; border : 1px solid #ccc;} 
+table table{border:0!important;}
+thead tr th {font-weight : bold; background :#E1E3EC; border-bottom : 1px solid #C6C6C6; padding : 5px; font-size:10pt}
+thead tr th a{color: #000}
+thead tr th a:hover{color: #3A6AAD} 
+tbody tr td {padding : 6px 5px; background : #fff; color : #111; cursor: pointer}
+tbody tr.alt td {background : #eee}
+tbody tr.disable td{background: #F9F5F5; color : #aaa}
+tbody tr td a{color: #000}
+tbody tr td a:hover{color: #1E335F;}
+tbody tr.red td{background: #f3c1c1; color : #aaa}
+tbody tr.red td a{color : #aaa}
+tbody tr.green td, tbody tr.green a{background: #c2ecb7; color : #aaa}
+
+/* paging */
+ul.paging{float: right; margin-top: 7px; margin-bottom: 5px}
+
+.img-marginb5{margin-bottom: 5px}
+.img-marginb5 label{cursor: pointer}
+.img-marginb5 img{border:1px solid #ddd; padding:2px; width: 150px}

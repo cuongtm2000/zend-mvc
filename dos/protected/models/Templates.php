@@ -15,7 +15,8 @@
  * @property DosUsernames[] $dosUsernames
  */
 class Templates extends CActiveRecord {
-
+    
+    private $_model;
     public $fileupload;
 
     /**
@@ -42,9 +43,10 @@ class Templates extends CActiveRecord {
         return array(
             array('template, template_name', 'required'),
             array('template', 'length', 'max' => 6),
-            array('template_name', 'length', 'max' => 45),
+            array('template_name, fileupload', 'length', 'max' => 45),
             array('description', 'length', 'max' => 1000),
             array('fileupload', 'file', 'types' => 'gif,png,jpg,jpeg,icon', 'allowEmpty' => false, 'maxSize' => 1024 * 1024 * 5, 'on' => 'add'),
+            array('fileupload', 'file', 'types' => 'gif,png,jpg,jpeg,icon', 'allowEmpty' => true, 'maxSize' => 1024 * 1024 * 5, 'on' => 'edit'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
             array('template, template_name, created, description', 'safe', 'on' => 'search'),
@@ -115,5 +117,27 @@ class Templates extends CActiveRecord {
     public function listTemplates(){
         $command = Yii::app()->db->createCommand('SELECT template, template_name, description FROM ' . $this->tableName() . ' ORDER BY created DESC');
         return $command->queryAll();
+    }
+    //Back end - List item admin
+    public function listItemAdmin() {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'created DESC';
+        $count = Templates::model()->count($criteria);
+
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = 15;
+        $pages->applyLimit($criteria);
+
+        return array('models' => Templates::model()->findAll($criteria), 'pages' => $pages);
+    }
+    //Back end - Get record to Edit
+    public function loadEdit($id) {
+        $this->_model = Templates::model()->findByPk($id);
+
+        if ($this->_model === null) {
+            throw new CHttpException(404, 'The requested page does not exist.');
+        }
+        return $this->_model;
     }
 }

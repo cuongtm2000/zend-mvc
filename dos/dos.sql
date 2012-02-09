@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 07, 2012 at 10:13 AM
+-- Generation Time: Feb 09, 2012 at 11:33 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -40,22 +40,24 @@ CREATE TABLE IF NOT EXISTS `dos_configs` (
 --
 
 INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES
-('advs_height', 200, NULL, '111120'),
-('advs_width', 224, NULL, '111120'),
-('banner_height', 320, NULL, '060212'),
-('banner_height', 297, NULL, '111120'),
-('banner_width', 980, NULL, '060212'),
-('banner_width', 709, NULL, '111120'),
-('logo_height', 65, NULL, '111120'),
-('logo_width', 310, NULL, '111120'),
-('products_height', 650, NULL, '111120'),
-('products_height_thumb', 167, NULL, '111120'),
-('products_width', 700, NULL, '111120'),
-('products_width_thumb', 167, NULL, '111120'),
-('product_cats_height', 150, NULL, '111120'),
-('product_cats_width', 169, NULL, '111120'),
-('services_height', 110, NULL, '111120'),
-('services_width', 192, NULL, '111120');
+('advs_height', 200, '', '060212'),
+('advs_height', 200, '', '111120'),
+('advs_width', 100, '', '060212'),
+('advs_width', 224, '', '111120'),
+('banner_height', 320, '', '060212'),
+('banner_height', 297, '', '111120'),
+('banner_width', 980, '', '060212'),
+('banner_width', 709, '', '111120'),
+('logo_height', 65, '', '111120'),
+('logo_width', 310, '', '111120'),
+('products_height', 650, '', '111120'),
+('products_height_thumb', 167, '', '111120'),
+('products_width', 700, '', '111120'),
+('products_width_thumb', 167, '', '111120'),
+('product_cats_height', 150, '', '111120'),
+('product_cats_width', 169, '', '111120'),
+('services_height', 110, '', '111120'),
+('services_width', 192, '', '111120');
 
 -- --------------------------------------------------------
 
@@ -107,6 +109,30 @@ INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('titleen', 'Tiêu đề EN', 'Title EN', 1),
 ('update', 'Cập nhật', 'Update', 1),
 ('views', 'Lượt xem', 'Views', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_loadfiles`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
+  `dos_templates_template` varchar(6) NOT NULL,
+  `dos_modules_module_id` varchar(20) NOT NULL,
+  `loadfiles` varchar(200) NOT NULL,
+  `typefile` varchar(45) NOT NULL,
+  PRIMARY KEY (`dos_templates_template`,`dos_modules_module_id`,`typefile`),
+  KEY `fk_dos_templates_has_dos_modules1_dos_modules1` (`dos_modules_module_id`),
+  KEY `fk_dos_templates_has_dos_modules1_dos_templates1` (`dos_templates_template`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dos_loadfiles`
+--
+
+INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, `loadfiles`, `typefile`) VALUES
+('111120', 'products', 'product-detail.css|jquery.fancybox-1.3.1.css', 'css'),
+('111120', 'products', 'jcarousellite.js|contentslider.js|scroller.js|jquery.fancybox-1.3.1.js|lightbox.js', 'javascript');
 
 -- --------------------------------------------------------
 
@@ -246,7 +272,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `description`, `activated`, `dos_usernames_username`) VALUES
 (119, 'tiêu', NULL, '<p>\r\n	tiêu đề</p>\r\n', NULL, 45, '2011-12-19 15:00:29', 1, 0, NULL, NULL, 'tieu', 'chi iết', 1, 'test'),
 (120, 'tiêu đềsas', 'title', '<p>\r\n	tieu deas</p>\r\n', '<p>\r\n	chi testsetsetes</p>\r\n', 5, '2011-12-23 14:50:21', 2, 0, NULL, NULL, 'tieu-desas', 'testsetestse', 1, 'test'),
-(121, 'home', '', '<p>\r\n	You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.</p>\r\n', '<p>\r\n	asass</p>\r\n', 276, '2012-01-07 03:31:48', 3, 1, NULL, NULL, 'home', 'asaassasa', 1, 'test'),
+(121, 'home', '', '<p>\r\n	You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.You have no items in your shopping cart.</p>\r\n', '<p>\r\n	asass</p>\r\n', 348, '2012-01-07 03:31:48', 3, 1, NULL, NULL, 'home', 'asaassasa', 1, 'test'),
 (122, 'adasdasd', 'dasdas', '<p>\r\n	sdasdsa</p>\r\n', '', 0, '2012-01-23 02:32:56', 4, 0, NULL, NULL, 'adasdasd', 'asdsad', 1, 'test'),
 (123, 'adasd', '', '<p>\r\n	sdasd</p>\r\n', '', 0, '2012-01-23 02:33:02', 5, 0, NULL, NULL, 'adasd', 'asdasd', 1, 'test'),
 (124, 'asdasdas', '', '<p>\r\n	asdasdasd</p>\r\n', '', 0, '2012-01-23 02:33:07', 6, 0, NULL, NULL, 'asdasdas', 'asdasd', 1, 'test'),
@@ -259,7 +285,7 @@ INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `co
 (131, 'asdasd', '', '<p>\r\n	asdas</p>\r\n', '', 0, '2012-01-23 02:33:51', 13, 0, NULL, NULL, 'asdasd-2', 'asdasd', 1, 'test'),
 (132, 'asda', '', '<p>\r\n	adsa</p>\r\n', '', 0, '2012-01-23 02:33:57', 14, 0, NULL, NULL, 'asda', 'asda', 1, 'test'),
 (133, 'asdas', '', '<p>\r\n	asdasd</p>\r\n', '', 0, '2012-01-23 02:34:04', 15, 0, NULL, NULL, 'asdas', 'sd', 1, 'test'),
-(134, 'asdas', '', '<p>\r\n	asda</p>\r\n', '', 42, '2012-01-23 02:34:10', 16, 0, NULL, NULL, 'asdas-2', 'sd', 1, 'test');
+(134, 'asdas', '', '<p>\r\n	asda</p>\r\n', '', 65, '2012-01-23 02:34:10', 16, 0, NULL, NULL, 'asdas-2', 'sd', 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -313,7 +339,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `dos_module_banners`
@@ -323,11 +349,7 @@ INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `ba
 (1, '2012-01-10 09:56:42', 'Banner cafe tự động', 'banner-cafe-tu-dong.jpg', 'http://grouplaptrinh.com', 1, 'banner', 'default', 1, 'test'),
 (2, '2012-01-10 09:57:28', 'Banner cafe tự nhập', 'tu-nhap.jpg', 'http://grouplaptrinh.com', 2, 'banner', 'default', 1, 'test'),
 (4, '2012-02-01 04:08:53', 'Logo', 'logo.png', '', 1, 'logo', 'default', 1, 'thanhansoft'),
-(5, '2012-02-01 04:45:20', 'Banner', 'banner.jpg', '', 1, 'banner', 'default', 1, 'root'),
-(6, '2012-02-06 03:31:50', 'Banner', 'banner.jpg', 'http://grouplaptrinh.com', 1, 'banner', 'default', 1, 'mvc'),
-(7, '2012-02-06 03:32:08', 'Banner 1', 'banner-1.jpg', '', 2, 'banner', 'default', 1, 'mvc'),
-(8, '2012-02-06 03:32:15', 'banner 2', 'banner-2.jpg', '', 3, 'banner', 'default', 1, 'mvc'),
-(9, '2012-02-06 03:32:27', 'Banner 3', 'banner-3.jpg', '', 4, 'banner', 'default', 1, 'mvc');
+(5, '2012-02-01 04:45:20', 'Banner', 'banner.jpg', '', 1, 'banner', 'default', 1, 'root');
 
 -- --------------------------------------------------------
 
@@ -411,16 +433,16 @@ INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `
 ('Sản phẩm', NULL, 'products', NULL, 3, 'thanhan'),
 ('Dịch vụ', NULL, 'services', NULL, 4, 'thanhan'),
 ('Liên hệ', NULL, 'contact', NULL, 5, 'thanhan'),
-('Trang chủ', NULL, 'default', NULL, 1, 'mvc'),
-('Giới thiệu', NULL, 'about', NULL, 2, 'mvc'),
-('Sản phẩm', NULL, 'products', NULL, 3, 'mvc'),
-('Dịch vụ', NULL, 'services', NULL, 4, 'mvc'),
-('Liên hệ', NULL, 'contact', NULL, 5, 'mvc'),
 ('Trang chủ', NULL, 'default', NULL, 1, 'dos'),
 ('Giới thiệu', NULL, 'about', NULL, 2, 'dos'),
 ('Sản phẩm', NULL, 'products', NULL, 3, 'dos'),
 ('Dịch vụ', NULL, 'services', NULL, 4, 'dos'),
-('Liên hệ', NULL, 'contact', NULL, 5, 'dos');
+('Liên hệ', NULL, 'contact', NULL, 5, 'dos'),
+('Trang chủ', NULL, 'default', NULL, 1, 'mvc'),
+('Giới thiệu', NULL, 'about', NULL, 2, 'mvc'),
+('Sản phẩm', NULL, 'products', NULL, 3, 'mvc'),
+('Dịch vụ', NULL, 'services', NULL, 4, 'mvc'),
+('Liên hệ', NULL, 'contact', NULL, 5, 'mvc');
 
 -- --------------------------------------------------------
 
@@ -440,9 +462,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_usernames_username`) VALUES
-('day_time', 2455965, 'test'),
+('day_time', 2455967, 'test'),
 ('max_count', 1, 'test'),
-('counter', 31, 'test'),
+('counter', 33, 'test'),
 ('yesterday', 1, 'test'),
 ('day_time', 2455959, 'thanhansoft'),
 ('max_count', 0, 'thanhansoft'),
@@ -475,7 +497,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1328584206, 'test');
+('''127.0.0.1''', 1328783212, 'test');
 
 -- --------------------------------------------------------
 
@@ -583,7 +605,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -663,14 +685,76 @@ CREATE TABLE IF NOT EXISTS `dos_provinces` (
   `dos_nationals_national` varchar(3) NOT NULL,
   PRIMARY KEY (`province_id`),
   KEY `fk_dos_provinces_dos_nationals` (`dos_nationals_national`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=64 ;
 
 --
 -- Dumping data for table `dos_provinces`
 --
 
 INSERT INTO `dos_provinces` (`province_id`, `province_name`, `dos_nationals_national`) VALUES
-(2, 'Đồng Nai', 'VND');
+(1, 'An Giang', 'VND'),
+(2, 'Bà rịa - Vũng tàu', 'VND'),
+(3, 'Bạc Liêu', 'VND'),
+(4, 'Bắc Cạn', 'VND'),
+(5, 'Bắc Giang', 'VND'),
+(6, 'Bắc Ninh', 'VND'),
+(7, 'Bến Tre', 'VND'),
+(8, 'Bình Dương', 'VND'),
+(9, 'Bình Định', 'VND'),
+(10, 'Bình Phước', 'VND'),
+(11, 'Bình Thuận', 'VND'),
+(12, 'Cà Mau', 'VND'),
+(13, 'Cao Bằng', 'VND'),
+(14, 'Cần Thơ', 'VND'),
+(15, 'Đà  Nẵng', 'VND'),
+(16, 'Đăk Lăk', 'VND'),
+(17, 'Đắk Nông', 'VND'),
+(18, 'Điện Biên', 'VND'),
+(19, 'Đồng Nai', 'VND'),
+(20, 'Đồng Tháp', 'VND'),
+(21, 'Gia Lai', 'VND'),
+(22, 'Hà Giang', 'VND'),
+(23, 'Hà Nam', 'VND'),
+(24, 'Hà Nội', 'VND'),
+(25, 'Hà Tĩnh', 'VND'),
+(26, 'Hải Dương', 'VND'),
+(27, 'Hải Phòng', 'VND'),
+(28, 'Hậu Giang', 'VND'),
+(29, 'Hòa Bình', 'VND'),
+(30, 'Thành phố Hồ Chí Minh', 'VND'),
+(31, 'Hưng Yên', 'VND'),
+(32, 'Khánh Hoà', 'VND'),
+(33, 'Kiên Giang', 'VND'),
+(34, 'Kon Tum', 'VND'),
+(35, 'Lai Châu', 'VND'),
+(36, 'Lạng Sơn', 'VND'),
+(37, 'Lào Cai', 'VND'),
+(38, 'Lâm Đồng', 'VND'),
+(39, 'Long An', 'VND'),
+(40, 'Nam Định', 'VND'),
+(41, 'Nghệ An', 'VND'),
+(42, 'Ninh Bình', 'VND'),
+(43, 'Ninh Thuận', 'VND'),
+(44, 'Phú Thọ', 'VND'),
+(45, 'Phú Yên', 'VND'),
+(46, 'Quảng Bình', 'VND'),
+(47, 'Quảng Nam', 'VND'),
+(48, 'Quảng Ngãi', 'VND'),
+(49, 'Quảng Ninh', 'VND'),
+(50, 'Quảng Trị', 'VND'),
+(51, 'Sóc Trăng', 'VND'),
+(52, 'Sơn La', 'VND'),
+(53, 'Tây Ninh', 'VND'),
+(54, 'Thái Bình', 'VND'),
+(55, 'Thái Nguyên', 'VND'),
+(56, 'Thanh Hoá', 'VND'),
+(57, 'Thừa Thiên-Huế', 'VND'),
+(58, 'Tiền Giang', 'VND'),
+(59, 'Trà Vinh', 'VND'),
+(60, 'Tuyên Quang', 'VND'),
+(61, 'Vĩnh Long', 'VND'),
+(62, 'Vĩnh Phúc', 'VND'),
+(63, 'Yên Bái', 'VND');
 
 -- --------------------------------------------------------
 
@@ -691,8 +775,8 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 --
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
-('060212', 'Mẫu số 060212', '2012-02-06 02:51:59', NULL),
-('111120', 'Mẫu số 111120', '2011-11-21 02:40:10', NULL);
+('060212', 'Mẫu số 060212', '2012-02-06 02:51:59', ''),
+('111120', 'Mẫu cafe', '2011-11-21 02:40:10', '');
 
 -- --------------------------------------------------------
 
@@ -715,10 +799,14 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_modules` (
 --
 
 INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modules_module_id`, `dos_values_value_name`) VALUES
+('060212', 'about', 'menu_about'),
+('060212', 'default', 'products_new'),
 ('111120', 'about', 'menu_about'),
+('111120', 'contact', 'menu_products'),
 ('111120', 'default', 'about_home'),
 ('111120', 'default', 'advs_left'),
 ('111120', 'default', 'list_supports'),
+('111120', 'default', 'menu_products'),
 ('111120', 'default', 'products_new'),
 ('111120', 'products', 'menu_products'),
 ('111120', 'services', 'menu_services');
@@ -755,7 +843,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `activated`, `dos_templates_template`, `dos_provinces_province_id`) VALUES
 ('bao', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-02-01 04:42:45', NULL, NULL, NULL, 'user', 'vi', NULL, 1, '111120', 2),
 ('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', NULL, NULL, NULL, 'administrator', 'vi', NULL, 1, '111120', 2),
-('mvc', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-02-06 02:57:33', NULL, NULL, NULL, 'user', 'vi', NULL, 1, '060212', 2),
+('mvc', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-02-08 09:50:54', NULL, NULL, NULL, 'user', 'vi', NULL, 1, '060212', 2),
 ('root', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-02-01 04:38:10', NULL, NULL, NULL, 'user', 'vi', NULL, 1, '111120', 2),
 ('test', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2011-11-21 02:40:55', 'Nguyễn An', '0929001001', 'ThuongHoi', 'user', 'vi', NULL, 1, '111120', 2),
 ('thanhan', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-02-04 02:35:42', NULL, NULL, NULL, 'user', 'vi', 'Z43dCG5', 1, '111120', 2),
@@ -808,6 +896,7 @@ INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_user
 
 CREATE TABLE IF NOT EXISTS `dos_values` (
   `value_name` varchar(20) NOT NULL,
+  `module` varchar(20) NOT NULL,
   `module_id` varchar(20) NOT NULL,
   `function_name` varchar(20) NOT NULL,
   PRIMARY KEY (`value_name`)
@@ -817,14 +906,14 @@ CREATE TABLE IF NOT EXISTS `dos_values` (
 -- Dumping data for table `dos_values`
 --
 
-INSERT INTO `dos_values` (`value_name`, `module_id`, `function_name`) VALUES
-('about_home', 'About', 'homeRecord'),
-('advs_left', 'Advs', 'listItemsLeft'),
-('list_supports', 'Supports', 'listItem'),
-('menu_about', 'About', 'listMenu'),
-('menu_products', 'ProductCats', 'listItem'),
-('menu_services', 'Services', 'listMenu'),
-('products_new', 'Products', 'listItemNew');
+INSERT INTO `dos_values` (`value_name`, `module`, `module_id`, `function_name`) VALUES
+('about_home', 'about', 'About', 'homeRecord'),
+('advs_left', 'advs', 'Advs', 'listItemsLeft'),
+('list_supports', 'supports', 'Supports', 'listItem'),
+('menu_about', 'about', 'About', 'listMenu'),
+('menu_products', 'products', 'ProductCats', 'listItem'),
+('menu_services', 'services', 'Services', 'listMenu'),
+('products_new', 'products', 'Products', 'listItemNew');
 
 --
 -- Constraints for dumped tables
@@ -835,6 +924,13 @@ INSERT INTO `dos_values` (`value_name`, `module_id`, `function_name`) VALUES
 --
 ALTER TABLE `dos_configs`
   ADD CONSTRAINT `fk_dos_configs_dos_templates1` FOREIGN KEY (`dos_templates_template`) REFERENCES `dos_templates` (`template`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `dos_loadfiles`
+--
+ALTER TABLE `dos_loadfiles`
+  ADD CONSTRAINT `fk_dos_templates_has_dos_modules1_dos_templates1` FOREIGN KEY (`dos_templates_template`) REFERENCES `dos_templates` (`template`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_dos_templates_has_dos_modules1_dos_modules1` FOREIGN KEY (`dos_modules_module_id`) REFERENCES `dos_modules` (`module_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `dos_modules_has_dos_usernames`

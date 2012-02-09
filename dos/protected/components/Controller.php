@@ -22,15 +22,18 @@ class Controller extends CController {
      * for more details on how to specify this property.
      */
     public $breadcrumbs = array();
+    
     public $nav;
     public $title;
     public $keywords;
     public $description;
-    public $function = array();
-    public $lang = array();
+   
+    public $function = array(); //for show, hidden function
+    public $lang = array(); //language
     public $configs = array();
-    public $logo = array();
-    public $banner = array();
+    
+    public $logo = array(); //Logo
+    public $banner = array(); //Banner
 
     public function init() {
         define('LANG', (isset($_GET['language']) && ($_GET['language'] != 'vi')) ? $_GET['language'] : '');
@@ -64,6 +67,10 @@ class Controller extends CController {
             $this->title = $web_value->setWebValue('title', $user);
             $this->keywords = $web_value->setWebValue('keywords', $user);
             $this->description = $web_value->setWebValue('description', $user);
+            
+            //Set page load file
+            $loadfiles_class = new Loadfiles;
+            $loadfiles_class->getFileByTemplateModule($username->template, $this->module->id);
 
             //Set navigation
             $menu_nav = new ModuleMenu();
@@ -73,12 +80,12 @@ class Controller extends CController {
             $loat_function = new TemplateModule();
             $func = $loat_function->getFunction($username->template, $this->module->id);
             foreach ($func as $value) {
-                Yii::app()->getModule(strtolower($value['module_id']));
+                Yii::app()->getModule($value['module']);
                 $load = new $value['module_id']();
                 $this->function[$value['value_name']] = $load->$value['function_name']();
             }
 
-            //Set banner
+            //Set Logo, Banner
             $banner = new Banner();
             $this->logo = $banner->getLogo($this->module->getName());
             $this->banner = $banner->getBanner($this->module->getName());
