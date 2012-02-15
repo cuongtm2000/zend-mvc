@@ -12,11 +12,13 @@ class PostsController extends Controller {
     }
     public function actionView($id) {
         Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/syntaxhighlighter/scripts/shCore.js');
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/syntaxhighlighter/scripts/shBrushCss.js');
 		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/syntaxhighlighter/scripts/shBrushJScript.js');
         Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/syntaxhighlighter/scripts/shBrushJava.js');
         Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/syntaxhighlighter/scripts/shBrushJavaFX.js');
         Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/syntaxhighlighter/scripts/shBrushPhp.js');
         Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/syntaxhighlighter/scripts/shBrushPlain.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/syntaxhighlighter/scripts/shBrushXml.js');
         Yii::app()->clientScript->registerScript('SyntaxHighlighter', 'SyntaxHighlighter.defaults[\'auto-links\'] = false; SyntaxHighlighter.all();', CClientScript::POS_READY);
         
         Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/js/syntaxhighlighter/styles/shCoreDefault.css');

@@ -1,4 +1,4 @@
-<?php $this->breadcrumbs = array('Posts'=>'/posts', $cat_name);?>
+<?php $this->breadcrumbs = array('Posts' => Yii::app()->request->baseUrl . '/posts', $cat_name); ?>
 <?php $this->pageTitle = $cat_name; $this->keywords = 'Specialized tutorial for ' . $cat_name . ', answer questions about programming for programmers, Where exchange and learning experience programming, Construction projects for charity'; $this->description = 'Specialized tutorial for ' . $cat_name . ', answer questions about programming for programmers, Where exchange and learning experience programming, Construction projects for charity' ?>
 <ul class="list-item">
     <?php if ($models): ?>
