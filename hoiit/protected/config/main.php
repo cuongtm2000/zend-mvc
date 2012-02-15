@@ -17,8 +17,6 @@ return array(
     ),
     'modules' => array(
         'dashboard',
-        // uncomment the following to enable the Gii tool
-
         /*'gii' => array(
             'class' => 'system.gii.GiiModule',
             'password' => '123',
@@ -33,65 +31,18 @@ return array(
             'allowAutoLogin' => true,
             'loginUrl' => array('login'),
         ),
-        // uncomment the following to enable URLs in path-format
-
+        'cache'=>array(
+            'class'=>'CFileCache',
+        ),
         'urlManager' => array(
             'urlFormat' => 'path',
             'showScriptName' => false,
-            'rules' => array(
-                'dashboard/<controller:\w+>/<action:\w+>/<id:\d+>' => 'dashboard/<controller>/<action>',
-                'dashboard/<controller:\w+>/<action:\w+>/page/<page:\d+>' => 'dashboard/<controller>/<action>', //paging dashboard
-                'dashboard/<controller:\w+>/<action:\w+>' => 'dashboard/<controller>/<action>',
-                'dashboard/<controller:\w+>' => 'dashboard/<controller>',
-                'dashboard' => 'dashboard/default',
-                
-                'register/<action:\w+>'=>'register/<action>',
-                'activate/<email:.*?>/<code:[A-Za-z0-9]+>' => 'activate/index', //activate user
-                'rss.xml'=>'site/feed',
-                
-                '<controller:\w+>/page/<page:\d+>' => array('<controller>/index'), //paging index
-                //'<controller:\w+>' => array('<controller>/index'),
-                '<controller:\w+>/<cid:[-a-z0-9]+>/page/<page:\d+>' => array('<controller>/cats'), //paging cats
-                '<controller:\w+>/<cid:[-a-z0-9]+>' => array('<controller>/cats'),
-                '<controller:\w+>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('<controller>/view', 'urlSuffix' => '.html'),
-            ),
+            'rules'=> require(dirname(__FILE__) . '/routes.php'),
                             ),
         // uncomment the following to use a MySQL database
-
-        'db' => array(
-            'connectionString' => 'mysql:host=localhost;dbname=hoiit',
-            'emulatePrepare' => true,
-            'username' => 'root',
-            'password' => '',
-            'charset' => 'utf8',
-            'enableProfiling' => true,
-            'enableParamLogging' => true,
-            //'schemaCachingDuration'=>60*60,
-        ),
         'errorHandler' => array(
             // use 'site/error' action to display errors
             'errorAction' => 'site/error',
         ),
-        'log' => array(
-            'class' => 'CLogRouter',
-            'routes' => array(
-                array(
-                    'class' => 'CFileLogRoute',
-                    'levels' => 'error, warning',
-                ),
-            // uncomment the following to show log messages on web pages
-            /*
-              array(
-              'class'=>'CWebLogRoute',
-              ),
-             */
-            ),
-        ),
-    ),
-    // application-level parameters that can be accessed
-    // using Yii::app()->params['paramName']
-    'params' => array(
-        // this is used in contact page
-        'adminEmail' => 'webmaster@example.com',
     ),
 );

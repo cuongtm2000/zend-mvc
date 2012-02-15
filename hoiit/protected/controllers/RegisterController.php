@@ -3,8 +3,6 @@
 class RegisterController extends Controller {
 
     public function actionIndex() {
-        $this->layout = 'column1';
-
         $model = new Usernames('index');
         if (isset($_POST['Usernames'])) {
             $model->attributes = $_POST['Usernames'];
@@ -22,7 +20,6 @@ class RegisterController extends Controller {
 
     public function actionUpdate() {
         if (Yii::app()->session['username']) {
-            $this->layout = 'column1';
             $model = new Usernames;
             if (isset($_POST['Usernames'])) {
                 $model->attributes = $_POST['Usernames'];
