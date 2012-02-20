@@ -1,11 +1,11 @@
 <?php
-<?php
 set_include_path(implode(PATH_SEPARATOR, array(
     dirname(__FILE__) . '/framework',
     get_include_path(),
 )));
 
-$yii = dirname(__FILE__).'framework/yii.php';
+// change the following paths if necessary
+$yii='framework/yii.php';
 $mode = 'dev';
 
 if ($mode == 'public') {
