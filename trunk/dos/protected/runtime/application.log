@@ -1,3 +1,0 @@
-2012/02/09 11:26:48 [warning] [application] Failed to set unsafe attribute "company" of "ContactUserForm".
-in C:\xampp\htdocs\protected\modules\contact\controllers\DefaultController.php (11)
-in C:\xampp\htdocs\index.php (13)
