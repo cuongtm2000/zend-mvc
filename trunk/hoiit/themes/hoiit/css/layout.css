@@ -163,4 +163,9 @@ ul.paging .hidden{display: none}
 .list-item li p{margin: 0; padding: 0}
 
 ul.list-templates{margin: 0; padding: 0}
-ul.list-templates li{float:left; width: 150px; list-style: none; margin: 5px 18px 5px 19px}
+ul.list-templates li{float:left; width: 150px; list-style: none; margin: 5px 17px}
+ul.list-templates li img{border: 1px solid #ddd}
+ul.list-templates li p{margin: 0; padding: 0; line-height: 14px; width: 144px; padding: 0 4px}
+ul.list-templates li p.add-cart{background: #3A6AAD; color: #fff; padding: 2px 4px; -moz-border-radius: 1px; -webkit-border-radius: 1px; text-align: center; margin-top: 1px}
+ul.list-templates li p.add-cart a{color: #fff}
+ul.list-templates li p.add-cart a:hover{color: #EF6700}
