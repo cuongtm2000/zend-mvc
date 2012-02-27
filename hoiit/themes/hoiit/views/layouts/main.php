@@ -10,7 +10,7 @@
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
         <meta name="keywords" content="<?php echo $this->keywords ?>" />
         <meta name="description" content="<?php echo $this->description ?>" />
-        <link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" />
+        <link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/hoiit.css" />
         <!--[if IE]>
         <style type="text/css">
             fieldset {position: relative; margin-top:10px}
@@ -55,7 +55,7 @@
             'items' => array(
                 array('label' => 'Home page', 'url' => Yii::app()->request->baseUrl.'/'),
                 array('label' => 'Tutorials', 'url' => array('/posts')),
-                array('label' => 'Web templates', 'url' => array('/web-templates')),
+                array('label' => 'Web templates', 'url' => array('/templates')),
             ),
         ));
         ?><div class="clear"></div>
