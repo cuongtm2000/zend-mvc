@@ -9,9 +9,11 @@ $this->menu = array(
     array('label' => 'List User', 'url' => array('index')),
     array('label' => 'Create User', 'url' => array('create')),
 );
+
+Yii::app()->clientScript->registerCoreScript('jquery');
 Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/jquery.treeview.css');
 Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.treeview.js');
-Yii::app()->clientScript->registerScript('',"",CClientScript::POS_READY);
+//Yii::app()->clientScript->registerScript('',"",CClientScript::POS_READY);
 ?>
 
 
