@@ -151,7 +151,7 @@ tbody tr td input.txt-sort{width:35px; -moz-border-radius: 2px; -webkit-border-r
 .control-button a{padding-right:15px}
 
 /* paging */
-ul.paging{float: right; margin : 7px 0}
+ul.paging{clear: both; float: right; margin : 7px 0}
 ul.paging .first, ul.paging .last{display: inline}
 ul.paging .hidden{display: none}
 
@@ -169,3 +169,5 @@ ul.list-templates li p{margin: 0; padding: 0; line-height: 14px; width: 144px; p
 ul.list-templates li p.add-cart{background: #3A6AAD; color: #fff; padding: 2px 4px; -moz-border-radius: 1px; -webkit-border-radius: 1px; text-align: center; margin-top: 1px}
 ul.list-templates li p.add-cart a{color: #fff}
 ul.list-templates li p.add-cart a:hover{color: #EF6700}
+
+.templates-view-right{background: red}
