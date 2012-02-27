@@ -1,252 +1,325 @@
--- -----------------------------------------------------
--- Table  `dos_module_products_cat`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS  `dos_module_products_cat` (
-  `cat_id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `cat_parent_id` INT(11) NOT NULL DEFAULT '0' ,
-  `cat_title` VARCHAR(100) NOT NULL ,
-  `cat_titleen` VARCHAR(100) NULL DEFAULT NULL ,
-  `preview` TEXT NULL DEFAULT NULL ,
-  `previewen` TEXT NULL DEFAULT NULL ,
-  `tag` VARCHAR(100) NOT NULL ,
-  `description` VARCHAR(250) NOT NULL ,
-  `pic_full` VARCHAR(100) NULL DEFAULT NULL ,
-  `pic_desc` VARCHAR(200) NULL DEFAULT NULL ,
-  `cat_order` INT(11) NOT NULL ,
-  `cat_extra1` VARCHAR(45) NULL DEFAULT NULL ,
-  `cat_extra2` VARCHAR(45) NULL DEFAULT NULL ,
-  `cat_enable` TINYINT(1) NOT NULL DEFAULT '1' ,
-  `dos_usernames_username` VARCHAR(45) NOT NULL ,
-  PRIMARY KEY (`cat_id`) )
-ENGINE = InnoDB
-AUTO_INCREMENT = 3
-DEFAULT CHARACTER SET = utf8;
+-- phpMyAdmin SQL Dump
+-- version 3.4.9
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Feb 27, 2012 at 03:53 PM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
--- -----------------------------------------------------
--- Table  `dos_module_usernames`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS  `dos_module_usernames` (
-  `username` VARCHAR(45) NOT NULL ,
-  `password` VARCHAR(45) NOT NULL ,
-  `create_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
-  `full_name` VARCHAR(150) NULL DEFAULT NULL ,
-  `email` VARCHAR(45) NULL DEFAULT NULL ,
-  `birthday` DATE NULL DEFAULT NULL ,
-  `address` VARCHAR(200) NULL DEFAULT NULL ,
-  `cmnd` VARCHAR(10) NULL DEFAULT NULL ,
-  `phone` VARCHAR(15) NULL DEFAULT NULL ,
-  `bank_number` VARCHAR(20) NULL DEFAULT NULL ,
-  `bank_name` VARCHAR(100) NULL DEFAULT NULL ,
-  `user_gioithieu` VARCHAR(45) NOT NULL ,
-  `balance` VARCHAR(45) NOT NULL DEFAULT '0' ,
-  `user_group` VARCHAR(45) NOT NULL ,
-  `level` INT NOT NULL DEFAULT 0 ,
-  `enable` TINYINT(1) NOT NULL ,
-  PRIMARY KEY (`username`) )
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
+--
+-- Database: `viptamnhinviet2`
+--
 
--- -----------------------------------------------------
--- Table  `dos_module_products`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS  `dos_module_products` (
-  `record_id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `title` VARCHAR(100) NOT NULL ,
-  `titleen` VARCHAR(100) NULL DEFAULT NULL ,
-  `postdate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
-  `pic_thumb` VARCHAR(100) NULL DEFAULT NULL ,
-  `pic_full` VARCHAR(100) NULL DEFAULT NULL ,
-  `pic_desc` VARCHAR(200) NULL DEFAULT NULL ,
-  `preview` TEXT NULL DEFAULT NULL ,
-  `previewen` TEXT NULL DEFAULT NULL ,
-  `detail` TEXT NOT NULL ,
-  `detailen` TEXT NULL DEFAULT NULL ,
-  `tag` VARCHAR(100) NOT NULL ,
-  `description` VARCHAR(250) NOT NULL ,
-  `hits` INT(11) NOT NULL DEFAULT '0' ,
-  `record_order` INT(11) NOT NULL DEFAULT '1' ,
-  `unit` INT(11) NULL DEFAULT NULL ,
-  `hot` TINYINT(1) NOT NULL DEFAULT '0' ,
-  `specials` TINYINT(1) NULL DEFAULT NULL ,
-  `extra_field1` VARCHAR(100) NULL DEFAULT NULL ,
-  `extra_field2` VARCHAR(100) NULL DEFAULT NULL ,
-  `extra_field3` VARCHAR(100) NULL DEFAULT NULL ,
-  `extra_field4` VARCHAR(100) NULL DEFAULT NULL ,
-  `enable` TINYINT(1) NOT NULL DEFAULT '1' ,
-  `dos_module_item_cat_cat_id` INT(11) NOT NULL ,
-  `dos_module_usernames_username` VARCHAR(45) NOT NULL ,
-  PRIMARY KEY (`record_id`) ,
-  INDEX `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id` ASC) ,
-  INDEX `fk_dos_module_products_dos_module_usernames1` (`dos_module_usernames_username` ASC) ,
-  CONSTRAINT `fk_dos_module_products_dos_module_products_cat10`
-    FOREIGN KEY (`dos_module_item_cat_cat_id` )
-    REFERENCES  `dos_module_products_cat` (`cat_id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_dos_module_products_dos_module_usernames10`
-    FOREIGN KEY (`dos_module_usernames_username` )
-    REFERENCES  `dos_module_usernames` (`username` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB
-AUTO_INCREMENT = 2
-DEFAULT CHARACTER SET = utf8;
+-- --------------------------------------------------------
 
+--
+-- Table structure for table `dos_module_abouts`
+--
 
--- -----------------------------------------------------
--- Table  `dos_module_abouts`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS  `dos_module_abouts` (
-  `record_id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `title` VARCHAR(100) NOT NULL ,
-  `titleen` VARCHAR(100) NULL DEFAULT NULL ,
-  `content` TEXT NOT NULL ,
-  `contenten` TEXT NULL DEFAULT NULL ,
-  `hit` INT(11) NOT NULL DEFAULT '0' ,
-  `created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
-  `record_order` SMALLINT(6) NOT NULL DEFAULT '1' ,
-  `hot` TINYINT(1) NOT NULL DEFAULT '0' ,
-  `extra_field1` VARCHAR(45) NULL DEFAULT NULL ,
-  `extra_field2` VARCHAR(45) NULL DEFAULT NULL ,
-  `tag` VARCHAR(100) NOT NULL ,
-  `description` VARCHAR(250) NOT NULL ,
-  `activated` TINYINT(1) NOT NULL DEFAULT '1' ,
-  PRIMARY KEY (`record_id`) ,
-  INDEX `tag` (`tag` ASC) )
-ENGINE = InnoDB
-AUTO_INCREMENT = 138
-DEFAULT CHARACTER SET = utf8;
+CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `titleen` varchar(100) DEFAULT NULL,
+  `content` text NOT NULL,
+  `contenten` text,
+  `hit` int(11) NOT NULL DEFAULT '0',
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `record_order` smallint(6) NOT NULL DEFAULT '1',
+  `hot` tinyint(1) NOT NULL DEFAULT '0',
+  `extra_field1` varchar(45) DEFAULT NULL,
+  `extra_field2` varchar(45) DEFAULT NULL,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) NOT NULL,
+  `activated` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`record_id`),
+  KEY `tag` (`tag`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table  `dos_module_banners`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS  `dos_module_banners` (
-  `banner_id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `banner_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
-  `banner_name` VARCHAR(45) NOT NULL ,
-  `banner_url` VARCHAR(45) NOT NULL ,
-  `banner_link` VARCHAR(200) NULL DEFAULT NULL ,
-  `banner_order` INT(11) NOT NULL DEFAULT '1' ,
-  `banner_type` VARCHAR(10) NOT NULL ,
-  `position` VARCHAR(20) NOT NULL ,
-  `enable` TINYINT(1) NOT NULL DEFAULT '1' ,
-  PRIMARY KEY (`banner_id`) )
-ENGINE = InnoDB
-AUTO_INCREMENT = 7
-DEFAULT CHARACTER SET = utf8;
+--
+-- Table structure for table `dos_module_advs`
+--
 
+CREATE TABLE IF NOT EXISTS `dos_module_advs` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `titleen` varchar(100) DEFAULT NULL,
+  `pic_thumb` varchar(50) NOT NULL,
+  `url` varchar(200) NOT NULL,
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `start_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `end_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `hits` int(11) NOT NULL DEFAULT '0',
+  `record_order` int(11) DEFAULT '1',
+  `position` varchar(45) NOT NULL,
+  `type` varchar(45) DEFAULT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`record_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
--- -----------------------------------------------------
--- Table  `dos_module_advs`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS  `dos_module_advs` (
-  `record_id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `title` VARCHAR(100) NOT NULL ,
-  `titleen` VARCHAR(100) NULL DEFAULT NULL ,
-  `pic_thumb` VARCHAR(50) NOT NULL ,
-  `url` VARCHAR(200) NOT NULL ,
-  `create_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
-  `start_date` TIMESTAMP NOT NULL DEFAULT '0000-00-00 00:00:00' ,
-  `end_date` TIMESTAMP NOT NULL DEFAULT '0000-00-00 00:00:00' ,
-  `hits` INT(11) NOT NULL DEFAULT '0' ,
-  `record_order` INT(11) NULL DEFAULT '1' ,
-  `position` VARCHAR(45) NOT NULL ,
-  `type` VARCHAR(45) NULL DEFAULT NULL ,
-  `enable` TINYINT(1) NOT NULL DEFAULT '1' ,
-  PRIMARY KEY (`record_id`) )
-ENGINE = InnoDB
-AUTO_INCREMENT = 3
-DEFAULT CHARACTER SET = utf8;
+-- --------------------------------------------------------
 
+--
+-- Table structure for table `dos_module_banners`
+--
 
--- -----------------------------------------------------
--- Table  `dos_module_contacts`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS  `dos_module_contacts` (
-  `record_id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `title` VARCHAR(100) NOT NULL ,
-  `titleen` VARCHAR(100) NULL DEFAULT NULL ,
-  `content` TEXT NOT NULL ,
-  `contenten` TEXT NULL DEFAULT NULL ,
-  `create_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
-  `record_order` SMALLINT(6) NOT NULL DEFAULT '1' ,
-  `hit` INT(11) NOT NULL DEFAULT '0' ,
-  `hot` TINYINT(1) NOT NULL DEFAULT '0' ,
-  `tag` VARCHAR(100) NOT NULL ,
-  `description` VARCHAR(250) NOT NULL ,
-  `enable` VARCHAR(45) NOT NULL DEFAULT '1' ,
-  PRIMARY KEY (`record_id`) )
-ENGINE = InnoDB
-AUTO_INCREMENT = 4
-DEFAULT CHARACTER SET = utf8;
+CREATE TABLE IF NOT EXISTS `dos_module_banners` (
+  `banner_id` int(11) NOT NULL AUTO_INCREMENT,
+  `banner_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `banner_name` varchar(45) NOT NULL,
+  `banner_url` varchar(45) NOT NULL,
+  `banner_link` varchar(200) DEFAULT NULL,
+  `banner_order` int(11) NOT NULL DEFAULT '1',
+  `banner_type` varchar(10) NOT NULL,
+  `position` varchar(20) NOT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`banner_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table  `dos_module_menus`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS  `dos_module_menus` (
-  `menu` VARCHAR(50) NOT NULL ,
-  `menuen` VARCHAR(50) NULL DEFAULT NULL ,
-  `url` VARCHAR(100) NULL DEFAULT NULL ,
-  `target` VARCHAR(20) NULL DEFAULT NULL ,
-  `position` TINYINT(4) NULL DEFAULT NULL )
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+--
+-- Table structure for table `dos_module_contacts`
+--
 
+CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `titleen` varchar(100) DEFAULT NULL,
+  `content` text NOT NULL,
+  `contenten` text,
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `record_order` smallint(6) NOT NULL DEFAULT '1',
+  `hit` int(11) NOT NULL DEFAULT '0',
+  `hot` tinyint(1) NOT NULL DEFAULT '0',
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) NOT NULL,
+  `enable` varchar(45) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`record_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
--- -----------------------------------------------------
--- Table  `dos_module_pcounter_save`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS  `dos_module_pcounter_save` (
-  `save_name` VARCHAR(10) NOT NULL ,
-  `save_value` INT(11) NOT NULL )
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+-- --------------------------------------------------------
 
+--
+-- Table structure for table `dos_module_log`
+--
 
--- -----------------------------------------------------
--- Table  `dos_module_pcounter_users`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS  `dos_module_pcounter_users` (
-  `user_ip` VARCHAR(39) NOT NULL ,
-  `user_time` INT(11) NOT NULL )
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+CREATE TABLE IF NOT EXISTS `dos_module_log` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `record_type` int(2) DEFAULT '0',
+  `detail` varchar(320) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `sender` varchar(45) NOT NULL,
+  `receiver` varchar(45) NOT NULL,
+  `value` float NOT NULL,
+  PRIMARY KEY (`record_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
+--
+-- Dumping data for table `dos_module_log`
+--
 
--- -----------------------------------------------------
--- Table  `dos_module_supports`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS  `dos_module_supports` (
-  `support_id` INT(11) NOT NULL AUTO_INCREMENT ,
-  `support_name` VARCHAR(45) NOT NULL ,
-  `support_phone` VARCHAR(45) NULL DEFAULT NULL ,
-  `support_value` VARCHAR(45) NOT NULL ,
-  `support_order` SMALLINT(6) NOT NULL ,
-  `support_type` VARCHAR(20) NOT NULL ,
-  PRIMARY KEY (`support_id`) )
-ENGINE = InnoDB
-AUTO_INCREMENT = 14
-DEFAULT CHARACTER SET = utf8;
+INSERT INTO `dos_module_log` (`record_id`, `record_type`, `detail`, `time`, `sender`, `receiver`, `value`) VALUES
+(1, 0, 'thử nghiệm', '2012-02-27 08:16:06', 'grouplaptrinh', '', 0),
+(2, 0, '', '2012-02-27 08:16:50', '', '', 0);
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table  `dos_module_tables`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS  `dos_module_tables` (
-  `left_child` VARCHAR(45) NULL DEFAULT NULL ,
-  `right_child` VARCHAR(45) NULL DEFAULT NULL ,
-  `four_child` VARCHAR(180) NULL DEFAULT NULL ,
-  `priority` VARCHAR(45) NULL DEFAULT NULL ,
-  `upgrade_date` DATETIME NULL DEFAULT NULL ,
-  `dos_module_usernames_username` VARCHAR(45) NOT NULL ,
-  INDEX `fk_dos_module_table_dos_module_usernames1` (`dos_module_usernames_username` ASC) ,
-  CONSTRAINT `fk_dos_module_table_dos_module_usernames10`
-    FOREIGN KEY (`dos_module_usernames_username` )
-    REFERENCES  `dos_module_usernames` (`username` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+--
+-- Table structure for table `dos_module_menus`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_menus` (
+  `menu` varchar(50) NOT NULL,
+  `menuen` varchar(50) DEFAULT NULL,
+  `url` varchar(100) DEFAULT NULL,
+  `target` varchar(20) DEFAULT NULL,
+  `position` tinyint(4) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_pcounter_save`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
+  `save_name` varchar(10) NOT NULL,
+  `save_value` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_pcounter_users`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
+  `user_ip` varchar(39) NOT NULL,
+  `user_time` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_products`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_products` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `titleen` varchar(100) DEFAULT NULL,
+  `postdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `pic_full` varchar(100) DEFAULT NULL,
+  `pic_desc` varchar(200) DEFAULT NULL,
+  `preview` text,
+  `previewen` text,
+  `detail` text NOT NULL,
+  `detailen` text,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) NOT NULL,
+  `hits` int(11) NOT NULL DEFAULT '0',
+  `record_order` int(11) NOT NULL DEFAULT '1',
+  `unit` int(11) DEFAULT NULL,
+  `hot` tinyint(1) NOT NULL DEFAULT '0',
+  `specials` tinyint(1) DEFAULT NULL,
+  `extra_field1` varchar(100) DEFAULT NULL,
+  `extra_field2` varchar(100) DEFAULT NULL,
+  `extra_field3` varchar(100) DEFAULT NULL,
+  `extra_field4` varchar(100) DEFAULT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_module_item_cat_cat_id` int(11) NOT NULL,
+  `dos_module_usernames_username` varchar(45) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`),
+  KEY `fk_dos_module_products_dos_module_usernames1` (`dos_module_usernames_username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_products_cat`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
+  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_parent_id` int(11) NOT NULL DEFAULT '0',
+  `cat_title` varchar(100) NOT NULL,
+  `cat_titleen` varchar(100) DEFAULT NULL,
+  `preview` text,
+  `previewen` text,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) NOT NULL,
+  `pic_full` varchar(100) DEFAULT NULL,
+  `pic_desc` varchar(200) DEFAULT NULL,
+  `cat_order` int(11) NOT NULL,
+  `cat_extra1` varchar(45) DEFAULT NULL,
+  `cat_extra2` varchar(45) DEFAULT NULL,
+  `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_usernames_username` varchar(45) NOT NULL,
+  PRIMARY KEY (`cat_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_supports`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_supports` (
+  `support_id` int(11) NOT NULL AUTO_INCREMENT,
+  `support_name` varchar(45) NOT NULL,
+  `support_phone` varchar(45) DEFAULT NULL,
+  `support_value` varchar(45) NOT NULL,
+  `support_order` smallint(6) NOT NULL,
+  `support_type` varchar(20) NOT NULL,
+  PRIMARY KEY (`support_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_tables`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_tables` (
+  `left_child` varchar(45) DEFAULT NULL,
+  `right_child` varchar(45) DEFAULT NULL,
+  `four_child` varchar(180) DEFAULT NULL,
+  `priority` varchar(45) DEFAULT NULL,
+  `upgrade_date` datetime DEFAULT NULL,
+  `dos_module_usernames_username` varchar(45) NOT NULL,
+  KEY `fk_dos_module_table_dos_module_usernames1` (`dos_module_usernames_username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_usernames`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_usernames` (
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `full_name` varchar(150) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `birthday` date DEFAULT NULL,
+  `address` varchar(200) DEFAULT NULL,
+  `cmnd` varchar(10) DEFAULT NULL,
+  `phone` varchar(15) DEFAULT NULL,
+  `bank_number` varchar(20) DEFAULT NULL,
+  `bank_name` varchar(100) DEFAULT NULL,
+  `user_gioithieu` varchar(45) NOT NULL,
+  `balance` varchar(45) NOT NULL DEFAULT '0',
+  `user_group` varchar(45) NOT NULL,
+  `level` int(11) NOT NULL DEFAULT '0',
+  `enable` tinyint(1) NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dos_module_usernames`
+--
+
+INSERT INTO `dos_module_usernames` (`username`, `password`, `create_date`, `full_name`, `email`, `birthday`, `address`, `cmnd`, `phone`, `bank_number`, `bank_name`, `user_gioithieu`, `balance`, `user_group`, `level`, `enable`) VALUES
+('admin', 'admin', '2012-02-22 15:19:39', '', '', '0000-00-00', '', '', '', '', '', 'grouplaptrinh', '0', '', 1, 1),
+('admin1', 'q', '2012-02-22 16:10:09', '', '', '0000-00-00', '', '', '', '', '', 'grouplaptrinh', '0', '', 0, 1),
+('admin10', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-02-25 08:43:30', '', 'aaa@aa.ccc', '1980-01-26', '', '2165454549', '', '', '', 'admin2', '0', 'user', 0, 0),
+('admin2', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-02-25 06:15:35', 'Lê Hữu Ninh', 'aaa@aa.ccc', '0000-00-00', '', '2165454549', '', '', '', 'admin', '0', 'user', 0, 0),
+('admin3', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-02-25 06:29:18', 'NInh', 'aaa@aa.ccc', '0000-00-00', '', '2165454549', '', '', '', 'admin1', '0', 'user', 0, 0),
+('admin4', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-02-25 06:33:59', 'NInh', 'aaa@aa.ccc', '0000-00-00', '', '2165454549', '', '', '', 'admin1', '0', 'user', 0, 0),
+('grouplaptrinh', 'b7a659e0c28c88b3ee01adf805fc228f', '2012-02-25 08:57:48', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '0', 'administrator', 0, 1);
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `dos_module_products`
+--
+ALTER TABLE `dos_module_products`
+  ADD CONSTRAINT `fk_dos_module_products_dos_module_products_cat10` FOREIGN KEY (`dos_module_item_cat_cat_id`) REFERENCES `dos_module_products_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_dos_module_products_dos_module_usernames10` FOREIGN KEY (`dos_module_usernames_username`) REFERENCES `dos_module_usernames` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `dos_module_tables`
+--
+ALTER TABLE `dos_module_tables`
+  ADD CONSTRAINT `fk_dos_module_table_dos_module_usernames10` FOREIGN KEY (`dos_module_usernames_username`) REFERENCES `dos_module_usernames` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
