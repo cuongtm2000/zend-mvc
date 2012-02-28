@@ -17,4 +17,5 @@ return array(
     
     'posts' => array('posts/index'),
     'templates' => array('templates/index'),
+	'sitemap.xml'=>'site/sitemap'
 );
