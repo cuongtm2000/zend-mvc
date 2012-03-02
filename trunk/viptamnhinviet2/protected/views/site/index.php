@@ -1,16 +1,38 @@
-<?php $this->pageTitle=Yii::app()->name; ?>
+<h1 class="title-right"><span>SẢN PHẨM LIÊN KẾT TIÊU BIỂU CỦA VIP TẦM NHÌN VIỆT</span></h1>
+<div class="frame-product">
+    <div class="product">
+        <div class="frame-img-pro"><a href="product-info.html" title=""><img src="images/pro-1.jpg" alt=""  /></a></div>
+    </div>
+    <div class="btom-pro"></div>
+    <p class="price-pro">Giá bán : <span>14.070</span> <strong>K</strong></p>
+    <h2 class="title-pro"><a href="product-info.html" title="">samsung series 9 np900x3a-a03us 13.3-inch laptop (black)</a></h2>
+</div>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+<div class="frame-product">
+    <div class="product">
+        <div class="frame-img-pro"><a href="product-info.html" title=""><img src="images/pro-2.jpg" alt=""  /></a></div>
+    </div>
+    <div class="btom-pro"></div>
+    <p class="price-pro">Giá bán : <span>14.070</span> <strong>K</strong></p>
+    <h2 class="title-pro"><a href="product-info.html" title="">samsung series 9 np900x3a-a03us 13.3-inch laptop (black)</a></h2>
+</div>
 
-<p>Congratulations! You have successfully created your Yii application.</p>
+<div class="img-new"><img src="images/datvemaybay.jpg" alt="tin tuc" /></div>
+<h1 class="title-right"><span>SẢN PHẨM MỚI NHẤT</span></h1>
+<div class="frame-product">
+    <div class="product">
+        <div class="frame-img-pro"><a href="product-info.html" title=""><img src="images/pro-1.jpg" alt=""  /></a></div>
+    </div>
+    <div class="btom-pro"></div>
+    <p class="price-pro">Giá bán : <span>14.070</span> <strong>K</strong></p>
+    <h2 class="title-pro"><a href="product-info.html" title="">samsung series 9 np900x3a-a03us 13.3-inch laptop (black)</a></h2>
+</div>
 
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <tt><?php echo __FILE__; ?></tt></li>
-	<li>Layout file: <tt><?php echo $this->getLayoutFile('main'); ?></tt></li>
-</ul>
-
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
+<div class="frame-product">
+    <div class="product">
+        <div class="frame-img-pro"><a href="product-info.html" title=""><img src="images/pro-4.jpg" alt=""  /></a></div>
+    </div>
+    <div class="btom-pro"></div>
+    <p class="price-pro">Giá bán : <span>14.070</span> <strong>K</strong></p>
+    <h2 class="title-pro"><a href="product-info.html" title="">samsung series 9 np900x3a-a03us 13.3-inch laptop (black)</a></h2>
+</div>

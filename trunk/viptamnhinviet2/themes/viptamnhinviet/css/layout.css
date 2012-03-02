@@ -1,0 +1,253 @@
+body {background:#ddd url(../images/bg.gif) repeat-x;font: 9pt Arial, Tahoma, Verdana;}
+.left{float: left;}
+.right{float:right}
+.clear{clear: both;}
+a{text-decoration:none; color:#720E3B}
+a:hover{color:#000;}
+
+/*layout*/
+*{margin:0; padding:0}
+#wrapper {margin:auto; width:998px}
+#page{background:#fff;padding:5px 5px 0 5px}
+
+/*Top page*/
+.top-page{margin:0 0 15px 0;color:#fff;padding:10px 0 0 0}
+
+.top-right{float:right}
+.top-right a{background:#0065AD; padding:5px 15px;color:#fff;font-weight:bold}
+.top-right a:hover{color:#FFFF00}
+
+/*Header*/
+#header{padding:5px 0}
+#header-left{float:left; width:150px; margin:0 0 0 30px}
+
+/*Lang*/
+.banner-eca{float:right; width:660px}
+
+
+/*Nav*/
+.nav{list-style:none;background:#08689A; height:40px;margin:0 0 5px 0}
+.nav li{float:left;border-right:1px solid #067AB6}
+.nav li a{color:#fff; padding:12px 24px;display:block;font-size:9pt;font-weight:bold;*padding:12px 20px}
+.nav li a:hover{color:#FFFF00}
+.nav .select{color:#FFFF00}
+
+.nav .bton-view{background:url(../images/cart.gif) no-repeat; color:#f00;float:right; width:108px; margin:5px}
+.nav .bton-view a{padding:7px 0; text-align:center; color:#f00}
+.nav .bton-view a:hover{color:#00F}
+
+/*Banner and video*/
+#banner{margin:0 0 10px 0}
+.slider{float:left; width:686px}
+.video{float:right; width:300px; background:#6F0}
+
+/*frm-search*/
+.frm-search{text-align:right; margin:0 0 10px 0;background:#F5FAFD;border-bottom:1px solid #B2BBBA;padding:5px 0}
+.frm-search input, .frm-search select {padding:3px 5px}
+.bton-search{background:#006DA6;color:#fff;border:none;padding:6px 5px !important;font-weight:bold; cursor:pointer}
+
+/*Content*/
+#content{ margin:0 0 30px 0}
+
+/*Left content*/
+#left-content{float:left; width:200px}
+.title-left , .title-support{color:#000; font-size:10pt; font-weight:bold; text-align:center;margin:0 0 10px 0}
+.title-left span{}
+
+.frame-left-1{background:#EAEAEA; padding:10px 10px 5px 10px;margin:0 0 10px 0;-webkit-border-radius:4px;-moz-border-radius:4px}
+
+/*Sub sản phẩm SGS*/
+.sub-pro{list-style:none}
+.sub-pro li{padding:0 0 4px 0}
+.sub-pro li a{display:block;color:#000; background:#F6F6F6;padding:5px 2px 5px 10px;-webkit-border-radius:4px;-moz-border-radius:4px}
+.sub-pro li a:hover{color:#AA100E; background:#E0DEDF}
+
+/*San pham tieu bieu anh khuyen mai moi */
+.sub-ty-pro{list-style:none;background:#F4F4F4}
+.sub-ty-pro li{border-bottom:1px dashed #BBBBBB;padding:5px 0 5px 0; margin:0 0 5px 0}
+.all-view-pro{text-align:right;padding:5px 0}
+.all-view-pro a{color:#FF7200} .all-view-pro a:hover{color:#00F}
+
+.img-ty-pro{float:left; width:55px}
+
+.right-ty-pro{float:right; width:117px}
+.title-pro{color:#256626}
+.title-pro a{color:#256626}  .title-pro a:hover{color:#800000}
+
+.price span{color:#AA100E} .price strong, .price-pro strong{color:#006DA6}
+
+/*Ho tro ky thuat*/
+.frame-left-2{background:#FF7200;padding:10px 5px 5px 5px;margin:0 0 10px 0;-webkit-border-radius:4px;-moz-border-radius:4px}
+.title-support{color:#40362D}
+.support{background:#fff;list-style:none;padding:5px 5px 10px 5px}
+.support li {color:#000;margin:0 0 10px 0}
+.img-sport{float:left; width:70px}
+.img-support{width:70px}
+.right-spport{float:right;padding:8px 0 0 0; width:100px; text-align:center}
+.title-sport-right{color:#cc0000;font-weight:bold; font-size:11px; margin:0 0 5px 0}
+
+/*Doi tac vang*/
+.title-adv-left{margin:0 0 13px 0; text-align:center;color:#fff; background:#FF7200;padding:8px 0; font-size:10pt; font-weight:bold;-webkit-border-radius:4px;-moz-border-radius:4px}
+.adv-left{list-style:none;margin:0 0 10px 0}
+
+/*Table thanh vien quyen gop nhieu nhat*/
+.title-member-left-1, .title-member-left-2{color:#fff;background:#00A2FF;font-size:8pt;padding:5px 0; text-align:center}
+.list-member{list-style:none;border-left:1px solid #00A2FF; border-right:1px solid #00A2FF;margin:0 0 10px 0}
+.list-member li{border-bottom:1px solid #00A2FF}
+.list-member label{background:#E3F5FF;padding:6px 0 6px 5px;width:120px;float:left;border-right:1px solid #00A2FF}
+.list-member span{float:right;color:#CC0000; padding:6px 5px; width:60px; text-align:right;font-weight:bold}
+.list-member span b{color:#006DA6}
+
+/*Table thanh vien quyen gop moi nhat*/
+.title-member-left-2{background:#4CA100}
+.list-member-2{border-left:1px solid #4CA100; border-right:1px solid #4CA100}
+.list-member-2 li{border-bottom:1px solid #4CA100}
+.list-member-2 label{background:#F0FFE3;border-right:1px solid #4CA100}
+
+/*Right content*/
+#right-content{float:right; width:770px}
+#right-content p{margin:0 0 10px 0}
+#right-content ul li, #right-content ol li{margin:0 0 0 18px}
+
+.title-right{margin:0 0 13px 0;color:#fff; background:#FF7200;padding:8px 0; font-size:10pt; font-weight:bold;-webkit-border-radius:4px;-moz-border-radius:4px}
+.title-right span{padding:0 0 0 15px}
+.title-right a{color:#fff}
+.title-right a:hover{color:#f90}
+
+/*Frame tent right*/
+.frame-tent-right{border:2px solid #ddd;-webkit-border-radius:4px;-moz-border-radius:4px;padding:8px 10px}
+.frame-tent-right p{text-align:justify}
+
+/*Product*/
+.img-new{margin:0 0 10px 0}
+.frame-product{width:148px; text-align:center; line-height:1.5em; display:inline-block; vertical-align:top; margin:0 0 20px 35px;*float:left;*margin:0 15px 20px 20px;}
+.product{border-left:1px solid #D9D9D9;border-right:1px solid #D9D9D9;border-top:1px solid #D9D9D9;padding:1px 0 0 0}
+.frame-img-pro{display:table-cell; vertical-align:top; height:145px; text-align:center;width:146px}
+.btom-pro{background:#ddd url(../images/bt-pro.gif) no-repeat; height:9px; width:148px;margin:0 0 10px 0}
+.price-pro{margin:0 !important}
+.price-pro span{color:#CC0000;font-weight:bold},
+
+/*Page New, services*/
+.masuring{text-align:justify;font-size:10pt;color:#666;margin:0 0 20px 0}
+.frame-img{float:left;width:143px;margin:0 15px 5px 0}
+.title-masuring {margin:0 0 10px 0}
+.title-masuring a{color:#208FFF;font-size:10pt;font-weight:bold}
+.title-masuring a:hover{color:#F90}
+
+/*Login registration */
+#dangky{ margin:10px 10px 0 20px; color:#666}
+
+#dangky .select-date input{width:42px; color:#666}
+#dangky .select-date select{ color:#666;-moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
+#dangky .singin{background:#666262;font-weight:bold;color:#fff;padding:5px 10px; border:none; width:100px; cursor:pointer;-webkit-border-radius: 3px;-moz-border-radius: 3px;}
+#dangky a:hover{color:#fff}
+#dangky p{ margin:20px 0; color:#666; font-size:10pt}
+#dangky span{color:#F00}
+#dangky ul{margin:0; padding:0; list-style:none}
+#dangky ul li{padding:5px 0;}
+#dangky ul li label{float:left; width:130px;padding-top:2px; font-family:Tahoma, Geneva, sans-serif;  text-align:left; margin-right:10px}
+#dangky ul li input{ width:200px;-moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
+
+
+/* paging */
+.paging{margin:15px 0 10px 0; text-align:right}
+.paging a{color:#3CBEDA}
+.paging a:hover{background:#44A4DE; color:#fff;}
+.pagenav , .pageactive{border: 1px solid #ccc; padding: 2px 5px; color:#fff; -moz-border-radius: 2px; -webkit-border-radius: 2px;}
+.pagecureent{border: 1px solid #ccc; padding: 2px 5px; background:#44A4DE; color:#fff; font-weight:bold; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+
+/**Page Contact**/
+.frame-title{margin:0 0 20px 0}
+.title-contact{ background:#F0EDE6;margin:10px 0 10px 0; padding:7px 2px 7px 10px; font-family:Tahoma, Geneva, sans-serif;font-weight:bold; color:#000}
+.frame-contact label{color:#555; margin:0 !important;font-weight:bold;width:100px; float:left}
+.frame-contact{list-style:none;margin:10px 0; position:relative}
+.img-contact{position:absolute; right:10px;}
+.frame-contact li{padding:4px 0; margin:0 !important}
+.frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.frame-contact textarea{border:1px solid #ddd; width:350px;-moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-contact span{color:#F00;font-weight:bold}
+.frame-contact .bton-dk{margin:10px 0 5px 30px;background:url(../images/button.gif) no-repeat;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-contact .bton-dk{margin:10px 10px 5px 0}
+
+/*Gian hang tieu bieu title-booth*/
+.title-booth{color:#fff; background:#FF7200;margin:0 0 5px 0; font-size:10pt; font-weight:bold;-webkit-border-radius:4px;-moz-border-radius:4px}
+.title-booth span{padding:0 0 0 15px}
+
+.bg-booth{background:#F4F4F4; padding:5px}
+.item-booth{text-align:center; width:78px;display:inline-block; vertical-align:top;margin:0 10px 20px 16px; *float:left}
+.img-booth{display:table-cell; vertical-align:bottom; height:75px}
+.img-booth img{border:2px solid #fff}
+.img-booth img:hover{border:2px solid #FFC354}
+.title-member{margin:5px 0 0 0}
+.title-member a{color:#333}
+.title-member a:hover{color:#CC0000}
+
+/*Holine*/
+.bg-hotline{background:url(../images/img-fter.jpg) no-repeat center; text-align:right;padding:22px 15px 22px 0}
+
+/***  Page info ***/
+.row-info-1{margin:0 0 10px 0}
+
+.col-info-1{float:left; width:420px;padding:5px}
+.col-info-1 img{border:2px solid #DDD;-webkit-border-radius:4px;-moz-border-radius:4px}
+.col-info-2{float:right; width:330px}
+.title-pro-info{font-weight:bold;color:#CC0000;font-size:12pt;margin:0 0 10px 0}
+.sub-info-row-1{list-style:none}
+.sub-info-row-1 li{margin:0 0 10px 0 !important}
+.sub-info-row-1 label{background:url(../images/bder-right.gif) no-repeat right; margin:0 10px 0 0;padding:0 10px 0 0 }
+.sub-info-row-1 strong{color:#CC0000;font-weight:normal}
+.sub-info-row-1 b{color:#008000;font-weight:normal}
+
+/*row-info-2*/
+.row-info-2{background:#EBF6FF;border:1px solid #ddd;margin:0 0 10px 0}
+.line-mid{background:url(../images/line-mid.gif) repeat-y 412px;padding:10px 0}
+
+.col-price-left{float:left; width:370px;padding:30px 20px}
+.col-price-left span{float:right;font-weight:bold;color:#CC0000}
+
+.col-right{float:right; width:350px}
+.bton-cart{background: url(../images/button.n.png) no-repeat left -90px;padding: 7px 10px 7px 38px;border:none;color:#fff; cursor:pointer}
+.col-right a{color:#333}
+.col-right a:hover{color:#cc0000}
+
+/*Thong tin nguoi ban info-sale*/
+.info-sale{border:1px solid #BAE1FF;margin:0 0 10px 0;padding:0 0 10px 0}
+.title-info-sale{background:#BAE1FF !important; color:#000 !important}
+.sub-info-sale{float:left; width:600px;list-style:none;padding:10px 0 0 0}
+.sub-info-sale li{margin:0 0 5px 18px !important}
+.sub-info-sale label{width:100px; float:left}
+.sub-info-sale span{color:#00F}
+.sub-info-sale-right{float:right; width:150px;padding:10px 0 0 0}
+
+
+/* bg-detion-detail */
+.bg-detion-detail{border:1px solid #DDD}
+.title-detion, .title-info-sale{margin:0 0 5px 0;color:#fff; background:#CC0000;padding:8px 0; font-size:10pt; font-weight:bold}
+.title-detion span, .title-info-sale span{padding:0 0 0 15px}
+.content-detail{padding:5px}
+
+/*Footer*/
+#footer{}
+.nav-fter{list-style:none; background:#EEEEEE; height:36px}
+.nav-fter li{float:left; border-right:1px solid #ddd}
+.nav-fter li a{color:#333;padding:10px 20px; display:block;font-size:10pt}
+.nav-fter li a:hover{color:#f90}
+
+.frame-info-footer{background:#DDDDDD; padding:5px 20px; line-height:1.5em}
+.left-fter{float:left; width:450px}
+.title-company{color:#FF7200 !important;font-weight:bold}
+.left-fter span{color:#333}
+
+.right-fter{float:right; width:450px; text-align:right;color:#333}
+.right-fter a{color:#333}
+
+/*Thong ke truy cap*/
+.statistics{font-size:14px;color:#000}
+.statistics span{color:#FF7200}
+
+
+
+
+
+
+

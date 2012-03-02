@@ -5,7 +5,7 @@
  *
  * The followings are the available columns in table 'dos_module_log':
  * @property integer $record_id
- * @property integer $record_type
+ * @property string $log_type
  * @property string $detail
  * @property string $time
  * @property string $sender
@@ -41,13 +41,12 @@ class Log extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('detail, time, sender, receiver, value', 'required'),
-			array('record_type', 'numerical', 'integerOnly'=>true),
 			array('value', 'numerical'),
+			array('log_type, sender, receiver', 'length', 'max'=>45),
 			array('detail', 'length', 'max'=>320),
-			array('sender, receiver', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('record_id, record_type, detail, time, sender, receiver, value', 'safe', 'on'=>'search'),
+			array('record_id, log_type, detail, time, sender, receiver, value', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,7 +68,7 @@ class Log extends CActiveRecord
 	{
 		return array(
 			'record_id' => 'Record',
-			'record_type' => 'Record Type',
+			'log_type' => 'Log Type',
 			'detail' => 'Detail',
 			'time' => 'Time',
 			'sender' => 'Sender',
@@ -90,7 +89,7 @@ class Log extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('record_id',$this->record_id);
-		$criteria->compare('record_type',$this->record_type);
+		$criteria->compare('log_type',$this->log_type,true);
 		$criteria->compare('detail',$this->detail,true);
 		$criteria->compare('time',$this->time,true);
 		$criteria->compare('sender',$this->sender,true);

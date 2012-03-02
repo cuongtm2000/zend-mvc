@@ -33,7 +33,7 @@ class UserController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete', 'map'),
+                'actions' => array('admin', 'delete', 'map','active'),
                 'users' => array('grouplaptrinh', 'viptamnhinviet'),
             ),
             array('deny', // deny all users
@@ -129,6 +129,17 @@ class UserController extends Controller {
             $model->attributes = $_GET['User'];
 
         $this->render('admin', array(
+            'model' => $model,
+        ));
+    }
+    
+    public function actionActive(){
+        $model = new User('active');
+        $model->unsetAttributes();  // clear any default values
+        if (isset($_GET['User']))
+            $model->attributes = $_GET['User'];
+
+        $this->render('active', array(
             'model' => $model,
         ));
     }
