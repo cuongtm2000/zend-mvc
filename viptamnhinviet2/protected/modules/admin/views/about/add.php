@@ -1,31 +1,27 @@
 <?php $form = $this->beginWidget('CActiveForm', array('id'=>'frm', 'enableAjaxValidation'=>true, 'enableClientValidation' =>true,));?>
 <?php echo $form->errorSummary($model, ''); ?>
 <fieldset>
-    <legend><?php echo $this->lang['add_new'] ?></legend>
+    <legend>Thêm mới bài viết</legend>
 
-    <?php $lang = explode('|', Yii::app()->user->language); foreach($lang as $value): $value = ($value=='vi') ? '' : $value;?>
-    <div class="col1"><?php echo $form->labelEx($model, $this->lang['title'.$value]) ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'title') ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'title'.$value, $htmlOptions=array('class'=>'txt-very-large')); ?>
+        <?php echo $form->textField($model, 'title', $htmlOptions=array('class'=>'txt-very-large')); ?>
 		<a class='west' href='' title='Hôm nay là 1 ngày gần chuẩn bị dinh cô '><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/mark.png"  alt="Mark" /></a>
     </div>
     <div class="clear space"></div>
-    <?php endforeach; ?>
 
-    <?php $lang = explode('|', Yii::app()->user->language); foreach($lang as $value): $value = ($value=='vi') ? '' : $value;?>
-    <div class="col1"><?php echo $form->labelEx($model, $this->lang['content'.$value]) ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'content') ?></div>
     <div class="col2">
-        <?php echo $form->textArea($model, 'content'.$value, $htmlOptions=array('cols'=>20, 'rows'=>10)); ?>
+        <?php echo $form->textArea($model, 'content', $htmlOptions=array('cols'=>20, 'rows'=>10)); ?>
         <script type="text/javascript">
         //<![CDATA[
-            CKEDITOR.replace('<?php echo get_class($model)?>[content<?php echo $value ?>]');
+            CKEDITOR.replace('<?php echo get_class($model)?>[content]');
         //]]>
         </script>
     </div>
     <div class="clear space"></div>
-    <?php endforeach; ?>
 
-    <div class="col1"><?php echo $form->labelEx($model, $this->lang['tag']) ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'Tag') ?></div>
     <div class="col2">
         <?php echo $form->textField($model, 'tag', $htmlOptions=array('class'=>'txt-very-large')); ?>
     </div>
@@ -37,22 +33,22 @@
     </div>
     <div class="clear space"></div>
 
-    <div class="col1"><?php echo $form->labelEx($model, $this->lang['hot'], $htmlOptions=array('for'=>ucfirst($this->ID).'_hot_0')) ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'Nổi bật', $htmlOptions=array('for'=>ucfirst($this->ID).'_hot_0')) ?></div>
     <div class="col2 radio">
-        <?php echo $form->radioButtonList($model, 'hot', array('0'=>$this->lang['normal'], '1'=>$this->lang['hot']), array('separator'=>'&nbsp;&nbsp;')); ?>
+        <?php echo $form->radioButtonList($model, 'hot', array('0'=>'Không nổi bật', '1'=>'Nổi bật'), array('separator'=>'&nbsp;&nbsp;')); ?>
     </div>
     <div class="clear space"></div>
 
-    <div class="col1"><?php echo $form->labelEx($model, $this->lang['show'], $htmlOptions=array('for'=>ucfirst($this->ID).'_activated_0')) ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'Hiển thị', $htmlOptions=array('for'=>ucfirst($this->ID).'_activated_0')) ?></div>
     <div class="col2 radio">
-        <?php echo $form->radioButtonList($model, 'activated', array('1'=>$this->lang['show'], '0'=>$this->lang['hidden']), array('separator'=>'&nbsp;&nbsp;')); ?>
+        <?php echo $form->radioButtonList($model, 'activated', array('1'=>'Hiển thị', '0'=>'Ẩn'), array('separator'=>'&nbsp;&nbsp;')); ?>
     </div>
     <div class="clear space"></div>
 
     <div class="col1">&nbsp;</div>
     <div class="col2">
-        <?php echo CHtml::submitButton($this->lang['add_new'], array('name'=>'submit', 'class'=>'login', 'title'=>$this->lang['add_new'])); ?>
-        <?php echo Chtml::link($this->lang['cancel'], 'javascript:history.back()', $htmlOptions=array('class'=>'login-a', 'title'=>$this->lang['cancel'])) ?>
+        <?php echo CHtml::submitButton('Thêm mới', array('name'=>'submit', 'class'=>'login', 'title'=>'Thêm mới')); ?>
+        <?php echo Chtml::link('Hủy bỏ', 'javascript:history.back()', $htmlOptions=array('class'=>'login-a', 'title'=>'Hủy bỏ')) ?>
     </div><div class="clear space"></div>
 </fieldset>
 <?php $this->endWidget();?>

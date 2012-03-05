@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 05, 2012 at 08:49 AM
+-- Generation Time: Mar 05, 2012 at 10:05 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   `activated` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 -- --------------------------------------------------------
 
