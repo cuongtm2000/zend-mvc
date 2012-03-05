@@ -1,17 +1,19 @@
-<?php
-$this->breadcrumbs=array(
-	'Logs',
-);
+<h1>Manage Logs</h1>
 
-$this->menu=array(
-	array('label'=>'Create Log', 'url'=>array('create')),
-	array('label'=>'Manage Log', 'url'=>array('admin')),
-);
-?>
 
-<h1>Logs</h1>
-
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'log-grid',
+	'dataProvider'=>$model->search(),
+	'filter'=>$model,
+	'columns'=>array(
+		'record_id',
+		//'log_type',
+		'detail',
+		'time',
+		'sender',
+		'receiver',
+		'value',
+		
+		
+	),
 )); ?>
