@@ -149,7 +149,7 @@ class About extends CActiveRecord {
     }
 
     //Front end - get list Menu
-    public function listMenu() {
+    /*public function listMenu() {
         $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
         $command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
         return $command->queryAll();
@@ -198,7 +198,7 @@ class About extends CActiveRecord {
         $command->bindParam(":hit", $hit, PDO::PARAM_INT);
         $command->bindParam(":id", $id, PDO::PARAM_INT);
         $command->execute();
-    }
+    }*/
 
     //Back end - List item admin
     public function listItemAdmin() {
@@ -300,9 +300,7 @@ class About extends CActiveRecord {
 
     //Back end - Get max record
     public function maxRecordOrder() {
-        $user = Yii::app()->user->id;
-        $command = Yii::app()->db->createCommand('SELECT max(record_order) AS max FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user');
-        $command->bindParam(":user", $user, PDO::PARAM_STR);
+        $command = Yii::app()->db->createCommand('SELECT max(record_order) AS max FROM ' . $this->tableName());
         return $command->queryScalar() + 1;
     }
 
@@ -316,10 +314,10 @@ class About extends CActiveRecord {
         return $this->_model;
     }
     //Back end - Count item by user post
-    public function countItemByUser(){
+    /*public function countItemByUser(){
         $user = Yii::app()->user->id;
         $command = Yii::app()->db->createCommand('SELECT COUNT(record_id) AS num FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user');
         $command->bindParam(":user", $user, PDO::PARAM_STR);
         return $command->queryScalar();
-    }
+    }*/
 }

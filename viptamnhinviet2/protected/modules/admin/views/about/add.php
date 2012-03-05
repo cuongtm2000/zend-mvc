@@ -6,7 +6,7 @@
     <div class="col1"><?php echo $form->labelEx($model, 'title') ?></div>
     <div class="col2">
         <?php echo $form->textField($model, 'title', $htmlOptions=array('class'=>'txt-very-large')); ?>
-		<a class='west' href='' title='Hôm nay là 1 ngày gần chuẩn bị dinh cô '><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/mark.png"  alt="Mark" /></a>
+		<a class="west" href="" title="Tiêu đề bài viết"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/mark.png"  alt="Mark" /></a>
     </div>
     <div class="clear space"></div>
 

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 05, 2012 at 10:05 AM
+-- Generation Time: Mar 05, 2012 at 04:03 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -330,7 +330,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `support_order` smallint(6) NOT NULL,
   `support_type` varchar(20) NOT NULL,
   PRIMARY KEY (`support_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `dos_module_supports`
+--
+
+INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_phone`, `support_value`, `support_order`, `support_type`) VALUES
+(2, 'Nguyễn An', '0929001001', 'thanhansoft', 1, 'yahoo');
 
 -- --------------------------------------------------------
 
