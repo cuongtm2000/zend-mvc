@@ -1,7 +1,7 @@
 <?php $form = $this->beginWidget('CActiveForm', array('id'=>'frm', 'enableAjaxValidation'=>true, 'enableClientValidation' =>true,));?>
     <?php echo $form->errorSummary($model, ''); ?>
     <fieldset>
-        <legend>Thêm bài viết mới</legend>
+        <legend>Chỉnh sửa bài viết</legend>
 
         <?php $lang = explode('|', Yii::app()->user->language); foreach($lang as $value): $value = ($value=='vi') ? '' : $value;?>
         <div class="col1"><?php echo $form->labelEx($model, $this->lang['title'.$value]) ?></div>
