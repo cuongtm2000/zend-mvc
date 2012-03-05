@@ -13,9 +13,11 @@ a:hover{color:#000;}
 /*Top page*/
 .top-page{margin:0 0 15px 0;color:#fff;padding:10px 0 0 0}
 
-.top-right{float:right}
-.top-right a{background:#0065AD; padding:5px 15px;color:#fff;font-weight:bold}
-.top-right a:hover{color:#FFFF00}
+#top-right{float:right}
+#top-right li{list-style: none; display: inline-block;}
+#top-right a{background:#0065AD; padding:5px 15px;color:#fff;font-weight:bold}
+#top-right a.none{background: none}
+#top-right a:hover{color:#FFFF00}
 
 /*Header*/
 #header{padding:5px 0}
