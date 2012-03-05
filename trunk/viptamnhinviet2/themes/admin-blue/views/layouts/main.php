@@ -28,10 +28,9 @@
                 <a href="#" title="Hộp thư">Hộp thư (0)</a>
                 <a href="<?php echo Yii::app()->request->baseUrl ?>/admin/logout" title="Thoát">Thoát</a>
             </div>
-            <div class="lang"><a href="<?php echo Yii::app()->request->baseUrl ?>/admin" title="Viet nam"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/vn.gif" alt="Viet nam" /></a> <a href="<?php echo Yii::app()->request->baseUrl ?>/en/admin" title="English"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/en.gif" alt="English" /></a></div>
         </div>
         <ul id="tabs">
-            <li><a href="/admin"<?php echo ($this->id =='default') ? ' class="select"' : ''?>><span>Trang chủ</span></a></li>
+            <li><a href="<?php echo Yii::app()->homeUrl?>admin"<?php echo ($this->id =='default') ? ' class="select"' : ''?>><span>Trang chủ</span></a></li>
             <li><a href="/admin/configs"<?php echo ($this->id =='configs') ? ' class="select"' : ''?>><span>Cấu hình &amp; cài đặt</span></a></li>
             <li><a href="/admin/report"<?php echo ($this->id =='report') ? ' class="select"' : ''?>><span>Báo cáo &amp; công cụ</span></a></li>
             <li><a href="#"><span>Thanh toán</span></a></li>
@@ -65,16 +64,16 @@
                     </div>
                 <?php endif;?>
                 <div id="catmenu">
-                    <ul class="menu-li"> 
-                        <?php foreach ($this->module_user as $value): ?>
-                            <li><a class="headerbar" href=""><?php echo $this->lang[$value['dos_modules_module_id']] ?></a>
-                                <ul class="submenu">
-                                <?php $urls = explode('|', $value['module_url']); $title = explode('|', $value['module_title']); $i = 0; foreach ($urls as $url): ?>
-                                    <li><a href="<?php echo Yii::app()->request->baseUrl . '/admin/' . $url ?>"><?php echo $title[$i] ?></a></li>
-                                <?php $i++; endforeach; ?>
-                                </ul>
-                            </li>
-                        <?php endforeach; ?>
+                    <ul class="menu-li">
+						<?php foreach ($this->module_user as $value): ?>
+						<li><a class="headerbar" href=""><?php echo $this->lang[$value['dos_modules_module_id']] ?></a>
+							<ul class="submenu">
+								<?php $urls = explode('|', $value['module_url']); $title = explode('|', $value['module_title']); $i = 0; foreach ($urls as $url): ?>
+								<li><a href="<?php echo Yii::app()->request->baseUrl . '/admin/' . $url ?>"><?php echo $title[$i] ?></a></li>
+								<?php $i++; endforeach; ?>
+							</ul>
+						</li>
+						<?php endforeach; ?>
                     </ul> 
                 </div>
             </div>
