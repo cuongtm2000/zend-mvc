@@ -18,7 +18,6 @@
  * @property string $tag
  * @property string $description
  * @property integer $activated
- * @property string $dos_usernames_username
  *
  * The followings are the available model relations:
  * @property DosUsernames $dosUsernamesUsername
@@ -58,12 +57,12 @@ class About extends CActiveRecord {
             array('hit, record_order, hot, activated', 'numerical', 'integerOnly' => true),
             array('title, titleen, tag', 'length', 'max' => 100),
             array('tag', 'checkExistsTag'),
-            array('extra_field1, extra_field2, dos_usernames_username', 'length', 'max' => 45),
+            array('extra_field1, extra_field2', 'length', 'max' => 45),
             array('contenten', 'safe'),
             array('description', 'length', 'max' => 250),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('record_id, title, titleen, content, contenten, hit, created, record_order, hot, extra_field1, extra_field2, tag, activated, dos_usernames_username', 'safe', 'on' => 'search'),
+            array('record_id, title, titleen, content, contenten, hit, created, record_order, hot, extra_field1, extra_field2, tag, activated', 'safe', 'on' => 'search'),
         );
     }
     public function checkExistsTag($attribute){
@@ -79,7 +78,7 @@ class About extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'dosUsernamesUsername' => array(self::BELONGS_TO, 'DosUsernames', 'dos_usernames_username'),
+            //'dosUsernamesUsername' => array(self::BELONGS_TO, 'DosUsernames', 'dos_usernames_username'),
         );
     }
 
@@ -102,7 +101,6 @@ class About extends CActiveRecord {
             'tag' => 'Tag',
             'description' => 'Description',
             'activated' => 'Activated',
-            'dos_usernames_username' => 'Dos Usernames Username',
         );
     }
 
@@ -129,7 +127,6 @@ class About extends CActiveRecord {
         $criteria->compare('extra_field2', $this->extra_field2, true);
         $criteria->compare('tag', $this->tag);
         $criteria->compare('activated', $this->activated);
-        $criteria->compare('dos_usernames_username', $this->dos_usernames_username, true);
 
         return new CActiveDataProvider($this, array(
                     'criteria' => $criteria,
@@ -146,7 +143,6 @@ class About extends CActiveRecord {
         if ($this->isNewRecord) {
             //Add new record
             $this->record_order = $this->maxRecordOrder();
-            $this->dos_usernames_username = Yii::app()->user->id;
         }
 
         return parent::beforeSave();
@@ -262,8 +258,6 @@ class About extends CActiveRecord {
         } else if ($syn) {
             $criteria = new CDbCriteria();
             $criteria->order = 'record_order ASC, created ASC';
-            $criteria->condition = 'dos_usernames_username=:user';
-            $criteria->params = array(':user' => Yii::app()->user->id);
 
             $models = About::model()->findAll($criteria);
 
@@ -314,11 +308,7 @@ class About extends CActiveRecord {
 
     //Back end - Get record to Edit
     public function loadEdit($id) {
-        $criteria = new CDbCriteria();
-        $criteria->condition = 'dos_usernames_username=:user';
-        $criteria->params = array(':user' => Yii::app()->user->id);
-
-        $this->_model = About::model()->findByPk($id, $criteria);
+        $this->_model = About::model()->findByPk($id);
 
         if ($this->_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');
