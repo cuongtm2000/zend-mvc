@@ -3,18 +3,12 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 27, 2012 at 03:53 PM
+-- Generation Time: Mar 05, 2012 at 05:42 AM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `viptamnhinviet2`
@@ -117,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
 
 CREATE TABLE IF NOT EXISTS `dos_module_log` (
   `record_id` int(11) NOT NULL AUTO_INCREMENT,
-  `record_type` int(2) DEFAULT '0',
+  `log_type` varchar(45) DEFAULT '0',
   `detail` varchar(320) NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `sender` varchar(45) NOT NULL,
@@ -130,9 +124,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_log` (
 -- Dumping data for table `dos_module_log`
 --
 
-INSERT INTO `dos_module_log` (`record_id`, `record_type`, `detail`, `time`, `sender`, `receiver`, `value`) VALUES
-(1, 0, 'thử nghiệm', '2012-02-27 08:16:06', 'grouplaptrinh', '', 0),
-(2, 0, '', '2012-02-27 08:16:50', '', '', 0);
+INSERT INTO `dos_module_log` (`record_id`, `log_type`, `detail`, `time`, `sender`, `receiver`, `value`) VALUES
+(1, '0', 'thử nghiệm', '2012-02-27 08:16:06', 'grouplaptrinh', '', 0),
+(2, '0', '', '2012-02-27 08:16:50', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -261,8 +255,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_tables` (
   `priority` varchar(45) DEFAULT NULL,
   `upgrade_date` datetime DEFAULT NULL,
   `dos_module_usernames_username` varchar(45) NOT NULL,
-  KEY `fk_dos_module_table_dos_module_usernames1` (`dos_module_usernames_username`)
+  PRIMARY KEY (`dos_module_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dos_module_tables`
+--
+
+INSERT INTO `dos_module_tables` (`left_child`, `right_child`, `four_child`, `priority`, `upgrade_date`, `dos_module_usernames_username`) VALUES
+(NULL, NULL, NULL, NULL, NULL, 'admin11');
 
 -- --------------------------------------------------------
 
@@ -296,12 +297,13 @@ CREATE TABLE IF NOT EXISTS `dos_module_usernames` (
 
 INSERT INTO `dos_module_usernames` (`username`, `password`, `create_date`, `full_name`, `email`, `birthday`, `address`, `cmnd`, `phone`, `bank_number`, `bank_name`, `user_gioithieu`, `balance`, `user_group`, `level`, `enable`) VALUES
 ('admin', 'admin', '2012-02-22 15:19:39', '', '', '0000-00-00', '', '', '', '', '', 'grouplaptrinh', '0', '', 1, 1),
-('admin1', 'q', '2012-02-22 16:10:09', '', '', '0000-00-00', '', '', '', '', '', 'grouplaptrinh', '0', '', 0, 1),
-('admin10', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-02-25 08:43:30', '', 'aaa@aa.ccc', '1980-01-26', '', '2165454549', '', '', '', 'admin2', '0', 'user', 0, 0),
-('admin2', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-02-25 06:15:35', 'Lê Hữu Ninh', 'aaa@aa.ccc', '0000-00-00', '', '2165454549', '', '', '', 'admin', '0', 'user', 0, 0),
+('admin1', 'q', '2012-02-22 16:10:09', '', '', '0000-00-00', '', '', '', '', '', 'viptamnhinviet', '0', '', 0, 1),
+('admin11', '453e41d218e071ccfb2d1c99ce23906a', '2012-03-01 07:21:29', '', 'aaa@aa.ccc', '1980-01-23', '', '2165454549', '', '', '', 'admin3', '0', 'user', 0, 1),
+('admin2', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-02-25 06:15:35', 'Lê Hữu Ninh', 'aaa@aa.ccc', '0000-00-00', '', '2165454549', '', '', '', 'admin', '0', 'user', 0, 1),
 ('admin3', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-02-25 06:29:18', 'NInh', 'aaa@aa.ccc', '0000-00-00', '', '2165454549', '', '', '', 'admin1', '0', 'user', 0, 0),
-('admin4', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-02-25 06:33:59', 'NInh', 'aaa@aa.ccc', '0000-00-00', '', '2165454549', '', '', '', 'admin1', '0', 'user', 0, 0),
-('grouplaptrinh', 'b7a659e0c28c88b3ee01adf805fc228f', '2012-02-25 08:57:48', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '0', 'administrator', 0, 1);
+('admin4', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-02-25 06:33:59', 'NInh', 'aaa@aa.ccc', '0000-00-00', '', '2165454549', '', '', '', 'admin1', '0', 'user', 0, 1),
+('grouplaptrinh', 'b7a659e0c28c88b3ee01adf805fc228f', '2012-02-25 08:57:48', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '0', 'administrator', 0, 1),
+('viptamnhinviet', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-04 14:30:34', 'Viptamnhinviet', 'aaa@aa.ccc', '1980-01-01', '', '2165454549', '12316546754', 'ACB', '', 'grouplaptrinh', '0', 'user', 0, 0);
 
 --
 -- Constraints for dumped tables
@@ -319,7 +321,3 @@ ALTER TABLE `dos_module_products`
 --
 ALTER TABLE `dos_module_tables`
   ADD CONSTRAINT `fk_dos_module_table_dos_module_usernames10` FOREIGN KEY (`dos_module_usernames_username`) REFERENCES `dos_module_usernames` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

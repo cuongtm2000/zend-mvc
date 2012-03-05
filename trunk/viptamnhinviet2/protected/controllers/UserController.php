@@ -135,12 +135,13 @@ class UserController extends Controller {
     
     public function actionActive(){
         $model = new User('active');
-        $model->unsetAttributes();  // clear any default values
-        if (isset($_GET['User']))
-            $model->attributes = $_GET['User'];
-
+        if (isset($_POST)) {
+            $model->activeItem($_POST);
+           //$this->redirect(Yii::app()->user->returnUrl);
+        }
         $this->render('active', array(
-            'model' => $model,
+            'model' => $model->getUnActive(),
+            'post' => $_POST,
         ));
     }
 

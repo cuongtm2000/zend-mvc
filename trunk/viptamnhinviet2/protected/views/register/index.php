@@ -10,7 +10,7 @@ $this->menu = array(
 ?>
 
 <h1>Create User</h1>
-<?php var_dump($model->debug) ?>
+
 <div class="form">
 
     <?php
