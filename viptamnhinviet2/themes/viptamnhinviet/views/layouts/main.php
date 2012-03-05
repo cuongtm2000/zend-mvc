@@ -39,12 +39,17 @@
 <body>
 <div id="wrapper">
 <div class="top-page">
-	<p class="left">Bạn chưa đăng nhập tài khoản thành viên của Viptamtnhinviet!</p>
+	<?php if(Yii::app()->user->isGuest == true):?><p class="left">Bạn chưa đăng nhập tài khoản thành viên của Viptamtnhinviet!</p><?php endif?>
 
-	<div class="top-right">
-		<a href="<?php echo Yii::app()->baseUrl; ?>/register" title="Đăng ký thành viên">Đăng ký thành viên</a>
-		<a href="<?php echo Yii::app()->baseUrl; ?>/login" title="Đăng nhập">Đăng nhập</a>
-	</div>
+	<?php $this->widget('zii.widgets.CMenu', array(
+		'id' => 'top-right',
+		'items' => array(
+			array('label' => 'Đăng ký thành viên', 'url' => array('/register'), 'visible' => Yii::app()->user->isGuest, 'linkOptions'=>array('title'=>'Đăng ký thành viên')),
+			array('label' => 'Đăng nhập', 'url' => array('/login'), 'visible' => Yii::app()->user->isGuest, 'linkOptions'=>array('title'=>'Đăng ký thành viên')),
+			array('label' => 'Bảng điều khiển', 'url' => array('/user'), 'visible' => !Yii::app()->user->isGuest, 'linkOptions'=>array('class'=>'none')),
+			array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest, 'linkOptions'=>array('class'=>'none')),
+		),
+	)); ?>
 	<div class="clear"></div>
 </div>
 <!--End top page-->
