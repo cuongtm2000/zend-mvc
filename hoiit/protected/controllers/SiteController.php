@@ -3,11 +3,8 @@
 class SiteController extends Controller {
 
 	public function actionSitemap() {
-		$cats = Cats::model()->findAll(array('order' => 'cat_sort ASC'));
-		$posts = Posts::model()->findAll(array('order' => 'post_sort DESC, post_create DESC', 'condition' => 'post_enable=1'));
-
 		header('Content-Type: application/xml');
-		$this->renderPartial('sitemap', array('cats' => $cats, 'posts' => $posts));
+		$this->renderPartial('sitemap');
 	}
 
 	public function actionIndex() {

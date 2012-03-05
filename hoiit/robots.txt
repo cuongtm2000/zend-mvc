@@ -1,5 +1,2 @@
 User-agent: *
-Disallow: /protected/
-Allow: /
-
-Sitemap: http://hoiit.com/sitemap.xml.gz
+Sitemap: http://hoiit.com/sitemap.xml

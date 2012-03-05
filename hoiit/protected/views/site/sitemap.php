@@ -2,7 +2,7 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>http://hoiit.com</loc>
+        <loc>http://hoiit.com/</loc>
         <changefreq>daily</changefreq>
         <priority>1.00</priority>
     </url>
@@ -21,19 +21,5 @@
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
-<?php foreach ($cats as $model): ?>
-    <url>
-        <loc><?php echo CHtml::encode($this->createAbsoluteUrl('post/view', array('slug' => $model->cat_id))); ?></loc>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-<?php endforeach; ?>
-
-<?php foreach ($posts as $model): ?>
-    <url>
-        <loc><?php echo CHtml::encode($this->createAbsoluteUrl('page/view', array('slug' => $model->post_id))); ?></loc>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-<?php endforeach; ?>
+	<?php $this->widget('ext.common.listCats', array('type'=>1)) ?>
 </urlset>
