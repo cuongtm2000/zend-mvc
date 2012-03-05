@@ -1,18 +1,108 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.9
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 05, 2012 at 05:42 AM
--- Server version: 5.5.8
--- PHP Version: 5.3.5
+-- Generation Time: Mar 05, 2012 at 08:49 AM
+-- Server version: 5.5.16
+-- PHP Version: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
 --
 -- Database: `viptamnhinviet2`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_langs`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_langs` (
+  `lang_name` varchar(30) NOT NULL,
+  `lang` varchar(200) NOT NULL,
+  `langen` varchar(200) DEFAULT NULL,
+  `admin` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`lang_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dos_langs`
+--
+
+INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
+('about', 'Giới thiệu', 'About us', 0),
+('advs', 'Quảng cáo', 'Adv', 0),
+('banner', 'Logo &amp; Banner', 'Logo &amp; Banner', 0),
+('contact', 'Liên hệ', 'Contact', 0),
+('default', 'Trang chủ', 'Home page', 0),
+('products', 'Sản phẩm', 'Products', 0),
+('services', 'Dịch vụ', 'Services', 0),
+('supports', 'Hỗ trợ trực tuyến', 'Online support', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_modules`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_modules` (
+  `module_id` varchar(20) NOT NULL,
+  `module_url` varchar(45) DEFAULT NULL,
+  `module_title` varchar(45) DEFAULT NULL,
+  `module_sort` tinyint(4) NOT NULL,
+  `module_type` tinyint(1) NOT NULL,
+  PRIMARY KEY (`module_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dos_modules`
+--
+
+INSERT INTO `dos_modules` (`module_id`, `module_url`, `module_title`, `module_sort`, `module_type`) VALUES
+('about', 'about', 'Danh sách', 2, 1),
+('advs', 'advs', 'Danh sách', 7, 0),
+('banner', 'banner', 'Danh sách', 5, 0),
+('contact', 'contact', 'Danh sách', 8, 1),
+('default', NULL, NULL, 1, 1),
+('products', 'products/cats|products', 'Danh mục|Danh sách', 3, 1),
+('services', 'services', 'Danh sách', 4, 1),
+('supports', 'supports', 'Danh sách', 6, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_modules_has_dos_usernames`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
+  `dos_modules_module_id` varchar(20) NOT NULL,
+  `dos_usernames_username` varchar(45) NOT NULL,
+  PRIMARY KEY (`dos_modules_module_id`,`dos_usernames_username`),
+  KEY `fk_dos_modules_has_dos_usernames_dos_usernames1` (`dos_usernames_username`),
+  KEY `fk_dos_modules_has_dos_usernames_dos_modules1` (`dos_modules_module_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dos_modules_has_dos_usernames`
+--
+
+INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
+('about', 'viptamnhinviet'),
+('advs', 'viptamnhinviet'),
+('banner', 'viptamnhinviet'),
+('contact', 'viptamnhinviet'),
+('products', 'viptamnhinviet'),
+('services', 'viptamnhinviet'),
+('supports', 'viptamnhinviet');
 
 -- --------------------------------------------------------
 
@@ -303,11 +393,18 @@ INSERT INTO `dos_module_usernames` (`username`, `password`, `create_date`, `full
 ('admin3', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-02-25 06:29:18', 'NInh', 'aaa@aa.ccc', '0000-00-00', '', '2165454549', '', '', '', 'admin1', '0', 'user', 0, 0),
 ('admin4', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-02-25 06:33:59', 'NInh', 'aaa@aa.ccc', '0000-00-00', '', '2165454549', '', '', '', 'admin1', '0', 'user', 0, 1),
 ('grouplaptrinh', 'b7a659e0c28c88b3ee01adf805fc228f', '2012-02-25 08:57:48', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '0', 'administrator', 0, 1),
-('viptamnhinviet', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-04 14:30:34', 'Viptamnhinviet', 'aaa@aa.ccc', '1980-01-01', '', '2165454549', '12316546754', 'ACB', '', 'grouplaptrinh', '0', 'user', 0, 0);
+('viptamnhinviet', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-04 14:30:34', 'Viptamnhinviet', 'aaa@aa.ccc', '1980-01-01', '', '2165454549', '12316546754', 'ACB', '', 'grouplaptrinh', '0', 'user', 0, 1);
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `dos_modules_has_dos_usernames`
+--
+ALTER TABLE `dos_modules_has_dos_usernames`
+  ADD CONSTRAINT `fk_dos_modules_has_dos_usernames_dos_modules1` FOREIGN KEY (`dos_modules_module_id`) REFERENCES `dos_modules` (`module_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_dos_modules_has_dos_usernames_dos_usernames1` FOREIGN KEY (`dos_usernames_username`) REFERENCES `dos_module_usernames` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `dos_module_products`
@@ -321,3 +418,7 @@ ALTER TABLE `dos_module_products`
 --
 ALTER TABLE `dos_module_tables`
   ADD CONSTRAINT `fk_dos_module_table_dos_module_usernames10` FOREIGN KEY (`dos_module_usernames_username`) REFERENCES `dos_module_usernames` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
