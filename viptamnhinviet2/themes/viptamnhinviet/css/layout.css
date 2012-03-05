@@ -125,7 +125,7 @@ a:hover{color:#000;}
 .frame-img-pro{display:table-cell; vertical-align:top; height:145px; text-align:center;width:146px}
 .btom-pro{background:#ddd url(../images/bt-pro.gif) no-repeat; height:9px; width:148px;margin:0 0 10px 0}
 .price-pro{margin:0 !important}
-.price-pro span{color:#CC0000;font-weight:bold},
+.price-pro span{color:#CC0000;font-weight:bold}
 
 /*Page New, services*/
 .masuring{text-align:justify;font-size:10pt;color:#666;margin:0 0 20px 0}
@@ -135,19 +135,20 @@ a:hover{color:#000;}
 .title-masuring a:hover{color:#F90}
 
 /*Login registration */
-#dangky{ margin:10px 10px 0 20px; color:#666}
+.form-all{ margin:10px 10px 0 20px;color:#666}
 
-#dangky .select-date input{width:42px; color:#666}
-#dangky .select-date select{ color:#666;-moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
-#dangky .singin{background:#666262;font-weight:bold;color:#fff;padding:5px 10px; border:none; width:100px; cursor:pointer;-webkit-border-radius: 3px;-moz-border-radius: 3px;}
-#dangky a:hover{color:#fff}
-#dangky p{ margin:20px 0; color:#666; font-size:10pt}
-#dangky span{color:#F00}
-#dangky ul{margin:0; padding:0; list-style:none}
-#dangky ul li{padding:5px 0;}
-#dangky ul li label{float:left; width:130px;padding-top:2px; font-family:Tahoma, Geneva, sans-serif;  text-align:left; margin-right:10px}
-#dangky ul li input{ width:200px;-moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
+.form-all .select-date input{width:42px; color:#666}
+.form-all .select-date select{ color:#666;-moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
+.form-all .login{background:#666262;font-weight:bold;color:#fff;padding:5px 10px; border:none; width:100px; cursor:pointer;-webkit-border-radius: 3px;-moz-border-radius: 3px;}
+/*.form-all a:hover{color:#fff}*/
+.form-all p{ margin:20px 0; color:#666; font-size:10pt}
+.form-all ul li span{color:#F00}
+.form-all ul{margin:0; padding:0; list-style:none}
+.form-all ul li{padding:5px 0;}
+.form-all ul li label{float:left;color:#666; width:130px;padding-top:2px; font-family:Tahoma, Geneva, sans-serif;  text-align:left; margin-right:10px}
+.form-all ul li input{ width:200px;-moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
 
+.remember{float:none !important;width:auto !important}
 
 /* paging */
 .paging{margin:15px 0 10px 0; text-align:right}
@@ -245,7 +246,16 @@ a:hover{color:#000;}
 .statistics{font-size:14px;color:#000}
 .statistics span{color:#FF7200}
 
+.link{color:#000; font-weight:bold; padding:0px 0 10px 0}
+.link a{ color:#9A522E; font-size:10pt}
+.link a:hover{text-decoration:underline; color:#000}
 
+/* Error */
+.note{}
+.required{color:#f00}
+.errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
+.errorSummary ul{margin:0 32px; padding:0}
+.errorSummary ul li{padding:2px 0; color:red;list-style:disc; margin:0 !important}
 
 
 
