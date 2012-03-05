@@ -133,6 +133,7 @@
 		<!--End frame-left 1-->
 		<div class="frame-left-2">
 			<h3 class="title-support"><span>HỖ TRỢ TRỰC TUYẾN</span></h3>
+			<?php $supports = new Supports(); var_dump($supports->listItem());?>
 			<ul class="support">
 				<li>
 					<div class="img-sport"><a href="ymsgr:sendim?groupitsoft"><img
@@ -145,8 +146,6 @@
 					</div>
 					<div class="clear"></div>
 				</li>
-
-
 			</ul>
 		</div>
 		<!--End frame left 2-->

@@ -76,7 +76,7 @@
 						<?php endforeach; ?>
 
 						<li><a class="headerbar" href="">Thành viên</a>
-							<ul>
+							<ul class="submenu">
 								<li><a href="<?php echo Yii::app()->request->baseUrl?>/admin/user">Danh sách User</a></li>
 								<li><a href="<?php echo Yii::app()->request->baseUrl?>/admin/user/active">User chờ kích hoạt</a></li>
 							</ul>

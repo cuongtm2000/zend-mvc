@@ -1,7 +1,7 @@
 <form action="" method="post" id="frm" name="frm">
     <fieldset>
         <legend><?php echo $this->lang['supports'] ?></legend>
-        <p class="rows"><a href="#" id="add-rows"><?php echo $this->lang['add_row'] ?></a></p>
+        <p class="rows"><a href="#" id="add-rows">Thêm dòng</a></p>
         <p>
             <label></label>
             <label class="label-txt-large">Name</label>
@@ -30,7 +30,7 @@
         <?php endforeach; ?>
         <p>
             <label>&nbsp;</label>
-            <input type="submit" name="submit" value="  <?php echo $this->lang['update'] ?>  " class="login" />
+            <input type="submit" name="submit" value="  Cập nhật  " class="login" />
         </p>
     </fieldset>
 </form>
