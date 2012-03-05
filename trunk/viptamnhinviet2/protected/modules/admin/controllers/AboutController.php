@@ -2,23 +2,6 @@
 
 class AboutController extends AdminController {
 
-    public function filters() {
-        return array(
-            'accessControl',
-        );
-    }
-
-    public function accessRules() {
-        return array(
-            array(
-                'allow',
-                //'actions' => array('index'),
-                'users' => array('@'),
-            ),
-            array('deny'),
-        );
-    }
-
     public function actionIndex() {
         $module = ucfirst($this->getId());
         Yii::app()->getModule($this->getId());
@@ -36,6 +19,10 @@ class AboutController extends AdminController {
         $module = ucfirst($this->getId());
         Yii::app()->getModule($this->getId());
         $model = new $module();
+
+		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/tipsy.css');
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/jquery.tipsy.js');
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/jquery.tooltip.tipsy.js');
 
         Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/ckeditor/ckeditor.js');
         $script = "$('#" . $module . "_description').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});";
