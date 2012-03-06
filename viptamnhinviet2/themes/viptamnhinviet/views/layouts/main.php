@@ -39,17 +39,18 @@
 <body>
 <div id="wrapper">
 <div class="top-page">
-	<?php if(Yii::app()->user->isGuest == true):?><p class="left">Bạn chưa đăng nhập tài khoản thành viên của Viptamtnhinviet!</p><?php endif?>
+	<?php if (Yii::app()->user->isGuest == true): ?><p class="left">Bạn chưa đăng nhập tài khoản thành viên của
+	Viptamtnhinviet!</p><?php endif?>
 
 	<?php $this->widget('zii.widgets.CMenu', array(
-		'id' => 'top-right',
-		'items' => array(
-			array('label' => 'Đăng ký thành viên', 'url' => array('/register'), 'visible' => Yii::app()->user->isGuest, 'linkOptions'=>array('title'=>'Đăng ký thành viên')),
-			array('label' => 'Đăng nhập', 'url' => array('/login'), 'visible' => Yii::app()->user->isGuest, 'linkOptions'=>array('title'=>'Đăng ký thành viên')),
-			array('label' => 'Bảng điều khiển', 'url' => array('/user'), 'visible' => !Yii::app()->user->isGuest, 'linkOptions'=>array('class'=>'none')),
-			array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest, 'linkOptions'=>array('class'=>'none')),
-		),
-	)); ?>
+	'id' => 'top-right',
+	'items' => array(
+		array('label' => 'Đăng ký thành viên', 'url' => array('/register'), 'visible' => Yii::app()->user->isGuest, 'linkOptions' => array('title' => 'Đăng ký thành viên')),
+		array('label' => 'Đăng nhập', 'url' => array('/login'), 'visible' => Yii::app()->user->isGuest, 'linkOptions' => array('title' => 'Đăng ký thành viên')),
+		array('label' => 'Bảng điều khiển', 'url' => array('/user'), 'visible' => !Yii::app()->user->isGuest, 'linkOptions' => array('class' => 'none')),
+		array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest, 'linkOptions' => array('class' => 'none')),
+	),
+)); ?>
 	<div class="clear"></div>
 </div>
 <!--End top page-->
@@ -65,28 +66,12 @@
 </div>
 <!--End header-->
 
-<?php $this->widget('zii.widgets.CMenu', array(
-	'htmlOptions' => array('class' => 'nav'),
-	'items' => array(
-		array('label' => 'Home', 'url' => array('/site/index')),
-		array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
-		array('label' => 'Contact', 'url' => array('/site/contact')),
-		array('label' => 'Register', 'url' => array('/register'), 'visible' => Yii::app()->user->isGuest),
-		array('label' => 'Login', 'url' => array('/login'), 'visible' => Yii::app()->user->isGuest),
-		array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
-	),
-)); ?>
-
-<!-- <ul class="nav">
-		  <li><a href="index.html" title="" class="select">Trang chủ</a></li>
-		  <li><a href="about.html" title="">Giới thiệu</a></li>
-		  <li><a href="product.html" title="">Sản phẩm</a></li>
-		  <li><a href="services.html" title="">Gian hàng</a></li>
-		  <li><a href="news.html" title="">Bản tin</a></li>
-		  <li><a href="news.html" title="">Góc báo chí</a></li>
-		  <li><a href="contact.html" title="">Liên hệ</a></li>
-		  <li class="bton-view"><a href="#">Xem giỏ hàng</a></li>
-	  </ul>-->
+<ul class="nav">
+	<li><a href="index.html" title="" class="select">Trang chủ</a></li>
+	<li><a href="about.html" title="">Giới thiệu</a></li>
+	<li><a href="product.html" title="">Sản phẩm</a></li>
+	<li><a href="contact.html" title="">Liên hệ</a></li>
+</ul>
 
 <div class="clear"></div>
 <div id="banner">
