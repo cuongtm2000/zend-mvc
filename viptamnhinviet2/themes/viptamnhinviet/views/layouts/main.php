@@ -123,19 +123,16 @@
 		<!--End frame-left 1-->
 		<div class="frame-left-2">
 			<h3 class="title-support"><span>HỖ TRỢ TRỰC TUYẾN</span></h3>
-			<?php $supports = new Supports(); var_dump($supports->listItem());?>
 			<ul class="support">
+				<?php $supports = new Supports(); $values = $supports->listItem(); foreach($values as $value):?>
 				<li>
-					<div class="img-sport"><a href="ymsgr:sendim?groupitsoft"><img
-							src="http://opi.yahoo.com/online?u=groupitsoft&amp;m=g&amp;t=14&amp;l=us"
-							class="img-support" alt="groupitsoft"/></a>
-					</div>
-					<div class="right-spport"><p class="title-sport-right">HT ĐĂNG TIN VÀ SẢN PHẨM</p>
-
-						<p>0618. 850 747</p>
+					<div class="img-sport"><a href="ymsgr:sendim?<?php echo $value['support_value']?>"><img	src="http://opi.yahoo.com/online?u=<?php echo $value['support_value']?>&amp;m=g&amp;t=14&amp;l=us" class="img-support" alt="<?php echo $value['support_value']?>"/></a></div>
+					<div class="right-spport"><p class="title-sport-right"><?php echo $value['support_name']?></p>
+						<p><?php echo $value['support_phone']?></p>
 					</div>
 					<div class="clear"></div>
 				</li>
+				<?endforeach?>
 			</ul>
 		</div>
 		<!--End frame left 2-->
