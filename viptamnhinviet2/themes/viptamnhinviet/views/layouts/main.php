@@ -74,7 +74,7 @@
                     <li><a href="index.html" title="" class="select">Trang chủ</a></li>
                     <li><a href="<?php echo Yii::app()->homeUrl?>gioi-thieu" title="Giới thiệu">Giới thiệu</a></li>
                     <li><a href="products" title="">Sản phẩm</a></li>
-                    <li><a href="contact" title="">Liên hệ</a></li>
+                    <li><a href="<?php echo Yii::app()->homeUrl?>lien-he.html" title="Liên hệ">Liên hệ</a></li>
                 </ul>
 
                 <div class="clear"></div>
@@ -116,6 +116,15 @@
                 <div id="content">
                     <div id="left-content">
                         <div class="frame-left-1">
+							<?php if(isset($this->menu_about) && ($this->menu_about)):?>
+							<h1 class="title-left"><span>DANH MỤC GIỚI THIỆU</span></h1>
+							<ul class="sub-pro">
+								<?php foreach($this->menu_about as $value): ?>
+								<li><a href="<?php echo Yii::app()->request->baseUrl ?>/gioi-thieu/<?php echo $value['tag']?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></li>
+								<?php endforeach; ?>
+							</ul>
+							<?php endif;?>
+
                             <h1 class="title-left"><span>BẢNG ĐIỀU KHIỂN</span></h1>
                             <ul class="sub-pro">
                                 <li><a href="<?php echo Yii::app()->baseUrl ?>/product/list" title="">Sản phẩm đã đăng</a></li>
@@ -127,15 +136,6 @@
                                 <li class="border-none"><a  href="<?php echo Yii::app()->baseUrl ?>/user/transferv" title="Chuyển khoản">Chuyển khoản</a></li>
 
                             </ul>
-
-							<?php if(isset($this->menu_about) && ($this->menu_about)):?>
-                            <h1 class="title-left"><span>DANH MỤC GIỚI THIỆU</span></h1>
-                            <ul class="sub-pro">
-								<?php foreach($this->menu_about as $value): ?>
-									<li><a href="<?php echo Yii::app()->request->baseUrl ?>/gioi-thieu/<?php echo $value['tag']?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></li>
-								<?php endforeach; ?>
-                            </ul>
-							<?php endif;?>
 
 							<h1 class="title-left"><span>DANH MỤC SẢN PHẨM</span></h1>
 							<ul class="sub-pro">
