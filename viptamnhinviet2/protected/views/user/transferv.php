@@ -5,7 +5,7 @@ $this->breadcrumbs = array(
 );
 ?>
 
-<h1>Chuyển khoản nội bộ</h1>
+
 
 
 <div class="form">
@@ -20,7 +20,9 @@ $this->breadcrumbs = array(
     <p class="note">Fields with <span class="required">*</span> are required.</p>
 
         <?php echo $form->errorSummary($model); ?>
-
+    <div class="row">
+        Số tiền hiện tại của bạn là: <?php echo $user['balance'] ?> V
+    </div>
     <div class="row">
         <?php echo $form->labelEx($model, 'pass'); ?>
 <?php echo $form->passwordField($model, 'pass', array('size' => 45, 'maxlength' => 45)); ?>
@@ -36,7 +38,11 @@ $this->breadcrumbs = array(
 <?php echo $form->textField($model, 'money', array('size' => 45, 'maxlength' => 45)); ?>
 <?php echo $form->error($model, 'money'); ?>
     </div>
-
+    <div class="row">
+        <?php echo $form->labelEx($model, 'message'); ?>
+<?php echo $form->textArea($model, 'message', array('cols' => 45,'rows'=>4, 'maxlength' => 180)); ?>
+<?php echo $form->error($model, 'message'); ?>
+    </div>
 
 
     <div class="row buttons">
