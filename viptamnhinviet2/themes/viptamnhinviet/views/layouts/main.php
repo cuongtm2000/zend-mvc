@@ -73,8 +73,8 @@
                 <ul class="nav">
                     <li><a href="index.html" title="" class="select">Trang chủ</a></li>
                     <li><a href="<?php echo Yii::app()->homeUrl?>about" title="Giới thiệu">Giới thiệu</a></li>
-                    <li><a href="product.html" title="">Sản phẩm</a></li>
-                    <li><a href="contact.html" title="">Liên hệ</a></li>
+                    <li><a href="products" title="">Sản phẩm</a></li>
+                    <li><a href="contact" title="">Liên hệ</a></li>
                 </ul>
 
                 <div class="clear"></div>
