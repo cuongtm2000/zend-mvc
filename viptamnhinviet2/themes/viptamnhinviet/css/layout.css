@@ -248,13 +248,15 @@ a:hover{color:#000;}
 .statistics{font-size:14px;color:#000}
 .statistics span{color:#FF7200}
 
-.link{color:#000; font-weight:bold; padding:0px 0 10px 0}
-.link a{ color:#9A522E; font-size:10pt}
-.link a:hover{text-decoration:underline; color:#000}
-
 /* Error */
 .note{}
 .required{color:#f00}
 .errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
 .errorSummary ul{margin:0 32px; padding:0}
 .errorSummary ul li{padding:2px 0; color:red;list-style:disc; margin:0 !important}
+
+#crumbs {height:2.3em; border:1px solid #dedede; margin: 0; padding: 0; list-style: none}
+#crumbs li {float:left; line-height:2.3em; color:#777; padding-left:.75em;}		
+#crumbs li a {background:url(../images/crumbs.gif) no-repeat right center; display:block; padding:0 15px 0 0;}							
+#crumbs li a:link, #crumbs li a:visited {color:#777; text-decoration:none;}	
+#crumbs li a:hover, #crumbs li a:focus {color:#dd2c0d;}
