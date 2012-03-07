@@ -72,7 +72,7 @@
 
                 <ul class="nav">
                     <li><a href="index.html" title="" class="select">Trang chủ</a></li>
-                    <li><a href="<?php echo Yii::app()->homeUrl?>about" title="Giới thiệu">Giới thiệu</a></li>
+                    <li><a href="<?php echo Yii::app()->homeUrl?>gioi-thieu" title="Giới thiệu">Giới thiệu</a></li>
                     <li><a href="products" title="">Sản phẩm</a></li>
                     <li><a href="contact" title="">Liên hệ</a></li>
                 </ul>
@@ -132,7 +132,7 @@
                             <h1 class="title-left"><span>DANH MỤC GIỚI THIỆU</span></h1>
                             <ul class="sub-pro">
 								<?php foreach($this->menu_about as $value): ?>
-									<li><a href="<?php echo Yii::app()->request->baseUrl ?>/about/<?php echo $value['tag']?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></li>
+									<li><a href="<?php echo Yii::app()->request->baseUrl ?>/gioi-thieu/<?php echo $value['tag']?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></li>
 								<?php endforeach; ?>
                             </ul>
 							<?php endif;?>
