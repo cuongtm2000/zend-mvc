@@ -121,7 +121,7 @@
                                 <li><a href="<?php echo Yii::app()->baseUrl ?>/product/list" title="">Sản phẩm đã đăng</a></li>
                                 <li><a href="<?php echo Yii::app()->baseUrl ?>/product/add" title="">Đăng sản phẩm</a></li>
                                 <li><a href="<?php echo Yii::app()->baseUrl ?>/user/map" title="">Sơ đồ mạng lưới</a></li>
-                                <li><a href="<?php echo Yii::app()->baseUrl ?>/user/log" title="">Lịch sử giao dịch</a></li>
+                                <li><a href="<?php echo Yii::app()->baseUrl ?>/log" title="">Lịch sử giao dịch</a></li>
                                 
                                 <li><a href="#" title="">Số tiền tích lũy: <span class="error"><?php echo Yii::app()->session['balance'] ?> V</span></a></li>
                                 <li class="border-none"><a  href="<?php echo Yii::app()->baseUrl ?>/user/transferv" title="Chuyển khoản">Chuyển khoản</a></li>
