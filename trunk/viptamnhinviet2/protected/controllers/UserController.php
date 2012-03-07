@@ -17,11 +17,6 @@ class UserController extends Controller {
         );
     }
 
-    /**
-     * Specifies the access control rules.
-     * This method is used by the 'accessControl' filter.
-     * @return array access control rules
-     */
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
@@ -33,7 +28,7 @@ class UserController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete', 'map','active'),
+                'actions' => array('admin', 'delete', 'map','transferv','active'),
                 'users' => array('grouplaptrinh', 'viptamnhinviet'),
             ),
             array('deny', // deny all users
@@ -108,14 +103,25 @@ class UserController extends Controller {
 
     public function actionMap() {
         $user = new User();
-//		$this->view->listUserQuanly= $user->getUser_Quanly($username);
-//		$log= new User_Model_Log();
-//		$this->view->solannhanquanly= $log->getSolanQuanlyThang($username);
-//        
-
         $this->render('map', array(
             'tree' => $user->createTree(Yii::app()->user->name),
             'listUserQuanly' => '',
+        ));
+    }
+    
+    public function actionTransferv() {
+        $model = new TransferForm();
+        if (isset($_POST['TransferForm'])) {
+            $model->attributes = $_POST['TransferForm'];
+            if ($model->validate() ) {
+                $model->transfer();
+                $this->redirect(array('user/log'));
+            }
+        }
+        
+        $this->render('transferv', array(
+            'model' => $model,
+            
         ));
     }
 

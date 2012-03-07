@@ -136,11 +136,6 @@ class User extends CActiveRecord {
             'user_gioithieu' => 'Introduce User',
         );
     }
-
-    /**
-     * Retrieves a list of models based on the current search/filter conditions.
-     * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
-     */
     public function search() {
         $criteria = new CDbCriteria;
 
@@ -210,30 +205,39 @@ class User extends CActiveRecord {
                 $this->addThanhtichHH($user['user_gioithieu']);
 
 
-//                $nguoiGT = $this->getNguoiGT($value);
-//                $tk = $this->getTK($nguoiGT);
-//                $this->addTK($nguoiGT, $tk + 400); ///
-//                $log = new User_Model_Log();
-//                $log->addItem("Hoa hồng trực tiếp do giới thiệu <b>" . $value . '</b>', '  -  ', $nguoiGT, 400, 0);
-//
-//                //$this->addQuanly($nguoiGT);
-//                //add quan ly tv cấp trên
-//                $user_baotro = $this->getNguoiBaotro($value);
-//                while ($user_baotro != '') {
-//                    $this->addQuanly($user_baotro);
-//                    $user_baotro = $this->getNguoiBaotro($user_baotro);
-//                }
+                
+                
+                
             } else {    //delete
                 User::model()->deleteByPk($value);
             }
         }
     }
 
+    
+    
+    /*
+     * List TV đã thoát bàn
+     *      tức TV có level > 0 và có ít nhất
+     *      1 trong 2 nhánh con trong bàn còn khuyết
+     */
+    
+    public function listTVthoatban(){
+        return Tables::model()->findAll('left_child != "" or right_child != ""');
+    }
+    
+    /*
+     * 
+     */
+    public function listTVdatchuan() {
+        return Tables::model()->findAll('left_child != 0 or right_child != 0');
+    }
+
+
     /*
      *  Thêm thành tích hoa hồng
      * cho người giới thiệu
      */
-
     private function addThanhtichHH($user) {
         $tree = $this->createTree($user);
         $min_child=min($tree['c0'] , $tree['c1'] );
@@ -289,12 +293,30 @@ class User extends CActiveRecord {
             return TRUE;
         return FALSE;
     }
+    public function validateTransfer($data){
+        $money = trim($data['money']);
+        $user=  User::model()->findByPk(Yii::app()->user->name);
+        
+    
+        
+        
+        
+        
+        User::model()->updateByPk($user,  
+                    array('balance' => $u['balance']+$money));
+            $log=new Log();
+            $log->addItem("Hoa hồng thành tích do đạt được số con ở mỗi nhánh là ".$min_child, '', $user, $money, 'thanhtich');
+	
+        $tk = $this->getTK($this->_username);
+        $this->addTK($this->_username, $tk - $money); ///
 
-//
-//    public function getNguoiGT($user) {
-//        $select = $this->select()
-//                ->from($this->_name, array('user_gioithieu'))
-//                ->where('username= ?', $user);
-//        return $db->fetchOne($select);
-//    }
+        $tk = $this->getTK($data['reciever']);
+        $this->addTK($data['reciever'], $tk + $money); ///
+
+        $log = new User_Model_Log();
+        $log->addItem('Chuyển khoản nội bộ', $this->_username, $data['reciever'], $money,2);
+        
+    }
+    
+
 }

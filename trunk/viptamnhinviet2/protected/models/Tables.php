@@ -52,13 +52,14 @@ class Tables extends CActiveRecord {
             'four_child' => 'Four Child',
             'priority' => 'Priority',
             'upgrade_date' => 'Upgrade Date',
-            'dos_module_usernames_username' => 'Dos Module Usernames Username',
+            'dos_module_usernames_username' => 'Username',
         );
     }
 
 
     public function addItem($user){
         $this->dos_module_usernames_username=$user;
+        $this->left_child=  $this->right_child=  $this->four_child='';
         $this->save();
     }
             
