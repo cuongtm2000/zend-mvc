@@ -148,6 +148,25 @@ class About extends CActiveRecord {
         return parent::beforeSave();
     }
 
+	//Front end - Get first record
+	public function firstRecord() {
+		$command = Yii::app()->db->createCommand('SELECT record_id, title, content, hit, description FROM ' . $this->tableName() . ' WHERE activated=1 ORDER BY record_order DESC, created DESC');
+		$row = $command->queryRow();
+		if ($row) {
+			//Update hit
+			$this->updateHit($row['hit'] + 1, $row['record_id']);
+			return $row;
+		}
+	}
+
+	//Front end - update hit view
+	private function updateHit($hit, $id) {
+		$command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET hit=:hit WHERE record_id=:id');
+		$command->bindParam(":hit", $hit, PDO::PARAM_INT);
+		$command->bindParam(":id", $id, PDO::PARAM_INT);
+		$command->execute();
+	}
+
     //Front end - get list Menu
     /*public function listMenu() {
         $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
@@ -158,18 +177,6 @@ class About extends CActiveRecord {
     //Front end - Get home record
     public function homeRecord() {
         $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit FROM ' . $this->tableName() . ' WHERE hot=1 AND dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
-        $command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
-        $row = $command->queryRow();
-        if ($row) {
-            //Update hit
-            $this->updateHit($row['hit'] + 1, $row['record_id']);
-            return $row;
-        }
-    }
-
-    //Front end - Get first record
-    public function firstRecord() {
-        $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
         $command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
         $row = $command->queryRow();
         if ($row) {
@@ -192,13 +199,7 @@ class About extends CActiveRecord {
         }
     }
 
-    //Front end - update hit view
-    private function updateHit($hit, $id) {
-        $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET hit=:hit WHERE record_id=:id');
-        $command->bindParam(":hit", $hit, PDO::PARAM_INT);
-        $command->bindParam(":id", $id, PDO::PARAM_INT);
-        $command->execute();
-    }*/
+    */
 
     //Back end - List item admin
     public function listItemAdmin() {
