@@ -72,7 +72,7 @@
 
                 <ul class="nav">
                     <li><a href="index.html" title="" class="select">Trang chủ</a></li>
-                    <li><a href="about.html" title="">Giới thiệu</a></li>
+                    <li><a href="<?php echo Yii::app()->homeUrl?>about" title="Giới thiệu">Giới thiệu</a></li>
                     <li><a href="product.html" title="">Sản phẩm</a></li>
                     <li><a href="contact.html" title="">Liên hệ</a></li>
                 </ul>
@@ -128,13 +128,22 @@
 
                             </ul>
 
-                            <h1 class="title-left"><span>DANH MỤC SẢN PHẨM</span></h1>
+							<?php if(isset($this->menu_about) && ($this->menu_about)):?>
+                            <h1 class="title-left"><span>DANH MỤC GIỚI THIỆU</span></h1>
                             <ul class="sub-pro">
-                                <li><a href="#" title="">Bất động sản</a></li>
-                                <li><a href="#" title="">Cho mẹ và bé</a></li>
-                                <li><a href="#" title="">Du lịch giải trí - Du lịch</a></li>
-
+								<?php foreach($this->menu_about as $value): ?>
+									<li><a href="<?php echo Yii::app()->request->baseUrl ?>/about/<?php echo $value['tag']?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></li>
+								<?php endforeach; ?>
                             </ul>
+							<?php endif;?>
+
+							<h1 class="title-left"><span>DANH MỤC SẢN PHẨM</span></h1>
+							<ul class="sub-pro">
+								<li><a href="#" title="">Bất động sản</a></li>
+								<li><a href="#" title="">Cho mẹ và bé</a></li>
+								<li><a href="#" title="">Du lịch giải trí - Du lịch</a></li>
+
+							</ul>
                         </div>
                         <!--End frame-left 1-->
                         <div class="frame-left-2">
