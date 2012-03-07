@@ -26,11 +26,11 @@
                     <tr<?php echo $rowclass ?>>
                         <td><input type="checkbox" name="ids[]" value="<?php echo $value['banner_id'] ?>" /></td>
                         <td><input type="text" name="orders[<?php echo $value['banner_id'] ?>]" maxlength="3" class="txt-sort" value="<?php echo $value['banner_order'] ?>" /></td>
-                        <td><a class="nyroModal" href="<?php echo Yii::app()->request->baseUrl.USERFILES ?>/banner/<?php echo $value['banner_url'] ?>"><?php echo $value['banner_name'] ?></a></td>
+                        <td><a class="nyroModal" href="<?php echo Yii::app()->request->baseUrl.USERFILES ?>/<?php echo $this->ID ?>/<?php echo $value['banner_url'] ?>"><?php echo $value['banner_name'] ?></a></td>
                         <td><?php echo date('d-m-Y', strtotime($value['banner_date'])) ?></td>
                         <td><?php echo ucfirst($value['banner_type']) ?></td>
                         <td><?php echo $this->lang[$value['position']] ?></td>
-                        <td><?php echo CHtml::link($this->lang['edit'], array('edit', 'id' => $value->banner_id)) ?></td>
+                        <td><?php echo CHtml::link('Chỉnh sửa', array('edit', 'id' => $value->banner_id)) ?></td>
                     </tr>
                 <?php $i++;endforeach; ?>
             <?php else: ?>

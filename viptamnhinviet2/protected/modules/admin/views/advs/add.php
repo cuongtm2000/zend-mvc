@@ -22,16 +22,16 @@
     <div class="clear space"></div>
 
     <div class="col1"><?php echo $form->labelEx($model, 'position') ?></div>
-        <div class="col2">
-        <?php echo $form->dropDownList($model, 'position', array('left'=>'Left', 'center'=>'Center', 'right'=>'Right')); ?>
-        </div>
-        <div class="clear space"></div>
+    <div class="col2">
+        <?php echo $form->dropDownList($model, 'position', array('left'=>'Left', 'center'=>'Center', 'top'=>'Top', 'bottom'=>'Bottom')); ?>
+    </div>
+    <div class="clear space"></div>
 
     <div class="col1"><?php echo $form->labelEx($model, 'type') ?></div>
-        <div class="col2">
+    <div class="col2">
         <?php echo $form->dropDownList($model, 'type', array('_bank'=>'Trang mới', '_parent'=>'Trang hiện tại')); ?>
-        </div>
-        <div class="clear space"></div>
+    </div>
+    <div class="clear space"></div>
 
     <div class="col1"><?php echo $form->labelEx($model, 'start_date') ?></div>
     <div class="col2">

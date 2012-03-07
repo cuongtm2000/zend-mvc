@@ -77,9 +77,28 @@ class ModulesUsernames extends CActiveRecord {
 			'criteria' => $criteria,
 		));
 	}
+
 	public function moduleUser($user) {
 		$command = Yii::app()->db->createCommand('SELECT dos_modules_module_id, module_url, module_title FROM ' . $this->tableName() . ', dos_modules WHERE ' . $this->tableName() . '.dos_modules_module_id = dos_modules.module_id AND dos_usernames_username=:user');
 		$command->bindParam(":user", $user, PDO::PARAM_STR);
 		return $command->queryAll();
+	}
+	//Back end - Module by User using for function "positionBanner" of Banner
+	public function moduleByUser($user) {
+		$langs = Langs::getLangs(0); //get lang list
+		$data = array();
+		$command = Yii::app()->db->createCommand('SELECT module_id FROM ' . $this->tableName() . ', dos_modules WHERE ' . $this->tableName() . '.dos_modules_module_id = dos_modules.module_id AND dos_usernames_username=:user AND module_type=1');
+		$command->bindParam(":user", $user, PDO::PARAM_STR);
+		$result = $command->queryAll();
+
+		$data['default'] = 'Trang chủ';
+		foreach ($result as $value) {
+			foreach ($langs as $lang){
+				if($lang['lang_name'] == $value['module_id']){
+					$data[$value['module_id']] = $lang['lang'];
+				}
+			}
+		}
+		return $data;
 	}
 }
