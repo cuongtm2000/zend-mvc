@@ -115,7 +115,7 @@ class UserController extends Controller {
             $model->attributes = $_POST['TransferForm'];
             if ($model->validate() ) {
                 $model->transfer();
-                $this->redirect(array('log'));
+                $this->redirect(array('/log'));
             }
         }        
         $this->render('transferv', array(
