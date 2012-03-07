@@ -159,6 +159,18 @@ class About extends CActiveRecord {
 		}
 	}
 
+	//Front end - Get detail record
+	public function detailRecord($tag) {
+		$command = Yii::app()->db->createCommand('SELECT record_id, title, content, hit FROM ' . $this->tableName() . ' WHERE tag=:tag AND activated=1');
+		$command->bindParam(":tag", $tag, PDO::PARAM_STR);
+		$row = $command->queryRow();
+		if ($row) {
+			//Update hit
+			$this->updateHit($row['hit'] + 1, $row['record_id']);
+			return $row;
+		}
+	}
+
 	//Front end - update hit view
 	private function updateHit($hit, $id) {
 		$command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET hit=:hit WHERE record_id=:id');
@@ -168,12 +180,11 @@ class About extends CActiveRecord {
 	}
 
     //Front end - get list Menu
-    /*public function listMenu() {
-        $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
-        $command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
+    public function listMenu() {
+        $command = Yii::app()->db->createCommand('SELECT record_id, title, tag FROM ' . $this->tableName() . ' WHERE activated=1 ORDER BY record_order DESC, created DESC');
         return $command->queryAll();
     }
-
+/*
     //Front end - Get home record
     public function homeRecord() {
         $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit FROM ' . $this->tableName() . ' WHERE hot=1 AND dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
@@ -186,18 +197,7 @@ class About extends CActiveRecord {
         }
     }
 
-    //Front end - Get detail record
-    public function detailRecord($tag) {
-        $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit FROM ' . $this->tableName() . ' WHERE tag=:tag AND dos_usernames_username=:user');
-        $command->bindParam(":tag", $tag, PDO::PARAM_STR);
-        $command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
-        $row = $command->queryRow();
-        if ($row) {
-            //Update hit
-            $this->updateHit($row['hit'] + 1, $row['record_id']);
-            return $row;
-        }
-    }
+
 
     */
 
