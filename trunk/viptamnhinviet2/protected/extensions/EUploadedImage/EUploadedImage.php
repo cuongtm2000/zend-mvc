@@ -374,8 +374,8 @@ class EUploadedImage extends CComponent {
         $common_class->recursiveMkdir($path . '/');
         
         /*if (!is_dir($path_upload)) {
-            $this->mkdir_r($path_upload);
-            //mkdir($path_upload, 0777, true);
+            //$this->mkdir_r($path_upload);
+            mkdir($path_upload, 0777, true);
             //chmod($path_upload, 0777);
         }*/
 

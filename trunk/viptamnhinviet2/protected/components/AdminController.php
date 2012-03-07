@@ -13,6 +13,8 @@ class AdminController extends CController {
 		//Setup module user
 		$this->module_user = ModulesUsernames::model()->moduleUser(Yii::app()->user->name);
 
+		define('USERFILES', '/public/userfiles/images/' . Yii::app()->user->id . '/images');
+
 		//Setup lang
 		$this->lang = Langs::setLangs();
 	}

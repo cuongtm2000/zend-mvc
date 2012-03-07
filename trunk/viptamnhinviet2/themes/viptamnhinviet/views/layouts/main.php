@@ -28,9 +28,7 @@
         <!--[if IE]>
         <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/excanvas.compiled-ie.js"></script>
         <![endif]-->
-        <!--[if lt IE 8]>
-        <script type="text/javascript"
-                        src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.sider.banner-ie.js"></script> <![endif]-->
+        <!--[if lt IE 8]> <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.sider.banner-ie.js"></script> <![endif]-->
         <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.sider.banner.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
@@ -64,6 +62,7 @@
                                 src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo"/></a></div>
                     <!--End header left-->
                     <div class="banner-eca">
+						<?php var_dump($this->advs_top);?>
                         <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner-eca.gif" alt=""/>
                     </div>
                     <div class="clear"></div>
@@ -79,6 +78,7 @@
 
                 <div class="clear"></div>
                 <div id="banner">
+					<?php var_dump($this->banners);?>
                     <ul class="slider">
                         <li class="slider-item"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner.jpg" alt="banner"/>
                         </li>
@@ -210,6 +210,7 @@ foreach ($values as $value): ?>
                         </div>
                         <!--End frame left 1-->
                         <h3 class="title-adv-left">ĐỐI TÁC VÀNG</h3>
+						<?php var_dump($this->advs_left);?>
                         <ul class="adv-left">
                             <li><a href="#" title="Khoi su doanh nghiep" target="_blank"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/kshg.jpg"
                                                                                               alt="khoi su doanh nghiep"/></a>
@@ -280,6 +281,7 @@ foreach ($values as $value): ?>
                 </div>
                 <!--End gian hang tieu bieu-->
                 <div class="bg-hotline">
+					<?php var_dump($this->advs_bottom);?>
                     <p class="title-sport-right">HT KINH DOANH</p>
 
                     <p><b>Mr.Nam</b> 0987 976 879</p>

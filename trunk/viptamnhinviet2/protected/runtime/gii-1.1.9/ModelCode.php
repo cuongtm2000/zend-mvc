@@ -2,7 +2,7 @@
 return array (
   'template' => 'default',
   'tablePrefix' => 'dos_module_',
-  'modelPath' => 'application.modules.products.models',
+  'modelPath' => 'application.models',
   'baseClass' => 'CActiveRecord',
   'buildRelations' => '1',
 );

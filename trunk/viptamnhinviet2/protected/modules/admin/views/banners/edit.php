@@ -5,7 +5,7 @@
 
         <div class="col1"><?php echo $form->labelEx($model, 'banner_type') ?></div>
         <div class="col2">
-            <?php echo $form->dropDownList($model, 'banner_type', array('banner'=>'Banner', 'logo'=>'Logo')); ?>
+            <?php echo $form->dropDownList($model, 'banner_type', array('banners'=>'Banner', 'logo'=>'Logo')); ?>
         </div>
         <div class="clear space"></div>
 
@@ -30,7 +30,7 @@
         <div class="col1"><?php echo $form->labelEx($model, 'banner_url') ?></div>
         <div class="col2">
             <?php if($model->banner_url): ?>
-                <a class="nyroModal" href="<?php echo Yii::app()->request->baseUrl.USERFILES.'/banner/'.$model->banner_url ?>"><img src="<?php echo Yii::app()->request->baseUrl.USERFILES.'/banner/'.$model->banner_url ?>" alt="" class="img-marginb5 img-banner" /></a><br />
+                <a class="nyroModal" href="<?php echo Yii::app()->request->baseUrl.USERFILES.'/banners/'.$model->banner_url ?>"><img src="<?php echo Yii::app()->request->baseUrl.USERFILES.'/banners/'.$model->banner_url ?>" alt="" class="img-marginb5 img-banner" /></a><br />
             <?php endif;?>
             <?php echo $form->fileField($model, 'banner_url', array('class'=>'fileupload')); ?>
         </div>

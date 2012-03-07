@@ -2,23 +2,6 @@
 
 class AdvsController extends AdminController {
 
-    public function filters() {
-        return array(
-            'accessControl',
-        );
-    }
-
-    public function accessRules() {
-        return array(
-            array(
-                'allow',
-                //'actions' => array('index'),
-                'users' => array('@'),
-            ),
-            array('deny'),
-        );
-    }
-
     public function actionIndex() {
         $module = ucfirst($this->getId());
         $model = new $module();
