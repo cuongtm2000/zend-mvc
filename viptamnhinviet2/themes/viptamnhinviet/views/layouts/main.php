@@ -169,7 +169,7 @@ foreach ($values as $value): ?>
                             <ul class="sub-ty-pro">
                                 <li>
                                     <div class="img-ty-pro">
-                                        <a href="product-info.html" title=""><img src="images/ty-pro-1.jpg" alt=""/></a>
+                                        <a href="product-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ty-pro-1.jpg" alt=""/></a>
                                     </div>
 
                                     <div class="right-ty-pro">
@@ -192,7 +192,7 @@ foreach ($values as $value): ?>
                             <ul class="sub-ty-pro">
                                 <li>
                                     <div class="img-ty-pro">
-                                        <a href="product-info.html" title=""><img src="images/ty-pro-1.jpg" alt=""/></a>
+                                        <a href="product-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ty-pro-1.jpg" alt=""/></a>
                                     </div>
 
                                     <div class="right-ty-pro">
@@ -211,14 +211,14 @@ foreach ($values as $value): ?>
                         <!--End frame left 1-->
                         <h3 class="title-adv-left">ĐỐI TÁC VÀNG</h3>
                         <ul class="adv-left">
-                            <li><a href="#" title="Khoi su doanh nghiep" target="_blank"><img src="images/kshg.jpg"
+                            <li><a href="#" title="Khoi su doanh nghiep" target="_blank"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/kshg.jpg"
                                                                                               alt="khoi su doanh nghiep"/></a>
                             </li>
                             <li><a href="http://www.vcbhcm.com.vn/tygia.htm" title="Ty gia ngoai te hom nay"
-                                   target="_blank"><img src="images/picture2.jpg" alt="Ty gia ngoai te"/></a></li>
+                                   target="_blank"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/picture2.jpg" alt="Ty gia ngoai te"/></a></li>
                             <li><a href="http://giavanghomnay.net/" title="Ty gia vang hom nay" target="_blank"><img
-                                        src="images/timthumb.jpg" alt="Ty gia Vang"/></a></li>
-                            <li><a href="#" title="Cac trung tam phan phoi" target="_blank"><img src="images/ttpp-copy.jpg"
+                                        src="<?php echo Yii::app()->theme->baseUrl; ?>/images/timthumb.jpg" alt="Ty gia Vang"/></a></li>
+                            <li><a href="#" title="Cac trung tam phan phoi" target="_blank"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ttpp-copy.jpg"
                                                                                                  alt="Cac trung tam phan phoi"/></a>
                             </li>
                         </ul>
@@ -271,7 +271,7 @@ foreach ($values as $value): ?>
 
                     <div class="bg-booth">
                         <div class="item-booth">
-                            <div class="img-booth"><a href="#" title=""><img src="images/pro-ty.jpg" alt=""/></a></div>
+                            <div class="img-booth"><a href="#" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/pro-ty.jpg" alt=""/></a></div>
                             <h3 class="title-member"><a href="#" title="">xuanchien</a></h3>
                         </div>
 
