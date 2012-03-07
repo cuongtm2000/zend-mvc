@@ -8,6 +8,8 @@ class LoginController extends Controller {
         if (isset($_POST['LoginForm'])) {
             $model->attributes = $_POST['LoginForm'];
             if ($model->validate() && $model->login()) {
+                $u=User::model()->findByPk(Yii::app()->user->name);
+                Yii::app()->session['balance']= $u['balance'];
                 $this->redirect(Yii::app()->user->returnUrl);
             }
         } elseif (Yii::app()->session['activated']) {

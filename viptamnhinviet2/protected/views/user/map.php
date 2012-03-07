@@ -2,24 +2,18 @@
 <?php
 $this->breadcrumbs = array(
     'Users' => array('index'),
-    'MAP',
+    $tree['value'] => array('view', 'id' => $tree['value']),
+    'Sơ đồ cây',
 );
 
-$this->menu = array(
-    array('label' => 'List User', 'url' => array('index')),
-    array('label' => 'Create User', 'url' => array('create')),
-);
 
-Yii::app()->clientScript->registerCoreScript('jquery');
+
 Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/jquery.treeview.css');
 Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.treeview.js');
-//Yii::app()->clientScript->registerScript('',"",CClientScript::POS_READY);
+
 ?>
 
 
-<div class="bg-pr">
-    <div class="bd-top-pr"></div>
-    <div class="tent-right">
 
 
 
@@ -59,7 +53,6 @@ function drawNode($tree, $lst) {
         </div>
         <p>
             <?php $lst = explode('|', $listUserQuanly); ?>
-            <?php var_dump($tree) ?>
         </p><br />
         <script >
             $(document).ready(function(){
@@ -70,6 +63,3 @@ function drawNode($tree, $lst) {
         </script>
         <?php drawTree($tree, 'browser', $lst) ?>
 
-    </div><!--End tent right-->
-    <div class="bd-bt-pr"></div>
-</div><!--End bg pr-->
