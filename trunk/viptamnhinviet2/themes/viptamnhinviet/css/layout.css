@@ -44,7 +44,7 @@ a:hover{color:#000;}
 .video{float:right; width:300px; background:#6F0}
 
 /*frm-search*/
-.frm-search{text-align:right; margin:0 0 10px 0;background:#F5FAFD;border-bottom:1px solid #B2BBBA;padding:5px 0}
+.frm-search{text-align:right; margin:0 0 10px 0;background:#F5FAFD;border-bottom:1px solid #ddd;padding:5px 0}
 .frm-search input, .frm-search select {padding:3px 5px}
 .bton-search{background:#006DA6;color:#fff;border:none;padding:6px 5px !important;font-weight:bold; cursor:pointer}
 
@@ -59,7 +59,7 @@ a:hover{color:#000;}
 .frame-left-1{background:#EAEAEA; padding:10px 10px 5px 10px;margin:0 0 10px 0;-webkit-border-radius:4px;-moz-border-radius:4px}
 
 /*Sub sản phẩm SGS*/
-.sub-pro{list-style:none}
+.sub-pro{list-style:none;margin:0 0 10px 0}
 .sub-pro li{padding:0 0 4px 0}
 .sub-pro li a{display:block;color:#000; background:#F6F6F6;padding:5px 2px 5px 10px;-webkit-border-radius:4px;-moz-border-radius:4px}
 .sub-pro li a:hover{color:#AA100E; background:#E0DEDF}
