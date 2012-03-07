@@ -71,9 +71,9 @@
                 <!--End header-->
 
                 <ul class="nav">
-                    <li><a href="index.html" title="" class="select">Trang chủ</a></li>
+                    <li><a href="<?php echo Yii::app()->homeUrl?>" title="Trang chủ" class="select">Trang chủ</a></li>
                     <li><a href="<?php echo Yii::app()->homeUrl?>gioi-thieu" title="Giới thiệu">Giới thiệu</a></li>
-                    <li><a href="products" title="">Sản phẩm</a></li>
+                    <li><a href="<?php echo Yii::app()->homeUrl?>san-pham" title="Sản phẩm">Sản phẩm</a></li>
                     <li><a href="<?php echo Yii::app()->homeUrl?>lien-he.html" title="Liên hệ">Liên hệ</a></li>
                 </ul>
 
@@ -137,13 +137,14 @@
 
                             </ul>
 
+							<?php if(isset($this->menu_product) && ($this->menu_product)):?>
 							<h1 class="title-left"><span>DANH MỤC SẢN PHẨM</span></h1>
 							<ul class="sub-pro">
-								<li><a href="#" title="">Bất động sản</a></li>
-								<li><a href="#" title="">Cho mẹ và bé</a></li>
-								<li><a href="#" title="">Du lịch giải trí - Du lịch</a></li>
-
+								<?php foreach($this->menu_product as $value): ?>
+								<li><a href="<?php echo Yii::app()->request->baseUrl ?>/san-pham/<?php echo $value['tag']?>" title="<?php echo $value['cat_title']?>"><?php echo $value['cat_title']?></a></li>
+								<?php endforeach; ?>
 							</ul>
+							<?php endif;?>
                         </div>
                         <!--End frame-left 1-->
                         <div class="frame-left-2">
