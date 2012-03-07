@@ -115,13 +115,12 @@ class UserController extends Controller {
             $model->attributes = $_POST['TransferForm'];
             if ($model->validate() ) {
                 $model->transfer();
-                $this->redirect(array('user/log'));
+                $this->redirect(array('log'));
             }
-        }
-        
+        }        
         $this->render('transferv', array(
             'model' => $model,
-            
+            'user' => User::model()->findByPk(Yii::app()->user->name),
         ));
     }
 

@@ -293,30 +293,7 @@ class User extends CActiveRecord {
             return TRUE;
         return FALSE;
     }
-    public function validateTransfer($data){
-        $money = trim($data['money']);
-        $user=  User::model()->findByPk(Yii::app()->user->name);
-        
-    
-        
-        
-        
-        
-        User::model()->updateByPk($user,  
-                    array('balance' => $u['balance']+$money));
-            $log=new Log();
-            $log->addItem("Hoa hồng thành tích do đạt được số con ở mỗi nhánh là ".$min_child, '', $user, $money, 'thanhtich');
-	
-        $tk = $this->getTK($this->_username);
-        $this->addTK($this->_username, $tk - $money); ///
-
-        $tk = $this->getTK($data['reciever']);
-        $this->addTK($data['reciever'], $tk + $money); ///
-
-        $log = new User_Model_Log();
-        $log->addItem('Chuyển khoản nội bộ', $this->_username, $data['reciever'], $money,2);
-        
-    }
+  
     
 
 }
