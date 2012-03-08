@@ -27,7 +27,7 @@
 
         <div class="col1"><?php echo $form->labelEx($model, 'position') ?></div>
         <div class="col2">
-            <?php echo $form->dropDownList($model, 'position', array('left'=>'Left', 'center'=>'Center', 'right'=>'Right')); ?>
+            <?php echo $form->dropDownList($model, 'position', array('left'=>'Left', 'center'=>'Center', 'top'=>'Top', 'bottom'=>'Bottom')); ?>
         </div>
         <div class="clear space"></div>
 

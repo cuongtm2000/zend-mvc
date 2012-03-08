@@ -145,7 +145,8 @@ class Advs extends CActiveRecord {
 	}
 	//Front end - list advs left
 	public function listItemsByPosition($pos) {
-		$command = Yii::app()->db->createCommand('SELECT record_id, title, pic_thumb, url, type FROM ' . $this->tableName() . ' WHERE start_date <= NOW() AND end_date >= NOW() AND position=\'$pos\' AND enable=1 ORDER BY record_order DESC, create_date DESC');
+		$command = Yii::app()->db->createCommand('SELECT record_id, title, pic_thumb, url, type FROM ' . $this->tableName() . ' WHERE start_date <= NOW() AND end_date >= NOW() AND position=:pos AND enable=1 ORDER BY record_order DESC, create_date DESC');
+		$command->bindParam(":pos", $pos, PDO::PARAM_STR);
 		return $command->queryAll();
 	}
 	//Back end - List item admin
