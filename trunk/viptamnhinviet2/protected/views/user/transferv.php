@@ -41,7 +41,7 @@ $this->breadcrumbs = array(
 			</li>
 			<li>
 				<?php echo $form->labelEx($model, 'message'); ?>
-				<?php echo $form->textArea($model, 'message', array('cols' => 45,'rows'=>10, 'maxlength' => 180)); ?>
+				<?php echo $form->textArea($model, 'message', array('cols' => 45,'rows'=>4, 'maxlength' => 180)); ?>
 				<?php echo $form->error($model, 'message'); ?>
 			</li>
 
