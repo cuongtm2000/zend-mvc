@@ -55,9 +55,9 @@
                     <ul class="menu-li"> 
                         <li><a class="headerbar" href="#">Cài đặt &amp; cấu hình</a>
                             <ul class="submenu">
-                                <li><a href="/admin/configs/web">Tiêu đề website</a></li>
-                                <li><a href="/admin/configs/menu">Cấu hình Menu</a></li>
-                                <li><a href="/admin/configs/langs">Cấu hình ngôn ngữ</a></li>
+                                <li><a href="<?php echo Yii::app()->baseUrl; ?>/admin/configs/web">Tiêu đề website</a></li>
+                                <li><a href="<?php echo Yii::app()->baseUrl; ?>/admin/configs/menu">Cấu hình Menu</a></li>
+                                <li><a href="<?php echo Yii::app()->baseUrl; ?>/admin/configs/langs">Cấu hình ngôn ngữ</a></li>
                             </ul>
                         </li>
                     </ul>
