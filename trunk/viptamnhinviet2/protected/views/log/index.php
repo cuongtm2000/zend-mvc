@@ -1,4 +1,4 @@
-<h1>Manage Logs</h1>
+<h1>Lịch sử giao dịch</h1>
 
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
@@ -12,8 +12,7 @@
 		'time',
 		'sender',
 		'receiver',
-		'value',
-		
+		'value',	
 		
 	),
 )); ?>

@@ -46,13 +46,13 @@ class Log extends CActiveRecord {
 
     public function attributeLabels() {
         return array(
-            'record_id' => 'Record',
+            'record_id' => 'ID',
             'log_type' => 'Log Type',
             'detail' => 'Detail',
-            'time' => 'Time',
-            'sender' => 'Sender',
-            'receiver' => 'Receiver',
-            'value' => 'Value',
+            'time' => 'Thời gian',
+            'sender' => 'Người gửi',
+            'receiver' => 'Người nhận',
+            'value' => 'Số tiền',
         );
     }
 
@@ -60,15 +60,21 @@ class Log extends CActiveRecord {
         $criteria = new CDbCriteria;
 
         $criteria->compare('record_id', $this->record_id);
-        $criteria->compare('log_type', $this->log_type, true);
+
         $criteria->compare('detail', $this->detail, true);
         $criteria->compare('time', $this->time, true);
-        $criteria->compare('sender', $this->sender, true);
-        $criteria->compare('receiver', $this->receiver, true);
+        $criteria->compare('sender',array(Yii::app()->user->name));
+        $criteria->compare('receiver',array(Yii::app()->user->name),true,'or');
         $criteria->compare('value', $this->value);
 
         return new CActiveDataProvider($this, array(
                     'criteria' => $criteria,
+                    'sort' => array(
+                        'defaultOrder' => 'time DESC',
+                    ),
+                    'pagination' => array(
+                        'pageSize' => 20,
+                    ),
                 ));
     }
 
