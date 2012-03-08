@@ -1,8 +1,7 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
-	$model->username,
+	
         'Lịch sử giao dịch',
 );
 ?>
