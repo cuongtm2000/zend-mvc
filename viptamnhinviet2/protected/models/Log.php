@@ -47,8 +47,8 @@ class Log extends CActiveRecord {
     public function attributeLabels() {
         return array(
             'record_id' => 'ID',
-            'log_type' => 'Log Type',
-            'detail' => 'Detail',
+            'log_type' => 'Loại GD',
+            'detail' => 'Chi tiết',
             'time' => 'Thời gian',
             'sender' => 'Người gửi',
             'receiver' => 'Người nhận',
