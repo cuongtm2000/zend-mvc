@@ -12,6 +12,7 @@ class Controller extends CController {
 	public $advs_center;
 	public $advs_top;
 	public $advs_bottom;
+	public $listItemHot;
 
 	public function init() {
 		Yii::app()->getModule('products');
@@ -26,6 +27,9 @@ class Controller extends CController {
 		$this->advs_center = $advs_class->listItemsByPosition('center');
 		$this->advs_top = $advs_class->listItemsByPosition('top');
 		$this->advs_bottom = $advs_class->listItemsByPosition('bottom');
+
+		$products_class = new Products();
+		$this->listItemHot = $products_class->listItemHot();
 		
 		define('USERFILES', '/public/userfiles/images/viptamnhinviet/images');
 	}
