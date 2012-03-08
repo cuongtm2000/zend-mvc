@@ -4,7 +4,7 @@ $this->breadcrumbs=array(
 	'Manage',
 );
 //var_dump($model);
-var_dump($post);
+//var_dump($post);
 ?>
 
 <div class="content">
