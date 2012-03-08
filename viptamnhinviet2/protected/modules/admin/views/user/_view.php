@@ -1,70 +1,70 @@
-<div class="view">
+<ul class="frame-contact">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('username')); ?>:</b>
+	<li><?php echo CHtml::encode($data->getAttributeLabel('username')); ?>:
 	<?php echo CHtml::link(CHtml::encode($data->username), array('view', 'id'=>$data->username)); ?>
-	<br />
+	</li>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
+	<li><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:
 	<?php echo CHtml::encode($data->password); ?>
-	<br />
+	</li>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('create_date')); ?>:</b>
+	<li><?php echo CHtml::encode($data->getAttributeLabel('create_date')); ?>:
 	<?php echo CHtml::encode($data->create_date); ?>
-	<br />
+	</li>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('full_name')); ?>:</b>
+	<li><?php echo CHtml::encode($data->getAttributeLabel('full_name')); ?>:
 	<?php echo CHtml::encode($data->full_name); ?>
-	<br />
+	</li>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
+	<li><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:
 	<?php echo CHtml::encode($data->email); ?>
-	<br />
+	</li>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('birthday')); ?>:</b>
+	<li><?php echo CHtml::encode($data->getAttributeLabel('birthday')); ?>:
 	<?php echo CHtml::encode($data->birthday); ?>
-	<br />
+	</li>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('address')); ?>:</b>
+	<li><?php echo CHtml::encode($data->getAttributeLabel('address')); ?>:
 	<?php echo CHtml::encode($data->address); ?>
-	<br />
+	</li>
 
 	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('cmnd')); ?>:</b>
+	<li><?php echo CHtml::encode($data->getAttributeLabel('cmnd')); ?>:
 	<?php echo CHtml::encode($data->cmnd); ?>
-	<br />
+	</li>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('phone')); ?>:</b>
+	<li><?php echo CHtml::encode($data->getAttributeLabel('phone')); ?>:
 	<?php echo CHtml::encode($data->phone); ?>
-	<br />
+	</li>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('bank_number')); ?>:</b>
+	<li><?php echo CHtml::encode($data->getAttributeLabel('bank_number')); ?>:
 	<?php echo CHtml::encode($data->bank_number); ?>
-	<br />
+	</li>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('bank_name')); ?>:</b>
+	<li><?php echo CHtml::encode($data->getAttributeLabel('bank_name')); ?>:
 	<?php echo CHtml::encode($data->bank_name); ?>
-	<br />
+	</li>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('user_gioithieu')); ?>:</b>
+	<li><?php echo CHtml::encode($data->getAttributeLabel('user_gioithieu')); ?>:
 	<?php echo CHtml::encode($data->user_gioithieu); ?>
-	<br />
+	</li>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('balance')); ?>:</b>
+	<li><?php echo CHtml::encode($data->getAttributeLabel('balance')); ?>:
 	<?php echo CHtml::encode($data->balance); ?>
-	<br />
+	</li>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('user_group')); ?>:</b>
+	<li><?php echo CHtml::encode($data->getAttributeLabel('user_group')); ?>:
 	<?php echo CHtml::encode($data->user_group); ?>
-	<br />
+	</li>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('level')); ?>:</b>
+	<li><?php echo CHtml::encode($data->getAttributeLabel('level')); ?>:
 	<?php echo CHtml::encode($data->level); ?>
-	<br />
+	</li>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('enable')); ?>:</b>
+	<li><?php echo CHtml::encode($data->getAttributeLabel('enable')); ?>:
 	<?php echo CHtml::encode($data->enable); ?>
-	<br />
+	</li>
 
 	*/ ?>
 
-</div>
+</ul>
