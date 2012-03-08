@@ -77,7 +77,7 @@
         <?php endforeach; ?>
     <?php endif; ?>
 
-    <p class="rows"><a href="#" id="add-rows">Hình mô tả</a></p>
+    <!-- <p class="rows"><a href="#" id="add-rows">Hình mô tả</a></p> -->
 
     <div class="col1"><?php echo $form->labelEx($model, 'hot', $htmlOptions = array('for' => ucfirst($this->ID) . '_hot_0')) ?></div>
     <div class="col2 radio">
@@ -100,11 +100,11 @@
 </fieldset>
 <?php $this->endWidget(); ?>
 <?php $this->widget('ext.seoAlias.seoAlias', array('model' => $model, 'source' => 'title', 'target' => 'tag')); ?>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     $(document).ready(function(){
         $("#add-rows").click(function(){
             $(".rows").before('<div class="col1">Hình mô tả</div><div class="col2"><input type="file" name="<?php echo ucfirst($this->ID) ?>[pic_desc][]" size="40%" /></div><div class="clear space"></div>');
             return false;
         });
     });
-</script>
+</script> -->
