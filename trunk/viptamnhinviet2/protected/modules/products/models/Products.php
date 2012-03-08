@@ -250,6 +250,12 @@ class Products extends CActiveRecord {
 		return parent::beforeSave();
 	}
 
+	//Front end - list item hot
+	public function listItemHot() {
+		$command = Yii::app()->db->createCommand('SELECT record_id, title, pic_thumb, ' . $this->tableName() . '.tag, unit FROM ' . $this->tableName() . ', dos_module_products_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = dos_module_products_cat.cat_id AND hot = 1 AND enable = 1 ORDER BY record_order DESC, postdate DESC LIMIT 0, 8');
+		return $command->queryAll();
+	}
+
 	//Front end - list Item by Cat
 	public function listItemByCat($cid) {
 		$criteria = new CDbCriteria();
@@ -438,12 +444,7 @@ class Products extends CActiveRecord {
         return $command->queryAll();
     }
 
-	//Front end - list item hot
-	public function listItemHot() {
-		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', pic_thumb, ' . $this->tableName() . '.tag, unit FROM ' . $this->tableName() . ', dos_module_products_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = dos_module_products_cat.cat_id AND dos_usernames_username=:user AND hot = 1 AND enable = 1 ORDER BY record_order DESC, postdate DESC LIMIT 0, 8');
-		$command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
-		return $command->queryAll();
-	}
+
 
 
 
