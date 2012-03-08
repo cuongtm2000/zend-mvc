@@ -9,8 +9,8 @@ return CMap::mergeArray(
                 'username' => 'root',
                 'password' => '',
                 'charset' => 'utf8',
-                'enableProfiling' => true,
-                'enableParamLogging' => true,
+                //'enableProfiling' => true,
+                //'enableParamLogging' => true,
             ),
             'log' => array(
                 'class' => 'CLogRouter',

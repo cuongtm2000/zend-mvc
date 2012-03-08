@@ -161,6 +161,90 @@ class Advs extends CActiveRecord {
 
 		return array('models' => Advs::model()->findAll($criteria), 'pages' => $pages);
 	}
+	//Back end - Update Record
+	private function updateSort($order, $id) {
+		$command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET record_order=:order WHERE record_id=:id');
+		$command->bindParam(":order", $order, PDO::PARAM_INT);
+		$command->bindParam(":id", $id, PDO::PARAM_INT);
+		return $command->execute();
+	}
+
+	//Back end - Update Record
+	private function updateShowHidden($activated, $id) {
+		$command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET enable=:activated WHERE record_id=:id');
+		$command->bindParam(":activated", $activated, PDO::PARAM_INT);
+		$command->bindParam(":id", $id, PDO::PARAM_INT);
+		return $command->execute();
+	}
+
+	//Back end - Delete Record
+	private function deleteRecord($id) {
+		$item = Advs::model()->find('record_id=:id', array(':id' => $id));
+		if (($item->pic_thumb && file_exists(YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . '/' . $item->pic_thumb))) {
+			unlink(YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . '/' . $item->pic_thumb);
+		}
+		Advs::model()->findByPk($id)->delete(); //delete record_id
+	}
+
+	//Back end - Active Item
+	public function activeItem($data) {
+		$flag = $data->getPost('factive', 'disable');
+		$ids = $data->getPost('ids', '');
+		$orders = $data->getPost('orders', '');
+		$sort = $data->getPost('sort', '');
+		$syn = $data->getPost('syn', '');
+
+		if ($sort) {
+			if (is_array($orders)) {
+				while (list($id, $order) = each($orders)) {
+					$id = intval($id);
+					$order = intval($order);
+					if ($id && $order) {
+						$this->updateSort($order, $id);
+					}
+				}
+			}
+		} else if ($syn) {
+			$criteria = new CDbCriteria();
+			$criteria->order = 'record_order ASC, create_date ASC';
+			$models = Advs::model()->findAll($criteria);
+
+			$i = 1;
+			foreach ($models as $model) {
+				Advs::model()->updateByPk($model['record_id'], array('record_order' => $i));
+				$i++;
+			}
+		} else {
+			if (!empty($ids)) {
+				if (!is_array($ids)) {
+					$record_id[0] = $ids;
+				} else {
+					$record_id = $ids;
+				}
+				unset($ids);
+
+				if ($flag) {
+					//show or hidden
+					$active = ($flag == "enable") ? 1 : 0;
+
+					foreach ($record_id as $value) {
+						$id = intval($value);
+						if ($id) {
+							$this->updateShowHidden($active, $id);
+						}
+					}
+				} else {
+					//delete
+					foreach ($record_id as $value) {
+						$id = intval($value);
+						if ($id) {
+							$this->deleteRecord($id);
+						}
+					}
+				}
+			}
+		}
+	}
 	//Back end - Get max record
 	public function maxRecordOrder() {
 		$command = Yii::app()->db->createCommand('SELECT max(record_order) AS max FROM ' . $this->tableName());
