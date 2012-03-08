@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 07, 2012 at 09:46 AM
+-- Generation Time: Mar 08, 2012 at 02:19 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `dos_langs` (
 INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('about', 'Giới thiệu', 'About us', 0),
 ('advs', 'Quảng cáo', 'Adv', 0),
-('banner', 'Logo &amp; Banner', 'Logo &amp; Banner', 0),
+('banners', 'Logo &amp; Banner', 'Logo &amp; Banner', 0),
 ('contact', 'Liên hệ', 'Contact', 0),
 ('default', 'Trang chủ', 'Home page', 0),
 ('products', 'Sản phẩm', 'Products', 0),
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `dos_modules` (
 INSERT INTO `dos_modules` (`module_id`, `module_url`, `module_title`, `module_sort`, `module_type`) VALUES
 ('about', 'about', 'Danh sách', 2, 1),
 ('advs', 'advs', 'Danh sách', 7, 0),
-('banner', 'banner', 'Danh sách', 5, 0),
+('banners', 'banners', 'Danh sách', 5, 0),
 ('contact', 'contact', 'Danh sách', 8, 1),
 ('default', NULL, NULL, 1, 1),
 ('products', 'products/cats|products', 'Danh mục|Danh sách', 3, 1),
@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
 INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
 ('about', 'viptamnhinviet'),
 ('advs', 'viptamnhinviet'),
-('banner', 'viptamnhinviet'),
+('banners', 'viptamnhinviet'),
 ('contact', 'viptamnhinviet'),
 ('products', 'viptamnhinviet'),
 ('services', 'viptamnhinviet'),
@@ -134,8 +134,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `description`, `activated`) VALUES
-(2, 'Giới thiệu', NULL, '<p>\r\n	Chi tiết</p>\r\n', NULL, 13, '2012-03-07 03:24:59', 1, 0, NULL, NULL, 'gioi-thieu', 'Mô tả', 1),
-(3, 'Tiêu đề giới thiệu', NULL, '<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n', NULL, 48, '2012-03-07 03:25:14', 2, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'Mô tả', 1);
+(2, 'Giới thiệu', NULL, '<p>\r\n	Chi tiết</p>\r\n', NULL, 15, '2012-03-07 03:24:59', 1, 0, NULL, NULL, 'gioi-thieu', 'Mô tả', 1),
+(3, 'Tiêu đề giới thiệu', NULL, '<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n', NULL, 76, '2012-03-07 03:25:14', 2, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'Mô tả', 1);
 
 -- --------------------------------------------------------
 
@@ -158,7 +158,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `type` varchar(45) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_module_advs`
+--
+
+INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`) VALUES
+(1, 'Tieu de', NULL, 'tieu-de.gif', 'http://grouplaptrinh.com', '2012-03-07 15:20:30', '2012-03-06 17:00:00', '2012-03-09 17:00:00', 0, 1, 'left', '_bank', 1);
 
 -- --------------------------------------------------------
 
@@ -177,7 +184,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `position` varchar(20) NOT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`banner_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `dos_module_banners`
+--
+
+INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_url`, `banner_link`, `banner_order`, `banner_type`, `position`, `enable`) VALUES
+(2, '2012-03-07 14:38:03', 'Banner', 'banner.jpg', 'http://hoiit.com', 1, 'banners', 'default', 1),
+(3, '2012-03-07 14:38:15', 'Banner 2', 'banner-2.jpg', 'http://hoiit.com', 2, 'banners', 'default', 1),
+(4, '2012-03-07 14:38:50', 'Banner 3', 'banner-3.jpg', 'http://hoiit.com', 3, 'banners', 'about', 1);
 
 -- --------------------------------------------------------
 
@@ -199,7 +215,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   `description` varchar(250) NOT NULL,
   `enable` varchar(45) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_module_contacts`
+--
+
+INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `description`, `enable`) VALUES
+(1, 'Tieu đề', NULL, '<p>\r\n	qweqweqw e</p>\r\n', NULL, '2012-03-08 00:15:51', 1, 0, 0, 'tieu-de', 'qwe qewq qwe', '1');
 
 -- --------------------------------------------------------
 
