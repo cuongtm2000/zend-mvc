@@ -5,7 +5,7 @@
 
     <div class="col1"><?php echo $form->labelEx($model, 'cat_parent_id') ?></div>
     <div class="col2">
-        <?php echo $form->dropDownList($model, 'cat_parent_id', CHtml::listData($model->listItemAdminAction(1), 'cat_id', 'cat_title')); ?>
+        <?php echo $form->dropDownList($model, 'cat_parent_id', CHtml::listData($model->listCats(1, '|-- '), 'cat_id', 'cat_title')); ?>
     </div>
     <div class="clear space"></div>
 
