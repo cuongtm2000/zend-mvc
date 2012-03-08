@@ -27,6 +27,16 @@ class ProductsCat extends CActiveRecord {
 	private $_rows;
 	private $_rowsize;
 
+	private $_cat_data;
+	private $_sub_cat_data;
+	private $_sortcat_count = 0;
+
+	private $_model;
+	private $_oldImage_full;
+
+	//private $_sub_cat_num = 0;
+	//private $_sub_num_item = 0;
+
 	public static function model($className = __CLASS__) {
 		return parent::model($className);
 	}
@@ -121,26 +131,165 @@ class ProductsCat extends CActiveRecord {
 		));
 	}
 
+	public function afterFind() {
+		parent::afterFind();
+		$this->_oldImage_full = $this->pic_full;
+	}
+
+	public function beforeSave() {
+		$purifier = new CHtmlPurifier();
+		$this->cat_title = $purifier->purify($this->cat_title);
+		$this->tag = $purifier->purify($this->tag);
+		$this->description = $purifier->purify($this->description);
+
+		if ($this->isNewRecord) {
+			$this->cat_order = $this->maxRecordOrder();
+			$this->dos_usernames_username = Yii::app()->user->id;
+			if ($_FILES['ProductsCat']['name']['pic_full']) {
+				Yii::import('ext.EUploadedImage.EUploadedImage');
+				$this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(143, 141, USERFILES . '/productsCat', $this->cat_title);
+			}
+		} else {
+			//check file old and upload
+			if ($_FILES['ProductsCat']['name']['pic_full']) {
+				Yii::import('ext.EUploadedImage.EUploadedImage');
+				$this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(143, 141, USERFILES . '/productsCat', $this->cat_title, $this->_oldImage_full);
+			} else {
+				$this->pic_full = $this->_oldImage_full;
+			}
+		}
+
+		return parent::beforeSave();
+	}
+
 	//Front end - List record for index
-	public function listCats() {
+	public function listCats($cid = 0, $prefix = NULL) {
+		if ($cid == 1) {
+			$this->_data[] = array('cat_id' => 0, 'cat_title' => 'Root');
+		}
+
 		$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title, tag FROM ' . $this->tableName() . ' WHERE cat_enable=1');
 		$this->_rows = $command->queryAll();
 		$this->_rowsize = count($this->_rows);
 		for ($i = 0; $i < $this->_rowsize; $i++) {
 			if ($this->_rows[$i]['cat_parent_id'] == 0) {
-				$this->_data[] = array('tag' => $this->_rows[$i]['tag'], 'cat_title' => $this->_rows[$i]['cat_title']);
-				$this->loopItem($i);
+				$this->_data[] = array('cat_id' => $this->_rows[$i]['cat_id'], 'tag' => $this->_rows[$i]['tag'], 'cat_title' => $prefix . $this->_rows[$i]['cat_title']);
+				$this->loopItem($i, $prefix);
 			}
 		}
 		return $this->_data;
 	}
 
-	private function loopItem($i, $tab = '|-- ') {
+	private function loopItem($i, $prefix, $tab = '|-- ') {
 		for ($j = 0; $j < $this->_rowsize; $j++) {
 			if ($this->_rows[$j]['cat_parent_id'] == $this->_rows[$i]['cat_id']) {
-				$this->_data[] = array('tag' => $this->_rows[$j]['tag'], 'cat_title' => $tab . $this->_rows[$j]['cat_title']);
-				$this->loopItem($j, $tab . '|-- ');
+				$this->_data[] = array('cat_id' => $this->_rows[$j]['cat_id'], 'tag' => $this->_rows[$j]['tag'], 'cat_title' => $prefix . $tab . $this->_rows[$j]['cat_title']);
+				$this->loopItem($j, $prefix, $tab . '|-- ');
 			}
 		}
+	}
+
+	public function listItemAdmin($cid = 0) {
+		$criteria = new CDbCriteria();
+		$criteria->order = 'cat_order DESC';
+		$count = ProductsCat::model()->count($criteria);
+
+		$this->_cat_data = ProductsCat::model()->findAll($criteria);
+		$this->listSubItem($cid);
+
+		return array('models' => $this->_sub_cat_data);
+	}
+
+	private function listSubItem($cid = 0, $getall = 1, $parent_id = 0, $level = 1, $str = '', $parent_enabled = 1) {
+		$cat_level = 2;
+		$prefix = ($cat_level > 1) ? '|-- ' : '';
+		foreach ($this->_cat_data as $value) {
+			if (($value->cat_parent_id == $parent_id) && ($cid != $value->cat_id)) {
+				$this->_sub_cat_data[$this->_sortcat_count]['cat_id'] = $value->cat_id;
+				$this->_sub_cat_data[$this->_sortcat_count]['cat_title'] = $value->cat_title;
+				$this->_sub_cat_data[$this->_sortcat_count]['title_prefix'] = $str . $prefix;
+
+				if (!$parent_enabled || !$value->cat_enable) {
+					$cat_enabled = 0;
+				} else {
+					$cat_enabled = 1;
+				}
+
+				$this->_sub_cat_data[$this->_sortcat_count]['cat_enable'] = $cat_enabled;
+				$this->_sortcat_count++;
+
+				if ($getall || ($level < $cat_level - 1)) {
+					$str2 = $str . "&nbsp; &nbsp; &nbsp;";
+					$this->listSubItem($cid, $getall, $value->cat_id, $level + 1, $str2, $cat_enabled);
+				}
+			}
+		}
+	}
+
+	//Back end - Update Record
+	private function updateShowHidden($activated, $id) {
+		$command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET cat_enable=:activated WHERE cat_id=:id');
+		$command->bindParam(":activated", $activated, PDO::PARAM_INT);
+		$command->bindParam(":id", $id, PDO::PARAM_INT);
+		return $command->execute();
+	}
+
+	//Back end - Active Item
+	public function activeItem($data) {
+		$flag = $data->getPost('factive', 'disable');
+		$ids = $data->getPost('ids', '');
+		$syn = $data->getPost('syn', '');
+
+		if ($syn) {
+			$criteria = new CDbCriteria();
+			$criteria->order = 'cat_order ASC';
+
+			$models = ProductsCat::model()->findAll($criteria);
+
+			$i = 1;
+			foreach ($models as $model) {
+				ProductsCat::model()->updateByPk($model['cat_id'], array('cat_order' => $i));
+				$i++;
+			}
+		} else {
+			if (!empty($ids)) {
+				if (!is_array($ids)) {
+					$record_id[0] = $ids;
+				} else {
+					$record_id = $ids;
+				}
+				unset($ids);
+
+				if ($flag) {
+					//show or hidden
+					$active = ($flag == "enable") ? 1 : 0;
+
+					foreach ($record_id as $value) {
+						$id = intval($value);
+						if ($id) {
+							$this->updateShowHidden($active, $id);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//Back end - Get max record
+	private function maxRecordOrder() {
+		$command = Yii::app()->db->createCommand('SELECT max(cat_order) AS max FROM ' . $this->tableName());
+		return $command->queryScalar() + 1;
+	}
+
+	//Back end - Get record to Edit
+	public function loadEdit($id) {
+		$criteria = new CDbCriteria();
+
+		$this->_model = ProductsCat::model()->findByPk($id, $criteria);
+
+		if ($this->_model === null) {
+			throw new CHttpException(404, 'The requested page does not exist.');
+		}
+		return $this->_model;
 	}
 }
