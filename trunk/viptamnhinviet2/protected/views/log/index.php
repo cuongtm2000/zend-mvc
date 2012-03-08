@@ -1,5 +1,11 @@
-<h1>Lịch sử giao dịch</h1>
 
+<?php
+$this->breadcrumbs=array(
+	'Users'=>array('index'),
+	$model->username,
+        'Lịch sử giao dịch',
+);
+?>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'log-grid',
