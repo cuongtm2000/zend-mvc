@@ -125,6 +125,20 @@
                 <div id="content">
                     <div id="left-content">
                         <div class="frame-left-1">
+
+   <?php if(!Yii::app()->user->isGuest):?>
+                            <h1 class="title-left"><span>BẢNG ĐIỀU KHIỂN</span></h1>
+                            <ul class="sub-pro">
+                                <li><a href="<?php echo Yii::app()->baseUrl ?>/product/list" title="">Sản phẩm đã đăng</a></li>
+                                <li><a href="<?php echo Yii::app()->baseUrl ?>/product/add" title="">Đăng sản phẩm</a></li>
+                                <li><a href="<?php echo Yii::app()->baseUrl ?>/user/map" title="">Sơ đồ mạng lưới</a></li>
+                                <li><a href="<?php echo Yii::app()->baseUrl ?>/log" title="">Lịch sử giao dịch</a></li>
+                                <li><a href="#" title="">Số tiền tích lũy: <span class="error"><?php echo Yii::app()->session['balance'] ?> V</span></a></li>
+                                <li class="border-none"><a  href="<?php echo Yii::app()->baseUrl ?>/user/transferv" title="Chuyển khoản">Chuyển khoản</a></li>
+
+                            </ul>
+                            <?php endif;?>                         
+
 							<?php if(isset($this->menu_about) && ($this->menu_about)):?>
 							<h1 class="title-left"><span>DANH MỤC GIỚI THIỆU</span></h1>
 							<ul class="sub-pro">
@@ -134,17 +148,7 @@
 							</ul>
 							<?php endif;?>
 
-                            <h1 class="title-left"><span>BẢNG ĐIỀU KHIỂN</span></h1>
-                            <ul class="sub-pro">
-                                <li><a href="<?php echo Yii::app()->baseUrl ?>/product/list" title="">Sản phẩm đã đăng</a></li>
-                                <li><a href="<?php echo Yii::app()->baseUrl ?>/product/add" title="">Đăng sản phẩm</a></li>
-                                <li><a href="<?php echo Yii::app()->baseUrl ?>/user/map" title="">Sơ đồ mạng lưới</a></li>
-                                <li><a href="<?php echo Yii::app()->baseUrl ?>/log" title="">Lịch sử giao dịch</a></li>
-                                
-                                <li><a href="#" title="">Số tiền tích lũy: <span class="error"><?php echo Yii::app()->session['balance'] ?> V</span></a></li>
-                                <li class="border-none"><a  href="<?php echo Yii::app()->baseUrl ?>/user/transferv" title="Chuyển khoản">Chuyển khoản</a></li>
 
-                            </ul>
 
 							<?php if(isset($this->menu_product) && ($this->menu_product)):?>
 							<h1 class="title-left"><span>DANH MỤC SẢN PHẨM</span></h1>
