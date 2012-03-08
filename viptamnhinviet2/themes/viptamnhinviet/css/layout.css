@@ -90,7 +90,8 @@ a:hover{color:#000;}
 
 /*Doi tac vang*/
 .title-adv-left{margin:0 0 13px 0; text-align:center;color:#fff; background:#FF7200;padding:8px 0; font-size:10pt; font-weight:bold;-webkit-border-radius:4px;-moz-border-radius:4px}
-.adv-left{list-style:none;margin:0 0 10px 0}
+.adv-left{list-style:none;margin:0 0 10px 0;text-align:center}
+.adv-left li{margin:0 0 5px 0}
 
 /*Table thanh vien quyen gop nhieu nhat*/
 .title-member-left-1, .title-member-left-2{color:#fff;background:#00A2FF;font-size:8pt;padding:5px 0; text-align:center}

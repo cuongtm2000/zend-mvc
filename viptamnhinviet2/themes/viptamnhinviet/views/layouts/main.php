@@ -63,11 +63,11 @@
                                 src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo"/></a></div>
                     <!--End header left-->
                     <div class="banner-eca">
-						<?php  
-								var_dump($this->advs_top);
-								
-						?>
-                        <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner-eca.gif" alt=""/>
+						<?php if(isset($this->advs_top) && ($this->advs_top)):?>
+								<?php foreach($this->advs_top as $value): ?>
+									<a href="<?php echo $value['url'] ?>" title="<?php echo $value['title'] ?>" target="<?php echo $value['type'] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>"  /></a>
+								<?php endforeach; ?>
+						<?php endif;?>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -159,9 +159,9 @@
                         <div class="frame-left-2">
                             <h3 class="title-support"><span>HỖ TRỢ TRỰC TUYẾN</span></h3>
                             <ul class="support">
-<?php $supports = new Supports();
-$values = $supports->listItem();
-foreach ($values as $value): ?>
+							<?php $supports = new Supports();
+								$values = $supports->listItem();
+									foreach ($values as $value): ?>
                                     <li>
                                         <div class="img-sport"><a href="ymsgr:sendim?<?php echo $value['support_value'] ?>"><img	src="http://opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=14&amp;l=us" class="img-support" alt="<?php echo $value['support_value'] ?>"/></a></div>
                                         <div class="right-spport"><p class="title-sport-right"><?php echo $value['support_name'] ?></p>
@@ -169,7 +169,7 @@ foreach ($values as $value): ?>
                                         </div>
                                         <div class="clear"></div>
                                     </li>
-<? endforeach ?>
+								<? endforeach ?>
                             </ul>
                         </div>
                         <!--End frame left 2-->
@@ -218,20 +218,15 @@ foreach ($values as $value): ?>
                             <p class="all-view-pro"><a href="#" title="">Xem thêm sản phẩm &raquo;</a></p>
                         </div>
                         <!--End frame left 1-->
-                        <h3 class="title-adv-left">ĐỐI TÁC VÀNG</h3>
-						<?php var_dump($this->advs_left);?>
-                        <ul class="adv-left">
-                            <li><a href="#" title="Khoi su doanh nghiep" target="_blank"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/kshg.jpg"
-                                                                                              alt="khoi su doanh nghiep"/></a>
-                            </li>
-                            <li><a href="http://www.vcbhcm.com.vn/tygia.htm" title="Ty gia ngoai te hom nay"
-                                   target="_blank"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/picture2.jpg" alt="Ty gia ngoai te"/></a></li>
-                            <li><a href="http://giavanghomnay.net/" title="Ty gia vang hom nay" target="_blank"><img
-                                        src="<?php echo Yii::app()->theme->baseUrl; ?>/images/timthumb.jpg" alt="Ty gia Vang"/></a></li>
-                            <li><a href="#" title="Cac trung tam phan phoi" target="_blank"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ttpp-copy.jpg"
-                                                                                                 alt="Cac trung tam phan phoi"/></a>
-                            </li>
-                        </ul>
+						<?php if(isset($this->advs_left) && ($this->advs_left)):?>
+						<h3 class="title-adv-left">ĐỐI TÁC VÀNG</h3>
+							<ul class="adv-left">
+								<?php foreach($this->advs_left as $value): ?>
+								<li><a href="<?php echo $value['url'] ?>" title="<?php echo $value['title'] ?>" target="<?php echo $value['type'] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>"  /></a>
+								</li>
+								<?php endforeach; ?>
+							</ul>
+						<?php endif;?>
                         <!--End doi tac vang-->
                         <h3 class="title-member-left-1">THÀNH VIÊN QUYÊN GÓP NHIỀU NHẤT</h3>
                         <ul class="list-member">
@@ -267,9 +262,9 @@ foreach ($values as $value): ?>
                             ));
                             ?><!-- breadcrumbs -->
 
-<?php endif ?>
+						<?php endif ?>
 
-<?php echo $content; ?>
+						<?php echo $content; ?>
 
                     </div>
                     <!--End right content-->
