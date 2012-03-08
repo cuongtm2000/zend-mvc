@@ -23,7 +23,7 @@ class DefaultController extends Controller {
             }
         }
         
-        $this->render(Yii::app()->session['template'] . '/index', array('item' => $items->firstItem(), 'contact' => $contact));
+        $this->render('index', array('item' => $items->firstItem(), 'contact' => $contact));
     }
 
 }

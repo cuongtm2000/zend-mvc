@@ -124,7 +124,11 @@ class Contact extends CActiveRecord {
 
 		return parent::beforeSave();
 	}
-
+	//Front end - First record
+	public function firstItem() {
+		$command = Yii::app()->db->createCommand('SELECT title, content, description FROM ' . $this->tableName() . ' WHERE hot=0 AND enable=1 ORDER BY record_order DESC, create_date LIMIT 0, 1');
+		return $command->queryRow();
+	}
 	//Back end - Update Record
 	private function updateSort($order, $id) {
 		$command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET record_order=:order WHERE record_id=:id');
