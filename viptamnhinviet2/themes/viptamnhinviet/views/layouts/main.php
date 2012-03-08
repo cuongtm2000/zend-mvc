@@ -49,8 +49,8 @@
                     'items' => array(
                         array('label' => 'Đăng ký thành viên', 'url' => array('/register'), 'visible' => Yii::app()->user->isGuest, 'linkOptions' => array('title' => 'Đăng ký thành viên')),
                         array('label' => 'Đăng nhập', 'url' => array('/login'), 'visible' => Yii::app()->user->isGuest, 'linkOptions' => array('title' => 'Đăng ký thành viên')),
-                        array('label' => 'Bảng điều khiển', 'url' => array('/user'), 'visible' => !Yii::app()->user->isGuest, 'linkOptions' => array('class' => 'none')),
-                        array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest, 'linkOptions' => array('class' => 'none')),
+                        array('label' => 'Chào '.Yii::app()->user->name .'','#', 'visible' => !Yii::app()->user->isGuest, 'linkOptions' => array('class' => 'none')),
+                        array('label' => 'Thoát', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest, 'linkOptions' => array('class' => 'none')),
                     ),
                 ));
                 ?>

@@ -8,7 +8,7 @@ class LogController extends Controller {
         if (isset($_GET['Log']))
             $model->attributes = $_GET['Log'];
 
-        $this->render('index', array(
+        $this->render('admin', array(
             'model' => $model,
         ));
     }

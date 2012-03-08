@@ -41,6 +41,7 @@ class User extends CActiveRecord {
     public function rules() {
         return array(
             array('username, password, password2, user_gioithieu,birthday, cmnd,email', 'required'),
+        //    array('username, user_gioithieu,birthday, cmnd,email', 'required', on=>'update'),
             /**/
             array('username', 'unique' /* ,'message'=>"{attribute} has already been taken." */, 'on' => 'create'),
             array('username, password, email, user_gioithieu', 'length', 'max' => 45),
@@ -152,6 +153,7 @@ class User extends CActiveRecord {
         $criteria->compare('user_gioithieu', $this->user_gioithieu, true);
         $criteria->compare('balance', $this->balance, true);
         $criteria->compare('level', $this->level);
+        $criteria->compare('enable',array(1));
 
         return new CActiveDataProvider($this, array(
                     'criteria' => $criteria,
@@ -223,14 +225,14 @@ class User extends CActiveRecord {
      */
     
     public function listTVthoatban(){
-        return Tables::model()->findAll('left_child != "" or right_child != ""');
+        return Tables::model()->findAll('left_child = "" or right_child = ""');
     }
     
     /*
      * 
      */
     public function listTVdatchuan() {
-        return Tables::model()->findAll('left_child != 0 or right_child != 0');
+        return Tables::model()->findAll('left_child !="" and right_child != ""');
     }
 
 
