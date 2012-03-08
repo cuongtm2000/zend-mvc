@@ -81,11 +81,25 @@ class UserController extends AdminController {
         $model = new User('active');
         if (isset($_POST)) {
             $model->activeItem($_POST);
-           //$this->redirect(Yii::app()->user->returnUrl);
+            $this->redirect(Yii::app()->user->returnUrl);
         }
         $this->render('active', array(
             'model' => $model->getUnActive(),
             'post' => $_POST,
+        ));
+    }
+    public function actionThoatban(){
+        $model = new User();
+        $this->render('thoatban', array(
+            'model' => $model->listTVthoatban(),
+  
+        ));
+    }
+    public function actionDatchuan(){
+        $model = new User();
+        $this->render('datchuan', array(
+            'model' => $model->listTVdatchuan(),
+  
         ));
     }
 
