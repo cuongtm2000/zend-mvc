@@ -179,6 +179,7 @@
                         <!--End frame left 2-->
                         <div class="frame-left-1">
                             <h3 class="title-left"><span>SẢN PHẨM TIÊU BIỂU</span></h3>
+							<?php var_dump($this->listItemHot);?>
                             <ul class="sub-ty-pro">
                                 <li>
                                     <div class="img-ty-pro">

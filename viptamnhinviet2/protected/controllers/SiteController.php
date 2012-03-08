@@ -25,7 +25,7 @@ class SiteController extends Controller {
 	 */
 	public function actionIndex() {
 		$products_class = new Products();
-		$this->render('index', array('listItemHot' => $products_class->listItemHot()));
+		$this->render('index', array('listItemNew' => $products_class->listItemNew()));
 	}
 
 	/**

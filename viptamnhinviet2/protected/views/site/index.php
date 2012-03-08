@@ -26,7 +26,7 @@
 </div>
 <h1 class="title-right"><span>SẢN PHẨM MỚI NHẤT</span></h1>
 <div class="frame-product">
-	<?php var_dump($listItemHot);?>
+	<?php var_dump($listItemNew);?>
     <div class="product">
         <div class="frame-img-pro"><a href="product-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/pro-1.jpg" alt=""  /></a></div>
     </div>
