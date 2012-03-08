@@ -285,7 +285,11 @@
                 </div>
                 <!--End gian hang tieu bieu-->
                 <div class="bg-hotline">
-					<?php var_dump($this->advs_bottom);?>
+					<?php if(isset($this->advs_bottom) && ($this->advs_bottom)):?>
+							<?php foreach($this->advs_bottom as $value): ?>
+								<a href="<?php echo $value['url'] ?>" title="<?php echo $value['title'] ?>" target="<?php echo $value['type'] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>"  /></a>
+							<?php endforeach; ?>
+					<?php endif;?>
                     <p class="title-sport-right">HT KINH DOANH</p>
 
                     <p><b>Mr.Nam</b> 0987 976 879</p>
