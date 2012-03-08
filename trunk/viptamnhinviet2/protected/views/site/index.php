@@ -18,8 +18,11 @@
 </div>
 
 <div class="img-new">
-	<?php var_dump($this->advs_center);?>
-	<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/datvemaybay.jpg" alt="tin tuc" />
+	<?php if(isset($this->advs_center) && ($this->advs_center)):?>
+			<?php foreach($this->advs_center as $value): ?>
+				<a href="<?php echo $value['url'] ?>" title="<?php echo $value['title'] ?>" target="<?php echo $value['type'] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>"  /></a>
+			<?php endforeach; ?>
+	<?php endif;?>
 </div>
 <h1 class="title-right"><span>SẢN PHẨM MỚI NHẤT</span></h1>
 <div class="frame-product">
