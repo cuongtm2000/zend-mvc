@@ -91,7 +91,12 @@ class UserController extends Controller {
             throw new CHttpException(400, 'Invalid request. Please do not repeat this request again.');
     }
 
-
+    /**
+     * Lists all models.
+     */
+    public function actionIndex() {
+        
+    }
 
     public function actionMap() {
         $user = new User();
@@ -129,7 +134,24 @@ class UserController extends Controller {
             'model' => $model,
         ));
     }
+    
+    public function actionActive(){
+        $model = new User('active');
+        if (isset($_POST)) {
+            $model->activeItem($_POST);
+           //$this->redirect(Yii::app()->user->returnUrl);
+        }
+        $this->render('active', array(
+            'model' => $model->getUnActive(),
+            'post' => $_POST,
+        ));
+    }
 
+    /**
+     * Returns the data model based on the primary key given in the GET variable.
+     * If the data model is not found, an HTTP exception will be raised.
+     * @param integer the ID of the model to be loaded
+     */
     public function loadModel($id) {
         $model = User::model()->findByPk($id);
         if ($model === null)

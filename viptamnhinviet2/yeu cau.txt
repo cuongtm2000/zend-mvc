@@ -1,12 +1,9 @@
-Form đăng kí thành viên
-Đăng nhập
-Xem cây hệ thống 
+
+ 
 
 
 
 Bàn
-Lịch sử giao dịch
-
 
         Lần 1 cần 4 vị trí
         Lần 2 cần 4 vị trí
