@@ -22,9 +22,9 @@
 
 
         <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.prettyPhoto.js"></script>
-
-        <script type="text/javascript"
-        src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.advancedSlider.min.js"></script>
+		
+		<?php if($this->banners):?>
+        <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.advancedSlider.min.js"></script>
         <!--[if IE]>
         <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/excanvas.compiled-ie.js"></script>
         <![endif]-->
@@ -32,9 +32,10 @@
         <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.sider.banner.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
-                runbanner(686, 255);
+                runbanner(686,255);
             });
         </script>
+		<?php endif;?>
     </head>
     <body>
         <div id="wrapper">
@@ -62,7 +63,10 @@
                                 src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo"/></a></div>
                     <!--End header left-->
                     <div class="banner-eca">
-						<?php var_dump($this->advs_top);?>
+						<?php  
+								var_dump($this->advs_top);
+								
+						?>
                         <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner-eca.gif" alt=""/>
                     </div>
                     <div class="clear"></div>
@@ -78,15 +82,17 @@
 
                 <div class="clear"></div>
                 <div id="banner">
-					<?php var_dump($this->banners);?>
-                    <ul class="slider">
-                        <li class="slider-item"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner.jpg" alt="banner"/>
-                        </li>
-                        <li class="slider-item"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner1.jpg" alt="banner"/>
-                        </li>
-                        <li class="slider-item"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banne2.jpg" alt="banner"/>
-                        </li>
-                    </ul>
+					<?php if($this->banners): ?>
+					<ul class="slider">
+						<?php foreach($this->banners as $value): ?>
+						<li class="slider-item"><a href="<?php echo $value['banner_link'] ?>" title="">
+							<img src="<?php echo Yii::app()->request->baseUrl.USERFILES; ?>/banners/<?php echo $value['banner_url'] ?>" alt="<?php echo $value['banner_name'] ?>" /></a></li>
+						<?php endforeach ?>
+					</ul>
+					<?php else : ?>
+					
+					<?php endif; ?>
+					
                     <!--End slider banner-->
                     <div class="video">
                         <a href="http://youtu.be/_-UIaGgRxkA" rel="prettyPhoto" title="Khoa Thương Mại điện tử - ĐH Thương Mại"><img

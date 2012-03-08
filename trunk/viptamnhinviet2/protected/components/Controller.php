@@ -26,5 +26,7 @@ class Controller extends CController {
 		$this->advs_center = $advs_class->listItemsByPosition('center');
 		$this->advs_top = $advs_class->listItemsByPosition('top');
 		$this->advs_bottom = $advs_class->listItemsByPosition('bottom');
+		
+		define('USERFILES', '/public/userfiles/images/viptamnhinviet/images');
 	}
 }
