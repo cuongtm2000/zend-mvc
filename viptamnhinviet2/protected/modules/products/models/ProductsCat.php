@@ -34,8 +34,8 @@ class ProductsCat extends CActiveRecord {
 	private $_model;
 	private $_oldImage_full;
 
-	//private $_sub_cat_num = 0;
-	//private $_sub_num_item = 0;
+	private $_sub_cat_num = 0;
+	private $_sub_num_item = 0;
 
 	public static function model($className = __CLASS__) {
 		return parent::model($className);
@@ -55,7 +55,7 @@ class ProductsCat extends CActiveRecord {
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('cat_title, tag, description, cat_order', 'required'),
+			array('cat_title, tag, description', 'required'),
 			array('cat_parent_id, cat_order, cat_enable', 'numerical', 'integerOnly' => true),
 			array('cat_title, cat_titleen, tag, pic_full', 'length', 'max' => 100),
 			array('description', 'length', 'max' => 250),
@@ -144,7 +144,6 @@ class ProductsCat extends CActiveRecord {
 
 		if ($this->isNewRecord) {
 			$this->cat_order = $this->maxRecordOrder();
-			$this->dos_usernames_username = Yii::app()->user->id;
 			if ($_FILES['ProductsCat']['name']['pic_full']) {
 				Yii::import('ext.EUploadedImage.EUploadedImage');
 				$this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(143, 141, USERFILES . '/productsCat', $this->cat_title);
@@ -160,6 +159,23 @@ class ProductsCat extends CActiveRecord {
 		}
 
 		return parent::beforeSave();
+	}
+
+	//Front end - find cat_id by tag
+	public function findCatByTag($tag) {
+		$command = Yii::app()->db->createCommand('SELECT cat_id, cat_title, tag FROM ' . $this->tableName() . ' WHERE tag=:tag');
+		$command->bindParam(':tag', $tag, PDO::PARAM_STR);
+		return $command->queryRow();
+	}
+
+	//Front end - list menu
+	public function listItem($cid = 0) {
+		if ($cid != 0) {
+			$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title, tag, pic_full FROM ' . $this->tableName() . ' WHERE cat_parent_id=' . $cid . ' AND cat_enable=1 ORDER BY cat_order DESC');
+		} else {
+			$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title, tag, pic_full FROM ' . $this->tableName() . ' WHERE cat_enable=1 ORDER BY cat_order DESC');
+		}
+		return $command->queryAll();
 	}
 
 	//Front end - List record for index
@@ -291,5 +307,89 @@ class ProductsCat extends CActiveRecord {
 			throw new CHttpException(404, 'The requested page does not exist.');
 		}
 		return $this->_model;
+	}
+
+	//Back end - Get info cat
+	public function getInfoCat($id) {
+		$command = Yii::app()->db->createCommand('SELECT cat_title FROM ' . $this->tableName() . ' WHERE cat_id=:id');
+		$command->bindParam(":id", $id, PDO::PARAM_INT);
+		return $command->queryScalar();
+	}
+
+	//Back end - Get info cat
+	public function countItemCat($id) {
+		$user = Yii::app()->user->id;
+		$command = Yii::app()->db->createCommand('SELECT COUNT(record_id) AS numcat FROM ' . $this->tableName() . ', dos_module_products WHERE ' . $this->tableName() . '.cat_id=dos_module_products.dos_module_item_cat_cat_id AND cat_id=:id');
+		$command->bindParam(":id", $id, PDO::PARAM_INT);
+		return $command->queryScalar();
+	}
+
+	public function countSubcat($id) {
+		$this->loopCat($id);
+		return array('sub_cat_num' => $this->_sub_cat_num, 'sub_num_item' => $this->_sub_num_item);
+	}
+
+	private function loopCat($id) {
+		$command = Yii::app()->db->createCommand('SELECT cat_id FROM ' . $this->tableName() . ' WHERE cat_parent_id=:id');
+		$command->bindParam(":id", $id, PDO::PARAM_INT);
+		$result = $command->queryAll();
+
+		foreach ($result as $value) {
+			$this->_sub_cat_num++;
+			$this->_sub_num_item += $this->countItembyCat($value['cat_id']);
+			$this->loopCat($value['cat_id']);
+		}
+	}
+
+	private function countItembyCat($id) {
+		$model = new Products();
+		return $model->countItemByCat($id);
+	}
+
+	//Xóa tất cả item của phân loại con
+	public function loopDelItemtoCat($cat_id) {
+		$command = Yii::app()->db->createCommand('SELECT cat_id FROM ' . $this->tableName() . ' WHERE cat_parent_id=:id');
+		$command->bindParam(":id", $cat_id, PDO::PARAM_INT);
+		$result = $command->queryAll();
+
+		$product = new Products();
+		foreach ($result as $value) {
+			//update dos_module_product_cat_cat_id
+			$product->deleteItembyCat($value['cat_id']);
+			$this->loopDelItemtoCat($value['cat_id']);
+		}
+	}
+
+	//xóa phân loại con
+	public function loopDelSubCat($cat_id) {
+		$command = Yii::app()->db->createCommand('SELECT cat_id FROM ' . $this->tableName() . ' WHERE cat_parent_id=:cid');
+		$command->bindParam(":cid", $cat_id, PDO::PARAM_INT);
+		$result = $command->queryAll();
+
+		foreach ($result as $value) {
+			$this->deleteRecord($value['cat_id']);
+			$this->loopDelSubCat($value['cat_id']);
+		}
+	}
+	//Back end - Delete Record
+	public function deleteRecord($id) {
+		$item = ProductsCat::model()->find('cat_id=:id', array(':id' => $id));
+		$path = YiiBase::getPathOfAlias('webroot') . USERFILES . '/ProductsCat/';
+		//Del pic_full field
+		if (($item->pic_full)) {
+			if (file_exists($path . $item->pic_full)) {
+				unlink($path . $item->pic_full);
+			}
+		}
+		//Del pic_desc field
+		if (($item->pic_desc)) {
+			$str = explode('|', $item->pic_desc);
+			foreach ($str as $value) {
+				if (file_exists($path . $value)) {
+					unlink($path . $value);
+				}
+			}
+		}
+		ProductsCat::model()->findByPk($id)->delete(); //delete record
 	}
 }

@@ -170,7 +170,25 @@ class Products extends CActiveRecord {
                 ));
     }
 
-    public function afterFind() {
+	//Front end - list Item by Cat
+	public function listItemByCat($cid) {
+		$criteria = new CDbCriteria();
+		$criteria->select = 'title, pic_thumb, tag, unit';
+		$criteria->order = 'record_order DESC, postdate DESC';
+		$criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
+		$criteria->params = array(':cid' => $cid);
+
+		$count = Products::model()->count($criteria);
+
+		// elements per page
+		$pages = new CPagination($count);
+		$pages->pageSize = 8;
+		$pages->applyLimit($criteria);
+
+		return array('models' => Products::model()->findAll($criteria), 'pages' => $pages);
+	}
+
+    /*public function afterFind() {
         parent::afterFind();
         $this->_oldImage_thumb = $this->pic_thumb;
         $this->_oldImage_full = $this->pic_full;
@@ -269,23 +287,7 @@ class Products extends CActiveRecord {
 		return $command->queryAll();
 	}
 
-    //Front end - list Item by Cat
-    public function listItemByCat($cid) {
-        $criteria = new CDbCriteria();
-        $criteria->select = 'title' . LANG . ', pic_thumb, tag, unit';
-        $criteria->order = 'record_order DESC, postdate DESC';
-        $criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
-        $criteria->params = array(':cid' => $cid);
 
-        $count = Products::model()->count($criteria);
-
-        // elements per page
-        $pages = new CPagination($count);
-        $pages->pageSize = 8;
-        $pages->applyLimit($criteria);
-
-        return array('models' => Products::model()->findAll($criteria), 'pages' => $pages);
-    }
 
     //Front end - get detail item
     public function detailItem($tag) {
@@ -337,7 +339,7 @@ class Products extends CActiveRecord {
     }
 
     //Back end - remove pic
-    /*private function removePic($item, $type = 0) {
+    private function removePic($item, $type = 0) {
         $path = YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . '/';
         if ($type == 0) {
             if ($item && file_exists($path . $item)) {
@@ -353,7 +355,7 @@ class Products extends CActiveRecord {
                 }
             }
         }
-    }*/
+    }
 
     //Back end - Delete Record
     public function deleteRecord($id) {
@@ -464,51 +466,9 @@ class Products extends CActiveRecord {
         return $this->_model;
     }
 
-    //Back end - count item by cat
-    public function countItemByCat($id) {
-        $command = Yii::app()->db->createCommand('SELECT COUNT(record_id) FROM ' . $this->tableName() . ' WHERE dos_module_item_cat_cat_id=:id');
-        $command->bindParam(":id", $id, PDO::PARAM_INT);
-        return $command->queryScalar();
-    }
 
-    //Back end - delete Item for Cat
-    public function delItembyCat($data = NULL) {
-        $id = $data->getQuery('id');
-        $command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE dos_module_item_cat_cat_id=:id');
-        $command->bindParam(":id", $id, PDO::PARAM_INT);
-        $result = $command->queryAll();
 
-        if ($data->getPost('delitems') == 'del') {
-            foreach ($result as $value) {
-                //delete item
-                $this->deleteRecord($value['record_id']); //delete record
-            }
-        } elseif ($data->getPost('delitems') == 'move') {
-            $cat_move = $data->getPost('catmove');
-            foreach ($result as $value) {
-                //move item
-                $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET dos_module_item_cat_cat_id=:cid WHERE record_id=:id');
-                $command->bindParam(":cid", $cat_move, PDO::PARAM_INT);
-                $command->bindParam(":id", $value['record_id'], PDO::PARAM_INT);
-                $command->execute();
-            }
-        }
-        //move all subcat to new cat parent
-        $cat = new ProductsCat();
-        if ($data->getPost('delcat') == 'move') {
-            $cat->findcatParent($id, $data->getPost('movetocat'));
-        } elseif ($data->getPost('delcat') == 'del') {
-            if ($data->getPost('movecat') == 'del') {
-                $cat->loopDelItemtoCat($id);
-            } elseif ($data->getPost('movecat') == 'move') {
-                $cat->loopMoveItemtoCat($id, $data->getPost('moveprotocat'));
-            }
-            //delete all subcat
-            $cat->loopDelSubCat($id);
-        }
-        //delete cat
-        $cat->deleteRecord($id);
-    }
+
 
     //delete item new cat
     public function deleteItembyCat($cat_id) {
@@ -534,5 +494,49 @@ class Products extends CActiveRecord {
         $command = Yii::app()->db->createCommand('SELECT COUNT(record_id) AS num FROM ' . $this->tableName() . ', ' . $this->tableName() . '_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = ' . $this->tableName() . '_cat.cat_id AND dos_usernames_username=:user');
         $command->bindParam(":user", $user, PDO::PARAM_STR);
         return $command->queryScalar();
-    }
+    }*/
+	//Back end - count item by cat
+	public function countItemByCat($id) {
+		$command = Yii::app()->db->createCommand('SELECT COUNT(record_id) FROM ' . $this->tableName() . ' WHERE dos_module_item_cat_cat_id=:id');
+		$command->bindParam(":id", $id, PDO::PARAM_INT);
+		return $command->queryScalar();
+	}
+	//Back end - delete Item for Cat
+	public function delItembyCat($data = NULL) {
+		$id = $data->getQuery('id');
+		$command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE dos_module_item_cat_cat_id=:id');
+		$command->bindParam(":id", $id, PDO::PARAM_INT);
+		$result = $command->queryAll();
+
+		if ($data->getPost('delitems') == 'del') {
+			foreach ($result as $value) {
+				//delete item
+				$this->deleteRecord($value['record_id']); //delete record
+			}
+		} elseif ($data->getPost('delitems') == 'move') {
+			$cat_move = $data->getPost('catmove');
+			foreach ($result as $value) {
+				//move item
+				$command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET dos_module_item_cat_cat_id=:cid WHERE record_id=:id');
+				$command->bindParam(":cid", $cat_move, PDO::PARAM_INT);
+				$command->bindParam(":id", $value['record_id'], PDO::PARAM_INT);
+				$command->execute();
+			}
+		}
+		//move all subcat to new cat parent
+		$cat = new ProductsCat();
+		if ($data->getPost('delcat') == 'move') {
+			$cat->findcatParent($id, $data->getPost('movetocat'));
+		} elseif ($data->getPost('delcat') == 'del') {
+			if ($data->getPost('movecat') == 'del') {
+				$cat->loopDelItemtoCat($id);
+			} elseif ($data->getPost('movecat') == 'move') {
+				$cat->loopMoveItemtoCat($id, $data->getPost('moveprotocat'));
+			}
+			//delete all subcat
+			$cat->loopDelSubCat($id);
+		}
+		//delete cat
+		$cat->deleteRecord($id);
+	}
 }
