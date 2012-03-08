@@ -43,7 +43,7 @@ class Common {
                 echo '</li>';
             }
         }
-    }
+    }*/
 
     //Back end - remove pic
     public function removePic($item, $type = 0, $path = 0) {
@@ -62,7 +62,7 @@ class Common {
                 }
             }
         }
-    }*/
+    }
 
     //Front end - Create folder and Chmod
     public function recursiveMkdir($path, $mode = 0777) {
