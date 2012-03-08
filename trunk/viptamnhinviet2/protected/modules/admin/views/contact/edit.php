@@ -1,28 +1,24 @@
 <?php $form = $this->beginWidget('CActiveForm', array('id'=>'frm', 'enableAjaxValidation'=>true, 'enableClientValidation' =>true,));?>
     <?php echo $form->errorSummary($model, ''); ?>
     <fieldset>
-        <legend>Thêm bài viết mới</legend>
+        <legend>Chỉnh sửa bài viết</legend>
 
-        <?php $lang = explode('|', Yii::app()->user->language); foreach($lang as $value): $value = ($value=='vi') ? '' : $value;?>
-        <div class="col1"><?php echo $form->labelEx($model, $this->lang['title'.$value]) ?></div>
+        <div class="col1"><?php echo $form->labelEx($model, 'title') ?></div>
         <div class="col2">
-            <?php echo $form->textField($model, 'title'.$value, array('class'=>'txt-very-large')); ?>
+            <?php echo $form->textField($model, 'title', array('class'=>'txt-very-large')); ?>
         </div>
         <div class="clear space"></div>
-        <?php endforeach; ?>
 
-        <?php $lang = explode('|', Yii::app()->user->language); foreach($lang as $value): $value = ($value=='vi') ? '' : $value;?>
-        <div class="col1"><?php echo $form->labelEx($model, $this->lang['content'.$value]) ?></div>
+        <div class="col1"><?php echo $form->labelEx($model, 'content') ?></div>
         <div class="col2">
-            <?php echo $form->textArea($model, 'content'.$value, array('cols'=>20, 'rows'=>10)); ?>
+            <?php echo $form->textArea($model, 'content', array('cols'=>20, 'rows'=>10)); ?>
             <script type="text/javascript">
             //<![CDATA[
-                    CKEDITOR.replace('<?php echo get_class($model)?>[content<?php echo $value ?>]');
+                    CKEDITOR.replace('<?php echo get_class($model)?>[content]');
             //]]>
             </script>
         </div>
         <div class="clear space"></div>
-        <?php endforeach; ?>
 
         <div class="col1"><?php echo $form->labelEx($model, 'tag') ?></div>
         <div class="col2">
@@ -50,7 +46,7 @@
 
         <div class="col1">&nbsp;</div>
         <div class="col2">
-            <?php echo CHtml::submitButton('Thêm mới', array('name'=>'submit', 'class'=>'login', 'title'=>'Thêm mới')); ?>
+            <?php echo CHtml::submitButton('Chỉnh sửa', array('name'=>'submit', 'class'=>'login', 'title'=>'Chỉnh sửa')); ?>
             <?php echo Chtml::link('Hủy bỏ', 'javascript:history.back()', array('class'=>'login-a', 'title'=>'Back')) ?>
         </div>
         <div class="clear space"></div>

@@ -18,11 +18,8 @@
  * @property string $enable
  */
 class Contact extends CActiveRecord {
-	/**
-	 * Returns the static model of the specified AR class.
-	 * @param string $className active record class name.
-	 * @return Contact the static model class
-	 */
+	private $_model;
+
 	public static function model($className = __CLASS__) {
 		return parent::model($className);
 	}
@@ -110,6 +107,7 @@ class Contact extends CActiveRecord {
 			'criteria' => $criteria,
 		));
 	}
+
 	public function beforeSave() {
 		$purifier = new CHtmlPurifier();
 		$this->title = $purifier->purify($this->title);
@@ -126,6 +124,7 @@ class Contact extends CActiveRecord {
 
 		return parent::beforeSave();
 	}
+
 	//Back end - Update Record
 	private function updateSort($order, $id) {
 		$command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET record_order=:order WHERE record_id=:id');
@@ -209,6 +208,25 @@ class Contact extends CActiveRecord {
 			}
 		}
 	}
+
+	//Back end - Get max record
+	public function maxRecordOrder() {
+		$command = Yii::app()->db->createCommand('SELECT max(record_order) AS max FROM ' . $this->tableName());
+		return $command->queryScalar() + 1;
+	}
+
+	//Back end - Get record to Edit
+	public function loadEdit($id) {
+		$criteria = new CDbCriteria();
+
+		$this->_model = Contact::model()->findByPk($id, $criteria);
+
+		if ($this->_model === null) {
+			throw new CHttpException(404, 'The requested page does not exist.');
+		}
+		return $this->_model;
+	}
+
 	//Back end - List item admin
 	public function listItemAdmin() {
 		$criteria = new CDbCriteria();
