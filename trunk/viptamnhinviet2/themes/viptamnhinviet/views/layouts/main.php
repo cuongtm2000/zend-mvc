@@ -294,17 +294,7 @@
 								<a href="<?php echo $value['url'] ?>" title="<?php echo $value['title'] ?>" target="<?php echo $value['type'] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>"  /></a>
 							<?php endforeach; ?>
 					<?php endif;?>
-                    <p class="title-sport-right">HT KINH DOANH</p>
-
-                    <p><b>Mr.Nam</b> 0987 976 879</p>
-
-                    <p class="title-sport-right">HT SẢN PHẨM</p>
-
-                    <p><b>Mr.Tân</b> 0908 273 266</p>
-
-                    <p class="title-sport-right">HT ĐĂNG TIN VÀ SẢN PHẨM</p>
-
-                    <p>0618 850 747</p>
+					<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-fter.jpg" alt=""/>
                 </div>
                 <!--End frame hotline-->
                 <div id="footer">
