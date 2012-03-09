@@ -67,8 +67,8 @@ a:hover{color:#000;}
 /*San pham tieu bieu anh khuyen mai moi */
 .sub-ty-pro{list-style:none;background:#F4F4F4}
 .sub-ty-pro li{border-bottom:1px dashed #BBBBBB;padding:5px 0 5px 0; margin:0 0 5px 0}
-.all-view-pro{text-align:right;padding:5px 0}
-.all-view-pro a{color:#FF7200} .all-view-pro a:hover{color:#00F}
+.all-view-pro{text-align:right;font-size:8pt;padding:5px 0;font-style:italic}
+.all-view-pro a{color:#666} .all-view-pro a:hover{color:#CC0000}
 
 .img-ty-pro{float:left; width:55px}
 
