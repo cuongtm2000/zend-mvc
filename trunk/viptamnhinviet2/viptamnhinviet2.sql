@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 08, 2012 at 10:13 AM
+-- Generation Time: Mar 09, 2012 at 05:23 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -40,10 +40,14 @@ CREATE TABLE IF NOT EXISTS `dos_langs` (
 
 INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('about', 'Giới thiệu', 'About us', 0),
+('address', 'Trụ sở: Lô L4,KP.1, P.Bửu Long, Biên Hòa, Đồng Nai', NULL, 0),
 ('advs', 'Quảng cáo', 'Adv', 0),
 ('banners', 'Logo &amp; Banner', 'Logo &amp; Banner', 0),
 ('contact', 'Liên hệ', 'Contact', 0),
+('copyright', 'Bản quyền 2012 thuộc về <strong>CÔNG TY CỔ PHẦN TM - DV VIP TẦM NHÌN VIỆT</strong>', NULL, 0),
 ('default', 'Trang chủ', 'Home page', 0),
+('fax', 'Fax: <span>0618 850 747</span>', NULL, 0),
+('phone', 'Điện thoại: 0618 850 747', NULL, 0),
 ('products', 'Sản phẩm', 'Products', 0),
 ('services', 'Dịch vụ', 'Services', 0),
 ('supports', 'Hỗ trợ trực tuyến', 'Online support', 0);
@@ -135,7 +139,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `description`, `activated`) VALUES
 (2, 'Giới thiệu', NULL, '<p>\r\n	Chi tiết</p>\r\n', NULL, 15, '2012-03-07 03:24:59', 1, 0, NULL, NULL, 'gioi-thieu', 'Mô tả', 1),
-(3, 'Tiêu đề giới thiệu', NULL, '<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n', NULL, 83, '2012-03-07 03:25:14', 2, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'Mô tả', 1);
+(3, 'Tiêu đề giới thiệu', NULL, '<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n', NULL, 99, '2012-03-07 03:25:14', 2, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'Mô tả', 1);
 
 -- --------------------------------------------------------
 
@@ -309,7 +313,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `record_order` int(11) NOT NULL DEFAULT '1',
   `unit` int(11) DEFAULT NULL,
   `hot` tinyint(1) NOT NULL DEFAULT '0',
-  `specials` tinyint(1) DEFAULT NULL,
+  `specials` tinyint(1) DEFAULT '0',
   `extra_field1` varchar(100) DEFAULT NULL,
   `extra_field2` varchar(100) DEFAULT NULL,
   `extra_field3` varchar(100) DEFAULT NULL,
@@ -320,7 +324,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`),
   KEY `fk_dos_module_products_dos_module_usernames1` (`dos_module_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `dos_module_products`
+--
+
+INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `detail`, `detailen`, `tag`, `description`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`, `dos_module_usernames_username`) VALUES
+(5, 'asdasdasdsaas asdas', NULL, '2012-03-08 09:46:11', 'asdasdasdsaas-asdas-thumb-3.jpg', 'asdasdasdsaas-asdas.jpg', NULL, NULL, NULL, '<p>\r\n	dasda dsasdas</p>\r\n', NULL, 'asdasdasdsaas-asdas', 'asd dasdas asd', 0, 1, NULL, 1, 0, NULL, NULL, NULL, NULL, 1, 10, 'viptamnhinviet'),
+(6, 'San pham', NULL, '2012-03-09 00:24:04', 'san-pham-thumb-4.jpg', 'san-pham-2.jpg', NULL, NULL, NULL, '<p>\r\n	Chi itet</p>\r\n', NULL, 'san-pham', 'Mô tả', 0, 2, NULL, 0, NULL, NULL, NULL, NULL, NULL, 1, 10, 'viptamnhinviet');
 
 -- --------------------------------------------------------
 
@@ -344,17 +356,20 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `cat_extra2` varchar(45) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
 --
 
 INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `description`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
-(4, 0, 'Danh mục 1', NULL, NULL, NULL, 'danh-muc-1', 'Danh muc 1', 'danh-muc-1.jpg', NULL, 1, NULL, NULL, 1),
+(4, 7, 'Danh mục 1', NULL, NULL, NULL, 'danh-muc-1', 'Danh muc 1', 'danh-muc-1.jpg', NULL, 3, NULL, NULL, 1),
 (5, 0, 'Danh mục 2', NULL, NULL, NULL, 'danh-muc-2', 'Danh mục 2', 'danh-muc-2.jpg', NULL, 2, NULL, NULL, 1),
-(6, 0, 'Danh mục 3', NULL, NULL, NULL, 'danh-muc-3', 'Danh mục 3', 'danh-muc-3.jpg', NULL, 3, NULL, NULL, 1),
-(7, 0, 'Danh mục 4', NULL, NULL, NULL, 'danh-muc-4', 'Danh mục 4', 'danh-muc-4.jpg', NULL, 4, NULL, NULL, 1);
+(6, 0, 'Danh mục 3', NULL, NULL, NULL, 'danh-muc-3', 'Danh mục 3', 'danh-muc-3.jpg', NULL, 1, NULL, NULL, 1),
+(7, 0, 'Danh mục 4', NULL, NULL, NULL, 'danh-muc-4', 'Danh mục 4', 'danh-muc-4.jpg', NULL, 4, NULL, NULL, 1),
+(8, 0, 'asdasdasdas', NULL, NULL, NULL, 'asdasdasdas', 'asdasdsa', 'asdasdasdas.png', NULL, 5, NULL, NULL, 1),
+(9, 0, 'asdasdasda', NULL, NULL, NULL, 'asdasdasda', 'asdasdasdsa', 'asdasdasda.png', NULL, 6, NULL, NULL, 1),
+(10, 0, 'Danh mục', NULL, NULL, NULL, 'danh-muc', 'afasfasf', 'dasfa.png', NULL, 7, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 

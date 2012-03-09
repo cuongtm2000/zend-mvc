@@ -230,7 +230,7 @@
 							</ul>
 						<?php endif;?>
                         <!--End doi tac vang-->
-                        <h3 class="title-member-left-1">THÀNH VIÊN QUYÊN GÓP NHIỀU NHẤT</h3>
+                        <!-- <h3 class="title-member-left-1">THÀNH VIÊN QUYÊN GÓP NHIỀU NHẤT</h3>
                         <ul class="list-member">
                             <li><label><strong>KenNguyen</strong></label> <span>2619 <b>K</b></span>
 
@@ -240,9 +240,9 @@
 
                                 <div class="clear"></div>
                             </li>
-                        </ul>
+                        </ul> -->
                         <!--End thanh vien quyen gop nhieu nhat-->
-                        <h3 class="title-member-left-2">THÀNH VIÊN QUYÊN GÓP MỚI NHẤT</h3>
+                        <!-- <h3 class="title-member-left-2">THÀNH VIÊN QUYÊN GÓP MỚI NHẤT</h3>
                         <ul class="list-member-2 list-member">
                             <li><label><strong>KenNguyen</strong></label> <span>2619 <b>K</b></span>
 
@@ -252,39 +252,26 @@
 
                                 <div class="clear"></div>
                             </li>
-                        </ul>
+                        </ul> -->
                         <!--End thanh vien quyen gop moi nhat-->
                     </div>
                     <!--End left content-->
                     <div id="right-content">
-                        <?php if (isset($this->breadcrumbs)): ?>
-                            <?php
-                            $this->widget('zii.widgets.CBreadcrumbs', array(
-                                'links' => $this->breadcrumbs,
-                            ));
-                            ?><!-- breadcrumbs -->
-
-						<?php endif ?>
-
 						<?php echo $content; ?>
-
                     </div>
                     <!--End right content-->
                     <div class="clear"></div>
                 </div>
                 <!--End content-->
-                <div class="frame-left-2">
+                <!-- <div class="frame-left-2">
                     <h3 class="title-booth"><span>GIAN HÀNG TIÊU BIỂU CỦA VIP TẦM NHÌN VIỆT</span></h3>
-
                     <div class="bg-booth">
                         <div class="item-booth">
                             <div class="img-booth"><a href="#" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/pro-ty.jpg" alt=""/></a></div>
                             <h3 class="title-member"><a href="#" title="">xuanchien</a></h3>
                         </div>
-
-
                     </div>
-                </div>
+                </div> -->
                 <!--End gian hang tieu bieu-->
                 <div class="bg-hotline">
 					<?php if(isset($this->advs_bottom) && ($this->advs_bottom)):?>
@@ -314,7 +301,7 @@
                         <div class="right-fter">
                             <p>Giấy phép kinh doanh số: 3602648481</p>
                             <p>Do Sở Kế Hoạch và Đầu Tư Tỉnh Đồng Nai cấp ngày: 11 tháng 11 năm 2011</p>
-                            <p class="statistics">Lượt truy cập : <span>10.999.990</span> - Trực Tuyến : <span>300</span></p>
+                            <p class="statistics">Lượt truy cập : <span><?php echo Yii::app()->counter->getTotal(); ?></span> - Trực Tuyến : <span><?php echo Yii::app()->counter->getOnline(); ?></span></p>
                             <p>Design by <a href="http://dos.vn" title="Dos.vn" target="_blank">Dos.vn</a></p>
                         </div>
                         <!--End right fter-->
