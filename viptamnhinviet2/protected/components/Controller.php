@@ -6,6 +6,8 @@ class Controller extends CController {
 	public $menu = array();
 	public $breadcrumbs = array();
 
+	public $lang = array(); //language
+
 	public $menu_product;
 	public $banners;
 	public $advs_left;
@@ -15,6 +17,9 @@ class Controller extends CController {
 	public $listItemHot;
 
 	public function init() {
+		//Setup lang
+		$this->lang = Langs::setLangs();
+
 		Yii::app()->getModule('products');
 		$product_cat_class = new ProductsCat();
 		$this->menu_product = $product_cat_class->listCats();
