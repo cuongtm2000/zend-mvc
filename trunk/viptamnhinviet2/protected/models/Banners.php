@@ -118,16 +118,22 @@ class Banners extends CActiveRecord {
 		if ($this->isNewRecord) {
 			$this->banner_order = $this->maxRecordOrder();
 			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['banner_url']) {
+				$width = Configs::configTemplate($this->banner_type.'_width', Yii::app()->params['template']);
+				$height = Configs::configTemplate($this->banner_type.'_height', Yii::app()->params['template']);
+
 				//import class upload images
 				Yii::import('ext.EUploadedImage.EUploadedImage');
-				$this->banner_url = EUploadedImage::getInstance($this, 'banner_url')->processUpload(($this->banner_type=='logo') ? 148 : 686, ($this->banner_type=='logo') ? 67 : 255, USERFILES . '/' . Yii::app()->controller->id, $this->banner_name, '', $this->change_file_name, $this->txt_file_name);
+				$this->banner_url = EUploadedImage::getInstance($this, 'banner_url')->processUpload(($this->banner_type=='logo') ? $width : $height, ($this->banner_type=='logo') ? $width : $height, USERFILES . '/' . Yii::app()->controller->id, $this->banner_name, '', $this->change_file_name, $this->txt_file_name);
 			}
 		} else {
 			//check file old and upload
 			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['banner_url']) {
+				$width = Configs::configTemplate($this->banner_type.'_width', Yii::app()->params['template']);
+				$height = Configs::configTemplate($this->banner_type.'_height', Yii::app()->params['template']);
+
 				//import class upload images
 				Yii::import('ext.EUploadedImage.EUploadedImage');
-				$this->banner_url = EUploadedImage::getInstance($this, 'banner_url')->processUpload(($this->banner_type=='logo') ? 148 : 686, ($this->banner_type=='logo') ? 67 : 255, USERFILES . '/' . Yii::app()->controller->id, $this->banner_name, $this->_oldImage);
+				$this->banner_url = EUploadedImage::getInstance($this, 'banner_url')->processUpload(($this->banner_type=='logo') ? $width : $height, ($this->banner_type=='logo') ? $width : $height, USERFILES . '/' . Yii::app()->controller->id, $this->banner_name, $this->_oldImage);
 			} else {
 				$this->banner_url = $this->_oldImage;
 			}

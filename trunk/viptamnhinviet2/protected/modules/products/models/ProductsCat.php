@@ -145,14 +145,20 @@ class ProductsCat extends CActiveRecord {
 		if ($this->isNewRecord) {
 			$this->cat_order = $this->maxRecordOrder();
 			if ($_FILES['ProductsCat']['name']['pic_full']) {
+				$width = Configs::configTemplate('products_cat_width', Yii::app()->params['template']);
+				$height = Configs::configTemplate('products_cat_height', Yii::app()->params['template']);
+
 				Yii::import('ext.EUploadedImage.EUploadedImage');
-				$this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(143, 141, USERFILES . '/productsCat', $this->cat_title);
+				$this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload($width, $height, USERFILES . '/productsCat', $this->cat_title);
 			}
 		} else {
 			//check file old and upload
 			if ($_FILES['ProductsCat']['name']['pic_full']) {
+				$width = Configs::configTemplate('products_cat_width', Yii::app()->params['template']);
+				$height = Configs::configTemplate('products_cat_height', Yii::app()->params['template']);
+
 				Yii::import('ext.EUploadedImage.EUploadedImage');
-				$this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(143, 141, USERFILES . '/productsCat', $this->cat_title, $this->_oldImage_full);
+				$this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload($width, $height, USERFILES . '/productsCat', $this->cat_title, $this->_oldImage_full);
 			} else {
 				$this->pic_full = $this->_oldImage_full;
 			}

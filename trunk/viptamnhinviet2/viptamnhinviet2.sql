@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 09, 2012 at 09:19 AM
+-- Generation Time: Mar 09, 2012 at 09:56 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -47,7 +47,17 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('advs_left_height', 300, NULL, '080312'),
 ('advs_left_width', 200, NULL, '080312'),
 ('advs_top_height', 75, NULL, '080312'),
-('advs_top_width', 660, NULL, '080312');
+('advs_top_width', 660, NULL, '080312'),
+('banner_height', 255, NULL, '080312'),
+('banner_width', 686, NULL, '080312'),
+('logo_height', 67, NULL, '080312'),
+('logo_width', 148, NULL, '080312'),
+('products_cat_height', 141, NULL, '080312'),
+('products_cat_width', 143, NULL, '080312'),
+('products_height', 500, NULL, '080312'),
+('products_height_thumb', 141, NULL, '080312'),
+('products_width', 740, NULL, '080312'),
+('products_width_thumb', 143, NULL, '080312');
 
 -- --------------------------------------------------------
 
@@ -168,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `description`, `activated`) VALUES
 (2, 'Giới thiệu', NULL, '<p>\r\n	Chi tiết</p>\r\n', NULL, 15, '2012-03-07 03:24:59', 1, 0, NULL, NULL, 'gioi-thieu', 'Mô tả', 1),
-(3, 'Tiêu đề giới thiệu', NULL, '<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n', NULL, 111, '2012-03-07 03:25:14', 2, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'Mô tả', 1);
+(3, 'Tiêu đề giới thiệu', NULL, '<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n', NULL, 115, '2012-03-07 03:25:14', 2, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'Mô tả', 1);
 
 -- --------------------------------------------------------
 
@@ -335,7 +345,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1331281152);
+('''127.0.0.1''', 1331283383);
 
 -- --------------------------------------------------------
 

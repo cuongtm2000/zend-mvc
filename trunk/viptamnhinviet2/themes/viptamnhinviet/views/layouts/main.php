@@ -196,7 +196,7 @@
                             <p class="all-view-pro"><a href="#" title="">Xem thêm sản phẩm &raquo;</a></p>
                         </div>
                         <!--End frame left 1-->
-                        <div class="frame-left-1">
+                        <!-- <div class="frame-left-1">
                             <h3 class="title-left"><span>KHUYẾN MÃI MỚI NHẤT</span></h3>
                             <ul class="sub-ty-pro">
                                 <li>
@@ -214,9 +214,8 @@
                                 </li>
 
                             </ul>
-                            <!--End Khuyen mai moi nhat-->
                             <p class="all-view-pro"><a href="#" title="">Xem thêm sản phẩm &raquo;</a></p>
-                        </div>
+                        </div> -->
                         <!--End frame left 1-->
 						<?php if(isset($this->advs_left) && ($this->advs_left)):?>
 						<h3 class="title-adv-left">ĐỐI TÁC VÀNG</h3>
