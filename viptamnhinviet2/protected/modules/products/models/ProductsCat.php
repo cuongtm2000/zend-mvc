@@ -75,7 +75,7 @@ class ProductsCat extends CActiveRecord {
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'products' => array(self::HAS_MANY, 'Products', 'dos_module_item_cat_cat_id'),
+			'Products' => array(self::HAS_MANY, 'Products', 'dos_module_item_cat_cat_id'),
 		);
 	}
 
@@ -169,12 +169,17 @@ class ProductsCat extends CActiveRecord {
 	}
 
 	//Front end - list menu
-	public function listItem($cid = 0) {
-		if ($cid != 0) {
+	public function listItem($cid = NULL) {
+		if(isset($cid)){
+			$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title, tag, pic_full FROM ' . $this->tableName() . ' WHERE cat_parent_id=' . $cid . ' AND cat_enable=1 ORDER BY cat_order DESC');
+		}else{
+			$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title, tag, pic_full FROM ' . $this->tableName() . ' WHERE cat_enable=1 ORDER BY cat_order DESC');
+		}
+		/*if ($cid != 0) {
 			$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title, tag, pic_full FROM ' . $this->tableName() . ' WHERE cat_parent_id=' . $cid . ' AND cat_enable=1 ORDER BY cat_order DESC');
 		} else {
 			$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title, tag, pic_full FROM ' . $this->tableName() . ' WHERE cat_enable=1 ORDER BY cat_order DESC');
-		}
+		}*/
 		return $command->queryAll();
 	}
 

@@ -40,16 +40,14 @@
     <body>
         <div id="wrapper">
             <div class="top-page">
-                <?php if (Yii::app()->user->isGuest == true): ?><p class="left">Bạn chưa đăng nhập tài khoản thành viên của
-                        Viptamtnhinviet!</p><?php endif ?>
-
+                <?php if (Yii::app()->user->isGuest == true): ?><p class="left">Bạn chưa đăng nhập tài khoản thành viên của Viptamtnhinviet!</p><?php endif ?>
                 <?php
                 $this->widget('zii.widgets.CMenu', array(
                     'id' => 'top-right',
                     'items' => array(
                         array('label' => 'Đăng ký thành viên', 'url' => array('/register'), 'visible' => Yii::app()->user->isGuest, 'linkOptions' => array('title' => 'Đăng ký thành viên')),
                         array('label' => 'Đăng nhập', 'url' => array('/login'), 'visible' => Yii::app()->user->isGuest, 'linkOptions' => array('title' => 'Đăng ký thành viên')),
-                        array('label' => 'Chào '.Yii::app()->user->name .'','#', 'visible' => !Yii::app()->user->isGuest, 'linkOptions' => array('class' => 'none')),
+                        array('label' => 'Chào '.Yii::app()->user->name, 'visible' => !Yii::app()->user->isGuest, 'linkOptions' => array('class' => 'none')),
                         array('label' => 'Thoát', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest, 'linkOptions' => array('class' => 'none')),
                     ),
                 ));
@@ -82,20 +80,20 @@
 
                 <div class="clear"></div>
                 <div id="banner">
-					<?php if($this->banners): ?>
 					<ul class="slider">
-						<?php foreach($this->banners as $value): ?>
-						<li class="slider-item">
-							<a href="<?php echo $value['banner_link'] ?>" title="<?php echo $value['banner_name'] ?>">
-								<img src="<?php echo Yii::app()->request->baseUrl.USERFILES; ?>/banners/<?php echo $value['banner_url'] ?>" alt="<?php echo $value['banner_name'] ?>" />
-							</a>
-						</li>
-						<?php endforeach ?>
+						<?php if($this->banners): ?>
+							<?php foreach($this->banners as $value): ?>
+							<li class="slider-item">
+								<a href="<?php echo $value['banner_link'] ?>" title="<?php echo $value['banner_name'] ?>">
+									<img src="<?php echo Yii::app()->request->baseUrl.USERFILES; ?>/banners/<?php echo $value['banner_url'] ?>" alt="<?php echo $value['banner_name'] ?>" />
+								</a>
+							</li>
+							<?php endforeach ?>
+						<?php else : ?>
+							<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner.jpg" alt="Banner" /></li>
+						<?php endif; ?>
 					</ul>
-					<?php else : ?>
-					
-					<?php endif; ?>
-					
+
                     <!--End slider banner-->
                     <div class="video">
                         <a href="http://youtu.be/_-UIaGgRxkA" rel="prettyPhoto" title="Khoa Thương Mại điện tử - ĐH Thương Mại"><img

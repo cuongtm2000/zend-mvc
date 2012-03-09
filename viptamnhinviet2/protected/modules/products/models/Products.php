@@ -252,7 +252,7 @@ class Products extends CActiveRecord {
 
 	//Front end - list item new
 	public function listItemNew() {
-		$command = Yii::app()->db->createCommand('SELECT record_id, title, pic_thumb, ' . $this->tableName() . '.tag, unit, hot FROM ' . $this->tableName() . ', dos_module_products_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = dos_module_products_cat.cat_id AND enable = 1 ORDER BY record_order DESC, postdate DESC LIMIT 0, 8');
+		$command = Yii::app()->db->createCommand('SELECT record_id, title, pic_thumb, ' . $this->tableName() . '.tag, unit, hot, '.$this->tableName().'_cat.tag AS tagcat FROM ' . $this->tableName() . ', dos_module_products_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = dos_module_products_cat.cat_id AND enable = 1 ORDER BY record_order DESC, postdate DESC LIMIT 0, 8');
 		return $command->queryAll();
 	}
 
@@ -265,6 +265,7 @@ class Products extends CActiveRecord {
 	//Front end - list Item by Cat
 	public function listItemByCat($cid) {
 		$criteria = new CDbCriteria();
+		$criteria->with = array('ProductsCat');
 		$criteria->select = 'title, pic_thumb, tag, unit';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
