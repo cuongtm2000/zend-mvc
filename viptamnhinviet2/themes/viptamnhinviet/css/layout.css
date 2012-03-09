@@ -156,6 +156,7 @@ a:hover{color:#000;}
 
 /* paging */
 .paging{margin:15px 0 10px 0; text-align:right !important}
+.yiiPager li{margin:0 0 0 0 !important}
 .paging a{color:#3CBEDA}
 .paging a:hover{background:#44A4DE; color:#fff;}
 .pagenav , .pageactive{border: 1px solid #ccc; padding: 2px 5px; color:#fff; -moz-border-radius: 2px; -webkit-border-radius: 2px;}
