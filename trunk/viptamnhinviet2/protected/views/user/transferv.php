@@ -6,7 +6,7 @@ $this->breadcrumbs = array(
 ?>
 
 
-
+<h1 class="title-right"><span>Chuyển khoản</span></h1>
 
 <div class="form">
 
