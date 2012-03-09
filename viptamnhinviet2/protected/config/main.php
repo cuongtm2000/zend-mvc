@@ -29,6 +29,7 @@ return array(
     ),
     // application components
     'components' => array(
+		'counter' => array('class' => 'application.extensions.UserCounter',),
         'cache' => array(
             'class' => 'CFileCache',
         ),
