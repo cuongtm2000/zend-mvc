@@ -126,9 +126,12 @@ class Advs extends CActiveRecord {
 		if ($this->isNewRecord) {
 			$this->record_order = $this->maxRecordOrder();
 			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
+				$width = Configs::configTemplate('advs_'.$this->position.'_width', Yii::app()->params['template']);
+				$height = Configs::configTemplate('advs_'.$this->position.'_height', Yii::app()->params['template']);
+
 				//import class upload images
 				Yii::import('ext.EUploadedImage.EUploadedImage');
-				$this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload(770, 80, USERFILES . '/' . Yii::app()->controller->id, $this->title);
+				$this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload($width, $height, USERFILES . '/' . Yii::app()->controller->id, $this->title);
 			}
 		} else {
 			//check file old and upload
