@@ -275,7 +275,7 @@ class Products extends CActiveRecord {
 
 		// elements per page
 		$pages = new CPagination($count);
-		$pages->pageSize = 8;
+		$pages->pageSize = 1;
 		$pages->applyLimit($criteria);
 
 		return array('models' => Products::model()->findAll($criteria), 'pages' => $pages);
