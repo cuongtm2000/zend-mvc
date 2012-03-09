@@ -30,14 +30,14 @@
 			<?php if($value['pic_thumb']): ?>
 				<div class="product">
 					<div class="frame-img-pro">
-						<a href="<?php echo Yii::app()->request->baseUrl ?>/san-pham/<?php echo $value['tagcat'] ?>/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'] ?>">
-							<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>" />
+						<a href="<?php echo Yii::app()->request->baseUrl ?>/san-pham/<?php echo $value['tagcat'] ?>/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'>
+							<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt='<?php echo $value['title'] ?>' />
 						</a>
 					</div>
 				</div>
 				<div class="btom-pro"></div>
 			<?php endif; ?>
-				<p class="price-pro">Giá bán : <span>14.070</span> <strong>K</strong></p>
-				<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl ?>/san-pham/<?php echo $value['tagcat'] ?>/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'] ?>"><?php echo $value['title'] ?></a></h2>
+				<p class="price-pro">Giá bán : <span><?php echo ($value['unit']) ?></span> <strong>K</strong></p>
+				<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl ?>/san-pham/<?php echo $value['tagcat'] ?>/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'><?php echo $value['title'] ?></a></h2>
 		</div>
 	<?php endforeach; ?>

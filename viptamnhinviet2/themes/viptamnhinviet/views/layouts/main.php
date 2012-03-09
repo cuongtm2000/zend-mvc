@@ -177,23 +177,22 @@
                         <!--End frame left 2-->
                         <div class="frame-left-1">
                             <h3 class="title-left"><span>SẢN PHẨM TIÊU BIỂU</span></h3>
-							<?php echo "<pre>";var_dump($this->listItemHot); echo "</pre>";?>
                             <ul class="sub-ty-pro">
-                                <li>
-                                    <div class="img-ty-pro">
-                                        <a href="product-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ty-pro-1.jpg" alt=""/></a>
-                                    </div>
-
-                                    <div class="right-ty-pro">
-                                        <h2 class="title-pro"><a href="product-info.html" title="">apple macbook air mc234ll/a
-                                                13.3" display - aluminum</a></h2>
-
-                                        <p class="price"><b>Giá : </b> <span>36.800</span> <strong>K</strong></p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </li>
-
-
+								<?php foreach($this->listItemHot as $value): ?>
+									<li>
+										<?php if($value['pic_thumb']): ?>
+											<div class="img-ty-pro">
+												<a href="<?php echo Yii::app()->request->baseUrl ?>/san-pham/<?php echo $value['tag'] ?>/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'>
+													<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt='<?php echo $value['title'] ?>' />
+												</a>
+											</div>
+										<?php endif; ?>
+										<div class="right-ty-pro">
+											<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl ?>/san-pham/<?php echo $value['tag'] ?>/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'><?php echo $value['title'] ?></a></h2>
+											<p class="price"><b>Giá : </b> <span><?php echo ($value['unit']) ?></span> <strong>K</strong></p>
+										</div> <div class="clear"></div>
+									</li>
+								<?php endforeach; ?>
                             </ul>
                             <!--End typical products-->
                             <p class="all-view-pro"><a href="#" title="">Xem thêm sản phẩm &raquo;</a></p>
