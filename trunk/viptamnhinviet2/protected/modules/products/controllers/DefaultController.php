@@ -5,7 +5,7 @@ class DefaultController extends Controller {
     public function actionIndex() {
         $model = new ProductsCat();
 
-        $this->render('index', array('items' => $model->listItem()));
+        $this->render('index', array('items' => $model->listItem(0)));
     }
 
     public function actionCats($cid, $page = 0) {
@@ -20,7 +20,7 @@ class DefaultController extends Controller {
         $model = ucfirst($this->module->id);
         $model_class = new $model();
 
-        $this->render(Yii::app()->session['template'] . '/view', array('item' => $model_class->detailItem($id)));
+        //$this->render(Yii::app()->session['template'] . '/view', array('item' => $model_class->detailItem($id)));
     }
 
 }
