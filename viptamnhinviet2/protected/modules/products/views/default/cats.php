@@ -35,7 +35,8 @@
 			<?php endif; ?>
 			<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl ?>/san-pham/<?php echo $value->ProductsCat->tag ?>/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'] ?>"><?php echo $value['title'] ?></a></h2>
 		</div>
-	<?php endforeach?>
+	<?php endforeach?> 
+	<div class="clear"></div>
 	<?php $this->widget('CLinkPager', array('pages' => $list_items['pages'], 'header' => '', 'htmlOptions' => array('class' => 'yiiPager paging'))) ?>
 <?php else:?>
 	Không tồn tại mẫu tin
