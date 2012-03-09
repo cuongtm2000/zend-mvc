@@ -71,6 +71,7 @@ a:hover{color:#000;}
 .all-view-pro a{color:#666} .all-view-pro a:hover{color:#CC0000}
 
 .img-ty-pro{float:left; width:55px}
+.img-ty-pro img{width:55px}
 
 .right-ty-pro{float:right; width:117px}
 .title-pro{color:#256626}

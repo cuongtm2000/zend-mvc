@@ -2,7 +2,7 @@
 
 <!-- Danh sach danh mục con -->
 <?php if($list_sub_cats): ?>
-<h1 class="title-right"><span><?php echo $info_cat['cat_title'] ?></span></h1>
+
 	<?php foreach($list_sub_cats as $value): ?>
 	<div class="frame-product">
 		<?php if($value['pic_full']): ?>
