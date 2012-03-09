@@ -304,25 +304,18 @@
                     </ul> <div class="clear"></div>
                     <div class="frame-info-footer">
                         <div class="left-fter">
-                            <p>Bản quyền 2012 thuộc về <span
-                                    class="title-company">CÔNG TY CỔ PHẦN TM - DV VIP TẦM NHÌN VIỆT</span></p>
-
-                            <p>Trụ sở:<span> Lô L4,KP.1, P.Bửu Long, Biên Hòa, Đồng Nai</span></p>
-
-                            <p>Điện thoại:<span> 0618 850 747</span></p>
-
-                            <p>Fax: <span>0618 850 747</span></p>
+                            <p><?php echo $this->lang['copyright']?></p>
+                            <p><?php echo $this->lang['address']?></p>
+                            <p><?php echo $this->lang['phone']?></p>
+                            <p><?php echo $this->lang['fax']?></p>
                         </div>
                         <!--End left fter-->
 
                         <div class="right-fter">
                             <p>Giấy phép kinh doanh số: 3602648481</p>
-
                             <p>Do Sở Kế Hoạch và Đầu Tư Tỉnh Đồng Nai cấp ngày: 11 tháng 11 năm 2011</p>
-
                             <p class="statistics">Lượt truy cập : <span>10.999.990</span> - Trực Tuyến : <span>300</span></p>
-
-                            <p>Design by Website <a href="http://dos.vn">Dos.vn</a></p>
+                            <p>Design by <a href="http://dos.vn" title="Dos.vn" target="_blank">Dos.vn</a></p>
                         </div>
                         <!--End right fter-->
                         <div class="clear"></div>

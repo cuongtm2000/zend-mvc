@@ -171,6 +171,13 @@ class Products extends CActiveRecord {
                 ));
     }
 
+	public function afterFind() {
+		parent::afterFind();
+		$this->_oldImage_thumb = $this->pic_thumb;
+		$this->_oldImage_full = $this->pic_full;
+		$this->_oldImage_desc = $this->pic_desc;
+	}
+
 	public function beforeSave() {
 		$purifier = new CHtmlPurifier();
 		$this->title = $purifier->purify($this->title);
