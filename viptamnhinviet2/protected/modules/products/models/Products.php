@@ -189,14 +189,20 @@ class Products extends CActiveRecord {
 			$this->record_order = $this->maxRecordOrder();
 			$this->dos_module_usernames_username = Yii::app()->user->id;
 			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
+				$width = Configs::configTemplate('products_width_thumb', Yii::app()->params['template']);
+				$height = Configs::configTemplate('products_height_thumb', Yii::app()->params['template']);
+
 				Yii::import('ext.simpleImage.CSimpleImage');
 				$file = new CSimpleImage();
-				$this->pic_thumb = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_thumb'], 143, 141, USERFILES . '/' . Yii::app()->controller->id, $this->title . '-thumb');
+				$this->pic_thumb = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_thumb'], $width, $height, USERFILES . '/' . Yii::app()->controller->id, $this->title . '-thumb');
 			}
 			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full']) {
+				$width = Configs::configTemplate('products_width', Yii::app()->params['template']);
+				$height = Configs::configTemplate('products_height', Yii::app()->params['template']);
+
 				Yii::import('ext.simpleImage.CSimpleImage');
 				$file = new CSimpleImage();
-				$this->pic_full = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_full'], 555, 555, USERFILES . '/' . Yii::app()->controller->id, $this->title);
+				$this->pic_full = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_full'], $width, $height, USERFILES . '/' . Yii::app()->controller->id, $this->title);
 			}
 			//pic_desc
 			/*if (isset($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_desc'])) {
@@ -207,9 +213,12 @@ class Products extends CActiveRecord {
 		} else {
 			//check file old and upload
 			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
+				$width = Configs::configTemplate('products_width_thumb', Yii::app()->params['template']);
+				$height = Configs::configTemplate('products_height_thumb', Yii::app()->params['template']);
+
 				Yii::import('ext.simpleImage.CSimpleImage');
 				$file = new CSimpleImage();
-				$this->pic_thumb = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_thumb'], 143, 141, USERFILES . '/' . Yii::app()->controller->id, $this->title . '-thumb', $this->_oldImage_thumb);
+				$this->pic_thumb = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_thumb'], $width, $height, USERFILES . '/' . Yii::app()->controller->id, $this->title . '-thumb', $this->_oldImage_thumb);
 			} else {
 				//remove picthumb
 				if (isset($_POST[ucfirst(Yii::app()->controller->id)]['remove_pic_thumb']) && $_POST[ucfirst(Yii::app()->controller->id)]['remove_pic_thumb'] == 1) {
@@ -222,9 +231,12 @@ class Products extends CActiveRecord {
 				}
 			}
 			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full']) {
+				$width = Configs::configTemplate('products_width', Yii::app()->params['template']);
+				$height = Configs::configTemplate('products_height', Yii::app()->params['template']);
+
 				Yii::import('ext.simpleImage.CSimpleImage');
 				$file = new CSimpleImage();
-				$this->pic_full = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_full'], 555, 555, USERFILES . '/' . Yii::app()->controller->id, $this->title, $this->_oldImage_full);
+				$this->pic_full = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_full'], $width, $height, USERFILES . '/' . Yii::app()->controller->id, $this->title, $this->_oldImage_full);
 			} else {
 				$this->pic_full = $this->_oldImage_full;
 			}
