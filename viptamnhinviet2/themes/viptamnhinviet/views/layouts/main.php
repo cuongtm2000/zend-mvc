@@ -297,15 +297,11 @@
                 <!--End frame hotline-->
                 <div id="footer">
                     <ul class="nav-fter">
-                        <li><a href="index.html" title="">Trang chủ</a></li>
-                        <li><a href="about.html" title="">Giới thiệu</a></li>
-                        <li><a href="product.html" title="">Sản phẩm</a></li>
-                        <li><a href="services.html" title="">Gian hàng</a></li>
-                        <li><a href="news.html" title="">Bản tin</a></li>
-                        <li><a href="news.html" title="">Góc báo chí</a></li>
-                        <li><a href="contact.html" title="">Liên hệ</a></li>
-                    </ul>
-                    <div class="clear"></div>
+                        <li><a href="<?php echo Yii::app()->homeUrl?>" title="Trang chủ" class="select">Trang chủ</a></li>
+						<li><a href="<?php echo Yii::app()->homeUrl?>gioi-thieu" title="Giới thiệu">Giới thiệu</a></li>
+						<li><a href="<?php echo Yii::app()->homeUrl?>san-pham" title="Sản phẩm">Sản phẩm</a></li>
+						<li><a href="<?php echo Yii::app()->homeUrl?>lien-he.html" title="Liên hệ">Liên hệ</a></li>
+                    </ul> <div class="clear"></div>
                     <div class="frame-info-footer">
                         <div class="left-fter">
                             <p>Bản quyền 2012 thuộc về <span
