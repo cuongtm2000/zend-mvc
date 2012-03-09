@@ -22,5 +22,10 @@ class DefaultController extends Controller {
 
         //$this->render(Yii::app()->session['template'] . '/view', array('item' => $model_class->detailItem($id)));
     }
-
+	public function actionAdd(){
+		$this->render('add');
+	}
+	public function actionList(){
+		$this->render('list');
+	}
 }

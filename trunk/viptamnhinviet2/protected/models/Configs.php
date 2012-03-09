@@ -89,4 +89,11 @@ class Configs extends CActiveRecord {
 			'criteria' => $criteria,
 		));
 	}
+	//Front end - config template
+	public static function configTemplate($config, $template) {
+		$command = Yii::app()->db->createCommand('SELECT config_value FROM dos_configs WHERE config_name=:config AND dos_templates_template=:template');
+		$command->bindParam(":template", $template, PDO::PARAM_STR);
+		$command->bindParam(":config", $config, PDO::PARAM_STR);
+		return $command->queryScalar();
+	}
 }

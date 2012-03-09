@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 09, 2012 at 05:23 AM
+-- Generation Time: Mar 09, 2012 at 09:19 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -19,6 +19,35 @@ SET time_zone = "+00:00";
 --
 -- Database: `viptamnhinviet2`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_configs`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_configs` (
+  `config_name` varchar(30) NOT NULL,
+  `config_value` int(11) NOT NULL,
+  `config_desc` varchar(50) DEFAULT NULL,
+  `dos_templates_template` varchar(6) NOT NULL,
+  PRIMARY KEY (`config_name`),
+  KEY `fk_dos_configs_dos_templates1` (`dos_templates_template`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dos_configs`
+--
+
+INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES
+('advs_bottom_height', 145, NULL, '080312'),
+('advs_bottom_width', 992, NULL, '080312'),
+('advs_center_height', 80, NULL, '080312'),
+('advs_center_width', 770, NULL, '080312'),
+('advs_left_height', 300, NULL, '080312'),
+('advs_left_width', 200, NULL, '080312'),
+('advs_top_height', 75, NULL, '080312'),
+('advs_top_width', 660, NULL, '080312');
 
 -- --------------------------------------------------------
 
@@ -139,7 +168,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `description`, `activated`) VALUES
 (2, 'Giới thiệu', NULL, '<p>\r\n	Chi tiết</p>\r\n', NULL, 15, '2012-03-07 03:24:59', 1, 0, NULL, NULL, 'gioi-thieu', 'Mô tả', 1),
-(3, 'Tiêu đề giới thiệu', NULL, '<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n', NULL, 99, '2012-03-07 03:25:14', 2, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'Mô tả', 1);
+(3, 'Tiêu đề giới thiệu', NULL, '<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n', NULL, 111, '2012-03-07 03:25:14', 2, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'Mô tả', 1);
 
 -- --------------------------------------------------------
 
@@ -162,14 +191,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `type` varchar(45) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `dos_module_advs`
 --
 
 INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`) VALUES
-(1, 'Tieu de', NULL, 'tieu-de.gif', 'http://grouplaptrinh.com', '2012-03-07 15:20:30', '2012-03-06 17:00:00', '2012-03-09 17:00:00', 0, 1, 'top', '_bank', 1);
+(2, 'Top', NULL, 'top.gif', 'http://grouplaptrinh.com', '2012-03-09 08:15:48', '2012-03-08 17:00:00', '2012-03-15 17:00:00', 0, 1, 'top', '_bank', 1),
+(3, 'Left', NULL, 'left.jpg', 'http://grouplaptrinh.com', '2012-03-09 08:19:11', '2012-03-08 17:00:00', '2012-03-21 17:00:00', 0, 2, 'left', '_bank', 1);
 
 -- --------------------------------------------------------
 
@@ -278,6 +308,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
   `save_value` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `dos_module_pcounter_save`
+--
+
+INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
+('day_time', 2455996),
+('max_count', 1),
+('counter', 1),
+('yesterday', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -286,8 +326,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 
 CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
   `user_ip` varchar(39) NOT NULL,
-  `user_time` int(11) NOT NULL
+  `user_time` int(10) unsigned NOT NULL,
+  UNIQUE KEY `user_ip` (`user_ip`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dos_module_pcounter_users`
+--
+
+INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
+('''127.0.0.1''', 1331281152);
 
 -- --------------------------------------------------------
 
@@ -311,7 +359,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `description` varchar(250) NOT NULL,
   `hits` int(11) NOT NULL DEFAULT '0',
   `record_order` int(11) NOT NULL DEFAULT '1',
-  `unit` int(11) DEFAULT NULL,
+  `unit` int(11) DEFAULT '0',
   `hot` tinyint(1) NOT NULL DEFAULT '0',
   `specials` tinyint(1) DEFAULT '0',
   `extra_field1` varchar(100) DEFAULT NULL,
@@ -331,8 +379,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
 --
 
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `detail`, `detailen`, `tag`, `description`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`, `dos_module_usernames_username`) VALUES
-(5, 'asdasdasdsaas asdas', NULL, '2012-03-08 09:46:11', 'asdasdasdsaas-asdas-thumb-3.jpg', 'asdasdasdsaas-asdas.jpg', NULL, NULL, NULL, '<p>\r\n	dasda dsasdas</p>\r\n', NULL, 'asdasdasdsaas-asdas', 'asd dasdas asd', 0, 1, NULL, 1, 0, NULL, NULL, NULL, NULL, 1, 10, 'viptamnhinviet'),
-(6, 'San pham', NULL, '2012-03-09 00:24:04', 'san-pham-thumb-4.jpg', 'san-pham-2.jpg', NULL, NULL, NULL, '<p>\r\n	Chi itet</p>\r\n', NULL, 'san-pham', 'Mô tả', 0, 2, NULL, 0, NULL, NULL, NULL, NULL, NULL, 1, 10, 'viptamnhinviet');
+(5, 'asdasdasdsaas asdas', NULL, '2012-03-08 09:46:11', 'asdasdasdsaas-asdas-thumb-3.jpg', 'asdasdasdsaas-asdas.jpg', NULL, NULL, NULL, '<p>\r\n	dasda dsasdas</p>\r\n', NULL, 'asdasdasdsaas-asdas', 'asd dasdas asd', 0, 1, NULL, 1, 1, NULL, NULL, NULL, NULL, 1, 10, 'viptamnhinviet'),
+(6, 'San pham', NULL, '2012-03-09 00:24:04', 'san-pham-thumb-4.jpg', 'san-pham-2.jpg', NULL, NULL, NULL, '<p>\r\n	Chi itet</p>\r\n', NULL, 'san-pham', 'Mô tả', 0, 2, 123, 0, 1, NULL, NULL, NULL, NULL, 1, 10, 'viptamnhinviet');
 
 -- --------------------------------------------------------
 
@@ -457,9 +505,37 @@ INSERT INTO `dos_module_usernames` (`username`, `password`, `create_date`, `full
 ('grouplaptrinh', 'b7a659e0c28c88b3ee01adf805fc228f', '2012-02-25 08:57:48', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '0', 'administrator', 0, 1),
 ('viptamnhinviet', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-04 14:30:34', 'Viptamnhinviet', 'aaa@aa.ccc', '1980-01-01', '', '2165454549', '12316546754', 'ACB', '', 'grouplaptrinh', '0', 'user', 0, 1);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_templates`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_templates` (
+  `template` varchar(6) NOT NULL,
+  `template_name` varchar(45) NOT NULL,
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `description` text,
+  `publish` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`template`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dos_templates`
+--
+
+INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`, `publish`) VALUES
+('080312', 'Mẫu web công ty Vip Tầm Nhìn Việt', '2012-03-09 04:28:40', 'Mẫu web công ty Vip Tầm Nhìn Việt', 1);
+
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `dos_configs`
+--
+ALTER TABLE `dos_configs`
+  ADD CONSTRAINT `fk_dos_configs_dos_templates1` FOREIGN KEY (`dos_templates_template`) REFERENCES `dos_templates` (`template`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `dos_modules_has_dos_usernames`

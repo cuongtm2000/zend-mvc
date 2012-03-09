@@ -123,18 +123,16 @@
                 <div id="content">
                     <div id="left-content">
                         <div class="frame-left-1">
-
-   <?php if(!Yii::app()->user->isGuest):?>
-                            <h1 class="title-left"><span>BẢNG ĐIỀU KHIỂN</span></h1>
-                            <ul class="sub-pro">
-                                <li><a href="<?php echo Yii::app()->baseUrl ?>/product/list" title="">Sản phẩm đã đăng</a></li>
-                                <li><a href="<?php echo Yii::app()->baseUrl ?>/product/add" title="">Đăng sản phẩm</a></li>
-                                <li><a href="<?php echo Yii::app()->baseUrl ?>/user/map" title="">Sơ đồ mạng lưới</a></li>
-                                <li><a href="<?php echo Yii::app()->baseUrl ?>/log" title="">Lịch sử giao dịch</a></li>
-                                <li><a href="#" title="">Số tiền tích lũy: <span class="error"><?php echo Yii::app()->session['balance'] ?> V</span></a></li>
-                                <li class="border-none"><a  href="<?php echo Yii::app()->baseUrl ?>/user/transferv" title="Chuyển khoản">Chuyển khoản</a></li>
-
-                            </ul>
+   							<?php if(!Yii::app()->user->isGuest):?>
+								<h1 class="title-left"><span>BẢNG ĐIỀU KHIỂN</span></h1>
+								<ul class="sub-pro">
+									<li><a href="<?php echo Yii::app()->baseUrl ?>/san-pham/danh-sach" title="">Sản phẩm đã đăng</a></li>
+									<li><a href="<?php echo Yii::app()->baseUrl ?>/san-pham/dang-san-pham" title="">Đăng sản phẩm</a></li>
+									<li><a href="<?php echo Yii::app()->baseUrl ?>/user/map" title="">Sơ đồ mạng lưới</a></li>
+									<li><a href="<?php echo Yii::app()->baseUrl ?>/log" title="">Lịch sử giao dịch</a></li>
+									<li><a href="#" title="">Số tiền tích lũy: <span class="error"><?php echo Yii::app()->session['balance'] ?> V</span></a></li>
+									<li class="border-none"><a  href="<?php echo Yii::app()->baseUrl ?>/user/transferv" title="Chuyển khoản">Chuyển khoản</a></li>
+								</ul>
                             <?php endif;?>                         
 
 							<?php if(isset($this->menu_about) && ($this->menu_about)):?>
@@ -189,7 +187,7 @@
 										<?php endif; ?>
 										<div class="right-ty-pro">
 											<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl ?>/san-pham/<?php echo $value['tag'] ?>/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'><?php echo $value['title'] ?></a></h2>
-											<p class="price"><b>Giá : </b> <span><?php echo ($value['unit']) ?></span> <strong>K</strong></p>
+											<p class="price"><b>Giá : </b> <span><?php echo ($value['unit']) ?></span></p>
 										</div> <div class="clear"></div>
 									</li>
 								<?php endforeach; ?>
