@@ -1,21 +1,11 @@
-<?php 
-$this->menu = array(
-    array('label' => 'List User', 'url' => array('index')),
-    array('label' => 'Manage User', 'url' => array('admin')),
-);
-?>
-
-<h1 class="title-right"><span>Create User</span></h1>
+<?php //$this->menu = array(array('label' => 'List User', 'url' => array('index')), array('label' => 'Manage User', 'url' => array('admin')),);?>
+<h1 class="title-right"><span>Đăng ký thành viên</span></h1>
 
 <div class="frame-tent-right">
+	<?php $form = $this->beginWidget('CActiveForm', array('id' => 'user-form', 'enableAjaxValidation' => false, 'htmlOptions' => array('class' => 'form-all')));?>
 
-    <?php
-    $form = $this->beginWidget('CActiveForm', array('id' => 'user-form', 'enableAjaxValidation' => false, 'htmlOptions'=>array('class'=>'form-all')));
-    ?>
-
-    <p class="note">Fields with <span class="required">*</span> are required.</p>
-
-        <?php echo $form->errorSummary($model); ?>
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<?php echo $form->errorSummary($model); ?>
 	<ul>
 		<li class="row">
 			<?php echo $form->labelEx($model, 'username'); ?>
@@ -52,10 +42,10 @@ $this->menu = array(
 			<?php echo $form->labelEx($model, 'birthday'); ?>
 
 			<?php
-			
-				$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+
+			$this->widget('zii.widgets.jui.CJuiDatePicker', array(
 				'model' => $model,
-				'attribute'=>'birthday',
+				'attribute' => 'birthday',
 				// additional javascript options for the date picker plugin
 				'options' => array(
 					'showAnim' => 'fold',
@@ -64,14 +54,14 @@ $this->menu = array(
 					'changeMonth' => true,
 					'changeYear' => true,
 					'yearRange' => '1930:-18',
-					'defaultDate'=>'01/01/1980',
+					'defaultDate' => '01/01/1980',
 				),
 				'htmlOptions' => array(
 					'style' => 'height:20px;'
 				),
 			));
 			?>
-	<?php echo $form->error($model, 'birthday'); ?>
+			<?php echo $form->error($model, 'birthday'); ?>
 
 		</li>
 
@@ -113,10 +103,10 @@ $this->menu = array(
 
 		<li class="row buttons">
 			<label>&nbsp;</label>
-			<?php echo CHtml::submitButton('Create',array('class'=>'login')); ?>
+			<?php echo CHtml::submitButton(' Đăng ký ', array('class' => 'login')); ?>
 		</li>
 	</ul>
-<?php $this->endWidget(); ?>
+	<?php $this->endWidget(); ?>
 
 </div>
 <!-- form -->

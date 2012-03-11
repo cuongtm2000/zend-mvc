@@ -90,7 +90,7 @@ a:hover{color:#000;}
 .title-sport-right{color:#cc0000;font-weight:bold; font-size:11px; margin:0 0 5px 0}
 
 /*Doi tac vang*/
-.title-adv-left{margin:0 0 13px 0; text-align:center;color:#fff; background:#FF7200;padding:8px 0; font-size:10pt; font-weight:bold;-webkit-border-radius:4px;-moz-border-radius:4px}
+.title-adv-left{margin:5px 0 3px 0; text-align:center;color:#fff; background:#FF7200;padding:8px 0; font-size:10pt; font-weight:bold;-webkit-border-radius:4px;-moz-border-radius:4px}
 .adv-left{list-style:none;margin:0 0 10px 0;text-align:center}
 .adv-left li{margin:0 0 5px 0}
 
@@ -171,9 +171,8 @@ a:hover{color:#000;}
 .frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
 .frame-contact textarea{border:1px solid #ddd; width:350px;-moz-border-radius: 3px; -webkit-border-radius:3px}
 
-.frame-contact span{color:#F00;font-weight:bold}
-.frame-contact .bton-dk{margin:10px 0 5px 30px;background:url(../images/button.gif) no-repeat;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
-.frame-contact .bton-dk{margin:10px 10px 5px 0}
+/*.frame-contact span{color:#F00;font-weight:bold} */
+.frame-contact .bton-dk{margin:0px 10px 5px 0;background:url(../images/button.gif) no-repeat;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
 .frame-contact .bton-user{background:#392F29;width:100px;color:#fff; height:28px;text-align:center;border:none;font-weight:bold}
 
 /*Gian hang tieu bieu title-booth*/
@@ -188,9 +187,6 @@ a:hover{color:#000;}
 .title-member{margin:5px 0 0 0}
 .title-member a{color:#333}
 .title-member a:hover{color:#CC0000}
-
-/*Holine*/
-
 
 /***  Page info ***/
 .row-info-1{margin:0 0 10px 0}
@@ -268,5 +264,8 @@ a:hover{color:#000;}
 .page-add input{width:300px}
 .page-add .radio, .page-add .radio-2{width:auto !important;margin:0 5px 0 0 !important}
 .page-add .radio-2{margin:0 0 0 20px !important}
-.page-add textarea{width:550px}
+.page-add textarea{width:500px}
 .page-add label{color:#555; margin:0 !important;font-weight:normal ;width:100px; float:left}
+
+.col1{float: left; width:100px}
+.col2{float: left; width:85%}

@@ -176,16 +176,11 @@ class ProductsCat extends CActiveRecord {
 
 	//Front end - list menu
 	public function listItem($cid = NULL) {
-		if(isset($cid)){
-			$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title, tag, pic_full FROM ' . $this->tableName() . ' WHERE cat_parent_id=' . $cid . ' AND cat_enable=1 ORDER BY cat_order DESC');
-		}else{
-			$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title, tag, pic_full FROM ' . $this->tableName() . ' WHERE cat_enable=1 ORDER BY cat_order DESC');
-		}
-		/*if ($cid != 0) {
+		if (isset($cid)) {
 			$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title, tag, pic_full FROM ' . $this->tableName() . ' WHERE cat_parent_id=' . $cid . ' AND cat_enable=1 ORDER BY cat_order DESC');
 		} else {
 			$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title, tag, pic_full FROM ' . $this->tableName() . ' WHERE cat_enable=1 ORDER BY cat_order DESC');
-		}*/
+		}
 		return $command->queryAll();
 	}
 
@@ -382,6 +377,7 @@ class ProductsCat extends CActiveRecord {
 			$this->loopDelSubCat($value['cat_id']);
 		}
 	}
+
 	//Back end - Delete Record
 	public function deleteRecord($id) {
 		$item = ProductsCat::model()->find('cat_id=:id', array(':id' => $id));
@@ -403,12 +399,14 @@ class ProductsCat extends CActiveRecord {
 		}
 		ProductsCat::model()->findByPk($id)->delete(); //delete record
 	}
+
 	//Back end - Get cat_parent_id, cat_order
 	public function getCatParent_CatOrder($cid) {
 		$command = Yii::app()->db->createCommand('SELECT cat_parent_id, cat_order FROM ' . $this->tableName() . ' WHERE cat_id=:cid');
 		$command->bindParam(":cid", $cid, PDO::PARAM_INT);
 		return $command->queryRow();
 	}
+
 	// Back end - Get cat_id, cat_order Next
 	public function getCatid_CatOrder_Next($cid, $order) {
 		$command = Yii::app()->db->createCommand('SELECT cat_id, cat_order FROM ' . $this->tableName() . ' WHERE cat_parent_id=:cid AND cat_order>:order ORDER BY cat_order ASC');
@@ -416,6 +414,7 @@ class ProductsCat extends CActiveRecord {
 		$command->bindParam(":order", $order, PDO::PARAM_INT);
 		return $command->queryRow();
 	}
+
 	// Back end - Get cat_id, cat_order Previous
 	public function getCatid_CatOrder_Previous($cid, $order) {
 		$command = Yii::app()->db->createCommand('SELECT cat_id, cat_order FROM ' . $this->tableName() . ' WHERE cat_parent_id=:cid AND cat_order<:order ORDER BY cat_order DESC');
@@ -423,6 +422,7 @@ class ProductsCat extends CActiveRecord {
 		$command->bindParam(":order", $order, PDO::PARAM_INT);
 		return $command->queryRow();
 	}
+
 	// Back end - Update for up, down
 	public function updateUpDown($cat_info, $next_info, $cid) {
 		$command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET cat_order=:order WHERE cat_id=:id');
