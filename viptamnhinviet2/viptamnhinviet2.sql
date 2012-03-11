@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 09, 2012 at 09:56 AM
+-- Generation Time: Mar 11, 2012 at 08:08 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -178,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `description`, `activated`) VALUES
 (2, 'Giới thiệu', NULL, '<p>\r\n	Chi tiết</p>\r\n', NULL, 15, '2012-03-07 03:24:59', 1, 0, NULL, NULL, 'gioi-thieu', 'Mô tả', 1),
-(3, 'Tiêu đề giới thiệu', NULL, '<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n', NULL, 115, '2012-03-07 03:25:14', 2, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'Mô tả', 1);
+(3, 'Tiêu đề giới thiệu', NULL, '<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n', NULL, 120, '2012-03-07 03:25:14', 2, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'Mô tả', 1);
 
 -- --------------------------------------------------------
 
@@ -323,9 +323,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2455996),
+('day_time', 2455998),
 ('max_count', 1),
-('counter', 1),
+('counter', 2),
 ('yesterday', 0);
 
 -- --------------------------------------------------------
@@ -345,7 +345,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1331283383);
+('''127.0.0.1''', 1331449609);
 
 -- --------------------------------------------------------
 
@@ -382,15 +382,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`),
   KEY `fk_dos_module_products_dos_module_usernames1` (`dos_module_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `dos_module_products`
 --
 
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `detail`, `detailen`, `tag`, `description`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`, `dos_module_usernames_username`) VALUES
-(5, 'asdasdasdsaas asdas', NULL, '2012-03-08 09:46:11', 'asdasdasdsaas-asdas-thumb-3.jpg', 'asdasdasdsaas-asdas.jpg', NULL, NULL, NULL, '<p>\r\n	dasda dsasdas</p>\r\n', NULL, 'asdasdasdsaas-asdas', 'asd dasdas asd', 0, 1, NULL, 1, 1, NULL, NULL, NULL, NULL, 1, 10, 'viptamnhinviet'),
-(6, 'San pham', NULL, '2012-03-09 00:24:04', 'san-pham-thumb-4.jpg', 'san-pham-2.jpg', NULL, NULL, NULL, '<p>\r\n	Chi itet</p>\r\n', NULL, 'san-pham', 'Mô tả', 0, 2, 123, 0, 1, NULL, NULL, NULL, NULL, 1, 10, 'viptamnhinviet');
+(15, 'San pham', NULL, '2012-03-11 07:02:57', 'san-pham-thumb.jpg', '', NULL, NULL, NULL, '<p>\r\n	Chi tiết</p>\r\n', NULL, 'san-pham', 'Mô tả', 0, 1, 0, 0, 0, NULL, NULL, NULL, NULL, 1, 11, 'viptamnhinviet'),
+(16, 'Sản phẩm 2', NULL, '2012-03-11 07:03:24', 'san-pham-2-thumb.jpg', '', NULL, NULL, NULL, '<p>\r\n	Chi tiết</p>\r\n', NULL, 'san-pham-2', 'Mô tả', 0, 2, 0, 1, 1, NULL, NULL, NULL, NULL, 1, 11, 'viptamnhinviet');
 
 -- --------------------------------------------------------
 
@@ -414,20 +414,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `cat_extra2` varchar(45) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
 --
 
 INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `description`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
-(4, 7, 'Danh mục 1', NULL, NULL, NULL, 'danh-muc-1', 'Danh muc 1', 'danh-muc-1.jpg', NULL, 3, NULL, NULL, 1),
-(5, 0, 'Danh mục 2', NULL, NULL, NULL, 'danh-muc-2', 'Danh mục 2', 'danh-muc-2.jpg', NULL, 2, NULL, NULL, 1),
-(6, 0, 'Danh mục 3', NULL, NULL, NULL, 'danh-muc-3', 'Danh mục 3', 'danh-muc-3.jpg', NULL, 1, NULL, NULL, 1),
-(7, 0, 'Danh mục 4', NULL, NULL, NULL, 'danh-muc-4', 'Danh mục 4', 'danh-muc-4.jpg', NULL, 4, NULL, NULL, 1),
-(8, 0, 'asdasdasdas', NULL, NULL, NULL, 'asdasdasdas', 'asdasdsa', 'asdasdasdas.png', NULL, 5, NULL, NULL, 1),
-(9, 0, 'asdasdasda', NULL, NULL, NULL, 'asdasdasda', 'asdasdasdsa', 'asdasdasda.png', NULL, 6, NULL, NULL, 1),
-(10, 0, 'Danh mục', NULL, NULL, NULL, 'danh-muc', 'afasfasf', 'dasfa.png', NULL, 7, NULL, NULL, 1);
+(11, 0, 'Danh mục', NULL, NULL, NULL, 'danh-muc', 'Mô tả danh mục', 'danh-muc.jpg', NULL, 1, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 

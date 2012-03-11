@@ -173,6 +173,7 @@
                             </ul>
                         </div>
                         <!--End frame left 2-->
+						<?php if($this->listItemHot):?>
                         <div class="frame-left-1">
                             <h3 class="title-left"><span>SẢN PHẨM TIÊU BIỂU</span></h3>
                             <ul class="sub-ty-pro">
@@ -195,6 +196,7 @@
                             <!--End typical products-->
                             <p class="all-view-pro"><a href="#" title="">Xem thêm sản phẩm &raquo;</a></p>
                         </div>
+						<?php endif;?>
                         <!--End frame left 1-->
                         <!-- <div class="frame-left-1">
                             <h3 class="title-left"><span>KHUYẾN MÃI MỚI NHẤT</span></h3>
@@ -218,7 +220,7 @@
                         </div> -->
                         <!--End frame left 1-->
 						<?php if(isset($this->advs_left) && ($this->advs_left)):?>
-						<h3 class="title-adv-left">ĐỐI TÁC VÀNG</h3>
+							<h3 class="title-adv-left">ĐỐI TÁC VÀNG</h3>
 							<ul class="adv-left">
 								<?php foreach($this->advs_left as $value): ?>
 								<li><a href="<?php echo $value['url'] ?>" title="<?php echo $value['title'] ?>" target="<?php echo $value['type'] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>"  /></a>

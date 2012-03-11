@@ -1,21 +1,53 @@
 <h1 class="title-right"><span>Đăng sản phẩm mới</span></h1>
 <div class="frame-tent-right">
-	<form id="frm" name="frm" action="" method="post" >
+	<?php $form = $this->beginWidget('CActiveForm', array('id'=>'frm', 'enableAjaxValidation'=>true, 'enableClientValidation' =>true, 'htmlOptions' => array('enctype' => 'multipart/form-data')));?>
+		<?php echo $form->errorSummary($model, ''); ?>
 		<ul class="frame-contact page-add">
-			<li><label>Phân loại cha:</label><select size="1" name="listproduct">
-									<option value="0">--Lựa chọn phân loại sản phẩm--</option>
-									<option value="1">Điện tử - Nhạc cụ</option>
-									<option value="2">Máy ảnh - Máy quay</option>
-									<option value="3">Ô tô - Xe máy - Xe đạp</option>
-
-								</select></li>
-			<li><label>Tiêu đề</label><input type="text" name="txt-very-large" value="" /> </li>
-			<li><label>Chi tiết:</label><textarea name="detail" rows="15" cols="" ></textarea></li>
-			<li><label>Hỉnh ảnh nhỏ:</label><input type="file" name="file_thumb" value="" class="page-pic" /></li>
-			<li><label>Hình ảnh:</label><input type="file" name="file_full" value="" class="page-pic" /></li>
-			<li><label>Đơn giá:</label><input type="text" name="unit" value="" /></li>
-			<li><label>Nổi bật:</label><input type="radio" checked="checked" name="hot" id="sys_nohot" value="0" class="radio" /> Không nổi bật <input type="radio" name="hot" id="hot" value="1" class="radio-2"  /> &nbsp;Nổi bật</li>
-			<li><label>&nbsp;</label><input type="submit" class="bton-dk" title="Submit"  value="Thêm mới"/> <input type="reset" class="bton-dk" value="Hủy bỏ" /></li>					
-		</ul>        
-	</form>
+			<li>
+				<?php echo $form->labelEx($model, 'dos_module_item_cat_cat_id') ?>
+				<?php echo $form->dropDownList($model, 'dos_module_item_cat_cat_id', CHtml::listData($listCats, 'cat_id', 'cat_title')); ?>
+			</li>
+			<li>
+				<?php echo $form->labelEx($model, 'title') ?>
+				<?php echo $form->textField($model, 'title'); ?>
+			</li>
+			<li>
+				<div class="col1"><?php echo $form->labelEx($model, 'detail') ?></div>
+				<div class="col2">
+					<?php echo $form->textArea($model, 'detail', $htmlOptions = array('cols' => 20, 'rows' => 10)); ?>
+					<script type="text/javascript">
+						//<![CDATA[
+						CKEDITOR.replace('<?php echo get_class($model) ?>[detail]');
+						//]]>
+					</script>
+				</div>
+			</li>
+			<li>
+				<?php echo $form->labelEx($model, 'pic_thumb') ?>
+				<?php echo $form->fileField($model, 'pic_thumb', array('class' => 'page-pic')); ?>
+			</li>
+			<li>
+				<?php echo $form->labelEx($model, 'pic_full') ?>
+				<?php echo $form->fileField($model, 'pic_full', array('class' => 'page-pic')); ?>
+			</li>
+			<li>
+				<?php echo $form->labelEx($model, 'unit') ?>
+				<?php echo $form->textField($model, 'unit'); ?>
+			</li>
+			<li>
+				<?php echo $form->labelEx($model, 'tag') ?>
+				<?php echo $form->textField($model, 'tag'); ?>
+			</li>
+			<li>
+				<?php echo $form->labelEx($model, 'description') ?>
+				<?php echo $form->textArea($model, 'description', $htmlOptions = array('cols' => 89, 'rows' => 5)); ?> <span class="info-keyup">0</span>
+			</li>
+			<li>
+				<label>&nbsp;</label>
+				<?php echo CHtml::submitButton(' Thêm mới ', array('name'=>'submit', 'class'=>'bton-dk', 'title'=>'Thêm mới')); ?>
+				<?php echo CHtml::resetButton(' Hủy bỏ ', array('name'=>'reset', 'class'=>'bton-dk', 'title'=>'Hủy bỏ')); ?>
+			</li>
+		</ul>
+	<?php $this->endWidget();?>
+	<?php $this->widget('ext.seoAlias.seoAlias', array('model' => $model, 'source' => 'title', 'target' => 'tag')); ?>
 </div> <!--End frame ten right-->
