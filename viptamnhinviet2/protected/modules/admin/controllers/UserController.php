@@ -1,6 +1,7 @@
 <?php
 
 class UserController extends AdminController {
+
     public $layout = '//layouts/column2';
 
     public function actionView($id) {
@@ -26,7 +27,6 @@ class UserController extends AdminController {
         ));
     }
 
-
     public function actionDelete($id) {
         if (Yii::app()->request->isPostRequest) {
             // we only allow deletion via POST request
@@ -43,7 +43,7 @@ class UserController extends AdminController {
      * Lists all models.
      */
     public function actionIndex() {
-               $model = new User('search');
+        $model = new User('search');
         $model->unsetAttributes();  // clear any default values
         if (isset($_GET['User']))
             $model->attributes = $_GET['User'];
@@ -60,54 +60,50 @@ class UserController extends AdminController {
             'listUserQuanly' => '',
         ));
     }
-    
+
     public function actionTransferv() {
         $model = new TransferForm();
         if (isset($_POST['TransferForm'])) {
             $model->attributes = $_POST['TransferForm'];
-            if ($model->validate() ) {
+            if ($model->validate()) {
                 $model->transfer();
                 $this->redirect(array('/log'));
             }
-        }        
+        }
         $this->render('transferv', array(
             'model' => $model,
             'user' => User::model()->findByPk(Yii::app()->user->name),
         ));
     }
 
-    
-    public function actionActive(){
+    public function actionActive() {
         $model = new User('active');
-        if (isset($_POST)) {
+        if (isset($_POST['ids'])) {
             $model->activeItem($_POST);
-            $this->redirect(Yii::app()->user->returnUrl);
+         //   $this->redirect(Yii::app()->user->returnUrl);
         }
         $this->render('active', array(
             'model' => $model->getUnActive(),
-            'post' => $_POST,
-        ));
-    }
-    public function actionThoatban(){
-        $model = new User();
-        $this->render('thoatban', array(
-            'model' => $model->listTVthoatban(),
-  
-        ));
-    }
-    public function actionDatchuan(){
-        $model = new User();
-        $this->render('datchuan', array(
-            'model' => $model->listTVdatchuan(),
-  
+            'debug'=>$model->debug,
+            //'post' => $_POST,
         ));
     }
 
-    /**
-     * Returns the data model based on the primary key given in the GET variable.
-     * If the data model is not found, an HTTP exception will be raised.
-     * @param integer the ID of the model to be loaded
-     */
+    public function actionThoatban() {
+        $model = new User();
+        $this->render('thoatban', array(
+            'model' => $model->listTVthoatban(),
+        ));
+    }
+
+    public function actionDatchuan() {
+        $model = new User();
+        $this->render('datchuan', array(
+            'model' => $model->listTVdatchuan(),
+        ));
+    }
+
+
     public function loadModel($id) {
         $model = User::model()->findByPk($id);
         if ($model === null)

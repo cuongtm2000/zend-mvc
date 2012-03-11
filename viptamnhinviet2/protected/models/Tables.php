@@ -15,9 +15,11 @@
  * @property Usernames $dosModuleUsernamesUsername
  */
 class Tables extends CActiveRecord {
+
     public static function model($className = __CLASS__) {
         return parent::model($className);
     }
+
     public function tableName() {
         return 'dos_module_tables';
     }
@@ -33,7 +35,7 @@ class Tables extends CActiveRecord {
             array('left_child, right_child, priority, dos_module_usernames_username', 'length', 'max' => 45),
             array('four_child', 'length', 'max' => 180),
             array('upgrade_date', 'safe'),
-     );
+        );
     }
 
     /**
@@ -56,11 +58,20 @@ class Tables extends CActiveRecord {
         );
     }
 
-
-    public function addItem($user){
-        $this->dos_module_usernames_username=$user;
-        $this->left_child=  $this->right_child=  $this->four_child='';
+    public function addItem($user) {
+        $this->dos_module_usernames_username = $user;
+        $this->left_child = $this->right_child = $this->four_child = '';
+        $this->priority = 0;
         $this->save();
+    }
+    public function resetItem(){
+        $this->left_child= $this->right_child = $this->four_child='';
+        $this->upgrade_date=0;
+        $this->priority=0;
+        $this->save();
+    }
+     public function findTVdatchuanTop() {
+        return $this->find('priority = (select min(priority) from ' . Tables::model()->tableName() . ' where left_child !="" and right_child != ""  and priority >0)');
     }
             
 
