@@ -41,7 +41,7 @@ class User extends CActiveRecord {
     public function rules() {
         return array(
             array('username, password, password2, user_gioithieu,birthday, cmnd,email', 'required'),
-        //    array('username, user_gioithieu,birthday, cmnd,email', 'required', on=>'update'),
+            //    array('username, user_gioithieu,birthday, cmnd,email', 'required', on=>'update'),
             /**/
             array('username', 'unique' /* ,'message'=>"{attribute} has already been taken." */, 'on' => 'create'),
             array('username, password, email, user_gioithieu', 'length', 'max' => 45),
@@ -53,7 +53,7 @@ class User extends CActiveRecord {
             array('bank_name', 'length', 'max' => 100),
             array('birthday', 'date', 'format' => 'dd/MM/yyyy', 'on' => 'create'),
             // The following rule is used by search().
-            // Please remove those attributes that should not be searched.
+// Please remove those attributes that should not be searched.
             array('username, create_date, full_name, email, birthday, address, cmnd, phone, bank_number, bank_name, user_gioithieu, balance, level, enable', 'safe', 'on' => 'search'),
             array('username, create_date, full_name, bank_number, bank_name, user_gioithieu', 'safe', 'on' => 'active'),
             array('user_gioithieu', 'checkIntroduceUser', 'on' => 'create'),
@@ -109,8 +109,8 @@ class User extends CActiveRecord {
     }
 
     public function relations() {
-        // NOTE: you may need to adjust the relation name and the related
-        // class name for the relations automatically generated below.
+// NOTE: you may need to adjust the relation name and the related
+// class name for the relations automatically generated below.
         return array(
             'products' => array(self::HAS_MANY, 'Products', 'dos_module_usernames_username'),
             'tables' => array(self::HAS_MANY, 'Tables', 'dos_module_usernames_username'),
@@ -122,25 +122,27 @@ class User extends CActiveRecord {
      */
     public function attributeLabels() {
         return array(
-            'username' => 'Username',
-            'password' => 'Password',
-            'password2' => 'Confirm Password',
-            'create_date' => 'Create Date',
-            'full_name' => 'Full Name',
+            'username' => 'Tên đăng ký',
+            'password' => 'Mật khẩu',
+            'password2' => 'Xác nhận mật khẩu',
+            'create_date' => 'Ngày ĐK',
+            'full_name' => 'Họ tên',
             'email' => 'Email',
-            'birthday' => 'Birthday',
-            'address' => 'Address',
-            'cmnd' => 'ID No.',
-            'phone' => 'Phone',
-            'bank_number' => 'Bank Number',
-            'bank_name' => 'Bank Name',
-            'user_gioithieu' => 'Introduce User',
+            'birthday' => 'Ngày sinh',
+            'address' => 'Địa chỉ',
+            'cmnd' => 'Số CMND',
+            'phone' => 'Số điện thoại',
+            'bank_number' => 'Số TK Ngân hàng',
+            'bank_name' => 'Tên Ngân hàng',
+            'user_gioithieu' => 'Người giới thiệu',
         );
     }
+
     public function search() {
         $criteria = new CDbCriteria;
 
         $criteria->compare('username', $this->username, true);
+        $criteria->addCondition('username != \'grouplaptrinh\'');
         $criteria->compare('create_date', $this->create_date, true);
         $criteria->compare('full_name', $this->full_name, true);
         $criteria->compare('email', $this->email, true);
@@ -153,7 +155,7 @@ class User extends CActiveRecord {
         $criteria->compare('user_gioithieu', $this->user_gioithieu, true);
         $criteria->compare('balance', $this->balance, true);
         $criteria->compare('level', $this->level);
-        $criteria->compare('enable',array(1));
+        $criteria->compare('enable', array(1));
 
         return new CActiveDataProvider($this, array(
                     'criteria' => $criteria,
@@ -162,15 +164,16 @@ class User extends CActiveRecord {
 
     public function beforeSave() {
         $purifier = new CHtmlPurifier();
-        $this->username = $purifier->purify($this->username);
-        $this->password = $purifier->purify(md5($this->password));
-        $this->email = $purifier->purify($this->email);
-        $this->user_group = 'user';
 
-        $timestam_bd = CDateTimeParser::parse($this->birthday, 'dd/MM/yyyy');
-        $this->birthday = CTimestamp::formatDate('Y-m-d', $timestam_bd);
 
         if ($this->isNewRecord) {
+            $this->username = $purifier->purify($this->username);
+            $this->password = $purifier->purify(md5($this->password));
+            $this->email = $purifier->purify($this->email);
+            $this->user_group = 'user';
+            $timestam_bday = CDateTimeParser::parse($this->birthday, 'dd/MM/yyyy');
+            $this->birthday = CTimestamp::formatDate('Y-m-d', $timestam_bday);
+        } else {
             
         }
 
@@ -196,75 +199,144 @@ class User extends CActiveRecord {
                 continue;
 
             if ($flag) {/////show or hidden
-                User::model()->updateByPk($value, array('enable' => 1));
+//  User::model()->updateByPk($value, array('enable' => 1));
                 $table = new Tables();
-                $table->addItem($value);
+// $table->addItem($value);
+//  $log = new Log();
+// $log->addItem('Thành viên ' . $value . ' mà bạn giới thiệu đã được kích hoạt', '', $user['user_gioithieu'], 0, 'gioithieu');
+                /*
+                 * Tim TV dat chuan co độ ưu tiên cao(priority min)
+                 * để gắn vào
+                 */
+                $userGAN = $table->findTVdatchuanTop();
+                $this->debug[] = $userGAN;
+                if ($userGAN) {
+                    if ($userGAN['four_child'] == '')
+                        $four_child = $user;
+                    else
+                        $four_child = $userGAN['four_child'] . '|' . $user;
+                    $userGAN->four_child = $four_child; //* update
+                    $userGAN->save();
 
-                $log = new Log();
-                $log->addItem('Thành viên ' . $value . ' mà bạn giới thiệu đã được kích hoạt', '', $user['user_gioithieu'], 0, 'gioithieu');
+                    $num_child = count(explode('|', $four_child));
+                    $level = $this->getLevel($userGAN['dos_module_usernames_username']);
+
+                    if ($level < 6)
+                        $so_user_can_gan = 4;
+                    elseif ($level < 8)
+                        $so_user_can_gan = 3;
+                    elseif ($level < 10)
+                        $so_user_can_gan = 2;
+                    else
+                        $so_user_can_gan = 1;
+
+                    if ($so_user_can_gan == $num_child) {
+                        /*
+                         * Cộng tiền, thoát bàn
+                         */
+                        $this->updateByPk($userGAN['dos_module_usernames_username'], array('level'=> $level+1));
+                        $userGAN->resetItem();
+                        $money=$this->getSotienHHdatcap($level+1);
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    }
+                }
 
 
-                $this->addThanhtichHH($user['user_gioithieu']);
 
 
-                
-                
-                
+//$this->addThanhtichHH($user['user_gioithieu']);
             } else {    //delete
                 User::model()->deleteByPk($value);
             }
         }
     }
 
-    
-    
+    /*
+     * Check Thoatban
+     */
+
+    public function addToThoatban($user) {
+        
+    }
+
     /*
      * List TV đã thoát bàn
      *      tức TV có level > 0 và có ít nhất
      *      1 trong 2 nhánh con trong bàn còn khuyết
      */
-    
-    public function listTVthoatban(){
+
+    public function listTVthoatban() {
         return Tables::model()->findAll('left_child = "" or right_child = ""');
     }
-    
+
     /*
      * 
      */
+
     public function listTVdatchuan() {
         return Tables::model()->findAll('left_child !="" and right_child != ""');
     }
 
+    public function getLevel($user) {
+        $u = User::model()->findByPk($user);
+        return $u['level'];
+    }
 
+    private function getSotienHHdatcap($level) {
+        switch ($level) {
+            case 1: return 2000;
+            case 2: return 4000;
+            case 3: return 8000;
+            case 4: return 20000;
+            case 5: return 40000;
+            case 6: return 80000;
+            case 7: return 150000;
+            case 8: return 300000;
+            case 9: return 500000;
+            case 10: return 1000000;
+            default: return 0;
+        }
+    }
+    private function getSotienHHthanhtich($num_user) {
+        switch ($num_user) {
+            case 15: return 5000;
+            case 30: return 7000;
+            case 60: return 15000;
+            case 120: return 20000;
+            case 300: return 40000;
+            case 600: return 60000;
+            case 1000: return 80000;
+            case 2000: return 100000;
+            case 5000: return 200000;
+            case 10000: return 500000;
+            default: return 0;
+        }
+    } 
     /*
      *  Thêm thành tích hoa hồng
      * cho người giới thiệu
      */
     private function addThanhtichHH($user) {
         $tree = $this->createTree($user);
-        $min_child=min($tree['c0'] , $tree['c1'] );
-        switch ($min_child) {
-            case 15:    $money=5000;    break;
-            case 30:    $money=7000;    break;
-            case 60:    $money=15000;   break;
-            case 120:   $money=20000;   break;
-            case 300:   $money=40000;   break;
-            case 600:   $money=60000;   break;
-            case 1000:  $money=80000;   break;
-            case 2000:  $money=100000;  break;
-            case 5000:  $money=200000;  break;
-            case 10000: $money=500000;  break;
-            default:    $money=0;       break;
+        $min_child = min($tree['c0'], $tree['c1']);
+        $money=  $this->getSotienHHthanhtich($min_child);
+       
+        $u = User::model()->findByPk($user);
+        if ($money > 0) {
+            $u->balance+=$money;
+            $u->save();
+            
+            $log = new Log();
+            $log->addItem("Hoa hồng thành tích do đạt được số con ở mỗi nhánh là " . $min_child, '', $user, $money, 'thanhtich');
         }
-        $u=  User::model()->findByPk($user);
-        if($money >0){
-            User::model()->updateByPk($user,  
-                    array('balance' => $u['balance']+$money));
-            $log=new Log();
-            $log->addItem("Hoa hồng thành tích do đạt được số con ở mỗi nhánh là ".$min_child, '', $user, $money, 'thanhtich');
-	}	
-        if($u['user_gioithieu']  != 'grouplaptrinh')
-            $this->addThanhtichHH ($u['user_gioithieu']);
+        if ($u['user_gioithieu'] != 'grouplaptrinh')
+            $this->addThanhtichHH($u['user_gioithieu']);
     }
 
     /*
@@ -295,7 +367,5 @@ class User extends CActiveRecord {
             return TRUE;
         return FALSE;
     }
-  
-    
 
 }
