@@ -9,7 +9,10 @@ class LoginController extends Controller {
             $model->attributes = $_POST['LoginForm'];
             if ($model->validate() && $model->login()) {
                 $u=User::model()->findByPk(Yii::app()->user->name);
-                Yii::app()->session['balance']= $u['balance'];
+                Yii::app()->session['balance']= $u['balance']; //coi lai cai nay, ko nen dung session
+
+				Yii::app()->session['logged'] = 1; //session for ckfinder logged
+				Yii::app()->session['user'] = Yii::app()->user->id; //session for ckfinder subdomain
                 $this->redirect(Yii::app()->user->returnUrl);
             }
         } elseif (Yii::app()->session['activated']) {
