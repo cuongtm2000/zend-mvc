@@ -5,7 +5,7 @@
 
         <div class="col1"><?php echo $form->labelEx($model, 'banner_type') ?></div>
         <div class="col2">
-            <?php echo $form->dropDownList($model, 'banner_type', array('banners'=>'Banner', 'logo'=>'Logo')); ?>
+            <?php echo $form->dropDownList($model, 'banner_type', array('banner'=>'Banner', 'logo'=>'Logo')); ?>
         </div>
         <div class="clear space"></div>
 
