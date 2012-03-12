@@ -226,6 +226,22 @@ class Products extends CActiveRecord {
 		return parent::beforeSave();
 	}
 
+	//Front end - get detail item
+	public function detailItem($tag) {
+		$id = $this->getIDByTag($tag);
+		return $this->loadEdit($id);
+		/*$command = Yii::app()->db->createCommand('SELECT title, pic_full, detail, tag, description, unit FROM ' . $this->tableName() . ' WHERE record_id=:id');
+		$command->bindParam(":id", $id, PDO::PARAM_INT);
+		return $command->queryRow();*/
+	}
+
+	//Front end - find record_id by tag
+	private function getIDByTag($tag) {
+		$command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE tag=:tag');
+		$command->bindParam(":tag", $tag, PDO::PARAM_STR);
+		return $command->queryScalar();
+	}
+
 	//Front end - list item new
 	public function listItemSpecials() {
 		$command = Yii::app()->db->createCommand('SELECT record_id, title, pic_thumb, ' . $this->tableName() . '.tag, unit, hot, ' . $this->tableName() . '_cat.tag AS tagcat FROM ' . $this->tableName() . ', dos_module_products_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = dos_module_products_cat.cat_id AND specials = 1 AND enable = 1 ORDER BY record_order DESC, postdate DESC LIMIT 0, 8');
@@ -404,8 +420,8 @@ class Products extends CActiveRecord {
 	//Back end - Get record to Edit
 	public function loadEdit($id) {
 		$criteria = new CDbCriteria();
-		$criteria->alias = 'p';
-		$criteria->join = 'JOIN dos_module_products_cat c ON p.dos_module_item_cat_cat_id = c.cat_id';
+		//$criteria->alias = 'p';
+		//$criteria->join = 'JOIN dos_module_products_cat c ON p.dos_module_item_cat_cat_id = c.cat_id';
 
 		$this->_model = Products::model()->findByPk($id, $criteria);
 
@@ -450,20 +466,7 @@ class Products extends CActiveRecord {
 
 
 
-		//Front end - get detail item
-		public function detailItem($tag) {
-			$id = $this->getIDByTag($tag);
-			$command = Yii::app()->db->createCommand('SELECT title' . LANG . ', pic_full, pic_desc, detail' . LANG . ', tag, description, unit FROM ' . $this->tableName() . ' WHERE record_id=:id');
-			$command->bindParam(":id", $id, PDO::PARAM_INT);
-			return $command->queryRow();
-		}
 
-		//Front end - find record_id by tag
-		private function getIDByTag($tag) {
-			$command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE tag=:tag');
-			$command->bindParam(":tag", $tag, PDO::PARAM_STR);
-			return $command->queryScalar();
-		}
 
 
 
