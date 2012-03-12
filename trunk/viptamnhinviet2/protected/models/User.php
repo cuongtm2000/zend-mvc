@@ -122,7 +122,7 @@ class User extends CActiveRecord {
      */
     public function attributeLabels() {
         return array(
-            'username' => 'Tên đăng ký',
+            'username' => 'Tên đăng nhập',
             'password' => 'Mật khẩu',
             'password2' => 'Xác nhận mật khẩu',
             'create_date' => 'Ngày ĐK',
