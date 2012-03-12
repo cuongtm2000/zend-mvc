@@ -73,8 +73,11 @@ class SiteController extends Controller {
 		if (isset($_POST['LoginForm'])) {
 			$model->attributes = $_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
-			if ($model->validate() && $model->login())
+			if ($model->validate() && $model->login()){
+				Yii::app()->session['logged'] = 1; //session for ckfinder logged
+				Yii::app()->session['user'] = Yii::app()->user->id; //session for ckfinder subdomain
 				$this->redirect(Yii::app()->user->returnUrl);
+			}
 		}
 		// display the login form
 		$this->render('login', array('model' => $model));

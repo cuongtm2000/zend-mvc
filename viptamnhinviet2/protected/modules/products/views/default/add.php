@@ -17,7 +17,14 @@
 					<?php echo $form->textArea($model, 'detail', $htmlOptions = array('cols' => 20, 'rows' => 10)); ?>
 					<script type="text/javascript">
 						//<![CDATA[
-						CKEDITOR.replace('<?php echo get_class($model) ?>[detail]');
+						CKEDITOR.replace('<?php echo get_class($model) ?>[detail]',{
+							filebrowserBrowseUrl : '/public/plugin/ckfinder/ckfinder.html',
+							filebrowserImageBrowseUrl : '/public/plugin/ckfinder/ckfinder.html?type=Images',
+							filebrowserFlashBrowseUrl : '/public/plugin/ckfinder/ckfinder.html?type=Flash',
+							filebrowserUploadUrl : '/public/plugin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+							filebrowserImageUploadUrl : '/public/plugin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+							filebrowserFlashUploadUrl : '/public/plugin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+						});
 						//]]>
 					</script>
 				</div>
