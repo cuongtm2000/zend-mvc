@@ -31,11 +31,11 @@
 			</li>
 			<li>
 				<?php echo $form->labelEx($model, 'pic_thumb') ?>
-				<?php echo $form->fileField($model, 'pic_thumb', array('class' => 'page-pic')); ?>
+				<?php echo $form->fileField($model, 'pic_thumb', array('class' => 'page-pic', 'size'=>'43')); ?>
 			</li>
 			<li>
 				<?php echo $form->labelEx($model, 'pic_full') ?>
-				<?php echo $form->fileField($model, 'pic_full', array('class' => 'page-pic')); ?>
+				<?php echo $form->fileField($model, 'pic_full', array('class' => 'page-pic','size'=>'43')); ?>
 			</li>
 			<li>
 				<?php echo $form->labelEx($model, 'unit') ?>

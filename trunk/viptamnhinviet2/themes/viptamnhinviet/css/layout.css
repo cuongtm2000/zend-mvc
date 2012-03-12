@@ -45,8 +45,10 @@ a:hover{color:#000;}
 
 /*frm-search*/
 .frm-search{text-align:right; margin:0 0 10px 0;background:#F5FAFD;border-bottom:1px solid #ddd;padding:5px 0}
-.frm-search input, .frm-search select {padding:3px 5px;-webkit-border-radius:1px;-moz-border-radius:1px;border:1px solid #ddd}
-.bton-search{background:#006DA6;color:#fff;border:none;padding:6px 5px !important;font-weight:bold; cursor:pointer}
+.frm-search input, .frm-search select {padding:3px 5px;-webkit-border-radius:2px;-moz-border-radius:2px;border:1px solid #ddd}
+.frm-search input{width:250px}
+.frm-search select  {width:160px}
+.bton-search{background:#006DA6;color:#fff;width:80px !important;border:none;padding:6px 5px !important;font-weight:bold; cursor:pointer}
 
 /*Content*/
 #content{ margin:0 0 10px 0}
@@ -262,9 +264,9 @@ a:hover{color:#000;}
 .my-price{font-size:10pt}  .my-price span{color:#f00;font-weight:bold}
 
 /**Page dang san pham ( page add)**/
-.page-add .page-pic{width:auto;border:none}
+.page-add .page-pic{width:auto;border:none;-moz-border-radius:0; -webkit-border-radius:0}
 .page-add select{padding:3px;border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px;width:250px}
-.page-add input{width:300px}
+.page-add  input{width:300px}
 .page-add .radio, .page-add .radio-2{width:auto !important;margin:0 5px 0 0 !important}
 .page-add .radio-2{margin:0 0 0 20px !important}
 .page-add textarea{width:500px}

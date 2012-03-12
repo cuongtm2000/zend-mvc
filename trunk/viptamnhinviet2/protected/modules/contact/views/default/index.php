@@ -36,7 +36,7 @@
                     <?php echo $form->textField($contact, 'phone'); ?>
                 </li>
                 <li>
-                    <p><?php echo $form->labelEx($contact, 'email') ?>
+                    <?php echo $form->labelEx($contact, 'email') ?>
                     <?php echo $form->textField($contact, 'email'); ?>
                 </li>
                 <li>
