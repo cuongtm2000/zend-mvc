@@ -123,7 +123,7 @@ class Banners extends CActiveRecord {
 
 				//import class upload images
 				Yii::import('ext.EUploadedImage.EUploadedImage');
-				$this->banner_url = EUploadedImage::getInstance($this, 'banner_url')->processUpload(($this->banner_type=='logo') ? $width : $height, ($this->banner_type=='logo') ? $width : $height, USERFILES . '/' . Yii::app()->controller->id, $this->banner_name, '', $this->change_file_name, $this->txt_file_name);
+				$this->banner_url = EUploadedImage::getInstance($this, 'banner_url')->processUpload($width, $height, USERFILES . '/' . Yii::app()->controller->id, $this->banner_name, '', $this->change_file_name, $this->txt_file_name);
 			}
 		} else {
 			//check file old and upload
@@ -133,7 +133,7 @@ class Banners extends CActiveRecord {
 
 				//import class upload images
 				Yii::import('ext.EUploadedImage.EUploadedImage');
-				$this->banner_url = EUploadedImage::getInstance($this, 'banner_url')->processUpload(($this->banner_type=='logo') ? $width : $height, ($this->banner_type=='logo') ? $width : $height, USERFILES . '/' . Yii::app()->controller->id, $this->banner_name, $this->_oldImage);
+				$this->banner_url = EUploadedImage::getInstance($this, 'banner_url')->processUpload($width, $height, USERFILES . '/' . Yii::app()->controller->id, $this->banner_name, $this->_oldImage);
 			} else {
 				$this->banner_url = $this->_oldImage;
 			}
@@ -144,7 +144,7 @@ class Banners extends CActiveRecord {
 
 	//Front end - get Banner by module
 	public function getBanner($module) {
-		$command = Yii::app()->db->createCommand('SELECT banner_name, banner_url, banner_link FROM ' . $this->tableName() . ' WHERE banner_type=\'banners\' AND position=:module AND enable=1');
+		$command = Yii::app()->db->createCommand('SELECT banner_name, banner_url, banner_link FROM ' . $this->tableName() . ' WHERE banner_type=\'banner\' AND position=:module AND enable=1');
 		$command->bindParam(":module", $module, PDO::PARAM_STR);
 		return $command->queryAll();
 	}

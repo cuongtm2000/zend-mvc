@@ -53,6 +53,11 @@ class DefaultController extends Controller {
 
 	public function actionList() {
 		$model = new Products();
+		//Submit
+		if (Yii::app()->request->getIsPostRequest()) {
+			$model->activeItem(Yii::app()->request);
+			$this->refresh();
+		}
 		$this->render('list', $model->listItemByUser());
 	}
 }

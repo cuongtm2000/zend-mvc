@@ -223,8 +223,7 @@
 							<h3 class="title-adv-left">ĐỐI TÁC VÀNG</h3>
 							<ul class="adv-left">
 								<?php foreach($this->advs_left as $value): ?>
-								<li><a href="<?php echo $value['url'] ?>" title="<?php echo $value['title'] ?>" target="<?php echo $value['type'] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>"  /></a>
-								</li>
+									<li><a href="<?php echo $value['url'] ?>" title="<?php echo $value['title'] ?>" target="<?php echo $value['type'] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>" /></a></li>
 								<?php endforeach; ?>
 							</ul>
 						<?php endif;?>
@@ -272,15 +271,14 @@
                     </div>
                 </div> -->
                 <!--End gian hang tieu bieu-->
-                <div class="bg-hotline">
-					<?php if(isset($this->advs_bottom) && ($this->advs_bottom)):?>
-							<?php foreach($this->advs_bottom as $value): ?>
-								<a href="<?php echo $value['url'] ?>" title="<?php echo $value['title'] ?>" target="<?php echo $value['type'] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>"  /></a>
-							<?php endforeach; ?>
-					<?php endif;?>
-					<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-fter.jpg" alt=""/>
-                </div>
-                <!--End frame hotline-->
+
+				<?php if(isset($this->advs_bottom) && ($this->advs_bottom)):?>
+					<?php foreach($this->advs_bottom as $value): ?>
+						<a href="<?php echo $value['url'] ?>" title="<?php echo $value['title'] ?>" target="<?php echo $value['type'] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>"  /></a>
+					<?php endforeach; ?>
+				<?php endif;?>
+				<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-fter.jpg" alt="" />
+
                 <div id="footer">
                     <ul class="nav-fter">
                         <li><a href="<?php echo Yii::app()->homeUrl?>" title="Trang chủ" class="select">Trang chủ</a></li>
