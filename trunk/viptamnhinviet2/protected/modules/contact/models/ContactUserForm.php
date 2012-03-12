@@ -19,6 +19,11 @@ class ContactUserForm extends CFormModel {
 
     public function attributeLabels() {
         return array(
+			'fullname' => 'Họ và tên',
+			'address' => 'Địa chỉ',
+			'phone' => 'Số điện thoại',
+			'content' => 'Nội dung',
+			'company' => 'Công ty',
         );
     }
 
