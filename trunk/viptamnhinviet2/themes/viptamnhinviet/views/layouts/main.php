@@ -143,8 +143,6 @@
 							</ul>
 							<?php endif;?>
 
-
-
 							<?php if(isset($this->menu_product) && ($this->menu_product)):?>
 							<h1 class="title-left"><span>DANH MỤC SẢN PHẨM</span></h1>
 							<ul class="sub-pro">
@@ -160,14 +158,14 @@
                             <ul class="support">
 							<?php $supports = new Supports();
 								$values = $supports->listItem();
-									foreach ($values as $value): ?>
-                                    <li>
-                                        <div class="img-sport"><a href="ymsgr:sendim?<?php echo $value['support_value'] ?>"><img	src="http://opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=14&amp;l=us" class="img-support" alt="<?php echo $value['support_value'] ?>"/></a></div>
-                                        <div class="right-spport"><p class="title-sport-right"><?php echo $value['support_name'] ?></p>
-                                            <p><?php echo $value['support_phone'] ?></p>
-                                        </div>
-                                        <div class="clear"></div>
-                                    </li>
+								foreach ($values as $value): ?>
+								<li>
+									<div class="img-sport"><a href="ymsgr:sendim?<?php echo $value['support_value'] ?>"><img	src="http://opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=14&amp;l=us" class="img-support" alt="<?php echo $value['support_value'] ?>"/></a></div>
+									<div class="right-spport"><p class="title-sport-right"><?php echo $value['support_name'] ?></p>
+										<p><?php echo $value['support_phone'] ?></p>
+									</div>
+									<div class="clear"></div>
+								</li>
 								<? endforeach ?>
                             </ul>
                         </div>

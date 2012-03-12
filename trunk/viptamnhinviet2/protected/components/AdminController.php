@@ -4,12 +4,15 @@ class AdminController extends CController {
 	public $module_user = array();
 	public $lang = array(); //language
 	public $layout = '//layouts/column1';
-	/**
-	 * @var array context menu items. This property will be assigned to {@link CMenu::items}.
-	 */
 	public $menu = array();
+	public $breadcrumbs = array();
 
-	public function init(){
+	public function init() {
+		//Check user administrator
+		if (isset(Yii::app()->user->role) && (Yii::app()->user->role != 'administrator')) {
+			$this->redirect(Yii::app()->request->baseUrl . '/error');
+		}
+
 		//Setup module user
 		$this->module_user = ModulesUsernames::model()->moduleUser(Yii::app()->user->name);
 
@@ -18,8 +21,6 @@ class AdminController extends CController {
 		//Setup lang
 		$this->lang = Langs::setLangs();
 	}
-
-	public $breadcrumbs = array();
 
 	public function filters() {
 		return array(
