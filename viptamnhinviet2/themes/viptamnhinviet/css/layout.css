@@ -155,11 +155,9 @@ a:hover{color:#000;}
 .remember{float:none !important;width:auto !important}
 
 /* paging */
-
-.yiiPager{text-align:right ;float:right; margin:10px 10px 10px 0}
-.yiiPager li{margin:0 0 0 0 !important}
-.paging a{color:#3CBEDA}
-.paging a:hover{background:#2E6AB1; color:#fff !important;}
+#frm{position: relative;}
+#frm .yiiPager{position: absolute; bottom: -18px; right: 0}
+#frm .yiiPager li{margin:0 0 0 0 !important}
 
 /**Page Contact**/
 .frame-title{margin:0 0 20px 0}
@@ -269,3 +267,28 @@ a:hover{color:#000;}
 
 .col1{float: left; width:100px}
 .col2{float: left; width:85%}
+
+/* table format */
+table{border-collapse : separate; border-spacing : 0;}
+caption, th, td {text-align : left; font-weight : normal;}
+table, td, th {vertical-align : middle;}
+table {width : 100%; border : 1px solid #ccc;}
+table table{border:0!important;}
+thead tr th {font-weight : bold; background :#E1E3EC; border-bottom : 1px solid #C6C6C6; padding : 5px; font-size:10pt}
+thead tr th a{color: #000}
+thead tr th a:hover{color: #3A6AAD}
+tbody tr td {padding : 6px 5px; background : #fff; color : #111; cursor: pointer}
+tbody tr.alt td {background : #eee}
+tbody tr.disable td{background: #F9F5F5; color : #aaa}
+tbody tr td a{color: #000}
+tbody tr td a:hover{color: #1E335F;}
+tbody tr.red td{background: #f3c1c1; color : #aaa}
+tbody tr.red td a{color : #aaa}
+tbody tr.green td, tbody tr.green a{background: #c2ecb7; color : #aaa}
+
+.control-button{width: auto; float: left; margin: 6px 0;}
+.control-button input{background: none; border: none; cursor: pointer; color: #3A66DD; font-size: 10pt; padding-right:7px}
+.control-button input:hover{color: #333}
+.control-button a{padding-right:15px}
+
+.txt15{width: 15px}

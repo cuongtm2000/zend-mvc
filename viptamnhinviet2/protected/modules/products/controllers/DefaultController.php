@@ -52,6 +52,7 @@ class DefaultController extends Controller {
 	}
 
 	public function actionList() {
-		$this->render('list');
+		$model = new Products();
+		$this->render('list', $model->listItemByUser());
 	}
 }

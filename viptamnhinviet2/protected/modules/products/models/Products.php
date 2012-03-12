@@ -206,7 +206,6 @@ class Products extends CActiveRecord {
 				if (isset($_POST['Products']['remove_pic_thumb']) && $_POST['Products']['remove_pic_thumb'] == 1) {
 					$common_class = new Common();
 					$common_class->removePic($this->_oldImage_thumb);
-					//$this->removePic($this->_oldImage_thumb);
 					$this->pic_thumb = '';
 				} else {
 					$this->pic_thumb = $this->_oldImage_thumb;
@@ -258,7 +257,24 @@ class Products extends CActiveRecord {
 
 		// elements per page
 		$pages = new CPagination($count);
-		$pages->pageSize = 1;
+		$pages->pageSize = 15;
+		$pages->applyLimit($criteria);
+
+		return array('models' => Products::model()->findAll($criteria), 'pages' => $pages);
+	}
+
+	//Front end - list Item by User
+	public function listItemByUser() {
+		$criteria = new CDbCriteria();
+		$criteria->order = 'record_order DESC, postdate DESC';
+		$criteria->condition = 'dos_module_usernames_username=:user AND enable=1';
+		$criteria->params = array(':user' => Yii::app()->user->name);
+
+		$count = Products::model()->count($criteria);
+
+		// elements per page
+		$pages = new CPagination($count);
+		$pages->pageSize = 15;
 		$pages->applyLimit($criteria);
 
 		return array('models' => Products::model()->findAll($criteria), 'pages' => $pages);
