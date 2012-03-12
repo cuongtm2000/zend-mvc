@@ -36,7 +36,7 @@
 			</li>
 			<li>
 				<?php echo $form->labelEx($model, 'tag') ?>
-				<?php echo $form->textField($model, 'tag'); ?>
+				<?php echo $form->textField($model, 'tag', array('readonly'=>'readonly')); ?>
 			</li>
 			<li>
 				<?php echo $form->labelEx($model, 'description') ?>

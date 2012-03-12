@@ -109,13 +109,12 @@
                     <div class="clear"></div>
                 </div>
                 <!--End banner-->
-                <form action="" name="frmsearch" class="frm-search">
-                    <input type="text"/>
-                    <select size="1" name="listproduct">
-                        <option value="">Chọn</option>
-                        <option value="6">Điện tử - Nhạc cụ</option>
-                        <option value="7">Máy ảnh - Máy quay</option>
-
+                <form action="" name="frmsearch" class="frm-search" method="post">
+                    <input type="text" name="txt-search" />
+                    <select name="listproduct">
+						<?php foreach($this->menu_product as $value):?>
+                        <option value="<?php echo $value['cat_id']?>"><?php echo $value['cat_title']?></option>
+						<?php endforeach?>
                     </select>
                     <input type="submit" value="Tìm kiếm" title="Tìm kiếm" class="bton-search"/>
                 </form>
