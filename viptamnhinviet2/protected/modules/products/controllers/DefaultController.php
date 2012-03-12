@@ -30,7 +30,10 @@ class DefaultController extends Controller {
 	}
 
 	public function actionView($id) {
-		$this->render('view');
+		$model_class = new Products();
+		$data['item'] = $model_class->detailItem($id);
+
+		$this->render('view', $data);
 	}
 
 	public function actionAdd() {

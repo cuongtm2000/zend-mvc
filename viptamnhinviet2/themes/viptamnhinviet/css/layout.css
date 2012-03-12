@@ -193,6 +193,7 @@ a:hover{color:#000;}
 .frame-info-view{border:2px solid #ddd;-webkit-border-radius:4px;-moz-border-radius:4px;padding:8px 10px;margin:0 0 10px 0}
 .frame-info-view p{margin:0 !important; line-height:1.5em}
 .info-view-img{text-align:center;margin:0 0 5px 0}
+.info-view-img img{border: 1px solid #eee; padding: 1px}
 
 .row-info-1{margin:0 0 10px 0}
 
