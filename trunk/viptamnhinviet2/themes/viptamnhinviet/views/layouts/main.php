@@ -45,8 +45,8 @@
                 $this->widget('zii.widgets.CMenu', array(
                     'id' => 'top-right',
                     'items' => array(
-                        array('label' => 'Đăng ký thành viên', 'url' => array('/register'), 'visible' => Yii::app()->user->isGuest, 'linkOptions' => array('title' => 'Đăng ký thành viên')),
-                        array('label' => 'Đăng nhập', 'url' => array('/login'), 'visible' => Yii::app()->user->isGuest, 'linkOptions' => array('title' => 'Đăng ký thành viên')),
+                        array('label' => 'Đăng ký thành viên', 'url' => array('/dang-ky-thanh-vien.html'), 'visible' => Yii::app()->user->isGuest, 'linkOptions' => array('title' => 'Đăng ký thành viên')),
+                        array('label' => 'Đăng nhập', 'url' => array('/dang-nhap.html'), 'visible' => Yii::app()->user->isGuest, 'linkOptions' => array('title' => 'Đăng ký thành viên')),
                         array('label' => 'Chào '.Yii::app()->user->name, 'visible' => !Yii::app()->user->isGuest, 'linkOptions' => array('class' => 'none')),
                         array('label' => 'Thoát', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest, 'linkOptions' => array('class' => 'none')),
                     ),

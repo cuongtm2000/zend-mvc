@@ -1,5 +1,8 @@
 <?php
 return array(
+	'dang-ky-thanh-vien' => array('register', 'urlSuffix' => '.html'),
+	'dang-nhap' => array('login', 'urlSuffix' => '.html'),
+
 	'lien-he' => array('contact/default/index', 'urlSuffix' => '.html'),
 
 	'(gioi-thieu)' => 'about/default/index',
