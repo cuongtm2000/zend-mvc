@@ -22,7 +22,9 @@ class LoginForm extends CFormModel {
 	 */
 	public function attributeLabels() {
 		return array(
-			'rememberMe' => 'Remember me next time',
+			'username' => 'Tên đăng nhập',
+			'password' => 'Mật khẩu',
+			'rememberMe' => 'Nhớ mật khẩu',
 		);
 	}
 

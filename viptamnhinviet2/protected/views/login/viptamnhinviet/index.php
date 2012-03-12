@@ -1,7 +1,3 @@
-<!--<ul id="crumbs">
-    <li><a href="#">Home</a></li>
-    <li>Login</li>
-</ul>-->
 <h1 class="title-right"><span>Login</span></h1>
 <div class="frame-tent-right">
 	<?php $form = $this->beginWidget('CActiveForm', array('id' => 'frm', 'enableAjaxValidation' => true, 'enableClientValidation' => true, 'htmlOptions'=>array('class'=>'form-all'))); ?>
