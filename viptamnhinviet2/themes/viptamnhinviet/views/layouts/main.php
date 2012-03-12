@@ -110,7 +110,7 @@
                 </div>
                 <!--End banner-->
                 <form action="" name="frmsearch" class="frm-search" method="post">
-                    <input type="text" name="txt-search" />
+                    <input type="text" name="txt-search" value="Tìm kiếm" onblur="if(this.value=='') this.value='Tìm kiếm'" onfocus="if(this.value =='Tìm kiếm' ) this.value=''"  />
                     <select name="listproduct">
 						<?php foreach($this->menu_product as $value):?>
                         <option value="<?php echo $value['cat_id']?>"><?php echo $value['cat_title']?></option>
