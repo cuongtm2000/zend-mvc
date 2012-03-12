@@ -46,7 +46,7 @@
                 </li>
                 <li>
 					<label>&nbsp;</label>
-                    <?php echo CHtml::submitButton(' Submit ', array('name'=>'submit', 'class'=>'bton-dk', 'title'=>'Submit')); ?>
+                    <?php echo CHtml::submitButton(' Gửi ', array('name'=>'submit', 'class'=>'bton-dk', 'title'=>'Submit')); ?>
                 </li>
             </ul>                  
         <?php $this->endWidget();?>

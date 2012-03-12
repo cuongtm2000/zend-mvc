@@ -19,7 +19,7 @@ class LoginController extends Controller {
             Yii::app()->user->setFlash('message', 'Successful registration.');
         }
 
-        $this->render(Yii::app()->theme->name . '/index', array('model' => $model));
+        $this->render('index', array('model' => $model));
     }
 
 }
