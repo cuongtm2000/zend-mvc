@@ -1,4 +1,4 @@
-<h1 class="title-right"><span><?php echo $info_cat['cat_title']?></span></h1>
+<h1 class="title-right"><span><a href="<?php echo Yii::app()->request->baseUrl?>/san-pham" title="sản phẩm">Sản phẩm</a> &raquo; <?php echo $info_cat['cat_title']?></span></h1>
 
 <!-- Danh sach danh mục con -->
 <?php if($list_sub_cats): ?>
