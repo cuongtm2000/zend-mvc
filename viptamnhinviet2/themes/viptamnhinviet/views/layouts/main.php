@@ -57,8 +57,7 @@
             <!--End top page-->
             <div id="page">
                 <div id="header">
-                    <div id="header-left"><a href="<?php echo Yii::app()->baseUrl; ?>" title=""><img
-                                src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo"/></a></div>
+                    <div id="header-left"><a href="<?php echo Yii::app()->homeUrl; ?>" title="Home page"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo"/></a></div>
                     <!--End header left-->
                     <div class="banner-eca">
 						<?php if(isset($this->advs_top) && ($this->advs_top)):?>
