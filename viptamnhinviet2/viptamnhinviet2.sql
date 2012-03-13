@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 12, 2012 at 05:11 AM
+-- Generation Time: Mar 13, 2012 at 02:31 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -178,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `description`, `activated`) VALUES
 (2, 'Giới thiệu', NULL, '<p>\r\n	Chi tiết</p>\r\n', NULL, 15, '2012-03-07 03:24:59', 1, 0, NULL, NULL, 'gioi-thieu', 'Mô tả', 1),
-(3, 'Tiêu đề giới thiệu', NULL, '<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n', NULL, 136, '2012-03-07 03:25:14', 2, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'Mô tả', 1);
+(3, 'Tiêu đề giới thiệu', NULL, '<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n', NULL, 146, '2012-03-07 03:25:14', 2, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'Mô tả', 1);
 
 -- --------------------------------------------------------
 
@@ -308,6 +308,58 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `dos_module_news`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_news` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `titleen` varchar(100) DEFAULT NULL,
+  `postdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `preview` text,
+  `previewen` text,
+  `detail` text NOT NULL,
+  `detailen` text,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) NOT NULL,
+  `hits` int(11) NOT NULL DEFAULT '0',
+  `record_order` int(11) NOT NULL DEFAULT '1',
+  `hot` tinyint(1) NOT NULL DEFAULT '0',
+  `extra_field1` varchar(100) DEFAULT NULL,
+  `extra_field2` varchar(100) DEFAULT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_module_item_cat_cat_id` int(11) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_news_cat`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
+  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_parent_id` int(11) NOT NULL DEFAULT '0',
+  `cat_title` varchar(100) NOT NULL,
+  `cat_titleen` varchar(100) DEFAULT NULL,
+  `preview` text,
+  `previewen` text,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) NOT NULL,
+  `pic_full` varchar(100) DEFAULT NULL,
+  `cat_order` int(11) NOT NULL,
+  `cat_extra1` varchar(45) DEFAULT NULL,
+  `cat_extra2` varchar(45) DEFAULT NULL,
+  `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`cat_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `dos_module_pcounter_save`
 --
 
@@ -321,9 +373,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2455999),
+('day_time', 2456000),
 ('max_count', 1),
-('counter', 3),
+('counter', 4),
 ('yesterday', 1);
 
 -- --------------------------------------------------------
@@ -343,7 +395,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1331525413);
+('''127.0.0.1''', 1331602264);
 
 -- --------------------------------------------------------
 
@@ -388,7 +440,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
 
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `detail`, `detailen`, `tag`, `description`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`, `dos_module_usernames_username`) VALUES
 (15, 'San pham', NULL, '2012-03-11 07:02:57', 'san-pham-thumb.jpg', '', NULL, NULL, NULL, '<p>\r\n	Chi tiết</p>\r\n', NULL, 'san-pham', 'Mô tả', 0, 1, 0, 0, 0, NULL, NULL, NULL, NULL, 1, 11, 'viptamnhinviet'),
-(16, 'Sản phẩm 2', NULL, '2012-03-11 07:03:24', 'san-pham-2-thumb.jpg', '', NULL, NULL, NULL, '<p>\r\n	Chi tiết</p>\r\n', NULL, 'san-pham-2', 'Mô tả', 0, 2, 0, 1, 1, NULL, NULL, NULL, NULL, 1, 11, 'viptamnhinviet'),
+(16, 'Sản phẩm 2', NULL, '2012-03-11 07:03:24', 'san-pham-2-thumb.jpg', 'san-pham-2.jpg', NULL, NULL, NULL, '<p>\r\n	Chi tiết</p>\r\n', NULL, 'san-pham-2', 'Mô tả', 0, 2, 0, 1, 1, NULL, NULL, NULL, NULL, 1, 11, 'viptamnhinviet'),
 (17, 'hhhhhhhh', NULL, '2012-03-12 04:00:45', '', '', NULL, NULL, NULL, '<p>\r\n	hhhhh</p>\r\n', NULL, 'hhhhhhhh', 'jkjhkhjk', 0, 3, 0, 0, 0, NULL, NULL, NULL, NULL, 1, 11, 'viptamnhinviet');
 
 -- --------------------------------------------------------
@@ -505,8 +557,8 @@ INSERT INTO `dos_module_usernames` (`username`, `password`, `create_date`, `full
 ('admin2', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-02-25 06:15:35', 'Lê Hữu Ninh', 'aaa@aa.ccc', '0000-00-00', '', '2165454549', '', '', '', 'admin', '0', 'user', 0, 1),
 ('admin3', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-02-25 06:29:18', 'NInh', 'aaa@aa.ccc', '0000-00-00', '', '2165454549', '', '', '', 'admin1', '0', 'user', 0, 0),
 ('admin4', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-02-25 06:33:59', 'NInh', 'aaa@aa.ccc', '0000-00-00', '', '2165454549', '', '', '', 'admin1', '0', 'user', 0, 1),
-('grouplaptrinh', 'b7a659e0c28c88b3ee01adf805fc228f', '2012-02-25 08:57:48', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '0', 'administrator', 0, 1),
-('viptamnhinviet', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-04 14:30:34', 'Viptamnhinviet', 'aaa@aa.ccc', '1980-01-01', '', '2165454549', '12316546754', 'ACB', '', 'grouplaptrinh', '0', 'user', 0, 1);
+('grouplaptrinh', 'b7a659e0c28c88b3ee01adf805fc228f', '2012-02-25 08:57:48', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '0', 'user', 0, 1),
+('viptamnhinviet', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-04 14:30:34', 'Viptamnhinviet', 'aaa@aa.ccc', '1980-01-01', '', '2165454549', '12316546754', 'ACB', '', 'grouplaptrinh', '0', 'administrator', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -546,6 +598,12 @@ ALTER TABLE `dos_configs`
 ALTER TABLE `dos_modules_has_dos_usernames`
   ADD CONSTRAINT `fk_dos_modules_has_dos_usernames_dos_modules1` FOREIGN KEY (`dos_modules_module_id`) REFERENCES `dos_modules` (`module_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_dos_modules_has_dos_usernames_dos_usernames1` FOREIGN KEY (`dos_usernames_username`) REFERENCES `dos_module_usernames` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `dos_module_news`
+--
+ALTER TABLE `dos_module_news`
+  ADD CONSTRAINT `fk_dos_module_news_dos_module_news_cat1` FOREIGN KEY (`dos_module_item_cat_cat_id`) REFERENCES `dos_module_news_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `dos_module_products`
