@@ -16,7 +16,7 @@ return array(
 		'application.components.*',
 	),
 	'modules' => array(
-		'admin', 'about', 'products', 'contact', 'news',
+		'admin', 'about', 'products', 'contact', 'news', 'video',
 		// uncomment the following to enable the Gii tool
 
 		'gii' => array(
