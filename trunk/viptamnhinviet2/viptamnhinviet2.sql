@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 13, 2012 at 08:38 AM
+-- Generation Time: Mar 14, 2012 at 05:21 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -94,7 +94,8 @@ INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('phone', 'Điện thoại: 0618 850 747', NULL, 0),
 ('products', 'Sản phẩm', 'Products', 0),
 ('services', 'Dịch vụ', 'Services', 0),
-('supports', 'Hỗ trợ trực tuyến', 'Online support', 0);
+('supports', 'Hỗ trợ trực tuyến', 'Online support', 0),
+('video', 'Video', 'Video', 0);
 
 -- --------------------------------------------------------
 
@@ -124,7 +125,8 @@ INSERT INTO `dos_modules` (`module_id`, `module_url`, `module_title`, `module_so
 ('news', 'news/cats|news', 'Danh mục|Danh sách', 9, 1),
 ('products', 'products/cats|products', 'Danh mục|Danh sách', 3, 1),
 ('services', 'services', 'Danh sách', 4, 1),
-('supports', 'supports', 'Danh sách', 6, 0);
+('supports', 'supports', 'Danh sách', 6, 0),
+('video', 'video/cats|video', 'Danh mục|Danh sách', 10, 1);
 
 -- --------------------------------------------------------
 
@@ -152,7 +154,8 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('news', 'viptamnhinviet'),
 ('products', 'viptamnhinviet'),
 ('services', 'viptamnhinviet'),
-('supports', 'viptamnhinviet');
+('supports', 'viptamnhinviet'),
+('video', 'viptamnhinviet');
 
 -- --------------------------------------------------------
 
@@ -185,7 +188,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `description`, `activated`) VALUES
 (2, 'Giới thiệu', NULL, '<p>\r\n	Chi tiết</p>\r\n', NULL, 15, '2012-03-07 03:24:59', 1, 0, NULL, NULL, 'gioi-thieu', 'Mô tả', 1),
-(3, 'Tiêu đề giới thiệu', NULL, '<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n', NULL, 147, '2012-03-07 03:25:14', 2, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'Mô tả', 1);
+(3, 'Tiêu đề giới thiệu', NULL, '<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n', NULL, 148, '2012-03-07 03:25:14', 2, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'Mô tả', 1);
 
 -- --------------------------------------------------------
 
@@ -339,7 +342,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -410,7 +413,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1331623449);
+('''127.0.0.1''', 1331630072);
 
 -- --------------------------------------------------------
 
@@ -578,6 +581,66 @@ INSERT INTO `dos_module_usernames` (`username`, `password`, `create_date`, `full
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `dos_module_video`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_video` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `titleen` varchar(100) DEFAULT NULL,
+  `postdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `url` varchar(100) NOT NULL,
+  `record_order` int(11) NOT NULL,
+  `hits` int(11) NOT NULL DEFAULT '0',
+  `extra_field1` varchar(45) DEFAULT NULL,
+  `extra_field2` varchar(45) DEFAULT NULL,
+  `hot` tinyint(1) NOT NULL DEFAULT '0',
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_module_item_cat_cat_id` int(11) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `fk_dos_module_video_dos_module_video_cat1` (`dos_module_item_cat_cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `dos_module_video`
+--
+
+INSERT INTO `dos_module_video` (`record_id`, `title`, `titleen`, `postdate`, `tag`, `description`, `pic_thumb`, `url`, `record_order`, `hits`, `extra_field1`, `extra_field2`, `hot`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(2, 'asdsadsad', NULL, '2012-03-14 04:10:53', 'asdsadsad', 'asdsadasdasdas', '', 'hthhtt', 1, 0, NULL, NULL, 0, 1, 1),
+(3, 'dasdsadsadsa asd asdasd', NULL, '2012-03-14 04:14:29', 'dasdsadsadsa-asd-asdasd', 'asdas', '', 'http://www.youtube.com/watch?v=0i2Xu87brR8&amp;feature=fvwrel', 2, 0, NULL, NULL, 0, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_video_cat`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
+  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_parent_id` int(11) NOT NULL DEFAULT '0',
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `cat_title` varchar(100) NOT NULL,
+  `cat_titleen` varchar(100) DEFAULT NULL,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `cat_order` int(11) NOT NULL,
+  `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_module_video_cat`
+--
+
+INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat_title`, `cat_titleen`, `tag`, `description`, `cat_order`, `cat_enable`) VALUES
+(1, 0, NULL, 'Danh muc video', 'video', 'Mo ta', NULL, 1, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `dos_templates`
 --
 
@@ -632,6 +695,12 @@ ALTER TABLE `dos_module_products`
 --
 ALTER TABLE `dos_module_tables`
   ADD CONSTRAINT `fk_dos_module_table_dos_module_usernames10` FOREIGN KEY (`dos_module_usernames_username`) REFERENCES `dos_module_usernames` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `dos_module_video`
+--
+ALTER TABLE `dos_module_video`
+  ADD CONSTRAINT `fk_dos_module_video_dos_module_video_cat1` FOREIGN KEY (`dos_module_item_cat_cat_id`) REFERENCES `dos_module_video_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
