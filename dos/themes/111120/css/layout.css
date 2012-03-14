@@ -1,0 +1,187 @@
+body {margin:0; padding:0; background:#000;font-family:verdana, arial, helvetica, sans-serif; font-size:9pt;}
+.left{float: left;}
+.right{float:right}
+.clear{clear: both;}
+a{text-decoration:none; color:#720E3B}
+a:hover{color:#000;}
+
+/*layout*/
+*{margin:0; padding:0}
+
+#wrapper {margin:auto; width:970px;}
+
+/*Lang va form search*/
+#header-top{ margin:17px 0}
+.lang img{ margin:0 5px 0 5px; position:relative; top:3px}
+.lang a{ color:#FFDC69;}
+.lang a:hover{ color:#fff}
+
+#search{float:right; position:relative; top:15px}
+#frsearch{margin:5px 15px 0 10px;}
+.input{ float:left;border:none; background:url(../images/searchbg.gif) no-repeat; padding:0 0 0 10px;border:none;color:#000;width:232px;height:30px; margin-right:5px}
+.bt-go{}
+
+/*Header*/
+#header{margin:5px 0 0 0; background:url(../images/headerbg.gif) no-repeat; height:141px}
+.menu-hd-right{list-style:none}
+.welcome{color:#9A522E; font-weight:700; margin:5px 0 0 0}
+.menu-hd-right{ margin-left:20px; }
+.menu-hd-right li{float:left;position:relative; top:25px}
+.menu-hd-right li a{padding:5px 7px;display:block;color:#000; font-size:8pt;font-weight:700}
+.menu-hd-right li a:hover{color:#fff; background:#D3A87C}
+
+.logo{float:left; margin:35px 0 0 0}
+/**  Menu **/
+.menu{list-style:none; padding:0 0 0 8px; position:relative; top:28px; *top:26px}
+.menu li{float:left; position:relative; margin:0 2px 0px 0}
+.menu li a{padding:49px 10px 15px; display:block; color:#fff; font-weight:bold;}
+.menu li a:hover{color:#FFDC69; background:url(../images/nav-hover.jpg) repeat-x left center;}
+.menu .select{color:#FFDC69; background:url(../images/nav-hover.jpg) repeat-x left center;}
+.menu li ul{display:none;}
+.menu li:hover ul{list-style:none;display:block;position:absolute; z-index:3000;top:77px;width:180px;background:#9A512E}
+.menu li ul li{width:100%; background:none}
+.menu li ul li a{font-weight:normal; color:#fff;background:none; padding:5px 2px 5px 15px}
+.menu li ul li a:hover{ background:#642B0E;}
+ /*Khi hover van giu chuot o vi tri li*/
+.menu li:hover >a {color:#FFDC69; background:url(../images/nav-hover.jpg) repeat-x left center;}
+/** Banner **/
+#banner{ margin:0px 0 5px 0; }
+
+/* Page Content*/
+#content{background:#fff;border-left:5px solid #D3A87C; border-right:5px solid #D3A87C;border-bottom:5px solid #D3A87C;-webkit-border-radius:0 0 5px 5px;-moz-border-radius:0 0 5px 5px}
+.title-left{margin:0 0 0 10px;font-size:13px; color:#9A522E; background:#fff; font-weight:bold; padding:10px 0; 
+			border-top:1px solid #CDBF9A; border-left:1px solid #CDBF9A ; border-bottom:1px solid #CDBF9A;}
+.title-left span{padding:0 0 0 10px;} 
+
+/*Left content*/
+#leftcontent{float:left; width:235px; background:url(../images/left-col-bg.jpg) repeat-y left top;padding:10px 0 1px;border-bottom:1px solid #CDBF9A}
+
+/*Shop by*/
+.sub-shop-by{margin:0 0 10px 0;list-style:none;padding:7px 5px 20px 20px; border-right:1px solid #CDBF9A}
+.sub-shop-by li{color:#000; font-weight:bold; padding:5px 0}
+.sub-shop-by li a{ color:#000}
+.sub-shop-by li a:hover{color:#8B674B}
+.sub-shop-by li ul{padding:5px 0 5px 20px}
+.sub-shop-by li ul li{font-weight:normal;list-style-image:url(../images/bull.gif); padding:2px 0}
+
+/*Category*/
+.subcate{margin:0 0 10px 0;list-style:none;padding:7px 0px 10px 20px; border-right:1px solid #CDBF9A}
+.subcate li{ padding:5px 0}
+.subcate li a{color:#000; font-weight:bold;display:block; *_display:inherit}
+.subcate li a:hover{ color:#8B674B}
+.subcate li ul{padding:5px 0 0 20px}
+.subcate li ul li{list-style-image:url(../images/bull.gif); padding:2px 0}
+.subcate li ul li a{color:#000; font-weight:normal;display:block; *_display:inherit}
+
+/*My cart*/
+.mycart{margin:0 0 10px 10px; padding:15px 0px 20px 0;border-right:1px solid #CDBF9A}
+.advs{margin:0 0 5px 10px; padding: 0;}
+
+/*  RECENTLY VIEWED PRODUCTS  */
+.sub-rely-products{list-style:none;padding:10px 3px 30px 10px;border-right:1px solid #CDBF9A}
+.sub-rely-products li a{color:#444444; display:block;  padding:5px 0}
+.sub-rely-products li a:hover{text-decoration:underline}
+
+/*Ho tro ky thuat*/
+.support{margin:0 0 10px 0;list-style:none;padding:10px 3px 20px 0px; text-align:center;border-right:1px solid #CDBF9A}
+.support li {color:#444444; padding:5px 0}
+/*Thong ke truy cap*/
+.statistics{margin:0;list-style:none;padding:10px 3px 20px 20px;border-right:1px solid #CDBF9A}
+.statistics li {color:#444444;  padding:5px 0}
+
+/*Right content*/
+#rightcontent{float:right;width:710px;padding:10px 0 1px; margin:0 5px 0 0 }
+.title-h2-right{margin:0 0 10px 0;font-size:11pt; color:#9A522E; font-weight:bold;padding:0px 1px 0px 0px;}
+.title-h2-right a{color:#9A522E}
+.title-h2-right a:hover{color:#000}
+
+.link{color:#000; font-weight:bold; padding:0px 0 10px 0}
+.link img{margin:0 3px 0 0}
+.link a{ color:#9A522E; font-size:10pt}
+.link a:hover{text-decoration:underline; color:#000}
+
+/*Page CREATE AN ACCOUNT*/
+.bt-frm-create{list-style:none;border-bottom:1px solid #F0F0F0; padding:0 0 30px 0; margin:0 0 10px 0;}
+.bt-frm-create li{padding:2px 0}
+.bt-frm-create p{ padding:0 0 0 10px}
+.bt-frm-create input{ margin:0 20px 0 0; width:220px; height:22px; border:1px solid #F0F0F0}
+.bt-frm-create label{ color:#555555; font-weight:700; font-size:8pt}
+.bt-frm-create span{ color:#F00}
+.check input{ width:20px; margin:0; position:relative; top:7px}
+
+/*****    Page Login   ****/
+.left-login{float:left; width:410px;}
+.info-left-login{border-bottom:1px solid #F0F0F0; padding:0 0 85px 0; margin:0 0 10px 0}
+.continue{float:right;background:#8A4C2D; font-weight:bold;color:#fff;padding:7px 15px; border:none;-webkit-border-radius:4px;-moz-border-radius:4px}
+.continue:hover{ color:#fff}
+
+.right-login{float:right;width:260px;padding:0 0 0px 10px; }
+#frm-login {margin:10px 0 0 10px}
+.bt-frm-login  label{ width:90px; padding-top:2px; color:#333; font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:700; text-transform:capitalize; text-align:left; margin-right:10px}
+.bt-frm-login input{ margin:0 0 10px 0; border:1px solid #ddd; width:150px; padding:3px}
+.bt-frm-login  p{margin:0px 0}
+.bt-frm-login{ list-style:none;border-bottom:1px solid #ddd; padding:0 0 27px 0; margin:0 0 10px 0}
+.forgot{float:left; color:#8A4C2D}
+.forgot:hover{ color:#000;text-decoration:underline}
+.singin{float:right;background:#8A4C2D; color:#fff;padding:7px 0px; text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold;-webkit-border-radius:4px;-moz-border-radius:4px}
+
+/*Page content right*/
+#page-tent-right{color:#444444; padding: 0 10px 0 15px; margin-bottom: 10px;}
+#page-tent-right img{margin:0 10px 5px 0}
+
+/***** Product    *****/
+#all-product{ width:710px; margin:0 0 5px 0}
+.product{width:169px;padding:5px 0 15px 0;text-align:left;margin:0 5px 10px 0; display:inline-block; vertical-align:top;*float:left;*margin:0 5px 10px 0; }
+.product-img{width:169px;display:table-cell;vertical-align:bottom; padding:0 0 10px 0;border-bottom:1px dotted #DBA067}
+.product p{color:#9A522E; font-weight:700; font-size:13px; margin:0 0 10px 0}
+.title-pro{ font-size:10pt;margin:10px 0}
+.title-pro a{color:#DBA067;}
+.title-pro a:hover{color:#444}
+.add-to-cart{padding: 5px 0 8px 10px; font-weight:700;background:url(../images/bkg_btn.png) no-repeat left top;*padding: 0px 0 0px 10px;*height:25px;}
+.add-to-cart span{background:url(../images/bkg_btn.png) no-repeat right top; padding:5px 15px 8px 7px; height:25px;color:#fff}
+
+/**Products Info**/
+.right-detail{ float:left; width:425px;margin:5px 0 0 0}
+.title-info{color:#000; font-size:10pt; font-weight:700; margin:0 0 10px 0}
+.right-detail-info p{padding:0; color:#999}
+.right-detail-info span{ font-size:11pt; color:#f90; font-weight:700}
+.right-detail-info b{color:#9A522E; font-size:12pt; }
+.title-info a{color:#000; font-size:10pt;}
+.title-info a:hover{ text-decoration:underline; *_color:#109FEC}
+.right-detail-info .add{float:right;color:#fff; font-weight:bold; background:#9A522E; padding:8px 8px}
+.right-detail-info .add:hover{ text-decoration:none;color:#fff; font-weight:bold; background:#FFDC69; padding:8px 8px}
+.right-detail-info .detail{float:left;color:#fff; font-weight:bold; background:#FFDC69; padding:8px 8px}
+.right-detail-info .detail:hover{text-decoration:none;color:#fff; font-weight:bold; background:#9A522E; padding:8px 8px}
+.right-detail-info li{list-style:none;margin:0px 0 0px 0; padding:5px 0 10px 0}
+
+/* paging */
+ul.paging{float: right; margin:0; padding:0; list-style: none;}
+ul.paging li{display: inline;}
+ul.paging .hidden{display: none;}
+ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{color:#FFB400; border: 1px solid #ccc; padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{color:#fff; background:#512C19}
+
+/**Page Contact**/
+.title-contact{ background:#F0EDE6;margin:10px 0 10px 0; padding:7px 2px 7px 10px; font-family:Tahoma, Geneva, sans-serif;font-weight:bold; color:#000}
+#frm{margin:0 0 10px 0;}
+.frame-contact p{color:#555; font-weight:bold}
+.frame-contact{list-style:none}
+.frame-contact li{padding:4px 0}
+.frame-contact input{ margin:0 20px 0 0; width:220px; height:22px; border:1px solid #ddd}
+.frame-contact textarea{border:1px solid #ddd; width:460px}
+.frame-contact span{ color:#F00}
+.frame-contact{margin:0 0 10px 0; padding:0 0 10px 0}
+.frame-contact .singin{float:none;width:70px;height:auto !important;margin:10px 0 0 0 !important}
+/*Footer*/
+
+#footer{ margin:0 0 15px 0;}
+#footer a:hover{color:#FFDC69}
+.menu-fter li{list-style:none;float:left;}
+.menu-fter li a{ text-transform:capitalize;padding:12px 5px;display:block; color:#FFDC69;background:url(../images/bkg-pipe2.gif) no-repeat right}
+.copyright {float:right;color:#FFDC69;text-align:right;*margin:10px 0 0 0;*_margin:0; padding:12px 0px 0 0}
+.copyright a{color:#FFDC69;}
+
+/* Error */
+.errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
+.errorSummary ul{margin:0 32px; padding:0}
+.errorSummary ul li{padding:2px 0; color: red}
