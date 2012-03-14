@@ -1,0 +1,1669 @@
+<?xml version="1.0" encoding="UTF-8"?><feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xml:lang="en"
+  xml:base="http://raynux.com/blog/wp-atom.php"
+   >
+	<title type="text">Rayhan's blog (raynux.com)</title>
+	<subtitle type="text">Rayhan's Personal Web Blog Site</subtitle>
+
+	<updated>2009-09-01T18:35:09Z</updated>
+	<generator uri="http://wordpress.org/" version="2.8">WordPress</generator>
+
+	<link rel="alternate" type="text/html" href="http://raynux.com/blog" />
+	<id>http://raynux.com/blog/feed/atom/</id>
+	<link rel="self" type="application/atom+xml" href="http://raynux.com/blog/feed/atom/" />
+
+			<entry>
+		<author>
+			<name>rayhan</name>
+						<uri>http://www.raynux.com</uri>
+					</author>
+		<title type="html"><![CDATA[RayFeedReader &#8211; PHP class for parsing RSS and Atom Feed]]></title>
+		<link rel="alternate" type="text/html" href="http://raynux.com/blog/2009/09/02/rayfeedreader-php-class-for-parsing-rss-and-atom-feed/" />
+		<id>http://raynux.com/blog/?p=147</id>
+		<updated>2009-09-01T18:35:09Z</updated>
+		<published>2009-09-01T18:35:09Z</published>
+		<category scheme="http://raynux.com/blog" term="FEED" /><category scheme="http://raynux.com/blog" term="PHP" /><category scheme="http://raynux.com/blog" term="Reference" /><category scheme="http://raynux.com/blog" term="class" /><category scheme="http://raynux.com/blog" term="programming" /><category scheme="http://raynux.com/blog" term="ATOM" /><category scheme="http://raynux.com/blog" term="Programming" /><category scheme="http://raynux.com/blog" term="RSS" /><category scheme="http://raynux.com/blog" term="XML" />		<summary type="html"><![CDATA[RayFeedReader, A Simple and Easy SimpleXML based feed reader class using PHP.
+First of all it&#8217;s another reinvention of wheel. This class is designed to provide quick access to any XML based RSS feed and it&#8217;s content. Usages are very simple and require only one line of code. Html rendering functionality is provided through separate pluggable [...]]]></summary>
+		<content type="html" xml:base="http://raynux.com/blog/2009/09/02/rayfeedreader-php-class-for-parsing-rss-and-atom-feed/"><![CDATA[<p><strong>RayFeedReader</strong>, A Simple and Easy SimpleXML based feed reader class using PHP.</p>
+
+<p>First of all it&#8217;s another reinvention of wheel. This class is designed to provide quick access to any XML based RSS feed and it&#8217;s content. Usages are very simple and require only one line of code. Html rendering functionality is provided through separate pluggable widget rendering class which can be extended easily. SimpleXML is used by default to load and fetch feed url but can be used CURL using rayHttp class. All or any CURL options can be set for HTTP request. It can auto detect feed type and supports RSS 0.92, RSS 2.0 and Atom feeds. </p>
+<p><strong>Features:</strong></p>
+<p>- Read feeds content into an array<br />
+- Supports for RSS 0.92, RSS 2.0 and Atom feed<br />
+- Detect feed type automatically, also can be set manually.<br />
+- Support pluggable html widget rendering class<br />
+- Can render html widget through optional RayFeedWidget class or your own extended class.<br />
+- Easily configurable &amp; can work without any configuration.<br />
+- Simple &amp; Easy to use from anywhere in your application with a single line of code.<br />
+- Support Singleton pattern<br />
+- By default SimpleXML is used as http client,<br />
+- Support Custom CURL request, may be used to extends functionality through rayHttp class.<br />
+- Light Weight</p>
+
+<p>Methods Available (This class provides):<br />
+- parse()<br />
+- getData()<br />
+- widget()</p>
+<p><strong>Class:</strong></p>
+<p>File: <strong>rayfeedreader.php</strong></p>
+<pre><code>&lt;?php
+
+    /**
+     * RayFeedReader
+     *
+     * SimpleXML based feed reader class. A very specific feed reader designed
+     * to working with no or little configurations.
+     *
+     * - This class can read an rss feed into array from a given url.
+     * - Also can render html widget with plugable RayFeedWidget Class.
+     *
+     * Supports following feed types:
+     *  - RSS 0.92
+     *  - RSS 2.0
+     *  - Atom
+     *
+     * Configuration Options
+     *  - array
+     *      - url: (string)
+     *          - feed url
+     *
+     *      - httpClient: (string)
+     *          - default SimpleXML
+     *          - value rayHttp or SimpleXML
+     *
+     *      - type: ([optional] string
+     *          - auto detect
+     *          - value rss or rss2 or atom
+     *
+     *      - widget: ([optional] string)
+     *          - feed widget class name for rendering html
+     *
+     *      - rayHttp: (array)
+     *          - only if httpClient is set to rayHttp
+     *          - rayHttp Options if you want to modify rayHttml CURL options
+     *          - generally not required.
+     *
+     *
+     *
+     *
+     * @version 1.0
+     * @author Md. Rayhan Chowdhury
+     * @package rayFeedReader
+     * @license GPL
+     */
+    Class RayFeedReader{
+
+        /**
+         * Self Instance for Singleton Pattern
+         *
+         * @var object
+         * @access protected
+         */
+        static private  $__instance;
+
+        /**
+         * Instance of Parser Class.
+         *
+         * @var object Parser Class
+         * @access protected
+         */
+        Protected       $_Parser;
+
+        /**
+         * Feed Url
+         *
+         * @var string feed url
+         * @access protected
+         */
+        protected       $_url;
+
+        /**
+         * Runtime Options for reader
+         *
+         * @var array
+         * @access protected
+         */
+        protected       $_options = array('rayHttp' => array());
+
+        /**
+         * Type of feed to be parsed.
+         *
+         * @var string
+         * @access protected
+         */
+        protected       $_type = "rss";
+
+        /**
+         * HttpClient to be used for loading feed content.
+         *
+         *  - default SimpleXML
+         *
+         * @var string 'SimpleXML' or 'rayHttp'
+         * @access protected
+         */
+        protected       $_httpClient = "SimpleXML";
+
+        /**
+         * Widget Class Name
+         *
+         * @var string
+         * @access protected
+         */
+        protected       $_widget;
+
+        /**
+         * Parsed result data
+         *
+         * @var array
+         * @access protected
+         */
+        protected       $_content;
+
+        /**
+         * Class construct
+         *
+         * @param array $options
+         */
+        function __construct($options = array()) {
+            $this->setOptions($options);
+        }
+
+        /**
+         * Get Instance of the class.
+         *
+         * @param array $options
+         * @return object self instance.
+         * @access public
+         * @static
+         */
+        static function &#038;getInstance($options = array()) {
+            if (is_null(self::$__instance)) {
+                self::$__instance = new self($options);
+            }
+            return self::$__instance;
+        }
+
+        /**
+         * Set Options for the class
+         *
+         *
+         * @param array $options
+         * @return object self instance
+         * @access public
+         */
+        function &#038;setOptions($options) {
+            if (!empty($options['url'])) {
+                $this->_url = $options['url'];
+            }
+
+            if (!empty($options['type'])) {
+                $this->_type = $options['type'];
+            }
+
+            if (!empty($options['httpClient'])) {
+                $this->_httpClient = $options['httpClient'];
+            }
+
+            if (!empty($options['widget'])) {
+                $this->_widget = $options['widget'];
+            }
+
+            $this->_options = array_merge($this->_options, $options);
+
+            return $this;
+        }
+
+        /**
+         * Parse feed contents into an array and return self object
+         *
+         * @return object self instance
+         * @access public
+         */
+        function &#038;parse() {
+            /**
+             * Get/load content
+             */
+             switch ($this->_httpClient) {
+                 case 'SimpleXML':
+                     $content = new SimpleXMLElement($this->_url, LIBXML_NOCDATA, true);
+                     break;
+
+                 case 'rayHttp':
+
+                     $content = RayHttp::getInstance()->setOptions($this->_options['rayHttp'])->get($this->_url);
+
+                     if (!empty($content)) {
+                        $content = new SimpleXMLElement($content, LIBXML_NOCDATA);
+                     }
+                     break;
+             }
+
+             if (empty($content)) {
+                 trigger_error("XML format is invalid or broken.", E_USER_ERROR);
+             }
+
+            /**
+             * Detect Feed Type
+             */
+
+             if (empty($this->_type)) {
+
+                    switch ($content->getName()) {
+                        case 'rss':
+                            foreach ($content->attributes() as $attribute) {
+                                if ($attribute->getName() == 'version') {
+                                    if ('2.0' == $attribute) {
+                                        self::setOptions(array('type' => 'rss2'));
+                                    } elseif (in_array($attribute, array('0.92', '0.91'))) {
+                                        self::setOptions(array('type' => 'rss'));
+                                    }
+                                }
+                            }
+                            break;
+
+                        case 'feed':
+                            self::setOptions(array('type' => 'atom'));
+
+                            break;
+                    }
+
+             }
+
+             if (!in_array($this->_type, array('rss', 'rss2', 'atom'))) {
+
+                  trigger_error("Feed type is either invalid or not supported.", E_USER_ERROR);
+
+                  return false;
+             }
+
+            /**
+             * Parse Feed Content
+             */
+            switch ($this->_type) {
+                case 'rss':
+                    $content = $this->parseRss($content);
+                    break;
+
+                case 'rss2':
+                    $content = $this->parseRss2($content);
+                    break;
+
+                case 'atom':
+                    $content = $this->parseAtom($content);
+                    break;
+            }
+
+             if (empty($content)) {
+                 trigger_error("No content is found.", E_USER_ERROR);
+             }
+
+             $this->_content = $content;
+
+             return $this;
+
+        }
+
+        /**
+         * Get Array of Parsed XML feed data.
+         *
+         * @return array parsed feed content.
+         * @access public
+         */
+        function getData() {
+            return $this->_content;
+        }
+
+        /**
+         * Return html widget based rendered by widget class
+         *
+         *
+         * @param array $options for html widget class
+         * @return string html widget
+         * @access public
+         */
+        function widget($options = array('widget' => 'brief')) {
+            if (!empty($this->_widget) &#038;&#038; !empty($this->_content)) {
+                $Widget = new $this->_widget;
+
+                return $Widget->widget($this->_content, $options);
+
+             } else {
+                 return false;
+             }
+        }
+
+        /**
+         * Parse feed xml into an array.
+         *
+         * @param object $feedXml SimpleXMLElementObject
+         * @return array feed content
+         * @access public
+         */
+        function parseRss($feedXml) {
+            $data = array();
+
+            $data['title'] = $feedXml->channel->title . '';
+            $data['link'] = $feedXml->channel->link . '';
+            $data['description'] = $feedXml->channel->description . '';
+            $data['parser'] = __CLASS__;
+            $data['type'] = 'rss';
+
+            foreach ($feedXml->channel->item as $item) {
+                $data['items'][] = array(
+                                        'title' =>  $item->title . '',
+                                        'link' =>   $item->link . '',
+                                        'description' => $item->description . '',
+                                    );
+            }
+
+            return $data;
+        }
+
+        /**
+         * Parse feed xml into an array.
+         *
+         * @param object $feedXml SimpleXMLElementObject
+         * @return array feed content
+         * @access public
+         */
+        function parseRss2($feedXml) {
+            $data = array();
+
+            $data['title'] = $feedXml->channel->title . '';
+            $data['link'] = $feedXml->channel->link . '';
+            $data['description'] = $feedXml->channel->description . '';
+            $data['parser'] = __CLASS__;
+            $data['type'] = 'rss2';
+
+            $namespaces = $feedXml->getNamespaces(true);
+            foreach ($namespaces as $namespace => $namespaceValue) {
+                $feedXml->registerXPathNamespace($namespace, $namespaceValue);
+            }
+
+            foreach ($feedXml->channel->item as $item) {
+                $categories = array();
+                foreach ($item->children() as $child) {
+                    if ($child->getName() == 'category') {
+                        $categories[] = (string) $child;
+                    }
+                }
+
+                $author = null;
+                if (!empty($namespaces['dc']) &#038;&#038; $creator = $item->xpath('dc:creator')) {
+                    $author = (string) $creator[0];
+                }
+
+                $content = null;
+                if (!empty($namespaces['encoded']) &#038;&#038; $encoded = $item->xpath('content:encoded')) {
+                    $content = (string) $encoded[0];
+                }
+
+                $data['items'][] = array(
+                                        'title' =>  $item->title . '',
+                                        'link' =>   $item->link . '',
+                                        'date' =>   date('Y-m-d h:i:s A', strtotime($item->pubDate . '')),
+                                        'description' => $item->description . '',
+                                        'categories' => $categories,
+                                        'author' => array( 'name' => $author),
+                                        'content' => $content,
+
+                                    );
+
+            }
+
+            return $data;
+        }
+
+        /**
+         * Parse feed xml into an array.
+         *
+         * @param object $feedXml SimpleXMLElementObject
+         * @return array feed content
+         * @access public
+         */
+        function parseAtom($feedXml) {
+            $data = array();
+
+            $data['title'] = $feedXml->title . '';
+            foreach ($feedXml->link as $link) {
+                    $data['link'] = $link['href'] . '';
+                break;
+            }
+
+            $data['description'] = $feedXml->subtitle . '';
+            $data['parser'] = __CLASS__;
+            $data['type'] = 'atom';
+
+            foreach ($feedXml->entry as $item) {
+                foreach ($item->link as $link) {
+                    $itemLink = $link['href'] . '';
+                    break;
+                }
+
+                $categories = array();
+                foreach ($item->category as $category) {
+                    $categories[] = $category['term'] . '';
+                }
+
+                $data['items'][] = array(
+                                        'title' =>  $item->title . '',
+                                        'link' =>   $itemLink . '',
+                                        'date' =>   date('Y-m-d h:i:s A', strtotime($item->published . '')),
+                                        'description' => $item->summary . '',
+                                        'content' => $item->content . '',
+                                        'categories' => $categories,
+                                        'author' => array('name' => $item->author->name . '', 'url' => $item->author->uri . ''),
+                                        'extra' => array('contentType' => $item->content['type'] . '', 'descriptionType' => $item->summary['type'] . '')
+                                    );
+            }
+
+            return $data;
+        }
+
+    }
+?&gt;</code></pre>
+
+<p>External feed widget class to get rendered html widget. </p>
+<p>File: <strong>rayfeedwidget.php</strong></p>
+<pre><code>&lt;?php
+
+    /**
+     * Feed Widget Interface
+     *
+     * @version 1.0
+     * @author Md. Rayhan Chowdhury
+     * @package rayFeedReader
+     * @license GPL
+     */
+    interface RayFeedWidget_Interface{
+        /**
+         * Public widget method
+         *
+         * @param &lt;type> $data
+         * @param <type> $options
+         * @return string html
+         */
+        public function widget($data, $options = array());
+    }
+
+    /**
+     * Widget Plugin Class for RayFeedReader
+     *
+     * Render html widget for feed reader based on options
+     *
+     * config options
+     *  - array
+     *      - widget:
+     *          - optional string
+     *          - value 'brief' or 'compact' or 'detail'
+     *      - showTitle
+     *          - boolean
+     *          - whether add blog title or not.
+     *
+     * @version 1.0
+     * @author Md. Rayhan Chowdhury
+     * @package rayFeedReader
+     * @license GPL
+     */
+    class RayFeedWidget implements RayFeedWidget_Interface{
+
+        /**
+         * HTML widget structure
+         *
+         * @var array
+         * @access public
+         */
+        public $html = array('brief' => "&lt;div class=\"feed-item feed-brief\"&gt;\n
+                                            &lt;div class=\"feed-item-title\"&gt;\n
+                                                &lt;h3&gt;&lt;a href='%s'&gt;%s&lt;/a&gt;&lt;/h3&gt;\n
+                                                &lt;div class='feed-item-date'&gt;%s&lt;/div&gt;\n
+                                            &lt;/div&gt;\n
+                                            &lt;div class=\"feed-item-description\"&gt;%s&lt;/div&gt;\n
+                                        &lt;/div&gt;",
+
+                                'compact' => "&lt;div class=\"feed-item feed-compact\"&gt;\n
+                                    &lt;div class=\"feed-item-title\"&gt;\n
+                                        &lt;h3&gt;&lt;a href='%s'&gt;%s&lt;/a&gt;&lt;/h3&gt;\n
+                                        &lt;div class='feed-item-date'&gt;%s&lt;/div&gt;\n
+                                    &lt;/div&gt;\n
+                                &lt;/div&gt;",
+
+                                'detail' => "&lt;div class=\"feed-item feed-detail\"&gt;\n
+                                    &lt;div class=\"feed-item-title\"&gt;\n
+                                        &lt;h3&gt;&lt;a href='%s'&gt;%s&lt;/a&gt;&lt;/h3&gt;\n
+                                        &lt;div class='feed-item-date'&gt;%s&lt;/div&gt;\n
+                                    &lt;/div&gt;\n
+                                    &lt;div class=\"feed-item-content\"&gt;%s&lt;/div&gt;\n
+                                &lt;/div&gt;",
+                            );
+
+        /**
+         * Return html widget based rendered by widget class
+         *
+         * @param <type> $data
+         * @param <type> $options
+         * @return <type>
+         */
+        function widget($data, $options = array('widget' => 'brief')) {
+            switch ($options['widget']) {
+
+                case 'compact':
+                    return $this->widgetCompact($data, $options);
+                    break;
+
+                case 'detail':
+                    return $this->widgetDetail($data, $options);
+                    break;
+
+                case 'brief':
+                default:
+                    return $this->widgetBrief($data, $options);
+                    break;
+            }
+        }
+
+        /**
+         * Render feed widget with title and date only
+         *
+         * @param <type> $data
+         * @param <type> $options
+         * @return <type>
+         */
+        function widgetCompact($data, $options = array()) {
+            if (empty($data['items'])) {
+              return false;
+            }
+
+            $out = array();
+            foreach ($data['items'] as $item) {
+                if (empty($item['date'])) {
+                    $item['date'] = '';
+                }
+                $out[] = sprintf($this->html['compact'], $item['link'], $item['title'], $item['date']);
+
+            }
+
+            $title = '';
+            if (empty($options['showtitle'])) {
+                $title = sprintf("&lt;div class='feed-title'&gt;&lt;h2&gt;%s&lt;/h2&gt;&lt;hr&gt;%s&lt;/div&gt;\n", $data['title'], $data['description']);
+            }
+
+            $out = "&lt;div class='feed-container'&gt;\n"  . $title . join(" \n", $out) . "&lt;/div&gt;";
+
+            return $out;
+        }
+
+        /**
+         * Render feed widget with title, date &#038; description
+         *
+         * @param <type> $data
+         * @param <type> $options
+         * @return <type>
+         */
+        function widgetBrief($data, $options = array()) {
+            if (empty($data['items'])) {
+              return false;
+            }
+
+            $out = array();
+
+            foreach ($data['items'] as $item) {
+                if (empty($item['date'])) {
+                    $item['date'] = '';
+                }
+
+                if (empty($item['description'])) {
+                        $item['description'] = $item['content'];
+                }
+
+                $out[] = sprintf($this->html['brief'], $item['link'], $item['title'], $item['date'], $item['description']);
+
+            }
+
+            $title = '';
+            if (empty($options['showtitle'])) {
+                $title = sprintf("&lt;div class='feed-title'&gt;&lt;h2&gt;%s&lt;/h2&gt;&lt;hr&gt;%s&lt;/div&gt;\n", $data['title'], $data['description']);
+            }
+
+            $out = "&lt;div class='feed-container'&gt;\n"  . $title . join(" \n", $out) . "&lt;/div&gt;";
+
+            return $out;
+        }
+
+        /**
+         * Render blog widget with title, date &#038; content
+         *
+         * @param <type> $data
+         * @param <type> $options
+         * @return <type>
+         */
+        function widgetDetail($data, $options = array()) {
+            if (empty($data['items'])) {
+              return false;
+            }
+
+            $out = array();
+            foreach ($data['items'] as $item) {
+                if (empty($item['date'])) {
+                    $item['date'] = '';
+                }
+                if (empty($item['content'])) {
+                    $item['content'] = $item['description'];
+                }
+                $out[] = sprintf($this->html['detail'], $item['link'], $item['title'], $item['date'], $item['content']);
+
+            }
+
+            $title = '';
+            if (empty($options['showtitle'])) {
+                $title = sprintf("&lt;div class='feed-title'&gt;&lt;h2&gt;%s&lt;/h2&gt;&lt;hr&gt;%s&lt;/div&gt;\n", $data['title'], $data['description']);
+            }
+
+            $out = "&lt;div class='feed-container'&gt;\n"  . $title . join(" \n", $out) . "&lt;/div&gt;";
+
+            return $out;
+        }
+    }
+?&gt;</code></pre>
+
+<p>Usage Example: some quick examples are given below to introduce you with the class and it&#8217;s methods. </p>
+<p>File: <strong>example.php</strong></p>
+<pre><code>&lt;?php
+
+    /**
+     * Example Usage or RayFeedReader
+     */
+
+    require_once('rayfeedreader.php');   
+
+    /**
+     * get Instance
+     */
+    $reader1 = RayFeedReader::getInstance();
+    $reader2 = RayFeedReader::getInstance($options);
+    $reader3 = new RayFeedReader();
+    $reader4 = new RayFeedReader($options);
+
+    /**
+     * get data from a feed url
+     */
+    $options = array('url' => 'http://example.com/feed');
+
+    $feedData = RayFeedReader::getInstance($options)->parse()->getData();
+
+    // Or options can be set anytime using setOptions method.
+    $feedData = RayFeedReader::getInstance()->setOptions($options)->parse()->getData();
+
+    /**
+     * Get html widget
+     */
+
+    $options = array(
+                        'url' => 'http://example.com/feed',
+                        'widget' => 'RayFeedWidget',
+                    );
+
+    /**
+     * Load rayFeedWidget class file
+     */
+    require_once('rayfeedwidget.php');
+
+    $html = RayFeedReader::getInstance()->setOptions($options)->parse()->widget();
+
+    // OR with widget options.
+    $widgetOptions = array('widget' => 'detail', 'showTitle' => true);
+
+    $html = RayFeedReader::getInstance()->setOptions($options)->parse()->widget($widgetOptions);
+
+    /**
+     * Full options
+     */
+    $options = array(
+                        'url' => 'http://example.com/feed',
+                        'widget' => 'RayFeedWidget',
+                        'httpClient' => 'rayHttp',
+                        'type' => 'atom',
+                    );
+
+    /**
+     * Load rayHttp class file.
+     */
+    require_once("rayhttp.php");    
+
+    /**
+     * Html widget with full options
+     */
+    $html = RayFeedReader::getInstance()->setOptions($options)->parse()->widget();
+
+    /**
+     * Get Feed Data with full options
+     */
+    $feedData = RayFeedReader::getInstance($options)->parse()->getData();
+?&gt;</code></pre>
+<p>Please let me know if you find this class helpful for you..</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://raynux.com/blog/2009/09/02/rayfeedreader-php-class-for-parsing-rss-and-atom-feed/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://raynux.com/blog/2009/09/02/rayfeedreader-php-class-for-parsing-rss-and-atom-feed/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>rayhan</name>
+						<uri>http://www.raynux.com</uri>
+					</author>
+		<title type="html"><![CDATA[I-Blood profile badge ready to use]]></title>
+		<link rel="alternate" type="text/html" href="http://raynux.com/blog/2009/08/05/i-blood-profile-badge-ready-to-use/" />
+		<id>http://raynux.com/blog/?p=138</id>
+		<updated>2009-08-05T12:11:45Z</updated>
+		<published>2009-08-05T11:03:03Z</published>
+		<category scheme="http://raynux.com/blog" term="Bangladesh" /><category scheme="http://raynux.com/blog" term="I-Blood" /><category scheme="http://raynux.com/blog" term="PHP" /><category scheme="http://raynux.com/blog" term="Web Services" /><category scheme="http://raynux.com/blog" term="programming" /><category scheme="http://raynux.com/blog" term="web" /><category scheme="http://raynux.com/blog" term="Blood Network" />		<summary type="html"><![CDATA[I-Blood, is a social network for blood.
+I-Blood offers donor profile for every member. Which is still in improvement. 
+Profile badge image for i-blood beta version is available now. Here is the image: 
+
+Here is the link to the image: http://beta.i-blood.com/img/i-blood-badge.gif
+Here is the sample code widget for placing the badge on your blog:
+
+&#60;p&#62;
+&#60;a href="http://beta.i-blood.com/g/profiles/pub/45"&#62;
+&#60;img src="http://beta.i-blood.com/img/i-blood-badge.gif" border="0" [...]]]></summary>
+		<content type="html" xml:base="http://raynux.com/blog/2009/08/05/i-blood-profile-badge-ready-to-use/"><![CDATA[<p><strong><a href="http://beta.i-blood.com">I-Blood</a></strong>, is a social network for blood.</p>
+<p><strong><a href="http://beta.i-blood.com">I-Blood</a></strong> offers donor profile for every member. Which is still in improvement. </p>
+
+<p>Profile badge image for i-blood beta version is available now. Here is the image: <br/></p>
+<p><img src="http://beta.i-blood.com/img/i-blood-badge.gif" alt="i-blood profile badge image." /></p>
+<p>Here is the link to the image: <a title="I-Blood profile badge image" href="http://beta.i-blood.com/img/i-blood-badge.gif">http://beta.i-blood.com/img/i-blood-badge.gif</a></p>
+<p>Here is the sample code widget for placing the badge on your blog:</p>
+<pre><code>&lt;p&gt;
+&lt;a href="http://beta.i-blood.com/g/profiles/pub/45"&gt;
+
+&lt;img src="http://beta.i-blood.com/img/i-blood-badge.gif" border="0" alt="View Md. Rayhan Chowdhury's donor profile on I-Blood" width="160" height="38" /&gt;
+&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+<p>just make a little change to the code above, change my profile link with your profile link and also my name with your name.</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://raynux.com/blog/2009/08/05/i-blood-profile-badge-ready-to-use/#comments" thr:count="1"/>
+		<link rel="replies" type="application/atom+xml" href="http://raynux.com/blog/2009/08/05/i-blood-profile-badge-ready-to-use/feed/atom/" thr:count="1"/>
+		<thr:total>1</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>rayhan</name>
+						<uri>http://www.raynux.com</uri>
+					</author>
+		<title type="html"><![CDATA[Convert a Multidimensional Array Into Single Dimension]]></title>
+		<link rel="alternate" type="text/html" href="http://raynux.com/blog/2009/06/28/convert-a-multidimensional-array-into-single-dimension/" />
+		<id>http://raynux.com/blog/?p=127</id>
+		<updated>2009-06-28T03:56:49Z</updated>
+		<published>2009-06-28T03:51:10Z</published>
+		<category scheme="http://raynux.com/blog" term="PHP" /><category scheme="http://raynux.com/blog" term="Reference" /><category scheme="http://raynux.com/blog" term="programming" /><category scheme="http://raynux.com/blog" term="Array" /><category scheme="http://raynux.com/blog" term="class" /><category scheme="http://raynux.com/blog" term="Programming" />		<summary type="html"><![CDATA[RayArray is a array utility class.
+I have wrapped three static functions for converting multidimensional configuration data. It is very much useful when working with configuration data. I have used this class in one of my project to store arbitrary configuration data just like windows registry data.
+File: rayarray.php
+
+&#60;?php
+/**
+* RayArray arrays utility class
+*
+* This class provides configuration [...]]]></summary>
+		<content type="html" xml:base="http://raynux.com/blog/2009/06/28/convert-a-multidimensional-array-into-single-dimension/"><![CDATA[<p><strong>RayArray</strong> is a array utility class.</p>
+<p>I have wrapped three static functions for converting multidimensional configuration data. It is very much useful when working with configuration data. I have used this class in one of my project to store arbitrary configuration data just like windows registry data.</p>
+<p>File: <strong>rayarray.php</strong></p>
+<pre><code>&lt;?php
+/**
+* RayArray arrays utility class
+*
+* This class provides configuration array handling funcionalities,
+* may be usefull when dealing with configuration data.
+*
+* Usage: using this class you can convert a multidimensional configuration
+* array into a single dimension array ready to store into sql table/ flat file.
+*
+* methods available are
+*  - shorten() - static
+*  - unshorten() - static
+*  - subarray() - static
+*
+* @package     raynux
+* @subpackage  raynux.lab.array
+* @version     1.0
+* @author      Md. Rayhan Chowdhury
+* @email       ray@raynux.com
+* @website     www.raynux.com
+* @license     GPL
+*/
+class RayArray{
+/**
+ * Shorten an multidimensional array into a single dimensional array concatenating all keys with separator.
+ *
+ * @example array('country' =&gt; array(0 =&gt; array('name' =&gt; 'Bangladesh', 'capital' =&gt; 'Dhaka')))
+ *          to array('country.0.name' =&gt; 'Bangladesh', 'country.0.capital' =&gt; 'Dhaka')
+ *
+ * @param array $inputArray, arrays to be marged into a single dimensional array
+ * @param string $path, Default Initial path
+ * @param string $separator, array key path separator
+ * @return array, single dimensional array with key and value pair
+ * @access public
+ * @static
+ */
+static public function shorten(array $inputArray, $path = null, $separator = "."){
+   $data = array();
+   if (!is_null($path)) {
+      $path = $path . $separator;
+   }
+
+   if (is_array($inputArray)) {
+      foreach ($inputArray as $key =&gt; &amp;$value) {
+         if (!is_array($value)) {
+            $data[$path . $key] = $value;
+         } else {
+            $data = array_merge($data, self::shorten($value, $path . $key, $separator));
+         }
+      }
+   }
+
+   return $data;
+}
+
+/**
+ * Unshorten a single dimensional array into multidimensional array.
+ *
+ * @example array('country.0.name' =&gt; 'Bangladesh', 'country.0.capital' =&gt; 'Dhaka')
+ *          to array('country' =&gt; array(0 =&gt; array('name' =&gt; 'Bangladesh', 'capital' =&gt; 'Dhaka')))
+ *
+ * @param array $data data to be converted into multidimensional array
+ * @param string $separator key path separator
+ * @return array multi dimensional array
+ * @access public
+ * @static
+ */
+static public function unshorten($data, $separator = '.'){
+   $result = array();
+
+   foreach ($data as $key =&gt; $value){
+      if(strpos($key, $separator) !== false ){
+         $str = explode($separator, $key, 2);
+         $result[$str[0]][$str[1]] = $value;
+         if(strpos($str[1], $separator)){
+            $result[$str[0]] = self::unshorten($result[$str[0]], $separator);
+         }
+      }else{
+         $result[$key] = is_array($value)?  self::unshorten($value, $separator) : $value;
+      }
+   }
+   return $result;
+}
+
+/**
+ * Get part of array from a multidimensional array specified by concatenated keys path.
+ *
+ * @example
+ *          path = "0.name"
+ *          data =
+ *          array(
+ *                  array('name' =&gt; array('Bangladesh', 'Srilanka', 'India', 'Pakistan')),
+ *                  array('help' =&gt; 'help.php'),
+ *                  'test' =&gt; 'value',
+ *                  10 =&gt;
+ *          false)
+ *          will return array('Bangladesh', 'Srilanka', 'India', 'Pakistan')
+ * @param string $path
+ * @param array $data
+ * @param string $separator path separator default '.'
+ * @return mixed and return NULL if not found.
+ * @access public
+ * @static
+ */
+static public function subarray($path, &amp;$data, $separator = '.') {
+   if (strpos($path, $separator) === false) {
+      if (isset($data[$path])) {
+         return $data[$path];
+      }
+   } else {
+      $keys = explode($separator, $path, 2);
+      if (array_key_exists($keys[0], $data)) {
+         return self::subarray($keys[1], $data[$keys[0]], $separator);
+      }
+   }
+}
+}
+?&gt;</code></pre>
+
+<p>Please drop me a line if you find this class useful or you have a different opinion.</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://raynux.com/blog/2009/06/28/convert-a-multidimensional-array-into-single-dimension/#comments" thr:count="1"/>
+		<link rel="replies" type="application/atom+xml" href="http://raynux.com/blog/2009/06/28/convert-a-multidimensional-array-into-single-dimension/feed/atom/" thr:count="1"/>
+		<thr:total>1</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>rayhan</name>
+						<uri>http://www.raynux.com</uri>
+					</author>
+		<title type="html"><![CDATA[Http Client Class for PHP development]]></title>
+		<link rel="alternate" type="text/html" href="http://raynux.com/blog/2009/06/13/http-client-class-for-php-development/" />
+		<id>http://raynux.com/blog/?p=99</id>
+		<updated>2009-06-16T06:53:26Z</updated>
+		<published>2009-06-13T07:01:35Z</published>
+		<category scheme="http://raynux.com/blog" term="PHP" /><category scheme="http://raynux.com/blog" term="Reference" /><category scheme="http://raynux.com/blog" term="programming" /><category scheme="http://raynux.com/blog" term="class" /><category scheme="http://raynux.com/blog" term="http" /><category scheme="http://raynux.com/blog" term="Programming" /><category scheme="http://raynux.com/blog" term="Tutorial" />		<summary type="html"><![CDATA[RayHttp, A Simple Http Client Class for PHP Development.
+This class is designed to provide quick http reqest method to access external website. A CURL alternative to php native file_get_contents method. It can work without any configuration and can be called anywhere is your application using singleton design pattern. Unlike other Http client class in php, [...]]]></summary>
+		<content type="html" xml:base="http://raynux.com/blog/2009/06/13/http-client-class-for-php-development/"><![CDATA[<p><strong>RayHttp</strong>, A Simple Http Client Class for PHP Development.</p>
+
+<p>This class is designed to provide quick http reqest method to access external website. A CURL alternative to php native file_get_contents method. It can work without any configuration and can be called anywhere is your application using singleton design pattern. Unlike other Http client class in php, this is lightweight, simple and easy to use and configure. If you need more functionality you can extend the class. CURL request is fully customizable through setCurlOptions() method.</p>
+<p>This class is suitable for those project which is not built on a PHP Framework. Usually all frameworks provide a built in Http Client Object.</p>
+<p><strong>Features:</strong></p>
+<p>- General purpose http request class.<br />
+- Supports GET &amp; POST request Method.<br />
+- For GET Request both CURL &amp; PHP native file_get_contents are available.<br />
+- By default CURL is used for GET Request.<br />
+- Easily configurable &amp; can work without any configuration.<br />
+- Simple &amp; Easy to use from anywhere in your application with a single line of code.<br />
+- Request through CURL fully configurable with all possible curl options, so it&#8217;s up to you.<br />
+- Encode given URL Automatically, may be disabled.<br />
+- Supports POST requests with a user defined array or serialised string of form values.<br />
+- Supports GET requests with a user defined parameter array.<br />
+- Support Singleton pattern<br />
+- Support Custom CURL request, may be used to extends functionality.<br />
+- Light Weight</p>
+
+<p>Methods Available (This class provides):</p>
+<p>- get()<br />
+- post()<br />
+- curlExecute()<br />
+- encodeUrl()</p>
+<p><strong>Class:</strong></p>
+<p>File: <strong>rayhttp.php</strong></p>
+<pre><code>&lt;?php
+/*	SVN FILE: $Id: rayhttp.php 113 2008-06-15 04:30:19Z rayhan $	 */
+/**
+ * HTTP Client Class.
+ *
+ * A basic HTTP Client desinged for php developer.
+ * - CURL
+ * - Native php method
+ *
+ *	PHP Version 5
+ *
+ *
+ *	@copyright		Copyright 2006-2008, Md. Rayhan Chowdhury
+ *	@package		raynux
+ *	@subpackage		raynux.lab.http
+ * 	@since			version 1.0
+ *	@version		$Revision: 113 $
+ * 	@modifiedby		$LastChangedBy: rayhan $
+ *	@lastModified	$Date: 2008-06-15 10:30:19 +0600 (Sun, 15 Jun 2008) $
+ *	@author			$Author: rayhan $
+ *	@url			$HeadURL: http://localhost/svn/raynux/trunk/labs/rayhttp.php $
+ *	@website		www.raynux.com
+ *  @license 		GPL
+ */
+
+/**
+ * HTTP Client Class.
+ *
+ * A basic HTTP Client desinged for php developer.
+ * - CURL
+ * - Native php method
+ *
+ *
+ * @todo add utf-8 conversion.
+ * @todo add plugins functionality
+ *
+ *
+ * @package raynux
+ * @subpackage raynux.lab.http
+ * @version 1.0
+ * @since version 1.0
+ * @author Md. Rayhan Chowdhury
+ */
+class RayHttp{
+
+	/**
+	 * Hold runtime instance of self
+	 *
+	 * @var array of self instances
+	 * @access private
+	 * @static
+	 */
+	static private $__instances;
+
+	/**
+	 * Curl Instance
+	 *
+	 * @var object Curl instance
+	 * @access protected
+	 */
+	protected 	$_curlInstance = null;
+
+	/**
+	 * Default configuration for the crawler.
+	 *
+	 * @var array
+	 * @access private
+	 */
+	private 	$__defaultConfigs = array(
+                    'client' =&gt; 'curl',
+                    'encodeUrl' =&gt; true,
+                    'curlOptions' =&gt; array(
+                        CURLOPT_SSL_VERIFYPEER =&gt; 0,
+                        CURLOPT_RETURNTRANSFER =&gt; 1,
+                        CURLOPT_FOLLOWLOCATION =&gt; 1,
+                        CURLOPT_ENCODING =&gt; "",
+                        CURLOPT_USERAGENT =&gt; "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.0.5) Gecko/2008120121 Firefox/3.0.5",
+                        CURLOPT_COOKIESESSION =&gt; 1,
+                        CURLOPT_AUTOREFERER =&gt; 1,
+                        CURLOPT_CONNECTTIMEOUT =&gt; 120,
+                        CURLOPT_AUTOREFERER =&gt; 120,
+                        CURLOPT_TIMEOUT =&gt; 120,
+                        CURLOPT_MAXREDIRS =&gt; 10,
+                        CURLOPT_COOKIEFILE =&gt; 'cookiefile',
+                        CURLOPT_COOKIEJAR =&gt; 'cookiefile',
+                    ),
+                );
+
+	/**
+	 * Hold runtime configuration.
+	 *
+	 *
+	 * @var array
+	 * @access protected
+	 */
+	protected 	$_configs = array();
+
+	/**
+	 * Class Constructor
+	 *
+	 * @param array $configs
+	 * @access public
+	 * @return unknown
+	 */
+	function __construct($configs = array()){
+		if (!empty($configs)) {
+			$this-&gt;setOptions($configs);
+		} else {
+			$this-&gt;setOptions($this-&gt;__defaultConfigs);
+		}
+	}
+
+	/**
+	 * Configure the class.
+	 *
+	 * @param array $configs, configuration data.
+	 * @return unknown
+	 * @access public
+	 */
+	public function &amp;setOptions($configs){
+		$this-&gt;_configs = array_merge($this-&gt;__defaultConfigs, $configs);
+
+		return $this;
+	}
+
+	/**
+	 * Get Curl Instance.
+	 *
+	 * @return object curl instance
+	 * @access protected
+	 */
+	protected function &amp;_getCurlInstance() {
+		if ($this-&gt;_curlInstance == null) {
+			$this-&gt;_curlInstance = curl_init();
+			$this-&gt;setCurlOptions($this-&gt;_configs['curlOptions']);
+		}
+		return $this-&gt;_curlInstance;
+	}
+
+	/**
+	 * Set Curl Options from array
+	 *
+	 * @param array $options
+	 * @return object | this
+	 * @access public
+	 */
+	public function &amp;setCurlOptions($options = array()) {
+		$c = $this-&gt;_getCurlInstance();
+		if (function_exists('curl_setopt_array')) {
+			curl_setopt_array($c, $options);
+		} else {
+			foreach ($options as $key =&gt; $value) {
+				curl_setopt($c, $key, $value);
+			}
+		}
+		return $this;
+	}
+
+	/**
+	 * Execute curl library function.
+	 *
+	 * @param string $url
+	 * @param string $method, http method, 'get' or 'post'
+	 * @param string|array $postFields, form data
+	 * @return string | curl response object
+	 * @access public
+	 */
+	public function curlExecute($url, $method = 'get', $postFields = null){
+		$c = $this-&gt;_getCurlInstance();
+		if ($method === 'get') {
+			$this-&gt;setCurlOptions(array(CURLOPT_URL =&gt; $url,
+                                        CURLOPT_POST =&gt; false,
+                                        CURLOPT_HTTPGET =&gt; 1));
+
+		} elseif ($method === 'post') {
+			$this-&gt;setCurlOptions(array(CURLOPT_URL =&gt; $url,
+                                        CURLOPT_POST =&gt; true,
+                                        CURLOPT_HTTPGET =&gt; 0,
+                                        CURLOPT_POSTFIELDS =&gt; $postFields));
+
+		} else {
+			$this-&gt;setCurlOptions(array(CURLOPT_URL =&gt; $url));
+
+		}
+		return curl_exec($c);
+	}
+
+	/**
+	 * Encode url with urlencode function for unencoded character.
+	 *
+	 * @param string $url urls to be encoded.
+	 * @param string $callback function name as callback function, 'urlencode' or 'raw_urlencode'
+	 * @return string encoded url.
+	 * @access public
+	 */
+	public function encodeUrl($url, $callback = 'urlencode') {
+		if ($pathOfset = strpos($url, '/', (strpos($url, '://') + 3))) {
+
+			extract(parse_url($url));
+
+			$path = implode('/', array_map($callback, explode('/', $path)));
+			$url = substr($url, 0, $pathOfset) . $path;
+
+			if (!empty($query)) {
+				parse_str($query, $query);
+				$query = http_build_query(array_map($callback, $query));
+				$query = preg_replace('@(\=($|(&amp;)))@is', '\3', $query);			// remove tailing = sign from empty variable.
+				$url = $url . "?" . $query;
+			}
+		}
+
+		return $url;
+	}
+
+    /**
+     * Get Self Instance.
+     *
+     * @param string $name, name of the instance, default value is 'default'
+     * @param array $configs, configuration array for the instance
+     * @return object, self instance
+	 * @access public
+     * @static
+     */
+    static public function &amp;getInstance($name = 'default', $configs = array()){
+    	if (is_null(self::$__instances[$name])) {
+    		self::$__instances[$name] = new self($configs);
+    	}
+    	return self::$__instances[$name];
+    }
+
+	/**
+	 * Get url contents using GET MEthod.
+	 *
+	 * @param string $url
+	 * @param string|array $getData, get data in serialized string or array format.
+	 * @return string
+	 * @access public
+	 */
+    public function get($url, $getData = null){
+    	if (!is_null($getData)) {
+    		if (is_array($getData)) {
+    			$getData = http_build_query($getData);
+    		}
+    		if (strpos($url, '?') === false) {
+    			$url .= '?';
+    		}
+    		$url .= $getData;
+    	}
+
+    	if ($this-&gt;_configs['encodeUrl']) {
+    		$url = $this-&gt;encodeUrl($url);
+    	}
+
+    	if ($this-&gt;_configs['client'] === 'php') {
+    		return file_get_contents($url);
+    	}
+    	return $this-&gt;curlExecute($url);
+    }
+
+    /**
+     * Get URL contents using POST method.
+     *
+     * @param string $url
+     * @param string|array $postData, form data in serialized string or array format.
+     * @return string
+     * @access public
+     */
+    public function post($url, $postData = null) {
+    	if (is_array($postData)) {
+    		$postData = http_build_query($postData);
+    	}
+
+    	if ($this-&gt;_configs['encodeUrl']) {
+    		$url = $this-&gt;encodeUrl($url);
+    	}
+
+    	return $this-&gt;curlExecute($url, 'post', $postData);
+    }
+}
+
+</code></pre>
+<p>
+<strong>Usage Example:</strong><br />
+File: <strong>example.php</strong></p>
+<pre><code>&lt;?php
+/**
+ * HTTP Client Class Example Script.
+ *
+ * Example of RayHttp Class Object.
+ *
+ *	PHP Version 5
+ *
+ *
+ *	@copyright		Copyright 2006-2008, Md. Rayhan Chowdhury
+ *	@package		raynux
+ *	@subpackage		raynux.lab.http
+ * 	@since			version 1.0
+ *	@version		$Revision: 113 $
+ * 	@modifiedby		$LastChangedBy: rayhan $
+ *	@lastModified	$Date: 2008-06-15 10:30:19 +0600 (Sun, 15 Jun 2008) $
+ *	@author			$Author: rayhan $
+ *	@url			$HeadURL: http://localhost/svn/raynux/trunk/labs/example.php $
+ *	@website		www.raynux.com
+ *  @license 		GPL
+ */
+
+/**
+ * Load the http client.
+ */
+require_once("rayhttp.php");
+
+/**
+ * METHOD GET.
+ */
+
+/**
+ * Example 1
+ *
+ * using default configuration
+ * default method is curl.
+ * use as a singleton object.
+ */
+$content = RayHttp::getInstance()-&gt;get("http://google.com");
+$content = RayHttp::getInstance()-&gt;get("http://google.com/search", array('q' =&gt; 'rayhttp'));
+$content = RayHttp::getInstance()-&gt;get("http://google.com/search?q=rayhttp");
+
+/**
+ * Example 2
+ *
+ * using default configuration but using php native file_get_contetns method.
+ * use as a singleton object.
+ * static method.
+ */
+$content = RayHttp::getInstance()-&gt;setOptions(array('client' =&gt; 'php'))-&gt;get("http://google.com");
+$content = RayHttp::getInstance()-&gt;setOptions(array('client' =&gt; 'php'))-&gt;get("http://google.com/search", array('q' =&gt; 'rayhttp'));
+$content = RayHttp::getInstance()-&gt;setOptions(array('client' =&gt; 'php'))-&gt;get("http://google.com/search?q=rayhttp");
+
+/**
+ * Example 3
+ *
+ * Take Instance Of the object
+ */
+$http = new RayHttp();
+$content = $http-&gt;get("http://google.com");
+$content = $http-&gt;get("http://google.com/search", array('q' =&gt; 'rayhttp'));
+$content = $http-&gt;get("http://google.com/search?q=rayhttp");
+
+/**
+ * METHOD POST.
+ */
+
+/**
+ * Example 4
+ *
+ * using default configuration
+ */
+$content = RayHttp::getInstance()-&gt;post("http://example.com/", array('name' =&gt; 'rayhttp', 'location' =&gt; 'dhaka, bangladesh'));
+
+/**
+ * Multiple Instance &amp; Configuration.
+ */
+RayHttp::getInstance('default', $configs);
+RayHttp::getInstance('default2', $configs);
+
+$http = RayHttp::getInstance(); // get default instance
+$http2 = RayHttp::getInstance('default2'); // get default2 instance
+
+$http3 = RayHttp::getInstance('default3', $configs); // get default 3 instance
+$http3-&gt;setOptions($configs); // reconfigure default3 instance;
+
+/**
+ * Specify Proxy
+ */
+RayHttp::getInstance('c')-&gt;setCurlOptions(array(CURLOPT_PROXY =&gt; '172.19.79.1:3128'))-&gt;get("http://www.google.com");
+
+
+</code></pre>
+<p>Rate this class at phpclasses.org: <a href="http://www.phpclasses.org/rayhttpclient">http://www.phpclasses.org/rayhttpclient</a></p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://raynux.com/blog/2009/06/13/http-client-class-for-php-development/#comments" thr:count="5"/>
+		<link rel="replies" type="application/atom+xml" href="http://raynux.com/blog/2009/06/13/http-client-class-for-php-development/feed/atom/" thr:count="5"/>
+		<thr:total>5</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>rayhan</name>
+						<uri>http://www.raynux.com</uri>
+					</author>
+		<title type="html"><![CDATA[IPTABLES quick command list]]></title>
+		<link rel="alternate" type="text/html" href="http://raynux.com/blog/2009/04/15/iptables-quick-command-list/" />
+		<id>http://raynux.com/blog/?p=86</id>
+		<updated>2009-04-15T06:33:47Z</updated>
+		<published>2009-04-15T06:09:34Z</published>
+		<category scheme="http://raynux.com/blog" term="Fedora" /><category scheme="http://raynux.com/blog" term="Linux" /><category scheme="http://raynux.com/blog" term="Reference" /><category scheme="http://raynux.com/blog" term="Ubuntu" /><category scheme="http://raynux.com/blog" term="iptables" /><category scheme="http://raynux.com/blog" term="Tutorial" />		<summary type="html"><![CDATA[Iptables is the default and powerful firewall that works on almost all Linux version including Ubuntu and Fedora. Here I have listed some important commands and a short description of each command for quick help. It can help people who already know little Iptables.
+
+manage chain:
+# iptables -N new_chain				// create a chain
+# iptables -E new_chain old_chain [...]]]></summary>
+		<content type="html" xml:base="http://raynux.com/blog/2009/04/15/iptables-quick-command-list/"><![CDATA[<p>Iptables is the default and powerful firewall that works on almost all Linux version including Ubuntu and Fedora. Here I have listed some important commands and a short description of each command for quick help. It can help people who already know little Iptables.</p>
+
+<pre><code>
+manage chain:
+# iptables -N new_chain				// create a chain
+# iptables -E new_chain old_chain  		// edit a chain
+# iptables -X old_chain				// delete a chain
+
+redirecting packet to a user chain:
+# iptables -A INPUT -p icmp -j new_chain
+
+listing rules:
+# iptables -L					// list all rules of all tables
+# iptables -L -v				// display rules and their counters
+# iptables -L -t nat				// display rules for a specific tables
+# iptables -L -n --line-numbers			// listing rules with line number for all tables
+# iptables -L INPUT -n --line-numbers		// listing rules with line number for specific table
+
+manage rules:
+# iptables -A chain				// append rules to the bottom of the chain
+# iptables -I chain [rulenum]			// insert in chain as rulenum (default at the top or 1)
+# iptables -R chain rulenum			// replace rules with rules specified for the rulnum
+# iptables -D chain	rulenum			// delete rules matching rulenum (default 1)
+# iptables -D chain				// delete matching rules
+
+change default policy:
+# iptables -P chain target			// change policy on chain to target
+# iptables -P INPUT DROP			// change INPUT table policy to DROP
+# iptables -P OUTPUT DROP			// change OUTPUT chain policy to DROP
+# iptables -P FORWARD DROP			// change FORWARD chain policy to DROP
+</code></pre>
+]]></content>
+		<link rel="replies" type="text/html" href="http://raynux.com/blog/2009/04/15/iptables-quick-command-list/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://raynux.com/blog/2009/04/15/iptables-quick-command-list/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>rayhan</name>
+						<uri>http://www.raynux.com</uri>
+					</author>
+		<title type="html"><![CDATA[Tour to Jaflong: where nature and beauty meet together]]></title>
+		<link rel="alternate" type="text/html" href="http://raynux.com/blog/2009/04/11/tour-to-jaflong-where-nature-and-beauty-meet-together/" />
+		<id>http://raynux.com/blog/?p=81</id>
+		<updated>2009-04-11T09:57:01Z</updated>
+		<published>2009-04-11T09:52:09Z</published>
+		<category scheme="http://raynux.com/blog" term="Bangladesh" /><category scheme="http://raynux.com/blog" term="Travel" /><category scheme="http://raynux.com/blog" term="personal" /><category scheme="http://raynux.com/blog" term="Jaflong" /><category scheme="http://raynux.com/blog" term="me" /><category scheme="http://raynux.com/blog" term="Sylhet" /><category scheme="http://raynux.com/blog" term="Tour" /><category scheme="http://raynux.com/blog" term="Tourism" />		<summary type="html"><![CDATA[Jaflong is one of the beautiful tourist place in Bangladesh. I visited the place 2 more times, so the place wasn&#8217;t new to me. Though, I have managed one of my friends to visit the place again. I borrowed a nice binocular from hasin bhai for that purpose. It was a nice addition to our [...]]]></summary>
+		<content type="html" xml:base="http://raynux.com/blog/2009/04/11/tour-to-jaflong-where-nature-and-beauty-meet-together/"><![CDATA[<p>Jaflong is one of the beautiful tourist place in Bangladesh. I visited the place 2 more times, so the place wasn&#8217;t new to me. Though, I have managed one of my friends to visit the place again. I borrowed a nice binocular from <a href="http://hasin.wordpress.com">hasin bhai</a> for that purpose. It was a nice addition to our journey. </p>
+
+<p><a href="http://www.flickr.com/photos/raynux/3425553727/" title="07-04-09_1528 by rayhan_wm, on Flickr"><img src="http://farm4.static.flickr.com/3329/3425553727_27daae84dc.jpg" width="375" height="500" alt="07-04-09_1528" /></a></p>
+<p>Tour Photos in Flickr: <a href="http://www.flickr.com/photos/raynux/tags/jaflong2009/">http://www.flickr.com/photos/raynux/tags/jaflong2009/</a><br />
+I have taken all the pictures using my Motorola V3i Mobile.</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://raynux.com/blog/2009/04/11/tour-to-jaflong-where-nature-and-beauty-meet-together/#comments" thr:count="2"/>
+		<link rel="replies" type="application/atom+xml" href="http://raynux.com/blog/2009/04/11/tour-to-jaflong-where-nature-and-beauty-meet-together/feed/atom/" thr:count="2"/>
+		<thr:total>2</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>rayhan</name>
+						<uri>http://www.raynux.com</uri>
+					</author>
+		<title type="html"><![CDATA[Update your social networking status from command line]]></title>
+		<link rel="alternate" type="text/html" href="http://raynux.com/blog/2009/02/28/update-your-social-networking-status-from-command-line/" />
+		<id>http://raynux.com/blog/?p=61</id>
+		<updated>2009-02-28T07:27:21Z</updated>
+		<published>2009-02-28T07:27:21Z</published>
+		<category scheme="http://raynux.com/blog" term="Linux" /><category scheme="http://raynux.com/blog" term="Python" /><category scheme="http://raynux.com/blog" term="Web Services" /><category scheme="http://raynux.com/blog" term="programming" /><category scheme="http://raynux.com/blog" term="web" /><category scheme="http://raynux.com/blog" term="Programming" />		<summary type="html"><![CDATA[This is my first python script, Throughout the learning process I want to make something use full and I know that the best way to learn a new programming language is to start with some real project.
+Updating your social networking status is now a frequent job. To make this job easier there are lots of [...]]]></summary>
+		<content type="html" xml:base="http://raynux.com/blog/2009/02/28/update-your-social-networking-status-from-command-line/"><![CDATA[<p>This is my first python script, Throughout the learning process I want to make something use full and I know that the best way to learn a new programming language is to start with some real project.</p>
+
+<p>Updating your social networking status is now a frequent job. To make this job easier there are lots of web services, desktop applications, mobile applications, plug-ins available to the users. Some people wants to update there status from a single place. Like others <a href="http://ping.fm/">Ping.fm</a>, <a href="http://hellotxt.com/">Hellotxt.com</a> are providing single place service with a variety of options. But I think that updating status from command line is the easiest way for most of the Linux users who loves their terminal.</p>
+<p>I have used ping.fm REST API for my script as a result It can update all the services registered with ping.fm at once or a single service putting additional parameter. You just need the Internet connection and terminal to put the command.</p>
+<p>File: <strong><em>~/bin/raypm</em></strong></p>
+<pre>
+<code>#! /usr/bin/env python
+"""
+A Simple program to update your social networking status using ping.fm
+
+This program will update all your social networking sites via ping.fm.
+
+requirements
+	- sign for a account at ping.fm
+	- setup ping.fm for desired social networking sites.
+	- get your developer api key http://www.ping.fm/developers
+	- get your user key from http://www.ping.fm/key
+
+@example
+	- shell > raypm "your message text to update your all social networking status, like twitter, facebook, linkedin"
+	- shell > raypm twitter "your message text to update twitter status only"
+	- shell > raypm facebook "your message text to update facebook status only"
+
+@author		: Md. Rayhan Chowdhury
+@email		: ray@raynux.com
+@website	: www.raynux.com
+@license	: GPL
+@copy		: All right are reserved
+"""
+
+import urllib
+import urllib2
+import sys
+from xml.etree import ElementTree as ET
+
+# modify __apiKey__ with your own
+# get your apiKey from http://www.ping.fm/developers
+__apiKey__ = 'YOUR DEVELOPER API KEY HERE' 
+
+# modify __userKey__ with your own user key
+# get your user key from http://www.ping.fm/key
+__UserKey__ = "YOUR USER APP KEY HERE"
+
+__apiUrl__ = 'http://api.ping.fm/v1/'
+
+# debug
+# 1 - will not update your status, dump xml response text
+# 0 - will update your status
+debug = 0
+
+class RayStatus:
+
+	def __init__(self, msg = None, service = None):
+		"create message"    
+
+		global debug
+
+		data = {	'api_key'		: __apiKey__,
+					'user_app_key'	: __UserKey__,
+					'post_method'	: 'default',
+					'body'			: msg,
+					'debug'			: debug
+                  }
+		if service is not None:
+			data['service'] = service		
+
+		#Encode the data to be posted
+		data = urllib.urlencode(data)	
+
+		print "Loading..."
+		# post the data
+		req = urllib2.Request(__apiUrl__ + 'user.post', data)
+		try:
+			response = urllib2.urlopen(req)
+
+			responseXML = response.read()
+
+			# parse response data
+			result = ET.XML(responseXML)
+			if result.attrib is not None:
+				if result.attrib['status'] == 'OK':
+					print 'Congratulations! your message posted successfully!';
+				else:
+					print 'Error: ' + result[2].text
+
+			if debug:
+				print
+				print "debug info: "
+				print responseXML
+
+		except urllib2.URLError, e:
+			if hasattr(e, 'reason'):
+				print 'Could not connect to the server.'
+				print 'Reason: ', e.reason
+			elif hasattr(e, 'code'):
+				print 'The server couldn\'t fulfill the request.'
+				print 'Error code: ', e.code
+		else:
+			print
+
+if __name__ == '__main__':
+	try:
+		if (len(sys.argv) == 2):
+			RayStatus(sys.argv[1], None)
+		elif (len(sys.argv) == 3):
+			RayStatus(sys.argv[2], sys.argv[1])
+	except IndexError:
+		print "Please enter your desired message to be posted."
+</code></pre>
+
+<p>To make the script working, you need to sign up for a <a href="http://ping.fm">ping.fm</a> user account, and registrar for services you want, they support all major social networking sites including <a href="http://www.twitter.com">twitter</a>, <a href="http://www.facebook.com">facebook</a>, <a href="http://www.linkedin.com">linkedIn</a>. </p>
+<p>You will need to get these two keys.<br />
+- developer api_keys from <a href="http://ping.fm/developers/">http://ping.fm/developers/</a><br />
+- user app key from  <a href="http://ping.fm/key/">http://ping.fm/key/</a></p>
+
+<p>I have my developer api key from <a href="http://ping.fm/">ping.fm</a> which will work for you, but I can&#8217;t disclose it openly. It will be great to have your own api key  and user key is unique for each user. </p>
+<p>Installation:</p>
+<ol>
+<li>create a directory inside your home folder named <strong>bin</strong></li>
+<li>create a file named <strong>raymp</strong> inside the bin folder and copy and paste the code</li>
+<li>replace <strong>api key</strong> and <strong>user key</strong> with your own.</li>
+
+<li>make the file executable with this command<br />
+                <code># chmod +x ~/bin/raypm</code></li>
+<li>you may need to restart the system to add the newly added bin folder to PATH.</li>
+</ol>
+<p>&#038; done.</p>
+<p>now you can update your status with the following commands<br />
+<code># raypm "update all social networking status at once"</code><br />
+or<br />
+
+<code># raypm twitter "update twitter status only"</code><br />
+or<br />
+<code># raypm facebook "update facebook status only"</code></p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://raynux.com/blog/2009/02/28/update-your-social-networking-status-from-command-line/#comments" thr:count="4"/>
+		<link rel="replies" type="application/atom+xml" href="http://raynux.com/blog/2009/02/28/update-your-social-networking-status-from-command-line/feed/atom/" thr:count="4"/>
+		<thr:total>4</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>rayhan</name>
+						<uri>http://www.raynux.com</uri>
+					</author>
+		<title type="html"><![CDATA[7 things about me]]></title>
+		<link rel="alternate" type="text/html" href="http://raynux.com/blog/2009/02/22/7-things-about-me/" />
+		<id>http://raynux.com/blog/?p=50</id>
+		<updated>2009-02-24T10:48:39Z</updated>
+		<published>2009-02-22T09:47:22Z</published>
+		<category scheme="http://raynux.com/blog" term="personal" />		<summary type="html"><![CDATA[Yesterday hasin bhai has tagged me to write 7 things about me. Though I don&#8217;t like to write about myself, my 7 things are given bellow&#8230;
+1. I am a very lazy parson.
+2. I can pass the whole day watching movies on TV.
+3. I almost forgot C, C++, VB, FORTRAN, Corel Draw, Flash because of lack [...]]]></summary>
+		<content type="html" xml:base="http://raynux.com/blog/2009/02/22/7-things-about-me/"><![CDATA[<p>Yesterday <a href="http://hasin.wordpress.com">hasin bhai</a> has <a href="http://hasin.wordpress.com/2009/02/21/seven-things-you-may-not-know-about-me/">tagged me to write 7 things</a> about me. Though I don&#8217;t like to write about myself, my 7 things are given bellow&#8230;</p>
+
+<p>1. I am a very lazy parson.<br />
+2. I can pass the whole day watching movies on TV.<br />
+3. I almost forgot C, C++, VB, FORTRAN, Corel Draw, Flash because of lack of practice<br />
+4. I passed my S.S.C. from humanities group.<br />
+5. While doing my graduation in civil engineering, I taught Accounting, Commerce, Economics to one of my student for O-Level Exam<br />
+6. I never dare to play Football because of direct foul habit in our country<br />
+7. I normally  avoid social events, parties, etc so little unsocial</p>
+<p>here are 7 people I would like to read seven things about them</p>
+<p>1. <a href="http://www.syamantics.com/">anupom syam</a><br />
+2. <a href="http://ahsanity.com/">ahsanul bari</a><br />
+3. <a href="http://shoeb.wordpress.com/">shoeb abdulla</a><br />
+4. <a href="http://reazulk.wordpress.com/">rubel</a><br />
+5. <a href="http://arafatbd.net/">arafat rahman</a><br />
+6. <a href="http://blog.thinkdiff.net/">mahmud ahsan/</a><br />
+7. <a href="http://marketinggossip.blogspot.com/">Asif Anwar</a></p>
+
+<p>And here goes the rules:</p>
+<p>- Link your original tagger(s), and list these rules on your blog.<br />
+- Share seven facts about yourself in the post &#8211; some random, some weird.<br />
+- Tag seven people at the end of your post by leaving their names and the links to their blogs.<br />
+- Let them know they’ve been tagged by leaving a comment on their blogs and/or Twitter.</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://raynux.com/blog/2009/02/22/7-things-about-me/#comments" thr:count="4"/>
+		<link rel="replies" type="application/atom+xml" href="http://raynux.com/blog/2009/02/22/7-things-about-me/feed/atom/" thr:count="4"/>
+		<thr:total>4</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>rayhan</name>
+						<uri>http://www.raynux.com</uri>
+					</author>
+		<title type="html"><![CDATA[Mac on my ubuntu laptop]]></title>
+		<link rel="alternate" type="text/html" href="http://raynux.com/blog/2009/02/19/mac-in-my-laptop/" />
+		<id>http://raynux.com/blog/?p=49</id>
+		<updated>2009-02-19T10:23:04Z</updated>
+		<published>2009-02-19T10:06:33Z</published>
+		<category scheme="http://raynux.com/blog" term="Linux" /><category scheme="http://raynux.com/blog" term="Ubuntu" /><category scheme="http://raynux.com/blog" term="personal" /><category scheme="http://raynux.com/blog" term="laptop" /><category scheme="http://raynux.com/blog" term="mac" /><category scheme="http://raynux.com/blog" term="mac4lin" />		<summary type="html"><![CDATA[Mac4Lin is a great project which brings mac user interface to linux desktop. Yesterday I installed Mac4Lin on my laptop running ubuntu intrepid idex. Installation needs some advance configuration which is not suitable for newbie right now even I couldn&#8217;t install screenlets desktop widget. But still it&#8217;s cool and I am really impressed with the [...]]]></summary>
+		<content type="html" xml:base="http://raynux.com/blog/2009/02/19/mac-in-my-laptop/"><![CDATA[<p>Mac4Lin is a great project which brings mac user interface to linux desktop. Yesterday I installed Mac4Lin on my laptop running ubuntu intrepid idex. Installation needs some advance configuration which is not suitable for newbie right now even I couldn&#8217;t install screenlets desktop widget. But still it&#8217;s cool and I am really impressed with the new mac like interface on my laptop. I have added couple of screenshots on my <a href="http://www.flickr.com/photos/raynux">flickr photo-stream</a>.</p>
+
+<p><a href="http://www.flickr.com/photos/raynux/3292686432/" title="5 by rayhan_wm, on Flickr"><img src="http://farm4.static.flickr.com/3626/3292686432_af5b598087.jpg" width="500" height="313" alt="5" /></a></p>
+<p>More Photos: <a href="http://www.flickr.com/photos/raynux/tags/mac4lin/">http://www.flickr.com/photos/raynux/tags/mac4lin/</a></p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://raynux.com/blog/2009/02/19/mac-in-my-laptop/#comments" thr:count="2"/>
+		<link rel="replies" type="application/atom+xml" href="http://raynux.com/blog/2009/02/19/mac-in-my-laptop/feed/atom/" thr:count="2"/>
+		<thr:total>2</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>rayhan</name>
+						<uri>http://www.raynux.com</uri>
+					</author>
+		<title type="html"><![CDATA[Translatation Services Available On The Net]]></title>
+		<link rel="alternate" type="text/html" href="http://raynux.com/blog/2009/02/17/translatation-services-available-on-the-net/" />
+		<id>http://raynux.com/blog/?p=48</id>
+		<updated>2009-02-17T11:14:13Z</updated>
+		<published>2009-02-17T11:11:29Z</published>
+		<category scheme="http://raynux.com/blog" term="Ajax" /><category scheme="http://raynux.com/blog" term="Technology" /><category scheme="http://raynux.com/blog" term="Translation" /><category scheme="http://raynux.com/blog" term="Web 2.0" /><category scheme="http://raynux.com/blog" term="Web Services" />		<summary type="html"><![CDATA[There are lots of services available on the net. Some of them are really helpful. My intention of this post is to introduce you with some necessary services available on the net and this is the first post of this category.
+There are some translation services available on the net like Google Translate, nicetranslator. 
+For normal [...]]]></summary>
+		<content type="html" xml:base="http://raynux.com/blog/2009/02/17/translatation-services-available-on-the-net/"><![CDATA[<p>There are lots of services available on the net. Some of them are really helpful. My intention of this post is to introduce you with some necessary services available on the net and this is the first post of this category.</p>
+
+<p>There are some translation services available on the net like <a href="http://translate.google.com/">Google Translate</a>, <a href="http://www.nicetranslator.com/">nicetranslator</a>. </p>
+<p>For normal user I have found that <a href="http://www.nicetranslator.com/">nicetranslator</a> is more intuitive and easy tool, specially for those who are studying or have interest on foreign languages. The User Interface of <a href="http://www.nicetranslator.com/">nicetranslator</a> is pretty simple yet powerful&#8230;Their ajax implementation is really cool. You can have a look at them.</p>
+<p><a href="http://translate.google.com/">Google Translate</a> is a good option for advance users and programmers as they have public API. It also provide support for more languages than <a href="http://www.nicetranslator.com/">nicetranslator</a> and have some other options. And It seems that <a href="http://www.nicetranslator.com/">nicetranslator</a> is using the <a href="http://translate.google.com/">Google Translate</a> API. If you are a programmer you can also use <a href="http://translate.google.com/">Google Translate</a> for your own project. I have made a PHP Class for <a href="http://translate.google.com/">Google Translate</a> API for one of my project, and hoping to release it as open source on the net when it&#8217;s final.</p>
+]]></content>
+		<link rel="replies" type="text/html" href="http://raynux.com/blog/2009/02/17/translatation-services-available-on-the-net/#comments" thr:count="2"/>
+		<link rel="replies" type="application/atom+xml" href="http://raynux.com/blog/2009/02/17/translatation-services-available-on-the-net/feed/atom/" thr:count="2"/>
+		<thr:total>2</thr:total>
+	</entry>
+	</feed>
+
+
