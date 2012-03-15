@@ -180,6 +180,20 @@ class News extends CActiveRecord {
 		return parent::beforeSave();
 	}
 
+	public function listItems(){
+		$criteria = new CDbCriteria();
+		$criteria->order = 'record_order DESC, postdate DESC';
+		$criteria->condition = 'enable=1';
+		$count = News::model()->count($criteria);
+
+		// elements per page
+		$pages = new CPagination($count);
+		$pages->pageSize = 2;
+		$pages->applyLimit($criteria);
+
+		return array('models' => News::model()->findAll($criteria), 'pages' => $pages);
+	}
+
 	//Back end - List item admin
 	public function listItemAdmin() {
 		$criteria = new CDbCriteria();

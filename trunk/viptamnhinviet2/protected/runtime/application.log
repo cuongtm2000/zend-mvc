@@ -176,3 +176,126 @@ Stack trace:
 REQUEST_URI=/yii/viptamnhinviet2/tin-tuc
 HTTP_REFERER=http://dos.vn/yii/viptamnhinviet2/san-pham
 ---
+2012/03/15 09:35:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin-tuc".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('tin-tuc')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc
+HTTP_REFERER=http://dos.vn/yii/viptamnhinviet2/video
+---
+2012/03/15 09:39:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin-tuc".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('tin-tuc')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc
+HTTP_REFERER=http://dos.vn/yii/viptamnhinviet2/tin-tuc
+---
+2012/03/15 09:49:33 [error] [php] Undefined variable: listItem (C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\views\default\index.php:1)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): DefaultController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php(6): DefaultController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CWebApplication->run()
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc
+in C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\views\default\index.php (1)
+in C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php (6)
+in C:\xampp\htdocs\yii\viptamnhinviet2\index.php (20)
+2012/03/15 09:51:56 [error] [php] Undefined index: title (C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\views\default\index.php:2)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): DefaultController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php(6): DefaultController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CWebApplication->run()
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc
+in C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\views\default\index.php (2)
+in C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php (6)
+in C:\xampp\htdocs\yii\viptamnhinviet2\index.php (20)
+2012/03/15 09:53:59 [error] [php] Undefined variable: pages (C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\views\default\index.php:9)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): DefaultController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php(6): DefaultController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CWebApplication->run()
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc
+in C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\views\default\index.php (9)
+in C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php (6)
+in C:\xampp\htdocs\yii\viptamnhinviet2\index.php (20)
+2012/03/15 10:01:50 [error] [exception.CException] exception 'CException' with message 'Property "DefaultController.menu_video" is not defined.' in C:\xampp\php\library\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yii\viptamnhinviet2\themes\viptamnhinviet\views\layouts\main.php(155): CComponent->__get('menu_video')
+#1 C:\xampp\php\library\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#2 C:\xampp\php\library\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#3 C:\xampp\php\library\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\php\library\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('?<p>Tieu de: df...')
+#5 C:\xampp\php\library\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('?<p>Tieu de: df...')
+#6 C:\xampp\php\library\framework\web\CBaseController.php(207): COutputProcessor->run()
+#7 C:\xampp\php\library\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#8 C:\xampp\htdocs\yii\viptamnhinviet2\themes\viptamnhinviet\views\layouts\column1.php(3): CBaseController->endContent()
+#9 C:\xampp\php\library\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#10 C:\xampp\php\library\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#11 C:\xampp\php\library\framework\web\CController.php(785): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php(12): CController->render('index', Array)
+#13 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#14 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('index')
+#18 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('news/default/in...')
+#19 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc
+HTTP_REFERER=http://dos.vn/yii/viptamnhinviet2/video
+---
+2012/03/15 10:03:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin-tuc/asdasd".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('tin-tuc/asdasd')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc/asdasd
+HTTP_REFERER=http://dos.vn/yii/viptamnhinviet2/tin-tuc
+---
+2012/03/15 10:03:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin-tuc/asdasd".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('tin-tuc/asdasd')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc/asdasd
+HTTP_REFERER=http://dos.vn/yii/viptamnhinviet2/tin-tuc
+---
+2012/03/15 10:03:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin-tuc/asdasd".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('tin-tuc/asdasd')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc/asdasd
+HTTP_REFERER=http://dos.vn/yii/viptamnhinviet2/tin-tuc
+---

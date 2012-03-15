@@ -141,10 +141,19 @@
 							<?php endif;?>
 
 							<?php if(isset($this->menu_video) && ($this->menu_video)):?>
-							<h1 class="title-left"><span>DANH MỤC Video</span></h1>
+							<h1 class="title-left"><span>DANH MỤC VIDEO</span></h1>
 							<ul class="sub-pro">
 								<?php foreach($this->menu_video as $value): ?>
 								<li><a href="<?php echo Yii::app()->request->baseUrl ?>/video/<?php echo $value['tag']?>" title="<?php echo $value['cat_title']?>"><?php echo $value['cat_title']?></a></li>
+								<?php endforeach; ?>
+							</ul>
+							<?php endif;?>
+
+							<?php if(isset($this->menu_news) && ($this->menu_news)):?>
+							<h1 class="title-left"><span>DANH MỤC TIN TỨC</span></h1>
+							<ul class="sub-pro">
+								<?php foreach($this->menu_news as $value): ?>
+								<li><a href="<?php echo Yii::app()->request->baseUrl ?>/tin-tuc/<?php echo $value['tag']?>" title="<?php echo $value['cat_title']?>"><?php echo $value['cat_title']?></a></li>
 								<?php endforeach; ?>
 							</ul>
 							<?php endif;?>
