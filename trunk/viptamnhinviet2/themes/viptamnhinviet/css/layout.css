@@ -133,12 +133,14 @@ a:hover{color:#000;}
 .price-pro{margin:0 !important}
 .price-pro span{color:#CC0000;font-weight:bold}
 
-/*Page New, services*/
-.masuring{text-align:justify;font-size:10pt;color:#666;margin:0 0 20px 0}
-.frame-img{float:left;width:143px;margin:0 15px 5px 0}
-.title-masuring {margin:0 0 10px 0}
+/*   Page New  */
+.masuring{text-align:justify;font-size:10pt;list-style:none}
+.masuring li{margin:0 0 17px 0 !important }
+.masuring p{line-height:1.4em}
+.frame-img{float:left;width:145px;margin:0 15px 5px 0}
+.title-masuring{margin:0 0 5px 0}
 .title-masuring a{color:#208FFF;font-size:10pt;font-weight:bold}
-.title-masuring a:hover{color:#F90}
+.title-masuring a:hover{color:#FF9933}
 
 /*Login registration */
 .form-all{ margin:10px 10px 0 20px;color:#666}
@@ -160,7 +162,8 @@ a:hover{color:#000;}
 /* paging */
 #frm{position: relative;}
 #frm .yiiPager{position: absolute; bottom: -18px; right: 0}
-#frm .yiiPager li{margin:0 0 0 0 !important}
+.yiiPager{float:right}
+.yiiPager li{margin:0 0 0 0 !important}
 
 /**Page Contact**/
 .frame-title{margin:0 0 20px 0}
