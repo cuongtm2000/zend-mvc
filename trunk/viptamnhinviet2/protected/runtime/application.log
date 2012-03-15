@@ -299,3 +299,162 @@ Stack trace:
 REQUEST_URI=/yii/viptamnhinviet2/tin-tuc/asdasd
 HTTP_REFERER=http://dos.vn/yii/viptamnhinviet2/tin-tuc
 ---
+2012/03/15 10:50:47 [error] [exception.CException] exception 'CException' with message 'DefaultController cannot find the requested view "cats".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('cats', Array, true)
+#1 C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php(18): CController->render('cats', Array)
+#2 [internal function]: DefaultController->actionCats('asdasd', 0)
+#3 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
+#4 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
+#5 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('cats')
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('news/default/ca...')
+#10 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc/asdasd
+HTTP_REFERER=http://dos.vn/yii/viptamnhinviet2/tin-tuc
+---
+2012/03/15 10:51:59 [error] [exception.CException] exception 'CException' with message 'News and its behaviors do not have a method or closure named "listItemByCat".' in C:\xampp\php\library\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(226): CComponent->__call('listItemByCat', Array)
+#1 C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php(18): CActiveRecord->__call('listItemByCat', Array)
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php(18): News->listItemByCat('11')
+#3 [internal function]: DefaultController->actionCats('asdasd', 0)
+#4 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
+#5 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
+#6 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('cats')
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('news/default/ca...')
+#11 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CApplication->run()
+#13 {main}
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc/asdasd
+HTTP_REFERER=http://dos.vn/yii/viptamnhinviet2/tin-tuc
+---
+2012/03/15 11:02:08 [error] [php] Undefined variable: value (C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\views\default\cats.php:2)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): DefaultController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php(22): DefaultController->render()
+#3 unknown(0): DefaultController->actionCats()
+#4 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#8 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CWebApplication->run()
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc/asdasd
+in C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\views\default\cats.php (2)
+in C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php (22)
+in C:\xampp\htdocs\yii\viptamnhinviet2\index.php (20)
+2012/03/15 11:02:23 [error] [php] Undefined variable: value (C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\views\default\cats.php:2)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): DefaultController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php(22): DefaultController->render()
+#3 unknown(0): DefaultController->actionCats()
+#4 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#8 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CWebApplication->run()
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc/asdasd
+in C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\views\default\cats.php (2)
+in C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php (22)
+in C:\xampp\htdocs\yii\viptamnhinviet2\index.php (20)
+2012/03/15 11:09:05 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\views\default\cats.php:2)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): DefaultController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php(22): DefaultController->render()
+#3 unknown(0): DefaultController->actionCats()
+#4 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#8 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CWebApplication->run()
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc/asdasd
+in C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\views\default\cats.php (2)
+in C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php (22)
+in C:\xampp\htdocs\yii\viptamnhinviet2\index.php (20)
+2012/03/15 11:10:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin-tuc/asdasd/dfg-dfg.html".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('tin-tuc/asdasd/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc/asdasd/dfg-dfg.html
+HTTP_REFERER=http://dos.vn/yii/viptamnhinviet2/tin-tuc/asdasd
+---
+2012/03/15 11:10:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin-tuc/asdasd/fgdfgdf.html".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('tin-tuc/asdasd/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc/asdasd/fgdfgdf.html
+HTTP_REFERER=http://dos.vn/yii/viptamnhinviet2/tin-tuc/asdasd
+---
+2012/03/15 11:10:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin-tuc/asdasd/dfg-dfg.html".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('tin-tuc/asdasd/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc/asdasd/dfg-dfg.html
+HTTP_REFERER=http://dos.vn/yii/viptamnhinviet2/tin-tuc
+---
+2012/03/15 11:11:54 [error] [exception.CException] exception 'CException' with message 'News and its behaviors do not have a method or closure named "detailItem".' in C:\xampp\php\library\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(226): CComponent->__call('detailItem', Array)
+#1 C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php(26): CActiveRecord->__call('detailItem', Array)
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php(26): News->detailItem('dfg-dfg')
+#3 [internal function]: DefaultController->actionView('dfg-dfg')
+#4 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
+#5 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
+#6 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('news/default/vi...')
+#11 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CApplication->run()
+#13 {main}
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc/asdasd/dfg-dfg.html
+HTTP_REFERER=http://dos.vn/yii/viptamnhinviet2/tin-tuc
+---
+2012/03/15 11:12:08 [error] [exception.CException] exception 'CException' with message 'News and its behaviors do not have a method or closure named "detailItem".' in C:\xampp\php\library\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(226): CComponent->__call('detailItem', Array)
+#1 C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php(26): CActiveRecord->__call('detailItem', Array)
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\news\controllers\DefaultController.php(26): News->detailItem('dfg-dfg')
+#3 [internal function]: DefaultController->actionView('dfg-dfg')
+#4 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
+#5 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
+#6 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('news/default/vi...')
+#11 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(20): CApplication->run()
+#13 {main}
+REQUEST_URI=/yii/viptamnhinviet2/tin-tuc/asdasd/dfg-dfg.html
+HTTP_REFERER=http://dos.vn/yii/viptamnhinviet2/tin-tuc
+---

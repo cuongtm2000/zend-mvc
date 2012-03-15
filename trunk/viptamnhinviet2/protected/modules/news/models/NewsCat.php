@@ -149,6 +149,17 @@ class NewsCat extends CActiveRecord {
 		return parent::beforeSave();
 	}
 
+	/**
+	 * Function tìm tag bởi cat_id
+	 * @param $tag
+	 * @return mixed
+	 */
+	public function findCatByTag($tag) {
+		$command = Yii::app()->db->createCommand('SELECT cat_id, cat_title, tag FROM ' . $this->tableName() . ' WHERE tag=:tag');
+		$command->bindParam(':tag', $tag, PDO::PARAM_STR);
+		return $command->queryRow();
+	}
+
 	//Front end - List record for index
 	public function listCats($cid = 0, $prefix = NULL, $type = 0, $id = 0) {
 		if ($cid == 1) {
