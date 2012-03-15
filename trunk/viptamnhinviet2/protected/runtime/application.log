@@ -458,3 +458,125 @@ Stack trace:
 REQUEST_URI=/yii/viptamnhinviet2/tin-tuc/asdasd/dfg-dfg.html
 HTTP_REFERER=http://dos.vn/yii/viptamnhinviet2/tin-tuc
 ---
+2012/03/15 21:56:24 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'viptamnhinviet2.dos_module_video' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `dos_module_video`.
+in E:\xampp\htdocs\yii\viptamnhinviet2\protected\components\Controller.php (41)
+in E:\xampp\htdocs\yii\viptamnhinviet2\index.php (21)
+2012/03/15 21:56:24 [error] [exception.CDbException] exception 'CDbException' with message 'The table "dos_module_video" for active record class "Video" cannot be found in the database.' in E:\xampp\php\www\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Video))
+#1 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(394): CActiveRecord::model('Video')
+#2 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 E:\xampp\htdocs\yii\viptamnhinviet2\protected\components\Controller.php(41): CActiveRecord->__construct()
+#4 E:\xampp\php\www\framework\web\CWebApplication.php(275): Controller->init()
+#5 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('login')
+#6 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#8 {main}
+REQUEST_URI=/yii/viptamnhinviet2/login
+---
+2012/03/15 21:56:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'viptamnhinviet2.dos_module_video' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `dos_module_video`.
+in E:\xampp\htdocs\yii\viptamnhinviet2\protected\components\Controller.php (41)
+in E:\xampp\htdocs\yii\viptamnhinviet2\index.php (21)
+2012/03/15 21:56:29 [error] [exception.CDbException] exception 'CDbException' with message 'The table "dos_module_video" for active record class "Video" cannot be found in the database.' in E:\xampp\php\www\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Video))
+#1 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(394): CActiveRecord::model('Video')
+#2 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 E:\xampp\htdocs\yii\viptamnhinviet2\protected\components\Controller.php(41): CActiveRecord->__construct()
+#4 E:\xampp\php\www\framework\web\CWebApplication.php(275): Controller->init()
+#5 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('login')
+#6 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#8 {main}
+REQUEST_URI=/yii/viptamnhinviet2/login
+---
+2012/03/15 22:03:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in E:\xampp\php\www\framework\web\CController.php:484
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(271): CController->missingAction('')
+#1 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('')
+#2 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('user')
+#3 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/viptamnhinviet2/user/
+---
+2012/03/15 22:03:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/images/viptamnhinviet/images/video/danh-muc.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/public/userfiles/images/viptamnhinviet/images/video/danh-muc.png
+HTTP_REFERER=http://localhost/yii/viptamnhinviet2/video
+---
+2012/03/15 22:03:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/images/viptamnhinviet/images/video/danh-muc.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/public/userfiles/images/viptamnhinviet/images/video/danh-muc.png
+HTTP_REFERER=http://localhost/yii/viptamnhinviet2/video
+---
+2012/03/15 22:05:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "active".' in E:\xampp\php\www\framework\web\CController.php:484
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(271): CController->missingAction('active')
+#1 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('active')
+#2 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('user/active')
+#3 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/viptamnhinviet2/user/active
+---
+2012/03/15 22:10:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admn".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admn')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/admn
+---
+2012/03/15 22:11:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/css/jquery.treeview.css".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/admin-bl...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/themes/admin-blue/css/jquery.treeview.css
+HTTP_REFERER=http://localhost/yii/viptamnhinviet2/admin/user/map
+---
+2012/03/15 22:11:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/js/jquery.treeview.js".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/admin-bl...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/themes/admin-blue/js/jquery.treeview.js
+HTTP_REFERER=http://localhost/yii/viptamnhinviet2/admin/user/map
+---
+2012/03/15 22:13:26 [error] [exception.CException] exception 'CException' with message 'UserController cannot find the requested view "_form".' in E:\xampp\php\www\framework\web\CController.php:879
+Stack trace:
+#0 E:\xampp\htdocs\yii\viptamnhinviet2\protected\views\user\update.php(18): CController->renderPartial('_form', Array)
+#1 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
+#2 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#3 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#4 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('update', Array, true)
+#5 E:\xampp\htdocs\yii\viptamnhinviet2\protected\controllers\UserController.php(50): CController->render('update', Array)
+#6 [internal function]: UserController->actionUpdate('admin')
+#7 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#9 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#16 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('update')
+#18 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('user/update/id/...')
+#19 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii/viptamnhinviet2/user/update/id/admin
+---

@@ -180,6 +180,12 @@ class User extends CActiveRecord {
         return parent::beforeSave();
     }
 
+    public function afterSave() {
+        $table = new Tables();
+        $table->addItem($this->username);
+        parent::afterSave();
+    }
+
     public function activeItem($data) {
 
         $flag = isset($data['factive']) ? $data['factive'] : 'disable';
@@ -198,29 +204,25 @@ class User extends CActiveRecord {
             if ($user['enable'])
                 continue;
 
-            if ($flag) {/////show or hidden
-//  User::model()->updateByPk($value, array('enable' => 1));
+            if ($flag) {
+                //Enable =1
+                // User::model()->updateByPk($value, array('enable' => 1));
+
                 $table = new Tables();
-// $table->addItem($value);
-//  $log = new Log();
-// $log->addItem('Thành viên ' . $value . ' mà bạn giới thiệu đã được kích hoạt', '', $user['user_gioithieu'], 0, 'gioithieu');
-                /*
-                 * Tim TV dat chuan co độ ưu tiên cao(priority min)
-                 * để gắn vào
-                 */
-                $userGAN = $table->findTVdatchuanTop();
-                $this->debug[] = $userGAN;
-                if ($userGAN) {
-                    if ($userGAN['four_child'] == '')
-                        $four_child = $user;
-                    else
-                        $four_child = $userGAN['four_child'] . '|' . $user;
-                    $userGAN->four_child = $four_child; //* update
+
+                //Ghi nhận log để theo dõi
+                $log = new Log();
+                $log->addItem('Thành viên ' . $value . ' được kích hoạt. Người giới thiệu:' . $user['user_gioithieu'], 'Hệ thống', 'grouplaptrinh', 0, 'gioithieu');
+                
+                //* Tim TV dat chuan co độ ưu tiên cao(priority min)để gắn vào
+                $userGAN = Tables::model()->findTVdatchuanTop();
+                if ($userGAN != NULL) {
+                    $four_child = ($userGAN['four_child'] != '') ? $userGAN['four_child'] . '|' : '';
+                    $userGAN->four_child = $four_child . $user['username']; //* update
                     $userGAN->save();
 
                     $num_child = count(explode('|', $four_child));
                     $level = $this->getLevel($userGAN['dos_module_usernames_username']);
-
                     if ($level < 6)
                         $so_user_can_gan = 4;
                     elseif ($level < 8)
@@ -230,27 +232,31 @@ class User extends CActiveRecord {
                     else
                         $so_user_can_gan = 1;
 
-                    if ($so_user_can_gan == $num_child) {
-                        /*
-                         * Cộng tiền, thoát bàn
-                         */
-                        $this->updateByPk($userGAN['dos_module_usernames_username'], array('level'=> $level+1));
+                    if ($so_user_can_gan == $num_child) {                        
+                        $money = $this->getSotienHHdatcap($level + 1);
+
+                        //Reset bàn
                         $userGAN->resetItem();
-                        $money=$this->getSotienHHdatcap($level+1);
                         
+                        //Tăng cấp và cộng tiền
+                        $u = User::model()->findByPk($userGAN['dos_module_usernames_username']);
+                        $u->level +=1;
+                        $u->balance+=$money;
+                        $u->save();
                         
-                        
-                        
-                        
-                        
-                        
+                        //Cộng tiền
+                        $log->addItem("Hoa hồng đạt cấp " . ($level+1), '', $u['username'], $money, 'tangcap');
+                        // tìm những thằng cha của nó có cấp lớn hơn để gắn vào
                     }
+                    
                 }
 
 
+                //update ban nguoi gioi thieu
+                $table->updateChild($user['user_gioithieu'], $value);
 
-
-//$this->addThanhtichHH($user['user_gioithieu']);
+                //them Hoa hong thanh tich
+                $this->addThanhtichHH($user['user_gioithieu']);
             } else {    //delete
                 User::model()->deleteByPk($value);
             }
@@ -258,26 +264,13 @@ class User extends CActiveRecord {
     }
 
     /*
-     * Check Thoatban
-     */
-
-    public function addToThoatban($user) {
-        
-    }
-
-    /*
      * List TV đã thoát bàn
      *      tức TV có level > 0 và có ít nhất
      *      1 trong 2 nhánh con trong bàn còn khuyết
      */
-
     public function listTVthoatban() {
         return Tables::model()->findAll('left_child = "" or right_child = ""');
     }
-
-    /*
-     * 
-     */
 
     public function listTVdatchuan() {
         return Tables::model()->findAll('left_child !="" and right_child != ""');
@@ -288,54 +281,25 @@ class User extends CActiveRecord {
         return $u['level'];
     }
 
-    private function getSotienHHdatcap($level) {
-        switch ($level) {
-            case 1: return 2000;
-            case 2: return 4000;
-            case 3: return 8000;
-            case 4: return 20000;
-            case 5: return 40000;
-            case 6: return 80000;
-            case 7: return 150000;
-            case 8: return 300000;
-            case 9: return 500000;
-            case 10: return 1000000;
-            default: return 0;
-        }
-    }
-    private function getSotienHHthanhtich($num_user) {
-        switch ($num_user) {
-            case 15: return 5000;
-            case 30: return 7000;
-            case 60: return 15000;
-            case 120: return 20000;
-            case 300: return 40000;
-            case 600: return 60000;
-            case 1000: return 80000;
-            case 2000: return 100000;
-            case 5000: return 200000;
-            case 10000: return 500000;
-            default: return 0;
-        }
-    } 
     /*
      *  Thêm thành tích hoa hồng
      * cho người giới thiệu
      */
+
     private function addThanhtichHH($user) {
         $tree = $this->createTree($user);
         $min_child = min($tree['c0'], $tree['c1']);
-        $money=  $this->getSotienHHthanhtich($min_child);
-       
+        $money = $this->getSotienHHthanhtich($min_child);
+
         $u = User::model()->findByPk($user);
         if ($money > 0) {
             $u->balance+=$money;
             $u->save();
-            
+
             $log = new Log();
-            $log->addItem("Hoa hồng thành tích do đạt được số con ở mỗi nhánh là " . $min_child, '', $user, $money, 'thanhtich');
+            $log->addItem("Hoa hồng thành tích do đạt được mỗi nhánh là " . $min_child, '', $user, $money, 'thanhtich');
         }
-        if ($u['user_gioithieu'] != 'grouplaptrinh')
+        if ($u['user_gioithieu'] != '')
             $this->addThanhtichHH($u['user_gioithieu']);
     }
 
@@ -357,7 +321,6 @@ class User extends CActiveRecord {
                         array(
                             'order' => 'create_date',
                             'condition' => 'enable=0',
-                        //'params' => array(':x' => $x)
                         )
         );
     }
@@ -366,6 +329,38 @@ class User extends CActiveRecord {
         if (User::model()->findByPk($username, 'enable=1'))
             return TRUE;
         return FALSE;
+    }
+
+    private function getSotienHHdatcap($level) {
+        switch ($level) {
+            case 1: return 2000;
+            case 2: return 4000;
+            case 3: return 8000;
+            case 4: return 20000;
+            case 5: return 40000;
+            case 6: return 80000;
+            case 7: return 150000;
+            case 8: return 300000;
+            case 9: return 500000;
+            case 10: return 1000000;
+            default: return 0;
+        }
+    }
+
+    private function getSotienHHthanhtich($num_user) {
+        switch ($num_user) {
+            case 15: return 5000;
+            case 30: return 7000;
+            case 60: return 15000;
+            case 120: return 20000;
+            case 300: return 40000;
+            case 600: return 60000;
+            case 1000: return 80000;
+            case 2000: return 100000;
+            case 5000: return 200000;
+            case 10000: return 500000;
+            default: return 0;
+        }
     }
 
 }
