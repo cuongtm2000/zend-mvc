@@ -1,15 +1,9 @@
-<?php
-$this->breadcrumbs=array(
-	$this->module->id,
-);
-?>
-<h1><?php echo $this->uniqueId . '/' . $this->action->id; ?></h1>
+<?php foreach($listItems['models'] as $value):?>
+	<p>Tieu de: <?php echo $value['title']?></p>
+	<p>Mô tả: <?php echo $value['preview']?></p>
+	<p>Hình ảnh: <?php echo $value['pic_thumb']?></p>
 
-<p>
-This is the view content for action "<?php echo $this->action->id; ?>".
-The action belongs to the controller "<?php echo get_class($this); ?>"
-in the "<?php echo $this->module->id; ?>" module.
-</p>
-<p>
-You may customize this page by editing <tt><?php echo __FILE__; ?></tt>
-</p>
+		<br /><br/>
+<?php endforeach?>
+
+<?php $this->widget('CLinkPager', array('pages' => $listItems['pages'], 'header' => '', 'htmlOptions' => array('class' => 'yiiPager paging'))) ?>

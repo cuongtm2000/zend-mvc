@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 15, 2012 at 08:38 AM
+-- Generation Time: Mar 15, 2012 at 10:42 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -346,7 +346,17 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `dos_module_news`
+--
+
+INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `preview`, `previewen`, `detail`, `detailen`, `tag`, `description`, `hits`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(1, 'Bài viết', NULL, '2012-03-15 08:50:17', '', '<p>\r\n	Mo ta</p>\r\n', NULL, '<p>\r\n	Chi tie</p>\r\n', NULL, 'bai-viet', 'adsadsad', 0, 1, 0, NULL, NULL, 1, 11),
+(2, 'sad sad', NULL, '2012-03-15 08:50:25', '', '<p>\r\n	asdasd</p>\r\n', NULL, '<p>\r\n	asdasd</p>\r\n', NULL, 'sad-sad', 'asd asdasd', 0, 2, 0, NULL, NULL, 1, 11),
+(3, 'fgdfgdf', NULL, '2012-03-15 08:54:28', '', '<p>\r\n	gdfgdfg</p>\r\n', NULL, '<p>\r\n	g dfgdfg</p>\r\n', NULL, 'fgdfgdf', 'dfg dfgdfg', 0, 3, 0, NULL, NULL, 1, 11),
+(4, 'dfg dfg', NULL, '2012-03-15 08:56:16', 'dfg-dfg.jpg', '<p>\r\n	dfgdfgdf g</p>\r\n', NULL, '<p>\r\n	dfgdfg</p>\r\n', NULL, 'dfg-dfg', 'dfg dgdf g', 0, 4, 0, NULL, NULL, 1, 11);
 
 -- --------------------------------------------------------
 
@@ -376,7 +386,6 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
 --
 
 INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `description`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
-(10, 0, 'asd', NULL, NULL, NULL, 'asd', 'sadsasadasdsadsa', '', 1, NULL, NULL, 1),
 (11, 0, 'asdasd', NULL, NULL, NULL, 'asdasd', 'sdaddasdsad', '', 2, NULL, NULL, 1);
 
 -- --------------------------------------------------------
@@ -417,7 +426,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1331797079);
+('''127.0.0.1''', 1331802236);
 
 -- --------------------------------------------------------
 
