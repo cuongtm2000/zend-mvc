@@ -18,13 +18,14 @@
  * @property DosModuleVideo[] $dosModuleVideos
  */
 class VideoCat extends CActiveRecord {
+	private $_oldImage_thumb;
+	public $remove_pic_thumb;
+
+	private $_model;
+
 	private $_data;
 	private $_rows;
 	private $_rowsize;
-
-	private $_model;
-	private $_oldImage_thumb;
-	public $remove_pic_thumb;
 
 	private $_sub_cat_num = 0;
 	private $_sub_num_item = 0;
@@ -154,7 +155,38 @@ class VideoCat extends CActiveRecord {
 		return parent::beforeSave();
 	}
 
-	//Front end - List record for index
+	/**
+	 * Function tìm tag bởi cat_id
+	 * @param $tag
+	 * @return mixed
+	 */
+	public function findCatByTag($tag) {
+		$command = Yii::app()->db->createCommand('SELECT cat_id, cat_title, tag FROM ' . $this->tableName() . ' WHERE tag=:tag');
+		$command->bindParam(':tag', $tag, PDO::PARAM_STR);
+		return $command->queryRow();
+	}
+
+	/**
+	 * Function dùng để lấy Danh sách Danh mục, nếu có $cid truyền vào lấy cat_parent_id=$cid, nguoc lại lấy hết
+	 * @param null $cid
+	 * @return mixed
+	 */
+	public function listItem($cid = NULL) {
+		if (isset($cid)) {
+			$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title, tag, pic_thumb FROM ' . $this->tableName() . ' WHERE cat_parent_id=' . $cid . ' AND cat_enable=1 ORDER BY cat_order DESC');
+		} else {
+			$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title, tag, pic_thumb FROM ' . $this->tableName() . ' WHERE cat_enable=1 ORDER BY cat_order DESC');
+		}
+		return $command->queryAll();
+	}
+
+	/**
+	 * @param int $cid - thêm Root vào đầu tiên select option
+	 * @param null $prefix - ký tự "|--"
+	 * @param int $type - dùng cho admin (1: admin, 0: non-admin)
+	 * @param int $id - dùng cho Edit, Delete không chứa id này
+	 * @return mixed
+	 */
 	public function listCats($cid = 0, $prefix = NULL, $type = 0, $id = 0) {
 		if ($cid == 1) {
 			$this->_data[] = array('cat_id' => 0, 'cat_title' => 'Root');
@@ -182,6 +214,11 @@ class VideoCat extends CActiveRecord {
 		return $this->_data;
 	}
 
+	/**
+	 * @param $i
+	 * @param $prefix
+	 * @param string $tab
+	 */
 	private function loopItem($i, $prefix, $tab = '|-- ') {
 		for ($j = 0; $j < $this->_rowsize; $j++) {
 			if ($this->_rows[$j]['cat_parent_id'] == $this->_rows[$i]['cat_id']) {
@@ -189,12 +226,6 @@ class VideoCat extends CActiveRecord {
 				$this->loopItem($j, $prefix, $tab . '|-- ');
 			}
 		}
-	}
-
-	private function countItembyCat($id) {
-		$model = ucfirst(Yii::app()->controller->id);
-		$items = new $model();
-		return $items->countItemByCat($id);
 	}
 
 	//Back end - Update Record
@@ -205,7 +236,10 @@ class VideoCat extends CActiveRecord {
 		return $command->execute();
 	}
 
-	//Back end - Active Item
+	/**
+	 * Function dùng cho Sys, show, hidden
+	 * @param $data - Dữ liệu submit từ user
+	 */
 	public function activeItem($data) {
 		$flag = $data->getPost('factive', 'disable');
 		$ids = $data->getPost('ids', '');
@@ -282,13 +316,20 @@ class VideoCat extends CActiveRecord {
 		$command->execute();
 	}
 
-	//Back end - Get max record
+	/**
+	 * Function dùng để tính số thứ tự lớn nhất, dùng cho Add Danh mục
+	 * @return mixed
+	 */
 	private function maxRecordOrder() {
 		$command = Yii::app()->db->createCommand('SELECT max(cat_order) AS max FROM ' . $this->tableName());
 		return $command->queryScalar() + 1;
 	}
 
-	//Back end - Get record to Edit
+	/**
+	 * @param $id
+	 * @return mixed
+	 * @throws CHttpException
+	 */
 	public function loadEdit($id) {
 		$criteria = new CDbCriteria();
 
@@ -300,25 +341,53 @@ class VideoCat extends CActiveRecord {
 		return $this->_model;
 	}
 
-	//Back end - Get info cat
+	/**
+	 * Function dùng để đếm sản phẩm cho Danh mục dùng cho hành động Delete
+	 * @param $id
+	 * @return mixed
+	 */
+	private function countItembyCat($id) {
+		$model = ucfirst(Yii::app()->controller->id);
+		$items = new $model();
+		return $items->countItemByCat($id);
+	}
+
+	/**
+	 * Function dùng để lấy thông tin Danh mục cho hành động Delete Danh mục
+	 * @param $id
+	 * @return mixed
+	 */
 	public function getInfoCat($id) {
 		$command = Yii::app()->db->createCommand('SELECT cat_title FROM ' . $this->tableName() . ' WHERE cat_id=:id');
 		$command->bindParam(":id", $id, PDO::PARAM_INT);
 		return $command->queryScalar();
 	}
 
-	//Back end - Get info cat
+	/**
+	 * Function dùng để điếm sản phẩm của Danh mục cho hành động Delete Danh mục
+	 * @param $id
+	 * @return mixed
+	 */
 	public function countItemCat($id) {
 		$command = Yii::app()->db->createCommand('SELECT COUNT(record_id) AS numcat FROM ' . $this->tableName() . ', dos_module_news WHERE ' . $this->tableName() . '.cat_id=dos_module_news.dos_module_item_cat_cat_id AND cat_id=:id');
 		$command->bindParam(":id", $id, PDO::PARAM_INT);
 		return $command->queryScalar();
 	}
 
+	/**
+	 * Function dùng để đếm số Danh mục con cho hành động Delete Danh mục
+	 * @param $id
+	 * @return array
+	 */
 	public function countSubcat($id) {
 		$this->loopCat($id);
 		return array('sub_cat_num' => $this->_sub_cat_num, 'sub_num_item' => $this->_sub_num_item);
 	}
 
+	/**
+	 * Function vòng lặp dòng để đếm số danh mục cho hành động Delete Danh mục
+	 * @param $id
+	 */
 	private function loopCat($id) {
 		$command = Yii::app()->db->createCommand('SELECT cat_id FROM ' . $this->tableName() . ' WHERE cat_parent_id=:id');
 		$command->bindParam(":id", $id, PDO::PARAM_INT);
@@ -331,7 +400,10 @@ class VideoCat extends CActiveRecord {
 		}
 	}
 
-	//Xóa tất cả item của phân loại con
+	/**
+	 * Function dùng để Xóa tất cả item của phân loại con cho hành động Delete Danh mục
+	 * @param $cat_id
+	 */
 	public function loopDelItemtoCat($cat_id) {
 		$command = Yii::app()->db->createCommand('SELECT cat_id FROM ' . $this->tableName() . ' WHERE cat_parent_id=:id');
 		$command->bindParam(":id", $cat_id, PDO::PARAM_INT);

@@ -15,6 +15,7 @@ class Controller extends CController {
 	public $advs_top;
 	public $advs_bottom;
 	public $listItemHot;
+	public $videoHome; //video home
 
 	public function init() {
 		//Setup lang
@@ -35,6 +36,10 @@ class Controller extends CController {
 
 		$products_class = new Products();
 		$this->listItemHot = $products_class->listItemHot();
+
+		Yii::app()->getModule('video');
+		$video_class = new Video();
+		$this->videoHome = $video_class->itemHome();
 		
 		define('USERFILES', '/public/userfiles/images/viptamnhinviet/images');
 	}

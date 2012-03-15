@@ -15,11 +15,14 @@
         <tbody>
             <?php if ($models): ?>
                 <?php $i = 1; foreach ($models as $value): ?>
-                    <?php if ($value['enable'] == 0) {$rowclass = ' class="disable"';} else {$rowclass = ($i % 2 == 0) ? '' : ' class="alt"';}?>
+                    <?php
+						if ($value['enable'] == 0) {$rowclass = ' class="disable"';} else {$rowclass = ($i % 2 == 0) ? '' : ' class="alt"';}
+						if ($value['hot'] == 1) {$title = '<strong>' . $value['title'] . '</strong> <img src="' . Yii::app()->theme->baseUrl . '/images/hot.gif" alt="Hot" />';} else {$title = $value['title'];}
+					?>
                     <tr<?php echo $rowclass ?>>
                         <td><input type="checkbox" name="ids[]" value="<?php echo $value['record_id'] ?>" /></td>
                         <td><input type="text" name="orders[<?php echo $value['record_id'] ?>]" maxlength="3" class="txt-sort" value="<?php echo $value['record_order'] ?>" /></td>
-                        <td><?php echo $value['title']?></td>
+                        <td><?php echo $title?></td>
                         <td><?php echo $value->VideoCat->cat_title ?></td>
                         <td><?php echo $value->hits ?></td>
                         <td><?php echo CHtml::link('Chỉnh sửa', array('edit', 'id' => $value->record_id)) ?></td>
