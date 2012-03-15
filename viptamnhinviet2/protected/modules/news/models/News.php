@@ -180,6 +180,38 @@ class News extends CActiveRecord {
 		return parent::beforeSave();
 	}
 
+	//Front end - get detail item
+	public function detailItem($tag) {
+		$id = $this->getIDByTag($tag);
+		return $this->loadEdit($id);
+	}
+
+	//Front end - find record_id by tag
+	private function getIDByTag($tag) {
+		$command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE tag=:tag');
+		$command->bindParam(":tag", $tag, PDO::PARAM_STR);
+		return $command->queryScalar();
+	}
+
+	//Front end - list Item by Cat
+	public function listItemByCat($cid) {
+		$criteria = new CDbCriteria();
+		$criteria->with = array('NewsCat');
+		$criteria->select = 'title, pic_thumb, preview, tag';
+		$criteria->order = 'record_order DESC, postdate DESC';
+		$criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
+		$criteria->params = array(':cid' => $cid);
+
+		$count = News::model()->count($criteria);
+
+		// elements per page
+		$pages = new CPagination($count);
+		$pages->pageSize = 2;
+		$pages->applyLimit($criteria);
+
+		return array('models' => News::model()->findAll($criteria), 'pages' => $pages);
+	}
+
 	public function listItems(){
 		$criteria = new CDbCriteria();
 		$criteria->order = 'record_order DESC, postdate DESC';

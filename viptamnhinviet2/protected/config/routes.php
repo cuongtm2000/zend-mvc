@@ -20,6 +20,7 @@ return array(
 	'tin-tuc' => array('news/default/index'), //index
 	'tin-tuc/<cid:[-a-z0-9]+>/page/<page:\d+>' => array('news/default/cats'), //paging cats
 	'tin-tuc/<cid:[-a-z0-9]+>' => array('news/default/cats'), //cats
+	'tin-tuc/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('news/default/view', 'urlSuffix' => '.html'), //view
 
 	'video/<cid:[-a-z0-9]+>/page/<page:\d+>' => array('video/default/cats'), //paging cats
 	'video/<cid:[-a-z0-9]+>' => array('video/default/cats'), //cats
