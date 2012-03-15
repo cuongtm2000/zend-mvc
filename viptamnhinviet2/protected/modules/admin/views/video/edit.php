@@ -1,7 +1,7 @@
 <?php $form = $this->beginWidget('CActiveForm', array('id'=>'frm', 'enableAjaxValidation'=>true, 'enableClientValidation' =>true, 'htmlOptions' => array('enctype' => 'multipart/form-data')));?>
 <?php echo $form->errorSummary($model, ''); ?>
 <fieldset>
-    <legend>Edit News</legend>
+    <legend>Edit Video</legend>
 
     <div class="col1"><?php echo $form->labelEx($model, 'dos_module_item_cat_cat_id') ?></div>
     <div class="col2">
@@ -11,29 +11,7 @@
 
     <div class="col1"><?php echo $form->labelEx($model, 'title') ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'title', $htmlOptions=array('class'=>'txt-large-x')); ?>
-    </div>
-    <div class="clear space"></div>
-    
-    <div class="col1"><?php echo $form->labelEx($model, 'preview') ?></div>
-    <div class="col2">
-        <?php echo $form->textArea($model, 'preview', $htmlOptions=array('cols'=>20, 'rows'=>10)); ?>
-        <script type="text/javascript">
-        //<![CDATA[
-            CKEDITOR.replace('<?php echo get_class($model)?>[preview]');
-        //]]>
-        </script>
-    </div>
-    <div class="clear space"></div>
-    
-    <div class="col1"><?php echo $form->labelEx($model, 'detail') ?></div>
-    <div class="col2">
-        <?php echo $form->textArea($model, 'detail', $htmlOptions=array('cols'=>20, 'rows'=>10)); ?>
-        <script type="text/javascript">
-        //<![CDATA[
-            CKEDITOR.replace('<?php echo get_class($model)?>[detail]');
-        //]]>
-        </script>
+        <?php echo $form->textField($model, 'title', $htmlOptions=array('class'=>'txt-very-large')); ?>
     </div>
     <div class="clear space"></div>
 
@@ -50,7 +28,7 @@
     
     <div class="col1"><?php echo $form->labelEx($model, 'tag') ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'tag', $htmlOptions=array('class'=>'txt-large-x')); ?>
+        <?php echo $form->textField($model, 'tag', $htmlOptions=array('class'=>'txt-very-large')); ?>
     </div>
     <div class="clear space"></div>
     
@@ -65,6 +43,12 @@
         <?php echo $form->radioButtonList($model, 'hot', array('0'=>'Normal', '1'=>'Hot'), array('separator'=>'&nbsp;&nbsp;')); ?>
     </div>
     <div class="clear space"></div>
+
+	<div class="col1"><?php echo $form->labelEx($model, 'enable', $htmlOptions = array('for' => ucfirst($this->ID) . '_enable_0')) ?></div>
+	<div class="col2 radio">
+		<?php echo $form->radioButtonList($model, 'enable', array('1' => 'Hiển thị', '0' => 'Ẩn'), array('separator' => '&nbsp;&nbsp;')); ?>
+	</div>
+	<div class="clear space"></div>
     
     <div class="col1">&nbsp;</div>
     <div class="col2">
