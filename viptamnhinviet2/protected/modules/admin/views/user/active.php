@@ -73,3 +73,4 @@ var_dump($debug);
     </form>
 
     <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/common.js"></script></div>
+

@@ -64,15 +64,34 @@ class Tables extends CActiveRecord {
         $this->priority = 0;
         $this->save();
     }
-    public function resetItem(){
-        $this->left_child= $this->right_child = $this->four_child='';
-        $this->upgrade_date=0;
-        $this->priority=0;
+
+    public function resetItem() {
+        $this->left_child = $this->right_child = $this->four_child = '';
+        $this->upgrade_date = date("Y-m-d H:i:s");
+        $this->priority = 0;
         $this->save();
     }
-     public function findTVdatchuanTop() {
+
+    public function findTVdatchuanTop() {
         return $this->find('priority = (select min(priority) from ' . Tables::model()->tableName() . ' where left_child !="" and right_child != ""  and priority >0)');
     }
-            
+
+    public function updateChild($parent, $child) {
+        $t = Tables::model()->findByPk($parent);
+
+        if ($t->left_child == '')
+            $t->left_child = $child;
+        else {
+            $t->right_child = $child;
+            $t->upgrade_date = date("Y-m-d H:i:s");
+            $t->priority = $this->getMaxPriority() + 1;
+        }
+        $t->save();
+    }
+
+    private function getMaxPriority() {
+        $command = Yii::app()->db->createCommand('select max(priority) from ' . $this->tableName());
+        return $command->queryScalar();
+    }
 
 }

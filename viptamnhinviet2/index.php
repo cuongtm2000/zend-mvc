@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Ho_Chi_Minh');
 set_include_path(implode(PATH_SEPARATOR, array(
     dirname(__FILE__) . '/framework',
     get_include_path(),
