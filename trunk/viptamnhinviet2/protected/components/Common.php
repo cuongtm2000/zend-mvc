@@ -45,9 +45,15 @@ class Common {
         }
     }*/
 
-    //Back end - remove pic
+    /**
+	 * @param $item - Tập tin cần remove
+	 * @param int $type - gồm 1 ảnh hay nhiều ảnh
+	 * @param int $path - phân biệt Sản phẩm hay Danh mục (0: Sản phẩm, 1: Danh mục)
+	 */
     public function removePic($item, $type = 0, $path = 0) {
-        $path = ($path == 1) ? YiiBase::getPathOfAlias('webroot') . '/public/userfiles/images/' . Yii::app()->user->id . '/images' . '/' . Yii::app()->controller->id . '/' : YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . '/';
+        //$path = ($path == 1) ? YiiBase::getPathOfAlias('webroot') . '/public/userfiles/images/' . Yii::app()->user->id . '/images' . '/' . Yii::app()->controller->id . '/' : YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . '/';
+		$path = ($path == 1) ? YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . 'Cat/' : YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . '/';
+
         if ($type == 0) {
             if ($item && file_exists($path . $item)) {
                 unlink($path . $item);

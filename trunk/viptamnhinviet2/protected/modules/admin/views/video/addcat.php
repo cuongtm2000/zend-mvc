@@ -27,9 +27,9 @@
     </div>
     <div class="clear space"></div>
 
-    <div class="col1"><?php echo $form->labelEx($model, 'pic_full') ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'pic_thumb') ?></div>
     <div class="col2">
-        <?php echo $form->fileField($model, 'pic_full', array('class' => 'fileupload')); ?>
+        <?php echo $form->fileField($model, 'pic_thumb', array('class' => 'fileupload')); ?>
     </div>
     <div class="clear space"></div>
 

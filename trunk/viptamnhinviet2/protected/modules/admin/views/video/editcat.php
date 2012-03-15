@@ -5,7 +5,7 @@
 
     <div class="col1"><?php echo $form->labelEx($model, 'cat_parent_id') ?></div>
     <div class="col2">
-        <?php echo $form->dropDownList($model, 'cat_parent_id', CHtml::listData($model->listCats(1, '|-- '), 'cat_id', 'cat_title')); ?>
+        <?php echo $form->dropDownList($model, 'cat_parent_id', CHtml::listData($model->listCats(1, '|-- ', 1, $model['cat_id']), 'cat_id', 'cat_title')); ?>
     </div>
     <div class="clear space"></div>
 
@@ -27,12 +27,14 @@
     </div>
     <div class="clear space"></div>
 
-    <div class="col1"><?php echo $form->labelEx($model, 'pic_full') ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'pic_thumb') ?></div>
     <div class="col2">
-        <?php if ($model->pic_full): ?>
-            <img src="<?php echo Yii::app()->request->baseUrl . USERFILES. '/newsCat/' . $model->pic_full ?>" alt="" class="img-marginb5" /><br />
+        <?php if ($model->pic_thumb): ?>
+			<div class="img-marginb5"><img src="<?php echo Yii::app()->request->baseUrl . USERFILES. '/videoCat/' . $model->pic_thumb ?>" alt="<?php echo $model->cat_title?>" />
+				<?php echo $form->checkBox($model, 'remove_pic_thumb') ?><?php echo $form->labelEx($model, 'remove_pic_thumb', array('class' => 'remove')) ?>
+			</div>
         <?php endif; ?>
-        <?php echo $form->fileField($model, 'pic_full', array('class' => 'fileupload')); ?>
+        <?php echo $form->fileField($model, 'pic_thumb', array('class' => 'fileupload')); ?>
     </div>
     <div class="clear space"></div>
 

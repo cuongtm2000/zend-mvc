@@ -47,6 +47,7 @@ class NewsCat extends CActiveRecord {
 			array('cat_title, tag, description', 'required'),
 			array('cat_parent_id, cat_order, cat_enable', 'numerical', 'integerOnly' => true),
 			array('cat_title, cat_titleen, tag, pic_full', 'length', 'max' => 100),
+			array('tag', 'unique'),
 			array('description', 'length', 'max' => 250),
 			array('cat_extra1, cat_extra2', 'length', 'max' => 45),
 			array('preview, previewen', 'safe'),
