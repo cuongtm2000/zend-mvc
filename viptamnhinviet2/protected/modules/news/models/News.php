@@ -346,4 +346,14 @@ class News extends CActiveRecord {
 		$command->bindParam(":cid", $cat_id, PDO::PARAM_INT);
 		$command->execute();
 	}
+	//delete item new cat
+	public function deleteItembyCat($cat_id) {
+		$command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE dos_module_item_cat_cat_id=:cid');
+		$command->bindParam(":cid", $cat_id, PDO::PARAM_INT);
+		$result = $command->queryAll();
+
+		foreach ($result as $value) {
+			$this->deleteRecord($value['record_id']);
+		}
+	}
 }

@@ -22,7 +22,7 @@
 
 
         <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.prettyPhoto.js"></script>
-		
+
 		<?php if($this->banners):?>
         <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.advancedSlider.min.js"></script>
         <!--[if IE]>
@@ -74,6 +74,8 @@
                     <li><a href="<?php echo Yii::app()->homeUrl?>" title="Trang chủ" class="select">Trang chủ</a></li>
                     <li><a href="<?php echo Yii::app()->homeUrl?>gioi-thieu" title="Giới thiệu">Giới thiệu</a></li>
                     <li><a href="<?php echo Yii::app()->homeUrl?>san-pham" title="Sản phẩm">Sản phẩm</a></li>
+					<li><a href="<?php echo Yii::app()->homeUrl?>tin-tuc" title="Tin tức">Tin tức</a></li>
+					<li><a href="<?php echo Yii::app()->homeUrl?>video" title="Video">Video</a></li>
                     <li><a href="<?php echo Yii::app()->homeUrl?>lien-he.html" title="Liên hệ">Liên hệ</a></li>
                 </ul>
 
@@ -95,14 +97,10 @@
 
                     <!--End slider banner-->
                     <div class="video">
-                        <a href="http://youtu.be/_-UIaGgRxkA" rel="prettyPhoto" title="Khoa Thương Mại điện tử - ĐH Thương Mại"><img
-                                src="<?php echo Yii::app()->theme->baseUrl; ?>/images/video.jpg"
-                                alt="Khoa Thương Mại điện tử - ĐH Thương Mại"/></a>
-                        <script type="text/javascript" charset="utf-8">
-                            $(document).ready(function () {
-                                $(".video a[rel^='prettyPhoto']").prettyPhoto();
-                            });
-                        </script>
+						<?php if($this->videoHome):?>
+                        <a href="<?php echo $this->videoHome['url']?>" rel="prettyPhoto" title="<?php echo $this->videoHome['title']?>"><img src="<?php echo Yii::app()->request->baseUrl . USERFILES . '/video/' . $this->videoHome['pic_thumb']?>" alt="<?php echo $this->videoHome['title']?>" /></a>
+                        <script type="text/javascript">$(document).ready(function () {$(".video a[rel^='prettyPhoto']").prettyPhoto();});</script>
+						<?php endif;?>
                     </div>
                     <!--End video-->
                     <div class="clear"></div>
@@ -131,13 +129,22 @@
 									<li><a href="#" title="">Số tiền tích lũy: <span class="error"><?php echo Yii::app()->session['balance'] ?> V</span></a></li>
 									<li class="border-none"><a  href="<?php echo Yii::app()->baseUrl ?>/user/transferv" title="Chuyển khoản">Chuyển khoản</a></li>
 								</ul>
-                            <?php endif;?>                         
+                            <?php endif;?>
 
 							<?php if(isset($this->menu_about) && ($this->menu_about)):?>
 							<h1 class="title-left"><span>DANH MỤC GIỚI THIỆU</span></h1>
 							<ul class="sub-pro">
 								<?php foreach($this->menu_about as $value): ?>
 								<li><a href="<?php echo Yii::app()->request->baseUrl ?>/gioi-thieu/<?php echo $value['tag']?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></li>
+								<?php endforeach; ?>
+							</ul>
+							<?php endif;?>
+
+							<?php if(isset($this->menu_video) && ($this->menu_video)):?>
+							<h1 class="title-left"><span>DANH MỤC Video</span></h1>
+							<ul class="sub-pro">
+								<?php foreach($this->menu_video as $value): ?>
+								<li><a href="<?php echo Yii::app()->request->baseUrl ?>/video/<?php echo $value['tag']?>" title="<?php echo $value['cat_title']?>"><?php echo $value['cat_title']?></a></li>
 								<?php endforeach; ?>
 							</ul>
 							<?php endif;?>

@@ -170,11 +170,40 @@ class Video extends CActiveRecord {
 		return parent::beforeSave();
 	}
 
+	/**
+	 * Function dùng để liệt kê Item hot mới nhất ngoài trang chủ
+	 * @return mixed
+	 */
+	public function itemHome() {
+		$command = Yii::app()->db->createCommand('SELECT title, pic_thumb, url FROM ' . $this->tableName() . ' WHERE hot = 1 AND enable = 1 ORDER BY record_order DESC, postdate DESC');
+		return $command->queryRow();
+	}
+
+	//Front end - list Item by Cat
+	public function listItemByCat($cid) {
+		$criteria = new CDbCriteria();
+		//$criteria->with = array('VideoCat');
+		$criteria->select = 'title, pic_thumb, tag';
+		$criteria->order = 'record_order DESC, postdate DESC';
+		$criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
+		$criteria->params = array(':cid' => $cid);
+
+		$count = Video::model()->count($criteria);
+
+		// elements per page
+		$pages = new CPagination($count);
+		$pages->pageSize = 15;
+		$pages->applyLimit($criteria);
+
+		return array('models' => Video::model()->findAll($criteria), 'pages' => $pages);
+	}
+
 	//Back end - Get max record
 	public function maxRecordOrder() {
 		$command = Yii::app()->db->createCommand('SELECT max(record_order) AS max FROM ' . $this->tableName());
 		return $command->queryScalar() + 1;
 	}
+
 	//Back end - Get record to Edit
 	public function loadEdit($id) {
 		$criteria = new CDbCriteria();
@@ -286,12 +315,14 @@ class Video extends CActiveRecord {
 			}
 		}
 	}
+
 	//Back end - count item by cat
 	public function countItemByCat($id) {
 		$command = Yii::app()->db->createCommand('SELECT COUNT(record_id) FROM ' . $this->tableName() . ' WHERE dos_module_item_cat_cat_id=:id');
 		$command->bindParam(":id", $id, PDO::PARAM_INT);
 		return $command->queryScalar();
 	}
+
 	//Back end - delete Item for Cat
 	public function delItembyCat($data = NULL) {
 		$id = $data->getQuery('id');
@@ -330,11 +361,23 @@ class Video extends CActiveRecord {
 		//delete cat
 		$cat->deleteRecord($id);
 	}
+
 	//update item to new cat
 	public function updateItem($cat_id, $cat_id_new) {
 		$command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET dos_module_item_cat_cat_id=:new_cid WHERE dos_module_item_cat_cat_id=:cid');
 		$command->bindParam(":new_cid", $cat_id_new, PDO::PARAM_INT);
 		$command->bindParam(":cid", $cat_id, PDO::PARAM_INT);
 		$command->execute();
+	}
+
+	//delete item new cat
+	public function deleteItembyCat($cat_id) {
+		$command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE dos_module_item_cat_cat_id=:cid');
+		$command->bindParam(":cid", $cat_id, PDO::PARAM_INT);
+		$result = $command->queryAll();
+
+		foreach ($result as $value) {
+			$this->deleteRecord($value['record_id']);
+		}
 	}
 }

@@ -41,7 +41,7 @@ a:hover{color:#000;}
 /*Banner and video*/
 #banner{margin:0 0 10px 0}
 .slider{float:left; width:686px}
-.video{float:right; width:300px; background:#6F0}
+.video{float:right; width:300px}
 
 /*frm-search*/
 .frm-search{text-align:right; margin:0 0 10px 0;background:#F5FAFD;border-bottom:1px solid #ddd;padding:5px 0}

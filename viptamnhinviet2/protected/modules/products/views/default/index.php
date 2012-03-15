@@ -2,7 +2,6 @@
 
 <?php foreach($items as $value): ?>
 <div class="frame-product">
-	
 		<div class="product">
 			<div class="frame-img-pro">
 				<a href="<?php echo Yii::app()->request->baseUrl ?>/san-pham/<?php echo $value['tag'] ?>" title="<?php echo $value['cat_title'] ?>">
@@ -15,8 +14,6 @@
 			</div>
 		</div>
 		<div class="btom-pro"></div>
-	
     <h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl ?>/san-pham/<?php echo $value['tag'] ?>" title="<?php echo $value['cat_title'] ?>"><?php echo $value['cat_title'] ?></a></h2>
 </div>
-<?php endforeach; ?>	
-
+<?php endforeach; ?>
