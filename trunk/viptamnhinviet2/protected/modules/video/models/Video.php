@@ -139,8 +139,8 @@ class Video extends CActiveRecord {
 		if ($this->isNewRecord) {
 			$this->record_order = $this->maxRecordOrder();
 			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
-				$width = Configs::configTemplate('news_width_thumb', Yii::app()->params['template']);
-				$height = Configs::configTemplate('news_height_thumb', Yii::app()->params['template']);
+				$width = Configs::configTemplate('video_width_thumb', Yii::app()->params['template']);
+				$height = Configs::configTemplate('video_height_thumb', Yii::app()->params['template']);
 
 				//import class upload images
 				Yii::import('ext.EUploadedImage.EUploadedImage');
@@ -149,8 +149,8 @@ class Video extends CActiveRecord {
 		} else {
 			//check file old and upload
 			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
-				$width = Configs::configTemplate('news_width_thumb', Yii::app()->params['template']);
-				$height = Configs::configTemplate('news_height_thumb', Yii::app()->params['template']);
+				$width = Configs::configTemplate('video_width_thumb', Yii::app()->params['template']);
+				$height = Configs::configTemplate('video_height_thumb', Yii::app()->params['template']);
 
 				//import class upload images
 				Yii::import('ext.EUploadedImage.EUploadedImage');
@@ -178,7 +178,7 @@ class Video extends CActiveRecord {
 	//Back end - Get record to Edit
 	public function loadEdit($id) {
 		$criteria = new CDbCriteria();
-		$this->_model = News::model()->findByPk($id, $criteria);
+		$this->_model = Video::model()->findByPk($id, $criteria);
 
 		if ($this->_model === null) {
 			throw new CHttpException(404, 'The requested page does not exist.');

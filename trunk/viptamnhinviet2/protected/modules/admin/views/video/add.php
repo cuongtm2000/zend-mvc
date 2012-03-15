@@ -11,13 +11,13 @@
 
     <div class="col1"><?php echo $form->labelEx($model, 'title') ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'title', $htmlOptions=array('class'=>'txt-large-x')); ?>
+        <?php echo $form->textField($model, 'title', $htmlOptions=array('class'=>'txt-very-large')); ?>
     </div>
     <div class="clear space"></div>
 
 	<div class="col1"><?php echo $form->labelEx($model, 'url') ?></div>
 	<div class="col2">
-		<?php echo $form->textField($model, 'url', $htmlOptions=array('class'=>'txt-large-x')); ?>
+		<?php echo $form->textField($model, 'url', $htmlOptions=array('class'=>'txt-very-large')); ?>
 	</div>
 	<div class="clear space"></div>
 
@@ -29,7 +29,7 @@
     
     <div class="col1"><?php echo $form->labelEx($model, 'tag') ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'tag', $htmlOptions=array('class'=>'txt-large-x')); ?>
+        <?php echo $form->textField($model, 'tag', $htmlOptions=array('class'=>'txt-very-large')); ?>
     </div>
     <div class="clear space"></div>
     
@@ -44,6 +44,12 @@
         <?php echo $form->radioButtonList($model, 'hot', array('0'=>'Normal', '1'=>'Hot'), array('separator'=>'&nbsp;&nbsp;')); ?>
     </div>
     <div class="clear space"></div>
+
+	<div class="col1"><?php echo $form->labelEx($model, 'enable', $htmlOptions = array('for' => ucfirst($this->ID) . '_enable_0')) ?></div>
+	<div class="col2 radio">
+		<?php echo $form->radioButtonList($model, 'enable', array('1' => 'Hiển thị', '0' => 'Ẩn'), array('separator' => '&nbsp;&nbsp;')); ?>
+	</div>
+	<div class="clear space"></div>
     
     <div class="col1">&nbsp;</div>
     <div class="col2">
