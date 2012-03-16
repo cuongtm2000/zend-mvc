@@ -15,6 +15,12 @@
     </div>
     <div class="clear space"></div>
 
+	<div class="col1"><?php echo $form->labelEx($model, 'url') ?></div>
+	<div class="col2">
+		<?php echo $form->textField($model, 'url', $htmlOptions=array('class'=>'txt-very-large')); ?>
+	</div>
+	<div class="clear space"></div>
+
     <div class="col1"><?php echo $form->labelEx($model, 'pic_thumb') ?></div>
     <div class="col2">
         <?php if ($model->pic_thumb): ?>
