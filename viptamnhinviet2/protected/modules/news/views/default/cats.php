@@ -1,4 +1,4 @@
-<h1 class="title-right"><span><a href="<?php echo Yii::app()->request->baseUrl?>/tin-tuc" title="Tin tức">Tin tức</a> &raquo; </span></h1>
+<h1 class="title-right"><span><a href="<?php echo Yii::app()->request->baseUrl?>/tin-tuc" title="Tin tức">Tin tức</a> &raquo; <?php echo $info_cat['cat_title'] ?></span></h1>
 <ul class="masuring">
 	<?php foreach ($list_items['models'] as $value): ?>
 		<li>
