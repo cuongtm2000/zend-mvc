@@ -39,10 +39,13 @@
 			<div class="btom-pro"></div>
 			<h2 class="title-masuring"><a href="<?php echo $this->videoHome['url']?>" rel="prettyPhoto" title="<?php echo $this->videoHome['title']?>"><?php echo $value['title']?></a></h2>
 		</div>
-		<script type="text/javascript">$(document).ready(function () {$(".frame-product a[rel^='prettyPhoto']").prettyPhoto();});</script>
-		<div class="clear"></div>
+	
+<?php endforeach?> 
+	<script type="text/javascript">$(document).ready(function () {$(".frame-product a[rel^='prettyPhoto']").prettyPhoto();});</script>
+	
+	<div class="clear"></div>
 		<?php $this->widget('CLinkPager', array('pages' => $list_items['pages'], 'header' => '', 'htmlOptions' => array('class' => 'yiiPager paging'))) ?>
-	<?php endforeach?> 
+	
 <?php else:?>
 	Không tồn tại mẫu tin
 <?php endif?>
