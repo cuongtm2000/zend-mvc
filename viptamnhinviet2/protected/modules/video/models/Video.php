@@ -183,7 +183,7 @@ class Video extends CActiveRecord {
 	public function listItemByCat($cid) {
 		$criteria = new CDbCriteria();
 		//$criteria->with = array('VideoCat');
-		$criteria->select = 'title, pic_thumb, tag';
+		$criteria->select = 'title, pic_thumb,url, tag';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
 		$criteria->params = array(':cid' => $cid);

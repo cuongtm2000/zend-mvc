@@ -27,7 +27,7 @@
 		<div class="frame-product">
 			<div class="product">
 				<div class="frame-img-pro-video">
-					<a href="<?php echo $this->videoHome['url']?>" rel="prettyPhoto" title="<?php echo $this->videoHome['title']?>">
+					<a href="<?php echo $value['url']?>" rel="prettyPhoto" title="<?php echo $value['title']?>">
 						<?php if($value['pic_thumb']): ?>
 							<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/video/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>" />
 						<?php else :?>
@@ -37,16 +37,15 @@
 				</div>
 			</div>
 			<div class="btom-pro"></div>
-			<h2 class="title-masuring"><a href="<?php echo $this->videoHome['url']?>" rel="prettyPhoto" title="<?php echo $this->videoHome['title']?>"><?php echo $value['title']?></a></h2>
+			<h2 class="title-masuring"><a href="<?php echo $value['url']?>" rel="prettyPhoto" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></h2>
 		</div>
-	
-<?php endforeach?> 
+	<?php endforeach?> 
 	<script type="text/javascript">$(document).ready(function () {$(".frame-product a[rel^='prettyPhoto']").prettyPhoto();});</script>
-	
-	<div class="clear"></div>
-		<?php $this->widget('CLinkPager', array('pages' => $list_items['pages'], 'header' => '', 'htmlOptions' => array('class' => 'yiiPager paging'))) ?>
-	
+
 <?php else:?>
 	Không tồn tại mẫu tin
 <?php endif?>
+<div class="clear"></div>
+<?php $this->widget('CLinkPager', array('pages' => $list_items['pages'], 'header' => '', 'htmlOptions' => array('class' => 'yiiPager paging'))) ?>
+
 
