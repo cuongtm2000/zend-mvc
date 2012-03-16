@@ -78,7 +78,10 @@ class Tables extends CActiveRecord {
 
     public function updateChild($parent, $child) {
         $t = Tables::model()->findByPk($parent);
-
+        if($t=== null){
+            $this->addItem($parent);
+            $t = Tables::model()->findByPk($parent);
+        }
         if ($t->left_child == '')
             $t->left_child = $child;
         else {
