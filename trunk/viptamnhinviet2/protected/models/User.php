@@ -265,7 +265,7 @@ class User extends CActiveRecord {
             return;
         $user_gioithieu= User::model()->findAllByPk($user['user_gioithieu']);
         if($user_gioithieu['level'] == $user['level']+1){
-            $child
+           // $child
         }
     }
 
