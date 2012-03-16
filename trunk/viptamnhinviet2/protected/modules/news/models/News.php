@@ -212,7 +212,7 @@ class News extends CActiveRecord {
 		return array('models' => News::model()->findAll($criteria), 'pages' => $pages);
 	}
 
-	public function listItems(){
+	public function listItems() {
 		$criteria = new CDbCriteria();
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'enable=1';
@@ -326,11 +326,13 @@ class News extends CActiveRecord {
 			}
 		}
 	}
+
 	//Back end - Get max record
 	public function maxRecordOrder() {
 		$command = Yii::app()->db->createCommand('SELECT max(record_order) AS max FROM ' . $this->tableName());
 		return $command->queryScalar() + 1;
 	}
+
 	//Back end - Get record to Edit
 	public function loadEdit($id) {
 		$criteria = new CDbCriteria();
@@ -341,12 +343,14 @@ class News extends CActiveRecord {
 		}
 		return $this->_model;
 	}
+
 	//Back end - count item by cat
 	public function countItemByCat($id) {
 		$command = Yii::app()->db->createCommand('SELECT COUNT(record_id) FROM ' . $this->tableName() . ' WHERE dos_module_item_cat_cat_id=:id');
 		$command->bindParam(":id", $id, PDO::PARAM_INT);
 		return $command->queryScalar();
 	}
+
 	//Back end - delete Item for Cat
 	public function delItembyCat($data = NULL) {
 		$id = $data->getQuery('id');
@@ -385,6 +389,7 @@ class News extends CActiveRecord {
 		//delete cat
 		$cat->deleteRecord($id);
 	}
+
 	//update item to new cat
 	public function updateItem($cat_id, $cat_id_new) {
 		$command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET dos_module_item_cat_cat_id=:new_cid WHERE dos_module_item_cat_cat_id=:cid');
@@ -392,6 +397,7 @@ class News extends CActiveRecord {
 		$command->bindParam(":cid", $cat_id, PDO::PARAM_INT);
 		$command->execute();
 	}
+
 	//delete item new cat
 	public function deleteItembyCat($cat_id) {
 		$command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE dos_module_item_cat_cat_id=:cid');
