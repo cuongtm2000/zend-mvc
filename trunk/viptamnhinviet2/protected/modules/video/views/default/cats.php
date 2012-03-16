@@ -26,7 +26,7 @@
 	<?php foreach($list_items['models'] as $value):?>
 		<div class="frame-product">
 			<div class="product">
-				<div class="frame-img-pro">
+				<div class="frame-img-pro-video">
 					<a href="<?php echo $this->videoHome['url']?>" rel="prettyPhoto" title="<?php echo $this->videoHome['title']?>">
 						<?php if($value['pic_thumb']): ?>
 							<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/video/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>" />
