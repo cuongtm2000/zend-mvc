@@ -25,3 +25,20 @@ Stack trace:
 REQUEST_URI=/yii/viptamnhinviet2/themes/viptamnhinviet/images/prettyPhoto/light_rounded/btnNext.png
 HTTP_REFERER=http://dos.vn/yii/viptamnhinviet2/video/danh-muc
 ---
+2012/03/16 14:11:29 [error] [php] Use of undefined constant USERFILES - assumed 'USERFILES' (C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\video\views\default\index.php:8)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): DefaultController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\video\controllers\DefaultController.php(14): DefaultController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CWebApplication->run()
+REQUEST_URI=/yii/viptamnhinviet2/video
+in C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\video\views\default\index.php (8)
+in C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\video\controllers\DefaultController.php (14)
+in C:\xampp\htdocs\yii\viptamnhinviet2\index.php (21)

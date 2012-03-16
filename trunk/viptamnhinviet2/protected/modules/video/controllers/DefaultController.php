@@ -3,6 +3,10 @@
 class DefaultController extends Controller {
 	public $menu_video; //menu video
 
+	public function action(){
+		echo 123;
+	}
+
 	public function actionIndex() {
 		$video_cat_class = new VideoCat();
 		$this->menu_video = $video_cat_class->listCats();
