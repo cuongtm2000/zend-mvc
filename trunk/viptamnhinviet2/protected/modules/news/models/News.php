@@ -206,7 +206,7 @@ class News extends CActiveRecord {
 
 		// elements per page
 		$pages = new CPagination($count);
-		$pages->pageSize = 2;
+		$pages->pageSize = 15;
 		$pages->applyLimit($criteria);
 
 		return array('models' => News::model()->findAll($criteria), 'pages' => $pages);
@@ -220,7 +220,7 @@ class News extends CActiveRecord {
 
 		// elements per page
 		$pages = new CPagination($count);
-		$pages->pageSize = 2;
+		$pages->pageSize = 15;
 		$pages->applyLimit($criteria);
 
 		return array('models' => News::model()->findAll($criteria), 'pages' => $pages);
