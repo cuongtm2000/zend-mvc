@@ -69,14 +69,13 @@
                     <div class="clear"></div>
                 </div>
                 <!--End header-->
-
                 <ul class="nav">
-                    <li><a href="<?php echo Yii::app()->homeUrl?>" title="Trang chủ" class="select">Trang chủ</a></li>
-                    <li><a href="<?php echo Yii::app()->homeUrl?>gioi-thieu" title="Giới thiệu">Giới thiệu</a></li>
-                    <li><a href="<?php echo Yii::app()->homeUrl?>san-pham" title="Sản phẩm">Sản phẩm</a></li>
-					<li><a href="<?php echo Yii::app()->homeUrl?>tin-tuc" title="Tin tức">Tin tức</a></li>
-					<li><a href="<?php echo Yii::app()->homeUrl?>video" title="Video">Video</a></li>
-                    <li><a href="<?php echo Yii::app()->homeUrl?>lien-he.html" title="Liên hệ">Liên hệ</a></li>
+                    <li><a href="<?php echo Yii::app()->homeUrl?>" title="Trang chủ"<?php echo (!isset($this->module->id)) ? ' class="select"' : ''?>>Trang chủ</a></li>
+                    <li><a href="<?php echo Yii::app()->homeUrl?>gioi-thieu" title="Giới thiệu"<?php echo (isset($this->module->id) && $this->module->id=='about') ? ' class="select"' : ''?>>Giới thiệu</a></li>
+                    <li><a href="<?php echo Yii::app()->homeUrl?>san-pham" title="Sản phẩm"<?php echo (isset($this->module->id) && $this->module->id=='products') ? ' class="select"' : ''?>>Sản phẩm</a></li>
+					<li><a href="<?php echo Yii::app()->homeUrl?>tin-tuc" title="Tin tức"<?php echo (isset($this->module->id) && $this->module->id=='news') ? ' class="select"' : ''?>>Tin tức</a></li>
+					<li><a href="<?php echo Yii::app()->homeUrl?>video" title="Video"<?php echo (isset($this->module->id) && $this->module->id=='video') ? ' class="select"' : ''?>>Video</a></li>
+                    <li><a href="<?php echo Yii::app()->homeUrl?>lien-he.html" title="Liên hệ"<?php echo (isset($this->module->id) && $this->module->id=='contact') ? ' class="select"' : ''?>>Liên hệ</a></li>
                 </ul>
 
                 <div class="clear"></div>
