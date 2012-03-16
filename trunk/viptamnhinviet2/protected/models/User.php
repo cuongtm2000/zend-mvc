@@ -68,8 +68,6 @@ class User extends CActiveRecord {
             $this->addError($attribute, '<strong>' . $this->user_gioithieu . '</strong>  is not exists please choose another user');
         } else {
             $child = $this->getChildOfUser($this->user_gioithieu);
-            $this->debug[] = $this->user_gioithieu;
-            $this->debug[] = $child;
             if (count($child) > 1)
                 $this->addError($attribute, '<strong>' . $this->user_gioithieu . '</strong>  is invalid');
         }
@@ -80,7 +78,7 @@ class User extends CActiveRecord {
 
         $command = Yii::app()->db
                 ->createCommand('SELECT username FROM ' . $this->tableName() .
-                ' WHERE user_gioithieu=:user_gioithieu' . $str);
+                ' WHERE user_gioithieu=:user_gioithieu' . $str . ' order by create_date asc');
         $command->bindParam(':user_gioithieu', $user, PDO::PARAM_STR);
         if ($enable)
             $command->bindParam(':enable', $enable, PDO::PARAM_INT);
@@ -113,7 +111,7 @@ class User extends CActiveRecord {
 // class name for the relations automatically generated below.
         return array(
             'products' => array(self::HAS_MANY, 'Products', 'dos_module_usernames_username'),
-            'tables' => array(self::HAS_MANY, 'Tables', 'dos_module_usernames_username'),
+            'tables' => array(self::HAS_ONE, 'Tables', 'dos_module_usernames_username'),
         );
     }
 
@@ -164,8 +162,6 @@ class User extends CActiveRecord {
 
     public function beforeSave() {
         $purifier = new CHtmlPurifier();
-
-
         if ($this->isNewRecord) {
             $this->username = $purifier->purify($this->username);
             $this->password = $purifier->purify(md5($this->password));
@@ -187,7 +183,6 @@ class User extends CActiveRecord {
     }
 
     public function activeItem($data) {
-
         $flag = isset($data['factive']) ? $data['factive'] : 'disable';
         $ids = isset($data['ids']) ? $data['ids'] : '';
         $record_id = array();
@@ -201,7 +196,8 @@ class User extends CActiveRecord {
         }
         foreach ($record_id as $value) {
             $user = User::model()->findByPk($value);
-            if ($user['enable'])
+            $this->debug[]=$user->tables;
+            if ($user['enable']==1)
                 continue;
 
             if ($flag) {
@@ -213,16 +209,16 @@ class User extends CActiveRecord {
                 //Ghi nhận log để theo dõi
                 $log = new Log();
                 $log->addItem('Thành viên ' . $value . ' được kích hoạt. Người giới thiệu:' . $user['user_gioithieu'], 'Hệ thống', 'grouplaptrinh', 0, 'gioithieu');
-                
+
                 //* Tim TV dat chuan co độ ưu tiên cao(priority min)để gắn vào
-                $userGAN = Tables::model()->findTVdatchuanTop();
-                if ($userGAN != NULL) {
-                    $four_child = ($userGAN['four_child'] != '') ? $userGAN['four_child'] . '|' : '';
-                    $userGAN->four_child = $four_child . $user['username']; //* update
-                    $userGAN->save();
+                $tbl_user_dc_gan = Tables::model()->findTVdatchuanTop();
+                if ($tbl_user_dc_gan != NULL) {
+                    $four_child = ($tbl_user_dc_gan['four_child'] != '') ? $tbl_user_dc_gan['four_child'] . '|' : '';
+                    $tbl_user_dc_gan->four_child = $four_child . $user['username']; //* update
+                    $tbl_user_dc_gan->save();
 
                     $num_child = count(explode('|', $four_child));
-                    $level = $this->getLevel($userGAN['dos_module_usernames_username']);
+                    $level = $this->getLevel($tbl_user_dc_gan['dos_module_usernames_username']);
                     if ($level < 6)
                         $so_user_can_gan = 4;
                     elseif ($level < 8)
@@ -232,23 +228,24 @@ class User extends CActiveRecord {
                     else
                         $so_user_can_gan = 1;
 
-                    if ($so_user_can_gan == $num_child) {                        
-                        $money = $this->getSotienHHdatcap($level + 1);
+                    if ($so_user_can_gan == $num_child) {
+                        $level+=1;
+                        $money = $this->getSotienHHdatcap($level);
 
                         //Reset bàn
-                        $userGAN->resetItem();
-                        
+                        $tbl_user_dc_gan->resetItem();
+
                         //Tăng cấp và cộng tiền
-                        $u = User::model()->findByPk($userGAN['dos_module_usernames_username']);
-                        $u->level +=1;
+                        $u = User::model()->findByPk($tbl_user_dc_gan['dos_module_usernames_username']);
+                        $u->level = $level;
                         $u->balance+=$money;
                         $u->save();
-                        
-                        //Cộng tiền
-                        $log->addItem("Hoa hồng đạt cấp " . ($level+1), '', $u['username'], $money, 'tangcap');
+
+                        //Ghi log
+                        $log->addItem("Hoa hồng đạt cấp " . $level, '', $u['username'], $money, 'tangcap');
                         // tìm những thằng cha của nó có cấp lớn hơn để gắn vào
+                        $this->addToUpperUser($u);
                     }
-                    
                 }
 
 
@@ -263,8 +260,16 @@ class User extends CActiveRecord {
         }
     }
 
-    /*
-     * List TV đã thoát bàn
+    private function addToUpperUser($user) {
+        if($user['user_gioithieu']=='')
+            return;
+        $user_gioithieu= User::model()->findAllByPk($user['user_gioithieu']);
+        if($user_gioithieu['level'] == $user['level']+1){
+            $child
+        }
+    }
+
+    /** List TV đã thoát bàn
      *      tức TV có level > 0 và có ít nhất
      *      1 trong 2 nhánh con trong bàn còn khuyết
      */
@@ -277,15 +282,12 @@ class User extends CActiveRecord {
     }
 
     public function getLevel($user) {
-        $u = User::model()->findByPk($user);
-        return $u['level'];
+        return User::model()->findByPk($user)->level;
     }
 
-    /*
-     *  Thêm thành tích hoa hồng
+    /**  Thêm thành tích hoa hồng
      * cho người giới thiệu
      */
-
     private function addThanhtichHH($user) {
         $tree = $this->createTree($user);
         $min_child = min($tree['c0'], $tree['c1']);
@@ -303,10 +305,8 @@ class User extends CActiveRecord {
             $this->addThanhtichHH($u['user_gioithieu']);
     }
 
-    /*
-     * Convert từ TREE sang Array
+    /** Convert từ TREE sang Array
      */
-
     private function getTreeItem($tree) {
         $items[] = $tree['value'];
         if (isset($tree[0]))
