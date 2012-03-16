@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 15, 2012 at 10:42 AM
+-- Generation Time: Mar 16, 2012 at 09:03 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -192,7 +192,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `description`, `activated`) VALUES
 (2, 'Giới thiệu', NULL, '<p>\r\n	Chi tiết</p>\r\n', NULL, 15, '2012-03-07 03:24:59', 1, 0, NULL, NULL, 'gioi-thieu', 'Mô tả', 1),
-(3, 'Tiêu đề giới thiệu', NULL, '<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n', NULL, 149, '2012-03-07 03:25:14', 2, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'Mô tả', 1);
+(3, 'Tiêu đề giới thiệu', NULL, '<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n', NULL, 155, '2012-03-07 03:25:14', 2, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'Mô tả', 1);
 
 -- --------------------------------------------------------
 
@@ -404,10 +404,11 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456002),
-('max_count', 1),
-('counter', 5),
-('yesterday', 0);
+('day_time', 2456003),
+('max_count', 2),
+('counter', 7),
+('yesterday', 2),
+('max_time', 0);
 
 -- --------------------------------------------------------
 
@@ -426,7 +427,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1331802236);
+('''127.0.0.1''', 1331884744);
 
 -- --------------------------------------------------------
 
