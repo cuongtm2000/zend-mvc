@@ -19,8 +19,9 @@ class DefaultController extends Controller {
 		$this->menu_news = $news_cat_class->listCats();
 		$info_cat = $news_cat_class->findCatByTag($cid); //find cat_id
 
-		$this->render('cats', array('list_items' => $news_class->listItemByCat($info_cat['cat_id'])));
+		$this->render('cats', array('info_cat' => $info_cat, 'list_items' => $news_class->listItemByCat($info_cat['cat_id'])));
 	}
+
 	public function actionView($id) {
 		$news_cat_class = new NewsCat();
 		$model_class = new News();
