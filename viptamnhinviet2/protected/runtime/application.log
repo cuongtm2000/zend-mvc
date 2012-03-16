@@ -1159,3 +1159,12 @@ Stack trace:
 REQUEST_URI=/yii/viptamnhinviet2/admin/configs/menu
 in C:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\controllers\ConfigsController.php (27)
 in C:\xampp\htdocs\yii\viptamnhinviet2\index.php (21)
+2012/03/16 15:58:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/viptamnhinviet/images/prettyPhoto/light_rounded/btnNext.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/viptamnh...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/themes/viptamnhinviet/images/prettyPhoto/light_rounded/btnNext.png
+HTTP_REFERER=http://localhost/yii/viptamnhinviet2/video/danh-muc
+---
