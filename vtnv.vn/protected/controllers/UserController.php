@@ -42,6 +42,13 @@ class UserController extends Controller {
             'listUserQuanly' => '',
         ));
     }
+    public function actionChangepass() {
+        $user = new User();
+        $this->render('map', array(
+            'tree' => $user->createTree(Yii::app()->user->name),
+            'listUserQuanly' => '',
+        ));
+    }
     
     public function actionTransferv() {
         $model = new TransferForm();
