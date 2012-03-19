@@ -364,3 +364,17 @@ Stack trace:
 REQUEST_URI=/yii/vtnv.vn/themes/viptamnhinviet/images/prettyPhoto/light_rounded/btnNext.png
 HTTP_REFERER=http://localhost/yii/vtnv.vn/video/danh-muc
 ---
+2012/03/19 16:13:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "amin".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('amin')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/vtnv.vn/amin
+---
+2012/03/19 16:14:08 [warning] [application] Failed to set unsafe attribute "remove_pic_thumb" of "Products".
+in C:\xampp\htdocs\yii\vtnv.vn\protected\modules\admin\controllers\ProductsController.php (152)
+in C:\xampp\htdocs\yii\vtnv.vn\index.php (21)
+2012/03/19 16:14:18 [warning] [application] Failed to set unsafe attribute "remove_pic_thumb" of "Products".
+in C:\xampp\htdocs\yii\vtnv.vn\protected\modules\admin\controllers\ProductsController.php (152)
+in C:\xampp\htdocs\yii\vtnv.vn\index.php (21)
