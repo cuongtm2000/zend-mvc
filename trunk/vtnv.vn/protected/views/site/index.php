@@ -14,7 +14,7 @@
 	</div>
 	<div class="btom-pro"></div>
 	<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl ?>/san-pham/<?php echo $value['tagcat'] ?>/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></h2>
-    <p class="price-pro">Giá bán : <span><?php echo $value['unit'] ?></span></p>
+    <p class="price-pro">Giá bán : <span><?php echo number_format($value['unit'], 0, '', '.'); ?></span> VND</p>
 </div>
 <?php endforeach?>
 
@@ -41,6 +41,6 @@
 				</div>
 				<div class="btom-pro"></div>	
 				<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl ?>/san-pham/<?php echo $value['tagcat'] ?>/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'><?php echo $value['title'] ?></a></h2>
-				<p class="price-pro">Giá bán : <span><?php echo ($value['unit']) ?></span></p>
+				<p class="price-pro">Giá bán : <span><?php echo number_format($value['unit'], 0, '', '.'); ?></span> VND</p>
 		</div>
 	<?php endforeach; ?>
