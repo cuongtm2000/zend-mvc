@@ -175,6 +175,7 @@ class Products extends CActiveRecord {
 		if ($this->isNewRecord) {
 			$this->record_order = $this->maxRecordOrder();
 			$this->dos_module_usernames_username = Yii::app()->user->id;
+			$this->enable = 0;
 
 			if ($_FILES['Products']['name']['pic_thumb']) {
 				$width = Configs::configTemplate('products_width_thumb', Yii::app()->params['template']);
@@ -283,7 +284,8 @@ class Products extends CActiveRecord {
 	public function listItemByUser() {
 		$criteria = new CDbCriteria();
 		$criteria->order = 'record_order DESC, postdate DESC';
-		$criteria->condition = 'dos_module_usernames_username=:user AND enable=1';
+		//$criteria->condition = 'dos_module_usernames_username=:user AND enable=1';
+		$criteria->condition = 'dos_module_usernames_username=:user';
 		$criteria->params = array(':user' => Yii::app()->user->name);
 
 		$count = Products::model()->count($criteria);
