@@ -299,7 +299,9 @@
                         <li><a href="<?php echo Yii::app()->homeUrl ?>" title="Trang chủ" class="select">Trang chủ</a></li>
                         <li><a href="<?php echo Yii::app()->homeUrl ?>gioi-thieu" title="Giới thiệu">Giới thiệu</a></li>
                         <li><a href="<?php echo Yii::app()->homeUrl ?>san-pham" title="Sản phẩm">Sản phẩm</a></li>
-                        <li><a href="<?php echo Yii::app()->homeUrl ?>lien-he.html" title="Liên hệ">Liên hệ</a></li>
+                        <li><a href="<?php echo Yii::app()->homeUrl ?>tin-tuc" title="Tin tức">Tin tức</a></li>
+                    <li><a href="<?php echo Yii::app()->homeUrl ?>video" title="Video">Video</a></li>
+						<li><a href="<?php echo Yii::app()->homeUrl ?>lien-he.html" title="Liên hệ">Liên hệ</a></li>
                     </ul> <div class="clear"></div>
                     <div class="frame-info-footer">
                         <div class="left-fter">
