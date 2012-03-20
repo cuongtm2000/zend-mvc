@@ -164,6 +164,7 @@ a:hover{color:#000;}
 /* paging */
 #frm{position: relative;}
 #frm .yiiPager{position: absolute; bottom: -18px; right: 0}
+.paginglog{margin:10px 0 0 0 !important}
 .yiiPager{float:right}
 .yiiPager li{margin:0 0 0 0 !important}
 

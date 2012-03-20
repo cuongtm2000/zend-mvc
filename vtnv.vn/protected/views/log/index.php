@@ -25,4 +25,4 @@
 		<?php endif?>
 	</tbody>
 </table>
-<?php $this->widget('CLinkPager', array('pages' => $listLog['pages'], 'header'=>'', 'prevPageLabel' => '< Lùi', 'nextPageLabel' => 'Tiếp >', 'htmlOptions'=>array('class'=>'yiiPager paging')))?>
+<?php $this->widget('CLinkPager', array('pages' => $listLog['pages'], 'header'=>'', 'prevPageLabel' => '< Lùi', 'nextPageLabel' => 'Tiếp >', 'htmlOptions'=>array('class'=>'yiiPager paginglog paging')))?>
