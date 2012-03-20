@@ -378,3 +378,271 @@ in C:\xampp\htdocs\yii\vtnv.vn\index.php (21)
 2012/03/19 16:14:18 [warning] [application] Failed to set unsafe attribute "remove_pic_thumb" of "Products".
 in C:\xampp\htdocs\yii\vtnv.vn\protected\modules\admin\controllers\ProductsController.php (152)
 in C:\xampp\htdocs\yii\vtnv.vn\index.php (21)
+2012/03/20 08:38:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php:71
+Stack trace:
+#0 C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php(17): UserController->loadModel('Guest')
+#1 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): UserController->actionView()
+#2 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#11 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('user/view/id/na...')
+#12 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/vtnv.vn/user/view/id/nam
+HTTP_REFERER=http://dos.vn/yii/vtnv.vn/dang-ky-thanh-vien.html
+---
+2012/03/20 08:43:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php:71
+Stack trace:
+#0 C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php(17): UserController->loadModel('Guest')
+#1 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): UserController->actionView()
+#2 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#11 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('user/view/id/na...')
+#12 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/vtnv.vn/user/view/id/nam
+HTTP_REFERER=http://dos.vn/yii/vtnv.vn/dang-ky-thanh-vien.html
+---
+2012/03/20 08:43:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php:71
+Stack trace:
+#0 C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php(17): UserController->loadModel('Guest')
+#1 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): UserController->actionView()
+#2 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#11 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('user/view/id/<b...')
+#12 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/vtnv.vn/user/view/id/%3Cbr%20/%3E%3Cfont%20size='1'%3E%3Ctable%20class='xdebug-error'%20dir='ltr'%20border='1'%20cellspacing='0'%20cellpadding='1'%3E%3Ctr%3E%3Cth%20align='left'%20bgcolor='
+HTTP_REFERER=http://dos.vn/yii/vtnv.vn/user/view/id/nam
+---
+2012/03/20 08:43:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php:71
+Stack trace:
+#0 C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php(17): UserController->loadModel('Guest')
+#1 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): UserController->actionView()
+#2 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#11 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('user/view/id/<b...')
+#12 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/vtnv.vn/user/view/id/%3Cbr%20/%3E%3Cfont%20size='1'%3E%3Ctable%20class='xdebug-error'%20dir='ltr'%20border='1'%20cellspacing='0'%20cellpadding='1'%3E%3Ctr%3E%3Cth%20align='left'%20bgcolor='
+HTTP_REFERER=http://dos.vn/yii/vtnv.vn/user/view/id/nam
+---
+2012/03/20 08:43:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php:71
+Stack trace:
+#0 C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php(17): UserController->loadModel('Guest')
+#1 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): UserController->actionView()
+#2 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#11 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('user/view/id/<b...')
+#12 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/vtnv.vn/user/view/id/%3Cbr%20/%3E%3Cfont%20size='1'%3E%3Ctable%20class='xdebug-error'%20dir='ltr'%20border='1'%20cellspacing='0'%20cellpadding='1'%3E%3Ctr%3E%3Cth%20align='left'%20bgcolor='
+HTTP_REFERER=http://dos.vn/yii/vtnv.vn/user/view/id/nam
+---
+2012/03/20 08:43:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php:71
+Stack trace:
+#0 C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php(17): UserController->loadModel('Guest')
+#1 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): UserController->actionView()
+#2 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#11 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('user/view/id/<b...')
+#12 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/vtnv.vn/user/view/id/%3Cbr%20/%3E%3Cfont%20size='1'%3E%3Ctable%20class='xdebug-error'%20dir='ltr'%20border='1'%20cellspacing='0'%20cellpadding='1'%3E%3Ctr%3E%3Cth%20align='left'%20bgcolor='
+HTTP_REFERER=http://dos.vn/yii/vtnv.vn/user/view/id/nam
+---
+2012/03/20 08:43:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php:71
+Stack trace:
+#0 C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php(17): UserController->loadModel('Guest')
+#1 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): UserController->actionView()
+#2 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#11 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('user/view/id/<b...')
+#12 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/vtnv.vn/user/view/id/%3Cbr%20/%3E%3Cfont%20size='1'%3E%3Ctable%20class='xdebug-error'%20dir='ltr'%20border='1'%20cellspacing='0'%20cellpadding='1'%3E%3Ctr%3E%3Cth%20align='left'%20bgcolor='
+HTTP_REFERER=http://dos.vn/yii/vtnv.vn/user/view/id/nam
+---
+2012/03/20 08:43:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php:71
+Stack trace:
+#0 C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php(17): UserController->loadModel('Guest')
+#1 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): UserController->actionView()
+#2 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#11 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('user/view/id/<b...')
+#12 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/vtnv.vn/user/view/id/%3Cbr%20/%3E%3Cfont%20size='1'%3E%3Ctable%20class='xdebug-error'%20dir='ltr'%20border='1'%20cellspacing='0'%20cellpadding='1'%3E%3Ctr%3E%3Cth%20align='left'%20bgcolor='
+HTTP_REFERER=http://dos.vn/yii/vtnv.vn/user/view/id/nam
+---
+2012/03/20 08:43:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php:71
+Stack trace:
+#0 C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php(17): UserController->loadModel('Guest')
+#1 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): UserController->actionView()
+#2 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#11 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('user/view/id/<b...')
+#12 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/vtnv.vn/user/view/id/%3Cbr%20/%3E%3Cfont%20size='1'%3E%3Ctable%20class='xdebug-error'%20dir='ltr'%20border='1'%20cellspacing='0'%20cellpadding='1'%3E%3Ctr%3E%3Cth%20align='left'%20bgcolor='
+HTTP_REFERER=http://dos.vn/yii/vtnv.vn/user/view/id/nam
+---
+2012/03/20 08:43:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php:71
+Stack trace:
+#0 C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php(17): UserController->loadModel('Guest')
+#1 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): UserController->actionView()
+#2 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#11 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('user/view/id/<b...')
+#12 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/vtnv.vn/user/view/id/%3Cbr%20/%3E%3Cfont%20size='1'%3E%3Ctable%20class='xdebug-error'%20dir='ltr'%20border='1'%20cellspacing='0'%20cellpadding='1'%3E%3Ctr%3E%3Cth%20align='left'%20bgcolor='
+HTTP_REFERER=http://dos.vn/yii/vtnv.vn/user/view/id/nam
+---
+2012/03/20 08:43:39 [error] [php] Use of undefined constant USERFILES - assumed 'USERFILES' (C:\xampp\htdocs\yii\vtnv.vn\protected\views\site\index.php:8)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): SiteController->renderPartial()
+#2 C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\SiteController.php(28): SiteController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): SiteController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CWebApplication->run()
+REQUEST_URI=/yii/vtnv.vn/
+in C:\xampp\htdocs\yii\vtnv.vn\protected\views\site\index.php (8)
+in C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\SiteController.php (28)
+in C:\xampp\htdocs\yii\vtnv.vn\index.php (21)
+2012/03/20 08:44:26 [error] [php] Use of undefined constant USERFILES - assumed 'USERFILES' (C:\xampp\htdocs\yii\vtnv.vn\protected\views\site\index.php:8)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): SiteController->renderPartial()
+#2 C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\SiteController.php(28): SiteController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): SiteController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CWebApplication->run()
+REQUEST_URI=/yii/vtnv.vn/
+in C:\xampp\htdocs\yii\vtnv.vn\protected\views\site\index.php (8)
+in C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\SiteController.php (28)
+in C:\xampp\htdocs\yii\vtnv.vn\index.php (21)
+2012/03/20 08:44:29 [error] [php] Use of undefined constant USERFILES - assumed 'USERFILES' (C:\xampp\htdocs\yii\vtnv.vn\protected\views\site\index.php:8)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): SiteController->renderPartial()
+#2 C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\SiteController.php(28): SiteController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): SiteController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CWebApplication->run()
+REQUEST_URI=/yii/vtnv.vn/
+in C:\xampp\htdocs\yii\vtnv.vn\protected\views\site\index.php (8)
+in C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\SiteController.php (28)
+in C:\xampp\htdocs\yii\vtnv.vn\index.php (21)
+2012/03/20 08:44:31 [error] [php] Use of undefined constant USERFILES - assumed 'USERFILES' (C:\xampp\htdocs\yii\vtnv.vn\protected\views\site\index.php:8)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): SiteController->renderPartial()
+#2 C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\SiteController.php(28): SiteController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): SiteController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CWebApplication->run()
+REQUEST_URI=/yii/vtnv.vn/
+in C:\xampp\htdocs\yii\vtnv.vn\protected\views\site\index.php (8)
+in C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\SiteController.php (28)
+in C:\xampp\htdocs\yii\vtnv.vn\index.php (21)
