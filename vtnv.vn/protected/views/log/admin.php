@@ -1,7 +1,7 @@
 
 <?php
 $this->breadcrumbs=array(
-	
+
         'Lịch sử giao dịch',
 );
 ?>
@@ -17,7 +17,7 @@ $this->breadcrumbs=array(
 		'time',
 		'sender',
 		'receiver',
-		'value',	
-		
+		'value',
+
 	),
 )); ?>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 18, 2012 at 05:01 PM
+-- Generation Time: Mar 20, 2012 at 02:17 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -192,7 +192,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `description`, `activated`) VALUES
 (2, 'Giới thiệu', NULL, '<p>\r\n	Chi tiết</p>\r\n', NULL, 15, '2012-03-07 03:24:59', 1, 0, NULL, NULL, 'gioi-thieu', 'Mô tả', 1),
-(3, 'Tiêu đề giới thiệu', NULL, '<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n', NULL, 150, '2012-03-07 03:25:14', 2, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'Mô tả', 1);
+(3, 'Tiêu đề giới thiệu', NULL, '<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n<p>\r\n	Chi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệuChi tiết Tiêu đề giới thiệu</p>\r\n', NULL, 152, '2012-03-07 03:25:14', 2, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'Mô tả', 1);
 
 -- --------------------------------------------------------
 
@@ -304,27 +304,27 @@ CREATE TABLE IF NOT EXISTS `dos_module_log` (
 INSERT INTO `dos_module_log` (`record_id`, `log_type`, `detail`, `time`, `sender`, `receiver`, `value`) VALUES
 (1, '0', 'thử nghiệm', '2012-02-27 08:16:06', 'grouplaptrinh', '', 0),
 (2, '0', '', '2012-02-27 08:16:50', '', '', 0),
-(3, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 15:24:07', 'Hệ thống', 'grouplaptrinh', 0),
-(4, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 15:27:27', 'Hệ thống', 'grouplaptrinh', 0),
-(5, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 15:30:12', 'Hệ thống', 'grouplaptrinh', 0),
-(6, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 16:31:03', 'Hệ thống', 'grouplaptrinh', 0),
-(7, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 16:51:29', 'Hệ thống', 'grouplaptrinh', 0),
-(8, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 16:52:38', 'Hệ thống', 'grouplaptrinh', 0),
-(9, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 16:54:05', 'Hệ thống', 'grouplaptrinh', 0),
-(10, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 16:56:09', 'Hệ thống', 'grouplaptrinh', 0),
-(11, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 17:03:00', 'Hệ thống', 'grouplaptrinh', 0),
-(12, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 17:08:02', 'Hệ thống', 'grouplaptrinh', 0),
-(13, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 17:09:20', 'Hệ thống', 'grouplaptrinh', 0),
-(14, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 17:09:43', 'Hệ thống', 'grouplaptrinh', 0),
-(15, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 17:09:46', 'Hệ thống', 'grouplaptrinh', 0),
-(16, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-16 00:36:49', 'Hệ thống', 'grouplaptrinh', 0),
-(17, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-16 00:36:52', 'Hệ thống', 'grouplaptrinh', 0),
+(3, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 15:24:07', 'Hệ thống', 'viptamnhinviet', 0),
+(4, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 15:27:27', 'Hệ thống', 'viptamnhinviet', 0),
+(5, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 15:30:12', 'Hệ thống', 'viptamnhinviet', 0),
+(6, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 16:31:03', 'Hệ thống', 'viptamnhinviet', 0),
+(7, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 16:51:29', 'Hệ thống', 'viptamnhinviet', 0),
+(8, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 16:52:38', 'Hệ thống', 'viptamnhinviet', 0),
+(9, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 16:54:05', 'Hệ thống', 'viptamnhinviet', 0),
+(10, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 16:56:09', 'Hệ thống', 'viptamnhinviet', 0),
+(11, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 17:03:00', 'Hệ thống', 'viptamnhinviet', 0),
+(12, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 17:08:02', 'Hệ thống', 'viptamnhinviet', 0),
+(13, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 17:09:20', 'Hệ thống', 'viptamnhinviet', 0),
+(14, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 17:09:43', 'Hệ thống', 'viptamnhinviet', 0),
+(15, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 17:09:46', 'Hệ thống', 'viptamnhinviet', 0),
+(16, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-16 00:36:49', 'Hệ thống', 'viptamnhinviet', 0),
+(17, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-16 00:36:52', 'Hệ thống', 'viptamnhinviet', 0),
 (18, 'tangcap', 'Hoa hồng đạt cấp 1', '2012-03-16 00:36:57', '', 'admin1', 2000),
-(19, 'gioithieu', 'Thành viên admin2 được kích hoạt. Người giới thiệu:admin', '2012-03-16 07:20:05', 'Hệ thống', 'grouplaptrinh', 0),
-(20, 'gioithieu', 'Thành viên admin được kích hoạt. Người giới thiệu:viptamnhinviet', '2012-03-16 07:22:51', 'Hệ thống', 'grouplaptrinh', 0),
-(21, 'gioithieu', 'Thành viên admin1 được kích hoạt. Người giới thiệu:viptamnhinviet', '2012-03-16 07:23:53', 'Hệ thống', 'grouplaptrinh', 0),
-(22, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin2', '2012-03-16 07:28:15', 'Hệ thống', 'grouplaptrinh', 0),
-(23, 'gioithieu', 'Thành viên admin4 được kích hoạt. Người giới thiệu:admin2', '2012-03-16 07:34:40', 'Hệ thống', 'grouplaptrinh', 0);
+(19, 'gioithieu', 'Thành viên admin2 được kích hoạt. Người giới thiệu:admin', '2012-03-16 07:20:05', 'Hệ thống', 'viptamnhinviet', 0),
+(20, 'gioithieu', 'Thành viên admin được kích hoạt. Người giới thiệu:viptamnhinviet', '2012-03-16 07:22:51', 'Hệ thống', 'viptamnhinviet', 0),
+(21, 'gioithieu', 'Thành viên admin1 được kích hoạt. Người giới thiệu:viptamnhinviet', '2012-03-16 07:23:53', 'Hệ thống', 'viptamnhinviet', 0),
+(22, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin2', '2012-03-16 07:28:15', 'Hệ thống', 'viptamnhinviet', 0),
+(23, 'gioithieu', 'Thành viên admin4 được kích hoạt. Người giới thiệu:admin2', '2012-03-16 07:34:40', 'Hệ thống', 'viptamnhinviet', 0);
 
 -- --------------------------------------------------------
 
@@ -425,10 +425,10 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456005),
+('day_time', 2456007),
 ('max_count', 1),
-('counter', 7),
-('yesterday', 0);
+('counter', 9),
+('yesterday', 1);
 
 -- --------------------------------------------------------
 
@@ -447,7 +447,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1332086462);
+('''127.0.0.1''', 1332206224);
 
 -- --------------------------------------------------------
 
@@ -484,7 +484,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`),
   KEY `fk_dos_module_products_dos_module_usernames1` (`dos_module_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 --
 -- Dumping data for table `dos_module_products`
@@ -493,7 +493,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `detail`, `detailen`, `tag`, `description`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`, `dos_module_usernames_username`) VALUES
 (15, 'San pham', NULL, '2012-03-11 07:02:57', 'san-pham-thumb.jpg', '', NULL, NULL, NULL, '<p>\r\n	Chi tiết</p>\r\n', NULL, 'san-pham', 'Mô tả', 0, 1, 0, 0, 0, NULL, NULL, NULL, NULL, 1, 11, 'viptamnhinviet'),
 (16, 'Sản phẩm 2', NULL, '2012-03-11 07:03:24', 'san-pham-2-thumb.jpg', 'san-pham-2.jpg', NULL, NULL, NULL, '<p>\r\n	Chi tiết</p>\r\n', NULL, 'san-pham-2', 'Mô tả', 0, 2, 0, 1, 1, NULL, NULL, NULL, NULL, 1, 11, 'viptamnhinviet'),
-(17, 'hhhhhhhh', NULL, '2012-03-12 04:00:45', '', '', NULL, NULL, NULL, '<p>\r\n	hhhhh</p>\r\n', NULL, 'hhhhhhhh', 'jkjhkhjk', 0, 3, 0, 0, 0, NULL, NULL, NULL, NULL, 1, 11, 'viptamnhinviet');
+(17, 'hhhhhhhh', NULL, '2012-03-12 04:00:45', '', '', NULL, NULL, NULL, '<p>\r\n	hhhhh</p>\r\n', NULL, 'hhhhhhhh', 'jkjhkhjk', 0, 3, 121212, 0, 0, NULL, NULL, NULL, NULL, 1, 11, 'viptamnhinviet'),
+(18, 'dasdsad', NULL, '2012-03-19 14:24:49', '', '', NULL, NULL, NULL, '<p>\r\n	asda</p>\r\n', NULL, 'dasdsad', 'asdasddasdasdas', 0, 4, 0, 0, 0, NULL, NULL, NULL, NULL, 1, 11, 'viptamnhinviet');
 
 -- --------------------------------------------------------
 

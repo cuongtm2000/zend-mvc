@@ -3,14 +3,8 @@
 class LogController extends Controller {
 
     public function actionIndex() {
-        $model = new Log('search');
-        $model->unsetAttributes();  // clear any default values
-        if (isset($_GET['Log']))
-            $model->attributes = $_GET['Log'];
-
-        $this->render('admin', array(
-            'model' => $model,
-        ));
+		$model_class = new Log();
+		$this->render('index', array('listLog' => $model_class->getLogByReceiver(Yii::app()->user->name)));
     }
 
     public function loadModel($id) {
