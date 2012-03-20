@@ -6,7 +6,7 @@ class LogController extends Controller {
 		$model_class = new Log();
 		$this->render('index', array('listLog' => $model_class->getLogByReceiver(Yii::app()->user->name)));
     }
-
+/*
     public function loadModel($id) {
         $model = Log::model()->findByPk($id);
         if ($model === null)
@@ -20,5 +20,5 @@ class LogController extends Controller {
             Yii::app()->end();
         }
     }
-
+*/
 }
