@@ -744,3 +744,27 @@ Stack trace:
 REQUEST_URI=/yii/vtnv.vn/themes/admin-blue/js/jquery.treeview.js
 HTTP_REFERER=http://localhost/yii/vtnv.vn/admin/user/map
 ---
+2012/03/20 08:39:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/favicon....')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/vtnv.vn/images/favicon.ico
+---
+2012/03/20 08:39:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gioi-thieu/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('gioi-thieu/imag...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/vtnv.vn/gioi-thieu/images/favicon.ico
+---
+2012/03/20 08:40:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "video/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('video/images/fa...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/vtnv.vn/video/images/favicon.ico
+---
