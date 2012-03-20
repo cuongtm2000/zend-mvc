@@ -43,11 +43,11 @@ class UserController extends Controller {
         ));
     }
     public function actionChangepass() {
-        $user = new User();
+        /*$user = new User();
         $this->render('map', array(
             'tree' => $user->createTree(Yii::app()->user->name),
             'listUserQuanly' => '',
-        ));
+        ));*/
     }
     
     public function actionTransferv() {
