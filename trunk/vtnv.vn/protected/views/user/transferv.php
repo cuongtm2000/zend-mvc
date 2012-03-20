@@ -1,7 +1,7 @@
 <?php //$this->breadcrumbs = array('Users' => array('index'), 'Chuyển khoản',);?>
 <h1 class="title-right"><span>Chuyển khoản</span></h1>
 
-<div class="form">
+<div class="frame-tent-right">
     <?php $form = $this->beginWidget('CActiveForm', array('id' => 'transfer-form', 'enableAjaxValidation' => false,));?>
 	<p class="note">Dấu <span class="required">*</span> là những thông tin bắt buộc nhập liệu.</p>
     <?php echo $form->errorSummary($model); ?>

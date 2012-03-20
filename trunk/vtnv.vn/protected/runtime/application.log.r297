@@ -1,0 +1,380 @@
+2012/03/16 14:17:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/css/jquery.treeview.css".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/admin-bl...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/themes/admin-blue/css/jquery.treeview.css
+HTTP_REFERER=http://localhost/yii/viptamnhinviet2/admin/user/map
+---
+2012/03/16 14:17:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/js/jquery.treeview.js".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/admin-bl...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/themes/admin-blue/js/jquery.treeview.js
+HTTP_REFERER=http://localhost/yii/viptamnhinviet2/admin/user/map
+---
+2012/03/16 14:20:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/favicon....')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/images/favicon.ico
+---
+2012/03/16 14:20:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('images/favicon....')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/images/favicon.ico
+---
+2012/03/16 14:20:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "error".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('error')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/error
+HTTP_REFERER=http://localhost/yii/viptamnhinviet2/dang-nhap.html
+---
+2012/03/16 14:21:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "error".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('error')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/error
+---
+2012/03/16 14:21:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in E:\xampp\php\www\framework\web\CController.php:484
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/fav...')
+#3 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/viptamnhinviet2/user/images/favicon.ico
+---
+2012/03/16 14:21:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in E:\xampp\php\www\framework\web\CController.php:484
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(271): CController->missingAction('images')
+#1 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('images')
+#2 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/fav...')
+#3 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/viptamnhinviet2/user/images/favicon.ico
+---
+2012/03/16 14:21:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "san-pham/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('san-pham/images...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/san-pham/images/favicon.ico
+---
+2012/03/16 14:21:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "san-pham/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('san-pham/images...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/viptamnhinviet2/san-pham/images/favicon.ico
+---
+2012/03/16 16:39:13 [error] [exception.CException] exception 'CException' with message 'User and its behaviors do not have a method or closure named "getData".' in E:\xampp\php\www\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(226): CComponent->__call('getData', Array)
+#1 E:\xampp\php\www\framework\zii\widgets\CBaseListView.php(105): CActiveRecord->__call('getData', Array)
+#2 E:\xampp\php\www\framework\zii\widgets\CBaseListView.php(105): User->getData()
+#3 E:\xampp\php\www\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#4 E:\xampp\php\www\framework\web\CBaseController.php(148): CGridView->init()
+#5 E:\xampp\php\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#6 E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\views\user\datchuan.php(30): CBaseController->widget('zii.widgets.gri...', Array)
+#7 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
+#8 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#9 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#10 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('datchuan', Array, true)
+#11 E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\controllers\UserController.php(103): CController->render('datchuan', Array)
+#12 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): UserController->actionDatchuan()
+#13 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#20 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('datchuan')
+#22 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/user/datc...')
+#23 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#25 {main}
+REQUEST_URI=/yii/viptamnhinviet2/admin/user/datchuan
+HTTP_REFERER=http://localhost/yii/viptamnhinviet2/admin/user/
+---
+2012/03/16 16:39:37 [error] [exception.CException] exception 'CException' with message 'User and its behaviors do not have a method or closure named "getData".' in E:\xampp\php\www\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(226): CComponent->__call('getData', Array)
+#1 E:\xampp\php\www\framework\zii\widgets\CBaseListView.php(105): CActiveRecord->__call('getData', Array)
+#2 E:\xampp\php\www\framework\zii\widgets\CBaseListView.php(105): User->getData()
+#3 E:\xampp\php\www\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#4 E:\xampp\php\www\framework\web\CBaseController.php(148): CGridView->init()
+#5 E:\xampp\php\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#6 E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\views\user\datchuan.php(30): CBaseController->widget('zii.widgets.gri...', Array)
+#7 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
+#8 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#9 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#10 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('datchuan', Array, true)
+#11 E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\controllers\UserController.php(103): CController->render('datchuan', Array)
+#12 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): UserController->actionDatchuan()
+#13 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#20 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('datchuan')
+#22 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/user/datc...')
+#23 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#25 {main}
+REQUEST_URI=/yii/viptamnhinviet2/admin/user/datchuan
+---
+2012/03/16 16:40:13 [error] [exception.CException] exception 'CException' with message 'User and its behaviors do not have a method or closure named "getData".' in E:\xampp\php\www\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(226): CComponent->__call('getData', Array)
+#1 E:\xampp\php\www\framework\zii\widgets\CBaseListView.php(105): CActiveRecord->__call('getData', Array)
+#2 E:\xampp\php\www\framework\zii\widgets\CBaseListView.php(105): User->getData()
+#3 E:\xampp\php\www\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#4 E:\xampp\php\www\framework\web\CBaseController.php(148): CGridView->init()
+#5 E:\xampp\php\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#6 E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\views\user\datchuan.php(25): CBaseController->widget('zii.widgets.gri...', Array)
+#7 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
+#8 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#9 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#10 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('datchuan', Array, true)
+#11 E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\controllers\UserController.php(103): CController->render('datchuan', Array)
+#12 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): UserController->actionDatchuan()
+#13 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#20 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('datchuan')
+#22 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/user/datc...')
+#23 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#25 {main}
+REQUEST_URI=/yii/viptamnhinviet2/admin/user/datchuan
+---
+2012/03/16 16:42:35 [error] [exception.CException] exception 'CException' with message 'Property "Tables.username" is not defined.' in E:\xampp\php\www\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('username')
+#1 E:\xampp\php\www\framework\base\CModel.php(593): CActiveRecord->__get('username')
+#2 E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\views\user\datchuan.php(29): CModel->offsetGet('username')
+#3 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
+#4 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#5 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#6 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('datchuan', Array, true)
+#7 E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\controllers\UserController.php(103): CController->render('datchuan', Array)
+#8 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): UserController->actionDatchuan()
+#9 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#16 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('datchuan')
+#18 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/user/datc...')
+#19 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii/viptamnhinviet2/admin/user/datchuan
+---
+2012/03/16 17:03:21 [error] [exception.CException] exception 'CException' with message 'Property "Tables.username" is not defined.' in E:\xampp\php\www\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('username')
+#1 E:\xampp\php\www\framework\base\CModel.php(593): CActiveRecord->__get('username')
+#2 E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\views\user\datchuan.php(29): CModel->offsetGet('username')
+#3 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
+#4 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#5 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#6 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('datchuan', Array, true)
+#7 E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\controllers\UserController.php(103): CController->render('datchuan', Array)
+#8 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): UserController->actionDatchuan()
+#9 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#16 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('datchuan')
+#18 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/user/datc...')
+#19 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii/viptamnhinviet2/admin/user/datchuan
+---
+2012/03/16 17:16:56 [error] [php] include(Usernames.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (E:\xampp\php\www\framework\YiiBase.php:418)
+Stack trace:
+#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(378): spl_autoload_call()
+#1 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(219): model()
+#2 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(49): CActiveFinder->buildJoinTree()
+#3 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(268): CActiveFinder->__construct()
+#4 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(142): Tables->getRelated()
+#5 E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\views\user\datchuan.php(32): Tables->__get()
+#6 E:\xampp\php\www\framework\web\CBaseController.php(127): require()
+#7 E:\xampp\php\www\framework\web\CBaseController.php(96): UserController->renderInternal()
+#8 E:\xampp\php\www\framework\web\CController.php(870): UserController->renderFile()
+#9 E:\xampp\php\www\framework\web\CController.php(783): UserController->renderPartial()
+#10 E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\controllers\UserController.php(103): UserController->render()
+#11 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): UserController->actionDatchuan()
+#12 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#13 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#14 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#16 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): UserController->filterAccessControl()
+#17 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#18 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#19 E:\xampp\php\www\framework\web\CController.php(266): UserController->runActionWithFilters()
+#20 E:\xampp\php\www\framework\web\CWebApplication.php(276): UserController->run()
+#21 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#22 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CWebApplication->run()
+REQUEST_URI=/yii/viptamnhinviet2/admin/user/datchuan
+in E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\views\user\datchuan.php (32)
+in E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\controllers\UserController.php (103)
+in E:\xampp\htdocs\yii\viptamnhinviet2\index.php (21)
+2012/03/16 17:17:45 [error] [php] include(Usernames.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (E:\xampp\php\www\framework\YiiBase.php:418)
+Stack trace:
+#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(378): spl_autoload_call()
+#1 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(219): model()
+#2 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(49): CActiveFinder->buildJoinTree()
+#3 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(268): CActiveFinder->__construct()
+#4 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(142): Tables->getRelated()
+#5 E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\views\user\datchuan.php(32): Tables->__get()
+#6 E:\xampp\php\www\framework\web\CBaseController.php(127): require()
+#7 E:\xampp\php\www\framework\web\CBaseController.php(96): UserController->renderInternal()
+#8 E:\xampp\php\www\framework\web\CController.php(870): UserController->renderFile()
+#9 E:\xampp\php\www\framework\web\CController.php(783): UserController->renderPartial()
+#10 E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\controllers\UserController.php(103): UserController->render()
+#11 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): UserController->actionDatchuan()
+#12 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#13 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#14 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#16 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): UserController->filterAccessControl()
+#17 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#18 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#19 E:\xampp\php\www\framework\web\CController.php(266): UserController->runActionWithFilters()
+#20 E:\xampp\php\www\framework\web\CWebApplication.php(276): UserController->run()
+#21 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#22 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CWebApplication->run()
+REQUEST_URI=/yii/viptamnhinviet2/admin/user/datchuan
+in E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\views\user\datchuan.php (32)
+in E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\controllers\UserController.php (103)
+in E:\xampp\htdocs\yii\viptamnhinviet2\index.php (21)
+2012/03/16 17:21:56 [error] [php] include(Username.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (E:\xampp\php\www\framework\YiiBase.php:418)
+Stack trace:
+#0 E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\controllers\AccountController.php(23): spl_autoload_call()
+#1 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): AccountController->actionIndex()
+#2 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): AccountController->runAction()
+#4 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#6 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): AccountController->filterAccessControl()
+#7 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#8 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#9 E:\xampp\php\www\framework\web\CController.php(266): AccountController->runActionWithFilters()
+#10 E:\xampp\php\www\framework\web\CWebApplication.php(276): AccountController->run()
+#11 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#12 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CWebApplication->run()
+REQUEST_URI=/yii/viptamnhinviet2/admin/account
+in E:\xampp\htdocs\yii\viptamnhinviet2\protected\modules\admin\controllers\AccountController.php (23)
+in E:\xampp\htdocs\yii\viptamnhinviet2\index.php (21)
+2012/03/16 17:36:18 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\php\www\framework\web\CController.php:337
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#7 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('user/view')
+#10 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/viptamnhinviet2/user/view
+---
+2012/03/16 17:42:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "changepass".' in E:\xampp\php\www\framework\web\CController.php:484
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(271): CController->missingAction('changepass')
+#1 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('changepass')
+#2 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('user/changepass')
+#3 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/viptamnhinviet2/user/changepass
+HTTP_REFERER=http://localhost/yii/viptamnhinviet2/user/view
+---
+2012/03/18 10:37:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in E:\xampp\htdocs\yii\viptamnhinviet2\protected\controllers\UserController.php:71
+Stack trace:
+#0 E:\xampp\htdocs\yii\viptamnhinviet2\protected\controllers\UserController.php(17): UserController->loadModel('Guest')
+#1 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): UserController->actionView()
+#2 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#9 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('view')
+#11 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('user/view')
+#12 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 E:\xampp\htdocs\yii\viptamnhinviet2\index.php(21): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/viptamnhinviet2/user/view
+HTTP_REFERER=http://localhost/yii/viptamnhinviet2/index.php
+---
+2012/03/19 07:09:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/viptamnhinviet/images/prettyPhoto/light_rounded/btnNext.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/viptamnh...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/vtnv.vn/themes/viptamnhinviet/images/prettyPhoto/light_rounded/btnNext.png
+HTTP_REFERER=http://localhost/yii/vtnv.vn/video/danh-muc
+---
+2012/03/19 16:13:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "amin".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('amin')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/vtnv.vn/amin
+---
+2012/03/19 16:14:08 [warning] [application] Failed to set unsafe attribute "remove_pic_thumb" of "Products".
+in C:\xampp\htdocs\yii\vtnv.vn\protected\modules\admin\controllers\ProductsController.php (152)
+in C:\xampp\htdocs\yii\vtnv.vn\index.php (21)
+2012/03/19 16:14:18 [warning] [application] Failed to set unsafe attribute "remove_pic_thumb" of "Products".
+in C:\xampp\htdocs\yii\vtnv.vn\protected\modules\admin\controllers\ProductsController.php (152)
+in C:\xampp\htdocs\yii\vtnv.vn\index.php (21)
