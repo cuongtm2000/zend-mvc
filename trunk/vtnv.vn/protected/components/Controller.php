@@ -40,7 +40,8 @@ class Controller extends CController {
 		Yii::app()->getModule('video');
 		$video_class = new Video();
 		$this->videoHome = $video_class->itemHome();
-		
-		define('USERFILES', '/public/userfiles/images/viptamnhinviet/images'); //coi lai cai này
+
+		$user_class = new User();
+		define('USERFILES', '/public/userfiles/images/'.$user_class->getUserAdministrator().'/images'); //coi lai cai này
 	}
 }

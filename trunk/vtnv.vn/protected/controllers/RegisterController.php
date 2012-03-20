@@ -8,8 +8,9 @@ class RegisterController extends Controller {
 
         if (isset($_POST['User'])) {
             $model->attributes = $_POST['User'];
-            if ($model->save())
-               $this->redirect(array('/user/view', 'id' => $model->username));
+            if ($model->save()){
+				Yii::app()->session['reg_success'] = true;
+			}
         }
 
         $this->render('index', array(
@@ -18,11 +19,10 @@ class RegisterController extends Controller {
     }
 
     public function actionSuccess() {
-        if (Yii::app()->session['reg_success']) {
-            $this->render(Yii::app()->theme->name . '/success');
-        } else {
-            $this->redirect(Yii::app()->request->baseUrl . '/' . $this->id);
+        if (!Yii::app()->session['reg_success']) {
+			$this->redirect(Yii::app()->request->baseUrl . '/dang-ky-thanh-vien.html');
         }
+		$this->render('success');
     }
 
 }
