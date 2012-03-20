@@ -203,7 +203,7 @@
         <?php endif; ?>
                                             <div class="right-ty-pro">
                                                 <h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl ?>/san-pham/<?php echo $value['tag'] ?>/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'><?php echo $value['title'] ?></a></h2>
-                                                <p class="price"><b>Giá : </b> <span><?php echo ($value['unit']) ?></span></p>
+                                                <p class="price"><b>Giá : </b> <span><?php echo number_format($value['unit'], 0, '', '.'); ?></span></p>
                                             </div> <div class="clear"></div>
                                         </li>
     <?php endforeach; ?>
