@@ -21,8 +21,8 @@
 				<td><?php echo $model['log_type']?></td>
 				<td><?php echo $model['detail']?></td>
 				<td><?php echo date('d-m-Y H:i:s', strtotime($model['time'])) ?></td>
-				<td><?php echo $model['sender']?></td
-				<td><?php echo $model['sender']?></td
+				<td><?php echo $model['sender']?></td>
+				<td><?php echo $model['receiver']?></td>
 				<td><?php echo $model['value']?></td>
 			</tr>
 		<?php $i++; endforeach ?>
