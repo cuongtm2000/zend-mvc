@@ -93,7 +93,7 @@ class Log extends CActiveRecord {
 
 	public function getLogByReceiver($user) {
 		$criteria = new CDbCriteria();
-		$criteria->select = 'log_type, detail, time, sender, value';
+		$criteria->select = 'log_type, detail, time, sender, receiver, value';
 		$criteria->order = 'time DESC';
 		$criteria->condition = 'receiver=:user';
 		$criteria->params = array(':user' => $user);
