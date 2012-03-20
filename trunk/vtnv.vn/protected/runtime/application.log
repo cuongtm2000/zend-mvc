@@ -710,3 +710,37 @@ REQUEST_URI=/yii/vtnv.vn/user/changepass
 in C:\xampp\htdocs\yii\vtnv.vn\protected\views\user\changepass.php (5)
 in C:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php (51)
 in C:\xampp\htdocs\yii\vtnv.vn\index.php (21)
+2012/03/20 08:28:58 [error] [php] Undefined index: ids (C:\xampp\htdocs\yii\vtnv.vn\protected\modules\admin\controllers\UserController.php:109)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#1 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): UserController->filterAccessControl()
+#4 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\php\library\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CWebApplication->run()
+REQUEST_URI=/yii/vtnv.vn/admin/user/datchuan
+in C:\xampp\htdocs\yii\vtnv.vn\protected\modules\admin\controllers\UserController.php (109)
+in C:\xampp\htdocs\yii\vtnv.vn\index.php (21)
+2012/03/20 08:29:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/css/jquery.treeview.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/vtnv.vn/themes/admin-blue/css/jquery.treeview.css
+HTTP_REFERER=http://localhost/yii/vtnv.vn/admin/user/map
+---
+2012/03/20 08:29:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin-blue/js/jquery.treeview.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/admin-bl...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/vtnv.vn/themes/admin-blue/js/jquery.treeview.js
+HTTP_REFERER=http://localhost/yii/vtnv.vn/admin/user/map
+---
