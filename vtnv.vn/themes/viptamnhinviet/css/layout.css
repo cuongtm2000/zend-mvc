@@ -62,6 +62,7 @@ a:hover{color:#000;}
 
 /*Sub sản phẩm SGS*/
 .sub-pro{list-style:none;margin:0 0 10px 0}
+.balan{color:#f00}
 .sub-pro li{padding:0 0 4px 0}
 .sub-pro li a{display:block;color:#000; background:#F6F6F6;padding:5px 2px 5px 10px;-webkit-border-radius:4px;-moz-border-radius:4px}
 .sub-pro li a:hover{color:#AA100E; background:#E0DEDF}
@@ -155,7 +156,7 @@ a:hover{color:#000;}
 .form-all p{ margin:20px 0; color:#666; font-size:10pt}
 .form-all ul li span{color:#F00}
 .form-all ul{margin:0; padding:0; list-style:none}
-.form-all ul li{padding:5px 0;}
+.form-all ul li{padding:5px 0;margin:0 !important}
 .form-all ul li label{float:left;color:#666; width:130px;padding-top:2px; font-family:Tahoma, Geneva, sans-serif;  text-align:left; margin-right:10px}
 .form-all ul li input{ width:200px;-moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
 
@@ -319,3 +320,8 @@ tbody tr.green td, tbody tr.green a{background: #c2ecb7; color : #aaa}
 .level-3-2{position:absolute; left:200px; top:100px}
 .level-3-3{position:absolute; right:10px; top:100px}
 .level-3-4{position:absolute; right:200px; top:100px}
+
+/*User view-log*/
+.view-log label{width:150px !important;padding:3px 2px 3px 10px;margin:0 10px 0 0 !important}
+.no{background:#E5F1F4}
+.retail{background:#F8F8F8}
