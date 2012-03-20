@@ -5,7 +5,7 @@
 		<div class="frame-img-pro">
 			<a href="<?php echo Yii::app()->request->baseUrl ?>/san-pham/<?php echo $value['tagcat'] ?>/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'>
 				<?php if($value['pic_thumb']): ?>
-					<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt='<?php echo $value['title'] ?>' />
+					<img src="<?php echo Yii::app()->baseUrl ?>/public/userfiles/images/<?php echo $value['dos_module_usernames_username'] ?>/images/products/<?php echo $value['pic_thumb'] ?>" alt='<?php echo $value['title'] ?>' />
 				<?php else :?>
 					<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no.jpg" alt="no-product" />
 				<?php endif; ?>
@@ -21,7 +21,7 @@
 <div class="img-new">
 	<?php if(isset($this->advs_center) && ($this->advs_center)):?>
 			<?php foreach($this->advs_center as $value): ?>
-				<a href="<?php echo $value['url'] ?>" title="<?php echo $value['title'] ?>" target="<?php echo $value['type'] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>"  /></a>
+				<a href="<?php echo $value['url'] ?>" title="<?php echo $value['title'] ?>" target="<?php echo $value['type'] ?>"><img src="<?php echo Yii::app()->baseUrl ?>/public/userfiles/images/<?php echo $value['dos_module_usernames_username'] ?>/images/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>"  /></a>
 			<?php endforeach; ?>
 	<?php endif;?>
 </div>
@@ -32,7 +32,7 @@
 					<div class="frame-img-pro">					
 						<a href="<?php echo Yii::app()->request->baseUrl ?>/san-pham/<?php echo $value['tagcat'] ?>/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'>
 							<?php if($value['pic_thumb']): ?>
-								<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt='<?php echo $value['title'] ?>' />
+								<img src="<?php echo Yii::app()->baseUrl ?>/public/userfiles/images/<?php echo $value['dos_module_usernames_username'] ?>/images/products/<?php echo $value['pic_thumb'] ?>" alt='<?php echo $value['title'] ?>' />
 							<?php else :?>
 								<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no.jpg" alt="no-product" />
 							<?php endif; ?>

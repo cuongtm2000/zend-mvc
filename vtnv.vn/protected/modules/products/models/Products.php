@@ -245,13 +245,13 @@ class Products extends CActiveRecord {
 
 	//Front end - list item new
 	public function listItemSpecials() {
-		$command = Yii::app()->db->createCommand('SELECT record_id, title, pic_thumb, ' . $this->tableName() . '.tag, unit, hot, ' . $this->tableName() . '_cat.tag AS tagcat FROM ' . $this->tableName() . ', dos_module_products_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = dos_module_products_cat.cat_id AND specials = 1 AND enable = 1 ORDER BY record_order DESC, postdate DESC LIMIT 0, 20');
+		$command = Yii::app()->db->createCommand('SELECT record_id, title, pic_thumb, ' . $this->tableName() . '.tag, unit, hot, dos_module_usernames_username, ' . $this->tableName() . '_cat.tag AS tagcat FROM ' . $this->tableName() . ', dos_module_products_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = dos_module_products_cat.cat_id AND specials = 1 AND enable = 1 ORDER BY record_order DESC, postdate DESC LIMIT 0, 20');
 		return $command->queryAll();
 	}
 
 	//Front end - list item new
 	public function listItemNew() {
-		$command = Yii::app()->db->createCommand('SELECT record_id, title, pic_thumb, ' . $this->tableName() . '.tag, unit, hot, ' . $this->tableName() . '_cat.tag AS tagcat FROM ' . $this->tableName() . ', dos_module_products_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = dos_module_products_cat.cat_id AND enable = 1 ORDER BY record_order DESC, postdate DESC LIMIT 0, 20');
+		$command = Yii::app()->db->createCommand('SELECT record_id, title, pic_thumb, ' . $this->tableName() . '.tag, unit, hot, dos_module_usernames_username, ' . $this->tableName() . '_cat.tag AS tagcat FROM ' . $this->tableName() . ', dos_module_products_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = dos_module_products_cat.cat_id AND enable = 1 ORDER BY record_order DESC, postdate DESC LIMIT 0, 20');
 		return $command->queryAll();
 	}
 
