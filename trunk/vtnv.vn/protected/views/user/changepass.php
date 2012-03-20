@@ -5,6 +5,6 @@
 		<li><label>Mật khẩu hiện tại: <span>*</span></label><input type="text" name="fullname" value="" /> </li>
 		<li><label>Mật khẩu mới: <span>*</span></label><input type="text" name="company" value="" /> </li>
 		<li><label>Xác nhận mật khẩu mới: <span>*</span></label><input type="text" name="email" value="" /></li>
-		 <li><label>&nbsp;</label><input type="submit" class="bton-user" title="Submit"  value="Đổi mật khẩu"/> <input type="reset" class="bton-user" value="Nhập lại" /></li>					
+		 <li><label>&nbsp;</label><input type="submit" class="bton-user" title="Submit"  value="Đổi mật khẩu"/></li>					
 	</ul>
 </div>
