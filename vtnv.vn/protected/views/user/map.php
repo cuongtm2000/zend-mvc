@@ -47,9 +47,9 @@ function drawNode($tree, $lst) {
 ?>
 
         <div id="treecontrol">
-            <a class="login" title="Collapse the entire tree below" href="#"> Collapse All</a>
-            <a class="login" title="Expand the entire tree below" href="#"> Expand All</a>
-            <a class="login" title="Toggle the tree below, opening closed branches, closing open branches" href="#">Toggle All</a>
+            <a class="login" title="Collapse the entire tree below" href="#">Thu gọn</a>
+            <a class="login" title="Expand the entire tree below" href="#">Mở rộng</a>
+            <a class="login" title="Toggle the tree below, opening closed branches, closing open branches" href="#">Chuyển đổi</a>
         </div>
         <p>
             <?php $lst = explode('|', $listUserQuanly); ?>
