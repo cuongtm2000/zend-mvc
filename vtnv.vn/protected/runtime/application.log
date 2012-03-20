@@ -768,3 +768,54 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/yii/vtnv.vn/video/images/favicon.ico
 ---
+2012/03/20 08:44:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/viptamnhinviet/images/prettyPhoto/light_rounded/btnNext.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/viptamnh...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/vtnv.vn/themes/viptamnhinviet/images/prettyPhoto/light_rounded/btnNext.png
+HTTP_REFERER=http://localhost/yii/vtnv.vn/themes/viptamnhinviet/css/prettyPhoto.css
+---
+2012/03/20 08:47:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin-tuc/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('tin-tuc/images/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/vtnv.vn/tin-tuc/images/favicon.ico
+---
+2012/03/20 08:47:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin-tuc/asdasd/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('tin-tuc/asdasd/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/vtnv.vn/tin-tuc/asdasd/images/favicon.ico
+---
+2012/03/20 08:48:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "san-pham/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('san-pham/images...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/vtnv.vn/san-pham/images/favicon.ico
+---
+2012/03/20 08:48:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "san-pham/danh-muc/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('san-pham/danh-m...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/vtnv.vn/san-pham/danh-muc/images/favicon.ico
+---
+2012/03/20 08:48:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\php\library\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('user/images/fav...')
+#3 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/vtnv.vn/user/images/favicon.ico
+---

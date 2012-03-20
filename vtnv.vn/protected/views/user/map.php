@@ -54,7 +54,7 @@ function drawNode($tree, $lst) {
         <p>
             <?php $lst = explode('|', $listUserQuanly); ?>
         </p>
-        <script >
+        <script type="text/javascript" >
             $(document).ready(function(){
                 $("#browser").treeview({
                     control: "#treecontrol",

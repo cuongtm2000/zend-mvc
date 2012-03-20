@@ -12,7 +12,7 @@
 				</a>
 			</div>
 			<h2 class="title-masuring"><a href="<?php echo Yii::app()->request->baseUrl?>/tin-tuc/<?php echo $value->NewsCat->tag?>/<?php echo $value['tag']?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></h2>
-			<p>Mô tả: <?php echo $value['preview']?></p>  <div class="clear"></div>
+			<?php echo $value['preview']?>  <div class="clear"></div>
 		</li>
 	<?php endforeach?>	
 </ul>
