@@ -48,6 +48,7 @@ class UserController extends Controller {
             'tree' => $user->createTree(Yii::app()->user->name),
             'listUserQuanly' => '',
         ));*/
+		$this->render('changepass');
     }
     
     public function actionTransferv() {
