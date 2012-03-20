@@ -1,23 +1,28 @@
-
-<?php
-$this->breadcrumbs=array(
-	
-        'Lịch sử giao dịch',
-);
-?>
-
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'log-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
-		'record_id',
-		//'log_type',
-		'detail',
-		'time',
-		'sender',
-		'receiver',
-		'value',	
-		
-	),
-)); ?>
+<h1 class="title-right"><span>Lịch sử giao dịch của <?php echo Yii::app()->user->name?></span></h1>
+<table>
+	<thead>
+	<tr>
+		<th>Loại</th>
+		<th>Nội dung</th>
+		<th>Thời gian</th>
+		<th>Người gửi</th>
+		<th>Số tiền</th>
+	</tr>
+	</thead>
+	<tbody>
+	<?php if ($listLog['models']): ?>
+		<?php $i = 0;
+		foreach ($listLog['models'] as $model): ?>
+			<?php $rowclass = ($i % 2 == 0) ? '' : ' class="alt"';?>
+			<tr<?php echo $rowclass?>>
+				<td><?php echo $model['log_type']?></td>
+				<td><?php echo $model['detail']?></td>
+				<td><?php echo date('d-m-Y H:i:s', strtotime($model['time'])) ?></td>
+				<td><?php echo $model['sender']?></td>
+				<td><?php echo $model['value']?></td>
+			</tr>
+		<?php $i++; endforeach ?>
+		<?php endif?>
+	</tbody>
+</table>
+<?php $this->widget('CLinkPager', array('pages' => $listLog['pages'], 'header'=>'', 'prevPageLabel' => '< Lùi', 'nextPageLabel' => 'Tiếp >', 'htmlOptions'=>array('class'=>'yiiPager paging')))?>
