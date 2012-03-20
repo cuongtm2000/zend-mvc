@@ -323,7 +323,8 @@ tbody tr.green td, tbody tr.green a{background: #c2ecb7; color : #aaa}
 
 /*User view-log*/
 .chanpass label{padding:3px 0 !important}
-.view-log label{width:150px !important;padding:3px 2px 3px 10px;margin:0 10px 0 0 !important}
+.view-log label{width:125px !important;padding:5px 2px 5px 10px; margin:0 10px 0 0 !important;-webkit-border-radius:2px;-moz-border-radius:2px}
+.view-log li{padding:5px 0 !important}
 .view-log span{color:#f00}
 .no{background:#E5F1F4}
 .retail{background:#F8F8F8}
