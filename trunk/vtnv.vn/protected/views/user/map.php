@@ -32,7 +32,7 @@ function drawNode($tree, $lst) {
     else
         $style = '';
 
-    echo '<li><span  class="' . $class . '"' . $style . '><b>' . $tree['value'] . '</b> (Trái:<b>' . $tree['c0'] . '</b> - Phải:<b>' . $tree['c1'] . '</b>)</span>';
+    echo '<li><span  class="' . $class . '"' . $style . '><b>' . $tree['value'] . '</b>--Cấp <b>'.$tree['level'].'</b>--(Trái:<b>' . $tree['c0'] . '</b> - Phải:<b>' . $tree['c1'] . '</b>)</span>';
     if ($class == 'folder') {
         echo '<ul>';
         $i = 0;

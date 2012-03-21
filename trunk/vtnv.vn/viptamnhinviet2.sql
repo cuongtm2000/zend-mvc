@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 3.4.9
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 20, 2012 at 02:17 AM
--- Server version: 5.5.16
--- PHP Version: 5.3.8
+-- Generation Time: Mar 21, 2012 at 01:40 AM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -295,36 +295,29 @@ CREATE TABLE IF NOT EXISTS `dos_module_log` (
   `receiver` varchar(45) NOT NULL,
   `value` float NOT NULL,
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=24 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=40 ;
 
 --
 -- Dumping data for table `dos_module_log`
 --
 
 INSERT INTO `dos_module_log` (`record_id`, `log_type`, `detail`, `time`, `sender`, `receiver`, `value`) VALUES
-(1, '0', 'thử nghiệm', '2012-02-27 08:16:06', 'grouplaptrinh', '', 0),
-(2, '0', '', '2012-02-27 08:16:50', '', '', 0),
-(3, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 15:24:07', 'Hệ thống', 'viptamnhinviet', 0),
-(4, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 15:27:27', 'Hệ thống', 'viptamnhinviet', 0),
-(5, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 15:30:12', 'Hệ thống', 'viptamnhinviet', 0),
-(6, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 16:31:03', 'Hệ thống', 'viptamnhinviet', 0),
-(7, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 16:51:29', 'Hệ thống', 'viptamnhinviet', 0),
-(8, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 16:52:38', 'Hệ thống', 'viptamnhinviet', 0),
-(9, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 16:54:05', 'Hệ thống', 'viptamnhinviet', 0),
-(10, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 16:56:09', 'Hệ thống', 'viptamnhinviet', 0),
-(11, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 17:03:00', 'Hệ thống', 'viptamnhinviet', 0),
-(12, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 17:08:02', 'Hệ thống', 'viptamnhinviet', 0),
-(13, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 17:09:20', 'Hệ thống', 'viptamnhinviet', 0),
-(14, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 17:09:43', 'Hệ thống', 'viptamnhinviet', 0),
-(15, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-15 17:09:46', 'Hệ thống', 'viptamnhinviet', 0),
-(16, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-16 00:36:49', 'Hệ thống', 'viptamnhinviet', 0),
-(17, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin1', '2012-03-16 00:36:52', 'Hệ thống', 'viptamnhinviet', 0),
-(18, 'tangcap', 'Hoa hồng đạt cấp 1', '2012-03-16 00:36:57', '', 'admin1', 2000),
-(19, 'gioithieu', 'Thành viên admin2 được kích hoạt. Người giới thiệu:admin', '2012-03-16 07:20:05', 'Hệ thống', 'viptamnhinviet', 0),
-(20, 'gioithieu', 'Thành viên admin được kích hoạt. Người giới thiệu:viptamnhinviet', '2012-03-16 07:22:51', 'Hệ thống', 'viptamnhinviet', 0),
-(21, 'gioithieu', 'Thành viên admin1 được kích hoạt. Người giới thiệu:viptamnhinviet', '2012-03-16 07:23:53', 'Hệ thống', 'viptamnhinviet', 0),
-(22, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin2', '2012-03-16 07:28:15', 'Hệ thống', 'viptamnhinviet', 0),
-(23, 'gioithieu', 'Thành viên admin4 được kích hoạt. Người giới thiệu:admin2', '2012-03-16 07:34:40', 'Hệ thống', 'viptamnhinviet', 0);
+(24, 'gioithieu', 'Thành viên admin được kích hoạt. Người giới thiệu:viptamnhinviet', '2012-03-20 17:17:02', 'Hệ thống', 'grouplaptrinh', 0),
+(25, 'gioithieu', 'Thành viên admin1 được kích hoạt. Người giới thiệu:viptamnhinviet', '2012-03-20 17:17:02', 'Hệ thống', 'grouplaptrinh', 0),
+(26, 'gioithieu', 'Thành viên admin2 được kích hoạt. Người giới thiệu:admin', '2012-03-20 17:19:25', 'Hệ thống', 'grouplaptrinh', 0),
+(27, 'gioithieu', 'Thành viên admin3 được kích hoạt. Người giới thiệu:admin', '2012-03-20 17:19:25', 'Hệ thống', 'grouplaptrinh', 0),
+(28, 'gioithieu', 'Thành viên admin5 được kích hoạt. Người giới thiệu:admin1', '2012-03-20 17:21:54', 'Hệ thống', 'grouplaptrinh', 0),
+(29, 'tangcap', 'Hoa hồng đạt cấp 1', '2012-03-20 17:22:51', '', 'viptamnhinviet', 2000),
+(30, 'gioithieu', 'Thành viên admin6 được kích hoạt. Người giới thiệu:admin2', '2012-03-20 17:27:17', 'Công ty', 'grouplaptrinh', 0),
+(31, 'gioithieu', 'Thành viên admin7 được kích hoạt. Người giới thiệu:admin2', '2012-03-20 17:32:09', 'Công ty', 'grouplaptrinh', 0),
+(32, 'gioithieu', 'Thành viên admin8 được kích hoạt. Người giới thiệu:admin3', '2012-03-20 18:04:21', 'Công ty', 'grouplaptrinh', 0),
+(33, 'gioithieu', 'Thành viên admin9 được kích hoạt. Người giới thiệu:admin3', '2012-03-20 18:07:52', 'Công ty', 'grouplaptrinh', 0),
+(34, 'tangcap', 'Hoa hồng đạt cấp 1', '2012-03-20 18:16:15', '', 'admin', 2000),
+(35, 'gioithieu', 'Thành viên admin11 được kích hoạt. Người giới thiệu:admin4', '2012-03-20 18:32:45', 'Công ty', 'grouplaptrinh', 0),
+(36, 'gioithieu', 'Thành viên admin12 được kích hoạt. Người giới thiệu:admin5', '2012-03-20 18:32:45', 'Công ty', 'grouplaptrinh', 0),
+(37, 'tangcap', 'Hoa hồng đạt cấp 1', '2012-03-20 18:32:45', '', 'admin2', 2000),
+(38, 'gioithieu', 'Thành viên admin14 được kích hoạt. Người giới thiệu:admin6', '2012-03-20 18:44:24', 'Công ty', 'grouplaptrinh', 0),
+(39, 'gioithieu', 'Thành viên admin15 được kích hoạt. Người giới thiệu:admin6', '2012-03-20 18:44:24', 'Công ty', 'grouplaptrinh', 0);
 
 -- --------------------------------------------------------
 
@@ -425,9 +418,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456007),
+('day_time', 2456008),
 ('max_count', 1),
-('counter', 9),
+('counter', 10),
 ('yesterday', 1);
 
 -- --------------------------------------------------------
@@ -447,7 +440,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1332206224);
+('''127.0.0.1''', 1332270467);
 
 -- --------------------------------------------------------
 
@@ -560,11 +553,35 @@ CREATE TABLE IF NOT EXISTS `dos_module_tables` (
   `left_child` varchar(45) DEFAULT NULL,
   `right_child` varchar(45) DEFAULT NULL,
   `four_child` varchar(180) DEFAULT NULL,
-  `priority` varchar(45) DEFAULT NULL,
+  `priority` int(11) DEFAULT NULL,
   `upgrade_date` datetime DEFAULT NULL,
   `dos_module_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`dos_module_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dos_module_tables`
+--
+
+INSERT INTO `dos_module_tables` (`left_child`, `right_child`, `four_child`, `priority`, `upgrade_date`, `dos_module_usernames_username`) VALUES
+('', '', '', 0, '2012-03-21 01:16:15', 'admin'),
+('admin5', 'admin4', '', 3, '2012-03-21 00:22:51', 'admin1'),
+('', '', '', 0, NULL, 'admin10'),
+('', '', '', 0, NULL, 'admin11'),
+('', '', '', 0, NULL, 'admin12'),
+('', '', '', 0, NULL, 'admin13'),
+('', '', '', 0, NULL, 'admin14'),
+('', '', '', 0, NULL, 'admin15'),
+('', '', '', 0, NULL, 'admin16'),
+('', '', '', 0, '2012-03-21 01:32:45', 'admin2'),
+('admin8', 'admin9', 'admin14|admin15', 2, '2012-03-21 01:07:52', 'admin3'),
+('admin11', '', '', 0, NULL, 'admin4'),
+('admin12', '', '', 0, NULL, 'admin5'),
+('admin14', 'admin15', '', 4, '2012-03-21 01:44:24', 'admin6'),
+('', '', '', 0, NULL, 'admin7'),
+('', '', '', 0, NULL, 'admin8'),
+('', '', '', 0, NULL, 'admin9'),
+('', '', '', 0, '2012-03-21 00:22:51', 'viptamnhinviet');
 
 -- --------------------------------------------------------
 
@@ -585,7 +602,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_usernames` (
   `bank_number` varchar(20) DEFAULT NULL,
   `bank_name` varchar(100) DEFAULT NULL,
   `user_gioithieu` varchar(45) NOT NULL,
-  `balance` varchar(45) NOT NULL DEFAULT '0',
+  `balance` int(11) NOT NULL DEFAULT '0',
   `user_group` varchar(45) NOT NULL,
   `level` int(11) NOT NULL DEFAULT '0',
   `enable` tinyint(1) NOT NULL,
@@ -597,7 +614,24 @@ CREATE TABLE IF NOT EXISTS `dos_module_usernames` (
 --
 
 INSERT INTO `dos_module_usernames` (`username`, `password`, `create_date`, `full_name`, `email`, `birthday`, `address`, `cmnd`, `phone`, `bank_number`, `bank_name`, `user_gioithieu`, `balance`, `user_group`, `level`, `enable`) VALUES
-('viptamnhinviet', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-04 14:30:34', 'Viptamnhinviet', 'aaa@aa.ccc', '1980-01-01', '', '2165454549', '12316546754', 'ACB', '', '', '0', 'administrator', 0, 1);
+('admin', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-20 17:16:02', '', 'aaa@aa.ccc', '1980-01-26', '', '2165454549', '', '', '', 'viptamnhinviet', 0, 'user', 0, 1),
+('admin1', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-20 17:16:53', '', 'aaa@aa.ccc', '1987-01-14', '', '2165454549', '', '', '', 'viptamnhinviet', 0, 'user', 0, 1),
+('admin10', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-20 18:16:05', '', 'aaa@aa.ccc', '1987-01-20', '', '2165454549', '', '', '', 'admin4', 0, 'user', 0, 1),
+('admin11', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-20 18:31:56', '', 'aaa@aa.ccc', '1987-01-27', '', '2165454549', '', '', '', 'admin4', 0, 'user', 0, 1),
+('admin12', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-20 18:32:13', '', 'aaa@aa.ccc', '1987-01-19', '', '2165454549', '', '', '', 'admin5', 0, 'user', 0, 1),
+('admin13', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-20 18:32:32', '', 'aaa@aa.ccc', '1987-01-20', '', '2165454549', '', '', '', 'admin5', 0, 'user', 0, 1),
+('admin14', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-20 18:43:59', '', 'aaa@aa.ccc', '1987-01-19', '', '2165454549', '', '', '', 'admin6', 0, 'user', 0, 1),
+('admin15', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-20 18:44:10', '', 'aaa@aa.ccc', '1987-01-22', '', '2165454549', '', '', '', 'admin6', 0, 'user', 0, 1),
+('admin16', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-20 18:47:53', '', 'aaa@aa.ccc', '1987-01-31', '', '2165454549', '', '', '', 'admin7', 0, 'user', 0, 0),
+('admin2', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-20 17:19:00', '', 'aaa@aa.ccc', '1987-01-20', '', '2165454549', '', '', '', 'admin', 0, 'user', 0, 1),
+('admin3', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-20 17:19:15', '', 'aaa@aa.ccc', '1987-01-21', '', '2165454549', '', '', '', 'admin', 0, 'user', 0, 1),
+('admin4', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-20 17:21:08', '', 'aaa@aa.ccc', '1987-01-20', '', '2165454549', '', '', '', 'admin1', 0, 'user', 0, 1),
+('admin5', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-20 17:21:37', '', 'aaa@aa.ccc', '1987-01-07', '', '2165454549', '', '', '', 'admin1', 0, 'user', 0, 1),
+('admin6', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-20 17:27:11', '', 'aaa@aa.ccc', '1987-01-14', '', '2165454549', '', '', '', 'admin2', 0, 'user', 0, 1),
+('admin7', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-20 17:31:31', '', 'aaa@aa.ccc', '1987-01-21', '', '2165454549', '', '', '', 'admin2', 0, 'user', 0, 1),
+('admin8', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-20 18:04:08', '', 'aaa@aa.ccc', '1987-01-26', '', '2165454549', '', '', '', 'admin3', 0, 'user', 0, 1),
+('admin9', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-20 18:07:46', '', 'aaa@aa.ccc', '1987-01-19', '', '2165454549', '', '', '', 'admin3', 0, 'user', 0, 1),
+('viptamnhinviet', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-04 14:30:34', 'Viptamnhinviet', 'aaa@aa.ccc', '1980-01-01', '', '2165454549', '12316546754', 'ACB', '', '', 0, 'administrator', 1, 1);
 
 -- --------------------------------------------------------
 
