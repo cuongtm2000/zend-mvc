@@ -431,4 +431,15 @@ class User extends CActiveRecord {
         }
     }
 
+	//Back end - Change password
+	public function changePass($password) {
+		$purifier = new CHtmlPurifier();
+		$password = md5($purifier->purify($password));
+
+		$user = Yii::app()->user->id;
+		$command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET password=:password WHERE username=:user');
+		$command->bindParam(":user", $user, PDO::PARAM_STR);
+		$command->bindParam(":password", $password, PDO::PARAM_STR);
+		$command->execute();
+	}
 }
