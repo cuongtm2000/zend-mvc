@@ -14,7 +14,7 @@ $this->breadcrumbs=array(
 ?>
 
 <h1 class="title-right"><span>View User #<?php echo $model->username; ?></span></h1>
-<div class="frame-tent-right">
+<!-- div class="frame-tent-right">
 	<ul class="view-log frame-contact">
 		<li><label class="no">Tên đăng nhập: </label>Viptamnhinviet</li>
 		<li><label class="retail">Ngày đăng ký: </label>2012-03-04 22:30:34 </li>

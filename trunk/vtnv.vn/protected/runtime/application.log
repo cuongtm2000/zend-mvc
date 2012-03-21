@@ -1122,3 +1122,36 @@ Stack trace:
 REQUEST_URI=/yii/vtnv.vn/admin/account
 in E:\xampp\htdocs\yii\vtnv.vn\protected\modules\admin\controllers\AccountController.php (23)
 in E:\xampp\htdocs\yii\vtnv.vn\index.php (21)
+2012/03/21 08:08:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "table".' in E:\xampp\php\www\framework\web\CController.php:484
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(271): CController->missingAction('table')
+#1 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('table')
+#2 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('user/table')
+#3 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\yii\vtnv.vn\index.php(21): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/vtnv.vn/user/table
+HTTP_REFERER=http://localhost/yii/vtnv.vn/log
+---
+2012/03/21 08:21:32 [error] [php] Undefined offset: 1 (E:\xampp\htdocs\yii\vtnv.vn\protected\views\user\table.php:10)
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(870): UserController->renderFile()
+#1 E:\xampp\php\www\framework\web\CController.php(783): UserController->renderPartial()
+#2 E:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php(48): UserController->render()
+#3 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): UserController->actionTable()
+#4 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#6 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): UserController->filterAccessControl()
+#9 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#11 E:\xampp\php\www\framework\web\CController.php(266): UserController->runActionWithFilters()
+#12 E:\xampp\php\www\framework\web\CWebApplication.php(276): UserController->run()
+#13 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\yii\vtnv.vn\index.php(21): CWebApplication->run()
+REQUEST_URI=/yii/vtnv.vn/user/table
+in E:\xampp\htdocs\yii\vtnv.vn\protected\views\user\table.php (10)
+in E:\xampp\htdocs\yii\vtnv.vn\protected\controllers\UserController.php (48)
+in E:\xampp\htdocs\yii\vtnv.vn\index.php (21)
