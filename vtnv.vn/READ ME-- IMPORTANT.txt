@@ -1,0 +1,14 @@
+Chỉnh sửa CSDL các trường sau
+ 
+Table dos_module_usernames trường balance đổi lại int(11)
+
+dos_module_tables priority int(11)
+
+Demo: Danh sach chờ thoát bàn, Danh sach thoat ban
+http://vicongdongviet.vn
+phongbaria/123456
+
+DAnh sách thoát bàn: Username, Họ Tên, CMND, Ngày thoát bàn, Level
+Bàn thành viên
+
+User phải được cty sắp xếp trước khi đạt chuẩn (luu ý)

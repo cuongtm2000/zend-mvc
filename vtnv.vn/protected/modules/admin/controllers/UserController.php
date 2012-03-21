@@ -2,8 +2,6 @@
 
 class UserController extends AdminController {
 
-    public $layout = '//layouts/column2';
-
     public function actionView($id) {
         $this->render('view', array(
             'model' => $this->loadModel($id),
@@ -53,39 +51,15 @@ class UserController extends AdminController {
         ));
     }
 
-    public function actionMap() {
-        $user = new User();
-        $this->render('map', array(
-            'tree' => $user->createTree(Yii::app()->user->name),
-            'listUserQuanly' => '',
-        ));
-    }
-
-    public function actionTransferv() {
-        $model = new TransferForm();
-        if (isset($_POST['TransferForm'])) {
-            $model->attributes = $_POST['TransferForm'];
-            if ($model->validate()) {
-                $model->transfer();
-                $this->redirect(array('/log'));
-            }
-        }
-        $this->render('transferv', array(
-            'model' => $model,
-            'user' => User::model()->findByPk(Yii::app()->user->name),
-        ));
-    }
-
     public function actionActive() {
         $model = new User('active');
         if (isset($_POST['ids'])) {
             $model->activeItem($_POST);
-            $this->redirect('admin/acive');
+          //   $this->redirect(Yii::app()->user->returnUrl);
         }
         $this->render('active', array(
             'model' => $model->getUnActive(),
             'debug'=>$model->debug,
-            //'post' => $_POST,
         ));
     }
 
@@ -97,16 +71,25 @@ class UserController extends AdminController {
     }
 
     public function actionDatchuan() {
-        $model = new User();
-        
+        $model = new User();        
         if (isset($_POST['ids'])) {
-            
+            foreach ($_POST['ids'] as $key => $value) {
+                $t=  Tables::model()->findByPk($key);
+                $t->priority=intval($value);                                
+                $t->save();
+            }
+            //sort
+            $list_u=$model->listTVdatchuan();
+            $k=1;
+            foreach ($list_u as $value) {
+                $value->priority=$k++;
+                $value->save();
+            }
         }
-        
         
         $this->render('datchuan', array(
             'model' => $model->listTVdatchuan(),
-            'post'  =>$_POST['ids'],
+        //    'post'  =>$_POST['ids'],
         ));
     }
 

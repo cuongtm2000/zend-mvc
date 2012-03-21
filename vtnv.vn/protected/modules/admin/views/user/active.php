@@ -3,7 +3,7 @@ $this->breadcrumbs = array(
     'Users' => array('index'),
     'Manage',
 );
-
+//var_dump($debug);
 ?>
 
 <div class="content">
@@ -37,15 +37,13 @@ $this->breadcrumbs = array(
 		               <td><input type="checkbox" name="ids[]" value="' . $value['username'] . '" /></td>
 		               <td><strong>' . $value['username'] . '</strong></td>
 		               <td>' . $value['full_name'] . '</td>
-		             	<td>' . $value['birthday'] . '</td>
-		               <td>' . substr($value['create_date'], 0, 10) . '</td>
-		               <td>' . $value['user_gioithieu'] . '</td>
-		    
+                               <td>' . $value['birthday'] . '</td>
+                               <td>' . substr($value['create_date'], 0, 10) . '</td>
+		               <td>' . $value['user_gioithieu'] . '</td>		    
 		               <td>' . $value['phone'] . '</td>
 		               <td>' . $value['email'] . '</td>
 		               <td>' . $value['bank_number'] . '</td>
-		               <td>' . $value['bank_name'] . '</td>
-		               
+		               <td>' . $value['bank_name'] . '</td>		               
 		            </tr>';
                     }
                 } else {
@@ -66,9 +64,6 @@ $this->breadcrumbs = array(
                 Xóa
             </a>
         </div>
-
-
-
     </form>
 
     <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/common.js"></script></div>
