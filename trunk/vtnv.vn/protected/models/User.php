@@ -315,16 +315,37 @@ class User extends CActiveRecord {
 		}
 	}
 
-	/** List TV đã thoát bàn
-	 *	   tức TV có level > 0 và có ít nhất
-	 *	   1 trong 2 nhánh con trong bàn còn khuyết
+	/**
+	 * List TV đã thoát bàn
+	 * tức TV có level > 0 và có ít nhất
+	 * 1 trong 2 nhánh con trong bàn còn khuyết
 	 */
 	public function listTVthoatban() {
-		return Tables::model()->findAll('left_child = "" or right_child = "" order by upgrade_date desc');
+		$criteria = new CDbCriteria();
+		$criteria->order = 'upgrade_date DESC';
+		$criteria->condition = 'left_child = "" or right_child = ""';
+		$count = Tables::model()->count($criteria);
+
+		// elements per page
+		$pages = new CPagination($count);
+		$pages->pageSize = 15;
+		$pages->applyLimit($criteria);
+
+		return array('models' => Tables::model()->findAll($criteria), 'pages' => $pages);
 	}
 
 	public function listTVdatchuan() {
-		return Tables::model()->findAll('left_child !="" and right_child != "" order by priority,upgrade_date asc');
+		$criteria = new CDbCriteria();
+		$criteria->order = 'priority, upgrade_date ASC';
+		$criteria->condition = 'left_child !="" and right_child != ""';
+		$count = Tables::model()->count($criteria);
+
+		// elements per page
+		$pages = new CPagination($count);
+		$pages->pageSize = 15;
+		$pages->applyLimit($criteria);
+
+		return array('models' => Tables::model()->findAll($criteria), 'pages' => $pages);
 	}
 
 	public function getLevel($user) {
