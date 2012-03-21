@@ -311,14 +311,14 @@ tbody tr.green td, tbody tr.green a{background: #c2ecb7; color : #aaa}
 /*diagram*/
 .diagram{border:2px solid #000; text-align:center; margin:0 0 20px 0; padding:10px; position:relative; height:200px}
 .diagram span{}
-.diagram h4{width:130px;border:1px inset #f00;padding:2px}
-.level-1{position:absolute;right:320px}
-.level-2-1{position:absolute; left:100px; top:50px} 
-.level-2-2{position:absolute; right:100px; top:50px}
-.level-3-1{position:absolute; left:10px; top:100px}
-.level-3-2{position:absolute; left:200px; top:100px}
-.level-3-3{position:absolute; right:10px; top:100px}
-.level-3-4{position:absolute; right:200px; top:100px}
+.diagram h4{width:130px;padding:5px 2px;color:#fff;-webkit-border-radius:3px;-moz-border-radius:3px}
+.level-1{position:absolute;right:320px;background:#f90}
+.level-2-1{position:absolute; left:100px; top:50px;background:#00FFFF} 
+.level-2-2{position:absolute; right:100px; top:50px;background:#00FFFF}
+.level-3-1{position:absolute; left:10px; top:100px;background:#08689A}
+.level-3-2{position:absolute; left:200px; top:100px;background:#08689A}
+.level-3-3{position:absolute; right:10px; top:100px;background:#08689A}
+.level-3-4{position:absolute; right:200px; top:100px;background:#08689A}
 
 /*User view-log*/
 .chanpass label{padding:3px 0 !important;width:150px !important;}
