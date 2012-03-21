@@ -181,7 +181,7 @@ a:hover{color:#000;}
 
 /*.frame-contact span{color:#F00;font-weight:bold} */
 .frame-contact .bton-dk{margin:0px 10px 5px 0;background:url(../images/button.gif) no-repeat;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
-.frame-contact .bton-user{background:#392F29;width:100px;color:#fff; height:28px;text-align:center;border:none;font-weight:bold}
+.frame-contact .bton-user{background:#392F29;width:100px;color:#fff; height:28px;text-align:center;border:none;font-weight:bold;cursor:pointer;}
 
 /*Gian hang tieu bieu title-booth*/
 .title-booth{color:#fff; background:#FF7200;margin:0 0 5px 0; font-size:10pt; font-weight:bold;-webkit-border-radius:4px;-moz-border-radius:4px}
