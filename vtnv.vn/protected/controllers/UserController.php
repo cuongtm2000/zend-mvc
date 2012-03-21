@@ -42,6 +42,11 @@ class UserController extends Controller {
             'listUserQuanly' => '',
         ));
     }
+    public function actionTable() {
+        $this->render('table', array(
+            'info' => Tables::model()->findByPk(Yii::app()->user->name),
+        ));
+    }
     public function actionChangepass() {
         /*$user = new User();
         $this->render('map', array(
