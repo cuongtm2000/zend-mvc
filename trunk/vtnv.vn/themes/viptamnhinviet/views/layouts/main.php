@@ -125,6 +125,8 @@
                                     <li><a href="<?php echo Yii::app()->baseUrl ?>/san-pham/dang-san-pham" title="">Đăng sản phẩm</a></li>
                                     <li><a href="<?php echo Yii::app()->baseUrl ?>/user/map" title="">Cây hệ thống</a></li>
                                     <li class="border-none"><a  href="<?php echo Yii::app()->baseUrl ?>/user/table" title="Bàn thành viên">Bàn thành viên</a></li>
+                                    <li class="border-none"><a  href="<?php echo Yii::app()->baseUrl ?>/user/datchuan" title="Danh sách bàn sắp thoát">Danh sách bàn sắp thoát</a></li>
+                                    <li class="border-none"><a  href="<?php echo Yii::app()->baseUrl ?>/user/thoatban" title="Thành viên thoát bàn">Thành viên thoát bàn</a></li>
                                     <li><a href="<?php echo Yii::app()->baseUrl ?>/log" title="">Lịch sử giao dịch</a></li>
                                     <li><a href="#" title="">Số tiền tích lũy: <span class="error"><b class="balan"><?php echo Yii::app()->session['balance'] ?></b> V</span></a></li>
                                     <li class="border-none"><a  href="<?php echo Yii::app()->baseUrl ?>/user/transferv" title="Chuyển khoản">Chuyển khoản</a></li>
@@ -185,34 +187,34 @@
                                         </div>
                                         <div class="clear"></div>
                                     </li>
-<? endforeach ?>
+                                <? endforeach ?>
                             </ul>
                         </div>
                         <!--End frame left 2-->
-<?php if ($this->listItemHot): ?>
+                        <?php if ($this->listItemHot): ?>
                             <div class="frame-left-1">
                                 <h3 class="title-left"><span>SẢN PHẨM TIÊU BIỂU</span></h3>
                                 <ul class="sub-ty-pro">
-                                        <?php foreach ($this->listItemHot as $value): ?>
+                                    <?php foreach ($this->listItemHot as $value): ?>
                                         <li>
-        <?php if ($value['pic_thumb']): ?>
+                                            <?php if ($value['pic_thumb']): ?>
                                                 <div class="img-ty-pro">
                                                     <a href="<?php echo Yii::app()->request->baseUrl ?>/san-pham/<?php echo $value['tag'] ?>/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'>
                                                         <img src="<?php echo Yii::app()->baseUrl . USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt='<?php echo $value['title'] ?>' />
                                                     </a>
                                                 </div>
-        <?php endif; ?>
+                                            <?php endif; ?>
                                             <div class="right-ty-pro">
                                                 <h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl ?>/san-pham/<?php echo $value['tag'] ?>/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'><?php echo $value['title'] ?></a></h2>
                                                 <p class="price"><b>Giá : </b> <span><?php echo number_format($value['unit'], 0, '', '.'); ?></span></p>
                                             </div> <div class="clear"></div>
                                         </li>
-    <?php endforeach; ?>
+                                    <?php endforeach; ?>
                                 </ul>
                                 <!--End typical products-->
                                 <p class="all-view-pro"><a href="#" title="">Xem thêm sản phẩm &raquo;</a></p>
                             </div>
-<?php endif; ?>
+                        <?php endif; ?>
                         <!--End frame left 1-->
                         <!-- <div class="frame-left-1">
                             <h3 class="title-left"><span>KHUYẾN MÃI MỚI NHẤT</span></h3>
@@ -235,14 +237,14 @@
                             <p class="all-view-pro"><a href="#" title="">Xem thêm sản phẩm &raquo;</a></p>
                         </div> -->
                         <!--End frame left 1-->
-                            <?php if (isset($this->advs_left) && ($this->advs_left)): ?>
+                        <?php if (isset($this->advs_left) && ($this->advs_left)): ?>
                             <h3 class="title-adv-left">ĐỐI TÁC VÀNG</h3>
                             <ul class="adv-left">
                                 <?php foreach ($this->advs_left as $value): ?>
                                     <li><a href="<?php echo $value['url'] ?>" title="<?php echo $value['title'] ?>" target="<?php echo $value['type'] ?>"><img src="<?php echo Yii::app()->baseUrl . USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>" /></a></li>
-                            <?php endforeach; ?>
+                                <?php endforeach; ?>
                             </ul>
-<?php endif; ?>
+                        <?php endif; ?>
                         <!--End doi tac vang-->
                         <!-- <h3 class="title-member-left-1">THÀNH VIÊN QUYÊN GÓP NHIỀU NHẤT</h3>
                         <ul class="list-member">
@@ -271,7 +273,7 @@
                     </div>
                     <!--End left content-->
                     <div id="right-content">
-<?php echo $content; ?>
+                        <?php echo $content; ?>
                     </div>
                     <!--End right content-->
                     <div class="clear"></div>
@@ -291,8 +293,8 @@
                 <?php if (isset($this->advs_bottom) && ($this->advs_bottom)): ?>
                     <?php foreach ($this->advs_bottom as $value): ?>
                         <a href="<?php echo $value['url'] ?>" title="<?php echo $value['title'] ?>" target="<?php echo $value['type'] ?>"><img src="<?php echo Yii::app()->baseUrl . USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>"  /></a>
-    <?php endforeach; ?>
-<?php endif; ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
                 <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-fter.jpg" alt="" />
 
                 <div id="footer">
@@ -301,8 +303,8 @@
                         <li><a href="<?php echo Yii::app()->homeUrl ?>gioi-thieu" title="Giới thiệu">Giới thiệu</a></li>
                         <li><a href="<?php echo Yii::app()->homeUrl ?>san-pham" title="Sản phẩm">Sản phẩm</a></li>
                         <li><a href="<?php echo Yii::app()->homeUrl ?>tin-tuc" title="Tin tức">Tin tức</a></li>
-                    <li><a href="<?php echo Yii::app()->homeUrl ?>video" title="Video">Video</a></li>
-						<li><a href="<?php echo Yii::app()->homeUrl ?>lien-he.html" title="Liên hệ">Liên hệ</a></li>
+                        <li><a href="<?php echo Yii::app()->homeUrl ?>video" title="Video">Video</a></li>
+                        <li><a href="<?php echo Yii::app()->homeUrl ?>lien-he.html" title="Liên hệ">Liên hệ</a></li>
                     </ul> <div class="clear"></div>
                     <div class="frame-info-footer">
                         <div class="left-fter">

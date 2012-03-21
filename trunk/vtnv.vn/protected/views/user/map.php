@@ -1,16 +1,7 @@
-
+<h1 class="title-right"><span>Cây hệ thống</span></h1>
 <?php
-$this->breadcrumbs = array(
-    'Users' => array('index'),
-    $tree['value'] => array('view', 'id' => $tree['value']),
-    'Sơ đồ cây',
-);
-
-
-
 Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/jquery.treeview.css');
 Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.treeview.js');
-
 ?>
 
 

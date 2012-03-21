@@ -76,7 +76,7 @@ class UserController extends AdminController {
 			//sort
 			$list_u = $model->listTVdatchuan();
 			$k = 1;
-			foreach ($list_u as $value) {
+			foreach ($list_u['models'] as $value) {
 				$value->priority = $k++;
 				$value->save();
 			}
