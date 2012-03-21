@@ -16,21 +16,22 @@ $this->breadcrumbs=array(
 <h1 class="title-right"><span>View User #<?php echo $model->username; ?></span></h1>
 <!-- div class="frame-tent-right">
 	<ul class="view-log frame-contact">
-		<li><label class="no">Tên đăng nhập: </label>Viptamnhinviet</li>
-		<li><label class="retail">Ngày đăng ký: </label>2012-03-04 22:30:34 </li>
-		<li><label class="no">Họ tên: </label>Nguyễn Văn Tèo</li>
-		<li><label class="retail">Email: </label>teo@gmail.com</li>
-		<li><label class="no">Ngày sinh: </label>09-09-999</li>
-		<li><label class="retail">Địa chỉ: </label>Nhị Thiên Đường</li>
-		<li><label class="no">Số CMND: </label>201030405</li>
-		<li><label class="retail">Số điện thoại: </label>0909 009 009</li>
-		<li><label class="no">Số TK ngân hàng: </label>116113</li>
-		<li><label class="retail">Tên ngân hàng: </label>Ngân hàng Thế Nhất vip</li>
-		<li><label class="no">Người giới thiệu: </label>diemvuong</li>
-		<li><label class="retail">Balance: </label>0</li>
-		<li><label class="no">Level: </label>1</li>
+		<li><label class="no">Tên đăng nhập: </label><?php echo $model['username'] ?></li>
+		<li><label class="retail">Ngày đăng ký: </label><?php echo $model['create_date'] ?> </li>
+		<li><label class="no">Họ tên: </label><?php echo $model['full_name'] ?></li>
+		<li><label class="retail">Email: </label><?php echo $model['email'] ?></li>
+		<li><label class="no">Ngày sinh: </label><?php echo $model['birthday'] ?></li>
+		<li><label class="retail">Địa chỉ: </label><?php echo $model['address'] ?></li>
+		<li><label class="no">Số CMND: </label><?php echo $model['cmnd'] ?></li>
+		<li><label class="retail">Số điện thoại: </label><?php echo $model['phone'] ?></li>
+		<li><label class="no">Số TK ngân hàng: </label><?php echo $model['bank_number'] ?></li>
+		<li><label class="retail">Tên ngân hàng: </label><?php echo $model['bank_name'] ?></li>
+		<li><label class="no">Người giới thiệu: </label><?php echo $model['user_gioithieu'] ?></li>
+		<li><label class="retail">Balance: </label><?php echo $model['balance'] ?></li>
+		<li><label class="no">Level: </label><?php echo $model['level'] ?></li>
 	</ul>        
 </div> <!--End frame tent right-->
+
 <div class="frame-tent-right">
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
