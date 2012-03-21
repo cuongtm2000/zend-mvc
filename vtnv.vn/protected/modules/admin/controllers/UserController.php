@@ -62,9 +62,7 @@ class UserController extends AdminController {
 
 	public function actionThoatban() {
 		$model = new User();
-		$this->render('thoatban', array(
-			'model' => $model->listTVthoatban(),
-		));
+		$this->render('thoatban', array('model' => $model->listTVthoatban()));
 	}
 
 	public function actionDatchuan() {

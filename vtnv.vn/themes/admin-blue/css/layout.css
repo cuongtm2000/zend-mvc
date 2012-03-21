@@ -151,7 +151,7 @@ span.required, .errorMessage{color: red;}
 .errorSummary ul li{padding:2px 0; color: red}
 
 /* paging */
-ul.paging{float: right; margin-top: 7px;}
+ul.paging{float: right; margin-top: 7px; margin-bottom: 5px}
 
 .content-index{margin-left:0.8%; margin-bottom:0.8em; padding:0.3em; padding-right: 0}
 /* welcome */
