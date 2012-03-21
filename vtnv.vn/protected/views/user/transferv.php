@@ -4,7 +4,7 @@
 <div class="frame-tent-right">
     <?php $form = $this->beginWidget('CActiveForm', array('id' => 'transfer-form', 'enableAjaxValidation' => false,));?>
 	<p class="note">Dấu <span class="required">*</span> là những thông tin bắt buộc nhập liệu.</p>
-    <?php echo $form->errorSummary($model); ?>
+    <?php echo $form->errorSummary($model, ''); ?>
     <div class="row">
         <p class="my-price">Số tiền hiện tại của bạn là: <span><?php echo $user['balance'] ?> V</span></p>
     </div>
