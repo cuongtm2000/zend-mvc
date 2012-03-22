@@ -295,7 +295,6 @@
                         <a href="<?php echo $value['url'] ?>" title="<?php echo $value['title'] ?>" target="<?php echo $value['type'] ?>"><img src="<?php echo Yii::app()->baseUrl . USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>"  /></a>
                     <?php endforeach; ?>
                 <?php endif; ?>
-                <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-fter.jpg" alt="" />
 
                 <div id="footer">
                     <ul class="nav-fter">
