@@ -40,7 +40,7 @@
     <body>
         <div id="wrapper">
             <div class="top-page">
-                <?php if (Yii::app()->user->isGuest == true): ?><p class="left">Bạn chưa đăng nhập tài khoản thành viên của Viptamtnhinviet!</p><?php endif ?>
+                <?php if (Yii::app()->user->isGuest == true): ?><p class="left">Bạn chưa đăng nhập tài khoản thành viên của Viptamnhinviet!</p><?php endif ?>
                 <?php
                 $this->widget('zii.widgets.CMenu', array(
                     'id' => 'top-right',
