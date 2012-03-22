@@ -1,0 +1,147 @@
+<?php
+
+/**
+ * This is the model class for table "dos_configs".
+ *
+ * The followings are the available columns in table 'dos_configs':
+ * @property string $config_name
+ * @property integer $config_value
+ * @property string $config_desc
+ * @property string $dos_templates_template
+ *
+ * The followings are the available model relations:
+ * @property DosTemplates $dosTemplatesTemplate
+ */
+class Configs extends CActiveRecord {
+
+    /**
+     * Returns the static model of the specified AR class.
+     * @return Configs the static model class
+     */
+    public static function model($className = __CLASS__) {
+        return parent::model($className);
+    }
+
+    /**
+     * @return string the associated database table name
+     */
+    public function tableName() {
+        return 'dos_configs';
+    }
+
+    /**
+     * @return array validation rules for model attributes.
+     */
+    public function rules() {
+        // NOTE: you should only define rules for those attributes that
+        // will receive user inputs.
+        return array(
+            array('config_name, config_value, dos_templates_template', 'required'),
+            array('config_value', 'numerical', 'integerOnly' => true),
+            array('config_name', 'length', 'max' => 30),
+            array('config_desc', 'length', 'max' => 50),
+            array('dos_templates_template', 'length', 'max' => 6),
+            // The following rule is used by search().
+            // Please remove those attributes that should not be searched.
+            array('config_name, config_value, config_desc, dos_templates_template', 'safe', 'on' => 'search'),
+        );
+    }
+
+    /**
+     * @return array relational rules.
+     */
+    public function relations() {
+        // NOTE: you may need to adjust the relation name and the related
+        // class name for the relations automatically generated below.
+        return array(
+            'dosTemplatesTemplate' => array(self::BELONGS_TO, 'DosTemplates', 'dos_templates_template'),
+        );
+    }
+
+    /**
+     * @return array customized attribute labels (name=>label)
+     */
+    public function attributeLabels() {
+        return array(
+            'config_name' => 'Config Name',
+            'config_value' => 'Config Value',
+            'config_desc' => 'Config Desc',
+            'dos_templates_template' => 'Dos Templates Template',
+        );
+    }
+
+    /**
+     * Retrieves a list of models based on the current search/filter conditions.
+     * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+     */
+    public function search() {
+        // Warning: Please modify the following code to remove attributes that
+        // should not be searched.
+
+        $criteria = new CDbCriteria;
+
+        $criteria->compare('config_name', $this->config_name, true);
+        $criteria->compare('config_value', $this->config_value);
+        $criteria->compare('config_desc', $this->config_desc, true);
+        $criteria->compare('dos_templates_template', $this->dos_templates_template, true);
+
+        return new CActiveDataProvider($this, array(
+                    'criteria' => $criteria,
+                ));
+    }
+
+    //Front end - config template
+    public static function configTemplate($config, $template) {
+        $command = Yii::app()->db->createCommand('SELECT config_value FROM dos_configs WHERE config_name=:config AND dos_templates_template=:template');
+        $command->bindParam(":template", $template, PDO::PARAM_STR);
+        $command->bindParam(":config", $config, PDO::PARAM_STR);
+        return $command->queryScalar();
+    }
+
+    //Front end - config template
+    public static function template($template) {
+        $data = array();
+        $command = Yii::app()->db->createCommand('SELECT config_name, config_value FROM dos_configs WHERE dos_templates_template=:template');
+        $command->bindParam(":template", $template, PDO::PARAM_STR);
+        $rows = $command->queryAll();
+        foreach ($rows as $value) {
+            $data[$value['config_name']] = $value['config_value'];
+        }
+        return $data;
+    }
+    //Back end - Add item
+    public function addItem($data = NULL, $template) {
+        $this->deleteItem($template); //delete
+
+        $config_name = $data->getPost('config_name', '');
+        $config_value = $data->getPost('config_value', '');
+        $config_desc = $data->getPost('config_desc', '');
+
+        for ($i = 0; $i < 30; $i++) {
+            if (!empty($config_name[$i]) && !empty($config_value[$i])) {
+                $this->insertItem(trim($config_name[$i]), trim($config_value[$i]), trim($config_desc[$i]), $template);
+            }
+        }
+    }
+    //Back end - insert item
+    private function insertItem($config_name, $config_value, $config_desc, $template) {
+        $command = Yii::app()->db->createCommand('INSERT INTO ' . $this->tableName() . ' (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES (:config_name, :config_value, :config_desc, :template)');
+        $command->bindParam(":config_name", $config_name, PDO::PARAM_STR);
+        $command->bindParam(":config_value", $config_value, PDO::PARAM_INT);
+        $command->bindParam(":config_desc", $config_desc, PDO::PARAM_STR);
+        $command->bindParam(":template", $template, PDO::PARAM_STR);
+        $command->execute();
+    }
+    //Back end - delete item
+    private function deleteItem($template) {
+        $command = Yii::app()->db->createCommand('DELETE FROM ' . $this->tableName() . ' WHERE dos_templates_template=:template');
+        $command->bindParam(":template", $template, PDO::PARAM_STR);
+        $command->execute();
+    }
+    //Back end - Config by Template
+    public function configByTemplate($template){
+        $command = Yii::app()->db->createCommand('SELECT config_name, config_value, config_desc FROM '.$this->tableName().' WHERE dos_templates_template=:template');
+        $command->bindParam(":template", $template, PDO::PARAM_STR);
+        return $command->queryAll();
+    }
+}
