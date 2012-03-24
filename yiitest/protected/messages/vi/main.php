@@ -26,4 +26,5 @@ return array(
 	'noRecord' => 'Không tồn tại mẫu tin',
 	'send' => 'Gửi',
 	'reset' => 'Nhập lại',
+	'goback' => 'Trở lại',
 );

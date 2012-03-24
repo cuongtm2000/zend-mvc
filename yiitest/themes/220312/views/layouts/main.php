@@ -108,8 +108,7 @@
 					<?php if($value['support_type']=='yahoo'): ?>
 						<?php if($value['support_name']) echo '<li>'.$value['support_name'].'</li>'; ?>
 						<?php if($value['support_phone']) echo '<li>'.$value['support_phone'].'</li>'; ?>
-						<li><a href="ymsgr:sendIM?<?php echo $value['support_value'] ?>">
-							<img src="http://mail.opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2" border="0" alt="<?php echo $value['support_value'] ?>" /></a></li>
+						<li><a href="ymsgr:sendIM?<?php echo $value['support_value'] ?>"><img src="http://mail.opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2" border="0" alt="<?php echo $value['support_value'] ?>" /></a></li>
 					<?php endif; ?>
 				<?php endforeach; ?>	
 			</ul>
@@ -126,7 +125,7 @@
 				<ul class="bg-adv">
 				<?php foreach($this->function['advs_left'] as $value): ?>
 					<li>
-						<a href="<?php echo $value['url'] ?>" target="<?php echo $value['type'] ?>" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" /></a></p>
+						<a href="<?php echo $value['url'] ?>" target="<?php echo $value['type'] ?>" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" /></a>
 					</li>
 				<?php endforeach; ?>
 				</ul>
@@ -150,9 +149,9 @@
 			<ul class="typical-product">
 					<?php foreach($this->function['products_hot'] as $value): ?>
 						<?php if($value['pic_thumb']): ?>
-							<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/products/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'.LANG] ?>" ><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" /></a></li>
+							<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value->ProductsCat->tag ?>/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" /></a></li>
 						<?php else: ?>
-							<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/product-thumb.jpg" alt="<?php echo $value['title'.LANG] ?>" /></li>
+							<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value->ProductsCat->tag ?>/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/product-thumb.jpg" alt="<?php echo $value['title'.LANG] ?>" /></a></li>
 						<?php endif; ?>
 					<?php endforeach; ?>
 			</ul>

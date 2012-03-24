@@ -285,9 +285,19 @@ class Products extends CActiveRecord {
 
 	//Front end - list item hot
 	public function listItemHot() {
-		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', pic_thumb, ' . $this->tableName() . '.tag, unit FROM ' . $this->tableName() . ', dos_module_products_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = dos_module_products_cat.cat_id AND dos_usernames_username=:user AND hot = 1 AND enable = 1 ORDER BY record_order DESC, postdate DESC LIMIT 0, 8');
+		/*$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', pic_thumb, ' . $this->tableName() . '.tag, unit FROM ' . $this->tableName() . ', dos_module_products_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = dos_module_products_cat.cat_id AND dos_usernames_username=:user AND hot = 1 AND enable = 1 ORDER BY record_order DESC, postdate DESC LIMIT 0, 8');
 		$command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
-		return $command->queryAll();
+		return $command->queryAll();*/
+
+		$criteria = new CDbCriteria();
+		$criteria->with = array('ProductsCat');
+		$criteria->select = 'title' . LANG . ', pic_thumb, tag, unit, hot';
+		$criteria->order = 'record_order DESC, postdate DESC';
+		$criteria->condition = 'dos_usernames_username=:user AND hot = 1 AND enable = 1';
+		$criteria->params = array(':user' => $this->_subdomain);
+		$criteria->limit = 4; //can thay doi theo template
+
+		return Products::model()->findAll($criteria);
 	}
 
 	//Front end - list Item by Cat
@@ -311,10 +321,22 @@ class Products extends CActiveRecord {
 	//Front end - get detail item
 	public function detailItem($tag) {
 		$id = $this->getIDByTag($tag);
-		/*$command = Yii::app()->db->createCommand('SELECT title' . LANG . ', pic_full, pic_desc, detail' . LANG . ', tag, description, unit FROM ' . $this->tableName() . ' WHERE record_id=:id');
-				$command->bindParam(":id", $id, PDO::PARAM_INT);
-				return $command->queryRow();*/
-		return $this->loadEdit($id);
+
+		/*$command = Yii::app()->db->createCommand('SELECT title' . LANG . ', pic_full, pic_desc, content' . LANG . ', tag, description, unit FROM ' . $this->tableName() . ' WHERE record_id=:id');
+		$command->bindParam(":id", $id, PDO::PARAM_INT);
+		return $command->queryRow();*/
+
+		$criteria = new CDbCriteria();
+		$criteria->with = array('ProductsCat');
+		$criteria->condition = 'dos_usernames_username=:user AND enable=1';
+		$criteria->params = array(':user' => $this->_subdomain);
+
+		$this->_model = Products::model()->findByPk($id, $criteria);
+
+		if ($this->_model === null) {
+			throw new CHttpException(404, 'The requested page does not exist.');
+		}
+		return $this->_model;
 	}
 
 	//Front end - find record_id by tag

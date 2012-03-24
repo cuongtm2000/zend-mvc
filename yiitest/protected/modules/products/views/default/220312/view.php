@@ -3,8 +3,9 @@
 <div class="frame-tent-right">
 	<div class="frame-img-info"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $item['pic_full'] ?>" alt="<?php echo $item['title'.LANG] ?>" /></div>
 	<?php echo $item['content'.LANG] ?>
-	<p class="black"><a href="javascript: history.go(-1)" title="Trở lại" >Trở lại</a></p>
+	<p class="black"><a href="javascript: history.go(-1)" title="<?php echo Yii::t('main', 'goback')?>" ><?php echo Yii::t('main', 'goback')?></a></p>
 </div> <!--End frame tent right-->
+
 <h3 class="title-right"><span>Sản phẩm khác</span></h3>
 <div class="all-product"> 
 	<div class="product">
