@@ -28,6 +28,7 @@ class ConfigsController extends AdminController {
         //Submit
         if (Yii::app()->request->getIsPostRequest()) {
             $model->addItem(Yii::app()->request);
+			$this->refresh();
         }
         $this->render('menu', array('models' => $model->listMenuByAdmin()));
     }
@@ -37,6 +38,7 @@ class ConfigsController extends AdminController {
         //Submit
         if (Yii::app()->request->getIsPostRequest()) {
             $model->addItem(Yii::app()->request);
+			$this->refresh();
         }
         $this->render('web', array('models' => $model->listRecord()));
     }

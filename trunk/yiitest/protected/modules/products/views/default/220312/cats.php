@@ -26,13 +26,13 @@
             <div class="product">
                 <?php if($value['pic_thumb']): ?>
                 <div class="product-img">
-                    <a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag'] ?>/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title' . LANG] ?>" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" /></a>
+                    <a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag'] ?>/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" /></a>
                 </div>
                 <?php endif; ?>
                 
                 <h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag'] ?>/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title' . LANG] ?>"><?php echo $value['title' . LANG] ?></a></h2>
                 <p class="price"><?php echo number_format($value['unit'], 0, '', '.'); ?> VND</p>
-                <p class="bton-pro"><a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag'] ?>/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title' . LANG] ?>" title="CHI TIẾT" class="bton-detail">Chi tiết</a> <a href="<?php echo Yii::app()->request->baseUrl . LANGURL?>/contact" title="<?php echo $value['title' . LANG] ?>" title="Liên hệ" class="bton-order">Liên hệ</a> </p>
+                <p class="bton-pro"><a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag'] ?>/<?php echo $value['tag'] ?>.html" title="<?php echo $this->lang['detail']?>: <?php echo $value['title' . LANG] ?>" class="bton-detail"><?php echo $this->lang['detail']?></a> <a href="<?php echo Yii::app()->request->baseUrl . LANGURL?>/<?php echo Yii::t('user', 'contact.link')?>" title="<?php echo $this->lang['contact']?>: <?php echo $value['title' . LANG] ?>" class="bton-order"><?php echo $this->lang['contact']?></a> </p>
             </div>
         <?php endforeach; ?>
     </div><!--End All products-->

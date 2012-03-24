@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 24, 2012 at 05:22 AM
+-- Generation Time: Mar 24, 2012 at 09:28 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -214,11 +214,13 @@ INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('delete', 'Xóa', 'Delete', 1),
 ('description', 'Mô tả', 'Decription', 1),
 ('descriptionen', 'Mô tả En', 'Description', 1),
+('detail', 'Chi tiết', 'Detail', 0),
 ('developed', 'Phát triển bởi', 'Developed by', 0),
 ('edit', 'Chỉnh sửa', 'Edit', 1),
 ('en', 'English', 'English', 0),
 ('hidden', 'Ẩn', 'Hidden', 1),
 ('hot', 'Nổi bật', 'Hot', 0),
+('new', 'Mới', 'New', 0),
 ('normal', 'Bình thường', 'Normal', 1),
 ('no_record', 'Không tồn tại mẫu tin', 'No record', 0),
 ('order', 'Thứ tự', 'Order', 1),
@@ -365,8 +367,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(11, 'Giới thiệu sơ lược', 'Tieu deasassa', '<p>\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\n<p>\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\n<p>\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\n<p>\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\n<p>\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\n', '<p>\r\n	asdasd</p>\r\n', 123, '2012-03-22 01:48:29', 3, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'tieu-deasassa', 'sdssds', 'asdsadasasasasasasasas', 1, 'test'),
-(12, 'asdas', 'ss', '<p>\r\n	sadasdsad</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 15, '2012-03-22 02:09:37', 2, 0, NULL, NULL, 'asdas', 'ss', 'asdasd', 'asdas', 1, 'test'),
+(11, 'Giới thiệu sơ lược', 'Tieu deasassa', '<p>\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\n<p>\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\n<p>\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\n<p>\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\n<p>\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\n', '<p>\r\n	asdasd</p>\r\n', 169, '2012-03-22 01:48:29', 3, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'tieu-deasassa', 'sdssds', 'asdsadasasasasasasasas', 1, 'test'),
+(12, 'asdas', 'ss', '<p>\r\n	sadasdsad</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 16, '2012-03-22 02:09:37', 2, 0, NULL, NULL, 'asdas', 'ss', 'asdasd', 'asdas', 1, 'test'),
 (13, 'adasd', 'Enlish', '<p>\r\n	sdasdsad</p>\r\n', '<p>\r\n	aasdad</p>\r\n', 91, '2012-03-22 03:47:36', 1, 0, NULL, NULL, 'adasd', 'enlish', 'asdasd', 'as', 1, 'test');
 
 -- --------------------------------------------------------
@@ -535,7 +537,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1332562932, 'test');
+('''127.0.0.1''', 1332577725, 'test');
 
 -- --------------------------------------------------------
 
@@ -661,7 +663,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
 (1, 'Dịch vụ 1', NULL, NULL, NULL, '<p>\r\n	CHi tiết</p>\r\n', NULL, '', 1, '2012-03-01 16:28:47', 1, 0, NULL, NULL, 'dich-vu-1', NULL, 'Mô tả', NULL, 1, 'test'),
-(2, 'Dich vụ 2', NULL, NULL, NULL, '<p>\r\n	Dich vu 2</p>\r\n', NULL, 'dich-vu-2.jpg', 1, '2012-03-01 16:28:59', 2, 0, NULL, NULL, 'dich-vu-2', NULL, 'Mo ta', NULL, 1, 'test');
+(2, 'Dich vụ 2', NULL, NULL, NULL, '<p>\r\n	Dich vu 2</p>\r\n', NULL, 'dich-vu-2.jpg', 2, '2012-03-01 16:28:59', 2, 0, NULL, NULL, 'dich-vu-2', NULL, 'Mo ta', NULL, 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -707,9 +709,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
 --
 
 INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
-('keywords', 'thanhan, an', 'test'),
-('description', 's', 'test'),
-('title', '', 'test');
+('keywords', 'thanhan, thanhansoft', 'test'),
+('description', 'thanhansoft', 'test'),
+('title', 'Welcome to Thanhansoft', 'test');
 
 -- --------------------------------------------------------
 

@@ -7,7 +7,7 @@
 <?php endif; ?>
 
 <?php if(isset($this->function['products_new']) && $this->function['products_new']):?>
-<h1 class="title-right"><span>Sản phẩm mới</span></h1>
+<h1 class="title-right"><span><?php echo $this->lang['products'] . ' ' . strtolower($this->lang['new']) ?></span></h1>
 <div class="all-product">
 	<?php foreach($this->function['products_new'] as $value): ?>
 	<div class="product">

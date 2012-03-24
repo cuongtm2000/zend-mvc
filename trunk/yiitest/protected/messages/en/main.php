@@ -26,4 +26,5 @@ return array(
 	'noRecord' => 'No records exist',
 	'send' => 'Send',
 	'reset' => 'Reset',
+	'goback' => 'Go back',
 );
