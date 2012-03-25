@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 25, 2012 at 10:50 AM
+-- Generation Time: Mar 25, 2012 at 11:36 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -367,7 +367,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(11, 'Giới thiệu sơ lược', 'about so luoc', '<p>\r\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\r\n<p>\r\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\r\n<p>\r\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\r\n<p>\r\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\r\n<p>\r\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 268, '2012-03-22 01:48:29', 3, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'about-so-luoc', 'Mô tả VN', 'Mô tả english', 1, 'test');
+(11, 'Giới thiệu sơ lược', 'about so luoc', '<p>\r\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\r\n<p>\r\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\r\n<p>\r\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\r\n<p>\r\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\r\n<p>\r\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 271, '2012-03-22 01:48:29', 3, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'about-so-luoc', 'Mô tả VN', 'Mô tả english', 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -500,6 +500,64 @@ INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `dos_module_news`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_news` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `titleen` varchar(100) DEFAULT NULL,
+  `postdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `preview` text,
+  `previewen` text,
+  `content` text NOT NULL,
+  `contenten` text,
+  `tag` varchar(100) NOT NULL,
+  `tagen` varchar(100) DEFAULT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `descriptionen` varchar(250) DEFAULT NULL,
+  `hits` int(11) NOT NULL DEFAULT '0',
+  `record_order` int(11) NOT NULL DEFAULT '1',
+  `hot` tinyint(1) NOT NULL DEFAULT '0',
+  `extra_field1` varchar(100) DEFAULT NULL,
+  `extra_field2` varchar(100) DEFAULT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_module_item_cat_cat_id` int(11) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_news_cat`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
+  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_parent_id` int(11) NOT NULL DEFAULT '0',
+  `cat_title` varchar(100) NOT NULL,
+  `cat_titleen` varchar(100) DEFAULT NULL,
+  `preview` text,
+  `previewen` text,
+  `tag` varchar(100) NOT NULL,
+  `tagen` varchar(100) DEFAULT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `descriptionen` varchar(250) DEFAULT NULL,
+  `pic_full` varchar(100) DEFAULT NULL,
+  `cat_order` int(11) NOT NULL,
+  `cat_extra1` varchar(45) DEFAULT NULL,
+  `cat_extra2` varchar(45) DEFAULT NULL,
+  `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_usernames_username` varchar(45) NOT NULL,
+  PRIMARY KEY (`cat_id`),
+  KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `dos_module_pcounter_save`
 --
 
@@ -542,7 +600,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1332665392, 'test');
+('''127.0.0.1''', 1332665477, 'test');
 
 -- --------------------------------------------------------
 
@@ -696,6 +754,57 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
 INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
 (8, 'Hỗ trợ mua hàng', 'Sales support', '0909 999 999', 'mailgoogle', 2, 'yahoo', 'test'),
 (9, 'Hỗ trợ kinh doanh', 'Business Support', '0909 999 888', 'groupitsoft', 1, 'yahoo', 'test');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_video`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_video` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `titleen` varchar(100) DEFAULT NULL,
+  `postdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `tag` varchar(100) NOT NULL,
+  `tagen` varchar(100) DEFAULT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `descriptionen` varchar(250) DEFAULT NULL,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `url` varchar(100) NOT NULL,
+  `record_order` int(11) NOT NULL,
+  `hits` int(11) NOT NULL DEFAULT '0',
+  `extra_field1` varchar(45) DEFAULT NULL,
+  `extra_field2` varchar(45) DEFAULT NULL,
+  `hot` tinyint(1) NOT NULL DEFAULT '0',
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_module_item_cat_cat_id` int(11) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `fk_dos_module_video_dos_module_video_cat1` (`dos_module_item_cat_cat_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_video_cat`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
+  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_parent_id` int(11) NOT NULL DEFAULT '0',
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `cat_title` varchar(100) NOT NULL,
+  `cat_titleen` varchar(100) DEFAULT NULL,
+  `tag` varchar(100) NOT NULL,
+  `tagen` varchar(100) DEFAULT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `descriptionen` varchar(250) DEFAULT NULL,
+  `cat_order` int(11) NOT NULL,
+  `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_usernames_username` varchar(45) NOT NULL,
+  PRIMARY KEY (`cat_id`),
+  KEY `fk_dos_module_video_cat_dos_usernames1` (`dos_usernames_username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1229,6 +1338,18 @@ ALTER TABLE `dos_module_menus`
   ADD CONSTRAINT `fk_dos_module_menus_dos_usernames1` FOREIGN KEY (`dos_usernames_username`) REFERENCES `dos_usernames` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
+-- Constraints for table `dos_module_news`
+--
+ALTER TABLE `dos_module_news`
+  ADD CONSTRAINT `fk_dos_module_news_dos_module_news_cat1` FOREIGN KEY (`dos_module_item_cat_cat_id`) REFERENCES `dos_module_news_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `dos_module_news_cat`
+--
+ALTER TABLE `dos_module_news_cat`
+  ADD CONSTRAINT `fk_dos_module_news_cat_dos_usernames1` FOREIGN KEY (`dos_usernames_username`) REFERENCES `dos_usernames` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
 -- Constraints for table `dos_module_pcounter_save`
 --
 ALTER TABLE `dos_module_pcounter_save`
@@ -1263,6 +1384,18 @@ ALTER TABLE `dos_module_services`
 --
 ALTER TABLE `dos_module_supports`
   ADD CONSTRAINT `fk_dos_module_supports_dos_usernames1` FOREIGN KEY (`dos_usernames_username`) REFERENCES `dos_usernames` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `dos_module_video`
+--
+ALTER TABLE `dos_module_video`
+  ADD CONSTRAINT `fk_dos_module_video_dos_module_video_cat1` FOREIGN KEY (`dos_module_item_cat_cat_id`) REFERENCES `dos_module_video_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `dos_module_video_cat`
+--
+ALTER TABLE `dos_module_video_cat`
+  ADD CONSTRAINT `fk_dos_module_video_cat_dos_usernames1` FOREIGN KEY (`dos_usernames_username`) REFERENCES `dos_usernames` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `dos_module_webs`
