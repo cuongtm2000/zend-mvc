@@ -79,8 +79,8 @@
 							<ul class="submenu">
 								<li><a href="<?php echo Yii::app()->request->baseUrl?>/admin/user">Danh sách User</a></li>
 								<li><a href="<?php echo Yii::app()->request->baseUrl?>/admin/user/active">User chờ kích hoạt</a></li>
-                                                                <li><a href="<?php echo Yii::app()->request->baseUrl?>/admin/user/thoatban">User thoát bàn</a></li>
-                                                                <li><a href="<?php echo Yii::app()->request->baseUrl?>/admin/user/datchuan">User đạt chuẩn</a></li>
+                                                                <li><a href="<?php echo Yii::app()->request->baseUrl?>/admin/user/thoatban">Thành viên thoát bàn</a></li>
+                                                                <li><a href="<?php echo Yii::app()->request->baseUrl?>/admin/user/datchuan">Danh sách bàn sắp thoát</a></li>
 							</ul>
 						</li>
                     </ul> 

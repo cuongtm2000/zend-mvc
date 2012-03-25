@@ -23,7 +23,7 @@
 				<td><?php echo date('d-m-Y H:i:s', strtotime($model['time'])) ?></td>
 				<td><?php echo $model['sender']?></td>
 				<td><?php echo $model['receiver']?></td>
-				<td><?php echo $model['value']?></td>
+				<td>0<?php //echo $model['value']?></td>
 			</tr>
 		<?php $i++; endforeach ?>
 		<?php endif?>

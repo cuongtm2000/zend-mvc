@@ -1,4 +1,4 @@
-<h3><strong>Danh sách thành viên đạt chuẩn</strong></h3>
+<h3><strong>Danh sách bàn sắp thoát</strong></h3>
 <form action="" method="post" enctype="multipart/form-data" id="frm" name="frm">
 	<input type="hidden" name="factive" value="" />
     <table>
