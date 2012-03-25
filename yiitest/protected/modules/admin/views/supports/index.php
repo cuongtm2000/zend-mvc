@@ -4,7 +4,9 @@
         <p class="rows"><a href="#" id="add-rows"><?php echo $this->lang['add_row'] ?></a></p>
         <p>
             <label></label>
-            <label class="label-txt-large">Name</label>
+            <?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
+                <label class="label-txt-large">Name<?php echo $lang?></label>
+            <?php endforeach?>
             <label class="label-txt-small">Phone</label>
             <label class="label-txt-small">Value</label>
             <label class="label-txt-very-tiny">Sort</label>
@@ -13,7 +15,9 @@
         <?php foreach ($models as $value): ?>
             <p class="clear">
                 <label>Support</label>
-                <input name="name[]" value="<?php echo $value['support_name'] ?>" maxlength="45" class="txt-large" />
+                <?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
+                    <input name="name<?php echo $lang?>[]" value="<?php echo $value['support_name'.$lang] ?>" maxlength="45" class="txt-large" />
+                <?php endforeach?>
                 <input name="phone[]" value="<?php echo $value['support_phone'] ?>" maxlength="45" class="txt-small" />
                 <input name="value[]" value="<?php echo $value['support_value'] ?>" maxlength="45" class="txt-small" />
                 <input name="order[]" value="<?php echo $value['support_order'] ?>" maxlength="2" class="txt-very-tiny" />

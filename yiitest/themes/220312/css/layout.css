@@ -190,7 +190,7 @@ a:hover{color:#000}
 
 /* Error */
 .errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
-.errorSummary ul{margin:0 32px; padding:0}
+.errorSummary ul{margin:0 10px; padding:0}
 .errorSummary ul li{padding:2px 0; color: red}
 
 

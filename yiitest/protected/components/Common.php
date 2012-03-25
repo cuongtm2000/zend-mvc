@@ -25,7 +25,7 @@ class Common {
         for ($i = 0; $i < $rowsize; $i++) {
             if ($data[$i]['cat_parent_id'] == 0) {
                 //Parent categories
-                echo '<li><a href="' . Yii::app()->request->baseUrl . LANGURL . '/' . $link . '/' . $data[$i]['tag'] . '" title="' . $data[$i]['cat_title' . LANG] . '">' . $data[$i]['cat_title' . LANG] . '</a>';
+                echo '<li><a href="' . Yii::app()->request->baseUrl . LANGURL . '/' . $link . '/' . $data[$i]['tag'.Yii::app()->session['lang']] . '" title="' . $data[$i]['cat_title' . LANG] . '">' . $data[$i]['cat_title' . LANG] . '</a>';
                 //Sub categories
                 if ($parent_id && ($parent_id == $data[$i]['cat_id'])) {
                     for ($j = 0; $j < $rowsize; $j++) {

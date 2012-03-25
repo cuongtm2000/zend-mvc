@@ -11,4 +11,11 @@ return array(
 	'total' => 'Tổng truy cập',
 	'maximum' => 'Truy cập nhiều nhất',
 	'dateMaximum' => 'Ngày nhiều nhất',
+
+    'fullname' => 'Họ và tên',
+    'company' => 'Công ty',
+    'address' => 'Địa chỉ',
+    'email' => 'Địa chỉ email',
+    'phone' => 'Số điện thoại',
+    'content' => 'Nội dung',
 );
