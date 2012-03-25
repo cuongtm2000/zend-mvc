@@ -92,7 +92,7 @@ class Tables extends CActiveRecord {
         $t->save();
     }
 
-    private function getMaxPriority() {
+    public function getMaxPriority() {
         $command = Yii::app()->db->createCommand('select max(priority) from ' . $this->tableName());
         return $command->queryScalar();
     }

@@ -1,3 +1,4 @@
+<?php //var_dump($debug) ?>
 <h3><strong>Danh sách thành viên chờ kích hoạt</strong></h3>
 <form name="frm" id="frm" action="" method="post">
 	<input type="hidden" name="factive" value="" />

@@ -1,6 +1,7 @@
 <h1 class="title-right"><span>Bàn thành viên</span></h1>
 <?php $children=  explode('|', $info->four_child);?>
-
+<div><b><?php echo $info->dos_module_usernames_username ?></b> hiện đang đứng ở bàn <?php echo $info->dosModuleUsernamesUsername->level+1 ?></div>
+</br>
 <div class="diagram">
     <h4 class="level-1"><?php echo $info->dos_module_usernames_username ?></h4>
     <h4 class="level-2-1"><?php echo $info->left_child." " ?> </h4>
