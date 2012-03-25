@@ -26,6 +26,7 @@ class SupportsController extends AdminController {
         //Submit
         if (Yii::app()->request->getIsPostRequest()) {
             $model->addItem(Yii::app()->request);
+            $this->refresh();
         }
 
         $this->render('index', array('models' => $model->listItemAdmin()));

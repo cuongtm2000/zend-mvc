@@ -37,7 +37,7 @@ class ProductsCat extends CActiveRecord {
     private $_model;
     private $_oldImage_full;
 
-	public $remove_pic_full;
+    public $remove_pic_full;
 
     public function init() {
         $this->_subdomain = Yii::app()->session['subdomain'];
@@ -95,7 +95,7 @@ class ProductsCat extends CActiveRecord {
         // class name for the relations automatically generated below.
         return array(
             'Products' => array(self::HAS_MANY, 'Products', 'dos_module_item_cat_cat_id'),
-                //'dosUsernamesUsername' => array(self::BELONGS_TO, 'DosUsernames', 'dos_usernames_username'),
+            //'dosUsernamesUsername' => array(self::BELONGS_TO, 'DosUsernames', 'dos_usernames_username'),
         );
     }
 
@@ -110,12 +110,12 @@ class ProductsCat extends CActiveRecord {
             'cat_titleen' => Yii::app()->controller->lang['cat_titleen'],
             //'preview' => 'Preview',
             //'previewen' => 'Previewen',
-			'tag' => Yii::app()->controller->lang['tag'],
-			'tagen' => Yii::app()->controller->lang['tagen'],
-			'description' => Yii::app()->controller->lang['description'],
-			'descriptionen' => Yii::app()->controller->lang['descriptionen'],
+            'tag' => Yii::app()->controller->lang['tag'],
+            'tagen' => Yii::app()->controller->lang['tagen'],
+            'description' => Yii::app()->controller->lang['description'],
+            'descriptionen' => Yii::app()->controller->lang['descriptionen'],
             'pic_full' => Yii::app()->controller->lang['picture'],
-			'remove_pic_full' => Yii::app()->controller->lang['remove_pic'],
+            'remove_pic_full' => Yii::app()->controller->lang['remove_pic'],
             //'pic_desc' => 'Pic Desc',
             //'cat_order' => 'Cat Order',
             //'cat_extra1' => 'Cat Extra1',
@@ -142,9 +142,9 @@ class ProductsCat extends CActiveRecord {
         $criteria->compare('preview', $this->preview, true);
         $criteria->compare('previewen', $this->previewen, true);
         $criteria->compare('tag', $this->tag, true);
-		$criteria->compare('tagen', $this->tagen, true);
+        $criteria->compare('tagen', $this->tagen, true);
         $criteria->compare('description', $this->description, true);
-		$criteria->compare('descriptionen', $this->descriptionen, true);
+        $criteria->compare('descriptionen', $this->descriptionen, true);
         $criteria->compare('pic_full', $this->pic_full, true);
         $criteria->compare('pic_desc', $this->pic_desc, true);
         $criteria->compare('cat_order', $this->cat_order);
@@ -154,8 +154,8 @@ class ProductsCat extends CActiveRecord {
         $criteria->compare('dos_usernames_username', $this->dos_usernames_username, true);
 
         return new CActiveDataProvider($this, array(
-                    'criteria' => $criteria,
-                ));
+            'criteria' => $criteria,
+        ));
     }
 
     public function afterFind() {
@@ -166,31 +166,33 @@ class ProductsCat extends CActiveRecord {
     public function beforeSave() {
         $purifier = new CHtmlPurifier();
         $this->cat_title = $purifier->purify($this->cat_title);
-		$this->cat_titleen = $purifier->purify($this->cat_titleen);
+        $this->cat_titleen = $purifier->purify($this->cat_titleen);
         $this->tag = $purifier->purify($this->tag);
+        $this->tagen = $purifier->purify($this->tagen);
         $this->description = $purifier->purify($this->description);
+        $this->descriptionen = $purifier->purify($this->descriptionen);
 
         if ($this->isNewRecord) {
             $this->cat_order = $this->maxRecordOrder();
             $this->dos_usernames_username = Yii::app()->user->id;
-            if ($_FILES[ucfirst(Yii::app()->controller->id).'Cat']['name']['pic_full']) {
+            if ($_FILES[ucfirst(Yii::app()->controller->id) . 'Cat']['name']['pic_full']) {
                 Yii::import('ext.EUploadedImage.EUploadedImage');
-                $this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(Configs::configTemplate(Yii::app()->controller->id.'_cat_width', Yii::app()->session['template']), Configs::configTemplate(Yii::app()->controller->id.'_cat_height', Yii::app()->session['template']), USERFILES . '/'.Yii::app()->controller->id.'Cat', $this->cat_title);
+                $this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(Configs::configTemplate(Yii::app()->controller->id . '_cat_width', Yii::app()->session['template']), Configs::configTemplate(Yii::app()->controller->id . '_cat_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id . 'Cat', $this->cat_title);
             }
         } else {
             //check file old and upload
-            if ($_FILES[ucfirst(Yii::app()->controller->id).'Cat']['name']['pic_full']) {
+            if ($_FILES[ucfirst(Yii::app()->controller->id) . 'Cat']['name']['pic_full']) {
                 Yii::import('ext.EUploadedImage.EUploadedImage');
-                $this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(Configs::configTemplate(Yii::app()->controller->id.'_cat_width', Yii::app()->session['template']), Configs::configTemplate(Yii::app()->controller->id.'_cat_height', Yii::app()->session['template']), USERFILES . '/'.Yii::app()->controller->id.'Cat', $this->cat_title, $this->_oldImage_full);
+                $this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(Configs::configTemplate(Yii::app()->controller->id . '_cat_width', Yii::app()->session['template']), Configs::configTemplate(Yii::app()->controller->id . '_cat_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id . 'Cat', $this->cat_title, $this->_oldImage_full);
             } else {
-				//remove picthumb
-				if (isset($_POST[ucfirst(Yii::app()->controller->id).'Cat']['remove_pic_full']) && $_POST[ucfirst(Yii::app()->controller->id).'Cat']['remove_pic_full'] == 1) {
-					$common_class = new Common();
-					$common_class->removePic($this->_oldImage_full);
-					$this->pic_full = '';
-				} else {
-					$this->pic_full = $this->_oldImage_full;
-				}
+                //remove picthumb
+                if (isset($_POST[ucfirst(Yii::app()->controller->id) . 'Cat']['remove_pic_full']) && $_POST[ucfirst(Yii::app()->controller->id) . 'Cat']['remove_pic_full'] == 1) {
+                    $common_class = new Common();
+                    $common_class->removePic($this->_oldImage_full);
+                    $this->pic_full = '';
+                } else {
+                    $this->pic_full = $this->_oldImage_full;
+                }
             }
         }
 
@@ -200,9 +202,9 @@ class ProductsCat extends CActiveRecord {
     //Front end - list menu
     public function listItem($cid = 0) {
         if ($cid != 0) {
-            $command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . LANG . ', tag, pic_full FROM ' . $this->tableName() . ' WHERE cat_parent_id=' . $cid . ' AND cat_enable=1 AND dos_usernames_username=:user ORDER BY cat_order DESC');
+            $command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . Yii::app()->session['lang'] . ', tag' . Yii::app()->session['lang'] . ', pic_full FROM ' . $this->tableName() . ' WHERE cat_parent_id=' . $cid . ' AND cat_enable=1 AND dos_usernames_username=:user ORDER BY cat_order DESC');
         } else {
-            $command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . LANG . ', tag, pic_full FROM ' . $this->tableName() . ' WHERE cat_enable=1 AND dos_usernames_username=:user ORDER BY cat_order DESC');
+            $command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . Yii::app()->session['lang'] . ', tag' . Yii::app()->session['lang'] . ', pic_full FROM ' . $this->tableName() . ' WHERE cat_enable=1 AND dos_usernames_username=:user ORDER BY cat_order DESC');
         }
         $command->bindParam(':user', $this->_subdomain, PDO::PARAM_STR);
         return $command->queryAll();
@@ -518,8 +520,9 @@ class ProductsCat extends CActiveRecord {
             $this->loopDelSubCat($value['cat_id']);
         }
     }
+
     //Back end - Count item by user post
-    public function countItemByUser(){
+    public function countItemByUser() {
         $user = Yii::app()->user->id;
         $command = Yii::app()->db->createCommand('SELECT COUNT(cat_id) AS num FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user');
         $command->bindParam(":user", $user, PDO::PARAM_STR);

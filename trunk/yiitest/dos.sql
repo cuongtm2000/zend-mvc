@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 24, 2012 at 09:28 AM
+-- Generation Time: Mar 25, 2012 at 10:50 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -367,9 +367,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(11, 'Giới thiệu sơ lược', 'Tieu deasassa', '<p>\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\n<p>\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\n<p>\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\n<p>\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\n<p>\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\n', '<p>\r\n	asdasd</p>\r\n', 169, '2012-03-22 01:48:29', 3, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'tieu-deasassa', 'sdssds', 'asdsadasasasasasasasas', 1, 'test'),
-(12, 'asdas', 'ss', '<p>\r\n	sadasdsad</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 16, '2012-03-22 02:09:37', 2, 0, NULL, NULL, 'asdas', 'ss', 'asdasd', 'asdas', 1, 'test'),
-(13, 'adasd', 'Enlish', '<p>\r\n	sdasdsad</p>\r\n', '<p>\r\n	aasdad</p>\r\n', 91, '2012-03-22 03:47:36', 1, 0, NULL, NULL, 'adasd', 'enlish', 'asdasd', 'as', 1, 'test');
+(11, 'Giới thiệu sơ lược', 'about so luoc', '<p>\r\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\r\n<p>\r\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\r\n<p>\r\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\r\n<p>\r\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\r\n<p>\r\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 268, '2012-03-22 01:48:29', 3, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'about-so-luoc', 'Mô tả VN', 'Mô tả english', 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -460,6 +458,13 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   KEY `fk_dos_module_contacts_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
+--
+-- Dumping data for table `dos_module_contacts`
+--
+
+INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `tagen`, `description`, `descriptionen`, `enable`, `dos_usernames_username`) VALUES
+(1, 'Liên hệ', '', '<p>\r\n	Nội dung</p>\r\n', '', '2012-03-25 08:12:35', 1, 0, 0, 'lien-he', '', 'Mô tả', 'Mô tả Mô tả En', '1', 'test');
+
 -- --------------------------------------------------------
 
 --
@@ -514,10 +519,10 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('max_count', 0, 'dos'),
 ('counter', 0, 'dos'),
 ('yesterday', 0, 'dos'),
-('day_time', 2456011, 'test'),
-('max_count', 0, 'test'),
-('counter', 0, 'test'),
-('yesterday', 0, 'test');
+('day_time', 2456012, 'test'),
+('max_count', 1, 'test'),
+('counter', 1, 'test'),
+('yesterday', 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -537,7 +542,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1332577725, 'test');
+('''127.0.0.1''', 1332665392, 'test');
 
 -- --------------------------------------------------------
 
@@ -623,7 +628,7 @@ INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `
 (7, 0, 'Tủ áo', '', NULL, NULL, 'tu-ao', '', '', '', 'tu-ao.jpg', NULL, 2, NULL, NULL, 1, 'test'),
 (8, 0, 'Nội thất bộ phòng ngủ', '', NULL, NULL, 'noi-that-bo-phong-ngu', '', '', '', 'noi-that-bo-phong-ngu.jpg', NULL, 3, NULL, NULL, 1, 'test'),
 (9, 0, 'Nội thất sofa phòng khách', '', NULL, NULL, 'noi-that-sofa-phong-khach', '', '', 'asdasds', 'noi-that-sofa-phong-khach.jpg', NULL, 4, NULL, NULL, 1, 'test'),
-(10, 0, 'Nội thất giường ngủ', '', NULL, NULL, 'noi-that-giuong-ngu', '', 'asdasd', '', 'noi-that-giuong-ngu.jpg', NULL, 5, NULL, NULL, 1, 'test'),
+(10, 0, 'Nội thất giường ngủ', 'Noi that giuong ngu english', NULL, NULL, 'noi-that-giuong-ngu', 'noi-that-giuong-ngu-english', 'asdasd', 'Mô tả english', 'noi-that-giuong-ngu.jpg', NULL, 5, NULL, NULL, 1, 'test'),
 (11, 10, 'Nội thất giường ngủ loại 1 chuyen cho vip nhat', '', NULL, NULL, 'noi-that-giuong-ngu-loai-1-chuyen-cho-vip-nhat', '', 'Nội thất giường ngủ loại 1', '', 'noi-that-giuong-ngu-loai-1.jpg', NULL, 6, NULL, NULL, 1, 'test');
 
 -- --------------------------------------------------------
@@ -662,7 +667,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(1, 'Dịch vụ 1', NULL, NULL, NULL, '<p>\r\n	CHi tiết</p>\r\n', NULL, '', 1, '2012-03-01 16:28:47', 1, 0, NULL, NULL, 'dich-vu-1', NULL, 'Mô tả', NULL, 1, 'test'),
+(1, 'Dịch vụ 1', 'Dịch vụ English', NULL, NULL, '<p>\r\n	CHi tiết</p>\r\n', '<p>\r\n	sdfsdf sdf</p>\r\n', '', 3, '2012-03-01 16:28:47', 1, 0, NULL, NULL, 'dich-vu-1', 'dich-vu-english', 'Mô tả', 'Mô tả', 1, 'test'),
 (2, 'Dich vụ 2', NULL, NULL, NULL, '<p>\r\n	Dich vu 2</p>\r\n', NULL, 'dich-vu-2.jpg', 2, '2012-03-01 16:28:59', 2, 0, NULL, NULL, 'dich-vu-2', NULL, 'Mo ta', NULL, 1, 'test');
 
 -- --------------------------------------------------------
@@ -674,6 +679,7 @@ INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `
 CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `support_id` int(11) NOT NULL AUTO_INCREMENT,
   `support_name` varchar(45) NOT NULL,
+  `support_nameen` varchar(45) DEFAULT NULL,
   `support_phone` varchar(45) DEFAULT NULL,
   `support_value` varchar(45) NOT NULL,
   `support_order` smallint(6) NOT NULL,
@@ -681,15 +687,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `dos_module_supports`
 --
 
-INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
-(2, 'Hỗ trợ mua hàng', '0909 999 999', 'mailgoogle', 2, 'yahoo', 'test'),
-(3, 'Hỗ trợ kinh doanh', '0909 999 888', 'groupitsoft', 1, 'yahoo', 'test');
+INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
+(8, 'Hỗ trợ mua hàng', 'Sales support', '0909 999 999', 'mailgoogle', 2, 'yahoo', 'test'),
+(9, 'Hỗ trợ kinh doanh', 'Business Support', '0909 999 888', 'groupitsoft', 1, 'yahoo', 'test');
 
 -- --------------------------------------------------------
 

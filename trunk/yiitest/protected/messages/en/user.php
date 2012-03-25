@@ -11,4 +11,11 @@ return array(
 	'total' => 'Total',
 	'maximum' => 'Maximum',
 	'dateMaximum' => 'Date for maximum',
+
+    'fullname' => 'Fullname',
+    'company' => 'Company',
+    'address' => 'Address',
+    'email' => 'Email',
+    'phone' => 'Phone',
+    'content' => 'Content',
 );

@@ -30,7 +30,7 @@
  */
 class Services extends CActiveRecord {
 
-	public $remove_pic_thumb;
+    public $remove_pic_thumb;
     private $_oldImage;
     private $_model;
     private $_subdomain;
@@ -74,6 +74,7 @@ class Services extends CActiveRecord {
             array('record_id, title, titleen, preview, previewen, content, contenten, pic_full, hit, created, record_order, hot, extra_field1, extra_field2, tag, description, activated, dos_usernames_username', 'safe', 'on' => 'search'),
         );
     }
+
     /*public function checkExistsTag($attribute){
         if (GetTag::tag($this->tag, $this->record_id, $this->tableName())) {
             $this->addError($attribute, $attribute . ': <strong>' . $this->tag . '</strong> đã tồn tại, vui lòng chọn một liên kết khác');
@@ -97,25 +98,25 @@ class Services extends CActiveRecord {
     public function attributeLabels() {
         return array(
             //'record_id' => 'Record',
-			'title' => Yii::app()->controller->lang['title'],
-			'titleen' => Yii::app()->controller->lang['titleen'],
+            'title' => Yii::app()->controller->lang['title'],
+            'titleen' => Yii::app()->controller->lang['titleen'],
             //'preview' => 'Preview',
             //'previewen' => 'Previewen',
-			'content' => Yii::app()->controller->lang['content'],
-			'contenten' => Yii::app()->controller->lang['contenten'],
+            'content' => Yii::app()->controller->lang['content'],
+            'contenten' => Yii::app()->controller->lang['contenten'],
             'pic_full' => Yii::app()->controller->lang['pic_full'],
             //'hit' => 'Hit',
             //'created' => 'Created',
             //'record_order' => 'Record Order',
-			'hot' => Yii::app()->controller->lang['hot'],
+            'hot' => Yii::app()->controller->lang['hot'],
             //'extra_field1' => 'Extra Field1',
             //'extra_field2' => 'Extra Field2',
-			'tag' => Yii::app()->controller->lang['tag'],
-			'tagen' => Yii::app()->controller->lang['tagen'],
-			'description' => Yii::app()->controller->lang['description'],
-			'descriptionen' => Yii::app()->controller->lang['descriptionen'],
+            'tag' => Yii::app()->controller->lang['tag'],
+            'tagen' => Yii::app()->controller->lang['tagen'],
+            'description' => Yii::app()->controller->lang['description'],
+            'descriptionen' => Yii::app()->controller->lang['descriptionen'],
             'activated' => Yii::app()->controller->lang['show'],
-			'remove_pic_thumb' => Yii::app()->controller->lang['remove_pic'],
+            'remove_pic_thumb' => Yii::app()->controller->lang['remove_pic'],
             //'dos_usernames_username' => 'Dos Usernames Username',
         );
     }
@@ -145,15 +146,15 @@ class Services extends CActiveRecord {
         $criteria->compare('extra_field1', $this->extra_field1, true);
         $criteria->compare('extra_field2', $this->extra_field2, true);
         $criteria->compare('tag', $this->tag, true);
-		$criteria->compare('tagen', $this->tagen, true);
+        $criteria->compare('tagen', $this->tagen, true);
         $criteria->compare('description', $this->description, true);
-		$criteria->compare('descriptionen', $this->descriptionen, true);
+        $criteria->compare('descriptionen', $this->descriptionen, true);
         $criteria->compare('activated', $this->activated);
         $criteria->compare('dos_usernames_username', $this->dos_usernames_username, true);
 
         return new CActiveDataProvider($this, array(
-                    'criteria' => $criteria,
-                ));
+            'criteria' => $criteria,
+        ));
     }
 
     public function afterFind() {
@@ -164,13 +165,13 @@ class Services extends CActiveRecord {
     public function beforeSave() {
         $purifier = new CHtmlPurifier();
         $this->title = $purifier->purify($this->title);
-		$this->titleen = $purifier->purify($this->titleen);
+        $this->titleen = $purifier->purify($this->titleen);
         $this->content = $purifier->purify($this->content);
-		$this->contenten = $purifier->purify($this->contenten);
+        $this->contenten = $purifier->purify($this->contenten);
         $this->tag = $purifier->purify($this->tag);
-		$this->tagen = $purifier->purify($this->tagen);
+        $this->tagen = $purifier->purify($this->tagen);
         $this->description = $purifier->purify($this->description);
-		$this->descriptionen = $purifier->purify($this->descriptionen);
+        $this->descriptionen = $purifier->purify($this->descriptionen);
 
         if ($this->isNewRecord) {
             $this->record_order = $this->maxRecordOrder();
@@ -187,14 +188,14 @@ class Services extends CActiveRecord {
                 Yii::import('ext.EUploadedImage.EUploadedImage');
                 $this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(Configs::configTemplate('services_width', Yii::app()->session['template']), Configs::configTemplate('services_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id, $this->title, $this->_oldImage);
             } else {
-				//remove picthumb
-				if (isset($_POST[ucfirst(Yii::app()->controller->id)]['remove_pic_thumb']) && $_POST[ucfirst(Yii::app()->controller->id)]['remove_pic_thumb'] == 1) {
-					$common_class = new Common();
-					$common_class->removePic($this->_oldImage);
-					$this->pic_full = '';
-				} else {
-					$this->pic_full = $this->_oldImage;
-				}
+                //remove picthumb
+                if (isset($_POST[ucfirst(Yii::app()->controller->id)]['remove_pic_thumb']) && $_POST[ucfirst(Yii::app()->controller->id)]['remove_pic_thumb'] == 1) {
+                    $common_class = new Common();
+                    $common_class->removePic($this->_oldImage);
+                    $this->pic_full = '';
+                } else {
+                    $this->pic_full = $this->_oldImage;
+                }
             }
         }
 
@@ -203,7 +204,7 @@ class Services extends CActiveRecord {
 
     //Front end - List menu
     public function listMenu() {
-        $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
+        $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag' . Yii::app()->session['lang'] . ' FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
         $command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
         return $command->queryAll();
     }
@@ -217,24 +218,24 @@ class Services extends CActiveRecord {
 
     //Front end - Get detail record
     public function detailRecord($tag) {
-        $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE tag=:tag AND dos_usernames_username=:user');
+        $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE tag' . Yii::app()->session['lang'] . '=:tag AND dos_usernames_username=:user');
         $command->bindParam(":tag", $tag, PDO::PARAM_STR);
         $command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
-		$row = $command->queryRow();
-		if ($row) {
-			//Update hit
-			$this->updateHit($row['hit'] + 1, $row['record_id']);
-			return $row;
-		}
+        $row = $command->queryRow();
+        if ($row) {
+            //Update hit
+            $this->updateHit($row['hit'] + 1, $row['record_id']);
+            return $row;
+        }
     }
 
-	//Front end - update hit view
-	private function updateHit($hit, $id) {
-		$command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET hit=:hit WHERE record_id=:id');
-		$command->bindParam(":hit", $hit, PDO::PARAM_INT);
-		$command->bindParam(":id", $id, PDO::PARAM_INT);
-		$command->execute();
-	}
+    //Front end - update hit view
+    private function updateHit($hit, $id) {
+        $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET hit=:hit WHERE record_id=:id');
+        $command->bindParam(":hit", $hit, PDO::PARAM_INT);
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        $command->execute();
+    }
 
     //Back end - List item admin
     public function listItemAdmin() {
@@ -362,8 +363,9 @@ class Services extends CActiveRecord {
         }
         return $this->_model;
     }
+
     //Back end - Count item by user post
-    public function countItemByUser(){
+    public function countItemByUser() {
         $user = Yii::app()->user->id;
         $command = Yii::app()->db->createCommand('SELECT COUNT(record_id) AS num FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user');
         $command->bindParam(":user", $user, PDO::PARAM_STR);
