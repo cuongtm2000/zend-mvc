@@ -211,7 +211,7 @@ class Services extends CActiveRecord {
 
     //Front end - Get first record
     public function firstRecord() {
-        $command = Yii::app()->db->createCommand('SELECT title' . LANG . ', content' . LANG . ' FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
+        $command = Yii::app()->db->createCommand('SELECT title' . LANG . ', content' . LANG . ', description' . LANG . ' FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
         $command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
         return $command->queryRow();
     }
