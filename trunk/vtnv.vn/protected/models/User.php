@@ -238,7 +238,7 @@ class User extends CActiveRecord {
                         //Tăng cấp và cộng tiền
                         $u = $tbl_user_dc_gan->dosModuleUsernamesUsername;
                         $u->level = $level;
-                        $u->balance +=$money;
+                        //$u->balance +=$money;
                         $u->update();
 
                         //Ghi log
