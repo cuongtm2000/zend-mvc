@@ -60,6 +60,10 @@ a:hover{color:#000}
 .sub-pro li{}
 .sub-pro li a{display:block;color:#161616; font-size:13px;border-bottom:dashed 1px #c7c5c5; padding:5px}
 .sub-pro li a:hover{background:#ff6000; color:#fff}
+.sub-pro li ul{list-style:none;padding:10px 0 10px 10px}
+.sub-pro li ul li{padding:2px 0 !important; font-weight:normal;background:url(../images/bull.gif) no-repeat left 8px;}
+.sub-pro li ul li a{border:none;padding:0 0 0 10px}
+.sub-pro li ul li a:hover{background:none;color:#97735B}
 
 /*Ho tro ky thuat*/
 .support{margin:0 0 15px 0;list-style:none;padding:5px 3px 10px 0px;border:1px solid #F2F2F2;text-align:center}
