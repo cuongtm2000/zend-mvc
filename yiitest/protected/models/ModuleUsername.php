@@ -79,7 +79,7 @@ class ModuleUsername extends CActiveRecord {
     }
 
     public function moduleUser($user) {
-        $command = Yii::app()->db->createCommand('SELECT dos_modules_module_id, module_url, module_title FROM ' . $this->tableName() . ', dos_modules WHERE ' . $this->tableName() . '.dos_modules_module_id = dos_modules.module_id AND dos_usernames_username=:user');
+        $command = Yii::app()->db->createCommand('SELECT dos_modules_module_id, module_url, module_title FROM ' . $this->tableName() . ', dos_modules WHERE ' . $this->tableName() . '.dos_modules_module_id = dos_modules.module_id AND dos_usernames_username=:user ORDER BY module_sort ASC');
         $command->bindParam(":user", $user, PDO::PARAM_STR);
         return $command->queryAll();
     }

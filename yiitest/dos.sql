@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 25, 2012 at 11:36 AM
+-- Generation Time: Mar 26, 2012 at 06:03 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -221,6 +221,7 @@ INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('hidden', 'Ẩn', 'Hidden', 1),
 ('hot', 'Nổi bật', 'Hot', 0),
 ('new', 'Mới', 'New', 0),
+('news', 'Tin tức &amp; sự kiện', 'News and Events', 0),
 ('normal', 'Bình thường', 'Normal', 1),
 ('no_record', 'Không tồn tại mẫu tin', 'No record', 0),
 ('order', 'Thứ tự', 'Order', 1),
@@ -292,12 +293,13 @@ CREATE TABLE IF NOT EXISTS `dos_modules` (
 INSERT INTO `dos_modules` (`module_id`, `module_url`, `module_title`, `module_sort`, `module_type`) VALUES
 ('about', 'about', 'Danh sách', 2, 1),
 ('advs', 'advs', 'Danh sách', 7, 0),
-('banner', 'banner', 'Danh sách', 5, 0),
-('contact', 'contact', 'Danh sách', 8, 1),
+('banner', 'banner', 'Danh sách', 8, 0),
+('contact', 'contact', 'Danh sách', 6, 1),
 ('default', NULL, NULL, 1, 1),
+('news', 'news/cats|news', 'Danh mục|Danh sách', 5, 1),
 ('products', 'products/cats|products', 'Danh mục|Danh sách', 3, 1),
 ('services', 'services', 'Danh sách', 4, 1),
-('supports', 'supports', 'Danh sách', 6, 0);
+('supports', 'supports', 'Danh sách', 9, 0);
 
 -- --------------------------------------------------------
 
@@ -326,6 +328,7 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('banner', 'test'),
 ('contact', 'dos'),
 ('contact', 'test'),
+('news', 'test'),
 ('products', 'dos'),
 ('products', 'test'),
 ('services', 'dos'),
@@ -360,14 +363,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(11, 'Giới thiệu sơ lược', 'about so luoc', '<p>\r\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\r\n<p>\r\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\r\n<p>\r\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\r\n<p>\r\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\r\n<p>\r\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 271, '2012-03-22 01:48:29', 3, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'about-so-luoc', 'Mô tả VN', 'Mô tả english', 1, 'test');
+(11, 'Giới thiệu sơ lược', 'about so luoc', '<p>\r\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\r\n<p>\r\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\r\n<p>\r\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\r\n<p>\r\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\r\n<p>\r\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 302, '2012-03-22 01:48:29', 3, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'about-so-luoc', 'Mô tả VN', 'Mô tả english', 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -526,7 +529,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 -- --------------------------------------------------------
 
@@ -553,7 +556,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_module_news_cat`
+--
+
+INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
+(1, 0, 'Danh muc', NULL, NULL, NULL, 'danh-muc', NULL, NULL, NULL, NULL, 0, NULL, NULL, 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -577,9 +587,9 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('max_count', 0, 'dos'),
 ('counter', 0, 'dos'),
 ('yesterday', 0, 'dos'),
-('day_time', 2456012, 'test'),
+('day_time', 2456013, 'test'),
 ('max_count', 1, 'test'),
-('counter', 1, 'test'),
+('counter', 2, 'test'),
 ('yesterday', 1, 'test');
 
 -- --------------------------------------------------------
@@ -600,7 +610,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1332665477, 'test');
+('''127.0.0.1''', 1332734539, 'test');
 
 -- --------------------------------------------------------
 
@@ -725,8 +735,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(1, 'Dịch vụ 1', 'Dịch vụ English', NULL, NULL, '<p>\r\n	CHi tiết</p>\r\n', '<p>\r\n	sdfsdf sdf</p>\r\n', '', 3, '2012-03-01 16:28:47', 1, 0, NULL, NULL, 'dich-vu-1', 'dich-vu-english', 'Mô tả', 'Mô tả', 1, 'test'),
-(2, 'Dich vụ 2', NULL, NULL, NULL, '<p>\r\n	Dich vu 2</p>\r\n', NULL, 'dich-vu-2.jpg', 2, '2012-03-01 16:28:59', 2, 0, NULL, NULL, 'dich-vu-2', NULL, 'Mo ta', NULL, 1, 'test');
+(1, 'Dịch vụ 1', 'Dịch vụ English', NULL, NULL, '<p>\r\n	CHi tiết</p>\r\n', '<p>\r\n	sdfsdf sdf</p>\r\n', '', 5, '2012-03-01 16:28:47', 1, 0, NULL, NULL, 'dich-vu-1', 'dich-vu-english', 'Mô tả', 'Mô tả', 1, 'test'),
+(2, 'Dich vụ 2', 'Dich vu 2 english', NULL, NULL, '<p>\r\n	Dich vu 2</p>\r\n', '<p>\r\n	Noi dung</p>\r\n', 'dich-vu-2.jpg', 3, '2012-03-01 16:28:59', 2, 0, NULL, NULL, 'dich-vu-2', 'dich-vu-2-english', 'Mo ta', 'Mô tả', 1, 'test');
 
 -- --------------------------------------------------------
 
