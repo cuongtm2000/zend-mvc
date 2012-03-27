@@ -1,12 +1,12 @@
-<?php $this->breadcrumbs=array($this->lang[$this->module->id]=>LANGURL.'/'.$this->module->id,$item->ProductsCat->cat_title . LANG => $item->ProductsCat->tag,$item['title'.LANG]);?>
+<?php $this->breadcrumbs = array($this->lang[$this->module->id] => LANGURL . '/' . Yii::t('user', $this->module->id.'.link'), $item->ProductsCat->cat_title . LANG => '../'.$item->ProductsCat->tag, $item['title' . LANG]); ?>
 
 <div class="product-view">
 	<div class="product-essential">
 		<form action="" method="post" id="product_addtocart_form">
 			<div class="product-img-box">
 				<p class="product-image product-image-zoom">
-					<!-- Picture full --><img id="image" src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $item['pic_full'] ?>" alt="<?php echo $item['title'.LANG] ?>" title="<?php echo $item['title'.LANG] ?>" />
-					</p>
+					<!-- Picture full --><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $item['pic_full'] ?>" alt="<?php echo $item['title'.LANG] ?>" />
+				</p>
 				<p class="zoom-notice" id="track_hint">Double click on above image to view full picture</p>
 				<div class="zoom">
 					<img id="zoom_out" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/slider_btn_zoom_out.gif" alt="Zoom Out" title="Zoom Out" class="btn-zoom-out" />
@@ -25,8 +25,9 @@
 			</div>
 		</form>
 	</div>
-	
+
 </div><!--End product view-->
+
 <div class="right-detail">
 	<ul class="right-detail-info">
 		<li>
@@ -35,7 +36,7 @@
 		</li>
 		<li>
 			<h3 class="title-info">Mô tả sản phẩm</h3>
-			<?php echo $item['detail'.LANG] ?> 
+			<?php echo $item['content'.LANG] ?>
 		</li>
 	</ul>
 </div> <div class="clear"></div>
@@ -43,7 +44,7 @@
 <ul id="all-product">
 	<li class="product">
 		<div class="product-top"></div>
-			<div class="product-mid">	
+			<div class="product-mid">
 				<div class="tent-product">
 						<div class="product-img">
 								<a href="#" title="">
@@ -57,7 +58,7 @@
 	</li>
 	<li class="product">
 		<div class="product-top"></div>
-			<div class="product-mid">	
+			<div class="product-mid">
 				<div class="tent-product">
 						<div class="product-img">
 								<a href="#" title="">
@@ -71,7 +72,7 @@
 	</li>
 	<li class="product">
 		<div class="product-top"></div>
-			<div class="product-mid">	
+			<div class="product-mid">
 				<div class="tent-product">
 						<div class="product-img">
 								<a href="#" title="">

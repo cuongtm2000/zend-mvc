@@ -136,7 +136,7 @@
 /*Timer advanced slider*/
 .advanced-slider .timer-animation 
 {
-	
+	height:20px;
 	position:absolute;
 	z-index:60;
 	bottom:3px;

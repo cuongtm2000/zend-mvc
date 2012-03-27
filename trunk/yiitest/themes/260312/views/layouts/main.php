@@ -104,7 +104,6 @@
 			<ul class="support">
 				<?php foreach($this->function['list_supports'] as $value): ?>
 					<?php if($value['support_type']=='yahoo'): ?>
-						
 						<li>
 							<?php if($value['support_name'.Yii::app()->session['lang']]) echo '<p>'.$value['support_name'.Yii::app()->session['lang']].'</p>'; ?>
 						<?php if($value['support_phone']) echo '<p>'.$value['support_phone'].'</p>'; ?>
