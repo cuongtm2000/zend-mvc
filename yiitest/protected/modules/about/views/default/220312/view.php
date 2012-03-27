@@ -7,7 +7,7 @@
     </div> <!--End frame tent right-->
 <?php else: ?>
     <?php $this->breadcrumbs = array($this->lang[$this->module->id]=>array('/'.Yii::t('user', $this->module->id.'.link')), Yii::t('main', 'noRecord'));?>
-    <div id="page-tent-right">
+    <div class="page-tent-right">
 		<?php echo Yii::t('main', 'noRecord')?>
     </div><!--End Page tent right-->
 <?php endif; ?>

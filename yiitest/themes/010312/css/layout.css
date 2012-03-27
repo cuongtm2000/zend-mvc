@@ -74,9 +74,13 @@ a:hover{color:#000;}
 .statistics{list-style:none;padding:5px 3px 10px 15px;border:1px solid #F2F2F2;}
 .statistics li {color:#000; line-height:1.75em;}
 
+/*bg-adv adv left*/
+.bg-adv{list-style:none;border:1px solid #F2F2F2;text-align:center;margin:0 0 10px 0}
+.bg-adv li{padding:0 0 5px 0}
+
 /*Right content*/
 #right-content{float:left;width:525px; margin:0 0 0 15px}
-#right-content p{margin:10px 0}
+#right-content p{margin:0 0 8px 0}
 #right-content ul li, #right-content ol li{margin:0 0 0 18px}
 
 .link{color:#000; font-weight:bold; padding:0px 0 10px 0}
@@ -91,7 +95,7 @@ a:hover{color:#000;}
 
 /*** San pham noi bat of page index*****/
 .title-all-pro{color:#333; font-size:14px; font-weight:bold;margin:0 0 10px 0}
-.all-product{background:url(../images/bg-all-pro.gif) repeat-x;padding:15px 5px 15px 15px;*_padding:15px 5px 15px 5px}
+.all-product{background:url(../images/bg-all-pro.gif) repeat-x;padding:5px 5px 15px 15px;*_padding:15px 5px 15px 5px}
 .product{width:230px;text-align:center;padding:5px 0; border:1px solid #ccc;margin:0 18px 20px 0; display:inline-block; vertical-align:top;*float:left;*_margin:0 7px 10px 0; }
 
 /** Tent product and frame product img **/
@@ -173,8 +177,6 @@ a:hover{color:#000;}
 .pagecureent{border: 1px solid #ccc; padding: 2px 5px; background:#44A4DE; color:#fff; font-weight:bold;-webkit-border-radius: 2px; -moz-border-radius: 2px}
 
 /**Page Contact**/
-
-
 /*** Frame title company  ***/
 #frame-info-contact{color:#f00}
 
