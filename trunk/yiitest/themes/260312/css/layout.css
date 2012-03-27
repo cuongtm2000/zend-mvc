@@ -7,7 +7,7 @@ a:hover{color:#000;}
 
 /*layout*/
 *{margin:0; padding:0}
-#wrapper { margin:auto; width:950px;}
+#wrapper { margin:0 auto 10px; width:950px;}
 
 /*Header*/
 #header{margin:40px 0 20px 0}
@@ -48,17 +48,17 @@ a:hover{color:#000;}
 
 /*LEFT Content*/
 #leftcontent{float:left; width:226px}
-.title-left{ font-size:10pt;padding:14px 0;color:#5F5E60; font-weight:bold; text-transform:uppercase; background:url(../images/tail-cat.gif) repeat-x;-webkit-border-radius:2px;-moz-border-radius:2px}
+.title-left{font-size:10pt;padding:14px 0;color:#5F5E60; font-weight:bold; text-transform:uppercase; background:url(../images/tail-cat.gif) repeat-x;-webkit-border-radius:2px;-moz-border-radius:2px}
 .title-left span{padding:0 0 0 20px}
 
 /*sub-pro*/
 .sub-pro{list-style:none; background:#F6F6F6;margin:0 0 10px 0}
 .sub-pro li{ border-top:1px solid #FFF;padding:10px 0}
-.sub-pro li a{ font-weight:bold;color:#666060; padding:0 0 0 20px;display:block; *_padding:5px 0 0px 20px}
+.sub-pro li a{color:#666060; padding:0 0 0 20px;display:block; *_padding:5px 0 0px 20px}
 .sub-pro li a:hover{ color:#067EBD}
 .sub-pro ul{ padding:10px 0 0 0}
 .sub-pro ul li{padding:3px 0;list-style-image:url(../images/icon-list.gif); margin-left:40px; border:none}
-.sub-pro ul li a{ padding:0;font-weight:normal}
+.sub-pro ul li a{ padding:0}
 
 /*Ho tro ky thuat*/
 .support{list-style:none; padding:10px 0 0 0;background:#F6F6F6;margin:0 0 10px 0;text-align:center}
@@ -74,7 +74,7 @@ a:hover{color:#000;}
 #rightcontent p{margin:0 0 8px 0}
 #rightcontent ul li, #rightcontent ol li{margin:0 0 0 18px}
 
-.title-right{color:#FFF;font-size:10pt; background:url(../images/bg-title-right.gif) repeat-x; margin:0 0 5px 0;padding:14px 0 14px 0; font-weight:bold;-webkit-border-radius:2px;-moz-border-radius:2px}
+.title-right{text-transform: uppercase; color:#FFF; background:url(../images/bg-title-right.gif) repeat-x; margin:0 0 5px 0;padding:14px 0 14px 0; font-weight:bold;-webkit-border-radius:2px;-moz-border-radius:2px}
 .title-right span{padding:0 0 0 15px}
 
 .link{color:#0881C3; font-weight:bold; padding:0px 0 10px 0}
@@ -121,32 +121,13 @@ a:hover{color:#000;}
 .frame-contact .bton-dk{margin:10px 10px 5px 0}
 /****  End page contact     *****/
 
-/*PAGE PRODUCTS NEW*/
-.titleh3{ color:#109FEC; font-size:12pt; font-weight:bold}
-.product-info{ margin:10px 0;border:1px solid #E9E8E8; float:left;width:690px; padding:20px 0 10px 20px}
-.pr-info-left{float:left; width:200px; margin-right:20px}
-.pr-info-left img{border:1px solid #E9E8E8}
-.pr-info-left img:hover{border:1px solid #067EBF;}
-.pr-info-right{float:left; width:440px; color:#959595}
-.pr-info-right b{ color:#045C98; font-size:15pt; font-weight:normal}
-.pr-info-right p{ margin:15px 0 0 0; padding:0}
-.pr-info-right p img{position:relative; top:5px}
-.pr-info-right a{color:#109FEC}
-.pr-info-right a:hover{ text-decoration:underline; *_color:#109FEC}
-.pr-info-right p span{ color:#888888; font-weight:bold}
-.pr-info-right .add{color:#fff; font-weight:bold; background:#0E97D8; padding:8px 8px}
-.pr-info-right .add:hover{ text-decoration:none;color:#5E5F67; font-weight:bold; background:#EBEBEB; padding:8px 8px}
-.pr-info-right .detail{color:#5E5F67; font-weight:bold; background:#EBEBEB; padding:8px 8px}
-.pr-info-right .detail:hover{; text-decoration:none;color:#fff; font-weight:bold; background:#0E97D8; padding:8px 8px}
-.pr-new-info li{ border-bottom:1px solid #E9E8E8; padding:0px 0 20px 0}
-
 /*************************************************************************
 				POPULAR PRODUCTS
 *************************************************************************/
 .scroll-interval{ float:left; list-style:none; width:150px; margin:0 10px 0 0 !important;}
 .special_block{ width:710px; overflow:hidden; margin-bottom:0px; position:relative;}
 .inner2{background:url(../images/tail_slider.gif) left top repeat-x transparent; width:710px; overflow:hidden; height:236px;}
-.title-special { margin:20px 0 0 19px; padding:0 0 0 0; font-size:14px; font-weight:bold; color:#5f5e60; line-height:1.2em}
+.title-special {text-transform: uppercase; margin:20px 0 0 19px; padding:0 0 0 0; font-size:14px; font-weight:bold; color:#5f5e60; line-height:1.2em}
 .scroll-interval .name{padding:9px 15px 0 13px}
 .scroll-interval .name a{ color:#fefefe; line-height:1.25em; font-size:12px; font-weight:normal}
 .scroll-interval .name a:hover{ color:#fefefe; text-decoration:underline; }
@@ -197,12 +178,8 @@ a:hover{color:#000;}
 .black a:hover{background:url(../images/bull.gif) no-repeat left 5px;color:#ED2121}
 
 /*Footer*/
-#footer{padding:30px 0 10px 0;line-height:1.5em}
-#nav_fter {text-align:center;margin:0 0 20px 0}
-#nav_fter li{display:inline; list-style:none;background:url(../images/nav_line_fter.gif) no-repeat right;padding:0 5px 0 0}
-#nav_fter li a{padding:0 5px; color:#000;font-size:10pt}
-#nav_fter li a:hover{ color:#067EBD}
-#nav_fter .none-line{background:none }
+#bg-fter{background:#E0DED5; min-width: 950px}
+#footer{padding:15px 0 10px 0;line-height:1.5em;width: 950px; margin: auto}
 
 .fter-left{float:left; width:650px;}
 .title-company{color:#024E87;font-size:11pt;font-weight:bold;margin:0 0 5px 0}
