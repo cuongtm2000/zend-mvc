@@ -201,6 +201,7 @@ a:hover{color:#000;}
 #nav_fter li{display:inline; list-style:none;background:url(../images/nav_line_fter.gif) no-repeat right;padding:0 5px 0 0}
 #nav_fter li a{padding:0 5px; color:#000;font-size:10pt}
 #nav_fter li a:hover{ color:#067EBD}
+#nav_fter .none-line{background:none }
 
 .fter-left{float:left; width:650px;}
 .title-company{color:#024E87;font-size:11pt;font-weight:bold;margin:0 0 5px 0}
