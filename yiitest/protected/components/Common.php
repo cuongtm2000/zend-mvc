@@ -1,10 +1,8 @@
 <?php
 
-class Common
-{
+class Common {
 
-    public static function menuMultiLevel($data, $models, $link)
-    {
+    public static function menuMultiLevel($data, $models, $link) {
         $rowsize = count($data);
         $model = new $models();
         $row = $model->findCatByTag(Yii::app()->request->getQuery('cid')); //find cat_id
@@ -47,10 +45,14 @@ class Common
         }
     }
 
-    //Back end - remove pic
-    public function removePic($item, $type = 0, $path = 0)
-    {
-        $path = ($path == 1) ? YiiBase::getPathOfAlias('webroot') . '/public/userfiles/images/' . Yii::app()->user->id . '/images' . '/' . Yii::app()->controller->id . '/' : YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . '/';
+    /**
+     * @param $item - item sẽ bị remove
+     * @param int $type - (0 = pic_full, 1 = pic_desc)
+     * @param int $path
+     * @param int $cat - Danh mục
+     */
+    public function removePic($item, $type = 0, $path = 0, $cat = '') {
+        $path = ($path == 1) ? YiiBase::getPathOfAlias('webroot') . '/public/userfiles/images/' . Yii::app()->user->id . '/images' . '/' . Yii::app()->controller->id . $cat . '/' : YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . $cat . '/';
         if ($type == 0) {
             if ($item && file_exists($path . $item)) {
                 unlink($path . $item);
@@ -65,11 +67,11 @@ class Common
                 }
             }
         }
+        echo $path . $item;
     }
 
     //Front end - Create folder and Chmod
-    public function recursiveMkdir($path, $mode = 0777)
-    {
+    public function recursiveMkdir($path, $mode = 0777) {
         $dirs = explode('/', $path);
         $count = count($dirs);
 
@@ -83,8 +85,7 @@ class Common
         }
     }
 
-    public static function setLanguage()
-    {
+    public static function setLanguage() {
         if (isset($_GET['language']) && ($_GET['language'] != 'vi')) {
             Yii::app()->language = $_GET['language'];
             define('LANG', $_GET['language']); //coi lai
