@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 26, 2012 at 06:03 AM
+-- Generation Time: Mar 27, 2012 at 01:59 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -76,79 +76,93 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('advs_height', 200, '', '111120'),
 ('advs_height', 222, '', '200312'),
 ('advs_height', 200, '', '220312'),
+('advs_height', 200, '', '260312'),
 ('advs_width', 200, '', '010312'),
 ('advs_width', 196, '', '070312'),
 ('advs_width', 224, '', '111120'),
 ('advs_width', 200, '', '200312'),
 ('advs_width', 200, '', '220312'),
+('advs_width', 210, '', '260312'),
 ('banner_height', 332, '', '010312'),
 ('banner_height', 324, '', '070312'),
 ('banner_height', 297, '', '111120'),
 ('banner_height', 300, '', '130312'),
 ('banner_height', 328, '', '200312'),
 ('banner_height', 332, '', '220312'),
+('banner_height', 332, '', '260312'),
 ('banner_width', 951, '', '010312'),
 ('banner_width', 757, '', '070312'),
 ('banner_width', 709, '', '111120'),
 ('banner_width', 950, '', '130312'),
 ('banner_width', 718, '', '200312'),
 ('banner_width', 950, '', '220312'),
+('banner_width', 710, '', '260312'),
 ('logo_height', 108, '', '010312'),
 ('logo_height', 57, '', '070312'),
 ('logo_height', 65, '', '111120'),
 ('logo_height', 100, '', '130312'),
 ('logo_height', 55, '', '200312'),
 ('logo_height', 79, '', '220312'),
+('logo_height', 46, '', '260312'),
 ('logo_width', 155, '', '010312'),
 ('logo_width', 260, '', '070312'),
 ('logo_width', 310, '', '111120'),
 ('logo_width', 735, '', '130312'),
 ('logo_width', 314, '', '200312'),
 ('logo_width', 259, '', '220312'),
+('logo_width', 300, '', '260312'),
 ('products_cat_height', 155, '', '010312'),
 ('products_cat_height', 200, '', '070312'),
 ('products_cat_height', 150, '', '111120'),
 ('products_cat_height', 121, '', '130312'),
 ('products_cat_height', 170, '', '200312'),
 ('products_cat_height', 120, '', '220312'),
+('products_cat_height', 193, '', '260312'),
 ('products_cat_width', 115, '', '010312'),
 ('products_cat_width', 150, '', '070312'),
 ('products_cat_width', 169, '', '111120'),
 ('products_cat_width', 152, '', '130312'),
 ('products_cat_width', 170, '', '200312'),
 ('products_cat_width', 150, '', '220312'),
+('products_cat_width', 188, '', '260312'),
 ('products_height', 400, '', '010312'),
 ('products_height', 500, '', '070312'),
 ('products_height', 650, '', '111120'),
 ('products_height', 400, '', '130312'),
 ('products_height', 590, '', '200312'),
 ('products_height', 400, '', '220312'),
+('products_height', 400, '', '260312'),
 ('products_height_thumb', 121, '', '010312'),
 ('products_height_thumb', 200, '', '070312'),
 ('products_height_thumb', 167, '', '111120'),
 ('products_height_thumb', 121, '', '130312'),
 ('products_height_thumb', 170, '', '200312'),
 ('products_height_thumb', 120, '', '220312'),
+('products_height_thumb', 193, '', '260312'),
 ('products_width', 500, '', '010312'),
 ('products_width', 600, '', '070312'),
 ('products_width', 700, '', '111120'),
 ('products_width', 500, '', '130312'),
 ('products_width', 475, '', '200312'),
 ('products_width', 515, '', '220312'),
+('products_width', 400, '', '260312'),
 ('products_width_thumb', 152, '', '010312'),
 ('products_width_thumb', 150, '', '070312'),
 ('products_width_thumb', 167, '', '111120'),
 ('products_width_thumb', 152, '', '130312'),
 ('products_width_thumb', 170, '', '200312'),
 ('products_width_thumb', 150, '', '220312'),
+('products_width_thumb', 188, '', '260312'),
 ('services_height', 90, '', '010312'),
 ('services_height', 110, '', '111120'),
 ('services_height', 89, '', '130312'),
 ('services_height', 90, '', '220312'),
+('services_height', 90, '', '260312'),
 ('services_width', 144, '', '010312'),
 ('services_width', 192, '', '111120'),
 ('services_width', 143, '', '130312'),
-('services_width', 145, '', '220312');
+('services_width', 145, '', '220312'),
+('services_width', 144, '', '260312');
 
 -- --------------------------------------------------------
 
@@ -363,14 +377,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(11, 'Giới thiệu sơ lược', 'about so luoc', '<p>\r\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\r\n<p>\r\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\r\n<p>\r\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\r\n<p>\r\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\r\n<p>\r\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 302, '2012-03-22 01:48:29', 3, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'about-so-luoc', 'Mô tả VN', 'Mô tả english', 1, 'test');
+(11, 'Giới thiệu sơ lược', 'about so luoc', '<p>\r\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\r\n<p>\r\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\r\n<p>\r\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\r\n<p>\r\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\r\n<p>\r\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 426, '2012-03-22 01:48:29', 2, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'about-so-luoc', 'Mô tả VN', 'Mô tả english', 1, 'test'),
+(12, 'Giới thiệu chung chung', '', '<p>\r\n	Là chung chung </p>\r\n', '', 2, '2012-03-26 08:38:15', 1, 0, NULL, NULL, 'gioi-thieu-chung-chung', '', 'Là chung chung ', '', 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -395,14 +410,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `dos_module_advs`
 --
 
 INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`, `dos_usernames_username`) VALUES
-(1, 'trai uot chinh', NULL, 'trai-uot-chinh.jpg', 'http://grouplaptrinh.com', '2012-03-22 23:38:44', '2012-03-22 10:00:00', '2012-03-29 10:00:00', 0, 1, 'left', '_bank', 1, 'test');
+(1, 'trai uot chinh', NULL, 'trai-uot-chinh.jpg', 'http://grouplaptrinh.com', '2012-03-22 23:38:44', '2012-03-22 10:00:00', '2012-03-29 10:00:00', 0, 1, 'left', '_bank', 1, 'test'),
+(2, 'Tại vì sao người', NULL, 'tai-vi-sao-nguoi.jpg', 'http://dantri.com.vn', '2012-03-26 08:23:38', '2012-03-25 16:00:00', '2012-03-26 16:00:00', 0, 2, 'left', '_bank', 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -466,7 +482,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
 --
 
 INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `tagen`, `description`, `descriptionen`, `enable`, `dos_usernames_username`) VALUES
-(1, 'Liên hệ', '', '<p>\r\n	Nội dung</p>\r\n', '', '2012-03-25 08:12:35', 1, 0, 0, 'lien-he', '', 'Mô tả', 'Mô tả Mô tả En', '1', 'test');
+(1, 'Liên hệ', '', '<p>\r\n	Nội dung Nội dung Nội dung Nội dung V  Nội dung Nội dung Nội dung</p>\r\n', '', '2012-03-25 08:12:35', 1, 0, 0, 'lien-he', '', 'Mô tả', 'Mô tả Mô tả En', '1', 'test');
 
 -- --------------------------------------------------------
 
@@ -529,7 +545,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -587,9 +603,9 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('max_count', 0, 'dos'),
 ('counter', 0, 'dos'),
 ('yesterday', 0, 'dos'),
-('day_time', 2456013, 'test'),
+('day_time', 2456014, 'test'),
 ('max_count', 1, 'test'),
-('counter', 2, 'test'),
+('counter', 3, 'test'),
 ('yesterday', 1, 'test');
 
 -- --------------------------------------------------------
@@ -610,7 +626,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1332734539, 'test');
+('''127.0.0.1''', 1332806376, 'test');
 
 -- --------------------------------------------------------
 
@@ -735,8 +751,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(1, 'Dịch vụ 1', 'Dịch vụ English', NULL, NULL, '<p>\r\n	CHi tiết</p>\r\n', '<p>\r\n	sdfsdf sdf</p>\r\n', '', 5, '2012-03-01 16:28:47', 1, 0, NULL, NULL, 'dich-vu-1', 'dich-vu-english', 'Mô tả', 'Mô tả', 1, 'test'),
-(2, 'Dich vụ 2', 'Dich vu 2 english', NULL, NULL, '<p>\r\n	Dich vu 2</p>\r\n', '<p>\r\n	Noi dung</p>\r\n', 'dich-vu-2.jpg', 3, '2012-03-01 16:28:59', 2, 0, NULL, NULL, 'dich-vu-2', 'dich-vu-2-english', 'Mo ta', 'Mô tả', 1, 'test');
+(1, 'Dịch vụ 1', 'Dịch vụ English', NULL, NULL, '<p>\r\n	CHi tiết</p>\r\n', '<p>\r\n	sdfsdf sdf</p>\r\n', '', 9, '2012-03-01 16:28:47', 1, 0, NULL, NULL, 'dich-vu-1', 'dich-vu-english', 'Mô tả', 'Mô tả', 1, 'test'),
+(2, 'Dich vụ 2', 'Dich vu 2 english', NULL, NULL, '<p>\r\n	Dich vu 2</p>\r\n', '<p>\r\n	Noi dung</p>\r\n', 'dich-vu-2.jpg', 8, '2012-03-01 16:28:59', 2, 0, NULL, NULL, 'dich-vu-2', 'dich-vu-2-english', 'Mo ta', 'Mô tả', 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -1031,7 +1047,8 @@ INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `descriptio
 ('111120', 'Mẫu cafe', '2011-11-21 02:40:10', ''),
 ('130312', 'Mẫu Đồ gỗ', '2012-03-12 12:01:59', 'Chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn Carb p2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn Carb p2'),
 ('200312', 'Mẫu Sách', '2012-03-19 23:43:27', 'Chuyên bán các loại sách cho sinh viên, giá cả bình dân'),
-('220312', 'Mẫu nội thất', '2012-03-21 20:04:36', 'Chuyên bán các loại đồ nội thất, dân dụng');
+('220312', 'Mẫu nội thất', '2012-03-21 20:04:36', 'Chuyên bán các loại đồ nội thất, dân dụng'),
+('260312', 'Mẫu máy tính', '2012-03-26 06:44:07', 'Chuyên bán các loại máy tính, linh kiện, laptop, pc, sửa chữa,...');
 
 -- --------------------------------------------------------
 
@@ -1057,7 +1074,8 @@ INSERT INTO `dos_templates_has_dos_bussiness` (`dos_templates_template`, `dos_bu
 ('111120', 'am-thuc-drink'),
 ('130312', 'noi-that-ngoai-that'),
 ('200312', 'cong-nghe-thong-tin-vien-thong'),
-('220312', 'noi-that-ngoai-that');
+('220312', 'noi-that-ngoai-that'),
+('260312', 'cong-nghe-thong-tin-vien-thong');
 
 -- --------------------------------------------------------
 
@@ -1196,7 +1214,25 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('220312', 'services', 'advs_left'),
 ('220312', 'services', 'list_supports'),
 ('220312', 'services', 'menu_services'),
-('220312', 'services', 'products_hot');
+('220312', 'services', 'products_hot'),
+('260312', 'about', 'advs_left'),
+('260312', 'about', 'list_supports'),
+('260312', 'about', 'menu_about'),
+('260312', 'contact', 'advs_left'),
+('260312', 'contact', 'list_supports'),
+('260312', 'contact', 'menu_products'),
+('260312', 'default', 'about_home'),
+('260312', 'default', 'advs_left'),
+('260312', 'default', 'list_supports'),
+('260312', 'default', 'menu_products'),
+('260312', 'default', 'products_hot'),
+('260312', 'default', 'products_new'),
+('260312', 'products', 'advs_left'),
+('260312', 'products', 'list_supports'),
+('260312', 'products', 'menu_products'),
+('260312', 'services', 'advs_left'),
+('260312', 'services', 'list_supports'),
+('260312', 'services', 'menu_services');
 
 -- --------------------------------------------------------
 
@@ -1232,7 +1268,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
 ('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi', NULL, '0000-00-00 00:00:00', 1, '111120', 2, 'thoi-trang'),
-('test', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-01 16:28:15', '', '', '', 'user', 'vi|en', NULL, '2012-03-31 10:00:00', 1, '220312', 19, 'du-lich');
+('test', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-01 16:28:15', '', '', '', 'user', 'vi|en', NULL, '2012-03-31 10:00:00', 1, '260312', 19, 'du-lich');
 
 -- --------------------------------------------------------
 
