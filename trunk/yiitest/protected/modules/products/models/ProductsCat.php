@@ -120,7 +120,7 @@ class ProductsCat extends CActiveRecord {
             //'cat_order' => 'Cat Order',
             //'cat_extra1' => 'Cat Extra1',
             //'cat_extra2' => 'Cat Extra2',
-            //'cat_enable' => 'Cat Enable',
+            'cat_enable' => Yii::app()->controller->lang['show'],
             //'dos_usernames_username' => 'Dos Usernames Username',
         );
     }

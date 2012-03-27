@@ -44,8 +44,8 @@ class NewsController extends AdminController {
 		$model_cat_class = new $module_cat();
 
 
-		$script = "$('#" . $module_cat . "_description').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});";
-		Yii::app()->clientScript->registerScript('', $script, CClientScript::POS_READY);
+		//$script = "$('#" . $module_cat . "_description').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});";
+		//Yii::app()->clientScript->registerScript('', $script, CClientScript::POS_READY);
 
 		if (isset($_POST[$module_cat])) {
 			$model_cat_class->attributes = $_POST[$module_cat];
@@ -68,8 +68,8 @@ class NewsController extends AdminController {
 
 		$model_cat_class = $model_cat_class->loadEdit($id); //load form models
 
-		$script = "$('#" . $module_cat . "_description').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});";
-		Yii::app()->clientScript->registerScript('', $script, CClientScript::POS_READY);
+		//$script = "$('#" . $module_cat . "_description').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});";
+		//Yii::app()->clientScript->registerScript('', $script, CClientScript::POS_READY);
 
 		if (isset($_POST[$module_cat])) {
 			$model_cat_class->attributes = $_POST[$module_cat];
@@ -151,16 +151,14 @@ class NewsController extends AdminController {
 	}
 
 	public function actionAdd() {
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/ckeditor/ckeditor.js');
+
 		$module = ucfirst($this->getId());
 		$module_cat = $module . 'Cat';
 		Yii::app()->getModule($this->getId());
 
 		$model_cat_class = new $module_cat();
 		$model_class = new $module();
-
-		Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/ckeditor/ckeditor.js');
-		//$script = "$('#" . $module . "_description').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});";
-		//Yii::app()->clientScript->registerScript('', $script, CClientScript::POS_READY);
 
 		if (isset($_POST[$module])) {
 			$model_class->attributes = $_POST[$module];
@@ -175,6 +173,11 @@ class NewsController extends AdminController {
 	}
 
 	public function actionEdit($id) {
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/ckeditor/ckeditor.js');
+        //Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.nyromodal.custom.min.js');
+        //Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/nyromodal.css');
+        //Yii::app()->clientScript->registerScript('', "$(function() { $('.nyroModal').nyroModal();});", CClientScript::POS_READY);
+
 		$module = ucfirst($this->getId());
 		$module_cat = $module . 'Cat';
 		Yii::app()->getModule($this->getId());
@@ -182,14 +185,6 @@ class NewsController extends AdminController {
 		$model_cat_class = new $module_cat();
 		$model_class = new $module();
 		$model_class = $model_class->loadEdit($id); //load form models
-
-		Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/ckeditor/ckeditor.js');
-		//$script = "$('#" . $module . "_description').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});";
-		//Yii::app()->clientScript->registerScript('', $script, CClientScript::POS_READY);
-
-		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.nyromodal.custom.min.js');
-		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/nyromodal.css');
-		Yii::app()->clientScript->registerScript('', "$(function() { $('.nyroModal').nyroModal();});", CClientScript::POS_READY);
 
 		if (isset($_POST[$module])) {
 			$model_class->attributes = $_POST[$module];

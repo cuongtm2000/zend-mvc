@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 27, 2012 at 01:59 AM
+-- Generation Time: Mar 27, 2012 at 05:03 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -111,6 +111,10 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('logo_width', 314, '', '200312'),
 ('logo_width', 259, '', '220312'),
 ('logo_width', 300, '', '260312'),
+('news_cat_height', 100, '', '260312'),
+('news_cat_width', 145, '', '260312'),
+('news_height_thumb', 100, '', '260312'),
+('news_width_thumb', 145, '', '260312'),
 ('products_cat_height', 155, '', '010312'),
 ('products_cat_height', 200, '', '070312'),
 ('products_cat_height', 150, '', '111120'),
@@ -214,7 +218,7 @@ INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('cancel', 'Hủy bỏ', 'Cancel', 1),
 ('cat_parent', 'Phân loại', 'Category', 1),
 ('cat_title', 'Danh mục', 'Category', 1),
-('cat_titleen', 'Danh mục EN', 'Category', 1),
+('cat_titleen', 'Danh mục En', 'Category', 1),
 ('company_name', 'Công ty cổ phần Thương Hội', 'Thuong Hoi JSC', 0),
 ('company_phone', 'Phone: 0929001001 (An)', 'Phone: 0929001001 (An)', 0),
 ('contact', 'Liên hệ', 'Contact', 0),
@@ -243,6 +247,8 @@ INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('pic_desc', 'Hình mô tả', 'Picture decription', 0),
 ('pic_full', 'Hình lớn', 'Picture large', 1),
 ('pic_thumb', 'Hình thu nhỏ', 'Picture thumbnail', 1),
+('preview', 'Giới thiệu sơ lược', 'Preview', 1),
+('previewen', 'Giới thiệu sơ lược En', 'Preview', 1),
 ('products', 'Sản phẩm', 'Products', 0),
 ('read_more', 'Xem tiếp', 'Read more', 0),
 ('remove_pic', 'Xóa ảnh này', 'Delete this picture', 1),
@@ -254,7 +260,7 @@ INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('tag', 'Liên kết', 'Link', 1),
 ('tagen', 'Liên kết En', 'Link', 1),
 ('title', 'Tiêu đề', 'Title', 1),
-('titleen', 'Tiêu đề EN', 'Title EN', 1),
+('titleen', 'Tiêu đề En', 'Title En', 1),
 ('update', 'Cập nhật', 'Update', 1),
 ('vi', 'Tiếng Việt', 'Tiếng Việt', 0),
 ('views', 'Lượt xem', 'Views', 1);
@@ -384,7 +390,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(11, 'Giới thiệu sơ lược', 'about so luoc', '<p>\r\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\r\n<p>\r\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\r\n<p>\r\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\r\n<p>\r\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\r\n<p>\r\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 426, '2012-03-22 01:48:29', 2, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'about-so-luoc', 'Mô tả VN', 'Mô tả english', 1, 'test'),
+(11, 'Giới thiệu sơ lược', 'about so luoc', '<p>\r\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\r\n<p>\r\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\r\n<p>\r\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\r\n<p>\r\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\r\n<p>\r\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 436, '2012-03-22 01:48:29', 2, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'about-so-luoc', 'Mô tả VN', 'Mô tả english', 1, 'test'),
 (12, 'Giới thiệu chung chung', '', '<p>\r\n	Là chung chung </p>\r\n', '', 2, '2012-03-26 08:38:15', 1, 0, NULL, NULL, 'gioi-thieu-chung-chung', '', 'Là chung chung ', '', 1, 'test');
 
 -- --------------------------------------------------------
@@ -545,7 +551,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 -- --------------------------------------------------------
 
@@ -572,14 +578,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `dos_module_news_cat`
---
-
-INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(1, 0, 'Danh muc', NULL, NULL, NULL, 'danh-muc', NULL, NULL, NULL, NULL, 0, NULL, NULL, 1, 'test');
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 -- --------------------------------------------------------
 
@@ -626,7 +625,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1332806376, 'test');
+('''127.0.0.1''', 1332811134, 'test');
 
 -- --------------------------------------------------------
 
