@@ -40,8 +40,9 @@
 				<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl'] ?>" title="<?php echo $this->logo['banner_name']?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/banner/<?php echo $this->logo['banner_url'] ?>" alt="<?php echo $this->logo['banner_name']?>" /></a>
 			<?php else:?>
 				<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl'] ?>/" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a>
-			<?php endif;?>
+			<?php endif; ?>
 		</div> <!--End logo-->
+		<h1 class="title-company-home"><?php echo $this->lang['company_name']?></h1>
 		<div class="lang">
 			 <a href="<?php echo Yii::app()->request->baseUrl ?>/en" title="English"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/en.gif" alt="English" /> English</a>
 						<a href="<?php echo Yii::app()->request->baseUrl ?>/" title="Tiếng Việt"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/vi.gif" alt="Việt Nam" /> Tiếng Việt</a> 
@@ -223,7 +224,8 @@
             <div class="fter-left">
                 <h3 class="title-company"><?php echo $this->lang['company_name'] ?></h3>
 				<p><?php echo $this->lang['address1'] ?></p>     
-				<p><?php echo $this->lang['address2'] ?></p>  
+				<p><?php echo $this->lang['address2'] ?></p> 
+				<p><?php echo $this->lang['company_phone'] ?></p>
                 <p><?php echo $this->lang['copyright'] ?></p>
             </div>
             <div class="fter-right">
