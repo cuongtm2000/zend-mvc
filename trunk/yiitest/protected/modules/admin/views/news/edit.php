@@ -26,12 +26,12 @@
     </div>
     <div class="clear space"></div>
     
-    <div class="col1"><?php echo $form->labelEx($model, 'detail') ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'content') ?></div>
     <div class="col2">
-        <?php echo $form->textArea($model, 'detail', $htmlOptions=array('cols'=>20, 'rows'=>10)); ?>
+        <?php echo $form->textArea($model, 'content', $htmlOptions=array('cols'=>20, 'rows'=>10)); ?>
         <script type="text/javascript">
         //<![CDATA[
-            CKEDITOR.replace('<?php echo get_class($model)?>[detail]');
+            CKEDITOR.replace('<?php echo get_class($model)?>[content]');
         //]]>
         </script>
     </div>

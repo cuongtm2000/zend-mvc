@@ -1,8 +1,10 @@
 <?php
 
-class Common {
+class Common
+{
 
-    public static function menuMultiLevel($data, $models, $link) {
+    public static function menuMultiLevel($data, $models, $link)
+    {
         $rowsize = count($data);
         $model = new $models();
         $row = $model->findCatByTag(Yii::app()->request->getQuery('cid')); //find cat_id
@@ -25,7 +27,7 @@ class Common {
         for ($i = 0; $i < $rowsize; $i++) {
             if ($data[$i]['cat_parent_id'] == 0) {
                 //Parent categories
-                echo '<li><a href="' . Yii::app()->request->baseUrl . LANGURL . '/' . $link . '/' . $data[$i]['tag'.Yii::app()->session['lang']] . '" title="' . $data[$i]['cat_title' . LANG] . '">' . $data[$i]['cat_title' . LANG] . '</a>';
+                echo '<li><a href="' . Yii::app()->request->baseUrl . LANGURL . '/' . $link . '/' . $data[$i]['tag' . Yii::app()->session['lang']] . '" title="' . $data[$i]['cat_title' . LANG] . '">' . $data[$i]['cat_title' . LANG] . '</a>';
                 //Sub categories
                 if ($parent_id && ($parent_id == $data[$i]['cat_id'])) {
                     for ($j = 0; $j < $rowsize; $j++) {
@@ -46,7 +48,8 @@ class Common {
     }
 
     //Back end - remove pic
-    public function removePic($item, $type = 0, $path = 0) {
+    public function removePic($item, $type = 0, $path = 0)
+    {
         $path = ($path == 1) ? YiiBase::getPathOfAlias('webroot') . '/public/userfiles/images/' . Yii::app()->user->id . '/images' . '/' . Yii::app()->controller->id . '/' : YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . '/';
         if ($type == 0) {
             if ($item && file_exists($path . $item)) {
@@ -65,7 +68,8 @@ class Common {
     }
 
     //Front end - Create folder and Chmod
-    public function recursiveMkdir($path, $mode = 0777) {
+    public function recursiveMkdir($path, $mode = 0777)
+    {
         $dirs = explode('/', $path);
         $count = count($dirs);
 
@@ -78,19 +82,21 @@ class Common {
             }
         }
     }
-	public static function setLanguage(){
-		if(isset($_GET['language']) && ($_GET['language'] != 'vi')){
-			Yii::app()->language = $_GET['language'];
-			define('LANG', $_GET['language']); //coi lai
-			define('LANGURL', '/' . $_GET['language']); //coi lai
-			Yii::app()->session['lang'] = $_GET['language'];
-			Yii::app()->session['langUrl'] = '/' . $_GET['language'];
-		}else{
-			Yii::app()->language = 'vi';
-			define('LANG', ''); //coi lai
-			define('LANGURL', ''); //coi lai
-			Yii::app()->session['lang'] = '';
-			Yii::app()->session['langUrl'] = '';
-		}
-	}
+
+    public static function setLanguage()
+    {
+        if (isset($_GET['language']) && ($_GET['language'] != 'vi')) {
+            Yii::app()->language = $_GET['language'];
+            define('LANG', $_GET['language']); //coi lai
+            define('LANGURL', '/' . $_GET['language']); //coi lai
+            Yii::app()->session['lang'] = $_GET['language'];
+            Yii::app()->session['langUrl'] = '/' . $_GET['language'];
+        } else {
+            Yii::app()->language = 'vi';
+            define('LANG', ''); //coi lai
+            define('LANGURL', ''); //coi lai
+            Yii::app()->session['lang'] = '';
+            Yii::app()->session['langUrl'] = '';
+        }
+    }
 }
