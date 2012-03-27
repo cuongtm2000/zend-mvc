@@ -213,26 +213,24 @@
     
     <div id="footer">
     	<ul id="nav_fter">
-        	<li><a href="#" title="">Trang chủ</a></li>
-            <li><a href="#" title="">Giới thiệu</a></li>
-            <li><a href="#" title="">Sản phẩm</a></li>
-            <li><a href="#" title="">Dịch vụ</a></li>
-            <li><a href="#" title="">Tin tức</a></li>
-            <li><a href="#" title="">Liên hệ</a></li>
+        	<?php $size= count($this->nav); $i=0; foreach($this->nav as $value):?>
+			<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
+			<?php $none = ($i < ($size-1)) ? '' : ' class="none-line"' ?>
+			<li<?php echo $none?>><a href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo $value['menu'.LANG] ?>"<?php echo $target ?>><?php echo $value['menu'.LANG] ?></a></li>
+			<?php $i++; endforeach;?>
         </ul>
         <div>
             <div class="fter-left">
-                <h3 class="title-company">CÔNG TY CỔ PHẦN MÁY TÍNH HOÀN LONG</h3>
-                <p>Trụ sở chính : Hoàn Long Building 244 Cống Quỳnh, P.Phạm Ngũ Lão, Q.1, Tp.HCM</p>
-                <p>ĐT: 08.39258999 - 08.39259999 - Fax : 08.39259131</p>
-                <p>Website: www.hoanlong.com.vn - Email: lienhe@hoanlong.com.vn</p>
-                <p>Copyright &copy; 2012 Golden Dragon Design by</p>
+                <h3 class="title-company"><?php echo $this->lang['company_name'] ?></h3>
+				<p><?php echo $this->lang['address1'] ?></p>     
+				<p><?php echo $this->lang['address2'] ?></p>  
+                <p><?php echo $this->lang['copyright'] ?></p>
             </div>
             <div class="fter-right">
             	<p><span>Đang truy cập: <b><?php echo Yii::app()->counter->getOnline(); ?></b> </span> - <span>Trong ngày: <b><?php echo Yii::app()->counter->getToday(); ?></b> </span></p>
                 <p><span>Hôm qua: <b><?php echo Yii::app()->counter->getYesterday(); ?></b> </span> - <span>Tổng truy câp: <b><?php echo Yii::app()->counter->getTotal(); ?></b> </span></p>
                 <p><span>Truy cập nhiều nhất: <b><?php echo Yii::app()->counter->getMaximal(); ?></b> </span> - <span>Ngày nhiều nhất: <b><?php echo date('d.m.Y', Yii::app()->counter->getMaximalTime()); ?></b> </span></p>
-            <a href="http://dos.vn" title="Dos.vn">Dos.vn</a></div> <div class="clear"></div>
+            <?php echo $this->lang['developed']?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></div> <div class="clear"></div>
     	</div>
     </div><!--End Footer-->
 </div><!--End wrapper-->
