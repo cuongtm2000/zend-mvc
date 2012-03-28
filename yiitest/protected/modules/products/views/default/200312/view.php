@@ -25,7 +25,6 @@
 			</div>
 		</form>
 	</div>
-
 </div><!--End product view-->
 
 <div class="right-detail">
@@ -44,45 +43,44 @@
 <ul id="all-product">
 	<li class="product">
 		<div class="product-top"></div>
-			<div class="product-mid">
-				<div class="tent-product">
-						<div class="product-img">
-								<a href="#" title="">
-									<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-product.jpg" alt="no-product"/>
-								</a>
-						</div>
-						<h2 class="title-pro"><a href="" title="">Sách tống hợp quý</a></h2>
+		<div class="product-mid">
+			<div class="tent-product">
+				<div class="product-img">
+					<a href="#" title="">
+						<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-product.jpg" alt="no-product"/>
+					</a>
 				</div>
+				<h2 class="title-pro"><a href="" title="">Sách tổng hợp loại 1</a></h2>
 			</div>
+		</div>
 		<div class="product-btom"></div>
 	</li>
 	<li class="product">
 		<div class="product-top"></div>
-			<div class="product-mid">
-				<div class="tent-product">
-						<div class="product-img">
-								<a href="#" title="">
-									<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-product.jpg" alt="no-product"/>
-								</a>
-						</div>
-						<h2 class="title-pro"><a href="" title="">Sách cho mẹ và bé</a></h2>
+		<div class="product-mid">
+			<div class="tent-product">
+				<div class="product-img">
+					<a href="#" title="">
+						<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-product.jpg" alt="no-product"/>
+					</a>
 				</div>
+				<h2 class="title-pro"><a href="" title="">Sách cho mẹ và bé</a></h2>
 			</div>
+		</div>
 		<div class="product-btom"></div>
 	</li>
 	<li class="product">
 		<div class="product-top"></div>
-			<div class="product-mid">
-				<div class="tent-product">
-						<div class="product-img">
-								<a href="#" title="">
-									<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-product.jpg" alt="no-product"/>
-								</a>
-						</div>
-						<h2 class="title-pro"><a href="" title="">Sách cho teen mới lớn</a></h2>
+		<div class="product-mid">
+			<div class="tent-product">
+				<div class="product-img">
+					<a href="#" title="">
+						<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-product.jpg" alt="no-product"/>
+					</a>
 				</div>
+				<h2 class="title-pro"><a href="" title="">Sách tổng hợp loại 2</a></h2>
 			</div>
+		</div>
 		<div class="product-btom"></div>
 	</li>
 </ul> <!--End all product-->
-
