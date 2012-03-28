@@ -22,11 +22,10 @@
  * @property DosUsernames $dosUsernamesUsername
  */
 class VideoCat extends CActiveRecord {
-	/**
-	 * Returns the static model of the specified AR class.
-	 * @param string $className active record class name.
-	 * @return VideoCat the static model class
-	 */
+	private $_data;
+	private $_rows;
+	private $_rowsize;
+
 	public static function model($className = __CLASS__) {
 		return parent::model($className);
 	}
@@ -114,6 +113,43 @@ class VideoCat extends CActiveRecord {
 		return new CActiveDataProvider($this, array(
 			'criteria' => $criteria,
 		));
+	}
+
+	//Front end - List record for index
+	public function listCats($cid = 0, $prefix = NULL, $type = 0, $id = 0) {
+		if ($cid == 1) {
+			$this->_data[] = array('cat_id' => 0, 'cat_title' => 'Root');
+		}
+
+		if ($type == 1) {
+			//for admin
+			if ($id != 0) {
+				$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title, tag, cat_enable FROM ' . $this->tableName() . ' WHERE cat_id != ' . $id . ' ORDER BY cat_order DESC');
+			} else {
+				$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title, tag, cat_enable FROM ' . $this->tableName() . ' ORDER BY cat_order DESC');
+			}
+		} else {
+			$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title, tag, cat_enable FROM ' . $this->tableName() . ' WHERE cat_enable=1 ORDER BY cat_order DESC');
+		}
+
+		$this->_rows = $command->queryAll();
+		$this->_rowsize = count($this->_rows);
+		for ($i = 0; $i < $this->_rowsize; $i++) {
+			if ($this->_rows[$i]['cat_parent_id'] == 0) {
+				$this->_data[] = array('cat_id' => $this->_rows[$i]['cat_id'], 'tag' => $this->_rows[$i]['tag'], 'cat_title' => $prefix . $this->_rows[$i]['cat_title'], 'cat_enable' => $this->_rows[$i]['cat_enable']);
+				$this->loopItem($i, $prefix);
+			}
+		}
+		return $this->_data;
+	}
+
+	private function loopItem($i, $prefix, $tab = '|-- ') {
+		for ($j = 0; $j < $this->_rowsize; $j++) {
+			if ($this->_rows[$j]['cat_parent_id'] == $this->_rows[$i]['cat_id']) {
+				$this->_data[] = array('cat_id' => $this->_rows[$j]['cat_id'], 'tag' => $this->_rows[$j]['tag'], 'cat_title' => $prefix . $tab . $this->_rows[$j]['cat_title'], 'cat_enable' => $this->_rows[$j]['cat_enable']);
+				$this->loopItem($j, $prefix, $tab . '|-- ');
+			}
+		}
 	}
 
 	//Back end - Count item by user post
