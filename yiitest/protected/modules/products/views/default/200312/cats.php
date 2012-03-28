@@ -1,4 +1,4 @@
-<?php $this->breadcrumbs=array($this->lang[$this->module->id]=>LANGURL.'/'.$this->module->id, $info_cat['cat_title'.LANG]=>$info_cat['tag']);?>
+<<?php $this->breadcrumbs = array($this->lang[$this->module->id] => LANGURL . '/' . Yii::t('user', $this->module->id.'.link'), $info_cat['cat_title' . LANG]); ?>
 
 <!-- for cat -->
 <?php if($list_sub_cats): ?>
