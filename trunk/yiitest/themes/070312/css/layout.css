@@ -80,7 +80,7 @@ a:hover{color:#000;}
 #rightcontent p{margin:0 0 8px 0}
 #rightcontent ul li, #rightcontent ol li{margin:0 0 0 18px}
 
-.title-right{margin:0 0 10px 0; font-size:12pt; color:#BC455F; background:url(../images/bull2.gif) no-repeat left; font-weight:bold;padding:10px 1px 7px 22px}
+.title-right{margin:0 0 5px 0; font-size:12pt; color:#BC455F; background:url(../images/bull2.gif) no-repeat left; font-weight:bold;padding:10px 1px 7px 22px}
 .title-right a {color:#BC455F}
 .title-right img{margin:0 3px}
 .title-right a:hover{color:#000}
@@ -90,9 +90,8 @@ a:hover{color:#000;}
 .link a{ color:#BC455F; font-size:10pt}
 .link a:hover{text-decoration:underline}
 
-
 /*Page tent right*/
-.page-tent-right{padding:10px 5px; text-align:justify;margin:0 0 20px 0;border:2px solid #EBEBEB;-webkit-border-radius:4px;-moz-border-radius:4px}
+.frame-tent-right{padding:10px 5px; text-align:justify;margin:0 0 20px 0;border:2px solid #EBEBEB;-webkit-border-radius:4px;-moz-border-radius:4px}
 
 /***** Product    *****/
 #all-product{padding:0 0 0 5px}
@@ -161,6 +160,7 @@ a:hover{color:#000;}
 .menu-fter{ background:url(../images/bg-menu.gif) no-repeat; width:965px;list-style:none;padding:10px 0;margin:0 0 10px 0}
 .menu-fter li{display:inline; }
 .menu-fter li a{padding:0 10px; color:#333; font-weight:bold;background:url(../images/line-bt-menu.gif) no-repeat right}
+.menu-fter .none-line a{background:none}
 #footer a:hover{color:#000}
 .info-fter{color:#00F;font-size:10pt}
 .company{font-size:11pt;font-weight:bold }

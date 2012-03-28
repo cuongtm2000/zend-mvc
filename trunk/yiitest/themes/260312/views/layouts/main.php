@@ -78,7 +78,7 @@
 				<h1 class="title-left"><span><?php echo $this->lang['about'] ?></span></h1>
 				<ul class="sub-pro">
 					<?php foreach($this->function['menu_about'] as $value): ?>
-					<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'about.link')?>/<?php echo $value['tag'.LANG]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
+					<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'about.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
 					<?php endforeach; ?>
 				</ul>
 			<?php endif;?>

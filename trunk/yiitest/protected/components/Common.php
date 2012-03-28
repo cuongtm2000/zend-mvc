@@ -33,7 +33,7 @@ class Common {
                             echo '<ul>';
                             for ($j = 0; $j < $rowsize; $j++) {
                                 if ($data[$j]['cat_parent_id'] == $data[$i]['cat_id']) {
-                                    echo '<li><a href="' . Yii::app()->request->baseUrl . LANGURL . '/' . $link . '/' . $data[$j]['tag'] . '" title="' . $data[$j]['cat_title' . LANG] . '">' . $data[$j]['cat_title' . LANG] . '</a></li>';
+                                    echo '<li><a href="' . Yii::app()->request->baseUrl . LANGURL . '/' . $link . '/' . $data[$j]['tag' . Yii::app()->session['lang']] . '" title="' . $data[$j]['cat_title' . LANG] . '">' . $data[$j]['cat_title' . LANG] . '</a></li>';
                                 }
                             }
                             echo '</ul>';
