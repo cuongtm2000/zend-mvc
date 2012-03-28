@@ -12,7 +12,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" />
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.7.1.min.js"></script>
 
-<title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->title) ? ' - '.CHtml::encode($this->title) : '' ?></title>
+<title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->title) ? ' - '.CHtml::encode($this->title) : '' ?> </title>
 <meta name="keywords" content="<?php echo $this->keywords ?>" />
 <meta name="description" content="<?php echo $this->description ?>" />
 
@@ -75,7 +75,7 @@
 					<h1 class="title-left"><span><?php echo $this->lang['about'] ?></span></h1>
 					<ul class="subcate">
 						<?php foreach($this->function['menu_about'] as $value): ?>
-						<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'about.link')?>/<?php echo $value['tag']?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
+						<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'about.link')?>/<?php echo $value['tag'.LANG]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
 						<?php endforeach; ?>
 					</ul>
 					<div class="bt-left-penal"></div> <!--bottom line sub left-->
@@ -85,7 +85,7 @@
 					<h1 class="title-left"><span><?php echo $this->lang['services'] ?></span></h1>
 					<ul class="subcate">
 						<?php foreach($this->function['menu_services'] as $value): ?>
-						<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'services.link')?>/<?php echo $value['tag']?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
+						<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'services.link')?>/<?php echo $value['tag'.LANG]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
 						<?php endforeach; ?>
 					</ul>
 					<div class="bt-left-penal"></div> <!--bottom line sub left-->
