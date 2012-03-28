@@ -25,7 +25,7 @@
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.sider.banner.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		runbanner(950,332);
+		runbanner(<?php echo $this->configs['banner_width'] ?>,<?php echo $this->configs['banner_height'] ?>);
 	});
 </script>
 <?php endif;?>
