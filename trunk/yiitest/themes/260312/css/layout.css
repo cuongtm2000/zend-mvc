@@ -92,19 +92,6 @@ a:hover{color:#000;}
 .pagenav , .pageactive{border: 1px solid #ccc; padding: 2px 5px; color:#FFF; -moz-border-radius: 2px; -webkit-border-radius: 2px;}
 .pagecureent{border: 1px solid #ccc; padding: 2px 5px; background:#109FEC; color:#fff; font-weight:bold; -moz-border-radius: 2px; -webkit-border-radius: 2px}
 
-/*Page Products Info*/
-.all-pg-info{ width:710px}
-.right-detail{float:left; width:430px; }
-.right-detail-info p{ margin:10px 0 0px 0; padding:0; color:#999}
-.right-detail-info b{color:#045C98; font-size:15pt; font-weight:normal}
-.right-detail-info a{color:#109FEC}
-.right-detail-info a:hover{ text-decoration:underline; *_color:#109FEC}
-.right-detail-info .add{float:right;color:#fff; font-weight:bold; background:#0E97D8; padding:8px 8px}
-.right-detail-info .add:hover{ text-decoration:none;color:#5E5F67; font-weight:bold; background:#EBEBEB; padding:8px 8px}
-.right-detail-info .detail{float:left;color:#5E5F67; font-weight:bold; background:#EBEBEB; padding:8px 8px}
-.right-detail-info  .detail:hover{text-decoration:none;color:#fff; font-weight:bold; background:#0E97D8; padding:8px 8px}
-.right-detail-info li{ margin:0px 0 0px 0; border-bottom:1px solid #E9E8E8; padding:10px 0 20px 0}
-
 /**Page Contact**/
 /*** Frame title company  ***/
 #frame-info-contact{margin:0 0 20px 0}
@@ -132,6 +119,7 @@ a:hover{color:#000;}
 .scroll-interval .name a{ color:#fefefe; line-height:1.25em; font-size:12px; font-weight:normal}
 .scroll-interval .name a:hover{ color:#fefefe; text-decoration:underline; }
 .txt_area{border:1px solid #e9e6e6;width:148px; overflow:hidden; background:#FFF;height:148px; margin:0px 0px 0 0px !important; float:left;}
+.txt_area img{height: 148px}
 .carouse2{ margin:17px 0 0 40px;width:632px!important;}
 .part {display:none;position:relative;top:-53px; left:0px;width:144px;  background:url(../images/bg-name.gif) left top no-repeat; height:51px;color:#FFF; margin-left:2px;}
 
