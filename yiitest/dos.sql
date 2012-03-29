@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 27, 2012 at 05:03 AM
+-- Generation Time: Mar 29, 2012 at 05:15 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -166,7 +166,11 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('services_width', 192, '', '111120'),
 ('services_width', 143, '', '130312'),
 ('services_width', 145, '', '220312'),
-('services_width', 144, '', '260312');
+('services_width', 144, '', '260312'),
+('video_cat_height', 100, NULL, '260312'),
+('video_cat_width', 145, NULL, '260312'),
+('video_height_thumb', 100, NULL, '260312'),
+('video_width_thumb', 145, NULL, '260312');
 
 -- --------------------------------------------------------
 
@@ -263,6 +267,7 @@ INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('titleen', 'Tiêu đề En', 'Title En', 1),
 ('update', 'Cập nhật', 'Update', 1),
 ('vi', 'Tiếng Việt', 'Tiếng Việt', 0),
+('video', 'Video', 'Video', 0),
 ('views', 'Lượt xem', 'Views', 1);
 
 -- --------------------------------------------------------
@@ -312,14 +317,15 @@ CREATE TABLE IF NOT EXISTS `dos_modules` (
 
 INSERT INTO `dos_modules` (`module_id`, `module_url`, `module_title`, `module_sort`, `module_type`) VALUES
 ('about', 'about', 'Danh sách', 2, 1),
-('advs', 'advs', 'Danh sách', 7, 0),
-('banner', 'banner', 'Danh sách', 8, 0),
-('contact', 'contact', 'Danh sách', 6, 1),
+('advs', 'advs', 'Danh sách', 8, 0),
+('banner', 'banner', 'Danh sách', 9, 0),
+('contact', 'contact', 'Danh sách', 7, 1),
 ('default', NULL, NULL, 1, 1),
 ('news', 'news/cats|news', 'Danh mục|Danh sách', 5, 1),
 ('products', 'products/cats|products', 'Danh mục|Danh sách', 3, 1),
 ('services', 'services', 'Danh sách', 4, 1),
-('supports', 'supports', 'Danh sách', 9, 0);
+('supports', 'supports', 'Danh sách', 10, 0),
+('video', 'video/cats|video', 'Danh mục|Danh sách', 6, 1);
 
 -- --------------------------------------------------------
 
@@ -354,7 +360,8 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('services', 'dos'),
 ('services', 'test'),
 ('supports', 'dos'),
-('supports', 'test');
+('supports', 'test'),
+('video', 'test');
 
 -- --------------------------------------------------------
 
@@ -390,8 +397,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(11, 'Giới thiệu sơ lược', 'about so luoc', '<p>\r\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\r\n<p>\r\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\r\n<p>\r\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\r\n<p>\r\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\r\n<p>\r\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 436, '2012-03-22 01:48:29', 2, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'about-so-luoc', 'Mô tả VN', 'Mô tả english', 1, 'test'),
-(12, 'Giới thiệu chung chung', '', '<p>\r\n	Là chung chung </p>\r\n', '', 2, '2012-03-26 08:38:15', 1, 0, NULL, NULL, 'gioi-thieu-chung-chung', '', 'Là chung chung ', '', 1, 'test');
+(11, 'Giới thiệu sơ lược', 'about so luoc', '<p>\r\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\r\n<p>\r\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\r\n<p>\r\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\r\n<p>\r\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\r\n<p>\r\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 471, '2012-03-22 01:48:29', 2, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'about-so-luoc', 'Mô tả VN', 'Mô tả english', 1, 'test'),
+(12, 'Giới thiệu chung chung', '', '<p>\r\n	Là chung chung </p>\r\n', '', 3, '2012-03-26 08:38:15', 1, 0, NULL, NULL, 'gioi-thieu-chung-chung', '', 'Là chung chung ', '', 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -551,7 +558,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -578,7 +585,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_module_news_cat`
+--
+
+INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
+(1, 0, 'Danh mục', '', NULL, NULL, 'danh-muc', '', '', '', '', 1, NULL, NULL, 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -602,10 +616,10 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('max_count', 0, 'dos'),
 ('counter', 0, 'dos'),
 ('yesterday', 0, 'dos'),
-('day_time', 2456014, 'test'),
+('day_time', 2456016, 'test'),
 ('max_count', 1, 'test'),
-('counter', 3, 'test'),
-('yesterday', 1, 'test');
+('counter', 4, 'test'),
+('yesterday', 0, 'test');
 
 -- --------------------------------------------------------
 
@@ -625,7 +639,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1332811134, 'test');
+('''127.0.0.1''', 1332988955, 'test');
 
 -- --------------------------------------------------------
 
@@ -669,10 +683,10 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
 --
 
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(9, 'Ghế sofa 002', '', '2012-03-22 19:45:59', 'ghe-sofa-002-thumb.jpg', 'ghe-sofa-002.jpg', NULL, NULL, NULL, '<p>\n	rong gia đình hiện đại thì ghế sofa là một trong những đồ vật được sử dụng khá phổ biến nhưng không dễ để thay đổi thường xuyên khi bạn muốn. Vì thế hãy tìm những bí quyết nho nhỏ và giản đơn nhưng có thể mang lại hiệu quả bảo vệ tốt nhất cho những chiếc ghế sofa.<br />\n	Cũng không cần quá nhiều thời gian hay phải bắt tay thực hiện những công việc phức tạp và cầu kỳ như các đồ dùng khác, bạn chỉ cần bảo quản ghế sofa đúng cách thì có thể tối ưu hóa thời gian sử dụng.</p>\n<p>\n	1. Chọn chất liệu vải bọc</p>\n<p>\n	Khi quyết định chọn sofa làm vật dụng và trang trí nhà cửa, bạn có thể chọn luôn một lớp vải bảo vệ bên ngoài. Vải bọc sofa nên chọn các loại vải dày như bố, gấm, nhung, da bò hay nỉ… Chọn được các loại vải dày và chất liệu tốt thì thời gian sử dụng sẽ được bền bỉ, lâu dài tránh bị rách hay co dãn, biến dạng.</p>\n<p>\n	Nếu nhà bạn dùng loại ghế sofa sáng màu, trong nhà lại có trẻ nhỏ hoặc vật nuôi thì các vết bẩn trên sofa rất dễ bị phát hiện. Trong trường hợp này, bạn hãy sử dụng một vải bọc để trải lên sofa, có thể sử dụng loại vải với màu sắc tươi sáng giúp không gian luôn sạch sẽ, ấm áp và mới mẻ cho phòng khách.</p>\n', '', 'ghe-sofa-002', '', 'asdasd', '', 0, 1, 1000, 1, NULL, NULL, NULL, NULL, NULL, 1, 9),
-(10, 'Nội thất giường ngủ 003', '', '2012-03-23 00:12:19', 'noi-that-giuong-ngu-003-thumb.jpg', 'noi-that-giuong-ngu-003.jpg', NULL, NULL, NULL, '<p>\n	Bộ sưu tập giường ngủ 2010<br />\n	Nội thất Giường ngủ, Nội thất Sofa phòng khách, Nội thất Phòng bếp, Nội thất Phòng trẻ em, Nội thất Bộ phòng ngủ, Nội thất Tủ áo, Nội thất Kệ tivi, Nội thất Giá sách, Nội thất Kệ trang trí, Nội thất Tủ trang trí, Nội thất Tủ hồ sơ, Nội thất Quầy lễ tân, Nội thất Văn phòng, Nội thất Bàn ghế ăn, Nội thất khách sạn, Nội thất phòng thờ, Nội thất phòng tắm, Nội thất Trường học, Nội thất phòng giám đốc, Nội thất làm từ thép, Nội thất phòng họp</p>\n', '', 'noi-that-giuong-ngu-003', '', 'Bộ sưu tập giường ngủ 2010', '', 0, 2, 12000000, 0, NULL, NULL, NULL, NULL, NULL, 1, 10),
-(11, 'Ghế sofa 102', '', '2012-03-23 00:29:13', 'ghe-sofa-102-thumb.jpg', 'ghe-sofa-102.jpg', NULL, NULL, NULL, '<p>\n	Nội thất Sofa phòng khách, Nội thất Phòng bếp, Nội thất Phòng trẻ em, Nội thất Bộ phòng ngủ, Nội thất Giường ngủ, Nội thất Tủ áo, Nội thất Kệ tivi, Nội thất Giá sách, Nội thất Kệ trang trí, Nội thất Tủ trang trí, Nội thất Tủ hồ sơ, Nội thất Quầy lễ tân, Nội thất Văn phòng, Nội thất Bàn ghế ăn, Nội thất khách sạn, Nội thất phòng thờ, Nội thất phòng tắm, Nội thất Trường học, Nội thất phòng giám đốc, Nội thất làm từ thép, Nội thất phòng họp.</p>\n', '', 'ghe-sofa-102', '', '', '', 0, 3, 29999, 0, NULL, NULL, NULL, NULL, NULL, 1, 9),
-(12, 'Kệ sách 0012', '', '2012-03-23 18:15:17', 'ke-sach-0012-thumb.jpg', '', NULL, NULL, NULL, '<p>\n	chi tiet lien he</p>\n', '', 'ke-sach-0012', '', 'chi tiet lien he', '', 0, 4, 9400000, 0, NULL, NULL, NULL, NULL, NULL, 1, 7);
+(9, 'Ghế sofa 002', 'dsdsd', '2012-03-22 19:45:59', 'ghe-sofa-002-thumb.jpg', 'ghe-sofa-002.jpg', NULL, NULL, NULL, '<p>\r\n	rong gia đình hiện đại thì ghế sofa là một trong những đồ vật được sử dụng khá phổ biến nhưng không dễ để thay đổi thường xuyên khi bạn muốn. Vì thế hãy tìm những bí quyết nho nhỏ và giản đơn nhưng có thể mang lại hiệu quả bảo vệ tốt nhất cho những chiếc ghế sofa.<br />\r\n	Cũng không cần quá nhiều thời gian hay phải bắt tay thực hiện những công việc phức tạp và cầu kỳ như các đồ dùng khác, bạn chỉ cần bảo quản ghế sofa đúng cách thì có thể tối ưu hóa thời gian sử dụng.</p>\r\n<p>\r\n	1. Chọn chất liệu vải bọc</p>\r\n<p>\r\n	Khi quyết định chọn sofa làm vật dụng và trang trí nhà cửa, bạn có thể chọn luôn một lớp vải bảo vệ bên ngoài. Vải bọc sofa nên chọn các loại vải dày như bố, gấm, nhung, da bò hay nỉ… Chọn được các loại vải dày và chất liệu tốt thì thời gian sử dụng sẽ được bền bỉ, lâu dài tránh bị rách hay co dãn, biến dạng.</p>\r\n<p>\r\n	Nếu nhà bạn dùng loại ghế sofa sáng màu, trong nhà lại có trẻ nhỏ hoặc vật nuôi thì các vết bẩn trên sofa rất dễ bị phát hiện. Trong trường hợp này, bạn hãy sử dụng một vải bọc để trải lên sofa, có thể sử dụng loại vải với màu sắc tươi sáng giúp không gian luôn sạch sẽ, ấm áp và mới mẻ cho phòng khách.</p>\r\n', '', 'ghe-sofa-002', 'dsdsd', 'asdasd', '', 0, 1, 1000, 1, NULL, NULL, NULL, NULL, NULL, 1, 9),
+(10, 'Nội thất giường ngủ 003', 'sdsdsd', '2012-03-23 00:12:19', 'noi-that-giuong-ngu-003-thumb.jpg', 'noi-that-giuong-ngu-003.jpg', NULL, NULL, NULL, '<p>\r\n	Bộ sưu tập giường ngủ 2010<br />\r\n	Nội thất Giường ngủ, Nội thất Sofa phòng khách, Nội thất Phòng bếp, Nội thất Phòng trẻ em, Nội thất Bộ phòng ngủ, Nội thất Tủ áo, Nội thất Kệ tivi, Nội thất Giá sách, Nội thất Kệ trang trí, Nội thất Tủ trang trí, Nội thất Tủ hồ sơ, Nội thất Quầy lễ tân, Nội thất Văn phòng, Nội thất Bàn ghế ăn, Nội thất khách sạn, Nội thất phòng thờ, Nội thất phòng tắm, Nội thất Trường học, Nội thất phòng giám đốc, Nội thất làm từ thép, Nội thất phòng họp</p>\r\n', '', 'noi-that-giuong-ngu-003', 'sdsdsd', 'Bộ sưu tập giường ngủ 2010', '', 0, 2, 12000000, 0, NULL, NULL, NULL, NULL, NULL, 1, 10),
+(11, 'Ghế sofa 102', 'sd', '2012-03-23 00:29:13', 'ghe-sofa-102-thumb.jpg', 'ghe-sofa-102.jpg', NULL, NULL, NULL, '<p>\r\n	Nội thất Sofa phòng khách, Nội thất Phòng bếp, Nội thất Phòng trẻ em, Nội thất Bộ phòng ngủ, Nội thất Giường ngủ, Nội thất Tủ áo, Nội thất Kệ tivi, Nội thất Giá sách, Nội thất Kệ trang trí, Nội thất Tủ trang trí, Nội thất Tủ hồ sơ, Nội thất Quầy lễ tân, Nội thất Văn phòng, Nội thất Bàn ghế ăn, Nội thất khách sạn, Nội thất phòng thờ, Nội thất phòng tắm, Nội thất Trường học, Nội thất phòng giám đốc, Nội thất làm từ thép, Nội thất phòng họp.</p>\r\n', '', 'ghe-sofa-102', 'sd', '', '', 0, 3, 29999, 0, NULL, NULL, NULL, NULL, NULL, 1, 9),
+(12, 'Kệ sách 0012', 'sdssdd', '2012-03-23 18:15:17', 'ke-sach-0012-thumb.jpg', '', NULL, NULL, NULL, '<p>\r\n	chi tiet lien he</p>\r\n', '', 'ke-sach-0012', 'sdssdd', 'chi tiet lien he', '', 0, 4, 9400000, 0, NULL, NULL, NULL, NULL, NULL, 1, 7);
 
 -- --------------------------------------------------------
 
@@ -750,8 +764,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(1, 'Dịch vụ 1', 'Dịch vụ English', NULL, NULL, '<p>\r\n	CHi tiết</p>\r\n', '<p>\r\n	sdfsdf sdf</p>\r\n', '', 9, '2012-03-01 16:28:47', 1, 0, NULL, NULL, 'dich-vu-1', 'dich-vu-english', 'Mô tả', 'Mô tả', 1, 'test'),
-(2, 'Dich vụ 2', 'Dich vu 2 english', NULL, NULL, '<p>\r\n	Dich vu 2</p>\r\n', '<p>\r\n	Noi dung</p>\r\n', 'dich-vu-2.jpg', 8, '2012-03-01 16:28:59', 2, 0, NULL, NULL, 'dich-vu-2', 'dich-vu-2-english', 'Mo ta', 'Mô tả', 1, 'test');
+(1, 'Dịch vụ 1', 'Dịch vụ English', NULL, NULL, '<p>\r\n	CHi tiết</p>\r\n', '<p>\r\n	sdfsdf sdf</p>\r\n', '', 10, '2012-03-01 16:28:47', 1, 0, NULL, NULL, 'dich-vu-1', 'dich-vu-english', 'Mô tả', 'Mô tả', 1, 'test'),
+(2, 'Dich vụ 2', 'Dich vu 2 english', NULL, NULL, '<p>\r\n	Dich vu 2</p>\r\n', '<p>\r\n	Noi dung</p>\r\n', 'dich-vu-2.jpg', 9, '2012-03-01 16:28:59', 2, 0, NULL, NULL, 'dich-vu-2', 'dich-vu-2-english', 'Mo ta', 'Mô tả', 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -829,7 +843,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_video_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `dos_module_video_cat`
+--
+
+INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat_title`, `cat_titleen`, `tag`, `tagen`, `description`, `descriptionen`, `cat_order`, `cat_enable`, `dos_usernames_username`) VALUES
+(1, 0, NULL, 'Video Cat', NULL, 'video', NULL, NULL, NULL, 0, 1, 'test'),
+(2, 0, '', 'sasaas', '', 'sasaas', 'asas', 'asasa', '', 1, 1, 'test'),
+(3, 0, '', 'saassa', '', 'saassa', '', 'asas', '', 2, 1, 'test');
 
 -- --------------------------------------------------------
 
