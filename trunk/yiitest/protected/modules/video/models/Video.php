@@ -308,6 +308,71 @@ class Video extends CActiveRecord {
 		}
 	}
 
+	//Back end - count item by cat
+	public function countItemByCat($id) {
+		$command = Yii::app()->db->createCommand('SELECT COUNT(record_id) FROM ' . $this->tableName() . ' WHERE dos_module_item_cat_cat_id=:id');
+		$command->bindParam(":id", $id, PDO::PARAM_INT);
+		return $command->queryScalar();
+	}
+
+	//Back end - delete Item for Cat
+	public function delItembyCat($data = NULL) {
+		$id = $data->getQuery('id');
+		$command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE dos_module_item_cat_cat_id=:id');
+		$command->bindParam(":id", $id, PDO::PARAM_INT);
+		$result = $command->queryAll();
+
+		if ($data->getPost('delitems') == 'del') {
+			foreach ($result as $value) {
+				//delete item
+				$this->deleteRecord($value['record_id']); //delete record
+			}
+		} elseif ($data->getPost('delitems') == 'move') {
+			$cat_move = $data->getPost('catmove');
+			foreach ($result as $value) {
+				//move item
+				$command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET dos_module_item_cat_cat_id=:cid WHERE record_id=:id');
+				$command->bindParam(":cid", $cat_move, PDO::PARAM_INT);
+				$command->bindParam(":id", $value['record_id'], PDO::PARAM_INT);
+				$command->execute();
+			}
+		}
+		//move all subcat to new cat parent
+		$cat = new VideoCat();
+		if ($data->getPost('delcat') == 'move') {
+			$cat->findcatParent($id, $data->getPost('movetocat'));
+		} elseif ($data->getPost('delcat') == 'del') {
+			if ($data->getPost('movecat') == 'del') {
+				$cat->loopDelItemtoCat($id);
+			} elseif ($data->getPost('movecat') == 'move') {
+				$cat->loopMoveItemtoCat($id, $data->getPost('moveprotocat'));
+			}
+			//delete all subcat
+			$cat->loopDelSubCat($id);
+		}
+		//delete cat
+		$cat->deleteRecord($id);
+	}
+
+	//delete item new cat
+	public function deleteItembyCat($cat_id) {
+		$command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE dos_module_item_cat_cat_id=:cid');
+		$command->bindParam(":cid", $cat_id, PDO::PARAM_INT);
+		$result = $command->queryAll();
+
+		foreach ($result as $value) {
+			$this->deleteRecord($value['record_id']);
+		}
+	}
+
+	//update item to new cat
+	public function updateItem($cat_id, $cat_id_new) {
+		$command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET dos_module_item_cat_cat_id=:new_cid WHERE dos_module_item_cat_cat_id=:cid');
+		$command->bindParam(":new_cid", $cat_id_new, PDO::PARAM_INT);
+		$command->bindParam(":cid", $cat_id, PDO::PARAM_INT);
+		$command->execute();
+	}
+
 	//Back end - Count item by user post
 	public function countItemByUser() {
 		$user = Yii::app()->user->id;

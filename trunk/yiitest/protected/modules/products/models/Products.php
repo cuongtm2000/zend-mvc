@@ -303,7 +303,7 @@ class Products extends CActiveRecord {
 	//Front end - list Item by Cat
 	public function listItemByCat($cid) {
 		$criteria = new CDbCriteria();
-		$criteria->select = 'title' . LANG . ', pic_thumb, tag, unit';
+		$criteria->select = 'title' . LANG . ', pic_thumb, tag'.LANG.', unit';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
 		$criteria->params = array(':cid' => $cid);
@@ -341,7 +341,7 @@ class Products extends CActiveRecord {
 
 	//Front end - find record_id by tag
 	private function getIDByTag($tag) {
-		$command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE tag=:tag');
+		$command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE tag'.LANG.'=:tag');
 		$command->bindParam(":tag", $tag, PDO::PARAM_STR);
 		return $command->queryScalar();
 	}
