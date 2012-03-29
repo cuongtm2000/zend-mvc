@@ -34,11 +34,11 @@
                         <td><?php echo CHtml::link($title, array('edit', 'id'=>$value->record_id)) ?></td>
                         <td><?php echo $value->ProductsCat->cat_title ?></td>
                         <td><?php echo $value->hits ?></td>
-                        <td><?php echo CHtml::link('Edit', array('edit', 'id'=>$value->record_id)) ?></td>
+                        <td><?php echo CHtml::link($this->lang['edit'], array('edit', 'id'=>$value->record_id)) ?></td>
                     </tr>
                 <?php $i++;endforeach; ?>
             <?php else: ?>
-                <tr><td colspan="6">Không tồn tại mẫu tin</td></tr>
+                <tr><td colspan="6"><?php echo $this->lang['no_record']?></td></tr>
             <?php endif; ?>
         </tbody>
 	</table>

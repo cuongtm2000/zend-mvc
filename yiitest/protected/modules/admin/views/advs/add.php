@@ -1,7 +1,7 @@
 <?php $form = $this->beginWidget('CActiveForm', array('id'=>'frm', 'enableAjaxValidation'=>true, 'enableClientValidation' =>true, 'htmlOptions'=>array('enctype' =>'multipart/form-data')));?>
 <?php echo $form->errorSummary($model, ''); ?>
 <fieldset>
-    <legend>Thêm quảng cáo</legend>
+    <legend><?php echo $this->lang['add_new'] ?> <?php echo strtolower($this->lang[$this->ID])?></legend>
 
     <div class="col1"><?php echo $form->labelEx($model, 'title') ?></div>
     <div class="col2">
@@ -23,7 +23,7 @@
 
     <div class="col1"><?php echo $form->labelEx($model, 'position') ?></div>
         <div class="col2">
-        <?php echo $form->dropDownList($model, 'position', array('left'=>'Left', 'center'=>'Center', 'right'=>'Right')); ?>
+        <?php echo $form->dropDownList($model, 'position', array('left'=>'Left', 'center'=>'Center', 'bottom'=>'Bottom', 'right'=>'Right')); ?>
         </div>
         <div class="clear space"></div>
 

@@ -31,6 +31,9 @@ class VideoCat extends CActiveRecord {
 
 	public $remove_pic_thumb;
 
+	private $_sub_cat_num = 0;
+	private $_sub_num_item = 0;
+
 	public static function model($className = __CLASS__) {
 		return parent::model($className);
 	}
@@ -147,7 +150,7 @@ class VideoCat extends CActiveRecord {
 			//check file old and upload
 			if ($_FILES[ucfirst(Yii::app()->controller->id) . 'Cat']['name']['pic_thumb']) {
 				Yii::import('ext.EUploadedImage.EUploadedImage');
-				$this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(Configs::configTemplate(Yii::app()->controller->id . '_cat_width', Yii::app()->session['template']), Configs::configTemplate(Yii::app()->controller->id . '_cat_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id . 'Cat', $this->cat_title, $this->_oldImage_thumb);
+				$this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumbl')->processUpload(Configs::configTemplate(Yii::app()->controller->id . '_cat_width', Yii::app()->session['template']), Configs::configTemplate(Yii::app()->controller->id . '_cat_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id . 'Cat', $this->cat_title, $this->_oldImage_thumb);
 			} else {
 				//remove picthumb
 				if (isset($_POST[ucfirst(Yii::app()->controller->id) . 'Cat']['remove_pic_thumb']) && $_POST[ucfirst(Yii::app()->controller->id) . 'Cat']['remove_pic_thumb'] == 1) {
@@ -283,7 +286,7 @@ class VideoCat extends CActiveRecord {
 	//Back end - Get info cat
 	public function countItemCat($id) {
 		$user = Yii::app()->user->id;
-		$command = Yii::app()->db->createCommand('SELECT COUNT(record_id) AS numcat FROM ' . $this->tableName() . ', dos_module_news WHERE ' . $this->tableName() . '.cat_id=dos_module_news.dos_module_item_cat_cat_id AND cat_id=:id AND dos_usernames_username=:user');
+		$command = Yii::app()->db->createCommand('SELECT COUNT(record_id) AS numcat FROM ' . $this->tableName() . ', dos_module_' . Yii::app()->controller->id . ' WHERE ' . $this->tableName() . '.cat_id=dos_module_' . Yii::app()->controller->id . '.dos_module_item_cat_cat_id AND cat_id=:id AND dos_usernames_username=:user');
 		$command->bindParam(":id", $id, PDO::PARAM_INT);
 		$command->bindParam(":user", $user, PDO::PARAM_STR);
 		return $command->queryScalar();
@@ -328,11 +331,11 @@ class VideoCat extends CActiveRecord {
 	//Back end - Delete Record coi lai cai nay
 	public function deleteRecord($id) {
 		$item = $this::model()->find('cat_id=:id', array(':id' => $id));
-		$path = YiiBase::getPathOfAlias('webroot') . USERFILES . '/NewsCat/';
-		//Del pic_full field
-		if (($item->pic_full)) {
-			if (file_exists($path . $item->pic_full)) {
-				unlink($path . $item->pic_full);
+		$path = YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . __CLASS__ . '/';
+		//Del pic_thumbl field
+		if (($item->pic_thumb)) {
+			if (file_exists($path . $item->pic_thumb)) {
+				unlink($path . $item->pic_thumb);
 			}
 		}
 		$this::model()->findByPk($id)->delete(); //delete record
@@ -344,7 +347,7 @@ class VideoCat extends CActiveRecord {
 		$command->bindParam(":id", $cat_id, PDO::PARAM_INT);
 		$result = $command->queryAll();
 
-		$product = new News();
+		$product = new Video();
 		foreach ($result as $value) {
 			//update dos_module_product_cat_cat_id
 			$product->deleteItembyCat($value['cat_id']);
@@ -358,7 +361,7 @@ class VideoCat extends CActiveRecord {
 		$command->bindParam(":id", $cat_id, PDO::PARAM_INT);
 		$result = $command->queryAll();
 
-		$item = new News();
+		$item = new Video();
 		foreach ($result as $value) {
 			//update dos_module_product_cat_cat_id
 			$item->updateItem($value['cat_id'], $cat_id_new);

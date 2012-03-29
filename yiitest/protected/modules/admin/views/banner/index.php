@@ -34,7 +34,7 @@
                     </tr>
                 <?php $i++;endforeach; ?>
             <?php else: ?>
-                <tr><td colspan="6">Không tồn tại mẫu tin</td></tr>
+                <tr><td colspan="6"><?php echo $this->lang['no_record']?></td></tr>
             <?php endif; ?>
         </tbody>
 	</table>

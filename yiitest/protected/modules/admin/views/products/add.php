@@ -1,7 +1,7 @@
 <?php if (!$list_item_cat = $model->listItemCat()): ?>
     <div class="errorSummary">
         <ul>
-            <li>Vui lòng <a href="addcat" title="thêm mới Danh mục">thêm mới Danh mục</a> trước khi thêm mới sản phẩm</li>
+            <li>Vui lòng <a href="addcat" title="thêm mới Danh mục">thêm mới danh mục</a> trước khi thêm mới sản phẩm</li>
         </ul>
     </div>
 <?php else:?>
