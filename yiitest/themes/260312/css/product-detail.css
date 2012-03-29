@@ -90,3 +90,16 @@
 .zoom:hover {
 	background-image:url(../images/zoom.png);
 }
+
+/*Page Products Info*/
+.all-pg-info{ width:710px}
+.right-detail{float:left; width:430px; }
+.right-detail-info p{ margin:10px 0 0px 0; padding:0; color:#999}
+.right-detail-info b{color:#045C98; font-size:15pt; font-weight:normal}
+.right-detail-info a{color:#109FEC}
+.right-detail-info a:hover{ text-decoration:underline; *_color:#109FEC}
+.right-detail-info .add{float:right;color:#fff; font-weight:bold; background:#0E97D8; padding:8px 8px}
+.right-detail-info .add:hover{ text-decoration:none;color:#5E5F67; font-weight:bold; background:#EBEBEB; padding:8px 8px}
+.right-detail-info .detail{float:left;color:#5E5F67; font-weight:bold; background:#EBEBEB; padding:8px 8px}
+.right-detail-info  .detail:hover{text-decoration:none;color:#fff; font-weight:bold; background:#0E97D8; padding:8px 8px}
+.right-detail-info li{ margin:0px 0 0px 0; border-bottom:1px solid #E9E8E8; padding:10px 0 20px 0}
