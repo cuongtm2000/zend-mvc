@@ -2,7 +2,7 @@
 <?php $form = $this->beginWidget('CActiveForm', array('id'=>'frm', 'enableAjaxValidation'=>true, 'enableClientValidation' =>true, 'htmlOptions'=>array('enctype' =>'multipart/form-data')));?>
     <?php echo $form->errorSummary($model, ''); ?>
     <fieldset>
-        <legend>Chỉnh sửa quảng cáo</legend>
+        <legend><?php echo $this->lang['edit'] ?> <?php echo strtolower($this->lang[$this->ID])?></legend>
 
         <div class="col1"><?php echo $form->labelEx($model, 'title') ?></div>
         <div class="col2">
@@ -28,7 +28,7 @@
 
         <div class="col1"><?php echo $form->labelEx($model, 'position') ?></div>
         <div class="col2">
-            <?php echo $form->dropDownList($model, 'position', array('left'=>'Left', 'center'=>'Center', 'right'=>'Right')); ?>
+            <?php echo $form->dropDownList($model, 'position', array('left'=>'Left', 'center'=>'Center', 'bottom'=>'Bottom', 'right'=>'Right')); ?>
         </div>
         <div class="clear space"></div>
 
@@ -59,10 +59,10 @@
         <div class="clear space"></div>
 
         <div class="col1">&nbsp;</div>
-        <div class="col2">
-            <?php echo CHtml::submitButton('Chỉnh sửa', array('name'=>'submit', 'class'=>'login', 'title'=>'Chỉnh sửa')); ?>
-            <?php echo Chtml::link('Hủy bỏ', 'javascript:history.back()', $htmlOptions=array('class'=>'login-a', 'title'=>'Back')) ?>
-        </div>
+		<div class="col2">
+			<?php echo CHtml::submitButton($this->lang['edit'], array('name'=>'submit', 'class'=>'login', 'title'=>$this->lang['edit'])); ?>
+			<?php echo Chtml::link($this->lang['cancel'], 'javascript:history.back()', array('class'=>'login-a', 'title'=>$this->lang['cancel'])) ?>
+		</div>
         <div class="clear space"></div>
     </fieldset>
 <?php $this->endWidget();?>

@@ -26,11 +26,11 @@
                         <td><?php echo CHtml::link('<img src="'.Yii::app()->theme->baseUrl.'/images/up.gif" alt="Up"/>', array('upcat', 'id'=>$value['cat_id'])) ?> <?php echo CHtml::link('<img src="'.Yii::app()->theme->baseUrl.'/images/down.gif" alt="Up"/>', array('downcat', 'id'=>$value['cat_id'])) ?></td>
                         <td><?php echo $value['title_prefix'] ?><?php echo $value['cat_title'] ?></td>
                         <td><?php echo $item->countItemByCat($value['cat_id']) ?></td>
-                        <td><?php echo CHtml::link('Chỉnh sửa', array('editcat', 'id'=>$value['cat_id'])) ?> <?php echo CHtml::link('Xóa', array('delcat', 'id'=>$value['cat_id'])) ?></td>
+                        <td><?php echo CHtml::link($this->lang['edit'], array('editcat', 'id'=>$value['cat_id'])) ?> <?php echo CHtml::link('Xóa', array('delcat', 'id'=>$value['cat_id'])) ?></td>
                     </tr>
                 <?php $k++; endforeach ?>
             <?php else: ?>
-                <tr><td colspan="5">Không tồn tại mẫu tin</td></tr>
+                <tr><td colspan="5"><?php echo $this->lang['no_record']?></td></tr>
             <?php endif; ?>
         </tbody>
 	</table>

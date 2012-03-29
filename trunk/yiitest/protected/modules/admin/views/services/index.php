@@ -34,11 +34,11 @@
                         <td><a href="<?php echo Yii::app()->request->baseUrl ?>/<?php echo $this->module->getName() ?>/<?php echo $this->ID ?>/edit/id/<?php echo $value['record_id'] ?>"><?php echo $title ?></a></td>
                         <td><?php echo date('d-m-Y', strtotime($value['created'])) ?></td>
                         <td><?php echo $value['hit'] ?></td>
-                        <td><a href="<?php echo Yii::app()->request->baseUrl ?>/<?php echo $this->module->getName() ?>/<?php echo $this->ID ?>/edit/id/<?php echo $value['record_id'] ?>" title="Chỉnh sửa">Chỉnh sửa</a></td>
+                        <td><a href="<?php echo Yii::app()->request->baseUrl ?>/<?php echo $this->module->getName() ?>/<?php echo $this->ID ?>/edit/id/<?php echo $value['record_id'] ?>" title="<?php echo $this->lang['edit']?>"><?php echo $this->lang['edit']?></a></td>
                     </tr>
                 <?php $i++;endforeach; ?>
             <?php else: ?>
-                <tr><td colspan="6">Không tồn tại mẫu tin</td></tr>
+                <tr><td colspan="6"><?php echo $this->lang['no_record']?></td></tr>
             <?php endif; ?>
         </tbody>
 	</table>

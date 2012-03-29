@@ -22,11 +22,11 @@
                         <td><?php echo $value['title']?></td>
                         <td><?php echo $value->NewsCat->cat_title ?></td>
                         <td><?php echo $value->hits ?></td>
-                        <td><?php echo CHtml::link('Chỉnh sửa', array('edit', 'id' => $value->record_id)) ?></td>
+                        <td><?php echo CHtml::link($this->lang['edit'], array('edit', 'id' => $value->record_id)) ?></td>
                     </tr>
                     <?php $i++; endforeach; ?>
             <?php else:?>
-                    <tr><td colspan="6">No record</td></tr>
+                    <tr><td colspan="6"><?php echo $this->lang['no_record']?></td></tr>
             <?php endif; ?>
         </tbody>
     </table>
