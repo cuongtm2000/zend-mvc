@@ -26,10 +26,6 @@ class VideoController extends AdminController {
 
 		$model_cat_class = new $module_cat();
 
-
-		$script = "$('#".$module_cat."_description').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});";
-		Yii::app()->clientScript->registerScript('', $script, CClientScript::POS_READY);
-
 		if (isset($_POST[$module_cat])) {
 			$model_cat_class->attributes = $_POST[$module_cat];
 
@@ -48,11 +44,7 @@ class VideoController extends AdminController {
 		Yii::app()->getModule($this->getId());
 
 		$model_cat_class = new $module_cat();
-
 		$model_cat_class = $model_cat_class->loadEdit($id); //load form models
-
-		$script = "$('#".$module_cat."_description').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});";
-		Yii::app()->clientScript->registerScript('', $script, CClientScript::POS_READY);
 
 		if (isset($_POST[$module_cat])) {
 			$model_cat_class->attributes = $_POST[$module_cat];
@@ -142,9 +134,6 @@ class VideoController extends AdminController {
 		$model_cat_class = new $module_cat();
 		$model_class = new $module();
 
-		$script = "$('#" . $module . "_description').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});";
-		Yii::app()->clientScript->registerScript('', $script, CClientScript::POS_READY);
-
 		if (isset($_POST[$module])) {
 			$model_class->attributes = $_POST[$module];
 
@@ -165,9 +154,6 @@ class VideoController extends AdminController {
 		$model_cat_class = new $module_cat();
 		$model_class = new $module();
 		$model_class = $model_class->loadEdit($id); //load form models
-
-		$script = "$('#" . $module . "_description').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});";
-		Yii::app()->clientScript->registerScript('', $script, CClientScript::POS_READY);
 
 		if (isset($_POST[$module])) {
 			$model_class->attributes = $_POST[$module];

@@ -89,7 +89,7 @@
 
     <div class="col1">&nbsp;</div>
     <div class="col2">
-        <?php echo CHtml::submitButton('Edit', array('name' => 'submit', 'class' => 'login', 'title' => 'Edit')); ?>
+		<?php echo CHtml::submitButton($this->lang['edit'], array('name'=>'submit', 'class'=>'login', 'title'=>$this->lang['edit'])); ?>
     </div><div class="clear space"></div>
 </fieldset>
 <?php $this->endWidget();?>
