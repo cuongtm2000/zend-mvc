@@ -21,53 +21,7 @@
     <favorites_list name="svn" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/config/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="54" selection-start="672" selection-end="672" vertical-scroll-proportion="0.310219">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cats.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/260312/cats.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="222" selection-start="2357" selection-end="2357" vertical-scroll-proportion="-11.115385">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="8" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Products.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/products/models/Products.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="343" column="116" selection-start="16120" selection-end="16120" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductsCat.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/products/models/ProductsCat.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="214" column="149" selection-start="10123" selection-end="10123" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -556,14 +510,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.7314112" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.4969651" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28831562" sideWeight="0.67064846" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28831562" sideWeight="0.67064846" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.26327768" order="7" side_tool="true" content_ui="tabs" />
@@ -710,35 +664,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/products/models/ProductsCat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="214" column="149" selection-start="10123" selection-end="10123" vertical-scroll-proportion="0.0">
+        <state line="214" column="149" selection-start="10123" selection-end="10123" vertical-scroll-proportion="0.36313868">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/products/models/Products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="343" column="116" selection-start="16120" selection-end="16120" vertical-scroll-proportion="0.0">
+        <state line="343" column="116" selection-start="16120" selection-end="16120" vertical-scroll-proportion="0.36313868">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="8" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0">
+        <state line="22" column="8" selection-start="772" selection-end="772" vertical-scroll-proportion="0.68248177">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/260312/cats.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="222" selection-start="2357" selection-end="2357" vertical-scroll-proportion="-11.115385">
+        <state line="38" column="222" selection-start="2357" selection-end="2357" vertical-scroll-proportion="0.5536398">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="54" selection-start="672" selection-end="672" vertical-scroll-proportion="0.310219">
+        <state line="24" column="21" selection-start="1434" selection-end="1434" vertical-scroll-proportion="0.74452555">
           <folding />
         </state>
       </provider>
