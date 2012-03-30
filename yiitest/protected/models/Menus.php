@@ -97,9 +97,15 @@ class Menus extends CActiveRecord {
 		));
 	}
 
+	public function getSeoPage($module, $user) {
+		$command = Yii::app()->db->createCommand('SELECT title' . LANG . ', description' . LANG . ' FROM ' . $this->tableName() . ' WHERE url=:url AND dos_usernames_username=:user');
+		$command->bindParam(":url", $module, PDO::PARAM_STR);
+		$command->bindParam(":user", $user, PDO::PARAM_STR);
+		return $command->queryRow();
+	}
+
 	public function setMenu($user) {
-		$sql = 'SELECT menu' . LANG . ', url, target FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY position ASC';
-		$command = Yii::app()->db->createCommand($sql);
+		$command = Yii::app()->db->createCommand('SELECT menu' . LANG . ', url, target FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY position ASC');
 		$command->bindParam(":user", $user, PDO::PARAM_STR);
 		return $command->queryAll();
 	}
