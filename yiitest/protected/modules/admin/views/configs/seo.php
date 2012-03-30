@@ -20,12 +20,12 @@
 			<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
 			<li>
 				<label><?php echo $this->lang['description'.$lang] ?></label>
-				<textarea name="description<?php echo $lang?>[]"><?php echo $value['description'.$lang] ?></textarea>
+				<textarea name="description<?php echo $lang?>[]" cols="70" rows="6"><?php echo $value['description'.$lang] ?></textarea>
 			</li>
 			<?php endforeach?>
-		</div>
+		</ul>
 		<?php $i++; endforeach; ?>
+		<label>&nbsp;</label><input type="submit" name="submit" value="  <?php echo $this->lang['update'] ?>  " title="<?php echo $this->lang['update'] ?>" class="bton-dk" />
 	</div>
-		<input type="submit" name="submit" value="  <?php echo $this->lang['update'] ?>  " title="<?php echo $this->lang['update'] ?>" class="login" />
 </div> <!--En tab-->
 </form>
