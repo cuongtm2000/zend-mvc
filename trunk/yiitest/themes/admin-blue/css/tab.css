@@ -1,0 +1,10 @@
+/*Tab Detail */
+.infotab{width: 100%}
+ul.tabs { margin:0 ;padding:0;width: 100%;}
+ul.tabs li {float: left;background:#396AAC;overflow: hidden;position: relative;}
+ul.tabs li a {color:#fff;display: block;font-size: 1.2em;padding: 5px 20px;border-right: 2px solid #fff}
+ul.tabs li a:hover {background: #ccc;}    
+
+.tab_container {width: 100%;background: #F9F9FB; border: 1px solid #E4E3E3;-webkit-border-radius: 0 0 2px 2px;-moz-border-radius: 0 0 2px 2px}
+.tab_content {padding:5px;}
+
