@@ -35,10 +35,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seo.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="seo.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/configs/seo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="26" selection-start="1357" selection-end="1357" vertical-scroll-proportion="0.8045977">
+            <state line="30" column="26" selection-start="1357" selection-end="1357" vertical-scroll-proportion="-16.153847">
               <folding />
             </state>
           </provider>
@@ -48,7 +48,14 @@
         <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/configs/web.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
+              <folding>
+                <marker date="1332553132192" expanded="true" signature="149:1677" placeholder="..." />
+                <marker date="1332553132192" expanded="true" signature="282:598" placeholder="..." />
+                <marker date="1332553132192" expanded="true" signature="671:914" placeholder="..." />
+                <marker date="1332553132192" expanded="true" signature="940:1186" placeholder="..." />
+                <marker date="1332553132192" expanded="true" signature="1212:1452" placeholder="..." />
+                <marker date="1332553132192" expanded="true" signature="1479:1665" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,10 +87,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tab.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="tab.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/admin-blue/css/tab.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="2" selection-start="18" selection-end="18" vertical-scroll-proportion="-0.68">
+            <state line="11" column="6" selection-start="542" selection-end="542" vertical-scroll-proportion="0.3575526">
               <folding />
             </state>
           </provider>
@@ -118,8 +125,8 @@
         <option value="$PROJECT_DIR$/protected/models/Menus.php" />
         <option value="$PROJECT_DIR$/protected/modules/admin/controllers/ConfigsController.php" />
         <option value="$PROJECT_DIR$/themes/admin-blue/views/layouts/main.php" />
-        <option value="$PROJECT_DIR$/themes/admin-blue/css/tab.css" />
         <option value="$PROJECT_DIR$/protected/modules/admin/views/configs/seo.php" />
+        <option value="$PROJECT_DIR$/themes/admin-blue/css/tab.css" />
       </list>
     </option>
   </component>
@@ -752,13 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/admin-blue/css/tab.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="2" selection-start="18" selection-end="18" vertical-scroll-proportion="-0.68">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/admin-blue/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="980" selection-end="980" vertical-scroll-proportion="-8.5">
@@ -773,13 +773,27 @@
     <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/configs/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1332553132192" expanded="true" signature="149:1677" placeholder="..." />
+            <marker date="1332553132192" expanded="true" signature="282:598" placeholder="..." />
+            <marker date="1332553132192" expanded="true" signature="671:914" placeholder="..." />
+            <marker date="1332553132192" expanded="true" signature="940:1186" placeholder="..." />
+            <marker date="1332553132192" expanded="true" signature="1212:1452" placeholder="..." />
+            <marker date="1332553132192" expanded="true" signature="1479:1665" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/configs/seo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="26" selection-start="1357" selection-end="1357" vertical-scroll-proportion="0.8045977">
+        <state line="30" column="26" selection-start="1357" selection-end="1357" vertical-scroll-proportion="-16.153847">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin-blue/css/tab.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="6" selection-start="542" selection-end="542" vertical-scroll-proportion="0.3575526">
           <folding />
         </state>
       </provider>
