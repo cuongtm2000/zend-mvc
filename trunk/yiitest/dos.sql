@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 29, 2012 at 05:15 AM
+-- Generation Time: Mar 30, 2012 at 03:32 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -397,8 +397,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(11, 'Giới thiệu sơ lược', 'about so luoc', '<p>\r\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\r\n<p>\r\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\r\n<p>\r\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\r\n<p>\r\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\r\n<p>\r\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 471, '2012-03-22 01:48:29', 2, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'about-so-luoc', 'Mô tả VN', 'Mô tả english', 1, 'test'),
-(12, 'Giới thiệu chung chung', '', '<p>\r\n	Là chung chung </p>\r\n', '', 3, '2012-03-26 08:38:15', 1, 0, NULL, NULL, 'gioi-thieu-chung-chung', '', 'Là chung chung ', '', 1, 'test');
+(11, 'Giới thiệu sơ lược', 'about so luoc', '<p>\r\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\r\n<p>\r\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\r\n<p>\r\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\r\n<p>\r\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\r\n<p>\r\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 520, '2012-03-22 01:48:29', 2, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'about-so-luoc', 'Mô tả VN', 'Mô tả english', 1, 'test'),
+(12, 'Giới thiệu chung chung', '', '<p>\r\n	Là chung chung </p>\r\n', '', 5, '2012-03-26 08:38:15', 1, 0, NULL, NULL, 'gioi-thieu-chung-chung', '', 'Là chung chung ', '', 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -431,7 +431,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
 
 INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`, `dos_usernames_username`) VALUES
 (1, 'trai uot chinh', NULL, 'trai-uot-chinh.jpg', 'http://grouplaptrinh.com', '2012-03-22 23:38:44', '2012-03-22 10:00:00', '2012-03-29 10:00:00', 0, 1, 'left', '_bank', 1, 'test'),
-(2, 'Tại vì sao người', NULL, 'tai-vi-sao-nguoi.jpg', 'http://dantri.com.vn', '2012-03-26 08:23:38', '2012-03-25 16:00:00', '2012-03-26 16:00:00', 0, 2, 'left', '_bank', 1, 'test');
+(2, 'Tại vì sao người', NULL, 'tai-vi-sao-nguoi.jpg', 'http://dantri.com.vn', '2012-03-26 08:23:38', '2012-03-24 17:00:00', '2012-03-25 17:00:00', 0, 2, 'top', '_bank', 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -509,6 +509,10 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
   `url` varchar(100) DEFAULT NULL,
   `target` varchar(20) DEFAULT NULL,
   `position` tinyint(4) DEFAULT NULL,
+  `title` varchar(100) DEFAULT NULL,
+  `titleen` varchar(100) DEFAULT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `descriptionen` varchar(250) DEFAULT NULL,
   `dos_usernames_username` varchar(45) NOT NULL,
   KEY `fk_dos_module_menus_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -517,17 +521,17 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 -- Dumping data for table `dos_module_menus`
 --
 
-INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `dos_usernames_username`) VALUES
-('Trang chủ', NULL, 'default', NULL, 1, 'dos'),
-('Giới thiệu', NULL, 'about', NULL, 2, 'dos'),
-('Sản phẩm', NULL, 'products', NULL, 3, 'dos'),
-('Dịch vụ', NULL, 'services', NULL, 4, 'dos'),
-('Liên hệ', NULL, 'contact', NULL, 5, 'dos'),
-('Trang chủ', 'Home page', 'default', '', 1, 'test'),
-('Giới thiệu', 'About us', 'about', '', 2, 'test'),
-('Sản phẩm', 'Products', 'products', '', 3, 'test'),
-('Dịch vụ', 'Services', 'services', '', 4, 'test'),
-('Liên hệ', 'Contact', 'contact', '', 5, 'test');
+INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
+('Trang chủ', NULL, 'default', NULL, 1, 'ew', '', 'ew', '', 'dos'),
+('Giới thiệu', NULL, 'about', NULL, 2, 'e', '', '', '', 'dos'),
+('Sản phẩm', NULL, 'products', NULL, 3, '', '', '', '', 'dos'),
+('Dịch vụ', NULL, 'services', NULL, 4, '', '', '', '', 'dos'),
+('Liên hệ', NULL, 'contact', NULL, 5, '', '', '', '', 'dos'),
+('Trang chủ', 'Home page', 'default', '', 1, 'ew', '', 'ew', '', 'test'),
+('Giới thiệu', 'About us', 'about', '', 2, 'e', '', '', '', 'test'),
+('Sản phẩm', 'Products', 'products', '', 3, '', '', '', '', 'test'),
+('Dịch vụ', 'Services', 'services', '', 4, '', '', '', '', 'test'),
+('Liên hệ', 'Contact', 'contact', '', 5, '', '', '', '', 'test');
 
 -- --------------------------------------------------------
 
@@ -616,10 +620,10 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('max_count', 0, 'dos'),
 ('counter', 0, 'dos'),
 ('yesterday', 0, 'dos'),
-('day_time', 2456016, 'test'),
+('day_time', 2456017, 'test'),
 ('max_count', 1, 'test'),
-('counter', 4, 'test'),
-('yesterday', 0, 'test');
+('counter', 5, 'test'),
+('yesterday', 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -639,7 +643,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1332988955, 'test');
+('''127.0.0.1''', 1333069929, 'test');
 
 -- --------------------------------------------------------
 
@@ -676,17 +680,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
-
---
--- Dumping data for table `dos_module_products`
---
-
-INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(9, 'Ghế sofa 002', 'dsdsd', '2012-03-22 19:45:59', 'ghe-sofa-002-thumb.jpg', 'ghe-sofa-002.jpg', NULL, NULL, NULL, '<p>\r\n	rong gia đình hiện đại thì ghế sofa là một trong những đồ vật được sử dụng khá phổ biến nhưng không dễ để thay đổi thường xuyên khi bạn muốn. Vì thế hãy tìm những bí quyết nho nhỏ và giản đơn nhưng có thể mang lại hiệu quả bảo vệ tốt nhất cho những chiếc ghế sofa.<br />\r\n	Cũng không cần quá nhiều thời gian hay phải bắt tay thực hiện những công việc phức tạp và cầu kỳ như các đồ dùng khác, bạn chỉ cần bảo quản ghế sofa đúng cách thì có thể tối ưu hóa thời gian sử dụng.</p>\r\n<p>\r\n	1. Chọn chất liệu vải bọc</p>\r\n<p>\r\n	Khi quyết định chọn sofa làm vật dụng và trang trí nhà cửa, bạn có thể chọn luôn một lớp vải bảo vệ bên ngoài. Vải bọc sofa nên chọn các loại vải dày như bố, gấm, nhung, da bò hay nỉ… Chọn được các loại vải dày và chất liệu tốt thì thời gian sử dụng sẽ được bền bỉ, lâu dài tránh bị rách hay co dãn, biến dạng.</p>\r\n<p>\r\n	Nếu nhà bạn dùng loại ghế sofa sáng màu, trong nhà lại có trẻ nhỏ hoặc vật nuôi thì các vết bẩn trên sofa rất dễ bị phát hiện. Trong trường hợp này, bạn hãy sử dụng một vải bọc để trải lên sofa, có thể sử dụng loại vải với màu sắc tươi sáng giúp không gian luôn sạch sẽ, ấm áp và mới mẻ cho phòng khách.</p>\r\n', '', 'ghe-sofa-002', 'dsdsd', 'asdasd', '', 0, 1, 1000, 1, NULL, NULL, NULL, NULL, NULL, 1, 9),
-(10, 'Nội thất giường ngủ 003', 'sdsdsd', '2012-03-23 00:12:19', 'noi-that-giuong-ngu-003-thumb.jpg', 'noi-that-giuong-ngu-003.jpg', NULL, NULL, NULL, '<p>\r\n	Bộ sưu tập giường ngủ 2010<br />\r\n	Nội thất Giường ngủ, Nội thất Sofa phòng khách, Nội thất Phòng bếp, Nội thất Phòng trẻ em, Nội thất Bộ phòng ngủ, Nội thất Tủ áo, Nội thất Kệ tivi, Nội thất Giá sách, Nội thất Kệ trang trí, Nội thất Tủ trang trí, Nội thất Tủ hồ sơ, Nội thất Quầy lễ tân, Nội thất Văn phòng, Nội thất Bàn ghế ăn, Nội thất khách sạn, Nội thất phòng thờ, Nội thất phòng tắm, Nội thất Trường học, Nội thất phòng giám đốc, Nội thất làm từ thép, Nội thất phòng họp</p>\r\n', '', 'noi-that-giuong-ngu-003', 'sdsdsd', 'Bộ sưu tập giường ngủ 2010', '', 0, 2, 12000000, 0, NULL, NULL, NULL, NULL, NULL, 1, 10),
-(11, 'Ghế sofa 102', 'sd', '2012-03-23 00:29:13', 'ghe-sofa-102-thumb.jpg', 'ghe-sofa-102.jpg', NULL, NULL, NULL, '<p>\r\n	Nội thất Sofa phòng khách, Nội thất Phòng bếp, Nội thất Phòng trẻ em, Nội thất Bộ phòng ngủ, Nội thất Giường ngủ, Nội thất Tủ áo, Nội thất Kệ tivi, Nội thất Giá sách, Nội thất Kệ trang trí, Nội thất Tủ trang trí, Nội thất Tủ hồ sơ, Nội thất Quầy lễ tân, Nội thất Văn phòng, Nội thất Bàn ghế ăn, Nội thất khách sạn, Nội thất phòng thờ, Nội thất phòng tắm, Nội thất Trường học, Nội thất phòng giám đốc, Nội thất làm từ thép, Nội thất phòng họp.</p>\r\n', '', 'ghe-sofa-102', 'sd', '', '', 0, 3, 29999, 0, NULL, NULL, NULL, NULL, NULL, 1, 9),
-(12, 'Kệ sách 0012', 'sdssdd', '2012-03-23 18:15:17', 'ke-sach-0012-thumb.jpg', '', NULL, NULL, NULL, '<p>\r\n	chi tiet lien he</p>\r\n', '', 'ke-sach-0012', 'sdssdd', 'chi tiet lien he', '', 0, 4, 9400000, 0, NULL, NULL, NULL, NULL, NULL, 1, 7);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -714,19 +708,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
-
---
--- Dumping data for table `dos_module_products_cat`
---
-
-INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(6, 0, 'Nội thất bếp', 'Danh mục 2', NULL, NULL, 'noi-that-bep', 'danh-muc-2', 'Mô tả', 'Mô tả', 'noi-that-bep.jpg', NULL, 1, NULL, NULL, 1, 'test'),
-(7, 0, 'Tủ áo', '', NULL, NULL, 'tu-ao', '', '', '', 'tu-ao.jpg', NULL, 2, NULL, NULL, 1, 'test'),
-(8, 0, 'Nội thất bộ phòng ngủ', '', NULL, NULL, 'noi-that-bo-phong-ngu', '', '', '', 'noi-that-bo-phong-ngu.jpg', NULL, 3, NULL, NULL, 1, 'test'),
-(9, 0, 'Nội thất sofa phòng khách', '', NULL, NULL, 'noi-that-sofa-phong-khach', '', '', 'asdasds', 'noi-that-sofa-phong-khach.jpg', NULL, 4, NULL, NULL, 1, 'test'),
-(10, 0, 'Nội thất giường ngủ', 'Noi that giuong ngu english', NULL, NULL, 'noi-that-giuong-ngu', 'noi-that-giuong-ngu-english', 'asdasd', 'Mô tả english', 'noi-that-giuong-ngu.jpg', NULL, 5, NULL, NULL, 1, 'test'),
-(11, 10, 'Nội thất giường ngủ loại 1 chuyen cho vip nhat', '', NULL, NULL, 'noi-that-giuong-ngu-loai-1-chuyen-cho-vip-nhat', '', 'Nội thất giường ngủ loại 1', '', 'noi-that-giuong-ngu-loai-1.jpg', NULL, 6, NULL, NULL, 1, 'test');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -843,16 +825,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_video_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
-
---
--- Dumping data for table `dos_module_video_cat`
---
-
-INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat_title`, `cat_titleen`, `tag`, `tagen`, `description`, `descriptionen`, `cat_order`, `cat_enable`, `dos_usernames_username`) VALUES
-(1, 0, NULL, 'Video Cat', NULL, 'video', NULL, NULL, NULL, 0, 1, 'test'),
-(2, 0, '', 'sasaas', '', 'sasaas', 'asas', 'asasa', '', 1, 1, 'test'),
-(3, 0, '', 'saassa', '', 'saassa', '', 'asas', '', 2, 1, 'test');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1343,7 +1316,11 @@ CREATE TABLE IF NOT EXISTS `dos_values` (
 
 INSERT INTO `dos_values` (`value_name`, `module`, `module_id`, `function_name`) VALUES
 ('about_home', 'about', 'About', 'homeRecord'),
+('advs_bottom', 'advs', 'Advs', 'listItemsBottom'),
+('advs_center', 'advs', 'Advs', 'listItemsCenter'),
 ('advs_left', 'advs', 'Advs', 'listItemsLeft'),
+('advs_right', 'advs', 'Advs', 'listItemsRight'),
+('advs_top', 'advs', 'Advs', 'listItemsTop'),
 ('list_supports', 'supports', 'Supports', 'listItem'),
 ('menu_about', 'about', 'About', 'listMenu'),
 ('menu_products', 'products', 'ProductsCat', 'listItem'),
