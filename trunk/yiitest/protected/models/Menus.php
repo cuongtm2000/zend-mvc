@@ -186,7 +186,7 @@ class Menus extends CActiveRecord {
 
 		$size = count($menu);
 		for ($i = 0; $i < $size; $i++) {
-			$this->updateItem(trim($title[$i]), trim(isset($titleen[$i])), trim($description[$i]), trim(isset($descriptionen[$i])), trim($menu[$i]));
+			$this->updateItem(trim($title[$i]), trim($titleen[$i]), trim($description[$i]), trim($descriptionen[$i]), trim($menu[$i]));
 		}
 	}
 
