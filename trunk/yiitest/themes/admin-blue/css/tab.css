@@ -1,5 +1,5 @@
 /*Tab Detail */
-/*.infotab{width: 100%}*/
+.infotab{padding: 5px}
 ul.tabs { margin:0 ;padding:0;width: 100%;}
 ul.tabs li {float: left;background:#396AAC;overflow: hidden;position: relative;}
 ul.tabs li a {color:#fff;display: block;font-size: 1.2em;padding: 5px 20px;border-right: 2px solid #fff}
