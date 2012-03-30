@@ -111,17 +111,17 @@ a:hover{color:#000;}
 /*************************************************************************
 				POPULAR PRODUCTS
 *************************************************************************/
-.scroll-interval{ float:left; list-style:none; width:150px; margin:0 10px 0 0 !important;}
+.scroll-interval{ float:left; list-style:none; width:150px; margin:0 10px 0 0 !important;position: relative;}
 .special_block{ width:710px; overflow:hidden; margin-bottom:0px; position:relative;}
-.inner2{background:url(../images/tail_slider.gif) left top repeat-x transparent; width:710px; overflow:hidden; height:236px;}
+.inner2{background:#F5F5F5; width:710px; overflow:hidden; height:236px;}
 .title-special {text-transform: uppercase; margin:20px 0 0 19px; padding:0 0 0 0; font-size:14px; font-weight:bold; color:#5f5e60; line-height:1.2em}
 .scroll-interval .name{padding:9px 15px 0 13px}
 .scroll-interval .name a{ color:#fefefe; line-height:1.25em; font-size:12px; font-weight:normal}
 .scroll-interval .name a:hover{ color:#fefefe; text-decoration:underline; }
 .txt_area{border:1px solid #e9e6e6;width:148px; overflow:hidden; background:#FFF;height:148px; margin:0px 0px 0 0px !important; float:left;}
-.txt_area img{height: 148px}
+
 .carouse2{ margin:17px 0 0 40px;width:632px!important;}
-.part {display:none;position:relative;top:-53px; left:0px;width:144px;  background:url(../images/bg-name.gif) left top no-repeat; height:51px;color:#FFF; margin-left:2px;}
+.part {display:none;position:absolute;top:45px; width:145px;  background:url(../images/bg-name.gif) left top no-repeat; height:51px;color:#FFF; margin-left:2px;}
 
 .special_block .prev {background:url(../images/prev-bg.png) no-repeat scroll left top transparent;height:34px;width:17px;left:15px;top:107px;border:none!important; position:absolute;cursor:pointer;}
 .special_block .prev:hover {background:url(../images/prev-bg2.png) no-repeat scroll left top transparent;height:34px;width:17px;left:15px;top:107px;border:none!important; position:absolute;}
