@@ -142,74 +142,29 @@
     </div><!--End ALL content-->
 	
 	<h3 class="title-right"><span>Quảng cáo doanh nghiệp</span></h3>
+	<?php if(isset($this->function['advs_bottom']) && ($this->function['advs_bottom'])):?>
 	<div class="special_block bg_adv_bottom">
-	<div class="inner2 bg_ineradv_bottom">
-		<p class="prev prev_adv"></p>
-		<p class="next next_adv"></p>
-		<div class="carouse2 adv_bottom">
-			<div class="blocks">
-				<ul class="list_scroll">
-					<li class="scroll-interval">
-						<div class="txt_area"><a class="pic" href="products-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img_3.jpg" alt="Set ipsum dolor sit amet"/></a>
-							<div class="part">
-								<h3 class="name"><a class="link" href="#">Set ipsum dolor sit amet</a></h3>
-							</div>
-						</div>
-					</li>
-					<li class="scroll-interval">
-						<div class="txt_area"><a class="pic" href="products-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img_1.jpg" alt="Lorem ipsum dolor sit amet" /></a>
-							<div class="part">
-								<h3 class="name"><a class="link" href="#">Lorem ipsum dolor sit amet</a></h3>
-							</div>
-						</div>
-					</li>
-					<li class="scroll-interval">
-						<div class="txt_area"><a class="pic" href="products-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img_2.jpg" alt="Iipsum dolor sit amet" /></a>
-							<div class="part">
-								<h3 class="name"><a class="link" href="#">Iipsum dolor sit amet</a></h3>
-							</div>
-						</div>
-					</li>
-					<li class="scroll-interval">
-						<div class="txt_area"><a class="pic" href="products-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img_4.jpg" alt="3dConnexion 3DX-700034" /></a>
-							<div class="part">
-								<h3 class="name"><a class="link" href="#">3dConnexion 3DX-700034</a></h3>
-							</div>
-						</div>
-					</li>
-					<li class="scroll-interval">
-						<div class="txt_area"><a class="pic" href="products-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img_1.jpg" alt="Lorem ipsum dolor sit amet" /></a>
-							<div class="part">
-								<h3 class="name"><a class="link" href="#">Lorem ipsum dolor sit amet</a></h3>
-							</div>
-						</div>
-					</li>
-					<li class="scroll-interval">
-						<div class="txt_area"><a class="pic" href="products-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img_2.jpg" alt="Acer H233H bmid" /></a>
-							<div class="part">
-								<h3 class="name"><a class="link" href="#">Acer H233H bmid</a></h3>
-							</div>
-						</div>
-					</li>
-					<li class="scroll-interval">
-						<div class="txt_area"><a class="pic" href="products-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img_3.jpg" alt="Altec Lansing FX3022" /></a>
-							<div class="part">
-								<h3 class="name"><a class="link" href="#">Altec Lansing FX3022</a></h3>
-							</div>
-						</div>
-					</li>
-					<li class="scroll-interval">
-						<div class="txt_area"><a class="pic" href="products-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img_1.jpg" alt="Apple AirPort Extreme Base" /></a>
-							<div class="part">
-							<h3 class="name"><a class="link" href="#">Apple AirPort Extreme Base</a></h3>
-							</div>
-						</div>
-					</li>
-				 </ul>
+		<div class="inner2 bg_ineradv_bottom">
+			<p class="prev prev_adv"></p>
+			<p class="next next_adv"></p>
+			<div class="carouse2 adv_bottom">
+				<div class="blocks">
+					<ul class="list_scroll">
+						<?php foreach($this->function['advs_bottom'] as $value): ?>
+							<li class="scroll-interval">
+								<div class="txt_area"><a href="<?php echo $value['url'] ?>" target="<?php echo $value['type'] ?>" title="<?php echo $value['title'.Yii::app()->session['lang']] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.Yii::app()->session['lang']] ?>" /></a>
+									<div class="part">
+										<h3 class="name"><a  href="<?php echo $value['url'] ?>" target="<?php echo $value['type'] ?>" title="<?php echo $value['title'.Yii::app()->session['lang']] ?>"><?php echo $value['title'.Yii::app()->session['lang']] ?></a></h3>
+									</div>
+								</div>
+							</li>
+						<?php endforeach; ?>
+					 </ul>
+				</div>
 			</div>
 		</div>
-	</div>
 	</div> <!--Adv bottom-->
+	 <?php endif;?>
 </div><!--End wrapper-->
  <div id="bg-fter">
 	 <div id="footer">
