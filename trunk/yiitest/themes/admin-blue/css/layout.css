@@ -100,6 +100,8 @@ tbody tr.green td, tbody tr.green a{background: #c2ecb7; color : #aaa}
 .control-button input:hover{color: #333}
 .control-button a{padding-right:15px}
 
+.submit{margin:0 0 7px 5px;background:#332923;color:#fff;padding:7px 0;text-align:center; cursor:pointer;width:70px;border:none;-moz-border-radius: 3px; -webkit-border-radius: 3px;font-weight:bold}
+
 .txt60{width: 60px}
 .txt15{width: 15px}
 .txt-sort{width:35px; -moz-border-radius: 2px; -webkit-border-radius: 2px; border:1px solid #ccc; padding:1px 3px; text-align: center;}

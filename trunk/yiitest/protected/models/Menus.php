@@ -57,7 +57,7 @@ class Menus extends CActiveRecord {
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'dosUsernamesUsername' => array(self::BELONGS_TO, 'DosUsernames', 'dos_usernames_username'),
+			//'dosUsernamesUsername' => array(self::BELONGS_TO, 'DosUsernames', 'dos_usernames_username'),
 		);
 	}
 
@@ -97,8 +97,8 @@ class Menus extends CActiveRecord {
 		));
 	}
 
-	public function getSeoPage($module, $user) {
-		$command = Yii::app()->db->createCommand('SELECT title' . LANG . ', description' . LANG . ' FROM ' . $this->tableName() . ' WHERE url=:url AND dos_usernames_username=:user');
+	public static function getSeoPage($module, $user) {
+		$command = Yii::app()->db->createCommand('SELECT title' . LANG . ', description' . LANG . ' FROM dos_module_menus WHERE url=:url AND dos_usernames_username=:user');
 		$command->bindParam(":url", $module, PDO::PARAM_STR);
 		$command->bindParam(":user", $user, PDO::PARAM_STR);
 		return $command->queryRow();
