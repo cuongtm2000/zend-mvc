@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 30, 2012 at 03:32 AM
+-- Generation Time: Mar 30, 2012 at 03:58 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -71,18 +71,18 @@ CREATE TABLE IF NOT EXISTS `dos_configs` (
 --
 
 INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES
-('advs_height', 204, '', '010312'),
-('advs_height', 200, '', '070312'),
-('advs_height', 200, '', '111120'),
-('advs_height', 222, '', '200312'),
-('advs_height', 200, '', '220312'),
-('advs_height', 200, '', '260312'),
-('advs_width', 200, '', '010312'),
-('advs_width', 196, '', '070312'),
-('advs_width', 224, '', '111120'),
-('advs_width', 200, '', '200312'),
-('advs_width', 200, '', '220312'),
-('advs_width', 210, '', '260312'),
+('advs_left_height', 204, '', '010312'),
+('advs_left_height', 200, '', '070312'),
+('advs_left_height', 200, '', '111120'),
+('advs_left_height', 222, '', '200312'),
+('advs_left_height', 200, '', '220312'),
+('advs_left_height', 200, '', '260312'),
+('advs_left_width', 200, '', '010312'),
+('advs_left_width', 196, '', '070312'),
+('advs_left_width', 224, '', '111120'),
+('advs_left_width', 200, '', '200312'),
+('advs_left_width', 200, '', '220312'),
+('advs_left_width', 210, '', '260312'),
 ('banner_height', 332, '', '010312'),
 ('banner_height', 324, '', '070312'),
 ('banner_height', 297, '', '111120'),
@@ -167,10 +167,10 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('services_width', 143, '', '130312'),
 ('services_width', 145, '', '220312'),
 ('services_width', 144, '', '260312'),
-('video_cat_height', 100, NULL, '260312'),
-('video_cat_width', 145, NULL, '260312'),
-('video_height_thumb', 100, NULL, '260312'),
-('video_width_thumb', 145, NULL, '260312');
+('video_cat_height', 100, '', '260312'),
+('video_cat_width', 145, '', '260312'),
+('video_height_thumb', 100, '', '260312'),
+('video_width_thumb', 145, '', '260312');
 
 -- --------------------------------------------------------
 
@@ -397,7 +397,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(11, 'Giới thiệu sơ lược', 'about so luoc', '<p>\r\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\r\n<p>\r\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\r\n<p>\r\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\r\n<p>\r\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\r\n<p>\r\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 520, '2012-03-22 01:48:29', 2, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'about-so-luoc', 'Mô tả VN', 'Mô tả english', 1, 'test'),
+(11, 'Giới thiệu sơ lược', 'about so luoc', '<p>\r\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\r\n<p>\r\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\r\n<p>\r\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\r\n<p>\r\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\r\n<p>\r\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 535, '2012-03-22 01:48:29', 2, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'about-so-luoc', 'Mô tả VN', 'Mô tả english', 1, 'test'),
 (12, 'Giới thiệu chung chung', '', '<p>\r\n	Là chung chung </p>\r\n', '', 5, '2012-03-26 08:38:15', 1, 0, NULL, NULL, 'gioi-thieu-chung-chung', '', 'Là chung chung ', '', 1, 'test');
 
 -- --------------------------------------------------------
@@ -423,15 +423,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `dos_module_advs`
 --
 
 INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`, `dos_usernames_username`) VALUES
-(1, 'trai uot chinh', NULL, 'trai-uot-chinh.jpg', 'http://grouplaptrinh.com', '2012-03-22 23:38:44', '2012-03-22 10:00:00', '2012-03-29 10:00:00', 0, 1, 'left', '_bank', 1, 'test'),
-(2, 'Tại vì sao người', NULL, 'tai-vi-sao-nguoi.jpg', 'http://dantri.com.vn', '2012-03-26 08:23:38', '2012-03-24 17:00:00', '2012-03-25 17:00:00', 0, 2, 'top', '_bank', 1, 'test');
+(1, 'trai uot chinh', NULL, 'trai-uot-chinh.jpg', 'http://grouplaptrinh.com', '2012-03-22 23:38:44', '2012-03-21 17:00:00', '2012-04-07 17:00:00', 0, 1, 'left', '_bank', 1, 'test'),
+(3, 'sadsad', NULL, 'sadsad.jpg', 'http://grouplaptrinh.com', '2012-03-30 01:55:17', '2012-03-29 17:00:00', '2012-04-02 17:00:00', 0, 2, 'left', '_bank', 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -643,7 +643,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1333069929, 'test');
+('''127.0.0.1''', 1333072681, 'test');
 
 -- --------------------------------------------------------
 
