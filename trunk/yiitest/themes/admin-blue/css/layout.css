@@ -109,8 +109,6 @@ fieldset{padding:15px; border : 1px solid #E4E3E3; background:#F9F9FB; -moz-bord
 fieldset p{clear: both; margin: 4px auto; padding-bottom: 0}
 fieldset label{float:left; width:90px; padding:3px}
 fieldset label.remove{float: none}
-fieldset .txt-large-x{width:40%; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
-fieldset .txt-very-large{width:55%; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
 fieldset input.login {cursor:pointer; width:80px; height:24px; color:#fff; border:1px solid #ccc; background:#3A6AAD; -moz-border-radius: 3px; -webkit-border-radius: 3px; display:inline; margin-right:6px}
 fieldset input.login:hover, .login-a:hover{background:#5184D2}
 fieldset textarea{-moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; width:55.1%; padding:1px 3px}
@@ -122,6 +120,8 @@ fieldset .login-a:hover{text-decoration:none}
 fieldset .txt-small{width:100px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
 fieldset .txt-very-tiny{width:22px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
 fieldset .txt-large{width:190px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
+fieldset .txt-large-x{width:40%; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
+fieldset .txt-very-large{width:55%; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
 
 fieldset .select-110{width: 110px;}
 
