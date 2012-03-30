@@ -158,16 +158,22 @@ class Advs extends CActiveRecord {
 			$this->record_order = $this->maxRecordOrder();
 			$this->dos_usernames_username = Yii::app()->user->id;
 			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
+				$width = Configs::configTemplate('advs_' . $this->position . '_width', Yii::app()->session['template']);
+				$height = Configs::configTemplate('advs_' . $this->position . '_height', Yii::app()->session['template']);
+
 				//import class upload images
 				Yii::import('ext.EUploadedImage.EUploadedImage');
-				$this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload(Configs::configTemplate('advs_width', Yii::app()->session['template']), Configs::configTemplate('advs_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id, $this->title);
+				$this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload($width, $height, USERFILES . '/' . Yii::app()->controller->id, $this->title);
 			}
 		} else {
 			//check file old and upload
 			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
+				$width = Configs::configTemplate('advs_' . $this->position . '_width', Yii::app()->session['template']);
+				$height = Configs::configTemplate('advs_' . $this->position . '_height', Yii::app()->session['template']);
+
 				//import class upload images
 				Yii::import('ext.EUploadedImage.EUploadedImage');
-				$this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload(Configs::configTemplate('advs_width', Yii::app()->session['template']), Configs::configTemplate('advs_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id, $this->title, $this->_oldImage);
+				$this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload($width, $height, USERFILES . '/' . Yii::app()->controller->id, $this->title, $this->_oldImage);
 			} else {
 				$this->pic_thumb = $this->_oldImage;
 			}
@@ -178,34 +184,34 @@ class Advs extends CActiveRecord {
 
 	//Front end - list advs left
 	public function listItemsLeft() {
-		$this->listItemsPosition('left');
-	}
-
-	//Front end - list advs top
-	public function listItemsTop() {
-		$this->listItemsPosition('top');
-	}
-
-	//Front end - list advs center
-	public function listItemsCenter() {
-		$this->listItemsPosition('center');
-	}
-
-	//Front end - list advs bottom
-	public function listItemsBottom() {
-		$this->listItemsPosition('bottom');
+		return $this->listItemsPosition('left');
 	}
 
 	//Front end - list advs right
 	public function listItemsRight() {
-		$this->listItemsPosition('right');
+		return $this->listItemsPosition('right');
+	}
+
+	//Front end - list advs top
+	public function listItemsTop() {
+		return $this->listItemsPosition('top');
+	}
+
+	//Front end - list advs center
+	public function listItemsCenter() {
+		return $this->listItemsPosition('center');
+	}
+
+	//Front end - list advs bottom
+	public function listItemsBottom() {
+		return $this->listItemsPosition('bottom');
 	}
 
 	/**
 	 * @param $position
 	 * @return mixed
 	 */
-	public function listItemsPosition($position) {
+	private function listItemsPosition($position) {
 		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', pic_thumb, url, type FROM ' . $this->tableName() . ' WHERE start_date <= NOW() AND end_date >= NOW() AND position=:position AND enable=1 AND dos_usernames_username=:user ORDER BY record_order DESC, create_date DESC');
 		$command->bindParam(':position', $position, PDO::PARAM_STR);
 		$command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
