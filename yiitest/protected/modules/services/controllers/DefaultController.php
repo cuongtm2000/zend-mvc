@@ -2,6 +2,8 @@
 
 class DefaultController extends Controller{
 	public function actionIndex(){
+		$this->setSeoPage(); //set Seo page
+
         $model = ucfirst($this->module->getName());
         $items = new $model();
         

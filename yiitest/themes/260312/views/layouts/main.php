@@ -140,9 +140,9 @@
 			
         </div><!--End rightcontent--> <div class="clear"></div>
     </div><!--End ALL content-->
-	
-	<h3 class="title-right"><span>Quảng cáo doanh nghiệp</span></h3>
+
 	<?php if(isset($this->function['advs_bottom']) && ($this->function['advs_bottom'])):?>
+	<h3 class="title-right"><span>Quảng cáo doanh nghiệp</span></h3>
 	<div class="special_block bg_adv_bottom">
 		<div class="inner2 bg_ineradv_bottom">
 			<p class="prev prev_adv"></p>
@@ -164,7 +164,7 @@
 			</div>
 		</div>
 	</div> <!--Adv bottom-->
-	 <?php endif;?>
+	<?php endif;?>
 </div><!--End wrapper-->
  <div id="bg-fter">
 	 <div id="footer">

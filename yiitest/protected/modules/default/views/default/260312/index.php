@@ -1,5 +1,3 @@
-<?php $this->pageTitle = 'test'; $this->description = 'desctip';?>
-
 <?php if(isset($this->function['about_home'])): ?>
 	<h1 class="title-right"><span><?php echo $this->function['about_home']['title'.LANG] ?></span></h1>
 	<div class="frame-tent-right">
