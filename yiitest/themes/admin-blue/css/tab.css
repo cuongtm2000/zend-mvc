@@ -6,7 +6,7 @@ ul.tabs li a {color:#fff;display: block;padding: 5px 22px;border-right: 2px soli
 ul.tabs li a:hover {background: #ccc;}    
 
 .tab_container {width: 100%;background: #F9F9FB; border: 1px solid #E4E3E3;-webkit-border-radius: 0 0 2px 2px;-moz-border-radius: 0 0 2px 2px}
-ul.tab_content {padding:5px 0;list-style: none}
+ul.tab_content {padding:5px;list-style: none}
 
 /**frame seo**/
 .tab_container label{color:#555; margin:0 !important;font-weight:bold;width:100px; float:left}
