@@ -21,7 +21,7 @@ h2{color:#0E8F0E; font-size:11pt}
 .contenter{float:left; width:78%; line-height:18px; text-align: justify; position:relative}
 .content{margin-left:1%; background:#fff; margin-bottom:0.8em; padding:0.3em; border:1px solid #ddd; -moz-border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 2px;border-radius: 2px; -moz-box-shadow: 2px 2px #ccc; -webkit-box-shadow:2px 2px #ccc; box-shadow: 2px 2px #ccc;}
 
-#catmenu{background:#fff; padding:4px; width:98%; margin-bottom:0.8em; border-right:1px solid #ccc; -moz-box-shadow: 0 0 5px #999; -webkit-box-shadow: 0 0 5px #999;  box-shadow: 0 0 5px #999}
+.catmenu{background:#fff; padding:4px; width:98%; margin-bottom:0.8em; border-right:1px solid #ccc; -moz-box-shadow: 0 0 5px #999; -webkit-box-shadow: 0 0 5px #999;  box-shadow: 0 0 5px #999}
 
 ul.menu-li{list-style:none; margin:5px 0 5px 0; padding:0}
 ul.menu-li li{padding:0;cursor:pointer}
@@ -100,7 +100,7 @@ tbody tr.green td, tbody tr.green a{background: #c2ecb7; color : #aaa}
 .control-button input:hover{color: #333}
 .control-button a{padding-right:15px}
 
-.submit{margin:0 0 7px 5px;background:#332923;color:#fff;padding:7px 0;text-align:center; cursor:pointer;width:70px;border:none;-moz-border-radius: 3px; -webkit-border-radius: 3px;font-weight:bold}
+.submit{margin:0 0 7px 5px;background:#332923;color:#fff;padding:7px 7px;text-align:center; cursor:pointer;border:none;-moz-border-radius: 3px; -webkit-border-radius: 3px;font-weight:bold}
 
 .txt60{width: 60px}
 .txt15{width: 15px}

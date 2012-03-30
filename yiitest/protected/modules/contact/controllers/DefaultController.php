@@ -3,7 +3,7 @@
 class DefaultController extends Controller {
 
     public function actionIndex() {
-        $model = ucfirst($this->module->getName());
+		$model = ucfirst($this->module->getName());
         $items = new $model();
         
         $contact = new ContactUserForm(); //contact user form
