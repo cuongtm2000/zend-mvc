@@ -164,14 +164,14 @@ class Services extends CActiveRecord {
 
     public function beforeSave() {
         $purifier = new CHtmlPurifier();
-        $this->title = $purifier->purify($this->title);
-        $this->titleen = $purifier->purify($this->titleen);
-        $this->content = $purifier->purify($this->content);
-        $this->contenten = $purifier->purify($this->contenten);
-        $this->tag = $purifier->purify($this->tag);
-        $this->tagen = $purifier->purify($this->tagen);
-        $this->description = $purifier->purify($this->description);
-        $this->descriptionen = $purifier->purify($this->descriptionen);
+        $this->title = $purifier->purify(trim($this->title));
+        $this->titleen = $purifier->purify(trim($this->titleen));
+        $this->content = $purifier->purify(trim($this->content));
+        $this->contenten = $purifier->purify(trim($this->contenten));
+        $this->tag = $purifier->purify(trim($this->tag));
+        $this->tagen = $purifier->purify(trim($this->tagen));
+        $this->description = $purifier->purify(trim($this->description));
+        $this->descriptionen = $purifier->purify(trim($this->descriptionen));
 
         if ($this->isNewRecord) {
             $this->record_order = $this->maxRecordOrder();
