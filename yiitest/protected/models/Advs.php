@@ -96,20 +96,20 @@ class Advs extends CActiveRecord {
 	 */
 	public function attributeLabels() {
 		return array(
-			'record_id' => 'Record',
-			'title' => 'Title',
-			'titleen' => 'Titleen',
-			'pic_thumb' => 'Pic Thumb',
+			//'record_id' => 'Record',
+			'title' => Yii::app()->controller->lang['title'],
+			'titleen' => Yii::app()->controller->lang['titleen'],
+			'pic_thumb' => Yii::app()->controller->lang['picture'],
 			'url' => 'Url',
-			'create_date' => 'Create Date',
+			//'create_date' => 'Create Date',
 			'start_date' => 'Start Date',
 			'end_date' => 'End Date',
-			'hits' => 'Hits',
-			'record_order' => 'Record Order',
+			//'hits' => 'Hits',
+			//'record_order' => 'Record Order',
 			'position' => 'Position',
 			'type' => 'Type',
-			'enable' => 'Enable',
-			'dos_usernames_username' => 'Dos Usernames Username',
+			'enable' => Yii::app()->controller->lang['show'],
+			//'dos_usernames_username' => 'Dos Usernames Username',
 		);
 	}
 
@@ -150,7 +150,8 @@ class Advs extends CActiveRecord {
 
 	public function beforeSave() {
 		$purifier = new CHtmlPurifier();
-		$this->title = $purifier->purify($this->title);
+		$this->title = $purifier->purify(trim($this->title));
+		$this->title = $purifier->purify(trim($this->title));
 		$this->start_date = date('Y-m-d H:i:s', strtotime($this->start_date));
 		$this->end_date = date('Y-m-d H:i:s', strtotime($this->end_date));
 

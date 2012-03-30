@@ -3,11 +3,13 @@
 <fieldset>
     <legend><?php echo $this->lang['add_new'] ?> <?php echo strtolower($this->lang[$this->ID])?></legend>
 
-    <div class="col1"><?php echo $form->labelEx($model, 'title') ?></div>
+	<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
+    <div class="col1"><?php echo $form->labelEx($model, 'title'.$lang) ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'title', $htmlOptions=array('class'=>'txt-very-large')); ?>
+        <?php echo $form->textField($model, 'title'.$lang, $htmlOptions=array('class'=>'txt-very-large')); ?>
     </div>
     <div class="clear space"></div>
+	<?php endforeach; ?>
 
     <div class="col1"><?php echo $form->labelEx($model, 'url') ?></div>
     <div class="col2">

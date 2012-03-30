@@ -132,12 +132,12 @@ class VideoCat extends CActiveRecord {
 
 	public function beforeSave() {
 		$purifier = new CHtmlPurifier();
-		$this->cat_title = $purifier->purify($this->cat_title);
-		$this->cat_titleen = $purifier->purify($this->cat_titleen);
-		$this->tag = $purifier->purify($this->tag);
-		$this->tagen = $purifier->purify($this->tagen);
-		$this->description = $purifier->purify($this->description);
-		$this->descriptionen = $purifier->purify($this->descriptionen);
+		$this->cat_title = $purifier->purify(trim($this->cat_title));
+		$this->cat_titleen = $purifier->purify(trim($this->cat_titleen));
+		$this->tag = $purifier->purify(trim($this->tag));
+		$this->tagen = $purifier->purify(trim($this->tagen));
+		$this->description = $purifier->purify(trim($this->description));
+		$this->descriptionen = $purifier->purify(trim($this->descriptionen));
 
 		if ($this->isNewRecord) {
 			$this->cat_order = $this->maxRecordOrder();
