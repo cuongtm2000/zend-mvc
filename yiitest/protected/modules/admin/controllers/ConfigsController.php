@@ -48,6 +48,9 @@ class ConfigsController extends AdminController {
     }
 
 	public function actionSeo() {
+		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/tab.css');
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/tab-sub-right.js');
+
 		$model = new Menus;
 		//Submit
 		if (Yii::app()->request->getIsPostRequest()) {
