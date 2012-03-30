@@ -52,7 +52,7 @@ class ConfigsController extends AdminController {
 		//Submit
 		if (Yii::app()->request->getIsPostRequest()) {
 			$model->addItemSeo(Yii::app()->request);
-			//$this->refresh();
+			$this->refresh();
 		}
 		$this->render('seo', array('models' => $model->listMenuByAdmin(1)));
 	}
