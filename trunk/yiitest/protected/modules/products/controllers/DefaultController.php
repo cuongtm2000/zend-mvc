@@ -3,6 +3,13 @@
 class DefaultController extends Controller {
 
     public function actionIndex() {
+		$this->pageTitle = 'asa';
+		$this->description = 'an';
+		echo $this->module->id;
+		echo Yii::app()->session['subdomain'];
+
+		//getSeoPage($this->module->id, Yii::app()->session['subdomain']);
+
         $model = new ProductsCat();
 
         $this->render(Yii::app()->session['template'] . '/index', array('items' => $model->listItem()));
