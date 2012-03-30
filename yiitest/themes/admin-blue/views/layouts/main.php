@@ -59,6 +59,7 @@
                                 <li><a href="/admin/configs/web">Tiêu đề website</a></li>
                                 <li><a href="/admin/configs/menu">Cấu hình Menu</a></li>
                                 <li><a href="/admin/configs/langs">Cấu hình ngôn ngữ</a></li>
+								<li><a href="/admin/configs/seo">Công cụ tìm kiếm</a></li>
                             </ul>
                         </li>
                     </ul>

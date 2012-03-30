@@ -1,4 +1,5 @@
 <?php $this->breadcrumbs=array($this->lang[$this->module->id]);?>
+<?php $this->pageTitle = 'test'; $this->description = 'desctip';?>
 
 <h1 class="title-right"><span><?php echo $this->lang[$this->module->id]?></span></h1>
 <div class="all-product"> 

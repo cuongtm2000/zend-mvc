@@ -47,4 +47,13 @@ class ConfigsController extends AdminController {
         $this->render('langs');
     }
 
+	public function actionSeo() {
+		$model = new Menus;
+		//Submit
+		if (Yii::app()->request->getIsPostRequest()) {
+			$model->addItemSeo(Yii::app()->request);
+			//$this->refresh();
+		}
+		$this->render('seo', array('models' => $model->listMenuByAdmin(1)));
+	}
 }
