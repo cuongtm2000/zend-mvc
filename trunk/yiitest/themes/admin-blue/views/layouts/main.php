@@ -40,7 +40,7 @@
         <div class="paddinglr10">
             <div class="menu-bar">
                 <?php if($this->id=='account'):?>
-                <div id="catmenu">
+                <div class="catmenu">
                     <ul class="menu-li"> 
                         <li><a class="headerbar" href="#">Tài khoản của tôi</a>
                             <ul class="submenu">
@@ -52,7 +52,7 @@
                 </div>
                 <?php endif;?>
                 <?php if($this->id=='configs'):?>
-                <div id="catmenu">
+                <div class="catmenu">
                     <ul class="menu-li"> 
                         <li><a class="headerbar" href="#">Cài đặt &amp; cấu hình</a>
                             <ul class="submenu">
@@ -65,7 +65,7 @@
                     </ul>
                     </div>
                 <?php endif;?>
-                <div id="catmenu">
+                <div class="catmenu">
                     <ul class="menu-li"> 
                         <?php foreach ($this->module_user as $value): ?>
                             <li><a class="headerbar" href=""><?php echo $this->lang[$value['dos_modules_module_id']] ?></a>
