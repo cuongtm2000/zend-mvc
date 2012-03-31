@@ -3,6 +3,8 @@ return array(
 	'about.link' => 'about',
 	'products.link' => 'products',
 	'services.link' => 'services',
+	'news.link' => 'news',
+	'video.link' => 'video',
 	'contact.link' => 'contact',
 
 	'online' => 'Online',

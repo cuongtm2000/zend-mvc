@@ -27,4 +27,6 @@ return array(
 	'send' => 'Gửi',
 	'reset' => 'Nhập lại',
 	'goback' => 'Trở lại',
+
+	'popular' => 'Giải pháp được ưu thích nhất để có website chất lượng',
 );

@@ -88,7 +88,7 @@ class Controller extends CController {
 			$this->banner = $banner->getBanner($this->module->getName());
 
 			//Set configs
-			$this->configs = Configs::template(Yii::app()->session['template']);
+			$this->configs = Configs::template(Yii::app()->session['template']); //coi lai cai nay
 		} else {
 			$this->redirect('http://dos.vn/error');
 		}
