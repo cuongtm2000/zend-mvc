@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 31, 2012 at 09:15 AM
+-- Generation Time: Mar 31, 2012 at 04:40 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -115,7 +115,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_cat_width', 145, '', '260312'),
 ('news_height_thumb', 100, '', '220312'),
 ('news_height_thumb', 100, '', '260312'),
-('news_num_paging_index', 2, NULL, '220312'),
+('news_num_paging_index', 2, '', '220312'),
 ('news_width_thumb', 145, '', '220312'),
 ('news_width_thumb', 145, '', '260312'),
 ('products_cat_height', 155, '', '010312'),
@@ -172,7 +172,11 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('services_width', 144, '', '260312'),
 ('video_cat_height', 100, '', '260312'),
 ('video_cat_width', 145, '', '260312'),
+('video_height_thumb', 150, '', '220312'),
 ('video_height_thumb', 100, '', '260312'),
+('video_num_paging_cat', 2, '', '220312'),
+('video_num_paging_index', 2, '', '220312'),
+('video_width_thumb', 200, '', '220312'),
 ('video_width_thumb', 145, '', '260312');
 
 -- --------------------------------------------------------
@@ -642,8 +646,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1333174539, 'test'),
-('''127.0.0.1''', 1333178120, 'mvc');
+('''127.0.0.1''', 1333192620, 'test'),
+('''127.0.0.1''', 1333203856, 'mvc');
 
 -- --------------------------------------------------------
 
@@ -800,7 +804,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_video` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_video_dos_module_video_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `dos_module_video`
+--
+
+INSERT INTO `dos_module_video` (`record_id`, `title`, `titleen`, `postdate`, `tag`, `tagen`, `description`, `descriptionen`, `pic_thumb`, `url`, `record_order`, `hits`, `extra_field1`, `extra_field2`, `hot`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(1, 'Asus demo', '', '2012-03-31 11:38:51', 'asus-demo', '', 'Mo ta video', '', 'asus-demo.png', 'http://www.youtube.com/watch?v=0i2Xu87brR8&feature=fvwrel', 1, 0, NULL, NULL, 0, 1, 1),
+(2, 'asdsadsad', '', '2012-03-31 11:44:59', 'asdsadsad', '', 'dffdfd', '', 'asdsadsad.jpg', 'http://www.youtube.com/watch?v=_ioNXTAo1Pc', 2, 0, NULL, NULL, 0, 1, 1),
+(3, 'sdsd', '', '2012-03-31 11:45:16', 'sdsd', '', '', '', 'sdsd.jpg', 'http://www.youtube.com/watch?v=0i2Xu87brR8&feature=fvwrel', 3, 0, NULL, NULL, 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -823,7 +836,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_video_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `dos_module_video_cat`
+--
+
+INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat_title`, `cat_titleen`, `tag`, `tagen`, `description`, `descriptionen`, `cat_order`, `cat_enable`, `dos_usernames_username`) VALUES
+(1, 0, '', 'Danh mục Video', '', 'danh-muc-video', '', 'Mô tả danh muc video', '', 1, 1, 'mvc'),
+(2, 1, '', 'adsadasd', '', 'adsadasd', '', '', '', 2, 1, 'mvc');
 
 -- --------------------------------------------------------
 
@@ -1195,14 +1216,9 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('220312', 'default', 'products_hot'),
 ('220312', 'default', 'products_new'),
 ('220312', 'news', 'menu_news'),
-('220312', 'products', 'advs_left'),
-('220312', 'products', 'list_supports'),
-('220312', 'products', 'menu_products'),
-('220312', 'products', 'products_hot'),
-('220312', 'services', 'advs_left'),
-('220312', 'services', 'list_supports'),
-('220312', 'services', 'menu_services'),
-('220312', 'services', 'products_hot'),
+('220312', 'news', 'news_new'),
+('220312', 'products', 'news_new'),
+('220312', 'video', 'menu_video'),
 ('260312', 'about', 'advs_left'),
 ('260312', 'about', 'list_supports'),
 ('260312', 'about', 'menu_about'),
@@ -1320,6 +1336,7 @@ INSERT INTO `dos_values` (`value_name`, `module`, `module_id`, `function_name`) 
 ('menu_news', 'news', 'NewsCat', 'listCats'),
 ('menu_products', 'products', 'ProductsCat', 'listItem'),
 ('menu_services', 'services', 'Services', 'listMenu'),
+('menu_video', 'video', 'VideoCat', 'listCats'),
 ('news_new', 'news', 'News', 'listItemsNew'),
 ('products_hot', 'products', 'Products', 'listItemHot'),
 ('products_new', 'products', 'Products', 'listItemNew');

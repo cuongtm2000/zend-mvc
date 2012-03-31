@@ -26,9 +26,15 @@
  * @property DosModuleVideoCat $dosModuleItemCatCat
  */
 class Video extends CActiveRecord {
+	private $_subdomain;
+
 	public $remove_pic_thumb;
 	private $_oldImage;
 	private $_model;
+
+	public function init() {
+		$this->_subdomain = Yii::app()->session['subdomain'];
+	}
 
 	public static function model($className = __CLASS__) {
 		return parent::model($className);
@@ -175,6 +181,41 @@ class Video extends CActiveRecord {
 		}
 
 		return parent::beforeSave();
+	}
+
+	public function listItemsIndex() {
+		$criteria = new CDbCriteria();
+		$criteria->with = array(__CLASS__ . 'Cat');
+		$criteria->select = 'title' . LANG . ', pic_thumb, url, hot';
+		$criteria->order = 'record_order DESC, postdate DESC';
+		$criteria->condition = 'dos_usernames_username=:user AND enable = 1';
+		$criteria->params = array(':user' => Yii::app()->session['subdomain']);
+		$count = $this::model()->count($criteria);
+
+		// elements per page
+		$pages = new CPagination($count);
+		$pages->pageSize = Yii::app()->controller->configs['video_num_paging_index'];
+		$pages->applyLimit($criteria);
+
+		return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+	}
+
+	//Front end - list Item by Cat
+	public function listItemByCat($cid) {
+		$criteria = new CDbCriteria();
+		$criteria->select = 'title' . LANG . ', pic_thumb, url, hot';
+		$criteria->order = 'record_order DESC, postdate DESC';
+		$criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
+		$criteria->params = array(':cid' => $cid);
+
+		$count = $this::model()->count($criteria);
+
+		// elements per page
+		$pages = new CPagination($count);
+		$pages->pageSize = Yii::app()->controller->configs['video_num_paging_cat'];
+		$pages->applyLimit($criteria);
+
+		return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
 	}
 
 	//Back end - Get max record
