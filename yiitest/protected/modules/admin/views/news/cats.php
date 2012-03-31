@@ -24,7 +24,7 @@
                     <tr<?php echo $rowclass ?>>
                         <td><input type="checkbox" name="ids[]" value="<?php echo $value['cat_id'] ?>" /></td>
                         <td><?php echo CHtml::link('<img src="'.Yii::app()->theme->baseUrl.'/images/up.gif" alt="Up"/>', array('upcat', 'id'=>$value['cat_id'])) ?> <?php echo CHtml::link('<img src="'.Yii::app()->theme->baseUrl.'/images/down.gif" alt="Up"/>', array('downcat', 'id'=>$value['cat_id'])) ?></td>
-                        <td><?php echo $value['cat_title'] ?></td>
+                        <td><?php echo $value['cat_title_prefix'] ?></td>
                         <td><?php echo $model->countItemByCat($value['cat_id']) ?></td>
                         <td><?php echo CHtml::link($this->lang['edit'], array('editcat', 'id'=>$value['cat_id'])) ?> <?php echo CHtml::link('Xóa', array('delcat', 'id'=>$value['cat_id'])) ?></td>
                     </tr>

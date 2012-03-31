@@ -74,6 +74,7 @@ class Username extends CActiveRecord {
 			array('activated, dos_provinces_province_id', 'numerical', 'integerOnly' => true),
 			array('username, email, password, fullname', 'length', 'max' => 45),
 			array('username', 'unique', 'on' => 'register', 'message' => '<strong>{value}</strong> {attribute} already exists please choose another user'),
+			array('dos_bussiness_bussiness_id', 'checkChooseBusiness'),
 			array('email', 'email'),
 			array('phone, code', 'length', 'max' => 15),
 			array('company, dos_bussiness_bussiness_id, choose_business', 'length', 'max' => 100),
@@ -82,6 +83,12 @@ class Username extends CActiveRecord {
 			// Please remove those attributes that should not be searched.
 			array('username, email, created, expired, fullname, phone, company, activated, dos_templates_template, dos_provinces_province_id, dos_bussiness_bussiness_id', 'safe', 'on' => 'search'),
 		);
+	}
+
+	public function checkChooseBusiness($attribute) {
+		if ($this->dos_bussiness_bussiness_id == 'root') {
+			$this->addError($attribute, 'Vui lòng chọn một ngành nghề');
+		}
 	}
 
 	/*public function checkExistsUsername($attribute) {
@@ -172,6 +179,7 @@ class Username extends CActiveRecord {
 		$this->role = 'user';
 		$this->language = 'vi';
 		$this->activated = 1;
+		$this->dos_bussiness_bussiness_id = $purifier->purify($this->dos_bussiness_bussiness_id);
 
 		if ($this->isNewRecord) {
 			$this->expired = date('Y-m-d', strtotime('now +30 days'));
