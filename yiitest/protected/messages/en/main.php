@@ -27,4 +27,6 @@ return array(
 	'send' => 'Send',
 	'reset' => 'Reset',
 	'goback' => 'Go back',
+
+	'popular' => 'The Most Popular Solution to Create a Free Website',
 );

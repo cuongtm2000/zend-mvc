@@ -32,7 +32,7 @@
         </ul>
     </form><div class="clear"></div>
 </div><!--End header wrap-->
-<h1 class="title-solution">The Most Popular Solution to Create a Free Website</h1>
+<h1 class="title-solution"><?php echo Yii::t('main', 'popular')?></h1>
 <div class="content">
     <div class="left-tent">
         <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-w1.jpg" alt="Easy" />

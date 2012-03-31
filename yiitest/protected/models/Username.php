@@ -347,13 +347,29 @@ class Username extends CActiveRecord {
 		//delete user lang
 		UserLangs::model()->deleteAllByAttributes(array('dos_usernames_username' => $user));
 
-		//delete productCats and products
+		//delete ProductsCat and products
 		Yii::app()->getModule('products');
-		$products = ProductsCat::model()->findAllByAttributes(array('dos_usernames_username' => $user));
-		foreach ($products as $product) {
-			Products::model()->deleteAllByAttributes(array('dos_module_item_cat_cat_id' => $product['cat_id'])); //delete products
+		$values = ProductsCat::model()->findAllByAttributes(array('dos_usernames_username' => $user));
+		foreach ($values as $value) {
+			Products::model()->deleteAllByAttributes(array('dos_module_item_cat_cat_id' => $value['cat_id'])); //delete products
 		}
-		ProductsCat::model()->deleteAllByAttributes(array('dos_usernames_username' => $user)); //delete productCats
+		ProductsCat::model()->deleteAllByAttributes(array('dos_usernames_username' => $user)); //delete ProductsCat
+
+		//delete NewsCat and news
+		Yii::app()->getModule('news');
+		$values = NewsCat::model()->findAllByAttributes(array('dos_usernames_username' => $user));
+		foreach ($values as $value) {
+			News::model()->deleteAllByAttributes(array('dos_module_item_cat_cat_id' => $value['cat_id'])); //delete news
+		}
+		NewsCat::model()->deleteAllByAttributes(array('dos_usernames_username' => $user)); //delete NewsCat
+
+		//delete VideoCat and video
+		Yii::app()->getModule('video');
+		$values = VideoCat::model()->findAllByAttributes(array('dos_usernames_username' => $user));
+		foreach ($values as $value) {
+			Video::model()->deleteAllByAttributes(array('dos_module_item_cat_cat_id' => $value['cat_id'])); //delete video
+		}
+		VideoCat::model()->deleteAllByAttributes(array('dos_usernames_username' => $user)); //delete VideoCat
 
 		//delete table: dos_usernames
 		Username::model()->findByPk($user)->delete();

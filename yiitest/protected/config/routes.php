@@ -14,6 +14,8 @@ return array(
 	'http://<subdomain:\w+>.dos.vn/<services:(dich-vu)>' => 'services/default/index', //index
 	'http://<subdomain:\w+>.dos.vn/<services:(dich-vu)>/<id:[-a-z0-9]+>' => array('services/default/view', 'urlSuffix' => '.html'), //view
 
+	'http://<subdomain:\w+>.dos.vn/<news:(tin-tuc-su-kien)>' => 'news/default/index', //index
+
 	//contact modules
 	'http://<subdomain:\w+>.dos.vn/<contact:(lien-he)>' => 'contact/default/index', //index
 

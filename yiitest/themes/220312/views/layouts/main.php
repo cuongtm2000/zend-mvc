@@ -25,7 +25,7 @@
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.sider.banner.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		runbanner(<?php echo $this->configs['banner_width'] ?>,<?php echo $this->configs['banner_height'] ?>);
+		runbanner(950, 332);
 	});
 </script>
 <?php endif;?>
@@ -138,14 +138,14 @@
 			<?php echo $content?>
 		</div><!--End right content-->
 		<div id="colum3">
-			<h1 class="title-box"><span>TIN TỨC</span></h1>
+			<?php if(isset($this->function['news_new']) && ($this->function['news_new'])):?>
+			<h1 class="title-box"><span><?php echo $this->lang['news']?></span></h1>
 			<ul class="sub-new">
-				<li><a href="#" title="">Thịt bò Kobe từ Nhật vào Việt Nam sẽ bị tiêu hủy</a></li>
-				<li><a href="#" title="">Cuộc tập trận hải quân hoành tráng nhất trên biển của Iran</a></li>
-				<li><a href="#" title="">Liên tiếp nhiều vụ chạy xe, nhiều nhất là hãng Honda</a></li>
-				<li><a href="#" title="">Thịt bò Kobe từ Nhật vào Việt Nam sẽ bị tiêu hủy</a></li>
-				<li><a href="#" title="">Cuộc tập trận hải quân hoành tráng nhất trên biển của Iran</a></li>
+				<?php foreach($this->function['news_new'] as $value):?>
+					<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value->NewsCat->tag.LANG ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
+				<?php endforeach?>
 			</ul>
+			<?php endif?>
 			
 			<?php if(isset($this->function['products_hot']) && $this->function['products_hot']):?>
 			<h1 class="title-box"><span><?php echo $this->lang['products'] . ' ' . strtolower($this->lang['hot']) ?></span></h1>

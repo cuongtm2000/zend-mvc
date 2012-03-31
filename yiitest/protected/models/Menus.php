@@ -157,7 +157,7 @@ class Menus extends CActiveRecord {
 
 		for ($i = 0; $i < 10; $i++) {
 			if (!empty($menu[$i]) && !empty($url[$i])) {
-				$this->insertItem(trim($menu[$i]), trim($menuen[$i]), trim($url[$i]), trim($target[$i]), trim($position[$i]));
+				$this->insertItem(htmlspecialchars(trim($menu[$i])), htmlspecialchars(trim($menuen[$i])), trim($url[$i]), trim($target[$i]), trim($position[$i]));
 			}
 		}
 	}

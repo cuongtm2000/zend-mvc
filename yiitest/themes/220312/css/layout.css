@@ -135,7 +135,7 @@ a:hover{color:#000}
 #colum3{float:right; width:200px}
 
 /**  Sub new   **/
-.sub-new{list-style:none;margin:0 0 15px 0;border:1px solid #F2F2F2;padding:20px 10px 20px 10px}
+.sub-new{list-style:none;margin:0 0 15px 0;border:1px solid #F2F2F2;padding:10px}
 .sub-new li{padding:4px 0;line-height:1.5em}
 .sub-new li a{ display:block;color:#161616;background:url(../images/bull.gif) no-repeat left 7px; padding:1px 0 1px 15px}
 .sub-new li a:hover{color:#f90}

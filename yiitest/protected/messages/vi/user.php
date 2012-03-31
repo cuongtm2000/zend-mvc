@@ -3,6 +3,8 @@ return array(
 	'about.link' => 'gioi-thieu',
 	'products.link' => 'san-pham',
 	'services.link' => 'dich-vu',
+	'news.link' => 'tin-tuc-su-kien',
+	'video.link' => 'video',
 	'contact.link' => 'lien-he',
 
 	'online' => 'Đang truy cập',
