@@ -239,7 +239,7 @@ class News extends CActiveRecord {
 
 		// elements per page
 		$pages = new CPagination($count);
-		$pages->pageSize = 2;
+		$pages->pageSize = Yii::app()->controller->configs['news_num_paging_cat'];
 		$pages->applyLimit($criteria);
 
 		return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);

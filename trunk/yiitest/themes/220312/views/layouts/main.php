@@ -102,6 +102,13 @@
 				<?php Common::menuMultiLevel($this->function['menu_news'], 'NewsCat', Yii::t('user', 'news.link')); ?>
 			</ul>
 			<?php endif; ?>
+
+			<?php if(isset($this->function['menu_video']) && ($this->function['menu_video'])):?>
+			<h1 class="title-box"><span><?php echo $this->lang['video'] ?></span></h1>
+			<ul class="sub-pro">
+				<?php Common::menuMultiLevel($this->function['menu_video'], 'VideoCat', Yii::t('user', 'video.link')); ?>
+			</ul>
+			<?php endif; ?>
 			
 			<?php if(isset($this->function['menu_products']) && ($this->function['menu_products'])):?>
 			<h1 class="title-box"><span><?php echo $this->lang['products'] ?></span></h1>
