@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 30, 2012 at 04:23 AM
+-- Generation Time: Mar 31, 2012 at 09:15 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -113,7 +113,10 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('logo_width', 300, '', '260312'),
 ('news_cat_height', 100, '', '260312'),
 ('news_cat_width', 145, '', '260312'),
+('news_height_thumb', 100, '', '220312'),
 ('news_height_thumb', 100, '', '260312'),
+('news_num_paging_index', 2, NULL, '220312'),
+('news_width_thumb', 145, '', '220312'),
 ('news_width_thumb', 145, '', '260312'),
 ('products_cat_height', 155, '', '010312'),
 ('products_cat_height', 200, '', '070312'),
@@ -243,7 +246,7 @@ INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('hidden', 'Ẩn', 'Hidden', 1),
 ('hot', 'Nổi bật', 'Hot', 0),
 ('new', 'Mới', 'New', 0),
-('news', 'Tin tức &amp; sự kiện', 'News and Events', 0),
+('news', 'Tin tức & sự kiện', 'News & Events', 0),
 ('normal', 'Bình thường', 'Normal', 1),
 ('no_record', 'Không tồn tại mẫu tin', 'No record', 0),
 ('order', 'Thứ tự', 'Order', 1),
@@ -347,20 +350,27 @@ CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
 
 INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
 ('about', 'dos'),
+('about', 'mvc'),
 ('about', 'test'),
 ('advs', 'dos'),
+('advs', 'mvc'),
 ('advs', 'test'),
 ('banner', 'dos'),
+('banner', 'mvc'),
 ('banner', 'test'),
 ('contact', 'dos'),
+('contact', 'mvc'),
 ('contact', 'test'),
-('news', 'test'),
+('news', 'mvc'),
 ('products', 'dos'),
-('products', 'test'),
+('products', 'mvc'),
 ('services', 'dos'),
+('services', 'mvc'),
 ('services', 'test'),
 ('supports', 'dos'),
+('supports', 'mvc'),
 ('supports', 'test'),
+('video', 'mvc'),
 ('video', 'test');
 
 -- --------------------------------------------------------
@@ -390,15 +400,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
-
---
--- Dumping data for table `dos_module_abouts`
---
-
-INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(11, 'Giới thiệu sơ lược', 'about so luoc', '<p>\r\n	Grand Home ra đời với mục đích đem đến cho Quý khách hàng những sản phẩm nội thất cổ điển cao cấp, sản phẩm của Grand Home là sự kết hợp giữa văn hóa nghệ thuật và phong cách các quốc gia Pháp, Ý, Nga, đường nét tinh tế, kiểu dáng sang trọng, ý tưởng thiết kế độc đáo,mang lại sự sang trọng và xa hoa cho ngôi nhà của bạn.</p>\r\n<p>\r\n	Với sự nỗ lực không ngừng và bản lĩnh của người tiên phong, chúng tôi đã tạo ra những sản phẩm tinh tế nhất cung cấp tới quý khách hàng trong và ngoài nước.</p>\r\n<p>\r\n	Thông điệp Grand Home gửi tới khách hàng “với tất cả sự kính trọng của mình Grand Home cam kết cung cấp tới khách hàng những sản phẩm,dịch vụ tốt nhất”.</p>\r\n<p>\r\n	Chúng tôi luôn tự hào và không ngừng phấn đấu để nguồn nhân lực của Grand Home luôn là những chuyên gia trong lĩnh vực của mình. Với đội ngũ nhân viên thiết kế, họa sĩ và công nhân lành nghề đầy tài năng được đào tạo chuyên nghiệp.</p>\r\n<p>\r\n	Grand Home đem đến cho quý khách hàng sự hài lòng.</p>\r\n', '<p>\r\n	asdasd</p>\r\n', 536, '2012-03-22 01:48:29', 2, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'about-so-luoc', 'Mô tả VN', 'Mô tả english', 1, 'test'),
-(12, 'Giới thiệu chung chung', '', '<p>\r\n	Là chung chung </p>\r\n', '', 5, '2012-03-26 08:38:15', 1, 0, NULL, NULL, 'gioi-thieu-chung-chung', '', 'Là chung chung ', '', 1, 'test');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -423,15 +425,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
-
---
--- Dumping data for table `dos_module_advs`
---
-
-INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`, `dos_usernames_username`) VALUES
-(1, 'trai uot chinh', NULL, 'trai-uot-chinh.jpg', 'http://grouplaptrinh.com', '2012-03-22 23:38:44', '2012-03-21 17:00:00', '2012-04-07 17:00:00', 0, 1, 'left', '_bank', 1, 'test'),
-(3, 'sadsad', 'ee', 'sadsad.jpg', 'http://grouplaptrinh.com', '2012-03-30 01:55:17', '2012-03-29 17:00:00', '2012-04-02 17:00:00', 0, 2, 'left', '_bank', 1, 'test');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -452,17 +446,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
-
---
--- Dumping data for table `dos_module_banners`
---
-
-INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_url`, `banner_link`, `banner_order`, `banner_type`, `position`, `enable`, `dos_usernames_username`) VALUES
-(1, '2012-03-22 21:41:45', 'ba1', 'ba1.jpg', '', 1, 'banners', 'default', 1, 'test'),
-(2, '2012-03-22 21:41:54', 'ba2', 'ba2.jpg', '', 2, 'banners', 'default', 1, 'test'),
-(3, '2012-03-22 21:42:03', 'ba3', 'ba3.jpg', '', 3, 'banners', 'default', 1, 'test'),
-(4, '2012-03-22 21:42:13', 'ba3', 'ba36.jpg', '', 4, 'banners', 'default', 1, 'test');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -488,14 +472,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_contacts_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `dos_module_contacts`
---
-
-INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `tagen`, `description`, `descriptionen`, `enable`, `dos_usernames_username`) VALUES
-(1, 'Liên hệ', '', '<p>\r\n	Nội dung Nội dung Nội dung Nội dung V  Nội dung Nội dung Nội dung</p>\r\n', '', '2012-03-25 08:12:35', 1, 0, 0, 'lien-he', '', 'Mô tả', 'Mô tả Mô tả En', '1', 'test');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -522,16 +499,23 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 --
 
 INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
-('Trang chủ', NULL, 'default', NULL, 1, 'ew', '', 'ew', '', 'dos'),
-('Giới thiệu', NULL, 'about', NULL, 2, 'e', '', '', '', 'dos'),
-('Sản phẩm', NULL, 'products', NULL, 3, '', '', '', '', 'dos'),
-('Dịch vụ', NULL, 'services', NULL, 4, '', '', '', '', 'dos'),
-('Liên hệ', NULL, 'contact', NULL, 5, '', '', '', '', 'dos'),
-('Trang chủ', 'Home page', 'default', '', 1, 'ew', '', 'ew', '', 'test'),
-('Giới thiệu', 'About us', 'about', '', 2, 'e', '', '', '', 'test'),
-('Sản phẩm', 'Products', 'products', '', 3, '', '', '', '', 'test'),
-('Dịch vụ', 'Services', 'services', '', 4, '', '', '', '', 'test'),
-('Liên hệ', 'Contact', 'contact', '', 5, '', '', '', '', 'test');
+('Trang chủ', NULL, 'default', NULL, 1, '', 'Homepage', 'Mô ta', 'Description', 'dos'),
+('Giới thiệu', NULL, 'about', NULL, 2, '', '1', '', 'dsdsdsd', 'dos'),
+('Sản phẩm', NULL, 'products', NULL, 3, 'Tieu de', 'Titiel website', 'Mọ', '', 'dos'),
+('Dịch vụ', NULL, 'services', NULL, 4, '', '1', '', '1', 'dos'),
+('Liên hệ', NULL, 'contact', NULL, 5, 'Tieu de Lien he', 'Title Contact', 'Mo ta', 'Mo ta en', 'dos'),
+('Trang chủ', NULL, 'default', NULL, 1, NULL, NULL, NULL, NULL, 'test'),
+('Giới thiệu', NULL, 'about', NULL, 2, NULL, NULL, NULL, NULL, 'test'),
+('Dịch vụ', NULL, 'services', NULL, 3, NULL, NULL, NULL, NULL, 'test'),
+('Video', NULL, 'video', NULL, 4, NULL, NULL, NULL, NULL, 'test'),
+('Liên hệ', NULL, 'contact', NULL, 5, NULL, NULL, NULL, NULL, 'test'),
+('Trang chủ', '', 'default', '', 1, NULL, NULL, NULL, NULL, 'mvc'),
+('Giới thiệu', '', 'about', '', 2, NULL, NULL, NULL, NULL, 'mvc'),
+('Sản phẩm', '', 'products', '', 3, NULL, NULL, NULL, NULL, 'mvc'),
+('Dịch vụ', '', 'services', '', 4, NULL, NULL, NULL, NULL, 'mvc'),
+('Tin tức &amp; sự kiện', '', 'news', '', 5, NULL, NULL, NULL, NULL, 'mvc'),
+('Video', '', 'video', '', 6, NULL, NULL, NULL, NULL, 'mvc'),
+('Liên hệ', '', 'contact', '', 7, NULL, NULL, NULL, NULL, 'mvc');
 
 -- --------------------------------------------------------
 
@@ -562,7 +546,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `dos_module_news`
+--
+
+INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(1, 'Tieu de tin chức', '', '2012-03-31 02:24:01', 'tieu-de-tin-chuc.jpg', '<p>\r\n	Gioi thieu so luoc</p>', '', '<p>\r\n	Noi dung</p>', '', 'tieu-de-tin-chuc', '', '', '', 0, 1, 0, NULL, NULL, 1, 1),
+(2, 'Tieu de', '', '2012-03-31 02:46:51', '', '<p>\r\n	Gioi thieu</p>', '', '<p>\r\n	Noi dung</p>', '', 'tieu-de', '', 'asdasds', '', 0, 2, 0, NULL, NULL, 1, 1),
+(3, 'Tieasdsaioi thieu', '', '2012-03-31 02:48:24', 'tieasdsaioi-thieu.jpg', '<p>\r\n	Gasdasd</p>', '', '<p>\r\n	asdsadsa</p>', '', 'tieasdsaioi-thieu', '', '', '', 0, 3, 0, NULL, NULL, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -589,14 +582,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `dos_module_news_cat`
 --
 
 INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(1, 0, 'Danh mục', '', NULL, NULL, 'danh-muc', '', '', '', '', 1, NULL, NULL, 1, 'test');
+(1, 0, 'Danh mục tin tức', '', NULL, NULL, 'danh-muc-tin-tuc', '', 'Mô tả', '', '', 1, NULL, NULL, 1, 'mvc'),
+(2, 1, 'Sub', '', NULL, NULL, 'sub', '', '', '', '', 2, NULL, NULL, 1, 'mvc'),
+(3, 0, 'Danh mục 2', '', NULL, NULL, 'danh-muc-2', '', 'Mo ta', '', '', 3, NULL, NULL, 1, 'mvc');
 
 -- --------------------------------------------------------
 
@@ -620,10 +615,14 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('max_count', 0, 'dos'),
 ('counter', 0, 'dos'),
 ('yesterday', 0, 'dos'),
-('day_time', 2456017, 'test'),
-('max_count', 1, 'test'),
-('counter', 5, 'test'),
-('yesterday', 1, 'test');
+('day_time', 2456018, 'mvc'),
+('max_count', 0, 'mvc'),
+('counter', 0, 'mvc'),
+('yesterday', 0, 'mvc'),
+('day_time', 2456018, 'test'),
+('max_count', 0, 'test'),
+('counter', 0, 'test'),
+('yesterday', 0, 'test');
 
 -- --------------------------------------------------------
 
@@ -643,7 +642,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1333072746, 'test');
+('''127.0.0.1''', 1333174539, 'test'),
+('''127.0.0.1''', 1333178120, 'mvc');
 
 -- --------------------------------------------------------
 
@@ -680,7 +680,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_module_products`
+--
+
+INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(1, 'asdas', '', '2012-03-31 07:14:49', 'asdas-thumb.jpg', 'asdas.jpg', NULL, NULL, NULL, '<p>\r\n	asdasdas</p>', '', 'asdas', '', '', '', 0, 1, NULL, 0, NULL, NULL, NULL, NULL, NULL, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -708,7 +715,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_module_products_cat`
+--
+
+INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
+(1, 0, 'asdadas', '', NULL, NULL, 'asdadas', '', 'adasd', '', '', NULL, 1, NULL, NULL, 1, 'mvc');
 
 -- --------------------------------------------------------
 
@@ -739,15 +753,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
-
---
--- Dumping data for table `dos_module_services`
---
-
-INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(1, 'Dịch vụ 1', 'Dịch vụ English', NULL, NULL, '<p>\r\n	CHi tiết</p>\r\n', '<p>\r\n	sdfsdf sdf</p>\r\n', '', 10, '2012-03-01 16:28:47', 1, 0, NULL, NULL, 'dich-vu-1', 'dich-vu-english', 'Mô tả', 'Mô tả', 1, 'test'),
-(2, 'Dich vụ 2', 'Dich vu 2 english', NULL, NULL, '<p>\r\n	Dich vu 2</p>\r\n', '<p>\r\n	Noi dung</p>\r\n', 'dich-vu-2.jpg', 9, '2012-03-01 16:28:59', 2, 0, NULL, NULL, 'dich-vu-2', 'dich-vu-2-english', 'Mo ta', 'Mô tả', 1, 'test');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -766,15 +772,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
-
---
--- Dumping data for table `dos_module_supports`
---
-
-INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
-(8, 'Hỗ trợ mua hàng', 'Sales support', '0909 999 999', 'mailgoogle', 2, 'yahoo', 'test'),
-(9, 'Hỗ trợ kinh doanh', 'Business Support', '0909 999 888', 'groupitsoft', 1, 'yahoo', 'test');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -839,15 +837,6 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   KEY `fk_dos_module_webs_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `dos_module_webs`
---
-
-INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
-('keywords', 'thanhan, thanhansoft', 'test'),
-('description', 'thanhansoft', 'test'),
-('title', 'Welcome to Thanhansoft', 'test');
 
 -- --------------------------------------------------------
 
@@ -1191,17 +1180,21 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('220312', 'about', 'advs_left'),
 ('220312', 'about', 'list_supports'),
 ('220312', 'about', 'menu_about'),
+('220312', 'about', 'news_new'),
 ('220312', 'about', 'products_hot'),
 ('220312', 'contact', 'advs_left'),
 ('220312', 'contact', 'list_supports'),
 ('220312', 'contact', 'menu_products'),
+('220312', 'contact', 'news_new'),
 ('220312', 'contact', 'products_hot'),
 ('220312', 'default', 'about_home'),
 ('220312', 'default', 'advs_left'),
 ('220312', 'default', 'list_supports'),
 ('220312', 'default', 'menu_products'),
+('220312', 'default', 'news_new'),
 ('220312', 'default', 'products_hot'),
 ('220312', 'default', 'products_new'),
+('220312', 'news', 'menu_news'),
 ('220312', 'products', 'advs_left'),
 ('220312', 'products', 'list_supports'),
 ('220312', 'products', 'menu_products'),
@@ -1263,7 +1256,8 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
 ('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi', NULL, '0000-00-00 00:00:00', 1, '111120', 2, 'thoi-trang'),
-('test', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-01 16:28:15', '', '', '', 'user', 'vi|en', NULL, '2012-03-31 10:00:00', 1, '260312', 19, 'du-lich');
+('mvc', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-31 02:21:57', NULL, NULL, NULL, 'user', 'vi', NULL, '2012-04-29 17:00:00', 1, '220312', 19, 'noi-that-ngoai-that'),
+('test', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-31 03:21:17', NULL, NULL, NULL, 'user', 'vi', NULL, '2012-04-29 17:00:00', 1, '220312', 19, 'noi-that-ngoai-that');
 
 -- --------------------------------------------------------
 
@@ -1323,8 +1317,10 @@ INSERT INTO `dos_values` (`value_name`, `module`, `module_id`, `function_name`) 
 ('advs_top', 'advs', 'Advs', 'listItemsTop'),
 ('list_supports', 'supports', 'Supports', 'listItem'),
 ('menu_about', 'about', 'About', 'listMenu'),
+('menu_news', 'news', 'NewsCat', 'listCats'),
 ('menu_products', 'products', 'ProductsCat', 'listItem'),
 ('menu_services', 'services', 'Services', 'listMenu'),
+('news_new', 'news', 'News', 'listItemsNew'),
 ('products_hot', 'products', 'Products', 'listItemHot'),
 ('products_new', 'products', 'Products', 'listItemNew');
 

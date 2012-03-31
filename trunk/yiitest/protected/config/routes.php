@@ -14,7 +14,12 @@ return array(
 	'http://<subdomain:\w+>.dos.vn/<services:(dich-vu)>' => 'services/default/index', //index
 	'http://<subdomain:\w+>.dos.vn/<services:(dich-vu)>/<id:[-a-z0-9]+>' => array('services/default/view', 'urlSuffix' => '.html'), //view
 
+	//news modules
+	'http://<subdomain:\w+>.dos.vn/<news:(tin-tuc-su-kien)>/trang/<page:\d+>' => 'news/default/index', //index paging
 	'http://<subdomain:\w+>.dos.vn/<news:(tin-tuc-su-kien)>' => 'news/default/index', //index
+	'http://<subdomain:\w+>.dos.vn/<news:(tin-tuc-su-kien)>/<cid:[-a-z0-9]+>/trang/<page:\d+>' => array('news/default/cats'), //cat paging
+	'http://<subdomain:\w+>.dos.vn/<news:(tin-tuc-su-kien)>/<cid:[-a-z0-9]+>' => array('news/default/cats'), //cat
+	'http://<subdomain:\w+>.dos.vn/<news:(tin-tuc-su-kien)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('news/default/view', 'urlSuffix' => '.html'), //view
 
 	//contact modules
 	'http://<subdomain:\w+>.dos.vn/<contact:(lien-he)>' => 'contact/default/index', //index

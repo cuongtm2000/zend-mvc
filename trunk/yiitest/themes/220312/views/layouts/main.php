@@ -41,9 +41,11 @@
 			<?php endif;?>
 		</div> <!--End logo-->
 		<div class="frame-title-pany"><h1 class="title-city"><?php echo $this->lang['company_name'] ?></h1></div> <!--End title company-->
-		<div class="lang"><a href="<?php echo Yii::app()->request->baseUrl ?>/en" title="English"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/en.gif" alt="English" /> English</a>
-						<a href="<?php echo Yii::app()->request->baseUrl ?>/" title="Tiếng Việt"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/vi.gif" alt="Việt Nam" /> Tiếng Việt</a> 
-						<p class="tent-lang"><?php echo $this->lang['company_phone']?></p> 
+		<div class="lang">
+			<?php foreach($this->numLang as $value): ?>
+				<a href="<?php echo ($value=='vi') ? Yii::app()->request->baseUrl.'/' : Yii::app()->request->baseUrl.'/'.$value ?>"><?php echo $this->lang[$value]?> <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $value?>.gif" alt="<?php echo $this->lang[$value]?>" /></a>
+			<?php endforeach?>
+			<p class="tent-lang"><?php echo $this->lang['company_phone']?></p>
 		</div> <!--End lang-->	<div class="clear"></div>
 	</div><!--End header-->
 	<div id="all-nav">
@@ -93,6 +95,13 @@
 					<?php endforeach; ?>
 				</ul>
 			<?php endif;?>
+
+			<?php if(isset($this->function['menu_news']) && ($this->function['menu_news'])):?>
+			<h1 class="title-box"><span><?php echo $this->lang['news'] ?></span></h1>
+			<ul class="sub-pro">
+				<?php Common::menuMultiLevel($this->function['menu_news'], 'NewsCat', Yii::t('user', 'news.link')); ?>
+			</ul>
+			<?php endif; ?>
 			
 			<?php if(isset($this->function['menu_products']) && ($this->function['menu_products'])):?>
 			<h1 class="title-box"><span><?php echo $this->lang['products'] ?></span></h1>

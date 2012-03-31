@@ -209,6 +209,65 @@ class News extends CActiveRecord {
 		return $this::model()->findAll($criteria);
 	}
 
+	public function listItemsIndex() {
+		$criteria = new CDbCriteria();
+		$criteria->with = array('NewsCat');
+		$criteria->select = 'title' . LANG . ', pic_thumb, preview' . LANG . ', tag' . LANG . ', hot';
+		$criteria->order = 'record_order DESC, postdate DESC';
+		$criteria->condition = 'dos_usernames_username=:user AND enable = 1';
+		$criteria->params = array(':user' => $this->_subdomain);
+		$count = News::model()->count($criteria);
+
+		// elements per page
+		$pages = new CPagination($count);
+		$pages->pageSize = Yii::app()->controller->configs['news_num_paging_index'];
+		$pages->applyLimit($criteria);
+
+		return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+	}
+
+	//Front end - list Item by Cat
+	public function listItemByCat($cid) {
+		$criteria = new CDbCriteria();
+		$criteria->with = array('NewsCat');
+		$criteria->select = 'title' . LANG . ', pic_thumb, tag'.LANG.', hot';
+		$criteria->order = 'record_order DESC, postdate DESC';
+		$criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
+		$criteria->params = array(':cid' => $cid);
+
+		$count = $this::model()->count($criteria);
+
+		// elements per page
+		$pages = new CPagination($count);
+		$pages->pageSize = 2;
+		$pages->applyLimit($criteria);
+
+		return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+	}
+
+	//Front end - get detail item
+	public function detailItem($tag) {
+		$id = $this->getIDByTag($tag);
+
+		$criteria = new CDbCriteria();
+		$criteria->with = array('NewsCat');
+		$criteria->condition = 'enable=1';
+
+		$this->_model = $this::model()->findByPk($id, $criteria);
+
+		if ($this->_model === null) {
+			throw new CHttpException(404, 'The requested page does not exist.');
+		}
+		return $this->_model;
+	}
+
+	//Front end - find record_id by tag
+	private function getIDByTag($tag) {
+		$command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE tag=:tag');
+		$command->bindParam(":tag", $tag, PDO::PARAM_STR);
+		return $command->queryScalar();
+	}
+
 	//Back end - Get max record
 	public function maxRecordOrder() {
 		$user = Yii::app()->user->id;
