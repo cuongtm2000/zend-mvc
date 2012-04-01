@@ -1,4 +1,4 @@
-<?php if (!$list_item_cat = $model->listItemCat()): ?>
+<?php if (!$listItemsCat): ?>
     <div class="errorSummary">
         <ul>
             <li>Vui lòng <a href="addcat" title="thêm mới Danh mục">thêm mới danh mục</a> trước khi thêm mới sản phẩm</li>
@@ -10,16 +10,14 @@
 		<fieldset>
 			<legend><?php echo $this->lang['add_new'] ?> <?php echo strtolower($this->lang[$this->ID])?></legend>
 
-			<?php if ($list_item_cat): ?>
-				<div class="col1"><?php echo $form->labelEx($model, 'dos_module_item_cat_cat_id') ?></div>
-				<div class="col2">
-					<?php echo $form->dropDownList($model, 'dos_module_item_cat_cat_id', CHtml::listData($list_item_cat, 'cat_id', 'cat_title')); ?>
-				</div>
-				<div class="clear space"></div>
-			<?php endif; ?>
+			<div class="col1"><?php echo $form->labelEx($model, 'dos_module_item_cat_cat_id') ?></div>
+			<div class="col2">
+				<?php echo $form->dropDownList($model, 'dos_module_item_cat_cat_id', CHtml::listData($listItemsCat, 'cat_id', 'cat_title_prefix')); ?>
+			</div>
+			<div class="clear space"></div>
 
 			<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
-			<div class="col1"><?php echo $form->labelEx($model, $this->lang['title'.$lang]) ?></div>
+			<div class="col1"><?php echo $form->labelEx($model, 'title'.$lang) ?></div>
 			<div class="col2">
 				<?php echo $form->textField($model, 'title'.$lang, $htmlOptions = array('class' => 'txt-very-large')); ?>
 			</div>
@@ -27,7 +25,7 @@
 			<?php endforeach; ?>
 
 			<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
-			<div class="col1"><?php echo $form->labelEx($model, $this->lang['content'.$lang]) ?></div>
+			<div class="col1"><?php echo $form->labelEx($model, 'content'.$lang) ?></div>
 			<div class="col2">
 				<?php echo $form->textArea($model, 'content'.$lang, $htmlOptions = array('cols' => 20, 'rows' => 10)); ?>
 				<script type="text/javascript">

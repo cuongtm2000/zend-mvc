@@ -39,7 +39,7 @@
             <div class="col-right">
                 <select name="catmove">
                     <?php foreach ($listcat as $value): ?>
-                        <option value="<?php echo $value['cat_id'] ?>"><?php echo $value['cat_title'] ?></option>
+                        <option value="<?php echo $value['cat_id'] ?>"><?php echo $value['cat_title_prefix'] ?></option>
                     <?php endforeach ?>
                 </select>
             </div>
@@ -66,7 +66,7 @@
 			<div class="col-right">
 				<select name="moveprotocat">
 					<?php foreach ($listcat as $value): ?>
-					<option value="<?php echo $value['cat_id'] ?>"><?php echo $value['cat_title'] ?></option>
+					<option value="<?php echo $value['cat_id'] ?>"><?php echo $value['cat_title_prefix'] ?></option>
 					<?php endforeach ?>
 				</select>
 			</div>
@@ -79,7 +79,7 @@
 		<div class="col-right">
 			<select name="movetocat">
 				<?php foreach ($listcat as $value): ?>
-				<option value="<?php echo $value['cat_id'] ?>"><?php echo $value['cat_title'] ?></option>
+				<option value="<?php echo $value['cat_id'] ?>"><?php echo $value['cat_title_prefix'] ?></option>
 				<?php endforeach ?>
 			</select>
 		</div>

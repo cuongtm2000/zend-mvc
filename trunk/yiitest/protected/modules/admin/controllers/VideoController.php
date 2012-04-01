@@ -3,12 +3,12 @@
 class VideoController extends AdminController {
 
 	public function actionCats() {
-		$module = ucfirst($this->getId());
-		$module_cat = $module . 'Cat';
-		Yii::app()->getModule($this->getId());
+		Yii::app()->getModule($this->ID);
+		$model = ucfirst($this->ID);
+		$module_cat = $model . 'Cat';
 
 		$model_cat_class = new $module_cat();
-		$model_class = new $module();
+		$model_class = new $model();
 
 		//Submit
 		if (Yii::app()->request->getIsPostRequest()) {
@@ -20,9 +20,8 @@ class VideoController extends AdminController {
 	}
 
 	public function actionAddCat() {
-		$module = ucfirst($this->getId());
-		$module_cat = $module . 'Cat';
-		Yii::app()->getModule($this->getId());
+		Yii::app()->getModule($this->ID);
+		$module_cat = ucfirst($this->ID) . 'Cat';
 
 		$model_cat_class = new $module_cat();
 
@@ -39,9 +38,8 @@ class VideoController extends AdminController {
 	}
 
 	public function actionEditCat($id) {
-		$module = ucfirst($this->getId());
-		$module_cat = $module . 'Cat';
-		Yii::app()->getModule($this->getId());
+		Yii::app()->getModule($this->ID);
+		$module_cat = ucfirst($this->ID) . 'Cat';
 
 		$model_cat_class = new $module_cat();
 		$model_cat_class = $model_cat_class->loadEdit($id); //load form models
@@ -59,12 +57,11 @@ class VideoController extends AdminController {
 	}
 
 	public function actionDelcat($id) {
-		$module = ucfirst($this->getId());
-		$module_cat = $module . 'Cat';
-		Yii::app()->getModule($this->getId());
+		Yii::app()->getModule($this->ID);
+		$module_cat = ucfirst($this->ID) . 'Cat';
 
 		$model_cat_class = new $module_cat();
-		$model_class = new $module();
+		$model_class = new $model();
 
 		$data['infocat'] = $model_cat_class->getInfoCat($id); //Tên phân loại
 		$data['numcat'] = $model_cat_class->countItemCat($id); //Số sản phẩm con
@@ -79,9 +76,8 @@ class VideoController extends AdminController {
 	}
 
 	public function actionUpcat($id) {
-		$module = ucfirst($this->getId());
-		$module_cat = $module . 'Cat';
-		Yii::app()->getModule($this->getId());
+		Yii::app()->getModule($this->ID);
+		$module_cat = ucfirst($this->ID) . 'Cat';
 
 		$model_cat_class = new $module_cat();
 
@@ -95,9 +91,8 @@ class VideoController extends AdminController {
 	}
 
 	public function actionDowncat($id) {
-		$module = ucfirst($this->getId());
-		$module_cat = $module . 'Cat';
-		Yii::app()->getModule($this->getId());
+		Yii::app()->getModule($this->ID);
+		$module_cat = ucfirst($this->ID) . 'Cat';
 
 		$model_cat_class = new $module_cat();
 
@@ -112,10 +107,10 @@ class VideoController extends AdminController {
 	}
 
 	public function actionIndex() {
-		$module = ucfirst($this->getId());
-		Yii::app()->getModule($this->getId());
+		Yii::app()->getModule($this->ID);
+		$model = ucfirst($this->ID);
 
-		$model_class = new $module();
+		$model_class = new $model();
 
 		//Submit
 		if (Yii::app()->request->getIsPostRequest()) {
@@ -127,15 +122,15 @@ class VideoController extends AdminController {
 	}
 
 	public function actionAdd() {
-		$module = ucfirst($this->getId());
-		$module_cat = $module . 'Cat';
-		Yii::app()->getModule($this->getId());
+		Yii::app()->getModule($this->ID);
+		$model = ucfirst($this->ID);
+		$module_cat = $model . 'Cat';
 
 		$model_cat_class = new $module_cat();
-		$model_class = new $module();
+		$model_class = new $model();
 
-		if (isset($_POST[$module])) {
-			$model_class->attributes = $_POST[$module];
+		if (isset($_POST[$model])) {
+			$model_class->attributes = $_POST[$model];
 
 			if ($model_class->validate()) {
 				$model_class->save();
@@ -147,16 +142,16 @@ class VideoController extends AdminController {
 	}
 
 	public function actionEdit($id) {
-		$module = ucfirst($this->getId());
-		$module_cat = $module . 'Cat';
-		Yii::app()->getModule($this->getId());
+		Yii::app()->getModule($this->ID);
+		$model = ucfirst($this->ID);
+		$module_cat = $model . 'Cat';
 
 		$model_cat_class = new $module_cat();
-		$model_class = new $module();
+		$model_class = new $model();
 		$model_class = $model_class->loadEdit($id); //load form models
 
-		if (isset($_POST[$module])) {
-			$model_class->attributes = $_POST[$module];
+		if (isset($_POST[$model])) {
+			$model_class->attributes = $_POST[$model];
 			if ($model_class->validate()) {
 				$model_class->save();
 				$this->redirect(array('index'));

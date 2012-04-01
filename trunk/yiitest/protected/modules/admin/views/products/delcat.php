@@ -34,12 +34,12 @@
         <div class="col-right"></div>
         <div class="clear space"></div>
 
-        <?php if ($listcat['models']): ?>
+        <?php if ($listcat): ?>
             <div class="col-left"><label style="width:340px"><input type="radio" name="delitems" value="move" /> Di chuyển tất cả sản phẩm này đến phân loại</label></div>
             <div class="col-right">
                 <select name="catmove">
-                    <?php foreach ($listcat['models'] as $value): ?>
-                        <option value="<?php echo $value['cat_id'] ?>"><?php echo $value['title_prefix'] . $value['cat_title'] ?></option>
+                    <?php foreach ($listcat as $value): ?>
+                        <option value="<?php echo $value['cat_id'] ?>"><?php echo $value['cat_title_prefix'] ?></option>
                     <?php endforeach ?>
                 </select>
             </div>
@@ -60,13 +60,13 @@
             <div class="clear space"></div>
         </div>
 
-        <?php if ($listcat['models']): ?>
+        <?php if ($listcat): ?>
             <div style="margin-left:20px">
                 <div class="col-left"><label style="width:340px"><input type="radio" name="movecat" value="move" />Di chuyển tất cả sản phẩm của phân loại con đến phân loại:</label></div>
                 <div class="col-right">
                     <select name="moveprotocat">
-                        <?php foreach ($listcat['models'] as $value): ?>
-                            <option value="<?php echo $value['cat_id'] ?>"><?php echo $value['title_prefix'] . $value['cat_title'] ?></option>
+                        <?php foreach ($listcat as $value): ?>
+                            <option value="<?php echo $value['cat_id'] ?>"><?php echo $value['cat_title_prefix'] ?></option>
                         <?php endforeach ?>
                     </select>
                 </div>
@@ -74,12 +74,12 @@
             </div>
         <?php endif; ?>
 
-        <?php if ($listcat['models']): ?>
+        <?php if ($listcat): ?>
             <div class="col-left"><label style="width:340px"><input type="radio" name="delcat" value="move" /> Di chuyển tất cả các phân loại con này đến phân loại:</label></div>
             <div class="col-right">
                 <select name="movetocat">
-                    <?php foreach ($listcat['models'] as $value): ?>
-                        <option value="<?php echo $value['cat_id'] ?>"><?php echo $value['title_prefix'] . $value['cat_title'] ?></option>
+                    <?php foreach ($listcat as $value): ?>
+                        <option value="<?php echo $value['cat_id'] ?>"><?php echo $value['cat_title_prefix'] ?></option>
                     <?php endforeach ?>
                 </select>
             </div>
