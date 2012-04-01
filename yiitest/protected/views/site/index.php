@@ -6,13 +6,13 @@
     <div id="banner">
 		<div id="allinone_carousel_charming">
 			<ul class="allinone_carousel_list">
-				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/01_charming.jpg" alt="" /></li>
-				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/02_charming.jpg" alt="" /></li>
-				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/03_charming.jpg" alt="" /></li>
-				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/04_charming.jpg" alt="" /></li>
-				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/05_charming.jpg" alt="" /></li>
-				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/06_charming.jpg" alt="" /></li>
-				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/07_charming.jpg" alt="" /></li>
+				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/web-preview.png" alt="" /></li>
+				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/web-preview-1.png" alt="" /></li>
+				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/web-preview-2.png" alt="" /></li>
+				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/web-preview-3.png" alt="" /></li>
+				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/web-preview-4.png" alt="" /></li>
+				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/web-preview-5.png" alt="" /></li>
+				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/web-preview-6.png" alt="" /></li>
 			</ul>
 		</div>
     </div>

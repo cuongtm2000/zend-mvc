@@ -20,13 +20,13 @@
     <body>
         <div id="wrapper">
             <div id="header">
-                <div class="header-left"><a href="<?php echo Yii::app()->request->baseUrl ?>/"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a></div>
+                <div class="header-left"><a href="<?php echo Yii::app()->request->baseUrl.'/'.Yii::app()->session['lang']?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a></div>
 				<ul id="lang">
 					<li><a href="/en" title="English"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/en.gif" alt="English" /> English</a></li>
 					<li><a href="/" title="Việt Nam"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/vi.gif" alt="Việt Nam" /> Việt Nam</a></li>
 				</ul>
 				<ul id="nav">
-					<li><a href="<?php echo LANGURL?>"><?php echo Yii::t('main', 'home')?></a></li>
+					<li><a href="<?php echo Yii::app()->request->baseUrl.'/'.Yii::app()->session['lang']?>"><?php echo Yii::t('main', 'home')?></a></li>
 					<li><a href="<?php echo LANGURL.'/'.Yii::t('main', 'articles.link')?>"><?php echo Yii::t('main', 'articles.name')?></a></li>
 					<li><a href="/site/page/view/about"><?php echo Yii::t('main', 'about')?></a></li>
 					<li><a href="/site/contact"><?php echo Yii::t('main', 'contact')?></a></li>

@@ -2,11 +2,7 @@
 
 class Controller extends CController {
 	//public $layout='//layouts/column1';
-	/**
-	 * @var array context menu items. This property will be assigned to {@link CMenu::items}.
-	 */
 	public $menu = array();
-
 	public $breadcrumbs = array();
 
 	public $nav;
@@ -24,11 +20,6 @@ class Controller extends CController {
 	public $banner = array(); //Banner
 
 	public function init() {
-		//Common::setLanguage(); //setting language
-
-		//define('LANG', (isset($_GET['language']) && ($_GET['language'] != 'vi')) ? $_GET['language'] : '');
-		//define('LANGURL', (isset($_GET['language']) && ($_GET['language'] != 'vi')) ? '/' . $_GET['language'] : '');
-
 		list($subdomain) = explode('.', $_SERVER['HTTP_HOST'], 2);
 		$this->setUser($subdomain);
 
@@ -49,10 +40,7 @@ class Controller extends CController {
 				$this->redirect('http://dos.vn/error'); //Ngon ngu khong duoc su dung
 			}
 
-			//Check set theme for user
-			//if ($this->module->id != 'admin' && $this->module->id != 'administrator') {
 			Yii::app()->theme = $info_user['dos_templates_template'];
-			//}
 
 			//Set session template and subdomain
 			Yii::app()->session['template'] = $info_user['dos_templates_template'];
