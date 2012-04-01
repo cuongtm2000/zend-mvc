@@ -1,11 +1,11 @@
 <?php $form = $this->beginWidget('CActiveForm', array('id' => 'frm', 'enableAjaxValidation' => true, 'enableClientValidation' => true, 'htmlOptions' => array('enctype' => 'multipart/form-data'))); ?>
 <?php echo $form->errorSummary($model, ''); ?>
 <fieldset>
-    <legend><?php echo $this->lang['edit'] ?> <?php echo strtolower($this->lang['cat_title'] .' ' .$this->lang[$this->ID])?></legend>
+    <legend><?php echo $this->lang['edit'] ?> <?php echo strtolower($this->lang['cat_title'])?></legend>
 
     <div class="col1"><?php echo $form->labelEx($model, 'cat_parent_id') ?></div>
     <div class="col2">
-        <?php echo $form->dropDownList($model, 'cat_parent_id', CHtml::listData($model->listItemAdminAction(1), 'cat_id', 'cat_title')); ?>
+		<?php echo $form->dropDownList($model, 'cat_parent_id', CHtml::listData($model->listCats(1, '|-- ', 1, $model['cat_id']), 'cat_id', 'cat_title_prefix')); ?>
     </div>
     <div class="clear space"></div>
 

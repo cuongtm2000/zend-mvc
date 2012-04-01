@@ -49,7 +49,7 @@
 		</div> <!--End lang-->	<div class="clear"></div>
 	</div><!--End header-->
 	<div id="all-nav">
-	   <ul id="nav">
+	    <ul id="nav">
 			<?php $size = count($this->nav); $i = 0; foreach($this->nav as $value):?>
 				<?php $selected = ($value['url']==$this->module->id) ?  ' class="select"' : ''?>
 				<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>

@@ -487,10 +487,10 @@ class Products extends CActiveRecord {
 	}
 
 	//Back end - get list item Product_cats
-	public function listItemCat() {
+	/*public function listItemCat() {
 		$item = new ProductsCat();
 		return $item->listItemAdminAction();
-	}
+	} */
 
 	//Back end - Get record to Edit
 	public function loadEdit($id) {

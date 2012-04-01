@@ -5,12 +5,12 @@
 
     <div class="col1"><?php echo $form->labelEx($model, 'dos_module_item_cat_cat_id') ?></div>
     <div class="col2">
-        <?php echo $form->dropDownList($model, 'dos_module_item_cat_cat_id', CHtml::listData($model->listItemCat(), 'cat_id', 'cat_title')); ?>
+        <?php echo $form->dropDownList($model, 'dos_module_item_cat_cat_id', CHtml::listData($listItemsCat, 'cat_id', 'cat_title_prefix')); ?>
     </div>
     <div class="clear space"></div>
 
 	<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
-    <div class="col1"><?php echo $form->labelEx($model, $this->lang['title'.$lang]) ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'title'.$lang) ?></div>
     <div class="col2">
         <?php echo $form->textField($model, 'title'.$lang, $htmlOptions = array('class' => 'txt-very-large')); ?>
     </div>
@@ -18,7 +18,7 @@
 	<?php endforeach; ?>
 
 	<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
-    <div class="col1"><?php echo $form->labelEx($model, $this->lang['content'.$lang]) ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'content'.$lang) ?></div>
     <div class="col2">
         <?php echo $form->textArea($model, 'content'.$lang, $htmlOptions = array('cols' => 20, 'rows' => 10)); ?>
         <script type="text/javascript">

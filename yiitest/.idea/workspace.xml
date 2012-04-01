@@ -36,22 +36,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/modules/admin/views/news/add.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/views/news/edit.php" />
-        <option value="$PROJECT_DIR$/protected/modules/video/views/default/220312/index.php" />
-        <option value="$PROJECT_DIR$/themes/220312/views/layouts/main.php" />
-        <option value="$PROJECT_DIR$/protected/config/routes.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/views/video/addcat.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/views/video/editcat.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/views/products/cats.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/views/products/addcat.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/views/products/editcat.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/views/products/delcat.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/views/news/delcat.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/views/video/delcat.php" />
+        <option value="$PROJECT_DIR$/protected/modules/products/models/Products.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/views/products/edit.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/views/products/add.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/VideoController.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/NewsController.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/ProductsController.php" />
+        <option value="$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/protected/modules/video/models/VideoCat.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/views/video/add.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/views/video/edit.php" />
-        <option value="$PROJECT_DIR$/protected/modules/video/views/default/220312/cats.php" />
-        <option value="$PROJECT_DIR$/protected/modules/video/controllers/DefaultController.php" />
-        <option value="$PROJECT_DIR$/protected/modules/video/models/Video.php" />
-        <option value="$PROJECT_DIR$/protected/modules/news/models/News.php" />
-        <option value="$PROJECT_DIR$/protected/modules/administrator/views/templates/add.php" />
-        <option value="$PROJECT_DIR$/protected/modules/administrator/views/templates/edit.php" />
+        <option value="$PROJECT_DIR$/protected/modules/products/models/ProductsCat.php" />
+        <option value="$PROJECT_DIR$/protected/modules/news/models/NewsCat.php" />
       </list>
     </option>
   </component>
@@ -434,6 +434,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="products" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="news" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -538,192 +564,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administrator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administrator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administrator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="video" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="news" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -755,8 +595,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig" serverName="svn" serverId="f6eabac4-9174-423f-9b95-f8e430e947ec" />
   <component name="RecentsManager">
@@ -845,7 +685,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.7314112" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.4969651" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2518968" sideWeight="0.67064846" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25644916" sideWeight="0.67064846" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.26327768" order="7" side_tool="true" content_ui="tabs" />
@@ -913,114 +753,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/video/editcat.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/news/delcat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="157" selection-start="626" selection-end="626" vertical-scroll-proportion="-4.576923">
+        <state line="81" column="98" selection-start="3625" selection-end="3625" vertical-scroll-proportion="0.48850575">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/news/models/NewsCat.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/video/delcat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="216" column="9" selection-start="8706" selection-end="9296" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/video/models/VideoCat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="5" selection-start="8767" selection-end="8767" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/video/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="139" selection-start="831" selection-end="847" vertical-scroll-proportion="-9.153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/video/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="135" selection-start="609" selection-end="609" vertical-scroll-proportion="-4.576923">
+        <state line="81" column="98" selection-start="3625" selection-end="3625" vertical-scroll-proportion="0.48850575">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/news/add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="139" selection-start="831" selection-end="847" vertical-scroll-proportion="-9.153846">
+        <state line="14" column="110" selection-start="805" selection-end="818" vertical-scroll-proportion="0.4559387">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/products/models/Products.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="492" column="8" selection-start="20711" selection-end="20711" vertical-scroll-proportion="1.8795412">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/news/edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="7" column="106" selection-start="567" selection-end="580" vertical-scroll-proportion="0.22796935">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/news/views/default/220312/cats.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/products/edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="20" column="71" selection-start="1209" selection-end="1209" vertical-scroll-proportion="-1.51341">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/video/views/default/220312/index.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/products/add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="51" selection-start="220" selection-end="246" vertical-scroll-proportion="-3.9230769">
+        <state line="27" column="64" selection-start="1426" selection-end="1426" vertical-scroll-proportion="-1.480843">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/video/views/default/220312/cats.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/products/cats.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="16" selection-start="806" selection-end="806" vertical-scroll-proportion="-8.5">
+        <state line="27" column="32" selection-start="1485" selection-end="1485" vertical-scroll-proportion="0.7816092">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/video/models/Video.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/VideoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="214" column="80" selection-start="8284" selection-end="8284" vertical-scroll-proportion="0.707457">
+        <state line="13" column="63" selection-start="319" selection-end="319" vertical-scroll-proportion="0.3939394">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/administrator/views/templates/add.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/NewsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="1970" selection-start="3674" selection-end="3996" vertical-scroll-proportion="0.64176244">
+        <state line="110" column="41" selection-start="2921" selection-end="2921" vertical-scroll-proportion="-1.505597">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/administrator/views/templates/edit.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/ProductsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="1970" selection-start="4761" selection-end="4761" vertical-scroll-proportion="0.64176244">
+        <state line="104" column="41" selection-start="2813" selection-end="2813" vertical-scroll-proportion="-1.5454545">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/video/controllers/DefaultController.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/news/controllers/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="5" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0">
+        <state line="11" column="70" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/news/models/News.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="241" column="79" selection-start="9659" selection-end="9659" vertical-scroll-proportion="-23.28">
+        <state line="16" column="8" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/products/models/ProductsCat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.8868613">
+        <state line="36" column="31" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/news/models/NewsCat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="5" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/video/models/VideoCat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="4" selection-start="946" selection-end="1029" vertical-scroll-proportion="0.7609489">
           <folding />
         </state>
       </provider>
