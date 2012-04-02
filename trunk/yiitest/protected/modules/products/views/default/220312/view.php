@@ -1,34 +1,29 @@
-<?php $this->breadcrumbs = array($this->lang[$this->module->id] => LANGURL . '/' . Yii::t('user', $this->module->id.'.link'), $item->ProductsCat->cat_title . LANG => '../'.$item->ProductsCat->tag, $item['title' . LANG]); ?>
+<?php $this->breadcrumbs = array($this->lang[$this->module->id] => LANGURL . '/' . Yii::t('user', $this->module->id.'.link'), $item[ucfirst($this->module->id).'Cat']['cat_title' . LANG] => '../'.$item[ucfirst($this->module->id).'Cat']['tag'], $item['title' . LANG]); ?>
 
 <div class="frame-tent-right">
 	<?php if($item['pic_full']): ?>
-		<div class="frame-img-info"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $item['pic_full'] ?>" alt="<?php echo $item['title'.LANG] ?>" /></div>
+		<div class="frame-img-info"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/<?php echo $this->module->id?>/<?php echo $item['pic_full'] ?>" alt="<?php echo $item['title'.LANG] ?>" /></div>
 	<?php endif; ?>
 	<?php echo $item['content'.LANG] ?>
 	<p class="black"><a href="javascript: history.go(-1)" title="<?php echo Yii::t('main', 'goback')?>" ><?php echo Yii::t('main', 'goback')?></a></p>
 </div> <!--End frame tent right-->
 
-<h3 class="title-right"><span>Sản phẩm khác</span></h3>
-<div class="all-product"> 
+<?php if($item_other):?>
+<h3 class="title-right"><span><?php echo $this->lang[$this->module->id]?> khác</span></h3>
+<div class="all-product">
+	<?php foreach($item_other as $value):?>
 	<div class="product">
 		<div class="tent-product">
+				<?php if($value['pic_thumb']):?>
 				<div class="product-img">
-					<a href="#" title="">
+					<a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $value[ucfirst($this->module->id).'Cat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>">
 						<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/order-1.jpg" alt="" />
 					</a>
 				</div>
-			<h2 class="title-pro"><a href="#" title="">Nội thất Giường ngủ 028</a></h2>
+				<?php endif?>
+			<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $value[ucfirst($this->module->id).'Cat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></h2>
 		</div>
 	</div>
-	<div class="product">
-		<div class="tent-product">
-				<div class="product-img">
-					<a href="#" title="">
-						<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/order-2.jpg" alt="" />
-					</a>
-				</div>
-			<h2 class="title-pro"><a href="#" title="">Nội thất Giường ngủ 013</a></h2>
-		</div>
-	</div>
-</div> <!--End frame all product-->
-
+	<?php endforeach?>
+</div>
+<?php endif;?>

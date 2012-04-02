@@ -6,7 +6,7 @@
 	<?php foreach($list_items['models'] as $value): ?>
 		<li class="product item_video">
 			<div class="product-img">
-				<a href="<?php echo $value['url']?>" rel="prettyPhoto" title="<?php echo $value['title'.LANG] ?>">
+				<a href="<?php echo CHtml::encode($value['url'])?>" rel="prettyPhoto" title="<?php echo $value['title'.LANG] ?>">
 					<?php if($value['pic_thumb']):?>
 						<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/<?php echo $this->module->id ?>/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" />
 					<?php else :?>
@@ -14,7 +14,7 @@
 					<?php endif?>
 				</a>
 			</div>
-			<h2 class="title-pro"><a href="<?php echo $value['url']?>" rel="prettyPhoto" title="<?php echo $value['title'.LANG] ?>">
+			<h2 class="title-pro"><a href="<?php echo CHtml::encode($value['url'])?>" rel="prettyPhoto" title="<?php echo $value['title'.LANG] ?>">
 				<?php echo $value['title'.LANG] ?>
 			</a></h2>
 		</li>

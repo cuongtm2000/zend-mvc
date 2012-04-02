@@ -99,7 +99,7 @@
 			<?php endif;?>
 
 			<?php if(isset($this->function['menu_news']) && ($this->function['menu_news'])):?>
-			<h1 class="title-box"><span><?php echo $this->lang['news'] ?></span></h1>
+			<h1 class="title-box"><span><?php echo CHtml::encode($this->lang['news']) ?></span></h1>
 			<ul class="sub-pro">
 				<?php Common::menuMultiLevel($this->function['menu_news'], 'NewsCat', Yii::t('user', 'news.link')); ?>
 			</ul>
@@ -159,7 +159,7 @@
 			<?php if(isset($this->function['video_hot']) && ($this->function['video_hot'])):?>
 			<h1 class="title-box"><span><?php echo $this->lang['video'] . ' ' . strtolower($this->lang['hot'])?></span></h1>
 			<div class="video">
-				<a href="<?php echo $this->function['video_hot']['url'] ?>" rel="prettyPhoto" title="<?php echo $this->function['video_hot']['title'] ?>">
+				<a href="<?php echo CHtml::encode($this->function['video_hot']['url']) ?>" rel="prettyPhoto" title="<?php echo $this->function['video_hot']['title'] ?>">
 					<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/video/<?php echo $this->function['video_hot']['pic_thumb'] ?>" alt="<?php echo $this->function['video_hot']['title'] ?>"/>
 				</a>
 			</div>
@@ -167,7 +167,7 @@
 			<?php endif?>
 
 			<?php if(isset($this->function['news_new']) && ($this->function['news_new'])):?>
-			<h1 class="title-box"><span><?php echo $this->lang['news'] . ' ' . strtolower($this->lang['new'])?></span></h1>
+			<h1 class="title-box"><span><?php echo CHtml::encode($this->lang['news']) . ' ' . strtolower($this->lang['new'])?></span></h1>
 			<ul class="sub-new">
 				<?php foreach($this->function['news_new'] as $value):?>
 					<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value->NewsCat->tag.LANG ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
@@ -176,7 +176,7 @@
 			<?php endif?>
 
 			<?php if(isset($this->function['news_hot']) && ($this->function['news_hot'])):?>
-			<h1 class="title-box"><span><?php echo $this->lang['news'] . ' ' . strtolower($this->lang['hot'])?></span></h1>
+			<h1 class="title-box"><span><?php echo CHtml::encode($this->lang['news']) . ' ' . strtolower($this->lang['hot'])?></span></h1>
 			<ul class="sub-new">
 				<?php foreach($this->function['news_hot'] as $value):?>
 				<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value->NewsCat->tag.LANG ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
