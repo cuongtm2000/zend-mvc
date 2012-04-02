@@ -24,23 +24,28 @@ Xin chúc mừng, website của bạn đã được tạo, ngay bây giờ bạn
 <div class="input_field">
     <ul class="info-user">
         <li>
-            <label>Choose Pages:</label>
-            <div class="choose-page border margin-top-none">
-                <img src="<?php echo Yii::app()->theme->baseUrl?>/images/icon-medium.png" alt="Trang chủ" /><br/>Trang chủ<br/><input value="default" type="checkbox" checked="checked" disabled="disabled" />
-            </div>
-            <?php foreach($choosePage as $value):?>
-            <div class="choose-page border margin-top-none">
-                <img src="<?php echo Yii::app()->theme->baseUrl?>/images/icon-medium.png" alt="<?php echo $this->lang[$value['module_id']]?>" /><br/><?php echo $this->lang[$value['module_id']]?><br/><input value="<?php echo $value['module_id']?>" type="checkbox" checked="checked" disabled="disabled" />
-            </div>
-            <?php endforeach;?>
+            <div class="title-choose"><label>Choose Pages:</label></div>
+			<div class="all-choose-page">
+				<div class="choose-page border margin-top-none">
+					<img src="<?php echo Yii::app()->theme->baseUrl?>/images/icon-medium.png" alt="Trang chủ" /><br/>Trang chủ<br/><input value="default" type="checkbox" checked="checked" disabled="disabled" />
+				</div>
+
+				<?php foreach($choosePage as $value):?>
+				<div class="choose-page border margin-top-none">
+					<img src="<?php echo Yii::app()->theme->baseUrl?>/images/icon-medium.png" alt="<?php echo $this->lang[$value['module_id']]?>" /><br/><?php echo $this->lang[$value['module_id']]?><br/><input value="<?php echo $value['module_id']?>" type="checkbox" checked="checked" disabled="disabled" />
+				</div>
+				<?php endforeach;?>
+			</div> <div class="clear"></div>
         </li>
         <li>
-            <label>Choose Features:</label>
-            <?php foreach($chooseFeature as $value):?>
-            <div class="choose-page border margin-top-none">
-                <img src="<?php echo Yii::app()->theme->baseUrl?>/images/icon-medium.png" alt="<?php echo $this->lang[$value['module_id']]?>" /><br/><?php echo $this->lang[$value['module_id']]?><br/><input value="<?php echo $value['module_id']?>" type="checkbox" checked="checked" disabled="disabled" />
-            </div>
-            <?php endforeach;?>
+			<div class="title-choose"><label>Choose Features:</label></div>
+			<div class="all-choose-page">
+				<?php foreach($chooseFeature as $value):?>
+				<div class="choose-page border margin-top-none">
+					<img src="<?php echo Yii::app()->theme->baseUrl?>/images/icon-medium.png" alt="<?php echo $this->lang[$value['module_id']]?>" /><br/><?php echo $this->lang[$value['module_id']]?><br/><input value="<?php echo $value['module_id']?>" type="checkbox" checked="checked" disabled="disabled" />
+				</div>
+				<?php endforeach;?>
+			</div> <div class="clear"></div>
         </li>
         <li><p><strong>Để quản lý website và thay đổi thông tin đã đăng ký bên trên, vui lòng truy cập liên kết <a href="http://<?php echo Yii::app()->session['user_registed'].'.'.$_SERVER['HTTP_HOST']?>/admin" target="_blank">http://<?php echo Yii::app()->session['user_registed'].'.'.$_SERVER['HTTP_HOST']?>/admin</a></strong></p></li>
     </ul>
