@@ -21,7 +21,9 @@ class DefaultController extends Controller {
         $model = ucfirst($this->module->id);
         $model_class = new $model();
 
-        $this->render(Yii::app()->session['template'] . '/view', array('item' => $model_class->detailItem($id)));
+		$data['item'] = $model_class->detailItem($id);
+		$data['item_other'] = $model_class->listItemOther($data['item']['record_id'], $data['item']['dos_module_item_cat_cat_id']);
+        $this->render(Yii::app()->session['template'] . '/view', $data);
     }
 
 }

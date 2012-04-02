@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 02, 2012 at 10:01 AM
+-- Generation Time: Apr 02, 2012 at 05:10 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -308,7 +308,11 @@ INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, 
 ('111120', 'products', 'product-detail.css|jquery.fancybox-1.3.1.css', 'css'),
 ('111120', 'products', 'jcarousellite.js|contentslider.js|scroller.js|jquery.fancybox-1.3.1.js|lightbox.js', 'javascript'),
 ('200312', 'products', 'product-detail.css', 'css'),
-('200312', 'products', 'prototype.js|effects.js|dragdrop.js|slider.js|product.js', 'javascript');
+('200312', 'products', 'prototype.js|effects.js|dragdrop.js|slider.js|product.js', 'javascript'),
+('220312', 'default', 'prettyPhoto.css', 'css'),
+('220312', 'default', 'jquery.prettyPhoto.js', 'javascript'),
+('220312', 'video', 'prettyPhoto.css', 'css'),
+('220312', 'video', 'jquery.prettyPhoto.js', 'javascript');
 
 -- --------------------------------------------------------
 
@@ -430,7 +434,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
 (1, 'sasadsad', '', '<p>\r\n	asdasdas aasa</p>', '', 1, '2012-04-01 13:47:55', 1, 0, NULL, NULL, 'sasadsad', '', 'asass', '', 1, 'mvc'),
-(2, 'asasa asa', '', '<p>\r\n	sasa as</p>', '', 111, '2012-04-01 13:48:11', 2, 1, NULL, NULL, 'asasa-asa', '', '', '', 1, 'mvc');
+(2, 'asasa asa', '', '<p>\r\n	sasa as</p>', '', 198, '2012-04-01 13:48:11', 2, 1, NULL, NULL, 'asasa-asa', '', '', '', 1, 'mvc');
 
 -- --------------------------------------------------------
 
@@ -659,7 +663,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_usernames_username`) VALUES
-('day_time', 2456010, 'dos'),
+('day_time', 2456020, 'dos'),
 ('max_count', 0, 'dos'),
 ('counter', 0, 'dos'),
 ('yesterday', 0, 'dos'),
@@ -694,8 +698,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1333350985, 'thanhansoft'),
-('''127.0.0.1''', 1333353614, 'mvc');
+('''127.0.0.1''', 1333359236, 'dos'),
+('''127.0.0.1''', 1333379336, 'mvc');
 
 -- --------------------------------------------------------
 
@@ -837,16 +841,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
-
---
--- Dumping data for table `dos_module_supports`
---
-
-INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
-(4, 'dsd', '', 'sdsd', 'sddsd', 3, 'yahoo', 'mvc'),
-(5, 'Nguyễn An as', '', 'asas', 'mailgoogle', 2, 'yahoo', 'mvc'),
-(6, 'Nguyễn An', '', '0929001001', 'thanhansoft', 1, 'yahoo', 'mvc');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 

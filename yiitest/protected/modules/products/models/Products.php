@@ -1,39 +1,5 @@
 <?php
 
-/**
- * This is the model class for table "dos_module_products".
- *
- * The followings are the available columns in table 'dos_module_products':
- * @property integer $record_id
- * @property string $title
- * @property string $titleen
- * @property string $postdate
- * @property string $pic_thumb
- * @property string $pic_full
- * @property string $pic_desc
- * @property string $preview
- * @property string $previewen
- * @property string $content
- * @property string $contenten
- * @property string $tag
- * @property string $tagen
- * @property string $description
- * @property string $descriptionen
- * @property integer $hits
- * @property integer $record_order
- * @property integer $unit
- * @property integer $hot
- * @property integer $specials
- * @property string $extra_field1
- * @property string $extra_field2
- * @property string $extra_field3
- * @property string $extra_field4
- * @property integer $enable
- * @property integer $dos_module_item_cat_cat_id
- *
- * The followings are the available model relations:
- * @property DosModuleProductsCat $dosModuleItemCatCat
- */
 class Products extends CActiveRecord {
 	private $_subdomain;
 
@@ -325,6 +291,19 @@ class Products extends CActiveRecord {
 			throw new CHttpException(404, 'The requested page does not exist.');
 		}
 		return $this->_model;
+	}
+
+	//Front end - list Item by Cat
+	public function listItemOther($id, $cid) {
+		$criteria = new CDbCriteria();
+		$criteria->with = array(__CLASS__ . 'Cat');
+		$criteria->select = 'title' . LANG . ', pic_thumb, tag, unit, hot';
+		$criteria->order = 'record_order DESC, postdate DESC';
+		$criteria->condition = 'record_id NOT IN (:id) AND dos_module_item_cat_cat_id=:cid AND enable = 1';
+		$criteria->params = array(':id' => $id, ':cid' => $cid);
+		$criteria->limit = 2;
+
+		return $this::model()->findAll($criteria);
 	}
 
 	//Front end - find record_id by tag
