@@ -9,6 +9,7 @@ class Controller extends CController {
 	public $title;
 	public $keywords;
 	public $description;
+	public $analytics;
 
 	public $function = array(); //for show, hidden function
 	public $lang = array(); //language
@@ -52,6 +53,7 @@ class Controller extends CController {
 			$this->title = $web_class->setWebValue('title', $user);
 			$this->keywords = $web_class->setWebValue('keywords', $user);
 			$this->description = $web_class->setWebValue('description', $user);
+			$this->analytics = $web_class->setWebValue('analytics', 'dos');
 
 			//Set page load file
 			$loadfiles_class = new Loadfiles;

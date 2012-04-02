@@ -173,8 +173,8 @@ class Username extends CActiveRecord {
 
 	public function beforeSave() {
 		$purifier = new CHtmlPurifier();
-		$this->username = $purifier->purify($this->username);
-		$this->email = $purifier->purify($this->email);
+		$this->username = $purifier->purify(strtolower($this->username));
+		$this->email = $purifier->purify(strtolower($this->email));
 		$this->password = md5($this->password);
 		$this->role = 'user';
 		$this->language = 'vi';
