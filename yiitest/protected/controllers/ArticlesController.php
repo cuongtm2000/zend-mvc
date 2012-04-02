@@ -3,6 +3,8 @@
 class ArticlesController extends HomeController {
 
 	public function actionIndex() {
+		$this->pageTitle = Yii::t('main', 'article-pageTitle');
+
 		$models_cat_class = new ArticlesCat();
 		$models_class = new Articles();
 		$this->render('index', array('articles_menu' => $models_cat_class->listCats(), 'listItems' => $models_class->listItems()));
