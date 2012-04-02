@@ -133,7 +133,7 @@ class Supports extends CActiveRecord {
 
         for ($i = 0; $i < 6; $i++) {
             if (!empty($values[$i]) && !empty($types[$i])) {
-                $this->insertItem($names[$i], $nameens[$i], $phones[$i], $values[$i], $orders[$i], $types[$i]);
+                $this->insertItem(trim($names[$i]), trim(isset($nameens[$i])), trim($phones[$i]), trim($values[$i]), trim($orders[$i]), trim($types[$i]));
             }
         }
     }
