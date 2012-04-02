@@ -110,7 +110,9 @@ p{line-height: 19px}
 .sign-up-heading span{color: #fff; font-size: 12pt; position: absolute; left: 8px; top: 5px}
 .sign-up-heading p{position: absolute; right:0; top: 6px; font-size: 10pt}
 
-.choose-page{width: 85px; float: left; margin: 10px 0 12px 15px; padding: 5px; text-align: center; border:1px solid #F7F6F2; cursor: pointer}
+.title-choose{float:left;width: 120px}
+.all-choose-page{float:left; width: 700px}
+.choose-page{width: 85px;display:inline-block;vertical-align: top; margin: 10px 0 12px 15px; padding: 5px; text-align: center; border:1px solid #F7F6F2; cursor: pointer}
 .choose-page.border, .choose-page:hover{border: 1px solid #ccc; -moz-border-radius: 3px; border-radius: 3px; background: #ECEAE4}
 .choose-page.margin-top-none{margin-top: 0}
 .input_field {margin:10px 32px 10px 32px}

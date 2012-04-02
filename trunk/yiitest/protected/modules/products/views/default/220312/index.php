@@ -17,7 +17,6 @@
 			<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', $this->module->id.'.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']] ?>" title='<?php echo $value['cat_title'.LANG] ?>'><?php echo $value['cat_title'.LANG] ?></a></h2>
 		</div>
 	</div>
-	
 <?php endforeach; ?>	
 </div> <!--End frame all product-->
 

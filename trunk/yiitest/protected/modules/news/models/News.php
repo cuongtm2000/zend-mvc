@@ -242,7 +242,7 @@ class News extends CActiveRecord {
 	public function listItemByCat($cid) {
 		$criteria = new CDbCriteria();
 		$criteria->with = array(__CLASS__ . 'Cat');
-		$criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', hot';
+		$criteria->select = 'title' . LANG . ', pic_thumb, preview' . LANG . ', tag' . LANG . ', hot';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
 		$criteria->params = array(':cid' => $cid);

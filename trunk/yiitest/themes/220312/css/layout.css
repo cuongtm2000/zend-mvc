@@ -43,7 +43,7 @@ a:hover{color:#000}
 #content{}
 
 /**  Title box   **/
-.title-box{color:#fff; font-size:14px; font-weight:bold;padding:12px 0;background:#97735B;margin:0 0 5px 0}
+.title-box{color:#fff; font-size:14px; font-weight:bold;padding:12px 0;background:#97735B;margin:0 0 5px 0;-webkit-border-radius:1px;-moz-border-radius:1px}
 .title-box span{padding:0 0 0 10px}
 
 /*Left content*/
@@ -56,8 +56,7 @@ a:hover{color:#000}
 .sub-left li a:hover{color:#f90}
 
 /*Sub sản phẩm SGS*/
-.sub-pro{list-style:none;margin:0 0 15px 0;border:1px solid #F2F2F2;padding:10px}
-.sub-pro li{}
+.sub-pro{list-style:none;margin:0 0 15px 0;border:1px solid #F2F2F2;padding:0 10px 10px 10px}
 .sub-pro li a{display:block;color:#161616; font-size:13px;border-bottom:dashed 1px #c7c5c5; padding:5px}
 .sub-pro li a:hover{background:#ff6000; color:#fff}
 .sub-pro li ul{list-style:none;padding:10px 0 10px 10px}
@@ -83,7 +82,7 @@ a:hover{color:#000}
 #right-content p{margin:0 0 8px 0}
 #right-content ul li, #right-content ol li{margin:0 0 0 18px}
 
-.title-right{color:#FF5400; font-size:14px; font-weight:bold;padding:12px 0;background:#D0CEC2;margin:0 0 5px 0}
+.title-right{color:#FF5400; font-size:14px; font-weight:bold;padding:12px 0;background:#D0CEC2;margin:0 0 5px 0;-webkit-border-radius:1px;-moz-border-radius:1px}
 .title-right span{padding:0 0 0 10px}
 .title-right a{color:#FF5400}
 .title-right a:hover{color:#f00}
@@ -94,7 +93,7 @@ a:hover{color:#000}
 .link a:hover{text-decoration:underline; color:#000}
 
 /*Frame tent right*/
-.frame-tent-right {padding:10px 10px 5px 10px;border:1px solid #F0F0F0;margin:0 0 15px 0}
+.frame-tent-right {padding:10px 10px 5px 10px;border:1px solid #F0F0F0;margin:0 0 15px 0;-webkit-border-radius:1px;-moz-border-radius:1px}
 .frame-tent-right p{text-align:justify;line-height:1.5em}
 .frame-tent-right img{margin:0 10px 10px 0}
 
@@ -104,7 +103,7 @@ a:hover{color:#000}
 
 /** Tent product and frame product img **/
 .tent-product{padding:10px}
-.product-img{height:150px;width:230px;display:table-cell;vertical-align:bottom}
+.product-img{height:120px;width:230px;display:table-cell;vertical-align:bottom}
 .price{font-size:15pt; color:#ff5400; font-family:Trebuchet MS, Arial }
 
 /****  Tieu đề sản phẩm    ****/
@@ -140,6 +139,10 @@ a:hover{color:#000}
 .sub-new li a{ display:block;color:#161616;background:url(../images/bull.gif) no-repeat left 7px; padding:1px 0 1px 15px}
 .sub-new li a:hover{color:#f90}
 
+/** sub video **/
+.sub-video{list-style:none;border:1px solid #F2F2F2;text-align: center;padding:5px 0}
+.sub-new li{padding:0 0 5px 0}
+
 /**		Sản phẩm tieu biểu (typical-product)		**/
 .typical-product{list-style:none; text-align:center}
 .typical-product li{margin:0 0 5px 0}
@@ -154,18 +157,21 @@ a:hover{color:#000}
 .frame-img-info img{margin:0 !important;border:2px solid #D1D1D1;padding:2px;-webkit-border-radius:3px;-moz-border-radius:3px}
 
 /*   Page New  */
-.masuring{text-align:justify;font-size:10pt;color:#666;margin-bottom:20px}
-.frame-img{float:left;width:143px;height:90px;margin:0 15px 5px 0}
-.title-masuring  a{color:#208FFF;font-size:10pt; font-weight:700}
-.title-masuring a:hover{color:#F90}
+.masuring{text-align:justify;font-size:10pt;list-style:none}
+.masuring li{margin:0 0 5px 0 !important }
+.masuring p{line-height:1.4em}
+.frame-img{float:left;width:143px;margin:0 5px 5px 0}
+.title-masuring{margin:0 0 5px 0}
+.title-masuring a{color:#208FFF;font-size:10pt;font-weight:bold}
+.title-masuring a:hover{color:#FF9933}
 
 /*Page product*/
 .frame-pro{background:#F3F5F4;padding:20px 15px;text-align:justify;font-size:10pt;color:#666;margin:0 0 10px 0;-webkit-border-radius:4px;-moz-border-radius:4px}
 .frame-pro p{line-height:normal !important}
 
 /* paging */
-ul.paging{float: right; margin:0; padding:0; list-style: none;}
-ul.paging li{display: inline;}
+ul.paging{float: right; margin:0; padding:0 0 5px 0; list-style: none;}
+ul.paging li{display: inline;margin:0 !important;}
 ul.paging .hidden{display: none;}
 ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{color:#FFB400; border: 1px solid #ccc; padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
 ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{color:#fff; background:#512C19}
