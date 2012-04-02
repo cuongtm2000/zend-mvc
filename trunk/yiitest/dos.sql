@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 02, 2012 at 06:16 AM
+-- Generation Time: Apr 02, 2012 at 10:01 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -363,28 +363,37 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('about', 'dos'),
 ('about', 'mvc'),
 ('about', 'test'),
+('about', 'thanhansoft'),
 ('advs', 'dos'),
 ('advs', 'mvc'),
 ('advs', 'test'),
+('advs', 'thanhansoft'),
 ('banner', 'dos'),
 ('banner', 'mvc'),
 ('banner', 'test'),
+('banner', 'thanhansoft'),
 ('contact', 'dos'),
 ('contact', 'mvc'),
 ('contact', 'test'),
+('contact', 'thanhansoft'),
 ('news', 'mvc'),
 ('news', 'test'),
+('news', 'thanhansoft'),
 ('products', 'dos'),
 ('products', 'mvc'),
 ('products', 'test'),
+('products', 'thanhansoft'),
 ('services', 'dos'),
 ('services', 'mvc'),
 ('services', 'test'),
+('services', 'thanhansoft'),
 ('supports', 'dos'),
 ('supports', 'mvc'),
 ('supports', 'test'),
+('supports', 'thanhansoft'),
 ('video', 'mvc'),
-('video', 'test');
+('video', 'test'),
+('video', 'thanhansoft');
 
 -- --------------------------------------------------------
 
@@ -421,7 +430,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
 (1, 'sasadsad', '', '<p>\r\n	asdasdas aasa</p>', '', 1, '2012-04-01 13:47:55', 1, 0, NULL, NULL, 'sasadsad', '', 'asass', '', 1, 'mvc'),
-(2, 'asasa asa', '', '<p>\r\n	sasa as</p>', '', 93, '2012-04-01 13:48:11', 2, 1, NULL, NULL, 'asasa-asa', '', '', '', 1, 'mvc');
+(2, 'asasa asa', '', '<p>\r\n	sasa as</p>', '', 111, '2012-04-01 13:48:11', 2, 1, NULL, NULL, 'asasa-asa', '', '', '', 1, 'mvc');
 
 -- --------------------------------------------------------
 
@@ -545,7 +554,14 @@ INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `
 ('Dịch vụ', NULL, 'services', NULL, 4, NULL, NULL, NULL, NULL, 'test'),
 ('Tin tức & sự kiện', NULL, 'news', NULL, 5, NULL, NULL, NULL, NULL, 'test'),
 ('Video', NULL, 'video', NULL, 6, NULL, NULL, NULL, NULL, 'test'),
-('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'test');
+('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'test'),
+('Trang chủ', NULL, 'default', NULL, 1, NULL, NULL, NULL, NULL, 'thanhansoft'),
+('Giới thiệu', NULL, 'about', NULL, 2, NULL, NULL, NULL, NULL, 'thanhansoft'),
+('Sản phẩm', NULL, 'products', NULL, 3, NULL, NULL, NULL, NULL, 'thanhansoft'),
+('Dịch vụ', NULL, 'services', NULL, 4, NULL, NULL, NULL, NULL, 'thanhansoft'),
+('Tin tức & sự kiện', NULL, 'news', NULL, 5, NULL, NULL, NULL, NULL, 'thanhansoft'),
+('Video', NULL, 'video', NULL, 6, NULL, NULL, NULL, NULL, 'thanhansoft'),
+('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'thanhansoft');
 
 -- --------------------------------------------------------
 
@@ -654,7 +670,11 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('day_time', 2456020, 'test'),
 ('max_count', 1, 'test'),
 ('counter', 1, 'test'),
-('yesterday', 1, 'test');
+('yesterday', 1, 'test'),
+('day_time', 2456020, 'thanhansoft'),
+('max_count', 0, 'thanhansoft'),
+('counter', 0, 'thanhansoft'),
+('yesterday', 0, 'thanhansoft');
 
 -- --------------------------------------------------------
 
@@ -674,7 +694,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1333334890, 'mvc');
+('''127.0.0.1''', 1333350985, 'thanhansoft'),
+('''127.0.0.1''', 1333353614, 'mvc');
 
 -- --------------------------------------------------------
 
@@ -816,7 +837,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `dos_module_supports`
+--
+
+INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
+(4, 'dsd', '', 'sdsd', 'sddsd', 3, 'yahoo', 'mvc'),
+(5, 'Nguyễn An as', '', 'asas', 'mailgoogle', 2, 'yahoo', 'mvc'),
+(6, 'Nguyễn An', '', '0929001001', 'thanhansoft', 1, 'yahoo', 'mvc');
 
 -- --------------------------------------------------------
 
@@ -894,10 +924,17 @@ INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat
 
 CREATE TABLE IF NOT EXISTS `dos_module_webs` (
   `web_name` varchar(45) NOT NULL,
-  `web_value` varchar(1000) DEFAULT NULL,
+  `web_value` text,
   `dos_usernames_username` varchar(45) NOT NULL,
   KEY `fk_dos_module_webs_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dos_module_webs`
+--
+
+INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
+('analytics', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-30151015-1'']);\r\n  _gaq.push([''_setDomainName'', ''dos.vn'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>', 'dos');
 
 -- --------------------------------------------------------
 
@@ -1319,7 +1356,8 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
 ('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi', NULL, '0000-00-00 00:00:00', 1, '111120', 2, 'thoi-trang'),
 ('mvc', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-31 02:21:57', '', '', '', 'user', 'vi', NULL, '2012-04-29 17:00:00', 1, '220312', 19, 'noi-that-ngoai-that'),
-('test', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-01 02:09:48', NULL, NULL, NULL, 'user', 'vi', NULL, '2012-04-30 17:00:00', 1, '220312', 1, 'noi-that-ngoai-that');
+('test', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-01 02:09:48', NULL, NULL, NULL, 'user', 'vi', NULL, '2012-04-30 17:00:00', 1, '220312', 1, 'noi-that-ngoai-that'),
+('thanhansoft', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-02 07:14:27', NULL, NULL, NULL, 'user', 'vi', NULL, '2012-05-01 17:00:00', 1, '220312', 19, 'noi-that-ngoai-that');
 
 -- --------------------------------------------------------
 

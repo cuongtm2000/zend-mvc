@@ -43,7 +43,7 @@
         var i = 0;
         $("#add-rows").click(function(){
             if(i<5){
-                $(".rows").before('<p><label>Support</label><input name="name[]" value="" maxlength="45" class="txt-large" /> <input name="phone[]" value="" maxlength="45" class="txt-small" /> <input name="value[]" value="" maxlength="45" class="txt-small" /> <input name="order[]" value="" maxlength="2" class="txt-very-tiny" /> <select name="type[]" class="select-110"><option value="yahoo">Yahoo</option><option value="skype">Skype</option></select></p>');
+                $(".rows").before('<p><label>Support</label><?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?><input name="name<?php echo $lang?>[]" value="" maxlength="45" class="txt-large" /> <?php endforeach?> <input name="phone[]" value="" maxlength="45" class="txt-small" /> <input name="value[]" value="" maxlength="45" class="txt-small" /> <input name="order[]" value="" maxlength="2" class="txt-very-tiny" /> <select name="type[]" class="select-110"><option value="yahoo">Yahoo</option><option value="skype">Skype</option></select></p>');
                 i++;
             }
         return false;
