@@ -1,9 +1,9 @@
 <?php $this->breadcrumbs=array($this->lang[$this->module->id]);?>
 
 <h1 class="title-right"><span><?php echo $this->lang[$this->module->id]?></span></h1>
-<div class="all-product"> 
+<ul class="all-product">
 <?php foreach($items as $value): ?>
-	<div class="product">
+	<li class="product">
 		<div class="tent-product">
 			<?php if($value['pic_full']): ?>
 				<div class="product-img">
@@ -16,9 +16,9 @@
 			<?php endif; ?>
 			<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', $this->module->id.'.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']] ?>" title='<?php echo $value['cat_title'.LANG] ?>'><?php echo $value['cat_title'.LANG] ?></a></h2>
 		</div>
-	</div>
+	</li>
 <?php endforeach; ?>	
-</div> <!--End frame all product-->
+</ul> <!--End frame all product-->
 
 
 
