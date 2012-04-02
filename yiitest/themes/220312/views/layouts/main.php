@@ -23,11 +23,11 @@
 <!--[if IE]><script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/excanvas.compiled-ie.js"></script><![endif]-->
 <!--[if lt IE 8]><script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.sider.banner-ie.js"></script> <![endif]-->
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.sider.banner.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		runbanner(<?php echo $this->configs['banner_width'] ?>,<?php echo $this->configs['banner_height'] ?>);
-	});
-</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			runbanner(<?php echo $this->configs['banner_width'] ?>, <?php echo $this->configs['banner_height'] ?>);
+		});
+	</script>
 <?php endif;?>
 
 	<?php echo $this->analytics?>
@@ -158,9 +158,12 @@
 		<div id="colum3">
 			<?php if(isset($this->function['video_hot']) && ($this->function['video_hot'])):?>
 			<h1 class="title-box"><span><?php echo $this->lang['video'] . ' ' . strtolower($this->lang['hot'])?></span></h1>
-			<ul class="sub-new">
-				<?php var_dump($this->function['video_hot'])?>
+			<ul class="video">
+				<li><a href="<?php echo $this->function['video_hot']['url'] ?>" rel="prettyPhoto" title="<?php echo $this->function['video_hot']['title'] ?>">
+					<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/video/<?php echo $this->function['video_hot']['pic_thumb'] ?>" alt="<?php echo $this->function['video_hot']['title'] ?>"/>
+				</a></li>
 			</ul>
+				<script type="text/javascript">$(document).ready(function () {$(".video a[rel^='prettyPhoto']").prettyPhoto();});</script>
 			<?php endif?>
 
 			<?php if(isset($this->function['news_new']) && ($this->function['news_new'])):?>
