@@ -140,8 +140,8 @@ a:hover{color:#000}
 .sub-new li a:hover{color:#f90}
 
 /** sub video **/
-.sub_video{list-style:none;border:1px solid #F2F2F2;text-align: center;padding:5px 0}
-.sub_video li{padding:0 0 5px 0}
+.video{list-style:none;border:1px solid #F2F2F2;text-align: center;padding:5px 0}
+.video li{padding:0 0 5px 0}
 
 /**		Sản phẩm tieu biểu (typical-product)		**/
 .typical-product{list-style:none; text-align:center}
