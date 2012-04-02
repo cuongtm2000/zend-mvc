@@ -82,7 +82,7 @@ a:hover{color:#000}
 #right-content p{margin:0 0 8px 0}
 #right-content ul li, #right-content ol li{margin:0 0 0 18px}
 
-.title-right{color:#FF5400; font-size:14px; font-weight:bold;padding:12px 0;background:#D0CEC2;margin:0 0 5px 0;-webkit-border-radius:1px;-moz-border-radius:1px}
+.title-right{color:#000; font-size:14px; font-weight:bold;padding:12px 0;background:#D0CEC2;margin:0 0 5px 0;-webkit-border-radius:1px;-moz-border-radius:1px}
 .title-right span{padding:0 0 0 10px}
 .title-right a{color:#FF5400}
 .title-right a:hover{color:#f00}
@@ -98,8 +98,8 @@ a:hover{color:#000}
 .frame-tent-right img{margin:0 10px 10px 0}
 
 /*** San pham noi bat of page index*****/
-.all-product{/*background:url(../images/bg-all-pro.gif) repeat-x;*/padding:0 0 15px 0;*_padding:15px 5px 15px 5px}
-.product{width:230px;text-align:center;padding:5px 0; border:1px solid #ccc;margin:0 10px 20px 16px; display:inline-block; vertical-align:top;*float:left;*_margin:0 7px 10px 0; }
+.all-product{}
+.product{width:230px;text-align:center;padding:5px 0; border:1px solid #ccc;margin:0 10px 20px 16px !important; display:inline-block; vertical-align:top;*float:left;*_margin:0 7px 10px 0; }
 
 /** Tent product and frame product img **/
 .tent-product{padding:10px}
@@ -107,7 +107,7 @@ a:hover{color:#000}
 .price{font-size:15pt; color:#ff5400; font-family:Trebuchet MS, Arial }
 
 /****  Tieu đề sản phẩm    ****/
-.title-pro{ font-size:10pt;margin:8px 0;font-weight:bold}
+.title-pro{ font-size:10pt;margin:8px 0;font-weight:bold;color:#444}
 .title-pro a{color:#444}
 .title-pro a:hover{color:#f90}
 
@@ -117,18 +117,6 @@ a:hover{color:#000}
 .bton-order{background:#FF9702;color:#fff;padding:5px 12px;font-weight:bold}
 .bton-pro a:hover{color:#fff}
 /****    End San pham noi bat of page index    ********/
-
-/**    Page san pham than    **/
-.frame-product{}
-.product-new{width:160px;padding:5px 0; margin:0 5px 10px 0 !important; text-align:center;display:inline-block; vertical-align:top;*float:left;*margin:0 10px 5px 0;*padding:2px 0; }
-.product-img-new{height:121px; width:160px;display:table-cell;vertical-align:bottom;padding:3px 0;border:1px solid #ccc;}
-.title-pro-new{ font-size:10pt;margin:10px 0 0 0;font-weight:bold}
-.title-pro-new a{color:#444}
-.title-pro-new a:hover{color:#f90}
-
-.bton-detail-new{background:#323232;color:#fff;padding:2px 8px;font-weight:bold;margin:0 10px 0 0}
-.bton-order-new{background:#FF9702;color:#fff;padding:2px 5px;font-weight:bold}
-/***   End page san pham than   ***/
 
 /** Column3  **/
 #colum3{float:right; width:200px}
