@@ -183,6 +183,12 @@ class Video extends CActiveRecord {
 		return parent::beforeSave();
 	}
 
+	public function itemHot() {
+		$command = Yii::app()->db->createCommand('SELECT title' . LANG . ', ' . $this->tableName() . '.pic_thumb, url FROM ' . $this->tableName() . ', ' . $this->tableName() . '_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = ' . $this->tableName() . '_cat.cat_id AND hot=1 AND enable = 1 AND dos_usernames_username=:user ORDER BY record_order DESC, postdate DESC');
+		$command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
+		return $command->queryRow();
+	}
+
 	public function listItemsIndex() {
 		$criteria = new CDbCriteria();
 		$criteria->with = array(__CLASS__ . 'Cat');

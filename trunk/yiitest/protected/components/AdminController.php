@@ -36,7 +36,7 @@ class AdminController extends CController{
             define('USERFILES', '/public/userfiles/images/' . $user . '/images');
         } else {
 			if($user != 'dos'){
-				$this->redirect('http://dos.vn/error');
+				$this->redirect('http://'.Yii::app()->theme->name.'/error');
 			}
         }
     }

@@ -37,7 +37,7 @@ class Controller extends CController {
 
 			$this->numLang = explode('|', $info_user['language']);
 			if (isset($_GET['language']) && !in_array($_GET['language'], $this->numLang)) {
-				$this->redirect('http://dos.vn/error'); //Ngon ngu khong duoc su dung
+				$this->redirect('http://' . Yii::app()->theme->name . '/error'); //Ngon ngu khong duoc su dung
 			}
 
 			Yii::app()->theme = $info_user['dos_templates_template'];
@@ -78,7 +78,7 @@ class Controller extends CController {
 			//Set configs
 			$this->configs = Configs::template(Yii::app()->session['template']); //coi lai cai nay
 		} else {
-			$this->redirect('http://dos.vn/error');
+			$this->redirect('http://' . Yii::app()->theme->name . '/error');
 		}
 	}
 

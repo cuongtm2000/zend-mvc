@@ -199,12 +199,24 @@ class News extends CActiveRecord {
 
 	public function listItemsNew() {
 		$criteria = new CDbCriteria();
-		$criteria->with = array('NewsCat');
+		$criteria->with = array(__CLASS__ . 'Cat');
 		$criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', hot';
 		$criteria->order = 'record_order DESC, postdate DESC';
-		$criteria->condition = 'dos_usernames_username=:user AND enable = 1';
+		$criteria->condition = 'enable = 1 AND dos_usernames_username=:user';
 		$criteria->params = array(':user' => $this->_subdomain);
-		$criteria->limit = 4; //can thay doi theo template
+		$criteria->limit = Configs::configTemplate('news_num_paging_new', Yii::app()->session['template']);
+
+		return $this::model()->findAll($criteria);
+	}
+
+	public function listItemsHot() {
+		$criteria = new CDbCriteria();
+		$criteria->with = array(__CLASS__ . 'Cat');
+		$criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . '';
+		$criteria->order = 'record_order DESC, postdate DESC';
+		$criteria->condition = 'hot = 1 AND enable = 1 AND dos_usernames_username=:user';
+		$criteria->params = array(':user' => $this->_subdomain);
+		$criteria->limit = Configs::configTemplate('news_num_paging_hot', Yii::app()->session['template']);
 
 		return $this::model()->findAll($criteria);
 	}
@@ -229,8 +241,8 @@ class News extends CActiveRecord {
 	//Front end - list Item by Cat
 	public function listItemByCat($cid) {
 		$criteria = new CDbCriteria();
-		$criteria->with = array('NewsCat');
-		$criteria->select = 'title' . LANG . ', pic_thumb, tag'.LANG.', hot';
+		$criteria->with = array(__CLASS__ . 'Cat');
+		$criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', hot';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
 		$criteria->params = array(':cid' => $cid);

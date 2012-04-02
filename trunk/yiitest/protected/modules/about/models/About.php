@@ -164,7 +164,7 @@ class About extends CActiveRecord {
 
 	//Front end - get list Menu
 	public function listMenu() {
-		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag' . LANG . ' FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
+		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag' . LANG . ' FROM ' . $this->tableName() . ' WHERE hot = 0 AND dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
 		$command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
 		return $command->queryAll();
 	}

@@ -35,12 +35,12 @@
  * @property DosModuleProductsCat $dosModuleItemCatCat
  */
 class Products extends CActiveRecord {
+	private $_subdomain;
 
 	public $remove_pic_thumb;
 	private $_oldImage_thumb;
 	private $_oldImage_full;
 	private $_oldImage_desc;
-	private $_subdomain;
 	private $_model;
 
 	public function init() {
@@ -269,69 +269,57 @@ class Products extends CActiveRecord {
 
 	//Front end - list item new
 	public function listItemNew() {
-		/*$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', pic_thumb, ' . $this->tableName() . '.tag, unit, hot, ' . $this->tableName() . '_cat.tag AS tagcat FROM ' . $this->tableName() . ', dos_module_products_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = dos_module_products_cat.cat_id AND dos_usernames_username=:user AND enable = 1 ORDER BY record_order DESC, postdate DESC LIMIT 0, 8');
-		$command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
-		return $command->queryAll();*/
 		$criteria = new CDbCriteria();
-		$criteria->with = array('ProductsCat');
+		$criteria->with = array(__CLASS__ . 'Cat');
 		$criteria->select = 'title' . LANG . ', pic_thumb, tag, unit, hot';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'dos_usernames_username=:user AND enable = 1';
 		$criteria->params = array(':user' => $this->_subdomain);
-		$criteria->limit = 4; //can thay doi theo template
+		$criteria->limit = Configs::configTemplate('products_num_paging_new', Yii::app()->session['template']);
 
-		return Products::model()->findAll($criteria);
+		return $this::model()->findAll($criteria);
 	}
 
 	//Front end - list item hot
 	public function listItemHot() {
-		/*$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', pic_thumb, ' . $this->tableName() . '.tag, unit FROM ' . $this->tableName() . ', dos_module_products_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = dos_module_products_cat.cat_id AND dos_usernames_username=:user AND hot = 1 AND enable = 1 ORDER BY record_order DESC, postdate DESC LIMIT 0, 8');
-		$command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
-		return $command->queryAll();*/
-
 		$criteria = new CDbCriteria();
-		$criteria->with = array('ProductsCat');
+		$criteria->with = array(__CLASS__ . 'Cat');
 		$criteria->select = 'title' . LANG . ', pic_thumb, tag, unit, hot';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'dos_usernames_username=:user AND hot = 1 AND enable = 1';
 		$criteria->params = array(':user' => $this->_subdomain);
-		$criteria->limit = 4; //can thay doi theo template
+		$criteria->limit = Configs::configTemplate('products_num_paging_hot', Yii::app()->session['template']);
 
-		return Products::model()->findAll($criteria);
+		return $this::model()->findAll($criteria);
 	}
 
 	//Front end - list Item by Cat
 	public function listItemByCat($cid) {
 		$criteria = new CDbCriteria();
-		$criteria->select = 'title' . LANG . ', pic_thumb, tag'.LANG.', unit';
+		$criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
 		$criteria->params = array(':cid' => $cid);
 
-		$count = Products::model()->count($criteria);
+		$count = $this::model()->count($criteria);
 
 		// elements per page
 		$pages = new CPagination($count);
-		$pages->pageSize = 8;
+		$pages->pageSize = Yii::app()->controller->configs['products_num_paging_cat'];
 		$pages->applyLimit($criteria);
 
-		return array('models' => Products::model()->findAll($criteria), 'pages' => $pages);
+		return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
 	}
 
 	//Front end - get detail item
 	public function detailItem($tag) {
 		$id = $this->getIDByTag($tag);
-
-		/*$command = Yii::app()->db->createCommand('SELECT title' . LANG . ', pic_full, pic_desc, content' . LANG . ', tag, description, unit FROM ' . $this->tableName() . ' WHERE record_id=:id');
-		$command->bindParam(":id", $id, PDO::PARAM_INT);
-		return $command->queryRow();*/
-
 		$criteria = new CDbCriteria();
-		$criteria->with = array('ProductsCat');
+		$criteria->with = array(__CLASS__ . 'Cat');
 		$criteria->condition = 'dos_usernames_username=:user AND enable=1';
 		$criteria->params = array(':user' => $this->_subdomain);
 
-		$this->_model = Products::model()->findByPk($id, $criteria);
+		$this->_model = $this::model()->findByPk($id, $criteria);
 
 		if ($this->_model === null) {
 			throw new CHttpException(404, 'The requested page does not exist.');
@@ -341,27 +329,27 @@ class Products extends CActiveRecord {
 
 	//Front end - find record_id by tag
 	private function getIDByTag($tag) {
-		$command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE tag'.LANG.'=:tag');
+		$command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE tag' . LANG . '=:tag');
 		$command->bindParam(":tag", $tag, PDO::PARAM_STR);
 		return $command->queryScalar();
 	}
 
 	public function listItemAdmin() {
 		$criteria = new CDbCriteria();
-		$criteria->with = array('ProductsCat');
+		$criteria->with = array(__CLASS__ . 'Cat');
 		$criteria->select = 'record_id, title, hits, record_order, hot, enable';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'dos_usernames_username=:user';
 		$criteria->params = array(':user' => Yii::app()->user->id);
 
-		$count = Products::model()->count($criteria);
+		$count = $this::model()->count($criteria);
 
 		// elements per page
 		$pages = new CPagination($count);
 		$pages->pageSize = 15;
 		$pages->applyLimit($criteria);
 
-		return array('models' => Products::model()->findAll($criteria), 'pages' => $pages);
+		return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
 	}
 
 	//Back end - Update Record
@@ -379,25 +367,6 @@ class Products extends CActiveRecord {
 		$command->bindParam(":id", $id, PDO::PARAM_INT);
 		return $command->execute();
 	}
-
-	//Back end - remove pic
-	/*private function removePic($item, $type = 0) {
-			$path = YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . '/';
-			if ($type == 0) {
-				if ($item && file_exists($path . $item)) {
-					unlink($path . $item);
-				}
-			} else {
-				if ($item) {
-					$str = explode('|', $item);
-					foreach ($str as $value) {
-						if (file_exists($path . $value)) {
-							unlink($path . $value);
-						}
-					}
-				}
-			}
-		}*/
 
 	//Back end - Delete Record
 	public function deleteRecord($id) {
@@ -486,22 +455,14 @@ class Products extends CActiveRecord {
 		return $command->queryScalar() + 1;
 	}
 
-	//Back end - get list item Product_cats
-	/*public function listItemCat() {
-		$item = new ProductsCat();
-		return $item->listItemAdminAction();
-	} */
-
 	//Back end - Get record to Edit
 	public function loadEdit($id) {
 		$criteria = new CDbCriteria();
-		//$criteria->alias = 'p';
-		//$criteria->join = 'JOIN dos_module_products_cat c ON p.dos_module_item_cat_cat_id = c.cat_id';
-		$criteria->with = array('ProductsCat');
+		$criteria->with = array(__CLASS__ . 'Cat');
 		$criteria->condition = 'dos_usernames_username=:user';
 		$criteria->params = array(':user' => Yii::app()->user->id);
 
-		$this->_model = Products::model()->findByPk($id, $criteria);
+		$this->_model = $this::model()->findByPk($id, $criteria);
 
 		if ($this->_model === null) {
 			throw new CHttpException(404, 'The requested page does not exist.');
