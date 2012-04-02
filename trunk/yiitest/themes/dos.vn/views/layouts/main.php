@@ -16,6 +16,8 @@
         <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/pngfix.js"></script>
         <script type="text/javascript">DD_belatedPNG.fix('img');</script>
         <![endif]-->
+
+		<?php echo $this->analytics?>
     </head>
     <body>
         <div id="wrapper">

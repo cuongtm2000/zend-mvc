@@ -47,7 +47,7 @@ class NewsController extends AdminController {
 
 			if ($model_cat_class->validate()) {
 				$model_cat_class->save();
-				//$this->redirect(array('cats'));
+				$this->redirect(array('cats'));
 			}
 		}
 
