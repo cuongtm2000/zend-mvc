@@ -10,7 +10,7 @@
 
 <?php if($item_other):?>
 <h3 class="title-right"><span><?php echo $this->lang[$this->module->id]?> khác</span></h3>
-<div class="all-product">
+<div class="all_product">
 	<?php foreach($item_other as $value):?>
 	<div class="product">
 		<div class="tent-product">
