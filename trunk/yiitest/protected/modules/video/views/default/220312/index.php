@@ -1,6 +1,6 @@
 <?php $this->breadcrumbs=array($this->lang[$this->module->id]);?>
 <?php if($listItemIndex['models']):?>
-	<ul>
+	<ul class="all_product">
 	<?php foreach($listItemIndex['models'] as $value):?>
 		<li class="product item_video">
 			<div class="product-img">

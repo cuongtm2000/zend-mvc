@@ -2,7 +2,7 @@
 <?php $this->pageTitle = $info_cat['cat_title'.LANG]; $this->description = $info_cat['description'.LANG];?>
 
 <?php if($list_items['models']): ?>
-	<ul>
+	<ul class="all_product">
 	<?php foreach($list_items['models'] as $value): ?>
 		<li class="product item_video">
 			<div class="product-img">
