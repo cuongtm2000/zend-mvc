@@ -98,8 +98,10 @@ a:hover{color:#000}
 .frame-tent-right img{margin:0 10px 10px 0}
 
 /*** San pham noi bat of page index*****/
-.all-product{}
-.product{width:230px;text-align:center;padding:5px 0; border:1px solid #ccc;margin:0 10px 20px 16px !important; display:inline-block; vertical-align:top;*float:left;*_margin:0 7px 10px 0; }
+.all_product{border: 1px solid #F2F2F2;padding:10px 0 0 0;margin: 0 0 10px 0;-webkit-border-radius:1px;-moz-border-radius:1px}
+.product{width:230px;text-align:center;padding:5px 0; border:1px solid #EEE;margin:0 10px 20px 16px !important; display:inline-block; vertical-align:top;*float:left;*_margin:0 7px 10px 0; }
+.product:hover{background:#eee; cursor: pointer}
+.product:hover a{color:#FF6000}
 
 /** Tent product and frame product img **/
 .tent-product{padding:10px}
@@ -109,13 +111,13 @@ a:hover{color:#000}
 /****  Tieu đề sản phẩm    ****/
 .title-pro{ font-size:10pt;margin:8px 0;font-weight:bold;color:#444}
 .title-pro a{color:#444}
-.title-pro a:hover{color:#f90}
+.title-pro a:hover{color:#333}
 
 /***  Bton chi tiet and Dat hang  **/
 .bton-pro{margin:15px 0 !important}
 .bton-detail{background:#323232;color:#fff;padding:5px 14px;font-weight:bold;margin:0 25px 0 0}
 .bton-order{background:#FF9702;color:#fff;padding:5px 12px;font-weight:bold}
-.bton-pro a:hover{color:#fff}
+.bton-pro a:hover{color:#fff !important}
 /****    End San pham noi bat of page index    ********/
 
 /** Column3  **/
