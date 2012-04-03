@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 02, 2012 at 05:10 PM
+-- Generation Time: Apr 03, 2012 at 04:34 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -434,7 +434,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
 (1, 'sasadsad', '', '<p>\r\n	asdasdas aasa</p>', '', 1, '2012-04-01 13:47:55', 1, 0, NULL, NULL, 'sasadsad', '', 'asass', '', 1, 'mvc'),
-(2, 'asasa asa', '', '<p>\r\n	sasa as</p>', '', 198, '2012-04-01 13:48:11', 2, 1, NULL, NULL, 'asasa-asa', '', '', '', 1, 'mvc');
+(2, 'asasa asa', '', '<p>\r\n	sasa as</p>', '', 211, '2012-04-01 13:48:11', 2, 1, NULL, NULL, 'asasa-asa', '', '', '', 1, 'mvc');
 
 -- --------------------------------------------------------
 
@@ -667,10 +667,10 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('max_count', 0, 'dos'),
 ('counter', 0, 'dos'),
 ('yesterday', 0, 'dos'),
-('day_time', 2456020, 'mvc'),
+('day_time', 2456021, 'mvc'),
 ('max_count', 1, 'mvc'),
-('counter', 1, 'mvc'),
-('yesterday', 0, 'mvc'),
+('counter', 2, 'mvc'),
+('yesterday', 1, 'mvc'),
 ('day_time', 2456020, 'test'),
 ('max_count', 1, 'test'),
 ('counter', 1, 'test'),
@@ -698,8 +698,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1333359236, 'dos'),
-('''127.0.0.1''', 1333379336, 'mvc');
+('''127.0.0.1''', 1333420105, 'mvc');
 
 -- --------------------------------------------------------
 
