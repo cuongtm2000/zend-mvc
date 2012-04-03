@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 03, 2012 at 04:34 AM
+-- Generation Time: Apr 03, 2012 at 05:07 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -261,6 +261,7 @@ INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('normal', 'Bình thường', 'Normal', 1),
 ('no_record', 'Không tồn tại mẫu tin', 'No record', 0),
 ('order', 'Thứ tự', 'Order', 1),
+('other', 'Khác', 'Other', 0),
 ('picture', 'Hình ảnh', 'Picture', 1),
 ('pic_desc', 'Hình mô tả', 'Picture decription', 0),
 ('pic_full', 'Hình lớn', 'Picture large', 1),
@@ -434,7 +435,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
 (1, 'sasadsad', '', '<p>\r\n	asdasdas aasa</p>', '', 1, '2012-04-01 13:47:55', 1, 0, NULL, NULL, 'sasadsad', '', 'asass', '', 1, 'mvc'),
-(2, 'asasa asa', '', '<p>\r\n	sasa as</p>', '', 211, '2012-04-01 13:48:11', 2, 1, NULL, NULL, 'asasa-asa', '', '', '', 1, 'mvc');
+(2, 'asasa asa', '', '<p>\r\n	sasa as</p>', '', 224, '2012-04-01 13:48:11', 2, 1, NULL, NULL, 'asasa-asa', '', '', '', 1, 'mvc');
 
 -- --------------------------------------------------------
 
@@ -698,7 +699,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1333420105, 'mvc');
+('''127.0.0.1''', 1333422407, 'mvc');
 
 -- --------------------------------------------------------
 
