@@ -101,7 +101,7 @@ a:hover{color:#000}
 .all_product{border: 1px solid #F2F2F2;padding:10px 0 0 0;margin: 0 0 10px 0;-webkit-border-radius:1px;-moz-border-radius:1px}
 .product{width:230px;text-align:center;padding:5px 0; border:1px solid #EEE;margin:0 10px 20px 16px !important; display:inline-block; vertical-align:top;*float:left;*_margin:0 7px 10px 0; }
 .product:hover{background:#eee; cursor: pointer}
-.product:hover a{color:#FF6000}
+.product .tent-product:hover a{color:#000}
 
 /** Tent product and frame product img **/
 .tent-product{padding:10px}
