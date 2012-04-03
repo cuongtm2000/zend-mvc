@@ -99,12 +99,12 @@ a:hover{color:#000}
 
 /*** San pham noi bat of page index*****/
 .all_product{border: 1px solid #F2F2F2;padding:10px 0 0 0;margin: 0 0 10px 0;-webkit-border-radius:1px;-moz-border-radius:1px}
-.product{width:230px;text-align:center;padding:5px 0; border:1px solid #EEE;margin:0 10px 20px 16px !important; display:inline-block; vertical-align:top;*float:left;*_margin:0 7px 10px 0; }
+.product{width:230px;text-align:center;padding:5px 0; border:1px solid #EEE;margin:0 13px 20px 13px !important; display:inline-block; vertical-align:top;*float:left;*_margin:0 7px 10px 0; }
 .product:hover{background:#eee; cursor: pointer}
 .product .tent-product:hover a{color:#000}
 
 /** Tent product and frame product img **/
-.tent-product{padding:10px}
+.tent-product{padding:5px}
 .product-img{height:120px;width:230px;display:table-cell;vertical-align:bottom}
 .price{font-size:15pt; color:#ff5400; font-family:Trebuchet MS, Arial }
 
@@ -152,8 +152,8 @@ a:hover{color:#000}
 .masuring p{line-height:1.4em}
 .frame-img{float:left;width:143px;margin:0 5px 5px 0}
 .title-masuring{margin:0 0 5px 0}
-.title-masuring a{color:#208FFF;font-size:10pt;font-weight:bold}
-.title-masuring a:hover{color:#FF9933}
+.title-masuring a{color:#9A522E;font-size:10pt;font-weight:bold}
+.title-masuring a:hover{color:#FF6000}
 
 /*Page product*/
 .frame-pro{background:#F3F5F4;padding:20px 15px;text-align:justify;font-size:10pt;color:#666;margin:0 0 10px 0;-webkit-border-radius:4px;-moz-border-radius:4px}
@@ -163,8 +163,8 @@ a:hover{color:#000}
 ul.paging{float: right; margin:0; padding:0 0 5px 0; list-style: none;}
 ul.paging li{display: inline;margin:0 !important;}
 ul.paging .hidden{display: none;}
-ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{color:#FFB400; border: 1px solid #ccc; padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
-ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{color:#fff; background:#512C19}
+ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{color:#FF6000; border: 1px solid #ccc; padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{color:#fff; background:#97735B}
 
 /**Page Contact**/
 /*** Frame title company  ***/
