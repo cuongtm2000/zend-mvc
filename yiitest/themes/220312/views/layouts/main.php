@@ -45,7 +45,7 @@
 		<div class="frame-title-pany"><h1 class="title-city"><?php echo $this->lang['company_name'] ?></h1></div> <!--End title company-->
 		<div class="lang">
 			<?php foreach($this->numLang as $value): ?>
-				<a href="<?php echo ($value=='vi') ? Yii::app()->request->baseUrl.'/' : Yii::app()->request->baseUrl.'/'.$value ?>"><?php echo $this->lang[$value]?> <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $value?>.gif" alt="<?php echo $this->lang[$value]?>" /></a>
+				<a href="<?php echo ($value=='vi') ? Yii::app()->request->baseUrl.'/' : Yii::app()->request->baseUrl.'/'.$value ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $value?>.gif" alt="<?php echo $this->lang[$value]?>" /> <?php echo $this->lang[$value]?></a>
 			<?php endforeach?>
 			<p class="tent-lang"><?php echo $this->lang['company_phone']?></p>
 		</div> <!--End lang-->	<div class="clear"></div>
@@ -124,9 +124,12 @@
 			<ul class="support">
 				<?php foreach($this->function['list_supports'] as $value): ?>
 					<?php if($value['support_type']=='yahoo'): ?>
-						<?php if($value['support_name'.Yii::app()->session['lang']]) echo '<li>'.$value['support_name'.Yii::app()->session['lang']].'</li>'; ?>
-						<?php if($value['support_phone']) echo '<li>'.$value['support_phone'].'</li>'; ?>
-						<li><a href="ymsgr:sendIM?<?php echo $value['support_value'] ?>"><img src="http://mail.opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2" border="0" alt="<?php echo $value['support_value'] ?>" /></a></li>
+
+						<li>
+							<?php if($value['support_name'.Yii::app()->session['lang']]) echo '<p>'.$value['support_name'.Yii::app()->session['lang']].'</p>'; ?>
+							<?php if($value['support_phone']) echo '<p>'.$value['support_phone'].'</p>'; ?>
+							<a href="ymsgr:sendIM?<?php echo $value['support_value'] ?>"><img src="http://mail.opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2" border="0" alt="<?php echo $value['support_value'] ?>" /></a>
+						</li>
 					<?php endif; ?>
 				<?php endforeach; ?>	
 			</ul>

@@ -14,7 +14,6 @@
 	<?php foreach($item_other as $value):?>
 	<div class="product">
 		<div class="tent-product">
-
 				<div class="product-img">
 					<a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $value[ucfirst($this->module->id).'Cat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>">
 					<?php if($value['pic_thumb']):?>
@@ -24,10 +23,10 @@
 					<?php endif?>
 					</a>
 				</div>
-
 			<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $value[ucfirst($this->module->id).'Cat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></h2>
 		</div>
 	</div>
 	<?php endforeach?>
 </div>
 <?php endif;?>
+

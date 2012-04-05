@@ -21,7 +21,7 @@ a:hover{color:#000}
 
 /*Lang ( Ngon ngu) */
 .lang{float:right; text-align:right}
-.lang img{margin:0 2px 0 0}
+.lang img{margin:0 2px 0 0;position: relative;top:2px}
 .lang a{color:#fff;font-weight:bold; margin:0 5px 0 10px}
 .lang a:hover{color:#f89800}
 .tent-lang{color:#fff;font-size:10pt;font-weight:bold;margin:10px 0 0 0}
@@ -66,8 +66,7 @@ a:hover{color:#000}
 
 /*Ho tro ky thuat*/
 .support{margin:0 0 15px 0;list-style:none;padding:5px 3px 10px 0px;border:1px solid #F2F2F2;text-align:center}
-.support li {color:#000;padding:2px 0}
-.support li img{margin:0 0 10px 0}
+.support li {color:#000;padding:5px 0 7px 0}
 
 /*Thong ke truy cap*/
 .statistics{list-style:none;padding:5px 3px 10px 15px;border:1px solid #F2F2F2;}
