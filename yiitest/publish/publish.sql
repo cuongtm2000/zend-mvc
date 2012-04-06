@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 05, 2012 at 05:20 AM
+-- Generation Time: Apr 06, 2012 at 04:34 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -434,8 +434,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(1, 'sasadsad', '', '<p>\r\n	asdasdas aasa</p>', '', 1, '2012-04-01 13:47:55', 1, 0, NULL, NULL, 'sasadsad', '', 'asass', '', 1, 'mvc'),
-(2, 'asasa asa', '', '<p>\r\n	sasa as</p>', '', 211, '2012-04-01 13:48:11', 2, 1, NULL, NULL, 'asasa-asa', '', '', '', 1, 'mvc');
+(1, 'sasadsad', '', '<p>\r\n	asdasdas aasa</p>', '', 5, '2012-04-01 13:47:55', 1, 0, NULL, NULL, 'sasadsad', '', 'asass', '', 1, 'mvc'),
+(2, 'asasa asa', '', '<p>\r\n	sasa as</p>', '', 308, '2012-04-01 13:48:11', 2, 1, NULL, NULL, 'asasa-asa', '', '', '', 1, 'mvc');
 
 -- --------------------------------------------------------
 
@@ -541,32 +541,13 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 --
 
 INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
-('Trang chủ', NULL, 'default', NULL, 1, '', 'Homepage', 'Mô ta', 'Description', 'dos'),
-('Giới thiệu', NULL, 'about', NULL, 2, '', '1', '', 'dsdsdsd', 'dos'),
-('Sản phẩm', NULL, 'products', NULL, 3, 'Tieu de', 'Titiel website', 'Mọ', '', 'dos'),
-('Dịch vụ', NULL, 'services', NULL, 4, '', '1', '', '1', 'dos'),
-('Liên hệ', NULL, 'contact', NULL, 5, 'Tieu de Lien he', 'Title Contact', 'Mo ta', 'Mo ta en', 'dos'),
 ('Trang chủ', '', 'default', '', 1, NULL, NULL, NULL, NULL, 'mvc'),
 ('Giới thiệu', '', 'about', '', 2, NULL, NULL, NULL, NULL, 'mvc'),
 ('Sản phẩm', '', 'products', '', 3, NULL, NULL, NULL, NULL, 'mvc'),
 ('Dịch vụ', '', 'services', '', 4, NULL, NULL, NULL, NULL, 'mvc'),
 ('Tin tức &amp; sự kiện', '', 'news', '', 5, NULL, NULL, NULL, NULL, 'mvc'),
 ('Video', '', 'video', '', 6, NULL, NULL, NULL, NULL, 'mvc'),
-('Liên hệ', '', 'contact', '', 7, NULL, NULL, NULL, NULL, 'mvc'),
-('Trang chủ', NULL, 'default', NULL, 1, NULL, NULL, NULL, NULL, 'test'),
-('Giới thiệu', NULL, 'about', NULL, 2, NULL, NULL, NULL, NULL, 'test'),
-('Sản phẩm', NULL, 'products', NULL, 3, NULL, NULL, NULL, NULL, 'test'),
-('Dịch vụ', NULL, 'services', NULL, 4, NULL, NULL, NULL, NULL, 'test'),
-('Tin tức & sự kiện', NULL, 'news', NULL, 5, NULL, NULL, NULL, NULL, 'test'),
-('Video', NULL, 'video', NULL, 6, NULL, NULL, NULL, NULL, 'test'),
-('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'test'),
-('Trang chủ', NULL, 'default', NULL, 1, NULL, NULL, NULL, NULL, 'thanhansoft'),
-('Giới thiệu', NULL, 'about', NULL, 2, NULL, NULL, NULL, NULL, 'thanhansoft'),
-('Sản phẩm', NULL, 'products', NULL, 3, NULL, NULL, NULL, NULL, 'thanhansoft'),
-('Dịch vụ', NULL, 'services', NULL, 4, NULL, NULL, NULL, NULL, 'thanhansoft'),
-('Tin tức & sự kiện', NULL, 'news', NULL, 5, NULL, NULL, NULL, NULL, 'thanhansoft'),
-('Video', NULL, 'video', NULL, 6, NULL, NULL, NULL, NULL, 'thanhansoft'),
-('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'thanhansoft');
+('Liên hệ', '', 'contact', '', 7, NULL, NULL, NULL, NULL, 'mvc');
 
 -- --------------------------------------------------------
 
@@ -657,6 +638,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
   `save_value` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `dos_module_pcounter_save`
+--
+
+INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
+('day_time', 2456024),
+('max_count', 1),
+('counter', 1),
+('yesterday', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -667,6 +658,13 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
   `user_ip` varchar(39) NOT NULL,
   `user_time` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dos_module_pcounter_users`
+--
+
+INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
+('''127.0.0.1''', 1333678282);
 
 -- --------------------------------------------------------
 
@@ -788,8 +786,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(1, 'Dich vu', '', NULL, NULL, '<p>\r\n	Noi dung</p>', '', '', 2, '2012-04-01 13:59:00', 1, 0, NULL, NULL, 'dich-vu', '', '', '', 1, 'mvc'),
-(2, 'Tieu de', '', NULL, NULL, '<p>\r\n	Noi dung</p>', '', '', 2, '2012-04-01 13:59:16', 2, 0, NULL, NULL, 'tieu-de', '', '', '', 1, 'mvc');
+(1, 'Dich vu', '', NULL, NULL, '<p>\r\n	Noi dung</p>', '', '', 4, '2012-04-01 13:59:00', 1, 0, NULL, NULL, 'dich-vu', '', '', '', 1, 'mvc'),
+(2, 'Tieu de', '', NULL, NULL, '<p>\r\n	Noi dung</p>', '', '', 4, '2012-04-01 13:59:16', 2, 0, NULL, NULL, 'tieu-de', '', '', '', 1, 'mvc');
 
 -- --------------------------------------------------------
 
@@ -1250,7 +1248,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
 ('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi', NULL, '0000-00-00 00:00:00', 1, '111120', 2, 'thoi-trang'),
-('mvc', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-31 02:21:57', '', '', '', 'user', 'vi', NULL, '2012-04-29 17:00:00', 1, '220312', 19, 'noi-that-ngoai-that'),
+('mvc', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-31 02:21:57', '', '', '', 'admin', 'vi|en', NULL, '2012-04-29 17:00:00', 1, '220312', 19, 'noi-that-ngoai-that'),
 ('test', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-01 02:09:48', NULL, NULL, NULL, 'user', 'vi', NULL, '2012-04-30 17:00:00', 1, '220312', 1, 'noi-that-ngoai-that'),
 ('thanhansoft', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-02 07:14:27', NULL, NULL, NULL, 'user', 'vi', NULL, '2012-05-01 17:00:00', 1, '220312', 19, 'noi-that-ngoai-that');
 

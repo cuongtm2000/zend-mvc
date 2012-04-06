@@ -164,14 +164,14 @@ class About extends CActiveRecord {
 
 	//Front end - get list Menu
 	public function listMenu() {
-		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag' . LANG . ' FROM ' . $this->tableName() . ' WHERE hot = 0 AND dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
+		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag' . LANG . ' FROM ' . $this->tableName() . ' WHERE hot = 0 AND activated = 1 AND dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
 		$command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
 		return $command->queryAll();
 	}
 
 	//Front end - Get home record
 	public function homeRecord() {
-		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit FROM ' . $this->tableName() . ' WHERE hot=1 AND dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
+		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit FROM ' . $this->tableName() . ' WHERE hot=1 AND activated = 1 AND dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
 		$command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
 		$row = $command->queryRow();
 		if ($row) {
@@ -183,7 +183,7 @@ class About extends CActiveRecord {
 
 	//Front end - Get first record
 	public function firstRecord() {
-		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
+		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE activated = 1 AND dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
 		$command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
 		$row = $command->queryRow();
 		if ($row) {
