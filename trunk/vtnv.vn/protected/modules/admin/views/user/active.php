@@ -1,5 +1,8 @@
 <?php //var_dump($debug) ?>
 <h3><strong>Danh sách thành viên chờ kích hoạt</strong></h3>
+<div class="control-button"><a href="javascript:submit_list('enable', '');" title="Kích hoạt"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/visible.png" alt="Kích hoạt" align="left" /> Kích hoạt</a></div>
+	<div class="control-button"><a href="javascript:delete_list('');" title="Xóa"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/delete.png" alt="Xóa" align="left" /> Xóa</a></div>
+</form><div class="clear"></div>
 <form name="frm" id="frm" action="" method="post">
 	<input type="hidden" name="factive" value="" />
 	<table>

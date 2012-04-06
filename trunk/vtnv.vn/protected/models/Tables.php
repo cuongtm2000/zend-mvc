@@ -69,13 +69,27 @@ class Tables extends CActiveRecord {
         $this->left_child = $this->right_child = $this->four_child = '';
         $this->upgrade_date = date("Y-m-d H:i:s");
         $this->priority = 0;
-        $this->save();
+        $this->update();
     }
 
-    public function findTVdatchuanTop() {
-        return $this->find('priority = (select min(priority) from ' . Tables::model()->tableName() . ' where left_child !="" and right_child != ""  and priority >0)');
+    public function getTVdatchuanTop_Level($level) {
+        $list= $this->findAll('left_child !="" and right_child != ""  and priority >0');
+        if($list === NULL)
+            return NULL;
+        $min_priority=99999;
+        $temp=NULL;
+        
+        foreach ($list as $value) {
+            if($value->dosModuleUsernamesUsername->level == $level){
+                if($value->priority < $min_priority){
+                    $min_priority=$value->priority;
+                    $temp=$value;
+                }               
+            }
+        }
+        return $temp;
     }
-
+        
     public function updateChild($parent, $child) {
         $t = Tables::model()->findByPk($parent);
         if($t=== null){

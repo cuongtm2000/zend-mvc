@@ -12,3 +12,11 @@ DAnh sách thoát bàn: Username, Họ Tên, CMND, Ngày thoát bàn, Level
 Bàn thành viên
 
 User phải được cty sắp xếp trước khi đạt chuẩn (luu ý)
+
+
+
+
+truncate dos_module_log;
+truncate dos_module_tables;
+update dos_module_usernames set `enable`=0,`level`=0,`balance`=0;
+update dos_module_usernames set `enable`=1 where `username`='viptamnhinviet';

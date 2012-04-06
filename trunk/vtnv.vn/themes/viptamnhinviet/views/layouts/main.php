@@ -128,7 +128,7 @@
                                     <li class="border-none"><a  href="<?php echo Yii::app()->baseUrl ?>/user/datchuan" title="Danh sách bàn sắp thoát">Danh sách bàn sắp thoát</a></li>
                                     <li class="border-none"><a  href="<?php echo Yii::app()->baseUrl ?>/user/thoatban" title="Thành viên thoát bàn">Thành viên thoát bàn</a></li>
                                     <li><a href="<?php echo Yii::app()->baseUrl ?>/log" title="">Lịch sử giao dịch</a></li>
-                                    <li><a href="#" title="">Số tiền tích lũy: <span class="error"><b class="balan"><?php echo Yii::app()->session['balance'] ?></b> V</span></a></li>
+                                    <li><a href="#" title="">Số tiền tích lũy: <span class="error"><b class="balan"><?php echo number_format($this->balance, 0, '', '.') ?></b> V</span></a></li>
                                     <li class="border-none"><a  href="<?php echo Yii::app()->baseUrl ?>/user/transferv" title="Chuyển khoản">Chuyển khoản</a></li>
                                     <li class="border-none"><a  href="<?php echo Yii::app()->baseUrl ?>/user/view" title="Xem thông tin">Xem thông tin</a></li>
                                     <li class="border-none"><a  href="<?php echo Yii::app()->baseUrl ?>/user/changepass" title="Đổi mật khẩu">Đổi mật khẩu</a></li>
