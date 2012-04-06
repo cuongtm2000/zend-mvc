@@ -1,28 +1,5 @@
 <?php
 
-/**
- * This is the model class for table "dos_module_contacts".
- *
- * The followings are the available columns in table 'dos_module_contacts':
- * @property integer $record_id
- * @property string $title
- * @property string $titleen
- * @property string $content
- * @property string $contenten
- * @property string $create_date
- * @property integer $record_order
- * @property integer $hit
- * @property integer $hot
- * @property string $tag
- * @property string $tagen
- * @property string $description
- * @property string $descriptionen
- * @property string $enable
- * @property string $dos_usernames_username
- *
- * The followings are the available model relations:
- * @property DosUsernames $dosUsernamesUsername
- */
 class Contact extends CActiveRecord {
     private $_model;
     //private $_subdomain;
