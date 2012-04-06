@@ -1,0 +1,210 @@
+body {background:#fff url(../images/bg-2.jpg) repeat-x; font-family:Tahoma, Geneva, sans-serif;font-size:9pt;}
+.left{float: left;}
+.right{float:right}
+.clear{clear: both;}
+a{text-decoration:none; color:#720E3B}
+a:hover{color:#000;}
+
+/*layout*/
+*{margin:0; padding:0}
+#wrapper {margin:auto; width:957px;}
+
+/*Header*/
+#header{padding:20px 0; position:relative}
+
+/*Logo*/
+#logo{float:left;width:155px; height:108px}
+
+/**  Ten cong ty     **/
+.frame-title-pany{float:left;padding:25px 0 0 0;margin:0 0 0 20px}
+.title-city{font-size:18pt;color:#0000FF;font-weight:bold}
+
+/*Lang ( Ngon ngu) */
+.lang{float:right; text-align:right}
+.lang img{margin:0 2px 0 0}
+.lang a{color:#000;font-weight:bold; margin:0 5px 0  10px}
+.lang a:hover{color:#fff}
+.tent-lang{color:#000;font-size:10pt;font-weight:bold;margin:10px 0 0 0}
+
+/* Nav ( Menu ) */
+#all-nav{position:relative;top:-20px;z-index:300;}
+#nav{list-style:none;position:absolute; right:10px; background:url(../images/nav-bg.gif) no-repeat; height:54px;padding:0 10px 0 10px;margin:0 0 5px 0;-webkit-border-radius:0 4px 4px 0;-moz-border-radius:0 4px 4px 0;}
+#nav li{float:left; background:url(../images/nav-line.gif) no-repeat right;}
+#nav li a{color:#fff; padding:19px 15px;display:block;font-size:10pt;font-weight:bold}
+#nav li a:hover{color:#000}
+#nav .select{color:#000}
+#nav .none-line{background:none}
+#nav .none-line a{padding:19px 10px 19px 15px}
+
+/*Banner*/
+#banner{margin:0 0 20px 0;border:3px solid #999;-webkit-border-radius:4px;-moz-border-radius:4px}
+
+/*Content*/
+#content{}
+
+/**  Title box   **/
+.title-box{color:#333; font-size:14px; font-weight:bold;padding:12px 0;background:#F3F3F3;margin:0 0 5px 0}
+.title-box span{padding:0 0 0 10px}
+.title-box a{color:#333}
+.title-box a:hover{color:#f00}
+
+/*Left content*/
+#left-content{float:left; width:200px}
+
+/***  Sub left  ***/
+.sub-left{list-style:none;margin:0 0 15px 0;border:1px solid #F2F2F2;padding:10px 5px 10px 20px}
+.sub-left li{padding:4px 0;line-height:1.5em}
+.sub-left li a{ display:block;color:#161616;background:url(../images/bull.gif) no-repeat left 7px; padding:1px 0 1px 15px}
+.sub-left li a:hover{color:#f90}
+
+/*Sub sản phẩm SGS*/
+.sub-pro{list-style:none;margin:0 0 15px 0;border:1px solid #F2F2F2;padding:20px 5px 20px 20px}
+.sub-pro li{color:161616;font-weight:bold}
+.sub-pro li a{ display:block;color:#161616;background:url(../images/bull.gif) no-repeat left 6px; padding:1px 0 1px 15px}
+.sub-pro li a:hover{color:#f90}
+.sub-pro li ul{list-style:none;padding:10px 0 10px 10px}
+.sub-pro li ul li{padding:2px 0 !important; font-weight:normal}
+
+/*Ho tro ky thuat*/
+.support{margin:0 0 15px 0;list-style:none;padding:5px 3px 10px 0px;border:1px solid #F2F2F2;text-align:center}
+.support li {color:#000;padding:2px 0}
+.support li img{margin:0 0 10px 0}
+
+/*Thong ke truy cap*/
+.statistics{list-style:none;padding:5px 3px 10px 15px;border:1px solid #F2F2F2;}
+.statistics li {color:#000; line-height:1.75em;}
+
+/*bg-adv adv left*/
+.bg-adv{list-style:none;border:1px solid #F2F2F2;text-align:center;margin:0 0 10px 0}
+.bg-adv li{padding:0 0 5px 0}
+
+/*Right content*/
+#right-content{float:left;width:525px; margin:0 0 0 15px}
+#right-content p{margin:0 0 8px 0}
+#right-content ul li, #right-content ol li{margin:0 0 0 18px}
+
+.link{color:#000; font-weight:bold; padding:0px 0 10px 0}
+.link img{margin:0 3px 0 0}
+.link a{ color:#9A522E; font-size:10pt}
+.link a:hover{text-decoration:underline; color:#000}
+
+/*Frame tent right*/
+.frame-tent-right {padding:10px 10px 5px 10px;border:1px solid #F0F0F0;margin:0 0 15px 0}
+.frame-tent-right p{text-align:justify;line-height:1.5em}
+.frame-tent-right img{margin:0 10px 10px 0}
+
+/*** San pham noi bat of page index*****/
+.title-all-pro{color:#333; font-size:14px; font-weight:bold;margin:0 0 10px 0}
+.all-product{background:url(../images/bg-all-pro.gif) repeat-x;padding:5px 5px 15px 15px;*_padding:15px 5px 15px 5px}
+.product{width:230px;text-align:center;padding:5px 0; border:1px solid #ccc;margin:0 18px 20px 0; display:inline-block; vertical-align:top;*float:left;*_margin:0 7px 10px 0; }
+
+/** Tent product and frame product img **/
+.tent-product{padding:10px}
+.product-img{height:150px; width:230px;display:table-cell;vertical-align:bottom}
+
+/****  Tieu đề sản phẩm    ****/
+.title-pro{ font-size:10pt;margin:10px 0 0 0;font-weight:bold}
+.title-pro a{color:#444}
+.title-pro a:hover{color:#f90}
+
+/***  Bton chi tiet and Dat hang  **/
+.bton-pro{margin:15px 0 !important}
+.bton-detail{background:url(../images/bton-detail.gif) no-repeat;color:#fff;padding:2px 14px;font-weight:bold;margin:0 25px 0 0}
+.bton-order{background:url(../images/bton-order.gif) no-repeat;color:#fff;padding:2px 12px;font-weight:bold}
+.bton-pro a:hover{color:#fff}
+/****    End San pham noi bat of page index    ********/
+
+/**    Page san pham than    **/
+.frame-product{}
+.product-new{width:160px;padding:5px 0; margin:0 5px 10px 0 !important; text-align:center;display:inline-block; vertical-align:top;*float:left;*margin:0 10px 5px 0;*padding:2px 0; }
+.product-img-new{height:121px; width:160px;display:table-cell;vertical-align:bottom;padding:3px 0;border:1px solid #ccc;}
+.title-pro-new{ font-size:10pt;margin:10px 0 0 0;font-weight:bold}
+.title-pro-new a{color:#444}
+.title-pro-new a:hover{color:#f90}
+
+.bton-detail-new{background:url(../images/bton-detail.gif) no-repeat;color:#fff;padding:2px 8px;font-weight:bold;margin:0 10px 0 0}
+.bton-order-new{background:url(../images/bton-order.gif) no-repeat;color:#fff;padding:2px 5px;font-weight:bold}
+/***   End page san pham than   ***/
+
+/** Column3  **/
+#colum3{float:right; width:200px}
+
+/**  Sub new   **/
+.sub-new{list-style:none;margin:0 0 15px 0;border:1px solid #F2F2F2;padding:20px 10px 20px 10px}
+.sub-new li{padding:4px 0;line-height:1.5em}
+.sub-new li a{ display:block;color:#161616;background:url(../images/bull.gif) no-repeat left 7px; padding:1px 0 1px 15px}
+.sub-new li a:hover{color:#f90}
+
+/**		Sản phẩm tieu biểu (typical-product)		**/
+.typical-product{list-style:none; text-align:center}
+.typical-product li{margin:0 0 5px 0}
+
+/**  Page order ( đặt hàng )      **/
+.frame-order label{color:#555; margin:0 !important;font-weight:bold;width:200px; float:left}
+.frame-order{list-style:none;margin:15px 0 10px 0}
+.frame-order li{padding:4px 0; margin:0 !important}
+.frame-order input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.frame-order textarea{border:1px solid #ddd; width:270px;-moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-order span{color:#F00;margin:0 5px 0 0}
+.frame-order .type-radio{width:inherit !important; margin:0 !important}
+.frame-order .bton-dk{background:url(../images/button.gif) no-repeat;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-order .bton-dk{margin:10px 10px 5px 0}
+
+/***    Page product-info     ****/
+.title-pro-order{color:#333; font-size:14px; font-weight:bold;margin:0 0 10px 0;border-bottom:1px solid #ccc;padding:0 0 10px 0}
+.title-pro-order span{padding:0 0 0 10px}
+.black{margin:0 !important; font-size:10pt;text-align:right !important}
+.black a{color:#000;background:url(../images/bull-1.gif) no-repeat left 5px;padding:0 0 0 10px}
+.black a:hover{background:url(../images/bull.gif) no-repeat left 5px;color:#ED2121}
+.frame-img-info{text-align:center;margin:0 0 10px 0}
+.frame-img-info img{margin:0 !important;border:2px solid #D1D1D1;padding:2px;-webkit-border-radius:3px;-moz-border-radius:3px}
+
+/*   Page New  */
+.masuring{text-align:justify;font-size:10pt;color:#666;margin-bottom:20px}
+.frame-img{float:left;width:143px;height:90px;margin:0 15px 5px 0}
+.title-masuring  a{color:#208FFF;font-size:10pt; font-weight:700}
+.title-masuring a:hover{color:#F90}
+
+/*Page product*/
+.frame-pro{background:#F3F5F4;padding:20px 15px;text-align:justify;font-size:10pt;color:#666;margin:0 0 10px 0;-webkit-border-radius:4px;-moz-border-radius:4px}
+.frame-pro p{line-height:normal !important}
+
+/* paging */
+.paging{margin:15px 0 10px 0; text-align:right}
+.paging a{color:#3CBEDA}
+.paging a:hover{background:#44A4DE; color:#fff;}
+.pagenav , .pageactive{border: 1px solid #ccc; padding: 2px 5px; color:#fff;-webkit-border-radius: 2px; -moz-border-radius: 2px;}
+.pagecureent{border: 1px solid #ccc; padding: 2px 5px; background:#44A4DE; color:#fff; font-weight:bold;-webkit-border-radius: 2px; -moz-border-radius: 2px}
+
+/**Page Contact**/
+/*** Frame title company  ***/
+#frame-info-contact{color:#f00}
+
+/** Form lien he  **/
+.frame-contact label{color:#555; margin:0 !important;font-weight:bold;width:100px; float:left}
+.frame-contact{list-style:none;margin:15px 0 10px 0}
+.frame-contact li{padding:4px 0; margin:0 !important}
+.frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.frame-contact textarea{border:1px solid #ddd; width:350px;-moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-contact span{color:#F00;margin:0 5px 0 0}
+
+.frame-contact .bton-dk{margin:10px 0 5px 30px;background:url(../images/button.gif) no-repeat;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-contact .bton-dk{margin:10px 10px 5px 0}
+/****  End page contact     *****/
+
+/*Footer*/
+#bg-footer{background:#010492 url(../images/bg-footer.gif) repeat-x; min-width:957px;margin:0 0 10px 0}
+#footer{text-align:center;margin:auto; width:957px;padding:5px 0;color:#fff; line-height:1.7em;font-weight:bold;font-size:10pt}
+#footer a{color:#fff}
+#footer a:hover{color:#f00}
+
+/* Error */
+.errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
+.errorSummary ul{margin:0 32px; padding:0}
+.errorSummary ul li{padding:2px 0; color: red}
+
+
+
+
+
+

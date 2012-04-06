@@ -1,0 +1,45 @@
+/*
+=======================================================================
+	Product Detail Page Rules
+=======================================================================
+*/
+/****   Frame Product  ****/
+.frameproduct{margin:0 0 20px 0}
+
+/********    Left product ***********/
+.container-img{float:left; width:290px}
+
+/*Zoomer*/
+.zoomer .holder{border:1px solid #ccc;background:#000}
+.zoomer .holder .image{position:relative; overflow:hidden}
+/*.zoomer .holder .image img{position:absolute; left:0; top:0; cursor:move; }*/
+.zoomer .holder .console{height:35px;padding-top:7px;background:#0b0b0b}
+.zoomer .holder .console .left{margin:0;float:left;padding-left:5px }
+.zoomer .holder .console .right{margin:0;float:right}
+.zoomer .holder .console li{list-style-type:none;float:left;margin:0 5px 0 0 !important;*_margin:0 !important}
+.zoomer .holder .console li span{float:left;cursor:pointer}
+.thumbs{list-style:none;margin:0; padding:0}
+.thumbs img{border:1px solid #ccc;cursor:pointer}
+
+
+.prod_detail .big_thumb{width:290px;background-color:#f8f7f7;border:#ededed solid 1px;overflow:hidden !important;}
+.big_thumb #paginate-slider2{width:255px !important;overflow:hidden;float:left;margin:10px 0;}
+.prod_detail #paginate-slider2 li{margin:0 6px 0 0 !important;}
+.prod_detail #paginate-slider2 img{height:55px;width:78px}
+.prod_detail span.prevsmall {float:left;margin:32px 5px 0 0; cursor:pointer}
+.prod_detail span.nextsmall {float:right;margin:32px 2px 0 0; cursor:pointer}
+
+/******** End Left product ***********/
+
+
+/***  Right product detail   ***/
+.right-detail{ float:right;width:450px}
+.title-info{color:#33220C; font-size:11pt; font-weight:700; margin:0 0 10px 0}
+.right-detail-info{padding:0 10px 0 0}
+.right-detail-info p{margin:2px 0 !important; line-height:1.5em}
+.right-detail-info span{color:#33220C; font-weight:700; font-size:12pt}
+.title-info {color:#BC455F; font-size:15px}
+.title-info a:hover{ text-decoration:underline; *_color:#109FEC}
+.right-detail-info li{list-style:none; padding:5px 0;margin:0 !important}
+
+
