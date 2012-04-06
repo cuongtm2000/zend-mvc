@@ -280,8 +280,7 @@ class Products extends CActiveRecord {
 		$id = $this->getIDByTag($tag);
 		$criteria = new CDbCriteria();
 		$criteria->with = array(__CLASS__ . 'Cat');
-		$criteria->condition = 'dos_usernames_username=:user AND enable=1';
-		$criteria->params = array(':user' => $this->_subdomain);
+		$criteria->condition = 'enable=1';
 
 		$this->_model = $this::model()->findByPk($id, $criteria);
 

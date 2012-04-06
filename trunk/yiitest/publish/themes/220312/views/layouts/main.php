@@ -74,7 +74,7 @@
 
 	<div id="content">
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-				'homeLink' => CHtml::link($this->lang['default'], (LANGURL) ? LANGURL : Yii::app()->homeUrl),
+				'homeLink' => CHtml::link($this->lang['default'], (LANG) ? Yii::app()->homeUrl.LANG : Yii::app()->homeUrl),
 				'links'=>$this->breadcrumbs,
 				'htmlOptions'=>array('class'=>'link'),
 				'separator'=>' <img src="'.Yii::app()->theme->baseUrl.'/images/bull.jpg" alt="Bull" title="Bull" />',
