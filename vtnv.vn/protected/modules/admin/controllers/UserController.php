@@ -55,7 +55,7 @@ class UserController extends AdminController {
         $model = new User('active');
         if (Yii::app()->request->getIsPostRequest()) {
             $model->activeItem($_POST);
-            $this->refresh();
+           // $this->refresh();
         }
         $this->render('active', array('model' => $model->getUnActive()));
     }
@@ -74,9 +74,11 @@ class UserController extends AdminController {
                 $t->save();
             }
             //sort
-            $list_u = $model->listTVdatchuan();
+//            $list_u = $model->listTVdatchuan();
+            $list_u = Tables::model()->findAll('left_child !="" and right_child != "" order by priority, upgrade_date ASC');
+
             $k = 1;
-            foreach ($list_u['models'] as $value) {
+            foreach ($list_u as $value) {
                 $value->priority = $k++;
                 $value->save();
             }

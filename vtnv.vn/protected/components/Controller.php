@@ -16,6 +16,8 @@ class Controller extends CController {
 	public $advs_bottom;
 	public $listItemHot;
 	public $videoHome; //video home
+        
+        public $balance=0;
 
 	public function init() {
 		//Setup lang
@@ -43,5 +45,8 @@ class Controller extends CController {
 
 		$user_class = new User();
 		define('USERFILES', '/public/userfiles/images/'.$user_class->getUserAdministrator().'/images'); //coi lai cai này
+                
+                $user=new User();
+                $this->balance=$user->getBalance(Yii::app()->user->name);
 	}
 }

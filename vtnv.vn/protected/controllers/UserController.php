@@ -74,7 +74,7 @@ class UserController extends Controller {
         }
         $this->render('transferv', array(
             'model' => $model,
-            'user' => User::model()->findByPk(Yii::app()->user->name),
+            //'user' => User::model()->findByPk(Yii::app()->user->name),
         ));
     }
 

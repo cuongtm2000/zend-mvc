@@ -1,4 +1,4 @@
-<h3><strong>Danh sách thành viên thoát bàn</strong></h3>
+<h1 class="title-right"><span>Danh sách thành viên thoát bàn</span></h1>
 <form action="" method="post" enctype="multipart/form-data" id="frm" name="frm">
     <table>
         <thead>
@@ -17,10 +17,10 @@
         <?php $rowclass = ($k % 2 == 0) ? '' : ' class="alt"'; ?>
                     <tr<?php echo $rowclass ?>>
                         <td><?php echo $k++ ?></td>
-                        <td><?php echo $value['dos_module_usernames_username'] ?></td>
-                        <td><?php echo $value->dosModuleUsernamesUsername->cmnd ?></td>
-                        <td><?php echo $value['upgrade_date'] ?></td>
-                        <td><?php echo $value->dosModuleUsernamesUsername->level ?></td>
+                        <td><?php echo $value['receiver'] ?></td>
+                        <td><?php echo $value->receive_user->cmnd ?></td>
+                        <td><?php echo $value['time'] ?></td>
+                        <td><?php echo substr($value->detail, -1) ?></td>
                     </tr>
                 <?php endforeach ?>
             <?php else: ?>
