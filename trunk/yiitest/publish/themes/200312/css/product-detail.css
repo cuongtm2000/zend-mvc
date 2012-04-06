@@ -1,0 +1,27 @@
+/* Product Images */
+.product-view .product-img-box{ float:left; width:302px; margin:0 0 20px 0}
+.col3-layout .product-view .product-img-box { float:none; margin:0 auto; }
+.product-view .product-img-box .product-image { margin:0 0 10px; border:1px solid #E8E8E8; }
+.product-view .product-img-box .product-image-zoom { position:relative; width:280px; height:300px; overflow:hidden; z-index:9; }
+.product-view .product-img-box .product-image-zoom img { position:absolute; left:0; top:0; cursor:move; }
+.product-view .product-img-box .zoom-notice { margin:0 0 10px; text-align:center; }
+.product-view .product-img-box .zoom { position:relative; z-index:9; height:24px; margin:0 auto 13px; padding:0 28px; background:url(../images/slider_bg.gif) 50% 50% no-repeat; cursor:pointer; }
+.product-view .product-img-box .zoom.disabled { -moz-opacity:.3; -webkit-opacity:.3; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";/*IE8*/ opacity:.3; }
+.product-view .product-img-box .zoom #track { position:relative; height:18px; }
+.product-view .product-img-box .zoom #handle { position:absolute; left:0; top:9px; width:16px; height:18px; background:url(../images/magnifier_handle.gif) 0 0 no-repeat;  }
+.product-view .product-img-box .zoom .btn-zoom-out { position:absolute; left:10px; top:7px; }
+.product-view .product-img-box .zoom .btn-zoom-in { position:absolute; right:10px; top:7px; }
+
+.title-more{ font-size:10px; font-weight:normal; padding:0 0 2px; border-bottom:1px solid #eee; margin:0 0 8px; text-transform:uppercase; }
+
+
+
+/***  Right product detail   ***/
+.right-detail{ float:right;width:410px;margin:5px 0 0 0}
+.title-info{color:#000; font-size:10pt; font-weight:700; margin:0 0 10px 0}
+.right-detail-info{padding:0 10px 0 0}
+.right-detail-info p{margin:2px 0 !important; line-height:1.5em}
+.right-detail-info span{color:#FEB138; font-weight:700; font-size:12pt}
+.title-info a{color:#000; font-size:10pt;}
+.title-info a:hover{ text-decoration:underline; *_color:#109FEC}
+.right-detail-info li{list-style:none; padding:5px 0}
