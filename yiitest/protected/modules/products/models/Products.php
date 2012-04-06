@@ -237,7 +237,7 @@ class Products extends CActiveRecord {
 	public function listItemNew() {
 		$criteria = new CDbCriteria();
 		$criteria->with = array(__CLASS__ . 'Cat');
-		$criteria->select = 'title' . LANG . ', pic_thumb, tag, unit, hot';
+		$criteria->select = 'title' . LANG . ', pic_thumb, tag'.LANG.', unit, hot';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'dos_usernames_username=:user AND enable = 1';
 		$criteria->params = array(':user' => $this->_subdomain);
@@ -297,11 +297,11 @@ class Products extends CActiveRecord {
 	public function listItemOther($id, $cid) {
 		$criteria = new CDbCriteria();
 		$criteria->with = array(__CLASS__ . 'Cat');
-		$criteria->select = 'title' . LANG . ', pic_thumb, tag, unit, hot';
+		$criteria->select = 'title' . LANG . ', pic_thumb, tag'.LANG.', unit, hot';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'record_id NOT IN (:id) AND dos_module_item_cat_cat_id=:cid AND enable = 1';
 		$criteria->params = array(':id' => $id, ':cid' => $cid);
-		$criteria->limit = 2;
+		$criteria->limit = Yii::app()->controller->configs['products_num_paging_other'];
 
 		return $this::model()->findAll($criteria);
 	}

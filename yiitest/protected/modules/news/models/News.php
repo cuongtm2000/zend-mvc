@@ -275,7 +275,7 @@ class News extends CActiveRecord {
 
 	//Front end - find record_id by tag
 	private function getIDByTag($tag) {
-		$command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE tag=:tag');
+		$command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE tag'.LANG.'=:tag');
 		$command->bindParam(":tag", $tag, PDO::PARAM_STR);
 		return $command->queryScalar();
 	}
