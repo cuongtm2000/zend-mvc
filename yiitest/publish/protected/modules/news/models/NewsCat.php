@@ -194,15 +194,14 @@ class NewsCat extends CActiveRecord {
 		if ($type == 1) {
 			//for admin
 			if ($id != 0) {
-				$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . LANG . ', tag' . LANG . ', cat_enable FROM ' . $this->tableName() . ' WHERE cat_id != ' . $id . ' AND dos_usernames_username=:user ORDER BY cat_order DESC');
+				$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . LANG . ', tag' . LANG . ', cat_enable FROM ' . $this->tableName() . ' WHERE cat_id != ' . $id . ' ORDER BY cat_order DESC');
 			} else {
-				$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . LANG . ', tag' . LANG . ', cat_enable FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY cat_order DESC');
+				$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . LANG . ', tag' . LANG . ', cat_enable FROM ' . $this->tableName() . ' ORDER BY cat_order DESC');
 			}
 		} else {
-			$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . LANG . ', tag' . LANG . ', cat_enable FROM ' . $this->tableName() . ' WHERE cat_enable=1 AND dos_usernames_username=:user ORDER BY cat_order DESC');
+			$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . LANG . ', tag' . LANG . ', cat_enable FROM ' . $this->tableName() . ' WHERE cat_enable=1 ORDER BY cat_order DESC');
 		}
 
-		$command->bindParam(':user', $this->_subdomain, PDO::PARAM_STR);
 		$this->_rows = $command->queryAll();
 		$this->_rowsize = count($this->_rows);
 		for ($i = 0; $i < $this->_rowsize; $i++) {

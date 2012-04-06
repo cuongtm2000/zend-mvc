@@ -29,6 +29,8 @@ return array(
 
 	//contact modules
 	'<contact:(lien-he)>' => 'contact/default/index', //index
+
+	'<language:(vi|en)>/<module:\w+>' => '<module>/default/index', //ex: en/about, en/products
 	/*
 		'http://<subdomain:\w+>.dos.vn/<language:(vi|en)>' => 'default/default', //ex: /en
 		'http://<subdomain:\w+>.dos.vn' => 'default/default', //ex: /

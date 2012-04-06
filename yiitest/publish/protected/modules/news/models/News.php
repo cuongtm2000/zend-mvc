@@ -213,8 +213,7 @@ class News extends CActiveRecord {
 		$criteria->with = array(__CLASS__ . 'Cat');
 		$criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . '';
 		$criteria->order = 'record_order DESC, postdate DESC';
-		$criteria->condition = 'hot = 1 AND enable = 1 AND dos_usernames_username=:user';
-		$criteria->params = array(':user' => $this->_subdomain);
+		$criteria->condition = 'hot = 1 AND enable = 1';
 		$criteria->limit = Configs::configTemplate('news_num_paging_hot', Yii::app()->session['template']);
 
 		return $this::model()->findAll($criteria);
@@ -225,8 +224,7 @@ class News extends CActiveRecord {
 		$criteria->with = array('NewsCat');
 		$criteria->select = 'title' . LANG . ', pic_thumb, preview' . LANG . ', tag' . LANG . ', hot';
 		$criteria->order = 'record_order DESC, postdate DESC';
-		$criteria->condition = 'dos_usernames_username=:user AND enable = 1';
-		$criteria->params = array(':user' => $this->_subdomain);
+		$criteria->condition = 'enable = 1';
 		$count = News::model()->count($criteria);
 
 		// elements per page

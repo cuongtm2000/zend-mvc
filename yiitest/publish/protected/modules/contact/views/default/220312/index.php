@@ -1,4 +1,4 @@
-<?php $this->breadcrumbs = array($this->lang[$this->module->id] => LANGURL . '/' . Yii::t('user', $this->module->id.'.link')); ?>
+<?php $this->breadcrumbs = array($this->lang[$this->module->id] => Yii::app()->homeUrl . LANGURL . Yii::t('user', $this->module->id . '.link')); ?>
 
 <?php if(Yii::app()->user->hasFlash('contactSuccess')): ?>
     <div class="flash-success">
