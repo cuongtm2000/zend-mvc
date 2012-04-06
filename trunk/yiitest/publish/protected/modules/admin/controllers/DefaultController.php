@@ -26,7 +26,7 @@ class DefaultController extends AdminController {
         Yii::app()->clientScript->registerScript('', $script, CClientScript::POS_READY);
         
         //static counter
-        $counter = PcounterSave::model()->findByAttributes(array('save_name'=>'counter', 'dos_usernames_username'=>Yii::app()->user->id));
+        $counter = PcounterSave::model()->findByAttributes(array('save_name'=>'counter'));
         $this->render('index', array('counter' => $counter));
     }
 
