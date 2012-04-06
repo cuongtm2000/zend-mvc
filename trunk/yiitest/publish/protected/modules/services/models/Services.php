@@ -204,23 +204,20 @@ class Services extends CActiveRecord {
 
     //Front end - List menu
     public function listMenu() {
-        $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag' . Yii::app()->session['lang'] . ' FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
-        $command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
+        $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag' . Yii::app()->session['lang'] . ' FROM ' . $this->tableName() . ' WHERE activated = 1 ORDER BY record_order DESC, created DESC');
         return $command->queryAll();
     }
 
     //Front end - Get first record
     public function firstRecord() {
-        $command = Yii::app()->db->createCommand('SELECT title' . LANG . ', content' . LANG . ', description' . LANG . ' FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
-        $command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
+        $command = Yii::app()->db->createCommand('SELECT title' . LANG . ', content' . LANG . ', description' . LANG . ' FROM ' . $this->tableName() . ' WHERE activated = 1 ORDER BY record_order DESC, created DESC');
         return $command->queryRow();
     }
 
     //Front end - Get detail record
     public function detailRecord($tag) {
-        $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE tag' . Yii::app()->session['lang'] . '=:tag AND dos_usernames_username=:user');
+        $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE tag' . Yii::app()->session['lang'] . '=:tag AND activated = 1');
         $command->bindParam(":tag", $tag, PDO::PARAM_STR);
-        $command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
         $row = $command->queryRow();
         if ($row) {
             //Update hit

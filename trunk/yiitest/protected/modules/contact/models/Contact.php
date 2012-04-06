@@ -154,7 +154,7 @@ class Contact extends CActiveRecord {
     }
     //Front end - First record
     public function firstItem() {
-        $command = Yii::app()->db->createCommand('SELECT title'.LANG.', content'.LANG.', description FROM ' . $this->tableName() . ' WHERE hot=0 AND enable=1 AND dos_usernames_username=:user ORDER BY record_order DESC, create_date LIMIT 0, 1');
+        $command = Yii::app()->db->createCommand('SELECT title'.LANG.', content'.LANG.', description FROM ' . $this->tableName() . ' WHERE hot=0 AND enable=1 AND dos_usernames_username=:user ORDER BY record_order DESC, create_date DESC');
         $command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
         return $command->queryRow();
     }

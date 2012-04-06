@@ -163,14 +163,13 @@ class About extends CActiveRecord {
 
 	//Front end - get list Menu
 	public function listMenu() {
-		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag' . LANG . ' FROM ' . $this->tableName() . ' WHERE hot = 0 AND dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
-		$command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
+		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag' . LANG . ' FROM ' . $this->tableName() . ' WHERE hot = 0 AND activated = 1 ORDER BY record_order DESC, created DESC');
 		return $command->queryAll();
 	}
 
 	//Front end - Get home record
 	public function homeRecord() {
-		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit FROM ' . $this->tableName() . ' WHERE hot=1 ORDER BY record_order DESC, created DESC');
+		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit FROM ' . $this->tableName() . ' WHERE hot=1 AND activated = 1 ORDER BY record_order DESC, created DESC');
 		$row = $command->queryRow();
 		if ($row) {
 			//Update hit
@@ -181,8 +180,7 @@ class About extends CActiveRecord {
 
 	//Front end - Get first record
 	public function firstRecord() {
-		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
-		$command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
+		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE activated = 1 ORDER BY record_order DESC, created DESC');
 		$row = $command->queryRow();
 		if ($row) {
 			//Update hit
@@ -193,9 +191,8 @@ class About extends CActiveRecord {
 
 	//Front end - Get detail record
 	public function detailRecord($tag) {
-		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE tag' . LANG . '=:tag AND dos_usernames_username=:user');
+		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE tag' . LANG . '=:tag AND activated = 1');
 		$command->bindParam(":tag", $tag, PDO::PARAM_STR);
-		$command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
 		$row = $command->queryRow();
 		if ($row) {
 			//Update hit
