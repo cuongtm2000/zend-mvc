@@ -146,6 +146,7 @@ p{line-height: 19px}
 .captcha img{position: absolute; top: -9px; left: 15px}
 
 .left-content{float:left; width:73%}
+.left-content p{margin: 5px; padding: 5px}
 .right-content{float:right; width:25%}
 .title-right{background:#252525;color:#fff;padding:7px 2px 7px 15px;font-size:17px}
 .sub-right{list-style:none;padding:5px 0;margin:0 0 10px 0; background:#F8F7F3;border-left:1px solid #E1DED7;border-right:1px solid #E1DED7;border-bottom:1px solid #E1DED7;}

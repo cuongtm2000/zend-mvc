@@ -7,7 +7,7 @@
 			<th class="txt15"><input onclick="javascript: select_switch(this.checked);" type="checkbox" name="checkall" /></th>
 			<th class="txt60">Thứ tự</th>
 			<th>Tên danh mục</th>
-			<th>Số sản phẩm</th>
+			<th>Số mẫu tin</th>
 			<th>Thao tác</th>
 		</tr>
 		</thead>

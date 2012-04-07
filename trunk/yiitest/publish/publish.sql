@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 06, 2012 at 04:34 AM
+-- Generation Time: Apr 07, 2012 at 04:29 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -127,14 +127,14 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_cat_height', 150, '', '111120'),
 ('products_cat_height', 121, '', '130312'),
 ('products_cat_height', 170, '', '200312'),
-('products_cat_height', 120, '', '220312'),
+('products_cat_height', 150, '', '220312'),
 ('products_cat_height', 193, '', '260312'),
 ('products_cat_width', 115, '', '010312'),
 ('products_cat_width', 150, '', '070312'),
 ('products_cat_width', 169, '', '111120'),
 ('products_cat_width', 152, '', '130312'),
 ('products_cat_width', 170, '', '200312'),
-('products_cat_width', 150, '', '220312'),
+('products_cat_width', 200, '', '220312'),
 ('products_cat_width', 188, '', '260312'),
 ('products_height', 400, '', '010312'),
 ('products_height', 500, '', '070312'),
@@ -148,11 +148,12 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_height_thumb', 167, '', '111120'),
 ('products_height_thumb', 121, '', '130312'),
 ('products_height_thumb', 170, '', '200312'),
-('products_height_thumb', 120, '', '220312'),
+('products_height_thumb', 135, '', '220312'),
 ('products_height_thumb', 193, '', '260312'),
 ('products_num_paging_cat', 6, '', '220312'),
 ('products_num_paging_cat', 5, '', '260312'),
 ('products_num_paging_new', 4, '', '220312'),
+('products_num_paging_other', 2, '', '220312'),
 ('products_width', 500, '', '010312'),
 ('products_width', 600, '', '070312'),
 ('products_width', 700, '', '111120'),
@@ -165,7 +166,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_width_thumb', 167, '', '111120'),
 ('products_width_thumb', 152, '', '130312'),
 ('products_width_thumb', 170, '', '200312'),
-('products_width_thumb', 150, '', '220312'),
+('products_width_thumb', 200, '', '220312'),
 ('products_width_thumb', 188, '', '260312'),
 ('services_height', 90, '', '010312'),
 ('services_height', 110, '', '111120'),
@@ -365,40 +366,22 @@ CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
 --
 
 INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
+('about', '220312'),
 ('about', 'dos'),
-('about', 'mvc'),
-('about', 'test'),
-('about', 'thanhansoft'),
+('advs', '220312'),
 ('advs', 'dos'),
-('advs', 'mvc'),
-('advs', 'test'),
-('advs', 'thanhansoft'),
+('banner', '220312'),
 ('banner', 'dos'),
-('banner', 'mvc'),
-('banner', 'test'),
-('banner', 'thanhansoft'),
+('contact', '220312'),
 ('contact', 'dos'),
-('contact', 'mvc'),
-('contact', 'test'),
-('contact', 'thanhansoft'),
-('news', 'mvc'),
-('news', 'test'),
-('news', 'thanhansoft'),
+('news', '220312'),
+('products', '220312'),
 ('products', 'dos'),
-('products', 'mvc'),
-('products', 'test'),
-('products', 'thanhansoft'),
+('services', '220312'),
 ('services', 'dos'),
-('services', 'mvc'),
-('services', 'test'),
-('services', 'thanhansoft'),
+('supports', '220312'),
 ('supports', 'dos'),
-('supports', 'mvc'),
-('supports', 'test'),
-('supports', 'thanhansoft'),
-('video', 'mvc'),
-('video', 'test'),
-('video', 'thanhansoft');
+('video', '220312');
 
 -- --------------------------------------------------------
 
@@ -427,15 +410,17 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(1, 'sasadsad', '', '<p>\r\n	asdasdas aasa</p>', '', 5, '2012-04-01 13:47:55', 1, 0, NULL, NULL, 'sasadsad', '', 'asass', '', 1, 'mvc'),
-(2, 'asasa asa', '', '<p>\r\n	sasa as</p>', '', 308, '2012-04-01 13:48:11', 2, 1, NULL, NULL, 'asasa-asa', '', '', '', 1, 'mvc');
+(3, 'Giới thiệu sơ lược', 'Introduction About', '<p>\r\n	Ngày nay, khi ngày càng có nhiều thông tin được cung cấp trực tuyến, bạn càng cần phải sử dụng trình duyệt nhanh và an toàn trên máy tính. Giới thiệu về Google Chrome -- trình duyệt mở trang web với tốc độ cực nhanh! Thiết kế mượt mà của trình duyệt mang lại cho bạn nhiều không gian hơn để duyệt các trang web ưa thích của mình. Hướng dẫn này giúp bạn tìm hiểu qua các tính năng chính của Google Chrome.</p>', '<p>\r\n	Today, as more and more information is offered online, the more you need to use fast and secure browser on the computer. About Google Chrome - the browser open site with fast speed! Sleek design of the browser gives you more space to browse your favorite sites. This guide helps you learn the key features of Google Chrome.</p>', 159, '2012-04-05 02:12:08', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'introduction-about', 'Ngày nay, khi ngày càng có nhiều thông tin được cung cấp trực tuyến, bạn càng cần phải sử dụng trình duyệt nhanh và an toàn trên máy tính. Giới thiệu về Google Chrome -- trình duyệt mở trang web với tốc độ cực nhanh! Thiết kế mượt mà của trìn', '', 1, '220312'),
+(4, 'Giới thiệu chung', 'Introduction', '<p>\r\n	Giới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chung</p>', '<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>\r\n<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>\r\n<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>', 12, '2012-04-05 02:29:35', 2, 0, NULL, NULL, 'gioi-thieu-chung', 'introduction', 'Giới thiệu chungGiới thiệu chung', 'Introduction Introduction Introduction Introduction', 1, '220312'),
+(5, 'Giới thiệu Văn phòng đại diện', 'About a representative office', '<p>\r\n	Giới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diện</p>', '<p>\r\n	About a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative office</p>', 59, '2012-04-05 02:29:55', 3, 0, NULL, NULL, 'gioi-thieu-van-phong-dai-dien', 'about-a-representative-office', 'Giới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diện', 'About a representative officeAbout a representative office', 1, '220312'),
+(6, 'Tieu de gioi thieu', 'English', '<p>\r\n	Noi dung</p>', '<p>\r\n	Noi dung english</p>', 22, '2012-04-06 23:47:01', 4, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'english', '', '', 1, '220312');
 
 -- --------------------------------------------------------
 
@@ -460,14 +445,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `dos_module_advs`
 --
 
 INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`, `dos_usernames_username`) VALUES
-(1, 'Tieu de', NULL, 'tieu-de.jpg', 'http://grouplaptrinh.com', '2012-04-02 01:18:34', '2012-04-01 17:00:00', '2012-04-11 17:00:00', 0, 1, 'left', '_bank', 1, 'mvc');
+(2, 'Pa nội thất', NULL, 'pa-noi-that.jpg', 'http://grouplaptrinh.com', '2012-04-05 02:16:24', '2012-04-04 16:00:00', '2012-05-22 16:00:00', 0, 1, 'left', '_bank', 1, '220312');
 
 -- --------------------------------------------------------
 
@@ -514,7 +499,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_contacts_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_module_contacts`
+--
+
+INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `tagen`, `description`, `descriptionen`, `enable`, `dos_usernames_username`) VALUES
+(1, 'Liên hệ với chúng tôi', '', '<p>\r\n	CÔNG TY CỔ PHẦN TM SX THẾ GIỚI NỘI THẤT</p>\r\n<p>\r\n	Trụ sở: 321 CỘNG HÒA, PHƯỜNG 13, TÂN BÌNH, TP.HCM</p>\r\n<p>\r\n	Nhà máy : C7/21 PHẠM HÙNG, CHÁNH HƯNG BÌNH CHÁNH</p>\r\n<p>\r\n	MST: 0309788812</p>\r\n<p>\r\n	Điện thoại : (+848) 6292 3934 - Fax: (+848) 6292 3935</p>\r\n<p>\r\n	Hotline: 0942852858--0942 853 443 - Email : thegioinoithatvn@gmail.com</p>', '', '2012-04-05 02:20:31', 1, 0, 0, 'lien-he-voi-chung-toi', '', '', '', '1', '220312');
 
 -- --------------------------------------------------------
 
@@ -541,13 +533,13 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 --
 
 INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
-('Trang chủ', '', 'default', '', 1, NULL, NULL, NULL, NULL, 'mvc'),
-('Giới thiệu', '', 'about', '', 2, NULL, NULL, NULL, NULL, 'mvc'),
-('Sản phẩm', '', 'products', '', 3, NULL, NULL, NULL, NULL, 'mvc'),
-('Dịch vụ', '', 'services', '', 4, NULL, NULL, NULL, NULL, 'mvc'),
-('Tin tức &amp; sự kiện', '', 'news', '', 5, NULL, NULL, NULL, NULL, 'mvc'),
-('Video', '', 'video', '', 6, NULL, NULL, NULL, NULL, 'mvc'),
-('Liên hệ', '', 'contact', '', 7, NULL, NULL, NULL, NULL, 'mvc');
+('Trang chủ', 'Home page', 'default', '', 1, NULL, NULL, NULL, NULL, '220312'),
+('Giới thiệu', 'About Us', 'about', '', 2, NULL, NULL, NULL, NULL, '220312'),
+('Sản phẩm', 'Products', 'products', '', 3, NULL, NULL, NULL, NULL, '220312'),
+('Dịch vụ', 'Services', 'services', '', 4, NULL, NULL, NULL, NULL, '220312'),
+('Tin tức &amp; sự kiện', 'News', 'news', '', 5, NULL, NULL, NULL, NULL, '220312'),
+('Video', 'Video', 'video', '', 6, NULL, NULL, NULL, NULL, '220312'),
+('Liên hệ', 'Contact Us', 'contact', '', 7, NULL, NULL, NULL, NULL, '220312');
 
 -- --------------------------------------------------------
 
@@ -578,17 +570,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `dos_module_news`
 --
 
 INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(1, 'Tieu de tin chức', '', '2012-03-31 02:24:01', 'tieu-de-tin-chuc.jpg', '<p>\r\n	Gioi thieu so luoc</p>', '', '<p>\r\n	Noi dung</p>', '', 'tieu-de-tin-chuc', '', '', '', 0, 1, 0, NULL, NULL, 1, 1),
-(2, 'Tieu de', '', '2012-03-31 02:46:51', '', '<p>\r\n	Gioi thieu</p>', '', '<p>\r\n	Noi dung</p>', '', 'tieu-de', '', 'asdasds', '', 0, 2, 0, NULL, NULL, 1, 1),
-(3, 'Tieasdsaioi thieu', '', '2012-03-31 02:48:24', 'tieasdsaioi-thieu.jpg', '<p>\r\n	Gasdasd</p>', '', '<p>\r\n	asdsadsa</p>', '', 'tieasdsaioi-thieu', '', '', '', 0, 3, 1, NULL, NULL, 1, 1),
-(4, 'sdsdfdsf', '', '2012-04-02 01:07:26', '', '<p>\r\n	sdfsdf</p>', '', '<p>\r\n	sdfds</p>', '', 'sdsdfdsf', '', '', '', 0, 4, 0, NULL, NULL, 1, 4);
+(5, '20 năm nữa, TP HCM có thể lụt như Bangkok', '20 years, Ho Chi Minh City Bangkok may flood as', '2012-04-05 02:27:41', '', '<p>\r\n	Sau thời gian nghiên cứu ngập lụt ở Bangkok (Thái Lan), PGS. TS Hồ Long Phi khẳng định, vài chục năm nữa TP HCM có khả năng xảy ra một trận lụt với thiệt hại tương tự như Bangkok.</p>', '<p>\r\n	20 years, Ho Chi Minh City Bangkok may flood as20 years, Ho Chi Minh City Bangkok may flood as20 years, Ho Chi Minh City Bangkok may flood as</p>', '<p>\r\n	Sau thời gian nghiên cứu ngập lụt ở Bangkok (Thái Lan), PGS. TS Hồ Long Phi khẳng định, vài chục năm nữa TP HCM có khả năng xảy ra một trận lụt với thiệt hại tương tự như Bangkok.<br />\r\n	&gt; ''TP HCM sẽ lụt như Bangkok nếu phát triển như hiện nay''/ Toàn cảnh trận lụt lịch sử ở Thái Lan</p>\r\n<p>\r\n	Chiều 4/4, tại hội nghị sơ kết một năm thực hiện chương trình giảm ngập nước ở thành phố giai đoạn 2011-2015, PGS. TS Hồ Long Phi, Phó ban điều phối chương trình chống ngập TP HCM cho biết, sau một thời gian nghiên cứu ngập lụt ở Bangkok (Thái Lan) đã rút ra được bài học và xây dựng đề án hành động giải quyết ngập lụt ở TP HCM.</p>\r\n<br /><p>\r\n	Nước lũ bao phủ cả khu vực rộng lớn phía bắc thủ đô Bangkok (Thái Lan). Màu đỏ của những mái nhà và màu xanh cây cối nổi lên giữa phông nền nước lũ. Ảnh: Kyodo.<br />\r\n	Theo ông Phi, bài học lớn nhất từ ngập lụt ở Bangkok là không nên tin tuyệt đối vào năng lực bảo vệ của các công trình chống ngập. Các giải pháp thích nghi, giảm nhẹ thiệt hại và sẵn sàng ứng phó luôn cần được dự trù.</p>\r\n<p>\r\n	Vị phó giáo sư cho rằng, thay vì ỷ lại hoàn toàn vào sự bảo vệ của các công trình đê bao chống ngập, TP HCM nên phát triển theo hình thức ECO2 (vừa phát triển kinh tế vừa phát triển sinh thái). Đồng thời, thay vì lấn chiếm không gian dành cho nước ở các vùng trũng thấp, một hành lang thoát lũ khẩn cấp cần được dự trù để đề phòng trường hợp các dòng sông không còn đủ năng lực thoát nước trong điều kiện mưa lũ đặc biệt lớn.</p>\r\n<p>\r\n	Bài học thứ hai mà TP HCM nên nghiên cứu từ trận lụt ở Bangkok là việc quản lý tài nguyên nước. Theo ông Phi, các hồ chứa thường được thiết kế và vận hành thiên về cấp nước tưới hay phát điện mà thiếu quan tâm đến điều tiết lũ. "Vì thế, TP HCM cần thiết lập quy trình vận hành hồ chứa đa mục tiêu để tăng cường khả năng điều tiết lũ", ông Phi đề nghị.</p>', '<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.<br />\r\n	&gt; ''As Bangkok, Ho Chi Minh City will flood if the current development'' / Overview of the flood history in Thailand</p>\r\n<p>\r\n	Afternoon of 4/4, at a preliminary conference in the program reduce flooding in the city in 2011-2015, Assoc. Dr. Ho Long Phi, deputy coordinating programs to prevent flooding HCM City, said after a flood studies in Bangkok (Thailand) has drawn lessons and build action plan address flood in Ho Chi Minh City.</p>\r\n<br /><p>\r\n	Floodwaters covered the large area north of the capital Bangkok (Thailand). The red color of the roofs and green trees rise between the flood wallpaper. Photo: Kyodo.<br />\r\n	According to Africa, the biggest lesson from flooding in Bangkok is not absolute protection in the capacity of the works to prevent flooding. The solution adaptation, mitigation and preparedness should always be planned.</p>\r\n<p>\r\n	The associate professor said that instead of relying entirely on the protection of the dike to prevent flooding works, Ho Chi Minh City should develop in the form of ECO2 (both economic development has developed eco). Also, instead of encroaching upon the space reserved for low-lying areas, a flood emergency corridors should be planned for in case the river is no longer sufficient drainage capacity in terms of special flood big difference.</p>\r\n<p>\r\n	The second lesson that should HCM City from the flood studies in Bangkok was the management of water resources. According to Africa, the reservoirs are usually designed and operated natural water supply or electricity, but lack of interest in flood control. "Therefore, HCM City needs to establish operating procedures for multi-purposes reservoirs to enhance flood control," said African proposal.</p>\r\n<p>\r\n	Another lesson should also be taken into account as forecasting and information management plays an important role in reducing damage caused by flooding. Information correct early and high probability will support the work of running. He cited Africa, Deputy Director of the Meteorological Thai government plans equipped with radar rainfall forecasts $ 130 million. However, this system was not equipped in time. "If there''s time will help the Thai government has more than enough information in decision making," said Africa.</p>\r\n<p>\r\n	From the analysis of the similarities are fairly between Bangkok and Ho Chi Minh City as the cause flooding due to upstream flooding, heavy rains, high tides, water levels, many low-lying terrain areas, subsidence and compared Compare the Flood Risk factor system to prevent flooding ... Ho Long Phi made the comment, if any city retains the current development is mainly based on the works to prevent flooding, the 20 years, Ho Chi Minh City will likely occur a game flooded with damage similar to Bangkok in 2011.</p>\r\n<p>\r\n	He said today''s most dangerous thing for Ho Chi Minh City is not tide or sea level rise that is larger storms occur in the basin of Sai Gon - Dong Nai late rainy season, coinciding with the flooding in the Mekong Delta. At that time, the upstream reservoir was almost full of water. So the solution must be calculated to minimize the damage.</p>\r\n<p>\r\n	Deputy executive proposed program to prevent flooding HCMC need to act now to prevent flooding. Four African action which he proposed the drafting and promulgating regulations for the space, setting up early warning systems and response procedures, establish operating procedures for multi-purposes reservoirs, priority first investment in urban drainage.</p>', '20-nam-nua-tp-hcm-co-the-lut-nhu-bangkok', '20-years-ho-chi-minh-city-bangkok-may-flood-as', 'Sau thời gian nghiên cứu ngập lụt ở Bangkok (Thái Lan), PGS. TS Hồ Long Phi khẳng định, vài chục năm nữa TP HCM có khả năng xảy ra một trận lụt với thiệt hại tương tự như Bangkok.', 'He said today''s most dangerous thing for Ho Chi Minh City is not tide or sea level rise that is larger storms occur in the basin of Sai Gon - Dong Nai late rainy season, coinciding with the flooding in the Mekong Delta. At that time, the upstream res', 0, 1, 1, NULL, NULL, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -615,17 +604,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `dos_module_news_cat`
 --
 
 INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(1, 0, 'Danh mục tin tức', '', NULL, NULL, 'danh-muc-tin-tuc', '', 'Mô tả', '', '', 1, NULL, NULL, 1, 'mvc'),
-(2, 1, 'Sub', '', NULL, NULL, 'sub', '', '', '', '', 2, NULL, NULL, 1, 'mvc'),
-(3, 0, 'Danh mục 2', '', NULL, NULL, 'danh-muc-2', '', 'Mo ta', '', '', 3, NULL, NULL, 1, 'mvc'),
-(4, 0, 'Danh muc', '', NULL, NULL, 'danh-muc', '', 'Mo ta', '', '', 4, NULL, NULL, 1, 'mvc');
+(5, 0, 'Xã hội', 'Social', NULL, NULL, 'xa-hoi', 'social', 'Xã hội', 'Social', '', 1, NULL, NULL, 1, '220312');
 
 -- --------------------------------------------------------
 
@@ -643,7 +629,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456024),
+('day_time', 2456025),
 ('max_count', 1),
 ('counter', 1),
 ('yesterday', 1);
@@ -664,7 +650,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1333678282);
+('''127.0.0.1''', 1333785427);
 
 -- --------------------------------------------------------
 
@@ -701,17 +687,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `dos_module_products`
 --
 
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(2, 'adsad', '', '2012-04-01 01:42:30', 'adsad-thumb.jpg', 'adsad.jpg', NULL, NULL, NULL, '<p>\r\n	sdasdsa</p>', '', 'adsad', '', '', '', 0, 1, NULL, 0, NULL, NULL, NULL, NULL, NULL, 1, 6),
-(3, 'adsdas', '', '2012-04-01 14:05:08', 'adsdas-thumb.jpg', '', NULL, NULL, NULL, '<p>\r\n	sdadsdas</p>', '', 'adsdas', '', '', '', 0, 2, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, 6),
-(4, 'asdsadsa', '', '2012-04-01 14:05:37', 'asdsadsa-thumb.jpg', '', NULL, NULL, NULL, '<p>\r\n	sdasdsad</p>', '', 'asdsadsa', '', '', '', 0, 3, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, 6),
-(5, 'sdf dsfdsf', '', '2012-04-01 14:05:58', 'sdf-dsfdsf-thumb.jpg', '', NULL, NULL, NULL, '<p>\r\n	sdf sdf</p>', '', 'sdf-dsfdsf', '', '', '', 0, 4, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, 6);
+(6, 'Nội thất bếp treo tường', 'Kitchen wall', '2012-04-05 03:08:09', '', '', NULL, NULL, NULL, '<p>\r\n	Nội thất bếp treo tường Nội thất bếp treo tường</p>', '<p>\r\n	Kitchen wall Kitchen wall Kitchen wall Kitchen wall</p>', 'noi-that-bep-treo-tuong', 'kitchen-wall', 'noi-that-bep-treo-tuong', 'Kitchen wall', 0, 1, 9990000, 1, NULL, NULL, NULL, NULL, NULL, 1, 10),
+(7, 'Nội thất bếp thời trang', 'Kitchen Furniture Fashion', '2012-04-05 03:09:20', '', 'noi-that-bep-thoi-trang.jpg', NULL, NULL, NULL, '<p>\r\n	Nội thất bếp thời trangNội thất bếp thời trangNội thất bếp thời trangNội thất bếp thời trangNội thất bếp thời trang</p>', '<p>\r\n	Kitchen Furniture FashionKitchen Furniture Fashionv Kitchen Furniture Fashion</p>', 'noi-that-bep-thoi-trang', 'kitchen-furniture-fashion', 'Nội thất bếp thời trangNội thất bếp thời trang', 'Kitchen Furniture Fashion Kitchen Furniture Fashion', 0, 2, 2999999, 1, NULL, NULL, NULL, NULL, NULL, 1, 10);
 
 -- --------------------------------------------------------
 
@@ -739,16 +723,17 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
 --
 
 INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(4, 0, 'Danh muc', '', NULL, NULL, 'danh-muc', '', 'Mo ta', '', '', NULL, 1, NULL, NULL, 1, 'mvc'),
-(5, 4, 'Danh muc con', '', NULL, NULL, 'danh-muc-con', '', '', '', '', NULL, 2, NULL, NULL, 1, 'mvc'),
-(6, 0, 'Danh muc 2', '', NULL, NULL, 'danh-muc-2', '', '', '', '', NULL, 3, NULL, NULL, 1, 'mvc');
+(7, 0, 'Nội thất sofa phòng khách', 'Furniture living room sofa', NULL, NULL, 'noi-that-sofa-phong-khach', 'furniture-living-room-sofa', 'Nội thất sofa khách', 'Furniture living room sofa', 'noi-that-sofa-phong-khach.jpg', NULL, 1, NULL, NULL, 1, '220312'),
+(8, 0, 'Nội thất bếp', 'Interior new kitchen', NULL, NULL, 'noi-that-bep', 'interior-new-kitchen', 'Noi that bep', 'Interior new kitchen', 'noi-that-bep.jpg', NULL, 2, NULL, NULL, 1, '220312'),
+(9, 0, 'Nội thất giường ngủ loại 1 chuyen cho vip nhat', 'Interior of a specialized bed for vip nhat', NULL, NULL, 'noi-that-giuong-ngu-loai-1-chuyen-cho-vip-nhat', 'interior-of-a-specialized-bed-for-vip-nhat', 'Nội thất giường ngủ loại 1 chuyen cho vip nhat', 'Interior of a specialized bed for vip nhat', 'noi-that-giuong-ngu-loai-1-chuyen-cho-vip-nhat.jpg', NULL, 3, NULL, NULL, 1, '220312'),
+(10, 0, 'Nhà bếp', 'Kitchen Furniture', NULL, NULL, 'nha-bep', 'kitchen-furniture', 'Nha bep', 'Kitchen Furniture', 'nha-bep.jpg', NULL, 4, NULL, NULL, 1, '220312');
 
 -- --------------------------------------------------------
 
@@ -779,15 +764,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `dos_module_services`
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(1, 'Dich vu', '', NULL, NULL, '<p>\r\n	Noi dung</p>', '', '', 4, '2012-04-01 13:59:00', 1, 0, NULL, NULL, 'dich-vu', '', '', '', 1, 'mvc'),
-(2, 'Tieu de', '', NULL, NULL, '<p>\r\n	Noi dung</p>', '', '', 4, '2012-04-01 13:59:16', 2, 0, NULL, NULL, 'tieu-de', '', '', '', 1, 'mvc');
+(3, 'Dịch vụ vẫn chuyển', 'Transport services', NULL, NULL, '<p>\r\n	Vận chuyển mọi nơi mọi lúc nếu khách yêu cầu</p>', '<p>\r\n	Shipping anywhere, anytime if requestedShipping anywhere, anytime if requestedShipping anywhere, anytime if requestedShipping anywhere, anytime if requested</p>', 'dich-vu-van-chuyen.jpg', 4, '2012-04-05 02:28:54', 1, 0, NULL, NULL, 'dich-vu-van-chuyen', 'transport-services', 'Vận chuyển mọi nơi mọi lúc nếu khách yêu cầu', 'Shipping anywhere, anytime if requested', 1, '220312');
 
 -- --------------------------------------------------------
 
@@ -806,7 +790,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `dos_module_supports`
+--
+
+INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
+(2, 'Hỗ trợ mua hàng', '', '01230 456 789', 'mailgoogle', 2, 'yahoo', '220312'),
+(3, 'Hỗ trợ kinh doanh', '', '0909 999 888', 'groupitsoft', 1, 'yahoo', '220312');
 
 -- --------------------------------------------------------
 
@@ -834,16 +826,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_video` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_video_dos_module_video_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `dos_module_video`
 --
 
 INSERT INTO `dos_module_video` (`record_id`, `title`, `titleen`, `postdate`, `tag`, `tagen`, `description`, `descriptionen`, `pic_thumb`, `url`, `record_order`, `hits`, `extra_field1`, `extra_field2`, `hot`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(1, 'Asus demo', '', '2012-03-31 11:38:51', 'asus-demo', '', 'Mo ta video', '', 'asus-demo.png', 'http://www.youtube.com/watch?v=0i2Xu87brR8&feature=fvwrel', 1, 0, NULL, NULL, 1, 1, 1),
-(2, 'asdsadsad', '', '2012-03-31 11:44:59', 'asdsadsad', '', 'dffdfd', '', 'asdsadsad.jpg', 'http://www.youtube.com/watch?v=_ioNXTAo1Pc', 2, 0, NULL, NULL, 0, 1, 1),
-(3, 'sdsd', '', '2012-03-31 11:45:16', 'sdsd', '', '', '', 'sdsd.jpg', 'http://www.youtube.com/watch?v=0i2Xu87brR8&feature=fvwrel', 3, 0, NULL, NULL, 0, 1, 1);
+(1, 'Asus demo', 'Asus demo', '2012-04-07 01:23:49', 'asus-demo', 'asus-demo', '', '', 'asus-demo.jpg', 'http://www.youtube.com/watch?v=0i2Xu87brR8&feature=fvwrel', 1, 0, NULL, NULL, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -866,15 +856,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_video_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `dos_module_video_cat`
 --
 
 INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat_title`, `cat_titleen`, `tag`, `tagen`, `description`, `descriptionen`, `cat_order`, `cat_enable`, `dos_usernames_username`) VALUES
-(1, 0, '', 'Danh mục Video', '', 'danh-muc-video', '', 'Mô tả danh muc video', '', 1, 1, 'mvc'),
-(2, 1, '', 'adsadasd', '', 'adsadasd', '', '', '', 2, 1, 'mvc');
+(1, 0, '', 'Video', 'Video En', 'video', 'video-en', '', '', 1, 1, '220312');
 
 -- --------------------------------------------------------
 
@@ -894,7 +883,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
 --
 
 INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
-('analytics', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-30151015-1'']);\r\n  _gaq.push([''_setDomainName'', ''dos.vn'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>', 'dos');
+('keywords', 'Thanhansoft, thanhan, Hoiit.com', '220312'),
+('description', 'THanhansoft information technology', '220312'),
+('title', 'Tieu de trang web', '220312');
 
 -- --------------------------------------------------------
 
@@ -1189,6 +1180,7 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('220312', 'news', 'menu_news'),
 ('220312', 'news', 'news_hot'),
 ('220312', 'news', 'news_new'),
+('220312', 'products', 'list_supports'),
 ('220312', 'products', 'menu_products'),
 ('220312', 'products', 'news_new'),
 ('220312', 'services', 'menu_services'),
@@ -1247,10 +1239,8 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 --
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi', NULL, '0000-00-00 00:00:00', 1, '111120', 2, 'thoi-trang'),
-('mvc', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-03-31 02:21:57', '', '', '', 'admin', 'vi|en', NULL, '2012-04-29 17:00:00', 1, '220312', 19, 'noi-that-ngoai-that'),
-('test', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-01 02:09:48', NULL, NULL, NULL, 'user', 'vi', NULL, '2012-04-30 17:00:00', 1, '220312', 1, 'noi-that-ngoai-that'),
-('thanhansoft', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-02 07:14:27', NULL, NULL, NULL, 'user', 'vi', NULL, '2012-05-01 17:00:00', 1, '220312', 19, 'noi-that-ngoai-that');
+('220312', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-05 02:08:09', NULL, NULL, NULL, 'admin', 'vi|en', NULL, '2012-05-04 16:00:00', 1, '220312', 2, 'cong-nghe-thong-tin-vien-thong'),
+('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi', NULL, '0000-00-00 00:00:00', 1, '111120', 2, 'thoi-trang');
 
 -- --------------------------------------------------------
 

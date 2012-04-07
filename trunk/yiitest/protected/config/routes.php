@@ -50,8 +50,10 @@ return array(
 
     'rss.xml' => 'site/rss',
     'read-rss' => 'site/readrss',
-    'dang-ky|sign-up' => 'site/signup',
+    'dang-ky' => 'site/signup',
     '<language:(vi|en)>/signup' => 'site/signup',
+	'lien-he' => 'site/contact',
+	'<language:(vi|en)>/contact-us' => 'site/contact',
     
     'activate/<email:.*?>/<code:[A-Za-z0-9]+>' => 'activate/index', //activate user
 
@@ -65,6 +67,12 @@ return array(
 	'<articles:(articles|bai-viet)>/<cid:[-a-z0-9]+>' => array('articles/cats'),
 	'<language:(vi|en)>/<articles:(articles|bai-viet)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('articles/view', 'urlSuffix' => '.html'),
 	'<articles:(articles|bai-viet)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('articles/view', 'urlSuffix' => '.html'),
+
+	//aboutus controller
+	'<language:(vi|en)>/<aboutus:(about-us)>' => array('aboutus/index'), //index
+	'<aboutus:(gioi-thieu)>' => array('aboutus/index'), //index
+	'<language:(vi|en)>/<aboutus:(about-us)>/<id:[-a-z0-9]+>' => array('aboutus/view', 'urlSuffix' => '.html'), //view
+	'<aboutus:(gioi-thieu)>/<id:[-a-z0-9]+>' => array('aboutus/view', 'urlSuffix' => '.html'), //view
     
     //modules multi language
     '<language:(vi|en)>' => 'site/index',

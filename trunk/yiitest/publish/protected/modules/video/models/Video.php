@@ -26,15 +26,15 @@
  * @property DosModuleVideoCat $dosModuleItemCatCat
  */
 class Video extends CActiveRecord {
-	private $_subdomain;
+	//private $_subdomain;
 
 	public $remove_pic_thumb;
 	private $_oldImage;
 	private $_model;
 
-	public function init() {
-		$this->_subdomain = Yii::app()->session['subdomain'];
-	}
+	//public function init() {
+	//	$this->_subdomain = Yii::app()->session['subdomain'];
+	//}
 
 	public static function model($className = __CLASS__) {
 		return parent::model($className);
@@ -184,8 +184,7 @@ class Video extends CActiveRecord {
 	}
 
 	public function itemHot() {
-		$command = Yii::app()->db->createCommand('SELECT title' . LANG . ', ' . $this->tableName() . '.pic_thumb, url FROM ' . $this->tableName() . ', ' . $this->tableName() . '_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = ' . $this->tableName() . '_cat.cat_id AND hot=1 AND enable = 1 AND dos_usernames_username=:user ORDER BY record_order DESC, postdate DESC');
-		$command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
+		$command = Yii::app()->db->createCommand('SELECT title' . LANG . ', ' . $this->tableName() . '.pic_thumb, url FROM ' . $this->tableName() . ', ' . $this->tableName() . '_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = ' . $this->tableName() . '_cat.cat_id AND hot=1 AND enable = 1 ORDER BY record_order DESC, postdate DESC');
 		return $command->queryRow();
 	}
 
@@ -194,8 +193,7 @@ class Video extends CActiveRecord {
 		$criteria->with = array(__CLASS__ . 'Cat');
 		$criteria->select = 'title' . LANG . ', pic_thumb, url, hot';
 		$criteria->order = 'record_order DESC, postdate DESC';
-		$criteria->condition = 'dos_usernames_username=:user AND enable = 1';
-		$criteria->params = array(':user' => Yii::app()->session['subdomain']);
+		$criteria->condition = 'enable = 1';
 		$count = $this::model()->count($criteria);
 
 		// elements per page

@@ -1,0 +1,85 @@
+2012/04/07 03:18:55 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "Video._subdomain" chưa được định nghĩa.' in C:\xampp\php\library\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(144): CComponent->__get('_subdomain')
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\video\models\Video.php(188): CActiveRecord->__get('_subdomain')
+#2 E:\Customers\dos.vn\svn\publish\protected\components\Controller.php(60): Video->itemHot()
+#3 C:\xampp\php\library\framework\web\CWebApplication.php(275): Controller->init()
+#4 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#5 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#7 {main}
+REQUEST_URI=/publish/
+---
+2012/04/07 03:27:52 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`record_id`) FROM `dos_module_video` `t`  LEFT OUTER JOIN `dos_module_video_cat` `VideoCat` ON (`t`.`dos_module_item_cat_cat_id`=`VideoCat`.`cat_id`)  WHERE (dos_usernames_username=:user AND enable = 1).
+in E:\Customers\dos.vn\svn\publish\protected\modules\video\models\Video.php (198)
+in E:\Customers\dos.vn\svn\publish\protected\modules\video\controllers\DefaultController.php (9)
+in E:\Customers\dos.vn\svn\publish\index.php (16)
+2012/04/07 03:27:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`record_id`) FROM `dos_module_video` `t`  LEFT OUTER JOIN `dos_module_video_cat` `VideoCat` ON (`t`.`dos_module_item_cat_cat_id`=`VideoCat`.`cat_id`)  WHERE (dos_usernames_username=:user AND enable = 1)' in C:\xampp\php\library\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\php\library\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\php\library\framework\db\ar\CActiveFinder.php(762): CDbCommand->queryScalar()
+#2 C:\xampp\php\library\framework\db\ar\CActiveFinder.php(155): CJoinElement->count(Object(CDbCriteria))
+#3 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(1540): CActiveFinder->count(Object(CDbCriteria))
+#4 E:\Customers\dos.vn\svn\publish\protected\modules\video\models\Video.php(198): CActiveRecord->count(Object(CDbCriteria))
+#5 E:\Customers\dos.vn\svn\publish\protected\modules\video\controllers\DefaultController.php(9): Video->listItemsIndex()
+#6 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#7 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('index')
+#11 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('video/default/i...')
+#12 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/publish/video
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien
+---
+2012/04/07 03:37:25 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "VideoCat._subdomain" chưa được định nghĩa.' in C:\xampp\php\library\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(144): CComponent->__get('_subdomain')
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\video\models\VideoCat.php(192): CActiveRecord->__get('_subdomain')
+#2 E:\Customers\dos.vn\svn\publish\protected\modules\admin\controllers\VideoController.php(19): VideoCat->listCats(0, NULL, 1)
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): VideoController->actionCats()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('cats')
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/video/cat...')
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#11 {main}
+REQUEST_URI=/publish/admin/video/cats
+HTTP_REFERER=http://dos.vn/publish/admin/video
+---
+2012/04/07 03:42:42 [error] [php] Undefined index: title (E:\Customers\dos.vn\svn\publish\themes\220312\views\layouts\main.php:162)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(785): DefaultController->renderFile()
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): DefaultController->render()
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#4 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#5 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CWebApplication->run()
+REQUEST_URI=/publish/en
+in E:\Customers\dos.vn\svn\publish\themes\220312\views\layouts\main.php (162)
+in E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php (8)
+in E:\Customers\dos.vn\svn\publish\index.php (16)
+2012/04/07 03:42:58 [error] [php] Undefined index: title (E:\Customers\dos.vn\svn\publish\themes\220312\views\layouts\main.php:162)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(785): DefaultController->renderFile()
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): DefaultController->render()
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#4 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#5 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CWebApplication->run()
+REQUEST_URI=/publish/en
+in E:\Customers\dos.vn\svn\publish\themes\220312\views\layouts\main.php (162)
+in E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php (8)
+in E:\Customers\dos.vn\svn\publish\index.php (16)

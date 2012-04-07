@@ -162,6 +162,45 @@ class About extends CActiveRecord {
 		return parent::beforeSave();
 	}
 
+	/**
+	 * Front end for main Dos.vn - get list Menu by Username: dos
+	 * @return mixed
+	 */
+	public function listMenuByDos() {
+		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag' . LANG . ' FROM ' . $this->tableName() . ' WHERE hot = 0 AND activated = 1 AND dos_usernames_username=\'dos\' ORDER BY record_order DESC, created DESC');
+		return $command->queryAll();
+	}
+
+	/**
+	 * Front end for main Dos.vn - Get first record by Username: dos
+	 * @return mixed
+	 */
+	public function firstRecordByDos() {
+		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE activated = 1 AND dos_usernames_username=\'dos\' ORDER BY record_order ASC, created ASC');
+		$row = $command->queryRow();
+		if ($row) {
+			//Update hit
+			$this->updateHit($row['hit'] + 1, $row['record_id']);
+			return $row;
+		}
+	}
+
+	/**
+	 * Front end for main Dos.vn - Get detail record by Username: dos
+	 * @param $tag
+	 * @return mixed
+	 */
+	public function detailRecordByDos($tag) {
+		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE tag' . LANG . '=:tag AND dos_usernames_username=\'dos\'');
+		$command->bindParam(":tag", $tag, PDO::PARAM_STR);
+		$row = $command->queryRow();
+		if ($row) {
+			//Update hit
+			$this->updateHit($row['hit'] + 1, $row['record_id']);
+			return $row;
+		}
+	}
+
 	//Front end - get list Menu
 	public function listMenu() {
 		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag' . LANG . ' FROM ' . $this->tableName() . ' WHERE hot = 0 AND activated = 1 AND dos_usernames_username=:user ORDER BY record_order DESC, created DESC');

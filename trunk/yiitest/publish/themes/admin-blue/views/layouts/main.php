@@ -31,11 +31,11 @@
             <div class="lang"><a href="<?php echo Yii::app()->request->baseUrl ?>/admin" title="Viet nam"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/vn.gif" alt="Viet nam" /></a> <a href="<?php echo Yii::app()->request->baseUrl ?>/en/admin" title="English"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/en.gif" alt="English" /></a></div>
         </div>
         <ul id="tabs">
-            <li><a href="/admin"<?php echo ($this->id =='default') ? ' class="select"' : ''?>><span>Trang chủ</span></a></li>
-            <li><a href="/admin/configs"<?php echo ($this->id =='configs') ? ' class="select"' : ''?>><span>Cấu hình &amp; cài đặt</span></a></li>
-            <li><a href="/admin/report"<?php echo ($this->id =='report') ? ' class="select"' : ''?>><span>Báo cáo &amp; công cụ</span></a></li>
+            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/admin"<?php echo ($this->id =='default') ? ' class="select"' : ''?>><span>Trang chủ</span></a></li>
+            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/admin/configs"<?php echo ($this->id =='configs') ? ' class="select"' : ''?>><span>Cấu hình &amp; cài đặt</span></a></li>
+            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/admin/report"<?php echo ($this->id =='report') ? ' class="select"' : ''?>><span>Báo cáo &amp; công cụ</span></a></li>
             <li><a href="#"><span>Thanh toán</span></a></li>
-            <li><a href="/admin/account"<?php echo ($this->id =='account') ? ' class="select"' : ''?>><span>Tài khoản của tôi</span></a></li>
+            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/admin/account"<?php echo ($this->id =='account') ? ' class="select"' : ''?>><span>Tài khoản của tôi</span></a></li>
         </ul><div class="clear"></div>
         <div class="paddinglr10">
             <div class="menu-bar">
@@ -44,8 +44,8 @@
                     <ul class="menu-li"> 
                         <li><a class="headerbar" href="#">Tài khoản của tôi</a>
                             <ul class="submenu">
-                                <li><a href="/admin/account">Thay đổi thông tin</a></li>
-                                <li><a href="/admin/account/changepass">Thay đổi mật khẩu</a></li>
+                                <li><a href="<?php echo Yii::app()->request->baseUrl ?>/admin/account">Thay đổi thông tin</a></li>
+                                <li><a href="<?php echo Yii::app()->request->baseUrl ?>/admin/account/changepass">Thay đổi mật khẩu</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -56,10 +56,10 @@
                     <ul class="menu-li"> 
                         <li><a class="headerbar" href="#">Cài đặt &amp; cấu hình</a>
                             <ul class="submenu">
-                                <li><a href="/admin/configs/web">Tiêu đề website</a></li>
-                                <li><a href="/admin/configs/menu">Cấu hình Menu</a></li>
-                                <li><a href="/admin/configs/langs">Cấu hình ngôn ngữ</a></li>
-								<li><a href="/admin/configs/seo">Công cụ tìm kiếm</a></li>
+                                <li><a href="<?php echo Yii::app()->request->baseUrl ?>/admin/configs/web">Tiêu đề website</a></li>
+                                <li><a href="<?php echo Yii::app()->request->baseUrl ?>/admin/configs/menu">Cấu hình Menu</a></li>
+                                <li><a href="<?php echo Yii::app()->request->baseUrl ?>/admin/configs/langs">Cấu hình ngôn ngữ</a></li>
+								<li><a href="<?php echo Yii::app()->request->baseUrl ?>/admin/configs/seo">Công cụ tìm kiếm</a></li>
                             </ul>
                         </li>
                     </ul>
