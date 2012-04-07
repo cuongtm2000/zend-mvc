@@ -30,7 +30,15 @@ return array(
 	//contact modules
 	'<contact:(lien-he)>' => 'contact/default/index', //index
 
+	//For multi language
+	'<language:(vi|en)>/<module:\w+>/<cid:[-a-z0-9]+>/page/<page:\d+>' => array('<module>/default/cats'), //cat paging
+	'<language:(vi|en)>/<module:\w+>/<cid:[-a-z0-9]+>' => array('<module>/default/cats'), //cat
+
+	'<language:(vi|en)>/<module:\w+>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('<module>/default/view', 'urlSuffix' => '.html'), //for products
+	'<language:(vi|en)>/<module:\w+>/<id:[-a-z0-9]+>' => array('<module>/default/view', 'urlSuffix' => '.html'),
+
 	'<language:(vi|en)>/<module:\w+>' => '<module>/default/index', //ex: en/about, en/products
+	'<language:(vi|en)>' => 'default/default',
 	/*
 		'http://<subdomain:\w+>.dos.vn/<language:(vi|en)>' => 'default/default', //ex: /en
 		'http://<subdomain:\w+>.dos.vn' => 'default/default', //ex: /
@@ -75,5 +83,5 @@ return array(
 		'<language:(vi|en)>/<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',        */
 
 	//modules multi language
-	'<language:(vi|en)>' => 'default/default',
+
 );

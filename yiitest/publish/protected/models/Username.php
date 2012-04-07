@@ -191,6 +191,16 @@ class Username extends CActiveRecord {
 	}
 
 	/**
+	 * Function for publish dành cho lấy User role(admin, administrator)
+	 * @return mixed
+	 */
+	public function getUserByRole($role) {
+		$command = Yii::app()->db->createCommand('SELECT username FROM ' . $this->tableName() . ' WHERE role=:role');
+		$command->bindParam(":role", $role, PDO::PARAM_STR);
+		return $command->queryScalar();
+	}
+
+	/**
 	 * Check exits user
 	 */
 	public function checkExistUser($username) {

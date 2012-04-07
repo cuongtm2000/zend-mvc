@@ -16,7 +16,7 @@ return CMap::mergeArray(
                 'class' => 'CLogRouter',
                 'routes' => array(
                     array(
-                        'class' => 'CProfileLogRoute',
+                        'class' => 'CFileLogRoute',
                         'levels' => 'error, warning',
                     ),
                 ),

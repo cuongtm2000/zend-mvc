@@ -7,7 +7,7 @@
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
 	'defaultController'=>'default/default',
-    //'name' => 'Dos.vn',
+    'name' => ucfirst($_SERVER['HTTP_HOST']),
     //'theme' => '220312',
 	//'language'=>'vi',
     // preloading 'log' component

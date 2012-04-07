@@ -97,7 +97,7 @@ class Web extends CActiveRecord {
 	//Back end - list record
 	public function listRecord() {
 		$user = Yii::app()->user->id;
-		$command = Yii::app()->db->createCommand('SELECT web_name, web_value FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user');
+		$command = Yii::app()->db->createCommand('SELECT web_name, web_value FROM ' . $this->tableName() . ' WHERE web_name != \'analytics\' AND dos_usernames_username=:user');
 		$command->bindParam(":user", $user, PDO::PARAM_STR);
 		return $command->queryAll();
 	}

@@ -40,67 +40,52 @@ class UserCounter extends CComponent {
 			$data[$value['save_name']] = $value['save_value'];
 		}
 
-		// Aktuellen Tag als julianisches Datum
 		$today_jd = GregorianToJD(date('m'), date('j'), date('Y'));
 
-		// Prüfen ob wir schon einen neuen Tag haben
 		if ($today_jd != $data['day_time']) {
-			// Anzahl der Besucher von heute auslesen
 			$sql = 'SELECT COUNT(user_ip) AS user_count FROM ' . $cfg_tbl_users;
 			$command = Yii::app()->db->createCommand($sql);
 			$dataReader = $command->query();
 			$row = $dataReader->read();
 			$today_count = $row['user_count'];
 
-			// Anzahl der Tage zum letzten Update ermitteln
 			$days_between = $today_jd - $data['day_time'];
 
-			// Zählerwert von heute auf gestern setzen
 			$sql = 'UPDATE ' . $cfg_tbl_save . ' SET save_value=' . ($days_between == 1 ? $today_count : 0) . ' WHERE save_name="yesterday"';
 			$command = Yii::app()->db->createCommand($sql);
 			$command->execute();
 
-			// Auf neuen Besucherrekord prüfen
 			if ($today_count >= $data['max_count']) {
-				// Daten aktualisieren
 				$data['max_time'] = mktime(12, 0, 0, date('n'), date('j'), date('Y')) - 86400;
 				$data['max_count'] = $today_count;
 
-				// Rekordwerd speichern
 				$sql = 'UPDATE ' . $cfg_tbl_save . ' SET save_value=' . $today_count . ' WHERE save_name="max_count"';
 				$command = Yii::app()->db->createCommand($sql);
 				$command->execute();
 
-				// Aktuellen Tag als neuen Rekordtag speichern
 				$sql = 'UPDATE ' . $cfg_tbl_save . ' SET save_value=' . $data['max_time'] . ' WHERE save_name="max_time"';
 				$command = Yii::app()->db->createCommand($sql);
 				$command->execute();
 			}
 
-			// Gesamtzähler erhöhen
 			$sql = 'UPDATE ' . $cfg_tbl_save . ' SET save_value=save_value+' . $today_count . ' WHERE save_name="counter"';
 			$command = Yii::app()->db->createCommand($sql);
 			$command->execute();
 
-			// Alte Besucherdaten aus Tabelle entfernen
 			$sql = 'TRUNCATE TABLE ' . $cfg_tbl_users;
 			$command = Yii::app()->db->createCommand($sql);
 			$command->execute();
 
-			// Datum aktualisieren
 			$sql = 'UPDATE ' . $cfg_tbl_save . ' SET save_value=' . $today_jd . ' WHERE save_name="day_time"';
 			$command = Yii::app()->db->createCommand($sql);
 			$command->execute();
 
-			// Daten aktualisieren
 			$data['counter'] += $today_count;
 			$data['yesterday'] = ($days_between == 1 ? $today_count : 0);
 		}
 
-		// IP des Besuchers ermitteln
 		$user_ip = Yii::app()->db->quoteValue(isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR']);
 
-		// Besucher speichern oder aktualisieren
 		$command = Yii::app()->db->createCommand('SELECT user_ip FROM ' . $cfg_tbl_users . ' WHERE user_ip=:user_ip');
 		$command->bindParam(":user_ip", $user_ip, PDO::PARAM_STR);
 
@@ -116,36 +101,28 @@ class UserCounter extends CComponent {
 			$command->execute();
 		}
 
-		// Rückgabearray initialisieren
 		$output = array();
 
-		// Anzahl der heutigen Besucher auslesen
 		$sql = 'SELECT COUNT(user_ip) AS user_count FROM ' . $cfg_tbl_users;
 		$command = Yii::app()->db->createCommand($sql);
 		$dataReader = $command->query();
 		$row = $dataReader->read();
 		$output['today'] = $row['user_count'];
 
-		// Gesamte Besucherzahl und Besucher vom Vortag zurückgeben
 		$output['counter'] = $data['counter'] + $output['today'];
 		$output['yesterday'] = $data['yesterday'];
 
-		// Aktuelle Besucher der letzten x Minuten auslesen
 		$sql = 'SELECT COUNT(user_ip) AS user_count FROM ' . $cfg_tbl_users . ' WHERE user_time>=' . (time() - $cfg_online_time * 60);
 		$command = Yii::app()->db->createCommand($sql);
 		$dataReader = $command->query();
 		$row = $dataReader->read();
 		$output['online'] = $row['user_count'];
 
-		// Wurde der aktuelle Besucherrekord heute überschritten?
 		if ($output['today'] >= $data['max_count']) {
-			// Heutigen Tag als Rekord zurückgeben
 			$output['max_count'] = $output['today'];
 			$output['max_time'] = time();
 		}
-		else
-		{
-			// Alten Rekord zurückgeben
+		else{
 			$output['max_count'] = $data['max_count'];
 			$output['max_time'] = $data['max_time'];
 		}

@@ -250,7 +250,7 @@ class Products extends CActiveRecord {
 	public function listItemHot() {
 		$criteria = new CDbCriteria();
 		$criteria->with = array(__CLASS__ . 'Cat');
-		$criteria->select = 'title' . LANG . ', pic_thumb, tag, unit, hot';
+		$criteria->select = 'title' . LANG . ', pic_thumb, tag'.LANG.', unit, hot';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'dos_usernames_username=:user AND hot = 1 AND enable = 1';
 		$criteria->params = array(':user' => $this->_subdomain);

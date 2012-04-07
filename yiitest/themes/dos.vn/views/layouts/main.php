@@ -9,7 +9,7 @@
         <link rel="icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/gif" />
         <link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" rel="stylesheet" type="text/css" />
 
-        <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+        <title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->title) ? ' - '.CHtml::encode($this->title) : '' ?></title>
         <meta name="keywords" content="<?php echo $this->keywords ?>" />
         <meta name="description" content="<?php echo $this->description ?>" />
         <!--[if IE 6]>
@@ -30,8 +30,6 @@
 				<ul id="nav">
 					<li><a href="<?php echo Yii::app()->request->baseUrl.'/'.Yii::app()->session['lang']?>"><?php echo Yii::t('main', 'home')?></a></li>
 					<li><a href="<?php echo LANGURL.'/'.Yii::t('main', 'articles.link')?>"><?php echo Yii::t('main', 'articles.name')?></a></li>
-					<li><a href="/site/page/view/about"><?php echo Yii::t('main', 'about')?></a></li>
-					<li><a href="/site/contact"><?php echo Yii::t('main', 'contact')?></a></li>
 					<?php if(Yii::app()->user->isGuest):?>
 						<li class="active"><a href="/admin"><?php echo Yii::t('main', 'login')?></a></li>
 					<?php else:?>
@@ -49,11 +47,8 @@
                 <ul class="nav-fter">
                     <li>Company
                         <ul>
-                            <li><a href="#" title="">Overview</a></li>
-                            <li><a href="#" title="">Careers</a></li>
-                            <li><a href="#" title="">Press Room</a></li>
-                            <li><a href="#" title="">Webs Blog</a></li>
-                            <li><a href="#" title="">Contact Us</a></li>
+                            <li><a href="<?php echo LANGURL.'/'.Yii::t('main', 'about.link')?>" title="<?php echo Yii::t('main', 'about.name')?>"><?php echo Yii::t('main', 'about.name')?></a></li>
+                            <li><a href="<?php echo LANGURL.'/'.Yii::t('main', 'contact.link')?>" title="<?php echo Yii::t('main', 'contact.name')?>"><?php echo Yii::t('main', 'contact.name')?></a></li>
                         </ul>
                     </li>
                     <li>Features

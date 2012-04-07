@@ -26,7 +26,7 @@ class Controller extends CController {
 		$username = new Username();
 		$info_user = $username->infoUser();
 
-		Yii::app()->name = ucfirst($_SERVER['HTTP_HOST']);
+		//Yii::app()->name = ucfirst($_SERVER['HTTP_HOST']);
 		Yii::app()->theme = $info_user['dos_templates_template']; //template use by 'admin'
 		Yii::app()->session['template'] = $info_user['dos_templates_template']; //session template use
 		define('USERFILES', '/public/userfiles/images/' . $info_user['username'] . '/images');

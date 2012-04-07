@@ -1,4 +1,4 @@
-<?php $this->breadcrumbs=array($this->lang[$this->module->id]=>LANGURL.'/'.Yii::t('user', $this->module->id.'.link'));?>
+<?php $this->breadcrumbs=array($this->lang['about']);?>
 <?php if($item): ?>
     <?php $this->pageTitle = $item['title'.LANG]; $this->description = $item['description'.LANG];?>
     <h1 class="title-right"><span><?php echo $item['title'.LANG] ?></span></h1>

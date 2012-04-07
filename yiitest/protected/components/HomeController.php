@@ -6,6 +6,7 @@ class HomeController extends CController {
     public $menu = array();
 
     public $breadcrumbs = array();
+	public $title;
     public $keywords;
     public $description;
 	public $analytics;
@@ -15,6 +16,8 @@ class HomeController extends CController {
 		Common::setLanguage(); //setting language
 
 		$web_class = new Web();
+		$this->title = $web_class->setWebValue('title', 'dos');
+		$this->keywords = $web_class->setWebValue('keywords', 'dos');
 		$this->analytics = $web_class->setWebValue('analytics', 'dos');
 
         //Setup lang

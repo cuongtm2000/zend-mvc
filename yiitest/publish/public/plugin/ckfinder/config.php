@@ -74,7 +74,7 @@ include ('../../../../../config.php');
 $config2= new Config();
 $baseUrl = $config2->livesite.'media/editor/';*/
 
-$baseUrl = '/public/userfiles/images/'.$_SESSION['subdomain'].'/';
+$baseUrl = '/public/userfiles/images/'.$_SESSION['userAdmin'].'/';
 
 /*
 $baseDir : the path to the local directory (in the server) which points to the
