@@ -26,10 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ExportController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ExportController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/administrator/controllers/ExportController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="127" selection-start="575" selection-end="575" vertical-scroll-proportion="0.37226278">
+            <state line="32" column="12" selection-start="2068" selection-end="2068" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/dos.vn/css/layout.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="150" column="45" selection-start="8018" selection-end="8018" vertical-scroll-proportion="0.50364965">
               <folding />
             </state>
           </provider>
@@ -59,7 +68,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/config/public.php" />
         <option value="$PROJECT_DIR$/publish/protected/modules/about/views/default/220312/view.php" />
         <option value="$PROJECT_DIR$/protected/modules/about/views/default/220312/view.php" />
         <option value="$PROJECT_DIR$/publish/protected/modules/news/controllers/DefaultController.php" />
@@ -75,6 +83,7 @@
         <option value="$PROJECT_DIR$/publish/protected/models/PcounterSave.php" />
         <option value="$PROJECT_DIR$/themes/admin-green/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/modules/administrator/controllers/ExportController.php" />
+        <option value="$PROJECT_DIR$/themes/dos.vn/css/layout.css" />
       </list>
     </option>
   </component>
@@ -132,6 +141,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dos.vn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dos.vn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -438,13 +501,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/111120/cats.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.59578544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/publish/protected/modules/news/views/default/220312/cats.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="191" selection-start="719" selection-end="771" vertical-scroll-proportion="-6.5384617">
@@ -549,7 +605,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/administrator/controllers/ExportController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="127" selection-start="575" selection-end="575" vertical-scroll-proportion="0.37226278">
+        <state line="32" column="12" selection-start="2068" selection-end="2068" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/dos.vn/css/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="45" selection-start="8018" selection-end="8018" vertical-scroll-proportion="0.50364965">
           <folding />
         </state>
       </provider>
