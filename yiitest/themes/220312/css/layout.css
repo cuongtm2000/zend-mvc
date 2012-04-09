@@ -129,7 +129,7 @@ a:hover{color:#000}
 .sub-new li a:hover{color:#f90}
 
 /** sub video **/
-.video{list-style:none;border:1px solid #F2F2F2;text-align: center;padding:5px 0}
+.video{list-style:none;border:1px solid #F2F2F2;text-align: center;padding:5px 0;margin:0 0 15px 0}
 .video li{padding:0 0 5px 0}
 
 /**		Sản phẩm tieu biểu (typical-product)		**/
@@ -167,11 +167,11 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 
 /**Page Contact**/
 /*** Frame title company  ***/
-#frame-info-contact{margin:0 0 20px 0}
+#frame-info-contact{margin:0 0 15px 0}
 
 /** Form lien he  **/
+.frame-contact{list-style:none;margin:0 0 10px 0}
 .frame-contact label{color:#555; margin:0 !important;font-weight:bold;width:100px; float:left}
-.frame-contact{list-style:none;margin:15px 0 10px 0}
 .frame-contact li{padding:4px 0; margin:0 !important}
 .frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
 .frame-contact textarea{border:1px solid #ddd; width:350px;-moz-border-radius: 3px; -webkit-border-radius:3px}

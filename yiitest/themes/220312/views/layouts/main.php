@@ -162,8 +162,8 @@
 			<?php if(isset($this->function['video_hot']) && ($this->function['video_hot'])):?>
 			<h1 class="title-box"><span><?php echo $this->lang['video'] . ' ' . strtolower($this->lang['hot'])?></span></h1>
 			<div class="video">
-				<a href="<?php echo CHtml::encode($this->function['video_hot']['url']) ?>" rel="prettyPhoto" title="<?php echo $this->function['video_hot']['title'] ?>">
-					<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/video/<?php echo $this->function['video_hot']['pic_thumb'] ?>" alt="<?php echo $this->function['video_hot']['title'] ?>"/>
+				<a href="<?php echo CHtml::encode($this->function['video_hot']['url']) ?>" rel="prettyPhoto" title="<?php echo $this->function['video_hot']['title'.LANG] ?>">
+					<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/video/<?php echo $this->function['video_hot']['pic_thumb'] ?>" alt="<?php echo $this->function['video_hot']['title'.LANG] ?>"/>
 				</a>
 			</div>
 				<script type="text/javascript">$(document).ready(function () {$(".video a[rel^='prettyPhoto']").prettyPhoto();});</script>
