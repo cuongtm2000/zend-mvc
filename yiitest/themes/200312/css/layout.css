@@ -29,14 +29,13 @@ a:hover{color:#000;}
 #nav li a:hover{color:#333}
 #nav .select{color:#333 }
 
-
 .lang {position:absolute;right:0; top:115px}
 .lang img{ margin:0 2px 0 0;position: relative;top:2px}
 .lang a{ color:#fff;margin: 0 10px 0 5px}
 .lang a:hover{ color:#000}
 
 /** Banner **/
-#banner{ margin:0px 0 10px 0; }
+#banner{ margin:0 0 10px 0; }
 
 /* Page Content*/
 #content{ background:url(../images/centerbg.gif) repeat-y; padding:0 15px}
@@ -48,7 +47,7 @@ a:hover{color:#000;}
 #leftcontent{float:left; width:214px}
 
 /*Category*/
-.sub-cat{ background:url(../images/mid-leftpenal.gif) repeat-y; list-style:none;padding:7px 10px 10px 20px}
+.sub-cat{ background:url(../images/mid-leftpenal.gif) repeat-y; list-style:none;padding:0 10px 0 20px}
 .sub-cat li{ padding:5px 0}
 .sub-cat li a{color:#000; font-weight:bold;display:block; *_display:inherit}
 .sub-cat li a:hover{ color:#578AB2}
@@ -76,33 +75,36 @@ a:hover{color:#000;}
 .mid-right{ background:url(../images/mid-right.gif) repeat-y;padding:0 10px 10px 10px}
 .bd-bt-right{background:url(../images/bd-bt-right.gif) no-repeat; height:21px; width:745px; position:relative; left:-1px}
 
-.title-right{margin:0 0 10px 0;font-size:10pt; background:url(../images/bullet2.gif) no-repeat left 3px ;color:#000;padding:0px 1px 0px 0px;font-weight:bold}
+.title-right{margin:0 0 10px 0;font-size:10pt; background:url(../images/bullet2.gif) no-repeat left 2px ;color:#000;font-weight:bold}
 .title-right span{padding:0 0 0 20px}
+
 .link{color:#000; font-weight:bold;padding:0 0 6px 10px}
-.link img{margin:0 3px 0 5px}
+.link img{margin:0 5px 0 5px}
 .link a{ color:#578AB2; font-size:10pt; font-weight:normal}
 .link a:hover{ color:#000}
 
 .singin{float:right;background:#A2A2A2; color:#fff;padding:7px 0px; text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold;-webkit-border-radius:4px;-moz-border-radius:4px}
 
 /*Page content right*/
-.frame-tent-right{padding:3px 15px 3px 20px;text-align:justify;margin:0 0 20px 0}
+.frame-tent-right{padding:3px 5px 3px 20px;text-align:justify;margin:0 0 10px 0}
 
-/*Page Dich Vu*/
-.masuring{text-align:justify;font-size:10pt;color:#666;margin-bottom:20px; }
-.masuring img{margin:0 10px 5px 2px}
-.masuring p{line-height:1.5em; }
-.title-box a{color:#208FFF;font-size:10pt; font-weight:700;}
-.masuring a:hover{color:#F90}
+/*   Page New  */
+.masuring{text-align:justify;font-size:10pt;list-style:none}
+.masuring li{margin:0 0 5px 0 !important }
+.masuring p{line-height:1.4em}
+.frame-img{float:left;width:143px;margin:0 10px 5px 0}
+.title-masuring{margin:0 0 5px 0}
+.title-masuring a{color:#208FFF;font-size:10pt;font-weight:bold}
+.title-masuring a:hover{color:#F90}
 
 /***** Product    *****/
-#all-product{ width:745px}
+.all-product{}
 .product-top{ background:url(../images/pr-top.gif) no-repeat; height:20px; width:235px}
-.product-btom{background:url(../images/pr-bottom.gif) no-repeat; height:16px; width:235px; padding:0 0 10px 0}
-.product-mid{width:235px;background:url(../images/pr-mid.gif) repeat-y;display:inline-block}
-.product{width:235px; display:inline-block; vertical-align:top; margin:0 5px 0 0;*float:left; }
-.tent-product{ padding:0 5px; *padding:0 0px}
-.product-img{width:235px; text-align:center;display:table-cell;vertical-align:bottom}
+.product-btom{background:url(../images/pr-bottom.gif) no-repeat; height:16px; width:235px}
+.product-mid{background:url(../images/pr-mid.gif) repeat-y;display:inline-block}
+.product{width:235px; display:inline-block;vertical-align:top; margin:0 0 5px 4px !important ;*float:left; }
+.tent-product{ padding:0 10px; *padding:0 0px}
+.product-img{width:235px;height: 170px; text-align:center;display:table-cell;vertical-align:bottom}
 .title-pro{ font-size:10pt;margin:10px 0; text-align:center;}
 .price{float:left;color:#FEB138; font-weight:700; font-size:13px;padding:10px 0 0 0}
 .price-add{padding:0 15px}
@@ -134,14 +136,18 @@ a:hover{color:#000;}
 .frame-contact .bton-dk{margin:10px 10px 5px 0}
 
 /*Footer*/
-#bg-fter{background:url(../images/footer-bg.gif) repeat-x; height:80px; min-width:997px}
-#footer{ width:997px; margin:auto; color:#000; padding:10px 0 0 0; line-height:1.7em}
+#bg-fter{}
+#footer{ line-height:1.7em;padding:0 10px 10px}
 #footer a:hover{color:#5D94BC}
 .menu-fter li{list-style:none;float:left;}
 .menu-fter li a{ text-transform:capitalize;padding:12px 5px;display:block; color:#000;background:url(../images/bkg-pipe1.gif) no-repeat right}
 .copyright {float:right;text-align:right;*margin:10px 0 0 0;*_margin:0; padding:12px 0px 0 0}
 .copyright a{color:#000;}
 
+/* Error */
+.errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
+.errorSummary ul{margin:0 10px; padding:0}
+.errorSummary ul li{padding:2px 0; color: red;margin: 0 0 0 20px !important}
 
 
 

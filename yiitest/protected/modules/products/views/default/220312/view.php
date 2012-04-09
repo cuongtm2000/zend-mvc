@@ -10,9 +10,9 @@
 
 <?php if($item_other):?>
 <h3 class="title-right"><span><?php echo $this->lang[$this->module->id]?> <?php echo strtolower($this->lang['other'])?></span></h3>
-<div class="all_product">
+<ul class="all_product">
 	<?php foreach($item_other as $value):?>
-	<div class="product">
+	<li class="product">
 		<div class="tent-product">
 				<div class="product-img">
 					<a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $value[ucfirst($this->module->id).'Cat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>">
@@ -25,8 +25,8 @@
 				</div>
 			<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $value[ucfirst($this->module->id).'Cat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></h2>
 		</div>
-	</div>
+	</li>
 	<?php endforeach?>
-</div>
+</ul>
 <?php endif;?>
 
