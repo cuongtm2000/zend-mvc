@@ -44,7 +44,14 @@ class ConfigsController extends AdminController {
     }
 
     public function actionLangs() {
-        $this->render('langs');
+		$model_class = new UserLangs();
+		$models = $model_class->getLangs();
+		//Submit
+		if (Yii::app()->request->getIsPostRequest()) {
+			$model_class->addItem(Yii::app()->request);
+			$this->refresh();
+		}
+        $this->render('langs', array('models'=>$models));
     }
 
 	public function actionSeo() {

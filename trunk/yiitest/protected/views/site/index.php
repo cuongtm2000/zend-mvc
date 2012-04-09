@@ -11,8 +11,6 @@
 				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/web-preview-2.png" alt="" /></li>
 				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/web-preview-3.png" alt="" /></li>
 				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/web-preview-4.png" alt="" /></li>
-				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/web-preview-5.png" alt="" /></li>
-				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/web-preview-6.png" alt="" /></li>
 			</ul>
 		</div>
     </div>
@@ -36,19 +34,18 @@
 <div class="content">
     <div class="left-tent">
         <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-w1.jpg" alt="Easy" />
-        <h2 class="title-tent">Easy Website Building Tools</h2>
-        <p>Get your <a href="#" title="">small business website</a> on the web in minutes with our ease-to-use Site Builder and templates that do the design work for you. No technical skills required ! Gain a mobile version of your site, too.
-        </p>
+        <h2 class="title-tent">Xây dựng website nhanh chóng, dễ dàng</h2>
+        <p>Bạn chỉ cần vài phút để có ngay một website cho doanh nghiệp hay cá nhân bạn, giao diện quản lý đơn giản &amp; trực quan, bạn chỉ cần nhập liệu và tùy chỉnh ứng dụng của mình mọi lúc, mọi nơi.</p>
     </div><!--End left cotent-->
     <div class="cter-tent">
         <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-w2.jpg" alt="Professional Template Styles" />
-        <h2 class="title-tent">Professional Template Styles</h2>
-        <p>Browse our gallery and you'll find 300+ professionally-designed templates in a variety of sophisticated styles. Customize your template with your logo, tagline, and color scheme to make your site look the way you want.</p>
+        <h2 class="title-tent">Mẫu giao diện chuyên nghiệp, đa dạng</h2>
+        <p>Bộ thư viện mẫu website phong phú đã được nhiều khách hàng sử dụng sẽ giúp bạn hài lòng. Có thể thay đổi giao diện bất cứ lúc nào và bật, tắt các chức năng module. Tự do tùy biến ứng dụng của bạn.</p>
     </div><!--End center content-->
     <div class="right-tent">
         <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-w3.jpg" alt="Powerful Business Applications" />
-        <h2 class="title-tent">Powerful Business Applications</h2>
-        <p>Make your site engaging with apps. Show off your work in a photo gallery or video. Sell products in a Web Store. Blog about your company news, and hear what customers are saying on a forum. Plus much more.</p>
+        <h2 class="title-tent">Dễ dàng cho các bộ máy tìm kiếm</h2>
+        <p>Mã nguồn để xây dựng web được lập trình tỉ mỉ đúng theo chuẩn W3C sẽ giúp website có thứ hạng trong các công cục tìm kiếm Google, yahoo, bring... với các từ khóa ngành nghề của bạn.</p>
     </div><!--End right content-->    <div class="clear"></div>
 </div><!--End row tent 1-->
 <div class="frame-features">

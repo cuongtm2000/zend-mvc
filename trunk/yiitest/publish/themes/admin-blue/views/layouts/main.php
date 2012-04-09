@@ -65,6 +65,18 @@
                     </ul>
                     </div>
                 <?php endif;?>
+				<?php if($this->id=='report'):?>
+				<div class="catmenu">
+					<ul class="menu-li">
+						<li><a class="headerbar" href="#">Báo cáo &amp; công cụ</a>
+							<ul class="submenu">
+								<li><a href="<?php echo Yii::app()->request->baseUrl ?>/admin/report">Thống kê website</a></li>
+								<li><a href="<?php echo Yii::app()->request->baseUrl ?>/admin/report/code">Mã Google analytics</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<?php endif;?>
                 <div class="catmenu">
                     <ul class="menu-li"> 
                         <?php foreach ($this->module_user as $value): ?>

@@ -4,10 +4,10 @@ return CMap::mergeArray(
     array(
         'components' => array(
             'db' => array(
-                'connectionString' => 'mysql:host=localhost;dbname=azweb_dos',
+                'connectionString' => 'mysql:host=localhost;dbname=data',
                 'emulatePrepare' => true,
-                'username' => 'azweb_dos',
-                'password' => 'OejzTB6G',
+                'username' => 'user',
+                'password' => 'Z3CYC5f3',
                 'charset' => 'utf8',
                 'schemaCachingDuration' => 60 * 60,
             ),

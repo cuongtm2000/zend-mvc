@@ -12,7 +12,7 @@
     <body>
         <div id="wapper">
             <div id="header">
-                <div class="logo"><a href="/administrator"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a></div>
+                <div class="logo"><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a></div>
                 <div class="frmlogin">
                     Chào <strong><?php echo Yii::app()->user->name ?></strong>
                     <a href="http://<?php echo Yii::app()->user->name ?>.dos.vn" target="_blank" title="Website">Website</a>
@@ -21,7 +21,7 @@
                 </div>
             </div>
             <ul id="tabs">
-                <li><a href="/administrator"><span>Trang chủ</span></a></li>
+                <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator"><span>Trang chủ</span></a></li>
                 <li><a href="#"><span>Cơ hội</span></a></li>
                 <li><a href="#"><span>Chiến dịch</span></a></li>
                 <li><a href="#"><span>Báo cáo &amp; công cụ</span></a></li>
@@ -32,21 +32,15 @@
                 <div class="menu-bar">
                     <div id="catmenu">
                         <ul class="menu-li"> 
-                            <li><a href="/administrator/templates">Templates</a>
+                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/templates">Templates</a>
                                 <ul>
-                                    <li><a href="/administrator/templates">List template</a></li>
-                                    <li><a href="/administrator/templates/add">Add template</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/templates">List template</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/templates/add">Add template</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/administrator/usernames">User</a>
+                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/usernames">User</a>
                                 <ul>
-                                    <li><a href="/administrator/usernames">List user</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/administrator/articles">Articles</a>
-                                <ul>
-                                    <li><a href="/administrator/articles/cat">List Articles cat</a></li>
-                                    <li><a href="/administrator/articles">List Articles</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/usernames">List user</a></li>
                                 </ul>
                             </li>
                         </ul> 
@@ -55,7 +49,7 @@
                 <div class="contenter">
                     <?php echo $content ?>
                     <div id="footer">
-                        <p>Copyright &copy; <?php echo date('Y'); ?> by Hoiit.com. All rights reserved</p>
+                        <p>Copyright &copy; <?php echo date('Y'); ?> by Dos.vn. All rights reserved</p>
                     </div>
                 </div>
             </div>

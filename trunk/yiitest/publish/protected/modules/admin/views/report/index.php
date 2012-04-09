@@ -1,1 +1,1 @@
-Chức năng này sẽ hoạt động khi website bạn có tên miền riêng
+Đang xây dựng... <img src="<?php echo Yii::app()->theme->baseUrl ?>/images/ajax-loader.gif" alt="loading" />
