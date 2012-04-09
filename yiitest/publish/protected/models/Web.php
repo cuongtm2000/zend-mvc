@@ -1,16 +1,5 @@
 <?php
 
-/**
- * This is the model class for table "dos_module_webs".
- *
- * The followings are the available columns in table 'dos_module_webs':
- * @property string $web_name
- * @property string $web_value
- * @property string $dos_usernames_username
- *
- * The followings are the available model relations:
- * @property DosUsernames $dosUsernamesUsername
- */
 class Web extends CActiveRecord {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -96,7 +85,7 @@ class Web extends CActiveRecord {
 	//Back end - list record
 	public function listRecord() {
 		$user = Yii::app()->user->id;
-		$command = Yii::app()->db->createCommand('SELECT web_name, web_value FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user');
+		$command = Yii::app()->db->createCommand('SELECT web_name, web_value FROM ' . $this->tableName() . ' WHERE web_name != \'analytics\' AND dos_usernames_username=:user');
 		$command->bindParam(":user", $user, PDO::PARAM_STR);
 		return $command->queryAll();
 	}
@@ -128,6 +117,20 @@ class Web extends CActiveRecord {
 	private function deleteItem() {
 		$user = Yii::app()->user->id;
 		$command = Yii::app()->db->createCommand('DELETE FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user');
+		$command->bindParam(":user", $user, PDO::PARAM_STR);
+		$command->execute();
+	}
+
+	public function addItemSample($data = NULL) {
+		$this->deleteItemSample();
+		$analytics = trim($data->getPost('analytics', ''));
+		$this->insertItem('analytics', $analytics);
+	}
+
+	//Back end - delete item sample
+	private function deleteItemSample() {
+		$user = Yii::app()->user->id;
+		$command = Yii::app()->db->createCommand('DELETE FROM ' . $this->tableName() . ' WHERE web_name=\'analytics\' AND dos_usernames_username=:user');
 		$command->bindParam(":user", $user, PDO::PARAM_STR);
 		$command->execute();
 	}

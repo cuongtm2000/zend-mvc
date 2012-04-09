@@ -99,7 +99,7 @@ class Langs extends CActiveRecord {
 
     //Front end - get all language
     public static function getLangs($admin) {
-        $command = ($admin == 1) ? Yii::app()->db->createCommand('SELECT lang_name, lang' . LANG . ' FROM dos_langs') : Yii::app()->db->createCommand('SELECT lang_name, lang' . LANG . ' FROM dos_langs WHERE admin=:admin');
+        $command = ($admin == 1) ? Yii::app()->db->createCommand('SELECT lang_name, lang' . LANG . ' FROM dos_langs') : Yii::app()->db->createCommand('SELECT lang_name, lang, langen FROM dos_langs WHERE admin=:admin');
         $command->bindParam(":admin", $admin, PDO::PARAM_INT);
         return $command->queryAll();
     }

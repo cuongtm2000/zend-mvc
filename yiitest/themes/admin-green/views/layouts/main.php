@@ -55,7 +55,7 @@
                 <div class="contenter">
                     <?php echo $content ?>
                     <div id="footer">
-                        <p>Copyright &copy; <?php echo date('Y'); ?> by Hoiit.com. All rights reserved</p>
+                        <p>Copyright &copy; <?php echo date('Y'); ?> by Dos.vn. All rights reserved</p>
                     </div>
                 </div>
             </div>
