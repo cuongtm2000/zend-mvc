@@ -133,7 +133,7 @@ class Supports extends CActiveRecord {
 
         for ($i = 0; $i < 6; $i++) {
             if (!empty($values[$i]) && !empty($types[$i])) {
-                $this->insertItem(trim($names[$i]), trim(isset($nameens[$i])), trim($phones[$i]), trim($values[$i]), trim($orders[$i]), trim($types[$i]));
+                $this->insertItem(trim($names[$i]), ($nameens) ? trim($nameens[$i]) : '', trim($phones[$i]), trim($values[$i]), trim($orders[$i]), trim($types[$i]));
             }
         }
     }
@@ -153,7 +153,7 @@ class Supports extends CActiveRecord {
     }
 
     //Back end - delete item and for Administrator
-    public function deleteRecord($user) {
+	private function deleteRecord($user) {
         $command = Yii::app()->db->createCommand('DELETE FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user');
         $command->bindParam(":user", $user, PDO::PARAM_STR);
         $command->execute();

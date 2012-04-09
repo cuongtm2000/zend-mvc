@@ -108,7 +108,7 @@ class Common {
 			$sql = '';
 
 			$arr[] = array('dos_bussiness', 'SELECT * FROM dos_bussiness');
-			$arr[] = array('dos_templates', 'SELECT * FROM dos_templates');
+			$arr[] = array('dos_templates', 'SELECT * FROM dos_templates WHERE template = \'' . $user_class->template . '\'');
 			$arr[] = array('dos_configs', 'SELECT * FROM dos_configs WHERE dos_templates_template = \'' . $user_class->template . '\'');
 			$arr[] = array('dos_features', 'SELECT * FROM dos_features');
 			$arr[] = array('dos_langs', 'SELECT * FROM dos_langs');
