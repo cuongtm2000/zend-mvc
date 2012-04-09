@@ -4,7 +4,7 @@
 <!-- for cat -->
 <?php if($list_sub_cats): ?>
 <h1 class="title-right"><span><?php echo $info_cat['cat_title'.LANG] ?></span></h1>
-<ul id="all-product">
+<ul class="all-product">
     <?php foreach($list_sub_cats as $value): ?>
         <li class="product">
 			<div class="product-top"></div>
@@ -26,11 +26,12 @@
 		</li>
     <?php endforeach; ?>
 </ul>
+<div class="clear"></div>
 <?php endif; ?>
 
 <?php if($list_items['models']): ?>
     <h1 class="title-right"><span><?php echo $info_cat['cat_title'.LANG] ?></span></h1>
-    <ul id="all-product">
+    <ul class="all-product">
         <?php foreach($list_items['models'] as $value): ?>
             <li class="product">
                 <div class="product-top"></div>
@@ -56,6 +57,7 @@
 		  </li>
         <?php endforeach; ?>
     </ul><!--End All products-->
+<div class="clear"></div>
     <?php $this->widget('CLinkPager', array('pages' => $list_items['pages'], 'header'=>'', 'lastPageLabel'=>'Last', 'nextPageLabel'=>'Next', 'firstPageLabel'=>'First', 'prevPageLabel'=>'Prev', 'htmlOptions'=>array('class'=>'paging')))?>
 	<div class="clear"></div>
 <?php else: ?>

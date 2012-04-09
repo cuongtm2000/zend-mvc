@@ -11,9 +11,11 @@ a:hover{color:#000;}
 #wrapper {margin:auto; width:997px;}
 
 /*Header*/
-#header{ padding:25px 0}
-.logo{float:left; margin:0px 0 0 0}
-#search{float:right;background:url(../images/searchbg.gif) no-repeat; width:300px;height:56px; margin:0 0 0 70px}
+#header{ padding:25px 0; position: relative;}
+.hot-line{position: absolute;right:0;top:10px;font-weight: bold;font-size: 10pt;color:#f00}
+.logo{float:left}
+
+#search{float:right;background:url(../images/searchbg.gif) no-repeat; width:300px;height:44px;position: absolute;right: 0; top:38px}
 #frsearch{margin:10px 5px 0 10px;}
 .input{ float:left;border:none; padding:2px 0;color:#000; width:210px; margin:2px 0 0 20px;*padding:0; *border:1px solid none}
 .bt-go{float:right}
@@ -72,7 +74,7 @@ a:hover{color:#000;}
 #rightcontent{float:right;width:745px}
 #rightcontent p{ margin:0 0 8px 0}
 .bd-top-right{ background:url(../images/bd-top-right.gif) no-repeat; height:21px; width:745px}
-.mid-right{ background:url(../images/mid-right.gif) repeat-y;padding:0 10px 0px 10px}
+.mid-right{ background:url(../images/mid-right.gif) repeat-y;padding:0 10px 5px 10px}
 .bd-bt-right{background:url(../images/bd-bt-right.gif) no-repeat; height:21px; width:745px; position:relative; left:-1px}
 
 .title-right{margin:0 0 10px 0;font-size:10pt; background:url(../images/bullet2.gif) no-repeat left 2px ;color:#000;font-weight:bold}
@@ -98,12 +100,12 @@ a:hover{color:#000;}
 .title-masuring a:hover{color:#F90}
 
 /***** Product    *****/
-.all-product{}
+.all-product{list-style: none}
+.product{width:235px; display:inline-block;vertical-align:top; margin:0 0 5px 4px !important; *float: left; }
 .product-top{ background:url(../images/pr-top.gif) no-repeat; height:20px; width:235px}
 .product-btom{background:url(../images/pr-bottom.gif) no-repeat; height:16px; width:235px}
 .product-mid{background:url(../images/pr-mid.gif) repeat-y;display:inline-block}
-.product{width:235px; display:inline-block;vertical-align:top; margin:0 0 5px 4px !important ;*float:left; }
-.tent-product{ padding:0 10px; *padding:0 0px}
+.tent-product{ padding:0 10px; *padding:0 }
 .product-img{width:235px;height: 170px; text-align:center;display:table-cell;vertical-align:bottom}
 .title-pro{ font-size:10pt;margin:10px 0; text-align:center;}
 .price{float:left;color:#FEB138; font-weight:700; font-size:13px;padding:10px 0 0 0}
@@ -139,8 +141,8 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 #bg-fter{}
 #footer{ line-height:1.7em;padding:0 10px 10px}
 #footer a:hover{color:#5D94BC}
-.menu-fter li{list-style:none;float:left;}
-.menu-fter li a{ text-transform:capitalize;padding:12px 5px;display:block; color:#000;background:url(../images/bkg-pipe1.gif) no-repeat right}
+.title-company{font-size:12pt;color:#598DB4;font-weight:bold;margin: 0 0 5px 0}
+
 .copyright {float:right;text-align:right;*margin:10px 0 0 0;*_margin:0; padding:12px 0px 0 0}
 .copyright a{color:#000;}
 
