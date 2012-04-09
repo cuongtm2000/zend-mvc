@@ -7,7 +7,7 @@
 				<p class="product-image product-image-zoom">
 					<?php if($item['pic_full']): ?>
 						<img id="image" src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $item['pic_full'] ?>" alt="<?php echo $item['title'.LANG] ?>" />
-					<?php else :?>
+					<?php else:?>
 						<?php echo Yii::t('main', 'noRecord')?>
 					<?php endif; ?>
 				</p>
@@ -20,11 +20,9 @@
 					<img id="zoom_in" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/slider_btn_zoom_in.gif" alt="Zoom In" title="Zoom In" class="btn-zoom-in" />
 				</div>
 				<script type="text/javascript">
-
 					Event.observe(window, 'load', function() {
 						product_zoom = new Product.Zoom('image', 'track', 'handle', 'zoom_in', 'zoom_out', 'track_hint');
 					});
-
 				</script>
 			</div>
 		</form>
