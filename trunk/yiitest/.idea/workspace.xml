@@ -29,25 +29,16 @@
       <file leaf-file-name="ExportController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/administrator/controllers/ExportController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="12" selection-start="2068" selection-end="2068" vertical-scroll-proportion="0.0">
+            <state line="5" column="18" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/themes/dos.vn/css/layout.css">
+      <file leaf-file-name="Common.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/components/Common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="150" column="45" selection-start="8018" selection-end="8018" vertical-scroll-proportion="0.50364965">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Username.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/models/Username.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="199" column="27" selection-start="8323" selection-end="8331" vertical-scroll-proportion="0.0">
+            <state line="173" column="12" selection-start="9458" selection-end="9458" vertical-scroll-proportion="0.7518248">
               <folding />
             </state>
           </provider>
@@ -68,7 +59,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/publish/protected/modules/about/views/default/220312/view.php" />
         <option value="$PROJECT_DIR$/protected/modules/about/views/default/220312/view.php" />
         <option value="$PROJECT_DIR$/publish/protected/modules/news/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/publish/protected/modules/news/views/default/220312/view.php" />
@@ -82,8 +72,9 @@
         <option value="$PROJECT_DIR$/publish/protected/models/UserLangs.php" />
         <option value="$PROJECT_DIR$/publish/protected/models/PcounterSave.php" />
         <option value="$PROJECT_DIR$/themes/admin-green/views/layouts/main.php" />
-        <option value="$PROJECT_DIR$/protected/modules/administrator/controllers/ExportController.php" />
         <option value="$PROJECT_DIR$/themes/dos.vn/css/layout.css" />
+        <option value="$PROJECT_DIR$/protected/components/Common.php" />
+        <option value="$PROJECT_DIR$/protected/modules/administrator/controllers/ExportController.php" />
       </list>
     </option>
   </component>
@@ -292,6 +283,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="administrator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -311,6 +328,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -501,13 +536,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/publish/protected/modules/news/views/default/220312/cats.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="191" selection-start="719" selection-end="771" vertical-scroll-proportion="-6.5384617">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/news/views/default/220312/cats.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="6" selection-start="2237" selection-end="2237" vertical-scroll-proportion="0.8467433">
@@ -596,23 +624,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/themes/dos.vn/css/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="163" column="24" selection-start="8751" selection-end="8751" vertical-scroll-proportion="0.9069343">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protected/models/Username.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="27" selection-start="8323" selection-end="8331" vertical-scroll-proportion="0.0">
+        <state line="199" column="27" selection-start="8323" selection-end="8331" vertical-scroll-proportion="0.47627738">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/administrator/controllers/ExportController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="12" selection-start="2068" selection-end="2068" vertical-scroll-proportion="0.0">
+        <state line="5" column="18" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/dos.vn/css/layout.css">
+    <entry file="file://$PROJECT_DIR$/protected/components/Common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="45" selection-start="8018" selection-end="8018" vertical-scroll-proportion="0.50364965">
+        <state line="173" column="12" selection-start="9458" selection-end="9458" vertical-scroll-proportion="0.7518248">
           <folding />
         </state>
       </provider>

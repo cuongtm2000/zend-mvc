@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 09, 2012 at 06:21 AM
+-- Generation Time: Apr 09, 2012 at 09:41 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -638,7 +638,9 @@ CREATE TABLE IF NOT EXISTS `dos_user_langs` (
   `lang_name` varchar(30) NOT NULL,
   `lang` varchar(200) NOT NULL,
   `langen` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`lang_name`)
+  `dos_usernames_username` varchar(45) NOT NULL,
+  PRIMARY KEY (`lang_name`),
+  KEY `fk_dos_user_langs_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -806,6 +808,12 @@ ALTER TABLE `dos_usernames_has_dos_modules`
   ADD CONSTRAINT `fk_dos_usernames_has_dos_modules_dos_modules1` FOREIGN KEY (`dos_modules_module_id`) REFERENCES `dos_modules` (`module_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_dos_usernames_has_dos_modules_dos_usernames1` FOREIGN KEY (`dos_usernames_username`) REFERENCES `dos_usernames` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_dos_usernames_has_dos_modules_dos_values1` FOREIGN KEY (`dos_values_value_name`) REFERENCES `dos_values` (`value_name`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `dos_user_langs`
+--
+ALTER TABLE `dos_user_langs`
+  ADD CONSTRAINT `fk_dos_user_langs_dos_usernames1` FOREIGN KEY (`dos_usernames_username`) REFERENCES `dos_usernames` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
