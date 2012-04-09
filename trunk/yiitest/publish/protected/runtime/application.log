@@ -373,3 +373,57 @@ REQUEST_URI=/publish/admin/configs/langs
 in E:\Customers\dos.vn\svn\publish\protected\models\UserLangs.php (98)
 in E:\Customers\dos.vn\svn\publish\protected\modules\admin\controllers\ConfigsController.php (51)
 in E:\Customers\dos.vn\svn\publish\index.php (16)
+2012/04/09 03:54:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dos_usernames_username' in 'where clause'. The SQL statement executed was: SELECT lang_name, lang, langen FROM dos_user_langs WHERE dos_usernames_username=:user.
+in E:\Customers\dos.vn\svn\publish\protected\models\UserLangs.php (91)
+in E:\Customers\dos.vn\svn\publish\protected\models\Langs.php (89)
+in E:\Customers\dos.vn\svn\publish\protected\modules\admin\AdminModule.php (27)
+2012/04/09 03:54:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dos_usernames_username' in 'where clause'. The SQL statement executed was: SELECT lang_name, lang, langen FROM dos_user_langs WHERE dos_usernames_username=:user' in C:\xampp\php\library\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\php\library\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\Customers\dos.vn\svn\publish\protected\models\UserLangs.php(91): CDbCommand->queryAll()
+#2 E:\Customers\dos.vn\svn\publish\protected\models\Langs.php(89): UserLangs::getLangs()
+#3 E:\Customers\dos.vn\svn\publish\protected\modules\admin\AdminModule.php(27): Langs::setLangs(1)
+#4 C:\xampp\php\library\framework\web\CController.php(264): AdminModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin')
+#7 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#9 {main}
+REQUEST_URI=/publish/admin
+---
+2012/04/09 03:57:05 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dos_usernames_username' in 'where clause'. The SQL statement executed was: SELECT lang_name, lang, langen FROM dos_user_langs WHERE dos_usernames_username=:user.
+in E:\Customers\dos.vn\svn\publish\protected\models\UserLangs.php (89)
+in E:\Customers\dos.vn\svn\publish\protected\models\Langs.php (89)
+in E:\Customers\dos.vn\svn\publish\protected\modules\admin\AdminModule.php (27)
+2012/04/09 03:57:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dos_usernames_username' in 'where clause'. The SQL statement executed was: SELECT lang_name, lang, langen FROM dos_user_langs WHERE dos_usernames_username=:user' in C:\xampp\php\library\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\php\library\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\Customers\dos.vn\svn\publish\protected\models\UserLangs.php(89): CDbCommand->queryAll()
+#2 E:\Customers\dos.vn\svn\publish\protected\models\Langs.php(89): UserLangs::getLangs()
+#3 E:\Customers\dos.vn\svn\publish\protected\modules\admin\AdminModule.php(27): Langs::setLangs(1)
+#4 C:\xampp\php\library\framework\web\CController.php(264): AdminModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin')
+#7 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#9 {main}
+REQUEST_URI=/publish/admin
+---
+2012/04/09 03:57:07 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dos_usernames_username' in 'where clause'. The SQL statement executed was: SELECT lang_name, lang, langen FROM dos_user_langs WHERE dos_usernames_username=:user.
+in E:\Customers\dos.vn\svn\publish\protected\models\UserLangs.php (89)
+in E:\Customers\dos.vn\svn\publish\protected\models\Langs.php (89)
+in E:\Customers\dos.vn\svn\publish\protected\modules\admin\AdminModule.php (27)
+2012/04/09 03:57:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dos_usernames_username' in 'where clause'. The SQL statement executed was: SELECT lang_name, lang, langen FROM dos_user_langs WHERE dos_usernames_username=:user' in C:\xampp\php\library\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\php\library\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\Customers\dos.vn\svn\publish\protected\models\UserLangs.php(89): CDbCommand->queryAll()
+#2 E:\Customers\dos.vn\svn\publish\protected\models\Langs.php(89): UserLangs::getLangs()
+#3 E:\Customers\dos.vn\svn\publish\protected\modules\admin\AdminModule.php(27): Langs::setLangs(1)
+#4 C:\xampp\php\library\framework\web\CController.php(264): AdminModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin')
+#7 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#9 {main}
+REQUEST_URI=/publish/admin
+---
