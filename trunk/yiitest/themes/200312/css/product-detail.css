@@ -1,9 +1,10 @@
 /* Product Images */
-.product-view .product-img-box{ float:left; width:302px; margin:0 0 20px 0}
+.frame-info-product{margin:0 0 10px 0}
+.product-view{ float:left; width:300px; margin:0 0 0 10px}
 .col3-layout .product-view .product-img-box { float:none; margin:0 auto; }
-.product-view .product-img-box .product-image { margin:0 0 10px; border:1px solid #E8E8E8; }
-.product-view .product-img-box .product-image-zoom { position:relative; width:280px; height:300px; overflow:hidden; z-index:9; }
-.product-view .product-img-box .product-image-zoom img { position:absolute; left:0; top:0; cursor:move; }
+.product-view .product-img-box .product-image { margin:0; border:1px solid #E8E8E8; }
+.product-view .product-img-box .product-image-zoom { position:relative; width:300px; height:300px; overflow:hidden; z-index:9; }
+.product-view .product-img-box .product-image-zoom img {cursor:move; }
 .product-view .product-img-box .zoom-notice { margin:0 0 10px; text-align:center; }
 .product-view .product-img-box .zoom { position:relative; z-index:9; height:24px; margin:0 auto 13px; padding:0 28px; background:url(../images/slider_bg.gif) 50% 50% no-repeat; cursor:pointer; }
 .product-view .product-img-box .zoom.disabled { -moz-opacity:.3; -webkit-opacity:.3; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";/*IE8*/ opacity:.3; }
@@ -17,7 +18,7 @@
 
 
 /***  Right product detail   ***/
-.right-detail{ float:right;width:410px;margin:5px 0 0 0}
+.right-detail{ float:right;width:400px;margin:0 0 0 10px}
 .title-info{color:#000; font-size:10pt; font-weight:700; margin:0 0 10px 0}
 .right-detail-info{padding:0 10px 0 0}
 .right-detail-info p{margin:2px 0 !important; line-height:1.5em}
