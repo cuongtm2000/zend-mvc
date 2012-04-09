@@ -41,7 +41,8 @@
 							<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl'] ?>/" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a>
 						<?php endif;?>
 					</div>
-					<div  id="search">
+					<p class="hot-line">Hotline: 0909 009 009</p>
+					<div id="search">
 						<form  id="frsearch" name="frm-search" action="" method="post">
 							<input type="text" class="input"  value="Search entire store here ..." onblur="if(this.value=='') this.value='Search entire store here ...'" onfocus="if(this.value =='Search entire store here ...' ) this.value=''"/>
 							<input type="image" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/btn-go.gif" alt="" class="bt-go" />
@@ -177,13 +178,9 @@
         <div class="bd-bt-ctent"></div>
 		<div id="footer">
 			<div class="left">
-				<ul class="menu-fter">
-					<?php foreach($this->nav as $value):?>
-					<?php $selected = ($value['url']==$this->module->id) ?  ' class="select"' : ''?>
-					<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
-					<li><a<?php echo $selected ?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo $value['menu'.LANG] ?>"<?php echo $target ?>><?php echo $value['menu'.LANG] ?></a></li>
-					<?php endforeach;?>
-				</ul>
+				<h1 class="title-company"><?php echo $this->lang['company_name'] ?></h1>
+				<p><?php echo $this->lang['address1'] ?></p>
+				<p><?php echo $this->lang['address2'] ?></p>
 			</div>
 			<div class="copyright">
 				<p><?php echo $this->lang['copyright'] ?></p>
