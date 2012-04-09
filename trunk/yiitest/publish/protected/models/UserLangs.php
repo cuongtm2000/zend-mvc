@@ -2,11 +2,11 @@
 
 class UserLangs extends CActiveRecord {
 
-	private $_subdomain;
+	//private $_subdomain;
 
-	public function init() {
-		$this->_subdomain = Yii::app()->session['subdomain'];
-	}
+	//public function init() {
+		//$this->_subdomain = Yii::app()->session['subdomain'];
+	//}
 
 	/**
 	 * Returns the static model of the specified AR class.

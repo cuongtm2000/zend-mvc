@@ -490,3 +490,318 @@ Stack trace:
 #10 {main}
 REQUEST_URI=/publish/
 ---
+2012/04/09 13:16:40 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:18:58 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:19:00 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:20:10 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:20:36 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:20:42 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:20:54 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:21:19 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:21:21 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:22:11 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:22:32 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:23:19 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:23:20 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:23:44 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:24:43 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:25:18 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:25:33 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:25:34 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:25:42 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:26:35 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:26:37 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "200312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('200312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('200312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
