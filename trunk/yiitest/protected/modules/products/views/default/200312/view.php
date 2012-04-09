@@ -6,8 +6,8 @@
 			<div class="product-img-box">
 				<p class="product-image product-image-zoom">
 					<?php if($item['pic_full']): ?>
-					<!-- Picture full --><img id="image" src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $item['pic_full'] ?>" alt="<?php echo $item['title'.LANG] ?>" />
-					<?php else: ?>
+						<img id="image" src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $item['pic_full'] ?>" alt="<?php echo $item['title'.LANG] ?>" />
+					<?php else :?>
 						<?php echo Yii::t('main', 'noRecord')?>
 					<?php endif; ?>
 				</p>
