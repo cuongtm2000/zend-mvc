@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 09, 2012 at 02:55 AM
+-- Generation Time: Apr 09, 2012 at 04:57 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -74,7 +74,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('advs_left_height', 204, '', '010312'),
 ('advs_left_height', 200, '', '070312'),
 ('advs_left_height', 200, '', '111120'),
-('advs_left_height', 222, '', '200312'),
+('advs_left_height', 200, '', '200312'),
 ('advs_left_height', 200, '', '220312'),
 ('advs_left_height', 200, '', '260312'),
 ('advs_left_width', 200, '', '010312'),
@@ -102,89 +102,83 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('logo_height', 65, '', '111120'),
 ('logo_height', 100, '', '130312'),
 ('logo_height', 55, '', '200312'),
-('logo_height', 79, '', '220312'),
+('logo_height', 55, '', '220312'),
 ('logo_height', 46, '', '260312'),
 ('logo_width', 155, '', '010312'),
 ('logo_width', 260, '', '070312'),
 ('logo_width', 310, '', '111120'),
 ('logo_width', 735, '', '130312'),
 ('logo_width', 314, '', '200312'),
-('logo_width', 259, '', '220312'),
+('logo_width', 314, '', '220312'),
 ('logo_width', 300, '', '260312'),
+('news_cat_height', 89, '', '200312'),
 ('news_cat_height', 100, '', '260312'),
+('news_cat_width', 143, '', '200312'),
 ('news_cat_width', 145, '', '260312'),
-('news_height_thumb', 100, '', '220312'),
+('news_height_thumb', 89, '', '200312'),
 ('news_height_thumb', 100, '', '260312'),
-('news_num_paging_cat', 2, '', '220312'),
-('news_num_paging_hot', 5, '', '220312'),
-('news_num_paging_index', 2, '', '220312'),
+('news_num_paging_cat', 8, '', '200312'),
+('news_num_paging_index', 8, '', '200312'),
 ('news_num_paging_index', 5, '', '260312'),
-('news_num_paging_new', 4, '', '220312'),
-('news_width_thumb', 145, '', '220312'),
+('news_num_paging_new', 4, '', '200312'),
+('news_width_thumb', 143, '', '200312'),
 ('news_width_thumb', 145, '', '260312'),
 ('products_cat_height', 155, '', '010312'),
 ('products_cat_height', 200, '', '070312'),
 ('products_cat_height', 150, '', '111120'),
 ('products_cat_height', 121, '', '130312'),
 ('products_cat_height', 170, '', '200312'),
-('products_cat_height', 150, '', '220312'),
 ('products_cat_height', 193, '', '260312'),
 ('products_cat_width', 115, '', '010312'),
 ('products_cat_width', 150, '', '070312'),
 ('products_cat_width', 169, '', '111120'),
 ('products_cat_width', 152, '', '130312'),
 ('products_cat_width', 170, '', '200312'),
-('products_cat_width', 200, '', '220312'),
 ('products_cat_width', 188, '', '260312'),
 ('products_height', 400, '', '010312'),
 ('products_height', 500, '', '070312'),
 ('products_height', 650, '', '111120'),
 ('products_height', 400, '', '130312'),
-('products_height', 590, '', '200312'),
-('products_height', 400, '', '220312'),
+('products_height', 600, '', '200312'),
 ('products_height', 400, '', '260312'),
 ('products_height_thumb', 121, '', '010312'),
 ('products_height_thumb', 200, '', '070312'),
 ('products_height_thumb', 167, '', '111120'),
 ('products_height_thumb', 121, '', '130312'),
 ('products_height_thumb', 170, '', '200312'),
-('products_height_thumb', 135, '', '220312'),
 ('products_height_thumb', 193, '', '260312'),
-('products_num_paging_cat', 6, '', '220312'),
+('products_num_paging_cat', 8, '', '200312'),
 ('products_num_paging_cat', 5, '', '260312'),
-('products_num_paging_new', 4, '', '220312'),
-('products_num_paging_other', 2, '', '220312'),
+('products_num_paging_hot', 8, '', '200312'),
+('products_num_paging_new', 3, '', '200312'),
+('products_num_paging_other', 3, '', '200312'),
 ('products_width', 500, '', '010312'),
 ('products_width', 600, '', '070312'),
 ('products_width', 700, '', '111120'),
 ('products_width', 500, '', '130312'),
-('products_width', 475, '', '200312'),
-('products_width', 515, '', '220312'),
+('products_width', 500, '', '200312'),
 ('products_width', 400, '', '260312'),
 ('products_width_thumb', 152, '', '010312'),
 ('products_width_thumb', 150, '', '070312'),
 ('products_width_thumb', 167, '', '111120'),
 ('products_width_thumb', 152, '', '130312'),
 ('products_width_thumb', 170, '', '200312'),
-('products_width_thumb', 200, '', '220312'),
 ('products_width_thumb', 188, '', '260312'),
 ('services_height', 90, '', '010312'),
 ('services_height', 110, '', '111120'),
 ('services_height', 89, '', '130312'),
-('services_height', 90, '', '220312'),
+('services_height', 200, '', '200312'),
 ('services_height', 90, '', '260312'),
 ('services_width', 144, '', '010312'),
 ('services_width', 192, '', '111120'),
 ('services_width', 143, '', '130312'),
-('services_width', 145, '', '220312'),
+('services_width', 200, '', '200312'),
 ('services_width', 144, '', '260312'),
 ('video_cat_height', 100, '', '260312'),
 ('video_cat_width', 145, '', '260312'),
-('video_height_thumb', 150, '', '220312'),
 ('video_height_thumb', 100, '', '260312'),
-('video_num_paging_cat', 2, '', '220312'),
-('video_num_paging_index', 2, '', '220312'),
-('video_width_thumb', 200, '', '220312'),
+('video_num_paging_cat', 8, '', '200312'),
+('video_num_paging_index', 8, '', '200312'),
 ('video_width_thumb', 145, '', '260312');
 
 -- --------------------------------------------------------
@@ -311,6 +305,8 @@ INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, 
 ('111120', 'products', 'jcarousellite.js|contentslider.js|scroller.js|jquery.fancybox-1.3.1.js|lightbox.js', 'javascript'),
 ('200312', 'products', 'product-detail.css', 'css'),
 ('200312', 'products', 'prototype.js|effects.js|dragdrop.js|slider.js|product.js', 'javascript'),
+('200312', 'video', 'prettyPhoto.css', 'css'),
+('200312', 'video', 'jquery.prettyPhoto.js', 'javascript'),
 ('220312', 'default', 'prettyPhoto.css', 'css'),
 ('220312', 'default', 'jquery.prettyPhoto.js', 'javascript'),
 ('220312', 'video', 'prettyPhoto.css', 'css'),
@@ -417,10 +413,10 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(3, 'Giới thiệu sơ lược', 'Introduction About', '<p>\r\n	Ngày nay, khi ngày càng có nhiều thông tin được cung cấp trực tuyến, bạn càng cần phải sử dụng trình duyệt nhanh và an toàn trên máy tính. Giới thiệu về Google Chrome -- trình duyệt mở trang web với tốc độ cực nhanh! Thiết kế mượt mà của trình duyệt mang lại cho bạn nhiều không gian hơn để duyệt các trang web ưa thích của mình. Hướng dẫn này giúp bạn tìm hiểu qua các tính năng chính của Google Chrome.</p>', '<p>\r\n	Today, as more and more information is offered online, the more you need to use fast and secure browser on the computer. About Google Chrome - the browser open site with fast speed! Sleek design of the browser gives you more space to browse your favorite sites. This guide helps you learn the key features of Google Chrome.</p>', 119, '2012-04-05 02:12:08', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'introduction-about', 'Ngày nay, khi ngày càng có nhiều thông tin được cung cấp trực tuyến, bạn càng cần phải sử dụng trình duyệt nhanh và an toàn trên máy tính. Giới thiệu về Google Chrome -- trình duyệt mở trang web với tốc độ cực nhanh! Thiết kế mượt mà của trìn', '', 1, '220312'),
-(4, 'Giới thiệu chung', 'Introduction', '<p>\r\n	Giới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chung</p>', '<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>\r\n<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>\r\n<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>', 15, '2012-04-05 02:29:35', 2, 0, NULL, NULL, 'gioi-thieu-chung', 'introduction', 'Giới thiệu chungGiới thiệu chung', 'Introduction Introduction Introduction Introduction', 1, '220312'),
-(5, 'Giới thiệu Văn phòng đại diện', 'About a representative office', '<p>\r\n	Giới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diện</p>', '<p>\r\n	About a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative office</p>', 77, '2012-04-05 02:29:55', 3, 0, NULL, NULL, 'gioi-thieu-van-phong-dai-dien', 'about-a-representative-office', 'Giới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diện', 'About a representative officeAbout a representative office', 1, '220312'),
-(6, 'Về Dos.vn', 'Dos.vn about', '<p>\r\n	Kính gửi: <strong>Quý Doanh nghiệp</strong></p>\r\n<p style="margin-left:40px;">\r\n	<strong>DOS</strong> là công ty chuyên nghiệp trong việc <strong>Thiết kế Website</strong>. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng.</p>\r\n<p style="margin-left:40px;">\r\n	Với tiêu chí "Giao diện đẹp, tính năng nhiều, giá thành thấp". Qua 5 năm thiết kế Web, sản phẩm của chúng tôi được các Doanh nghiệp đánh giá cao. Chúng tôi có bề dày kinh nghiệm, có giải pháp và đội ngũ nhân lực tâm huyết để đảm bảo sản phẩm đáp ứng đúng nhu cầu, đem lại hiệu quả, với chi phí phù hợp.</p>\r\n<p style="margin-left:40px;">\r\n	Không ngừng học hỏi và phát triển công nghệ. <strong>DOS</strong> trở thành một công ty thiết kế Web tiên phong về chất lượng, có sản phẩm tiêu biểu, có thương hiệu uy tín trong và ngoài nước.</p>\r\n<p style="margin-left:40px;">\r\n	<strong>DOS</strong> thiết kế và cung cấp giải pháp Web trên đến các đơn vị: <strong>UBND Tân phú</strong>, <strong>SONADEZI</strong>, <strong>BENCO</strong>, <strong>Gạch Ngói Nhị Hiệp</strong>, <strong>An Gia Phú</strong>, <strong>Nội Thất Yến Bình Minh</strong>, <strong>Thuận Thành Glass</strong>, <strong>Thái Sơn</strong>, <strong>Thái Bình An Phú Thịnh...</strong></p>\r\n<p style="margin-left:40px;">\r\n	Tại Việt Nam, Sản phẩm <strong>DOS</strong> được giới thiệu tại các Công ty thiết kế in ấn, ở hầu hết các Trung Tâm tỉnh thành trên toàn quốc .</p>', '<p>\r\n	Kính gửi: Quý Doanh nghiệp<br />\r\n	      <br />\r\n	           DOS là công ty chuyên nghiệp trong việc Thiết kế Website. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng.<br />\r\n	          Với tiêu chí "Giao diện đẹp, tính năng nhiều, giá thành thấp". Qua 5 năm thiết kế Web, sản phẩm của chúng tôi được các Doanh nghiệp đánh giá cao. Chúng tôi có bề dày kinh nghiệm, có giải pháp và đội ngũ nhân lực tâm huyết để đảm bảo sản phẩm đáp ứng đúng nhu cầu, đem lại hiệu quả, với chi phí phù hợp.</p>\r\n<p>\r\n	          Không ngừng học hỏi và phát triển công nghệ. DOS trở thành một công ty thiết kế Web tiên phong về chất lượng, có sản phẩm tiêu biểu, có thương hiệu uy tín trong và ngoài nước.<br />\r\n	          DOS thiết kế và cung cấp giải pháp Web trên đến các đơn vị: UBND Tân phú, SONADEZI, BENCO, Gạch Ngói Nhị Hiệp, An Gia Phú, Nội Thất Yến Bình Minh, Thuận Thành Glass, Thái Sơn, Thái Bình An Phú Thịnh...</p>\r\n<p>\r\n	          Tại Việt Nam, Sản phẩm DOS được giới thiệu tại các Công ty thiết kế in ấn, ở hầu hết các Trung Tâm tỉnh thành trên toàn quốc .</p>', 71, '2012-04-07 02:13:52', 1, 0, NULL, NULL, 've-dos', 'dos-about', 'DOS là công ty chuyên nghiệp trong việc Thiết kế Website. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng', 'DOS là công ty chuyên nghiệp trong việc Thiết kế Website. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng', 1, 'dos'),
+(3, 'Giới thiệu sơ lược', 'Introduction About', '<p>\r\n	Ngày nay, khi ngày càng có nhiều thông tin được cung cấp trực tuyến, bạn càng cần phải sử dụng trình duyệt nhanh và an toàn trên máy tính. Giới thiệu về Google Chrome -- trình duyệt mở trang web với tốc độ cực nhanh! Thiết kế mượt mà của trình duyệt mang lại cho bạn nhiều không gian hơn để duyệt các trang web ưa thích của mình. Hướng dẫn này giúp bạn tìm hiểu qua các tính năng chính của Google Chrome.</p>', '<p>\r\n	Today, as more and more information is offered online, the more you need to use fast and secure browser on the computer. About Google Chrome - the browser open site with fast speed! Sleek design of the browser gives you more space to browse your favorite sites. This guide helps you learn the key features of Google Chrome.</p>', 222, '2012-04-05 02:12:08', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'introduction-about', 'Ngày nay, khi ngày càng có nhiều thông tin được cung cấp trực tuyến, bạn càng cần phải sử dụng trình duyệt nhanh và an toàn trên máy tính. Giới thiệu về Google Chrome -- trình duyệt mở trang web với tốc độ cực nhanh! Thiết kế mượt mà của trìn', '', 1, '220312'),
+(4, 'Giới thiệu chung', 'Introduction', '<p>\r\n	Giới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chung</p>', '<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>\r\n<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>\r\n<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>', 21, '2012-04-05 02:29:35', 2, 0, NULL, NULL, 'gioi-thieu-chung', 'introduction', 'Giới thiệu chungGiới thiệu chung', 'Introduction Introduction Introduction Introduction', 1, '220312'),
+(5, 'Giới thiệu Văn phòng đại diện', 'About a representative office', '<p>\r\n	Giới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diện</p>', '<p>\r\n	About a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative office</p>', 81, '2012-04-05 02:29:55', 3, 0, NULL, NULL, 'gioi-thieu-van-phong-dai-dien', 'about-a-representative-office', 'Giới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diện', 'About a representative officeAbout a representative office', 1, '220312'),
+(6, 'Về Dos.vn', 'Dos.vn about', '<p>\r\n	Kính gửi: <strong>Quý Doanh nghiệp</strong></p>\r\n<p style="margin-left:40px;">\r\n	<strong>DOS</strong> là công ty chuyên nghiệp trong việc <strong>Thiết kế Website</strong>. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng.</p>\r\n<p style="margin-left:40px;">\r\n	Với tiêu chí "Giao diện đẹp, tính năng nhiều, giá thành thấp". Qua 5 năm thiết kế Web, sản phẩm của chúng tôi được các Doanh nghiệp đánh giá cao. Chúng tôi có bề dày kinh nghiệm, có giải pháp và đội ngũ nhân lực tâm huyết để đảm bảo sản phẩm đáp ứng đúng nhu cầu, đem lại hiệu quả, với chi phí phù hợp.</p>\r\n<p style="margin-left:40px;">\r\n	Không ngừng học hỏi và phát triển công nghệ. <strong>DOS</strong> trở thành một công ty thiết kế Web tiên phong về chất lượng, có sản phẩm tiêu biểu, có thương hiệu uy tín trong và ngoài nước.</p>\r\n<p style="margin-left:40px;">\r\n	<strong>DOS</strong> thiết kế và cung cấp giải pháp Web trên đến các đơn vị: <strong>UBND Tân phú</strong>, <strong>SONADEZI</strong>, <strong>BENCO</strong>, <strong>Gạch Ngói Nhị Hiệp</strong>, <strong>An Gia Phú</strong>, <strong>Nội Thất Yến Bình Minh</strong>, <strong>Thuận Thành Glass</strong>, <strong>Thái Sơn</strong>, <strong>Thái Bình An Phú Thịnh...</strong></p>\r\n<p style="margin-left:40px;">\r\n	Tại Việt Nam, Sản phẩm <strong>DOS</strong> được giới thiệu tại các Công ty thiết kế in ấn, ở hầu hết các Trung Tâm tỉnh thành trên toàn quốc .</p>', '<p>\r\n	Kính gửi: Quý Doanh nghiệp<br />\r\n	      <br />\r\n	           DOS là công ty chuyên nghiệp trong việc Thiết kế Website. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng.<br />\r\n	          Với tiêu chí "Giao diện đẹp, tính năng nhiều, giá thành thấp". Qua 5 năm thiết kế Web, sản phẩm của chúng tôi được các Doanh nghiệp đánh giá cao. Chúng tôi có bề dày kinh nghiệm, có giải pháp và đội ngũ nhân lực tâm huyết để đảm bảo sản phẩm đáp ứng đúng nhu cầu, đem lại hiệu quả, với chi phí phù hợp.</p>\r\n<p>\r\n	          Không ngừng học hỏi và phát triển công nghệ. DOS trở thành một công ty thiết kế Web tiên phong về chất lượng, có sản phẩm tiêu biểu, có thương hiệu uy tín trong và ngoài nước.<br />\r\n	          DOS thiết kế và cung cấp giải pháp Web trên đến các đơn vị: UBND Tân phú, SONADEZI, BENCO, Gạch Ngói Nhị Hiệp, An Gia Phú, Nội Thất Yến Bình Minh, Thuận Thành Glass, Thái Sơn, Thái Bình An Phú Thịnh...</p>\r\n<p>\r\n	          Tại Việt Nam, Sản phẩm DOS được giới thiệu tại các Công ty thiết kế in ấn, ở hầu hết các Trung Tâm tỉnh thành trên toàn quốc .</p>', 70, '2012-04-07 02:13:52', 1, 0, NULL, NULL, 've-dos', 'dos-about', 'DOS là công ty chuyên nghiệp trong việc Thiết kế Website. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng', 'DOS là công ty chuyên nghiệp trong việc Thiết kế Website. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng', 1, 'dos'),
 (7, 'Tầm nhìn và sứ mệnh Dos', 'Gioi thieu 2 En', '<p>\r\n	Tầm nhìn và Sứ mệnh của DOS được viết ra ngay từ khi thành lập, xác định lý tưởng, hướng đi lâu dài và những giá trị cơ bản mà mỗi thành viên sáng lập luôn hướng tới.</p>\r\n<p>\r\n	<strong>Tầm nhìn của DOS</strong><br />\r\n	Được công nhận là công ty đứng đầu trong lĩnh vực thiết kế Website. Với giải pháp tích hợp Marketing và Công Nghệ Thông Tin trong việc quảng cáo bán hàng dành riêng cho từng Doanh nghiệp.</p>\r\n<p>\r\n	<strong>Sứ mệnh của DOS</strong><br />\r\n	Mang lại cho Doanh nghiệp một kênh truyền thông nhanh chóng và hiệu quả qua những Website đầy tính sáng tạo.</p>\r\n<p>\r\n	<strong>Các giá trị cơ bản của DOS c</strong>ác giá trị cơ bản là tài sản vô cùng quý báu mà mỗi người thành viên của DOS đều trân trọng giữ gìn:</p>\r\n<ul><li>\r\n		<strong>Làm khách hàng hài lòng</strong>: Tận tuỵ với khách hàng và luôn phấn đấu để đáp ứng tốt nhất những nhu cầu, vượt trên mong đợi của họ.</li>\r\n	<li>\r\n		<strong>Con người là cốt lõi</strong>: Tôn trọng con người, tạo điều kiện cho các thành viên phát triển tối đa tài năng, đóng góp cho tổ chức và được đãi ngộ xứng đáng cả về vật chất và tinh thần.</li>\r\n	<li>\r\n		<strong>Chất lượng tốt nhất</strong>: Đảm bảo chất lượng tốt nhất trong mỗi sản phẩm, mỗi việc làm.</li>\r\n	<li>\r\n		<strong>Đề cao đạo đức kinh doanh</strong>: Mỗi nhân viên là một đại diện của Công ty, có nghĩa vụ tuân thủ đạo đức kinh doanh cao nhất, luôn hợp tác, cởi mở và thân thiện với đồng nghiệp, đóng góp cho cộng đồng và xã hội.</li>\r\n</ul>', '<p>\r\n	NOi dung en</p>', 37, '2012-04-07 02:14:02', 2, 0, NULL, NULL, 'tam-nhin-va-su-menh-dos', 'gioi-thieu-2-en', 'Tầm nhìn và Sứ mệnh của DOS được viết ra ngay từ khi thành lập, xác định lý tưởng, hướng đi lâu dài và những giá trị cơ bản mà mỗi thành viên sáng lập luôn hướng tới', 'Mo ta 2 En', 1, 'dos'),
 (8, 'Lĩnh vực hoạt động', 'Gioi thieu 3 En', '<p>\r\n	<strong>DỊCH VỤ CHUYÊN NGHIỆP</strong>:</p>\r\n<ul><li>\r\n		Thiết kế website</li>\r\n	<li>\r\n		Phương pháp quảng cáo bán hàng trực tuyến</li>\r\n	<li>\r\n		Giải pháp CNTT trọn gói cho Doanh nghiệp</li>\r\n	<li>\r\n		Thương mại điện tử</li>\r\n</ul><p>\r\n	 </p>\r\n<p>\r\n	<strong>SẢN PHẨM VÀ DỊCH VỤ GTGT:</strong></p>\r\n<ul><li>\r\n		Đăng ký tên miền</li>\r\n	<li>\r\n		Cung cấp Hosting</li>\r\n	<li>\r\n		Xử lý hình ảnh nhập liệu cho web</li>\r\n	<li>\r\n		Thiết kế Logo</li>\r\n	<li>\r\n		Thiết Kế Name Card</li>\r\n	<li>\r\n		Thiết kế ấn phầm Quảng cáo theo đơn đặt hàng</li>\r\n</ul><p>\r\n	 </p>\r\n<p>\r\n	<strong>HỖ TRỢ TƯ VẤN MIỄN PHÍ:</strong></p>\r\n<ul><li>\r\n		Thành lập Doanh nghiệp</li>\r\n	<li>\r\n		Quản lý Doanh nghiệp</li>\r\n	<li>\r\n		Tư vấn Marketing và phát triển Doanh nghiệp</li>\r\n	<li>\r\n		Tư vấn và định hướng đào tạo nhân viên bán hàng</li>\r\n	<li>\r\n		Tư vấn phong thủy</li>\r\n</ul>', '<p>\r\n	Noi dung 3 en</p>', 31, '2012-04-07 02:14:12', 3, 0, NULL, NULL, 'linh-vuc-hoat-dong', 'gioi-thieu-3-en', 'Mo ta 3', 'Mo ta 3 En', 1, 'dos');
 
@@ -508,7 +504,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
 --
 
 INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `tagen`, `description`, `descriptionen`, `enable`, `dos_usernames_username`) VALUES
-(1, 'Liên hệ với chúng tôi', '', '<p>\r\n	CÔNG TY CỔ PHẦN TM SX THẾ GIỚI NỘI THẤT</p>\r\n<p>\r\n	Trụ sở: 321 CỘNG HÒA, PHƯỜNG 13, TÂN BÌNH, TP.HCM</p>\r\n<p>\r\n	Nhà máy : C7/21 PHẠM HÙNG, CHÁNH HƯNG BÌNH CHÁNH</p>\r\n<p>\r\n	MST: 0309788812</p>\r\n<p>\r\n	Điện thoại : (+848) 6292 3934 - Fax: (+848) 6292 3935</p>\r\n<p>\r\n	Hotline: 0942852858--0942 853 443 - Email : thegioinoithatvn@gmail.com</p>', '', '2012-04-05 02:20:31', 1, 0, 0, 'lien-he-voi-chung-toi', '', '', '', '1', '220312');
+(1, 'Contact us', '', '<p>\r\n	CÔNG TY CỔ PHẦN TM SX THẾ GIỚI NỘI THẤT</p>\r\n<p>\r\n	Trụ sở: 321 CỘNG HÒA, PHƯỜNG 13, TÂN BÌNH, TP.HCM</p>\r\n<p>\r\n	Nhà máy : C7/21 PHẠM HÙNG, CHÁNH HƯNG BÌNH CHÁNH</p>\r\n<p>\r\n	MST: 0309788812</p>\r\n<p>\r\n	Điện thoại : (+848) 6292 3934 - Fax: (+848) 6292 3935</p>\r\n<p>\r\n	Hotline: 0942852858--0942 853 443 - Email : thegioinoithatvn@gmail.com</p>', '<p>\r\n	TM MANUFACTURING COMPANY FURNITURE WORLD</p>\r\n<p>\r\n	Office: 321 Cong Hoa, Ward 13, Tan Binh, Ho Chi Minh City</p>\r\n<p>\r\n	Factory: C7/21 Pham Hung Binh Chanh Hung DISTRICT</p>\r\n<p>\r\n	MST: 0309788812</p>\r\n<p>\r\n	Tel: (+848) 6292 3934 - Fax: (+848) 6292 3935</p>\r\n<p>\r\n	Hotline: 0942852858 - 0942 853 443 - Email: thegioinoithatvn@gmail.com</p>', '2012-04-05 02:20:31', 1, 0, 0, 'contact-us', '', '', '', '1', '220312');
 
 -- --------------------------------------------------------
 
@@ -644,8 +640,8 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('yesterday', 0, 'dos'),
 ('day_time', 2456027, '220312'),
 ('max_count', 1, '220312'),
-('counter', 4, '220312'),
-('yesterday', 1, '220312');
+('counter', 3, '220312'),
+('yesterday', 0, '220312');
 
 -- --------------------------------------------------------
 
@@ -665,7 +661,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1333932840, '220312');
+('''127.0.0.1''', 1333938423, '220312');
 
 -- --------------------------------------------------------
 
@@ -702,7 +698,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `dos_module_products`
@@ -710,7 +706,10 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
 
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
 (6, 'Nội thất bếp treo tường', 'Kitchen wall', '2012-04-05 03:08:09', '', '', NULL, NULL, NULL, '<p>\r\n	Nội thất bếp treo tường Nội thất bếp treo tường</p>', '<p>\r\n	Kitchen wall Kitchen wall Kitchen wall Kitchen wall</p>', 'noi-that-bep-treo-tuong', 'kitchen-wall', 'noi-that-bep-treo-tuong', 'Kitchen wall', 0, 1, 9990000, 1, NULL, NULL, NULL, NULL, NULL, 1, 10),
-(7, 'Nội thất bếp thời trang', 'Kitchen Furniture Fashion', '2012-04-05 03:09:20', '', 'noi-that-bep-thoi-trang.jpg', NULL, NULL, NULL, '<p>\r\n	Nội thất bếp thời trangNội thất bếp thời trangNội thất bếp thời trangNội thất bếp thời trangNội thất bếp thời trang</p>', '<p>\r\n	Kitchen Furniture FashionKitchen Furniture Fashionv Kitchen Furniture Fashion</p>', 'noi-that-bep-thoi-trang', 'kitchen-furniture-fashion', 'Nội thất bếp thời trangNội thất bếp thời trang', 'Kitchen Furniture Fashion Kitchen Furniture Fashion', 0, 2, 2999999, 1, NULL, NULL, NULL, NULL, NULL, 1, 10);
+(7, 'Nội thất bếp thời trang', 'Kitchen Furniture Fashion', '2012-04-05 03:09:20', '', 'noi-that-bep-thoi-trang.jpg', NULL, NULL, NULL, '<p>\r\n	Nội thất bếp thời trangNội thất bếp thời trangNội thất bếp thời trangNội thất bếp thời trangNội thất bếp thời trang</p>', '<p>\r\n	Kitchen Furniture FashionKitchen Furniture Fashionv Kitchen Furniture Fashion</p>', 'noi-that-bep-thoi-trang', 'kitchen-furniture-fashion', 'Nội thất bếp thời trangNội thất bếp thời trang', 'Kitchen Furniture Fashion Kitchen Furniture Fashion', 0, 2, 2999999, 1, NULL, NULL, NULL, NULL, NULL, 1, 10),
+(8, 'Sách hot nhất nóng nhất', 'Book hottest hottest', '2012-04-09 01:11:18', 'sach-hot-nhat-nong-nhat-thumb.jpg', 'sach-hot-nhat-nong-nhat.jpg', NULL, NULL, NULL, '<p>\r\n	chi tiet</p>', '<p>\r\n	detail</p>', 'sach-hot-nhat-nong-nhat', 'book-hottest-hottest', 'sach hot nhieu nguoi doc', 'some read', 0, 3, 200000, 0, NULL, NULL, NULL, NULL, NULL, 1, 10),
+(9, 'Sách khoa học công nghệ mới', 'New science and technology policy', '2012-04-09 01:32:02', 'sach-khoa-hoc-cong-nghe-moi-thumb.jpg', 'sach-khoa-hoc-cong-nghe-moi.jpg', NULL, NULL, NULL, '<p>\r\n	chi tiet</p>', '<p>\r\n	detail</p>', 'sach-khoa-hoc-cong-nghe-moi', 'new-science-and-technology-policy', 'sach cong nghe mới', 'New science and technology policy', 0, 4, 400000, 1, NULL, NULL, NULL, NULL, NULL, 1, 8),
+(10, 'Sách nhà giáo dục mới', 'The new education policy', '2012-04-09 01:39:13', '', '', NULL, NULL, NULL, '<p>\r\n	chi tiet</p>', '<p>\r\n	add</p>', 'sach-nha-giao-duc-moi', 'the-new-education-policy', 'Sách nhà giáo dục mới', 'The new education policy', 0, 5, 20000, 1, NULL, NULL, NULL, NULL, NULL, 1, 10);
 
 -- --------------------------------------------------------
 
@@ -738,7 +737,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
@@ -748,7 +747,8 @@ INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `
 (7, 0, 'Nội thất sofa phòng khách', 'Furniture living room sofa', NULL, NULL, 'noi-that-sofa-phong-khach', 'furniture-living-room-sofa', 'Nội thất sofa khách', 'Furniture living room sofa', 'noi-that-sofa-phong-khach.jpg', NULL, 1, NULL, NULL, 1, '220312'),
 (8, 0, 'Nội thất bếp', 'Interior new kitchen', NULL, NULL, 'noi-that-bep', 'interior-new-kitchen', 'Noi that bep', 'Interior new kitchen', 'noi-that-bep.jpg', NULL, 2, NULL, NULL, 1, '220312'),
 (9, 0, 'Nội thất giường ngủ loại 1 chuyen cho vip nhat', 'Interior of a specialized bed for vip nhat', NULL, NULL, 'noi-that-giuong-ngu-loai-1-chuyen-cho-vip-nhat', 'interior-of-a-specialized-bed-for-vip-nhat', 'Nội thất giường ngủ loại 1 chuyen cho vip nhat', 'Interior of a specialized bed for vip nhat', 'noi-that-giuong-ngu-loai-1-chuyen-cho-vip-nhat.jpg', NULL, 3, NULL, NULL, 1, '220312'),
-(10, 0, 'Nhà bếp', 'Kitchen Furniture', NULL, NULL, 'nha-bep', 'kitchen-furniture', 'Nha bep', 'Kitchen Furniture', 'nha-bep.jpg', NULL, 4, NULL, NULL, 1, '220312');
+(10, 0, 'Nhà bếp', 'Kitchen Furniture', NULL, NULL, 'nha-bep', 'kitchen-furniture', 'Nha bep', 'Kitchen Furniture', 'nha-bep.jpg', NULL, 4, NULL, NULL, 1, '220312'),
+(11, 10, 'Sách khoa học xã hội', 'Social sciences books', NULL, NULL, 'sach-khoa-hoc-xa-hoi', 'social-sciences-books', 'Sách khoa học xã hội', 'Social sciences books', '', NULL, 5, NULL, NULL, 1, '220312');
 
 -- --------------------------------------------------------
 
@@ -786,7 +786,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(3, 'Dịch vụ vẫn chuyển', 'Transport services', NULL, NULL, '<p>\r\n	Vận chuyển mọi nơi mọi lúc nếu khách yêu cầu</p>', '<p>\r\n	Shipping anywhere, anytime if requestedShipping anywhere, anytime if requestedShipping anywhere, anytime if requestedShipping anywhere, anytime if requested</p>', 'dich-vu-van-chuyen.jpg', 4, '2012-04-05 02:28:54', 1, 0, NULL, NULL, 'dich-vu-van-chuyen', 'transport-services', 'Vận chuyển mọi nơi mọi lúc nếu khách yêu cầu', 'Shipping anywhere, anytime if requested', 1, '220312');
+(3, 'Dịch vụ vẫn chuyển', 'Transport services', NULL, NULL, '<p>\r\n	Vận chuyển mọi nơi mọi lúc nếu khách yêu cầu</p>', '<p>\r\n	Shipping anywhere, anytime if requestedShipping anywhere, anytime if requestedShipping anywhere, anytime if requestedShipping anywhere, anytime if requested</p>', 'dich-vu-van-chuyen.jpg', 10, '2012-04-05 02:28:54', 1, 0, NULL, NULL, 'dich-vu-van-chuyen', 'transport-services', 'Vận chuyển mọi nơi mọi lúc nếu khách yêu cầu', 'Shipping anywhere, anytime if requested', 1, '220312');
 
 -- --------------------------------------------------------
 
@@ -805,15 +805,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `dos_module_supports`
 --
 
 INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
-(2, 'Hỗ trợ mua hàng', '', '01230 456 789', 'mailgoogle', 2, 'yahoo', '220312'),
-(3, 'Hỗ trợ kinh doanh', '', '0909 999 888', 'groupitsoft', 1, 'yahoo', '220312');
+(12, 'Hỗ trợ mua hàng', '1', '01230 456 789', 'mailgoogle', 2, 'yahoo', '220312'),
+(13, 'Hỗ trợ kinh doanh', '1', '0909 999 888', 'groupitsoft', 1, 'yahoo', '220312');
 
 -- --------------------------------------------------------
 
@@ -841,7 +841,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_video` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_video_dos_module_video_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_module_video`
+--
+
+INSERT INTO `dos_module_video` (`record_id`, `title`, `titleen`, `postdate`, `tag`, `tagen`, `description`, `descriptionen`, `pic_thumb`, `url`, `record_order`, `hits`, `extra_field1`, `extra_field2`, `hot`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(1, 'Có gì hot', 'What''s hot', '2012-04-09 00:09:19', 'co-gi-hot', 'whats-hot', 'Có gì hot', 'What''s hot', 'co-gi-hot.jpg', 'http://www.youtube.com/watch?v=9Ko3wWP6Z9Y&feature=fvsr', 1, 0, NULL, NULL, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -864,7 +871,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_video_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_module_video_cat`
+--
+
+INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat_title`, `cat_titleen`, `tag`, `tagen`, `description`, `descriptionen`, `cat_order`, `cat_enable`, `dos_usernames_username`) VALUES
+(1, 0, '', 'Video mới nhất', 'Latest Videos', 'video-moi-nhat', 'latest-videos', 'Video mới nhất', 'Latest Videos', 1, 1, '220312');
 
 -- --------------------------------------------------------
 
@@ -1222,12 +1236,18 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('200312', 'default', 'list_supports'),
 ('200312', 'default', 'menu_products'),
 ('200312', 'default', 'products_hot'),
+('200312', 'news', 'advs_left'),
+('200312', 'news', 'list_supports'),
+('200312', 'news', 'menu_news'),
 ('200312', 'products', 'advs_left'),
 ('200312', 'products', 'list_supports'),
 ('200312', 'products', 'menu_products'),
 ('200312', 'services', 'advs_left'),
 ('200312', 'services', 'list_supports'),
 ('200312', 'services', 'menu_services'),
+('200312', 'video', 'advs_left'),
+('200312', 'video', 'list_supports'),
+('200312', 'video', 'menu_video'),
 ('220312', 'about', 'advs_left'),
 ('220312', 'about', 'list_supports'),
 ('220312', 'about', 'menu_about'),
@@ -1308,7 +1328,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 --
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('220312', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-05 02:08:09', NULL, NULL, NULL, 'user', 'vi|en', NULL, '2012-05-04 16:00:00', 1, '220312', 2, 'cong-nghe-thong-tin-vien-thong'),
+('220312', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-05 02:08:09', '', '', '', 'user', 'vi|en', NULL, '2012-05-04 16:00:00', 1, '200312', 2, 'tranh-anh-qua-luu-niem'),
 ('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi|en', NULL, '0000-00-00 00:00:00', 1, '111120', 2, 'thoi-trang');
 
 -- --------------------------------------------------------
