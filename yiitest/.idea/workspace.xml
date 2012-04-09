@@ -26,82 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cats.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/publish/protected/modules/news/views/default/220312/cats.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="191" selection-start="719" selection-end="771" vertical-scroll-proportion="-6.5384617">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/news/views/default/220312/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="158" selection-start="1395" selection-end="1447" vertical-scroll-proportion="-9.153846">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/publish/protected/modules/news/views/default/220312/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="210" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.4559387">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cats.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/news/views/default/220312/cats.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="6" selection-start="2237" selection-end="2237" vertical-scroll-proportion="-17.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/220312/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cats.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/220312/cats.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="254" selection-start="1433" selection-end="1436" vertical-scroll-proportion="-3.235294">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cats.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/111120/cats.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="11.961538">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="view.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/publish/protected/modules/news/views/default/220312/view.php">
+        <entry file="file://$PROJECT_DIR$/publish/protected/modules/products/views/default/220312/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="51" selection-start="537" selection-end="537" vertical-scroll-proportion="-3.2692308">
+            <state line="0" column="0" selection-start="0" selection-end="305" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/publish/protected/modules/news/controllers/DefaultController.php">
+      <file leaf-file-name="view.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/220312/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="105" selection-start="929" selection-end="939" vertical-scroll-proportion="0.0">
+            <state line="0" column="305" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -122,8 +59,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/models/Langs.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/views/configs/langs.php" />
         <option value="$PROJECT_DIR$/protected/models/UserLangs.php" />
         <option value="$PROJECT_DIR$/protected/modules/admin/controllers/ConfigsController.php" />
         <option value="$PROJECT_DIR$/publish/protected/models/UserLangs.php" />
@@ -138,6 +73,8 @@
         <option value="$PROJECT_DIR$/protected/modules/news/views/default/220312/cats.php" />
         <option value="$PROJECT_DIR$/protected/modules/news/views/default/220312/index.php" />
         <option value="$PROJECT_DIR$/publish/protected/modules/news/views/default/220312/index.php" />
+        <option value="$PROJECT_DIR$/publish/protected/modules/products/views/default/220312/view.php" />
+        <option value="$PROJECT_DIR$/protected/modules/products/views/default/220312/view.php" />
       </list>
     </option>
   </component>
@@ -274,7 +211,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="news" />
+              <option name="myItemId" value="products" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -300,7 +237,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="news" />
+              <option name="myItemId" value="products" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -313,66 +250,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="220312" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="publish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="news" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="publish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="news" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -861,16 +738,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/config/public.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="71" selection-start="217" selection-end="217" vertical-scroll-proportion="0.18181819" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/site/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="42" selection-start="1558" selection-end="1558" vertical-scroll-proportion="-0.79118776" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/publish/protected/modules/about/views/default/220312/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -908,14 +775,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/publish/protected/modules/news/controllers/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="105" selection-start="929" selection-end="939" vertical-scroll-proportion="0.0">
+        <state line="26" column="105" selection-start="929" selection-end="939" vertical-scroll-proportion="0.80656934">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/publish/protected/modules/news/views/default/220312/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="51" selection-start="537" selection-end="537" vertical-scroll-proportion="-3.2692308">
+        <state line="5" column="51" selection-start="537" selection-end="537" vertical-scroll-proportion="0.16283526">
           <folding />
         </state>
       </provider>
@@ -929,14 +796,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/220312/cats.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="254" selection-start="1433" selection-end="1436" vertical-scroll-proportion="-3.235294">
+        <state line="16" column="254" selection-start="1433" selection-end="1436" vertical-scroll-proportion="0.33199194">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/111120/cats.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="11.961538">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.59578544">
           <folding />
         </state>
       </provider>
@@ -950,7 +817,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/news/views/default/220312/cats.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="6" selection-start="2237" selection-end="2237" vertical-scroll-proportion="-17.0">
+        <state line="26" column="6" selection-start="2237" selection-end="2237" vertical-scroll-proportion="0.8467433">
           <folding />
         </state>
       </provider>
@@ -965,6 +832,20 @@
     <entry file="file://$PROJECT_DIR$/publish/protected/modules/news/views/default/220312/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="210" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.4559387">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/publish/protected/modules/products/views/default/220312/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="305" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/220312/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="305" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
