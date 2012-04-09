@@ -24,8 +24,29 @@ INSERT INTO `dos_bussiness` (`bussiness_id`,`bussiness_name`,`cat_parent_id`) VA
 ('advs_left_width','200','','220312'),
 ('banner_height','332','','220312'),
 ('banner_width','950','','220312'),
-('logo_height','55','','220312'),
-('logo_width','314','','220312');
+('logo_height','79','','220312'),
+('logo_width','259','','220312'),
+('news_height_thumb','100','','220312'),
+('news_num_paging_cat','2','','220312'),
+('news_num_paging_hot','5','','220312'),
+('news_num_paging_index','2','','220312'),
+('news_num_paging_new','4','','220312'),
+('news_width_thumb','145','','220312'),
+('products_cat_height','150','','220312'),
+('products_cat_width','200','','220312'),
+('products_height','400','','220312'),
+('products_height_thumb','135','','220312'),
+('products_num_paging_cat','6','','220312'),
+('products_num_paging_new','4','','220312'),
+('products_num_paging_other','2','','220312'),
+('products_width','515','','220312'),
+('products_width_thumb','200','','220312'),
+('services_height','90','','220312'),
+('services_width','145','','220312'),
+('video_height_thumb','150','','220312'),
+('video_num_paging_cat','2','','220312'),
+('video_num_paging_index','2','','220312'),
+('video_width_thumb','200','','220312');
 INSERT INTO `dos_features` (`feature_id`,`feature_name`) VALUES
 ('gioi-thieu-dich-vu','Giới thiệu dịch vụ'),
 ('gioi-thieu-san-pham','Giới thiệu sản phẩm');

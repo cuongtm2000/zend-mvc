@@ -805,3 +805,158 @@ Stack trace:
 #10 {main}
 REQUEST_URI=/publish/
 ---
+2012/04/09 13:39:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'publish.dos_usernames' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `dos_usernames`.
+in E:\Customers\dos.vn\svn\publish\protected\components\Controller.php (26)
+in E:\Customers\dos.vn\svn\publish\index.php (16)
+2012/04/09 13:39:17 [error] [exception.CDbException] exception 'CDbException' with message 'Bảng "dos_usernames" dùng cho lớp active record "Username" không có trong database.' in C:\xampp\php\library\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Username))
+#1 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(394): CActiveRecord::model('Username')
+#2 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 E:\Customers\dos.vn\svn\publish\protected\components\Controller.php(26): CActiveRecord->__construct()
+#4 C:\xampp\php\library\framework\web\CWebApplication.php(275): Controller->init()
+#5 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#6 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#8 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:39:57 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'publish.dos_usernames' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `dos_usernames`.
+in E:\Customers\dos.vn\svn\publish\protected\components\Controller.php (26)
+in E:\Customers\dos.vn\svn\publish\index.php (16)
+2012/04/09 13:39:57 [error] [exception.CDbException] exception 'CDbException' with message 'Bảng "dos_usernames" dùng cho lớp active record "Username" không có trong database.' in C:\xampp\php\library\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Username))
+#1 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(394): CActiveRecord::model('Username')
+#2 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 E:\Customers\dos.vn\svn\publish\protected\components\Controller.php(26): CActiveRecord->__construct()
+#4 C:\xampp\php\library\framework\web\CWebApplication.php(275): Controller->init()
+#5 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#6 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#8 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:39:58 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'publish.dos_usernames' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `dos_usernames`.
+in E:\Customers\dos.vn\svn\publish\protected\components\Controller.php (26)
+in E:\Customers\dos.vn\svn\publish\index.php (16)
+2012/04/09 13:39:58 [error] [exception.CDbException] exception 'CDbException' with message 'Bảng "dos_usernames" dùng cho lớp active record "Username" không có trong database.' in C:\xampp\php\library\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Username))
+#1 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(394): CActiveRecord::model('Username')
+#2 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 E:\Customers\dos.vn\svn\publish\protected\components\Controller.php(26): CActiveRecord->__construct()
+#4 C:\xampp\php\library\framework\web\CWebApplication.php(275): Controller->init()
+#5 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#6 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#8 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:40:21 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'publish.dos_usernames' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `dos_usernames`.
+in E:\Customers\dos.vn\svn\publish\protected\components\Controller.php (26)
+in E:\Customers\dos.vn\svn\publish\index.php (16)
+2012/04/09 13:40:21 [error] [exception.CDbException] exception 'CDbException' with message 'Bảng "dos_usernames" dùng cho lớp active record "Username" không có trong database.' in C:\xampp\php\library\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Username))
+#1 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(394): CActiveRecord::model('Username')
+#2 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 E:\Customers\dos.vn\svn\publish\protected\components\Controller.php(26): CActiveRecord->__construct()
+#4 C:\xampp\php\library\framework\web\CWebApplication.php(275): Controller->init()
+#5 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#6 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#8 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:40:22 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'publish.dos_usernames' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `dos_usernames`.
+in E:\Customers\dos.vn\svn\publish\protected\components\Controller.php (26)
+in E:\Customers\dos.vn\svn\publish\index.php (16)
+2012/04/09 13:40:22 [error] [exception.CDbException] exception 'CDbException' with message 'Bảng "dos_usernames" dùng cho lớp active record "Username" không có trong database.' in C:\xampp\php\library\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Username))
+#1 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(394): CActiveRecord::model('Username')
+#2 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 E:\Customers\dos.vn\svn\publish\protected\components\Controller.php(26): CActiveRecord->__construct()
+#4 C:\xampp\php\library\framework\web\CWebApplication.php(275): Controller->init()
+#5 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#6 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#8 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:41:05 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:41:06 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:41:35 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:41:36 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
+2012/04/09 13:41:39 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/publish/
+---
