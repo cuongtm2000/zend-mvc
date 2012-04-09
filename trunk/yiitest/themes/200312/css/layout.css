@@ -30,9 +30,9 @@ a:hover{color:#000;}
 #nav .select{color:#333 }
 
 
-.lang {position:absolute;right:0; top:120px}
-.lang img{ margin:0 15px 0 5px}
-.lang a{ color:#fff}
+.lang {position:absolute;right:0; top:115px}
+.lang img{ margin:0 2px 0 0;position: relative;top:2px}
+.lang a{ color:#fff;margin: 0 10px 0 5px}
 .lang a:hover{ color:#000}
 
 /** Banner **/
@@ -48,13 +48,13 @@ a:hover{color:#000;}
 #leftcontent{float:left; width:214px}
 
 /*Category*/
-.subcate{ background:url(../images/mid-leftpenal.gif) repeat-y; list-style:none;padding:7px 0 10px 20px}
-.subcate li{ padding:5px 0}
-.subcate li a{color:#000; font-weight:bold;display:block; *_display:inherit}
-.subcate li a:hover{ color:#578AB2}
-.subcate li ul{padding:5px 0 0 20px}
-.subcate li ul li{list-style:none;padding:2px 0}
-.subcate li ul li a{color:#000; font-weight:normal;display:block; *_display:inherit}
+.sub-cat{ background:url(../images/mid-leftpenal.gif) repeat-y; list-style:none;padding:7px 10px 10px 20px}
+.sub-cat li{ padding:5px 0}
+.sub-cat li a{color:#000; font-weight:bold;display:block; *_display:inherit}
+.sub-cat li a:hover{ color:#578AB2}
+.sub-cat li ul{padding:5px 0 0 20px}
+.sub-cat li ul li{list-style:none;padding:2px 0}
+.sub-cat li ul li a{color:#000; font-weight:normal;display:block; *_display:inherit}
 
 /*Ho tro ky thuat*/
 .support{background:url(../images/mid-leftpenal.gif) repeat-y; list-style:none;padding:5px 3px 20px 0px; text-align:center}
