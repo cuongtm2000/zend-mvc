@@ -5,7 +5,11 @@
 		<form action="" method="post" id="product_addtocart_form">
 			<div class="product-img-box">
 				<p class="product-image product-image-zoom">
-					<!-- Picture full --><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $item['pic_full'] ?>" alt="<?php echo $item['title'.LANG] ?>" />
+					<?php if($item['pic_full']): ?>
+					<!-- Picture full --><img id="image" src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $item['pic_full'] ?>" alt="<?php echo $item['title'.LANG] ?>" />
+					<?php else: ?>
+						<?php echo Yii::t('main', 'noRecord')?>
+					<?php endif; ?>
 				</p>
 				<p class="zoom-notice" id="track_hint">Double click on above image to view full picture</p>
 				<div class="zoom">
@@ -15,18 +19,17 @@
 					</div>
 					<img id="zoom_in" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/slider_btn_zoom_in.gif" alt="Zoom In" title="Zoom In" class="btn-zoom-in" />
 				</div>
-			<script type="text/javascript">
-			//<![CDATA[
-				Event.observe(window, 'load', function() {
-					product_zoom = new Product.Zoom('image', 'track', 'handle', 'zoom_in', 'zoom_out', 'track_hint');
-				});
-			//]]>
-			</script>
+				<script type="text/javascript">
+
+					Event.observe(window, 'load', function() {
+						product_zoom = new Product.Zoom('image', 'track', 'handle', 'zoom_in', 'zoom_out', 'track_hint');
+					});
+
+				</script>
 			</div>
 		</form>
 	</div>
 </div><!--End product view-->
-
 <div class="right-detail">
 	<ul class="right-detail-info">
 		<li>
@@ -39,48 +42,29 @@
 		</li>
 	</ul>
 </div> <div class="clear"></div>
-<h2 class="title-right"><span>Sản phẩm liên quan</span></h2>
-<ul id="all-product">
+<?php if($item_other):?>
+<h3 class="title-right"><span><?php echo $this->lang[$this->module->id]?> <?php echo strtolower($this->lang['other'])?></span></h3>
+<ul class="all_product">
+	<?php foreach($item_other as $value):?>
 	<li class="product">
 		<div class="product-top"></div>
 		<div class="product-mid">
 			<div class="tent-product">
 				<div class="product-img">
-					<a href="#" title="">
-						<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-product.jpg" alt="no-product"/>
+					<a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $value[ucfirst($this->module->id).'Cat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>">
+						<?php if($value['pic_thumb']):?>
+						<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/<?php echo $this->module->id?>/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" />
+						<?php else :?>
+						<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt="<?php echo $value['title'.LANG] ?>" />
+						<?php endif?>
 					</a>
 				</div>
-				<h2 class="title-pro"><a href="" title="">Sách tổng hợp loại 1</a></h2>
+				<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $value[ucfirst($this->module->id).'Cat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></h2>
 			</div>
 		</div>
 		<div class="product-btom"></div>
 	</li>
-	<li class="product">
-		<div class="product-top"></div>
-		<div class="product-mid">
-			<div class="tent-product">
-				<div class="product-img">
-					<a href="#" title="">
-						<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-product.jpg" alt="no-product"/>
-					</a>
-				</div>
-				<h2 class="title-pro"><a href="" title="">Sách cho mẹ và bé</a></h2>
-			</div>
-		</div>
-		<div class="product-btom"></div>
-	</li>
-	<li class="product">
-		<div class="product-top"></div>
-		<div class="product-mid">
-			<div class="tent-product">
-				<div class="product-img">
-					<a href="#" title="">
-						<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-product.jpg" alt="no-product"/>
-					</a>
-				</div>
-				<h2 class="title-pro"><a href="" title="">Sách tổng hợp loại 2</a></h2>
-			</div>
-		</div>
-		<div class="product-btom"></div>
-	</li>
-</ul> <!--End all product-->
+	<?php endforeach?>
+</ul>
+<?php endif;?>
+
