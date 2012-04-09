@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 07, 2012 at 04:29 PM
+-- Generation Time: Apr 09, 2012 at 02:55 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -417,10 +417,10 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(3, 'Giới thiệu sơ lược', 'Introduction About', '<p>\r\n	Ngày nay, khi ngày càng có nhiều thông tin được cung cấp trực tuyến, bạn càng cần phải sử dụng trình duyệt nhanh và an toàn trên máy tính. Giới thiệu về Google Chrome -- trình duyệt mở trang web với tốc độ cực nhanh! Thiết kế mượt mà của trình duyệt mang lại cho bạn nhiều không gian hơn để duyệt các trang web ưa thích của mình. Hướng dẫn này giúp bạn tìm hiểu qua các tính năng chính của Google Chrome.</p>', '<p>\r\n	Today, as more and more information is offered online, the more you need to use fast and secure browser on the computer. About Google Chrome - the browser open site with fast speed! Sleek design of the browser gives you more space to browse your favorite sites. This guide helps you learn the key features of Google Chrome.</p>', 159, '2012-04-05 02:12:08', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'introduction-about', 'Ngày nay, khi ngày càng có nhiều thông tin được cung cấp trực tuyến, bạn càng cần phải sử dụng trình duyệt nhanh và an toàn trên máy tính. Giới thiệu về Google Chrome -- trình duyệt mở trang web với tốc độ cực nhanh! Thiết kế mượt mà của trìn', '', 1, '220312'),
-(4, 'Giới thiệu chung', 'Introduction', '<p>\r\n	Giới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chung</p>', '<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>\r\n<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>\r\n<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>', 12, '2012-04-05 02:29:35', 2, 0, NULL, NULL, 'gioi-thieu-chung', 'introduction', 'Giới thiệu chungGiới thiệu chung', 'Introduction Introduction Introduction Introduction', 1, '220312'),
-(5, 'Giới thiệu Văn phòng đại diện', 'About a representative office', '<p>\r\n	Giới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diện</p>', '<p>\r\n	About a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative office</p>', 59, '2012-04-05 02:29:55', 3, 0, NULL, NULL, 'gioi-thieu-van-phong-dai-dien', 'about-a-representative-office', 'Giới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diện', 'About a representative officeAbout a representative office', 1, '220312'),
-(6, 'Tieu de gioi thieu', 'English', '<p>\r\n	Noi dung</p>', '<p>\r\n	Noi dung english</p>', 22, '2012-04-06 23:47:01', 4, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'english', '', '', 1, '220312');
+(3, 'Giới thiệu sơ lược', 'Introduction About', '<p>\r\n	Ngày nay, khi ngày càng có nhiều thông tin được cung cấp trực tuyến, bạn càng cần phải sử dụng trình duyệt nhanh và an toàn trên máy tính. Giới thiệu về Google Chrome -- trình duyệt mở trang web với tốc độ cực nhanh! Thiết kế mượt mà của trình duyệt mang lại cho bạn nhiều không gian hơn để duyệt các trang web ưa thích của mình. Hướng dẫn này giúp bạn tìm hiểu qua các tính năng chính của Google Chrome.</p>', '<p>\r\n	Today, as more and more information is offered online, the more you need to use fast and secure browser on the computer. About Google Chrome - the browser open site with fast speed! Sleek design of the browser gives you more space to browse your favorite sites. This guide helps you learn the key features of Google Chrome.</p>', 185, '2012-04-05 02:12:08', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'introduction-about', 'Ngày nay, khi ngày càng có nhiều thông tin được cung cấp trực tuyến, bạn càng cần phải sử dụng trình duyệt nhanh và an toàn trên máy tính. Giới thiệu về Google Chrome -- trình duyệt mở trang web với tốc độ cực nhanh! Thiết kế mượt mà của trìn', '', 1, '220312'),
+(4, 'Giới thiệu chung', 'Introduction', '<p>\r\n	Giới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chung</p>', '<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>\r\n<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>\r\n<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>', 22, '2012-04-05 02:29:35', 2, 0, NULL, NULL, 'gioi-thieu-chung', 'introduction', 'Giới thiệu chungGiới thiệu chung', 'Introduction Introduction Introduction Introduction', 1, '220312'),
+(5, 'Giới thiệu Văn phòng đại diện', 'About a representative office', '<p>\r\n	Giới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diện</p>', '<p>\r\n	About a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative office</p>', 63, '2012-04-05 02:29:55', 3, 0, NULL, NULL, 'gioi-thieu-van-phong-dai-dien', 'about-a-representative-office', 'Giới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diện', 'About a representative officeAbout a representative office', 1, '220312'),
+(6, 'Tieu de gioi thieu', 'English', '<p>\r\n	Noi dung</p>', '<p>\r\n	Noi dung english</p>', 34, '2012-04-06 23:47:01', 4, 0, NULL, NULL, 'tieu-de-gioi-thieu', 'english', '', '', 1, '220312');
 
 -- --------------------------------------------------------
 
@@ -629,9 +629,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456025),
+('day_time', 2456027),
 ('max_count', 1),
-('counter', 1),
+('counter', 3),
 ('yesterday', 1);
 
 -- --------------------------------------------------------
@@ -650,7 +650,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1333785427);
+('''127.0.0.1''', 1333932838);
 
 -- --------------------------------------------------------
 
@@ -885,7 +885,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
 INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
 ('keywords', 'Thanhansoft, thanhan, Hoiit.com', '220312'),
 ('description', 'THanhansoft information technology', '220312'),
-('title', 'Tieu de trang web', '220312');
+('title', 'Tieu de trang web', '220312'),
+('analytics', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-30151015-1'']);\r\n  _gaq.push([''_setDomainName'', ''dos.vn'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>', 'dos');
 
 -- --------------------------------------------------------
 
@@ -1239,7 +1240,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 --
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('220312', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-05 02:08:09', NULL, NULL, NULL, 'admin', 'vi|en', NULL, '2012-05-04 16:00:00', 1, '220312', 2, 'cong-nghe-thong-tin-vien-thong'),
+('220312', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-05 02:08:09', 'Nguyễn An', '0929001001', 'ThuongHoi', 'admin', 'vi|en', NULL, '2012-05-04 16:00:00', 1, '220312', 19, 'cong-nghe-thong-tin-vien-thong'),
 ('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi', NULL, '0000-00-00 00:00:00', 1, '111120', 2, 'thoi-trang');
 
 -- --------------------------------------------------------
