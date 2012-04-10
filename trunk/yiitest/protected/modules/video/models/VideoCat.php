@@ -61,13 +61,19 @@ class VideoCat extends CActiveRecord {
 			array('cat_title, tag', 'required'),
 			array('cat_parent_id, cat_order, cat_enable', 'numerical', 'integerOnly' => true),
 			array('pic_thumb, cat_title, cat_titleen, tag, tagen', 'length', 'max' => 100),
-			array('tag, tagen', 'unique'),
+			array('tag, tagen', 'checkExistsTag'),
 			array('description, descriptionen', 'length', 'max' => 250),
 			array('dos_usernames_username', 'length', 'max' => 45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('cat_id, cat_parent_id, pic_thumb, cat_title, cat_titleen, tag, tagen, description, descriptionen, cat_order, cat_enable, dos_usernames_username', 'safe', 'on' => 'search'),
 		);
+	}
+
+	public function checkExistsTag($attribute) {
+		if (GetTag::tag($this->tag, $this->cat_id, $this->tableName(), 'cid')) {
+			$this->addError($attribute, $attribute . ': <strong>' . $this->tag . '</strong> đã tồn tại, vui lòng chọn một liên kết khác');
+		}
 	}
 
 	/**

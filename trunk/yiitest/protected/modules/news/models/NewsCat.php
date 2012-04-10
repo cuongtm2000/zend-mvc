@@ -65,7 +65,7 @@ class NewsCat extends CActiveRecord {
 			array('cat_title, tag', 'required'),
 			array('cat_parent_id, cat_order, cat_enable', 'numerical', 'integerOnly' => true),
 			array('cat_title, cat_titleen, tag, tagen, pic_full', 'length', 'max' => 100),
-			array('tag, tagen', 'unique'),
+			array('tag, tagen', 'checkExistsTag'),
 			array('description, descriptionen', 'length', 'max' => 250),
 			array('cat_extra1, cat_extra2, dos_usernames_username', 'length', 'max' => 45),
 			array('preview, previewen', 'safe'),
@@ -73,6 +73,12 @@ class NewsCat extends CActiveRecord {
 			// Please remove those attributes that should not be searched.
 			array('cat_id, cat_parent_id, cat_title, cat_titleen, preview, previewen, tag, tagen, description, descriptionen, pic_full, cat_order, cat_extra1, cat_extra2, cat_enable, dos_usernames_username', 'safe', 'on' => 'search'),
 		);
+	}
+
+	public function checkExistsTag($attribute) {
+		if (GetTag::tag($this->tag, $this->cat_id, $this->tableName(), 'cid')) {
+			$this->addError($attribute, $attribute . ': <strong>' . $this->tag . '</strong> đã tồn tại, vui lòng chọn một liên kết khác');
+		}
 	}
 
 	/**

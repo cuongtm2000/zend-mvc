@@ -57,12 +57,19 @@ class Video extends CActiveRecord {
 			array('title, tag, url, dos_module_item_cat_cat_id', 'required'),
 			array('record_order, hits, hot, enable, dos_module_item_cat_cat_id', 'numerical', 'integerOnly' => true),
 			array('title, titleen, tag, tagen, pic_thumb, url', 'length', 'max' => 100),
+			array('tag, tagen', 'checkExistsTag'),
 			array('description, descriptionen', 'length', 'max' => 250),
 			array('extra_field1, extra_field2', 'length', 'max' => 45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('record_id, title, titleen, postdate, tag, tagen, description, descriptionen, pic_thumb, url, record_order, hits, extra_field1, extra_field2, hot, enable, dos_module_item_cat_cat_id', 'safe', 'on' => 'search'),
 		);
+	}
+
+	public function checkExistsTag($attribute) {
+		if (GetTag::tag($this->tag, $this->record_id, $this->tableName(), 'id', 2, 'dos_module_video_cat')) {
+			$this->addError($attribute, $attribute . ': <strong>' . $this->tag . '</strong> đã tồn tại, vui lòng chọn một liên kết khác');
+		}
 	}
 
 	/**
