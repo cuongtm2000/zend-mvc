@@ -52,37 +52,37 @@
                         </ul>
                     </li>
                     <li>Features
-                        <ul>
+                        <!-- <ul>
                             <li><a href="#" title="">Website Features</a></li>
                             <li><a href="#" title="">Small Business Websites</a></li>
                             <li><a href="#" title="">Permium Services</a></li>
                             <li><a href="#" title="">Free Hosting</a></li>
                             <li><a href="#" title="">Example Sites</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
                     <li>Contact
-                        <ul>
+                        <!-- <ul>
                             <li><a href="#" title="">FAQ &amp; Help</a></li>
                             <li><a href="#" title="">Developers</a></li>
                             <li><a href="#" title="">Affiate Progam</a></li>
                             <li><a href="#" title="">Partners</a></li>
                             <li><a href="#" title="">Billing Support</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
                     <li>Policies
-                        <ul>
+                        <!-- <ul>
                             <li><a href="#" title="">Terms of Services</a></li>
                             <li><a href="#" title="">Provacy Policy</a></li>
                             <li><a href="#" title="">Developer Terms</a></li>
                             <li><a href="#" title="">Report Abuse</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
                 </ul>
                 <div class="fter-right">
-                    <p class="copyright">&copy; 2011 Webs Inc. All Rights Reserved</p>
-                    <p class="fter-blog"><a href="#" title="">Read</a> the Webs Blog</p>
+                    <p class="copyright">&copy; <?php echo date('Y')?> Dos.vn. All Rights Reserved</p>
+                    <!-- <p class="fter-blog"><a href="#" title="">Read</a> the Webs Blog</p>
                     <p class="fter-facebook"><a href="#" title="">Join</a> our facebook page</p>
-                    <p class="fter-twitter"><a href="#" title="">Follow</a> us on twitter</p>
+                    <p class="fter-twitter"><a href="#" title="">Follow</a> us on twitter</p> -->
                 </div>
                 <div class="clear"></div>
             </div><!--End footer-->

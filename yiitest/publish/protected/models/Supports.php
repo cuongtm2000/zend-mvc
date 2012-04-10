@@ -1,27 +1,6 @@
 <?php
 
-/**
- * This is the model class for table "dos_module_supports".
- *
- * The followings are the available columns in table 'dos_module_supports':
- * @property integer $support_id
- * @property string $support_name
- * @property string $support_phone
- * @property string $support_value
- * @property integer $support_order
- * @property string $support_type
- * @property string $dos_usernames_username
- *
- * The followings are the available model relations:
- * @property DosUsernames $dosUsernamesUsername
- */
 class Supports extends CActiveRecord {
-
-    private $_subdomain;
-
-    public function init() {
-        $this->_subdomain = Yii::app()->session['subdomain'];
-    }
 
     /**
      * Returns the static model of the specified AR class.
@@ -107,8 +86,7 @@ class Supports extends CActiveRecord {
 
     //Front end - list item
     public function listItem() {
-        $command = Yii::app()->db->createCommand('SELECT support_name'.LANG.', support_phone, support_value, support_order, support_type FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY support_order ASC');
-        $command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
+        $command = Yii::app()->db->createCommand('SELECT support_name'.LANG.', support_phone, support_value, support_order, support_type FROM ' . $this->tableName() . ' ORDER BY support_order ASC');
         return $command->queryAll();
     }
 

@@ -219,8 +219,9 @@ class Username extends CActiveRecord {
 	 * @param $username
 	 * @return mixed
 	 */
-	public function infoUser() {
-		$command = Yii::app()->db->createCommand('SELECT username, email, fullname, phone, company, language, expired, dos_templates_template, province_name FROM ' . $this->tableName() . ', dos_provinces WHERE dos_provinces.province_id = ' . $this->tableName() . '.dos_provinces_province_id AND role=\'admin\'');
+	public function infoUser($role) {
+		$command = Yii::app()->db->createCommand('SELECT username, email, fullname, phone, company, language, expired, dos_templates_template, province_name FROM ' . $this->tableName() . ', dos_provinces WHERE dos_provinces.province_id = ' . $this->tableName() . '.dos_provinces_province_id AND role=:role');
+		$command->bindParam(":role", $role, PDO::PARAM_STR);
 		return $command->queryRow();
 	}
 

@@ -1,7 +1,6 @@
 <?php
 
 class Controller extends CController {
-	//public $layout='//layouts/column1';
 	public $menu = array();
 	public $breadcrumbs = array();
 
@@ -24,9 +23,8 @@ class Controller extends CController {
 		Common::setLanguage(); //setting language
 
 		$username = new Username();
-		$info_user = $username->infoUser();
+		$info_user = $username->infoUser('user');
 
-		//Yii::app()->name = ucfirst($_SERVER['HTTP_HOST']);
 		Yii::app()->theme = $info_user['dos_templates_template']; //template use by 'admin'
 		Yii::app()->session['template'] = $info_user['dos_templates_template']; //session template use
 		define('USERFILES', '/public/userfiles/images/' . $info_user['username'] . '/images');

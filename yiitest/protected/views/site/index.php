@@ -50,7 +50,7 @@
 </div><!--End row tent 1-->
 
 <div class="frame-features">
-    <span>Learn about the features Webs has to offer your business!</span> <a href="#" title="" class="free">Make a Free Website!</a> <a href="#" title="" class="view">View Features</a>
+    <span>Xem các tính năng website mà chúng tôi dành cho Doanh nghiệp bạn!</span> <a href="#" title="" class="free">Make a Free Website!</a> <a href="#" title="" class="view">View Features</a>
 </div>
 <!--<div class="content">
     <div class="left-tent">
