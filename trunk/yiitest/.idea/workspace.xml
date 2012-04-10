@@ -303,27 +303,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/modules/video/models/Video.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="100" selection-start="2335" selection-end="2335" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/video/models/VideoCat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="47" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/products/models/Products.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="4" selection-start="2001" selection-end="2289" vertical-scroll-proportion="0.49635038">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/products/models/ProductsCat.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="84" column="4" selection-start="2760" selection-end="3016" vertical-scroll-proportion="0.0">
@@ -411,6 +390,27 @@
     <entry file="file://$PROJECT_DIR$/publish/protected/modules/about/models/About.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="12" selection-start="1746" selection-end="1776" vertical-scroll-proportion="0.38636363">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/publish/protected/components/Common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="27" selection-start="3544" selection-end="3544" vertical-scroll-proportion="0.34854016">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/publish/protected/components/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="17" selection-start="157" selection-end="157" vertical-scroll-proportion="0.21212122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.09090909">
           <folding />
         </state>
       </provider>
