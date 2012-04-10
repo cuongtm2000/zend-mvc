@@ -59,7 +59,7 @@ class About extends CActiveRecord {
 			array('title, content, tag', 'required', 'message' => '<strong>{attribute}</strong> Khong duoc rong'),
 			array('hit, record_order, hot, activated', 'numerical', 'integerOnly' => true),
 			array('title, titleen, tag, tagen', 'length', 'max' => 100),
-			array('tag, tagen', 'unique'),
+			array('tag, tagen', 'checkExistsTag'),
 			array('extra_field1, extra_field2, dos_usernames_username', 'length', 'max' => 45),
 			array('contenten', 'safe'),
 			array('description, descriptionen', 'length', 'max' => 250),
@@ -69,11 +69,11 @@ class About extends CActiveRecord {
 		);
 	}
 
-	/*public function checkExistsTag($attribute){
-			if (GetTag::tag($this->tag, $this->record_id, $this->tableName())) {
-				$this->addError($attribute, $attribute . ': <strong>' . $this->tag . '</strong> đã tồn tại, vui lòng chọn một liên kết khác');
-			}
-		}*/
+	public function checkExistsTag($attribute) {
+		if (GetTag::tag($this->tag, $this->record_id, $this->tableName())) {
+			$this->addError($attribute, $attribute . ': <strong>' . $this->tag . '</strong> đã tồn tại, vui lòng chọn một liên kết khác');
+		}
+	}
 
 	/**
 	 * @return array relational rules.
