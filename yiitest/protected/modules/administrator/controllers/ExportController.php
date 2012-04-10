@@ -4,22 +4,18 @@ class ExportController extends AdministratorController {
 
 	public function actionIndex() {
 		if (Yii::app()->request->getIsPostRequest()) {
+			$common_class = new Common();
 			$user = Yii::app()->request->getPost('user', '');
-			if(isset($_POST['submit-data'])){
+			if (isset($_POST['submit-data'])) {
 				Common::export(trim($user));
+			}
+			if (isset($_POST['submit-file'])) {
+				$common_class->recursiveMkdir('/assets/tmp/public/userfiles/images/220312/'); //create folder 'tmp'
+				$myfile = Yii::app()->file->set('public/userfiles/images/220312', true);
+				$myfile->copy('../../../assets/tmp/public/userfiles/images/220312/');
 			}
 		}
 
-		//$zip = Yii::app()->zip;
-		//$zip->makeZip('./public/userfiles/images/220312','./toto.zip'); // make an ZIP archive
-		//var_dump(var_export($zip->infosZip('./toto.zip')));
-
-		//$content = var_export($zip->infosZip('./toto.zip'), false);
-		//$request = Yii::app()->getRequest();
-		//$request->sendFile('sss.zip', $content);
-
-		/*Yii::import('ext.EZipAn.EZipAn');
-		EZipAn::test();*/
 		$this->render('index');
 	}
 }

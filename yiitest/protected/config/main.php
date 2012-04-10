@@ -18,18 +18,18 @@ return array(
 	),
 	'modules' => array(
 		'default', 'about', 'products', 'services', 'news', 'video', 'contact', 'search', 'admin', 'administrator',
-		'gii' => array(
+		/*'gii' => array(
 			'class' => 'system.gii.GiiModule',
 			'password' => '123',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters' => array('127.0.0.1', '::1'),
-		),
+		),*/
 	),
 	// application components
 	'components' => array(
 		// UserCounter
 		'counter' => array('class' => 'application.extensions.UserCounter',),
-		'zip' => array('class' => 'application.extensions.EZip.EZip'),
+		'file'=>array('class'=>'application.extensions.CFile.CFile'),
 		'user' => array(
 			'allowAutoLogin' => true,
 			'loginUrl' => array('admin/login'),
