@@ -25,7 +25,17 @@
     <favorites_list name="svn" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="dev.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/publish/protected/config/dev.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -117,6 +127,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="publish" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="publish" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="publish" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -125,8 +189,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.HTML" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="dos.vn" serverId="819b0d99-b6d0-4d88-9f62-7e03412fcb55">
     <servers>
@@ -228,14 +292,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.4939302" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.7314112" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.4969651" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28300455" sideWeight="0.0" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28831562" sideWeight="0.0" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5007587" order="7" side_tool="true" content_ui="tabs" />
@@ -303,114 +367,84 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/modules/products/models/ProductsCat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="4" selection-start="2760" selection-end="3016" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/news/models/NewsCat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="47" selection-start="1826" selection-end="1826" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="67" column="47" selection-start="1826" selection-end="1826" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/news/models/News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="57" selection-start="1747" selection-end="1747" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="61" column="57" selection-start="1747" selection-end="1747" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/contact/models/Contact.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="41" selection-start="2335" selection-end="2335" vertical-scroll-proportion="0.71350366">
-          <folding />
-        </state>
+        <state line="65" column="41" selection-start="2335" selection-end="2335" vertical-scroll-proportion="0.71350366" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/publish/protected/modules/video/models/Video.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="42" selection-start="1726" selection-end="1726" vertical-scroll-proportion="0.52737224">
-          <folding />
-        </state>
+        <state line="59" column="42" selection-start="1726" selection-end="1726" vertical-scroll-proportion="0.52737224" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/publish/protected/modules/video/models/VideoCat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.4890511">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.4890511" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/publish/protected/modules/services/models/Services.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="39" selection-start="2065" selection-end="2071" vertical-scroll-proportion="0.27919707">
-          <folding />
-        </state>
+        <state line="66" column="39" selection-start="2065" selection-end="2071" vertical-scroll-proportion="0.27919707" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/publish/protected/modules/products/models/Products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="7" selection-start="2293" selection-end="2293" vertical-scroll-proportion="0.899635">
-          <folding />
-        </state>
+        <state line="56" column="7" selection-start="2293" selection-end="2293" vertical-scroll-proportion="0.899635" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/publish/protected/modules/products/models/ProductsCat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.2335765">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.2335765" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/publish/protected/modules/news/models/News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.6751825">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.6751825" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/publish/protected/modules/news/models/NewsCat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.5821168">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.5821168" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/publish/protected/modules/contact/models/Contact.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.46532845">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.46532845" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/publish/protected/modules/about/models/About.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="12" selection-start="1746" selection-end="1776" vertical-scroll-proportion="0.38636363">
-          <folding />
-        </state>
+        <state line="60" column="12" selection-start="1746" selection-end="1776" vertical-scroll-proportion="0.38636363" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/publish/protected/components/Common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="27" selection-start="3544" selection-end="3544" vertical-scroll-proportion="0.34854016">
-          <folding />
-        </state>
+        <state line="87" column="27" selection-start="3544" selection-end="3544" vertical-scroll-proportion="0.34854016" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/publish/protected/components/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="157" selection-end="157" vertical-scroll-proportion="0.21212122">
-          <folding />
-        </state>
+        <state line="7" column="17" selection-start="157" selection-end="157" vertical-scroll-proportion="0.21212122" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.09090909">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.09090909" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/publish/protected/config/dev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
