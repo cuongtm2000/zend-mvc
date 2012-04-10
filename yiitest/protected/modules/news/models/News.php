@@ -60,13 +60,19 @@ class News extends CActiveRecord {
 			array('title, content, tag, dos_module_item_cat_cat_id', 'required'),
 			array('hits, record_order, hot, enable, dos_module_item_cat_cat_id', 'numerical', 'integerOnly' => true),
 			array('title, titleen, pic_thumb, tag, tagen, extra_field1, extra_field2', 'length', 'max' => 100),
-			array('tag, tagen', 'unique'),
+			array('tag, tagen', 'checkExistsTag'),
 			array('description, descriptionen', 'length', 'max' => 250),
 			array('preview, previewen, contenten', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('record_id, title, titleen, postdate, pic_thumb, preview, previewen, content, contenten, tag, tagen, description, descriptionen, hits, record_order, hot, extra_field1, extra_field2, enable, dos_module_item_cat_cat_id', 'safe', 'on' => 'search'),
 		);
+	}
+
+	public function checkExistsTag($attribute) {
+		if (GetTag::tag($this->tag, $this->record_id, $this->tableName(), 'id', 2, 'dos_module_news_cat')) {
+			$this->addError($attribute, $attribute . ': <strong>' . $this->tag . '</strong> đã tồn tại, vui lòng chọn một liên kết khác');
+		}
 	}
 
 	/**

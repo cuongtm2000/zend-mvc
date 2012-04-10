@@ -54,7 +54,7 @@ class Contact extends CActiveRecord {
             array('title, content, tag', 'required'),
             array('record_order, hit, hot', 'numerical', 'integerOnly' => true),
             array('title, titleen, tag, tagen', 'length', 'max' => 100),
-            array('tag, tagen', 'unique'),
+            array('tag, tagen', 'checkExistsTag'),
             array('description, descriptionen', 'length', 'max' => 250),
             array('enable, dos_usernames_username', 'length', 'max' => 45),
             array('contenten', 'safe'),
@@ -63,11 +63,11 @@ class Contact extends CActiveRecord {
             array('record_id, title, titleen, content, contenten, create_date, record_order, hit, hot, tag, description, enable, dos_usernames_username', 'safe', 'on' => 'search'),
         );
     }
-    /*public function checkExistsTag($attribute){
+    public function checkExistsTag($attribute){
         if (GetTag::tag($this->tag, $this->record_id, $this->tableName())) {
             $this->addError($attribute, $attribute . ': <strong>' . $this->tag . '</strong> đã tồn tại, vui lòng chọn một liên kết khác');
         }
-    }*/
+    }
 
     /**
      * @return array relational rules.

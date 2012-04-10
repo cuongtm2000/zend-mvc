@@ -33,7 +33,7 @@
 					<?php if(Yii::app()->user->isGuest):?>
 						<li class="active"><a href="/admin"><?php echo Yii::t('main', 'login')?></a></li>
 					<?php else:?>
-						<li><a href="/site/logout"><?php echo Yii::t('main', 'logout')?> (<?php echo Yii::app()->user->name?>)</a></li>
+						<li><a href="/<?php echo Yii::t('main', 'logout.link')?>"><?php echo Yii::t('main', 'logout.name')?> (<?php echo Yii::app()->user->name?>)</a></li>
 					<?php endif;?>
 				</ul>
                 <div class="clear"></div>

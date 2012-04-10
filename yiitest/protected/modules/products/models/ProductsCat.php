@@ -70,7 +70,7 @@ class ProductsCat extends CActiveRecord {
 			array('cat_title, tag', 'required'),
 			array('cat_parent_id, cat_order, cat_enable', 'numerical', 'integerOnly' => true),
 			array('cat_title, cat_titleen, tag, tagen, pic_full', 'length', 'max' => 100),
-			array('tag, tagen', 'unique'),
+			array('tag, tagen', 'checkExistsTag'),
 			array('description, descriptionen', 'length', 'max' => 250),
 			array('pic_desc', 'length', 'max' => 200),
 			array('cat_extra1, cat_extra2, dos_usernames_username', 'length', 'max' => 45),
@@ -82,11 +82,11 @@ class ProductsCat extends CActiveRecord {
 		);
 	}
 
-	/*public function checkExistsTag($attribute) {
-			if (GetTag::tag($this->tag, $this->cat_id, $this->tableName(), 'cid')) {
-				$this->addError($attribute, $attribute . ': <strong>' . $this->tag . '</strong> đã tồn tại, vui lòng chọn một liên kết khác');
-			}
-		}*/
+	public function checkExistsTag($attribute) {
+		if (GetTag::tag($this->tag, $this->cat_id, $this->tableName(), 'cid')) {
+			$this->addError($attribute, $attribute . ': <strong>' . $this->tag . '</strong> đã tồn tại, vui lòng chọn một liên kết khác');
+		}
+	}
 
 	/**
 	 * @return array relational rules.
@@ -202,7 +202,7 @@ class ProductsCat extends CActiveRecord {
 
 	//Front end - find cat_id by tag
 	public function findCatByTag($tag) {
-		$command = Yii::app()->db->createCommand('SELECT cat_id, cat_title' . LANG . ', tag' . LANG . ', description'.LANG.' FROM ' . $this->tableName() . ' WHERE tag' . LANG . '=:tag');
+		$command = Yii::app()->db->createCommand('SELECT cat_id, cat_title' . LANG . ', tag' . LANG . ', description' . LANG . ' FROM ' . $this->tableName() . ' WHERE tag' . LANG . '=:tag');
 		$command->bindParam(':tag', $tag, PDO::PARAM_STR);
 		return $command->queryRow();
 	}
