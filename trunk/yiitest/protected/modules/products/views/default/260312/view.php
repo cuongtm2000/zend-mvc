@@ -8,27 +8,25 @@
 	<p class="black"><a href="javascript: history.go(-1)" title="<?php echo Yii::t('main', 'goback')?>" ><?php echo Yii::t('main', 'goback')?></a></p>
 </div> <!--End frame tent right-->
 
-<h3 class="title-right"><span>Sản phẩm khác</span></h3>
-<div class="all-product"> 
-	<div class="product">
+<?php if($item_other):?>
+<h3 class="title-right"><span><?php echo $this->lang[$this->module->id]?> <?php echo strtolower($this->lang['other'])?></span></h3>
+<ul class="all_product">
+	<?php foreach($item_other as $value):?>
+	<li class="product">
 		<div class="tent-product">
-				<div class="product-img">
-					<a href="#" title="">
-						<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/order-1.jpg" alt="" />
-					</a>
-				</div>
-			<h2 class="title-pro"><a href="#" title="">Nội thất Giường ngủ 028</a></h2>
+			<div class="product-img">
+				<a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $value[ucfirst($this->module->id).'Cat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>">
+					<?php if($value['pic_thumb']):?>
+						<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/<?php echo $this->module->id?>/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" />
+					<?php else :?>
+						<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt="<?php echo $value['title'.LANG] ?>" />
+					<?php endif?>
+				</a>
+			</div>
+			<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $value[ucfirst($this->module->id).'Cat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></h2>
 		</div>
-	</div>
-	<div class="product">
-		<div class="tent-product">
-				<div class="product-img">
-					<a href="#" title="">
-						<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/order-2.jpg" alt="" />
-					</a>
-				</div>
-			<h2 class="title-pro"><a href="#" title="">Nội thất Giường ngủ 013</a></h2>
-		</div>
-	</div>
-</div> <!--End frame all product-->
+	</li>
+	<?php endforeach?>
+</ul>
+<?php endif;?>
 

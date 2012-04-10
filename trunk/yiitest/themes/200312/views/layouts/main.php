@@ -56,9 +56,9 @@
 
                 <ul id="nav">
 					<?php foreach($this->nav as $value):?>
-					<?php $selected = ($value['url']==$this->module->id) ?  ' class="select"' : ''?>
-					<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
-					<li><a<?php echo $selected ?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo $value['menu'.LANG] ?>"<?php echo $target ?>><?php echo $value['menu'.LANG] ?></a></li>
+						<?php $selected = ($value['url']==$this->module->id) ?  ' class="select"' : ''?>
+						<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
+						<li><a<?php echo $selected ?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
 					<?php endforeach;?>
 				</ul> <!--End nav--> <div class="clear"></div>   
 
