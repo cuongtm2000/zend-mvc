@@ -39,7 +39,7 @@ class Products extends CActiveRecord {
 			array('title, content, tag, dos_module_item_cat_cat_id', 'required'),
 			array('hits, record_order, unit, hot, specials, enable, dos_module_item_cat_cat_id', 'numerical', 'integerOnly' => true),
 			array('title, titleen, pic_thumb, pic_full, tag, tagen, extra_field1, extra_field2, extra_field3, extra_field4', 'length', 'max' => 100),
-			array('tag, tagen', 'checkExistsTag'),
+			array('tag, tagen', 'unique'),
 			array('pic_desc', 'length', 'max' => 200),
 			array('description, descriptionen', 'length', 'max' => 250),
 			array('preview, previewen, contenten', 'safe'),
@@ -50,11 +50,11 @@ class Products extends CActiveRecord {
 		);
 	}
 
-	public function checkExistsTag($attribute) {
+	/*public function checkExistsTag($attribute) {
 		if (GetTag::tag($this->tag, $this->record_id, $this->tableName(), 'id', 2, 'dos_module_products_cat')) {
 			$this->addError($attribute, $attribute . ': <strong>' . $this->tag . '</strong> đã tồn tại, vui lòng chọn một liên kết khác');
 		}
-	}
+	}*/
 
 	/**
 	 * @return array relational rules.

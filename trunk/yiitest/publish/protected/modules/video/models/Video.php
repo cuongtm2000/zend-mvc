@@ -57,6 +57,7 @@ class Video extends CActiveRecord {
 			array('title, tag, url, dos_module_item_cat_cat_id', 'required'),
 			array('record_order, hits, hot, enable, dos_module_item_cat_cat_id', 'numerical', 'integerOnly' => true),
 			array('title, titleen, tag, tagen, pic_thumb, url', 'length', 'max' => 100),
+			array('tag, tagen', 'unique'),
 			array('description, descriptionen', 'length', 'max' => 250),
 			array('extra_field1, extra_field2', 'length', 'max' => 45),
 			// The following rule is used by search().
