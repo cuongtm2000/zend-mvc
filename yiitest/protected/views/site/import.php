@@ -20,7 +20,7 @@
 		</ul>
 	</div>
 </div>
-<?php echo CHtml::submitButton('Nhập liệu', array('class' => 'submit', 'name' => 'submit')); ?> <a href="#" title="Bỏ qua">Bỏ qua</a>
+<?php echo CHtml::submitButton('Nhập liệu', array('class' => 'submit', 'name' => 'submit')); ?> <a href="#" title="Bỏ qua" class="skip">Bỏ qua</a>
 <?php $this->endWidget(); ?>
 <script type="text/javascript">
 	jQuery(function () {
