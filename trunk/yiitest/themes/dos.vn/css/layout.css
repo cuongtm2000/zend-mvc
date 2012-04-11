@@ -4,7 +4,9 @@ body { margin:0; padding:0; background:#f2f0e9 url(../images/bg-body.png) repeat
 .clear{clear: both;}
 a{text-decoration:none; color:#720E3B}
 a:hover{color:#000;}
-p{line-height: 19px}
+p{line-height: 18px}
+
+.font-size13pt{font-size: 13pt}
 
 /*layout*/
 *{margin:0; padding:0}

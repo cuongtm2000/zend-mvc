@@ -21,3 +21,5 @@ input.smallfield-dos {padding: 6px;  padding-right: 0; background: #F8F7F3; bord
 
 .submit{margin-left: 350px; margin-top:12px;background:#63C600; cursor:pointer;font-weight:600;width:auto;font-size:19pt;color:#fff;border:none; -webkit-border-radius:4px; -moz-border-radius:4px; *_width:190px; padding:2px 10px}
 .submit:hover{background:#f90}
+
+.errorImport{margin: 5px 32px 0 32px}

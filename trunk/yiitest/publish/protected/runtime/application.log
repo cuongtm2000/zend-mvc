@@ -115,3 +115,30 @@ Stack trace:
 REQUEST_URI=/publish/public/userfiles/images/220312/images/products/sach-hot-nhat-nong-nhat-thumb.jpg
 HTTP_REFERER=http://dos.vn/publish/
 ---
+2012/04/10 15:47:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userfiles/images/260312/images/demo.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('userfiles/image...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/publish/userfiles/images/260312/images/demo.jpg
+HTTP_REFERER=http://dos.vn/site/import
+---
+2012/04/10 15:47:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userfiles/images/260312/images/demo.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('userfiles/image...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/publish/userfiles/images/260312/images/demo.jpg
+HTTP_REFERER=http://dos.vn/site/import
+---
+2012/04/10 15:48:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userfiles/images/260312/images/demo.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('userfiles/image...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/publish/userfiles/images/260312/images/demo.jpg
+HTTP_REFERER=http://dos.vn/site/import
+---
