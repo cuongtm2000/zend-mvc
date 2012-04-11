@@ -136,11 +136,15 @@ class Menus extends CActiveRecord {
 
 	public function listMenuByAdmin($type = 0) {
 		$user = Yii::app()->user->id;
+		$command = Yii::app()->db->createCommand('SELECT menu, menuen, url, target, position, title, titleen, description, descriptionen FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY position ASC');
 		if ($type == 1) {
-			$command = Yii::app()->db->createCommand('SELECT menu, menuen, url, target, position, title, titleen, description, descriptionen FROM ' . $this->tableName() . ' WHERE target != \'_blank\' AND dos_usernames_username=:user ORDER BY position ASC');
+			$command = Yii::app()->db->createCommand('SELECT menu, menuen, url, target, position, title, titleen, description, descriptionen FROM ' . $this->tableName() . ' WHERE target = \'\' AND dos_usernames_username=:user ORDER BY position ASC');
+		}
+		/*if ($type == 1) {
+			$command = Yii::app()->db->createCommand('SELECT menu, menuen, url, target, position, title, titleen, description, descriptionen FROM ' . $this->tableName() . ' WHERE target = \'\' AND dos_usernames_username=:user ORDER BY position ASC');
 		} else {
 			$command = Yii::app()->db->createCommand('SELECT menu, menuen, url, target, position, title, titleen, description, descriptionen FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY position ASC');
-		}
+		}*/
 		$command->bindParam(":user", $user, PDO::PARAM_STR);
 		return $command->queryAll();
 	}
@@ -157,7 +161,7 @@ class Menus extends CActiveRecord {
 
 		for ($i = 0; $i < 10; $i++) {
 			if (!empty($menu[$i]) && !empty($url[$i])) {
-				$this->insertItem(htmlspecialchars(trim($menu[$i])), htmlspecialchars(trim($menuen[$i])), trim($url[$i]), trim($target[$i]), trim($position[$i]));
+				$this->insertItem(trim($menu[$i]), ($menuen) ? trim($menuen[$i]) : '', trim($url[$i]), trim($target[$i]), trim($position[$i]));
 			}
 		}
 	}

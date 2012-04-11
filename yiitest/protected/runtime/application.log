@@ -232,3 +232,81 @@ Stack trace:
 REQUEST_URI=/site/chen-du-lieu-mau
 HTTP_REFERER=http://dos.vn/dang-ky
 ---
+2012/04/11 05:57:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sign.cert".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('sign.cert')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/sign.cert?ran=12596967182597361702-6485316095737202500
+HTTP_REFERER=http://www.google.co.uk/
+---
+2012/04/11 06:03:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "error".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('error')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/error
+HTTP_REFERER=http://dos.vn/tao-web-thanh-cong
+---
+2012/04/11 06:07:33 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '_blank' AND dos_usernames_username='thanhansoft' ORDER BY position ASC' at line 1. The SQL statement executed was: SELECT menu, menuen, url, target, position, title, titleen, description, descriptionen FROM dos_module_menus WHERE target == '_blank' AND dos_usernames_username=:user ORDER BY position ASC.
+in E:\Customers\dos.vn\svn\protected\models\Menus.php (145)
+in E:\Customers\dos.vn\svn\protected\modules\admin\controllers\ConfigsController.php (68)
+in E:\Customers\dos.vn\svn\index.php (16)
+2012/04/11 06:07:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '_blank' AND dos_usernames_username='thanhansoft' ORDER BY position ASC' at line 1. The SQL statement executed was: SELECT menu, menuen, url, target, position, title, titleen, description, descriptionen FROM dos_module_menus WHERE target == '_blank' AND dos_usernames_username=:user ORDER BY position ASC' in C:\xampp\php\library\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\php\library\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\Customers\dos.vn\svn\protected\models\Menus.php(145): CDbCommand->queryAll()
+#2 E:\Customers\dos.vn\svn\protected\modules\admin\controllers\ConfigsController.php(68): Menus->listMenuByAdmin(1)
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): ConfigsController->actionSeo()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('seo')
+#13 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/configs/s...')
+#14 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/configs/seo
+HTTP_REFERER=http://thanhansoft.dos.vn/admin/configs/seo
+---
+2012/04/11 06:07:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/11 06:18:52 [error] [php] Uninitialized string offset: 0 (E:\Customers\dos.vn\svn\protected\models\Menus.php:164)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): ConfigsController->runAction()
+#2 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): ConfigsController->filterAccessControl()
+#5 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\xampp\php\library\framework\web\CController.php(266): ConfigsController->runActionWithFilters()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(276): ConfigsController->run()
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 E:\Customers\dos.vn\svn\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/configs/menu
+in E:\Customers\dos.vn\svn\protected\models\Menus.php (164)
+in E:\Customers\dos.vn\svn\protected\modules\admin\controllers\ConfigsController.php (30)
+in E:\Customers\dos.vn\svn\index.php (16)
+2012/04/11 06:18:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
