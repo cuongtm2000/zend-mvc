@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 11, 2012 at 03:19 AM
+-- Generation Time: Apr 11, 2012 at 04:42 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -111,24 +111,32 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('logo_width', 314, '', '200312'),
 ('logo_width', 259, '', '220312'),
 ('logo_width', 300, '', '260312'),
+('news_cat_height', 89, '', '010312'),
 ('news_cat_height', 89, '', '200312'),
 ('news_cat_height', 89, '', '260312'),
+('news_cat_width', 143, '', '010312'),
 ('news_cat_width', 143, '', '200312'),
 ('news_cat_width', 143, '', '260312'),
+('news_height_thumb', 89, '', '010312'),
 ('news_height_thumb', 89, '', '200312'),
 ('news_height_thumb', 100, '', '220312'),
 ('news_height_thumb', 89, '', '260312'),
+('news_num_paging_cat', 8, '', '010312'),
 ('news_num_paging_cat', 8, '', '200312'),
 ('news_num_paging_cat', 2, '', '220312'),
 ('news_num_paging_cat', 8, '', '260312'),
+('news_num_paging_hot', 6, '', '010312'),
 ('news_num_paging_hot', 5, '', '220312'),
 ('news_num_paging_hot', 6, '', '260312'),
+('news_num_paging_index', 8, '', '010312'),
 ('news_num_paging_index', 8, '', '200312'),
 ('news_num_paging_index', 2, '', '220312'),
 ('news_num_paging_index', 4, '', '260312'),
+('news_num_paging_new', 6, '', '010312'),
 ('news_num_paging_new', 4, '', '200312'),
 ('news_num_paging_new', 4, '', '220312'),
 ('news_num_paging_new', 6, '', '260312'),
+('news_width_thumb', 143, '', '010312'),
 ('news_width_thumb', 143, '', '200312'),
 ('news_width_thumb', 145, '', '220312'),
 ('news_width_thumb', 143, '', '260312'),
@@ -160,14 +168,18 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_height_thumb', 170, '', '200312'),
 ('products_height_thumb', 135, '', '220312'),
 ('products_height_thumb', 160, '', '260312'),
+('products_num_paging_cat', 3, '', '010312'),
 ('products_num_paging_cat', 8, '', '200312'),
 ('products_num_paging_cat', 6, '', '220312'),
 ('products_num_paging_cat', 8, '', '260312'),
+('products_num_paging_hot', 3, '', '010312'),
 ('products_num_paging_hot', 8, '', '200312'),
 ('products_num_paging_hot', 30, '', '260312'),
+('products_num_paging_new', 6, '', '010312'),
 ('products_num_paging_new', 3, '', '200312'),
 ('products_num_paging_new', 4, '', '220312'),
 ('products_num_paging_new', 8, '', '260312'),
+('products_num_paging_other', 3, '', '010312'),
 ('products_num_paging_other', 3, '', '200312'),
 ('products_num_paging_other', 2, '', '220312'),
 ('products_num_paging_other', 4, '', '260312'),
@@ -199,13 +211,17 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('services_width', 144, '', '260312'),
 ('video_cat_height', 100, '', '260312'),
 ('video_cat_width', 145, '', '260312'),
+('video_height_thumb', 115, '', '010312'),
 ('video_height_thumb', 150, '', '220312'),
 ('video_height_thumb', 100, '', '260312'),
+('video_num_paging_cat', 4, '', '010312'),
 ('video_num_paging_cat', 8, '', '200312'),
 ('video_num_paging_cat', 2, '', '220312'),
+('video_num_paging_index', 4, '', '010312'),
 ('video_num_paging_index', 8, '', '200312'),
 ('video_num_paging_index', 2, '', '220312'),
 ('video_num_paging_index', 8, '', '260312'),
+('video_width_thumb', 155, '', '010312'),
 ('video_width_thumb', 200, '', '220312');
 
 -- --------------------------------------------------------
@@ -328,6 +344,10 @@ CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
 --
 
 INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, `loadfiles`, `typefile`) VALUES
+('010312', 'default', 'prettyPhoto.css', 'css'),
+('010312', 'default', 'jquery.prettyPhoto.js', 'javascript'),
+('010312', 'video', 'prettyPhoto.css', 'css'),
+('010312', 'video', 'jquery.prettyPhoto.js', 'javascript'),
 ('111120', 'products', 'product-detail.css|jquery.fancybox-1.3.1.css', 'css'),
 ('111120', 'products', 'jcarousellite.js|contentslider.js|scroller.js|jquery.fancybox-1.3.1.js|lightbox.js', 'javascript'),
 ('200312', 'products', 'product-detail.css', 'css'),
@@ -460,16 +480,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(3, 'Giới thiệu sơ lược', 'Introduction About', '<p>\r\n	Ngày nay, khi ngày càng có nhiều thông tin được cung cấp trực tuyến, bạn càng cần phải sử dụng trình duyệt nhanh và an toàn trên máy tính. Giới thiệu về Google Chrome -- trình duyệt mở trang web với tốc độ cực nhanh! Thiết kế mượt mà của trình duyệt mang lại cho bạn nhiều không gian hơn để duyệt các trang web ưa thích của mình. Hướng dẫn này giúp bạn tìm hiểu qua các tính năng chính của Google Chrome.</p>', '<p>\r\n	Today, as more and more information is offered online, the more you need to use fast and secure browser on the computer. About Google Chrome - the browser open site with fast speed! Sleek design of the browser gives you more space to browse your favorite sites. This guide helps you learn the key features of Google Chrome.</p>', 266, '2012-04-05 02:12:08', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'introduction-about', 'Ngày nay, khi ngày càng có nhiều thông tin được cung cấp trực tuyến, bạn càng cần phải sử dụng trình duyệt nhanh và an toàn trên máy tính. Giới thiệu về Google Chrome -- trình duyệt mở trang web với tốc độ cực nhanh! Thiết kế mượt mà của trìn', '', 1, '220312'),
-(4, 'Giới thiệu chung', 'Introduction', '<p>\r\n	Giới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chung</p>', '<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>\r\n<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>\r\n<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>', 21, '2012-04-05 02:29:35', 2, 0, NULL, NULL, 'gioi-thieu-chung', 'introduction', 'Giới thiệu chungGiới thiệu chung', 'Introduction Introduction Introduction Introduction', 1, '220312'),
-(5, 'Giới thiệu Văn phòng đại diện', 'About a representative office', '<p>\r\n	Giới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diện</p>', '<p>\r\n	About a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative office</p>', 86, '2012-04-05 02:29:55', 3, 0, NULL, NULL, 'gioi-thieu-van-phong-dai-dien', 'about-a-representative-office', 'Giới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diện', 'About a representative officeAbout a representative office', 1, '220312'),
+(3, 'Giới thiệu sơ lược', 'Introduction About', '<p>\r\n	Ngày nay, khi ngày càng có nhiều thông tin được cung cấp trực tuyến, bạn càng cần phải sử dụng trình duyệt nhanh và an toàn trên máy tính. Giới thiệu về Google Chrome -- trình duyệt mở trang web với tốc độ cực nhanh! Thiết kế mượt mà của trình duyệt mang lại cho bạn nhiều không gian hơn để duyệt các trang web ưa thích của mình. Hướng dẫn này giúp bạn tìm hiểu qua các tính năng chính của Google Chrome.</p>', '<p>\r\n	Today, as more and more information is offered online, the more you need to use fast and secure browser on the computer. About Google Chrome - the browser open site with fast speed! Sleek design of the browser gives you more space to browse your favorite sites. This guide helps you learn the key features of Google Chrome.</p>', 376, '2012-04-05 02:12:08', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'introduction-about', 'Ngày nay, khi ngày càng có nhiều thông tin được cung cấp trực tuyến, bạn càng cần phải sử dụng trình duyệt nhanh và an toàn trên máy tính. Giới thiệu về Google Chrome -- trình duyệt mở trang web với tốc độ cực nhanh! Thiết kế mượt mà của trìn', '', 1, '220312'),
+(4, 'Giới thiệu chung', 'Introduction', '<p>\r\n	Giới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chung</p>', '<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>\r\n<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>\r\n<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>', 29, '2012-04-05 02:29:35', 2, 0, NULL, NULL, 'gioi-thieu-chung', 'introduction', 'Giới thiệu chungGiới thiệu chung', 'Introduction Introduction Introduction Introduction', 1, '220312'),
+(5, 'Giới thiệu Văn phòng đại diện', 'About a representative office', '<p>\r\n	Giới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diện</p>', '<p>\r\n	About a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative office</p>', 108, '2012-04-05 02:29:55', 3, 0, NULL, NULL, 'gioi-thieu-van-phong-dai-dien', 'about-a-representative-office', 'Giới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diện', 'About a representative officeAbout a representative office', 1, '220312'),
 (6, 'Về Dos.vn', 'Dos.vn about', '<p>\r\n	Kính gửi: <strong>Quý Doanh nghiệp</strong></p>\r\n<p style="margin-left:40px;">\r\n	<strong>DOS</strong> là công ty chuyên nghiệp trong việc <strong>Thiết kế Website</strong>. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng.</p>\r\n<p style="margin-left:40px;">\r\n	Với tiêu chí "Giao diện đẹp, tính năng nhiều, giá thành thấp". Qua 5 năm thiết kế Web, sản phẩm của chúng tôi được các Doanh nghiệp đánh giá cao. Chúng tôi có bề dày kinh nghiệm, có giải pháp và đội ngũ nhân lực tâm huyết để đảm bảo sản phẩm đáp ứng đúng nhu cầu, đem lại hiệu quả, với chi phí phù hợp.</p>\r\n<p style="margin-left:40px;">\r\n	Không ngừng học hỏi và phát triển công nghệ. <strong>DOS</strong> trở thành một công ty thiết kế Web tiên phong về chất lượng, có sản phẩm tiêu biểu, có thương hiệu uy tín trong và ngoài nước.</p>\r\n<p style="margin-left:40px;">\r\n	<strong>DOS</strong> thiết kế và cung cấp giải pháp Web trên đến các đơn vị: <strong>UBND Tân phú</strong>, <strong>SONADEZI</strong>, <strong>BENCO</strong>, <strong>Gạch Ngói Nhị Hiệp</strong>, <strong>An Gia Phú</strong>, <strong>Nội Thất Yến Bình Minh</strong>, <strong>Thuận Thành Glass</strong>, <strong>Thái Sơn</strong>, <strong>Thái Bình An Phú Thịnh...</strong></p>\r\n<p style="margin-left:40px;">\r\n	Tại Việt Nam, Sản phẩm <strong>DOS</strong> được giới thiệu tại các Công ty thiết kế in ấn, ở hầu hết các Trung Tâm tỉnh thành trên toàn quốc .</p>', '<p>\r\n	Kính gửi: Quý Doanh nghiệp<br />\r\n	      <br />\r\n	           DOS là công ty chuyên nghiệp trong việc Thiết kế Website. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng.<br />\r\n	          Với tiêu chí "Giao diện đẹp, tính năng nhiều, giá thành thấp". Qua 5 năm thiết kế Web, sản phẩm của chúng tôi được các Doanh nghiệp đánh giá cao. Chúng tôi có bề dày kinh nghiệm, có giải pháp và đội ngũ nhân lực tâm huyết để đảm bảo sản phẩm đáp ứng đúng nhu cầu, đem lại hiệu quả, với chi phí phù hợp.</p>\r\n<p>\r\n	          Không ngừng học hỏi và phát triển công nghệ. DOS trở thành một công ty thiết kế Web tiên phong về chất lượng, có sản phẩm tiêu biểu, có thương hiệu uy tín trong và ngoài nước.<br />\r\n	          DOS thiết kế và cung cấp giải pháp Web trên đến các đơn vị: UBND Tân phú, SONADEZI, BENCO, Gạch Ngói Nhị Hiệp, An Gia Phú, Nội Thất Yến Bình Minh, Thuận Thành Glass, Thái Sơn, Thái Bình An Phú Thịnh...</p>\r\n<p>\r\n	          Tại Việt Nam, Sản phẩm DOS được giới thiệu tại các Công ty thiết kế in ấn, ở hầu hết các Trung Tâm tỉnh thành trên toàn quốc .</p>', 75, '2012-04-07 02:13:52', 1, 0, NULL, NULL, 've-dos', 'dos-about', 'DOS là công ty chuyên nghiệp trong việc Thiết kế Website. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng', 'DOS là công ty chuyên nghiệp trong việc Thiết kế Website. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng', 1, 'dos'),
 (7, 'Tầm nhìn và sứ mệnh Dos', 'Gioi thieu 2 En', '<p>\r\n	Tầm nhìn và Sứ mệnh của DOS được viết ra ngay từ khi thành lập, xác định lý tưởng, hướng đi lâu dài và những giá trị cơ bản mà mỗi thành viên sáng lập luôn hướng tới.</p>\r\n<p>\r\n	<strong>Tầm nhìn của DOS</strong><br />\r\n	Được công nhận là công ty đứng đầu trong lĩnh vực thiết kế Website. Với giải pháp tích hợp Marketing và Công Nghệ Thông Tin trong việc quảng cáo bán hàng dành riêng cho từng Doanh nghiệp.</p>\r\n<p>\r\n	<strong>Sứ mệnh của DOS</strong><br />\r\n	Mang lại cho Doanh nghiệp một kênh truyền thông nhanh chóng và hiệu quả qua những Website đầy tính sáng tạo.</p>\r\n<p>\r\n	<strong>Các giá trị cơ bản của DOS c</strong>ác giá trị cơ bản là tài sản vô cùng quý báu mà mỗi người thành viên của DOS đều trân trọng giữ gìn:</p>\r\n<ul><li>\r\n		<strong>Làm khách hàng hài lòng</strong>: Tận tuỵ với khách hàng và luôn phấn đấu để đáp ứng tốt nhất những nhu cầu, vượt trên mong đợi của họ.</li>\r\n	<li>\r\n		<strong>Con người là cốt lõi</strong>: Tôn trọng con người, tạo điều kiện cho các thành viên phát triển tối đa tài năng, đóng góp cho tổ chức và được đãi ngộ xứng đáng cả về vật chất và tinh thần.</li>\r\n	<li>\r\n		<strong>Chất lượng tốt nhất</strong>: Đảm bảo chất lượng tốt nhất trong mỗi sản phẩm, mỗi việc làm.</li>\r\n	<li>\r\n		<strong>Đề cao đạo đức kinh doanh</strong>: Mỗi nhân viên là một đại diện của Công ty, có nghĩa vụ tuân thủ đạo đức kinh doanh cao nhất, luôn hợp tác, cởi mở và thân thiện với đồng nghiệp, đóng góp cho cộng đồng và xã hội.</li>\r\n</ul>', '<p>\r\n	NOi dung en</p>', 45, '2012-04-07 02:14:02', 2, 0, NULL, NULL, 'tam-nhin-va-su-menh-dos', 'gioi-thieu-2-en', 'Tầm nhìn và Sứ mệnh của DOS được viết ra ngay từ khi thành lập, xác định lý tưởng, hướng đi lâu dài và những giá trị cơ bản mà mỗi thành viên sáng lập luôn hướng tới', 'Mo ta 2 En', 1, 'dos'),
 (8, 'Lĩnh vực hoạt động', 'Gioi thieu 3 En', '<p>\r\n	<strong>DỊCH VỤ CHUYÊN NGHIỆP</strong>:</p>\r\n<ul><li>\r\n		Thiết kế website</li>\r\n	<li>\r\n		Phương pháp quảng cáo bán hàng trực tuyến</li>\r\n	<li>\r\n		Giải pháp CNTT trọn gói cho Doanh nghiệp</li>\r\n	<li>\r\n		Thương mại điện tử</li>\r\n</ul><p>\r\n	 </p>\r\n<p>\r\n	<strong>SẢN PHẨM VÀ DỊCH VỤ GTGT:</strong></p>\r\n<ul><li>\r\n		Đăng ký tên miền</li>\r\n	<li>\r\n		Cung cấp Hosting</li>\r\n	<li>\r\n		Xử lý hình ảnh nhập liệu cho web</li>\r\n	<li>\r\n		Thiết kế Logo</li>\r\n	<li>\r\n		Thiết Kế Name Card</li>\r\n	<li>\r\n		Thiết kế ấn phầm Quảng cáo theo đơn đặt hàng</li>\r\n</ul><p>\r\n	 </p>\r\n<p>\r\n	<strong>HỖ TRỢ TƯ VẤN MIỄN PHÍ:</strong></p>\r\n<ul><li>\r\n		Thành lập Doanh nghiệp</li>\r\n	<li>\r\n		Quản lý Doanh nghiệp</li>\r\n	<li>\r\n		Tư vấn Marketing và phát triển Doanh nghiệp</li>\r\n	<li>\r\n		Tư vấn và định hướng đào tạo nhân viên bán hàng</li>\r\n	<li>\r\n		Tư vấn phong thủy</li>\r\n</ul>', '<p>\r\n	Noi dung 3 en</p>', 31, '2012-04-07 02:14:12', 3, 0, NULL, NULL, 'linh-vuc-hoat-dong', 'gioi-thieu-3-en', 'Mo ta 3', 'Mo ta 3 En', 1, 'dos'),
-(10, 'Giới thiệu sơ lược', '', '<p>\r\n	 Ngày thành lập: 05/09/2002<br />\r\n	- Công ty TNHH Tin Học Việt Tiến được thành lập ngày 5 tháng tháng 09 năm 2002, số giấy phép: 4702000428 do Sở Kế Hoạch Đầu Tư Tỉnh Đồng Nai  cấp<br />\r\n	- Ngày 23/08/2009 Công ty TNHH Tin Học Việt Tiến đổi tên thành Công ty Cổ Phần Công Nghệ Tin Việt Tiến<br />\r\n	- Vốn điều lệ: 4.000.000.000 đồng (bốn tỷ đồng)<br />\r\n	- Tháng 08 năm 2009 công ty nân vốn lên quy mô 10.000.000.000 đồng (mười tỷ đồng)<br />\r\n	- Ngày 23/08/2009 Công ty Cổ Phần Công Nghệ Tin Việt Tiến thành lập chi nhánh mới Công ty Thiết Bị Số Bách Việt tại số 30, Xa lộ Hà Nội, Khu phố 4, Phường Long Bình, Biên Hoà (ngay vòng xoay Tam Hiệp) với số vốn là 3 tỷ đồng</p>', '', 174, '2012-04-10 00:42:59', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', 'Công ty TNHH Tin Học Việt Tiến được thành lập ngày 5 tháng tháng 09 năm 2002, số giấy phép: 4702000428 do Sở Kế Hoạch Đầu Tư Tỉnh Đồng Nai  cấp', '', 1, '260312'),
+(10, 'Giới thiệu sơ lược', '', '<p>\r\n	 Ngày thành lập: 05/09/2002<br />\r\n	- Công ty TNHH Tin Học Việt Tiến được thành lập ngày 5 tháng tháng 09 năm 2002, số giấy phép: 4702000428 do Sở Kế Hoạch Đầu Tư Tỉnh Đồng Nai  cấp<br />\r\n	- Ngày 23/08/2009 Công ty TNHH Tin Học Việt Tiến đổi tên thành Công ty Cổ Phần Công Nghệ Tin Việt Tiến<br />\r\n	- Vốn điều lệ: 4.000.000.000 đồng (bốn tỷ đồng)<br />\r\n	- Tháng 08 năm 2009 công ty nân vốn lên quy mô 10.000.000.000 đồng (mười tỷ đồng)<br />\r\n	- Ngày 23/08/2009 Công ty Cổ Phần Công Nghệ Tin Việt Tiến thành lập chi nhánh mới Công ty Thiết Bị Số Bách Việt tại số 30, Xa lộ Hà Nội, Khu phố 4, Phường Long Bình, Biên Hoà (ngay vòng xoay Tam Hiệp) với số vốn là 3 tỷ đồng</p>', '', 180, '2012-04-10 00:42:59', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', 'Công ty TNHH Tin Học Việt Tiến được thành lập ngày 5 tháng tháng 09 năm 2002, số giấy phép: 4702000428 do Sở Kế Hoạch Đầu Tư Tỉnh Đồng Nai  cấp', '', 1, '260312'),
 (11, 'Giới thiệu ngành nghề hoạt động', '', '<p>\r\n	 Ngành nghề kinh doanh<br />\r\n	- Mua bán máy tính, máy văn phòng, hàng trang trí nôi thất, thiết bị điện tử, điện lạnh, điện công nghiệp, điện gia dụng<br />\r\n	- Sừa chữa, bảo trì, lắp đặt máy tính, máy văn phòng, hệ thống mạng<br />\r\n	- Viết chương trình phần mềm tin học<br />\r\n	- Đào tạo tin học</p>', '', 1, '2012-04-10 00:44:40', 2, 0, NULL, NULL, 'gioi-thieu-nganh-nghe-hoat-dong', '', 'Ngành nghề kinh doanh\r\n- Mua bán máy tính, máy văn phòng, hàng trang trí nôi thất, thiết bị điện tử, điện lạnh, điện công nghiệp, điện gia dụng\r\n- Sừa chữa, bảo trì, lắp đặt máy tính, máy văn phòng, hệ thống mạng', '', 1, '260312'),
 (12, 'Quá trình hoạt động', '', '<p>\r\n	- Từ ngày thành lập tới nay Công ty Cổ Phần Công Nghệ Tin Việt Tiến đã cung cấp máy tính cho hầu hết các phòng ban các Xã, Huyện, Thị trấn trong Tỉnh như Huyện Định Quán, Huyên Tân Phú, Huyện Thống Nhất, Huyên Long Thành, Huyên Nhơn Trạch, Huyên Vĩnh Cửu, Huyên Cẩm Mỹ, Tp. Biên Hoà...<br />\r\n	- Công ty còn cung cấp cho các đối tác lớn là các đơn vị như Sở Tài Chính, Sở Bưu Chính Viễn Thông, Sở Tài Nguyên, Sở Nông Nghiệp &amp; Phát Triển Nông Thôn, Công An Tỉnh Đồng Nai, các bệnh viện, các trường học trong Tỉnh, Ban quản lý các khu công nghiệp...Công ty Cổ Phần Công Nghệ Tin Việt Tiến còn đối tác cung cấp máy tính cho các công ty, tâp đoàn trong các khu công nghiệp, khu chế xuất như Chanshin, Pounchen, Teakhang...<br />\r\n	- Ngoài ra Công ty còn cung cấp linh kiện sĩ và lẻ cho các công ty tin học, hộ gia đình trong tỉnh.</p>', '', 1, '2012-04-10 00:45:17', 3, 0, NULL, NULL, 'qua-trinh-hoat-dong', '', '- Từ ngày thành lập tới nay Công ty Cổ Phần Công Nghệ Tin Việt Tiến đã cung cấp máy tính cho hầu hết các phòng ban các Xã, Huyện, Thị trấn trong Tỉnh như Huyện Định Quán, Huyên Tân Phú, Huyện Thống Nhất, Huyên Long Thành, Huyên Nhơn Trạch,...', '', 1, '260312'),
-(13, 'Mở rộng showroom chuyên kinh doanh máy tính xách tay', '', '<p>\r\n	- Ngày 03/09/2008 với sự hỗ trợ từ các hãng máy tính, Công ty Cổ Phần Công Nghệ Tin Việt Tiến khai trương mở rông showroom chuyên kinh doanh máy tính xách tay chính hãng nổi tiếng như HP, TOSHIBA, ACER, DELL, SAMSUNG, LENOVO, SONY, APPLE...<br />\r\n	- Các hãng đặt tủ kệ trưng để bày sản phẩm và đưa nhân viên tư vấn của hãng xuống tại showroom để tư vấn trực tiếp khách hàng</p>', '', 8, '2012-04-10 00:45:44', 4, 0, NULL, NULL, 'mo-rong-showroom-chuyen-kinh-doanh-may-tinh-xach-tay', '', 'kinh doanh máy tính xách tay chính hãng nổi tiếng như HP, TOSHIBA, ACER, DELL, SAMSUNG, LENOVO, SONY, APPLE...', '', 1, '260312'),
+(13, 'Mở rộng showroom chuyên kinh doanh máy tính xách tay', '', '<p>\r\n	- Ngày 03/09/2008 với sự hỗ trợ từ các hãng máy tính, Công ty Cổ Phần Công Nghệ Tin Việt Tiến khai trương mở rông showroom chuyên kinh doanh máy tính xách tay chính hãng nổi tiếng như HP, TOSHIBA, ACER, DELL, SAMSUNG, LENOVO, SONY, APPLE...<br />\r\n	- Các hãng đặt tủ kệ trưng để bày sản phẩm và đưa nhân viên tư vấn của hãng xuống tại showroom để tư vấn trực tiếp khách hàng</p>', '', 9, '2012-04-10 00:45:44', 4, 0, NULL, NULL, 'mo-rong-showroom-chuyen-kinh-doanh-may-tinh-xach-tay', '', 'kinh doanh máy tính xách tay chính hãng nổi tiếng như HP, TOSHIBA, ACER, DELL, SAMSUNG, LENOVO, SONY, APPLE...', '', 1, '260312'),
 (38, 'Giới thiệu sơ lược', 'Introduction About', '<p>\r\n	Ngày nay, khi ngày càng có nhiều thông tin được cung cấp trực tuyến, bạn càng cần phải sử dụng trình duyệt nhanh và an toàn trên máy tính. Giới thiệu về Google Chrome -- trình duyệt mở trang web với tốc độ cực nhanh! Thiết kế mượt mà của trình duyệt mang lại cho bạn nhiều không gian hơn để duyệt các trang web ưa thích của mình. Hướng dẫn này giúp bạn tìm hiểu qua các tính năng chính của Google Chrome.</p>', '<p>\r\n	Today, as more and more information is offered online, the more you need to use fast and secure browser on the computer. About Google Chrome - the browser open site with fast speed! Sleek design of the browser gives you more space to browse your favorite sites. This guide helps you learn the key features of Google Chrome.</p>', 266, '2012-04-11 00:43:14', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'introduction-about', 'Ngày nay, khi ngày càng có nhiều thông tin được cung cấp trực tuyến, bạn càng cần phải sử dụng trình duyệt nhanh và an toàn trên máy tính. Giới thiệu về Google Chrome -- trình duyệt mở trang web với tốc độ cực nhanh! Thiết kế mượt mà của trìn', '', 1, 'thanhansoft'),
 (39, 'Giới thiệu chung', 'Introduction', '<p>\r\n	Giới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chung</p>', '<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>\r\n<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>\r\n<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>', 21, '2012-04-11 00:43:14', 2, 0, NULL, NULL, 'gioi-thieu-chung', 'introduction', 'Giới thiệu chungGiới thiệu chung', 'Introduction Introduction Introduction Introduction', 1, 'thanhansoft'),
 (40, 'Giới thiệu Văn phòng đại diện', 'About a representative office', '<p>\r\n	Giới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diện</p>', '<p>\r\n	About a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative office</p>', 86, '2012-04-11 00:43:14', 3, 0, NULL, NULL, 'gioi-thieu-van-phong-dai-dien', 'about-a-representative-office', 'Giới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diện', 'About a representative officeAbout a representative office', 1, 'thanhansoft');
@@ -568,7 +588,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
 --
 
 INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `tagen`, `description`, `descriptionen`, `enable`, `dos_usernames_username`) VALUES
-(1, 'Contact us', '', '<p>\r\n	CÔNG TY CỔ PHẦN TM SX THẾ GIỚI NỘI THẤT</p>\r\n<p>\r\n	Trụ sở: 321 CỘNG HÒA, PHƯỜNG 13, TÂN BÌNH, TP.HCM</p>\r\n<p>\r\n	Nhà máy : C7/21 PHẠM HÙNG, CHÁNH HƯNG BÌNH CHÁNH</p>\r\n<p>\r\n	MST: 0309788812</p>\r\n<p>\r\n	Điện thoại : (+848) 6292 3934 - Fax: (+848) 6292 3935</p>\r\n<p>\r\n	Hotline: 0942852858--0942 853 443 - Email : thegioinoithatvn@gmail.com</p>', '<p>\r\n	TM MANUFACTURING COMPANY FURNITURE WORLD</p>\r\n<p>\r\n	Office: 321 Cong Hoa, Ward 13, Tan Binh, Ho Chi Minh City</p>\r\n<p>\r\n	Factory: C7/21 Pham Hung Binh Chanh Hung DISTRICT</p>\r\n<p>\r\n	MST: 0309788812</p>\r\n<p>\r\n	Tel: (+848) 6292 3934 - Fax: (+848) 6292 3935</p>\r\n<p>\r\n	Hotline: 0942852858 - 0942 853 443 - Email: thegioinoithatvn@gmail.com</p>', '2012-04-05 02:20:31', 1, 0, 0, 'contact-us', '', '', '', '1', '220312'),
+(1, 'Liên hệ với chúng tôi', 'Contact Us', '<p>\r\n	CÔNG TY CỔ PHẦN TM SX THẾ GIỚI NỘI THẤT</p>\r\n<p>\r\n	Trụ sở: 321 CỘNG HÒA, PHƯỜNG 13, TÂN BÌNH, TP.HCM</p>\r\n<p>\r\n	Nhà máy : C7/21 PHẠM HÙNG, CHÁNH HƯNG BÌNH CHÁNH</p>\r\n<p>\r\n	MST: 0309788812</p>\r\n<p>\r\n	Điện thoại : (+848) 6292 3934 - Fax: (+848) 6292 3935</p>\r\n<p>\r\n	Hotline: 0942852858--0942 853 443 - Email : thegioinoithatvn@gmail.com</p>', '<p>\r\n	TM MANUFACTURING COMPANY FURNITURE WORLD</p>\r\n<p>\r\n	Office: 321 Cong Hoa, Ward 13, Tan Binh, Ho Chi Minh City</p>\r\n<p>\r\n	Factory: C7/21 Pham Hung Binh Chanh Hung DISTRICT</p>\r\n<p>\r\n	MST: 0309788812</p>\r\n<p>\r\n	Tel: (+848) 6292 3934 - Fax: (+848) 6292 3935</p>\r\n<p>\r\n	Hotline: 0942852858 - 0942 853 443 - Email: thegioinoithatvn@gmail.com</p>', '2012-04-05 02:20:31', 1, 0, 0, 'lien-he-voi-chung-toi', 'contact-us', 'Liên hệ với chúng tôi', 'Contact us', '1', '220312'),
 (2, 'Liên hệ với chúng tôi', '', '<p>\r\n	CÔNG TY CỔ PHẦN MÁY TÍNH DRAGON</p>\r\n<p>\r\n	<br />\r\n	Trụ sở chính</p>\r\n<p>\r\n	Hoàn Long Building 244 Cống Quỳnh, P.Phạm Ngũ Lão, Q.1, Tp.HCM</p>\r\n<p>\r\n	ĐT: 08.39259999 - 08.39258999</p>\r\n<p>\r\n	Fax : 08.39259131</p>\r\n<p>\r\n	Showroom 1: Chi nhánh Tôn Thất Tùng</p>\r\n<p>\r\n	101 Sương Nguyệt Ánh, P.Bến Thành, Q.1, Tp.HCM</p>\r\n<p>\r\n	96B Tôn Thất Tùng, P.Bến Thành, Q1. Tp.HCM</p>\r\n<p>\r\n	ĐT: 08.62911046 - 08.62911047</p>\r\n<p>\r\n	Fax : 08.39255326</p>\r\n<br /><p>\r\n	Showroom 2: Chi nhánh Nguyễn Thị Minh Khai</p>\r\n<p>\r\n	410 B-C-D Nguyễn Thị Minh Khai, P.5, Q.3, Tp.HCM</p>\r\n<p>\r\n	ĐT: 08.62911058 - 08.62911061</p>\r\n<p>\r\n	Fax : 08.38344896</p>\r\n<br /><p>\r\n	Showroom 3: Chi nhánh Gò Vấp</p>\r\n<p>\r\n	15 Nguyễn Oanh, P.10, Q.Gò Vấp, Tp.HCM</p>\r\n<p>\r\n	ĐT: 08.62955289 - 08.62955299</p>\r\n<p>\r\n	Fax : 08.62955064</p>\r\n<br /><p>\r\n	Showroom 4: Chi nhánh Cần Thơ</p>\r\n<p>\r\n	41 - 43 Đường 30/4, P. An Lạc, Q. Ninh Kiều, Tp Cần Thơ</p>\r\n<p>\r\n	ĐT: 0710 3819030 - 0710 3819040</p>\r\n<p>\r\n	Fax:0710 3819050</p>\r\n<br /><p>\r\n	Showroom 5 : Chi nhánh Biên Hòa</p>\r\n<p>\r\n	77-79 Phạm Văn Thuận (QL.15), P. Tân Tiến, Tp Biên Hòa, ĐN.</p>\r\n<p>\r\n	ĐT: (061).8822228 - (061).3825779</p>\r\n<p>\r\n	Fax : (061).8820139</p>\r\n<br /><p>\r\n	Website: www.pct.com.vn - Email: lienhe@pct.com.vn</p>', '', '2012-04-10 00:59:52', 1, 0, 0, 'lien-he-voi-chung-toi', '', 'Liện hệ với chúng tôi để được những ưu đãi', '', '1', '260312'),
 (4, 'Contact us', '', '<p>\r\n	CÔNG TY CỔ PHẦN TM SX THẾ GIỚI NỘI THẤT</p>\r\n<p>\r\n	Trụ sở: 321 CỘNG HÒA, PHƯỜNG 13, TÂN BÌNH, TP.HCM</p>\r\n<p>\r\n	Nhà máy : C7/21 PHẠM HÙNG, CHÁNH HƯNG BÌNH CHÁNH</p>\r\n<p>\r\n	MST: 0309788812</p>\r\n<p>\r\n	Điện thoại : (+848) 6292 3934 - Fax: (+848) 6292 3935</p>\r\n<p>\r\n	Hotline: 0942852858--0942 853 443 - Email : thegioinoithatvn@gmail.com</p>', '<p>\r\n	TM MANUFACTURING COMPANY FURNITURE WORLD</p>\r\n<p>\r\n	Office: 321 Cong Hoa, Ward 13, Tan Binh, Ho Chi Minh City</p>\r\n<p>\r\n	Factory: C7/21 Pham Hung Binh Chanh Hung DISTRICT</p>\r\n<p>\r\n	MST: 0309788812</p>\r\n<p>\r\n	Tel: (+848) 6292 3934 - Fax: (+848) 6292 3935</p>\r\n<p>\r\n	Hotline: 0942852858 - 0942 853 443 - Email: thegioinoithatvn@gmail.com</p>', '2012-04-11 00:39:43', 1, 0, 0, 'contact-us', '', '', '', '1', 'thanhansoft'),
 (5, 'Contact us', '', '<p>\r\n	CÔNG TY CỔ PHẦN TM SX THẾ GIỚI NỘI THẤT</p>\r\n<p>\r\n	Trụ sở: 321 CỘNG HÒA, PHƯỜNG 13, TÂN BÌNH, TP.HCM</p>\r\n<p>\r\n	Nhà máy : C7/21 PHẠM HÙNG, CHÁNH HƯNG BÌNH CHÁNH</p>\r\n<p>\r\n	MST: 0309788812</p>\r\n<p>\r\n	Điện thoại : (+848) 6292 3934 - Fax: (+848) 6292 3935</p>\r\n<p>\r\n	Hotline: 0942852858--0942 853 443 - Email : thegioinoithatvn@gmail.com</p>', '<p>\r\n	TM MANUFACTURING COMPANY FURNITURE WORLD</p>\r\n<p>\r\n	Office: 321 Cong Hoa, Ward 13, Tan Binh, Ho Chi Minh City</p>\r\n<p>\r\n	Factory: C7/21 Pham Hung Binh Chanh Hung DISTRICT</p>\r\n<p>\r\n	MST: 0309788812</p>\r\n<p>\r\n	Tel: (+848) 6292 3934 - Fax: (+848) 6292 3935</p>\r\n<p>\r\n	Hotline: 0942852858 - 0942 853 443 - Email: thegioinoithatvn@gmail.com</p>', '2012-04-11 00:40:33', 1, 0, 0, 'contact-us', '', '', '', '1', 'thanhansoft'),
@@ -735,7 +755,7 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('max_count', 1, '220312'),
 ('counter', 4, '220312'),
 ('yesterday', 0, '220312'),
-('day_time', 2456028, '260312'),
+('day_time', 2456029, '260312'),
 ('max_count', 0, '260312'),
 ('counter', 0, '260312'),
 ('yesterday', 0, '260312'),
@@ -762,8 +782,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1334106757, 'thanhansoft'),
-('''127.0.0.1''', 1334104019, '220312');
+('''127.0.0.1''', 1334108222, '260312'),
+('''127.0.0.1''', 1334111869, '220312');
 
 -- --------------------------------------------------------
 
@@ -800,7 +820,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
 
 --
 -- Dumping data for table `dos_module_products`
@@ -808,7 +828,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
 
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
 (6, 'Nội thất bếp treo tường', 'Kitchen wall', '2012-04-05 03:08:09', '', '', NULL, NULL, NULL, '<p>\r\n	Nội thất bếp treo tường Nội thất bếp treo tường</p>', '<p>\r\n	Kitchen wall Kitchen wall Kitchen wall Kitchen wall</p>', 'noi-that-bep-treo-tuong', 'kitchen-wall', 'noi-that-bep-treo-tuong', 'Kitchen wall', 0, 1, 9990000, 1, NULL, NULL, NULL, NULL, NULL, 1, 10),
-(7, 'Nội thất bếp thời trang', 'Kitchen Furniture Fashion', '2012-04-05 03:09:20', '', 'noi-that-bep-thoi-trang.jpg', NULL, NULL, NULL, '<p>\r\n	Nội thất bếp thời trangNội thất bếp thời trangNội thất bếp thời trangNội thất bếp thời trangNội thất bếp thời trang</p>', '<p>\r\n	Kitchen Furniture FashionKitchen Furniture Fashionv Kitchen Furniture Fashion</p>', 'noi-that-bep-thoi-trang', 'kitchen-furniture-fashion', 'Nội thất bếp thời trangNội thất bếp thời trang', 'Kitchen Furniture Fashion Kitchen Furniture Fashion', 0, 2, 2999999, 1, NULL, NULL, NULL, NULL, NULL, 1, 10),
+(7, 'Nội thất bếp thời trang', 'Kitchen Furniture Fashion', '2012-04-05 03:09:20', 'noi-that-bep-thoi-trang-thumb.jpg', 'noi-that-bep-thoi-trang.jpg', NULL, NULL, NULL, '<p>\r\n	Nội thất bếp thời trangNội thất bếp thời trangNội thất bếp thời trangNội thất bếp thời trangNội thất bếp thời trang</p>', '<p>\r\n	Kitchen Furniture FashionKitchen Furniture Fashionv Kitchen Furniture Fashion</p>', 'noi-that-bep-thoi-trang', 'kitchen-furniture-fashion', 'Nội thất bếp thời trangNội thất bếp thời trang', 'Kitchen Furniture Fashion Kitchen Furniture Fashion', 0, 2, 2999999, 1, NULL, NULL, NULL, NULL, NULL, 1, 10),
 (8, 'Sách hot nhất nóng nhất', 'Book hottest hottest', '2012-04-09 01:11:18', 'sach-hot-nhat-nong-nhat-thumb.jpg', 'sach-hot-nhat-nong-nhat.jpg', NULL, NULL, NULL, '<p>\r\n	chi tiet</p>', '<p>\r\n	detail</p>', 'sach-hot-nhat-nong-nhat', 'book-hottest-hottest', 'sach hot nhieu nguoi doc', 'some read', 0, 3, 200000, 0, NULL, NULL, NULL, NULL, NULL, 1, 10),
 (9, 'Sách khoa học công nghệ mới', 'New science and technology policy', '2012-04-09 01:32:02', 'sach-khoa-hoc-cong-nghe-moi-thumb.jpg', 'sach-khoa-hoc-cong-nghe-moi.jpg', NULL, NULL, NULL, '<p>\r\n	chi tiet</p>', '<p>\r\n	detail</p>', 'sach-khoa-hoc-cong-nghe-moi', 'new-science-and-technology-policy', 'sach cong nghe mới', 'New science and technology policy', 0, 4, 400000, 1, NULL, NULL, NULL, NULL, NULL, 1, 8),
 (10, 'Sách nhà giáo dục mới', 'The new education policy', '2012-04-09 01:39:13', '', '', NULL, NULL, NULL, '<p>\r\n	chi tiet</p>', '<p>\r\n	add</p>', 'sach-nha-giao-duc-moi', 'the-new-education-policy', 'Sách nhà giáo dục mới', 'The new education policy', 0, 5, 20000, 1, NULL, NULL, NULL, NULL, NULL, 1, 10),
@@ -819,7 +839,9 @@ INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, 
 (15, 'HP Mini 110-3713TU (LV829PA)', '', '2012-04-10 01:24:39', 'hp-mini-110-3713tu-lv829pa-thumb.jpg', 'hp-mini-110-3713tu-lv829pa.jpg', NULL, NULL, NULL, '<p>\r\n	CPU: Intel Atom N570 (1.66 GHz 512Kb )<br />\r\n	RAM: 1024 MB DDR3 1333Mhz<br />\r\n	Chipset: Intel GMA<br />\r\n	HDD: 320 GB SATA 5400 rpm<br />\r\n	ODD: No optical/ Webcam /Bluetooth / Reader card<br />\r\n	Graphics: INTEL GMA 3150 - WIN7 256 MB<br />\r\n	Display: 10.10" WSVGA LED HP Anti-glare Display<br />\r\n	Network: 802.11bgN / 100/1000 /<br />\r\n	Battery: Pin 6cell<br />\r\n	Weight: 1.25 Kg<br />\r\n	OS: Free DOS<br />\r\n	Other: Màu đen nhỏ gọn</p>', '', 'hp-mini-110-3713tu-lv829pa', '', '', '', 0, 5, 7800000, 1, NULL, NULL, NULL, NULL, NULL, 1, 15),
 (16, 'Dell Inspiron 14R-N4110 200-83637', '', '2012-04-10 01:51:58', 'dell-inspiron-14r-n4110-200-83637-thumb.jpg', 'dell-inspiron-14r-n4110-200-83637.jpg', NULL, NULL, NULL, '<p>\r\n	CPU: Intel Core i3 2350M (2.30 GHz 3M L2 cache, 4 threads )<br />\r\n	RAM: 4096 MB DDR3 1333Mhz<br />\r\n	Chipset: Intel HM67<br />\r\n	HDD: 320 GB SATA 5400 rpm<br />\r\n	ODD: DVD RW/ Reader card/ Camera/ Bluetooth/ HDMI<br />\r\n	Graphics: NVIDIA Geforce GT610 DDR3 2 GB<br />\r\n	Display: 15.60" HD Color Shine SLIM (LED backlight)<br />\r\n	Network: 802.11bgn / 100/1000 base /<br />\r\n	Battery: 6 cell<br />\r\n	Weight: 2.60 Kg<br />\r\n	OS: Free DOS<br />\r\n	Other: Màu nâu nhám, keyboard chiclet - Vga rời 2Gb</p>', '', 'dell-inspiron-14r-n4110-200-83637', '', '', '', 0, 6, 14000000, 1, NULL, NULL, NULL, NULL, NULL, 1, 15),
 (17, 'Dell Vostro V131-MR5ND3', '', '2012-04-10 01:52:48', 'dell-vostro-v131-mr5nd3-thumb.jpg', 'dell-vostro-v131-mr5nd3.jpg', NULL, NULL, NULL, '<p>\r\n	CPU: Intel Core i3 2350M (2.30 GHz 3M L2 cache, 4 threads )<br />\r\n	RAM: 2048 MB DDR3 1333Mhz<br />\r\n	Chipset: Intel HM67<br />\r\n	HDD: 500 GB SATA 7200 rpm<br />\r\n	ODD: No optical/ Reader card/ Camera/ Bluetooth 3.0/ 2x USB 3.0/ HDMI<br />\r\n	Graphics: INTEL HD Graphics 3000 – WIN7 x86 : 782MB 512 MB<br />\r\n	Display: 13.30" HD WLED Anti-Glare<br />\r\n	Network: 802.11bgn / 100/1000 base /<br />\r\n	Battery: 6 cell<br />\r\n	Weight: 1.86 Kg<br />\r\n	OS: Free DOS<br />\r\n	Other: Thiết kế mỏng, nhẹ thời trang - Màu đỏ, xám bạc</p>', '', 'dell-vostro-v131-mr5nd3', '', 'Dell Vostro V131-MR5ND3', '', 0, 7, 14700000, 1, NULL, NULL, NULL, NULL, NULL, 1, 15),
-(18, 'Dell Vostro AVN-1450-2G', '', '2012-04-10 01:53:51', 'dell-vostro-avn-1450-2g-thumb.jpg', 'dell-vostro-avn-1450-2g.jpg', NULL, NULL, NULL, '<p>\r\n	CPU: Intel Core i5 2430M (2.40 GHz 3M L2 cache, 4 threads, turbo boost 3.0Ghz )<br />\r\n	RAM: 2048 MB DDR3 1333Mhz<br />\r\n	Chipset: Intel HM67<br />\r\n	HDD: 500 GB SATA 5400 rpm<br />\r\n	ODD: DVD RW/ Reader card/ Camera/ Bluetooth/ HDMI<br />\r\n	Graphics: AMD Radeon HD6470 DDR3 512 MB<br />\r\n	Display: 14.00" HD LED Alti -Glare®<br />\r\n	Network: 802.11bgn / 100/1000 base /<br />\r\n	Battery: 6 cell<br />\r\n	Weight: 2.30 Kg<br />\r\n	OS: Free DOS<br />\r\n	Other: Màu xám vỏ vân chống xướt</p>', '', 'dell-vostro-avn-1450-2g', '', 'Dell Vostro AVN-1450-2G', '', 0, 8, 13800000, 1, NULL, NULL, NULL, NULL, NULL, 1, 15);
+(18, 'Dell Vostro AVN-1450-2G', '', '2012-04-10 01:53:51', 'dell-vostro-avn-1450-2g-thumb.jpg', 'dell-vostro-avn-1450-2g.jpg', NULL, NULL, NULL, '<p>\r\n	CPU: Intel Core i5 2430M (2.40 GHz 3M L2 cache, 4 threads, turbo boost 3.0Ghz )<br />\r\n	RAM: 2048 MB DDR3 1333Mhz<br />\r\n	Chipset: Intel HM67<br />\r\n	HDD: 500 GB SATA 5400 rpm<br />\r\n	ODD: DVD RW/ Reader card/ Camera/ Bluetooth/ HDMI<br />\r\n	Graphics: AMD Radeon HD6470 DDR3 512 MB<br />\r\n	Display: 14.00" HD LED Alti -Glare®<br />\r\n	Network: 802.11bgn / 100/1000 base /<br />\r\n	Battery: 6 cell<br />\r\n	Weight: 2.30 Kg<br />\r\n	OS: Free DOS<br />\r\n	Other: Màu xám vỏ vân chống xướt</p>', '', 'dell-vostro-avn-1450-2g', '', 'Dell Vostro AVN-1450-2G', '', 0, 8, 13800000, 1, NULL, NULL, NULL, NULL, NULL, 1, 15),
+(19, 'Than đá loại 1', 'Coal type 1', '2012-04-11 00:44:20', 'than-da-loai-1-thumb.jpg', 'than-da-loai-1.jpg', NULL, NULL, NULL, '<p>\r\n	chi tiet gia lien hệ</p>', '<p>\r\n	Coal type 1</p>', 'than-da-loai-1', 'coal-type-1', 'than đá loại 1', 'Coal type 1', 0, 6, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, 10),
+(20, 'Sách nghiên cứu than', 'Book coal research', '2012-04-11 02:32:49', 'sach-nghien-cuu-than-thumb.jpg', '', NULL, NULL, NULL, '<p>\r\n	chi thiet lien hệ</p>', '', 'sach-nghien-cuu-than', 'book-coal-research', '', '', 0, 7, NULL, 0, NULL, NULL, NULL, NULL, NULL, 1, 11);
 
 -- --------------------------------------------------------
 
@@ -847,7 +869,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
@@ -864,7 +886,8 @@ INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `
 (14, 0, 'Linh kiện laptop', '', NULL, NULL, 'linh-kien-laptop', '', 'Linh kiện laptop', '', '', NULL, 3, NULL, NULL, 1, '260312'),
 (15, 0, 'Linh kiện máy bộ', '', NULL, NULL, 'linh-kien-may-bo', '', 'Linh kiện máy bộ', '', '', NULL, 4, NULL, NULL, 1, '260312'),
 (16, 14, 'Bộ vi xử lý', '', NULL, NULL, 'bo-vi-xu-ly', '', 'Bộ vi xử lý', '', 'bo-vi-xu-ly.jpg', NULL, 5, NULL, NULL, 1, '260312'),
-(17, 14, 'Ram', '', NULL, NULL, 'ram', '', 'Ram', '', 'ram.Jpeg', NULL, 6, NULL, NULL, 1, '260312');
+(17, 14, 'Ram', '', NULL, NULL, 'ram', '', 'Ram', '', 'ram.Jpeg', NULL, 6, NULL, NULL, 1, '260312'),
+(18, 10, 'Bếp nội thất loại 2', 'Kitchen Furniture 2', NULL, NULL, 'bep-noi-that-loai-2', 'kitchen-furniture-2', 'Bếp nội thất loại 2', 'Kitchen Furniture 2', '', NULL, 6, NULL, NULL, 1, '220312');
 
 -- --------------------------------------------------------
 
@@ -895,14 +918,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `dos_module_services`
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(4, 'Dịch vụ vẫn chuyển tận nơi', 'Transport services', NULL, NULL, '<p>\r\n	Dịch vụ vẫn chuyển Dịch vụ vẫn chuyển Dịch vụ vẫn chuyển Dịch vụ vẫn chuyển</p>', '<p>\r\n	Transport services Transport services Transport services Transport services</p>', '', 2, '2012-04-10 02:55:14', 1, 0, NULL, NULL, 'dich-vu-van-chuyen-tan-noi', 'transport-services', 'Dịch vụ vẫn chuyển', 'Transport services', 1, '260312');
+(4, 'Dịch vụ vẫn chuyển tận nơi', 'Transport services', NULL, NULL, '<p>\r\n	Dịch vụ vẫn chuyển Dịch vụ vẫn chuyển Dịch vụ vẫn chuyển Dịch vụ vẫn chuyển</p>', '<p>\r\n	Transport services Transport services Transport services Transport services</p>', '', 2, '2012-04-10 02:55:14', 1, 0, NULL, NULL, 'dich-vu-van-chuyen-tan-noi', 'transport-services', 'Dịch vụ vẫn chuyển', 'Transport services', 1, '260312'),
+(5, 'Dịch vụ làm visa', 'Visa Services', NULL, NULL, '<p>\r\n	Người nước ngoài vào Việt Nam khi có nhu cầu tiếp tục ở lại Việt Nam thì có thể tiến hành thủ tục gia hạn visa. Để được gia hạn visa theo quy định người nước ngoài phải thông qua cơ quan, tổ chức, cá nhân mời,</p>', '<p>\r\n	Foreigners entering Vietnam when required to remain in Vietnam, they can proceed visa extension procedure. For extension of visa under the provisions of foreigners have to go through agencies, organizations and individuals invited,</p>', '', 10, '2012-04-11 01:54:12', 1, 0, NULL, NULL, 'dich-vu-lam-visa', 'visa-services', 'Người nước ngoài vào Việt Nam khi có nhu cầu tiếp tục ở lại Việt Nam thì có thể tiến hành thủ tục gia hạn visa. Để được gia hạn visa theo quy định người nước ngoài phải thông qua cơ quan, tổ chức, cá nhân mời,', 'Foreigners entering Vietnam when required to remain in Vietnam, they can proceed visa extension procedure. For extension of visa under the provisions of foreigners have to go through agencies, organizations and individuals invited,', 1, '220312');
 
 -- --------------------------------------------------------
 
@@ -921,17 +945,17 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=61 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=62 ;
 
 --
 -- Dumping data for table `dos_module_supports`
 --
 
 INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
-(45, '', '', '0929001001', 'mailgoogle', 0, 'yahoo', '220312'),
 (54, 'Hỗ trợ khách hàng', '', '0909 999 888', 'mailgoogle', 2, 'yahoo', '260312'),
 (55, 'Linh kiện - máy bộ - Công ty', '', '01230 456 789', 'mailpccase', 1, 'yahoo', '260312'),
-(60, '', '', '0929001001', 'mailgoogle', 0, 'yahoo', 'thanhansoft');
+(60, '', '', '0929001001', 'mailgoogle', 0, 'yahoo', 'thanhansoft'),
+(61, 'Hỗ trợ khách hàng', '', '0929001001', 'mailgoogle', 1, 'yahoo', '220312');
 
 -- --------------------------------------------------------
 
@@ -1291,8 +1315,16 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('010312', 'default', 'about_home'),
 ('010312', 'default', 'advs_left'),
 ('010312', 'default', 'list_supports'),
+('010312', 'default', 'menu_products'),
+('010312', 'default', 'news_new'),
 ('010312', 'default', 'products_hot'),
 ('010312', 'default', 'products_new'),
+('010312', 'default', 'video_hot'),
+('010312', 'news', 'advs_left'),
+('010312', 'news', 'menu_news'),
+('010312', 'news', 'news_hot'),
+('010312', 'news', 'news_new'),
+('010312', 'news', 'video_hot'),
 ('010312', 'products', 'advs_left'),
 ('010312', 'products', 'list_supports'),
 ('010312', 'products', 'menu_products'),
@@ -1300,7 +1332,12 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('010312', 'services', 'advs_left'),
 ('010312', 'services', 'list_supports'),
 ('010312', 'services', 'menu_services'),
+('010312', 'services', 'news_new'),
 ('010312', 'services', 'products_hot'),
+('010312', 'video', 'advs_left'),
+('010312', 'video', 'list_supports'),
+('010312', 'video', 'menu_video'),
+('010312', 'video', 'news_new'),
 ('070312', 'about', 'advs_left'),
 ('070312', 'about', 'list_supports'),
 ('070312', 'about', 'menu_about'),
@@ -1454,7 +1491,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 --
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('220312', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-05 02:08:09', '', '', '', 'user', 'vi|en', NULL, '2012-05-04 16:00:00', 1, 1, '220312', 19, 'noi-that-ngoai-that'),
+('220312', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-05 02:08:09', '', '', '', 'user', 'vi|en', NULL, '2012-05-04 16:00:00', 1, 1, '010312', 19, 'noi-that-ngoai-that'),
 ('260312', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-10 00:35:32', NULL, NULL, NULL, 'user', 'vi|en', NULL, '2012-05-09 16:00:00', 1, 1, '260312', 14, 'bds-kien-truc-xay-dung'),
 ('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi|en', NULL, '0000-00-00 00:00:00', 0, 1, '111120', 2, 'thoi-trang'),
 ('thanhansoft', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-10 23:08:37', NULL, NULL, NULL, 'user', 'vi', NULL, '2012-05-10 17:00:00', 0, 1, '220312', 1, 'noi-that-ngoai-that');
