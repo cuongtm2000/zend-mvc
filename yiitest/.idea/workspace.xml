@@ -26,10 +26,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DatabaseHelper.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DatabaseHelper.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/components/DatabaseHelper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="163" column="67" selection-start="9452" selection-end="9452" vertical-scroll-proportion="1.3102189">
+            <state line="145" column="0" selection-start="8881" selection-end="8881" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SiteController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="40" selection-start="3210" selection-end="3210" vertical-scroll-proportion="1.126894">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/config/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="37" selection-start="3821" selection-end="3821" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signup.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/dos.vn/css/signup.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="194" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="import.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/site/import.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="23" selection-start="1953" selection-end="1968" vertical-scroll-proportion="-10.461538">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/dos.vn/css/layout.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="39" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loaduserimport.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/site/loaduserimport.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="129" selection-start="461" selection-end="461" vertical-scroll-proportion="-3.2692308">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/dos.vn/views/layouts/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="75" selection-start="1715" selection-end="1741" vertical-scroll-proportion="-17.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loadtemplates.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/site/loadtemplates.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="199" selection-start="152" selection-end="294" vertical-scroll-proportion="-1.9615384">
               <folding />
             </state>
           </provider>
@@ -50,14 +122,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/models/Supports.php" />
         <option value="$PROJECT_DIR$/protected/models/Username.php" />
         <option value="$PROJECT_DIR$/protected/modules/administrator/controllers/UsernamesController.php" />
         <option value="$PROJECT_DIR$/themes/dos.vn/css/layout.css" />
-        <option value="$PROJECT_DIR$/protected/views/site/import.php" />
-        <option value="$PROJECT_DIR$/themes/dos.vn/css/signup.css" />
-        <option value="$PROJECT_DIR$/protected/views/site/loaduserimport.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/protected/components/Common.php" />
         <option value="$PROJECT_DIR$/protected/modules/news/models/NewsCat.php" />
         <option value="$PROJECT_DIR$/protected/modules/video/models/VideoCat.php" />
@@ -66,6 +133,11 @@
         <option value="$PROJECT_DIR$/protected/modules/admin/controllers/NewsController.php" />
         <option value="$PROJECT_DIR$/protected/modules/admin/controllers/VideoController.php" />
         <option value="$PROJECT_DIR$/protected/components/DatabaseHelper.php" />
+        <option value="$PROJECT_DIR$/protected/views/site/import.php" />
+        <option value="$PROJECT_DIR$/themes/dos.vn/css/signup.css" />
+        <option value="$PROJECT_DIR$/protected/views/site/loaduserimport.php" />
+        <option value="$PROJECT_DIR$/protected/config/routes.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/SiteController.php" />
       </list>
     </option>
   </component>
@@ -124,6 +196,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dos.vn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dos.vn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -507,7 +627,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -733,58 +853,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/views/site/loaduserimport.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="73" selection-start="152" selection-end="152" vertical-scroll-proportion="0.09770115" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/administrator/controllers/ExportController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="16" selection-start="460" selection-end="606" vertical-scroll-proportion="0.43992606" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/site/loadtemplates.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="199" selection-start="152" selection-end="294" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Username.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="195" column="21" selection-start="8330" selection-end="8336" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/site/success.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="10" selection-start="233" selection-end="564" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="73" selection-start="4217" selection-end="4225" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/site/signup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="8" selection-start="5233" selection-end="5557" vertical-scroll-proportion="0.45816734">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/site/import.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="275" selection-start="2039" selection-end="2039" vertical-scroll-proportion="0.44636014">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/Common.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="69" column="10" selection-start="2273" selection-end="2273" vertical-scroll-proportion="0.74635035">
@@ -836,7 +904,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/DatabaseHelper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="67" selection-start="9452" selection-end="9452" vertical-scroll-proportion="1.3102189">
+        <state line="145" column="0" selection-start="8881" selection-end="8881" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/loadtemplates.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="199" selection-start="152" selection-end="294" vertical-scroll-proportion="-1.9615384">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/dos.vn/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="75" selection-start="1715" selection-end="1741" vertical-scroll-proportion="-17.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/import.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="23" selection-start="1953" selection-end="1968" vertical-scroll-proportion="-10.461538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/loaduserimport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="129" selection-start="461" selection-end="461" vertical-scroll-proportion="-3.2692308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/dos.vn/css/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="39" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/dos.vn/css/signup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="194" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="37" selection-start="3821" selection-end="3821" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="40" selection-start="3210" selection-end="3210" vertical-scroll-proportion="1.126894">
           <folding />
         </state>
       </provider>

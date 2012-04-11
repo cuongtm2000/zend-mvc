@@ -144,7 +144,6 @@ class DatabaseHelper {
 			//dos_module_video_cat
 			$str[] = "INSERT INTO `dos_module_video_cat` (cat_parent_id, pic_thumb, cat_title, cat_titleen, tag, tagen, description, descriptionen, cat_order, cat_enable, dos_usernames_username) SELECT cat_parent_id, pic_thumb, cat_title, cat_titleen, tag, tagen, description, descriptionen, cat_order, cat_enable, '" . $userImport . "' FROM `dos_module_video_cat` WHERE dos_usernames_username = '" . $userExport . "'";
 
-
 			foreach($str as $value){
 				$this->sqlQuery($value);
 			}

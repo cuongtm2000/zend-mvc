@@ -75,7 +75,7 @@ class SiteController extends HomeController {
 					Yii::app()->session['user_registed'] = $model->username;
 					Yii::app()->session['user_registed_choose_business'] = $model->dos_bussiness_bussiness_id;
 				}
-				$this->redirect(array('import'));
+				$this->redirect(array('/chen-du-lieu-mau'));
 			}
 		} else {
 			$model->email = Yii::app()->request->getPost('email', '');
@@ -97,8 +97,8 @@ class SiteController extends HomeController {
 				if ($model->validate()) {
 					$data_helper_class = new DatabaseHelper();
 					$data_helper_class->importDataSample($model->username, Yii::app()->session['user_registed']);
-					//var_dump($model->username);
-					//$this->redirect(array('success'));
+
+					$this->redirect(array('/tao-web-thanh-cong'));
 				}
 			} else {
 				$model->dos_bussiness_bussiness_id = Yii::app()->session['user_registed_choose_business'];
