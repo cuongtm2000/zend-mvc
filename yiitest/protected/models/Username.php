@@ -15,6 +15,7 @@
  * @property string $language
  * @property string $code
  * @property string $expired
+ * @property integer $import
  * @property integer $activated
  * @property string $dos_templates_template
  * @property integer $dos_provinces_province_id
@@ -26,11 +27,13 @@
  * @property DosModuleBanners[] $dosModuleBanners
  * @property DosModuleContacts[] $dosModuleContacts
  * @property DosModuleMenus[] $dosModuleMenuses
+ * @property DosModuleNewsCat[] $dosModuleNewsCats
  * @property DosModulePcounterSave[] $dosModulePcounterSaves
  * @property DosModulePcounterUsers[] $dosModulePcounterUsers
  * @property DosModuleProductsCat[] $dosModuleProductsCats
  * @property DosModuleServices[] $dosModuleServices
  * @property DosModuleSupports[] $dosModuleSupports
+ * @property DosModuleVideoCat[] $dosModuleVideoCats
  * @property DosModuleWebs[] $dosModuleWebs
  * @property DosModules[] $dosModules
  * @property DosUserLangs[] $dosUserLangs
@@ -70,8 +73,9 @@ class Username extends CActiveRecord {
 		// will receive user inputs.
 		return array(
 			array('username, email, password, dos_templates_template, dos_provinces_province_id, dos_bussiness_bussiness_id, choose_modules, choose_feature', 'required', 'on' => 'register'),
+			array('username, dos_bussiness_bussiness_id', 'required', 'on' => 'import'),
 			array('email, fullname, phone, company, dos_templates_template, dos_provinces_province_id, dos_bussiness_bussiness_id', 'required', 'on' => 'changeInfo'),
-			array('activated, dos_provinces_province_id', 'numerical', 'integerOnly' => true),
+			array('import, activated, dos_provinces_province_id', 'numerical', 'integerOnly' => true),
 			array('username, email, password, fullname', 'length', 'max' => 45),
 			array('username', 'unique', 'on' => 'register', 'message' => '<strong>{value}</strong> {attribute} already exists please choose another user'),
 			array('dos_bussiness_bussiness_id', 'checkChooseBusiness'),
@@ -81,7 +85,7 @@ class Username extends CActiveRecord {
 			array('dos_templates_template', 'length', 'max' => 6),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('username, email, created, expired, fullname, phone, company, activated, dos_templates_template, dos_provinces_province_id, dos_bussiness_bussiness_id', 'safe', 'on' => 'search'),
+			array('username, email, created, expired, import, fullname, phone, company, activated, dos_templates_template, dos_provinces_province_id, dos_bussiness_bussiness_id', 'safe', 'on' => 'search'),
 		);
 	}
 
@@ -137,6 +141,7 @@ class Username extends CActiveRecord {
 			'phone' => 'Phone',
 			'company' => 'Company',
 			'code' => 'Code',
+			'import' => 'Import',
 			'activated' => 'Activated',
 			'dos_templates_template' => 'Dos Templates Template',
 			'dos_provinces_province_id' => 'Dos Provinces Province',
@@ -162,6 +167,7 @@ class Username extends CActiveRecord {
 		$criteria->compare('fullname', $this->fullname, true);
 		$criteria->compare('phone', $this->phone, true);
 		$criteria->compare('company', $this->company, true);
+		$criteria->compare('import',$this->import);
 		$criteria->compare('activated', $this->activated);
 		$criteria->compare('dos_templates_template', $this->dos_templates_template, true);
 		$criteria->compare('dos_provinces_province_id', $this->dos_provinces_province_id);
@@ -188,6 +194,12 @@ class Username extends CActiveRecord {
 		}
 
 		return parent::beforeSave();
+	}
+
+	public function listUserByImport($businessId){
+		$command = Yii::app()->db->createCommand('SELECT username FROM ' . $this->tableName() . ' WHERE import = 1 AND activated=1 AND dos_bussiness_bussiness_id=:business ORDER BY created ASC');
+		$command->bindParam(":business", $businessId, PDO::PARAM_STR);
+		return $command->queryAll();
 	}
 
 	/**

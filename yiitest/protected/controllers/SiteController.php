@@ -25,11 +25,11 @@ class SiteController extends HomeController {
 	 * when an action is not explicitly requested by users.
 	 */
 	public function actionIndex() {
-		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/allinone_carousel.css');
-		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/jquery-1.7.1.min.js');
-		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/jquery-ui-1.8.16.custom.min.js');
-		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/allinone_carousel.js');
-		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/allinone_carousel_charming.js');
+		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/allinone_carousel.css');
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery-1.7.1.min.js');
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery-ui-1.8.16.custom.min.js');
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/allinone_carousel.js');
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/allinone_carousel_charming.js');
 
 
 		$this->layout = 'column2';
@@ -42,11 +42,11 @@ class SiteController extends HomeController {
 		$this->render('index', array('listBusiness' => $business_class->listCats(1)));
 	}
 
-	public function actionsignup() {
+	public function actionSignup() {
 		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/signup.css');
 		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/tiptip.css');
 
-		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/jquery-1.7.1.min.js');
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery-1.7.1.min.js');
 		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.tiptip.js');
 		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.tiptip.minified.js');
 
@@ -56,7 +56,7 @@ class SiteController extends HomeController {
 		$model = new Username('register');
 		if (isset($_POST['Username'])) {
 			//Check session for loadtemplates
-			if(isset($_POST['Username']['dos_templates_template'])){
+			if (isset($_POST['Username']['dos_templates_template'])) {
 				Yii::app()->session['user_choose_template'] = $_POST['Username']['dos_templates_template'];
 			}
 			$model->attributes = $_POST['Username'];
@@ -73,8 +73,9 @@ class SiteController extends HomeController {
 					//Create code and Send mail for active
 					//$model->sendMailActive($model->username);
 					Yii::app()->session['user_registed'] = $model->username;
+					Yii::app()->session['user_registed_choose_business'] = $model->dos_bussiness_bussiness_id;
 				}
-				$this->redirect(array('success'));
+				$this->redirect(array('import'));
 			}
 		} else {
 			$model->email = Yii::app()->request->getPost('email', '');
@@ -84,7 +85,32 @@ class SiteController extends HomeController {
 		$this->render('signup', array('model' => $model, 'listBusiness' => $business_class->listCats(1), 'listProvinces' => $province_class->listProvinceByCountry('VND')));
 	}
 
-	public function actionsuccess() {
+	public function actionImport() {
+		if (Yii::app()->session['user_registed']) {
+			Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/signup.css');
+			Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery-1.7.1.min.js');
+
+			$business_class = new Bussiness();
+			$model = new Username('import');
+			if (isset($_POST['Username'])) {
+				$model->attributes = $_POST['Username'];
+				if ($model->validate()) {
+					$data_helper_class = new DatabaseHelper();
+					$data_helper_class->importDataSample($model->username, Yii::app()->session['user_registed']);
+					//var_dump($model->username);
+					//$this->redirect(array('success'));
+				}
+			} else {
+				$model->dos_bussiness_bussiness_id = Yii::app()->session['user_registed_choose_business'];
+			}
+
+			$this->render('import', array('model' => $model, 'listBusiness' => $business_class->listCats(1)));
+		} else {
+			$this->redirect(Yii::app()->request->baseUrl . '/');
+		}
+	}
+
+	public function actionSuccess() {
 		if (Yii::app()->session['user_registed']) {
 			$modules_class = new Modules;
 			$userame_class = new Username;
@@ -98,6 +124,12 @@ class SiteController extends HomeController {
 		$tempaltes_business_class = new TemplatesBussiness();
 		$business_class = new Bussiness();
 		$this->renderPartial('loadtemplates', array('templatesBusiness' => $tempaltes_business_class->listTempaltesByBusiness($id), 'name' => $business_class->detailItem($id)));
+	}
+
+	public function actionLoadUserImport($id) {
+		$username_class = new Username();
+		$business_class = new Bussiness();
+		$this->renderPartial('loaduserimport', array('userImport' => $username_class->listUserByImport($id), 'name' => $business_class->detailItem($id)));
 	}
 
 	public function actionrss() {
