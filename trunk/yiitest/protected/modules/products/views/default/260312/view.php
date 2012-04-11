@@ -2,8 +2,20 @@
 
 <div class="frame-tent-right">
 	<?php if($item['pic_full']): ?>
-		<div class="frame-img-info"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $item['pic_full'] ?>" alt="<?php echo $item['title'.LANG] ?>" /></div>
+		<div id="frame-img-info">
+			<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $item['pic_full'] ?>" alt="<?php echo $item['title'.LANG] ?>" />
+			<a href="<?php echo Yii::app()->theme->baseUrl; ?>/images/20507_2.jpg" rel="milkbox[gall1]" title="LAPTOP  DELL Inspiron  N4050 - KXJXJ9"/>
+			<a href="<?php echo Yii::app()->theme->baseUrl; ?>/images/20507_3.jpg" rel="milkbox[gall1]" title="LAPTOP  DELL Inspiron  N4050 - KXJXJ9"/>
+			<a href="<?php echo Yii::app()->theme->baseUrl; ?>/images/20507_4.jpg" rel="milkbox[gall1]" title="LAPTOP  DELL Inspiron  N4050 - KXJXJ9"/>
+			<p><a href="" id="pic_zoom_box">Xem nhiều hình</a></p>
+		</div>
 	<?php endif; ?>
+	<div class="right-pro-info">
+		<h3>Laptop MACBOOK Air MC504ZP / A</h3>
+		<p>Nhà sản xuất: APPLE</p>
+		<p>Thời gian bảo hành : 12 THÁNG</p>
+		<p>Giá: 35.600.000 VNĐ</p>
+	</div>
 	<?php echo $item['content'.LANG] ?>
 	<p class="black"><a href="javascript: history.go(-1)" title="<?php echo Yii::t('main', 'goback')?>" ><?php echo Yii::t('main', 'goback')?></a></p>
 </div> <!--End frame tent right-->
