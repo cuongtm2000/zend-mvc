@@ -41,9 +41,11 @@
 			<?php endif;?>
 		</div> <!--End logo-->
 		<div class="frame-title-pany"><h1 class="title-city"><?php echo $this->lang['company_name'] ?></h1></div> <!--End title company-->
-		<div class="lang"><a href="<?php echo Yii::app()->request->baseUrl ?>/en" title="English"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/en.gif" alt="English" /> English</a>
-						<a href="<?php echo Yii::app()->request->baseUrl ?>/" title="Tiếng Việt"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/vn.gif" alt="Việt Nam" /> Tiếng Việt</a> 
-						<p class="tent-lang"><?php echo $this->lang['company_phone']?></p> 
+		<div class="lang">
+			<?php foreach($this->numLang as $value): ?>
+				<a href="<?php echo ($value=='vi') ? Yii::app()->request->baseUrl.'/' : Yii::app()->request->baseUrl.'/'.$value ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $value?>.gif" alt="<?php echo $this->lang[$value]?>" /> <?php echo $this->lang[$value]?></a>
+			<?php endforeach?>
+			<p class="tent-lang"><?php echo $this->lang['company_phone']?></p>
 		</div> <!--End lang-->	<div class="clear"></div>
 	</div><!--End header-->
 	<div id="all-nav">
@@ -52,7 +54,7 @@
 			   <?php $selected = ($value['url']==$this->module->id) ?  ' class="select"' : ''?>
 			   <?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
 			   <?php $none = ($i < ($size-1)) ? '' : ' class="none-line"' ?>
-			   <li<?php echo $none?>><a<?php echo $selected ?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo $value['menu'.LANG] ?>"<?php echo $target ?>><?php echo $value['menu'.LANG] ?></a></li>
+		   <li<?php echo $none?>><a<?php echo $selected ?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
 		   <?php $i++; endforeach;?>
 		</ul>	
 	</div> <!--End all nav--><div class="clear"></div>
@@ -70,10 +72,16 @@
 	</div><!--End banner-->
 	
 	<div id="content">
+		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+			'homeLink' => CHtml::link($this->lang['default'], (LANGURL) ? LANGURL : Yii::app()->homeUrl),
+			'links'=>$this->breadcrumbs,
+			'htmlOptions'=>array('class'=>'link'),
+			'separator'=>' <img src="'.Yii::app()->theme->baseUrl.'/images/bull.jpg" alt="Bull" title="Bull" />',
+		)); ?> <!-- breadcrumbs -->
 		<div id="left-content">
 			<?php if(isset($this->function['menu_about']) && ($this->function['menu_about'])):?>
 			<h1 class="title-box"><span><?php echo $this->lang['about'] ?></span></h1>
-			<ul class="sub-pro">
+			<ul class="sub-cat">
 				<?php foreach($this->function['menu_about'] as $value): ?>
 				<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'about.link')?>/<?php echo $value['tag'.LANG]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
 				<?php endforeach; ?>
@@ -82,16 +90,30 @@
 
 			<?php if(isset($this->function['menu_services']) && ($this->function['menu_services'])):?>
 			<h1 class="title-box"><span><?php echo $this->lang['services'] ?></span></h1>
-			<ul class="sub-pro">
+			<ul class="sub-cat">
 				<?php foreach($this->function['menu_services'] as $value): ?>
 				<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'services.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
 				<?php endforeach; ?>
 			</ul>
 			<?php endif;?>
 
+			<?php if(isset($this->function['menu_news']) && ($this->function['menu_news'])):?>
+			<h1 class="title-box"><span><?php echo CHtml::encode($this->lang['news']) ?></span></h1>
+			<ul class="sub-cat">
+				<?php Common::menuMultiLevel($this->function['menu_news'], 'NewsCat', Yii::t('user', 'news.link')); ?>
+			</ul>
+			<?php endif; ?>
+
+			<?php if(isset($this->function['menu_video']) && ($this->function['menu_video'])):?>
+			<h1 class="title-box"><span><?php echo $this->lang['video'] ?></span></h1>
+			<ul class="sub-cat">
+				<?php Common::menuMultiLevel($this->function['menu_video'], 'VideoCat', Yii::t('user', 'video.link')); ?>
+			</ul>
+			<?php endif; ?>
+
 			<?php if(isset($this->function['menu_products']) && ($this->function['menu_products'])):?>
 			<h1 class="title-box"><span><?php echo $this->lang['products'] ?></span></h1>
-			<ul class="sub-pro">
+			<ul class="sub-cat">
 				<?php Common::menuMultiLevel($this->function['menu_products'], 'ProductsCat', Yii::t('user', 'products.link')); ?>
 			</ul>
 			<?php endif;?>
@@ -101,9 +123,11 @@
 			<ul class="support">
 				<?php foreach($this->function['list_supports'] as $value): ?>
 				<?php if($value['support_type']=='yahoo'): ?>
-					<?php if($value['support_name'.Yii::app()->session['lang']]) echo '<li>'.$value['support_name'.Yii::app()->session['lang']].'</li>'; ?>
-					<?php if($value['support_phone']) echo '<li>'.$value['support_phone'].'</li>'; ?>
-					<li><a href="ymsgr:sendIM?<?php echo $value['support_value'] ?>"><img src="http://mail.opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2" border="0" alt="<?php echo $value['support_value'] ?>" /></a></li>
+					<li>
+						<?php if($value['support_name'.Yii::app()->session['lang']]) echo '<p>'.$value['support_name'.Yii::app()->session['lang']].'</p>'; ?>
+						<?php if($value['support_phone']) echo '<p>'.$value['support_phone'].'</p>'; ?>
+						<a href="ymsgr:sendIM?<?php echo $value['support_value'] ?>"><img src="http://mail.opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2" border="0" alt="<?php echo $value['support_value'] ?>" /></a>
+					</li>
 					<?php endif; ?>
 				<?php endforeach; ?>
 			</ul>
@@ -130,35 +154,47 @@
 			<?php endif;?>
 		</div><!--End left content-->	
 		<div id="right-content">
-			<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-				'homeLink' => CHtml::link($this->lang['default'], (LANGURL) ? LANGURL : Yii::app()->homeUrl),
-				'links'=>$this->breadcrumbs,
-				'htmlOptions'=>array('class'=>'link'),
-				'separator'=>' <img src="'.Yii::app()->theme->baseUrl.'/images/bull.jpg" alt="Bull" title="Bull" />',
-			)); ?> <!-- breadcrumbs -->
 			<?php echo $content?>
-		
 		</div><!--End right content-->
 		<div id="colum3">
-			<h1 class="title-box"><span>TIN TỨC</span></h1>
+			<?php if(isset($this->function['video_hot']) && ($this->function['video_hot'])):?>
+			<h1 class="title-box"><span><?php echo $this->lang['video'] . ' ' . strtolower($this->lang['hot'])?></span></h1>
+			<div class="video">
+				<a href="<?php echo CHtml::encode($this->function['video_hot']['url']) ?>" rel="prettyPhoto" title="<?php echo $this->function['video_hot']['title'.LANG] ?>">
+					<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/video/<?php echo $this->function['video_hot']['pic_thumb'] ?>" alt="<?php echo $this->function['video_hot']['title'.LANG] ?>"/>
+				</a>
+			</div>
+			<script type="text/javascript">$(document).ready(function () {$(".video a[rel^='prettyPhoto']").prettyPhoto();});</script>
+			<?php endif?>
+
+			<?php if(isset($this->function['news_new']) && ($this->function['news_new'])):?>
+			<h1 class="title-box"><span><?php echo CHtml::encode($this->lang['news']) . ' ' . strtolower($this->lang['new'])?></span></h1>
 			<ul class="sub-new">
-				<li><a href="#" title="">Thịt bò Kobe từ Nhật vào Việt Nam sẽ bị tiêu hủy</a></li>
-				<li><a href="#" title="">Cuộc tập trận hải quân hoành tráng nhất trên biển của Iran</a></li>
-				<li><a href="#" title="">Liên tiếp nhiều vụ chạy xe, nhiều nhất là hãng Honda</a></li>
-				<li><a href="#" title="">Thịt bò Kobe từ Nhật vào Việt Nam sẽ bị tiêu hủy</a></li>
-				<li><a href="#" title="">Cuộc tập trận hải quân hoành tráng nhất trên biển của Iran</a></li>
+				<?php foreach($this->function['news_new'] as $value):?>
+				<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
+				<?php endforeach?>
 			</ul>
-			
+			<?php endif?>
+
+			<?php if(isset($this->function['news_hot']) && ($this->function['news_hot'])):?>
+			<h1 class="title-box"><span><?php echo CHtml::encode($this->lang['news']) . ' ' . strtolower($this->lang['hot'])?></span></h1>
+			<ul class="sub-new">
+				<?php foreach($this->function['news_hot'] as $value):?>
+				<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
+				<?php endforeach?>
+			</ul>
+			<?php endif?>
+
 			<?php if(isset($this->function['products_hot']) && $this->function['products_hot']):?>
 			<h1 class="title-box"><span><?php echo $this->lang['products'] . ' ' . strtolower($this->lang['hot']) ?></span></h1>
 			<ul class="typical-product">
-					<?php foreach($this->function['products_hot'] as $value): ?>
-						<?php if($value['pic_thumb']): ?>
-							<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/products/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'.LANG] ?>" ><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" /></a></li>
-						<?php else: ?>
-							<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/product-thumb.jpg" alt="<?php echo $value['title'.LANG] ?>" /></li>
-						<?php endif; ?>
-					<?php endforeach; ?>
+				<?php foreach($this->function['products_hot'] as $value): ?>
+				<?php if($value['pic_thumb']): ?>
+						<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value->ProductsCat->tag ?>/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'.Yii::app()->session['lang']] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.Yii::app()->session['lang']] ?>" /></a></li>
+					<?php else: ?>
+						<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value->ProductsCat->tag ?>/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'.Yii::app()->session['lang']] ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt="<?php echo $value['title'.Yii::app()->session['lang']] ?>" /></a></li>
+					<?php endif; ?>
+				<?php endforeach; ?>
 			</ul>
 			<?php endif;?>
 		</div> <!--End colum3--> <div class="clear"></div>
