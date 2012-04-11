@@ -51,6 +51,8 @@ return array(
     'rss.xml' => 'site/rss',
     'read-rss' => 'site/readrss',
 	'(thoat|logout)' => 'site/logout',
+	'(chen-du-lieu-mau)' => 'site/import',
+	'(tao-web-thanh-cong)' => 'site/success',
     'dang-ky' => 'site/signup',
     '<language:(vi|en)>/signup' => 'site/signup',
 	'lien-he' => 'site/contact',

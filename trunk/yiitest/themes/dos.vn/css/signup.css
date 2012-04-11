@@ -8,7 +8,7 @@
 
 #scrollbar{height:217px; padding:10px 0; overflow-x: auto; overflow-y: hidden}
 #scrollbar ul {padding:0 10px}
-#scrollbar ul li{float: left; width: 260px; margin-right: 31px; list-style: none; text-align: center}
+#scrollbar ul li{float: left; width: 260px; margin-right: 31px; list-style: none; text-align: center; position: relative}
 #scrollbar ul li img{margin-right: 10px; margin-bottom: 3px; border: 1px solid #ddd; padding: 1px; -webkit-border-radius:2px;-moz-border-radius:2px}
 #scrollbar ul li label, #scrollbar ul li p input{cursor: pointer}
 
@@ -23,3 +23,6 @@ input.smallfield-dos {padding: 6px;  padding-right: 0; background: #F8F7F3; bord
 .submit:hover{background:#f90}
 
 .errorImport{margin: 5px 32px 0 32px}
+
+#scrollbar ul li .hover{display: none; position: absolute; left: 1px; bottom: 23px; z-index: 2; background: #fff; width: 257px; padding: 3px 0 0 5px; text-align: right; border-top:1px solid #eee}
+#scrollbar ul li .hover img{border: none; margin-right: 3px}
