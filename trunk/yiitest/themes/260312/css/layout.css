@@ -120,7 +120,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .scroll-interval .name a{ color:#fefefe; line-height:1.25em; font-size:12px; font-weight:normal}
 .scroll-interval .name a:hover{ color:#fefefe; text-decoration:underline; }
 .txt_area{border:1px solid #e9e6e6;width:160px; background:#FFF;height:160px; margin:0px 0px 0 0px !important}
-
+.img-pro-hot{display: table-cell;vertical-align: middle; height: 160px}
 .carouse2{ margin:17px 0 0 22px;width:660px !important }
 .part {display:none;position:absolute;bottom:0; width:160px;  background:url(../images/bg-name-1.gif) repeat-x; height:51px;color:#FFF;}
 
