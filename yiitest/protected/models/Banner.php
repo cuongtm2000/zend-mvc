@@ -156,9 +156,8 @@ class Banner extends CActiveRecord {
     }
 
     //Front end - get Logo by module
-    public function getLogo($module) {
-        $command = Yii::app()->db->createCommand('SELECT banner_name, banner_url, banner_link FROM ' . $this->tableName() . ' WHERE banner_type=\'logo\' AND position=:module AND enable=1 AND dos_usernames_username=:user');
-        $command->bindParam(":module", $module, PDO::PARAM_STR);
+    public function getLogo() {
+        $command = Yii::app()->db->createCommand('SELECT banner_name, banner_url, banner_link FROM ' . $this->tableName() . ' WHERE banner_type=\'logo\' AND enable=1 AND dos_usernames_username=:user');
         $command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
         return $command->queryRow();
     }

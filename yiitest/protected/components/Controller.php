@@ -74,7 +74,7 @@ class Controller extends CController {
 
 			//Set Logo, Banner
 			$banner = new Banner();
-			$this->logo = $banner->getLogo($this->module->getName());
+			$this->logo = $banner->getLogo();
 			$this->banner = $banner->getBanner($this->module->getName());
 
 			//Set configs
