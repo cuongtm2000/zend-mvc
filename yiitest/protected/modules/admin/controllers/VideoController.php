@@ -58,9 +58,10 @@ class VideoController extends AdminController {
 
 	public function actionDelcat($id) {
 		Yii::app()->getModule($this->ID);
-		$module_cat = ucfirst($this->ID) . 'Cat';
+		$model = ucfirst($this->ID);
+		$model_cat = $model . 'Cat';
 
-		$model_cat_class = new $module_cat();
+		$model_cat_class = new $model_cat();
 		$model_class = new $model();
 
 		$data['infocat'] = $model_cat_class->getInfoCat($id); //Tên phân loại

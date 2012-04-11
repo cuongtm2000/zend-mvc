@@ -351,13 +351,17 @@ class VideoCat extends CActiveRecord {
 	//Back end - Delete Record coi lai cai nay
 	public function deleteRecord($id) {
 		$item = $this::model()->find('cat_id=:id', array(':id' => $id));
+		$common_class = new Common();
+		$common_class->removePic($item->pic_thumb, 0, 1, 'Cat');
+		                /*
+		$item = $this::model()->find('cat_id=:id', array(':id' => $id));
 		$path = YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . __CLASS__ . '/';
 		//Del pic_thumbl field
 		if (($item->pic_thumb)) {
 			if (file_exists($path . $item->pic_thumb)) {
 				unlink($path . $item->pic_thumb);
 			}
-		}
+		}                 */
 		$this::model()->findByPk($id)->delete(); //delete record
 	}
 

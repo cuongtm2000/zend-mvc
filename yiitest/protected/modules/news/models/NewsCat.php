@@ -364,13 +364,18 @@ class NewsCat extends CActiveRecord {
 	//Back end - Delete Record coi lai cai nay
 	public function deleteRecord($id) {
 		$item = $this::model()->find('cat_id=:id', array(':id' => $id));
-		$path = YiiBase::getPathOfAlias('webroot') . USERFILES . '/NewsCat/';
+		$common_class = new Common();
+		$common_class->removePic($item->pic_full, 0, 1, 'Cat');
+
+		//$path = YiiBase::getPathOfAlias('webroot') . USERFILES . '/NewsCat/';
+		//var_dump($path);
+		//var_dump($item);
 		//Del pic_full field
-		if (($item->pic_full)) {
+		/*if ($item->pic_full) {
 			if (file_exists($path . $item->pic_full)) {
 				unlink($path . $item->pic_full);
 			}
-		}
+		}                                                       */
 		$this::model()->findByPk($id)->delete(); //delete record
 	}
 

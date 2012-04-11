@@ -503,7 +503,12 @@ class ProductsCat extends CActiveRecord {
 
 	//Back end - Delete Record
 	public function deleteRecord($id) {
-		$item = ProductsCat::model()->find('cat_id=:id', array(':id' => $id));
+		$item = $this::model()->find('cat_id=:id', array(':id' => $id));
+		$common_class = new Common();
+		$common_class->removePic($item->pic_full, 0, 1, 'Cat');
+		$common_class->removePic($item->pic_desc, 1, 1, 'Cat');
+
+		/*$item = ProductsCat::model()->find('cat_id=:id', array(':id' => $id));
 		$path = YiiBase::getPathOfAlias('webroot') . USERFILES . '/ProductsCat/';
 		//Del pic_full field
 		if (($item->pic_full)) {
@@ -519,8 +524,8 @@ class ProductsCat extends CActiveRecord {
 					unlink($path . $value);
 				}
 			}
-		}
-		ProductsCat::model()->findByPk($id)->delete(); //delete record
+		}                              */
+		$this::model()->findByPk($id)->delete(); //delete record
 	}
 
 	//Xóa tất cả item của phân loại con
