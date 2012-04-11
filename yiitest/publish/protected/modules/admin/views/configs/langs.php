@@ -5,7 +5,7 @@
 	<?php foreach($models as $value):?>
 	<p class="clear">
 		<label>Language</label>
-		<input name="lang_name[]" value="<?php echo $value['lang'.LANG]?>" maxlength="30" class="txt-small" />
+		<input name="lang_name[]" value="<?php echo $value['lang_name']?>" maxlength="30" class="txt-small" />
 		<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
 			<input name="lang<?php echo $lang?>[]" value="<?php echo $value['lang'.$lang]?>" maxlength="200" class="txt-large" />
 		<?php endforeach?>
