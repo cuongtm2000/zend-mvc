@@ -1,118 +1,76 @@
 <?php
-/**
- *
- * Export & import sql
- *
- * @author davidhhuan
- */
+
 class DatabaseHelper {
-	/**
-	 * Export the sql to a file
-	 *
-	 * @author davidhhuan
-	 * @param bool $withData: Whether to export the insert-data at the same time
-	 * @param bool $dropTable: Add to drop the table or not
-	 * @param string $saveName: the saved file name
-	 * @param string $savePath
-	 *
-	 * @return mixed
-	 */
-	public static function export($withData = true, $dropTable = false, $saveName = null, $savePath = false) {
-		$pdo = Yii::app()->db->pdoInstance;
-		$mysql = '';
-		$statments = $pdo->query("show tables");
-		foreach ($statments as $value)
-		{
-			$tableName = $value[0];
-			if ($dropTable === true) {
-				$mysql .= "DROP TABLE IF EXISTS `$tableName`;\n";
-			}
-			$tableQuery = $pdo->query("show create table `$tableName`");
-			$createSql = $tableQuery->fetch();
-			$mysql .= $createSql['Create Table'] . ";\r\n\r\n";
-			if ($withData != 0) {
-				$itemsQuery = $pdo->query("select * from `$tableName`");
+	public static function export($user) {
+		$user_class = new Username();
+		if ($user_class->checkExistUser($user)) {
+			$pdo = Yii::app()->db->pdoInstance;
+			$sql = '';
+
+			$arr[] = array('dos_bussiness', 'SELECT * FROM dos_bussiness');
+			$arr[] = array('dos_templates', 'SELECT * FROM dos_templates WHERE template = \'' . $user_class->template . '\'');
+			$arr[] = array('dos_configs', 'SELECT * FROM dos_configs WHERE dos_templates_template = \'' . $user_class->template . '\'');
+			$arr[] = array('dos_features', 'SELECT * FROM dos_features');
+			$arr[] = array('dos_langs', 'SELECT * FROM dos_langs');
+			$arr[] = array('dos_modules', 'SELECT * FROM dos_modules');
+			$arr[] = array('dos_values', 'SELECT * FROM dos_values');
+			$arr[] = array('dos_nationals', 'SELECT * FROM dos_nationals');
+			$arr[] = array('dos_provinces', 'SELECT * FROM dos_provinces');
+			$arr[] = array('dos_usernames', 'SELECT * FROM dos_usernames WHERE username=\'' . $user . '\'');
+			$arr[] = array('dos_loadfiles', 'SELECT * FROM dos_loadfiles WHERE dos_templates_template = \'' . $user_class->template . '\'');
+			$arr[] = array('dos_modules_has_dos_usernames', 'SELECT * FROM dos_modules_has_dos_usernames WHERE dos_usernames_username=\'' . $user . '\'');
+			$arr[] = array('dos_module_webs', 'SELECT * FROM dos_module_webs WHERE dos_usernames_username=\'' . $user . '\'');
+			$arr[] = array('dos_templates_has_dos_bussiness', 'SELECT * FROM dos_templates_has_dos_bussiness WHERE dos_templates_template=\'' . $user_class->template . '\'');
+			$arr[] = array('dos_templates_has_dos_features', 'SELECT * FROM dos_templates_has_dos_features WHERE dos_templates_template=\'' . $user_class->template . '\'');
+			$arr[] = array('dos_templates_has_dos_modules', 'SELECT * FROM dos_templates_has_dos_modules WHERE dos_templates_template=\'' . $user_class->template . '\'');
+			$arr[] = array('dos_usernames_has_dos_modules', 'SELECT * FROM dos_usernames_has_dos_modules WHERE dos_usernames_username=\'' . $user . '\'');
+			$arr[] = array('dos_user_langs', 'SELECT * FROM dos_user_langs WHERE dos_usernames_username=\'' . $user . '\'');
+
+			$arr[] = array('dos_module_abouts', 'SELECT * FROM dos_module_abouts WHERE dos_usernames_username=\'' . $user . '\'');
+			$arr[] = array('dos_module_advs', 'SELECT * FROM dos_module_advs WHERE dos_usernames_username=\'' . $user . '\'');
+			$arr[] = array('dos_module_banners', 'SELECT * FROM dos_module_banners WHERE dos_usernames_username=\'' . $user . '\'');
+			$arr[] = array('dos_module_contacts', 'SELECT * FROM dos_module_contacts WHERE dos_usernames_username=\'' . $user . '\'');
+			$arr[] = array('dos_module_menus', 'SELECT * FROM dos_module_menus WHERE dos_usernames_username=\'' . $user . '\'');
+			$arr[] = array('dos_module_services', 'SELECT * FROM dos_module_services WHERE dos_usernames_username=\'' . $user . '\'');
+			$arr[] = array('dos_module_supports', 'SELECT * FROM dos_module_supports WHERE dos_usernames_username=\'' . $user . '\'');
+			$arr[] = array('dos_module_news_cat', 'SELECT * FROM dos_module_news_cat WHERE dos_usernames_username=\'' . $user . '\'');
+			$arr[] = array('dos_module_news', 'SELECT `record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, dos_module_news.`preview`, dos_module_news.`previewen`, `content`, `contenten`, dos_module_news.`tag`, dos_module_news.`tagen`, dos_module_news.`description`, dos_module_news.`descriptionen`, `hits`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id` FROM dos_module_news, dos_module_news_cat WHERE dos_module_news.dos_module_item_cat_cat_id = dos_module_news_cat.cat_id AND dos_usernames_username=\'' . $user . '\'');
+			$arr[] = array('dos_module_products_cat', 'SELECT * FROM dos_module_products_cat WHERE dos_usernames_username=\'' . $user . '\'');
+			$arr[] = array('dos_module_products', 'SELECT `record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, dos_module_products.`pic_full`, dos_module_products.`pic_desc`, dos_module_products.`preview`, dos_module_products.`previewen`, `content`, `contenten`, dos_module_products.`tag`, dos_module_products.`tagen`, dos_module_products.`description`, dos_module_products.`descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id` FROM dos_module_products, dos_module_products_cat WHERE dos_module_products.dos_module_item_cat_cat_id = dos_module_products_cat.cat_id AND dos_usernames_username=\'' . $user . '\'');
+			$arr[] = array('dos_module_video_cat', 'SELECT * FROM dos_module_video_cat WHERE dos_usernames_username=\'' . $user . '\'');
+			$arr[] = array('dos_module_video', 'SELECT `record_id`, `title`, `titleen`, `postdate`, dos_module_video.`tag`, dos_module_video.`tagen`, dos_module_video.`description`, dos_module_video.`descriptionen`, dos_module_video.`pic_thumb`, `url`, `record_order`, `hits`, `extra_field1`, `extra_field2`, `hot`, `enable`, `dos_module_item_cat_cat_id` FROM dos_module_video, dos_module_video_cat WHERE dos_module_video.dos_module_item_cat_cat_id = dos_module_video_cat.cat_id AND dos_usernames_username=\'' . $user . '\'');
+
+			foreach ($arr as $value) {
+				$itemsQuery = $pdo->query($value[1]);
 				$values = "";
 				$items = "";
-				while ($itemQuery = $itemsQuery->fetch(PDO::FETCH_ASSOC))
-				{
+				while ($itemQuery = $itemsQuery->fetch(PDO::FETCH_ASSOC)) {
 					$itemNames = array_keys($itemQuery);
 					$itemNames = array_map("addslashes", $itemNames);
 					$items = join('`,`', $itemNames);
+
 					$itemValues = array_values($itemQuery);
-					$itemValues = array_map("addslashes", $itemValues);
+					//$itemValues = array_map("addslashes", $itemValues);
+					$itemValues = str_replace("'", "''", $itemValues);
 					$valueString = join("','", $itemValues);
 					$valueString = "('" . $valueString . "'),";
 					$values .= "\n" . $valueString;
 				}
 				if ($values != "") {
-					$insertSql = "INSERT INTO `$tableName` (`$items`) VALUES" . rtrim($values, ",") . ";\n\r";
-					$mysql .= $insertSql;
+					$insertSql = "INSERT INTO `$value[0]` (`$items`) VALUES" . rtrim($values, ",") . ";\n\r";
+					$sql .= $insertSql;
 				}
 			}
-			//$mysql.="/*-----------------------------------------------------*/\n\r";
-		}
+			ob_start();
+			echo $sql;
+			$content = ob_get_contents();
+			ob_end_clean();
+			$content = gzencode($content, 9);
 
-		ob_start();
-		echo $mysql;
-		$content = ob_get_contents();
-		ob_end_clean();
-		$content = gzencode($content, 9);
+			$saveName = date($user . '-d-m-Y') . ".sql.gz";
 
-		if (is_null($saveName)) {
-			$saveName = date('YmdHms') . ".sql.gz";
-		}
-
-		if ($savePath === false) {
-			//header("Content-Type: application/force-download");
-			//header("Content-Type: application/octet-stream");
-			//header("Content-Type: application/download");
-			//header("Content-Description: Download SQL Export");
-			//header('Content-Disposition: attachment; filename='.$saveName);
-			//echo $content;
-			//die();
 			$request = Yii::app()->getRequest();
 			$request->sendFile($saveName, $content);
-		}
-		else
-		{
-			$filePath = $savePath ? $savePath . '/' . $saveName : $saveName;
-			file_put_contents($filePath, $content);
-			echo "Database file saved: " . $saveName;
-		}
-	}
-
-
-	/**
-	 * import sql from a *.sql file
-	 *
-	 * @author davidhhuan
-	 * @param string $file: with the path and the file name
-	 *
-	 * @return mixed
-	 */
-	public static function import($file = '') {
-		$pdo = Yii::app()->db->pdoInstance;
-		try {
-			if (file_exists($file)) {
-				$sqlStream = file_get_contents($file);
-				var_dump($sqlStream);
-				/*$sqlStream = rtrim($sqlStream);
-				$newStream = preg_replace_callback("/\((.*)\)/", create_function('$matches', 'return str_replace(";"," $$$ ",$matches[0]);'), $sqlStream);
-				$sqlArray = explode(";", $newStream);
-				foreach ($sqlArray as $value){
-					if (!empty($value)) {
-						$sql = str_replace(" $$$ ", ";", $value) . ";";
-						$pdo->exec($sql);
-					}
-				}
-				//echo "succeed to import the sql data!";
-				return true;*/
-			}
-		}
-		catch (PDOException $e) {
-			echo $e->getMessage();
-			exit;
 		}
 	}
 
@@ -144,11 +102,11 @@ class DatabaseHelper {
 			//dos_module_video_cat
 			$str[] = "INSERT INTO `dos_module_video_cat` (cat_parent_id, pic_thumb, cat_title, cat_titleen, tag, tagen, description, descriptionen, cat_order, cat_enable, dos_usernames_username) SELECT cat_parent_id, pic_thumb, cat_title, cat_titleen, tag, tagen, description, descriptionen, cat_order, cat_enable, '" . $userImport . "' FROM `dos_module_video_cat` WHERE dos_usernames_username = '" . $userExport . "'";
 
-			foreach($str as $value){
+			foreach ($str as $value) {
 				$this->sqlQuery($value);
 			}
 			//copy file
-			$myfile = Yii::app()->file->set('public/userfiles/images/'.$userExport, true);
+			$myfile = Yii::app()->file->set('public/userfiles/images/' . $userExport, true);
 			$myfile->copy($userImport);
 		}
 	}
