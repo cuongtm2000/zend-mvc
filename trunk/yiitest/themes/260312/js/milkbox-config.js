@@ -3,11 +3,11 @@ window.addEvent('domready', function(){
 				e.preventDefault();
 				milkbox.showGallery({ gallery:'gall1'});
 			});
-	/*$('frame-img-info').addEvent('click', function(e){
+			$('hover').addEvent('click', function(e){
 				e.preventDefault();
 				milkbox.showGallery({ gallery:'gall1'});
 			});
-			$('flashlink').addEvent('click', function(e){
+			/*$('flashlink').addEvent('click', function(e){
 				e.preventDefault();
 				milkbox.showGallery({ gallery:'gall2'});
 			});*/
