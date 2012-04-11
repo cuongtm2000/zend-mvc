@@ -157,10 +157,14 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 
 .product-img:hover{border:1px solid #067EBF}
 
-/****  ****/
+/****  Page product info****/
+.left-pro-info{float: left; width: 410px;text-align: center}
 #frame-img-info{margin:0 0 10px 0}
 #frame-img-info img{ margin:0 !important;border:2px solid #D1D1D1;padding:2px;-webkit-border-radius:3px;-moz-border-radius:3px}
 #pic_zoom_box{color:#0881C3;background: url(../images/multi_image.gif) no-repeat left 5px;padding:5px 0 5px 30px}
+
+.right-pro-info{float:right;width: 250px;background: #f0ede6}
+
 
 .black{margin:0 !important; font-size:10pt;text-align:right !important}
 .black a{color:#000;background:url(../images/bull-1.gif) no-repeat left 5px;padding:0 0 0 10px}
