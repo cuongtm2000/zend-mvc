@@ -67,7 +67,7 @@ class Common {
 				}
 			}
 		}
-		echo $path . $item;
+		//echo $path . $item;
 	}
 
 	//Front end - Create folder and Chmod
