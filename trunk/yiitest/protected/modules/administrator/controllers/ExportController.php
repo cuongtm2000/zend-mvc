@@ -3,12 +3,12 @@
 class ExportController extends AdministratorController {
 
 	public function actionIndex() {
-		/*if (Yii::app()->request->getIsPostRequest()) {
+		if (Yii::app()->request->getIsPostRequest()) {
 			$common_class = new Common();
 			$user = Yii::app()->request->getPost('user', '');
 
 			if (isset($_POST['submit-data'])) {
-				Common::export(trim($user));
+				DatabaseHelper::export(trim($user));
 			}
 			if (isset($_POST['submit-file'])) {
 				$common_class->recursiveMkdir('/assets/tmp/public/userfiles/images/220312/'); //create folder 'tmp'
@@ -16,9 +16,7 @@ class ExportController extends AdministratorController {
 				$myfile->copy('../../../assets/tmp/public/userfiles/images/220312/');
 			}
 
-		}*/
-
-		DatabaseHelper::import('test.sql');
+		}
 
 		$this->render('index');
 	}
