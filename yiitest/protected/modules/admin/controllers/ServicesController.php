@@ -33,9 +33,8 @@ class ServicesController extends AdminController {
     }
 
     public function actionAdd() {
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/ckeditor/ckeditor.js');
-        //$script = "$('#Services_description').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});";
-        //Yii::app()->clientScript->registerScript('', $script, CClientScript::POS_READY);
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/config.js');
 
         $module = ucfirst($this->getId());
         Yii::app()->getModule($this->getId());
@@ -54,9 +53,8 @@ class ServicesController extends AdminController {
     }
 
     public function actionEdit($id) {
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/ckeditor/ckeditor.js');
-        //$script = "$('#Services_description').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});";
-        //Yii::app()->clientScript->registerScript('', $script, CClientScript::POS_READY);
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/config.js');
 
         $module = ucfirst($this->getId());
         Yii::app()->getModule($this->getId());

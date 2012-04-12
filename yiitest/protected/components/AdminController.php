@@ -33,7 +33,7 @@ class AdminController extends CController{
 
             //Set session template
             Yii::app()->session['template'] = $username->template;
-            define('USERFILES', '/public/userfiles/images/' . $user . '/images');
+            define('USERFILES', '/public/userfiles/image/' . $user . '/image');
         } else {
 			if($user != 'dos'){
 				$this->redirect('http://'.Yii::app()->theme->name.'/error');

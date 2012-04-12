@@ -21,11 +21,40 @@
     <div class="col1"><?php echo $form->labelEx($model, 'content'.$lang) ?></div>
     <div class="col2">
         <?php echo $form->textArea($model, 'content'.$lang, $htmlOptions = array('cols' => 20, 'rows' => 10)); ?>
-        <script type="text/javascript">
-            //<![CDATA[
-            CKEDITOR.replace('<?php echo get_class($model) ?>[content<?php echo $lang?>]');
-            //]]>
-        </script>
+		<script type="text/javascript">
+			tinyMCE.init({
+				 file_browser_callback: 'openKCFinder',
+				 mode:"exact",
+				 elements : "<?php echo ucfirst($this->ID)?>_content<?php echo $lang?>",
+				 theme:"advanced",
+				 language : "vi",
+				 //skin : "o2k7",
+				 //skin_variant : "silver",
+				 plugins : "paste, autolink,lists,style,layer,table,save,advhr,advimage,advlink,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
+
+				 theme_advanced_buttons1 : "bold,italic,underline,strikethrough,formatselect,fontsizeselect,|,justifyleft,justifycenter,justifyright,justifyfull,pastetext,pasteword,|,link,unlink,|,image,media,|,fullscreen",
+				 theme_advanced_buttons2 : "forecolor,backcolor,bullist,numlist,underline,justifyfull,outdent,indent,sub,sup,tablecontrols,visualaid,charmap,removeformat",
+				 theme_advanced_buttons3: "",
+
+				 relative_urls : false,
+
+				 paste_text_use_dialog : true,
+				 paste_auto_cleanup_on_paste : true,
+				 paste_remove_styles: true,
+				 paste_remove_styles_if_webkit: true,
+				 paste_strip_class_attributes: true,
+
+				 paste_text_sticky : true,
+				 setup : function(ed) {ed.onInit.add(function(ed) {ed.pasteAsPlainText = true;});},
+
+				 theme_advanced_toolbar_location : "top",
+				 theme_advanced_toolbar_align : "left",
+				 //theme_advanced_statusbar_location : "bottom",
+				 theme_advanced_resizing : true,
+				 width : "100%",
+				 height: "250"
+			 });
+		</script>
     </div>
     <div class="clear space"></div>
 	<?php endforeach; ?>

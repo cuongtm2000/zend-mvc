@@ -4620,3 +4620,74 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/upload/images/image/logo.jpg
 ---
+2012/04/12 03:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/plugin/ckeditor/ckeditor.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/plugin/c...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/plugin/ckeditor/ckeditor.js
+HTTP_REFERER=http://220312.dos.vn/admin/services/add
+---
+2012/04/12 03:39:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/plugin/ckeditor/ckeditor.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/plugin/c...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/plugin/ckeditor/ckeditor.js
+HTTP_REFERER=http://220312.dos.vn/admin/products/edit/id/10
+---
+2012/04/12 03:50:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/advs/pa-noi-that.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/220312/image/advs/pa-noi-that.jpg
+HTTP_REFERER=http://220312.dos.vn/
+---
+2012/04/12 03:50:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-khoa-hoc-cong-nghe-moi-thumb.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/220312/image/products/sach-khoa-hoc-cong-nghe-moi-thumb.jpg
+HTTP_REFERER=http://220312.dos.vn/
+---
+2012/04/12 03:50:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg
+HTTP_REFERER=http://220312.dos.vn/
+---
+2012/04/12 03:50:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/video/co-gi-hot.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/220312/image/video/co-gi-hot.jpg
+HTTP_REFERER=http://220312.dos.vn/
+---
+2012/04/12 03:50:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-khoa-hoc-cong-nghe-moi-thumb.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/220312/image/products/sach-khoa-hoc-cong-nghe-moi-thumb.jpg
+HTTP_REFERER=http://220312.dos.vn/
+---
+2012/04/12 03:51:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
