@@ -20,6 +20,10 @@ class SiteController extends HomeController {
 		);
 	}
 
+	public function actionMsgerror(){
+		//echo '123';
+	}
+
 	/**
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
