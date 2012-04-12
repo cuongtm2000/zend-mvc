@@ -106,7 +106,7 @@ class DatabaseHelper {
 				$this->sqlQuery($value);
 			}
 			//copy file
-			$myfile = Yii::app()->file->set('public/userfiles/images/' . $userExport, true);
+			$myfile = Yii::app()->file->set('public/userfiles/image/' . $userExport, true);
 			$myfile->copy($userImport);
 		}
 	}
