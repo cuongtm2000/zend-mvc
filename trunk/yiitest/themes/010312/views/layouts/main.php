@@ -197,6 +197,17 @@
 				<?php endforeach; ?>
 			</ul>
 			<?php endif;?>
+
+			<?php if(isset($this->function['advs_right']) && ($this->function['advs_right'])):?>
+			<h1 class="title-box"><span><?php echo $this->lang['advs'] ?></span></h1>
+			<ul class="bg-adv">
+				<?php foreach($this->function['advs_right'] as $value): ?>
+				<li>
+					<a href="<?php echo $value['url'] ?>" target="<?php echo $value['type'] ?>" title="<?php echo $value['title'.Yii::app()->session['lang']] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.Yii::app()->session['lang']] ?>" /></a>
+				</li>
+				<?php endforeach; ?>
+			</ul>
+			<?php endif;?>
 		</div> <!--End colum3--> <div class="clear"></div>
 	</div><!--End content-->
 </div><!--End wrapper-->

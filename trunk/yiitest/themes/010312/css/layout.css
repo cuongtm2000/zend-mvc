@@ -71,7 +71,7 @@ a:hover{color:#000;}
 .statistics li {color:#000; line-height:1.75em;}
 
 /*bg-adv adv left*/
-.bg-adv{list-style:none;border:1px solid #F2F2F2;text-align:center;margin:0 0 10px 0}
+.bg-adv{list-style:none;border:1px solid #F2F2F2;text-align:center;margin:0 0 10px 0;padding: 5px 0 0 0}
 .bg-adv li{padding:0 0 5px 0}
 
 /*Right content*/
