@@ -46,7 +46,7 @@ class Controller extends CController {
 			//Set session template and subdomain
 			Yii::app()->session['template'] = $info_user['dos_templates_template'];
 			Yii::app()->session['subdomain'] = $user;
-			define('USERFILES', '/public/userfiles/images/' . Yii::app()->session['subdomain'] . '/images');
+			define('USERFILES', '/public/userfiles/image/' . Yii::app()->session['subdomain'] . '/image');
 
 			//Set title, keywords and description
 			$web_class = new Web();
