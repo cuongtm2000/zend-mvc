@@ -26,19 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserLangs.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/models/UserLangs.php">
+      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/plugin/kcfinder/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="12" selection-start="2760" selection-end="3487" vertical-scroll-proportion="0.0">
+            <state line="25" column="24" selection-start="731" selection-end="731" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="langs.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/configs/langs.php">
+      <file leaf-file-name="config.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/plugin/tiny_mce/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="8" selection-start="357" selection-end="459" vertical-scroll-proportion="0.20306513">
+            <state line="27" column="73" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.121212125">
               <folding />
             </state>
           </provider>
@@ -59,22 +59,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/VideoController.php" />
-        <option value="$PROJECT_DIR$/themes/dos.vn/css/signup.css" />
-        <option value="$PROJECT_DIR$/protected/views/site/loaduserimport.php" />
-        <option value="$PROJECT_DIR$/protected/config/routes.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/SiteController.php" />
-        <option value="$PROJECT_DIR$/protected/components/Common.php" />
-        <option value="$PROJECT_DIR$/protected/components/DatabaseHelper.php" />
-        <option value="$PROJECT_DIR$/protected/modules/administrator/controllers/ExportController.php" />
-        <option value="$PROJECT_DIR$/protected/views/site/import.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/views/configs/menu.php" />
         <option value="$PROJECT_DIR$/protected/models/Menus.php" />
         <option value="$PROJECT_DIR$/protected/models/Banner.php" />
         <option value="$PROJECT_DIR$/protected/components/Controller.php" />
         <option value="$PROJECT_DIR$/protected/modules/admin/views/configs/langs.php" />
         <option value="$PROJECT_DIR$/protected/modules/admin/controllers/ConfigsController.php" />
         <option value="$PROJECT_DIR$/protected/models/UserLangs.php" />
+        <option value="$PROJECT_DIR$/public/plugin/ckeditor/config.js" />
+        <option value="$PROJECT_DIR$/public/plugin/tiny_mce/themes/advanced/skins/o2k7/content.css" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/views/about/add.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/AboutController.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/views/about/edit.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/LoginController.php" />
+        <option value="$PROJECT_DIR$/public/plugin/tiny_mce/themes/advanced/skins/o2k7/ui.css" />
+        <option value="$PROJECT_DIR$/public/plugin/tiny_mce/themes/advanced/skins/default/ui.css" />
+        <option value="$PROJECT_DIR$/public/plugin/kcfinder/config.php" />
+        <option value="$PROJECT_DIR$/public/plugin/tiny_mce/config.js" />
       </list>
     </option>
   </component>
@@ -117,7 +117,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -146,7 +145,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -160,33 +159,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
+              <option name="myItemId" value="plugin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="tiny_mce" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -200,72 +181,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
+              <option name="myItemId" value="plugin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="configs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="kcfinder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -323,6 +253,13 @@
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -374,7 +311,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -382,7 +319,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.7314112" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.4969651" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29590288" sideWeight="0.67064846" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2511381" sideWeight="0.67064846" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5007587" order="7" side_tool="true" content_ui="tabs" />
@@ -450,88 +387,94 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/modules/administrator/controllers/ExportController.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/configs/langs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="30" selection-start="291" selection-end="291" vertical-scroll-proportion="0.31423292" />
+        <state line="7" column="8" selection-start="357" selection-end="459" vertical-scroll-proportion="0.20306513" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/Common.php">
+    <entry file="file://$PROJECT_DIR$/public/plugin/tiny_mce/themes/advanced/skins/o2k7/ui_silver.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="0" selection-start="3315" selection-end="3315" vertical-scroll-proportion="0.7746212" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/DatabaseHelper.php">
+    <entry file="file://$PROJECT_DIR$/protected/components/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="71" selection-start="12481" selection-end="12481" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/dos.vn/css/signup.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="18" selection-start="2436" selection-end="2436" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/site/import.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="124" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.71647507" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="6" selection-start="3790" selection-end="3808" vertical-scroll-proportion="0.21715328" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Configs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.071168" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Menus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="84" selection-start="6244" selection-end="6244" vertical-scroll-proportion="0.6113139" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Supports.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.6295621" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/about/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="828" selection-end="848" vertical-scroll-proportion="0.3908046" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/configs/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="51" selection-start="1629" selection-end="1629" vertical-scroll-proportion="0.5536398" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.09090909" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="43" selection-start="2448" selection-end="2448" vertical-scroll-proportion="0.57575756" />
+        <state line="76" column="43" selection-start="2448" selection-end="2448" vertical-scroll-proportion="1.5757576" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Banner.php">
+    <entry file="file://$PROJECT_DIR$/protected/components/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="28" selection-start="7083" selection-end="7083" vertical-scroll-proportion="0.3941606" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/ConfigsController.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/about/models/About.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="12" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.27272728">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.6514599" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/AboutController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="0" selection-start="2171" selection-end="2171" vertical-scroll-proportion="0.6514599" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/about/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="36" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.44636014" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/about/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="82" selection-start="2153" selection-end="2153" vertical-scroll-proportion="0.40421456" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="18" selection-start="731" selection-end="731" vertical-scroll-proportion="0.4848485" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/plugin/tiny_mce/themes/advanced/skins/default/content.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/UserLangs.php">
+    <entry file="file://$PROJECT_DIR$/public/plugin/tiny_mce/themes/advanced/skins/default/ui.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="12" selection-start="2760" selection-end="3487" vertical-scroll-proportion="0.0">
+        <state line="81" column="104" selection-start="7007" selection-end="7009" vertical-scroll-proportion="-0.15487571">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/configs/langs.php">
+    <entry file="file://$PROJECT_DIR$/public/plugin/tiny_mce/themes/advanced/skins/o2k7/ui.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="8" selection-start="357" selection-end="459" vertical-scroll-proportion="0.20306513">
+        <state line="84" column="101" selection-start="6772" selection-end="6774" vertical-scroll-proportion="2.7304015">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/plugin/tiny_mce/themes/advanced/skins/o2k7/content.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="12" selection-start="899" selection-end="905" vertical-scroll-proportion="0.58508605">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/plugin/kcfinder/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="24" selection-start="731" selection-end="731" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/plugin/tiny_mce/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="73" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.121212125">
           <folding />
         </state>
       </provider>
