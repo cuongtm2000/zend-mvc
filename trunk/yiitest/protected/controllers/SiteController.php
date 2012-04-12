@@ -21,7 +21,14 @@ class SiteController extends HomeController {
 	}
 
 	public function actionMsgerror($code){
-		var_dump($code);
+		$msg = array();
+		switch($code){
+			case 'expired':
+				$msg[] = 'Website đã hết hạn';
+				$msg[] = 'Website của bạn đã quá hạn, vui lòng gia hạn để được sử dụng';
+			break;
+		}
+		$this->render('msgerror', array('data' => $msg));
 	}
 
 	/**

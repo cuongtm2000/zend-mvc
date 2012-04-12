@@ -34,7 +34,7 @@ class Controller extends CController {
 		if ($username->checkExistUser($user)) {
 			$dateExpired = $username->checkExpired($user);
 			if ($dateExpired > 0) {
-				$this->redirect('http://' . Yii::app()->theme->name . '/site/msgerror/code/expired'); //thong bao het han
+				$this->redirect('http://' . Yii::app()->theme->name . '/report-error/expired'); //thong bao het han
 			} else {
 				Common::setLanguage(); //setting language
 
