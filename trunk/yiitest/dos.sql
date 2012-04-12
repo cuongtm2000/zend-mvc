@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 12, 2012 at 04:29 AM
+-- Generation Time: Apr 12, 2012 at 04:39 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -446,7 +446,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=42 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=43 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
