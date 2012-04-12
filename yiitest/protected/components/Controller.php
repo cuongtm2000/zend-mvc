@@ -32,53 +32,58 @@ class Controller extends CController {
 		$username = new Username();
 		//Check exist user
 		if ($username->checkExistUser($user)) {
-			Common::setLanguage(); //setting language
+			$dateExpired = $username->checkExpired($user);
+			if ($dateExpired > 0) {
+				$this->redirect('http://' . Yii::app()->theme->name . '/site/msgerror/code/expired'); //thong bao het han
+			} else {
+				Common::setLanguage(); //setting language
 
-			$info_user = $username->infoUser($user);
+				$info_user = $username->infoUser($user);
 
-			$this->numLang = explode('|', $info_user['language']);
-			if (isset($_GET['language']) && !in_array($_GET['language'], $this->numLang)) {
-				$this->redirect('http://' . Yii::app()->theme->name . '/error'); //Ngon ngu khong duoc su dung
+				$this->numLang = explode('|', $info_user['language']);
+				if (isset($_GET['language']) && !in_array($_GET['language'], $this->numLang)) {
+					$this->redirect('http://' . Yii::app()->theme->name . '/error'); //Ngon ngu khong duoc su dung
+				}
+
+				Yii::app()->theme = $info_user['dos_templates_template'];
+
+				//Set session template and subdomain
+				Yii::app()->session['template'] = $info_user['dos_templates_template'];
+				Yii::app()->session['subdomain'] = $user;
+				define('USERFILES', '/public/userfiles/image/' . Yii::app()->session['subdomain'] . '/image');
+
+				//Set title, keywords and description
+				$web_class = new Web();
+				$this->title = $web_class->setWebValue('title', $user);
+				$this->keywords = $web_class->setWebValue('keywords', $user);
+				$this->description = $web_class->setWebValue('description', $user);
+				$this->analytics = $web_class->setWebValue('analytics', 'dos');
+
+				//Set page load file
+				$loadfiles_class = new Loadfiles;
+				$loadfiles_class->getFileByTemplateModule($info_user['dos_templates_template'], $this->module->id);
+
+				//Set navigation
+				$menus_class = new Menus();
+				$this->nav = $menus_class->setMenu($user);
+
+				//Set function
+				$load_function = new TemplateModule();
+				$func = $load_function->getFunction($info_user['dos_templates_template'], $this->module->id);
+				foreach ($func as $value) {
+					Yii::app()->getModule($value['module']);
+					$load = new $value['module_id']();
+					$this->function[$value['value_name']] = $load->$value['function_name']();
+				}
+
+				//Set Logo, Banner
+				$banner = new Banner();
+				$this->logo = $banner->getLogo();
+				$this->banner = $banner->getBanner($this->module->getName());
+
+				//Set configs
+				$this->configs = Configs::template(Yii::app()->session['template']); //coi lai cai nay
 			}
-
-			Yii::app()->theme = $info_user['dos_templates_template'];
-
-			//Set session template and subdomain
-			Yii::app()->session['template'] = $info_user['dos_templates_template'];
-			Yii::app()->session['subdomain'] = $user;
-			define('USERFILES', '/public/userfiles/image/' . Yii::app()->session['subdomain'] . '/image');
-
-			//Set title, keywords and description
-			$web_class = new Web();
-			$this->title = $web_class->setWebValue('title', $user);
-			$this->keywords = $web_class->setWebValue('keywords', $user);
-			$this->description = $web_class->setWebValue('description', $user);
-			$this->analytics = $web_class->setWebValue('analytics', 'dos');
-
-			//Set page load file
-			$loadfiles_class = new Loadfiles;
-			$loadfiles_class->getFileByTemplateModule($info_user['dos_templates_template'], $this->module->id);
-
-			//Set navigation
-			$menus_class = new Menus();
-			$this->nav = $menus_class->setMenu($user);
-
-			//Set function
-			$load_function = new TemplateModule();
-			$func = $load_function->getFunction($info_user['dos_templates_template'], $this->module->id);
-			foreach ($func as $value) {
-				Yii::app()->getModule($value['module']);
-				$load = new $value['module_id']();
-				$this->function[$value['value_name']] = $load->$value['function_name']();
-			}
-
-			//Set Logo, Banner
-			$banner = new Banner();
-			$this->logo = $banner->getLogo();
-			$this->banner = $banner->getBanner($this->module->getName());
-
-			//Set configs
-			$this->configs = Configs::template(Yii::app()->session['template']); //coi lai cai nay
 		} else {
 			$this->redirect('http://' . Yii::app()->theme->name . '/error');
 		}

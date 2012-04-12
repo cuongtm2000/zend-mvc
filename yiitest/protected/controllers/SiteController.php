@@ -20,8 +20,8 @@ class SiteController extends HomeController {
 		);
 	}
 
-	public function actionMsgerror(){
-		//echo '123';
+	public function actionMsgerror($code){
+		var_dump($code);
 	}
 
 	/**
