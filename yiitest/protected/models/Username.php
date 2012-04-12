@@ -167,7 +167,7 @@ class Username extends CActiveRecord {
 		$criteria->compare('fullname', $this->fullname, true);
 		$criteria->compare('phone', $this->phone, true);
 		$criteria->compare('company', $this->company, true);
-		$criteria->compare('import',$this->import);
+		$criteria->compare('import', $this->import);
 		$criteria->compare('activated', $this->activated);
 		$criteria->compare('dos_templates_template', $this->dos_templates_template, true);
 		$criteria->compare('dos_provinces_province_id', $this->dos_provinces_province_id);
@@ -196,7 +196,7 @@ class Username extends CActiveRecord {
 		return parent::beforeSave();
 	}
 
-	public function listUserByImport($businessId){
+	public function listUserByImport($businessId) {
 		$command = Yii::app()->db->createCommand('SELECT username FROM ' . $this->tableName() . ' WHERE import = 1 AND activated=1 AND dos_bussiness_bussiness_id=:business ORDER BY created ASC');
 		$command->bindParam(":business", $businessId, PDO::PARAM_STR);
 		return $command->queryAll();
@@ -226,6 +226,11 @@ class Username extends CActiveRecord {
 		$path = '/public/userfiles/image/' . $user . '/image/';
 		$common_class = new Common();
 		$common_class->recursiveMkdir($path);
+	}
+
+	public function checkExpired($user) {
+		$command = Yii::app()->db->createCommand("SELECT DATEDIFF(CURDATE(), (SELECT expired FROM " . $this->tableName() . " WHERE username = '" . $user . "'))");
+		return $command->queryScalar();
 	}
 
 	//Back end - Change info

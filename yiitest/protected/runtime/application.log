@@ -4767,3 +4767,194 @@ Stack trace:
 REQUEST_URI=/sign.cert?ran=12596967182597361702-6485314718013887844
 HTTP_REFERER=http://www.google.co.uk/
 ---
+2012/04/12 05:54:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/12 05:55:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/12 05:55:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/12 05:56:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/12 05:57:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sign.cert".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('sign.cert')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/sign.cert?ran=12596967182597361702-6485314681983190724
+HTTP_REFERER=http://www.google.co.uk/
+---
+2012/04/12 05:57:57 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT DATEDIFF(CURDATE().
+in E:\Customers\dos.vn\svn\protected\modules\admin\controllers\PaymentController.php (24)
+in E:\Customers\dos.vn\svn\index.php (16)
+2012/04/12 05:57:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT DATEDIFF(CURDATE()' in C:\xampp\php\library\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\php\library\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 E:\Customers\dos.vn\svn\protected\modules\admin\controllers\PaymentController.php(24): CDbCommand->queryRow()
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): PaymentController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#12 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/payment')
+#13 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/admin/payment
+HTTP_REFERER=http://dos.dos.vn/admin/payment
+---
+2012/04/12 05:57:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/12 06:21:41 [error] [php] Undefined variable: row (E:\Customers\dos.vn\svn\protected\modules\admin\views\payment\index.php:1)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): PaymentController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): PaymentController->renderPartial()
+#2 E:\Customers\dos.vn\svn\protected\modules\admin\controllers\PaymentController.php(25): PaymentController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): PaymentController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): PaymentController->runAction()
+#6 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): PaymentController->filterAccessControl()
+#9 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\php\library\framework\web\CController.php(266): PaymentController->runActionWithFilters()
+#12 C:\xampp\php\library\framework\web\CWebApplication.php(276): PaymentController->run()
+#13 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\Customers\dos.vn\svn\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/payment
+in E:\Customers\dos.vn\svn\protected\modules\admin\views\payment\index.php (1)
+in E:\Customers\dos.vn\svn\protected\modules\admin\controllers\PaymentController.php (25)
+in E:\Customers\dos.vn\svn\index.php (16)
+2012/04/12 06:21:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/12 06:21:49 [error] [php] Undefined variable: row (E:\Customers\dos.vn\svn\protected\modules\admin\views\payment\index.php:2)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): PaymentController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): PaymentController->renderPartial()
+#2 E:\Customers\dos.vn\svn\protected\modules\admin\controllers\PaymentController.php(25): PaymentController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): PaymentController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): PaymentController->runAction()
+#6 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): PaymentController->filterAccessControl()
+#9 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\php\library\framework\web\CController.php(266): PaymentController->runActionWithFilters()
+#12 C:\xampp\php\library\framework\web\CWebApplication.php(276): PaymentController->run()
+#13 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\Customers\dos.vn\svn\index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/payment
+in E:\Customers\dos.vn\svn\protected\modules\admin\views\payment\index.php (2)
+in E:\Customers\dos.vn\svn\protected\modules\admin\controllers\PaymentController.php (25)
+in E:\Customers\dos.vn\svn\index.php (16)
+2012/04/12 06:21:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/12 06:27:55 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT expired FROM dos_usernames WHERE username = 'dos') AS date' at line 1. The SQL statement executed was: SELECT DATEDIFF(CURDATE(), SELECT expired FROM dos_usernames WHERE username = 'dos') AS date.
+in E:\Customers\dos.vn\svn\protected\models\Username.php (233)
+in E:\Customers\dos.vn\svn\protected\modules\admin\controllers\PaymentController.php (25)
+in E:\Customers\dos.vn\svn\index.php (16)
+2012/04/12 06:27:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT expired FROM dos_usernames WHERE username = 'dos') AS date' at line 1. The SQL statement executed was: SELECT DATEDIFF(CURDATE(), SELECT expired FROM dos_usernames WHERE username = 'dos') AS date' in C:\xampp\php\library\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\php\library\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 E:\Customers\dos.vn\svn\protected\models\Username.php(233): CDbCommand->queryScalar()
+#2 E:\Customers\dos.vn\svn\protected\modules\admin\controllers\PaymentController.php(25): Username->checkExpired('dos')
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): PaymentController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#13 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/payment')
+#14 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/payment
+HTTP_REFERER=http://dos.dos.vn/admin/payment
+---
+2012/04/12 06:27:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/12 06:29:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "error".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('error')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/error
+---
+2012/04/12 06:30:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "error".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('error')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/error
+---
+2012/04/12 06:30:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
