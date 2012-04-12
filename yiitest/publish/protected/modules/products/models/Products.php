@@ -37,11 +37,12 @@ class Products extends CActiveRecord {
 		// will receive user inputs.
 		return array(
 			array('title, content, tag, dos_module_item_cat_cat_id', 'required'),
-			array('hits, record_order, unit, hot, specials, enable, dos_module_item_cat_cat_id', 'numerical', 'integerOnly' => true),
+			array('hits, record_order, hot, specials, enable, dos_module_item_cat_cat_id', 'numerical', 'integerOnly' => true),
 			array('title, titleen, pic_thumb, pic_full, tag, tagen, extra_field1, extra_field2, extra_field3, extra_field4', 'length', 'max' => 100),
 			array('tag, tagen', 'unique'),
 			array('pic_desc', 'length', 'max' => 200),
 			array('description, descriptionen', 'length', 'max' => 250),
+			array('unit', 'length', 'max'=>45),
 			array('preview, previewen, contenten', 'safe'),
 			array('pic_thumb, pic_full, pic_desc', 'file', 'types' => 'gif,png,jpg,jpeg,icon', 'allowEmpty' => true, 'maxSize' => 1024 * 1024 * 5),
 			// The following rule is used by search().
@@ -129,7 +130,7 @@ class Products extends CActiveRecord {
 		$criteria->compare('descriptionen', $this->descriptionen, true);
 		$criteria->compare('hits', $this->hits);
 		$criteria->compare('record_order', $this->record_order);
-		$criteria->compare('unit', $this->unit);
+		$criteria->compare('unit', $this->unit, true);
 		$criteria->compare('hot', $this->hot);
 		$criteria->compare('specials', $this->specials);
 		$criteria->compare('extra_field1', $this->extra_field1, true);
