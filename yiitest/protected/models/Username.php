@@ -223,7 +223,7 @@ class Username extends CActiveRecord {
 	}
 
 	public function createFolderUser($user) {
-		$path = '/public/userfiles/images/' . $user . '/images/';
+		$path = '/public/userfiles/image/' . $user . '/image/';
 		$common_class = new Common();
 		$common_class->recursiveMkdir($path);
 	}
@@ -396,7 +396,7 @@ class Username extends CActiveRecord {
 
 		//delete forder
 		$file = new File;
-		$file->deleteFolderUser(YiiBase::getPathOfAlias('webroot') . '/public/userfiles/images/' . $user);
+		$file->deleteFolderUser(YiiBase::getPathOfAlias('webroot') . '/public/userfiles/image/' . $user);
 	}
 
 	//Back end - Active Item

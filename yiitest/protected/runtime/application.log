@@ -4691,3 +4691,61 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2012/04/12 04:25:45 [error] [php] rmdir(E:/Customers/dos.vn/svn/public/userfiles/image/thanhansoft) [<a href='function.rmdir'>function.rmdir</a>]: Directory not empty (E:\Customers\dos.vn\svn\protected\modules\administrator\components\File.php:32)
+Stack trace:
+#0 E:\Customers\dos.vn\svn\protected\models\Username.php(430): Username->deleteRecord()
+#1 E:\Customers\dos.vn\svn\protected\modules\administrator\controllers\UsernamesController.php(9): Username->activeItem()
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): UsernamesController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#4 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): UsernamesController->runAction()
+#5 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#7 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): UsernamesController->filterAccessControl()
+#8 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#9 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\xampp\php\library\framework\web\CController.php(266): UsernamesController->runActionWithFilters()
+#11 C:\xampp\php\library\framework\web\CWebApplication.php(276): UsernamesController->run()
+#12 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 E:\Customers\dos.vn\svn\index.php(16): CWebApplication->run()
+REQUEST_URI=/administrator/usernames
+in E:\Customers\dos.vn\svn\protected\modules\administrator\components\File.php (32)
+in E:\Customers\dos.vn\svn\protected\models\Username.php (399)
+in E:\Customers\dos.vn\svn\protected\models\Username.php (430)
+2012/04/12 04:25:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/12 04:27:35 [error] [php] rmdir(E:/Customers/dos.vn/svn/public/userfiles/image/thanhan) [<a href='function.rmdir'>function.rmdir</a>]: Directory not empty (E:\Customers\dos.vn\svn\protected\modules\administrator\components\File.php:32)
+Stack trace:
+#0 E:\Customers\dos.vn\svn\protected\models\Username.php(430): Username->deleteRecord()
+#1 E:\Customers\dos.vn\svn\protected\modules\administrator\controllers\UsernamesController.php(9): Username->activeItem()
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): UsernamesController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#4 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): UsernamesController->runAction()
+#5 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#7 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): UsernamesController->filterAccessControl()
+#8 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#9 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\xampp\php\library\framework\web\CController.php(266): UsernamesController->runActionWithFilters()
+#11 C:\xampp\php\library\framework\web\CWebApplication.php(276): UsernamesController->run()
+#12 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 E:\Customers\dos.vn\svn\index.php(16): CWebApplication->run()
+REQUEST_URI=/administrator/usernames
+in E:\Customers\dos.vn\svn\protected\modules\administrator\components\File.php (32)
+in E:\Customers\dos.vn\svn\protected\models\Username.php (399)
+in E:\Customers\dos.vn\svn\protected\models\Username.php (430)
+2012/04/12 04:27:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
