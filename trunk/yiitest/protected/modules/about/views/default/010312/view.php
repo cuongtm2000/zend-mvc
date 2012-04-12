@@ -4,6 +4,7 @@
 		<h1 class="title-box"><span><?php echo $item['title'.LANG] ?></span></h1>
 		<div class="frame-tent-right">
 			<?php echo $item['content'.LANG] ?>
+			<div class="clear"></div>
 		</div> <!--End frame tent right-->
 <?php else: ?>
 	<?php $this->breadcrumbs = array($this->lang[$this->module->id]=>array('/'.Yii::t('user', $this->module->id.'.link')), Yii::t('main', 'noRecord'));?>

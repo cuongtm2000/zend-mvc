@@ -78,6 +78,7 @@ a:hover{color:#000;}
 #right-content{float:left;width:525px; margin:0 0 0 15px}
 #right-content p{margin:0 0 8px 0}
 #right-content ul li, #right-content ol li{margin:0 0 0 18px}
+#right-content table{margin: auto;}
 
 .link{color:#444; font-weight:bold;margin:0 0 10px 0}
 .link img{margin:0 3px 0 0}
