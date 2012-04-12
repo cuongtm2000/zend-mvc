@@ -78,7 +78,7 @@ a:hover{color:#000;}
 #right-content{float:left;width:525px; margin:0 0 0 15px}
 #right-content p{margin:0 0 8px 0}
 #right-content ul li, #right-content ol li{margin:0 0 0 18px}
-#right-content table{margin: auto;}
+#right-content table{margin: auto;padding: auto}
 
 .link{color:#444; font-weight:bold;margin:0 0 10px 0}
 .link img{margin:0 3px 0 0}
@@ -87,7 +87,7 @@ a:hover{color:#000;}
 
 /*Frame tent right*/
 .frame-tent-right {padding:10px 10px 5px 10px;border:1px solid #F0F0F0;margin:0 0 15px 0}
-.frame-tent-right p{text-align:justify;line-height:1.5em}
+.frame-tent-right p{text-align:justify;line-height:1.6em}
 .frame-tent-right img{margin:0 10px 10px 0}
 
 /*** San pham noi bat of page index*****/
