@@ -14,7 +14,9 @@ class LoginController extends AdminController {
 				$_SESSION['KCFINDER'] = array();
 				$_SESSION['KCFINDER']['disabled'] = false;
 				$_SESSION['KCFINDER']['uploadURL'] = "/public/userfiles/image/" . Yii::app()->user->id;
-				
+				$_SESSION['KCFINDER']['maxImageWidth'] = Configs::configTemplate('max_image_width', Yii::app()->session['template']);
+				$_SESSION['KCFINDER']['maxImageHeight'] = Configs::configTemplate('max_image_height', Yii::app()->session['template']);
+
                 Yii::app()->request->redirect(Yii::app()->user->returnUrl);
             }
         }
