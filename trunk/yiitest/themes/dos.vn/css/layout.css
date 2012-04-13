@@ -125,6 +125,7 @@ p{line-height: 18px}
 .info-user li label{float: left; width:120px; font-weight: bold}
 
 /*Common*/
+.margint20{margin-top: 20px}
 .marginb50{margin-bottom: 50px}
 .marginb10{margin-bottom: 10px}
 .red, .required span{color:red}

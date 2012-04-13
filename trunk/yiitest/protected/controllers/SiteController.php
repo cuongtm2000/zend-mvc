@@ -20,13 +20,13 @@ class SiteController extends HomeController {
 		);
 	}
 
-	public function actionMsgerror($code){
+	public function actionMsgerror($code) {
 		$msg = array();
-		switch($code){
+		switch ($code) {
 			case 'expired':
 				$msg[] = 'Website đã hết hạn';
 				$msg[] = 'Website của bạn đã quá hạn, vui lòng gia hạn để được sử dụng';
-			break;
+				break;
 		}
 		$this->render('msgerror', array('data' => $msg));
 	}
@@ -54,6 +54,10 @@ class SiteController extends HomeController {
 	}
 
 	public function actionSignup() {
+		$this->pageTitle = 'Đăng ký tài khoản';
+		$this->keywords = 'Đăng ký tài khoản, chọn mẫu website, chọn module web, chọn chức năng website';
+		$this->description = 'Bạn cần điền thông tin để tạo website, chọn mẫu web phù hợp, chọn module và chức năng bạn cần';
+
 		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/signup.css');
 		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/tiptip.css');
 

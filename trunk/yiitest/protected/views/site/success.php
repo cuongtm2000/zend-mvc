@@ -18,6 +18,15 @@ Xin chúc mừng, website của bạn đã được tạo, ngay bây giờ bạn
             <label>Mẫu web:</label>
             <?php echo $info_user['dos_templates_template']?>
         </li>
+		<li class="margint20"><p><strong>Để quản lý website và thay đổi thông tin đã đăng ký bên trên, vui lòng truy cập liên kết <a href="http://<?php echo Yii::app()->session['user_registed'].'.'.$_SERVER['HTTP_HOST']?>/admin" target="_blank">http://<?php echo Yii::app()->session['user_registed'].'.'.$_SERVER['HTTP_HOST']?>/admin</a></strong></p></li>
+		<li>
+			<label>Username:</label>
+			<?php echo Yii::app()->session['user_registed']?>
+		</li>
+		<li>
+			<label>Mật khẩu:</label>
+			<i>(Mật khẩu bạn đã đăng ký)</i>
+		</li>
     </ul>
 </div>
 <div class="sign-up-heading"><h1 class="small"><span>2</span>Choose Pages &amp; Features For Your Site</h1></div>
@@ -47,6 +56,5 @@ Xin chúc mừng, website của bạn đã được tạo, ngay bây giờ bạn
 				<?php endforeach;?>
 			</div> <div class="clear"></div>
         </li>
-        <li><p><strong>Để quản lý website và thay đổi thông tin đã đăng ký bên trên, vui lòng truy cập liên kết <a href="http://<?php echo Yii::app()->session['user_registed'].'.'.$_SERVER['HTTP_HOST']?>/admin" target="_blank">http://<?php echo Yii::app()->session['user_registed'].'.'.$_SERVER['HTTP_HOST']?>/admin</a></strong></p></li>
     </ul>
 </div>
