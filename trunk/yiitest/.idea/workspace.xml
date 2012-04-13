@@ -40,7 +40,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/modules/administrator/views/usernames/index.php" />
         <option value="$PROJECT_DIR$/protected/components/DatabaseHelper.php" />
         <option value="$PROJECT_DIR$/protected/modules/administrator/controllers/ExportController.php" />
         <option value="$PROJECT_DIR$/protected/modules/products/views/default/220312/view.php" />
@@ -56,6 +55,7 @@
         <option value="$PROJECT_DIR$/protected/modules/admin/views/news/edit.php" />
         <option value="$PROJECT_DIR$/protected/modules/administrator/views/articles/edit.php" />
         <option value="$PROJECT_DIR$/protected/modules/administrator/views/articles/add.php" />
+        <option value="$PROJECT_DIR$/public/plugin/tiny_mce/themes/advanced/skins/default/content.css" />
       </list>
     </option>
   </component>
@@ -310,13 +310,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/about/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="33" selection-start="2550" selection-end="2553" vertical-scroll-proportion="-13.730769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/about/add.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="29" selection-start="2679" selection-end="2679" vertical-scroll-proportion="-18.307692">
@@ -418,6 +411,13 @@
     <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/news/addcat.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.1724138">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/plugin/tiny_mce/themes/advanced/skins/default/content.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="38" selection-start="2586" selection-end="2586" vertical-scroll-proportion="1.0237226">
           <folding />
         </state>
       </provider>
