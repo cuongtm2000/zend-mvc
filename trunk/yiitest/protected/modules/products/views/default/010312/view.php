@@ -1,5 +1,5 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id] => Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id.'.link'), $item[ucfirst($this->module->id).'Cat']['cat_title' . LANG] => '../'.$item[ucfirst($this->module->id).'Cat']['tag'.LANG], $item['title' . LANG]); ?>
-
+<?php $this->pageTitle = $item['title'.LANG]; $this->description = $item['description'.LANG];?>
 <div class="frame-tent-right">
 	<?php if($item['pic_full']): ?>
 		<div class="frame-img-info"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/<?php echo $this->module->id?>/<?php echo $item['pic_full'] ?>" alt="<?php echo $item['title'.LANG] ?>" /></div>
