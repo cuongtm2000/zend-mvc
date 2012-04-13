@@ -1,4 +1,3 @@
-<ul class="modals"><li><a href="<?php echo Yii::app()->request->baseUrl ?>/<?php echo $this->module->getName() ?>/<?php echo $this->ID ?>/add" title="Thêm mới"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/add.png" alt="Add tempalte" /><span>Add tempalte</span></a></li></ul><div class="clear"></div>
 <form name="frm" id="frm" action="" method="post">
     <input type="hidden" name="factive" value="" />
     <table>
@@ -27,6 +26,8 @@
                         <td><?php echo CHtml::link('Edit', array('edit', 'id' => $value->username)) ?></td>
                     </tr>
                     <?php $i++; endforeach; ?>
+			<?php else:?>
+					<tr><td colspan="7">Không có ma nào cả!</td></tr>
             <?php endif; ?>
         </tbody>
     </table>

@@ -111,7 +111,7 @@ class DatabaseHelper {
 		}
 	}
 
-	private function sqlQuery($str) {
+	public function sqlQuery($str) {
 		$pdo = Yii::app()->db->pdoInstance;
 		try {
 			$newStream = preg_replace_callback("/\((.*)\)/", create_function('$matches', 'return str_replace(";"," $$$ ",$matches[0]);'), $str);
