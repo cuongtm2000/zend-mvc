@@ -93,25 +93,25 @@ class DatabaseHelper {
 			$str[] = "INSERT INTO `dos_module_advs` (title, titleen, pic_thumb, url, start_date, end_date, hits, record_order, position, type, enable, dos_usernames_username) SELECT title, titleen, pic_thumb, url, start_date, end_date, hits, record_order, position, type, enable, '" . $userImport . "' FROM `dos_module_advs` WHERE dos_usernames_username = '" . $userExport . "'";
 			//dos_module_banners
 			$str[] = "INSERT INTO `dos_module_banners` (banner_name, banner_url, banner_link, banner_order, banner_type, position, enable, dos_usernames_username) SELECT banner_name, banner_url, banner_link, banner_order, banner_type, position, enable, '" . $userImport . "' FROM `dos_module_banners` WHERE dos_usernames_username = '" . $userExport . "'";
-			//dos_module_news_cat
-			$str[] = "INSERT INTO `dos_module_news_cat` (cat_parent_id, cat_title, cat_titleen, preview, previewen, tag, tagen, description, descriptionen, pic_full, cat_order, cat_extra1, cat_extra2, cat_enable, dos_usernames_username) SELECT cat_parent_id, cat_title, cat_titleen, preview, previewen, tag, tagen, description, descriptionen, pic_full, cat_order, cat_extra1, cat_extra2, cat_enable, '" . $userImport . "' FROM `dos_module_news_cat` WHERE dos_usernames_username = '" . $userExport . "'";
-			//dos_module_news
-			//$str[] = "INSERT INTO `dos_module_news` (title, titleen, pic_thumb, dos_module_news.preview, dos_module_news.previewen, content, contenten, dos_module_news.tag, dos_module_news.tagen, dos_module_news.description, dos_module_news.descriptionen, hits, record_order, hot, extra_field1, extra_field2, enable, dos_module_item_cat_cat_id) SELECT title, titleen, pic_thumb, dos_module_news.preview, dos_module_news.previewen, content, contenten, dos_module_news.tag, dos_module_news.tagen, dos_module_news.description, dos_module_news.descriptionen, hits, record_order, hot, extra_field1, extra_field2, enable, dos_module_item_cat_cat_id FROM `dos_module_news`, `dos_module_news_cat` WHERE dos_module_news.dos_module_item_cat_cat_id = dos_module_news_cat.cat_id AND dos_usernames_username = '" . $userExport . "'";
-			//dos_module_products_cat
-			$str[] = "INSERT INTO `dos_module_products_cat` (cat_parent_id, cat_title, cat_titleen, preview, previewen, tag, tagen, description, descriptionen, pic_full, pic_desc, cat_order, cat_extra1, cat_extra2, cat_enable, dos_usernames_username) SELECT cat_parent_id, cat_title, cat_titleen, preview, previewen, tag, tagen, description, descriptionen, pic_full, pic_desc, cat_order, cat_extra1, cat_extra2, cat_enable, '" . $userImport . "' FROM `dos_module_products_cat` WHERE dos_usernames_username = '" . $userExport . "'";
-			//dos_module_video_cat
-			$str[] = "INSERT INTO `dos_module_video_cat` (cat_parent_id, pic_thumb, cat_title, cat_titleen, tag, tagen, description, descriptionen, cat_order, cat_enable, dos_usernames_username) SELECT cat_parent_id, pic_thumb, cat_title, cat_titleen, tag, tagen, description, descriptionen, cat_order, cat_enable, '" . $userImport . "' FROM `dos_module_video_cat` WHERE dos_usernames_username = '" . $userExport . "'";
 
 			foreach ($str as $value) {
 				$this->sqlQuery($value);
 			}
+
+			//dos_module_products_cat & dos_module_products
+			$this->importProducts($userExport, $userImport);
+			//dos_module_news_cat & dos_module_news
+			$this->importNews($userExport, $userImport);
+			//dos_module_video_cat & dos_module_video
+			$this->importVideo($userExport, $userImport);
+
 			//copy file
 			$myfile = Yii::app()->file->set('public/userfiles/image/' . $userExport, true);
 			$myfile->copy($userImport);
 		}
 	}
 
-	public function sqlQuery($str) {
+	private function sqlQuery($str) {
 		$pdo = Yii::app()->db->pdoInstance;
 		try {
 			$newStream = preg_replace_callback("/\((.*)\)/", create_function('$matches', 'return str_replace(";"," $$$ ",$matches[0]);'), $str);
@@ -127,6 +127,48 @@ class DatabaseHelper {
 		} catch (PDOException $e) {
 			echo $e->getMessage();
 			exit;
+		}
+	}
+
+	private function importProducts($userExport, $userImport) {
+		$str = "SELECT cat_id, cat_parent_id, cat_title, cat_titleen, preview, previewen, tag, tagen, description, descriptionen, pic_full, pic_desc, cat_order, cat_extra1, cat_extra2, cat_enable FROM `dos_module_products_cat` WHERE dos_usernames_username = '" . $userExport . "'";
+		$command = Yii::app()->db->createCommand($str);
+		$rows = $command->queryAll();
+
+		foreach ($rows as $row) {
+			$sql = "INSERT INTO `dos_module_products_cat` (cat_parent_id, cat_title, cat_titleen, preview, previewen, tag, tagen, description, descriptionen, pic_full, pic_desc, cat_order, cat_extra1, cat_extra2, cat_enable, dos_usernames_username) VALUE('" . $row['cat_parent_id'] . "', '" . $row['cat_title'] . "', '" . $row['cat_titleen'] . "', '" . $row['preview'] . "', '" . $row['previewen'] . "', '" . $row['tag'] . "', '" . $row['tagen'] . "', '" . $row['description'] . "', '" . $row['descriptionen'] . "', '" . $row['pic_full'] . "', '" . $row['pic_desc'] . "', '" . $row['cat_order'] . "', '" . $row['cat_extra1'] . "', '" . $row['cat_extra2'] . "', '" . $row['cat_enable'] . "', '" . $userImport . "')";
+			$this->sqlQuery($sql);
+
+			$str = "INSERT INTO `dos_module_products` (title, titleen, pic_thumb, pic_full, pic_desc, preview, previewen, content, contenten, tag, tagen, description, descriptionen, hits, record_order, unit, hot, specials, extra_field1, extra_field2, extra_field3, extra_field4, enable, dos_module_item_cat_cat_id) SELECT title, titleen, pic_thumb, pic_full, pic_desc, preview, previewen, content, contenten, tag, tagen, description, descriptionen, hits, record_order, unit, hot, specials, extra_field1, extra_field2, extra_field3, extra_field4, enable, " . Yii::app()->db->getLastInsertId() . " FROM `dos_module_products` WHERE dos_module_item_cat_cat_id = " . $row['cat_id'];
+			$this->sqlQuery($str);
+		}
+	}
+
+	private function importNews($userExport, $userImport) {
+		$str = "SELECT cat_id, cat_parent_id, cat_title, cat_titleen, preview, previewen, tag, tagen, description, descriptionen, pic_full, cat_order, cat_extra1, cat_extra2, cat_enable FROM `dos_module_news_cat` WHERE dos_usernames_username = '" . $userExport . "'";
+		$command = Yii::app()->db->createCommand($str);
+		$rows = $command->queryAll();
+
+		foreach ($rows as $row) {
+			$sql = "INSERT INTO `dos_module_news_cat` (cat_parent_id, cat_title, cat_titleen, preview, previewen, tag, tagen, description, descriptionen, pic_full, cat_order, cat_extra1, cat_extra2, cat_enable, dos_usernames_username) VALUE('" . $row['cat_parent_id'] . "', '" . $row['cat_title'] . "', '" . $row['cat_titleen'] . "', '" . $row['preview'] . "', '" . $row['previewen'] . "', '" . $row['tag'] . "', '" . $row['tagen'] . "', '" . $row['description'] . "', '" . $row['descriptionen'] . "', '" . $row['pic_full'] . "', '" . $row['cat_order'] . "', '" . $row['cat_extra1'] . "', '" . $row['cat_extra2'] . "', '" . $row['cat_enable'] . "', '" . $userImport . "')";
+			$this->sqlQuery($sql);
+
+			$str = "INSERT INTO `dos_module_news` (title, titleen, pic_thumb, preview, previewen, content, contenten, tag, tagen, description, descriptionen, hits, record_order, hot, extra_field1, extra_field2, enable, dos_module_item_cat_cat_id) SELECT title, titleen, pic_thumb, preview, previewen, content, contenten, tag, tagen, description, descriptionen, hits, record_order, hot, extra_field1, extra_field2, enable, " . Yii::app()->db->getLastInsertId() . " FROM `dos_module_news` WHERE dos_module_item_cat_cat_id = " . $row['cat_id'];
+			$this->sqlQuery($str);
+		}
+	}
+
+	private function importVideo($userExport, $userImport) {
+		$str = "SELECT cat_id, cat_parent_id, pic_thumb, cat_title, cat_titleen, tag, tagen, description, descriptionen, cat_order, cat_enable FROM `dos_module_video_cat` WHERE dos_usernames_username = '" . $userExport . "'";
+		$command = Yii::app()->db->createCommand($str);
+		$rows = $command->queryAll();
+
+		foreach ($rows as $row) {
+			$sql = "INSERT INTO `dos_module_video_cat` (cat_parent_id, pic_thumb, cat_title, cat_titleen, tag, tagen, description, descriptionen, cat_order, cat_enable, dos_usernames_username) VALUE('" . $row['cat_parent_id'] . "', '" . $row['pic_thumb'] . "', '" . $row['cat_title'] . "', '" . $row['cat_titleen'] . "', '" . $row['tag'] . "', '" . $row['tagen'] . "', '" . $row['description'] . "', '" . $row['descriptionen'] . "', '" . $row['cat_order'] . "', '" . $row['cat_enable'] . "', '" . $userImport . "')";
+			$this->sqlQuery($sql);
+
+			$str = "INSERT INTO `dos_module_video` (title, titleen, tag, tagen, description, descriptionen, pic_thumb, url, record_order, hits, extra_field1, extra_field2, hot, enable, dos_module_item_cat_cat_id) SELECT title, titleen, tag, tagen, description, descriptionen, pic_thumb, url, record_order, hits, extra_field1, extra_field2, hot, enable, " . Yii::app()->db->getLastInsertId() . " FROM `dos_module_video` WHERE dos_module_item_cat_cat_id = " . $row['cat_id'];
+			$this->sqlQuery($str);
 		}
 	}
 }
