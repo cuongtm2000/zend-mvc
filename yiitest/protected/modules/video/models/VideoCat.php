@@ -162,7 +162,7 @@ class VideoCat extends CActiveRecord {
 			//check file old and upload
 			if ($_FILES[ucfirst(Yii::app()->controller->id) . 'Cat']['name']['pic_thumb']) {
 				Yii::import('ext.EUploadedImage.EUploadedImage');
-				$this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumbl')->processUpload(Configs::configTemplate(Yii::app()->controller->id . '_cat_width', Yii::app()->session['template']), Configs::configTemplate(Yii::app()->controller->id . '_cat_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id . 'Cat', $this->cat_title, $this->_oldImage_thumb);
+				$this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload(Configs::configTemplate(Yii::app()->controller->id . '_cat_width', Yii::app()->session['template']), Configs::configTemplate(Yii::app()->controller->id . '_cat_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id . 'Cat', $this->cat_title, $this->_oldImage_thumb);
 			} else {
 				//remove picthumb
 				if (isset($_POST[ucfirst(Yii::app()->controller->id) . 'Cat']['remove_pic_thumb']) && $_POST[ucfirst(Yii::app()->controller->id) . 'Cat']['remove_pic_thumb'] == 1) {

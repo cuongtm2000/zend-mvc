@@ -74,14 +74,9 @@
 	margin-top:5px;
 }
 
-
 #mbPrevLink, #mbNextLink{ width:63px; height:32px}
 #mbPrevLink{ background: url(../images/btn-next.gif) no-repeat ;position:absolute; left:0; top:170px}/* IMAGE: prev */
 #mbNextLink{ background: url(../images/btn-prev.gif) no-repeat;position:absolute; right:0; top:170px}/* IMAGE: next */
-
-#mbPlayPause{ width:13px; }
-#mbPlayPause{ background: transparent url(play-pause.gif) no-repeat; }/* IMAGE: prev */
-
 
 #mbCloseLink {
 	width:17px;

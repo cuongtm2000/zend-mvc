@@ -73,7 +73,8 @@ a:hover{color:#000;}
 /*RIGHT Content*/
 #rightcontent{ float:right; width:710px}
 #rightcontent p{margin:0 0 8px 0}
-#rightcontent ul li, #rightcontent ol li{margin:0 0 0 18px}
+#rightcontent ul li, #rightcontent ol li{margin: 0 0 0 40px}
+#rightcontent ul ,#rightcontent ol{margin: 0 0 12px 0}
 
 .title-right{text-transform: uppercase; color:#FFF; background:url(../images/bg-title-right.gif) repeat-x; margin:0 0 5px 0;padding:14px 0 14px 0; font-weight:bold;-webkit-border-radius:2px;-moz-border-radius:2px}
 .title-right span{padding:0 0 0 15px}
@@ -120,7 +121,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .scroll-interval .name a{ color:#fefefe; line-height:1.25em; font-size:12px; font-weight:normal}
 .scroll-interval .name a:hover{ color:#fefefe; text-decoration:underline; }
 .txt_area{border:1px solid #e9e6e6;width:160px; background:#FFF;height:160px; margin:0px 0px 0 0px !important}
-.img-pro-hot{display: table-cell;vertical-align: middle; height: 160px}
+.img-pro-hot{display: table-cell;vertical-align: middle; height: 160px;width:160px;text-align: center}
 .carouse2{ margin:17px 0 0 22px;width:660px !important }
 .part {display:none;position:absolute;bottom:0; width:160px;  background:url(../images/bg-name-1.gif) repeat-x; height:51px;color:#FFF;}
 
@@ -142,7 +143,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 
 /*Products*/
 .frame-all-productt{}
-.addproduct{list-style:none; padding:10px 0 0 0 }
+.allproduct{list-style:none; padding:10px 0 0 0;margin: 0 !important }
 .product{padding:10px 0; text-align:center; margin:0 2px 15px 3px !important; background:#FAFAFA;width:170px; display:inline-block; vertical-align:text-top; *_float:left; *_height:270px}
 .tent-product{padding:0 5px}
 .product-img{border:1px solid #E9E8E8;width:160px; height:160px; display:table-cell; vertical-align:middle; text-align:center;}
@@ -196,8 +197,8 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .errorSummary ul li{padding:2px 0; color: red}
 
 /*   Page New  */
-.masuring{text-align:justify;font-size:10pt;list-style:none}
-.masuring li{margin:0 0 5px 0 !important }
+.masuring{text-align:justify;font-size:10pt;list-style:none;margin: 0 !important;}
+.masuring li{margin:0 0 10px 0 !important}
 .masuring p{line-height:1.4em}
 .frame-img{float:left;width:143px;margin:0 10px 5px 0}
 .title-masuring{margin:0 0 5px 0}
@@ -205,7 +206,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .title-masuring a:hover{color:#F90}
 
 .frame-new{margin:30px 0 0 0}
-.sub-new{padding:5px 0 5px 25px; background:#F6F6F6;}
+.sub-new{padding:5px 0 5px 0px; background:#F6F6F6;margin: 0 !important}
 .sub-new li{padding:3px 0;color: #333}
 .sub-new a{color:#208FFF;display: block;font-size: 10pt}
 .sub-new a:hover{color:#F00}
