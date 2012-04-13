@@ -1,4 +1,5 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id] => LANGURL . '/' . Yii::t('user', $this->module->id.'.link'), $item->ProductsCat->cat_title . LANG => '../'.$item->ProductsCat->tag, $item['title' . LANG]); ?>
+<?php $this->pageTitle = $item['title'.LANG]; $this->description = $item['description'.LANG];?>
 
 <div class="frame-tent-right">
 	<div class="frame-pro-info">
