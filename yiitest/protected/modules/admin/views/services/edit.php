@@ -47,7 +47,7 @@
 				 //theme_advanced_statusbar_location : "bottom",
 				 theme_advanced_resizing : true,
 				 width : "100%",
-				 height: "250"
+				 height: "300"
 			 });
 		</script>
     </div>
