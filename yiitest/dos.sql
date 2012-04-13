@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 13, 2012 at 04:57 AM
+-- Generation Time: Apr 14, 2012 at 12:36 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -75,16 +75,18 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('advs_left_height', 200, '', '070312'),
 ('advs_left_height', 200, '', '111120'),
 ('advs_left_height', 200, '', '200312'),
-('advs_left_height', 200, '', '220312'),
+('advs_left_height', 190, '', '220312'),
 ('advs_left_height', 200, '', '260312'),
 ('advs_left_width', 190, '', '010312'),
 ('advs_left_width', 196, '', '070312'),
 ('advs_left_width', 224, '', '111120'),
 ('advs_left_width', 200, '', '200312'),
-('advs_left_width', 200, '', '220312'),
+('advs_left_width', 190, '', '220312'),
 ('advs_left_width', 210, '', '260312'),
 ('advs_right_height', 190, '', '010312'),
+('advs_right_height', 190, '', '220312'),
 ('advs_right_width', 190, '', '010312'),
+('advs_right_width', 190, '', '220312'),
 ('banner_height', 332, '', '010312'),
 ('banner_height', 324, '', '070312'),
 ('banner_height', 297, '', '111120'),
@@ -113,8 +115,14 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('logo_width', 314, '', '200312'),
 ('logo_width', 259, '', '220312'),
 ('logo_width', 300, '', '260312'),
-('max_image_height', 913, '', '260312'),
-('max_image_width', 685, '', '260312'),
+('max_image_height', 667, '', '010312'),
+('max_image_height', 600, '', '200312'),
+('max_image_height', 500, '', '220312'),
+('max_image_height', 450, '', '260312'),
+('max_image_width', 500, '', '010312'),
+('max_image_width', 450, '', '200312'),
+('max_image_width', 667, '', '220312'),
+('max_image_width', 600, '', '260312'),
 ('news_cat_height', 89, '', '010312'),
 ('news_cat_height', 89, '', '200312'),
 ('news_cat_height', 89, '', '260312'),
@@ -220,8 +228,10 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_num_paging_cat', 4, '', '010312'),
 ('video_num_paging_cat', 8, '', '200312'),
 ('video_num_paging_cat', 2, '', '220312'),
+('video_num_paging_index', 4, '', '010312'),
 ('video_num_paging_index', 8, '', '200312'),
 ('video_num_paging_index', 2, '', '220312'),
+('video_width_thumb', 115, '', '010312'),
 ('video_width_thumb', 200, '', '220312');
 
 -- --------------------------------------------------------
@@ -414,28 +424,37 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('about', 'dos'),
 ('about', 'mayphotocopysieuviet'),
 ('about', 'phumyan'),
+('about', 'tinhungphat'),
 ('advs', 'dos'),
 ('advs', 'mayphotocopysieuviet'),
 ('advs', 'phumyan'),
+('advs', 'tinhungphat'),
 ('banner', 'dos'),
 ('banner', 'mayphotocopysieuviet'),
 ('banner', 'phumyan'),
+('banner', 'tinhungphat'),
 ('contact', 'dos'),
 ('contact', 'mayphotocopysieuviet'),
 ('contact', 'phumyan'),
+('contact', 'tinhungphat'),
 ('news', 'dos'),
 ('news', 'mayphotocopysieuviet'),
 ('news', 'phumyan'),
+('news', 'tinhungphat'),
 ('products', 'dos'),
 ('products', 'mayphotocopysieuviet'),
 ('products', 'phumyan'),
+('products', 'tinhungphat'),
 ('services', 'dos'),
 ('services', 'mayphotocopysieuviet'),
 ('services', 'phumyan'),
+('services', 'tinhungphat'),
 ('supports', 'dos'),
 ('supports', 'mayphotocopysieuviet'),
 ('supports', 'phumyan'),
-('video', 'phumyan');
+('supports', 'tinhungphat'),
+('video', 'phumyan'),
+('video', 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -464,7 +483,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=46 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=48 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
@@ -474,9 +493,11 @@ INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `co
 (6, 'Về Dos.vn', 'Dos.vn about', '<p>\r\n	Kính gửi: <strong>Quý Doanh nghiệp</strong></p>\r\n<p style="margin-left:40px;">\r\n	<strong>DOS</strong> là công ty chuyên nghiệp trong việc <strong>Thiết kế Website</strong>. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng.</p>\r\n<p style="margin-left:40px;">\r\n	Với tiêu chí "Giao diện đẹp, tính năng nhiều, giá thành thấp". Qua 5 năm thiết kế Web, sản phẩm của chúng tôi được các Doanh nghiệp đánh giá cao. Chúng tôi có bề dày kinh nghiệm, có giải pháp và đội ngũ nhân lực tâm huyết để đảm bảo sản phẩm đáp ứng đúng nhu cầu, đem lại hiệu quả, với chi phí phù hợp.</p>\r\n<p style="margin-left:40px;">\r\n	Không ngừng học hỏi và phát triển công nghệ. <strong>DOS</strong> trở thành một công ty thiết kế Web tiên phong về chất lượng, có sản phẩm tiêu biểu, có thương hiệu uy tín trong và ngoài nước.</p>\r\n<p style="margin-left:40px;">\r\n	<strong>DOS</strong> thiết kế và cung cấp giải pháp Web trên đến các đơn vị: <strong>UBND Tân phú</strong>, <strong>SONADEZI</strong>, <strong>BENCO</strong>, <strong>Gạch Ngói Nhị Hiệp</strong>, <strong>An Gia Phú</strong>, <strong>Nội Thất Yến Bình Minh</strong>, <strong>Thuận Thành Glass</strong>, <strong>Thái Sơn</strong>, <strong>Thái Bình An Phú Thịnh...</strong></p>\r\n<p style="margin-left:40px;">\r\n	Tại Việt Nam, Sản phẩm <strong>DOS</strong> được giới thiệu tại các Công ty thiết kế in ấn, ở hầu hết các Trung Tâm tỉnh thành trên toàn quốc .</p>', '<p>\r\n	Kính gửi: Quý Doanh nghiệp<br />\r\n	      <br />\r\n	           DOS là công ty chuyên nghiệp trong việc Thiết kế Website. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng.<br />\r\n	          Với tiêu chí "Giao diện đẹp, tính năng nhiều, giá thành thấp". Qua 5 năm thiết kế Web, sản phẩm của chúng tôi được các Doanh nghiệp đánh giá cao. Chúng tôi có bề dày kinh nghiệm, có giải pháp và đội ngũ nhân lực tâm huyết để đảm bảo sản phẩm đáp ứng đúng nhu cầu, đem lại hiệu quả, với chi phí phù hợp.</p>\r\n<p>\r\n	          Không ngừng học hỏi và phát triển công nghệ. DOS trở thành một công ty thiết kế Web tiên phong về chất lượng, có sản phẩm tiêu biểu, có thương hiệu uy tín trong và ngoài nước.<br />\r\n	          DOS thiết kế và cung cấp giải pháp Web trên đến các đơn vị: UBND Tân phú, SONADEZI, BENCO, Gạch Ngói Nhị Hiệp, An Gia Phú, Nội Thất Yến Bình Minh, Thuận Thành Glass, Thái Sơn, Thái Bình An Phú Thịnh...</p>\r\n<p>\r\n	          Tại Việt Nam, Sản phẩm DOS được giới thiệu tại các Công ty thiết kế in ấn, ở hầu hết các Trung Tâm tỉnh thành trên toàn quốc .</p>', 75, '2012-04-07 02:13:52', 1, 0, NULL, NULL, 've-dos', 'dos-about', 'DOS là công ty chuyên nghiệp trong việc Thiết kế Website. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng', 'DOS là công ty chuyên nghiệp trong việc Thiết kế Website. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng', 1, 'dos'),
 (7, 'Tầm nhìn và sứ mệnh Dos', 'Gioi thieu 2 En', '<p>\r\n	Tầm nhìn và Sứ mệnh của DOS được viết ra ngay từ khi thành lập, xác định lý tưởng, hướng đi lâu dài và những giá trị cơ bản mà mỗi thành viên sáng lập luôn hướng tới.</p>\r\n<p>\r\n	<strong>Tầm nhìn của DOS</strong><br />\r\n	Được công nhận là công ty đứng đầu trong lĩnh vực thiết kế Website. Với giải pháp tích hợp Marketing và Công Nghệ Thông Tin trong việc quảng cáo bán hàng dành riêng cho từng Doanh nghiệp.</p>\r\n<p>\r\n	<strong>Sứ mệnh của DOS</strong><br />\r\n	Mang lại cho Doanh nghiệp một kênh truyền thông nhanh chóng và hiệu quả qua những Website đầy tính sáng tạo.</p>\r\n<p>\r\n	<strong>Các giá trị cơ bản của DOS c</strong>ác giá trị cơ bản là tài sản vô cùng quý báu mà mỗi người thành viên của DOS đều trân trọng giữ gìn:</p>\r\n<ul><li>\r\n		<strong>Làm khách hàng hài lòng</strong>: Tận tuỵ với khách hàng và luôn phấn đấu để đáp ứng tốt nhất những nhu cầu, vượt trên mong đợi của họ.</li>\r\n	<li>\r\n		<strong>Con người là cốt lõi</strong>: Tôn trọng con người, tạo điều kiện cho các thành viên phát triển tối đa tài năng, đóng góp cho tổ chức và được đãi ngộ xứng đáng cả về vật chất và tinh thần.</li>\r\n	<li>\r\n		<strong>Chất lượng tốt nhất</strong>: Đảm bảo chất lượng tốt nhất trong mỗi sản phẩm, mỗi việc làm.</li>\r\n	<li>\r\n		<strong>Đề cao đạo đức kinh doanh</strong>: Mỗi nhân viên là một đại diện của Công ty, có nghĩa vụ tuân thủ đạo đức kinh doanh cao nhất, luôn hợp tác, cởi mở và thân thiện với đồng nghiệp, đóng góp cho cộng đồng và xã hội.</li>\r\n</ul>', '<p>\r\n	NOi dung en</p>', 45, '2012-04-07 02:14:02', 2, 0, NULL, NULL, 'tam-nhin-va-su-menh-dos', 'gioi-thieu-2-en', 'Tầm nhìn và Sứ mệnh của DOS được viết ra ngay từ khi thành lập, xác định lý tưởng, hướng đi lâu dài và những giá trị cơ bản mà mỗi thành viên sáng lập luôn hướng tới', 'Mo ta 2 En', 1, 'dos'),
 (8, 'Lĩnh vực hoạt động', 'Gioi thieu 3 En', '<p>\r\n	<strong>DỊCH VỤ CHUYÊN NGHIỆP</strong>:</p>\r\n<ul><li>\r\n		Thiết kế website</li>\r\n	<li>\r\n		Phương pháp quảng cáo bán hàng trực tuyến</li>\r\n	<li>\r\n		Giải pháp CNTT trọn gói cho Doanh nghiệp</li>\r\n	<li>\r\n		Thương mại điện tử</li>\r\n</ul><p>\r\n	 </p>\r\n<p>\r\n	<strong>SẢN PHẨM VÀ DỊCH VỤ GTGT:</strong></p>\r\n<ul><li>\r\n		Đăng ký tên miền</li>\r\n	<li>\r\n		Cung cấp Hosting</li>\r\n	<li>\r\n		Xử lý hình ảnh nhập liệu cho web</li>\r\n	<li>\r\n		Thiết kế Logo</li>\r\n	<li>\r\n		Thiết Kế Name Card</li>\r\n	<li>\r\n		Thiết kế ấn phầm Quảng cáo theo đơn đặt hàng</li>\r\n</ul><p>\r\n	 </p>\r\n<p>\r\n	<strong>HỖ TRỢ TƯ VẤN MIỄN PHÍ:</strong></p>\r\n<ul><li>\r\n		Thành lập Doanh nghiệp</li>\r\n	<li>\r\n		Quản lý Doanh nghiệp</li>\r\n	<li>\r\n		Tư vấn Marketing và phát triển Doanh nghiệp</li>\r\n	<li>\r\n		Tư vấn và định hướng đào tạo nhân viên bán hàng</li>\r\n	<li>\r\n		Tư vấn phong thủy</li>\r\n</ul>', '<p>\r\n	Noi dung 3 en</p>', 32, '2012-04-07 02:14:12', 3, 0, NULL, NULL, 'linh-vuc-hoat-dong', 'gioi-thieu-3-en', 'Mo ta 3', 'Mo ta 3 En', 1, 'dos'),
-(43, 'Giới thiệu chung', '', '<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong>Siêu Việt</strong></span><span style="color:#000000;"> là một trong những công ty hàng đầu chuyên cung cấp các thiết bị và giải pháp toàn diện trong lĩnh vực Giải pháp máy văn phòng.</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">Công ty được thành lập với tiêu chí cung cấp sỉ và lẻ tất cả các thiết bị văn phòng cho các đại lý trên khắp Việt Nam .</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">Tận dụng và phát huy năng lực, kinh nghiệm trong lĩnh vực thiết bị văn phòng cùng với sự hỗ trợ của các thương hiệu nổi tiếng thế giới như Toshiba, Panasonic, Canon, Ricoh, Konica Minolta, Xerox... và trong lĩnh vực tin học như Intel, Seagate, Samsung, Asus, Dell, Ibm, Acer ...chúng tôi mong muốn và quyết tâm để trờ thành nhà cung cấp lớn và uy tín nhất trong lĩnh vực văn phòng tại Việt Nam.</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">Dịch vụ hỗ trợ khách hàng: Chúng tôi có một đội ngũ kỹ sư có chuyên môn cao, kỹ thuật viên uy tín lâu năm kinh nghiệm trong các lĩnh vực:</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Tư vấn, thực hiện các Giải Pháp về Máy Photocopy, Máy Fax, Máy In ...</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Kinh doanh và cho thuê Máy Văn Phòng </span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Máy Photocopy in kỹ thuật số khổ lớn A0, Máy In Siêu Tốc 130 bản/phút</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Máy in Công nghiệp, Máy in Màu Offset</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Hỗ trợ kỹ thuật cho các dịch vụ Photocopy</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Phân phối Sỉ &amp; Lẻ Máy Photocopy hàng nhập khẩu</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Cung cấp Mực, Linh Kiện, Vật Tư với giá ưu đãi</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Nhận đào tạo Kỹ Thuật Viên sửa chữa máy Photocopy, In, Fax</span></p>\n<p style="text-align:justify;"><span style="color:#000000;"><span style="color:#008000;font-size:medium;"><strong>Siêu Việt</strong> </span>đáp ứng mọi nhu cầu, lựa chọn từ quý khách.</span></p>\n<p style="text-align:justify;"><span style="color:#000000;"> </span></p>\n<p style="text-align:center;"><span style="color:#ff0000;font-size:medium;"><strong><em>Tiêu chí kinh doanh trong lĩnh vực dịch vụ của chúng tôi</em></strong></span><br /><span style="color:#ff0000;font-size:medium;"><strong><em>“Hãy để <span style="color:#008000;">Siêu Việt</span> chăm sóc văn phòng bạn”</em></strong></span></p>', '', 46, '2012-04-12 01:25:59', 1, 1, NULL, NULL, 'gioi-thieu-chung', '', 'Siêu Việt', '', 1, 'mayphotocopysieuviet'),
-(44, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 27, '2012-04-12 01:57:36', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', '', '', 1, 'phumyan'),
-(45, 'Giấy chứng nhận đại lý', '', '<p><img style="margin-left:auto;margin-right:auto;" title="Giấy chung nhan" src="/public/userfiles/image/mayphotocopysieuviet/image/Nho-Chungnhan_HP.jpg" alt="sieu viet" width="450" height="651" /></p>', '', 4, '2012-04-12 02:49:22', 2, 0, NULL, NULL, 'giay-chung-nhan-dai-ly', '', '', '', 1, 'mayphotocopysieuviet');
+(43, 'Giới thiệu chung', '', '<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong>Siêu Việt</strong></span><span style="color:#000000;"> là một trong những công ty hàng đầu chuyên cung cấp các thiết bị và giải pháp toàn diện trong lĩnh vực Giải pháp máy văn phòng.</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">Công ty được thành lập với tiêu chí cung cấp sỉ và lẻ tất cả các thiết bị văn phòng cho các đại lý trên khắp Việt Nam .</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">Tận dụng và phát huy năng lực, kinh nghiệm trong lĩnh vực thiết bị văn phòng cùng với sự hỗ trợ của các thương hiệu nổi tiếng thế giới như Toshiba, Panasonic, Canon, Ricoh, Konica Minolta, Xerox... và trong lĩnh vực tin học như Intel, Seagate, Samsung, Asus, Dell, Ibm, Acer ...chúng tôi mong muốn và quyết tâm để trờ thành nhà cung cấp lớn và uy tín nhất trong lĩnh vực văn phòng tại Việt Nam.</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">Dịch vụ hỗ trợ khách hàng: Chúng tôi có một đội ngũ kỹ sư có chuyên môn cao, kỹ thuật viên uy tín lâu năm kinh nghiệm trong các lĩnh vực:</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Tư vấn, thực hiện các Giải Pháp về Máy Photocopy, Máy Fax, Máy In ...</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Kinh doanh và cho thuê Máy Văn Phòng </span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Máy Photocopy in kỹ thuật số khổ lớn A0, Máy In Siêu Tốc 130 bản/phút</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Máy in Công nghiệp, Máy in Màu Offset</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Hỗ trợ kỹ thuật cho các dịch vụ Photocopy</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Phân phối Sỉ &amp; Lẻ Máy Photocopy hàng nhập khẩu</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Cung cấp Mực, Linh Kiện, Vật Tư với giá ưu đãi</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Nhận đào tạo Kỹ Thuật Viên sửa chữa máy Photocopy, In, Fax</span></p>\n<p style="text-align:justify;"><span style="color:#000000;"><span style="color:#008000;font-size:medium;"><strong>Siêu Việt</strong> </span>đáp ứng mọi nhu cầu, lựa chọn từ quý khách.</span></p>\n<p style="text-align:justify;"><span style="color:#000000;"> </span></p>\n<p style="text-align:center;"><span style="color:#ff0000;font-size:medium;"><strong><em>Tiêu chí kinh doanh trong lĩnh vực dịch vụ của chúng tôi</em></strong></span><br /><span style="color:#ff0000;font-size:medium;"><strong><em>“Hãy để <span style="color:#008000;">Siêu Việt</span> chăm sóc văn phòng bạn”</em></strong></span></p>', '', 49, '2012-04-12 01:25:59', 1, 1, NULL, NULL, 'gioi-thieu-chung', '', 'Siêu Việt', '', 1, 'mayphotocopysieuviet'),
+(44, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 45, '2012-04-12 01:57:36', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', '', '', 1, 'phumyan'),
+(45, 'Giấy chứng nhận đại lý', '', '<p><img style="margin-left:auto;margin-right:auto;" title="Giấy chung nhan" src="/public/userfiles/image/mayphotocopysieuviet/image/Nho-Chungnhan_HP.jpg" alt="sieu viet" width="450" height="651" /></p>', '', 4, '2012-04-12 02:49:22', 2, 0, NULL, NULL, 'giay-chung-nhan-dai-ly', '', '', '', 1, 'mayphotocopysieuviet'),
+(46, 'Giới thiệu chung chung', '', '<p>Giới thiệu chung chung Giới thiệu chung chung  Giới thiệu chung chung</p>', '', 2, '2012-04-13 03:18:30', 2, 0, NULL, NULL, 'gioi-thieu-chung-chung', '', 'Giới thiệu chung chung', '', 1, 'phumyan'),
+(47, 'Giới thiệu thị trường nội thất', '', '<p>Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất</p>', '', 4, '2012-04-13 03:19:10', 3, 0, NULL, NULL, 'gioi-thieu-thi-truong-noi-that', '', 'Giới thiệu thị trường nội thất', '', 1, 'phumyan');
 
 -- --------------------------------------------------------
 
@@ -501,7 +522,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `dos_module_advs`
@@ -515,7 +536,8 @@ INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `ur
 (10, 'toshiba', NULL, 'toshiba.jpeg', 'http://dos.vn/', '2012-04-12 02:51:09', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 2, 'right', '_bank', 1, 'mayphotocopysieuviet'),
 (11, 'Panasonic', NULL, 'panasonic.jpeg', 'http://dos.vn/', '2012-04-12 02:51:56', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 4, 'right', '_bank', 1, 'mayphotocopysieuviet'),
 (12, 'Canon', NULL, 'canon.jpeg', 'http://dos.vn/', '2012-04-12 02:52:19', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 5, 'right', '_bank', 1, 'mayphotocopysieuviet'),
-(13, 'Xerok', NULL, 'xerok.jpeg', 'http://dos.vn/', '2012-04-12 02:52:59', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 3, 'right', '_bank', 1, 'mayphotocopysieuviet');
+(13, 'Xerok', NULL, 'xerok.jpeg', 'http://dos.vn/', '2012-04-12 02:52:59', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 3, 'right', '_bank', 1, 'mayphotocopysieuviet'),
+(14, 'Pa nội thất', NULL, 'pa-noi-that.jpg', 'http://dantri.com.vn', '2012-04-13 03:04:28', '2012-04-12 16:00:00', '2012-04-26 16:00:00', 0, 3, 'right', '_bank', 1, 'phumyan');
 
 -- --------------------------------------------------------
 
@@ -654,7 +676,14 @@ INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `
 ('Dịch vụ', NULL, 'services', NULL, 4, NULL, NULL, NULL, NULL, 'phumyan'),
 ('Tin tức & sự kiện', NULL, 'news', NULL, 5, NULL, NULL, NULL, NULL, 'phumyan'),
 ('Video', NULL, 'video', NULL, 6, NULL, NULL, NULL, NULL, 'phumyan'),
-('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'phumyan');
+('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'phumyan'),
+('Trang chủ', NULL, 'default', NULL, 1, NULL, NULL, NULL, NULL, 'tinhungphat'),
+('Giới thiệu', NULL, 'about', NULL, 2, NULL, NULL, NULL, NULL, 'tinhungphat'),
+('Sản phẩm', NULL, 'products', NULL, 3, NULL, NULL, NULL, NULL, 'tinhungphat'),
+('Dịch vụ', NULL, 'services', NULL, 4, NULL, NULL, NULL, NULL, 'tinhungphat'),
+('Tin tức & sự kiện', NULL, 'news', NULL, 5, NULL, NULL, NULL, NULL, 'tinhungphat'),
+('Video', NULL, 'video', NULL, 6, NULL, NULL, NULL, NULL, 'tinhungphat'),
+('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -685,14 +714,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `dos_module_news`
 --
 
 INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(13, '6 mẹo chọn ghế sofa hoàn hảo', '', '2012-04-12 02:12:11', '6-meo-chon-ghe-sofa-hoan-hao.jpg', '<p>Việc chọn một bộ sofa dường như không phải là một công việc dễ dàng khi phong cách, hình dạng, màu sắc, và giá cả của các bộ sofa này rất đa dạng.</p>', '', '<p>Để tiết kiệm thời gian, tiền bạc và công sức, bạn có thể tham khảo một số mẹo sau trước khi lựa chọn một bộ sofa phù hợp cho không gian nhà.</p>\n<p>1. Xác định kích thước</p>\n<p>Nếu phòng khách nhà bạn có diện tích lớn, bạn cần quyết định xem bạn muốn kê bao nhiêu chiếc ghế. Bạn có muốn dùng đi-văng hay ghế bành? Bàn nhỏ kiểu bàn cà phê liệu có cần thiết cho không gian nhà bạn? Nếu câu trả lời là có thì một bộ sofa đơn giản, hình chữ L có lẽ là lựa chọn phù hợp nhất. Trong trường hợp bạn muốn bộ sofa là điểm nhấn của phòng khách thì bạn cần đến một chiếc đi-văng đủ lớn và nhiều chỗ ngồi.</p>\n<p>Chú ý đến kích thước ghế</p>\n<p>Nếu không gian nhà bạn khiêm tốn, thì hẳn là bạn cần một chiếc trường kỷ nhỏ hơn.</p>\n<p>2. Quyết định hướng kê sofa</p>\n<p>Bạn cần định hình trước sofa sẽ được sắp xếp thế nào? Kê sofa để xem TV, để gia đình quây quần tụ họp, chơi trò chơi? Bạn có thể kê sofa tạo thành vòng tròn, hoặc nửa vòng tròn, lấy bàn làm trung tâm</p>', '', '6-meo-chon-ghe-sofa-hoan-hao', '', 'Chú ý đến kích thước ghế\n\nNếu không gian nhà bạn khiêm tốn, thì hẳn là bạn cần một chiếc trường kỷ nhỏ hơn.\n\n2. Quyết định hướng kê sofa', '', 0, 1, 1, NULL, NULL, 1, 9);
+(13, '6 mẹo chọn ghế sofa hoàn hảo', '', '2012-04-12 02:12:11', '6-meo-chon-ghe-sofa-hoan-hao.jpg', '<p>Việc chọn một bộ sofa dường như không phải là một công việc dễ dàng khi phong cách, hình dạng, màu sắc, và giá cả của các bộ sofa này rất đa dạng.</p>', '', '<p>Để tiết kiệm thời gian, tiền bạc và công sức, bạn có thể tham khảo một số mẹo sau trước khi lựa chọn một bộ sofa phù hợp cho không gian nhà.</p>\n<p>1. Xác định kích thước</p>\n<p>Nếu phòng khách nhà bạn có diện tích lớn, bạn cần quyết định xem bạn muốn kê bao nhiêu chiếc ghế. Bạn có muốn dùng đi-văng hay ghế bành? Bàn nhỏ kiểu bàn cà phê liệu có cần thiết cho không gian nhà bạn? Nếu câu trả lời là có thì một bộ sofa đơn giản, hình chữ L có lẽ là lựa chọn phù hợp nhất. Trong trường hợp bạn muốn bộ sofa là điểm nhấn của phòng khách thì bạn cần đến một chiếc đi-văng đủ lớn và nhiều chỗ ngồi.</p>\n<p>Chú ý đến kích thước ghế</p>\n<p>Nếu không gian nhà bạn khiêm tốn, thì hẳn là bạn cần một chiếc trường kỷ nhỏ hơn.</p>\n<p>2. Quyết định hướng kê sofa</p>\n<p>Bạn cần định hình trước sofa sẽ được sắp xếp thế nào? Kê sofa để xem TV, để gia đình quây quần tụ họp, chơi trò chơi? Bạn có thể kê sofa tạo thành vòng tròn, hoặc nửa vòng tròn, lấy bàn làm trung tâm</p>', '', '6-meo-chon-ghe-sofa-hoan-hao', '', 'Chú ý đến kích thước ghế\n\nNếu không gian nhà bạn khiêm tốn, thì hẳn là bạn cần một chiếc trường kỷ nhỏ hơn.\n\n2. Quyết định hướng kê sofa', '', 0, 1, 1, NULL, NULL, 1, 9),
+(14, 'Căn hộ nhỏ mà không nhỏ', '', '2012-04-13 02:14:53', 'can-ho-nho-ma-khong-nho.jpg', '<p style="text-align:left;">Tuy chỉ có diện tích 35 m2 nhưng ngôi nhà nhỏ này vẫn rất thoáng đãng, đầy đủ tiện nghi và đẹp mắt nhờ cách thiết kế, bố trí sáng tạo như bậc cầu thang kiêm nơi để quần áo…</p>', '', '<p>Tuy chỉ có diện tích 35 m2 nhưng ngôi nhà nhỏ này vẫn rất thoáng đãng, đầy đủ tiện nghi và đẹp mắt nhờ cách thiết kế, bố trí sáng tạo như bậc cầu thang kiêm nơi để quần áo…</p>\r\n<p>Phòng khách nhỏ bố trí những đồ vật đơn giản như salon chữ L, bàn gỗ, TV treo tường..</p>\r\n<p>fggggdgfdgfgfdgfgf</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/phumyan/image/can-ho-3.jpg" alt="" width="480" height="468" /></p>\r\n<p style="text-align:center;">dgfgfggfdgfdg</p>\r\n<p style="text-align:center;">ggffgfgdf</p>\r\n<p style="text-align:center;"> <img src="/public/userfiles/image/phumyan/image/giuong.jpg" alt="" width="200" height="135" /></p>', '', 'can-ho-nho-ma-khong-nho', '', '', '', 0, 2, 1, NULL, NULL, 1, 9);
 
 -- --------------------------------------------------------
 
@@ -719,7 +749,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `dos_module_news_cat`
@@ -761,7 +791,11 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('day_time', 2456031, 'mayphotocopysieuviet'),
 ('max_count', 0, 'mayphotocopysieuviet'),
 ('counter', 0, 'mayphotocopysieuviet'),
-('yesterday', 0, 'mayphotocopysieuviet');
+('yesterday', 0, 'mayphotocopysieuviet'),
+('day_time', 2456031, 'tinhungphat'),
+('max_count', 0, 'tinhungphat'),
+('counter', 0, 'tinhungphat'),
+('yesterday', 0, 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -781,8 +815,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1334285126, 'mayphotocopysieuviet'),
-('''127.0.0.1''', 1334285220, 'phumyan');
+('''127.0.0.1''', 1334303030, 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -819,7 +852,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=34 ;
 
 --
 -- Dumping data for table `dos_module_products`
@@ -831,7 +864,14 @@ INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, 
 (23, 'Nội thất phòng ngủ', '', '2012-04-12 00:26:09', 'noi-that-phong-ngu-thumb.jpg', 'noi-that-phong-ngu.jpg', NULL, NULL, NULL, '<p>Mô tả chi tiết ...</p>', '', 'noi-that-phong-ngu', '', 'Nội thất phòng ngủ', '', 0, 2, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, 21),
 (24, 'Nội thất bếp ăn', '', '2012-04-12 00:26:55', 'noi-that-bep-an-thumb.jpg', 'noi-that-bep-an.jpg', NULL, NULL, NULL, '<p>Mô tả chi tiết ...</p>', '', 'noi-that-bep-an', '', 'Nội thất bếp ăn', '', 0, 1, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, 19),
 (25, 'Phòng tiếp khách', '', '2012-04-12 00:28:56', 'phong-tiep-khach-thumb.jpg', 'phong-tiep-khach.jpg', NULL, NULL, NULL, '<p>Mô tả chi tiết ...</p>', '', 'phong-tiep-khach', '', 'Phòng tiếp khách', '', 0, 5, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, 19),
-(26, 'Trang trí góc nhỏ', '', '2012-04-12 00:33:09', 'trang-tri-goc-nho-thumb.jpg', 'trang-tri-goc-nho.jpg', NULL, NULL, NULL, '<p>Mô tả chi tiết</p>', '', 'trang-tri-goc-nho', '', 'Trang trí góc nhỏ', '', 0, 6, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, 20);
+(26, 'Trang trí góc nhỏ', '', '2012-04-12 00:33:09', 'trang-tri-goc-nho-thumb.jpg', 'trang-tri-goc-nho.jpg', NULL, NULL, NULL, '<p>Mô tả chi tiết</p>\r\n<table style="width:400px;height:100px;" border="1" align="center"><tbody><tr><td style="text-align:center;">Tình trạng:</td>\r\n<td style="text-align:center;">Có hàng số lượng lớn chưa tiêu tụai giúp tiêu thụ với õ</td>\r\n</tr><tr><td style="text-align:center;">Nhà sản xuất</td>\r\n<td style="text-align:center;">Việt Nam vip</td>\r\n</tr><tr><td style="text-align:center;">Model</td>\r\n<td style="text-align:center;">2012</td>\r\n</tr><tr><td style="text-align:center;">Đánh giá:</td>\r\n<td style="text-align:center;">Chưa có đánh giá</td>\r\n</tr></tbody></table><p style="text-align:center;"> </p>', '', 'trang-tri-goc-nho', '', 'Trang trí góc nhỏ', '', 0, 6, '290000', 1, NULL, NULL, NULL, NULL, NULL, 1, 20),
+(27, 'Acer Aspire AS5755G-2452G75Mn (011)', '', '2012-04-13 06:43:13', 'acer-aspire-as5755g-2452g75mn-011-thumb.jpg', 'acer-aspire-as5755g-2452g75mn-011.jpg', NULL, NULL, NULL, '<p>CPU: Intel Core i5 2450M (2.50 GHz 3M L2 cache, 4 threads, turbo boost 3.1Ghz )<br />RAM: 4096 MB DDR3 1333Mhz<br />Chipset: Intel HM67<br />HDD: 750 GB SATA 5400 rpm<br />ODD: DVD RW/ Reader card/ Camera/ Bluetooth/ HDMI/ USB 3.0<br />Graphics: NVIDIA Geforce GT630M DDR3 2 GB<br />Display: 15.60" HD LED LCD<br />Network: 802.11bgn / 100/1000 base /<br />Battery: 6 cell<br />Weight: 2.60 Kg<br />OS: Free DOS<br />Other: Màu đen bóng, bàn phím số - Vga rời 2Gb</p>', '', 'acer-aspire-as5755g-2452g75mn-011', '', 'Acer Aspire AS5755G-2452G75Mn (011)', '', 0, 1, '12000000', 1, NULL, NULL, NULL, NULL, NULL, 1, 27),
+(28, 'Asus K43E-VX663', '', '2012-04-13 06:45:16', 'asus-k43e-vx663-thumb.jpg', 'asus-k43e-vx663.jpg', '|asus-k43e-vx663-desc-1.jpg|asus-k43e-vx663-desc-2.jpg', NULL, NULL, '<p>CPU: Intel Core i3 2350M (2.30 GHz 3M L2 cache, 4 threads )<br />RAM: 2048 MB DDR3 1333Mhz<br />Chipset: Intel HM67<br />HDD: 500 GB SATA 5400 rpm<br />ODD: DVD RW/ Reader card/ Camera/ Bluetooth/ HDMI/ Loa Altec Lansing<br />Graphics: INTEL HD graphics 3000 512 MB<br />Display: 14.00" HD Color Shine SLIM (LED backlight)<br />Network: 802.11bgn / 100/1000 base /<br />Battery: 6 cells<br />Weight: 2.20 Kg<br />OS: Free DOS<br />Other: Màu đỏ bóng , keyboard chiclet</p>', '', 'asus-k43e-vx663', '', 'Asus K43E-VX663', '', 0, 2, '1790000', 1, NULL, NULL, NULL, NULL, NULL, 1, 27),
+(29, 'Samsung NP300E4Z-A06VN', '', '2012-04-13 07:34:18', 'samsung-np300e4z-a06vn-thumb.jpg', 'samsung-np300e4z-a06vn.jpg', NULL, NULL, NULL, '<p>CPU: Intel Core i3 2350M (2.30 GHz 3M L2 cache, 4 threads )<br />RAM: 4096 MB DDR3 1333Mhz<br />Chipset: Intel HM67<br />HDD: 500 GB SATA 5400 rpm<br />ODD: DVD RW/ Reader card/ Camera/ Bluetooth/ HDMI/ USB 3.0<br />Graphics: INTEL HD graphics 3000 512 MB<br />Display: 14.00" Super Bright Anti-reflective HD<br />Network: 802.11bgn / 100/1000 base /<br />Battery: 6 cell<br />Weight: 2.20 Kg<br />OS: Free DOS<br />Other: Màu đen sọc chống trầy, keyboard chiclet</p>', '', 'samsung-np300e4z-a06vn', '', 'Samsung NP300E4Z-A06VN', '', 0, 3, '12000000', 1, NULL, NULL, NULL, NULL, NULL, 1, 27),
+(30, 'Toshiba Satellite L740-1222U', '', '2012-04-13 07:35:47', 'toshiba-satellite-l740-1222u-thumb.jpg', 'toshiba-satellite-l740-1222u.jpg', NULL, NULL, NULL, '<p>CPU: Intel Core i3 380M (2.53 GHz 3M L2 cache, 4 threads )<br />RAM: 2048 MB DDR3 1333Mhz<br />Chipset: Intel HM55<br />HDD: 500 GB SATA 5400 rpm<br />ODD: DVD RW/ Reader card/ Camera/ Bluetooth<br />Graphics: INTEL HD graphics 512 MB<br />Display: 14.00" HD WLED Backlight (16:9)<br />Network: 802.11bgn / 100/1000 base /<br />Battery: 6 cell<br />Weight: 2.20 Kg<br />OS: Free DOS<br />Other: Màu đen bóng, hoa văn chìm 3D</p>', '', 'toshiba-satellite-l740-1222u', '', 'Toshiba Satellite L740-1222U', '', 0, 4, '9500000', 1, NULL, NULL, NULL, NULL, NULL, 1, 27),
+(31, 'Intel Dual Core E6700 - 3.2Ghz', '', '2012-04-13 07:36:51', 'intel-dual-core-e6700-3-2ghz-thumb.jpg', 'intel-dual-core-e6700-3-2ghz.jpg', NULL, NULL, NULL, '<p>Tên Linh Kiện: Intel Dual Core E6700 - 3.2Ghz<br />Mô Tả: 2MB K BUS 1066 LGA775</p>', '', 'intel-dual-core-e6700-32ghz', '', 'Intel Dual Core E6700 - 3.2Ghz', '', 0, 5, '1850000', 1, NULL, NULL, NULL, NULL, NULL, 1, 31),
+(32, 'Intel Dual Core E5700 - 3.0Ghz', '', '2012-04-13 07:37:37', 'intel-dual-core-e5700-3-0ghz-thumb.jpg', 'intel-dual-core-e5700-3-0ghz.jpg', NULL, NULL, NULL, '<p>Tên Linh Kiện: Intel Dual Core E5700 - 3.0Ghz<br />Mô Tả: 2MB K BUS 800 LGA775</p>', '', 'intel-dual-core-e5700-30ghz', '', 'Intel Dual Core E5700 - 3.0Ghz', '', 0, 6, '1440000', 1, NULL, NULL, NULL, NULL, NULL, 1, 29),
+(33, '500 Gb Toshiba', '', '2012-04-13 07:38:50', '500-gb-toshiba-thumb.jpg', '500-gb-toshiba.jpg', NULL, NULL, NULL, '<p>Tên Linh Kiện: 500 Gb Toshiba<br />Mô Tả: Sata Notebook - 2.5” – 5.400 rpm</p>', '', '500-gb-toshiba', '', '500 Gb Toshiba', '', 0, 7, '1950000', 1, NULL, NULL, NULL, NULL, NULL, 1, 32);
 
 -- --------------------------------------------------------
 
@@ -859,7 +899,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=33 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
@@ -873,7 +913,13 @@ INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `
 (23, 0, 'Máy Photocopy', '', NULL, NULL, 'may-photocopy', '', 'Máy Photocopy', '', 'may-photocopy.jpeg', NULL, 3, NULL, NULL, 1, 'mayphotocopysieuviet'),
 (24, 0, 'Máy In', '', NULL, NULL, 'may-in', '', 'Máy In', '', 'may-in.jpeg', NULL, 3, NULL, NULL, 1, 'mayphotocopysieuviet'),
 (25, 0, 'Máy Fax', '', NULL, NULL, 'may-fax', '', 'Máy Fax', '', 'may-fax.jpeg', NULL, 2, NULL, NULL, 1, 'mayphotocopysieuviet'),
-(26, 0, 'Mực -  Linh kiện - Vật tư', '', NULL, NULL, 'muc-linh-kien-vat-tu', '', '', '', 'muc--linh-kien-vat-tu.jpeg', NULL, 2, NULL, NULL, 1, 'mayphotocopysieuviet');
+(26, 0, 'Mực -  Linh kiện - Vật tư', '', NULL, NULL, 'muc-linh-kien-vat-tu', '', '', '', 'muc--linh-kien-vat-tu.jpeg', NULL, 2, NULL, NULL, 1, 'mayphotocopysieuviet'),
+(27, 0, 'Laptop', '', NULL, NULL, 'laptop', '', 'laptop', '', 'laptop.jpg', NULL, 1, NULL, NULL, 1, 'tinhungphat'),
+(28, 0, 'Máy bộ', '', NULL, NULL, 'may-bo', '', 'máy bộ', '', 'may-bo.jpg', NULL, 2, NULL, NULL, 1, 'tinhungphat'),
+(29, 0, 'Linh kiện laptop', '', NULL, NULL, 'linh-kien-laptop', '', 'Linh kiện laptop', '', '', NULL, 3, NULL, NULL, 1, 'tinhungphat'),
+(30, 29, 'RAM', '', NULL, NULL, 'ram', '', 'RAM', '', 'ram.Jpeg', NULL, 4, NULL, NULL, 1, 'tinhungphat'),
+(31, 29, 'Bộ vi xử lý', '', NULL, NULL, 'bo-vi-xu-ly', '', 'Bộ vi xử lý', '', 'bo-vi-xu-ly.jpg', NULL, 5, NULL, NULL, 1, 'tinhungphat'),
+(32, 0, 'Linh kiện máy bộ', '', NULL, NULL, 'linh-kien-may-bo', '', 'Linh kiện máy bộ', '', '', NULL, 6, NULL, NULL, 1, 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -933,7 +979,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=68 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=71 ;
 
 --
 -- Dumping data for table `dos_module_supports`
@@ -942,7 +988,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
 INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
 (63, 'Hỗ trợ kinh doanh', '', '01230 456 789', 'mailgoogle', 2, 'yahoo', 'phumyan'),
 (64, 'Hỗ trợ khách hàng', '', '0909 999 888', 'groupitsoft', 1, 'yahoo', 'phumyan'),
-(67, '', '', 'Tư vấn', '1', 1, 'yahoo', 'mayphotocopysieuviet');
+(67, '', '', 'Tư vấn', '1', 1, 'yahoo', 'mayphotocopysieuviet'),
+(69, 'Hỗ trợ kinh doanh', '', '0901 001 001', 'mailgoogle', 2, 'yahoo', 'tinhungphat'),
+(70, 'Hỗ trợ khách hàng', '', '01230 456 789', 'groupitsoft', 1, 'yahoo', 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -1396,31 +1444,38 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('200312', 'video', 'list_supports'),
 ('200312', 'video', 'menu_video'),
 ('220312', 'about', 'advs_left'),
+('220312', 'about', 'advs_right'),
 ('220312', 'about', 'list_supports'),
 ('220312', 'about', 'menu_about'),
 ('220312', 'about', 'news_new'),
 ('220312', 'about', 'products_hot'),
 ('220312', 'contact', 'advs_left'),
+('220312', 'contact', 'advs_right'),
 ('220312', 'contact', 'list_supports'),
 ('220312', 'contact', 'menu_products'),
 ('220312', 'contact', 'news_new'),
 ('220312', 'contact', 'products_hot'),
 ('220312', 'default', 'about_home'),
 ('220312', 'default', 'advs_left'),
+('220312', 'default', 'advs_right'),
 ('220312', 'default', 'list_supports'),
 ('220312', 'default', 'menu_products'),
 ('220312', 'default', 'news_new'),
 ('220312', 'default', 'products_hot'),
 ('220312', 'default', 'products_new'),
 ('220312', 'default', 'video_hot'),
+('220312', 'news', 'advs_right'),
 ('220312', 'news', 'menu_news'),
 ('220312', 'news', 'news_hot'),
 ('220312', 'news', 'news_new'),
+('220312', 'products', 'advs_right'),
 ('220312', 'products', 'list_supports'),
 ('220312', 'products', 'menu_products'),
 ('220312', 'products', 'news_new'),
+('220312', 'services', 'advs_right'),
 ('220312', 'services', 'menu_services'),
 ('220312', 'services', 'news_new'),
+('220312', 'video', 'advs_right'),
 ('220312', 'video', 'menu_video'),
 ('220312', 'video', 'news_new'),
 ('260312', 'about', 'advs_left'),
@@ -1485,7 +1540,8 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
 ('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi|en', NULL, '2012-04-14 17:00:00', 0, 1, '111120', 2, 'thoi-trang'),
 ('mayphotocopysieuviet', 'info@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-11 20:38:05', NULL, NULL, NULL, 'user', 'vi', NULL, '2012-05-11 10:00:00', 0, 1, '010312', 19, 'bds-kien-truc-xay-dung'),
-('phumyan', 'maioanh7887@yahoo.com', '25f9e794323b453885f5181f1b624d0b', '2012-04-11 23:50:51', NULL, NULL, NULL, 'user', 'vi', NULL, '2012-05-11 10:00:00', 0, 1, '220312', 19, 'noi-that-ngoai-that');
+('phumyan', 'maioanh7887@yahoo.com', '25f9e794323b453885f5181f1b624d0b', '2012-04-11 23:50:51', NULL, NULL, NULL, 'user', 'vi', NULL, '2012-05-11 10:00:00', 0, 1, '220312', 19, 'noi-that-ngoai-that'),
+('tinhungphat', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-13 06:37:56', NULL, NULL, NULL, 'user', 'vi', NULL, '2012-05-12 16:00:00', 0, 1, '260312', 18, 'cong-nghe-thong-tin-vien-thong');
 
 -- --------------------------------------------------------
 
