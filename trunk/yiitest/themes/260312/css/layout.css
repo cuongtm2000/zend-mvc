@@ -161,10 +161,10 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 /****  Page product info****/
 .frame-pro-info{margin: 0 0 10px 0}
 
-#imgHover{float: left; width: 410px;text-align: center;border:1px solid #eee;-webkit-border-radius:3px;-moz-border-radius:3px}
-#imgHover {display: inline;position: relative}
+#imgHover{float: left;width: 400px;text-align: center;border:1px solid #eee;-webkit-border-radius:3px;-moz-border-radius:3px}
+#imgHover {position: relative}
 #imgHover:hover #hover{display: block;}
-#imgHover #hover {display: none;position: absolute;right:0;bottom:0;z-index: 2}
+#imgHover #hover {display: none;position:absolute;right:0;bottom:0;z-index: 2}
 
 #pic_zoom_box{text-align: center;color:#0881C3;background: url(../images/multi_image.gif) no-repeat left 5px;padding:5px 0 5px 30px}
 

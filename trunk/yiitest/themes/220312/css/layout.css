@@ -67,13 +67,14 @@ a:hover{color:#000}
 .statistics li {color:#000; line-height:1.75em;}
 
 /*bg-adv adv left*/
-.bg-adv{list-style:none;border:1px solid #F2F2F2;text-align:center;margin:0 0 10px 0}
+.bg-adv{list-style:none;border:1px solid #F2F2F2;text-align:center;padding:5px 0 0 0;margin:0 0 10px 0}
 .bg-adv li{padding:0 0 5px 0}
 
 /*Right content*/
 #right-content{float:left;width:525px; margin:0 0 0 15px}
 #right-content p{margin:0 0 8px 0}
 #right-content ul li, #right-content ol li{margin:0 0 0 18px}
+#right-content table{margin: auto}
 
 .title-right{color:#333; font-size:14px; font-weight:bold;padding:12px 0;background:#D0CEC2;margin:0 0 5px 0;-webkit-border-radius:1px;-moz-border-radius:1px}
 .title-right span{padding:0 0 0 10px}
@@ -116,8 +117,8 @@ a:hover{color:#000}
 #colum3{float:right; width:200px}
 
 /**  Sub new   **/
-.sub-new{list-style:none;margin:0 0 15px 0;border:1px solid #F2F2F2;padding:10px}
-.sub-new li{padding:4px 0;line-height:1.5em}
+.sub-new{list-style:none;margin:0 0 15px 0;border:1px solid #F2F2F2;padding:5px 10px 0 10px}
+.sub-new li{padding:0 0 5px 0;line-height:1.5em}
 .sub-new li a{ display:block;color:#161616;background:url(../images/bull.gif) no-repeat left 7px; padding:1px 0 1px 15px}
 .sub-new li a:hover{color:#f90}
 
@@ -142,7 +143,7 @@ a:hover{color:#000}
 .masuring{text-align:justify;font-size:10pt;list-style:none}
 .masuring li{margin:0 0 5px 0 !important }
 .masuring p{line-height:1.4em}
-.frame-img{float:left;width:143px;margin:0 5px 5px 0}
+.frame-img{float:left;width:145px;margin:0 5px 5px 0}
 .title-masuring{margin:0 0 5px 0}
 .title-masuring a{color:#9A522E;font-size:10pt;font-weight:bold}
 .title-masuring a:hover{color:#FF6000}
