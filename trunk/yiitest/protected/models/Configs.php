@@ -117,7 +117,7 @@ class Configs extends CActiveRecord {
         $config_value = $data->getPost('config_value', '');
         $config_desc = $data->getPost('config_desc', '');
 
-        for ($i = 0; $i < 30; $i++) {
+        for ($i = 0; $i < 45; $i++) {
             if (!empty($config_name[$i]) && !empty($config_value[$i])) {
                 $this->insertItem(trim($config_name[$i]), trim($config_value[$i]), trim($config_desc[$i]), $template);
             }

@@ -5,12 +5,12 @@
 		<div id="imgHover">
 			<?php if($item['pic_full']): ?>
 				<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $item['pic_full'] ?>" alt="<?php echo $item['title'.LANG] ?>" />
-				<a href="<?php echo Yii::app()->theme->baseUrl; ?>/images/20507_2.jpg" rel="milkbox[gall1]" title="LAPTOP  DELL Inspiron  N4050 - KXJXJ9"/>
-				<a href="<?php echo Yii::app()->theme->baseUrl; ?>/images/20507_3.jpg" rel="milkbox[gall1]" title="LAPTOP  DELL Inspiron  N4050 - KXJXJ9"/>
-				<a href="<?php echo Yii::app()->theme->baseUrl; ?>/images/20507_4.jpg" rel="milkbox[gall1]" title="LAPTOP  DELL Inspiron  N4050 - KXJXJ9"/>
-
 				<p><a href="" id="pic_zoom_box">Xem nhiều hình</a></p>
 			<?php endif; ?>
+			<?php $str = explode('|', $item['pic_desc']); foreach($str as $value): ?>
+				<a href="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value ?>" rel="milkbox[gall1]" title="<?php echo $item['title'.LANG] ?>"/>
+			<?php endforeach;?>
+
 			<div id="hover">
 				<a href=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/zoom.png" alt="zoom" /> </a>
 			</div>
@@ -20,7 +20,7 @@
 			<h3 class="title-pro-info">Laptop MACBOOK Air MC504ZP </h3>
 			Nhà sản xuất: APPLE<br />
 			Thời gian bảo hành : 12 THÁNG
-			<p class="price-info">Giá: <span>35.600.000</span> VNĐ</p>
+			<p class="price-info">Giá: <span><?php echo number_format($item['unit'], 0, '', '.'); ?></span> VNĐ</p>
 			</div>
 		</div> <div class="clear"></div>
 	</div>
