@@ -35,10 +35,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SiteController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SiteController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="35" selection-start="1843" selection-end="1843" vertical-scroll-proportion="-2.2025547">
+            <state line="55" column="35" selection-start="1843" selection-end="1843" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/views/site/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="119" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0651341">
               <folding />
             </state>
           </provider>
@@ -77,7 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/modules/admin/views/contact/add.php" />
         <option value="$PROJECT_DIR$/protected/modules/admin/views/contact/edit.php" />
         <option value="$PROJECT_DIR$/protected/modules/admin/views/products/add.php" />
         <option value="$PROJECT_DIR$/protected/modules/admin/views/products/edit.php" />
@@ -93,6 +101,7 @@
         <option value="$PROJECT_DIR$/themes/dos.vn/css/layout.css" />
         <option value="$PROJECT_DIR$/protected/views/site/success.php" />
         <option value="$PROJECT_DIR$/protected/controllers/SiteController.php" />
+        <option value="$PROJECT_DIR$/protected/views/site/index.php" />
       </list>
     </option>
   </component>
@@ -473,11 +482,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/about/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="21" selection-start="2016" selection-end="2084" vertical-scroll-proportion="1.0095786" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/site/import.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="27" selection-start="2067" selection-end="2067" vertical-scroll-proportion="-14.384615" />
@@ -556,7 +560,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="35" selection-start="1843" selection-end="1843" vertical-scroll-proportion="-2.2025547">
+        <state line="55" column="35" selection-start="1843" selection-end="1843" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="119" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0651341">
           <folding />
         </state>
       </provider>

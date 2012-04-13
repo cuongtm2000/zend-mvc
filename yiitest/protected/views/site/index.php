@@ -1,6 +1,6 @@
 <div id="header-wrap">
     <div class="frame-title">
-        <h1 class="title-page">Thiết kế web Trực tuyến <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/free.png" alt="Free" />  &nbsp;ấn tượng, giá rẻ!</h1>
+        <h1 class="title-page">Thiết kế web Trực tuyến <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/price.png" alt="137 $" />  &nbsp;ấn tượng, giá rẻ!</h1>
         <p>Đăng ký tài khoản, chọn mẫu website, chọn Module &amp; chức năng, chạy thử nghiệm, thanh toán, chạy độc lập</p>
     </div>
     <div id="banner">
