@@ -45,6 +45,9 @@
 
 					 relative_urls : false,
 
+					 accessibility_warnings : false,
+					 //accessibility_focus : false,
+
 					 paste_text_use_dialog : true,
 					 paste_auto_cleanup_on_paste : true,
 					 paste_remove_styles: true,
@@ -87,6 +90,9 @@
 
 					 relative_urls : false,
 
+					 accessibility_warnings : false,
+					 //accessibility_focus : false,
+
 					 paste_text_use_dialog : true,
 					 paste_auto_cleanup_on_paste : true,
 					 paste_remove_styles: true,
@@ -101,7 +107,7 @@
 					 //theme_advanced_statusbar_location : "bottom",
 					 theme_advanced_resizing : true,
 					 width : "100%",
-					 height: "250"
+					 height: "300"
 				 });
 			</script>
 		</div>

@@ -32,6 +32,9 @@
 
 					 relative_urls : false,
 
+					 accessibility_warnings : false,
+					 //accessibility_focus : false,
+
 					 paste_text_use_dialog : true,
 					 paste_auto_cleanup_on_paste : true,
 					 paste_remove_styles: true,
