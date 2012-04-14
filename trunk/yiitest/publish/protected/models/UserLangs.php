@@ -102,7 +102,7 @@ class UserLangs extends CActiveRecord {
 		if ($lang_name) {
 			$lang_name = array_unique($lang_name);
 			foreach ($lang_name as $key => $value) {
-				if (!empty($value) && !empty($lang[$key])) {
+				if (!empty($value)) {
 					if ($this->checkInArray($value)) {
 						$this->insertItem(trim($value), trim($lang[$key]), ($langen) ? trim($langen[$key]) : '');
 					}

@@ -29,6 +29,8 @@
 	});
 </script>
 <?php endif;?>
+
+<?php echo $this->analytics?>
 </head>
 <body>
 <div id="wrapper">
@@ -215,7 +217,7 @@
     <div id="footer">
         <p><?php echo $this->lang['company_name'] ?></p>     
         <p><?php echo $this->lang['address1'] ?></p>     
-        <p><?php echo $this->lang['address2'] ?></p>     
+        <?php echo ($this->lang['address2']) ? '<p>'.$this->lang['address2'].'</p>' : '' ?>
         <p><?php echo $this->lang['copyright'] ?></p>     
         <p><?php echo $this->lang['developed']?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></p>     
     </div><!--End footer-->
