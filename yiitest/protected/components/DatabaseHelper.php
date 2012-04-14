@@ -67,7 +67,7 @@ class DatabaseHelper {
 			ob_end_clean();
 			$content = gzencode($content, 9);
 
-			$saveName = date($user . '-d-m-Y') . ".sql.gz";
+			$saveName = $user . date('-d-m-Y') . ".sql.gz";
 
 			$request = Yii::app()->getRequest();
 			$request->sendFile($saveName, $content);
