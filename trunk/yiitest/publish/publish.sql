@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 11, 2012 at 10:04 AM
+-- Generation Time: Apr 14, 2012 at 04:56 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -71,33 +71,40 @@ CREATE TABLE IF NOT EXISTS `dos_configs` (
 --
 
 INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES
-('advs_left_height', 200, '', '220312'),
-('advs_left_width', 200, '', '220312'),
-('banner_height', 332, '', '220312'),
-('banner_width', 950, '', '220312'),
-('logo_height', 79, '', '220312'),
-('logo_width', 259, '', '220312'),
-('news_height_thumb', 100, '', '220312'),
-('news_num_paging_cat', 2, '', '220312'),
-('news_num_paging_hot', 5, '', '220312'),
-('news_num_paging_index', 2, '', '220312'),
-('news_num_paging_new', 4, '', '220312'),
-('news_width_thumb', 145, '', '220312'),
-('products_cat_height', 150, '', '220312'),
-('products_cat_width', 200, '', '220312'),
-('products_height', 400, '', '220312'),
-('products_height_thumb', 135, '', '220312'),
-('products_num_paging_cat', 6, '', '220312'),
-('products_num_paging_new', 4, '', '220312'),
-('products_num_paging_other', 2, '', '220312'),
-('products_width', 515, '', '220312'),
-('products_width_thumb', 200, '', '220312'),
-('services_height', 90, '', '220312'),
-('services_width', 145, '', '220312'),
-('video_height_thumb', 150, '', '220312'),
-('video_num_paging_cat', 2, '', '220312'),
-('video_num_paging_index', 2, '', '220312'),
-('video_width_thumb', 200, '', '220312');
+('advs_left_height', 190, '', '010312'),
+('advs_left_width', 190, '', '010312'),
+('advs_right_height', 190, '', '010312'),
+('advs_right_width', 190, '', '010312'),
+('banner_height', 332, '', '010312'),
+('banner_width', 951, '', '010312'),
+('logo_height', 108, '', '010312'),
+('logo_width', 155, '', '010312'),
+('max_image_height', 667, '', '010312'),
+('max_image_width', 500, '', '010312'),
+('news_cat_height', 89, '', '010312'),
+('news_cat_width', 143, '', '010312'),
+('news_height_thumb', 89, '', '010312'),
+('news_num_paging_cat', 8, '', '010312'),
+('news_num_paging_hot', 6, '', '010312'),
+('news_num_paging_index', 8, '', '010312'),
+('news_num_paging_new', 6, '', '010312'),
+('news_width_thumb', 143, '', '010312'),
+('products_cat_height', 155, '', '010312'),
+('products_cat_width', 115, '', '010312'),
+('products_height', 400, '', '010312'),
+('products_height_thumb', 121, '', '010312'),
+('products_num_paging_cat', 3, '', '010312'),
+('products_num_paging_hot', 3, '', '010312'),
+('products_num_paging_new', 6, '', '010312'),
+('products_num_paging_other', 3, '', '010312'),
+('products_width', 500, '', '010312'),
+('products_width_thumb', 152, '', '010312'),
+('services_height', 90, '', '010312'),
+('services_width', 144, '', '010312'),
+('video_height_thumb', 115, '', '010312'),
+('video_num_paging_cat', 4, '', '010312'),
+('video_num_paging_index', 4, '', '010312'),
+('video_width_thumb', 115, '', '010312');
 
 -- --------------------------------------------------------
 
@@ -219,10 +226,10 @@ CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
 --
 
 INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, `loadfiles`, `typefile`) VALUES
-('220312', 'default', 'prettyPhoto.css', 'css'),
-('220312', 'default', 'jquery.prettyPhoto.js', 'javascript'),
-('220312', 'video', 'prettyPhoto.css', 'css'),
-('220312', 'video', 'jquery.prettyPhoto.js', 'javascript');
+('010312', 'default', 'prettyPhoto.css', 'css'),
+('010312', 'default', 'jquery.prettyPhoto.js', 'javascript'),
+('010312', 'video', 'prettyPhoto.css', 'css'),
+('010312', 'video', 'jquery.prettyPhoto.js', 'javascript');
 
 -- --------------------------------------------------------
 
@@ -274,15 +281,14 @@ CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
 --
 
 INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
-('about', '220312'),
-('advs', '220312'),
-('banner', '220312'),
-('contact', '220312'),
-('news', '220312'),
-('products', '220312'),
-('services', '220312'),
-('supports', '220312'),
-('video', '220312');
+('about', 'mayphotocopysieuviet'),
+('advs', 'mayphotocopysieuviet'),
+('banner', 'mayphotocopysieuviet'),
+('contact', 'mayphotocopysieuviet'),
+('news', 'mayphotocopysieuviet'),
+('products', 'mayphotocopysieuviet'),
+('services', 'mayphotocopysieuviet'),
+('supports', 'mayphotocopysieuviet');
 
 -- --------------------------------------------------------
 
@@ -311,16 +317,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=46 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(3, 'Giới thiệu sơ lược', 'Introduction About', '<p>\r\n	Ngày nay, khi ngày càng có nhiều thông tin được cung cấp trực tuyến, bạn càng cần phải sử dụng trình duyệt nhanh và an toàn trên máy tính. Giới thiệu về Google Chrome -- trình duyệt mở trang web với tốc độ cực nhanh! Thiết kế mượt mà của trình duyệt mang lại cho bạn nhiều không gian hơn để duyệt các trang web ưa thích của mình. Hướng dẫn này giúp bạn tìm hiểu qua các tính năng chính của Google Chrome.</p>', '<p>\r\n	Today, as more and more information is offered online, the more you need to use fast and secure browser on the computer. About Google Chrome - the browser open site with fast speed! Sleek design of the browser gives you more space to browse your favorite sites. This guide helps you learn the key features of Google Chrome.</p>', 255, '2012-04-05 02:12:08', 1, 1, '', '', 'gioi-thieu-so-luoc', 'introduction-about', 'Ngày nay, khi ngày càng có nhiều thông tin được cung cấp trực tuyến, bạn càng cần phải sử dụng trình duyệt nhanh và an toàn trên máy tính. Giới thiệu về Google Chrome -- trình duyệt mở trang web với tốc độ cực nhanh! Thiết kế mượt mà của trìn', '', 1, '220312'),
-(4, 'Giới thiệu chung', 'Introduction', '<p>\r\n	Giới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chungGiới thiệu chung</p>', '<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>\r\n<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>\r\n<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.</p>', 21, '2012-04-05 02:29:35', 2, 0, '', '', 'gioi-thieu-chung', 'introduction', 'Giới thiệu chungGiới thiệu chung', 'Introduction Introduction Introduction Introduction', 1, '220312'),
-(5, 'Giới thiệu Văn phòng đại diện', 'About a representative office', '<p>\r\n	Giới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diện</p>', '<p>\r\n	About a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative officeAbout a representative office</p>', 88, '2012-04-05 02:29:55', 3, 0, '', '', 'gioi-thieu-van-phong-dai-dien', 'about-a-representative-office', 'Giới thiệu Văn phòng đại diệnGiới thiệu Văn phòng đại diện', 'About a representative officeAbout a representative office', 1, '220312');
+(43, 'Giới thiệu chung', '', '<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong>Siêu Việt</strong></span><span style="color:#000000;"> là một trong những công ty hàng đầu chuyên cung cấp các thiết bị và giải pháp toàn diện trong lĩnh vực Giải pháp máy văn phòng.</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">Công ty được thành lập với tiêu chí cung cấp sỉ và lẻ tất cả các thiết bị văn phòng cho các đại lý trên khắp Việt Nam .</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">Tận dụng và phát huy năng lực, kinh nghiệm trong lĩnh vực thiết bị văn phòng cùng với sự hỗ trợ của các thương hiệu nổi tiếng thế giới như Toshiba, Panasonic, Canon, Ricoh, Konica Minolta, Xerox... và trong lĩnh vực tin học như Intel, Seagate, Samsung, Asus, Dell, Ibm, Acer ...chúng tôi mong muốn và quyết tâm để trờ thành nhà cung cấp lớn và uy tín nhất trong lĩnh vực văn phòng tại Việt Nam.</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">Dịch vụ hỗ trợ khách hàng: Chúng tôi có một đội ngũ kỹ sư có chuyên môn cao, kỹ thuật viên uy tín lâu năm kinh nghiệm trong các lĩnh vực:</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Tư vấn, thực hiện các Giải Pháp về Máy Photocopy, Máy Fax, Máy In ...</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Kinh doanh và cho thuê Máy Văn Phòng </span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Máy Photocopy in kỹ thuật số khổ lớn A0, Máy In Siêu Tốc 130 bản/phút</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Máy in Công nghiệp, Máy in Màu Offset</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Hỗ trợ kỹ thuật cho các dịch vụ Photocopy</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Phân phối Sỉ &amp; Lẻ Máy Photocopy hàng nhập khẩu</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Cung cấp Mực, Linh Kiện, Vật Tư với giá ưu đãi</span></p>\n<p style="text-align:justify;"><span style="color:#000000;">- Nhận đào tạo Kỹ Thuật Viên sửa chữa máy Photocopy, In, Fax</span></p>\n<p style="text-align:justify;"><span style="color:#000000;"><span style="color:#008000;font-size:medium;"><strong>Siêu Việt</strong> </span>đáp ứng mọi nhu cầu, lựa chọn từ quý khách.</span></p>\n<p style="text-align:justify;"><span style="color:#000000;"> </span></p>\n<p style="text-align:center;"><span style="color:#ff0000;font-size:medium;"><strong><em>Tiêu chí kinh doanh trong lĩnh vực dịch vụ của chúng tôi</em></strong></span><br /><span style="color:#ff0000;font-size:medium;"><strong><em>“Hãy để <span style="color:#008000;">Siêu Việt</span> chăm sóc văn phòng bạn”</em></strong></span></p>', '', 62, '2012-04-12 01:25:59', 1, 1, '', '', 'gioi-thieu-chung', '', 'Siêu Việt', '', 1, 'mayphotocopysieuviet'),
+(45, 'Giấy chứng nhận đại lý', '', '<p><img style="margin-left:auto;margin-right:auto;" title="Giấy chung nhan" src="/public/userfiles/image/mayphotocopysieuviet/image/Nho-Chungnhan_HP.jpg" alt="sieu viet" width="450" height="651" /></p>', '', 12, '2012-04-12 02:49:22', 2, 0, '', '', 'giay-chung-nhan-dai-ly', '', '', '', 1, 'mayphotocopysieuviet');
 
 -- --------------------------------------------------------
 
@@ -345,14 +350,19 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `dos_module_advs`
 --
 
 INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`, `dos_usernames_username`) VALUES
-(2, 'Pa nội thất', '', 'pa-noi-that.jpg', 'http://grouplaptrinh.com', '2012-04-05 02:16:24', '2012-04-04 16:00:00', '2012-05-22 16:00:00', 0, 1, 'left', '_bank', 1, '220312');
+(8, 'Quảng cáo', '', 'quang-cao.jpg', 'http://mayphotocopysieuviet.dos.vn/', '2012-04-12 02:29:32', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 1, 'left', '_bank', 1, 'mayphotocopysieuviet'),
+(9, 'hp', '', 'hp.jpeg', 'http://dos.vn/', '2012-04-12 02:50:25', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 6, 'right', '_bank', 1, 'mayphotocopysieuviet'),
+(10, 'toshiba', '', 'toshiba.jpeg', 'http://dos.vn/', '2012-04-12 02:51:09', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 2, 'right', '_bank', 1, 'mayphotocopysieuviet'),
+(11, 'Panasonic', '', 'panasonic.jpeg', 'http://dos.vn/', '2012-04-12 02:51:56', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 4, 'right', '_bank', 1, 'mayphotocopysieuviet'),
+(12, 'Canon', '', 'canon.jpeg', 'http://dos.vn/', '2012-04-12 02:52:19', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 5, 'right', '_bank', 1, 'mayphotocopysieuviet'),
+(13, 'Xerok', '', 'xerok.jpeg', 'http://dos.vn/', '2012-04-12 02:52:59', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 3, 'right', '_bank', 1, 'mayphotocopysieuviet');
 
 -- --------------------------------------------------------
 
@@ -373,7 +383,28 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=37 ;
+
+--
+-- Dumping data for table `dos_module_banners`
+--
+
+INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_url`, `banner_link`, `banner_order`, `banner_type`, `position`, `enable`, `dos_usernames_username`) VALUES
+(6, '2012-04-12 00:05:03', 'logo', 'logo.png', '', 1, 'logo', 'default', 1, 'mayphotocopysieuviet'),
+(23, '2012-04-12 00:58:23', 'Banner', 'banner.jpg', '', 2, 'banners', 'default', 1, 'mayphotocopysieuviet'),
+(24, '2012-04-12 01:03:46', 'Banner 1', 'banner-1.jpg', '', 3, 'banners', 'default', 1, 'mayphotocopysieuviet'),
+(25, '2012-04-12 01:04:13', 'Banner 2', 'banner-2.jpg', '', 4, 'banners', 'default', 1, 'mayphotocopysieuviet'),
+(26, '2012-04-12 01:04:26', 'Banner 3', 'banner-3.jpg', '', 5, 'banners', 'default', 1, 'mayphotocopysieuviet'),
+(27, '2012-04-12 01:04:50', 'Banner 4', 'banner-4.jpg', '', 6, 'banners', 'about', 1, 'mayphotocopysieuviet'),
+(28, '2012-04-12 01:06:19', 'Banner 5', 'banner-5.jpg', '', 7, 'banners', 'contact', 1, 'mayphotocopysieuviet'),
+(29, '2012-04-12 01:07:21', 'Banner 7', 'banner-7.jpg', '', 8, 'banners', 'services', 1, 'mayphotocopysieuviet'),
+(30, '2012-04-12 01:07:36', 'Banner 8', 'banner-8.jpg', '', 9, 'banners', 'news', 1, 'mayphotocopysieuviet'),
+(31, '2012-04-12 01:08:09', 'Banner 9', 'banner-73.jpg', '', 10, 'banners', 'products', 1, 'mayphotocopysieuviet'),
+(32, '2012-04-12 01:10:28', 'Banner 11', 'banner-11.jpg', '', 11, 'banners', 'products', 1, 'mayphotocopysieuviet'),
+(33, '2012-04-12 01:11:14', 'Banner 10', 'banner-10.jpg', '', 12, 'banners', 'products', 1, 'mayphotocopysieuviet'),
+(34, '2012-04-12 02:37:36', 'Banner 15', 'banner-15.jpg', '', 13, 'banners', 'services', 1, 'mayphotocopysieuviet'),
+(35, '2012-04-12 02:38:20', 'Banner 12', 'banner-12.jpg', '', 14, 'banners', 'services', 1, 'mayphotocopysieuviet'),
+(36, '2012-04-12 02:38:56', 'Banner 13', 'banner-13.jpg', '', 15, 'banners', 'products', 1, 'mayphotocopysieuviet');
 
 -- --------------------------------------------------------
 
@@ -399,14 +430,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_contacts_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `dos_module_contacts`
 --
 
 INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `tagen`, `description`, `descriptionen`, `enable`, `dos_usernames_username`) VALUES
-(1, 'Contact us', '', '<p>\r\n	CÔNG TY CỔ PHẦN TM SX THẾ GIỚI NỘI THẤT</p>\r\n<p>\r\n	Trụ sở: 321 CỘNG HÒA, PHƯỜNG 13, TÂN BÌNH, TP.HCM</p>\r\n<p>\r\n	Nhà máy : C7/21 PHẠM HÙNG, CHÁNH HƯNG BÌNH CHÁNH</p>\r\n<p>\r\n	MST: 0309788812</p>\r\n<p>\r\n	Điện thoại : (+848) 6292 3934 - Fax: (+848) 6292 3935</p>\r\n<p>\r\n	Hotline: 0942852858--0942 853 443 - Email : thegioinoithatvn@gmail.com</p>', '<p>\r\n	TM MANUFACTURING COMPANY FURNITURE WORLD</p>\r\n<p>\r\n	Office: 321 Cong Hoa, Ward 13, Tan Binh, Ho Chi Minh City</p>\r\n<p>\r\n	Factory: C7/21 Pham Hung Binh Chanh Hung DISTRICT</p>\r\n<p>\r\n	MST: 0309788812</p>\r\n<p>\r\n	Tel: (+848) 6292 3934 - Fax: (+848) 6292 3935</p>\r\n<p>\r\n	Hotline: 0942852858 - 0942 853 443 - Email: thegioinoithatvn@gmail.com</p>', '2012-04-05 02:20:31', 1, 0, 0, 'contact-us', '', '', '', '1', '220312');
+(8, 'Liên hệ với chúng tôi', '', '<p><span style="color:#008000;font-size:medium;"><strong>DNTN SIÊU VIỆT</strong></span></p>\n<p>3A/1 Đoàn Văn Cự, P. Tam Hiệp, TP. Biên Hòa, Tỉnh Đồng Nai</p>\n<p>Điện thoại: 061. 629 0909 - 061. 3914 541</p>\n<p>Fax: 061. 629 0819</p>\n<p>Hotline: 0937 107 888 - Mr. Nguyên - Phụ trách Kinh doanh.</p>\n<p>Email: nguyensieuviet@yahoo.com.vn</p>\n<p>Website: www.mayphotocopysieuviet.com</p>', '', '2012-04-12 02:03:01', 1, 0, 0, 'lien-he-voi-chung-toi', '', '', '', '1', 'mayphotocopysieuviet'),
+(9, 'Liên hệ', '', '<p>0937.107 888 (Mr. Nguyên)</p>', '', '2012-04-12 02:03:32', 2, 0, 1, 'lien-he', '', '', '', '1', 'mayphotocopysieuviet');
 
 -- --------------------------------------------------------
 
@@ -433,13 +465,12 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 --
 
 INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
-('Trang chủ', 'Home page', 'default', '', 1, '', '', '', '', '220312'),
-('Giới thiệu', 'About Us', 'about', '', 2, '', '', '', '', '220312'),
-('Sản phẩm', 'Products', 'products', '', 3, '', '', '', '', '220312'),
-('Dịch vụ', 'Services', 'services', '', 4, '', '', '', '', '220312'),
-('Tin tức &amp; sự kiện', 'News', 'news', '', 5, '', '', '', '', '220312'),
-('Video', 'Video', 'video', '', 6, '', '', '', '', '220312'),
-('Liên hệ', 'Contact Us', 'contact', '', 7, '', '', '', '', '220312');
+('Trang chủ', '', 'default', '', 1, '', '', '', '', 'mayphotocopysieuviet'),
+('Giới thiệu', '', 'about', '', 2, '', '', '', '', 'mayphotocopysieuviet'),
+('Sản phẩm', '', 'products', '', 3, '', '', '', '', 'mayphotocopysieuviet'),
+('Dịch vụ', '', 'services', '', 4, '', '', '', '', 'mayphotocopysieuviet'),
+('Tin tức & sự kiện', '', 'news', '', 5, '', '', '', '', 'mayphotocopysieuviet'),
+('Liên hệ', '', 'contact', '', 6, '', '', '', '', 'mayphotocopysieuviet');
 
 -- --------------------------------------------------------
 
@@ -470,14 +501,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
-
---
--- Dumping data for table `dos_module_news`
---
-
-INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(5, '20 năm nữa, TP HCM có thể lụt như Bangkok', '20 years, Ho Chi Minh City Bangkok may flood as', '2012-04-05 02:27:41', '', '<p>\r\n	Sau thời gian nghiên cứu ngập lụt ở Bangkok (Thái Lan), PGS. TS Hồ Long Phi khẳng định, vài chục năm nữa TP HCM có khả năng xảy ra một trận lụt với thiệt hại tương tự như Bangkok.</p>', '<p>\r\n	20 years, Ho Chi Minh City Bangkok may flood as20 years, Ho Chi Minh City Bangkok may flood as20 years, Ho Chi Minh City Bangkok may flood as</p>', '<p>\r\n	Sau thời gian nghiên cứu ngập lụt ở Bangkok (Thái Lan), PGS. TS Hồ Long Phi khẳng định, vài chục năm nữa TP HCM có khả năng xảy ra một trận lụt với thiệt hại tương tự như Bangkok.<br />\r\n	&gt; ''TP HCM sẽ lụt như Bangkok nếu phát triển như hiện nay''/ Toàn cảnh trận lụt lịch sử ở Thái Lan</p>\r\n<p>\r\n	Chiều 4/4, tại hội nghị sơ kết một năm thực hiện chương trình giảm ngập nước ở thành phố giai đoạn 2011-2015, PGS. TS Hồ Long Phi, Phó ban điều phối chương trình chống ngập TP HCM cho biết, sau một thời gian nghiên cứu ngập lụt ở Bangkok (Thái Lan) đã rút ra được bài học và xây dựng đề án hành động giải quyết ngập lụt ở TP HCM.</p>\r\n<br /><p>\r\n	Nước lũ bao phủ cả khu vực rộng lớn phía bắc thủ đô Bangkok (Thái Lan). Màu đỏ của những mái nhà và màu xanh cây cối nổi lên giữa phông nền nước lũ. Ảnh: Kyodo.<br />\r\n	Theo ông Phi, bài học lớn nhất từ ngập lụt ở Bangkok là không nên tin tuyệt đối vào năng lực bảo vệ của các công trình chống ngập. Các giải pháp thích nghi, giảm nhẹ thiệt hại và sẵn sàng ứng phó luôn cần được dự trù.</p>\r\n<p>\r\n	Vị phó giáo sư cho rằng, thay vì ỷ lại hoàn toàn vào sự bảo vệ của các công trình đê bao chống ngập, TP HCM nên phát triển theo hình thức ECO2 (vừa phát triển kinh tế vừa phát triển sinh thái). Đồng thời, thay vì lấn chiếm không gian dành cho nước ở các vùng trũng thấp, một hành lang thoát lũ khẩn cấp cần được dự trù để đề phòng trường hợp các dòng sông không còn đủ năng lực thoát nước trong điều kiện mưa lũ đặc biệt lớn.</p>\r\n<p>\r\n	Bài học thứ hai mà TP HCM nên nghiên cứu từ trận lụt ở Bangkok là việc quản lý tài nguyên nước. Theo ông Phi, các hồ chứa thường được thiết kế và vận hành thiên về cấp nước tưới hay phát điện mà thiếu quan tâm đến điều tiết lũ. "Vì thế, TP HCM cần thiết lập quy trình vận hành hồ chứa đa mục tiêu để tăng cường khả năng điều tiết lũ", ông Phi đề nghị.</p>', '<p>\r\n	After the study period flood in Bangkok (Thailand), Assoc. Dr. Ho Long Phi said, a few dozen years have HCMC possibility of a flood damage similar to Bangkok.<br />\r\n	&gt; ''As Bangkok, Ho Chi Minh City will flood if the current development'' / Overview of the flood history in Thailand</p>\r\n<p>\r\n	Afternoon of 4/4, at a preliminary conference in the program reduce flooding in the city in 2011-2015, Assoc. Dr. Ho Long Phi, deputy coordinating programs to prevent flooding HCM City, said after a flood studies in Bangkok (Thailand) has drawn lessons and build action plan address flood in Ho Chi Minh City.</p>\r\n<br /><p>\r\n	Floodwaters covered the large area north of the capital Bangkok (Thailand). The red color of the roofs and green trees rise between the flood wallpaper. Photo: Kyodo.<br />\r\n	According to Africa, the biggest lesson from flooding in Bangkok is not absolute protection in the capacity of the works to prevent flooding. The solution adaptation, mitigation and preparedness should always be planned.</p>\r\n<p>\r\n	The associate professor said that instead of relying entirely on the protection of the dike to prevent flooding works, Ho Chi Minh City should develop in the form of ECO2 (both economic development has developed eco). Also, instead of encroaching upon the space reserved for low-lying areas, a flood emergency corridors should be planned for in case the river is no longer sufficient drainage capacity in terms of special flood big difference.</p>\r\n<p>\r\n	The second lesson that should HCM City from the flood studies in Bangkok was the management of water resources. According to Africa, the reservoirs are usually designed and operated natural water supply or electricity, but lack of interest in flood control. "Therefore, HCM City needs to establish operating procedures for multi-purposes reservoirs to enhance flood control," said African proposal.</p>\r\n<p>\r\n	Another lesson should also be taken into account as forecasting and information management plays an important role in reducing damage caused by flooding. Information correct early and high probability will support the work of running. He cited Africa, Deputy Director of the Meteorological Thai government plans equipped with radar rainfall forecasts $ 130 million. However, this system was not equipped in time. "If there''s time will help the Thai government has more than enough information in decision making," said Africa.</p>\r\n<p>\r\n	From the analysis of the similarities are fairly between Bangkok and Ho Chi Minh City as the cause flooding due to upstream flooding, heavy rains, high tides, water levels, many low-lying terrain areas, subsidence and compared Compare the Flood Risk factor system to prevent flooding ... Ho Long Phi made the comment, if any city retains the current development is mainly based on the works to prevent flooding, the 20 years, Ho Chi Minh City will likely occur a game flooded with damage similar to Bangkok in 2011.</p>\r\n<p>\r\n	He said today''s most dangerous thing for Ho Chi Minh City is not tide or sea level rise that is larger storms occur in the basin of Sai Gon - Dong Nai late rainy season, coinciding with the flooding in the Mekong Delta. At that time, the upstream reservoir was almost full of water. So the solution must be calculated to minimize the damage.</p>\r\n<p>\r\n	Deputy executive proposed program to prevent flooding HCMC need to act now to prevent flooding. Four African action which he proposed the drafting and promulgating regulations for the space, setting up early warning systems and response procedures, establish operating procedures for multi-purposes reservoirs, priority first investment in urban drainage.</p>', '20-nam-nua-tp-hcm-co-the-lut-nhu-bangkok', '20-years-ho-chi-minh-city-bangkok-may-flood-as', 'Sau thời gian nghiên cứu ngập lụt ở Bangkok (Thái Lan), PGS. TS Hồ Long Phi khẳng định, vài chục năm nữa TP HCM có khả năng xảy ra một trận lụt với thiệt hại tương tự như Bangkok.', 'He said today''s most dangerous thing for Ho Chi Minh City is not tide or sea level rise that is larger storms occur in the basin of Sai Gon - Dong Nai late rainy season, coinciding with the flooding in the Mekong Delta. At that time, the upstream res', 0, 1, 1, '', '', 1, 5);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -504,14 +528,17 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `dos_module_news_cat`
 --
 
 INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(5, 0, 'Xã hội', 'Social', '', '', 'xa-hoi', 'social', 'Xã hội', 'Social', '', 1, '', '', 1, '220312');
+(10, 0, 'Thông tin Công nghệ', '', '', '', 'thong-tin-cong-nghe', '', 'Thông tin Công nghệ', '', '', 1, '', '', 1, 'mayphotocopysieuviet'),
+(11, 0, 'Góc kỹ thuật', '', '', '', 'goc-ky-thuat', '', 'Góc kỹ thuật', '', '', 2, '', '', 1, 'mayphotocopysieuviet'),
+(12, 0, 'Tuyển dụng', '', '', '', 'tuyen-dung', '', 'Tuyển dụng', '', '', 3, '', '', 1, 'mayphotocopysieuviet'),
+(13, 0, 'Cẩm nang tiêu dùng', '', '', '', 'cam-nang-tieu-dung', '', 'Cẩm nang tiêu dùng', '', '', 4, '', '', 1, 'mayphotocopysieuviet');
 
 -- --------------------------------------------------------
 
@@ -529,10 +556,10 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456028),
-('max_count', 1),
-('counter', 1),
-('yesterday', 1);
+('day_time', 2456032),
+('max_count', 0),
+('counter', 0),
+('yesterday', 0);
 
 -- --------------------------------------------------------
 
@@ -550,7 +577,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1334031148);
+('''127.0.0.1''', 1334415293);
 
 -- --------------------------------------------------------
 
@@ -587,18 +614,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
-
---
--- Dumping data for table `dos_module_products`
---
-
-INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(6, 'Nội thất bếp treo tường', 'Kitchen wall', '2012-04-05 03:08:09', '', '', '', '', '', '<p>\r\n	Nội thất bếp treo tường Nội thất bếp treo tường</p>', '<p>\r\n	Kitchen wall Kitchen wall Kitchen wall Kitchen wall</p>', 'noi-that-bep-treo-tuong', 'kitchen-wall', 'noi-that-bep-treo-tuong', 'Kitchen wall', 0, 1, 9990000, 1, 0, '', '', '', '', 1, 10),
-(7, 'Nội thất bếp thời trang', 'Kitchen Furniture Fashion', '2012-04-05 03:09:20', '', 'noi-that-bep-thoi-trang.jpg', '', '', '', '<p>\r\n	Nội thất bếp thời trangNội thất bếp thời trangNội thất bếp thời trangNội thất bếp thời trangNội thất bếp thời trang</p>', '<p>\r\n	Kitchen Furniture FashionKitchen Furniture Fashionv Kitchen Furniture Fashion</p>', 'noi-that-bep-thoi-trang', 'kitchen-furniture-fashion', 'Nội thất bếp thời trangNội thất bếp thời trang', 'Kitchen Furniture Fashion Kitchen Furniture Fashion', 0, 2, 2999999, 1, 0, '', '', '', '', 1, 10),
-(8, 'Sách hot nhất nóng nhất', 'Book hottest hottest', '2012-04-09 01:11:18', 'sach-hot-nhat-nong-nhat-thumb.jpg', 'sach-hot-nhat-nong-nhat.jpg', '', '', '', '<p>\r\n	chi tiet</p>', '<p>\r\n	detail</p>', 'sach-hot-nhat-nong-nhat', 'book-hottest-hottest', 'sach hot nhieu nguoi doc', 'some read', 0, 3, 200000, 0, 0, '', '', '', '', 1, 10),
-(9, 'Sách khoa học công nghệ mới', 'New science and technology policy', '2012-04-09 01:32:02', 'sach-khoa-hoc-cong-nghe-moi-thumb.jpg', 'sach-khoa-hoc-cong-nghe-moi.jpg', '', '', '', '<p>\r\n	chi tiet</p>', '<p>\r\n	detail</p>', 'sach-khoa-hoc-cong-nghe-moi', 'new-science-and-technology-policy', 'sach cong nghe mới', 'New science and technology policy', 0, 4, 400000, 1, 0, '', '', '', '', 1, 8),
-(10, 'Sách nhà giáo dục mới', 'The new education policy', '2012-04-09 01:39:13', '', '', '', '', '', '<p>\r\n	chi tiet</p>', '<p>\r\n	add</p>', 'sach-nha-giao-duc-moi', 'the-new-education-policy', 'Sách nhà giáo dục mới', 'The new education policy', 0, 5, 20000, 1, 0, '', '', '', '', 1, 10);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -626,18 +642,17 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
 --
 
 INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(7, 0, 'Nội thất sofa phòng khách', 'Furniture living room sofa', '', '', 'noi-that-sofa-phong-khach', 'furniture-living-room-sofa', 'Nội thất sofa khách', 'Furniture living room sofa', 'noi-that-sofa-phong-khach.jpg', '', 1, '', '', 1, '220312'),
-(8, 0, 'Nội thất bếp', 'Interior new kitchen', '', '', 'noi-that-bep', 'interior-new-kitchen', 'Noi that bep', 'Interior new kitchen', 'noi-that-bep.jpg', '', 2, '', '', 1, '220312'),
-(9, 0, 'Nội thất giường ngủ loại 1 chuyen cho vip nhat', 'Interior of a specialized bed for vip nhat', '', '', 'noi-that-giuong-ngu-loai-1-chuyen-cho-vip-nhat', 'interior-of-a-specialized-bed-for-vip-nhat', 'Nội thất giường ngủ loại 1 chuyen cho vip nhat', 'Interior of a specialized bed for vip nhat', 'noi-that-giuong-ngu-loai-1-chuyen-cho-vip-nhat.jpg', '', 3, '', '', 1, '220312'),
-(10, 0, 'Nhà bếp', 'Kitchen Furniture', '', '', 'nha-bep', 'kitchen-furniture', 'Nha bep', 'Kitchen Furniture', 'nha-bep.jpg', '', 4, '', '', 1, '220312'),
-(11, 10, 'Sách khoa học xã hội', 'Social sciences books', '', '', 'sach-khoa-hoc-xa-hoi', 'social-sciences-books', 'Sách khoa học xã hội', 'Social sciences books', '', '', 5, '', '', 1, '220312');
+(23, 0, 'Máy Photocopy', '', '', '', 'may-photocopy', '', 'Máy Photocopy', '', 'may-photocopy.jpeg', '', 3, '', '', 1, 'mayphotocopysieuviet'),
+(24, 0, 'Máy In', '', '', '', 'may-in', '', 'Máy In', '', 'may-in.jpeg', '', 3, '', '', 1, 'mayphotocopysieuviet'),
+(25, 0, 'Máy Fax', '', '', '', 'may-fax', '', 'Máy Fax', '', 'may-fax.jpeg', '', 2, '', '', 1, 'mayphotocopysieuviet'),
+(26, 0, 'Mực -  Linh kiện - Vật tư', '', '', '', 'muc-linh-kien-vat-tu', '', '', '', 'muc--linh-kien-vat-tu.jpeg', '', 2, '', '', 1, 'mayphotocopysieuviet');
 
 -- --------------------------------------------------------
 
@@ -668,14 +683,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `dos_module_services`
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(3, 'Dịch vụ vẫn chuyển', 'Transport services', '', '', '<p>\r\n	Vận chuyển mọi nơi mọi lúc nếu khách yêu cầu</p>', '<p>\r\n	Shipping anywhere, anytime if requestedShipping anywhere, anytime if requestedShipping anywhere, anytime if requestedShipping anywhere, anytime if requested</p>', 'dich-vu-van-chuyen.jpg', 10, '2012-04-05 02:28:54', 1, 0, '', '', 'dich-vu-van-chuyen', 'transport-services', 'Vận chuyển mọi nơi mọi lúc nếu khách yêu cầu', 'Shipping anywhere, anytime if requested', 1, '220312');
+(6, 'Dịch vụ Bảo trì', '', '', '', '<p style="text-align:justify;"><span style="color:#008000;"><strong>SIÊU VIỆT CUNG CẤP MÁY PHOTOCOPY CHUYÊN NGHIỆP, LUÔN SÀN LỌC NHỮNG LOẠI MÁY THÔNG DỤNG NHẤT ĐỂ CUNG CẤP TRÊN THỊ TRƯỜNG.</strong></span></p>\n<p style="text-align:justify;"><span style="color:#ff0000;"><strong>DỊCH VỤ BẢO TRÌ ĐỊNH KỲ:</strong></span></p>\n<p style="text-align:justify;">Đây là loại hình dịch vụ được áp dụng thông dụng nhất hiện nay. Loại hình dịch vụ này có các hình thức như sau:</p>\n<p style="text-align:justify;"><span style="text-decoration:underline;"><strong>Hợp đồng bảo trì ký hàng năm:</strong></span></p>\n<p style="text-align:justify;">- Quý khách và <span style="color:#008000;"><strong>SIÊU VIỆT</strong></span> sẽ ký một hợp đồng bảo trì theo thời hạn 12 tháng một lần. Quý khách sẽ chỉ phải trả một khoản phí cố định mà không cần quan tâm là thiết bị phải sửa chữa bao nhiêu lần trong tháng.</p>\n<p style="text-align:justify;"><span style="text-decoration:underline;"><strong>Hợp đồng Meter Charge:</strong></span></p>\n<p style="text-align:justify;">- Với loại hình dịch vụ này, Quý khách sẽ không phải quan tâm đến việc thay thế vật tư cho máy (kể cả mực). Thiết bị cũng sẽ được chăm sóc như dịch vụ bảo trì hàng năm nhưng Quý khách chỉ phải thanh toán một số tiền theo số bản chụp (in) mà máy đã thực hiện trong tháng. Giá thành mỗi bản chụp (in) tuỳ thuộc vào từng loại thiết bị cụ thể</p>\n<p style="text-align:justify;"><strong><em>Khi hợp đồng được ký kết, <span style="color:#008000;">SIÊU VIỆT</span> sẽ có trách nhiệm thực hiện những công việc sau:</em></strong></p>\n<p style="text-align:justify;">- Kiểm tra, bảo dưỡng cân chỉnh và vệ sinh máy định kỳ (phần mềm và phần cứng) vào 1 ngày được ấn định hàng tháng.</p>\n<p style="text-align:justify;">- Đến kiểm tra, sửa chữa (miễn phí) vào bất cứ khi nào máy gặp trục trặc.</p>\n<p style="text-align:justify;">- Cho khách hàng mượn máy khác đang trong tình trạng hoạt động tốt khi cần nhiều thời gian cho công việc sửa chữa.</p>\n<p style="text-align:justify;">- Giám định chi tiết và báo giá vật tư, linh kiện (cần thay thế) chính phẩm với mức giá ưu đãi cho khách hàng.</p>\n<p style="text-align:justify;">- Cung cấp cho khách hàng những hướng dẫn sử dụng máy cần thiết.</p>\n<p style="text-align:center;"><span style="font-size:large;"><strong><span style="color:#008000;"> </span></strong></span></p>\n<p style="text-align:center;"><span style="font-size:large;"><strong><span style="color:#008000;">SIÊU VIỆT</span></strong> LUÔN SÁT CÁNH CÙNG THÀNH CÔNG CỦA BẠN !</span></p>\n<p style="text-align:center;"> </p>\n<p style="text-align:center;"> </p>\n<p style="text-align:center;">Hotline: 0937 107 888 - Mr. Nguyên - Phụ trách Kinh doanh.</p>\n<p style="text-align:center;">3A/1 Đoàn Văn Cự, P. Tam Hiệp, TP. Biên Hòa, Tỉnh Đồng Nai<br />Email: nguyensieuviet@yahoo.com.vn<br />Website: www.mayphotocopysieuviet.com</p>\n<p style="text-align:center;"><span style="font-size:large;"> </span></p>', '', 'dich-vu-bao-tri.jpg', 2, '2012-04-12 01:44:54', 2, 0, '', '', 'dich-vu-bao-tri', '', 'Dịch vụ Bảo trì', '', 1, 'mayphotocopysieuviet'),
+(7, 'Dịch vụ cho thuê', '', '', '', '<p style="text-align:justify;"><span style="color:#008000;"><strong>DỊCH VỤ THUÊ MÁY VĂN PHÒNG LÀ LOẠI HÌNH DỊCH VỤ ĐƯỢC ÁP DỤNG RỘNG RÃI Ở CÁC NƯỚC PHÁT TRIỂN VÀ Ở VIỆT NAM, NÓ CŨNG ĐANG LÀ SỰ LỰA CHỌN TỐI ƯU CỦA NHIỀU CÔNG TY LIÊN DOANH VÀ CÔNG TY NƯƠC NGOÀI. KHI LỰA CHỌN LOẠI HÌNH NÀY, QUÝ KHÁCH HÀNG KHÔNG PHẢI LO KHOẢN ĐẦU TƯ BAN ĐÂU...</strong></span></p>\n<p style="text-align:justify;"><strong><span style="color:#008000;">SIÊU VIỆT</span> - CHUYÊN CHO THUÊ THIẾT BỊ VĂN PHÒNG SAU:</strong></p>\n<p style="text-align:justify;">- Máy Photocopy đen trắng và màu</p>\n<p style="text-align:justify;">- Máy đa năng (Copy - Fax - In - Scan)</p>\n<p style="text-align:justify;"><strong><span style="color:#008000;">SIÊU VIỆT</span> - PHỤC VỤ</strong></p>\n<p style="text-align:justify;">* Công tác hoạt động văn phòng - dài hạn</p>\n<p style="text-align:justify;">* Các hội nghị, hội thảo - ngắn hạn</p>\n<p style="text-align:justify;">Tất cả các máy cung cấp đều được đảm bảo các tính năng như sau:</p>\n<p style="text-align:justify;">&gt;&gt; Máy copy kỹ thuật số - tính năng cao<br />&gt;&gt; Tốc độ sao chụp – in mạng tối thiểu 23 - 75 trang/phút.<br />&gt;&gt; Máy sao chụp hai mặt tự động - thật tiện lợi trong sử dụng.<br />&gt;&gt; Sao chụp miễn phí 1000 trang mỗi tháng.<br />&gt;&gt; Có khả năng nâng cấp thêm các chức năng fax và quét mạng.</p>\n<p style="text-align:justify;"><strong><span style="color:#008000;">SIÊU VIỆT</span> - NHÀ CUNG CẤP</strong></p>\n<p style="text-align:justify;">Công ty <strong><span style="color:#008000;">SIÊU VIỆT</span></strong> - nhà cung cấp các dịch vụ thuê máy văn phòng uy tín tại Đồng Nai. Mục tiêu trong kinh doanh của <span style="color:#008000;"><strong>SIÊU VIỆT</strong></span> luôn đặt chữ tín lên hàng đầu và xây dựng một hệ thống dịch vụ cho thuê máy văn phòng khép kín. Với kinh nghiệm chuyên sâu về nghành nghề chúng tôi luôn đ­a ra các giải pháp tối ­ưu - tiết kiệm chi phí - linh hoạt trong sử dụng cho các khách hàng có nhu cầu về thiết bị máy văn phòng. Sau quá trình thành lập và phát triển Công ty <strong><span style="color:#008000;">SIÊU VIỆT</span></strong> đã đạt đ­ược nhiều thành qủa cao. Hiện nay Công ty <strong><span style="color:#008000;">SIÊU VIỆT</span></strong> đang thực hiện bảo hành, cho thuê hơn 1000 khách hàng sử dụng các loại thiết bị văn phòng tại Đồng Nai và các tỉnh phía Nam. Các khách hàng quen thuộc sử dụng dịch vụ của chúng tôi đó là các công ty, khách sạn, tổ chức, văn phòng n­ước ngoài có nhu cầu sao chụp in ấn.</p>\n<p style="text-align:justify;"><strong> </strong></p>\n<p style="text-align:center;"><span style="color:#ff0000;font-size:medium;"><strong>&gt;&gt; LIÊN HỆ CHI TIẾT &lt;&lt;</strong></span></p>\n<p style="text-align:center;"><span style="font-size:medium;"><strong><span style="color:#008000;">DNTN SIÊU VIỆT</span></strong></span></p>\n<p style="text-align:center;"><span style="font-size:medium;">3A/1 Đoàn Văn Cự, P. Tam Hiệp, TP. Biên Hòa, Tỉnh Đồng Nai</span><br /><span style="font-size:medium;">Hotline: 0937 107 888 - Mr. Nguyên - Phụ trách Kinh doanh.</span><br /><span style="font-size:medium;">Email: nguyensieuviet@yahoo.com.vn</span><br /><span style="font-size:medium;">Website: www.mayphotocopysieuviet.com</span></p>', '', '', 1, '2012-04-12 01:56:24', 3, 0, '', '', 'dich-vu-cho-thue', '', 'DNTN SIÊU VIỆT', '', 1, 'mayphotocopysieuviet'),
+(9, 'Đào tạo kỹ thuật viên', '', '', '', '<p style="text-align:justify;">Truyền đạt nhiệt tình lại toàn bộ lý thuyết và nguyên lý hoạt động cơ bản của máy photocopy đơn giản, dễ hiểu, không giấu nghề.</p>\n<p style="text-align:justify;">Rất thích hợp cho người muốn tìm hiểu thêm về máy photocopy ,làm ktv ,về mở cửa hàng , công ty ,người chưa biết nghề ,thích hợp cho cty cử người đi học sửa chữa cơ bản về máy photocopy đáp ứng nhu cầu sửa chữa cho cơ quan  và công ty. </p>\n<p style="text-align:justify;">Dạy photocopy + sửa chữa cơ bản + Nâng cao.</p>\n<p style="text-align:justify;">Nhằm đào tạo thợ photocopy chuyên nghiệp,tạo công việc làm ổn định học sửa máy photocopy về để tự mở cửa hàng, cho cơ quan, công ty</p>\n<p style="text-align:justify;">Tiết kiệm thời gian, tiền bạc, khỏi phải học nghề tại các cửa hàng mà thời gian kéo dài, không hiệu quả</p>\n<p style="text-align:justify;">Cung cấp thêm các tài liệu nâng cao về máy photocopy như mã code, mode của các dòng máy để tìm hiểu và nâng cao chuyên môn .</p>\n<p style="text-align:justify;"> </p>', '', '', 1, '2012-04-12 02:16:00', 1, 0, '', '', 'dao-tao-ky-thuat-vien', '', 'Đào tạo kỹ thuật viên', '', 1, 'mayphotocopysieuviet');
 
 -- --------------------------------------------------------
 
@@ -694,14 +711,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=68 ;
 
 --
 -- Dumping data for table `dos_module_supports`
 --
 
 INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
-(22, 'Hỗ trợ kinh doanh', '1', '0909 999 888', 'groupitsoft', 1, 'yahoo', '220312');
+(67, '', '', 'Tư vấn', '1', 1, 'yahoo', 'mayphotocopysieuviet');
 
 -- --------------------------------------------------------
 
@@ -729,14 +746,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_video` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_video_dos_module_video_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `dos_module_video`
---
-
-INSERT INTO `dos_module_video` (`record_id`, `title`, `titleen`, `postdate`, `tag`, `tagen`, `description`, `descriptionen`, `pic_thumb`, `url`, `record_order`, `hits`, `extra_field1`, `extra_field2`, `hot`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(1, 'Có gì hot', 'What''s hot', '2012-04-09 00:09:19', 'co-gi-hot', 'whats-hot', 'Có gì hot', 'What''s hot', 'co-gi-hot.jpg', 'http://www.youtube.com/watch?v=9Ko3wWP6Z9Y&feature=fvsr', 1, 0, '', '', 1, 1, 1);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -761,13 +771,6 @@ CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
   KEY `fk_dos_module_video_cat_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
---
--- Dumping data for table `dos_module_video_cat`
---
-
-INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat_title`, `cat_titleen`, `tag`, `tagen`, `description`, `descriptionen`, `cat_order`, `cat_enable`, `dos_usernames_username`) VALUES
-(1, 0, '', 'Video mới nhất', 'Latest Videos', 'video-moi-nhat', 'latest-videos', 'Video mới nhất', 'Latest Videos', 1, 1, '220312');
-
 -- --------------------------------------------------------
 
 --
@@ -780,6 +783,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   KEY `fk_dos_module_webs_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dos_module_webs`
+--
+
+INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
+('keywords', 'Máy in, máy photocopy, máy fax', 'mayphotocopysieuviet'),
+('description', 'Chuyên cung cấp, mua bán Máy in, máy photocopy, máy fax', 'mayphotocopysieuviet'),
+('title', 'Chuyên cung cấp Máy in, máy photocopy', 'mayphotocopysieuviet');
 
 -- --------------------------------------------------------
 
@@ -902,13 +914,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 --
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
-('010312', 'Mẫu than đá', '2012-02-29 11:38:05', 'Chuyên bán các loại than đá, than cám...'),
-('070312', 'Mẫu Thời trang', '2012-03-06 13:21:26', 'Chuyên bán các sản phẩm thời trang quần áo mới nhất, với các dịch vụ ưu đãi...'),
-('111120', 'Mẫu cafe', '2011-11-21 02:40:10', ''),
-('130312', 'Mẫu Đồ gỗ', '2012-03-12 12:01:59', 'Chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn Carb p2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn Carb p2'),
-('200312', 'Mẫu Sách', '2012-03-19 23:43:27', 'Chuyên bán các loại sách cho sinh viên, giá cả bình dân'),
-('220312', 'Mẫu nội thất', '2012-03-21 20:04:36', 'Chuyên bán các loại đồ nội thất, dân dụng'),
-('260312', 'Mẫu máy tính', '2012-03-26 06:44:07', 'Chuyên bán các loại máy tính, linh kiện, laptop, pc, sửa chữa,...');
+('010312', 'Mẫu than đá', '2012-02-29 11:38:05', 'Chuyên bán các loại than đá, than cám...');
 
 -- --------------------------------------------------------
 
@@ -929,7 +935,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_bussiness` (
 --
 
 INSERT INTO `dos_templates_has_dos_bussiness` (`dos_templates_template`, `dos_bussiness_bussiness_id`) VALUES
-('220312', 'noi-that-ngoai-that');
+('010312', 'bds-kien-truc-xay-dung');
 
 -- --------------------------------------------------------
 
@@ -967,34 +973,41 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_modules` (
 --
 
 INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modules_module_id`, `dos_values_value_name`) VALUES
-('220312', 'about', 'advs_left'),
-('220312', 'about', 'list_supports'),
-('220312', 'about', 'menu_about'),
-('220312', 'about', 'news_new'),
-('220312', 'about', 'products_hot'),
-('220312', 'contact', 'advs_left'),
-('220312', 'contact', 'list_supports'),
-('220312', 'contact', 'menu_products'),
-('220312', 'contact', 'news_new'),
-('220312', 'contact', 'products_hot'),
-('220312', 'default', 'about_home'),
-('220312', 'default', 'advs_left'),
-('220312', 'default', 'list_supports'),
-('220312', 'default', 'menu_products'),
-('220312', 'default', 'news_new'),
-('220312', 'default', 'products_hot'),
-('220312', 'default', 'products_new'),
-('220312', 'default', 'video_hot'),
-('220312', 'news', 'menu_news'),
-('220312', 'news', 'news_hot'),
-('220312', 'news', 'news_new'),
-('220312', 'products', 'list_supports'),
-('220312', 'products', 'menu_products'),
-('220312', 'products', 'news_new'),
-('220312', 'services', 'menu_services'),
-('220312', 'services', 'news_new'),
-('220312', 'video', 'menu_video'),
-('220312', 'video', 'news_new');
+('010312', 'about', 'advs_left'),
+('010312', 'about', 'list_supports'),
+('010312', 'about', 'menu_about'),
+('010312', 'about', 'products_hot'),
+('010312', 'contact', 'advs_left'),
+('010312', 'contact', 'list_supports'),
+('010312', 'contact', 'menu_products'),
+('010312', 'contact', 'products_hot'),
+('010312', 'default', 'about_home'),
+('010312', 'default', 'advs_left'),
+('010312', 'default', 'advs_right'),
+('010312', 'default', 'list_supports'),
+('010312', 'default', 'menu_products'),
+('010312', 'default', 'news_new'),
+('010312', 'default', 'products_hot'),
+('010312', 'default', 'products_new'),
+('010312', 'default', 'video_hot'),
+('010312', 'news', 'advs_left'),
+('010312', 'news', 'menu_news'),
+('010312', 'news', 'news_hot'),
+('010312', 'news', 'news_new'),
+('010312', 'news', 'video_hot'),
+('010312', 'products', 'advs_left'),
+('010312', 'products', 'list_supports'),
+('010312', 'products', 'menu_products'),
+('010312', 'products', 'products_hot'),
+('010312', 'services', 'advs_left'),
+('010312', 'services', 'list_supports'),
+('010312', 'services', 'menu_services'),
+('010312', 'services', 'news_new'),
+('010312', 'services', 'products_hot'),
+('010312', 'video', 'advs_left'),
+('010312', 'video', 'list_supports'),
+('010312', 'video', 'menu_video'),
+('010312', 'video', 'news_new');
 
 -- --------------------------------------------------------
 
@@ -1014,6 +1027,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
   `language` varchar(20) NOT NULL,
   `code` varchar(15) DEFAULT NULL,
   `expired` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `import` tinyint(1) NOT NULL DEFAULT '0',
   `activated` tinyint(1) NOT NULL,
   `dos_templates_template` varchar(6) NOT NULL,
   `dos_provinces_province_id` int(11) NOT NULL,
@@ -1028,8 +1042,8 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 -- Dumping data for table `dos_usernames`
 --
 
-INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('220312', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-05 02:08:09', '', '', '', 'user', 'vi|en', '', '2012-05-04 16:00:00', 1, '220312', 2, 'tranh-anh-qua-luu-niem');
+INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
+('mayphotocopysieuviet', 'info@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-11 20:38:05', '', '', '', 'user', 'vi', '', '2012-05-11 10:00:00', 0, 1, '010312', 19, 'bds-kien-truc-xay-dung');
 
 -- --------------------------------------------------------
 
@@ -1058,9 +1072,20 @@ CREATE TABLE IF NOT EXISTS `dos_user_langs` (
   `lang` varchar(200) NOT NULL,
   `langen` varchar(200) DEFAULT NULL,
   `dos_usernames_username` varchar(45) NOT NULL,
-  PRIMARY KEY (`lang_name`,`dos_usernames_username`),
+  PRIMARY KEY (`lang_name`),
   KEY `fk_dos_user_langs_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dos_user_langs`
+--
+
+INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_username`) VALUES
+('address1', '3A/1 Đoàn Văn Cự, P. Tam Hiệp, TP. Biên Hòa, Tỉnh Đồng Nai', '', 'mayphotocopysieuviet'),
+('address2', '', '', 'mayphotocopysieuviet'),
+('advs', 'Đối tác chính', '', 'mayphotocopysieuviet'),
+('company_name', 'DNTN SIÊU VIỆT', '', 'mayphotocopysieuviet'),
+('company_phone', 'Hotline: 0937 107 888 (Mr. Nguyên)', '', 'mayphotocopysieuviet');
 
 -- --------------------------------------------------------
 

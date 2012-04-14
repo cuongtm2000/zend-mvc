@@ -27,7 +27,7 @@ class Controller extends CController {
 
 		Yii::app()->theme = $info_user['dos_templates_template']; //template use by 'admin'
 		Yii::app()->session['template'] = $info_user['dos_templates_template']; //session template use
-		define('USERFILES', '/public/userfiles/images/' . $info_user['username'] . '/images');
+		define('USERFILES', '/public/userfiles/image/' . $info_user['username'] . '/image');
 
 		$this->numLang = explode('|', $info_user['language']);
 		if (isset($_GET['language']) && !in_array($_GET['language'], $this->numLang)) {
