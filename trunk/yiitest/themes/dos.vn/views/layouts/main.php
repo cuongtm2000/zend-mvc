@@ -17,7 +17,7 @@
         <script type="text/javascript">DD_belatedPNG.fix('img');</script>
         <![endif]-->
 
-		<?php echo $this->analytics?>
+<?php echo $this->analytics?>
     </head>
     <body>
         <div id="wrapper">
