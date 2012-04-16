@@ -261,7 +261,7 @@ class Products extends CActiveRecord {
 	//Front end - list Item by Cat
 	public function listItemByCat($cid) {
 		$criteria = new CDbCriteria();
-		$criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit';
+		$criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit,record_id';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
 		$criteria->params = array(':cid' => $cid);
@@ -519,4 +519,15 @@ class Products extends CActiveRecord {
 		$command->bindParam(":user", $user, PDO::PARAM_STR);
 		return $command->queryScalar();
 	}
+	public function listItem($arrParam = array()) {
+        if (empty($arrParam))
+            return;
+        $ids = implode(',', array_keys($arrParam));
+     
+        $criteria = new CDbCriteria();
+        $criteria->with = array(__CLASS__ . 'Cat');
+        $criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit, hot,record_id';
+        $criteria->condition = 'enable = 1 and record_id IN(' . $ids . ')';
+        return $this->model()->findAll($criteria);
+    }
 }
