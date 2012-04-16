@@ -3,7 +3,7 @@
         var i = 0;
         $("#add-rows").click(function(){
             if(i<5){
-                $(".rows").before('<p><label>Menu</label><input name="menu[]" value="" maxlength="50" class="txt-large" /> <input name="menuen[]" value="" maxlength="50" class="txt-small" /> <input name="url[]" value="" maxlength="100" class="txt-small" /> <input name="position[]" value="" maxlength="2" class="txt-very-tiny" /> <select name="target[]" class="select-110"><option value="">Cureent</option><option value="_blank">Page new</option></select></p>');
+                $(".rows").before('<p><label>Menu</label><?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?><input name="menu<?php echo $lang?>[]" value="" maxlength="50" class="txt-small" /><?php endforeach; ?> <input name="url[]" value="" maxlength="100" class="txt-small" /> <input name="position[]" value="" maxlength="2" class="txt-very-tiny" /> <select name="target[]" class="select-110"><option value="">Cureent</option><option value="_blank">Page new</option></select></p>');
                 i++;
             }
             return false;
@@ -16,8 +16,9 @@
         <p class="rows"><a href="#" id="add-rows"><?php echo $this->lang['add_row'] ?></a></p>
         <p>
             <label></label>
-            <label class="label-txt-large">Menu</label>
-            <label class="label-txt-small">Menu En</label>
+			<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
+            <label class="label-txt-small">Menu <?php echo $lang?></label>
+			<?php endforeach; ?>
             <label class="label-txt-small">Url</label>
             <label class="label-txt-very-tiny">Pos</label>
             <label class="label-txt-small">Target</label>
@@ -25,8 +26,9 @@
         <?php foreach ($models as $value): ?>
             <p class="clear">
                 <label>Menu</label>
-                <input name="menu[]" value="<?php echo $value['menu'] ?>" maxlength="50" class="txt-large" />
-                <input name="menuen[]" value="<?php echo $value['menuen'] ?>" maxlength="50" class="txt-small" />
+				<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
+                <input name="menu<?php echo $lang?>[]" value="<?php echo $value['menu'.$lang] ?>" maxlength="50" class="txt-small" />
+				<?php endforeach; ?>
                 <input name="url[]" value="<?php echo $value['url'] ?>" maxlength="100" class="txt-small" />
                 <input name="position[]" value="<?php echo $value['position'] ?>" maxlength="2" class="txt-very-tiny" />
                 <select name="target[]" class="select-110">
