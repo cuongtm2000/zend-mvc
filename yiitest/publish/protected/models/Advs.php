@@ -26,11 +26,11 @@ class Advs extends CActiveRecord {
 
 	private $_oldImage;
 	private $_model;
-	private $_subdomain;
+	//private $_subdomain;
 
-	public function init() {
-		$this->_subdomain = Yii::app()->session['subdomain'];
-	}
+	//public function init() {
+		//$this->_subdomain = Yii::app()->session['subdomain'];
+	//}
 
 	/**
 	 * Returns the static model of the specified AR class.
@@ -213,9 +213,8 @@ class Advs extends CActiveRecord {
 	 * @return mixed
 	 */
 	private function listItemsPosition($position) {
-		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', pic_thumb, url, type FROM ' . $this->tableName() . ' WHERE start_date <= NOW() AND end_date >= NOW() AND position=:position AND enable=1 AND dos_usernames_username=:user ORDER BY record_order DESC, create_date DESC');
+		$command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', pic_thumb, url, type FROM ' . $this->tableName() . ' WHERE start_date <= NOW() AND end_date >= NOW() AND position=:position AND enable=1 ORDER BY record_order DESC, create_date DESC');
 		$command->bindParam(':position', $position, PDO::PARAM_STR);
-		$command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
 		return $command->queryAll();
 	}
 
