@@ -26,7 +26,7 @@
     <div class="col1"><?php echo $form->labelEx($model, 'pic_thumb') ?></div>
     <div class="col2">
         <?php if ($model->pic_thumb): ?>
-            <div class="img-marginb5"><img src="<?php echo Yii::app()->request->baseUrl . '/public/userfiles/images/'.Yii::app()->user->id.'/images/' . $this->getId() . '/' . $model->pic_thumb ?>" alt="<?php echo $model->title?>" />
+            <div class="img-marginb5"><img src="<?php echo Yii::app()->request->baseUrl . '/public/userfiles/image/'.Yii::app()->user->id.'/image/' . $this->getId() . '/' . $model->pic_thumb ?>" alt="<?php echo $model->title?>" />
                 <?php echo $form->checkBox($model, 'remove_pic_thumb') ?><?php echo $form->labelEx($model, 'remove_pic_thumb', array('class' => 'remove')) ?>
             </div>
         <?php endif; ?>

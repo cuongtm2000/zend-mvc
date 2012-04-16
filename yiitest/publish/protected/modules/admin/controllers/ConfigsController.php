@@ -64,6 +64,7 @@ class ConfigsController extends AdminController {
 			$model->addItemSeo(Yii::app()->request);
 			$this->refresh();
 		}
+
 		$this->render('seo', array('models' => $model->listMenuByAdmin(1)));
 	}
 }
