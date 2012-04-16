@@ -2473,3 +2473,1027 @@ Stack trace:
 REQUEST_URI=/publish/public/userfiles/images/mayphotocopysieuviet/images/banner/banner.jpg
 HTTP_REFERER=http://dos.vn/publish/
 ---
+2012/04/15 05:55:01 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "/index".' in E:\xampp\php\www\framework\web\CController.php:879
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('/index', NULL, true)
+#1 E:\xampp\htdocs\yii\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('/index')
+#2 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('')
+#7 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii/publish/
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep/sach-hot-nhat-nong-nhat.html
+---
+2012/04/15 05:58:26 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "220312/index".' in E:\xampp\php\www\framework\web\CController.php:879
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('220312/index', NULL, true)
+#1 E:\xampp\htdocs\yii\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('220312/index')
+#2 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('')
+#7 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii/publish/
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep/sach-hot-nhat-nong-nhat.html
+---
+2012/04/15 06:00:29 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "/index".' in E:\xampp\php\www\framework\web\CController.php:879
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('/index', NULL, true)
+#1 E:\xampp\htdocs\yii\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('/index')
+#2 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('')
+#7 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii/publish/
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep/sach-hot-nhat-nong-nhat.html
+---
+2012/04/15 06:03:59 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "220312/index".' in E:\xampp\php\www\framework\web\CController.php:879
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('220312/index', NULL, true)
+#1 E:\xampp\htdocs\yii\publish\protected\modules\default\controllers\DefaultController.php(8): CController->render('220312/index')
+#2 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('')
+#7 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii/publish/
+---
+2012/04/15 06:04:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-khoa-hoc-cong-nghe-moi-thumb.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/products/sach-khoa-hoc-cong-nghe-moi-thumb.jpg
+HTTP_REFERER=http://localhost/yii/publish/
+---
+2012/04/15 06:04:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg
+HTTP_REFERER=http://localhost/yii/publish/
+---
+2012/04/15 06:04:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/video/co-gi-hot.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/video/co-gi-hot.jpg
+HTTP_REFERER=http://localhost/yii/publish/
+---
+2012/04/15 06:08:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg
+HTTP_REFERER=http://localhost/yii/publish/
+---
+2012/04/15 06:08:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/video/co-gi-hot.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/video/co-gi-hot.jpg
+HTTP_REFERER=http://localhost/yii/publish/
+---
+2012/04/15 06:08:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-khoa-hoc-cong-nghe-moi-thumb.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/products/sach-khoa-hoc-cong-nghe-moi-thumb.jpg
+HTTP_REFERER=http://localhost/yii/publish/
+---
+2012/04/15 06:08:17 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "220312/index".' in E:\xampp\php\www\framework\web\CController.php:879
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('220312/index', Array, true)
+#1 E:\xampp\htdocs\yii\publish\protected\modules\contact\controllers\DefaultController.php(26): CController->render('220312/index', Array)
+#2 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('index')
+#7 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('contact/default...')
+#8 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii/publish/lien-he
+HTTP_REFERER=http://localhost/yii/publish/
+---
+2012/04/15 06:21:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/productsCat/nha-bep.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/productsCat/nha-bep.jpg
+HTTP_REFERER=http://localhost/yii/publish/san-pham
+---
+2012/04/15 06:21:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/productsCat/noi-that-sofa-phong-khach.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/productsCat/noi-that-sofa-phong-khach.jpg
+HTTP_REFERER=http://localhost/yii/publish/san-pham
+---
+2012/04/15 06:21:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/productsCat/noi-that-bep.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/productsCat/noi-that-bep.jpg
+HTTP_REFERER=http://localhost/yii/publish/san-pham
+---
+2012/04/15 06:21:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/productsCat/noi-that-giuong-ngu-loai-1-chuyen-cho-vip-nhat.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/productsCat/noi-that-giuong-ngu-loai-1-chuyen-cho-vip-nhat.jpg
+HTTP_REFERER=http://localhost/yii/publish/san-pham
+---
+2012/04/15 06:21:21 [error] [php] Undefined index: addcart (E:\xampp\htdocs\yii\publish\protected\modules\products\views\default\220312\cats.php:40)
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(870): DefaultController->renderFile()
+#1 E:\xampp\php\www\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(17): DefaultController->render()
+#3 unknown(0): DefaultController->actionCats()
+#4 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 E:\xampp\php\www\framework\web\CController.php(287): DefaultController->runAction()
+#8 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#9 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
+#10 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 E:\xampp\htdocs\yii\publish\index.php(16): CWebApplication->run()
+REQUEST_URI=/yii/publish/san-pham/nha-bep
+in E:\xampp\htdocs\yii\publish\protected\modules\products\views\default\220312\cats.php (40)
+in E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php (17)
+in E:\xampp\htdocs\yii\publish\index.php (16)
+2012/04/15 06:21:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep
+---
+2012/04/15 06:29:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep
+---
+2012/04/15 06:31:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep
+---
+2012/04/15 06:36:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep
+---
+2012/04/15 06:36:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "default/order/id/noi-that-bep-thoi-trang".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('default/order/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/default/order/id/noi-that-bep-thoi-trang
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep
+---
+2012/04/15 06:39:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "default/order/id/sach-nha-giao-duc-moi".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('default/order/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/default/order/id/sach-nha-giao-duc-moi
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep
+---
+2012/04/15 06:40:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "default/order/id/sach-nha-giao-duc-moi".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('default/order/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/default/order/id/sach-nha-giao-duc-moi
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep
+---
+2012/04/15 06:40:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "default/order/id/sach-nha-giao-duc-moi".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('default/order/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/default/order/id/sach-nha-giao-duc-moi
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep
+---
+2012/04/15 06:41:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep
+---
+2012/04/15 06:41:09 [error] [exception.CException] exception 'CException' with message 'Products and its behaviors do not have a method or closure named "listItem".' in E:\xampp\php\www\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(226): CComponent->__call('listItem', Array)
+#1 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(55): CActiveRecord->__call('listItem', Array)
+#2 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(55): Products->listItem(Array)
+#3 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionCartitem()
+#4 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('cartitem')
+#8 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#9 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/publish/products/default/cartitem
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep
+---
+2012/04/15 06:42:43 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'tag' in where clause is ambiguous. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`pic_thumb` AS `t0_c4`, `t`.`tag` AS `t0_c11`, `t`.`unit` AS `t0_c17`, `t`.`hot` AS `t0_c18`, `t`.`record_id` AS `t0_c0`, `ProductsCat`.`cat_id` AS `t1_c0`, `ProductsCat`.`cat_parent_id` AS `t1_c1`, `ProductsCat`.`cat_title` AS `t1_c2`, `ProductsCat`.`cat_titleen` AS `t1_c3`, `ProductsCat`.`preview` AS `t1_c4`, `ProductsCat`.`previewen` AS `t1_c5`, `ProductsCat`.`tag` AS `t1_c6`, `ProductsCat`.`tagen` AS `t1_c7`, `ProductsCat`.`description` AS `t1_c8`, `ProductsCat`.`descriptionen` AS `t1_c9`, `ProductsCat`.`pic_full` AS `t1_c10`, `ProductsCat`.`pic_desc` AS `t1_c11`, `ProductsCat`.`cat_order` AS `t1_c12`, `ProductsCat`.`cat_extra1` AS `t1_c13`, `ProductsCat`.`cat_extra2` AS `t1_c14`, `ProductsCat`.`cat_enable` AS `t1_c15`, `ProductsCat`.`dos_usernames_username` AS `t1_c16` FROM `dos_module_products` `t`  LEFT OUTER JOIN `dos_module_products_cat` `ProductsCat` ON (`t`.`dos_module_item_cat_cat_id`=`ProductsCat`.`cat_id`)  WHERE (enable = 1 and tag IN(noi-that-bep-thoi-trang)).
+in E:\xampp\htdocs\yii\publish\protected\modules\products\models\Products.php (534)
+in E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php (55)
+in E:\xampp\htdocs\yii\publish\index.php (16)
+2012/04/15 06:42:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'tag' in where clause is ambiguous. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`pic_thumb` AS `t0_c4`, `t`.`tag` AS `t0_c11`, `t`.`unit` AS `t0_c17`, `t`.`hot` AS `t0_c18`, `t`.`record_id` AS `t0_c0`, `ProductsCat`.`cat_id` AS `t1_c0`, `ProductsCat`.`cat_parent_id` AS `t1_c1`, `ProductsCat`.`cat_title` AS `t1_c2`, `ProductsCat`.`cat_titleen` AS `t1_c3`, `ProductsCat`.`preview` AS `t1_c4`, `ProductsCat`.`previewen` AS `t1_c5`, `ProductsCat`.`tag` AS `t1_c6`, `ProductsCat`.`tagen` AS `t1_c7`, `ProductsCat`.`description` AS `t1_c8`, `ProductsCat`.`descriptionen` AS `t1_c9`, `ProductsCat`.`pic_full` AS `t1_c10`, `ProductsCat`.`pic_desc` AS `t1_c11`, `ProductsCat`.`cat_order` AS `t1_c12`, `ProductsCat`.`cat_extra1` AS `t1_c13`, `ProductsCat`.`cat_extra2` AS `t1_c14`, `ProductsCat`.`cat_enable` AS `t1_c15`, `ProductsCat`.`dos_usernames_username` AS `t1_c16` FROM `dos_module_products` `t`  LEFT OUTER JOIN `dos_module_products_cat` `ProductsCat` ON (`t`.`dos_module_item_cat_cat_id`=`ProductsCat`.`cat_id`)  WHERE (enable = 1 and tag IN(noi-that-bep-thoi-trang))' in E:\xampp\php\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 E:\xampp\php\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(818): CDbCommand->queryAll()
+#2 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 E:\xampp\htdocs\yii\publish\protected\modules\products\models\Products.php(534): CActiveRecord->findAll(Object(CDbCriteria))
+#7 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(55): Products->listItem(Array)
+#8 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionCartitem()
+#9 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('cartitem')
+#13 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#14 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/publish/products/default/cartitem
+---
+2012/04/15 06:44:23 [error] [exception.CDbException] exception 'CDbException' with message 'Quan hệ "ProductsCat cat" chưa được định nghĩa trong lớp active record "Products".' in E:\xampp\php\www\framework\db\ar\CActiveFinder.php:215
+Stack trace:
+#0 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(310): CActiveFinder->buildJoinTree(Object(CJoinElement), 'ProductsCat cat')
+#1 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1291): CActiveFinder->__construct(Object(Products), Array)
+#3 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#4 E:\xampp\htdocs\yii\publish\protected\modules\products\models\Products.php(534): CActiveRecord->findAll(Object(CDbCriteria))
+#5 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(55): Products->listItem(Array)
+#6 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionCartitem()
+#7 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('cartitem')
+#11 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#12 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/publish/products/default/cartitem
+---
+2012/04/15 06:44:41 [error] [exception.CDbException] exception 'CDbException' with message 'Quan hệ "ProductsCat cat" chưa được định nghĩa trong lớp active record "Products".' in E:\xampp\php\www\framework\db\ar\CActiveFinder.php:215
+Stack trace:
+#0 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(310): CActiveFinder->buildJoinTree(Object(CJoinElement), 'ProductsCat cat')
+#1 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1291): CActiveFinder->__construct(Object(Products), Array)
+#3 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#4 E:\xampp\htdocs\yii\publish\protected\modules\products\models\Products.php(534): CActiveRecord->findAll(Object(CDbCriteria))
+#5 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(55): Products->listItem(Array)
+#6 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionCartitem()
+#7 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('cartitem')
+#11 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#12 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/publish/products/default/cartitem
+---
+2012/04/15 06:44:48 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'tag' in where clause is ambiguous. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`pic_thumb` AS `t0_c4`, `t`.`tag` AS `t0_c11`, `t`.`unit` AS `t0_c17`, `t`.`hot` AS `t0_c18`, `t`.`record_id` AS `t0_c0`, `ProductsCat`.`cat_id` AS `t1_c0`, `ProductsCat`.`cat_parent_id` AS `t1_c1`, `ProductsCat`.`cat_title` AS `t1_c2`, `ProductsCat`.`cat_titleen` AS `t1_c3`, `ProductsCat`.`preview` AS `t1_c4`, `ProductsCat`.`previewen` AS `t1_c5`, `ProductsCat`.`tag` AS `t1_c6`, `ProductsCat`.`tagen` AS `t1_c7`, `ProductsCat`.`description` AS `t1_c8`, `ProductsCat`.`descriptionen` AS `t1_c9`, `ProductsCat`.`pic_full` AS `t1_c10`, `ProductsCat`.`pic_desc` AS `t1_c11`, `ProductsCat`.`cat_order` AS `t1_c12`, `ProductsCat`.`cat_extra1` AS `t1_c13`, `ProductsCat`.`cat_extra2` AS `t1_c14`, `ProductsCat`.`cat_enable` AS `t1_c15`, `ProductsCat`.`dos_usernames_username` AS `t1_c16` FROM `dos_module_products` `t`  LEFT OUTER JOIN `dos_module_products_cat` `ProductsCat` ON (`t`.`dos_module_item_cat_cat_id`=`ProductsCat`.`cat_id`)  WHERE (enable = 1 and tag IN(noi-that-bep-thoi-trang)).
+in E:\xampp\htdocs\yii\publish\protected\modules\products\models\Products.php (534)
+in E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php (55)
+in E:\xampp\htdocs\yii\publish\index.php (16)
+2012/04/15 06:44:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'tag' in where clause is ambiguous. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`pic_thumb` AS `t0_c4`, `t`.`tag` AS `t0_c11`, `t`.`unit` AS `t0_c17`, `t`.`hot` AS `t0_c18`, `t`.`record_id` AS `t0_c0`, `ProductsCat`.`cat_id` AS `t1_c0`, `ProductsCat`.`cat_parent_id` AS `t1_c1`, `ProductsCat`.`cat_title` AS `t1_c2`, `ProductsCat`.`cat_titleen` AS `t1_c3`, `ProductsCat`.`preview` AS `t1_c4`, `ProductsCat`.`previewen` AS `t1_c5`, `ProductsCat`.`tag` AS `t1_c6`, `ProductsCat`.`tagen` AS `t1_c7`, `ProductsCat`.`description` AS `t1_c8`, `ProductsCat`.`descriptionen` AS `t1_c9`, `ProductsCat`.`pic_full` AS `t1_c10`, `ProductsCat`.`pic_desc` AS `t1_c11`, `ProductsCat`.`cat_order` AS `t1_c12`, `ProductsCat`.`cat_extra1` AS `t1_c13`, `ProductsCat`.`cat_extra2` AS `t1_c14`, `ProductsCat`.`cat_enable` AS `t1_c15`, `ProductsCat`.`dos_usernames_username` AS `t1_c16` FROM `dos_module_products` `t`  LEFT OUTER JOIN `dos_module_products_cat` `ProductsCat` ON (`t`.`dos_module_item_cat_cat_id`=`ProductsCat`.`cat_id`)  WHERE (enable = 1 and tag IN(noi-that-bep-thoi-trang))' in E:\xampp\php\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 E:\xampp\php\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(818): CDbCommand->queryAll()
+#2 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 E:\xampp\htdocs\yii\publish\protected\modules\products\models\Products.php(534): CActiveRecord->findAll(Object(CDbCriteria))
+#7 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(55): Products->listItem(Array)
+#8 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionCartitem()
+#9 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('cartitem')
+#13 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#14 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/publish/products/default/cartitem
+---
+2012/04/15 06:45:20 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'tag' in where clause is ambiguous. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`pic_thumb` AS `t0_c4`, `t`.`tag` AS `t0_c11`, `t`.`unit` AS `t0_c17`, `t`.`hot` AS `t0_c18`, `t`.`record_id` AS `t0_c0`, `ProductsCat`.`cat_id` AS `t1_c0`, `ProductsCat`.`cat_parent_id` AS `t1_c1`, `ProductsCat`.`cat_title` AS `t1_c2`, `ProductsCat`.`cat_titleen` AS `t1_c3`, `ProductsCat`.`preview` AS `t1_c4`, `ProductsCat`.`previewen` AS `t1_c5`, `ProductsCat`.`tag` AS `t1_c6`, `ProductsCat`.`tagen` AS `t1_c7`, `ProductsCat`.`description` AS `t1_c8`, `ProductsCat`.`descriptionen` AS `t1_c9`, `ProductsCat`.`pic_full` AS `t1_c10`, `ProductsCat`.`pic_desc` AS `t1_c11`, `ProductsCat`.`cat_order` AS `t1_c12`, `ProductsCat`.`cat_extra1` AS `t1_c13`, `ProductsCat`.`cat_extra2` AS `t1_c14`, `ProductsCat`.`cat_enable` AS `t1_c15`, `ProductsCat`.`dos_usernames_username` AS `t1_c16` FROM `dos_module_products` `t`  LEFT OUTER JOIN `dos_module_products_cat` `ProductsCat` ON (`t`.`dos_module_item_cat_cat_id`=`ProductsCat`.`cat_id`)  WHERE (enable = 1 and tag IN(noi-that-bep-thoi-trang)).
+in E:\xampp\htdocs\yii\publish\protected\modules\products\models\Products.php (534)
+in E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php (55)
+in E:\xampp\htdocs\yii\publish\index.php (16)
+2012/04/15 06:45:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'tag' in where clause is ambiguous. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`pic_thumb` AS `t0_c4`, `t`.`tag` AS `t0_c11`, `t`.`unit` AS `t0_c17`, `t`.`hot` AS `t0_c18`, `t`.`record_id` AS `t0_c0`, `ProductsCat`.`cat_id` AS `t1_c0`, `ProductsCat`.`cat_parent_id` AS `t1_c1`, `ProductsCat`.`cat_title` AS `t1_c2`, `ProductsCat`.`cat_titleen` AS `t1_c3`, `ProductsCat`.`preview` AS `t1_c4`, `ProductsCat`.`previewen` AS `t1_c5`, `ProductsCat`.`tag` AS `t1_c6`, `ProductsCat`.`tagen` AS `t1_c7`, `ProductsCat`.`description` AS `t1_c8`, `ProductsCat`.`descriptionen` AS `t1_c9`, `ProductsCat`.`pic_full` AS `t1_c10`, `ProductsCat`.`pic_desc` AS `t1_c11`, `ProductsCat`.`cat_order` AS `t1_c12`, `ProductsCat`.`cat_extra1` AS `t1_c13`, `ProductsCat`.`cat_extra2` AS `t1_c14`, `ProductsCat`.`cat_enable` AS `t1_c15`, `ProductsCat`.`dos_usernames_username` AS `t1_c16` FROM `dos_module_products` `t`  LEFT OUTER JOIN `dos_module_products_cat` `ProductsCat` ON (`t`.`dos_module_item_cat_cat_id`=`ProductsCat`.`cat_id`)  WHERE (enable = 1 and tag IN(noi-that-bep-thoi-trang))' in E:\xampp\php\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 E:\xampp\php\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(818): CDbCommand->queryAll()
+#2 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 E:\xampp\htdocs\yii\publish\protected\modules\products\models\Products.php(534): CActiveRecord->findAll(Object(CDbCriteria))
+#7 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(55): Products->listItem(Array)
+#8 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionCartitem()
+#9 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('cartitem')
+#13 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#14 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/publish/products/default/cartitem
+---
+2012/04/15 06:45:21 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'tag' in where clause is ambiguous. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`pic_thumb` AS `t0_c4`, `t`.`tag` AS `t0_c11`, `t`.`unit` AS `t0_c17`, `t`.`hot` AS `t0_c18`, `t`.`record_id` AS `t0_c0`, `ProductsCat`.`cat_id` AS `t1_c0`, `ProductsCat`.`cat_parent_id` AS `t1_c1`, `ProductsCat`.`cat_title` AS `t1_c2`, `ProductsCat`.`cat_titleen` AS `t1_c3`, `ProductsCat`.`preview` AS `t1_c4`, `ProductsCat`.`previewen` AS `t1_c5`, `ProductsCat`.`tag` AS `t1_c6`, `ProductsCat`.`tagen` AS `t1_c7`, `ProductsCat`.`description` AS `t1_c8`, `ProductsCat`.`descriptionen` AS `t1_c9`, `ProductsCat`.`pic_full` AS `t1_c10`, `ProductsCat`.`pic_desc` AS `t1_c11`, `ProductsCat`.`cat_order` AS `t1_c12`, `ProductsCat`.`cat_extra1` AS `t1_c13`, `ProductsCat`.`cat_extra2` AS `t1_c14`, `ProductsCat`.`cat_enable` AS `t1_c15`, `ProductsCat`.`dos_usernames_username` AS `t1_c16` FROM `dos_module_products` `t`  LEFT OUTER JOIN `dos_module_products_cat` `ProductsCat` ON (`t`.`dos_module_item_cat_cat_id`=`ProductsCat`.`cat_id`)  WHERE (enable = 1 and tag IN(noi-that-bep-thoi-trang)).
+in E:\xampp\htdocs\yii\publish\protected\modules\products\models\Products.php (534)
+in E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php (55)
+in E:\xampp\htdocs\yii\publish\index.php (16)
+2012/04/15 06:45:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'tag' in where clause is ambiguous. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`pic_thumb` AS `t0_c4`, `t`.`tag` AS `t0_c11`, `t`.`unit` AS `t0_c17`, `t`.`hot` AS `t0_c18`, `t`.`record_id` AS `t0_c0`, `ProductsCat`.`cat_id` AS `t1_c0`, `ProductsCat`.`cat_parent_id` AS `t1_c1`, `ProductsCat`.`cat_title` AS `t1_c2`, `ProductsCat`.`cat_titleen` AS `t1_c3`, `ProductsCat`.`preview` AS `t1_c4`, `ProductsCat`.`previewen` AS `t1_c5`, `ProductsCat`.`tag` AS `t1_c6`, `ProductsCat`.`tagen` AS `t1_c7`, `ProductsCat`.`description` AS `t1_c8`, `ProductsCat`.`descriptionen` AS `t1_c9`, `ProductsCat`.`pic_full` AS `t1_c10`, `ProductsCat`.`pic_desc` AS `t1_c11`, `ProductsCat`.`cat_order` AS `t1_c12`, `ProductsCat`.`cat_extra1` AS `t1_c13`, `ProductsCat`.`cat_extra2` AS `t1_c14`, `ProductsCat`.`cat_enable` AS `t1_c15`, `ProductsCat`.`dos_usernames_username` AS `t1_c16` FROM `dos_module_products` `t`  LEFT OUTER JOIN `dos_module_products_cat` `ProductsCat` ON (`t`.`dos_module_item_cat_cat_id`=`ProductsCat`.`cat_id`)  WHERE (enable = 1 and tag IN(noi-that-bep-thoi-trang))' in E:\xampp\php\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 E:\xampp\php\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(818): CDbCommand->queryAll()
+#2 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 E:\xampp\htdocs\yii\publish\protected\modules\products\models\Products.php(534): CActiveRecord->findAll(Object(CDbCriteria))
+#7 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(55): Products->listItem(Array)
+#8 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionCartitem()
+#9 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('cartitem')
+#13 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#14 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/publish/products/default/cartitem
+---
+2012/04/15 06:45:25 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'tag' in where clause is ambiguous. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`pic_thumb` AS `t0_c4`, `t`.`tag` AS `t0_c11`, `t`.`unit` AS `t0_c17`, `t`.`hot` AS `t0_c18`, `t`.`record_id` AS `t0_c0`, `ProductsCat`.`cat_id` AS `t1_c0`, `ProductsCat`.`cat_parent_id` AS `t1_c1`, `ProductsCat`.`cat_title` AS `t1_c2`, `ProductsCat`.`cat_titleen` AS `t1_c3`, `ProductsCat`.`preview` AS `t1_c4`, `ProductsCat`.`previewen` AS `t1_c5`, `ProductsCat`.`tag` AS `t1_c6`, `ProductsCat`.`tagen` AS `t1_c7`, `ProductsCat`.`description` AS `t1_c8`, `ProductsCat`.`descriptionen` AS `t1_c9`, `ProductsCat`.`pic_full` AS `t1_c10`, `ProductsCat`.`pic_desc` AS `t1_c11`, `ProductsCat`.`cat_order` AS `t1_c12`, `ProductsCat`.`cat_extra1` AS `t1_c13`, `ProductsCat`.`cat_extra2` AS `t1_c14`, `ProductsCat`.`cat_enable` AS `t1_c15`, `ProductsCat`.`dos_usernames_username` AS `t1_c16` FROM `dos_module_products` `t`  LEFT OUTER JOIN `dos_module_products_cat` `ProductsCat` ON (`t`.`dos_module_item_cat_cat_id`=`ProductsCat`.`cat_id`)  WHERE (enable = 1 and tag IN(noi-that-bep-thoi-trang)).
+in E:\xampp\htdocs\yii\publish\protected\modules\products\models\Products.php (534)
+in E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php (55)
+in E:\xampp\htdocs\yii\publish\index.php (16)
+2012/04/15 06:45:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'tag' in where clause is ambiguous. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`pic_thumb` AS `t0_c4`, `t`.`tag` AS `t0_c11`, `t`.`unit` AS `t0_c17`, `t`.`hot` AS `t0_c18`, `t`.`record_id` AS `t0_c0`, `ProductsCat`.`cat_id` AS `t1_c0`, `ProductsCat`.`cat_parent_id` AS `t1_c1`, `ProductsCat`.`cat_title` AS `t1_c2`, `ProductsCat`.`cat_titleen` AS `t1_c3`, `ProductsCat`.`preview` AS `t1_c4`, `ProductsCat`.`previewen` AS `t1_c5`, `ProductsCat`.`tag` AS `t1_c6`, `ProductsCat`.`tagen` AS `t1_c7`, `ProductsCat`.`description` AS `t1_c8`, `ProductsCat`.`descriptionen` AS `t1_c9`, `ProductsCat`.`pic_full` AS `t1_c10`, `ProductsCat`.`pic_desc` AS `t1_c11`, `ProductsCat`.`cat_order` AS `t1_c12`, `ProductsCat`.`cat_extra1` AS `t1_c13`, `ProductsCat`.`cat_extra2` AS `t1_c14`, `ProductsCat`.`cat_enable` AS `t1_c15`, `ProductsCat`.`dos_usernames_username` AS `t1_c16` FROM `dos_module_products` `t`  LEFT OUTER JOIN `dos_module_products_cat` `ProductsCat` ON (`t`.`dos_module_item_cat_cat_id`=`ProductsCat`.`cat_id`)  WHERE (enable = 1 and tag IN(noi-that-bep-thoi-trang))' in E:\xampp\php\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 E:\xampp\php\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(818): CDbCommand->queryAll()
+#2 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 E:\xampp\htdocs\yii\publish\protected\modules\products\models\Products.php(534): CActiveRecord->findAll(Object(CDbCriteria))
+#7 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(55): Products->listItem(Array)
+#8 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionCartitem()
+#9 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('cartitem')
+#13 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#14 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/publish/products/default/cartitem
+---
+2012/04/15 06:46:10 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'noi' in 'where clause'. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`pic_thumb` AS `t0_c4`, `t`.`tag` AS `t0_c11`, `t`.`unit` AS `t0_c17`, `t`.`hot` AS `t0_c18`, `t`.`record_id` AS `t0_c0`, `ProductsCat`.`cat_id` AS `t1_c0`, `ProductsCat`.`cat_parent_id` AS `t1_c1`, `ProductsCat`.`cat_title` AS `t1_c2`, `ProductsCat`.`cat_titleen` AS `t1_c3`, `ProductsCat`.`preview` AS `t1_c4`, `ProductsCat`.`previewen` AS `t1_c5`, `ProductsCat`.`tag` AS `t1_c6`, `ProductsCat`.`tagen` AS `t1_c7`, `ProductsCat`.`description` AS `t1_c8`, `ProductsCat`.`descriptionen` AS `t1_c9`, `ProductsCat`.`pic_full` AS `t1_c10`, `ProductsCat`.`pic_desc` AS `t1_c11`, `ProductsCat`.`cat_order` AS `t1_c12`, `ProductsCat`.`cat_extra1` AS `t1_c13`, `ProductsCat`.`cat_extra2` AS `t1_c14`, `ProductsCat`.`cat_enable` AS `t1_c15`, `ProductsCat`.`dos_usernames_username` AS `t1_c16` FROM `dos_module_products` `t`  LEFT OUTER JOIN `dos_module_products_cat` `ProductsCat` ON (`t`.`dos_module_item_cat_cat_id`=`ProductsCat`.`cat_id`)  WHERE (enable = 1 and t.tag IN(noi-that-bep-thoi-trang)).
+in E:\xampp\htdocs\yii\publish\protected\modules\products\models\Products.php (534)
+in E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php (55)
+in E:\xampp\htdocs\yii\publish\index.php (16)
+2012/04/15 06:46:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'noi' in 'where clause'. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`pic_thumb` AS `t0_c4`, `t`.`tag` AS `t0_c11`, `t`.`unit` AS `t0_c17`, `t`.`hot` AS `t0_c18`, `t`.`record_id` AS `t0_c0`, `ProductsCat`.`cat_id` AS `t1_c0`, `ProductsCat`.`cat_parent_id` AS `t1_c1`, `ProductsCat`.`cat_title` AS `t1_c2`, `ProductsCat`.`cat_titleen` AS `t1_c3`, `ProductsCat`.`preview` AS `t1_c4`, `ProductsCat`.`previewen` AS `t1_c5`, `ProductsCat`.`tag` AS `t1_c6`, `ProductsCat`.`tagen` AS `t1_c7`, `ProductsCat`.`description` AS `t1_c8`, `ProductsCat`.`descriptionen` AS `t1_c9`, `ProductsCat`.`pic_full` AS `t1_c10`, `ProductsCat`.`pic_desc` AS `t1_c11`, `ProductsCat`.`cat_order` AS `t1_c12`, `ProductsCat`.`cat_extra1` AS `t1_c13`, `ProductsCat`.`cat_extra2` AS `t1_c14`, `ProductsCat`.`cat_enable` AS `t1_c15`, `ProductsCat`.`dos_usernames_username` AS `t1_c16` FROM `dos_module_products` `t`  LEFT OUTER JOIN `dos_module_products_cat` `ProductsCat` ON (`t`.`dos_module_item_cat_cat_id`=`ProductsCat`.`cat_id`)  WHERE (enable = 1 and t.tag IN(noi-that-bep-thoi-trang))' in E:\xampp\php\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 E:\xampp\php\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(818): CDbCommand->queryAll()
+#2 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 E:\xampp\htdocs\yii\publish\protected\modules\products\models\Products.php(534): CActiveRecord->findAll(Object(CDbCriteria))
+#7 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(55): Products->listItem(Array)
+#8 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionCartitem()
+#9 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('cartitem')
+#13 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#14 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/publish/products/default/cartitem
+---
+2012/04/15 06:50:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/productsCat/nha-bep.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/productsCat/nha-bep.jpg
+HTTP_REFERER=http://localhost/yii/publish/products/
+---
+2012/04/15 06:50:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/productsCat/noi-that-giuong-ngu-loai-1-chuyen-cho-vip-nhat.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/productsCat/noi-that-giuong-ngu-loai-1-chuyen-cho-vip-nhat.jpg
+HTTP_REFERER=http://localhost/yii/publish/products/
+---
+2012/04/15 06:50:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/productsCat/noi-that-sofa-phong-khach.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/productsCat/noi-that-sofa-phong-khach.jpg
+HTTP_REFERER=http://localhost/yii/publish/products/
+---
+2012/04/15 06:50:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/productsCat/noi-that-bep.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/productsCat/noi-that-bep.jpg
+HTTP_REFERER=http://localhost/yii/publish/products/
+---
+2012/04/15 06:50:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep
+---
+2012/04/15 06:50:53 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'noi' in 'where clause'. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`pic_thumb` AS `t0_c4`, `t`.`tag` AS `t0_c11`, `t`.`unit` AS `t0_c17`, `t`.`hot` AS `t0_c18`, `t`.`record_id` AS `t0_c0`, `ProductsCat`.`cat_id` AS `t1_c0`, `ProductsCat`.`cat_parent_id` AS `t1_c1`, `ProductsCat`.`cat_title` AS `t1_c2`, `ProductsCat`.`cat_titleen` AS `t1_c3`, `ProductsCat`.`preview` AS `t1_c4`, `ProductsCat`.`previewen` AS `t1_c5`, `ProductsCat`.`tag` AS `t1_c6`, `ProductsCat`.`tagen` AS `t1_c7`, `ProductsCat`.`description` AS `t1_c8`, `ProductsCat`.`descriptionen` AS `t1_c9`, `ProductsCat`.`pic_full` AS `t1_c10`, `ProductsCat`.`pic_desc` AS `t1_c11`, `ProductsCat`.`cat_order` AS `t1_c12`, `ProductsCat`.`cat_extra1` AS `t1_c13`, `ProductsCat`.`cat_extra2` AS `t1_c14`, `ProductsCat`.`cat_enable` AS `t1_c15`, `ProductsCat`.`dos_usernames_username` AS `t1_c16` FROM `dos_module_products` `t`  LEFT OUTER JOIN `dos_module_products_cat` `ProductsCat` ON (`t`.`dos_module_item_cat_cat_id`=`ProductsCat`.`cat_id`)  WHERE (enable = 1 and record_id IN(noi-that-bep-thoi-trang,sach-nha-giao-duc-moi)).
+in E:\xampp\htdocs\yii\publish\protected\modules\products\models\Products.php (531)
+in E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php (55)
+in E:\xampp\htdocs\yii\publish\index.php (16)
+2012/04/15 06:50:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'noi' in 'where clause'. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`pic_thumb` AS `t0_c4`, `t`.`tag` AS `t0_c11`, `t`.`unit` AS `t0_c17`, `t`.`hot` AS `t0_c18`, `t`.`record_id` AS `t0_c0`, `ProductsCat`.`cat_id` AS `t1_c0`, `ProductsCat`.`cat_parent_id` AS `t1_c1`, `ProductsCat`.`cat_title` AS `t1_c2`, `ProductsCat`.`cat_titleen` AS `t1_c3`, `ProductsCat`.`preview` AS `t1_c4`, `ProductsCat`.`previewen` AS `t1_c5`, `ProductsCat`.`tag` AS `t1_c6`, `ProductsCat`.`tagen` AS `t1_c7`, `ProductsCat`.`description` AS `t1_c8`, `ProductsCat`.`descriptionen` AS `t1_c9`, `ProductsCat`.`pic_full` AS `t1_c10`, `ProductsCat`.`pic_desc` AS `t1_c11`, `ProductsCat`.`cat_order` AS `t1_c12`, `ProductsCat`.`cat_extra1` AS `t1_c13`, `ProductsCat`.`cat_extra2` AS `t1_c14`, `ProductsCat`.`cat_enable` AS `t1_c15`, `ProductsCat`.`dos_usernames_username` AS `t1_c16` FROM `dos_module_products` `t`  LEFT OUTER JOIN `dos_module_products_cat` `ProductsCat` ON (`t`.`dos_module_item_cat_cat_id`=`ProductsCat`.`cat_id`)  WHERE (enable = 1 and record_id IN(noi-that-bep-thoi-trang,sach-nha-giao-duc-moi))' in E:\xampp\php\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 E:\xampp\php\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(818): CDbCommand->queryAll()
+#2 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 E:\xampp\php\www\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 E:\xampp\htdocs\yii\publish\protected\modules\products\models\Products.php(531): CActiveRecord->findAll(Object(CDbCriteria))
+#7 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(55): Products->listItem(Array)
+#8 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionCartitem()
+#9 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('cartitem')
+#13 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#14 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/publish/products/default/cartitem
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep
+---
+2012/04/15 06:51:56 [error] [php] Undefined index: cart (E:\xampp\htdocs\yii\publish\protected\modules\products\views\default\220312\cartitem.php:1)
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(870): DefaultController->renderFile()
+#1 E:\xampp\php\www\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(55): DefaultController->render()
+#3 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionCartitem()
+#4 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 E:\xampp\php\www\framework\web\CController.php(287): DefaultController->runAction()
+#6 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#7 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
+#8 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 E:\xampp\htdocs\yii\publish\index.php(16): CWebApplication->run()
+REQUEST_URI=/yii/publish/products/default/cartitem
+in E:\xampp\htdocs\yii\publish\protected\modules\products\views\default\220312\cartitem.php (1)
+in E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php (55)
+in E:\xampp\htdocs\yii\publish\index.php (16)
+2012/04/15 06:54:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep
+---
+2012/04/15 06:54:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/220312/images/del.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/220312/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/themes/220312/images/del.png
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 06:54:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/220312/images/del.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/220312/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/themes/220312/images/del.png
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 06:57:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/220312/images/del.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/220312/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/themes/220312/images/del.png
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 07:03:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/220312/images/del.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/220312/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/themes/220312/images/del.png
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 07:03:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/220312/images/del.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/220312/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/themes/220312/images/del.png
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 07:05:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in E:\xampp\htdocs\yii\publish\protected\modules\products\models\Products.php:289
+Stack trace:
+#0 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(24): Products->detailItem('sach-nha-giao-d...')
+#1 [internal function]: DefaultController->actionView('sach-nha-giao-d...')
+#2 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
+#3 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
+#4 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('view')
+#8 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#9 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/publish/san-pham/nha-bep/sach-nha-giao-duc-moihtml
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 07:05:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep/sach-nha-giao-duc-moi.html
+---
+2012/04/15 07:06:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in E:\xampp\htdocs\yii\publish\protected\modules\products\models\Products.php:289
+Stack trace:
+#0 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(24): Products->detailItem('sach-nha-giao-d...')
+#1 [internal function]: DefaultController->actionView('sach-nha-giao-d...')
+#2 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
+#3 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
+#4 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('view')
+#8 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#9 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/publish/san-pham/nha-bep/sach-nha-giao-duc-moihtml
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 07:06:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep/sach-nha-giao-duc-moi.html
+---
+2012/04/15 07:06:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep/sach-nha-giao-duc-moi.html
+---
+2012/04/15 07:06:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "ordering".' in E:\xampp\php\www\framework\web\CController.php:484
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(271): CController->missingAction('ordering')
+#1 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('ordering')
+#2 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#3 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/publish/products/default/ordering
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 07:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/productsCat/nha-bep.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/productsCat/nha-bep.jpg
+HTTP_REFERER=http://localhost/yii/publish/products/default/
+---
+2012/04/15 07:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/productsCat/noi-that-giuong-ngu-loai-1-chuyen-cho-vip-nhat.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/productsCat/noi-that-giuong-ngu-loai-1-chuyen-cho-vip-nhat.jpg
+HTTP_REFERER=http://localhost/yii/publish/products/default/
+---
+2012/04/15 07:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/productsCat/noi-that-bep.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/productsCat/noi-that-bep.jpg
+HTTP_REFERER=http://localhost/yii/publish/products/default/
+---
+2012/04/15 07:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/productsCat/noi-that-sofa-phong-khach.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/productsCat/noi-that-sofa-phong-khach.jpg
+HTTP_REFERER=http://localhost/yii/publish/products/default/
+---
+2012/04/15 07:09:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep
+---
+2012/04/15 07:09:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/220312/images/del.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/220312/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/themes/220312/images/del.png
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 07:09:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "product/default/cartdelete/id/6".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('product/default...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/product/default/cartdelete/id/6
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 07:13:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "product/default/cartdelete/id/6".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('product/default...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/product/default/cartdelete/id/6
+---
+2012/04/15 07:13:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "product/default/cartdelete/id/6".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('product/default...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/product/default/cartdelete/id/6
+---
+2012/04/15 07:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "product/default/cartdelete/id/10".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('product/default...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/product/default/cartdelete/id/10
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 07:14:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "product/default/cartdelete/id/10".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('product/default...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/product/default/cartdelete/id/10
+---
+2012/04/15 07:15:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/220312/images/del.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/220312/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/themes/220312/images/del.png
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 07:21:21 [error] [php] Undefined index: cart (E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php:49)
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(287): DefaultController->runAction()
+#1 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#2 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
+#3 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 E:\xampp\htdocs\yii\publish\index.php(16): CWebApplication->run()
+REQUEST_URI=/yii/publish/products/default/cartitem
+in E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php (49)
+in E:\xampp\htdocs\yii\publish\index.php (16)
+2012/04/15 07:23:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep
+---
+2012/04/15 07:23:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/220312/images/del.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/220312/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/themes/220312/images/del.png
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 07:23:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/220312/images/del.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/220312/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/themes/220312/images/del.png
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 07:23:31 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "DefaultController._request" chưa được định nghĩa.' in E:\xampp\php\www\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(82): CComponent->__get('_request')
+#1 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionOrdering()
+#2 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#4 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('ordering')
+#6 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#7 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#9 {main}
+REQUEST_URI=/yii/publish/products/default/ordering
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 07:23:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/220312/images/del.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/220312/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/themes/220312/images/del.png
+HTTP_REFERER=http://localhost/yii/publish/products/default/ordering
+---
+2012/04/15 13:22:52 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "DefaultController._request" chưa được định nghĩa.' in E:\xampp\php\www\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(82): CComponent->__get('_request')
+#1 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionOrdering()
+#2 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#4 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('ordering')
+#6 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#7 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#9 {main}
+REQUEST_URI=/yii/publish/products/default/ordering
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 13:23:36 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "220312/view".' in E:\xampp\php\www\framework\web\CController.php:879
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('220312/view', Array, true)
+#1 E:\xampp\htdocs\yii\publish\protected\modules\news\controllers\DefaultController.php(27): CController->render('220312/view', Array)
+#2 [internal function]: DefaultController->actionView('20-nam-nua-tp-h...')
+#3 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
+#4 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
+#5 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('news/default/vi...')
+#10 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/publish/tin-tuc-su-kien/xa-hoi/20-nam-nua-tp-hcm-co-the-lut-nhu-bangkok.html
+HTTP_REFERER=http://localhost/yii/publish/san-pham/noi-that-sofa-phong-khach
+---
+2012/04/15 15:40:55 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "220312/index".' in E:\xampp\php\www\framework\web\CController.php:879
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('220312/index', Array, true)
+#1 E:\xampp\htdocs\yii\publish\protected\modules\services\controllers\DefaultController.php(11): CController->render('220312/index', Array)
+#2 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('index')
+#7 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('services/defaul...')
+#8 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii/publish/dich-vu
+HTTP_REFERER=http://localhost/yii/publish/san-pham/noi-that-sofa-phong-khach
+---
+2012/04/15 15:44:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/public/userfiles/image/220312/image/products/sach-hot-nhat-nong-nhat-thumb.jpg
+HTTP_REFERER=http://localhost/yii/publish/san-pham/nha-bep
+---
+2012/04/15 15:44:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/220312/images/del.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/220312/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/themes/220312/images/del.png
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 15:44:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/220312/images/del.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/220312/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/publish/themes/220312/images/del.png
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 15:44:23 [error] [php] Undefined variable: total (E:\xampp\htdocs\yii\publish\protected\modules\products\views\default\220312\ordering.php:44)
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(870): DefaultController->renderFile()
+#1 E:\xampp\php\www\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(78): DefaultController->render()
+#3 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionOrdering()
+#4 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 E:\xampp\php\www\framework\web\CController.php(287): DefaultController->runAction()
+#6 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#7 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
+#8 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 E:\xampp\htdocs\yii\publish\index.php(16): CWebApplication->run()
+REQUEST_URI=/yii/publish/products/default/ordering
+in E:\xampp\htdocs\yii\publish\protected\modules\products\views\default\220312\ordering.php (44)
+in E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php (78)
+in E:\xampp\htdocs\yii\publish\index.php (16)
+2012/04/15 15:46:26 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "DefaultController.cart" chưa được định nghĩa.' in E:\xampp\php\www\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\xampp\htdocs\yii\publish\protected\modules\products\views\default\220312\ordering.php(22): CComponent->__get('cart')
+#1 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
+#2 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#3 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#4 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('220312/ordering', Array, true)
+#5 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(78): CController->render('220312/ordering', Array)
+#6 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionOrdering()
+#7 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('ordering')
+#11 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#12 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/publish/products/default/ordering
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 15:47:30 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "DefaultController.info_payment" chưa được định nghĩa.' in E:\xampp\php\www\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\xampp\htdocs\yii\publish\protected\modules\products\views\default\220312\ordering.php(50): CComponent->__get('info_payment')
+#1 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
+#2 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#3 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#4 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('220312/ordering', Array, true)
+#5 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(78): CController->render('220312/ordering', Array)
+#6 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionOrdering()
+#7 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('ordering')
+#11 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#12 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/publish/products/default/ordering
+HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
+---
+2012/04/15 20:03:36 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "DefaultController.info_payment" chưa được định nghĩa.' in E:\xampp\php\www\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\xampp\htdocs\yii\publish\protected\modules\products\views\default\220312\ordering.php(50): CComponent->__get('info_payment')
+#1 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
+#2 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#3 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#4 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('220312/ordering', Array, true)
+#5 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(78): CController->render('220312/ordering', Array)
+#6 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionOrdering()
+#7 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('ordering')
+#11 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#12 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 E:\xampp\htdocs\yii\publish\index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/publish/products/default/ordering
+---
+2012/04/15 20:03:48 [error] [php] Undefined variable: model (E:\xampp\htdocs\yii\publish\protected\modules\products\views\default\220312\ordering.php:53)
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(870): DefaultController->renderFile()
+#1 E:\xampp\php\www\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php(78): DefaultController->render()
+#3 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionOrdering()
+#4 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 E:\xampp\php\www\framework\web\CController.php(287): DefaultController->runAction()
+#6 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#7 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
+#8 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 E:\xampp\htdocs\yii\publish\index.php(16): CWebApplication->run()
+REQUEST_URI=/yii/publish/products/default/ordering
+in E:\xampp\htdocs\yii\publish\protected\modules\products\views\default\220312\ordering.php (53)
+in E:\xampp\htdocs\yii\publish\protected\modules\products\controllers\DefaultController.php (78)
+in E:\xampp\htdocs\yii\publish\index.php (16)
