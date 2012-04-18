@@ -43,7 +43,7 @@
 						<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl'] ?>/" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a>
 					<?php endif;?>
                 </div> <!--End logo-->
-				<div class="frame-title-pany"><h1 class="title-city"><?php echo $this->lang['company_name'] ?></h1></div> <!--End title company-->
+				<?php echo ($this->lang['company_name']) ? '<h1 class="title-city">'.$this->lang['company_name'].'</h1>' : '' ?> <!--End title company-->
 				<div class="lang">
 					<?php foreach($this->numLang as $value): ?>
 					<a href="<?php echo ($value=='vi') ? Yii::app()->request->baseUrl.'/' : Yii::app()->request->baseUrl.'/'.$value ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $value?>.gif" alt="<?php echo $this->lang[$value]?>" /> <?php echo $this->lang[$value]?></a>
@@ -167,9 +167,9 @@
 				 <li<?php echo $none?>><a<?php echo $none_line ?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
 				 <?php $i++; endforeach;?>
 			 </ul>
-			 <h3 class="title-company-fter"><strong><?php echo $this->lang['company_name'] ?></strong></h3>
+			 <h3 class="title-company-fter"><strong><?php echo $this->lang['company_name_footer'] ?></strong></h3>
 			 <p><?php echo $this->lang['address1'] ?></p>
-			 <p><?php echo $this->lang['address2'] ?></p>
+			 <?php echo ($this->lang['address2']) ? '<p>'.$this->lang['address2'].'</p>' : '' ?>
 			 <p><?php echo $this->lang['copyright'] ?></p>
 			 <p><?php echo $this->lang['developed']?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></p>
         </div><!--End footer-->

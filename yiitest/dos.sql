@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 18, 2012 at 09:24 AM
+-- Generation Time: Apr 18, 2012 at 10:15 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -318,6 +318,7 @@ INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('cat_title', 'Danh mục', 'Category', 0),
 ('cat_titleen', 'Danh mục En', 'Category', 1),
 ('company_name', 'Công ty cổ phần Thương Hội', 'Thuong Hoi JSC', 0),
+('company_name_footer', 'Công ty cổ phần Thương Hội', 'Thuong Hoi JSC', 0),
 ('company_phone', 'Phone: 0929001001 (An)', 'Phone: 0929001001 (An)', 0),
 ('contact', 'Liên hệ', 'Contact', 0),
 ('contact_msg', 'Quý khách có thể liên hệ với chúng tôi bằng cách điền đầy đủ thông tin vào mẫu sau:', 'Complete the form below to contact us:', 0),
@@ -534,8 +535,8 @@ INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `co
 (45, 'Giấy chứng nhận đại lý', '', '<p><img style="margin-left:auto;margin-right:auto;" title="Giấy chung nhan" src="/public/userfiles/image/mayphotocopysieuviet/image/Nho-Chungnhan_HP.jpg" alt="sieu viet" width="450" height="651" /></p>', '', 4, '2012-04-12 02:49:22', 2, 0, NULL, NULL, 'giay-chung-nhan-dai-ly', '', '', '', 1, 'mayphotocopysieuviet'),
 (46, 'Giới thiệu chung chung', '', '<p>Giới thiệu chung chung Giới thiệu chung chung  Giới thiệu chung chung</p>', '', 2, '2012-04-13 03:18:30', 2, 0, NULL, NULL, 'gioi-thieu-chung-chung', '', 'Giới thiệu chung chung', '', 1, 'phumyan'),
 (47, 'Giới thiệu thị trường nội thất', '', '<p>Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất</p>', '', 4, '2012-04-13 03:19:10', 3, 0, NULL, NULL, 'gioi-thieu-thi-truong-noi-that', '', 'Giới thiệu thị trường nội thất', '', 1, 'phumyan'),
-(48, 'Giới thiệu sơ lược công ty', '', '<p>Giới thiệu sơ lược công ty Giới thiệu sơ lược công ty Giới thiệu sơ lược công ty Giới thiệu sơ lược công ty</p>', '', 27, '2012-04-18 02:19:41', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc-cong-ty', '', 'Giới thiệu sơ lược công ty', '', 1, 'tinhungphat'),
-(49, 'Giới thiệu chung', '', '<p> Giới thiệu chung Giới thiệu chung Giới thiệu chung</p>', '', 20, '2012-04-18 02:21:02', 2, 0, NULL, NULL, 'gioi-thieu-chung', '', 'Giới thiệu chung', '', 1, 'tinhungphat');
+(48, 'Giới thiệu sơ lược công ty', '', '<p>Giới thiệu sơ lược công ty Giới thiệu sơ lược công ty Giới thiệu sơ lược công ty Giới thiệu sơ lược công ty</p>', '', 41, '2012-04-18 02:19:41', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc-cong-ty', '', 'Giới thiệu sơ lược công ty', '', 1, 'tinhungphat'),
+(49, 'Giới thiệu chung', '', '<p> Giới thiệu chung Giới thiệu chung Giới thiệu chung</p>', '', 21, '2012-04-18 02:21:02', 2, 0, NULL, NULL, 'gioi-thieu-chung', '', 'Giới thiệu chung', '', 1, 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -862,7 +863,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1334733815, 'tinhungphat'),
+('''127.0.0.1''', 1334736903, 'tinhungphat'),
 ('''127.0.0.1''', 1334716207, 'phumyan'),
 ('''127.0.0.1''', 1334716214, 'mayphotocopysieuviet');
 
@@ -1663,6 +1664,7 @@ INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_user
 ('advs', 'Quảng cáo', '', 'phumyan'),
 ('company_name', 'DNTN SIÊU VIỆT', '', 'mayphotocopysieuviet'),
 ('company_name', 'Công ty TNHH Phú Mỹ An', '', 'phumyan'),
+('company_name', '', '', 'tinhungphat'),
 ('company_phone', 'Hotline: 0937 107 888 (Mr. Nguyên)', '', 'mayphotocopysieuviet');
 
 -- --------------------------------------------------------
