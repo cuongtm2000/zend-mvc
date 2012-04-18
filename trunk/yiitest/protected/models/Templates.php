@@ -125,8 +125,24 @@ class Templates extends CActiveRecord {
 		return parent::beforeSave();
 	}
 
-	public function listTemplates() {
+	/**
+	 * @param int $type, nếu ($type = 1) => phân trang
+	 * @return mixed
+	 */
+	public function listTemplates($type = 0) {
 		$command = Yii::app()->db->createCommand('SELECT template, template_name, description FROM ' . $this->tableName() . ' ORDER BY created DESC');
+		if($type == 1){
+			$criteria = new CDbCriteria();
+			$criteria->order = 'created DESC';
+			$count = $this::model()->count($criteria);
+
+			// elements per page
+			$pages = new CPagination($count);
+			$pages->pageSize = 6;
+			$pages->applyLimit($criteria);
+
+			return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+		}
 		return $command->queryAll();
 	}
 

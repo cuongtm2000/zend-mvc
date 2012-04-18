@@ -611,3 +611,175 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/san-pham
 ---
+2012/04/18 17:02:34 [error] [php] Undefined index: company_name_footer (E:\Customers\dos.vn\svn\themes\180412\views\layouts\main.php:170)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(785): DefaultController->renderFile()
+#1 E:\Customers\dos.vn\svn\protected\modules\products\controllers\DefaultController.php(26): DefaultController->render()
+#2 unknown(0): DefaultController->actionView()
+#3 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#4 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#5 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#6 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#7 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 E:\Customers\dos.vn\svn\index.php(16): CWebApplication->run()
+REQUEST_URI=/san-pham/phong-khach/phong-tiep-khach.html
+in E:\Customers\dos.vn\svn\themes\180412\views\layouts\main.php (170)
+in E:\Customers\dos.vn\svn\protected\modules\products\controllers\DefaultController.php (26)
+in E:\Customers\dos.vn\svn\index.php (16)
+2012/04/18 17:02:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/18 17:02:39 [error] [php] Undefined index: company_name_footer (E:\Customers\dos.vn\svn\themes\180412\views\layouts\main.php:170)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(785): DefaultController->renderFile()
+#1 E:\Customers\dos.vn\svn\protected\modules\default\controllers\DefaultController.php(8): DefaultController->render()
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#4 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#5 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\index.php(16): CWebApplication->run()
+REQUEST_URI=/
+in E:\Customers\dos.vn\svn\themes\180412\views\layouts\main.php (170)
+in E:\Customers\dos.vn\svn\protected\modules\default\controllers\DefaultController.php (8)
+in E:\Customers\dos.vn\svn\index.php (16)
+2012/04/18 17:02:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/18 17:06:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "configs".' in C:\xampp\php\library\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(271): CController->missingAction('configs')
+#1 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('configs')
+#2 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/configs/c...')
+#3 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/configs/configs
+HTTP_REFERER=http://phumyan.dos.vn/admin/configs/templates
+---
+2012/04/18 17:06:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/configs".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/admin/con...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/configs
+HTTP_REFERER=http://phumyan.dos.vn/admin/configs/templates
+---
+2012/04/18 17:13:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "configs".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('configs')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/configs
+HTTP_REFERER=http://phumyan.dos.vn/admin/configs/templates
+---
+2012/04/18 17:13:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/configs".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/admin/con...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/configs
+HTTP_REFERER=http://phumyan.dos.vn/admin/configs/templates
+---
+2012/04/18 17:14:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in C:\xampp\php\library\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(271): CController->missingAction('admin')
+#1 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('admin')
+#2 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/configs/a...')
+#3 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/configs/admin/configs
+HTTP_REFERER=http://phumyan.dos.vn/admin/configs/templates
+---
+2012/04/18 17:14:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "configs".' in C:\xampp\php\library\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(271): CController->missingAction('configs')
+#1 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('configs')
+#2 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/configs/c...')
+#3 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/configs/configs
+HTTP_REFERER=http://phumyan.dos.vn/admin/configs/templates
+---
+2012/04/18 17:15:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "configs".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('configs')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/configs
+HTTP_REFERER=http://phumyan.dos.vn/admin/configs/templates
+---
+2012/04/18 17:15:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "configs".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('configs')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/configs
+HTTP_REFERER=http://phumyan.dos.vn/admin/configs/templates
+---
+2012/04/18 17:15:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in C:\xampp\php\library\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(271): CController->missingAction('admin')
+#1 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('admin')
+#2 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/configs/a...')
+#3 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/configs/admin/configs
+HTTP_REFERER=http://phumyan.dos.vn/admin/configs/templates
+---
+2012/04/18 17:56:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/18 17:57:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sign.cert".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('sign.cert')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/sign.cert?ran=12596967182597361702-6485309134161819620
+HTTP_REFERER=http://www.google.co.uk/
+---
+2012/04/18 18:03:56 [error] [php] Undefined index: company_name_footer (E:\Customers\dos.vn\svn\themes\180412\views\layouts\main.php:170)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(785): DefaultController->renderFile()
+#1 E:\Customers\dos.vn\svn\protected\modules\default\controllers\DefaultController.php(8): DefaultController->render()
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#4 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#5 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\index.php(16): CWebApplication->run()
+REQUEST_URI=/
+in E:\Customers\dos.vn\svn\themes\180412\views\layouts\main.php (170)
+in E:\Customers\dos.vn\svn\protected\modules\default\controllers\DefaultController.php (8)
+in E:\Customers\dos.vn\svn\index.php (16)

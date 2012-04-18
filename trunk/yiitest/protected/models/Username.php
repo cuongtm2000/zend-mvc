@@ -74,11 +74,12 @@ class Username extends CActiveRecord {
 		return array(
 			array('username, email, password, dos_templates_template, dos_provinces_province_id, dos_bussiness_bussiness_id, choose_modules, choose_feature', 'required', 'on' => 'register'),
 			array('username, dos_bussiness_bussiness_id', 'required', 'on' => 'import'),
+			array('dos_templates_template', 'required', 'on' => 'templates'),
 			array('email, fullname, phone, company, dos_templates_template, dos_provinces_province_id, dos_bussiness_bussiness_id', 'required', 'on' => 'changeInfo'),
 			array('import, activated, dos_provinces_province_id', 'numerical', 'integerOnly' => true),
 			array('username, email, password, fullname', 'length', 'max' => 45),
 			array('username', 'unique', 'on' => 'register', 'message' => '<strong>{value}</strong> {attribute} already exists please choose another user'),
-			array('dos_bussiness_bussiness_id', 'checkChooseBusiness'),
+			array('dos_bussiness_bussiness_id', 'checkChooseBusiness', 'on' => 'register'),
 			array('email', 'email'),
 			array('phone, code', 'length', 'max' => 15),
 			array('company, dos_bussiness_bussiness_id, choose_business', 'length', 'max' => 100),
@@ -144,8 +145,8 @@ class Username extends CActiveRecord {
 			'import' => 'Import',
 			'activated' => 'Activated',
 			'dos_templates_template' => 'Dos Templates Template',
-			'dos_provinces_province_id' => 'Dos Provinces Province',
-			'dos_bussiness_bussiness_id' => 'Dos Bussiness Bussiness',
+			'dos_provinces_province_id' => 'Tỉnh thành',
+			'dos_bussiness_bussiness_id' => 'Ngành nghề kinh doanh',
 		);
 	}
 

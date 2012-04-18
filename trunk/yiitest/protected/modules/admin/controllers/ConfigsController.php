@@ -69,8 +69,24 @@ class ConfigsController extends AdminController {
 	}
 
 	public function actionTemplates() {
-		var_dump($_POST);
 		$business_class = new Bussiness();
-		$this->render('templates', array('listBusiness' => $business_class->listCats(1)));
+		$tempaltes_business_class = new TemplatesBussiness();
+
+		$model = new Username('templates');
+		$id = isset($_POST['Username']['dos_bussiness_bussiness_id']) ? $_POST['Username']['dos_bussiness_bussiness_id'] : 'root';
+
+		if (isset($_POST['Username'])) {
+			if (isset($_POST['btn-submit'])) {
+				$model->attributes = $_POST['Username'];
+				if ($model->validate()) {
+					Username::model()->updateByPk(Yii::app()->user->id, array('dos_templates_template' => $model->dos_templates_template));
+					Yii::app()->clientScript->registerScript('', 'alert("Chức mừng! thay đổi mẫu Website thành công"); window.location="' . Yii::app()->request->baseUrl . '/admin/configs' . '"', CClientScript::POS_HEAD);
+				}
+			} else {
+				$model->dos_bussiness_bussiness_id = $id;
+			}
+		}
+
+		$this->render('templates', array('model' => $model, 'templatesBusiness' => $tempaltes_business_class->listTempaltesByBusiness($id, 1), 'listBusiness' => $business_class->listCats(1)));
 	}
 }
