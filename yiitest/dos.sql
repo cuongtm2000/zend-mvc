@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 18, 2012 at 10:15 AM
+-- Generation Time: Apr 18, 2012 at 10:25 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -863,7 +863,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1334736903, 'tinhungphat'),
+('''127.0.0.1''', 1334737093, 'tinhungphat'),
 ('''127.0.0.1''', 1334716207, 'phumyan'),
 ('''127.0.0.1''', 1334716214, 'mayphotocopysieuviet');
 
@@ -902,7 +902,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=34 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=35 ;
 
 --
 -- Dumping data for table `dos_module_products`
@@ -921,7 +921,8 @@ INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, 
 (30, 'Toshiba Satellite L740-1222U', '', '2012-04-13 07:35:47', 'toshiba-satellite-l740-1222u-thumb.jpg', 'toshiba-satellite-l740-1222u.jpg', NULL, NULL, NULL, '<p>CPU: Intel Core i3 380M (2.53 GHz 3M L2 cache, 4 threads )<br />RAM: 2048 MB DDR3 1333Mhz<br />Chipset: Intel HM55<br />HDD: 500 GB SATA 5400 rpm<br />ODD: DVD RW/ Reader card/ Camera/ Bluetooth<br />Graphics: INTEL HD graphics 512 MB<br />Display: 14.00" HD WLED Backlight (16:9)<br />Network: 802.11bgn / 100/1000 base /<br />Battery: 6 cell<br />Weight: 2.20 Kg<br />OS: Free DOS<br />Other: Màu đen bóng, hoa văn chìm 3D</p>', '', 'toshiba-satellite-l740-1222u', '', 'Toshiba Satellite L740-1222U', '', 0, 4, '9500000', 1, NULL, NULL, NULL, NULL, NULL, 1, 27),
 (31, 'Intel Dual Core E6700 - 3.2Ghz', '', '2012-04-13 07:36:51', 'intel-dual-core-e6700-3-2ghz-thumb.jpg', 'intel-dual-core-e6700-3-2ghz.jpg', NULL, NULL, NULL, '<p>Tên Linh Kiện: Intel Dual Core E6700 - 3.2Ghz<br />Mô Tả: 2MB K BUS 1066 LGA775</p>', '', 'intel-dual-core-e6700-32ghz', '', 'Intel Dual Core E6700 - 3.2Ghz', '', 0, 5, '1850000', 1, NULL, NULL, NULL, NULL, NULL, 1, 31),
 (32, 'Intel Dual Core E5700 - 3.0Ghz', '', '2012-04-13 07:37:37', 'intel-dual-core-e5700-3-0ghz-thumb.jpg', 'intel-dual-core-e5700-3-0ghz.jpg', NULL, NULL, NULL, '<p>Tên Linh Kiện: Intel Dual Core E5700 - 3.0Ghz<br />Mô Tả: 2MB K BUS 800 LGA775</p>', '', 'intel-dual-core-e5700-30ghz', '', 'Intel Dual Core E5700 - 3.0Ghz', '', 0, 6, '1440000', 1, NULL, NULL, NULL, NULL, NULL, 1, 29),
-(33, '500 Gb Toshiba', '', '2012-04-13 07:38:50', '500-gb-toshiba-thumb.jpg', '500-gb-toshiba.jpg', NULL, NULL, NULL, '<p>Tên Linh Kiện: 500 Gb Toshiba<br />Mô Tả: Sata Notebook - 2.5” – 5.400 rpm</p>', '', '500-gb-toshiba', '', '500 Gb Toshiba', '', 0, 7, '1950000', 1, NULL, NULL, NULL, NULL, NULL, 1, 32);
+(33, '500 Gb Toshiba', '', '2012-04-13 07:38:50', '500-gb-toshiba-thumb.jpg', '500-gb-toshiba.jpg', NULL, NULL, NULL, '<p>Tên Linh Kiện: 500 Gb Toshiba<br />Mô Tả: Sata Notebook - 2.5” – 5.400 rpm</p>', '', '500-gb-toshiba', '', '500 Gb Toshiba', '', 0, 7, '1950000', 1, NULL, NULL, NULL, NULL, NULL, 1, 32),
+(34, 'Máy chụp ảnh sony 14.5PX', '', '2012-04-18 08:17:48', '', '', 'may-chup-anh-sony-14-5px-desc-1.jpg|may-chup-anh-sony-14-5px-desc-2.jpg|may-chup-anh-sony-14-5px-desc-3.jpg|may-chup-anh-sony-14-5px-desc-1-3.jpg|may-chup-anh-sony-14-5px-desc-1-9.jpg|may-chup-anh-son', NULL, NULL, '<p>CHI TIET LIEN HE</p>', '', 'may-chup-anh-sony-145px', '', 'CHI TIET LIEN HE', '', 0, 8, '300000', 0, NULL, NULL, NULL, NULL, NULL, 1, 32);
 
 -- --------------------------------------------------------
 
