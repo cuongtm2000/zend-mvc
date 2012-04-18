@@ -8,7 +8,7 @@
 				<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $item['pic_full'] ?>" alt="<?php echo $item['title'.LANG] ?>" />
 			<?php endif; ?>
 			<?php $str = explode('|', $item['pic_desc']); foreach($str as $value): ?>
-				<a href="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value ?>" rel="milkbox[gall1]" title="<?php echo $item['title'.LANG] ?>"/>
+				<a href="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value ?>" rel="milkbox[gall1]" title="<?php echo $item['title'.LANG] ?>"/></a>
 			<?php endforeach;?>
 			<div id="hover">
 				<a href=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/zoom.png" alt="zoom" /> </a>

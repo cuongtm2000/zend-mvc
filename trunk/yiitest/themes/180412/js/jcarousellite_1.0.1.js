@@ -12,7 +12,7 @@ $.fn.jCarouselLite = function(o) {
         easing: null,
 
         vertical: false,
-        circular: true, /*Neu co 3 san pham thi slider ko co chay dc doi voi "false" con "true" thi nguoc lai"*/
+        circular: false, /*Neu co 3 san pham thi slider ko co chay dc doi voi "false" con "true" thi nguoc lai"*/
         visible: 3,
         start: 0,
         scroll: 1,
