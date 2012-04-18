@@ -1,0 +1,1 @@
+Đang xây dựng... <img src="<?php echo Yii::app()->theme->baseUrl ?>/images/ajax-loader.gif" alt="loading" />
