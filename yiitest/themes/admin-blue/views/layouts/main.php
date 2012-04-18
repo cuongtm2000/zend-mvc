@@ -59,6 +59,7 @@
 						<li><a href="<?php echo Yii::app()->request->baseUrl ?>/admin/configs/web">Tiêu đề website</a></li>
 						<li><a href="<?php echo Yii::app()->request->baseUrl ?>/admin/configs/menu">Cấu hình Menu</a></li>
 						<li><a href="<?php echo Yii::app()->request->baseUrl ?>/admin/configs/langs">Cấu hình ngôn ngữ</a></li>
+						<li><a href="<?php echo Yii::app()->request->baseUrl ?>/admin/configs/templates">Đổi mẫu website</a></li>
 						<li><a href="<?php echo Yii::app()->request->baseUrl ?>/admin/configs/seo">Công cụ tìm kiếm</a></li>
 					</ul>
 				</li>

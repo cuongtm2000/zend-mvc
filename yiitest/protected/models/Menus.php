@@ -140,11 +140,6 @@ class Menus extends CActiveRecord {
 		if ($type == 1) {
 			$command = Yii::app()->db->createCommand('SELECT menu, menuen, url, target, position, title, titleen, description, descriptionen FROM ' . $this->tableName() . ' WHERE target = \'\' AND dos_usernames_username=:user ORDER BY position ASC');
 		}
-		/*if ($type == 1) {
-			$command = Yii::app()->db->createCommand('SELECT menu, menuen, url, target, position, title, titleen, description, descriptionen FROM ' . $this->tableName() . ' WHERE target = \'\' AND dos_usernames_username=:user ORDER BY position ASC');
-		} else {
-			$command = Yii::app()->db->createCommand('SELECT menu, menuen, url, target, position, title, titleen, description, descriptionen FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY position ASC');
-		}*/
 		$command->bindParam(":user", $user, PDO::PARAM_STR);
 		return $command->queryAll();
 	}
