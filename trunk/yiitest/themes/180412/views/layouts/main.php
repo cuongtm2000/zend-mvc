@@ -159,7 +159,15 @@
             </div> <!--End right content--> <div class="clear"></div>
         </div><!--End content-->
          <div id="footer">
-			 <p><?php echo $this->lang['company_name'] ?></p>
+			 <ul id="nav-fter">
+				 <?php $size = count($this->nav); $i = 0; foreach($this->nav as $value):?>
+				 <?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
+				 <?php $none = ($i == 0) ? ' class="none-line"' : '' ?>
+				 <?php $none_line = ($i <($size-1)) ? '' : ' class="none-border"' ?>
+				 <li<?php echo $none?>><a<?php echo $none_line ?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
+				 <?php $i++; endforeach;?>
+			 </ul>
+			 <h3 class="title-company-fter"><strong><?php echo $this->lang['company_name'] ?></strong></h3>
 			 <p><?php echo $this->lang['address1'] ?></p>
 			 <p><?php echo $this->lang['address2'] ?></p>
 			 <p><?php echo $this->lang['copyright'] ?></p>
