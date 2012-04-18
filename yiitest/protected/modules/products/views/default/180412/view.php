@@ -17,9 +17,10 @@
 					<span class="prevsmall"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/prev.gif" alt="" /></span>
 					<div class="thumbs anyClass" id="paginate-slider2">
 						<ul id="thumbs_list">
-							<li><a href="<?php echo Yii::app()->theme->baseUrl; ?>/images/pig-1.jpg" rel="other-views" class="thickbox shown" title="Maxtor Central Axis"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/1-1-medium.jpg" alt="Maxtor Central Axis"  /></a></li>
-							<li><a href="<?php echo Yii::app()->theme->baseUrl; ?>/images/pig-2.jpg" rel="other-views" class="thickbox" title="Maxtor box block cat"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/1-2-medium.jpg" alt="Maxtor Central Axis" /></a></li>
-							<li><a href="<?php echo Yii::app()->theme->baseUrl; ?>/images/pig-3.jpg" rel="other-views" class="thickbox" title="Maxtor box block cat cat cat"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/1-3-medium.jpg" alt="Maxtor Central Axis" /></a></li>
+							<li><a href="<?php echo Yii::app()->theme->baseUrl; ?>/images/pig-1.jpg" rel="other-views" class="thickbox shown" title="Maxtor Central Axis"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/phongngu.jpg" alt="Maxtor Central Axis"  /></a></li>
+							<li><a href="<?php echo Yii::app()->theme->baseUrl; ?>/images/pig-2.jpg" rel="other-views" class="thickbox" title="Maxtor box block cat"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/phongngu.jpg" alt="Maxtor Central Axis" /></a></li>
+							<li><a href="<?php echo Yii::app()->theme->baseUrl; ?>/images/pig-3.jpg" rel="other-views" class="thickbox" title="Maxtor box block cat cat cat"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/phongngu.jpg" alt="Maxtor Central Axis" /></a></li>
+							<li><a href="<?php echo Yii::app()->theme->baseUrl; ?>/images/pro-2.jpg" rel="other-views" class="thickbox" title="Maxtor box block cat cat cat"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/phongngu.jpg" alt="Maxtor Central Axis" /></a></li>
 						</ul>
 					</div>
 					<span class="nextsmall"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/next.gif" alt="" /></span>

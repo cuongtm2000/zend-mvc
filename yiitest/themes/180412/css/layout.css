@@ -175,12 +175,16 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 /****  End page contact     *****/
 
 /*Footer*/
-#nav-fter{list-style:none}
-#nav-fter li{display:inline;border-right:1px solid #434343}
-#nav-fter li a{padding:0 15px;color:#353535}
+#nav-fter{list-style:none;margin:0 0 10px 0}
+#nav-fter li{display:inline;}
+#nav-fter li a{font-size:10pt;padding:0 15px 0 11px;color:#353535;background:url(../images/bkg-pipe1.gif) no-repeat right}
+#nav-fter .none-line a{padding: 0 15px 0 0}
+#nav-fter .none-border{background: none}
+.title-company-fter{font-size:11pt;color:#000}
 
-#footer{background:#F4F4F4;padding:5px 20px; line-height:1.5em;font-size:10pt}
-#footer a:hover{color:#F89800}
+#footer{background:#F4F4F4;padding:5px 20px 0 20px; font-size:10pt}
+#footer a{color:#000}
+#footer a:hover{color:#000}
 
 /* Error */
 .errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
