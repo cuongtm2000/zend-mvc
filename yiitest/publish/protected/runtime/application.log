@@ -1644,3 +1644,59 @@ Stack trace:
 REQUEST_URI=/publish/public/userfiles/image/mayphotocopysieuviet/image/banner/banner.jpg
 HTTP_REFERER=http://dos.vn/publish/
 ---
+2012/04/19 03:27:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "code".' in C:\xampp\php\library\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(271): CController->missingAction('code')
+#1 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('code')
+#2 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/report/co...')
+#3 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/publish/admin/report/code
+HTTP_REFERER=http://dos.vn/publish/admin/report
+---
+2012/04/19 03:28:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "code".' in C:\xampp\php\library\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(271): CController->missingAction('code')
+#1 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('code')
+#2 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/report/co...')
+#3 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/publish/admin/report/code
+HTTP_REFERER=http://dos.vn/publish/admin/report
+---
+2012/04/19 03:28:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "code".' in C:\xampp\php\library\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(271): CController->missingAction('code')
+#1 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('code')
+#2 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/report/co...')
+#3 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/publish/admin/report/code
+HTTP_REFERER=http://dos.vn/publish/admin/report
+---
+2012/04/19 03:32:28 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "UserLangs._subdomain" chưa được định nghĩa.' in C:\xampp\php\library\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(144): CComponent->__get('_subdomain')
+#1 E:\Customers\dos.vn\svn\publish\protected\models\UserLangs.php(135): CActiveRecord->__get('_subdomain')
+#2 E:\Customers\dos.vn\svn\publish\protected\models\UserLangs.php(94): UserLangs->deleteItem()
+#3 E:\Customers\dos.vn\svn\publish\protected\modules\admin\controllers\ConfigsController.php(51): UserLangs->addItem(Object(CHttpRequest))
+#4 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): ConfigsController->actionLangs()
+#5 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('langs')
+#14 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/configs/l...')
+#15 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#17 {main}
+REQUEST_URI=/publish/admin/configs/langs
+HTTP_REFERER=http://dos.vn/publish/admin/configs/langs
+---
