@@ -76,7 +76,7 @@ a:hover{color:#000;}
 #rightcontent p{margin:0 0 8px 0}
 #rightcontent ul li, #rightcontent ol li{margin: 0 0 0 40px}
 #rightcontent ul ,#rightcontent ol{margin: 0 0 12px 0}
-#right-content table{margin: auto}
+#rightcontent table{margin: auto}
 
 .title-right{font-size:12pt; color:#BC455F; background:url(../images/bull2.gif) no-repeat left 6px; font-weight:bold;padding:5px 1px 5px 22px}
 .title-right a {color:#BC455F}
@@ -102,6 +102,10 @@ a:hover{color:#000;}
 .add-to-cart{background:#666262; padding:5px 15px; color:#fff; text-transform:capitalize; font-weight:bold; -webkit-border-radius: 5px;-moz-border-radius: 5px;}
 .add-to-cart:hover{color:#fff}
 
+/***    Page product-info     ****/
+.black{margin:0 !important; font-size:10pt;text-align:right !important}
+.black a{color:#000;background:url(../images/bull-1.gif) no-repeat left 5px;padding:0 0 0 10px}
+.black a:hover{background:url(../images/bull.gif) no-repeat left 5px;color:#ED2121}
 .frame-img-info{text-align:center;margin:0 0 10px 0}
 .frame-img-info img{margin:0 !important;border:2px solid #D1D1D1;padding:2px;-webkit-border-radius:3px;-moz-border-radius:3px}
 

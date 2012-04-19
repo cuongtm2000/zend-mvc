@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 19, 2012 at 03:41 AM
+-- Generation Time: Apr 19, 2012 at 11:17 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -72,15 +72,17 @@ CREATE TABLE IF NOT EXISTS `dos_configs` (
 
 INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES
 ('advs_left_height', 190, '', '010312'),
-('advs_left_height', 200, '', '070312'),
+('advs_left_height', 160, '', '070312'),
 ('advs_left_height', 200, '', '111120'),
+('advs_left_height', 200, '', '130312'),
 ('advs_left_height', 130, '', '180412'),
 ('advs_left_height', 200, '', '200312'),
 ('advs_left_height', 190, '', '220312'),
 ('advs_left_height', 200, '', '260312'),
 ('advs_left_width', 190, '', '010312'),
-('advs_left_width', 196, '', '070312'),
+('advs_left_width', 160, '', '070312'),
 ('advs_left_width', 224, '', '111120'),
+('advs_left_width', 220, '', '130312'),
 ('advs_left_width', 204, '', '180412'),
 ('advs_left_width', 200, '', '200312'),
 ('advs_left_width', 190, '', '220312'),
@@ -122,48 +124,68 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('logo_width', 259, '', '220312'),
 ('logo_width', 300, '', '260312'),
 ('max_image_height', 667, '', '010312'),
+('max_image_height', 600, '', '070312'),
+('max_image_height', 600, '', '130312'),
 ('max_image_height', 700, '', '180412'),
 ('max_image_height', 600, '', '200312'),
 ('max_image_height', 500, '', '220312'),
 ('max_image_height', 450, '', '260312'),
 ('max_image_width', 500, '', '010312'),
+('max_image_width', 700, '', '070312'),
+('max_image_width', 650, '', '130312'),
 ('max_image_width', 670, '', '180412'),
 ('max_image_width', 450, '', '200312'),
 ('max_image_width', 667, '', '220312'),
 ('max_image_width', 600, '', '260312'),
 ('news_cat_height', 89, '', '010312'),
+('news_cat_height', 100, '', '070312'),
+('news_cat_height', 90, '', '130312'),
 ('news_cat_height', 89, '', '180412'),
 ('news_cat_height', 89, '', '200312'),
 ('news_cat_height', 89, '', '260312'),
 ('news_cat_width', 143, '', '010312'),
+('news_cat_width', 130, '', '070312'),
+('news_cat_width', 143, '', '130312'),
 ('news_cat_width', 143, '', '180412'),
 ('news_cat_width', 143, '', '200312'),
 ('news_cat_width', 143, '', '260312'),
 ('news_height_thumb', 89, '', '010312'),
+('news_height_thumb', 89, '', '070312'),
+('news_height_thumb', 90, '', '130312'),
 ('news_height_thumb', 89, '', '180412'),
 ('news_height_thumb', 89, '', '200312'),
 ('news_height_thumb', 100, '', '220312'),
 ('news_height_thumb', 89, '', '260312'),
 ('news_num_paging_cat', 8, '', '010312'),
+('news_num_paging_cat', 10, '', '070312'),
+('news_num_paging_cat', 10, '', '130312'),
 ('news_num_paging_cat', 10, '', '180412'),
 ('news_num_paging_cat', 8, '', '200312'),
 ('news_num_paging_cat', 2, '', '220312'),
 ('news_num_paging_cat', 8, '', '260312'),
 ('news_num_paging_hot', 6, '', '010312'),
+('news_num_paging_hot', 6, '', '070312'),
+('news_num_paging_hot', 6, '', '130312'),
 ('news_num_paging_hot', 6, '', '180412'),
 ('news_num_paging_hot', 5, '', '220312'),
 ('news_num_paging_hot', 6, '', '260312'),
 ('news_num_paging_index', 8, '', '010312'),
+('news_num_paging_index', 10, '', '070312'),
+('news_num_paging_index', 3, '', '130312'),
 ('news_num_paging_index', 10, '', '180412'),
 ('news_num_paging_index', 8, '', '200312'),
 ('news_num_paging_index', 2, '', '220312'),
 ('news_num_paging_index', 4, '', '260312'),
 ('news_num_paging_new', 6, '', '010312'),
+('news_num_paging_new', 10, '', '070312'),
+('news_num_paging_new', 6, '', '130312'),
 ('news_num_paging_new', 6, '', '180412'),
 ('news_num_paging_new', 4, '', '200312'),
 ('news_num_paging_new', 4, '', '220312'),
 ('news_num_paging_new', 6, '', '260312'),
 ('news_width_thumb', 143, '', '010312'),
+('news_width_thumb', 143, '', '070312'),
+('news_width_thumb', 143, '', '130312'),
 ('news_width_thumb', 143, '', '180412'),
 ('news_width_thumb', 143, '', '200312'),
 ('news_width_thumb', 145, '', '220312'),
@@ -201,20 +223,28 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_height_thumb', 135, '', '220312'),
 ('products_height_thumb', 160, '', '260312'),
 ('products_num_paging_cat', 3, '', '010312'),
+('products_num_paging_cat', 16, '', '070312'),
+('products_num_paging_cat', 12, '', '130312'),
 ('products_num_paging_cat', 8, '', '180412'),
 ('products_num_paging_cat', 8, '', '200312'),
 ('products_num_paging_cat', 6, '', '220312'),
 ('products_num_paging_cat', 8, '', '260312'),
 ('products_num_paging_hot', 3, '', '010312'),
+('products_num_paging_hot', 8, '', '070312'),
+('products_num_paging_hot', 8, '', '130312'),
 ('products_num_paging_hot', 8, '', '180412'),
 ('products_num_paging_hot', 8, '', '200312'),
 ('products_num_paging_hot', 30, '', '260312'),
 ('products_num_paging_new', 6, '', '010312'),
+('products_num_paging_new', 8, '', '070312'),
+('products_num_paging_new', 8, '', '130312'),
 ('products_num_paging_new', 20, '', '180412'),
 ('products_num_paging_new', 3, '', '200312'),
 ('products_num_paging_new', 4, '', '220312'),
 ('products_num_paging_new', 8, '', '260312'),
 ('products_num_paging_other', 3, '', '010312'),
+('products_num_paging_other', 4, '', '070312'),
+('products_num_paging_other', 4, '', '130312'),
 ('products_num_paging_other', 4, '', '180412'),
 ('products_num_paging_other', 3, '', '200312'),
 ('products_num_paging_other', 2, '', '220312'),
@@ -236,6 +266,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_width_thumb', 200, '', '220312'),
 ('products_width_thumb', 160, '', '260312'),
 ('services_height', 90, '', '010312'),
+('services_height', 100, '', '070312'),
 ('services_height', 110, '', '111120'),
 ('services_height', 89, '', '130312'),
 ('services_height', 100, '', '180412'),
@@ -243,6 +274,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('services_height', 90, '', '220312'),
 ('services_height', 90, '', '260312'),
 ('services_width', 144, '', '010312'),
+('services_width', 150, '', '070312'),
 ('services_width', 192, '', '111120'),
 ('services_width', 143, '', '130312'),
 ('services_width', 160, '', '180412'),
@@ -252,17 +284,25 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_cat_height', 100, '', '260312'),
 ('video_cat_width', 145, '', '260312'),
 ('video_height_thumb', 115, '', '010312'),
+('video_height_thumb', 160, '', '070312'),
+('video_height_thumb', 121, '', '130312'),
 ('video_height_thumb', 160, '', '180412'),
 ('video_height_thumb', 150, '', '220312'),
 ('video_num_paging_cat', 4, '', '010312'),
+('video_num_paging_cat', 8, '', '070312'),
+('video_num_paging_cat', 8, '', '130312'),
 ('video_num_paging_cat', 8, '', '180412'),
 ('video_num_paging_cat', 8, '', '200312'),
 ('video_num_paging_cat', 2, '', '220312'),
 ('video_num_paging_index', 4, '', '010312'),
+('video_num_paging_index', 8, '', '070312'),
+('video_num_paging_index', 8, '', '130312'),
 ('video_num_paging_index', 8, '', '180412'),
 ('video_num_paging_index', 8, '', '200312'),
 ('video_num_paging_index', 2, '', '220312'),
 ('video_width_thumb', 115, '', '010312'),
+('video_width_thumb', 160, '', '070312'),
+('video_width_thumb', 152, '', '130312'),
 ('video_width_thumb', 175, '', '180412'),
 ('video_width_thumb', 200, '', '220312');
 
@@ -329,7 +369,7 @@ INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('create_date', 'Ngày tạo', 'Create date', 1),
 ('default', 'Trang chủ', 'Home page', 0),
 ('delete', 'Xóa', 'Delete', 1),
-('description', 'Mô tả', 'Decription', 1),
+('description', 'Mô tả', 'Decription', 0),
 ('descriptionen', 'Mô tả En', 'Description', 1),
 ('detail', 'Chi tiết', 'Detail', 0),
 ('developed', 'Phát triển bởi', 'Developed by', 0),
@@ -391,8 +431,12 @@ INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, 
 ('010312', 'default', 'jquery.prettyPhoto.js', 'javascript'),
 ('010312', 'video', 'prettyPhoto.css', 'css'),
 ('010312', 'video', 'jquery.prettyPhoto.js', 'javascript'),
+('070312', 'video', 'prettyPhoto.css', 'css'),
+('070312', 'video', 'jquery.prettyPhoto.js', 'javascript'),
 ('111120', 'products', 'product-detail.css|jquery.fancybox-1.3.1.css', 'css'),
 ('111120', 'products', 'jcarousellite.js|contentslider.js|scroller.js|jquery.fancybox-1.3.1.js|lightbox.js', 'javascript'),
+('130312', 'video', 'prettyPhoto.css', 'css'),
+('130312', 'video', 'jquery.prettyPhoto.js', 'javascript'),
 ('180412', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
 ('180412', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
 ('180412', 'video', 'prettyPhoto.css', 'css'),
@@ -461,36 +505,54 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('about', 'dos'),
 ('about', 'mayphotocopysieuviet'),
 ('about', 'phumyan'),
+('about', 'thienlonghoi'),
+('about', 'thoitrang'),
 ('about', 'tinhungphat'),
 ('advs', 'dos'),
 ('advs', 'mayphotocopysieuviet'),
 ('advs', 'phumyan'),
+('advs', 'thienlonghoi'),
+('advs', 'thoitrang'),
 ('advs', 'tinhungphat'),
 ('banner', 'dos'),
 ('banner', 'mayphotocopysieuviet'),
 ('banner', 'phumyan'),
+('banner', 'thienlonghoi'),
+('banner', 'thoitrang'),
 ('banner', 'tinhungphat'),
 ('contact', 'dos'),
 ('contact', 'mayphotocopysieuviet'),
 ('contact', 'phumyan'),
+('contact', 'thienlonghoi'),
+('contact', 'thoitrang'),
 ('contact', 'tinhungphat'),
 ('news', 'dos'),
 ('news', 'mayphotocopysieuviet'),
 ('news', 'phumyan'),
+('news', 'thienlonghoi'),
+('news', 'thoitrang'),
 ('news', 'tinhungphat'),
 ('products', 'dos'),
 ('products', 'mayphotocopysieuviet'),
 ('products', 'phumyan'),
+('products', 'thienlonghoi'),
+('products', 'thoitrang'),
 ('products', 'tinhungphat'),
 ('services', 'dos'),
 ('services', 'mayphotocopysieuviet'),
 ('services', 'phumyan'),
+('services', 'thienlonghoi'),
+('services', 'thoitrang'),
 ('services', 'tinhungphat'),
 ('supports', 'dos'),
 ('supports', 'mayphotocopysieuviet'),
 ('supports', 'phumyan'),
+('supports', 'thienlonghoi'),
+('supports', 'thoitrang'),
 ('supports', 'tinhungphat'),
 ('video', 'phumyan'),
+('video', 'thienlonghoi'),
+('video', 'thoitrang'),
 ('video', 'tinhungphat');
 
 -- --------------------------------------------------------
@@ -520,7 +582,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=50 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=56 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
@@ -531,11 +593,17 @@ INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `co
 (7, 'Tầm nhìn và sứ mệnh Dos', 'Gioi thieu 2 En', '<p>\r\n	Tầm nhìn và Sứ mệnh của DOS được viết ra ngay từ khi thành lập, xác định lý tưởng, hướng đi lâu dài và những giá trị cơ bản mà mỗi thành viên sáng lập luôn hướng tới.</p>\r\n<p>\r\n	<strong>Tầm nhìn của DOS</strong><br />\r\n	Được công nhận là công ty đứng đầu trong lĩnh vực thiết kế Website. Với giải pháp tích hợp Marketing và Công Nghệ Thông Tin trong việc quảng cáo bán hàng dành riêng cho từng Doanh nghiệp.</p>\r\n<p>\r\n	<strong>Sứ mệnh của DOS</strong><br />\r\n	Mang lại cho Doanh nghiệp một kênh truyền thông nhanh chóng và hiệu quả qua những Website đầy tính sáng tạo.</p>\r\n<p>\r\n	<strong>Các giá trị cơ bản của DOS c</strong>ác giá trị cơ bản là tài sản vô cùng quý báu mà mỗi người thành viên của DOS đều trân trọng giữ gìn:</p>\r\n<ul><li>\r\n		<strong>Làm khách hàng hài lòng</strong>: Tận tuỵ với khách hàng và luôn phấn đấu để đáp ứng tốt nhất những nhu cầu, vượt trên mong đợi của họ.</li>\r\n	<li>\r\n		<strong>Con người là cốt lõi</strong>: Tôn trọng con người, tạo điều kiện cho các thành viên phát triển tối đa tài năng, đóng góp cho tổ chức và được đãi ngộ xứng đáng cả về vật chất và tinh thần.</li>\r\n	<li>\r\n		<strong>Chất lượng tốt nhất</strong>: Đảm bảo chất lượng tốt nhất trong mỗi sản phẩm, mỗi việc làm.</li>\r\n	<li>\r\n		<strong>Đề cao đạo đức kinh doanh</strong>: Mỗi nhân viên là một đại diện của Công ty, có nghĩa vụ tuân thủ đạo đức kinh doanh cao nhất, luôn hợp tác, cởi mở và thân thiện với đồng nghiệp, đóng góp cho cộng đồng và xã hội.</li>\r\n</ul>', '<p>\r\n	NOi dung en</p>', 45, '2012-04-07 02:14:02', 2, 0, NULL, NULL, 'tam-nhin-va-su-menh-dos', 'gioi-thieu-2-en', 'Tầm nhìn và Sứ mệnh của DOS được viết ra ngay từ khi thành lập, xác định lý tưởng, hướng đi lâu dài và những giá trị cơ bản mà mỗi thành viên sáng lập luôn hướng tới', 'Mo ta 2 En', 1, 'dos'),
 (8, 'Lĩnh vực hoạt động', 'Gioi thieu 3 En', '<p>\r\n	<strong>DỊCH VỤ CHUYÊN NGHIỆP</strong>:</p>\r\n<ul><li>\r\n		Thiết kế website</li>\r\n	<li>\r\n		Phương pháp quảng cáo bán hàng trực tuyến</li>\r\n	<li>\r\n		Giải pháp CNTT trọn gói cho Doanh nghiệp</li>\r\n	<li>\r\n		Thương mại điện tử</li>\r\n</ul><p>\r\n	 </p>\r\n<p>\r\n	<strong>SẢN PHẨM VÀ DỊCH VỤ GTGT:</strong></p>\r\n<ul><li>\r\n		Đăng ký tên miền</li>\r\n	<li>\r\n		Cung cấp Hosting</li>\r\n	<li>\r\n		Xử lý hình ảnh nhập liệu cho web</li>\r\n	<li>\r\n		Thiết kế Logo</li>\r\n	<li>\r\n		Thiết Kế Name Card</li>\r\n	<li>\r\n		Thiết kế ấn phầm Quảng cáo theo đơn đặt hàng</li>\r\n</ul><p>\r\n	 </p>\r\n<p>\r\n	<strong>HỖ TRỢ TƯ VẤN MIỄN PHÍ:</strong></p>\r\n<ul><li>\r\n		Thành lập Doanh nghiệp</li>\r\n	<li>\r\n		Quản lý Doanh nghiệp</li>\r\n	<li>\r\n		Tư vấn Marketing và phát triển Doanh nghiệp</li>\r\n	<li>\r\n		Tư vấn và định hướng đào tạo nhân viên bán hàng</li>\r\n	<li>\r\n		Tư vấn phong thủy</li>\r\n</ul>', '<p>\r\n	Noi dung 3 en</p>', 32, '2012-04-07 02:14:12', 3, 0, NULL, NULL, 'linh-vuc-hoat-dong', 'gioi-thieu-3-en', 'Mo ta 3', 'Mo ta 3 En', 1, 'dos'),
 (43, 'Giới thiệu chung', '', '<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong>  <span style="color:#0000ff;font-size:large;">Siêu Việt là Doanh Nghiệp chuyên cung cấp và cho thuê máy văn phòng</span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">- Sản phẩm chính: Máy photocopy, Máy in, Máy fax, Máy scan, Máy vi tính, Máy chiếu.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">- Dịch vụ: cho thuê máy photocopy đa chức năng, đen trắng, màu, bảo hành, bảo trì, sữa chữa.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">Được thành lập vào năm 2003, với bề dày nhiều năm kinh nghiệm Siêu Việt luộn đi tiên phong trong việc đầu tư đổi mới máy văn phòng và luôn cung cấp cho Khách Hàng nhưng loại hình dịch vụ chất lợng cao. Luôn làm hài lòng nhưng Khách Hàng khó tính.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">Tại  Đồng Nai, Siêu Việt là nhà cung cấp cho các Doanh Nghiệp trong và ngoài nước đóng trong các Khu Công Nghiệp như: Biên Hòa 1, Biên Hòa 2, Amata, Loteco, Long Thành, Nhợn Trạch 1-5, Tam Phước, Gò Dầu, Sông Mây, Hố nai 3, Bàu Xéo và các Tỉnh Thành lân cận.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#ff0000;font-size:medium;"><strong>* Với tiêu chí: </strong></span></p>\n<p style="text-align:center;"><span style="font-size:large;"><strong><span style="color:#ff0000;">" LỢI ÍCH CỦA KHÁCH HÀNG LÀ THÀNH QUẢ CỦA CHÚNG TÔI"</span></strong></span></p>\n<p style="text-align:center;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;">Doanh nghiệp Siêu Việt luôn đồng hành cùng sự nghiệp phát triển của Doanh Nghiệp</span></span></strong></span></p>\n<p style="text-align:justify;"> </p>', '', 251, '2012-04-12 01:25:59', 1, 1, '', '', 'gioi-thieu-chung', '', 'Siêu Việt', '', 1, 'mayphotocopysieuviet'),
-(44, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 57, '2012-04-12 01:57:36', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'phumyan'),
+(44, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 61, '2012-04-12 01:57:36', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'phumyan'),
 (45, 'Giấy chứng nhận đại lý', '', '<p><img style="margin-left:auto;margin-right:auto;" title="Giấy chung nhan" src="/public/userfiles/image/mayphotocopysieuviet/image/Nho-Chungnhan_HP.jpg" alt="sieu viet" width="450" height="651" /></p>', '', 64, '2012-04-12 02:49:22', 2, 0, '', '', 'giay-chung-nhan-dai-ly', '', '', '', 1, 'mayphotocopysieuviet'),
 (46, 'Giới thiệu chung chung', '', '<p>Giới thiệu chung chung Giới thiệu chung chung  Giới thiệu chung chung</p>', '', 3, '2012-04-13 03:18:30', 2, 0, '', '', 'gioi-thieu-chung-chung', '', 'Giới thiệu chung chung', '', 1, 'phumyan'),
 (47, 'Giới thiệu thị trường nội thất', '', '<p>Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất</p>', '', 8, '2012-04-13 03:19:10', 3, 0, '', '', 'gioi-thieu-thi-truong-noi-that', '', 'Giới thiệu thị trường nội thất', '', 1, 'phumyan'),
-(48, 'Tổng quan vể công ty', '', '<p>Siêu Việt là Doanh nghiệp chuyên cung cấp và cho thuê thiết bị máy văn phòng. Sản phẩm chính: Máy photocopy, máy tính, máy Fax, Máy Scan,.. ngoài ta còn cung cấp sản phẩm và dịch vụ theo đơn đặt hàng của khách hàng.</p>\n<p>Được thành lập vào năm 2002, bề dày kinh nghiệp 10 năm luôn tiên phong trong việc đổi mới máy móc và dịch vụ phụ vụ chất lượng cao luôn làm hoài lòng khách hàng khó tính nhất.</p>\n<p>Tại Đồng Nai, Siêu Việt là nhà cung cấp thiết bị văn phòng cho các Doanh nghiệp trong và ngoài nước như: Sonadezi, KCN AMADA,..</p>\n<p>khẳng định dịch vụ chất lượng Công ty được thành lập với tiêu chí cung cấp sỉ và lẻ tất cả các thiết bị văn phòng cho các đại lý trên khắp Việt Nam .</p>\n<p>Tận dụng và phát huy năng lực, kinh nghiệm trong lĩnh vực thiết bị văn phòng cùng với sự hỗ trợ của các thương hiệu nổi tiếng thế giới như Toshiba, Panasonic, Canon, Ricoh, Konica Minolta, Xerox... và trong lĩnh vực tin học như Intel, Seagate, Samsung, Asus, Dell, Ibm, Acer ...chúng tôi mong muốn và quyết tâm để trờ thành nhà cung cấp lớn và uy tín nhất trong lĩnh vực văn phòng tại Việt Nam.</p>\n<p>Dịch vụ hỗ trợ khách hàng: Chúng tôi có một đội ngũ kỹ sư có chuyên môn cao, kỹ thuật viên uy tín lâu năm kinh nghiệm trong các lĩnh vực:</p>\n<p>- Tư vấn, thực hiện các Giải Pháp về Máy Photocopy, Máy Fax, Máy In ...</p>\n<p>- Kinh doanh và cho thuê Máy Văn Phòng</p>\n<p>- Máy Photocopy in kỹ thuật số khổ lớn A0, Máy In Siêu Tốc 130 bản/phút</p>\n<p>- Máy in Công nghiệp, Máy in Màu Offset</p>\n<p>- Hỗ trợ kỹ thuật cho các dịch vụ Photocopy</p>\n<p>- Phân phối Sỉ &amp; Lẻ Máy Photocopy hàng nhập khẩu</p>\n<p>- Cung cấp Mực, Linh Kiện, Vật Tư với giá ưu đãi</p>\n<p>- Nhận đào tạo Kỹ Thuật Viên sửa chữa máy Photocopy, In, Fax</p>\n<p>Siêu Việt đáp ứng mọi nhu cầu, lựa chọn từ quý khách.</p>', '', 7, '2012-04-16 01:09:47', 3, 0, '', '', 'tong-quan-ve-cong-ty', '', '', '', 1, 'mayphotocopysieuviet');
+(48, 'Tổng quan vể công ty', '', '<p>Siêu Việt là Doanh nghiệp chuyên cung cấp và cho thuê thiết bị máy văn phòng. Sản phẩm chính: Máy photocopy, máy tính, máy Fax, Máy Scan,.. ngoài ta còn cung cấp sản phẩm và dịch vụ theo đơn đặt hàng của khách hàng.</p>\n<p>Được thành lập vào năm 2002, bề dày kinh nghiệp 10 năm luôn tiên phong trong việc đổi mới máy móc và dịch vụ phụ vụ chất lượng cao luôn làm hoài lòng khách hàng khó tính nhất.</p>\n<p>Tại Đồng Nai, Siêu Việt là nhà cung cấp thiết bị văn phòng cho các Doanh nghiệp trong và ngoài nước như: Sonadezi, KCN AMADA,..</p>\n<p>khẳng định dịch vụ chất lượng Công ty được thành lập với tiêu chí cung cấp sỉ và lẻ tất cả các thiết bị văn phòng cho các đại lý trên khắp Việt Nam .</p>\n<p>Tận dụng và phát huy năng lực, kinh nghiệm trong lĩnh vực thiết bị văn phòng cùng với sự hỗ trợ của các thương hiệu nổi tiếng thế giới như Toshiba, Panasonic, Canon, Ricoh, Konica Minolta, Xerox... và trong lĩnh vực tin học như Intel, Seagate, Samsung, Asus, Dell, Ibm, Acer ...chúng tôi mong muốn và quyết tâm để trờ thành nhà cung cấp lớn và uy tín nhất trong lĩnh vực văn phòng tại Việt Nam.</p>\n<p>Dịch vụ hỗ trợ khách hàng: Chúng tôi có một đội ngũ kỹ sư có chuyên môn cao, kỹ thuật viên uy tín lâu năm kinh nghiệm trong các lĩnh vực:</p>\n<p>- Tư vấn, thực hiện các Giải Pháp về Máy Photocopy, Máy Fax, Máy In ...</p>\n<p>- Kinh doanh và cho thuê Máy Văn Phòng</p>\n<p>- Máy Photocopy in kỹ thuật số khổ lớn A0, Máy In Siêu Tốc 130 bản/phút</p>\n<p>- Máy in Công nghiệp, Máy in Màu Offset</p>\n<p>- Hỗ trợ kỹ thuật cho các dịch vụ Photocopy</p>\n<p>- Phân phối Sỉ &amp; Lẻ Máy Photocopy hàng nhập khẩu</p>\n<p>- Cung cấp Mực, Linh Kiện, Vật Tư với giá ưu đãi</p>\n<p>- Nhận đào tạo Kỹ Thuật Viên sửa chữa máy Photocopy, In, Fax</p>\n<p>Siêu Việt đáp ứng mọi nhu cầu, lựa chọn từ quý khách.</p>', '', 7, '2012-04-16 01:09:47', 3, 0, '', '', 'tong-quan-ve-cong-ty', '', '', '', 1, 'mayphotocopysieuviet'),
+(50, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 159, '2012-04-19 01:22:04', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'thoitrang'),
+(51, 'Giới thiệu chung chung', '', '<p>Giới thiệu chung chung Giới thiệu chung chung  Giới thiệu chung chung</p>', '', 11, '2012-04-19 01:22:04', 2, 0, '', '', 'gioi-thieu-chung-chung', '', 'Giới thiệu chung chung', '', 1, 'thoitrang'),
+(52, 'Giới thiệu thị trường nội thất', '', '<p>Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất</p>', '', 30, '2012-04-19 01:22:04', 3, 0, '', '', 'gioi-thieu-thi-truong-noi-that', '', 'Giới thiệu thị trường nội thất', '', 1, 'thoitrang'),
+(53, 'Giới thiệu sơ lược', '', '<p>Thiên Long Hội  chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn carbp2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn carbp2. Ngoài ra, Thiên Long Hộiluôn đáp ứng các loại ván ép, keo theo Đơn Đặt Hàng.</p>\r\n<p>Được thành lập năm 1999, có 5 xưởng sản xuất, bề dày kinh nghiệm 12 năm luôn tiên phong đầu tư khoa học, nghiên cứu phát triển sản phẩm, có máy móc thiết bị loại tốt và đội ngũ nhân lực tâm huyết, có trình độ chuyên môn cao, thạo việc để sản xuất sản phẩm có tính năng tốt, bền bỉ, tinh xảo, giá thành thấp đồng thời đáp ứng được đơn hàng số lượng lớn.</p>', '', 207, '2012-04-19 06:46:54', 1, 1, '', '', 'gioi-thieu-so-luoc', '', 'Thiên Long Hội  chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn carbp2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn carbp2. Ngoài ra, Thiên Long Hộiluôn đáp ứng các loại ván ép, keo theo Đơn Đặt Hàng.', '', 1, 'thienlonghoi'),
+(54, 'Giới thiệu chung chung', '', '<p>1. Địa chỉ trụ sở chính:</p>\r\n<p>Văn phòng: 23 Núi Thành - TP.Đà Nẵng</p>\r\n<p>Điện thoại: 0511.3634345 - 3626077 - 3626099 - 3601558 - 3601559. Fax: 0511.3634345</p>\r\n<p>Email: gialinh@begili.com Website: www.begili.com</p>\r\n<ul><li>2. Nhà máy:</li>\r\n<li>Địa chỉ: Lô 4-5 Cụm Công nghiệp Đại Hiệp, Đại Lộc, Quảng Nam.</li>\r\n<li>Điện thoại: 0510.3762767 Fax: 0510.3762769</li>\r\n<li>3. Quá trình hình thành và phát triển:</li>\r\n</ul><p>Công ty TNHH Gia Linh là đơn vị thành lập theo hình thức Công ty trách nhiệm hữu hạn và hoạt đông theo luật doanh nghiệp được Quốc Hội Nước Cộng Hoà Xã Hội Chủ Nghĩa Việt Nam Khoá X thông qua ngày 12/6/1999 và các quy định khác của pháp luật Nhà nước Việt Nam. Là đơn vị chuyên sản xuất và cung cấp các thiết bị đồ gỗ nội - ngoại thất cao cấp, kinh doanh khách sạn, nhà hàng và sản xuất máy điều hoà không khí mang thương hiệu Begili.</p>\r\n<p>Trải qua thời gian, cùng với sự lớn mạnh không ngừng cả về chất và lượng, do vậy Công ty TNHH Gia Linh đã đạt được những thành tựu to lớn. Đặc biệt, với đội ngũ cán bộ kỹ thuật, kỹ sư dày dạn kinh nghiệm trong việc tổ chức quản lý thi công, điều hành sản xuất, đội ngũ cán bộ quản lý nhạy bén, đội ngũ nhân viên với bề dày kinh nghiệm trong lĩnh vực mộc máy và được bổ sung thêm bởi lớp nhân viên trẻ có sức sáng tạo, nhiệt huyết cao, năng động đã góp phần tạo nên sự lớn mạnh của Công ty trong môi trường cạnh tranh ngày càng khốc liệt.</p>\r\n<p>Công ty áp dụng công nghệ máy móc hiện đại, với sự giám sát chặt chẽ của các kỹ thuật viên trong Công ty vì vậy sản phẩm đã đạt đến đỉnh cao của sự hoàn hảo, tinh tế và đa dạng về chủng loại.</p>\r\n<p>Mục đích kinh doanh của Công ty là tạo dựng trở thành thương hiệu uy tín và in sâu trong tâm trí của khách hàng. Qua đó góp phần tạo cho nhân viên Công ty nói riêng có một cuộc sống đảm bảo, ổn định và góp sức xây dựng một đất nước Việt Nam nói chung ngày càng vững mạnh và phồn vinh.</p>\r\n<p>Phương châm kinh doanh của Công ty là mong muốn đem lại cho quý khách sự hài lòng và thỏa mãn về chất lượng sản phẩm mang thương hiệu Begili .</p>', '', 8, '2012-04-19 06:46:54', 2, 0, '', '', 'gioi-thieu-chung-chung', '', '1. Địa chỉ trụ sở chính:\r\nVăn phòng: 23 Núi Thành - TP.Đà Nẵng\r\nĐiện thoại: 0511.3634345 - 3626077 - 3626099 - 3601558 - 3601559. Fax: 0511.3634345\r\nEmail: gialinh@begili.com Website: www.begili.com', '', 1, 'thienlonghoi'),
+(55, 'Công trình đã thực hiện', '', '<p><strong>1.Một số hình ảnh 2 chi nhánh SCB tại Đà Nẵng</strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/GLSCB04.jpg" alt="" width="350" height="300" /></p>\r\n<p style="text-align:left;"><strong>2.Các công trình tiêu biểu:</strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/nhaconam.jpg" alt="" width="650" height="487" /></p>\r\n<p style="text-align:center;"><strong><span style="color:#0000ff;">Nhà tư nhân</span></strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/sunriver.JPG" alt="" width="450" height="600" /></p>\r\n<p style="text-align:center;"><span style="color:#0000ff;"><strong>Khách sạn SUN RIVER</strong></span></p>\r\n<p style="text-align:left;"> </p>', '', 43, '2012-04-19 06:46:54', 3, 0, '', '', 'cong-trinh-da-thuc-hien', '', 'Công trình đã thực hiện', '', 1, 'thienlonghoi');
 
 -- --------------------------------------------------------
 
@@ -560,7 +628,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
 
 --
 -- Dumping data for table `dos_module_advs`
@@ -575,7 +643,13 @@ INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `ur
 (11, 'Panasonic', '', 'panasonic.jpeg', 'http://dos.vn/', '2012-04-12 02:51:56', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 4, 'right', '_bank', 0, 'mayphotocopysieuviet'),
 (12, 'Canon', '', 'canon.jpeg', 'http://dos.vn/', '2012-04-12 02:52:19', '2012-03-30 17:00:00', '2012-05-29 17:00:00', 0, 5, 'left', '_bank', 1, 'mayphotocopysieuviet'),
 (13, 'Xerok', '', 'xerok.jpeg', 'http://dos.vn/', '2012-04-12 02:52:59', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 3, 'right', '_bank', 1, 'mayphotocopysieuviet'),
-(14, 'Pa nội thất', '', 'pa-noi-that.jpg', 'http://dantri.com.vn', '2012-04-13 03:04:28', '2012-04-12 16:00:00', '2012-04-26 16:00:00', 0, 3, 'right', '_bank', 1, 'phumyan');
+(14, 'Pa nội thất', '', 'pa-noi-that.jpg', 'http://dantri.com.vn', '2012-04-13 03:04:28', '2012-04-12 16:00:00', '2012-04-26 16:00:00', 0, 3, 'right', '_bank', 1, 'phumyan'),
+(16, 'Quảng cáo', '', 'quang-cao.jpg', 'http://phumyan.dos.vn/', '2012-04-19 01:22:05', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 1, 'left', '_bank', 1, 'thoitrang'),
+(17, 'Quảng cáo 2', '', 'quang-cao-2.jpg', 'http://phumyan.dos.vn/', '2012-04-19 01:22:05', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 2, 'left', '_bank', 1, 'thoitrang'),
+(18, 'Pa nội thất', '', 'pa-noi-that.jpg', 'http://dantri.com.vn', '2012-04-19 01:22:05', '2012-04-12 16:00:00', '2012-04-26 16:00:00', 0, 3, 'right', '_bank', 1, 'thoitrang'),
+(19, 'Quảng cáo', '', 'quang-cao.jpg', 'http://phumyan.dos.vn/', '2012-04-19 06:46:55', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 1, 'left', '_bank', 1, 'thienlonghoi'),
+(20, 'Quảng cáo 2', '', 'quang-cao-2.jpg', 'http://phumyan.dos.vn/', '2012-04-19 06:46:55', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 2, 'left', '_bank', 1, 'thienlonghoi'),
+(21, 'Pa nội thất', '', 'pa-noi-that.jpg', 'http://dantri.com.vn', '2012-04-19 06:46:55', '2012-04-12 16:00:00', '2012-04-26 16:00:00', 0, 3, 'right', '_bank', 1, 'thienlonghoi');
 
 -- --------------------------------------------------------
 
@@ -596,7 +670,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=42 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=95 ;
 
 --
 -- Dumping data for table `dos_module_banners`
@@ -639,7 +713,47 @@ INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `ba
 (37, '2012-04-16 01:08:41', 'Banner 6', 'banner-6.jpg', '', 16, 'banners', 'news', 1, 'mayphotocopysieuviet'),
 (38, '2012-04-16 01:09:27', 'Banner 11', 'banner-115.jpg', '', 17, 'banners', 'contact', 1, 'mayphotocopysieuviet'),
 (39, '2012-04-16 02:02:48', 'Banner 14', 'banner-14.jpg', '', 18, 'banners', 'about', 1, 'mayphotocopysieuviet'),
-(41, '2012-04-16 02:51:39', 'Banner 1', 'banner-1.jpg', '', 2, 'banners', 'default', 1, 'mayphotocopysieuviet');
+(41, '2012-04-16 02:51:39', 'Banner 1', 'banner-1.jpg', '', 2, 'banners', 'default', 1, 'mayphotocopysieuviet'),
+(42, '2012-04-19 01:03:41', 'ba3', 'ba3.jpg', '', 1, 'banners', 'default', 1, 'tinhungphat'),
+(43, '2012-04-19 01:03:52', 'ba1', 'ba11.jpg', '', 2, 'banners', 'default', 1, 'tinhungphat'),
+(44, '2012-04-19 01:22:05', 'Logo', 'logo.png', '', 1, 'logo', 'default', 0, 'thoitrang'),
+(45, '2012-04-19 01:22:05', 'Banner', 'banner.jpg', '', 2, 'banners', 'default', 1, 'thoitrang'),
+(46, '2012-04-19 01:22:05', 'Banner 1', 'banner-1.jpg', '', 3, 'banners', 'default', 1, 'thoitrang'),
+(47, '2012-04-19 01:22:05', 'Banner 2', 'banner-2.jpg', '', 4, 'banners', 'default', 1, 'thoitrang'),
+(48, '2012-04-19 01:22:05', 'Banner 3', 'banner-3.jpg', '', 5, 'banners', 'default', 1, 'thoitrang'),
+(49, '2012-04-19 01:22:05', 'Banner 4', 'banner-4.jpg', '', 6, 'banners', 'about', 0, 'thoitrang'),
+(50, '2012-04-19 01:22:05', 'Banner 5', 'banner-5.jpg', '', 7, 'banners', 'about', 0, 'thoitrang'),
+(51, '2012-04-19 01:22:05', 'Banner 6', 'banner-6.jpg', '', 8, 'banners', 'products', 0, 'thoitrang'),
+(52, '2012-04-19 01:22:05', 'Banner 7', 'banner-7.jpg', '', 9, 'banners', 'products', 0, 'thoitrang'),
+(53, '2012-04-19 01:22:05', 'Banner 8', 'banner-8.jpg', '', 10, 'banners', 'products', 0, 'thoitrang'),
+(54, '2012-04-19 01:22:05', 'Banner 9', 'banner-86.jpg', '', 11, 'banners', 'news', 0, 'thoitrang'),
+(55, '2012-04-19 01:22:05', 'Banner 10', 'banner-10.jpg', '', 12, 'banners', 'news', 0, 'thoitrang'),
+(56, '2012-04-19 01:22:05', 'Banner 11', 'banner-11.jpg', '', 13, 'banners', 'news', 0, 'thoitrang'),
+(57, '2012-04-19 01:22:05', 'Banner 12', 'banner-12.jpg', '', 14, 'banners', 'services', 0, 'thoitrang'),
+(58, '2012-04-19 01:22:05', 'Banner 13', 'banner-13.jpg', '', 15, 'banners', 'services', 0, 'thoitrang'),
+(59, '2012-04-19 01:22:05', 'Banner 14', 'banner-14.jpg', '', 16, 'banners', 'contact', 0, 'thoitrang'),
+(60, '2012-04-19 01:22:05', 'Banner 15', 'banner-15.jpg', '', 17, 'banners', 'contact', 0, 'thoitrang'),
+(61, '2012-04-19 01:22:05', 'Banner 16', 'banner-16.jpg', '', 18, 'banners', 'video', 0, 'thoitrang'),
+(62, '2012-04-19 01:22:05', 'Banner 17', 'banner-17.jpg', '', 19, 'banners', 'video', 0, 'thoitrang'),
+(64, '2012-04-19 06:46:55', 'Banner', 'banner.jpg', '', 2, 'banners', 'default', 1, 'thienlonghoi'),
+(65, '2012-04-19 06:46:55', 'Banner 1', 'banner-1.jpg', '', 3, 'banners', 'default', 1, 'thienlonghoi'),
+(66, '2012-04-19 06:46:55', 'Banner 2', 'banner-2.jpg', '', 4, 'banners', 'default', 1, 'thienlonghoi'),
+(67, '2012-04-19 06:46:55', 'Banner 3', 'banner-3.jpg', '', 5, 'banners', 'default', 1, 'thienlonghoi'),
+(68, '2012-04-19 06:46:55', 'Banner 4', 'banner-4.jpg', '', 6, 'banners', 'about', 1, 'thienlonghoi'),
+(69, '2012-04-19 06:46:55', 'Banner 5', 'banner-5.jpg', '', 7, 'banners', 'about', 1, 'thienlonghoi'),
+(70, '2012-04-19 06:46:55', 'Banner 6', 'banner-6.jpg', '', 8, 'banners', 'products', 1, 'thienlonghoi'),
+(71, '2012-04-19 06:46:55', 'Banner 7', 'banner-7.jpg', '', 9, 'banners', 'products', 1, 'thienlonghoi'),
+(72, '2012-04-19 06:46:55', 'Banner 8', 'banner-8.jpg', '', 10, 'banners', 'products', 1, 'thienlonghoi'),
+(73, '2012-04-19 06:46:55', 'Banner 9', 'banner-86.jpg', '', 11, 'banners', 'news', 1, 'thienlonghoi'),
+(74, '2012-04-19 06:46:55', 'Banner 10', 'banner-10.jpg', '', 12, 'banners', 'news', 1, 'thienlonghoi'),
+(75, '2012-04-19 06:46:55', 'Banner 11', 'banner-11.jpg', '', 13, 'banners', 'news', 1, 'thienlonghoi'),
+(76, '2012-04-19 06:46:55', 'Banner 12', 'banner-12.jpg', '', 14, 'banners', 'services', 1, 'thienlonghoi'),
+(77, '2012-04-19 06:46:55', 'Banner 13', 'banner-13.jpg', '', 15, 'banners', 'services', 1, 'thienlonghoi'),
+(78, '2012-04-19 06:46:55', 'Banner 14', 'banner-14.jpg', '', 16, 'banners', 'contact', 1, 'thienlonghoi'),
+(79, '2012-04-19 06:46:55', 'Banner 15', 'banner-15.jpg', '', 17, 'banners', 'contact', 1, 'thienlonghoi'),
+(80, '2012-04-19 06:46:55', 'Banner 16', 'banner-16.jpg', '', 18, 'banners', 'video', 1, 'thienlonghoi'),
+(81, '2012-04-19 06:46:55', 'Banner 17', 'banner-17.jpg', '', 19, 'banners', 'video', 1, 'thienlonghoi'),
+(94, '2012-04-19 07:35:16', 'Logo', 'logo.gif', 'http://thienlonghoi.dos.vn/', 20, 'logo', 'default', 1, 'thienlonghoi');
 
 -- --------------------------------------------------------
 
@@ -665,7 +779,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_contacts_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `dos_module_contacts`
@@ -673,7 +787,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
 
 INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `tagen`, `description`, `descriptionen`, `enable`, `dos_usernames_username`) VALUES
 (8, 'Liên hệ với chúng tôi', '', '<p><span style="color:#008000;font-size:medium;"><strong>DNTN SIÊU VIỆT</strong></span></p>\n<p>3A/1 Đoàn Văn Cự, P. Tam Hiệp, TP. Biên Hòa, Tỉnh Đồng Nai</p>\n<p>Điện thoại: 061. 629 0909 - 061. 3914 541</p>\n<p>Fax: 061. 629 0819</p>\n<p>Hotline: 0937 107 888 - Mr. Nguyên - Phụ trách Kinh doanh.</p>\n<p>Email: nguyensieuviet@yahoo.com.vn</p>\n<p>Website: www.mayphotocopysieuviet.com</p>', '', '2012-04-12 02:03:01', 1, 0, 0, 'lien-he-voi-chung-toi', '', '', '', '1', 'mayphotocopysieuviet'),
-(9, 'Liên hệ', '', '<p>0937.107 888 (Mr. Nguyên)</p>', '', '2012-04-12 02:03:32', 2, 0, 1, 'lien-he', '', '', '', '1', 'mayphotocopysieuviet');
+(9, 'Liên hệ', '', '<p>0937.107 888 (Mr. Nguyên)</p>', '', '2012-04-12 02:03:32', 2, 0, 1, 'lien-he', '', '', '', '1', 'mayphotocopysieuviet'),
+(11, 'Liên hệ với chúng tôi', '', '<p>Địa chỉ:<br />Shop Quần Áo Rẻ Đẹp - Online Shop<br />Địa chỉ: 222 Nguyễn Thái Sơn, P.4, Quận Gò Vấp, Tp.HCM.<br />Email: kinhdoanh@quanaoredep.com, tuah1lz0@yahoo.com, tuantang.lf@gmail.comĐiện thoại:<br />093 -736-9468, 099-621-2889</p>', '', '2012-04-19 02:12:28', 1, 0, 0, 'lien-he-voi-chung-toi', '', 'Địa chỉ:\r\nShop Quần Áo Rẻ Đẹp - Online Shop\r\nĐịa chỉ: 222 Nguyễn Thái Sơn, P.4, Quận Gò Vấp, Tp.HCM.\r\nEmail: kinhdoanh@quanaoredep.com, tuah1lz0@yahoo.com, tuantang.lf@gmail.comĐiện thoại:\r\n093 -736-9468, 099-621-2889', '', '1', 'thoitrang'),
+(12, 'Liên hệ với chúng tôi để được phục vụ nhiệt tình', '', '<p>CÔNG TY TNHH THIÊN LONG HỘI</p>\r\n<p>Nhà sản xuất đồ gỗ nội - ngoại thất cao cấp</p>\r\n<p>Nhà máy<br />- Địa chỉ: Lô 4-5 Cụm công nghiệp Đại Hiệp - Đại Lộc - Quảng Nam</p>\r\n<p>Văn phòng:</p>\r\n<p>- Địa chỉ: 23 Núi Thành - TP.Đà Nẵng<br />- Điện thoại: 0511.3634345 - 3626077 - 3626099. Fax: 0511.3634345</p>\r\n<p>- Website: www.thienlonghoi.com </p>\r\n<p>Cảm ơn quý khách đã ghé thăm website của chúng tôi. Hy vọng sự nhiệt tình của chúng tôi sẽ làm quý khách hài lòng.</p>', '', '2012-04-19 08:50:17', 1, 0, 0, 'lien-he-voi-chung-toi-de-duoc-phuc-vu-nhiet-tinh', '', 'CÔNG TY TNHH THIÊN LONG HỘI\r\n\r\nNhà sản xuất đồ gỗ nội - ngoại thất cao cấp\r\n\r\nNhà máy\r\n- Địa chỉ: Lô 4-5 Cụm công nghiệp Đại Hiệp - Đại Lộc - Quảng Nam\r\nVăn phòng:\r\n- Địa chỉ: 23 Núi Thành - TP.Đà Nẵng\r\n- Điện thoại: 0511.3634345', '', '1', 'thienlonghoi');
 
 -- --------------------------------------------------------
 
@@ -724,7 +840,21 @@ INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `
 ('Dịch vụ', '', 'services', '', 4, '', '', '', '', 'tinhungphat'),
 ('Tin tức & sự kiện', '', 'news', '', 5, '', '', '', '', 'tinhungphat'),
 ('Video', '', 'video', '', 6, '', '', '', '', 'tinhungphat'),
-('Liên hệ', '', 'contact', '', 7, '', '', '', '', 'tinhungphat');
+('Liên hệ', '', 'contact', '', 7, '', '', '', '', 'tinhungphat'),
+('Trang chủ', NULL, 'default', NULL, 1, NULL, NULL, NULL, NULL, 'thoitrang'),
+('Giới thiệu', NULL, 'about', NULL, 2, NULL, NULL, NULL, NULL, 'thoitrang'),
+('Sản phẩm', NULL, 'products', NULL, 3, NULL, NULL, NULL, NULL, 'thoitrang'),
+('Dịch vụ', NULL, 'services', NULL, 4, NULL, NULL, NULL, NULL, 'thoitrang'),
+('Tin tức & sự kiện', NULL, 'news', NULL, 5, NULL, NULL, NULL, NULL, 'thoitrang'),
+('Video', NULL, 'video', NULL, 6, NULL, NULL, NULL, NULL, 'thoitrang'),
+('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'thoitrang'),
+('Trang chủ', NULL, 'default', NULL, 1, NULL, NULL, NULL, NULL, 'thienlonghoi'),
+('Giới thiệu', NULL, 'about', NULL, 2, NULL, NULL, NULL, NULL, 'thienlonghoi'),
+('Sản phẩm', NULL, 'products', NULL, 3, NULL, NULL, NULL, NULL, 'thienlonghoi'),
+('Dịch vụ', NULL, 'services', NULL, 4, NULL, NULL, NULL, NULL, 'thienlonghoi'),
+('Tin tức & sự kiện', NULL, 'news', NULL, 5, NULL, NULL, NULL, NULL, 'thienlonghoi'),
+('Video', NULL, 'video', NULL, 6, NULL, NULL, NULL, NULL, 'thienlonghoi'),
+('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'thienlonghoi');
 
 -- --------------------------------------------------------
 
@@ -755,7 +885,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
 
 --
 -- Dumping data for table `dos_module_news`
@@ -767,7 +897,15 @@ INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic
 (15, 'Canon sắp có một loạt ống kính fix mới', '', '2012-04-16 03:44:24', 'canon-sap-co-mot-loat-ong-kinh-fix-moi.jpg', '<p>Danh sách này có sự góp mặt của các ống fix nổi tiếng như 50 mm f/1.4, 85 mm f/1.2, 100 mm f/2.0 hay 200 mm f/2.0.<br /><br /></p>', '', '<p>Danh sách này có sự góp mặt của các ống fix nổi tiếng như 50 mm f/1.4, 85 mm f/1.2, 100 mm f/2.0 hay 200 mm f/2.0.</p>\n<p>Ống kính fix 50mm f/1.4 sắp có bản thay thế.</p>\n<p>Nguồn tin từ Canonrumors và Photorumors đồng loạt cho hay Canon mới đây đã được cấp các bằng sáng chế về 6 bộ ống kính fix với độ mở lớn. Các tài liệu này được hãng máy ảnh Nhật Bản nộp vào tháng 6/2010 và mới được cơ quan có thẩm quyền chấp nhận hôm qua.</p>\n<p>Các ống kính mới được nhắc đến bao gồm 50 mm f/1.4, 85 mm f/1.2, 85 mm f/1.8, 100 mm f/2.0, 135 mm f/2.0, 200 mm f/2.0.</p>\n<p> </p>', '', 'canon-sap-co-mot-loat-ong-kinh-fix-moi', '', 'Canon sắp có một loạt ống kính fix mới', '', 0, 1, 0, '', '', 1, 10),
 (16, 'Giao dịch với nhân viên thu ngân qua máy ATM', '', '2012-04-16 03:45:39', 'giao-dich-voi-nhan-vien-thu-ngan-qua-may-atm.jpg', '<p>Kể từ khi được đưa vào sử dụng vào những năm 60 của thế kỷ trước, máy rút tiền tự động (ATM) đã cung cấp cho khách hàng của ngân hàng phương thức tiện lợi để rút tiền mặt 24/24 giờ mỗi ngày, mà không phải chờ đến giờ làm việc của ngân hàng và xếp hàng chờ giao dịch với nhân viên của ngân hàng.</p>', '', '<p style="text-align:justify;">Kể từ khi được đưa vào sử dụng vào những năm 60 của thế kỷ trước, máy rút tiền tự động (ATM) đã cung cấp cho khách hàng của ngân hàng phương thức tiện lợi để rút tiền mặt 24/24 giờ mỗi ngày, mà không phải chờ đến giờ làm việc của ngân hàng và xếp hàng chờ giao dịch với nhân viên của ngân hàng.</p>\n<p style="text-align:justify;">Theo trang tin Gizmag, giờ đây hãng cung cấp máy ATM lớn nhất thế giới đã “bố trí” được nhân viên thu ngân ngay trong máy ATM nhờ thiết bị truyền hình 2 chiều tích hợp cho phép người sử dụng máy nói chuyện với nhân viên thu ngân từ xa.</p>\n<p style="text-align:justify;">Bên cạnh việc để khách hàng chọn chế độ tự phục vụ thông thường mà mọi người đã quen thuộc, máy ATM đa chức năng mới có tên gọi SelfServ của Công ty NCR (Mỹ) còn giúp người sử dụng chọn giao diện có tên gọi Tương tác với nhân viên (Interactive Teller) để thực hiện giao dịch với nhân viên thu ngân mà không phải đến ngân hàng.</p>\n<p style="text-align:justify;">Theo NCR, công nghệ mới sẽ cho phép các ngân hàng cung cấp khả năng truy cập 24 giờ mỗi ngày vào các dịch vụ với nhân viên thu ngân.</p>\n<p style="text-align:justify;">Ngoài ra, nó còn cho phép các ngân hàng cung cấp dịch vụ giao dịch với nhân viên thu ngân tại những khu vực không có chi nhánh ngân hàng.</p>\n<p style="text-align:justify;">“Người tiêu dùng không thể thường xuyên giao dịch ở ngân hàng trong giờ mở cửa. Họ muốn được phục vụ vào thời gian và địa điểm thuận tiện cho họ. Máy ATM SelfServ cung cấp dịch vụ tự phục vụ tốt nhất cho các giao dịch đơn giản, thông thường và ngoài giờ làm việc cũng như phục vụ từ xa”, ông Michael O’Laughlin, Phó chủ tịch phụ trách các dịch vụ tài chính của NCR, cho biết.</p>\n<p style="text-align:justify;">Máy SelfServ của NCR hoạt động nhờ công nghệ giao dịch qua video hiện đang được thử nghiệm tại Mỹ.</p>', '', 'giao-dich-voi-nhan-vien-thu-ngan-qua-may-atm', '', 'Giao dịch với nhân viên thu ngân qua máy ATM', '', 0, 2, 0, '', '', 1, 10),
 (17, 'Những điều cần biết khi chọn mua máy chiếu', '', '2012-04-16 03:50:17', 'nhung-dieu-can-biet-khi-chon-mua-may-chieu.jpg', '<p>Đối với những người có nhu cầu trang bị hệ thống giải trí gia đình, việc chọn mua máy chiếu không dễ khi chúng liên tục lỗi mốt.</p>', '', '<p style="text-align:justify;">Đối với những người có nhu cầu trang bị hệ thống giải trí gia đình, việc chọn mua máy chiếu không dễ khi chúng liên tục lỗi mốt.</p>\n<p style="text-align:justify;"><strong>Cần một số hiểu biết nhất định</strong></p>\n<p style="text-align:justify;">Sở dĩ nói khó mua là bởi, tuy có rất nhiều dòng máy chiếu trên thị trường, nhưng người mua cần có một số hiểu biết nhất định về loại sản phẩm này mới có thể chọn được loại máy đáp ứng đúng chất lượng, giá cả và yêu cầu sử dụng.</p>\n<p style="text-align:justify;">Mặc dù giá thành máy chiếu liên tục giảm, nhưng hiện nay mức trung bình vẫn được tính bằng đơn vị chục triệu đồng, do vậy bạn cần cân nhắc xem loại sản phẩm này có thực sự thích hợp với mình, đặc biệt là khi đặc thù của nó có một số hạn chế nhất định. Chẳng hạn, tỉ lệ tương phản của máy chiếu không được xuất sắc. Đây là tỉ lệ giữa màu đen nhất và màu trắng nhất có thể được thể hiện. Khả năng thể hiện độ đen càng lớn thì tỉ lệ này càng lớn, mà đối với một thiết bị hoạt động bằng cơ chế chiếu sáng thì mức độ đen "kịt" hầu như là "bất khả thi".</p>\n<p style="text-align:justify;">Rõ ràng là tỉ lệ tương phản 3000:1 thì tốt hơn 1000:1, nhưng chớ nên tin vào tỉ lệ do nhà sản xuất quảng cáo. Đây chỉ là tỉ lệ lý thuyết, được lấy từ mẫu tốt nhất mà họ có được của một loại sản phẩm, do đó một máy chiếu có tỉ lệ tương phản lý thuyết cao hơn chưa chắc đã thực sự cho hình ảnh sắc nét hơn một máy chiếu có tỉ lệ này thấp hơn. Cách tốt nhất là bạn phải lựa chọn thật kỹ bằng mắt mình.</p>\n<p style="text-align:justify;">Một vấn đề đặc thù nữa của máy chiếu là "hiệu ứng cửa ra màn hình" (screen-door effect). Hãy thử nhìn kỹ vào phần trắng hoặc sáng màu của hình ảnh được chiếu lên, đối với một số máy chiếu bạn có thể thấy một đường chéo rất mờ ở khu vực này. Mặc dù trong phần lớn các trường hợp, đường chéo này không rõ lắm và bạn chỉ nhìn thấy khi nhìn thật gần, nhưng bạn vẫn cần thận trọng kẻo mua phải máy chiếu có đường chéo này rõ tới mức bạn nhìn thấy nó ngay cả từ khoảng cách xem bình thường. Vấn đề này thường xảy ra ở loại máy chiếu DLP rõ ràng hơn so với ở máy LCD.</p>\n<p style="text-align:justify;"><strong>Ống kính và màn hình</strong></p>\n<p style="text-align:justify;">Máy chiếu có các loại ống kính khác nhau, do đó bạn cần chọn loại máy có ống kính chiếu được kích cỡ hình ảnh phù hợp từ một khoảng cách phù hợp với diện tích căn phòng mà bạn định sử dụng. Bên cạnh đó, chỉ số bù góc vuông của máy cũng khá quan trọng bởi chúng quyết định tính linh hoạt trong việc bố trí máy. Số góc có thể bù càng lớn, bạn càng có thể đặt máy chiếu lệch hơn so với điểm chính giữa nhiều hơn mà vẫn đạt được hình ảnh vuông vắn, trung thực.</p>\n<p style="text-align:justify;">Bạn cần nhớ rằng khi dùng máy chiếu, bạn sẽ phải thay bóng đèn, thường là sau khoảng 2.000 - 3.000 giờ sử dụng, tức là trung bình khoảng 2 - 3 năm. Do đó, giá cả của bóng đèn cũng là một yếu tố cần cân nhắc trước khi chọn máy, bởi nó sẽ làm phụ trội tổng chi phí cho máy. Bóng đèn thường có giá vài triệu đồng, nhưng cũng có loại lên tới hơn chục triệu đồng. Một số loại phải nhờ tới bàn thay chuyên nghiệp mới thay được, trong khi một số loại máy chiếu mới cho phép người dùng tự thay bóng đèn. Một số máy chiếu có chế độ chạy tiết kiệm, cho phép kéo dài tuổi thọ bóng đèn, nhưng chế độ này sẽ làm giảm độ sáng của hình ảnh.</p>\n<p style="text-align:justify;"><strong>3. Cách chọn máy chiếu tại gia đình</strong></p>\n<p style="text-align:justify;">Máy chiếu (projector) được lòng dân mê điện ảnh vì dễ bố trí và cho hình ảnh lớn, đẹp. Tuy nhiên, cách sử dụng và bảo quản đồ vật hàng nghìn USD này cũng rắc rối hơn TV đôi chút.</p>\n<p style="text-align:justify;">“Ngay cả máy chiếu hàng nghìn USD, nếu không được cài đặt tốt thì chất lượng hình ảnh cũng không như ý muốn”, ông Nguyễn Tuấn Thành, Trưởng phòng Kỹ thuật công ty DigiWorld, đơn vị phân phối độc quyền máy chiếu Infocus tại Việt Nam, khẳng định.</p>\n<p style="text-align:justify;">Đa phần những người đam mê nghệ thuật thứ bảy đều công nhận projector là đối thủ đáng gờm nhất của dòng TV cỡ lớn hiện nay. Ưu thế của thiết bị thu hình truyền thống nổi bật nhất ở điểm dễ sử dụng và lắp đặt. Nhưng máy chiếu, ngoài kích thước hình ảnh lớn hơn, còn có ưu thế về giá, chất lượng hình ảnh và khả năng bố trí. So sánh các chỉ số kỹ thuật, máy chiếu ấn tượng hơn màn hình LCD hoặc plasma có cùng giá tiền cả về độ phân giải, độ sáng và tương phản. Nhưng sản phẩm “xuất thân” từ phòng họp của các công ty lớn này cũng khó tính hơn các anh em khác trong dòng thiết bị nghe nhìn và đòi hỏi sự quan tâm đặc biệt.</p>\n<p style="text-align:justify;"><strong>Lựa chọn công nghệ: LCD và DLP</strong></p>\n<p style="text-align:justify;">“Hiện tại, một số projector thuộc dòng phổ thông cũng có công nghệ xử lý ánh sáng số DLP vốn chỉ có trong những dòng máy chuyên dụng cỡ lớn ở rạp chiếu phim”, ông Thành nói.<br />Trong công nghệ LCD (liquid crystal display – màn hình tinh thể lỏng) trước đây, máy chiếu tổng hợp hình ảnh màu dựa trên 3 màu cơ bản là đỏ, lục và xanh dương (RGB). Nguồn sáng trắng ban đầu được tách thành 3 nguồn sáng đơn sắc là đỏ, lục, xanh dương và được dẫn đến 3 tấm LCD độc lập. Nếu điểm ảnh trên LCD ở trạng thái đóng, ánh sáng không thể xuyên qua thì điểm ảnh biểu diễn trên màn hình là đen. Tương tự, độ sáng của điểm ảnh cũng thay đổi tương ứng theo trạng thái mở của điểm ảnh LCD. Điều khiển 3 tấm LCD đóng mở điểm ảnh theo thông tin ảnh số, ta thu được 3 ảnh đơn sắc theo hệ màu RGB. Sau đó, tất cả được tổng hợp một cách tự nhiên trong một lăng kính theo cơ chế ánh sáng trước khi xuất đến màn chiếu. Nhược điểm của máy chiếu LCD thường thể hiện khi chiếu phim là lộ điểm ảnh, màu đen không thật và hình ảnh chuyển động nhanh sẽ bị nhòe.</p>\n<p style="text-align:justify;"><strong>Công nghệ DLP đem lại sự nhỏ gọn của máy chiếu tại gia đình.</strong></p>\n<p style="text-align:justify;">Khắc phục nhược điểm này, công nghệ DLP sử dụng gương để phản chiếu ánh sáng. Một chip DMD (Digital Micromirror Device) được tích hợp hàng nghìn vi gương, mỗi vi gương tương ứng một điểm ảnh. Vi gương dao động hàng nghìn lần/giây và thể hiện được 1.024 cấp độ xám. Để thể hiện hình ảnh màu, một bánh quay màu (color wheel) được đặt giữa nguồn sáng và DMD. Phổ biến hiện nay là hệ thống sử dụng bánh quay 4 màu gồm đỏ, lục, xanh dương, trắng để lần lượt tạo và xuất ra 4 ảnh đơn sắc trong một chu kỳ. Thay vì tổng hợp tự nhiên tại thấu kính, 4 hình ảnh đơn sắc lần lượt được ghi nhận và tổng hợp tại não người (tương tự như phương pháp tổng hợp ảnh 3D bằng mắt phổ biến trong điện ảnh). Ưu điểm của DLP là tạo được hình ảnh mượt, không lộ điểm ảnh, độ tương phản cao và không bị hiện tượng lệch hội tụ như công nghệ dùng LCD 3 tấm. Cấu tạo máy chiếu DLP đơn giản hơn LCD 3 tấm nên kích thước máy nhỏ nhẹ. Nhờ đưa thêm màu trắng vào bánh quay màu mà hình ảnh tạo ra bởi máy chiếu DLP sáng hơn và có màu trắng rất thuần khiết. Điểm ảnh trong máy chiếu “khít” hơn, hình ảnh sắc nét hơn so với LCD.</p>\n<p style="text-align:justify;"><strong>Chỉ số kỹ thuật</strong></p>\n<p style="text-align:justify;">Độ sáng, độ tương phản và độ phân giải là ba chỉ số cơ bản ảnh hưởng trực tiếp đến chất lượng hình ảnh của máy chiếu. Thông thường, độ sáng được quan tâm nhiều nhất bởi chỉ số này càng cao thì chất lượng hình ảnh càng độc lập với ánh sáng bên ngoài. Đây cũng là căn cứ thể hiện sự khác biệt giữa 2 dòng máy chiếu gia đình và văn phòng.</p>\n<p style="text-align:justify;">Phòng họp tại các công ty thường có ánh sáng phức tạp, người có thể đi lại, cần ánh sáng để ghi chép… nên đòi hỏi projector cho nguồn ánh sáng mạnh. Người sử dụng máy chiếu tại gia đình hay thiết kế phòng riêng để thưởng thức, khi xem phim thường tắt hết đèn nên độ sáng chỉ khoảng từ 1.500 - 2.200 Ansilumen là có đáp ứng được yêu cầu. Gia tăng thêm cường độ ánh sáng chỉ có sự khác biệt về… tiền mua máy và tiền điện.</p>\n<p style="text-align:justify;">Ngược lại, độ tương phản và phân giải những máy chiếu cho gia đình lại được gia tăng đặc biệt. Nếu độ tương phản càng cao, màu sắc càng sống động, trung thực. Màn LCD hiện nay có độ tương phản phổ biến ở mức 500 – 700:1, trong khi máy chiếu thông thường có độ tương phản từ 1.700 – 2.200:1. Những biểu đồ, đồ thị trong các buổi thuyết trình tại văn phòng không đòi hỏi quá khắt khe về yếu tố này, nhưng đây lại là điểm làm nên sức hút cho những bộ phim DVD. Mỗi projector có thể tương thích với nhiều độ phân giải, chế độ SVGA (800 x 600 pixel) thích hợp với những phòng rộng và tối vì điểm ảnh khá lớn. Chế độ chuẩn XGA (1024 x 768) phù hợp với đa số phòng chiếu gia đình.</p>\n<p style="text-align:justify;">Chỉ số bù góc vuông khá quan trọng nhưng thường ít được người mua để ý. Đây là khả năng định hướng luồng sáng của máy chiếu ánh sáng vuông góc với màn ảnh, cho hình ảnh vuông vắn và trung thực. Số góc có thể bù càng lớn, khả năng bố trí máy càng linh hoạt.</p>\n<p style="text-align:justify;">Projector dùng để xem phim tại nhà không cần loại có sẵn loa vì chúng thường có công suất vừa phải, chỉ thích hợp với phòng họp nhỏ. Mặt khác, hệ thống rạp hát gia đình thường đi kèm với đầu ampli, máy chơi DVD và dàn âm thanh chuyên dụng.Do đó, những tính năng hỗ trợ chiếu khuôn hình rộng (16:9), chuẩn kết nối DVI, HDTV,… quan trọng hơn để có được chất lượng hình ảnh tốt nhất.</p>\n<p style="text-align:justify;"><strong>Bảo quản và sử dụng</strong></p>\n<p style="text-align:justify;">Không như màn hình TV, máy chiếu có bóng đèn công suất lớn tỏa nhiều nhiệt nên chúng cần được bố trí vận hành tại nơi thoáng mát, nguồn điện ổn định. Sau mỗi lần xem, người dùng phải đợi một lúc cho máy nguội mới cất vào hộp hoặc che phủ tránh bụi. Một số gia đình thiết kế giá treo projector trên trần nhà để đảm bảo yếu tố này mà lại tiết kiệm được không gian. Bóng đèn cũng là linh kiện cần được “chăm sóc” kỹ càng nhất. Thông thường, toàn bộ thân máy chiếu được bảo hành 1-2 năm, nhưng riêng đèn hình chỉ được bảo hành 1 tháng hoặc 90 giờ chiếu. Người dùng cần thường xuyên quan sát bóng đèn, nếu có hiện tượng nhòe hình thì nên thay ngay.</p>\n<p style="text-align:justify;">Để tiết kiệm diện tích, người dùng có thể tận dụng bức tường phẳng sơn nhẵn để chiếu hình. Tuy nhiên, chất lượng hình ảnh không thể bằng tấm phông chiếu chuyên dụng. Tấm màn này được phủ sơn phản quang để ánh sáng phản xạ đến mắt người nhiều nhất. Phần lớn màn chiếu có màu trắng, nhưng cũng có loại màu xám để chống chói và tăng sắc đen cho ảnh. Nếu yêu cầu chất lượng cao hơn, khách hàng có thể yêu cầu loại cao cấp trong sơn có pha hạt kim loại tăng độ nét và độ sáng.</p>\n<p style="text-align:justify;">Hiện tại, khách hàng mua máy chiếu thường dựa vào thương hiệu hoặc “tư vấn” của bạn bè vì loại sản phẩm này còn mới đối với nhiều người. Những thương hiệu phổ biến ở Việt Nam có Epson, Canon, Infocus, Optoma, Sony… Sản xuất các loại máy chiếu nhỏ gọn cho văn phòng nhỏ và giải trí tại gia đình ngày càng được các nhà sản xuất chú trọng.</p>\n<p style="text-align:justify;"><strong>4. Máy chiếu LCD hay máy chiếu DLP</strong></p>\n<p style="text-align:justify;">Máy chiếu nói chung có thể phân loại theo hai công nghệ, DLP (Digital Light Processing) hay LCD (Liquid Crystal Display). Công nghệ này liên quan đến cơ chế hoạt động bên trong mà máy chiếu sử dụng để hiển thị hình ảnh. Trên thị trường, sự cạnh tranh giữa 2 nhóm máy chiếu công nghệ LCD (đại diện tiêu biểu là Máy chiếu 3M) với máy chiếu công nghệ DLP (tiêu biểu là Acer), ngày càng quyết liệt.<br />Điều này giúp cả hai công nghệ tự hoàn thiện mình hơn nữa để chất lượng hình ảnh ngày càng rõ, đẹp, tự nhiên. Đồng thời, giá thành sản phẩm cũng vì thế mà rẻ đi. Sự khác biệt chất lượng giữa các công nghệ phóng hình (LCD, DLP và LCOS) giờ đây còn rất nhỏ. Máy chiếu được phân loại theo một số tiêu chí thông dụng như tính trong suốt (transparent), tính phản chiếu (reflective) đối với ánh sáng truyền; hoặc 3 tấm, 1 tấm theo số lượng tấm tạo ảnh; hoặc LCD, gương, LCOS theo cấu tạo. Về nguyên lý, ánh sáng phát ra từ đèn công suất cao phải đi qua nhiều thấu kính để điều chỉnh cho ổn định, đồng nhất trước khi đến lăng kính điều chế hình ảnh cũng như lúc xuất ra. Hai phương pháp thường được dùng hiện nay là trong suốt cho xuyên qua và phản chiếu bằng gương.</p>\n<p style="text-align:justify;">Phương pháp trong suốt thường dùng tấm LCD trong khi phương pháp phản chiếu lại sử dụng hàng ngàn gương nhỏ tương ứng hàng ngàn điểm ảnh. Mỗi phương pháp đều có ưu và nhược điểm riêng song mức khác biệt chất lượng hiện tại đã được rút ngắn đến mức khó phân biệt. Tiếc là vẫn chưa có máy chiếu nào toàn năng đến mức đáp ứng tốt cả trình diễn nghiệp vụ và chiếu phim. Chính vì thế để lựa được máy chiếu phù hợp với mục đích sử dụng, bạn cần hiểu rõ công nghệ trước.</p>\n<p style="text-align:justify;">Cả hai công nghệ LCD hay DLP đều có những ưu điểm riêng, điều quan trọng là hiểu rõ mỗi công nghệ mang lại điều gì.</p>\n<p style="text-align:justify;"><strong>CÔNG NGHỆ DLP</strong></p>\n<p style="text-align:justify;">Digital Light Processing là giải pháp hiển thị kỹ thuật số. Công nghệ DLP sử dụng một vi mạch bán dẫn quang học, gọi là Digital Micromirror Device (tạm dịch là thiết bị phản chiếu siêu nhỏ kỹ thuật số) hay DMD để tái tạo dữ liệu nguồn.</p>\n<p style="text-align:justify;">Trái ngược với phương pháp trong suốt cho ánh sáng truyền qua của LCD, công nghệ DLP do Texas Instruments phát triển độc quyền vào năm 1997 sử dụng gương để phản chiếu ánh sáng. Một chip DMD (Direct Micromirror Device) được tích hợp đến hàng ngàn vi gương, mỗi vi gương tương ứng một điểm ảnh. Vì gương dao động hàng ngàn lần/giây và thể hiện được 1.024 cấp độ xám. Để thể hiện hình ảnh màu, một bánh quay màu (color wheel) được đặt giữa nguồn sáng và DMD. Phổ biến hiện nay là hệ thống sử dụng bánh quay 4 màu gồm đỏ, lục, xanh dương, trắng để lần lượt tạo và xuất ra 4 ảnh đơn sắc trong một chu kỳ. Thay vì tổng hợp tự nhiên tại thấu kính, 4 hình ảnh đơn sắc lần lượt được ghi nhận và tổng hợp tại não người (tương tự như phương pháp tổng hợp ảnh 3D bằng mắt phổ biến trong giới thanh niên vào những năm 1990).</p>\n<p style="text-align:justify;">- light source: nguồn sáng<br />- optics: bộ phận quang học<br />- color filter: bộ lọc màu<br />- circuit board: bo mạch<br />- DMD: chip DMD</p>\n<p style="text-align:justify;"><strong>Ưu điểm của DLP</strong></p>\n<p style="text-align:justify;">* Hiệu ứng "ca-rô" (lưới) nhẹ hơn vì các ảnh điểm gần nhau hơn. Điều này không cho nhiều khác biệt với dữ liệu, nhưng nó cho hình ảnh video mịn hơn.</p>\n<p style="text-align:justify;">* Có thể đạt độ tương phản (contrast) cao hơn.<br />* Gọn nhẹ, dễ di động hơn do có ít thành phần hơn.<br />* Một số nghiên cứu cho rằng máy chiếu DLP có tuổi thọ cao hơn máy chiếu LCD.</p>\n<p style="text-align:justify;">Ưu điểm của DLP là tạo được hình ảnh mượt, không lộ điểm ảnh; tương phản cao và không bị hiện tượng lệch hội tụ như công nghệ dùng LCD 3 tấm. Mặt khác, cấu tạo máy chiếu DLP đơn giản hơn LCD 3 tấm nên kích thước máy nhỏ và nhẹ hơn.</p>\n<p style="text-align:justify;">Nhờ đưa thêm màu trắng vào bánh quay màu mà hình ảnh tạo ra bởi máy chiếu DLP sáng hơn và có màu trắng rất thuần khiết; tuy nhiên, điều này lại làm cho tỷ lệ cân bằng giữa các màu chênh lệch và làm giảm sắc độ màu biểu diễn. Để khắc phục, máy chiếu DLP trong rạp hát gia đình có thể dùng bánh quay 6 màu (2 bộ màu RGB) và có trường hợp bổ sung thêm màu lục đậm, xanh dương đậm (bánh quay 7 màu hoặc 8 màu). Việc loại bỏ màu trắng và dùng bánh quay nhiều màu giúp máy chiếu DLP thể hiện màu tươi, phong phú sắc độ hơn nhưng độ sáng bị giảm xuống; vì thế để xem phim tốt với máy chiếu DLP, không gian phòng chiếu cần tối.</p>\n<p style="text-align:justify;"><strong>Khuyết điểm của DLP</strong></p>\n<p style="text-align:justify;">* Độ bão hoà màu thấp hơn (ảnh hưởng nhiều đến dữ liệu hơn video).<br />* Hiệu ứng "cầu vồng", xuất hiện dưới dạng một vệt sáng giống như cầu vồng loé lên, thường theo sau những vật thể sáng, khi nhìn từ cạnh này sang cạnh kia của màn ảnh, hay khi từ hình ảnh chiếu trên màn ảnh quay sang nhìn vật thể ngoài màn ảnh. Chỉ có ít người nhìn thấy hiệu ứng này, hoặc ta có thể thấy bằng cách nhìn nhanh ngang qua màn ảnh. Có 2 loại máy chiếu DLP, loại cũ có 4 phần trên bộ lọc màu, loại mới có 6 phần và bộ lọc màu quay nhanh hơn, điều đó làm giảm hiệu ứng "cầu vồng" và tăng độ bão hoà màu.<br />* Hiệu ứng "vầng hào quang" (hay lộ sáng). Nó có thể gây khó chịu cho những người sử dụng máy chiếu xem phim tại nhà. Về cơ bản, đó là một dải xám xung quanh rìa của hình ảnh, gây ra do ánh sáng "đi lạc" bị bật ra khi đụng các cạnh của các tấm gương nhỏ trên chip DLP. Có thể khắc phục bằng cách tạo một đường biên đen rộng vài inch quanh màn ảnh, "vầng hào quang" sẽ rơi trên đường biên này. Tuy nhiên, hiệu ứng "vầng hào quang" ít thấy rõ trên các chip DLP mới, chẳng hạn như chip DDR.<br />* Nói chung, DLP là công nghệ tốt hơn LCD cho việc xem phim tại nhà. Một số máy chiếu dành cho việc xem phim tại nhà hầu như không bị hiệu ứng "vầng hào quang".</p>\n<p style="text-align:justify;">Nhược điểm của DLP không phải mọi người đều nhận thấy. Tùy thuộc vào khả năng xử lý hình ảnh của não mà một số người cảm thấy nhức đầu, hoa mắt và thấy vệt cầu vồng viền quanh đối tượng chuyển động nhanh. Hiện tượng này xuất hiện là do đối tượng chuyển động quá nhanh nên có sự xê dịch trong quá trình tổng hợp các lớp ảnh đơn màu diễn ra trong não. Để loại bỏ hiện tượng này triệt để, dĩ nhiên máy chiếu DLP cũng được phát triển theo hướng sử dụng 3 chip DMD nhưng giá thành hiện nay còn rất cao, khoảng trên 20.000 USD một máy. Một số nhà sản xuất máy chiếu DLP 1 tấm khác đang tìm cách tăng tốc độ quay và tăng số màu trên bánh quay màu. Điều này đã phân hóa dòng máy chiếu DLP: hướng đến phòng chiếu phim gia đình, nhà sản xuất dùng bánh quay 6 màu, tốc độ 120Hz (tương đương 7.200 vòng/phút) trong khi máy chiếu cho ứng dụng nghiệp vụ thì vẫn dùng bánh quay 4 màu (có màu trắng) với tốc độ quay từ 120Hz cho đến 180Hz. Tuy vậy, cách khắc phục này không thể loại bỏ hoàn toàn hiện tượng vệt cầu vồng.</p>\n<p style="text-align:justify;"><strong>CÔNG NGHỆ LCD</strong></p>\n<p style="text-align:justify;">Máy chiếu LCD (liquid crystal display, tạm dịch là hiển thị tinh thể lỏng) tổng hợp hình ảnh màu dựa trên 3 màu cơ bản là đỏ, lục và xanh dương (RGB) như cơ chế đang được dùng phổ biến trong chế tạo màn hình, in ấn. Nguồn sáng trắng ban đầu được tách thành 3 nguồn sáng đơn sắc là đỏ, lục, xanh dương và được dẫn đến 3 tấm LCD độc lập. Nếu điểm ảnh trên LCD ở trạng thái đóng, ánh sáng không thể xuyên qua thì điểm ảnh biểu diễn trên màn hình là đen. Tương tự, độ sáng của điểm ảnh cũng thay đổi tương ứng theo trạng thái mở của điểm ảnh LCD. Điều khiển 3 tấm LCD đóng mở điểm ảnh theo thông tin ảnh số, ta thu được 3 ảnh đơn sắc theo hệ màu RGB. Sau đó, tất cả được tổng hợp một cách tự nhiên trong một lăng kính theo cơ chế ánh sáng trước khi xuất đến màn chiếu.</p>\n<p style="text-align:justify;">- light source: nguồn sáng<br />- red dichroic mirror: gương sắc đỏ<br />- blue dichroic mirror: gương sắc xanh<br />- dichroic mirror "wavelength selector": gương chọn lọc bước sóng<br />- mirror: guơng phản chiếu<br />- LCD: bộ phận hiển thị tinh thể lỏng<br />- dichroic combiner cube: thành phần tổng hợp 3 sắc đỏ, xanh lục, xanh<br />- lens: thấu kính</p>\n<p style="text-align:justify;"><strong>Ưu điểm của LCD</strong></p>\n<p style="text-align:justify;">* LCD nói chung có "hiệu quả ánh sáng" hơn DLP (hình ảnh sẽ sáng hơn với LCD, với đèn có cùng công suất).<br />* LCD có khuynh hướng cho độ bão hoà màu cao hơn. Tuy nhiên, độ bão hoà màu cao hơn làm cho ta thấy máy chiếu nhìn toàn bộ là sáng hơn, dù là máy chiếu DLP trắng có thể sáng hơn.<br />* Vì lý do này, nếu đặt một máy chiếu LCD 1000 lumen kế bên một máy chiếu DLP 1200 lumen và cho chiếu hình màu, ta có thể thích máy chiếu LCD do độ sáng của nó.<br />* LCD có khuynh hướng cho hình ảnh sắc nét hơn (hội tụ chính xác hơn).</p>\n<p style="text-align:justify;">Ưu điểm của máy chiếu LCD 3 tấm là thể hiện phong phú sắc độ màu, sắc nét và độ sáng cao. Do tổ hợp cùng lúc 3 màu RGB với nguồn sáng ổn định, không suy giảm, máy chiếu LCD 3 tấm tái hiện màu phong phú và chuyển tiếp màu mượt hơn công nghệ DLP 1 tấm. Độ sắc nét của máy chiếu LCD 3 tấm trội hẳn DLP trong các ứng dụng nghiệp vụ. Độ hiệu quả ánh sáng (ANSI lumen xuất ra/công suất đèn) của máy chiếu LCD cũng có phần nhỉnh hơn DLP.</p>\n<p style="text-align:justify;"><strong>Khuyết điểm của LCD</strong></p>\n<p style="text-align:justify;">* Hiệu ứng "ca-rô" làm hình ảnh trông bị "vỡ hạt".<br />* Cấu tạo lớn hơn, vì có nhiều thành phần bên trong hơn.<br />* Hiện tượng "điểm chết" - các ảnh điểm có thể luôn tắt hay luôn mở, được gọi là điểm chết. Nếu máy chiếu có nhiều điểm chết, nó sẽ gây khó chịu cho người dùng.<br />* Các tấm kính LCD có thể bị hỏng và thay thế rất đắt tiền. Chip DLP cũng có thể bị hỏng nhưng tương đối hiếm vì có ít linh kiện bên trong hơn.</p>\n<p style="text-align:justify;">Nhược điểm của máy chiếu LCD thường thể hiện khi chiếu phim là lộ điểm ảnh và màu đen không thật. Tuy nhiên, với thế hệ máy chiếu phân giải XGA hiện nay, mắt thường rất khó phân biệt được điểm ảnh. Với thế hệ D4 mới nhất mà Epson chế tạo, khoảng phân cách giữa hai điểm LCD đã giảm từ 3 micron xuống 2,5 micron. Còn để tạo được màu đen tự nhiên, Epson vừa áp dụng kỹ thuật thay đổi động cường độ sáng trong mẫu máy Dreamio EMP-TW200H. Chế độ cinema tối ưu cho mục đích chiếu phim tự động giảm công suất nguồn đèn trong khoảng 1.500lm đến 500lm.</p>\n<p style="text-align:justify;">Để thể hiện được những chi tiết khuất trong vùng tối hoặc vùng sáng, Epson có chức năng tăng cường mức trắng và đen (black &amp; white level enhancer): đường gamma sẽ được chỉnh cong lên khi khung hình tối và chỉnh cong xuống trong trường hợp khung hình sáng. Kính lọc cinema mà Epson vừa đưa vào giúp lọc bớt màu lục, xanh dương nên màu da người có phần hồng hào hơn, màu sắc chuyển mượt và sâu hơn. Texas Instruments từng tài trợ một thử nghiệm để chứng minh máy chiếu LCD nhanh xuống màu hơn DLP. Kết quả thử nghiệm cho kết quả đúng nhưng tuổi thọ của tấm LCD giờ đã được nâng lên nhiều nhờ công nghệ chế tạo LCD HTPS (high temparature polysilicon) của Epson cho phép LCD chịu được nhiệt độ 1.000 độ C.</p>\n<p style="text-align:justify;"><strong>CÔNG NGHỆ LCOS - Liquid Crystal on Silicon</strong></p>\n<p style="text-align:justify;">Công nghệ LCOS là giải pháp kết hợp đượcPhương thức LCOS 3 tấm giữa 2 công nghệ LCD và DLP. Bên trên lớp đế gương phản chiếu là lớp phủ thạch anh lỏng. Ứng với trạng thái đóng hoặc mở của thạch anh mà tia sáng nguồn được phản chiếu trên lớp đế gương hoặc không, tạo ra điểm sáng hoặc tối. Hơn nữa, việc chế tạo LCOS có thể thực hiện ngay trên những dây chuyền sản xuất vi mạch bán dẫn hiện có nên chi phí sản xuất dễ chấp nhận hơn.</p>\n<p style="text-align:justify;"><strong>Ưu điểm của LCOS</strong></p>\n<p style="text-align:justify;">Ưu điểm lớn nhất của công nghệ LCOS là tạo được hình ảnh mượt, không hề lộ điểm và vượt qua cả chip DLP Mustang phân giải cao (1280x720). Độ sắc nét của LCOS trội hơn DLP đồng thời thể hiện màu tự nhiên hơn. Một điểm khác cũng hết sức quan trọng là máy chiếu LCOS hoàn toàn không gây ra hiện tượng vệt cầu vồng hay hoa mắt cho người xem.</p>\n<p style="text-align:justify;"><strong>Khuyết điểm của LCOS</strong></p>\n<p style="text-align:justify;">Điểm yếu hiện tại của công nghệ này là độ tương phản chưa cao: hiện mới chỉ đạt đến 800:1 trong khi công nghệ LCD và DLP hiện tại đã đạt đến 6.000:1. Ngoài ra, tuổi thọ bóng đèn LCOS còn đang ở mức 1.500 giờ và giá thay thế còn rất cao.</p>\n<p style="text-align:justify;"><strong>KẾT LUẬN</strong></p>\n<p style="text-align:justify;">Máy chiếu công nghệ DLP nhìn chung được ưa thích cho việc xem phim tại nhà và tính di động. Máy chiếu LCD thì tốt hơn cho các đòi hỏi cao về màu sắc.</p>\n<p style="text-align:justify;"><strong>5. Chơi HD bằng máy chiếu</strong></p>\n<p style="text-align:justify;">Xem phim HD bằng máy chiếu đem lại cho người xem cả không gian và không khí thực như đang thưởng thức phim trên màn ảnh rộng tại rạp.</p>\n<p style="text-align:justify;">Theo một số người sành chơi, có nhiều cách xem phim HD nhưng để thưởng thức "mãn nhãn" nhất phải là máy chiếu. Ngay cả các TV LCD hay Plasma màn hình cực lớn vẫn nhỏ mà không đem lại cho người xem một không gian cũng như không khí xem phim thực như ở rạp, anh Nguyễn Long thành viên box HD Film Club của diễn đàn Nghe Nhìn Việt Nam chia sẻ.</p>\n<p style="text-align:justify;">Tại Việt Nam, thị trường máy chiếu giải trí gia đình - Homecinema Projector - có sự góp mặt của rất nhiều sản phẩm đến từ các tên tuổi uy tín như Canon, Panasonic, Sanyo, Sony, Toshiba hay Optoma với giá bán trung bình khoảng 20 - 40 triệu đồng. Tầm tiền này tương đương với một HDTV tốt, cỡ lớn, như Panasonic Plasma TH-P50S10S 50 inch giá 28 triệu đồng hay Samsung LCD LA52B550 52 inch giá 39,5 triệu đồng. Khi xem phim HD trên những TV này, người xem không thấy được sự khác biệt về không gian, đơn giản vẫn là xem TV. Với máy chiếu, khả năng chiếu hình có thể gấp cả 10 lần độ lớn màn TV, lên đến cả 100 inch nhưng vẫn đảm bảo cho chất lượng hình ảnh tốt.</p>\n<p style="text-align:justify;">Máy chiếu đáp ứng tốt các yếu tố kỹ thuật cần thiết cho việc trình chiếu phim HD. Ví dụ, mẫu Sony VPL-BW7 giá chỉ 18 triệu đồng, có khả năng chiếu hình 40 - 300 inch, hỗ trợ độ phân giải HD 720p. Máy sử dụng đèn chiếu 3LCD BrightEra độ sáng 2.000 ANSIlumens, có độ tương phản 1.000:1. Sony VPL-BW7 tích hợp sẵn ngõ vào HDMI giúp kết nối với các thiết bị như đầu phát HD, đầu Blu-ray, PC hay máy chơi game Play Station 3. Bên cạnh đó, nếu muốn xem TV qua máy chiếu cũng hoàn toàn có thể thực hiện dễ dàng khi kết nối với PC hay laptop có bộ thu truyền hình số tích hợp sẵn hoặc có thể mua và gắn ngoài qua cổng USB.</p>\n<p style="text-align:justify;">Một khoảng tường rộng quét sơn trắng và mịn trong phòng có thể là màn chiếu tốt</p>\n<p style="text-align:justify;">Vấn đề phông chiếu cũng được đơn giản hóa, có thể sử dụng các màn phông chiếu chuyên dụng hay dùng ngay một khoảng tường rộng quét sơn trắng và mịn trong phòng để làm màn chiếu khuôn hình lên, vừa đảm bảo tính thẩm mỹ vừa kinh tế. Lên đến tầm chuyên nghiệp, các tay chơi có khả năng còn dựng riêng phòng chiếu chuyên dụng được thiết kế với điều kiện ánh sáng phù hợp và cách âm, cũng như trang bị các dàn âm thanh cao cấp để phục vụ tốt nhất cho nhu cầu xem phim tại gia thực như đi rạp.</p>\n<p style="text-align:justify;">Phòng chiếu chuyên dụng rộng 40m2 bố trí khoảng cách chỗ ngồi xem cách tường hoặc màn chiếu 100 inch tầm 3 mét là lựa chọn phù hợp. Không nên đặt máy chiếu ngay tại phòng khách vì thế sẽ làm loãng không khí "xi-nê" và dễ bị yếu tố ánh áng làm ảnh hưởng tới chất lượng hình ảnh. Ngoài ra tính cơ động cao của máy chiếu cũng được đánh giá cao, bởi với trọng lượng khoảng 3 kg, người chơi có thể dễ dàng di chuyển máy đến vị trí phù hợp hay tới nhà bạn bè để cùng thưởng thức phim.</p>\n<p style="text-align:justify;">Nhưng một nhược điểm của máy chiếu là sau một thời gian thưởng thức phim HD, người dùng sẽ phải thay bóng chiếu, trung bình là từ 2-3 năm và giá tiền khoảng trên 200 USD tùy thuộc loại bóng mà máy sử dụng.</p>', '', 'nhung-dieu-can-biet-khi-chon-mua-may-chieu', '', 'Những điều cần biết khi chọn mua máy chiếu', '', 0, 3, 0, '', '', 1, 13),
-(18, 'PhoneSoap: Vừa sạc vừa khử trùng điện thoại', '', '2012-04-16 03:52:42', 'phonesoap-vua-sac-vua-khu-trung-dien-thoai.jpg', '<p>Thực tế la smartphone còn bẩn hơn cả... cần gạt toilet nên PhoneSoap sẽ giúp ngăn chặn, tiêu diệt vi khuẩn trên smartphone và bảo đảm an toàn cho mọi người.</p>', '', '<p style="text-align:justify;">Nghiên cứu gần đây của công ty marketing 11mark chỉ ra có tới 75% người Mỹ sử dụng smartphone khi ở trong nhà vệ sinh. Mọi người thừa nhận nhắn tin, duyệt web và 1/5 nam giới thậm chí còn gọi điện thoại tới cuộc họp khi đang ở khu vực nhạy cảm này. Một cách đơn giản, điện thoại của chúng ta đều khá bẩn. Những người sáng lập ra PhoneSoap muốn ngăn chặn vấn đề này.</p>\n<p style="text-align:justify;"><br />Theo nghiên cứu của một sinh viên y khoa Đại học Stanford, lượng vi khuẩn trên điện thoại di động còn nhiều gấp 500 lần trên bệ xí và cao gấp 18 lần cần giật nước. Tệ hơn, 1/6 điện thoại có dấu hiệu có khuẩn E.coli từ phân. Trong khi đó, có gần 20% người đánh rơi điện thoại trong nhà vệ sinh.</p>\n<p style="text-align:justify;"><br />Nhà sáng chế Wesley LaPorte nảy ra ý tưởng về PhoneSoap khi đang trong phòng nghiên cứu ung thư. Sau khi nhận thấy tia UC-V được dùng để vệ sinh, LaPorte nhận ra có thể dùng công nghệ trong bệnh viện và vòng sát trùng khắp thế giới để làm sạch điện thoại mà không cần tới chất lỏng hay nhiệt độ.</p>\n<p style="text-align:justify;"><br />Hộp PhoneSoap sẽ bao phủ điện thoại trong ánh sáng này trong 3-5 phút mỗi lần, đủ để khử trùng (thiết bị cũng sạc gần như tất cả điện thoại). Mục tiêu gây quỹ trên trang chủ dự án PhoneSoap là 18.000 USD. Nếu LaPorte và 3 đồng nghiệp thu được số tiền, PhoneSoap có thể bán với giá 40 USD/thiết bị. Hiện họ đã có được 15.000 USD sau 20 ngày phát động.</p>', '', 'phonesoap-vua-sac-vua-khu-trung-dien-thoai', '', 'PhoneSoap: Vừa sạc vừa khử trùng điện thoại', '', 0, 4, 0, '', '', 1, 10);
+(18, 'PhoneSoap: Vừa sạc vừa khử trùng điện thoại', '', '2012-04-16 03:52:42', 'phonesoap-vua-sac-vua-khu-trung-dien-thoai.jpg', '<p>Thực tế la smartphone còn bẩn hơn cả... cần gạt toilet nên PhoneSoap sẽ giúp ngăn chặn, tiêu diệt vi khuẩn trên smartphone và bảo đảm an toàn cho mọi người.</p>', '', '<p style="text-align:justify;">Nghiên cứu gần đây của công ty marketing 11mark chỉ ra có tới 75% người Mỹ sử dụng smartphone khi ở trong nhà vệ sinh. Mọi người thừa nhận nhắn tin, duyệt web và 1/5 nam giới thậm chí còn gọi điện thoại tới cuộc họp khi đang ở khu vực nhạy cảm này. Một cách đơn giản, điện thoại của chúng ta đều khá bẩn. Những người sáng lập ra PhoneSoap muốn ngăn chặn vấn đề này.</p>\n<p style="text-align:justify;"><br />Theo nghiên cứu của một sinh viên y khoa Đại học Stanford, lượng vi khuẩn trên điện thoại di động còn nhiều gấp 500 lần trên bệ xí và cao gấp 18 lần cần giật nước. Tệ hơn, 1/6 điện thoại có dấu hiệu có khuẩn E.coli từ phân. Trong khi đó, có gần 20% người đánh rơi điện thoại trong nhà vệ sinh.</p>\n<p style="text-align:justify;"><br />Nhà sáng chế Wesley LaPorte nảy ra ý tưởng về PhoneSoap khi đang trong phòng nghiên cứu ung thư. Sau khi nhận thấy tia UC-V được dùng để vệ sinh, LaPorte nhận ra có thể dùng công nghệ trong bệnh viện và vòng sát trùng khắp thế giới để làm sạch điện thoại mà không cần tới chất lỏng hay nhiệt độ.</p>\n<p style="text-align:justify;"><br />Hộp PhoneSoap sẽ bao phủ điện thoại trong ánh sáng này trong 3-5 phút mỗi lần, đủ để khử trùng (thiết bị cũng sạc gần như tất cả điện thoại). Mục tiêu gây quỹ trên trang chủ dự án PhoneSoap là 18.000 USD. Nếu LaPorte và 3 đồng nghiệp thu được số tiền, PhoneSoap có thể bán với giá 40 USD/thiết bị. Hiện họ đã có được 15.000 USD sau 20 ngày phát động.</p>', '', 'phonesoap-vua-sac-vua-khu-trung-dien-thoai', '', 'PhoneSoap: Vừa sạc vừa khử trùng điện thoại', '', 0, 4, 0, '', '', 1, 10),
+(19, '6 mẹo chọn ghế sofa hoàn hảo', '', '2012-04-19 01:22:05', '6-meo-chon-ghe-sofa-hoan-hao.jpg', '<p>Việc chọn một bộ sofa dường như không phải là một công việc dễ dàng khi phong cách, hình dạng, màu sắc, và giá cả của các bộ sofa này rất đa dạng.</p>', '', '<p>Để tiết kiệm thời gian, tiền bạc và công sức, bạn có thể tham khảo một số mẹo sau trước khi lựa chọn một bộ sofa phù hợp cho không gian nhà.</p>\r\n<p>1. Xác định kích thước</p>\r\n<p>Nếu phòng khách nhà bạn có diện tích lớn, bạn cần quyết định xem bạn muốn kê bao nhiêu chiếc ghế. Bạn có muốn dùng đi-văng hay ghế bành? Bàn nhỏ kiểu bàn cà phê liệu có cần thiết cho không gian nhà bạn? Nếu câu trả lời là có thì một bộ sofa đơn giản, hình chữ L có lẽ là lựa chọn phù hợp nhất. Trong trường hợp bạn muốn bộ sofa là điểm nhấn của phòng khách thì bạn cần đến một chiếc đi-văng đủ lớn và nhiều chỗ ngồi.</p>\r\n<p>Chú ý đến kích thước ghế</p>\r\n<p>Nếu không gian nhà bạn khiêm tốn, thì hẳn là bạn cần một chiếc trường kỷ nhỏ hơn.</p>\r\n<p>2. Quyết định hướng kê sofa</p>\r\n<p>Bạn cần định hình trước sofa sẽ được sắp xếp thế nào? Kê sofa để xem TV, để gia đình quây quần tụ họp, chơi trò chơi? Bạn có thể kê sofa tạo thành vòng tròn, hoặc nửa vòng tròn, lấy bàn làm trung tâm</p>', '', '6-meo-chon-ghe-sofa-hoan-hao', '', 'Chú ý đến kích thước ghế\r\n\r\nNếu không gian nhà bạn khiêm tốn, thì hẳn là bạn cần một chiếc trường kỷ nhỏ hơn.\r\n\r\n2. Quyết định hướng kê sofa', '', 0, 1, 1, '', '', 1, 16),
+(20, 'Căn hộ nhỏ mà không nhỏ', '', '2012-04-19 01:22:05', 'can-ho-nho-ma-khong-nho.jpg', '<p style="text-align:left;">Tuy chỉ có diện tích 35 m2 nhưng ngôi nhà nhỏ này vẫn rất thoáng đãng, đầy đủ tiện nghi và đẹp mắt nhờ cách thiết kế, bố trí sáng tạo như bậc cầu thang kiêm nơi để quần áo…</p>', '', '<p>Tuy chỉ có diện tích 35 m2 nhưng ngôi nhà nhỏ này vẫn rất thoáng đãng, đầy đủ tiện nghi và đẹp mắt nhờ cách thiết kế, bố trí sáng tạo như bậc cầu thang kiêm nơi để quần áo…</p>\r\n<p>Phòng khách nhỏ bố trí những đồ vật đơn giản như salon chữ L, bàn gỗ, TV treo tường..</p>\r\n<p>fggggdgfdgfgfdgfgf</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/phumyan/image/can-ho-3.jpg" alt="" width="480" height="468" /></p>\r\n<p style="text-align:center;">dgfgfggfdgfdg</p>\r\n<p style="text-align:center;">ggffgfgdf</p>\r\n<p style="text-align:center;"> <img src="/public/userfiles/image/phumyan/image/giuong.jpg" alt="" width="200" height="135" /></p>', '', 'can-ho-nho-ma-khong-nho', '', '', '', 0, 2, 1, '', '', 1, 16),
+(22, '6 kiểu tóc ngắn nổi bật cho mùa hè', '', '2012-04-19 02:34:06', '6-kieu-toc-ngan-noi-bat-cho-mua-he.jpg', '<p>6 mẫu tóc ngắn của các ngôi sao sau đây sẽ là những gợi ý cho bạn lựa chọn để bước vào một mùa hè nóng nực.</p>', '', '<p>6 mẫu tóc ngắn của các ngôi sao sau đây sẽ là những gợi ý cho bạn lựa chọn để bước vào một mùa hè nóng nực.</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thoitrang/image/5l.jpg" alt="" width="363" height="581" /></p>\r\n<p style="text-align:center;">Tóc vàng, phần mái rủ dài một bên, ngọn tóc được uốn úp vào tinh tế. Kiểu tóc của Laura Carmicha được đánh giá là không bao giờ lỗi mốt.</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thoitrang/image/2j.jpg" alt="" width="371" height="582" /></p>\r\n<p style="text-align:center;">Điểm nhấn ở mái tóc ngắn của Jang Nara là ngọn tóc được uốn cong về phía trước, cùng với màu nâu đồng, làm nên vẻ cuốn hút đặc biệt, trong sáng mà vẫn quý phái, thời thượng.</p>', '', '6-kieu-toc-ngan-noi-bat-cho-mua-he', '', '6 mẫu tóc ngắn của các ngôi sao sau đây sẽ là những gợi ý cho bạn lựa chọn để bước vào một mùa hè nóng nực.', '', 0, 3, 0, NULL, NULL, 1, 17);
+INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(23, '6 mẹo chọn ghế sofa như ý', '', '2012-04-19 06:46:55', '6-meo-chon-ghe-sofa-hoan-hao.jpg', '<p>Việc chọn một bộ sofa dường như không phải là một công việc dễ dàng khi phong cách, hình dạng, màu sắc, và giá cả của các bộ sofa này rất đa dạng.</p>', '', '<p>Để tiết kiệm thời gian, tiền bạc và công sức, bạn có thể tham khảo một số mẹo sau trước khi lựa chọn một bộ sofa phù hợp cho không gian nhà.</p>\r\n<p>1. Xác định kích thước</p>\r\n<p>Nếu phòng khách nhà bạn có diện tích lớn, bạn cần quyết định xem bạn muốn kê bao nhiêu chiếc ghế. Bạn có muốn dùng đi-văng hay ghế bành? Bàn nhỏ kiểu bàn cà phê liệu có cần thiết cho không gian nhà bạn? Nếu câu trả lời là có thì một bộ sofa đơn giản, hình chữ L có lẽ là lựa chọn phù hợp nhất. Trong trường hợp bạn muốn bộ sofa là điểm nhấn của phòng khách thì bạn cần đến một chiếc đi-văng đủ lớn và nhiều chỗ ngồi.</p>\r\n<p>Chú ý đến kích thước ghế</p>\r\n<p>Nếu không gian nhà bạn khiêm tốn, thì hẳn là bạn cần một chiếc trường kỷ nhỏ hơn.</p>\r\n<p>2. Quyết định hướng kê sofa</p>\r\n<p>Bạn cần định hình trước sofa sẽ được sắp xếp thế nào? Kê sofa để xem TV, để gia đình quây quần tụ họp, chơi trò chơi? Bạn có thể kê sofa tạo thành vòng tròn, hoặc nửa vòng tròn, lấy bàn làm trung tâm</p>', '', '6-meo-chon-ghe-sofa-nhu-y', '', 'Chú ý đến kích thước ghế\r\n\r\nNếu không gian nhà bạn khiêm tốn, thì hẳn là bạn cần một chiếc trường kỷ nhỏ hơn.\r\n\r\n2. Quyết định hướng kê sofa', '', 0, 1, 1, '', '', 1, 18),
+(24, 'Căn hộ nhỏ mà không gian không nhỏ', '', '2012-04-19 06:46:55', 'can-ho-nho-ma-khong-nho.jpg', '<p style="text-align:left;">Tuy chỉ có diện tích 35 m2 nhưng ngôi nhà nhỏ này vẫn rất thoáng đãng, đầy đủ tiện nghi và đẹp mắt nhờ cách thiết kế, bố trí sáng tạo như bậc cầu thang kiêm nơi để quần áo…</p>', '', '<p>Tuy chỉ có diện tích 35 m2 nhưng ngôi nhà nhỏ này vẫn rất thoáng đãng, đầy đủ tiện nghi và đẹp mắt nhờ cách thiết kế, bố trí sáng tạo như bậc cầu thang kiêm nơi để quần áo…</p>\r\n<p>Phòng khách nhỏ bố trí những đồ vật đơn giản như salon chữ L, bàn gỗ, TV treo tường..</p>\r\n<p>fggggdgfdgfgfdgfgf</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/phumyan/image/can-ho-3.jpg" alt="" width="480" height="468" /></p>\r\n<p style="text-align:center;">dgfgfggfdgfdg</p>\r\n<p style="text-align:center;">ggffgfgdf</p>\r\n<p style="text-align:center;"> <img src="/public/userfiles/image/phumyan/image/giuong.jpg" alt="" width="200" height="135" /></p>', '', 'can-ho-nho-ma-khong-gian-khong-nho', '', '', '', 0, 2, 1, '', '', 1, 18),
+(26, 'Cách bảo quản đồ gỗ', '', '2012-04-19 06:56:27', '', '<p>Cách bảo quản đồ gỗ</p>\r\n<p>Gỗ là loại vật liệu được sử dụng để chế tạo rất nhiều vật dụng, trang trí nội thất... Do tính chất của gỗ nên việc sử dụng và bảo quản đúng cách sẽ giúp cho các vật dụng được chế tạo bằng gỗ luôn được mới đẹp và không bị hư hỏng.</p>', '', '<p>Gỗ là loại vật liệu được sử dụng để chế tạo rất nhiều vật dụng, trang trí nội thất... Do tính chất của gỗ nên việc sử dụng và bảo quản đúng cách sẽ giúp cho các vật dụng được chế tạo bằng gỗ luôn được mới đẹp và không bị hư hỏng.</p>\r\n<p>Sau đây là các cách bảo quản đồ gỗ:</p>\r\n<p>Cách lau chùi ván bọc tường</p>\r\n<p>Vách ván nhà bạn có sơn vẽ đủ màu, lâu ngày bị vàng và hoen ố, bạn hãy dùng nước trà tàu tẩm vào khăn, lau mạnh lên tường ván ấy là sạch sẽ ngay.</p>\r\n<p>Cách làm sáng lại lớp vecni trên gỗ</p>\r\n<p>Lớp vẹc ni trên gỗ tuy ít bám bụi, nhưng nếu ít săn sóc, chúng cũng bị lu mờ, kém bóng loáng. Muốn chúng bóng loáng như mới, bạn có thể dùng một ít sữa lau lên lớp vecni và để cho khô. Sau đó, dùng bàn chải nhúng nước lã cọ sạch. Với phương pháp này, vecni sẽ cứng và bóng</p>\r\n<p>Tẩy những vết dính lâu ngày trên đồ gỗ</p>\r\n<p>Trên đồ gỗ thường có những vết dơ do sự vô ý gây ra. Nếu để lâu, các vết dơ này rất khó chùi rửa. Muốn làm mất những dấu vết này đi, bạn hãy cho mấy giọt dầu ăn vào một chút sáp ong trắng, đem chưng cách thủy cho sáp ong chảy ra. Đen bôi thứ sáp ấy lên chỗ dơ rồi lấy vải chà thật mạnh.</p>\r\n<p>Cách chùi đồ gỗ bị giống ruồi làm dơ bẩn</p>\r\n<p>Muốn làm mất những vết dơ bẩn do giống ruồi gây ra trên đồ gỗ, bạn lấy bột (nếp, gạo, hay mì ...) trộn với chút dầu ăn đánh cho thật quánh, thoa đều bột lên chỗ dơ rồi lấy giẻ chùi cho sạch. Sau cùng, rửa kỹ bằng nước trong và đánh bóng.</p>\r\n<p>Cách tẩy vết dơ bám lâu ngày trên gỗ trơn</p>\r\n<p>Muốn làm sạch những vết dơ bám trên những vật dụng bằng gỗ trơn, không có đánh vẹcni, đầu tiên, bạn hãy pha một thứ nước để lau chùi theo công thức:</p>\r\n<p>10gam muối + 90 gam nước tẩy (soude de caustique) + 1 lít nước</p>\r\n<p>Sau đó, bạn lấy một cái chổi bằng bẹ dừa thấm vào nước này mà quét lên các đồ dùng bằng gỗ trơn đó. Để một lúc lâu, bạn rửa lại bằng nước lã và lau khô bằng khăn mềm và sạch.</p>\r\n<p>Cách làm mới lại những vật dụng nhỏ bằng gỗ</p>\r\n<p>Muốn cho những vật dụng bằng gỗ nhỏ của bạn được bóng loáng như mới, bạn hãy lấy bông gòn thấm dầu thông (essence de térébenthine) lau lên thật đều. Sau đó, bạn đợi cho khô và đánh bóng lại bằng nỉ sạch.</p>\r\n<p>Làm mất các vết dộp trắng trên bàn gỗ có đánh vecni</p>\r\n<p>Bàn hay đi-văng bị nước nóng làm dộp trắng trên mặt gỗ có đánh vecni, bạn hãy dùng vải có tẩm dầu paraffine chà nhẹ lên chỗ dộp. Để một lúc lâu rồi bạn dùng dầu thông đánh lên và dùng vải thường đánh bóng.</p>\r\n<p>Cách lấy những khe nứt trên sàn gỗ</p>\r\n<p>Muốn lấy kín những khe nứt hoặc kẽ hở trên sàn gỗ, bạn hãy lấy keo lỏng trộn với mạt cưa đã rây nhuyễn. Bạn nhớ trộn cho thật đều, thật nhuyễn, rồi bạn đem chưng lên cho nóng, đoạn đem trét vào các chỗ hở và miết cho thật bằng mặt.</p>\r\n<p>Nếu sàn gỗ có đánh vecni, bạn phải lấy vecni đánh lên các chỗ đã được trét kín cho tiệp màu.</p>', '', 'cach-bao-quan-do-go', '', 'Gỗ là loại vật liệu được sử dụng để chế tạo rất nhiều vật dụng, trang trí nội thất... Do tính chất của gỗ nên việc sử dụng và bảo quản đúng cách sẽ giúp cho các vật dụng được chế tạo bằng gỗ luôn được mới đẹp và không bị hư hỏng.', '', 0, 3, 0, NULL, NULL, 1, 18),
+(27, 'Những xu hướng mới tại thị trường đồ gỗ nội thất nhà bếp Hàn Quốc.', '', '2012-04-19 06:58:51', 'nhung-xu-huong-moi-tai-thi-truong-do-go-noi-that-nha-bep-han-quoc-.jpg', '<p>Tại Hàn Quốc một bộ phận lớn dân số đang có xu hướng mua đồ gỗ cao cấp về trang trí cho nhà bếp của mình. Xu hướng này càng khẳng định người tiêu dùng Hàn quốc càng ngày càng quan tâm đến chất lượng và mẫu mã sản phẩm, chứ không đơn thuần chỉ là giá cả nữa.<br />Đồ gỗ nội thất cho nhà bếp phải được thiết kế đẹp, hợp mốt và phục vụ đựơc những yêu cầu của người tiêu dùng. Những mặt hàng đồ gỗ nhà bếp ở mức giá thấp và trung bình không còn được đại đa số bộ phận dân chúng ưa chuộng nữa.</p>', '', '<p>Tại Hàn Quốc một bộ phận lớn dân số đang có xu hướng mua đồ gỗ cao cấp về trang trí cho nhà bếp của mình. Xu hướng này càng khẳng định người tiêu dùng Hàn quốc càng ngày càng quan tâm đến chất lượng và mẫu mã sản phẩm, chứ không đơn thuần chỉ là giá cả nữa.<br />Đồ gỗ nội thất cho nhà bếp phải được thiết kế đẹp, hợp mốt và phục vụ đựơc những yêu cầu của người tiêu dùng. Những mặt hàng đồ gỗ nhà bếp ở mức giá thấp và trung bình không còn được đại đa số bộ phận dân chúng ưa chuộng nữa.<br />Các nhà nhập khẩu đang tăng cường nhập các mặt hàng đồ gỗ nhà bếp cao cấp về Hàn quốc. Các mặt hàng cao cấp thường có xuất xứ từ Châu Âu, Mỹ, còn các mặt hàng giá thấp và trung bình thì được nhập khẩu từ các nước Châu À như Trung Quốc, Việt Nam.<br />Ngoài các hệ thống phân phối đồ nội thất, tại Hàn Quốc, các nhà xây dựng cũng góp phần lớn trong việc tiêu thụ mặt hàng đồ gỗ nhà bếp. Mặt hàng đồ gỗ nhà bếp cao cấp ở Hàn Quốc thì chủ yếu được nhập từ Châu Âu, Mỹ, còn các sản phẩm trung bình thì đa số được sản xuất tại Trung Quốc.</p>\r\n<p>Hơn nữa, rất nhiều nhà sản xuất Hàn Quốc chuyển nhà máy của mình sang Trung Quốc để tận dụng giá nhân công rẻ, sau đó nhập lại Hàn Quốc để bán tại các hệ thống đồ gỗ nội thất hoặc bán cho các nhà xây dựng.</p>\r\n<p>Thị trường đồ gỗ nhà bếp bị chi phối từ nhu cầu của các cặp vợ chồng mới cưới và những gia đình có điều kiện chuyển vào ở tại các căn hộ hoặc nhà mới có diện tích lớn hơn. Hai nhóm khách hàng này giữ tỷ lệ tiêu thụ đồ gỗ nhà bếp ổn định và lớn nhất hiện nay.</p>\r\n<p>Khoảng 70% các chung cư cũ tại Hàn Quốc được xây dựng từ giữa những năm 1970-1980, tương đựơng khoảng 3,5 triệu căn hộ có trên 20 năm. Do vậy, nhu cầu sửa chữa lại nhà là rất lớn. Điều này cũng làm tăng nhu cầu sử dụng đồ nội thất mới, đặc biệt là đồ gỗ nhà bếp.</p>\r\n<p>Đồ gỗ nhà bếp Mỹ, Ý, Đức và Nhật vẫn chiếm đa số trong phân khúc hàng nhập khẩu cao cấp. Tại Hàn Quốc, Ý chiếm ưu thế trong việc cung cấp đồ gỗ nhà bếp từ trung cấp đến cao cấp, chiếm 35% thị phần, tiếp sau đó là Đức (20%), Mỹ (15%), và Nhật (15%).</p>\r\n<p>Những nước Châu Á như Trung Quốc, Việt Nam thì chuyên cung cấp hàng giá rẻ, chiếm 60% thị phần. Nói chung, các nhà cung cấp đến từ Mỹ, Châu Âu và Nhật thống trị phân khúc hàng cao cấp bằng các sản phẩm chất lượng cao hơn, mẫu mã đẹp hơn.</p>\r\n<p>Các nhà sản xuất đồ gỗ nhà bếp Việt Nam cần chú trọng hơn đến chất lượng và mẫu mã của sản phẩm, chứ không nên chỉ đơn thuần tập trung vào việc làm hàng giá rẻ. Sự cạnh tranh trong lĩnh vực này tại Hàn Quốc càng ngày càng cao, nên các nhà sản xuất Việt Nam cần liên tục cập nhật những xu hướng mới nhất, tìm hiểu thị trường kỹ để hàng hóa có thể có chỗ đứng tại thị trường Hàn Quốc.</p>\r\n<p>Xu hướng mới nhất hiện nay của sản phẩm đồ gỗ nhà bếp tại Hàn Quốc là:</p>\r\n<p>* mẫu mã đơn giản.<br />* sang trọng.<br />* giá cả hợp lý.<br />* đáp ứng được đầy đủ nhu cầu sử dụng.</p>\r\n<p>Các công ty phải đáp ứng đựợc các yêu cầu từ phía các nhà nhập khẩu Hàn Quốc khi muốn bán hàng vào thị trường này, Đối với tất cả các loại đồ gỗ nội thất, kể cả đồ nội thất cho nhà bếp được nhập vào Hàn Quốc, các nhà nhập khẩu Hàn Quốc rất quan tâm đến chất lượng và độ an toàn của sản phẩm nhằm bảo đảm lợi ích của người mua hàng. Những yêu cầu chung đối với các nhà xuất khẩu đồ gỗ nội thất vào Hàn Quốc bao gồm:</p>\r\n<p>* Đáp ứng quy định của Luật kiểm tra an toàn và quản lý chất lượng của Hàn Quốc. Luật này nhằm bảo vệ người tiêu dùng tránh rủi ro, nguy hiểm có thể gây ra do các sản phẩm kém chất lượng hoặc nhập lậu.<br />* Có giấy chứng nhận xuất xứ hàng hóa.<br />* Nhà sản xuất cần có nguồn gỗ tốt, hợp lệ, ổn định đáp ứng đòi hỏi của khách hàng để đảm bảo chất lượng sản phẩm.<br />* Đảm bảo sản phẩm không gây hại cho môi trường.<br />* Bao bì hợp lệ, đúng quy cách.</p>\r\n<p>Ngoài ra, hình ảnh nhà xưởng ngăn nắp, gọn sạch, đời sống công nhân tốt, thiết bị máy móc đồng bộ... cũng là điều mà các nhà mua hàng Hàn Quốc quan tâm bởi vì điều này nói lên sự ổn định sản xuất, đảm bảo tiến độ giao hàng. Bạn cũng nên nhớ rằng các nhà mua hàng Hàn Quốc khá thân thiện, tuy nhiên họ không hay hỗ trợ các nhà xuất khẩu khi họ gặp khó khăn về thủ tục</p>', '', 'nhung-xu-huong-moi-tai-thi-truong-do-go-noi-that-nha-bep-han-quoc', '', 'Tại Hàn Quốc một bộ phận lớn dân số đang có xu hướng mua đồ gỗ cao cấp về trang trí cho nhà bếp của mình. Xu hướng này càng khẳng định người tiêu dùng Hàn quốc càng ngày càng quan tâm đến chất lượng và mẫu mã sản phẩm, chứ không đơn thuần chỉ là giá', '', 0, 4, 0, NULL, NULL, 1, 19);
 
 -- --------------------------------------------------------
 
@@ -794,7 +932,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
 
 --
 -- Dumping data for table `dos_module_news_cat`
@@ -805,7 +943,11 @@ INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_
 (10, 0, 'Thông tin Công nghệ', '', '', '', 'thong-tin-cong-nghe', '', 'Thông tin Công nghệ', '', '', 1, '', '', 1, 'mayphotocopysieuviet'),
 (11, 0, 'Góc kỹ thuật', '', '', '', 'goc-ky-thuat', '', 'Góc kỹ thuật', '', '', 2, '', '', 1, 'mayphotocopysieuviet'),
 (12, 0, 'Tuyển dụng', '', '', '', 'tuyen-dung', '', 'Tuyển dụng', '', '', 3, '', '', 1, 'mayphotocopysieuviet'),
-(13, 0, 'Cẩm nang tiêu dùng', '', '', '', 'cam-nang-tieu-dung', '', 'Cẩm nang tiêu dùng', '', '', 4, '', '', 1, 'mayphotocopysieuviet');
+(13, 0, 'Cẩm nang tiêu dùng', '', '', '', 'cam-nang-tieu-dung', '', 'Cẩm nang tiêu dùng', '', '', 4, '', '', 1, 'mayphotocopysieuviet'),
+(16, 0, 'Tin TứcTrong Ngành', '', '', '', 'tin-tuctrong-nganh', '', 'Tin TứcTrong Ngành', '', 'tin-tuctrong-nganh.jpg', 1, '', '', 1, 'thoitrang'),
+(17, 0, 'Thời trang giới trẻ', '', NULL, NULL, 'thoi-trang-gioi-tre', '', 'Thời trang giới trẻ', '', '', 2, NULL, NULL, 1, 'thoitrang'),
+(18, 0, 'Không gian sống', '', '', '', 'khong-gian-song', '', 'Không gian sống', '', 'tin-tuctrong-nganh.jpg', 1, '', '', 1, 'thienlonghoi'),
+(19, 0, 'Tin tức khách', '', NULL, NULL, 'tin-tuc-khach', '', 'Tin tức khách', '', '', 2, NULL, NULL, 1, 'thienlonghoi');
 
 -- --------------------------------------------------------
 
@@ -840,7 +982,15 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('day_time', 2456037, 'phumyan'),
 ('max_count', 0, 'phumyan'),
 ('counter', 0, 'phumyan'),
-('yesterday', 0, 'phumyan');
+('yesterday', 0, 'phumyan'),
+('day_time', 2456037, 'thoitrang'),
+('max_count', 0, 'thoitrang'),
+('counter', 0, 'thoitrang'),
+('yesterday', 0, 'thoitrang'),
+('day_time', 2456037, 'thienlonghoi'),
+('max_count', 0, 'thienlonghoi'),
+('counter', 0, 'thienlonghoi'),
+('yesterday', 0, 'thienlonghoi');
 
 -- --------------------------------------------------------
 
@@ -860,8 +1010,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1334796901, 'phumyan'),
-('''127.0.0.1''', 1334797585, 'mayphotocopysieuviet');
+('''127.0.0.1''', 1334826891, 'thienlonghoi');
 
 -- --------------------------------------------------------
 
@@ -898,7 +1047,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=89 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=107 ;
 
 --
 -- Dumping data for table `dos_module_products`
@@ -972,7 +1121,19 @@ INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, 
 (85, 'Bánh xe cao su cuộn giấy', '', '2012-04-16 02:57:49', 'banh-xe-cao-su-cuon-giay-thumb.jpg', 'banh-xe-cao-su-cuon-giay.jpg', '', '', '', '<p>Liên hệ công ty</p>', '', 'banh-xe-cao-su-cuon-giay', '', 'Bánh xe cao su cuộn giấy', '', 0, 50, '', 0, 0, '', '', '', '', 1, 26),
 (86, 'Drum', '', '2012-04-16 02:59:22', 'drum-thumb.jpg', 'drum.jpg', '', '', '', '<p>Liên hệ công ty</p>', '', 'drum', '', 'DRUM', '', 0, 46, '', 0, 0, '', '', '', '', 1, 26),
 (87, 'CO RICOH FT4027', '', '2012-04-16 03:00:43', 'co-ricoh-ft4027-thumb.jpg', 'co-ricoh-ft4027.jpg', '', '', '', '<p>Liên hệ công ty</p>', '', 'co-ricoh-ft4027', '', 'CO RICOH FT4027', '', 0, 48, '', 0, 0, '', '', '', '', 1, 26),
-(88, 'Rulo sấy', '', '2012-04-16 03:36:27', 'rulo-say-thumb.jpg', 'rulo-say.jpg', '', '', '', '<p>Liên hệ công ty</p>', '', 'rulo-say', '', '', '', 0, 49, '', 0, 0, '', '', '', '', 1, 26);
+(88, 'Rulo sấy', '', '2012-04-16 03:36:27', 'rulo-say-thumb.jpg', 'rulo-say.jpg', '', '', '', '<p>Liên hệ công ty</p>', '', 'rulo-say', '', '', '', 0, 49, '', 0, 0, '', '', '', '', 1, 26),
+(89, 'Đầm quý phái 2012', '', '2012-04-19 01:22:05', 'am-quy-phai-2012-thumb.jpg', 'am-quy-phai-2012.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'dam-quy-phai-2012', '', 'Mô tả chi tiết ...', '', 0, 4, '', 1, 0, '', '', '', '', 1, 43),
+(90, 'Váy dạ hội', '', '2012-04-19 01:22:05', 'vay-da-hoi-thumb.jpg', 'vay-da-hoi.jpg', '', '', '', '<p>Mô tả chi tiết ....</p>', '', 'vay-da-hoi', '', 'Váy dạ hội', '', 0, 3, '', 1, 0, '', '', '', '', 1, 43),
+(91, 'Váy dạ hội 2011', '', '2012-04-19 01:22:05', 'vay-da-hoi-2011-thumb.jpg', 'vay-da-hoi-2011.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'vay-da-hoi-2011', '', 'Váy dạ hội 2011', '', 0, 1, '', 1, 0, '', '', '', '', 1, 43),
+(92, 'Đồ công sở 002', '', '2012-04-19 01:22:05', 'o-cong-so-002-thumb.jpg', 'o-cong-so-002.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'do-cong-so-002', '', 'Đồ công sở 002', '', 0, 5, '', 1, 0, '', '', '', '', 1, 43),
+(96, 'Đầm 2012 hoa', '', '2012-04-19 01:22:05', 'trang-tri-goc-nho-thumb.jpg', 'trang-tri-goc-nho.jpg', '', '', '', '<p>Mô tả chi tiết</p>\r\n<table style="width:400px;height:100px;" border="1" align="center"><tbody><tr><td style="text-align:center;">Tình trạng:</td>\r\n<td style="text-align:center;">Có hàng số lượng lớn chưa tiêu tụai giúp tiêu thụ với õ</td>\r\n</tr><tr><td style="text-align:center;">Nhà sản xuất</td>\r\n<td style="text-align:center;">Việt Nam vip</td>\r\n</tr><tr><td style="text-align:center;">Model</td>\r\n<td style="text-align:center;">2012</td>\r\n</tr><tr><td style="text-align:center;">Đánh giá:</td>\r\n<td style="text-align:center;">Chưa có đánh giá</td>\r\n</tr></tbody></table><p style="text-align:center;"> </p>', '', 'dam-2012-hoa', '', 'Trang trí góc nhỏ', '', 0, 6, '290000', 1, 0, '', '', '', '', 1, 44),
+(97, 'Thời trang trẻ 20', '', '2012-04-19 01:22:05', 'thoi-trang-tre-20-thumb.jpg', 'thoi-trang-tre-20.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'thoi-trang-tre-20', '', 'Thời trang trẻ 20', '', 0, 2, '', 1, 0, '', '', '', '', 1, 43),
+(98, 'Nội thất phòng khách', '', '2012-04-19 06:46:55', 'noi-that-phong-khach-thumb.jpg', 'noi-that-phong-khach.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'noi-that-phong-khach', '', 'Mô tả chi tiết ...', '', 0, 4, '', 1, 0, '', '', '', '', 1, 47),
+(99, 'Nội thất phòng giải trí', '', '2012-04-19 06:46:55', 'noi-that-phong-giai-tri-thumb.jpg', 'noi-that-phong-giai-tri.jpg', '', '', '', '<p>Mô tả chi tiết ....</p>', '', 'noi-that-phong-giai-tri', '', 'Nội thất phòng giải trí', '', 0, 3, '', 1, 0, '', '', '', '', 1, 47),
+(100, 'Nội thất bếp ăn', '', '2012-04-19 06:46:55', 'noi-that-bep-an-thumb.jpg', 'noi-that-bep-an.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'noi-that-bep-an', '', 'Nội thất bếp ăn', '', 0, 1, '', 1, 0, '', '', '', '', 1, 47),
+(101, 'Phòng tiếp khách', '', '2012-04-19 06:46:55', 'phong-tiep-khach-thumb.jpg', 'phong-tiep-khach.jpg', '', '', '', '<p>Mô tả chi tiết ... h</p>', '', 'phong-tiep-khach', '', 'Phòng tiếp khách', '', 0, 5, '', 1, 0, '', '', '', '', 1, 47),
+(105, 'Trang trí góc', '', '2012-04-19 06:46:55', 'trang-tri-goc-nho-thumb.jpg', 'trang-tri-goc-nho.jpg', '', '', '', '<p>Mô tả chi tiết</p>\r\n<table style="width:400px;height:100px;" border="1" align="center"><tbody><tr><td style="text-align:center;">Tình trạng:</td>\r\n<td style="text-align:center;">Có hàng số lượng lớn chưa tiêu tụai giúp tiêu thụ với õ</td>\r\n</tr><tr><td style="text-align:center;">Nhà sản xuất</td>\r\n<td style="text-align:center;">Việt Nam vip</td>\r\n</tr><tr><td style="text-align:center;">Model</td>\r\n<td style="text-align:center;">2012</td>\r\n</tr><tr><td style="text-align:center;">Đánh giá:</td>\r\n<td style="text-align:center;">Chưa có đánh giá</td>\r\n</tr></tbody></table><p style="text-align:center;"> </p>', '', 'trang-tri-goc', '', 'Trang trí góc nhỏ', '', 0, 6, '290000', 1, 0, '', '', '', '', 1, 48),
+(106, 'Nội thất phòng ngủ', '', '2012-04-19 06:46:55', 'noi-that-phong-ngu-thumb.jpg', 'noi-that-phong-ngu.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'noi-that-phong-ngu', '', 'Nội thất phòng ngủ', '', 0, 2, '', 1, 0, '', '', '', '', 1, 49);
 
 -- --------------------------------------------------------
 
@@ -1000,7 +1161,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=43 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=51 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
@@ -1029,7 +1190,15 @@ INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `
 (39, 24, 'Epson', '', '', '', 'epson', '', '/Máy Epson', '', 'epson.jpg', '', 9, '', '', 1, 'mayphotocopysieuviet'),
 (40, 24, 'Hp', '', '', '', 'hp', '', 'Máy Hp', '', 'hp.jpg', '', 10, '', '', 1, 'mayphotocopysieuviet'),
 (41, 25, 'Brother', '', '', '', 'brother', '', 'Máy Brother', '', 'brother.jpg', '', 12, '', '', 1, 'mayphotocopysieuviet'),
-(42, 25, 'Panasonic', '', '', '', 'panasonic', '', 'Máy Panasonic', '', 'panasonic.jpg', '', 11, '', '', 1, 'mayphotocopysieuviet');
+(42, 25, 'Panasonic', '', '', '', 'panasonic', '', 'Máy Panasonic', '', 'panasonic.jpg', '', 11, '', '', 1, 'mayphotocopysieuviet'),
+(43, 0, 'Thời trang đậm', '', '', '', 'thoi-trang-dam', '', 'Thời trang đậm', '', 'thoi-trang-dam.jpg', '', 3, '', '', 1, 'thoitrang'),
+(44, 0, 'Thời trang nam', '', '', '', 'thoi-trang-nam', '', 'Thời trang nam', '', 'thoi-trang-nam.jpg', '', 4, '', '', 1, 'thoitrang'),
+(45, 0, 'Model 2012', '', '', '', 'model-2012', '', 'Thời trang đậm', '', 'model-2012.jpg', '', 1, '', '', 1, 'thoitrang'),
+(46, 0, 'Thời trang công sở', '', '', '', 'thoi-trang-cong-so', '', 'Thời trang đậm', '', 'thoi-trang-cong-so.jpg', '', 2, '', '', 1, 'thoitrang'),
+(47, 0, 'Trang trí tủ bếp', '', '', '', 'trang-tri-tu-bep', '', 'Trang trí tủ bếp', '', 'trang-tri-tu-bep.jpg', '', 3, '', '', 1, 'thienlonghoi'),
+(48, 0, 'Trang trí phòng khách', '', '', '', 'trang-tri-phong-khach', '', 'Trang trí phòng khách', '', 'trang-tri-phong-khach.jpg', '', 4, '', '', 1, 'thienlonghoi'),
+(49, 0, 'Phòng ngủ', '', '', '', 'phong-ngu', '', 'Phòng ngủ', '', 'phong-ngu.jpg', '', 1, '', '', 1, 'thienlonghoi'),
+(50, 0, 'Bếp ăn', '', '', '', 'bep-an', '', 'Bếp ăn', '', 'bep-an.jpg', '', 2, '', '', 1, 'thienlonghoi');
 
 -- --------------------------------------------------------
 
@@ -1060,7 +1229,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `dos_module_services`
@@ -1070,7 +1239,9 @@ INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `
 (6, 'Dịch vụ Bảo trì', '', '', '', '<p style="text-align:justify;"><span style="color:#008000;"><strong>SIÊU VIỆT CUNG CẤP MÁY PHOTOCOPY CHUYÊN NGHIỆP, LUÔN SÀN LỌC NHỮNG LOẠI MÁY THÔNG DỤNG NHẤT ĐỂ CUNG CẤP TRÊN THỊ TRƯỜNG.</strong></span></p>\n<p style="text-align:justify;"><span style="color:#ff0000;"><strong>DỊCH VỤ BẢO TRÌ ĐỊNH KỲ:</strong></span></p>\n<p style="text-align:justify;">Đây là loại hình dịch vụ được áp dụng thông dụng nhất hiện nay. Loại hình dịch vụ này có các hình thức như sau:</p>\n<p style="text-align:justify;"><span style="text-decoration:underline;"><strong>Hợp đồng bảo trì ký hàng năm:</strong></span></p>\n<p style="text-align:justify;">- Quý khách và <span style="color:#008000;"><strong>SIÊU VIỆT</strong></span> sẽ ký một hợp đồng bảo trì theo thời hạn 12 tháng một lần. Quý khách sẽ chỉ phải trả một khoản phí cố định mà không cần quan tâm là thiết bị phải sửa chữa bao nhiêu lần trong tháng.</p>\n<p style="text-align:justify;"><span style="text-decoration:underline;"><strong>Hợp đồng Meter Charge:</strong></span></p>\n<p style="text-align:justify;">- Với loại hình dịch vụ này, Quý khách sẽ không phải quan tâm đến việc thay thế vật tư cho máy (kể cả mực). Thiết bị cũng sẽ được chăm sóc như dịch vụ bảo trì hàng năm nhưng Quý khách chỉ phải thanh toán một số tiền theo số bản chụp (in) mà máy đã thực hiện trong tháng. Giá thành mỗi bản chụp (in) tuỳ thuộc vào từng loại thiết bị cụ thể</p>\n<p style="text-align:justify;"><strong><em>Khi hợp đồng được ký kết, <span style="color:#008000;">SIÊU VIỆT</span> sẽ có trách nhiệm thực hiện những công việc sau:</em></strong></p>\n<p style="text-align:justify;">- Kiểm tra, bảo dưỡng cân chỉnh và vệ sinh máy định kỳ (phần mềm và phần cứng) vào 1 ngày được ấn định hàng tháng.</p>\n<p style="text-align:justify;">- Đến kiểm tra, sửa chữa (miễn phí) vào bất cứ khi nào máy gặp trục trặc.</p>\n<p style="text-align:justify;">- Cho khách hàng mượn máy khác đang trong tình trạng hoạt động tốt khi cần nhiều thời gian cho công việc sửa chữa.</p>\n<p style="text-align:justify;">- Giám định chi tiết và báo giá vật tư, linh kiện (cần thay thế) chính phẩm với mức giá ưu đãi cho khách hàng.</p>\n<p style="text-align:justify;">- Cung cấp cho khách hàng những hướng dẫn sử dụng máy cần thiết.</p>\n<p style="text-align:center;"><span style="font-size:large;"><strong><span style="color:#008000;"> </span></strong></span></p>\n<p style="text-align:center;"><span style="font-size:large;"><strong><span style="color:#008000;">SIÊU VIỆT</span></strong> LUÔN SÁT CÁNH CÙNG THÀNH CÔNG CỦA BẠN !</span></p>\n<p style="text-align:center;"> </p>\n<p style="text-align:center;"> </p>\n<p style="text-align:center;">Hotline: 0937 107 888 - Mr. Nguyên - Phụ trách Kinh doanh.</p>\n<p style="text-align:center;">3A/1 Đoàn Văn Cự, P. Tam Hiệp, TP. Biên Hòa, Tỉnh Đồng Nai<br />Email: nguyensieuviet@yahoo.com.vn<br />Website: www.mayphotocopysieuviet.com</p>\n<p style="text-align:center;"><span style="font-size:large;"> </span></p>', '', 'dich-vu-bao-tri.jpg', 3, '2012-04-12 01:44:54', 2, 0, '', '', 'dich-vu-bao-tri', '', 'Dịch vụ Bảo trì', '', 1, 'mayphotocopysieuviet'),
 (7, 'Dịch vụ cho thuê', '', '', '', '<p style="text-align:justify;"><span style="color:#008000;"><strong>DỊCH VỤ THUÊ MÁY VĂN PHÒNG LÀ LOẠI HÌNH DỊCH VỤ ĐƯỢC ÁP DỤNG RỘNG RÃI Ở CÁC NƯỚC PHÁT TRIỂN VÀ Ở VIỆT NAM, NÓ CŨNG ĐANG LÀ SỰ LỰA CHỌN TỐI ƯU CỦA NHIỀU CÔNG TY LIÊN DOANH VÀ CÔNG TY NƯƠC NGOÀI. KHI LỰA CHỌN LOẠI HÌNH NÀY, QUÝ KHÁCH HÀNG KHÔNG PHẢI LO KHOẢN ĐẦU TƯ BAN ĐÂU...</strong></span></p>\n<p style="text-align:justify;"><strong><span style="color:#008000;">SIÊU VIỆT</span> - CHUYÊN CHO THUÊ THIẾT BỊ VĂN PHÒNG SAU:</strong></p>\n<p style="text-align:justify;">- Máy Photocopy đen trắng và màu</p>\n<p style="text-align:justify;">- Máy đa năng (Copy - Fax - In - Scan)</p>\n<p style="text-align:justify;"><strong><span style="color:#008000;">SIÊU VIỆT</span> - PHỤC VỤ</strong></p>\n<p style="text-align:justify;">* Công tác hoạt động văn phòng - dài hạn</p>\n<p style="text-align:justify;">* Các hội nghị, hội thảo - ngắn hạn</p>\n<p style="text-align:justify;">Tất cả các máy cung cấp đều được đảm bảo các tính năng như sau:</p>\n<p style="text-align:justify;">&gt;&gt; Máy copy kỹ thuật số - tính năng cao<br />&gt;&gt; Tốc độ sao chụp – in mạng tối thiểu 23 - 75 trang/phút.<br />&gt;&gt; Máy sao chụp hai mặt tự động - thật tiện lợi trong sử dụng.<br />&gt;&gt; Sao chụp miễn phí 1000 trang mỗi tháng.<br />&gt;&gt; Có khả năng nâng cấp thêm các chức năng fax và quét mạng.</p>\n<p style="text-align:justify;"><strong><span style="color:#008000;">SIÊU VIỆT</span> - NHÀ CUNG CẤP</strong></p>\n<p style="text-align:justify;">Công ty <strong><span style="color:#008000;">SIÊU VIỆT</span></strong> - nhà cung cấp các dịch vụ thuê máy văn phòng uy tín tại Đồng Nai. Mục tiêu trong kinh doanh của <span style="color:#008000;"><strong>SIÊU VIỆT</strong></span> luôn đặt chữ tín lên hàng đầu và xây dựng một hệ thống dịch vụ cho thuê máy văn phòng khép kín. Với kinh nghiệm chuyên sâu về nghành nghề chúng tôi luôn đ­a ra các giải pháp tối ­ưu - tiết kiệm chi phí - linh hoạt trong sử dụng cho các khách hàng có nhu cầu về thiết bị máy văn phòng. Sau quá trình thành lập và phát triển Công ty <strong><span style="color:#008000;">SIÊU VIỆT</span></strong> đã đạt đ­ược nhiều thành qủa cao. Hiện nay Công ty <strong><span style="color:#008000;">SIÊU VIỆT</span></strong> đang thực hiện bảo hành, cho thuê hơn 1000 khách hàng sử dụng các loại thiết bị văn phòng tại Đồng Nai và các tỉnh phía Nam. Các khách hàng quen thuộc sử dụng dịch vụ của chúng tôi đó là các công ty, khách sạn, tổ chức, văn phòng n­ước ngoài có nhu cầu sao chụp in ấn.</p>\n<p style="text-align:justify;"><strong> </strong></p>\n<p style="text-align:center;"><span style="color:#ff0000;font-size:medium;"><strong>&gt;&gt; LIÊN HỆ CHI TIẾT &lt;&lt;</strong></span></p>\n<p style="text-align:center;"><span style="font-size:medium;"><strong><span style="color:#008000;">DNTN SIÊU VIỆT</span></strong></span></p>\n<p style="text-align:center;"><span style="font-size:medium;">3A/1 Đoàn Văn Cự, P. Tam Hiệp, TP. Biên Hòa, Tỉnh Đồng Nai</span><br /><span style="font-size:medium;">Hotline: 0937 107 888 - Mr. Nguyên - Phụ trách Kinh doanh.</span><br /><span style="font-size:medium;">Email: nguyensieuviet@yahoo.com.vn</span><br /><span style="font-size:medium;">Website: www.mayphotocopysieuviet.com</span></p>', '', '', 2, '2012-04-12 01:56:24', 3, 0, '', '', 'dich-vu-cho-thue', '', 'DNTN SIÊU VIỆT', '', 1, 'mayphotocopysieuviet'),
 (8, 'Dịch vụ vẫn chuyển', '', '', '', '<p>Dịch vụ vẫn chuyển</p>', '', '', 2, '2012-04-12 02:10:55', 1, 0, '', '', 'dich-vu-van-chuyen', '', '', '', 1, 'phumyan'),
-(9, 'Đào tạo kỹ thuật viên', '', '', '', '<p style="text-align:justify;">Truyền đạt nhiệt tình lại toàn bộ lý thuyết và nguyên lý hoạt động cơ bản của máy photocopy đơn giản, dễ hiểu, không giấu nghề.</p>\n<p style="text-align:justify;">Rất thích hợp cho người muốn tìm hiểu thêm về máy photocopy ,làm ktv ,về mở cửa hàng , công ty ,người chưa biết nghề ,thích hợp cho cty cử người đi học sửa chữa cơ bản về máy photocopy đáp ứng nhu cầu sửa chữa cho cơ quan  và công ty. </p>\n<p style="text-align:justify;">Dạy photocopy + sửa chữa cơ bản + Nâng cao.</p>\n<p style="text-align:justify;">Nhằm đào tạo thợ photocopy chuyên nghiệp,tạo công việc làm ổn định học sửa máy photocopy về để tự mở cửa hàng, cho cơ quan, công ty</p>\n<p style="text-align:justify;">Tiết kiệm thời gian, tiền bạc, khỏi phải học nghề tại các cửa hàng mà thời gian kéo dài, không hiệu quả</p>\n<p style="text-align:justify;">Cung cấp thêm các tài liệu nâng cao về máy photocopy như mã code, mode của các dòng máy để tìm hiểu và nâng cao chuyên môn .</p>\n<p style="text-align:justify;"> </p>', '', '', 2, '2012-04-12 02:16:00', 1, 0, '', '', 'dao-tao-ky-thuat-vien', '', 'Đào tạo kỹ thuật viên', '', 1, 'mayphotocopysieuviet');
+(9, 'Đào tạo kỹ thuật viên', '', '', '', '<p style="text-align:justify;">Truyền đạt nhiệt tình lại toàn bộ lý thuyết và nguyên lý hoạt động cơ bản của máy photocopy đơn giản, dễ hiểu, không giấu nghề.</p>\n<p style="text-align:justify;">Rất thích hợp cho người muốn tìm hiểu thêm về máy photocopy ,làm ktv ,về mở cửa hàng , công ty ,người chưa biết nghề ,thích hợp cho cty cử người đi học sửa chữa cơ bản về máy photocopy đáp ứng nhu cầu sửa chữa cho cơ quan  và công ty. </p>\n<p style="text-align:justify;">Dạy photocopy + sửa chữa cơ bản + Nâng cao.</p>\n<p style="text-align:justify;">Nhằm đào tạo thợ photocopy chuyên nghiệp,tạo công việc làm ổn định học sửa máy photocopy về để tự mở cửa hàng, cho cơ quan, công ty</p>\n<p style="text-align:justify;">Tiết kiệm thời gian, tiền bạc, khỏi phải học nghề tại các cửa hàng mà thời gian kéo dài, không hiệu quả</p>\n<p style="text-align:justify;">Cung cấp thêm các tài liệu nâng cao về máy photocopy như mã code, mode của các dòng máy để tìm hiểu và nâng cao chuyên môn .</p>\n<p style="text-align:justify;"> </p>', '', '', 2, '2012-04-12 02:16:00', 1, 0, '', '', 'dao-tao-ky-thuat-vien', '', 'Đào tạo kỹ thuật viên', '', 1, 'mayphotocopysieuviet'),
+(11, 'Dịch vụ vẫn chuyển tận nơi', '', NULL, NULL, '<p> Dịch vụ vẫn chuyển tận nơi  Dịch vụ vẫn chuyển tận nơi Dịch vụ vẫn chuyển tận nơi Dịch vụ vẫn chuyển tận nơi</p>', '', NULL, 7, '2012-04-19 01:22:04', 1, 0, '', '', 'dich-vu-van-chuyen-tan-noi', '', 'Dịch vụ vẫn chuyển tận nơi', '', 1, 'thoitrang'),
+(12, 'Dịch vụ vẫn chuyển', '', NULL, NULL, '<p>Dịch vụ vẫn chuyển</p>', '', NULL, 4, '2012-04-19 06:46:55', 1, 0, '', '', 'dich-vu-van-chuyen', '', '', '', 1, 'thienlonghoi');
 
 -- --------------------------------------------------------
 
@@ -1089,7 +1260,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=79 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=87 ;
 
 --
 -- Dumping data for table `dos_module_supports`
@@ -1100,7 +1271,11 @@ INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen
 (64, 'Hỗ trợ khách hàng', '', '0909 999 888', 'groupitsoft', 1, 'yahoo', 'phumyan'),
 (69, 'Hỗ trợ kinh doanh', '', '0901 001 001', 'mailgoogle', 2, 'yahoo', 'tinhungphat'),
 (70, 'Hỗ trợ khách hàng', '', '01230 456 789', 'groupitsoft', 1, 'yahoo', 'tinhungphat'),
-(78, 'tixiu28', '', 'Kinh doanh', '1', 1, 'yahoo', 'mayphotocopysieuviet');
+(78, 'tixiu28', '', 'Kinh doanh', '1', 1, 'yahoo', 'mayphotocopysieuviet'),
+(82, 'Hỗ trợ kinh doanh', '', '01230 456 789', 'mailgoogle', 2, 'yahoo', 'thoitrang'),
+(83, 'Hỗ trợ khách hàng', '', '0909 999 888', 'groupitsoft', 1, 'yahoo', 'thoitrang'),
+(84, 'Hỗ trợ kinh doanh', '', '01230 456 789', 'mailgoogle', 2, 'yahoo', 'thienlonghoi'),
+(85, 'Hỗ trợ khách hàng', '', '0909 999 888', 'groupitsoft', 1, 'yahoo', 'thienlonghoi');
 
 -- --------------------------------------------------------
 
@@ -1128,14 +1303,20 @@ CREATE TABLE IF NOT EXISTS `dos_module_video` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_video_dos_module_video_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `dos_module_video`
 --
 
 INSERT INTO `dos_module_video` (`record_id`, `title`, `titleen`, `postdate`, `tag`, `tagen`, `description`, `descriptionen`, `pic_thumb`, `url`, `record_order`, `hits`, `extra_field1`, `extra_field2`, `hot`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(2, 'Nội Thất Văn Phòng 3D - Video từ ASP Viet Nam.wmv', '', '2012-04-12 01:56:28', 'noi-that-van-phong-3d-video-tu-asp-viet-namwmv', '', '', '', 'noi-that-van-phong-3d-video-tu-asp-viet-nam-wmv.jpg', 'http://www.youtube.com/watch?v=9kc4jOXvrAA', 1, 0, '', '', 1, 1, 2);
+(2, 'Nội Thất Văn Phòng 3D - Video từ ASP Viet Nam.wmv', '', '2012-04-12 01:56:28', 'noi-that-van-phong-3d-video-tu-asp-viet-namwmv', '', '', '', 'noi-that-van-phong-3d-video-tu-asp-viet-nam-wmv.jpg', 'http://www.youtube.com/watch?v=9kc4jOXvrAA', 1, 0, '', '', 1, 1, 2),
+(4, 'Thoi trang han quoc - thoi trang 2012', '', '2012-04-19 01:22:05', 'thoi-trang-han-quoc-thoi-trang-2012', '', 'Thoi trang han quoc - thoi trang 2012', '', 'thoi-trang-han-quoc-thoi-trang-2012.jpg', 'http://www.youtube.com/watch?v=cKPzP4kZfek', 1, 0, '', '', 0, 1, 4),
+(5, 'Shock với Thời trang tự cởi QDC News QuachDaiCa info', '', '2012-04-19 03:04:22', 'shock-voi-thoi-trang-tu-coi-qdc-news-quachdaica-info', '', 'Shock với Thời trang tự cởi QDC News QuachDaiCa info', '', 'shock-voi-thoi-trang-tu-coi-qdc-news-quachdaica-info.jpg', 'http://www.youtube.com/watch?v=kOVBzBElfeA', 2, 0, NULL, NULL, 0, 1, 4),
+(6, 'thời trang tại TroChoiThoiTrang', '', '2012-04-19 03:08:55', 'thoi-trang-tai-trochoithoitrang', '', 'thời trang tại TroChoiThoiTrang', '', 'thoi-trang-tai-trochoithoitrang.jpg', 'http://www.youtube.com/watch?v=53kxPAM2QJY', 3, 0, NULL, NULL, 0, 1, 4),
+(7, 'Thoi trang cong so - KKFashion', '', '2012-04-19 03:09:34', 'thoi-trang-cong-so-kkfashion', '', 'Thoi trang cong so - KKFashion', '', '', 'http://www.youtube.com/watch?v=cjFVqWNnhHE', 4, 0, NULL, NULL, 0, 1, 4),
+(8, 'ggdfggfgdf', '', '2012-04-19 03:32:05', 'ggdfggfgdf', '', 'ggdfggfgdf', '', '', 'http://www.youtube.com/watch?v=cjFVqWNnhHE', 1, 0, NULL, NULL, 0, 1, 5),
+(9, 'Nội Thất Văn Phòng 3D - Video từ ASP Viet Nam.wmv', '', '2012-04-19 06:46:56', 'noi-that-van-phong-3d-video-tu-asp-viet-namwmv', '', '', '', 'noi-that-van-phong-3d-video-tu-asp-viet-nam-wmv.jpg', 'http://www.youtube.com/watch?v=9kc4jOXvrAA', 1, 0, '', '', 1, 1, 6);
 
 -- --------------------------------------------------------
 
@@ -1158,14 +1339,17 @@ CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_video_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `dos_module_video_cat`
 --
 
 INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat_title`, `cat_titleen`, `tag`, `tagen`, `description`, `descriptionen`, `cat_order`, `cat_enable`, `dos_usernames_username`) VALUES
-(2, 0, '', 'Video mới nhất', '', 'video-moi-nhat', '', '', '', 1, 1, 'phumyan');
+(2, 0, '', 'Video mới nhất', '', 'video-moi-nhat', '', '', '', 1, 1, 'phumyan'),
+(4, 0, '', 'Video mới nhất', '', 'video-moi-nhat', '', 'Video thời trang nữ', '', 1, 1, 'thoitrang'),
+(5, 0, '', 'Video sản phẩm mới', '', 'video-san-pham-moi', '', 'Video sản phẩm mới', '', 1, 1, 'tinhungphat'),
+(6, 0, '', 'Video mới nhất', '', 'video-moi-nhat', '', '', '', 1, 1, 'thienlonghoi');
 
 -- --------------------------------------------------------
 
@@ -1194,7 +1378,13 @@ INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`
 ('title', 'Chuyên cung cấp Máy in, máy photocopy', 'mayphotocopysieuviet'),
 ('keywords', 'chuyên các loại đồ nội thất', 'phumyan'),
 ('description', 'chuyên các loại đồ nội thất', 'phumyan'),
-('title', 'chuyên các loại đồ nội thất', 'phumyan');
+('title', 'chuyên các loại đồ nội thất', 'phumyan'),
+('keywords', 'chuyên các loại đồ nội thất', 'thoitrang'),
+('description', 'chuyên các loại đồ nội thất', 'thoitrang'),
+('title', 'chuyên các loại đồ nội thất', 'thoitrang'),
+('keywords', 'chuyên các loại đồ nội thất', 'thienlonghoi'),
+('description', 'chuyên các loại đồ nội thất', 'thienlonghoi'),
+('title', 'chuyên các loại đồ nội thất', 'thienlonghoi');
 
 -- --------------------------------------------------------
 
@@ -1501,14 +1691,23 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('070312', 'contact', 'menu_products'),
 ('070312', 'default', 'about_home'),
 ('070312', 'default', 'advs_left'),
+('070312', 'default', 'list_supports'),
 ('070312', 'default', 'menu_products'),
 ('070312', 'default', 'products_hot'),
+('070312', 'default', 'products_new'),
+('070312', 'news', 'advs_left'),
+('070312', 'news', 'list_supports'),
+('070312', 'news', 'menu_news'),
+('070312', 'news', 'news_new'),
 ('070312', 'products', 'advs_left'),
 ('070312', 'products', 'list_supports'),
 ('070312', 'products', 'menu_products'),
 ('070312', 'services', 'advs_left'),
 ('070312', 'services', 'list_supports'),
 ('070312', 'services', 'menu_services'),
+('070312', 'video', 'advs_left'),
+('070312', 'video', 'list_supports'),
+('070312', 'video', 'menu_video'),
 ('111120', 'about', 'menu_about'),
 ('111120', 'contact', 'menu_products'),
 ('111120', 'default', 'about_home'),
@@ -1529,12 +1728,19 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('130312', 'default', 'list_supports'),
 ('130312', 'default', 'menu_products'),
 ('130312', 'default', 'products_hot'),
+('130312', 'news', 'advs_left'),
+('130312', 'news', 'list_supports'),
+('130312', 'news', 'menu_news'),
+('130312', 'news', 'news_new'),
 ('130312', 'products', 'advs_left'),
 ('130312', 'products', 'list_supports'),
 ('130312', 'products', 'menu_products'),
 ('130312', 'services', 'advs_left'),
 ('130312', 'services', 'list_supports'),
 ('130312', 'services', 'menu_services'),
+('130312', 'video', 'advs_left'),
+('130312', 'video', 'list_supports'),
+('130312', 'video', 'menu_video'),
 ('180412', 'about', 'advs_left'),
 ('180412', 'about', 'list_supports'),
 ('180412', 'about', 'menu_about'),
@@ -1681,7 +1887,9 @@ INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullna
 ('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi|en', NULL, '2012-04-14 17:00:00', 0, 1, '111120', 2, 'thoi-trang'),
 ('mayphotocopysieuviet', 'info@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-11 20:38:05', '', '', '', 'user', 'vi', '', '2012-05-11 10:00:00', 1, 1, '010312', 19, 'cong-nghe-thong-tin-vien-thong'),
 ('phumyan', 'maioanh7887@yahoo.com', '25f9e794323b453885f5181f1b624d0b', '2012-04-11 23:50:51', '', '', '', 'user', 'vi', '', '2012-05-11 10:00:00', 1, 1, '220312', 19, 'noi-that-ngoai-that'),
-('tinhungphat', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-13 06:37:56', '', '', '', 'user', 'vi', '', '2012-05-12 16:00:00', 0, 1, '260312', 18, 'cong-nghe-thong-tin-vien-thong');
+('thienlonghoi', 'mailgoogle@yahoo.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-19 06:46:47', NULL, NULL, NULL, 'user', 'vi|en', NULL, '2012-05-18 16:00:00', 0, 1, '130312', 1, 'noi-that-ngoai-that'),
+('thoitrang', 'groupitsoft@gmail.com.vn', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-19 01:21:46', NULL, NULL, NULL, 'user', 'vi', NULL, '2012-05-18 16:00:00', 0, 1, '070312', 20, 'bds-kien-truc-xay-dung'),
+('tinhungphat', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-13 06:37:56', '', '', '', 'user', 'vi', '', '2012-05-12 16:00:00', 0, 1, '180412', 18, 'cong-nghe-thong-tin-vien-thong');
 
 -- --------------------------------------------------------
 
@@ -1721,10 +1929,15 @@ CREATE TABLE IF NOT EXISTS `dos_user_langs` (
 INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_username`) VALUES
 ('address1', '3A/1 Đoàn Văn Cự, P. Tam Hiệp, TP. Biên Hòa, Tỉnh Đồng Nai', '', 'mayphotocopysieuviet'),
 ('address2', '', '', 'mayphotocopysieuviet'),
+('address2', '', '', 'thoitrang'),
 ('advs', 'Đối tác chính', '', 'mayphotocopysieuviet'),
 ('advs', 'Quảng cáo', '', 'phumyan'),
+('advs', 'Quảng cáo', '', 'thienlonghoi'),
+('advs', 'Quảng cáo', '', 'thoitrang'),
 ('company_name', 'DNTN SIÊU VIỆT', '', 'mayphotocopysieuviet'),
 ('company_name', 'Công ty TNHH Phú Mỹ An', '', 'phumyan'),
+('company_name', 'Công ty TNHH Thiên Long Hội', '', 'thienlonghoi'),
+('company_name', 'Cửa hàng thời trang KTVIP', '', 'thoitrang'),
 ('company_phone', 'Hotline: 0937 107 888 (Mr. Nguyên)', '', 'mayphotocopysieuviet');
 
 -- --------------------------------------------------------

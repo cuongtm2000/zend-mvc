@@ -1,4 +1,4 @@
-body { margin:0; padding:0; background:#fff url(../images/bg.gif) repeat-x;font-family:Tahoma, Geneva, sans-serif; font-size:9pt;}
+body {font-family:Tahoma, Geneva, sans-serif; font-size:9pt;}
 .left{float: left;}
 .right{float:right}
 .clear{clear: both;}
@@ -10,38 +10,41 @@ a:hover{color:#000;}
 #wrapper {margin:auto; width:950px;}
 
 /*Header*/
-#header{}
-#header-left{float:left;}
+#header{position: relative;margin: 0 0 10px 0;padding: 5px 0 0 0}
+#logo{float:left;}
 
+.title-city{font-size:18pt;color:#f00;font-weight:bold;float:left;padding:20px 0 0 30px}
 /*Lang*/
-.lang{float:right; text-align:right;padding:70px 0 0 0}
+.lang{position: absolute;bottom:0; right: 0; text-align: right}
 .lang img{position:relative;top:2px}
-.lang a{color:#228BC8;font-weight:bold; margin:0 5px 0  10px}
+.lang a{color:#228BC8;font-weight:bold; margin:0 5px}
 .lang a:hover{color:#000}
+.tent-lang{color:#228BC8;margin: 10px 0 0 0}
 
 /*Nav*/
-#nav{list-style:none;background:url(../images/nav-bg.jpg) no-repeat; height:36px;padding:0 10px 0 15px;margin:0 0 5px 0}
-#nav li{float:left; background:url(../images/nav-line.jpg) no-repeat right;}
-#nav li a{color:#fff; padding:9px 47px;display:block;font-size:10pt;font-weight:bold;*padding:9px 46px}
-#nav li a:hover{background:#228BC8}
-#nav .select{background:#228BC8}
+#nav{list-style:none;text-align: center; background:url(../images/nav-bg.jpg) no-repeat;padding:8px 0 12px 0;margin: 0 0 10px 0}
+#nav li{display: inline;background:url(../images/nav-line.jpg) no-repeat right;}
+#nav li a{color:#fff; padding:10px 35px;font-size:10pt;font-weight:bold}
+#nav li a:hover{color:#FFCD27}
+#nav .select{color:#FFCD27}
+#nav .none-line{background: none}
 
 /*Banner*/
 #banner{margin:0 0 10px 0}
 
 /*Content*/
-#content{ margin:0 0 30px 0;}
+#content{ margin:0 0 20px 0;}
 
 /*Left content*/
-#left-content{float:left; width:224px; }
-.title-left{color:#f00; font-size:12pt; font-weight:bold;margin:0 0 10px 0}
-.title-left span{padding:0 0 0 10px}
+#leftcontent{float:left; width:224px; }
+.title-box{color:#f00; font-size:12pt; font-weight:bold;margin:0 0 10px 0}
+.title-box span{padding:0 0 0 10px}
 
 /*Sub sản phẩm SGS*/
-.subcate{list-style:none;margin:0 0 15px 0}
-.subcate li{padding:2px 0}
-.subcate li a{ display:block;color:#1D2263; background:#DFDFDF;font-weight:bold; padding:5px 10px;font-size:10pt;}
-.subcate li a:hover{color:#f90}
+.sub-pro{list-style:none;margin:0 0 15px 0}
+.sub-pro li{padding:2px 0}
+.sub-pro li a{ display:block;color:#1D2263; background:#DFDFDF;font-weight:bold; padding:5px 10px;font-size:10pt;}
+.sub-pro li a:hover{color:#f90}
 
 /*Ho tro ky thuat*/
 .support{margin:0 0 15px 0;list-style:none;padding:5px 3px 10px 0px;text-align:center}
@@ -52,35 +55,47 @@ a:hover{color:#000;}
 .statistics{list-style:none;padding:5px 3px 10px 15px}
 .statistics li {color:#000; line-height:1.75em;}
 
+/*bg-adv adv left*/
+.bg-adv{list-style:none;border:1px solid #F2F2F2;text-align:center;margin:0 0 10px 0;padding:10px 0 0 0}
+.bg-adv li{padding:0 0 5px 0}
+
 /*Right content*/
-#right-content{float:right; width:700px}
-#right-content p{margin:10px 0}
-#right-content ul li, #right-content ol li{margin:0 0 0 18px}
+#rightcontent{float:right; width:700px}
+#rightcontent p{margin:0 0 8px 0}
+#rightcontent ul li, #rightcontent ol li{margin: 0 0 0 40px}
+#rightcontent ul ,#rightcontent ol{margin: 0 0 12px 0}
+#rightcontent table{margin: auto}
 
-.link{color:#000; font-weight:bold; padding:0px 0 10px 0}
+.link{color:#444; font-weight:bold; padding:0px 0 10px 0}
 .link img{margin:0 3px 0 0}
-.link a{ color:#9A522E; font-size:10pt}
-.link a:hover{text-decoration:underline; color:#000}
+.link a{ color:#000; font-size:10pt}
+.link a:hover{color:#f00}
 
-.title-right{margin:0 0 13px 0;color:#f00; font-size:11pt; font-weight:bold}
+.title-right{margin:0 0 10px 0;color:#f00; font-size:11pt; font-weight:bold}
 .title-right span{}
 .title-right a{color:#676767}
 .title-right a:hover{color:#f90}
 
 /*Frame tent right*/
 .frame-tent-right p{text-align:justify;line-height:1.7em}
-.frame-tent-right img{margin:0 15px 2px 0}
-.read-more{float:right;color:#217EBB;background:url(../images/readon_bg.jpg) no-repeat left;padding:0 0 0 20px}
-.read-more:hover{color:#f90}
+.frame-tent-right{border: 1px solid #F2F2F2;padding: 5px 10px;margin: 0 0 10px 0}
 
 /*   Page New  */
 .masuring{text-align:justify;font-size:10pt;list-style:none}
-.masuring li{margin:0 0 17px 0 !important }
+.masuring li{margin:0 0 15px 0 !important }
 .masuring p{line-height:1.4em}
-.frame-img{float:left;width:145px;margin:0 15px 5px 0}
+.frame-img{float:left;width:143px;margin:0 12px 5px 0}
 .title-masuring{margin:0 0 5px 0}
-.title-masuring a{color:#208FFF;font-size:11pt;font-weight:bold}
+.title-masuring a{color:#208FFF;font-size:10pt;display: block}
 .title-masuring a:hover{color:#FF9933}
+
+/**  Sub new   **/
+.frame-new{margin:30px 0 0 0}
+.sub-new{list-style:none;margin:0 0 15px 0;padding: 0 0 0 30px}
+.sub-new li{padding:0 0 5px 0;line-height:1.5em;list-style:disc; margin: 0 !important;}
+.sub-new li a{ display:block;color:#208FFF;}
+.sub-new li a:hover{color:#f90}
+
 
 /*Page product*/
 .frame-pro{background:#F3F5F4;padding:20px 15px;text-align:justify;font-size:10pt;color:#666;margin:0 0 10px 0;-webkit-border-radius:4px;-moz-border-radius:4px}
@@ -90,11 +105,11 @@ a:hover{color:#000;}
 .frame-img-info img{margin:0 !important;border:2px solid #D1D1D1;padding:2px;-webkit-border-radius:3px;-moz-border-radius:3px}
 
 /* paging */
-.paging{margin:15px 0 10px 0; text-align:right}
-.paging a{color:#3CBEDA}
-.paging a:hover{background:#44A4DE; color:#fff;}
-.pagenav , .pageactive{border: 1px solid #ccc; padding: 2px 5px; color:#fff; -moz-border-radius: 2px; -webkit-border-radius: 2px;}
-.pagecureent{border: 1px solid #ccc; padding: 2px 5px; background:#44A4DE; color:#fff; font-weight:bold; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+ul.paging{float: right; margin:0; padding:0 0 5px 0; list-style: none;}
+ul.paging li{display: inline;margin:0 !important;}
+ul.paging .hidden{display: none;}
+ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{color:#3CBEDA; border: 1px solid #ccc; padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{color:#fff; background:#44A4DE}
 
 /**Page Contact**/
 .frame-title{margin:0 0 20px 0}
@@ -112,16 +127,15 @@ a:hover{color:#000;}
 
 /*Footer*/
 #footer{text-align:center;margin:0 0 15px 0}
-#nav-fter{list-style:none; margin:0 0 15px 0}
-#nav-fter li{display:inline}
-#nav-fter li a{color:#1A4C98;padding:0 10px;background:url(../images/bkg-pipe2.gif) no-repeat right}
-#nav-fter li a:hover{color:#f90}
-.frame-info{line-height:1.5em; color:#fff;background:url(../images/footer-bg.jpg) no-repeat;padding:10px 0}
+.frame-info a:hover{color:#f90}
+.frame-info{line-height:1.5em; color:#fff;background:#44A4DE;padding:10px 0;-webkit-border-radius:6px;-moz-border-radius: 6px}
+.frame-info a{color:#fff}
 
 /**    Page san pham than    **/
-.product{width:160px;padding:5px 0; margin:0 0 10px 10px; text-align:center;display:inline-block; vertical-align:top;*float:left;*margin:0 10px 5px 0;*padding:2px 0; }
+.all-product{border: 1px solid #F2F2F2;padding: 2px 0}
+.product{width:160px;padding:5px 0; margin:0 6px 10px 5px !important; text-align:center;display:inline-block; vertical-align:top;*float:left;*margin:0 10px 5px 0;*padding:2px 0; }
 .product-img{height:121px; width:160px;display:table-cell;vertical-align:bottom;padding:3px 0;border:1px solid #ccc;}
-.title-pro{ font-size:10pt;margin:10px 0 0 0;font-weight:bold}
+.title-pro{ font-size:10pt;margin:10px 0;font-weight:bold}
 .title-pro a{color:#444}
 .title-pro a:hover{color:#f90}
 

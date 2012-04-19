@@ -1,5 +1,4 @@
-
-<?php $this->breadcrumbs = array($this->lang[$this->module->id] => LANGURL . '/' . $this->module->id); ?>
+<?php $this->breadcrumbs = array($this->lang['contact']); ?>
 
 <?php if(Yii::app()->user->hasFlash('contactSuccess')): ?>
     <div class="flash-success">
@@ -7,7 +6,8 @@
     </div>
 <?php else: ?>
 	<?php $this->pageTitle = ($item) ? $item['title' . LANG] : $this->lang[$this->module->id]; $this->description = $item['description']; ?>
-	<h1 class="title-right"><?php echo ($item) ? $item['title' . LANG] : $this->lang[$this->module->id] ?></h1>
+<h1 class="title-right"><span><?php echo ($item) ? $item['title' . LANG] : $this->lang[$this->module->id] ?></span></h1>
+<div class="frame-tent-right">
     <?php if($item):?>
 		<div id="frame-info-contact"><?php echo $item['content' . LANG] ?></div>
 	<?php endif;?>
@@ -42,9 +42,10 @@
 				</li>
 				<li>
 					<label>&nbsp;</label>
-					<?php echo CHtml::submitButton(' Submit ', array('name'=>'submit', 'class'=>'bton-dk', 'title'=>'Submit')); ?>
-					<?php echo CHtml::resetButton(' Reset ', array('name'=>'reset', 'class'=>'bton-dk', 'title'=>'Reset')); ?>
+					<?php echo CHtml::submitButton(Yii::t('main', 'send'), array('name'=>'submit', 'class'=>'bton-dk', 'title'=>Yii::t('main', 'send'))); ?>
+					<?php echo CHtml::resetButton(Yii::t('main', 'reset'), array('name'=>'reset', 'class'=>'bton-dk', 'title'=>Yii::t('main', 'reset'))); ?>
 				</li>					
 			</ul>               
 	   <?php $this->endWidget();?>
+</div>
 <?php endif;?>

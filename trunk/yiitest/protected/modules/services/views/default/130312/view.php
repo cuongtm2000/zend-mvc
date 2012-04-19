@@ -1,12 +1,13 @@
 <?php if($item): ?>
-    <?php $this->breadcrumbs = array($this->lang['services']=>array(LANGURL.'/services'), $item['title'.LANG]);?>
-    <h1 class="title-right"><?php echo $item['title'.LANG] ?></h1>
-    <div class="page-tent-right">
+	<?php $this->breadcrumbs = array($this->lang[$this->module->id]=>array(LANGURL.'/'.Yii::t('user', $this->module->id.'.link')),$item['title'.LANG]);?>
+	<?php $this->pageTitle = $item['title'.LANG]; $this->description = $item['description'.LANG];?>
+    <h1 class="title-right"><span><?php echo $item['title'.LANG] ?></span></h1>
+    <div class="frame-tent-right">
     	<?php echo $item['content'.LANG] ?>
-    </div><!--End Page tent right-->
+    </div><!--End frame tent right-->
 <?php else: ?>
-    <?php $this->breadcrumbs = array('About'=>array('/about'), 'No record');?>
-    <div class="page-tent-right">
-    	No record
-    </div><!--End Page tent right-->
+	<?php $this->breadcrumbs = array($this->lang[$this->module->id]=>array('/'.Yii::t('user', $this->module->id.'.link')), Yii::t('main', 'noRecord'));?>
+    <div class="frame-tent-right">
+    	<?php echo Yii::t('main', 'noRecord')?>
+    </div><!--End frame tent right-->
 <?php endif; ?>
