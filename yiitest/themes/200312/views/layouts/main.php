@@ -178,9 +178,9 @@
         <div class="bd-bt-ctent"></div>
 		<div id="footer">
 			<div class="left">
-				<h1 class="title-company"><?php echo $this->lang['company_name'] ?></h1>
+				<h2 class="title-company"><strong><?php echo $this->lang['company_name_footer'] ?></strong></h2>
 				<p><?php echo $this->lang['address1'] ?></p>
-				<p><?php echo $this->lang['address2'] ?></p>
+				<?php echo ($this->lang['address2']) ? '<p>'.$this->lang['address2'].'</p>' : '' ?>
 			</div>
 			<div class="copyright">
 				<p><?php echo $this->lang['copyright'] ?></p>

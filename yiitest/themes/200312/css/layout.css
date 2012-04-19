@@ -141,7 +141,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 #bg-fter{}
 #footer{ line-height:1.7em;padding:0 10px 10px}
 #footer a:hover{color:#5D94BC}
-.title-company{font-size:12pt;color:#598DB4;font-weight:bold;margin: 0 0 5px 0}
+.title-company{font-size:12pt;color:#598DB4;margin: 0 0 5px 0}
 
 .copyright {float:right;text-align:right;*margin:10px 0 0 0;*_margin:0; padding:12px 0px 0 0}
 .copyright a{color:#000;}
