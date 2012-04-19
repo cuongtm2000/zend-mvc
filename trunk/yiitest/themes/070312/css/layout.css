@@ -42,29 +42,25 @@ a:hover{color:#000;}
 /** Banner **/
 #banner{ margin:3px 0 5px 0}
 
-/*  Frame about page index*/
-.frame-about-index{}
-
-
 /* Page Content*/
 #content{margin:0 0 10px 0}
 
 .title-left{text-transform:capitalize; font-size:11pt; color:#BC455F; background:url(../images/bg-title-left.gif) no-repeat; width:196px; font-weight:bold; padding:10px 3px 10px 0px}
 .title-left span{padding:0 0 0 10px}
-.bt-sub-left{background:url(../images/bt-title-left.gif) no-repeat; width:196px; height:8px; margin:0 0 10px 0}
+.bt-left-penal{background:url(../images/bt-title-left.gif) no-repeat; width:196px; height:8px; margin:0 0 10px 0}
 .title-h3{color:#444444; font-weight:bold;}
 
 /*Left content*/
 #leftcontent{float:left; width:196px;}
 
 /*Category*/
-.subcate{list-style:none;padding:10px 5px 10px 20px; border-left:1px solid #EBEBEB; border-right:1px solid #EBEBEB;*_padding:10px 5px 0px 20px}
-.subcate li{line-height:2em;}
-.subcate li a{color:#000; font-weight:bold;display:block; *_display:inherit}
-.subcate li a:hover{ color:#979282}
-.subcate li ul{padding:0 0 0 20px}
-.subcate li ul li{list-style-image:url(../images/bull.gif); line-height:1.5em;}
-.subcate li ul li a{color:#000; font-weight:normal;display:block; *_display:inherit}
+.sub-cat{list-style:none;padding:10px 5px 10px 20px; border-left:1px solid #EBEBEB; border-right:1px solid #EBEBEB;*_padding:10px 5px 0px 20px}
+.sub-cat li{line-height:2em;}
+.sub-cat li a{color:#000; font-weight:bold;display:block; *_display:inherit}
+.sub-cat li a:hover{ color:#979282}
+.sub-cat li ul{padding:0 0 0 20px}
+.sub-cat li ul li{list-style-image:url(../images/bull.gif); line-height:1.5em;}
+.sub-cat li ul li a{color:#000; font-weight:normal;display:block; *_display:inherit}
 
 /*Ho tro ky thuat*/
 .support{list-style:none;padding:10px 3px 15px 0px; text-align:center;border-left:1px solid #EBEBEB; border-right:1px solid #EBEBEB;*_padding:10px 3px 0px 0px}
@@ -74,6 +70,10 @@ a:hover{color:#000;}
 /*Thong ke truy cap*/
 .statistics{list-style:none;padding:10px 3px 0px 15px;border-left:1px solid #EBEBEB; border-right:1px solid #EBEBEB;*_padding:10px 3px 0px 20px}
 .statistics li {color:#444444;padding:3px 0}
+
+/*bg-adv adv left*/
+.bg-adv{list-style:none;text-align:center;border-left:1px solid #EBEBEB; border-right:1px solid #EBEBEB}
+.bg-adv li{padding:0 0 5px 0}
 
 /*Right content*/
 #rightcontent{float:right; width:757px}
