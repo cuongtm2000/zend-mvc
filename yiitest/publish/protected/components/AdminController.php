@@ -9,7 +9,7 @@ class AdminController extends CController {
 
 		$user_class = new Username();
 		Yii::app()->session['userAdmin'] = $user_class->getUserByRole('user');
-		define('USERFILES', '/public/userfiles/images/' . Yii::app()->session['userAdmin'] . '/images');
+		define('USERFILES', '/public/userfiles/image/' . Yii::app()->session['userAdmin'] . '/image');
 
 		//Setup module user
 		$this->module_user = ModuleUsername::model()->moduleUser(Yii::app()->user->id);
