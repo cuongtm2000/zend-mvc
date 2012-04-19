@@ -4,11 +4,8 @@
 		<?php if($templatesBusiness['models']):?>
 		<?php foreach($templatesBusiness['models'] as $value):?>
 			<li>
-				<label for="tem-<?php echo $value['template']?>"><img src="<?php echo Yii::app()->baseUrl; ?>/themes/<?php echo $value['template']?>/images/tiny.jpg" alt="<?php echo $value['template']?>"  /></label>
-				<p>
-					<input id="tem-<?php echo $value['template']?>" name="Username[dos_templates_template]" value="<?php echo $value['template']?>" type="radio"/>
-					<label for="tem-<?php echo $value['template']?>"><strong><?php echo $value['template_name']?></strong></label>
-				</p>
+				<a href="" title=""><img src="<?php echo Yii::app()->baseUrl; ?>/themes/<?php echo $value['template']?>/images/tiny.jpg" alt="<?php echo $value['template']?>"  /></a>
+				<p><a href="" title=""><strong><?php echo $value['template_name']?></strong></a></p>
 			</li>
 			<?php endforeach?>
 		<?php else:?>
