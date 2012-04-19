@@ -124,10 +124,10 @@
 /*Timer advanced slider*/
 .advanced-slider .timer-animation 
 {
-	height:20px;
+	width:20px;
 	position:absolute;
 	z-index:60;
-	top:3px;
+	bottom:3px;
 	right:2px;
 }
 /*End Timer advanced slider*/
