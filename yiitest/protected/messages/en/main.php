@@ -7,6 +7,8 @@ return array(
 	'article-pageTitle' => 'Newsletter Dos.vn',
 
 	'home' => 'Home',
+	'templates.name' => 'Web templates',
+	'templates.link' => 'web-templates',
 	'articles.name' => 'Articles',
 	'articles.link' => 'articles',
 	'about.name' => 'About us',
