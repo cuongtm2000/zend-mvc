@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 19, 2012 at 11:17 AM
+-- Generation Time: Apr 19, 2012 at 04:26 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -598,12 +598,12 @@ INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `co
 (46, 'Giới thiệu chung chung', '', '<p>Giới thiệu chung chung Giới thiệu chung chung  Giới thiệu chung chung</p>', '', 3, '2012-04-13 03:18:30', 2, 0, '', '', 'gioi-thieu-chung-chung', '', 'Giới thiệu chung chung', '', 1, 'phumyan'),
 (47, 'Giới thiệu thị trường nội thất', '', '<p>Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất</p>', '', 8, '2012-04-13 03:19:10', 3, 0, '', '', 'gioi-thieu-thi-truong-noi-that', '', 'Giới thiệu thị trường nội thất', '', 1, 'phumyan'),
 (48, 'Tổng quan vể công ty', '', '<p>Siêu Việt là Doanh nghiệp chuyên cung cấp và cho thuê thiết bị máy văn phòng. Sản phẩm chính: Máy photocopy, máy tính, máy Fax, Máy Scan,.. ngoài ta còn cung cấp sản phẩm và dịch vụ theo đơn đặt hàng của khách hàng.</p>\n<p>Được thành lập vào năm 2002, bề dày kinh nghiệp 10 năm luôn tiên phong trong việc đổi mới máy móc và dịch vụ phụ vụ chất lượng cao luôn làm hoài lòng khách hàng khó tính nhất.</p>\n<p>Tại Đồng Nai, Siêu Việt là nhà cung cấp thiết bị văn phòng cho các Doanh nghiệp trong và ngoài nước như: Sonadezi, KCN AMADA,..</p>\n<p>khẳng định dịch vụ chất lượng Công ty được thành lập với tiêu chí cung cấp sỉ và lẻ tất cả các thiết bị văn phòng cho các đại lý trên khắp Việt Nam .</p>\n<p>Tận dụng và phát huy năng lực, kinh nghiệm trong lĩnh vực thiết bị văn phòng cùng với sự hỗ trợ của các thương hiệu nổi tiếng thế giới như Toshiba, Panasonic, Canon, Ricoh, Konica Minolta, Xerox... và trong lĩnh vực tin học như Intel, Seagate, Samsung, Asus, Dell, Ibm, Acer ...chúng tôi mong muốn và quyết tâm để trờ thành nhà cung cấp lớn và uy tín nhất trong lĩnh vực văn phòng tại Việt Nam.</p>\n<p>Dịch vụ hỗ trợ khách hàng: Chúng tôi có một đội ngũ kỹ sư có chuyên môn cao, kỹ thuật viên uy tín lâu năm kinh nghiệm trong các lĩnh vực:</p>\n<p>- Tư vấn, thực hiện các Giải Pháp về Máy Photocopy, Máy Fax, Máy In ...</p>\n<p>- Kinh doanh và cho thuê Máy Văn Phòng</p>\n<p>- Máy Photocopy in kỹ thuật số khổ lớn A0, Máy In Siêu Tốc 130 bản/phút</p>\n<p>- Máy in Công nghiệp, Máy in Màu Offset</p>\n<p>- Hỗ trợ kỹ thuật cho các dịch vụ Photocopy</p>\n<p>- Phân phối Sỉ &amp; Lẻ Máy Photocopy hàng nhập khẩu</p>\n<p>- Cung cấp Mực, Linh Kiện, Vật Tư với giá ưu đãi</p>\n<p>- Nhận đào tạo Kỹ Thuật Viên sửa chữa máy Photocopy, In, Fax</p>\n<p>Siêu Việt đáp ứng mọi nhu cầu, lựa chọn từ quý khách.</p>', '', 7, '2012-04-16 01:09:47', 3, 0, '', '', 'tong-quan-ve-cong-ty', '', '', '', 1, 'mayphotocopysieuviet'),
-(50, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 159, '2012-04-19 01:22:04', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'thoitrang'),
+(50, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 162, '2012-04-19 01:22:04', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'thoitrang'),
 (51, 'Giới thiệu chung chung', '', '<p>Giới thiệu chung chung Giới thiệu chung chung  Giới thiệu chung chung</p>', '', 11, '2012-04-19 01:22:04', 2, 0, '', '', 'gioi-thieu-chung-chung', '', 'Giới thiệu chung chung', '', 1, 'thoitrang'),
-(52, 'Giới thiệu thị trường nội thất', '', '<p>Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất</p>', '', 30, '2012-04-19 01:22:04', 3, 0, '', '', 'gioi-thieu-thi-truong-noi-that', '', 'Giới thiệu thị trường nội thất', '', 1, 'thoitrang'),
-(53, 'Giới thiệu sơ lược', '', '<p>Thiên Long Hội  chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn carbp2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn carbp2. Ngoài ra, Thiên Long Hộiluôn đáp ứng các loại ván ép, keo theo Đơn Đặt Hàng.</p>\r\n<p>Được thành lập năm 1999, có 5 xưởng sản xuất, bề dày kinh nghiệm 12 năm luôn tiên phong đầu tư khoa học, nghiên cứu phát triển sản phẩm, có máy móc thiết bị loại tốt và đội ngũ nhân lực tâm huyết, có trình độ chuyên môn cao, thạo việc để sản xuất sản phẩm có tính năng tốt, bền bỉ, tinh xảo, giá thành thấp đồng thời đáp ứng được đơn hàng số lượng lớn.</p>', '', 207, '2012-04-19 06:46:54', 1, 1, '', '', 'gioi-thieu-so-luoc', '', 'Thiên Long Hội  chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn carbp2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn carbp2. Ngoài ra, Thiên Long Hộiluôn đáp ứng các loại ván ép, keo theo Đơn Đặt Hàng.', '', 1, 'thienlonghoi'),
+(52, 'Giới thiệu thị trường nội thất', '', '<p>Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất</p>', '', 32, '2012-04-19 01:22:04', 3, 0, '', '', 'gioi-thieu-thi-truong-noi-that', '', 'Giới thiệu thị trường nội thất', '', 1, 'thoitrang'),
+(53, 'Giới thiệu sơ lược', '', '<p>Thiên Long Hội  chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn carbp2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn carbp2. Ngoài ra, Thiên Long Hộiluôn đáp ứng các loại ván ép, keo theo Đơn Đặt Hàng.</p>\r\n<p>Được thành lập năm 1999, có 5 xưởng sản xuất, bề dày kinh nghiệm 12 năm luôn tiên phong đầu tư khoa học, nghiên cứu phát triển sản phẩm, có máy móc thiết bị loại tốt và đội ngũ nhân lực tâm huyết, có trình độ chuyên môn cao, thạo việc để sản xuất sản phẩm có tính năng tốt, bền bỉ, tinh xảo, giá thành thấp đồng thời đáp ứng được đơn hàng số lượng lớn.</p>', '', 209, '2012-04-19 06:46:54', 1, 1, '', '', 'gioi-thieu-so-luoc', '', 'Thiên Long Hội  chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn carbp2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn carbp2. Ngoài ra, Thiên Long Hộiluôn đáp ứng các loại ván ép, keo theo Đơn Đặt Hàng.', '', 1, 'thienlonghoi'),
 (54, 'Giới thiệu chung chung', '', '<p>1. Địa chỉ trụ sở chính:</p>\r\n<p>Văn phòng: 23 Núi Thành - TP.Đà Nẵng</p>\r\n<p>Điện thoại: 0511.3634345 - 3626077 - 3626099 - 3601558 - 3601559. Fax: 0511.3634345</p>\r\n<p>Email: gialinh@begili.com Website: www.begili.com</p>\r\n<ul><li>2. Nhà máy:</li>\r\n<li>Địa chỉ: Lô 4-5 Cụm Công nghiệp Đại Hiệp, Đại Lộc, Quảng Nam.</li>\r\n<li>Điện thoại: 0510.3762767 Fax: 0510.3762769</li>\r\n<li>3. Quá trình hình thành và phát triển:</li>\r\n</ul><p>Công ty TNHH Gia Linh là đơn vị thành lập theo hình thức Công ty trách nhiệm hữu hạn và hoạt đông theo luật doanh nghiệp được Quốc Hội Nước Cộng Hoà Xã Hội Chủ Nghĩa Việt Nam Khoá X thông qua ngày 12/6/1999 và các quy định khác của pháp luật Nhà nước Việt Nam. Là đơn vị chuyên sản xuất và cung cấp các thiết bị đồ gỗ nội - ngoại thất cao cấp, kinh doanh khách sạn, nhà hàng và sản xuất máy điều hoà không khí mang thương hiệu Begili.</p>\r\n<p>Trải qua thời gian, cùng với sự lớn mạnh không ngừng cả về chất và lượng, do vậy Công ty TNHH Gia Linh đã đạt được những thành tựu to lớn. Đặc biệt, với đội ngũ cán bộ kỹ thuật, kỹ sư dày dạn kinh nghiệm trong việc tổ chức quản lý thi công, điều hành sản xuất, đội ngũ cán bộ quản lý nhạy bén, đội ngũ nhân viên với bề dày kinh nghiệm trong lĩnh vực mộc máy và được bổ sung thêm bởi lớp nhân viên trẻ có sức sáng tạo, nhiệt huyết cao, năng động đã góp phần tạo nên sự lớn mạnh của Công ty trong môi trường cạnh tranh ngày càng khốc liệt.</p>\r\n<p>Công ty áp dụng công nghệ máy móc hiện đại, với sự giám sát chặt chẽ của các kỹ thuật viên trong Công ty vì vậy sản phẩm đã đạt đến đỉnh cao của sự hoàn hảo, tinh tế và đa dạng về chủng loại.</p>\r\n<p>Mục đích kinh doanh của Công ty là tạo dựng trở thành thương hiệu uy tín và in sâu trong tâm trí của khách hàng. Qua đó góp phần tạo cho nhân viên Công ty nói riêng có một cuộc sống đảm bảo, ổn định và góp sức xây dựng một đất nước Việt Nam nói chung ngày càng vững mạnh và phồn vinh.</p>\r\n<p>Phương châm kinh doanh của Công ty là mong muốn đem lại cho quý khách sự hài lòng và thỏa mãn về chất lượng sản phẩm mang thương hiệu Begili .</p>', '', 8, '2012-04-19 06:46:54', 2, 0, '', '', 'gioi-thieu-chung-chung', '', '1. Địa chỉ trụ sở chính:\r\nVăn phòng: 23 Núi Thành - TP.Đà Nẵng\r\nĐiện thoại: 0511.3634345 - 3626077 - 3626099 - 3601558 - 3601559. Fax: 0511.3634345\r\nEmail: gialinh@begili.com Website: www.begili.com', '', 1, 'thienlonghoi'),
-(55, 'Công trình đã thực hiện', '', '<p><strong>1.Một số hình ảnh 2 chi nhánh SCB tại Đà Nẵng</strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/GLSCB04.jpg" alt="" width="350" height="300" /></p>\r\n<p style="text-align:left;"><strong>2.Các công trình tiêu biểu:</strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/nhaconam.jpg" alt="" width="650" height="487" /></p>\r\n<p style="text-align:center;"><strong><span style="color:#0000ff;">Nhà tư nhân</span></strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/sunriver.JPG" alt="" width="450" height="600" /></p>\r\n<p style="text-align:center;"><span style="color:#0000ff;"><strong>Khách sạn SUN RIVER</strong></span></p>\r\n<p style="text-align:left;"> </p>', '', 43, '2012-04-19 06:46:54', 3, 0, '', '', 'cong-trinh-da-thuc-hien', '', 'Công trình đã thực hiện', '', 1, 'thienlonghoi');
+(55, 'Công trình đã thực hiện', '', '<p><strong>1.Một số hình ảnh 2 chi nhánh SCB tại Đà Nẵng</strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/GLSCB04.jpg" alt="" width="350" height="300" /></p>\r\n<p style="text-align:left;"><strong>2.Các công trình tiêu biểu:</strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/nhaconam.jpg" alt="" width="650" height="487" /></p>\r\n<p style="text-align:center;"><strong><span style="color:#0000ff;">Nhà tư nhân</span></strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/sunriver.JPG" alt="" width="450" height="600" /></p>\r\n<p style="text-align:center;"><span style="color:#0000ff;"><strong>Khách sạn SUN RIVER</strong></span></p>\r\n<p style="text-align:left;"> </p>', '', 44, '2012-04-19 06:46:54', 3, 0, '', '', 'cong-trinh-da-thuc-hien', '', 'Công trình đã thực hiện', '', 1, 'thienlonghoi');
 
 -- --------------------------------------------------------
 
@@ -1010,7 +1010,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1334826891, 'thienlonghoi');
+('''127.0.0.1''', 1334838554, 'thienlonghoi'),
+('''127.0.0.1''', 1334838044, 'tinhungphat'),
+('''127.0.0.1''', 1334842499, 'thoitrang');
 
 -- --------------------------------------------------------
 
@@ -1260,7 +1262,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=87 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=86 ;
 
 --
 -- Dumping data for table `dos_module_supports`
@@ -1575,14 +1577,14 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 --
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
-('010312', 'Mẫu than đá', '2012-02-29 11:38:05', 'Chuyên bán các loại than đá, than cám...'),
-('070312', 'Mẫu Thời trang', '2012-03-06 13:21:26', 'Chuyên bán các sản phẩm thời trang quần áo mới nhất, với các dịch vụ ưu đãi...'),
-('111120', 'Mẫu cafe', '2011-11-21 02:40:10', ''),
-('130312', 'Mẫu Đồ gỗ', '2012-03-12 12:01:59', 'Chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn Carb p2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn Carb p2'),
-('180412', 'Mẫu 180412', '2012-04-18 00:58:03', 'Mẫu máy tính 180412'),
-('200312', 'Mẫu Sách', '2012-03-19 23:43:27', 'Chuyên bán các loại sách cho sinh viên, giá cả bình dân'),
-('220312', 'Mẫu nội thất', '2012-03-21 20:04:36', 'Chuyên bán các loại đồ nội thất, dân dụng'),
-('260312', 'Mẫu máy tính', '2012-03-26 06:44:07', 'Chuyên bán các loại máy tính, linh kiện, laptop, pc, sửa chữa,...');
+('010312', 'Mẫu than đá: 010312', '2012-02-29 11:38:05', 'Chuyên bán các loại than đá, than cám'),
+('070312', 'Mẫu thời trang: 070312', '2012-03-06 13:21:26', 'Chuyên bán các sản phẩm thời trang quần áo mới nhất, với các dịch vụ ưu đãi'),
+('111120', 'Mẫu cafe: 111120', '2011-11-21 02:40:10', 'Mẫu ẩm thực, đồ uống caffe'),
+('130312', 'Mẫu cơ khí: 130312', '2012-03-12 12:01:59', 'Chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn Carb p2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn Carb p2'),
+('180412', 'Mẫu máy tính: 180412', '2012-04-18 00:58:03', 'Mẫu máy tính mã số 180412'),
+('200312', 'Mẫu giáo dục: 200312', '2012-03-19 23:43:27', 'Chuyên bán các loại sách cho sinh viên, giá cả bình dân'),
+('220312', 'Mẫu nội thất: 220312', '2012-03-21 20:04:36', 'Chuyên bán các loại đồ nội thất, dân dụng'),
+('260312', 'Mẫu máy tính: 260312', '2012-03-26 06:44:07', 'Chuyên bán các loại máy tính, linh kiện, laptop, pc, sửa chữa');
 
 -- --------------------------------------------------------
 
@@ -1606,9 +1608,9 @@ INSERT INTO `dos_templates_has_dos_bussiness` (`dos_templates_template`, `dos_bu
 ('010312', 'bds-kien-truc-xay-dung'),
 ('070312', 'thoi-trang'),
 ('111120', 'am-thuc-drink'),
-('130312', 'noi-that-ngoai-that'),
+('130312', 'bds-kien-truc-xay-dung'),
 ('180412', 'cong-nghe-thong-tin-vien-thong'),
-('200312', 'cong-nghe-thong-tin-vien-thong'),
+('200312', 'giao-duc-dao-tao'),
 ('220312', 'noi-that-ngoai-that'),
 ('260312', 'cong-nghe-thong-tin-vien-thong');
 
