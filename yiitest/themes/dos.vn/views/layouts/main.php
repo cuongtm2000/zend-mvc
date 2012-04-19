@@ -28,11 +28,11 @@
 					<li><a href="/" title="Việt Nam"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/vi.gif" alt="Việt Nam" /> Việt Nam</a></li>
 				</ul>
 				<ul id="nav">
-					<li><a href="<?php echo Yii::app()->request->baseUrl.'/'.Yii::app()->session['lang']?>"><?php echo Yii::t('main', 'home')?></a></li>
-					<li><a href="<?php echo LANGURL.'/'.Yii::t('main', 'templates.link')?>"><?php echo Yii::t('main', 'templates.name')?></a></li>
-					<li><a href="<?php echo LANGURL.'/'.Yii::t('main', 'articles.link')?>"><?php echo Yii::t('main', 'articles.name')?></a></li>
+					<li<?php echo (Yii::app()->controller->id == 'site') ? ' class="active"' : ''?>><a href="<?php echo Yii::app()->request->baseUrl.'/'.Yii::app()->session['lang']?>"><?php echo Yii::t('main', 'home')?></a></li>
+					<li<?php echo (Yii::app()->controller->id == 'templates') ? ' class="active"' : ''?>><a href="<?php echo LANGURL.'/'.Yii::t('main', 'templates.link')?>"><?php echo Yii::t('main', 'templates.name')?></a></li>
+					<li<?php echo (Yii::app()->controller->id == 'articles') ? ' class="active"' : ''?>><a href="<?php echo LANGURL.'/'.Yii::t('main', 'articles.link')?>"><?php echo Yii::t('main', 'articles.name')?></a></li>
 					<?php if(Yii::app()->user->isGuest):?>
-						<li class="active"><a href="/admin"><?php echo Yii::t('main', 'login')?></a></li>
+						<li><a href="/admin"><?php echo Yii::t('main', 'login')?></a></li>
 					<?php else:?>
 						<li><a href="/<?php echo Yii::t('main', 'logout.link')?>"><?php echo Yii::t('main', 'logout.name')?> (<?php echo Yii::app()->user->name?>)</a></li>
 					<?php endif;?>
