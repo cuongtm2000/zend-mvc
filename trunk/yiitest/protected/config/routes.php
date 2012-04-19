@@ -55,8 +55,9 @@ return array(
     
     'activate/<email:.*?>/<code:[A-Za-z0-9]+>' => 'activate/index', //activate user
 
-	'<templates:(mau-website)>/page/<page:\d+>' => array('templates/index'), //paging index
+	'<templates:(mau-website)>/trang/<page:\d+>' => array('templates/index'), //paging index
 	'<templates:(mau-website)>' => array('templates/index'), //index
+	'<templates:(mau-website)>/<cid:[-a-z0-9]+>' => array('templates/cats'),
 
 	'<language:(vi|en)>/<articles:(articles|bai-viet)>/page/<page:\d+>' => array('articles/index'), //paging index
 	'<articles:(articles|bai-viet)>/page/<page:\d+>' => array('articles/index'), //paging index
