@@ -222,10 +222,10 @@ class Products extends CActiveRecord {
 				$file = new CSimpleImage();
 				$uploaded = $file->uploadMulti($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_desc'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_desc'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id, $this->title);
 
-				$pic_desc = explode('|', $this->_oldImage_desc);
+				$pic_desc = ($this->_oldImage_desc) ? explode('|', $this->_oldImage_desc) : array();
 				//push value
 				foreach ($uploaded as $value) {
-					array_push($pic_desc, $value);
+						array_push($pic_desc, $value);
 				}
 				$this->pic_desc = implode("|", $pic_desc);
 			}
