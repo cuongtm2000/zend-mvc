@@ -29,6 +29,7 @@
 				</ul>
 				<ul id="nav">
 					<li><a href="<?php echo Yii::app()->request->baseUrl.'/'.Yii::app()->session['lang']?>"><?php echo Yii::t('main', 'home')?></a></li>
+					<li><a href="<?php echo LANGURL.'/'.Yii::t('main', 'templates.link')?>"><?php echo Yii::t('main', 'templates.name')?></a></li>
 					<li><a href="<?php echo LANGURL.'/'.Yii::t('main', 'articles.link')?>"><?php echo Yii::t('main', 'articles.name')?></a></li>
 					<?php if(Yii::app()->user->isGuest):?>
 						<li class="active"><a href="/admin"><?php echo Yii::t('main', 'login')?></a></li>

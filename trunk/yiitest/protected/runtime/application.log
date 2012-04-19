@@ -460,3 +460,163 @@ in E:\Customers\dos.vn\svn\index.php (16)
 2012/04/19 05:24:16 [warning] [application] Failed to set unsafe attribute "remove_pic_desc" of "Products".
 in E:\Customers\dos.vn\svn\protected\modules\admin\controllers\ProductsController.php (177)
 in E:\Customers\dos.vn\svn\index.php (16)
+2012/04/19 05:57:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sign.cert".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('sign.cert')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/sign.cert?ran=12596967182597361702-6485309732953603380
+HTTP_REFERER=http://www.google.co.uk/
+---
+2012/04/19 06:04:50 [error] [php] Trying to get property of non-object (E:\Customers\dos.vn\svn\protected\views\templates\index.php:1)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): TemplatesController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): TemplatesController->renderPartial()
+#2 E:\Customers\dos.vn\svn\protected\controllers\TemplatesController.php(6): TemplatesController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): TemplatesController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): TemplatesController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): TemplatesController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): TemplatesController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 E:\Customers\dos.vn\svn\index.php(16): CWebApplication->run()
+REQUEST_URI=/templates
+in E:\Customers\dos.vn\svn\protected\views\templates\index.php (1)
+in E:\Customers\dos.vn\svn\protected\controllers\TemplatesController.php (6)
+in E:\Customers\dos.vn\svn\index.php (16)
+2012/04/19 06:04:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/19 06:16:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mau-website".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('mau-website')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/mau-website
+HTTP_REFERER=http://dos.vn/
+---
+2012/04/19 06:20:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "en/web-templates".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('en/web-template...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/en/web-templates
+HTTP_REFERER=http://dos.vn/en
+---
+2012/04/19 06:22:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/19 06:28:09 [error] [php] Use of undefined constant templatesBusiness - assumed 'templatesBusiness' (E:\Customers\dos.vn\svn\protected\views\templates\index.php:3)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): TemplatesController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): TemplatesController->renderPartial()
+#2 E:\Customers\dos.vn\svn\protected\controllers\TemplatesController.php(9): TemplatesController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): TemplatesController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): TemplatesController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): TemplatesController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): TemplatesController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 E:\Customers\dos.vn\svn\index.php(16): CWebApplication->run()
+REQUEST_URI=/mau-website
+in E:\Customers\dos.vn\svn\protected\views\templates\index.php (3)
+in E:\Customers\dos.vn\svn\protected\controllers\TemplatesController.php (9)
+in E:\Customers\dos.vn\svn\index.php (16)
+2012/04/19 06:28:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/19 06:29:37 [error] [php] Undefined index: models (E:\Customers\dos.vn\svn\protected\views\templates\index.php:4)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): TemplatesController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): TemplatesController->renderPartial()
+#2 E:\Customers\dos.vn\svn\protected\controllers\TemplatesController.php(9): TemplatesController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): TemplatesController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): TemplatesController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): TemplatesController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): TemplatesController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 E:\Customers\dos.vn\svn\index.php(16): CWebApplication->run()
+REQUEST_URI=/mau-website
+in E:\Customers\dos.vn\svn\protected\views\templates\index.php (4)
+in E:\Customers\dos.vn\svn\protected\controllers\TemplatesController.php (9)
+in E:\Customers\dos.vn\svn\index.php (16)
+2012/04/19 06:29:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/19 06:39:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/19 06:44:26 [error] [php] Undefined variable: listItems (E:\Customers\dos.vn\svn\protected\views\templates\index.php:18)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): TemplatesController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): TemplatesController->renderPartial()
+#2 E:\Customers\dos.vn\svn\protected\controllers\TemplatesController.php(9): TemplatesController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): TemplatesController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): TemplatesController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): TemplatesController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): TemplatesController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 E:\Customers\dos.vn\svn\index.php(16): CWebApplication->run()
+REQUEST_URI=/mau-website
+in E:\Customers\dos.vn\svn\protected\views\templates\index.php (18)
+in E:\Customers\dos.vn\svn\protected\controllers\TemplatesController.php (9)
+in E:\Customers\dos.vn\svn\index.php (16)
+2012/04/19 06:44:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/19 06:54:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/19 06:57:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sign.cert".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('sign.cert')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/sign.cert?ran=12596967182597361702-6485309765688118788
+HTTP_REFERER=http://www.google.co.uk/
+---

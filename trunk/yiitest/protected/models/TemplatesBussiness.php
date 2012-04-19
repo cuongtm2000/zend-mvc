@@ -84,7 +84,7 @@ class TemplatesBussiness extends CActiveRecord {
 	 * @param ($type = 1) => phan trang
 	 * @return mixed
 	 */
-	public function listTempaltesByBusiness($businessid, $type = 0) {
+	public function listTempaltesByBusiness($businessid = 'root', $type = 0) {
 		if ($businessid == 'root') {
 			$templates_class = new Templates();
 			return $templates_class->listTemplates($type);

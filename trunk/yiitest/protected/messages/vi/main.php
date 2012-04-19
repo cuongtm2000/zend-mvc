@@ -7,6 +7,8 @@ return array(
 	'article-pageTitle' => 'Bản tin website Dos.vn',
 
 	'home' => 'Trang chủ',
+	'templates.name' => 'Mẫu website',
+	'templates.link' => 'mau-website',
 	'articles.name' => 'Bài viết',
 	'articles.link' => 'bai-viet',
 	'about.name' => 'Giới thiệu',
