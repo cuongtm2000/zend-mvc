@@ -86,7 +86,7 @@
 			iframe_markup: '<iframe src ="{path}" width="{width}" height="{height}" frameborder="no"></iframe>',
 			inline_markup: '<div class="pp_inline">{content}</div>',
 			custom_markup: '',
-			social_tools: '' /* html or false to disable */
+			social_tools: false /* html or false to disable */
 		}, pp_settings);
 		
 		// Global variables accessible only by prettyPhoto
