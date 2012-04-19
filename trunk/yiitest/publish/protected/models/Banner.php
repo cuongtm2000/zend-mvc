@@ -160,9 +160,8 @@ class Banner extends CActiveRecord {
 	 * @param $module
 	 * @return mixed
 	 */
-    public function getLogo($module) {
-        $command = Yii::app()->db->createCommand('SELECT banner_name, banner_url, banner_link FROM ' . $this->tableName() . ' WHERE banner_type=\'logo\' AND position=:module AND enable=1');
-        $command->bindParam(":module", $module, PDO::PARAM_STR);
+    public function getLogo() {
+        $command = Yii::app()->db->createCommand('SELECT banner_name, banner_url, banner_link FROM ' . $this->tableName() . ' WHERE banner_type=\'logo\' AND enable=1');
         return $command->queryRow();
     }
     

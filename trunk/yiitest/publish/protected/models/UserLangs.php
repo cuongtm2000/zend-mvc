@@ -85,9 +85,7 @@ class UserLangs extends CActiveRecord {
 
 	//Front end - get all language
 	public static function getLangs() {
-		$user = Yii::app()->session['subdomain'];
-		$command = Yii::app()->db->createCommand('SELECT lang_name, lang, langen FROM dos_user_langs WHERE dos_usernames_username=:user');
-		$command->bindParam(":user", $user, PDO::PARAM_STR);
+		$command = Yii::app()->db->createCommand('SELECT lang_name, lang, langen FROM dos_user_langs');
 		return $command->queryAll();
 	}
 
@@ -123,18 +121,20 @@ class UserLangs extends CActiveRecord {
 
 	//Back end - insert item
 	private function insertItem($lang_name, $lang, $langen) {
+		$user = Yii::app()->session['userAdmin'];
 		$command = Yii::app()->db->createCommand('INSERT INTO ' . $this->tableName() . ' (`lang_name`, `lang`, `langen`, `dos_usernames_username`) VALUES (:lang_name, :lang, :langen, :user)');
 		$command->bindParam(":lang_name", $lang_name, PDO::PARAM_STR);
 		$command->bindParam(":lang", $lang, PDO::PARAM_STR);
 		$command->bindParam(":langen", $langen, PDO::PARAM_STR);
-		$command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
+		$command->bindParam(":user", $user, PDO::PARAM_STR);
 		$command->execute();
 	}
 
 	//Back end - delete item
 	private function deleteItem() {
+		$user = Yii::app()->session['userAdmin'];
 		$command = Yii::app()->db->createCommand('DELETE FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user');
-		$command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
+		$command->bindParam(":user", $user, PDO::PARAM_STR);
 		$command->execute();
 	}
 }
