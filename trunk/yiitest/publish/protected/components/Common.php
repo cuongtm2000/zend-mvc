@@ -52,7 +52,7 @@ class Common {
      * @param int $cat - Danh mục
      */
     public function removePic($item, $type = 0, $path = 0, $cat = '') {
-        $path = ($path == 1) ? YiiBase::getPathOfAlias('webroot') . '/public/userfiles/images/' . Yii::app()->user->id . '/images' . '/' . Yii::app()->controller->id . $cat . '/' : YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . $cat . '/';
+        $path = ($path == 1) ? YiiBase::getPathOfAlias('webroot') . '/public/userfiles/image/' . Yii::app()->user->id . '/image' . '/' . Yii::app()->controller->id . $cat . '/' : YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . $cat . '/';
         if ($type == 0) {
             if ($item && file_exists($path . $item)) {
                 unlink($path . $item);

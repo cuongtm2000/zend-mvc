@@ -1,4 +1,3 @@
-  
 <?php $form = $this->beginWidget('CActiveForm', array('id' => 'frm', 'enableAjaxValidation' => true, 'enableClientValidation' => true, 'htmlOptions' => array('enctype' => 'multipart/form-data'))); ?>
 <?php echo $form->errorSummary($model, ''); ?>
 <fieldset>
