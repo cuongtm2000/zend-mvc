@@ -202,8 +202,9 @@ class ProductsCat extends CActiveRecord {
 
 	//Front end - find cat_id by tag
 	public function findCatByTag($tag) {
-		$command = Yii::app()->db->createCommand('SELECT cat_id, cat_title' . LANG . ', tag' . LANG . ', description' . LANG . ' FROM ' . $this->tableName() . ' WHERE tag' . LANG . '=:tag');
+		$command = Yii::app()->db->createCommand('SELECT cat_id, cat_title' . LANG . ', tag' . LANG . ', description' . LANG . ' FROM ' . $this->tableName() . ' WHERE tag' . LANG . '=:tag AND dos_usernames_username=:user');
 		$command->bindParam(':tag', $tag, PDO::PARAM_STR);
+		$command->bindParam(':user', $this->_subdomain, PDO::PARAM_STR);
 		return $command->queryRow();
 	}
 
