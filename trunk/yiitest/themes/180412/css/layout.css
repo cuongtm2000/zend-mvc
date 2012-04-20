@@ -12,7 +12,7 @@ a:hover{color:#000}
 
 /*Header*/
 #bg-header{background:url(../images/bg_header.png) no-repeat}
-#header{padding:20px 5px 26px 20px;position: relative;}
+#header{padding:20px 5px 26px 20px;position: relative; *padding:20px 5px 24px 20px }
 
 /*Logo*/
 #logo{float:left;height: 51px}
@@ -74,8 +74,8 @@ a:hover{color:#000}
 /*Right content*/
 #right-content{float:left;width:723px; margin:0 0 0 9px;}
 #right-content p{margin:0 0 8px 0}
-#rightcontent ul li, #rightcontent ol li{margin: 0 0 0 40px}
-#rightcontent ul ,#rightcontent ol{margin: 0 0 12px 0}
+#right-content ul li, #rightcontent ol li{margin: 0 0 0 40px}
+#right-content ul ,#rightcontent ol{margin: 0 0 12px 0}
 #right-content table{margin: auto}
 
 .title-right{font-size:17px;color:#3F3F3F;padding:7px 0;background:url(../images/bg-title-right-1.png) no-repeat;margin:0 0 5px 3px}
@@ -94,7 +94,7 @@ a:hover{color:#000}
 
 /*** San pham noi bat of page index*****/
 .all-product{margin: 0 0 10px 0}
-.product{width:175px;text-align:center;padding:15px 0 4px 0;background:#fff; margin:0 0 10px 3px !important; display:inline-block; vertical-align:top;*float:left}
+.product{width:175px;text-align:center;padding:15px 0 4px 0;background:#fff; margin:0 0 10px 3px !important; display:inline-block; vertical-align:top;*float:left; }
 
 /** Tent product and frame product img **/
 .product-img{height:160px;width:175px;display:table-cell;vertical-align:middle}
