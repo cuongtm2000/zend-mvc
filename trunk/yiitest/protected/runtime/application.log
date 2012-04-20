@@ -529,3 +529,93 @@ Stack trace:
 REQUEST_URI=/sign.cert?ran=12596967182597361702-6485308387956109156
 HTTP_REFERER=http://www.google.co.uk/
 ---
+2012/04/20 08:57:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sign.cert".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('sign.cert')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/sign.cert?ran=12596967182597361702-6485308761515571108
+HTTP_REFERER=http://www.google.co.uk/
+---
+2012/04/20 09:04:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in E:\Customers\dos.vn\svn\protected\modules\products\models\Products.php:292
+Stack trace:
+#0 E:\Customers\dos.vn\svn\protected\modules\products\controllers\DefaultController.php(24): Products->detailItem('phong-tiep-khac...')
+#1 [internal function]: DefaultController->actionView('phong-tiep-khac...')
+#2 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#11 {main}
+REQUEST_URI=/san-pham/trang-tri-tu-bep/phong-tiep-khach.html
+HTTP_REFERER=http://thienlonghoi.dos.vn/
+---
+2012/04/20 09:09:24 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dos_module_products.cat_id' in 'where clause'. The SQL statement executed was: SELECT record_id FROM dos_module_products, dos_module_products_cat WHERE dos_module_products.dos_module_item_cat_cat_id = dos_module_products.cat_id AND tag=:tag AND dos_usernames_username=:user.
+in E:\Customers\dos.vn\svn\protected\modules\products\models\Products.php (315)
+in E:\Customers\dos.vn\svn\protected\modules\products\models\Products.php (283)
+in E:\Customers\dos.vn\svn\protected\modules\products\controllers\DefaultController.php (24)
+2012/04/20 09:09:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dos_module_products.cat_id' in 'where clause'. The SQL statement executed was: SELECT record_id FROM dos_module_products, dos_module_products_cat WHERE dos_module_products.dos_module_item_cat_cat_id = dos_module_products.cat_id AND tag=:tag AND dos_usernames_username=:user' in C:\xampp\php\library\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\php\library\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 E:\Customers\dos.vn\svn\protected\modules\products\models\Products.php(315): CDbCommand->queryScalar()
+#2 E:\Customers\dos.vn\svn\protected\modules\products\models\Products.php(283): Products->getIDByTag('phong-tiep-khac...')
+#3 E:\Customers\dos.vn\svn\protected\modules\products\controllers\DefaultController.php(24): Products->detailItem('phong-tiep-khac...')
+#4 [internal function]: DefaultController->actionView('phong-tiep-khac...')
+#5 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
+#6 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
+#7 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#11 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#12 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/san-pham/trang-tri-tu-bep/phong-tiep-khach.html
+HTTP_REFERER=http://thienlonghoi.dos.vn/
+---
+2012/04/20 09:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/20 09:10:05 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'tag' in where clause is ambiguous. The SQL statement executed was: SELECT record_id FROM dos_module_products, dos_module_products_cat WHERE dos_module_products.dos_module_item_cat_cat_id = dos_module_products_cat.cat_id AND tag=:tag AND dos_usernames_username=:user.
+in E:\Customers\dos.vn\svn\protected\modules\products\models\Products.php (315)
+in E:\Customers\dos.vn\svn\protected\modules\products\models\Products.php (283)
+in E:\Customers\dos.vn\svn\protected\modules\products\controllers\DefaultController.php (24)
+2012/04/20 09:10:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'tag' in where clause is ambiguous. The SQL statement executed was: SELECT record_id FROM dos_module_products, dos_module_products_cat WHERE dos_module_products.dos_module_item_cat_cat_id = dos_module_products_cat.cat_id AND tag=:tag AND dos_usernames_username=:user' in C:\xampp\php\library\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\php\library\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 E:\Customers\dos.vn\svn\protected\modules\products\models\Products.php(315): CDbCommand->queryScalar()
+#2 E:\Customers\dos.vn\svn\protected\modules\products\models\Products.php(283): Products->getIDByTag('phong-tiep-khac...')
+#3 E:\Customers\dos.vn\svn\protected\modules\products\controllers\DefaultController.php(24): Products->detailItem('phong-tiep-khac...')
+#4 [internal function]: DefaultController->actionView('phong-tiep-khac...')
+#5 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
+#6 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
+#7 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#11 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#12 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/san-pham/trang-tri-tu-bep/phong-tiep-khach.html
+HTTP_REFERER=http://thienlonghoi.dos.vn/
+---
+2012/04/20 09:10:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---

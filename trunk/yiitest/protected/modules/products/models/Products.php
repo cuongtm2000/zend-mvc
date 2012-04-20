@@ -42,7 +42,7 @@ class Products extends CActiveRecord {
 			array('tag, tagen', 'checkExistsTag'),
 			array('pic_desc', 'length', 'max' => 200),
 			array('description, descriptionen', 'length', 'max' => 250),
-			array('unit', 'length', 'max'=>45),
+			array('unit', 'length', 'max' => 45),
 			array('preview, previewen, contenten', 'safe'),
 			array('pic_thumb, pic_full, pic_desc', 'file', 'types' => 'gif,png,jpg,jpeg,icon', 'allowEmpty' => true, 'maxSize' => 1024 * 1024 * 5),
 			// The following rule is used by search().
@@ -225,7 +225,7 @@ class Products extends CActiveRecord {
 				$pic_desc = ($this->_oldImage_desc) ? explode('|', $this->_oldImage_desc) : array();
 				//push value
 				foreach ($uploaded as $value) {
-						array_push($pic_desc, $value);
+					array_push($pic_desc, $value);
 				}
 				$this->pic_desc = implode("|", $pic_desc);
 			}
@@ -238,7 +238,7 @@ class Products extends CActiveRecord {
 	public function listItemNew() {
 		$criteria = new CDbCriteria();
 		$criteria->with = array(__CLASS__ . 'Cat');
-		$criteria->select = 'title' . LANG . ', pic_thumb, tag'.LANG.', unit, hot';
+		$criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit, hot';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'dos_usernames_username=:user AND enable = 1';
 		$criteria->params = array(':user' => $this->_subdomain);
@@ -251,7 +251,7 @@ class Products extends CActiveRecord {
 	public function listItemHot() {
 		$criteria = new CDbCriteria();
 		$criteria->with = array(__CLASS__ . 'Cat');
-		$criteria->select = 'title' . LANG . ', pic_thumb, tag'.LANG.', unit, hot';
+		$criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit, hot';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'dos_usernames_username=:user AND hot = 1 AND enable = 1';
 		$criteria->params = array(':user' => $this->_subdomain);
@@ -298,7 +298,7 @@ class Products extends CActiveRecord {
 	public function listItemOther($id, $cid) {
 		$criteria = new CDbCriteria();
 		$criteria->with = array(__CLASS__ . 'Cat');
-		$criteria->select = 'title' . LANG . ', pic_thumb, tag'.LANG.', unit, hot';
+		$criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit, hot';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'record_id NOT IN (:id) AND dos_module_item_cat_cat_id=:cid AND enable = 1';
 		$criteria->params = array(':id' => $id, ':cid' => $cid);
@@ -309,8 +309,9 @@ class Products extends CActiveRecord {
 
 	//Front end - find record_id by tag
 	private function getIDByTag($tag) {
-		$command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE tag' . LANG . '=:tag');
+		$command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ', ' . $this->tableName() . '_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = ' . $this->tableName() . '_cat.cat_id AND ' . $this->tableName() . '.tag' . LANG . '=:tag AND dos_usernames_username=:user');
 		$command->bindParam(":tag", $tag, PDO::PARAM_STR);
+		$command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
 		return $command->queryScalar();
 	}
 
