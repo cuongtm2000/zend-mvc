@@ -1,0 +1,2 @@
+<p>We sent a letter to your email <strong><?php echo Yii::app()->session['email']?></strong> help us confirm you are the owner of <strong><?php echo Yii::app()->session['username']?></strong> account. Please check your email and click on the link to activate your account<br/>
+Then log in at <a href="http://hoiit.com/login" title="Login">http://hoiit.com/login</a></p>

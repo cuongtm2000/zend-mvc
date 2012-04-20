@@ -21,9 +21,8 @@ class DefaultController extends AdminController {
 
     public function actionIndex() {
         $this->layout = '//layouts/column2';
-        
-        $script = '$("#load-news").load("/read-rss");';
-        Yii::app()->clientScript->registerScript('', $script, CClientScript::POS_READY);
+
+        Yii::app()->clientScript->registerScript('', '$("#load-news").load("http://dos.vn/read-rss");', CClientScript::POS_READY);
         
         //static counter
         $counter = PcounterSave::model()->findByAttributes(array('save_name'=>'counter'));
