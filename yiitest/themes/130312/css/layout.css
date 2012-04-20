@@ -101,6 +101,10 @@ a:hover{color:#000;}
 .frame-pro{background:#F3F5F4;padding:20px 15px;text-align:justify;font-size:10pt;color:#666;margin:0 0 10px 0;-webkit-border-radius:4px;-moz-border-radius:4px}
 .frame-pro p{line-height:normal !important}
 
+/***    Page product-info     ****/
+.black{margin:0 !important; font-size:10pt;text-align:right !important}
+.black a{color:#000;background:url(../images/bull-1.gif) no-repeat left 5px;cursor:pointer; padding:0 0 0 10px}
+.black a:hover{background:url(../images/bull.gif) no-repeat left 5px;color:#ED2121}
 .frame-img-info{text-align:center;margin:0 0 10px 0}
 .frame-img-info img{margin:0 !important;border:2px solid #D1D1D1;padding:2px;-webkit-border-radius:3px;-moz-border-radius:3px}
 

@@ -10,21 +10,20 @@ a:hover{color:#000}
 #wrapper {margin:auto; width:956px;}
 
 /*Header*/
-#header{padding:20px 0; position:relative}
+#header{padding:20px 0 0px 0;margin:0 0 20px 0; position:relative}
 
 /*Logo*/
-#logo{float:left;height:108px}
+#logo{float:left;margin:0 30px 0 0}
 
 /**  Ten cong ty     **/
-.frame-title-pany{float:left;padding:25px 0 0 30px;}
-.title-city{font-size:18pt;color:#fff;font-weight:bold}
+.title-city{padding:25px 0 0 0; font-size:18pt;color:#fff;font-weight:bold}
 
 /*Lang ( Ngon ngu) */
-.lang{float:right; text-align:right}
+.lang{position: absolute;top:50px; right: 0; text-align: right}
 .lang img{margin:0 2px 0 0;position: relative;top:2px}
 .lang a{color:#fff;font-weight:bold; margin:0 5px 0 10px}
 .lang a:hover{color:#f89800}
-.tent-lang{color:#fff;font-size:10pt;font-weight:bold;margin:10px 0 0 0}
+.tent-lang{position:absolute; bottom:10px;right:0;color:#fff;font-size:10pt;font-weight:bold}
 
 /* Nav ( Menu ) */
 #all-nav{position:relative;top:-20px;z-index:300;}

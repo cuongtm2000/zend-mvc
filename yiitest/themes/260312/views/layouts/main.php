@@ -44,9 +44,11 @@
 		</div> <!--End logo-->
 		<h1 class="title-company-home"><?php echo $this->lang['company_name']?></h1>
 		<div class="lang">
+			<?php if(count($this->numLang) > 1):?>
 			<?php foreach($this->numLang as $value): ?>
 				<a href="<?php echo ($value=='vi') ? Yii::app()->request->baseUrl.'/' : Yii::app()->request->baseUrl.'/'.$value ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $value?>.gif" alt="<?php echo $this->lang[$value]?>" /> <?php echo $this->lang[$value]?></a>
-			<?php endforeach?>
+				<?php endforeach?>
+			<?php endif?>
 			<p class="hotline"><?php echo $this->lang['company_phone']?></p>
 		</div> <div class="clear"></div>
     </div><!--End header-->
