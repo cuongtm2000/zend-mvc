@@ -42,11 +42,13 @@
 				<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl']?>/" title="Logo"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a>
 			<?php endif;?>
 		</div> <!--End logo-->
-		<div class="frame-title-pany"><h1 class="title-city"><?php echo $this->lang['company_name'] ?></h1></div> <!--End title company-->
+		<?php echo ($this->lang['company_name']) ? '<h1 class="title-city">'.$this->lang['company_name'].'</h1>' : '' ?> <!--End title company-->
 		<div class="lang">
+			<?php if(count($this->numLang) > 1):?>
 			<?php foreach($this->numLang as $value): ?>
 				<a href="<?php echo ($value=='vi') ? Yii::app()->request->baseUrl.'/' : Yii::app()->request->baseUrl.'/'.$value ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $value?>.gif" alt="<?php echo $this->lang[$value]?>" /> <?php echo $this->lang[$value]?></a>
-			<?php endforeach?>
+				<?php endforeach?>
+			<?php endif?>
 			<p class="tent-lang"><?php echo $this->lang['company_phone']?></p>
 		</div> <!--End lang-->	<div class="clear"></div>
 	</div><!--End header-->

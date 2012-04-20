@@ -50,9 +50,8 @@
 					<a href="<?php echo ($value=='vi') ? Yii::app()->request->baseUrl.'/' : Yii::app()->request->baseUrl.'/'.$value ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $value?>.gif" alt="<?php echo $this->lang[$value]?>" /> <?php echo $this->lang[$value]?></a>
 				<?php endforeach?>
 			<?php endif?>
-			<p class="tent-lang"><?php echo $this->lang['company_phone']?></p>
-		</div> <!--End lang-->	<div class="clear"></div>
-
+		</div> <!--End lang-->
+		<p class="tent-lang"><?php echo $this->lang['company_phone']?></p> <div class="clear"></div>
 	</div><!--End header-->
 	<div id="all-nav">
 	    <ul id="nav">

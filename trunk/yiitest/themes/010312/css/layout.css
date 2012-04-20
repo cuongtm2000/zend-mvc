@@ -13,14 +13,13 @@ a:hover{color:#000;}
 #header{padding:20px 0; position:relative}
 
 /*Logo*/
-#logo{float:left;width:155px; height:108px}
+#logo{float:left;margin:0 20px 0 0}
 
 /**  Ten cong ty     **/
-.frame-title-pany{float:left;padding:25px 0 0 0;margin:0 0 0 20px}
-.title-city{font-size:18pt;color:#0000FF;font-weight:bold}
+.title-city{padding:25px 0 0 0; font-size:18pt;color:#0000FF;font-weight:bold}
 
 /*Lang ( Ngon ngu) */
-.lang{float:right; text-align:right}
+.lang{position: absolute;bottom:30px; right: 0; text-align: right}
 .lang img{margin:0 2px 0 0}
 .lang a{color:#000;font-weight:bold; margin:0 5px 0  10px}
 .lang a:hover{color:#fff}
