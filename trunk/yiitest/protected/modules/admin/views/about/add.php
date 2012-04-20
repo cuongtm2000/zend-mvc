@@ -30,7 +30,7 @@
 				 theme_advanced_buttons1 : "bold,italic,underline,strikethrough,formatselect,fontsizeselect,|,justifyleft,justifycenter,justifyright,justifyfull,pastetext,pasteword,|,link,unlink,|,image,media,|,fullscreen",
 				 theme_advanced_buttons2 : "forecolor,backcolor,bullist,numlist,underline,justifyfull,outdent,indent,sub,sup,tablecontrols,visualaid,charmap,removeformat",
 				 theme_advanced_buttons3: "",
-				 
+
 				 relative_urls : false,
 
 				 accessibility_warnings : false,
@@ -44,7 +44,7 @@
 
 				 paste_text_sticky : true,
 				 setup : function(ed) {ed.onInit.add(function(ed) {ed.pasteAsPlainText = true;});},
-				
+
 				 theme_advanced_toolbar_location : "top",
 				 theme_advanced_toolbar_align : "left",
 				 //theme_advanced_statusbar_location : "bottom",

@@ -16,11 +16,44 @@
     <div class="col1"><?php echo $form->labelEx($model, 'post_detail') ?></div>
     <div class="col2">
         <?php echo $form->textArea($model, 'post_detail'); ?>
-        <script type="text/javascript">
-        //<![CDATA[
-            CKEDITOR.replace('<?php echo get_class($model)?>[post_detail]');
-        //]]>
-        </script>
+		<script type="text/javascript">
+			tinyMCE.init({
+				 mode:"exact",
+				 elements : "<?php echo get_class($model)?>[post_detail]",
+				 theme:"advanced",
+				 plugins : "paste, autolink,lists,style,layer,table,save,advhr,advimage,advlink,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,syntaxhl",
+
+				 theme_advanced_buttons1 : "bold,italic,underline,formatselect,fontsizeselect,justifyleft,justifycenter,justifyright,justifyfull,bullist,numlist,outdent,indent,image,media",
+				 theme_advanced_buttons2 : "pastetext,pasteword,link,unlink,tablecontrols,charmap,removeformat,fullscreen,syntaxhl",
+				 theme_advanced_buttons3: "",
+				 theme_advanced_blockformats : "p,h2,h3,h4,blockquote,div",
+				 theme_advanced_font_sizes : "8pt,9pt,10pt,11pt,12pt,14pt",
+
+				 remove_linebreaks : false,
+				 extended_valid_elements : "textarea[cols|rows|disabled|name|readonly|class]",
+
+				 relative_urls : false,
+
+				 accessibility_warnings : false,
+				 //accessibility_focus : false,
+
+				 paste_text_use_dialog : true,
+				 paste_auto_cleanup_on_paste : true,
+				 paste_remove_styles: true,
+				 paste_remove_styles_if_webkit: true,
+				 paste_strip_class_attributes: true,
+
+				 paste_text_sticky : true,
+				 setup : function(ed) {ed.onInit.add(function(ed) {ed.pasteAsPlainText = true;});},
+
+				 theme_advanced_toolbar_location : "top",
+				 theme_advanced_toolbar_align : "left",
+				 theme_advanced_statusbar_location : "bottom",
+				 theme_advanced_resizing : true,
+				 width : "100%",
+				 height: "300"
+			 });
+		</script>
     </div>
     <div class="clear space"></div>
     
