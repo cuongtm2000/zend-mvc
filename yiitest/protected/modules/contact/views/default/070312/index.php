@@ -1,5 +1,4 @@
-
-<?php $this->breadcrumbs = array($this->lang[$this->module->id] => LANGURL . '/' . $this->module->id); ?>
+<?php $this->breadcrumbs = array($this->lang['contact']); ?>
 
 <?php if(Yii::app()->user->hasFlash('contactSuccess')): ?>
     <div class="flash-success">

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 20, 2012 at 08:44 AM
+-- Generation Time: Apr 20, 2012 at 10:50 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -125,6 +125,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('logo_width', 300, '', '260312'),
 ('max_image_height', 667, '', '010312'),
 ('max_image_height', 600, '', '070312'),
+('max_image_height', 600, '', '111120'),
 ('max_image_height', 600, '', '130312'),
 ('max_image_height', 700, '', '180412'),
 ('max_image_height', 600, '', '200312'),
@@ -132,6 +133,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('max_image_height', 450, '', '260312'),
 ('max_image_width', 500, '', '010312'),
 ('max_image_width', 700, '', '070312'),
+('max_image_width', 680, '', '111120'),
 ('max_image_width', 650, '', '130312'),
 ('max_image_width', 670, '', '180412'),
 ('max_image_width', 450, '', '200312'),
@@ -139,18 +141,21 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('max_image_width', 600, '', '260312'),
 ('news_cat_height', 89, '', '010312'),
 ('news_cat_height', 100, '', '070312'),
+('news_cat_height', 100, '', '111120'),
 ('news_cat_height', 90, '', '130312'),
 ('news_cat_height', 89, '', '180412'),
 ('news_cat_height', 89, '', '200312'),
 ('news_cat_height', 89, '', '260312'),
 ('news_cat_width', 143, '', '010312'),
 ('news_cat_width', 130, '', '070312'),
+('news_cat_width', 143, '', '111120'),
 ('news_cat_width', 143, '', '130312'),
 ('news_cat_width', 143, '', '180412'),
 ('news_cat_width', 143, '', '200312'),
 ('news_cat_width', 143, '', '260312'),
 ('news_height_thumb', 89, '', '010312'),
 ('news_height_thumb', 89, '', '070312'),
+('news_height_thumb', 100, '', '111120'),
 ('news_height_thumb', 90, '', '130312'),
 ('news_height_thumb', 89, '', '180412'),
 ('news_height_thumb', 89, '', '200312'),
@@ -158,6 +163,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_height_thumb', 89, '', '260312'),
 ('news_num_paging_cat', 8, '', '010312'),
 ('news_num_paging_cat', 10, '', '070312'),
+('news_num_paging_cat', 10, '', '111120'),
 ('news_num_paging_cat', 10, '', '130312'),
 ('news_num_paging_cat', 10, '', '180412'),
 ('news_num_paging_cat', 8, '', '200312'),
@@ -165,12 +171,14 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_cat', 8, '', '260312'),
 ('news_num_paging_hot', 6, '', '010312'),
 ('news_num_paging_hot', 6, '', '070312'),
+('news_num_paging_hot', 6, '', '111120'),
 ('news_num_paging_hot', 6, '', '130312'),
 ('news_num_paging_hot', 6, '', '180412'),
 ('news_num_paging_hot', 5, '', '220312'),
 ('news_num_paging_hot', 6, '', '260312'),
 ('news_num_paging_index', 8, '', '010312'),
 ('news_num_paging_index', 10, '', '070312'),
+('news_num_paging_index', 10, '', '111120'),
 ('news_num_paging_index', 3, '', '130312'),
 ('news_num_paging_index', 10, '', '180412'),
 ('news_num_paging_index', 8, '', '200312'),
@@ -178,6 +186,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_index', 4, '', '260312'),
 ('news_num_paging_new', 6, '', '010312'),
 ('news_num_paging_new', 10, '', '070312'),
+('news_num_paging_new', 6, '', '111120'),
 ('news_num_paging_new', 6, '', '130312'),
 ('news_num_paging_new', 6, '', '180412'),
 ('news_num_paging_new', 4, '', '200312'),
@@ -185,6 +194,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_new', 6, '', '260312'),
 ('news_width_thumb', 143, '', '010312'),
 ('news_width_thumb', 143, '', '070312'),
+('news_width_thumb', 143, '', '111120'),
 ('news_width_thumb', 143, '', '130312'),
 ('news_width_thumb', 143, '', '180412'),
 ('news_width_thumb', 143, '', '200312'),
@@ -200,7 +210,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_cat_height', 160, '', '260312'),
 ('products_cat_width', 115, '', '010312'),
 ('products_cat_width', 150, '', '070312'),
-('products_cat_width', 169, '', '111120'),
+('products_cat_width', 150, '', '111120'),
 ('products_cat_width', 152, '', '130312'),
 ('products_cat_width', 175, '', '180412'),
 ('products_cat_width', 170, '', '200312'),
@@ -216,7 +226,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_height', 400, '', '260312'),
 ('products_height_thumb', 121, '', '010312'),
 ('products_height_thumb', 200, '', '070312'),
-('products_height_thumb', 167, '', '111120'),
+('products_height_thumb', 150, '', '111120'),
 ('products_height_thumb', 121, '', '130312'),
 ('products_height_thumb', 160, '', '180412'),
 ('products_height_thumb', 170, '', '200312'),
@@ -224,6 +234,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_height_thumb', 160, '', '260312'),
 ('products_num_paging_cat', 9, '', '010312'),
 ('products_num_paging_cat', 16, '', '070312'),
+('products_num_paging_cat', 2, '', '111120'),
 ('products_num_paging_cat', 12, '', '130312'),
 ('products_num_paging_cat', 8, '', '180412'),
 ('products_num_paging_cat', 8, '', '200312'),
@@ -231,12 +242,14 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_cat', 8, '', '260312'),
 ('products_num_paging_hot', 3, '', '010312'),
 ('products_num_paging_hot', 8, '', '070312'),
+('products_num_paging_hot', 8, '', '111120'),
 ('products_num_paging_hot', 8, '', '130312'),
 ('products_num_paging_hot', 8, '', '180412'),
 ('products_num_paging_hot', 8, '', '200312'),
 ('products_num_paging_hot', 30, '', '260312'),
 ('products_num_paging_new', 6, '', '010312'),
 ('products_num_paging_new', 8, '', '070312'),
+('products_num_paging_new', 8, '', '111120'),
 ('products_num_paging_new', 8, '', '130312'),
 ('products_num_paging_new', 20, '', '180412'),
 ('products_num_paging_new', 3, '', '200312'),
@@ -244,6 +257,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_new', 8, '', '260312'),
 ('products_num_paging_other', 3, '', '010312'),
 ('products_num_paging_other', 4, '', '070312'),
+('products_num_paging_other', 4, '', '111120'),
 ('products_num_paging_other', 4, '', '130312'),
 ('products_num_paging_other', 4, '', '180412'),
 ('products_num_paging_other', 3, '', '200312'),
@@ -259,7 +273,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_width', 380, '', '260312'),
 ('products_width_thumb', 152, '', '010312'),
 ('products_width_thumb', 150, '', '070312'),
-('products_width_thumb', 167, '', '111120'),
+('products_width_thumb', 150, '', '111120'),
 ('products_width_thumb', 152, '', '130312'),
 ('products_width_thumb', 175, '', '180412'),
 ('products_width_thumb', 170, '', '200312'),
@@ -285,23 +299,27 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_cat_width', 145, '', '260312'),
 ('video_height_thumb', 115, '', '010312'),
 ('video_height_thumb', 160, '', '070312'),
+('video_height_thumb', 169, '', '111120'),
 ('video_height_thumb', 121, '', '130312'),
 ('video_height_thumb', 160, '', '180412'),
 ('video_height_thumb', 150, '', '220312'),
 ('video_num_paging_cat', 4, '', '010312'),
 ('video_num_paging_cat', 8, '', '070312'),
+('video_num_paging_cat', 8, '', '111120'),
 ('video_num_paging_cat', 8, '', '130312'),
 ('video_num_paging_cat', 8, '', '180412'),
 ('video_num_paging_cat', 8, '', '200312'),
 ('video_num_paging_cat', 2, '', '220312'),
 ('video_num_paging_index', 4, '', '010312'),
 ('video_num_paging_index', 8, '', '070312'),
+('video_num_paging_index', 8, '', '111120'),
 ('video_num_paging_index', 8, '', '130312'),
 ('video_num_paging_index', 8, '', '180412'),
 ('video_num_paging_index', 8, '', '200312'),
 ('video_num_paging_index', 2, '', '220312'),
 ('video_width_thumb', 115, '', '010312'),
 ('video_width_thumb', 160, '', '070312'),
+('video_width_thumb', 150, '', '111120'),
 ('video_width_thumb', 152, '', '130312'),
 ('video_width_thumb', 175, '', '180412'),
 ('video_width_thumb', 200, '', '220312');
@@ -433,8 +451,10 @@ INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, 
 ('010312', 'video', 'jquery.prettyPhoto.js', 'javascript'),
 ('070312', 'video', 'prettyPhoto.css', 'css'),
 ('070312', 'video', 'jquery.prettyPhoto.js', 'javascript'),
-('111120', 'products', 'product-detail.css|jquery.fancybox-1.3.1.css', 'css'),
-('111120', 'products', 'jcarousellite.js|contentslider.js|scroller.js|jquery.fancybox-1.3.1.js|lightbox.js', 'javascript'),
+('111120', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
+('111120', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
+('111120', 'video', 'prettyPhoto.css', 'css'),
+('111120', 'video', 'jquery.prettyPhoto.js', 'javascript'),
 ('130312', 'video', 'prettyPhoto.css', 'css'),
 ('130312', 'video', 'jquery.prettyPhoto.js', 'javascript'),
 ('180412', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
@@ -502,54 +522,63 @@ CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
 --
 
 INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
+('about', 'cafe24h'),
 ('about', 'dos'),
 ('about', 'mayphotocopysieuviet'),
 ('about', 'phumyan'),
 ('about', 'thienlonghoi'),
 ('about', 'thoitrang'),
 ('about', 'tinhungphat'),
+('advs', 'cafe24h'),
 ('advs', 'dos'),
 ('advs', 'mayphotocopysieuviet'),
 ('advs', 'phumyan'),
 ('advs', 'thienlonghoi'),
 ('advs', 'thoitrang'),
 ('advs', 'tinhungphat'),
+('banner', 'cafe24h'),
 ('banner', 'dos'),
 ('banner', 'mayphotocopysieuviet'),
 ('banner', 'phumyan'),
 ('banner', 'thienlonghoi'),
 ('banner', 'thoitrang'),
 ('banner', 'tinhungphat'),
+('contact', 'cafe24h'),
 ('contact', 'dos'),
 ('contact', 'mayphotocopysieuviet'),
 ('contact', 'phumyan'),
 ('contact', 'thienlonghoi'),
 ('contact', 'thoitrang'),
 ('contact', 'tinhungphat'),
+('news', 'cafe24h'),
 ('news', 'dos'),
 ('news', 'mayphotocopysieuviet'),
 ('news', 'phumyan'),
 ('news', 'thienlonghoi'),
 ('news', 'thoitrang'),
 ('news', 'tinhungphat'),
+('products', 'cafe24h'),
 ('products', 'dos'),
 ('products', 'mayphotocopysieuviet'),
 ('products', 'phumyan'),
 ('products', 'thienlonghoi'),
 ('products', 'thoitrang'),
 ('products', 'tinhungphat'),
+('services', 'cafe24h'),
 ('services', 'dos'),
 ('services', 'mayphotocopysieuviet'),
 ('services', 'phumyan'),
 ('services', 'thienlonghoi'),
 ('services', 'thoitrang'),
 ('services', 'tinhungphat'),
+('supports', 'cafe24h'),
 ('supports', 'dos'),
 ('supports', 'mayphotocopysieuviet'),
 ('supports', 'phumyan'),
 ('supports', 'thienlonghoi'),
 ('supports', 'thoitrang'),
 ('supports', 'tinhungphat'),
+('video', 'cafe24h'),
 ('video', 'phumyan'),
 ('video', 'thienlonghoi'),
 ('video', 'thoitrang'),
@@ -582,7 +611,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=56 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=59 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
@@ -592,18 +621,21 @@ INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `co
 (6, 'Về Dos.vn', 'Dos.vn about', '<p>\r\n	Kính gửi: <strong>Quý Doanh nghiệp</strong></p>\r\n<p style="margin-left:40px;">\r\n	<strong>DOS</strong> là công ty chuyên nghiệp trong việc <strong>Thiết kế Website</strong>. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng.</p>\r\n<p style="margin-left:40px;">\r\n	Với tiêu chí "Giao diện đẹp, tính năng nhiều, giá thành thấp". Qua 5 năm thiết kế Web, sản phẩm của chúng tôi được các Doanh nghiệp đánh giá cao. Chúng tôi có bề dày kinh nghiệm, có giải pháp và đội ngũ nhân lực tâm huyết để đảm bảo sản phẩm đáp ứng đúng nhu cầu, đem lại hiệu quả, với chi phí phù hợp.</p>\r\n<p style="margin-left:40px;">\r\n	Không ngừng học hỏi và phát triển công nghệ. <strong>DOS</strong> trở thành một công ty thiết kế Web tiên phong về chất lượng, có sản phẩm tiêu biểu, có thương hiệu uy tín trong và ngoài nước.</p>\r\n<p style="margin-left:40px;">\r\n	<strong>DOS</strong> thiết kế và cung cấp giải pháp Web trên đến các đơn vị: <strong>UBND Tân phú</strong>, <strong>SONADEZI</strong>, <strong>BENCO</strong>, <strong>Gạch Ngói Nhị Hiệp</strong>, <strong>An Gia Phú</strong>, <strong>Nội Thất Yến Bình Minh</strong>, <strong>Thuận Thành Glass</strong>, <strong>Thái Sơn</strong>, <strong>Thái Bình An Phú Thịnh...</strong></p>\r\n<p style="margin-left:40px;">\r\n	Tại Việt Nam, Sản phẩm <strong>DOS</strong> được giới thiệu tại các Công ty thiết kế in ấn, ở hầu hết các Trung Tâm tỉnh thành trên toàn quốc .</p>', '<p>\r\n	Kính gửi: Quý Doanh nghiệp<br />\r\n	      <br />\r\n	           DOS là công ty chuyên nghiệp trong việc Thiết kế Website. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng.<br />\r\n	          Với tiêu chí "Giao diện đẹp, tính năng nhiều, giá thành thấp". Qua 5 năm thiết kế Web, sản phẩm của chúng tôi được các Doanh nghiệp đánh giá cao. Chúng tôi có bề dày kinh nghiệm, có giải pháp và đội ngũ nhân lực tâm huyết để đảm bảo sản phẩm đáp ứng đúng nhu cầu, đem lại hiệu quả, với chi phí phù hợp.</p>\r\n<p>\r\n	          Không ngừng học hỏi và phát triển công nghệ. DOS trở thành một công ty thiết kế Web tiên phong về chất lượng, có sản phẩm tiêu biểu, có thương hiệu uy tín trong và ngoài nước.<br />\r\n	          DOS thiết kế và cung cấp giải pháp Web trên đến các đơn vị: UBND Tân phú, SONADEZI, BENCO, Gạch Ngói Nhị Hiệp, An Gia Phú, Nội Thất Yến Bình Minh, Thuận Thành Glass, Thái Sơn, Thái Bình An Phú Thịnh...</p>\r\n<p>\r\n	          Tại Việt Nam, Sản phẩm DOS được giới thiệu tại các Công ty thiết kế in ấn, ở hầu hết các Trung Tâm tỉnh thành trên toàn quốc .</p>', 75, '2012-04-07 02:13:52', 1, 0, NULL, NULL, 've-dos', 'dos-about', 'DOS là công ty chuyên nghiệp trong việc Thiết kế Website. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng', 'DOS là công ty chuyên nghiệp trong việc Thiết kế Website. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng', 1, 'dos'),
 (7, 'Tầm nhìn và sứ mệnh Dos', 'Gioi thieu 2 En', '<p>\r\n	Tầm nhìn và Sứ mệnh của DOS được viết ra ngay từ khi thành lập, xác định lý tưởng, hướng đi lâu dài và những giá trị cơ bản mà mỗi thành viên sáng lập luôn hướng tới.</p>\r\n<p>\r\n	<strong>Tầm nhìn của DOS</strong><br />\r\n	Được công nhận là công ty đứng đầu trong lĩnh vực thiết kế Website. Với giải pháp tích hợp Marketing và Công Nghệ Thông Tin trong việc quảng cáo bán hàng dành riêng cho từng Doanh nghiệp.</p>\r\n<p>\r\n	<strong>Sứ mệnh của DOS</strong><br />\r\n	Mang lại cho Doanh nghiệp một kênh truyền thông nhanh chóng và hiệu quả qua những Website đầy tính sáng tạo.</p>\r\n<p>\r\n	<strong>Các giá trị cơ bản của DOS c</strong>ác giá trị cơ bản là tài sản vô cùng quý báu mà mỗi người thành viên của DOS đều trân trọng giữ gìn:</p>\r\n<ul><li>\r\n		<strong>Làm khách hàng hài lòng</strong>: Tận tuỵ với khách hàng và luôn phấn đấu để đáp ứng tốt nhất những nhu cầu, vượt trên mong đợi của họ.</li>\r\n	<li>\r\n		<strong>Con người là cốt lõi</strong>: Tôn trọng con người, tạo điều kiện cho các thành viên phát triển tối đa tài năng, đóng góp cho tổ chức và được đãi ngộ xứng đáng cả về vật chất và tinh thần.</li>\r\n	<li>\r\n		<strong>Chất lượng tốt nhất</strong>: Đảm bảo chất lượng tốt nhất trong mỗi sản phẩm, mỗi việc làm.</li>\r\n	<li>\r\n		<strong>Đề cao đạo đức kinh doanh</strong>: Mỗi nhân viên là một đại diện của Công ty, có nghĩa vụ tuân thủ đạo đức kinh doanh cao nhất, luôn hợp tác, cởi mở và thân thiện với đồng nghiệp, đóng góp cho cộng đồng và xã hội.</li>\r\n</ul>', '<p>\r\n	NOi dung en</p>', 45, '2012-04-07 02:14:02', 2, 0, NULL, NULL, 'tam-nhin-va-su-menh-dos', 'gioi-thieu-2-en', 'Tầm nhìn và Sứ mệnh của DOS được viết ra ngay từ khi thành lập, xác định lý tưởng, hướng đi lâu dài và những giá trị cơ bản mà mỗi thành viên sáng lập luôn hướng tới', 'Mo ta 2 En', 1, 'dos'),
 (8, 'Lĩnh vực hoạt động', 'Gioi thieu 3 En', '<p>\r\n	<strong>DỊCH VỤ CHUYÊN NGHIỆP</strong>:</p>\r\n<ul><li>\r\n		Thiết kế website</li>\r\n	<li>\r\n		Phương pháp quảng cáo bán hàng trực tuyến</li>\r\n	<li>\r\n		Giải pháp CNTT trọn gói cho Doanh nghiệp</li>\r\n	<li>\r\n		Thương mại điện tử</li>\r\n</ul><p>\r\n	 </p>\r\n<p>\r\n	<strong>SẢN PHẨM VÀ DỊCH VỤ GTGT:</strong></p>\r\n<ul><li>\r\n		Đăng ký tên miền</li>\r\n	<li>\r\n		Cung cấp Hosting</li>\r\n	<li>\r\n		Xử lý hình ảnh nhập liệu cho web</li>\r\n	<li>\r\n		Thiết kế Logo</li>\r\n	<li>\r\n		Thiết Kế Name Card</li>\r\n	<li>\r\n		Thiết kế ấn phầm Quảng cáo theo đơn đặt hàng</li>\r\n</ul><p>\r\n	 </p>\r\n<p>\r\n	<strong>HỖ TRỢ TƯ VẤN MIỄN PHÍ:</strong></p>\r\n<ul><li>\r\n		Thành lập Doanh nghiệp</li>\r\n	<li>\r\n		Quản lý Doanh nghiệp</li>\r\n	<li>\r\n		Tư vấn Marketing và phát triển Doanh nghiệp</li>\r\n	<li>\r\n		Tư vấn và định hướng đào tạo nhân viên bán hàng</li>\r\n	<li>\r\n		Tư vấn phong thủy</li>\r\n</ul>', '<p>\r\n	Noi dung 3 en</p>', 32, '2012-04-07 02:14:12', 3, 0, NULL, NULL, 'linh-vuc-hoat-dong', 'gioi-thieu-3-en', 'Mo ta 3', 'Mo ta 3 En', 1, 'dos'),
-(43, 'Giới thiệu chung', '', '<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong>  <span style="color:#0000ff;font-size:large;">Siêu Việt là Doanh Nghiệp chuyên cung cấp và cho thuê máy văn phòng</span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">- Sản phẩm chính: Máy photocopy, Máy in, Máy fax, Máy scan, Máy vi tính, Máy chiếu.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">- Dịch vụ: cho thuê máy photocopy đa chức năng, đen trắng, màu, bảo hành, bảo trì, sữa chữa.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">Được thành lập vào năm 2003, với bề dày nhiều năm kinh nghiệm Siêu Việt luộn đi tiên phong trong việc đầu tư đổi mới máy văn phòng và luôn cung cấp cho Khách Hàng nhưng loại hình dịch vụ chất lợng cao. Luôn làm hài lòng nhưng Khách Hàng khó tính.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">Tại  Đồng Nai, Siêu Việt là nhà cung cấp cho các Doanh Nghiệp trong và ngoài nước đóng trong các Khu Công Nghiệp như: Biên Hòa 1, Biên Hòa 2, Amata, Loteco, Long Thành, Nhợn Trạch 1-5, Tam Phước, Gò Dầu, Sông Mây, Hố nai 3, Bàu Xéo và các Tỉnh Thành lân cận.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#ff0000;font-size:medium;"><strong>* Với tiêu chí: </strong></span></p>\n<p style="text-align:center;"><span style="font-size:large;"><strong><span style="color:#ff0000;">" LỢI ÍCH CỦA KHÁCH HÀNG LÀ THÀNH QUẢ CỦA CHÚNG TÔI"</span></strong></span></p>\n<p style="text-align:center;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;">Doanh nghiệp Siêu Việt luôn đồng hành cùng sự nghiệp phát triển của Doanh Nghiệp</span></span></strong></span></p>\n<p style="text-align:justify;"> </p>', '', 265, '2012-04-12 01:25:59', 1, 1, '', '', 'gioi-thieu-chung', '', 'Siêu Việt', '', 1, 'mayphotocopysieuviet'),
-(44, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 64, '2012-04-12 01:57:36', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'phumyan'),
+(43, 'Giới thiệu chung', '', '<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong>  <span style="color:#0000ff;font-size:large;">Siêu Việt là Doanh Nghiệp chuyên cung cấp và cho thuê máy văn phòng</span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">- Sản phẩm chính: Máy photocopy, Máy in, Máy fax, Máy scan, Máy vi tính, Máy chiếu.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">- Dịch vụ: cho thuê máy photocopy đa chức năng, đen trắng, màu, bảo hành, bảo trì, sữa chữa.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">Được thành lập vào năm 2003, với bề dày nhiều năm kinh nghiệm Siêu Việt luộn đi tiên phong trong việc đầu tư đổi mới máy văn phòng và luôn cung cấp cho Khách Hàng nhưng loại hình dịch vụ chất lợng cao. Luôn làm hài lòng nhưng Khách Hàng khó tính.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">Tại  Đồng Nai, Siêu Việt là nhà cung cấp cho các Doanh Nghiệp trong và ngoài nước đóng trong các Khu Công Nghiệp như: Biên Hòa 1, Biên Hòa 2, Amata, Loteco, Long Thành, Nhợn Trạch 1-5, Tam Phước, Gò Dầu, Sông Mây, Hố nai 3, Bàu Xéo và các Tỉnh Thành lân cận.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#ff0000;font-size:medium;"><strong>* Với tiêu chí: </strong></span></p>\n<p style="text-align:center;"><span style="font-size:large;"><strong><span style="color:#ff0000;">" LỢI ÍCH CỦA KHÁCH HÀNG LÀ THÀNH QUẢ CỦA CHÚNG TÔI"</span></strong></span></p>\n<p style="text-align:center;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;">Doanh nghiệp Siêu Việt luôn đồng hành cùng sự nghiệp phát triển của Doanh Nghiệp</span></span></strong></span></p>\n<p style="text-align:justify;"> </p>', '', 279, '2012-04-12 01:25:59', 1, 1, '', '', 'gioi-thieu-chung', '', 'Siêu Việt', '', 1, 'mayphotocopysieuviet'),
+(44, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 100, '2012-04-12 01:57:36', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'phumyan'),
 (45, 'Giấy chứng nhận đại lý', '', '<p><img style="margin-left:auto;margin-right:auto;" title="Giấy chung nhan" src="/public/userfiles/image/mayphotocopysieuviet/image/Nho-Chungnhan_HP.jpg" alt="sieu viet" width="450" height="651" /></p>', '', 64, '2012-04-12 02:49:22', 2, 0, '', '', 'giay-chung-nhan-dai-ly', '', '', '', 1, 'mayphotocopysieuviet'),
 (46, 'Giới thiệu chung chung', '', '<p>Giới thiệu chung chung Giới thiệu chung chung  Giới thiệu chung chung</p>', '', 3, '2012-04-13 03:18:30', 2, 0, '', '', 'gioi-thieu-chung-chung', '', 'Giới thiệu chung chung', '', 1, 'phumyan'),
 (47, 'Giới thiệu thị trường nội thất', '', '<p>Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất</p>', '', 8, '2012-04-13 03:19:10', 3, 0, '', '', 'gioi-thieu-thi-truong-noi-that', '', 'Giới thiệu thị trường nội thất', '', 1, 'phumyan'),
 (48, 'Tổng quan vể công ty', '', '<p>Siêu Việt là Doanh nghiệp chuyên cung cấp và cho thuê thiết bị máy văn phòng. Sản phẩm chính: Máy photocopy, máy tính, máy Fax, Máy Scan,.. ngoài ta còn cung cấp sản phẩm và dịch vụ theo đơn đặt hàng của khách hàng.</p>\n<p>Được thành lập vào năm 2002, bề dày kinh nghiệp 10 năm luôn tiên phong trong việc đổi mới máy móc và dịch vụ phụ vụ chất lượng cao luôn làm hoài lòng khách hàng khó tính nhất.</p>\n<p>Tại Đồng Nai, Siêu Việt là nhà cung cấp thiết bị văn phòng cho các Doanh nghiệp trong và ngoài nước như: Sonadezi, KCN AMADA,..</p>\n<p>khẳng định dịch vụ chất lượng Công ty được thành lập với tiêu chí cung cấp sỉ và lẻ tất cả các thiết bị văn phòng cho các đại lý trên khắp Việt Nam .</p>\n<p>Tận dụng và phát huy năng lực, kinh nghiệm trong lĩnh vực thiết bị văn phòng cùng với sự hỗ trợ của các thương hiệu nổi tiếng thế giới như Toshiba, Panasonic, Canon, Ricoh, Konica Minolta, Xerox... và trong lĩnh vực tin học như Intel, Seagate, Samsung, Asus, Dell, Ibm, Acer ...chúng tôi mong muốn và quyết tâm để trờ thành nhà cung cấp lớn và uy tín nhất trong lĩnh vực văn phòng tại Việt Nam.</p>\n<p>Dịch vụ hỗ trợ khách hàng: Chúng tôi có một đội ngũ kỹ sư có chuyên môn cao, kỹ thuật viên uy tín lâu năm kinh nghiệm trong các lĩnh vực:</p>\n<p>- Tư vấn, thực hiện các Giải Pháp về Máy Photocopy, Máy Fax, Máy In ...</p>\n<p>- Kinh doanh và cho thuê Máy Văn Phòng</p>\n<p>- Máy Photocopy in kỹ thuật số khổ lớn A0, Máy In Siêu Tốc 130 bản/phút</p>\n<p>- Máy in Công nghiệp, Máy in Màu Offset</p>\n<p>- Hỗ trợ kỹ thuật cho các dịch vụ Photocopy</p>\n<p>- Phân phối Sỉ &amp; Lẻ Máy Photocopy hàng nhập khẩu</p>\n<p>- Cung cấp Mực, Linh Kiện, Vật Tư với giá ưu đãi</p>\n<p>- Nhận đào tạo Kỹ Thuật Viên sửa chữa máy Photocopy, In, Fax</p>\n<p>Siêu Việt đáp ứng mọi nhu cầu, lựa chọn từ quý khách.</p>', '', 11, '2012-04-16 01:09:47', 3, 0, '', '', 'tong-quan-ve-cong-ty', '', '', '', 1, 'mayphotocopysieuviet'),
-(50, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 162, '2012-04-19 01:22:04', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'thoitrang'),
+(50, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 164, '2012-04-19 01:22:04', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'thoitrang'),
 (51, 'Giới thiệu chung chung', '', '<p>Giới thiệu chung chung Giới thiệu chung chung  Giới thiệu chung chung</p>', '', 11, '2012-04-19 01:22:04', 2, 0, '', '', 'gioi-thieu-chung-chung', '', 'Giới thiệu chung chung', '', 1, 'thoitrang'),
 (52, 'Giới thiệu thị trường nội thất', '', '<p>Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất</p>', '', 32, '2012-04-19 01:22:04', 3, 0, '', '', 'gioi-thieu-thi-truong-noi-that', '', 'Giới thiệu thị trường nội thất', '', 1, 'thoitrang'),
-(53, 'Giới thiệu sơ lược', '', '<p>Thiên Long Hội  chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn carbp2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn carbp2. Ngoài ra, Thiên Long Hộiluôn đáp ứng các loại ván ép, keo theo Đơn Đặt Hàng.</p>\r\n<p>Được thành lập năm 1999, có 5 xưởng sản xuất, bề dày kinh nghiệm 12 năm luôn tiên phong đầu tư khoa học, nghiên cứu phát triển sản phẩm, có máy móc thiết bị loại tốt và đội ngũ nhân lực tâm huyết, có trình độ chuyên môn cao, thạo việc để sản xuất sản phẩm có tính năng tốt, bền bỉ, tinh xảo, giá thành thấp đồng thời đáp ứng được đơn hàng số lượng lớn.</p>', '', 277, '2012-04-19 06:46:54', 1, 1, '', '', 'gioi-thieu-so-luoc', '', 'Thiên Long Hội  chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn carbp2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn carbp2. Ngoài ra, Thiên Long Hộiluôn đáp ứng các loại ván ép, keo theo Đơn Đặt Hàng.', '', 1, 'thienlonghoi'),
+(53, 'Giới thiệu sơ lược', '', '<p>Thiên Long Hội  chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn carbp2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn carbp2. Ngoài ra, Thiên Long Hộiluôn đáp ứng các loại ván ép, keo theo Đơn Đặt Hàng.</p>\r\n<p>Được thành lập năm 1999, có 5 xưởng sản xuất, bề dày kinh nghiệm 12 năm luôn tiên phong đầu tư khoa học, nghiên cứu phát triển sản phẩm, có máy móc thiết bị loại tốt và đội ngũ nhân lực tâm huyết, có trình độ chuyên môn cao, thạo việc để sản xuất sản phẩm có tính năng tốt, bền bỉ, tinh xảo, giá thành thấp đồng thời đáp ứng được đơn hàng số lượng lớn.</p>', '', 293, '2012-04-19 06:46:54', 1, 1, '', '', 'gioi-thieu-so-luoc', '', 'Thiên Long Hội  chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn carbp2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn carbp2. Ngoài ra, Thiên Long Hộiluôn đáp ứng các loại ván ép, keo theo Đơn Đặt Hàng.', '', 1, 'thienlonghoi'),
 (54, 'Giới thiệu chung chung', '', '<p>1. Địa chỉ trụ sở chính:</p>\r\n<p>Văn phòng: 23 Núi Thành - TP.Đà Nẵng</p>\r\n<p>Điện thoại: 0511.3634345 - 3626077 - 3626099 - 3601558 - 3601559. Fax: 0511.3634345</p>\r\n<p>Email: gialinh@begili.com Website: www.begili.com</p>\r\n<ul><li>2. Nhà máy:</li>\r\n<li>Địa chỉ: Lô 4-5 Cụm Công nghiệp Đại Hiệp, Đại Lộc, Quảng Nam.</li>\r\n<li>Điện thoại: 0510.3762767 Fax: 0510.3762769</li>\r\n<li>3. Quá trình hình thành và phát triển:</li>\r\n</ul><p>Công ty TNHH Gia Linh là đơn vị thành lập theo hình thức Công ty trách nhiệm hữu hạn và hoạt đông theo luật doanh nghiệp được Quốc Hội Nước Cộng Hoà Xã Hội Chủ Nghĩa Việt Nam Khoá X thông qua ngày 12/6/1999 và các quy định khác của pháp luật Nhà nước Việt Nam. Là đơn vị chuyên sản xuất và cung cấp các thiết bị đồ gỗ nội - ngoại thất cao cấp, kinh doanh khách sạn, nhà hàng và sản xuất máy điều hoà không khí mang thương hiệu Begili.</p>\r\n<p>Trải qua thời gian, cùng với sự lớn mạnh không ngừng cả về chất và lượng, do vậy Công ty TNHH Gia Linh đã đạt được những thành tựu to lớn. Đặc biệt, với đội ngũ cán bộ kỹ thuật, kỹ sư dày dạn kinh nghiệm trong việc tổ chức quản lý thi công, điều hành sản xuất, đội ngũ cán bộ quản lý nhạy bén, đội ngũ nhân viên với bề dày kinh nghiệm trong lĩnh vực mộc máy và được bổ sung thêm bởi lớp nhân viên trẻ có sức sáng tạo, nhiệt huyết cao, năng động đã góp phần tạo nên sự lớn mạnh của Công ty trong môi trường cạnh tranh ngày càng khốc liệt.</p>\r\n<p>Công ty áp dụng công nghệ máy móc hiện đại, với sự giám sát chặt chẽ của các kỹ thuật viên trong Công ty vì vậy sản phẩm đã đạt đến đỉnh cao của sự hoàn hảo, tinh tế và đa dạng về chủng loại.</p>\r\n<p>Mục đích kinh doanh của Công ty là tạo dựng trở thành thương hiệu uy tín và in sâu trong tâm trí của khách hàng. Qua đó góp phần tạo cho nhân viên Công ty nói riêng có một cuộc sống đảm bảo, ổn định và góp sức xây dựng một đất nước Việt Nam nói chung ngày càng vững mạnh và phồn vinh.</p>\r\n<p>Phương châm kinh doanh của Công ty là mong muốn đem lại cho quý khách sự hài lòng và thỏa mãn về chất lượng sản phẩm mang thương hiệu Begili .</p>', '', 8, '2012-04-19 06:46:54', 2, 0, '', '', 'gioi-thieu-chung-chung', '', '1. Địa chỉ trụ sở chính:\r\nVăn phòng: 23 Núi Thành - TP.Đà Nẵng\r\nĐiện thoại: 0511.3634345 - 3626077 - 3626099 - 3601558 - 3601559. Fax: 0511.3634345\r\nEmail: gialinh@begili.com Website: www.begili.com', '', 1, 'thienlonghoi'),
-(55, 'Công trình đã thực hiện', '', '<p><strong>1.Một số hình ảnh 2 chi nhánh SCB tại Đà Nẵng</strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/GLSCB04.jpg" alt="" width="350" height="300" /></p>\r\n<p style="text-align:left;"><strong>2.Các công trình tiêu biểu:</strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/nhaconam.jpg" alt="" width="650" height="487" /></p>\r\n<p style="text-align:center;"><strong><span style="color:#0000ff;">Nhà tư nhân</span></strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/sunriver.JPG" alt="" width="450" height="600" /></p>\r\n<p style="text-align:center;"><span style="color:#0000ff;"><strong>Khách sạn SUN RIVER</strong></span></p>\r\n<p style="text-align:left;"> </p>', '', 65, '2012-04-19 06:46:54', 3, 0, '', '', 'cong-trinh-da-thuc-hien', '', 'Công trình đã thực hiện', '', 1, 'thienlonghoi');
+(55, 'Công trình đã thực hiện', '', '<p><strong>1.Một số hình ảnh 2 chi nhánh SCB tại Đà Nẵng</strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/GLSCB04.jpg" alt="" width="350" height="300" /></p>\r\n<p style="text-align:left;"><strong>2.Các công trình tiêu biểu:</strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/nhaconam.jpg" alt="" width="650" height="487" /></p>\r\n<p style="text-align:center;"><strong><span style="color:#0000ff;">Nhà tư nhân</span></strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/sunriver.JPG" alt="" width="450" height="600" /></p>\r\n<p style="text-align:center;"><span style="color:#0000ff;"><strong>Khách sạn SUN RIVER</strong></span></p>\r\n<p style="text-align:left;"> </p>', '', 67, '2012-04-19 06:46:54', 3, 0, '', '', 'cong-trinh-da-thuc-hien', '', 'Công trình đã thực hiện', '', 1, 'thienlonghoi'),
+(56, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 167, '2012-04-20 06:34:17', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'cafe24h'),
+(57, 'Giới thiệu chung chung', '', '<p>Giới thiệu chung chung Giới thiệu chung chung  Giới thiệu chung chung</p>\r\n<p>Giới thiệu chung chung Giới thiệu chung chung Giới thiệu chung chung</p>\r\n<p>Giới thiệu chung chung Giới thiệu chung chung Giới thiệu chung chung</p>\r\n<p>Giới thiệu chung chung Giới thiệu chung chung Giới thiệu chung chung</p>', '', 13, '2012-04-20 06:34:17', 2, 0, '', '', 'gioi-thieu-chung-chung', '', 'Giới thiệu chung chung', '', 1, 'cafe24h'),
+(58, 'Giới thiệu thị trường nội thất', '', '<p>Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất</p>', '', 21, '2012-04-20 06:34:17', 3, 0, '', '', 'gioi-thieu-thi-truong-noi-that', '', 'Giới thiệu thị trường nội thất', '', 1, 'cafe24h');
 
 -- --------------------------------------------------------
 
@@ -628,7 +660,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
 
 --
 -- Dumping data for table `dos_module_advs`
@@ -649,7 +681,10 @@ INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `ur
 (18, 'Pa nội thất', '', 'pa-noi-that.jpg', 'http://dantri.com.vn', '2012-04-19 01:22:05', '2012-04-12 16:00:00', '2012-04-26 16:00:00', 0, 3, 'right', '_bank', 1, 'thoitrang'),
 (19, 'Quảng cáo', '', 'quang-cao.jpg', 'http://phumyan.dos.vn/', '2012-04-19 06:46:55', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 1, 'left', '_bank', 1, 'thienlonghoi'),
 (20, 'Quảng cáo 2', '', 'quang-cao-2.jpg', 'http://phumyan.dos.vn/', '2012-04-19 06:46:55', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 2, 'left', '_bank', 1, 'thienlonghoi'),
-(21, 'Pa nội thất', '', 'pa-noi-that.jpg', 'http://dantri.com.vn', '2012-04-19 06:46:55', '2012-04-12 16:00:00', '2012-04-26 16:00:00', 0, 3, 'right', '_bank', 1, 'thienlonghoi');
+(21, 'Pa nội thất', '', 'pa-noi-that.jpg', 'http://dantri.com.vn', '2012-04-19 06:46:55', '2012-04-12 16:00:00', '2012-04-26 16:00:00', 0, 3, 'right', '_bank', 1, 'thienlonghoi'),
+(22, 'Quảng cáo', '', 'quang-cao.jpg', 'http://phumyan.dos.vn/', '2012-04-20 06:34:17', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 1, 'left', '_bank', 1, 'cafe24h'),
+(23, 'Quảng cáo 2', '', 'quang-cao-2.jpg', 'http://phumyan.dos.vn/', '2012-04-20 06:34:17', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 2, 'left', '_bank', 1, 'cafe24h'),
+(24, 'Pa nội thất', '', 'pa-noi-that.jpg', 'http://dantri.com.vn', '2012-04-20 06:34:17', '2012-04-12 16:00:00', '2012-04-26 16:00:00', 0, 3, 'right', '_bank', 1, 'cafe24h');
 
 -- --------------------------------------------------------
 
@@ -670,7 +705,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=95 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=126 ;
 
 --
 -- Dumping data for table `dos_module_banners`
@@ -753,7 +788,26 @@ INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `ba
 (79, '2012-04-19 06:46:55', 'Banner 15', 'banner-15.jpg', '', 17, 'banners', 'contact', 1, 'thienlonghoi'),
 (80, '2012-04-19 06:46:55', 'Banner 16', 'banner-16.jpg', '', 18, 'banners', 'video', 1, 'thienlonghoi'),
 (81, '2012-04-19 06:46:55', 'Banner 17', 'banner-17.jpg', '', 19, 'banners', 'video', 1, 'thienlonghoi'),
-(94, '2012-04-19 07:35:16', 'Logo', 'logo.gif', 'http://thienlonghoi.dos.vn/', 20, 'logo', 'default', 1, 'thienlonghoi');
+(94, '2012-04-19 07:35:16', 'Logo', 'logo.gif', 'http://thienlonghoi.dos.vn/', 20, 'logo', 'default', 1, 'thienlonghoi'),
+(95, '2012-04-20 06:34:17', 'Logo', 'logo.png', '', 1, 'logo', 'default', 0, 'cafe24h'),
+(96, '2012-04-20 06:34:17', 'Banner', 'banner.jpg', '', 2, 'banners', 'default', 1, 'cafe24h'),
+(97, '2012-04-20 06:34:17', 'Banner 1', 'banner-1.jpg', '', 3, 'banners', 'default', 1, 'cafe24h'),
+(98, '2012-04-20 06:34:17', 'Banner 2', 'banner-2.jpg', '', 4, 'banners', 'default', 1, 'cafe24h'),
+(99, '2012-04-20 06:34:17', 'Banner 3', 'banner-3.jpg', '', 5, 'banners', 'default', 1, 'cafe24h'),
+(100, '2012-04-20 06:34:17', 'Banner 4', 'banner-4.jpg', '', 6, 'banners', 'about', 0, 'cafe24h'),
+(101, '2012-04-20 06:34:17', 'Banner 5', 'banner-5.jpg', '', 7, 'banners', 'about', 0, 'cafe24h'),
+(102, '2012-04-20 06:34:17', 'Banner 6', 'banner-6.jpg', '', 8, 'banners', 'products', 0, 'cafe24h'),
+(103, '2012-04-20 06:34:17', 'Banner 7', 'banner-7.jpg', '', 9, 'banners', 'products', 0, 'cafe24h'),
+(104, '2012-04-20 06:34:17', 'Banner 8', 'banner-8.jpg', '', 10, 'banners', 'products', 0, 'cafe24h'),
+(105, '2012-04-20 06:34:17', 'Banner 9', 'banner-86.jpg', '', 11, 'banners', 'news', 0, 'cafe24h'),
+(106, '2012-04-20 06:34:17', 'Banner 10', 'banner-10.jpg', '', 12, 'banners', 'news', 0, 'cafe24h'),
+(107, '2012-04-20 06:34:17', 'Banner 11', 'banner-11.jpg', '', 13, 'banners', 'news', 0, 'cafe24h'),
+(108, '2012-04-20 06:34:17', 'Banner 12', 'banner-12.jpg', '', 14, 'banners', 'services', 0, 'cafe24h'),
+(109, '2012-04-20 06:34:17', 'Banner 13', 'banner-13.jpg', '', 15, 'banners', 'services', 0, 'cafe24h'),
+(110, '2012-04-20 06:34:17', 'Banner 14', 'banner-14.jpg', '', 16, 'banners', 'contact', 0, 'cafe24h'),
+(111, '2012-04-20 06:34:17', 'Banner 15', 'banner-15.jpg', '', 17, 'banners', 'contact', 0, 'cafe24h'),
+(112, '2012-04-20 06:34:17', 'Banner 16', 'banner-16.jpg', '', 18, 'banners', 'video', 0, 'cafe24h'),
+(113, '2012-04-20 06:34:17', 'Banner 17', 'banner-17.jpg', '', 19, 'banners', 'video', 0, 'cafe24h');
 
 -- --------------------------------------------------------
 
@@ -779,7 +833,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_contacts_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `dos_module_contacts`
@@ -789,7 +843,9 @@ INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `
 (8, 'Liên hệ với chúng tôi', '', '<p><span style="color:#008000;font-size:medium;"><strong>DNTN SIÊU VIỆT</strong></span></p>\n<p>3A/1 Đoàn Văn Cự, P. Tam Hiệp, TP. Biên Hòa, Tỉnh Đồng Nai</p>\n<p>Điện thoại: 061. 629 0909 - 061. 3914 541</p>\n<p>Fax: 061. 629 0819</p>\n<p>Hotline: 0937 107 888 - Mr. Nguyên - Phụ trách Kinh doanh.</p>\n<p>Email: nguyensieuviet@yahoo.com.vn</p>\n<p>Website: www.mayphotocopysieuviet.com</p>', '', '2012-04-12 02:03:01', 1, 0, 0, 'lien-he-voi-chung-toi', '', '', '', '1', 'mayphotocopysieuviet'),
 (9, 'Liên hệ', '', '<p>0937.107 888 (Mr. Nguyên)</p>', '', '2012-04-12 02:03:32', 2, 0, 1, 'lien-he', '', '', '', '1', 'mayphotocopysieuviet'),
 (11, 'Liên hệ với chúng tôi', '', '<p>Địa chỉ:<br />Shop Quần Áo Rẻ Đẹp - Online Shop<br />Địa chỉ: 222 Nguyễn Thái Sơn, P.4, Quận Gò Vấp, Tp.HCM.<br />Email: kinhdoanh@quanaoredep.com, tuah1lz0@yahoo.com, tuantang.lf@gmail.comĐiện thoại:<br />093 -736-9468, 099-621-2889</p>', '', '2012-04-19 02:12:28', 1, 0, 0, 'lien-he-voi-chung-toi', '', 'Địa chỉ:\r\nShop Quần Áo Rẻ Đẹp - Online Shop\r\nĐịa chỉ: 222 Nguyễn Thái Sơn, P.4, Quận Gò Vấp, Tp.HCM.\r\nEmail: kinhdoanh@quanaoredep.com, tuah1lz0@yahoo.com, tuantang.lf@gmail.comĐiện thoại:\r\n093 -736-9468, 099-621-2889', '', '1', 'thoitrang'),
-(12, 'Liên hệ với chúng tôi để được phục vụ nhiệt tình', '', '<p>CÔNG TY TNHH THIÊN LONG HỘI</p>\r\n<p>Nhà sản xuất đồ gỗ nội - ngoại thất cao cấp</p>\r\n<p>Nhà máy<br />- Địa chỉ: Lô 4-5 Cụm công nghiệp Đại Hiệp - Đại Lộc - Quảng Nam</p>\r\n<p>Văn phòng:</p>\r\n<p>- Địa chỉ: 23 Núi Thành - TP.Đà Nẵng<br />- Điện thoại: 0511.3634345 - 3626077 - 3626099. Fax: 0511.3634345</p>\r\n<p>- Website: www.thienlonghoi.com </p>\r\n<p>Cảm ơn quý khách đã ghé thăm website của chúng tôi. Hy vọng sự nhiệt tình của chúng tôi sẽ làm quý khách hài lòng.</p>', '', '2012-04-19 08:50:17', 1, 0, 0, 'lien-he-voi-chung-toi-de-duoc-phuc-vu-nhiet-tinh', '', 'CÔNG TY TNHH THIÊN LONG HỘI\r\n\r\nNhà sản xuất đồ gỗ nội - ngoại thất cao cấp\r\n\r\nNhà máy\r\n- Địa chỉ: Lô 4-5 Cụm công nghiệp Đại Hiệp - Đại Lộc - Quảng Nam\r\nVăn phòng:\r\n- Địa chỉ: 23 Núi Thành - TP.Đà Nẵng\r\n- Điện thoại: 0511.3634345', '', '1', 'thienlonghoi');
+(12, 'Liên hệ với chúng tôi để được phục vụ nhiệt tình', '', '<p>CÔNG TY TNHH THIÊN LONG HỘI</p>\r\n<p>Nhà sản xuất đồ gỗ nội - ngoại thất cao cấp</p>\r\n<p>Nhà máy<br />- Địa chỉ: Lô 4-5 Cụm công nghiệp Đại Hiệp - Đại Lộc - Quảng Nam</p>\r\n<p>Văn phòng:</p>\r\n<p>- Địa chỉ: 23 Núi Thành - TP.Đà Nẵng<br />- Điện thoại: 0511.3634345 - 3626077 - 3626099. Fax: 0511.3634345</p>\r\n<p>- Website: www.thienlonghoi.com </p>\r\n<p>Cảm ơn quý khách đã ghé thăm website của chúng tôi. Hy vọng sự nhiệt tình của chúng tôi sẽ làm quý khách hài lòng.</p>', '', '2012-04-19 08:50:17', 1, 0, 0, 'lien-he-voi-chung-toi-de-duoc-phuc-vu-nhiet-tinh', '', 'CÔNG TY TNHH THIÊN LONG HỘI\r\n\r\nNhà sản xuất đồ gỗ nội - ngoại thất cao cấp\r\n\r\nNhà máy\r\n- Địa chỉ: Lô 4-5 Cụm công nghiệp Đại Hiệp - Đại Lộc - Quảng Nam\r\nVăn phòng:\r\n- Địa chỉ: 23 Núi Thành - TP.Đà Nẵng\r\n- Điện thoại: 0511.3634345', '', '1', 'thienlonghoi'),
+(13, 'Liên hệ với chúng tôi', '', '<p>Địa chỉ: 365 Tôn Đức Thắng, Hồ Chí Minh</p>', '', '2012-04-20 06:16:11', 1, 0, 0, 'lien-he-voi-chung-toi', '', 'Địa chỉ: 365 Tôn Đức Thắng, Hồ Chí Minh', '', '1', 'tinhungphat'),
+(14, 'Liên hệ với chúng tôi để được phục vụ nhiệt tình', '', '<p>Liên hệ với chúng tôi để được phục vụ nhiệt tình Liên hệ với chúng tôi để được phục vụ nhiệt tình Liên hệ với chúng tôi để được phục vụ nhiệt tình Liên hệ với chúng tôi để được phục vụ nhiệt tình Liên hệ với chúng tôi để được phục vụ nhiệt tình</p>\r\n<p>Liên hệ với chúng tôi để được phục vụ nhiệt tình</p>\r\n<p>Liên hệ với chúng tôi để được phục vụ nhiệt tình</p>\r\n<p>Liên hệ với chúng tôi để được phục vụ nhiệt tình</p>', '', '2012-04-20 07:35:33', 1, 0, 0, 'lien-he-voi-chung-toi-de-duoc-phuc-vu-nhiet-tinh', '', 'Liên hệ với chúng tôi để được phục vụ nhiệt tình', '', '1', 'cafe24h');
 
 -- --------------------------------------------------------
 
@@ -854,7 +910,14 @@ INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `
 ('Dịch vụ', NULL, 'services', NULL, 4, NULL, NULL, NULL, NULL, 'thienlonghoi'),
 ('Tin tức & sự kiện', NULL, 'news', NULL, 5, NULL, NULL, NULL, NULL, 'thienlonghoi'),
 ('Video', NULL, 'video', NULL, 6, NULL, NULL, NULL, NULL, 'thienlonghoi'),
-('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'thienlonghoi');
+('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'thienlonghoi'),
+('Trang chủ', NULL, 'default', NULL, 1, NULL, NULL, NULL, NULL, 'cafe24h'),
+('Giới thiệu', NULL, 'about', NULL, 2, NULL, NULL, NULL, NULL, 'cafe24h'),
+('Sản phẩm', NULL, 'products', NULL, 3, NULL, NULL, NULL, NULL, 'cafe24h'),
+('Dịch vụ', NULL, 'services', NULL, 4, NULL, NULL, NULL, NULL, 'cafe24h'),
+('Tin tức & sự kiện', NULL, 'news', NULL, 5, NULL, NULL, NULL, NULL, 'cafe24h'),
+('Video', NULL, 'video', NULL, 6, NULL, NULL, NULL, NULL, 'cafe24h'),
+('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'cafe24h');
 
 -- --------------------------------------------------------
 
@@ -885,7 +948,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
 
 --
 -- Dumping data for table `dos_module_news`
@@ -905,7 +968,9 @@ INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic
 (23, '6 mẹo chọn ghế sofa như ý', '', '2012-04-19 06:46:55', '6-meo-chon-ghe-sofa-hoan-hao.jpg', '<p>Việc chọn một bộ sofa dường như không phải là một công việc dễ dàng khi phong cách, hình dạng, màu sắc, và giá cả của các bộ sofa này rất đa dạng.</p>', '', '<p>Để tiết kiệm thời gian, tiền bạc và công sức, bạn có thể tham khảo một số mẹo sau trước khi lựa chọn một bộ sofa phù hợp cho không gian nhà.</p>\r\n<p>1. Xác định kích thước</p>\r\n<p>Nếu phòng khách nhà bạn có diện tích lớn, bạn cần quyết định xem bạn muốn kê bao nhiêu chiếc ghế. Bạn có muốn dùng đi-văng hay ghế bành? Bàn nhỏ kiểu bàn cà phê liệu có cần thiết cho không gian nhà bạn? Nếu câu trả lời là có thì một bộ sofa đơn giản, hình chữ L có lẽ là lựa chọn phù hợp nhất. Trong trường hợp bạn muốn bộ sofa là điểm nhấn của phòng khách thì bạn cần đến một chiếc đi-văng đủ lớn và nhiều chỗ ngồi.</p>\r\n<p>Chú ý đến kích thước ghế</p>\r\n<p>Nếu không gian nhà bạn khiêm tốn, thì hẳn là bạn cần một chiếc trường kỷ nhỏ hơn.</p>\r\n<p>2. Quyết định hướng kê sofa</p>\r\n<p>Bạn cần định hình trước sofa sẽ được sắp xếp thế nào? Kê sofa để xem TV, để gia đình quây quần tụ họp, chơi trò chơi? Bạn có thể kê sofa tạo thành vòng tròn, hoặc nửa vòng tròn, lấy bàn làm trung tâm</p>', '', '6-meo-chon-ghe-sofa-nhu-y', '', 'Chú ý đến kích thước ghế\r\n\r\nNếu không gian nhà bạn khiêm tốn, thì hẳn là bạn cần một chiếc trường kỷ nhỏ hơn.\r\n\r\n2. Quyết định hướng kê sofa', '', 0, 1, 1, '', '', 1, 18),
 (24, 'Căn hộ nhỏ mà không gian không nhỏ', '', '2012-04-19 06:46:55', 'can-ho-nho-ma-khong-nho.jpg', '<p style="text-align:left;">Tuy chỉ có diện tích 35 m2 nhưng ngôi nhà nhỏ này vẫn rất thoáng đãng, đầy đủ tiện nghi và đẹp mắt nhờ cách thiết kế, bố trí sáng tạo như bậc cầu thang kiêm nơi để quần áo…</p>', '', '<p>Tuy chỉ có diện tích 35 m2 nhưng ngôi nhà nhỏ này vẫn rất thoáng đãng, đầy đủ tiện nghi và đẹp mắt nhờ cách thiết kế, bố trí sáng tạo như bậc cầu thang kiêm nơi để quần áo…</p>\r\n<p>Phòng khách nhỏ bố trí những đồ vật đơn giản như salon chữ L, bàn gỗ, TV treo tường..</p>\r\n<p>fggggdgfdgfgfdgfgf</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/phumyan/image/can-ho-3.jpg" alt="" width="480" height="468" /></p>\r\n<p style="text-align:center;">dgfgfggfdgfdg</p>\r\n<p style="text-align:center;">ggffgfgdf</p>\r\n<p style="text-align:center;"> <img src="/public/userfiles/image/phumyan/image/giuong.jpg" alt="" width="200" height="135" /></p>', '', 'can-ho-nho-ma-khong-gian-khong-nho', '', '', '', 0, 2, 1, '', '', 1, 18),
 (26, 'Cách bảo quản đồ gỗ', '', '2012-04-19 06:56:27', '', '<p>Cách bảo quản đồ gỗ</p>\r\n<p>Gỗ là loại vật liệu được sử dụng để chế tạo rất nhiều vật dụng, trang trí nội thất... Do tính chất của gỗ nên việc sử dụng và bảo quản đúng cách sẽ giúp cho các vật dụng được chế tạo bằng gỗ luôn được mới đẹp và không bị hư hỏng.</p>', '', '<p>Gỗ là loại vật liệu được sử dụng để chế tạo rất nhiều vật dụng, trang trí nội thất... Do tính chất của gỗ nên việc sử dụng và bảo quản đúng cách sẽ giúp cho các vật dụng được chế tạo bằng gỗ luôn được mới đẹp và không bị hư hỏng.</p>\r\n<p>Sau đây là các cách bảo quản đồ gỗ:</p>\r\n<p>Cách lau chùi ván bọc tường</p>\r\n<p>Vách ván nhà bạn có sơn vẽ đủ màu, lâu ngày bị vàng và hoen ố, bạn hãy dùng nước trà tàu tẩm vào khăn, lau mạnh lên tường ván ấy là sạch sẽ ngay.</p>\r\n<p>Cách làm sáng lại lớp vecni trên gỗ</p>\r\n<p>Lớp vẹc ni trên gỗ tuy ít bám bụi, nhưng nếu ít săn sóc, chúng cũng bị lu mờ, kém bóng loáng. Muốn chúng bóng loáng như mới, bạn có thể dùng một ít sữa lau lên lớp vecni và để cho khô. Sau đó, dùng bàn chải nhúng nước lã cọ sạch. Với phương pháp này, vecni sẽ cứng và bóng</p>\r\n<p>Tẩy những vết dính lâu ngày trên đồ gỗ</p>\r\n<p>Trên đồ gỗ thường có những vết dơ do sự vô ý gây ra. Nếu để lâu, các vết dơ này rất khó chùi rửa. Muốn làm mất những dấu vết này đi, bạn hãy cho mấy giọt dầu ăn vào một chút sáp ong trắng, đem chưng cách thủy cho sáp ong chảy ra. Đen bôi thứ sáp ấy lên chỗ dơ rồi lấy vải chà thật mạnh.</p>\r\n<p>Cách chùi đồ gỗ bị giống ruồi làm dơ bẩn</p>\r\n<p>Muốn làm mất những vết dơ bẩn do giống ruồi gây ra trên đồ gỗ, bạn lấy bột (nếp, gạo, hay mì ...) trộn với chút dầu ăn đánh cho thật quánh, thoa đều bột lên chỗ dơ rồi lấy giẻ chùi cho sạch. Sau cùng, rửa kỹ bằng nước trong và đánh bóng.</p>\r\n<p>Cách tẩy vết dơ bám lâu ngày trên gỗ trơn</p>\r\n<p>Muốn làm sạch những vết dơ bám trên những vật dụng bằng gỗ trơn, không có đánh vẹcni, đầu tiên, bạn hãy pha một thứ nước để lau chùi theo công thức:</p>\r\n<p>10gam muối + 90 gam nước tẩy (soude de caustique) + 1 lít nước</p>\r\n<p>Sau đó, bạn lấy một cái chổi bằng bẹ dừa thấm vào nước này mà quét lên các đồ dùng bằng gỗ trơn đó. Để một lúc lâu, bạn rửa lại bằng nước lã và lau khô bằng khăn mềm và sạch.</p>\r\n<p>Cách làm mới lại những vật dụng nhỏ bằng gỗ</p>\r\n<p>Muốn cho những vật dụng bằng gỗ nhỏ của bạn được bóng loáng như mới, bạn hãy lấy bông gòn thấm dầu thông (essence de térébenthine) lau lên thật đều. Sau đó, bạn đợi cho khô và đánh bóng lại bằng nỉ sạch.</p>\r\n<p>Làm mất các vết dộp trắng trên bàn gỗ có đánh vecni</p>\r\n<p>Bàn hay đi-văng bị nước nóng làm dộp trắng trên mặt gỗ có đánh vecni, bạn hãy dùng vải có tẩm dầu paraffine chà nhẹ lên chỗ dộp. Để một lúc lâu rồi bạn dùng dầu thông đánh lên và dùng vải thường đánh bóng.</p>\r\n<p>Cách lấy những khe nứt trên sàn gỗ</p>\r\n<p>Muốn lấy kín những khe nứt hoặc kẽ hở trên sàn gỗ, bạn hãy lấy keo lỏng trộn với mạt cưa đã rây nhuyễn. Bạn nhớ trộn cho thật đều, thật nhuyễn, rồi bạn đem chưng lên cho nóng, đoạn đem trét vào các chỗ hở và miết cho thật bằng mặt.</p>\r\n<p>Nếu sàn gỗ có đánh vecni, bạn phải lấy vecni đánh lên các chỗ đã được trét kín cho tiệp màu.</p>', '', 'cach-bao-quan-do-go', '', 'Gỗ là loại vật liệu được sử dụng để chế tạo rất nhiều vật dụng, trang trí nội thất... Do tính chất của gỗ nên việc sử dụng và bảo quản đúng cách sẽ giúp cho các vật dụng được chế tạo bằng gỗ luôn được mới đẹp và không bị hư hỏng.', '', 0, 3, 0, NULL, NULL, 1, 18),
-(27, 'Những xu hướng mới tại thị trường đồ gỗ nội thất nhà bếp Hàn Quốc.', '', '2012-04-19 06:58:51', 'nhung-xu-huong-moi-tai-thi-truong-do-go-noi-that-nha-bep-han-quoc-.jpg', '<p>Tại Hàn Quốc một bộ phận lớn dân số đang có xu hướng mua đồ gỗ cao cấp về trang trí cho nhà bếp của mình. Xu hướng này càng khẳng định người tiêu dùng Hàn quốc càng ngày càng quan tâm đến chất lượng và mẫu mã sản phẩm, chứ không đơn thuần chỉ là giá cả nữa.<br />Đồ gỗ nội thất cho nhà bếp phải được thiết kế đẹp, hợp mốt và phục vụ đựơc những yêu cầu của người tiêu dùng. Những mặt hàng đồ gỗ nhà bếp ở mức giá thấp và trung bình không còn được đại đa số bộ phận dân chúng ưa chuộng nữa.</p>', '', '<p>Tại Hàn Quốc một bộ phận lớn dân số đang có xu hướng mua đồ gỗ cao cấp về trang trí cho nhà bếp của mình. Xu hướng này càng khẳng định người tiêu dùng Hàn quốc càng ngày càng quan tâm đến chất lượng và mẫu mã sản phẩm, chứ không đơn thuần chỉ là giá cả nữa.<br />Đồ gỗ nội thất cho nhà bếp phải được thiết kế đẹp, hợp mốt và phục vụ đựơc những yêu cầu của người tiêu dùng. Những mặt hàng đồ gỗ nhà bếp ở mức giá thấp và trung bình không còn được đại đa số bộ phận dân chúng ưa chuộng nữa.<br />Các nhà nhập khẩu đang tăng cường nhập các mặt hàng đồ gỗ nhà bếp cao cấp về Hàn quốc. Các mặt hàng cao cấp thường có xuất xứ từ Châu Âu, Mỹ, còn các mặt hàng giá thấp và trung bình thì được nhập khẩu từ các nước Châu À như Trung Quốc, Việt Nam.<br />Ngoài các hệ thống phân phối đồ nội thất, tại Hàn Quốc, các nhà xây dựng cũng góp phần lớn trong việc tiêu thụ mặt hàng đồ gỗ nhà bếp. Mặt hàng đồ gỗ nhà bếp cao cấp ở Hàn Quốc thì chủ yếu được nhập từ Châu Âu, Mỹ, còn các sản phẩm trung bình thì đa số được sản xuất tại Trung Quốc.</p>\r\n<p>Hơn nữa, rất nhiều nhà sản xuất Hàn Quốc chuyển nhà máy của mình sang Trung Quốc để tận dụng giá nhân công rẻ, sau đó nhập lại Hàn Quốc để bán tại các hệ thống đồ gỗ nội thất hoặc bán cho các nhà xây dựng.</p>\r\n<p>Thị trường đồ gỗ nhà bếp bị chi phối từ nhu cầu của các cặp vợ chồng mới cưới và những gia đình có điều kiện chuyển vào ở tại các căn hộ hoặc nhà mới có diện tích lớn hơn. Hai nhóm khách hàng này giữ tỷ lệ tiêu thụ đồ gỗ nhà bếp ổn định và lớn nhất hiện nay.</p>\r\n<p>Khoảng 70% các chung cư cũ tại Hàn Quốc được xây dựng từ giữa những năm 1970-1980, tương đựơng khoảng 3,5 triệu căn hộ có trên 20 năm. Do vậy, nhu cầu sửa chữa lại nhà là rất lớn. Điều này cũng làm tăng nhu cầu sử dụng đồ nội thất mới, đặc biệt là đồ gỗ nhà bếp.</p>\r\n<p>Đồ gỗ nhà bếp Mỹ, Ý, Đức và Nhật vẫn chiếm đa số trong phân khúc hàng nhập khẩu cao cấp. Tại Hàn Quốc, Ý chiếm ưu thế trong việc cung cấp đồ gỗ nhà bếp từ trung cấp đến cao cấp, chiếm 35% thị phần, tiếp sau đó là Đức (20%), Mỹ (15%), và Nhật (15%).</p>\r\n<p>Những nước Châu Á như Trung Quốc, Việt Nam thì chuyên cung cấp hàng giá rẻ, chiếm 60% thị phần. Nói chung, các nhà cung cấp đến từ Mỹ, Châu Âu và Nhật thống trị phân khúc hàng cao cấp bằng các sản phẩm chất lượng cao hơn, mẫu mã đẹp hơn.</p>\r\n<p>Các nhà sản xuất đồ gỗ nhà bếp Việt Nam cần chú trọng hơn đến chất lượng và mẫu mã của sản phẩm, chứ không nên chỉ đơn thuần tập trung vào việc làm hàng giá rẻ. Sự cạnh tranh trong lĩnh vực này tại Hàn Quốc càng ngày càng cao, nên các nhà sản xuất Việt Nam cần liên tục cập nhật những xu hướng mới nhất, tìm hiểu thị trường kỹ để hàng hóa có thể có chỗ đứng tại thị trường Hàn Quốc.</p>\r\n<p>Xu hướng mới nhất hiện nay của sản phẩm đồ gỗ nhà bếp tại Hàn Quốc là:</p>\r\n<p>* mẫu mã đơn giản.<br />* sang trọng.<br />* giá cả hợp lý.<br />* đáp ứng được đầy đủ nhu cầu sử dụng.</p>\r\n<p>Các công ty phải đáp ứng đựợc các yêu cầu từ phía các nhà nhập khẩu Hàn Quốc khi muốn bán hàng vào thị trường này, Đối với tất cả các loại đồ gỗ nội thất, kể cả đồ nội thất cho nhà bếp được nhập vào Hàn Quốc, các nhà nhập khẩu Hàn Quốc rất quan tâm đến chất lượng và độ an toàn của sản phẩm nhằm bảo đảm lợi ích của người mua hàng. Những yêu cầu chung đối với các nhà xuất khẩu đồ gỗ nội thất vào Hàn Quốc bao gồm:</p>\r\n<p>* Đáp ứng quy định của Luật kiểm tra an toàn và quản lý chất lượng của Hàn Quốc. Luật này nhằm bảo vệ người tiêu dùng tránh rủi ro, nguy hiểm có thể gây ra do các sản phẩm kém chất lượng hoặc nhập lậu.<br />* Có giấy chứng nhận xuất xứ hàng hóa.<br />* Nhà sản xuất cần có nguồn gỗ tốt, hợp lệ, ổn định đáp ứng đòi hỏi của khách hàng để đảm bảo chất lượng sản phẩm.<br />* Đảm bảo sản phẩm không gây hại cho môi trường.<br />* Bao bì hợp lệ, đúng quy cách.</p>\r\n<p>Ngoài ra, hình ảnh nhà xưởng ngăn nắp, gọn sạch, đời sống công nhân tốt, thiết bị máy móc đồng bộ... cũng là điều mà các nhà mua hàng Hàn Quốc quan tâm bởi vì điều này nói lên sự ổn định sản xuất, đảm bảo tiến độ giao hàng. Bạn cũng nên nhớ rằng các nhà mua hàng Hàn Quốc khá thân thiện, tuy nhiên họ không hay hỗ trợ các nhà xuất khẩu khi họ gặp khó khăn về thủ tục</p>', '', 'nhung-xu-huong-moi-tai-thi-truong-do-go-noi-that-nha-bep-han-quoc', '', 'Tại Hàn Quốc một bộ phận lớn dân số đang có xu hướng mua đồ gỗ cao cấp về trang trí cho nhà bếp của mình. Xu hướng này càng khẳng định người tiêu dùng Hàn quốc càng ngày càng quan tâm đến chất lượng và mẫu mã sản phẩm, chứ không đơn thuần chỉ là giá', '', 0, 4, 0, NULL, NULL, 1, 19);
+(27, 'Những xu hướng mới tại thị trường đồ gỗ nội thất nhà bếp Hàn Quốc.', '', '2012-04-19 06:58:51', 'nhung-xu-huong-moi-tai-thi-truong-do-go-noi-that-nha-bep-han-quoc-.jpg', '<p>Tại Hàn Quốc một bộ phận lớn dân số đang có xu hướng mua đồ gỗ cao cấp về trang trí cho nhà bếp của mình. Xu hướng này càng khẳng định người tiêu dùng Hàn quốc càng ngày càng quan tâm đến chất lượng và mẫu mã sản phẩm, chứ không đơn thuần chỉ là giá cả nữa.<br />Đồ gỗ nội thất cho nhà bếp phải được thiết kế đẹp, hợp mốt và phục vụ đựơc những yêu cầu của người tiêu dùng. Những mặt hàng đồ gỗ nhà bếp ở mức giá thấp và trung bình không còn được đại đa số bộ phận dân chúng ưa chuộng nữa.</p>', '', '<p>Tại Hàn Quốc một bộ phận lớn dân số đang có xu hướng mua đồ gỗ cao cấp về trang trí cho nhà bếp của mình. Xu hướng này càng khẳng định người tiêu dùng Hàn quốc càng ngày càng quan tâm đến chất lượng và mẫu mã sản phẩm, chứ không đơn thuần chỉ là giá cả nữa.<br />Đồ gỗ nội thất cho nhà bếp phải được thiết kế đẹp, hợp mốt và phục vụ đựơc những yêu cầu của người tiêu dùng. Những mặt hàng đồ gỗ nhà bếp ở mức giá thấp và trung bình không còn được đại đa số bộ phận dân chúng ưa chuộng nữa.<br />Các nhà nhập khẩu đang tăng cường nhập các mặt hàng đồ gỗ nhà bếp cao cấp về Hàn quốc. Các mặt hàng cao cấp thường có xuất xứ từ Châu Âu, Mỹ, còn các mặt hàng giá thấp và trung bình thì được nhập khẩu từ các nước Châu À như Trung Quốc, Việt Nam.<br />Ngoài các hệ thống phân phối đồ nội thất, tại Hàn Quốc, các nhà xây dựng cũng góp phần lớn trong việc tiêu thụ mặt hàng đồ gỗ nhà bếp. Mặt hàng đồ gỗ nhà bếp cao cấp ở Hàn Quốc thì chủ yếu được nhập từ Châu Âu, Mỹ, còn các sản phẩm trung bình thì đa số được sản xuất tại Trung Quốc.</p>\r\n<p>Hơn nữa, rất nhiều nhà sản xuất Hàn Quốc chuyển nhà máy của mình sang Trung Quốc để tận dụng giá nhân công rẻ, sau đó nhập lại Hàn Quốc để bán tại các hệ thống đồ gỗ nội thất hoặc bán cho các nhà xây dựng.</p>\r\n<p>Thị trường đồ gỗ nhà bếp bị chi phối từ nhu cầu của các cặp vợ chồng mới cưới và những gia đình có điều kiện chuyển vào ở tại các căn hộ hoặc nhà mới có diện tích lớn hơn. Hai nhóm khách hàng này giữ tỷ lệ tiêu thụ đồ gỗ nhà bếp ổn định và lớn nhất hiện nay.</p>\r\n<p>Khoảng 70% các chung cư cũ tại Hàn Quốc được xây dựng từ giữa những năm 1970-1980, tương đựơng khoảng 3,5 triệu căn hộ có trên 20 năm. Do vậy, nhu cầu sửa chữa lại nhà là rất lớn. Điều này cũng làm tăng nhu cầu sử dụng đồ nội thất mới, đặc biệt là đồ gỗ nhà bếp.</p>\r\n<p>Đồ gỗ nhà bếp Mỹ, Ý, Đức và Nhật vẫn chiếm đa số trong phân khúc hàng nhập khẩu cao cấp. Tại Hàn Quốc, Ý chiếm ưu thế trong việc cung cấp đồ gỗ nhà bếp từ trung cấp đến cao cấp, chiếm 35% thị phần, tiếp sau đó là Đức (20%), Mỹ (15%), và Nhật (15%).</p>\r\n<p>Những nước Châu Á như Trung Quốc, Việt Nam thì chuyên cung cấp hàng giá rẻ, chiếm 60% thị phần. Nói chung, các nhà cung cấp đến từ Mỹ, Châu Âu và Nhật thống trị phân khúc hàng cao cấp bằng các sản phẩm chất lượng cao hơn, mẫu mã đẹp hơn.</p>\r\n<p>Các nhà sản xuất đồ gỗ nhà bếp Việt Nam cần chú trọng hơn đến chất lượng và mẫu mã của sản phẩm, chứ không nên chỉ đơn thuần tập trung vào việc làm hàng giá rẻ. Sự cạnh tranh trong lĩnh vực này tại Hàn Quốc càng ngày càng cao, nên các nhà sản xuất Việt Nam cần liên tục cập nhật những xu hướng mới nhất, tìm hiểu thị trường kỹ để hàng hóa có thể có chỗ đứng tại thị trường Hàn Quốc.</p>\r\n<p>Xu hướng mới nhất hiện nay của sản phẩm đồ gỗ nhà bếp tại Hàn Quốc là:</p>\r\n<p>* mẫu mã đơn giản.<br />* sang trọng.<br />* giá cả hợp lý.<br />* đáp ứng được đầy đủ nhu cầu sử dụng.</p>\r\n<p>Các công ty phải đáp ứng đựợc các yêu cầu từ phía các nhà nhập khẩu Hàn Quốc khi muốn bán hàng vào thị trường này, Đối với tất cả các loại đồ gỗ nội thất, kể cả đồ nội thất cho nhà bếp được nhập vào Hàn Quốc, các nhà nhập khẩu Hàn Quốc rất quan tâm đến chất lượng và độ an toàn của sản phẩm nhằm bảo đảm lợi ích của người mua hàng. Những yêu cầu chung đối với các nhà xuất khẩu đồ gỗ nội thất vào Hàn Quốc bao gồm:</p>\r\n<p>* Đáp ứng quy định của Luật kiểm tra an toàn và quản lý chất lượng của Hàn Quốc. Luật này nhằm bảo vệ người tiêu dùng tránh rủi ro, nguy hiểm có thể gây ra do các sản phẩm kém chất lượng hoặc nhập lậu.<br />* Có giấy chứng nhận xuất xứ hàng hóa.<br />* Nhà sản xuất cần có nguồn gỗ tốt, hợp lệ, ổn định đáp ứng đòi hỏi của khách hàng để đảm bảo chất lượng sản phẩm.<br />* Đảm bảo sản phẩm không gây hại cho môi trường.<br />* Bao bì hợp lệ, đúng quy cách.</p>\r\n<p>Ngoài ra, hình ảnh nhà xưởng ngăn nắp, gọn sạch, đời sống công nhân tốt, thiết bị máy móc đồng bộ... cũng là điều mà các nhà mua hàng Hàn Quốc quan tâm bởi vì điều này nói lên sự ổn định sản xuất, đảm bảo tiến độ giao hàng. Bạn cũng nên nhớ rằng các nhà mua hàng Hàn Quốc khá thân thiện, tuy nhiên họ không hay hỗ trợ các nhà xuất khẩu khi họ gặp khó khăn về thủ tục</p>', '', 'nhung-xu-huong-moi-tai-thi-truong-do-go-noi-that-nha-bep-han-quoc', '', 'Tại Hàn Quốc một bộ phận lớn dân số đang có xu hướng mua đồ gỗ cao cấp về trang trí cho nhà bếp của mình. Xu hướng này càng khẳng định người tiêu dùng Hàn quốc càng ngày càng quan tâm đến chất lượng và mẫu mã sản phẩm, chứ không đơn thuần chỉ là giá', '', 0, 4, 0, NULL, NULL, 1, 19),
+(28, '6 mẹo chọn ghế sofa hoàn hảo', '', '2012-04-20 06:34:18', '6-meo-chon-ghe-sofa-hoan-hao.jpg', '<p>Việc chọn một bộ sofa dường như không phải là một công việc dễ dàng khi phong cách, hình dạng, màu sắc, và giá cả của các bộ sofa này rất đa dạng.</p>', '', '<p>Để tiết kiệm thời gian, tiền bạc và công sức, bạn có thể tham khảo một số mẹo sau trước khi lựa chọn một bộ sofa phù hợp cho không gian nhà.</p>\n<p>1. Xác định kích thước</p>\n<p>Nếu phòng khách nhà bạn có diện tích lớn, bạn cần quyết định xem bạn muốn kê bao nhiêu chiếc ghế. Bạn có muốn dùng đi-văng hay ghế bành? Bàn nhỏ kiểu bàn cà phê liệu có cần thiết cho không gian nhà bạn? Nếu câu trả lời là có thì một bộ sofa đơn giản, hình chữ L có lẽ là lựa chọn phù hợp nhất. Trong trường hợp bạn muốn bộ sofa là điểm nhấn của phòng khách thì bạn cần đến một chiếc đi-văng đủ lớn và nhiều chỗ ngồi.</p>\n<p>Chú ý đến kích thước ghế</p>\n<p>Nếu không gian nhà bạn khiêm tốn, thì hẳn là bạn cần một chiếc trường kỷ nhỏ hơn.</p>\n<p>2. Quyết định hướng kê sofa</p>\n<p>Bạn cần định hình trước sofa sẽ được sắp xếp thế nào? Kê sofa để xem TV, để gia đình quây quần tụ họp, chơi trò chơi? Bạn có thể kê sofa tạo thành vòng tròn, hoặc nửa vòng tròn, lấy bàn làm trung tâm</p>', '', '6-meo-chon-ghe-sofa-hoan-hao', '', 'Chú ý đến kích thước ghế\n\nNếu không gian nhà bạn khiêm tốn, thì hẳn là bạn cần một chiếc trường kỷ nhỏ hơn.\n\n2. Quyết định hướng kê sofa', '', 0, 1, 1, '', '', 1, 20),
+(29, 'Căn hộ nhỏ mà không nhỏ', '', '2012-04-20 06:34:18', 'can-ho-nho-ma-khong-nho.jpg', '<p style="text-align:left;">Tuy chỉ có diện tích 35 m2 nhưng ngôi nhà nhỏ này vẫn rất thoáng đãng, đầy đủ tiện nghi và đẹp mắt nhờ cách thiết kế, bố trí sáng tạo như bậc cầu thang kiêm nơi để quần áo…</p>', '', '<p>Tuy chỉ có diện tích 35 m2 nhưng ngôi nhà nhỏ này vẫn rất thoáng đãng, đầy đủ tiện nghi và đẹp mắt nhờ cách thiết kế, bố trí sáng tạo như bậc cầu thang kiêm nơi để quần áo…</p>\n<p>Phòng khách nhỏ bố trí những đồ vật đơn giản như salon chữ L, bàn gỗ, TV treo tường..</p>\n<p>fggggdgfdgfgfdgfgf</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/phumyan/image/can-ho-3.jpg" alt="" width="480" height="468" /></p>\n<p style="text-align:center;">dgfgfggfdgfdg</p>\n<p style="text-align:center;">ggffgfgdf</p>\n<p style="text-align:center;"> <img src="/public/userfiles/image/phumyan/image/giuong.jpg" alt="" width="200" height="135" /></p>', '', 'can-ho-nho-ma-khong-nho', '', '', '', 0, 2, 1, '', '', 1, 20);
 
 -- --------------------------------------------------------
 
@@ -932,7 +997,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
 
 --
 -- Dumping data for table `dos_module_news_cat`
@@ -947,7 +1012,8 @@ INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_
 (16, 0, 'Tin TứcTrong Ngành', '', '', '', 'tin-tuctrong-nganh', '', 'Tin TứcTrong Ngành', '', 'tin-tuctrong-nganh.jpg', 1, '', '', 1, 'thoitrang'),
 (17, 0, 'Thời trang giới trẻ', '', NULL, NULL, 'thoi-trang-gioi-tre', '', 'Thời trang giới trẻ', '', '', 2, NULL, NULL, 1, 'thoitrang'),
 (18, 0, 'Không gian sống', '', '', '', 'khong-gian-song', '', 'Không gian sống', '', 'tin-tuctrong-nganh.jpg', 1, '', '', 1, 'thienlonghoi'),
-(19, 0, 'Tin tức khách', '', NULL, NULL, 'tin-tuc-khach', '', 'Tin tức khách', '', '', 2, NULL, NULL, 1, 'thienlonghoi');
+(19, 0, 'Tin tức khách', '', NULL, NULL, 'tin-tuc-khach', '', 'Tin tức khách', '', '', 2, NULL, NULL, 1, 'thienlonghoi'),
+(20, 0, 'Tin TứcTrong Ngành', '', '', '', 'tin-tuctrong-nganh', '', 'Tin TứcTrong Ngành', '', 'tin-tuctrong-nganh.jpg', 1, '', '', 1, 'cafe24h');
 
 -- --------------------------------------------------------
 
@@ -983,14 +1049,18 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('max_count', 0, 'phumyan'),
 ('counter', 0, 'phumyan'),
 ('yesterday', 0, 'phumyan'),
-('day_time', 2456037, 'thoitrang'),
+('day_time', 2456038, 'thoitrang'),
 ('max_count', 0, 'thoitrang'),
 ('counter', 0, 'thoitrang'),
 ('yesterday', 0, 'thoitrang'),
 ('day_time', 2456038, 'thienlonghoi'),
 ('max_count', 0, 'thienlonghoi'),
 ('counter', 0, 'thienlonghoi'),
-('yesterday', 0, 'thienlonghoi');
+('yesterday', 0, 'thienlonghoi'),
+('day_time', 2456038, 'cafe24h'),
+('max_count', 0, 'cafe24h'),
+('counter', 0, 'cafe24h'),
+('yesterday', 0, 'cafe24h');
 
 -- --------------------------------------------------------
 
@@ -1010,7 +1080,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1334902569, 'thienlonghoi');
+('''127.0.0.1''', 1334907822, 'thoitrang'),
+('''127.0.0.1''', 1334911776, 'cafe24h'),
+('''127.0.0.1''', 1334907808, 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -1047,7 +1119,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=107 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=116 ;
 
 --
 -- Dumping data for table `dos_module_products`
@@ -1133,7 +1205,14 @@ INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, 
 (100, 'Nội thất bếp ăn', '', '2012-04-19 06:46:55', 'noi-that-bep-an-thumb.jpg', 'noi-that-bep-an.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'noi-that-bep-an', '', 'Nội thất bếp ăn', '', 0, 1, '', 1, 0, '', '', '', '', 1, 47),
 (101, 'Phòng tiếp khách', '', '2012-04-19 06:46:55', 'phong-tiep-khach-thumb.jpg', 'phong-tiep-khach.jpg', '', '', '', '<p>Mô tả chi tiết ... h</p>', '', 'phong-tiep-khach', '', 'Phòng tiếp khách', '', 0, 5, '', 1, 0, '', '', '', '', 1, 47),
 (105, 'Trang trí góc', '', '2012-04-19 06:46:55', 'trang-tri-goc-nho-thumb.jpg', 'trang-tri-goc-nho.jpg', '', '', '', '<p>Mô tả chi tiết</p>\r\n<table style="width:400px;height:100px;" border="1" align="center"><tbody><tr><td style="text-align:center;">Tình trạng:</td>\r\n<td style="text-align:center;">Có hàng số lượng lớn chưa tiêu tụai giúp tiêu thụ với õ</td>\r\n</tr><tr><td style="text-align:center;">Nhà sản xuất</td>\r\n<td style="text-align:center;">Việt Nam vip</td>\r\n</tr><tr><td style="text-align:center;">Model</td>\r\n<td style="text-align:center;">2012</td>\r\n</tr><tr><td style="text-align:center;">Đánh giá:</td>\r\n<td style="text-align:center;">Chưa có đánh giá</td>\r\n</tr></tbody></table><p style="text-align:center;"> </p>', '', 'trang-tri-goc', '', 'Trang trí góc nhỏ', '', 0, 6, '290000', 1, 0, '', '', '', '', 1, 48),
-(106, 'Nội thất phòng ngủ', '', '2012-04-19 06:46:55', 'noi-that-phong-ngu-thumb.jpg', 'noi-that-phong-ngu.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'noi-that-phong-ngu', '', 'Nội thất phòng ngủ', '', 0, 2, '', 1, 0, '', '', '', '', 1, 49);
+(106, 'Nội thất phòng ngủ', '', '2012-04-19 06:46:55', 'noi-that-phong-ngu-thumb.jpg', 'noi-that-phong-ngu.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'noi-that-phong-ngu', '', 'Nội thất phòng ngủ', '', 0, 2, '', 1, 0, '', '', '', '', 1, 49),
+(107, 'Blizzard hương liệu cà phê', '', '2012-04-20 06:34:17', 'blizzard-huong-lieu-ca-phe-thumb.jpg', 'blizzard-huong-lieu-ca-phe.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'blizzard-huong-lieu-ca-phe', '', 'Mô tả chi tiết ...', '', 0, 4, '', 1, 0, '', '', '', '', 1, 51),
+(108, 'Starbuck của cà phê', '', '2012-04-20 06:34:17', 'starbuck-cua-ca-phe-thumb.jpg', 'starbuck-cua-ca-phe.jpg', '', '', '', '<p>Mô tả chi tiết ....</p>', '', 'starbuck-cua-ca-phe', '', 'Nội thất phòng giải trí', '', 0, 3, '', 1, 0, '', '', '', '', 1, 51),
+(109, 'Hazelnut hương liệu cà phê', '', '2012-04-20 06:34:17', 'hazelnut-huong-lieu-ca-phe-thumb.jpg', 'hazelnut-huong-lieu-ca-phe.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'hazelnut-huong-lieu-ca-phe', '', 'Hazelnut hương liệu cà phê', '', 0, 1, '', 1, 0, '', '', '', '', 1, 51),
+(110, 'Almond hương liệu cà phê', '', '2012-04-20 06:34:17', 'almond-huong-lieu-ca-phe-thumb.jpg', 'almond-huong-lieu-ca-phe.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'almond-huong-lieu-ca-phe', '', 'Phòng tiếp khách', '', 0, 5, '', 1, 0, '', '', '', '', 1, 51),
+(114, 'Thiên thần Mặt cà phê', '', '2012-04-20 06:34:17', 'thien-than-mat-ca-phe-thumb.jpg', 'thien-than-mat-ca-phe.jpg', '', '', '', '<p>Mô tả chi tiết</p>\r\n<table style="width:400px;height:100px;" border="1" align="center"><tbody><tr><td style="text-align:center;">Tình trạng:</td>\r\n<td style="text-align:center;">Có hàng số lượng lớn chưa tiêu tụai giúp tiêu thụ với õ</td>\r\n</tr><tr><td style="text-align:center;">Nhà sản xuất</td>\r\n<td style="text-align:center;">Việt Nam vip</td>\r\n</tr><tr><td style="text-align:center;">Model</td>\r\n<td style="text-align:center;">2012</td>\r\n</tr><tr><td style="text-align:center;">Đánh giá:</td>\r\n<td style="text-align:center;">Chưa có đánh giá</td>\r\n</tr></tbody></table><p style="text-align:center;"> </p>', '', 'thien-than-mat-ca-phe', '', 'Trang trí góc nhỏ', '', 0, 6, '290000', 1, 0, '', '', '', '', 1, 52);
+INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(115, 'Quế hương liệu cà phê Hazelnut', '', '2012-04-20 06:34:18', 'que-huong-lieu-ca-phe-hazelnut-thumb.jpg', 'que-huong-lieu-ca-phe-hazelnut.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'que-huong-lieu-ca-phe-hazelnut', '', 'Quế hương liệu cà phê Hazelnut', '', 0, 2, '', 1, 0, '', '', '', '', 1, 53);
 
 -- --------------------------------------------------------
 
@@ -1161,7 +1240,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=51 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=55 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
@@ -1198,7 +1277,11 @@ INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `
 (47, 0, 'Trang trí tủ bếp', '', '', '', 'trang-tri-tu-bep', '', 'Trang trí tủ bếp', '', 'trang-tri-tu-bep.jpg', '', 3, '', '', 1, 'thienlonghoi'),
 (48, 0, 'Trang trí phòng khách', '', '', '', 'trang-tri-phong-khach', '', 'Trang trí phòng khách', '', 'trang-tri-phong-khach.jpg', '', 4, '', '', 1, 'thienlonghoi'),
 (49, 0, 'Phòng ngủ', '', '', '', 'phong-ngu', '', 'Phòng ngủ', '', 'phong-ngu.jpg', '', 1, '', '', 1, 'thienlonghoi'),
-(50, 0, 'Bếp ăn', '', '', '', 'bep-an', '', 'Bếp ăn', '', 'bep-an.jpg', '', 2, '', '', 1, 'thienlonghoi');
+(50, 0, 'Bếp ăn', '', '', '', 'bep-an', '', 'Bếp ăn', '', 'bep-an.jpg', '', 2, '', '', 1, 'thienlonghoi'),
+(51, 0, 'Blends cà phê', '', '', '', 'blends-ca-phe', '', 'Blends cà phê', '', 'phong-khach.jpg', '', 3, '', '', 1, 'cafe24h'),
+(52, 0, 'Gourmet cà phê', '', '', '', 'gourmet-ca-phe', '', 'Gourmet cà phê', '', 'phong-giai-tri.jpg', '', 4, '', '', 1, 'cafe24h'),
+(53, 0, 'Cà phê không có caffein', '', '', '', 'ca-phe-khong-co-caffein', '', 'Cà phê không có caffein', '', 'ca-phe-khong-co-caffein.jpg', '', 1, '', '', 1, 'cafe24h'),
+(54, 0, 'Hương vị cà phê', '', '', '', 'huong-vi-ca-phe', '', 'Hương vị cà phê', '', 'huong-vi-ca-phe.jpg', '', 2, '', '', 1, 'cafe24h');
 
 -- --------------------------------------------------------
 
@@ -1229,7 +1312,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `dos_module_services`
@@ -1241,7 +1324,8 @@ INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `
 (8, 'Dịch vụ vẫn chuyển', '', '', '', '<p>Dịch vụ vẫn chuyển</p>', '', '', 2, '2012-04-12 02:10:55', 1, 0, '', '', 'dich-vu-van-chuyen', '', '', '', 1, 'phumyan'),
 (9, 'Đào tạo kỹ thuật viên', '', '', '', '<p style="text-align:justify;">Truyền đạt nhiệt tình lại toàn bộ lý thuyết và nguyên lý hoạt động cơ bản của máy photocopy đơn giản, dễ hiểu, không giấu nghề.</p>\n<p style="text-align:justify;">Rất thích hợp cho người muốn tìm hiểu thêm về máy photocopy ,làm ktv ,về mở cửa hàng , công ty ,người chưa biết nghề ,thích hợp cho cty cử người đi học sửa chữa cơ bản về máy photocopy đáp ứng nhu cầu sửa chữa cho cơ quan  và công ty. </p>\n<p style="text-align:justify;">Dạy photocopy + sửa chữa cơ bản + Nâng cao.</p>\n<p style="text-align:justify;">Nhằm đào tạo thợ photocopy chuyên nghiệp,tạo công việc làm ổn định học sửa máy photocopy về để tự mở cửa hàng, cho cơ quan, công ty</p>\n<p style="text-align:justify;">Tiết kiệm thời gian, tiền bạc, khỏi phải học nghề tại các cửa hàng mà thời gian kéo dài, không hiệu quả</p>\n<p style="text-align:justify;">Cung cấp thêm các tài liệu nâng cao về máy photocopy như mã code, mode của các dòng máy để tìm hiểu và nâng cao chuyên môn .</p>\n<p style="text-align:justify;"> </p>', '', '', 2, '2012-04-12 02:16:00', 1, 0, '', '', 'dao-tao-ky-thuat-vien', '', 'Đào tạo kỹ thuật viên', '', 1, 'mayphotocopysieuviet'),
 (11, 'Dịch vụ vẫn chuyển tận nơi', '', NULL, NULL, '<p> Dịch vụ vẫn chuyển tận nơi  Dịch vụ vẫn chuyển tận nơi Dịch vụ vẫn chuyển tận nơi Dịch vụ vẫn chuyển tận nơi</p>', '', NULL, 7, '2012-04-19 01:22:04', 1, 0, '', '', 'dich-vu-van-chuyen-tan-noi', '', 'Dịch vụ vẫn chuyển tận nơi', '', 1, 'thoitrang'),
-(12, 'Dịch vụ vẫn chuyển', '', NULL, NULL, '<p>Dịch vụ vẫn chuyển</p>', '', NULL, 4, '2012-04-19 06:46:55', 1, 0, '', '', 'dich-vu-van-chuyen', '', '', '', 1, 'thienlonghoi');
+(12, 'Dịch vụ vẫn chuyển', '', NULL, NULL, '<p>Dịch vụ vẫn chuyển</p>', '', NULL, 4, '2012-04-19 06:46:55', 1, 0, '', '', 'dich-vu-van-chuyen', '', '', '', 1, 'thienlonghoi'),
+(13, 'Dịch vụ vẫn chuyển', '', NULL, NULL, '<p>Dịch vụ vẫn chuyển</p>', '', NULL, 2, '2012-04-20 06:34:17', 1, 0, '', '', 'dich-vu-van-chuyen', '', '', '', 1, 'cafe24h');
 
 -- --------------------------------------------------------
 
@@ -1260,7 +1344,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=86 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=89 ;
 
 --
 -- Dumping data for table `dos_module_supports`
@@ -1275,7 +1359,9 @@ INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen
 (82, 'Hỗ trợ kinh doanh', '', '01230 456 789', 'mailgoogle', 2, 'yahoo', 'thoitrang'),
 (83, 'Hỗ trợ khách hàng', '', '0909 999 888', 'groupitsoft', 1, 'yahoo', 'thoitrang'),
 (84, 'Hỗ trợ kinh doanh', '', '01230 456 789', 'mailgoogle', 2, 'yahoo', 'thienlonghoi'),
-(85, 'Hỗ trợ khách hàng', '', '0909 999 888', 'groupitsoft', 1, 'yahoo', 'thienlonghoi');
+(85, 'Hỗ trợ khách hàng', '', '0909 999 888', 'groupitsoft', 1, 'yahoo', 'thienlonghoi'),
+(86, 'Hỗ trợ kinh doanh', '', '01230 456 789', 'mailgoogle', 2, 'yahoo', 'cafe24h'),
+(87, 'Hỗ trợ khách hàng', '', '0909 999 888', 'groupitsoft', 1, 'yahoo', 'cafe24h');
 
 -- --------------------------------------------------------
 
@@ -1303,7 +1389,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_video` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_video_dos_module_video_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `dos_module_video`
@@ -1316,7 +1402,9 @@ INSERT INTO `dos_module_video` (`record_id`, `title`, `titleen`, `postdate`, `ta
 (6, 'thời trang tại TroChoiThoiTrang', '', '2012-04-19 03:08:55', 'thoi-trang-tai-trochoithoitrang', '', 'thời trang tại TroChoiThoiTrang', '', 'thoi-trang-tai-trochoithoitrang.jpg', 'http://www.youtube.com/watch?v=53kxPAM2QJY', 3, 0, NULL, NULL, 0, 1, 4),
 (7, 'Thoi trang cong so - KKFashion', '', '2012-04-19 03:09:34', 'thoi-trang-cong-so-kkfashion', '', 'Thoi trang cong so - KKFashion', '', '', 'http://www.youtube.com/watch?v=cjFVqWNnhHE', 4, 0, NULL, NULL, 0, 1, 4),
 (8, 'ggdfggfgdf', '', '2012-04-19 03:32:05', 'ggdfggfgdf', '', 'ggdfggfgdf', '', '', 'http://www.youtube.com/watch?v=cjFVqWNnhHE', 1, 0, NULL, NULL, 0, 1, 5),
-(9, 'Nội Thất Văn Phòng 3D - Video từ ASP Viet Nam.wmv', '', '2012-04-19 06:46:56', 'noi-that-van-phong-3d-video-tu-asp-viet-namwmv', '', '', '', 'noi-that-van-phong-3d-video-tu-asp-viet-nam-wmv.jpg', 'http://www.youtube.com/watch?v=9kc4jOXvrAA', 1, 0, '', '', 1, 1, 6);
+(9, 'Nội Thất Văn Phòng 3D - Video từ ASP Viet Nam.wmv', '', '2012-04-19 06:46:56', 'noi-that-van-phong-3d-video-tu-asp-viet-namwmv', '', '', '', 'noi-that-van-phong-3d-video-tu-asp-viet-nam-wmv.jpg', 'http://www.youtube.com/watch?v=9kc4jOXvrAA', 1, 0, '', '', 1, 1, 6),
+(10, 'Hương Cafe Macchiato', '', '2012-04-20 06:34:18', 'huong-cafe-macchiato', '', 'Huong Cafe Macchiato', '', 'noi-that-van-phong-3d-video-tu-asp-viet-nam-wmv.jpg', 'http://www.youtube.com/watch?v=66i3tKBXzrk', 1, 0, '', '', 1, 1, 7),
+(11, 'THE PERFECT (LATTE MACCHIATO) CAPPUCCINO. WHO NEEDS STRARBUCKS', '', '2012-04-20 07:56:28', 'the-perfect-latte-macchiato-cappuccino-who-needs-strarbucks', '', 'THE PERFECT (LATTE MACCHIATO) CAPPUCCINO. WHO NEEDS STRARBUCKS', '', '', 'http://www.youtube.com/watch?v=Ifzav8n2ptg&feature=fvwrel', 2, 0, NULL, NULL, 0, 1, 7);
 
 -- --------------------------------------------------------
 
@@ -1339,7 +1427,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_video_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `dos_module_video_cat`
@@ -1349,7 +1437,8 @@ INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat
 (2, 0, '', 'Video mới nhất', '', 'video-moi-nhat', '', '', '', 1, 1, 'phumyan'),
 (4, 0, '', 'Video mới nhất', '', 'video-moi-nhat', '', 'Video thời trang nữ', '', 1, 1, 'thoitrang'),
 (5, 0, '', 'Video sản phẩm mới', '', 'video-san-pham-moi', '', 'Video sản phẩm mới', '', 1, 1, 'tinhungphat'),
-(6, 0, '', 'Video mới nhất', '', 'video-moi-nhat', '', '', '', 1, 1, 'thienlonghoi');
+(6, 0, '', 'Video mới nhất', '', 'video-moi-nhat', '', '', '', 1, 1, 'thienlonghoi'),
+(7, 0, '', 'Video mới nhất', '', 'video-moi-nhat', '', '', '', 1, 1, 'cafe24h');
 
 -- --------------------------------------------------------
 
@@ -1384,7 +1473,10 @@ INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`
 ('title', 'chuyên các loại đồ nội thất', 'thoitrang'),
 ('keywords', 'chuyên các loại đồ nội thất', 'thienlonghoi'),
 ('description', 'chuyên các loại đồ nội thất', 'thienlonghoi'),
-('title', 'chuyên các loại đồ nội thất', 'thienlonghoi');
+('title', 'chuyên các loại đồ nội thất', 'thienlonghoi'),
+('keywords', 'chuyên các loại đồ nội thất', 'cafe24h'),
+('description', 'chuyên các loại đồ nội thất', 'cafe24h'),
+('title', 'chuyên các loại đồ nội thất', 'cafe24h');
 
 -- --------------------------------------------------------
 
@@ -1708,15 +1800,29 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('070312', 'video', 'advs_left'),
 ('070312', 'video', 'list_supports'),
 ('070312', 'video', 'menu_video'),
+('111120', 'about', 'advs_left'),
+('111120', 'about', 'list_supports'),
 ('111120', 'about', 'menu_about'),
+('111120', 'contact', 'advs_left'),
+('111120', 'contact', 'list_supports'),
 ('111120', 'contact', 'menu_products'),
 ('111120', 'default', 'about_home'),
 ('111120', 'default', 'advs_left'),
 ('111120', 'default', 'list_supports'),
 ('111120', 'default', 'menu_products'),
-('111120', 'default', 'products_new'),
+('111120', 'default', 'products_hot'),
+('111120', 'news', 'advs_left'),
+('111120', 'news', 'list_supports'),
+('111120', 'news', 'menu_news'),
+('111120', 'products', 'advs_left'),
+('111120', 'products', 'list_supports'),
 ('111120', 'products', 'menu_products'),
+('111120', 'services', 'advs_left'),
+('111120', 'services', 'list_supports'),
 ('111120', 'services', 'menu_services'),
+('111120', 'video', 'advs_left'),
+('111120', 'video', 'list_supports'),
+('111120', 'video', 'menu_video'),
 ('130312', 'about', 'advs_left'),
 ('130312', 'about', 'list_supports'),
 ('130312', 'about', 'menu_about'),
@@ -1884,9 +1990,10 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 --
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
+('cafe24h', 'mailgoogle@yahoo.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-20 06:33:29', NULL, NULL, NULL, 'user', 'vi|en', NULL, '2012-05-19 16:00:00', 0, 1, '111120', 1, 'giao-duc-dao-tao'),
 ('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi|en', NULL, '2012-04-14 17:00:00', 0, 1, '111120', 2, 'thoi-trang'),
 ('mayphotocopysieuviet', 'info@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-11 20:38:05', '', '', '', 'user', 'vi', '', '2012-05-11 10:00:00', 1, 1, '010312', 19, 'cong-nghe-thong-tin-vien-thong'),
-('phumyan', 'maioanh7887@yahoo.com', '25f9e794323b453885f5181f1b624d0b', '2012-04-11 23:50:51', '', '', '', 'user', 'vi', '', '2012-05-11 10:00:00', 1, 1, '220312', 19, 'noi-that-ngoai-that'),
+('phumyan', 'maioanh7887@yahoo.com', '25f9e794323b453885f5181f1b624d0b', '2012-04-11 23:50:51', '', '', '', 'user', 'vi|en', '', '2012-05-11 10:00:00', 1, 1, '220312', 19, 'noi-that-ngoai-that'),
 ('thienlonghoi', 'mailgoogle@yahoo.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-19 06:46:47', NULL, NULL, NULL, 'user', 'vi|en', NULL, '2012-05-18 16:00:00', 0, 1, '130312', 1, 'noi-that-ngoai-that'),
 ('thoitrang', 'groupitsoft@gmail.com.vn', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-19 01:21:46', NULL, NULL, NULL, 'user', 'vi', NULL, '2012-05-18 16:00:00', 0, 1, '070312', 20, 'bds-kien-truc-xay-dung'),
 ('tinhungphat', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-13 06:37:56', '', '', '', 'user', 'vi', '', '2012-05-12 16:00:00', 0, 1, '180412', 18, 'cong-nghe-thong-tin-vien-thong');
@@ -1930,10 +2037,12 @@ INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_user
 ('address1', '3A/1 Đoàn Văn Cự, P. Tam Hiệp, TP. Biên Hòa, Tỉnh Đồng Nai', '', 'mayphotocopysieuviet'),
 ('address2', '', '', 'mayphotocopysieuviet'),
 ('address2', '', '', 'thoitrang'),
+('advs', 'Quảng cáo', '', 'cafe24h'),
 ('advs', 'Đối tác chính', '', 'mayphotocopysieuviet'),
 ('advs', 'Quảng cáo', '', 'phumyan'),
 ('advs', 'Quảng cáo', '', 'thienlonghoi'),
 ('advs', 'Quảng cáo', '', 'thoitrang'),
+('company_name', 'Công ty TNHH Phú Mỹ An', '', 'cafe24h'),
 ('company_name', 'DNTN SIÊU VIỆT', '', 'mayphotocopysieuviet'),
 ('company_name', 'Công ty TNHH Phú Mỹ An', '', 'phumyan'),
 ('company_name', 'Công ty TNHH Thiên Long Hội', '', 'thienlonghoi'),
