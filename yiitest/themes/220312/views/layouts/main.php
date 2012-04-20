@@ -37,9 +37,9 @@
 	<div id="header">
 		<div id="logo">
 			<?php if($this->logo):?>
-				<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl'] ?>" title="<?php echo $this->logo['banner_name']?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/banner/<?php echo $this->logo['banner_url'] ?>" alt="<?php echo $this->logo['banner_name']?>" /></a>
+				<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl']?>/" title="<?php echo $this->logo['banner_name']?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/banner/<?php echo $this->logo['banner_url'] ?>" alt="<?php echo $this->logo['banner_name']?>" /></a>
 			<?php else:?>
-				<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl'] ?>/" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a>
+				<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl']?>/" title="Logo"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a>
 			<?php endif;?>
 		</div> <!--End logo-->
 		<?php echo ($this->lang['company_name']) ? '<h1 class="title-city">'.$this->lang['company_name'].'</h1>' : '' ?> <!--End title company-->

@@ -20,4 +20,9 @@ return array(
     'email' => 'Địa chỉ email',
     'phone' => 'Số điện thoại',
     'content' => 'Nội dung',
+
+	'first' => 'Đầu tiên',
+	'prev' => 'Lùi',
+	'next' => 'Tiếp',
+	'last' => 'Cuối cùng',
 );

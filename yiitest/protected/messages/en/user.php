@@ -20,4 +20,9 @@ return array(
     'email' => 'Email',
     'phone' => 'Phone',
     'content' => 'Content',
+
+	'first' => 'First',
+	'prev' => 'Prev',
+	'next' => 'Next',
+	'last' => 'Last',
 );
