@@ -1,0 +1,21 @@
+/* comment list */
+.comment-item {clear: both; margin-bottom: 15px; position: relative;}
+.avatar {display: block; float: left; height: 50px; margin-right: 10px; padding: 2px; width: 50px;}
+.avatar img{width: 50px}
+.comment-item p {-webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; border: 1px solid #ddd; margin-left: 70px; padding: 10px; position: relative; -moz-box-shadow: 0px 1px 1px 0px #ccc; -webkit-box-shadow: 0px 1px 1px 0px #ccc; box-shadow: 1px 1px 1px 0px #ccc;}
+.comment-item p span {display: block; font-size: 12px; margin-top: 5px; padding-top: 5px}
+.comment-item p a{font-weight: bold; color: #18538C}
+.comment-item p a:hover{color: #20622A}
+.nonchange, .nonchange span {display: inline !important; margin: 0; padding: 0;}
+span.comment-time {color: #888888; padding: 10px 0; position: absolute; right: 20px; top: 0;}
+.comment-content {border-top: 1px solid #DFDFDF}
+.comment-item span.dialog {background: url(../images/arrow-said.png) no-repeat; height: 25px;left: -10px; position: absolute; top: 0; width: 11px}
+
+/* comment form */
+.comment{border:1px solid #CDDEEE; -moz-box-shadow: 0 0 5px #999; -webkit-box-shadow: 0 0 5px #999;  box-shadow: 0 0 5px #999; -moz-border-radius:2px; -webkit-border-radius:2px; margin:10px 0; background: #F5F5F5}
+.comment .panel{border-left:6px solid #CDDEEE; padding: 8px 10px}
+.comment .panel div{margin-bottom:5px; clear: both}
+.comment .panel div label{width:120px; float:left; padding-top:3px}
+input.smallfield{width:350px; -moz-border-radius: 2px; -webkit-border-radius: 2px; border:1px solid #ccc; padding:3px}
+.comment .panel div textarea{border:1px solid #ccc; padding:3px; -moz-border-radius: 2px; -webkit-border-radius: 2px;}
+input.btn-comment {cursor:pointer; width:98px; height:24px; color:#fff; border:1px solid #ccc; background:#3A6AAD; -moz-border-radius: 3px; -webkit-border-radius: 3px; display:inline; margin-right:6px}
