@@ -1,9 +1,9 @@
-<?php $this->pageTitle = Yii::app()->name . ' - Contact Us'; ?>
+<?php $this->pageTitle = 'Liên hệ với chúng tôi'; $this->description = 'Bạn đang gặp khó khăn trong việc sử dụng sản phẩm, bạn muốn đóng góp ý kiến hay phàn nàn về chất lượng phục vụ của Dịch vụ tạo web Dos hãy liên lạc với chúng tôi bằng số Hotline: 0929 001001 hoặc điền vào form liên hệ' ?>
 <?php if (Yii::app()->user->hasFlash('contact')): ?>
     <?php echo Yii::app()->user->getFlash('contact'); ?>
 <?php else: ?>
-    <h1 class="heading-contact marginb10">Have you visited a Webs site that you find offensive or that contains illegal material? Have you received an unsolicited email from a site hosted by Webs?</h1>
-    <p>At Webs, we strictly prohibit the use of our services for software piracy, copyright infringement, sharing pornographic material, the defamation of others, unsolicited email communication and other such illegal and offensive activity, as outlined in our Terms of Service. While we are not responsible for such behavior, we do take strict disciplinary action against offenders. Webs is a member of the Internet Watch Foundation and employs automated scanning to insure all images on Webs sites are legal.</p>
+    <h1 class="heading-contact marginb10">Liên hệ với Dos</h1>
+    <p>Chúng tôi ghi nhận những ý kiến đóng góp, thắc mắc phản hồi từ phía người sử dụng. Nếu có bất cứ vấn đề gi liên quan đến Dos.vn xin dành ít phút đề chúng tôi tiếp nhận ý kiến của bạn điều này sẽ giúp sản phâm chúng tôi ngày càng hoàn thiện &amp; chăm sóc bạn tốt hơn<br/><br/>Bạn có thể liên lạc trực tiếp với chúng tôi:<br/>Hỗ trợ: <strong>0929 001001 (mr. An)</strong></p>
     <div class="frame-contact">
         <div class="tent-contact">
             <div class="left-contact">
@@ -22,16 +22,15 @@
                     </li>
                     <li class="right">
                         <select size="1" name="listtype" class="select">
-                            <option value="0">Copyright Infringement</option>
-                            <option value="1">Trademark Infringement</option>
-                            <option value="2">Defamation</option>
-                            <option value="3">Adult Content</option>
-                            <option value="4">Music Piracy</option>
+                            <option value="0">Hỗ trợ kỹ thuật</option>
+                            <option value="1">Thanh toán</option>
+                            <option value="2">Đóng góp ý kiến</option>
+                            <option value="3">Vấn đề khác</option>
                         </select> 
                     </li>
                     <li class="clear left"><input type="text" name="phone" value="Phone Number" onblur="if(this.value=='') this.value='Phone Number'" onfocus="if(this.value =='Phone Number' ) this.value=''" /></li>
                     <li class="right captcha">
-                        <?php echo $form->textField($model, 'verifyCode', array('class' => 'small-input', 'value' => 'Verification Code', 'onblur' => 'if(this.value=="") this.value="Verification Code"', 'onfocus' => 'if(this.value =="Verification Code") this.value=""')); ?>
+                        <?php echo $form->textField($model, 'verifyCode', array('class' => 'small-input', 'value' => 'Mã xác nhận', 'onblur' => 'if(this.value=="") this.value="Mã xác nhận"', 'onfocus' => 'if(this.value =="Mã xác nhận") this.value=""')); ?>
                         <?php if (CCaptcha::checkRequirements()): ?>
                             <?php $this->widget('CCaptcha', array('clickableImage' => true, 'showRefreshButton' => false)); ?>
                         <?php endif; ?>
@@ -40,7 +39,7 @@
                         <?php echo $form->textArea($model, 'body', array('rows' => 7, 'cols' => 50, 'onblur' => 'if(this.value=="") this.value="Content"', 'onfocus' => 'if(this.value =="Content") this.value=""')); ?>
                     </li>
                     <li>
-                        <?php echo CHtml::submitButton('Submit', array('class' => 'submit')); ?>
+                        <?php echo CHtml::submitButton('Send', array('class' => 'submit')); ?>
                     </li>
                 </ul>
                 <?php $this->endWidget(); ?>
