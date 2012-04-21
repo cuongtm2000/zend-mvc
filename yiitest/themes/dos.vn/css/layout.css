@@ -66,9 +66,9 @@ p{line-height: 18px}
 
 /*Frame-features (tieu de tinh nang)*/
 .frame-features{ text-align:center;background:#E6E2D5; -webkit-border-radius:4px; padding:20px 0;-moz-border-radius:4px;  margin:0 0 20px 0;color:#434343;font-size:13pt;*padding:10px 0 20px; *_padding:20px 0}
-.free{background:#0095E2; color:#fff; padding:8px 30px; font-weight:600;-webkit-border-radius:4px; -moz-border-radius:4px;}
+.free{background:#0095E2; color:#fff; padding:8px 25px; font-weight:600;-webkit-border-radius:4px; -moz-border-radius:4px;}
 .free:hover{background:#0083C1; color:#fff}
-.view{background:#62C400;color:#fff; padding:8px 30px;font-weight:600;-webkit-border-radius:4px; -moz-border-radius:4px;}
+.view{background:#62C400;color:#fff; padding:8px 25px;font-weight:600;-webkit-border-radius:4px; -moz-border-radius:4px;}
 .view:hover{ background:#4B9700; color:#fff}
 
 /*Title family*/
