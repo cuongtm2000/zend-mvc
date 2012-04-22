@@ -5,8 +5,8 @@ body{font-family:Arial, Helvetica, sans-serif; font-size:9pt; background:#E1E3EC
 a{text-decoration:none; color:#0066CC}
 a:hover{color:#004C25}
 h1.title-view{color:#0066CC; font-size:12pt}
-h3{color:#0066CC; font-size:11pt}
-h2{color:#0E8F0E; font-size:11pt}
+/*h3{color:#0066CC; font-size:11pt}
+h2{color:#0E8F0E; font-size:11pt}*/
 
 /*layout*/
 #header{background:#fff; padding:5px 10px;position:relative;top:0;left:0}
