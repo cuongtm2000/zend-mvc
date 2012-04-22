@@ -88,11 +88,11 @@ class Usernames extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'hoiitComments' => array(self::HAS_MANY, 'HoiitComments', 'hoiit_usernames_username'),
-            'hoiitLogs' => array(self::HAS_MANY, 'HoiitLogs', 'hoiit_usernames_username'),
-            'hoiitPosts' => array(self::HAS_MANY, 'HoiitPosts', 'hoiit_usernames_username'),
-            'hoiitProvincesProvince' => array(self::BELONGS_TO, 'HoiitProvinces', 'hoiit_provinces_province_id'),
-            'hoiitTemplatesTemplate' => array(self::BELONGS_TO, 'HoiitTemplates', 'hoiit_templates_template_id'),
+            //'hoiitComments' => array(self::HAS_MANY, 'HoiitComments', 'hoiit_usernames_username'),
+            //'hoiitLogs' => array(self::HAS_MANY, 'HoiitLogs', 'hoiit_usernames_username'),
+            //'hoiitPosts' => array(self::HAS_MANY, 'HoiitPosts', 'hoiit_usernames_username'),
+            //'hoiitProvincesProvince' => array(self::BELONGS_TO, 'HoiitProvinces', 'hoiit_provinces_province_id'),
+            //'hoiitTemplatesTemplate' => array(self::BELONGS_TO, 'HoiitTemplates', 'hoiit_templates_template_id'),
         );
     }
 
@@ -165,7 +165,7 @@ class Usernames extends CActiveRecord {
             if($_FILES[__CLASS__]['name']['picture']){
                 //import class upload images
                 Yii::import('ext.EUploadedImage.EUploadedImage');
-                $this->picture = EUploadedImage::getInstance($this, 'picture')->processUpload(120, 90, 'public/userfiles/images/usernames', $this->username);
+                $this->picture = EUploadedImage::getInstance($this, 'picture')->processUpload(120, 90, '/public/userfiles/image/usernames', $this->username);
             }
         }
 

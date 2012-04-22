@@ -54,7 +54,7 @@ class Posts extends CActiveRecord {
             array('post_title, post_detail, post_link, hoiit_cats_cat_id', 'required'),
             array('post_sort, post_type, post_enable, hoiit_cats_cat_id', 'numerical', 'integerOnly' => true),
             array('post_title, post_link', 'length', 'max' => 100),
-            array('post_link', 'checkExistsLink'),
+            array('post_link', 'unique'),
             array('post_description', 'length', 'min' => 60, 'max' => 250),
             array('post_img', 'length', 'max' => 60),
             array('post_demo, post_hit', 'length', 'max' => 45),
@@ -64,11 +64,11 @@ class Posts extends CActiveRecord {
             array('post_id, post_title, post_img, post_detail, post_sort, post_demo, post_hit, post_type, post_link, post_description, post_enable, post_create, hoiit_cats_cat_id, hoiit_usernames_username', 'safe', 'on' => 'search'),
         );
     }
-    public function checkExistsLink($attribute){
+    /*public function checkExistsLink($attribute){
         if (GetTag::tag($this->post_link, $this->post_id)) {
             $this->addError($attribute, '<strong>' . $this->post_link . '</strong> ' . $attribute . ' already exists please choose another link');
         }
-    }
+    }*/
 
     /**
      * @return array relational rules.
@@ -77,10 +77,10 @@ class Posts extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'hoiitComments' => array(self::HAS_MANY, 'HoiitComments', 'hoiit_posts_post_id'),
-            'hoiitDownloads' => array(self::HAS_MANY, 'HoiitDownload', 'hoiit_posts_post_id'),
+            //'hoiitComments' => array(self::HAS_MANY, 'HoiitComments', 'hoiit_posts_post_id'),
+            //'hoiitDownloads' => array(self::HAS_MANY, 'HoiitDownload', 'hoiit_posts_post_id'),
             'hoiitCatsCat' => array(self::BELONGS_TO, 'Cats', 'hoiit_cats_cat_id'),
-            'hoiitUsernamesUsername' => array(self::BELONGS_TO, 'HoiitUsernames', 'hoiit_usernames_username'),
+            //'hoiitUsernamesUsername' => array(self::BELONGS_TO, 'HoiitUsernames', 'hoiit_usernames_username'),
         );
     }
 
@@ -155,13 +155,13 @@ class Posts extends CActiveRecord {
             if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['post_img']) {
                 //import class upload images
                 Yii::import('ext.EUploadedImage.EUploadedImage');
-                $this->post_img = EUploadedImage::getInstance($this, 'post_img')->processUpload(145, 100, 'public/userfiles/images/posts', $this->post_title);
+                $this->post_img = EUploadedImage::getInstance($this, 'post_img')->processUpload(145, 100, '/public/userfiles/image/posts', $this->post_title);
             }
         } else {
             if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['post_img']) {
                 //import class upload images
                 Yii::import('ext.EUploadedImage.EUploadedImage');
-                $this->post_img = EUploadedImage::getInstance($this, 'post_img')->processUpload(145, 100, 'public/userfiles/images/posts', $this->post_title, $this->_oldImage);
+                $this->post_img = EUploadedImage::getInstance($this, 'post_img')->processUpload(145, 100, '/public/userfiles/image/posts', $this->post_title, $this->_oldImage);
             } else {
                 $this->post_img = $this->_oldImage;
             }
@@ -264,7 +264,7 @@ class Posts extends CActiveRecord {
     //Back end - Delete Record
     private function deleteRecord($id) {
         $item = Posts::model()->find('post_id=:id', array(':id' => $id));
-        $path = YiiBase::getPathOfAlias('webroot') . '/' . 'public/userfiles/images/' . Yii::app()->controller->id . '/';
+        $path = YiiBase::getPathOfAlias('webroot') . '/' . 'public/userfiles/image/' . Yii::app()->controller->id . '/';
         
         if ($item->post_img && file_exists($path . $item->post_img)) {
             unlink($path . $item->post_img);

@@ -237,8 +237,9 @@ class EUploadedImage extends CComponent {
                     // save the thumbnail
                     if ($this->saveImage(substr_replace($file, $thumb_dir . $thumb_prefix, strrpos($file, DIRECTORY_SEPARATOR) + 1, 0)))
                         return true;
-                } else
+                } else {
                     return true;
+                }
             }
         }
 
@@ -366,8 +367,18 @@ class EUploadedImage extends CComponent {
         $this->maxWidth = (int) $maxwidth;
         $this->maxHeight = (int) $maxheight;
         //path and filename
-        $path_upload = YiiBase::getPathOfAlias('webroot') . '/' . $path . '/';
+        $path_upload = YiiBase::getPathOfAlias('webroot') . $path . '/';
+
+        //check Directory Exists
+        $common_class = new Common();
+        $common_class->recursiveMkdir($path . '/');
         
+        /*if (!is_dir($path_upload)) {
+            //$this->mkdir_r($path_upload);
+            mkdir($path_upload, 0777, true);
+            //chmod($path_upload, 0777);
+        }*/
+
         //remove file old
         if ($file_old && file_exists($path_upload . $file_old)) {
             unlink($path_upload . $file_old);
@@ -380,7 +391,7 @@ class EUploadedImage extends CComponent {
             //change name using user input name
             $filename = $this->getFileExists($path_upload, NoneUnicode::fileName($filename . '.' . $this->getExtensionName()));
         }
-        
+
         //upload
         if ($this->saveAs($path_upload . $filename)) {
             return $filename;
