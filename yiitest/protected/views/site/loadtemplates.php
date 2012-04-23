@@ -1,7 +1,7 @@
 <?php if($templatesBusiness):?>
 	<?php $checked = ''; foreach($templatesBusiness as $value):?>
 	<li>
-		<label for="tem-<?php echo $value['template']?>"><img src="<?php echo Yii::app()->baseUrl; ?>/themes/<?php echo $value['template']?>/images/tiny.jpg" alt="<?php echo $value['template']?>"  /></label>
+		<label for="tem-<?php echo $value['template']?>"><img src="<?php echo Yii::app()->baseUrl; ?>/themes/<?php echo $value['template']?>/images/tiny.png" alt="<?php echo $value['template']?>"  /></label>
 		<p>
 			<?php
 			if (isset(Yii::app()->session['user_choose_template']) && Yii::app()->session['user_choose_template']==$value['template']){
