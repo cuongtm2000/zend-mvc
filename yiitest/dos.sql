@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 23, 2012 at 09:35 AM
+-- Generation Time: Apr 23, 2012 at 09:19 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -121,7 +121,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('logo_width', 239, '', '180412'),
 ('logo_width', 314, '', '200312'),
 ('logo_width', 259, '', '220312'),
-('logo_width', 310, '', '230412'),
+('logo_width', 320, '', '230412'),
 ('logo_width', 300, '', '260312'),
 ('max_image_height', 667, '', '010312'),
 ('max_image_height', 600, '', '070312'),
@@ -647,7 +647,7 @@ INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `co
 (53, 'Giới thiệu sơ lược', '', '<p>Thiên Long Hội  chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn carbp2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn carbp2. Ngoài ra, Thiên Long Hộiluôn đáp ứng các loại ván ép, keo theo Đơn Đặt Hàng.</p>\r\n<p>Được thành lập năm 1999, có 5 xưởng sản xuất, bề dày kinh nghiệm 12 năm luôn tiên phong đầu tư khoa học, nghiên cứu phát triển sản phẩm, có máy móc thiết bị loại tốt và đội ngũ nhân lực tâm huyết, có trình độ chuyên môn cao, thạo việc để sản xuất sản phẩm có tính năng tốt, bền bỉ, tinh xảo, giá thành thấp đồng thời đáp ứng được đơn hàng số lượng lớn.</p>', '', 298, '2012-04-19 06:46:54', 1, 1, '', '', 'gioi-thieu-so-luoc', '', 'Thiên Long Hội  chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn carbp2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn carbp2. Ngoài ra, Thiên Long Hộiluôn đáp ứng các loại ván ép, keo theo Đơn Đặt Hàng.', '', 1, 'thienlonghoi'),
 (54, 'Giới thiệu chung chung', '', '<p>1. Địa chỉ trụ sở chính:</p>\r\n<p>Văn phòng: 23 Núi Thành - TP.Đà Nẵng</p>\r\n<p>Điện thoại: 0511.3634345 - 3626077 - 3626099 - 3601558 - 3601559. Fax: 0511.3634345</p>\r\n<p>Email: gialinh@begili.com Website: www.begili.com</p>\r\n<ul><li>2. Nhà máy:</li>\r\n<li>Địa chỉ: Lô 4-5 Cụm Công nghiệp Đại Hiệp, Đại Lộc, Quảng Nam.</li>\r\n<li>Điện thoại: 0510.3762767 Fax: 0510.3762769</li>\r\n<li>3. Quá trình hình thành và phát triển:</li>\r\n</ul><p>Công ty TNHH Gia Linh là đơn vị thành lập theo hình thức Công ty trách nhiệm hữu hạn và hoạt đông theo luật doanh nghiệp được Quốc Hội Nước Cộng Hoà Xã Hội Chủ Nghĩa Việt Nam Khoá X thông qua ngày 12/6/1999 và các quy định khác của pháp luật Nhà nước Việt Nam. Là đơn vị chuyên sản xuất và cung cấp các thiết bị đồ gỗ nội - ngoại thất cao cấp, kinh doanh khách sạn, nhà hàng và sản xuất máy điều hoà không khí mang thương hiệu Begili.</p>\r\n<p>Trải qua thời gian, cùng với sự lớn mạnh không ngừng cả về chất và lượng, do vậy Công ty TNHH Gia Linh đã đạt được những thành tựu to lớn. Đặc biệt, với đội ngũ cán bộ kỹ thuật, kỹ sư dày dạn kinh nghiệm trong việc tổ chức quản lý thi công, điều hành sản xuất, đội ngũ cán bộ quản lý nhạy bén, đội ngũ nhân viên với bề dày kinh nghiệm trong lĩnh vực mộc máy và được bổ sung thêm bởi lớp nhân viên trẻ có sức sáng tạo, nhiệt huyết cao, năng động đã góp phần tạo nên sự lớn mạnh của Công ty trong môi trường cạnh tranh ngày càng khốc liệt.</p>\r\n<p>Công ty áp dụng công nghệ máy móc hiện đại, với sự giám sát chặt chẽ của các kỹ thuật viên trong Công ty vì vậy sản phẩm đã đạt đến đỉnh cao của sự hoàn hảo, tinh tế và đa dạng về chủng loại.</p>\r\n<p>Mục đích kinh doanh của Công ty là tạo dựng trở thành thương hiệu uy tín và in sâu trong tâm trí của khách hàng. Qua đó góp phần tạo cho nhân viên Công ty nói riêng có một cuộc sống đảm bảo, ổn định và góp sức xây dựng một đất nước Việt Nam nói chung ngày càng vững mạnh và phồn vinh.</p>\r\n<p>Phương châm kinh doanh của Công ty là mong muốn đem lại cho quý khách sự hài lòng và thỏa mãn về chất lượng sản phẩm mang thương hiệu Begili .</p>', '', 8, '2012-04-19 06:46:54', 2, 0, '', '', 'gioi-thieu-chung-chung', '', '1. Địa chỉ trụ sở chính:\r\nVăn phòng: 23 Núi Thành - TP.Đà Nẵng\r\nĐiện thoại: 0511.3634345 - 3626077 - 3626099 - 3601558 - 3601559. Fax: 0511.3634345\r\nEmail: gialinh@begili.com Website: www.begili.com', '', 1, 'thienlonghoi'),
 (55, 'Công trình đã thực hiện', '', '<p><strong>1.Một số hình ảnh 2 chi nhánh SCB tại Đà Nẵng</strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/GLSCB04.jpg" alt="" width="350" height="300" /></p>\r\n<p style="text-align:left;"><strong>2.Các công trình tiêu biểu:</strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/nhaconam.jpg" alt="" width="650" height="487" /></p>\r\n<p style="text-align:center;"><strong><span style="color:#0000ff;">Nhà tư nhân</span></strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/sunriver.JPG" alt="" width="450" height="600" /></p>\r\n<p style="text-align:center;"><span style="color:#0000ff;"><strong>Khách sạn SUN RIVER</strong></span></p>\r\n<p style="text-align:left;"> </p>', '', 67, '2012-04-19 06:46:54', 3, 0, '', '', 'cong-trinh-da-thuc-hien', '', 'Công trình đã thực hiện', '', 1, 'thienlonghoi'),
-(56, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 167, '2012-04-20 06:34:17', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'cafe24h'),
+(56, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 183, '2012-04-20 06:34:17', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'cafe24h'),
 (57, 'Giới thiệu chung chung', '', '<p>Giới thiệu chung chung Giới thiệu chung chung  Giới thiệu chung chung</p>\r\n<p>Giới thiệu chung chung Giới thiệu chung chung Giới thiệu chung chung</p>\r\n<p>Giới thiệu chung chung Giới thiệu chung chung Giới thiệu chung chung</p>\r\n<p>Giới thiệu chung chung Giới thiệu chung chung Giới thiệu chung chung</p>', '', 13, '2012-04-20 06:34:17', 2, 0, '', '', 'gioi-thieu-chung-chung', '', 'Giới thiệu chung chung', '', 1, 'cafe24h'),
 (58, 'Giới thiệu thị trường nội thất', '', '<p>Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất</p>', '', 21, '2012-04-20 06:34:17', 3, 0, '', '', 'gioi-thieu-thi-truong-noi-that', '', 'Giới thiệu thị trường nội thất', '', 1, 'cafe24h'),
 (59, 'Giới thiệu sơ lược', '', '<p>Từ năm 1998 đến nay, Nhà sách 24h đã và đang tiếp tục nhận được sự tín nhiệm của đông đảo bạn đọc gần xa cũng như sự tín nhiệm của các cơ quan, trường học trong và ngoài nước. Sự tín nhiệm đó chính là nguồn động lực lớn giúp Nhà sách luôn cố gắng hoàn thiện hơn nữa để phục vụ quý khách ngày một tốt hơn.</p>', '', 184, '2012-04-23 02:30:31', 1, 1, '', '', 'gioi-thieu-so-luoc', '', 'Từ năm 1998 đến nay, Nhà sách 24h đã và đang tiếp tục nhận được sự tín nhiệm của đông đảo bạn đọc gần xa cũng như sự tín nhiệm của các cơ quan, trường học trong và ngoài nước.', '', 1, 'sach24h'),
@@ -1110,7 +1110,7 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('max_count', 0, 'thienlonghoi'),
 ('counter', 0, 'thienlonghoi'),
 ('yesterday', 0, 'thienlonghoi'),
-('day_time', 2456038, 'cafe24h'),
+('day_time', 2456041, 'cafe24h'),
 ('max_count', 0, 'cafe24h'),
 ('counter', 0, 'cafe24h'),
 ('yesterday', 0, 'cafe24h'),
@@ -1137,10 +1137,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1335151926, 'sach24h'),
-('''127.0.0.1''', 1335148661, 'thoitrang'),
-('''127.0.0.1''', 1335164873, 'thienlonghoi'),
-('''127.0.0.1''', 1335164978, 'phumyan');
+('''127.0.0.1''', 1335164918, 'cafe24h');
 
 -- --------------------------------------------------------
 
