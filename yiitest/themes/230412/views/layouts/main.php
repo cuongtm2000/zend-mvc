@@ -42,21 +42,16 @@
 	</div>
 	<?php endif?>
 	<div id="header">
-			<ul class="menu-hd-right">
-				<li class="welcome">Default welcome Coffee!</li>
-				<li><a href="login.html" title="">My Account</a></li>
-				<li><a href="login.html" title="">My Wishlist</a></li>
-				<li><a href="login.html" title="">My Cart</a></li>
-				<li><a href="login.html" title="">Checkout</a></li>
-				<li><a href="login.html" title="">Log In</a></li>
-			</ul>
+		<div>
+			<h1 class="welcome"><b><?php echo $this->lang['company_name'] ?></b></h1>
 			<div  id="search">
 				<form id="frsearch" action="<?php echo Yii::app()->homeUrl?>" method="post">
 					<input type="text" name="txt-search" class="input"  value="Search entire store here ..." onblur="if(this.value=='') this.value='Search entire store here ...'" onfocus="if(this.value =='Search entire store here ...' ) this.value=''"/>
 					<input type="image" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/btn-go.gif" alt="" class="bt-go" />
 				</form>
-			</div>
-		<div class="clear"></div>
+			</div> 		<div class="clear"></div>
+		</div>
+		<div>
 			<div class="logo">
 				<?php if($this->logo):?>
 					<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl']?>/" title="<?php echo $this->logo['banner_name']?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/banner/<?php echo $this->logo['banner_url'] ?>" alt="<?php echo $this->logo['banner_name']?>" /></a>
@@ -64,13 +59,14 @@
 					<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl']?>/" title="Logo"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a>
 				<?php endif;?>
 			</div>
-		<ul id="nav">
-			<?php foreach($this->nav as $value):?>
-				<?php $selected = ($value['url']==$this->module->id) ?  ' class="select"' : ''?>
-				<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
-				<li><a<?php echo $selected ?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
-			<?php endforeach;?>
-		</ul> <!--End all nav-->
+			<ul id="nav">
+				<?php foreach($this->nav as $value):?>
+					<?php $selected = ($value['url']==$this->module->id) ?  ' class="select"' : ''?>
+					<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
+					<li><a<?php echo $selected ?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
+				<?php endforeach;?>
+			</ul> <!--End all nav--> <div class="clear"></div>
+		</div>
 	</div><!--End header-->
 	<div id="content">
 		<div id="leftcontent">
@@ -170,17 +166,21 @@
 		<div class="clear"></div>
 	</div><!--End content-->
 	<div id="footer">
-		<div class="left">
+		<div class="left-fter">
 			<ul class="menu-fter">
 				<?php $size = count($this->nav); $i = 0; foreach($this->nav as $value):?>
 					<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
 					<?php $none_line = ($i <($size-1)) ? '' : ' class="none-border"' ?>
 					<li><a<?php echo $none_line ?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
 				<?php $i++; endforeach;?>
-			</ul>
+			</ul> <div class="clear"></div>
+			<h3 class="title-company"><?php echo $this->lang['company_name'] ?></h3>
+			 <p><?php echo $this->lang['address1'] ?></p>
+			 <p><?php echo $this->lang['address2'] ?></p>
 		</div>
-		<div class="copyright"><p>&copy; 2011 Magento Demo Store. All Rights Reserved.</p>
-			<p> Design by Website <a href="#" title="">azweb.vn</a></p>
+		<div class="copyright">
+			
+			 <p><?php echo $this->lang['copyright'] ?></p>
 		</div>            <div class="clear"></div>
 	</div><!--End Footer-->
 </div><!--End wrapper-->

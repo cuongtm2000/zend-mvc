@@ -22,5 +22,5 @@
 <script type="text/javascript">$(document).ready(function () {$(".product a[rel^='prettyPhoto']").prettyPhoto();});</script>
 	<?php $this->widget('CLinkPager', array('pages' => $listItemIndex['pages'], 'header'=>'', 'lastPageLabel'=>'last', 'nextPageLabel'=>'next', 'firstPageLabel'=>'first', 'prevPageLabel'=>'prev', 'htmlOptions'=>array('class'=>'paging')))?>
 <?php else:?>
-	Khong co mau tin
+	<div class="frame-tent-right"><?php echo $this->lang['no_record'] ?></div>
 <?php endif?>
