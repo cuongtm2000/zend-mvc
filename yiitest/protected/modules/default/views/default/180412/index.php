@@ -18,7 +18,7 @@
 						<a  class="pic" href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title='<?php echo $value['title'.LANG] ?>'><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt='<?php echo $value['title'.Yii::app()->session['lang']] ?>' /></a>
 					<?php endif; ?>
 				</div>
-				<p class="price"><?php echo number_format($value['unit'], 0, '', '.'); ?> VND</p>
+				<p class="price"><?php echo (is_numeric($value['unit'])) ? number_format($value['unit'], 0, '', '.') . ' VND' : (($value['unit']) ? $value['unit'] : $this->lang['contact']) ?></p>
 				<p class="bton-pro"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title='<?php echo $this->lang['detail']?>: <?php echo $value['title' . LANG] ?>' class="bton-detail"><?php echo $this->lang['detail']?></a> <a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'contact.link')?>" title='<?php echo $this->lang['contact']?>' class="bton-order"><?php echo $this->lang['contact']?></a>  </p>
 			</li>
 		<?php endforeach; ?>

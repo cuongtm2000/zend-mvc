@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 <meta http-equiv="content-language" content="vi, en" />
 <meta name="revisit-after" content="1 days" />
 <meta name="robots" content="noodp,index,follow" />
@@ -28,6 +29,8 @@
 	});
 </script>
 <?php endif;?>
+
+<?php echo $this->analytics?>
 </head>
 <body>
  <div id="wrapper">
@@ -143,16 +146,14 @@
         <div id="rightcontent">
 			<?php if($this->banner): ?>
 				<div id="banner">
-						<ul class="slider">
-							<?php foreach($this->banner as $value): ?>
-								<li class="slider-item"><a href="<?php echo $value['banner_link'] ?>" title=""><img src="<?php echo Yii::app()->request->baseUrl.USERFILES; ?>/banner/<?php echo $value['banner_url'] ?>" alt="<?php echo $value['banner_name'] ?>" /></a></li>
-							<?php endforeach ?>
-						</ul>
-				</div> <!--End banner-->
-
+					<ul class="slider">
+						<?php foreach($this->banner as $value): ?>
+						<li class="slider-item"><a href="<?php echo $value['banner_link'] ?>" title=""><img src="<?php echo Yii::app()->request->baseUrl.USERFILES; ?>/banner/<?php echo $value['banner_url'] ?>" alt="<?php echo $value['banner_name'] ?>" /></a></li>
+						<?php endforeach ?>
+					</ul>
+				</div><!--End banner-->
 			<?php endif; ?>
 			<?php echo $content?>
-
         </div><!--End rightcontent--> <div class="clear"></div>
     </div><!--End ALL content-->
 

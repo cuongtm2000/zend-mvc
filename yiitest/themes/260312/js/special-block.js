@@ -6,7 +6,7 @@ $(function() {
  			speed: 500,
 			crossfade: false,
 			autopagination:false,
- 			autoplay: 5000
+ 			autoplay: 3000
  });
  //rollover hover
  $(".carousel li").hover(function() { //On hover...

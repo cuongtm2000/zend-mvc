@@ -7,10 +7,9 @@
 
 <?php if(isset($this->function['products_hot']) && $this->function['products_hot']):?>
 <h1 class="title-right"><span><?php echo $this->lang['products'] . ' ' . strtolower($this->lang['hot']) ?></span></h1>
-	<div class="all-product">
-	
+	<ul class="all-product">
 	<?php foreach($this->function['products_hot'] as $value): ?>
-		<div class="product">
+		<li class="product">
 			<div class="tent-product">
 				<div class="product-img">
 					<?php if($value['pic_thumb']): ?>
@@ -22,7 +21,7 @@
 				<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title='<?php echo $value['title'.LANG] ?>'><strong><?php echo $value['title'.LANG] ?></strong></a></h2>
 				<p class="bton-pro"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $this->lang['detail']?>: <?php echo $value['title' . LANG] ?>" class="bton-detail"><?php echo $this->lang['detail']?></a> <a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'contact.link')?>" title="<?php echo $this->lang['contact']?>" class="bton-order"><?php echo $this->lang['contact']?></a> </p>
 			</div>
-		</div>
+		</li>
 	<?php endforeach; ?>
-	</div> <!--End all product-->
+	</ul> <!--End all product-->
 <?php endif; ?>

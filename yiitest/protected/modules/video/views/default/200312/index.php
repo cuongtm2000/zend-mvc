@@ -7,7 +7,7 @@
 			<div class="product-top"></div>
 			<div class="product-mid">
 					<div class="tent-product">
-						<div class="product-img">
+						<div class="product-img product-img-video">
 							<a href="<?php echo CHtml::encode($value['url'])?>" rel="prettyPhoto" title="<?php echo $value['title'.LANG] ?>">
 								<?php if($value['pic_thumb']):?>
 									<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/<?php echo $this->module->id ?>/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" />
