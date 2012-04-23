@@ -11,14 +11,14 @@ class SiteController extends Controller {
 		$model = new Posts;
 		$user = new Usernames;
 		$comment = new Comments;
-		$this->render('index', array('listRecordNew' => $model->listRecordNew(), 'listHitView' => $model->listHitView(), 'listNewUsers' => $user->listNewUsers(), 'listNewComment' => $comment->listNewComment()));
+		$this->render('index', array('listRecordTypeNew' => $model->listRecordTypeNew(1), 'listRecordNew' => $model->listRecordNew(), 'listHitView' => $model->listHitView(), 'listNewUsers' => $user->listNewUsers(), 'listNewComment' => $comment->listNewComment()));
 	}
 
 	public function actionError() {
 		if ($error = Yii::app()->errorHandler->error) {
 			if (Yii::app()->request->isAjaxRequest)
 				echo $error['message'];
-			else{
+			else {
 				$this->render('error', $error);
 			}
 		}

@@ -1,5 +1,12 @@
-<?php $this->pageTitle = 'Hoiit.com - Home page'; $this->keywords = 'Specialized tutorial for programming, answer questions about programming for programmers, Where exchange and learning experience programming, Construction projects for charity'; $this->description = 'Specialized tutorial Php framework, Asp.net, C#, VB, Jquery, Javascript, Web template, Outsourcing of programming languages​​, answer questions about programming for programmers, Where exchange and learning experience programming, Construction projects for charity'?>
+<?php $this->pageTitle = 'Home page'; $this->keywords = 'Specialized tutorial for programming, answer questions about programming for programmers, Where exchange and learning experience programming, Construction projects for charity'; $this->description = 'Specialized tutorial Php framework, Asp.net, C#, VB, Jquery, Javascript, Web template, Outsourcing of programming languages​​, answer questions about programming for programmers, Where exchange and learning experience programming, Construction projects for charity'?>
 <div class="left col-center">
+	<h1>Post experience for programmer</h1>
+	<ul>
+		<?php foreach ($listRecordTypeNew as $value): ?>
+		<li><a href="<?php echo Yii::app()->request->baseUrl . '/posts/' . NoneUnicode::convert($value['cat_name']) . '/' . $value['post_link'] ?>.html"><?php echo $value['post_title'] ?></a> by <a href="#"><?php echo $value['hoiit_usernames_username'] ?></a> - <a href="<?php echo Yii::app()->request->baseUrl . '/posts/' . NoneUnicode::convert($value['cat_name']) ?>"><?php echo $value['cat_name'] ?></a></li>
+		<?php endforeach; ?>
+	</ul>
+
     <h1>Latest Posts</h1>
     <ul>
         <?php foreach ($listRecordNew as $value): ?>
