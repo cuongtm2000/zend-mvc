@@ -197,6 +197,16 @@ class Username extends CActiveRecord {
 		return parent::beforeSave();
 	}
 
+	public function listUserNewCreated() {
+		$command = Yii::app()->db->createCommand('SELECT username FROM ' . $this->tableName() . ' WHERE activated=1 ORDER BY created DESC LIMIT 0, 7');
+		return $command->queryAll();
+	}
+
+	public function listUserImport() {
+		$command = Yii::app()->db->createCommand('SELECT username FROM ' . $this->tableName() . ' WHERE import = 1 AND activated=1 ORDER BY created DESC LIMIT 0, 7');
+		return $command->queryAll();
+	}
+
 	public function listUserByImport($businessId) {
 		$command = Yii::app()->db->createCommand('SELECT username FROM ' . $this->tableName() . ' WHERE import = 1 AND activated=1 AND dos_bussiness_bussiness_id=:business ORDER BY created ASC');
 		$command->bindParam(":business", $businessId, PDO::PARAM_STR);
