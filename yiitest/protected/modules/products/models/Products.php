@@ -80,8 +80,8 @@ class Products extends CActiveRecord {
 			'pic_thumb' => Yii::app()->controller->lang['pic_thumb'],
 			'pic_full' => Yii::app()->controller->lang['pic_full'],
 			'pic_desc' => Yii::app()->controller->lang['pic_desc'],
-			//'preview' => 'Preview',
-			//'previewen' => 'Previewen',
+			'preview' => Yii::app()->controller->lang['description'],
+			'previewen' => Yii::app()->controller->lang['descriptionen'],
 			'content' => Yii::app()->controller->lang['content'],
 			'contenten' => Yii::app()->controller->lang['contenten'],
 			'tag' => Yii::app()->controller->lang['tag'],
@@ -156,6 +156,8 @@ class Products extends CActiveRecord {
 		$purifier = new CHtmlPurifier();
 		$this->title = $purifier->purify(trim($this->title));
 		$this->titleen = $purifier->purify(trim($this->titleen));
+		$this->preview = $purifier->purify(trim($this->preview));
+		$this->previewen = $purifier->purify(trim($this->previewen));
 		$this->content = $purifier->purify(trim($this->content));
 		$this->contenten = $purifier->purify(trim($this->contenten));
 		$this->tag = $purifier->purify(trim($this->tag));

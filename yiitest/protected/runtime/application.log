@@ -1,0 +1,3 @@
+2012/04/23 06:13:56 [warning] [application] Failed to set unsafe attribute "remove_pic_thumb" of "Products".
+in E:\Customers\dos.vn\svn\protected\modules\admin\controllers\ProductsController.php (177)
+in E:\Customers\dos.vn\svn\index.php (16)
