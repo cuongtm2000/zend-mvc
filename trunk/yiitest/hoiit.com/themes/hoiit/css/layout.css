@@ -171,4 +171,8 @@ ul.list-templates li p.add-cart{background: #3A6AAD; color: #fff; padding: 2px 4
 ul.list-templates li p.add-cart a{color: #fff}
 ul.list-templates li p.add-cart a:hover{color: #EF6700}
 
+ul.top-user{list-style:none; margin:2px auto; padding:0; width:99%}
+ul.top-user li{float: left; margin:5px 0.2em}
+ul.top-user li img{width:52px; height:52px; border:1px solid #ccc; padding:1px}
+
 .templates-view-right{background: red}

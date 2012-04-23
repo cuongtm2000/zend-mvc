@@ -1,4 +1,5 @@
 <?php $this->breadcrumbs=array('Posts',);?>
+<?php $this->pageTitle = 'Posts'?>
 <ul class="list-item">
     <?php if ($models): ?>
         <?php foreach ($models as $value): ?>

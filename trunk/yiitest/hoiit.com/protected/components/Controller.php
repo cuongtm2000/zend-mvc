@@ -25,10 +25,10 @@ class Controller extends CController {
     public $breadcrumbs = array();
     public $keywords;
     public $description;
-    /*protected function afterAction($action) {
-        $time = sprintf('%0.5f', Yii::getLogger()->getExecutionTime());
-        $memory = round(memory_get_peak_usage() / (1024 * 1024), 2) . "MB";
-        echo "Time: $time, memory: $memory";
-        parent::afterAction($action);
-    }*/
+	public $listTopPostUsers = array();
+
+	public function init(){
+		$username_class = new Usernames();
+		$this->listTopPostUsers = $username_class->listTopPostUsers();
+	}
 }

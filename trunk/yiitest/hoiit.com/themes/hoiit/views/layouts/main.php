@@ -7,7 +7,7 @@
         <meta name="robots" content="noodp,index,follow" />
         <link rel="SHORTCUT ICON" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/gif" />
-        <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+        <title><?php echo CHtml::encode($this->pageTitle); ?> - Hoiit.com</title>
         <meta name="keywords" content="<?php echo $this->keywords ?>" />
         <meta name="description" content="<?php echo $this->description ?>" />
         <link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/hoiit.css" />
@@ -19,16 +19,16 @@
         <![endif]-->
 		<script type="text/javascript">
 
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-25177991-35']);
-		  _gaq.push(['_setDomainName', 'hoiit.com']);
-		  _gaq.push(['_trackPageview']);
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-30169391-1']);
+			_gaq.push(['_setDomainName', 'hoiit.com']);
+			_gaq.push(['_trackPageview']);
 
-		  (function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
 
 		</script>
     </head>
@@ -42,6 +42,7 @@
                     array('label' => 'Register', 'url' => array('/register'), 'visible' => Yii::app()->user->isGuest, 'itemOptions' => array('class' => 'register')),
                     array('label' => 'Login', 'url' => array('/login'), 'visible' => Yii::app()->user->isGuest, 'itemOptions' => array('class' => 'login')),
                     array('label' => 'Dashboard', 'url' => array('/dashboard'), 'visible' => !Yii::app()->user->isGuest, 'itemOptions' => array('class' => 'login')),
+					array('label' => 'Profile', 'url' => array('/dashboard/users/edit'), 'visible' => !Yii::app()->user->isGuest, 'itemOptions' => array('class' => 'login')),
                     array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/logout'), 'visible' => !Yii::app()->user->isGuest, 'itemOptions' => array('class' => 'register'))
                 ),
             ));
@@ -65,6 +66,15 @@
                 <div class="catmenu">
                     <?php $this->widget('ext.common.listCats') ?>
                 </div>
+
+				<div class="catmenu">
+					<h4>Top Poster</h4>
+					<ul class="top-user">
+						<?php foreach($this->listTopPostUsers as $values):?>
+							<li><a href="#" title="<?php echo $values['username']?>"><img src="<?php echo Yii::app()->request->baseUrl?>/public/userfiles/image/usernames/<?php echo $values['picture']?>" alt="<?php echo $values['username']?>" /></a></li>
+						<?php endforeach?>
+					</ul><div class="clear"></div>
+				</div>
             </div><!--End menu bar-->
             <div class="contenter">
                 <div class="content">
