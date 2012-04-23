@@ -28,5 +28,5 @@
 	<?php $this->widget('CLinkPager', array('pages' => $list_items['pages'], 'header'=>'', 'lastPageLabel'=>'Last', 'nextPageLabel'=>'Next', 'firstPageLabel'=>'First', 'prevPageLabel'=>'Prev', 'htmlOptions'=>array('class'=>'paging')))?>
 <div class="clear"></div>
 <?php else: ?>
-	<?php echo $this->lang['no_record'] ?>
+	<div class="frame-tent-right"><?php echo $this->lang['no_record'] ?></div>
 <?php endif; ?>

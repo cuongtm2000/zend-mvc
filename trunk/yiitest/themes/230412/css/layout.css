@@ -23,16 +23,12 @@ a:hover{color:#000;}
 
 /*Header*/
 #header{margin:5px 0 0 0; background:url(../images/headerbg.gif) no-repeat; height:141px}
-.menu-hd-right{list-style:none}
-.welcome{color:#9A522E; font-weight:700; margin:5px 0 0 0}
-.menu-hd-right{ margin-left:20px; }
-.menu-hd-right li{float:left;position:relative; top:25px}
-.menu-hd-right li a{padding:5px 7px;display:block;color:#000; font-size:8pt;font-weight:700}
-.menu-hd-right li a:hover{color:#fff; background:#D3A87C}
+.welcome{color:#9A522E; font-size:15pt; position:relative; top:20px;float:left;margin-left:20px;}
 
 .logo{float:left; margin:35px 0 0 0}
+
 /**  Menu **/
-#nav{list-style:none; padding:0 0 0 8px; position:relative; top:28px; *top:26px}
+#nav{list-style:none; padding:0 0 0 8px;float:left; position:relative; top:28px; *top:26px}
 #nav li{float:left; position:relative; margin:0 1px 0px 0}
 #nav li a{padding:49px 10px 15px; display:block; color:#fff; font-weight:bold;}
 #nav li a:hover{color:#FFDC69; background:url(../images/nav-hover.jpg) repeat-x left center;}
@@ -157,7 +153,7 @@ a:hover{color:#000;}
 .title-pro-order span{padding:0 0 0 10px}
 
 .row-info{margin: 0 0 15px 0}
-.right-info{float:left;width: 390px;background: #f00; margin:0 0 0 15px}
+.right-info{float:left;width: 390px; margin:0 0 0 15px}
 .title-info{margin:0 0 10px 0;color: #fff}
 .title-info span{background: #444444;padding:3px 10px}
 .price-info{color:#3F3F3F;margin:0 0 10px 0 !important;font-size: 10pt}
@@ -194,6 +190,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 
 #footer{ margin:0 0 15px 0;}
 #footer a:hover{color:#FFDC69}
+.left-fter{color:#FFDC69;float:left}
 .menu-fter li{list-style:none;float:left;}
 .menu-fter li a{ text-transform:capitalize;padding:12px 5px;display:block; color:#FFDC69;background:url(../images/bkg-pipe2.gif) no-repeat right}
 .menu-fter .none-border{background: none}
