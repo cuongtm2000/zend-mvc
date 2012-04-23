@@ -15,9 +15,6 @@
 <title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->title) ? ' - '.CHtml::encode($this->title) : '' ?></title>
 <meta name="keywords" content="<?php echo $this->keywords ?>" />
 <meta name="description" content="<?php echo $this->description ?>" />
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jcarousellite.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/special-block.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/part.js"></script>
 
 <?php if($this->banner):?>
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/advanced-slider-base.css" media="screen"/>
