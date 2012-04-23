@@ -56,6 +56,7 @@ p{line-height: 18px}
 .left-tent{float:left; width:308px; text-align:center;}
 .left-tent p{line-height:1.9em}
 .left-tent a{color:#0370A8}
+
 /*Center content*/
 .cter-tent{float:left; width:308px; text-align:center; margin:0 0 0 24px}
 .cter-tent p{line-height:1.9em}
@@ -176,3 +177,8 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 #list-template{margin: 10px 0}
 #list-template li{display:inline-block;vertical-align: top;width:260px; margin: 0 50px 5px 0 !important;list-style: none; text-align: center}
 #list-template li img{border: 1px solid #ccc; cursor: pointer}
+
+.list-typical{text-align: left;background: #E6E2D5;padding:5px 0 0 25px;-webkit-border-radius:1px;-moz-border-radius:1px}
+.list-typical li{padding:0 0 5px 0}
+.list-typical li a{color:#000;display: block}
+.list-typical li a:hover{color:#0095E2}

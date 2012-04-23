@@ -56,7 +56,7 @@
     <div class="left-tent">
         <!-- <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-w4.jpg" alt="Premium Website Packages" /> -->
         <h2 class="title-tent">Danh sách website tiêu biểu</h2>
-        <ul>
+        <ul class="list-typical">
 			<?php foreach($listUserImport as $value):?>
 				<li><a href="http://<?php echo $value['username']?>.dos.vn" target="_blank"><?php echo $value['username']?></a></li>
 			<?php endforeach?>
@@ -64,7 +64,7 @@
     </div>
     <div class="cter-tent">
         <h2 class="title-tent">Danh sách website mới đăng ký</h2>
-		<ul>
+		<ul class="list-typical">
 			<?php foreach($listUserNewCreated as $value):?>
 				<li><a href="http://<?php echo $value['username']?>.dos.vn" target="_blank"><?php echo $value['username']?></a></li>
 			<?php endforeach?>

@@ -94,6 +94,7 @@ ul.paging .hidden{display: none;}
 ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{color:#578AB2; border: 1px solid #ccc; padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
 ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{color:#fff; background:#578AB2}
 
+
 /**Page Contact**/
 /*** Frame title company  ***/
 #frame-info-contact{margin:0 0 20px 0}
@@ -158,26 +159,17 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 
 .product-img:hover{border:1px solid #067EBF}
 
-/****  Page product info****/
-.frame-pro-info{margin: 0 0 10px 0}
+/***    Page product-info     ****/
+.frame-pro-info{padding:15px 0 5px 0;margin: 0 0 15px 0}
+.title-pro-order{color:#333; font-size:14px; font-weight:bold;margin:0 0 10px 0;border-bottom:1px solid #ccc;padding:0 0 10px 0}
+.title-pro-order span{padding:0 0 0 10px}
 
-#imgHover{float: left;width: 400px;text-align: center;border:1px solid #eee;-webkit-border-radius:3px;-moz-border-radius:3px}
-#imgHover {position: relative}
-#imgHover:hover #hover{display: block;}
-#imgHover #hover {display: none;position:absolute;right:0;bottom:0;z-index: 2}
-
-#pic_zoom_box{text-align: center;color:#0881C3;background: url(../images/multi_image.gif) no-repeat left 5px;padding:5px 0 5px 30px}
-
-.right-pro-info{float:right;width: 270px;border: 1px solid #eee;padding: 5px 0;-webkit-border-radius:2px;-moz-border-radius:2px}
-.right-pro-info p{margin: 0 !important;}
-.tent-right-info{padding:0 10px;line-height: 1.5em}
-.title-pro-info{color:#000; font-weight:bold;font-size: 10pt;margin:0 0 5px 0}
-.price-info{color:#045C98; font-weight:bold; font-size:10pt;margin:8px 0 15px 0 !important}
-.price-info span{color:#f00}
-
-.black{margin:0 !important; font-size:10pt;text-align:right !important}
-.black a{color:#000;background:url(../images/bull-1.gif) no-repeat left 5px;padding:0 0 0 10px}
-.black a:hover{background:url(../images/bull.gif) no-repeat left 5px;color:#ED2121}
+.row-info{margin: 0 0 15px 0}
+.right-info{float:right;width: 400px}
+.title-info{margin:0 0 10px 0;color: #fff}
+.title-info span{background: #444444;padding:3px 10px}
+.price-info{color:#000;margin:0 0 10px 0 !important;font-size: 10pt}
+.price-info span{margin: 0 0 0 10px;color: #045C98}
 
 /*Footer*/
 #bg-fter{background:#E0DED5; min-width: 950px}
