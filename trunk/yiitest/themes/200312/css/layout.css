@@ -73,6 +73,10 @@ a:hover{color:#000;}
 /*Right content*/
 #rightcontent{float:right;width:745px}
 #rightcontent p{ margin:0 0 8px 0}
+#rightcontent ul li, #rightcontent ol li{margin: 0 0 0 40px}
+#rightcontent ul ,#rightcontent ol{margin: 0 0 12px 0}
+#rightcontent table{margin: auto}
+
 .bd-top-right{ background:url(../images/bd-top-right.gif) no-repeat; height:21px; width:745px}
 .mid-right{ background:url(../images/mid-right.gif) repeat-y;padding:0 10px 5px 10px}
 .bd-bt-right{background:url(../images/bd-bt-right.gif) no-repeat; height:21px; width:745px; position:relative; left:-1px}
@@ -100,7 +104,7 @@ a:hover{color:#000;}
 .title-masuring a:hover{color:#F90}
 
 /***** Product    *****/
-.all-product{list-style: none}
+.all-product{list-style: none;margin:0 0 10px 0 !important;}
 .product{width:235px; display:inline-block;vertical-align:top; margin:0 0 5px 4px !important; *float: left; }
 .product-top{ background:url(../images/pr-top.gif) no-repeat; height:20px; width:235px}
 .product-btom{background:url(../images/pr-bottom.gif) no-repeat; height:16px; width:235px}
@@ -117,6 +121,9 @@ a:hover{color:#000;}
 
 .frame-img-info{text-align:center;margin:0 0 10px 0}
 .frame-img-info img{margin:0 !important;border:2px solid #D1D1D1;padding:2px;-webkit-border-radius:3px;-moz-border-radius:3px}
+
+/*page video*/
+.product-img-video{height: 150px;vertical-align:middle}
 
 /* paging */
 ul.paging{float: right; margin:0; padding:0; list-style: none}

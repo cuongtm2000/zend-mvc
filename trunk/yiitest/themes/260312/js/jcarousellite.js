@@ -5,7 +5,7 @@ $.fn.jCarouselLite = function(o) {
         btnNext: null,
         btnGo: null,
         mouseWheel: true,
-        auto:3000,
+        auto:5000,
 
         speed: 200,
         easing: null,
