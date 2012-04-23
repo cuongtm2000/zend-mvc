@@ -18,9 +18,56 @@
 	<?php endforeach; ?>
 
 	<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
-    <div class="col1"><?php echo $form->labelEx($model, 'content'.$lang) ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'preview'.$lang) ?></div>
     <div class="col2">
-        <?php echo $form->textArea($model, 'content'.$lang, $htmlOptions = array('cols' => 20, 'rows' => 10)); ?>
+        <?php echo $form->textArea($model, 'preview'.$lang, $htmlOptions = array('cols' => 20, 'rows' => 10)); ?>
+		<script type="text/javascript">
+			tinyMCE.init({
+				 file_browser_callback: 'openKCFinder',
+				 mode:"exact",
+				 elements : "<?php echo ucfirst($this->ID)?>_preview<?php echo $lang?>",
+				 theme:"advanced",
+				 language : "vi",
+				 //skin : "o2k7",
+				 //skin_variant : "silver",
+				 plugins : "paste, autolink,lists,style,layer,table,save,advhr,advimage,advlink,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
+
+				 theme_advanced_buttons1 : "bold,italic,underline,strikethrough,formatselect,fontsizeselect,|,justifyleft,justifycenter,justifyright,justifyfull,pastetext,pasteword,|,link,unlink,|,image,media,|,fullscreen",
+				 theme_advanced_buttons2 : "forecolor,backcolor,bullist,numlist,underline,justifyfull,outdent,indent,sub,sup,tablecontrols,visualaid,charmap,removeformat",
+				 theme_advanced_buttons3: "",
+				 theme_advanced_blockformats : "p,h2,h3,h4,blockquote,div",
+				 theme_advanced_font_sizes : "8pt,9pt,10pt,11pt,12pt,14pt",
+
+				 relative_urls : false,
+
+				 accessibility_warnings : false,
+				 //accessibility_focus : false,
+
+				 paste_text_use_dialog : true,
+				 paste_auto_cleanup_on_paste : true,
+				 paste_remove_styles: true,
+				 paste_remove_styles_if_webkit: true,
+				 paste_strip_class_attributes: true,
+
+				 paste_text_sticky : true,
+				 setup : function(ed) {ed.onInit.add(function(ed) {ed.pasteAsPlainText = true;});},
+
+				 theme_advanced_toolbar_location : "top",
+				 theme_advanced_toolbar_align : "left",
+				 //theme_advanced_statusbar_location : "bottom",
+				 theme_advanced_resizing : true,
+				 width : "100%",
+				 height: "250"
+			 });
+		</script>
+    </div>
+    <div class="clear space"></div>
+	<?php endforeach; ?>
+
+	<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
+	<div class="col1"><?php echo $form->labelEx($model, 'content'.$lang) ?></div>
+	<div class="col2">
+		<?php echo $form->textArea($model, 'content'.$lang, $htmlOptions = array('cols' => 20, 'rows' => 10)); ?>
 		<script type="text/javascript">
 			tinyMCE.init({
 				 file_browser_callback: 'openKCFinder',
@@ -35,6 +82,8 @@
 				 theme_advanced_buttons1 : "bold,italic,underline,strikethrough,formatselect,fontsizeselect,|,justifyleft,justifycenter,justifyright,justifyfull,pastetext,pasteword,|,link,unlink,|,image,media,|,fullscreen",
 				 theme_advanced_buttons2 : "forecolor,backcolor,bullist,numlist,underline,justifyfull,outdent,indent,sub,sup,tablecontrols,visualaid,charmap,removeformat",
 				 theme_advanced_buttons3: "",
+				 theme_advanced_blockformats : "p,h2,h3,h4,blockquote,div",
+				 theme_advanced_font_sizes : "8pt,9pt,10pt,11pt,12pt,14pt",
 
 				 relative_urls : false,
 
@@ -58,8 +107,8 @@
 				 height: "300"
 			 });
 		</script>
-    </div>
-    <div class="clear space"></div>
+	</div>
+	<div class="clear space"></div>
 	<?php endforeach; ?>
 
     <div class="col1"><?php echo $form->labelEx($model, 'unit') ?></div>
