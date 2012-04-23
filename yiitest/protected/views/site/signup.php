@@ -73,6 +73,8 @@
         //disable check for default
         jQuery("#Username_choose_modules_0").attr("disabled", true);
         jQuery("#Username_choose_modules_0").attr("checked", true);
+		jQuery("#Username_choose_feature_1").attr("disabled", true);
+		jQuery("#Username_choose_feature_1").attr("checked", true);
         jQuery("#Username_choose_modules_0").parent().addClass('border');
 
 		jQuery('.choose-page').click(function () {
