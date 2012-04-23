@@ -118,7 +118,7 @@ class Templates extends CActiveRecord {
 			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['fileupload']) {
 				//import class upload images
 				Yii::import('ext.EUploadedImage.EUploadedImage');
-				EUploadedImage::getInstance($this, 'fileupload')->processUpload(260, 182, '/themes/' . $this->template . '/images', 'tiny', 'tiny.jpg');
+				EUploadedImage::getInstance($this, 'fileupload')->processUpload(260, 182, '/themes/' . $this->template . '/images', 'tiny', 'tiny.png');
 			}
 		}
 

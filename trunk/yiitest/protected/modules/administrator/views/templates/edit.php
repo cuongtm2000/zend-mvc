@@ -16,7 +16,7 @@
         </p>
         <p>
             <label><?php echo $form->labelEx($model, 'fileupload') ?></label>
-            <div class="img-marginb5"><img src="<?php echo Yii::app()->request->baseUrl ?>/themes/<?php echo $model->template?>/images/tiny.jpg" alt="" /></div>
+            <div class="img-marginb5"><img src="<?php echo Yii::app()->request->baseUrl ?>/themes/<?php echo $model->template?>/images/tiny.png" alt="" /></div>
             <?php echo $form->fileField($model, 'fileupload', array('class'=>'fileupload fileupload-img', 'size'=>'40%')); ?> &nbsp;<span><i>260 x 182</i></span>
         </p>
     </fieldset>
