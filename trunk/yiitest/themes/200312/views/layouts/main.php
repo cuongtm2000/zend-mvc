@@ -48,11 +48,15 @@
 							<input type="image" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/btn-go.gif" alt="" class="bt-go" />
 						</form>
 					</div>  <div class="clear"></div>
-                </div><!--End header-->       
-				<div class="lang">
-					<a href="<?php echo Yii::app()->request->baseUrl ?>/"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/vi.gif" alt="Việt Nam" /> Tiếng Việt </a>
-					<a href="<?php echo Yii::app()->request->baseUrl ?>/en" title=""> <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/en.gif" alt="English" /> English </a>
-				</div>
+                </div><!--End header-->
+
+				<?php if(count($this->numLang) > 1):?>
+					<div class="lang">
+					<?php foreach($this->numLang as $value): ?>
+						<a href="<?php echo ($value=='vi') ? Yii::app()->request->baseUrl.'/' : Yii::app()->request->baseUrl.'/'.$value ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $value?>.gif" alt="<?php echo $this->lang[$value]?>" /> <?php echo $this->lang[$value]?></a>
+					<?php endforeach?>
+					</div>
+				<?php endif?>
 
                 <ul id="nav">
 					<?php foreach($this->nav as $value):?>
