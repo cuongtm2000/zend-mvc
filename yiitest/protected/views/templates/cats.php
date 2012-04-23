@@ -5,7 +5,7 @@
 	<?php if($templatesBusiness['models']):?>
 	<?php foreach($templatesBusiness['models'] as $value):?>
 		<li>
-			<a href="" title=""><img src="<?php echo Yii::app()->baseUrl; ?>/themes/<?php echo $value['template']?>/images/tiny.jpg" alt="<?php echo $value['template']?>"  /></a>
+			<a href="" title=""><img src="<?php echo Yii::app()->baseUrl; ?>/themes/<?php echo $value['template']?>/images/tiny.png" alt="<?php echo $value['template']?>"  /></a>
 			<p><a href="" title=""><strong><?php echo $value['template_name']?></strong></a></p>
 		</li>
 		<?php endforeach?>
