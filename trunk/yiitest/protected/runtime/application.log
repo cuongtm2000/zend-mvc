@@ -947,3 +947,200 @@ Stack trace:
 REQUEST_URI=/sign.cert?ran=12596967182597361702-6485307050006194980
 HTTP_REFERER=http://www.google.co.uk/
 ---
+2012/04/21 04:57:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sign.cert".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('sign.cert')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/sign.cert?ran=12596967182597361702-6485307010733004820
+HTTP_REFERER=http://www.google.co.uk/
+---
+2012/04/21 05:31:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/21 05:34:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/22 16:57:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sign.cert".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('sign.cert')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/sign.cert?ran=12596967182597361702-6485271080131388724
+HTTP_REFERER=http://www.google.co.uk/
+---
+2012/04/22 16:59:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "error".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('error')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/error
+HTTP_REFERER=http://www.google.com.vn/url?sa=t&rct=j&q=site%3Ados.vn&source=web&cd=2&ved=0CCgQFjAB&url=http%3A%2F%2Ftheloc.dos.vn%2F&ei=sxyUT57-ComZiAeMmYmfBA&usg=AFQjCNGfW3gR79uUJLMC8DQPmJxSVKP3RA
+---
+2012/04/22 17:47:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/22 17:48:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/22 17:49:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/22 17:53:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/22 17:53:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/22 17:57:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sign.cert".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('sign.cert')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/sign.cert?ran=12596967182597361702-6485270975369028916
+HTTP_REFERER=http://www.google.co.uk/
+---
+2012/04/22 17:58:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/04/23 02:40:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos.vn/images/img-w6.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos.vn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos.vn/images/img-w6.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/04/23 02:41:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos.vn/images/img-w6.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos.vn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos.vn/images/img-w6.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/04/23 02:42:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos.vn/images/img-w6.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos.vn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos.vn/images/img-w6.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/04/23 02:43:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos.vn/images/img-w6.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos.vn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos.vn/images/img-w6.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/04/23 02:43:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos.vn/images/img-w6.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos.vn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos.vn/images/img-w6.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/04/23 02:43:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos.vn/images/img-w6.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos.vn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos.vn/images/img-w6.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/04/23 02:44:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos.vn/images/img-w5.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos.vn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos.vn/images/img-w5.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/04/23 02:57:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sign.cert".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('sign.cert')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/sign.cert?ran=12596967182597361702-6485271269314740756
+HTTP_REFERER=http://www.google.co.uk/
+---
+2012/04/23 02:59:24 [error] [php] Undefined index: usernmae (E:\Customers\dos.vn\svn\protected\views\site\index.php:61)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): SiteController->renderPartial()
+#2 E:\Customers\dos.vn\svn\protected\controllers\SiteController.php(54): SiteController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): SiteController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 E:\Customers\dos.vn\svn\index.php(16): CWebApplication->run()
+REQUEST_URI=/
+in E:\Customers\dos.vn\svn\protected\views\site\index.php (61)
+in E:\Customers\dos.vn\svn\protected\controllers\SiteController.php (54)
+in E:\Customers\dos.vn\svn\index.php (16)
+2012/04/23 02:59:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---

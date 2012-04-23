@@ -52,21 +52,27 @@
 <div class="frame-features">
     <span>Xem các tính năng website mà chúng tôi dành cho Doanh nghiệp bạn!</span> <a href="#" title="" class="free">Hướng dẫn sử dụng</a> <a href="#" title="" class="view">Tính năng website</a>
 </div>
-<!--<div class="content">
+<div class="content">
     <div class="left-tent">
-        <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-w4.jpg" alt="Premium Website Packages" />
-        <h2 class="title-tent">Premium Website Packages</h2>
-        <p>Make a free website to start, then upgrade to a Premium Package that fits your business needs. Pick out a domain name, use premium templates, build out an online store, and access our award-winning, 24/7 live support team.</p>
+        <!-- <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-w4.jpg" alt="Premium Website Packages" /> -->
+        <h2 class="title-tent">Danh sách website tiêu biểu</h2>
+        <ul>
+			<?php foreach($listUserImport as $value):?>
+				<li><a href="http://<?php echo $value['username']?>.dos.vn" target="_blank"><?php echo $value['username']?></a></li>
+			<?php endforeach?>
+        </ul>
     </div>
     <div class="cter-tent">
-        <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-w5.jpg" alt="Insightful Reports" />
-        <h2 class="title-tent">Insightful Reports</h2>
-        <p>Keep track of the traffic on your website. Find out where your visitors come from to improve your marketing efforts. Get detailed analytics on what pages are popular, which links get clicked, time spent and more.</p>
+        <h2 class="title-tent">Danh sách website mới đăng ký</h2>
+		<ul>
+			<?php foreach($listUserNewCreated as $value):?>
+				<li><a href="http://<?php echo $value['username']?>.dos.vn" target="_blank"><?php echo $value['username']?></a></li>
+			<?php endforeach?>
+		</ul>
     </div>
-    <div class="right-tent">
-        <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-w6.jpg" alt="Get Found Online" />
+    <!-- <div class="right-tent">
         <h2 class="title-tent">Get Found Online</h2>
         <p>Get traffic to your site from search engines like Google®  and Yahoo!®  by submitting your site to search engines, adding keywords, building links, and more. We'll even help you promote on Facebook and Twitter.</p>
-    </div><div class="clear"></div>
+    </div> --><div class="clear"></div>
 </div>
-<h2 class="title-family marginb50">Need a <a href="#" title="">custom Face book Page</a> too? Try <a href="#" title="">Pagemodo</a>, a member of the Webs Family of Products</h2>-->
+<!-- <h2 class="title-family marginb50">Need a <a href="#" title="">custom Face book Page</a> too? Try <a href="#" title="">Pagemodo</a>, a member of the Webs Family of Products</h2> -->

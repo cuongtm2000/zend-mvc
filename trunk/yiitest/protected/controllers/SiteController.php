@@ -49,8 +49,9 @@ class SiteController extends HomeController {
 		$this->description = Yii::t('main', 'description');
 
 		$business_class = new Bussiness();
+		$username_class = new Username();
 
-		$this->render('index', array('listBusiness' => $business_class->listCats(1)));
+		$this->render('index', array('listBusiness' => $business_class->listCats(1), 'listUserImport' => $username_class->listUserImport(), 'listUserNewCreated' => $username_class->listUserNewCreated()));
 	}
 
 	public function actionSignup() {
