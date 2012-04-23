@@ -198,7 +198,7 @@ class Username extends CActiveRecord {
 	}
 
 	public function listUserNewCreated() {
-		$command = Yii::app()->db->createCommand('SELECT username FROM ' . $this->tableName() . ' WHERE activated=1 ORDER BY created DESC LIMIT 0, 7');
+		$command = Yii::app()->db->createCommand('SELECT username FROM ' . $this->tableName() . ' WHERE username != \'dos\' AND activated=1 ORDER BY created DESC LIMIT 0, 7');
 		return $command->queryAll();
 	}
 
