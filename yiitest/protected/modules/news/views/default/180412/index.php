@@ -21,7 +21,7 @@
 	</ul>
 	<?php $this->widget('CLinkPager', array('pages' => $listItemIndex['pages'], 'header'=>'', 'lastPageLabel'=>'Last', 'nextPageLabel'=>'Next', 'firstPageLabel'=>'First', 'prevPageLabel'=>'Prev', 'htmlOptions'=>array('class'=>'paging')))?>
 <?php else:?>
-	Khong co mau tin
+	<?php echo $this->lang['no_record']?>
 <?php endif?> <div class="clear"></div>
 	<?php if(isset($this->function['news_new']) && ($this->function['news_new'])):?>
 	<div class="frame-new">
