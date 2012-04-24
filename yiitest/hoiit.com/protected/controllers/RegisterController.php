@@ -3,15 +3,15 @@
 class RegisterController extends Controller {
 
     public function actionIndex() {
-        $model = new Usernames('index');
+        $model = new Usernames();
         if (isset($_POST['Usernames'])) {
             $model->attributes = $_POST['Usernames'];
             if ($model->validate()) {
-                Yii::app()->session['username'] = $model->username;
-                Yii::app()->session['password'] = $model->password;
-                Yii::app()->session['email'] = $model->email;
-                Yii::app()->session['group_code'] = $model->group_code;
-                Yii::app()->session['province_id'] = $model->hoiit_provinces_province_id;
+                Yii::app()->session['username'] = trim($model->username);
+                Yii::app()->session['password'] = trim($model->password);
+                Yii::app()->session['email'] = trim($model->email);
+                Yii::app()->session['group_code'] = trim($model->group_code);
+                Yii::app()->session['province_id'] = trim($model->hoiit_provinces_province_id);
                 $this->redirect(array('update'));
             }
         }
@@ -20,7 +20,13 @@ class RegisterController extends Controller {
 
     public function actionUpdate() {
         if (Yii::app()->session['username']) {
-            $model = new Usernames;
+            $model = new Usernames();
+			$model->username = Yii::app()->session['username'];
+			$model->password = Yii::app()->session['password'];
+			$model->email = Yii::app()->session['email'];
+			$model->group_code = Yii::app()->session['group_code'];
+			$model->hoiit_provinces_province_id = Yii::app()->session['province_id'];
+
             if (isset($_POST['Usernames'])) {
                 $model->attributes = $_POST['Usernames'];
                 if ($model->validate()) {

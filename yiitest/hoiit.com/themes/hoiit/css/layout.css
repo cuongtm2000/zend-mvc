@@ -98,6 +98,11 @@ fieldset .radio label{float: none; cursor: pointer}
 fieldset .radio input{width:15px}
 fieldset .space{height: 8px;}
 
+.picture{float: left; margin-bottom: 10px}
+.picture img{border: 1px solid #ddd; padding:1px}
+.picture input{width: auto}
+.picture label{float: none; width: auto; padding: inherit}
+
 /* Error */
 .errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:5px}
 .errorSummary ul{margin:0 10px; padding:0}
