@@ -33,10 +33,7 @@
     </p>
     <p>
         <?php echo $form->labelEx($model, 'hoiit_provinces_province_id') ?>
-        <?php $provinces_class = new Provinces; $values = $provinces_class->listProvincesByNational('VND'); $data = array(); foreach ($values as $value){
-                $data[$value['province_id']] = $value['province_name'];
-            }
-        ?>
+        <?php $provinces_class = new Provinces; $values = $provinces_class->listProvincesByNational('VND'); $data = array(); foreach ($values as $value){$data[$value['province_id']] = $value['province_name'];} ?>
         <?php echo $form->dropDownList($model, 'hoiit_provinces_province_id', $data); ?>
         <span id="locationinfo"></span>
     </p>
