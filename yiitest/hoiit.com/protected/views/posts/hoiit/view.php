@@ -4,7 +4,7 @@
 <?php echo $detail['post_detail']?>
 
 <!-- Place this tag where you want the +1 button to render -->
-<div class="g-plusone"></div>
+Neu bai viet hay hay bam vao day <div class="g-plusone"></div>
 
 <!-- Place this render call where appropriate -->
 <script type="text/javascript">
