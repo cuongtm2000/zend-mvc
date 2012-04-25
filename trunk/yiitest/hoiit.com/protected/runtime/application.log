@@ -446,3 +446,17 @@ Stack trace:
 REQUEST_URI=/hoiit.com/dashboard/users/dashboard
 HTTP_REFERER=http://dos.vn/hoiit.com/dashboard/users/edit
 ---
+2012/04/24 06:35:38 [warning] [application] Failed to set unsafe attribute "remove_pic" of "Usernames".
+in E:\Customers\dos.vn\svn\hoiit.com\protected\modules\dashboard\controllers\UsersController.php (30)
+in E:\Customers\dos.vn\svn\hoiit.com\index.php (15)
+2012/04/24 09:26:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "html-template".' in C:\xampp\php\library\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(271): CController->missingAction('html-template')
+#1 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('html-template')
+#2 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('templates/html-...')
+#3 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/hoiit.com/templates/html-template/.html
+HTTP_REFERER=http://dos.vn/hoiit.com/templates
+---
