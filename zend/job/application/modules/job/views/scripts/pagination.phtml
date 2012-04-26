@@ -1,0 +1,33 @@
+<?php
+$strPage = '';
+foreach ( $this->pagesInRange as $key ) {
+	if ($this->current == $key) {
+		$strPage .= '<b class="pagecureent">' . $key . '</b> ';
+	} else {
+		$strPage .= '<a class="pagenav" href="'.$this->url(array('page' => $key)).'">' . $key . '</a> ';
+	}
+}
+
+//$page = 'Page ' . $this->current . ' Of ' . $this->last;
+?>
+<div style="float: right; margin: 10px 0 5px 0;">
+	<?php 
+        if (isset($this->previous)){
+            echo '<a class="pagenav" href="'.$this->url(array('page' => $this->first)).'">Bắt đầu</a> ';
+        }  
+        
+        if (isset($this->previous)){
+            echo '<a class="pagenav" href="'.$this->url(array('page' => $this->previous)).'">Lùi</a> ';
+        }
+    ?>
+	<?php echo $strPage;?>
+	<?php 
+		if (isset($this->next)){
+            echo '<a class="pageactive" href="'.$this->url(array('page' => $this->next)).'">Tiếp</a> ';
+        }
+        
+        if (isset($this->next)){
+            echo '<a class="pagenav" href="'.$this->url(array('page' => $this->last)).'">Cuối</a>';
+        } 
+	?>
+</div><div class="clear"></div>

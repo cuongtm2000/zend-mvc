@@ -1,0 +1,39 @@
+<h2 class="marginb3"><strong>Công việc được giao</strong></h2>
+<table>
+	<thead>
+		<tr>
+			<th class="txt60">Mã CV</th>
+			<th>Tên công việc</th>
+			<th>Người giao việc</th>
+			<th>Ngày bắt đầu</th>
+			<th>Ngày kết thúc</th>
+			<th>Trạng thái</th>
+			<th>Tiến độ thời gian</th>
+		</tr>
+
+	</thead>
+	<tbody>
+	<?php if($this->listjobs):?>
+  	<?php
+  		$i=0;
+		foreach ($this->listjobs as $job) {
+		    $i++;
+			?>
+		  	<tr	<?php if($i%2==0) echo 'class="alt"';?>  >
+				<td><?php echo $job['job_id']?></td>
+				<td><a href="<?php echo $this->baseUrl()?>/job/list/view/id/<?php echo $job['job_id']?>"><?php echo $job['job_title']?></a></td>
+				<td><?php echo $job['glt_usernames_username']?></td>
+				<td><?php echo $job['start_date']?></td>		
+				<td><?php echo $job['last_date']?></td>
+				<td><?php echo $job['status']?></td>		
+				<td><?php echo $job['time']?></td>	
+			</tr>  
+	<?php }?>
+	<?php else: ?>
+		<tr><td colspan="7">Chưa có công việc, bạn có thể rãnh rang đi chơi rồi</td></tr>
+	<?php endif;?>
+	</tbody>
+</table>
+<?php	
+	echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml');
+?>
