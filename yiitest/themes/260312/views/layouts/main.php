@@ -35,7 +35,7 @@
 <body>
  <div id="wrapper">
 	<div id="header">
-    	<div class="left">
+    	<div class="logo">
 			<?php if($this->logo):?>
 				<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl']?>/" title="<?php echo $this->logo['banner_name']?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/banner/<?php echo $this->logo['banner_url'] ?>" alt="<?php echo $this->logo['banner_name']?>" /></a>
 			<?php else:?>
