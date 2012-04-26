@@ -101,7 +101,7 @@ tbody tr.green td, tbody tr.green a{background: #c2ecb7; color : #aaa}
 .control-button input:hover{color: #333}
 .control-button a{padding-right:15px}
 
-.submit{margin:0 0 7px 5px;background:#332923;color:#fff;padding:7px 7px;text-align:center; cursor:pointer;border:none;-moz-border-radius: 3px; -webkit-border-radius: 3px;font-weight:bold}
+.submit{margin:0 0 7px 5px;background:#332923;color:#fff;padding:7px 15px;text-align:center; cursor:pointer;border:none;-moz-border-radius: 3px; -webkit-border-radius: 3px;font-weight:bold}
 
 .txt60{width: 60px}
 .txt15{width: 15px}
@@ -179,7 +179,8 @@ ul.paging{float: right; margin-top: 7px;}
 
 #frm-template{margin: 2px 5px 5px 5px}
 ul#list-template{margin: 5px 0 0 0; padding:0}
-ul#list-template li{float: left; width: 260px; margin:0 30px 10px 0; list-style: none; text-align: center; position: relative}
+ul#list-template li{ width: 260px;height: 210px; margin:0 30px 10px 0; list-style: none; text-align: center; position: relative;float:left}
 ul#list-template li p{margin: 0; padding: 0}
 ul#list-template li img{margin-right: 10px; margin-bottom: 3px; border: 1px solid #ddd; padding: 1px; -webkit-border-radius:2px;-moz-border-radius:2px}
 ul#list-template li label, #scrollbar ul li p input{cursor: pointer}
+.psion-submit{text-align: center}

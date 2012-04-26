@@ -18,11 +18,11 @@
 		<?php else:?>
 			<li style="text-align: left">Rất tiếc! <strong>Ngành nghề</strong> bạn chọn chưa có mẫu</li>
 		<?php endif;?>
-	</ul><div class="clear"></div>
+	</ul> <div class="clear"></div>
 
 	<?php if(isset($templatesBusiness['pages'])):?>
 	<?php $this->widget('CLinkPager', array('pages' => $templatesBusiness['pages'], 'header' => '', 'htmlOptions' => array('class' => 'yiiPager paging'))) ?>
 	<?php endif?>
 
-	<?php echo CHtml::submitButton($this->lang['edit'], array('class' => 'submit', 'name' => 'btn-submit')); ?>
+	<div class="psion-submit"><?php echo CHtml::submitButton($this->lang['edit'], array('class' => 'submit', 'name' => 'btn-submit')); ?></div>
 <?php $this->endWidget(); ?>
