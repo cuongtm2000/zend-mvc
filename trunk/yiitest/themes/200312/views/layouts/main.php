@@ -48,18 +48,16 @@
 							<input type="image" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/btn-go.gif" alt="" class="bt-go" />
 						</form>
 					</div>  <div class="clear"></div>
-
-
-                <ul id="nav">
-					<?php foreach($this->nav as $value):?>
-						<?php $selected = ($value['url']==$this->module->id) ?  ' class="select"' : ''?>
-						<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
-						<li><a<?php echo $selected ?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
-					<?php endforeach;?>
-				</ul> <!--End nav--> <div class="clear"></div>   
-
-        	</div><!--End header tent-->
-        </div>
+				</div>	
+					<ul id="nav">
+						<?php foreach($this->nav as $value):?>
+							<?php $selected = ($value['url']==$this->module->id) ?  ' class="select"' : ''?>
+							<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
+							<li><a<?php echo $selected ?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
+						<?php endforeach;?>
+					</ul> <!--End nav--> <div class="clear"></div>   
+			</div><!--End header tent-->
+		</div>
         <div id="content">
 			<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 				'homeLink' => CHtml::link($this->lang['default'], (LANGURL) ? LANGURL : Yii::app()->homeUrl),
@@ -156,7 +154,7 @@
             	<div class="bd-top-right"></div>
                 <div class="mid-right">
                     <?php if($this->banner): ?>
-					<div id="banner">    
+					<div id="banner">
 						<ul class="slider">
 							<?php foreach($this->banner as $value): ?>
 								<li class="slider-item"><a href="<?php echo $value['banner_link'] ?>" title=""><img src="<?php echo Yii::app()->request->baseUrl.USERFILES; ?>/banner/<?php echo $value['banner_url'] ?>" alt="<?php echo $value['banner_name'] ?>" /></a></li>
@@ -164,8 +162,6 @@
 						</ul>
 					</div><!--End banner-->
 					<?php endif; ?>
-					
-                    
 				<?php echo $content?>
             	</div> <!--End mid right-->
                 <div class="bd-bt-right"></div><!--Bd bottom right-->        
