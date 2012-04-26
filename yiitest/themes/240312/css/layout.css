@@ -12,12 +12,12 @@ a:hover{color:#000;}
 #page{padding:0 7px;}
 
 /*Header*/
-#header{padding:15px 0 0 0}
-.logo{float:left;width:367px; display:block; padding:3px 0 0 270px}
+#header{padding:15px 0 0 0;position:relative}
+.logo{text-align:center;}
 
 /*Lang */
-.lang {float:right}
-.lang img{ margin:0 15px 0 5px; position:relative; top:3px}
+.lang {position:absolute;top:10px; right:10px}
+.lang img{ margin:0 5px 0 5px; position:relative; top:2px}
 .lang a{ color:#33220C;font-weight:bold}
 .lang a:hover{ color:#948440}
 
