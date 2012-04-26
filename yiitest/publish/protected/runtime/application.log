@@ -1700,3 +1700,40 @@ Stack trace:
 REQUEST_URI=/publish/admin/configs/langs
 HTTP_REFERER=http://dos.vn/publish/admin/configs/langs
 ---
+2012/04/26 09:24:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "read-rss".' in C:\xampp\php\library\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(271): CController->missingAction('read-rss')
+#1 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('read-rss')
+#2 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/default/r...')
+#3 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/publish/admin/default/read-rss
+---
+2012/04/26 09:26:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/read".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/read')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/publish/admin/read
+HTTP_REFERER=http://thanhansoft.com/publish/admin/
+---
+2012/04/26 09:26:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "read".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('read')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/publish/read
+HTTP_REFERER=http://thanhansoft.com/publish/admin
+---
+2012/04/26 09:27:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "default/read".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('default/read')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\publish\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/publish/default/read
+HTTP_REFERER=http://thanhansoft.com/publish/admin
+---
