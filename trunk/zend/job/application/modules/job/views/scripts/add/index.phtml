@@ -1,0 +1,84 @@
+<?php if(count($this->error) > 0): ?>
+	<ul class="error-li">
+		<?php 
+		foreach ($this->error as $value)
+			echo '<li>'.$value.'</li>';
+		?>
+	</ul>
+<?php endif; ?>
+<?php if(count($this->success) > 0): ?>
+	<ul class="lab">
+		<?php echo '<li>'.$this->success.'</li>'	?>
+	</ul>
+<?php endif; ?>
+<form action="" method="post" enctype="multipart/form-data" id="frm" name="frm">
+<fieldset>
+	<legend>Thêm mới công việc</legend>
+	<div class="col1">Tên công việc <span class="error">*</span></div>
+		<div class="col2">
+			<input name="title" value="<?php 
+				if(isset($this->data))
+					echo $this->data['title']?>" maxlength="45" class="txt-very-large" />
+		</div>
+	<div class="clear space"></div>
+	
+	<div class="col1">Mô tả chi tiết <span class="error">*</span></div>
+		<div class="col2">
+			<textarea name="content" cols="70" rows="10"><?php 
+				if(isset($this->data))
+					echo $this->data['content']?></textarea>
+			<script type="text/javascript">
+			//<![CDATA[
+				CKEDITOR.replace( 'content' );
+			//]]>
+			</script>
+		</div><div class="clear space">
+	</div>
+	
+	<div class="col1">Người nhận việc <span class="error">*</span></div>
+	<div class="col2 radio">
+		<select name="reciever" >
+			<option value="0"> -- Chọn người nhận việc -- </option>
+			<?php foreach ($this->users as $user)
+				if($this->data['reciever']==$user['username'])
+					echo '<option selected="selected" value="'.$user['username'].'">'.$user['username'].'</option>';
+				else
+					echo '<option value="'.$user['username'].'">'.$user['username'].'</option>';
+			?>
+		</select>
+	</div>
+	<div class="clear space"></div>
+	
+		<div class="col1">Ngày bắt đầu <span class="error">*</span></div>
+		<div class="col2">
+			<input  name="start_date" value="<?php 
+				if(isset($this->data))
+					echo $this->data['start_date']?>" id="start_date"  maxlength="10" class="txt-small" />
+				(dd-mm-yyyy)
+		</div>
+	<div class="clear space"></div>
+	
+	<div class="col1">Ngày kết thúc <span class="error">*</span></div>
+		<div class="col2">
+			<input name="last_date" value="<?php 
+				if(isset($this->data))
+					echo $this->data['last_date']?>" id="last_date" maxlength="10" class="txt-small" />
+				(dd-mm-yyyy)
+		</div>
+	<div class="clear space"></div>
+	
+	<div class="col1">Đính kèm file</div>
+		<div class="col2">
+			<input type="file" name="ufile" class="txt-very-large" />
+			<input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
+		</div>
+	<div class="clear space"></div>
+	
+	<div class="col1">&nbsp;</div>
+	<div class="col2">
+		<input type="submit" name="submit" value="  Thêm   " class="login" />
+		<input type="button" class="login" onclick="javascript:history.back()" value="  Trở lại  " />
+	</div>
+	<div class="clear space"></div>
+</fieldset>
+</form>

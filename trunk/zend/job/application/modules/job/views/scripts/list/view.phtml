@@ -1,0 +1,53 @@
+<?php if (isset($this->id)) { $i = $this->id; ?>
+<fieldset>
+	<legend>Thông tin chi tiết</legend>
+	<div class="col1">Tên công việc</div>
+	<div class="col2">
+		<input value="<?php echo $this->job['job_title']?>" maxlength="45" readonly="readonly" class="txt-very-large" />
+	</div>	<div class="clear space"></div>
+	
+	<div class="col1">Mô tả chi tiết</div>
+		<div class="col2">
+		<div >	<?php echo  htmlspecialchars_decode ($this->job['content'])?></div>
+		</div><div class="clear space">
+	</div>
+	
+	<div class="col1">Người nhận việc</div>
+	<div class="col2 radio">
+		<input readonly="readonly" value="<?php echo $this->job['reciever']?>" class="txt-small"/>
+	</div>	<div class="clear space"></div>
+	
+	<div class="col1">Ngày bắt đầu</div>
+	<div class="col2">
+		<input readonly="readonly" value="<?php echo $this->job['start_date']?>" class="txt-small"/>
+	</div>	<div class="clear space"></div>
+	
+	<div class="col1">Ngày kết thúc</div>
+	<div class="col2">
+		<input readonly="readonly" value="<?php echo $this->job['last_date']?>" class="txt-small"/>
+	</div>	<div class="clear space"></div>
+	
+	<div class="col1">Đính kèm file</div>
+	<div class="col2">
+		<ul>
+		<?php foreach ($this->job['files'] as  $file) {?>
+			<li><a href="<?php echo $file['file_url']?>"><?php echo $file['file_name']?></a></li>
+		<?php }?>
+		</ul>
+	</div> <div class="clear space"></div>
+	<div class="col1">Trạng thái</div>
+	<div class="col2">
+		<?php echo $this->job['status']?>	
+	</div> <div class="clear space"></div>
+	<div class="col1">Tiến độ thời gian</div>
+	<div class="col2">
+			<td><?php echo $this->job['time']?></td>	
+	</div> <div class="clear space"></div>
+
+	
+	<div style="float: right; font-weight: bold;">
+		<a href="<?php echo $this->baseUrl()?>/job/finish/index/id/<?php echo $i ?>">Kết thúc công việc</a>
+	</div>	
+</fieldset>
+	
+<?php }?>

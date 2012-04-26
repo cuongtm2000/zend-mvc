@@ -1,0 +1,55 @@
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="index, follow" />
+
+<link type="text/css" rel="stylesheet" href="<?php echo $this->baseUrl().TEMPLATE ?>/css/dosvn.css" />
+<link rel="SHORTCUT ICON" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/gif" />
+
+<?php echo $this->headTitle()?>
+<?php echo $this->headMeta() ?>
+<?php echo $this->headLink() ?>
+<?php echo $this->headScript() ?>
+</head>
+<body>
+<div id="wapper">
+	<div id="header">
+		<div class="logo"><a href="<?php echo $this->baseUrl() ?>/"><img src="<?php echo $this->baseUrl().TEMPLATE?>/images/logo.png" alt="Logo" /></a></div>
+		<div class="frmlogin">
+			Welcome <strong><?php echo $this->infouser('username').'!';
+							if($this->infouser('username')!='Guest')
+								echo '<a href="'.$this->baseUrl().'/login/index/out">Thoát</a>'; ?></strong>
+		</div>
+    </div>
+    <ul id="tabs">
+        <li><a href="<?php echo $this->baseUrl() ?>/"><span>Trang chủ</span></a></li>
+        <li><a href="<?php echo $this->baseUrl()?>/job/list"><span>Công việc đã tạo</span></a></li>
+        <li><a href="<?php echo $this->baseUrl()?>/job/list-received"><span>Công việc được giao</span></a></li>
+    </ul><div class="clear"></div>
+	<div class="paddinglr10">
+		<div class="menu-bar">
+			<div id="catmenu">
+			<ul class="menu-li"> 
+				<li><a href="<?php echo $this->baseUrl() ?>/job">Quản lý</a>
+					<ul>
+						<li><a href="<?php echo $this->baseUrl() ?>/job/add">Thêm mới công việc</a></li>						
+					</ul>
+				</li>
+            </ul> 
+		</div>
+		</div>
+		<div class="contenter">
+			<div class="content">
+				<?php echo $this->menu;?>
+				<?php echo $this->layout()->content;?>
+			</div>
+			<div id="footer">
+				<p>Copyright &copy; 2011 by Grouplaptrinh.com. All rights reserved. Version: 1.1.0.092211</p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
