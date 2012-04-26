@@ -11,6 +11,7 @@ a:hover{color:#000;}
 
 /*Header*/
 #header{margin:40px 0 20px 0}
+.logo{float:left;overflow:hidden;height:46px}
 .title-company-home{float:left;font-size:18pt;color:#024E87;margin:0 0 0 25px;font-weight: bold;padding:10px 0 0 0}
 .lang{float:right; text-align:right; color:#999}
 .lang img{margin:0 5px;position: relative; top:2px}
