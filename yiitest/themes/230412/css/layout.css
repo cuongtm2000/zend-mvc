@@ -25,7 +25,7 @@ a:hover{color:#000;}
 #header{margin:5px 0 0 0; background:url(../images/headerbg.gif) no-repeat; height:141px}
 .welcome{color:#9A522E; font-size:15pt; position:relative; top:20px;float:left;margin-left:20px;}
 
-.logo{float:left; margin:35px 0 0 0}
+.logo{float:left; margin:35px 0 0 0;overflow: hidden;height:65px; width:320px}
 
 /**  Menu **/
 #nav{list-style:none; padding:0 0 0 8px;float:left; position:relative; top:28px; *top:26px}
