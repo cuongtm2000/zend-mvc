@@ -49,7 +49,7 @@ Vertical scroller example, with custom base class */
 /* Explicitly set height/width of each list item */
 .vert .simply-scroll-list li {
 
-	height: 200px;
+	height: 130px;
 }
 
 /* Modified button positions, overriding previous styles */
