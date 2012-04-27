@@ -52,7 +52,7 @@
 		<ul id="tabs">
 			<li><a<?php echo ($this->ID =='site') ? ' class="select"' : ''?> href="<?php echo Yii::app()->request->baseUrl?>/"><span>Home page</span></a></li>
 			<li><a<?php echo ($this->ID =='posts') ? ' class="select"' : ''?> href="<?php echo Yii::app()->request->baseUrl?>/posts"><span>Tutorials</span></a></li>
-			<li><a<?php echo ($this->ID =='templates') ? ' class="select"' : ''?> href="<?php echo Yii::app()->request->baseUrl?>/templates"><span>Web templates</span></a></li>
+			<!-- <li><a<?php echo ($this->ID =='templates') ? ' class="select"' : ''?> href="<?php echo Yii::app()->request->baseUrl?>/templates"><span>Web templates</span></a></li> -->
 		</ul
 		<div class="clear"></div>
         <div class="paddinglr10">

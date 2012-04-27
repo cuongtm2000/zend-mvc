@@ -96,12 +96,12 @@
         <?php echo $form->radioButtonList($model, 'post_enable', array('1'=>'Show', '0'=>'Hidden'), array('separator'=>'&nbsp;&nbsp;')); ?>
     </div>
     <div class="clear space"></div>
-    
-    <p>
-        <label>&nbsp;</label>
+
+	<div class="col1"><label>&nbsp;</label></div>
+	<div class="col2">
         <?php echo CHtml::submitButton('  Submit  ', array('class'=>'login', 'name'=>'submit')); ?>
         <input type="button" onclick="javascript:history.back()" value="  Cancel  " class="login" />
-    </p>
+    </div>
 </fieldset>
 <?php $this->endWidget(); ?>
 <?php $this->widget('ext.seoAlias.seoAlias', array('model'=>$model, 'source'=>'post_title', 'target'=>'post_link')); ?>
