@@ -91,20 +91,20 @@ class Posts extends CActiveRecord {
 	 */
 	public function attributeLabels() {
 		return array(
-			'post_id' => 'Post',
-			'post_title' => 'Post Title',
-			'post_img' => 'Post Img',
-			'post_detail' => 'Post Detail',
-			'post_sort' => 'Post Sort',
-			'post_demo' => 'Post Demo',
-			'post_hit' => 'Post Hit',
-			'post_type' => 'Post Type',
-			'post_link' => 'Post Link',
-			'post_description' => 'Post Description',
-			'post_enable' => 'Post Enable',
-			'post_create' => 'Post Create',
-			'hoiit_cats_cat_id' => 'Hoiit Cats Cat',
-			'hoiit_usernames_username' => 'Hoiit Usernames Username',
+			//'post_id' => 'Post',
+			'post_title' => 'Title',
+			'post_img' => 'Picture',
+			'post_detail' => 'Content',
+			//'post_sort' => 'Post Sort',
+			'post_demo' => 'Demo',
+			//'post_hit' => 'Post Hit',
+			//'post_type' => 'Post Type',
+			'post_link' => 'Link',
+			'post_description' => 'Description',
+			'post_enable' => 'Enable',
+			//'post_create' => 'Post Create',
+			'hoiit_cats_cat_id' => 'Category',
+			//'hoiit_usernames_username' => 'Hoiit Usernames Username',
 		);
 	}
 
