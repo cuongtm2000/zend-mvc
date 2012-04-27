@@ -31,7 +31,7 @@
 	<div class="col2">
 		<ul>
 		<?php foreach ($this->job['files'] as  $file) {?>
-			<li><a href="<?php echo $file['file_url']?>"><?php echo $file['file_name']?></a></li>
+			<li><a href="<?php echo $this->baseUrl().$file['file_url']?>"><?php echo $file['file_name']?></a></li>
 		<?php }?>
 		</ul>
 	</div> <div class="clear space"></div>
