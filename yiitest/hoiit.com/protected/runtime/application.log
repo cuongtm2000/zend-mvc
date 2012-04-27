@@ -616,3 +616,75 @@ Stack trace:
 REQUEST_URI=/hoiit.com/themes/hoiit/js/jquery-1.7.1.min.js
 HTTP_REFERER=http://dos.vn/hoiit.com/templates/html-template/200412.html
 ---
+2012/04/26 12:08:21 [error] [exception.CException] exception 'CException' with message 'TemplatesController and its behaviors do not have a method or closure named "loadModel".' in C:\xampp\php\library\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\Customers\dos.vn\svn\hoiit.com\protected\controllers\TemplatesController.php(31): CComponent->__call('loadModel', Array)
+#1 E:\Customers\dos.vn\svn\hoiit.com\protected\controllers\TemplatesController.php(31): TemplatesController->loadModel('200412')
+#2 [internal function]: TemplatesController->actionView('200412')
+#3 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TemplatesController), Array)
+#4 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TemplatesController), Object(ReflectionMethod), Array)
+#5 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('templates/view')
+#10 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/hoiit.com/templates/html-template/200412.html
+HTTP_REFERER=http://thanhansoft.com/hoiit.com/templates
+---
+2012/04/26 12:08:33 [error] [exception.CException] exception 'CException' with message 'TemplatesController and its behaviors do not have a method or closure named "loadModel".' in C:\xampp\php\library\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\Customers\dos.vn\svn\hoiit.com\protected\controllers\TemplatesController.php(31): CComponent->__call('loadModel', Array)
+#1 E:\Customers\dos.vn\svn\hoiit.com\protected\controllers\TemplatesController.php(31): TemplatesController->loadModel('200412')
+#2 [internal function]: TemplatesController->actionView('200412')
+#3 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TemplatesController), Array)
+#4 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TemplatesController), Object(ReflectionMethod), Array)
+#5 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('templates/view')
+#10 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/hoiit.com/templates/html-template/200412.html
+HTTP_REFERER=http://thanhansoft.com/hoiit.com/templates
+---
+2012/04/26 12:08:34 [error] [exception.CException] exception 'CException' with message 'TemplatesController and its behaviors do not have a method or closure named "loadModel".' in C:\xampp\php\library\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\Customers\dos.vn\svn\hoiit.com\protected\controllers\TemplatesController.php(31): CComponent->__call('loadModel', Array)
+#1 E:\Customers\dos.vn\svn\hoiit.com\protected\controllers\TemplatesController.php(31): TemplatesController->loadModel('200412')
+#2 [internal function]: TemplatesController->actionView('200412')
+#3 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TemplatesController), Array)
+#4 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TemplatesController), Object(ReflectionMethod), Array)
+#5 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('templates/view')
+#10 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/hoiit.com/templates/html-template/200412.html
+HTTP_REFERER=http://thanhansoft.com/hoiit.com/templates
+---
+2012/04/26 12:08:40 [error] [exception.CException] exception 'CException' with message 'TemplatesController and its behaviors do not have a method or closure named "loadModel".' in C:\xampp\php\library\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\Customers\dos.vn\svn\hoiit.com\protected\controllers\TemplatesController.php(31): CComponent->__call('loadModel', Array)
+#1 E:\Customers\dos.vn\svn\hoiit.com\protected\controllers\TemplatesController.php(31): TemplatesController->loadModel('200412')
+#2 [internal function]: TemplatesController->actionView('200412')
+#3 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TemplatesController), Array)
+#4 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TemplatesController), Object(ReflectionMethod), Array)
+#5 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('templates/view')
+#10 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/hoiit.com/templates/html-template/200412.html
+HTTP_REFERER=http://thanhansoft.com/hoiit.com/templates
+---
