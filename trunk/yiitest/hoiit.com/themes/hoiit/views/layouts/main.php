@@ -49,20 +49,27 @@
             ?>
         </div>
 
-        <?php
-        $this->widget('zii.widgets.CMenu', array(
-            'id' => 'tabs',
-            'linkLabelWrapper' => 'span',
-            'items' => array(
-                array('label' => 'Home page', 'url' => Yii::app()->request->baseUrl.'/'),
-                array('label' => 'Tutorials', 'url' => array('/posts')),
-                array('label' => 'Web templates', 'url' => array('/templates')),
-            ),
-        ));
-        ?><div class="clear"></div>
+		<ul id="tabs">
+			<li><a<?php echo ($this->ID =='site') ? ' class="select"' : ''?> href="<?php echo Yii::app()->request->baseUrl?>/"><span>Home page</span></a></li>
+			<li><a<?php echo ($this->ID =='posts') ? ' class="select"' : ''?> href="<?php echo Yii::app()->request->baseUrl?>/posts"><span>Tutorials</span></a></li>
+			<li><a<?php echo ($this->ID =='templates') ? ' class="select"' : ''?> href="<?php echo Yii::app()->request->baseUrl?>/templates"><span>Web templates</span></a></li>
+		</ul
+		<div class="clear"></div>
         <div class="paddinglr10">
             <div class="menu-bar">
                 <?php $this->widget('ext.common.dashBoard') ?>
+
+				<?php if($this->ID =='templates'):?>
+				<div class="catmenu">
+					<h4>Web templates</h4>
+					<ul class="menu-li">
+						<?php foreach($this->listCatTemplates as $value):?>
+						<li><a href="templates/<?php echo $value['tag']?>"><?php echo $value['cat_name']?></a></li>
+						<?php endforeach?>
+					</ul>
+				</div>
+				<?php endif;?>
+
                 <div class="catmenu">
                     <?php $this->widget('ext.common.listCats') ?>
                 </div>

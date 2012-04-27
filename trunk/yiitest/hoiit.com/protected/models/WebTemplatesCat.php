@@ -84,4 +84,8 @@ class WebTemplatesCat extends CActiveRecord {
 			'criteria' => $criteria,
 		));
 	}
+	public function listCats(){
+		$command = Yii::app()->db->createCommand('SELECT cat_id, cat_name, parent_id, tag FROM '.$this->tableName());
+		return $command->queryAll();
+	}
 }
