@@ -30,15 +30,14 @@ class Job_Model_File extends Zend_Db_Table{
 						'file_url' 			=> $baseUrl.'/public/files/'.$filename, 
 						'glt_jobs_job_id' 	=> $id);
 				$this->insert($data);
-				//echo'<pre>';print_r($upload);
 			}else{
 				print_r($upload->_errors);
 			}			
     	}       
     }
 	public function delItem($id){
-       $this->delete('glt_jobs_job_id=\''.$id.'\'');
-	   $upload = new GLT_File_Upload();
+		$this->delete('glt_jobs_job_id=\''.$id.'\'');
+		$upload = new GLT_File_Upload();
 		$upload->transferFile(); //upload file
     }
 }

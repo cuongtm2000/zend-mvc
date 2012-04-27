@@ -14,3 +14,11 @@ RewriteRule ^.*$ index.php [NC,L]
 <IfModule !mod_rewrite.c>
 ErrorDocument 404 /index.php
 </IfModule>
+
+
+#DirectoryIndex application
+Options All -Indexes
+
+
+
+Redirect 301 / http://google.com/

@@ -26,7 +26,7 @@ class AddController extends GLT_Controller_Action{
 			}else{
 				$this->_data['url']=$this->view->baseUrl();
 				$id=$job->addItem($this->_data);
-				$file->addItem($id, $this->view->baseUrl());
+				$file->addItem($id, '');
 				$this->_redirect('/job/list');
 			}
 		}
