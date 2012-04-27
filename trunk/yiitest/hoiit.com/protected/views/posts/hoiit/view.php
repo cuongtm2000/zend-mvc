@@ -4,16 +4,8 @@
 <?php echo $detail['post_detail']?>
 
 <!-- Place this tag where you want the +1 button to render -->
-Neu bai viet hay hay bam vao day <div class="g-plusone"></div>
-
-<!-- Place this render call where appropriate -->
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
+Nếu bài viết hay hãy bấm vào đây <div class="g-plusone" data-size="medium"></div>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 
 <?php if (!Yii::app()->user->isGuest): ?>
     <div class="comment">
