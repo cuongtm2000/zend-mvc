@@ -4,7 +4,7 @@ $(function() {
 			orientation: 'vertical',
 			auto: true,
 			manualMode: 'loop',
-			frameRate: 70,
+			frameRate: 30,
 			speed: 2
 		});
 	});
