@@ -85,7 +85,7 @@
 		<div id="left-content">
 			<?php if(isset($this->function['menu_about']) && ($this->function['menu_about'])):?>
 				<h1 class="title-box"><span><?php echo $this->lang['about'] ?></span></h1>
-				<ul class="sub-pro">
+				<ul class="sub-cat">
 					<?php foreach($this->function['menu_about'] as $value): ?>
 					<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'about.link')?>/<?php echo $value['tag'.LANG]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
 					<?php endforeach; ?>
@@ -94,7 +94,7 @@
 
 			<?php if(isset($this->function['menu_services']) && ($this->function['menu_services'])):?>
 				<h1 class="title-box"><span><?php echo $this->lang['services'] ?></span></h1>
-				<ul class="sub-pro">
+				<ul class="sub-cat">
 					<?php foreach($this->function['menu_services'] as $value): ?>
 					<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'services.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
 					<?php endforeach; ?>
@@ -103,21 +103,21 @@
 
 			<?php if(isset($this->function['menu_news']) && ($this->function['menu_news'])):?>
 			<h1 class="title-box"><span><?php echo CHtml::encode($this->lang['news']) ?></span></h1>
-			<ul class="sub-pro">
+			<ul class="sub-cat">
 				<?php Common::menuMultiLevel($this->function['menu_news'], 'NewsCat', Yii::t('user', 'news.link')); ?>
 			</ul>
 			<?php endif; ?>
 
 			<?php if(isset($this->function['menu_video']) && ($this->function['menu_video'])):?>
 			<h1 class="title-box"><span><?php echo $this->lang['video'] ?></span></h1>
-			<ul class="sub-pro">
+			<ul class="sub-cat">
 				<?php Common::menuMultiLevel($this->function['menu_video'], 'VideoCat', Yii::t('user', 'video.link')); ?>
 			</ul>
 			<?php endif; ?>
 			
 			<?php if(isset($this->function['menu_products']) && ($this->function['menu_products'])):?>
 			<h1 class="title-box"><span><?php echo $this->lang['products'] ?></span></h1>
-			<ul class="sub-pro">
+			<ul class="sub-cat">
 				<?php Common::menuMultiLevel($this->function['menu_products'], 'ProductsCat', Yii::t('user', 'products.link')); ?>
 			</ul>
 			<?php endif;?>

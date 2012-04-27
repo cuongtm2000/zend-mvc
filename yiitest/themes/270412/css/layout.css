@@ -1,0 +1,189 @@
+body {background:#939BA1 url(../images/bkg-body.gif) repeat-x;font:9pt arial, helvetica, sans-serif;}
+.left{float: left;}
+.right{float:right}
+.clear{clear: both;}
+a{text-decoration:none; color:#720E3B}
+a:hover{color:#000;}
+/*layout*/
+*{margin:0; padding:0}
+
+#wrapper {width:979px;margin:auto;}
+/*Header*/
+#header{ margin:5px 0 0 0;padding:18px 0;position:relative}
+#logo{float:left;margin: 0 20px 0 0}
+.title-city{padding:10px 0 0 0; font-size:20pt;color:#EE6B11;font-weight:bold}
+
+.lang{position:absolute;bottom:35px; right:0}
+.lang-vn{ margin:0 10px 0 0}
+.lang img{ margin:0 2px 0 10px; position:relative; top:2px}
+.lang a{ color:#424C53; font-weight:bold}
+.lang a:hover{color:#EE6B11}
+.hot-line{position:absolute;bottom:10px; right:0; color:#EE6B11;font-weight:bold;font-size:11pt}
+
+/**  Menu **/
+#nav{list-style:none; height:42px;background:url(../images/nav-bg.gif) no-repeat; padding:0 0 0 9px}
+#nav li{float:left; position:relative; }
+#nav li a{font-weight:bold;padding:12px 15px; background:url(../images/nav-line.gif) no-repeat right; display:block; color:#fff;font-size:11pt;}
+#nav li a:hover{color:#EE6B11;}
+#nav li ul{ display:none}
+#nav li:hover > a{color:#EE6B11}
+#nav li:hover ul{ list-style:none;display:block; position:absolute; z-index:20000; top:42px; width:180px; border-bottom:1px solid #E5DBB8; border-left:1px solid #E5DBB8; border-right:1px solid #E5DBB8; *top:41px}
+#nav li ul li{width:100%;}
+#nav li ul li a{font-weight:normal;background:#fff; color:#555; padding:3px 11px; font-size:9pt}
+#nav li ul li a:hover{ background:#FF870F; color:#fff}
+#nav .select{color:#EE6B11}
+
+
+/** Banner **/
+#banner {margin:0 0 5px 0}
+
+/*Frame tent right*/
+.frame-tent-right {padding:5px;border:1px solid #E5DBB8;margin:0 0 15px 0;-webkit-border-radius:1px;-moz-border-radius:1px}
+.frame-tent-right p{text-align:justify;line-height:1.5em}
+
+/* Page Content*/
+#content{ background:#fff; padding:10px 4px}
+.title-box{ font-size:10pt;color:#5A5A5B; font-weight:bold; padding:6px 0;font-weight:bold; background:url(../images/topbg-sub-left.gif) no-repeat}
+.title-box span{padding:0px 10px 0 15px; }
+.bd-frame-box{background:url(../images/bt-bg-title-left.gif) no-repeat; margin:0 0 10px 0; height:7px; width:181px;*_margin:0 0 5px 0}
+.title-h3{color:#444444; font-weight:bold; padding:0 0 0 30px; margin:10px 0 5px 0}
+
+/*Left content*/
+#leftcontent{float:left; width:181px;}
+
+/*Category*/
+.sub-cat{list-style:none;padding:5px 5px 0px 10px;border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8 }
+.sub-cat li{padding:5px 0; font-weight:bold}
+.sub-cat li a{color:#444;display:block}
+.sub-cat li a:hover{ color:#EE6B11}
+.sub-cat li ul{padding:5px 5px 0px 20px}
+.sub-cat li ul li{ font-weight:normal;list-style-image:url(../images/bull.gif); padding:1px 0}
+
+/*My cart*/
+.mycart{padding:7px 5px 15px 10px;border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8 }
+
+/*  RECENTLY VIEWED PRODUCTS  */
+.sub-rely-products{list-style:none;padding:7px 3px 15px 10px;border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8 }
+
+/*Ho tro ky thuat*/
+.support{list-style:none;padding:7px 3px 15px 0px;text-align:center;border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8 }
+.support li {color:#444444; line-height:2em;}
+
+/*Thong ke truy cap*/
+.statistics{list-style:none;padding:7px 3px 15px 10px;border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8 }
+.statistics li {color:#444444; line-height:1.75em;}
+
+/*bg-adv adv left*/
+.bg-adv{list-style:none;border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8 ;text-align:center}
+.bg-adv li{padding:0 0 5px 0}
+
+/*Right content*/
+#rightcontent{float:left; width:597px; margin:0 0 0 5px}
+#rightcontent p{margin:0 0 8px 0}
+#rightcontent ul li, #rightcontent ol li{margin: 0 0 0 40px}
+#rightcontent ul ,#rightcontent ol{margin: 0 0 12px 0}
+#rightcontent table{margin: auto}
+
+.title-right{ margin:0 0 10px 0; font-size:10pt;padding:0px 0px 0px 20px;color:#3CBEDA; font-size:17px;background:url(../images/bull1.gif) no-repeat left 2px;  font-weight:bold;}
+
+.link{color:#404F5B;font-weight:bold;margin:0 0 10px 0}
+.link img{margin:0 3px 0 0}
+.link a{ color:#EE6B11;font-size:10pt}
+.link a:hover{color:#5A5A5B}
+
+/***** Product    *****/
+.all-product{ }
+.product{width:140px; border:1px solid #E5DBB8;text-align:center;padding:5px 0 15px 0;margin:0 1px 10px 4px !important; display:inline-block; vertical-align:top;*float:left; *margin:0 7px 10px 0}
+.product-img{height:140px;width:140px;display:table-cell;vertical-align:middle}
+.price{color:#EE6B11; font-weight:700; font-size:14px; margin:0 0 12px 0 !important}
+.title-pro{font-size:10pt;margin:10px 0; font-weight:bold}
+.title-pro a{color:#5A5A5B;}
+.title-pro a:hover{color:#EE6B11}
+.add-to-cart{padding: 5px 0 8px 10px; font-weight:700;background:url(../images/add-to-cart.png) no-repeat left top;*padding: 0px 0 0px 10px;*height:25px;}
+.add-to-cart span{background:url(../images/add-to-cart.png) no-repeat right top; padding:5px 15px 5px 7px; height:25px;color:#fff}
+
+/***    Page product-info     ****/
+.frame-pro-info{background: #fff;padding:5px 0;margin: 0 0 15px 0}
+.title-pro-order{color:#333; font-size:14px; font-weight:bold;margin:0 0 10px 0;border-bottom:1px solid #ccc;padding:0 0 10px 0}
+.title-pro-order span{padding:0 0 0 10px}
+
+.row-info{margin: 0 0 15px 0}
+.right-info{float:right;width:300px}
+.title-info{margin:0 0 10px 0;color: #fff}
+.title-info span{background: #444444;padding:3px 10px}
+.price-info{color:#3F3F3F;margin:0 0 10px 0 !important;font-size: 10pt}
+.price-info span{margin: 0 0 0 10px;color: #000}
+
+/*   Page New  */
+.masuring{text-align:justify;font-size:10pt;list-style:none}
+.masuring li{margin:0 0 5px 0 !important }
+.masuring p{line-height:1.4em}
+.frame-img{float:left;width:145px;margin:0 5px 5px 0}
+.title-masuring{margin:0 0 5px 0}
+.title-masuring a{color:#404F5B;font-size:10pt;font-weight:bold}
+.title-masuring a:hover{color:#FF6000}
+
+/* paging */
+ul.paging{float: right; margin:0; padding:0 0 5px 0; list-style: none;}
+ul.paging li{display: inline;margin:0 !important;}
+ul.paging .hidden{display: none;}
+ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{background:#404F5B;color:#fff; padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{color:#fff; background:#EE6B11}
+
+/**Page Contact**/
+/*** Frame title company  ***/
+#frame-info-contact{margin:0 0 15px 0}
+
+/** Form lien he  **/
+.frame-contact{list-style:none;margin:0 0 10px 0}
+.frame-contact label{color:#555; margin:0 !important;font-weight:bold;width:100px; float:left}
+.frame-contact li{padding:4px 0; margin:0 !important}
+.frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.frame-contact textarea{border:1px solid #ddd; width:350px;-moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-contact span{color:#F00;margin:0 5px 0 0}
+
+.frame-contact .bton-dk{margin:10px 0 5px 30px;background:#372E27;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-contact .bton-dk{margin:10px 10px 5px 0}
+/****  End page contact     *****/
+
+/*Columns 3*/
+#columns3{ float:right; width:181px}
+
+/*Video*/
+.video{border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8 }
+
+/*typical-product*/
+.typical-product{list-style: none;border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8;text-align: center}
+.typical-product li{padding:0 0 5px 0}
+
+/**  Sub new   **/
+.sub-new{list-style:none;padding:5px 2px 0 10px;border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8}
+.sub-new li{padding:0 0 5px 0;line-height:1.5em}
+.sub-new li a{ display:block;color:#161616;background:url(../images/bull.gif) no-repeat left 5px; padding:0 0 0 10px}
+.sub-new li a:hover{color:#f90}
+
+/*Footer*/
+#bg-fter{background:url(../images/foooter-bg.gif) repeat-x; min-width:979px; height:56px}
+#footer{padding:10px 10px 0px 10px; line-height:1.7em; width:979px; margin:auto;color:#fff}
+#footer a:hover{text-decoration:underline}
+.menu-fter li{ list-style:none;float:left;}
+.menu-fter li a{ text-transform:capitalize;padding:5px 5px;color:#fff;background:url(../images/bkg-pipe2.gif) no-repeat right}
+.copyright { text-align:right;float:right; *margin:10px 0 0 0;*_margin:0;}
+.copyright a{color:#fff; font-size:10pt}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
