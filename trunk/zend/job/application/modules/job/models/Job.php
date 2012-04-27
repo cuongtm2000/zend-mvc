@@ -95,12 +95,12 @@ class Job_Model_Job extends Zend_Db_Table{
 		
 		
 		$dd = array(
-			'job_title' => htmlspecialchars($this->_xss->purify($data['title'])), 
-			'content' 	=> htmlspecialchars($this->_xss->purify($data['content'])), 
-			'start_date'=> htmlspecialchars($this->_xss->purify($ngay_batdau)),
-			'last_date' => htmlspecialchars($this->_xss->purify($ngay_ketthuc)), 
-			'reciever' 	=> htmlspecialchars($this->_xss->purify($data['reciever'])),
-			'glt_usernames_username' => htmlspecialchars($this->_xss->purify($this->_username)));
+			'job_title' => $this->_xss->purify($data['title']), 
+			'content' 	=> $this->_xss->purify($data['content']), 
+			'start_date'=> $this->_xss->purify($ngay_batdau),
+			'last_date' => $this->_xss->purify($ngay_ketthuc), 
+			'reciever' 	=> $this->_xss->purify($data['reciever']),
+			'glt_usernames_username' => $this->_xss->purify($this->_username));
 		try{ 
 			$id= $this->insert($dd);
 			
@@ -126,11 +126,11 @@ class Job_Model_Job extends Zend_Db_Table{
 		$ngay_ketthuc=$this->yyyymmdd($data['last_date']);
 		
 		$dd = array(
-			'job_title' => htmlspecialchars($this->_xss->purify($data['title'])), 
-			'content' 	=> htmlspecialchars($this->_xss->purify($data['content'])), 
-			'start_date'=> htmlspecialchars($this->_xss->purify($ngay_batdau)),
-			'last_date' => htmlspecialchars($this->_xss->purify($ngay_ketthuc)), 
-			'reciever' 	=> htmlspecialchars($this->_xss->purify($data['reciever'])));
+			'job_title' => $this->_xss->purify($data['title']), 
+			'content' 	=> $this->_xss->purify($data['content']), 
+			'start_date'=> $this->_xss->purify($ngay_batdau),
+			'last_date' => $this->_xss->purify($ngay_ketthuc), 
+			'reciever' 	=> $this->_xss->purify($data['reciever']));
 		try{
 			$where='job_id =\''.$data['id'].'\' and glt_usernames_username= \''.$this->_username.'\'';
 			return $this->update($dd,$where);	
