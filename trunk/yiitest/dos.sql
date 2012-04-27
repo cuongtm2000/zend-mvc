@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 26, 2012 at 09:10 AM
+-- Generation Time: Apr 27, 2012 at 10:51 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -40,6 +40,7 @@ CREATE TABLE IF NOT EXISTS `dos_bussiness` (
 INSERT INTO `dos_bussiness` (`bussiness_id`, `bussiness_name`, `cat_parent_id`) VALUES
 ('am-thuc-drink', 'Ẩm thực - Đồ uống', 'root'),
 ('bds-kien-truc-xay-dung', 'BĐS - kiến trúc - xây dựng', 'root'),
+('co-khi-may-moc-thiet-bi', 'Cơ khí - Máy móc - Thiết bị', 'root'),
 ('cong-nghe-thong-tin-vien-thong', 'Công nghệ thông tin - viễn thông', 'root'),
 ('du-lich', 'Du lịch', 'root'),
 ('giao-duc-dao-tao', 'Giáo dục - đào tạo', 'root'),
@@ -80,6 +81,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('advs_left_height', 200, '', '230412'),
 ('advs_left_height', 250, '', '240312'),
 ('advs_left_height', 200, '', '260312'),
+('advs_left_height', 300, '', '270412'),
 ('advs_left_width', 190, '', '010312'),
 ('advs_left_width', 160, '', '070312'),
 ('advs_left_width', 220, '', '130312'),
@@ -89,10 +91,13 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('advs_left_width', 224, '', '230412'),
 ('advs_left_width', 210, '', '240312'),
 ('advs_left_width', 210, '', '260312'),
+('advs_left_width', 179, '', '270412'),
 ('advs_right_height', 190, '', '010312'),
 ('advs_right_height', 190, '', '220312'),
+('advs_right_height', 300, '', '270412'),
 ('advs_right_width', 190, '', '010312'),
 ('advs_right_width', 190, '', '220312'),
+('advs_right_width', 179, '', '270412'),
 ('banner_height', 332, '', '010312'),
 ('banner_height', 324, '', '070312'),
 ('banner_height', 300, '', '130312'),
@@ -102,6 +107,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('banner_height', 297, '', '230412'),
 ('banner_height', 308, '', '240312'),
 ('banner_height', 387, '', '260312'),
+('banner_height', 285, '', '270412'),
 ('banner_width', 951, '', '010312'),
 ('banner_width', 757, '', '070312'),
 ('banner_width', 950, '', '130312'),
@@ -111,6 +117,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('banner_width', 709, '', '230412'),
 ('banner_width', 750, '', '240312'),
 ('banner_width', 710, '', '260312'),
+('banner_width', 597, '', '270412'),
 ('logo_height', 108, '', '010312'),
 ('logo_height', 57, '', '070312'),
 ('logo_height', 100, '', '130312'),
@@ -120,6 +127,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('logo_height', 65, '', '230412'),
 ('logo_height', 53, '', '240312'),
 ('logo_height', 46, '', '260312'),
+('logo_height', 69, '', '270412'),
 ('logo_width', 155, '', '010312'),
 ('logo_width', 260, '', '070312'),
 ('logo_width', 735, '', '130312'),
@@ -129,6 +137,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('logo_width', 320, '', '230412'),
 ('logo_width', 367, '', '240312'),
 ('logo_width', 300, '', '260312'),
+('logo_width', 100, '', '270412'),
 ('max_image_height', 667, '', '010312'),
 ('max_image_height', 600, '', '070312'),
 ('max_image_height', 600, '', '130312'),
@@ -138,6 +147,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('max_image_height', 600, '', '230412'),
 ('max_image_height', 660, '', '240312'),
 ('max_image_height', 450, '', '260312'),
+('max_image_height', 420, '', '270412'),
 ('max_image_width', 500, '', '010312'),
 ('max_image_width', 700, '', '070312'),
 ('max_image_width', 650, '', '130312'),
@@ -147,6 +157,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('max_image_width', 680, '', '230412'),
 ('max_image_width', 600, '', '240312'),
 ('max_image_width', 600, '', '260312'),
+('max_image_width', 560, '', '270412'),
 ('news_cat_height', 89, '', '010312'),
 ('news_cat_height', 100, '', '070312'),
 ('news_cat_height', 90, '', '130312'),
@@ -155,6 +166,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_cat_height', 100, '', '230412'),
 ('news_cat_height', 100, '', '240312'),
 ('news_cat_height', 89, '', '260312'),
+('news_cat_height', 100, '', '270412'),
 ('news_cat_width', 143, '', '010312'),
 ('news_cat_width', 130, '', '070312'),
 ('news_cat_width', 143, '', '130312'),
@@ -163,6 +175,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_cat_width', 143, '', '230412'),
 ('news_cat_width', 143, '', '240312'),
 ('news_cat_width', 143, '', '260312'),
+('news_cat_width', 143, '', '270412'),
 ('news_height_thumb', 89, '', '010312'),
 ('news_height_thumb', 89, '', '070312'),
 ('news_height_thumb', 90, '', '130312'),
@@ -172,6 +185,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_height_thumb', 100, '', '230412'),
 ('news_height_thumb', 100, '', '240312'),
 ('news_height_thumb', 89, '', '260312'),
+('news_height_thumb', 100, '', '270412'),
 ('news_num_paging_cat', 10, '', '010312'),
 ('news_num_paging_cat', 10, '', '070312'),
 ('news_num_paging_cat', 10, '', '130312'),
@@ -181,6 +195,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_cat', 10, '', '230412'),
 ('news_num_paging_cat', 10, '', '240312'),
 ('news_num_paging_cat', 10, '', '260312'),
+('news_num_paging_cat', 10, '', '270412'),
 ('news_num_paging_hot', 6, '', '010312'),
 ('news_num_paging_hot', 6, '', '070312'),
 ('news_num_paging_hot', 6, '', '130312'),
@@ -189,6 +204,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_hot', 6, '', '230412'),
 ('news_num_paging_hot', 6, '', '240312'),
 ('news_num_paging_hot', 6, '', '260312'),
+('news_num_paging_hot', 6, '', '270412'),
 ('news_num_paging_index', 10, '', '010312'),
 ('news_num_paging_index', 10, '', '070312'),
 ('news_num_paging_index', 10, '', '130312'),
@@ -198,6 +214,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_index', 10, '', '230412'),
 ('news_num_paging_index', 10, '', '240312'),
 ('news_num_paging_index', 10, '', '260312'),
+('news_num_paging_index', 10, '', '270412'),
 ('news_num_paging_new', 6, '', '010312'),
 ('news_num_paging_new', 10, '', '070312'),
 ('news_num_paging_new', 10, '', '130312'),
@@ -207,6 +224,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_new', 6, '', '230412'),
 ('news_num_paging_new', 6, '', '240312'),
 ('news_num_paging_new', 6, '', '260312'),
+('news_num_paging_new', 6, '', '270412'),
 ('news_width_thumb', 143, '', '010312'),
 ('news_width_thumb', 143, '', '070312'),
 ('news_width_thumb', 143, '', '130312'),
@@ -216,6 +234,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_width_thumb', 143, '', '230412'),
 ('news_width_thumb', 143, '', '240312'),
 ('news_width_thumb', 143, '', '260312'),
+('news_width_thumb', 143, '', '270412'),
 ('products_cat_height', 155, '', '010312'),
 ('products_cat_height', 200, '', '070312'),
 ('products_cat_height', 121, '', '130312'),
@@ -225,6 +244,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_cat_height', 150, '', '230412'),
 ('products_cat_height', 165, '', '240312'),
 ('products_cat_height', 160, '', '260312'),
+('products_cat_height', 130, '', '270412'),
 ('products_cat_width', 115, '', '010312'),
 ('products_cat_width', 150, '', '070312'),
 ('products_cat_width', 152, '', '130312'),
@@ -234,6 +254,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_cat_width', 150, '', '230412'),
 ('products_cat_width', 165, '', '240312'),
 ('products_cat_width', 160, '', '260312'),
+('products_cat_width', 130, '', '270412'),
 ('products_height', 400, '', '010312'),
 ('products_height', 500, '', '070312'),
 ('products_height', 400, '', '130312'),
@@ -243,6 +264,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_height', 650, '', '230412'),
 ('products_height', 660, '', '240312'),
 ('products_height', 450, '', '260312'),
+('products_height', 550, '', '270412'),
 ('products_height_thumb', 121, '', '010312'),
 ('products_height_thumb', 200, '', '070312'),
 ('products_height_thumb', 121, '', '130312'),
@@ -252,6 +274,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_height_thumb', 150, '', '230412'),
 ('products_height_thumb', 165, '', '240312'),
 ('products_height_thumb', 160, '', '260312'),
+('products_height_thumb', 130, '', '270412'),
 ('products_num_paging_cat', 15, '', '010312'),
 ('products_num_paging_cat', 16, '', '070312'),
 ('products_num_paging_cat', 12, '', '130312'),
@@ -261,6 +284,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_cat', 16, '', '230412'),
 ('products_num_paging_cat', 16, '', '240312'),
 ('products_num_paging_cat', 16, '', '260312'),
+('products_num_paging_cat', 16, '', '270412'),
 ('products_num_paging_hot', 9, '', '010312'),
 ('products_num_paging_hot', 8, '', '070312'),
 ('products_num_paging_hot', 8, '', '130312'),
@@ -269,6 +293,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_hot', 8, '', '230412'),
 ('products_num_paging_hot', 8, '', '240312'),
 ('products_num_paging_hot', 30, '', '260312'),
+('products_num_paging_hot', 12, '', '270412'),
 ('products_num_paging_new', 9, '', '010312'),
 ('products_num_paging_new', 16, '', '070312'),
 ('products_num_paging_new', 8, '', '130312'),
@@ -278,6 +303,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_new', 16, '', '230412'),
 ('products_num_paging_new', 16, '', '240312'),
 ('products_num_paging_new', 8, '', '260312'),
+('products_num_paging_new', 20, '', '270412'),
 ('products_num_paging_other', 3, '', '010312'),
 ('products_num_paging_other', 4, '', '070312'),
 ('products_num_paging_other', 4, '', '130312'),
@@ -287,6 +313,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_other', 4, '', '230412'),
 ('products_num_paging_other', 4, '', '240312'),
 ('products_num_paging_other', 4, '', '260312'),
+('products_num_paging_other', 4, '', '270412'),
 ('products_width', 500, '', '010312'),
 ('products_width', 600, '', '070312'),
 ('products_width', 500, '', '130312'),
@@ -296,6 +323,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_width', 700, '', '230412'),
 ('products_width', 460, '', '240312'),
 ('products_width', 500, '', '260312'),
+('products_width', 660, '', '270412'),
 ('products_width_thumb', 152, '', '010312'),
 ('products_width_thumb', 150, '', '070312'),
 ('products_width_thumb', 152, '', '130312'),
@@ -305,6 +333,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_width_thumb', 150, '', '230412'),
 ('products_width_thumb', 165, '', '240312'),
 ('products_width_thumb', 160, '', '260312'),
+('products_width_thumb', 130, '', '270412'),
 ('services_height', 90, '', '010312'),
 ('services_height', 100, '', '070312'),
 ('services_height', 89, '', '130312'),
@@ -333,6 +362,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_height_thumb', 150, '', '220312'),
 ('video_height_thumb', 169, '', '230412'),
 ('video_height_thumb', 100, '', '240312'),
+('video_height_thumb', 130, '', '270412'),
 ('video_num_paging_cat', 4, '', '010312'),
 ('video_num_paging_cat', 8, '', '070312'),
 ('video_num_paging_cat', 8, '', '130312'),
@@ -342,6 +372,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_num_paging_cat', 8, '', '230412'),
 ('video_num_paging_cat', 8, '', '240312'),
 ('video_num_paging_cat', 8, '', '260312'),
+('video_num_paging_cat', 8, '', '270412'),
 ('video_num_paging_index', 4, '', '010312'),
 ('video_num_paging_index', 8, '', '070312'),
 ('video_num_paging_index', 8, '', '130312'),
@@ -351,6 +382,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_num_paging_index', 8, '', '230412'),
 ('video_num_paging_index', 8, '', '240312'),
 ('video_num_paging_index', 8, '', '260312'),
+('video_num_paging_index', 8, '', '270412'),
 ('video_width_thumb', 115, '', '010312'),
 ('video_width_thumb', 160, '', '070312'),
 ('video_width_thumb', 152, '', '130312'),
@@ -358,7 +390,8 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_width_thumb', 170, '', '200312'),
 ('video_width_thumb', 200, '', '220312'),
 ('video_width_thumb', 150, '', '230412'),
-('video_width_thumb', 165, '', '240312');
+('video_width_thumb', 165, '', '240312'),
+('video_width_thumb', 130, '', '270412');
 
 -- --------------------------------------------------------
 
@@ -511,7 +544,13 @@ INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, 
 ('240312', 'video', 'jquery.prettyPhoto.js', 'javascript'),
 ('260312', 'default', 'jcarousellite.js|special-block.js|part.js', 'javascript'),
 ('260312', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
-('260312', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript');
+('260312', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
+('270412', 'default', 'simplyscroll.verticall.css|prettyPhoto.css', 'css'),
+('270412', 'default', 'jquery.simplyscroll.vertical.js|verticall-config.js|jquery.prettyPhoto.js', 'javascript'),
+('270412', 'products', 'scroll.css|jquery.fancybox.css|simplyscroll.verticall.css', 'css'),
+('270412', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js|jquery.simplyscroll.vertical.js|verticall-config.js', 'javascript'),
+('270412', 'video', 'prettyPhoto.css', 'css'),
+('270412', 'video', 'jquery.prettyPhoto.js', 'javascript');
 
 -- --------------------------------------------------------
 
@@ -565,6 +604,7 @@ CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
 INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
 ('about', 'bagshop'),
 ('about', 'cafe24h'),
+('about', 'cuasat24h'),
 ('about', 'dos'),
 ('about', 'mayphotocopysieuviet'),
 ('about', 'phumyan'),
@@ -574,6 +614,7 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('about', 'tinhungphat'),
 ('advs', 'bagshop'),
 ('advs', 'cafe24h'),
+('advs', 'cuasat24h'),
 ('advs', 'dos'),
 ('advs', 'mayphotocopysieuviet'),
 ('advs', 'phumyan'),
@@ -583,6 +624,7 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('advs', 'tinhungphat'),
 ('banner', 'bagshop'),
 ('banner', 'cafe24h'),
+('banner', 'cuasat24h'),
 ('banner', 'dos'),
 ('banner', 'mayphotocopysieuviet'),
 ('banner', 'phumyan'),
@@ -592,6 +634,7 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('banner', 'tinhungphat'),
 ('contact', 'bagshop'),
 ('contact', 'cafe24h'),
+('contact', 'cuasat24h'),
 ('contact', 'dos'),
 ('contact', 'mayphotocopysieuviet'),
 ('contact', 'phumyan'),
@@ -601,6 +644,7 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('contact', 'tinhungphat'),
 ('news', 'bagshop'),
 ('news', 'cafe24h'),
+('news', 'cuasat24h'),
 ('news', 'dos'),
 ('news', 'mayphotocopysieuviet'),
 ('news', 'phumyan'),
@@ -610,6 +654,7 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('news', 'tinhungphat'),
 ('products', 'bagshop'),
 ('products', 'cafe24h'),
+('products', 'cuasat24h'),
 ('products', 'dos'),
 ('products', 'mayphotocopysieuviet'),
 ('products', 'phumyan'),
@@ -619,6 +664,7 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('products', 'tinhungphat'),
 ('services', 'bagshop'),
 ('services', 'cafe24h'),
+('services', 'cuasat24h'),
 ('services', 'dos'),
 ('services', 'mayphotocopysieuviet'),
 ('services', 'phumyan'),
@@ -628,6 +674,7 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('services', 'tinhungphat'),
 ('supports', 'bagshop'),
 ('supports', 'cafe24h'),
+('supports', 'cuasat24h'),
 ('supports', 'dos'),
 ('supports', 'mayphotocopysieuviet'),
 ('supports', 'phumyan'),
@@ -637,6 +684,7 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('supports', 'tinhungphat'),
 ('video', 'bagshop'),
 ('video', 'cafe24h'),
+('video', 'cuasat24h'),
 ('video', 'phumyan'),
 ('video', 'sach24h'),
 ('video', 'thienlonghoi'),
@@ -670,7 +718,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=66 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=69 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
@@ -680,26 +728,29 @@ INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `co
 (6, 'Về Dos.vn', 'Dos.vn about', '<p>\r\n	Kính gửi: <strong>Quý Doanh nghiệp</strong></p>\r\n<p style="margin-left:40px;">\r\n	<strong>DOS</strong> là công ty chuyên nghiệp trong việc <strong>Thiết kế Website</strong>. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng.</p>\r\n<p style="margin-left:40px;">\r\n	Với tiêu chí "Giao diện đẹp, tính năng nhiều, giá thành thấp". Qua 5 năm thiết kế Web, sản phẩm của chúng tôi được các Doanh nghiệp đánh giá cao. Chúng tôi có bề dày kinh nghiệm, có giải pháp và đội ngũ nhân lực tâm huyết để đảm bảo sản phẩm đáp ứng đúng nhu cầu, đem lại hiệu quả, với chi phí phù hợp.</p>\r\n<p style="margin-left:40px;">\r\n	Không ngừng học hỏi và phát triển công nghệ. <strong>DOS</strong> trở thành một công ty thiết kế Web tiên phong về chất lượng, có sản phẩm tiêu biểu, có thương hiệu uy tín trong và ngoài nước.</p>\r\n<p style="margin-left:40px;">\r\n	<strong>DOS</strong> thiết kế và cung cấp giải pháp Web trên đến các đơn vị: <strong>UBND Tân phú</strong>, <strong>SONADEZI</strong>, <strong>BENCO</strong>, <strong>Gạch Ngói Nhị Hiệp</strong>, <strong>An Gia Phú</strong>, <strong>Nội Thất Yến Bình Minh</strong>, <strong>Thuận Thành Glass</strong>, <strong>Thái Sơn</strong>, <strong>Thái Bình An Phú Thịnh...</strong></p>\r\n<p style="margin-left:40px;">\r\n	Tại Việt Nam, Sản phẩm <strong>DOS</strong> được giới thiệu tại các Công ty thiết kế in ấn, ở hầu hết các Trung Tâm tỉnh thành trên toàn quốc .</p>', '<p>\r\n	Kính gửi: Quý Doanh nghiệp<br />\r\n	      <br />\r\n	           DOS là công ty chuyên nghiệp trong việc Thiết kế Website. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng.<br />\r\n	          Với tiêu chí "Giao diện đẹp, tính năng nhiều, giá thành thấp". Qua 5 năm thiết kế Web, sản phẩm của chúng tôi được các Doanh nghiệp đánh giá cao. Chúng tôi có bề dày kinh nghiệm, có giải pháp và đội ngũ nhân lực tâm huyết để đảm bảo sản phẩm đáp ứng đúng nhu cầu, đem lại hiệu quả, với chi phí phù hợp.</p>\r\n<p>\r\n	          Không ngừng học hỏi và phát triển công nghệ. DOS trở thành một công ty thiết kế Web tiên phong về chất lượng, có sản phẩm tiêu biểu, có thương hiệu uy tín trong và ngoài nước.<br />\r\n	          DOS thiết kế và cung cấp giải pháp Web trên đến các đơn vị: UBND Tân phú, SONADEZI, BENCO, Gạch Ngói Nhị Hiệp, An Gia Phú, Nội Thất Yến Bình Minh, Thuận Thành Glass, Thái Sơn, Thái Bình An Phú Thịnh...</p>\r\n<p>\r\n	          Tại Việt Nam, Sản phẩm DOS được giới thiệu tại các Công ty thiết kế in ấn, ở hầu hết các Trung Tâm tỉnh thành trên toàn quốc .</p>', 75, '2012-04-07 02:13:52', 1, 0, NULL, NULL, 've-dos', 'dos-about', 'DOS là công ty chuyên nghiệp trong việc Thiết kế Website. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng', 'DOS là công ty chuyên nghiệp trong việc Thiết kế Website. Những sản phẩm chính: Web Doanh nghiệp, Web cơ quan, Web trường học, Web du lịch, Web nhà hàng, Web máy tính, Web điện thoại,... và các loại Web theo đơn đặt hàng', 1, 'dos'),
 (7, 'Tầm nhìn và sứ mệnh Dos', 'Gioi thieu 2 En', '<p>\r\n	Tầm nhìn và Sứ mệnh của DOS được viết ra ngay từ khi thành lập, xác định lý tưởng, hướng đi lâu dài và những giá trị cơ bản mà mỗi thành viên sáng lập luôn hướng tới.</p>\r\n<p>\r\n	<strong>Tầm nhìn của DOS</strong><br />\r\n	Được công nhận là công ty đứng đầu trong lĩnh vực thiết kế Website. Với giải pháp tích hợp Marketing và Công Nghệ Thông Tin trong việc quảng cáo bán hàng dành riêng cho từng Doanh nghiệp.</p>\r\n<p>\r\n	<strong>Sứ mệnh của DOS</strong><br />\r\n	Mang lại cho Doanh nghiệp một kênh truyền thông nhanh chóng và hiệu quả qua những Website đầy tính sáng tạo.</p>\r\n<p>\r\n	<strong>Các giá trị cơ bản của DOS c</strong>ác giá trị cơ bản là tài sản vô cùng quý báu mà mỗi người thành viên của DOS đều trân trọng giữ gìn:</p>\r\n<ul><li>\r\n		<strong>Làm khách hàng hài lòng</strong>: Tận tuỵ với khách hàng và luôn phấn đấu để đáp ứng tốt nhất những nhu cầu, vượt trên mong đợi của họ.</li>\r\n	<li>\r\n		<strong>Con người là cốt lõi</strong>: Tôn trọng con người, tạo điều kiện cho các thành viên phát triển tối đa tài năng, đóng góp cho tổ chức và được đãi ngộ xứng đáng cả về vật chất và tinh thần.</li>\r\n	<li>\r\n		<strong>Chất lượng tốt nhất</strong>: Đảm bảo chất lượng tốt nhất trong mỗi sản phẩm, mỗi việc làm.</li>\r\n	<li>\r\n		<strong>Đề cao đạo đức kinh doanh</strong>: Mỗi nhân viên là một đại diện của Công ty, có nghĩa vụ tuân thủ đạo đức kinh doanh cao nhất, luôn hợp tác, cởi mở và thân thiện với đồng nghiệp, đóng góp cho cộng đồng và xã hội.</li>\r\n</ul>', '<p>\r\n	NOi dung en</p>', 45, '2012-04-07 02:14:02', 2, 0, NULL, NULL, 'tam-nhin-va-su-menh-dos', 'gioi-thieu-2-en', 'Tầm nhìn và Sứ mệnh của DOS được viết ra ngay từ khi thành lập, xác định lý tưởng, hướng đi lâu dài và những giá trị cơ bản mà mỗi thành viên sáng lập luôn hướng tới', 'Mo ta 2 En', 1, 'dos'),
 (8, 'Lĩnh vực hoạt động', 'Gioi thieu 3 En', '<p>\r\n	<strong>DỊCH VỤ CHUYÊN NGHIỆP</strong>:</p>\r\n<ul><li>\r\n		Thiết kế website</li>\r\n	<li>\r\n		Phương pháp quảng cáo bán hàng trực tuyến</li>\r\n	<li>\r\n		Giải pháp CNTT trọn gói cho Doanh nghiệp</li>\r\n	<li>\r\n		Thương mại điện tử</li>\r\n</ul><p>\r\n	 </p>\r\n<p>\r\n	<strong>SẢN PHẨM VÀ DỊCH VỤ GTGT:</strong></p>\r\n<ul><li>\r\n		Đăng ký tên miền</li>\r\n	<li>\r\n		Cung cấp Hosting</li>\r\n	<li>\r\n		Xử lý hình ảnh nhập liệu cho web</li>\r\n	<li>\r\n		Thiết kế Logo</li>\r\n	<li>\r\n		Thiết Kế Name Card</li>\r\n	<li>\r\n		Thiết kế ấn phầm Quảng cáo theo đơn đặt hàng</li>\r\n</ul><p>\r\n	 </p>\r\n<p>\r\n	<strong>HỖ TRỢ TƯ VẤN MIỄN PHÍ:</strong></p>\r\n<ul><li>\r\n		Thành lập Doanh nghiệp</li>\r\n	<li>\r\n		Quản lý Doanh nghiệp</li>\r\n	<li>\r\n		Tư vấn Marketing và phát triển Doanh nghiệp</li>\r\n	<li>\r\n		Tư vấn và định hướng đào tạo nhân viên bán hàng</li>\r\n	<li>\r\n		Tư vấn phong thủy</li>\r\n</ul>', '<p>\r\n	Noi dung 3 en</p>', 32, '2012-04-07 02:14:12', 3, 0, NULL, NULL, 'linh-vuc-hoat-dong', 'gioi-thieu-3-en', 'Mo ta 3', 'Mo ta 3 En', 1, 'dos'),
-(43, 'Giới thiệu chung', '', '<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong>  <span style="color:#0000ff;font-size:large;">Siêu Việt là Doanh Nghiệp chuyên cung cấp và cho thuê máy văn phòng</span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">- Sản phẩm chính: Máy photocopy, Máy in, Máy fax, Máy scan, Máy vi tính, Máy chiếu.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">- Dịch vụ: cho thuê máy photocopy đa chức năng, đen trắng, màu, bảo hành, bảo trì, sữa chữa.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">Được thành lập vào năm 2003, với bề dày nhiều năm kinh nghiệm Siêu Việt luộn đi tiên phong trong việc đầu tư đổi mới máy văn phòng và luôn cung cấp cho Khách Hàng nhưng loại hình dịch vụ chất lợng cao. Luôn làm hài lòng nhưng Khách Hàng khó tính.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">Tại  Đồng Nai, Siêu Việt là nhà cung cấp cho các Doanh Nghiệp trong và ngoài nước đóng trong các Khu Công Nghiệp như: Biên Hòa 1, Biên Hòa 2, Amata, Loteco, Long Thành, Nhợn Trạch 1-5, Tam Phước, Gò Dầu, Sông Mây, Hố nai 3, Bàu Xéo và các Tỉnh Thành lân cận.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#ff0000;font-size:medium;"><strong>* Với tiêu chí: </strong></span></p>\n<p style="text-align:center;"><span style="font-size:large;"><strong><span style="color:#ff0000;">" LỢI ÍCH CỦA KHÁCH HÀNG LÀ THÀNH QUẢ CỦA CHÚNG TÔI"</span></strong></span></p>\n<p style="text-align:center;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;">Doanh nghiệp Siêu Việt luôn đồng hành cùng sự nghiệp phát triển của Doanh Nghiệp</span></span></strong></span></p>\n<p style="text-align:justify;"> </p>', '', 284, '2012-04-12 01:25:59', 1, 1, '', '', 'gioi-thieu-chung', '', 'Siêu Việt', '', 1, 'mayphotocopysieuviet'),
-(44, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 108, '2012-04-12 01:57:36', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'phumyan'),
+(43, 'Giới thiệu chung', '', '<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong>  <span style="color:#0000ff;font-size:large;">Siêu Việt là Doanh Nghiệp chuyên cung cấp và cho thuê máy văn phòng</span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">- Sản phẩm chính: Máy photocopy, Máy in, Máy fax, Máy scan, Máy vi tính, Máy chiếu.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">- Dịch vụ: cho thuê máy photocopy đa chức năng, đen trắng, màu, bảo hành, bảo trì, sữa chữa.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">Được thành lập vào năm 2003, với bề dày nhiều năm kinh nghiệm Siêu Việt luộn đi tiên phong trong việc đầu tư đổi mới máy văn phòng và luôn cung cấp cho Khách Hàng nhưng loại hình dịch vụ chất lợng cao. Luôn làm hài lòng nhưng Khách Hàng khó tính.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;font-size:small;">Tại  Đồng Nai, Siêu Việt là nhà cung cấp cho các Doanh Nghiệp trong và ngoài nước đóng trong các Khu Công Nghiệp như: Biên Hòa 1, Biên Hòa 2, Amata, Loteco, Long Thành, Nhợn Trạch 1-5, Tam Phước, Gò Dầu, Sông Mây, Hố nai 3, Bàu Xéo và các Tỉnh Thành lân cận.</span></span></strong></span></p>\n<p style="text-align:justify;"><span style="color:#ff0000;font-size:medium;"><strong>* Với tiêu chí: </strong></span></p>\n<p style="text-align:center;"><span style="font-size:large;"><strong><span style="color:#ff0000;">" LỢI ÍCH CỦA KHÁCH HÀNG LÀ THÀNH QUẢ CỦA CHÚNG TÔI"</span></strong></span></p>\n<p style="text-align:center;"><span style="color:#008000;font-size:medium;"><strong><span style="color:#0000ff;"><span style="color:#000000;">Doanh nghiệp Siêu Việt luôn đồng hành cùng sự nghiệp phát triển của Doanh Nghiệp</span></span></strong></span></p>\n<p style="text-align:justify;"> </p>', '', 285, '2012-04-12 01:25:59', 1, 1, '', '', 'gioi-thieu-chung', '', 'Siêu Việt', '', 1, 'mayphotocopysieuviet'),
+(44, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 116, '2012-04-12 01:57:36', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'phumyan'),
 (45, 'Giấy chứng nhận đại lý', '', '<p><img style="margin-left:auto;margin-right:auto;" title="Giấy chung nhan" src="/public/userfiles/image/mayphotocopysieuviet/image/Nho-Chungnhan_HP.jpg" alt="sieu viet" width="450" height="651" /></p>', '', 64, '2012-04-12 02:49:22', 2, 0, '', '', 'giay-chung-nhan-dai-ly', '', '', '', 1, 'mayphotocopysieuviet'),
 (46, 'Giới thiệu chung chung', '', '<p>Giới thiệu chung chung Giới thiệu chung chung  Giới thiệu chung chung</p>', '', 3, '2012-04-13 03:18:30', 2, 0, '', '', 'gioi-thieu-chung-chung', '', 'Giới thiệu chung chung', '', 1, 'phumyan'),
-(47, 'Giới thiệu thị trường nội thất', '', '<p>Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất</p>', '', 8, '2012-04-13 03:19:10', 3, 0, '', '', 'gioi-thieu-thi-truong-noi-that', '', 'Giới thiệu thị trường nội thất', '', 1, 'phumyan'),
+(47, 'Giới thiệu thị trường nội thất', '', '<p>Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất</p>', '', 10, '2012-04-13 03:19:10', 3, 0, '', '', 'gioi-thieu-thi-truong-noi-that', '', 'Giới thiệu thị trường nội thất', '', 1, 'phumyan'),
 (48, 'Tổng quan vể công ty', '', '<p>Siêu Việt là Doanh nghiệp chuyên cung cấp và cho thuê thiết bị máy văn phòng. Sản phẩm chính: Máy photocopy, máy tính, máy Fax, Máy Scan,.. ngoài ta còn cung cấp sản phẩm và dịch vụ theo đơn đặt hàng của khách hàng.</p>\n<p>Được thành lập vào năm 2002, bề dày kinh nghiệp 10 năm luôn tiên phong trong việc đổi mới máy móc và dịch vụ phụ vụ chất lượng cao luôn làm hoài lòng khách hàng khó tính nhất.</p>\n<p>Tại Đồng Nai, Siêu Việt là nhà cung cấp thiết bị văn phòng cho các Doanh nghiệp trong và ngoài nước như: Sonadezi, KCN AMADA,..</p>\n<p>khẳng định dịch vụ chất lượng Công ty được thành lập với tiêu chí cung cấp sỉ và lẻ tất cả các thiết bị văn phòng cho các đại lý trên khắp Việt Nam .</p>\n<p>Tận dụng và phát huy năng lực, kinh nghiệm trong lĩnh vực thiết bị văn phòng cùng với sự hỗ trợ của các thương hiệu nổi tiếng thế giới như Toshiba, Panasonic, Canon, Ricoh, Konica Minolta, Xerox... và trong lĩnh vực tin học như Intel, Seagate, Samsung, Asus, Dell, Ibm, Acer ...chúng tôi mong muốn và quyết tâm để trờ thành nhà cung cấp lớn và uy tín nhất trong lĩnh vực văn phòng tại Việt Nam.</p>\n<p>Dịch vụ hỗ trợ khách hàng: Chúng tôi có một đội ngũ kỹ sư có chuyên môn cao, kỹ thuật viên uy tín lâu năm kinh nghiệm trong các lĩnh vực:</p>\n<p>- Tư vấn, thực hiện các Giải Pháp về Máy Photocopy, Máy Fax, Máy In ...</p>\n<p>- Kinh doanh và cho thuê Máy Văn Phòng</p>\n<p>- Máy Photocopy in kỹ thuật số khổ lớn A0, Máy In Siêu Tốc 130 bản/phút</p>\n<p>- Máy in Công nghiệp, Máy in Màu Offset</p>\n<p>- Hỗ trợ kỹ thuật cho các dịch vụ Photocopy</p>\n<p>- Phân phối Sỉ &amp; Lẻ Máy Photocopy hàng nhập khẩu</p>\n<p>- Cung cấp Mực, Linh Kiện, Vật Tư với giá ưu đãi</p>\n<p>- Nhận đào tạo Kỹ Thuật Viên sửa chữa máy Photocopy, In, Fax</p>\n<p>Siêu Việt đáp ứng mọi nhu cầu, lựa chọn từ quý khách.</p>', '', 11, '2012-04-16 01:09:47', 3, 0, '', '', 'tong-quan-ve-cong-ty', '', '', '', 1, 'mayphotocopysieuviet'),
-(50, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 183, '2012-04-19 01:22:04', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'thoitrang'),
+(50, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 184, '2012-04-19 01:22:04', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'thoitrang'),
 (51, 'Giới thiệu chung chung', '', '<p>Giới thiệu chung chung Giới thiệu chung chung  Giới thiệu chung chung</p>', '', 11, '2012-04-19 01:22:04', 2, 0, '', '', 'gioi-thieu-chung-chung', '', 'Giới thiệu chung chung', '', 1, 'thoitrang'),
 (52, 'Giới thiệu thị trường nội thất', '', '<p>Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất</p>', '', 32, '2012-04-19 01:22:04', 3, 0, '', '', 'gioi-thieu-thi-truong-noi-that', '', 'Giới thiệu thị trường nội thất', '', 1, 'thoitrang'),
 (53, 'Giới thiệu sơ lược', '', '<p>Thiên Long Hội  chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn carbp2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn carbp2. Ngoài ra, Thiên Long Hộiluôn đáp ứng các loại ván ép, keo theo Đơn Đặt Hàng.</p>\r\n<p>Được thành lập năm 1999, có 5 xưởng sản xuất, bề dày kinh nghiệm 12 năm luôn tiên phong đầu tư khoa học, nghiên cứu phát triển sản phẩm, có máy móc thiết bị loại tốt và đội ngũ nhân lực tâm huyết, có trình độ chuyên môn cao, thạo việc để sản xuất sản phẩm có tính năng tốt, bền bỉ, tinh xảo, giá thành thấp đồng thời đáp ứng được đơn hàng số lượng lớn.</p>', '', 309, '2012-04-19 06:46:54', 1, 1, '', '', 'gioi-thieu-so-luoc', '', 'Thiên Long Hội  chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn carbp2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn carbp2. Ngoài ra, Thiên Long Hộiluôn đáp ứng các loại ván ép, keo theo Đơn Đặt Hàng.', '', 1, 'thienlonghoi'),
 (54, 'Giới thiệu chung chung', '', '<p>1. Địa chỉ trụ sở chính:</p>\r\n<p>Văn phòng: 23 Núi Thành - TP.Đà Nẵng</p>\r\n<p>Điện thoại: 0511.3634345 - 3626077 - 3626099 - 3601558 - 3601559. Fax: 0511.3634345</p>\r\n<p>Email: gialinh@begili.com Website: www.begili.com</p>\r\n<ul><li>2. Nhà máy:</li>\r\n<li>Địa chỉ: Lô 4-5 Cụm Công nghiệp Đại Hiệp, Đại Lộc, Quảng Nam.</li>\r\n<li>Điện thoại: 0510.3762767 Fax: 0510.3762769</li>\r\n<li>3. Quá trình hình thành và phát triển:</li>\r\n</ul><p>Công ty TNHH Gia Linh là đơn vị thành lập theo hình thức Công ty trách nhiệm hữu hạn và hoạt đông theo luật doanh nghiệp được Quốc Hội Nước Cộng Hoà Xã Hội Chủ Nghĩa Việt Nam Khoá X thông qua ngày 12/6/1999 và các quy định khác của pháp luật Nhà nước Việt Nam. Là đơn vị chuyên sản xuất và cung cấp các thiết bị đồ gỗ nội - ngoại thất cao cấp, kinh doanh khách sạn, nhà hàng và sản xuất máy điều hoà không khí mang thương hiệu Begili.</p>\r\n<p>Trải qua thời gian, cùng với sự lớn mạnh không ngừng cả về chất và lượng, do vậy Công ty TNHH Gia Linh đã đạt được những thành tựu to lớn. Đặc biệt, với đội ngũ cán bộ kỹ thuật, kỹ sư dày dạn kinh nghiệm trong việc tổ chức quản lý thi công, điều hành sản xuất, đội ngũ cán bộ quản lý nhạy bén, đội ngũ nhân viên với bề dày kinh nghiệm trong lĩnh vực mộc máy và được bổ sung thêm bởi lớp nhân viên trẻ có sức sáng tạo, nhiệt huyết cao, năng động đã góp phần tạo nên sự lớn mạnh của Công ty trong môi trường cạnh tranh ngày càng khốc liệt.</p>\r\n<p>Công ty áp dụng công nghệ máy móc hiện đại, với sự giám sát chặt chẽ của các kỹ thuật viên trong Công ty vì vậy sản phẩm đã đạt đến đỉnh cao của sự hoàn hảo, tinh tế và đa dạng về chủng loại.</p>\r\n<p>Mục đích kinh doanh của Công ty là tạo dựng trở thành thương hiệu uy tín và in sâu trong tâm trí của khách hàng. Qua đó góp phần tạo cho nhân viên Công ty nói riêng có một cuộc sống đảm bảo, ổn định và góp sức xây dựng một đất nước Việt Nam nói chung ngày càng vững mạnh và phồn vinh.</p>\r\n<p>Phương châm kinh doanh của Công ty là mong muốn đem lại cho quý khách sự hài lòng và thỏa mãn về chất lượng sản phẩm mang thương hiệu Begili .</p>', '', 8, '2012-04-19 06:46:54', 2, 0, '', '', 'gioi-thieu-chung-chung', '', '1. Địa chỉ trụ sở chính:\r\nVăn phòng: 23 Núi Thành - TP.Đà Nẵng\r\nĐiện thoại: 0511.3634345 - 3626077 - 3626099 - 3601558 - 3601559. Fax: 0511.3634345\r\nEmail: gialinh@begili.com Website: www.begili.com', '', 1, 'thienlonghoi'),
 (55, 'Công trình đã thực hiện', '', '<p><strong>1.Một số hình ảnh 2 chi nhánh SCB tại Đà Nẵng</strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/8102010112013.jpg" alt="" width="650" height="487" /></p>\r\n<p style="text-align:left;"><strong>2.Các công trình tiêu biểu:</strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/nhaconam.jpg" alt="" width="650" height="487" /></p>\r\n<p style="text-align:center;"><strong><span style="color:#0000ff;">Nhà tư nhân</span></strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thienlonghoi/image/sunriver.JPG" alt="" width="450" height="600" /></p>\r\n<p style="text-align:center;"><span style="color:#0000ff;"><strong>Khách sạn SUN RIVER</strong></span></p>\r\n<p style="text-align:left;"> </p>', '', 69, '2012-04-19 06:46:54', 3, 0, '', '', 'cong-trinh-da-thuc-hien', '', 'Công trình đã thực hiện', '', 1, 'thienlonghoi'),
-(56, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 191, '2012-04-20 06:34:17', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'cafe24h'),
+(56, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 192, '2012-04-20 06:34:17', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'cafe24h'),
 (57, 'Giới thiệu chung chung', '', '<p>Giới thiệu chung chung Giới thiệu chung chung  Giới thiệu chung chung</p>\r\n<p>Giới thiệu chung chung Giới thiệu chung chung Giới thiệu chung chung</p>\r\n<p>Giới thiệu chung chung Giới thiệu chung chung Giới thiệu chung chung</p>\r\n<p>Giới thiệu chung chung Giới thiệu chung chung Giới thiệu chung chung</p>', '', 13, '2012-04-20 06:34:17', 2, 0, '', '', 'gioi-thieu-chung-chung', '', 'Giới thiệu chung chung', '', 1, 'cafe24h'),
 (58, 'Giới thiệu thị trường nội thất', '', '<p>Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất</p>', '', 24, '2012-04-20 06:34:17', 3, 0, '', '', 'gioi-thieu-thi-truong-noi-that', '', 'Giới thiệu thị trường nội thất', '', 1, 'cafe24h'),
-(59, 'Giới thiệu sơ lược', '', '<p>Từ năm 1998 đến nay, Nhà sách 24h đã và đang tiếp tục nhận được sự tín nhiệm của đông đảo bạn đọc gần xa cũng như sự tín nhiệm của các cơ quan, trường học trong và ngoài nước. Sự tín nhiệm đó chính là nguồn động lực lớn giúp Nhà sách luôn cố gắng hoàn thiện hơn nữa để phục vụ quý khách ngày một tốt hơn.</p>', '', 216, '2012-04-23 02:30:31', 1, 1, '', '', 'gioi-thieu-so-luoc', '', 'Từ năm 1998 đến nay, Nhà sách 24h đã và đang tiếp tục nhận được sự tín nhiệm của đông đảo bạn đọc gần xa cũng như sự tín nhiệm của các cơ quan, trường học trong và ngoài nước.', '', 1, 'sach24h'),
-(62, 'GIỚI THIỆU VỀ NHÀ SÁCH 24H', '', '<p>Từ năm 1998 đến nay, Nhà sách 24h đã và đang tiếp tục nhận được sự tín nhiệm của đông đảo bạn đọc gần xa cũng như sự tín nhiệm của các cơ quan, trường học trong và ngoài nước. Sự tín nhiệm đó chính là nguồn động lực lớn giúp Nhà sách luôn cố gắng hoàn thiện hơn nữa để phục vụ quý khách ngày một tốt hơn.</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/sach24h/image/cuahang.jpg" alt="" width="400" height="300" /></p>\r\n<p style="text-align:left;">Với tổng diện tích 1.200m2, không gian rộng rãi, trang bị máy lạnh thoáng mát, đội ngũ nhân viên phục vụ ân cần. Chủng loại sách phong phú với khoảng 35.000 đầu sách, đa dạng các mặt hàng: Văn phòng phẩm, Dụng cụ học sinh, Băng đĩa, Quà lưu niệm, Đồ chơi, …</p>\r\n<p>Nhà sách Minh Khai chuyên cung cấp sỉ và lẻ các mặt hàng sau tại chỗ hoặc tận nơi theo yêu cầu, nhanh chóng và tiện lợi:</p>\r\n<ul><li><strong>Sách</strong></li>\r\n<li><strong>Báo và Tạp chí</strong></li>\r\n<li><strong>Băng đĩa nhạc</strong></li>\r\n<li><strong>Văn phòng phẩm và quà tặng, lưu niệm, ...</strong></li>\r\n</ul><p>Khi đặt mua hàng tại nhà sách của chúng tôi, quý khách sẽ giảm được khá nhiều những chi phí vì được hưởng các loại hình dịch vụ miễn phí và Quý khách còn được hưởng chiết khấu cao. Ngoài việc cung cấp sỉ và lẻ các mặt hàng phong phú như trên, Nhà sách Minh Khai còn phục vụ Quý khách các dịch vụ sau:</p>\r\n<p><strong>Dịch vụ bán hàng qua mạng Internet (giao hàng tận nơi)</strong></p>\r\n<p>Thăm website minhkhai.vn, Quý khách có thể lựa chọn và đặt mua những loại Sách, Báo &amp; Tạp chí, Băng Đĩa, Văn Phòng Phẩm, Quà lưu niệm, ... mà mình cần.</p>\r\n<p>Đặc biệt, Nhà sách Minh Khai còn liên kết với Amazon.com để phục vụ nhu cầu mua sách ngoại văn thuộc các thể loại, chuyên đề khác nhau.</p>\r\n<p>Khi mua sách ngoại văn từ Amazon.com thông qua minhkhai.vn, Quý khách sẽ tiết kiệm được khá nhiều tiền bạc và thời gian. Hình thức thanh toán: Tiền mặt hoặc Chuyển khoản hoặc thẻ Tín dụng.</p>\r\n<p>Chúng tôi sẽ giao đủ chủng loại và số lượng mà khách yêu cầu với đầy đủ chứng từ hợp lệ. Với phương châm: Càng ngày càng phục vụ khách hàng tốt hơn, nhà sách Minh Khai chúng tôi rất hân hạnh được đáp ứng những yêu cầu của quý khách.</p>', '', 4, '2012-04-23 03:04:08', 4, 0, NULL, NULL, 'gioi-thieu-ve-nha-sach-24h', '', 'Từ năm 1998 đến nay, Nhà sách 24h đã và đang tiếp tục nhận được sự tín nhiệm của đông đảo bạn đọc gần xa cũng như sự tín nhiệm của các cơ quan, trường học trong và ngoài nước. Sự tín nhiệm đó chính là nguồn động lực lớn giúp Nhà sách luôn cố gắng...', '', 1, 'sach24h'),
-(63, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 229, '2012-04-24 06:33:08', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'bagshop'),
+(59, 'Giới thiệu sơ lược', '', '<p>Từ năm 1998 đến nay, Nhà sách 24h đã và đang tiếp tục nhận được sự tín nhiệm của đông đảo bạn đọc gần xa cũng như sự tín nhiệm của các cơ quan, trường học trong và ngoài nước. Sự tín nhiệm đó chính là nguồn động lực lớn giúp Nhà sách luôn cố gắng hoàn thiện hơn nữa để phục vụ quý khách ngày một tốt hơn.</p>', '', 241, '2012-04-23 02:30:31', 1, 1, '', '', 'gioi-thieu-so-luoc', '', 'Từ năm 1998 đến nay, Nhà sách 24h đã và đang tiếp tục nhận được sự tín nhiệm của đông đảo bạn đọc gần xa cũng như sự tín nhiệm của các cơ quan, trường học trong và ngoài nước.', '', 1, 'sach24h'),
+(62, 'GIỚI THIỆU VỀ NHÀ SÁCH 24H', '', '<p>Từ năm 1998 đến nay, Nhà sách 24h đã và đang tiếp tục nhận được sự tín nhiệm của đông đảo bạn đọc gần xa cũng như sự tín nhiệm của các cơ quan, trường học trong và ngoài nước. Sự tín nhiệm đó chính là nguồn động lực lớn giúp Nhà sách luôn cố gắng hoàn thiện hơn nữa để phục vụ quý khách ngày một tốt hơn.</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/sach24h/image/cuahang.jpg" alt="" width="400" height="300" /></p>\r\n<p style="text-align:left;">Với tổng diện tích 1.200m2, không gian rộng rãi, trang bị máy lạnh thoáng mát, đội ngũ nhân viên phục vụ ân cần. Chủng loại sách phong phú với khoảng 35.000 đầu sách, đa dạng các mặt hàng: Văn phòng phẩm, Dụng cụ học sinh, Băng đĩa, Quà lưu niệm, Đồ chơi, …</p>\r\n<p>Nhà sách Minh Khai chuyên cung cấp sỉ và lẻ các mặt hàng sau tại chỗ hoặc tận nơi theo yêu cầu, nhanh chóng và tiện lợi:</p>\r\n<ul><li><strong>Sách</strong></li>\r\n<li><strong>Báo và Tạp chí</strong></li>\r\n<li><strong>Băng đĩa nhạc</strong></li>\r\n<li><strong>Văn phòng phẩm và quà tặng, lưu niệm, ...</strong></li>\r\n</ul><p>Khi đặt mua hàng tại nhà sách của chúng tôi, quý khách sẽ giảm được khá nhiều những chi phí vì được hưởng các loại hình dịch vụ miễn phí và Quý khách còn được hưởng chiết khấu cao. Ngoài việc cung cấp sỉ và lẻ các mặt hàng phong phú như trên, Nhà sách Minh Khai còn phục vụ Quý khách các dịch vụ sau:</p>\r\n<p><strong>Dịch vụ bán hàng qua mạng Internet (giao hàng tận nơi)</strong></p>\r\n<p>Thăm website minhkhai.vn, Quý khách có thể lựa chọn và đặt mua những loại Sách, Báo &amp; Tạp chí, Băng Đĩa, Văn Phòng Phẩm, Quà lưu niệm, ... mà mình cần.</p>\r\n<p>Đặc biệt, Nhà sách Minh Khai còn liên kết với Amazon.com để phục vụ nhu cầu mua sách ngoại văn thuộc các thể loại, chuyên đề khác nhau.</p>\r\n<p>Khi mua sách ngoại văn từ Amazon.com thông qua minhkhai.vn, Quý khách sẽ tiết kiệm được khá nhiều tiền bạc và thời gian. Hình thức thanh toán: Tiền mặt hoặc Chuyển khoản hoặc thẻ Tín dụng.</p>\r\n<p>Chúng tôi sẽ giao đủ chủng loại và số lượng mà khách yêu cầu với đầy đủ chứng từ hợp lệ. Với phương châm: Càng ngày càng phục vụ khách hàng tốt hơn, nhà sách Minh Khai chúng tôi rất hân hạnh được đáp ứng những yêu cầu của quý khách.</p>', '', 11, '2012-04-23 03:04:08', 4, 0, NULL, NULL, 'gioi-thieu-ve-nha-sach-24h', '', 'Từ năm 1998 đến nay, Nhà sách 24h đã và đang tiếp tục nhận được sự tín nhiệm của đông đảo bạn đọc gần xa cũng như sự tín nhiệm của các cơ quan, trường học trong và ngoài nước. Sự tín nhiệm đó chính là nguồn động lực lớn giúp Nhà sách luôn cố gắng...', '', 1, 'sach24h'),
+(63, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 230, '2012-04-24 06:33:08', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'bagshop'),
 (64, 'Giới thiệu chung chung', '', '<p>Giới thiệu chung chung Giới thiệu chung chung  Giới thiệu chung chung</p>', '', 17, '2012-04-24 06:33:08', 2, 0, '', '', 'gioi-thieu-chung-chung', '', 'Giới thiệu chung chung', '', 1, 'bagshop'),
-(65, 'Giới thiệu thị trường nội thất', '', '<p>Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất</p>', '', 74, '2012-04-24 06:33:08', 3, 0, '', '', 'gioi-thieu-thi-truong-noi-that', '', 'Giới thiệu thị trường nội thất', '', 1, 'bagshop');
+(65, 'Giới thiệu thị trường nội thất', '', '<p>Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất</p>', '', 74, '2012-04-24 06:33:08', 3, 0, '', '', 'gioi-thieu-thi-truong-noi-that', '', 'Giới thiệu thị trường nội thất', '', 1, 'bagshop'),
+(66, 'Giới thiệu sơ lược', '', '<p>Lịch sử ngành Tổ chức Nhà nước gắn liền với quá trình xây dựng, phát triển của bộ máy Nhà nước cách mạng, gắn liền với quá trình đấu tranh giải phóng dân tộc và xây dựng đất nước qua các giai đoạn lịch sử.<br />Cùng với sự phát triển của ngành, cũng từng bước trưởng thành và phát triển cả về số lượng, </p>', '', 206, '2012-04-27 06:50:08', 1, 1, '', '', 'gioi-thieu-so-luoc', '', '', '', 1, 'cuasat24h'),
+(67, 'Giới thiệu chung chung', '', '<p>Giới thiệu chung chung Giới thiệu chung chung  Giới thiệu chung chung</p>', '', 11, '2012-04-27 06:50:08', 2, 0, '', '', 'gioi-thieu-chung-chung', '', 'Giới thiệu chung chung', '', 1, 'cuasat24h'),
+(68, 'Giới thiệu thị trường nội thất', '', '<p>Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất Giới thiệu thị trường nội thất</p>', '', 19, '2012-04-27 06:50:08', 3, 0, '', '', 'gioi-thieu-thi-truong-noi-that', '', 'Giới thiệu thị trường nội thất', '', 1, 'cuasat24h');
 
 -- --------------------------------------------------------
 
@@ -724,7 +775,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=37 ;
 
 --
 -- Dumping data for table `dos_module_advs`
@@ -752,7 +803,12 @@ INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `ur
 (27, 'Pa nội thất', '', 'pa-noi-that.jpg', 'http://dantri.com.vn', '2012-04-23 02:30:32', '2012-04-12 16:00:00', '2012-04-26 16:00:00', 0, 3, 'right', '_bank', 1, 'sach24h'),
 (28, 'Quảng cáo', '', 'quang-cao.jpg', 'http://phumyan.dos.vn/', '2012-04-24 06:33:08', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 1, 'left', '_bank', 1, 'bagshop'),
 (29, 'Quảng cáo 2', '', 'quang-cao-2.jpg', 'http://phumyan.dos.vn/', '2012-04-24 06:33:08', '2012-03-31 10:00:00', '2012-05-30 10:00:00', 0, 2, 'left', '_bank', 1, 'bagshop'),
-(30, 'Pa nội thất', '', 'pa-noi-that.jpg', 'http://dantri.com.vn', '2012-04-24 06:33:08', '2012-04-12 16:00:00', '2012-04-26 16:00:00', 0, 3, 'right', '_bank', 1, 'bagshop');
+(30, 'Pa nội thất', '', 'pa-noi-that.jpg', 'http://dantri.com.vn', '2012-04-24 06:33:08', '2012-04-12 16:00:00', '2012-04-26 16:00:00', 0, 3, 'right', '_bank', 1, 'bagshop'),
+(31, 'Quảng cáo', '', 'quang-cao.jpg', 'http://phumyan.dos.vn/', '2012-04-27 06:50:08', '2012-03-30 16:00:00', '2012-05-29 16:00:00', 0, 1, 'left', '_bank', 1, 'cuasat24h'),
+(32, 'Quảng cáo 2', '', 'quang-cao-2.jpg', 'http://phumyan.dos.vn/', '2012-04-27 06:50:08', '2012-03-30 16:00:00', '2012-05-29 16:00:00', 0, 2, 'left', '_bank', 1, 'cuasat24h'),
+(34, 'quang cao bên dưới 2', NULL, 'quang-cao-ben-duoi-2.jpg', 'http://dantri.com.vn', '2012-04-27 08:47:32', '2012-04-26 16:00:00', '2012-05-17 16:00:00', 0, 3, 'right', '_bank', 1, 'cuasat24h'),
+(35, 'quang cao bên dưới 1', NULL, 'quang-cao-ben-duoi-1.jpg', 'http://www.acer.com.vn', '2012-04-27 08:47:59', '2012-04-26 16:00:00', '2012-05-21 16:00:00', 0, 4, 'right', '_bank', 1, 'cuasat24h'),
+(36, 'quang cao bên dưới 3', NULL, 'quang-cao-ben-duoi-3.jpg', 'http://block-betongnhe.com/', '2012-04-27 08:48:16', '2012-04-26 16:00:00', '2012-05-22 16:00:00', 0, 5, 'right', '_bank', 1, 'cuasat24h');
 
 -- --------------------------------------------------------
 
@@ -773,7 +829,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=156 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=189 ;
 
 --
 -- Dumping data for table `dos_module_banners`
@@ -882,7 +938,27 @@ INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `ba
 (152, '2012-04-26 06:36:49', 'lgo', 'lgo.gif', '', 1, 'logo', 'default', 1, 'thienlonghoi'),
 (153, '2012-04-26 06:37:35', 'ba1', 'ba1.jpg', 'http://thienlonghoi.dos.vn/', 2, 'banners', 'default', 1, 'thienlonghoi'),
 (154, '2012-04-26 06:37:43', 'ba2', 'ba2.jpg', '', 3, 'banners', 'default', 1, 'thienlonghoi'),
-(155, '2012-04-26 06:38:05', 'ban2', 'ban2.jpg', '', 4, 'banners', 'default', 1, 'thienlonghoi');
+(155, '2012-04-26 06:38:05', 'ban2', 'ban2.jpg', '', 4, 'banners', 'default', 1, 'thienlonghoi'),
+(157, '2012-04-26 07:59:46', 'ba spa', 'ba-spa.jpg', '', 5, 'banners', 'products', 1, 'sach24h'),
+(158, '2012-04-27 06:50:08', 'Logo', 'logo.jpg', '', 1, 'logo', 'default', 0, 'cuasat24h'),
+(159, '2012-04-27 06:50:08', 'Banner', 'banner.jpg', '', 2, 'banners', 'default', 1, 'cuasat24h'),
+(160, '2012-04-27 06:50:08', 'Banner 1', 'banner-1.jpg', '', 3, 'banners', 'default', 1, 'cuasat24h'),
+(161, '2012-04-27 06:50:08', 'Banner 2', 'banner-2.jpg', '', 4, 'banners', 'default', 1, 'cuasat24h'),
+(162, '2012-04-27 06:50:08', 'Banner 3', 'banner-3.jpg', '', 5, 'banners', 'default', 1, 'cuasat24h'),
+(163, '2012-04-27 06:50:08', 'Banner 4', 'banner-4.jpg', '', 6, 'banners', 'about', 1, 'cuasat24h'),
+(164, '2012-04-27 06:50:08', 'Banner 5', 'banner-5.jpg', '', 7, 'banners', 'about', 1, 'cuasat24h'),
+(165, '2012-04-27 06:50:08', 'Banner 6', 'banner-6.jpg', '', 8, 'banners', 'products', 1, 'cuasat24h'),
+(166, '2012-04-27 06:50:08', 'Banner 7', 'banner-7.jpg', '', 9, 'banners', 'products', 1, 'cuasat24h'),
+(167, '2012-04-27 06:50:08', 'Banner 8', 'banner-8.jpg', '', 10, 'banners', 'products', 1, 'cuasat24h'),
+(168, '2012-04-27 06:50:08', 'Banner 9', 'banner-86.jpg', '', 11, 'banners', 'news', 1, 'cuasat24h'),
+(169, '2012-04-27 06:50:08', 'Banner 10', 'banner-10.jpg', '', 12, 'banners', 'news', 1, 'cuasat24h'),
+(170, '2012-04-27 06:50:08', 'Banner 11', 'banner-11.jpg', '', 13, 'banners', 'news', 1, 'cuasat24h'),
+(171, '2012-04-27 06:50:08', 'Banner 12', 'banner-12.jpg', '', 14, 'banners', 'services', 1, 'cuasat24h'),
+(172, '2012-04-27 06:50:08', 'Banner 13', 'banner-13.jpg', '', 15, 'banners', 'services', 1, 'cuasat24h'),
+(173, '2012-04-27 06:50:08', 'Banner 14', 'banner-14.jpg', '', 16, 'banners', 'contact', 1, 'cuasat24h'),
+(174, '2012-04-27 06:50:08', 'Banner 15', 'banner-15.jpg', '', 17, 'banners', 'contact', 1, 'cuasat24h'),
+(175, '2012-04-27 06:50:08', 'Banner 16', 'banner-16.jpg', '', 18, 'banners', 'video', 1, 'cuasat24h'),
+(176, '2012-04-27 06:50:08', 'Banner 17', 'banner-17.jpg', '', 19, 'banners', 'video', 1, 'cuasat24h');
 
 -- --------------------------------------------------------
 
@@ -908,7 +984,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_contacts_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
 
 --
 -- Dumping data for table `dos_module_contacts`
@@ -922,7 +998,8 @@ INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `
 (13, 'Liên hệ với chúng tôi', '', '<p>Địa chỉ: 365 Tôn Đức Thắng, Hồ Chí Minh</p>', '', '2012-04-20 06:16:11', 1, 0, 0, 'lien-he-voi-chung-toi', '', 'Địa chỉ: 365 Tôn Đức Thắng, Hồ Chí Minh', '', '1', 'tinhungphat'),
 (14, 'Liên hệ với chúng tôi để được phục vụ nhiệt tình', '', '<p>Liên hệ với chúng tôi để được phục vụ nhiệt tình Liên hệ với chúng tôi để được phục vụ nhiệt tình Liên hệ với chúng tôi để được phục vụ nhiệt tình Liên hệ với chúng tôi để được phục vụ nhiệt tình Liên hệ với chúng tôi để được phục vụ nhiệt tình</p>\r\n<p>Liên hệ với chúng tôi để được phục vụ nhiệt tình</p>\r\n<p>Liên hệ với chúng tôi để được phục vụ nhiệt tình</p>\r\n<p>Liên hệ với chúng tôi để được phục vụ nhiệt tình</p>', '', '2012-04-20 07:35:33', 1, 0, 0, 'lien-he-voi-chung-toi-de-duoc-phuc-vu-nhiet-tinh', '', 'Liên hệ với chúng tôi để được phục vụ nhiệt tình', '', '1', 'cafe24h'),
 (15, 'Liên hệ với chúng tôi', '', '<p><span style="font-size:large;"><strong>Công Ty TNHH SÁCH 24H</strong></span><br />249 Nguyễn Thị Minh Khai, F. Nguyễn Cư Trinh, Q.1, Tp. Hồ Chí Minh<br />Giấy chứng nhận đăng ký kinh doanh số: 4102019159<br />Ðiện Thoại (08)39250590 - (08)39250591 -Fax: (08)39257837<br />Website: www.sach24h.com và www.minhkhai.com.vn<br />E-mail:mk.book@sach24h.vn hoặc mk.book@sach24h.com.vn</p>', '', '2012-04-23 02:30:31', 1, 0, 0, 'lien-he-voi-chung-toi', '', 'Địa chỉ:\r\nShop Quần Áo Rẻ Đẹp - Online Shop\r\nĐịa chỉ: 222 Nguyễn Thái Sơn, P.4, Quận Gò Vấp, Tp.HCM.\r\nEmail: kinhdoanh@quanaoredep.com, tuah1lz0@yahoo.com, tuantang.lf@gmail.comĐiện thoại:\r\n093 -736-9468, 099-621-2889', '', '1', 'sach24h'),
-(16, 'Liên hệ với chúng tôi', '', '<p>Địa chỉ:<br />Shop Quần Áo Rẻ Đẹp - Online Shop<br />Địa chỉ: 222 Nguyễn Thái Sơn, P.4, Quận Gò Vấp, Tp.HCM.<br />Email: kinhdoanh@quanaoredep.com, tuah1lz0@yahoo.com, tuantang.lf@gmail.comĐiện thoại:<br />093 -736-9468, 099-621-2889</p>', '', '2012-04-24 06:33:08', 1, 0, 0, 'lien-he-voi-chung-toi', '', 'Địa chỉ:\r\nShop Quần Áo Rẻ Đẹp - Online Shop\r\nĐịa chỉ: 222 Nguyễn Thái Sơn, P.4, Quận Gò Vấp, Tp.HCM.\r\nEmail: kinhdoanh@quanaoredep.com, tuah1lz0@yahoo.com, tuantang.lf@gmail.comĐiện thoại:\r\n093 -736-9468, 099-621-2889', '', '1', 'bagshop');
+(16, 'Liên hệ với chúng tôi', '', '<p>Địa chỉ:<br />Shop Quần Áo Rẻ Đẹp - Online Shop<br />Địa chỉ: 222 Nguyễn Thái Sơn, P.4, Quận Gò Vấp, Tp.HCM.<br />Email: kinhdoanh@quanaoredep.com, tuah1lz0@yahoo.com, tuantang.lf@gmail.comĐiện thoại:<br />093 -736-9468, 099-621-2889</p>', '', '2012-04-24 06:33:08', 1, 0, 0, 'lien-he-voi-chung-toi', '', 'Địa chỉ:\r\nShop Quần Áo Rẻ Đẹp - Online Shop\r\nĐịa chỉ: 222 Nguyễn Thái Sơn, P.4, Quận Gò Vấp, Tp.HCM.\r\nEmail: kinhdoanh@quanaoredep.com, tuah1lz0@yahoo.com, tuantang.lf@gmail.comĐiện thoại:\r\n093 -736-9468, 099-621-2889', '', '1', 'bagshop'),
+(17, 'Liên hệ với chúng tôi để được phục vụ nhiệt tình', '', '<p>Địa chỉ:t test</p>\r\n<p>Phone: test</p>', '', '2012-04-27 07:46:38', 1, 0, 0, 'lien-he-voi-chung-toi-de-duoc-phuc-vu-nhiet-tinh', '', 'Liên hệ với chúng tôi để được phục vụ nhiệt tình', '', '1', 'cuasat24h');
 
 -- --------------------------------------------------------
 
@@ -1008,7 +1085,14 @@ INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `
 ('Dịch vụ', NULL, 'services', NULL, 4, NULL, NULL, NULL, NULL, 'bagshop'),
 ('Tin tức & sự kiện', NULL, 'news', NULL, 5, NULL, NULL, NULL, NULL, 'bagshop'),
 ('Video', NULL, 'video', NULL, 6, NULL, NULL, NULL, NULL, 'bagshop'),
-('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'bagshop');
+('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'bagshop'),
+('Trang chủ', NULL, 'default', NULL, 1, NULL, NULL, NULL, NULL, 'cuasat24h'),
+('Giới thiệu', NULL, 'about', NULL, 2, NULL, NULL, NULL, NULL, 'cuasat24h'),
+('Sản phẩm', NULL, 'products', NULL, 3, NULL, NULL, NULL, NULL, 'cuasat24h'),
+('Dịch vụ', NULL, 'services', NULL, 4, NULL, NULL, NULL, NULL, 'cuasat24h'),
+('Tin tức & sự kiện', NULL, 'news', NULL, 5, NULL, NULL, NULL, NULL, 'cuasat24h'),
+('Video', NULL, 'video', NULL, 6, NULL, NULL, NULL, NULL, 'cuasat24h'),
+('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'cuasat24h');
 
 -- --------------------------------------------------------
 
@@ -1039,7 +1123,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=39 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=42 ;
 
 --
 -- Dumping data for table `dos_module_news`
@@ -1068,7 +1152,9 @@ INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic
 (34, 'Xe khách đâm quán cà phê, 14 người gặp nạn', '', '2012-04-23 03:16:39', 'xe-khach-dam-quan-ca-phe-14-nguoi-gap-nan.jpg', '<p>Trời đổ mưa, ôtô khách chạy nhanh bất ngờ đâm vào quán cà phê ven đường và lật nghiêng làm một người chết, 13 người bị thương.</p>', '', '<p>Trời đổ mưa, ôtô khách chạy nhanh bất ngờ đâm vào quán cà phê ven đường và lật nghiêng làm một người chết, 13 người bị thương.</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/sach24h/image/xe-khach-10.jpg" alt="" width="450" height="351" /></p>\r\n<p>Khoảng 14h30 chiều 22/4, xe khách Thành Công 29 chỗ chạy tuyến TP HCM -Bình Phước khi lưu thông qua xã An Bình (Phú Giáo, Bình Dương) thì lao thẳng vào quán cà phê và lật nghiêng. Nhiều hành khách cùng một số người uống cà phê đã bị thương.</p>\r\n<p>Thời điểm tai nạn trời đổ mưa. Chiếc xe khách mất lái lật nhào vào quán cà phê. Ảnh: Hoàng Lê.<br />Bác sĩ Nguyên Văn Hòa, khoa cấp cứu Bệnh viện huyện Phú Giáo cho biết đã tiếp nhận 11 người bị thương rất nặng. Sau đó những người này cùng 3 trường hợp bị thương khác đã được chuyển lên Bệnh viện đa khoa tỉnh Bình Dương. Đến 20h cùng ngày, một nạn nhân nam chưa xác định danh tính đã tử vong.</p>\r\n<p>Tại Khoa cấp cứu Bệnh viện đa khoa Bình Dương, bác sĩ Trần Xuân Hiếu cho hay trong số nạn nhân được chuyển đến, bị thương nặng nhất là ông Nguyễn Văn Khả (51 tuổi) bị dập não, tụ máu không còn khả năng điều trị. 3 ca được chuyển tiếp lên Bệnh viện Chợ Rẫy (TP HCM) trong tình trạng chấn thương sọ não, cột sống, gãy cổ, trong đó có em bé khoảng 10 tuổi.</p>\r\n<p>Công an tỉnh Bình Dương đang phối hợp với Công an huyện Phú Giáo khẩn trương điều tra nguyên nhân tai nạn.</p>', '', 'xe-khach-dam-quan-ca-phe-14-nguoi-gap-nan', '', 'Trời đổ mưa, ôtô khách chạy nhanh bất ngờ đâm vào quán cà phê ven đường và lật nghiêng làm một người chết, 13 người bị thương.', '', 0, 4, 0, NULL, NULL, 1, 23),
 (35, '6 mẹo chọn ghế sofa hoàn hảo', '', '2012-04-24 06:33:09', '6-meo-chon-ghe-sofa-hoan-hao.jpg', '<p>Việc chọn một bộ sofa dường như không phải là một công việc dễ dàng khi phong cách, hình dạng, màu sắc, và giá cả của các bộ sofa này rất đa dạng.</p>', '', '<p>Để tiết kiệm thời gian, tiền bạc và công sức, bạn có thể tham khảo một số mẹo sau trước khi lựa chọn một bộ sofa phù hợp cho không gian nhà.</p>\r\n<p>1. Xác định kích thước</p>\r\n<p>Nếu phòng khách nhà bạn có diện tích lớn, bạn cần quyết định xem bạn muốn kê bao nhiêu chiếc ghế. Bạn có muốn dùng đi-văng hay ghế bành? Bàn nhỏ kiểu bàn cà phê liệu có cần thiết cho không gian nhà bạn? Nếu câu trả lời là có thì một bộ sofa đơn giản, hình chữ L có lẽ là lựa chọn phù hợp nhất. Trong trường hợp bạn muốn bộ sofa là điểm nhấn của phòng khách thì bạn cần đến một chiếc đi-văng đủ lớn và nhiều chỗ ngồi.</p>\r\n<p>Chú ý đến kích thước ghế</p>\r\n<p>Nếu không gian nhà bạn khiêm tốn, thì hẳn là bạn cần một chiếc trường kỷ nhỏ hơn.</p>\r\n<p>2. Quyết định hướng kê sofa</p>\r\n<p>Bạn cần định hình trước sofa sẽ được sắp xếp thế nào? Kê sofa để xem TV, để gia đình quây quần tụ họp, chơi trò chơi? Bạn có thể kê sofa tạo thành vòng tròn, hoặc nửa vòng tròn, lấy bàn làm trung tâm</p>', '', '6-meo-chon-ghe-sofa-hoan-hao', '', 'Chú ý đến kích thước ghế\r\n\r\nNếu không gian nhà bạn khiêm tốn, thì hẳn là bạn cần một chiếc trường kỷ nhỏ hơn.\r\n\r\n2. Quyết định hướng kê sofa', '', 0, 1, 1, '', '', 1, 24),
 (36, 'Căn hộ nhỏ mà không nhỏ', '', '2012-04-24 06:33:09', 'can-ho-nho-ma-khong-nho.jpg', '<p style="text-align:left;">Tuy chỉ có diện tích 35 m2 nhưng ngôi nhà nhỏ này vẫn rất thoáng đãng, đầy đủ tiện nghi và đẹp mắt nhờ cách thiết kế, bố trí sáng tạo như bậc cầu thang kiêm nơi để quần áo…</p>', '', '<p>Tuy chỉ có diện tích 35 m2 nhưng ngôi nhà nhỏ này vẫn rất thoáng đãng, đầy đủ tiện nghi và đẹp mắt nhờ cách thiết kế, bố trí sáng tạo như bậc cầu thang kiêm nơi để quần áo…</p>\r\n<p>Phòng khách nhỏ bố trí những đồ vật đơn giản như salon chữ L, bàn gỗ, TV treo tường..</p>\r\n<p>fggggdgfdgfgfdgfgf</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/phumyan/image/can-ho-3.jpg" alt="" width="480" height="468" /></p>\r\n<p style="text-align:center;">dgfgfggfdgfdg</p>\r\n<p style="text-align:center;">ggffgfgdf</p>\r\n<p style="text-align:center;"> <img src="/public/userfiles/image/phumyan/image/giuong.jpg" alt="" width="200" height="135" /></p>', '', 'can-ho-nho-ma-khong-nho', '', '', '', 0, 2, 1, '', '', 1, 24),
-(38, '6 kiểu tóc ngắn nổi bật cho mùa hè', '', '2012-04-24 06:33:09', '6-kieu-toc-ngan-noi-bat-cho-mua-he.jpg', '<p>6 mẫu tóc ngắn của các ngôi sao sau đây sẽ là những gợi ý cho bạn lựa chọn để bước vào một mùa hè nóng nực.</p>', '', '<p>6 mẫu tóc ngắn của các ngôi sao sau đây sẽ là những gợi ý cho bạn lựa chọn để bước vào một mùa hè nóng nực.</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thoitrang/image/5l.jpg" alt="" width="363" height="581" /></p>\r\n<p style="text-align:center;">Tóc vàng, phần mái rủ dài một bên, ngọn tóc được uốn úp vào tinh tế. Kiểu tóc của Laura Carmicha được đánh giá là không bao giờ lỗi mốt.</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thoitrang/image/2j.jpg" alt="" width="371" height="582" /></p>\r\n<p style="text-align:center;">Điểm nhấn ở mái tóc ngắn của Jang Nara là ngọn tóc được uốn cong về phía trước, cùng với màu nâu đồng, làm nên vẻ cuốn hút đặc biệt, trong sáng mà vẫn quý phái, thời thượng.</p>', '', '6-kieu-toc-ngan-noi-bat-cho-mua-he', '', '6 mẫu tóc ngắn của các ngôi sao sau đây sẽ là những gợi ý cho bạn lựa chọn để bước vào một mùa hè nóng nực.', '', 0, 3, 0, NULL, NULL, 1, 25);
+(38, '6 kiểu tóc ngắn nổi bật cho mùa hè', '', '2012-04-24 06:33:09', '6-kieu-toc-ngan-noi-bat-cho-mua-he.jpg', '<p>6 mẫu tóc ngắn của các ngôi sao sau đây sẽ là những gợi ý cho bạn lựa chọn để bước vào một mùa hè nóng nực.</p>', '', '<p>6 mẫu tóc ngắn của các ngôi sao sau đây sẽ là những gợi ý cho bạn lựa chọn để bước vào một mùa hè nóng nực.</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thoitrang/image/5l.jpg" alt="" width="363" height="581" /></p>\r\n<p style="text-align:center;">Tóc vàng, phần mái rủ dài một bên, ngọn tóc được uốn úp vào tinh tế. Kiểu tóc của Laura Carmicha được đánh giá là không bao giờ lỗi mốt.</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/thoitrang/image/2j.jpg" alt="" width="371" height="582" /></p>\r\n<p style="text-align:center;">Điểm nhấn ở mái tóc ngắn của Jang Nara là ngọn tóc được uốn cong về phía trước, cùng với màu nâu đồng, làm nên vẻ cuốn hút đặc biệt, trong sáng mà vẫn quý phái, thời thượng.</p>', '', '6-kieu-toc-ngan-noi-bat-cho-mua-he', '', '6 mẫu tóc ngắn của các ngôi sao sau đây sẽ là những gợi ý cho bạn lựa chọn để bước vào một mùa hè nóng nực.', '', 0, 3, 0, NULL, NULL, 1, 25),
+(39, '6 mẹo chọn ghế sofa hoàn hảo', '', '2012-04-27 06:50:09', '6-meo-chon-ghe-sofa-hoan-hao.jpg', '<p>Việc chọn một bộ sofa dường như không phải là một công việc dễ dàng khi phong cách, hình dạng, màu sắc, và giá cả của các bộ sofa này rất đa dạng.</p>', '', '<p>Để tiết kiệm thời gian, tiền bạc và công sức, bạn có thể tham khảo một số mẹo sau trước khi lựa chọn một bộ sofa phù hợp cho không gian nhà.</p>\n<p>1. Xác định kích thước</p>\n<p>Nếu phòng khách nhà bạn có diện tích lớn, bạn cần quyết định xem bạn muốn kê bao nhiêu chiếc ghế. Bạn có muốn dùng đi-văng hay ghế bành? Bàn nhỏ kiểu bàn cà phê liệu có cần thiết cho không gian nhà bạn? Nếu câu trả lời là có thì một bộ sofa đơn giản, hình chữ L có lẽ là lựa chọn phù hợp nhất. Trong trường hợp bạn muốn bộ sofa là điểm nhấn của phòng khách thì bạn cần đến một chiếc đi-văng đủ lớn và nhiều chỗ ngồi.</p>\n<p>Chú ý đến kích thước ghế</p>\n<p>Nếu không gian nhà bạn khiêm tốn, thì hẳn là bạn cần một chiếc trường kỷ nhỏ hơn.</p>\n<p>2. Quyết định hướng kê sofa</p>\n<p>Bạn cần định hình trước sofa sẽ được sắp xếp thế nào? Kê sofa để xem TV, để gia đình quây quần tụ họp, chơi trò chơi? Bạn có thể kê sofa tạo thành vòng tròn, hoặc nửa vòng tròn, lấy bàn làm trung tâm</p>', '', '6-meo-chon-ghe-sofa-hoan-hao', '', 'Chú ý đến kích thước ghế\n\nNếu không gian nhà bạn khiêm tốn, thì hẳn là bạn cần một chiếc trường kỷ nhỏ hơn.\n\n2. Quyết định hướng kê sofa', '', 0, 1, 1, '', '', 1, 26),
+(40, 'Căn hộ nhỏ mà không nhỏ', '', '2012-04-27 06:50:09', 'can-ho-nho-ma-khong-nho.jpg', '<p style="text-align:left;">Tuy chỉ có diện tích 35 m2 nhưng ngôi nhà nhỏ này vẫn rất thoáng đãng, đầy đủ tiện nghi và đẹp mắt nhờ cách thiết kế, bố trí sáng tạo như bậc cầu thang kiêm nơi để quần áo…</p>', '', '<p>Tuy chỉ có diện tích 35 m2 nhưng ngôi nhà nhỏ này vẫn rất thoáng đãng, đầy đủ tiện nghi và đẹp mắt nhờ cách thiết kế, bố trí sáng tạo như bậc cầu thang kiêm nơi để quần áo…</p>\n<p>Phòng khách nhỏ bố trí những đồ vật đơn giản như salon chữ L, bàn gỗ, TV treo tường..</p>\n<p>fggggdgfdgfgfdgfgf</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/phumyan/image/can-ho-3.jpg" alt="" width="480" height="468" /></p>\n<p style="text-align:center;">dgfgfggfdgfdg</p>\n<p style="text-align:center;">ggffgfgdf</p>\n<p style="text-align:center;"> <img src="/public/userfiles/image/phumyan/image/giuong.jpg" alt="" width="200" height="135" /></p>', '', 'can-ho-nho-ma-khong-nho', '', '', '', 0, 2, 1, '', '', 1, 26);
 
 -- --------------------------------------------------------
 
@@ -1095,7 +1181,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
 
 --
 -- Dumping data for table `dos_module_news_cat`
@@ -1116,7 +1202,8 @@ INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_
 (22, 0, 'Tin tức trong nước', '', '', '', 'tin-tuc-trong-nuoc', '', 'Tin tức trong nước', '', '', 2, '', '', 1, 'sach24h'),
 (23, 0, 'Tin tức trong ngày', '', NULL, NULL, 'tin-tuc-trong-ngay', '', 'Tin tức trong ngày', '', '', 3, NULL, NULL, 1, 'sach24h'),
 (24, 0, 'Tin TứcTrong Ngành', '', '', '', 'tin-tuctrong-nganh', '', 'Tin TứcTrong Ngành', '', 'tin-tuctrong-nganh.jpg', 1, '', '', 1, 'bagshop'),
-(25, 0, 'Thời trang giới trẻ', '', '', '', 'thoi-trang-gioi-tre', '', 'Thời trang giới trẻ', '', '', 2, '', '', 1, 'bagshop');
+(25, 0, 'Thời trang giới trẻ', '', '', '', 'thoi-trang-gioi-tre', '', 'Thời trang giới trẻ', '', '', 2, '', '', 1, 'bagshop'),
+(26, 0, 'Tin TứcTrong Ngành', '', '', '', 'tin-tuctrong-nganh', '', 'Tin TứcTrong Ngành', '', 'tin-tuctrong-nganh.jpg', 1, '', '', 1, 'cuasat24h');
 
 -- --------------------------------------------------------
 
@@ -1140,19 +1227,19 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('max_count', 0, 'dos'),
 ('counter', 0, 'dos'),
 ('yesterday', 0, 'dos'),
-('day_time', 2456041, 'mayphotocopysieuviet'),
+('day_time', 2456045, 'mayphotocopysieuviet'),
 ('max_count', 0, 'mayphotocopysieuviet'),
 ('counter', 0, 'mayphotocopysieuviet'),
 ('yesterday', 0, 'mayphotocopysieuviet'),
-('day_time', 2456044, 'tinhungphat'),
+('day_time', 2456045, 'tinhungphat'),
 ('max_count', 0, 'tinhungphat'),
 ('counter', 0, 'tinhungphat'),
 ('yesterday', 0, 'tinhungphat'),
-('day_time', 2456044, 'phumyan'),
+('day_time', 2456045, 'phumyan'),
 ('max_count', 0, 'phumyan'),
 ('counter', 0, 'phumyan'),
 ('yesterday', 0, 'phumyan'),
-('day_time', 2456044, 'thoitrang'),
+('day_time', 2456045, 'thoitrang'),
 ('max_count', 0, 'thoitrang'),
 ('counter', 0, 'thoitrang'),
 ('yesterday', 0, 'thoitrang'),
@@ -1160,7 +1247,7 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('max_count', 0, 'thienlonghoi'),
 ('counter', 0, 'thienlonghoi'),
 ('yesterday', 0, 'thienlonghoi'),
-('day_time', 2456044, 'cafe24h'),
+('day_time', 2456045, 'cafe24h'),
 ('max_count', 0, 'cafe24h'),
 ('counter', 0, 'cafe24h'),
 ('yesterday', 0, 'cafe24h'),
@@ -1171,7 +1258,11 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('day_time', 2456044, 'bagshop'),
 ('max_count', 0, 'bagshop'),
 ('counter', 0, 'bagshop'),
-('yesterday', 0, 'bagshop');
+('yesterday', 0, 'bagshop'),
+('day_time', 2456045, 'cuasat24h'),
+('max_count', 0, 'cuasat24h'),
+('counter', 0, 'cuasat24h'),
+('yesterday', 0, 'cuasat24h');
 
 -- --------------------------------------------------------
 
@@ -1191,10 +1282,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1335423316, 'thienlonghoi'),
-('''127.0.0.1''', 1335423238, 'cafe24h'),
-('''127.0.0.1''', 1335423872, 'sach24h'),
-('''127.0.0.1''', 1335424128, 'phumyan');
+('''127.0.0.1''', 1335514041, 'mayphotocopysieuviet'),
+('''127.0.0.1''', 1335516641, 'cuasat24h'),
+('''127.0.0.1''', 1335515231, 'phumyan');
 
 -- --------------------------------------------------------
 
@@ -1231,7 +1321,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=141 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=150 ;
 
 --
 -- Dumping data for table `dos_module_products`
@@ -1345,7 +1435,13 @@ INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, 
 (135, 'Váy dạ hội 2011', '', '2012-04-24 06:33:08', 'vay-da-hoi-2011-thumb.jpg', 'vay-da-hoi-2011.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'vay-da-hoi-2011', '', 'Váy dạ hội 2011', '', 0, 1, '', 1, 0, '', '', '', '', 1, 59),
 (136, 'Đồ công sở 002', '', '2012-04-24 06:33:08', 'o-cong-so-002-thumb.jpg', 'o-cong-so-002.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'do-cong-so-002', '', 'Đồ công sở 002', '', 0, 5, '', 1, 0, '', '', '', '', 1, 59),
 (137, 'Thời trang trẻ 20', '', '2012-04-24 06:33:08', 'thoi-trang-tre-20-thumb.jpg', 'thoi-trang-tre-20.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'thoi-trang-tre-20', '', 'Thời trang trẻ 20', '', 0, 2, '', 1, 0, '', '', '', '', 1, 59),
-(140, 'Đầm 2012 hoa', '', '2012-04-24 06:33:08', 'am-2012-hoa-thumb.jpg', 'am-2012-hoa.jpg', 'am-2012-hoa-desc-1.jpg|am-2012-hoa-desc-2.jpg', '', '', '<p>Bag bé có nhiều tính năng khéo léo bao gồm cả một tấm thảm hoa văn không thấm nước thay đổi con, phiếu vào một túi bên, hai túi có thể tháo rời và một dây đeo lỗi. 5 hành lý phần kinh tế thiết lập bởi Samsonite bao gồm 26in. Thẳng đứng, Carry On Upright, duffel, nội trú Tote, và Kit Toiletry! Ngoại thất: Da nhân tạo 100%, không có sản phẩm động vật được sử dụng nội thất: 100% Polyester Zipper đóng cửa tính năng giấc mơ cầu vồng bắt chữ ký và con chim gỗ mạn đà la trên một khóa fob di động. Bên ngoài trở lại khe tế bào lót túi cây khoa vản anh Chữ ký điện thoại với bộ ba túi nội thất và một túi zippered tường địa điểm sạch với rag chỉ ẩm ướt</p>', '', 'dam-2012-hoa', '', 'Trang trí góc nhỏ', '', 0, 6, '290000', 1, 0, '', '', '', '', 1, 60);
+(140, 'Đầm 2012 hoa', '', '2012-04-24 06:33:08', 'am-2012-hoa-thumb.jpg', 'am-2012-hoa.jpg', 'am-2012-hoa-desc-1.jpg|am-2012-hoa-desc-2.jpg', '', '', '<p>Bag bé có nhiều tính năng khéo léo bao gồm cả một tấm thảm hoa văn không thấm nước thay đổi con, phiếu vào một túi bên, hai túi có thể tháo rời và một dây đeo lỗi. 5 hành lý phần kinh tế thiết lập bởi Samsonite bao gồm 26in. Thẳng đứng, Carry On Upright, duffel, nội trú Tote, và Kit Toiletry! Ngoại thất: Da nhân tạo 100%, không có sản phẩm động vật được sử dụng nội thất: 100% Polyester Zipper đóng cửa tính năng giấc mơ cầu vồng bắt chữ ký và con chim gỗ mạn đà la trên một khóa fob di động. Bên ngoài trở lại khe tế bào lót túi cây khoa vản anh Chữ ký điện thoại với bộ ba túi nội thất và một túi zippered tường địa điểm sạch với rag chỉ ẩm ướt</p>', '', 'dam-2012-hoa', '', 'Trang trí góc nhỏ', '', 0, 6, '290000', 1, 0, '', '', '', '', 1, 60),
+(141, 'Milwaukee Electric Orbital Jig Saw', '', '2012-04-27 06:50:08', 'noi-that-phong-khach-thumb.jpg', 'milwaukee-electric-orbital-jig-saw.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'milwaukee-electric-orbital-jig-saw', '', 'Milwaukee Electric Orbital Jig Saw', '', 0, 4, '', 1, 0, '', '', '', '', 1, 63),
+(142, 'Wel-Bilt Air Hammerdrill', '', '2012-04-27 06:50:08', 'noi-that-phong-giai-tri-thumb.jpg', 'wel-bilt-air-hammerdrill.jpg', '', '', '', '<p>Mô tả chi tiết ....</p>', '', 'wel-bilt-air-hammerdrill', '', 'Wel-Bilt Air Hammerdrill', '', 0, 3, '', 1, 0, '', '', '', '', 1, 63),
+(143, 'Thẫm màu mũ bảo hiểm hàn tự động', '', '2012-04-27 06:50:08', 'noi-that-bep-an-thumb.gif', 'tham-mau-mu-bao-hiem-han-tu-dong.gif', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'tham-mau-mu-bao-hiem-han-tu-dong', '', 'Thẫm màu mũ bảo hiểm hàn tự động', '', 0, 1, '', 1, 0, '', '', '', '', 1, 63),
+(144, 'Kim loại Thông tư cắt Saw', '', '2012-04-27 06:50:08', 'phong-tiep-khach-thumb.jpg', 'kim-loai-thong-tu-cat-saw.jpg', 'kim-loai-thong-tu-cat-saw-desc-1.jpg', '', '', '<p>Mô tả chi tiết ...</p>', '', 'kim-loai-thong-tu-cat-saw', '', 'Kim loại Thông tư cắt Saw', '', 0, 5, '', 1, 0, '', '', '', '', 1, 63),
+(148, 'Milwaukee khô Cut Chop Saw', '', '2012-04-27 06:50:09', 'trang-tri-goc-nho-thumb.jpg', 'milwaukee-kho-cut-chop-saw.jpg', 'milwaukee-kho-cut-chop-saw-desc-1.jpg|milwaukee-kho-cut-chop-saw-desc-2.jpg|milwaukee-kho-cut-chop-saw-desc-3.jpg', '', '', '<p>Mô tả chi tiết</p>\r\n<table style="width:400px;height:100px;" border="1" align="center"><tbody><tr><td style="text-align:center;">Tình trạng:</td>\r\n<td style="text-align:center;">Có hàng số lượng lớn chưa tiêu tụai giúp tiêu thụ với õ</td>\r\n</tr><tr><td style="text-align:center;">Nhà sản xuất</td>\r\n<td style="text-align:center;">Việt Nam vip</td>\r\n</tr><tr><td style="text-align:center;">Model</td>\r\n<td style="text-align:center;">2012</td>\r\n</tr><tr><td style="text-align:center;">Đánh giá:</td>\r\n<td style="text-align:center;">Chưa có đánh giá</td>\r\n</tr></tbody></table><p style="text-align:center;"> </p>', '', 'milwaukee-kho-cut-chop-saw', '', 'Milwaukee khô Cut Chop Saw', '', 0, 6, '290000', 1, 0, '', '', '', '', 1, 64),
+(149, 'Điện Hammer Air khoan', '', '2012-04-27 06:50:09', 'noi-that-phong-ngu-thumb.jpg', 'ien-hammer-air-khoan.jpg', '', '', '', '<p>Mô tả chi tiết ...</p>', '', 'dien-hammer-air-khoan', '', 'Điện Hammer Air khoan', '', 0, 2, '', 1, 0, '', '', '', '', 1, 65);
 
 -- --------------------------------------------------------
 
@@ -1373,7 +1469,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=63 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=67 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
@@ -1422,7 +1518,11 @@ INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `
 (59, 0, 'Thời trang đậm', '', '', '', 'thoi-trang-dam', '', 'Thời trang đậm', '', 'thoi-trang-dam.jpg', '', 3, '', '', 1, 'bagshop'),
 (60, 0, 'Thời trang nam', '', '', '', 'thoi-trang-nam', '', 'Thời trang nam', '', 'thoi-trang-nam.jpg', '', 4, '', '', 1, 'bagshop'),
 (61, 0, 'Model 2012', '', '', '', 'model-2012', '', 'Thời trang đậm', '', 'model-2012.jpg', '', 1, '', '', 1, 'bagshop'),
-(62, 0, 'Thời trang công sở', '', '', '', 'thoi-trang-cong-so', '', 'Thời trang đậm', '', 'thoi-trang-cong-so.jpg', '', 2, '', '', 1, 'bagshop');
+(62, 0, 'Thời trang công sở', '', '', '', 'thoi-trang-cong-so', '', 'Thời trang đậm', '', 'thoi-trang-cong-so.jpg', '', 2, '', '', 1, 'bagshop'),
+(63, 0, 'Dụng cụ cầm tay', '', '', '', 'dung-cu-cam-tay', '', 'Dụng cụ cầm tay', '', 'dung-cu-cam-tay.jpg', '', 3, '', '', 1, 'cuasat24h'),
+(64, 0, 'Xây dựng công cụ', '', '', '', 'xay-dung-cong-cu', '', 'Xây dựng công cụ', '', 'xay-dung-cong-cu.jpg', '', 4, '', '', 1, 'cuasat24h'),
+(65, 0, 'Dụng cụ điện', '', '', '', 'dung-cu-dien', '', 'Dụng cụ điện', '', 'dung-cu-dien.jpg', '', 1, '', '', 1, 'cuasat24h'),
+(66, 0, 'Sức khỏe và an toàn', '', '', '', 'suc-khoe-va-an-toan', '', 'Sức khỏe và an toàn', '', 'suc-khoe-va-an-toan.jpg', '', 2, '', '', 1, 'cuasat24h');
 
 -- --------------------------------------------------------
 
@@ -1453,7 +1553,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `dos_module_services`
@@ -1468,7 +1568,8 @@ INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `
 (12, 'Dịch vụ vẫn chuyển', '', NULL, NULL, '<p>Dịch vụ vẫn chuyển</p>', '', NULL, 4, '2012-04-19 06:46:55', 1, 0, '', '', 'dich-vu-van-chuyen', '', '', '', 1, 'thienlonghoi'),
 (13, 'Dịch vụ vẫn chuyển', '', NULL, NULL, '<p>Dịch vụ vẫn chuyển</p>', '', NULL, 2, '2012-04-20 06:34:17', 1, 0, '', '', 'dich-vu-van-chuyen', '', '', '', 1, 'cafe24h'),
 (14, 'Dịch vụ vẫn chuyển tận nơi', '', NULL, NULL, '<p> Dịch vụ vẫn chuyển tận nơi  Dịch vụ vẫn chuyển tận nơi Dịch vụ vẫn chuyển tận nơi Dịch vụ vẫn chuyển tận nơi</p>', '', NULL, 7, '2012-04-23 02:30:31', 1, 0, '', '', 'dich-vu-van-chuyen-tan-noi', '', 'Dịch vụ vẫn chuyển tận nơi', '', 1, 'sach24h'),
-(15, 'Dịch vụ vẫn chuyển tận nơi', '', NULL, NULL, '<p> Dịch vụ vẫn chuyển tận nơi  Dịch vụ vẫn chuyển tận nơi Dịch vụ vẫn chuyển tận nơi Dịch vụ vẫn chuyển tận nơi</p>', '', NULL, 10, '2012-04-24 06:33:08', 1, 0, '', '', 'dich-vu-van-chuyen-tan-noi', '', 'Dịch vụ vẫn chuyển tận nơi', '', 1, 'bagshop');
+(15, 'Dịch vụ vẫn chuyển tận nơi', '', NULL, NULL, '<p> Dịch vụ vẫn chuyển tận nơi  Dịch vụ vẫn chuyển tận nơi Dịch vụ vẫn chuyển tận nơi Dịch vụ vẫn chuyển tận nơi</p>', '', NULL, 10, '2012-04-24 06:33:08', 1, 0, '', '', 'dich-vu-van-chuyen-tan-noi', '', 'Dịch vụ vẫn chuyển tận nơi', '', 1, 'bagshop'),
+(16, 'Dịch vụ vẫn chuyển', '', NULL, NULL, '<p>Dịch vụ vẫn chuyển</p>', '', NULL, 4, '2012-04-27 06:50:08', 1, 0, '', '', 'dich-vu-van-chuyen', '', '', '', 1, 'cuasat24h');
 
 -- --------------------------------------------------------
 
@@ -1487,7 +1588,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=92 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=95 ;
 
 --
 -- Dumping data for table `dos_module_supports`
@@ -1508,7 +1609,9 @@ INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen
 (88, 'Hỗ trợ kinh doanh', '', '01230 456 789', 'mailgoogle', 2, 'yahoo', 'sach24h'),
 (89, 'Hỗ trợ khách hàng', '', '0909 999 888', 'groupitsoft', 1, 'yahoo', 'sach24h'),
 (90, 'Hỗ trợ kinh doanh', '', '01230 456 789', 'mailgoogle', 2, 'yahoo', 'bagshop'),
-(91, 'Hỗ trợ khách hàng', '', '0909 999 888', 'groupitsoft', 1, 'yahoo', 'bagshop');
+(91, 'Hỗ trợ khách hàng', '', '0909 999 888', 'groupitsoft', 1, 'yahoo', 'bagshop'),
+(92, 'Hỗ trợ kinh doanh', '', '01230 456 789', 'mailgoogle', 2, 'yahoo', 'cuasat24h'),
+(93, 'Hỗ trợ khách hàng', '', '0909 999 888', 'groupitsoft', 1, 'yahoo', 'cuasat24h');
 
 -- --------------------------------------------------------
 
@@ -1536,7 +1639,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_video` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_video_dos_module_video_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
 
 --
 -- Dumping data for table `dos_module_video`
@@ -1559,7 +1662,8 @@ INSERT INTO `dos_module_video` (`record_id`, `title`, `titleen`, `postdate`, `ta
 (16, 'Thoi trang han quoc - thoi trang 2012', '', '2012-04-24 06:33:09', 'thoi-trang-han-quoc-thoi-trang-2012', '', 'Thoi trang han quoc - thoi trang 2012', '', 'thoi-trang-han-quoc-thoi-trang-2012.jpg', 'http://www.youtube.com/watch?v=cKPzP4kZfek', 1, 0, '', '', 0, 1, 9),
 (17, 'Shock với Thời trang tự cởi QDC News QuachDaiCa info', '', '2012-04-24 06:33:09', 'shock-voi-thoi-trang-tu-coi-qdc-news-quachdaica-info', '', 'Shock với Thời trang tự cởi QDC News QuachDaiCa info', '', 'shock-voi-thoi-trang-tu-coi-qdc-news-quachdaica-info.jpg', 'http://www.youtube.com/watch?v=kOVBzBElfeA', 2, 0, NULL, NULL, 0, 1, 9),
 (18, 'thời trang tại TroChoiThoiTrang', '', '2012-04-24 06:33:09', 'thoi-trang-tai-trochoithoitrang', '', 'thời trang tại TroChoiThoiTrang', '', 'thoi-trang-tai-trochoithoitrang.jpg', 'http://www.youtube.com/watch?v=53kxPAM2QJY', 3, 0, NULL, NULL, 0, 1, 9),
-(19, 'Thoi trang cong so - KKFashion', '', '2012-04-24 06:33:09', 'thoi-trang-cong-so-kkfashion', '', 'Thoi trang cong so - KKFashion', '', '', 'http://www.youtube.com/watch?v=cjFVqWNnhHE', 4, 0, NULL, NULL, 0, 1, 9);
+(19, 'Thoi trang cong so - KKFashion', '', '2012-04-24 06:33:09', 'thoi-trang-cong-so-kkfashion', '', 'Thoi trang cong so - KKFashion', '', '', 'http://www.youtube.com/watch?v=cjFVqWNnhHE', 4, 0, NULL, NULL, 0, 1, 9),
+(20, 'Nội Thất Văn Phòng 3D - Video từ ASP Viet Nam.wmv', '', '2012-04-27 06:50:09', 'noi-that-van-phong-3d-video-tu-asp-viet-namwmv', '', '', '', 'noi-that-van-phong-3d-video-tu-asp-viet-nam-wmv.jpg', 'http://www.youtube.com/watch?v=9kc4jOXvrAA', 1, 0, '', '', 1, 1, 10);
 
 -- --------------------------------------------------------
 
@@ -1582,7 +1686,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_video_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `dos_module_video_cat`
@@ -1595,7 +1699,8 @@ INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat
 (6, 0, '', 'Video mới nhất', '', 'video-moi-nhat', '', '', '', 1, 1, 'thienlonghoi'),
 (7, 0, '', 'Video mới nhất', '', 'video-moi-nhat', '', '', '', 1, 1, 'cafe24h'),
 (8, 0, '', 'Video mới nhất', '', 'video-moi-nhat', '', 'Video thời trang nữ', '', 1, 1, 'sach24h'),
-(9, 0, '', 'Video mới nhất', '', 'video-moi-nhat', '', 'Video thời trang nữ', '', 1, 1, 'bagshop');
+(9, 0, '', 'Video mới nhất', '', 'video-moi-nhat', '', 'Video thời trang nữ', '', 1, 1, 'bagshop'),
+(10, 0, '', 'Video mới nhất', '', 'video-moi-nhat', '', '', '', 1, 1, 'cuasat24h');
 
 -- --------------------------------------------------------
 
@@ -1639,7 +1744,10 @@ INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`
 ('title', 'chuyên các loại đồ nội thất', 'sach24h'),
 ('keywords', 'chuyên các loại đồ nội thất', 'bagshop'),
 ('description', 'chuyên các loại đồ nội thất', 'bagshop'),
-('title', 'chuyên các loại đồ nội thất', 'bagshop');
+('title', 'chuyên các loại đồ nội thất', 'bagshop'),
+('keywords', 'chuyên các loại đồ nội thất', 'cuasat24h'),
+('description', 'chuyên các loại đồ nội thất', 'cuasat24h'),
+('title', 'chuyên các loại đồ nội thất', 'cuasat24h');
 
 -- --------------------------------------------------------
 
@@ -1838,7 +1946,8 @@ INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `descriptio
 ('220312', 'Mẫu nội thất: 220312', '2012-03-21 20:04:36', 'Chuyên bán các loại đồ nội thất, dân dụng'),
 ('230412', 'Mẫu cafe: 230412', '2012-04-23 07:25:18', 'Mẫu ẩm thực, đồ uống caffe'),
 ('240312', 'Mẫu thời trang: 240312', '2012-03-24 03:00:26', 'Chuyên bán các loại túi xách cho phụ nữ, và nhiều phụ điện...'),
-('260312', 'Mẫu máy tính: 260312', '2012-03-26 06:44:07', 'Chuyên bán các loại máy tính, linh kiện, laptop, pc, sửa chữa');
+('260312', 'Mẫu máy tính: 260312', '2012-03-26 06:44:07', 'Chuyên bán các loại máy tính, linh kiện, laptop, pc, sửa chữa'),
+('270412', 'Mẫu cơ khí: 270412', '2012-04-27 06:27:56', 'Chuyên bán các loại máy móc, thiết bị cơ khí, cửa sắt...');
 
 -- --------------------------------------------------------
 
@@ -1867,7 +1976,8 @@ INSERT INTO `dos_templates_has_dos_bussiness` (`dos_templates_template`, `dos_bu
 ('220312', 'noi-that-ngoai-that'),
 ('230412', 'am-thuc-drink'),
 ('240312', 'thoi-trang'),
-('260312', 'cong-nghe-thong-tin-vien-thong');
+('260312', 'cong-nghe-thong-tin-vien-thong'),
+('270412', 'co-khi-may-moc-thiet-bi');
 
 -- --------------------------------------------------------
 
@@ -2144,7 +2254,47 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('260312', 'services', 'menu_services'),
 ('260312', 'video', 'advs_left'),
 ('260312', 'video', 'list_supports'),
-('260312', 'video', 'menu_video');
+('260312', 'video', 'menu_video'),
+('270412', 'about', 'advs_left'),
+('270412', 'about', 'advs_right'),
+('270412', 'about', 'list_supports'),
+('270412', 'about', 'menu_about'),
+('270412', 'about', 'news_hot'),
+('270412', 'contact', 'advs_left'),
+('270412', 'contact', 'advs_right'),
+('270412', 'contact', 'list_supports'),
+('270412', 'contact', 'menu_products'),
+('270412', 'contact', 'news_hot'),
+('270412', 'default', 'about_home'),
+('270412', 'default', 'advs_left'),
+('270412', 'default', 'advs_right'),
+('270412', 'default', 'list_supports'),
+('270412', 'default', 'menu_products'),
+('270412', 'default', 'products_hot'),
+('270412', 'default', 'products_new'),
+('270412', 'default', 'video_hot'),
+('270412', 'news', 'advs_left'),
+('270412', 'news', 'advs_right'),
+('270412', 'news', 'list_supports'),
+('270412', 'news', 'menu_news'),
+('270412', 'news', 'news_hot'),
+('270412', 'products', 'advs_left'),
+('270412', 'products', 'advs_right'),
+('270412', 'products', 'list_supports'),
+('270412', 'products', 'menu_products'),
+('270412', 'products', 'news_hot'),
+('270412', 'products', 'products_hot'),
+('270412', 'services', 'advs_left'),
+('270412', 'services', 'advs_right'),
+('270412', 'services', 'list_supports'),
+('270412', 'services', 'menu_services'),
+('270412', 'services', 'news_hot'),
+('270412', 'video', 'advs_left'),
+('270412', 'video', 'advs_right'),
+('270412', 'video', 'list_supports'),
+('270412', 'video', 'menu_video'),
+('270412', 'video', 'news_hot'),
+('270412', 'video', 'video_hot');
 
 -- --------------------------------------------------------
 
@@ -2182,6 +2332,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
 ('bagshop', 'mailgoogle@yahoo.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-24 06:32:57', NULL, NULL, NULL, 'user', 'vi', NULL, '2012-05-23 16:00:00', 0, 1, '240312', 16, 'thoi-trang'),
 ('cafe24h', 'mailgoogle@yahoo.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-20 06:33:29', NULL, NULL, NULL, 'user', 'vi|en', NULL, '2012-05-19 16:00:00', 0, 1, '230412', 1, 'giao-duc-dao-tao'),
+('cuasat24h', 'thienlonghoi@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-27 06:49:53', NULL, NULL, NULL, 'user', 'vi', NULL, '2012-05-26 16:00:00', 0, 1, '270412', 1, 'co-khi-may-moc-thiet-bi'),
 ('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi|en', NULL, '2012-04-14 17:00:00', 0, 1, '230412', 2, 'cong-nghe-thong-tin-vien-thong'),
 ('mayphotocopysieuviet', 'info@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-11 20:38:05', '', '', '', 'user', 'vi', '', '2012-05-11 10:00:00', 1, 1, '010312', 19, 'cong-nghe-thong-tin-vien-thong'),
 ('phumyan', 'maioanh7887@yahoo.com', '25f9e794323b453885f5181f1b624d0b', '2012-04-11 23:50:51', '', '', '', 'user', 'vi|en', '', '2012-05-11 10:00:00', 1, 1, '220312', 19, 'noi-that-ngoai-that'),
@@ -2233,6 +2384,7 @@ INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_user
 ('address2', '', '', 'thoitrang'),
 ('advs', 'Quảng cáo', '', 'bagshop'),
 ('advs', 'Quảng cáo', '', 'cafe24h'),
+('advs', 'Quảng cáo', '', 'cuasat24h'),
 ('advs', 'Đối tác chính', '', 'mayphotocopysieuviet'),
 ('advs', 'Quảng cáo', '', 'phumyan'),
 ('advs', 'Quảng cáo', '', 'sach24h'),
@@ -2240,6 +2392,7 @@ INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_user
 ('advs', 'Quảng cáo', '', 'thoitrang'),
 ('company_name', 'Chào mừng bạn đới với Bag Shop', '', 'bagshop'),
 ('company_name', 'Công ty TNHH Phú Mỹ An', '', 'cafe24h'),
+('company_name', '', '', 'cuasat24h'),
 ('company_name', 'DNTN SIÊU VIỆT', '', 'mayphotocopysieuviet'),
 ('company_name', 'Công ty TNHH Phú Mỹ An', '', 'phumyan'),
 ('company_name', 'Cửa hàng thời trang KTVIP', '', 'sach24h'),
