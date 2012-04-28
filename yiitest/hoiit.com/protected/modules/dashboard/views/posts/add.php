@@ -57,11 +57,11 @@
     </div>
     <div class="clear space"></div>
     
-    <div class="col1"><?php echo $form->labelEx($model, 'post_img') ?></div>
+    <!-- <div class="col1"><?php echo $form->labelEx($model, 'post_img') ?></div>
     <div class="col2">
         <?php echo $form->fileField($model, 'post_img', array('size'=>'36')); ?>
     </div>
-    <div class="clear space"></div>
+    <div class="clear space"></div> -->
     
     <div class="col1"><?php echo $form->labelEx($model, 'post_demo') ?></div>
     <div class="col2">
