@@ -1,4 +1,4 @@
-<?php $this->pageTitle = 'Home page'; $this->keywords = 'Specialized tutorial for programming, answer questions about programming for programmers, Where exchange and learning experience programming, Construction projects for charity'; $this->description = 'Specialized tutorial Php framework, Asp.net, C#, VB, Jquery, Javascript, Web template, Outsourcing of programming languages​​, answer questions about programming for programmers, Where exchange and learning experience programming, Construction projects for charity'?>
+<?php $this->pageTitle = 'Chia sẻ kinh nghiệm lập trình'; $this->keywords = 'hướng dẫn lập trình, cung cấp trang web mẫu, Gia công phần mềm, trả lời các câu hỏi lập trình, trao đổi và học hỏi kinh nghiệm xây dựng các dự án, tổ chức từ thiện'; $this->description = 'Trang chuyên hướng dẫn lập trình các ngôn ngữ: Php, Asp.net, C #, VB, JQuery, Javascript, cung cấp trang web mẫu, Gia công phần mềm, trả lời các câu hỏi về lập trình, trao đổi và học hỏi kinh nghiệm xây dựng các dự án, cho các tổ chức từ thiện'?>
 <div class="left col-center">
 	<h1>Post experience for programmer</h1>
 	<ul>
