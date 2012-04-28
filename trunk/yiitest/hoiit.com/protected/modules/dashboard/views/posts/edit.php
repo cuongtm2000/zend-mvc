@@ -57,7 +57,7 @@
     </div>
     <div class="clear space"></div>
     
-    <div class="col1">
+    <!-- <div class="col1">
         <?php echo $form->labelEx($model, 'post_img') ?></div>
     <div class="col2">   <?php if ($model->post_img): ?>
             <div class="img-marginb5"><img src="<?php echo Yii::app()->request->baseUrl . '/public/userfiles/image/posts/' . $model->post_img ?>" alt="" />
@@ -67,7 +67,7 @@
             <?php echo $form->fileField($model, 'post_img', array('size' => '36')); ?>
         <?php endif; ?>
     </div>
-    <div class="clear space"></div>
+    <div class="clear space"></div> -->
     
     <div class="col1"><?php echo $form->labelEx($model, 'post_demo') ?></div>
     <div class="col2">
