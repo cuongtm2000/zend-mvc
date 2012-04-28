@@ -65,7 +65,7 @@ class DatabaseHelper {
 			echo $sql;
 			$content = ob_get_contents();
 			ob_end_clean();
-			$content = gzencode($content, 9);
+			//$content = gzencode($content, 9);
 
 			$saveName = $user . date('-d-m-Y') . ".sql.gz";
 
