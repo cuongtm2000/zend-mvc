@@ -13,8 +13,11 @@
 #scrollbar ul li label, #scrollbar ul li p input{cursor: pointer}
 
 input.smallfield {width : 350px; padding: 6px; background: #F8F7F3; border-color: #E4E3E3; border-width:3px; border-style:double; color: #333; font-size: 10pt; font-weight: bold}
+input.smallfield-tiny {width : 165px}
 input.smallfield-name {width : 303px; padding: 6px; padding-right: 0; background: #F8F7F3; border-color: #E4E3E3; border-width:3px; border-style:double; color: #333; text-align: right; border-right:none; font-size: 10pt; font-weight: bold}
-input.smallfield-dos {padding: 6px;  padding-right: 0; background: #F8F7F3; border-color: #E4E3E3; border-width:3px; border-style:double; color: #333; width: 47px; border-left:none; font-size: 10pt; font-weight: bold}
+input.smallfield-dos {padding: 6px 0;  padding-right: 0; background: #F8F7F3; border-color: #E4E3E3; border-width:3px; border-style:double; color: #333; width: 53px; border-left:none; font-size: 10pt; font-weight: bold}
+#choose-agent{color: #356D95; font-style: italic;}
+#choose-agent:hover{color: #333}
 
 .border-image{width: 865px; margin: 15px 0 0 31px; border: 1px solid #D7D3C4; background: #F7F6F2;}
 .border-image .border-heading{background: #252525; padding:7px 10px; color: #fff}

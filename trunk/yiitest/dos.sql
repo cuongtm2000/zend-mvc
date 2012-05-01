@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 28, 2012 at 03:31 PM
+-- Generation Time: May 01, 2012 at 05:44 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -1252,7 +1252,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=93 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1913,6 +1913,8 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
   `code` varchar(15) DEFAULT NULL,
   `expired` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `import` tinyint(1) NOT NULL DEFAULT '0',
+  `agent_sale` varchar(8) NOT NULL,
+  `agent_tech` varchar(8) DEFAULT NULL,
   `activated` tinyint(1) NOT NULL,
   `dos_templates_template` varchar(6) NOT NULL,
   `dos_provinces_province_id` int(11) NOT NULL,
@@ -1927,12 +1929,12 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 -- Dumping data for table `dos_usernames`
 --
 
-INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('070312', 'maioanh@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-25 07:28:23', '', '', '', 'user', 'vi', '', '2012-05-24 17:00:00', 0, 1, '070312', 19, 'thoi-trang'),
-('200312', 'maioanh@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-25 07:17:56', '', '', '', 'user', 'vi', '', '2012-05-24 17:00:00', 0, 1, '200312', 1, 'giao-duc-dao-tao'),
-('230412', 'maioanh@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-26 09:03:32', '', '', '', 'user', 'vi', '', '2012-05-25 17:00:00', 0, 1, '230412', 19, 'nha-hang-cafe'),
-('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi|en', NULL, '2012-04-14 17:00:00', 0, 1, '230412', 2, 'cong-nghe-thong-tin-vien-thong'),
-('gothuytung', 'maioanh@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-28 08:03:03', '', '', '', 'user', 'vi', '', '2012-05-27 17:00:00', 0, 1, '220312', 19, 'noi-that-ngoai-that');
+INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `agent_sale`, `agent_tech`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
+('070312', 'maioanh@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-25 07:28:23', '', '', '', 'user', 'vi', '', '2012-05-24 17:00:00', 0, '', NULL, 1, '070312', 19, 'thoi-trang'),
+('200312', 'maioanh@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-25 07:17:56', '', '', '', 'user', 'vi', '', '2012-05-24 17:00:00', 0, '', NULL, 1, '200312', 1, 'giao-duc-dao-tao'),
+('230412', 'maioanh@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-26 09:03:32', '', '', '', 'user', 'vi', '', '2012-05-25 17:00:00', 0, '', NULL, 1, '230412', 19, 'nha-hang-cafe'),
+('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi|en', NULL, '2012-04-14 17:00:00', 0, '', NULL, 1, '230412', 2, 'cong-nghe-thong-tin-vien-thong'),
+('gothuytung', 'maioanh@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-28 08:03:03', '', '', '', 'user', 'vi', '', '2012-05-27 17:00:00', 0, '', NULL, 1, '220312', 19, 'noi-that-ngoai-that');
 
 -- --------------------------------------------------------
 

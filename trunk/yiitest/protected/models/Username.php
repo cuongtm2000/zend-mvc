@@ -1,47 +1,5 @@
 <?php
 
-/**
- * This is the model class for table "dos_usernames".
- *
- * The followings are the available columns in table 'dos_usernames':
- * @property string $username
- * @property string $email
- * @property string $password
- * @property string $created
- * @property string $fullname
- * @property string $phone
- * @property string $company
- * @property string $role
- * @property string $language
- * @property string $code
- * @property string $expired
- * @property integer $import
- * @property integer $activated
- * @property string $dos_templates_template
- * @property integer $dos_provinces_province_id
- * @property string $dos_bussiness_bussiness_id
- *
- * The followings are the available model relations:
- * @property DosModuleAbouts[] $dosModuleAbouts
- * @property DosModuleAdvs[] $dosModuleAdvs
- * @property DosModuleBanners[] $dosModuleBanners
- * @property DosModuleContacts[] $dosModuleContacts
- * @property DosModuleMenus[] $dosModuleMenuses
- * @property DosModuleNewsCat[] $dosModuleNewsCats
- * @property DosModulePcounterSave[] $dosModulePcounterSaves
- * @property DosModulePcounterUsers[] $dosModulePcounterUsers
- * @property DosModuleProductsCat[] $dosModuleProductsCats
- * @property DosModuleServices[] $dosModuleServices
- * @property DosModuleSupports[] $dosModuleSupports
- * @property DosModuleVideoCat[] $dosModuleVideoCats
- * @property DosModuleWebs[] $dosModuleWebs
- * @property DosModules[] $dosModules
- * @property DosUserLangs[] $dosUserLangs
- * @property DosBussiness $dosBussinessBussiness
- * @property DosProvinces $dosProvincesProvince
- * @property DosTemplates $dosTemplatesTemplate
- * @property DosUsernamesHasDosModules[] $dosUsernamesHasDosModules
- */
 class Username extends CActiveRecord {
 
 	private $_model;
@@ -72,7 +30,7 @@ class Username extends CActiveRecord {
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, email, password, dos_templates_template, dos_provinces_province_id, dos_bussiness_bussiness_id, choose_modules, choose_feature', 'required', 'on' => 'register'),
+			array('username, email, password, agent_sale, dos_templates_template, dos_provinces_province_id, dos_bussiness_bussiness_id, choose_modules, choose_feature', 'required', 'on' => 'register'),
 			array('username, dos_bussiness_bussiness_id', 'required', 'on' => 'import'),
 			array('dos_templates_template', 'required', 'on' => 'templates'),
 			array('email, fullname, phone, company, dos_templates_template, dos_provinces_province_id, dos_bussiness_bussiness_id', 'required', 'on' => 'changeInfo'),
@@ -83,10 +41,11 @@ class Username extends CActiveRecord {
 			array('email', 'email'),
 			array('phone, code', 'length', 'max' => 15),
 			array('company, dos_bussiness_bussiness_id, choose_business', 'length', 'max' => 100),
+			array('agent_sale, agent_tech', 'length', 'max' => 8),
 			array('dos_templates_template', 'length', 'max' => 6),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('username, email, created, expired, import, fullname, phone, company, activated, dos_templates_template, dos_provinces_province_id, dos_bussiness_bussiness_id', 'safe', 'on' => 'search'),
+			array('username, email, created, expired, import, agent_sale, agent_tech, fullname, phone, company, activated, dos_templates_template, dos_provinces_province_id, dos_bussiness_bussiness_id', 'safe', 'on' => 'search'),
 		);
 	}
 
@@ -143,6 +102,8 @@ class Username extends CActiveRecord {
 			'company' => 'Company',
 			'code' => 'Code',
 			'import' => 'Import',
+			'agent_sale' => 'Chọn đại lý',
+			'agent_tech' => 'Agent Tech',
 			'activated' => 'Activated',
 			'dos_templates_template' => 'Dos Templates Template',
 			'dos_provinces_province_id' => 'Tỉnh thành',
@@ -169,6 +130,8 @@ class Username extends CActiveRecord {
 		$criteria->compare('phone', $this->phone, true);
 		$criteria->compare('company', $this->company, true);
 		$criteria->compare('import', $this->import);
+		$criteria->compare('agent_sale', $this->agent_sale, true);
+		$criteria->compare('agent_tech', $this->agent_tech, true);
 		$criteria->compare('activated', $this->activated);
 		$criteria->compare('dos_templates_template', $this->dos_templates_template, true);
 		$criteria->compare('dos_provinces_province_id', $this->dos_provinces_province_id);
@@ -183,6 +146,7 @@ class Username extends CActiveRecord {
 		$this->username = $purifier->purify(strtolower($this->username));
 		$this->email = $purifier->purify(strtolower($this->email));
 		$this->password = md5($this->password);
+		$this->phone = $purifier->purify($this->phone);
 		$this->role = 'user';
 		$this->language = 'vi';
 		$this->activated = 1;
