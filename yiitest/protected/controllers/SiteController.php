@@ -66,6 +66,8 @@ class SiteController extends HomeController {
 		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.tiptip.js');
 		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.tiptip.minified.js');
 
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/openwindow.js'); //popup agent
+
 		$business_class = new Bussiness();
 		$province_class = new Provinces;
 

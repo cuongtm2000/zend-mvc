@@ -40,14 +40,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/hoiit.com/protected/models/Usernames.php" />
-        <option value="$PROJECT_DIR$/hoiit.com/protected/views/register/hoiit/index.php" />
-        <option value="$PROJECT_DIR$/publish/protected/modules/admin/controllers/DefaultController.php" />
-        <option value="$PROJECT_DIR$/hoiit.com/themes/hoiit/css/layout.css" />
-        <option value="$PROJECT_DIR$/hoiit.com/protected/models/WebTemplatesCat.php" />
-        <option value="$PROJECT_DIR$/hoiit.com/protected/views/posts/hoiit/view.php" />
-        <option value="$PROJECT_DIR$/hoiit.com/protected/controllers/TemplatesController.php" />
-        <option value="$PROJECT_DIR$/hoiit.com/protected/views/templates/hoiit/view.php" />
         <option value="$PROJECT_DIR$/hoiit.com/themes/hoiit/js/global-product.config.js" />
         <option value="$PROJECT_DIR$/hoiit.com/themes/hoiit/css/scroll.css" />
         <option value="$PROJECT_DIR$/hoiit.com/protected/controllers/PostsController.php" />
@@ -56,6 +48,14 @@
         <option value="$PROJECT_DIR$/hoiit.com/protected/modules/dashboard/views/posts/edit.php" />
         <option value="$PROJECT_DIR$/hoiit.com/themes/hoiit/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/hoiit.com/protected/views/site/index.php" />
+        <option value="$PROJECT_DIR$/protected/messages/vi/main.php" />
+        <option value="$PROJECT_DIR$/protected/messages/en/main.php" />
+        <option value="$PROJECT_DIR$/protected/config/main.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/SiteController.php" />
+        <option value="$PROJECT_DIR$/themes/dos.vn/js/openwindow.js" />
+        <option value="$PROJECT_DIR$/protected/views/site/signup.php" />
+        <option value="$PROJECT_DIR$/protected/models/Username.php" />
+        <option value="$PROJECT_DIR$/themes/dos.vn/css/signup.css" />
       </list>
     </option>
   </component>
@@ -116,86 +116,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hoiit.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hoiit.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hoiit.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hoiit.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -205,8 +125,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.HTML" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="dos.vn" serverId="819b0d99-b6d0-4d88-9f62-7e03412fcb55">
     <servers>
@@ -247,6 +167,13 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="819b0d99-b6d0-4d88-9f62-7e03412fcb55" server_name="dos.vn">
       <method>
         <option name="FtpUpload" enabled="false">
@@ -255,13 +182,6 @@
         </option>
         <option name="PhingTarget" enabled="false" />
       </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
     </configuration>
     <list size="0" />
   </component>
@@ -322,7 +242,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.7314112" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.4969651" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2245827" sideWeight="0.0" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22837633" sideWeight="0.0" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5007587" order="7" side_tool="true" content_ui="tabs" />
@@ -390,56 +310,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hoiit.com/protected/models/Cats.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="5" selection-start="3291" selection-end="3499" vertical-scroll-proportion="0.33211678" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hoiit.com/protected/models/WebTemplates.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="20" selection-start="4672" selection-end="4672" vertical-scroll-proportion="0.41058394" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hoiit.com/protected/models/WebTemplatesCat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="89" selection-start="2614" selection-end="2614" vertical-scroll-proportion="0.75757575" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hoiit.com/protected/extensions/common/listCats.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="49" selection-start="292" selection-end="292" vertical-scroll-proportion="0.55839413" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hoiit.com/themes/hoiit/css/layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="3" selection-start="3506" selection-end="3506" vertical-scroll-proportion="0.36313868" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hoiit.com/themes/hoiit/css/scroll.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hoiit.com/protected/views/templates/hoiit/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="45" selection-start="736" selection-end="752" vertical-scroll-proportion="0.4559387" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hoiit.com/themes/hoiit/js/global-product.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="46" selection-start="245" selection-end="245" vertical-scroll-proportion="0.21212122" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hoiit.com/protected/controllers/TemplatesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="87" selection-start="949" selection-end="949" vertical-scroll-proportion="0.42424244" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hoiit.com/protected/views/posts/hoiit/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="74" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0651341" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hoiit.com/protected/models/Posts.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="106" column="14" selection-start="3733" selection-end="3733" vertical-scroll-proportion="0.0" />
@@ -447,39 +317,113 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hoiit.com/protected/modules/dashboard/views/posts/add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="4" selection-start="4352" selection-end="4417" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="99" column="4" selection-start="4352" selection-end="4417" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hoiit.com/protected/modules/dashboard/views/posts/edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="9" selection-start="4997" selection-end="4997" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="109" column="9" selection-start="4997" selection-end="4997" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hoiit.com/protected/controllers/PostsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="120" selection-start="1794" selection-end="1794" vertical-scroll-proportion="0.22445256">
-          <folding />
-        </state>
+        <state line="23" column="120" selection-start="1794" selection-end="1794" vertical-scroll-proportion="0.22445256" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hoiit.com/themes/hoiit/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="17" selection-start="1763" selection-end="1763" vertical-scroll-proportion="-0.65384614">
-          <folding>
-            <marker date="1335526327225" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1335526327225" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1335526327225" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
+        <state line="32" column="17" selection-start="1763" selection-end="1763" vertical-scroll-proportion="-0.65384614" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hoiit.com/protected/views/site/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="240" selection-start="240" selection-end="240" vertical-scroll-proportion="-0.7816092">
+        <state line="0" column="240" selection-start="240" selection-end="240" vertical-scroll-proportion="-0.7816092" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/messages/vi/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="19" selection-start="871" selection-end="871" vertical-scroll-proportion="0.6514599">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/messages/en/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="26" selection-start="869" selection-end="869" vertical-scroll-proportion="0.6514599">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/import.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.23754789">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/success.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.1168582">
+          <folding>
+            <marker date="1334359875556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1334359875556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1334359875556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1334359875556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1334359875556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1334359875556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1334359875556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1334359875556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1334359875556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1334359875556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1334359875556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1334359875556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1334359875556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1334359875556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1334359875556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1334359875556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1334359875556" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="8" selection-start="2767" selection-end="2767" vertical-scroll-proportion="0.52737224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/dos.vn/js/openwindow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="239" selection-start="348" selection-end="348" vertical-scroll-proportion="0.093065694">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Username.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="40" selection-start="4958" selection-end="4958" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/signup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="299" selection-start="697" selection-end="711" vertical-scroll-proportion="0.16283526">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/dos.vn/css/signup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="178" selection-start="1828" selection-end="1828" vertical-scroll-proportion="0.5372849">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="8" selection-start="688" selection-end="688" vertical-scroll-proportion="0.6060606">
           <folding />
         </state>
       </provider>

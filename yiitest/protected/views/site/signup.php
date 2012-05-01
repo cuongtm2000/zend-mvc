@@ -11,6 +11,7 @@
     <?php echo $form->passwordField($model, 'password', $htmlOptions = array('class' => 'smallfield', 'title' => 'Mật khẩu dùng để đăng nhập, bạn nên đặt mật khẩu có độ phức tạp, giúp web bạn bảo mật hơn', 'tabindex' => 2)); ?>
     <span class="field_desc" id="passwordinfo"></span>
 </div>
+<div class="sign-up-heading"><h1><span>2</span><?php echo Yii::t('main', 'register.step2')?></h1></div>
 <div class="input_field">
     <?php echo $form->labelEx($model, 'email') ?>
     <?php echo $form->textField($model, 'email', $htmlOptions = array('class' => 'smallfield', 'title' => 'Email sẽ dùng để kích hoạt web của bạn sau khi đăng ký, nếu bạn chưa có Email hãy tạo nó trước khi thực hiện Đăng ký web', 'tabindex' => 3)); ?>
@@ -29,8 +30,16 @@
     <?php $data_provinces = array(); foreach ($listProvinces as $value) {$data_provinces[$value['province_id']] = $value['province_name'];} ?>
     <?php echo $form->dropDownList($model, 'dos_provinces_province_id', $data_provinces, array('tabindex' => 6)); ?>
 </div>
+<div class="input_field">
+	<?php echo $form->labelEx($model, 'phone') ?>
+	<?php echo $form->textField($model, 'phone', $htmlOptions = array('class' => 'smallfield', 'title' => 'Số điện thoại của bạn, giúp chúng tôi hỗ trợ bạn tốt hơn', 'tabindex' => 7)); ?>
+</div>
+<div class="input_field">
+	<?php echo $form->labelEx($model, 'agent_sale') ?>
+	<?php echo $form->textField($model, 'agent_sale', $htmlOptions = array('class' => 'smallfield smallfield-tiny', 'title' => 'Chọn Mã số đại lý, Đại lý sẽ hỗ trợ bạn trong việc sử dụng &amp; nhập liệu website', 'tabindex' => 8, 'maxlength' => 8)); ?> <a href="#" onclick="javascript:openwindow('795','400')" id="choose-agent">Chọn đại lý</a>
+</div>
 
-<div class="sign-up-heading"><h1><span>2</span><?php echo Yii::t('main', 'register.step2')?></h1>
+<div class="sign-up-heading"><h1><span>3</span><?php echo Yii::t('main', 'register.step3')?></h1>
     <p><?php echo Yii::t('main', 'changeTemplate')?></p>
 </div>
 <div class="border-image">
@@ -48,7 +57,7 @@
 	</div>
 </div>
 
-<div class="sign-up-heading"><h1><span>3</span><?php echo Yii::t('main', 'register.step3')?></h1><p><?php echo Yii::t('main', 'changeModule')?></p></div>
+<div class="sign-up-heading"><h1><span>4</span><?php echo Yii::t('main', 'register.step4')?></h1><p><?php echo Yii::t('main', 'changeModule')?></p></div>
 <div class="border-image">
     <div class="border-heading"><strong><?php echo Yii::t('main', 'chooseModules')?></strong></div>
     <?php $model_class = new Modules; $values = $model_class->listModules(1); $data = array(); foreach ($values as $value): ?>
@@ -74,9 +83,22 @@
         jQuery("#Username_choose_modules_0").attr("disabled", true);
         jQuery("#Username_choose_modules_0").attr("checked", true);
 		jQuery("#Username_choose_modules_0").parent().addClass('border');
-		//jQuery("#Username_choose_feature_1").attr("disabled", true);
+
+		jQuery("#Username_choose_modules_1").attr("checked", true);
+		jQuery("#Username_choose_modules_1").parent().addClass('border');
+		jQuery("#Username_choose_modules_2").attr("checked", true);
+		jQuery("#Username_choose_modules_2").parent().addClass('border');
+		jQuery("#Username_choose_modules_3").attr("checked", true);
+		jQuery("#Username_choose_modules_3").parent().addClass('border');
+		jQuery("#Username_choose_modules_6").attr("checked", true);
+		jQuery("#Username_choose_modules_6").parent().addClass('border');
+
+		jQuery("#Username_choose_feature_0").attr("checked", true);
+		jQuery("#Username_choose_feature_0").parent().addClass('border');
 		jQuery("#Username_choose_feature_1").attr("checked", true);
         jQuery("#Username_choose_feature_1").parent().addClass('border');
+		jQuery("#Username_choose_feature_2").attr("checked", true);
+		jQuery("#Username_choose_feature_2").parent().addClass('border');
 
 		jQuery('.choose-page').click(function () {
 			if (jQuery(this).find('input').is(':checked')) {
@@ -98,5 +120,9 @@
 		jQuery(".smallfield").tipTip({maxWidth:"335px", defaultPosition:"right", edgeOffset:10});
 		jQuery(".smallfield-name").tipTip({maxWidth:"335px", defaultPosition:"right", edgeOffset:72});
 		jQuery(".tooltip").tipTip({maxWidth:"335px", defaultPosition:"right", edgeOffset:10});
+
+		jQuery('#choose-agent').click(function () {
+			return false;
+		});
     });
 </script>
