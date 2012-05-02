@@ -1,28 +1,31 @@
 <?php
 
 class DatabaseHelper {
-	public static function export($user) {
+	public static function export($user, $type = 'publish') {
 		$user_class = new Username();
 		if ($user_class->checkExistUser($user)) {
 			$pdo = Yii::app()->db->pdoInstance;
 			$sql = '';
 
-			$arr[] = array('dos_bussiness', 'SELECT * FROM dos_bussiness');
-			$arr[] = array('dos_templates', 'SELECT * FROM dos_templates WHERE template = \'' . $user_class->template . '\'');
-			$arr[] = array('dos_configs', 'SELECT * FROM dos_configs WHERE dos_templates_template = \'' . $user_class->template . '\'');
-			$arr[] = array('dos_features', 'SELECT * FROM dos_features');
-			$arr[] = array('dos_langs', 'SELECT * FROM dos_langs');
-			$arr[] = array('dos_modules', 'SELECT * FROM dos_modules');
-			$arr[] = array('dos_values', 'SELECT * FROM dos_values');
-			$arr[] = array('dos_nationals', 'SELECT * FROM dos_nationals');
-			$arr[] = array('dos_provinces', 'SELECT * FROM dos_provinces');
+			if ($type == 'publish') {
+				$arr[] = array('dos_bussiness', 'SELECT * FROM dos_bussiness');
+				$arr[] = array('dos_templates', 'SELECT * FROM dos_templates WHERE template = \'' . $user_class->template . '\'');
+				$arr[] = array('dos_configs', 'SELECT * FROM dos_configs WHERE dos_templates_template = \'' . $user_class->template . '\'');
+				$arr[] = array('dos_features', 'SELECT * FROM dos_features');
+				$arr[] = array('dos_langs', 'SELECT * FROM dos_langs');
+				$arr[] = array('dos_modules', 'SELECT * FROM dos_modules');
+				$arr[] = array('dos_values', 'SELECT * FROM dos_values');
+				$arr[] = array('dos_nationals', 'SELECT * FROM dos_nationals');
+				$arr[] = array('dos_provinces', 'SELECT * FROM dos_provinces');
+				$arr[] = array('dos_loadfiles', 'SELECT * FROM dos_loadfiles WHERE dos_templates_template = \'' . $user_class->template . '\'');
+				$arr[] = array('dos_templates_has_dos_bussiness', 'SELECT * FROM dos_templates_has_dos_bussiness WHERE dos_templates_template=\'' . $user_class->template . '\'');
+				$arr[] = array('dos_templates_has_dos_features', 'SELECT * FROM dos_templates_has_dos_features WHERE dos_templates_template=\'' . $user_class->template . '\'');
+				$arr[] = array('dos_templates_has_dos_modules', 'SELECT * FROM dos_templates_has_dos_modules WHERE dos_templates_template=\'' . $user_class->template . '\'');
+			}
+
 			$arr[] = array('dos_usernames', 'SELECT * FROM dos_usernames WHERE username=\'' . $user . '\'');
-			$arr[] = array('dos_loadfiles', 'SELECT * FROM dos_loadfiles WHERE dos_templates_template = \'' . $user_class->template . '\'');
 			$arr[] = array('dos_modules_has_dos_usernames', 'SELECT * FROM dos_modules_has_dos_usernames WHERE dos_usernames_username=\'' . $user . '\'');
 			$arr[] = array('dos_module_webs', 'SELECT * FROM dos_module_webs WHERE dos_usernames_username=\'' . $user . '\'');
-			$arr[] = array('dos_templates_has_dos_bussiness', 'SELECT * FROM dos_templates_has_dos_bussiness WHERE dos_templates_template=\'' . $user_class->template . '\'');
-			$arr[] = array('dos_templates_has_dos_features', 'SELECT * FROM dos_templates_has_dos_features WHERE dos_templates_template=\'' . $user_class->template . '\'');
-			$arr[] = array('dos_templates_has_dos_modules', 'SELECT * FROM dos_templates_has_dos_modules WHERE dos_templates_template=\'' . $user_class->template . '\'');
 			$arr[] = array('dos_usernames_has_dos_modules', 'SELECT * FROM dos_usernames_has_dos_modules WHERE dos_usernames_username=\'' . $user . '\'');
 			$arr[] = array('dos_user_langs', 'SELECT * FROM dos_user_langs WHERE dos_usernames_username=\'' . $user . '\'');
 
