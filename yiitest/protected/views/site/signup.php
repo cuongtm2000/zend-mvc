@@ -36,7 +36,7 @@
 </div>
 <div class="input_field">
 	<?php echo $form->labelEx($model, 'agent_sale') ?>
-	<?php echo $form->textField($model, 'agent_sale', $htmlOptions = array('class' => 'smallfield smallfield-tiny', 'title' => 'Chọn Mã số đại lý, Đại lý sẽ hỗ trợ bạn trong việc sử dụng &amp; nhập liệu website', 'tabindex' => 8, 'maxlength' => 8)); ?> <a href="#" onclick="javascript:openwindow('795','400')" id="choose-agent">Chọn đại lý</a>
+	<?php echo $form->textField($model, 'agent_sale', $htmlOptions = array('class' => 'smallfield smallfield-tiny', 'title' => 'Chọn Mã số đại lý, Đại lý sẽ hỗ trợ bạn trong việc sử dụng &amp; nhập liệu website', 'tabindex' => 8, 'maxlength' => 8, 'onclick' => 'javascript:openwindow(795,400)')); ?> <a href="#" onclick="javascript:openwindow(795,400)" id="choose-agent">Chọn đại lý</a>
 </div>
 
 <div class="sign-up-heading"><h1><span>3</span><?php echo Yii::t('main', 'register.step3')?></h1>
@@ -61,7 +61,7 @@
 <div class="border-image">
     <div class="border-heading"><strong><?php echo Yii::t('main', 'chooseModules')?></strong></div>
     <?php $model_class = new Modules; $values = $model_class->listModules(1); $data = array(); foreach ($values as $value): ?>
-        <?php $data[$value['module_id']] = '<img src="' . Yii::app()->theme->baseUrl . '/images/icon-medium.png" alt="' . $value['module_id'] . '" /><br/>' . $this->lang[$value['module_id']]; ?>
+        <?php $data[$value['module_id']] = '<img src="' . Yii::app()->theme->baseUrl . '/images/icon-medium.png" alt="' . $value['module_id'] . '" /><br/>' . CHtml::encode($this->lang[$value['module_id']]); ?>
     <?php endforeach; ?>
     <?php echo str_replace('span', 'div', $form->checkBoxList($model, 'choose_modules', $data, array('template' => '<div class="choose-page">{label}<br/>{input}</div>', 'separator' => ''))); ?>
     <div class="clear"></div>
