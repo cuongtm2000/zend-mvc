@@ -36,7 +36,7 @@
 </div>
 <div class="input_field">
 	<?php echo $form->labelEx($model, 'agent_sale') ?>
-	<?php echo $form->textField($model, 'agent_sale', $htmlOptions = array('class' => 'smallfield smallfield-tiny', 'title' => 'Chọn Mã số đại lý, Đại lý sẽ hỗ trợ bạn trong việc sử dụng &amp; nhập liệu website', 'tabindex' => 8, 'maxlength' => 8, 'onclick' => 'javascript:openwindow(795,400)')); ?> <a href="#" onclick="javascript:openwindow(795,400)" id="choose-agent">Chọn đại lý</a>
+	<?php echo $form->textField($model, 'agent_sale', $htmlOptions = array('class' => 'smallfield smallfield-tiny', 'title' => 'Chọn Mã số đại lý, Đại lý sẽ hỗ trợ bạn trong việc sử dụng &amp; nhập liệu website. Bạn có thể chọn mã số: 20122012. Dos.vn sẽ phân đại lý gần nhất để hỗ trợ bạn', 'tabindex' => 8, 'maxlength' => 8, 'onclick' => 'javascript:openwindow(795,400)')); ?> <a href="#" onclick="javascript:openwindow(795,400)" id="choose-agent">Chọn đại lý</a>
 </div>
 
 <div class="sign-up-heading"><h1><span>3</span><?php echo Yii::t('main', 'register.step3')?></h1>
