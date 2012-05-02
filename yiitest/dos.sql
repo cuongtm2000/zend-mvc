@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 02, 2012 at 03:24 AM
+-- Generation Time: May 02, 2012 at 10:59 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -109,7 +109,10 @@ CREATE TABLE IF NOT EXISTS `dos_configs` (
 --
 
 INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES
+('advs_bottom_height', 32, '', '020512'),
+('advs_bottom_width', 980, '', '020512'),
 ('advs_left_height', 190, '', '010312'),
+('advs_left_height', 220, '', '020512'),
 ('advs_left_height', 160, '', '070312'),
 ('advs_left_height', 200, '', '130312'),
 ('advs_left_height', 130, '', '180412'),
@@ -120,6 +123,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('advs_left_height', 200, '', '260312'),
 ('advs_left_height', 300, '', '270412'),
 ('advs_left_width', 190, '', '010312'),
+('advs_left_width', 200, '', '020512'),
 ('advs_left_width', 160, '', '070312'),
 ('advs_left_width', 220, '', '130312'),
 ('advs_left_width', 204, '', '180412'),
@@ -135,7 +139,10 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('advs_right_width', 190, '', '010312'),
 ('advs_right_width', 190, '', '220312'),
 ('advs_right_width', 179, '', '270412'),
+('advs_top_height', 146, '', '020512'),
+('advs_top_width', 250, '', '020512'),
 ('banner_height', 332, '', '010312'),
+('banner_height', 290, '', '020512'),
 ('banner_height', 324, '', '070312'),
 ('banner_height', 300, '', '130312'),
 ('banner_height', 339, '', '180412'),
@@ -146,6 +153,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('banner_height', 387, '', '260312'),
 ('banner_height', 285, '', '270412'),
 ('banner_width', 951, '', '010312'),
+('banner_width', 725, '', '020512'),
 ('banner_width', 757, '', '070312'),
 ('banner_width', 950, '', '130312'),
 ('banner_width', 940, '', '180412'),
@@ -156,6 +164,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('banner_width', 710, '', '260312'),
 ('banner_width', 597, '', '270412'),
 ('logo_height', 108, '', '010312'),
+('logo_height', 110, '', '020512'),
 ('logo_height', 57, '', '070312'),
 ('logo_height', 100, '', '130312'),
 ('logo_height', 51, '', '180412'),
@@ -166,6 +175,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('logo_height', 46, '', '260312'),
 ('logo_height', 69, '', '270412'),
 ('logo_width', 155, '', '010312'),
+('logo_width', 285, '', '020512'),
 ('logo_width', 260, '', '070312'),
 ('logo_width', 735, '', '130312'),
 ('logo_width', 239, '', '180412'),
@@ -176,6 +186,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('logo_width', 300, '', '260312'),
 ('logo_width', 100, '', '270412'),
 ('max_image_height', 667, '', '010312'),
+('max_image_height', 670, '', '020512'),
 ('max_image_height', 600, '', '070312'),
 ('max_image_height', 600, '', '130312'),
 ('max_image_height', 700, '', '180412'),
@@ -186,6 +197,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('max_image_height', 450, '', '260312'),
 ('max_image_height', 420, '', '270412'),
 ('max_image_width', 500, '', '010312'),
+('max_image_width', 720, '', '020512'),
 ('max_image_width', 700, '', '070312'),
 ('max_image_width', 650, '', '130312'),
 ('max_image_width', 670, '', '180412'),
@@ -196,6 +208,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('max_image_width', 600, '', '260312'),
 ('max_image_width', 560, '', '270412'),
 ('news_cat_height', 89, '', '010312'),
+('news_cat_height', 100, '', '020512'),
 ('news_cat_height', 100, '', '070312'),
 ('news_cat_height', 90, '', '130312'),
 ('news_cat_height', 89, '', '180412'),
@@ -205,6 +218,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_cat_height', 89, '', '260312'),
 ('news_cat_height', 100, '', '270412'),
 ('news_cat_width', 143, '', '010312'),
+('news_cat_width', 143, '', '020512'),
 ('news_cat_width', 130, '', '070312'),
 ('news_cat_width', 143, '', '130312'),
 ('news_cat_width', 143, '', '180412'),
@@ -214,6 +228,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_cat_width', 143, '', '260312'),
 ('news_cat_width', 143, '', '270412'),
 ('news_height_thumb', 89, '', '010312'),
+('news_height_thumb', 100, '', '020512'),
 ('news_height_thumb', 89, '', '070312'),
 ('news_height_thumb', 90, '', '130312'),
 ('news_height_thumb', 89, '', '180412'),
@@ -224,6 +239,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_height_thumb', 89, '', '260312'),
 ('news_height_thumb', 100, '', '270412'),
 ('news_num_paging_cat', 10, '', '010312'),
+('news_num_paging_cat', 10, '', '020512'),
 ('news_num_paging_cat', 10, '', '070312'),
 ('news_num_paging_cat', 10, '', '130312'),
 ('news_num_paging_cat', 10, '', '180412'),
@@ -234,6 +250,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_cat', 10, '', '260312'),
 ('news_num_paging_cat', 10, '', '270412'),
 ('news_num_paging_hot', 6, '', '010312'),
+('news_num_paging_hot', 6, '', '020512'),
 ('news_num_paging_hot', 6, '', '070312'),
 ('news_num_paging_hot', 6, '', '130312'),
 ('news_num_paging_hot', 6, '', '180412'),
@@ -243,6 +260,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_hot', 6, '', '260312'),
 ('news_num_paging_hot', 6, '', '270412'),
 ('news_num_paging_index', 10, '', '010312'),
+('news_num_paging_index', 10, '', '020512'),
 ('news_num_paging_index', 10, '', '070312'),
 ('news_num_paging_index', 10, '', '130312'),
 ('news_num_paging_index', 10, '', '180412'),
@@ -253,6 +271,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_index', 10, '', '260312'),
 ('news_num_paging_index', 10, '', '270412'),
 ('news_num_paging_new', 6, '', '010312'),
+('news_num_paging_new', 6, '', '020512'),
 ('news_num_paging_new', 10, '', '070312'),
 ('news_num_paging_new', 10, '', '130312'),
 ('news_num_paging_new', 6, '', '180412'),
@@ -263,6 +282,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_new', 6, '', '260312'),
 ('news_num_paging_new', 6, '', '270412'),
 ('news_width_thumb', 143, '', '010312'),
+('news_width_thumb', 143, '', '020512'),
 ('news_width_thumb', 143, '', '070312'),
 ('news_width_thumb', 143, '', '130312'),
 ('news_width_thumb', 143, '', '180412'),
@@ -273,6 +293,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_width_thumb', 143, '', '260312'),
 ('news_width_thumb', 143, '', '270412'),
 ('products_cat_height', 155, '', '010312'),
+('products_cat_height', 198, '', '020512'),
 ('products_cat_height', 200, '', '070312'),
 ('products_cat_height', 121, '', '130312'),
 ('products_cat_height', 160, '', '180412'),
@@ -283,6 +304,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_cat_height', 160, '', '260312'),
 ('products_cat_height', 130, '', '270412'),
 ('products_cat_width', 115, '', '010312'),
+('products_cat_width', 170, '', '020512'),
 ('products_cat_width', 150, '', '070312'),
 ('products_cat_width', 152, '', '130312'),
 ('products_cat_width', 175, '', '180412'),
@@ -293,6 +315,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_cat_width', 160, '', '260312'),
 ('products_cat_width', 130, '', '270412'),
 ('products_height', 400, '', '010312'),
+('products_height', 500, '', '020512'),
 ('products_height', 500, '', '070312'),
 ('products_height', 400, '', '130312'),
 ('products_height', 550, '', '180412'),
@@ -303,6 +326,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_height', 450, '', '260312'),
 ('products_height', 550, '', '270412'),
 ('products_height_thumb', 121, '', '010312'),
+('products_height_thumb', 198, '', '020512'),
 ('products_height_thumb', 200, '', '070312'),
 ('products_height_thumb', 121, '', '130312'),
 ('products_height_thumb', 160, '', '180412'),
@@ -313,6 +337,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_height_thumb', 160, '', '260312'),
 ('products_height_thumb', 130, '', '270412'),
 ('products_num_paging_cat', 15, '', '010312'),
+('products_num_paging_cat', 20, '', '020512'),
 ('products_num_paging_cat', 16, '', '070312'),
 ('products_num_paging_cat', 12, '', '130312'),
 ('products_num_paging_cat', 16, '', '180412'),
@@ -323,6 +348,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_cat', 16, '', '260312'),
 ('products_num_paging_cat', 16, '', '270412'),
 ('products_num_paging_hot', 9, '', '010312'),
+('products_num_paging_hot', 20, '', '020512'),
 ('products_num_paging_hot', 8, '', '070312'),
 ('products_num_paging_hot', 8, '', '130312'),
 ('products_num_paging_hot', 8, '', '180412'),
@@ -332,6 +358,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_hot', 30, '', '260312'),
 ('products_num_paging_hot', 12, '', '270412'),
 ('products_num_paging_new', 9, '', '010312'),
+('products_num_paging_new', 20, '', '020512'),
 ('products_num_paging_new', 16, '', '070312'),
 ('products_num_paging_new', 8, '', '130312'),
 ('products_num_paging_new', 20, '', '180412'),
@@ -342,6 +369,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_new', 8, '', '260312'),
 ('products_num_paging_new', 20, '', '270412'),
 ('products_num_paging_other', 3, '', '010312'),
+('products_num_paging_other', 4, '', '020512'),
 ('products_num_paging_other', 4, '', '070312'),
 ('products_num_paging_other', 4, '', '130312'),
 ('products_num_paging_other', 4, '', '180412'),
@@ -352,6 +380,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_other', 4, '', '260312'),
 ('products_num_paging_other', 4, '', '270412'),
 ('products_width', 500, '', '010312'),
+('products_width', 500, '', '020512'),
 ('products_width', 600, '', '070312'),
 ('products_width', 500, '', '130312'),
 ('products_width', 550, '', '180412'),
@@ -362,6 +391,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_width', 500, '', '260312'),
 ('products_width', 660, '', '270412'),
 ('products_width_thumb', 152, '', '010312'),
+('products_width_thumb', 170, '', '020512'),
 ('products_width_thumb', 150, '', '070312'),
 ('products_width_thumb', 152, '', '130312'),
 ('products_width_thumb', 175, '', '180412'),
@@ -372,6 +402,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_width_thumb', 160, '', '260312'),
 ('products_width_thumb', 130, '', '270412'),
 ('services_height', 90, '', '010312'),
+('services_height', 170, '', '020512'),
 ('services_height', 100, '', '070312'),
 ('services_height', 89, '', '130312'),
 ('services_height', 100, '', '180412'),
@@ -381,6 +412,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('services_height', 160, '', '240312'),
 ('services_height', 90, '', '260312'),
 ('services_width', 144, '', '010312'),
+('services_width', 170, '', '020512'),
 ('services_width', 150, '', '070312'),
 ('services_width', 143, '', '130312'),
 ('services_width', 160, '', '180412'),
@@ -392,6 +424,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_cat_height', 100, '', '260312'),
 ('video_cat_width', 145, '', '260312'),
 ('video_height_thumb', 115, '', '010312'),
+('video_height_thumb', 150, '', '020512'),
 ('video_height_thumb', 160, '', '070312'),
 ('video_height_thumb', 121, '', '130312'),
 ('video_height_thumb', 160, '', '180412'),
@@ -401,6 +434,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_height_thumb', 100, '', '240312'),
 ('video_height_thumb', 130, '', '270412'),
 ('video_num_paging_cat', 4, '', '010312'),
+('video_num_paging_cat', 16, '', '020512'),
 ('video_num_paging_cat', 8, '', '070312'),
 ('video_num_paging_cat', 8, '', '130312'),
 ('video_num_paging_cat', 8, '', '180412'),
@@ -411,6 +445,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_num_paging_cat', 8, '', '260312'),
 ('video_num_paging_cat', 8, '', '270412'),
 ('video_num_paging_index', 4, '', '010312'),
+('video_num_paging_index', 16, '', '020512'),
 ('video_num_paging_index', 8, '', '070312'),
 ('video_num_paging_index', 8, '', '130312'),
 ('video_num_paging_index', 8, '', '180412'),
@@ -421,6 +456,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_num_paging_index', 8, '', '260312'),
 ('video_num_paging_index', 8, '', '270412'),
 ('video_width_thumb', 115, '', '010312'),
+('video_width_thumb', 170, '', '020512'),
 ('video_width_thumb', 160, '', '070312'),
 ('video_width_thumb', 152, '', '130312'),
 ('video_width_thumb', 175, '', '180412'),
@@ -555,6 +591,10 @@ INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, 
 ('010312', 'default', 'jquery.prettyPhoto.js', 'javascript'),
 ('010312', 'video', 'prettyPhoto.css', 'css'),
 ('010312', 'video', 'jquery.prettyPhoto.js', 'javascript'),
+('020512', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
+('020512', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js|jquery.simplyscroll.vertical.js', 'javascript'),
+('020512', 'video', 'prettyPhoto.css', 'css'),
+('020512', 'video', 'jquery.prettyPhoto.js', 'javascript'),
 ('070312', 'video', 'prettyPhoto.css', 'css'),
 ('070312', 'video', 'jquery.prettyPhoto.js', 'javascript'),
 ('130312', 'video', 'prettyPhoto.css', 'css'),
@@ -642,44 +682,62 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('about', '070312'),
 ('about', '200312'),
 ('about', '230412'),
+('about', 'cuasat24h'),
 ('about', 'dos'),
 ('about', 'gothuytung'),
+('about', 'hoasaytinh'),
 ('advs', '070312'),
 ('advs', '200312'),
 ('advs', '230412'),
+('advs', 'cuasat24h'),
 ('advs', 'dos'),
 ('advs', 'gothuytung'),
+('advs', 'hoasaytinh'),
 ('banner', '200312'),
 ('banner', '230412'),
+('banner', 'cuasat24h'),
 ('banner', 'dos'),
 ('banner', 'gothuytung'),
+('banner', 'hoasaytinh'),
 ('contact', '070312'),
 ('contact', '200312'),
 ('contact', '230412'),
+('contact', 'cuasat24h'),
 ('contact', 'dos'),
 ('contact', 'gothuytung'),
+('contact', 'hoasaytinh'),
 ('news', '070312'),
 ('news', '200312'),
 ('news', '230412'),
+('news', 'cuasat24h'),
 ('news', 'dos'),
 ('news', 'gothuytung'),
+('news', 'hoasaytinh'),
 ('products', '070312'),
 ('products', '200312'),
 ('products', '230412'),
+('products', 'cuasat24h'),
 ('products', 'dos'),
 ('products', 'gothuytung'),
+('products', 'hoasaytinh'),
 ('services', '070312'),
 ('services', '200312'),
 ('services', '230412'),
+('services', 'cuasat24h'),
 ('services', 'dos'),
 ('services', 'gothuytung'),
+('services', 'hoasaytinh'),
 ('supports', '070312'),
 ('supports', '200312'),
 ('supports', '230412'),
+('supports', 'cuasat24h'),
 ('supports', 'dos'),
 ('supports', 'gothuytung'),
+('supports', 'hoasaytinh'),
 ('video', '200312'),
-('video', '230412');
+('video', '230412'),
+('video', 'cuasat24h'),
+('video', 'hoasaytinh');
 
 -- --------------------------------------------------------
 
@@ -708,7 +766,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=83 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=84 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
@@ -721,7 +779,8 @@ INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `co
 (69, 'Thủy Tùng - Gỗ quý hiếm', '', '<p style="text-align:justify;"><span style="color:#993300;"><strong>THỦY TÙNG</strong></span> (có tên khoa học Glyptostrobus pensilis, xuất hiện cách đây khoảng 10 triệu năm) là cây gỗ lớn thường cao tới 25m, đường kính thân hơn 1,3m. <span style="color:#993300;"><strong>THỦY TÙNG </strong></span>có tên trong Sách đỏ Việt Nam và theo công bố của Quỹ Sinh vật hoang dã thế giới (WWF), đây là một trong những loại bị săn lung ráo riết nhất.</p>\n<p style="text-align:justify;">Hiên nay, trên thế giới chỉ con sót lại 2 quần thể cuối cùng ở Huyện Ea H’Leo và Krông Năng, tỉnh Đắc Lắc với khoảng 290 cây. <span style="color:#993300;"><strong>THỦY TÙNG</strong> </span>thuộc danh mục gỗ nhóm IA.</p>\n<p style="text-align:justify;">Gỗ <strong><span style="color:#993300;">THỦY TÙNG</span></strong> có hương thơm quý phái, không mọt, xua đuổi được côn trùng, muỗi kiến, bọ cọp, không cong vênh, thớ gỗ mịn, có mùi thơm. và trường tồn với thời gian.</p>\n<p style="text-align:justify;">Đặc biệt, Gỗ <strong><span style="color:#993300;">THỦY TÙNG</span></strong> mang lại may mắn, tài lộc, tiền bạc cho người làm ăn kinh doanh.</p>', '', 61, '2012-04-28 08:50:55', 1, 1, '', '', 'thuy-tung-go-quy-hiem', '', 'Thủy Tùng - Gỗ quý hiếm', '', 1, 'gothuytung'),
 (77, 'Thư ngỏ', '', 'Thời trang đóng vai trò quan trọng trong việc xây dựng hình ảnh cá nhân của mỗi người. Thấu hiểu điều đó 3S shop luôn nắm bắt xu hướng thời trang từng năm để cung cấp tới bạn những dòng sản phẩm thời trang hợp thời:\n\n- Các mẫu thiết kế nổi bật, có phom dáng chuẩn phù hợp với người Việt…từ đó làm tăng niềm tin của khách hàng với dòng sản phẩm Made in Việt Nam.\n\n - Với hệ thống máy móc hiện đại chúng tôi cam kết đưa ra những sản phẩm đa dạng và hoàn hảo về màu sắc. Nhờ đó bạn có rất nhiều lựa chọn về màu sắc và kiểu dáng.\n\n - “Thử tẹt ga – Mua thỏa mái” đó là phương châm phục vụ của chúng tôi.\n\n Bộ sản phẩm thời trang của 3S Shop bao gồm:\n\n- Quần kaki, quần Gờ Tô, Quần âu: Với phom dáng chuẩn phù hợp với người việt, chất vải đẹp không nhăn, không bám bụi và bền màu. Bảo Hành 6 Tháng.\n\n - Áo sơ mi body kiểu dáng Hàn Quốc: Bạn sẽ thật thỏa mái khi đi học, đi chơi hay đi làm, tất cả chất liệu đều được chọn lọc kỹ lưỡng bảo đảm thấm mồ hôi và không nhăn.\n\n- Véc body cực cá tính và năng động: Bạn sẽ ko phải lo lắng hay băn khoăn về độ thùng thình và độ dài của vec làm mất dáng của bạn… Vì tất cả các mẫu thiết kế của chúng tôi đã loại bỏ điều lo lắng đó của bạn. Bạn sẽ khoác lên cơ thể mình một bộ véc đúng như mong đợi…!\n\n - Phụ Kiện thời trang đa dạng: Giầy, ví, thắt lưng, bật lửa kiểu….tất cả đều được chúng tôi lựa chọn kỹ để phù hợp với quần áo, từ đó các bạn sẽ có nhiều lựa chọn cho nhiều phong cách khác nhau.\n\n Sản phẩm của 3S shop phong phú về chủng loại cùng với kiểu dáng đa dạng, ấn tượng. Chúng tôi có một đội ngũ chuyên viên tư vấn và thiết kế được đào tạo chuyên nghiệp đầy sức sáng tạo và lòng nhiệt tình. Đến với 3S shop bạn sẽ thực sự nổi bật và khác biệt.\n\n Nhấc máy gọi số 0904.80.83.85 bất cứ khi nào bạn muốn Design cho mình một bộ cánh mới. Hãy để chúng tôi cùng làm điều đó với bạn. ^^', '', 7, '2012-04-25 08:05:08', 1, 0, '', '', 'thu-ngo', '', '', '', 1, '070312'),
 (81, 'Thư viện sách', '', '<p>Thư viện sách thành phố được thành lập vào 12/1994 nằm ở trung tâm thành phố tại số 2, Phú Lợi, khóm 1, phường 2, thành phố Biên Hòa.</p>\n<p>- Kinh phí hoạt động hàng năm của Thư viện không ổn định, thường dao động từ 5 - 23 triệu đồng.</p>\n<p>* Nhân sự: Thư viện có 02 nhân sự, trong đó: 01 nhân sự trình độ Đại học Thông tin Thư viện, 01 nhân sự trình độ Cao đẳng Thông tin Thư viện.</p>\n<p>- Thư viện hiện có 11.593 tên với 29.168 bản sách, trong đó sách thiếu nhi là 10.992 tên với 28.364 bản.</p>\n<p>- Tổng số báo, tạp chí hiện có của Thư viện 70 tên với 7.445 bản.</p>\n<p>Để đảm bảo nguồn sách phục vụ bạn đọc, Thư viện luôn chú trọng công tác bổ sung sách mới. Hàng năm Thư viện bổ sung khoảng 300- 1.000 bản sách và 20 loại báo, tạp chí.</p>\n<p>* Tổ chức phục vụ: Thư viện mở cửa phục vụ bạn đọc 5 ngày trong tuần (từ thứ hai đến thứ sáu), phục vụ chủ yếu là độc giả thiếu nhi trên địa bàn thành phố Biên Hòa.</p>\n<p>- Hàng năm thư viện đã cấp được trên 800 thẻ bạn đọc, phục vụ trên 40.000 lượt người với hơn 100.000 lượt tài liệu.</p>\n<p>Số điện thoại liên hệ: 0987522003</p>', '', 6, '2012-04-26 08:51:30', 1, 0, '', '', 'thu-vien-sach', '', 'Thư viện sách', '', 1, '200312'),
-(82, '230412 COFFEE', '', '<p style="text-align:justify;">Các bạn thân mến,<br />Trong thời gian vừa qua. <span style="color:#993300;"><strong>230412 COFFEE </strong></span>đã chuyển qua 2 giai đoạn với 2 phiên bản demo và mở rộng. Tuy nhiên, chưa thực sự trở thành website hữu ích với mức độ tương tác giữa người truy cập. Do đó, chúng tôi hân hoan thông báo tới toàn thể thành viên thường xuyên truy cập vào <strong><span style="color:#993300;">230412 COFFEE</span></strong> , thành viên góp ý về việc nâng cấp phiên bản mới với các nội dung trong bản Beta như sau:<br />- Bạn có thể sử dụng guidebook cho các chuyến đi của mình trên 2 bản App cho điện thoại và online trực tuyến.<br />- Đăng kí thành viên. Tham gia trực tiếp và quản lý các hoạt động offline, chuyến đi của mình.<br />- Chia sẻ chuyến đi, post bài kinh nghiệm v.v qua khả năng kết nối mới.<br />- Giao diện thân thiện, dễ sử dụng<br />- Các tiện ích khác biệt, lợi ích vô hạn cho thành viên thường xuyên.<br />Và còn rất nhiều các tiện ích khác.</p>\n<p style="text-align:justify;">Dự tính phiên bản <strong><span style="color:#993300;">230412 COFFEE</span></strong> sẽ thử nghiệm online trong khoảng thời gian từ 15/2/2012 - 30/2/2012.</p>\n<p style="text-align:justify;">Rất mong trong thời gian chờ đợi phiên bản mới. Các bạn vẫn luôn theo sát chúng tôi và chia sẻ cùng chúng tôi tại phuotcafe.com hiện tại.</p>\n<p style="text-align:justify;"> </p>', '', 9, '2012-04-26 09:25:37', 1, 0, '', '', '230412-coffee', '', '230412 COFFEE', '', 1, '230412');
+(82, '230412 COFFEE', '', '<p style="text-align:justify;">Các bạn thân mến,<br />Trong thời gian vừa qua. <span style="color:#993300;"><strong>230412 COFFEE </strong></span>đã chuyển qua 2 giai đoạn với 2 phiên bản demo và mở rộng. Tuy nhiên, chưa thực sự trở thành website hữu ích với mức độ tương tác giữa người truy cập. Do đó, chúng tôi hân hoan thông báo tới toàn thể thành viên thường xuyên truy cập vào <strong><span style="color:#993300;">230412 COFFEE</span></strong> , thành viên góp ý về việc nâng cấp phiên bản mới với các nội dung trong bản Beta như sau:<br />- Bạn có thể sử dụng guidebook cho các chuyến đi của mình trên 2 bản App cho điện thoại và online trực tuyến.<br />- Đăng kí thành viên. Tham gia trực tiếp và quản lý các hoạt động offline, chuyến đi của mình.<br />- Chia sẻ chuyến đi, post bài kinh nghiệm v.v qua khả năng kết nối mới.<br />- Giao diện thân thiện, dễ sử dụng<br />- Các tiện ích khác biệt, lợi ích vô hạn cho thành viên thường xuyên.<br />Và còn rất nhiều các tiện ích khác.</p>\n<p style="text-align:justify;">Dự tính phiên bản <strong><span style="color:#993300;">230412 COFFEE</span></strong> sẽ thử nghiệm online trong khoảng thời gian từ 15/2/2012 - 30/2/2012.</p>\n<p style="text-align:justify;">Rất mong trong thời gian chờ đợi phiên bản mới. Các bạn vẫn luôn theo sát chúng tôi và chia sẻ cùng chúng tôi tại phuotcafe.com hiện tại.</p>\n<p style="text-align:justify;"> </p>', '', 9, '2012-04-26 09:25:37', 1, 0, '', '', '230412-coffee', '', '230412 COFFEE', '', 1, '230412'),
+(83, 'Giới thiệu sơ lược', '', '<p>Từ ngàn xưa, dẫu cuộc sống nghèo khó, cha ông ta cũng đã biết thưởng ngoạn vẻ đẹp món quà đặc biệt của thiên nhiên, sự tinh túy của đất trời, làm phong phú thêm vẻ đẹp tâm hồn của con người, đó là hương và sắc của ngàn hoa rực rỡ!</p>\r\n<p>Ngày nay, nhịp sống hối hả có thể khiến nhiều người quên đi thú vui bình dị mà thanh tao, giản đơn mà cao quý ấy. Nhưng, cùng với sự thành đạt của mỗi người, sự tiến bộ của xã hội, hương sắc của hoa dần trở thành một phần tất yếu của cuộc sống.</p>\r\n<p>Không chỉ là vật trang trí cho không gian được sang trọng, hoa còn trở thành công cụ thể hiện đẳng cấp và phong cách sống khác biệt, là phương tiện để sẻ chia những niềm vui nỗi buồn, và đặc biệt, hoa trở thành phương tiện để giao tế một cách hiệu quả khó có thể thay thế.</p>\r\n<p>Cuộc sống và công việc của bạn dù có bộn bề với những lo toan, hãy đến với Hoa Sài Gòn, chúng tôi sẽ giúp bạn bắc nhịp cầu nối những bờ vui, làm vững bền mối thâm giao bằng hữu, giúp bạn tạo dựng quan hệ thân tình, tạo dựng đẳng cấp và phong cách khác biệt trong cuộc sống và công việc hay để chia ngọt sẻ bùi, gửi gắm tâm tư ...</p>\r\n<p>Chỉ đơn giản bằng một mẩu tin nhắn hay một cuộc điện thoại, mọi nhu cầu về hoa của bạn sẽ được Hoa Sài Gòn đáp ứng tận nơi!</p>', '', 45, '2012-05-02 07:20:32', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', 'Từ ngàn xưa, dẫu cuộc sống nghèo khó, cha ông ta cũng đã biết thưởng ngoạn vẻ đẹp món quà đặc biệt của thiên nhiên, sự tinh túy của đất trời, làm phong phú thêm vẻ đẹp tâm hồn của con người, đó là hương và sắc của ngàn hoa rực rỡ!', '', 1, 'hoasaytinh');
 
 -- --------------------------------------------------------
 
@@ -746,7 +805,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=62 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=66 ;
 
 --
 -- Dumping data for table `dos_module_advs`
@@ -756,7 +815,11 @@ INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `ur
 (51, 'Quảng cáo', '', 'quang-cao.jpeg', 'http://dos.vn', '2012-04-25 07:55:33', '2012-04-24 17:00:00', '2012-05-30 17:00:00', 0, 1, 'left', '_bank', 1, '070312'),
 (52, 'Quảng cáo 1', '', 'quang-cao-1.jpeg', 'http://dos.vn', '2012-04-25 09:08:48', '2012-04-24 17:00:00', '2012-05-30 17:00:00', 0, 2, 'left', '_bank', 1, '070312'),
 (53, 'Quảng cáo 2', '', 'quang-cao-2.jpeg', 'http://dos.vn', '2012-04-25 09:13:53', '2012-04-24 17:00:00', '2012-05-30 17:00:00', 0, 3, 'left', '_bank', 0, '070312'),
-(61, 'Quảng cáo', '', 'quang-cao.jpg', 'http://dos.vn', '2012-04-26 07:46:17', '2012-04-25 17:00:00', '2012-05-30 17:00:00', 0, 1, 'left', '_bank', 1, '200312');
+(61, 'Quảng cáo', '', 'quang-cao.jpg', 'http://dos.vn', '2012-04-26 07:46:17', '2012-04-25 17:00:00', '2012-05-30 17:00:00', 0, 1, 'left', '_bank', 1, '200312'),
+(62, 'Chân thành cám ơn', NULL, 'chan-thanh-cam-on.jpg', 'http://dantri.com.vn', '2012-05-02 06:46:56', '2012-05-01 16:00:00', '2012-05-23 16:00:00', 0, 1, 'bottom', '_parent', 1, 'hoasaytinh'),
+(63, 'trai', NULL, 'trai.jpg', 'http://grouplaptrinh.com', '2012-05-02 06:51:57', '2012-05-01 16:00:00', '2012-05-15 16:00:00', 0, 2, 'left', '_bank', 1, 'hoasaytinh'),
+(64, 'top1', NULL, 'top1.gif', 'http://hoasaytinh.dos.vn/', '2012-05-02 06:59:10', '2012-05-01 16:00:00', '2012-05-23 16:00:00', 0, 3, 'top', '_bank', 1, 'hoasaytinh'),
+(65, 'top2', NULL, 'top2.gif', 'http://hoasaytinh.dos.vn/', '2012-05-02 06:59:38', '2012-05-01 16:00:00', '2012-05-22 16:00:00', 0, 4, 'top', '_bank', 1, 'hoasaytinh');
 
 -- --------------------------------------------------------
 
@@ -777,7 +840,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=327 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=330 ;
 
 --
 -- Dumping data for table `dos_module_banners`
@@ -805,7 +868,10 @@ INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `ba
 (323, '2012-04-26 09:04:26', 'Banner', 'banner.jpg', '', 1, 'banners', 'default', 1, '230412'),
 (324, '2012-04-26 09:04:38', 'Banner 1', 'banner-1.jpg', '', 2, 'banners', 'default', 1, '230412'),
 (325, '2012-04-26 09:04:48', 'Banner 2', 'banner-2.jpg', '', 3, 'banners', 'default', 1, '230412'),
-(326, '2012-04-26 09:04:57', 'Banner 3', 'banner-3.jpg', '', 4, 'banners', 'default', 1, '230412');
+(326, '2012-04-26 09:04:57', 'Banner 3', 'banner-3.jpg', '', 4, 'banners', 'default', 1, '230412'),
+(327, '2012-05-02 07:06:19', 'logo', 'logo.png', 'http://cuasat24h.dos.vn/', 1, 'logo', 'default', 1, 'cuasat24h'),
+(328, '2012-05-02 07:08:33', 'ba1', 'ba1.jpg', 'http://hoasaytinh.dos.vn/', 1, 'banners', 'default', 1, 'hoasaytinh'),
+(329, '2012-05-02 07:09:31', 'ban3', 'ban3.jpg', '', 2, 'banners', 'default', 1, 'hoasaytinh');
 
 -- --------------------------------------------------------
 
@@ -888,7 +954,21 @@ INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `
 ('Sản phẩm', '', 'products', '', 3, '', '', '', '', '070312'),
 ('Khuyến mãi', '', 'services', '', 4, '', '', '', '', '070312'),
 ('Tin tức & sự kiện', '', 'news', '', 5, '', '', '', '', '070312'),
-('Liên hệ', '', 'contact', '', 6, '', '', '', '', '070312');
+('Liên hệ', '', 'contact', '', 6, '', '', '', '', '070312'),
+('Trang chủ', NULL, 'default', NULL, 1, NULL, NULL, NULL, NULL, 'hoasaytinh'),
+('Giới thiệu', NULL, 'about', NULL, 2, NULL, NULL, NULL, NULL, 'hoasaytinh'),
+('Sản phẩm', NULL, 'products', NULL, 3, NULL, NULL, NULL, NULL, 'hoasaytinh'),
+('Dịch vụ', NULL, 'services', NULL, 4, NULL, NULL, NULL, NULL, 'hoasaytinh'),
+('Tin tức & sự kiện', NULL, 'news', NULL, 5, NULL, NULL, NULL, NULL, 'hoasaytinh'),
+('Video', NULL, 'video', NULL, 6, NULL, NULL, NULL, NULL, 'hoasaytinh'),
+('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'hoasaytinh'),
+('Trang chủ', NULL, 'default', NULL, 1, NULL, NULL, NULL, NULL, 'cuasat24h'),
+('Giới thiệu', NULL, 'about', NULL, 2, NULL, NULL, NULL, NULL, 'cuasat24h'),
+('Sản phẩm', NULL, 'products', NULL, 3, NULL, NULL, NULL, NULL, 'cuasat24h'),
+('Dịch vụ', NULL, 'services', NULL, 4, NULL, NULL, NULL, NULL, 'cuasat24h'),
+('Tin tức & sự kiện', NULL, 'news', NULL, 5, NULL, NULL, NULL, NULL, 'cuasat24h'),
+('Video', NULL, 'video', NULL, 6, NULL, NULL, NULL, NULL, 'cuasat24h'),
+('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'cuasat24h');
 
 -- --------------------------------------------------------
 
@@ -919,7 +999,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=65 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=68 ;
 
 --
 -- Dumping data for table `dos_module_news`
@@ -932,7 +1012,10 @@ INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic
 (61, '‘Hãy chăm sóc mẹ’ đoạt giải Man Asian', '', '2012-04-26 08:30:02', 'hay-cham-soc-me-doat-giai-man-asian.jpg', '<p>Với tiểu thuyết ‘Hãy chăm sóc mẹ’ (Please Look After Mom), nhà văn Hàn Quốc Shin Kyung Sook là người phụ nữ đầu tiên dành giải Man Asian, giải văn học hàng đầu châu Á.</p>', '', '<p style="text-align:justify;"><strong>Với tiểu thuyết ‘Hãy chăm sóc mẹ’ (Please Look After Mom), nhà văn Hàn Quốc Shin Kyung Sook là người phụ nữ đầu tiên dành giải Man Asian, giải văn học hàng đầu châu Á.</strong></p>\n<p style="text-align:center;"><em><img src="/public/userfiles/image/200312/image/shin.jpg" alt="" width="420" height="309" /></em></p>\n<p style="text-align:center;"><em>Nhà văn Shin Kyung Sook nhận giải Man Asian. Ảnh: Johnny Gi.</em></p>\n<p style="text-align:justify;">Theo AFP, giải thưởng trị giá 30.000 USD (624 triệu đồng) được công bố cuối tuần trước. Để được vinh danh, Shin Kyung Sook đã vượt qua những tên tuổi lớn của văn học châu Á như Haruki Murakami, Amitav Ghosh, Tahmima Anam, Banana Yoshimoto...</p>\n<p style="text-align:justify;">Razia Iqbal, nhà báo của BBC và là Chủ tịch ban giám khảo, nhận xét về cuốn Hãy chăm sóc mẹ: “Cuốn sách không chỉ dựng lên bức chân dung cảm động với đầy đủ những gì làm nên một người, mà còn mô tả các nét truyền thống và hiện đại trong một gia đình Hàn Quốc”.<br />“Tôi cảm thấy cả hai cánh cửa, một cho các nhà văn nữ và một cho các nhà văn Hàn Quốc, đều đã được mở rộng”, Shin Kyung Sook phát biểu cảm tưởng với AFP khi nghe tin nhận giải. Chị là nhà văn Hàn Quốc đầu tiên được lọt vào danh sách rút gọn của giải và chiến thắng luôn.</p>\n<p style="text-align:justify;">Ra mắt năm 2009, Hãy chăm sóc mẹ đã đưa Shin Kyung Sook trở thành một biểu tượng mới của văn học Hàn Quốc đương đại. Nữ văn sĩ đã có 28 năm viết văn bằng tiếng Hàn Quốc mẹ đẻ nhưng vẫn được coi như một gương mặt mới mẻ của làng văn châu Á.</p>\n<p style="text-align:justify;">Hãy chăm sóc mẹ đã được xuất bản ở Việt Nam, do công ty Nhã Nam và nhà xuất bản Hà Nội ấn hành, từng gây chú ý khi bán rất chạy tại Hội chợ triển lãm sách và sản phẩm giáo dục ở Hà Nội năm ngoái, với số lượng 2.000 cuốn. Còn tại Hàn Quốc quê hương, cuốn sách đã bán được gần 2 triệu bản.</p>\n<p style="text-align:right;">Tác giả bài viết: Pham Mi Ly</p>\n<p style="text-align:right;">Nguồn tin: evan</p>\n<p style="text-align:justify;"> </p>\n<p style="text-align:justify;"><strong> </strong></p>', '', 'hay-cham-soc-me-doat-giai-man-asian', '', '‘Hãy chăm sóc mẹ’ đoạt giải Man Asian', '', 0, 1, 0, '', '', 1, 44),
 (62, 'Café sữa và café đen', '', '2012-04-26 09:31:50', 'cafe-sua-va-cafe-den.jpg', '<p>Vào quán uống nước, em luôn gọi café đen. Anh luôn gọi café sữa.</p>', '', '<p><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/230412/image/cafety5.jpg" alt="" width="271" height="205" /></p>\n<p style="text-align:justify;">Vào quán uống nước, em luôn gọi café đen. Anh luôn gọi café sữa.</p>\n<p style="text-align:justify;">Người ta mang nước ra, luôn luôn nhầm lẫn. Anh café đen. Em café sữa.</p>\n<p style="text-align:justify;">Em nhanh tay đổi 2 món. Người bồi bàn đứng ngẩn ra, mặt đầy vẻ thắc mắc. Anh cười trừ. Đợi người ta đi, anh trách: “Sao không để người ta đi rồi em hãy đổi? Làm mất mặt anh quá!!!” Em cười phá lên: “Đằng nào cũng vậy. Đâu có gì mắc cỡ!”.</p>\n<p style="text-align:justify;">Em con gái mà lại thích café đen.</p>\n<p style="text-align:justify;">Anh con trai nhưng rất thích café sữa.</p>\n<p style="text-align:justify;">Em bảo café đen nguyên chất, tuy đắng nhưng uống rồi sẽ mang lại dư vị, mà nếu pha thêm sữa thì sẽ chẳng còn cảm giác café nữa.</p>\n<p style="text-align:justify;">Anh bảo café cho thêm tí sữa sẽ đậm mùi café hơn, lại còn cảm giác ngọt ngào của sữa…</p>\n<p style="text-align:justify;">Anh và em luôn thế. Khác nhau hoàn toàn.</p>\n<p style="text-align:justify;">Anh và em không yêu nhau. Đơn giản chỉ là bạn bè. Mà không, trên bạn bè 1 chút. Gần giống như tình anh em.</p>\n<p style="text-align:justify;">Nhưng em không chịu làm em gái anh. Em bảo, em gái có vẻ phụ thuộc vào anh trai, có vẻ yếu đuối, có vẻ… hàng trăm cái “có vẻ” và em không đồng tình.</p>\n<p style="text-align:justify;">Anh cũng không muốn anh là anh trai của em. Anh trai suốt ngày phải lo cho em gái, bị nhõng nhẽo, vòi vĩnh đủ thứ. Anh không thể kiên nhẫn.</p>\n<p style="text-align:justify;">Lâu lâu em hẹn anh ra ngoài đi uống café. Em café đen, anh café sữa.</p>\n<p style="text-align:justify;">Thỉnh thoảng buồn buồn anh lôi em đi vòng vòng, rốt cuộc cũng đến quán nước. Anh café sữa. Em café đen.</p>\n<p style="text-align:justify;">Anh có bạn gái. Bạn gái anh xinh xắn, rất dịu dàng, nữ tính. Đi với anh giống như 1 con thỏ non yếu ớt. Anh tự hào bảo, cô ấy không “ba gai”, bướng bỉnh như em.</p>\n<p style="text-align:justify;">Em có bạn trai. Bạn trai em đẹp trai, galant, luôn chiều chuộng em. Đi với em, anh ấy không bao giờ khiến em tức chết. Em kiêu hãnh khoe, anh ấy thực sự là chỗ dựa vững chắc.</p>\n<p style="text-align:justify;">2 cặp thỉnh thoảng gặp nhau. Em vẫn café đen. Anh luôn café sữa.</p>\n<p style="text-align:justify;">Bạn trai em nói, anh đổi ly cho em. Em không chịu, café đen là sở thích của em.</p>\n<p style="text-align:justify;">Bạn gái anh thắc mắc, anh không uống café đen như những người con trai khác. Anh nhún vai, café sữa hợp khẩu vị với anh.</p>\n<p style="text-align:justify;">Trong lúc nói chuyện, thường thường anh và em vẫn cãi nhau. Bạn trai em luôn là người hòa giải. Bạn gái anh dịu dàng nói anh phải biết nhường nhịn con gái.</p>\n<p style="text-align:justify;">Cuối cùng anh là anh. Em vẫn là em.</p>\n<p style="text-align:justify;">Anh chia tay bạn gái. Cũng có thời gian chông chênh. Nhưng anh không hối tiếc. Anh và cô căn bản không hợp nhau. Dù cô ra sức chiều chuộng anh, nhưng anh vẫn thấy thiếu thiếu cá tính gì đó. Mà cá tính thiếu ấy mới thật sự hấp dẫn anh.</p>\n<p style="text-align:justify;">Em chia tay bạn trai. Có một lúc cảm thấy trống vắng. Nhưng em không hối hận. Em và bạn trai không tìm được tiếng nói chung. Dù anh ấy không khiến em bực mình, ít khi gây sự với em. Nhưng em vẫn thấy thiếu thiếu. Mà “thiếu thiếu” ấy làm em chán nản.</p>\n<p style="text-align:justify;">Anh và em không hẹn mà gặp nhau ở quán café cũ.</p>\n<p style="text-align:justify;">Em gọi café đen.</p>\n<p style="text-align:justify;">Anh gọi café sữa.</p>\n<p style="text-align:justify;">Người bồi đã quen với 2 người. Anh ta không để nhầm chỗ nữa.</p>\n<p style="text-align:justify;">Anh yên lặng. Em cũng không nói. Đợi người bồi đi, anh kéo ly café đen về phía mình, đẩy ly café sữa về phía em.</p>\n<p style="text-align:justify;">Hôm đó 2 người uống thử “khẩu vị” của người kia.</p>\n<p style="text-align:justify;">Đêm ấy, anh nhắn tin cho em “Café đen hay thật! Anh bắt đầu thấy thích nó!”</p>\n<p style="text-align:justify;">Em nhắn tin lại cho anh “Café thêm sữa cũng rất tuyệt vời. Em sẽ uống café sữa…”</p>\n<p style="text-align:justify;">Sau đó em và anh luôn đi cùng nhau, bất luận ở đâu, em cũng luôn gọi café sữa cho em và không quên gọi café đen cho anh…</p>\n<p style="text-align:justify;">Café đen hay café sữa đều là café, phải không?</p>\n<p style="text-align:justify;">Tình yêu đắng hay tình yêu ngọt đều là tình yêu… chẳng phải sao???</p>', '', 'cafe-sua-va-cafe-den', '', 'Café sữa và café đen', '', 0, 3, 0, '', '', 1, 46),
 (63, 'Vị đắng cà phê', '', '2012-04-26 09:34:20', 'vi-dang-ca-phe.jpg', '<p>Rất nhiều bạn đọc chia sẻ với Blog Việt rằng mỗi khi nghe Blog Radio, họ thường tìm đến một thức uống đặc biệt đó là cà phê!</p>', '', '<p style="text-align:justify;">Rất nhiều bạn đọc chia sẻ với Blog Việt rằng mỗi khi nghe Blog Radio, họ thường tìm đến một thức uống đặc biệt đó là cà phê! Cà phê đã trở thành một món ngon dành cho tâm hồn mỗi người, người tìm đến cà phê khi có những tâm sự, trăn trở, người tìm đến cà phê như tìm một nguồn cảm hứng sáng tạo trong công việc, người tìm đến cà phê đơn giản như một cách thưởng thức cuộc sống! Đã bao giờ bạn nghĩ cà phê cũng là một hương vị của tình yêu? Điều gì đọng lại sau mỗi giọt cà phê đắng của tình yêu? Mời các bạn cùng đến với một truyện ngắn nhẹ nhàng dành cho ngày cuối tuần này, Blog Radio 130: Vị đắng cà phê - chuyển thể từ truyện ngắn cùng tên của bạn đọc Hồng Minh!</p>\n<p style="text-align:justify;"><img style="vertical-align:middle;" src="/public/userfiles/image/230412/image/img_13505.jpg" alt="" width="399" height="237" /></p>\n<p style="text-align:justify;">Cô có thói quen uống cà phê buổi sáng. Thói quen ngắm những giọt cà phê đen, đắng nhưng thơm nồng đọng lại trên đầu lưỡi, đọng lại trên trên chiếc thìa màu trắng bạc. Lanh canh, tiếng thìa chạm vào đáy cốc làm cô bừng tỉnh. Những phút ưu tư luôn chỉ được có trong khoảnh khắc! 6h rưỡi sáng, mùa đông cũng như mùa hè, khi ánh sáng không còn chớm nhẹ mà trở nên gay gắt hơn một chút là đến lúc chen chân vào cuộc sống đông đúc, lắm bon chen ngoài kia. Đứng dậy khỏi bàn ăn và dắt xe ra hòa vào dòng người đông đúc.</p>\n<p style="text-align:justify;">Một năm, khoảng thời gian không quá dài nhưng cũng không ngắn đối với một đời người. Một năm, tính từ câu nói: “Dù không đến được với nhau nhưng ta làm bạn nhé” - giọng anh lịch sự và lạnh lùng, không một chút gì cảm xúc. Nhớ lại cái cảm giác cố gắng để không thốt ra câu nói: “Không anh ạ, em không muốn gặp lại anh nữa và không muốn làm bạn với anh, vì dù sao em cũng có quyền chọn lựa bạn cho mình”. Nghĩ đến đây cô bật cười vì sự mỉa mai của hoàn cảnh ấy. Đối với cô tình bạn cũng là một điều thiêng liêng không kém gì tình yêu, hay là vì, cô không muốn gặp lại anh ta để tránh cho mình khỏi một sự tổn thương? Cảm giác đắng ngắt như nuốt phải một ngụm cà phê không đường.</p>\n<p style="text-align:justify;">Mùa thu năm ấy, cô gặp Nam. Một sự khởi đầu mới. Gặp Nam, dưới những tàng cây hoa sữa trong mùa thu Hà Nội. Và cảm xúc cũng bắt đầu một cách dịu dàng như chiều thu năm ấy và ngọt ngào tựa mùi hoa sữa. Chiều mùa hè vàng ánh, nắng hào phóng phủ vàng mọi ngóc ngách của những tàng cây góc phố. Và lãng mạn như phim Hàn Quốc, hắn ta mạnh dạn bước tới làm quen với cô. Lúc đó, cô đang lấy xe trong bãi đỗ xe gần Đinh Lễ nên thật sự là ngỡ ngàng… . Cô nhìn hắn ta lạ lẫm, tưởng hắn có ý đồ gì, và thực sự là có ý đồ! Hắn ta bước tới cô hỏi :</p>\n<p style="text-align:justify;">- Bạn là sinh viên à? - khuôn mặt căng thẳng lo âu trông đến buồn cười. Về sau hắn kể lại là lúc đó trông cô “mặt non choẹt và tay không đeo nhẫn nên đoán là cô chưa có chồng! Thế là hắn cứ tiến ra làm quen…”.</p>\n<p style="text-align:justify;">- Bạn học năm thứ mấy? - Câu trước cô còn trả lời nhưng đến câu này thì nhìn hắn ta một cách kì lạ.</p>\n<p style="text-align:justify;">- Bạn định làm quen với mình? - Cô hỏi.</p>\n<p style="text-align:justify;">Đó là buổi đầu tiên khi cô và Nam gặp nhau, bắt đầu một tình yêu đẹp và bình dị, có lẽ, bình dị giống như mọi tình yêu bền chặt khác. Anh hơn cô một tuổi.</p>\n<p style="text-align:justify;">Một buổi chiều mùa đông giá rét của tháng mười hai, khi mọi vật xung quanh đều nhuốm vẻ xám xịt đầy u ám y như màu của cái nền trời đáng ngán, cô mặc một cái áo khoác màu đỏ thắm như mọt cây nến nhỏ có thể làm ấm lòng một ai đó. Và lại ngồi tại một quán cà phê, xa nhà của cả hai đứa. Gọi hai cốc cà phê nâu nhiều sữa. Cả hai ngồi lặng im, trong màu xám của không khí, trong giai điệu của bài hát “If you are not the one” của Daniel Bettingfield, và khi đến câu : “ ‘cause I miss you, body and soul so strong that it takes my breathe away….” Thì cô chợt hỏi: “Vì sao anh lại yêu em?”</p>\n<p style="text-align:justify;">Nam trả lời: “Lan ạ, đây không phải lần đầu tiên em hỏi anh câu đó. Đôi khi anh cũng tự hỏi, tại sao em không xinh, không thông minh mà anh lại yêu em được nhỉ?”, nói xong anh cười ngặt nghẽo. Điệu cười thật là đáng ghét. Cô nghĩ, anh ta thật là vô duyên. Dù sao, thì ít nhất anh ta cũng phải nhĩ ra một câu nịnh nọt nào đó chứ, vì con gái vốn yêu bằng tai mà. Nhưng không bao giờ anh ta nói điều ấy, khi trả lời cho câu hỏi vì sao anh yêu cô. Cho đến một ngày, trong khi lau cầu thang cô bị trượt chân ngã, từ tầng ba xuống tầng hai. Bị rạn xương cánh tay, phải bó bột một thời gian. Anh đến thăm và bảo:</p>\n<p style="text-align:justify;">- Xem nào, cô bé. Em luôn mong anh phải nịnh em rằng em thật là xinh xắn và anh yêu em vì điều ấy. Thế nhưng bây giờ trông em thật xấu và anh vẫn yêu em!</p>\n<p style="text-align:justify;">Cô mỉm cười và nhìn vào đôi mắt anh, thấy tình yêu và tình thương chứa chan trong ánh mắt.....</p>\n<p style="text-align:justify;">Thời gian thấm thoắt trôi qua, một năm trôi qua, mùa thu đến. Mùa thu đến, Hà Nội tràn ngập trong một thứ ánh sáng vàng êm dịu. Năm ấy là năm cuối cấp của cô. Đột nhiên Lan thấy anh xa cô đến kì lạ, chưa bao giờ anh tắt máy đối với cô hoặc không trả lời tin nhắn. Nhưng giờ thì thế. Một tháng rồi hai tháng anh tránh mặt cô. Đến nhà không bao giờ gặp. Qua một người bạn chung, cô biết anh bị ung thư ruột. Hai tuần nữa sẽ mổ.</p>\n<p style="text-align:justify;">- Không biết có khỏi được không? Nó bảo em nếu có yêu ai thì cứ việc yêu nhưng có điều khi nào yêu hãy nói với nó trước. Anh ta nói.</p>\n<p style="text-align:justify;">Cà phê luôn luôn đắng và cuộc sống cũng vậy. Cô vào thăm anh trong bệnh viện. Anh nhìn cô rồi nói:</p>\n<p style="text-align:justify;">- Anh rất vui vì em đã đến.</p>\n<p style="text-align:justify;">- Bác sĩ bảo thế nào?_ cô hỏi.</p>\n<p style="text-align:justify;">- U lành tính, nhưng nào ai biết được - Anh cười xòa.</p>\n<p style="text-align:justify;">Cô khóc. Đừng khóc em…, anh an ủi. Anh sẽ khỏi, chắc chắn thế.</p>\n<p style="text-align:justify;">- Sao anh định bỏ em? , cô nói và khóc to hơn.</p>\n<p style="text-align:justify;">- Bởi vì anh muốn em hạnh phúc - Anh mỉm cười.</p>\n<p style="text-align:justify;">Lúc đó cô chỉ muốn đánh anh ta một cái. Cô tủi thân chạy ra ngoài…</p>\n<p style="text-align:justify;">Ca mổ thành công và Nam…. vẫn sống đến bây giờ. Nhưng cô vẫn giận Nam. Vì anh không bao giờ biết, dù anh có ra sao, có như thế nào cô vẫn yêu anh, và anh thật ngốc khi nghĩ rằng bỏ anh cô sẽ hạnh phúc. Anh không biết rắng sẽ mãi mãi không bao giờ cô tìm được một người giống như anh dù cô có sống thêm ngàn năm nữa. Ít nhất, về điểm này, cô có thể vênh mặt mà nghĩ rằng cô thông minh hơn anh dù anh thường bảo cô thật ngốc!</p>\n<p style="text-align:justify;">Vì cô tin chắc một điều, trong cuộc sống luôn có một người dành cho một người. Cái chính là phải có một chút may mắn để ta có thể tìm ra họ. Lan đã may mắn vì đã tìm được Nam và cô chọt nhận ra rằng, cuộc sống của cô dường như đã được pha thêm sữa, do vậy, nó không còn quá đắng nữa.</p>\n<p style="text-align:justify;">Trong cuộc sống có muôn vàn điều kì diệu. Và trong muôn vàn điều kì diệu có tình yêu!</p>\n<p style="text-align:justify;">Lan nhấp nốt ngụm cà phê rồi lại đi ra ngoài đường hòa vào dòng người đông đúc….</p>', '', 'vi-dang-ca-phe', '', '', '', 0, 2, 0, '', '', 1, 45),
-(64, 'Cà phê có lợi cho nhân viên văn phòng', '', '2012-04-26 09:36:23', 'ca-phe-co-loi-cho-nhan-vien-van-phong.jpg', '<p style="text-align:justify;">Theo một nghiên cứu mới đây, những tách cà phê vào giờ nghỉ giải lao ở công sở mà người ta gọi là “coffee break” có thể giúp cho người lao động làm việc hứng khởi, tích cực và có hiệu quả hơn.</p>', '', '<p style="text-align:justify;">Theo một nghiên cứu mới đây, những tách cà phê vào giờ nghỉ giải lao ở công sở mà người ta gọi là “coffee break” có thể <strong>giúp cho người lao động làm việc hứng khởi, tích cực và có hiệu quả hơn.</strong></p>\n<p style="text-align:justify;">Các nhà nghiên cứu tại Viện Y học Nhiệt đới Luân Đôn (Anh) đã chỉ ra rằng, chất cafein có thể giúp cải thiện trí nhớ, làm cho người lao động tập trung hơn vào công việc. Hơn thế nữa, nó còn có thể làm giảm số lượng những lỗi sai mà người lao động thường mắc phải trong khi làm việc.</p>\n<p style="text-align:justify;">Đối với những người phải làm việc vào ban đêm, cafein cũng có tác dụng tương tự như những “giấc ngủ ngắn”. Đây là những phát hiện được công bố trên tờ tạp chí Cochrane Library, tạp chí của tổ chức Cochrane Collaboration, một tổ chức quốc tế chuyên đánh giá các nghiên cứu y khoa.</p>\n<p><img style="vertical-align:middle;margin-left:auto;margin-right:auto;" src="/public/userfiles/image/230412/image/img_12918.jpg" alt="" width="450" height="300" /></p>\n<p style="text-align:justify;">Các nhà nghiên cứu cũng gợi ý rằng, uống cà phê có thể giúp giảm thiểu các vụ tai nạn tại nơi làm việc, tai nạn giao thông. Thậm chí, nó có thể làm giảm sai sót y tế của các bác sĩ phải làm việc trong điều kiện căng thẳng kéo dài.</p>\n<p style="text-align:justify;">Nhóm nghiên cứu đã xem xét kết quả của 13 cuộc nghiên cứu độc lập được thực hiện ở khắp nơi trên thế giới liên quan đến những người lao động theo ca, hầu hết ở độ tuổi 20, trong điều kiện làm việc mô phỏng. Các tình nguyện viên đã được yêu cầu thực hiện nhiệm vụ để kiểm tra bộ nhớ và sự tập trung của họ, sử dụng lời nói và lí trí.</p>\n<p style="text-align:justify;">Một số các tình nguyện viên đã sử dụng cafein, trong khi các tình nguyên viên còn lại sử dụng giả dược. Sau đó, các tình nguyện viên sẽ tiếp xúc với các yếu tố khác như ánh sáng hoặc có một giấc ngủ ngắn. Tiếp đó, sẽ làm test trí nhớ, sự tập trung…. Kết quả cho thấy những tình nguyện viên dùng chất cafein có điểm số cao hơn so với những tình nguyện viên dùng giả dược.</p>\n<p style="text-align:justify;">Cà phê, đồ uống tăng lực hay ăn những thực phẩm có hàm lượng cafein cao đều cho kết quả tương tự.</p>\n<p style="text-align:justify;">Mặc dù sự khác biệt không lớn nhưng người dùng cafein thường ít mắc lỗi hơn so với những người có được giấc ngủ ngắn.</p>\n<p style="text-align:justify;">Ông Katharine Ker, nhà nghiên cứu hàng đầu của Viện Y học Nhiệt đới Luận Đôn cho hay: “Kết quả của những cuộc thử nghiệm cho thấy rằng, caffeine có thể giảm số lượng các lỗi và cải thiện hiệu suất chuyển đổi nhận thức trong công nhân”.</p>\n<p style="text-align:justify;">Nhóm nghiên cứu kêu gọi có nhiều nghiên cứu hơn về tác dụng của cafein đối với những người lớn tuổi.</p>', '', 'ca-phe-co-loi-cho-nhan-vien-van-phong', '', 'Cà phê có lợi cho nhân viên văn phòng', '', 0, 1, 0, '', '', 1, 47);
+(64, 'Cà phê có lợi cho nhân viên văn phòng', '', '2012-04-26 09:36:23', 'ca-phe-co-loi-cho-nhan-vien-van-phong.jpg', '<p style="text-align:justify;">Theo một nghiên cứu mới đây, những tách cà phê vào giờ nghỉ giải lao ở công sở mà người ta gọi là “coffee break” có thể giúp cho người lao động làm việc hứng khởi, tích cực và có hiệu quả hơn.</p>', '', '<p style="text-align:justify;">Theo một nghiên cứu mới đây, những tách cà phê vào giờ nghỉ giải lao ở công sở mà người ta gọi là “coffee break” có thể <strong>giúp cho người lao động làm việc hứng khởi, tích cực và có hiệu quả hơn.</strong></p>\n<p style="text-align:justify;">Các nhà nghiên cứu tại Viện Y học Nhiệt đới Luân Đôn (Anh) đã chỉ ra rằng, chất cafein có thể giúp cải thiện trí nhớ, làm cho người lao động tập trung hơn vào công việc. Hơn thế nữa, nó còn có thể làm giảm số lượng những lỗi sai mà người lao động thường mắc phải trong khi làm việc.</p>\n<p style="text-align:justify;">Đối với những người phải làm việc vào ban đêm, cafein cũng có tác dụng tương tự như những “giấc ngủ ngắn”. Đây là những phát hiện được công bố trên tờ tạp chí Cochrane Library, tạp chí của tổ chức Cochrane Collaboration, một tổ chức quốc tế chuyên đánh giá các nghiên cứu y khoa.</p>\n<p><img style="vertical-align:middle;margin-left:auto;margin-right:auto;" src="/public/userfiles/image/230412/image/img_12918.jpg" alt="" width="450" height="300" /></p>\n<p style="text-align:justify;">Các nhà nghiên cứu cũng gợi ý rằng, uống cà phê có thể giúp giảm thiểu các vụ tai nạn tại nơi làm việc, tai nạn giao thông. Thậm chí, nó có thể làm giảm sai sót y tế của các bác sĩ phải làm việc trong điều kiện căng thẳng kéo dài.</p>\n<p style="text-align:justify;">Nhóm nghiên cứu đã xem xét kết quả của 13 cuộc nghiên cứu độc lập được thực hiện ở khắp nơi trên thế giới liên quan đến những người lao động theo ca, hầu hết ở độ tuổi 20, trong điều kiện làm việc mô phỏng. Các tình nguyện viên đã được yêu cầu thực hiện nhiệm vụ để kiểm tra bộ nhớ và sự tập trung của họ, sử dụng lời nói và lí trí.</p>\n<p style="text-align:justify;">Một số các tình nguyện viên đã sử dụng cafein, trong khi các tình nguyên viên còn lại sử dụng giả dược. Sau đó, các tình nguyện viên sẽ tiếp xúc với các yếu tố khác như ánh sáng hoặc có một giấc ngủ ngắn. Tiếp đó, sẽ làm test trí nhớ, sự tập trung…. Kết quả cho thấy những tình nguyện viên dùng chất cafein có điểm số cao hơn so với những tình nguyện viên dùng giả dược.</p>\n<p style="text-align:justify;">Cà phê, đồ uống tăng lực hay ăn những thực phẩm có hàm lượng cafein cao đều cho kết quả tương tự.</p>\n<p style="text-align:justify;">Mặc dù sự khác biệt không lớn nhưng người dùng cafein thường ít mắc lỗi hơn so với những người có được giấc ngủ ngắn.</p>\n<p style="text-align:justify;">Ông Katharine Ker, nhà nghiên cứu hàng đầu của Viện Y học Nhiệt đới Luận Đôn cho hay: “Kết quả của những cuộc thử nghiệm cho thấy rằng, caffeine có thể giảm số lượng các lỗi và cải thiện hiệu suất chuyển đổi nhận thức trong công nhân”.</p>\n<p style="text-align:justify;">Nhóm nghiên cứu kêu gọi có nhiều nghiên cứu hơn về tác dụng của cafein đối với những người lớn tuổi.</p>', '', 'ca-phe-co-loi-cho-nhan-vien-van-phong', '', 'Cà phê có lợi cho nhân viên văn phòng', '', 0, 1, 0, '', '', 1, 47),
+(65, 'Hoa lan', '', '2012-05-02 07:56:36', 'hoa-lan.jpg', '<p>Hoa lan – Orchidaceae - Là một trong những cây hoa đặc sắc, được quan tâm nuôi trồng từ những năm đầu khi phá ra vùng đất Đà lạt. Bắt đầu từ những cây lan thu hoạch trong tự nhiên của địa phương cho đến những năm 1960, việc nhập nội đã mang lại cho Đà Lạt những chủng loại giống mới và từ đó đã phát triển cho đến hiện nay.</p>', '', '<p>Hoa lan – Orchidaceae - Là một trong những cây hoa đặc sắc, được quan tâm nuôi trồng từ những năm đầu khi phá ra vùng đất Đà lạt. Bắt đầu từ những cây lan thu hoạch trong tự nhiên của địa phương cho đến những năm 1960, việc nhập nội đã mang lại cho Đà Lạt những chủng loại giống mới và từ đó đã phát triển cho đến hiện nay.</p>\r\n<p>Các cây lan nhập nội được nuôi trồng ở Đà Lạt nằm trong các chi: Catleya, Cymbidium, Dendrobium, Paphiopedillum, Oncidium, Odontoglossum, Vanda.<br />Các cây lan nhập nội được trồng trọt nhiều nhất là trong chi Cymbidium với trên 300 giống. Các giống Bengal Bay Golden Hue, Suva Royal Velvet, Sayonara Raritan, Balkis, Eliotte…được nhập nội từ những năm 1960 cho đến nay vẫn còn được ưa chuộng và trồng trọt khá nhiều tại các vườn lan.<br />Các loài lan nội địa cũng đã được sưu tập và trồng trọt phổ biến tại Đà lạt từ những năm 1940 cho đến nay. Các loài lan được ưa chuộng tại các vườn lan Đà Lạt là Long tu (Dendrobium primulinum Lindl.) Kim điệp (Den. Chrysotosum Lindl. var. Delacourii Gagn.), Thủy tiên trắng (Den. Farmeri Paxton.), Thủy tiên vàng (Den. Thyrsiflorum Rchb.f.), Thủy tiên mỡ gà (Den. Densiflorum Wall.), Long nhãn kim điệp (Den. Fimbriatum Hook.var.oculatum Hook.), Giả hạc (Den. Superbum Reich.in Walp.), Ý thảo (Den. gratiotissimum Rchb.f.), Các loại Lọng (Bulbophyllum sp.), Tuyết ngọc (Coelogyne psectrantha Gagn.), Hàm lân (Coelogyne Lawrenceana Rofle), Mỹ dung dạ hương (Vanda denisoniana Bens.et.Rchb.f.), Tóc tiên (Vanda Watsonii Rolfe), Cẩm báo (Vandopsis parishii (Veitsch) Reichb.f.), Huyết nhung (Renanthera Imschootiana Rolfe.), Bò cạp (Renanthera Evrardii Guillaum.), Hồ điệp (Phalaenopsis manii Reichb.f.), Vân hài (Paphiopedilum callosum Kerchove), Kim hài (Paphiopedilum villosum (Lindl.)Pfitz.), Hồng dâu (Aerides lawrenceana), Hạc đỉnh (Phajus tankervilleae (Ait.) Bl.).</p>', '', 'hoa-lan', '', 'Hoa lan – Orchidaceae - Là một trong những cây hoa đặc sắc, được quan tâm nuôi trồng từ những năm đầu khi phá ra vùng đất Đà lạt. Bắt đầu từ những cây lan thu hoạch trong tự nhiên của địa phương cho đến những năm 1960, việc nhập nội đã mang lại cho', '', 0, 1, 0, NULL, NULL, 1, 48),
+(66, 'Hoa hồng', '', '2012-05-02 07:58:40', 'hoa-hong.jpg', '<p>Tên khoa học Rosa hybrida Hook. (họ Rosaceae). Hoa hồng có nguồn gốc từ Trung quốc, được trồng ở Đà lạt từ khá lâu, năm 1958 đã nhập các giống trồng trọt mới và phổ biến rộng rãi với mục đích khai thác hoa cắt cành.</p>', '', '<p>Tên khoa học Rosa hybrida Hook. (họ Rosaceae). Hoa hồng có nguồn gốc từ Trung quốc, được trồng ở Đà lạt từ khá lâu, năm 1958 đã nhập các giống trồng trọt mới và phổ biến rộng rãi với mục đích khai thác hoa cắt cành.</p>', '', 'hoa-hong', '', 'Tên khoa học Rosa hybrida Hook. (họ Rosaceae). Hoa hồng có nguồn gốc từ Trung quốc, được trồng ở Đà lạt từ khá lâu, năm 1958 đã nhập các giống trồng trọt mới và phổ biến rộng rãi với mục đích khai thác hoa cắt cành.', '', 0, 2, 0, NULL, NULL, 1, 48),
+(67, 'Hoa cúc', '', '2012-05-02 07:59:01', 'hoa-cuc.jpg', '<p>Tên khoa học Chrysanthemum sp. (họ Asteraceae), có nguồn gốc từ trung quốc và các nước Châu Au. Hoa cúc được trồng làm cảnh tại Đà Lạt từ lâu nhưng thực sự trở thành sản phẩm kinh tế từ năm 1995.</p>', '', '<p>Tên khoa học Chrysanthemum sp. (họ Asteraceae), có nguồn gốc từ trung quốc và các nước Châu Au. Hoa cúc được trồng làm cảnh tại Đà Lạt từ lâu nhưng thực sự trở thành sản phẩm kinh tế từ năm 1995.</p>', '', 'hoa-cuc', '', 'Tên khoa học Chrysanthemum sp. (họ Asteraceae), có nguồn gốc từ trung quốc và các nước Châu Au. Hoa cúc được trồng làm cảnh tại Đà Lạt từ lâu nhưng thực sự trở thành sản phẩm kinh tế từ năm 1995.', '', 0, 3, 0, NULL, NULL, 1, 48);
 
 -- --------------------------------------------------------
 
@@ -959,7 +1042,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=48 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=53 ;
 
 --
 -- Dumping data for table `dos_module_news_cat`
@@ -972,7 +1055,12 @@ INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_
 (44, 0, 'Sự kiện', '', '', '', 'su-kien', '', 'Sự kiện', '', '', 3, '', '', 1, '200312'),
 (45, 0, 'Góc cà phê', '', '', '', 'goc-ca-phe', '', 'Góc cà phê', '', '', 1, '', '', 1, '230412'),
 (46, 0, 'Văn hóa cà phê', '', '', '', 'van-hoa-ca-phe', '', 'Câu chuyện cà phê', '', '', 2, '', '', 1, '230412'),
-(47, 0, 'Cẩm nang - Kiến thức', '', '', '', 'cam-nang-kien-thuc', '', 'Cẩm nang - Kiến thức', '', '', 3, '', '', 1, '230412');
+(47, 0, 'Cẩm nang - Kiến thức', '', '', '', 'cam-nang-kien-thuc', '', 'Cẩm nang - Kiến thức', '', '', 3, '', '', 1, '230412'),
+(48, 0, 'Thị trường hoa trong nước', '', NULL, NULL, 'thi-truong-hoa-trong-nuoc', '', 'Thị trường hoa trong nước', '', '', 1, NULL, NULL, 1, 'hoasaytinh'),
+(49, 48, 'Tin tức về hoa', '', NULL, NULL, 'tin-tuc-ve-hoa', '', '', '', '', 2, NULL, NULL, 1, 'hoasaytinh'),
+(50, 48, 'Tin tức về rượu', '', NULL, NULL, 'tin-tuc-ve-ruou', '', '', '', '', 3, NULL, NULL, 1, 'hoasaytinh'),
+(51, 48, 'Tin tức về quà tặng cho tình nhân', '', NULL, NULL, 'tin-tuc-ve-qua-tang-cho-tinh-nhan', '', '', '', '', 4, NULL, NULL, 1, 'hoasaytinh'),
+(52, 0, 'Quà tặng', '', NULL, NULL, 'qua-tang', '', '', '', '', 5, NULL, NULL, 1, 'hoasaytinh');
 
 -- --------------------------------------------------------
 
@@ -1011,7 +1099,15 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('day_time', 2456046, '070312'),
 ('max_count', 0, '070312'),
 ('counter', 0, '070312'),
-('yesterday', 0, '070312');
+('yesterday', 0, '070312'),
+('day_time', 2456050, 'hoasaytinh'),
+('max_count', 0, 'hoasaytinh'),
+('counter', 0, 'hoasaytinh'),
+('yesterday', 0, 'hoasaytinh'),
+('day_time', 2456050, 'cuasat24h'),
+('max_count', 0, 'cuasat24h'),
+('counter', 0, 'cuasat24h'),
+('yesterday', 0, 'cuasat24h');
 
 -- --------------------------------------------------------
 
@@ -1025,6 +1121,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
   `dos_usernames_username` varchar(45) NOT NULL,
   KEY `fk_dos_module_pcounter_users_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dos_module_pcounter_users`
+--
+
+INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
+('''127.0.0.1''', 1335942482, 'cuasat24h'),
+('''127.0.0.1''', 1335949148, 'hoasaytinh');
 
 -- --------------------------------------------------------
 
@@ -1061,7 +1165,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=436 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=445 ;
 
 --
 -- Dumping data for table `dos_module_products`
@@ -1161,7 +1265,16 @@ INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, 
 (432, 'Hawaiian Coffee', '', '2012-04-26 09:17:03', 'hawaiian-coffee-thumb.jpg', 'hawaiian-coffee.jpg', '', '<p>Hawaiian Coffee</p>', '', '<p>Hawaiian Coffee</p>', '', 'hawaiian-coffee', '', 'Hawaiian Coffee', '', 0, 4, '', 1, 0, '', '', '', '', 1, 125),
 (433, 'Hazelnut Flavored Coffee', '', '2012-04-26 09:17:35', 'hazelnut-flavored-coffee-thumb.jpg', 'hazelnut-flavored-coffee.jpg', '', '<p>Hazelnut Flavored Coffee</p>', '', '<p>Hazelnut Flavored Coffee</p>', '', 'hazelnut-flavored-coffee', '', 'Hazelnut Flavored Coffee', '', 0, 3, '', 1, 0, '', '', '', '', 1, 127),
 (434, 'Sinful Delight Flavored Coffee', '', '2012-04-26 09:19:09', 'sinful-delight-flavored-coffee-thumb.jpg', 'sinful-delight-flavored-coffee.jpg', '', '<p>Sinful Delight Flavored Coffee</p>', '', '<p>Sinful Delight Flavored Coffee</p>', '', 'sinful-delight-flavored-coffee', '', 'Sinful Delight Flavored Coffee', '', 0, 2, '', 1, 0, '', '', '', '', 1, 127),
-(435, 'Sticky Buns Flavored Coffee', '', '2012-04-26 09:20:07', 'sticky-buns-flavored-coffee-thumb.jpg', 'sticky-buns-flavored-coffee.jpg', '', '<p>Sticky Buns Flavored Coffee</p>', '', '<p>Sticky Buns Flavored Coffee</p>', '', 'sticky-buns-flavored-coffee', '', 'Sticky Buns Flavored Coffee', '', 0, 1, '', 1, 0, '', '', '', '', 1, 125);
+(435, 'Sticky Buns Flavored Coffee', '', '2012-04-26 09:20:07', 'sticky-buns-flavored-coffee-thumb.jpg', 'sticky-buns-flavored-coffee.jpg', '', '<p>Sticky Buns Flavored Coffee</p>', '', '<p>Sticky Buns Flavored Coffee</p>', '', 'sticky-buns-flavored-coffee', '', 'Sticky Buns Flavored Coffee', '', 0, 1, '', 1, 0, '', '', '', '', 1, 125),
+(436, 'Hoa cô dâu - CD43', '', '2012-05-02 07:12:33', 'hoa-co-dau-cd43-thumb.jpg', 'hoa-co-dau-cd43.jpg', NULL, '', '', '<p>- Sản phẩm này cần đặt trước 2h – 4h ( chat, điện thoại), 24h (qua email, website).</p>\r\n<p>- Về màu sắc, loại hoa, nguyên vật liệu cắm hoa phụ thuộc thời tiết và mùa màng trong năm nên thỉnh thoảng có sự thay đổi chút ít giữa mẫu trên website và thực tế. Tuy nhiên, Hoa Sài Gòn sẽ liên lạc trước với Quý khách để xin ý kiến. Trường hợp không liên lạc được Hoa Sài Gòn sẽ chủ động thay thế bằng một loại hoa hay nguyên vật liệu phù hợp nhưng vẫn đảm bảo ý nghĩa và tính mỹ quan của sản phẩm.</p>', '', 'hoa-co-dau-cd43', '', '', '', 0, 1, '598000', 0, NULL, NULL, NULL, NULL, NULL, 1, 132),
+(437, 'Hoa tình yêu - TY136', '', '2012-05-02 07:27:43', 'hoa-tinh-yeu-ty136-thumb.JPG', 'hoa-tinh-yeu-ty136.JPG', NULL, '', '', '<p>chi tiet1</p>', '', 'hoa-tinh-yeu-ty136', '', '', '', 0, 2, '1650000', 0, NULL, NULL, NULL, NULL, NULL, 1, 130),
+(438, 'Xe hoa - XH27', '', '2012-05-02 07:29:57', 'xe-hoa-xh27-thumb.jpg', 'xe-hoa-xh27.jpg', NULL, '', '', '<p>CHI TIET</p>', '', 'xe-hoa-xh27', '', '', '', 0, 3, '1300000', 0, NULL, NULL, NULL, NULL, NULL, 1, 134),
+(439, 'OV11', '', '2012-05-02 07:30:41', 'ov11-thumb.JPG', 'ov11.JPG', NULL, '', '', '<p>CHI TIET</p>', '', 'ov11', '', '', '', 0, 4, '240000', 0, NULL, NULL, NULL, NULL, NULL, 1, 129),
+(440, 'Xe hoa - XH26A', '', '2012-05-02 08:40:01', 'xe-hoa-xh26a-thumb.jpg', 'xe-hoa-xh26a.jpg', NULL, '', '', '<p>chi tiet</p>', '', 'xe-hoa-xh26a', '', 'Xe hoa - XH26A', '', 0, 5, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 134),
+(441, 'Xe hoa - XH19', '', '2012-05-02 08:53:41', 'xe-hoa-xh19-thumb.jpg', 'xe-hoa-xh19.jpg', NULL, '<p>Sản phẩm này cần đặt trước 2h – 4h ( chat, điện thoại), 24h (qua email, website).</p>\r\n<p>- Về màu sắc, loại hoa, nguyên vật liệu cắm hoa phụ thuộc thời tiết và mùa màng trong năm nên thỉnh thoảng có sự thay đổi chút ít giữa mẫu trên website và thực tế. Tuy nhiên, Hoa Sài Gòn sẽ liên lạc trước với Quý khách để xin ý kiến. Trường hợp không liên lạc được Hoa Sài Gòn sẽ chủ động thay thế bằng một loại hoa hay nguyên vật liệu phù hợp nhưng vẫn đảm bảo ý nghĩa và tính mỹ quan của sản phẩm.</p>', '', '<p>Sản phẩm này cần đặt trước 2h – 4h ( chat, điện thoại), 24h (qua email, website).</p>\r\n<p>- Về màu sắc, loại hoa, nguyên vật liệu cắm hoa phụ thuộc thời tiết và mùa màng trong năm nên thỉnh thoảng có sự thay đổi chút ít giữa mẫu trên website và thực tế. Tuy nhiên, Hoa Sài Gòn sẽ liên lạc trước với Quý khách để xin ý kiến. Trường hợp không liên lạc được Hoa Sài Gòn sẽ chủ động thay thế bằng một loại hoa hay nguyên vật liệu phù hợp nhưng vẫn đảm bảo ý nghĩa và tính mỹ quan của sản phẩm.</p>', '', 'xe-hoa-xh19', '', 'Xe hoa - XH19', '', 0, 6, '790000', 0, NULL, NULL, NULL, NULL, NULL, 1, 134),
+(442, 'Cổng hoa cưới - CH03', '', '2012-05-02 08:54:41', 'cong-hoa-cuoi-ch03-thumb.JPG', 'cong-hoa-cuoi-ch03.JPG', NULL, '', '', '<p>chi tiet</p>', '', 'cong-hoa-cuoi-ch03', '', 'Cổng hoa cưới - CH03', '', 0, 7, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 135),
+(443, 'Cổng hoa cưới - CH02(KS intercontiental)', '', '2012-05-02 08:55:22', 'cong-hoa-cuoi-ch02ks-intercontiental-thumb.jpg', 'cong-hoa-cuoi-ch02ks-intercontiental.jpg', NULL, '', '', '<p>chi tiet</p>', '', 'cong-hoa-cuoi-ch02ks-intercontiental', '', 'Cổng hoa cưới - CH02(KS intercontiental)', '', 0, 8, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 135),
+(444, 'Cổng hoa cưới - CH01', '', '2012-05-02 08:55:44', 'cong-hoa-cuoi-ch01-thumb.JPG', 'cong-hoa-cuoi-ch01.JPG', NULL, '', '', '<p>chi tiet</p>', '', 'cong-hoa-cuoi-ch01', '', 'Cổng hoa cưới - CH01', '', 0, 9, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 135);
 
 -- --------------------------------------------------------
 
@@ -1189,7 +1302,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=129 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=136 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
@@ -1219,7 +1332,14 @@ INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `
 (125, 0, 'Cà phê', '', '', '', 'ca-phe', '', 'Cà phê', '', 'ca-phe.jpg', '', 4, '', '', 1, '230412'),
 (126, 0, 'Trà', '', '', '', 'tra', '', 'Trà', '', 'tra.jpg', '', 4, '', '', 1, '230412'),
 (127, 0, 'Bánh &amp; Kẹo', '', '', '', 'banh-keo', '', 'Bánh &amp; Kẹo', '', 'banh-amp-keo.jpg', '', 3, '', '', 1, '230412'),
-(128, 0, 'Phụ kiện pha chế', '', '', '', 'phu-kien-pha-che', '', 'Phụ kiện pha chế', '', 'phu-kien-pha-che.jpg', '', 2, '', '', 1, '230412');
+(128, 0, 'Phụ kiện pha chế', '', '', '', 'phu-kien-pha-che', '', 'Phụ kiện pha chế', '', 'phu-kien-pha-che.jpg', '', 2, '', '', 1, '230412'),
+(129, 0, 'Hoa tươi đi tỉnh', '', NULL, NULL, 'hoa-tuoi-di-tinh', '', 'Hoa tươi đi tỉnh', '', 'hoa-tuoi-di-tinh.gif', NULL, 1, NULL, NULL, 1, 'hoasaytinh'),
+(130, 0, 'Hoa tình yêu', '', NULL, NULL, 'hoa-tinh-yeu', '', 'Hoa tình yêu', '', 'hoa-tinh-yeu.jpg', NULL, 2, NULL, NULL, 1, 'hoasaytinh'),
+(131, 0, 'Hoa bó', '', NULL, NULL, 'hoa-bo', '', 'Hoa bó', '', 'hoa-bo.jpg', NULL, 3, NULL, NULL, 1, 'hoasaytinh'),
+(132, 0, 'Hoa cưới', '', NULL, NULL, 'hoa-cuoi', '', 'Hoa cưới', '', '', NULL, 4, NULL, NULL, 1, 'hoasaytinh'),
+(133, 132, 'Hoa cô dâu', '', NULL, NULL, 'hoa-co-dau', '', 'Hoa cô dâu', '', 'hoa-co-dau.jpg', NULL, 5, NULL, NULL, 1, 'hoasaytinh'),
+(134, 132, 'Xe hoa', '', NULL, NULL, 'xe-hoa', '', 'Xe hoa', '', 'xe-hoa.jpg', NULL, 6, NULL, NULL, 1, 'hoasaytinh'),
+(135, 132, 'Cổng hoa cưới', '', NULL, NULL, 'cong-hoa-cuoi', '', 'Cổng hoa cưới', '', 'cong-hoa-cuoi.JPG', NULL, 7, NULL, NULL, 1, 'hoasaytinh');
 
 -- --------------------------------------------------------
 
@@ -1250,7 +1370,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=38 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=40 ;
 
 --
 -- Dumping data for table `dos_module_services`
@@ -1260,7 +1380,9 @@ INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `
 (34, 'Ngủ Cùng Sói', '', '', '', '<p><img style="float:right;" src="/public/userfiles/image/200312/image/_fill_300_49541.jpg" alt="" width="300" height="300" /></p>\n<p> </p>\n<p>Tác giả: Diệp Lạc Vô Tâm. - Dịch giả: Hoàng Anh.</p>\n<p>Nhà xuất bản: Nxb văn học</p>\n<p>Chưa có nhận xét nào. Bạn là người đầu tiên ?</p>\n<p>Số trang: 584</p>\n<p>Giảm 10 %</p>\n<p>Hình thức bìa: Bìa mềm<br />Kích thước: 14.5 x 20.5 cm Ngày xuất bản: 5 - 2012<br />Trọng lượng: 700 gram Số lần xem: 2159<br />(Chi tiết về phí vận chuyển)<br />Giá bìa: 118.000 VNĐ<br />Giá bán: 106.200 VNĐ<br />Giảm giá: (10%)</p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>', '', 'ngu-cung-soi.jpg', 4, '2012-04-26 08:39:22', 1, 0, '', '', 'ngu-cung-soi', '', 'Ngủ Cùng Sói', '', 1, '200312'),
 (35, 'Nếu Xa Nhau, Em Chúc Anh Hạnh Phúc', '', '', '', '<p><img style="float:right;" src="/public/userfiles/image/200312/image/_si_fill_300_49572.jpg" alt="" width="300" height="300" /></p>\n<p>Tác giả: Dư Tư. - Dịch giả: Hồng Hoa.</p>\n<p>Nhà xuất bản: Nxb văn học</p>\n<p>Chưa có nhận xét nào. Bạn là người đầu tiên ?</p>\n<p>Số trang: 368</p>\n<p>Giảm 10 %</p>\n<p>Hình thức bìa: Bìa mềm<br />Kích thước: 13.5 x 20.5 cm Ngày xuất bản: 2011<br />Trọng lượng: 352 gram Số lần xem: 955<br />(Chi tiết về phí vận chuyển)<br />Giá bìa: 72.000 VNĐ<br />Giá bán: 64.800 VNĐ<br />Giảm giá: (10%)</p>\n<p>Xếp hạng: 60 ( trong những cuốn Sách bán chạy )</p>\n<p> </p>', '', 'neu-xa-nhau-em-chuc-anh-hanh-phuc.jpg', 2, '2012-04-26 08:42:00', 2, 0, '', '', 'neu-xa-nhau-em-chuc-anh-hanh-phuc', '', '', '', 1, '200312'),
 (36, 'A Mạch Tòng Quân - Tập 2 (Phát Hành 25-04-2012)', '', '', '', '<p style="text-align:justify;"><img style="float:right;" src="/public/userfiles/image/200312/image/_fill_300_49537.jpg" alt="" width="300" height="300" /></p>\n<p style="text-align:justify;">Tác giả: Tiên Chanh. - Dịch giả: Nguyễn Thanh An.</p>\n<p style="text-align:justify;">Nhà xuất bản: Nxb văn học</p>\n<p style="text-align:justify;">Chưa có nhận xét nào. Bạn là người đầu tiên ?</p>\n<p style="text-align:justify;">Số trang: 444</p>\n<p style="text-align:justify;">Giảm 10 %</p>\n<p style="text-align:justify;">Hình thức bìa: Bìa mềm<br />Kích thước: 16 x 24 cm Ngày xuất bản: 04 - 2012<br />Trọng lượng: 700 gram Số lần xem: 621<br />(Chi tiết về phí vận chuyển)<br />Giá bìa: 129.000 VNĐ<br />Giá bán: 116.100 VNĐ<br />Giảm giá: (10%)</p>\n<p style="text-align:justify;"> </p>\n<p style="text-align:justify;"> </p>', '', 'a-mach-tong-quan-tap-2-phat-hanh-25-04-2012.jpg', 3, '2012-04-26 08:45:27', 3, 0, '', '', 'a-mach-tong-quan-tap-2-phat-hanh-25-04-2012', '', 'A Mạch Tòng Quân - Tập 2 (Phát Hành 25-04-2012)', '', 1, '200312'),
-(37, 'Dịch vụ 230412 Cafe', '', '', '', '<p><img style="float:left;margin-left:10px;margin-right:10px;" src="/public/userfiles/image/230412/image/images.jpeg" alt="" width="183" height="261" /></p>\n<p style="text-align:justify;"> </p>\n<p style="text-align:justify;">Khuôn viên rộng rãi, thoáng mát gần gũi với thiên nhiên, phòng ăn sạch sẽ, lịch sự sẽ là điểm hẹn lý tưởng của quý khách cho những buổi gặp gỡ, trò chuyện hàng ngày cũng như những sự kiện quan trọng như sinh nhật, liên hoan, tiệc cưới.</p>\n<p style="text-align:justify;">Sự đa dạng của các món ăn, đồ uống cũng như kinh nghiệm chế biến truyền thống sẽ tạo cho quý khách cảm nhận đích thực về nghệ thuật ẩm thực tại <strong>230412 Cafe.</strong></p>\n<p style="text-align:justify;">Chúng tôi luôn tự hào về phong cách phục vụ mang đậm bản sắc quê hương Việt Nam của đội ngũ nhân viên phục vụ chuyên nghiệp và hiếu khách, quý khách sẽ thấy hài lòng về chất lượng phục vụ khi đến với chúng tôi.</p>\n<p style="text-align:justify;">Để biết thêm chi tiết về các dịch vụ của chúng tôi vui lòng lựa chọn dịch vụ ở menu bên phải.</p>\n<p style="text-align:right;"><strong> </strong></p>\n<p style="text-align:right;"><strong>FREE WIFI INTERNET - FREE WIFI INTERNET</strong></p>', '', '', 1, '2012-04-26 09:38:50', 1, 0, '', '', 'dich-vu-230412-cafe', '', 'Dịch vụ', '', 1, '230412');
+(37, 'Dịch vụ 230412 Cafe', '', '', '', '<p><img style="float:left;margin-left:10px;margin-right:10px;" src="/public/userfiles/image/230412/image/images.jpeg" alt="" width="183" height="261" /></p>\n<p style="text-align:justify;"> </p>\n<p style="text-align:justify;">Khuôn viên rộng rãi, thoáng mát gần gũi với thiên nhiên, phòng ăn sạch sẽ, lịch sự sẽ là điểm hẹn lý tưởng của quý khách cho những buổi gặp gỡ, trò chuyện hàng ngày cũng như những sự kiện quan trọng như sinh nhật, liên hoan, tiệc cưới.</p>\n<p style="text-align:justify;">Sự đa dạng của các món ăn, đồ uống cũng như kinh nghiệm chế biến truyền thống sẽ tạo cho quý khách cảm nhận đích thực về nghệ thuật ẩm thực tại <strong>230412 Cafe.</strong></p>\n<p style="text-align:justify;">Chúng tôi luôn tự hào về phong cách phục vụ mang đậm bản sắc quê hương Việt Nam của đội ngũ nhân viên phục vụ chuyên nghiệp và hiếu khách, quý khách sẽ thấy hài lòng về chất lượng phục vụ khi đến với chúng tôi.</p>\n<p style="text-align:justify;">Để biết thêm chi tiết về các dịch vụ của chúng tôi vui lòng lựa chọn dịch vụ ở menu bên phải.</p>\n<p style="text-align:right;"><strong> </strong></p>\n<p style="text-align:right;"><strong>FREE WIFI INTERNET - FREE WIFI INTERNET</strong></p>', '', '', 1, '2012-04-26 09:38:50', 1, 0, '', '', 'dich-vu-230412-cafe', '', 'Dịch vụ', '', 1, '230412'),
+(38, 'Dịch vụ vẫn chuyển tận nơi', '', NULL, NULL, '<p>Dịch vụ vẫn chuyển tận nơiDịch vụ vẫn chuyển tận nơi Dịch vụ vẫn chuyển tận nơi</p>', '', '', 1, '2012-05-02 07:47:48', 1, 0, NULL, NULL, 'dich-vu-van-chuyen-tan-noi', '', 'Dịch vụ vẫn chuyển tận nơi', '', 1, 'hoasaytinh'),
+(39, 'Dịch vụ tặng quà', '', NULL, NULL, '<p>Dịch vụ tặng quà</p>', '', '', 1, '2012-05-02 07:52:01', 2, 0, NULL, NULL, 'dich-vu-tang-qua', '', 'Dịch vụ tặng quà', '', 1, 'hoasaytinh');
 
 -- --------------------------------------------------------
 
@@ -1279,7 +1401,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_module_supports`
+--
+
+INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
+(1, 'Hỗ trợ khách hàng', '', '01230 456 789', 'groupitsoft', 1, 'yahoo', 'hoasaytinh');
 
 -- --------------------------------------------------------
 
@@ -1307,7 +1436,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_video` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_video_dos_module_video_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
 
 --
 -- Dumping data for table `dos_module_video`
@@ -1317,7 +1446,8 @@ INSERT INTO `dos_module_video` (`record_id`, `title`, `titleen`, `postdate`, `ta
 (18, 'Bí Quyết Thành Công Dành Cho Tuổi Teen ', '', '2012-04-26 07:52:48', 'bi-quyet-thanh-cong-danh-cho-tuoi-teen', '', 'Bí Quyết Thành Công Dành Cho Tuổi Teen ', '', 'bi-quyet-thanh-cong-danh-cho-tuoi-teen.jpg', 'http://www.youtube.com/watch?v=FzdzK96W6DA', 1, 0, '', '', 0, 1, 11),
 (19, 'Nghệ thuật pha chế cà phê ', '', '2012-04-26 09:46:27', 'nghe-thuat-pha-che-ca-phe', '', 'Nghệ thuật pha chế cà phê ', '', 'nghe-thuat-pha-che-ca-phe.jpg', 'http://www.youtube.com/watch?v=wcdnGqBDiA0', 3, 0, '', '', 0, 1, 12),
 (20, 'Nghệ thuật trang trí ly cafe', '', '2012-04-26 09:47:41', 'nghe-thuat-trang-tri-ly-cafe', '', 'Nghệ thuật trang trí ly cafe', '', 'nghe-thuat-trang-tri-ly-cafe.jpg', 'http://www.youtube.com/watch?v=x7NgdZPEmxU&feature=related', 2, 0, '', '', 0, 1, 12),
-(21, 'Cà Phê Đắng Và Mưa', '', '2012-04-26 09:50:38', 'ca-phe-dang-va-mua', '', 'Cà Phê Đắng Và Mưa (w/ Lyrics) - Thanh Ngọc ', '', 'ca-phe-ang-va-mua.jpg', 'http://www.youtube.com/watch?v=y7JlskJN1DM', 1, 0, '', '', 0, 1, 13);
+(21, 'Cà Phê Đắng Và Mưa', '', '2012-04-26 09:50:38', 'ca-phe-dang-va-mua', '', 'Cà Phê Đắng Và Mưa (w/ Lyrics) - Thanh Ngọc ', '', 'ca-phe-ang-va-mua.jpg', 'http://www.youtube.com/watch?v=y7JlskJN1DM', 1, 0, '', '', 0, 1, 13),
+(22, 'Video Hoa Quỳnh nở', '', '2012-05-02 08:14:01', 'video-hoa-quynh-no', '', '', '', 'video-hoa-quynh-no.jpg', 'http://www.youtube.com/watch?v=JJYDp06iixw', 1, 0, NULL, NULL, 0, 1, 14);
 
 -- --------------------------------------------------------
 
@@ -1340,7 +1470,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_video_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `dos_module_video_cat`
@@ -1349,7 +1479,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
 INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat_title`, `cat_titleen`, `tag`, `tagen`, `description`, `descriptionen`, `cat_order`, `cat_enable`, `dos_usernames_username`) VALUES
 (11, 0, '', 'Giới thiệu sách', '', 'gioi-thieu-sach', '', 'Giới thiệu sách', '', 1, 1, '200312'),
 (12, 0, '', 'Pha chế cà phê', '', 'pha-che-ca-phe', '', 'Pha chế', '', 1, 1, '230412'),
-(13, 0, '', 'Thưởng thức Âm nhạc', '', 'thuong-thuc-am-nhac', '', '', '', 2, 1, '230412');
+(13, 0, '', 'Thưởng thức Âm nhạc', '', 'thuong-thuc-am-nhac', '', '', '', 2, 1, '230412'),
+(14, 0, '', 'Về hoa Việt Nam', '', 've-hoa-viet-nam', '', '', '', 1, 1, 'hoasaytinh');
 
 -- --------------------------------------------------------
 
@@ -1564,6 +1695,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
 ('010312', 'Mẫu than đá: 010312', '2012-02-29 11:38:05', 'Chuyên bán các loại than đá, than cám'),
+('020512', 'Mẫu hoa tươi 020512', '2012-05-02 03:10:52', 'Chuyên cung cấp hoa tuoi, hoa cuoi, điện hoa, hoa tuoi van phong, hoa khai trương, hoa chúc mừng, hoa xe, hoa online, hoa chia buồn'),
 ('070312', 'Mẫu thời trang: 070312', '2012-03-06 13:21:26', 'Chuyên bán các sản phẩm thời trang quần áo mới nhất, với các dịch vụ ưu đãi'),
 ('130312', 'Mẫu cơ khí: 130312', '2012-03-12 12:01:59', 'Chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn Carb p2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn Carb p2'),
 ('180412', 'Mẫu máy tính: 180412', '2012-04-18 00:58:03', 'Mẫu máy tính mã số 180412'),
@@ -1594,6 +1726,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_bussiness` (
 
 INSERT INTO `dos_templates_has_dos_bussiness` (`dos_templates_template`, `dos_bussiness_bussiness_id`) VALUES
 ('010312', 'bds-kien-truc-xay-dung'),
+('020512', 'hoa-tuoi'),
 ('070312', 'thoi-trang'),
 ('130312', 'bds-kien-truc-xay-dung'),
 ('180412', 'cong-nghe-thong-tin-vien-thong'),
@@ -1675,6 +1808,43 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('010312', 'video', 'list_supports'),
 ('010312', 'video', 'menu_video'),
 ('010312', 'video', 'news_new'),
+('020512', 'about', 'advs_bottom'),
+('020512', 'about', 'advs_left'),
+('020512', 'about', 'advs_top'),
+('020512', 'about', 'list_supports'),
+('020512', 'about', 'menu_about'),
+('020512', 'contact', 'advs_bottom'),
+('020512', 'contact', 'advs_left'),
+('020512', 'contact', 'advs_top'),
+('020512', 'contact', 'list_supports'),
+('020512', 'contact', 'menu_products'),
+('020512', 'default', 'about_home'),
+('020512', 'default', 'advs_bottom'),
+('020512', 'default', 'advs_left'),
+('020512', 'default', 'advs_top'),
+('020512', 'default', 'list_supports'),
+('020512', 'default', 'menu_products'),
+('020512', 'default', 'products_new'),
+('020512', 'news', 'advs_bottom'),
+('020512', 'news', 'advs_left'),
+('020512', 'news', 'advs_top'),
+('020512', 'news', 'list_supports'),
+('020512', 'news', 'menu_news'),
+('020512', 'products', 'advs_bottom'),
+('020512', 'products', 'advs_left'),
+('020512', 'products', 'advs_top'),
+('020512', 'products', 'list_supports'),
+('020512', 'products', 'menu_products'),
+('020512', 'services', 'advs_bottom'),
+('020512', 'services', 'advs_center'),
+('020512', 'services', 'advs_top'),
+('020512', 'services', 'list_supports'),
+('020512', 'services', 'menu_services'),
+('020512', 'video', 'advs_bottom'),
+('020512', 'video', 'advs_left'),
+('020512', 'video', 'advs_top'),
+('020512', 'video', 'list_supports'),
+('020512', 'video', 'menu_video'),
 ('070312', 'about', 'advs_left'),
 ('070312', 'about', 'list_supports'),
 ('070312', 'about', 'menu_about'),
@@ -1960,8 +2130,10 @@ INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullna
 ('070312', 'maioanh@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-25 07:28:23', '', '', '', 'user', 'vi', '', '2012-05-24 17:00:00', 0, '', NULL, 1, '070312', 19, 'thoi-trang'),
 ('200312', 'maioanh@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-25 07:17:56', '', '', '', 'user', 'vi', '', '2012-05-24 17:00:00', 0, '', NULL, 1, '200312', 1, 'giao-duc-dao-tao'),
 ('230412', 'maioanh@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-26 09:03:32', '', '', '', 'user', 'vi', '', '2012-05-25 17:00:00', 0, '', NULL, 1, '230412', 19, 'nha-hang-cafe'),
+('cuasat24h', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-02 06:35:34', NULL, '', NULL, 'user', 'vi', NULL, '2012-05-31 16:00:00', 0, '20122012', NULL, 1, '270412', 1, 'co-khi-may-moc-thiet-bi'),
 ('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi|en', NULL, '2012-04-14 17:00:00', 0, '', NULL, 1, '230412', 2, 'cong-nghe-thong-tin-vien-thong'),
-('gothuytung', 'maioanh@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-28 08:03:03', '', '', '', 'user', 'vi', '', '2012-05-27 17:00:00', 0, '', NULL, 1, '220312', 19, 'noi-that-ngoai-that');
+('gothuytung', 'maioanh@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-28 08:03:03', '', '', '', 'user', 'vi', '', '2012-05-27 17:00:00', 0, '', NULL, 1, '220312', 19, 'noi-that-ngoai-that'),
+('hoasaytinh', 'mailgooglepig@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-02 03:14:04', NULL, '01234 567 890', NULL, 'user', 'vi', NULL, '2012-05-31 16:00:00', 0, '20122012', NULL, 1, '020512', 19, 'hoa-tuoi');
 
 -- --------------------------------------------------------
 

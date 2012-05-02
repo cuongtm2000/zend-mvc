@@ -28,6 +28,7 @@
 	});
 </script>
 <?php endif;?>
+<?php echo $this->analytics?>
 </head>
 <body>
 <div id="wrapper">
@@ -91,6 +92,7 @@
 					<ul class="sub-cat">
 						<?php Common::menuMultiLevel($this->function['menu_news'], 'NewsCat', Yii::t('user', 'news.link')); ?>
 					</ul>
+				<div class="bt-left-penal"></div>
 				<?php endif; ?>
 
 				<?php if(isset($this->function['menu_video']) && ($this->function['menu_video'])):?>
