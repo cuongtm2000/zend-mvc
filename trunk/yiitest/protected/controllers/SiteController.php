@@ -150,6 +150,17 @@ class SiteController extends HomeController {
 		$this->renderPartial('loaduserimport', array('userImport' => $username_class->listUserByImport($id), 'name' => $business_class->detailItem($id)));
 	}
 
+	public function actionGetagents() {
+		$provinces_class = new Provinces();
+		$this->renderPartial('getagents', array('listProvinceByCountry' => $provinces_class->listProvinceByCountry('VND')));
+	}
+
+	public function actionLoadagents($id){
+		$province_class = new Provinces();
+		$agents_class = new Agents();
+		$this->renderPartial('loadagents', array('listAgents' => $agents_class->listAgentsByProvince($id), 'detailProvince' => $province_class->detailProvince($id)));
+	}
+
 	public function actionrss() {
 		Yii::import('application.vendors.*');
 		require_once('Zend/Feed/Rss.php');

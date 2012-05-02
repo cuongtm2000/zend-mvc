@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 01, 2012 at 05:44 AM
+-- Generation Time: May 02, 2012 at 03:24 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -19,6 +19,43 @@ SET time_zone = "+00:00";
 --
 -- Database: `dos`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_agents`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_agents` (
+  `agent_id` varchar(8) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `fullname` varchar(45) NOT NULL,
+  `phone` varchar(30) NOT NULL,
+  `company` varchar(100) DEFAULT NULL,
+  `website` varchar(60) DEFAULT NULL,
+  `picture` varchar(60) DEFAULT NULL,
+  `address` varchar(100) NOT NULL,
+  `yahoo` varchar(45) DEFAULT NULL,
+  `skype` varchar(45) DEFAULT NULL,
+  `content` varchar(45) DEFAULT NULL,
+  `point` varchar(15) NOT NULL DEFAULT '0',
+  `bonus` varchar(15) NOT NULL DEFAULT '0',
+  `type` varchar(45) NOT NULL DEFAULT '0',
+  `parent_id` varchar(8) NOT NULL,
+  `enable` tinyint(1) NOT NULL,
+  `dos_provinces_province_id` int(11) NOT NULL,
+  PRIMARY KEY (`agent_id`),
+  KEY `fk_dos_agents_dos_provinces1` (`dos_provinces_province_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dos_agents`
+--
+
+INSERT INTO `dos_agents` (`agent_id`, `email`, `password`, `created_date`, `fullname`, `phone`, `company`, `website`, `picture`, `address`, `yahoo`, `skype`, `content`, `point`, `bonus`, `type`, `parent_id`, `enable`, `dos_provinces_province_id`) VALUES
+('20122012', 'info@dos.vn', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-05-01 16:05:05', 'Dos.vn', '0929001001', 'Công ty cổ phần Thương Hội', 'http://dos.vn', NULL, 'Gò Dầu - P. Tân Sơn Nhì - Q. Tân Phú - TpHCM', NULL, NULL, NULL, '0', '0', '0', '20122012', 1, 30);
 
 -- --------------------------------------------------------
 
@@ -988,16 +1025,6 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
   `dos_usernames_username` varchar(45) NOT NULL,
   KEY `fk_dos_module_pcounter_users_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `dos_module_pcounter_users`
---
-
-INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1335619244, '070312'),
-('''127.0.0.1''', 1335619241, '230412'),
-('''127.0.0.1''', 1335619236, 'gothuytung'),
-('''127.0.0.1''', 1335619253, '200312');
 
 -- --------------------------------------------------------
 
@@ -2019,6 +2046,12 @@ INSERT INTO `dos_values` (`value_name`, `module`, `module_id`, `function_name`) 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `dos_agents`
+--
+ALTER TABLE `dos_agents`
+  ADD CONSTRAINT `fk_dos_agents_dos_provinces1` FOREIGN KEY (`dos_provinces_province_id`) REFERENCES `dos_provinces` (`province_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `dos_configs`
