@@ -31,6 +31,7 @@
             <?php endif; ?>
         </tbody>
     </table>
+	<div class="control-button"><a href="javascript:submit_list('export', '');" title="Export"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/syn.png" alt="Export" align="left" /> Export</a></div>
     <div class="control-button"><a href="javascript:submit_list('enable', '');" title="Show"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/visible.png" alt="Show" align="left" /> Show</a></div>
     <div class="control-button"><a href="javascript:submit_list('disable', '');" title="Hidden"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/hidden.png" alt="Hidden" align="left" /> Hidden</a></div>
     <div class="control-button"><a href="javascript:delete_list('');" title="Delete"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/delete.png" alt="Delete" align="left" /> Delete</a></div>

@@ -393,15 +393,25 @@ class Username extends CActiveRecord {
 			unset($ids);
 
 			if ($flag) {
-				//show or hidden
-				$active = ($flag == "enable") ? 1 : 0;
+				if ($flag == 'export') {
+					foreach ($record_id as $value) {
+						$id = strval($value);
+						if ($id) {
+							DatabaseHelper::export(trim($id), 'user');
+						}
+					}
+				} else {
+					//show or hidden
+					$active = ($flag == "enable") ? 1 : 0;
 
-				foreach ($record_id as $value) {
-					$id = strval($value);
-					if ($id) {
-						$this->updateShowHidden($active, $id);
+					foreach ($record_id as $value) {
+						$id = strval($value);
+						if ($id) {
+							$this->updateShowHidden($active, $id);
+						}
 					}
 				}
+
 			} else {
 				//delete
 				foreach ($record_id as $value) {
