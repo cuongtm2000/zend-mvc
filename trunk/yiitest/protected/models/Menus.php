@@ -110,21 +110,21 @@ class Menus extends CActiveRecord {
 		return $command->queryAll();
 	}
 
-	public function addModuleMenu($user, $chooses) {
-		$langs = Langs::getLangs(0); //get lang list
-		//Insert default
-		$command = Yii::app()->db->createCommand("INSERT INTO " . $this->tableName() . " (`menu`, `url`, `position`, `dos_usernames_username`) VALUES ('Trang chủ', 'default', 1, :username)");
-		$command->bindParam(":username", $user, PDO::PARAM_STR);
-		$command->execute();
+    public function addModuleMenu($user, $chooses) {
+        $langs = Langs::getLangs(0); //get lang list
+        //Insert default
+        $command = Yii::app()->db->createCommand("INSERT INTO " . $this->tableName() . " (`menu`, `url`, `position`, `dos_usernames_username`) VALUES ('Trang chủ', 'default', 1, :username)");
+        $command->bindParam(":username", $user, PDO::PARAM_STR);
+        $command->execute();
 
-		$i = 2;
-		foreach ($chooses as $choose) {
+        $i = 2;
+        foreach ($chooses as $choose) {
 			$command = Yii::app()->db->createCommand('INSERT INTO ' . $this->tableName() . ' (`menu`, `url`, `position`, `dos_usernames_username`) VALUES (:menu, :url, :position, :username)');
 			foreach ($langs as $lang) {
-				if ($lang['lang_name'] == $choose) {
-					$command->bindParam(":menu", $lang['lang'], PDO::PARAM_STR);
-				}
-			}
+                if ($lang['lang_name'] == $choose) {
+                    $command->bindParam(":menu", $lang['lang'], PDO::PARAM_STR);
+                }
+            }
 
 			$command->bindParam(":url", $choose, PDO::PARAM_STR);
 			$command->bindParam(":position", $i, PDO::PARAM_INT);
@@ -132,7 +132,7 @@ class Menus extends CActiveRecord {
 			$command->execute();
 			$i++;
 		}
-	}
+    }
 
 	public function listMenuByAdmin($type = 0) {
 		$user = Yii::app()->user->id;
