@@ -11,6 +11,9 @@
 
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" />
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.7.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/simplyscroll.verticall.css" />
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.simplyscroll.vertical.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/verticall-config.js"></script>
 
 <title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->title) ? ' - '.CHtml::encode($this->title) : '' ?></title>
 <meta name="keywords" content="<?php echo $this->keywords ?>" />
@@ -235,14 +238,14 @@
 				<?php $size = count($this->nav); $i = 0; foreach($this->nav as $value):?>
 				<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
 				<?php $none = ($i < ($size-1)) ? '' : ' class="none-line"' ?>
-				<li<?php echo $none?>><a href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
+				<li><a<?php echo $none?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
 				<?php $i++; endforeach;?>
             </ul>
         </div>
         <div class="copyright">
 			<p><?php echo $this->lang['copyright'] ?></p>
 			<p><?php echo $this->lang['developed']?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></p>
-        </div>
+        </div> <div class="clear"></div>
     </div><!--End Footer-->
 </div><!--End bg foter-->
 </body>
