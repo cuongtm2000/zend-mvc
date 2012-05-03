@@ -16,7 +16,7 @@ Class name automatically added to element */
 	z-index: 1;
 	overflow: hidden;
 	margin: 0;
-	padding: 0;
+	padding:0;
 	list-style: none;
 }
 	
@@ -37,12 +37,11 @@ Vertical scroller example, with custom base class */
 /* Container DIV */
 .vert { 
 
-
 }
 
 /* Clip DIV */
 .vert .simply-scroll-clip {
-
+	
 	height: 400px;
 }
 

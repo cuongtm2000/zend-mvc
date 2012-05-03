@@ -819,3 +819,27 @@ Stack trace:
 REQUEST_URI=/public/userfiles/image/cuasat24h/image/banner/logo.png
 HTTP_REFERER=http://cuasat24h.dos.vn/tin-tuc-su-kien
 ---
+2012/05/03 09:30:07 [warning] [application] Failed to set unsafe attribute "company" of "ContactUserForm".
+in D:\svn\protected\modules\contact\controllers\DefaultController.php (11)
+in D:\svn\index.php (16)
+2012/05/03 09:30:08 [warning] [application] Failed to set unsafe attribute "company" of "ContactUserForm".
+in D:\svn\protected\modules\contact\controllers\DefaultController.php (11)
+in D:\svn\index.php (16)
+2012/05/03 09:30:36 [warning] [application] Failed to set unsafe attribute "company" of "ContactUserForm".
+in D:\svn\protected\modules\contact\controllers\DefaultController.php (11)
+in D:\svn\index.php (16)
+2012/05/03 09:31:11 [warning] [application] Failed to set unsafe attribute "company" of "ContactUserForm".
+in D:\svn\protected\modules\contact\controllers\DefaultController.php (11)
+in D:\svn\index.php (16)
+2012/05/03 09:31:39 [warning] [application] Failed to set unsafe attribute "company" of "ContactUserForm".
+in D:\svn\protected\modules\contact\controllers\DefaultController.php (11)
+in D:\svn\index.php (16)
+2012/05/03 09:31:48 [warning] [application] Failed to set unsafe attribute "company" of "ContactUserForm".
+in D:\svn\protected\modules\contact\controllers\DefaultController.php (11)
+in D:\svn\index.php (16)
+2012/05/03 09:32:10 [warning] [application] Failed to set unsafe attribute "company" of "ContactUserForm".
+in D:\svn\protected\modules\contact\controllers\DefaultController.php (11)
+in D:\svn\index.php (16)
+2012/05/03 09:32:22 [warning] [application] Failed to set unsafe attribute "company" of "ContactUserForm".
+in D:\svn\protected\modules\contact\controllers\DefaultController.php (11)
+in D:\svn\index.php (16)

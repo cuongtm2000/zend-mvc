@@ -11,7 +11,7 @@ a:hover{color:#000;}
 /*Header*/
 #header{ margin:5px 0 0 0;padding:10px 0;position:relative}
 #logo{float:left;margin: 0 20px 0 0;overflow:hidden;height:97px}
-.title-city{padding:10px 0 0 0; font-size:20pt;color:#EE6B11;font-weight:bold}
+.title-city{padding:30px 0 0 0; font-size:20pt;color:#EE6B11;font-weight:bold}
 
 .lang{position:absolute;bottom:35px; right:0}
 .lang-vn{ margin:0 10px 0 0}
@@ -33,9 +33,8 @@ a:hover{color:#000;}
 #nav li ul li a:hover{ background:#FF870F; color:#fff}
 #nav .select{color:#EE6B11}
 
-
 /** Banner **/
-#banner {margin:0 0 5px 0}
+#banner {margin:0 0 10px 0}
 
 /*Frame tent right*/
 .frame-tent-right {padding:5px;border:1px solid #E5DBB8;margin:0 0 15px 0;-webkit-border-radius:1px;-moz-border-radius:1px}
@@ -69,7 +68,7 @@ a:hover{color:#000;}
 
 /*bg-adv adv left*/
 .bg-adv{list-style:none;padding:5px 0 0 0;border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8 ;text-align:center}
-.bg-adv li{padding:0 0 10px 0}
+.bg-adv li{padding:0 0 5px 0}
 
 /*Right content*/
 #rightcontent{float:left; width:597px; margin:0 0 0 5px}
@@ -78,7 +77,7 @@ a:hover{color:#000;}
 #rightcontent ul ,#rightcontent ol{margin: 0 0 12px 0}
 #rightcontent table{margin: auto}
 
-.title-right{ margin:0 0 10px 0; font-size:10pt;padding:0px 0px 0px 20px;color:#3CBEDA; font-size:17px;background:url(../images/bull1.gif) no-repeat left 2px;  font-weight:bold;}
+.title-right{ margin:0 0 5px 0; font-size:10pt;padding:0px 0px 0px 20px;color:#EE6B11; font-size:17px;background:url(../images/bull1.gif) no-repeat left 1px;  font-weight:bold;}
 
 .link{color:#404F5B;font-weight:bold;margin:0 0 10px 0}
 .link img{margin:0 3px 0 0}
@@ -148,7 +147,6 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 
 /*typical-product*/
 .typical-product{list-style: none;border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8;text-align: center}
-.typical-product li{}
 
 /**  Sub new   **/
 .sub-new{list-style:none;padding:5px 2px 0 10px;border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8}
@@ -166,7 +164,10 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .copyright { text-align:right;float:right; *margin:10px 0 0 0;*_margin:0;}
 .copyright a{color:#fff; font-size:10pt}
 
-
+/* Error */
+.errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
+.errorSummary ul{margin:0 10px; padding:0}
+.errorSummary ul li{padding:2px 0; color: red}
 
 
 
