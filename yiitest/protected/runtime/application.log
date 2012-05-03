@@ -810,3 +810,12 @@ Stack trace:
 REQUEST_URI=/themes/admin-blue/css/images/ui-bg_glass_65_ffffff_1x400.png
 HTTP_REFERER=http://cuasat24h.dos.vn/admin/advs/add
 ---
+2012/05/03 06:45:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/cuasat24h/image/banner/logo.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/cuasat24h/image/banner/logo.png
+HTTP_REFERER=http://cuasat24h.dos.vn/tin-tuc-su-kien
+---

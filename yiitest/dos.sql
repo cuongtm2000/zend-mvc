@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 03, 2012 at 06:38 AM
+-- Generation Time: May 03, 2012 at 06:46 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -875,8 +875,7 @@ INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `ba
 (328, '2012-05-02 07:08:33', 'ba1', 'ba1.jpg', 'http://hoasaytinh.dos.vn/', 1, 'banners', 'default', 1, 'hoasaytinh'),
 (329, '2012-05-02 07:09:31', 'ban3', 'ban3.jpg', '', 2, 'banners', 'default', 1, 'hoasaytinh'),
 (330, '2012-05-03 03:07:58', 'banner 1', 'ba1.jpg', '', 2, 'banners', 'default', 1, 'cuasat24h'),
-(332, '2012-05-03 03:08:15', 'banner2', 'ba3.jpg', '', 4, 'banners', 'default', 1, 'cuasat24h'),
-(333, '2012-05-03 03:19:55', 'Logo', 'logo.png', '', 5, 'logo', 'default', 1, 'cuasat24h');
+(332, '2012-05-03 03:08:15', 'banner2', 'ba3.jpg', '', 4, 'banners', 'default', 1, 'cuasat24h');
 
 -- --------------------------------------------------------
 
@@ -1150,7 +1149,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1336019879, 'cuasat24h');
+('''127.0.0.1''', 1336020352, 'cuasat24h');
 
 -- --------------------------------------------------------
 
