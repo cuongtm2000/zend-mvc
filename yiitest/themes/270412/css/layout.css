@@ -21,9 +21,9 @@ a:hover{color:#000;}
 .hot-line{position:absolute;bottom:10px; right:0; color:#EE6B11;font-weight:bold;font-size:11pt}
 
 /**  Menu **/
-#nav{list-style:none; height:42px;background:url(../images/nav-bg.gif) no-repeat; padding:0 0 0 9px}
+#nav{list-style:none; height:42px;background:url(../images/nav-bg.gif) no-repeat; padding:0}
 #nav li{float:left; position:relative; }
-#nav li a{font-weight:bold;padding:12px 15px; background:url(../images/nav-line.gif) no-repeat right; display:block; color:#fff;font-size:11pt;}
+#nav li a{font-weight:bold;padding:12px 22px; background:url(../images/nav-line.gif) no-repeat right; display:block; color:#fff;font-size:10pt;}
 #nav li a:hover{color:#EE6B11;}
 #nav li ul{ display:none}
 #nav li:hover > a{color:#EE6B11}
@@ -77,7 +77,7 @@ a:hover{color:#000;}
 #rightcontent ul ,#rightcontent ol{margin: 0 0 12px 0}
 #rightcontent table{margin: auto}
 
-.title-right{ margin:0 0 5px 0; font-size:10pt;padding:0px 0px 0px 20px;color:#EE6B11; font-size:17px;background:url(../images/bull1.gif) no-repeat left 1px;  font-weight:bold;}
+.title-right{ margin:0 0 5px 0; font-size:10pt;padding:0px 0px 0px 20px;color:#EE6B11; font-size:11pt;background:url(../images/bull1.gif) no-repeat left 1px;  font-weight:bold;}
 
 .link{color:#404F5B;font-weight:bold;margin:0 0 10px 0}
 .link img{margin:0 3px 0 0}
@@ -162,7 +162,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 #footer{padding:10px 10px 0px 10px; line-height:1.7em; width:979px; margin:auto;color:#fff}
 #footer a:hover{text-decoration:underline}
 .menu-fter li{ list-style:none;float:left;}
-.menu-fter li a{padding:5px 5px;color:#fff;background:url(../images/bkg-pipe2.gif) no-repeat right}
+.menu-fter li a{padding:5px 10px;color:#fff;background:url(../images/bkg-pipe2.gif) no-repeat right}
 .menu-fter .none-line{background:none}
 .copyright { text-align:right;float:right; *margin:10px 0 0 0;*_margin:0;}
 .copyright a{color:#fff; font-size:10pt}
@@ -171,18 +171,3 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
 .errorSummary ul{margin:0 10px; padding:0}
 .errorSummary ul li{padding:2px 0; color: red}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
