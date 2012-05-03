@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 03, 2012 at 06:46 AM
+-- Generation Time: May 04, 2012 at 01:44 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -195,7 +195,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('max_image_height', 600, '', '230412'),
 ('max_image_height', 660, '', '240312'),
 ('max_image_height', 450, '', '260312'),
-('max_image_height', 420, '', '270412'),
+('max_image_height', 753, '', '270412'),
 ('max_image_width', 500, '', '010312'),
 ('max_image_width', 720, '', '020512'),
 ('max_image_width', 700, '', '070312'),
@@ -206,7 +206,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('max_image_width', 680, '', '230412'),
 ('max_image_width', 600, '', '240312'),
 ('max_image_width', 600, '', '260312'),
-('max_image_width', 560, '', '270412'),
+('max_image_width', 565, '', '270412'),
 ('news_cat_height', 89, '', '010312'),
 ('news_cat_height', 100, '', '020512'),
 ('news_cat_height', 100, '', '070312'),
@@ -302,7 +302,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_cat_height', 150, '', '230412'),
 ('products_cat_height', 165, '', '240312'),
 ('products_cat_height', 160, '', '260312'),
-('products_cat_height', 130, '', '270412'),
+('products_cat_height', 135, '', '270412'),
 ('products_cat_width', 115, '', '010312'),
 ('products_cat_width', 170, '', '020512'),
 ('products_cat_width', 150, '', '070312'),
@@ -313,7 +313,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_cat_width', 150, '', '230412'),
 ('products_cat_width', 165, '', '240312'),
 ('products_cat_width', 160, '', '260312'),
-('products_cat_width', 130, '', '270412'),
+('products_cat_width', 135, '', '270412'),
 ('products_height', 400, '', '010312'),
 ('products_height', 500, '', '020512'),
 ('products_height', 500, '', '070312'),
@@ -324,7 +324,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_height', 650, '', '230412'),
 ('products_height', 660, '', '240312'),
 ('products_height', 450, '', '260312'),
-('products_height', 550, '', '270412'),
+('products_height', 753, '', '270412'),
 ('products_height_thumb', 121, '', '010312'),
 ('products_height_thumb', 198, '', '020512'),
 ('products_height_thumb', 200, '', '070312'),
@@ -335,7 +335,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_height_thumb', 150, '', '230412'),
 ('products_height_thumb', 165, '', '240312'),
 ('products_height_thumb', 160, '', '260312'),
-('products_height_thumb', 130, '', '270412'),
+('products_height_thumb', 135, '', '270412'),
 ('products_num_paging_cat', 15, '', '010312'),
 ('products_num_paging_cat', 20, '', '020512'),
 ('products_num_paging_cat', 16, '', '070312'),
@@ -389,7 +389,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_width', 700, '', '230412'),
 ('products_width', 460, '', '240312'),
 ('products_width', 500, '', '260312'),
-('products_width', 660, '', '270412'),
+('products_width', 565, '', '270412'),
 ('products_width_thumb', 152, '', '010312'),
 ('products_width_thumb', 170, '', '020512'),
 ('products_width_thumb', 150, '', '070312'),
@@ -400,7 +400,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_width_thumb', 150, '', '230412'),
 ('products_width_thumb', 165, '', '240312'),
 ('products_width_thumb', 160, '', '260312'),
-('products_width_thumb', 130, '', '270412'),
+('products_width_thumb', 135, '', '270412'),
 ('services_height', 90, '', '010312'),
 ('services_height', 170, '', '020512'),
 ('services_height', 100, '', '070312'),
@@ -432,7 +432,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_height_thumb', 150, '', '220312'),
 ('video_height_thumb', 169, '', '230412'),
 ('video_height_thumb', 100, '', '240312'),
-('video_height_thumb', 130, '', '270412'),
+('video_height_thumb', 135, '', '270412'),
 ('video_num_paging_cat', 4, '', '010312'),
 ('video_num_paging_cat', 16, '', '020512'),
 ('video_num_paging_cat', 8, '', '070312'),
@@ -464,7 +464,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_width_thumb', 200, '', '220312'),
 ('video_width_thumb', 150, '', '230412'),
 ('video_width_thumb', 165, '', '240312'),
-('video_width_thumb', 130, '', '270412');
+('video_width_thumb', 135, '', '270412');
 
 -- --------------------------------------------------------
 
@@ -684,6 +684,7 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('about', '230412'),
 ('about', 'cuasat24h'),
 ('about', 'dos'),
+('about', 'ducpano'),
 ('about', 'gothuytung'),
 ('about', 'hoasaytinh'),
 ('advs', '070312'),
@@ -691,12 +692,14 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('advs', '230412'),
 ('advs', 'cuasat24h'),
 ('advs', 'dos'),
+('advs', 'ducpano'),
 ('advs', 'gothuytung'),
 ('advs', 'hoasaytinh'),
 ('banner', '200312'),
 ('banner', '230412'),
 ('banner', 'cuasat24h'),
 ('banner', 'dos'),
+('banner', 'ducpano'),
 ('banner', 'gothuytung'),
 ('banner', 'hoasaytinh'),
 ('contact', '070312'),
@@ -704,6 +707,7 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('contact', '230412'),
 ('contact', 'cuasat24h'),
 ('contact', 'dos'),
+('contact', 'ducpano'),
 ('contact', 'gothuytung'),
 ('contact', 'hoasaytinh'),
 ('news', '070312'),
@@ -711,6 +715,7 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('news', '230412'),
 ('news', 'cuasat24h'),
 ('news', 'dos'),
+('news', 'ducpano'),
 ('news', 'gothuytung'),
 ('news', 'hoasaytinh'),
 ('products', '070312'),
@@ -718,6 +723,7 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('products', '230412'),
 ('products', 'cuasat24h'),
 ('products', 'dos'),
+('products', 'ducpano'),
 ('products', 'gothuytung'),
 ('products', 'hoasaytinh'),
 ('services', '070312'),
@@ -725,6 +731,7 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('services', '230412'),
 ('services', 'cuasat24h'),
 ('services', 'dos'),
+('services', 'ducpano'),
 ('services', 'gothuytung'),
 ('services', 'hoasaytinh'),
 ('supports', '070312'),
@@ -732,11 +739,13 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('supports', '230412'),
 ('supports', 'cuasat24h'),
 ('supports', 'dos'),
+('supports', 'ducpano'),
 ('supports', 'gothuytung'),
 ('supports', 'hoasaytinh'),
 ('video', '200312'),
 ('video', '230412'),
 ('video', 'cuasat24h'),
+('video', 'ducpano'),
 ('video', 'hoasaytinh');
 
 -- --------------------------------------------------------
@@ -766,7 +775,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=86 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=88 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
@@ -781,8 +790,10 @@ INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `co
 (81, 'Thư viện sách', '', '<p>Thư viện sách thành phố được thành lập vào 12/1994 nằm ở trung tâm thành phố tại số 2, Phú Lợi, khóm 1, phường 2, thành phố Biên Hòa.</p>\n<p>- Kinh phí hoạt động hàng năm của Thư viện không ổn định, thường dao động từ 5 - 23 triệu đồng.</p>\n<p>* Nhân sự: Thư viện có 02 nhân sự, trong đó: 01 nhân sự trình độ Đại học Thông tin Thư viện, 01 nhân sự trình độ Cao đẳng Thông tin Thư viện.</p>\n<p>- Thư viện hiện có 11.593 tên với 29.168 bản sách, trong đó sách thiếu nhi là 10.992 tên với 28.364 bản.</p>\n<p>- Tổng số báo, tạp chí hiện có của Thư viện 70 tên với 7.445 bản.</p>\n<p>Để đảm bảo nguồn sách phục vụ bạn đọc, Thư viện luôn chú trọng công tác bổ sung sách mới. Hàng năm Thư viện bổ sung khoảng 300- 1.000 bản sách và 20 loại báo, tạp chí.</p>\n<p>* Tổ chức phục vụ: Thư viện mở cửa phục vụ bạn đọc 5 ngày trong tuần (từ thứ hai đến thứ sáu), phục vụ chủ yếu là độc giả thiếu nhi trên địa bàn thành phố Biên Hòa.</p>\n<p>- Hàng năm thư viện đã cấp được trên 800 thẻ bạn đọc, phục vụ trên 40.000 lượt người với hơn 100.000 lượt tài liệu.</p>\n<p>Số điện thoại liên hệ: 0987522003</p>', '', 6, '2012-04-26 08:51:30', 1, 0, '', '', 'thu-vien-sach', '', 'Thư viện sách', '', 1, '200312'),
 (82, '230412 COFFEE', '', '<p style="text-align:justify;">Các bạn thân mến,<br />Trong thời gian vừa qua. <span style="color:#993300;"><strong>230412 COFFEE </strong></span>đã chuyển qua 2 giai đoạn với 2 phiên bản demo và mở rộng. Tuy nhiên, chưa thực sự trở thành website hữu ích với mức độ tương tác giữa người truy cập. Do đó, chúng tôi hân hoan thông báo tới toàn thể thành viên thường xuyên truy cập vào <strong><span style="color:#993300;">230412 COFFEE</span></strong> , thành viên góp ý về việc nâng cấp phiên bản mới với các nội dung trong bản Beta như sau:<br />- Bạn có thể sử dụng guidebook cho các chuyến đi của mình trên 2 bản App cho điện thoại và online trực tuyến.<br />- Đăng kí thành viên. Tham gia trực tiếp và quản lý các hoạt động offline, chuyến đi của mình.<br />- Chia sẻ chuyến đi, post bài kinh nghiệm v.v qua khả năng kết nối mới.<br />- Giao diện thân thiện, dễ sử dụng<br />- Các tiện ích khác biệt, lợi ích vô hạn cho thành viên thường xuyên.<br />Và còn rất nhiều các tiện ích khác.</p>\n<p style="text-align:justify;">Dự tính phiên bản <strong><span style="color:#993300;">230412 COFFEE</span></strong> sẽ thử nghiệm online trong khoảng thời gian từ 15/2/2012 - 30/2/2012.</p>\n<p style="text-align:justify;">Rất mong trong thời gian chờ đợi phiên bản mới. Các bạn vẫn luôn theo sát chúng tôi và chia sẻ cùng chúng tôi tại phuotcafe.com hiện tại.</p>\n<p style="text-align:justify;"> </p>', '', 9, '2012-04-26 09:25:37', 1, 0, '', '', '230412-coffee', '', '230412 COFFEE', '', 1, '230412'),
 (83, 'Giới thiệu sơ lược', '', '<p>Từ ngàn xưa, dẫu cuộc sống nghèo khó, cha ông ta cũng đã biết thưởng ngoạn vẻ đẹp món quà đặc biệt của thiên nhiên, sự tinh túy của đất trời, làm phong phú thêm vẻ đẹp tâm hồn của con người, đó là hương và sắc của ngàn hoa rực rỡ!</p>\r\n<p>Ngày nay, nhịp sống hối hả có thể khiến nhiều người quên đi thú vui bình dị mà thanh tao, giản đơn mà cao quý ấy. Nhưng, cùng với sự thành đạt của mỗi người, sự tiến bộ của xã hội, hương sắc của hoa dần trở thành một phần tất yếu của cuộc sống.</p>\r\n<p>Không chỉ là vật trang trí cho không gian được sang trọng, hoa còn trở thành công cụ thể hiện đẳng cấp và phong cách sống khác biệt, là phương tiện để sẻ chia những niềm vui nỗi buồn, và đặc biệt, hoa trở thành phương tiện để giao tế một cách hiệu quả khó có thể thay thế.</p>\r\n<p>Cuộc sống và công việc của bạn dù có bộn bề với những lo toan, hãy đến với Hoa Sài Gòn, chúng tôi sẽ giúp bạn bắc nhịp cầu nối những bờ vui, làm vững bền mối thâm giao bằng hữu, giúp bạn tạo dựng quan hệ thân tình, tạo dựng đẳng cấp và phong cách khác biệt trong cuộc sống và công việc hay để chia ngọt sẻ bùi, gửi gắm tâm tư ...</p>\r\n<p>Chỉ đơn giản bằng một mẩu tin nhắn hay một cuộc điện thoại, mọi nhu cầu về hoa của bạn sẽ được Hoa Sài Gòn đáp ứng tận nơi!</p>', '', 45, '2012-05-02 07:20:32', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', 'Từ ngàn xưa, dẫu cuộc sống nghèo khó, cha ông ta cũng đã biết thưởng ngoạn vẻ đẹp món quà đặc biệt của thiên nhiên, sự tinh túy của đất trời, làm phong phú thêm vẻ đẹp tâm hồn của con người, đó là hương và sắc của ngàn hoa rực rỡ!', '', 1, 'hoasaytinh'),
-(84, 'Giới thiệu sơ lược', '', '<p>Hoà mình vào sự phát triển chung của đất nước với những biến đổi không ngừng của thời cuộc, mỗi doanh nghiệp bằng thực lực và những kế sách đúng đắn của mình luôn tìm được một vị trí xứng đáng trong nền kinh tế thị trường đầy khắc nghiệt. Không là một ngoại lệ DNTN CỬA SẮT 24H với kinh nghiệm nhiều năm hoạt động trong lĩnh vực. SẮT - NHÔM – INOX, với một đội ngũ công nhân lành nghề, tác phong chuyên nghiệp, sản phẩm chất lượng, đa dạng phù hợp kiến trúc và thẩm mỹ mọi công trình, cùng với giá cả hợp lý, hậu mãi chu đáo đã nhanh chóng chiếm lĩnh và chinh phục nhiều khách hàng lớn và khó tính, dần dần khẳng định vị thế của mình trong lĩnh vực xây dựng nói chung và hoạt động sản xuất kinh doanh cửa panô, cửa cuốn, cửa sắt, cửa cổng xếp, trụ lan can kính, cầu thang kính, lan can, cầu thang sắt, Inox, mặt dựng nhôm kính, mặt dựng aluminium, vách ngăn</p>', '', 44, '2012-05-03 01:33:33', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', 'Hoà mình vào sự phát triển chung của đất nước với những biến đổi không ngừng của thời cuộc, mỗi doanh nghiệp bằng thực lực và những kế sách đúng đắn của mình luôn tìm được một vị trí xứng đáng trong nền kinh tế thị trường đầy khắc nghiệt. Không là mộ', '', 1, 'cuasat24h'),
-(85, 'Nhân sự', '', '<p>SƠ ĐỒ TỔ CHỨC</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/cuasat24h/image/sodotochuc.gif" alt="" width="520" height="329" /></p>\r\n<p>DANH SÁCH CÁN BỘ CHỦ CHỐT CÔNG TY CỔ PHẦN NỐP</p>\r\n<p>1. Lưu Thanh Hùng - Giám đốc</p>\r\n<p>2. Hồ Châu Tuấn - Phó giám đốc</p>\r\n<p>3. Lê Anh Tuấn - Trưởng phòng Tài Chính Nhân Sự Kinh Doanh</p>\r\n<p>4. Phạm Thị Hạnh - Phó phòng Tài Chính Nhân Sự Kinh Doanh</p>\r\n<p>5. Nguyễn Ngọc Cẩm Thúy - Phó phòng Kỹ Thuật Tổ Chức Thi Công</p>\r\n<p>6. Ngô Hoàng Tuấn - Phó quản đốc vườn ươm</p>\r\n<p>7. Nguyễn Văn Tặng - Phó quản đốc vườn ươm</p>', '', 10, '2012-05-03 01:36:57', 2, 0, NULL, NULL, 'nhan-su', '', '', '', 1, 'cuasat24h');
+(84, 'Giới thiệu sơ lược', '', '<p>Hoà mình vào sự phát triển chung của đất nước với những biến đổi không ngừng của thời cuộc, mỗi doanh nghiệp bằng thực lực và những kế sách đúng đắn của mình luôn tìm được một vị trí xứng đáng trong nền kinh tế thị trường đầy khắc nghiệt. Không là một ngoại lệ DNTN CỬA SẮT 24H với kinh nghiệm nhiều năm hoạt động trong lĩnh vực. SẮT - NHÔM – INOX, với một đội ngũ công nhân lành nghề, tác phong chuyên nghiệp, sản phẩm chất lượng, đa dạng phù hợp kiến trúc và thẩm mỹ mọi công trình, cùng với giá cả hợp lý, hậu mãi chu đáo đã nhanh chóng chiếm lĩnh và chinh phục nhiều khách hàng lớn và khó tính, dần dần khẳng định vị thế của mình trong lĩnh vực xây dựng nói chung và hoạt động sản xuất kinh doanh cửa panô, cửa cuốn, cửa sắt, cửa cổng xếp, trụ lan can kính, cầu thang kính, lan can, cầu thang sắt, Inox, mặt dựng nhôm kính, mặt dựng aluminium, vách ngăn</p>', '', 91, '2012-05-03 01:33:33', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', 'Hoà mình vào sự phát triển chung của đất nước với những biến đổi không ngừng của thời cuộc, mỗi doanh nghiệp bằng thực lực và những kế sách đúng đắn của mình luôn tìm được một vị trí xứng đáng trong nền kinh tế thị trường đầy khắc nghiệt. Không là mộ', '', 1, 'cuasat24h'),
+(85, 'Nhân sự', '', '<p>SƠ ĐỒ TỔ CHỨC</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/cuasat24h/image/sodotochuc.gif" alt="" width="520" height="329" /></p>\r\n<p>DANH SÁCH CÁN BỘ CHỦ CHỐT CÔNG TY CỔ PHẦN NỐP</p>\r\n<p>1. Lưu Thanh Hùng - Giám đốc</p>\r\n<p>2. Hồ Châu Tuấn - Phó giám đốc</p>\r\n<p>3. Lê Anh Tuấn - Trưởng phòng Tài Chính Nhân Sự Kinh Doanh</p>\r\n<p>4. Phạm Thị Hạnh - Phó phòng Tài Chính Nhân Sự Kinh Doanh</p>\r\n<p>5. Nguyễn Ngọc Cẩm Thúy - Phó phòng Kỹ Thuật Tổ Chức Thi Công</p>\r\n<p>6. Ngô Hoàng Tuấn - Phó quản đốc vườn ươm</p>\r\n<p>7. Nguyễn Văn Tặng - Phó quản đốc vườn ươm</p>', '', 19, '2012-05-03 01:36:57', 2, 0, NULL, NULL, 'nhan-su', '', '', '', 1, 'cuasat24h'),
+(86, 'Giới thiệu sơ lược', '', '<p>Hoà mình vào sự phát triển chung của đất nước với những biến đổi không ngừng của thời cuộc, mỗi doanh nghiệp bằng thực lực và những kế sách đúng đắn của mình luôn tìm được một vị trí xứng đáng trong nền kinh tế thị trường đầy khắc nghiệt. Không là một ngoại lệ với kinh nghiệm nhiều năm hoạt động trong lĩnh vực. SẮT - NHÔM – INOX, với một đội ngũ công nhân lành nghề, tác phong chuyên nghiệp, sản phẩm chất lượng, đa dạng phù hợp kiến trúc và thẩm mỹ mọi công trình, cùng với giá cả hợp lý, hậu mãi chu đáo đã nhanh chóng chiếm lĩnh và chinh phục nhiều khách hàng lớn và khó tính, dần dần khẳng định vị thế của mình trong lĩnh vực xây dựng nói chung và hoạt động sản xuất kinh doanh cửa panô, cửa cuốn, cửa sắt, cửa cổng xếp, trụ lan can kính, cầu thang kính, lan can, cầu thang sắt, Inox, mặt dựng nhôm kính, mặt dựng aluminium, vách ngăn</p>', '', 20, '2012-05-03 14:39:49', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', '', '', 1, 'ducpano'),
+(87, 'Giới thiệu công ty', '', '<p>Nội dung gioi thiệu</p>', '', 3, '2012-05-03 14:40:19', 2, 0, NULL, NULL, 'gioi-thieu-cong-ty', '', '', '', 1, 'ducpano');
 
 -- --------------------------------------------------------
 
@@ -807,7 +818,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=67 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=69 ;
 
 --
 -- Dumping data for table `dos_module_advs`
@@ -822,7 +833,9 @@ INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `ur
 (63, 'trai', NULL, 'trai.jpg', 'http://grouplaptrinh.com', '2012-05-02 06:51:57', '2012-05-01 16:00:00', '2012-05-15 16:00:00', 0, 2, 'left', '_bank', 1, 'hoasaytinh'),
 (64, 'top1', NULL, 'top1.gif', 'http://hoasaytinh.dos.vn/', '2012-05-02 06:59:10', '2012-05-01 16:00:00', '2012-05-23 16:00:00', 0, 3, 'top', '_bank', 1, 'hoasaytinh'),
 (65, 'top2', NULL, 'top2.gif', 'http://hoasaytinh.dos.vn/', '2012-05-02 06:59:38', '2012-05-01 16:00:00', '2012-05-22 16:00:00', 0, 4, 'top', '_bank', 1, 'hoasaytinh'),
-(66, 'Tin môi trường', NULL, 'tin-moi-truong.png', 'http://www.tinmoitruong.vn/doanh-nghiep_36_1_1_trang-1.html', '2012-05-03 03:32:07', '2012-05-02 16:00:00', '2012-06-09 16:00:00', 0, 1, 'left', '_bank', 1, 'cuasat24h');
+(66, 'Tin môi trường', NULL, 'tin-moi-truong.png', 'http://www.tinmoitruong.vn/doanh-nghiep_36_1_1_trang-1.html', '2012-05-03 03:32:07', '2012-05-02 16:00:00', '2012-06-09 16:00:00', 0, 1, 'left', '_bank', 1, 'cuasat24h'),
+(67, 'Tạo website trực tuyến', NULL, 'tao-website-truc-tuyen.gif', 'http://dos.vn', '2012-05-03 08:08:16', '2012-05-02 17:00:00', '2012-05-30 17:00:00', 0, 2, 'left', '_bank', 1, 'cuasat24h'),
+(68, 'Tạo website trực tuyến', NULL, 'tao-website-truc-tuyen.gif', 'http://dos.vn', '2012-05-03 14:52:31', '2012-05-02 17:00:00', '2012-05-30 17:00:00', 0, 1, 'left', '_bank', 1, 'ducpano');
 
 -- --------------------------------------------------------
 
@@ -843,7 +856,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=334 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=336 ;
 
 --
 -- Dumping data for table `dos_module_banners`
@@ -875,7 +888,9 @@ INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `ba
 (328, '2012-05-02 07:08:33', 'ba1', 'ba1.jpg', 'http://hoasaytinh.dos.vn/', 1, 'banners', 'default', 1, 'hoasaytinh'),
 (329, '2012-05-02 07:09:31', 'ban3', 'ban3.jpg', '', 2, 'banners', 'default', 1, 'hoasaytinh'),
 (330, '2012-05-03 03:07:58', 'banner 1', 'ba1.jpg', '', 2, 'banners', 'default', 1, 'cuasat24h'),
-(332, '2012-05-03 03:08:15', 'banner2', 'ba3.jpg', '', 4, 'banners', 'default', 1, 'cuasat24h');
+(332, '2012-05-03 03:08:15', 'banner 2', 'ba3.jpg', '', 4, 'banners', 'default', 1, 'cuasat24h'),
+(334, '2012-05-03 07:45:03', 'Logo', 'logo.png', '', 5, 'logo', 'default', 1, 'cuasat24h'),
+(335, '2012-05-03 14:24:08', 'Logo', 'logo.png', '', 1, 'logo', 'default', 1, 'ducpano');
 
 -- --------------------------------------------------------
 
@@ -979,7 +994,14 @@ INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `
 ('Dịch vụ', NULL, 'services', NULL, 4, NULL, NULL, NULL, NULL, 'cuasat24h'),
 ('Tin tức & sự kiện', NULL, 'news', NULL, 5, NULL, NULL, NULL, NULL, 'cuasat24h'),
 ('Video', NULL, 'video', NULL, 6, NULL, NULL, NULL, NULL, 'cuasat24h'),
-('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'cuasat24h');
+('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'cuasat24h'),
+('Trang chủ', NULL, 'default', NULL, 1, NULL, NULL, NULL, NULL, 'ducpano'),
+('Giới thiệu', NULL, 'about', NULL, 2, NULL, NULL, NULL, NULL, 'ducpano'),
+('Sản phẩm', NULL, 'products', NULL, 3, NULL, NULL, NULL, NULL, 'ducpano'),
+('Dịch vụ', NULL, 'services', NULL, 4, NULL, NULL, NULL, NULL, 'ducpano'),
+('Tin tức & sự kiện', NULL, 'news', NULL, 5, NULL, NULL, NULL, NULL, 'ducpano'),
+('Video', NULL, 'video', NULL, 6, NULL, NULL, NULL, NULL, 'ducpano'),
+('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'ducpano');
 
 -- --------------------------------------------------------
 
@@ -1010,7 +1032,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=75 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=76 ;
 
 --
 -- Dumping data for table `dos_module_news`
@@ -1034,7 +1056,8 @@ INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic
 (71, 'Bảo vệ đồ gỗ ngoài trời', '', '2012-05-03 02:35:40', 'bao-ve-do-go-ngoai-troi.jpg', '<p>Những chiếc bàn gỗ, ghế gỗ bầy ngoài vườn cho bữa tiệc trà, những chiếc xích đu bằng gỗ cho con chơi đùa..., chúng rất dễ bị hỏng khi phơi ngoài trời. Bạn có biết cách bảo vệ chúng?</p>', '', '<p>Những chiếc bàn gỗ, ghế gỗ bầy ngoài vườn cho bữa tiệc trà, những chiếc xích đu bằng gỗ cho con chơi đùa..., chúng rất dễ bị hỏng khi phơi ngoài trời. Bạn có biết cách bảo vệ chúng?</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/cuasat24h/image/08_DOOL_100709_K1_1.jpg" alt="" width="500" height="399" /></p>\r\n<p style="text-align:left;">Bạn nên đặt đồ gỗ ở những nơi không có ánh nắng trực tiếp, tốt nhất là dưới bóng râm và mái hiên.</p>\r\n<p>Khi trời quá nắng hoặc quá lạnh hãy phủ lên chúng một lớp vải bọc.</p>\r\n<p>Nên lau chùi bàn ghế thường xuyên.</p>\r\n<p>Bộ dụng cụ đơn giản để bảo quản đồ gỗ ngoài trời bao gồm: khăn mềm, nước rửa (có thể sử dụng loại nước rửa chén gia đình pha loãng), giấy nhám cỡ hạt 320, găng tay nhựa, cọ sơn và không thể thiếu dầu bảo quản gỗ chuyên dùng.</p>\r\n<p><strong>Bước 1</strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/cuasat24h/image/08_DOOL_100709_K1_2.jpg" alt="" width="500" height="375" /></p>\r\n<p style="text-align:left;">- Trong quá trình thực hiện bảo trì sản phẩm bạn nên chọn nơi khô ráo, không bị mưa để thực hiện quá trình.</p>\r\n<p>- Bước đầu tiên là bạn làm sạch các bụi bẩn trên sản phẩm bằng cách cọ rửa bằng nước, có thể kết hợp nước rửa pha loãng để làm sạch các vết bẩn cứng đầu.</p>\r\n<p>- Sau đó rửa sạch lại bằng nước cho trôi hết các vết bẩn và nước rửa. Sau khi làm sạch xong, bạn lau khô đồ gỗ và để sản phẩm khô khoảng 24h, nếu muốn, hãy dời đồ gỗ ra chỗ có nắng để nước trên bề mặt gỗ được bốc hơi nhanh.</p>\r\n<p><strong>Bước 2</strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/cuasat24h/image/08_DOOL_100709_K1_3.jpg" alt="" width="500" height="342" /></p>\r\n<p style="text-align:left;">- Khi sản phẫm gỗ đã khô ráo, sử dụng giấy nhám cỡ hạt #320 (loại giấy nhám mịn) làm phẳng lại bề mặt sản phẩm gỗ, thao tác chỉ cần chà nhẹ thôi là đủ để làm phẳng bề mặt. Sau khi làm phẳng xong, dùng vải lau sạch bụi gỗ trên sản phẩm.</p>\r\n<p style="text-align:left;"><strong>Bước 3</strong></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/cuasat24h/image/08_DOOL_100709_K1_4.jpg" alt="" width="303" height="420" /></p>\r\n<p style="text-align:left;">- Tiến hành phủ lại lớp dầu bảo quản lên bề mặt sản phẩm, nên đeo găng tay nhựa (không dùng găng cao su vì sẽ bị vỡ khi tiếp xúc với dầu bảo quản gỗ) khi thao tác phủ dầu bảo quản.</p>\r\n<p>- Phương pháp phủ rất đơn giản bằng cách bạn có thể dùng cọ sơn hoặc vải lau mềm để thấm dầu quét lên bề mặt. Nhưng lưu ý là quét không để sót chi tiết nào của sản phẩm. Khi hoàn tất toàn bộ sản phẩm, dùng vải lau ráo các vệt dầu dư trên bề mặt và để sản phẩm vào nơi khô ráo, không bị mưa để lớp dầu bảo quản được khô (tương tự như khi chúng ta quét sơn trên cửa sắt, phải để màng sơn khô). Thời gian khô là khoảng 24h cho nên không sử dụng sản phẩm trong thời gian này.</p>\r\n<p>- Thao tác trên có thể được lặp lại sau 24h, để tăng thêm một lớp dầu bảo quản trên bề mặt (nhưng tối đa chì khoảng 2-3 lớp). Bạn nên nhớ rằng khi số lớp dầu bảo quản nhiều hơn một lớp thì cũng có nghĩa là sản phẩm gỗ của bạn được bảo vệ tốt hơn.</p>\r\n<p>- Bạn có thể sử dụng sản phẩm đồ gỗ lại sau 24h kể từ lúc phủ lớp dầu bảo quản sau cùng.</p>\r\n<p>Loại dầu bảo quản chuyên dùng có các khả năng như thẩm thấu sâu vào các sợi gỗ, chống chịu được mưa, nắng, tia tử ngoại, nấm mốc,..và co giãn theo gỗ khi gặp thời tiết nóng, lạnh, cho nên khả năng bảo vệ cho đồ gỗ ngoài trời rất tốt.</p>\r\n<p>Một số loại sơn hay vec- ni ngoài thị trường được bày bán ở các tiệm sơn cùng có thể có một trong các tính năng trên nhưng tốt nhất là bạn nên tìm đúng loại chuyên dùng với các yêu cầu cơ bản như: chịu mưa nắng tốt, không bị bong tróc, kháng nấm mốc.</p>\r\n<p>Chu kỳ thực hiện bảo trì là 03 tháng/lần hoặc bạn là người rất bận rộn thì ít nhất là khoảng 06 tháng/lần. Còn ngược lại, để giản đơn thì khoảng lâu nhất là 02 năm bạn nên mua lại bộ đồ gỗ ngoài trời mới cho ngôi nhà của mình.</p>', '', 'bao-ve-do-go-ngoai-troi', '', '', '', 0, 4, 0, NULL, NULL, 1, 53),
 (72, 'Khoảng sân nhỏ xanh mát giữa nhà', '', '2012-05-03 02:50:33', 'khoang-san-nho-xanh-mat-giua-nha.JPG', '<p>Ở những ngôi nhà phố rất cần một khoảng xanh tươi giữa các không gian trong nhà để làm dịu đi cái nắng oi ả của mùa hè.</p>', '', '<p>Ở những ngôi nhà phố rất cần một khoảng xanh tươi giữa các không gian trong nhà để làm dịu đi cái nắng oi ả của mùa hè.</p>\r\n<p>Với khoảng diện tích khiêm tốn trong những ngôi nhà phố, nếu biết cách khéo léo thiết kế, bố trí thì vẫn có thể tạo nên khoảng xanh mát của cây cối, hoa lá, chim chóc mang đến vẻ đẹp thanh lịch và mát mẻ cho không gian.</p>\r\n<p>Thông thường, gia chủ ở những ngôi nhà phố thường “để lại” một khoảng đất nhỏ phía trước hoặc sau nhà để tạo nên khoảng patio xinh xắn ngồi hóng mát trong mỗi chiều mùa hè. Tuy nhiên, archi.vn lại muốn giới thiệu đến bạn những giải pháp thiết kế độc đáo, tạo khoảng sân nhỏ được nối tiếp từ nhà trước đến nhà sau hoặc từ cổng nghỉ vào đến nhà là một giải pháp thú vị. Đây cũng là một cách tận dụng không gian để mang lại bầu không khí trong lành và thoải mái cho ngôi nhà của bạn.</p>\r\n<p>Để thực sự tạo kết nối không gian trong nhà và ngoài sân, bạn nên chọn những vật liệu thân thiện với môi trường như gỗ, đá, sỏi… Thêm những yếu tố thiên nhiên như cây cỏ, hoa lá, nước… để thực sự biến căn nhà của bạn thành không gian nghỉ dưỡng tuyệt vời ngay trong lòng thành phố.</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/cuasat24h/image/02_020512DOOLThangMB0.JPG" alt="" width="501" height="278" /></p>\r\n<p style="text-align:left;">Thông thường, khoảng sân nhỏ kết nối giữa hai không gian sống trong cùng một ngôi nhà sẽ được chia thành hai khu vực tương đối rõ ràng. Một khu vực được thiết kế sàn bằng phẳng tiện lợi cho việc đi lại, đặt ghế hay bàn ăn cho những buổi tiệc cuối tuần. Một khu vực sử dụng để bài trí tiểu cảnh, được thiết kế như một khu “sinh thái mini” tạo vẻ đẹp sinh động và bắt mắt cho khoảng sân nhỏ.</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/cuasat24h/image/02_020512DOOLThangMB01.JPG" alt="" width="503" height="304" /></p>\r\n<p style="text-align:left;">Tùy vào tính cách của gia chủ để mang đến nét đẹp riêng cho khoảng sân. Khu vườn nhỏ xinh này được thiết kế bởi các hình khối chữ nhật đơn giản với các ô được phân chia chức năng rõ ràng như: trồng rau, trồng hoa, xung quanh là lối đi bằng đá trắng xinh xắn. Ở giữa là khu vực bằng phẳng dành đặt chiếc ghế tựa dài ngồi đọc sách hay ngắm đất trời mỗi buổi chiều hè.</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/cuasat24h/image/02_020512DOOLThangMB02.jpg" alt="" width="501" height="317" /></p>\r\n<p style="text-align:left;">Khác với cách bố trí thông thường, khu vực kết nối 2 không gian của ngôi nhà được gia chủ thiết kế mang đậm phong cách Á Đông với hệ thống non bộ và ao nhỏ nuôi cá cảnh. Một vài cây, hoa được đặt trên các phiến đá tạo nên không gian rất gần với thiên nhiên. Đặt một chiếc ghế giường nho nhỏ bên cạnh ao cá cảnh, tiếng nước róc rách và hơi nước mát mẻ sẽ giúp tinh thần của bạn thêm thư thái trong mỗi buổi trưa hè.</p>', '', 'khoang-san-nho-xanh-mat-giua-nha', '', '', '', 0, 5, 0, NULL, NULL, 1, 55),
 (73, 'Dùng tượng rồng tránh họa mang vận may đến gia đình', '', '2012-05-03 02:52:00', 'dung-tuong-rong-tranh-hoa-mang-van-may-den-gia-dinh.jpg', '<p>Rồng là linh vật trong phong thủy, ngoài việc đem lại những ý nghĩa tốt đẹp và tránh họa tiểu nhân, sử dụng hình tượng rồng còn đem lại may mắn cho...</p>', '', '<p>Rồng là linh vật trong phong thủy, ngoài việc đem lại những ý nghĩa tốt đẹp và tránh họa tiểu nhân, sử dụng hình tượng rồng còn đem lại may mắn cho...</p>\r\n<p>Một trong những vấn đề được phong thủy đặc biệt quan tâm là việc tạo ra sự cân bằng về năng lượng.</p>\r\n<p>Cách tốt nhất để có được điều đó là vận dụng những vật phẩm phong thủy vào không gian sống. Với phụ nữ, nên sử dụng biểu tượng rồng để thu hút năng lượng dương.</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/cuasat24h/image/02_020512DOOLThangTT010.jpg" alt="" width="439" height="420" /></p>\r\n<p style="text-align:left;">Rồng là biểu tượng cung cấp năng lượng dương rất mạnh, chủ về vận may trong tình yêu cho những phụ nữ độc thân sống 1 mình hoặc sống với mẹ.</p>\r\n<p>Trong trường hợp này, năng lượng toàn âm tạo ra sự mất cân bằng. Nếu việc trang trí của ngôi nhà phản ánh quá nhiều năng lượng âm, sẽ khiến người phụ nữ trong gia đình gặp khó khăn trong việc tìm kiếm người yêu và bạn đời của mình.</p>\r\n<p>Bạn có thể khắc phục bằng cách khai thác năng lượng dương rất mạnh của rồng. Nơi tốt nhất để tạo năng lượng dương của rồng là phòng khách.</p>\r\n<p>Bạn đứng ở giửa phòng khách nhìn ra phía trước và chọn bờ tường bên trái của phòng khách, tức là phương vị Thanh long, để bố trí một kệ nhỏ và đặt rồng trên kệ này, đầu rồng nhìn ra cửa chính của ngôi nhà.</p>\r\n<p>Để đạt hiệu quả tốt nhất, bạn nên chọn ngày tốt để đặt rồng trong nhà.</p>\r\n<p>Những ngày tốt đó gồm có 5 ngày (còn gọi là ngũ long nhật: 5 ngày rồng) như sau: Giáp Thìn, Bính Thìn, Mậu Thìn, Canh Thìn, Nhâm Thìn.</p>', '', 'dung-tuong-rong-tranh-hoa-mang-van-may-den-gia-dinh', '', 'Dùng tượng rồng tránh họa mang vận may đến gia đình', '', 0, 6, 0, NULL, NULL, 1, 55),
-(74, 'Choáng ngợp với khu rừng tre tuyệt đẹp ở Nhật', '', '2012-05-03 02:53:46', 'choang-ngop-voi-khu-rung-tre-tuyet-dep-o-nhat.jpg', '<p>Rừng tre Sagano nằm ở phía tây bắc của Kyoto trên diện tích 16 km2. Đây là một trong những khu tự nhiên đẹp nhất ở Nhật.</p>', '', '<p>Rừng tre Sagano nằm ở phía tây bắc của Kyoto trên diện tích 16 km2. Đây là một trong những khu tự nhiên đẹp nhất ở Nhật.</p>\r\n<p>Không chỉ ấn tượng bởi vẻ đẹp tự nhiên, rừng tre Sagano còn tạo ra những bản nhạc du dương khi gió thổi qua những rặng tre xào xạc. Âm thanh của tre ở đây còn được bầu chọn trong top 100 âm thanh cần được bảo tồn ở Nhật. Theo Amusing Planet, bạn chỉ cần mất 30 phút đi tàu từ Kyoto để tới rừng Sagano.</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/cuasat24h/image/27_270412DOOLThangTT010.jpg" alt="" width="560" height="372" /></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/cuasat24h/image/27_270412DOOLThangTT011.jpg" alt="" width="560" height="372" /></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/cuasat24h/image/27_270412DOOLThangTT09.jpg" alt="" width="560" height="314" /></p>', '', 'choang-ngop-voi-khu-rung-tre-tuyet-dep-o-nhat', '', '', '', 0, 7, 0, NULL, NULL, 1, 55);
+(74, 'Choáng ngợp với khu rừng tre tuyệt đẹp ở Nhật', '', '2012-05-03 02:53:46', 'choang-ngop-voi-khu-rung-tre-tuyet-dep-o-nhat.jpg', '<p>Rừng tre Sagano nằm ở phía tây bắc của Kyoto trên diện tích 16 km2. Đây là một trong những khu tự nhiên đẹp nhất ở Nhật.</p>', '', '<p>Rừng tre Sagano nằm ở phía tây bắc của Kyoto trên diện tích 16 km2. Đây là một trong những khu tự nhiên đẹp nhất ở Nhật.</p>\r\n<p>Không chỉ ấn tượng bởi vẻ đẹp tự nhiên, rừng tre Sagano còn tạo ra những bản nhạc du dương khi gió thổi qua những rặng tre xào xạc. Âm thanh của tre ở đây còn được bầu chọn trong top 100 âm thanh cần được bảo tồn ở Nhật. Theo Amusing Planet, bạn chỉ cần mất 30 phút đi tàu từ Kyoto để tới rừng Sagano.</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/cuasat24h/image/27_270412DOOLThangTT010.jpg" alt="" width="560" height="372" /></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/cuasat24h/image/27_270412DOOLThangTT011.jpg" alt="" width="560" height="372" /></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/cuasat24h/image/27_270412DOOLThangTT09.jpg" alt="" width="560" height="314" /></p>', '', 'choang-ngop-voi-khu-rung-tre-tuyet-dep-o-nhat', '', '', '', 0, 7, 0, NULL, NULL, 1, 55),
+(75, 'Bảo vệ đồ gỗ ngoài trời', '', '2012-05-03 15:01:06', 'bao-ve-do-go-ngoai-troi.jpg', '<p>Những chiếc bàn gỗ, ghế gỗ bầy ngoài vườn cho bữa tiệc trà, những chiếc xích đu bằng gỗ cho con chơi đùa..., chúng rất dễ bị hỏng khi phơi ngoài trời. Bạn có biết cách bảo vệ chúng?</p>', '', '<p>Những chiếc bàn gỗ, ghế gỗ bầy ngoài vườn cho bữa tiệc trà, những chiếc xích đu bằng gỗ cho con chơi đùa..., chúng rất dễ bị hỏng khi phơi ngoài trời. Bạn có biết cách bảo vệ chúng?</p>', '', 'bao-ve-do-go-ngoai-troi', '', '', '', 0, 1, 0, NULL, NULL, 1, 56);
 
 -- --------------------------------------------------------
 
@@ -1061,7 +1084,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=56 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=57 ;
 
 --
 -- Dumping data for table `dos_module_news_cat`
@@ -1082,7 +1105,8 @@ INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_
 (52, 0, 'Quà tặng', '', NULL, NULL, 'qua-tang', '', '', '', '', 5, NULL, NULL, 1, 'hoasaytinh'),
 (53, 0, 'Tin tức về đồ gỗ', '', NULL, NULL, 'tin-tuc-ve-do-go', '', 'Tin tức về đồ gỗ', '', 'tin-tuc-ve-do-go.jpg', 1, NULL, NULL, 1, 'cuasat24h'),
 (54, 0, 'Tin tức trong nước', '', NULL, NULL, 'tin-tuc-trong-nuoc', '', '', '', 'tin-tuc-trong-nuoc.jpg', 2, NULL, NULL, 1, 'cuasat24h'),
-(55, 0, 'Khám phá trải nghiệm', '', NULL, NULL, 'kham-pha-trai-nghiem', '', 'Khám phá trải nghiệm', '', '', 3, NULL, NULL, 1, 'cuasat24h');
+(55, 0, 'Khám phá trải nghiệm', '', NULL, NULL, 'kham-pha-trai-nghiem', '', 'Khám phá trải nghiệm', '', '', 3, NULL, NULL, 1, 'cuasat24h'),
+(56, 0, 'Tin tức về đồ gỗ', '', NULL, NULL, 'tin-tuc-ve-do-go', '', '', '', '', 1, NULL, NULL, 1, 'ducpano');
 
 -- --------------------------------------------------------
 
@@ -1129,7 +1153,11 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('day_time', 2456051, 'cuasat24h'),
 ('max_count', 1, 'cuasat24h'),
 ('counter', 1, 'cuasat24h'),
-('yesterday', 1, 'cuasat24h');
+('yesterday', 1, 'cuasat24h'),
+('day_time', 2456052, 'ducpano'),
+('max_count', 1, 'ducpano'),
+('counter', 1, 'ducpano'),
+('yesterday', 1, 'ducpano');
 
 -- --------------------------------------------------------
 
@@ -1149,7 +1177,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1336020352, 'cuasat24h');
+('''127.0.0.1''', 1336087419, 'ducpano');
 
 -- --------------------------------------------------------
 
@@ -1186,7 +1214,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=459 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=462 ;
 
 --
 -- Dumping data for table `dos_module_products`
@@ -1310,7 +1338,10 @@ INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, 
 (456, 'Cửa gỗ chớp lật 01', '', '2012-05-03 02:41:50', 'cua-go-chop-lat-01-thumb.jpg', 'cua-go-chop-lat-01.jpg', NULL, '', '', '<p>Mã hàng: Cửa gỗ chớp lật 01<br />Hãng sản xuất : VietNam</p>', '', 'cua-go-chop-lat-01', '', '', '', 0, 12, '', 1, NULL, NULL, NULL, NULL, NULL, 1, 139),
 (457, 'Cửa gỗ chớp lật 02', '', '2012-05-03 02:43:32', 'cua-go-chop-lat-02-thumb.jpg', 'cua-go-chop-lat-02.jpg', NULL, '', '', '<p>Mã hàng: Cửa gỗ chớp lật 02<br />Hãng sản xuất : VietNam</p>', '', 'cua-go-chop-lat-02', '', '', '', 0, 13, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 139);
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(458, 'Cửa pano kính 06', '', '2012-05-03 02:44:25', 'cua-pano-kinh-06-thumb.jpg', 'cua-pano-kinh-06.jpg', NULL, '', '', '<p>Tình trang: Còn hàng</p>', '', 'cua-pano-kinh-06', '', 'Cửa pano kính 06', '', 0, 14, '', 1, NULL, NULL, NULL, NULL, NULL, 1, 138);
+(458, 'Cửa pano kính 06', '', '2012-05-03 02:44:25', 'cua-pano-kinh-06-thumb.jpg', 'cua-pano-kinh-06.jpg', NULL, '', '', '<p>Tình trang: Còn hàng</p>', '', 'cua-pano-kinh-06', '', 'Cửa pano kính 06', '', 0, 14, '', 1, NULL, NULL, NULL, NULL, NULL, 1, 138),
+(459, 'dasdasd', '', '2012-05-03 08:44:14', 'dasdasd-thumb.jpg', 'dasdasd.jpg', NULL, '<p>sadadasd</p>', '', '<p>asdasd</p>', '', 'dasdasd', '', 'asdasdsa', '', 0, 15, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 139),
+(460, 'Sản phẩm', '', '2012-05-03 14:37:46', 'san-pham-thumb.jpg', 'san-pham.jpg', NULL, '<p>Mô tả sơ lược</p>', '', '<p>Noi dung</p>', '', 'san-pham', '', '', '', 0, 1, '', 1, NULL, NULL, NULL, NULL, NULL, 1, 143),
+(461, 'San pham 2', '', '2012-05-03 14:38:50', 'san-pham-2-thumb.jpg', 'san-pham-2.jpg', NULL, '<p>Mô tả</p>', '', '<p>Nội dung</p>', '', 'san-pham-2', '', '', '', 0, 2, '', 1, NULL, NULL, NULL, NULL, NULL, 1, 143);
 
 -- --------------------------------------------------------
 
@@ -1338,7 +1369,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=140 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=144 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
@@ -1379,7 +1410,11 @@ INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `
 (136, 0, 'Cửa pano gỗ', '', NULL, NULL, 'cua-pano-go', '', 'Cửa pano gỗ', '', 'cua-pano-go.jpg', NULL, 1, NULL, NULL, 1, 'cuasat24h'),
 (137, 0, 'Cửa panô gỗ - kính', '', NULL, NULL, 'cua-pano-go-kinh', '', 'Cửa panô gỗ - kính', '', 'cua-pano-go-kinh.jpg', NULL, 2, NULL, NULL, 1, 'cuasat24h'),
 (138, 0, 'Cửa panô kính', '', NULL, NULL, 'cua-pano-kinh', '', 'Cửa panô kính', '', 'cua-pano-kinh.jpg', NULL, 3, NULL, NULL, 1, 'cuasat24h'),
-(139, 0, 'Cửa panô chớp lật', '', NULL, NULL, 'cua-pano-chop-lat', '', 'Cửa panô chớp lật', '', 'cua-pano-chop-lat.JPG', NULL, 4, NULL, NULL, 1, 'cuasat24h');
+(139, 0, 'Cửa panô chớp lật', '', NULL, NULL, 'cua-pano-chop-lat', '', 'Cửa panô chớp lật', '', 'cua-pano-chop-lat.JPG', NULL, 4, NULL, NULL, 1, 'cuasat24h'),
+(140, 0, 'Cửa panô chớp lật', '', NULL, NULL, 'cua-pano-chop-lat', '', '', '', 'cua-pano-chop-lat.JPG', NULL, 1, NULL, NULL, 1, 'ducpano'),
+(141, 0, 'Cửa panô kính', '', NULL, NULL, 'cua-pano-kinh', '', '', '', 'cua-pano-kinh.jpg', NULL, 2, NULL, NULL, 1, 'ducpano'),
+(142, 0, 'Cửa panô gỗ - kính', '', NULL, NULL, 'cua-pano-go-kinh', '', '', '', 'cua-pano-go-kinh.jpg', NULL, 3, NULL, NULL, 1, 'ducpano'),
+(143, 0, 'Cửa pano gỗ', '', NULL, NULL, 'cua-pano-go', '', '', '', 'cua-pano-go.jpg', NULL, 4, NULL, NULL, 1, 'ducpano');
 
 -- --------------------------------------------------------
 
@@ -1410,7 +1445,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=42 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=43 ;
 
 --
 -- Dumping data for table `dos_module_services`
@@ -1423,8 +1458,9 @@ INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `
 (37, 'Dịch vụ 230412 Cafe', '', '', '', '<p><img style="float:left;margin-left:10px;margin-right:10px;" src="/public/userfiles/image/230412/image/images.jpeg" alt="" width="183" height="261" /></p>\n<p style="text-align:justify;"> </p>\n<p style="text-align:justify;">Khuôn viên rộng rãi, thoáng mát gần gũi với thiên nhiên, phòng ăn sạch sẽ, lịch sự sẽ là điểm hẹn lý tưởng của quý khách cho những buổi gặp gỡ, trò chuyện hàng ngày cũng như những sự kiện quan trọng như sinh nhật, liên hoan, tiệc cưới.</p>\n<p style="text-align:justify;">Sự đa dạng của các món ăn, đồ uống cũng như kinh nghiệm chế biến truyền thống sẽ tạo cho quý khách cảm nhận đích thực về nghệ thuật ẩm thực tại <strong>230412 Cafe.</strong></p>\n<p style="text-align:justify;">Chúng tôi luôn tự hào về phong cách phục vụ mang đậm bản sắc quê hương Việt Nam của đội ngũ nhân viên phục vụ chuyên nghiệp và hiếu khách, quý khách sẽ thấy hài lòng về chất lượng phục vụ khi đến với chúng tôi.</p>\n<p style="text-align:justify;">Để biết thêm chi tiết về các dịch vụ của chúng tôi vui lòng lựa chọn dịch vụ ở menu bên phải.</p>\n<p style="text-align:right;"><strong> </strong></p>\n<p style="text-align:right;"><strong>FREE WIFI INTERNET - FREE WIFI INTERNET</strong></p>', '', '', 1, '2012-04-26 09:38:50', 1, 0, '', '', 'dich-vu-230412-cafe', '', 'Dịch vụ', '', 1, '230412'),
 (38, 'Dịch vụ vẫn chuyển tận nơi', '', NULL, NULL, '<p>Dịch vụ vẫn chuyển tận nơiDịch vụ vẫn chuyển tận nơi Dịch vụ vẫn chuyển tận nơi</p>', '', '', 1, '2012-05-02 07:47:48', 1, 0, NULL, NULL, 'dich-vu-van-chuyen-tan-noi', '', 'Dịch vụ vẫn chuyển tận nơi', '', 1, 'hoasaytinh'),
 (39, 'Dịch vụ tặng quà', '', NULL, NULL, '<p>Dịch vụ tặng quà</p>', '', '', 1, '2012-05-02 07:52:01', 2, 0, NULL, NULL, 'dich-vu-tang-qua', '', 'Dịch vụ tặng quà', '', 1, 'hoasaytinh'),
-(40, 'CHUYÊN SẢN XUẤT VÀ GIA CÔNG', '', NULL, NULL, '<ol><li><strong>CỬA CUỐN</strong> - cửa cuốn, cửa cuốn cao cấp, cửa cuốn giá rẻ, cửa cuốn Đài Loan, cửa cuốn Úc, cửa cuốn đức, cửa cuốn khe thoáng, cửa cuốn hợp kim nhôm, cửa cuốn inox, cửa cuốn song ngang, cửa cuốn công nghệ đức.</li>\r\n<li><strong>CỬA KÉO</strong> - cửa kéo Đài Loan, cửa kéo giả Đài Loan , cửa xếp đài loan.</li>\r\n<li><strong>CỬA SẮ</strong>T - cửa pano sắt, cửa số sắt, bông bảo vệ, hàng rào sắt, cửa cổng mở, cửa cổng lùa.</li>\r\n<li><strong>CỬA NHÔM</strong> - cửa pano nhôm, cửa sổ nhôm, cửa bản lề sàn kính cường lực, cửa kính tự động, phòng tắm - phòng xông hơi kính, vách ngăn - mặt dựng nhôm kính - mặt dựng aluminium.</li>\r\n<li><strong>CỬA INOX</strong> - cửa inox, cột cờ inox.</li>\r\n<li><strong>LAN CAN</strong> - CẦU THANG.</li>\r\n<li><strong>TRỤ CẦU THAN</strong>G - trụ cầu thang inox, inox ốp gỗ, gỗ, gỗ xỏ giữa, inox xỏ giữa, sắt sơn tĩnh điện.</li>\r\n<li><strong>CỬA CỔNG XẾP</strong> - xếp sơn tĩnh điện, xếp inox.</li>\r\n<li><strong>MÁI NGÓI - BIỆT THỰ</strong> - mái ngói biệt thự, vì kèo - kho xưởng.</li>\r\n</ol>', '', '', 2, '2012-05-03 01:40:20', 1, 0, NULL, NULL, 'chuyen-san-xuat-va-gia-cong', '', 'CỬA CUỐN - cửa cuốn, cửa cuốn cao cấp, cửa cuốn giá rẻ, cửa cuốn Đài Loan, cửa cuốn Úc, cửa cuốn đức, cửa cuốn khe thoáng, cửa cuốn hợp kim nhôm, cửa cuốn inox, cửa cuốn song ngang, cửa cuốn công nghệ đức.', '', 1, 'cuasat24h'),
-(41, 'DỊCH VỤ BẢO HÀNH', '', NULL, NULL, '<p>Mọi sản phẩm cửa cuốn, cửa kéo, cửa sắt, cửa nhôm...của CUASAT24H được bảo hành theo tiêu chuẩn của nhà sản xuất.</p>\r\n<p>Mọi thông tin xin vui lòng liên hệ :</p>\r\n<p>Địa chỉ văn phòng: 93 A (số mới 101) Bình Long, P. Bình Hưng Hoà A, Q. Bình Tân, Tp.HCM</p>\r\n<p>Điện thoại :</p>\r\n<p>Bộ phận văn phòng : (08) 6267 2879 - xin số 101</p>\r\n<p>Bộ phận Kinh Doanh : - xin số 103</p>\r\n<p>Bộ phận thiết kế : - xin số 104</p>\r\n<p>Giám Đốc Kinh Doanh: 0978 745 745 ( Anh Xuân )</p>', '', '', 3, '2012-05-03 01:41:06', 2, 0, NULL, NULL, 'dich-vu-bao-hanh', '', '', '', 1, 'cuasat24h');
+(40, 'CHUYÊN SẢN XUẤT VÀ GIA CÔNG', '', NULL, NULL, '<ol><li><strong>CỬA CUỐN</strong> - cửa cuốn, cửa cuốn cao cấp, cửa cuốn giá rẻ, cửa cuốn Đài Loan, cửa cuốn Úc, cửa cuốn đức, cửa cuốn khe thoáng, cửa cuốn hợp kim nhôm, cửa cuốn inox, cửa cuốn song ngang, cửa cuốn công nghệ đức.</li>\r\n<li><strong>CỬA KÉO</strong> - cửa kéo Đài Loan, cửa kéo giả Đài Loan , cửa xếp đài loan.</li>\r\n<li><strong>CỬA SẮ</strong>T - cửa pano sắt, cửa số sắt, bông bảo vệ, hàng rào sắt, cửa cổng mở, cửa cổng lùa.</li>\r\n<li><strong>CỬA NHÔM</strong> - cửa pano nhôm, cửa sổ nhôm, cửa bản lề sàn kính cường lực, cửa kính tự động, phòng tắm - phòng xông hơi kính, vách ngăn - mặt dựng nhôm kính - mặt dựng aluminium.</li>\r\n<li><strong>CỬA INOX</strong> - cửa inox, cột cờ inox.</li>\r\n<li><strong>LAN CAN</strong> - CẦU THANG.</li>\r\n<li><strong>TRỤ CẦU THAN</strong>G - trụ cầu thang inox, inox ốp gỗ, gỗ, gỗ xỏ giữa, inox xỏ giữa, sắt sơn tĩnh điện.</li>\r\n<li><strong>CỬA CỔNG XẾP</strong> - xếp sơn tĩnh điện, xếp inox.</li>\r\n<li><strong>MÁI NGÓI - BIỆT THỰ</strong> - mái ngói biệt thự, vì kèo - kho xưởng.</li>\r\n</ol>', '', '', 3, '2012-05-03 01:40:20', 1, 0, NULL, NULL, 'chuyen-san-xuat-va-gia-cong', '', 'CỬA CUỐN - cửa cuốn, cửa cuốn cao cấp, cửa cuốn giá rẻ, cửa cuốn Đài Loan, cửa cuốn Úc, cửa cuốn đức, cửa cuốn khe thoáng, cửa cuốn hợp kim nhôm, cửa cuốn inox, cửa cuốn song ngang, cửa cuốn công nghệ đức.', '', 1, 'cuasat24h'),
+(41, 'DỊCH VỤ BẢO HÀNH', '', NULL, NULL, '<p>Mọi sản phẩm cửa cuốn, cửa kéo, cửa sắt, cửa nhôm...của CUASAT24H được bảo hành theo tiêu chuẩn của nhà sản xuất.</p>\r\n<p>Mọi thông tin xin vui lòng liên hệ :</p>\r\n<p>Địa chỉ văn phòng: 93 A (số mới 101) Bình Long, P. Bình Hưng Hoà A, Q. Bình Tân, Tp.HCM</p>\r\n<p>Điện thoại :</p>\r\n<p>Bộ phận văn phòng : (08) 6267 2879 - xin số 101</p>\r\n<p>Bộ phận Kinh Doanh : - xin số 103</p>\r\n<p>Bộ phận thiết kế : - xin số 104</p>\r\n<p>Giám Đốc Kinh Doanh: 0978 745 745 ( Anh Xuân )</p>', '', '', 4, '2012-05-03 01:41:06', 2, 0, NULL, NULL, 'dich-vu-bao-hanh', '', '', '', 1, 'cuasat24h'),
+(42, 'Chuyên sản xuất và gia công', '', NULL, NULL, '<ol><li>CỬA CUỐN - cửa cuốn, cửa cuốn cao cấp, cửa cuốn giá rẻ, cửa cuốn Đài Loan, cửa cuốn Úc, cửa cuốn đức, cửa cuốn khe thoáng, cửa cuốn hợp kim nhôm, cửa cuốn inox, cửa cuốn song ngang, cửa cuốn công nghệ đức.</li>\r\n<li>CỬA KÉO - cửa kéo Đài Loan, cửa kéo giả Đài Loan , cửa xếp đài loan.</li>\r\n<li>CỬA SẮT - cửa pano sắt, cửa số sắt, bông bảo vệ, hàng rào sắt, cửa cổng mở, cửa cổng lùa.</li>\r\n<li>CỬA NHÔM - cửa pano nhôm, cửa sổ nhôm, cửa bản lề sàn kính cường lực, cửa kính tự động, phòng tắm - phòng xông hơi kính, vách ngăn - mặt dựng nhôm kính - mặt dựng aluminium.</li>\r\n<li>CỬA INOX - cửa inox, cột cờ inox.</li>\r\n<li>LAN CAN - CẦU THANG.</li>\r\n<li>TRỤ CẦU THANG - trụ cầu thang inox, inox ốp gỗ, gỗ, gỗ xỏ giữa, inox xỏ giữa, sắt sơn tĩnh điện.</li>\r\n<li>CỬA CỔNG XẾP - xếp sơn tĩnh điện, xếp inox.</li>\r\n<li>MÁI NGÓI - BIỆT THỰ - mái ngói biệt thự, vì kèo - kho xưởng.</li>\r\n</ol>', '', '', 1, '2012-05-03 14:49:37', 1, 0, NULL, NULL, 'chuyen-san-xuat-va-gia-cong', '', '', '', 1, 'ducpano');
 
 -- --------------------------------------------------------
 
@@ -1443,14 +1479,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `dos_module_supports`
 --
 
 INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
-(1, 'Hỗ trợ khách hàng', '', '01230 456 789', 'groupitsoft', 1, 'yahoo', 'hoasaytinh');
+(1, 'Hỗ trợ khách hàng', '', '01230 456 789', 'groupitsoft', 1, 'yahoo', 'hoasaytinh'),
+(3, '', '', '0903337654', 'ducpano', 1, 'yahoo', 'ducpano');
 
 -- --------------------------------------------------------
 
@@ -1478,7 +1515,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_video` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_video_dos_module_video_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=24 ;
 
 --
 -- Dumping data for table `dos_module_video`
@@ -1489,7 +1526,8 @@ INSERT INTO `dos_module_video` (`record_id`, `title`, `titleen`, `postdate`, `ta
 (19, 'Nghệ thuật pha chế cà phê ', '', '2012-04-26 09:46:27', 'nghe-thuat-pha-che-ca-phe', '', 'Nghệ thuật pha chế cà phê ', '', 'nghe-thuat-pha-che-ca-phe.jpg', 'http://www.youtube.com/watch?v=wcdnGqBDiA0', 3, 0, '', '', 0, 1, 12),
 (20, 'Nghệ thuật trang trí ly cafe', '', '2012-04-26 09:47:41', 'nghe-thuat-trang-tri-ly-cafe', '', 'Nghệ thuật trang trí ly cafe', '', 'nghe-thuat-trang-tri-ly-cafe.jpg', 'http://www.youtube.com/watch?v=x7NgdZPEmxU&feature=related', 2, 0, '', '', 0, 1, 12),
 (21, 'Cà Phê Đắng Và Mưa', '', '2012-04-26 09:50:38', 'ca-phe-dang-va-mua', '', 'Cà Phê Đắng Và Mưa (w/ Lyrics) - Thanh Ngọc ', '', 'ca-phe-ang-va-mua.jpg', 'http://www.youtube.com/watch?v=y7JlskJN1DM', 1, 0, '', '', 0, 1, 13),
-(22, 'Video Hoa Quỳnh nở', '', '2012-05-02 08:14:01', 'video-hoa-quynh-no', '', '', '', 'video-hoa-quynh-no.jpg', 'http://www.youtube.com/watch?v=JJYDp06iixw', 1, 0, NULL, NULL, 0, 1, 14);
+(22, 'Video Hoa Quỳnh nở', '', '2012-05-02 08:14:01', 'video-hoa-quynh-no', '', '', '', 'video-hoa-quynh-no.jpg', 'http://www.youtube.com/watch?v=JJYDp06iixw', 1, 0, NULL, NULL, 0, 1, 14),
+(23, 'Nội Thất Văn Phòng 3D', '', '2012-05-03 08:34:30', 'noi-that-van-phong-3d', '', '', '', 'noi-that-van-phong-3d.jpg', 'http://www.youtube.com/watch?v=9kc4jOXvrAA', 1, 0, NULL, NULL, 1, 1, 15);
 
 -- --------------------------------------------------------
 
@@ -1512,7 +1550,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_video_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
 -- Dumping data for table `dos_module_video_cat`
@@ -1522,7 +1560,8 @@ INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat
 (11, 0, '', 'Giới thiệu sách', '', 'gioi-thieu-sach', '', 'Giới thiệu sách', '', 1, 1, '200312'),
 (12, 0, '', 'Pha chế cà phê', '', 'pha-che-ca-phe', '', 'Pha chế', '', 1, 1, '230412'),
 (13, 0, '', 'Thưởng thức Âm nhạc', '', 'thuong-thuc-am-nhac', '', '', '', 2, 1, '230412'),
-(14, 0, '', 'Về hoa Việt Nam', '', 've-hoa-viet-nam', '', '', '', 1, 1, 'hoasaytinh');
+(14, 0, '', 'Về hoa Việt Nam', '', 've-hoa-viet-nam', '', '', '', 1, 1, 'hoasaytinh'),
+(15, 0, '', 'Video', '', 'video', '', 'test', '', 1, 1, 'cuasat24h');
 
 -- --------------------------------------------------------
 
@@ -2175,6 +2214,7 @@ INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullna
 ('230412', 'maioanh@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-26 09:03:32', '', '', '', 'user', 'vi', '', '2012-05-25 17:00:00', 0, '', NULL, 1, '230412', 19, 'nha-hang-cafe'),
 ('cuasat24h', 'groupitsoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-02 06:35:34', NULL, '', NULL, 'user', 'vi', NULL, '2012-05-31 16:00:00', 0, '20122012', NULL, 1, '270412', 1, 'co-khi-may-moc-thiet-bi'),
 ('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi|en', NULL, '2012-04-14 17:00:00', 0, '', NULL, 1, '230412', 2, 'cong-nghe-thong-tin-vien-thong'),
+('ducpano', 'ducpano@yahoo.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-03 14:10:09', NULL, '0903337654', NULL, 'user', 'vi', NULL, '2012-06-01 17:00:00', 0, '20122012', NULL, 1, '270412', 19, 'co-khi-may-moc-thiet-bi'),
 ('gothuytung', 'maioanh@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-28 08:03:03', '', '', '', 'user', 'vi', '', '2012-05-27 17:00:00', 0, '', NULL, 1, '220312', 19, 'noi-that-ngoai-that'),
 ('hoasaytinh', 'mailgooglepig@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-02 03:14:04', NULL, '01234 567 890', NULL, 'user', 'vi', NULL, '2012-05-31 16:00:00', 0, '20122012', NULL, 1, '020512', 19, 'hoa-tuoi');
 
@@ -2214,11 +2254,15 @@ CREATE TABLE IF NOT EXISTS `dos_user_langs` (
 --
 
 INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_username`) VALUES
+('address1', 'Địa chỉ: 345/A2 Ấp Nhị Hoà - Xã Hiệp Hoà - Biên Hoà - Đồng Nai', '', 'ducpano'),
+('address2', '', '', 'ducpano'),
 ('company_name', 'Mẫu 200312', '', '200312'),
 ('company_name', 'Mẫu 200312', '', '230412'),
+('company_name', 'Công ty TNHH Đức Bình An', '', 'ducpano'),
 ('company_name', '', '', 'gothuytung'),
 ('company_name_footer', 'Mẫu 200312', '', '200312'),
 ('company_name_footer', 'GỖ THỦY TÙNG', '', 'gothuytung'),
+('company_phone', 'Phone: 0903337654 (Đức)', '', 'ducpano'),
 ('company_phone', 'Hot line: 0987 001 001', '', 'gothuytung');
 
 -- --------------------------------------------------------
