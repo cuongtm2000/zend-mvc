@@ -140,7 +140,10 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 /****  End page contact     *****/
 
 /*Columns 3*/
-#columns3{ float:right; width:181px}
+#columns3{ float:right; width:166px}
+.title-box-2{ font-size:10pt;color:#5A5A5B; font-weight:bold; padding:6px 0;font-weight:bold; background:url(../images/topbg-sub-right.gif) no-repeat}
+.title-box-2 span{padding:0px 10px 0 15px; }
+.bd-frame-right{background:url(../images/bt-bg-title-right.gif) no-repeat; margin:0 0 10px 0; height:7px; width:166px;*_margin:0 0 5px 0}
 
 /*Video*/
 .video{text-align:center;border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8 }
