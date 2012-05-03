@@ -71,7 +71,7 @@ a:hover{color:#000;}
 .bg-adv li{padding:0 0 5px 0}
 
 /*Right content*/
-#rightcontent{float:left; width:597px; margin:0 0 0 5px}
+#rightcontent{float:left; width:597px; margin:0 0 0 13px}
 #rightcontent p{margin:0 0 8px 0}
 #rightcontent ul li, #rightcontent ol li{margin: 0 0 0 40px}
 #rightcontent ul ,#rightcontent ol{margin: 0 0 12px 0}
@@ -146,7 +146,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .bd-frame-right{background:url(../images/bt-bg-title-right.gif) no-repeat; margin:0 0 10px 0; height:7px; width:166px;*_margin:0 0 5px 0}
 
 /*Video*/
-.video{text-align:center;border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8 }
+.video{padding:5px 0 0 0;text-align:center;border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8 }
 
 /*typical-product*/
 .typical-product{list-style: none;border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8;text-align: center}
