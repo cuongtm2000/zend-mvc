@@ -48,7 +48,7 @@ Vertical scroller example, with custom base class */
 
 /* Explicitly set height/width of each list item */
 .vert .simply-scroll-list li {
-
+	margin:0 0 10px 0;
 	height: 130px;
 }
 
