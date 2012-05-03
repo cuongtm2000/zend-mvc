@@ -843,3 +843,6 @@ in D:\svn\index.php (16)
 2012/05/03 09:32:22 [warning] [application] Failed to set unsafe attribute "company" of "ContactUserForm".
 in D:\svn\protected\modules\contact\controllers\DefaultController.php (11)
 in D:\svn\index.php (16)
+2012/05/03 09:36:06 [warning] [application] Failed to set unsafe attribute "company" of "ContactUserForm".
+in D:\svn\protected\modules\contact\controllers\DefaultController.php (11)
+in D:\svn\index.php (16)
