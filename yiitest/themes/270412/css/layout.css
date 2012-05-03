@@ -143,7 +143,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 #columns3{ float:right; width:181px}
 
 /*Video*/
-.video{border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8 }
+.video{text-align:center;border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8 }
 
 /*typical-product*/
 .typical-product{list-style: none;border-left:1px solid #E5DBB8 ;border-right:1px solid #E5DBB8;text-align: center}
