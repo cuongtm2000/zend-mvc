@@ -2,8 +2,8 @@
 <?php $this->pageTitle = $this->lang['cart'];
 $this->description = $this->lang['cart']; ?>
 
-<h1 class="title-pr">Thông tin giỏ hàng</h1>
-<form name="order" action="" method="post">
+<h1 class="title-right"><span>Thông tin giỏ hàng</span></h1>
+<form name="order" action="" method="post" >
     <table class="form_order" cellspacing="0" cellpadding="5" width="100%">
         <thead>
             <tr align="center">
@@ -45,14 +45,9 @@ $this->description = $this->lang['cart']; ?>
         </tbody>
     </table>
     <div class="panel-order">
-        <input type="submit" value=" THANH TOÁN " /> 
-        <a href="javascript:history.back()" class="btn_order" title="tiếp tục mua hàng">
-            <strong>TIẾP TỤC MUA HÀNG</strong>
-        </a>
-        <a href="<?php echo Yii::app()->baseUrl . LANGURL?>/products/default/delallcart ">
-           Xóa giỏ hàng
-           </a>
-   
+        <input type="submit" value="Thanh Toán" title="Thanh Toán" class="btn_order" /> 
+        <a href="javascript:history.back()" class="btn_order" title="tiếp tục mua hàng">Tiếp tục mua hàng</a>
+        <a href="<?php echo Yii::app()->baseUrl . LANGURL?>/products/default/delallcart " class="btn_order">Xóa giỏ hàng</a>
     </div>
 </form>
 

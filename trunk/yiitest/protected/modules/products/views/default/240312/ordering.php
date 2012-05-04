@@ -46,13 +46,13 @@
     </tbody>
 </table>
 
-<div id="notificaion">Thông tin đặt hàng</div>
+<h3 class="notificaion"><strong>Thông tin đặt hàng</strong></h3>
  <div class="frame-tent-right"><?php $form = $this->beginWidget('CActiveForm', array('id' => 'user-form', 'enableAjaxValidation' => false, 'htmlOptions' => array('class' => 'form-all'))); ?>
 
 
     <p class="note">Dấu <span class="required">*</span> là những thông tin bắt buộc nhập liệu.</p>
     <?php echo $form->errorSummary($model, ''); ?>
-    <ul>
+    <ul class="frame-contact frm-cart">
 
         <li class="row">
             <?php echo $form->labelEx($model, 'fullname'); ?>
@@ -72,13 +72,13 @@
         </li>
         <li class="row">
             <?php echo $form->labelEx($model, 'content'); ?>
-            <?php echo $form->textArea($model, 'content', array('cols' => 80, 'rows' => 4)); ?>
+            <?php echo $form->textArea($model, 'content', array('cols' => 80, 'rows' => 8)); ?>
         </li>
 
 
         <li class="row buttons">
             <label>&nbsp;</label>
-            <?php echo CHtml::submitButton(' Hoàn tất ', array('class' => 'login')); ?>
+            <?php echo CHtml::submitButton(' Hoàn tất ', array('class' => 'bton-dk')); ?>
         </li>
     </ul>
     <?php $this->endWidget(); ?>
