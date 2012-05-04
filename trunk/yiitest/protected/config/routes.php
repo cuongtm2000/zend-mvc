@@ -8,7 +8,8 @@ return array(
 	'http://<subdomain:\w+>.dos.vn/<products:(san-pham)>' => 'products/default/index', //index
 	'http://<subdomain:\w+>.dos.vn/<products:(san-pham)>/<cid:[-a-z0-9]+>/trang/<page:\d+>' => array('products/default/cats'), //cat paging
 	'http://<subdomain:\w+>.dos.vn/<products:(san-pham)>/<cid:[-a-z0-9]+>' => array('products/default/cats'), //cat
-	'http://<subdomain:\w+>.dos.vn/<products:(san-pham)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('products/default/view', 'urlSuffix' => '.html'), //view
+    'http://<subdomain:\w+>.dos.vn/<products:(san-pham)>/<cid:(dat-hang)>/<id:[-a-z0-9]+>' => array('products/default/order'), //order
+    'http://<subdomain:\w+>.dos.vn/<products:(san-pham)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('products/default/view', 'urlSuffix' => '.html'), //view
 
 	//services modules
 	'http://<subdomain:\w+>.dos.vn/<services:(dich-vu)>' => 'services/default/index', //index

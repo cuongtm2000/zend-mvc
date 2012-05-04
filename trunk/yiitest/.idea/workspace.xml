@@ -13,6 +13,10 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/cache/472f714c226873e2219db544625182ed.bin" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/cache" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/routes.php" afterPath="$PROJECT_DIR$/protected/config/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php" afterPath="$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/products/models/Products.php" afterPath="$PROJECT_DIR$/protected/modules/products/models/Products.php" />
     </list>
     <ignored path="svn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,28 +42,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DefaultController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="5" selection-start="3303" selection-end="3303" vertical-scroll-proportion="0.0">
+            <state line="30" column="38" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.06593407">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cartitem.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/240312/cartitem.php">
+      <file leaf-file-name="Products.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/products/models/Products.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="28" selection-start="374" selection-end="384" vertical-scroll-proportion="18.576923">
+            <state line="312" column="10" selection-start="16647" selection-end="16647" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ordering.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/240312/ordering.php">
+      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/config/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="13" selection-start="3562" selection-end="3562" vertical-scroll-proportion="0.65384614">
+            <state line="11" column="156" selection-start="912" selection-end="912" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -78,7 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/components/UserIdentity.php" />
         <option value="$PROJECT_DIR$/protected/models/LoginForm.php" />
         <option value="$PROJECT_DIR$/protected/models/Menus.php" />
         <option value="$PROJECT_DIR$/protected/models/Banner.php" />
@@ -90,10 +93,11 @@
         <option value="$PROJECT_DIR$/shoppingcart/protected/config/dev.php" />
         <option value="$PROJECT_DIR$/shoppingcart/protected/config/public.php" />
         <option value="$PROJECT_DIR$/protected/modules/default/views/default/240312/index.php" />
-        <option value="$PROJECT_DIR$/protected/modules/products/models/Products.php" />
         <option value="$PROJECT_DIR$/protected/modules/products/views/default/240312/cartitem.php" />
-        <option value="$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/protected/modules/products/views/default/240312/ordering.php" />
+        <option value="$PROJECT_DIR$/protected/config/routes.php" />
+        <option value="$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/protected/modules/products/models/Products.php" />
       </list>
     </option>
   </component>
@@ -654,6 +658,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -662,8 +684,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.HTML" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="dos.vn" serverId="819b0d99-b6d0-4d88-9f62-7e03412fcb55" />
   <component name="RecentsManager">
@@ -712,6 +734,13 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="819b0d99-b6d0-4d88-9f62-7e03412fcb55" server_name="dos.vn">
       <method>
         <option name="FtpUpload" enabled="false">
@@ -720,13 +749,6 @@
         </option>
         <option name="PhingTarget" enabled="false" />
       </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
     </configuration>
     <list size="0" />
   </component>
@@ -805,7 +827,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.7314112" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.4969651" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2215478" sideWeight="0.67064846" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22534142" sideWeight="0.67064846" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5007587" order="7" side_tool="true" content_ui="tabs" />
@@ -876,114 +898,88 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="40" selection-start="2949" selection-end="2949" vertical-scroll-proportion="0.4981685">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/site/signup.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="36" selection-start="3861" selection-end="3861" vertical-scroll-proportion="0.5884615">
-          <folding />
-        </state>
+        <state line="55" column="36" selection-start="3861" selection-end="3861" vertical-scroll-proportion="0.5884615" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/models/Agents.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="31" selection-start="5213" selection-end="5224" vertical-scroll-proportion="0.93772894">
-          <folding />
-        </state>
+        <state line="146" column="31" selection-start="5213" selection-end="5224" vertical-scroll-proportion="0.93772894" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/models/Username.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="58" selection-start="2585" selection-end="2585" vertical-scroll-proportion="0.50183153">
-          <folding />
-        </state>
+        <state line="59" column="58" selection-start="2585" selection-end="2585" vertical-scroll-proportion="0.50183153" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shoppingcart/protected/config/public.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="71" selection-start="217" selection-end="217" vertical-scroll-proportion="0.1824687">
-          <folding />
-        </state>
+        <state line="6" column="71" selection-start="217" selection-end="217" vertical-scroll-proportion="0.1824687" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shoppingcart/protected/config/dev.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="71" selection-start="213" selection-end="217" vertical-scroll-proportion="0.1824687">
-          <folding />
-        </state>
+        <state line="6" column="71" selection-start="213" selection-end="217" vertical-scroll-proportion="0.1824687" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shoppingcart/protected/modules/products/views/default/220312/cats.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="171" selection-start="3373" selection-end="3380" vertical-scroll-proportion="-15.038462">
-          <folding />
-        </state>
+        <state line="41" column="171" selection-start="3373" selection-end="3380" vertical-scroll-proportion="-15.038462" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/default/views/default/240312/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="264" selection-start="4601" selection-end="4601" vertical-scroll-proportion="-13.461538">
-          <folding />
-        </state>
+        <state line="49" column="264" selection-start="4601" selection-end="4601" vertical-scroll-proportion="-13.461538" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shoppingcart/protected/modules/products/views/default/220312/cartitem.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shoppingcart/protected/modules/products/models/Products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="522" column="6" selection-start="21648" selection-end="22125" vertical-scroll-proportion="0.47792706">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/products/models/Products.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="537" column="5" selection-start="22939" selection-end="22939" vertical-scroll-proportion="0.9347409">
-          <folding />
-        </state>
+        <state line="522" column="6" selection-start="21648" selection-end="22125" vertical-scroll-proportion="0.47792706" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shoppingcart/protected/modules/products/controllers/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="19" selection-start="2629" selection-end="3295" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="85" column="19" selection-start="2629" selection-end="3295" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/products/models/CartForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/240312/ordering.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="98" selection-start="3563" selection-end="3563" vertical-scroll-proportion="0.68653846" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/240312/cartitem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="28" selection-start="374" selection-end="384" vertical-scroll-proportion="-0.9288462" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/products/models/Products.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="312" column="10" selection-start="16647" selection-end="16647" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="156" selection-start="912" selection-end="912" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="5" selection-start="3303" selection-end="3303" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/240312/cartitem.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="28" selection-start="374" selection-end="384" vertical-scroll-proportion="18.576923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/240312/ordering.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="13" selection-start="3562" selection-end="3562" vertical-scroll-proportion="0.65384614">
+        <state line="30" column="38" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.06593407">
           <folding />
         </state>
       </provider>
