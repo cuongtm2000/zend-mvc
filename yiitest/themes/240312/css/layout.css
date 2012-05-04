@@ -157,12 +157,12 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 /****  End page contact     *****/
 
 /*Footer*/
-.bg-footer{background:url(../images/footer_bg.gif) no-repeat center; height:80px}
-#footer{color:#fff;padding:0 30px 0 0; line-height:1.5em}
+.bd-bt-page{background:url(../images/footer-bg-2.gif) no-repeat center;height:21px}
+.bg-footer{background:url(../images/footer-bg-1.gif) repeat-y center}
+#footer{font-weight:bold;text-align: right;color:#fff;padding:10px 15px 0 0; line-height:1.3em}
+.title-company-fter{font-size:10pt}
 #footer a:hover{color:#33220C}
-
-.copyright {font-weight:bold;text-align: right}
-.copyright a{color:#fff}
+#footer a{color:#fff}
 
 /* Error */
 .errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}

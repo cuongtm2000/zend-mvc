@@ -142,7 +142,7 @@
 					'homeLink' => CHtml::link($this->lang['default'], (LANGURL) ? LANGURL : Yii::app()->homeUrl),
 					'links'=>$this->breadcrumbs,
 					'htmlOptions'=>array('class'=>'link'),
-					'separator'=>'<img src="'.Yii::app()->theme->baseUrl.'/images/bkg_pipe1.gif" alt="Bull" title="Bull" />',
+					'separator'=>' &raquo; ',
 				)); ?> <!-- breadcrumbs -->
 					<?php if($this->banner): ?>
 					<div id="banner">
@@ -160,14 +160,14 @@
 	</div> <!--End page-->	
     <div class="bg-footer">
 		<div id="footer">
-			<div class="copyright"><h3 class="title-company-fter"><strong><?php echo $this->lang['company_name_footer'] ?></strong></h3>
-				<p><?php echo $this->lang['address1'] ?></p>
-				<?php echo ($this->lang['address2']) ? '<p>'.$this->lang['address2'].'</p>' : '' ?>
-				<p><?php echo $this->lang['copyright'] ?></p>
-				<p><?php echo $this->lang['developed']?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></p>
-			</div>            
+			<h3 class="title-company-fter"><strong><?php echo $this->lang['company_name_footer'] ?></strong></h3>
+			<p><?php echo $this->lang['address1'] ?></p>
+			<?php echo ($this->lang['address2']) ? '<p>'.$this->lang['address2'].'</p>' : '' ?>
+			<p><?php echo $this->lang['copyright'] ?></p>
+			<p><?php echo $this->lang['developed']?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></p>          
 		</div><!--End Footer-->
 	</div> <!--End bg footer-->
+	<div class="bd-bt-page"></div>
 </div><!--End wrapper-->
 </body>
 </html>
