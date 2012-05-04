@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 04, 2012 at 09:52 AM
+-- Generation Time: May 04, 2012 at 10:36 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -507,6 +507,7 @@ CREATE TABLE IF NOT EXISTS `dos_langs` (
 INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('about', 'Giới thiệu', 'About us', 0),
 ('actions', 'Thao tác', 'Actions', 1),
+('addcart', 'Đặt hàng', 'Add to Cart', 0),
 ('address1', 'Địa chỉ công ty 1', 'Address 1', 0),
 ('address2', 'Địa chỉ chi nhánh', 'Address 2', 0),
 ('add_new', 'Thêm mới', 'Add new', 1),
@@ -514,6 +515,7 @@ INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('advs', 'Quảng cáo', 'Adv', 0),
 ('banner', 'Logo &amp; Banner', 'Logo &amp; Banner', 0),
 ('cancel', 'Hủy bỏ', 'Cancel', 1),
+('cart', 'Giỏ hàng', 'Cart', 0),
 ('cat_parent', 'Phân loại', 'Category', 1),
 ('cat_title', 'Danh mục', 'Category', 0),
 ('cat_titleen', 'Danh mục En', 'Category', 1),
