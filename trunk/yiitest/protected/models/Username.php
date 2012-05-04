@@ -38,6 +38,7 @@ class Username extends CActiveRecord {
 			array('username, email, password, fullname', 'length', 'max' => 45),
 			array('username', 'unique', 'on' => 'register', 'message' => '<strong>{value}</strong> {attribute} already exists please choose another user'),
 			array('dos_bussiness_bussiness_id', 'checkChooseBusiness', 'on' => 'register'),
+            array('agent_sale', 'checkExistsAgents', 'on' => 'register'),
 			array('email', 'email'),
 			array('phone, code', 'length', 'max' => 15),
 			array('company, dos_bussiness_bussiness_id, choose_business', 'length', 'max' => 100),
@@ -54,6 +55,12 @@ class Username extends CActiveRecord {
 			$this->addError($attribute, 'Vui lòng chọn một ngành nghề');
 		}
 	}
+
+    public function checkExistsAgents($attribute) {
+        if(!Agents::model()->checkAgents($this->agent_sale)){
+            $this->addError($attribute, 'Mã số đại lý không đúng');
+        }
+    }
 
 	/*public function checkExistsUsername($attribute) {
 			if (Username::model()->findByPk($this->username)) {

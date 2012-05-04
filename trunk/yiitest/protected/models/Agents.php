@@ -143,4 +143,10 @@ class Agents extends CActiveRecord {
 		$command->bindParam(":province_id", $province_id, PDO::PARAM_INT);
 		return $command->queryAll();
 	}
+
+    public function checkAgents($agent_id) {
+        $command = Yii::app()->db->createCommand('SELECT agent_id FROM ' . $this->tableName() . ' WHERE agent_id=:agent_id');
+        $command->bindParam(":agent_id", $agent_id, PDO::PARAM_STR);
+        return $command->queryScalar();
+    }
 }
