@@ -1,5 +1,5 @@
 <h1 class="notificaion"><strong>Mua hàng</strong></h1>
-    <table class="form_order" cellspacing="0" cellpadding="5">
+    <table class="form_order" cellspacing="0" cellpadding="5" width="100%">
     <thead>
         <tr align="center">
             <td>Hình ảnh</td>
