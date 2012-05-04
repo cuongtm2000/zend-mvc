@@ -1,6 +1,4 @@
-<h1 class="title-pr">Mua hàng</h1>
-
-   
+<h1 class="notificaion"><strong>Mua hàng</strong></h1>
     <table class="form_order" cellspacing="0" cellpadding="5">
     <thead>
         <tr align="center">
