@@ -5280,3 +5280,98 @@ Stack trace:
 REQUEST_URI=/yii/publish/themes/220312/images/del.png
 HTTP_REFERER=http://localhost/yii/publish/products/default/cartitem
 ---
+2012/05/04 09:56:08 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "070312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('070312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\shoppingcart\protected\modules\default\controllers\DefaultController.php(8): CController->render('070312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\shoppingcart\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/shoppingcart/
+---
+2012/05/04 09:58:40 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "070312/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('070312/index', NULL, true)
+#1 E:\Customers\dos.vn\svn\shoppingcart\protected\modules\default\controllers\DefaultController.php(8): CController->render('070312/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\shoppingcart\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/shoppingcart/
+---
+2012/05/04 09:58:56 [error] [php] Undefined index: default (E:\Customers\dos.vn\svn\shoppingcart\protected\components\Controller.php:82)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#2 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#3 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#4 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#5 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 E:\Customers\dos.vn\svn\shoppingcart\index.php(16): CWebApplication->run()
+REQUEST_URI=/shoppingcart/
+in E:\Customers\dos.vn\svn\shoppingcart\protected\components\Controller.php (82)
+in E:\Customers\dos.vn\svn\shoppingcart\protected\modules\default\controllers\DefaultController.php (6)
+in E:\Customers\dos.vn\svn\shoppingcart\index.php (16)
+2012/05/04 09:58:58 [error] [php] Undefined index: default (E:\Customers\dos.vn\svn\shoppingcart\protected\components\Controller.php:82)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#2 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#3 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#4 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#5 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 E:\Customers\dos.vn\svn\shoppingcart\index.php(16): CWebApplication->run()
+REQUEST_URI=/shoppingcart/
+in E:\Customers\dos.vn\svn\shoppingcart\protected\components\Controller.php (82)
+in E:\Customers\dos.vn\svn\shoppingcart\protected\modules\default\controllers\DefaultController.php (6)
+in E:\Customers\dos.vn\svn\shoppingcart\index.php (16)
+2012/05/04 09:59:08 [error] [php] Undefined index: default (E:\Customers\dos.vn\svn\shoppingcart\protected\components\Controller.php:82)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#2 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#3 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#4 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#5 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 E:\Customers\dos.vn\svn\shoppingcart\index.php(16): CWebApplication->run()
+REQUEST_URI=/shoppingcart/
+in E:\Customers\dos.vn\svn\shoppingcart\protected\components\Controller.php (82)
+in E:\Customers\dos.vn\svn\shoppingcart\protected\modules\default\controllers\DefaultController.php (6)
+in E:\Customers\dos.vn\svn\shoppingcart\index.php (16)
+2012/05/04 10:11:06 [error] [php] Undefined index: default (E:\Customers\dos.vn\svn\shoppingcart\protected\components\Controller.php:82)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#2 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#3 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#4 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#5 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 E:\Customers\dos.vn\svn\shoppingcart\index.php(16): CWebApplication->run()
+REQUEST_URI=/shoppingcart/
+in E:\Customers\dos.vn\svn\shoppingcart\protected\components\Controller.php (82)
+in E:\Customers\dos.vn\svn\shoppingcart\protected\modules\default\controllers\DefaultController.php (6)
+in E:\Customers\dos.vn\svn\shoppingcart\index.php (16)
+2012/05/04 10:11:13 [error] [php] Undefined index: default (E:\Customers\dos.vn\svn\shoppingcart\protected\components\Controller.php:82)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#2 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#3 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#4 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#5 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 E:\Customers\dos.vn\svn\shoppingcart\index.php(16): CWebApplication->run()
+REQUEST_URI=/shoppingcart/
+in E:\Customers\dos.vn\svn\shoppingcart\protected\components\Controller.php (82)
+in E:\Customers\dos.vn\svn\shoppingcart\protected\modules\default\controllers\DefaultController.php (6)
+in E:\Customers\dos.vn\svn\shoppingcart\index.php (16)

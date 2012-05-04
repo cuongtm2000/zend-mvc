@@ -525,4 +525,15 @@ class Products extends CActiveRecord {
 		$command->bindParam(":user", $user, PDO::PARAM_STR);
 		return $command->queryScalar();
 	}
+    public function listItem($arrParam = array()) {
+        if (empty($arrParam))
+            return;
+        $ids = implode(',', array_keys($arrParam));
+
+        $criteria = new CDbCriteria();
+        $criteria->with = array(__CLASS__ . 'Cat');
+        $criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit, hot,record_id';
+        $criteria->condition = 'enable = 1 and record_id IN(' . $ids . ')';
+        return $this->model()->findAll($criteria);
+    }
 }
