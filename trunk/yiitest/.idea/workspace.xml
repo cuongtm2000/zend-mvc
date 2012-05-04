@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="2f258138-a102-4f75-a25d-31c366fc1ede" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/products/models/CartForm.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/products/views/default/240312/cartitem.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/products/views/default/240312/ordering.php" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/application.log" afterPath="" />
       <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\CSS\4.4.0,4af9cb41e1f64636f725057634b6a44b,1.ser" afterPath="" />
       <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\CSS" afterPath="" />
@@ -16,12 +13,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/cache/472f714c226873e2219db544625182ed.bin" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/cache" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/default/views/default/240312/index.php" afterPath="$PROJECT_DIR$/protected/modules/default/views/default/240312/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php" afterPath="$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/products/models/Products.php" afterPath="$PROJECT_DIR$/protected/modules/products/models/Products.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoppingcart/protected/config/dev.php" afterPath="$PROJECT_DIR$/shoppingcart/protected/config/dev.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoppingcart/protected/config/public.php" afterPath="$PROJECT_DIR$/shoppingcart/protected/config/public.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoppingcart/protected/runtime/application.log" afterPath="$PROJECT_DIR$/shoppingcart/protected/runtime/application.log" />
     </list>
     <ignored path="svn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,10 +38,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DefaultController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="5" selection-start="3303" selection-end="3303" vertical-scroll-proportion="0.78205127">
+            <state line="90" column="5" selection-start="3303" selection-end="3303" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cartitem.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/240312/cartitem.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="28" selection-start="374" selection-end="384" vertical-scroll-proportion="18.576923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ordering.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/240312/ordering.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="76" column="13" selection-start="3562" selection-end="3562" vertical-scroll-proportion="0.65384614">
               <folding />
             </state>
           </provider>
@@ -788,7 +797,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -944,13 +953,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/240312/cartitem.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="230" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.62115383">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shoppingcart/protected/modules/products/controllers/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="85" column="19" selection-start="2629" selection-end="3295" vertical-scroll-proportion="0.0">
@@ -965,16 +967,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/240312/ordering.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="28" selection-start="58" selection-end="68" vertical-scroll-proportion="-1.4711539">
+        <state line="90" column="5" selection-start="3303" selection-end="3303" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/240312/cartitem.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="5" selection-start="3303" selection-end="3303" vertical-scroll-proportion="0.78205127">
+        <state line="6" column="28" selection-start="374" selection-end="384" vertical-scroll-proportion="18.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/240312/ordering.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="13" selection-start="3562" selection-end="3562" vertical-scroll-proportion="0.65384614">
           <folding />
         </state>
       </provider>
