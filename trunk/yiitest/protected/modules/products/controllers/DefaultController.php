@@ -5,16 +5,20 @@ class DefaultController extends Controller {
     public function actionIndex() {
         $this->setSeoPage(); //set Seo page
 
-        $model = new ProductsCat();
-        $this->render(Yii::app()->session['template'] . '/index', array('items' => $model->listItem()));
+        $model_cat = ucfirst($this->module->id) . 'Cat';
+        $model_cat_class = new $model_cat();
+
+        $this->render(Yii::app()->session['template'] . '/index', array('items' => $model_cat_class->listItem()));
     }
 
     public function actionCats($cid, $page = 0) {
-        $model = new ProductsCat();
-        $items = new Products();
+        $model = ucfirst($this->module->id);
+        $model_cat = $model . 'Cat';
+        $model_class = new $model();
+        $model_cat_class = new $model_cat();
 
-        $info_cat = $model->findCatByTag($cid); //find cat_id
-        $this->render(Yii::app()->session['template'] . '/cats', array('info_cat' => $info_cat, 'list_sub_cats' => $model->listItem($info_cat['cat_id']), 'list_items' => $items->listItemByCat($info_cat['cat_id'])));
+        $info_cat = $model_cat_class->findCatByTag($cid); //find cat_id
+        $this->render(Yii::app()->session['template'] . '/cats', array('info_cat' => $info_cat, 'list_sub_cats' => $model_cat_class->listItem($info_cat['cat_id']), 'list_items' => $model_class->listItemByCat($info_cat['cat_id'])));
     }
 
     public function actionView($id) {
@@ -27,8 +31,11 @@ class DefaultController extends Controller {
     }
 
     public function actionOrder($id) {
-        $model = new Products();
-        $id = $model->getIDByTag($id);
+        $model = ucfirst($this->module->id);
+        $model_class = new $model();
+
+        $id = $model_class->getIDByTag($id);
+
         $cart = Yii::app()->session['cart'];
 
         if (is_array($cart) && array_key_exists($id, $cart)) {
@@ -37,7 +44,7 @@ class DefaultController extends Controller {
             $cart[$id] = 1;
         }
         Yii::app()->session['cart'] = $cart;
-        $this->redirect(Yii::app()->getBaseUrl() . '/' . $this->module->id . '/default/cartitem');
+        $this->redirect(LANGURL . '/' . Yii::t('user', 'products.link') . '/' . Yii::t('user', 'products.cartitem.link'));
     }
 
     public function actionCartitem() {
@@ -51,7 +58,7 @@ class DefaultController extends Controller {
                 $cart[$k] = $_POST['num_of_dates'][$k];
             }
             Yii::app()->session['cart'] = $cart;
-            $this->redirect(Yii::app()->getBaseUrl() . '/' . $this->module->id . '/default/ordering');
+            $this->redirect(LANGURL . '/' . Yii::t('user', 'products.link') . '/' . Yii::t('user', 'products.ordering.link'));
         }
 
         $this->render(Yii::app()->session['template'] . '/cartitem', array('Items' => $model_class->listItem($cart), 'carts' => $cart));
@@ -61,13 +68,13 @@ class DefaultController extends Controller {
         $cart = Yii::app()->session['cart'];
         unset($cart[$id]);
         Yii::app()->session['cart'] = $cart;
-        $this->redirect(Yii::app()->getBaseUrl() . '/' . $this->module->id . '/default/cartitem');
+        $this->redirect(LANGURL . '/' . Yii::t('user', 'products.link') . '/' . Yii::t('user', 'products.cartitem.link'));
     }
 
     // delete all item in cart
     public function actionDelallcart() {
         Yii::app()->session['cart'] = '';
-        $this->redirect(Yii::app()->getBaseUrl() . '/' . $this->module->id . '/default/cartitem');
+        $this->redirect(LANGURL . '/' . Yii::t('user', 'products.link') . '/' . Yii::t('user', 'products.cartitem.link'));
     }
 
     public function actionOrdering() {

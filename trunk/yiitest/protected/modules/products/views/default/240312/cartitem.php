@@ -45,10 +45,8 @@ $this->description = $this->lang['cart']; ?>
         </tbody>
     </table>
     <div class="panel-order">
-        <input type="submit" value="Thanh Toán" title="Thanh Toán" class="btn_order" /> 
-        <a href="javascript:history.back()" class="btn_order" title="tiếp tục mua hàng">Tiếp tục mua hàng</a>
-        <a href="<?php echo Yii::app()->baseUrl . LANGURL?>/products/default/delallcart " class="btn_order">Xóa giỏ hàng</a>
+        <input type="submit" value="<?php echo Yii::t('user', 'products.purchase.shopping')?>" title="<?php echo Yii::t('user', 'products.purchase.shopping')?>" class="btn_order" />
+        <a href="javascript:history.back()" class="btn_order" title="<?php echo Yii::t('user', 'products.continue.shopping')?>"><?php echo Yii::t('user', 'products.continue.shopping')?></a>
+        <a href="<?php echo Yii::app()->baseUrl . LANGURL?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo Yii::t('user', 'products.delallcart.link')?>" class="btn_order" title="<?php echo Yii::t('user', 'products.delallcart.name')?>"><?php echo Yii::t('user', 'products.delallcart.name')?></a>
     </div>
 </form>
-
-
