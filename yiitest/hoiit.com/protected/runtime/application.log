@@ -724,3 +724,103 @@ Stack trace:
 REQUEST_URI=/hoiit.com/templates/html-template/200412.html
 HTTP_REFERER=http://dos.vn/hoiit.com/templates
 ---
+2012/05/04 17:12:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dashboard/users/edit".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('dashboard/users...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/hoiit.com/dashboard/users/edit
+HTTP_REFERER=http://dos.vn/hoiit.com/dashboard/user/edit
+---
+2012/05/04 17:13:38 [error] [exception.CException] exception 'CException' with message 'Property "UserController.listCatTemplates" is not defined.' in C:\xampp\php\library\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\Customers\dos.vn\svn\hoiit.com\themes\hoiit\views\layouts\main.php(64): CComponent->__get('listCatTemplate...')
+#1 C:\xampp\php\library\framework\web\CBaseController.php(127): require('E:\Customers\do...')
+#2 C:\xampp\php\library\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\Customers\do...', Array, true)
+#3 C:\xampp\php\library\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('E:\Customers\do...', Array, true)
+#4 C:\xampp\php\library\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('    <ul id="cru...')
+#5 C:\xampp\php\library\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('    <ul id="cru...')
+#6 C:\xampp\php\library\framework\web\CBaseController.php(207): COutputProcessor->run()
+#7 C:\xampp\php\library\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#8 E:\Customers\dos.vn\svn\hoiit.com\themes\hoiit\views\layouts\column1.php(3): CBaseController->endContent()
+#9 C:\xampp\php\library\framework\web\CBaseController.php(127): require('E:\Customers\do...')
+#10 C:\xampp\php\library\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\Customers\do...', Array, true)
+#11 C:\xampp\php\library\framework\web\CController.php(785): CBaseController->renderFile('E:\Customers\do...', Array, true)
+#12 E:\Customers\dos.vn\svn\hoiit.com\protected\modules\dashboard\controllers\UserController.php(36): CController->render('edit', Array)
+#13 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): UserController->actionEdit()
+#14 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('edit')
+#23 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('dashboard/user/...')
+#24 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CApplication->run()
+#26 {main}
+REQUEST_URI=/hoiit.com/dashboard/user/edit
+HTTP_REFERER=http://dos.vn/hoiit.com/
+---
+2012/05/04 17:17:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dashboard".' in C:\xampp\php\library\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(271): CController->missingAction('dashboard')
+#1 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('dashboard')
+#2 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('dashboard/user/...')
+#3 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/hoiit.com/dashboard/user/dashboard/user/edit
+HTTP_REFERER=http://dos.vn/hoiit.com/dashboard/user/edit
+---
+2012/05/04 17:19:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dashboard".' in C:\xampp\php\library\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(271): CController->missingAction('dashboard')
+#1 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('dashboard')
+#2 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('dashboard/user/...')
+#3 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/hoiit.com/dashboard/user/dashboard/user/edit
+HTTP_REFERER=http://dos.vn/hoiit.com/dashboard/user/edit
+---
+2012/05/04 17:28:39 [error] [php] include(Username.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\php\library\framework\YiiBase.php:418)
+Stack trace:
+#0 E:\Customers\dos.vn\svn\hoiit.com\protected\models\Usernames.php(81): spl_autoload_call()
+#1 C:\xampp\php\library\framework\validators\CInlineValidator.php(43): Usernames->checkPassOld()
+#2 C:\xampp\php\library\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute()
+#3 C:\xampp\php\library\framework\base\CModel.php(158): CInlineValidator->validate()
+#4 E:\Customers\dos.vn\svn\hoiit.com\protected\controllers\RegisterController.php(9): Usernames->validate()
+#5 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): RegisterController->actionIndex()
+#6 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 C:\xampp\php\library\framework\web\CController.php(287): RegisterController->runAction()
+#8 C:\xampp\php\library\framework\web\CController.php(266): RegisterController->runActionWithFilters()
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(276): RegisterController->run()
+#10 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CWebApplication->run()
+REQUEST_URI=/hoiit.com/register
+in E:\Customers\dos.vn\svn\hoiit.com\protected\models\Usernames.php (81)
+in E:\Customers\dos.vn\svn\hoiit.com\protected\controllers\RegisterController.php (9)
+in E:\Customers\dos.vn\svn\hoiit.com\index.php (15)
+2012/05/04 17:50:05 [error] [php] Only variables should be passed by reference (E:\Customers\dos.vn\svn\hoiit.com\protected\models\Usernames.php:270)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#2 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): UserController->filterAccessControl()
+#5 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\xampp\php\library\framework\web\CController.php(266): UserController->runActionWithFilters()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(276): UserController->run()
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CWebApplication->run()
+REQUEST_URI=/hoiit.com/dashboard/user/changepass
+in E:\Customers\dos.vn\svn\hoiit.com\protected\models\Usernames.php (270)
+in E:\Customers\dos.vn\svn\hoiit.com\protected\modules\dashboard\controllers\UserController.php (44)
+in E:\Customers\dos.vn\svn\hoiit.com\index.php (15)

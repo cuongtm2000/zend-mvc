@@ -2,6 +2,16 @@
 return array(
 	'about.link' => 'gioi-thieu',
 	'products.link' => 'san-pham',
+
+    'products.order.link' => 'dat-hang',
+    'products.cartitem.link' => 'gio-hang',
+    'products.delallcart.link' => 'xoa-gio-hang',
+    'products.ordering.link' => 'thong-tin-dat-hang',
+
+    'products.purchase.shopping' => 'Mua hàng',
+    'products.continue.shopping' => 'Tiếp tục mua hàng',
+    'products.delallcart.name' => 'Xóa giỏ hàng',
+
 	'services.link' => 'dich-vu',
 	'news.link' => 'tin-tuc-su-kien',
 	'video.link' => 'video',

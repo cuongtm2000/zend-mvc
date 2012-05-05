@@ -5,14 +5,13 @@ body{font-family:Arial, Helvetica, sans-serif; font-size:9pt; background:#E1E3EC
 a{text-decoration:none; color:#0066CC}
 a:hover{color:#004C25}
 h1.title-view{color:#0066CC; font-size:12pt}
-/*h3{color:#0066CC; font-size:11pt}
-h2{color:#0E8F0E; font-size:11pt}*/
 
 /*layout*/
 #header{background:#fff; padding:5px 10px;position:relative;top:0;left:0}
 #header .logo{position:relative; top:0; left:0}
 
 /* Common */
+.txt-green{color:#0E8F0E}
 .paddinglr10{padding:0 10px}
 .marginb5{margin-bottom: 5px}
 /* Colum */
@@ -27,6 +26,7 @@ h2{color:#0E8F0E; font-size:11pt}*/
 #nav li a:hover{color: #333}
 #nav li.register{background:url('../images/icon-register.png') no-repeat left top; padding-left:7px}
 #nav li.login{background:url('../images/icon-login.png') no-repeat left top; padding-left:7px}
+#nav li.user{background:url('../images/user.png') no-repeat; padding-left:7px}
 
 /* menu */
 .catmenu{background:#fff; padding:4px; width:98%; margin-bottom:0.8em; border-right:1px solid #ccc; -moz-box-shadow: 0 0 5px #999; -webkit-box-shadow: 0 0 5px #999;  box-shadow: 0 0 5px #999}

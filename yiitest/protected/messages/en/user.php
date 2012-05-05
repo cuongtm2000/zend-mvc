@@ -2,7 +2,17 @@
 return array(
 	'about.link' => 'about',
 	'products.link' => 'products',
-	'services.link' => 'services',
+
+    'products.order.link' => 'order',
+    'products.cartitem.link' => 'cart-item',
+    'products.delallcart.link' => 'del-all-cart',
+    'products.ordering.link' => 'purchase',
+
+    'products.purchase.shopping' => 'Purchase',
+    'products.continue.shopping' => 'Continue',
+    'products.delallcart.name' => 'Delete all cart',
+
+    'services.link' => 'services',
 	'news.link' => 'news',
 	'video.link' => 'video',
 	'contact.link' => 'contact',

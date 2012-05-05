@@ -42,7 +42,7 @@
                     array('label' => 'Register', 'url' => array('/register'), 'visible' => Yii::app()->user->isGuest, 'itemOptions' => array('class' => 'register')),
                     array('label' => 'Login', 'url' => array('/login'), 'visible' => Yii::app()->user->isGuest, 'itemOptions' => array('class' => 'login')),
                     array('label' => 'Dashboard', 'url' => array('/dashboard'), 'visible' => !Yii::app()->user->isGuest, 'itemOptions' => array('class' => 'login')),
-					array('label' => 'Profile', 'url' => array('/dashboard/users/edit'), 'visible' => !Yii::app()->user->isGuest, 'itemOptions' => array('class' => 'login')),
+					array('label' => 'Profile', 'url' => array('/dashboard/user/edit'), 'visible' => !Yii::app()->user->isGuest, 'itemOptions' => array('class' => 'user')),
                     array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/logout'), 'visible' => !Yii::app()->user->isGuest, 'itemOptions' => array('class' => 'register'))
                 ),
             ));
@@ -57,6 +57,19 @@
 		<div class="clear"></div>
         <div class="paddinglr10">
             <div class="menu-bar">
+                <?php if($this->ID =='user'):?>
+                <div class="catmenu">
+                    <ul class="menu-li">
+                        <li><a href="" title="User Control">User Control</a>
+                            <ul>
+                                <li><a href="<?php echo Yii::app()->request->baseUrl ?>/dashboard/user/edit" title="Edit information">Edit information</a></li>
+                                <li><a href="<?php echo Yii::app()->request->baseUrl ?>/dashboard/user/changepass" title="Change password">Change password</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <?php endif;?>
+
                 <?php $this->widget('ext.common.dashBoard') ?>
 
 				<?php if($this->ID =='templates'):?>

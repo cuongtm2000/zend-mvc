@@ -19,12 +19,10 @@
 	<p>
 		<?php echo $form->labelEx($model, 'yahoo') ?>
 		<?php echo $form->textField($model, 'yahoo', array('class'=>'small-input')); ?>
-		<span id="yahooinfo"></span>
 	</p>
 	<p>
 		<?php echo $form->labelEx($model, 'skype') ?>
 		<?php echo $form->textField($model, 'skype', array('class'=>'small-input')); ?>
-		<span id="skypeinfo"></span>
 	</p>
 	<p>
 		<?php echo $form->labelEx($model, 'picture') ?>
@@ -41,12 +39,10 @@
 	<p>
 		<?php echo $form->labelEx($model, 'detail') ?>
 		<?php echo $form->textArea($model, 'detail', array('cols'=>30, 'rows'=>10)); ?>
-		<span id="detailinfo"></span>
 	</p>
 	<p>
 		<?php echo $form->labelEx($model, 'parent') ?>
 		<?php echo $form->textField($model, 'parent', array('class'=>'small-input')); ?>
-		<span id="parentinfo"></span>
 	</p>
 	<p>
 		<?php echo $form->labelEx($model, 'group_code') ?>
