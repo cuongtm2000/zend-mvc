@@ -1,0 +1,172 @@
+body{font-family:Tahoma, Geneva, sans-serif; font-size:9pt; background:url(../images/bg_body.jpg) top center no-repeat;}
+.left{float: left;}
+.right{float:right}
+.clear{clear: both;}
+a{text-decoration:none; color:#720E3B}
+a:hover{color:#000;}
+
+/*layout*/
+*{ margin:0; padding:0}
+#wapper{width:980px; margin: auto;background:#fff}
+
+#header{position:relative;margin:0 0 5px 0}
+#logo{}
+.lang{position:absolute;top:10px; right:0}
+.lang-vn{ margin:0 10px 0 0}
+.lang img{ margin:0 2px 0 10px; position:relative; top:2px}
+.lang a{ color:#FE359B; font-weight:bold}
+.lang a:hover{color:#479201}
+.hot-line{position:absolute;bottom:5px; right:0; color:#FE359B;font-weight:bold;font-size:11pt}
+
+/*MENU*/
+ul#nav {list-style:none;background:url(../images/nv.jpg) repeat-x top left;width:980px; height:40px;margin:0 0 10px 0}
+ul#nav li{overflow: hidden;float: left;height: 40px;}
+ul#nav a, ul#nav span {padding: 10px 20px;display:block; clear: both;color:#dbff92; font-weight:bold; font-size:12px; line-height:20px;width: 100%; height:20px; background:url(../images/nv.jpg) repeat-x top left;}
+ul#nav a {color: #fff;background-position: left bottom;}
+ul#nav span {background-position: left top;}
+
+#lang{float:right; padding:10px 0 0 0;}
+#lang li{display:inline; margin:0 5px}
+#lang img{ position:relative; top:2px;margin:0 5px 0 0 }
+#lang a{color:#fff; font-weight:bold}
+#lang a:hover{color:#FE3A9C}
+
+/*Banner*/
+#banner{margin:0 0 15px 0}
+#bannerleft{ float:left; width:725px; margin:0 5px 0 0}
+.adv-top{ float:right; width:250px;list-style:none}
+
+/*Content*/
+#content{margin:0 0 15px 0}
+
+
+/*Left Content*/
+#leftcontent{ float:left; width:210px; margin:0 17px 0 0}
+.title-left {background:url(../images/cate1.jpg) no-repeat;padding:9px 0;color:#FFF; font-weight:bold;text-transform:uppercase}
+.title-left span{padding:0 0 0 12px}
+
+.bt-left-penal{background:url(../images/cate3.jpg); height:13px; margin-bottom:10px}
+
+/*Hoa hong biet noi va hoa tuoi-dien hoa*/
+.sub-cat{list-style:none; padding:2px 10px 0 0;border-left:1px solid #F1DDDE; border-right:1px solid #F1DDDE}
+.sub-cat li{border-bottom:1px dotted #F0F;padding: 5px 0}
+.sub-cat a{color: #f42f94; text-transform:capitalize;line-height: 1.4em; font-weight:bold;background:url(../images/icon-pink-fresh.gif) 5px 3px no-repeat;display: block;padding: 3px 0 3px 25px;}
+.sub-cat a:hover{color: #ff012e}
+
+.sub-cat li ul{margin:0 0 5px 30px;list-style:none}
+.sub-cat li ul li{border: none;padding:2px 0}
+.sub-cat li ul li a{background:url(../images/icon-detail.gif) left 5px  no-repeat; color:#8D4FCB; padding:0 0 0 20px;  }
+.sub-cat li ul li a:hover{color:#F53800}
+
+
+/*Qua tang*/
+#gifts{list-style:none; padding:2px 10px 0 0;border-left:1px solid #F1DDDE; border-right:1px solid #F1DDDE}
+#gifts li:first-letter{text-transform:capitalize}
+#gifts li{border-bottom:1px dotted #F0F; line-height:1.75em}
+#gifts a{color: #ff6600;display: block;background:url(../images/icon-gifts.gif) left 3px;background-repeat:no-repeat;padding: 8px 0 0 30px; font-weight:bold}
+#gifts a:hover{color: #ff012e}
+
+/*Ho tro truc tuyến*/
+.support{list-style:none;padding:10px 10px 10px 0;border-left:1px solid #F1DDDE; border-right:1px solid #F1DDDE; text-align:center; font-weight:700}
+.support li{padding:2px 0;line-height: 1.5em}
+.support li img{margin:0 0 10px 0}
+
+/*Huong dẫn*/
+#guide{list-style:none;padding:10px 10px 10px 0;border-left:1px solid #F1DDDE; border-right:1px solid #F1DDDE; line-height:1.75em}
+#guide li:first-letter{text-transform:capitalize}
+#guide li{border-bottom:1px dotted #000;}
+#guide a{color:#000; font-weight:700;display: block;background:url(../images/icon-guide.gif) left 3px;background-repeat:no-repeat;padding: 8px 0 0 30px;}
+
+
+/*Thống kê*/
+#topsta{background:#7EBC28; color:#FFF; text-transform:capitalize; font-weight:bold; padding:5px 0 5px 20px}
+.statistics{margin:0 0 10px 0; list-style:none;border-left:1px solid #57B200; border-right:1px solid #57B200; line-height:2em}
+.statistics li:first-letter{text-transform:capitalize}
+.statistics li{padding-left:10px;border-bottom:1px solid #57B200}
+
+/**adv left**/
+.bg-adv{list-style: none;text-align:center;padding: 5px 0 0 0; border-left:1px solid #F1DDDE; border-right:1px solid #F1DDDE}
+.bg-adv li{padding:0 0 5px 0;}
+
+/*Right content*/
+#rightcontent{float:left; width:751px;}
+#rightcontent p{margin:0 0 8px 0}
+#rightcontent ul li, #rightcontent ol li{margin: 0 0 0 40px}
+#rightcontent ul ,#rightcontent ol{margin: 0 0 12px 0}
+#rightcontent table{margin: auto}
+
+.title-right{background:url(../images/main1.jpg) no-repeat;padding:9px 0; color:#FFF;font-weight:700; text-transform:uppercase}
+.title-right span{padding:0 0 0 40px}
+
+.frame-tent-right{padding:5px; border-left:1px solid #F2DCE0;border-right:1px solid #F2DCE0;}
+.btom-main{ background:url(../images/main3.jpg); height:13px; width:751px;margin:0 0 7px 0}
+
+/*Trinh bay san pham*/
+.all-product{padding:5px 0 5px 0;margin: 0 !important; border-left:1px solid #F2DCE0;border-right:1px solid #F2DCE0;}
+.product{width:170px;text-align:center;margin:0 5px 10px 8px !important; display:inline-block; vertical-align:top;*float:left; *margin:0 7px 10px 0}
+.item-video-img{height: 150px !important}
+
+.product-img{height:198px;width:170px;display:table-cell;vertical-align:middle}
+
+.price{color:#999; margin:0 0 5px 0 !important}
+.price strong{color:#f00}
+.title-pro{font-size:10pt;margin:5px 0; font-weight:bold}
+.title-pro a{color:#94CD32;}
+.title-pro a:hover{color:#FD399B}
+
+/***    Page product-info     ****/
+.frame-pro-info{background: #fff;padding:15px 15px 5px 15px; border-left:1px solid #F2DCE0;border-right:1px solid #F2DCE0}
+.title-pro-order{color:#333; font-size:14px; font-weight:bold;margin:0 0 10px 0;border-bottom:1px solid #ccc;padding:0 0 10px 0}
+.title-pro-order span{padding:0 0 0 10px}
+
+.row-info{margin: 0 0 15px 0}
+.right-info{float:left;width: 385px;margin:0 0 0 15px}
+.title-info{margin:0 0 10px 0;color: #fff}
+.title-info span{background: #444444;padding:3px 10px}
+.price-info{color:#3F3F3F;margin:0 0 10px 0 !important;font-size: 10pt}
+.price-info span{margin: 0 0 0 10px;color: #000}
+
+/**Page Contact**/
+/*** Frame title company  ***/
+#frame-info-contact{margin:0 0 15px 0}
+
+/** Form lien he  **/
+.frame-contact{list-style:none;margin:0 0 10px 0}
+.frame-contact label{color:#555; margin:0 !important;font-weight:bold;width:100px; float:left}
+.frame-contact li{padding:4px 0; margin:0 !important}
+.frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.frame-contact textarea{border:1px solid #ddd; width:350px;-moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-contact span{color:#F00;margin:0 5px 0 0}
+
+.frame-contact .bton-dk{margin:10px 0 5px 30px;background:#372E27;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-contact .bton-dk{margin:10px 10px 5px 0}
+/****  End page contact     *****/
+
+/*   Page New  */
+.masuring{text-align:justify;font-size:10pt;list-style:none}
+.masuring li{margin:0 0 5px 0 !important }
+.masuring p{line-height:1.4em}
+.frame-img{float:left;width:143px;margin:0 10px 5px 0}
+.title-masuring{margin:0 0 2px 0}
+.title-masuring a{color:#55B200;font-size:10pt;font-weight:bold}
+.title-masuring a:hover{color:#FD399B}
+
+/* paging */
+ul.paging{float: right; margin:0; padding:0 0 5px 0; list-style: none;}
+ul.paging li{display: inline;margin:0 !important;}
+ul.paging .hidden{display: none;}
+ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{background: #FD399B; color:#fff; padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{color:#fff; background:#55B200}
+
+#adv-btom{margin:0 0 10px 0}
+
+/*Footer*/
+#footer{background:#58A200;color:#fff; font-size:10pt; padding:15px 0 15px 10px; margin-bottom:20px;-webkit-border-radius:2px;-moz-border-radius:2px}
+#footer .comname{font-weight:bold; text-transform:uppercase}
+#footer a{color:#fff}
+#footer a:hover{color: #FD399B}
+
+/* Error */
+.errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
+.errorSummary ul{margin:0 10px; padding:0}
+.errorSummary ul li{padding:2px 0; color: red}
