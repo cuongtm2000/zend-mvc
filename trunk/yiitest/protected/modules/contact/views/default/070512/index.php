@@ -48,5 +48,4 @@
 			</ul>               
 	   <?php $this->endWidget();?>
 </div>
-<div class="btom-main"></div>
 <?php endif;?>
