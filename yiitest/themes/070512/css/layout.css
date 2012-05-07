@@ -1,0 +1,145 @@
+body {background:url(../images/bg-body.gif) ;font-family:Arial, Helvetica, sans-serif; font-size:9pt;}
+.left{float: left;}
+.right{float:right}
+.clear{clear: both;}
+a{text-decoration:none; color:#720E3B}
+a:hover{color:#000;}
+
+/*layout*/
+*{margin:0; padding:0}
+#top-page{background:url(../images/bg-page-top-curve.jpg) no-repeat top center;height:78px;}
+   	
+#wrapper{margin:auto; width: 950px;background:url(../images/bg-page.jpg) repeat-y}
+#page{padding:5px 5px 5px 5px; background:url(../images/bg-page-bottom-curve.jpg) no-repeat bottom center;}
+
+.logo{margin:20px 0 20px 20px;}
+
+/** start style navitagion style**/
+#nav{margin:0 0 50px 8px;padding:5px 0 0 0;list-style:none; background:url(../images/border-dashed.gif) repeat-x top;position:relative;width:200px;z-index:9990;}
+#nav li{width:200px;height:40px;position:relative;line-height:40px;background:url(../images/menu-separator.jpg) no-repeat 0 35px;}
+#nav .last{background:url(../images/border-dashed.gif) repeat-x bottom;}
+#nav li a{width:214px;height:40px;display:block;position:absolute;left:0;top:-5px;text-align:center;padding-right:10px;color:#999999;text-decoration:none;}
+#nav li a:hover{width:214px;height:40px;display:block;position:absolute;color:#669933;background: url(../images/sprite.gif) no-repeat 200px -228px;text-shadow: #ffffff 2px 0px 1px;}
+#nav .select{width:214px;height:40px;display:block;position:absolute;color:#669933;background: url("../images/sprite.gif") no-repeat 200px -228px;text-shadow: #ffffff 2px 0px 1px;}
+
+/*Content*/
+#content{background:url(../images/body_bg.gif) repeat-y top center transparent}
+
+/*Left content*/
+#leftcontent{float:left; width:214px}
+.title-left{font-size:15px;margin:0 0 5px 0; color:#444;font-weight:bold;text-align:center}
+.title-left span{padding:0 15px 0 0} 
+
+/*Category*/
+.sub-cat{list-style:none; padding:5px 5px 10px 10px;margin:0  15px 0}
+.sub-cat li{ padding:0 0 5px 0}
+.sub-cat li a{color:#444;display:block}
+.sub-cat li a:hover{ color:#669933}
+.sub-cat li ul{padding:5px 0 0 20px}
+.sub-cat li ul li{list-style:none;padding:2px 0}
+.sub-cat li ul li a{color:#000; font-weight:normal;display:block}
+
+/*bg-adv adv left*/
+.bg-adv{list-style:none;text-align:center;margin:0 0 10px 0;padding:10px 0 0 0}
+.bg-adv li{padding:0 0 5px 0}
+
+/*Ho tro ky thuat*/
+.support{list-style:none;padding:5px 0 1px 0; text-align:center;margin:0 0 15px 0}
+.support li{padding:2px 0;line-height: 1.5em}
+.support li img{margin:0 0 5px 0}
+
+/*Thong ke truy cap*/
+.statistics{list-style:none;padding:5px 3px 10px 20px}
+.statistics li {color:#444444;  padding:3px 0}
+
+/*Right content*/
+#rightcontent{float:left;width:726px}
+#rightcontent p{ margin:0 0 10px 0 ;line-height:1.5em}
+#rightcontent ul li,#rightcontent ol li{margin:0 0 0 18px}
+.mid-tent{padding:15px 25px 5px 25px}
+
+.title-right{margin:0 0 10px 0;font-size:12pt;font-weight:bold; color:#fff}
+.title-right span{}
+
+.link{color:#478e17; font-size:10pt;font-weight:bold;margin:10px 0 10px 0}
+.link a{color:#fff;}
+.link img{margin:0 5px 0 4px}
+.link a:hover{ color:#478e17}
+
+/*  Frame about page index*/
+.frame-tent-right{text-align:justify; margin:0 0 20px 0;color:#fff;font-size:14px}
+
+/*   Page New  */
+.masuring{list-style: none; text-align:justify;font-size:10pt;margin:0 0 20px 0}
+.masuring li{ margin:0 0 10px 0 !important}
+.frame-img{float:left;width:130px; margin:0 10px 0 0}
+.title-masuring{margin:0 0 5px 0}
+.title-masuring a{color:#fff;font-size: 14pt}
+.title-masuring a:hover{color:#ccc}
+
+/* paging */
+ul.paging{float: right; margin:0; padding:0; list-style: none}
+ul.paging li{display: inline;margin:0 !important;}
+ul.paging .hidden{display: none;}
+ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{background:#CC6600; color:#fff;  padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{color:#fff; background:#993300}
+
+/***** Begin Product    *****/
+.all-product{}
+.product{width:160px;display:inline-block; vertical-align:top; margin:0 2px 20px 4px !important;text-align:center;*float:left}
+
+/* Frame images products*/
+.product-img{width:160px;height:160px; text-align:center;display:table-cell;vertical-align:middle}
+
+/* Tieu de, gia, add to cart*/
+.title-pro{ font-size:10pt;margin:5px 0 5px 0}
+.title-pro a{color:#fff;font-weight:bold}
+.title-pro a:hover{color:#ccc}
+.price{color:#fff; font-weight:700;margin:5px 0!important; font-size:13px}
+
+/***    Page product-info     ****/
+.frame-pro-info{background: #fff;padding:15px 15px 5px 15px;margin:0 0 10px 0}
+.title-pro-order{color:#333; font-size:14px; font-weight:bold;margin:0 0 10px 0;border-bottom:1px solid #ccc;padding:0 0 10px 0}
+.title-pro-order span{padding:0 0 0 10px}
+
+.row-info{margin: 0 0 15px 0}
+.right-info{float:right;width: 340px;margin:0 0 0 10px }
+.title-info{margin:0 0 10px 0;color: #fff}
+.title-info span{background: #444444;padding:3px 10px}
+.price-info{color:#000;margin:0 0 10px 0 !important;font-size: 10pt}
+.price-info span{margin: 0 0 0 10px;color: #000}
+
+/** Form lien he  **/
+.title-contact{ background:#CCC195;margin:0 0 10px 0; padding:7px 2px 7px 10px; font-family:Tahoma, Geneva, sans-serif;font-weight:bold; color:#33220C}
+#frm{margin:0 0 10px 0;}
+.frame-contact label{color:#fff;font-weight:700; margin:0 !important;width:150px; float:left}
+.frame-contact{list-style:none;margin:15px 0 10px 0}
+.frame-contact li{padding:4px 0; margin:0 !important}
+.frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.frame-contact textarea{border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-contact span{color:#f00;margin:0 5px 0 0}
+
+.frame-contact .bton-dk{margin:10px 0 5px 30px;background:#000;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-contact .bton-dk{margin:10px 10px 5px 0}
+/****  End page contact     *****/
+
+/*Footer*/
+#footer{font-weight:bold;text-align: right;color:#fff;padding:10px 15px 0 0; line-height:1.3em}
+.title-company-fter{font-size:10pt}
+#footer a:hover{color:#33220C}
+#footer a{color:#fff}
+
+.bg-bottom{background:url(../images/bottom-shadow.jpg) no-repeat center;height:35px;}
+
+/* Error */
+.errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
+.errorSummary ul{margin:0 10px; padding:0}
+.errorSummary ul li{padding:2px 0; color: red}
+
+
+
+
+
+
+
+
