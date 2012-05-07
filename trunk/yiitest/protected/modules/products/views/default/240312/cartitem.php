@@ -1,5 +1,5 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id] => Yii::app()->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link'), $this->lang['cart']); ?>
-<?php $this->pageTitle = $this->lang['cart']; $this->description = $this->lang['cart']; ?>
+<?php $this->pageTitle = $this->lang['cart'] . ' - ' . $this->lang[$this->module->id]; ?>
 
 <h1 class="title-right"><span><?php echo Yii::t('user', 'shoppingcart')?></span></h1>
 <form name="order" action="" method="post" >
@@ -16,26 +16,27 @@
         </thead>
         <tbody>
             <?php
-            if ($Items):
+            if ($Items): $total = 0;
                 foreach ($Items as $k => $v):
-                    $url = '<a href="'.Yii::app()->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $v->ProductsCat['tag'.LANG] .'/'.$v['tag'.LANG].'.html" title="'.$v['title'.LANG].'">';
+                    $url = '<a href="'.Yii::app()->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $v['ProductsCat']['tag'.LANG] .'/'.$v['tag'.LANG].'.html" title="'.$v['title'.LANG].'">';
                     $pic = ($v['pic_thumb'] != '') ? '<img src="'.Yii::app()->baseUrl.USERFILES.'/'.$this->module->id.'/'.$v['pic_thumb'] .'" alt="'.$v['title'.LANG] .'" />' : '<img src="'.Yii::app()->theme->baseUrl.'/images/no-images.jpg" alt="'.$v['title'.LANG].'" />';
-                    $name = $v['title' . LANG] . ' - ' . $v->ProductsCat['cat_title' . LANG];
+                    $name = $v['title' . LANG] . ' - ' . $v['ProductsCat']['cat_title' . LANG];
                     $price = $v['unit'];
                     $num_of_dates = '<input  name="num_of_dates[' . $v['record_id'].']" value="'.$carts[$v['record_id']].'" style="width:30px;text-align: center;" maxlength="3" />';
                     $total_item = $price * $carts[$v['record_id']];
-
+                    $total += $total_item;
                     $link_del = '<a href="' . Yii::app()->baseUrl.'/products/default/cartdelete/id/' . $v['record_id'] . '" title="Del ' . $name . '"><img src="' . Yii::app()->theme->baseUrl . '/images/delete-cart.png" alt="delete cart" /></a>';
                     ?>
                     <tr align="center">
                         <td class="pic-order"><?php echo $url . $pic ?></a></td>
                         <td><?php echo $url ?><strong><?php echo $name ?></strong></a></td>
-                        <td><?php //echo number_format($price) ?></td>
+                        <td><?php echo Common::getPrice($price) ?></td>
                         <td><?php echo $num_of_dates ?></td>
-                        <td><?php //echo number_format($total_item) ?> VND</td>
+                        <td><strong><?php echo Common::getPrice($total_item) ?></strong></td>
                         <td><?php echo $link_del ?></td>
                     </tr>
                     <?php endforeach;?>
+                <tr><td colspan="4" style="padding:5px; text-align: right"><strong><?php echo Yii::t('user', 'sum')?>:</strong></td><td align="center"><strong><?php echo Common::getPrice($total)?></strong> VND</td><td></td></tr>
             <?php else:?>
                 <tr><td colspan="6" style="padding:5px"><?php echo Yii::t('user', 'emptycart') ?></td></tr>
             <?php endif?>
