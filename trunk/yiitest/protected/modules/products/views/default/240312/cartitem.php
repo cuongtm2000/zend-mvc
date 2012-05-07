@@ -1,23 +1,22 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id] => Yii::app()->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link'), $this->lang['cart']); ?>
-<?php $this->pageTitle = $this->lang['cart'];
-$this->description = $this->lang['cart']; ?>
+<?php $this->pageTitle = $this->lang['cart']; $this->description = $this->lang['cart']; ?>
 
-<h1 class="title-right"><span>Thông tin giỏ hàng</span></h1>
+<h1 class="title-right"><span><?php echo Yii::t('user', 'shoppingcart')?></span></h1>
 <form name="order" action="" method="post" >
     <table class="form_order" cellspacing="0" cellpadding="5" width="100%">
         <thead>
             <tr align="center">
-                <td width="150">Hình ảnh</td>
-                <td>Tên sản phẩm</td>
-                <td>Đơn giá</td>
-                <td width="80">Số lượng</td>
-                <td>Thành tiền</td>
-                <td width="100">Hủy</td>
+                <td width="150"><?php echo Yii::t('user', 'picture')?></td>
+                <td><?php echo Yii::t('user', 'products.name')?></td>
+                <td><?php echo Yii::t('user', 'unit')?></td>
+                <td width="80"><?php echo Yii::t('user', 'number')?></td>
+                <td><?php echo Yii::t('user', 'cash')?></td>
+                <td width="40"><?php echo Yii::t('user', 'remove')?></td>
             </tr>
         </thead>
         <tbody>
             <?php
-            if (!empty($Items)) {
+            if ($Items):
                 foreach ($Items as $k => $v):
                     $url = '<a href="'.Yii::app()->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $v->ProductsCat['tag'.LANG] .'/'.$v['tag'.LANG].'.html" title="'.$v['title'.LANG].'">';
                     $pic = ($v['pic_thumb'] != '') ? '<img src="'.Yii::app()->baseUrl.USERFILES.'/'.$this->module->id.'/'.$v['pic_thumb'] .'" alt="'.$v['title'.LANG] .'" />' : '<img src="'.Yii::app()->theme->baseUrl.'/images/no-images.jpg" alt="'.$v['title'.LANG].'" />';
@@ -36,12 +35,10 @@ $this->description = $this->lang['cart']; ?>
                         <td><?php //echo number_format($total_item) ?> VND</td>
                         <td><?php echo $link_del ?></td>
                     </tr>
-                    <?php
-                endforeach;
-            }else {
-                echo '<tr align="center"><td colspan="6" style="text-align:center; padding:5px 0">Danh sách trống</td></tr>';
-            }
-            ?>
+                    <?php endforeach;?>
+            <?php else:?>
+                <tr><td colspan="6" style="padding:5px"><?php echo Yii::t('user', 'emptycart') ?></td></tr>
+            <?php endif?>
         </tbody>
     </table>
     <div class="panel-order">
