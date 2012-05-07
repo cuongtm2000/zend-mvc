@@ -3,7 +3,7 @@
     <?php echo Yii::app()->user->getFlash('contact'); ?>
 <?php else: ?>
     <h1 class="heading-contact marginb10">Liên hệ với Dos</h1>
-    <p>Chúng tôi ghi nhận những ý kiến đóng góp, thắc mắc phản hồi từ phía người sử dụng. Nếu có bất cứ vấn đề gi liên quan đến Dos.vn xin dành ít phút đề chúng tôi tiếp nhận ý kiến của bạn điều này sẽ giúp sản phâm chúng tôi ngày càng hoàn thiện &amp; chăm sóc bạn tốt hơn<br/><br/>Bạn có thể liên lạc trực tiếp với chúng tôi:<br/>Hỗ trợ: <strong>0929 001001 (mr. An)</strong></p>
+    <p>Chúng tôi ghi nhận những ý kiến đóng góp, thắc mắc phản hồi từ phía người sử dụng. Nếu có bất cứ vấn đề gì liên quan đến Dos.vn xin dành ít phút đề chúng tôi tiếp nhận ý kiến của bạn điều này sẽ giúp sản phâm chúng tôi ngày càng hoàn thiện &amp; chăm sóc bạn tốt hơn<br/><br/>Bạn có thể liên lạc trực tiếp với chúng tôi:<br/>Hỗ trợ: <strong>0929 001001 (mr. An)</strong></p>
     <div class="frame-contact">
         <div class="tent-contact">
             <div class="left-contact">

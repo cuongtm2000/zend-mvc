@@ -20,6 +20,7 @@ return array(
     'cash' => 'Cash',
     'remove' => 'Remove',
     'emptycart' => 'Empty cart',
+    'sum' => 'Total',
 
     'services.link' => 'services',
 	'news.link' => 'news',

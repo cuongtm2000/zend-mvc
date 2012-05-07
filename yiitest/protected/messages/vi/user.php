@@ -20,6 +20,7 @@ return array(
     'cash' => 'Thành tiền',
     'remove' => 'Hủy',
     'emptycart' => 'Danh sách rỗng',
+    'sum' => 'Tổng tiền',
 
 	'services.link' => 'dich-vu',
 	'news.link' => 'tin-tuc-su-kien',

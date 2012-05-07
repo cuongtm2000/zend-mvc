@@ -89,6 +89,8 @@ class DefaultController extends Controller {
             if ($cartform->validate()) {
                 var_dump($_POST['CartForm']);
                 //$this->_redirect($this->_data['module'] . '/index/success');
+                Yii::app()->user->setFlash('contactSuccess', 'Thank you for contacting us. We will respond to you as soon as possible.');
+                $this->refresh();
             }
         }
 
