@@ -12,6 +12,15 @@ return array(
     'products.continue.shopping' => 'Tiếp tục mua hàng',
     'products.delallcart.name' => 'Xóa giỏ hàng',
 
+    'shoppingcart' => 'Thông tin giỏ hàng',
+    'picture' => 'Hình ảnh',
+    'products.name' => 'Tên sản phẩm',
+    'unit' => 'Đơn giá',
+    'number' => 'Số lượng',
+    'cash' => 'Thành tiền',
+    'remove' => 'Hủy',
+    'emptycart' => 'Danh sách rỗng',
+
 	'services.link' => 'dich-vu',
 	'news.link' => 'tin-tuc-su-kien',
 	'video.link' => 'video',

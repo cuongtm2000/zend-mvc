@@ -12,6 +12,15 @@ return array(
     'products.continue.shopping' => 'Continue',
     'products.delallcart.name' => 'Delete all cart',
 
+    'shoppingcart' => 'Shopping cart',
+    'picture' => 'Picture',
+    'products.name' => 'Product name',
+    'unit' => 'Unit',
+    'number' => 'Number',
+    'cash' => 'Cash',
+    'remove' => 'Remove',
+    'emptycart' => 'Empty cart',
+
     'services.link' => 'services',
 	'news.link' => 'news',
 	'video.link' => 'video',

@@ -29,6 +29,7 @@
     <p>
         <label>&nbsp;</label>
         <?php echo CHtml::submitButton('  Submit  ', array('class'=>'login', 'name'=>'submit')); ?>
+        test
     </p>
 </fieldset>
 <?php $this->endWidget(); ?>
