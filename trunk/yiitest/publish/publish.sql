@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 27, 2012 at 03:26 AM
+-- Generation Time: May 07, 2012 at 04:05 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -40,6 +40,7 @@ CREATE TABLE IF NOT EXISTS `dos_bussiness` (
 INSERT INTO `dos_bussiness` (`bussiness_id`, `bussiness_name`, `cat_parent_id`) VALUES
 ('am-thuc-drink', 'Ẩm thực - Đồ uống', 'root'),
 ('bds-kien-truc-xay-dung', 'BĐS - kiến trúc - xây dựng', 'root'),
+('co-khi-may-moc-thiet-bi', 'Cơ khí - Máy móc - Thiết bị', 'root'),
 ('cong-nghe-thong-tin-vien-thong', 'Công nghệ thông tin - viễn thông', 'root'),
 ('du-lich', 'Du lịch', 'root'),
 ('giao-duc-dao-tao', 'Giáo dục - đào tạo', 'root'),
@@ -71,38 +72,42 @@ CREATE TABLE IF NOT EXISTS `dos_configs` (
 --
 
 INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES
-('advs_left_height', 160, '', '070312'),
-('advs_left_width', 160, '', '070312'),
-('banner_height', 324, '', '070312'),
-('banner_width', 757, '', '070312'),
-('logo_height', 57, '', '070312'),
-('logo_width', 260, '', '070312'),
-('max_image_height', 600, '', '070312'),
-('max_image_width', 700, '', '070312'),
-('news_cat_height', 100, '', '070312'),
-('news_cat_width', 130, '', '070312'),
-('news_height_thumb', 89, '', '070312'),
-('news_num_paging_cat', 10, '', '070312'),
-('news_num_paging_hot', 6, '', '070312'),
-('news_num_paging_index', 10, '', '070312'),
-('news_num_paging_new', 10, '', '070312'),
-('news_width_thumb', 143, '', '070312'),
-('products_cat_height', 200, '', '070312'),
-('products_cat_width', 150, '', '070312'),
-('products_height', 500, '', '070312'),
-('products_height_thumb', 200, '', '070312'),
-('products_num_paging_cat', 16, '', '070312'),
-('products_num_paging_hot', 8, '', '070312'),
-('products_num_paging_new', 8, '', '070312'),
-('products_num_paging_other', 4, '', '070312'),
-('products_width', 600, '', '070312'),
-('products_width_thumb', 150, '', '070312'),
-('services_height', 100, '', '070312'),
-('services_width', 150, '', '070312'),
-('video_height_thumb', 160, '', '070312'),
-('video_num_paging_cat', 8, '', '070312'),
-('video_num_paging_index', 8, '', '070312'),
-('video_width_thumb', 160, '', '070312');
+('advs_bottom_height', 32, '', '020512'),
+('advs_bottom_width', 980, '', '020512'),
+('advs_left_height', 220, '', '020512'),
+('advs_left_width', 200, '', '020512'),
+('advs_top_height', 146, '', '020512'),
+('advs_top_width', 250, '', '020512'),
+('banner_height', 290, '', '020512'),
+('banner_width', 725, '', '020512'),
+('logo_height', 110, '', '020512'),
+('logo_width', 285, '', '020512'),
+('max_image_height', 670, '', '020512'),
+('max_image_width', 720, '', '020512'),
+('news_cat_height', 100, '', '020512'),
+('news_cat_width', 143, '', '020512'),
+('news_height_thumb', 100, '', '020512'),
+('news_num_paging_cat', 10, '', '020512'),
+('news_num_paging_hot', 6, '', '020512'),
+('news_num_paging_index', 10, '', '020512'),
+('news_num_paging_new', 6, '', '020512'),
+('news_width_thumb', 143, '', '020512'),
+('products_cat_height', 198, '', '020512'),
+('products_cat_width', 170, '', '020512'),
+('products_height', 500, '', '020512'),
+('products_height_thumb', 198, '', '020512'),
+('products_num_paging_cat', 20, '', '020512'),
+('products_num_paging_hot', 20, '', '020512'),
+('products_num_paging_new', 20, '', '020512'),
+('products_num_paging_other', 4, '', '020512'),
+('products_width', 500, '', '020512'),
+('products_width_thumb', 170, '', '020512'),
+('services_height', 170, '', '020512'),
+('services_width', 170, '', '020512'),
+('video_height_thumb', 150, '', '020512'),
+('video_num_paging_cat', 16, '', '020512'),
+('video_num_paging_index', 16, '', '020512'),
+('video_width_thumb', 170, '', '020512');
 
 -- --------------------------------------------------------
 
@@ -225,8 +230,10 @@ CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
 --
 
 INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, `loadfiles`, `typefile`) VALUES
-('070312', 'video', 'prettyPhoto.css', 'css'),
-('070312', 'video', 'jquery.prettyPhoto.js', 'javascript');
+('020512', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
+('020512', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js|jquery.simplyscroll.vertical.js', 'javascript'),
+('020512', 'video', 'prettyPhoto.css', 'css'),
+('020512', 'video', 'jquery.prettyPhoto.js', 'javascript');
 
 -- --------------------------------------------------------
 
@@ -278,13 +285,14 @@ CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
 --
 
 INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
-('about', 'inlisaco'),
-('advs', 'inlisaco'),
-('banner', 'inlisaco'),
-('contact', 'inlisaco'),
-('news', 'inlisaco'),
-('services', 'inlisaco'),
-('supports', 'inlisaco');
+('about', 'luoibaoche'),
+('advs', 'luoibaoche'),
+('banner', 'luoibaoche'),
+('contact', 'luoibaoche'),
+('news', 'luoibaoche'),
+('products', 'luoibaoche'),
+('services', 'luoibaoche'),
+('supports', 'luoibaoche');
 
 -- --------------------------------------------------------
 
@@ -313,14 +321,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=74 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=94 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(73, 'Thư ngỏ', '', '<p style="text-align:justify;"><span style="text-decoration:underline;font-size:12pt;"><strong>Kính gửi: Quý khách hàng.</strong></span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Công ty <strong>IN LISA</strong> là đơn vị hoạt động trong lĩnh vực thiết kế, tạo mẫu, in ấn và cung cấp các sản phẩm tốt nhất phục vụ cho hoạt động quảng bá nhãn hiệu, phát triển thị trường.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Với đội ngũ chuyên viên thiết kế đầy sáng tạo, nhiều kinh nghiệm và kỹ thuật in hiện đại, chúng tôi sẵn sàng thực hiện các yêu cầu của quý khách hàng trên các lĩnh vực: Thiết kế và in ấn Catalogue, tờ gấp, túi giấy, biểu mẫu, tạp chí, tem chống hàng giả, hộp giấy, hộp metalize, hộp hologram…).</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;"><strong>UY TÍN - CHẤT LƯỢNG VÀ GIÁ CẢ HỢP LÝ</strong> là những gì mà công ty chúng tôi muốn đem đến cho quý khách hàng những sản phẩm hoàn hảo nhất.</span></p>', '', 127, '2012-04-25 01:46:14', 1, 1, '', '', 'thu-ngo', '', 'Thiết kế và in ấn Catalogue, tờ gấp, túi giấy, biểu mẫu, tạp chí, tem chống hàng giả, hộp giấy, hộp metalize, hộp hologram', '', 1, 'inlisaco');
+(93, 'Giới thiệu về công ty', '', '<p style="text-align:justify;"><span style="color:#008000;"><strong>Công Ty TNHH TM DV XD Thái Hàn</strong></span> chuyên Sản Xuất và nhập khẩu một số mặt hàng như:</p>\n<p style="text-align:justify;"><strong>&gt;&gt; Lưới xây dựng: lưới an toàn, lưới chống rơi, , lưới bao che công trình, lưới bảo hiểm, lưới bảo hộ lao động.</strong></p>\n<p style="text-align:justify;"><strong>&gt;&gt; Lưới thể thao: lưới bao sân bóng đá, sân bóng chày, bóng chuyền, lưới sân tennis, lưới bóng rổ. Đặc biệt là lưới bao sân tập golf và các loại lưới khác dùng trong thể thao.</strong></p>\n<p style="text-align:justify;"><strong>&gt;&gt; Lưới nông nghiệp và thủy sản: gồm lưới che chắn côn trùng, lưới che nắng và ươm cây, lưới rào, lưới phơi nông sản, lưới nhà kính, lưới đỡ hoa, lưới giàn leo</strong></p>\n<p style="text-align:justify;"><strong>&gt;&gt; Lưới nhựa: lưới bảo vệ, lưới phủ nhựa, lưới nhựa ép, lưới lọc</strong></p>\n<p style="text-align:justify;"><strong>&gt;&gt; Các loại dây nhựa: dây dơn, dây cào, dây ly và dây làm theo mẫu.</strong></p>\n<p style="text-align:justify;">&gt;&gt; Sản Phẩm của chúng tôi được Sản xuất dựa trên công nghệ Hàn Quốc, nguyên liệu chủ yếu: Hạt nhựa cao cấp HDPE, PP, PA... và một số phụ gia khác! Với công nghệ hiện đại. Sản Phẩm của Thái Hàn đa dạng màu sắc, kích cỡ..., và sản xuất theo đúng yêu cầu của Khách Hàng</p>\n<p style="text-align:justify;">&gt;&gt; Với quy trình công nghệ sản xuất tiến tiến và đội ngũ kỹ thuật, chuyên gia nhiều kinh nghiệm, chúng tôi tự hào cung cấp cho bạn những sản phẩm với chất lượng và dịch vụ tốt nhất.</p>\n<p style="text-align:justify;"><strong><em> </em></strong></p>\n<p style="text-align:justify;"><strong><em>Thông tin chi tiết về Thái Hàn:</em></strong></p>\n<p style="text-align:left;"><strong><span style="color:#008000;">CÔNG TY TNHH TM DV XD THÁI HÀN</span></strong><br />Địa chỉ : 2/6 Phú Mỹ - P.22 – Q.Bình Thạnh – Tp.HCM<br />ĐT : (08)38.407.137 Fax: (08)3840.6223 DĐ: 0908.130.298 - 0902.305.966<br />Email: thaihan2303@gmail.com<br />Website: www.luoibaoche.com</p>\n<p> </p>', '', 78, '2012-05-04 09:21:47', 1, 0, '', '', 'gioi-thieu-ve-cong-ty', '', 'Lưới xây dựng, Lưới thể thao, Lưới nông nghiệp và thủy sản, Lưới nhựa', '', 1, 'luoibaoche');
 
 -- --------------------------------------------------------
 
@@ -345,16 +353,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=48 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=71 ;
 
 --
 -- Dumping data for table `dos_module_advs`
 --
 
 INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`, `dos_usernames_username`) VALUES
-(45, 'Quảng cáo', '', 'quang-cao.jpeg', 'http://dos.vn/', '2012-04-25 03:46:54', '2012-04-24 17:00:00', '2012-05-30 17:00:00', 0, 2, 'left', '_bank', 1, 'inlisaco'),
-(46, 'Quảng cáo 1', '', 'quang-cao-1.jpg', 'http://dos.vn/', '2012-04-25 03:47:37', '2012-04-24 17:00:00', '2012-05-30 17:00:00', 0, 1, 'left', '_bank', 0, 'inlisaco'),
-(47, 'Quảng cáo 2', '', 'quang-cao-2.jpeg', 'http://dos.vn/', '2012-04-25 03:48:30', '2012-04-24 17:00:00', '2012-05-30 17:00:00', 0, 3, 'left', '_bank', 1, 'inlisaco');
+(69, 'Quảng cáo', '', 'quang-cao.jpg', 'http://luoibaoche.dos.vn/', '2012-05-04 10:22:58', '2012-05-03 17:00:00', '2012-06-29 17:00:00', 0, 1, 'top', '_bank', 1, 'luoibaoche'),
+(70, 'Quảng cáo 1', '', 'quang-cao-1.jpeg', 'http://luoibaoche.dos.vn', '2012-05-04 10:34:49', '2012-05-03 17:00:00', '2012-06-29 17:00:00', 0, 2, 'top', '_bank', 1, 'luoibaoche');
 
 -- --------------------------------------------------------
 
@@ -375,31 +382,28 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=306 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=360 ;
 
 --
 -- Dumping data for table `dos_module_banners`
 --
 
 INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_url`, `banner_link`, `banner_order`, `banner_type`, `position`, `enable`, `dos_usernames_username`) VALUES
-(288, '2012-04-26 03:04:23', 'Logo', 'logo.jpg', '', 1, 'logo', 'default', 1, 'inlisaco'),
-(289, '2012-04-26 03:06:13', 'Banner', 'banner.jpg', '', 2, 'banners', 'default', 1, 'inlisaco'),
-(290, '2012-04-26 06:49:23', 'Banner 2', 'banner-2.jpg', '', 3, 'banners', 'default', 1, 'inlisaco'),
-(291, '2012-04-26 06:49:41', 'Banner 3', 'banner-3.jpg', '', 4, 'banners', 'default', 1, 'inlisaco'),
-(292, '2012-04-26 06:50:30', 'Banner 4', 'banner-4.jpg', '', 5, 'banners', 'about', 1, 'inlisaco'),
-(293, '2012-04-26 06:50:47', 'Banner 5', 'banner-5.jpg', '', 6, 'banners', 'about', 1, 'inlisaco'),
-(294, '2012-04-26 06:51:03', 'Banner 6', 'banner-6.jpg', '', 7, 'banners', 'services', 1, 'inlisaco'),
-(295, '2012-04-26 06:51:46', 'Banner 7', 'banner-7.jpg', '', 8, 'banners', 'services', 1, 'inlisaco'),
-(296, '2012-04-26 06:52:02', 'Banner 8', 'banner-8.jpg', '', 9, 'banners', 'services', 1, 'inlisaco'),
-(297, '2012-04-26 06:52:22', 'Banner 9', 'banner-9.jpg', '', 10, 'banners', 'services', 1, 'inlisaco'),
-(298, '2012-04-26 06:55:18', 'Banner 10', 'banner-94.jpg', '', 11, 'banners', 'contact', 1, 'inlisaco'),
-(299, '2012-04-26 06:56:13', 'Banner 11', 'banner-11.jpg', '', 12, 'banners', 'contact', 1, 'inlisaco'),
-(300, '2012-04-26 06:56:35', 'Banner 12', 'banner-12.jpg', '', 13, 'banners', 'news', 1, 'inlisaco'),
-(301, '2012-04-26 06:56:53', 'Banner 13', 'banner-13.jpg', '', 14, 'banners', 'news', 1, 'inlisaco'),
-(302, '2012-04-26 06:57:36', 'Banner 14', 'banner-14.jpg', '', 15, 'banners', 'about', 1, 'inlisaco'),
-(303, '2012-04-26 06:57:59', 'Banner 15', 'banner-15.jpg', '', 16, 'banners', 'services', 1, 'inlisaco'),
-(304, '2012-04-26 06:58:26', 'Banner 16', 'banner-16.jpg', '', 17, 'banners', 'services', 1, 'inlisaco'),
-(305, '2012-04-26 07:00:51', 'Banner 17', 'banner-17.jpg', '', 18, 'banners', 'default', 1, 'inlisaco');
+(343, '2012-05-04 09:11:08', 'Logo', 'logo.jpg', '', 1, 'logo', 'default', 1, 'luoibaoche'),
+(344, '2012-05-04 09:17:22', 'banner1', 'banner1.jpg', '', 2, 'banners', 'default', 1, 'luoibaoche'),
+(345, '2012-05-04 10:02:41', 'Banner 2', 'banner-2.jpg', '', 5, 'banners', 'default', 1, 'luoibaoche'),
+(346, '2012-05-04 10:05:57', 'Banner 3', 'banner-3.jpg', '', 4, 'banners', 'default', 1, 'luoibaoche'),
+(347, '2012-05-04 10:06:18', 'Banner 4', 'banner-4.jpg', '', 3, 'banners', 'default', 1, 'luoibaoche'),
+(349, '2012-05-04 13:30:02', 'Banner 6', 'banner-6.jpg', '', 6, 'banners', 'about', 1, 'luoibaoche'),
+(350, '2012-05-04 13:30:22', 'Banner 5', 'banner-5.jpg', '', 7, 'banners', 'about', 1, 'luoibaoche'),
+(351, '2012-05-04 13:30:47', 'Banner 7', 'banner-7.jpg', '', 8, 'banners', 'products', 1, 'luoibaoche'),
+(352, '2012-05-04 13:31:18', 'Banner 8', 'banner-8.jpg', '', 9, 'banners', 'products', 1, 'luoibaoche'),
+(353, '2012-05-04 13:31:37', 'Banner 9', 'banner-9.jpg', '', 10, 'banners', 'products', 1, 'luoibaoche'),
+(354, '2012-05-04 13:31:58', 'Banner 10', 'banner-10.jpg', '', 11, 'banners', 'products', 1, 'luoibaoche'),
+(355, '2012-05-04 13:34:49', 'Banner 11', 'banner-11.jpg', '', 12, 'banners', 'services', 1, 'luoibaoche'),
+(356, '2012-05-04 13:35:10', 'Banner 12', 'banner-12.jpg', '', 13, 'banners', 'services', 1, 'luoibaoche'),
+(358, '2012-05-04 14:15:08', 'Banner 14', 'banner-14.jpg', '', 14, 'banners', 'services', 1, 'luoibaoche'),
+(359, '2012-05-04 14:15:28', 'Banner 13', 'banner-13.jpg', '', 15, 'banners', 'products', 1, 'luoibaoche');
 
 -- --------------------------------------------------------
 
@@ -425,14 +429,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_contacts_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=24 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `dos_module_contacts`
 --
 
 INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `tagen`, `description`, `descriptionen`, `enable`, `dos_usernames_username`) VALUES
-(23, 'Liên hệ với chúng tôi', '', '<p><strong><span style="font-size:12pt;">IN LISA</span></strong></p>', '', '2012-04-25 03:25:25', 1, 0, 0, 'lien-he-voi-chung-toi', '', 'IN LISA', '', '1', 'inlisaco');
+(2, 'Liên hệ với chúng tôi', '', '<p><span style="color:#008000;"><strong><span style="font-size:11pt;">CÔNG TY TNHH TM DV XD THÁI HÀN</span></strong></span></p>\n<p><strong><span style="font-size:11pt;">Địa chỉ : 2/6 Phú Mỹ - P.22 – Q.Bình Thạnh – Tp.HCM</span></strong></p>\n<p><strong><span style="font-size:11pt;">ĐT : (08)38.407.137 Fax: (08)3840.6223 </span></strong></p>\n<p><strong><span style="font-size:11pt;">DĐ: 0908.130.298 - 0902.305.966</span></strong></p>\n<p><strong><span style="font-size:11pt;">Email: thaihan2303@gmail.com</span></strong></p>\n<p><strong><span style="font-size:11pt;">Website: www.luoibaoche.com</span></strong></p>', '', '2012-05-04 09:48:33', 1, 0, 0, 'lien-he-voi-chung-toi', '', 'CÔNG TY TNHH TM DV XD THÁI HÀN', '', '1', 'luoibaoche');
 
 -- --------------------------------------------------------
 
@@ -459,11 +463,12 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 --
 
 INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
-('Trang chủ', '', 'default', '', 1, '', '', '', '', 'inlisaco'),
-('Giới thiệu', '', 'about', '', 2, '', '', '', '', 'inlisaco'),
-('Thiết kế - In ấn', '', 'services', '', 3, '', '', '', '', 'inlisaco'),
-('Kiến thức - Cẩm nang', '', 'news', '', 4, '', '', '', '', 'inlisaco'),
-('Liên hệ', '', 'contact', '', 5, '', '', '', '', 'inlisaco');
+('Trang chủ', '', 'default', '', 1, '', '', '', '', 'luoibaoche'),
+('Giới thiệu', '', 'about', '', 2, '', '', '', '', 'luoibaoche'),
+('Sản phẩm', '', 'products', '', 3, '', '', '', '', 'luoibaoche'),
+('Dự án', '', 'services', '', 4, '', '', '', '', 'luoibaoche'),
+('Tin tức & sự kiện', '', 'news', '', 5, '', '', '', '', 'luoibaoche'),
+('Liên hệ', '', 'contact', '', 6, '', '', '', '', 'luoibaoche');
 
 -- --------------------------------------------------------
 
@@ -494,18 +499,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=51 ;
-
---
--- Dumping data for table `dos_module_news`
---
-
-INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(46, '12 Mẫu Card visit thiết kế với nhiều màu sắc ấn tượng', '', '2012-04-25 02:40:27', '12-mau-card-visit-thiet-ke-voi-nhieu-mau-sac-an-tuong.jpeg', '<p style="text-align:justify;">12 Mẫu Card visit lấy cảm hứng từ màu sắc được phối hợp tinh tế. Sử dụng công nghệ in offset với 4 màu cơ bản CMYK mang lại cho người dùng một một cái nhìn thật ấn tượng.</p>', '', '<p style="text-align:left;"><strong><span style="color:#ff6600;"><em><span style="font-size:12pt;">12 Mẫu Card visit lấy cảm hứng từ màu sắc được phối hợp tinh tế. Sử dụng công nghệ in offset với 4 màu cơ bản CMYK mang lại cho người dùng một một cái nhìn thật ấn tượng.</span></em></span></strong></p>\n<p style="text-align:left;"><strong><span style="font-size:12pt;">Blue Sky CS by The Seen®</span></strong></p>\n<p style="text-align:center;"><strong><img src="/public/userfiles/image/inlisaco/image/1.jpg" alt="" width="550" height="388" /></strong></p>\n<p style="text-align:center;"><strong><span style="font-size:12pt;"> </span></strong></p>\n<p style="text-align:left;"><strong><span style="font-size:12pt;">Chromatistes Meres (Colorful Days) by Sophia Georgopoulou</span></strong></p>\n<p style="text-align:center;"><strong><span style="font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/2.jpg" alt="" width="550" height="315" /></span></strong></p>\n<p style="text-align:center;"><strong> </strong></p>\n<p style="text-align:left;"><strong><span style="font-size:12pt;">Ayako Okada Hair Stylist by Silky Szeto</span></strong></p>\n<p style="text-align:center;"><strong><span style="font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/3.jpg" alt="" width="500" height="333" /></span></strong></p>\n<p style="text-align:center;"><strong><span style="font-size:12pt;"> </span></strong></p>\n<p style="text-align:left;"><strong><span style="font-size:12pt;">TurboMilk Cards</span></strong></p>\n<p style="text-align:center;"><strong><span style="font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/4.png" alt="" width="500" height="260" /></span></strong></p>\n<p style="text-align:center;"><strong><span style="font-size:12pt;"> </span></strong></p>\n<p style="text-align:left;"><strong><span style="font-size:12pt;">Artistic Business Card by myjilson</span></strong></p>\n<p style="text-align:center;"><strong><span style="font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/6.png" alt="" width="550" height="218" /></span></strong></p>\n<p style="text-align:center;"><strong><span style="font-size:12pt;"> </span></strong></p>\n<p style="text-align:left;"><strong><span style="font-size:12pt;">Colorful Business Card by Alex</span></strong></p>\n<p style="text-align:center;"><strong><span style="font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/7.jpg" alt="" width="546" height="390" /></span></strong></p>\n<p style="text-align:left;"><strong><span style="font-size:12pt;"> </span></strong></p>\n<p style="text-align:left;"><strong><span style="font-size:12pt;">Reality business card by Lemongraphic</span></strong></p>\n<p style="text-align:center;"><strong><span style="font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/8.jpg" alt="" width="550" height="406" /></span></strong></p>\n<p style="text-align:center;"><strong><span style="font-size:12pt;"> </span></strong></p>\n<p style="text-align:left;"><strong><span style="font-size:12pt;">Transparent Colored Business Card by kaixergroup</span></strong></p>\n<p style="text-align:center;"><strong><span style="font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/9.jpg" alt="" width="550" height="444" /></span></strong></p>\n<p style="text-align:center;"><strong><span style="font-size:12pt;"> </span></strong></p>\n<p style="text-align:left;"><strong><span style="font-size:12pt;">Apex Creative Imagination by kaixergroup</span></strong></p>\n<p style="text-align:center;"><strong><span style="font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/10.jpg" alt="" width="550" height="469" /></span></strong></p>\n<p style="text-align:center;"><strong><span style="font-size:12pt;"> </span></strong></p>\n<p style="text-align:left;"><strong><span style="font-size:12pt;">RW Creative Studio Business Card by Reclameworks</span></strong></p>\n<p style="text-align:center;"><strong><span style="font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/11.jpg" alt="" width="550" height="400" /><br /></span></strong></p>\n<p style="text-align:center;"><strong> </strong></p>\n<p style="text-align:left;"><strong><span style="font-size:12pt;">Color Explosion Business Card by kaixergroup</span></strong></p>\n<p style="text-align:center;"><strong><span style="font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/12.jpg" alt="" width="550" height="399" /></span></strong></p>\n<p style="text-align:center;"><strong><span style="font-size:12pt;"> </span> <br /></strong></p>\n<p style="text-align:left;"><strong><span style="font-size:12pt;">Colorful Body Shop Business Card Template</span></strong></p>\n<p><strong><span style="font-size:12pt;"><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/inlisaco/image/13.jpg" alt="" width="550" height="368" /></span></strong></p>', '', '12-mau-card-visit-thiet-ke-voi-nhieu-mau-sac-an-tuong', '', '', '', 0, 1, 0, '', '', 1, 33),
-(47, 'Mẫu thiết kế Business card ấn tượng', '', '2012-04-25 02:58:35', 'mau-thiet-ke-business-card-an-tuong.jpeg', '<p style="text-align:justify;">Business card không đơn thuần như chúng ta thường thấy. Những nhà thiết kế sáng tạo có thể tùy biến kiểu dáng của những chiếc Business card để nó trở nên thật ấn tượng.</p>', '', '<p style="text-align:left;"><strong><em><span style="color:#ff6600;font-size:12pt;">Dưới đây là một loạt các trường hợp đặc biệt của Business card. Chúng ta sẽ có một cái nhìn hoàn toàn mới về chiếc business card và biết đâu bạn sẽ tìm được 1 ý tưởng để thiết kế cho mình một mẫu business card thật độc đáo.</span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/1c.jpg" alt="" width="550" height="280" /></span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/2c.jpg" alt="" width="550" height="733" /></span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/3c.jpg" alt="" width="550" height="411" /></span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/5c.jpg" alt="" width="550" height="735" /></span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/6c.jpg" alt="" width="550" height="366" /></span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/7c.jpg" alt="" width="550" height="347" /></span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/8c.jpg" alt="" width="550" height="914" /></span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/9c.jpg" alt="" width="550" height="358" /></span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/10c.jpg" alt="" width="550" height="331" /></span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/11c.jpg" alt="" width="550" height="404" /></span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/12c.jpg" alt="" width="550" height="276" /></span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/13c.jpg" alt="" width="550" height="322" /></span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/14c.jpg" alt="" width="550" height="1200" /></span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/15c.jpg" alt="" width="550" height="412" /></span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/16c.jpg" alt="" width="550" height="680" /></span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/18c.jpg" alt="" width="550" height="413" /></span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/19c.jpg" alt="" width="550" height="399" /></span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/20c.jpg" alt="" width="550" height="413" /></span></em></strong></p>\n<p style="text-align:center;"><strong><em><span style="color:#ff6600;font-size:12pt;"><img src="/public/userfiles/image/inlisaco/image/news/21c.jpg" alt="" width="550" height="367" /></span></em></strong></p>\n<p><strong><em><span style="color:#ff6600;font-size:12pt;"><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/inlisaco/image/news/22c.jpg" alt="" width="550" height="367" /></span></em></strong></p>', '', 'mau-thiet-ke-business-card-an-tuong', '', 'Mẫu thiết kế Business card ấn tượng', '', 0, 2, 0, '', '', 1, 33),
-(48, 'Những mẫu Catalogue đẹp năm 2012', '', '2012-04-25 03:09:22', 'nhung-mau-catalogue-dep-nam-2012.jpeg', '<p style="text-align:justify;">Bất cứ thương hiệu nào khi tung ra một bộ sản phẩm mới đều phải thiết kế một hoặc nhiều cuốn Catalogue để giới thiệu chi tiết và quảng cáo cho dòng sản phẩm đó. Thoạt nhìn thì thiết kế Cataloge có vẻ như không có gì quá khó khăn, song để tạo ra được cuốn Catalogue đẹp mắt không đơn giản chỉ là sự sắp xếp giữa chữ và hình.</p>', '', '<p> </p>\n<p style="text-align:justify;"><em><strong><span style="font-size:12pt;color:#ff6600;">Bất cứ thương hiệu nào khi tung ra một bộ sản phẩm mới đều phải thiết kế một hoặc nhiều cuốn Catalogue để giới thiệu chi tiết và quảng cáo cho dòng sản phẩm đó. Thoạt nhìn thì thiết kế Cataloge có vẻ như không có gì quá khó khăn, song để tạo ra được cuốn Catalogue đẹp mắt không đơn giản chỉ là sự sắp xếp giữa chữ và hình. Các nguyên tắc cơ bản khi thiết kế Catalogue là: Phải hiểu khách hàng của mình, phải tạo được sự chú ý cho khách hàng, hiểu được mục đích chính của khách hàng khi mua sản phẩm, đưa ra lý do để hành động, dễ dàng liên hệ và loại bỏ rủi ro.</span></strong></em></p>\n<p style="text-align:justify;"><em><strong><span style="font-size:12pt;color:#ff6600;">Đó chính là lý do mà IN LISA giới thiệu một số mẫu catalogue đẹp dưới dây để các bạn tham khảo.</span></strong></em></p>\n<p style="text-align:justify;"><em><strong><span style="font-size:12pt;color:#ff6600;"> </span></strong></em></p>\n<p><em><strong><span style="font-size:12pt;color:#ff6600;"><img style="margin-left:auto;margin-right:auto;vertical-align:middle;" src="/public/userfiles/image/inlisaco/image/news/1B.jpg" alt="" width="500" height="313" /></span></strong></em></p>\n<p><em><strong><span style="font-size:12pt;color:#ff6600;"> </span></strong></em></p>\n<p><em><strong><span style="font-size:12pt;color:#ff6600;"><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/inlisaco/image/news/2B.jpg" alt="" width="500" height="391" /></span></strong></em></p>\n<p style="text-align:center;"><em><strong><span style="font-size:12pt;color:#ff6600;"><img src="/public/userfiles/image/inlisaco/image/news/3B.jpg" alt="" width="500" height="375" /><br /></span></strong></em></p>\n<p style="text-align:center;"><em><strong><span style="font-size:12pt;color:#ff6600;"><img src="/public/userfiles/image/inlisaco/image/news/4B.jpg" alt="" width="500" height="379" /></span></strong></em></p>\n<p style="text-align:center;"><em><strong><span style="font-size:12pt;color:#ff6600;"><img src="/public/userfiles/image/inlisaco/image/news/5B.jpg" alt="" width="500" height="393" /></span></strong></em></p>\n<p style="text-align:center;"><em><strong><span style="font-size:12pt;color:#ff6600;"><img src="/public/userfiles/image/inlisaco/image/news/6B.jpg" alt="" width="500" height="334" /></span></strong></em></p>\n<p style="text-align:center;"><em><strong><span style="font-size:12pt;color:#ff6600;"><img src="/public/userfiles/image/inlisaco/image/news/7B.jpg" alt="" width="500" height="333" /></span></strong></em></p>\n<p style="text-align:center;"><em><strong><span style="font-size:12pt;color:#ff6600;"><img src="/public/userfiles/image/inlisaco/image/news/8B.jpg" alt="" width="500" height="332" /></span></strong></em></p>\n<p style="text-align:center;"><em><strong><span style="font-size:12pt;color:#ff6600;"><img src="/public/userfiles/image/inlisaco/image/news/9B.jpg" alt="" width="500" height="375" /></span></strong></em></p>\n<p style="text-align:center;"><em><strong><span style="font-size:12pt;color:#ff6600;"><img src="/public/userfiles/image/inlisaco/image/news/10B.jpg" alt="" width="500" height="359" /></span></strong></em></p>\n<p style="text-align:center;"><em><strong><span style="font-size:12pt;color:#ff6600;"><img src="/public/userfiles/image/inlisaco/image/news/11B.jpg" alt="" width="500" height="357" /></span></strong></em></p>\n<p style="text-align:center;"><em><strong><span style="font-size:12pt;color:#ff6600;"><img src="/public/userfiles/image/inlisaco/image/news/12B.jpg" alt="" width="500" height="332" /></span></strong></em></p>\n<p style="text-align:center;"><em><strong><span style="font-size:12pt;color:#ff6600;"><img src="/public/userfiles/image/inlisaco/image/news/14B.jpg" alt="" width="500" height="333" /></span></strong></em></p>\n<p style="text-align:center;"><em><strong><span style="font-size:12pt;color:#ff6600;"><img src="/public/userfiles/image/inlisaco/image/news/15B.jpg" alt="" width="500" height="375" /></span></strong></em></p>\n<p style="text-align:center;"><em><strong><span style="font-size:12pt;color:#ff6600;"><img src="/public/userfiles/image/inlisaco/image/news/16B.jpg" alt="" width="500" height="279" /></span></strong></em></p>\n<p style="text-align:center;"><em><strong><span style="font-size:12pt;color:#ff6600;"><img src="/public/userfiles/image/inlisaco/image/news/17B.jpg" alt="" width="500" height="334" /></span></strong></em></p>\n<p style="text-align:center;"><em><strong><span style="font-size:12pt;color:#ff6600;"><img src="/public/userfiles/image/inlisaco/image/news/18B.jpg" alt="" width="500" height="335" /></span></strong></em></p>\n<p style="text-align:center;"><em><strong><span style="font-size:12pt;color:#ff6600;"><img src="/public/userfiles/image/inlisaco/image/news/19B.jpg" alt="" width="500" height="333" /></span></strong></em></p>\n<p> </p>', '', 'nhung-mau-catalogue-dep-nam-2012', '', '', '', 0, 3, 0, '', '', 1, 34),
-(49, 'Top 5 xu hướng tiếp thị trực tuyến 2012', '', '2012-04-25 03:16:44', 'top-5-xu-huong-tiep-thi-truc-tuyen-2012.jpeg', '<p>Trong thời đại mới , Tiếp thị trực tuyến đóng vai trò quan trọng không kém gì công việc tiếp thị và quảng bá thương hiệu truyền thống.</p>', '', '<p><span style="font-size:11pt;">Trong thời đại mới , Tiếp thị trực tuyến đóng vai trò quan trọng không kém gì công việc tiếp thị và quảng bá thương hiệu truyền thống.</span></p>\n<p><span style="font-size:11pt;"><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/inlisaco/image/index2.jpeg" alt="" width="254" height="198" /></span></p>\n<p><strong><span style="font-size:11pt;">1. Viết blog / sáng tạo nội dung</span></strong></p>\n<p><span style="font-size:11pt;">Tối ưu hóa với các từ khóa</span></p>\n<p><span style="font-size:11pt;">-Làm cho nó thú vị</span></p>\n<p><span style="font-size:11pt;">-Làm cho nó dễ dàng để chia sẻ</span></p>\n<p><span style="font-size:11pt;"> </span></p>\n<p><strong><span style="font-size:11pt;">2. Tiếp thị trên điện thoại di động</span></strong></p>\n<p><span style="font-size:11pt;">- Tạo ra một phiên bản di động của trang web của bạn.</span></p>\n<p><span style="font-size:11pt;">- Tạo một ứng dụng.</span></p>\n<p><span style="font-size:11pt;">- Làm cho nó dễ dàng cho mọi người tìm thấy bạn trên những nơi như bản đồ của Google.</span></p>\n<p><span style="font-size:11pt;"> </span></p>\n<p><strong><span style="font-size:11pt;">3. Videos!</span></strong></p>\n<p><span style="font-size:11pt;">- YouTube: công cụ tìm kiếm lớn thứ 2</span></p>\n<p><span style="font-size:11pt;">- Podcast, làm thế nào hoặc viral videos</span></p>\n<p><span style="font-size:11pt;">- Blip.TV: phân phối thông qua các kênh khác nhau</span></p>\n<p><span style="font-size:11pt;"> </span></p>\n<p><strong><span style="font-size:11pt;">4. Social phương tiện truyền thông tiếp thị:</span></strong></p>\n<p><span style="font-size:11pt;">Google + (tease frankwatching.com/ww1)</span></p>\n<p><span style="font-size:11pt;">Gửi bài bình luận trên blog, được tham gia vào cộng đồng trực tuyến, trả lời các tweets / FB bài viết, …</span></p>\n<p><span style="font-size:11pt;"> </span></p>\n<p><strong><span style="font-size:11pt;">5. Vị trí các ứng dụng dựa trên thành tích phù hiệu</span></strong></p>\n<p><span style="font-size:11pt;">-specials/deals</span></p>\n<p><span style="font-size:11pt;">-Cuộc thi</span></p>', '', 'top-5-xu-huong-tiep-thi-truc-tuyen-2012', '', 'Top 5 xu hướng tiếp thị trực tuyến 2012', '', 0, 4, 0, '', '', 1, 35),
-(50, 'Những chiến lược marketing đơn giản mà hiệu quả', '', '2012-04-25 03:24:38', 'nhung-chien-luoc-marketing-don-gian-ma-hieu-qua.jpeg', '<p style="text-align:justify;">Bạn đã thử marketing bằng các cách nào rồi? hiệu quả ra sau? Hãy xem những cách marketing đơn giản sau đây theo tôi là rất hiệu quả, nhưng riêng bạn thì hãy đánh giá thử xem và cho ý kiến nhé.</p>', '', '<p> </p>\n<p style="text-align:justify;"><span style="color:#ff6600;"><strong><em><span style="font-size:11pt;">Bạn đã thử marketing bằng các cách nào rồi? hiệu quả ra sau? Hãy xem những cách marketing đơn giản sau đây theo tôi là rất hiệu quả, nhưng riêng bạn thì hãy đánh giá thử xem và cho ý kiến nhé.</span></em></strong></span></p>\n<p><span style="color:#ff6600;"><strong><em><span style="font-size:11pt;"><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/inlisaco/image/images1.jpeg" alt="" width="259" height="194" /></span></em></strong></span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;"><strong> </strong></span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;"><strong>1. BÁM GIỮ KHÁCH HÀNG TIỀM NĂNG.</strong></span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Chắc chắn rồi, những khách hàng này là nguồn thu quan trọng của doanh nghiệp bạn. Hãy xây dựng hồ sơ của riêng từng khách hàng, thường xuyên email cho họ các chính sách ưu đãi, những thông tin có ích cho họ cho dù họ đã biết hay không. Thể hiện sự quan tâm của bạn đối với họ bằng email hay bưu thiếp và trên đó không bao giờ quên kèm theo thông tin về công ty của bạn một cách tế nhị. Ít nhất 1 tuần 1 lần.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;"><strong>2. MARKETING THƯƠNG HIỆU.</strong></span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Điều này có thể làm khó nhiều người vì nó không đơn giản nhưng nó có ảnh hưỡng rất lớn tới chiến dịch marketing của doanh nghiệp.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Hãy thử những cách đơn giản cho điều này nhé:</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">- Bằng mọi cách phải cho khách hàng biết rằng doanh nghiệp bạn cung cấp sản phẩm, dịch vụ chất lượng.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">- Không những cung cấp cho khách hàng sự phục vụ tốt mà còn cung cấp cho khách hàng cả niềm tin khi họ lựa chọn bạn.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">- Hãy cho khách hàng thấy sự khác biệt của bạn.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">- Làm nổi bật thương hiệu bằng quảng cáo mạnh, khuyến mãi cực sock. Nếu không nằm trong top thì cũng phải nổi bật.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">- Chính sách giá cạnh tranh.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">- Cố gắng giữ khách hàng tiềm năng.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">- Làm từ thiện.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;"><strong>3. MARKETING ONLINE DỂ NHƯ TRỞ BÀN TAY.</strong></span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Cho dù bạn đã biết hay chưa biết đến marketing online thì trên thực tế nó rất quan trọng với công ty bạn trong thời đại CNTT phát triển quá mạnh mẽ như bây giờ.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Bạn cần có website thông tin về doanh nghiệp bạn và sản phẩm, dịch vụ bạn đang kinh doanh. Điều này rất dể chỉ cần lên Google search thiết kế website, wordpress, joomla,… Hoặc liên hệ với chúng tôi để có một website đơn giản miển phí hay được tư vấn online miển phí. Hãy nhớ website là địa chỉ, là nơi liên lạc, cầu nối của bạn và khách hàng trên internet.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Đặt baner, logo giới thiệu website bạn trên nhiều trang web khác. Điều này có thể đơn giản hay phức tạp tùy bạn nhưng với tôi, tôi liên kết bằng cách đặt logo website bạn để bạn đặt lại. Hợp tác để cùng nhau phát triển mà phải không. Nếu bạn muốn đặt logo trên các website lớn cũng không thành vấn đề nhưng phải tốn chi phí một chút.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Quảng bá rao vặt : Đăng tin giới thiệu sản phẩm, dịch vụ hay giới thiệu công ty bạn lên hàng ngàn diển đàn, trang rao vặt, hay website khác. Để làm điều này có phần mềm hỗ trợ có thể bạn sẽ tìm được miển phí hay thích bạn có thể mua. Hiện nay rất nhiều người hay doanh nghiệp làm vậy. Nó có nhiều tác dụng như quảng cáo, seo, ….</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;"><span style="text-decoration:underline;">Mạng xã hội ảo :</span> Facebook, twitter, Google Plus One, LinkedIn,Yahoo,… Đây là các kênh tìm kiếm, liên lạc, và tương tác với khách hàng rất dể dàng, và đơn giản. Các công ty trung bình cần có riêng bộ phận này nằm trong phòng marketing. Hãy tưởng tượng mổi ngày có vài trăm đến hàng ngàn người tương tác với Fanpage của công ty bạn. Hãy cố gắng biến mạng xã hội ảo của công ty bạn thành game show như trên tuyền hình nhé.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;"><span style="text-decoration:underline;">Dịch vụ SEO</span> : Hãy tưởng tượng bạn có một shop thời trang mà bạn lên google gỏ từ khóa “thời trang nữ” và thấy website của bạn được google sếp lên đầu. Như vậy là sao? Có phải sẽ được nhiều người xem hơn không? Và dĩ nhiên sẽ được nhiều khách hàng hơn rồi phải không?</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;"><strong>4. HÃY CHO KHÁCH HÀNG BIẾT BẠN LÀ AI.</strong></span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Đương nhiên bạn là bạn chứ bạn là ai. Điều tôi và bạn muốn là khách hàng sẽ biết đến mình, đến công ty/doanh nghiệp của bạn. Mà phải biết bằng thiện cảm, sự thán phục, sự ngưỡng mộ, sự tò mò, lòng biết ơn,…</span></p>\n<p> </p>', '', 'nhung-chien-luoc-marketing-don-gian-ma-hieu-qua', '', 'Những chiến lược marketing đơn giản mà hiệu quả', '', 0, 5, 0, '', '', 1, 35);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -532,16 +526,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=36 ;
-
---
--- Dumping data for table `dos_module_news_cat`
---
-
-INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(33, 0, 'Thiết Kế Đồ Họa', '', '', '', 'thiet-ke-do-hoa', '', 'Thiết Kế Đồ Họa', '', 'thiet-ke-o-hoa.jpg', 1, '', '', 1, 'inlisaco'),
-(34, 0, 'In ấn - Quảng cáo', '', '', '', 'in-an-quang-cao', '', 'In ấn - Quảng cáo', '', 'in-an-quang-cao.jpg', 2, '', '', 1, 'inlisaco'),
-(35, 0, 'Tin Tổng Hợp', '', '', '', 'tin-tong-hop', '', 'Tin Tổng Hợp', '', 'tin-tong-hop.jpeg', 3, '', '', 1, 'inlisaco');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -559,7 +544,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456045),
+('day_time', 2456055),
 ('max_count', 0),
 ('counter', 0),
 ('yesterday', 0);
@@ -580,7 +565,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1335489760);
+('''127.0.0.1''', 1336356158);
 
 -- --------------------------------------------------------
 
@@ -606,7 +591,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `descriptionen` varchar(250) DEFAULT NULL,
   `hits` int(11) NOT NULL DEFAULT '0',
   `record_order` int(11) NOT NULL DEFAULT '1',
-  `unit` int(11) DEFAULT NULL,
+  `unit` varchar(45) DEFAULT NULL,
   `hot` tinyint(1) NOT NULL DEFAULT '0',
   `specials` tinyint(1) DEFAULT NULL,
   `extra_field1` varchar(100) DEFAULT NULL,
@@ -617,7 +602,34 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=553 ;
+
+--
+-- Dumping data for table `dos_module_products`
+--
+
+INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(532, 'Lưới bao che 01', '', '2012-05-04 10:05:16', 'luoi-bao-che-01-thumb.jpg', 'luoi-bao-che-01.jpg', 'luoi-bao-che-01-desc-1.jpg', '<p class="MsoNormal" style="margin-bottom:.0001pt;"><strong>1. Tên sản phẩm: </strong>Lưới bao che 01</p>\n<p class="MsoNormal" style="margin-bottom:.0001pt;"> </p>\n<p class="MsoNormal" style="margin-bottom:.0001pt;"><strong>Giá SP:</strong> LH (08)38407137 – DĐ: 0908.130.298</p>\n<p class="MsoNormal" style="margin-bottom:.0001pt;"> </p>\n<p class="MsoNormal" style="margin-bottom:.0001pt;"><strong>Thông tin chi tiết: </strong></p>\n<p class="MsoNormal" style="margin-bottom:.0001pt;"><strong> </strong></p>\n<p class="MsoNormal" style="margin-bottom:.0001pt;">-  Màu sắc: xanh lá cây, trắng, đen</p>\n<p class="MsoNormal" style="margin-bottom:.0001pt;">-  Ô lưới 1mm</p>\n<p class="MsoNormal" style="margin-bottom:.0001pt;">-  Khổ lưới: 1.8m x 50m</p>\n<p class="MsoNormal" style="margin-bottom:.0001pt;">-  Làm theo yêu cầu khách hàng</p>', '', '<p class="MsoNormal" style="margin-bottom:.0001pt;"> Liên hệ: (08)38407137 – DĐ: 0908.130.298</p>', '', 'luoi-bao-che-01', '', 'Lưới bao che 01', '', 0, 1, '', 0, 0, '', '', '', '', 1, 158),
+(533, 'Lưới bao che 02', '', '2012-05-04 10:21:44', 'luoi-bao-che-02-thumb.jpg', 'luoi-bao-che-02.jpg', 'luoi-bao-che-02-desc-1.jpg', '<p><strong>Giá SP</strong>: LH (08)38407137 – DĐ: 0908.130.298</p>\n<p><strong> </strong></p>\n<p><strong>Thông tin chi tiết:</strong></p>\n<p><strong> </strong></p>\n<p>- Màu sắc: xanh lá cây</p>\n<p>- Ô lưới: Loại 2-3li/ Loại 4-5li/ Loại 6-8li</p>\n<p>Khổ lưới: K3: ô lưới 3mm, dệt kim, khổ lưới (1-4)m x100m</p>\n<p>K5: ô lưới 5mm, dệt kim, khổ lưới (1-4)m x 100m</p>\n<p>K8: ô lưới 8mm, dệt kim, khổ lưới (1-4)m x 100m</p>\n<p>- Làm theo yêu cầu khách hàng</p>', '', '<p>Liên hệ: (08)38407137 – DĐ: 0908.130.298</p>', '', 'luoi-bao-che-02', '', 'Lưới bao che', '', 0, 17, '', 0, 0, '', '', '', '', 1, 158),
+(534, 'Lưới an toàn', '', '2012-05-04 10:27:56', 'luoi-an-toan-thumb.jpg', 'luoi-an-toan.jpg', 'luoi-an-toan-desc-1.jpg|luoi-an-toan-desc-1-7.jpg', '<p><strong>Giá SP</strong>: LH (08)38407137 – DĐ: 0908.130.298</p>\n<p><strong> </strong></p>\n<p><strong>Thông tin chi tiết:</strong></p>\n<p> </p>\n<p>Màu: xanh dương, xanh lá cây</p>\n<p>Kích thước mắt lưới: 2cm, 3cm, 4cm</p>\n<p>Khổ lưới: 2m, 3m, 4m x 80m, 100m</p>\n<p>Chất liệu: PP</p>\n<p>UV: 3%</p>', '', '<p>LH (08)38407137 – DĐ: 0908.130.298</p>', '', 'luoi-an-toan', '', 'Lưới an toàn', '', 0, 19, '', 0, 0, '', '', '', '', 1, 159),
+(535, 'Lưới chống rơi 1', '', '2012-05-04 10:37:04', 'luoi-chong-roi-1-thumb.jpg', 'luoi-chong-roi-1.jpg', 'luoi-chong-roi-1-desc-1.jpg', '<p><strong>Giá SP</strong>: LH (08)38407137 – DĐ: 0908.130.298</p>\n<p><strong>Thông tin chi tiết:</strong></p>\n<p>Màu: trắng</p>\n<p>Kích thước mắt lưới: 5cm, 8cm, 10cm…</p>\n<p>Khổ lưới: 1m, 1.2m, 1.5m, 2m, 3m, 4m</p>\n<p>Làm theo yêu cầu khách hàng</p>', '', '<p>Liên hệ: (08)38407137 – DĐ: 0908.130.298</p>', '', 'luoi-chong-roi-1', '', 'Lưới chống rơi 1', '', 0, 7, '', 0, 0, '', '', '', '', 1, 160),
+(536, 'Lưới chống rơi 2', '', '2012-05-04 10:37:48', 'luoi-chong-roi-2-thumb.jpg', 'luoi-chong-roi-2.jpg', '', '<p><strong>Giá SP</strong>: LH (08)38407137 – DĐ: 0908.130.298</p>\n<p><strong>Thông tin chi tiết:</strong></p>\n<p> - Công dụng: dùng để bảo vệ an toàn cho những công trình xây dựng có quy mô lớn, các tòa nhà cao tầng có thời gian thi công dài ngày.</p>\n<p>- Màu sắc: xanh đen</p>\n<p>- Chiều dài cạnh lưới: 5cm</p>\n<p>- Kích thước sợi lưới: 0.5cm</p>', '', '<p>Liên hệ: (08)38407137 – DĐ: 0908.130.298</p>', '', 'luoi-chong-roi-2', '', 'Lưới chống rơi 2', '', 0, 12, '', 0, 0, '', '', '', '', 1, 160),
+(537, 'Lưới cẩu hàng', '', '2012-05-04 10:40:33', 'luoi-cau-hang-thumb.jpg', 'luoi-cau-hang.jpg', 'luoi-cau-hang-desc-1.jpg|luoi-cau-hang-desc-2.jpg|luoi-cau-hang-desc-3.jpg', '<p><strong>Giá SP</strong>: LH (08)38407137 – DĐ: 0908.130.298</p>\n<p> <strong>Thông tin chi tiết:</strong></p>\n<p> - Giới hạn trọng tải : từ 1 đến 10 tấn</p>\n<p>- Quy cách lưới: 1.2mx1.2m, 1.5mx1.5m,2mx2m,3mx3m hoặc theo yêu cầu.</p>\n<p>- Kích thước ô lưới: theo yêu cầu.</p>\n<p>- Màu sắc: Trắng</p>', '', '<p>Liên hệ: (08)38407137 – DĐ: 0908.130.298</p>', '', 'luoi-cau-hang', '', 'Lưới cẩu hàng', '', 0, 13, '', 0, 0, '', '', '', '', 1, 161),
+(538, 'Lưới bao che có may viền bấm khuy', '', '2012-05-04 10:42:34', 'luoi-bao-che-co-may-vien-bam-khuy-thumb.jpg', 'luoi-bao-che-co-may-vien-bam-khuy.jpg', '', '<p><strong>Giá SP</strong>: LH (08)38407137 – DĐ: 0908.130.298</p>\n<p>- Lưới bao che công trình làm theo yêu cầu có may viền đóng khuy.</p>\n<p>- Lưới chắn gió, có may viền đóng khuy, may theo yêu cầu.</p>\n<p>- Đầy đủ màu sắc và chủng loại</p>', '', '<p>LH (08)38407137 – DĐ: 0908.130.298</p>', '', 'luoi-bao-che-co-may-vien-bam-khuy', '', '', '', 0, 11, '', 0, 0, '', '', '', '', 1, 158),
+(539, 'Lưới bao che có cốt 1', '', '2012-05-04 10:44:16', 'luoi-bao-che-co-cot-1-thumb.jpg', 'luoi-bao-che-co-cot-1.jpg', '', '<p><strong>Tên sản phẩm</strong>: Lưới bao công trình</p>\n<p><strong>Giá SP</strong>: LH (08)38407137 – DĐ: 0908.130.298</p>\n<p>Thông tin chi tiết: Lưới chuyên dùng để bao che, bảo vệ an toàn cho các công trình xây dựng có quy mô lớn, các tòa nhà cao tầng được xây dựng trong thời gian dài.<br />- Định lượng (g/m2): 100, 110, 120, 135<br />- Màu sắc: xanh lá cây<br />- Khổ lưới (m): 2, 4 Chiều dài (m): 120 Hoặc theo yêu cầu của quý khách hàng</p>\n<p>Mã Sp: CG/C1: lưới dạng chắn gió, dệt kim, có cốt liên kết.</p>\n<p> </p>', '', '<p>LH (08)38407137 – DĐ: 0908.130.298</p>', '', 'luoi-bao-che-co-cot-1', '', 'Lưới bao che có cốt', '', 0, 8, '', 0, 0, '', '', '', '', 1, 158),
+(540, 'Lưới bao che có cốt 2', '', '2012-05-04 10:45:37', 'luoi-bao-che-co-cot-thumb.jpg', 'luoi-bao-che-co-cot.jpg', '', '<p><strong>Tên sản phẩm</strong>: Lưới bao công trình</p>\n<p><strong>Giá SP</strong>: LH (08)38407137 – DĐ: 0908.130.298</p>\n<p>Thông tin chi tiết: Lưới chuyên dùng để bao che, bảo vệ an toàn cho các công trình xây dựng có quy mô lớn, các tòa nhà cao tầng được xây dựng trong thời gian dài.</p>\n<p>- Định lượng (g/m2): 100, 110, 120, 135</p>\n<p>- Màu sắc: xanh lá cây</p>\n<p>Khổ lưới: Rộng (1-4)m Dài (50)m</p>\n<p>Mã Sp: CG/C2: lưới dạng chắn gió, dệt kim, có cốt liên kết.</p>\n<p> </p>', '', '<p>LH (08)38407137 – DĐ: 0908.130.298</p>', '', 'luoi-bao-che-co-cot-2', '', 'LH (08)38407137 – DĐ: 0908.130.298', '', 0, 9, '', 0, 0, '', '', '', '', 1, 158),
+(541, 'Lưới bao che có cốt 3', '', '2012-05-04 10:46:38', 'luoi-bao-che-co-cot-3-thumb.jpg', 'luoi-bao-che-co-cot-3.jpg', '', '<p><strong>Tên sản phẩm:</strong> Lưới bao công trình</p>\n<p><strong>Giá SP</strong>: LH (08)38407137 – DĐ: 0908.130.298</p>\n<p>Thông tin chi tiết: Lưới chuyên dùng để bao che, bảo vệ an toàn cho các công trình xây dựng có quy mô lớn, các tòa nhà cao tầng được xây dựng trong thời gian dài.</p>\n<p>- Định lượng (g/m2): 100, 110, 120, 135</p>\n<p>- Màu sắc: xanh lá cây</p>\n<p>- Khổ lưới (m): 2, 4 Chiều dài (m): 120 Hoặc theo yêu cầu của quý khách hàng</p>\n<p>Mã Sp: CG/C3: lưới dạng chắn gió, dệt kim, có cốt liên kết.</p>\n<p> </p>', '', '<p>LH (08)38407137 – DĐ: 0908.130.298</p>', '', 'luoi-bao-che-co-cot-3', '', 'Lưới bao che có cốt', '', 0, 10, '', 0, 0, '', '', '', '', 1, 158),
+(542, 'LPN1', '', '2012-05-04 12:55:09', 'lpn1-thumb.jpg', 'lpn1.jpg', '', '<p><strong>Giá SP</strong>: LH (08)38407137 – DĐ: 0908.130.298</p>\n<p><strong>Thông tin chi tiết:</strong></p>\n<p>- Màu sắc: Tùy chọn</p>\n<p>- Ô lưới: vuông</p>\n<p>- Khổ lưới: 2m x 100m</p>\n<p>- Làm theo yêu cầu khách hàng</p>', '', '<p>LH (08)38407137 – DĐ: 0908.130.298</p>', '', 'lpn1', '', '', '', 0, 14, '', 0, 0, '', '', '', '', 1, 162),
+(543, 'LPN2', '', '2012-05-04 12:55:59', 'lpn2-thumb.JPG', 'lpn2.JPG', '', '<p><strong>Giá SP</strong>: LH (08)38407137 – DĐ: 0908.130.298</p>\n<p><strong>Thông tin chi tiết:</strong></p>\n<p>- Màu sắc: Tùy chọn</p>\n<p>- Ô lưới: vuông, có gạch xéo</p>\n<p>- Khổ lưới: 2m x 100m</p>\n<p>- Làm theo yêu cầu khách hàng</p>', '', '<p>LH (08)38407137 – DĐ: 0908.130.298</p>', '', 'lpn2', '', '', '', 0, 15, '', 0, 0, '', '', '', '', 1, 162),
+(544, 'LPN3', '', '2012-05-04 12:56:48', 'lpn3-thumb.JPG', 'lpn3.JPG', '', '<p><strong>Giá SP</strong>: LH (08)38407137 – DĐ: 0908.130.298</p>\n<p><strong>Thông tin chi tiết:</strong></p>\n<p>- Màu sắc: Tùy chọn</p>\n<p>- Ô lưới: vuông</p>\n<p>- Khổ lưới: 2m x 100m</p>\n<p>- Làm theo yêu cầu khách hàng</p>', '', '<p>LH (08)38407137 – DĐ: 0908.130.298</p>', '', 'lpn3', '', 'Lưới bao che', '', 0, 16, '', 0, 0, '', '', '', '', 1, 162),
+(545, 'Lưới sân bóng đá', '', '2012-05-04 12:59:58', 'luoi-san-bong-da-thumb.jpg', 'luoi-san-bong-da.jpg', 'luoi-san-bong-da-desc-1.jpg|luoi-san-bong-da-desc-2.jpeg|luoi-san-bong-da-desc-3.jpg|luoi-san-bong-da-desc-4.jpg', '<p><strong>Giá SP</strong>: LH (08)38407137 – DĐ: 0908.130.298</p>\n<p><strong>Thông tin chi tiết</strong>:</p>\n<p>Lưới được dùng để bao sân bóng đá,  ở các trường học, các sân bóng đá ngoài trời.</p>\n<p>- Đường kính sợi : 4mm</p>\n<p>- Cạnh lưới : 12cm</p>\n<p>- Màu sắc : xanh da trời, xanh lá cây.</p>\n<p>- Khả năng chịu nắng mưa: 03 năm</p>', '', '<p>LH (08)38407137 – DĐ: 0908.130.298</p>', '', 'luoi-san-bong-da', '', 'Lưới sân bóng đá', '', 0, 18, '', 0, 0, '', '', '', '', 1, 165),
+(546, 'Lưới khung thành', '', '2012-05-04 13:01:21', 'luoi-khung-thanh-thumb.jpg', 'luoi-khung-thanh.jpg', 'luoi-khung-thanh-desc-1.jpg|luoi-khung-thanh-desc-1-6.jpg', '<p>Lưới khung thành:</p>\n<p>- Khung thành 05 người</p>\n<p>- Khung thành 07 người</p>', '', '<p>LH: (08)38407137 – DĐ: 0908.130.298</p>', '', 'luoi-khung-thanh', '', 'Lưới khung thành', '', 0, 6, '', 0, 0, '', '', '', '', 1, 163),
+(547, 'Lưới bao sân tập Golf', '', '2012-05-04 13:03:22', 'luoi-bao-san-tap-golf-thumb.jpg', 'luoi-bao-san-tap-golf.jpg', 'luoi-bao-san-tap-golf-desc-1.jpg|luoi-bao-san-tap-golf-desc-2.jpg|luoi-bao-san-tap-golf-desc-3.jpg|luoi-bao-san-tap-golf-desc-4.jpg|luoi-bao-san-tap-golf-desc-5.jpg|luoi-bao-san-tap-golf-desc-6.jpg|lu', '<p style="text-align:justify;"><strong>Thông tin chi tiết</strong>: Lưới chuyên dùng để bao vây các sân tập golf và các sân thể thao khác.</p>\n<p style="text-align:justify;"><strong>Giá SP</strong>: LH (08)38407137 – DĐ: 0908.130.298</p>\n<p style="text-align:justify;"><strong>Ưu điểm</strong>: Lưới được dệt bằng máy với công nghệ hiện đại nên có chất lượng cao, gút lưới chắc chắn, mắt lưới đều đặn.</p>\n<p style="text-align:justify;">- Màu sắc: xanh lá cây, xanh da trời.</p>\n<p style="text-align:justify;">- Kích thước sợi lưới: 2.0mm.</p>\n<p style="text-align:justify;">- Chiều dài mắt lưới : 2.5 cm</p>\n<p style="text-align:justify;">- Kích thước lưới : theo yêu cầu của khách hàng</p>\n<p style="text-align:justify;">- Bảo hành độ mục: 02 năm</p>', '', '<p>LH (08)38407137 – DĐ: 0908.130.298</p>', '', 'luoi-bao-san-tap-golf', '', '', '', 0, 20, '', 0, 0, '', '', '', '', 1, 166),
+(548, 'Lưới che nắng', '', '2012-05-04 13:05:02', 'luoi-che-nang-thumb.jpg', 'luoi-che-nang.jpg', 'luoi-che-nang-desc-1.jpg|luoi-che-nang-desc-2.jpg|luoi-che-nang-desc-3.jpg', '<p style="text-align:justify;">Lưới che nắng hiệu là sản phẩm do công ty do công ty Thái Hàn phân phối. Lưới có độ bền tốt nhất hiện nay, màu sắc đồng đều, lưới thẳng đẹp, độ che nắng chuẩn xác.</p>\n<p style="text-align:justify;"><strong>Giá SP</strong>: LH (08)38407137 – DĐ: 0908.130.298</p>\n<p style="text-align:justify;"><strong>Thông tin sản phẩm:</strong></p>\n<p style="text-align:justify;">Lưới che nắng được dùng để che nắng cho các vườn lan, vườn ươm, khu nghỉ mát, nhà ở...</p>\n<p style="text-align:justify;">- Màu sắc: xanh, đen, đen xanh</p>\n<p style="text-align:justify;">- Độ che nắng: 50%, 60%, 70%, 80%</p>\n<p style="text-align:justify;">- Quy cách cuộn: 1mx100m, 2mx100m,</p>', '', '<p>LH (08)38407137 – DĐ: 0908.130.298</p>', '', 'luoi-che-nang', '', 'Lưới che nắng', '', 0, 21, '', 0, 0, '', '', '', '', 1, 164),
+(549, 'Dây  Đơn', '', '2012-05-04 13:07:43', 'day--on-thumb.jpg', 'day--on.jpg', 'day--on-desc-1.jpg|day--on-desc-2.jpg|day--on-desc-3.jpg', '<p>Dây Đơn</p>', '', '<p>LH: (08)38407137 – DĐ: 0908.130.298</p>', '', 'day-don', '', 'Dây  Đơn', '', 0, 4, '', 0, 0, '', '', '', '', 1, 167),
+(550, 'Dây Cào', '', '2012-05-04 13:09:19', 'day-cao-thumb.jpg', 'day-cao.jpg', 'day-cao-desc-1.jpg|day-cao-desc-2.jpg|day-cao-desc-3.jpg|day-cao-desc-4.jpg', '<p>Dây Cào</p>', '', '<p>LH: (08) 38407137 – DĐ: 0908.130.298</p>', '', 'day-cao', '', 'Dây Cào', '', 0, 5, '', 0, 0, '', '', '', '', 1, 167),
+(551, 'Dây Thừng', '', '2012-05-04 13:13:12', 'day-thung-thumb.jpg', 'day-thung.jpg', 'day-thung-desc-1.jpg|day-thung-desc-2.jpg|day-thung-desc-3.jpg|day-thung-desc-4.jpg|day-thung-desc-1-8.jpg', '<p><strong>- Thông tin chi tiết:</strong></p>\n<p>Đựơc sử dụng cho mục đích cứu hộ, ngư nghiệp, leo núi, cột súc vật, neo thuyền và trong các ngành công nghiệp khác.</p>\n<p><strong>- Ưu điểm:</strong></p>\n<p>Lưới được dệt bằng máy với công nghệ hiện đại nên có chất lượng cao</p>\n<p>- <strong>Đặc tính</strong>:</p>\n<p>Là lọai dây từ sợi tổng hợp chắc chắn nhất. Có khả năng chịu lực và chống mài mòn cao, chịu được ở nhiệt độ cao, không mục rửa, không thấm dầu hay hay hòa tan trong bất kỳ lọai hóa chất nào.</p>\n<p><strong>- Màu sắc:</strong></p>\n<p>Đủ màu sắc</p>\n<p><strong>Kích thước</strong>: 5mm – 42mm</p>', '', '<p>LH: (08) 38407137 – DĐ: 0908.130.298</p>', '', 'day-thung', '', 'Dây Thừng', '', 0, 2, '', 0, 0, '', '', '', '', 1, 168),
+(552, 'Bao tay', '', '2012-05-04 13:14:28', 'bao-tay-thumb.jpg', 'bao-tay.jpg', 'bao-tay-desc-1.jpg|bao-tay-desc-2.jpg|bao-tay-desc-3.gif|bao-tay-desc-4.jpg', '<p style="text-align:justify;">Với phương châm “An toàn là hạnh phúc” Công Ty chúng tôi mang đến cho quý khách hàng các loại bay tay trong nước và nhập khẩu chất lượng cao, đa dạng về mẫu mã, giá cả cạnh tranh,…nhằm đảm bảo sự an toàn cho đôi tay người lao động góp phần nâng cao hiệu quả sản xuất kinh doanh và cùng nhau phát triển.</p>\n<p style="text-align:justify;">Bao tay 100%poly dùng cho lao đông phổ thông bảo vệ tay khỏi đau rát</p>\n<p style="text-align:justify;">Màu sắc: trắng, đen ,nâu… đủ loại màu sắc</p>', '', '<p>LH: (08) 38407137 – DĐ: 0908.130.298</p>', '', 'bao-tay', '', 'Bao tay', '', 0, 3, '', 0, 0, '', '', '', '', 1, 169);
 
 -- --------------------------------------------------------
 
@@ -645,7 +657,26 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=171 ;
+
+--
+-- Dumping data for table `dos_module_products_cat`
+--
+
+INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
+(158, 0, 'LƯỚI BAO CHE', '', '', '', 'luoi-bao-che', '', '', '', 'li-bao-che.jpg', '', 13, '', '', 1, 'luoibaoche'),
+(159, 0, 'LƯỚI AN TOÀN', '', '', '', 'luoi-an-toan', '', 'LƯỚI AN TOÀN', '', 'li-an-ton.jpg', '', 11, '', '', 1, 'luoibaoche'),
+(160, 0, 'LƯỚI CHỐNG RƠI', '', '', '', 'luoi-chong-roi', '', 'LƯỚI CHỐNG RƠI', '', 'li-chng-ri.jpg', '', 4, '', '', 1, 'luoibaoche'),
+(161, 0, 'LƯỚI CẨU HÀNG', '', '', '', 'luoi-cau-hang', '', 'LƯỚI CẨU HÀNG', '', 'li-cu-hng.jpg', '', 8, '', '', 1, 'luoibaoche'),
+(162, 0, 'LƯỚI PHỦ NHỰA', '', '', '', 'luoi-phu-nhua', '', 'LƯỚI PHỦ NHỰA', '', 'li-ph-nha.jpg', '', 10, '', '', 1, 'luoibaoche'),
+(163, 0, 'LƯỚI KHUNG THÀNH', '', '', '', 'luoi-khung-thanh', '', 'LƯỚI KHUNG THÀNH', '', 'li-khung-thnh.jpg', '', 9, '', '', 1, 'luoibaoche'),
+(164, 0, 'LƯỚI CHE NẮNG', '', '', '', 'luoi-che-nang', '', 'LƯỚI CHE NẮNG', '', 'li-che-nng.jpg', '', 7, '', '', 1, 'luoibaoche'),
+(165, 0, 'LƯỚI CHẮN BÓNG', '', '', '', 'luoi-chan-bong', '', '', '', 'li-chn-bng.jpeg', '', 7, '', '', 1, 'luoibaoche'),
+(166, 0, 'LƯỚI SÂN GOLF', '', '', '', 'luoi-san-golf', '', '', '', 'li-sn-golf.jpg', '', 12, '', '', 1, 'luoibaoche'),
+(167, 0, 'DÂY NHỰA', '', '', '', 'day-nhua', '', 'DÂY NHỰA', '', 'dy-nha.jpg', '', 8, '', '', 1, 'luoibaoche'),
+(168, 0, 'DÂY THỪNG', '', '', '', 'day-thung', '', 'DÂY THỪNG', '', 'dy-thng.jpg', '', 4, '', '', 1, 'luoibaoche'),
+(169, 0, 'BAO TAY', '', '', '', 'bao-tay', '', 'BAO TAY', '', 'bao-tay.gif', '', 4, '', '', 1, 'luoibaoche'),
+(170, 0, 'CỎ NHÂN TẠO', '', '', '', 'co-nhan-tao', '', 'CỎ NHÂN TẠO', '', 'c-nhn-to.jpg', '', 3, '', '', 1, 'luoibaoche');
 
 -- --------------------------------------------------------
 
@@ -676,21 +707,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=44 ;
 
 --
 -- Dumping data for table `dos_module_services`
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(22, 'In Ấn Thương Hiệu', '', '', '', '<p style="text-align:justify;"><strong><span style="font-size:11pt;"> </span></strong></p>\n<p style="text-align:justify;"><strong><span style="font-size:11pt;"><img src="/public/userfiles/image/inlisaco/image/nhandien1.jpg" alt="" width="450" height="377" /></span></strong></p>\n<p style="text-align:justify;"><strong><span style="font-size:11pt;"> </span></strong></p>\n<p style="text-align:justify;"><strong><span style="font-size:11pt;">IN LISA</span></strong><span style="font-size:11pt;"> chuyên nhận <span style="color:#993300;">in offset </span>bộ nhận diện thương hiệu, các khổ A3 - A4 - A5 và các khổ giấy tự do theo thiết kế của khách hàngvới số lượng lớn từ 1000 sản phẩm trở lên.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Gắn liền với dịch vụ <span style="color:#993300;">thiết kế nhận diện thương hiệu</span> là mức giá in ưu đãi cho khách hàng.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Chất lượng giấy Couche bảo đảm đúng với yêu cầu của khách (C150, C200, C250 .v.v.)</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Máy in offset 4 màu chuyên nghiệp đảm bảo chất lượng màu hoàn hảo nhất gần giống với màu thiết kế trên máy tính đến 95%.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Dịch vụ cán màng một mặt và hai mặt các sản phẩm in, cấn lên các sản phẩm gấp.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Sản phẩm được giao tận nơi trong khu vực TP. Hồ Chí Minh.</span></p>\n<p> </p>', '', 'in-an-thuong-hieu.jpg', 10, '2012-04-25 01:50:13', 8, 0, '', '', 'in-an-thuong-hieu', '', 'in an chuyen nghiep, in an nhan dien thuong hieu', '', 1, 'inlisaco'),
-(23, 'In Ấn Brochure', '', '', '', '<p style="text-align:justify;"><strong><img src="/public/userfiles/image/inlisaco/image/bro3.jpg" alt="" width="425" height="356" /></strong></p>\n<p style="text-align:justify;"><span style="font-size:11pt;"><strong>IN LISA</strong> chuyên nhận <span style="color:#993300;">in offset</span> các loại brochure A3 - A4 - A5 và các khổ giấy tự do theo thiết kế của khách hàngvới số lượng lớn từ 1000 tờ trở lên.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Gắn liền với dịch vụ <span style="color:#993300;">thiết kế brochure</span> là mức giá in ưu đãi cho khách hàng.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Chất lượng giấy Couche bảo đảm đúng với yêu cầu của khách (C150, C200, C250 .v.v.)</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Máy <span style="color:#993300;">in offset</span> 4 màu chuyên nghiệp đảm bảo chất lượng màu hoàn hảo nhất gần giống với màu thiết kế trên máy tính đến 95%.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Dịch vụ cán màng một mặt và hai mặt các sản phẩm in, cấn lên các sản phẩm gấp.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Sản phẩm được giao tận nơi trong khu vực TP. Hồ Chí Minh.</span></p>', '', 'in-n-brochure.jpg', 11, '2012-04-25 01:56:29', 7, 0, '', '', 'in-an-brochure', '', 'in an brochure, in chuyen nghiep', '', 1, 'inlisaco'),
-(24, 'In Ấn Catalogue', '', '', '', '<p> </p>\n<p style="text-align:justify;"><strong><img src="/public/userfiles/image/inlisaco/image/bro4.jpg" alt="" width="500" height="232" /></strong></p>\n<p style="text-align:justify;"><strong> </strong></p>\n<p style="text-align:justify;"><span style="font-size:11pt;"><strong>IN LISA</strong> chuyên nhận <span style="color:#993300;">in offset</span> các loại Catalogue cuốn, khổ A3 - A4 - A5 và các khổ giấy tự do theo thiết kế của khách hàngvới số lượng lớn từ 1000 cuốn trở lên.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Gắn liền với dịch vụ <span style="color:#993300;">thiết kế catalogue</span> là mức giá in ưu đãi cho khách hàng.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Chất lượng giấy Couche bảo đảm đúng với yêu cầu của khách (C150, C200, C250 .v.v.)</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Máy <span style="color:#993300;">in offset</span> 4 màu chuyên nghiệp đảm bảo chất lượng màu hoàn hảo nhất gần giống với màu thiết kế trên máy tính đến 95%.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Dịch vụ cán màng một mặt và hai mặt các sản phẩm in, cấn lên các sản phẩm gấp.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Sản phẩm được giao tận nơi trong khu vực TP. Hồ Chí Minh.</span></p>\n<p><span style="font-size:11pt;"> </span></p>', '', 'in-n-catalogue.jpg', 10, '2012-04-25 01:59:16', 6, 0, '', '', 'in-an-catalogue', '', 'in an catalogue, in an chuyen nghiep', '', 1, 'inlisaco'),
-(25, 'In Ấn Profile', '', '', '', '<p><strong> </strong></p>\n<p><strong><img src="/public/userfiles/image/inlisaco/image/profile1.jpg" alt="" width="400" height="300" /></strong></p>\n<p><strong> </strong></p>\n<p><strong>IN LISA</strong> chuyên nhận <span style="color:#993300;">in offset</span> các Profile công ty cuốn, khổ A4 và các khổ giấy tự do theo thiết kế của khách hàngvới số lượng lớn từ 1000 cuốn trở lên.</p>\n<p>Gắn liền với dịch vụ <span style="color:#993300;">thiết kế Profile</span> là mức giá in ưu đãi cho khách hàng.</p>\n<p>Chất lượng giấy Couche bảo đảm đúng với yêu cầu của khách (C150, C200, C250 .v.v.)</p>\n<p>Máy <span style="color:#993300;">in offset</span> 4 màu chuyên nghiệp đảm bảo chất lượng màu hoàn hảo nhất, gần giống với màu thiết kế trên máy tính đến 95%.</p>\n<p>Dịch vụ cán màng một mặt và hai mặt các sản phẩm in, cấn lên các sản phẩm gấp.</p>\n<p>Sản phẩm được giao tận nơi trong khu vực TP. Hồ Chí Minh.</p>', '', 'in-n-profile.jpg', 10, '2012-04-25 02:02:08', 5, 0, '', '', 'in-an-profile', '', 'in an chuyen nghiep, in an profile', '', 1, 'inlisaco'),
-(26, 'In Ấn Tờ Rơi', '', '', '', '<p style="text-align:justify;"><span style="font-size:11pt;"><strong> </strong></span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;"><strong><img src="/public/userfiles/image/inlisaco/image/toroi2.jpg" alt="" width="500" height="310" /></strong></span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;"><strong>IN LISA</strong> chuyên nhận <span style="color:#ff6600;">in offset</span> các loại tờ rơi quảng cáo, khổ A4 – A5 và các khổ giấy tự do theo thiết kế của khách hàng với số lượng lớn từ 1000 tờ trở lên.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Gắn liền với dịch vụ <span style="color:#ff6600;">thiết kế tờ rơi</span> là mức giá in ưu đãi cho khách hàng.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Chất lượng giấy Couche bảo đảm đúng với yêu cầu của khách (C150, C200, C250 .v.v.)</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Máy <span style="color:#ff6600;">in offset</span> 4 màu chuyên nghiệp đảm bảo chất lượng màu hoàn hảo nhất, gần giống với màu thiết kế trên máy tính đến 95%.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Dịch vụ cán màng một mặt và hai mặt các sản phẩm in, cấn lên các sản phẩm gấp.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Sản phẩm được giao tận nơi trong khu vực TP. Hồ Chí Minh.</span></p>', '', 'in-n-to-roi.jpg', 7, '2012-04-25 02:07:22', 4, 0, '', '', 'in-an-to-roi', '', 'in an to gap, in an to roi', '', 1, 'inlisaco'),
-(27, 'In Ấn Poster', '', '', '', '<p> </p>\n<p><img src="/public/userfiles/image/inlisaco/image/poster1.jpg" alt="" width="300" height="400" /></p>\n<p><strong> </strong></p>\n<p><span style="font-size:11pt;"><strong>IN LISA</strong> chuyên nhận <span style="color:#ff6600;">in offset</span> các loại Poster quảng cáo, khổ A3 - A4 – A5 và các khổ giấy tự do theo thiết kế của khách hàngvới số lượng lớn từ 1000 tờ trở lên.</span></p>\n<p><span style="font-size:11pt;">Gắn liền với dịch vụ <span style="color:#ff6600;">thiết kế Poster</span> là mức giá in ưu đãi cho khách hàng.</span></p>\n<p><span style="font-size:11pt;">Chất lượng giấy Couche bảo đảm đúng với yêu cầu của khách (C150, C200, C250 .v.v.)</span></p>\n<p><span style="font-size:11pt;">Máy <span style="color:#ff6600;">in offset</span> 4 màu chuyên nghiệp đảm bảo chất lượng màu hoàn hảo nhất, gần giống với màu thiết kế trên máy tính đến 95%.</span></p>\n<p><span style="font-size:11pt;">Dịch vụ cán màng một mặt và hai mặt các sản phẩm in, cấn lên các sản phẩm gấp.</span></p>\n<p><span style="font-size:11pt;">Sản phẩm được giao tận nơi trong khu vực TP. Hồ Chí Minh.</span></p>', '', 'in-n-poster.jpg', 5, '2012-04-25 02:09:26', 3, 0, '', '', 'in-an-poster', '', 'in an chuyen nghiep, in an poster', '', 1, 'inlisaco'),
-(28, 'In Ấn Thiệp', '', '', '', '<p style="text-align:justify;"><strong> </strong></p>\n<p style="text-align:justify;"><strong><img src="/public/userfiles/image/inlisaco/image/thiep1.jpg" alt="" width="450" height="214" /></strong></p>\n<p style="text-align:justify;"><strong> </strong></p>\n<p style="text-align:justify;"><span style="font-size:11pt;"><strong>IN LISA</strong> chuyên nhận <span style="color:#ff6600;">in offset</span> các loại thiệp công ty A4 - A5 và các khổ giấy tự do theo thiết kế của khách hàng với số lượng lớn từ 1000 tờ trở lên.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Gắn liền với dịch vụ <span style="color:#ff6600;">thiết kế thiệp</span> là mức giá in ưu đãi cho khách hàng.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Chất lượng giấy Couche bảo đảm đúng với yêu cầu của khách (C150, C200, C250 .v.v.)</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Máy <span style="color:#ff6600;">in offset</span> 4 màu chuyên nghiệp đảm bảo chất lượng màu hoàn hảo nhất, gần giống với màu thiết kế trên máy tính đến 95%.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Dịch vụ cán màng một mặt và hai mặt các sản phẩm in, cấn lên các sản phẩm gấp.</span></p>\n<p style="text-align:justify;"><span style="font-size:11pt;">Sản phẩm được giao tận nơi trong khu vực TP. Hồ Chí Minh.</span></p>', '', 'in-n-thiep.jpg', 5, '2012-04-25 02:11:07', 2, 0, '', '', 'in-an-thiep', '', 'in an chuyen nghiep, in an thiep', '', 1, 'inlisaco'),
-(29, 'In Ấn Cờ Phướn', '', '', '', '<p> </p>\n<p><img src="/public/userfiles/image/inlisaco/image/cophuon1.jpg" alt="" width="440" height="282" /></p>\n<p> </p>\n<p><span style="font-size:11pt;"><strong>IN LISA</strong> chuyên nhận <span style="color:#ff6600;">in hiflex</span> các loại cờ phướn quảng cáo, khổ A4 – A5 và các khổ giấy tự do theo thiết kế của khách hàng với số lượng lớn từ 100 tấm trở lên.</span></p>\n<p><span style="font-size:11pt;">Gắn liền với dịch vụ <span style="color:#ff6600;">thiết kế cờ phướn</span> là mức giá in ưu đãi cho khách hàng.</span></p>\n<p><span style="font-size:11pt;">Chất lượng bạt in cực tốt, dày và bên chịu được mưa gió.</span></p>\n<p><span style="font-size:11pt;">Máy <span style="color:#ff6600;">in hiflex</span> 4 màu chuyên nghiệp đảm bảo chất lượng màu hoàn hảo nhất, gần giống với màu thiết kế trên máy tính đến 95%.</span></p>\n<p><span style="font-size:11pt;">Sản phẩm được giao tận nơi trong khu vực TP. Hồ Chí Minh.</span></p>', '', 'in-n-co-phuon.jpg', 6, '2012-04-25 02:12:52', 1, 0, '', '', 'in-an-co-phuon', '', 'in an chuyen nghiep, in an co phuon', '', 1, 'inlisaco');
+(43, 'Dự Án', '', '', '', '<p style="text-align:center;"><span style="color:#008000;font-size:14pt;"><strong>Các Dự Án của Thái Hàn</strong></span></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/luoibaoche/image/du%20an%203.jpg" alt="" width="350" height="350" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/luoibaoche/image/du%20an%202.jpg" alt="" width="350" height="350" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/luoibaoche/image/du%20an%201.jpg" alt="" width="350" height="350" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/luoibaoche/image/du%20an%2010.jpg" alt="" width="350" height="337" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/luoibaoche/image/du%20an%209.jpg" alt="" width="350" height="247" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/luoibaoche/image/du%20an%208.jpg" alt="" width="350" height="274" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/luoibaoche/image/du%20an%207.jpg" alt="" width="350" height="263" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/luoibaoche/image/du%20an%205.jpg" alt="" width="350" height="252" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/luoibaoche/image/du%20an%208.jpg" alt="" width="350" height="274" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/luoibaoche/image/san%20bong%20da%20%202.jpg" alt="" width="350" height="263" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/luoibaoche/image/Luoi%20gofl%203.jpg" alt="" width="350" height="263" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/luoibaoche/image/Luoi%20gofl%202.jpg" alt="" width="350" height="263" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/luoibaoche/image/Luoi%20gofl%205.jpg" alt="" width="350" height="263" /></p>', '', '', 2, '2012-05-04 13:25:15', 1, 0, '', '', 'du-an', '', '', '', 1, 'luoibaoche');
 
 -- --------------------------------------------------------
 
@@ -709,7 +733,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `dos_module_supports`
+--
+
+INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
+(4, 'Hỗ trợ Khách hàng', '', '0908.130.298', 'maioanh7887', 1, 'yahoo', 'luoibaoche');
 
 -- --------------------------------------------------------
 
@@ -774,13 +805,6 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   KEY `fk_dos_module_webs_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `dos_module_webs`
---
-
-INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
-('analytics', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-31228822-1'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>', 'dos');
 
 -- --------------------------------------------------------
 
@@ -903,7 +927,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 --
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
-('070312', 'Mẫu thời trang: 070312', '2012-03-06 13:21:26', 'Chuyên bán các sản phẩm thời trang quần áo mới nhất, với các dịch vụ ưu đãi');
+('020512', 'Mẫu hoa tươi: 020512', '2012-05-02 03:10:52', 'Chuyên cung cấp hoa tuoi, hoa cuoi, điện hoa, hoa tuoi van phong, hoa khai trương, hoa chúc mừng, hoa xe, hoa online, hoa chia buồn');
 
 -- --------------------------------------------------------
 
@@ -924,7 +948,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_bussiness` (
 --
 
 INSERT INTO `dos_templates_has_dos_bussiness` (`dos_templates_template`, `dos_bussiness_bussiness_id`) VALUES
-('070312', 'thoi-trang');
+('020512', 'hoa-tuoi');
 
 -- --------------------------------------------------------
 
@@ -962,31 +986,43 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_modules` (
 --
 
 INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modules_module_id`, `dos_values_value_name`) VALUES
-('070312', 'about', 'advs_left'),
-('070312', 'about', 'list_supports'),
-('070312', 'about', 'menu_about'),
-('070312', 'contact', 'advs_left'),
-('070312', 'contact', 'list_supports'),
-('070312', 'contact', 'menu_products'),
-('070312', 'default', 'about_home'),
-('070312', 'default', 'advs_left'),
-('070312', 'default', 'list_supports'),
-('070312', 'default', 'menu_products'),
-('070312', 'default', 'products_hot'),
-('070312', 'default', 'products_new'),
-('070312', 'news', 'advs_left'),
-('070312', 'news', 'list_supports'),
-('070312', 'news', 'menu_news'),
-('070312', 'news', 'news_new'),
-('070312', 'products', 'advs_left'),
-('070312', 'products', 'list_supports'),
-('070312', 'products', 'menu_products'),
-('070312', 'services', 'advs_left'),
-('070312', 'services', 'list_supports'),
-('070312', 'services', 'menu_services'),
-('070312', 'video', 'advs_left'),
-('070312', 'video', 'list_supports'),
-('070312', 'video', 'menu_video');
+('020512', 'about', 'advs_bottom'),
+('020512', 'about', 'advs_left'),
+('020512', 'about', 'advs_top'),
+('020512', 'about', 'list_supports'),
+('020512', 'about', 'menu_about'),
+('020512', 'contact', 'advs_bottom'),
+('020512', 'contact', 'advs_left'),
+('020512', 'contact', 'advs_top'),
+('020512', 'contact', 'list_supports'),
+('020512', 'contact', 'menu_products'),
+('020512', 'default', 'about_home'),
+('020512', 'default', 'advs_bottom'),
+('020512', 'default', 'advs_left'),
+('020512', 'default', 'advs_top'),
+('020512', 'default', 'list_supports'),
+('020512', 'default', 'menu_products'),
+('020512', 'default', 'products_new'),
+('020512', 'news', 'advs_bottom'),
+('020512', 'news', 'advs_left'),
+('020512', 'news', 'advs_top'),
+('020512', 'news', 'list_supports'),
+('020512', 'news', 'menu_news'),
+('020512', 'products', 'advs_bottom'),
+('020512', 'products', 'advs_left'),
+('020512', 'products', 'advs_top'),
+('020512', 'products', 'list_supports'),
+('020512', 'products', 'menu_products'),
+('020512', 'services', 'advs_bottom'),
+('020512', 'services', 'advs_center'),
+('020512', 'services', 'advs_top'),
+('020512', 'services', 'list_supports'),
+('020512', 'services', 'menu_services'),
+('020512', 'video', 'advs_bottom'),
+('020512', 'video', 'advs_left'),
+('020512', 'video', 'advs_top'),
+('020512', 'video', 'list_supports'),
+('020512', 'video', 'menu_video');
 
 -- --------------------------------------------------------
 
@@ -1022,8 +1058,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 --
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('dos', 'thanhansoft@gmail.com', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-05 19:58:28', '', '', '', 'administrator', 'vi|en', NULL, '2012-04-14 03:00:00', 0, 1, '070312', 2, 'cong-nghe-thong-tin-vien-thong'),
-('inlisaco', 'xuantrung@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-04-25 01:20:27', '', '', '', 'user', 'vi', '', '2012-05-24 17:00:00', 0, 1, '070312', 1, 'thoi-trang');
+('luoibaoche', 'info@luoibaoche.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-04 08:51:09', '', '', '', 'user', 'vi', '', '2012-06-02 17:00:00', 0, 1, '020512', 30, 'bds-kien-truc-xay-dung');
 
 -- --------------------------------------------------------
 
@@ -1061,11 +1096,12 @@ CREATE TABLE IF NOT EXISTS `dos_user_langs` (
 --
 
 INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_username`) VALUES
-('address1', '30/16 Gò Dầu, P. Tân Sơn Nhì, Q. Tân Phú, TP. Hồ Chí Minh', '', 'inlisaco'),
-('address2', '08. 6296 3521 - 08. 6296 3522', '', 'inlisaco'),
-('banner', 'Logo & Banner', '', 'inlisaco'),
-('company_name', 'CÔNG TY IN LISA', '', 'inlisaco'),
-('company_phone', 'Hot line: 0987 522 003', '', 'inlisaco');
+('address1', 'Địa chỉ : 2/6 Phú Mỹ - P.22 – Q.Bình Thạnh – Tp.HCM', '', 'luoibaoche'),
+('address2', 'ĐT : (08)38.407.137 Fax: (08)3840.6223 DĐ: 0908.130.298 - 0902.305.966', '', 'luoibaoche'),
+('company_name', 'CÔNG TY TNHH TM DV XD THÁI HÀN', '', 'luoibaoche'),
+('company_name_footer', 'CÔNG TY TNHH TM DV XD THÁI HÀN', '', 'luoibaoche'),
+('company_phone', 'Hot line: 0908.130.298 - 0902.305.966', '', 'luoibaoche'),
+('copyright', 'Email: thaihan2303@gmail.com  - Website: www.luoibaoche.com', '', 'luoibaoche');
 
 -- --------------------------------------------------------
 

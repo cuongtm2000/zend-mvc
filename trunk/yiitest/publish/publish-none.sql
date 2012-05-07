@@ -344,7 +344,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `descriptionen` varchar(250) DEFAULT NULL,
   `hits` int(11) NOT NULL DEFAULT '0',
   `record_order` int(11) NOT NULL DEFAULT '1',
-  `unit` int(11) DEFAULT NULL,
+  `unit` varchar(45) DEFAULT NULL,
   `hot` tinyint(1) NOT NULL DEFAULT '0',
   `specials` tinyint(1) DEFAULT NULL,
   `extra_field1` varchar(100) DEFAULT NULL,
