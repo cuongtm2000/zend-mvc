@@ -14,17 +14,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/cache" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hoiit.com/protected/views/login/hoiit/index.php" afterPath="$PROJECT_DIR$/hoiit.com/protected/views/login/hoiit/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Common.php" afterPath="$PROJECT_DIR$/protected/components/Common.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/messages/en/user.php" afterPath="$PROJECT_DIR$/protected/messages/en/user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/messages/vi/user.php" afterPath="$PROJECT_DIR$/protected/messages/vi/user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/default/views/default/240312/index.php" afterPath="$PROJECT_DIR$/protected/modules/default/views/default/240312/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php" afterPath="$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/products/models/CartForm.php" afterPath="$PROJECT_DIR$/protected/modules/products/models/CartForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/products/views/default/240312/cartitem.php" afterPath="$PROJECT_DIR$/protected/modules/products/views/default/240312/cartitem.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/products/views/default/240312/cats.php" afterPath="$PROJECT_DIR$/protected/modules/products/views/default/240312/cats.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/products/views/default/240312/ordering.php" afterPath="$PROJECT_DIR$/protected/modules/products/views/default/240312/ordering.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/contact.php" afterPath="$PROJECT_DIR$/protected/views/site/contact.php" />
     </list>
     <ignored path="svn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,71 +39,7 @@
     <favorites_list name="svn" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ordering.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/240312/ordering.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="23" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.47692308">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CartForm.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/products/models/CartForm.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="26" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cartitem.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/240312/cartitem.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="55" selection-start="822" selection-end="857" vertical-scroll-proportion="-0.65384614">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Products.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/products/models/Products.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="12" selection-start="1465" selection-end="1525" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="61" selection-start="3576" selection-end="3576" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/contact/views/default/240312/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="62" selection-end="231" vertical-scroll-proportion="8.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/contact/controllers/DefaultController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="16" selection-start="1450" selection-end="1605" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -139,9 +65,9 @@
         <option value="$PROJECT_DIR$/protected/messages/en/user.php" />
         <option value="$PROJECT_DIR$/protected/modules/products/views/default/240312/cartitem.php" />
         <option value="$PROJECT_DIR$/protected/modules/default/views/default/240312/index.php" />
-        <option value="$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/protected/modules/products/models/CartForm.php" />
         <option value="$PROJECT_DIR$/protected/modules/products/views/default/240312/ordering.php" />
+        <option value="$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php" />
       </list>
     </option>
   </component>
@@ -854,21 +780,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/contact/controllers/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="16" selection-start="1450" selection-end="1605" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="61" selection-start="3576" selection-end="3576" vertical-scroll-proportion="0.0">
+        <state line="20" column="16" selection-start="1450" selection-end="1605" vertical-scroll-proportion="0.62271065">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/products/models/Products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="12" selection-start="1465" selection-end="1525" vertical-scroll-proportion="0.0">
+        <state line="43" column="12" selection-start="1465" selection-end="1525" vertical-scroll-proportion="0.4981685">
           <folding />
         </state>
       </provider>
@@ -882,28 +801,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/contact/views/default/240312/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="62" selection-end="231" vertical-scroll-proportion="8.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/products/models/CartForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="26" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0">
+        <state line="2" column="0" selection-start="62" selection-end="231" vertical-scroll-proportion="-0.425">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/240312/cartitem.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="55" selection-start="822" selection-end="857" vertical-scroll-proportion="-0.65384614">
+        <state line="12" column="55" selection-start="822" selection-end="857" vertical-scroll-proportion="0.03269231">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/products/views/default/240312/ordering.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="23" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.47692308">
+        <state line="13" column="75" selection-start="919" selection-end="919" vertical-scroll-proportion="9.153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="18" selection-start="3671" selection-end="3671" vertical-scroll-proportion="0.7161172">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/products/models/CartForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="26" selection-start="455" selection-end="455" vertical-scroll-proportion="0.48300537">
           <folding />
         </state>
       </provider>
