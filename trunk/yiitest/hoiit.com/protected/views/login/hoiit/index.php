@@ -1,5 +1,5 @@
 <ul id="crumbs">
-    <li><a href="#">Home</a></li>
+    <li><a href="<?php echo Yii::app()->request->baseUrl?>" title="Home page">Home</a></li>
     <li>Login</li>
 </ul>
 <?php $form = $this->beginWidget('CActiveForm', array('id' => 'frm', 'enableAjaxValidation' => true, 'enableClientValidation' => true)); ?>
@@ -29,7 +29,7 @@
     <p>
         <label>&nbsp;</label>
         <?php echo CHtml::submitButton('  Submit  ', array('class'=>'login', 'name'=>'submit')); ?>
-        <a href="" title="Forgot password">Forgot password</a>
+        <a href="<?php echo Yii::app()->request->baseUrl?>/forgot-password" title="Forgot password">Forgot password</a>
     </p>
 </fieldset>
 <?php $this->endWidget(); ?>
