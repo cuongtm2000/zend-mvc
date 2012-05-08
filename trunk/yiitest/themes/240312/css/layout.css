@@ -176,6 +176,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 
 .form_order tbody tr td{border : 1px solid #ddd;}
 .form_order tbody tr .pic-order{padding:5px 0}
+.form_order tbody tr input{border:1px solid #ccc}
 .form_order tbody tr td a{color:#8E7F3D}
 .form_order tbody tr td a:hover{color:#2C2C2C}
 
