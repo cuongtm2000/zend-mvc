@@ -83,56 +83,44 @@ class DefaultController extends Controller {
         $cartform = new CartForm();
 
         $cart = Yii::app()->session['cart'];
+        $items = $model_class->listItem($cart);
 
         if (isset($_POST['CartForm'])) {
             $cartform->attributes = $_POST['CartForm'];
             if ($cartform->validate()) {
+                $username = Username::model()->infoUser(Yii::app()->session['subdomain']);
+                $html = 'Xin chào: <strong>' . $username['fullname'] . '</strong><br /><br />';
+                $html .= 'Thông tin khách hàng liên hệ đặt mua sản phẩm tại website: ' . Yii::app()->session['subdomain'] . '.dos.vn <br />';
+                $html .= '<strong>Họ và tên</strong>: ' . $cartform['fullname'] . '<br />';
+                $html .= '<strong>Địa chỉ</strong>: ' . $cartform['address'] . '<br />';
+                $html .= '<strong>Điện thoại</strong>: ' . $cartform['phone'] . '<br />';
+                $html .= '<strong>Email</strong>: ' . $cartform['email'] . '<br />';
+                $html .= '<strong>Nội dung</strong>: ' . $cartform['content'] . '<br />';
 
-                /*$html = 'Xin chào: <strong>Quý khách</strong><br /><br />';
-                $html .= 'Thông tin khách hàng liên hệ đặt phòng tại website: <br />';
-                $html .= 'Họ và tên: ' . $data['fullname'] . '<br />';
-                $html .= 'Địa chỉ: ' . $data['address'] . '<br />';
-                $html .= 'Điện thoại: ' . $data['phone'] . '<br />';
-                $html .= 'Email: ' . $data['email'] . '<br />';
-                $html .= 'Số lượng người lớn: ' . $data['adults'] . '<br />';
-                $html .= 'Số lượng trẻ em: ' . $data['children'] . '<br />';
-                $html .= 'Ngày đến: ' . $data['date_start'] . '<br />';
-                $html .= 'Ngày đi: ' . $data['date_end'] . '<br />';
-
-                $html .= '<table align="center" cellspacing="0" cellpadding="5" border="1">
-						<thead>
-						  <tr align="center">
-							<td>Tên phòng</td>
-							<td>Đơn giá</td>
-							<td width="80">Số ngày ở</td>
-							<td>Thành tiền</td>
-						  </tr>
-						</thead>
-						<tbody>';
-
-                $cartSession = new Zend_Session_Namespace('cart');
-                $ssInfo = $cartSession->getIterator();
+                $html .= '<table align="center" cellspacing="0" cellpadding="5" border="1"><thead><tr align="center"><td>Tên sản phẩm</td><td>Đơn giá</td><td width="80">Số lượng</td><td>Thành tiền</td></tr></thead><tbody>';
 
                 $total = 0;
-                foreach ($order as $value) {
-                    foreach ($ssInfo as $ss) {
-                        $total_item = $value['unit'] * $ss[$value['record_id']];
-                        $total = $total + $total_item;
-                        $html .= '<tr align="center"><td>' . $value['title' . LANG] . ' - ' . $value['cat_title' . LANG] . '</td><td>' . $value['unit'] . '</td><td>' . $ss[$value['record_id']] . '</td><td>' . $total_item . ' VND</td></tr>';
-                    }
+                foreach ($items as $k => $v) {
+                    $price = $v['unit'];
+                    $num_of_dates = $cart[$v['record_id']];
+                    $total_item = $price * $num_of_dates;
+                    $total += $total_item;
+
+                    $html .= '<tr align="center"><td>' . $v['title' . LANG] . ' - ' . $v['ProductsCat']['cat_title' . LANG] . '</td><td>' . Common::getPrice($price) . '</td><td>' . $num_of_dates . '</td><td>' . Common::getPrice($total_item) . '</td></tr>';
                 }
+                $html .= '<tr><td colspan="3" style="padding:5px; text-align: right">Tổng cộng: </td><td align="center"><strong>' . Common::getPrice($total) . ' VND</strong></td></tr>';
+                $html .= '</tbody></table>';
+                $html .= '<br />Cảm ơn đã sử dụng dịch vụ công ty chúng tôi<br />--<br/>Dos.vn';
 
-                $html .= '<tr><td colspan="3">Tổng cộng: </td><td align="center">' . number_format($total, 3) . ' VND</td></tr>';
+                Yii::import('application.extensions.phpmailer.JPhpMailer');
+                $mail = new JPhpMailer;
+                $mail->sendMailSmtp('sender@dos.vn', $username['email'], 'Dos.vn', $username['fullname'], 'Liên hệ từ web: ' . Yii::app()->session['subdomain'] . '.dos.vn', $html, 1, $cartform['email'], $cartform['fullname']);
 
-                $html .= '</tbody>
-					</table>';
-                $html .= '<br />Cảm ơn đã sử dụng dịch vụ công ty chúng tôi<br />Trân trọng';*/
-
-                //Yii::app()->user->setFlash('contactSuccess', $this->lang['contactSuccess']);
-                //$this->refresh();
+                Yii::app()->user->setFlash('contactSuccess', $this->lang['contactSuccess']);
+                $this->refresh();
             }
         }
 
-        $this->render(Yii::app()->session['template'] . '/ordering', array('Items' => $model_class->listItem($cart), 'carts' => $cart, 'model' => $cartform));
+        $this->render(Yii::app()->session['template'] . '/ordering', array('Items' => $items, 'carts' => $cart, 'model' => $cartform));
     }
 }
