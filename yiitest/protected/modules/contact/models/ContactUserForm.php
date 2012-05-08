@@ -13,6 +13,7 @@ class ContactUserForm extends CFormModel {
         return array(
             array('fullname, address, phone, email, content', 'required'),
             array('email', 'email'),
+            array('company', 'length', 'max' => 60),
             array('content', 'length', 'min' => 10),
         );
     }

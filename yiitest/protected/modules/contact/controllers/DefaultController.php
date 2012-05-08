@@ -18,7 +18,7 @@ class DefaultController extends Controller {
                 $html = 'Chào <b>' . $username['fullname'] . '</b>!<br /><br />Cảm ơn bạn đã sử dụng dịch vụ công ty chúng tôi. Dưới đây là thông tin Khách hàng liên hệ từ website <b>http://' . Yii::app()->session['subdomain'] . '.dos.vn</b><br /><br/><b>Fullname</b>: ' . $contact->fullname . '<br /><b>Company</b>: ' . $contact->company . '<br /><b>Address</b>: ' . $contact->address . '<br /><b>Phone</b>: ' . $contact->phone . '<br /><b>Email</b>: ' . $contact->email . '<br /><b>Content</b>: ' . nl2br($contact->content).'<br /><br />--<br/>Dos.vn';
                 $mail->sendMailSmtp('sender@dos.vn', $username['email'], 'Dos.vn', $username['fullname'], 'Liên hệ từ web: ' . Yii::app()->session['subdomain'] . '.dos.vn', $html, 1, $contact->email, $contact->fullname);
 
-                Yii::app()->user->setFlash('contactSuccess', 'Thank you for contacting us. We will respond to you as soon as possible.');
+                Yii::app()->user->setFlash('contactSuccess', $this->lang['contactSuccess']);
                 $this->refresh();
             }
         }

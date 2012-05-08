@@ -87,9 +87,48 @@ class DefaultController extends Controller {
         if (isset($_POST['CartForm'])) {
             $cartform->attributes = $_POST['CartForm'];
             if ($cartform->validate()) {
-                var_dump($_POST['CartForm']);
-                //$this->_redirect($this->_data['module'] . '/index/success');
-                Yii::app()->user->setFlash('contactSuccess', 'Thank you for contacting us. We will respond to you as soon as possible.');
+
+                /*$html = 'Xin chào: <strong>Quý khách</strong><br /><br />';
+                $html .= 'Thông tin khách hàng liên hệ đặt phòng tại website: <br />';
+                $html .= 'Họ và tên: ' . $data['fullname'] . '<br />';
+                $html .= 'Địa chỉ: ' . $data['address'] . '<br />';
+                $html .= 'Điện thoại: ' . $data['phone'] . '<br />';
+                $html .= 'Email: ' . $data['email'] . '<br />';
+                $html .= 'Số lượng người lớn: ' . $data['adults'] . '<br />';
+                $html .= 'Số lượng trẻ em: ' . $data['children'] . '<br />';
+                $html .= 'Ngày đến: ' . $data['date_start'] . '<br />';
+                $html .= 'Ngày đi: ' . $data['date_end'] . '<br />';
+
+                $html .= '<table align="center" cellspacing="0" cellpadding="5" border="1">
+						<thead>
+						  <tr align="center">
+							<td>Tên phòng</td>
+							<td>Đơn giá</td>
+							<td width="80">Số ngày ở</td>
+							<td>Thành tiền</td>
+						  </tr>
+						</thead>
+						<tbody>';
+
+                $cartSession = new Zend_Session_Namespace('cart');
+                $ssInfo = $cartSession->getIterator();
+
+                $total = 0;
+                foreach ($order as $value) {
+                    foreach ($ssInfo as $ss) {
+                        $total_item = $value['unit'] * $ss[$value['record_id']];
+                        $total = $total + $total_item;
+                        $html .= '<tr align="center"><td>' . $value['title' . LANG] . ' - ' . $value['cat_title' . LANG] . '</td><td>' . $value['unit'] . '</td><td>' . $ss[$value['record_id']] . '</td><td>' . $total_item . ' VND</td></tr>';
+                    }
+                }
+
+                $html .= '<tr><td colspan="3">Tổng cộng: </td><td align="center">' . number_format($total, 3) . ' VND</td></tr>';
+
+                $html .= '</tbody>
+					</table>';
+                $html .= '<br />Cảm ơn đã sử dụng dịch vụ công ty chúng tôi<br />Trân trọng';*/
+
+                //Yii::app()->user->setFlash('contactSuccess', $this->lang['contactSuccess']);
                 //$this->refresh();
             }
         }
