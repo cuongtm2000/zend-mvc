@@ -226,7 +226,7 @@ class Username extends CActiveRecord {
 	}
 
 	public function createFolderUser($user) {
-		$path = '/public/userfiles/images/' . $user . '/images/';
+		$path = '/public/userfiles/image/' . $user . '/image/';
 		$common_class = new Common();
 		$common_class->recursiveMkdir($path);
 	}
