@@ -212,11 +212,18 @@ class Usernames extends CActiveRecord {
         return $command->queryAll();
     }
 
-    //Front end - get Username for activate
-    public function getUsername($email, $code_user) {
+    public function getUsernameByEmail($email){
         $command = Yii::app()->db->createCommand('SELECT username, code, enable FROM ' . $this->tableName() . ' WHERE email=:email');
         $command->bindParam(':email', $email, PDO::PARAM_STR);
-        $row = $command->queryRow();
+        return $command->queryRow();
+    }
+
+    //Front end - get Username for activate
+    public function getUsername($email, $code_user) {
+        /*$command = Yii::app()->db->createCommand('SELECT username, code, enable FROM ' . $this->tableName() . ' WHERE email=:email');
+        $command->bindParam(':email', $email, PDO::PARAM_STR);
+        $row = $command->queryRow();*/
+        $row = $this->getUsernameByEmail($email);
         if ($row) {
             //enable == 1, user has activated
             if ($row['enable'] == 1) {
