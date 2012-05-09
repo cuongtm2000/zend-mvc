@@ -38,7 +38,22 @@ class LoginController extends Controller {
     }
 
     public function actionReset($email, $code) {
-        var_dump($email);
-        var_dump($code);
+        $model = new ResetPassForm();
+
+        if (Usernames::model()->checkResetPassUser($email, $code)) {
+            if (isset($_POST['ResetPassForm'])) {
+                $model->attributes = $_POST['ResetPassForm'];
+                if ($model->validate()) {
+                    Usernames::model()->resetPassUser($email, $model['pass_new']);
+
+                    Yii::app()->user->setFlash('contactSuccess', 'Password successfully changed! You can now <a href="http://' . $_SERVER['HTTP_HOST'] . Yii::app()->request->baseUrl . '/login" title="Login">access your Account</a>, change your account settings.');
+                    $this->refresh();
+                }
+            }
+        } else {
+            Yii::app()->user->setFlash('contactSuccess', 'Password Recovery is unsuccessful, please try again at the link <a href="http://' . $_SERVER['HTTP_HOST'] . Yii::app()->request->baseUrl . '/forgot-password" title="Forgot password">http://' . $_SERVER['HTTP_HOST'] . Yii::app()->request->baseUrl . '/forgot-password</a>');
+        }
+
+        $this->render(Yii::app()->theme->name . '/reset', array('model' => $model));
     }
 }
