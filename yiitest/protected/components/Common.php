@@ -120,8 +120,4 @@ class Common {
         }
         return $str;
     }
-
-    public static function totalPrice($price) {
-
-    }
 }
