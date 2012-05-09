@@ -100,4 +100,24 @@ class Common {
             Yii::app()->session['langUrl'] = '';
         }
     }
+
+    /**
+     * Function dùng cho việc tính toán trả về số, hay là liên hệ giá cả sản phẩm
+     * @static
+     * @param $price
+     * @return string
+     */
+    public static function getPrice($price) {
+        $str = '';
+        if (is_numeric($price)) {
+            $str = number_format($price, 0, '', '.');
+        } else {
+            if ($price) {
+                $str = $price;
+            } else {
+                $str = Yii::app()->controller->lang['contact'];
+            }
+        }
+        return $str;
+    }
 }

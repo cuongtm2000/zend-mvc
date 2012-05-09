@@ -35,7 +35,6 @@ class DefaultController extends Controller {
         $model_class = new $model();
 
         $id = $model_class->getIDByTag($id);
-
         $cart = Yii::app()->session['cart'];
 
         if (is_array($cart) && array_key_exists($id, $cart)) {
@@ -44,7 +43,7 @@ class DefaultController extends Controller {
             $cart[$id] = 1;
         }
         Yii::app()->session['cart'] = $cart;
-        $this->redirect(LANGURL . '/' . Yii::t('user', 'products.link') . '/' . Yii::t('user', 'products.cartitem.link'));
+        $this->redirect(Yii::app()->request->baseUrl.LANGURL . '/' . Yii::t('user', 'products.link') . '/' . Yii::t('user', 'products.cartitem.link'));
     }
 
     public function actionCartitem() {
@@ -58,7 +57,7 @@ class DefaultController extends Controller {
                 $cart[$k] = $_POST['num_of_dates'][$k];
             }
             Yii::app()->session['cart'] = $cart;
-            $this->redirect(LANGURL . '/' . Yii::t('user', 'products.link') . '/' . Yii::t('user', 'products.ordering.link'));
+            $this->redirect(Yii::app()->request->baseUrl.LANGURL . '/' . Yii::t('user', 'products.link') . '/' . Yii::t('user', 'products.ordering.link'));
         }
 
         $this->render(Yii::app()->session['template'] . '/cartitem', array('Items' => $model_class->listItem($cart), 'carts' => $cart));
@@ -68,13 +67,13 @@ class DefaultController extends Controller {
         $cart = Yii::app()->session['cart'];
         unset($cart[$id]);
         Yii::app()->session['cart'] = $cart;
-        $this->redirect(LANGURL . '/' . Yii::t('user', 'products.link') . '/' . Yii::t('user', 'products.cartitem.link'));
+        $this->redirect(Yii::app()->request->baseUrl.LANGURL . '/' . Yii::t('user', 'products.link') . '/' . Yii::t('user', 'products.cartitem.link'));
     }
 
     // delete all item in cart
     public function actionDelallcart() {
         Yii::app()->session['cart'] = '';
-        $this->redirect(LANGURL . '/' . Yii::t('user', 'products.link') . '/' . Yii::t('user', 'products.cartitem.link'));
+        $this->redirect(Yii::app()->request->baseUrl.LANGURL . '/' . Yii::t('user', 'products.link') . '/' . Yii::t('user', 'products.cartitem.link'));
     }
 
     public function actionOrdering() {
