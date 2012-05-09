@@ -9,6 +9,7 @@ return array(
     
     'register/<action:\w+>' => 'register/<action>',
     'forgot-password' => 'login/forgot', //forgot password
+    'reset-password/<email:.*?>/<code:[A-Za-z0-9]+>' => 'login/reset', //forgot password
     'activate/<email:.*?>/<code:[A-Za-z0-9]+>' => 'activate/index', //activate user
 
     '<controller:\w+>/page/<page:\d+>' => array('<controller>/index'), //paging index

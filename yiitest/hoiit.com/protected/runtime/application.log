@@ -841,3 +841,83 @@ REQUEST_URI=/hoiit.com/forgot-password
 in E:\Customers\dos.vn\svn\hoiit.com\protected\views\login\hoiit\forgot.php (9)
 in E:\Customers\dos.vn\svn\hoiit.com\protected\controllers\LoginController.php (27)
 in E:\Customers\dos.vn\svn\hoiit.com\index.php (15)
+2012/05/09 09:33:49 [error] [exception.CException] exception 'CException' with message 'ForgotForm and its behaviors do not have a method or closure named "createCode".' in C:\xampp\php\library\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\Customers\dos.vn\svn\hoiit.com\protected\controllers\LoginController.php(24): CComponent->__call('createCode', Array)
+#1 E:\Customers\dos.vn\svn\hoiit.com\protected\controllers\LoginController.php(24): ForgotForm->createCode()
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): LoginController->actionForgot()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('forgot')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('login/forgot')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/hoiit.com/forgot-password
+HTTP_REFERER=http://dos.vn/hoiit.com/forgot-password
+---
+2012/05/09 11:05:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reset-password/thanhansoft@gmail.com/asda'sd".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('reset-password/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/hoiit.com/reset-password/thanhansoft@gmail.com/asda'sd
+---
+2012/05/09 11:06:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reset-password/thanhansoft@g' mail.com/asdasd".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('reset-password/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/hoiit.com/reset-password/thanhansoft@g'+mail.com/asdasd
+---
+2012/05/09 11:06:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reset-password/thanhansoft@123sss.com/asdasd".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('reset-password/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/hoiit.com/reset-password/thanhansoft@123sss.com/asdasd
+---
+2012/05/09 11:06:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reset-password/thanhansoft@123sss.com/asdasd".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('reset-password/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/hoiit.com/reset-password/thanhansoft@123sss.com/asdasd
+---
+2012/05/09 11:09:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reset-password/thanhansoft@123sss.com/asdasd".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('reset-password/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/hoiit.com/reset-password/thanhansoft@123sss.com/asdasd
+---
+2012/05/09 11:09:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reset-password/thanhansoft@sss.com/asdasd".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('reset-password/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/hoiit.com/reset-password/thanhansoft@sss.com/asdasd
+---
+2012/05/09 11:11:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reset-password/thanhansoft@sss.com/FORGOT-asdasd".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('reset-password/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/hoiit.com/reset-password/thanhansoft@sss.com/FORGOT-asdasd
+---
+2012/05/09 11:11:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reset-password/thanhansoft@sss.com/forgot-asdasd".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('reset-password/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\hoiit.com\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/hoiit.com/reset-password/thanhansoft@sss.com/forgot-asdasd
+---
