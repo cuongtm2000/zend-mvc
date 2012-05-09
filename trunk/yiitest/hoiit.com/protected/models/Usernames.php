@@ -61,9 +61,10 @@ class Usernames extends CActiveRecord {
             array('detail', 'length', 'max' => 1000),
             array('code', 'length', 'max' => 15),
             array('hoiit_templates_template_id', 'length', 'max' => 6),
+            array('remove_pic', 'safe'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('username, email, password, picture, detail, phone, yahoo, skype, parent, group_code, reg_date, user_role, code, enable, hoiit_templates_template_id, hoiit_provinces_province_id', 'safe', 'on' => 'search'),
+            array('username, email, picture, detail, phone, yahoo, skype, parent, group_code, reg_date, user_role, code, enable, hoiit_templates_template_id, hoiit_provinces_province_id', 'safe', 'on' => 'search'),
         );
     }
 
@@ -212,7 +213,7 @@ class Usernames extends CActiveRecord {
         return $command->queryAll();
     }
 
-    public function getUsernameByEmail($email){
+    public function getUsernameByEmail($email) {
         $command = Yii::app()->db->createCommand('SELECT username, code, enable FROM ' . $this->tableName() . ' WHERE email=:email');
         $command->bindParam(':email', $email, PDO::PARAM_STR);
         return $command->queryRow();
@@ -220,9 +221,6 @@ class Usernames extends CActiveRecord {
 
     //Front end - get Username for activate
     public function getUsername($email, $code_user) {
-        /*$command = Yii::app()->db->createCommand('SELECT username, code, enable FROM ' . $this->tableName() . ' WHERE email=:email');
-        $command->bindParam(':email', $email, PDO::PARAM_STR);
-        $row = $command->queryRow();*/
         $row = $this->getUsernameByEmail($email);
         if ($row) {
             //enable == 1, user has activated
@@ -238,6 +236,26 @@ class Usernames extends CActiveRecord {
             }
         }
         return false;
+    }
+
+    //Front end - check reset password for user
+    public function checkResetPassUser($email, $code_user) {
+        $row = $this->getUsernameByEmail($email);
+        if ($row) {
+            $code = explode('-', $row['code']);
+            if (($code[0] == 'FORGOT') && $code_user == $code[1]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public function resetPassUser($email, $pass_new) {
+        $row = $this->getUsernameByEmail($email);
+        if ($row) {
+            Usernames::model()->updateByPk($row['username'], array('code' => NULL)); //reset code = null
+            $this->changePass($row['username'], $pass_new); //change password
+        }
     }
 
     //Font end - Create code for register user
@@ -267,14 +285,13 @@ class Usernames extends CActiveRecord {
     }
 
     //Back end - Change password
-    public function changePass($password) {
+    public function changePass($user, $password) {
         $purifier = new CHtmlPurifier();
         $password = md5($purifier->purify($password));
 
-        $user = Yii::app()->user->id;
         $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET password=:password WHERE username=:user');
         $command->bindParam(":user", $user, PDO::PARAM_STR);
-        $command->bindParam(":password", md5($password), PDO::PARAM_STR);
+        $command->bindParam(":password", $password, PDO::PARAM_STR);
         $command->execute();
     }
 }

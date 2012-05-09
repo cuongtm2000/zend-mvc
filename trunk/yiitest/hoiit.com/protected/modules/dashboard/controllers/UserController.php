@@ -41,7 +41,7 @@ class UserController extends Controller {
         if (isset($_POST['ChangePassForm'])) {
             $model->attributes = $_POST['ChangePassForm'];
             if ($model->validate()) {
-                Usernames::model()->changePass($model->pass_new);
+                Usernames::model()->changePass(Yii::app()->user->id, $model->pass_new);
 
                 Yii::app()->user->setFlash('ChangeSuccess', 'Congratulations! Change password successfully');
                 $this->refresh();

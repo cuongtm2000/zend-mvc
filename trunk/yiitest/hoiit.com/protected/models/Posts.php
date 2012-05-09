@@ -56,7 +56,7 @@ class Posts extends CActiveRecord {
 			array('post_sort, post_type, post_enable, hoiit_cats_cat_id', 'numerical', 'integerOnly' => true),
 			array('post_title, post_link', 'length', 'max' => 100),
 			array('post_link', 'unique'),
-			array('post_description', 'length', 'min' => 60, 'max' => 250),
+			array('post_description', 'length', 'min' => 45, 'max' => 250),
 			array('post_img', 'length', 'max' => 60),
 			array('post_demo, post_hit', 'length', 'max' => 45),
 			array('hoiit_usernames_username', 'length', 'max' => 40),
@@ -156,19 +156,19 @@ class Posts extends CActiveRecord {
 			$this->post_sort = $this->maxRecordSort(Yii::app()->user->id);
 			$this->hoiit_usernames_username = Yii::app()->user->id;
 
-			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['post_img']) {
+			/*if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['post_img']) {
 				//import class upload images
 				Yii::import('ext.EUploadedImage.EUploadedImage');
 				$this->post_img = EUploadedImage::getInstance($this, 'post_img')->processUpload(145, 100, '/public/userfiles/image/posts', $this->post_title);
-			}
+			}*/
 		} else {
-			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['post_img']) {
+			/*if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['post_img']) {
 				//import class upload images
 				Yii::import('ext.EUploadedImage.EUploadedImage');
 				$this->post_img = EUploadedImage::getInstance($this, 'post_img')->processUpload(145, 100, '/public/userfiles/image/posts', $this->post_title, $this->_oldImage);
 			} else {
 				$this->post_img = $this->_oldImage;
-			}
+			}*/
 		}
 
 		return parent::beforeSave();
