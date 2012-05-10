@@ -83,12 +83,13 @@ ul#tabs .select span{background-position:100% -42px;color:#444}
 fieldset{padding:15px; border : 1px solid #E4E3E3; background:#eee; -moz-border-radius:3px; -webkit-border-radius:3px; margin:5px}
 legend{color:#0066CC; font-weight:bold; font-size:11pt}
 fieldset p{clear: both; position: relative; top:0; left:0}
+fieldset p img{position: absolute; top: -10px; left: 384px; cursor: pointer}
 fieldset label{float:left; width:100px; padding:3px}
 fieldset textarea{border:1px solid #ccc; padding:3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; width:50%; height: 90px}
 fieldset select{border:1px solid #ccc; padding:3px; cursor:pointer; -moz-border-radius: 3px; -webkit-border-radius: 3px; width:278px}
 fieldset input{width:50%; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
 fieldset input.small-input{width: 270px}
-fieldset input.login {cursor:pointer; width:80px; height:24px; color:#fff; border:1px solid #ccc; background:#3A6AAD; -moz-border-radius: 3px; -webkit-border-radius: 3px; display:inline; margin-right:6px}
+fieldset input.login {cursor:pointer; width:auto; padding: 0 7px; height:24px; color:#fff; border:1px solid #ccc; background:#3A6AAD; -moz-border-radius: 3px; -webkit-border-radius: 3px; display:inline; margin-right:6px}
 fieldset input.login:hover{background:#5184D2}
 fieldset input.remember{float: left; width: 15px; margin-right: 3px}
 fieldset label.remember{width: 315px; padding: 0}

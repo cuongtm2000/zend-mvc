@@ -11,36 +11,28 @@
     <p>
         <?php echo $form->labelEx($model, 'username') ?>
         <?php echo $form->textField($model, 'username', array('class'=>'small-input')); ?>
-        <span id="useridinfo"></span>
     </p>
     <p>
         <?php echo $form->labelEx($model, 'password') ?>
         <?php echo $form->passwordField($model, 'password', array('class'=>'small-input')); ?>
-        <span id="passwordinfo"></span>
     </p>
     <p>
         <?php echo $form->labelEx($model, 'email') ?>
         <?php echo $form->textField($model, 'email', array('class'=>'small-input')); ?>
-        <span id="emailinfo"></span>
     </p>
     <p>
         <?php echo $form->labelEx($model, 'group_code') ?>
-        <?php $cats_class = new Cats; $values = $cats_class->MultiLevelCats(0); $data = array(); foreach($values as $value){
-            $data[$value['cat_title']] = $value['cat_name'];
-        }
-        ?>
+        <?php $cats_class = new Cats; $values = $cats_class->MultiLevelCats(0); $data = array(); foreach($values as $value){$data[$value['cat_title']] = $value['cat_name'];}?>
         <?php echo $form->dropDownList($model, 'group_code', $data); ?>
     </p>
     <p>
         <?php echo $form->labelEx($model, 'hoiit_provinces_province_id') ?>
         <?php $provinces_class = new Provinces; $values = $provinces_class->listProvincesByNational('VND'); $data = array(); foreach ($values as $value){$data[$value['province_id']] = $value['province_name'];} ?>
         <?php echo $form->dropDownList($model, 'hoiit_provinces_province_id', $data); ?>
-        <span id="locationinfo"></span>
     </p>
     <p>
         <label>&nbsp;</label>
-        <?php echo CHtml::submitButton('  Submit  ', array('class'=>'login', 'name'=>'submit')); ?>
-        <input type="button" onclick="javascript:history.back()" value="  Cancel  " class="login" />
+        <?php echo CHtml::submitButton('    Register    ', array('class'=>'login', 'name'=>'submit')); ?>
     </p>
 </fieldset>
 <?php $this->endWidget(); ?>

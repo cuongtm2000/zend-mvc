@@ -56,7 +56,7 @@
 	</p>
 	<p>
 		<label>&nbsp;</label>
-		<?php echo CHtml::submitButton('  Submit  ', array('class'=>'login', 'name'=>'submit')); ?>
+		<?php echo CHtml::submitButton('     Edit     ', array('class'=>'login', 'name'=>'submit')); ?>
 	</p>
 </fieldset>
 <?php $this->endWidget(); ?>

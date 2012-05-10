@@ -53,9 +53,9 @@
 			<li><a<?php echo ($this->ID =='site') ? ' class="select"' : ''?> href="<?php echo Yii::app()->request->baseUrl?>/"><span>Home page</span></a></li>
 			<li><a<?php echo ($this->ID =='posts') ? ' class="select"' : ''?> href="<?php echo Yii::app()->request->baseUrl?>/posts"><span>Tutorials</span></a></li>
 			<!-- <li><a<?php echo ($this->ID =='templates') ? ' class="select"' : ''?> href="<?php echo Yii::app()->request->baseUrl?>/templates"><span>Web templates</span></a></li> -->
-		</ul
-		<div class="clear"></div>
-        <div class="paddinglr10">
+            <li><a<?php echo ($this->ID =='request') ? ' class="select"' : ''?> href="<?php echo Yii::app()->request->baseUrl?>/request"><span>Send request</span></a></li>
+		</ul>
+        <div class="clear paddinglr10">
             <div class="menu-bar">
                 <?php if($this->ID =='user'):?>
                 <div class="catmenu">

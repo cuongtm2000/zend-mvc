@@ -28,7 +28,7 @@
     </p>
     <p>
         <label>&nbsp;</label>
-        <?php echo CHtml::submitButton('  Submit  ', array('class'=>'login', 'name'=>'submit')); ?>
+        <?php echo CHtml::submitButton('      Login      ', array('class'=>'login', 'name'=>'submit')); ?>
         <a href="<?php echo Yii::app()->request->baseUrl?>/forgot-password" title="Forgot password">Forgot password</a>
     </p>
 </fieldset>

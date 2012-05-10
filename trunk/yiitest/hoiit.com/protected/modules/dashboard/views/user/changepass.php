@@ -25,7 +25,7 @@
         </p>
         <p>
             <label>&nbsp;</label>
-            <?php echo CHtml::submitButton('  Submit  ', array('class'=>'login', 'name'=>'submit')); ?>
+            <?php echo CHtml::submitButton(' Change password ', array('class'=>'login', 'name'=>'submit')); ?>
         </p>
     <?php endif?>
 </fieldset>
