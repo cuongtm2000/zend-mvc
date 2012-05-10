@@ -12,7 +12,7 @@ class RequestForm extends CFormModel {
         return array(
             array('name, email, phone, subject, content', 'required'),
             array('email', 'email'),
-            // verifyCode needs to be entered correctly
+            array('content', 'length', 'min' => 35),
             array('verifyCode', 'captcha', 'allowEmpty' => !CCaptcha::checkRequirements()),
         );
     }
