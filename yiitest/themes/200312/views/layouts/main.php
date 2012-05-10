@@ -182,7 +182,5 @@
 			</div> <div class="clear"></div>
 		</div><!--End Footer-->
 </div><!--End wrapper-->
-
 </body>
 </html>
-

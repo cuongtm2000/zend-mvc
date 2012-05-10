@@ -48,8 +48,8 @@
 							</div>
 							<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>"><?php echo $value['title' . LANG] ?></a></h2>
 							<div class="price-add">
-								<p class="price"><?php echo (is_numeric($value['unit'])) ? number_format($value['unit'], 0, '', '.') . ' VND' : (($value['unit']) ? $value['unit'] : $this->lang['contact']) ?></p>
-								<a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $this->lang['detail']?>: <?php echo $value['title' . LANG] ?>" class="add-to-cart"><span>Add to Cart</span></a>
+								<p class="price"><?php echo Common::getPrice($value['unit']) ?></p>
+                                <a href="<?php echo Yii::app()->baseUrl . LANGURL?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo Yii::t('user', 'products.order.link')?>/<?php echo $value['tag'.LANG] ?>" title="<?php echo $this->lang['addcart']?>: <?php echo $value['title' . LANG] ?>" class="add-to-cart"><span><?php echo $this->lang['addcart']?></span></a>
 							</div>
 						</div>
 					</div>
