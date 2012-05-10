@@ -32,7 +32,7 @@
                     <li class="right captcha">
                         <?php echo $form->textField($model, 'verifyCode', array('class' => 'small-input', 'value' => 'Mã xác nhận', 'onblur' => 'if(this.value=="") this.value="Mã xác nhận"', 'onfocus' => 'if(this.value =="Mã xác nhận") this.value=""')); ?>
                         <?php if (CCaptcha::checkRequirements()): ?>
-                            <?php $this->widget('CCaptcha', array('clickableImage' => true, 'showRefreshButton' => false)); ?>
+                            <?php $this->widget('CCaptcha', array('clickableImage' => true, 'showRefreshButton' => false, 'imageOptions' => array('alt' => 'Mã số xác nhận', 'title' => 'Mã số xác nhận'))); ?>
                         <?php endif; ?>
                     </li>
                     <li>
