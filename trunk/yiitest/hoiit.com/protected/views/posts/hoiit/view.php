@@ -3,10 +3,6 @@
 <h1 class="title-view"><strong><?php echo $detail['post_title']?></strong></h1>
 <?php echo $detail['post_detail']?>
 
-<!-- Place this tag where you want the +1 button to render -->
-Nếu bài viết hay hãy bấm vào đây <div class="g-plusone" data-size="medium"></div>
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-
 <?php if (!Yii::app()->user->isGuest): ?>
     <div class="comment">
         <div class="panel">
