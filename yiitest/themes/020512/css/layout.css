@@ -25,6 +25,7 @@ ul#nav a, ul#nav span {padding: 10px 20px;display:block; clear: both;color:#dbff
 ul#nav a {color: #fff;background-position: left bottom;}
 ul#nav span {background-position: left top;}
 
+
 #lang{float:right; padding:10px 0 0 0;}
 #lang li{display:inline; margin:0 5px}
 #lang img{ position:relative; top:2px;margin:0 5px 0 0 }
@@ -113,6 +114,13 @@ ul#nav span {background-position: left top;}
 .title-pro{font-size:10pt;margin:5px 0; font-weight:bold}
 .title-pro a{color:#94CD32;}
 .title-pro a:hover{color:#FD399B}
+
+/***  Bton chi tiet and Dat hang  **/
+.bton-pro{margin:15px 0 !important}
+.bton-detail{background:url(../images/buy.gif) no-repeat;color:#fff;padding:3px 13px;font-weight:bold}
+.bton-order{background:url(../images/add-to-cart.gif) no-repeat;color:#fff;padding:2px 7px 3px 7px;font-weight:bold}
+.bton-pro a:hover{color:#fff !important}
+/****    End San pham noi bat of page index    ********/
 
 /***    Page product-info     ****/
 .frame-pro-info{background: #fff;padding:15px 15px 5px 15px; border-left:1px solid #F2DCE0;border-right:1px solid #F2DCE0}
