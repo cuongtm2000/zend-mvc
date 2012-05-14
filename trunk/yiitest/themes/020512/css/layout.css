@@ -93,7 +93,7 @@ ul#nav span {background-position: left top;}
 #rightcontent p{margin:0 0 8px 0}
 #rightcontent ul li, #rightcontent ol li{margin: 0 0 0 40px}
 #rightcontent ul ,#rightcontent ol{margin: 0 0 12px 0}
-#rightcontent table{margin: auto}
+
 
 .title-right{background:url(../images/main1.jpg) no-repeat;padding:9px 0; color:#FFF;font-weight:700; text-transform:uppercase}
 .title-right span{padding:0 0 0 40px}
@@ -170,3 +170,21 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
 .errorSummary ul{margin:0 10px; padding:0}
 .errorSummary ul li{padding:2px 0; color: red}
+
+/*Add to cart*/
+.form_order{background:#fff;margin:0 0 15px 0;-webkit-border-radius:0 0 4px 6px;-moz-border-radius:0 0 6px 4px}
+.form_order thead{background:#57B101}
+.form_order thead tr td{font-weight : bold;padding : 5px !important; color:#fff;font-size:10pt}
+
+.form_order tbody tr td{border : 1px solid #ddd;}
+.form_order tbody tr .pic-order{padding:5px 0}
+.form_order tbody tr input{border:1px solid #ccc}
+.form_order tbody tr td a{color:#FF399B}
+.form_order tbody tr td a:hover{color:#57B101}
+
+.btn_order{cursor:pointer; border:none;font-weight:bold;background:#57B101;padding:5px 7px;color:#fff;-webkit-border-radius:4px;-moz-border-radius:4px;margin:0 10px 0 0}
+.btn_order:hover{color:#fff}
+
+.frm-cart label{width:100px}
+.notificaion{color:#2C2C2C;font-size:10pt;margin:0 0 10px 0}
+.note span{color:#f00}
