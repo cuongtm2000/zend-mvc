@@ -86,9 +86,9 @@ a:hover{color:#000;}
 
 /***** Product    *****/
 .all-product{}
-.product{width:140px; border:1px solid #E5DBB8;text-align:center;padding:5px 0;margin:0 1px 10px 4px !important; display:inline-block; vertical-align:top;*float:left; *margin:0 7px 10px 0}
+.product{width:140px; border:1px solid #E5DBB8;text-align:center;padding:5px 0 10px 0;margin:0 1px 10px 4px !important; display:inline-block; vertical-align:top;*float:left; *margin:0 7px 10px 0}
 .product-img{height:140px;width:140px;display:table-cell;vertical-align:middle}
-.price{color:#EE6B11; font-weight:700; font-size:14px; margin:0 0 5px 0 !important}
+.price{color:#EE6B11; font-weight:700; font-size:14px; margin:0 0 10px 0 !important}
 .title-pro{font-size:10pt;margin:5px 0; font-weight:bold}
 .title-pro a{color:#5A5A5B;}
 .title-pro a:hover{color:#EE6B11}
@@ -171,3 +171,21 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
 .errorSummary ul{margin:0 10px; padding:0}
 .errorSummary ul li{padding:2px 0; color: red}
+
+/*Add to cart*/
+.form_order{background:#fff;margin:0 0 15px 0;-webkit-border-radius:0 0 4px 6px;-moz-border-radius:0 0 6px 4px}
+.form_order thead{background:#3D4B56}
+.form_order thead tr td{font-weight : bold;padding : 5px !important; color:#fff;font-size:10pt}
+
+.form_order tbody tr td{border : 1px solid #ddd;}
+.form_order tbody tr .pic-order{padding:5px 0}
+.form_order tbody tr input{border:1px solid #ccc}
+.form_order tbody tr td a{color:#3D4B56}
+.form_order tbody tr td a:hover{color:#EE6B11}
+
+.btn_order{cursor:pointer; border:none;font-weight:bold;background:#2C2C2C;padding:5px 7px;color:#fff;-webkit-border-radius:4px;-moz-border-radius:4px;margin:0 10px 0 0}
+.btn_order:hover{color:#fff}
+
+.frm-cart label{width:100px}
+.notificaion{color:#2C2C2C;font-size:10pt;margin:0 0 10px 0}
+.note span{color:#f00}
