@@ -7,6 +7,7 @@
                 <th class="txt60">Username</th>
                 <th>Email</th>
                 <th>Created</th>
+                <th>Phone</th>
                 <th>Template</th>
                 <th>Province</th>
                 <th>Actions</th>
@@ -21,6 +22,7 @@
                         <td><?php echo CHtml::link($value['username'], 'http://'.$value['username'] . '.' . $_SERVER['HTTP_HOST'], array('target'=>'_blank')) ?></td>
                         <td><?php echo $value['email']?></td>
                         <td><?php echo date('d-m-Y', strtotime($value['created'])) ?></td>
+                        <td><?php echo $value['phone'] ?></td>
                         <td><?php echo $value['dos_templates_template']?></td>
                         <td><?php echo $value->Provinces->province_name?></td>
                         <td><?php echo CHtml::link('Edit', array('edit', 'id' => $value->username)) ?></td>
