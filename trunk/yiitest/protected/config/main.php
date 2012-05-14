@@ -34,10 +34,10 @@ return array(
             'allowAutoLogin' => true,
             'loginUrl' => array('admin/login')
         ),
-        'adminUser' => array(
+        'agentUser' => array(
             'class' => 'CWebUser',
             'loginUrl' => array('agent/login'),
-            //'stateKeyPrefix' => 'admin_',
+            'stateKeyPrefix' => 'agent',
         ),
         'cache' => array(
             'class' => 'CFileCache',
