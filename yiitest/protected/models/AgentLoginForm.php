@@ -1,7 +1,6 @@
 <?php
 
 class AgentLoginForm extends CFormModel {
-
     public $username;
     public $password;
     public $rememberMe;
@@ -39,7 +38,7 @@ class AgentLoginForm extends CFormModel {
         }
         if ($this->_identity->errorCode === AgentUserIdentity::ERROR_NONE) {
             $duration = $this->rememberMe ? 3600 * 24 * 30 : 0; // 30 days
-            Yii::app()->adminUser->login($this->_identity, $duration);
+            Yii::app()->agentUser->login($this->_identity, $duration);
             return true;
         }
         else

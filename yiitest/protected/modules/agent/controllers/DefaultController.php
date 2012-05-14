@@ -26,15 +26,15 @@ class DefaultController extends AgentController {
     }
 
     public function filterAdminAccess($filterChain) {
-        if ($filterChain->action->id === 'login' || !Yii::app()->adminUser->isGuest) {
-            //$filterChain->run();
+        if ($filterChain->action->id === 'login' || !Yii::app()->agentUser->isGuest) {
+            $filterChain->run();
         }
         else {
-            Yii::app()->adminUser->loginRequired();
+            Yii::app()->agentUser->loginRequired();
         }
     }
 
     public function actionIndex() {
-        //$this->render('index');
+        $this->render('index');
     }
 }

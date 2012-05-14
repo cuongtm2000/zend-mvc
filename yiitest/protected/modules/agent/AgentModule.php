@@ -8,8 +8,12 @@ class AgentModule extends CWebModule {
         ));
 
         //Check user login use theme
-        if (Yii::app()->adminUser->isGuest) {
+        if (Yii::app()->agentUser->isGuest) {
             Yii::app()->theme = 'admin-login-green';
+        } else {
+            var_dump(Yii::app()->user);
+            var_dump(Yii::app()->agentUser);
+            Yii::app()->theme = 'admin-agent';
         }
     }
 
