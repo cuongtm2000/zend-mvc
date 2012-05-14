@@ -38,7 +38,7 @@
 				</li>
 				<li>
 					<?php echo $form->labelEx($contact, 'content') ?>
-					<?php echo $form->textArea($contact, 'content', array('cols'=>30, 'rows'=>10)); ?>
+					<?php echo $form->textArea($contact, 'content', array('cols'=>10, 'rows'=>10)); ?>
 				</li>
 				<li>
 					<label>&nbsp;</label>
