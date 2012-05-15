@@ -34,7 +34,7 @@
 	<ul class="right-detail-info">
 		<li>
 			<h3 class="title-info"><?php echo $item['title'.LANG] ?></h3>
-			<p><span>$<?php echo $item['unit'] ?></span></p>
+			<p><span><?php echo Common::getPrice($item['unit']) ?></span></p>
 		</li>
 		<li>
 			<h3 class="title-info">Mô tả sản phẩm</h3>
