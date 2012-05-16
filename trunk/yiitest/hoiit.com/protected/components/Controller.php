@@ -28,6 +28,14 @@ class Controller extends CController {
 	public $listTopPostUsers = array();
 
 	public function init(){
+        $ip = '42.119.214.149'; //IP in VietNam
+        if(IpCountries::model()->checkIP($ip)){
+            //true
+            echo 'ok, nam trong range so sanh';
+        }else{
+            echo 'ko co, hien ngon ngu Mac dinh';
+        }
+
 		$username_class = new Usernames();
 		$this->listTopPostUsers = $username_class->listTopPostUsers();
 	}
