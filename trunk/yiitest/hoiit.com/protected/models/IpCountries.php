@@ -89,12 +89,12 @@ class IpCountries extends CActiveRecord {
         ));
     }
 
-    public function checkIP($ip){
+    public function checkIP($ip) {
         $ips = explode('.', $ip);
-		$ipnum= $ips[3] + $ips[2] * 256 + $ips[1] * 65536 + $ips[0]*16777216;
-        //$ipnum=ip2long($ip);
-		$command = Yii::app()->db->createCommand('SELECT * FROM ' . $this->tableName() . ' WHERE :ip>= ip_begin and :ip <= ip_end');
-        $command->bindParam(":ip", $ipnum, PDO::PARAM_STR);//	var_dump(  $command);
+        $ip_range = $ips[3] + $ips[2] * 256 + $ips[1] * 65536 + $ips[0] * 16777216;
+        //$ip_range=ip2long($ip);
+        $command = Yii::app()->db->createCommand('SELECT * FROM ' . $this->tableName() . ' WHERE :ip>= ip_begin and :ip <= ip_end');
+        $command->bindParam(":ip", $ip_range, PDO::PARAM_STR); //	var_dump(  $command);
         return $command->queryScalar();
     }
 }
