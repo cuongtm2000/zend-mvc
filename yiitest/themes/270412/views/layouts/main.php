@@ -156,18 +156,15 @@
 				<?php endif;?>
             </div><!--End left content-->
             <div id="rightcontent">
-				<div id="banner">
-					<?php if($this->banner): ?>
-					<ul class="slider">
-						<?php foreach($this->banner as $value): ?>
-						<li class="slider-item"><a href="<?php echo $value['banner_link'] ?>" title=""><img src="<?php echo Yii::app()->request->baseUrl.USERFILES; ?>/banner/<?php echo $value['banner_url'] ?>" alt="<?php echo $value['banner_name'] ?>" /></a></li>
-						<?php endforeach ?>
-					</ul>
-					<?php else:?>
-						<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner.jpg" alt="Banner" />
-					<?php endif; ?>
-				</div><!--End banner-->
-
+				<?php if($this->banner): ?>
+					<div id="banner">
+						<ul class="slider">
+							<?php foreach($this->banner as $value): ?>
+							<li class="slider-item"><a href="<?php echo $value['banner_link'] ?>" title=""><img src="<?php echo Yii::app()->request->baseUrl.USERFILES; ?>/banner/<?php echo $value['banner_url'] ?>" alt="<?php echo $value['banner_name'] ?>" /></a></li>
+							<?php endforeach ?>
+						</ul>
+					</div><!--End banner-->
+				<?php endif; ?>
 				<?php echo $content?>
 
             </div><!--End right content-->
