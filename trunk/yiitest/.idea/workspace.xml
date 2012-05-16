@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="2f258138-a102-4f75-a25d-31c366fc1ede" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/share/hoiit_ip_countries.sql" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/application.log" afterPath="" />
       <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\CSS\4.4.0,4af9cb41e1f64636f725057634b6a44b,1.ser" afterPath="" />
       <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\CSS" afterPath="" />
@@ -13,7 +14,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/cache/472f714c226873e2219db544625182ed.bin" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/cache" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="svn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,7 +38,17 @@
     <favorites_list name="svn" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Banner.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/models/Banner.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="22" selection-start="650" selection-end="650" vertical-scroll-proportion="-1.6501832">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -485,8 +495,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.HTML" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="dos.vn" serverId="819b0d99-b6d0-4d88-9f62-7e03412fcb55" />
   <component name="RecentsManager">
@@ -538,6 +548,13 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="819b0d99-b6d0-4d88-9f62-7e03412fcb55" server_name="dos.vn">
       <method>
         <option name="FtpUpload" enabled="false">
@@ -546,13 +563,6 @@
         </option>
         <option name="PhingTarget" enabled="false" />
       </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
     </configuration>
     <list size="0" />
   </component>
@@ -583,6 +593,10 @@
           <option name="myVcsRoot" value="E:\Customers\dos.vn\svn" />
           <option name="myCopyRoot" value="E:\Customers\dos.vn\svn" />
         </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="E:\Customers\dos.vn\svn" />
+          <option name="myCopyRoot" value="E:\Customers\dos.vn\svn\share" />
+        </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
@@ -590,6 +604,10 @@
         <SvnCopyRootSimple>
           <option name="myVcsRoot" value="E:\Customers\dos.vn\svn" />
           <option name="myCopyRoot" value="E:\Customers\dos.vn\svn" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="E:\Customers\dos.vn\svn" />
+          <option name="myCopyRoot" value="E:\Customers\dos.vn\svn\share" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -624,14 +642,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.4939302" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.7314112" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.4969651" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21396054" sideWeight="0.0" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21775417" sideWeight="0.0" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5007587" order="7" side_tool="true" content_ui="tabs" />
@@ -702,114 +720,84 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/modules/administrator/controllers/UsernamesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="47" selection-start="347" selection-end="347" vertical-scroll-proportion="0.33452594">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/agent/views/default/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/admin-agent/css/dosvn.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="34" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="1" column="34" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/admin-agent/css/layout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="43" selection-start="8674" selection-end="8674" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="152" column="43" selection-start="8674" selection-end="8674" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/admin-agent/css/reset-min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/agent/controllers/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="67" selection-start="362" selection-end="362" vertical-scroll-proportion="0.3041145">
-          <folding />
-        </state>
+        <state line="10" column="67" selection-start="362" selection-end="362" vertical-scroll-proportion="0.3041145" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/administrator/controllers/LogoutController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="12" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="9" column="12" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/administrator/AdministratorModule.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="12" selection-start="500" selection-end="534" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="14" column="12" selection-start="500" selection-end="534" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/models/LoginForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="25" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.6994633">
-          <folding />
-        </state>
+        <state line="41" column="25" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.6994633" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/models/AgentLoginForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="41" selection-start="48" selection-end="48" vertical-scroll-proportion="-0.39534885">
-          <folding />
-        </state>
+        <state line="2" column="41" selection-start="48" selection-end="48" vertical-scroll-proportion="-0.39534885" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/agent/controllers/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="33" selection-start="742" selection-end="742" vertical-scroll-proportion="0.6314848">
-          <folding />
-        </state>
+        <state line="32" column="33" selection-start="742" selection-end="742" vertical-scroll-proportion="0.6314848" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/AdministratorController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="9" selection-start="305" selection-end="305" vertical-scroll-proportion="0.3041145">
-          <folding />
-        </state>
+        <state line="10" column="9" selection-start="305" selection-end="305" vertical-scroll-proportion="0.3041145" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/admin-agent/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="77" selection-start="1236" selection-end="1236" vertical-scroll-proportion="0.5884615">
-          <folding />
-        </state>
+        <state line="18" column="77" selection-start="1236" selection-end="1236" vertical-scroll-proportion="0.5884615" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/AgentUserIdentity.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="47" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="13" column="47" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/agent/AgentModule.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="34" selection-start="371" selection-end="371" vertical-scroll-proportion="0.39534885">
-          <folding />
-        </state>
+        <state line="13" column="34" selection-start="371" selection-end="371" vertical-scroll-proportion="0.39534885" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/config/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="38" selection-start="1501" selection-end="1501" vertical-scroll-proportion="1.0948122">
+        <state line="39" column="38" selection-start="1501" selection-end="1501" vertical-scroll-proportion="1.0948122" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Banner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="22" selection-start="650" selection-end="650" vertical-scroll-proportion="-1.6501832">
           <folding />
         </state>
       </provider>
