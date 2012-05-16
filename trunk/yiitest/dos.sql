@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 16, 2012 at 04:44 AM
+-- Generation Time: May 16, 2012 at 08:39 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -116,6 +116,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('advs_left_height', 160, '', '070312'),
 ('advs_left_height', 200, '', '070512'),
 ('advs_left_height', 200, '', '130312'),
+('advs_left_height', 200, '', '160512'),
 ('advs_left_height', 130, '', '180412'),
 ('advs_left_height', 200, '', '200312'),
 ('advs_left_height', 190, '', '220312'),
@@ -128,6 +129,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('advs_left_width', 160, '', '070312'),
 ('advs_left_width', 205, '', '070512'),
 ('advs_left_width', 220, '', '130312'),
+('advs_left_width', 203, '', '160512'),
 ('advs_left_width', 204, '', '180412'),
 ('advs_left_width', 200, '', '200312'),
 ('advs_left_width', 190, '', '220312'),
@@ -148,6 +150,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('banner_height', 324, '', '070312'),
 ('banner_height', 270, '', '070512'),
 ('banner_height', 300, '', '130312'),
+('banner_height', 315, '', '160512'),
 ('banner_height', 339, '', '180412'),
 ('banner_height', 328, '', '200312'),
 ('banner_height', 332, '', '220312'),
@@ -160,6 +163,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('banner_width', 757, '', '070312'),
 ('banner_width', 726, '', '070512'),
 ('banner_width', 950, '', '130312'),
+('banner_width', 717, '', '160512'),
 ('banner_width', 940, '', '180412'),
 ('banner_width', 718, '', '200312'),
 ('banner_width', 950, '', '220312'),
@@ -172,6 +176,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('logo_height', 57, '', '070312'),
 ('logo_height', 74, '', '070512'),
 ('logo_height', 100, '', '130312'),
+('logo_height', 83, '', '160512'),
 ('logo_height', 51, '', '180412'),
 ('logo_height', 55, '', '200312'),
 ('logo_height', 79, '', '220312'),
@@ -184,6 +189,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('logo_width', 260, '', '070312'),
 ('logo_width', 157, '', '070512'),
 ('logo_width', 735, '', '130312'),
+('logo_width', 218, '', '160512'),
 ('logo_width', 239, '', '180412'),
 ('logo_width', 314, '', '200312'),
 ('logo_width', 259, '', '220312'),
@@ -196,6 +202,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('max_image_height', 600, '', '070312'),
 ('max_image_height', 860, '', '070512'),
 ('max_image_height', 600, '', '130312'),
+('max_image_height', 860, '', '160512'),
 ('max_image_height', 700, '', '180412'),
 ('max_image_height', 600, '', '200312'),
 ('max_image_height', 667, '', '220312'),
@@ -208,6 +215,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('max_image_width', 700, '', '070312'),
 ('max_image_width', 660, '', '070512'),
 ('max_image_width', 650, '', '130312'),
+('max_image_width', 700, '', '160512'),
 ('max_image_width', 670, '', '180412'),
 ('max_image_width', 450, '', '200312'),
 ('max_image_width', 500, '', '220312'),
@@ -220,6 +228,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_cat_height', 100, '', '070312'),
 ('news_cat_height', 132, '', '070512'),
 ('news_cat_height', 90, '', '130312'),
+('news_cat_height', 90, '', '160512'),
 ('news_cat_height', 89, '', '180412'),
 ('news_cat_height', 89, '', '200312'),
 ('news_cat_height', 100, '', '230412'),
@@ -231,6 +240,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_cat_width', 130, '', '070312'),
 ('news_cat_width', 132, '', '070512'),
 ('news_cat_width', 143, '', '130312'),
+('news_cat_width', 143, '', '160512'),
 ('news_cat_width', 143, '', '180412'),
 ('news_cat_width', 143, '', '200312'),
 ('news_cat_width', 143, '', '230412'),
@@ -242,6 +252,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_height_thumb', 89, '', '070312'),
 ('news_height_thumb', 132, '', '070512'),
 ('news_height_thumb', 90, '', '130312'),
+('news_height_thumb', 90, '', '160512'),
 ('news_height_thumb', 89, '', '180412'),
 ('news_height_thumb', 100, '', '200312'),
 ('news_height_thumb', 100, '', '220312'),
@@ -254,6 +265,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_cat', 10, '', '070312'),
 ('news_num_paging_cat', 10, '', '070512'),
 ('news_num_paging_cat', 10, '', '130312'),
+('news_num_paging_cat', 10, '', '160512'),
 ('news_num_paging_cat', 10, '', '180412'),
 ('news_num_paging_cat', 10, '', '200312'),
 ('news_num_paging_cat', 10, '', '220312'),
@@ -266,6 +278,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_hot', 6, '', '070312'),
 ('news_num_paging_hot', 6, '', '070512'),
 ('news_num_paging_hot', 6, '', '130312'),
+('news_num_paging_hot', 6, '', '160512'),
 ('news_num_paging_hot', 6, '', '180412'),
 ('news_num_paging_hot', 6, '', '220312'),
 ('news_num_paging_hot', 6, '', '230412'),
@@ -277,6 +290,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_index', 10, '', '070312'),
 ('news_num_paging_index', 10, '', '070512'),
 ('news_num_paging_index', 10, '', '130312'),
+('news_num_paging_index', 10, '', '160512'),
 ('news_num_paging_index', 10, '', '180412'),
 ('news_num_paging_index', 10, '', '200312'),
 ('news_num_paging_index', 10, '', '220312'),
@@ -289,6 +303,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_new', 10, '', '070312'),
 ('news_num_paging_new', 6, '', '070512'),
 ('news_num_paging_new', 10, '', '130312'),
+('news_num_paging_new', 6, '', '160512'),
 ('news_num_paging_new', 6, '', '180412'),
 ('news_num_paging_new', 8, '', '200312'),
 ('news_num_paging_new', 6, '', '220312'),
@@ -301,6 +316,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_width_thumb', 143, '', '070312'),
 ('news_width_thumb', 132, '', '070512'),
 ('news_width_thumb', 143, '', '130312'),
+('news_width_thumb', 143, '', '160512'),
 ('news_width_thumb', 143, '', '180412'),
 ('news_width_thumb', 143, '', '200312'),
 ('news_width_thumb', 145, '', '220312'),
@@ -313,6 +329,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_cat_height', 200, '', '070312'),
 ('products_cat_height', 160, '', '070512'),
 ('products_cat_height', 121, '', '130312'),
+('products_cat_height', 160, '', '160512'),
 ('products_cat_height', 160, '', '180412'),
 ('products_cat_height', 170, '', '200312'),
 ('products_cat_height', 150, '', '220312'),
@@ -325,6 +342,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_cat_width', 150, '', '070312'),
 ('products_cat_width', 160, '', '070512'),
 ('products_cat_width', 152, '', '130312'),
+('products_cat_width', 160, '', '160512'),
 ('products_cat_width', 175, '', '180412'),
 ('products_cat_width', 170, '', '200312'),
 ('products_cat_width', 200, '', '220312'),
@@ -337,6 +355,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_height', 500, '', '070312'),
 ('products_height', 860, '', '070512'),
 ('products_height', 400, '', '130312'),
+('products_height', 500, '', '160512'),
 ('products_height', 550, '', '180412'),
 ('products_height', 600, '', '200312'),
 ('products_height', 400, '', '220312'),
@@ -349,6 +368,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_height_thumb', 200, '', '070312'),
 ('products_height_thumb', 160, '', '070512'),
 ('products_height_thumb', 121, '', '130312'),
+('products_height_thumb', 160, '', '160512'),
 ('products_height_thumb', 160, '', '180412'),
 ('products_height_thumb', 170, '', '200312'),
 ('products_height_thumb', 135, '', '220312'),
@@ -361,6 +381,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_cat', 16, '', '070312'),
 ('products_num_paging_cat', 16, '', '070512'),
 ('products_num_paging_cat', 12, '', '130312'),
+('products_num_paging_cat', 4, '', '160512'),
 ('products_num_paging_cat', 16, '', '180412'),
 ('products_num_paging_cat', 16, '', '200312'),
 ('products_num_paging_cat', 8, '', '220312'),
@@ -373,6 +394,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_hot', 8, '', '070312'),
 ('products_num_paging_hot', 12, '', '070512'),
 ('products_num_paging_hot', 8, '', '130312'),
+('products_num_paging_hot', 16, '', '160512'),
 ('products_num_paging_hot', 8, '', '180412'),
 ('products_num_paging_hot', 12, '', '200312'),
 ('products_num_paging_hot', 8, '', '230412'),
@@ -384,6 +406,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_new', 16, '', '070312'),
 ('products_num_paging_new', 12, '', '070512'),
 ('products_num_paging_new', 8, '', '130312'),
+('products_num_paging_new', 20, '', '160512'),
 ('products_num_paging_new', 20, '', '180412'),
 ('products_num_paging_new', 12, '', '200312'),
 ('products_num_paging_new', 4, '', '220312'),
@@ -396,6 +419,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_other', 4, '', '070312'),
 ('products_num_paging_other', 4, '', '070512'),
 ('products_num_paging_other', 4, '', '130312'),
+('products_num_paging_other', 4, '', '160512'),
 ('products_num_paging_other', 4, '', '180412'),
 ('products_num_paging_other', 3, '', '200312'),
 ('products_num_paging_other', 2, '', '220312'),
@@ -408,6 +432,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_width', 600, '', '070312'),
 ('products_width', 660, '', '070512'),
 ('products_width', 500, '', '130312'),
+('products_width', 500, '', '160512'),
 ('products_width', 550, '', '180412'),
 ('products_width', 500, '', '200312'),
 ('products_width', 500, '', '220312'),
@@ -420,6 +445,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_width_thumb', 150, '', '070312'),
 ('products_width_thumb', 160, '', '070512'),
 ('products_width_thumb', 152, '', '130312'),
+('products_width_thumb', 160, '', '160512'),
 ('products_width_thumb', 175, '', '180412'),
 ('products_width_thumb', 170, '', '200312'),
 ('products_width_thumb', 200, '', '220312'),
@@ -432,6 +458,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('services_height', 100, '', '070312'),
 ('services_height', 880, '', '070512'),
 ('services_height', 89, '', '130312'),
+('services_height', 850, '', '160512'),
 ('services_height', 100, '', '180412'),
 ('services_height', 200, '', '200312'),
 ('services_height', 90, '', '220312'),
@@ -443,6 +470,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('services_width', 150, '', '070312'),
 ('services_width', 660, '', '070512'),
 ('services_width', 143, '', '130312'),
+('services_width', 700, '', '160512'),
 ('services_width', 160, '', '180412'),
 ('services_width', 200, '', '200312'),
 ('services_width', 145, '', '220312'),
@@ -456,6 +484,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_height_thumb', 160, '', '070312'),
 ('video_height_thumb', 160, '', '070512'),
 ('video_height_thumb', 121, '', '130312'),
+('video_height_thumb', 160, '', '160512'),
 ('video_height_thumb', 160, '', '180412'),
 ('video_height_thumb', 170, '', '200312'),
 ('video_height_thumb', 150, '', '220312'),
@@ -467,6 +496,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_num_paging_cat', 8, '', '070312'),
 ('video_num_paging_cat', 8, '', '070512'),
 ('video_num_paging_cat', 8, '', '130312'),
+('video_num_paging_cat', 16, '', '160512'),
 ('video_num_paging_cat', 8, '', '180412'),
 ('video_num_paging_cat', 8, '', '200312'),
 ('video_num_paging_cat', 2, '', '220312'),
@@ -479,6 +509,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_num_paging_index', 8, '', '070312'),
 ('video_num_paging_index', 8, '', '070512'),
 ('video_num_paging_index', 8, '', '130312'),
+('video_num_paging_index', 16, '', '160512'),
 ('video_num_paging_index', 8, '', '180412'),
 ('video_num_paging_index', 8, '', '200312'),
 ('video_num_paging_index', 2, '', '220312'),
@@ -491,6 +522,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_width_thumb', 160, '', '070312'),
 ('video_width_thumb', 160, '', '070512'),
 ('video_width_thumb', 152, '', '130312'),
+('video_width_thumb', 160, '', '160512'),
 ('video_width_thumb', 175, '', '180412'),
 ('video_width_thumb', 170, '', '200312'),
 ('video_width_thumb', 200, '', '220312'),
@@ -637,6 +669,10 @@ INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, 
 ('070512', 'video', 'jquery.prettyPhoto.js', 'javascript'),
 ('130312', 'video', 'prettyPhoto.css', 'css'),
 ('130312', 'video', 'jquery.prettyPhoto.js', 'javascript'),
+('160512', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
+('160512', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
+('160512', 'video', 'prettyPhoto.css', 'css'),
+('160512', 'video', 'jquery.prettyPhoto.js', 'javascript'),
 ('180412', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
 ('180412', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
 ('180412', 'video', 'prettyPhoto.css', 'css'),
@@ -809,7 +845,7 @@ INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `co
 (77, 'Thư ngỏ', '', 'Thời trang đóng vai trò quan trọng trong việc xây dựng hình ảnh cá nhân của mỗi người. Thấu hiểu điều đó 3S shop luôn nắm bắt xu hướng thời trang từng năm để cung cấp tới bạn những dòng sản phẩm thời trang hợp thời:\n\n- Các mẫu thiết kế nổi bật, có phom dáng chuẩn phù hợp với người Việt…từ đó làm tăng niềm tin của khách hàng với dòng sản phẩm Made in Việt Nam.\n\n - Với hệ thống máy móc hiện đại chúng tôi cam kết đưa ra những sản phẩm đa dạng và hoàn hảo về màu sắc. Nhờ đó bạn có rất nhiều lựa chọn về màu sắc và kiểu dáng.\n\n - “Thử tẹt ga – Mua thỏa mái” đó là phương châm phục vụ của chúng tôi.\n\n Bộ sản phẩm thời trang của 3S Shop bao gồm:\n\n- Quần kaki, quần Gờ Tô, Quần âu: Với phom dáng chuẩn phù hợp với người việt, chất vải đẹp không nhăn, không bám bụi và bền màu. Bảo Hành 6 Tháng.\n\n - Áo sơ mi body kiểu dáng Hàn Quốc: Bạn sẽ thật thỏa mái khi đi học, đi chơi hay đi làm, tất cả chất liệu đều được chọn lọc kỹ lưỡng bảo đảm thấm mồ hôi và không nhăn.\n\n- Véc body cực cá tính và năng động: Bạn sẽ ko phải lo lắng hay băn khoăn về độ thùng thình và độ dài của vec làm mất dáng của bạn… Vì tất cả các mẫu thiết kế của chúng tôi đã loại bỏ điều lo lắng đó của bạn. Bạn sẽ khoác lên cơ thể mình một bộ véc đúng như mong đợi…!\n\n - Phụ Kiện thời trang đa dạng: Giầy, ví, thắt lưng, bật lửa kiểu….tất cả đều được chúng tôi lựa chọn kỹ để phù hợp với quần áo, từ đó các bạn sẽ có nhiều lựa chọn cho nhiều phong cách khác nhau.\n\n Sản phẩm của 3S shop phong phú về chủng loại cùng với kiểu dáng đa dạng, ấn tượng. Chúng tôi có một đội ngũ chuyên viên tư vấn và thiết kế được đào tạo chuyên nghiệp đầy sức sáng tạo và lòng nhiệt tình. Đến với 3S shop bạn sẽ thực sự nổi bật và khác biệt.\n\n Nhấc máy gọi số 0904.80.83.85 bất cứ khi nào bạn muốn Design cho mình một bộ cánh mới. Hãy để chúng tôi cùng làm điều đó với bạn. ^^', '', 7, '2012-04-25 08:05:08', 1, 0, '', '', 'thu-ngo', '', '', '', 1, '070312'),
 (81, 'Thư viện sách', '', '<p>Thư viện sách thành phố được thành lập vào 12/1994 nằm ở trung tâm thành phố tại số 2, Phú Lợi, khóm 1, phường 2, thành phố Biên Hòa.</p>\n<p>- Kinh phí hoạt động hàng năm của Thư viện không ổn định, thường dao động từ 5 - 23 triệu đồng.</p>\n<p>* Nhân sự: Thư viện có 02 nhân sự, trong đó: 01 nhân sự trình độ Đại học Thông tin Thư viện, 01 nhân sự trình độ Cao đẳng Thông tin Thư viện.</p>\n<p>- Thư viện hiện có 11.593 tên với 29.168 bản sách, trong đó sách thiếu nhi là 10.992 tên với 28.364 bản.</p>\n<p>- Tổng số báo, tạp chí hiện có của Thư viện 70 tên với 7.445 bản.</p>\n<p>Để đảm bảo nguồn sách phục vụ bạn đọc, Thư viện luôn chú trọng công tác bổ sung sách mới. Hàng năm Thư viện bổ sung khoảng 300- 1.000 bản sách và 20 loại báo, tạp chí.</p>\n<p>* Tổ chức phục vụ: Thư viện mở cửa phục vụ bạn đọc 5 ngày trong tuần (từ thứ hai đến thứ sáu), phục vụ chủ yếu là độc giả thiếu nhi trên địa bàn thành phố Biên Hòa.</p>\n<p>- Hàng năm thư viện đã cấp được trên 800 thẻ bạn đọc, phục vụ trên 40.000 lượt người với hơn 100.000 lượt tài liệu.</p>\n<p>Số điện thoại liên hệ: 0987522003</p>', '', 6, '2012-04-26 08:51:30', 1, 0, '', '', 'thu-vien-sach', '', 'Thư viện sách', '', 1, '200312'),
 (82, '230412 COFFEE', '', '<p style="text-align:justify;">Các bạn thân mến,<br />Trong thời gian vừa qua. <span style="color:#993300;"><strong>230412 COFFEE </strong></span>đã chuyển qua 2 giai đoạn với 2 phiên bản demo và mở rộng. Tuy nhiên, chưa thực sự trở thành website hữu ích với mức độ tương tác giữa người truy cập. Do đó, chúng tôi hân hoan thông báo tới toàn thể thành viên thường xuyên truy cập vào <strong><span style="color:#993300;">230412 COFFEE</span></strong> , thành viên góp ý về việc nâng cấp phiên bản mới với các nội dung trong bản Beta như sau:<br />- Bạn có thể sử dụng guidebook cho các chuyến đi của mình trên 2 bản App cho điện thoại và online trực tuyến.<br />- Đăng kí thành viên. Tham gia trực tiếp và quản lý các hoạt động offline, chuyến đi của mình.<br />- Chia sẻ chuyến đi, post bài kinh nghiệm v.v qua khả năng kết nối mới.<br />- Giao diện thân thiện, dễ sử dụng<br />- Các tiện ích khác biệt, lợi ích vô hạn cho thành viên thường xuyên.<br />Và còn rất nhiều các tiện ích khác.</p>\n<p style="text-align:justify;">Dự tính phiên bản <strong><span style="color:#993300;">230412 COFFEE</span></strong> sẽ thử nghiệm online trong khoảng thời gian từ 15/2/2012 - 30/2/2012.</p>\n<p style="text-align:justify;">Rất mong trong thời gian chờ đợi phiên bản mới. Các bạn vẫn luôn theo sát chúng tôi và chia sẻ cùng chúng tôi tại phuotcafe.com hiện tại.</p>\n<p style="text-align:justify;"> </p>', '', 9, '2012-04-26 09:25:37', 1, 0, '', '', '230412-coffee', '', '230412 COFFEE', '', 1, '230412'),
-(86, 'Giới thiệu sơ lược', '', '<p>Hoà mình vào sự phát triển chung của đất nước với những biến đổi không ngừng của thời cuộc, mỗi doanh nghiệp bằng thực lực và những kế sách đúng đắn của mình luôn tìm được một vị trí xứng đáng trong nền kinh tế thị trường đầy khắc nghiệt. Không là một ngoại lệ với kinh nghiệm nhiều năm hoạt động trong lĩnh vực. SẮT - NHÔM – INOX, với một đội ngũ công nhân lành nghề, tác phong chuyên nghiệp, sản phẩm chất lượng, đa dạng phù hợp kiến trúc và thẩm mỹ mọi công trình, cùng với giá cả hợp lý, hậu mãi chu đáo đã nhanh chóng chiếm lĩnh và chinh phục nhiều khách hàng lớn và khó tính, dần dần khẳng định vị thế của mình trong lĩnh vực xây dựng nói chung và hoạt động sản xuất kinh doanh cửa panô, cửa cuốn, cửa sắt, cửa cổng xếp, trụ lan can kính, cầu thang kính, lan can, cầu thang sắt, Inox, mặt dựng nhôm kính, mặt dựng aluminium, vách ngăn</p>', '', 27, '2012-05-03 14:39:49', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', '', '', 1, 'ducpano'),
+(86, 'Giới thiệu sơ lược', '', '<p>Hoà mình vào sự phát triển chung của đất nước với những biến đổi không ngừng của thời cuộc, mỗi doanh nghiệp bằng thực lực và những kế sách đúng đắn của mình luôn tìm được một vị trí xứng đáng trong nền kinh tế thị trường đầy khắc nghiệt. Không là một ngoại lệ với kinh nghiệm nhiều năm hoạt động trong lĩnh vực. SẮT - NHÔM – INOX, với một đội ngũ công nhân lành nghề, tác phong chuyên nghiệp, sản phẩm chất lượng, đa dạng phù hợp kiến trúc và thẩm mỹ mọi công trình, cùng với giá cả hợp lý, hậu mãi chu đáo đã nhanh chóng chiếm lĩnh và chinh phục nhiều khách hàng lớn và khó tính, dần dần khẳng định vị thế của mình trong lĩnh vực xây dựng nói chung và hoạt động sản xuất kinh doanh cửa panô, cửa cuốn, cửa sắt, cửa cổng xếp, trụ lan can kính, cầu thang kính, lan can, cầu thang sắt, Inox, mặt dựng nhôm kính, mặt dựng aluminium, vách ngăn</p>', '', 29, '2012-05-03 14:39:49', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', '', '', 1, 'ducpano'),
 (87, 'Giới thiệu công ty', '', '<p>Nội dung gioi thiệu</p>', '', 5, '2012-05-03 14:40:19', 2, 0, NULL, NULL, 'gioi-thieu-cong-ty', '', '', '', 1, 'ducpano'),
 (90, 'Giới thiệu công ty', '', '<p style="text-align:justify;">Shop thời trang <strong>240312 </strong>là doanh nghiệp chuyên cung cấp các sản phẩm đồ da trên thị trường Việt Nam từ năm 2001.</p>\n<p style="text-align:justify;"><strong>240312 </strong>là nhà phân phối trực tuyến các sản phẩm túi xách, ví da, dây lưng da, kính thời trang, giầy, xăng đan, thời trang quốc tế được nhập khẩu từ nước ngoài về.</p>\n<p style="text-align:justify;">Bên cạnh việc phân phối trực tuyến cho các khách hàng Hà Nội, TPHCM và các tỉnh, shop còn có 4 showroom trưng bày tại Hà Nội, mở cửa từ 8h - 22h hàng ngày.</p>\n<p style="text-align:justify;">Nhịp sống hiện đại ngày càng ảnh hưởng đến lối sống của mọi tầng lớp xã hội. Trong đó, giới trẻ là những người chịu ảnh hưởng nhiều nhất của lối sống mới này. Trong một cuộc điều tra nhỏ về nhu cầu mua sắm và chăm chút cho vẻ bề ngoài xinh đẹp của giới nữ thì có tới 99% cho kết quả thuận. Bởi vì đời sống ngày càng phát triền, những bộ trang phục và theo đó những phụ kiệm đi kèm, có thể nói lên phong cách và cá tính rất riêng của họ. Chúng tôi hiểu và đã cho ra đời website <strong>240312</strong> nhằm đáp ứng nhu cầu đấy, nhưng theo một cách khác, mới hơn và hoàn hảo hơn.</p>\n<p style="text-align:justify;">Hiện nay, xu hướng thương mại điện tử đang phát triển rất mạnh, trong tương lai sẽ là mô hình chủ đạo và tất yếu, <strong>240312</strong> đã tạo nên sự khác biệt bởi chính hình thức này: Một mô hình cửa hàng trực tuyến, cung cấp mọi góc độ của sản phẩm nhằm giúp khách hàng dễ dàng chọn lựa sản phẩm yêu thích, liên tục cập nhật mẫu mã đa dạng và kèm theo đó là phong cách bán hàng chuyên nghiệp, chu đáo giúp cho bạn trẻ, những người bận rộn, những người làm việc văn phòng không có thời gian đi shopping vẫn có thể thỏa sức mua sắm. với mô hình này chúng tôi đã và đang làm hài lòng tất cả các Khách hàng.</p>', '', 18, '2012-05-03 07:46:57', 1, 0, '', '', 'gioi-thieu-cong-ty', '', 'tui xach  túi xách thời trang  giới thiệu  túi xách  túi hàng hiệu  túi hàng hiệu  cặp da cao cấp  túi ví  túi máy tính  cặp xách  tui dep  may tinh bo tui  túi xách nam  túi xách nữ  túi chống sốc  hang tui xach  túi xách đẹp  tui xach dep  công ty', '', 1, '240312');
 
@@ -836,7 +872,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=69 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=70 ;
 
 --
 -- Dumping data for table `dos_module_advs`
@@ -848,7 +884,8 @@ INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `ur
 (53, 'Quảng cáo 2', '', 'quang-cao-2.jpeg', 'http://dos.vn', '2012-04-25 09:13:53', '2012-04-24 17:00:00', '2012-05-30 17:00:00', 0, 3, 'left', '_bank', 0, '070312'),
 (61, 'Quảng cáo', '', 'quang-cao.jpg', 'http://dos.vn', '2012-04-26 07:46:17', '2012-04-25 17:00:00', '2012-05-30 17:00:00', 0, 1, 'left', '_bank', 1, '200312'),
 (62, 'Quảng cáo', '', 'quang-cao.jpg', 'http://dos.vn', '2012-05-03 06:46:38', '2012-05-02 17:00:00', '2012-06-29 17:00:00', 0, 1, 'left', '_bank', 1, '240312'),
-(68, 'Tạo website trực tuyến', NULL, 'tao-website-truc-tuyen.gif', 'http://dos.vn', '2012-05-03 14:52:31', '2012-05-02 17:00:00', '2012-05-30 17:00:00', 0, 1, 'left', '_bank', 1, 'ducpano');
+(68, 'Tạo website trực tuyến', NULL, 'tao-website-truc-tuyen.gif', 'http://dos.vn', '2012-05-03 14:52:31', '2012-05-02 17:00:00', '2012-05-30 17:00:00', 0, 1, 'left', '_bank', 1, 'ducpano'),
+(69, 'Sale 40', NULL, 'sale-40.jpg', 'http://vnexpress.net/gl/van-hoa/2012/05/ho-ngoc-ha-mang-sieu-xe-len-san-khau/', '2012-05-16 06:21:29', '2012-05-15 16:00:00', '2012-06-25 16:00:00', 0, 2, 'left', '_bank', 1, '240312');
 
 -- --------------------------------------------------------
 
@@ -869,7 +906,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=336 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=337 ;
 
 --
 -- Dumping data for table `dos_module_banners`
@@ -900,7 +937,8 @@ INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `ba
 (329, '2012-05-03 06:44:26', 'Banner', 'banner.jpg', '', 1, 'banners', 'default', 1, '240312'),
 (330, '2012-05-03 06:44:41', 'Banner 1', 'banner-1.jpg', '', 2, 'banners', 'default', 1, '240312'),
 (331, '2012-05-03 06:44:55', 'Banner 2', 'banner-2.jpg', '', 3, 'banners', 'default', 1, '240312'),
-(335, '2012-05-03 14:24:08', 'Logo', 'logo.png', '', 1, 'logo', 'default', 1, 'ducpano');
+(335, '2012-05-03 14:24:08', 'Logo', 'logo.png', '', 1, 'logo', 'default', 1, 'ducpano'),
+(336, '2012-05-16 03:34:07', 'ba', 'ba.jpg', 'http://sieuthiposm.com/', 2, 'banners', 'default', 1, 'ducpano');
 
 -- --------------------------------------------------------
 
@@ -1120,7 +1158,7 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('max_count', 1, 'ducpano'),
 ('counter', 2, 'ducpano'),
 ('yesterday', 0, 'ducpano'),
-('day_time', 2456055, '240312'),
+('day_time', 2456064, '240312'),
 ('max_count', 0, '240312'),
 ('counter', 0, '240312'),
 ('yesterday', 0, '240312');
@@ -1143,7 +1181,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1337136215, 'ducpano');
+('''127.0.0.1''', 1337150324, '240312');
 
 -- --------------------------------------------------------
 
@@ -1429,14 +1467,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `dos_module_supports`
 --
 
 INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
-(3, '', '', '0903337654', 'ducpano', 1, 'yahoo', 'ducpano');
+(3, '', '', '0903337654', 'ducpano', 1, 'yahoo', 'ducpano'),
+(4, 'Hỗ trợ khách hàng', '', '01230 456 789', 'groupitsoft', 1, 'yahoo', '240312');
 
 -- --------------------------------------------------------
 
@@ -1727,6 +1766,7 @@ INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `descriptio
 ('070312', 'Mẫu thời trang: 070312', '2012-03-06 13:21:26', 'Chuyên bán các sản phẩm thời trang quần áo mới nhất, với các dịch vụ ưu đãi'),
 ('070512', 'Mẫu dịch vụ 070512', '2012-05-07 06:57:34', 'Dịch vụ chuyển phát nhanh - Babylon Express chuyển phát nhanh thư từ, hợp đồng, hàng hóa đến tận nơi trên toàn quốc, và thế giới'),
 ('130312', 'Mẫu cơ khí: 130312', '2012-03-12 12:01:59', 'Chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn Carb p2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn Carb p2'),
+('160512', 'Mẫu ẩm thực 160512', '2012-05-16 04:22:58', 'Chuyên bán các loại ẩm thực đồ uống các loại.'),
 ('180412', 'Mẫu máy tính: 180412', '2012-04-18 00:58:03', 'Mẫu máy tính mã số 180412'),
 ('200312', 'Mẫu giáo dục: 200312', '2012-03-19 23:43:27', 'Chuyên bán các loại sách cho sinh viên, giá cả bình dân'),
 ('220312', 'Mẫu nội thất: 220312', '2012-03-21 20:04:36', 'Chuyên bán các loại đồ nội thất, dân dụng'),
@@ -1759,6 +1799,7 @@ INSERT INTO `dos_templates_has_dos_bussiness` (`dos_templates_template`, `dos_bu
 ('070312', 'thoi-trang'),
 ('070512', 'cong-nghe-thong-tin-vien-thong'),
 ('130312', 'bds-kien-truc-xay-dung'),
+('160512', 'am-thuc-drink'),
 ('180412', 'cong-nghe-thong-tin-vien-thong'),
 ('200312', 'giao-duc-dao-tao'),
 ('220312', 'noi-that-ngoai-that'),
@@ -1947,6 +1988,29 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('130312', 'video', 'advs_left'),
 ('130312', 'video', 'list_supports'),
 ('130312', 'video', 'menu_video'),
+('160512', 'about', 'advs_left'),
+('160512', 'about', 'list_supports'),
+('160512', 'about', 'menu_about'),
+('160512', 'contact', 'advs_left'),
+('160512', 'contact', 'list_supports'),
+('160512', 'contact', 'menu_products'),
+('160512', 'default', 'about_home'),
+('160512', 'default', 'advs_left'),
+('160512', 'default', 'list_supports'),
+('160512', 'default', 'menu_products'),
+('160512', 'default', 'products_new'),
+('160512', 'news', 'advs_left'),
+('160512', 'news', 'list_supports'),
+('160512', 'news', 'menu_news'),
+('160512', 'products', 'advs_left'),
+('160512', 'products', 'list_supports'),
+('160512', 'products', 'menu_products'),
+('160512', 'services', 'advs_left'),
+('160512', 'services', 'list_supports'),
+('160512', 'services', 'menu_services'),
+('160512', 'video', 'advs_left'),
+('160512', 'video', 'list_supports'),
+('160512', 'video', 'menu_video'),
 ('180412', 'about', 'advs_left'),
 ('180412', 'about', 'list_supports'),
 ('180412', 'about', 'menu_about'),
@@ -2184,7 +2248,7 @@ INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullna
 ('070312', 'info@dos.vn', 'd85287e7f9ec18990d6d2dce0b1692b5', '2012-04-25 07:28:23', '', '', '', 'user', 'vi', '', '2012-05-24 17:00:00', 0, '20122012', NULL, 1, '070312', 19, 'thoi-trang'),
 ('200312', 'info@dos.vn', 'd85287e7f9ec18990d6d2dce0b1692b5', '2012-04-25 07:17:56', '', '', '', 'user', 'vi', '', '2012-05-24 17:00:00', 0, '20122012', NULL, 1, '200312', 1, 'giao-duc-dao-tao'),
 ('230412', 'info@dos.vn', 'd85287e7f9ec18990d6d2dce0b1692b5', '2012-04-26 09:03:32', '', '', '', 'user', 'vi', '', '2012-05-25 17:00:00', 0, '20122012', NULL, 1, '230412', 19, 'nha-hang-cafe'),
-('240312', 'info@dos.vn', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-03 02:01:30', '', '', '', 'user', 'vi', '', '2012-06-01 17:00:00', 1, '20122012', NULL, 1, '240312', 1, 'thoi-trang'),
+('240312', 'info@dos.vn', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-03 02:01:30', '', '', '', 'user', 'vi', '', '2012-06-01 17:00:00', 1, '20122012', NULL, 1, '160512', 1, 'thoi-trang'),
 ('dos', 'info@dos.vn', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi|en', NULL, '2012-04-14 17:00:00', 0, '20122012', NULL, 1, '230412', 2, 'cong-nghe-thong-tin-vien-thong'),
 ('ducpano', 'ducpano@yahoo.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-03 14:10:09', NULL, '0903337654', NULL, 'user', 'vi', NULL, '2012-06-01 17:00:00', 0, '20122012', NULL, 1, '270412', 19, 'co-khi-may-moc-thiet-bi');
 
