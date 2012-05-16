@@ -98,9 +98,10 @@ class Comments extends CActiveRecord {
         $criteria->compare('hoiit_posts_post_id', $this->hoiit_posts_post_id);
 
         return new CActiveDataProvider($this, array(
-                    'criteria' => $criteria,
-                ));
+            'criteria' => $criteria,
+        ));
     }
+
     public function beforeSave() {
         $posts = new Posts;
         $purifier = new CHtmlPurifier();
@@ -110,21 +111,24 @@ class Comments extends CActiveRecord {
         $this->hoiit_posts_post_id = $posts->getIdByLink(Yii::app()->request->getQuery('id'));
         return parent::beforeSave();
     }
+
     //Front end - list Comment
     public function listNewComment() {
         $command = Yii::app()->db->createCommand('SELECT comment_id, comment_title, hoiit_posts.hoiit_usernames_username AS username, post_link, cat_name FROM ' . $this->tableName() . ', hoiit_posts, hoiit_cats WHERE ' . $this->tableName() . '.hoiit_posts_post_id = hoiit_posts.post_id AND hoiit_posts.hoiit_cats_cat_id = hoiit_cats.cat_id AND comment_enable=1 ORDER BY comment_date DESC LIMIT 0, 10');
         return $command->queryAll();
     }
+
     //Front end - list Comment
     public function listCommentByPost($link) {
         $post = new Posts;
         $id = $post->getIdByLink($link);
-        $command = Yii::app()->db->createCommand('SELECT comment_id, comment_title, comment_content, comment_date, hoiit_usernames_username FROM ' . $this->tableName() . ' WHERE comment_enable=1 AND hoiit_posts_post_id=:postid ORDER BY comment_date ASC');
+        $command = Yii::app()->db->createCommand('SELECT comment_id, comment_title, comment_content, comment_date, hoiit_usernames_username, picture FROM ' . $this->tableName() . ', hoiit_usernames WHERE ' . $this->tableName() . '.hoiit_usernames_username = hoiit_usernames.username AND comment_enable=1 AND hoiit_posts_post_id=:postid ORDER BY comment_date ASC');
         $command->bindParam(':postid', $id, PDO::PARAM_INT);
         return $command->queryAll();
     }
+
     //Back end - delete comment
-    public function deleteRecordByPostID($post_id){
+    public function deleteRecordByPostID($post_id) {
         $command = Yii::app()->db->createCommand('DELETE FROM ' . $this->tableName() . ' WHERE hoiit_posts_post_id=:post_id');
         $command->bindParam(':post_id', $post_id, PDO::PARAM_INT);
         $command->execute();

@@ -8,6 +8,8 @@ h1.title-view{color:#0066CC; font-size:12pt}
 
 /*layout*/
 #header{background:#fff; padding:5px 10px;position:relative;top:0;left:0}
+#header .lang{position: absolute; top:63px; right:20px}
+#header .lang a{margin-left: 5px}
 #header .logo{position:relative; top:0; left:0}
 
 /* Common */

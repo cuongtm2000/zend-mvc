@@ -47,6 +47,7 @@
                 ),
             ));
             ?>
+            <div class="lang"><a href="<?php echo Yii::app()->request->baseUrl ?>/vn" title="Viet nam"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/vn.gif" alt="Viet nam" /></a> <a href="<?php echo Yii::app()->request->baseUrl ?>/en" title="English"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/en.gif" alt="English" /></a></div>
         </div>
 
 		<ul id="tabs">
