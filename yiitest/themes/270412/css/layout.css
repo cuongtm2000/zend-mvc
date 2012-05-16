@@ -11,7 +11,7 @@ a:hover{color:#000;}
 /*Header*/
 #header{ margin:5px 0 0 0;padding:10px 0;position:relative}
 #logo{float:left;margin: 0 20px 0 0;overflow:hidden;height:97px}
-.title-city{padding:30px 0 0 0; font-size:20pt;color:#EE6B11;font-weight:bold}
+.title-city{padding:30px 0 0 0; font-size:18pt;color:#EE6B11;font-weight:bold}
 
 .lang{position:absolute;bottom:35px; right:0}
 .lang-vn{ margin:0 10px 0 0}
