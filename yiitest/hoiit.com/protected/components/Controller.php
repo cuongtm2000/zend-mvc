@@ -28,7 +28,7 @@ class Controller extends CController {
 	public $listTopPostUsers = array();
 
 	public function init(){
-        $ip = '123.22.68.105';
+        $ip = '42.119.214.149';
 
         if(IpCountries::model()->checkIP($ip)){
             //true
