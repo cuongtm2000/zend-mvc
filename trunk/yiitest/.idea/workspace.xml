@@ -13,7 +13,13 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/cache/472f714c226873e2219db544625182ed.bin" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/cache" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hoiit.com/protected/components/Controller.php" afterPath="$PROJECT_DIR$/hoiit.com/protected/components/Controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hoiit.com/protected/models/Comments.php" afterPath="$PROJECT_DIR$/hoiit.com/protected/models/Comments.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hoiit.com/protected/runtime/application.log" afterPath="$PROJECT_DIR$/hoiit.com/protected/runtime/application.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hoiit.com/protected/views/posts/hoiit/view.php" afterPath="$PROJECT_DIR$/hoiit.com/protected/views/posts/hoiit/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hoiit.com/themes/hoiit/css/comment.css" afterPath="$PROJECT_DIR$/hoiit.com/themes/hoiit/css/comment.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hoiit.com/themes/hoiit/css/layout.css" afterPath="$PROJECT_DIR$/hoiit.com/themes/hoiit/css/layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hoiit.com/themes/hoiit/views/layouts/main.php" afterPath="$PROJECT_DIR$/hoiit.com/themes/hoiit/views/layouts/main.php" />
     </list>
     <ignored path="svn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,35 +44,7 @@
     <favorites_list name="svn" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Controller.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hoiit.com/protected/components/Controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="49" selection-start="1202" selection-end="1202" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Common.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hoiit.com/protected/components/Common.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="5" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IpCountries.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hoiit.com/protected/models/IpCountries.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="21" selection-start="3476" selection-end="3476" vertical-scroll-proportion="0.8175313">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -79,11 +57,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/hoiit.com/protected/views/site/index.php" />
-        <option value="$PROJECT_DIR$/protected/modules/administrator/views/usernames/index.php" />
-        <option value="$PROJECT_DIR$/protected/components/AgentUserIdentity.php" />
-        <option value="$PROJECT_DIR$/themes/admin-agent/css/reset-min.css" />
-        <option value="$PROJECT_DIR$/protected/modules/agent/controllers/LoginController.php" />
         <option value="$PROJECT_DIR$/protected/modules/agent/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/protected/models/AgentLoginForm.php" />
         <option value="$PROJECT_DIR$/themes/admin-agent/views/layouts/main.php" />
@@ -93,8 +66,13 @@
         <option value="$PROJECT_DIR$/protected/models/Banner.php" />
         <option value="$PROJECT_DIR$/hoiit.com/protected/config/routes.php" />
         <option value="$PROJECT_DIR$/hoiit.com/protected/config/main.php" />
-        <option value="$PROJECT_DIR$/hoiit.com/protected/components/Controller.php" />
         <option value="$PROJECT_DIR$/hoiit.com/protected/models/IpCountries.php" />
+        <option value="$PROJECT_DIR$/hoiit.com/themes/hoiit/css/layout.css" />
+        <option value="$PROJECT_DIR$/hoiit.com/protected/components/Controller.php" />
+        <option value="$PROJECT_DIR$/hoiit.com/themes/hoiit/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/hoiit.com/protected/models/Comments.php" />
+        <option value="$PROJECT_DIR$/hoiit.com/themes/hoiit/css/comment.css" />
+        <option value="$PROJECT_DIR$/hoiit.com/protected/views/posts/hoiit/view.php" />
       </list>
     </option>
   </component>
@@ -175,7 +153,213 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-blue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-blue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-blue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-blue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="hoiit.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hoiit.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hoiit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hoiit.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hoiit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hoiit.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hoiit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hoiit.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hoiit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -215,7 +399,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -237,7 +421,89 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="posts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hoiit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hoiit.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="messages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hoiit.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="messages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="en" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hoiit.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -271,8 +537,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.HTML" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig" serverName="dos.vn" serverId="819b0d99-b6d0-4d88-9f62-7e03412fcb55" />
   <component name="RecentsManager">
@@ -324,13 +590,6 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="819b0d99-b6d0-4d88-9f62-7e03412fcb55" server_name="dos.vn">
       <method>
         <option name="FtpUpload" enabled="false">
@@ -339,6 +598,13 @@
         </option>
         <option name="PhingTarget" enabled="false" />
       </method>
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
     </configuration>
     <list size="0" />
   </component>
@@ -369,10 +635,6 @@
           <option name="myVcsRoot" value="E:\Customers\dos.vn\svn" />
           <option name="myCopyRoot" value="E:\Customers\dos.vn\svn" />
         </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Customers\dos.vn\svn" />
-          <option name="myCopyRoot" value="E:\Customers\dos.vn\svn\share" />
-        </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
@@ -380,10 +642,6 @@
         <SvnCopyRootSimple>
           <option name="myVcsRoot" value="E:\Customers\dos.vn\svn" />
           <option name="myCopyRoot" value="E:\Customers\dos.vn\svn" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Customers\dos.vn\svn" />
-          <option name="myCopyRoot" value="E:\Customers\dos.vn\svn\share" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -418,14 +676,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.4939302" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.7314112" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.4969651" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21775417" sideWeight="0.0" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2215478" sideWeight="0.0" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5007587" order="7" side_tool="true" content_ui="tabs" />
@@ -496,98 +754,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/models/LoginForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="25" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.6994633" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/AgentLoginForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="41" selection-start="48" selection-end="48" vertical-scroll-proportion="-0.39534885" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/agent/controllers/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="33" selection-start="742" selection-end="742" vertical-scroll-proportion="0.6314848" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/AdministratorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="9" selection-start="305" selection-end="305" vertical-scroll-proportion="0.3041145" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/admin-agent/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="77" selection-start="1236" selection-end="1236" vertical-scroll-proportion="0.5884615" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/AgentUserIdentity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="47" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/agent/AgentModule.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="34" selection-start="371" selection-end="371" vertical-scroll-proportion="0.39534885" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="38" selection-start="1501" selection-end="1501" vertical-scroll-proportion="1.0948122" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/about/models/About.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.8021977">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Banner.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="61" selection-start="3441" selection-end="3441" vertical-scroll-proportion="0.529304">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/products/models/Products.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="24" selection-start="4555" selection-end="4592" vertical-scroll-proportion="0.8717949">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hoiit.com/protected/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="33" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.6386404">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hoiit.com/protected/config/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="12" selection-start="873" selection-end="873" vertical-scroll-proportion="0.6386404">
-          <folding />
-        </state>
+        <state line="24" column="12" selection-start="873" selection-end="873" vertical-scroll-proportion="0.6386404" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hoiit.com/protected/models/IpCountries.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="13" selection-start="3443" selection-end="3443" vertical-scroll-proportion="1.881932" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hoiit.com/protected/components/Common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="5" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0">
+        <state line="27" column="15" selection-start="739" selection-end="739" vertical-scroll-proportion="0.8211091" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/Common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="21" selection-start="4188" selection-end="4188" vertical-scroll-proportion="0.77838826" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/contact/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="506" selection-start="1158" selection-end="1163" vertical-scroll-proportion="0.529304">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hoiit.com/protected/messages/en/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hoiit.com/protected/messages/vi/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="7" selection-start="46" selection-end="46" vertical-scroll-proportion="0.09123435">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin-blue/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="358" selection-start="1597" selection-end="1951" vertical-scroll-proportion="-7.8461537">
+          <folding>
+            <marker date="1334721919508" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1334721919508" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1334721919508" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/admin-blue/css/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="455" selection-end="510" vertical-scroll-proportion="-7.16">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hoiit.com/protected/components/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="49" selection-start="1202" selection-end="1202" vertical-scroll-proportion="0.0">
+        <state line="33" column="12" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.57423973">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hoiit.com/protected/models/IpCountries.php">
+    <entry file="file://$PROJECT_DIR$/hoiit.com/protected/views/posts/hoiit/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="21" selection-start="3476" selection-end="3476" vertical-scroll-proportion="0.8175313">
+        <state line="38" column="16" selection-start="2412" selection-end="2412" vertical-scroll-proportion="0.86923075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hoiit.com/themes/hoiit/css/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="47" selection-start="527" selection-end="527" vertical-scroll-proportion="0.3761996">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hoiit.com/themes/hoiit/css/comment.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="61" selection-start="250" selection-end="250" vertical-scroll-proportion="0.09788868">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hoiit.com/themes/hoiit/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="201" selection-start="5601" selection-end="5707" vertical-scroll-proportion="0.27115384">
+          <folding>
+            <marker date="1337153689660" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1337153689660" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1337153689660" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hoiit.com/protected/controllers/PostsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="132" selection-start="2676" selection-end="2676" vertical-scroll-proportion="0.75091577">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hoiit.com/protected/models/Comments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="148" selection-start="5248" selection-end="5248" vertical-scroll-proportion="0.50183153">
           <folding />
         </state>
       </provider>

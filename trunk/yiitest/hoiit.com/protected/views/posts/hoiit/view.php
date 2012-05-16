@@ -25,12 +25,16 @@
 <?php foreach ($listComment as $value):?>
 <div class="comment-item">	
     <div class="avatar">
-        <img src="<?php echo Yii::app()->theme->baseUrl?>/images/no-avatar.png" alt="<?php echo $value['hoiit_usernames_username']?>" />
+        <?php if($value['picture']):?>
+            <img src="<?php echo Yii::app()->request->baseUrl?>/public/userfiles/image/usernames/<?php echo $value['picture']?>" alt="<?php echo $value['hoiit_usernames_username']?>" />
+        <?php else:?>
+            <img src="<?php echo Yii::app()->theme->baseUrl?>/images/no-avatar.png" alt="<?php echo $value['hoiit_usernames_username']?>" />
+        <?php endif?>
     </div>
     <p>
         <a href="#comment-<?php echo $value['comment_id']?>" name="comment-<?php echo $value['comment_id']?>" title="<?php echo $value['hoiit_usernames_username']?>"><?php echo $value['comment_title']?> - <?php echo $value['hoiit_usernames_username']?></a>
         <span class="comment-time"><?php echo date('Y-m-d H:i', strtotime($value['comment_date']))?></span>
-        <span class="comment-content"><?php echo $value['comment_content']?></span>
+        <span class="comment-content"><?php echo nl2br($value['comment_content'])?></span>
         <span class="dialog"></span>
     </p> 
 </div>

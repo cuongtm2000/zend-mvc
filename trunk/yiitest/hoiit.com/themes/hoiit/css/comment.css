@@ -1,7 +1,7 @@
 /* comment list */
 .comment-item {clear: both; margin-bottom: 15px; position: relative;}
 .avatar {display: block; float: left; height: 50px; margin-right: 10px; padding: 2px; width: 50px;}
-.avatar img{width: 50px}
+.avatar img{width: 50px; border: 1px solid #ccc; padding: 1px}
 .comment-item p {-webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; border: 1px solid #ddd; margin-left: 70px; padding: 10px; position: relative; -moz-box-shadow: 0px 1px 1px 0px #ccc; -webkit-box-shadow: 0px 1px 1px 0px #ccc; box-shadow: 1px 1px 1px 0px #ccc;}
 .comment-item p span {display: block; font-size: 12px; margin-top: 5px; padding-top: 5px}
 .comment-item p a{font-weight: bold; color: #18538C}
