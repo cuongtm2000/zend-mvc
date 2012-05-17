@@ -76,7 +76,6 @@ a:hover{color:#000;}
 #rightcontent ul li, #rightcontent ol li{margin: 0 0 0 40px}
 #rightcontent ul ,#rightcontent ol{margin: 0 0 12px 0}
 
-
 .bd-top-right{ background:url(../images/bd-top-right.gif) no-repeat; height:21px; width:745px}
 .mid-right{ background:url(../images/mid-right.gif) repeat-y;padding:0 10px 5px 10px}
 .bd-bt-right{background:url(../images/bd-bt-right.gif) no-repeat; height:21px; width:745px; position:relative; left:-1px}
