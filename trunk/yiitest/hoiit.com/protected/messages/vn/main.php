@@ -9,6 +9,7 @@ return array(
     'topPoster' => 'Thành viên tích cực',
 
     'postExperience' => 'Kinh nghiệm dành cho lập trình viên',
+    'by' => 'bởi',
     'latestPosts' => 'Bài viết mới nhất',
     'latestComments' => 'Bình luận mới nhất',
 

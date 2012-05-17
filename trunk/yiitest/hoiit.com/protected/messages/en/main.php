@@ -9,6 +9,7 @@ return array(
     'topPoster' => 'Top Poster',
 
     'postExperience' => 'Post experience for programmer',
+    'by' => 'by',
     'latestPosts' => 'Latest posts',
     'latestComments' => 'Latest comments',
 

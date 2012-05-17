@@ -3,14 +3,14 @@
 	<h1><?php echo Yii::t('main', 'postExperience')?></h1>
 	<ul>
 		<?php foreach ($listRecordTypeNew as $value): ?>
-		<li><a href="<?php echo Yii::app()->request->baseUrl . '/posts/' . NoneUnicode::convert($value['cat_name']) . '/' . $value['post_link'] ?>.html"><?php echo $value['post_title'] ?></a> by <a href="#"><?php echo $value['hoiit_usernames_username'] ?></a> - <a href="<?php echo Yii::app()->request->baseUrl . '/posts/' . NoneUnicode::convert($value['cat_name']) ?>"><?php echo $value['cat_name'] ?></a></li>
+		<li><a href="<?php echo Yii::app()->request->baseUrl . '/posts/' . NoneUnicode::convert($value['cat_name']) . '/' . $value['post_link'] ?>.html"><?php echo $value['post_title'] ?></a> <?php echo Yii::t('main', 'by')?> <a href="#"><?php echo $value['hoiit_usernames_username'] ?></a> - <a href="<?php echo Yii::app()->request->baseUrl . '/posts/' . NoneUnicode::convert($value['cat_name']) ?>"><?php echo $value['cat_name'] ?></a></li>
 		<?php endforeach; ?>
 	</ul>
 
     <h1><?php echo Yii::t('main', 'latestPosts')?></h1>
     <ul>
         <?php foreach ($listRecordNew as $value): ?>
-            <li><a href="<?php echo Yii::app()->request->baseUrl . '/posts/' . NoneUnicode::convert($value['cat_name']) . '/' . $value['post_link'] ?>.html"><?php echo $value['post_title'] ?></a> by <a href="#"><?php echo $value['hoiit_usernames_username'] ?></a> - <a href="<?php echo Yii::app()->request->baseUrl . '/posts/' . NoneUnicode::convert($value['cat_name']) ?>"><?php echo $value['cat_name'] ?></a></li>
+            <li><a href="<?php echo Yii::app()->request->baseUrl . '/posts/' . NoneUnicode::convert($value['cat_name']) . '/' . $value['post_link'] ?>.html"><?php echo $value['post_title'] ?></a> <?php echo Yii::t('main', 'by')?> <a href="#"><?php echo $value['hoiit_usernames_username'] ?></a> - <a href="<?php echo Yii::app()->request->baseUrl . '/posts/' . NoneUnicode::convert($value['cat_name']) ?>"><?php echo $value['cat_name'] ?></a></li>
         <?php endforeach; ?>
     </ul>
 
@@ -66,7 +66,7 @@
     <h1><?php echo Yii::t('main', 'latestComments')?></h1>
     <ul>
         <?php foreach ($listNewComment as $value):?>
-        <li><a href="<?php echo Yii::app()->request->baseUrl . '/posts/' . NoneUnicode::convert($value['cat_name']) . '/' . $value['post_link'] ?>.html#<?php echo NoneUnicode::convert($value['comment_title'])?>-<?php echo $value['comment_id']?>" title="<?php echo $value['comment_title'] ?> - <?php echo $value['username'] ?>"><?php echo $value['comment_title'] ?></a> by <a href="#"><?php echo $value['username'] ?></a></li>
+        <li><a href="<?php echo Yii::app()->request->baseUrl . '/posts/' . NoneUnicode::convert($value['cat_name']) . '/' . $value['post_link'] ?>.html#<?php echo NoneUnicode::convert($value['comment_title'])?>-<?php echo $value['comment_id']?>" title="<?php echo $value['comment_title'] ?> - <?php echo $value['username'] ?>"><?php echo $value['comment_title'] ?></a> <?php echo Yii::t('main', 'by')?> <a href="#"><?php echo $value['username'] ?></a></li>
         <?php endforeach;?>
     </ul>
 </div>
