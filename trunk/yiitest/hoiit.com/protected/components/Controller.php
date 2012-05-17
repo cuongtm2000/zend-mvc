@@ -20,8 +20,8 @@ class Controller extends CController {
     public $topCatname;
 
     public function init() {
-        Common::setLanguage($_SERVER['REMOTE_ADDR']); //setting language
-        //Common::setLanguage('42.119.61.11'); //setting language
+        //Common::setLanguage($_SERVER['REMOTE_ADDR']); //setting language
+        Common::setLanguage('42.119.61.11'); //setting language
 
         $username_class = new Usernames();
         $this->listTopPostUsers = $username_class->listTopPostUsers();
