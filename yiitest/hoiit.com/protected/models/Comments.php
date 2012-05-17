@@ -114,7 +114,7 @@ class Comments extends CActiveRecord {
 
     //Front end - list Comment
     public function listNewComment() {
-        $command = Yii::app()->db->createCommand('SELECT comment_id, comment_title, hoiit_posts.hoiit_usernames_username AS username, post_link, cat_name FROM ' . $this->tableName() . ', hoiit_posts, hoiit_cats WHERE ' . $this->tableName() . '.hoiit_posts_post_id = hoiit_posts.post_id AND hoiit_posts.hoiit_cats_cat_id = hoiit_cats.cat_id AND comment_enable=1 ORDER BY comment_date DESC LIMIT 0, 10');
+        $command = Yii::app()->db->createCommand('SELECT comment_id, comment_title, ' . $this->tableName() . '.hoiit_usernames_username AS username, post_link, cat_name FROM ' . $this->tableName() . ', hoiit_posts, hoiit_cats WHERE ' . $this->tableName() . '.hoiit_posts_post_id = hoiit_posts.post_id AND hoiit_posts.hoiit_cats_cat_id = hoiit_cats.cat_id AND comment_enable=1 ORDER BY comment_date DESC LIMIT 0, 10');
         return $command->queryAll();
     }
 
