@@ -1,5 +1,5 @@
 <?php $this->breadcrumbs = array('Posts' => Yii::app()->request->baseUrl . '/posts', $detail['cat_name'] => './'); ?>
-<?php $this->pageTitle = $detail['post_title'] . ' - ' . $detail['cat_name']; $this->keywords = CHtml::encode($detail['post_description']); $this->description = CHtml::encode($detail['post_description'])?>
+<?php $this->topCatname = $detail['cat_name']; $this->pageTitle = $detail['post_title'] . ' - ' . $detail['cat_name']; $this->keywords = CHtml::encode($detail['post_description']); $this->description = CHtml::encode($detail['post_description'])?>
 <h1 class="title-view"><strong><?php echo $detail['post_title']?></strong></h1>
 <?php echo $detail['post_detail']?>
 
