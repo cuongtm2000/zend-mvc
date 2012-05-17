@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 14, 2012 at 11:30 AM
+-- Generation Time: May 17, 2012 at 02:50 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -72,37 +72,38 @@ CREATE TABLE IF NOT EXISTS `dos_configs` (
 --
 
 INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES
-('advs_left_height', 190, '', '220312'),
-('advs_left_width', 190, '', '220312'),
-('advs_right_height', 190, '', '220312'),
-('advs_right_width', 190, '', '220312'),
-('banner_height', 332, '', '220312'),
-('banner_width', 950, '', '220312'),
-('logo_height', 79, '', '220312'),
-('logo_width', 259, '', '220312'),
-('max_image_height', 667, '', '220312'),
-('max_image_width', 500, '', '220312'),
-('news_height_thumb', 100, '', '220312'),
-('news_num_paging_cat', 10, '', '220312'),
-('news_num_paging_hot', 6, '', '220312'),
-('news_num_paging_index', 10, '', '220312'),
-('news_num_paging_new', 6, '', '220312'),
-('news_width_thumb', 145, '', '220312'),
-('products_cat_height', 150, '', '220312'),
-('products_cat_width', 200, '', '220312'),
-('products_height', 400, '', '220312'),
-('products_height_thumb', 135, '', '220312'),
-('products_num_paging_cat', 8, '', '220312'),
-('products_num_paging_new', 4, '', '220312'),
-('products_num_paging_other', 2, '', '220312'),
-('products_width', 500, '', '220312'),
-('products_width_thumb', 200, '', '220312'),
-('services_height', 90, '', '220312'),
-('services_width', 145, '', '220312'),
-('video_height_thumb', 150, '', '220312'),
-('video_num_paging_cat', 2, '', '220312'),
-('video_num_paging_index', 2, '', '220312'),
-('video_width_thumb', 200, '', '220312');
+('advs_left_height', 300, '', '270412'),
+('advs_left_width', 179, '', '270412'),
+('advs_right_height', 300, '', '270412'),
+('advs_right_width', 164, '', '270412'),
+('banner_height', 285, '', '270412'),
+('banner_width', 597, '', '270412'),
+('logo_height', 97, '', '270412'),
+('logo_width', 107, '', '270412'),
+('max_image_height', 753, '', '270412'),
+('max_image_width', 565, '', '270412'),
+('news_cat_height', 100, '', '270412'),
+('news_cat_width', 143, '', '270412'),
+('news_height_thumb', 100, '', '270412'),
+('news_num_paging_cat', 10, '', '270412'),
+('news_num_paging_hot', 6, '', '270412'),
+('news_num_paging_index', 10, '', '270412'),
+('news_num_paging_new', 6, '', '270412'),
+('news_width_thumb', 143, '', '270412'),
+('products_cat_height', 135, '', '270412'),
+('products_cat_width', 135, '', '270412'),
+('products_height', 753, '', '270412'),
+('products_height_thumb', 135, '', '270412'),
+('products_num_paging_cat', 16, '', '270412'),
+('products_num_paging_hot', 12, '', '270412'),
+('products_num_paging_new', 20, '', '270412'),
+('products_num_paging_other', 4, '', '270412'),
+('products_width', 565, '', '270412'),
+('products_width_thumb', 135, '', '270412'),
+('video_height_thumb', 135, '', '270412'),
+('video_num_paging_cat', 8, '', '270412'),
+('video_num_paging_index', 8, '', '270412'),
+('video_width_thumb', 135, '', '270412');
 
 -- --------------------------------------------------------
 
@@ -228,10 +229,12 @@ CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
 --
 
 INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, `loadfiles`, `typefile`) VALUES
-('220312', 'default', 'prettyPhoto.css', 'css'),
-('220312', 'default', 'jquery.prettyPhoto.js', 'javascript'),
-('220312', 'video', 'prettyPhoto.css', 'css'),
-('220312', 'video', 'jquery.prettyPhoto.js', 'javascript');
+('270412', 'default', 'simplyscroll.verticall.css|prettyPhoto.css', 'css'),
+('270412', 'default', 'jquery.simplyscroll.vertical.js|verticall-config.js|jquery.prettyPhoto.js', 'javascript'),
+('270412', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
+('270412', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
+('270412', 'video', 'prettyPhoto.css', 'css'),
+('270412', 'video', 'jquery.prettyPhoto.js', 'javascript');
 
 -- --------------------------------------------------------
 
@@ -283,14 +286,15 @@ CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
 --
 
 INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
-('about', 'phumyan'),
-('advs', 'phumyan'),
-('banner', 'phumyan'),
-('contact', 'phumyan'),
-('news', 'phumyan'),
-('products', 'phumyan'),
-('services', 'phumyan'),
-('supports', 'phumyan');
+('about', 'tinhungphat'),
+('advs', 'tinhungphat'),
+('banner', 'tinhungphat'),
+('contact', 'tinhungphat'),
+('news', 'tinhungphat'),
+('products', 'tinhungphat'),
+('services', 'tinhungphat'),
+('supports', 'tinhungphat'),
+('video', 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -319,15 +323,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=103 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=109 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(101, 'Thư ngỏ', '', '<p style="text-align:justify;">       Trong đời sống hiện nay, nhu cầu sống trong những ngôi nhà đẹp, cao cấp với không gian tiện nghi đã không còn là những “ước mơ” khó thực hiện. Tất cả chúng ta đều tự hào vì cảnh quan của đất nước với hạ tầng cơ sở là những công trình kiến trúc hiện đại, những tòa nhà cao cấp hay những biệt thự với sân vườn, cây xanh, hoặc chỉ là những căn hộ nhỏ xinh cũng đã có những dấu ấn lớn của sự chăm chút của người chủ sở hữu. Trong những không gian đẹp, tiện nghi, hiện đại đó có sự góp phần không nhỏ công sức của kiến trúc sư, của các nhà thiết kế của lĩnh vực này.</p>\n<p style="text-align:justify;">       Theo đà sự phát triển không ngừng của xã hội và nền kinh tế, mong muốn có đời sống tốt hơn, nơi ăn chốn ở đẹp và tiện nghi, trang thiết bị cao cấp mang tới những tính năng tốt nhất với mục đích chăm sóc con người một cách hòan hảo... là điều mà tất cả chúng ta đều hướng tới.</p>\n<p style="text-align:justify;">       Công ty TNHH <strong>Phú Mỹ An</strong> đã ra đời trong sự phát triển chung của xã hội và sự phát triển riêng trong lĩnh vực Xây dựng kiến trúc nội thất.</p>\n<p style="text-align:justify;">       Mặc dù cùng dòng chảy phát triển của lĩnh vực ngành nghề chuyên biệt, nhưng Công ty TNHH <strong>Phú Mỹ An</strong> đã chọn một lối đi riêng, lối đi khác biệt để mang lại hiệu quả tuyệt đối với mức đầu tư, khẳng định niềm tin của khách hàng khi đã “chọn mặt gửi vàng”. Cung cấp cho khách hàng không chỉ những công trình lớn hiện đại, ngôi nhà đẹp... mà <strong>Phú Mỹ An</strong> còn chăm sóc tới những chi tiết nhỏ trong không gian sống của khách hàng với những thiết bị sản phẩm gia dụng, bếp, và các sản phẩm nội thất cao cấp khác như tủ, giường, bàn, ghế ... với mong muốn mang lại cho khách hàng một đời sống đầy tiện nghi để khi đến với <strong>Phú Mỹ An</strong>, khách hàng sẽ có được một ngôi nhà hòan hảo và đúng nghĩa!</p>', '', 18, '2012-05-08 07:58:39', 2, 0, '', '', 'thu-ngo', '', '', '', 1, 'phumyan'),
-(102, 'Chào mừng bạn ghé thăm website của chúng tôi!', '', '<p style="text-align:justify;">Công ty TNHH <strong>Phú Mỹ An</strong> ra đời trong sự phát triển chung của xã hội và sự phát triển riêng trong lĩnh vực Xây dựng kiến trúc nội thất.</p>\n<p style="text-align:justify;">Mặc dù cùng dòng chảy phát triển của lĩnh vực ngành nghề chuyên biệt, nhưng Công ty TNHH <strong>Phú Mỹ An</strong> đã chọn một lối đi riêng, lối đi khác biệt để mang lại hiệu quả tuyệt đối với mức đầu tư, khẳng định niềm tin của khách hàng khi đã “chọn mặt gửi vàng”.</p>\n<p style="text-align:justify;">Cung cấp cho khách hàng không chỉ những công trình lớn hiện đại, ngôi nhà đẹp... mà <strong>Phú Mỹ An</strong> còn chăm sóc tới những chi tiết nhỏ trong không gian sống của khách hàng với những thiết bị sản phẩm gia dụng, bếp, và các sản phẩm nội thất cao cấp khác như tủ, giường, bàn, ghế ... với mong muốn mang lại cho khách hàng một đời sống đầy tiện nghi để khi đến với <strong>Phú Mỹ An</strong>, khách hàng sẽ có được một ngôi nhà hòan hảo và đúng nghĩa!</p>', '', 92, '2012-05-08 07:59:40', 1, 1, '', '', 'chao-mung-ban-ghe-tham-website-cua-chung-toi', '', '', '', 1, 'phumyan');
+(108, 'Giới thiệu công ty', '', '<p style="text-align:justify;"><span style="text-decoration:underline;"><span style="font-size:12pt;">Tin HưngPhát(THP) </span></span>chuyên cung cấp sản phẩm, dich vụ về các mặt hàng: Máy PC, Máy văn phòng, Laptop, Máy In,Máy Chấm<br />Công, Camera quan sát,báo trộm cháy...... Nay Tin Hưng Phát chúng tôi trân trọng gửi đến Quý khách hàng thư ngỏ này với<br />mong muốn Quý Khách hàng có thêm sự lựa chọn và chúng tôi có thêm khách hàng thân thiết mới.<br />» Các sản phẩm của THP :<br />- Mặt hàng chủ lực của THP chúng tôi là: máy bộ <strong>PC, Laptop, Netbook, Macbook, Camera quan sát, Chuông cửa, khóa điện tử</strong><br />-<strong> Linh Kiện PC, Máy VP</strong>: Main, Ram , CPU, DVD, Case, Power, VGA, LCD … Thiết bị ngoại vi : HDD External, Webcam,<br />speaker,<br />headphone, USB, USB 3G, mp3, mp4, ….<br />- <strong>Software</strong> : phần mềm diệt virus (Kaspersky, BKis, Panda, Norton, Avira...), phần mềm chấm công, camera...<br />-<strong> Linh Kiện Laptop</strong>: HDD, Ram, LCD, DVD, tản nhiệt, …..<br />-<strong> Printer</strong>: Máy In HP,Canon, Samsung, Brother, Epson, OKI ...,Mực In HP Chính Hãng, Mực sạc HP, Canon, Samsung, Epson,<br />Brother, OKI...<br />-<strong> Máy chấm công</strong> vân tay, cảm ứng với chức năng và ưu điểm phù hợp với các doanh nghiệp vừa và nhỏ tích hợp chấm công<br />chính xác. Có thể quản lý dễ dàng từ 50 cho tới 5000 nv. Thẻ chấm công Logo công ty,tên nhân viên, hình nhân viên....<br />-<strong> Hệ thống báo trộm không dây</strong> Báo trộm tại chổ và từ xa thông báo qua điện thoại.Báo động có Trộm tại vùng kiểm soát, bộ<br />kiểm soát trung tâm sẽ kích hoạt hệ thống còi hụ còi. Kiểm Soát Trung Tâm kiểm soát được 1 vùng, 16 đầu dò.<br />- <strong>Camera quan sát</strong> với cự ly rộng hình ảnh rõ nét, tên miền cố định, dữ liệu tập trung ......<br />-<strong> Thiết kế Website</strong>, update dữ liệu, bảo trì...... cho các doanh ngiệp vừa và nhỏ<br />» Dịch vụ bảo trì PC, printer, camera, laptop.. đa dạng, hỗ trợ kỹ thuật miễn phí trong thời gian bảo trì, đưa ra giải pháp tốt<br />nhất cho máy tính của bạn.<br />&gt;&gt;Hỗ trợ kĩ thuật nhanh nhất đáp ứng kịp thời và hiệu quả những nhu cầu của khách hàng<br />&gt;&gt;Thời gian và hình thức thanh toán linh hoạt, với phương châm: ”Mang sản phẩm và dịch vụ tốt nhất tới tận tay khách hàng<br />là niềm vui và hạnh phúc của chúng tôi” . Đặc biệt giá cả hoàn hảo nhất có tính cạnh tranh cao trên thị trường.<br />&gt;&gt;Với đội ngũ nhân viên trẻ, giàu tri thức và nhiệt huyết, không ngừng sáng tạo cam kết sẽ mang đến cho quý khách hàng<br />những dịch vụ với chất lượng hoàn hảo.<br />&gt;&gt;Mục tiêu chúng tôi &gt; "Luôn luôn sáng tạo hướng tới thành công"</p>', '', 88, '2012-05-14 03:12:04', 1, 0, '', '', 'gioi-thieu-cong-ty', '', 'CÔNG TY TNHH TIN HỌC -VIỄN THÔNG TIN HƯNG PHÁT\nCHUYÊN CUNG CẤP LINH KIỆN MÁY TÍNH - MÁY VĂN PHÒNG - CAMERA QUAN SÁT', '', 1, 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -352,18 +355,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=87 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=97 ;
 
 --
 -- Dumping data for table `dos_module_advs`
 --
 
 INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`, `dos_usernames_username`) VALUES
-(82, 'Quảng cáo', '', 'quang-cao.jpg', 'http://dos.vn', '2012-05-08 07:38:25', '2012-05-07 17:00:00', '2012-06-29 17:00:00', 0, 1, 'right', '_bank', 1, 'phumyan'),
-(83, 'Quảng cáo 1', '', 'quang-cao-1.jpg', 'http://dos.vn', '2012-05-08 07:39:16', '2012-04-30 17:00:00', '2012-06-29 17:00:00', 0, 2, 'right', '_bank', 1, 'phumyan'),
-(84, 'Quảng cáo 2', '', 'quang-cao-2.jpg', 'http://dos.vn', '2012-05-08 07:42:20', '2012-05-07 17:00:00', '2012-06-29 17:00:00', 0, 3, 'left', '_bank', 1, 'phumyan'),
-(85, 'Quảng cáo 3', '', 'quang-cao-3.jpg', 'http://dos.vn', '2012-05-08 07:43:05', '2012-05-07 17:00:00', '2012-06-29 17:00:00', 0, 4, 'right', '_bank', 1, 'phumyan'),
-(86, 'Quảng cáo 4', '', 'quang-cao-4.jpeg', 'http://dos.vn', '2012-05-08 07:45:32', '2012-05-07 17:00:00', '2012-06-29 17:00:00', 0, 5, 'right', '_bank', 1, 'phumyan');
+(94, 'Quảng cáo', '', 'quang-cao.jpg', 'http://tinhungphat.dos.vn/', '2012-05-16 03:10:30', '2012-05-15 17:00:00', '2012-06-29 17:00:00', 0, 1, 'right', '_bank', 1, 'tinhungphat'),
+(95, 'Camera Trọn Gói', '', 'camera-tron-goi.jpeg', 'http://tinhungphat.dos.vn/san-pham/camera-tron-goi/8-camera-tron-goi.html', '2012-05-16 03:20:33', '2012-05-15 17:00:00', '2012-06-29 17:00:00', 0, 2, 'right', '_bank', 1, 'tinhungphat'),
+(96, 'Quảng cáo 1', '', 'quang-cao-1.gif', 'http://tinhungphat.vn', '2012-05-16 06:41:56', '2012-05-15 17:00:00', '2012-06-29 17:00:00', 0, 3, 'right', '_bank', 1, 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -384,30 +385,33 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=433 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=506 ;
 
 --
 -- Dumping data for table `dos_module_banners`
 --
 
 INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_url`, `banner_link`, `banner_order`, `banner_type`, `position`, `enable`, `dos_usernames_username`) VALUES
-(416, '2012-05-08 07:19:57', 'Logo', 'logo.png', '', 1, 'logo', 'default', 1, 'phumyan'),
-(417, '2012-05-08 07:21:05', 'Banner', 'banner.jpg', '', 2, 'banners', 'default', 1, 'phumyan'),
-(418, '2012-05-08 07:21:19', 'Banner 1', 'banner-1.jpg', '', 3, 'banners', 'default', 1, 'phumyan'),
-(419, '2012-05-08 07:21:29', 'Banner 2', 'banner-2.jpg', '', 4, 'banners', 'default', 1, 'phumyan'),
-(420, '2012-05-08 07:21:38', 'Banner 3', 'banner-3.jpg', '', 5, 'banners', 'default', 1, 'phumyan'),
-(421, '2012-05-08 07:21:53', 'Banner 4', 'banner-4.jpg', '', 6, 'banners', 'about', 1, 'phumyan'),
-(422, '2012-05-08 07:22:04', 'Banner 5', 'banner-5.jpg', '', 7, 'banners', 'about', 1, 'phumyan'),
-(423, '2012-05-08 07:22:35', 'Banner 7', 'banner-7.jpg', '', 8, 'banners', 'contact', 1, 'phumyan'),
-(424, '2012-05-08 07:22:51', 'Banner 8', 'banner-8.jpg', '', 9, 'banners', 'contact', 1, 'phumyan'),
-(425, '2012-05-08 07:23:01', 'Banner 9', 'banner-9.jpg', '', 10, 'banners', 'products', 1, 'phumyan'),
-(426, '2012-05-08 07:23:13', 'Banner 10', 'banner-10.jpg', '', 11, 'banners', 'products', 1, 'phumyan'),
-(427, '2012-05-08 07:23:22', 'Banner 11', 'banner-11.jpg', '', 12, 'banners', 'default', 1, 'phumyan'),
-(428, '2012-05-08 07:23:31', 'Banner 12', 'banner-12.jpg', '', 13, 'banners', 'default', 1, 'phumyan'),
-(429, '2012-05-08 07:23:46', 'Banner 13', 'banner-13.jpg', '', 14, 'banners', 'news', 1, 'phumyan'),
-(430, '2012-05-08 07:24:03', 'Banner 14', 'banner-14.jpg', '', 15, 'banners', 'services', 1, 'phumyan'),
-(431, '2012-05-08 07:24:56', 'Banner 16', 'banner-16.jpg', '', 16, 'banners', 'services', 1, 'phumyan'),
-(432, '2012-05-08 07:25:17', 'Banner15', 'banner15.jpg', '', 17, 'banners', 'news', 1, 'phumyan');
+(474, '2012-05-15 07:33:32', 'Banner 5', 'banner-5.jpg', 'http://tinhungphat.vn', 1, 'banners', 'default', 1, 'tinhungphat'),
+(475, '2012-05-15 07:33:41', 'Banner 4', '4.jpg', 'http://tinhungphat.vn', 2, 'banners', 'default', 1, 'tinhungphat'),
+(476, '2012-05-15 07:33:55', 'Banner 3', 'banner-3.jpg', 'http://tinhungphat.vn', 3, 'banners', 'default', 1, 'tinhungphat'),
+(477, '2012-05-15 07:40:09', 'Banner 2', 'banner-2.jpg', 'http://tinhungphat.vn', 4, 'banners', 'default', 1, 'tinhungphat'),
+(484, '2012-05-15 08:02:01', 'Banner 1', 'banner-1.jpg', 'http://tinhungphat.vn', 5, 'banners', 'video', 1, 'tinhungphat'),
+(491, '2012-05-15 09:01:28', 'Logo', 'logo.png', 'http://tinhungphat.vn', 6, 'logo', 'default', 1, 'tinhungphat'),
+(492, '2012-05-16 07:10:30', 'Banner 6', 'banner-6.jpg', '', 7, 'banners', 'contact', 1, 'tinhungphat'),
+(493, '2012-05-16 07:11:16', 'Banner 7', 'banner-7.jpg', '', 8, 'banners', 'products', 1, 'tinhungphat'),
+(494, '2012-05-16 07:11:49', 'Banner 8', 'banner-8.jpg', '', 9, 'banners', 'services', 1, 'tinhungphat'),
+(495, '2012-05-16 07:13:28', 'Banner 9', 'banner-9.jpg', '', 10, 'banners', 'about', 1, 'tinhungphat'),
+(496, '2012-05-16 07:14:11', 'Banner 10', 'banner-10.jpg', '', 11, 'banners', 'products', 1, 'tinhungphat'),
+(497, '2012-05-16 07:14:50', 'Banner 11', 'banner-11.jpg', '', 12, 'banners', 'products', 1, 'tinhungphat'),
+(498, '2012-05-16 07:15:36', 'Banner 12', 'banner-12.jpg', '', 13, 'banners', 'products', 1, 'tinhungphat'),
+(499, '2012-05-16 07:15:54', 'Banner 13', 'banner-13.jpg', '', 14, 'banners', 'products', 1, 'tinhungphat'),
+(500, '2012-05-16 07:16:54', 'Banner 14', 'banner-14.jpg', '', 15, 'banners', 'services', 1, 'tinhungphat'),
+(501, '2012-05-16 07:18:39', 'Banner 15', 'banner-15.jpg', '', 16, 'banners', 'products', 1, 'tinhungphat'),
+(502, '2012-05-16 07:19:31', 'Banner 16', 'banner-16.jpg', '', 17, 'banners', 'about', 1, 'tinhungphat'),
+(503, '2012-05-16 07:20:06', 'Banner 17', 'banner-17.jpg', '', 18, 'banners', 'news', 1, 'tinhungphat'),
+(504, '2012-05-16 07:21:54', 'Banner 18', 'banner-18.jpg', '', 19, 'banners', 'news', 1, 'tinhungphat'),
+(505, '2012-05-16 07:23:39', 'Banner 19', 'banner-19.jpg', '', 20, 'banners', 'products', 1, 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -433,7 +437,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_contacts_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `dos_module_contacts`
+--
+
+INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `tagen`, `description`, `descriptionen`, `enable`, `dos_usernames_username`) VALUES
+(6, 'Liên hệ với chúng tôi', '', '<p style="text-align:justify;"><span style="font-size:11pt;color:#ff6600;"><strong>CÔNG TY TNHH TIN HỌC VIỄN THÔNG TIN HƯNG PHÁT</strong></span></p>\n<p style="text-align:justify;"><span style="color:#003366;"><strong>1/19, KP3, Phường Hố Nai, TP. Biên Hòa, Tỉnh Đồng Nai</strong></span></p>\n<p style="text-align:justify;"><span style="color:#003366;"><strong>Điện thoại: 0613.889 245</strong></span></p>\n<p style="text-align:justify;"><span style="color:#003366;"><strong>Fax: 0613.889 245</strong></span></p>\n<p style="text-align:justify;"><span style="color:#003366;"><strong>Hotline: 0913 516 059 - Mr. Huy</strong></span></p>\n<p style="text-align:justify;"><span style="color:#003366;"><strong>Email: tinhungphat@gmail.com</strong></span></p>\n<p style="text-align:justify;"><span style="color:#003366;"><strong>Website: www.tinhungphat@gmail.vn</strong></span></p>', '', '2012-05-16 09:01:45', 1, 0, 0, 'lien-he-voi-chung-toi', '', '', '', '1', 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -460,12 +471,13 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 --
 
 INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
-('Trang chủ', '', 'default', '', 1, '', '', '', '', 'phumyan'),
-('Giới thiệu', '', 'about', '', 2, '', '', '', '', 'phumyan'),
-('Sản phẩm', '', 'products', '', 3, '', '', '', '', 'phumyan'),
-('Dịch vụ', '', 'services', '', 4, '', '', '', '', 'phumyan'),
-('Tin tức & sự kiện', '', 'news', '', 5, '', '', '', '', 'phumyan'),
-('Liên hệ', '', 'contact', '', 6, '', '', '', '', 'phumyan');
+('Trang chủ', '', 'default', '', 1, '', '', '', '', 'tinhungphat'),
+('Giới thiệu', '', 'about', '', 2, '', '', '', '', 'tinhungphat'),
+('Sản phẩm', '', 'products', '', 3, '', '', '', '', 'tinhungphat'),
+('Dịch vụ', '', 'services', '', 4, '', '', '', '', 'tinhungphat'),
+('Báo giá', '', 'news', '', 5, '', '', '', '', 'tinhungphat'),
+('Video', '', 'video', '', 6, '', '', '', '', 'tinhungphat'),
+('Liên hệ', '', 'contact', '', 7, '', '', '', '', 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -496,16 +508,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=90 ;
-
---
--- Dumping data for table `dos_module_news`
---
-
-INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(87, 'Trang trí nội thất phòng khách hiện đại', '', '2012-05-08 08:06:30', 'trang-tri-noi-that-phong-khach-hien-dai.jpeg', '<p style="text-align:justify;">Trước đây phòng khách hoặc (nơi tiếp khách) là những nơi được thiết kế và trang trí chỉ để đón khách quý . Cùng với thời gian, ngày nay phòng khách được thiết lập như một phòng đa chức năng, vừa có chức năng là nơi chào đón khách, vừa là nơi ngồi nghỉ ngơi, thoải mái thư giãn trong khi chúng ta đọc một cuốn sách hoặc xem ti vi. Phòng khách là nơi để giải trí và dành thời gian với gia đình, trò chuyện và tán gẫu với bạn bè .</p>', '', '<p style="text-align:justify;"><strong>Đồ đạc trong phòng khách</strong></p>\n<p style="text-align:justify;">Những đồ nội thất phổ biến và cơ bản trong phòng khách đó là ghế sofa, bàn cà phê, băng ghế, kệ, bàn và kệ sách, tủ rượu…. Nếu phòng khách cũng được sử dụng như một phòng sinh hoạt chung của cả gia đình thì chúng ta còn thấy có ti vi cùng với các phụ kiện thiết bị âm thanh, đèn trang trí, thảm trang trí, tranh treo nghệ thuật…</p>\n<p style="text-align:justify;"><strong>Sắp đặt nội thất phòng khách</strong></p>\n<p style="text-align:justify;">Một phòng khách lớn có thể bố trí sắp đặt những vật dụng giải trí như một cây đàn Piano chẳng hạn, hoặc có thể thêm khu vực ăn uống trong phòng khách như bàn ăn, thêm khu vui chơi giải trí như bàn bida hoặc các thiết bị giải trí khác. Phòng khách có thể được thiết kế sắp đặt tối đa không gian sử để có thể bày biện nhiều đồ đạc khác nhau… vì thế nó lại là một thách thức với chúng ta về sự tương hợp các đồ vật mà ta mong muốn với nhau, từ thảm sàn, tranh treo tường, màu sơn tường cho đến ánh sáng, cửa sổ….Thông thường ghế sofa, bàn café (được gọi là khu giải trí trung tâm) là các đồ nội thất lớn nhất trong phòng khách và từ vị trí của ghế sofa chúng ta lấy đó làm điểm khởi đầu (trung tâm), từ vị trí này sẽ quyết định xem ta trang trí và thiết kế thế nào cho phù hợp với sự sinh hoạt, sử dụng chung của cả gia đình.</p>\n<p style="text-align:justify;"><strong>Phòng khách thể hiện gu thẩm mỹ của chủ nhân</strong></p>\n<p style="text-align:justify;">Phòng khách cũng là nơi biểu lộ cá tính, gu thẩm mỹ cá nhân, sự tinh tế được đánh giá trong cách bạn trang trí phòng khách của bạn. Sửa chưa, tu bổ hoặc trang rí lại phòng khách không có nghĩa là thêm vào các đồ nội thất trong phòng khách quan trọng là phải làm thế nào sắp xếp những gì đã có hoặc sẽ có trong phòng một cách hợp lý, bố trí sai có thể làm hỏng bố cục và bộ mặt của phòng. Một số quy tắc và cách thức truyền thống trong việc thiết kế phòng khách là tạo sự thích hợp và sảng khoái, mà người thiết kế phải tuân thủ . Có thể có sự sáng tạo, ý tưởng khác biệt cho phòng khách để cho phòng khách thêm hấp dẫn nhưng nên giới hạn ở sự thoải mái và công năng sử dụng cửa căn phòng.</p>\n<p style="text-align:justify;"><strong>Phòng khách ấn tượng với sự giúp đỡ thiết kế của kiến trúc sư</strong></p>\n<p style="text-align:justify;">Thiết kế theo những cách sáng tạo đó có thể phá vỡ các quy tắc trong thiết kế và trang trí nên kết hợp sự sáng tạo của bạn với các chuyên gia để đảm bảo sự phù hợp cũng như có hiệu quả cao nhất. Phải đảm bảo rằng nó duy trì được sự cân bằng của thị giác và sự hài hòa với các đồ dùng trưng bày, tránh sự hỗn loạn. Với ngân sách eo hẹp thì cố gắng sử dụng những gì đã có, sau đó chọn mua hoặc thiết kế những gì cảm thấy thực sự cần thiết. Đối với một phòng khách đẹp có thể không cần phải bắt đầu lại từ đầu, hãy sắp xếp lại đồ nội thất và vật dụng, nó có thể đạt được hiệu quả mà bạn mong muốn. Hãy chắc chắn rằng bạn không phải bỏ đi bức tranh quý vì không nghĩ đến việc đặt đúng chỗ.</p>\n<p style="text-align:justify;">Trong khi trang trí và thiết kế một phòng khách, kiến trúc sư phải chú ý đến khu vực trọng tâm của phòng, lối sống của các thành viên trong gia đình, vị trí, chức năng của đồ nội thất, công năng sử dụng, khu vực tán gẫu, đàm thoại, cân bằng anh sáng, màu sắc của phòng, rèm cửa, màu nỉ sofa…. Tổ chức săp đặt làm sao những đồ vật đẹp được trưng ra bên ngoài, những vật dụng xấu được ngụy trang và che khuất, tranh ảnh trang trí phải có tỷ lệ tương ứng với phòng, quy mô của vật dụng trang trí… quan trọng nhất đó chính là yếu tố thống nhất, hài hòa trong việc trang trí.</p>', '', 'trang-tri-noi-that-phong-khach-hien-dai', '', '', '', 0, 1, 0, '', '', 1, 61),
-(88, 'Thiết kế nội thất phòng khách hiện đại - Mẫu thiết kế phòng khách', '', '2012-05-08 08:08:31', 'thiet-ke-noi-that-phong-khach-hien-dai-mau-thiet-ke-phong-khach.jpeg', '<p style="text-align:justify;">Phòng khách ngày nay luôn được các nhà thiết kế chuyên nghiệp quan tâm, bởi phòng khách nội thất hiện đại ngày này ngoài yếu tố đẹp nó còn là nơi thư giãn, giải trí khi chúng ta trở về nhà sau một ngày làm việc mệt mỏi kéo dài.</p>', '', '<p>Phòng khách ngày nay luôn được các nhà thiết kế chuyên nghiệp quan tâm, bởi phòng khách nội thất hiện đại ngày này ngoài yếu tố đẹp nó còn là nơi thư giãn, giải trí khi chúng ta trở về nhà sau một ngày làm việc mệt mỏi kéo dài.</p>\n<p>Mang phong cách đơn giản nhưng không quên nhấn mạnh đến bản sắc và phong cách cá nhân của từng người, một tấm thảm màu tươi sáng, hay bóng đèn, đồ gỗ trang trí, kệ ti vi… Nó tạo cho căn phòng trở lên sống động và mang đến bản sắc riêng của chủ nhà.</p>\n<p>Bạn có thể chọn lựa một phòng khách hiện đại theo sở thích cá nhân của bạn, hoặc nó có thể gợi mở những ý tưởng về một phòng khách của riêng bạn, hãy gọi cho chúng tôi, chúng tôi sẽ thực hiện ý tưởng đó cùng các bạn.</p>', '', 'thiet-ke-noi-that-phong-khach-hien-dai-mau-thiet-ke-phong-khach', '', '', '', 0, 2, 0, '', '', 1, 61),
-(89, 'Phòng bếp, tủ bếp ngày nay', '', '2012-05-08 08:18:56', 'phong-bep-tu-bep-ngay-nay.jpeg', '<p style="text-align:justify;">Không gian nhà bếp khác hoàn toàn với các không gian khác trong ngôi nhà của bạn, nó cần được suy tính và chuẩn bị kỹ lưỡng về mọi mặt cho dù là bạn đang thiết kế mới hay là cải tạo lại phòng bếp cũ, thậm chí là trang hoàng lại một chút. Khi bạn có một kế hoạch kỹ lưỡng, nó cho phép tạo ra phòng bếp đảm bảo công năng sử dụng và đáp ứng nhu cầu riêng cho bạn, phản ảnh cá tính – gu thẩm mỹ của bạn nữa</p>', '', '<p style="text-align:justify;">Không gian nhà bếp khác hoàn toàn với các không gian khác trong ngôi nhà của bạn, nó cần được suy tính và chuẩn bị kỹ lưỡng về mọi mặt cho dù là bạn đang thiết kế mới hay là cải tạo lại phòng bếp cũ, thậm chí là trang hoàng lại một chút. Khi bạn có một kế hoạch kỹ lưỡng, nó cho phép tạo ra phòng bếp đảm bảo công năng sử dụng và đáp ứng nhu cầu riêng cho bạn, phản ảnh cá tính – gu thẩm mỹ của bạn nữa. Bạn lưu ý, bí quyết để có phòng bếp hoàn hảo là phải phối hợp sao cho hài hòa giữa sự hiệu quả công năng sử dụng và cảm giác thoải mái trong phòng bếp đó. Hãy tạo ra phòng bếp để phục vụ chất lượng cuộc sống của bạn tốt hơn.</p>\n<p style="text-align:justify;">Cách thức dễ dàng để chọn một thiết kế phù hợp căn cứ chủ yếu vào kiểu nhà mà bạn sống, tuy nhiên thói quen cuộc sống, nghề nghiệp của bạn cũng là yếu tố cần tham khảo kỹ: người bận rộn thì phòng bếp nhỏ, lắp đặt các thiết bị nhà bếp tiện dụng và hiệu quả cho việc nấu nướng; ngược lại có người thích thưởng thức một không gian lãng mạn,nghệ thuật, ấm cúng ngay tại phòng bếp</p>\n<p style="text-align:justify;"><span style="color:#008000;"><strong>Lời khuyên cho phòng bếp</strong></span></p>\n<p style="text-align:justify;"><strong>1) Điểm khởi đầu khi xây dựng bản thiết kế</strong></p>\n<p style="text-align:justify;">Nhà bếp là chính là khu vực đề các chậu rửa, với hệ thống đường nước cấp và xả. Cần lưu ý điểm này đầu tiên, vì đó là những thiết bị đắt tiền và rất khó để chỉnh sửa nếu đã lắp đặt. Các chậu rửa nên để gần với bếp nấu trên cùng (chính), và đảm bảo không gian thoải mái về cả hai phía. Cả bếp nấu chính lẫn các chậu rửa không nên đặt ở góc, ở đó bạn cần được đứng vững trên cả hai chân nếu như bạn không muốn lúc nào đó trật khớp vì nó. Nhờ đó, bạn có không gian khá phẳng ở những vị trí trọng điểm. Hãy tránh sự gián đoạn công việc của bạn vì lắp thêm các lò tích hợp hoặc tủ lạnh ở đây, nhóm này thích hợp để ở khu vực cuối của bàn bếp (tủ bếp – quầy bếp).</p>\n<p style="text-align:justify;"><strong>2) Mặt bàn bếp chuẩn bị thức ăn</strong></p>\n<p style="text-align:justify;">Thông thường, nên để cách khuỷu tay của bạn từ năm đến mười cm. Chiều cao đến mặt nằm ngang cho các tử bếp cơ bản là khoảng 100cm (feet). Chỗ nấu nướng thì nên để thấp hơn chỗ chuẩn đồ nấu khoảng 15cm (6inch), để bạn có thể nhìn rõ các chảo (nồi) nấu.</p>\n<p style="text-align:justify;"><strong>3) Thông gió tốt là điều rất quan trọng,</strong></p>\n<p style="text-align:justify;">Ngay cả đối với một nhà bếp có nhiều cửa sổ. Các cửa sổ cho phép không khí trong lành tràn vào nhà bếp, nhưng dù sao vẫn cần một thiết bị hút khói (lọc không khí) đặt gần lò nướng, bếp nấu.</p>\n<p style="text-align:justify;"><strong>4) Tiếp theo là an toàn trong nhà bếp,</strong></p>\n<p style="text-align:justify;">Bạn nên biết là 40% các tại nạn ở nhà là xảy ra ở nhà bếp, nó là nơi dễ xảy ra tai nạn nhất trong một ngôi nhà. Nguy cơ cao nhất đó chính là trẻ nhỏ và người già. Khu vực bếp nấu chính (bếp gas) là nơi nguy hiểm nhất. Do vậy, không nên đặt nó ngay phía dưới tủ trên (khu vực này nên để máy hút mùi, và chiều cao tối thiểu của hút mùi cách mặt bếp 60-80cm), trong nhà bếp cần có bình cứu hỏa và để nơi bạn dễ nhìn thấy nhất. Nếu nhà có trẻ nhỏ, hãy cất kỹ dao và chất tẩy rửa trong tủ có khóa. Tuyệt đối không để hơi ở các nồi nấu xả thẳng vào ổ cắm điện, có lắp đặt hệ thống cầu dao tự ngắt khi có sự cố chập điện.</p>\n<p style="text-align:justify;"><strong>5) Ánh sáng trong nhà bếp</strong></p>\n<p style="text-align:justify;">có ánh sáng tốt là yếu tố rất quan trọng, vì bản chất nhà bếp là không gian làm việc là chính. Đèn chiếu nền và đèn có rọi cả hai đều cần cho nhà bếp. Ở các khu vực bếp nấu, chậu rửa, bàn chuẩn bị đồ nấu cần có ánh sáng công suất vừa phải phía trên nó. Tránh để nguồn ánh sáng phía sau chỗ bạn đứng nấu, vì như vậy bạn làm việc trong cái bóng che của bạn. Còn màu sắc ánh sáng chủ yếu chọn theo sở thích của bạn!</p>', '', 'phong-bep-tu-bep-ngay-nay', '', '', '', 0, 3, 0, '', '', 1, 61);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -532,14 +535,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=62 ;
-
---
--- Dumping data for table `dos_module_news_cat`
---
-
-INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(61, 0, 'Cẩm nang trang trí', '', '', '', 'cam-nang-trang-tri', '', '', '', '', 1, '', '', 1, 'phumyan');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -557,7 +553,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456062),
+('day_time', 2456065),
 ('max_count', 0),
 ('counter', 0),
 ('yesterday', 0);
@@ -578,7 +574,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''::1''', 1336987768);
+('''::1''', 1337215678);
 
 -- --------------------------------------------------------
 
@@ -615,29 +611,25 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=783 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1063 ;
 
 --
 -- Dumping data for table `dos_module_products`
 --
 
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(767, 'SOFA 001', '', '2012-05-08 07:06:31', 'sofa-001-thumb.jpg', 'sofa-001.jpg', '', '<p>SOFA 001</p>', '', '<p>Liên hệ công ty</p>', '', 'sofa-001', '', '', '', 0, 16, 'VND', 0, 0, '', '', '', '', 1, 218),
-(768, 'SOFA 002', '', '2012-05-08 07:07:12', 'sofa-002-thumb.jpg', 'sofa-002.jpg', '', '<p>SOFA 002</p>', '', '<p>Liên hệ công ty</p>', '', 'sofa-002', '', '', '', 0, 1, 'VND', 0, 0, '', '', '', '', 1, 218),
-(769, 'SOFA 003', '', '2012-05-08 07:07:41', 'sofa-003-thumb.jpg', 'sofa-003.jpg', '', '<p>SOFA 003</p>', '', '<p>Liên hệ công ty</p>', '', 'sofa-003', '', '', '', 0, 3, 'VND', 0, 0, '', '', '', '', 1, 218),
-(770, 'SOFA 004', '', '2012-05-08 07:08:23', 'sofa-004-thumb.jpg', 'sofa-004.jpg', '', '<p>SOFA 004</p>', '', '<p>Liên hệ công ty</p>', '', 'sofa-004', '', '', '', 0, 2, 'VND', 0, 0, '', '', '', '', 1, 218),
-(771, 'GIƯỜNG NGỦ 001', '', '2012-05-08 07:08:58', 'ging-ng-001-thumb.jpg', 'ging-ng-001.jpg', '', '<p>GIƯỜNG NGỦ 001</p>', '', '<p>Liên hệ công ty</p>', '', 'giuong-ngu-001', '', '', '', 0, 5, 'VND', 0, 0, '', '', '', '', 1, 219),
-(772, 'GIƯỜNG NGỦ 002', '', '2012-05-08 07:09:28', 'ging-ng-002-thumb.jpg', 'ging-ng-002.jpg', '', '<p>GIƯỜNG NGỦ 002</p>', '', '<p>Liên hệ công ty</p>', '', 'giuong-ngu-002', '', '', '', 0, 6, 'VND', 0, 0, '', '', '', '', 1, 219),
-(773, 'GIƯỜNG NGỦ 003', '', '2012-05-08 07:10:14', 'ging-ng-003-thumb.jpg', 'ging-ng-003.jpg', '', '<p>GIƯỜNG NGỦ 003</p>', '', '<p>Liên hệ công ty</p>', '', 'giuong-ngu-003', '', '', '', 0, 15, 'VND', 0, 0, '', '', '', '', 1, 219),
-(774, 'GIƯỜNG NGỦ 004', '', '2012-05-08 07:10:46', 'ging-ng-004-thumb.jpg', 'ging-ng-004.jpg', '', '<p>GIƯỜNG NGỦ 004</p>', '', '<p>Liên hệ công ty</p>', '', 'giuong-ngu-004', '', '', '', 0, 8, 'VND', 0, 0, '', '', '', '', 1, 218),
-(775, 'NA001', '', '2012-05-08 07:11:23', 'na001-thumb.jpg', 'na001.jpg', '', '<p>NA001</p>', '', '<p>Liên hệ công ty</p>', '', 'na001', '', '', '', 0, 14, 'VND', 0, 0, '', '', '', '', 1, 220),
-(776, 'NA002', '', '2012-05-08 07:12:09', 'na002-thumb.jpg', 'na002.jpg', '', '<p>NA002</p>', '', '<p>Liên hệ công ty</p>', '', 'na002', '', '', '', 0, 10, 'VND', 0, 0, '', '', '', '', 1, 218),
-(777, 'TỦ BẾP 001', '', '2012-05-08 07:12:57', 't-bp-001-thumb.jpg', 't-bp-001.jpg', '', '<p>TỦ BẾP 001</p>', '', '<p>Liên hệ công ty</p>', '', 'tu-bep-001', '', '', '', 0, 11, 'VND', 0, 0, '', '', '', '', 1, 221),
-(778, 'TỦ BẾP 002', '', '2012-05-08 07:13:26', 't-bp-002-thumb.jpg', 't-bp-002.jpg', '', '<p>TỦ BẾP 002</p>', '', '<p>Liên hệ công ty</p>', '', 'tu-bep-002', '', '', '', 0, 13, 'VND', 0, 0, '', '', '', '', 1, 221),
-(779, 'GIƯỜNG NGỦ 005', '', '2012-05-08 07:13:55', 'ging-ng-005-thumb.jpg', 'ging-ng-005.jpg', '', '<p>GIƯỜNG NGỦ 005</p>', '', '<p>Liên hệ công ty</p>', '', 'giuong-ngu-005', '', '', '', 0, 7, 'VND', 0, 0, '', '', '', '', 1, 219),
-(780, 'TỦ QUẦN ÁO', '', '2012-05-08 07:15:23', 't-qun-o-thumb.jpg', 't-qun-o.jpg', '', '<p>TỦ QUẦN ÁO</p>', '', '<p>Liên hệ công ty</p>', '', 'tu-quan-ao', '', '', '', 0, 9, 'VND', 0, 0, '', '', '', '', 1, 222),
-(781, 'KỆ SÁCH', '', '2012-05-08 07:15:50', 'k-sch-thumb.jpg', 'k-sch.jpg', '', '<p>KỆ SÁCH</p>', '', '<p>Liên hệ công ty</p>', '', 'ke-sach', '', '', '', 0, 12, 'VND', 0, 0, '', '', '', '', 1, 222),
-(782, 'Phòng trẻ em', '', '2012-05-08 07:19:10', 'phong-tre-em-thumb.jpg', 'phong-tre-em.jpg', '', '<p>Phòng trẻ em</p>', '', '<p>Liên hệ công ty</p>', '', 'phong-tre-em', '', '', '', 0, 4, 'VND', 0, 0, '', '', '', '', 1, 223);
+(1044, 'Camera JTech 342', '', '2012-05-15 06:39:57', 'camera-jtech-342-thumb.png', 'camera-jtech-342.jpg', '', '<p>Giá: Liên hệ</p>\n<p>Thuế: Giá trên chua có VAT</p>\n<p>Trạng thái: Có hàng</p>\n<p>Model: JT-872</p>\n<p>Hãng sản xuất: J-TECH</p>\n<p>B?o hành 24 tháng</p>\n<p>Ðánh giá: Chưa có</p>', '', '<p>Camera J-TECH JT-342</p>\n<p>Chip Sony 1/3 CCD</p>\n<p>Trang bị 12 đèn hồng ngọai loại lớn Φ5mm cho phép quan sát hảnh rõ nét trong điều kiện không ánh sáng.</p>\n<p>Độ phân giải 420 TV Lines cho hình ảnh rõ đẹp.</p>\n<p>Kích thước : đường kính Φ63mm, dài 102mm.</p>', '', 'camera-jtech-342', '', '', '', 0, 1, '850.000', 0, 0, '', '', '', '', 1, 284),
+(1045, 'Camera J-TECH JT-742 Serial', '', '2012-05-15 06:59:29', 'camera-j-tech-jt-742-serial-thumb.jpg', 'camera-j-tech-jt-742-serial.jpg', '', '<p>Giá: Liên hệ</p>\n<p>Thuế: Giá trên chưa có VAT</p>\n<p>Trạng thái: Có hàng</p>\n<p>Model: JT-742</p>\n<p>Hãng sản xuất: J-TECH</p>\n<p>Bảo hành 24 tháng</p>\n<p>Đánh giá: Chưa có</p>', '', '<p>Camera J-TECH JT-742 ( 450TVL ) 770.000</p>\n<p>Camera J-TECH JT-742i ( 500TVL ) 950.000</p>\n<p>Camera J-TECH JT-742HD ( 600TVL, OSD, WDR ) 1.120.000</p>\n<p>Chip Sony 1/3" CCD.</p>\n<p>Sử dụng công nghệ Dual-Len giúp tăng cự ly quan sát</p>\n<p>Cân chỉnh độ sáng, màu, lấy nét bằng menu (742HD)</p>\n<p>Hổ trợ chống ngược sáng tốt (742HD)</p>\n<p>Tự động cân bằng ánh sáng trắng giúp hình ảnh thu được không bị hiện tượng chóa.</p>\n<p>Trang bị 42 đèn hồng ngọai loại lớn Φ5mm cho phép quan sát hình ảnh rõ nét trong điều kiện không ánh sáng.</p>\n<p>Độ phân giải cao 450/500/600 TV Line . Cho hình ảnh rõ đẹpích thước : đường kính Φ80mm, dài 132mm.</p>', '', 'camera-j-tech-jt-742-serial', '', '', '', 0, 2, '1.050.000', 0, 0, '', '', '', '', 1, 284),
+(1053, '8 Camera Trọn Gói', '', '2012-05-16 03:17:12', '8-camera-tron-goi-thumb.jpg', '8-camera-tron-goi.jpg', '', '<p>Cho phép giám sát tại chổ bằng Tivi hoặc máy vi tính (mạng nội bộ ).<br />Cho phép giám sát từ xa thông qua đường truyền internet bằng máy vi tính, điện thoại di động, điện thoại thông minh, máy tính bảng.<br />Trang bị 24 đèn hồng ngoại cho phép quan sát trong điều kiện không ánh sáng.</p>', '', '<p>Giá sock</p>', '', '8-camera-tron-goi', '', 'Giá sock', '', 0, 3, '15700000', 0, 0, '', '', '', '', 1, 294),
+(1054, 'Camera J-TECH JT-872', '', '2012-05-16 07:13:23', 'camera-j-tech-jt-872-thumb.jpg', 'camera-j-tech-jt-872.jpg', '', '<p>Giá: Liên hệ</p>\n<p>Thuế: Giá trên chưa có VAT</p>\n<p>Trạng thái: Có hàng</p>\n<p>Model: JT-872</p>\n<p>Hãng sản xuất: J-TECH</p>\n<p>Bảo hành 12 tháng</p>\n<p>Đánh giá: Chưa có</p>\n<p> </p>', '', '<p>. Chip Sony 1/3 Super HAD CCD</p>\n<p>. Sử dụng công nghệ Dual- Glasses giúp tăng cự ly quan sát</p>\n<p>. Trang bị công nghệ tiên tiến Tự Động Lấy Nét Hình Ảnh giúp tăng độ nét của hình ảnh thu được ( rất ít camera trên thị trường được trang bị tính năng tiên tiến này)</p>\n<p>. Tự động cân bằng ánh sáng trắng giúp hình ảnh thu được không bị hiện tượng chóa</p>\n<p>. Trang bị 72 đèn hồng ngoại loại lớn f5mm cho phép quan sát hình ảnh rõ nét ở cự ly xa trong điều kiện không ánh sáng</p>\n<p>. Độ phân giải cao 480 TV Line cho hình ảnh đẹp</p>\n<p>. Kích thước: đường kính f 90mm, dài 157mm</p>', '', 'camera-j-tech-jt-872', '', 'may bo dam, tong dai dien thoai, camera giam sat', '', 0, 4, '1.670.000', 0, 0, '', '', '', '', 1, 284),
+(1055, 'Camera J-TECH JT-D0650', '', '2012-05-16 07:13:25', 'camera-j-tech-jt-d0650-thumb.jpg', 'camera-j-tech-jt-d0650.jpg', '', '<p>Giá: Liên hệ</p>\n<p>Thuế: Giá trên chưa có VAT</p>\n<p>Trạng thái: Có hàng</p>\n<p>Model: JT-D0650</p>\n<p>Hãng sản xuất: J-TECH</p>\n<p>Bảo hành 24 tháng</p>\n<p>Đánh giá: Chưa có</p>', '', '<p>Camera J-TECH JT-D0650 ( 500TVL )</p>\n<p>Camera J-TECH JT-D650i ( 560TVL )</p>\n<p>Camera J-TECH JT-D650HD ( 650TVL, OSD, WDR )</p>\n<p>Chip Sony 1/3 Super HAD CCD ( Japan )</p>\n<p>Cho phép cân chỉnh độ sáng, màu, lấy nét bằng menu.</p>\n<p>Hổ trợ chống ngược sáng tốt.</p>\n<p>42 đèn hồng ngoại Φ5mm cho hình ảnh rõ đẹp khi ghi hình trong điều kiện không ánh sáng</p>\n<p>Độ phân giải cực cao 500/560/650 TV Lines cho hình ảnh có màu sắc trung thực, rõ nét.</p>\n<p>Độ nhạy sáng 0Lux ( hồng ngoại ).</p>\n<p>Kích thước : đường kính Φ 94mm.</p>', '', 'camera-j-tech-jt-d0650', '', 'Thích Hợp Trang Trí', '', 0, 5, '1.250.000 ', 0, 0, '', '', '', '', 1, 293),
+(1056, 'Hệ thống báo trộm không dây GUARDSMAN GS-3500', '', '2012-05-16 07:52:20', 'he-thong-bao-trom-khong-day-guardsman-gs-3500-thumb.jpg', 'he-thong-bao-trom-khong-day-guardsman-gs-3500.jpg', '', '<p>Thuế: Giá trên chua có VAT</p>\n<p>Trạng thái: Có hàng</p>\n<p>Model: GUARDSMAN GS-3500</p>\n<p>Hãng sản xuất: J-TECH</p>\n<p>Bảo hành 12 tháng</p>\n<p>Ðánh giá: Chua có</p>', '', '<p>Hệ thống báo trộm không dây GUARDSMAN GS-3500 là Model cao cấp</p>\n<p>Hổ trợ sử dụng SIM điện thoại di động để thực hiện cuộc gọi khẩn cấp và gởi tin nhắn khi hệ thống bị kích hoạt báo động.</p>\n<p>Hổ trợ 3 băng tần 900 / 1800 / 1900MHz</p>\n<p>Khi có trộm đột nhập vào vùng kiểm soát, bộ Kiểm Soát Trung Tâm sẽ kích hoạt hụ còi tất cả các còi có trong hệ thống, đồng thời thực hiện cuộc gọi và gởi 05 tin nhắn SMS đến 05 số điện thoại cùng lúc của Chủ Nhà để thống báo có trộm.</p>\n<p>Kiểm soát được 6 vùng, 28 thiết bị như báo trộm, báo cháy, báo rò rĩ Gas</p>\n<p>Điều khiển Tắt / Mở các thiết bị điện .</p>\n<p>Trọn bộ bao gồm : 01 Bộ kiểm soát trung tâm, 01 đầu dò GS-161,01 bộ kiểm soát mở cửa gs-112, 1 còi và 02 điều khiển từ xa .</p>', '', 'he-thong-bao-trom-khong-day-guardsman-gs-3500', '', 'GUARDSMAN GS-3500', '', 0, 6, '3.000.000', 0, 0, '', '', '', '', 1, 297),
+(1057, 'Hệ thống báo trộm không dây GUARDSMAN GS-5000', '', '2012-05-16 07:54:12', 'he-thong-bao-trom-khong-day-guardsman-gs-5000-thumb.jpg', 'he-thong-bao-trom-khong-day-guardsman-gs-5000.jpg', '', '<p>Thuế: Giá trên chưa có VAT</p>\n<p>Trạng thái: Có hàng</p>\n<p>Model: GUARDSMAN GS-5000</p>\n<p>Hãng sản xuất: J-TECH</p>\n<p>Bảo hành 12 tháng</p>', '', '<p>- Báo trộm tại chổ và từ xa thông báo qua điện thoại. Khi có Trộm<br />tại vùng kiểm soát, bộ kiểm soát trung tâm sẽ hiển thị số của vùng<br />có Trộm đồng thời kích hoạt hệ thống còi hụ còi.<br />- Hổ trợ điều khiển từ xa bằng điện di động hoặc bằng bộ điều khiển từ xa.<br />- Kiểm soát tối đa được 32 vùng không dây và 17 vùng có dây.<br />- Tổng số đầu dò cho phép kết nối với thiết bị lên đến 170 đầu dò.<br />- Kết nối được các đầu dò báo Trộm , khói, dò Gas, còi, …<br />- Mất điện vẫn họat động ( bằng nguồn dự phòng có sẵn )<br />- Trọn bộ bao gồm : 01 Bộ kiểm soát trung tâm, 01 đầu dò GS-161,<br />01 bộ kiểm soát mở cửa gs-112, 1 còi và 02 điều khiển từ xa .</p>', '', 'he-thong-bao-trom-khong-day-guardsman-gs-5000', '', '', '', 0, 7, '1.860.000', 0, 0, '', '', '', '', 1, 297),
+(1058, 'METRON K-400 THẺ CẢM ỨNG', '', '2012-05-16 08:01:03', 'metron-k-400-th-cm-ng-thumb.jpg', 'metron-k-400-th-cm-ng.jpg', '', '<p>Thuế: Giá trên chua có VAT</p>\n<p>Trạng thái: Có hàng</p>\n<p>Model: K-400</p>\n<p>Hãng sản xuất: Metron</p>\n<p>Bảo hành 12 tháng</p>', '', '<p>Máy chấm công cảm ứng K-400<br />Tính năng:<br />- Tích hợp nhiều dấu vân tay &amp; thẻ cảm ứng<br />- Công suất chứa 2.200 dấu vân tay &amp; Thẻ cảm ứng &amp;Password - Sử dụng Chip xử lý Intel của Mỹ<br />- Tốc độ xử lý nhanh &lt;1s/1lần chấm công.<br />- Dung lượng bộ nhớ lưu trữ 80.000 lần chấm công<br />- Phát ra giọng nói bằng ngôn ngữ: Tiếng Anh &amp; Tiếng Việt<br />- Password bảo vệ máy, hẹn giờ tắt, mở máy, chuông báo giờ<br />- Kết nối với máy vi tính qua cổng RS – 232/485, TCP/IP, USB flash disk.<br />- Pin bộ nhớ lưu trữ dữ liệu khi mất điện.<br />- Hiển thị tên người sử dụng khi chấm công.</p>\n<p>Ưu điểm:<br />+ Không sử dụng thẻ  tiết kiệm chi phí đầu tư<br />+ Bảo mật cao: Không chấm công dùm được<br />+ Phần mềm quản lý tên nhân viên, số vân tay, giờ công chi tiết &amp; tổng hợp… được xuất ra file Excel để tính lương…</p>', '', 'metron-k-400-the-cam-ung', '', '', '', 0, 8, '5.200.000', 0, 0, '', '', '', '', 1, 296),
+(1059, 'RONALD JACK U-160C', '', '2012-05-16 08:07:47', 'ronald-jack-u-160c-thumb.jpg', 'ronald-jack-u-160c.jpg', '', '<p>Thuế: Giá trên chua có VAT</p>\n<p>Trạng thái: Có hàng</p>\n<p>Model: RONALD JACK U-160C</p>\n<p>Hãng sản xuất: RONALD JACK</p>\n<p>Bảo hành 12 tháng</p>', '', '<p>Máy chấm công vân tay + thẻ cảm ứng RONALD JACK U-160C</p>\n<p>Tính năng:<br />- Màn hình màu . Tích hợp nhiều dấu vân tay &amp; thẻ cảm ứng<br />- Công suất chứa 3.000 dấu vân tay &amp; Thẻ cảm ứng &amp;Password - Sử dụng Chip xử lý Intel của Mỹ<br />- Tốc độ xử lý nhanh &lt;1s/1lần chấm công.<br />- Ñaàu ñoïc vaân tay theá heä môùi chống trầy xước,chống mài mòn<br />- Dung lượng bộ nhớ lưu trữ 100.000 lần chấm công<br />- Phát ra giọng nói bằng ngôn ngữ: Tiếng Anh &amp; Tiếng Việt<br />- Password bảo vệ máy, hẹn giờ tắt, mở máy, chuông báo giờ<br />- Kết nối với máy vi tính qua cổng RS – 232/485, TCP/IP, USB flash disk.<br />- Pin bộ nhớ lưu trữ dữ liệu khi mất điện.<br />- Hiển thị tên người sử dụng khi chấm công.</p>\n<p>Ưu điểm:<br />+ Không sử dụng thẻ  tiết kiệm chi phí đầu tư<br />+ Bảo mật cao: Không chấm công dùm được<br />+ Phần mềm quản lý tên nhân viên, số vân tay, giờ công chi tiết &amp; tổng hợp…được xuất ra file Excel để tính lương</p>', '', 'ronald-jack-u-160c', '', 'RONALD JACK', '', 0, 9, '5.100.000', 0, 0, '', '', '', '', 1, 296),
+(1060, 'BỘ 8 CAMERA TRỌN GÓI SUPER 280', '', '2012-05-16 08:40:56', 'b-8-camera-trn-gi-super-280-thumb.jpg', 'b-8-camera-trn-gi-super-280.jpg', '', '<p>Thuế: Giá trên chua có VAT</p>\n<p>Trạng thái: Có hàng</p>\n<p>Model: SUPER 280</p>\n<p>Hãng sản xuất: J-TECH</p>\n<p>Bảo hành 24 tháng</p>', '', '<p>Cho phép giám sát tại chổ bằng Tivi hoặc máy vi tính (mạng nội bộ ).<br />Cho phép giám sát từ xa thông qua đường truyền internet bằng máy vi tính, điện thoại di động, điện thoại thông minh, máy tính bảng.<br />Trang bị 24 đèn hồng ngoại cho phép quan sát trong điều kiện không ánh sáng.</p>', '', 'bo-8-camera-tron-goi-super-280', '', 'SUPER 280', '', 0, 10, '13.000.000', 0, 0, '', '', '', '', 1, 294),
+(1061, 'CHUÔNG CỬA CÓ HÌNH J-TECH JT-0725', '', '2012-05-16 08:45:16', 'chung-ca-c-hnh-j-tech-jt-0725-thumb.jpg', 'chung-ca-c-hnh-j-tech-jt-0725.jpg', '', '<p>Thuế: Giá trên chua có VAT</p>\n<p>Trạng thái: Có hàng</p>\n<p>Model: JT-0725</p>\n<p>Hãng sản xuất: J-TECH</p>\n<p>Bảo hành 12 tháng</p>\n<p>Ðánh giá: Chua có</p>', '', '<p>CHUÔNG CỬA CÓ HÌNH J-TECH JT-0725<br />- Người nhà nhìn thấy và trao đổi với khách trước khi cho Khách vào<br />nhà giúp tránh được kẻ gian.<br />- Hổ trợ điều khiển khóa điện tử.<br />- Màn hình TFT LCD màu 7 inch.<br />- Thiết kế chống trộm, chống nước.<br />- Kết nối nhiều màn hình, camera cửa, khóa điện.</p>', '', 'chuong-cua-co-hinh-j-tech-jt-0725', '', 'JT-0725', '', 0, 11, '5.000.000', 0, 0, '', '', '', '', 1, 295),
+(1062, '''CHUÔNG CỬA CÓ HÌNH J-TECH JT-0729', '', '2012-05-16 08:50:32', 'chung-ca-c-hnh-j-tech-jt-0729-thumb.png', 'chung-ca-c-hnh-j-tech-jt-0729.png', '', '<p>Thuế: Giá trên chua có VAT</p>\n<p>Trạng thái: Có hàng</p>\n<p>Model: JJT-0725</p>\n<p>Hãng sản xuất: J-TECH</p>\n<p>Bảo hành 12 tháng</p>\n<p>Ðánh giá: Chua có</p>', '', '<p>CHUÔNG CỬA CÓ HÌNH J-TECH JT-0729<br />- Người nhà nhìn thấy và trao đổi với khách trước khi cho Khách vào<br />nhà giúp tránh được kẻ gian.<br />- Hổ trợ điều khiển khóa điện tử.<br />- Màn hình TFT LCD màu 7 inch.<br />- Thiết kế chống trộm, chống nước.<br />- Kết nối nhiều màn hình, camera cửa, khóa điện.<br />- Tự động tắt nguồn giúp tiết kiệm điện.</p>', '', 'chuong-cua-co-hinh-j-tech-jt-0729', '', '', '', 0, 12, '5.200.000', 0, 0, '', '', '', '', 1, 295);
 
 -- --------------------------------------------------------
 
@@ -665,19 +657,24 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=224 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=298 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
 --
 
 INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(218, 0, 'Nội thất phòng khách', '', '', '', 'noi-that-phong-khach', '', 'Nội thất phòng khách', '', 'noi-that-phong-khach.jpg', '', 4, '', '', 1, 'phumyan'),
-(219, 0, 'Nội thất phòng ngủ', '', '', '', 'noi-that-phong-ngu', '', 'Nội thất phòng ngủ', '', 'noi-that-phong-ngu.jpg', '', 4, '', '', 1, 'phumyan'),
-(220, 0, 'Nội thất phòng ăn', '', '', '', 'noi-that-phong-an', '', 'Nội thất phòng ăn', '', 'noi-that-phong-an.jpg', '', 4, '', '', 1, 'phumyan'),
-(221, 0, 'Nội thất bếp', '', '', '', 'noi-that-bep', '', 'Nội thất bếp', '', 'noi-that-bep.jpg', '', 3, '', '', 1, 'phumyan'),
-(222, 0, 'Tủ - Kệ', '', '', '', 'tu-ke', '', '', '', 't-k.jpg', '', 2, '', '', 1, 'phumyan'),
-(223, 0, 'Nội thất phòng giải trí', '', '', '', 'noi-that-phong-giai-tri', '', '', '', 'noi-that-phong-giai-tri.jpg', '', 3, '', '', 1, 'phumyan');
+(279, 0, 'Camera Quan Sát', '', '', '', 'camera-quan-sat', '', 'Camera', '', 'camera.jpg', '', 11, '', '', 1, 'tinhungphat'),
+(280, 0, 'Linh Kiện PC', '', '', '', 'linh-kien-pc', '', 'Linh Kiện PC', '', 'linh-kien-pc.jpeg', '', 10, '', '', 1, 'tinhungphat'),
+(281, 0, 'Máy In', '', '', '', 'may-in', '', 'Máy In', '', 'may-in.jpeg', '', 1, '', '', 1, 'tinhungphat'),
+(282, 0, 'Laptop', '', '', '', 'laptop', '', 'Laptop', '', 'laptop.jpeg', '', 10, '', '', 1, 'tinhungphat'),
+(283, 0, 'Mưc In', '', '', '', 'muc-in', '', 'Mưc In', '', 'muc-in.jpeg', '', 2, '', '', 1, 'tinhungphat'),
+(284, 279, 'Camera Thân', '', '', '', 'camera-than', '', 'Camera Thân', '', 'camera-than.jpg', '', 6, '', '', 1, 'tinhungphat'),
+(293, 279, 'Camera Dome', '', '', '', 'camera-dome', '', 'Camera Dome (bán cầu)', '', 'camera-dome-ban-cau.jpeg', '', 7, '', '', 1, 'tinhungphat'),
+(294, 279, 'Camera Trọn Gói', '', '', '', 'camera-tron-goi', '', 'Camera Trọn Gói', '', 'camera-tron-goi.jpg', '', 8, '', '', 1, 'tinhungphat'),
+(295, 0, 'Chuông Cửa Tự Động', '', '', '', 'chuong-cua-tu-dong', '', '', '', '', '', 9, '', '', 1, 'tinhungphat'),
+(296, 0, 'Máy Chấm Công', '', '', '', 'may-cham-cong', '', '', '', '', '', 9, '', '', 1, 'tinhungphat'),
+(297, 0, 'Hệ Thống Báo Trộm Không Dây', '', '', '', 'he-thong-bao-trom-khong-day', '', '', '', '', '', 10, '', '', 1, 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -727,14 +724,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
 
 --
 -- Dumping data for table `dos_module_supports`
 --
 
 INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
-(6, 'Hỗ trợ Khách hàng', '', '0929 001 001', 'thanhansoft', 1, 'yahoo', 'phumyan');
+(29, 'Trần Đức Huy', '', '0902516059', 'huy_hoang956', 3, 'yahoo', 'tinhungphat'),
+(30, 'Nguyễn Duy Khang', '', '0909122558', 'nguyenkhang2819', 1, 'yahoo', 'tinhungphat'),
+(31, 'Trần Đức Hưng', '', '0932025802', 'hungtran111087', 2, 'yahoo', 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -805,10 +804,10 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
 --
 
 INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
-('keywords', 'Nội thất phú mỹ an, nội thất phòng khách, nội thất gỗ, nội thất phòng ngủ, nội thất gia đình, siêu thị nội thất', 'phumyan'),
-('description', 'Nội thất phú mỹ an, nội thất phòng khách, nội thất gỗ, nội thất phòng ngủ, nội thất gia đình, siêu thị nội thất', 'phumyan'),
-('title', 'Nội thất Phú Mỹ An - noithatphumyan.vn', 'phumyan'),
-('analytics', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-31710703-1'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>', 'phumyan');
+('keywords', 'Camera quan sát, Laptop, PC, Linh kiện máy tính, hệ thống báo trộm không dây, mực in, máy in, máy chấm công', 'tinhungphat'),
+('description', 'Chuyên mua bán Laptop, Linh kiện PC, Camera quan sát, Hệ Thống Báo Trộm Không Dây, Chuông Cửa Tự Động, Máy Chấm Công, Máy in, Mực in tại Biên Hòa, Đồng Nai', 'tinhungphat'),
+('title', 'Laptop, PC, Camera Biên Hòa - Tinhungphat.com', 'tinhungphat'),
+('analytics', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-31813465-1'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>', 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -931,7 +930,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 --
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
-('220312', 'Mẫu nội thất: 220312', '2012-03-21 20:04:36', 'Chuyên bán các loại đồ nội thất, dân dụng');
+('270412', 'Mẫu cơ khí: 270412', '2012-04-27 06:27:56', 'Chuyên bán các loại máy móc, thiết bị cơ khí, cửa sắt...');
 
 -- --------------------------------------------------------
 
@@ -952,7 +951,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_bussiness` (
 --
 
 INSERT INTO `dos_templates_has_dos_bussiness` (`dos_templates_template`, `dos_bussiness_bussiness_id`) VALUES
-('220312', 'noi-that-ngoai-that');
+('270412', 'co-khi-may-moc-thiet-bi');
 
 -- --------------------------------------------------------
 
@@ -990,41 +989,47 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_modules` (
 --
 
 INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modules_module_id`, `dos_values_value_name`) VALUES
-('220312', 'about', 'advs_left'),
-('220312', 'about', 'advs_right'),
-('220312', 'about', 'list_supports'),
-('220312', 'about', 'menu_about'),
-('220312', 'about', 'news_new'),
-('220312', 'about', 'products_hot'),
-('220312', 'contact', 'advs_left'),
-('220312', 'contact', 'advs_right'),
-('220312', 'contact', 'list_supports'),
-('220312', 'contact', 'menu_products'),
-('220312', 'contact', 'news_new'),
-('220312', 'contact', 'products_hot'),
-('220312', 'default', 'about_home'),
-('220312', 'default', 'advs_left'),
-('220312', 'default', 'advs_right'),
-('220312', 'default', 'list_supports'),
-('220312', 'default', 'menu_products'),
-('220312', 'default', 'news_new'),
-('220312', 'default', 'products_hot'),
-('220312', 'default', 'products_new'),
-('220312', 'default', 'video_hot'),
-('220312', 'news', 'advs_right'),
-('220312', 'news', 'menu_news'),
-('220312', 'news', 'news_hot'),
-('220312', 'news', 'news_new'),
-('220312', 'products', 'advs_right'),
-('220312', 'products', 'list_supports'),
-('220312', 'products', 'menu_products'),
-('220312', 'products', 'news_new'),
-('220312', 'services', 'advs_right'),
-('220312', 'services', 'menu_services'),
-('220312', 'services', 'news_new'),
-('220312', 'video', 'advs_right'),
-('220312', 'video', 'menu_video'),
-('220312', 'video', 'news_new');
+('270412', 'about', 'advs_left'),
+('270412', 'about', 'advs_right'),
+('270412', 'about', 'list_supports'),
+('270412', 'about', 'menu_about'),
+('270412', 'about', 'products_hot'),
+('270412', 'contact', 'advs_left'),
+('270412', 'contact', 'advs_right'),
+('270412', 'contact', 'list_supports'),
+('270412', 'contact', 'menu_products'),
+('270412', 'contact', 'products_hot'),
+('270412', 'default', 'about_home'),
+('270412', 'default', 'advs_left'),
+('270412', 'default', 'advs_right'),
+('270412', 'default', 'list_supports'),
+('270412', 'default', 'menu_products'),
+('270412', 'default', 'products_hot'),
+('270412', 'default', 'products_new'),
+('270412', 'default', 'video_hot'),
+('270412', 'news', 'advs_left'),
+('270412', 'news', 'advs_right'),
+('270412', 'news', 'list_supports'),
+('270412', 'news', 'menu_news'),
+('270412', 'news', 'news_hot'),
+('270412', 'news', 'products_hot'),
+('270412', 'products', 'advs_left'),
+('270412', 'products', 'advs_right'),
+('270412', 'products', 'list_supports'),
+('270412', 'products', 'menu_products'),
+('270412', 'products', 'news_hot'),
+('270412', 'products', 'products_hot'),
+('270412', 'services', 'advs_left'),
+('270412', 'services', 'advs_right'),
+('270412', 'services', 'list_supports'),
+('270412', 'services', 'menu_services'),
+('270412', 'services', 'products_hot'),
+('270412', 'video', 'advs_left'),
+('270412', 'video', 'advs_right'),
+('270412', 'video', 'list_supports'),
+('270412', 'video', 'menu_video'),
+('270412', 'video', 'products_hot'),
+('270412', 'video', 'video_hot');
 
 -- --------------------------------------------------------
 
@@ -1060,7 +1065,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 --
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('phumyan', 'tinhungphat@gmail.com', 'd85287e7f9ec18990d6d2dce0b1692b5', '2012-05-08 06:58:45', 'Nội thất Phú Mỹ An', '0613889245', 'Nội thất Phú Mỹ An', 'user', 'vi', '', '2012-06-06 17:00:00', 0, 1, '220312', 19, 'noi-that-ngoai-that');
+('tinhungphat', 'tinhungphat@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909', '2012-05-14 03:11:27', 'Tin Hưng Phát', '0613889245', 'Công ty TNHH tin học viễn thông Tin Hưng Phát', 'user', 'vi', '', '2012-06-12 17:00:00', 0, 1, '270412', 19, 'cong-nghe-thong-tin-vien-thong');
 
 -- --------------------------------------------------------
 
@@ -1098,11 +1103,9 @@ CREATE TABLE IF NOT EXISTS `dos_user_langs` (
 --
 
 INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_username`) VALUES
-('address1', 'Địa chỉ: Biên Hòa - Đồng Nai', '', 'phumyan'),
-('address2', 'Điện thoại: 0613.889 245 - Fax: 0613.889 246', '', 'phumyan'),
-('company_name', 'NỘI THẤT PHÚ MỸ AN', '', 'phumyan'),
-('company_name_footer', 'CÔNG TY TNHH NỘI THẤT PHÚ MỸ AN', '', 'phumyan'),
-('company_phone', 'Hotline: 0613.889 245', '', 'phumyan');
+('company_name', 'CÔNG TY TNHH TIN HỌC VIỄN THÔNG TIN HƯNG PHÁT', '', 'tinhungphat'),
+('company_name_footer', 'CÔNG TY TNHH TIN HỌC VIỄN THÔNG TIN HƯNG PHÁT', '', 'tinhungphat'),
+('company_phone', '', '', 'tinhungphat');
 
 -- --------------------------------------------------------
 
