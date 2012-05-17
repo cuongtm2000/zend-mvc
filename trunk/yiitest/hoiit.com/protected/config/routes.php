@@ -19,5 +19,8 @@ return array(
     
     'posts' => array('posts/index'),
     'templates' => array('templates/index'),
-	'sitemap.xml'=>'site/sitemap'
+	'sitemap.xml'=>'site/sitemap',
+
+    //multi language
+    '<language:(vn|en)>' => 'site/index',
 );

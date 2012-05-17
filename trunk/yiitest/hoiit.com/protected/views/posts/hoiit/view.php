@@ -32,7 +32,7 @@
         <?php endif?>
     </div>
     <p>
-        <a href="#comment-<?php echo $value['comment_id']?>" name="comment-<?php echo $value['comment_id']?>" title="<?php echo $value['hoiit_usernames_username']?>"><?php echo $value['comment_title']?> - <?php echo $value['hoiit_usernames_username']?></a>
+        <a href="#<?php echo NoneUnicode::convert($value['comment_title'])?>-<?php echo $value['comment_id']?>" name="<?php echo NoneUnicode::convert($value['comment_title'])?>-<?php echo $value['comment_id']?>" title="<?php echo $value['comment_title']?> - <?php echo $value['hoiit_usernames_username']?>"><?php echo $value['comment_title']?> - <?php echo $value['hoiit_usernames_username']?></a>
         <span class="comment-time"><?php echo date('Y-m-d H:i', strtotime($value['comment_date']))?></span>
         <span class="comment-content"><?php echo nl2br($value['comment_content'])?></span>
         <span class="dialog"></span>
