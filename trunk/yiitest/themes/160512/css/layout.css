@@ -72,13 +72,13 @@ a:hover{color:#000;}
 
 .title-right{margin:0 0 10px 0;font-size:13pt; color:#DC692B; font-weight:bold;padding:6px 0 5px 0; border-bottom:3px solid #D4D4D4}
 
-.link{color:#000; font-weight:bold; padding:0px 0 10px 0}
-.link img{margin:0 5px 0 0}
-.link a{ color:#DC692B; font-size:10pt}
+.link{color:#000;font-size:10pt; font-weight:bold; padding:0 0 10px 0}
+.link img{margin:0 3px 0 2px}
+.link a{ color:#DC692B}
 .link a:hover{text-decoration:underline; color:#000}
 
 /*  Frame about page index*/
-.frame-tent-right{padding:5px 0; text-align:justify;margin:0 0 20px 0}
+.frame-tent-right{padding:5px 0 2px 0; text-align:justify;margin:0 0 5px 0}
 
 /***** Product    *****/
 .all-product{margin:0 !important}
