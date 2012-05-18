@@ -64,7 +64,7 @@ ul#top-nav li a{color:#fff}
 ul#top-nav li a:hover{text-decoration:underline}
 
 #banner{position:relative; background:url(../images/banner.png) no-repeat; width:954px; height:350px; margin-top:26px}
-#banner .flash{position:absolute; top:-95px; right:-30px; height:600px; width:600px; z-index:0}
+#banner .flash{position:absolute; top:-95px; right:-35px; height:500px; width:600px; z-index:0}
 #banner .logo{position:absolute; top:10px; left:8px; height:45px; width:650px; z-index:2}
 #banner .tencty{position:absolute; top:13px; left:278px; height:103px; width:215px; z-index:3}
 
@@ -133,7 +133,7 @@ ul#top-nav li a:hover{text-decoration:underline}
 .sub-new-hot li h3{margin:0;padding:0}
 
 /** columns3 **/
-#columns3{float:right;width:227px; background:#F6FBE9}
+#columns3{float:right;width:227px; background:#F6FBE9;position:relative; z-index:200;}
 
 /** Adv right **/
 .title-adv-right{background:url(../images/nav-adv.jpg) no-repeat;padding:8px 0;text-align:center; color:#fff; font-weight:bold}
