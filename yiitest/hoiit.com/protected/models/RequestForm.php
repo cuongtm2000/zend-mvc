@@ -19,7 +19,11 @@ class RequestForm extends CFormModel {
 
     public function attributeLabels() {
         return array(
-            'verifyCode' => 'Verification Code',
+            'name' => Yii::t('main', 'name'),
+            'phone' => Yii::t('main', 'phone'),
+            'subject' => Yii::t('main', 'subject'),
+            'content' => Yii::t('main', 'content'),
+            'verifyCode' => Yii::t('main', 'verifyCode'),
         );
     }
 }

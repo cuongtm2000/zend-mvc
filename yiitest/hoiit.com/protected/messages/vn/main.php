@@ -13,6 +13,12 @@ return array(
     'latestPosts' => 'Bài viết mới nhất',
     'latestComments' => 'Bình luận mới nhất',
 
+    'name' => 'Họ &amp; tên',
+    'phone' => 'Điện thoại',
+    'subject' => 'Tiêu đề',
+    'content' => 'Nội dung',
+    'verifyCode' => 'Mã xác nhận',
+
     'newMembers' => 'Thành viên mới',
     'mostView' => 'Xem nhiều nhất',
 );
