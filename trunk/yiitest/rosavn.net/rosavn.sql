@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 17, 2012 at 02:50 AM
+-- Generation Time: May 18, 2012 at 04:11 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `publish`
+-- Database: `rosavn`
 --
 
 -- --------------------------------------------------------
@@ -77,7 +77,9 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('advs_right_height', 300, '', '270412'),
 ('advs_right_width', 164, '', '270412'),
 ('banner_height', 285, '', '270412'),
+('banner_height', 266, NULL, 'rosavn'),
 ('banner_width', 597, '', '270412'),
+('banner_width', 473, NULL, 'rosavn'),
 ('logo_height', 97, '', '270412'),
 ('logo_width', 107, '', '270412'),
 ('max_image_height', 753, '', '270412'),
@@ -330,7 +332,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(108, 'Giới thiệu công ty', '', '<p style="text-align:justify;"><span style="text-decoration:underline;"><span style="font-size:12pt;">Tin HưngPhát(THP) </span></span>chuyên cung cấp sản phẩm, dich vụ về các mặt hàng: Máy PC, Máy văn phòng, Laptop, Máy In,Máy Chấm<br />Công, Camera quan sát,báo trộm cháy...... Nay Tin Hưng Phát chúng tôi trân trọng gửi đến Quý khách hàng thư ngỏ này với<br />mong muốn Quý Khách hàng có thêm sự lựa chọn và chúng tôi có thêm khách hàng thân thiết mới.<br />» Các sản phẩm của THP :<br />- Mặt hàng chủ lực của THP chúng tôi là: máy bộ <strong>PC, Laptop, Netbook, Macbook, Camera quan sát, Chuông cửa, khóa điện tử</strong><br />-<strong> Linh Kiện PC, Máy VP</strong>: Main, Ram , CPU, DVD, Case, Power, VGA, LCD … Thiết bị ngoại vi : HDD External, Webcam,<br />speaker,<br />headphone, USB, USB 3G, mp3, mp4, ….<br />- <strong>Software</strong> : phần mềm diệt virus (Kaspersky, BKis, Panda, Norton, Avira...), phần mềm chấm công, camera...<br />-<strong> Linh Kiện Laptop</strong>: HDD, Ram, LCD, DVD, tản nhiệt, …..<br />-<strong> Printer</strong>: Máy In HP,Canon, Samsung, Brother, Epson, OKI ...,Mực In HP Chính Hãng, Mực sạc HP, Canon, Samsung, Epson,<br />Brother, OKI...<br />-<strong> Máy chấm công</strong> vân tay, cảm ứng với chức năng và ưu điểm phù hợp với các doanh nghiệp vừa và nhỏ tích hợp chấm công<br />chính xác. Có thể quản lý dễ dàng từ 50 cho tới 5000 nv. Thẻ chấm công Logo công ty,tên nhân viên, hình nhân viên....<br />-<strong> Hệ thống báo trộm không dây</strong> Báo trộm tại chổ và từ xa thông báo qua điện thoại.Báo động có Trộm tại vùng kiểm soát, bộ<br />kiểm soát trung tâm sẽ kích hoạt hệ thống còi hụ còi. Kiểm Soát Trung Tâm kiểm soát được 1 vùng, 16 đầu dò.<br />- <strong>Camera quan sát</strong> với cự ly rộng hình ảnh rõ nét, tên miền cố định, dữ liệu tập trung ......<br />-<strong> Thiết kế Website</strong>, update dữ liệu, bảo trì...... cho các doanh ngiệp vừa và nhỏ<br />» Dịch vụ bảo trì PC, printer, camera, laptop.. đa dạng, hỗ trợ kỹ thuật miễn phí trong thời gian bảo trì, đưa ra giải pháp tốt<br />nhất cho máy tính của bạn.<br />&gt;&gt;Hỗ trợ kĩ thuật nhanh nhất đáp ứng kịp thời và hiệu quả những nhu cầu của khách hàng<br />&gt;&gt;Thời gian và hình thức thanh toán linh hoạt, với phương châm: ”Mang sản phẩm và dịch vụ tốt nhất tới tận tay khách hàng<br />là niềm vui và hạnh phúc của chúng tôi” . Đặc biệt giá cả hoàn hảo nhất có tính cạnh tranh cao trên thị trường.<br />&gt;&gt;Với đội ngũ nhân viên trẻ, giàu tri thức và nhiệt huyết, không ngừng sáng tạo cam kết sẽ mang đến cho quý khách hàng<br />những dịch vụ với chất lượng hoàn hảo.<br />&gt;&gt;Mục tiêu chúng tôi &gt; "Luôn luôn sáng tạo hướng tới thành công"</p>', '', 88, '2012-05-14 03:12:04', 1, 0, '', '', 'gioi-thieu-cong-ty', '', 'CÔNG TY TNHH TIN HỌC -VIỄN THÔNG TIN HƯNG PHÁT\nCHUYÊN CUNG CẤP LINH KIỆN MÁY TÍNH - MÁY VĂN PHÒNG - CAMERA QUAN SÁT', '', 1, 'tinhungphat');
+(108, 'Giới thiệu công ty', '', '<p style="text-align:justify;"><span style="text-decoration:underline;"><span style="font-size:12pt;">Tin HưngPhát(THP) </span></span>chuyên cung cấp sản phẩm, dich vụ về các mặt hàng: Máy PC, Máy văn phòng, Laptop, Máy In,Máy Chấm<br />Công, Camera quan sát,báo trộm cháy...... Nay Tin Hưng Phát chúng tôi trân trọng gửi đến Quý khách hàng thư ngỏ này với<br />mong muốn Quý Khách hàng có thêm sự lựa chọn và chúng tôi có thêm khách hàng thân thiết mới.<br />» Các sản phẩm của THP :<br />- Mặt hàng chủ lực của THP chúng tôi là: máy bộ <strong>PC, Laptop, Netbook, Macbook, Camera quan sát, Chuông cửa, khóa điện tử</strong><br />-<strong> Linh Kiện PC, Máy VP</strong>: Main, Ram , CPU, DVD, Case, Power, VGA, LCD … Thiết bị ngoại vi : HDD External, Webcam,<br />speaker,<br />headphone, USB, USB 3G, mp3, mp4, ….<br />- <strong>Software</strong> : phần mềm diệt virus (Kaspersky, BKis, Panda, Norton, Avira...), phần mềm chấm công, camera...<br />-<strong> Linh Kiện Laptop</strong>: HDD, Ram, LCD, DVD, tản nhiệt, …..<br />-<strong> Printer</strong>: Máy In HP,Canon, Samsung, Brother, Epson, OKI ...,Mực In HP Chính Hãng, Mực sạc HP, Canon, Samsung, Epson,<br />Brother, OKI...<br />-<strong> Máy chấm công</strong> vân tay, cảm ứng với chức năng và ưu điểm phù hợp với các doanh nghiệp vừa và nhỏ tích hợp chấm công<br />chính xác. Có thể quản lý dễ dàng từ 50 cho tới 5000 nv. Thẻ chấm công Logo công ty,tên nhân viên, hình nhân viên....<br />-<strong> Hệ thống báo trộm không dây</strong> Báo trộm tại chổ và từ xa thông báo qua điện thoại.Báo động có Trộm tại vùng kiểm soát, bộ<br />kiểm soát trung tâm sẽ kích hoạt hệ thống còi hụ còi. Kiểm Soát Trung Tâm kiểm soát được 1 vùng, 16 đầu dò.<br />- <strong>Camera quan sát</strong> với cự ly rộng hình ảnh rõ nét, tên miền cố định, dữ liệu tập trung ......<br />-<strong> Thiết kế Website</strong>, update dữ liệu, bảo trì...... cho các doanh ngiệp vừa và nhỏ<br />» Dịch vụ bảo trì PC, printer, camera, laptop.. đa dạng, hỗ trợ kỹ thuật miễn phí trong thời gian bảo trì, đưa ra giải pháp tốt<br />nhất cho máy tính của bạn.<br />&gt;&gt;Hỗ trợ kĩ thuật nhanh nhất đáp ứng kịp thời và hiệu quả những nhu cầu của khách hàng<br />&gt;&gt;Thời gian và hình thức thanh toán linh hoạt, với phương châm: ”Mang sản phẩm và dịch vụ tốt nhất tới tận tay khách hàng<br />là niềm vui và hạnh phúc của chúng tôi” . Đặc biệt giá cả hoàn hảo nhất có tính cạnh tranh cao trên thị trường.<br />&gt;&gt;Với đội ngũ nhân viên trẻ, giàu tri thức và nhiệt huyết, không ngừng sáng tạo cam kết sẽ mang đến cho quý khách hàng<br />những dịch vụ với chất lượng hoàn hảo.<br />&gt;&gt;Mục tiêu chúng tôi &gt; "Luôn luôn sáng tạo hướng tới thành công"</p>', '', 89, '2012-05-14 03:12:04', 1, 0, '', '', 'gioi-thieu-cong-ty', '', 'CÔNG TY TNHH TIN HỌC -VIỄN THÔNG TIN HƯNG PHÁT\nCHUYÊN CUNG CẤP LINH KIỆN MÁY TÍNH - MÁY VĂN PHÒNG - CAMERA QUAN SÁT', '', 1, 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -553,10 +555,10 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456065),
-('max_count', 0),
-('counter', 0),
-('yesterday', 0);
+('day_time', 2456066),
+('max_count', 1),
+('counter', 1),
+('yesterday', 1);
 
 -- --------------------------------------------------------
 
@@ -574,7 +576,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''::1''', 1337215678);
+('''127.0.0.1''', 1337297587);
 
 -- --------------------------------------------------------
 
@@ -930,7 +932,8 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 --
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
-('270412', 'Mẫu cơ khí: 270412', '2012-04-27 06:27:56', 'Chuyên bán các loại máy móc, thiết bị cơ khí, cửa sắt...');
+('270412', 'Mẫu cơ khí: 270412', '2012-04-27 06:27:56', 'Chuyên bán các loại máy móc, thiết bị cơ khí, cửa sắt...'),
+('rosavn', 'Mẫu website ẩm thực', '2012-05-17 23:33:54', 'Mẫu website công ty Rosa');
 
 -- --------------------------------------------------------
 
@@ -1065,7 +1068,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 --
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('tinhungphat', 'tinhungphat@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909', '2012-05-14 03:11:27', 'Tin Hưng Phát', '0613889245', 'Công ty TNHH tin học viễn thông Tin Hưng Phát', 'user', 'vi', '', '2012-06-12 17:00:00', 0, 1, '270412', 19, 'cong-nghe-thong-tin-vien-thong');
+('tinhungphat', 'tinhungphat@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909', '2012-05-14 03:11:27', 'Tin Hưng Phát', '0613889245', 'Công ty TNHH tin học viễn thông Tin Hưng Phát', 'user', 'vi', '', '2012-06-12 17:00:00', 0, 1, 'rosavn', 19, 'cong-nghe-thong-tin-vien-thong');
 
 -- --------------------------------------------------------
 
