@@ -14,7 +14,7 @@
 						<?php if($value['pic_full']): ?>
 							<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/<?php echo $this->module->id?>Cat/<?php echo $value['pic_full'] ?>" alt="<?php echo $value['cat_title'.LANG] ?>" />
 						<?php else :?>
-							<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-product.jpg" alt="" />
+							<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt="" />
 						<?php endif; ?>
 					</a>
 				</div>
@@ -39,7 +39,7 @@
 								<?php if($value['pic_thumb']): ?>
 									<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/<?php echo $this->module->id?>/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" />
 								<?php else :?>
-									<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-product.jpg" alt="no product" />
+									<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt="no product" />
 								<?php endif; ?>
 							</a>
 						</div>									
