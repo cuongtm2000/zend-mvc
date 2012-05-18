@@ -4,7 +4,7 @@
 		<?php echo $this->function['about_home']['content'.LANG] ?>
 	</div> <!--End frame tent right-->
 <?php endif; ?>
-<h2 class="title-blue"><span>Trình diễn</span></h2>
+<h2 class="title-right"><span>Trình diễn</span></h2>
 <?php if($this->banner): ?>
 	<ul class="slider">
 		<?php foreach($this->banner as $value): ?>
