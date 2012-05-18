@@ -34,7 +34,7 @@
     </head>
     <body>
         <div id="header">
-            <div class="logo"><a href="<?php echo Yii::app()->request->baseUrl ?>/"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a> <?php if($this->topCatname):?><span><?php echo $this->topCatname?></span><?php endif?></div>
+            <div class="logo"><a href="<?php echo Yii::app()->request->baseUrl ?>/"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a> <?php if($this->topCatname):?><span><strong><?php echo $this->topCatname?></strong></span><?php endif?></div>
             <?php
             $this->widget('zii.widgets.CMenu', array(
                 'id' => 'nav',

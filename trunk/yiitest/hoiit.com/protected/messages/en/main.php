@@ -13,6 +13,12 @@ return array(
     'latestPosts' => 'Latest posts',
     'latestComments' => 'Latest comments',
 
+    'name' => 'Full name',
+    'phone' => 'Phone',
+    'subject' => 'Subject',
+    'content' => 'Content',
+    'verifyCode' => 'Verification Code',
+
     'newMembers' => 'New members',
     'mostView' => 'Most viewed',
 );
