@@ -13,6 +13,17 @@
 	</ul>
 <?php endif; ?>
 
+<?php if(isset($this->function['news_hot']) && ($this->function['news_hot'])):?>
+	<h2 class="title-org"><span><?php echo CHtml::encode($this->lang['news']) . ' ' . strtolower($this->lang['hot'])?></span></h2>
+	<ul class="sub-new-hot">
+		<?php foreach($this->function['news_hot'] as $value):?>
+		<li>
+			<h3><a class="link" href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></h3>
+			<?php echo $value['preview'.LANG] ?> 
+		</li>
+		<?php endforeach?>
+	</ul>
+<?php endif?>
 
 <?php if(isset($this->function['products_new']) && $this->function['products_new']):?>
 <h1 class="title-org"><span><?php echo $this->lang['products'] . ' ' . strtolower($this->lang['new']) ?></span></h1>
