@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="2f258138-a102-4f75-a25d-31c366fc1ede" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\cache\0537537fb427b78d71cc8751dbd66d3b.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/cache/472f714c226873e2219db544625182ed.bin" afterPath="" />
-      <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\URI\4.4.0,fdfc1465c1553db684e2f90f64511cd4,1.ser" afterPath="" />
-      <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\HTML\4.4.0,7dbdc3d58ab57a278defc6669c7aa098,1.ser" afterPath="" />
       <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\URI" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/application.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\CSS" afterPath="" />
-      <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\CSS\4.4.0,4af9cb41e1f64636f725057634b6a44b,1.ser" afterPath="" />
       <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\HTML" afterPath="" />
+      <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\CSS\4.4.0,4af9cb41e1f64636f725057634b6a44b,1.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/application.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime" afterPath="" />
+      <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\CSS" afterPath="" />
+      <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\URI\4.4.0,fdfc1465c1553db684e2f90f64511cd4,1.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/cache/472f714c226873e2219db544625182ed.bin" afterPath="" />
+      <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\cache\0537537fb427b78d71cc8751dbd66d3b.bin" afterPath="" />
+      <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\HTML\4.4.0,7dbdc3d58ab57a278defc6669c7aa098,1.ser" afterPath="" />
     </list>
     <ignored path="svn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +41,7 @@
       <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rosavn.net/themes/rosavn/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="80" selection-start="3791" selection-end="3791" vertical-scroll-proportion="0.090747334">
+            <state line="66" column="30" selection-start="4415" selection-end="4415" vertical-scroll-proportion="-0.69572955">
               <folding />
             </state>
           </provider>
@@ -266,8 +266,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.HTML" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig" serverName="dos.vn" serverId="819b0d99-b6d0-4d88-9f62-7e03412fcb55">
     <servers>
@@ -325,13 +325,6 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="819b0d99-b6d0-4d88-9f62-7e03412fcb55" server_name="dos.vn">
       <method>
         <option name="FtpUpload" enabled="false">
@@ -340,6 +333,13 @@
         </option>
         <option name="PhingTarget" enabled="false" />
       </method>
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
     </configuration>
     <list size="0" />
   </component>
@@ -392,7 +392,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1288" height="778" extended-state="6" />
+    <frame x="-4" y="-4" width="1288" height="778" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -400,7 +400,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.7314112" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.4969651" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26055196" sideWeight="0.0" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33603895" sideWeight="0.0" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5007587" order="7" side_tool="true" content_ui="tabs" />
@@ -525,7 +525,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rosavn.net/themes/rosavn/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="80" selection-start="3791" selection-end="3791" vertical-scroll-proportion="0.090747334">
+        <state line="66" column="30" selection-start="4415" selection-end="4415" vertical-scroll-proportion="-0.69572955">
           <folding />
         </state>
       </provider>

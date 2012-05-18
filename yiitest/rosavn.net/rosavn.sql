@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 18, 2012 at 04:11 AM
+-- Generation Time: May 18, 2012 at 08:01 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -72,40 +72,38 @@ CREATE TABLE IF NOT EXISTS `dos_configs` (
 --
 
 INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES
-('advs_left_height', 300, '', '270412'),
-('advs_left_width', 179, '', '270412'),
-('advs_right_height', 300, '', '270412'),
-('advs_right_width', 164, '', '270412'),
-('banner_height', 285, '', '270412'),
-('banner_height', 266, NULL, 'rosavn'),
-('banner_width', 597, '', '270412'),
-('banner_width', 473, NULL, 'rosavn'),
-('logo_height', 97, '', '270412'),
-('logo_width', 107, '', '270412'),
-('max_image_height', 753, '', '270412'),
-('max_image_width', 565, '', '270412'),
-('news_cat_height', 100, '', '270412'),
-('news_cat_width', 143, '', '270412'),
-('news_height_thumb', 100, '', '270412'),
-('news_num_paging_cat', 10, '', '270412'),
-('news_num_paging_hot', 6, '', '270412'),
-('news_num_paging_index', 10, '', '270412'),
-('news_num_paging_new', 6, '', '270412'),
-('news_width_thumb', 143, '', '270412'),
-('products_cat_height', 135, '', '270412'),
-('products_cat_width', 135, '', '270412'),
-('products_height', 753, '', '270412'),
-('products_height_thumb', 135, '', '270412'),
-('products_num_paging_cat', 16, '', '270412'),
-('products_num_paging_hot', 12, '', '270412'),
-('products_num_paging_new', 20, '', '270412'),
-('products_num_paging_other', 4, '', '270412'),
-('products_width', 565, '', '270412'),
-('products_width_thumb', 135, '', '270412'),
-('video_height_thumb', 135, '', '270412'),
-('video_num_paging_cat', 8, '', '270412'),
-('video_num_paging_index', 8, '', '270412'),
-('video_width_thumb', 135, '', '270412');
+('advs_left_height', 300, '', 'rosavn'),
+('advs_left_width', 200, '', 'rosavn'),
+('advs_right_height', 300, '', 'rosavn'),
+('advs_right_width', 224, '', 'rosavn'),
+('banner_height', 266, '', 'rosavn'),
+('banner_width', 473, '', 'rosavn'),
+('logo_height', 97, '', 'rosavn'),
+('logo_width', 107, '', 'rosavn'),
+('max_image_height', 753, '', 'rosavn'),
+('max_image_width', 565, '', 'rosavn'),
+('news_cat_height', 83, '', 'rosavn'),
+('news_cat_width', 125, '', 'rosavn'),
+('news_height_thumb', 83, '', 'rosavn'),
+('news_num_paging_cat', 10, '', 'rosavn'),
+('news_num_paging_hot', 6, '', 'rosavn'),
+('news_num_paging_index', 10, '', 'rosavn'),
+('news_num_paging_new', 6, '', 'rosavn'),
+('news_width_thumb', 125, '', 'rosavn'),
+('products_cat_height', 125, '', 'rosavn'),
+('products_cat_width', 128, '', 'rosavn'),
+('products_height', 753, '', 'rosavn'),
+('products_height_thumb', 125, '', 'rosavn'),
+('products_num_paging_cat', 16, '', 'rosavn'),
+('products_num_paging_hot', 12, '', 'rosavn'),
+('products_num_paging_new', 20, '', 'rosavn'),
+('products_num_paging_other', 4, '', 'rosavn'),
+('products_width', 565, '', 'rosavn'),
+('products_width_thumb', 128, '', 'rosavn'),
+('video_height_thumb', 135, '', 'rosavn'),
+('video_num_paging_cat', 8, '', 'rosavn'),
+('video_num_paging_index', 8, '', 'rosavn'),
+('video_width_thumb', 135, '', 'rosavn');
 
 -- --------------------------------------------------------
 
@@ -231,12 +229,12 @@ CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
 --
 
 INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, `loadfiles`, `typefile`) VALUES
-('270412', 'default', 'simplyscroll.verticall.css|prettyPhoto.css', 'css'),
-('270412', 'default', 'jquery.simplyscroll.vertical.js|verticall-config.js|jquery.prettyPhoto.js', 'javascript'),
-('270412', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
-('270412', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
-('270412', 'video', 'prettyPhoto.css', 'css'),
-('270412', 'video', 'jquery.prettyPhoto.js', 'javascript');
+('rosavn', 'default', 'simplyscroll.verticall.css|prettyPhoto.css', 'css'),
+('rosavn', 'default', 'jquery.simplyscroll.vertical.js|verticall-config.js|jquery.prettyPhoto.js', 'javascript'),
+('rosavn', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
+('rosavn', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
+('rosavn', 'video', 'prettyPhoto.css', 'css'),
+('rosavn', 'video', 'jquery.prettyPhoto.js', 'javascript');
 
 -- --------------------------------------------------------
 
@@ -325,14 +323,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=109 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=110 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(108, 'Giới thiệu công ty', '', '<p style="text-align:justify;"><span style="text-decoration:underline;"><span style="font-size:12pt;">Tin HưngPhát(THP) </span></span>chuyên cung cấp sản phẩm, dich vụ về các mặt hàng: Máy PC, Máy văn phòng, Laptop, Máy In,Máy Chấm<br />Công, Camera quan sát,báo trộm cháy...... Nay Tin Hưng Phát chúng tôi trân trọng gửi đến Quý khách hàng thư ngỏ này với<br />mong muốn Quý Khách hàng có thêm sự lựa chọn và chúng tôi có thêm khách hàng thân thiết mới.<br />» Các sản phẩm của THP :<br />- Mặt hàng chủ lực của THP chúng tôi là: máy bộ <strong>PC, Laptop, Netbook, Macbook, Camera quan sát, Chuông cửa, khóa điện tử</strong><br />-<strong> Linh Kiện PC, Máy VP</strong>: Main, Ram , CPU, DVD, Case, Power, VGA, LCD … Thiết bị ngoại vi : HDD External, Webcam,<br />speaker,<br />headphone, USB, USB 3G, mp3, mp4, ….<br />- <strong>Software</strong> : phần mềm diệt virus (Kaspersky, BKis, Panda, Norton, Avira...), phần mềm chấm công, camera...<br />-<strong> Linh Kiện Laptop</strong>: HDD, Ram, LCD, DVD, tản nhiệt, …..<br />-<strong> Printer</strong>: Máy In HP,Canon, Samsung, Brother, Epson, OKI ...,Mực In HP Chính Hãng, Mực sạc HP, Canon, Samsung, Epson,<br />Brother, OKI...<br />-<strong> Máy chấm công</strong> vân tay, cảm ứng với chức năng và ưu điểm phù hợp với các doanh nghiệp vừa và nhỏ tích hợp chấm công<br />chính xác. Có thể quản lý dễ dàng từ 50 cho tới 5000 nv. Thẻ chấm công Logo công ty,tên nhân viên, hình nhân viên....<br />-<strong> Hệ thống báo trộm không dây</strong> Báo trộm tại chổ và từ xa thông báo qua điện thoại.Báo động có Trộm tại vùng kiểm soát, bộ<br />kiểm soát trung tâm sẽ kích hoạt hệ thống còi hụ còi. Kiểm Soát Trung Tâm kiểm soát được 1 vùng, 16 đầu dò.<br />- <strong>Camera quan sát</strong> với cự ly rộng hình ảnh rõ nét, tên miền cố định, dữ liệu tập trung ......<br />-<strong> Thiết kế Website</strong>, update dữ liệu, bảo trì...... cho các doanh ngiệp vừa và nhỏ<br />» Dịch vụ bảo trì PC, printer, camera, laptop.. đa dạng, hỗ trợ kỹ thuật miễn phí trong thời gian bảo trì, đưa ra giải pháp tốt<br />nhất cho máy tính của bạn.<br />&gt;&gt;Hỗ trợ kĩ thuật nhanh nhất đáp ứng kịp thời và hiệu quả những nhu cầu của khách hàng<br />&gt;&gt;Thời gian và hình thức thanh toán linh hoạt, với phương châm: ”Mang sản phẩm và dịch vụ tốt nhất tới tận tay khách hàng<br />là niềm vui và hạnh phúc của chúng tôi” . Đặc biệt giá cả hoàn hảo nhất có tính cạnh tranh cao trên thị trường.<br />&gt;&gt;Với đội ngũ nhân viên trẻ, giàu tri thức và nhiệt huyết, không ngừng sáng tạo cam kết sẽ mang đến cho quý khách hàng<br />những dịch vụ với chất lượng hoàn hảo.<br />&gt;&gt;Mục tiêu chúng tôi &gt; "Luôn luôn sáng tạo hướng tới thành công"</p>', '', 89, '2012-05-14 03:12:04', 1, 0, '', '', 'gioi-thieu-cong-ty', '', 'CÔNG TY TNHH TIN HỌC -VIỄN THÔNG TIN HƯNG PHÁT\nCHUYÊN CUNG CẤP LINH KIỆN MÁY TÍNH - MÁY VĂN PHÒNG - CAMERA QUAN SÁT', '', 1, 'tinhungphat');
+(108, 'Giới thiệu công ty', '', '<p style="text-align:justify;"><span style="text-decoration:underline;"><span style="font-size:12pt;">Tin HưngPhát(THP) </span></span>chuyên cung cấp sản phẩm, dich vụ về các mặt hàng: Máy PC, Máy văn phòng, Laptop, Máy In,Máy Chấm<br />Công, Camera quan sát,báo trộm cháy...... Nay Tin Hưng Phát chúng tôi trân trọng gửi đến Quý khách hàng thư ngỏ này với<br />mong muốn Quý Khách hàng có thêm sự lựa chọn và chúng tôi có thêm khách hàng thân thiết mới.<br />» Các sản phẩm của THP :<br />- Mặt hàng chủ lực của THP chúng tôi là: máy bộ <strong>PC, Laptop, Netbook, Macbook, Camera quan sát, Chuông cửa, khóa điện tử</strong><br />-<strong> Linh Kiện PC, Máy VP</strong>: Main, Ram , CPU, DVD, Case, Power, VGA, LCD … Thiết bị ngoại vi : HDD External, Webcam,<br />speaker,<br />headphone, USB, USB 3G, mp3, mp4, ….<br />- <strong>Software</strong> : phần mềm diệt virus (Kaspersky, BKis, Panda, Norton, Avira...), phần mềm chấm công, camera...<br />-<strong> Linh Kiện Laptop</strong>: HDD, Ram, LCD, DVD, tản nhiệt, …..<br />-<strong> Printer</strong>: Máy In HP,Canon, Samsung, Brother, Epson, OKI ...,Mực In HP Chính Hãng, Mực sạc HP, Canon, Samsung, Epson,<br />Brother, OKI...<br />-<strong> Máy chấm công</strong> vân tay, cảm ứng với chức năng và ưu điểm phù hợp với các doanh nghiệp vừa và nhỏ tích hợp chấm công<br />chính xác. Có thể quản lý dễ dàng từ 50 cho tới 5000 nv. Thẻ chấm công Logo công ty,tên nhân viên, hình nhân viên....<br />-<strong> Hệ thống báo trộm không dây</strong> Báo trộm tại chổ và từ xa thông báo qua điện thoại.Báo động có Trộm tại vùng kiểm soát, bộ<br />kiểm soát trung tâm sẽ kích hoạt hệ thống còi hụ còi. Kiểm Soát Trung Tâm kiểm soát được 1 vùng, 16 đầu dò.<br />- <strong>Camera quan sát</strong> với cự ly rộng hình ảnh rõ nét, tên miền cố định, dữ liệu tập trung ......<br />-<strong> Thiết kế Website</strong>, update dữ liệu, bảo trì...... cho các doanh ngiệp vừa và nhỏ<br />» Dịch vụ bảo trì PC, printer, camera, laptop.. đa dạng, hỗ trợ kỹ thuật miễn phí trong thời gian bảo trì, đưa ra giải pháp tốt<br />nhất cho máy tính của bạn.<br />&gt;&gt;Hỗ trợ kĩ thuật nhanh nhất đáp ứng kịp thời và hiệu quả những nhu cầu của khách hàng<br />&gt;&gt;Thời gian và hình thức thanh toán linh hoạt, với phương châm: ”Mang sản phẩm và dịch vụ tốt nhất tới tận tay khách hàng<br />là niềm vui và hạnh phúc của chúng tôi” . Đặc biệt giá cả hoàn hảo nhất có tính cạnh tranh cao trên thị trường.<br />&gt;&gt;Với đội ngũ nhân viên trẻ, giàu tri thức và nhiệt huyết, không ngừng sáng tạo cam kết sẽ mang đến cho quý khách hàng<br />những dịch vụ với chất lượng hoàn hảo.<br />&gt;&gt;Mục tiêu chúng tôi &gt; "Luôn luôn sáng tạo hướng tới thành công"</p>', '', 92, '2012-05-14 03:12:04', 1, 0, '', '', 'gioi-thieu-cong-ty', '', 'CÔNG TY TNHH TIN HỌC -VIỄN THÔNG TIN HƯNG PHÁT\nCHUYÊN CUNG CẤP LINH KIỆN MÁY TÍNH - MÁY VĂN PHÒNG - CAMERA QUAN SÁT', '', 1, 'tinhungphat'),
+(109, 'Welcom to Rosa website', '', '<p>"Rosa - theo tiếng Ý, nghĩa là hoa hồng. Tuy là kinh doanh, nhưng là kinh doanh lĩnh vực rất truyền thống: ẩm thực &amp; thẩm mỹ.<br />Và không chỉ là kinh doanh, mà còn hướng đến những hoạt động mang tính nhân văn và cộng đồng nhằm giúp cho cuộc sống đẹp hơn, ý nghĩa hơn. Vì thế mới rất đằm thắm: hoa hồng".</p>\r\n<p> </p>', '', 118, '2012-05-18 01:43:26', 2, 1, NULL, NULL, 'welcom-to-rosa-website', '', '"Rosa - theo tiếng Ý, nghĩa là hoa hồng. Tuy là kinh doanh, nhưng là kinh doanh lĩnh vực rất truyền thống: ẩm thực &amp; thẩm mỹ.', '', 1, 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -510,7 +509,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_module_news`
+--
+
+INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(1, 'ẾCH CHIÊN NƯỚC MẮM', '', '2012-05-18 02:01:38', 'ch-chin-nc-mm.jpg', '<p>Từ lâu, dân gian đã đánh giá thịt ếch thơm và ngon như thịt gà ta. Không chỉ...</p>\r\n<p>Từ lâu, dân gian đã đánh giá thịt ếch thơm và ngon như thịt gà ta. Không chỉ...</p>', '', '<p>Nguyên liệu:</p>\r\n<p>- Ếch: 3 con</p>\r\n<p>- Hành tây</p>\r\n<p>- Hành lá</p>\r\n<p>- Ớt sừng</p>\r\n<p>- Tỏi băm: 1 muỗng</p>\r\n<p>- Dầu ăn: 1 muỗng</p>\r\n<p>- Nước mắm: 2/3 muỗng</p>\r\n<p>- Tương ớt: 1 muỗng</p>\r\n<p>- Đường: ½ muỗng</p>\r\n<p>- Bột ngọt: ½ muỗng</p>\r\n<p>Thực hiện:</p>\r\n<p>- Hành tây cắt múi</p>\r\n<p>- Ếch lột da, chặt khúc vứa ăn</p>\r\n<p>- Hành lá cắt khúc</p>\r\n<p>- Làm nước sốt: cho ½ muỗng đường, ½ muỗng bột ngọt, 2/3 muỗng nước, tương ớt và nước dùng . Khuấy đều hỗn hợp lên.</p>\r\n<p>- Cho ếch vào chảo dầu chiên đến khi da giòn.</p>\r\n<p>- Bắt chảo, đợi nóng cho tỏi vào phi, cho nước sốt, hành tây, đầu hành lá và ớt vào đảo sơ lên tiếp đến cho hành tây và ếch vào xào đều lên.</p>\r\n<p>- Cho ra đĩa, dùng kèm với nước sốt.</p>', '', 'ech-chien-nuoc-mam', '', 'Từ lâu, dân gian đã đánh giá thịt ếch thơm và ngon như thịt gà ta. Không chỉ...', '', 0, 1, 1, NULL, NULL, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -537,7 +543,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_module_news_cat`
+--
+
+INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
+(1, 0, 'Ẩm thực &amp; Thẩm mỹ', '', NULL, NULL, 'am-thuc-tham-my', '', 'Ẩm thực &amp; Thẩm mỹ', '', '', 1, NULL, NULL, 1, 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -576,7 +589,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1337297587);
+('''127.0.0.1''', 1337314871);
 
 -- --------------------------------------------------------
 
@@ -726,16 +739,17 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=42 ;
 
 --
 -- Dumping data for table `dos_module_supports`
 --
 
 INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
-(29, 'Trần Đức Huy', '', '0902516059', 'huy_hoang956', 3, 'yahoo', 'tinhungphat'),
-(30, 'Nguyễn Duy Khang', '', '0909122558', 'nguyenkhang2819', 1, 'yahoo', 'tinhungphat'),
-(31, 'Trần Đức Hưng', '', '0932025802', 'hungtran111087', 2, 'yahoo', 'tinhungphat');
+(38, 'Hỗ trợ khách hàng', '', '', 'groupitsoft', 4, 'yahoo', 'tinhungphat'),
+(39, 'Trần Đức Huy', '', '0902516059', 'huy_hoang956', 3, 'yahoo', 'tinhungphat'),
+(40, 'Nguyễn Duy Khang', '', '0909122558', 'nguyenkhang2819', 1, 'yahoo', 'tinhungphat'),
+(41, 'Trần Đức Hưng', '', '0932025802', 'hungtran111087', 2, 'yahoo', 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -763,7 +777,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_video` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_video_dos_module_video_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_module_video`
+--
+
+INSERT INTO `dos_module_video` (`record_id`, `title`, `titleen`, `postdate`, `tag`, `tagen`, `description`, `descriptionen`, `pic_thumb`, `url`, `record_order`, `hits`, `extra_field1`, `extra_field2`, `hot`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(1, 'Giới thiệu về Rosa', '', '2012-05-18 02:53:52', 'gioi-thieu-ve-rosa', '', 'Giới thiệu về Rosa', '', 'gioi-thieu-ve-rosa.gif', 'http://www.youtube.com/watch?v=1vnHeNydPVc', 1, 0, NULL, NULL, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -786,7 +807,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_video_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_module_video_cat`
+--
+
+INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat_title`, `cat_titleen`, `tag`, `tagen`, `description`, `descriptionen`, `cat_order`, `cat_enable`, `dos_usernames_username`) VALUES
+(1, 0, '', 'Giới thiệu Rosa tháng 11/2011', '', 'gioi-thieu-rosa-thang-112011', '', 'Giới thiệu Rosa tháng 11/2011', '', 1, 1, 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -806,10 +834,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
 --
 
 INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
-('keywords', 'Camera quan sát, Laptop, PC, Linh kiện máy tính, hệ thống báo trộm không dây, mực in, máy in, máy chấm công', 'tinhungphat'),
-('description', 'Chuyên mua bán Laptop, Linh kiện PC, Camera quan sát, Hệ Thống Báo Trộm Không Dây, Chuông Cửa Tự Động, Máy Chấm Công, Máy in, Mực in tại Biên Hòa, Đồng Nai', 'tinhungphat'),
-('title', 'Laptop, PC, Camera Biên Hòa - Tinhungphat.com', 'tinhungphat'),
-('analytics', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-31813465-1'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>', 'tinhungphat');
+('keywords', ' Công ty dạy nghề Ẩm Thực & Thẩm mỹ Rosa - Biên Hòa - Đồng Nai dạy nghề nấu ăn - quản lý nhà hàng, pha chế thức uống - Bartender - quản lý bar caffe, làm bánh & trang trí bánh kem, cắm kết hoa, trang điểm, săn sóc da, xăm thẩm mỹ, cắt uốn &am', 'tinhungphat'),
+('description', ' Công ty dạy nghề Ẩm Thực & Thẩm mỹ Rosa - Biên Hòa - Đồng Nai dạy nghề nấu ăn - quản lý nhà hàng, pha chế thức uống - Bartender - quản lý bar caffe, làm bánh & trang trí bánh kem, cắm kết hoa, trang điểm, săn sóc da, xăm thẩm mỹ, cắt uốn &am', 'tinhungphat'),
+('title', 'Công ty dạy nghề Ẩm Thực & Thẩm mỹ Rosa - Biên Hòa - Đồng Nai', 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -992,47 +1019,47 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_modules` (
 --
 
 INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modules_module_id`, `dos_values_value_name`) VALUES
-('270412', 'about', 'advs_left'),
-('270412', 'about', 'advs_right'),
-('270412', 'about', 'list_supports'),
-('270412', 'about', 'menu_about'),
-('270412', 'about', 'products_hot'),
-('270412', 'contact', 'advs_left'),
-('270412', 'contact', 'advs_right'),
-('270412', 'contact', 'list_supports'),
-('270412', 'contact', 'menu_products'),
-('270412', 'contact', 'products_hot'),
-('270412', 'default', 'about_home'),
-('270412', 'default', 'advs_left'),
-('270412', 'default', 'advs_right'),
-('270412', 'default', 'list_supports'),
-('270412', 'default', 'menu_products'),
-('270412', 'default', 'products_hot'),
-('270412', 'default', 'products_new'),
-('270412', 'default', 'video_hot'),
-('270412', 'news', 'advs_left'),
-('270412', 'news', 'advs_right'),
-('270412', 'news', 'list_supports'),
-('270412', 'news', 'menu_news'),
-('270412', 'news', 'news_hot'),
-('270412', 'news', 'products_hot'),
-('270412', 'products', 'advs_left'),
-('270412', 'products', 'advs_right'),
-('270412', 'products', 'list_supports'),
-('270412', 'products', 'menu_products'),
-('270412', 'products', 'news_hot'),
-('270412', 'products', 'products_hot'),
-('270412', 'services', 'advs_left'),
-('270412', 'services', 'advs_right'),
-('270412', 'services', 'list_supports'),
-('270412', 'services', 'menu_services'),
-('270412', 'services', 'products_hot'),
-('270412', 'video', 'advs_left'),
-('270412', 'video', 'advs_right'),
-('270412', 'video', 'list_supports'),
-('270412', 'video', 'menu_video'),
-('270412', 'video', 'products_hot'),
-('270412', 'video', 'video_hot');
+('rosavn', 'about', 'advs_left'),
+('rosavn', 'about', 'advs_right'),
+('rosavn', 'about', 'list_supports'),
+('rosavn', 'about', 'menu_about'),
+('rosavn', 'about', 'products_hot'),
+('rosavn', 'contact', 'advs_left'),
+('rosavn', 'contact', 'advs_right'),
+('rosavn', 'contact', 'list_supports'),
+('rosavn', 'contact', 'menu_products'),
+('rosavn', 'contact', 'products_hot'),
+('rosavn', 'default', 'about_home'),
+('rosavn', 'default', 'advs_left'),
+('rosavn', 'default', 'advs_right'),
+('rosavn', 'default', 'list_supports'),
+('rosavn', 'default', 'menu_products'),
+('rosavn', 'default', 'news_hot'),
+('rosavn', 'default', 'news_new'),
+('rosavn', 'default', 'video_hot'),
+('rosavn', 'news', 'advs_left'),
+('rosavn', 'news', 'advs_right'),
+('rosavn', 'news', 'list_supports'),
+('rosavn', 'news', 'menu_news'),
+('rosavn', 'news', 'news_hot'),
+('rosavn', 'news', 'products_hot'),
+('rosavn', 'products', 'advs_left'),
+('rosavn', 'products', 'advs_right'),
+('rosavn', 'products', 'list_supports'),
+('rosavn', 'products', 'menu_products'),
+('rosavn', 'products', 'news_hot'),
+('rosavn', 'products', 'products_hot'),
+('rosavn', 'services', 'advs_left'),
+('rosavn', 'services', 'advs_right'),
+('rosavn', 'services', 'list_supports'),
+('rosavn', 'services', 'menu_services'),
+('rosavn', 'services', 'products_hot'),
+('rosavn', 'video', 'advs_left'),
+('rosavn', 'video', 'advs_right'),
+('rosavn', 'video', 'list_supports'),
+('rosavn', 'video', 'menu_video'),
+('rosavn', 'video', 'products_hot'),
+('rosavn', 'video', 'video_hot');
 
 -- --------------------------------------------------------
 
