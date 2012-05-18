@@ -168,14 +168,6 @@
 			</ul>
 			<?php endif?>
 
-			<?php if(isset($this->function['news_hot']) && ($this->function['news_hot'])):?>
-			<h2 class="title-new"><span><?php echo CHtml::encode($this->lang['news']) . ' ' . strtolower($this->lang['hot'])?></span></h2>
-			<ul class="sub-new">
-				<?php foreach($this->function['news_hot'] as $value):?>
-				<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
-				<?php endforeach?>
-			</ul>
-			<?php endif?>
 			<?php if(isset($this->function['advs_right']) && ($this->function['advs_right'])):?>
 			<h2 class="title-adv-right"><span><?php echo $this->lang['advs'] ?></span></h2>
 			<ul class="advright">
