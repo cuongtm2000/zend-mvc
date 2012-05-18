@@ -103,6 +103,8 @@
             </ul>
         </div> <!--End left content-->
         <div id="rightcontent">
+			<?php echo $content?>
+		
         	<div class="about-nav"></div>
             <div class="frame-tent-right">
         	<p>"Rosa - theo tiếng Ý, nghĩa là hoa hồng. Tuy là kinh doanh, nhưng là kinh doanh lĩnh vực rất truyền thống: ẩm thực thẩm mỹ.
