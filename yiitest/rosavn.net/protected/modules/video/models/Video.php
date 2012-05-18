@@ -158,7 +158,7 @@ class Video extends CActiveRecord {
 
 				//import class upload images
 				Yii::import('ext.EUploadedImage.EUploadedImage');
-				$this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload($width, $height, '/public/userfiles/images/' . Yii::app()->user->id . '/images' . '/' . Yii::app()->controller->id, $this->title);
+				$this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload($width, $height, '/public/userfiles/image/' . Yii::app()->user->id . '/image' . '/' . Yii::app()->controller->id, $this->title);
 			}
 		} else {
 			//check file old and upload
@@ -168,7 +168,7 @@ class Video extends CActiveRecord {
 
 				//import class upload images
 				Yii::import('ext.EUploadedImage.EUploadedImage');
-				$this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload($width, $height, '/public/userfiles/images/' . Yii::app()->user->id . '/images' . '/' . Yii::app()->controller->id, $this->title, $this->_oldImage);
+				$this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload($width, $height, '/public/userfiles/image/' . Yii::app()->user->id . '/image' . '/' . Yii::app()->controller->id, $this->title, $this->_oldImage);
 			} else {
 				//remove picthumb
 				if (isset($_POST[ucfirst(Yii::app()->controller->id)]['remove_pic_thumb']) && $_POST[ucfirst(Yii::app()->controller->id)]['remove_pic_thumb'] == 1) {
