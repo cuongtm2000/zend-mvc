@@ -16,34 +16,33 @@
 		<?php echo $form->errorSummary($contact, ''); ?>
 		<p><?php echo $this->lang['contact_msg']?></p>
 			<ul class="frame-contact">
-				<li>
-					<?php echo $form->labelEx($contact, 'fullname') ?>
+				<li class="left-input">
+					<p><?php echo $form->labelEx($contact, 'fullname') ?></p>
 					<?php echo $form->textField($contact, 'fullname'); ?> 
 				</li>
 				<li>
-					<?php echo $form->labelEx($contact, 'company') ?>
-					<?php echo $form->textField($contact, 'company'); ?>
+					<p><?php echo $form->labelEx($contact, 'address') ?></p>
+					<?php echo $form->textField($contact, 'address'); ?> <div class="clear"></div>
 				</li>
-				<li>
-					<?php echo $form->labelEx($contact, 'address') ?>
-					<?php echo $form->textField($contact, 'address'); ?>
-				</li>
-				<li>
-					<?php echo $form->labelEx($contact, 'email') ?>
-					<?php echo $form->textField($contact, 'email'); ?>
-				</li>
-				<li>
-					<?php echo $form->labelEx($contact, 'phone') ?>
+				<li  class="left-input">
+					<p><?php echo $form->labelEx($contact, 'phone') ?></p>
 					<?php echo $form->textField($contact, 'phone'); ?>
 				</li>
 				<li>
-					<?php echo $form->labelEx($contact, 'content') ?>
+					<p><?php echo $form->labelEx($contact, 'email') ?></p>
+					<?php echo $form->textField($contact, 'email'); ?> <div class="clear"></div>
+				</li>
+				<li>
+					<p><?php echo $form->labelEx($contact, 'company') ?></p>
+					<?php echo $form->textField($contact, 'company'); ?>
+				</li>
+				<li>
+					<p><?php echo $form->labelEx($contact, 'content') ?></p>
 					<?php echo $form->textArea($contact, 'content', array('cols'=>10, 'rows'=>10)); ?>
 				</li>
 				<li>
-					<label>&nbsp;</label>
-					<?php echo CHtml::submitButton(Yii::t('main', 'send'), array('name'=>'submit', 'class'=>'bton-dk', 'title'=>Yii::t('main', 'send'))); ?>
-					<?php echo CHtml::resetButton(Yii::t('main', 'reset'), array('name'=>'reset', 'class'=>'bton-dk', 'title'=>Yii::t('main', 'reset'))); ?>
+					<?php echo CHtml::submitButton(Yii::t('main', 'Gửi'), array('name'=>'submit', 'class'=>'bton-dk', 'title'=>Yii::t('main', 'Gửi'))); ?>
+					<?php echo CHtml::resetButton(Yii::t('main', 'Nhập lại'), array('name'=>'reset', 'class'=>'bton-dk', 'title'=>Yii::t('main', 'Nhập lại'))); ?>
 				</li>					
 			</ul>               
 	   <?php $this->endWidget();?>

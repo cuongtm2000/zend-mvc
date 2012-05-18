@@ -24,28 +24,28 @@ h4{font-size:11pt; font-weight:bold; margin-top:1em; background:url(../images/do
 .product{width:138px;text-align:center;margin:0 18px 10px 0; display:inline-block; vertical-align:top;*float:left;*_margin:0 7px 10px 0; }
 
 .product-img{height:130px;border: 1px solid #D9D9D9; width:138px;display:table-cell;vertical-align:middle}
-.gallery img{width:128px; height:125px}
+.title-pro{margin: 4px 0}
 
 /**  End product **/
 
-/* slideshow */
-ul#portfolio{margin:0; padding:0; list-style:none}
-ul#portfolio li a img{width:473px; height:266px}
+/**Page Contact**/
+/*** Frame title company  ***/
+#frame-info-contact{margin:0 0 15px 0}
 
-/* contact */
+#frm{margin:0 0 10px 0;position:relative}
+.frame-contact label{color:#444}
+.frame-contact p{margin:0 0 5px 0}
+.frame-contact .left-input{float:left;margin:0 50px 0 0 }
+.frame-contact{list-style:none;margin:15px 0 10px 0;padding: 0}
+.frame-contact li{padding:4px 0}
+.frame-contact input{padding:3px;width:170px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.frame-contact textarea{border:1px solid #ddd;width: 405px; -moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-contact span{color:#f00;margin:0 5px 0 0}
+.frame-contact .bton-dk{text-align:left;background:url(../images/btn.jpg) no-repeat;color:#fff;padding:7px 0px 7px 10px;cursor:pointer;width:90px;border:none;font-weight:bold;}
+.frame-contact .bton-dk:hover{background:url(../images/btn_hover.jpg) no-repeat}
+/****  End page contact     *****/
+
 .red{color: red;}
-fieldset{padding:15px; width: 670px; border : 1px solid #E4E3E3; background:#F6F6F6; -moz-border-radius:3px; -webkit-border-radius:3px; position: relative; margin-top: 5px;}
-fieldset .img{position: absolute; top: 110px; right: 20px;}
-legend{color:#720E3B; font-weight:bold; font-size:10pt}
-fieldset div.info{margin:5px 0 10px 0; float: none; width: 415px}
-fieldset div.info p{padding: 5px 0}
-fieldset label{padding-bottom:5px}
-fieldset div{float:left; width:230px}
-fieldset div p{margin:0; padding:0}
-fieldset div input{width:171px; margin:5px 0; background: url(../images/bg_input.png) no-repeat; border:none; padding:6px}
-fieldset div textarea{width:407px; height:122px; margin:5px 0; background: url(../images/bg_textarea.png) no-repeat; border:none; padding: 7px 5px; overflow:auto}
-fieldset div .submit{width:90px; background:url(../images/btn.jpg) no-repeat; color:#fff; font-weight:bold; text-align:left; cursor:pointer}
-fieldset div .submit:hover{background:url(../images/btn_hover.jpg) no-repeat}
 
 /* paging */
 ul.paging{float: right; margin:0; padding:0; list-style: none}
@@ -55,7 +55,6 @@ ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a,
 ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{color:#fff; background:#A5D527}
 
 /*layout*/
-
 #wrapper{width: 954px; margin: 5px auto; position:relative}
 
 ul#top-nav{text-align:right; text-transform:uppercase; font-size:8pt; padding:0; width: 954px; margin: auto; z-index:9; position:absolute; top:-15px; left:0}
@@ -69,7 +68,7 @@ ul#top-nav li a:hover{text-decoration:underline}
 #banner .tencty{position:absolute; top:13px; left:278px; height:103px; width:215px; z-index:3}
 
 #content{background:#fff; z-index:9}
-#leftcontent{float:left; width:206px; padding:0 0 0 15px; background:#F6FBE9}
+#leftcontent{float:left;width:206px; padding:0 0 0 15px; background:#F6FBE9}
 
 /** Left content **/
 .title-left{background:url(../images/nav-bg.jpg) no-repeat;padding:8px 0;color:#fff; font-weight:bold}
@@ -97,8 +96,8 @@ ul#top-nav li a:hover{text-decoration:underline}
 .statistics li{padding:2px 0}
 
 /** adv left**/
-.advleft{list-style:none;margin:0;padding:10px 0;text-align:center}
-.advleft img{width: 200px; border: 1px solid #ccc; padding: 2px; margin:0 0 0 2px}
+.bg-adv{list-style:none;margin:0;padding:10px 0;text-align:center}
+.bg-adv img{border:1px solid #ccc; padding: 2px}
 
 .services{padding:10px 0}
 .services h2{background:url(../images/nav-bg.jpg) no-repeat; height:35px; padding-top:7px; text-indent:58px; color:#fff; font-weight:bold}
@@ -110,11 +109,11 @@ ul#top-nav li a:hover{text-decoration:underline}
 .services ul li p{margin:0; padding:0; font-size:8pt}
 
 /** rightcontent **/
-#rightcontent{float:left;margin: 0 15px; width:475px; text-align: justify; line-height: 18px}
-.frame-tent-right{margin:0 0 10px 0}
+#rightcontent{float:left;margin: 0 15px; width:475px; line-height: 18px; position:relative; z-index:2 }
+.frame-tent-right{margin:0 0 10px 0; text-align: justify}
 
-.title-blue{background:url(../images/dot.png) no-repeat left;color:#14239C;font-weight:bold;padding:2px 0 0 0; font-size:10pt;margin:0 0 10px 0}
-.title-blue span{padding:0 0 0 25px}
+.title-right{background:url(../images/dot.png) no-repeat left;color:#14239C;font-weight:bold;padding:2px 0 0 0; font-size:10pt;margin:0 0 10px 0}
+.title-right span{padding:0 0 0 25px}
 
 .title-org{background:url(../images/dot-2.png) no-repeat left;color:#FE9A44;font-weight:bold;padding:2px 0 0 0; font-size:10pt;margin:0 0 10px 0}
 .title-org span{padding:0 0 0 25px}
@@ -127,13 +126,13 @@ ul#top-nav li a:hover{text-decoration:underline}
 /* Tin noi bat */
 .sub-new-hot{margin:5px 0 0 0; padding: 0; list-style: none}
 .sub-new-hot li{float:left; margin:0 2px 0 10px; width:145px}
-.sub-new-hot li p{margin:0}
+.sub-new-hot li p{margin:0; }
 .sub-new-hot li .img-panel{border: 1px solid #ccc;text-align:center;margin:0 0 15px 0}
 .sub-new-hot li img{padding:5px}
 .sub-new-hot li h3{margin:0;padding:0}
 
 /** columns3 **/
-#columns3{float:right;width:227px; background:#F6FBE9;position:relative; z-index:200;}
+#columns3{float:right;width:227px; background:#F6FBE9;position:relative; z-index:2;}
 
 /** Adv right **/
 .title-adv-right{background:url(../images/nav-adv.jpg) no-repeat;padding:8px 0;text-align:center; color:#fff; font-weight:bold}
@@ -181,3 +180,8 @@ ul#top-nav li a:hover{text-decoration:underline}
 .contentb div ul li a:hover{color:#A6D527}
 
 ul.relate-news{margin:0; padding:0; margin-left:20px}
+
+/* Error */
+.errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:0 0 5px 0}
+.errorSummary ul{margin:5px 10px; padding:0}
+.errorSummary ul li{padding:2px 0;margin: 0 0 0 20px; color: red}

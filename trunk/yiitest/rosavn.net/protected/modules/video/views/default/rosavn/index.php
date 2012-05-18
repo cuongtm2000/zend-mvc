@@ -1,7 +1,7 @@
 <?php $this->breadcrumbs=array($this->lang[$this->module->id]);?>
 <h1 class="title-right"><span><?php echo $this->lang[$this->module->id]?></span></h1>
 <?php if($listItemIndex['models']):?>
-	<ul class="all_product">
+	<ul class="all-product">
 	<?php foreach($listItemIndex['models'] as $value):?>
 		<li class="product item_video">
 			<div class="tent-product">
