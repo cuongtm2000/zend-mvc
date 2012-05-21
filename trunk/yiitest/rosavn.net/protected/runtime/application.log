@@ -5791,3 +5791,35 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
 ---
+2012/05/21 10:19:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:19:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:19:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:19:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---

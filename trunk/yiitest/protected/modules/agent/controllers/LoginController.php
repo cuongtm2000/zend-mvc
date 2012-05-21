@@ -1,6 +1,6 @@
 <?php
 
-class LoginController extends AgentController {
+class LoginController extends CController {
 
     public function actionIndex() {
         $model = new AgentLoginForm();

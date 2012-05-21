@@ -20,15 +20,15 @@
                 </div>
             </div>
             <ul id="tabs">
-                <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator"><span>Trang chủ</span></a></li>
+                <li><a href="<?php echo Yii::app()->request->baseUrl ?>/agent"><span>Trang chủ</span></a></li>
             </ul><div class="clear"></div>
             <div class="paddinglr10">
                 <div class="menu-bar">
                     <div id="catmenu">
                         <ul class="menu-li">
-                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/usernames">User</a>
+                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/agent/usernames">User</a>
                                 <ul>
-                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/usernames">List user</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/agent/usernames">List user</a></li>
                                 </ul>
                             </li>
                         </ul> 
