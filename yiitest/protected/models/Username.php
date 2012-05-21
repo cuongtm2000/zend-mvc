@@ -284,7 +284,7 @@ class Username extends CActiveRecord {
 		return $this->_model;
 	}
 
-	//Back end - List item admin for Administrator
+	//Back end - List item user for Administrator
 	public function listItemAdmin() {
 		$criteria = new CDbCriteria();
 		$criteria->order = 'created DESC';
@@ -299,6 +299,27 @@ class Username extends CActiveRecord {
 
 		return array('models' => Username::model()->findAll($criteria), 'pages' => $pages);
 	}
+
+    //Back end - List item user for Agent
+    public function listItemAgent($type = NULL, $agent_id = NULL) {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'created DESC';
+        if($type == 0){
+            $criteria->condition = 'role !=:role AND agent_sale =:agent';
+            $criteria->params = array(':role' => 'administrator', ':agent' => $agent_id);
+        }else if($type == 1){
+            $criteria->condition = 'role !=:role AND agent_tech =:agent';
+            $criteria->params = array(':role' => 'administrator', ':agent' => $agent_id);
+        }
+        $count = Username::model()->count($criteria);
+
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = 15;
+        $pages->applyLimit($criteria);
+
+        return array('models' => Username::model()->findAll($criteria), 'pages' => $pages);
+    }
 
 	//Back end - Update Record for Administrator
 	private function updateShowHidden($activated, $username) {

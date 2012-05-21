@@ -12,6 +12,7 @@ class AgentModule extends CWebModule {
             Yii::app()->theme = 'admin-login-green';
         } else {
             Yii::app()->theme = 'admin-agent';
+            $this->layout = '//layouts/column1';
         }
     }
 
