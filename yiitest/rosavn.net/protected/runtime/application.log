@@ -5238,3 +5238,556 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
 ---
+2012/05/21 10:08:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/js/jquery.simplyscroll.vertical.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/js/jquery.simplyscroll.vertical.js
+HTTP_REFERER=http://dos.vn/rosavn.net/
+---
+2012/05/21 10:08:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/js/verticall-config.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/js/verticall-config.js
+HTTP_REFERER=http://dos.vn/rosavn.net/
+---
+2012/05/21 10:08:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/css/simplyscroll.verticall.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/c...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/css/simplyscroll.verticall.css
+HTTP_REFERER=http://dos.vn/rosavn.net/
+---
+2012/05/21 10:08:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:08:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:08:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:08:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:08:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:09:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:09:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:09:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:09:08 [warning] [application] Failed to set unsafe attribute "company" of "ContactUserForm".
+in E:\Customers\dos.vn\svn\rosavn.net\protected\modules\contact\controllers\DefaultController.php (11)
+in E:\Customers\dos.vn\svn\rosavn.net\index.php (16)
+2012/05/21 10:09:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:09:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:09:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/js/verticall-config.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/js/verticall-config.js
+HTTP_REFERER=http://dos.vn/rosavn.net/
+---
+2012/05/21 10:09:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/css/simplyscroll.verticall.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/c...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/css/simplyscroll.verticall.css
+HTTP_REFERER=http://dos.vn/rosavn.net/
+---
+2012/05/21 10:09:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/js/jquery.simplyscroll.vertical.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/js/jquery.simplyscroll.vertical.js
+HTTP_REFERER=http://dos.vn/rosavn.net/
+---
+2012/05/21 10:09:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:09:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:09:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:09:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:09:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:09:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:10:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/js/jquery.simplyscroll.vertical.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/js/jquery.simplyscroll.vertical.js
+HTTP_REFERER=http://dos.vn/rosavn.net/
+---
+2012/05/21 10:10:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/js/verticall-config.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/js/verticall-config.js
+HTTP_REFERER=http://dos.vn/rosavn.net/
+---
+2012/05/21 10:10:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/css/simplyscroll.verticall.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/c...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/css/simplyscroll.verticall.css
+HTTP_REFERER=http://dos.vn/rosavn.net/
+---
+2012/05/21 10:10:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:10:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:11:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/css/simplyscroll.verticall.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/c...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/css/simplyscroll.verticall.css
+HTTP_REFERER=http://dos.vn/rosavn.net/
+---
+2012/05/21 10:11:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/js/jquery.simplyscroll.vertical.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/js/jquery.simplyscroll.vertical.js
+HTTP_REFERER=http://dos.vn/rosavn.net/
+---
+2012/05/21 10:11:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/js/verticall-config.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/js/verticall-config.js
+HTTP_REFERER=http://dos.vn/rosavn.net/
+---
+2012/05/21 10:11:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:11:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:11:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:11:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:11:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:11:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:11:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:11:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:12:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:12:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:12:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/en.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/en.gif
+HTTP_REFERER=http://dos.vn/rosavn.net/san-pham
+---
+2012/05/21 10:12:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/vi.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/vi.gif
+HTTP_REFERER=http://dos.vn/rosavn.net/san-pham
+---
+2012/05/21 10:12:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:12:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:13:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/vi.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/vi.gif
+HTTP_REFERER=http://dos.vn/rosavn.net/san-pham/chuong-cua-tu-dong
+---
+2012/05/21 10:13:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/en.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/en.gif
+HTTP_REFERER=http://dos.vn/rosavn.net/san-pham/chuong-cua-tu-dong
+---
+2012/05/21 10:13:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:13:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:16:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/vi.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/vi.gif
+HTTP_REFERER=http://dos.vn/rosavn.net/san-pham/chuong-cua-tu-dong
+---
+2012/05/21 10:16:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/en.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/en.gif
+HTTP_REFERER=http://dos.vn/rosavn.net/san-pham/chuong-cua-tu-dong
+---
+2012/05/21 10:16:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:16:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:17:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/vi.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/vi.gif
+HTTP_REFERER=http://dos.vn/rosavn.net/san-pham/chuong-cua-tu-dong
+---
+2012/05/21 10:17:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/en.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/en.gif
+HTTP_REFERER=http://dos.vn/rosavn.net/san-pham/chuong-cua-tu-dong
+---
+2012/05/21 10:17:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:17:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:17:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/vi.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/vi.gif
+HTTP_REFERER=http://dos.vn/rosavn.net/dich-vu
+---
+2012/05/21 10:17:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/en.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/en.gif
+HTTP_REFERER=http://dos.vn/rosavn.net/dich-vu
+---
+2012/05/21 10:18:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:18:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:18:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:18:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:18:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:18:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:18:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/21 10:18:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/rosavn.net/themes/rosavn/images/favicon.ico
+---

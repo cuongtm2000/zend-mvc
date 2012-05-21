@@ -34,10 +34,13 @@
 </head>
 <body>
 <div id="wrapper">
+    <?php if(count($this->numLang) > 1):?>
 	<ul id="top-nav">
-        <li><a href="/vi">Vietnamese</a></li>
-        <li><a href="/en">English</a></li>
+        <?php foreach($this->numLang as $value): ?>
+        <li><a href="<?php echo ($value=='vi') ? Yii::app()->request->baseUrl.'/' : Yii::app()->request->baseUrl.'/'.$value ?>"><?php echo $this->lang[$value]?></a></li>
+        <?php endforeach?>
     </ul>
+    <?php endif?>
     <div id="banner">
 		<div class="flash"><script type="text/javascript">embedFlashObj('<?php echo Yii::app()->theme->baseUrl; ?>/images/banner.swf',600,600);</script></div>
 		<div class="logo"><script type="text/javascript">embedFlashObj('<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.swf',215,103);</script></div>
@@ -46,17 +49,6 @@
     </div> 
     <div id="content">
     	<div id="leftcontent">
-        	<div class="menu">
-            	<a href="/"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/menu-home.jpg" alt="menu home" /></a>
-                <ul>
-                	<?php foreach($this->nav as $value):?>
-					<?php $selected = ($value['url']==$this->module->id) ?  ' class="select"' : ''?>
-					<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>				
-					<li><a<?php echo $selected ?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
-					<?php endforeach;?>
-            	</ul>
-            </div> <!--End sub cat-->
-
 			<?php if(isset($this->function['menu_about']) && ($this->function['menu_about'])):?>
 			<h2 class="title-cat"><span><?php echo $this->lang['about'] ?></span></h2>
 			<ul class="sub-cat">
@@ -95,6 +87,17 @@
 				<?php Common::menuMultiLevel($this->function['menu_products'], 'ProductsCat', Yii::t('user', 'products.link')); ?>
 			</ul>
 			<?php endif;?>
+
+            <div class="menu">
+                <a href="/"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/menu-home.jpg" alt="menu home" /></a>
+                <ul>
+                    <?php foreach($this->nav as $value):?>
+                    <?php $selected = ($value['url']==$this->module->id) ?  ' class="select"' : ''?>
+                    <?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
+                    <li><a<?php echo $selected ?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
+                    <?php endforeach;?>
+                </ul>
+            </div> <!--End sub cat-->
 
 			<?php if(isset($this->function['list_supports']) && ($this->function['list_supports'])):?>
 			<h2 class="title-cat"><span><?php echo $this->lang['supports'] ?></span></h2>
