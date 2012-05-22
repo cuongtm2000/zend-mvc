@@ -178,6 +178,19 @@
 			<?php endif;?>
         </div> <!--End columns3--> <div class="clear"></div>
     </div> <!--End Content-->
+	<div id="footer">
+    	<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
+        <div class="contentb">
+			<div>
+				<p><?php echo $this->lang['company_name'] ?></p>
+                <p><?php echo $this->lang['copyright'] ?></p>
+				<p><?php echo $this->lang['address1'] ?></p>
+				<?php echo ($this->lang['address2']) ? '<p>'.$this->lang['address2'].'</p>' : '' ?>
+				<p><?php echo $this->lang['developed']?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></p>
+            </div>
+        </div>
+        <b class="b4"></b><b class="b3"></b><b class="b2"></b><b class="b1"></b>
+	</div>
 </div> <!--End Wrapper-->
 </body>
 </html>
