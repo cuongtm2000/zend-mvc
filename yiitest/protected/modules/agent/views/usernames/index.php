@@ -25,7 +25,7 @@
                         <td><?php echo $value['phone'] ?></td>
                         <td><?php echo $value['dos_templates_template']?></td>
                         <td><?php echo $value->Provinces->province_name?></td>
-                        <td><?php echo CHtml::link('Edit', array('edit', 'id' => $value->username)) ?></td>
+                        <td><?php echo CHtml::link('Edit', array('edit', 'id' => $value->username)) ?> <?php echo CHtml::link('Password', array('password', 'id' => $value->username)) ?></td>
                     </tr>
                     <?php $i++; endforeach; ?>
 			<?php else:?>
