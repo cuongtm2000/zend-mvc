@@ -20,15 +20,17 @@ class AccountController extends AdminController {
     }
 
     public function actionIndex() {
-        $model = new Username('changeInfo');
+        $model = new Username();
 		$business_class = new Bussiness();
 		$province_class = new Provinces();
 
-        $model = $model->loadEdit(); //load form models
+        $model = $model->loadEdit(Yii::app()->user->id); //load form models
+        $model->setScenario('changeInfo');
+
         if (isset($_POST['Username'])) {
             $model->attributes = $_POST['Username'];
             if ($model->validate()) {
-                $model->changeInfo($model->email, $model->fullname, $model->phone, $model->company, $model->dos_templates_template, $model->dos_provinces_province_id, $model->dos_bussiness_bussiness_id);
+                $model->changeInfo($model->email, $model->fullname, $model->phone, $model->company, $model->dos_provinces_province_id, $model->dos_bussiness_bussiness_id, Yii::app()->user->id);
                 $this->refresh();
             }
         }

@@ -18,11 +18,11 @@
         <?php echo $form->labelEx($model, 'company') ?>
         <?php echo $form->textField($model, 'company', $htmlOptions=array('class'=>'txt-large-x')); ?>
     </p>
-	<p class="clear">
-		<?php echo $form->labelEx($model, 'dos_bussiness_bussiness_id') ?>
-		<?php $data_bussiness = array(); foreach ($listBusiness as $value) {$data_bussiness[$value['bussiness_id']] = $value['bussiness_name'];}?>
-		<?php echo $form->dropDownList($model, 'dos_bussiness_bussiness_id', $data_bussiness); ?>
-	</p>
+    <p class="clear">
+        <?php echo $form->labelEx($model, 'dos_bussiness_bussiness_id') ?>
+        <?php $data_bussiness = array(); foreach ($listBusiness as $value) {$data_bussiness[$value['bussiness_id']] = $value['bussiness_name'];}?>
+        <?php echo $form->dropDownList($model, 'dos_bussiness_bussiness_id', $data_bussiness); ?>
+    </p>
     <p class="clear">
         <?php echo $form->labelEx($model, 'dos_provinces_province_id') ?>
         <?php $data = array(); foreach ($listProvinces as $value){$data[$value['province_id']] = $value['province_name'];} ?>
@@ -30,7 +30,7 @@
     </p>
     <p>
         <label>&nbsp;</label>
-        <?php echo CHtml::submitButton($this->lang['update'], array('name' => 'submit', 'class' => 'login', 'title' => $this->lang['update'])); ?>
+        <?php echo CHtml::submitButton('Edit', array('name' => 'submit', 'class' => 'login', 'title' => 'Edit')); ?>
     </p>
 </fieldset>
 <?php $this->endWidget(); ?>

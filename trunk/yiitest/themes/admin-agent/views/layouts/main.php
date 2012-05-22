@@ -26,9 +26,9 @@
                 <div class="menu-bar">
                     <div id="catmenu">
                         <ul class="menu-li">
-                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/agent/usernames">User</a>
+                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/agent/usernames">Thành viên</a>
                                 <ul>
-                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/agent/usernames">List user</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/agent/usernames">Danh sách</a></li>
                                 </ul>
                             </li>
                         </ul> 
