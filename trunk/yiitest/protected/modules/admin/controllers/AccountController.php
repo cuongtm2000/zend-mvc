@@ -21,8 +21,8 @@ class AccountController extends AdminController {
 
     public function actionIndex() {
         $model = new Username();
-		$business_class = new Bussiness();
-		$province_class = new Provinces();
+        $business_class = new Bussiness();
+        $province_class = new Provinces();
 
         $model = $model->loadEdit(Yii::app()->user->id); //load form models
         $model->setScenario('changeInfo');
@@ -38,12 +38,13 @@ class AccountController extends AdminController {
     }
 
     public function actionChangepass() {
-        $model = new ChangePassForm;
-        if (isset($_POST['ChangePassForm'])) {
-            $model->attributes = $_POST['ChangePassForm'];
+        $model = new Username();
+        $model->setScenario('changeOldPass');
+
+        if (isset($_POST['Username'])) {
+            $model->attributes = $_POST['Username'];
             if ($model->validate()) {
-                $user = new Username;
-                $user->changePass($model->pass_new);
+                $model->changePass($model->pass_new, Yii::app()->user->id);
                 $this->redirect(array('/admin/account'));
             }
         }

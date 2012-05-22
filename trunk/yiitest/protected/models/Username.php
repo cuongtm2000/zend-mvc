@@ -7,6 +7,7 @@ class Username extends CActiveRecord {
     public $choose_feature;
     public $template = '';
     public $choose_business;
+    public $pass_old; //for change password
     public $pass_new; //for change password
     public $pass_new_compare; //for change password
 
@@ -47,6 +48,10 @@ class Username extends CActiveRecord {
             array('agent_sale, agent_tech', 'length', 'max' => 8),
             array('dos_templates_template', 'length', 'max' => 6),
 
+            //rules for change old password
+            array('pass_old, pass_new, pass_new_compare', 'required', 'on' => 'changeOldPass'),
+            array('pass_old', 'checkPassOld', 'on' => 'changeOldPass'),
+
             //rules for change password
             array('pass_new, pass_new_compare', 'required', 'on' => 'changePass'),
             array('pass_new, pass_new_compare', 'length', 'min' => 6, 'max' => 45),
@@ -66,6 +71,12 @@ class Username extends CActiveRecord {
     public function checkExistsAgents($attribute) {
         if (!Agents::model()->checkAgents($this->agent_sale)) {
             $this->addError($attribute, 'Mã số đại lý không đúng');
+        }
+    }
+
+    public function checkPassOld($attribute) {
+        if (!Username::model()->find('username=:username AND password=:password', array(':username' => Yii::app()->user->id, ':password' => md5($this->pass_old)))) {
+            $this->addError($attribute, 'Password: <strong>' . $this->pass_old . '</strong> is incorrect');
         }
     }
 
@@ -111,9 +122,9 @@ class Username extends CActiveRecord {
             'email' => 'Email',
             'password' => 'Password',
             'created' => 'Created',
-            'fullname' => 'Fullname',
-            'phone' => 'Phone',
-            'company' => 'Company',
+            'fullname' => 'Họ và tên',
+            'phone' => 'Điện thoại',
+            'company' => 'Tên công ty',
             'code' => 'Code',
             'import' => 'Import',
             'agent_sale' => 'Chọn đại lý',
@@ -122,6 +133,9 @@ class Username extends CActiveRecord {
             'dos_templates_template' => 'Dos Templates Template',
             'dos_provinces_province_id' => 'Tỉnh thành',
             'dos_bussiness_bussiness_id' => 'Ngành nghề kinh doanh',
+            'pass_old' => 'Mật khẩu cũ',
+            'pass_new' => 'Mật khẩu mới',
+            'pass_new_compare' => 'Nhập lại mật khẩu',
         );
     }
 
@@ -244,11 +258,10 @@ class Username extends CActiveRecord {
     }
 
     //Back end - Change password
-    public function changePass($password) {
+    public function changePass($password, $user) {
         $purifier = new CHtmlPurifier();
         $password = md5($purifier->purify($password));
 
-        $user = Yii::app()->user->id;
         $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET password=:password WHERE username=:user');
         $command->bindParam(":user", $user, PDO::PARAM_STR);
         $command->bindParam(":password", $password, PDO::PARAM_STR);

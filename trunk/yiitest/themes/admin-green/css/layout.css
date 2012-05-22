@@ -11,6 +11,7 @@ h2{color:#0E8F0E; font-size:11pt}
 #wapper{}
 #header{padding:5px 10px;position:relative;top:0;left:0}
 #header .logo{position:relative; top:0; left:0}
+#header .logo strong{color: #0160A5; font-size: 10pt; font-family: verdana}
 #header .frmlogin{position:absolute;top:15px;right:10px}
 #header .frmlogin  a {color:#005b8c; font-weight:bold; margin-left:10px}
 #header .frmlogin .register{background:url('../images/icon-register.png') no-repeat left top; padding-left:20px}

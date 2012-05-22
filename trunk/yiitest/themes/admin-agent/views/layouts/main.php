@@ -12,7 +12,7 @@
     <body>
         <div id="wapper">
             <div id="header">
-                <div class="logo"><a href="/agent"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a></div>
+                <div class="logo"><a href="/agent"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a> <strong>Reseller</strong></div>
                 <div class="frmlogin">
                     Chào <strong><?php echo Yii::app()->agentUser->name ?></strong>
                     <a href="#" title="Hộp thư">Hộp thư (0)</a>
@@ -37,7 +37,7 @@
                 <div class="contenter">
                     <?php echo $content ?>
                     <div id="footer">
-                        <p>Copyright &copy; <?php echo date('Y'); ?> by Dos.vn. All rights reserved</p>
+                        <p>Copyright &copy; <?php echo date('Y'); ?> by <a href="http://dos.vn" title="Dos.vn">Dos.vn</a>. All rights reserved</p>
                     </div>
                 </div>
             </div>
