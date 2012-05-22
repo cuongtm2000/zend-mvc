@@ -12,7 +12,7 @@
     <body>
         <div id="wapper">
             <div id="header">
-                <div class="logo"><a href="/administrator"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a></div>
+                <div class="logo"><a href="/administrator"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a> <strong>Administrator</strong></div>
                 <div class="frmlogin">
                     Chào <strong><?php echo Yii::app()->user->name ?></strong>
                     <a href="http://<?php echo Yii::app()->user->name ?>.dos.vn" target="_blank" title="Website">Website</a>

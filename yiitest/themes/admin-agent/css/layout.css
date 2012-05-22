@@ -11,6 +11,7 @@ h2{color:#0E8F0E; font-size:11pt}
 #wapper{}
 #header{padding:5px 10px;position:relative;top:0;left:0}
 #header .logo{position:relative; top:0; left:0}
+#header .logo strong{color: #0160A5; font-size: 10pt; font-family: verdana}
 #header .frmlogin{position:absolute;top:15px;right:10px}
 #header .frmlogin  a {color:#005b8c; font-weight:bold; margin-left:10px}
 #header .frmlogin .register{background:url('../images/icon-register.png') no-repeat left top; padding-left:20px}
@@ -74,7 +75,7 @@ ul#tabs .select span{background-position:100% -42px; color:#fff; font-weight:bol
 legend{color:#0066CC; font-weight:bold; font-size:11pt}
 fieldset{padding:15px; border : 1px solid #E4E3E3; background:#F9F9FB; -moz-border-radius:3px; -webkit-border-radius:3px; margin:5px}
 fieldset p{clear: both; margin: 4px auto; padding-bottom: 0}
-fieldset label{float:left; width:105px; padding:3px}
+fieldset label{float:left; width:110px; padding:3px}
 fieldset label.remove{float: none}
 fieldset input.login {cursor:pointer; width:80px; height:24px; color:#fff; border:1px solid #ccc; background:#3A6AAD; -moz-border-radius: 3px; -webkit-border-radius: 3px; display:inline; margin-right:6px}
 fieldset input.login:hover, .login-a:hover{background:#5184D2}

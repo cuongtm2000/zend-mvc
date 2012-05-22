@@ -24,6 +24,7 @@ class UsernamesController extends AgentController {
         }
         $this->render('edit', array('model' => $model, 'listBusiness' => $business_class->listCats(), 'listProvinces' => $province_class->listProvinceByCountry('VND')));
     }
+
     public function actionPassword($id) {
         $model = new Username();
         $model->setScenario('changePass');
@@ -31,7 +32,7 @@ class UsernamesController extends AgentController {
         if (isset($_POST['Username'])) {
             $model->attributes = $_POST['Username'];
             if ($model->validate()) {
-                $model->changePass($model->pass_new);
+                $model->changePass($model->pass_new, $id);
                 $this->redirect(array('./usernames'));
             }
         }
