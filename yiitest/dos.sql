@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 21, 2012 at 11:37 AM
+-- Generation Time: May 23, 2012 at 08:12 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -55,7 +55,6 @@ CREATE TABLE IF NOT EXISTS `dos_agents` (
 --
 
 INSERT INTO `dos_agents` (`agent_id`, `email`, `password`, `created_date`, `fullname`, `phone`, `company`, `website`, `picture`, `address`, `yahoo`, `skype`, `content`, `point`, `bonus`, `type`, `parent_id`, `enable`, `dos_provinces_province_id`) VALUES
-('08001001', 'info@dos.vn', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-05-01 16:05:05', 'Dos.vn', '0929001001', 'Công ty cổ phần Thương Hội', 'http://dos.vn', NULL, 'Gò Dầu - P. Tân Sơn Nhì - Q. Tân Phú - TpHCM', NULL, NULL, NULL, '0', '0', '0', '20122012', 1, 30),
 ('20122012', 'info@dos.vn', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-05-01 16:05:05', 'Dos.vn', '0929001001', 'Công ty cổ phần Thương Hội', 'http://dos.vn', NULL, 'Gò Dầu - P. Tân Sơn Nhì - Q. Tân Phú - TpHCM', NULL, NULL, NULL, '0', '0', '0', '20122012', 1, 30);
 
 -- --------------------------------------------------------
@@ -119,6 +118,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('advs_left_height', 200, '', '130312'),
 ('advs_left_height', 200, '', '160512'),
 ('advs_left_height', 130, '', '180412'),
+('advs_left_height', 267, '', '180512'),
 ('advs_left_height', 200, '', '200312'),
 ('advs_left_height', 190, '', '220312'),
 ('advs_left_height', 200, '', '230412'),
@@ -132,6 +132,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('advs_left_width', 220, '', '130312'),
 ('advs_left_width', 203, '', '160512'),
 ('advs_left_width', 204, '', '180412'),
+('advs_left_width', 203, '', '180512'),
 ('advs_left_width', 200, '', '200312'),
 ('advs_left_width', 190, '', '220312'),
 ('advs_left_width', 224, '', '230412'),
@@ -153,6 +154,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('banner_height', 300, '', '130312'),
 ('banner_height', 315, '', '160512'),
 ('banner_height', 339, '', '180412'),
+('banner_height', 323, '', '180512'),
 ('banner_height', 328, '', '200312'),
 ('banner_height', 332, '', '220312'),
 ('banner_height', 297, '', '230412'),
@@ -166,6 +168,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('banner_width', 950, '', '130312'),
 ('banner_width', 717, '', '160512'),
 ('banner_width', 940, '', '180412'),
+('banner_width', 929, '', '180512'),
 ('banner_width', 718, '', '200312'),
 ('banner_width', 950, '', '220312'),
 ('banner_width', 709, '', '230412'),
@@ -179,6 +182,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('logo_height', 100, '', '130312'),
 ('logo_height', 83, '', '160512'),
 ('logo_height', 51, '', '180412'),
+('logo_height', 55, '', '180512'),
 ('logo_height', 55, '', '200312'),
 ('logo_height', 79, '', '220312'),
 ('logo_height', 65, '', '230412'),
@@ -192,6 +196,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('logo_width', 735, '', '130312'),
 ('logo_width', 218, '', '160512'),
 ('logo_width', 239, '', '180412'),
+('logo_width', 263, '', '180512'),
 ('logo_width', 314, '', '200312'),
 ('logo_width', 259, '', '220312'),
 ('logo_width', 320, '', '230412'),
@@ -205,6 +210,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('max_image_height', 600, '', '130312'),
 ('max_image_height', 860, '', '160512'),
 ('max_image_height', 700, '', '180412'),
+('max_image_height', 950, '', '180512'),
 ('max_image_height', 600, '', '200312'),
 ('max_image_height', 667, '', '220312'),
 ('max_image_height', 600, '', '230412'),
@@ -218,6 +224,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('max_image_width', 650, '', '130312'),
 ('max_image_width', 700, '', '160512'),
 ('max_image_width', 670, '', '180412'),
+('max_image_width', 750, '', '180512'),
 ('max_image_width', 450, '', '200312'),
 ('max_image_width', 500, '', '220312'),
 ('max_image_width', 680, '', '230412'),
@@ -231,6 +238,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_cat_height', 90, '', '130312'),
 ('news_cat_height', 90, '', '160512'),
 ('news_cat_height', 89, '', '180412'),
+('news_cat_height', 100, '', '180512'),
 ('news_cat_height', 89, '', '200312'),
 ('news_cat_height', 100, '', '230412'),
 ('news_cat_height', 100, '', '240312'),
@@ -243,6 +251,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_cat_width', 143, '', '130312'),
 ('news_cat_width', 143, '', '160512'),
 ('news_cat_width', 143, '', '180412'),
+('news_cat_width', 143, '', '180512'),
 ('news_cat_width', 143, '', '200312'),
 ('news_cat_width', 143, '', '230412'),
 ('news_cat_width', 143, '', '240312'),
@@ -255,6 +264,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_height_thumb', 90, '', '130312'),
 ('news_height_thumb', 90, '', '160512'),
 ('news_height_thumb', 89, '', '180412'),
+('news_height_thumb', 100, '', '180512'),
 ('news_height_thumb', 100, '', '200312'),
 ('news_height_thumb', 100, '', '220312'),
 ('news_height_thumb', 100, '', '230412'),
@@ -268,6 +278,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_cat', 10, '', '130312'),
 ('news_num_paging_cat', 10, '', '160512'),
 ('news_num_paging_cat', 10, '', '180412'),
+('news_num_paging_cat', 10, '', '180512'),
 ('news_num_paging_cat', 10, '', '200312'),
 ('news_num_paging_cat', 10, '', '220312'),
 ('news_num_paging_cat', 10, '', '230412'),
@@ -281,6 +292,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_hot', 6, '', '130312'),
 ('news_num_paging_hot', 6, '', '160512'),
 ('news_num_paging_hot', 6, '', '180412'),
+('news_num_paging_hot', 8, '', '180512'),
 ('news_num_paging_hot', 6, '', '220312'),
 ('news_num_paging_hot', 6, '', '230412'),
 ('news_num_paging_hot', 6, '', '240312'),
@@ -293,6 +305,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_index', 10, '', '130312'),
 ('news_num_paging_index', 10, '', '160512'),
 ('news_num_paging_index', 10, '', '180412'),
+('news_num_paging_index', 10, '', '180512'),
 ('news_num_paging_index', 10, '', '200312'),
 ('news_num_paging_index', 10, '', '220312'),
 ('news_num_paging_index', 10, '', '230412'),
@@ -306,6 +319,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_num_paging_new', 10, '', '130312'),
 ('news_num_paging_new', 6, '', '160512'),
 ('news_num_paging_new', 6, '', '180412'),
+('news_num_paging_new', 8, '', '180512'),
 ('news_num_paging_new', 8, '', '200312'),
 ('news_num_paging_new', 6, '', '220312'),
 ('news_num_paging_new', 6, '', '230412'),
@@ -319,6 +333,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('news_width_thumb', 143, '', '130312'),
 ('news_width_thumb', 143, '', '160512'),
 ('news_width_thumb', 143, '', '180412'),
+('news_width_thumb', 143, '', '180512'),
 ('news_width_thumb', 143, '', '200312'),
 ('news_width_thumb', 145, '', '220312'),
 ('news_width_thumb', 143, '', '230412'),
@@ -332,6 +347,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_cat_height', 121, '', '130312'),
 ('products_cat_height', 160, '', '160512'),
 ('products_cat_height', 160, '', '180412'),
+('products_cat_height', 145, '', '180512'),
 ('products_cat_height', 170, '', '200312'),
 ('products_cat_height', 150, '', '220312'),
 ('products_cat_height', 150, '', '230412'),
@@ -345,6 +361,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_cat_width', 152, '', '130312'),
 ('products_cat_width', 160, '', '160512'),
 ('products_cat_width', 175, '', '180412'),
+('products_cat_width', 145, '', '180512'),
 ('products_cat_width', 170, '', '200312'),
 ('products_cat_width', 200, '', '220312'),
 ('products_cat_width', 150, '', '230412'),
@@ -358,6 +375,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_height', 400, '', '130312'),
 ('products_height', 500, '', '160512'),
 ('products_height', 550, '', '180412'),
+('products_height', 650, '', '180512'),
 ('products_height', 600, '', '200312'),
 ('products_height', 400, '', '220312'),
 ('products_height', 650, '', '230412'),
@@ -371,6 +389,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_height_thumb', 121, '', '130312'),
 ('products_height_thumb', 160, '', '160512'),
 ('products_height_thumb', 160, '', '180412'),
+('products_height_thumb', 145, '', '180512'),
 ('products_height_thumb', 170, '', '200312'),
 ('products_height_thumb', 135, '', '220312'),
 ('products_height_thumb', 150, '', '230412'),
@@ -384,6 +403,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_cat', 12, '', '130312'),
 ('products_num_paging_cat', 4, '', '160512'),
 ('products_num_paging_cat', 16, '', '180412'),
+('products_num_paging_cat', 20, '', '180512'),
 ('products_num_paging_cat', 16, '', '200312'),
 ('products_num_paging_cat', 8, '', '220312'),
 ('products_num_paging_cat', 16, '', '230412'),
@@ -397,6 +417,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_hot', 8, '', '130312'),
 ('products_num_paging_hot', 16, '', '160512'),
 ('products_num_paging_hot', 8, '', '180412'),
+('products_num_paging_hot', 20, '', '180512'),
 ('products_num_paging_hot', 12, '', '200312'),
 ('products_num_paging_hot', 8, '', '230412'),
 ('products_num_paging_hot', 8, '', '240312'),
@@ -409,6 +430,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_new', 8, '', '130312'),
 ('products_num_paging_new', 20, '', '160512'),
 ('products_num_paging_new', 20, '', '180412'),
+('products_num_paging_new', 20, '', '180512'),
 ('products_num_paging_new', 12, '', '200312'),
 ('products_num_paging_new', 4, '', '220312'),
 ('products_num_paging_new', 16, '', '230412'),
@@ -422,6 +444,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_other', 4, '', '130312'),
 ('products_num_paging_other', 4, '', '160512'),
 ('products_num_paging_other', 4, '', '180412'),
+('products_num_paging_other', 20, '', '180512'),
 ('products_num_paging_other', 3, '', '200312'),
 ('products_num_paging_other', 2, '', '220312'),
 ('products_num_paging_other', 4, '', '230412'),
@@ -435,6 +458,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_width', 500, '', '130312'),
 ('products_width', 500, '', '160512'),
 ('products_width', 550, '', '180412'),
+('products_width', 650, '', '180512'),
 ('products_width', 500, '', '200312'),
 ('products_width', 500, '', '220312'),
 ('products_width', 700, '', '230412'),
@@ -448,6 +472,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_width_thumb', 152, '', '130312'),
 ('products_width_thumb', 160, '', '160512'),
 ('products_width_thumb', 175, '', '180412'),
+('products_width_thumb', 145, '', '180512'),
 ('products_width_thumb', 170, '', '200312'),
 ('products_width_thumb', 200, '', '220312'),
 ('products_width_thumb', 150, '', '230412'),
@@ -461,6 +486,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('services_height', 89, '', '130312'),
 ('services_height', 850, '', '160512'),
 ('services_height', 100, '', '180412'),
+('services_height', 950, '', '180512'),
 ('services_height', 200, '', '200312'),
 ('services_height', 90, '', '220312'),
 ('services_height', 110, '', '230412'),
@@ -473,6 +499,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('services_width', 143, '', '130312'),
 ('services_width', 700, '', '160512'),
 ('services_width', 160, '', '180412'),
+('services_width', 750, '', '180512'),
 ('services_width', 200, '', '200312'),
 ('services_width', 145, '', '220312'),
 ('services_width', 192, '', '230412'),
@@ -487,6 +514,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_height_thumb', 121, '', '130312'),
 ('video_height_thumb', 160, '', '160512'),
 ('video_height_thumb', 160, '', '180412'),
+('video_height_thumb', 145, '', '180512'),
 ('video_height_thumb', 170, '', '200312'),
 ('video_height_thumb', 150, '', '220312'),
 ('video_height_thumb', 169, '', '230412'),
@@ -499,6 +527,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_num_paging_cat', 8, '', '130312'),
 ('video_num_paging_cat', 16, '', '160512'),
 ('video_num_paging_cat', 8, '', '180412'),
+('video_num_paging_cat', 8, '', '180512'),
 ('video_num_paging_cat', 8, '', '200312'),
 ('video_num_paging_cat', 2, '', '220312'),
 ('video_num_paging_cat', 8, '', '230412'),
@@ -512,6 +541,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_num_paging_index', 8, '', '130312'),
 ('video_num_paging_index', 16, '', '160512'),
 ('video_num_paging_index', 8, '', '180412'),
+('video_num_paging_index', 8, '', '180512'),
 ('video_num_paging_index', 8, '', '200312'),
 ('video_num_paging_index', 2, '', '220312'),
 ('video_num_paging_index', 8, '', '230412'),
@@ -525,6 +555,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_width_thumb', 152, '', '130312'),
 ('video_width_thumb', 160, '', '160512'),
 ('video_width_thumb', 175, '', '180412'),
+('video_width_thumb', 145, '', '180512'),
 ('video_width_thumb', 170, '', '200312'),
 ('video_width_thumb', 200, '', '220312'),
 ('video_width_thumb', 150, '', '230412'),
@@ -678,6 +709,10 @@ INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, 
 ('180412', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
 ('180412', 'video', 'prettyPhoto.css', 'css'),
 ('180412', 'video', 'jquery.prettyPhoto.js', 'javascript'),
+('180512', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
+('180512', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
+('180512', 'video', 'prettyPhoto.css', 'css'),
+('180512', 'video', 'jquery.prettyPhoto.js', 'javascript'),
 ('200312', 'products', 'product-detail.css', 'css'),
 ('200312', 'products', 'prototype.js|effects.js|dragdrop.js|slider.js|product.js', 'javascript'),
 ('200312', 'video', 'prettyPhoto.css', 'css'),
@@ -846,9 +881,9 @@ INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `co
 (77, 'Thư ngỏ', '', 'Thời trang đóng vai trò quan trọng trong việc xây dựng hình ảnh cá nhân của mỗi người. Thấu hiểu điều đó 3S shop luôn nắm bắt xu hướng thời trang từng năm để cung cấp tới bạn những dòng sản phẩm thời trang hợp thời:\n\n- Các mẫu thiết kế nổi bật, có phom dáng chuẩn phù hợp với người Việt…từ đó làm tăng niềm tin của khách hàng với dòng sản phẩm Made in Việt Nam.\n\n - Với hệ thống máy móc hiện đại chúng tôi cam kết đưa ra những sản phẩm đa dạng và hoàn hảo về màu sắc. Nhờ đó bạn có rất nhiều lựa chọn về màu sắc và kiểu dáng.\n\n - “Thử tẹt ga – Mua thỏa mái” đó là phương châm phục vụ của chúng tôi.\n\n Bộ sản phẩm thời trang của 3S Shop bao gồm:\n\n- Quần kaki, quần Gờ Tô, Quần âu: Với phom dáng chuẩn phù hợp với người việt, chất vải đẹp không nhăn, không bám bụi và bền màu. Bảo Hành 6 Tháng.\n\n - Áo sơ mi body kiểu dáng Hàn Quốc: Bạn sẽ thật thỏa mái khi đi học, đi chơi hay đi làm, tất cả chất liệu đều được chọn lọc kỹ lưỡng bảo đảm thấm mồ hôi và không nhăn.\n\n- Véc body cực cá tính và năng động: Bạn sẽ ko phải lo lắng hay băn khoăn về độ thùng thình và độ dài của vec làm mất dáng của bạn… Vì tất cả các mẫu thiết kế của chúng tôi đã loại bỏ điều lo lắng đó của bạn. Bạn sẽ khoác lên cơ thể mình một bộ véc đúng như mong đợi…!\n\n - Phụ Kiện thời trang đa dạng: Giầy, ví, thắt lưng, bật lửa kiểu….tất cả đều được chúng tôi lựa chọn kỹ để phù hợp với quần áo, từ đó các bạn sẽ có nhiều lựa chọn cho nhiều phong cách khác nhau.\n\n Sản phẩm của 3S shop phong phú về chủng loại cùng với kiểu dáng đa dạng, ấn tượng. Chúng tôi có một đội ngũ chuyên viên tư vấn và thiết kế được đào tạo chuyên nghiệp đầy sức sáng tạo và lòng nhiệt tình. Đến với 3S shop bạn sẽ thực sự nổi bật và khác biệt.\n\n Nhấc máy gọi số 0904.80.83.85 bất cứ khi nào bạn muốn Design cho mình một bộ cánh mới. Hãy để chúng tôi cùng làm điều đó với bạn. ^^', '', 7, '2012-04-25 08:05:08', 1, 0, '', '', 'thu-ngo', '', '', '', 1, '070312'),
 (81, 'Thư viện sách', '', '<p>Thư viện sách thành phố được thành lập vào 12/1994 nằm ở trung tâm thành phố tại số 2, Phú Lợi, khóm 1, phường 2, thành phố Biên Hòa.</p>\n<p>- Kinh phí hoạt động hàng năm của Thư viện không ổn định, thường dao động từ 5 - 23 triệu đồng.</p>\n<p>* Nhân sự: Thư viện có 02 nhân sự, trong đó: 01 nhân sự trình độ Đại học Thông tin Thư viện, 01 nhân sự trình độ Cao đẳng Thông tin Thư viện.</p>\n<p>- Thư viện hiện có 11.593 tên với 29.168 bản sách, trong đó sách thiếu nhi là 10.992 tên với 28.364 bản.</p>\n<p>- Tổng số báo, tạp chí hiện có của Thư viện 70 tên với 7.445 bản.</p>\n<p>Để đảm bảo nguồn sách phục vụ bạn đọc, Thư viện luôn chú trọng công tác bổ sung sách mới. Hàng năm Thư viện bổ sung khoảng 300- 1.000 bản sách và 20 loại báo, tạp chí.</p>\n<p>* Tổ chức phục vụ: Thư viện mở cửa phục vụ bạn đọc 5 ngày trong tuần (từ thứ hai đến thứ sáu), phục vụ chủ yếu là độc giả thiếu nhi trên địa bàn thành phố Biên Hòa.</p>\n<p>- Hàng năm thư viện đã cấp được trên 800 thẻ bạn đọc, phục vụ trên 40.000 lượt người với hơn 100.000 lượt tài liệu.</p>\n<p>Số điện thoại liên hệ: 0987522003</p>', '', 6, '2012-04-26 08:51:30', 1, 0, '', '', 'thu-vien-sach', '', 'Thư viện sách', '', 1, '200312'),
 (82, '230412 COFFEE', '', '<p style="text-align:justify;">Các bạn thân mến,<br />Trong thời gian vừa qua. <span style="color:#993300;"><strong>230412 COFFEE </strong></span>đã chuyển qua 2 giai đoạn với 2 phiên bản demo và mở rộng. Tuy nhiên, chưa thực sự trở thành website hữu ích với mức độ tương tác giữa người truy cập. Do đó, chúng tôi hân hoan thông báo tới toàn thể thành viên thường xuyên truy cập vào <strong><span style="color:#993300;">230412 COFFEE</span></strong> , thành viên góp ý về việc nâng cấp phiên bản mới với các nội dung trong bản Beta như sau:<br />- Bạn có thể sử dụng guidebook cho các chuyến đi của mình trên 2 bản App cho điện thoại và online trực tuyến.<br />- Đăng kí thành viên. Tham gia trực tiếp và quản lý các hoạt động offline, chuyến đi của mình.<br />- Chia sẻ chuyến đi, post bài kinh nghiệm v.v qua khả năng kết nối mới.<br />- Giao diện thân thiện, dễ sử dụng<br />- Các tiện ích khác biệt, lợi ích vô hạn cho thành viên thường xuyên.<br />Và còn rất nhiều các tiện ích khác.</p>\n<p style="text-align:justify;">Dự tính phiên bản <strong><span style="color:#993300;">230412 COFFEE</span></strong> sẽ thử nghiệm online trong khoảng thời gian từ 15/2/2012 - 30/2/2012.</p>\n<p style="text-align:justify;">Rất mong trong thời gian chờ đợi phiên bản mới. Các bạn vẫn luôn theo sát chúng tôi và chia sẻ cùng chúng tôi tại phuotcafe.com hiện tại.</p>\n<p style="text-align:justify;"> </p>', '', 9, '2012-04-26 09:25:37', 1, 0, '', '', '230412-coffee', '', '230412 COFFEE', '', 1, '230412'),
-(86, 'Giới thiệu sơ lược', '', '<p>Hoà mình vào sự phát triển chung của đất nước với những biến đổi không ngừng của thời cuộc, mỗi doanh nghiệp bằng thực lực và những kế sách đúng đắn của mình luôn tìm được một vị trí xứng đáng trong nền kinh tế thị trường đầy khắc nghiệt. Không là một ngoại lệ với kinh nghiệm nhiều năm hoạt động trong lĩnh vực. SẮT - NHÔM – INOX, với một đội ngũ công nhân lành nghề, tác phong chuyên nghiệp, sản phẩm chất lượng, đa dạng phù hợp kiến trúc và thẩm mỹ mọi công trình, cùng với giá cả hợp lý, hậu mãi chu đáo đã nhanh chóng chiếm lĩnh và chinh phục nhiều khách hàng lớn và khó tính, dần dần khẳng định vị thế của mình trong lĩnh vực xây dựng nói chung và hoạt động sản xuất kinh doanh cửa panô, cửa cuốn, cửa sắt, cửa cổng xếp, trụ lan can kính, cầu thang kính, lan can, cầu thang sắt, Inox, mặt dựng nhôm kính, mặt dựng aluminium, vách ngăn</p>', '', 30, '2012-05-03 14:39:49', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', '', '', 1, 'ducpano'),
+(86, 'Giới thiệu sơ lược', '', '<p>Hoà mình vào sự phát triển chung của đất nước với những biến đổi không ngừng của thời cuộc, mỗi doanh nghiệp bằng thực lực và những kế sách đúng đắn của mình luôn tìm được một vị trí xứng đáng trong nền kinh tế thị trường đầy khắc nghiệt. Không là một ngoại lệ với kinh nghiệm nhiều năm hoạt động trong lĩnh vực. SẮT - NHÔM – INOX, với một đội ngũ công nhân lành nghề, tác phong chuyên nghiệp, sản phẩm chất lượng, đa dạng phù hợp kiến trúc và thẩm mỹ mọi công trình, cùng với giá cả hợp lý, hậu mãi chu đáo đã nhanh chóng chiếm lĩnh và chinh phục nhiều khách hàng lớn và khó tính, dần dần khẳng định vị thế của mình trong lĩnh vực xây dựng nói chung và hoạt động sản xuất kinh doanh cửa panô, cửa cuốn, cửa sắt, cửa cổng xếp, trụ lan can kính, cầu thang kính, lan can, cầu thang sắt, Inox, mặt dựng nhôm kính, mặt dựng aluminium, vách ngăn</p>', '', 37, '2012-05-03 14:39:49', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', '', '', 1, 'ducpano'),
 (87, 'Giới thiệu công ty', '', '<p>Nội dung gioi thiệu</p>', '', 5, '2012-05-03 14:40:19', 2, 0, NULL, NULL, 'gioi-thieu-cong-ty', '', '', '', 1, 'ducpano'),
-(90, 'Giới thiệu công ty', '', '<p style="text-align:justify;">Shop thời trang <strong>240312 </strong>là doanh nghiệp chuyên cung cấp các sản phẩm đồ da trên thị trường Việt Nam từ năm 2001.</p>\n<p style="text-align:justify;"><strong>240312 </strong>là nhà phân phối trực tuyến các sản phẩm túi xách, ví da, dây lưng da, kính thời trang, giầy, xăng đan, thời trang quốc tế được nhập khẩu từ nước ngoài về.</p>\n<p style="text-align:justify;">Bên cạnh việc phân phối trực tuyến cho các khách hàng Hà Nội, TPHCM và các tỉnh, shop còn có 4 showroom trưng bày tại Hà Nội, mở cửa từ 8h - 22h hàng ngày.</p>\n<p style="text-align:justify;">Nhịp sống hiện đại ngày càng ảnh hưởng đến lối sống của mọi tầng lớp xã hội. Trong đó, giới trẻ là những người chịu ảnh hưởng nhiều nhất của lối sống mới này. Trong một cuộc điều tra nhỏ về nhu cầu mua sắm và chăm chút cho vẻ bề ngoài xinh đẹp của giới nữ thì có tới 99% cho kết quả thuận. Bởi vì đời sống ngày càng phát triền, những bộ trang phục và theo đó những phụ kiệm đi kèm, có thể nói lên phong cách và cá tính rất riêng của họ. Chúng tôi hiểu và đã cho ra đời website <strong>240312</strong> nhằm đáp ứng nhu cầu đấy, nhưng theo một cách khác, mới hơn và hoàn hảo hơn.</p>\n<p style="text-align:justify;">Hiện nay, xu hướng thương mại điện tử đang phát triển rất mạnh, trong tương lai sẽ là mô hình chủ đạo và tất yếu, <strong>240312</strong> đã tạo nên sự khác biệt bởi chính hình thức này: Một mô hình cửa hàng trực tuyến, cung cấp mọi góc độ của sản phẩm nhằm giúp khách hàng dễ dàng chọn lựa sản phẩm yêu thích, liên tục cập nhật mẫu mã đa dạng và kèm theo đó là phong cách bán hàng chuyên nghiệp, chu đáo giúp cho bạn trẻ, những người bận rộn, những người làm việc văn phòng không có thời gian đi shopping vẫn có thể thỏa sức mua sắm. với mô hình này chúng tôi đã và đang làm hài lòng tất cả các Khách hàng.</p>', '', 18, '2012-05-03 07:46:57', 1, 0, '', '', 'gioi-thieu-cong-ty', '', 'tui xach  túi xách thời trang  giới thiệu  túi xách  túi hàng hiệu  túi hàng hiệu  cặp da cao cấp  túi ví  túi máy tính  cặp xách  tui dep  may tinh bo tui  túi xách nam  túi xách nữ  túi chống sốc  hang tui xach  túi xách đẹp  tui xach dep  công ty', '', 1, '240312');
+(90, 'Giới thiệu công ty', '', '<p style="text-align:justify;">Shop thời trang <strong>240312 </strong>là doanh nghiệp chuyên cung cấp các sản phẩm đồ da trên thị trường Việt Nam từ năm 2001.</p>\r\n<p style="text-align:justify;"><strong>240312 </strong>là nhà phân phối trực tuyến các sản phẩm túi xách, ví da, dây lưng da, kính thời trang, giầy, xăng đan, thời trang quốc tế được nhập khẩu từ nước ngoài về.</p>\r\n<p style="text-align:justify;">Bên cạnh việc phân phối trực tuyến cho các khách hàng Hà Nội, TPHCM và các tỉnh, shop còn có 4 showroom trưng bày tại Hà Nội, mở cửa từ 8h - 22h hàng ngày.</p>\r\n<p style="text-align:justify;">Nhịp sống hiện đại ngày càng ảnh hưởng đến lối sống của mọi tầng lớp xã hội. Trong đó, giới trẻ là những người chịu ảnh hưởng nhiều nhất của lối sống mới này. Trong một cuộc điều tra nhỏ về nhu cầu mua sắm và chăm chút cho vẻ bề ngoài xinh đẹp của giới nữ thì có tới 99% cho kết quả thuận. Bởi vì đời sống ngày càng phát triền, những bộ trang phục và theo đó những phụ kiệm đi kèm, có thể nói lên phong cách và cá tính rất riêng của họ. Chúng tôi hiểu và đã cho ra đời website <strong>240312</strong> nhằm đáp ứng nhu cầu đấy, nhưng theo một cách khác, mới hơn và hoàn hảo hơn.</p>\r\n<p style="text-align:justify;">Hiện nay, xu hướng thương mại điện tử đang phát triển rất mạnh, trong tương lai sẽ là mô hình chủ đạo và tất yếu, <strong>240312</strong> đã tạo nên sự khác biệt bởi chính hình thức này: Một mô hình cửa hàng trực tuyến, cung cấp mọi góc độ của sản phẩm nhằm giúp khách hàng dễ dàng chọn lựa sản phẩm yêu thích, liên tục cập nhật mẫu mã đa dạng và kèm theo đó là phong cách bán hàng chuyên nghiệp, chu đáo giúp cho bạn trẻ, những người bận rộn, những người làm việc văn phòng không có thời gian đi shopping vẫn có thể thỏa sức mua sắm. với mô hình này chúng tôi đã và đang làm hài lòng tất cả các Khách hàng.</p>', '', 32, '2012-05-03 07:46:57', 1, 0, '', '', 'gioi-thieu-cong-ty', '', 'tui xach  túi xách thời trang  giới thiệu  túi xách  túi hàng hiệu  túi hàng hiệu  cặp da cao cấp  túi ví  túi máy tính  cặp xách  tui dep  may tinh bo tui  túi xách nam  túi xách nữ  túi chống sốc  hang tui xach  túi xách đẹp  tui xach dep  công ty', '', 1, '240312');
 
 -- --------------------------------------------------------
 
@@ -1077,7 +1112,7 @@ INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic
 (64, 'Cà phê có lợi cho nhân viên văn phòng', '', '2012-04-26 09:36:23', 'ca-phe-co-loi-cho-nhan-vien-van-phong.jpg', '<p style="text-align:justify;">Theo một nghiên cứu mới đây, những tách cà phê vào giờ nghỉ giải lao ở công sở mà người ta gọi là “coffee break” có thể giúp cho người lao động làm việc hứng khởi, tích cực và có hiệu quả hơn.</p>', '', '<p style="text-align:justify;">Theo một nghiên cứu mới đây, những tách cà phê vào giờ nghỉ giải lao ở công sở mà người ta gọi là “coffee break” có thể <strong>giúp cho người lao động làm việc hứng khởi, tích cực và có hiệu quả hơn.</strong></p>\n<p style="text-align:justify;">Các nhà nghiên cứu tại Viện Y học Nhiệt đới Luân Đôn (Anh) đã chỉ ra rằng, chất cafein có thể giúp cải thiện trí nhớ, làm cho người lao động tập trung hơn vào công việc. Hơn thế nữa, nó còn có thể làm giảm số lượng những lỗi sai mà người lao động thường mắc phải trong khi làm việc.</p>\n<p style="text-align:justify;">Đối với những người phải làm việc vào ban đêm, cafein cũng có tác dụng tương tự như những “giấc ngủ ngắn”. Đây là những phát hiện được công bố trên tờ tạp chí Cochrane Library, tạp chí của tổ chức Cochrane Collaboration, một tổ chức quốc tế chuyên đánh giá các nghiên cứu y khoa.</p>\n<p><img style="vertical-align:middle;margin-left:auto;margin-right:auto;" src="/public/userfiles/image/230412/image/img_12918.jpg" alt="" width="450" height="300" /></p>\n<p style="text-align:justify;">Các nhà nghiên cứu cũng gợi ý rằng, uống cà phê có thể giúp giảm thiểu các vụ tai nạn tại nơi làm việc, tai nạn giao thông. Thậm chí, nó có thể làm giảm sai sót y tế của các bác sĩ phải làm việc trong điều kiện căng thẳng kéo dài.</p>\n<p style="text-align:justify;">Nhóm nghiên cứu đã xem xét kết quả của 13 cuộc nghiên cứu độc lập được thực hiện ở khắp nơi trên thế giới liên quan đến những người lao động theo ca, hầu hết ở độ tuổi 20, trong điều kiện làm việc mô phỏng. Các tình nguyện viên đã được yêu cầu thực hiện nhiệm vụ để kiểm tra bộ nhớ và sự tập trung của họ, sử dụng lời nói và lí trí.</p>\n<p style="text-align:justify;">Một số các tình nguyện viên đã sử dụng cafein, trong khi các tình nguyên viên còn lại sử dụng giả dược. Sau đó, các tình nguyện viên sẽ tiếp xúc với các yếu tố khác như ánh sáng hoặc có một giấc ngủ ngắn. Tiếp đó, sẽ làm test trí nhớ, sự tập trung…. Kết quả cho thấy những tình nguyện viên dùng chất cafein có điểm số cao hơn so với những tình nguyện viên dùng giả dược.</p>\n<p style="text-align:justify;">Cà phê, đồ uống tăng lực hay ăn những thực phẩm có hàm lượng cafein cao đều cho kết quả tương tự.</p>\n<p style="text-align:justify;">Mặc dù sự khác biệt không lớn nhưng người dùng cafein thường ít mắc lỗi hơn so với những người có được giấc ngủ ngắn.</p>\n<p style="text-align:justify;">Ông Katharine Ker, nhà nghiên cứu hàng đầu của Viện Y học Nhiệt đới Luận Đôn cho hay: “Kết quả của những cuộc thử nghiệm cho thấy rằng, caffeine có thể giảm số lượng các lỗi và cải thiện hiệu suất chuyển đổi nhận thức trong công nhân”.</p>\n<p style="text-align:justify;">Nhóm nghiên cứu kêu gọi có nhiều nghiên cứu hơn về tác dụng của cafein đối với những người lớn tuổi.</p>', '', 'ca-phe-co-loi-cho-nhan-vien-van-phong', '', 'Cà phê có lợi cho nhân viên văn phòng', '', 0, 1, 0, '', '', 1, 47),
 (65, 'Túi xách da, túi xách lông thú cho bạn gái', '', '2012-05-03 08:04:10', 'tui-xach-da-tui-xach-long-thu-cho-ban-gai.jpg', '<p>Dù bạn bao nhiêu tuổi, thân hình ra sao, phong cách thời trang như thế nào, bạn cũng có thể chọn cho mình một chiếc túi ưng ý...</p>', '', '<p style="text-align:justify;">Những chiếc túi xách bằng da được điểm xuyết lông thú với nhiều hình dáng, thích hợp cho các bạn gái.</p>\n<p style="text-align:justify;">Dù bạn bao nhiêu tuổi, thân hình ra sao, phong cách thời trang như thế nào, bạn cũng có thể chọn cho mình một chiếc túi xách ưng ý với đủ loại kích thước, kiểu dáng to, nhỏ khác nhau. Với túi xách da, túi xách lông thú, các bạn gái sẽ tự tin hơn trong việc thể hiện phong cách và cá tính bản thân.</p>\n<p><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/240312/image/tui-xach-ban-gai-2.jpg" alt="" width="550" height="410" /></p>\n<p><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/240312/image/tui-xach-ban-gai-3.jpg" alt="" width="550" height="407" /></p>\n<p style="text-align:center;"><img style="float:left;" src="/public/userfiles/image/240312/image/tui-xach-ban-gai-4.jpg" alt="" width="550" height="516" /></p>\n<p style="text-align:center;"><img style="float:left;" src="/public/userfiles/image/240312/image/tui-xach-ban-gai-5.jpg" alt="" width="550" height="531" /></p>\n<p style="text-align:justify;">Để hòa mình vào thế giới túi xách, túi xách da, túi xách thời trang sành điệu truy cập ngay http://shoptuixachda.com - chuyên cung cấp túi xách, túi xách thời trang, túi xách hàng hiệu, túi xách nam, túi xách nữ, túi xách laptop, túi xách đẹp, túi xách tay, túi xách da.</p>', '', 'tui-xach-da-tui-xach-long-thu-cho-ban-gai', '', 'Túi xách da, túi xách lông thú cho bạn gái', '', 0, 4, 0, '', '', 1, 48),
 (66, 'Túi xách của bạn, phong cách của bạn', '', '2012-05-03 08:07:30', 'tui-xach-cua-ban-phong-cach-cua-ban.jpg', '<p>Dù bạn bao nhiêu tuổi, thân hình ra sao, phong cách thời trang như thế nào, bạn cũng có thể chọn cho mình một chiếc túi ưng ý...</p>', '', '<p style="text-align:justify;">Các bạn gái hãy thể hiện cá tính riêng của mình với phong cách túi xách 2012.</p>\n<p style="text-align:justify;">Bên cạnh trang phục và phụ kiện đi kèm, túi xách là "người bạn thân thiết" khó thể tách rời mỗi khi các bạn gái đi ra ngoài. Chúng không chỉ giúp các cô gái chứa những vật dụng cần thiết, là một món "nữ trang" mà còn cho các nàng thỏa sức phô diễn phong cách thời trang riêng.</p>\n<p style="text-align:justify;">Với những cô bạn công sở hay yêu thích sự điệu đà, duyên dáng, chiếc túi xách hoặc khoác vai là lựa chọn hợp lý nhất.</p>\n<p><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/240312/image/tui-xach-phong-cach-3.jpg" alt="" width="541" height="660" /></p>\n<p> </p>\n<p><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/240312/image/tui-xach-phong-cach-2.jpg" alt="" width="550" height="397" /></p>\n<p style="text-align:justify;">Để hòa mình vào thế giới túi xách, túi xách da, túi xách thời trang sành điệu truy cập ngay http://240312.dos.vn - chuyên cung cấp túi xách, túi xách thời trang, túi xách hàng hiệu, túi xách nam, túi xách nữ, túi xách laptop, túi xách đẹp, túi xách tay, túi xách da.</p>', '', 'tui-xach-cua-ban-phong-cach-cua-ban', '', 'Dù bạn bao nhiêu tuổi, thân hình ra sao, phong cách thời trang như thế nào, bạn cũng có thể chọn cho mình một chiếc túi ưng ý...', '', 0, 3, 0, '', '', 1, 48),
-(75, 'Bảo vệ đồ gỗ ngoài trời', '', '2012-05-03 15:01:06', 'bao-ve-do-go-ngoai-troi.jpg', '<p>Những chiếc bàn gỗ, ghế gỗ bầy ngoài vườn cho bữa tiệc trà, những chiếc xích đu bằng gỗ cho con chơi đùa..., chúng rất dễ bị hỏng khi phơi ngoài trời. Bạn có biết cách bảo vệ chúng?</p>', '', '<p>Những chiếc bàn gỗ, ghế gỗ bầy ngoài vườn cho bữa tiệc trà, những chiếc xích đu bằng gỗ cho con chơi đùa..., chúng rất dễ bị hỏng khi phơi ngoài trời. Bạn có biết cách bảo vệ chúng?</p>', '', 'bao-ve-do-go-ngoai-troi', '', '', '', 0, 1, 0, NULL, NULL, 1, 56);
+(75, 'Bảo vệ đồ gỗ ngoài trời', '', '2012-05-03 15:01:06', 'bao-ve-do-go-ngoai-troi.jpg', '<p>Những chiếc bàn gỗ, ghế gỗ bầy ngoài vườn cho bữa tiệc trà, những chiếc xích đu bằng gỗ cho con chơi đùa..., chúng rất dễ bị hỏng khi phơi ngoài trời. Bạn có biết cách bảo vệ chúng?</p>', '', '<p>Những chiếc bàn gỗ, ghế gỗ bầy ngoài vườn cho bữa tiệc trà, những chiếc xích đu bằng gỗ cho con chơi đùa..., chúng rất dễ bị hỏng khi phơi ngoài trời. Bạn có biết cách bảo vệ chúng?</p>', '', 'bao-ve-do-go-ngoai-troi', '', '', '', 0, 1, 1, NULL, NULL, 1, 56);
 
 -- --------------------------------------------------------
 
@@ -1147,21 +1182,21 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('max_count', 0, '230412'),
 ('counter', 0, '230412'),
 ('yesterday', 0, '230412'),
-('day_time', 2456064, '200312'),
+('day_time', 2456046, '200312'),
 ('max_count', 0, '200312'),
 ('counter', 0, '200312'),
 ('yesterday', 0, '200312'),
-('day_time', 2456064, '070312'),
+('day_time', 2456046, '070312'),
 ('max_count', 0, '070312'),
 ('counter', 0, '070312'),
 ('yesterday', 0, '070312'),
-('day_time', 2456064, 'ducpano'),
+('day_time', 2456066, 'ducpano'),
 ('max_count', 1, 'ducpano'),
 ('counter', 2, 'ducpano'),
 ('yesterday', 0, 'ducpano'),
-('day_time', 2456069, '240312'),
-('max_count', 0, '240312'),
-('counter', 0, '240312'),
+('day_time', 2456070, '240312'),
+('max_count', 1, '240312'),
+('counter', 2, '240312'),
 ('yesterday', 0, '240312');
 
 -- --------------------------------------------------------
@@ -1182,7 +1217,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1337593039, '240312');
+('''127.0.0.1''', 1337674885, '240312');
 
 -- --------------------------------------------------------
 
@@ -1448,7 +1483,7 @@ INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `
 (35, 'Nếu Xa Nhau, Em Chúc Anh Hạnh Phúc', '', '', '', '<p><img style="float:right;" src="/public/userfiles/image/200312/image/_si_fill_300_49572.jpg" alt="" width="300" height="300" /></p>\n<p>Tác giả: Dư Tư. - Dịch giả: Hồng Hoa.</p>\n<p>Nhà xuất bản: Nxb văn học</p>\n<p>Chưa có nhận xét nào. Bạn là người đầu tiên ?</p>\n<p>Số trang: 368</p>\n<p>Giảm 10 %</p>\n<p>Hình thức bìa: Bìa mềm<br />Kích thước: 13.5 x 20.5 cm Ngày xuất bản: 2011<br />Trọng lượng: 352 gram Số lần xem: 955<br />(Chi tiết về phí vận chuyển)<br />Giá bìa: 72.000 VNĐ<br />Giá bán: 64.800 VNĐ<br />Giảm giá: (10%)</p>\n<p>Xếp hạng: 60 ( trong những cuốn Sách bán chạy )</p>\n<p> </p>', '', 'neu-xa-nhau-em-chuc-anh-hanh-phuc.jpg', 2, '2012-04-26 08:42:00', 2, 0, '', '', 'neu-xa-nhau-em-chuc-anh-hanh-phuc', '', '', '', 1, '200312'),
 (36, 'A Mạch Tòng Quân - Tập 2 (Phát Hành 25-04-2012)', '', '', '', '<p style="text-align:justify;"><img style="float:right;" src="/public/userfiles/image/200312/image/_fill_300_49537.jpg" alt="" width="300" height="300" /></p>\n<p style="text-align:justify;">Tác giả: Tiên Chanh. - Dịch giả: Nguyễn Thanh An.</p>\n<p style="text-align:justify;">Nhà xuất bản: Nxb văn học</p>\n<p style="text-align:justify;">Chưa có nhận xét nào. Bạn là người đầu tiên ?</p>\n<p style="text-align:justify;">Số trang: 444</p>\n<p style="text-align:justify;">Giảm 10 %</p>\n<p style="text-align:justify;">Hình thức bìa: Bìa mềm<br />Kích thước: 16 x 24 cm Ngày xuất bản: 04 - 2012<br />Trọng lượng: 700 gram Số lần xem: 621<br />(Chi tiết về phí vận chuyển)<br />Giá bìa: 129.000 VNĐ<br />Giá bán: 116.100 VNĐ<br />Giảm giá: (10%)</p>\n<p style="text-align:justify;"> </p>\n<p style="text-align:justify;"> </p>', '', 'a-mach-tong-quan-tap-2-phat-hanh-25-04-2012.jpg', 3, '2012-04-26 08:45:27', 3, 0, '', '', 'a-mach-tong-quan-tap-2-phat-hanh-25-04-2012', '', 'A Mạch Tòng Quân - Tập 2 (Phát Hành 25-04-2012)', '', 1, '200312'),
 (37, 'Dịch vụ 230412 Cafe', '', '', '', '<p><img style="float:left;margin-left:10px;margin-right:10px;" src="/public/userfiles/image/230412/image/images.jpeg" alt="" width="183" height="261" /></p>\n<p style="text-align:justify;"> </p>\n<p style="text-align:justify;">Khuôn viên rộng rãi, thoáng mát gần gũi với thiên nhiên, phòng ăn sạch sẽ, lịch sự sẽ là điểm hẹn lý tưởng của quý khách cho những buổi gặp gỡ, trò chuyện hàng ngày cũng như những sự kiện quan trọng như sinh nhật, liên hoan, tiệc cưới.</p>\n<p style="text-align:justify;">Sự đa dạng của các món ăn, đồ uống cũng như kinh nghiệm chế biến truyền thống sẽ tạo cho quý khách cảm nhận đích thực về nghệ thuật ẩm thực tại <strong>230412 Cafe.</strong></p>\n<p style="text-align:justify;">Chúng tôi luôn tự hào về phong cách phục vụ mang đậm bản sắc quê hương Việt Nam của đội ngũ nhân viên phục vụ chuyên nghiệp và hiếu khách, quý khách sẽ thấy hài lòng về chất lượng phục vụ khi đến với chúng tôi.</p>\n<p style="text-align:justify;">Để biết thêm chi tiết về các dịch vụ của chúng tôi vui lòng lựa chọn dịch vụ ở menu bên phải.</p>\n<p style="text-align:right;"><strong> </strong></p>\n<p style="text-align:right;"><strong>FREE WIFI INTERNET - FREE WIFI INTERNET</strong></p>', '', '', 1, '2012-04-26 09:38:50', 1, 0, '', '', 'dich-vu-230412-cafe', '', 'Dịch vụ', '', 1, '230412'),
-(38, 'MAY ĐỒNG PHỤC', '', '', '', '<p style="text-align:justify;">Xã hội ngày càng phát triển con người không còn dừng lại ở việc ăn no, mặc ấm mà chính là ăn ngon mặc đẹp,mặc đẹp chính là một nhu cầu thể hiện bản thân ,nhu cầu thể hiện bản thân mình là ai? từ đâu? hiểu được nhu cầu ngày càng cao đó <strong>240312</strong> sẽ cung ứng cho quý khách những sản phẩm may mặc như:</p>\n<p style="text-align:justify;">Đồng phục học sinh Đồng phục văn phòng Đồng phục bệnh viên Đồng phục nhà máy xí nghiệp Đồng phục nhà hàng,khách sạn, đồng phục lớp, nhóm, tập thể</p>\n<p style="text-align:justify;">Khi quý khách khoác lên người bộ đồng phục mang thương hiệu của tổ chức, công ty mình, quý khách sẽ tự tin hơn về thương hiệu của mình đồng thời cũng phân biệt được quý khách là ai? đến từ đâu? Giữa muôn vạn các thương hiệu khác, mặc đồng phục để tạo nên sự chuyên nghiệp, ”khác biệt” và đặc biệt hơn là sự tỏa sáng cho thương hiệu mình.</p>\n<p style="text-align:justify;">Bên cạnh đó công ty chúng tôi còn cung cấp cho quý khách những sản phẩm làm quà tặng quảng cáo ,quà tặng khuyến mãi cho đối tác ,khách hàng của mình như:</p>\n<p style="text-align:justify;">Áo thun,áo gió ,áo mưa Mũ,nón Ba lô ,túi sách,ví Gối Giày dép</p>\n<p style="text-align:justify;">Tất cả những sản phẩm của chúng tôi đều có in, thêu logo,tên công ty trên sản phẩm.</p>\n<p style="text-align:justify;">Với giá cả cạnh tranh, sản phẩm chất lượng, uy tín đến với công ty chúng tôi là sự lựa chọn hoàn hảo của quý khách.</p>\n<p style="text-align:justify;">Với phương châm <strong>TỎA SÁNG THƯƠNG HIỆU – NÂNG BƯỚC THÀNH CÔNG</strong>. <strong>240312</strong> hy vọng sẽ mang đến cho quý khách sự tự tin ,thoải mái và nguồn năng lực dồi dào khi khoát lên mình sản phẩm của chúng tôi.</p>\n<p style="text-align:justify;">Thành công của quý khách là niềm tự hào của chúng tôi!</p>', '', '', 2, '2012-05-03 08:14:59', 1, 0, '', '', 'may-dong-phuc', '', '', '', 1, '240312'),
+(38, 'MAY ĐỒNG PHỤC', '', '', '', '<p style="text-align:justify;">Xã hội ngày càng phát triển con người không còn dừng lại ở việc ăn no, mặc ấm mà chính là ăn ngon mặc đẹp,mặc đẹp chính là một nhu cầu thể hiện bản thân ,nhu cầu thể hiện bản thân mình là ai? từ đâu? hiểu được nhu cầu ngày càng cao đó <strong>240312</strong> sẽ cung ứng cho quý khách những sản phẩm may mặc như:</p>\n<p style="text-align:justify;">Đồng phục học sinh Đồng phục văn phòng Đồng phục bệnh viên Đồng phục nhà máy xí nghiệp Đồng phục nhà hàng,khách sạn, đồng phục lớp, nhóm, tập thể</p>\n<p style="text-align:justify;">Khi quý khách khoác lên người bộ đồng phục mang thương hiệu của tổ chức, công ty mình, quý khách sẽ tự tin hơn về thương hiệu của mình đồng thời cũng phân biệt được quý khách là ai? đến từ đâu? Giữa muôn vạn các thương hiệu khác, mặc đồng phục để tạo nên sự chuyên nghiệp, ”khác biệt” và đặc biệt hơn là sự tỏa sáng cho thương hiệu mình.</p>\n<p style="text-align:justify;">Bên cạnh đó công ty chúng tôi còn cung cấp cho quý khách những sản phẩm làm quà tặng quảng cáo ,quà tặng khuyến mãi cho đối tác ,khách hàng của mình như:</p>\n<p style="text-align:justify;">Áo thun,áo gió ,áo mưa Mũ,nón Ba lô ,túi sách,ví Gối Giày dép</p>\n<p style="text-align:justify;">Tất cả những sản phẩm của chúng tôi đều có in, thêu logo,tên công ty trên sản phẩm.</p>\n<p style="text-align:justify;">Với giá cả cạnh tranh, sản phẩm chất lượng, uy tín đến với công ty chúng tôi là sự lựa chọn hoàn hảo của quý khách.</p>\n<p style="text-align:justify;">Với phương châm <strong>TỎA SÁNG THƯƠNG HIỆU – NÂNG BƯỚC THÀNH CÔNG</strong>. <strong>240312</strong> hy vọng sẽ mang đến cho quý khách sự tự tin ,thoải mái và nguồn năng lực dồi dào khi khoát lên mình sản phẩm của chúng tôi.</p>\n<p style="text-align:justify;">Thành công của quý khách là niềm tự hào của chúng tôi!</p>', '', '', 14, '2012-05-03 08:14:59', 1, 0, '', '', 'may-dong-phuc', '', '', '', 1, '240312'),
 (42, 'Chuyên sản xuất và gia công', '', NULL, NULL, '<ol><li>CỬA CUỐN - cửa cuốn, cửa cuốn cao cấp, cửa cuốn giá rẻ, cửa cuốn Đài Loan, cửa cuốn Úc, cửa cuốn đức, cửa cuốn khe thoáng, cửa cuốn hợp kim nhôm, cửa cuốn inox, cửa cuốn song ngang, cửa cuốn công nghệ đức.</li>\r\n<li>CỬA KÉO - cửa kéo Đài Loan, cửa kéo giả Đài Loan , cửa xếp đài loan.</li>\r\n<li>CỬA SẮT - cửa pano sắt, cửa số sắt, bông bảo vệ, hàng rào sắt, cửa cổng mở, cửa cổng lùa.</li>\r\n<li>CỬA NHÔM - cửa pano nhôm, cửa sổ nhôm, cửa bản lề sàn kính cường lực, cửa kính tự động, phòng tắm - phòng xông hơi kính, vách ngăn - mặt dựng nhôm kính - mặt dựng aluminium.</li>\r\n<li>CỬA INOX - cửa inox, cột cờ inox.</li>\r\n<li>LAN CAN - CẦU THANG.</li>\r\n<li>TRỤ CẦU THANG - trụ cầu thang inox, inox ốp gỗ, gỗ, gỗ xỏ giữa, inox xỏ giữa, sắt sơn tĩnh điện.</li>\r\n<li>CỬA CỔNG XẾP - xếp sơn tĩnh điện, xếp inox.</li>\r\n<li>MÁI NGÓI - BIỆT THỰ - mái ngói biệt thự, vì kèo - kho xưởng.</li>\r\n</ol>', '', '', 1, '2012-05-03 14:49:37', 1, 0, NULL, NULL, 'chuyen-san-xuat-va-gia-cong', '', '', '', 1, 'ducpano');
 
 -- --------------------------------------------------------
@@ -1769,6 +1804,7 @@ INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `descriptio
 ('130312', 'Mẫu cơ khí: 130312', '2012-03-12 12:01:59', 'Chuyên nghiệp sản xuất ván lạng, ván ép cong định hình và keo tiêu chuẩn Carb p2, keo chịu nước, keo menamim, test mẫu thí nghiệm gỗ đặt tiêu chuẩn Carb p2'),
 ('160512', 'Mẫu ẩm thực 160512', '2012-05-16 04:22:58', 'Chuyên bán các loại ẩm thực đồ uống các loại.'),
 ('180412', 'Mẫu máy tính: 180412', '2012-04-18 00:58:03', 'Mẫu máy tính mã số 180412'),
+('180512', 'Mẫu nội thất: 180512', '2012-05-18 08:57:47', 'Chuyên bán các loại đồ nội thất, dân dụng'),
 ('200312', 'Mẫu giáo dục: 200312', '2012-03-19 23:43:27', 'Chuyên bán các loại sách cho sinh viên, giá cả bình dân'),
 ('220312', 'Mẫu nội thất: 220312', '2012-03-21 20:04:36', 'Chuyên bán các loại đồ nội thất, dân dụng'),
 ('230412', 'Mẫu cafe: 230412', '2012-04-23 07:25:18', 'Mẫu ẩm thực, đồ uống caffe'),
@@ -1802,6 +1838,7 @@ INSERT INTO `dos_templates_has_dos_bussiness` (`dos_templates_template`, `dos_bu
 ('130312', 'bds-kien-truc-xay-dung'),
 ('160512', 'am-thuc-drink'),
 ('180412', 'cong-nghe-thong-tin-vien-thong'),
+('180512', 'noi-that-ngoai-that'),
 ('200312', 'giao-duc-dao-tao'),
 ('220312', 'noi-that-ngoai-that'),
 ('230412', 'am-thuc-drink'),
@@ -2037,6 +2074,29 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('180412', 'video', 'advs_left'),
 ('180412', 'video', 'list_supports'),
 ('180412', 'video', 'menu_video'),
+('180512', 'about', 'advs_left'),
+('180512', 'about', 'list_supports'),
+('180512', 'about', 'menu_about'),
+('180512', 'contact', 'advs_left'),
+('180512', 'contact', 'list_supports'),
+('180512', 'contact', 'menu_products'),
+('180512', 'default', 'about_home'),
+('180512', 'default', 'advs_left'),
+('180512', 'default', 'list_supports'),
+('180512', 'default', 'menu_products'),
+('180512', 'default', 'products_new'),
+('180512', 'news', 'advs_left'),
+('180512', 'news', 'list_supports'),
+('180512', 'news', 'menu_news'),
+('180512', 'products', 'advs_left'),
+('180512', 'products', 'list_supports'),
+('180512', 'products', 'menu_products'),
+('180512', 'services', 'advs_left'),
+('180512', 'services', 'list_supports'),
+('180512', 'services', 'menu_services'),
+('180512', 'video', 'advs_left'),
+('180512', 'video', 'advs_top'),
+('180512', 'video', 'menu_video'),
 ('200312', 'about', 'advs_left'),
 ('200312', 'about', 'list_supports'),
 ('200312', 'about', 'menu_about'),
@@ -2249,9 +2309,9 @@ INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullna
 ('070312', 'info@dos.vn', 'd85287e7f9ec18990d6d2dce0b1692b5', '2012-04-25 07:28:23', '', '', '', 'user', 'vi', '', '2012-05-24 17:00:00', 0, '20122012', NULL, 1, '070312', 19, 'thoi-trang'),
 ('200312', 'info@dos.vn', 'd85287e7f9ec18990d6d2dce0b1692b5', '2012-04-25 07:17:56', '', '', '', 'user', 'vi', '', '2012-05-24 17:00:00', 0, '20122012', NULL, 1, '200312', 1, 'giao-duc-dao-tao'),
 ('230412', 'info@dos.vn', 'd85287e7f9ec18990d6d2dce0b1692b5', '2012-04-26 09:03:32', '', '', '', 'user', 'vi', '', '2012-05-25 17:00:00', 0, '20122012', NULL, 1, '230412', 19, 'nha-hang-cafe'),
-('240312', 'info@dos.vn', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-03 02:01:30', '', '', '', 'user', 'vi', '', '2012-06-01 17:00:00', 1, '20122012', NULL, 1, '160512', 1, 'thoi-trang'),
+('240312', 'info@dos.vn', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-03 02:01:30', '', '', '', 'user', 'vi', '', '2012-06-01 17:00:00', 1, '20122012', NULL, 1, '240312', 1, 'thoi-trang'),
 ('dos', 'info@dos.vn', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi|en', NULL, '2012-04-14 17:00:00', 0, '20122012', NULL, 1, '230412', 2, 'cong-nghe-thong-tin-vien-thong'),
-('ducpano', 'ducpano@yahoo.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-03 14:10:09', NULL, '0903337654', NULL, 'user', 'vi', NULL, '2012-06-01 17:00:00', 0, '08001001', NULL, 1, '270412', 19, 'co-khi-may-moc-thiet-bi');
+('ducpano', 'ducpano@yahoo.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-03 14:10:09', NULL, '0903337654', NULL, 'user', 'vi', NULL, '2012-06-01 17:00:00', 0, '20122012', NULL, 1, '270412', 19, 'co-khi-may-moc-thiet-bi');
 
 -- --------------------------------------------------------
 
