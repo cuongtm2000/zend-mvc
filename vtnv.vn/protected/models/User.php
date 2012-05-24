@@ -260,12 +260,17 @@ class User extends CActiveRecord {
                 $log->addItem("Hoa hồng đạt cấp " . $level, '', $u->username, $money, 'tangcap');
                 // tìm những thằng cha của nó có cấp lớn hơn để gắn vào
                 $this->ganTV($u, $log);
-                $this->addToUpperUser($u);
+                $this->addToUpper($u);
             }
         }
     }
 
-    private function addToUpperUser($user_dc_gan) {
+    private function updateFromChild($user){
+        $tree=$this->createTree($user);
+        
+    }
+    
+    private function addToUpper($user_dc_gan) {
         $username = $user_dc_gan['username']; //lưu lại user để gán
         $level = $user_dc_gan['level'];
         $temp_user = $user_dc_gan['username'];
