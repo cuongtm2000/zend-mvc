@@ -52,10 +52,7 @@
 		</div><!--End header-->
 		<div id="header-btom">
 			<div id="search">
-				<form  id="frmsearch" name="frm-search" action="" method="post">
-					<input type="text" class="input"  value="Search entire store here ..." onblur="if(this.value=='') this.value='Search entire store here ...'" onfocus="if(this.value =='Search entire store here ...' ) this.value=''"/>
-					<input type="submit" class="bt-go" value="GO" title="GO" />
-				</form>
+				<p class="hot-line"><?php echo $this->lang['company_phone']?></p>				
 			</div>
             <div id="bg-menu-hd-right">
 				<?php echo ($this->lang['company_name']) ? '<h1 class="welcome">'.$this->lang['company_name'].'</h1>' : '' ?> <!--End title company-->
@@ -125,7 +122,7 @@
 				</ul>
 				<?php endif; ?>
 				
-				<h1 class="title-box"><span><?php echo $this->lang['counter'] ?></span></h1>
+				<h1 class="title-left"><span><?php echo $this->lang['counter'] ?></span></h1>
 				<ul class="statistics">
 					<li><?php echo Yii::t('user', 'online')?>: <?php echo Yii::app()->counter->getOnline(); ?></li>
 					<li><?php echo Yii::t('user', 'today')?>: <?php echo Yii::app()->counter->getToday(); ?></li>
