@@ -29,6 +29,7 @@ a:hover{color:#000;}
 
 /*Menu hd right*/
 #bg-menu-hd-right{float:left;height: 45px; text-align:right;background:url(../images/link_bg.gif) no-repeat #E0DDCE;width: 770px}
+.hot-line{padding:8px 0 0 0;margin:0 0 0 10px;color:#33220C; font-weight:700;font-size: 12pt;}
 .welcome{color:#33220C; font-weight:700;font-size: 12pt; position: relative;top:15px;font-weight: bold;right:15px}
 
 /**  Navigation **/

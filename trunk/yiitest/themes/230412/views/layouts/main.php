@@ -43,12 +43,9 @@
 	<?php endif?>
 	<div id="header">
 		<div>
-			<h1 class="welcome"><b><?php echo $this->lang['company_name'] ?></b></h1>
+			<?php echo ($this->lang['company_name']) ? '<h1 class="welcome">'.$this->lang['company_name'].'</h1>' : '' ?> <!--End title company-->
 			<div  id="search">
-				<form id="frsearch" action="<?php echo Yii::app()->homeUrl?>" method="post">
-					<input type="text" name="txt-search" class="input"  value="Search entire store here ..." onblur="if(this.value=='') this.value='Search entire store here ...'" onfocus="if(this.value =='Search entire store here ...' ) this.value=''"/>
-					<input type="image" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/btn-go.gif" alt="" class="bt-go" />
-				</form>
+				<p class="hot-line"><?php echo $this->lang['company_phone']?></p>
 			</div> 		<div class="clear"></div>
 		</div>
 		<div>
