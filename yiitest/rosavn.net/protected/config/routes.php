@@ -25,6 +25,15 @@ return array(
     '<news:(tin-tuc-su-kien)>/<cid:[-a-z0-9]+>' => array('news/default/cats'), //cat
     '<news:(tin-tuc-su-kien)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('news/default/view', 'urlSuffix' => '.html'), //view
 
+    //food modules
+    '<food:(am-thuc-tham-my)>/trang/<page:\d+>' => 'food/default/index', //index paging
+    '<food:(am-thuc-tham-my)>' => 'food/default/index', //index
+    '<food:(am-thuc-tham-my)>/<cid:[-a-z0-9]+>/trang/<page:\d+>' => array('food/default/cats'), //cat paging
+    '<food:(am-thuc-tham-my)>/<cid:[-a-z0-9]+>' => array('food/default/cats'), //cat
+    '<food:(am-thuc-tham-my)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('food/default/view', 'urlSuffix' => '.html'), //view
+
+
+
     //video modules
     '<video:(video)>/trang/<page:\d+>' => 'video/default/index', //index paging
     '<video:(video)>' => 'video/default/index', //index

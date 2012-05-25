@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 3.5.0
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 18, 2012 at 10:00 AM
--- Server version: 5.5.16
--- PHP Version: 5.3.8
+-- Generation Time: May 23, 2012 at 09:13 AM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -177,6 +177,7 @@ INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('developed', 'Phát triển bởi', 'Developed by', 0),
 ('edit', 'Chỉnh sửa', 'Edit', 1),
 ('en', 'English', 'English', 0),
+('food', 'Ẩm thực và thẩm mỹ', 'Food and Aesthetic', 0),
 ('hidden', 'Ẩn', 'Hidden', 1),
 ('hot', 'Nổi bật', 'Hot', 0),
 ('new', 'Mới', 'New', 0),
@@ -192,6 +193,7 @@ INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('preview', 'Giới thiệu sơ lược', 'Preview', 1),
 ('previewen', 'Giới thiệu sơ lược En', 'Preview', 1),
 ('products', 'Sản phẩm', 'Products', 0),
+('programs', 'Chương trình đào tạo', 'Training Programs', 0),
 ('read_more', 'Xem tiếp', 'Read more', 0),
 ('remove_pic', 'Xóa ảnh này', 'Delete this picture', 1),
 ('services', 'Dịch vụ', 'Services', 0),
@@ -203,6 +205,7 @@ INSERT INTO `dos_langs` (`lang_name`, `lang`, `langen`, `admin`) VALUES
 ('tagen', 'Liên kết En', 'Link', 1),
 ('title', 'Tiêu đề', 'Title', 1),
 ('titleen', 'Tiêu đề En', 'Title En', 1),
+('training', 'Hỗ trợ học nghề', 'Training', 0),
 ('update', 'Cập nhật', 'Update', 1),
 ('vi', 'Tiếng Việt', 'Tiếng Việt', 0),
 ('video', 'Video', 'Video', 0),
@@ -261,10 +264,13 @@ INSERT INTO `dos_modules` (`module_id`, `module_url`, `module_title`, `module_so
 ('banner', 'banner', 'Danh sách', 9, 0),
 ('contact', 'contact', 'Danh sách', 7, 1),
 ('default', '', '', 1, 1),
+('food', 'food/cats|food', 'Danh mục|Danh sách', 13, 1),
 ('news', 'news/cats|news', 'Danh mục|Danh sách', 5, 1),
 ('products', 'products/cats|products', 'Danh mục|Danh sách', 3, 1),
+('programs', 'programs', 'Danh sách', 12, 1),
 ('services', 'services', 'Danh sách', 4, 1),
 ('supports', 'supports', 'Danh sách', 10, 0),
+('training', 'training', 'Danh sách', 11, 1),
 ('video', 'video/cats|video', 'Danh mục|Danh sách', 6, 1);
 
 -- --------------------------------------------------------
@@ -290,10 +296,13 @@ INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usern
 ('advs', 'tinhungphat'),
 ('banner', 'tinhungphat'),
 ('contact', 'tinhungphat'),
+('food', 'tinhungphat'),
 ('news', 'tinhungphat'),
 ('products', 'tinhungphat'),
+('programs', 'tinhungphat'),
 ('services', 'tinhungphat'),
 ('supports', 'tinhungphat'),
+('training', 'tinhungphat'),
 ('video', 'tinhungphat');
 
 -- --------------------------------------------------------
@@ -331,7 +340,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
 (108, 'Giới thiệu công ty', '', '<p style="text-align:justify;"><span style="text-decoration:underline;"><span style="font-size:12pt;">Tin HưngPhát(THP) </span></span>chuyên cung cấp sản phẩm, dich vụ về các mặt hàng: Máy PC, Máy văn phòng, Laptop, Máy In,Máy Chấm<br />Công, Camera quan sát,báo trộm cháy...... Nay Tin Hưng Phát chúng tôi trân trọng gửi đến Quý khách hàng thư ngỏ này với<br />mong muốn Quý Khách hàng có thêm sự lựa chọn và chúng tôi có thêm khách hàng thân thiết mới.<br />» Các sản phẩm của THP :<br />- Mặt hàng chủ lực của THP chúng tôi là: máy bộ <strong>PC, Laptop, Netbook, Macbook, Camera quan sát, Chuông cửa, khóa điện tử</strong><br />-<strong> Linh Kiện PC, Máy VP</strong>: Main, Ram , CPU, DVD, Case, Power, VGA, LCD … Thiết bị ngoại vi : HDD External, Webcam,<br />speaker,<br />headphone, USB, USB 3G, mp3, mp4, ….<br />- <strong>Software</strong> : phần mềm diệt virus (Kaspersky, BKis, Panda, Norton, Avira...), phần mềm chấm công, camera...<br />-<strong> Linh Kiện Laptop</strong>: HDD, Ram, LCD, DVD, tản nhiệt, …..<br />-<strong> Printer</strong>: Máy In HP,Canon, Samsung, Brother, Epson, OKI ...,Mực In HP Chính Hãng, Mực sạc HP, Canon, Samsung, Epson,<br />Brother, OKI...<br />-<strong> Máy chấm công</strong> vân tay, cảm ứng với chức năng và ưu điểm phù hợp với các doanh nghiệp vừa và nhỏ tích hợp chấm công<br />chính xác. Có thể quản lý dễ dàng từ 50 cho tới 5000 nv. Thẻ chấm công Logo công ty,tên nhân viên, hình nhân viên....<br />-<strong> Hệ thống báo trộm không dây</strong> Báo trộm tại chổ và từ xa thông báo qua điện thoại.Báo động có Trộm tại vùng kiểm soát, bộ<br />kiểm soát trung tâm sẽ kích hoạt hệ thống còi hụ còi. Kiểm Soát Trung Tâm kiểm soát được 1 vùng, 16 đầu dò.<br />- <strong>Camera quan sát</strong> với cự ly rộng hình ảnh rõ nét, tên miền cố định, dữ liệu tập trung ......<br />-<strong> Thiết kế Website</strong>, update dữ liệu, bảo trì...... cho các doanh ngiệp vừa và nhỏ<br />» Dịch vụ bảo trì PC, printer, camera, laptop.. đa dạng, hỗ trợ kỹ thuật miễn phí trong thời gian bảo trì, đưa ra giải pháp tốt<br />nhất cho máy tính của bạn.<br />&gt;&gt;Hỗ trợ kĩ thuật nhanh nhất đáp ứng kịp thời và hiệu quả những nhu cầu của khách hàng<br />&gt;&gt;Thời gian và hình thức thanh toán linh hoạt, với phương châm: ”Mang sản phẩm và dịch vụ tốt nhất tới tận tay khách hàng<br />là niềm vui và hạnh phúc của chúng tôi” . Đặc biệt giá cả hoàn hảo nhất có tính cạnh tranh cao trên thị trường.<br />&gt;&gt;Với đội ngũ nhân viên trẻ, giàu tri thức và nhiệt huyết, không ngừng sáng tạo cam kết sẽ mang đến cho quý khách hàng<br />những dịch vụ với chất lượng hoàn hảo.<br />&gt;&gt;Mục tiêu chúng tôi &gt; "Luôn luôn sáng tạo hướng tới thành công"</p>', '', 92, '2012-05-14 03:12:04', 1, 0, '', '', 'gioi-thieu-cong-ty', '', 'CÔNG TY TNHH TIN HỌC -VIỄN THÔNG TIN HƯNG PHÁT\nCHUYÊN CUNG CẤP LINH KIỆN MÁY TÍNH - MÁY VĂN PHÒNG - CAMERA QUAN SÁT', '', 1, 'tinhungphat'),
-(109, 'Welcom to Rosa website', '', '<p>"Rosa - theo tiếng Ý, nghĩa là hoa hồng. Tuy là kinh doanh, nhưng là kinh doanh lĩnh vực rất truyền thống: ẩm thực &amp; thẩm mỹ.<br />Và không chỉ là kinh doanh, mà còn hướng đến những hoạt động mang tính nhân văn và cộng đồng nhằm giúp cho cuộc sống đẹp hơn, ý nghĩa hơn. Vì thế mới rất đằm thắm: hoa hồng".</p>\r\n<p> </p>', '', 151, '2012-05-18 01:43:26', 2, 1, NULL, NULL, 'welcom-to-rosa-website', '', '"Rosa - theo tiếng Ý, nghĩa là hoa hồng. Tuy là kinh doanh, nhưng là kinh doanh lĩnh vực rất truyền thống: ẩm thực &amp; thẩm mỹ.', '', 1, 'tinhungphat');
+(109, 'Welcom to Rosa website', '', '<p>"Rosa - theo tiếng Ý, nghĩa là hoa hồng. Tuy là kinh doanh, nhưng là kinh doanh lĩnh vực rất truyền thống: ẩm thực &amp; thẩm mỹ.<br />Và không chỉ là kinh doanh, mà còn hướng đến những hoạt động mang tính nhân văn và cộng đồng nhằm giúp cho cuộc sống đẹp hơn, ý nghĩa hơn. Vì thế mới rất đằm thắm: hoa hồng".</p>\r\n<p> </p>', '', 155, '2012-05-18 01:43:26', 2, 1, NULL, NULL, 'welcom-to-rosa-website', '', '"Rosa - theo tiếng Ý, nghĩa là hoa hồng. Tuy là kinh doanh, nhưng là kinh doanh lĩnh vực rất truyền thống: ẩm thực &amp; thẩm mỹ.', '', 1, 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -451,6 +460,79 @@ INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `dos_module_food`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_food` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `titleen` varchar(100) DEFAULT NULL,
+  `postdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `preview` text,
+  `previewen` text,
+  `content` text NOT NULL,
+  `contenten` text,
+  `tag` varchar(100) NOT NULL,
+  `tagen` varchar(100) DEFAULT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `descriptionen` varchar(250) DEFAULT NULL,
+  `hits` int(11) NOT NULL DEFAULT '0',
+  `record_order` int(11) NOT NULL DEFAULT '1',
+  `hot` tinyint(1) NOT NULL DEFAULT '0',
+  `extra_field1` varchar(100) DEFAULT NULL,
+  `extra_field2` varchar(100) DEFAULT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_module_item_cat_cat_id` int(11) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `dos_module_food`
+--
+
+INSERT INTO `dos_module_food` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(1, 'ẾCH CHIÊN NƯỚC MẮM', '', '2012-05-18 02:01:38', 'ch-chin-nc-mm.jpg', '<p>Từ lâu, dân gian đã đánh giá thịt ếch thơm và ngon như thịt gà ta. Không chỉ...</p>\r\n<p>Từ lâu, dân gian đã đánh giá thịt ếch thơm và ngon như thịt gà ta. Không chỉ...</p>', '', '<p>Nguyên liệu:</p>\r\n<p>- Ếch: 3 con</p>\r\n<p>- Hành tây</p>\r\n<p>- Hành lá</p>\r\n<p>- Ớt sừng</p>\r\n<p>- Tỏi băm: 1 muỗng</p>\r\n<p>- Dầu ăn: 1 muỗng</p>\r\n<p>- Nước mắm: 2/3 muỗng</p>\r\n<p>- Tương ớt: 1 muỗng</p>\r\n<p>- Đường: ½ muỗng</p>\r\n<p>- Bột ngọt: ½ muỗng</p>\r\n<p>Thực hiện:</p>\r\n<p>- Hành tây cắt múi</p>\r\n<p>- Ếch lột da, chặt khúc vứa ăn</p>\r\n<p>- Hành lá cắt khúc</p>\r\n<p>- Làm nước sốt: cho ½ muỗng đường, ½ muỗng bột ngọt, 2/3 muỗng nước, tương ớt và nước dùng . Khuấy đều hỗn hợp lên.</p>\r\n<p>- Cho ếch vào chảo dầu chiên đến khi da giòn.</p>\r\n<p>- Bắt chảo, đợi nóng cho tỏi vào phi, cho nước sốt, hành tây, đầu hành lá và ớt vào đảo sơ lên tiếp đến cho hành tây và ếch vào xào đều lên.</p>\r\n<p>- Cho ra đĩa, dùng kèm với nước sốt.</p>', '', 'ech-chien-nuoc-mam', '', 'Từ lâu, dân gian đã đánh giá thịt ếch thơm và ngon như thịt gà ta. Không chỉ...', '', 0, 1, 1, NULL, NULL, 1, 1),
+(2, 'Khai giảng lớp Pha chế biểu diễn (Showmanship) WORKING', '', '2012-05-18 06:16:24', 'khai-giang-lop-pha-che-bieu-dien-showmanshipworking.jpg', '<p>Nhằm Trang bị cho Học viên những kỹ năng biểu diễn trong 1 quầy Bar.</p>', '', '<p>Nhằm Trang bị cho Học viên những kỹ năng biểu diễn trong 1 quầy Bar.</p>\r\n<p>Ngày khai giảng: 24//04/2012(Vui lòng đăng ký giữ chỗ trước ngày khai giảng)</p>\r\n<p>Thời gian đào tạo: 12 buổi</p>\r\n<p>Thời gian học: Sáng 3 – 5 – 7 từ 8h – 20 h</p>\r\n<p>Học phí: 1.000.000 vnđ</p>\r\n<p>Chương Trình:</p>\r\n<ol><li>Kỹ năng sử dụng Shaker</li>\r\n<li>Xoay shaker</li>\r\n<li>Lăn shaker trên tay</li>\r\n<li>Kỹ thuật sử dụng Mixing Glass</li>\r\n<li>Kỹ thuật sử dụng Mixing glass</li>\r\n<li>Kết hợp với shaker</li>\r\n<li>Kỹ thuật sử dụng Chai</li>\r\n<li>Kỹ thuật sử dụng chai</li>\r\n<li>Kết hợp với shaker</li>\r\n<li>Thực hành biểu diễn</li>\r\n<li>Ôn tập</li>\r\n<li>Kiểm tra cuối khóa</li>\r\n</ol>', '', 'khai-giang-lop-pha-che-bieu-dien-showmanship-working', '', 'Nhằm Trang bị cho Học viên những kỹ năng biểu diễn trong 1 quầy Bar.', '', 0, 2, 1, NULL, NULL, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_food_cat`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_food_cat` (
+  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_parent_id` int(11) NOT NULL DEFAULT '0',
+  `cat_title` varchar(100) NOT NULL,
+  `cat_titleen` varchar(100) DEFAULT NULL,
+  `preview` text,
+  `previewen` text,
+  `tag` varchar(100) NOT NULL,
+  `tagen` varchar(100) DEFAULT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `descriptionen` varchar(250) DEFAULT NULL,
+  `pic_full` varchar(100) DEFAULT NULL,
+  `cat_order` int(11) NOT NULL,
+  `cat_extra1` varchar(45) DEFAULT NULL,
+  `cat_extra2` varchar(45) DEFAULT NULL,
+  `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_usernames_username` varchar(45) NOT NULL,
+  PRIMARY KEY (`cat_id`),
+  KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_module_food_cat`
+--
+
+INSERT INTO `dos_module_food_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
+(1, 0, 'Ẩm thực &amp; Thẩm mỹ', '', NULL, NULL, 'am-thuc-tham-my', '', 'Ẩm thực &amp; Thẩm mỹ', '', '', 1, NULL, NULL, 1, 'tinhungphat');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `dos_module_menus`
 --
 
@@ -479,6 +561,9 @@ INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `
 ('Dịch vụ', '', 'services', '', 4, '', '', '', '', 'tinhungphat'),
 ('Báo giá', '', 'news', '', 5, '', '', '', '', 'tinhungphat'),
 ('Video', '', 'video', '', 6, '', '', '', '', 'tinhungphat'),
+('Hỗ trợ học nghề', '', 'training', '', 6, '', '', '', '', 'tinhungphat'),
+('Ẩm thực và thẩm mỹ', '', 'food', '', 6, '', '', '', '', 'tinhungphat'),
+('Chương trình đào tạo', '', 'programs', '', 6, '', '', '', '', 'tinhungphat'),
 ('Liên hệ', '', 'contact', '', 7, '', '', '', '', 'tinhungphat');
 
 -- --------------------------------------------------------
@@ -570,9 +655,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456066),
+('day_time', 2456071),
 ('max_count', 1),
-('counter', 1),
+('counter', 6),
 ('yesterday', 1);
 
 -- --------------------------------------------------------
@@ -591,7 +676,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1337328013);
+('''127.0.0.1''', 1337756787);
 
 -- --------------------------------------------------------
 
@@ -696,6 +781,45 @@ INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `dos_module_programs`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_programs` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `titleen` varchar(100) DEFAULT NULL,
+  `preview` text,
+  `previewen` text,
+  `content` text NOT NULL,
+  `contenten` text,
+  `pic_full` varchar(100) DEFAULT NULL,
+  `hit` int(11) NOT NULL DEFAULT '1',
+  `created` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `record_order` int(11) NOT NULL DEFAULT '1',
+  `hot` tinyint(1) NOT NULL DEFAULT '0',
+  `extra_field1` varchar(45) DEFAULT NULL,
+  `extra_field2` varchar(45) DEFAULT NULL,
+  `tag` varchar(100) NOT NULL,
+  `tagen` varchar(100) DEFAULT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `descriptionen` varchar(250) DEFAULT NULL,
+  `activated` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_usernames_username` varchar(45) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `dos_module_programs`
+--
+
+INSERT INTO `dos_module_programs` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
+(1, 'Hỗ trợ học nghề 100 % cho bộ đội', '', NULL, NULL, '<p style="text-align:center;"><strong>LỜI NGỎ</strong><br /><strong>GỬI ANH EM QUÂN NHÂN XUẤT NGŨ</strong></p>\r\n<p style="text-align:left;">Công ty Rosa rất hân hạnh được gặp gỡ quý anh em.</p>\r\n<p>ROSA chuyên đào tạo và cung cấp các dịch vụ ẩm thực và thẩm mỹ, được Sở Lao Động Thương Binh - Xã Hội cấp phép hoạt động dạy nghề.</p>\r\n<p>Hàng năm, công ty đã liên tục đào tạo và cho ra trường nhiều học viên có tay nghề tốt được các nhà hàng, cơ sở kinh doanh ăn uống, dich vụ giải trí và doanh nghiệp nước ngoài,... đánh giá tốt. Có nhiều học viên ra trường tự thành lập cơ sở kinh doanh riêng thành công.</p>\r\n<p>Công ty đã và đang đào tạo nhiều nghề phù hợp với Bộ đội xuất ngũ như: Quản lý nhà hàng, Quản lý Bar-café, Đầu bếp chuyên nghiệp, Pha chế thức uống (Bartender); Tỉa rau củ - quả trang trí tiệc, Làm bánh kem, Cắt và thiết kế tóc .... đây là những nghề có nhiều triển vọng trong xã hội hiện đại. Học viên ra trường có nhiều cơ hội việc làm, thu nhập từ 1.500.000 đến 4.000.000 vnđ.Đặc biệt, thời gian học ngắn, dễ hiểu, thực hành thường xuyên.</p>\r\n<p>Đặt biệt:Giới thiệu công việc bán thời gian cho anh em chưa có việc làm (kiếm thêm thu nhập) trong thời gian học.Công ty hỗ trợ xin việc làm sau khi tốt nghiệp .</p>', '', '', 2, '2012-05-18 07:47:14', 1, 0, NULL, NULL, 'ho-tro-hoc-nghe-100-cho-bo-doi', '', 'Công ty Rosa rất hân hạnh được gặp gỡ quý anh em.\r\n\r\nROSA chuyên đào tạo và cung cấp các dịch vụ ẩm thực và thẩm mỹ, được Sở Lao Động Thương Binh - Xã Hội cấp phép hoạt động dạy nghề.', '', 1, 'tinhungphat'),
+(2, 'Đào tạo PHP chuyên sâu', '', NULL, NULL, '<p>GIỚI THIỆU KHÓA HỌC<br />Phải chăng cái thời vàng son của Công nghệ thông tin đã qua rồi, nghề lập trình không còn đứng trên top đầu của các ngành nghề danh giá nữa?</p>\r\n<p>10 năm nhìn lại..<br />Bắt đầu với sự kiện Y2K làm dấu ấn lịch sử, tiếp theo là sự sụp đổ hàng loạt các công ty dotcom ( công ty hoạt động trên Internet ). Các lập trình viên, các kỹ sư CNTT đã trải qua một giai đoạn khó khăn trong tầm ảnh hưởng mang tính domino này.<br />Web lên ngôi. Internet băng thông rộng phát triển và các công ty dotcom hồi sinh. Thế giới web lại rộn ràng với wiki, blog, youtube, web 2.0, mạng xã hội, …</p>\r\n<p>Lập trình viên cũng trong vòng phát triển đó, từ “chế tác” các phần mềm chạy trên desktop thì phát triển các website , các hệ thống web là xu thế. Và với họ -</p>', '', '', 1, '2012-05-23 01:27:44', 2, 0, NULL, NULL, 'dao-tao-php-chuyen-sau', '', '', '', 1, 'tinhungphat');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `dos_module_services`
 --
 
@@ -729,7 +853,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(1, 'Hỗ trợ học nghề 100 % cho bộ đội', '', NULL, NULL, '<p style="text-align:center;"><strong>LỜI NGỎ</strong><br /><strong>GỬI ANH EM QUÂN NHÂN XUẤT NGŨ</strong></p>\r\n<p style="text-align:left;">Công ty Rosa rất hân hạnh được gặp gỡ quý anh em.</p>\r\n<p>ROSA chuyên đào tạo và cung cấp các dịch vụ ẩm thực và thẩm mỹ, được Sở Lao Động Thương Binh - Xã Hội cấp phép hoạt động dạy nghề.</p>\r\n<p>Hàng năm, công ty đã liên tục đào tạo và cho ra trường nhiều học viên có tay nghề tốt được các nhà hàng, cơ sở kinh doanh ăn uống, dich vụ giải trí và doanh nghiệp nước ngoài,... đánh giá tốt. Có nhiều học viên ra trường tự thành lập cơ sở kinh doanh riêng thành công.</p>\r\n<p>Công ty đã và đang đào tạo nhiều nghề phù hợp với Bộ đội xuất ngũ như: Quản lý nhà hàng, Quản lý Bar-café, Đầu bếp chuyên nghiệp, Pha chế thức uống (Bartender); Tỉa rau củ - quả trang trí tiệc, Làm bánh kem, Cắt và thiết kế tóc .... đây là những nghề có nhiều triển vọng trong xã hội hiện đại. Học viên ra trường có nhiều cơ hội việc làm, thu nhập từ 1.500.000 đến 4.000.000 vnđ.Đặc biệt, thời gian học ngắn, dễ hiểu, thực hành thường xuyên.</p>\r\n<p>Đặt biệt:Giới thiệu công việc bán thời gian cho anh em chưa có việc làm (kiếm thêm thu nhập) trong thời gian học.Công ty hỗ trợ xin việc làm sau khi tốt nghiệp .</p>', '', '', 1, '2012-05-18 07:47:14', 1, 0, NULL, NULL, 'ho-tro-hoc-nghe-100-cho-bo-doi', '', 'Công ty Rosa rất hân hạnh được gặp gỡ quý anh em.\r\n\r\nROSA chuyên đào tạo và cung cấp các dịch vụ ẩm thực và thẩm mỹ, được Sở Lao Động Thương Binh - Xã Hội cấp phép hoạt động dạy nghề.', '', 1, 'tinhungphat');
+(1, 'Hỗ trợ học nghề 100 % cho bộ đội', '', NULL, NULL, '<p style="text-align:center;"><strong>LỜI NGỎ</strong><br /><strong>GỬI ANH EM QUÂN NHÂN XUẤT NGŨ</strong></p>\r\n<p style="text-align:left;">Công ty Rosa rất hân hạnh được gặp gỡ quý anh em.</p>\r\n<p>ROSA chuyên đào tạo và cung cấp các dịch vụ ẩm thực và thẩm mỹ, được Sở Lao Động Thương Binh - Xã Hội cấp phép hoạt động dạy nghề.</p>\r\n<p>Hàng năm, công ty đã liên tục đào tạo và cho ra trường nhiều học viên có tay nghề tốt được các nhà hàng, cơ sở kinh doanh ăn uống, dich vụ giải trí và doanh nghiệp nước ngoài,... đánh giá tốt. Có nhiều học viên ra trường tự thành lập cơ sở kinh doanh riêng thành công.</p>\r\n<p>Công ty đã và đang đào tạo nhiều nghề phù hợp với Bộ đội xuất ngũ như: Quản lý nhà hàng, Quản lý Bar-café, Đầu bếp chuyên nghiệp, Pha chế thức uống (Bartender); Tỉa rau củ - quả trang trí tiệc, Làm bánh kem, Cắt và thiết kế tóc .... đây là những nghề có nhiều triển vọng trong xã hội hiện đại. Học viên ra trường có nhiều cơ hội việc làm, thu nhập từ 1.500.000 đến 4.000.000 vnđ.Đặc biệt, thời gian học ngắn, dễ hiểu, thực hành thường xuyên.</p>\r\n<p>Đặt biệt:Giới thiệu công việc bán thời gian cho anh em chưa có việc làm (kiếm thêm thu nhập) trong thời gian học.Công ty hỗ trợ xin việc làm sau khi tốt nghiệp .</p>', '', '', 2, '2012-05-18 07:47:14', 1, 0, NULL, NULL, 'ho-tro-hoc-nghe-100-cho-bo-doi', '', 'Công ty Rosa rất hân hạnh được gặp gỡ quý anh em.\r\n\r\nROSA chuyên đào tạo và cung cấp các dịch vụ ẩm thực và thẩm mỹ, được Sở Lao Động Thương Binh - Xã Hội cấp phép hoạt động dạy nghề.', '', 1, 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -759,6 +883,43 @@ INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen
 (39, 'Trần Đức Huy', '', '0902516059', 'huy_hoang956', 3, 'yahoo', 'tinhungphat'),
 (40, 'Nguyễn Duy Khang', '', '0909122558', 'nguyenkhang2819', 1, 'yahoo', 'tinhungphat'),
 (41, 'Trần Đức Hưng', '', '0932025802', 'hungtran111087', 2, 'yahoo', 'tinhungphat');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_training`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_training` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `titleen` varchar(100) DEFAULT NULL,
+  `content` text NOT NULL,
+  `contenten` text,
+  `hit` int(11) NOT NULL DEFAULT '0',
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `record_order` smallint(6) NOT NULL DEFAULT '1',
+  `hot` tinyint(1) NOT NULL DEFAULT '0',
+  `extra_field1` varchar(45) DEFAULT NULL,
+  `extra_field2` varchar(45) DEFAULT NULL,
+  `tag` varchar(100) NOT NULL,
+  `tagen` varchar(100) DEFAULT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `descriptionen` varchar(250) DEFAULT NULL,
+  `activated` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_usernames_username` varchar(45) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
+  KEY `tag` (`tag`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=110 ;
+
+--
+-- Dumping data for table `dos_module_training`
+--
+
+INSERT INTO `dos_module_training` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
+(108, 'Giới thiệu công ty', '', '<p style="text-align:justify;"><span style="text-decoration:underline;"><span style="font-size:12pt;">Tin HưngPhát(THP) </span></span>chuyên cung cấp sản phẩm, dich vụ về các mặt hàng: Máy PC, Máy văn phòng, Laptop, Máy In,Máy Chấm<br />Công, Camera quan sát,báo trộm cháy...... Nay Tin Hưng Phát chúng tôi trân trọng gửi đến Quý khách hàng thư ngỏ này với<br />mong muốn Quý Khách hàng có thêm sự lựa chọn và chúng tôi có thêm khách hàng thân thiết mới.<br />» Các sản phẩm của THP :<br />- Mặt hàng chủ lực của THP chúng tôi là: máy bộ <strong>PC, Laptop, Netbook, Macbook, Camera quan sát, Chuông cửa, khóa điện tử</strong><br />-<strong> Linh Kiện PC, Máy VP</strong>: Main, Ram , CPU, DVD, Case, Power, VGA, LCD … Thiết bị ngoại vi : HDD External, Webcam,<br />speaker,<br />headphone, USB, USB 3G, mp3, mp4, ….<br />- <strong>Software</strong> : phần mềm diệt virus (Kaspersky, BKis, Panda, Norton, Avira...), phần mềm chấm công, camera...<br />-<strong> Linh Kiện Laptop</strong>: HDD, Ram, LCD, DVD, tản nhiệt, …..<br />-<strong> Printer</strong>: Máy In HP,Canon, Samsung, Brother, Epson, OKI ...,Mực In HP Chính Hãng, Mực sạc HP, Canon, Samsung, Epson,<br />Brother, OKI...<br />-<strong> Máy chấm công</strong> vân tay, cảm ứng với chức năng và ưu điểm phù hợp với các doanh nghiệp vừa và nhỏ tích hợp chấm công<br />chính xác. Có thể quản lý dễ dàng từ 50 cho tới 5000 nv. Thẻ chấm công Logo công ty,tên nhân viên, hình nhân viên....<br />-<strong> Hệ thống báo trộm không dây</strong> Báo trộm tại chổ và từ xa thông báo qua điện thoại.Báo động có Trộm tại vùng kiểm soát, bộ<br />kiểm soát trung tâm sẽ kích hoạt hệ thống còi hụ còi. Kiểm Soát Trung Tâm kiểm soát được 1 vùng, 16 đầu dò.<br />- <strong>Camera quan sát</strong> với cự ly rộng hình ảnh rõ nét, tên miền cố định, dữ liệu tập trung ......<br />-<strong> Thiết kế Website</strong>, update dữ liệu, bảo trì...... cho các doanh ngiệp vừa và nhỏ<br />» Dịch vụ bảo trì PC, printer, camera, laptop.. đa dạng, hỗ trợ kỹ thuật miễn phí trong thời gian bảo trì, đưa ra giải pháp tốt<br />nhất cho máy tính của bạn.<br />&gt;&gt;Hỗ trợ kĩ thuật nhanh nhất đáp ứng kịp thời và hiệu quả những nhu cầu của khách hàng<br />&gt;&gt;Thời gian và hình thức thanh toán linh hoạt, với phương châm: ”Mang sản phẩm và dịch vụ tốt nhất tới tận tay khách hàng<br />là niềm vui và hạnh phúc của chúng tôi” . Đặc biệt giá cả hoàn hảo nhất có tính cạnh tranh cao trên thị trường.<br />&gt;&gt;Với đội ngũ nhân viên trẻ, giàu tri thức và nhiệt huyết, không ngừng sáng tạo cam kết sẽ mang đến cho quý khách hàng<br />những dịch vụ với chất lượng hoàn hảo.<br />&gt;&gt;Mục tiêu chúng tôi &gt; "Luôn luôn sáng tạo hướng tới thành công"</p>', '', 92, '2012-05-14 03:12:04', 1, 0, '', '', 'gioi-thieu-cong-ty', '', 'CÔNG TY TNHH TIN HỌC -VIỄN THÔNG TIN HƯNG PHÁT\nCHUYÊN CUNG CẤP LINH KIỆN MÁY TÍNH - MÁY VĂN PHÒNG - CAMERA QUAN SÁT', '', 1, 'tinhungphat'),
+(109, 'Welcom to Rosa website', '', '<p>"Rosa - theo tiếng Ý, nghĩa là hoa hồng. Tuy là kinh doanh, nhưng là kinh doanh lĩnh vực rất truyền thống: ẩm thực &amp; thẩm mỹ.<br />Và không chỉ là kinh doanh, mà còn hướng đến những hoạt động mang tính nhân văn và cộng đồng nhằm giúp cho cuộc sống đẹp hơn, ý nghĩa hơn. Vì thế mới rất đằm thắm: hoa hồng".</p>\r\n<p> </p>', '', 153, '2012-05-18 01:43:26', 2, 1, NULL, NULL, 'welcom-to-rosa-website', '', '"Rosa - theo tiếng Ý, nghĩa là hoa hồng. Tuy là kinh doanh, nhưng là kinh doanh lĩnh vực rất truyền thống: ẩm thực &amp; thẩm mỹ.', '', 1, 'tinhungphat');
 
 -- --------------------------------------------------------
 
@@ -1104,6 +1265,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 --
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
+('grouplaptrinh', '', 'b7a659e0c28c88b3ee01adf805fc228f', '2012-05-19 15:37:38', NULL, NULL, NULL, '', '', NULL, '0000-00-00 00:00:00', 0, 1, 'rosavn', 19, 'thoi-trang'),
 ('tinhungphat', 'tinhungphat@gmail.com', '8ddcff3a80f4189ca1c9d4d902c3c909', '2012-05-14 03:11:27', 'Tin Hưng Phát', '0613889245', 'Công ty TNHH tin học viễn thông Tin Hưng Phát', 'user', 'vi', '', '2012-06-12 17:00:00', 0, 1, 'rosavn', 19, 'cong-nghe-thong-tin-vien-thong');
 
 -- --------------------------------------------------------

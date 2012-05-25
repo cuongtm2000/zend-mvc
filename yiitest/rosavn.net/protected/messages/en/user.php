@@ -2,6 +2,10 @@
 return array(
     'about.link' => 'about',
     'products.link' => 'products',
+	
+    'training.link' => 'training',
+    'programs.link' => 'programs',
+    'food.link' => 'food',
 
     'products.order.link' => 'order',
     'products.cartitem.link' => 'cart-item',
