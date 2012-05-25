@@ -2,6 +2,9 @@
 return array(
     'about.link' => 'gioi-thieu',
     'products.link' => 'san-pham',
+    'training.link' => 'ho-tro-hoc-nghe',
+    'programs.link' => 'chuong-trinh-dao-tao',
+    'food.link' => 'am-thuc-tham-my',
 
     'products.order.link' => 'dat-hang',
     'products.cartitem.link' => 'gio-hang',
