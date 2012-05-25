@@ -45,7 +45,7 @@ a:hover{color:#000;}
 
 /*Ho tro ky thuat*/
 .support{list-style:none;padding:5px 0 1px 0; text-align:center;margin:0 0 15px 0}
-.support li{padding:2px 0;line-height: 1.5em}
+.support li{padding:2px 0;line-height: 1.5em;color:#444}
 .support li img{margin:0 0 5px 0}
 
 /*Thong ke truy cap*/
@@ -110,9 +110,8 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .price-info span{margin: 0 0 0 10px;color: #000}
 
 /** Form lien he  **/
-.title-contact{ background:#CCC195;margin:0 0 10px 0; padding:7px 2px 7px 10px; font-family:Tahoma, Geneva, sans-serif;font-weight:bold; color:#33220C}
 #frm{margin:0 0 10px 0;}
-.frame-contact label{color:#fff;font-weight:700; margin:0 !important;width:150px; float:left}
+.frame-contact label{color:#fff; margin:0 !important;width:150px; float:left}
 .frame-contact{list-style:none;margin:15px 0 10px 0}
 .frame-contact li{padding:4px 0; margin:0 !important}
 .frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
