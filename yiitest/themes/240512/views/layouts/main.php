@@ -179,16 +179,15 @@
 		<div class="menu-bottom">
 			<div class="tent-fter">
 				<ul class="nav-fter">
-					<li><a href="index.html" class="select">Trang chủ</a></li>
-					<li><a href="about.html">Giới thiệu</a></li>
-					<li><a href="products.html">Sản phẩm</a></li>
-					<li><a href="recruitment.html">Tuyển dụng</a></li>
-					<li><a href="news.html">Tin tức</a></li>
-					<li class="none-line"><a href="contact.html">Liên hệ</a></li>
+					<?php $size = count($this->nav); $i = 0; foreach($this->nav as $value):?>
+						<?php $selected = ($value['url']==$this->module->id) ?  ' class="select"' : ''?>
+						<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
+						<?php $none = ($i < ($size-1)) ? '' : ' class="none-line"' ?>
+						<li<?php echo $none?>><a<?php echo $selected ?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
+						<?php $i++; endforeach;?>
 				</ul>
-				<p>Copyright &copy; 2011 by Grouplaptrinh.com. All rights reserved</p>
-			</div>	
-			<div class="copright">Developed by <a href="http://dos.vn">Dos.vn</a></div> <div class="clear"></div>
+				<p><?php echo $this->lang['copyright'] ?></p>
+			<div class="copright"><?php echo $this->lang['developed']?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></div>
 		</div>
 	</div>
 </body>
