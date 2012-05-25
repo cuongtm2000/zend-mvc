@@ -42,12 +42,11 @@
 					<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl']?>/" title="Logo"><img class="logo" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a>
 				<?php endif;?>
 				<ul id="nav">
-					<?php $size = count($this->nav); $i = 0; foreach($this->nav as $value):?>
+					<?php foreach($this->nav as $value):?>
 					<?php $selected = ($value['url']==$this->module->id) ?  ' class="select"' : ''?>
 					<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
-					<?php $none = ($i < ($size-1)) ? '' : ' class="last"' ?>
-					<li<?php echo $none?>><a<?php echo $selected ?> class="linknav" href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
-					<?php $i++; endforeach;?>
+					<li><a<?php echo $selected ?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
+					<?php endforeach;?>
 				</ul>
 				<?php if(isset($this->function['menu_about']) && ($this->function['menu_about'])):?>
 				<h1 class="title-left"><span><?php echo $this->lang['about'] ?></span></h1>
