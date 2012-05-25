@@ -42,13 +42,7 @@
 							<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl']?>/" title="Logo"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a>
 						<?php endif;?>
 					</div>
-					<p class="hot-line"><?php echo $this->lang['company_phone']?></p>
-					<div id="search">
-						<form  id="frsearch" name="frm-search" action="" method="post">
-							<input type="text" class="input"  value="Search entire store here ..." onblur="if(this.value=='') this.value='Search entire store here ...'" onfocus="if(this.value =='Search entire store here ...' ) this.value=''"/>
-							<input type="image" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/btn-go.gif" alt="" class="bt-go" />
-						</form>
-					</div>  <div class="clear"></div>
+					<p class="hot-line"><?php echo $this->lang['company_phone']?></p> <div class="clear"></div>
 				</div>	
 					<ul id="nav">
 						<?php foreach($this->nav as $value):?>
