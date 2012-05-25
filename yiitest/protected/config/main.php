@@ -7,7 +7,7 @@
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
     'name' => 'Dos.vn',
-    'theme' => 'dos.vn',
+    'theme' => 'dos-blue',
     //'language'=>'vi',
     // preloading 'log' component
     'preload' => array('log'),
