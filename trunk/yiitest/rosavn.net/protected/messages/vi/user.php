@@ -2,6 +2,7 @@
 return array(
     'about.link' => 'gioi-thieu',
     'products.link' => 'san-pham',
+    'learning.link' => 'chuong-trinh-hoc-moi',
     'training.link' => 'ho-tro-hoc-nghe',
     'programs.link' => 'chuong-trinh-dao-tao',
     'food.link' => 'am-thuc-tham-my',

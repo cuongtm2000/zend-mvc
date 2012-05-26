@@ -2,6 +2,7 @@
 return array(
     'about.link' => 'about',
     'products.link' => 'products',
+    'learning.link' => 'learning',
 	
     'training.link' => 'training',
     'programs.link' => 'programs',
