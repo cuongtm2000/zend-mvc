@@ -3,6 +3,20 @@ return array(
     //about modules
     '<about:(gioi-thieu)>' => 'about/default/index', //index
     '<about:(gioi-thieu)>/<id:[-a-z0-9]+>' => array('about/default/view', 'urlSuffix' => '.html'), //view
+  
+  //about programs
+    '<programs:(chuong-trinh-dao-tao)>' => 'programs/default/index', //index
+    '<programs:(chuong-trinh-dao-tao)>/<id:[-a-z0-9]+>' => array('programs/default/view', 'urlSuffix' => '.html'), //view
+	
+	
+		  //about learning
+    '<learning:(chuong-trinh-hoc-moi)>' => 'learning/default/index', //index
+    '<learning:(chuong-trinh-hoc-moi)>/<id:[-a-z0-9]+>' => array('learning/default/view', 'urlSuffix' => '.html'), //view
+	
+		  //about training
+    '<training:(ho-tro-hoc-nghe)>' => 'training/default/index', //index
+    '<training:(ho-tro-hoc-nghe)>/<id:[-a-z0-9]+>' => array('training/default/view', 'urlSuffix' => '.html'), //view
+
 
     //products modules
     '<products:(san-pham)>' => 'products/default/index', //index

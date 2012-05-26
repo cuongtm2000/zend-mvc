@@ -736,3 +736,493 @@ Stack trace:
 REQUEST_URI=/rosavn.net/images/banner4.jpg
 HTTP_REFERER=http://dos.vn/rosavn.net/
 ---
+2012/05/25 10:54:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/css/simplyscroll.verticall.css".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/c...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/css/simplyscroll.verticall.css
+HTTP_REFERER=http://localhost/dos/rosavn.net/
+---
+2012/05/25 10:54:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/js/jquery.simplyscroll.vertical.js".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/j...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/js/jquery.simplyscroll.vertical.js
+HTTP_REFERER=http://localhost/dos/rosavn.net/
+---
+2012/05/25 10:54:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/js/verticall-config.js".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/j...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/js/verticall-config.js
+HTTP_REFERER=http://localhost/dos/rosavn.net/
+---
+2012/05/25 10:54:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/25 10:54:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/25 10:55:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/tinhungphat/image/food/khai-giang-lop-pha-che-bieu-dien-showmanshipworking.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/public/userfiles/image/tinhungphat/image/food/khai-giang-lop-pha-che-bieu-dien-showmanshipworking.jpg
+HTTP_REFERER=http://localhost/dos/rosavn.net/am-thuc-tham-my
+---
+2012/05/25 10:55:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/tinhungphat/image/food/ch-chin-nc-mm.jpg".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/public/userfiles/image/tinhungphat/image/food/ch-chin-nc-mm.jpg
+HTTP_REFERER=http://localhost/dos/rosavn.net/am-thuc-tham-my
+---
+2012/05/25 10:55:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/25 10:55:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/25 10:55:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/25 10:55:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/25 10:55:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "chuong-trinh-dao-tao".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('chuong-trinh-da...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/chuong-trinh-dao-tao
+HTTP_REFERER=http://localhost/dos/rosavn.net/am-thuc-tham-my/am-thuc-tham-my/ech-chien-nuoc-mam.html
+---
+2012/05/25 11:15:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/25 11:15:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/25 11:16:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ho-tro-hoc-nghe".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ho-tro-hoc-nghe')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/ho-tro-hoc-nghe
+HTTP_REFERER=http://localhost/dos/rosavn.net/chuong-trinh-dao-tao
+---
+2012/05/25 11:32:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/25 11:32:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/25 11:32:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/26 09:13:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ho-tro-hoc-nghe".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ho-tro-hoc-nghe')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/ho-tro-hoc-nghe
+HTTP_REFERER=http://localhost/dos/rosavn.net/am-thuc-tham-my/am-thuc-tham-my/ech-chien-nuoc-mam.html
+---
+2012/05/26 09:13:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ho-tro-hoc-nghe".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ho-tro-hoc-nghe')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/ho-tro-hoc-nghe
+---
+2012/05/26 09:13:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/26 09:13:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/26 09:13:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ho-tro-hoc-nghe".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ho-tro-hoc-nghe')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/ho-tro-hoc-nghe
+HTTP_REFERER=http://localhost/dos/rosavn.net/training
+---
+2012/05/26 09:14:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/26 09:14:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/26 09:17:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/26 09:17:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/26 09:17:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "learning.link".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('learning.link')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/learning.link
+HTTP_REFERER=http://localhost/dos/rosavn.net/ho-tro-hoc-nghe
+---
+2012/05/26 09:19:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/26 09:19:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/26 09:19:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "chuong-trinh-hoc-moi".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('chuong-trinh-ho...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/chuong-trinh-hoc-moi
+HTTP_REFERER=http://localhost/dos/rosavn.net/ho-tro-hoc-nghe
+---
+2012/05/26 09:19:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "chuong-trinh-hoc-moi".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('chuong-trinh-ho...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/chuong-trinh-hoc-moi
+---
+2012/05/26 09:20:33 [error] [php] Undefined index: learning (E:\xampp\htdocs\dos\rosavn.net\protected\components\Controller.php:82)
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 E:\xampp\php\www\framework\web\CController.php(287): DefaultController->runAction()
+#2 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#3 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
+#4 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#5 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CWebApplication->run()
+REQUEST_URI=/dos/rosavn.net/learning
+in E:\xampp\htdocs\dos\rosavn.net\protected\components\Controller.php (82)
+in E:\xampp\htdocs\dos\rosavn.net\protected\modules\learning\controllers\DefaultController.php (5)
+in E:\xampp\htdocs\dos\rosavn.net\index.php (16)
+2012/05/26 09:21:13 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rosavn.dos_module_learning' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `dos_module_learning`.
+in E:\xampp\htdocs\dos\rosavn.net\protected\modules\learning\controllers\DefaultController.php (8)
+in E:\xampp\htdocs\dos\rosavn.net\index.php (16)
+2012/05/26 09:21:13 [error] [exception.CDbException] exception 'CDbException' with message 'Bảng "dos_module_learning" dùng cho lớp active record "Learning" không có trong database.' in E:\xampp\php\www\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Learning))
+#1 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(394): CActiveRecord::model('Learning')
+#2 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 E:\xampp\htdocs\dos\rosavn.net\protected\modules\learning\controllers\DefaultController.php(8): CActiveRecord->__construct()
+#4 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#5 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('')
+#9 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('learning')
+#10 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#12 {main}
+REQUEST_URI=/dos/rosavn.net/learning
+---
+2012/05/26 09:21:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/26 09:21:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/26 09:21:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "chuong-trinh-hoc-moi".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('chuong-trinh-ho...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/chuong-trinh-hoc-moi
+HTTP_REFERER=http://localhost/dos/rosavn.net/learning
+---
+2012/05/26 09:22:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/26 09:22:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/rosavn/images/favicon.ico".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/rosavn/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/themes/rosavn/images/favicon.ico
+---
+2012/05/26 09:22:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "chuong-trinh-hoc-moiadmin".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('chuong-trinh-ho...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/chuong-trinh-hoc-moiadmin
+---
+2012/05/26 09:22:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admn".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admn')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/admn
+---
+2012/05/26 09:23:23 [error] [php] file_get_contents(http://dos.vn/read-rss) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+ (E:\xampp\htdocs\dos\rosavn.net\protected\modules\admin\controllers\DefaultController.php:23)
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): DefaultController->runAction()
+#2 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): DefaultController->filterAccessControl()
+#5 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#7 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#8 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
+#9 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CWebApplication->run()
+REQUEST_URI=/dos/rosavn.net/admin/default/read
+in E:\xampp\htdocs\dos\rosavn.net\protected\modules\admin\controllers\DefaultController.php (23)
+in E:\xampp\htdocs\dos\rosavn.net\index.php (16)
+2012/05/26 09:24:45 [error] [php] include(Learning.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (E:\xampp\php\www\framework\YiiBase.php:418)
+Stack trace:
+#0 E:\xampp\htdocs\dos\rosavn.net\protected\modules\admin\components\StatisticsModules.php(15): spl_autoload_call()
+#1 E:\xampp\htdocs\dos\rosavn.net\protected\modules\admin\views\default\index.php(14): StatisticsModules->countItem()
+#2 E:\xampp\php\www\framework\web\CBaseController.php(127): require()
+#3 E:\xampp\php\www\framework\web\CBaseController.php(96): DefaultController->renderInternal()
+#4 E:\xampp\php\www\framework\web\CController.php(870): DefaultController->renderFile()
+#5 E:\xampp\php\www\framework\web\CController.php(783): DefaultController->renderPartial()
+#6 E:\xampp\htdocs\dos\rosavn.net\protected\modules\admin\controllers\DefaultController.php(33): DefaultController->render()
+#7 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#8 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): DefaultController->runAction()
+#10 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#12 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): DefaultController->filterAccessControl()
+#13 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#14 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#15 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#16 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
+#17 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#18 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CWebApplication->run()
+REQUEST_URI=/dos/rosavn.net/admin
+in E:\xampp\htdocs\dos\rosavn.net\protected\modules\admin\components\StatisticsModules.php (15)
+in E:\xampp\htdocs\dos\rosavn.net\protected\modules\admin\views\default\index.php (14)
+in E:\xampp\htdocs\dos\rosavn.net\protected\modules\admin\controllers\DefaultController.php (33)
+2012/05/26 09:25:06 [error] [php] file_get_contents(http://dos.vn/read-rss) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+ (E:\xampp\htdocs\dos\rosavn.net\protected\modules\admin\controllers\DefaultController.php:23)
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): DefaultController->runAction()
+#2 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): DefaultController->filterAccessControl()
+#5 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#7 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#8 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
+#9 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CWebApplication->run()
+REQUEST_URI=/dos/rosavn.net/admin/default/read
+in E:\xampp\htdocs\dos\rosavn.net\protected\modules\admin\controllers\DefaultController.php (23)
+in E:\xampp\htdocs\dos\rosavn.net\index.php (16)
+2012/05/26 09:32:31 [error] [php] include(Learning.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (E:\xampp\php\www\framework\YiiBase.php:418)
+Stack trace:
+#0 E:\xampp\htdocs\dos\rosavn.net\protected\modules\admin\components\StatisticsModules.php(16): spl_autoload_call()
+#1 E:\xampp\htdocs\dos\rosavn.net\protected\modules\admin\views\default\index.php(14): StatisticsModules->countItem()
+#2 E:\xampp\php\www\framework\web\CBaseController.php(127): require()
+#3 E:\xampp\php\www\framework\web\CBaseController.php(96): DefaultController->renderInternal()
+#4 E:\xampp\php\www\framework\web\CController.php(870): DefaultController->renderFile()
+#5 E:\xampp\php\www\framework\web\CController.php(783): DefaultController->renderPartial()
+#6 E:\xampp\htdocs\dos\rosavn.net\protected\modules\admin\controllers\DefaultController.php(33): DefaultController->render()
+#7 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#8 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): DefaultController->runAction()
+#10 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#12 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): DefaultController->filterAccessControl()
+#13 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#14 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#15 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#16 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
+#17 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#18 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CWebApplication->run()
+REQUEST_URI=/dos/rosavn.net/admin
+in E:\xampp\htdocs\dos\rosavn.net\protected\modules\admin\components\StatisticsModules.php (16)
+in E:\xampp\htdocs\dos\rosavn.net\protected\modules\admin\views\default\index.php (14)
+in E:\xampp\htdocs\dos\rosavn.net\protected\modules\admin\controllers\DefaultController.php (33)
+2012/05/26 09:33:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/learning".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/learning')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/admin/learning
+HTTP_REFERER=http://localhost/dos/rosavn.net/admin
+---
+2012/05/26 09:33:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/learning".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/learning')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/admin/learning
+HTTP_REFERER=http://localhost/dos/rosavn.net/admin
+---
+2012/05/26 09:33:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/learning".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/learning')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/admin/learning
+HTTP_REFERER=http://localhost/dos/rosavn.net/admin
+---
+2012/05/26 09:34:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/learning".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/learning')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/admin/learning
+HTTP_REFERER=http://localhost/dos/rosavn.net/admin
+---
+2012/05/26 09:34:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/learning".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/learning')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\dos\rosavn.net\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/dos/rosavn.net/admin/learning
+HTTP_REFERER=http://localhost/dos/rosavn.net/admin
+---
