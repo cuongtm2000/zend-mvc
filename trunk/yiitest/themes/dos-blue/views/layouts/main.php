@@ -31,9 +31,9 @@
 	<div class="top-page">
     	<div class="left-top">
             <?php if(Yii::app()->user->isGuest):?>
-                <a href="<?php echo Yii::t('main', 'msgButton')?>" title="<?php echo Yii::t('main', 'register')?>"><?php echo Yii::t('main', 'register')?></a> <span>|</span> <a href="/admin" title="<?php echo Yii::t('main', 'login')?>"><?php echo Yii::t('main', 'login')?></a>
+                <a class="register" href="<?php echo Yii::t('main', 'msgButton')?>" title="<?php echo Yii::t('main', 'register')?>"><?php echo Yii::t('main', 'register')?></a> <a class="login" href="/admin" title="<?php echo Yii::t('main', 'login')?>"><?php echo Yii::t('main', 'login')?></a>
             <?php else:?>
-                Chào <strong><?php echo Yii::app()->user->name?></strong> <span>|</span> <a href="/admin" title="Admin">Admin</a> <span>|</span> <a href="/<?php echo Yii::t('main', 'logout.link')?>"><?php echo Yii::t('main', 'logout.name')?></a>
+                Chào <strong><?php echo Yii::app()->user->name?></strong>  <a class="login" href="/admin" title="Admin">Admin</a> <a class="register" href="/<?php echo Yii::t('main', 'logout.link')?>"><?php echo Yii::t('main', 'logout.name')?></a>
             <?php endif;?>
         </div>
         <form class="frm-test" action="" method="post">
@@ -60,7 +60,7 @@
             <li><a href="" title=""><span>Dịch vụ</span></a></li>
             <li><a href="" title=""><span>Giải pháp</span></a></li>
             <li><a href="" title=""><span>Khách hàng</span></a></li>
-            <li class="none-line"><a href="<?php echo LANGURL.'/'.Yii::t('main', 'contact.link')?>" title="<?php echo Yii::t('main', 'contact.name')?>" title="<?php echo Yii::t('main', 'contact.name')?>"><span><?php echo Yii::t('main', 'contact.name')?></span></a></li>
+            <li class="none-line"><a href="<?php echo LANGURL.'/'.Yii::t('main', 'contact.link')?>" title="<?php echo Yii::t('main', 'contact.name')?>" ><span><?php echo Yii::t('main', 'contact.name')?></span></a></li>
         </ul> <div class="clear"></div>
 	</div> <!--End header-->
     
