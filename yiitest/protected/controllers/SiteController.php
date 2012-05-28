@@ -39,7 +39,6 @@ class SiteController extends HomeController {
         Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/scroller.js');
         //Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/allinone_carousel_charming.js');
 
-
         $this->layout = 'column2';
         $this->pageTitle = Yii::t('main', 'pageTitle');
         $this->keywords = Yii::t('main', 'keywords');
