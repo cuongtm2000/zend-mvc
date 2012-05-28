@@ -7,7 +7,7 @@ class SiteController extends HomeController {
             // captcha action renders the CAPTCHA image displayed on the contact page
             'captcha' => array(
                 'class' => 'CCaptchaAction',
-                'backColor' => 0xEEEEEE,
+                'backColor' => 0xFFFFFF,
             ),
             // page action renders "static" pages stored under 'protected/views/site/pages'
             // They can be accessed via: index.php?r=site/page&view=FileName
@@ -28,16 +28,10 @@ class SiteController extends HomeController {
         $this->render('msgerror', array('data' => $msg));
     }
 
-    /**
-     * This is the default 'index' action that is invoked
-     * when an action is not explicitly requested by users.
-     */
     public function actionIndex() {
-        //Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/advanced-slider-base.css');
         Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery-1.7.1.min.js');
         Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jcarousellite_1.0.1.js');
         Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/scroller.js');
-        //Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/allinone_carousel_charming.js');
 
         $this->layout = 'column2';
         $this->pageTitle = Yii::t('main', 'pageTitle');
