@@ -17,12 +17,14 @@
                     </li>
                     <li class="right">
                         <?php echo $form->textField($model, 'website', array('value' => 'Website', 'onblur' => 'if(this.value=="") this.value="Website"', 'onfocus' => 'if(this.value =="Website") this.value=""')); ?>
-                    </li>
+                    
+					</li>
                     <li class="clear left">
-                        <?php echo $form->textField($model, 'email', array('value' => 'Email', 'onblur' => 'if(this.value=="") this.value="Email"', 'onfocus' => 'if(this.value =="Email") this.value=""')); ?>
+						<?php echo $form->dropDownList($model, 'type', array('Hỗ trợ kỹ thuật' => 'Hỗ trợ kỹ thuật', 'Thanh toán' => 'Thanh toán', 'Đóng góp ý kiến' => 'Đóng góp ý kiến', 'Vấn đề khác' => 'Vấn đề khác'), array('class' => 'select-list')); ?>
+                        
                     </li>
                     <li class="right">
-                        <?php echo $form->dropDownList($model, 'type', array('Hỗ trợ kỹ thuật' => 'Hỗ trợ kỹ thuật', 'Thanh toán' => 'Thanh toán', 'Đóng góp ý kiến' => 'Đóng góp ý kiến', 'Vấn đề khác' => 'Vấn đề khác'), array('class' => 'select')); ?>
+                        <?php echo $form->textField($model, 'email', array('value' => 'Email', 'onblur' => 'if(this.value=="") this.value="Email"', 'onfocus' => 'if(this.value =="Email") this.value=""')); ?>
                     </li>
                     <li class="clear left">
                         <?php echo $form->textField($model, 'phone', array('value' => 'Phone Number', 'onblur' => 'if(this.value=="") this.value="Phone Number"', 'onfocus' => 'if(this.value =="Phone Number") this.value=""')); ?>
@@ -34,7 +36,7 @@
                         <?php endif; ?>
                     </li>
                     <li>
-                        <?php echo $form->textArea($model, 'body', array('rows' => 7, 'cols' => 50, 'onblur' => 'if(this.value=="") this.value="Content"', 'onfocus' => 'if(this.value =="Content") this.value=""')); ?>
+                        <?php echo $form->textArea($model, 'body', array('rows' => 10, 'cols' => 50, 'onblur' => 'if(this.value=="") this.value="Content"', 'onfocus' => 'if(this.value =="Content") this.value=""')); ?>
                     </li>
                     <li>
                         <?php echo CHtml::submitButton('Send', array('class' => 'submit')); ?>
@@ -44,7 +46,7 @@
             </div> <!--END left contact-->
             <div class="right-contact">
                 <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/contact.png" alt="Contac us"/>
-            </div><div class="clear"></div>
+            </div> <div class="clear"></div>
         </div>
     </div>
 <?php endif; ?>
