@@ -69,7 +69,7 @@
         <div id="content">
         	<div id="leftcontent">
 				<?php if(isset($this->function['menu_about']) && ($this->function['menu_about'])):?>
-				<h1 class="title-left"><span><?php echo $this->lang['about'] ?></span></h1>
+				<h2 class="title-left"><span><?php echo $this->lang['about'] ?></span></h2>
 				<ul class="sub-cat">
 					<?php foreach($this->function['menu_about'] as $value): ?>
 					<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'about.link')?>/<?php echo $value['tag'.LANG]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
@@ -78,7 +78,7 @@
 				<?php endif;?>
 
 				<?php if(isset($this->function['menu_services']) && ($this->function['menu_services'])):?>
-				<h1 class="title-left"><span><?php echo $this->lang['services'] ?></span></h1>
+				<h2 class="title-left"><span><?php echo $this->lang['services'] ?></span></h2>
 				<ul class="sub-cat">
 					<?php foreach($this->function['menu_services'] as $value): ?>
 					<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'services.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
@@ -87,28 +87,28 @@
 				<?php endif;?>
 
 				<?php if(isset($this->function['menu_news']) && ($this->function['menu_news'])):?>
-				<h1 class="title-left"><span><?php echo CHtml::encode($this->lang['news']) ?></span></h1>
+				<h2 class="title-left"><span><?php echo CHtml::encode($this->lang['news']) ?></span></h2>
 				<ul class="sub-cat">
 					<?php Common::menuMultiLevel($this->function['menu_news'], 'NewsCat', Yii::t('user', 'news.link')); ?>
 				</ul>
 				<?php endif; ?>
 
 				<?php if(isset($this->function['menu_video']) && ($this->function['menu_video'])):?>
-				<h1 class="title-left"><span><?php echo $this->lang['video'] ?></span></h1>
+				<h2 class="title-left"><span><?php echo $this->lang['video'] ?></span></h2>
 				<ul class="sub-cat">
 					<?php Common::menuMultiLevel($this->function['menu_video'], 'VideoCat', Yii::t('user', 'video.link')); ?>
 				</ul>
 				<?php endif; ?>
 
 				<?php if(isset($this->function['menu_products']) && ($this->function['menu_products'])):?>
-				<h1 class="title-left"><span><?php echo $this->lang['products'] ?></span></h1>
+				<h2 class="title-left"><span><?php echo $this->lang['products'] ?></span></h2>
 				<ul class="sub-cat">
 					<?php Common::menuMultiLevel($this->function['menu_products'], 'ProductsCat', Yii::t('user', 'products.link')); ?>
 				</ul>
 				<?php endif;?>
 
 				<?php if(isset($this->function['list_supports']) && ($this->function['list_supports'])):?>
-				<h1 class="title-left"><span><?php echo $this->lang['supports'] ?></span></h1>
+				<h2 class="title-left"><span><?php echo $this->lang['supports'] ?></span></h2>
 				<ul class="support">
 					<?php foreach($this->function['list_supports'] as $value): ?>
 					<?php if($value['support_type']=='yahoo'): ?>
@@ -122,7 +122,7 @@
 				</ul>
 				<?php endif; ?>
 				
-				<h1 class="title-left"><span><?php echo $this->lang['counter'] ?></span></h1>
+				<h2 class="title-left"><span><?php echo $this->lang['counter'] ?></span></h2>
 				<ul class="statistics">
 					<li><?php echo Yii::t('user', 'online')?>: <?php echo Yii::app()->counter->getOnline(); ?></li>
 					<li><?php echo Yii::t('user', 'today')?>: <?php echo Yii::app()->counter->getToday(); ?></li>
@@ -133,7 +133,7 @@
 				</ul>
 				
 				<?php if(isset($this->function['advs_left']) && ($this->function['advs_left'])):?>
-				<h1 class="title-left"><span><?php echo $this->lang['advs'] ?></span></h1>
+				<h2 class="title-left"><span><?php echo $this->lang['advs'] ?></span></h2>
 				<ul class="bg-adv">
 					<?php foreach($this->function['advs_left'] as $value): ?>
 					<li>
