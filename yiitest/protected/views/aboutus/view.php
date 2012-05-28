@@ -1,4 +1,4 @@
-<div class="left-content">
+<div id="leftcontent">
 	<?php if ($item): ?>
 		<?php $this->breadcrumbs = array(Yii::t('main', 'about.name') => Yii::app()->session['langUrl'] . '/'. Yii::t('main', 'about.link'), $item['title'.LANG]); ?>
 		<?php $this->pageTitle = $item['title'.LANG]; $this->description = $item['description'.LANG];?>
