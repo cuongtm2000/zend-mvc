@@ -25,12 +25,12 @@ a:hover{color:#000;}
 #nav li{float:left; position:relative; }
 #nav li a{font-weight:bold;padding:12px 22px; background:url(../images/nav-line.gif) no-repeat right; display:block; color:#fff;font-size:10pt;}
 #nav li a:hover{color:#EE6B11;}
-#nav li ul{ display:none}
+/*#nav li ul{ display:none}
 #nav li:hover > a{color:#EE6B11}
 #nav li:hover ul{ list-style:none;display:block; position:absolute; z-index:20000; top:42px; width:180px; border-bottom:1px solid #E5DBB8; border-left:1px solid #E5DBB8; border-right:1px solid #E5DBB8; *top:41px}
 #nav li ul li{width:100%;}
 #nav li ul li a{font-weight:normal;background:#fff; color:#555; padding:3px 11px; font-size:9pt}
-#nav li ul li a:hover{ background:#FF870F; color:#fff}
+#nav li ul li a:hover{ background:#FF870F; color:#fff}*/
 #nav .select{color:#EE6B11}
 
 /** Banner **/

@@ -145,10 +145,10 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 
 /** Form lien he  **/
 .title-contact{ background:#CCC195;margin:0 0 10px 0; padding:7px 2px 7px 10px; font-family:Tahoma, Geneva, sans-serif;font-weight:bold; color:#33220C}
-#frm{margin:0 0 10px 0;}
+#frm{margin:0 0 10px 0}
 .frame-contact label{color:#555;font-weight:700; margin:0 !important;width:150px; float:left}
 .frame-contact{list-style:none;margin:15px 0 10px 0}
-.frame-contact li{padding:4px 0; margin:0 !important}
+.frame-contact li{padding:10px 0 0 0; margin:0 !important}
 .frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
 .frame-contact textarea{border:1px solid #ddd;width: 350px; -moz-border-radius: 3px; -webkit-border-radius:3px}
 .frame-contact span{color:#f00;margin:0 5px 0 0}
