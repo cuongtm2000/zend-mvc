@@ -15,6 +15,7 @@ return array(
 	'about.link' => 'gioi-thieu',
 	'contact.name' => 'Liên hệ',
 	'contact.link' => 'lien-he',
+    'register' => 'Đăng ký',
 	'login' => 'Đăng nhập',
 	'logout.name' => 'Thoát',
 	'logout.link' => 'thoat',

@@ -13,13 +13,6 @@
     <meta name="keywords" content="<?php echo $this->keywords ?>" />
     <meta name="description" content="<?php echo $this->description ?>" />
 
-    <!-- <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.7.1.min.js"></script> -->
-
-    <!--Slider thumb images-->
-    <!-- <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jcarousellite_1.0.1.js"></script>
-    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/scroller.js"></script> -->
-    <!--End slider thumb images-->
-
     <?php if(($this->id == 'site') && ($this->action->id == 'index')):?>
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/advanced-slider-base.css" />
         <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.advancedSlider.min.js"></script>
@@ -36,7 +29,13 @@
 <body>
 <div id="wrapper">
 	<div class="top-page">
-    	<div class="left-top"><a href="#" title="">Đăng ký</a> <span>|</span> <a href="#" title="">Đăng nhập</a></div>
+    	<div class="left-top">
+            <?php if(Yii::app()->user->isGuest):?>
+                <a href="<?php echo Yii::t('main', 'msgButton')?>" title="<?php echo Yii::t('main', 'register')?>"><?php echo Yii::t('main', 'register')?></a> <span>|</span> <a href="/admin" title="<?php echo Yii::t('main', 'login')?>"><?php echo Yii::t('main', 'login')?></a>
+            <?php else:?>
+                Chào <strong><?php echo Yii::app()->user->name?></strong> <span>|</span> <a href="/admin" title="Admin">Admin</a> <span>|</span> <a href="/<?php echo Yii::t('main', 'logout.link')?>"><?php echo Yii::t('main', 'logout.name')?></a>
+            <?php endif;?>
+        </div>
         <form class="frm-test" action="" method="post">
         	<label>www.</label>
         	<input type="text" name="domain" size="25"/>
