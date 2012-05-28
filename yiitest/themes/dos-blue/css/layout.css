@@ -39,14 +39,14 @@ a:hover{color:#000;}
 /** header-btom **/
 .header-btom{}
 .hd-bt-left{float:left; width:520px}
-.title-company{font-size:30pt;color:#fff;padding:30px 0 0 0;margin:0 0 10px 0}
+.title-company{font-size:29pt;color:#fff;padding:30px 0 0 0;margin:0 0 10px 0}
 .white{color:#fff;font-size:11pt;margin:0 0 15px 0}
 
 /**  Form list-title  **/ 
 .template-great{border:none;background:url(../images/bg-input.png) no-repeat center; width:326px;padding:8px 0}
 .list-title{border:none;background:url(../images/bg-input.png) no-repeat center; width:326px;padding:8px 0;float:left}
 .list-title .frame-list{margin:0 0 0 15px; width:305px;border:none;font-size:11pt;color:#0074BD}
-.bton-great{background:url(../images/bg-button.png) no-repeat;border:none;font-size:14pt;font-weight:bold;color:#fff;padding:6px 0; width:139px;text-align:center;font-family:Tahoma, Geneva, sans-serif;cursor:pointer}
+.button-great{background:url(../images/bg-button.png) no-repeat;border:none;font-size:13pt;font-weight:bold;color:#fff;padding:7px 0; width:139px;text-align:center;font-family:Tahoma, Geneva, sans-serif;cursor:pointer; text-transform: uppercase}
 
 #banner{float:right; background:url(../images/bg-silder.png) no-repeat; height:270px; width:287px; position:relative; top:-13px}
 
@@ -65,7 +65,7 @@ a:hover{color:#000;}
 /** bg-solution (giai phap) **/
 .bg-solution{margin:0 0 50px 0}
 .top-solution{text-align:center;margin:0 0 15px 0}
-.title-solution{color:#ff940c;font-size:11pt}
+.title-solution{color:#ff940c;font-size:12pt}
 
 .sub-solution{list-style:none; width:48%}
 .sub-solution li{margin:0 0 10px 0}
@@ -194,7 +194,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .tent-footer{padding:5px 0}
 .bt-page{background:#F2F2F2 url(../images/bg-bttom.gif) repeat-x;min-width:960px}
 .footer, .tent-copyright{margin:auto; width:960px}
-.copyright{background:url(../images/bg-copy-1.gif) no-repeat center;margin:30px 0 50px 0;padding:11px 0}
+.copyright{background:url(../images/bg-copy-1.gif) no-repeat center;margin:30px 0 0 0;padding:11px 0}
 .logo-fter{margin:0 0 40px 0}
 
 #nav-fter{list-style:none;background:#6F0}
@@ -212,3 +212,11 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
 .errorSummary ul{margin:0 32px; padding:0}
 .errorSummary ul li{padding:2px 0; color: red}
+
+#sign-up{background: #fff url(../images/white-top-shadow.png) repeat-x; border-left: 2px solid #D7D5D0; border-right: 2px solid #D7D5D0; padding: 20px}
+.sign-up-heading{background: url(../images/bullet.png) no-repeat left; position: relative; padding-left: 32px; margin-top: 15px; margin-right: 32px}
+.sign-up-heading h1, .heading-contact{font-size: 18pt; font-weight: bold; font-family: tahoma; color: #434343}
+.sign-up-heading h1.small{font-size: 13pt; font-weight: bold; font-family: tahoma; color: #434343; padding:2px 0}
+.sign-up-heading h1.small span{top: 1px}
+.sign-up-heading span{color: #fff; font-size: 12pt; position: absolute; left: 8px; top: 5px}
+.sign-up-heading p{position: absolute; right:0; top: 6px; font-size: 10pt}

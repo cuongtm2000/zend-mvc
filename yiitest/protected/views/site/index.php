@@ -1,78 +1,157 @@
-<div id="header-wrap">
-    <div class="frame-title">
-        <h1 class="title-page">Thiết kế web Trực tuyến <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/price.png" alt="137 $" />  &nbsp;ấn tượng, giá rẻ!</h1>
-        <p>Đăng ký tài khoản, chọn mẫu website, chọn Module &amp; chức năng, chạy thử nghiệm, thanh toán, chạy độc lập</p>
-    </div>
-    <div id="banner">
-		<div id="allinone_carousel_charming">
-			<ul class="allinone_carousel_list">
-				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/web-preview.png" alt="" /></li>
-				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/web-preview-1.png" alt="" /></li>
-				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/web-preview-2.png" alt="" /></li>
-				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/web-preview-3.png" alt="" /></li>
-				<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/web-preview-4.png" alt="" /></li>
-			</ul>
-		</div>
-    </div>
-    <form action="<?php echo Yii::t('main', 'msgButton')?>" class="frm-create" name="frm-create" method="post">
-        <h2><?php echo Yii::t('main', 'msgCreate')?></h2>
-		<ul>
-            <li><input type="text" name="email" value="Email Address" onblur="if(this.value=='') this.value='Email Address'" onfocus="if(this.value =='Email Address' ) this.value=''" /></li>
-            <li><input type="password" name="password" value="Pass word" onblur="if(this.value=='') this.value='Pass word'" onfocus="if(this.value =='Pass word' ) this.value=''" /></li>
-            <li>
-                <select name="bussiness">
-					<?php foreach($listBusiness as $value):?>
-                    	<option value="<?php echo $value['bussiness_id']?>"><?php echo $value['bussiness_name']?></option>
-					<?php endforeach?>
+<div class="header-btom">
+    <div class="hd-bt-left">
+        <h1 class="title-company">Khởi tạo website trực tuyến chuyên nghiệp, ấn tượng.</h1>
+        <p class="white">Giải pháp tối ưu cho Doanh nghiệp vừa và nhỏ, nhóm hoặc cá nhân...</p>
+        <form action="<?php echo Yii::t('main', 'msgButton')?>" class="select-title" method="post">
+            <p class="list-title">
+                <select name="bussiness" size="1" class="frame-list">
+                    <?php foreach($listBusiness as $value):?>
+                    <option value="<?php echo $value['bussiness_id']?>"><?php echo $value['bussiness_name']?></option>
+                    <?php endforeach?>
                 </select>
-            </li>
-            <li><input type="submit" class="get" value="  <?php echo Yii::t('main', 'createweb')?>  "/></li>
+            </p>
+            <input type="submit" class="button-great" value="  <?php echo Yii::t('main', 'createweb')?>  "/>
+        </form>
+    </div> <!--End hd bt left-->
+    <div id="banner">
+        <ul class="slider">
+            <li class="slider-item"><a href="http://grouplaptrinh.com" title="grouplaptrinh"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner.png" alt="banner" /></a></li>
+            <li class="slider-item"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner1.png" alt="banner1" /></li>
         </ul>
-    </form><div class="clear"></div>
-</div><!--End header wrap-->
-<h1 class="title-solution"><?php echo Yii::t('main', 'popular')?></h1>
-<div class="content">
-    <div class="left-tent">
-        <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-w1.jpg" alt="Xây dựng website nhanh chóng, dễ dàng" />
-        <h2 class="title-tent">Xây dựng website nhanh chóng, dễ dàng</h2>
-        <p>Bạn chỉ cần vài phút để có ngay một website cho doanh nghiệp hay cá nhân bạn, giao diện quản lý đơn giản &amp; trực quan, bạn chỉ cần nhập liệu và tùy chỉnh ứng dụng của mình mọi lúc, mọi nơi.</p>
-    </div><!--End left cotent-->
-    <div class="cter-tent">
-        <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/web-templates.jpg" alt="Mẫu giao diện chuyên nghiệp, đa dạng" />
-        <h2 class="title-tent">Mẫu giao diện chuyên nghiệp, đa dạng</h2>
-        <p>Bộ thư viện mẫu website phong phú đã được nhiều khách hàng sử dụng sẽ giúp bạn hài lòng. Có thể thay đổi giao diện bất cứ lúc nào và bật, tắt các chức năng module. Tự do tùy biến ứng dụng của bạn.</p>
-    </div><!--End center content-->
-    <div class="right-tent">
-        <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/google-adwords.jpg" alt="Dễ dàng cho các bộ máy tìm kiếm" />
-        <h2 class="title-tent">Dễ dàng cho các bộ máy tìm kiếm</h2>
-        <p>Mã nguồn để xây dựng web được lập trình tỉ mỉ đúng theo chuẩn W3C sẽ giúp website có thứ hạng trong các công cục tìm kiếm Google, yahoo, bring... với các từ khóa ngành nghề của bạn.</p>
-    </div><!--End right content-->    <div class="clear"></div>
-</div><!--End row tent 1-->
+    </div> <!--End banner--> <div class="clear"></div>
 
-<div class="frame-features">
-    <span>Xem các tính năng website mà chúng tôi dành cho Doanh nghiệp bạn!</span> <a href="#" title="" class="free">Hướng dẫn sử dụng</a> <a href="#" title="" class="view">Tính năng website</a>
-</div>
-<div class="content">
-    <div class="left-tent">
-        <!-- <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-w4.jpg" alt="Premium Website Packages" /> -->
-        <h2 class="title-tent">Danh sách website tiêu biểu</h2>
-        <ul class="list-typical">
-			<?php foreach($listUserImport as $value):?>
-				<li><a href="http://<?php echo $value['username']?>.dos.vn" target="_blank"><?php echo $value['username']?></a></li>
-			<?php endforeach?>
+</div> <!--End header-btom -->
+<div class="prod_detail">
+    <!--Slide show Jquery Lightbox-->
+    <div class="big_thumb">
+        <!--Slide Prev-->
+        <span class="prevsmall"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/prev.png" alt="" /></span>
+        <div class="thumbs anyClass" id="paginate-slider2">
+            <ul>
+                <?php foreach($listUserImport as $value):?>
+                    <li><a href="http://<?php echo $value['username']?>.dos.vn" target="_blank"><img src="<?php echo Yii::app()->baseUrl; ?>/public/userfiles/image/<?php echo $value['username']?>/image/demo.png" alt="<?php echo $value['username']?>" /></a></li>
+                <?php endforeach?>
+            </ul>
+        </div>
+        <span class="nextsmall"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/next.png" alt="" /></span>
+        <!--Slide Next-->
+    </div><!--END Slide show Jquery Lightbox-->
+    <div class="bg-title-great">Website tạo bởi dos.vn</div>
+</div> <!--End prod detail-->  <div class="clear"></div>
+<div class="bg-solution">
+    <div class="top-solution">
+        <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/price.png" alt="Website trọn gói 137$ Dos.vn" />
+        <p class="title-solution"><strong>GIẢI PHÁP ĐƯỢC YÊU THÍCH ĐỂ CÓ WEBSITE CHẤT LƯỢNG</strong></p>
+    </div>
+    <div>
+        <ul class="left sub-solution">
+            <li><a href="#" title="">Một tên miền quốc tế (.com, .net, .org,...)</a></li>
+            <li><a href="#" title="">Tạo email dùng riêng cho công ty</a></li>
+            <li><a href="#" title="">Hostting 1.000 MB, băng thông 50GB sever tốc độ nhanh, ổn định</a></li>
+            <li><a href="#" title="">Web động, có đầy đủ tính năng để giới thiệu, quảng cáo, bán hàng</a></li>
         </ul>
+        <ul class="right sub-solution">
+            <li><a href="#" title="">Tự thay đổi giao diện trang web, với nhiều mẫu thiết kế đep</a></li>
+            <li><a href="#" title="">Phầm mềm quản trị để người dùng tự thay đổi nội dùng trên web</a></li>
+            <li><a href="#" title="">Công cụ chèn từ khóa để website nhanh xuất hiện trên Google</a></li>
+            <li><a href="#" title="">Thống kê truy cập, hỗ trợ trực tuyến</a></li>
+        </ul> <div class="clear"></div>
     </div>
-    <div class="cter-tent">
-        <h2 class="title-tent">Danh sách website mới đăng ký</h2>
-		<ul class="list-typical">
-			<?php foreach($listUserNewCreated as $value):?>
-				<li><a href="http://<?php echo $value['username']?>.dos.vn" target="_blank"><?php echo $value['username']?></a></li>
-			<?php endforeach?>
-		</ul>
-    </div>
-    <!-- <div class="right-tent">
-        <h2 class="title-tent">Get Found Online</h2>
-        <p>Get traffic to your site from search engines like Google®  and Yahoo!®  by submitting your site to search engines, adding keywords, building links, and more. We'll even help you promote on Facebook and Twitter.</p>
-    </div> --><div class="clear"></div>
+</div> <!--End bg-solution -->
+<div class="bg-panel">
+    <div class="left panel">
+        <div class="top-panel"></div>
+        <div class="mid-panel">
+            <h2 class="title-panel"><span class="ico-port green">Xây dựng nhanh chóng</span><img class="img-nel-1" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ico-nel-1.png" alt="" /></h2>
+            <p>Bạn chỉ cần vài phút để có ngay một website cho doanh nghiệp hay cá nhân bạn, giao diện quản lý đơn giản &amp; trực quan, bạn chỉ cần nhập liệu và tùy chỉnh ứng dụng của mình mọi lúc, mọi nơi</p>
+            <p class="more"><a href="#" title="">Chi tiết</a></p>
+        </div>
+        <div class="bttom-panel"></div>
+    </div> <!--End panel-1 -->
+    <div class="left panel panel-2">
+        <div class="top-panel"></div>
+        <div class="mid-panel">
+            <h2 class="title-panel"><span class="ico-port blue">Mẫu giao diện</span><img class="img-nel-2" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ico-nel-2.png" alt="" /></h2>
+            <p>Bộ thư viện mẫu website phong phú đã được nhiều khách hàng sử dụng sẽ giúp bạn hài lòng. Có thể thay đổi giao diện bất cứ lúc nào và bật, tắt các chức năng module. Tự do tùy biến ứng dụng của bạn</p>
+            <p class="more"><a href="#" title="">Chi tiết</a></p>
+        </div>
+        <div class="bttom-panel"></div>
+    </div> <!--End panel-1 -->
+    <div class="right panel">
+        <div class="top-panel"></div>
+        <div class="mid-panel">
+            <h2 class="title-panel"><span class="ico-port org">Công cụ tìm kiếm</span><img class="img-nel-3" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ico-nel-3.png" alt="" /></h2>
+            <p>Mã nguồn để xây dựng web được lập trình tỉ mỉ đúng theo chuẩn W3C sẽ giúp website có thứ hạng trong các công cục tìm kiếm Google, yahoo, bring... với các từ khóa ngành nghề của bạn</p>
+            <p class="more"><a href="#" title="">Chi tiết</a></p>
+        </div>
+        <div class="bttom-panel"></div>
+    </div> <!--End panel-1 --> <div class="clear"></div>
 </div>
-<!-- <h2 class="title-family marginb50">Need a <a href="#" title="">custom Face book Page</a> too? Try <a href="#" title="">Pagemodo</a>, a member of the Webs Family of Products</h2> -->
+
+<div id="content">
+    <h2 class="title-hdbook"><img class="ico-hdbook" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/bg-handbook.png" alt="" /><span>Cẩm nang - Hướng dẫn</span></h2>
+    <div id="leftcontent">
+        <div class="new-hdbook">
+            <div class="frame-hd-img"><a href="#" title="" ><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img.jpg" alt="" /></a></div>
+            <h3 class="title-new-hdbook"><a href="#" title="">Hướng dẫn xóa bộ nhớ cache của trình duyệt</a></h3>
+            <p>Trong trường hợp trang web quý khách xem bị lỗi, hiển thị không đúng hoặc hiển thị thông tin cũ, quý khách hãy thử khắc phục bằng cách xóa bộ nhớ cache của trình duyệt. Trong trường hợp trang web quý khách xem bị lỗi, hiển thị không đúng hoặc hiển thị thông tin cũ, quý khách hãy thử khắc phục bằng cách xóa bộ nhớ cache của trình duyệt.</p>  <div class="clear"></div>
+        </div> <!--End new hdbook-->
+        <div class="bg-sub-hand">
+            <ul class="left sub-hdbook">
+                <li><a href="" title="">Kích thước banner tiêu chuẩn trong thiết kế web</a></li>
+                <li><a href="" title="">Trích dẫn các văn bản pháp quy về website</a></li>
+                <li><a href="" title="">Những điều nên lưu ý khi viết blog doanh nghiệp</a></li>
+                <li><a href="" title="">Các lỗi thường gặp khi thiết kế trang web</a></li>
+                <li><a href="" title="">Năm yếu tố người sử dụng không ưa trên website</a></li>
+                <li><a href="" title="">Đăng ký sử dụng Gmail theo tên miền riêng</a></li>
+                <li><a href="" title="">Yêu cầu cần thiết để cài đặt website lên internet</a></li>
+                <li><a href="" title="">Các câu hỏi thường gặp về tên miền</a></li>
+                <li><a href="" title="">Chuyển đổi nhà quản lý tên miền</a></li>
+                <li><a href="" title="">Các lỗi thường gặp khi gởi nhận email</a></li>
+            </ul>
+            <ul class="right sub-hdbook">
+                <li><a href="" title="">Kích thước banner tiêu chuẩn trong thiết kế web</a></li>
+                <li><a href="" title="">Trích dẫn các văn bản pháp quy về website</a></li>
+                <li><a href="" title="">Những điều nên lưu ý khi viết blog doanh nghiệp</a></li>
+                <li><a href="" title="">Các lỗi thường gặp khi thiết kế trang web</a></li>
+                <li><a href="" title="">Năm yếu tố người sử dụng không ưa trên website</a></li>
+                <li><a href="" title="">Đăng ký sử dụng Gmail theo tên miền riêng</a></li>
+                <li><a href="" title="">Yêu cầu cần thiết để cài đặt website lên internet</a></li>
+                <li><a href="" title="">Các câu hỏi thường gặp về tên miền</a></li>
+                <li><a href="" title="">Chuyển đổi nhà quản lý tên miền</a></li>
+                <li><a href="" title="">Các lỗi thường gặp khi gởi nhận email</a></li>
+            </ul> <div class="clear"></div>
+        </div> <!--End bg sub hand-->
+    </div> <!--End leftcontent-->
+    <div id="rightcontent">
+        <h2 class="title-right"><span>DANH MỤC MẪU WEBSITE</span></h2>
+        <ul class="sub-cat">
+            <li><a href="/mau-website/am-thuc-drink" title="Ẩm thực - Đồ uống">Ẩm thực - Đồ uống</a></li>
+            <li><a href="/mau-website/bds-kien-truc-xay-dung" title="BĐS - kiến trúc - xây dựng">BĐS - kiến trúc - xây dựng</a></li>
+            <li><a href="/mau-website/co-khi-may-moc-thiet-bi" title="Cơ khí - Máy móc - Thiết bị">Cơ khí - Máy móc - Thiết bị</a></li>
+            <li><a href="/mau-website/cong-nghe-thong-tin-vien-thong" title="Công nghệ thông tin - viễn thông">Công nghệ thông tin - viễn thông</a></li>
+            <li><a href="/mau-website/du-lich" title="Du lịch">Du lịch</a></li>
+            <li><a href="/mau-website/giao-duc-dao-tao" title="Giáo dục - đào tạo">Giáo dục - đào tạo</a></li>
+            <li><a href="/mau-website/hoa-tuoi" title="Hoa tươi">Hoa tươi</a></li>
+            <li><a href="/mau-website/luat-ke-toan" title="Luật - kế toán">Luật - kế toán</a></li>
+            <li><a href="/mau-website/nha-hang-cafe" title="Nhà hàng - Cafe">Nhà hàng - Cafe</a></li>
+            <li><a href="/mau-website/noi-that-ngoai-that" title="Nội thất - Ngoại thất">Nội thất - Ngoại thất</a></li>
+            <li><a href="/mau-website/tham-my-vien" title="Thẩm mỹ viện">Thẩm mỹ viện</a></li>
+            <li><a href="/mau-website/thoi-trang" title="Thời trang">Thời trang</a></li>
+            <li><a href="/mau-website/tranh-anh-qua-luu-niem" title="Tranh ảnh - quà lưu niệm">Tranh ảnh - quà lưu niệm</a></li>
+        </ul> <!--End sub cat-->
+        <div class="ico-mid">
+            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ico-right.png" alt="" />
+            <p>Đừng ngần ngại hãy liên hệ với chúng tôi để được tư vẫn miễn phí</p>
+        </div>
+        <ul class="support">
+            <li>
+                <div class="img-port"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-port.png" alt="" /></div>
+                <div class="ten-port">
+                    <p><a href="ymsgr:sendim?thanhansoft"><img src="http://opi.yahoo.com/online?u=thanhansoft&amp;m=g&amp;t=1&amp;l=us" alt="thanhansoft" /></a></p>
+                    <p>E: support@dos.vn </p>
+                    <p>T: 0929 001 001</p></div>  <div class="clear"></div>
+            </li>
+        </ul> <!--End support-->
+    </div> <!--End rightcontent--> <div class="clear"></div>
+</div><!--End content-->

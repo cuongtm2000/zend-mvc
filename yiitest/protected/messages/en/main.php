@@ -25,7 +25,7 @@ return array(
 	'chooseGallery' => 'Select a template website in accordance with your business',
 	'changeTemplate' => 'Don\'t worry, you can change your template at any time.',
 	'changeModule' => 'You can add and delete modules, functions at any time.',
-	'createweb' => 'Create my website',
+	'createweb' => 'Create web',
 	'chooseModules' => 'Choose Modules',
 	'chooseFunctions' => 'Choose Functions',
 
