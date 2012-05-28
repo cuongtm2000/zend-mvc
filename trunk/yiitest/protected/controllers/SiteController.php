@@ -33,11 +33,11 @@ class SiteController extends HomeController {
      * when an action is not explicitly requested by users.
      */
     public function actionIndex() {
-        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/allinone_carousel.css');
+        //Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/advanced-slider-base.css');
         Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery-1.7.1.min.js');
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery-ui-1.8.16.custom.min.js');
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/allinone_carousel.js');
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/allinone_carousel_charming.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jcarousellite_1.0.1.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/scroller.js');
+        //Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/allinone_carousel_charming.js');
 
 
         $this->layout = 'column2';
@@ -47,8 +47,8 @@ class SiteController extends HomeController {
 
         $business_class = new Bussiness();
         $username_class = new Username();
-
-        $this->render('index', array('listBusiness' => $business_class->listCats(1), 'listUserImport' => $username_class->listUserImport(), 'listUserNewCreated' => $username_class->listUserNewCreated()));
+        /*'listUserNewCreated' => $username_class->listUserNewCreated()*/
+        $this->render('index', array('listBusiness' => $business_class->listCats(1), 'listUserImport' => $username_class->listUserImport()));
     }
 
     public function actionSignup() {
@@ -93,8 +93,8 @@ class SiteController extends HomeController {
                 $this->redirect(array('/chen-du-lieu-mau'));
             }
         } else {
-            $model->email = Yii::app()->request->getPost('email', '');
-            $model->password = Yii::app()->request->getPost('password', '');
+            //$model->email = Yii::app()->request->getPost('email', '');
+            //$model->password = Yii::app()->request->getPost('password', '');
             $model->choose_business = $model->dos_bussiness_bussiness_id = Yii::app()->request->getPost('bussiness', '');
         }
         $this->render('signup', array('model' => $model, 'listBusiness' => $business_class->listCats(1), 'listProvinces' => $province_class->listProvinceByCountry('VND')));

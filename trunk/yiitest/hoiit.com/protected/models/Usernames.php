@@ -203,7 +203,7 @@ class Usernames extends CActiveRecord {
 
     //Front end - list record new
     public function listTopPostUsers() {
-        $command = Yii::app()->db->createCommand('SELECT count(post_id) AS num, username, picture FROM ' . $this->tableName() . ', hoiit_posts WHERE ' . $this->tableName() . '.username = hoiit_posts.hoiit_usernames_username AND enable=1 ORDER BY num DESC LIMIT 0, 12');
+        $command = Yii::app()->db->createCommand('SELECT COUNT(post_id) AS num, username, picture FROM ' . $this->tableName() . ', hoiit_posts WHERE ' . $this->tableName() . '.username = hoiit_posts.hoiit_usernames_username AND enable=1 GROUP BY username, picture ORDER BY num DESC, reg_date ASC LIMIT 0, 12');
         return $command->queryAll();
     }
 

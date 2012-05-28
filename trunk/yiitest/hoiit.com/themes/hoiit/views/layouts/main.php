@@ -91,9 +91,9 @@
 				<div class="catmenu">
 					<h4><?php echo Yii::t('main', 'topPoster')?></h4>
 					<ul class="top-user">
-						<?php foreach($this->listTopPostUsers as $values):?>
-							<li><a href="#" title="<?php echo $values['username']?>"><img src="<?php echo Yii::app()->request->baseUrl?>/public/userfiles/image/usernames/<?php echo $values['picture']?>" alt="<?php echo $values['username']?>" /></a></li>
-						<?php endforeach?>
+                        <?php foreach($this->listTopPostUsers as $values):?>
+                            <li><a href="#" title="<?php echo $values['username']?>"><?php if($values['picture']):?><img src="<?php echo Yii::app()->request->baseUrl?>/public/userfiles/image/usernames/<?php echo $values['picture']?>" alt="<?php echo $values['username']?>" /><?php else:?><img src="<?php echo Yii::app()->theme->baseUrl?>/images/no-avatar.png" alt="<?php echo $values['username']?>" /><?php endif;?></a></li>
+                        <?php endforeach?>
 					</ul><div class="clear"></div>
 				</div>
             </div><!--End menu bar-->

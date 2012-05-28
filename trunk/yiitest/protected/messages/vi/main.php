@@ -25,7 +25,7 @@ return array(
 	'chooseGallery' => 'Chọn một mẫu website phù hợp với ngành nghề kinh doanh của bạn',
 	'changeTemplate' => 'Bạn có thể thay đổi mẫu website bất kỳ lúc nào.',
 	'changeModule' => 'Bạn có thể thêm và xóa các module, chức năng bất cứ lúc nào.',
-	'createweb' => 'Tạo trang web',
+	'createweb' => 'Tạo web',
 	'chooseModules' => 'Chọn Modules',
 	'chooseFunctions' => 'Chọn Chức năng',
 
