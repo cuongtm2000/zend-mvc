@@ -15,6 +15,7 @@ return array(
 	'about.link' => 'about-us',
 	'contact.name' => 'Contact us',
 	'contact.link' => 'contact-us',
+    'register' => 'Register',
 	'login' => 'Login',
 	'logout.name' => 'Logout',
 	'logout.link' => 'logout',
