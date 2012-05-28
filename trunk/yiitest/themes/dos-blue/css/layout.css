@@ -131,8 +131,8 @@ a:hover{color:#000;}
 .sub-hdbook a{background:url(../images/ico-hdbok.gif) no-repeat left;padding:1px 0 1px 15px;display:block;color:#000}
 .sub-hdbook a:hover{color:#f90}
 
-.link{color:#939393; font-size:11pt;margin:0 0 20px 0;padding:0 0 5px 0;border-bottom:1px solid #E0E0E0}
-.link img{margin:0 10px;}
+.link{color:#939393; font-size:10pt;margin:0 0 20px 0;padding:0 0 5px 0;border-bottom:1px solid #E0E0E0}
+.link img{margin:0 6px}
 .link a{color:#0C4DA2}
 .link a:hover{color:#939393}
 
@@ -175,8 +175,8 @@ a:hover{color:#000;}
 ul.paging{float: right; margin:0  !important; padding:0 9px 5px 0; list-style: none;}
 ul.paging li{display: inline;margin:0 !important;}
 ul.paging .hidden{display: none;}
-ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{background:#0C4DA2;color:#fff; padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
-ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{background:#f00}
+ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{background:#0082F0;color:#fff; padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{background:#F89531}
 
 /*Footer*/
 .tent-footer{padding:5px 0}
@@ -238,3 +238,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .info-user{background: #F8F8F8; border: 1px solid #ddd; -moz-border-radius: 2px; border-radius: 2px; padding:5px 10px}
 .info-user li{list-style: none; margin-bottom: 7px; clear: both}
 .info-user li label{float: left; width:120px; font-weight: bold}
+
+#list-template{margin: 10px 0}
+#list-template li{display:inline-block;vertical-align: top;width:260px; margin: 0 50px 5px 0 !important;list-style: none; text-align: center}
+#list-template li img{border: 1px solid #ccc; cursor: pointer}

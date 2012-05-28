@@ -1,6 +1,6 @@
 <?php $this->breadcrumbs = array(Yii::t('main', 'templates.name') => Yii::app()->session['langUrl'] . '/'. Yii::t('main', 'templates.link'), $infoCat);?>
 <?php $this->pageTitle = Yii::t('main', 'templates.name') . ' ' . $infoCat; $this->description = 'Danh sách mẫu website thuộc lĩnh vực ngành nghề kinh doanh '. $infoCat . '. Bạn có thể chọn mẫu và xem chi tiết các tính năng dành cho mẫu bạn chọn'?>
-<div class="left-content">
+<div id="leftcontent">
 <ul id="list-template">
 	<?php if($templatesBusiness['models']):?>
 	<?php foreach($templatesBusiness['models'] as $value):?>
