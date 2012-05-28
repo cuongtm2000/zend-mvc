@@ -5372,3 +5372,704 @@ Stack trace:
 REQUEST_URI=/themes/070512/js/dropdown.js
 HTTP_REFERER=http://240312.dos.vn/san-pham/tui-may-anh/30010.html
 ---
+2012/05/28 02:23:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/js/allinone_carousel.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/js/allinone_carousel.js
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/css/allinone_carousel.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/css/allinone_carousel.css
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/advanced-slider-base.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('css/advanced-sl...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/advanced-slider-base.css
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/js/jquery-ui-1.8.16.custom.min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/js/jquery-ui-1.8.16.custom.min.js
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/js/allinone_carousel_charming.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/js/allinone_carousel_charming.js
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery-1.7.1.min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('js/jquery-1.7.1...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jquery-1.7.1.min.js
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jcarousellite_1.0.1.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('js/jcarousellit...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jcarousellite_1.0.1.js
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/scroller.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('js/scroller.js')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/scroller.js
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.advancedSlider.min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('js/jquery.advan...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jquery.advancedSlider.min.js
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.sider.banner.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('js/jquery.sider...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jquery.sider.banner.js
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/logo.png')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/banner1.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/banner1....')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/banner1.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/prev.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/prev.png')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/prev.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/carousel-1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/carousel...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/carousel-1.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/banner.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/banner.p...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/banner.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/carousel-2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/carousel...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/carousel-2.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/carousel-3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/carousel...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/carousel-3.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/carousel-4.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/carousel...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/carousel-4.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/carousel-5.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/carousel...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/carousel-5.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/next.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/next.png')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/next.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/price.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/price.pn...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/price.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/ico-nel-1.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/ico-nel-...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/ico-nel-1.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/ico-nel-2.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/ico-nel-...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/ico-nel-2.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/ico-nel-3.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/ico-nel-...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/ico-nel-3.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg-handbook.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/bg-handb...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg-handbook.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/img.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/img.jpg')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/img.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bull.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/bull.png')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bull.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/pro-2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/pro-2.jp...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/pro-2.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/pro-1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/pro-1.jp...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/pro-1.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/pro-3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/pro-3.jp...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/pro-3.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/bullet.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/bullet.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/ico-right.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/ico-righ...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/ico-right.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/img-port.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/img-port...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/img-port.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:23:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/logo-2.p...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/advanced-slider-base.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('css/advanced-sl...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/advanced-slider-base.css
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/css/allinone_carousel.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/css/allinone_carousel.css
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/js/allinone_carousel_charming.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/js/allinone_carousel_charming.js
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/js/jquery-ui-1.8.16.custom.min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/js/jquery-ui-1.8.16.custom.min.js
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery-1.7.1.min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('js/jquery-1.7.1...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jquery-1.7.1.min.js
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/js/allinone_carousel.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/js/allinone_carousel.js
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jcarousellite_1.0.1.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('js/jcarousellit...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jcarousellite_1.0.1.js
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/scroller.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('js/scroller.js')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/scroller.js
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.advancedSlider.min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('js/jquery.advan...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jquery.advancedSlider.min.js
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.sider.banner.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('js/jquery.sider...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jquery.sider.banner.js
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/logo.png')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/banner.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/banner.p...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/banner.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/carousel-2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/carousel...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/carousel-2.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/carousel-1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/carousel...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/carousel-1.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/prev.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/prev.png')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/prev.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/banner1.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/banner1....')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/banner1.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/carousel-3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/carousel...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/carousel-3.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/carousel-4.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/carousel...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/carousel-4.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/carousel-5.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/carousel...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/carousel-5.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/next.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/next.png')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/next.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/price.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/price.pn...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/price.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/ico-nel-1.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/ico-nel-...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/ico-nel-1.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/ico-nel-2.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/ico-nel-...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/ico-nel-2.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/ico-nel-3.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/ico-nel-...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/ico-nel-3.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg-handbook.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/bg-handb...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg-handbook.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/img.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/img.jpg')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/img.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bull.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/bull.png')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bull.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/pro-1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/pro-1.jp...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/pro-1.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/pro-2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/pro-2.jp...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/pro-2.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/pro-3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/pro-3.jp...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/pro-3.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/bullet.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/bullet.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/ico-right.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/ico-righ...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/ico-right.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/img-port.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/img-port...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/img-port.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:24:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/logo-2.p...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:25:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/bullet.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/bullet.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:25:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/white-top-shadow.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/white-top-shadow.png
+HTTP_REFERER=http://dos.vn/report-error/expired
+---
+2012/05/28 02:25:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/bullet.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/bullet.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:26:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/28 02:26:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/icon-medium.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/icon-medium.png
+HTTP_REFERER=http://dos.vn/dang-ky
+---
+2012/05/28 02:26:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/white-top-shadow.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/white-top-shadow.png
+HTTP_REFERER=http://dos.vn/dang-ky
+---
+2012/05/28 02:27:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/bullet.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/bullet.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:27:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/bullet.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/bullet.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/28 02:27:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/white-top-shadow.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/white-top-shadow.png
+HTTP_REFERER=http://dos.vn/dang-ky
+---
+2012/05/28 02:27:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/icon-medium.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/icon-medium.png
+HTTP_REFERER=http://dos.vn/dang-ky
+---
