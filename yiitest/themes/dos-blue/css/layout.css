@@ -202,7 +202,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .errorSummary ul{margin:0 32px; padding:0}
 .errorSummary ul li{padding:2px 0; color: red}
 
-#sign-up{background:#fff url(../images/white-top-shadow.png) repeat-x; border-left: 2px solid #D7D5D0; border-right: 2px solid #D7D5D0; padding: 20px}
+#sign-up{background: #fff url(../images/white-top-shadow.png) repeat-x; border-left: 2px solid #D7D5D0; border-right: 2px solid #D7D5D0; padding: 20px; margin-top: 12px;}
 .sign-up-heading{background: url(../images/bullet.png) no-repeat left; position: relative; padding-left: 32px; margin-top: 15px; margin-right: 32px}
 .sign-up-heading h1, .heading-contact{font-size: 18pt; font-weight: bold; font-family: tahoma; color: #434343}
 .sign-up-heading h1.small{font-size: 13pt; font-weight: bold; font-family: tahoma; color: #434343; padding:2px 0}
