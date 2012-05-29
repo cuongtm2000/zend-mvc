@@ -1,5 +1,5 @@
 <?php $this->breadcrumbs = array(Yii::t('main', 'templates.name')) ?>
-<div id="leftcontent">
+<div id="leftcontent" style="width:639px">
 	<ul id="list-template">
 		<?php if($templatesBusiness['models']):?>
 		<?php foreach($templatesBusiness['models'] as $value):?>

@@ -1,4 +1,4 @@
-<div id="rightcontent">
+<div id="rightcontent" style="width:274px">
 	<h1 class="title-right"><span><?php echo $this->lang['cat_title'] . ' '. Yii::t('main', 'templates.name')?></span></h1>
 	<ul class="sub-cat">
 		<?php foreach($listBusiness as $value):?>
