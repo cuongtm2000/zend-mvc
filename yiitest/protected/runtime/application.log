@@ -9137,3 +9137,427 @@ Stack trace:
 REQUEST_URI=/themes/dos-blue/images/white-top-shadow.png
 HTTP_REFERER=http://dos.vn/bai-viet/huong-dan-su-dung-web/ban-tin-2.html
 ---
+2012/05/29 02:38:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/bullet.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/bullet.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/29 02:47:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/white-top-shadow.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/white-top-shadow.png
+HTTP_REFERER=http://dos.vn/mau-website
+---
+2012/05/29 02:47:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/bullet.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/bullet.jpg
+HTTP_REFERER=http://dos.vn/mau-website
+---
+2012/05/29 02:49:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/white-top-shadow.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/white-top-shadow.png
+HTTP_REFERER=http://dos.vn/mau-website
+---
+2012/05/29 02:49:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/bullet.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/bullet.jpg
+HTTP_REFERER=http://dos.vn/mau-website
+---
+2012/05/29 02:49:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/white-top-shadow.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/white-top-shadow.png
+HTTP_REFERER=http://dos.vn/mau-website
+---
+2012/05/29 02:49:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/bullet.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/bullet.jpg
+HTTP_REFERER=http://dos.vn/mau-website
+---
+2012/05/29 02:59:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/bullet.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/bullet.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/29 02:59:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/white-top-shadow.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/white-top-shadow.png
+HTTP_REFERER=http://dos.vn/dang-ky
+---
+2012/05/29 03:00:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/29 03:01:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/white-top-shadow.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/white-top-shadow.png
+HTTP_REFERER=http://dos.vn/chen-du-lieu-mau
+---
+2012/05/29 03:01:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/white-top-shadow.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/white-top-shadow.png
+HTTP_REFERER=http://dos.vn/tao-web-thanh-cong
+---
+2012/05/29 03:01:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/dropdown.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/dropdown.js
+HTTP_REFERER=http://baovesieusao.dos.vn/
+---
+2012/05/29 03:02:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/dropdown.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/dropdown.js
+HTTP_REFERER=http://baovesieusao.dos.vn/
+---
+2012/05/29 03:02:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/dropdown.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/dropdown.js
+HTTP_REFERER=http://baovesieusao.dos.vn/gioi-thieu
+---
+2012/05/29 03:03:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/dropdown.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/dropdown.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham
+---
+2012/05/29 03:03:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/jquery.simplyscroll.vertical.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/jquery.simplyscroll.vertical.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham
+---
+2012/05/29 03:03:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/dropdown.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/dropdown.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/tui-style
+---
+2012/05/29 03:03:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/jquery.simplyscroll.vertical.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/jquery.simplyscroll.vertical.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/tui-style
+---
+2012/05/29 03:03:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/dropdown.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/dropdown.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/tui-style/tribed-large-shopper.html
+---
+2012/05/29 03:03:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/jquery.simplyscroll.vertical.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/jquery.simplyscroll.vertical.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/tui-style/tribed-large-shopper.html
+---
+2012/05/29 03:03:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/dropdown.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/dropdown.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/tui-style/tribed-large-shopper.html
+---
+2012/05/29 03:03:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/jquery.simplyscroll.vertical.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/jquery.simplyscroll.vertical.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/tui-style/tribed-large-shopper.html
+---
+2012/05/29 03:03:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/dropdown.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/dropdown.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/tui-style/rainbow-large-shopper.html
+---
+2012/05/29 03:03:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/jquery.simplyscroll.vertical.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/jquery.simplyscroll.vertical.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/tui-style/rainbow-large-shopper.html
+---
+2012/05/29 03:04:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/jquery.simplyscroll.vertical.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/jquery.simplyscroll.vertical.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/tui-style/mandarin-knitting-bag.html
+---
+2012/05/29 03:04:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/dropdown.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/dropdown.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/tui-style/mandarin-knitting-bag.html
+---
+2012/05/29 03:04:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/jquery.simplyscroll.vertical.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/jquery.simplyscroll.vertical.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/tui-doanh-nhan
+---
+2012/05/29 03:04:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/dropdown.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/dropdown.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/tui-doanh-nhan
+---
+2012/05/29 03:04:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/jquery.simplyscroll.vertical.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/jquery.simplyscroll.vertical.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/tui-doanh-nhan/0960.html
+---
+2012/05/29 03:04:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/dropdown.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/dropdown.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/tui-doanh-nhan/0960.html
+---
+2012/05/29 03:04:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/jquery.simplyscroll.vertical.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/jquery.simplyscroll.vertical.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/tui-doanh-nhan/40051.html
+---
+2012/05/29 03:04:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/dropdown.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/dropdown.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/tui-doanh-nhan/40051.html
+---
+2012/05/29 03:04:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/jquery.simplyscroll.vertical.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/jquery.simplyscroll.vertical.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham
+---
+2012/05/29 03:04:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/dropdown.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/dropdown.js
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham
+---
+2012/05/29 03:04:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/dropdown.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/dropdown.js
+HTTP_REFERER=http://baovesieusao.dos.vn/
+---
+2012/05/29 03:04:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/070512/js/dropdown.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/070512/j...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/070512/js/dropdown.js
+HTTP_REFERER=http://baovesieusao.dos.vn/
+---
+2012/05/29 03:06:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/29 03:10:39 [warning] [application] Failed to set unsafe attribute "remove_pic_thumb" of "Products".
+in D:\svn\protected\modules\admin\controllers\ProductsController.php (177)
+in D:\svn\index.php (16)
+2012/05/29 03:11:25 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "180412/cartitem".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('180412/cartitem', Array, true)
+#1 D:\svn\protected\modules\products\controllers\DefaultController.php(63): CController->render('180412/cartitem', Array)
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionCartitem()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('cartitem')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\svn\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/san-pham/gio-hang
+HTTP_REFERER=http://baovesieusao.dos.vn/
+---
+2012/05/29 03:11:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/29 03:12:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/180412/images/delete-cart.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/180412/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/180412/images/delete-cart.png
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/gio-hang
+---
+2012/05/29 03:12:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/180412/images/delete-cart.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/180412/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/180412/images/delete-cart.png
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/gio-hang
+---
+2012/05/29 03:13:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/180412/images/delete-cart.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/180412/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/180412/images/delete-cart.png
+HTTP_REFERER=http://baovesieusao.dos.vn/san-pham/gio-hang
+---
+2012/05/29 03:18:23 [warning] [application] Failed to set unsafe attribute "remove_pic_thumb" of "Products".
+in D:\svn\protected\modules\admin\controllers\ProductsController.php (177)
+in D:\svn\index.php (16)
+2012/05/29 03:20:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/bullet.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/bullet.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/29 03:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/bullet.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/bullet.jpg
+HTTP_REFERER=http://dos.vn/
+---
+2012/05/29 03:20:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dos-blue/images/bullet.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/dos-blue...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dos-blue/images/bullet.jpg
+HTTP_REFERER=http://dos.vn/
+---
