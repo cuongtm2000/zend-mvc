@@ -132,7 +132,7 @@ a:hover{color:#000;}
 .sub-hdbook a{background:url(../images/ico-hdbok.gif) no-repeat left;padding:1px 0 1px 15px;display:block;color:#000}
 .sub-hdbook a:hover{color:#f90}
 
-.link{color:#939393; font-size:10pt;margin:0 0 20px 0;padding:0 0 5px 0;border-bottom:1px solid #E0E0E0}
+.link{color:#333; font-size:10pt;margin:0 0 20px 0;padding:0 0 5px 0;border-bottom:1px solid #E0E0E0}
 .link img{margin:0 6px}
 .link a{color:#0C4DA2}
 .link a:hover{color:#939393}

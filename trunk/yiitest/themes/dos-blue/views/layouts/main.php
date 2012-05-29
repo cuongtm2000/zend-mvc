@@ -60,7 +60,7 @@
             <li><a href="" title=""><span>Dịch vụ</span></a></li>
             <li><a href="" title=""><span>Giải pháp</span></a></li>
             <li><a href="" title=""><span>Khách hàng</span></a></li>
-            <li class="none-line"><a href="<?php echo LANGURL.'/'.Yii::t('main', 'contact.link')?>" title="<?php echo Yii::t('main', 'contact.name')?>" ><span><?php echo Yii::t('main', 'contact.name')?></span></a></li>
+            <li class="none-line<?php echo (($this->id == 'site') && ($this->action->id == 'contact')) ? ' select' : '' ?>"><a href="<?php echo LANGURL.'/'.Yii::t('main', 'contact.link')?>" title="<?php echo Yii::t('main', 'contact.name')?>" ><span><?php echo Yii::t('main', 'contact.name')?></span></a></li>
         </ul> <div class="clear"></div>
 	</div> <!--End header-->
     
