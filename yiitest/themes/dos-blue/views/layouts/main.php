@@ -33,7 +33,7 @@
             <?php if(Yii::app()->user->isGuest):?>
                 <a class="register" href="<?php echo Yii::t('main', 'msgButton')?>" title="<?php echo Yii::t('main', 'register')?>"><?php echo Yii::t('main', 'register')?></a> <a class="login" href="/admin" title="<?php echo Yii::t('main', 'login')?>"><?php echo Yii::t('main', 'login')?></a>
             <?php else:?>
-                Chào <strong><?php echo Yii::app()->user->name?></strong>  <a class="login" href="/admin" title="Admin">Admin</a> <a class="register" href="/<?php echo Yii::t('main', 'logout.link')?>"><?php echo Yii::t('main', 'logout.name')?></a>
+                Chào <strong><?php echo Yii::app()->user->name?></strong>  <a class="welcome login" href="/admin" title="Admin">Admin</a> <a class="register" href="/<?php echo Yii::t('main', 'logout.link')?>"><?php echo Yii::t('main', 'logout.name')?></a>
             <?php endif;?>
         </div>
         <form class="frm-test" action="" method="post">
