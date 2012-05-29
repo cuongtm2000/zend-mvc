@@ -227,7 +227,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 /*Right contact*/
 .right-contact{float:right;width:316px}
 .captcha{position: relative; top: 0; left: 0}
-.captcha img{position: absolute; top: -9px; left: 15px}
+.captcha img{position: absolute; top: -9px; left: 5px}
 
 .title-choose{float:left;width: 120px}
 .all-choose-page{float:left; width: 700px}
