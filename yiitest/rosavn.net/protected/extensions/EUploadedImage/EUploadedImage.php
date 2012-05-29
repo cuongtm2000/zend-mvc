@@ -372,12 +372,6 @@ class EUploadedImage extends CComponent {
         //check Directory Exists
         $common_class = new Common();
         $common_class->recursiveMkdir($path . '/');
-        
-        /*if (!is_dir($path_upload)) {
-            //$this->mkdir_r($path_upload);
-            mkdir($path_upload, 0777, true);
-            //chmod($path_upload, 0777);
-        }*/
 
         //remove file old
         if ($file_old && file_exists($path_upload . $file_old)) {
