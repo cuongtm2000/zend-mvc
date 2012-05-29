@@ -198,9 +198,9 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 #nav-fter .row-7{float:right;margin:0;border:none}
 
 /* Error */
-.errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
-.errorSummary ul{margin:0 32px; padding:0}
-.errorSummary ul li{padding:2px 0; color: red}
+.left-contact .errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0 !important}
+.left-contact .errorSummary ul{margin:0 32px; padding:0}
+.left-contact .errorSummary ul li{padding:2px 0;list-style:disc; margin: 0 0 2px 10px !important; color: red}
 
 #sign-up{background: #fff url(../images/white-top-shadow.png) repeat-x; border-left: 2px solid #D7D5D0; border-right: 2px solid #D7D5D0; padding: 20px; margin-top: 12px;}
 .sign-up-heading{background: url(../images/bullet.png) no-repeat left; position: relative; padding-left: 32px; margin-top: 15px; margin-right: 32px}
