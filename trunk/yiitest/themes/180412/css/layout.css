@@ -76,7 +76,7 @@ a:hover{color:#000}
 #right-content p{margin:0 0 8px 0}
 #right-content ul li, #rightcontent ol li{margin: 0 0 0 40px}
 #right-content ul ,#rightcontent ol{margin: 0 0 12px 0}
-#right-content table{margin: auto}
+
 
 .title-right{font-size:17px;color:#3F3F3F;padding:7px 0;background:url(../images/bg-title-right-1.png) no-repeat;margin:0 0 5px 3px}
 .title-right span{padding:0 0 0 10px}
@@ -98,7 +98,7 @@ a:hover{color:#000}
 
 /** Tent product and frame product img **/
 .product-img{height:160px;width:175px;display:table-cell;vertical-align:middle}
-.price{color:#3F3F3F;margin:5px 0 12px 0 !important }
+.price{color:#3F3F3F;font-size:10pt; margin:5px 0 12px 0 !important }
 
 /****  Tieu đề sản phẩm    ****/
 .title-pro{ font-size:10pt;margin:0 0 8px 0;color:#444;padding:0 5px}
@@ -108,16 +108,16 @@ a:hover{color:#000}
 /***  Bton chi tiet and Dat hang  **/
 .bton-pro{margin:0 !important}
 .bton-detail{background:url(../images/btn_exclusive.gif) repeat-x;color:#fff;padding:4px 20px;font-weight:bold}
-.bton-order{background:url(../images/btn_button.gif) repeat-x;color:#fff;padding:4px 20px;font-weight:bold}
+.add-to-cart{background:url(../images/btn_button.gif) repeat-x;color:#fff;padding:4px 20px;font-weight:bold}
 
-.bton-order:hover{background:#444} .bton-detail:hover{background:#282828}
+.add-to-cart:hover{background:#444} .bton-detail:hover{background:#282828}
 .bton-pro a:hover{color:#fff}
 /****    End San pham noi bat of page index    ********/
 
 /**  Sub new   **/
 .frame-new{margin:30px 0 0 0}
 .sub-new{list-style:none;margin:0 0 15px 0;padding:5px 10px 0 20px}
-.sub-new li{padding:0 0 5px 0;line-height:1.5em}
+.sub-new li{padding:0 0 5px 0;line-height:1.5em;margin:0 0 0 !important}
 .sub-new li a{ display:block;color:#161616;background:url(../images/bull.gif) no-repeat left 4px; padding:1px 0 1px 15px}
 .sub-new li a:hover{background:url(../images/bull-hover.gif) no-repeat left 4px;color:#f90}
 
@@ -190,6 +190,23 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .errorSummary ul{margin:0 10px; padding:0}
 .errorSummary ul li{padding:2px 0; color: red}
 
+/*Add to cart*/
+.form_order{background:#fff;margin:0 0 15px 0;-webkit-border-radius:0 0 4px 6px;-moz-border-radius:0 0 6px 4px}
+.form_order thead{background:#444}
+.form_order thead tr td{font-weight : bold;padding : 5px !important; color:#fff;font-size:10pt}
+
+.form_order tbody tr td{border : 1px solid #ddd;}
+.form_order tbody tr .pic-order{padding:5px 0}
+.form_order tbody tr input{border:1px solid #ccc}
+.form_order tbody tr td a{color:#444}
+.form_order tbody tr td a:hover{color:#9A9A9A}
+
+.btn_order{cursor:pointer; border:none;font-weight:bold;background:#2C2C2C;padding:5px 7px;color:#fff;-webkit-border-radius:4px;-moz-border-radius:4px;margin:0 10px 0 0}
+.btn_order:hover{color:#fff}
+
+.frm-cart label{width:100px}
+.notificaion{color:#2C2C2C;font-size:10pt;margin:0 0 10px 0}
+.note span{color:#f00}
 
 
 
