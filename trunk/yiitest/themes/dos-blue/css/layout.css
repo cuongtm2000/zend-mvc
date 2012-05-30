@@ -1,4 +1,4 @@
-body {background:#F3F3F3 url(../images/bg.png) no-repeat; font-family:Arial, Helvetica, sans-serif; font-size:9pt;}
+body {padding:8px 0 0 0;background:#F3F3F3 url(../images/bg.png) no-repeat; font-family:Arial, Helvetica, sans-serif; font-size:9pt}
 .left{float: left;}
 .right{float:right}
 .clear{clear:both}
@@ -12,7 +12,7 @@ a:hover{color:#000;}
 *{margin:0; padding:0}
 #wrapper {margin:auto; width:960px}
 
-.top-page{padding:8px 0 0 0;margin:0 0 10px 0}
+.top-page{}
 .left-top{color:#fff;float:left}
 .register{background:url(../images/icon-register.png) no-repeat left 1px ; padding:0 0 0 18px;margin:0 20px 0 0}
 .login{background:url(../images/icon-login.png) no-repeat left 1px; padding:0 0 0 18px}
@@ -22,15 +22,15 @@ a:hover{color:#000;}
 
 /** form test domain **/
 .frm-test{float:right; text-align:right;color:#fff}
-.bt-test{border:none;background:url(../images/bg-test.gif) no-repeat;color:#0569B5;font-weight:bold;padding:2px 6px;cursor:pointer}
+.bt-test{border:none;background:url(../images/bg-test.gif) no-repeat;color:#0569B5;font-weight:bold;width:59px; cursor:pointer}
 
 /*Header*/
-#header{margin: 0 0 10px 0}
+#header{padding:10px 0 12px 0}
 
 #logo{float:left}
 
 /*nav*/
-#nav{list-style:none;float:right;padding:10px 0 0 0;*_padding:0}
+#nav{list-style:none;float:right;padding:10px 0 0 0}
 #nav li{float:left;margin:0 1px 0 0}
 #nav li a{padding: 0 0 0 5px; float:left;}
 #nav li a span{padding:9px 10px; display:block;color:#444;font-size:10pt}
@@ -202,7 +202,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .left-contact .errorSummary ul{margin:0 32px; padding:0}
 .left-contact .errorSummary ul li{padding:2px 0;list-style:disc; margin: 0 0 2px 10px !important; color: red}
 
-#sign-up{background: #fff url(../images/white-top-shadow.png) repeat-x; border-left: 2px solid #D7D5D0; border-right: 2px solid #D7D5D0; padding: 20px; margin-top: 10px;}
+#sign-up{background: #fff url(../images/white-top-shadow.png) repeat-x; border-left: 2px solid #D7D5D0; border-right: 2px solid #D7D5D0; padding: 20px}
 .sign-up-heading{background: url(../images/bullet.png) no-repeat left; position: relative; padding-left: 32px; margin-top: 15px; margin-right: 32px}
 .sign-up-heading h1, .heading-contact{font-size: 18pt; font-weight: bold; font-family: tahoma; color: #434343}
 .sign-up-heading h1.small{font-size: 13pt; font-weight: bold; font-family: tahoma; color: #434343; padding:2px 0}
