@@ -17,11 +17,9 @@
                     </li>
                     <li class="right">
                         <?php echo $form->textField($model, 'website', array('value' => 'Website', 'onblur' => 'if(this.value=="") this.value="Website"', 'onfocus' => 'if(this.value =="Website") this.value=""')); ?>
-                    
 					</li>
                     <li class="clear left">
 						<?php echo $form->dropDownList($model, 'type', array('Hỗ trợ kỹ thuật' => 'Hỗ trợ kỹ thuật', 'Thanh toán' => 'Thanh toán', 'Đóng góp ý kiến' => 'Đóng góp ý kiến', 'Vấn đề khác' => 'Vấn đề khác'), array('class' => 'select-list')); ?>
-                        
                     </li>
                     <li class="right">
                         <?php echo $form->textField($model, 'email', array('value' => 'Email', 'onblur' => 'if(this.value=="") this.value="Email"', 'onfocus' => 'if(this.value =="Email") this.value=""')); ?>

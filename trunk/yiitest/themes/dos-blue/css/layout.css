@@ -51,10 +51,10 @@ a:hover{color:#000;}
 .list-title .frame-list{margin:0 0 0 15px; width:305px;border:none;font-size:11pt;color:#0074BD}
 .button-great{background:url(../images/bg-button.png) no-repeat;border:none;font-size:13pt;font-weight:bold;color:#fff;padding:7px 0; width:139px;text-align:center;font-family:Tahoma, Geneva, sans-serif;cursor:pointer; text-transform: uppercase}
 
-#banner{float:right; background:url(../images/bg-silder.png) no-repeat; height:270px; width:287px; position:relative; top:-13px}
+#banner{float:right; background:url(../images/bg-silder.png) no-repeat; height:270px; width:287px; position:relative; top:-13px; margin-right: 25px; z-index: 999}
 
 /**  jcarousellite-template  **/
-.prod_detail{position:relative;top:-25px}
+.prod_detail{position:relative;top:-20px}
 .prod_detail .big_thumb{width:960px;background:url(../images/bg-carousel-1.gif) repeat-x;border:1px solid #fff; height:158px;overflow:hidden !important;-webkit-border-radius:4px;-moz-border-radius:4px}
 .big_thumb #paginate-slider2{width:870px !important;overflow:hidden;float:left;margin:15px 0 15px 40px}
 .prod_detail #paginate-slider2 li{margin:0 15px 0 0}
@@ -141,9 +141,9 @@ a:hover{color:#000;}
 #rightcontent{float:right; width:234px}
 
 /*Sub Cat*/
-.sub-cat{list-style:none;margin:0 0 40px 0}
+.sub-cat{list-style:none;margin:0 0 40px 0; border: 1px solid #eee; border-top: none; border-bottom: none}
 #rightcontent .sub-cat li{border-bottom:1px solid #D8D8D8;margin:0}
-.sub-cat li a{ display:block;color:#333;padding:5px 0 5px 15px;font-size:11pt;background:url(../images/bullet.jpg) no-repeat left 9px}
+.sub-cat li a{ display:block;color:#333;padding:5px 0 5px 15px;font-size:11pt;}
 .sub-cat li a:hover{color:#f90}
 
 .ico-mid{margin:0 0 30px 0} .ico-mid img{margin:0 0 10px 0}
@@ -183,8 +183,8 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .tent-footer{padding:5px 0}
 .bt-page{background:#F2F2F2 url(../images/bg-bttom.gif) repeat-x;min-width:960px}
 .footer, .tent-copyright{margin:auto; width:960px}
-.copyright{background:url(../images/bg-copy-1.gif) no-repeat center;margin:30px 0 0 0;padding:11px 0}
-.logo-fter{margin:0 0 40px 0}
+.copyright{background:url(../images/bg-copy-1.gif) no-repeat center;margin:20px 0 0 0;padding:11px 0}
+.logo-fter{margin:0 0 33px 0}
 
 #nav-fter{list-style:none;background:#6F0}
 #nav-fter li{width:135px;margin:0 10px 0 0;border-right:1px solid #D5D6D6}
@@ -202,7 +202,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .left-contact .errorSummary ul{margin:0 32px; padding:0}
 .left-contact .errorSummary ul li{padding:2px 0;list-style:disc; margin: 0 0 2px 10px !important; color: red}
 
-#sign-up{background: #fff url(../images/white-top-shadow.png) repeat-x; border-left: 2px solid #D7D5D0; border-right: 2px solid #D7D5D0; padding: 20px; margin-top: 12px;}
+#sign-up{background: #fff url(../images/white-top-shadow.png) repeat-x; border-left: 2px solid #D7D5D0; border-right: 2px solid #D7D5D0; padding: 20px; margin-top: 10px;}
 .sign-up-heading{background: url(../images/bullet.png) no-repeat left; position: relative; padding-left: 32px; margin-top: 15px; margin-right: 32px}
 .sign-up-heading h1, .heading-contact{font-size: 18pt; font-weight: bold; font-family: tahoma; color: #434343}
 .sign-up-heading h1.small{font-size: 13pt; font-weight: bold; font-family: tahoma; color: #434343; padding:2px 0}
@@ -227,7 +227,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 /*Right contact*/
 .right-contact{float:right;width:316px}
 .captcha{position: relative; top: 0; left: 0}
-.captcha img{position: absolute; top: -9px; left: 5px}
+.captcha img{position: absolute; top: -9px; left: 5px; cursor: pointer}
 
 .title-choose{float:left;width: 120px}
 .all-choose-page{float:left; width: 700px}
