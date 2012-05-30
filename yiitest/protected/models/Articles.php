@@ -161,14 +161,14 @@ class Articles extends CActiveRecord {
             if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
                 //import class upload images
                 Yii::import('ext.EUploadedImage.EUploadedImage');
-                $this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload(145, 100, '/public/userfiles/images/' . Yii::app()->user->id . '/images' . '/' . Yii::app()->controller->id, $this->title);
+                $this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload(145, 100, '/public/userfiles/image/' . Yii::app()->user->id . '/image' . '/' . Yii::app()->controller->id, $this->title);
             }
         } else {
             //check file old and upload
             if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
                 //import class upload images
                 Yii::import('ext.EUploadedImage.EUploadedImage');
-                $this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload(145, 100, '/public/userfiles/images/' . Yii::app()->user->id . '/images' . '/' . Yii::app()->controller->id, $this->title, $this->_oldImage);
+                $this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload(145, 100, '/public/userfiles/image/' . Yii::app()->user->id . '/image' . '/' . Yii::app()->controller->id, $this->title, $this->_oldImage);
             } else {
                 //remove picthumb
                 if (isset($_POST[ucfirst(Yii::app()->controller->id)]['remove_pic_thumb']) && $_POST[ucfirst(Yii::app()->controller->id)]['remove_pic_thumb'] == 1) {
@@ -182,6 +182,19 @@ class Articles extends CActiveRecord {
         }
 
         return parent::beforeSave();
+    }
+
+    //Front end - item first record
+    public function itemFirstNew() {
+        $command = Yii::app()->db->createCommand('SELECT title, pic_thumb, ' . $this->tableName() . '.preview, ' . $this->tableName() . '.tag, ' . $this->tableName() . '_cat.tag AS tag_cat FROM ' . $this->tableName() . ', ' . $this->tableName() . '_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = ' . $this->tableName() . '_cat.cat_id AND enable=1 ORDER BY record_order DESC, postdate DESC');
+        return $command->queryRow();
+    }
+
+    //Front end - list record limit
+    public function listRecordLimit($num) {
+        $command = Yii::app()->db->createCommand('SELECT title, ' . $this->tableName() . '.tag, ' . $this->tableName() . '_cat.tag AS tag_cat FROM ' . $this->tableName() . ', ' . $this->tableName() . '_cat WHERE ' . $this->tableName() . '.dos_module_item_cat_cat_id = ' . $this->tableName() . '_cat.cat_id AND enable=1 ORDER BY record_order DESC, postdate DESC LIMIT :num, 10');
+        $command->bindParam(":num", $num, PDO::PARAM_INT);
+        return $command->queryAll();
     }
 
 	//Front end - list record for rss
