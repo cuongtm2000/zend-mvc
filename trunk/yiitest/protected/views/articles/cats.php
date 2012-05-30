@@ -3,8 +3,9 @@
 <div id="leftcontent">
 	<?php foreach($listItemByCat['models'] as $value):?>
 	<ul class="clear masuring">
-		<li><?php if($value['pic_thumb']):?>
-			<div class="frame-img"><a href="<?php echo Yii::app()->session['langUrl'] . '/' . Yii::t('main', 'articles.link')?>/<?php echo $value->ArticlesCat->tag?>/<?php echo $value['tag']?>.html" title="<?php echo $value['title']?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" class="imgcon" alt="<?php echo $value['title']?>" /></a></div>
+		<li>
+            <?php if($value['pic_thumb']):?>
+			    <div class="frame-img"><a href="<?php echo Yii::app()->session['langUrl'] . '/' . Yii::t('main', 'articles.link')?>/<?php echo $value->ArticlesCat->tag?>/<?php echo $value['tag']?>.html" title="<?php echo $value['title']?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/public/userfiles/image/dos/image/articles/<?php echo $value['pic_thumb']?>" class="imgcon" alt="<?php echo $value['title']?>" /></a></div>
 			<?php endif;?>
 			<h2 class="title-masuring"><strong><a href="<?php echo Yii::app()->session['langUrl'] . '/' . Yii::t('main', 'articles.link')?>/<?php echo $value->ArticlesCat->tag?>/<?php echo $value['tag']?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></strong></h2>
 			<?php echo $value['preview']?>

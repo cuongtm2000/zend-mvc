@@ -124,7 +124,7 @@ a:hover{color:#000;}
 .new-hdbook{margin:0 0 30px 0;border-bottom:2px solid #E4E4E4;padding:0 0 16px 0; line-height:1.5em}
 .title-new-hdbook{font-size:11pt;font-weight:bold; margin:0 0 10px 0} .title-new-hdbook a{color:#000}
 .title-new-hdbook a:hover{color:#0175BD}
-.frame-hd-img{float:left; width:202px;margin:0 25px 0 0}
+.frame-hd-img{float:left;margin:0 25px 0 0}
 
 /**  sub hdbook **/
 #leftcontent .sub-hdbook{width:320px;list-style:none}
@@ -167,7 +167,7 @@ a:hover{color:#000;}
 .masuring{text-align:justify;font-size:10pt;list-style:none}
 .masuring li{margin:0 0 15px 0 !important }
 .masuring p{line-height:1.4em}
-.frame-img{float:left;width:143px;margin:0 12px 5px 0}
+.frame-img{float:left;margin:0 12px 5px 0}
 .title-masuring{margin:0 0 5px 0}
 .title-masuring a{color:#208FFF;font-size:10pt;display: block}
 .title-masuring a:hover{color:#FF9933}

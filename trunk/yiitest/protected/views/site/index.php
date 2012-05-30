@@ -92,34 +92,26 @@
     <h2 class="title-hdbook"><img class="ico-hdbook" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/bg-handbook.png" alt="" /><span>Cẩm nang - Hướng dẫn</span></h2>
     <div id="leftcontent">
         <div class="new-hdbook">
-            <div class="frame-hd-img"><a href="#" title="" ><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img.jpg" alt="" /></a></div>
-            <h3 class="title-new-hdbook"><a href="#" title="">Hướng dẫn xóa bộ nhớ cache của trình duyệt</a></h3>
-            <p>Trong trường hợp trang web quý khách xem bị lỗi, hiển thị không đúng hoặc hiển thị thông tin cũ, quý khách hãy thử khắc phục bằng cách xóa bộ nhớ cache của trình duyệt. Trong trường hợp trang web quý khách xem bị lỗi, hiển thị không đúng hoặc hiển thị thông tin cũ, quý khách hãy thử khắc phục bằng cách xóa bộ nhớ cache của trình duyệt.</p>  <div class="clear"></div>
+            <?php if($articleFirst['pic_thumb']):?>
+            <div class="frame-hd-img">
+                <a href="<?php echo Yii::app()->session['langUrl'] . '/' . Yii::t('main', 'articles.link')?>/<?php echo $articleFirst['tag_cat']?>/<?php echo $articleFirst['tag']?>.html" title="<?php echo $articleFirst['title']?>">
+                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/public/userfiles/image/dos/image/articles/<?php echo $articleFirst['pic_thumb']?>" alt="<?php echo $articleFirst['title']?>" />
+                </a>
+            </div>
+            <?php endif?>
+            <h3 class="title-new-hdbook"><a href="<?php echo Yii::app()->session['langUrl'] . '/' . Yii::t('main', 'articles.link')?>/<?php echo $articleFirst['tag_cat']?>/<?php echo $articleFirst['tag']?>.html" title="<?php echo $articleFirst['title']?>"><?php echo $articleFirst['title']?></a></h3>
+            <?php echo $articleFirst['preview']?><div class="clear"></div>
         </div> <!--End new hdbook-->
         <div class="bg-sub-hand">
             <ul class="left sub-hdbook">
-                <li><a href="" title="">Kích thước banner tiêu chuẩn trong thiết kế web</a></li>
-                <li><a href="" title="">Trích dẫn các văn bản pháp quy về website</a></li>
-                <li><a href="" title="">Những điều nên lưu ý khi viết blog doanh nghiệp</a></li>
-                <li><a href="" title="">Các lỗi thường gặp khi thiết kế trang web</a></li>
-                <li><a href="" title="">Năm yếu tố người sử dụng không ưa trên website</a></li>
-                <li><a href="" title="">Đăng ký sử dụng Gmail theo tên miền riêng</a></li>
-                <li><a href="" title="">Yêu cầu cần thiết để cài đặt website lên internet</a></li>
-                <li><a href="" title="">Các câu hỏi thường gặp về tên miền</a></li>
-                <li><a href="" title="">Chuyển đổi nhà quản lý tên miền</a></li>
-                <li><a href="" title="">Các lỗi thường gặp khi gởi nhận email</a></li>
+                <?php foreach($listArticleLimitOne as $value):?>
+                    <li><a href="<?php echo Yii::app()->session['langUrl'] . '/' . Yii::t('main', 'articles.link')?>/<?php echo $value['tag_cat']?>/<?php echo $value['tag']?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></li>
+                <?php endforeach?>
             </ul>
             <ul class="right sub-hdbook">
-                <li><a href="" title="">Kích thước banner tiêu chuẩn trong thiết kế web</a></li>
-                <li><a href="" title="">Trích dẫn các văn bản pháp quy về website</a></li>
-                <li><a href="" title="">Những điều nên lưu ý khi viết blog doanh nghiệp</a></li>
-                <li><a href="" title="">Các lỗi thường gặp khi thiết kế trang web</a></li>
-                <li><a href="" title="">Năm yếu tố người sử dụng không ưa trên website</a></li>
-                <li><a href="" title="">Đăng ký sử dụng Gmail theo tên miền riêng</a></li>
-                <li><a href="" title="">Yêu cầu cần thiết để cài đặt website lên internet</a></li>
-                <li><a href="" title="">Các câu hỏi thường gặp về tên miền</a></li>
-                <li><a href="" title="">Chuyển đổi nhà quản lý tên miền</a></li>
-                <li><a href="" title="">Các lỗi thường gặp khi gởi nhận email</a></li>
+                <?php foreach($listArticleLimitTwo as $value):?>
+                    <li><a href="<?php echo Yii::app()->session['langUrl'] . '/' . Yii::t('main', 'articles.link')?>/<?php echo $value['tag_cat']?>/<?php echo $value['tag']?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></li>
+                <?php endforeach?>
             </ul> <div class="clear"></div>
         </div> <!--End bg sub hand-->
     </div> <!--End leftcontent-->
