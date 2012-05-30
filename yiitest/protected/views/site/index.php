@@ -124,26 +124,10 @@
         </div> <!--End bg sub hand-->
     </div> <!--End leftcontent-->
     <div id="rightcontent">
-        <h2 class="title-right"><span>DANH MỤC MẪU WEBSITE</span></h2>
-        <ul class="sub-cat">
-            <li><a href="/mau-website/am-thuc-drink" title="Ẩm thực - Đồ uống">Ẩm thực - Đồ uống</a></li>
-            <li><a href="/mau-website/bds-kien-truc-xay-dung" title="BĐS - kiến trúc - xây dựng">BĐS - kiến trúc - xây dựng</a></li>
-            <li><a href="/mau-website/co-khi-may-moc-thiet-bi" title="Cơ khí - Máy móc - Thiết bị">Cơ khí - Máy móc - Thiết bị</a></li>
-            <li><a href="/mau-website/cong-nghe-thong-tin-vien-thong" title="Công nghệ thông tin - viễn thông">Công nghệ thông tin - viễn thông</a></li>
-            <li><a href="/mau-website/du-lich" title="Du lịch">Du lịch</a></li>
-            <li><a href="/mau-website/giao-duc-dao-tao" title="Giáo dục - đào tạo">Giáo dục - đào tạo</a></li>
-            <li><a href="/mau-website/hoa-tuoi" title="Hoa tươi">Hoa tươi</a></li>
-            <li><a href="/mau-website/luat-ke-toan" title="Luật - kế toán">Luật - kế toán</a></li>
-            <li><a href="/mau-website/nha-hang-cafe" title="Nhà hàng - Cafe">Nhà hàng - Cafe</a></li>
-            <li><a href="/mau-website/noi-that-ngoai-that" title="Nội thất - Ngoại thất">Nội thất - Ngoại thất</a></li>
-            <li><a href="/mau-website/tham-my-vien" title="Thẩm mỹ viện">Thẩm mỹ viện</a></li>
-            <li><a href="/mau-website/thoi-trang" title="Thời trang">Thời trang</a></li>
-            <li><a href="/mau-website/tranh-anh-qua-luu-niem" title="Tranh ảnh - quà lưu niệm">Tranh ảnh - quà lưu niệm</a></li>
-        </ul> <!--End sub cat-->
-        <div class="ico-mid">
-            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ico-right.png" alt="" />
+        <!-- <div class="ico-mid">
+            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ico-right.png" alt="Support" />
             <p>Đừng ngần ngại hãy liên hệ với chúng tôi để được tư vẫn miễn phí</p>
-        </div>
+        </div> -->
         <ul class="support">
             <li>
                 <div class="img-port"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-port.png" alt="" /></div>

@@ -53,13 +53,14 @@
     <div id="header">
     	<div id="logo"><a href="<?php echo Yii::app()->request->baseUrl.'/'.Yii::app()->session['lang']?>" title="Home page"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a></div>
         <ul id="nav">
+            <li><a <?php echo (Yii::app()->controller->id == 'site') ? ' class="select"' : ''?> href="<?php echo Yii::app()->request->baseUrl.'/'.Yii::app()->session['lang']?>" title="<?php echo Yii::t('main', 'home')?>"><span><?php echo Yii::t('main', 'home')?></span></a></li>
             <li><a <?php echo (Yii::app()->controller->id == 'templates') ? ' class="select"' : ''?> href="<?php echo LANGURL.'/'.Yii::t('main', 'templates.link')?>" title="<?php echo Yii::t('main', 'templates.name')?>"><span><?php echo Yii::t('main', 'templates.name')?></span></a></li>
             <li><a <?php echo (Yii::app()->controller->id == 'articles') ? ' class="select"' : ''?> href="<?php echo LANGURL.'/'.Yii::t('main', 'articles.link')?>" title="<?php echo Yii::t('main', 'articles.name')?>"><span><?php echo Yii::t('main', 'articles.name')?></span></a></li>
-            <li><a href="" title=""><span>Hướng dẫn</span></a></li>
+            <!-- <li><a href="" title=""><span>Hướng dẫn</span></a></li>
             <li><a href="" title=""><span>Chính sách đại lý</span></a></li>
             <li><a href="" title=""><span>Dịch vụ</span></a></li>
             <li><a href="" title=""><span>Giải pháp</span></a></li>
-            <li><a href="" title=""><span>Khách hàng</span></a></li>
+            <li><a href="" title=""><span>Khách hàng</span></a></li> -->
             <li class="none-line<?php echo (($this->id == 'site') && ($this->action->id == 'contact')) ? ' select' : '' ?>"><a href="<?php echo LANGURL.'/'.Yii::t('main', 'contact.link')?>" title="<?php echo Yii::t('main', 'contact.name')?>" ><span><?php echo Yii::t('main', 'contact.name')?></span></a></li>
         </ul> <div class="clear"></div>
 	</div> <!--End header-->
@@ -129,7 +130,6 @@
                 	</div>
                 </li>
             </ul> <!--End menu footer--> <div class="clear"></div>
-            <p></p>
 		</div>
     </div>
     <div class="copyright">
