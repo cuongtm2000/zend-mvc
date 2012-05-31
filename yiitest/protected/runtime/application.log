@@ -11696,3 +11696,38 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2012/05/31 10:05:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "edit".' in C:\xampp\php\library\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(271): CController->missingAction('edit')
+#1 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('edit')
+#2 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('administrator/u...')
+#3 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\svn\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/administrator/usernames/edit/id/240312
+HTTP_REFERER=http://dos.vn/administrator/usernames
+---
+2012/05/31 10:08:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 10:09:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 10:13:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
