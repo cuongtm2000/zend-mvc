@@ -1,0 +1,148 @@
+body{font-family:Tahoma, Geneva, sans-serif; font-size:9pt; background:#767561}
+.left{float: left;}
+.right{float:right}
+.clear{clear: both;}
+a{text-decoration:none; color:#720E3B}
+a:hover{color:#000}
+
+/*layout*/
+#wapper{width: 920px; margin: auto; background: #F0EFEF; }
+#header{position:relative}
+#logo{position:absolute;top:30px; z-index:2}
+
+/*Nav*/
+#nav{list-style:none;background:#AD2624; padding:15px 0 15px 0;margin:0}
+#nav li{display:inline}
+#nav li a{text-transform:capitalize; color:#fff; padding:10px 22px;font-weight:bold;font-family:Arial, Helvetica, sans-serif;}
+#nav li a:hover{color:#F47505}
+#nav .select{color:#F47505}
+
+/*ALL Content*/
+#content{padding:10px 20px 40px 0;background:url(../images/gach.gif) repeat-y 660px top}
+
+/*Content Left*/
+#leftcontent{float:left; width:640px;color:#7B7B7B}
+.tent-leftcontent{padding:0 0 0 20px}
+#leftcontent p{line-height:1.5em}
+
+.title-right{background:url(../images/icon-ca.gif) no-repeat;padding:2px 0 12px 0;color:#343434;font-weight:bold;font-size:11pt;margin:0 0 5px 0}
+.title-right span{padding:0 0 0 30px}
+
+/*Các món ăn*/
+.all-product{list-style:none; margin:0; padding:20px 0 0 0}
+.product{margin:0 5px 15px 5px; text-align:center; width:90px; display:inline-block; vertical-align:top}
+.product-img{width:90px; height:90px;display:table-cell; vertical-align:middle;border:2px solid #D1D0CE;-moz-border-radius:5px;-webkit-border-radius:-5px}
+
+.title-pro{margin:5px 0}.title-pro a{ color:#BF0000; text-transform:capitalize}
+.title-pro a:hover{text-decoration:underline}
+.price{color:#DC692B;margin:0 0 5px 0;font-size: 10pt}
+.add-to-cart{background:#AD2624;font-weight:bold;  color:#fff;padding:3px 10px;margin:0 0 10px 0}
+.add-to-cart:hover{color:#fff}
+/***    Page product-info     ****/
+.frame-pro-info{padding:10px 0}
+.title-pro-order{color:#333; font-size:14px; font-weight:bold;margin:0 0 10px 0;border-bottom:1px solid #ccc;padding:0 0 10px 0}
+.title-pro-order span{padding:0 0 0 10px}
+
+.row-info{margin: 0 0 15px 0}
+.right-info{float:right;width:305px}
+.tent-right-info{padding:0 10px}
+.title-info{margin:0 0 10px 0;color: #fff}
+.title-info span{background: #444444;padding:3px 10px}
+.price-info{color:#000;margin:0 0 10px 0 !important;font-size: 10pt}
+.price-info span{margin: 0 0 0 10px;color: #DC692B}
+
+/*tin tuc*/
+.sub-new-hot, .sub-new{list-style:none; padding:0; margin:0}
+.sub-new li{line-height:1.5em;margin:0 0 5px 0}
+.sub-new .sub-new-hot{margin:0 0 15px 0}
+.sub-new-hot a, .sub-new li a{color:#DB1A1A; font-size:14px; font-weight:700;background:url(../images/icon-sao.jpg) no-repeat left -1px; display:block; padding:0 0 0 25px}
+.sub-new-img{float:left;margin:0 20px 0 0;border:1px solid #D1D0CE;-moz-border-radius:2px;-webkit-border-radius:2px}
+.title-sub-new {margin:0 0 5px 0} .sub-new li .title-sub-new a{padding:0; background:none; color:#DB1A1A; font-size:14px; font-weight:700; }
+.sub-new li a:hover{ text-decoration:underline}
+
+/*Content Right*/
+#rightcontent{float:right;width:220px}
+
+.bg-sub-cat{padding:10px 0 2px 0;background:#DDDDDD; margin:0 0 15px 0;-moz-border-radius:5px; -webkit-border-radius:5px}
+.title-left{font-weight:bold;color:#343434;font-size:11pt; text-align:center; border-bottom:2px solid #B4B4B4; margin-bottom:10px}
+.sub-cat{margin:0;padding:0 0 0 5px; list-style:none}
+.sub-cat li{padding:0 0 5px 0}
+.sub-cat a{ background:url(../images/icon.gif) no-repeat left;padding:0 0 0 15px; display:block; color:#000}
+.sub-cat a:hover{color:#AD2724}
+
+/*Ho tro ky thuat*/
+.support{list-style:none;padding:0 0 0 20px;margin:0 0 15px 0}
+.support li {color:#7B7B7B}
+.support li p{margin:0; line-height:1.5em} .support li img{margin:0 0 10px 0}
+
+/*Thong ke truy cap*/
+.statistics{list-style:none;padding:0 0 0 20px; margin:0 0 15px 0}
+.statistics li {color:#7B7B7B; line-height:1.75em;}
+
+/*bg-adv adv left*/
+.bg-adv{list-style:none;text-align:center;padding:5px 0 0 0; margin:0}
+.bg-adv li{padding:0 0 5px 0}
+
+/**Page Contact**/
+/*** Frame title company  ***/
+#frame-info-contact{margin:0 0 15px 0}
+
+/** Form lien he  **/
+.frame-contact{list-style:none;margin:0 0 10px 0;padding:0}
+.frame-contact label{color:#555; margin:0 !important;font-weight:bold;width:100px; float:left}
+.frame-contact li{padding:4px 0; margin:0 !important}
+.frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.frame-contact textarea{border:1px solid #ddd; width:350px;-moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-contact span{color:#F00;margin:0 5px 0 0}
+
+.frame-contact .bton-dk{margin:10px 0 5px 30px;background:#372E27;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-contact .bton-dk{margin:10px 10px 5px 0}
+/****  End page contact     *****/
+
+/*   Page New  */
+.masuring{text-align:justify;margin:0; padding:0;  font-size:10pt;list-style:none}
+.masuring li{margin:0 0 15px 0}
+.frame-img{float:left;margin:0 10px 0 0}
+.frame-img img{border:1px solid #CCC}
+.title-masuring{margin:0 0 10px 0}
+.title-masuring a{color:#AD2624;font-size:10pt;font-weight:bold}
+.title-masuring a:hover{color:#55B200}
+
+/* paging */
+ul.paging{float: right; margin:0; padding:0 0 5px 0; list-style: none;}
+ul.paging li{display: inline;margin:0 !important;}
+ul.paging .hidden{display: none;}
+ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{background: #FD399B; color:#fff; padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{color:#fff; background:#55B200}
+
+/*FOOTER*/
+#foo{ text-align:center; padding:0 0 20px 0;line-height:1.5em; color:#7B7B7B}
+#nav-fter{list-style:none;padding:5px 0;margin:0 0 10px 0;text-align:center; border-bottom:1px dotted  #707070; border-top:1px dotted #707070; color:#DB1A1A}
+#nav-fter li{display:inline}
+#foo #nav-fter li a{ padding:0 10px 0 8px ;color:#DB1A1A;background:url(../images/nav-line.gif) no-repeat right}
+#foo #nav-fter .none-line-fter{background:none}
+#foo a{color:#7B7B7B}
+#foo a:hover{text-decoration:underline}
+#foo p{margin:0;padding:0}
+/* Error */
+.errorSummary{border: 1px solid #FA8C1E; padding:5px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
+#rightcontent .errorSummary ul{margin:0 10px; padding:0}
+.errorSummary ul li{padding:2px 0; color: red}
+
+/*Add to cart*/
+.form_order{background:#fff;margin:0 0 15px 0;-webkit-border-radius:0 0 4px 6px;-moz-border-radius:0 0 6px 4px}
+.form_order thead{background:#1F1F1F}
+.form_order thead tr td{font-weight:bold;padding :5px !important; color:#fff;font-size:10pt}
+
+.form_order tbody tr td{border : 1px solid #ddd;}
+.form_order tbody tr .pic-order{padding:5px 0}
+.form_order tbody tr input{border:1px solid #ccc}
+.form_order tbody tr td a{color:#444}
+.form_order tbody tr td a:hover{color:#3CBEDA}
+
+.btn_order{cursor:pointer; border:none;font-weight:bold;background:#2C2C2C;padding:5px 7px;color:#fff;-webkit-border-radius:4px;-moz-border-radius:4px;margin:0 10px 0 0}
+.btn_order:hover{color:#fff}
+
+.frm-cart label{width:100px}
+.notificaion{color:#2C2C2C;font-size:10pt;margin:0 0 10px 0}
+.note span{color:#f00}
