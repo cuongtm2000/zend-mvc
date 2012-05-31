@@ -11167,3 +11167,532 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2012/05/31 03:12:15 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'news_width_thumb-310512' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO dos_configs (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES (:config_name, :config_value, :config_desc, :template).
+in D:\svn\protected\models\Configs.php (133)
+in D:\svn\protected\models\Configs.php (122)
+in D:\svn\protected\modules\administrator\controllers\TemplatesController.php (58)
+2012/05/31 03:12:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'news_width_thumb-310512' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO dos_configs (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES (:config_name, :config_value, :config_desc, :template)' in C:\xampp\php\library\framework\db\CDbCommand.php:354
+Stack trace:
+#0 D:\svn\protected\models\Configs.php(133): CDbCommand->execute()
+#1 D:\svn\protected\models\Configs.php(122): Configs->insertItem('news_width_thum...', '143', '', '310512')
+#2 D:\svn\protected\modules\administrator\controllers\TemplatesController.php(58): Configs->addItem(Object(CHttpRequest), '310512')
+#3 [internal function]: TemplatesController->actionEdit('310512')
+#4 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TemplatesController), Array)
+#5 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TemplatesController), Object(ReflectionMethod), Array)
+#6 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#13 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('edit')
+#15 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('administrator/t...')
+#16 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 D:\svn\index.php(16): CApplication->run()
+#18 {main}
+REQUEST_URI=/administrator/templates/edit/id/310512
+HTTP_REFERER=http://dos.vn/administrator/templates/edit/id/310512
+---
+2012/05/31 03:12:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 03:59:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 03:59:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 03:59:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:00:14 [error] [php] Undefined index: news (D:\svn\protected\modules\default\views\default\310512\index.php:48)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): DefaultController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 D:\svn\protected\modules\default\controllers\DefaultController.php(8): DefaultController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\svn\index.php(16): CWebApplication->run()
+REQUEST_URI=/
+in D:\svn\protected\modules\default\views\default\310512\index.php (48)
+in D:\svn\protected\modules\default\controllers\DefaultController.php (8)
+in D:\svn\index.php (16)
+2012/05/31 04:00:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:00:15 [error] [php] Undefined index: news (D:\svn\protected\modules\default\views\default\310512\index.php:48)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): DefaultController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 D:\svn\protected\modules\default\controllers\DefaultController.php(8): DefaultController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\svn\index.php(16): CWebApplication->run()
+REQUEST_URI=/
+in D:\svn\protected\modules\default\views\default\310512\index.php (48)
+in D:\svn\protected\modules\default\controllers\DefaultController.php (8)
+in D:\svn\index.php (16)
+2012/05/31 04:00:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:00:16 [error] [php] Undefined index: news (D:\svn\protected\modules\default\views\default\310512\index.php:48)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): DefaultController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 D:\svn\protected\modules\default\controllers\DefaultController.php(8): DefaultController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\svn\index.php(16): CWebApplication->run()
+REQUEST_URI=/
+in D:\svn\protected\modules\default\views\default\310512\index.php (48)
+in D:\svn\protected\modules\default\controllers\DefaultController.php (8)
+in D:\svn\index.php (16)
+2012/05/31 04:00:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:00:18 [error] [php] Undefined index: news (D:\svn\protected\modules\default\views\default\310512\index.php:48)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): DefaultController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 D:\svn\protected\modules\default\controllers\DefaultController.php(8): DefaultController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\svn\index.php(16): CWebApplication->run()
+REQUEST_URI=/
+in D:\svn\protected\modules\default\views\default\310512\index.php (48)
+in D:\svn\protected\modules\default\controllers\DefaultController.php (8)
+in D:\svn\index.php (16)
+2012/05/31 04:00:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:01:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:03:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:03:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:03:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:03:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:03:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:04:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:04:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:04:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:04:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:10:43 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "News.DefaultCat" chưa được định nghĩa.' in C:\xampp\php\library\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(144): CComponent->__get('DefaultCat')
+#1 C:\xampp\php\library\framework\base\CModel.php(593): CActiveRecord->__get('DefaultCat')
+#2 D:\svn\protected\modules\default\views\default\310512\index.php(55): CModel->offsetGet('DefaultCat')
+#3 C:\xampp\php\library\framework\web\CBaseController.php(127): require('D:\svn\protecte...')
+#4 C:\xampp\php\library\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\svn\protecte...', NULL, true)
+#5 C:\xampp\php\library\framework\web\CController.php(870): CBaseController->renderFile('D:\svn\protecte...', NULL, true)
+#6 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('310512/index', NULL, true)
+#7 D:\svn\protected\modules\default\controllers\DefaultController.php(8): CController->render('310512/index')
+#8 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#9 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#13 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('default/default')
+#14 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 D:\svn\index.php(16): CApplication->run()
+#16 {main}
+REQUEST_URI=/
+HTTP_REFERER=http://240312.dos.vn/admin/configs
+---
+2012/05/31 04:10:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:17:29 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "News.DefaultCat" chưa được định nghĩa.' in C:\xampp\php\library\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(144): CComponent->__get('DefaultCat')
+#1 C:\xampp\php\library\framework\base\CModel.php(593): CActiveRecord->__get('DefaultCat')
+#2 D:\svn\protected\modules\default\views\default\310512\index.php(55): CModel->offsetGet('DefaultCat')
+#3 C:\xampp\php\library\framework\web\CBaseController.php(127): require('D:\svn\protecte...')
+#4 C:\xampp\php\library\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\svn\protecte...', NULL, true)
+#5 C:\xampp\php\library\framework\web\CController.php(870): CBaseController->renderFile('D:\svn\protecte...', NULL, true)
+#6 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('310512/index', NULL, true)
+#7 D:\svn\protected\modules\default\controllers\DefaultController.php(8): CController->render('310512/index')
+#8 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#9 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#13 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('default/default')
+#14 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 D:\svn\index.php(16): CApplication->run()
+#16 {main}
+REQUEST_URI=/
+HTTP_REFERER=http://240312.dos.vn/admin/configs
+---
+2012/05/31 04:17:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:40:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:40:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 04:59:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 08:03:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/310512/images/no-images.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/310512/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/310512/images/no-images.jpg
+HTTP_REFERER=http://240312.dos.vn/san-pham
+---
+2012/05/31 08:03:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/310512/images/no-images.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/310512/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/310512/images/no-images.jpg
+HTTP_REFERER=http://240312.dos.vn/san-pham/tui-doanh-nhan
+---
+2012/05/31 08:03:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/310512/images/no-images.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/310512/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/310512/images/no-images.jpg
+HTTP_REFERER=http://240312.dos.vn/san-pham/tui-doanh-nhan
+---
+2012/05/31 08:04:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/310512/images/prev.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/310512/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/310512/images/prev.gif
+HTTP_REFERER=http://240312.dos.vn/san-pham/tui-doanh-nhan/0960.html
+---
+2012/05/31 08:04:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/310512/images/next.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/310512/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/310512/images/next.gif
+HTTP_REFERER=http://240312.dos.vn/san-pham/tui-doanh-nhan/0960.html
+---
+2012/05/31 08:04:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/310512/images/no-images.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/310512/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/310512/images/no-images.jpg
+HTTP_REFERER=http://240312.dos.vn/san-pham/tui-doanh-nhan
+---
+2012/05/31 08:09:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/310512/images/no-images.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/310512/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/310512/images/no-images.jpg
+HTTP_REFERER=http://240312.dos.vn/san-pham/tui-doanh-nhan
+---
+2012/05/31 08:10:24 [error] [php] Undefined index: products_num_paging_cat (D:\svn\protected\modules\products\models\Products.php:277)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#4 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#5 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\svn\index.php(16): CWebApplication->run()
+REQUEST_URI=/san-pham/tui-doanh-nhan-loai-2
+in D:\svn\protected\modules\products\models\Products.php (277)
+in D:\svn\protected\modules\products\controllers\DefaultController.php (21)
+in D:\svn\index.php (16)
+2012/05/31 08:10:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 08:10:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/310512/images/prev.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/310512/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/310512/images/prev.gif
+HTTP_REFERER=http://240312.dos.vn/san-pham/tui-doanh-nhan/0960.html
+---
+2012/05/31 08:10:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/310512/images/next.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/310512/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/310512/images/next.gif
+HTTP_REFERER=http://240312.dos.vn/san-pham/tui-doanh-nhan/0960.html
+---
+2012/05/31 08:12:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 08:12:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/310512/images/fancybox/fancybox-y.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/310512/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/310512/images/fancybox/fancybox-y.png
+HTTP_REFERER=http://240312.dos.vn/san-pham/tui-doanh-nhan/0960.html
+---
+2012/05/31 08:12:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/310512/images/fancybox/blank.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/310512/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/310512/images/fancybox/blank.gif
+HTTP_REFERER=http://240312.dos.vn/san-pham/tui-doanh-nhan/0960.html
+---
+2012/05/31 08:12:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/310512/images/fancybox/fancybox-x.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/310512/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/310512/images/fancybox/fancybox-x.png
+HTTP_REFERER=http://240312.dos.vn/san-pham/tui-doanh-nhan/0960.html
+---
+2012/05/31 08:12:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/310512/images/fancybox/fancybox.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/310512/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/310512/images/fancybox/fancybox.png
+HTTP_REFERER=http://240312.dos.vn/san-pham/tui-doanh-nhan/0960.html
+---
+2012/05/31 08:14:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/310512/images/prettyPhoto/light_rounded/btnNext.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/310512/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/310512/images/prettyPhoto/light_rounded/btnNext.png
+HTTP_REFERER=http://240312.dos.vn/video
+---
+2012/05/31 08:34:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 08:36:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 08:36:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 08:37:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 08:37:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/05/31 08:37:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
