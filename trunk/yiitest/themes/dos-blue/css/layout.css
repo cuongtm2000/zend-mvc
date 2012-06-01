@@ -156,8 +156,9 @@ a:hover{color:#000;}
 .img-port{float:left; width:34px;position:relative; margin:-15px 10px 0 0}
 .ten-port{float:right;width:165px}
 
+.title-right-1{color:#0076BC;background:url(../images/bg-title-right-1.png) no-repeat;padding:15px 0; font-weight:bold;position:relative;}
 .title-right{color:#0076BC;background:url(../images/bg-title-right.png) no-repeat;padding:15px 0; font-weight:bold;position:relative;}
-.title-right span{padding:0 0 0 20px}
+.title-right-1 span, .title-right span{padding:0 0 0 20px}
 
 /*Frame tent right*/
 .frame-tent-right p{text-align:justify;line-height:1.5em}
