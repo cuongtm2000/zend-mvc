@@ -170,7 +170,7 @@ a:hover{color:#000;}
 .masuring p{line-height:1.4em}
 .frame-img{float:left;margin:0 12px 5px 0}
 .title-masuring{margin:0 0 5px 0}
-.title-masuring a{color:#208FFF;font-size:10pt;display: block}
+.title-masuring a{color:#208FFF;font-size:11pt;display: block}
 .title-masuring a:hover{color:#FF9933}
 
 /* paging */
@@ -247,3 +247,4 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 #list-template p{font-size:10pt;margin:10px 0 15px 0}
 #list-template p  a{color:#000;}
 #list-template p  a:hover{color:#ccc}
+.title-template{color:#208FFF;font-size:11pt;margin:0 0 5px 0}
