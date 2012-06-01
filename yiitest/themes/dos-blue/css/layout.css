@@ -243,6 +243,6 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 #list-template{margin: 10px 0}
 #list-template li{display:inline-block;vertical-align: top;width:260px; margin: 0 50px 5px 0 !important;list-style: none; text-align: center}
 #list-template li img{border: 1px solid #ccc; cursor: pointer}
-#list-template p{font-size:10pt;margin:10px 0 5px 0}
+#list-template p{font-size:10pt;margin:10px 0 15px 0}
 #list-template p  a{color:#000;}
 #list-template p  a:hover{color:#ccc}

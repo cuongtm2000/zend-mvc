@@ -62,6 +62,7 @@ class Templates extends CActiveRecord {
 		// class name for the relations automatically generated below.
 		return array(
 			'commentCount' => array(self::STAT, 'Username', 'dos_templates_template'),
+            'TemplatesBussiness'=>array(self::HAS_ONE, 'TemplatesBussiness', 'dos_templates_template'),
 			//'dosConfigs' => array(self::HAS_MANY, 'DosConfigs', 'dos_templates_template'),
 			//'dosTemplatesHasDosModules' => array(self::HAS_MANY, 'DosTemplatesHasDosModules', 'dos_templates_template'),
 			//'dosUsernames' => array(self::HAS_MANY, 'DosUsernames', 'dos_templates_template'),

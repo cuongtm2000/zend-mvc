@@ -13,19 +13,19 @@
                 <?php echo $form->errorSummary($model, '', '', array('class'=>'errorSummary error')); ?>
                 <ul>
                     <li class="left">
-                        <?php echo $form->textField($model, 'name', array('value' => 'Name', 'onblur' => 'if(this.value=="") this.value="Name"', 'onfocus' => 'if(this.value =="Name") this.value=""')); ?>
+                        <?php echo $form->textField($model, 'name', array('value' => ''.($model['name']) ? $model['name'] : 'Name'.'', 'onblur' => 'if(this.value=="") this.value="Name"', 'onfocus' => 'if(this.value =="Name") this.value=""')); ?>
                     </li>
                     <li class="right">
-                        <?php echo $form->textField($model, 'website', array('value' => 'Website', 'onblur' => 'if(this.value=="") this.value="Website"', 'onfocus' => 'if(this.value =="Website") this.value=""')); ?>
+                        <?php echo $form->textField($model, 'website', array('value' => ''.($model['website']) ? $model['website'] : 'Website'.'', 'onblur' => 'if(this.value=="") this.value="Website"', 'onfocus' => 'if(this.value =="Website") this.value=""')); ?>
 					</li>
                     <li class="clear left">
 						<?php echo $form->dropDownList($model, 'type', array('Hỗ trợ kỹ thuật' => 'Hỗ trợ kỹ thuật', 'Thanh toán' => 'Thanh toán', 'Đóng góp ý kiến' => 'Đóng góp ý kiến', 'Vấn đề khác' => 'Vấn đề khác'), array('class' => 'select-list')); ?>
                     </li>
                     <li class="right">
-                        <?php echo $form->textField($model, 'email', array('value' => 'Email', 'onblur' => 'if(this.value=="") this.value="Email"', 'onfocus' => 'if(this.value =="Email") this.value=""')); ?>
+                        <?php echo $form->textField($model, 'email', array('value' => ''.($model['email']) ? $model['email'] : 'Email'.'', 'onblur' => 'if(this.value=="") this.value="Email"', 'onfocus' => 'if(this.value =="Email") this.value=""')); ?>
                     </li>
                     <li class="clear left">
-                        <?php echo $form->textField($model, 'phone', array('value' => 'Phone Number', 'onblur' => 'if(this.value=="") this.value="Phone Number"', 'onfocus' => 'if(this.value =="Phone Number") this.value=""')); ?>
+                        <?php echo $form->textField($model, 'phone', array('value' => ''.($model['phone']) ? $model['phone'] : 'Phone Number'.'', 'onblur' => 'if(this.value=="") this.value="Phone Number"', 'onfocus' => 'if(this.value =="Phone Number") this.value=""')); ?>
                     </li>
                     <li class="right captcha">
                         <?php echo $form->textField($model, 'verifyCode', array('class' => 'small-input', 'value' => 'Mã xác nhận', 'onblur' => 'if(this.value=="") this.value="Mã xác nhận"', 'onfocus' => 'if(this.value =="Mã xác nhận") this.value=""')); ?>
