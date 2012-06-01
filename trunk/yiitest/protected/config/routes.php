@@ -67,6 +67,7 @@ return array(
 	'<templates:(mau-website)>/trang/<page:\d+>' => array('templates/index'), //paging index
 	'<templates:(mau-website)>' => array('templates/index'), //index
 	'<templates:(mau-website)>/<cid:[-a-z0-9]+>' => array('templates/cats'),
+    '<templates:(mau-website)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('templates/view', 'urlSuffix' => '.html'),
 
 	'<language:(vi|en)>/<articles:(articles|bai-viet)>/page/<page:\d+>' => array('articles/index'), //paging index
 	'<articles:(articles|bai-viet)>/page/<page:\d+>' => array('articles/index'), //paging index

@@ -180,7 +180,7 @@ ul.paging{float: right; margin-top: 7px;}
 
 #frm-template{margin: 2px 5px 5px 5px}
 ul#list-template{margin: 5px 0 0 0; padding:0}
-ul#list-template li{ width: 260px;height: 210px; margin:0 30px 10px 0; list-style: none; text-align: center; position: relative;float:left}
+ul#list-template li{width: 260px;height: 210px; margin:0 30px 10px 0; list-style: none; text-align: center; position: relative;float:left}
 ul#list-template li p{margin: 0; padding: 0}
 ul#list-template li img{margin-right: 10px; margin-bottom: 3px; border: 1px solid #ddd; padding: 1px; -webkit-border-radius:2px;-moz-border-radius:2px}
 ul#list-template li label, #scrollbar ul li p input{cursor: pointer}

@@ -89,7 +89,7 @@ class TemplatesBussiness extends CActiveRecord {
 			$templates_class = new Templates();
 			return $templates_class->listTemplates($type);
 		} else {
-			$command = Yii::app()->db->createCommand('SELECT template, template_name FROM ' . $this->tableName() . ', dos_templates WHERE dos_templates.template = ' . $this->tableName() . '.dos_templates_template AND dos_bussiness_bussiness_id=:businessid');
+			$command = Yii::app()->db->createCommand('SELECT template, template_name, dos_bussiness_bussiness_id FROM ' . $this->tableName() . ', dos_templates WHERE dos_templates.template = ' . $this->tableName() . '.dos_templates_template AND dos_bussiness_bussiness_id=:businessid');
 			$command->bindParam(":businessid", $businessid, PDO::PARAM_STR);
 			if($type == 1){
 				return array('models' => $command->queryAll());

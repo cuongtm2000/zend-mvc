@@ -4,8 +4,8 @@
 		<?php if($templatesBusiness['models']):?>
 		<?php foreach($templatesBusiness['models'] as $value):?>
 			<li>
-				<a href="" title="<?php echo $value['template_name']?>"><img src="<?php echo Yii::app()->baseUrl; ?>/themes/<?php echo $value['template']?>/images/tiny.png" alt="<?php echo $value['template']?>"  /></a>
-				<p><a href="" title="<?php echo $value['template_name']?>"><?php echo $value['template_name']?></a></p>
+				<a href="<?php echo Yii::t('main', 'templates.link')?>/<?php echo $value->TemplatesBussiness->dos_bussiness_bussiness_id?>/<?php echo $value['template']?>.html" title="<?php echo $value['template_name']?>"><img src="<?php echo Yii::app()->baseUrl; ?>/themes/<?php echo $value['template']?>/images/tiny.png" alt="<?php echo $value['template']?>"  /></a>
+				<p><a href="<?php echo Yii::t('main', 'templates.link')?>/<?php echo $value->TemplatesBussiness->dos_bussiness_bussiness_id?>/<?php echo $value['template']?>.html" title="<?php echo $value['template_name']?>"><strong><?php echo $value['template_name']?></strong></a></p>
 			</li>
 			<?php endforeach?>
 		<?php else:?>

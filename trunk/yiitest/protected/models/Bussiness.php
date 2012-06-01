@@ -55,7 +55,7 @@ class Bussiness extends CActiveRecord {
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			//'dosTemplates' => array(self::MANY_MANY, 'DosTemplates', 'dos_templates_has_dos_bussiness(dos_bussiness_bussiness_id, dos_templates_template)'),
+			//'dosTemplates' => array(self::MANY_MANY, 'Templates', 'dos_templates_has_dos_bussiness(dos_bussiness_bussiness_id, dos_templates_template)'),
 			//'dosUsernames' => array(self::HAS_MANY, 'DosUsernames', 'dos_bussiness_bussiness_id'),
 		);
 	}

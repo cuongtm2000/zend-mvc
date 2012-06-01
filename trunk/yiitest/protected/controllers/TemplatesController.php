@@ -17,4 +17,10 @@ class TemplatesController extends HomeController {
 
 		$this->render('cats', array('listBusiness' => $business_class->listCats(), 'infoCat' => $business_class->detailItem($cid), 'templatesBusiness' => $tempaltes_business_class->listTempaltesByBusiness($cid, 1)));
 	}
+    public function actionView($id) {
+        $business_class = new Bussiness();
+        $template_class = new Templates();
+
+        $this->render('view', array('listBusiness' => $business_class->listCats(), 'detail' => $template_class->loadEdit($id)));
+    }
 }
