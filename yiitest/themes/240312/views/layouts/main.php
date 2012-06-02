@@ -52,6 +52,10 @@
 		</div><!--End header-->
 		<div id="header-btom">
 			<div id="search">
+                <form id="frmsearch" name="frm-search" action="/search" method="post">
+                    <input type="text" class="input" name="txt-search" value="<?php echo (Yii::app()->session['txt-search']) ? Yii::app()->session['txt-search'] : Yii::t('user', 'search')?>" onblur="if(this.value=='') this.value='<?php echo Yii::t('user', 'search')?>'" onfocus="if(this.value =='<?php echo Yii::t('user', 'search')?>' ) this.value=''"/>
+                    <input type="submit" class="bt-go" value=" GO " title="Search" />
+                </form>
 				<p class="hot-line"><?php echo $this->lang['company_phone']?></p>				
 			</div>
             <div id="bg-menu-hd-right">
