@@ -12,6 +12,8 @@ return array(
     'products.continue.shopping' => 'Continue',
     'products.delallcart.name' => 'Delete all cart',
 
+    'search' => 'Search',
+
     'shoppingcart' => 'Shopping cart',
     'picture' => 'Picture',
     'products.name' => 'Product name',

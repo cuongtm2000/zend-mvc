@@ -2,16 +2,29 @@
 
 class DefaultController extends Controller{
     public function actionIndex(){
-        /*$criteria = new CDbCriteria();
+        $criteria = new CDbCriteria();
 
         if (isset($_POST['txt-search'])) {
-            $q = $_POST['txt-search'];
-            $criteria->compare('title', $q, true, 'OR');
+            Yii::app()->session['txt-search'] = Yii::app()->request->getPost('txt-search');
         }
 
-        $dataProvider = About::model()->findAll($criteria);
+        if(Yii::app()->session['txt-search']==null){
+            Yii::app()->session['txt-search'] = Yii::t('user', 'search');
+        }
 
-        $this->render(Yii::app()->session['template'] . '/index', array('dataProvider' => $dataProvider));*/
-        $this->render('index');
+        $criteria->with = array('ProductsCat');
+        $criteria->compare('title', Yii::app()->session['txt-search'], true, 'OR');
+        $criteria->compare('enable', 1);
+        $criteria->compare('cat_enable', 1);
+
+        Yii::app()->getModule('products');
+        $count = Products::model()->count($criteria);
+
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = Yii::app()->controller->configs['products_num_paging_cat'];
+        $pages->applyLimit($criteria);
+
+        $this->render(Yii::app()->session['template'] . '/index', array('items' => array('models' => Products::model()->findAll($criteria), 'pages' => $pages)));
     }
 }

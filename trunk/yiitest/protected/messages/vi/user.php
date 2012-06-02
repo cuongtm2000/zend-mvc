@@ -12,6 +12,8 @@ return array(
     'products.continue.shopping' => 'Tiếp tục mua hàng',
     'products.delallcart.name' => 'Xóa giỏ hàng',
 
+    'search' => 'Tìm kiếm',
+
     'shoppingcart' => 'Thông tin giỏ hàng',
     'picture' => 'Hình ảnh',
     'products.name' => 'Tên sản phẩm',
