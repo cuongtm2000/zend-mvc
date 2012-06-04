@@ -34,7 +34,7 @@
 <body>
 <div id="wrapper">
 	<div id="page">
-		<div  id="header">
+		<div id="header">
 			<div class="logo">
 				<?php if($this->logo):?>
 					<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl']?>/" title="<?php echo $this->logo['banner_name']?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/banner/<?php echo $this->logo['banner_url'] ?>" alt="<?php echo $this->logo['banner_name']?>" /></a>
@@ -48,15 +48,15 @@
 					<a href="<?php echo ($value=='vi') ? Yii::app()->request->baseUrl.'/' : Yii::app()->request->baseUrl.'/'.$value ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $value?>.gif" alt="<?php echo $this->lang[$value]?>" /> <?php echo $this->lang[$value]?></a>
 					<?php endforeach?>
 				<?php endif?>
-			</div>   <div class="clear"></div>
+			</div>
+			<p class="hot-line"><?php echo $this->lang['company_phone']?></p>	<div class="clear"></div>
 		</div><!--End header-->
 		<div id="header-btom">
 			<div id="search">
                 <form id="frmsearch" name="frm-search" action="/search" method="post">
                     <input type="text" class="input" name="txt-search" value="<?php echo (Yii::app()->session['txt-search']) ? Yii::app()->session['txt-search'] : Yii::t('user', 'search')?>" onblur="if(this.value=='') this.value='<?php echo Yii::t('user', 'search')?>'" onfocus="if(this.value =='<?php echo Yii::t('user', 'search')?>' ) this.value=''"/>
                     <input type="submit" class="bt-go" value=" GO " title="Search" />
-                </form>
-				<p class="hot-line"><?php echo $this->lang['company_phone']?></p>				
+                </form>				
 			</div>
             <div id="bg-menu-hd-right">
 				<?php echo ($this->lang['company_name']) ? '<h1 class="welcome">'.$this->lang['company_name'].'</h1>' : '' ?> <!--End title company-->

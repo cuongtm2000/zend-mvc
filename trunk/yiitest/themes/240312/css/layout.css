@@ -16,6 +16,7 @@ a:hover{color:#000;}
 .logo{text-align:center;}
 
 /*Lang */
+.hot-line{position:absolute;bottom:5px;right:10pt;  color:#33220C; font-weight:700;font-size: 11pt;}
 .lang {position:absolute;top:10px; right:10px}
 .lang img{ margin:0 5px 0 5px; position:relative; top:2px}
 .lang a{ color:#33220C;font-weight:bold}
@@ -29,7 +30,7 @@ a:hover{color:#000;}
 
 /*Menu hd right*/
 #bg-menu-hd-right{float:left;height: 45px; text-align:right;background:url(../images/link_bg.gif) no-repeat #E0DDCE;width: 770px}
-.hot-line{padding:8px 0 0 0;margin:0 0 0 10px;color:#33220C; font-weight:700;font-size: 12pt;}
+
 .welcome{color:#33220C; font-weight:700;font-size: 12pt; position: relative;top:15px;font-weight: bold;right:15px}
 
 /**  Navigation **/
@@ -112,7 +113,7 @@ a:hover{color:#000;}
 .product-btom{background:url(../images/pro_bottom_bg.gif) no-repeat; height:13px; width:171px }
 .product-mid{width:171px;background:#fff}
 .product-tent{ padding:0 3px; *padding:0 0px}
-.product-img{width:171px; text-align:center;display:table-cell;vertical-align:middle}
+.product-img{width:171px;height:165px;  text-align:center;display:table-cell;vertical-align:middle}
 
 /* Tieu de, gia, add to cart*/
 .title-pro{ font-size:10pt;margin:5px 0 5px 0}
