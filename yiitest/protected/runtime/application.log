@@ -11787,3 +11787,39 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2012/06/04 02:53:05 [warning] [application] Failed to set unsafe attribute "remove_pic_thumb" of "Products".
+in D:\svn\protected\modules\admin\controllers\ProductsController.php (177)
+in D:\svn\index.php (16)
+2012/06/04 02:53:10 [warning] [application] Failed to set unsafe attribute "remove_pic_thumb" of "Products".
+in D:\svn\protected\modules\admin\controllers\ProductsController.php (177)
+in D:\svn\index.php (16)
+2012/06/04 02:53:15 [warning] [application] Failed to set unsafe attribute "remove_pic_thumb" of "Products".
+in D:\svn\protected\modules\admin\controllers\ProductsController.php (177)
+in D:\svn\index.php (16)
+2012/06/04 02:53:21 [warning] [application] Failed to set unsafe attribute "remove_pic_thumb" of "Products".
+in D:\svn\protected\modules\admin\controllers\ProductsController.php (177)
+in D:\svn\index.php (16)
+2012/06/04 02:55:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/04 02:58:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/04 02:58:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
