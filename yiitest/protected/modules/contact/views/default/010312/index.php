@@ -5,7 +5,7 @@
 </div>
 <?php else: ?>
 <?php $this->pageTitle = ($item) ? $item['title' . LANG] : $this->lang[$this->module->id]; $this->description = $item['description']; ?>
-<h1 class="title-box"><span><?php echo $item['title' . LANG] ?></span></h1>
+<h1 class="title-box"><span><?php echo ($item) ? $item['title' . LANG] : $this->lang[$this->module->id] ?></span></h1>
 <div class="frame-tent-right">
 	<?php if($item):?>
 	<div id="frame-info-contact"><?php echo $item['content' . LANG] ?></div>
