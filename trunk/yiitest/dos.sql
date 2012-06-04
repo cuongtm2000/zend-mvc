@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 04, 2012 at 03:02 AM
+-- Generation Time: Jun 04, 2012 at 03:07 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -781,8 +781,16 @@ CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
 --
 
 INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, `loadfiles`, `typefile`) VALUES
+('010312', 'about', 'simplyscroll.verticall.css', 'css'),
+('010312', 'about', 'jquery.simplyscroll.vertical.js|verticall-config.js', 'javascript'),
+('010312', 'contact', 'simplyscroll.verticall.css', 'css'),
+('010312', 'contact', 'jquery.simplyscroll.vertical.js|verticall-config.js', 'javascript'),
 ('010312', 'default', 'prettyPhoto.css|simplyscroll.verticall.css', 'css'),
 ('010312', 'default', 'jquery.prettyPhoto.js|jquery.simplyscroll.vertical.js|verticall-config.js', 'javascript'),
+('010312', 'products', 'simplyscroll.verticall.css', 'css'),
+('010312', 'products', 'jquery.simplyscroll.vertical.js|verticall-config.js', 'javascript'),
+('010312', 'services', 'simplyscroll.verticall.css', 'css'),
+('010312', 'services', 'jquery.simplyscroll.vertical.js|verticall-config.js', 'javascript'),
 ('010312', 'video', 'prettyPhoto.css', 'css'),
 ('010312', 'video', 'jquery.prettyPhoto.js', 'javascript'),
 ('020512', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
