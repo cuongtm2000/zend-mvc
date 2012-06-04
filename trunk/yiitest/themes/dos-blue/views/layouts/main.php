@@ -56,8 +56,8 @@
             <li><a <?php echo (Yii::app()->controller->id == 'site' && ($this->action->id == 'index')) ? ' class="select"' : ''?> href="<?php echo Yii::app()->request->baseUrl.'/'.Yii::app()->session['lang']?>" title="<?php echo Yii::t('main', 'home')?>"><span><?php echo Yii::t('main', 'home')?></span></a></li>
             <li><a <?php echo (Yii::app()->controller->id == 'templates') ? ' class="select"' : ''?> href="<?php echo LANGURL.'/'.Yii::t('main', 'templates.link')?>" title="<?php echo Yii::t('main', 'templates.name')?>"><span><?php echo Yii::t('main', 'templates.name')?></span></a></li>
             <li><a <?php echo (Yii::app()->controller->id == 'articles') ? ' class="select"' : ''?> href="<?php echo LANGURL.'/'.Yii::t('main', 'articles.link')?>" title="<?php echo Yii::t('main', 'articles.name')?>"><span><?php echo Yii::t('main', 'articles.name')?></span></a></li>
-            <!-- <li><a href="" title=""><span>Hướng dẫn</span></a></li>
-            <li><a href="" title=""><span>Chính sách đại lý</span></a></li>
+            <li><a href="" title=""><span>Hướng dẫn</span></a></li>
+            <!-- <li><a href="" title=""><span>Chính sách đại lý</span></a></li>
             <li><a href="" title=""><span>Dịch vụ</span></a></li>
             <li><a href="" title=""><span>Giải pháp</span></a></li>
             <li><a href="" title=""><span>Khách hàng</span></a></li> -->
