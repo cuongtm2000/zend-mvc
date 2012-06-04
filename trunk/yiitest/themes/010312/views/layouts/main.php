@@ -191,7 +191,7 @@
 
 			<?php if(isset($this->function['products_hot']) && $this->function['products_hot']):?>
 			<h1 class="title-box"><span><?php echo $this->lang['products'] . ' ' . strtolower($this->lang['hot']) ?></span></h1>
-			<ul class="typical-product">
+			<ul id="scroller" class="typical-product">
 				<?php foreach($this->function['products_hot'] as $value): ?>
 				<?php if($value['pic_thumb']): ?>
 						<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value->ProductsCat->tag ?>/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'.Yii::app()->session['lang']] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.Yii::app()->session['lang']] ?>" /></a></li>

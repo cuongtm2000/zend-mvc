@@ -135,7 +135,7 @@ a:hover{color:#000;}
 .sub-new li a:hover{color:#f90}
 
 /**		Sản phẩm tieu biểu (typical-product)		**/
-.typical-product{list-style:none; text-align:center;border:1px solid #F2F2F2;padding:5px 0 0 0;margin: 0 0 10px  0}
+.typical-product{list-style:none; text-align:center;padding:5px 0 10px 0;margin: 0 0 10px  0}
 .typical-product li{padding: 0 0 5px 0}
 
 /***    Page product-info     ****/
