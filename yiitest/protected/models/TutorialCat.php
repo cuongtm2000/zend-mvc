@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "dos_sys_articles_cat".
+ * This is the model class for table "dos_sys_tutorial_cat".
  *
- * The followings are the available columns in table 'dos_sys_articles_cat':
+ * The followings are the available columns in table 'dos_sys_tutorial_cat':
  * @property integer $cat_id
  * @property integer $cat_parent_id
  * @property string $cat_title
@@ -19,9 +19,9 @@
  * @property integer $cat_enable
  *
  * The followings are the available model relations:
- * @property DosSysArticles[] $dosSysArticles
+ * @property DosSysTutorial[] $dosSysTutorial
  */
-class ArticlesCat extends CActiveRecord {
+class TutorialCat extends CActiveRecord {
 	private $_data;
 	private $_rows;
 	private $_rowsize;
@@ -33,7 +33,7 @@ class ArticlesCat extends CActiveRecord {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return ArticlesCat the static model class
+	 * @return TutorialCat the static model class
 	 */
 	public static function model($className = __CLASS__) {
 		return parent::model($className);
@@ -43,7 +43,7 @@ class ArticlesCat extends CActiveRecord {
 	 * @return string the associated database table name
 	 */
 	public function tableName() {
-		return 'dos_sys_articles_cat';
+		return 'dos_sys_tutorial_cat';
 	}
 
 	/**
@@ -161,7 +161,7 @@ class ArticlesCat extends CActiveRecord {
 		$criteria = new CDbCriteria();
 		$criteria->order = 'cat_order DESC';
 
-		$this->_cat_data = ArticlesCat::model()->findAll($criteria);
+		$this->_cat_data = TutorialCat::model()->findAll($criteria);
 
 		if ($cat == 1) {
 			$this->_sub_cat_data[0]['cat_id'] = 0;

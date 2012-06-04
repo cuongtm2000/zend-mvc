@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "dos_sys_articles".
+ * This is the model class for table "dos_sys_tutorial".
  *
- * The followings are the available columns in table 'dos_sys_articles':
+ * The followings are the available columns in table 'dos_sys_tutorial':
  * @property integer $record_id
  * @property string $title
  * @property string $titleen
@@ -24,9 +24,9 @@
  * @property integer $dos_module_item_cat_cat_id
  *
  * The followings are the available model relations:
- * @property DosSysArticlesCat $dosModuleItemCatCat
+ * @property DosSysTutorialCat $dosModuleItemCatCat
  */
-class Articles extends CActiveRecord {
+class Tutorial extends CActiveRecord {
     public $remove_pic_thumb;
     private $_oldImage;
     private $_model;
@@ -34,7 +34,7 @@ class Articles extends CActiveRecord {
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
-     * @return Articles the static model class
+     * @return Tutorial the static model class
      */
     public static function model($className = __CLASS__) {
         return parent::model($className);
@@ -44,7 +44,7 @@ class Articles extends CActiveRecord {
      * @return string the associated database table name
      */
     public function tableName() {
-        return 'dos_sys_articles';
+        return 'dos_sys_tutorial';
     }
 
     /**
@@ -79,7 +79,7 @@ class Articles extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'ArticlesCat' => array(self::BELONGS_TO, 'ArticlesCat', 'dos_module_item_cat_cat_id'),
+            'TutorialCat' => array(self::BELONGS_TO, 'TutorialCat', 'dos_module_item_cat_cat_id'),
         );
     }
 
@@ -208,45 +208,45 @@ class Articles extends CActiveRecord {
 		$criteria = new CDbCriteria();
 		$criteria->condition = 'enable=1';
 		$criteria->order = 'record_order DESC, postdate DESC';
-		$count = Articles::model()->count($criteria);
+		$count = Tutorial::model()->count($criteria);
 
 		// elements per page
 		$pages = new CPagination($count);
 		$pages->pageSize = 15;
 		$pages->applyLimit($criteria);
 
-		return array('models' => Articles::model()->findAll($criteria), 'pages' => $pages);
+		return array('models' => Tutorial::model()->findAll($criteria), 'pages' => $pages);
 	}
 
 	//Front end - List item by cat
 	public function listItemByCat($tag) {
 		$criteria = new CDbCriteria();
-		$criteria->with = array('ArticlesCat');
-		$criteria->condition = 'enable=1 AND ArticlesCat.tag=:tag';
+		$criteria->with = array('TutorialCat');
+		$criteria->condition = 'enable=1 AND TutorialCat.tag=:tag';
 		$criteria->params = array(':tag'=>$tag);
 		$criteria->order = 'record_order DESC, postdate DESC';
-		$count = Articles::model()->count($criteria);
+		$count = Tutorial::model()->count($criteria);
 
 		// elements per page
 		$pages = new CPagination($count);
 		$pages->pageSize = 15;
 		$pages->applyLimit($criteria);
 
-		return array('models' => Articles::model()->findAll($criteria), 'pages' => $pages);
+		return array('models' => Tutorial::model()->findAll($criteria), 'pages' => $pages);
 	}
 
     //Back end - List item admin
     public function listItemAdmin() {
         $criteria = new CDbCriteria();
         $criteria->order = 'postdate DESC';
-        $count = Articles::model()->count($criteria);
+        $count = Tutorial::model()->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
         $pages->pageSize = 15;
         $pages->applyLimit($criteria);
 
-        return array('models' => Articles::model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => Tutorial::model()->findAll($criteria), 'pages' => $pages);
     }
 
     //Back end - Update Record
@@ -267,12 +267,12 @@ class Articles extends CActiveRecord {
 
     //Back end - Delete Record
     private function deleteRecord($id) {
-        $item = Articles::model()->find('record_id=:id', array(':id' => $id));
+        $item = Tutorial::model()->find('record_id=:id', array(':id' => $id));
         $path = YiiBase::getPathOfAlias('webroot') . '/public/userfiles/image/' . Yii::app()->user->id . '/image' . '/' . Yii::app()->controller->id . '/';
         if ($item->pic_thumb && file_exists($path . $item->pic_thumb)) {
             unlink($path . $item->pic_thumb);
         }
-        Articles::model()->findByPk($id)->delete(); //delete record_id
+        Tutorial::model()->findByPk($id)->delete(); //delete record_id
     }
 
     //Back end - Active Item
@@ -297,11 +297,11 @@ class Articles extends CActiveRecord {
             $criteria = new CDbCriteria();
             $criteria->order = 'record_order ASC, postdate ASC';
 
-            $models = Articles::model()->findAll($criteria);
+            $models = Tutorial::model()->findAll($criteria);
 
             $i = 1;
             foreach ($models as $model) {
-                Articles::model()->updateByPk($model['record_id'], array('record_order' => $i));
+                Tutorial::model()->updateByPk($model['record_id'], array('record_order' => $i));
                 $i++;
             }
         } else {
@@ -344,7 +344,7 @@ class Articles extends CActiveRecord {
     //Back end - Get record to Edit
     public function loadEdit($id) {
         $criteria = new CDbCriteria();
-        $this->_model = Articles::model()->findByPk($id, $criteria);
+        $this->_model = Tutorial::model()->findByPk($id, $criteria);
 
         if ($this->_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');
