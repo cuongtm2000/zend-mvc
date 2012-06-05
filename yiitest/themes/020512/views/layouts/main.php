@@ -55,7 +55,7 @@
 		<?php $selected = ($value['url']==$this->module->id) ?  ' class="select"' : ''?>
 		<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
 		<?php $none = ($i < ($size-1)) ? '' : ' class="none-line"' ?>
-		<li<?php echo $none?>><a <?php echo $selected ?> class="linknav" href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
+		<li<?php echo $none?>><a<?php echo $selected ?> class="linknav" href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
 		<?php $i++; endforeach;?>
 	</ul> <!--End Nav-->  <div class="clear"></div>
     <div id="banner">
@@ -182,6 +182,7 @@
 		<?php echo ($this->lang['address2']) ? '<p>'.$this->lang['address2'].'</p>' : '' ?>
 		<p><?php echo $this->lang['copyright'] ?></p>
 		<p><?php echo $this->lang['developed']?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></p>
+	</div>
 </div><!--End Wapper-->
 </body>
 </html>

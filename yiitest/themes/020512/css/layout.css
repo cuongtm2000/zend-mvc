@@ -24,7 +24,8 @@ ul#nav li{overflow: hidden;float: left;height: 40px;}
 ul#nav a, ul#nav span {padding: 10px 20px;display:block; clear: both;color:#dbff92; font-weight:bold; font-size:12px; line-height:20px;width: 100%; height:20px; background:url(../images/nv.jpg) repeat-x top left;}
 ul#nav a {color: #fff;background-position: left bottom;}
 ul#nav span {background-position: left top;}
-
+/*ul#nav .select {margin:-40px 0 0 0}
+ul#nav .select:hover{margin:0}*/
 
 #lang{float:right; padding:10px 0 0 0;}
 #lang li{display:inline; margin:0 5px}
