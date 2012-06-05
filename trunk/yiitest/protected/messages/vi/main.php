@@ -5,12 +5,15 @@ return array(
 	'description' => 'Dịch vụ tạo website trực tuyến: Chọn mẫu website, đăng ký tài khoản, chạy thử website, dể dàng quản lý và nhập liệu, dữ liệu được nhập tự động theo ngành nghề bạn chọn',
 
 	'article-pageTitle' => 'Bản tin website Dos.vn',
+    'tutorial-pageTitle' => 'Hướng dẫn sử dụng',
 
 	'home' => 'Trang chủ',
 	'templates.name' => 'Mẫu website',
 	'templates.link' => 'mau-website',
 	'articles.name' => 'Bài viết',
 	'articles.link' => 'bai-viet',
+    'tutorial.name' => 'Hướng dẫn',
+    'tutorial.link' => 'huong-dan',
 	'about.name' => 'Giới thiệu',
 	'about.link' => 'gioi-thieu',
 	'contact.name' => 'Liên hệ',

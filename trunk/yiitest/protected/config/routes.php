@@ -80,6 +80,17 @@ return array(
 	'<language:(vi|en)>/<articles:(articles|bai-viet)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('articles/view', 'urlSuffix' => '.html'),
 	'<articles:(articles|bai-viet)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('articles/view', 'urlSuffix' => '.html'),
 
+    '<language:(vi|en)>/<tutorial:(user-guide|huong-dan)>/page/<page:\d+>' => array('tutorial/index'), //paging index
+    '<tutorial:(user-guide|huong-dan)>/page/<page:\d+>' => array('tutorial/index'), //paging index
+    '<language:(vi|en)>/<tutorial:(user-guide|huong-dan)>' => array('tutorial/index'), //index
+    '<tutorial:(user-guide|huong-dan)>' => array('tutorial/index'), //index
+    '<language:(vi|en)>/<tutorial:(user-guide|huong-dan)>/<cid:[-a-z0-9]+>/page/<page:\d+>' => array('tutorial/cats'), //paging cats
+    '<tutorial:(user-guide|huong-dan)>/<cid:[-a-z0-9]+>/page/<page:\d+>' => array('tutorial/cats'), //paging cats
+    '<language:(vi|en)>/<tutorial:(user-guide|huong-dan)>/<cid:[-a-z0-9]+>' => array('tutorial/cats'),
+    '<tutorial:(user-guide|huong-dan)>/<cid:[-a-z0-9]+>' => array('tutorial/cats'),
+    '<language:(vi|en)>/<tutorial:(user-guide|huong-dan)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('tutorial/view', 'urlSuffix' => '.html'),
+    '<tutorial:(user-guide|huong-dan)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('tutorial/view', 'urlSuffix' => '.html'),
+
 	//aboutus controller
 	'<language:(vi|en)>/<aboutus:(about-us)>' => array('aboutus/index'), //index
 	'<aboutus:(gioi-thieu)>' => array('aboutus/index'), //index
