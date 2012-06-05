@@ -1,4 +1,5 @@
 <?php $this->breadcrumbs = array(Yii::t('main', 'articles.name') => Yii::app()->session['langUrl'] . '/'. Yii::t('main', 'articles.link'), $infoCat['cat_title']);?>
+<?php $this->pageTitle = $infoCat['cat_title']; $this->description = $infoCat['description']?>
 
 <div id="leftcontent">
 	<?php foreach($listItemByCat['models'] as $value):?>

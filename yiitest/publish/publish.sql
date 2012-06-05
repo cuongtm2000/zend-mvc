@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 04, 2012 at 01:56 PM
+-- Generation Time: Jun 05, 2012 at 04:47 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -72,38 +72,42 @@ CREATE TABLE IF NOT EXISTS `dos_configs` (
 --
 
 INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES
-('advs_left_height', 300, '', '270412'),
-('advs_left_width', 179, '', '270412'),
-('advs_right_height', 300, '', '270412'),
-('advs_right_width', 164, '', '270412'),
-('banner_height', 285, '', '270412'),
-('banner_width', 597, '', '270412'),
-('logo_height', 97, '', '270412'),
-('logo_width', 107, '', '270412'),
-('max_image_height', 753, '', '270412'),
-('max_image_width', 565, '', '270412'),
-('news_cat_height', 100, '', '270412'),
-('news_cat_width', 143, '', '270412'),
-('news_height_thumb', 100, '', '270412'),
-('news_num_paging_cat', 10, '', '270412'),
-('news_num_paging_hot', 6, '', '270412'),
-('news_num_paging_index', 10, '', '270412'),
-('news_num_paging_new', 6, '', '270412'),
-('news_width_thumb', 143, '', '270412'),
-('products_cat_height', 135, '', '270412'),
-('products_cat_width', 135, '', '270412'),
-('products_height', 753, '', '270412'),
-('products_height_thumb', 135, '', '270412'),
-('products_num_paging_cat', 16, '', '270412'),
-('products_num_paging_hot', 12, '', '270412'),
-('products_num_paging_new', 20, '', '270412'),
-('products_num_paging_other', 4, '', '270412'),
-('products_width', 565, '', '270412'),
-('products_width_thumb', 135, '', '270412'),
-('video_height_thumb', 135, '', '270412'),
-('video_num_paging_cat', 8, '', '270412'),
-('video_num_paging_index', 8, '', '270412'),
-('video_width_thumb', 135, '', '270412');
+('advs_bottom_height', 32, '', '020512'),
+('advs_bottom_width', 980, '', '020512'),
+('advs_left_height', 220, '', '020512'),
+('advs_left_width', 200, '', '020512'),
+('advs_top_height', 146, '', '020512'),
+('advs_top_width', 250, '', '020512'),
+('banner_height', 290, '', '020512'),
+('banner_width', 725, '', '020512'),
+('logo_height', 110, '', '020512'),
+('logo_width', 285, '', '020512'),
+('max_image_height', 670, '', '020512'),
+('max_image_width', 720, '', '020512'),
+('news_cat_height', 100, '', '020512'),
+('news_cat_width', 143, '', '020512'),
+('news_height_thumb', 100, '', '020512'),
+('news_num_paging_cat', 10, '', '020512'),
+('news_num_paging_hot', 6, '', '020512'),
+('news_num_paging_index', 10, '', '020512'),
+('news_num_paging_new', 6, '', '020512'),
+('news_width_thumb', 143, '', '020512'),
+('products_cat_height', 198, '', '020512'),
+('products_cat_width', 170, '', '020512'),
+('products_height', 500, '', '020512'),
+('products_height_thumb', 198, '', '020512'),
+('products_num_paging_cat', 20, '', '020512'),
+('products_num_paging_hot', 20, '', '020512'),
+('products_num_paging_new', 20, '', '020512'),
+('products_num_paging_other', 4, '', '020512'),
+('products_width', 500, '', '020512'),
+('products_width_thumb', 170, '', '020512'),
+('services_height', 170, '', '020512'),
+('services_width', 170, '', '020512'),
+('video_height_thumb', 150, '', '020512'),
+('video_num_paging_cat', 16, '', '020512'),
+('video_num_paging_index', 16, '', '020512'),
+('video_width_thumb', 170, '', '020512');
 
 -- --------------------------------------------------------
 
@@ -229,12 +233,10 @@ CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
 --
 
 INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, `loadfiles`, `typefile`) VALUES
-('270412', 'default', 'simplyscroll.verticall.css|prettyPhoto.css', 'css'),
-('270412', 'default', 'jquery.simplyscroll.vertical.js|verticall-config.js|jquery.prettyPhoto.js', 'javascript'),
-('270412', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
-('270412', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
-('270412', 'video', 'prettyPhoto.css', 'css'),
-('270412', 'video', 'jquery.prettyPhoto.js', 'javascript');
+('020512', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
+('020512', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js|jquery.simplyscroll.vertical.js', 'javascript'),
+('020512', 'video', 'prettyPhoto.css', 'css'),
+('020512', 'video', 'jquery.prettyPhoto.js', 'javascript');
 
 -- --------------------------------------------------------
 
@@ -286,14 +288,14 @@ CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
 --
 
 INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
-('about', 'phivucomputer'),
-('advs', 'phivucomputer'),
-('banner', 'phivucomputer'),
-('contact', 'phivucomputer'),
-('news', 'phivucomputer'),
-('products', 'phivucomputer'),
-('services', 'phivucomputer'),
-('supports', 'phivucomputer');
+('about', 'quangcaothienkim'),
+('advs', 'quangcaothienkim'),
+('banner', 'quangcaothienkim'),
+('contact', 'quangcaothienkim'),
+('news', 'quangcaothienkim'),
+('products', 'quangcaothienkim'),
+('services', 'quangcaothienkim'),
+('supports', 'quangcaothienkim');
 
 -- --------------------------------------------------------
 
@@ -322,14 +324,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=150 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=166 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(149, 'Giới thiệu công ty', '', '<p>CTY TNHH CÔNG NGHỆ TIN HỌC PHI VŨ<br />     380 NGUYỄN HOÀNG - ĐÀ NẴNG<br />          0905.168.699 - 3691973</p>\n<p>- TRUNG TÂM PHÂN PHỐI MÁY BỘ VI TÍNH CŨ VÀ MỚI MIỀN TRUNG</p>\n<p>- TRUNG TÂM PHÂN PHỐI LINH KIỆN MÁY TÍNH CŨ VÀ MỚI MIỀN TRUNG</p>\n<p>- CAM KẾT BẢO HÀNH NHANH CHÓNG, 1 ĐỔI 1 TRONG THỜI GIAN BẢO HÀNH</p>\n<p>- QUÝ KHÁCH NGOẠI TỈNH LẤY HÀNG CHUYỂN KHOẢN VÀO TK:</p>\n<p>              <span style="color:#ff0000;"><strong>   LÊ HÙNG VIỆT</strong></span></p>\n<p><span style="color:#ff0000;"><strong>                 AGRIBANK ĐÀ NẴNG</strong></span></p>\n<p><span style="color:#ff0000;"><strong>                 TK: 2003206079110   </strong></span></p>\n<p><em><span style="text-decoration:underline;">DỊCH VỤ:</span></em></p>\n<p>- SỬA CHỮA VÀ THAY THẾ LINH KIỆN MÁY TÍNH.<br />- Chuyên hàn bản lề laptop, hàn vỏ nhựa laptop.<br />- Chuyên sửa bàn phím laptop, thay mới bàn phím laptop.</p>\n<p>- Chuyên thay màn hình LCD laptop các loại.</p>\n<p>- Sửa laptop bao gồm tất cả các bệnh.</p>\n<p> </p>', '', 116, '2012-05-27 04:02:03', 1, 0, '', '', 'gioi-thieu-cong-ty', '', '', '', 1, 'phivucomputer');
+(165, 'Giới thiệu', '', '<p><strong>Thiên Kim</strong> là công ty chuyên nghiệp về thiết kế đồ họa, cung cấp nhãn, bao bì hàng hóa, ấn phẩm quảng cáo và truyền thông thương hiệu.</p>\n<p>Nhóm thiết kế của chúng tôi gồm các họa sĩ, chuyên gia mỹ thuật công nghiệp giàu kinh nghiệm về thiết kế logo, bộ nhận diện thương hiệu, brochure, catalog, báo cáo thường niên, kỷ yếu, lịch, nhãn hiệu, bao bì và nhiều sản phẩm thiết kế khác.</p>\n<p>Chúng tôi cũng cung cấp cho khách hàng các loại nhãn, bao bì chất lượng cao và các ấn phẩm cao cấp, sang trọng sử dụng cho việc quảng bá thương hiệu và giới thiệu sản phẩm.</p>\n<p>Sản phẩm do chúng tôi cung cấp đáp ứng các yêu cầu khắt khe nhất về mỹ thuật, chất lượng in ấn và thành phẩm.</p>', '', 26, '2012-06-01 04:30:54', 1, 0, '', '', 'gioi-thieu', '', '', '', 1, 'quangcaothienkim');
 
 -- --------------------------------------------------------
 
@@ -354,14 +356,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=150 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=186 ;
 
 --
 -- Dumping data for table `dos_module_advs`
 --
 
 INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`, `dos_usernames_username`) VALUES
-(149, 'Cam kết Bảo hành 24h, 1 đổi 1', '', 'cam-ket-bao-hanh-24h-1-doi-1.jpg', 'http://dos.vn', '2012-05-27 04:02:03', '2012-05-02 17:00:00', '2012-06-29 17:00:00', 0, 1, 'left', '_bank', 1, 'phivucomputer');
+(183, 'qc1', '', 'qc1.jpg', 'http://thuonghoi.com', '2012-06-02 17:07:53', '2012-06-02 17:00:00', '2013-06-02 17:00:00', 0, 1, 'top', '_bank', 1, 'quangcaothienkim'),
+(184, 'qc2', '', 'qc2.jpg', 'http://thuonghoi.com', '2012-06-02 17:08:37', '2012-06-02 17:00:00', '2013-06-02 17:00:00', 0, 2, 'top', '_bank', 1, 'quangcaothienkim'),
+(185, 'logo_thuonghoi', '', 'logothuonghoi.jpg', 'http://thuonghoi.com', '2012-06-02 17:31:19', '2012-06-02 17:00:00', '2013-06-02 17:00:00', 0, 3, 'left', '_bank', 0, 'quangcaothienkim');
 
 -- --------------------------------------------------------
 
@@ -382,22 +386,23 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=715 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=752 ;
 
 --
 -- Dumping data for table `dos_module_banners`
 --
 
 INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_url`, `banner_link`, `banner_order`, `banner_type`, `position`, `enable`, `dos_usernames_username`) VALUES
-(667, '2012-05-27 04:02:03', 'Banner 1', 'banner-1.jpg', '', 2, 'banners', 'default', 0, 'phivucomputer'),
-(668, '2012-05-27 04:02:03', 'Banner 2', 'banner-2.jpg', '', 3, 'banners', 'default', 0, 'phivucomputer'),
-(680, '2012-05-28 02:09:34', 'Phi Vu Computer', 'phi-vu-computer.png', '', 4, 'logo', 'default', 1, 'phivucomputer'),
-(681, '2012-05-28 02:44:00', 'Hinh cong ty', 'hinh-cong-ty.jpg', '', 5, 'banners', 'default', 1, 'phivucomputer'),
-(710, '2012-05-31 04:05:48', 'Banner 3', 'banner-3.jpg', '', 6, 'banners', 'default', 1, 'phivucomputer'),
-(711, '2012-05-31 04:06:20', 'Banner 4', 'banner-4.jpg', '', 7, 'banners', 'default', 1, 'phivucomputer'),
-(712, '2012-05-31 04:06:44', 'Banner 5', 'banner-5.jpg', '', 8, 'banners', 'default', 1, 'phivucomputer'),
-(713, '2012-05-31 04:08:21', 'Banner 6', 'banner-6.jpg', '', 9, 'banners', 'default', 1, 'phivucomputer'),
-(714, '2012-05-31 04:08:52', 'Banner 7', 'banner-7.jpg', '', 10, 'banners', 'default', 1, 'phivucomputer');
+(742, '2012-06-02 16:58:43', 'banner1_cty', 'banner1cty7.jpg', '', 5, 'banners', 'default', 1, 'quangcaothienkim'),
+(743, '2012-06-02 17:04:47', 'banner2', 'banner2.jpg', '', 6, 'banners', 'default', 1, 'quangcaothienkim'),
+(744, '2012-06-02 17:14:03', 'logo_thienkim', 'logothienkim.jpg', '', 7, 'logo', 'default', 1, 'quangcaothienkim'),
+(745, '2012-06-02 17:22:37', 'banner3', 'banner3.jpg', '', 8, 'banners', 'products', 1, 'quangcaothienkim'),
+(746, '2012-06-02 17:22:50', 'banner4', 'banner4.jpg', '', 9, 'banners', 'products', 1, 'quangcaothienkim'),
+(747, '2012-06-02 17:24:18', 'banner5', 'banner5.jpg', '', 10, 'banners', 'about', 1, 'quangcaothienkim'),
+(748, '2012-06-02 17:24:30', 'banner6', 'banne6r.jpg', '', 11, 'banners', 'about', 1, 'quangcaothienkim'),
+(749, '2012-06-02 17:26:11', 'banner7', 'banner7.jpg', '', 12, 'banners', 'services', 1, 'quangcaothienkim'),
+(750, '2012-06-02 17:26:48', 'banner8', 'banner8.jpg', '', 13, 'banners', 'news', 1, 'quangcaothienkim'),
+(751, '2012-06-02 17:27:23', 'banner9', 'banner9.jpg', '', 14, 'banners', 'contact', 1, 'quangcaothienkim');
 
 -- --------------------------------------------------------
 
@@ -423,14 +428,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_contacts_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `dos_module_contacts`
 --
 
 INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `tagen`, `description`, `descriptionen`, `enable`, `dos_usernames_username`) VALUES
-(14, 'Cty Phi Vũ - 380 Nguyễn Hoàng- Đà Nẵng - 0905.168.699', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- Đà Nẵng - 0905.168.699</p>', '', '2012-05-29 03:36:52', 1, 0, 0, 'cty-phi-vu-380-nguyen-hoang-da-nang-0905168699', '', 'Cty Phi Vũ - 380 Nguyễn Hoàng- Đà Nẵng - 0905.168.699', '', '1', 'phivucomputer');
+(16, 'Liên hệ với chung tôi', '', '<p><strong>CÔNG TY TNHH IN ẤN &amp; QUẢNG CÁO THIÊN KIM</strong></p>\n<p><strong>Địa chỉ:</strong> 95/68, Nguyễn Ái Quốc, Kp.8, P.Tân Phong, Tp.Biên Hòa, Tỉnh Đồng Nai</p>\n<p><strong>ĐT/Fax:</strong> (061) 3 896 606</p>\n<p><strong>Hotline:</strong> 0915.429 486 / 0983 818 414</p>\n<p><strong>Email:</strong> <a href="mailto:info@quangcaothienkim.com">info@quangcaothienkim.com</a></p>\n<p><strong>Website:</strong> <a href="http://quangcaothienkim.com">http://quangcaothienkim.com</a></p>', '', '2012-06-01 06:29:15', 1, 0, 0, 'lien-he-voi-chung-toi', '', '', '', '1', 'quangcaothienkim');
 
 -- --------------------------------------------------------
 
@@ -457,12 +462,12 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 --
 
 INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
-('Trang chủ', '', 'default', '', 1, '', '', '', '', 'phivucomputer'),
-('Giới thiệu', '', 'about', '', 2, '', '', '', '', 'phivucomputer'),
-('Sản phẩm', '', 'products', '', 3, '', '', '', '', 'phivucomputer'),
-('Dịch vụ', '', 'services', '', 4, '', '', '', '', 'phivucomputer'),
-('Tin tức & sự kiện', '', 'news', '', 5, '', '', '', '', 'phivucomputer'),
-('Liên hệ', '', 'contact', '', 6, '', '', '', '', 'phivucomputer');
+('Trang chủ', '', 'default', '', 1, '', '', '', '', 'quangcaothienkim'),
+('Giới thiệu', '', 'about', '', 2, '', '', '', '', 'quangcaothienkim'),
+('Sản phẩm', '', 'products', '', 3, '', '', '', '', 'quangcaothienkim'),
+('Dịch vụ', '', 'services', '', 4, '', '', '', '', 'quangcaothienkim'),
+('Tin tức & sự kiện', '', 'news', '', 5, '', '', '', '', 'quangcaothienkim'),
+('Liên hệ', '', 'contact', '', 6, '', '', '', '', 'quangcaothienkim');
 
 -- --------------------------------------------------------
 
@@ -493,15 +498,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=159 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=191 ;
 
 --
 -- Dumping data for table `dos_module_news`
 --
 
 INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(157, 'Túi xách da, túi xách lông thú cho bạn gái', '', '2012-05-27 04:02:03', 'tui-xach-da-tui-xach-long-thu-cho-ban-gai.jpg', '<p>Dù bạn bao nhiêu tuổi, thân hình ra sao, phong cách thời trang như thế nào, bạn cũng có thể chọn cho mình một chiếc túi ưng ý...</p>', '', '<p style="text-align:justify;">Những chiếc túi xách bằng da được điểm xuyết lông thú với nhiều hình dáng, thích hợp cho các bạn gái.</p>\n<p style="text-align:justify;">Dù bạn bao nhiêu tuổi, thân hình ra sao, phong cách thời trang như thế nào, bạn cũng có thể chọn cho mình một chiếc túi xách ưng ý với đủ loại kích thước, kiểu dáng to, nhỏ khác nhau. Với túi xách da, túi xách lông thú, các bạn gái sẽ tự tin hơn trong việc thể hiện phong cách và cá tính bản thân.</p>\n<p><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/240312/image/tui-xach-ban-gai-2.jpg" alt="" width="550" height="410" /></p>\n<p><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/240312/image/tui-xach-ban-gai-3.jpg" alt="" width="550" height="407" /></p>\n<p style="text-align:center;"><img style="float:left;" src="/public/userfiles/image/240312/image/tui-xach-ban-gai-4.jpg" alt="" width="550" height="516" /></p>\n<p style="text-align:center;"><img style="float:left;" src="/public/userfiles/image/240312/image/tui-xach-ban-gai-5.jpg" alt="" width="550" height="531" /></p>\n<p style="text-align:justify;">Để hòa mình vào thế giới túi xách, túi xách da, túi xách thời trang sành điệu truy cập ngay http://shoptuixachda.com - chuyên cung cấp túi xách, túi xách thời trang, túi xách hàng hiệu, túi xách nam, túi xách nữ, túi xách laptop, túi xách đẹp, túi xách tay, túi xách da.</p>', '', 'tui-xach-da-tui-xach-long-thu-cho-ban-gai', '', 'Túi xách da, túi xách lông thú cho bạn gái', '', 0, 4, 0, '', '', 1, 95),
-(158, 'Túi xách của bạn, phong cách của bạn', '', '2012-05-27 04:02:03', 'tui-xach-cua-ban-phong-cach-cua-ban.jpg', '<p>Dù bạn bao nhiêu tuổi, thân hình ra sao, phong cách thời trang như thế nào, bạn cũng có thể chọn cho mình một chiếc túi ưng ý...</p>', '', '<p style="text-align:justify;">Các bạn gái hãy thể hiện cá tính riêng của mình với phong cách túi xách 2012.</p>\n<p style="text-align:justify;">Bên cạnh trang phục và phụ kiện đi kèm, túi xách là "người bạn thân thiết" khó thể tách rời mỗi khi các bạn gái đi ra ngoài. Chúng không chỉ giúp các cô gái chứa những vật dụng cần thiết, là một món "nữ trang" mà còn cho các nàng thỏa sức phô diễn phong cách thời trang riêng.</p>\n<p style="text-align:justify;">Với những cô bạn công sở hay yêu thích sự điệu đà, duyên dáng, chiếc túi xách hoặc khoác vai là lựa chọn hợp lý nhất.</p>\n<p><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/240312/image/tui-xach-phong-cach-3.jpg" alt="" width="541" height="660" /></p>\n<p> </p>\n<p><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/240312/image/tui-xach-phong-cach-2.jpg" alt="" width="550" height="397" /></p>\n<p style="text-align:justify;">Để hòa mình vào thế giới túi xách, túi xách da, túi xách thời trang sành điệu truy cập ngay http://240312.dos.vn - chuyên cung cấp túi xách, túi xách thời trang, túi xách hàng hiệu, túi xách nam, túi xách nữ, túi xách laptop, túi xách đẹp, túi xách tay, túi xách da.</p>', '', 'tui-xach-cua-ban-phong-cach-cua-ban', '', 'Dù bạn bao nhiêu tuổi, thân hình ra sao, phong cách thời trang như thế nào, bạn cũng có thể chọn cho mình một chiếc túi ưng ý...', '', 0, 3, 0, '', '', 1, 95);
+(189, 'Anapurna M2 UV – Gia tăng tốc độ và sản lượng', '', '2012-06-02 17:50:24', 'anapurna-m2-uv--gia-tang-toc-do-va-san-luong.jpg', '<p>Agfa Graphics tự hào công bố dòng máy in phun mực UV khổ lớn Anapurna M2 UV. Dựa trên dòng máy in phun mực UV khổ lớn Anapurna M từng đạt giải thưởng công nghiệp và giải thưởng bán chạy nhất, Anapurna M2 là một hệ thống in phun mực UV thuộc dòng máy công nghiệp nặng có đầy đủ mọi chức năng.</p>', '', '<p><strong>Agfa Graphics tự hào công bố dòng máy in phun mực UV khổ lớn Anapurna M2 UV. Dựa trên dòng máy in phun mực UV khổ lớn Anapurna M từng đạt giải thưởng công nghiệp và giải thưởng bán chạy nhất, Anapurna M2 là một hệ thống in phun mực UV thuộc dòng máy công nghiệp nặng có đầy đủ mọi chức năng.</strong></p>\n<p><strong><img src="http://vhp.dos.vn/public/userfiles/image/vhp/image/nss_1314782881.jpg" alt="" width="459" height="345" /></strong></p>\n<p>Nhiều chức năng tự động được bổ sung đã giúp cho Anapurna M2 trở thành dòng máy dẫn đầu trong thị trường in phun mực UV khổ lớn. Hệ thống điều khiển lực hút chân không đồng bộ được thiết kế phù hợp cho phép vật liệu có thể đi qua trơn tru với tốc độ rất nhanh. Dãy cảm biến an toàn có nhiệm vụ bảo vệ đầu in trong trường hợp vật liệu in có độ dày không ổn định, và bộ phận ion hóa ngăn chặn sự tích điện xảy ra trên vật liệu, bảo đảm điều kiện tốt nhất cho việc phun mực chính xác do đó giúp đạt được chất lượng in cao nhất. Các bộ phận của Anapurna M2 được thiết kế theo tiêu chuẩn nhằm đáp ứng tối đa các nhu cầu sản xuất đòi hỏi cao. Anapurna M2 tăng số đầu in lên 6 đơn vị với 1024 lỗ phun mực cho phép gia tăng tốc độ in. Với thiết kế tiện lợi, máy điều khiển vật liệu theo dạng in cuộn rất vững chãi, vật liệu được đưa thẳng trực tiếp vào máy in thông qua hệ thống định vị vật liệu tự động.</p>\n<p>Willy Van Dromme, quản lý hệ thống kinh doanh in khổ lớn của Agfa Graphics nói: “Anapurna M2 là ý tưởng thích hợp cho nhu cầu in quảng cáo, in thương mại, in bảng hiệu và các phòng photo lab yêu cầu chất lượng cao. Nó được chế tạo thật bền bỉ nhằm phục vụ cho yêu cầu công nghiệp. Nó là dòng máy in phun mực UV cao cấp có thể đáp ứng tối đa các nhu cầu sản xuất đòi hỏi cao”.</p>\n<p>Anapurna M2 đáp ứng vật liệu có khổ bề rộng tối đa là 62inch (1,57m) và sử dụng đầu in mới nhất Konica-Minolta 12 pico cho phép in hình ảnh có độ phân giải không đồng nhất (unparalleled image) 720 x 1440dpi.</p>\n<p>Cả hai chế độ in hai chiều và một chiều đều sắc nét, thể hiện được nhiều chi tiết và chữ rõ nét. In ở chế độ 8 lần một chiều cho hình ảnh có chất lượng cao nhất, chế độ 4 lần hai chiều cho sản lượng in cao nhất, khoảng 23m2/giờ.</p>\n<p>Khi kết hợp sử dụng với mực in UV Anapurna do Afga chế tạo, Anapurna M2 cho chất lượng ảnh nhìn sắc nét với tốc độ in cao.</p>', '', 'anapurna-m2-uv-gia-tang-toc-do-va-san-luong', '', '', '', 0, 1, 0, '', '', 1, 109),
+(190, 'Quite công bố phiên bản Quite Imposing Plus 3', '', '2012-06-02 17:52:41', 'quite-cong-bo-phien-ban-quite-imposing-plus-3.gif', '<p>Quite Software, công ty phát triển các giải pháp cho PDF trên toàn cầu vừa công bố phiên bản bình trang điện tử QUITE IMPOSING PLUS 3. Quite tập trung giải quyết những phản hồi của khách hàng về những yêu cầu của họ trong việc bình trang điện tử</p>', '', '<p>Quite Software, công ty phát triển các giải pháp cho PDF trên toàn cầu vừa công bố phiên bản bình trang điện tử QUITE IMPOSING PLUS 3. Quite tập trung giải quyết những phản hồi của khách hàng về những yêu cầu của họ trong việc bình trang điện tử. Những tính năng mới của Quite Imposing Plus 3 giúp cho công việc bình trang được nhanh chóng và thuận tiện hơn.Trong phiên bản update lần này, Quite nâng cấp các chức năng về xử lý trang trong PDF như: thêm trang, nhóm trang, nhân bản trang, chia tách trang, thay đổi kích thước trang, thêm dữ liệu biến đổi cho trang như thêm số trang, ngày và giờ, tên tài liệu. Quite củng bổ sung thêm chức năng Creep với việc cho khai báo độ dày giấy nhằm bù trừ hiện tượng các tay sách bên ngoài lệch so với các tay sách bên trong khi đóng xén. Quite cũng bổ sung thêm các chức năng cho phép chủ động hơn trong việc sử dụng Crop marks trong bình trang thủ công (Manual Imposition).</p>\n<p>Quite Imposing Plus 3 hỗ trợ đầy đủ cho phiên bản mới nhất của Acrobat X (10.0) và có thể làm việc với PDF/X-4 và PDF/X-5.</p>\n<p>Download Quite Imposing Plus 3 (Demo)</p>\n<p>Download Quite Imposing 3 (Demo)</p>\n<p>Vietnamprint</p>', '', 'quite-cong-bo-phien-ban-quite-imposing-plus-3', '', '', '', 0, 2, 0, '', '', 1, 109);
 
 -- --------------------------------------------------------
 
@@ -528,14 +533,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=96 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=110 ;
 
 --
 -- Dumping data for table `dos_module_news_cat`
 --
 
 INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(95, 0, 'TIN TỨC THỜI TRANG', '', '', '', 'tin-tuc-thoi-trang', '', 'TIN TỨC THỜI TRANG', '', '', 1, '', '', 1, 'phivucomputer');
+(109, 0, 'Tin trong nước', '', '', '', 'tin-trong-nuoc', '', '', '', '', 1, '', '', 1, 'quangcaothienkim');
 
 -- --------------------------------------------------------
 
@@ -553,7 +558,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456083),
+('day_time', 2456084),
 ('max_count', 0),
 ('counter', 0),
 ('yesterday', 0);
@@ -574,7 +579,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''::1''', 1338810429);
+('''127.0.0.1''', 1338862396);
 
 -- --------------------------------------------------------
 
@@ -611,66 +616,25 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2449 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2493 ;
 
 --
 -- Dumping data for table `dos_module_products`
 --
 
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(1940, '20 cái Mainboard 945 Asus', '', '2012-05-28 04:06:16', 'mainboard-945-asus-thumb.jpg', 'mainboard-945-asus.jpg', '', '<p>Main 945 Asus chạy rất ổn đinh, chất lương 80%</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong>(giá 420.000đ)</strong></span></p>', '', '<p>Main 945 Asus chạy rất ổn đinh, chất lương 80%</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1 </p>\n<p><span style="color:#ff0000;"><strong>(giá 420.000đ)</strong></span></p>', '', '20-cai-mainboard-945-asus', '', '', '', 0, 1, '420000', 1, 0, '', '', '', '', 1, 452),
-(1942, '20 cái Nguồn PC JETEK  24Pin 480-500W', '', '2012-05-28 04:10:44', 'nguon-pc-jetek--24pin-480-500w-thumb.jpg', 'nguon-pc-jetek--24pin-480-500w.jpg', '', '<p>Nguồn chất lượng 80%, chạy rất ổn định, dùng cho tất cả các loại máy.</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1.</p>\n<p><span style="color:#ff0000;"><strong>(giá 100.000đ)</strong></span></p>', '', '<p>Input Voltage : 115/230V</p>\n<p>Input Frequency : 50-60Hz</p>\n<p>Output : +5v 22A, +3.3v 17A, +12v 18A, +12VB 18A, -12v 1A, +5VFP 2A</p>\n<p>Dimensions : 5.7W x 3.7 H x 5.4 D - Inches / 150mm(w) x 100mm(H) x 140mm(D)</p>\n<p>Connectors : (1) 24 Pin ATX connector, (1) P2 ATX12V Connector, (1) Peripheral connector, (1) Floppy connector &amp; (2) SATA connector</p>', '', '20-cai-nguon-pc-jetek-24pin-480-500w', '', '', '', 0, 2, '80.000- 100.000VND', 1, 0, '', '', '', '', 1, 452),
-(1954, '10 cái Mainboard 945 Intel chính hãng', '', '2012-05-28 08:11:10', 'mainboard-945-intel-chinh-hang-thumb.jpg', 'mainboard-945-intel-chinh-hang.jpg', '', '<p>Main 945 Intel chạy rất ổn định, chất lượng 80%</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1</p>\n<p>(giá 450.000đ)</p>', '', '<p>Main 945 Intel chạy rất ổn định, chất lượng 80%</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1</p>\n<p>(giá 450.000đ)</p>', '', '10-cai-mainboard-945-intel-chinh-hang', '', '', '', 0, 3, '450000', 0, 0, '', '', '', '', 1, 452),
-(1955, '10 cái Mainboard 945 các loại khác', '', '2012-05-28 08:15:04', 'mainboard-945-cac-loai-khac-thumb.jpg', 'mainboard-945-cac-loai-khac.jpg', '', '<p>Main 945 nhiều loại khác, chạy rất ổn định, chất lượng 80%</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong>(giá 380.000đ)</strong></span></p>', '', '<p>Main 945 nhiều loại khác, chạy rất ổn định, chất lượng 80%</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1</p>\n<p><strong><span style="color:#ff0000;">(giá 380.000đ)</span></strong></p>', '', '10-cai-mainboard-945-cac-loai-khac', '', '', '', 0, 4, '380.000VND - 400.000VND', 0, 0, '', '', '', '', 1, 452),
-(1956, '5 cái Mainboard G31 Asus', '', '2012-05-28 08:21:09', 'mainboard-g31-asus-gia-550-000-vnd-thumb.jpg', 'mainboard-g31-asus-gia-550-000-vnd.jpg', '', '<p>Main G31 Asus chạy rất ổn đinh, chất lượng 80%</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1</p>\n<p><strong><span style="color:#ff0000;">(giá 550.000đ)</span></strong></p>', '', '<p>Main G31 Asus chạy rất ổn đinh, chất lượng 80%</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1</p>\n<p><strong><span style="color:#ff0000;">(giá 550.000đ)</span></strong></p>', '', '5-cai-mainboard-g31-asus', '', '', '', 0, 5, '550000', 0, 0, '', '', '', '', 1, 452),
-(1957, '5 cái main G31 Intel', '', '2012-05-28 08:23:22', 'main-g31-intel-gia-580-000-vnd-thumb.gif', 'main-g31-intel-gia-580-000-vnd.gif', '', '<p>Main G31 Intel chạy rất ổn đinh, chất lượng 80%</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong>(giá 580.000đ)</strong></span></p>', '', '<p>Main G31 Intel chạy rất ổn đinh, chất lượng 80%</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong>(giá 580.000đ)</strong></span></p>', '', '5-cai-main-g31-intel', '', '', '', 0, 6, '580000', 0, 0, '', '', '', '', 1, 452),
-(1958, '10 main G31 Foxconn', '', '2012-05-28 08:26:06', 'main-g31-foxconn--gia-500-000-vnd-thumb.jpg', 'main-g31-foxconn--gia-500-000-vnd.jpg', '', '<p>Main G31 Foxconn chạy rất ổn đinh, chất lượng 80%</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong>(giá 500.000đ)</strong></span></p>', '', '<p>Main G31 Foxconn chạy rất ổn đinh, chất lượng 80%</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong>(giá 500.000đ)</strong></span></p>', '', '10-main-g31-foxconn', '', '', '', 0, 7, '500000', 0, 0, '', '', '', '', 1, 452),
-(1959, '5 cái Mainboard 915 chạy DDram2', '', '2012-05-28 08:29:52', 'mainboard-915-chay-ddram2-gia-300-000-vnd-thumb.jpg', 'mainboard-915-chay-ddram2-gia-300-000-vnd.jpg', '', '<p>Mainboard 915 chạy DDram2, chạy được chíp Celeron D 2,66, 3.0 hoặc P4 2.66, 3.0, chạy rất ổn đinh, chất lượng 80%</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong>(giá 300.000đ)</strong></span></p>', '', '<p>Mainboard 915 chạy DDram2, chạy được chíp Celeron D 2,66, 3.0 hoặc P4 2.66, 3.0, chạy rất ổn đinh, chất lượng 80%</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong>(giá 300.000đ)</strong></span></p>', '', '5-cai-mainboard-915-chay-ddram2', '', '', '', 0, 8, '300000', 0, 0, '', '', '', '', 1, 452),
-(1960, '5 cái Mainboard 845, 865 sk 478 các loại', '', '2012-05-28 08:34:37', 'mainboard-845-865-sk-478-cac-loai-thumb.jpg', 'mainboard-845-865-sk-478-cac-loai.jpg', '', '<p>Mainboard 845, 865 sk 478, chạy rất ổn đinh, chất lượng 80%</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1</p>\n<p><strong><span style="color:#ff0000;">(giá 230.000đ  đến 270.000đ)</span></strong></p>', '', '<p>Mainboard 845, 865 sk 478, chạy rất ổn đinh, chất lượng 80%</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1</p>\n<p><strong><span style="color:#ff0000;">(giá 230.000đ đến 270.000đ)<br /></span></strong></p>', '', '5-cai-mainboard-845-865-sk-478-cac-loai', '', '', '', 0, 9, '230.000 - 270.000VND', 0, 0, '', '', '', '', 1, 452),
-(1961, '10 LCD 19'' AOC còn Bh 34 tháng', '', '2012-05-28 08:40:51', 'lcd-19-aoc-con-bh-34-thang-gia-1tr5-thumb.jpg', 'lcd-19-aoc-con-bh-34-thang-gia-1tr5.jpg', '', '<p>- LCD 19'' AOC 931SWL, còn phiếu bh chính hãng 34 tháng, mới keng, chất lượng 99%  </p>\n<p>- Số lượng còn 10 cái</p>\n<p>- Bảo hành 34 tháng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong>(giá 1.500.000đ)</strong></span></p>', '', '<p>- LCD 19'' AOC 931SWL, còn phiếu bh chính hãng 34 tháng, mới keng, chất lượng 99%</p>\n<p>- Số lượng còn 10 cái</p>\n<p>- Bảo hành 34 tháng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong>(giá 1.500.000đ)</strong></span></p>', '', '10-lcd-19-aoc-con-bh-34-thang', '', '', '', 0, 10, '1500000', 1, 0, '', '', '', '', 1, 452),
-(1962, '5 LCD 17'' ASUS còn Bh 3 tháng', '', '2012-05-28 08:42:56', 'lcd-17-asus-con-bh-3-thang-gia-1tr3-thumb.jpg', 'lcd-17-asus-con-bh-3-thang-gia-1tr3.jpg', '', '<p>- LCD 17 ASUS, mẩu mã đẹp, chất lượng 90%</p>\n<p>- Số lượng còn 5 cái</p>\n<p>- Bảo hành 3 tháng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong>(giá 1.300.000đ)</strong></span></p>', '', '<p>- LCD 17 ASUS, mẩu mã đẹp, chất lượng 90%</p>\n<p>- Số lượng còn 5 cái</p>\n<p>- Bảo hành 3 tháng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong>(giá 1.300.000đ)</strong></span></p>', '', '5-lcd-17-asus-con-bh-3-thang', '', '', '', 0, 11, '1300000', 0, 0, '', '', '', '', 1, 452),
-(1963, 'LCD 15'', LCD 16'' các loại', '', '2012-05-28 08:47:17', 'lcd-15-lcd-16-cac-loai--gia-800k-1tr-thumb.jpg', 'lcd-15-lcd-16-cac-loai--gia-800k-1tr.jpg', '', '<p>- LCD 15'', LCD 16'' các loại, chất lượng 80%, chạy ổn định, chưa sửa chữa</p>\n<p>- Bảo hành 3 háng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong>(giá 800.000 đ - 1.000.000 đ)</strong></span></p>', '', '<p>- LCD 15'', LCD 16'' các loại, chất lượng 80%, chạy ổn định, chưa sửa chữa</p>\n<p>- Bảo hành 3 háng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong>(giá 800.000đ - 1.000.000đ)</strong></span></p>', '', 'lcd-15-lcd-16-cac-loai', '', '', '', 0, 12, '800.000 - 1.000.000VND', 0, 0, '', '', '', '', 1, 452),
-(1964, '30 Hdd 160g Seagate mới 100%', '', '2012-05-28 09:11:51', '', 'hdd-160g-seagate-moi-100-gia-850k-920k.jpg', '', '<p>Hdd 160g Seagate mới 100%, nguyên bao còn bảo hành 16 tháng</p>\n<p><strong><span style="color:#ff0000;">(giá 900k)</span></strong></p>\n<p>Hdd 160g Seagate mới 100%, nguyên bao còn bảo hành dưới 12 tháng</p>\n<p><span style="color:#ff0000;"><strong>(giá 850k)</strong></span></p>', '', '<p>Hdd 160g Seagate mới 100%, nguyên bao còn bảo hành 16 tháng</p>\n<p><span style="color:#ff0000;"><strong>(giá 900k)</strong></span></p>\n<p>Hdd 160g Seagate mới 100%, nguyên bao còn bảo hành dưới 12 tháng</p>\n<p><strong><span style="color:#ff0000;">(giá 850k)</span></strong></p>', '', '30-hdd-160g-seagate-moi-100', '', '', '', 0, 13, '850.000 - 900.000VND', 1, 0, '', '', '', '', 1, 452),
-(1965, 'Hdd 250g Seagate mới 100%', '', '2012-05-28 09:14:58', 'hdd-250g-seagate-moi-100-gia-1tr1-1tr150-thumb.jpg', 'hdd-250g-seagate-moi-100-gia-1tr1-1tr150.jpg', '', '<p>Hdd 250g Seagate mới 100%, nguyên bao còn bảo hành trên 12 tháng</p>\n<p><strong><span style="color:#ff0000;">(giá 1.150.000đ)</span></strong></p>\n<p>Hdd 250g Seagate mới 100%, nguyên bao còn bảo hành dưới 12 tháng</p>\n<p><span style="color:#ff0000;"><strong>(giá 1.100.000đ)</strong></span></p>', '', '<p>Hdd 250g Seagate mới 100%, nguyên bao còn bảo hành trên 12 tháng</p>\n<p>(giá 1.150.000đ)</p>\n<p>Hdd 250g Seagate mới 100%, nguyên bao còn bảo hành dưới 12 tháng</p>\n<p>(giá 1.100.000đ)</p>', '', 'hdd-250g-seagate-moi-100', '', '', '', 0, 14, '1tr1 -1tr150', 0, 0, '', '', '', '', 1, 452),
-(1966, 'chíp E2140, E2160, E2180, E4300, E4500, E5200, E5300,... giá rẻ', '', '2012-05-28 09:26:57', 'chip-e2140-e2160-e2180-e4300-e4500-e5200-e5300----gia-re-thumb.jpg', 'chip-e2140-e2160-e2180-e4300-e4500-e5200-e5300----gia-re.jpg', '', '<p>- Celeron 2.66ghz,........................giá 150.000đ</p>\n<p>- Pentium4 2.66ghz.....................giá 200.000đ</p>\n<p>- Pentium4 3.06ghz.....................giá 300.000đ</p>\n<p>- Chíp Dou core E2140..............giá 550.000đ</p>\n<p>- Chíp Dou core E2160.............giá 600.000đ</p>\n<p>- Chíp Dou core E2180..............giá 650.000đ</p>\n<p>- Chíp Dou core E5200..............giá 900.000đ</p>\n<p>- Chíp Dou core E5300..............giá 950.000đ</p>\n<p>- Chíp core 2 Dou E4300..........giá 900.000đ</p>\n<p>- Chíp core 2 Dou E4300..........giá 950.000đ</p>', '', '<p>- Celeron 2.66ghz,........................giá 150.000đ</p>\n<p>- Pentium4 2.66ghz.....................giá 200.000đ</p>\n<p>- Pentium4 3.06ghz.....................giá 300.000đ</p>\n<p>- Chíp Dou core E2140..............giá 550.000đ</p>\n<p>- Chíp Dou core E2160.............giá 600.000đ</p>\n<p>- Chíp Dou core E2180..............giá 650.000đ</p>\n<p>- Chíp Dou core E5200..............giá 900.000đ</p>\n<p>- Chíp Dou core E5300..............giá 950.000đ</p>\n<p>- Chíp core 2 Dou E4300..........giá 900.000đ</p>\n<p>- Chíp core 2 Dou E4300..........giá 950.000đ</p>', '', 'chip-e2140-e2160-e2180-e4300-e4500-e5200-e5300-gia-re', '', '', '', 0, 15, '', 0, 0, '', '', '', '', 1, 452),
-(1967, '10 Hdd 80g ATA samsung, Seagate mới 100%', '', '2012-05-28 09:30:10', '10-hdd-80g-ata-samsung-seagate-moi-100-thumb.jpg', '10-hdd-80g-ata-samsung-seagate-moi-100.jpg', '', '<p>Hdd 80g ATA samsung, Seagate mới 100%</p>\n<p>bảo hành 12 tháng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong>(giá 450.000đ- 480.000đ)</strong></span></p>', '', '<p>Hdd 80g ATA samsung, Seagate mới 100%</p>\n<p>bảo hành 12 tháng, nhanh chống, 1 đổi 1</p>\n<p>(giá 450.000đ- 480.000đ)</p>', '', '10-hdd-80g-ata-samsung-seagate-moi-100', '', '', '', 0, 16, '450000', 0, 0, '', '', '', '', 1, 452),
-(1968, '10 Hdd 80g SATA samsung, Seagate mới 100%', '', '2012-05-28 09:31:56', 'hdd-80g-sata-samsung-seagate-moi-100-gia-700k-thumb.jpg', 'hdd-80g-sata-samsung-seagate-moi-100-gia-700k.jpg', '', '<p>Hdd 80g SATA samsung, Seagate mới 100%</p>\n<p>bảo hành 12 tháng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong>(giá 700.000đ- 750.000đ)</strong></span></p>', '', '<p>Hdd 80g SATA samsung, Seagate mới 100%</p>\n<p>bảo hành 12 tháng, nhanh chống, 1 đổi 1</p>\n<p>(giá 700.000đ- 750.000đ)</p>', '', '10-hdd-80g-sata-samsung-seagate-moi-100', '', '', '', 0, 17, '700000', 0, 0, '', '', '', '', 1, 452),
-(1969, '10 Hdd 40g ATA samsung, Seagate mới 100%', '', '2012-05-28 09:33:53', 'hdd-40g-ata-samsung-seagate-moi-100-gia-250k-thumb.jpg', 'hdd-40g-ata-samsung-seagate-moi-100-gia-250k.jpg', '', '<p>Hdd 40g ATA samsung, Seagate mới 100%,</p>\n<p>bảo hành 12 tháng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong>(giá 230.000đ- 250.000đ)</strong></span></p>', '', '<p>Hdd 40g ATA samsung, Seagate mới 100%,</p>\n<p>bảo hành 12 tháng, nhanh chống, 1 đổi 1</p>\n<p>(giá 230.000đ- 250.000đ)</p>', '', '10-hdd-40g-ata-samsung-seagate-moi-100', '', '', '', 0, 18, '250000', 0, 0, '', '', '', '', 1, 452),
-(1970, '100 thanh DDram1 512m mới 100%', '', '2012-05-28 09:36:58', 'ddram1-512m-moi-100-gia-120k-150k-thumb.jpg', 'ddram1-512m-moi-100-gia-120k-150k.jpg', '', '<p>DDram1 512M/ bus 400 mới 100%</p>\n<p>bảo hành 12 tháng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong> (giá 120.000đ-150.000đ)</strong></span></p>', '', '<p>DDram1 512M/ bus 400 mới 100%</p>\n<p>bảo hành 12 tháng, nhanh chống, 1 đổi 1</p>\n<p>(giá 120.000đ-150.000đ)</p>', '', '100-thanh-ddram1-512m-moi-100', '', '', '', 0, 19, '120.000 - 150.000VND', 0, 0, '', '', '', '', 1, 452),
-(1972, '50 thanh DDram2 1g mới 100%', '', '2012-05-28 09:38:38', 'ddram2-1g-moi-100-gia-250k-270k-thumb.jpg', 'ddram2-1g-moi-100-gia-250k-270k.jpg', '', '<p>DDram2 1g/ bus 800 mới 100%</p>\n<p>bảo hành 24 tháng, nhanh chống, 1 đổi 1</p>\n<p><span style="color:#ff0000;"><strong>(giá 250.000đ-270.000đ)</strong></span></p>', '', '<p>DDram2 1g/ bus 800 mới 100%</p>\n<p>bảo hành 24 tháng, nhanh chống, 1 đổi 1</p>\n<p>(giá 250.000đ-270.000đ)</p>', '', '50-thanh-ddram2-1g-moi-100', '', '', '', 0, 20, '250.000 - 270.000VND', 0, 0, '', '', '', '', 1, 452),
-(1973, '50 thanh DDram2 1g cũ', '', '2012-05-28 09:42:53', '50-thanh-ddram2-1g-cu-gia-170k-200k-thumb.jpg', '50-thanh-ddram2-1g-cu-gia-170k-200k.jpg', '', '<p>DDram2 1g/ bus 667/800 cũ 80%</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1</p>\n<p>(giá 170.000đ-200.000đ)</p>', '', '<p>DDram2 1g/ bus 667/800 cũ 80%</p>\n<p>bảo hành 1 tháng, nhanh chống, 1 đổi 1</p>\n<p>(giá 170.000đ-200.000đ)</p>', '', '50-thanh-ddram2-1g-cu', '', '', '', 0, 21, '170.000 - 200.000VND', 0, 0, '', '', '', '', 1, 452),
-(1974, 'Pentium4 3.0/Main 945/DDram1g/hdd 80/ key +mouse', '', '2012-05-28 09:57:08', 'pentium4-3-0main-945ddram1ghdd-80-key-mouse-gia-1tr8-thumb.jpg', 'pentium4-3-0main-945ddram1ghdd-80-key-mouse-gia-1tr8.jpg', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699<br />Bán một số case: chất lượng rất tốt, máy chạy ổn định. Bảo hành 3 tháng 1 đổi 1.</p>\n<p>Dou core E5200<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr4</p>\n<p>Dou core E2160<br />Main g945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />cd rom mới<br />Case nguồn<br />(giá 2tr2)</p>\n<p>Dou core E2140<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr1)</p>\n<p>pentium4 3.0ghz hoặc Pentium D 2.8ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr8)</p>\n<p>Pentium4 3.0ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr6)</p>\n<p>pentium4 2.26-2.4ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr1)</p>\n<p>Intel CE 2.0-2.4 ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr)</p>\n<p>ngoài ra công ty có bán màn hình CRT 17'' giá 280k, LCD 15'', 17'' giá 1tr-1tr5</p>', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699<br />Bán một số case: chất lượng rất tốt, máy chạy ổn định. Bảo hành 3 tháng 1 đổi 1.</p>\n<p>Dou core E5200<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr4</p>\n<p>Dou core E2160<br />Main g945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />cd rom mới<br />Case nguồn<br />(giá 2tr2)</p>\n<p>Dou core E2140<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr1)</p>\n<p>pentium4 3.0ghz hoặc Pentium D 2.8ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr8)</p>\n<p>Pentium4 3.0ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr6)</p>\n<p>pentium4 2.26-2.4ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr1)</p>\n<p>Intel CE 2.0-2.4 ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr)</p>\n<p>ngoài ra công ty có bán màn hình CRT 17'' giá 280k, LCD 15'', 17'' giá 1tr-1tr5</p>', '', 'pentium4-30main-945ddram1ghdd-80-key-mouse', '', '', '', 0, 22, '1800000', 0, 0, '', '', '', '', 1, 451),
-(1975, 'Dou core E2140/main 945/ddram 1g/hdd 80/ key+mouse', '', '2012-05-28 09:59:02', 'dou-core-e2140main-945ddram-1ghdd-80-keymouse-gia-2tr1-thumb.jpg', 'dou-core-e2140main-945ddram-1ghdd-80-keymouse-gia-2tr1.jpg', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699<br />Bán một số case: chất lượng rất tốt, máy chạy ổn định. Bảo hành 3 tháng 1 đổi 1.</p>\n<p>Dou core E5200<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr4</p>\n<p>Dou core E2160<br />Main g945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />cd rom mới<br />Case nguồn<br />(giá 2tr2)</p>\n<p>Dou core E2140<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr1)</p>\n<p>pentium4 3.0ghz hoặc Pentium D 2.8ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr8)</p>\n<p>Pentium4 3.0ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr6)</p>\n<p>pentium4 2.26-2.4ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr1)</p>\n<p>Intel CE 2.0-2.4 ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr)</p>\n<p>ngoài ra công ty có bán màn hình CRT 17'' giá 280k, LCD 15'', 17'' giá 1tr-1tr5</p>', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699<br />Bán một số case: chất lượng rất tốt, máy chạy ổn định. Bảo hành 3 tháng 1 đổi 1.</p>\n<p>Dou core E5200<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr4</p>\n<p>Dou core E2160<br />Main g945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />cd rom mới<br />Case nguồn<br />(giá 2tr2)</p>\n<p>Dou core E2140<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr1)</p>\n<p>pentium4 3.0ghz hoặc Pentium D 2.8ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr8)</p>\n<p>Pentium4 3.0ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr6)</p>\n<p>pentium4 2.26-2.4ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr1)</p>\n<p>Intel CE 2.0-2.4 ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr)</p>\n<p>ngoài ra công ty có bán màn hình CRT 17'' giá 280k, LCD 15'', 17'' giá 1tr-1tr5</p>', '', 'dou-core-e2140main-945ddram-1ghdd-80-keymouse', '', '', '', 0, 23, '2100000', 0, 0, '', '', '', '', 1, 451),
-(1976, 'Dou core E2160/main 945/ddram 1g/hdd 80/ key+mouse', '', '2012-05-28 09:59:44', 'dou-core-e2160main-945ddram-1ghdd-80-keymouse-gia-2tr2-thumb.jpg', 'dou-core-e2160main-945ddram-1ghdd-80-keymouse-gia-2tr2.jpg', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699<br />Bán một số case: chất lượng rất tốt, máy chạy ổn định. Bảo hành 3 tháng 1 đổi 1.</p>\n<p>Dou core E5200<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr4</p>\n<p>Dou core E2160<br />Main g945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />cd rom mới<br />Case nguồn<br />(giá 2tr2)</p>\n<p>Dou core E2140<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr1)</p>\n<p>pentium4 3.0ghz hoặc Pentium D 2.8ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr8)</p>\n<p>Pentium4 3.0ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr6)</p>\n<p>pentium4 2.26-2.4ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr1)</p>\n<p>Intel CE 2.0-2.4 ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr)</p>\n<p>ngoài ra công ty có bán màn hình CRT 17'' giá 280k, LCD 15'', 17'' giá 1tr-1tr5</p>', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699<br />Bán một số case: chất lượng rất tốt, máy chạy ổn định. Bảo hành 3 tháng 1 đổi 1.</p>\n<p>Dou core E5200<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr4</p>\n<p>Dou core E2160<br />Main g945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />cd rom mới<br />Case nguồn<br />(giá 2tr2)</p>\n<p>Dou core E2140<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr1)</p>\n<p>pentium4 3.0ghz hoặc Pentium D 2.8ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr8)</p>\n<p>Pentium4 3.0ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr6)</p>\n<p>pentium4 2.26-2.4ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr1)</p>\n<p>Intel CE 2.0-2.4 ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr)</p>\n<p>ngoài ra công ty có bán màn hình CRT 17'' giá 280k, LCD 15'', 17'' giá 1tr-1tr5</p>', '', 'dou-core-e2160main-945ddram-1ghdd-80-keymouse', '', '', '', 0, 24, '2200000', 0, 0, '', '', '', '', 1, 451),
-(1977, 'Dou core E5200/main 945/ddram 1g/hdd 80/ key+mouse', '', '2012-05-28 10:00:50', 'dou-core-e5200main-945ddram-1ghdd-80-keymouse-gia-2tr4-thumb.jpg', 'dou-core-e5200main-945ddram-1ghdd-80-keymouse-gia-2tr4.jpg', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699<br />Bán một số case: chất lượng rất tốt, máy chạy ổn định. Bảo hành 3 tháng 1 đổi 1.</p>\n<p>Dou core E5200<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr4</p>\n<p>Dou core E2160<br />Main g945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />cd rom mới<br />Case nguồn<br />(giá 2tr2)</p>\n<p>Dou core E2140<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr1)</p>\n<p>pentium4 3.0ghz hoặc Pentium D 2.8ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr8)</p>\n<p>Pentium4 3.0ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr6)</p>\n<p>pentium4 2.26-2.4ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr1)</p>\n<p>Intel CE 2.0-2.4 ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr)</p>\n<p>ngoài ra công ty có bán màn hình CRT 17'' giá 280k, LCD 15'', 17'' giá 1tr-1tr5</p>', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699<br />Bán một số case: chất lượng rất tốt, máy chạy ổn định. Bảo hành 3 tháng 1 đổi 1.</p>\n<p>Dou core E5200<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr4</p>\n<p>Dou core E2160<br />Main g945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />cd rom mới<br />Case nguồn<br />(giá 2tr2)</p>\n<p>Dou core E2140<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr1)</p>\n<p>pentium4 3.0ghz hoặc Pentium D 2.8ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr8)</p>\n<p>Pentium4 3.0ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr6)</p>\n<p>pentium4 2.26-2.4ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr1)</p>\n<p>Intel CE 2.0-2.4 ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr)</p>\n<p>ngoài ra công ty có bán màn hình CRT 17'' giá 280k, LCD 15'', 17'' giá 1tr-1tr5</p>', '', 'dou-core-e5200main-945ddram-1ghdd-80-keymouse', '', '', '', 0, 25, '2400000', 0, 0, '', '', '', '', 1, 451),
-(1978, 'Pentium4 3.0/Main 945/DDram1g/hdd 40/ key +mouse', '', '2012-05-28 10:02:25', 'pentium4-3-0main-945ddram1ghdd-40-key-mouse-gia-1tr6-thumb.jpg', 'pentium4-3-0main-945ddram1ghdd-40-key-mouse-gia-1tr6.jpg', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699<br />Bán một số case: chất lượng rất tốt, máy chạy ổn định. Bảo hành 3 tháng 1 đổi 1.</p>\n<p>Dou core E5200<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr4</p>\n<p>Dou core E2160<br />Main g945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />cd rom mới<br />Case nguồn<br />(giá 2tr2)</p>\n<p>Dou core E2140<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr1)</p>\n<p>pentium4 3.0ghz hoặc Pentium D 2.8ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr8)</p>\n<p>Pentium4 3.0ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr6)</p>\n<p>pentium4 2.26-2.4ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr1)</p>\n<p>Intel CE 2.0-2.4 ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr)</p>\n<p>ngoài ra công ty có bán màn hình CRT 17'' giá 280k, LCD 15'', 17'' giá 1tr-1tr5</p>', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699<br />Bán một số case: chất lượng rất tốt, máy chạy ổn định. Bảo hành 3 tháng 1 đổi 1.</p>\n<p>Dou core E5200<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr4</p>\n<p>Dou core E2160<br />Main g945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />cd rom mới<br />Case nguồn<br />(giá 2tr2)</p>\n<p>Dou core E2140<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr1)</p>\n<p>pentium4 3.0ghz hoặc Pentium D 2.8ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr8)</p>\n<p>Pentium4 3.0ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr6)</p>\n<p>pentium4 2.26-2.4ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr1)</p>\n<p>Intel CE 2.0-2.4 ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr)</p>\n<p>ngoài ra công ty có bán màn hình CRT 17'' giá 280k, LCD 15'', 17'' giá 1tr-1tr5</p>', '', 'pentium4-30main-945ddram1ghdd-40-key-mouse', '', '', '', 0, 26, '1600000', 0, 0, '', '', '', '', 1, 451),
-(1979, 'Pentium4 2.26-2.4/Main 845/DDram 512m/hdd 40/ key +mouse', '', '2012-05-28 10:03:53', 'pentium4-2-26-2-4main-845ddram-512mhdd-40-key-mouse-gia-1tr1-thumb.jpg', 'pentium4-2-26-2-4main-845ddram-512mhdd-40-key-mouse-gia-1tr1.jpg', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699<br />Bán một số case: chất lượng rất tốt, máy chạy ổn định. Bảo hành 3 tháng 1 đổi 1.</p>\n<p>Dou core E5200<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr4</p>\n<p>Dou core E2160<br />Main g945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />cd rom mới<br />Case nguồn<br />(giá 2tr2)</p>\n<p>Dou core E2140<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr1)</p>\n<p>pentium4 3.0ghz hoặc Pentium D 2.8ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr8)</p>\n<p>Pentium4 3.0ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr6)</p>\n<p>pentium4 2.26-2.4ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr1)</p>\n<p><br />Intel CE 2.0-2.4 ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr)</p>\n<p>ngoài ra công ty có bán màn hình CRT 17'' giá 280k, LCD 15'', 17'' giá 1tr-1tr5</p>', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699<br />Bán một số case: chất lượng rất tốt, máy chạy ổn định. Bảo hành 3 tháng 1 đổi 1.</p>\n<p>Dou core E5200<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr4</p>\n<p>Dou core E2160<br />Main g945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />cd rom mới<br />Case nguồn<br />(giá 2tr2)</p>\n<p>Dou core E2140<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 2tr1)</p>\n<p>pentium4 3.0ghz hoặc Pentium D 2.8ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 80g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr8)</p>\n<p>Pentium4 3.0ghz<br />Main 945/ sk77<br />ddram 1g<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr6)</p>\n<p>pentium4 2.26-2.4ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr1)</p>\n<p>Intel CE 2.0-2.4 ghz<br />Main 845/ sk478<br />ddram 512Mb<br />hdd 40g (mới bh 12 tháng)<br />Case nguồn<br />(giá 1tr)</p>\n<p>ngoài ra công ty có bán màn hình CRT 17'' giá 280k, LCD 15'', 17'' giá 1tr-1tr5</p>', '', 'pentium4-226-24main-845ddram-512mhdd-40-key-mouse', '', '', '', 0, 27, '1100000', 0, 0, '', '', '', '', 1, 451),
-(1980, 'Khuyến mại case vi tính cực rẻ, giá chỉ 2.950.000VND', '', '2012-05-28 10:15:30', 'khuyen-mai-case-vi-tinh-cuc-re-gia-chi-2-950-000vnd-thumb.jpg', 'khuyen-mai-case-vi-tinh-cuc-re-gia-chi-2-950-000vnd.jpg', '', '<p>Cty Công Nghệ tin học Phi Vũ<br />380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>Khuyến mại một số case vi tính mới 100% giá cực rẻ:<br />thời gian khuyến mại trong vòng 15 ngày</p>\n<p>1. Dou core E2140 (1.6ghz)<br />Main G31 chíp Intel<br />Hdd 80g Seagate<br />DDram2 1g<br />DVD samsung<br />Case + Nguồn 500W<br />Key + mouse MSM<br />(Giá 2.950.000đ) Bảo hành 24 tháng</p>\n<p>2. Dou core E2140 (1.6ghz)<br />Main G31 chíp Intel<br />Hdd 160g Seagate<br />DDram2 1g<br />DVD samsung<br />Case + Nguồn 500W<br />Key + mouse MSM<br />(Giá 3.350.000đ) Bảo hành 24 tháng</p>\n<p>3. Dou core E5200 (1.6ghz)<br />Main G41 chíp Intel<br />Hdd 160g Seagate<br />DDram3 2g<br />DVD samsung<br />Case + Nguồn 500W<br />Key + mouse MSM<br />(Giá 4.050.000đ) Bảo hành 36 tháng</p>\n<p>quý khách có nhu cầu hãy liên hệ nhanh 0905.168.699</p>\n<p> </p>\n<p> </p>\n<p> </p>', '', '<p>Cty Công Nghệ tin học Phi Vũ<br />380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>Khuyến mại một số case vi tính mới 100% giá cực rẻ:<br />thời gian khuyến mại trong vòng 15 ngày</p>\n<p>1. Dou core E2140 (1.6ghz)<br />Main G31 chíp Intel<br />Hdd 80g Seagate<br />DDram2 1g<br />DVD samsung<br />Case + Nguồn 500W<br />Key + mouse MSM<br />(Giá 2.950.000đ) Bảo hành 24 tháng</p>\n<p>2. Dou core E2140 (1.6ghz)<br />Main G31 chíp Intel<br />Hdd 160g Seagate<br />DDram2 1g<br />DVD samsung<br />Case + Nguồn 500W<br />Key + mouse MSM<br />(Giá 3.350.000đ) Bảo hành 24 tháng</p>\n<p>3. Dou core E5200 (1.6ghz)<br />Main G41 chíp Intel<br />Hdd 160g Seagate<br />DDram3 2g<br />DVD samsung<br />Case + Nguồn 500W<br />Key + mouse MSM<br />(Giá 4.050.000đ) Bảo hành 36 tháng</p>\n<p>quý khách có nhu cầu hãy liên hệ nhanh 0905.168.699</p>\n<p> </p>', '', 'khuyen-mai-case-vi-tinh-cuc-re-gia-chi-2950000vnd', '', '', '', 0, 28, '2950000', 1, 0, '', '', '', '', 1, 453),
-(1981, 'Bảng giá Case mới 100% các loại', '', '2012-05-28 10:26:21', 'bang-gia-case-moi-100-cac-loai-thumb.jpg', 'bang-gia-case-moi-100-cac-loai.jpg', '', '<p> quý khách vui lòng liên hệ để có giá tốt nhất</p>\n<p>DĐ: 0905.168.699 gặp A.VIỆT</p>', '', '<p>quý khách vui lòng liên hệ để có giá tốt nhất</p>\n<p>DĐ: 0905.168.699  gặp A.VIỆT</p>', '', 'bang-gia-case-moi-100-cac-loai', '', '', '', 0, 29, '', 0, 0, '', '', '', '', 1, 453),
-(1982, 'Phân phối DDram1 512M mới 100%', '', '2012-05-29 01:01:39', 'phan-phoi-ddram1-512m-moi-100-gia-120k-thumb.jpg', 'phan-phoi-ddram1-512m-moi-100-gia-120k.jpg', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>phân phối các mặt hàng mới 100% giá tốt: bảo hành 12 tháng 1 đổi 1</p>\n<p>- DDram1 512/400 PC...............................giá 120k-150k ( Loại 1)</p>\n<p>- Main 865 sk 478.......................................giá 480k- 500k ( Loại 2 )</p>\n<p>- Main 865 sk 478.......................................giá 530k - 550k ( Loại 1, loại tốt )</p>\n<p>- Main G31 chạy được Celeron D, Pentium 4, Dou core, Core 2 Dou..........giá 780-800k</p>\n<p>- DDram2 1g/800 PC.................................giá 250k</p>\n<p>- HDD 40g ATA samsung............................giá 250k - 270k</p>\n<p>- HDD 80g ATA samsung, Seagate............giá 450k</p>\n<p>- HDD 160g SATA samsung, Seagate........giá 900- 950k</p>\n<p>- HDD 80g SATA samsung, Seagate..........giá 720k - 750k</p>\n<p>- DVD-rom ATA samsung........................giá 200k</p>\n<p>- DVD-rom SATA samsung........................giá 250k</p>\n<p>- nguồn 550W, 24 Pin................................giá 200k-250</p>\n<p>&gt;&gt;&gt;&gt;Nếu lấy số lượng hãy gọi 0905.168.699 để có giá tốt&lt;&lt;&lt;&lt;</p>', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>phân phối các mặt hàng mới 100% giá tốt: bảo hành 12 tháng 1 đổi 1</p>\n<p>- DDram1 512/400 PC...............................giá 120k-150k ( Loại 1)</p>\n<p>- Main 865 sk 478.......................................giá 480k- 500k ( Loại 2 )</p>\n<p>- Main 865 sk 478.......................................giá 530k - 550k ( Loại 1, loại tốt )</p>\n<p>- Main G31 chạy được Celeron D, Pentium 4, Dou core, Core 2 Dou..........giá 780-800k</p>\n<p>- DDram2 1g/800 PC.................................giá 250k</p>\n<p>- HDD 40g ATA samsung............................giá 250k - 270k</p>\n<p>- HDD 80g ATA samsung, Seagate............giá 450k</p>\n<p>- HDD 160g SATA samsung, Seagate........giá 900- 950k</p>\n<p>- HDD 80g SATA samsung, Seagate..........giá 720k - 750k</p>\n<p>- DVD-rom ATA samsung........................giá 200k</p>\n<p>- DVD-rom SATA samsung........................giá 250k</p>\n<p>- nguồn 550W, 24 Pin................................giá 200k-250</p>\n<p>&gt;&gt;&gt;&gt;Nếu lấy số lượng hãy gọi 0905.168.699 để có giá tốt&lt;&lt;&lt;&lt;</p>', '', 'phan-phoi-ddram1-512m-moi-100', '', '', '', 0, 30, '120000', 1, 0, '', '', '', '', 1, 454),
-(1983, 'Phân phối DDram2 1g/800 mới 100%', '', '2012-05-29 01:03:07', 'phan-phoi-ddram2-1g800-moi-100-gia-250k-thumb.jpg', 'phan-phoi-ddram2-1g800-moi-100-gia-250k.jpg', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>phân phối các mặt hàng mới 100% giá tốt: bảo hành 12 tháng 1 đổi 1</p>\n<p>- DDram2 1g/800 PC.................................giá 250k</p>\n<p>- DDram1 512/400 PC...............................giá 120k-150k ( Loại 1)</p>\n<p>- Main 865 sk 478.......................................giá 480k- 500k ( Loại 2 )</p>\n<p>- Main 865 sk 478.......................................giá 530k - 550k ( Loại 1, loại tốt )</p>\n<p>- Main G31 chạy được Celeron D, Pentium 4, Dou core, Core 2 Dou..........giá 780-800k</p>\n<p>- HDD 40g ATA samsung............................giá 250k - 270k</p>\n<p>- HDD 80g ATA samsung, Seagate............giá 450k</p>\n<p>- HDD 160g SATA samsung, Seagate........giá 900- 950k</p>\n<p>- HDD 80g SATA samsung, Seagate..........giá 720k - 750k</p>\n<p>- DVD-rom ATA samsung........................giá 200k</p>\n<p>- DVD-rom SATA samsung........................giá 250k</p>\n<p>- nguồn 550W, 24 Pin................................giá 200k-250</p>\n<p>&gt;&gt;&gt;&gt;Nếu lấy số lượng hãy gọi 0905.168.699 để có giá tốt&lt;&lt;&lt;&lt;</p>', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>phân phối các mặt hàng mới 100% giá tốt: bảo hành 12 tháng 1 đổi 1</p>\n<p>- DDram2 1g/800 PC.................................giá 250k</p>\n<p>- DDram1 512/400 PC...............................giá 120k-150k ( Loại 1)</p>\n<p>- Main 865 sk 478.......................................giá 480k- 500k ( Loại 2 )</p>\n<p>- Main 865 sk 478.......................................giá 530k - 550k ( Loại 1, loại tốt )</p>\n<p>- Main G31 chạy được Celeron D, Pentium 4, Dou core, Core 2 Dou..........giá 780-800k</p>\n<p>- HDD 40g ATA samsung............................giá 250k - 270k</p>\n<p>- HDD 80g ATA samsung, Seagate............giá 450k</p>\n<p>- HDD 160g SATA samsung, Seagate........giá 900- 950k</p>\n<p>- HDD 80g SATA samsung, Seagate..........giá 720k - 750k</p>\n<p>- DVD-rom ATA samsung........................giá 200k</p>\n<p>- DVD-rom SATA samsung........................giá 250k</p>\n<p>- nguồn 550W, 24 Pin................................giá 200k-250</p>\n<p>&gt;&gt;&gt;&gt;Nếu lấy số lượng hãy gọi 0905.168.699 để có giá tốt&lt;&lt;&lt;&lt;</p>', '', 'phan-phoi-ddram2-1g800-moi-100', '', '', '', 0, 31, '250000', 1, 0, '', '', '', '', 1, 454),
-(1984, 'Phân phối HDD 40g, 80g, 160g, 250g mới 100% (giá rẻ)', '', '2012-05-29 01:05:46', 'phan-phoi-hdd-40g-80g-160g-250g-moi-100-gia-re-thumb.jpg', 'phan-phoi-hdd-40g-80g-160g-250g-moi-100-gia-re.jpg', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>phân phối các mặt hàng mới 100% giá tốt: bảo hành 12 tháng 1 đổi 1</p>\n<p>- DDram2 1g/800 PC.................................giá 250k</p>\n<p>- DDram1 512/400 PC...............................giá 120k-150k ( Loại 1)</p>\n<p>- Main 865 sk 478.......................................giá 480k- 500k ( Loại 2 )</p>\n<p>- Main 865 sk 478.......................................giá 530k - 550k ( Loại 1, loại tốt )</p>\n<p>- Main G31 chạy được Celeron D, Pentium 4, Dou core, Core 2 Dou..........giá 780-800k</p>\n<p>- HDD 40g ATA samsung............................giá 250k - 270k</p>\n<p>- HDD 80g ATA samsung, Seagate............giá 450k</p>\n<p>- HDD 160g SATA samsung, Seagate........giá 900- 950k</p>\n<p>- HDD 80g SATA samsung, Seagate..........giá 720k - 750k</p>\n<p>- DVD-rom ATA samsung........................giá 200k</p>\n<p>- DVD-rom SATA samsung........................giá 250k</p>\n<p>- nguồn 550W, 24 Pin................................giá 200k-250</p>\n<p>&gt;&gt;&gt;&gt;Nếu lấy số lượng hãy gọi 0905.168.699 để có giá tốt&lt;&lt;&lt;&lt;</p>', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>phân phối các mặt hàng mới 100% giá tốt: bảo hành 12 tháng 1 đổi 1</p>\n<p>- DDram2 1g/800 PC.................................giá 250k</p>\n<p>- DDram1 512/400 PC...............................giá 120k-150k ( Loại 1)</p>\n<p>- Main 865 sk 478.......................................giá 480k- 500k ( Loại 2 )</p>\n<p>- Main 865 sk 478.......................................giá 530k - 550k ( Loại 1, loại tốt )</p>\n<p>- Main G31 chạy được Celeron D, Pentium 4, Dou core, Core 2 Dou..........giá 780-800k</p>\n<p>- HDD 40g ATA samsung............................giá 250k - 270k</p>\n<p>- HDD 80g ATA samsung, Seagate............giá 450k</p>\n<p>- HDD 160g SATA samsung, Seagate........giá 900- 950k</p>\n<p>- HDD 80g SATA samsung, Seagate..........giá 720k - 750k</p>\n<p>- DVD-rom ATA samsung........................giá 200k</p>\n<p>- DVD-rom SATA samsung........................giá 250k</p>\n<p>- nguồn 550W, 24 Pin................................giá 200k-250</p>\n<p>&gt;&gt;&gt;&gt;Nếu lấy số lượng hãy gọi 0905.168.699 để có giá tốt&lt;&lt;&lt;&lt;</p>', '', 'phan-phoi-hdd-40g-80g-160g-250g-moi-100-gia-re', '', '', '', 0, 32, '', 1, 0, '', '', '', '', 1, 454),
-(1986, 'phân phối Main G31 mới 100%', '', '2012-05-29 03:10:45', 'phan-phoi-main-g31-moi-100-thumb.jpg', 'phan-phoi-main-g31-moi-100.jpg', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>phân phối các mặt hàng mới 100% giá tốt: bảo hành 12 tháng 1 đổi 1</p>\n<p>- Main G31 chạy được Celeron D, Pentium 4, Dou core, Core 2 Dou..........giá 780-800k</p>\n<p>- DDram2 1g/800 PC.................................giá 250k</p>\n<p>- DDram1 512/400 PC...............................giá 120k-150k ( Loại 1)</p>\n<p>- Main 865 sk 478.......................................giá 480k- 500k ( Loại 2 )</p>\n<p>- Main 865 sk 478.......................................giá 530k - 550k ( Loại 1, loại tốt )</p>\n<p>- HDD 40g ATA samsung............................giá 250k - 270k</p>\n<p>- HDD 80g ATA samsung, Seagate............giá 450k</p>\n<p>- HDD 160g SATA samsung, Seagate........giá 900- 950k</p>\n<p>- HDD 80g SATA samsung, Seagate..........giá 720k - 750k</p>\n<p>- DVD-rom ATA samsung........................giá 200k</p>\n<p>- DVD-rom SATA samsung........................giá 250k</p>\n<p>- nguồn 550W, 24 Pin................................giá 200k-250</p>\n<p>&gt;&gt;&gt;&gt;Nếu lấy số lượng hãy gọi 0905.168.699 để có giá tốt&lt;&lt;&lt;&lt;</p>', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>phân phối các mặt hàng mới 100% giá tốt: bảo hành 12 tháng 1 đổi 1</p>\n<p>- Main G31 chạy được Celeron D, Pentium 4, Dou core, Core 2 Dou..........giá 780-800k</p>\n<p>- DDram2 1g/800 PC.................................giá 250k</p>\n<p>- DDram1 512/400 PC...............................giá 120k-150k ( Loại 1)</p>\n<p>- Main 865 sk 478.......................................giá 480k- 500k ( Loại 2 )</p>\n<p>- Main 865 sk 478.......................................giá 530k - 550k ( Loại 1, loại tốt )</p>\n<p>- HDD 40g ATA samsung............................giá 250k - 270k</p>\n<p>- HDD 80g ATA samsung, Seagate............giá 450k</p>\n<p>- HDD 160g SATA samsung, Seagate........giá 900- 950k</p>\n<p>- HDD 80g SATA samsung, Seagate..........giá 720k - 750k</p>\n<p>- DVD-rom ATA samsung........................giá 200k</p>\n<p>- DVD-rom SATA samsung........................giá 250k</p>\n<p>- nguồn 550W, 24 Pin................................giá 200k-250</p>\n<p>&gt;&gt;&gt;&gt;Nếu lấy số lượng hãy gọi 0905.168.699 để có giá tốt&lt;&lt;&lt;&lt;</p>', '', 'phan-phoi-main-g31-moi-100', '', '', '', 0, 33, '780000', 0, 0, '', '', '', '', 1, 454),
-(1987, 'phân phối Main 865/ sk 478 mới 100%', '', '2012-05-29 03:13:13', 'phan-phoi-main-865-sk-478-moi-100-thumb.jpg', 'phan-phoi-main-865-sk-478-moi-100.jpg', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>phân phối các mặt hàng mới 100% giá tốt: bảo hành 12 tháng 1 đổi 1</p>\n<p>- Main 865 sk 478.......................................giá 480k- 500k ( Loại 2 )</p>\n<p>- Main 865 sk 478.......................................giá 530k - 550k ( Loại 1, loại tốt )</p>\n<p>- Main G31 chạy được Celeron D, Pentium 4, Dou core, Core 2 Dou..........giá 780-800k</p>\n<p>- DDram2 1g/800 PC.................................giá 250k</p>\n<p>- DDram1 512/400 PC...............................giá 120k-150k ( Loại 1)</p>\n<p>- HDD 40g ATA samsung............................giá 250k - 270k</p>\n<p>- HDD 80g ATA samsung, Seagate............giá 450k</p>\n<p>- HDD 160g SATA samsung, Seagate........giá 900- 950k</p>\n<p>- HDD 80g SATA samsung, Seagate..........giá 720k - 750k</p>\n<p>- DVD-rom ATA samsung........................giá 200k</p>\n<p>- DVD-rom SATA samsung........................giá 250k</p>\n<p>- nguồn 550W, 24 Pin................................giá 200k-250</p>\n<p>&gt;&gt;&gt;&gt;Nếu lấy số lượng hãy gọi 0905.168.699 để có giá tốt&lt;&lt;&lt;&lt;</p>', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>phân phối các mặt hàng mới 100% giá tốt: bảo hành 12 tháng 1 đổi 1</p>\n<p>- Main 865 sk 478.......................................giá 480k- 500k ( Loại 2 )</p>\n<p>- Main 865 sk 478.......................................giá 530k - 550k ( Loại 1, loại tốt )</p>\n<p>- Main G31 chạy được Celeron D, Pentium 4, Dou core, Core 2 Dou..........giá 780-800k</p>\n<p>- DDram2 1g/800 PC.................................giá 250k</p>\n<p>- DDram1 512/400 PC...............................giá 120k-150k ( Loại 1)</p>\n<p>- HDD 40g ATA samsung............................giá 250k - 270k</p>\n<p>- HDD 80g ATA samsung, Seagate............giá 450k</p>\n<p>- HDD 160g SATA samsung, Seagate........giá 900- 950k</p>\n<p>- HDD 80g SATA samsung, Seagate..........giá 720k - 750k</p>\n<p>- DVD-rom ATA samsung........................giá 200k</p>\n<p>- DVD-rom SATA samsung........................giá 250k</p>\n<p>- nguồn 550W, 24 Pin................................giá 200k-250</p>\n<p>&gt;&gt;&gt;&gt;Nếu lấy số lượng hãy gọi 0905.168.699 để có giá tốt&lt;&lt;&lt;&lt;</p>', '', 'phan-phoi-main-865-sk-478-moi-100', '', '', '', 0, 34, '550000', 0, 0, '', '', '', '', 1, 454);
-INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(1988, 'Phân phối DVD SATA samsung mới 100%', '', '2012-05-29 03:15:08', 'phan-phoi-dvd-sata-samsung-moi-100-thumb.jpg', 'phan-phoi-dvd-sata-samsung-moi-100.jpg', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>phân phối các mặt hàng mới 100% giá tốt: bảo hành 12 tháng 1 đổi 1</p>\n<p>- Main 865 sk 478.......................................giá 480k- 500k ( Loại 2 )</p>\n<p>- Main 865 sk 478.......................................giá 530k - 550k ( Loại 1, loại tốt )</p>\n<p>- Main G31 chạy được Celeron D, Pentium 4, Dou core, Core 2 Dou..........giá 780-800k</p>\n<p>- DDram2 1g/800 PC.................................giá 250k</p>\n<p>- DDram1 512/400 PC...............................giá 120k-150k ( Loại 1)</p>\n<p>- HDD 40g ATA samsung............................giá 250k - 270k</p>\n<p>- HDD 80g ATA samsung, Seagate............giá 450k</p>\n<p>- HDD 160g SATA samsung, Seagate........giá 900- 950k</p>\n<p>- HDD 80g SATA samsung, Seagate..........giá 720k - 750k</p>\n<p>- DVD-rom ATA samsung........................giá 200k</p>\n<p>- DVD-rom SATA samsung........................giá 250k</p>\n<p>- nguồn 550W, 24 Pin................................giá 200k-250</p>\n<p>&gt;&gt;&gt;&gt;Nếu lấy số lượng hãy gọi 0905.168.699 để có giá tốt&lt;&lt;&lt;&lt;</p>', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>phân phối các mặt hàng mới 100% giá tốt: bảo hành 12 tháng 1 đổi 1</p>\n<p>- Main 865 sk 478.......................................giá 480k- 500k ( Loại 2 )</p>\n<p>- Main 865 sk 478.......................................giá 530k - 550k ( Loại 1, loại tốt )</p>\n<p>- Main G31 chạy được Celeron D, Pentium 4, Dou core, Core 2 Dou..........giá 780-800k</p>\n<p>- DDram2 1g/800 PC.................................giá 250k</p>\n<p>- DDram1 512/400 PC...............................giá 120k-150k ( Loại 1)</p>\n<p>- HDD 40g ATA samsung............................giá 250k - 270k</p>\n<p>- HDD 80g ATA samsung, Seagate............giá 450k</p>\n<p>- HDD 160g SATA samsung, Seagate........giá 900- 950k</p>\n<p>- HDD 80g SATA samsung, Seagate..........giá 720k - 750k</p>\n<p>- DVD-rom ATA samsung........................giá 200k</p>\n<p>- DVD-rom SATA samsung........................giá 250k</p>\n<p>- nguồn 550W, 24 Pin................................giá 200k-250</p>\n<p>&gt;&gt;&gt;&gt;Nếu lấy số lượng hãy gọi 0905.168.699 để có giá tốt&lt;&lt;&lt;&lt;</p>', '', 'phan-phoi-dvd-sata-samsung-moi-100', '', '', '', 0, 35, '250000', 0, 0, '', '', '', '', 1, 454),
-(1989, 'phân phối nguồn 500w-550w', '', '2012-05-29 03:23:06', 'phan-phoi-nguon-500w-550w-thumb.jpg', 'phan-phoi-nguon-500w-550w.jpg', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>phân phối các mặt hàng mới 100% giá tốt: bảo hành 12 tháng 1 đổi 1</p>\n<p>- Main 865 sk 478.......................................giá 480k- 500k ( Loại 2 )</p>\n<p>- Main 865 sk 478.......................................giá 530k - 550k ( Loại 1, loại tốt )</p>\n<p>- Main G31 chạy được Celeron D, Pentium 4, Dou core, Core 2 Dou..........giá 780-800k</p>\n<p>- DDram2 1g/800 PC.................................giá 250k</p>\n<p>- DDram1 512/400 PC...............................giá 120k-150k ( Loại 1)</p>\n<p>- HDD 40g ATA samsung............................giá 250k - 270k</p>\n<p>- HDD 80g ATA samsung, Seagate............giá 450k</p>\n<p>- HDD 160g SATA samsung, Seagate........giá 900- 950k</p>\n<p>- HDD 80g SATA samsung, Seagate..........giá 720k - 750k</p>\n<p>- DVD-rom ATA samsung........................giá 200k</p>\n<p>- DVD-rom SATA samsung........................giá 250k</p>\n<p>- nguồn 550W, 24 Pin................................giá 200k-250</p>\n<p>&gt;&gt;&gt;&gt;Nếu lấy số lượng hãy gọi 0905.168.699 để có giá tốt&lt;&lt;&lt;&lt;</p>', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>phân phối các mặt hàng mới 100% giá tốt: bảo hành 12 tháng 1 đổi 1</p>\n<p>- Main 865 sk 478.......................................giá 480k- 500k ( Loại 2 )</p>\n<p>- Main 865 sk 478.......................................giá 530k - 550k ( Loại 1, loại tốt )</p>\n<p>- Main G31 chạy được Celeron D, Pentium 4, Dou core, Core 2 Dou..........giá 780-800k</p>\n<p>- DDram2 1g/800 PC.................................giá 250k</p>\n<p>- DDram1 512/400 PC...............................giá 120k-150k ( Loại 1)</p>\n<p>- HDD 40g ATA samsung............................giá 250k - 270k</p>\n<p>- HDD 80g ATA samsung, Seagate............giá 450k</p>\n<p>- HDD 160g SATA samsung, Seagate........giá 900- 950k</p>\n<p>- HDD 80g SATA samsung, Seagate..........giá 720k - 750k</p>\n<p>- DVD-rom ATA samsung........................giá 200k</p>\n<p>- DVD-rom SATA samsung........................giá 250k</p>\n<p>- nguồn 550W, 24 Pin................................giá 200k-250</p>\n<p>&gt;&gt;&gt;&gt;Nếu lấy số lượng hãy gọi 0905.168.699 để có giá tốt&lt;&lt;&lt;&lt;</p>', '', 'phan-phoi-nguon-500w-550w', '', '', '', 0, 36, '200000', 0, 0, '', '', '', '', 1, 454),
-(1990, 'Phân phối DVD ATA samsung mới 100%', '', '2012-05-29 03:25:25', 'phan-phoi-dvd-ata-samsung-moi-100-thumb.jpg', 'phan-phoi-dvd-ata-samsung-moi-100.jpg', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>phân phối các mặt hàng mới 100% giá tốt: bảo hành 12 tháng 1 đổi 1</p>\n<p>- Main 865 sk 478.......................................giá 480k- 500k ( Loại 2 )</p>\n<p>- Main 865 sk 478.......................................giá 530k - 550k ( Loại 1, loại tốt )</p>\n<p>- Main G31 chạy được Celeron D, Pentium 4, Dou core, Core 2 Dou..........giá 780-800k</p>\n<p>- DDram2 1g/800 PC.................................giá 250k</p>\n<p>- DDram1 512/400 PC...............................giá 120k-150k ( Loại 1)</p>\n<p>- HDD 40g ATA samsung............................giá 250k - 270k</p>\n<p>- HDD 80g ATA samsung, Seagate............giá 450k</p>\n<p>- HDD 160g SATA samsung, Seagate........giá 900- 950k</p>\n<p>- HDD 80g SATA samsung, Seagate..........giá 720k - 750k</p>\n<p>- DVD-rom ATA samsung........................giá 200k</p>\n<p>- DVD-rom SATA samsung........................giá 250k</p>\n<p>- nguồn 550W, 24 Pin................................giá 200k-250</p>\n<p>&gt;&gt;&gt;&gt;Nếu lấy số lượng hãy gọi 0905.168.699 để có giá tốt&lt;&lt;&lt;&lt;</p>', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>phân phối các mặt hàng mới 100% giá tốt: bảo hành 12 tháng 1 đổi 1</p>\n<p>- Main 865 sk 478.......................................giá 480k- 500k ( Loại 2 )</p>\n<p>- Main 865 sk 478.......................................giá 530k - 550k ( Loại 1, loại tốt )</p>\n<p>- Main G31 chạy được Celeron D, Pentium 4, Dou core, Core 2 Dou..........giá 780-800k</p>\n<p>- DDram2 1g/800 PC.................................giá 250k</p>\n<p>- DDram1 512/400 PC...............................giá 120k-150k ( Loại 1)</p>\n<p>- HDD 40g ATA samsung............................giá 250k - 270k</p>\n<p>- HDD 80g ATA samsung, Seagate............giá 450k</p>\n<p>- HDD 160g SATA samsung, Seagate........giá 900- 950k</p>\n<p>- HDD 80g SATA samsung, Seagate..........giá 720k - 750k</p>\n<p>- DVD-rom ATA samsung........................giá 200k</p>\n<p>- DVD-rom SATA samsung........................giá 250k</p>\n<p>- nguồn 550W, 24 Pin................................giá 200k-250</p>\n<p>&gt;&gt;&gt;&gt;Nếu lấy số lượng hãy gọi 0905.168.699 để có giá tốt&lt;&lt;&lt;&lt;</p>', '', 'phan-phoi-dvd-ata-samsung-moi-100', '', '', '', 0, 37, '200000', 0, 0, '', '', '', '', 1, 454),
-(2035, 'Hdd 250g SATA laptop cũ', '', '2012-05-29 09:24:15', 'hdd-250g-sata-laptop-cu-thumb.jpg', 'hdd-250g-sata-laptop-cu.jpg', '', '<p>Hdd 250g SATA laptop cũ, chất lượng rất ok, không bad</p>\n<p>bảo hành 1 tháng</p>\n<p>giá 900.000đ</p>', '', '<p>Hdd 250g SATA laptop cũ, chất lượng rất ok, không bad</p>\n<p>bảo hành 1 tháng</p>\n<p>giá 900.000đ</p>', '', 'hdd-250g-sata-laptop-cu', '', '', '', 0, 38, '900000', 0, 0, '', '', '', '', 1, 452),
-(2036, 'Hdd 250g SATA laptop cũ, giá rẻ', '', '2012-05-29 09:34:53', 'hdd-250g-sata-laptop-cu-gia-re-thumb.jpg', 'hdd-250g-sata-laptop-cu-gia-re.jpg', '', '<p>Hdd 250g SATA laptop cũ, chất lượng rất ok, không bad</p>\n<p>bảo hành 1 tháng</p>\n<p>giá 850.000đ</p>', '', '<p>Hdd 250g SATA laptop cũ, chất lượng rất ok, không bad</p>\n<p>bảo hành 1 tháng</p>\n<p>giá 850.000đ</p>', '', 'hdd-250g-sata-laptop-cu-gia-re', '', '', '', 0, 39, '850000', 0, 0, '', '', '', '', 1, 450),
-(2041, '30 Hdd 160g Seagate chính hãng, mới 100%', '', '2012-05-30 02:17:13', '30-hdd-160g-seagate-chinh-hang-moi-100-thumb.jpg', '30-hdd-160g-seagate-chinh-hang-moi-100.jpg', '', '<p>Hdd 160g Seagate mới 100%, nguyên bao còn bảo hành 16 tháng</p>\n<p>(giá 900k)</p>\n<p>Hdd 160g Seagate mới 100%, nguyên bao còn bảo hành dưới 12 tháng</p>\n<p>(giá 850k)</p>', '', '<p>Hdd 160g Seagate mới 100%, nguyên bao còn bảo hành 16 tháng</p>\n<p>(giá 900k)</p>\n<p>Hdd 160g Seagate mới 100%, nguyên bao còn bảo hành dưới 12 tháng</p>\n<p>(giá 850k)</p>', '', '30-hdd-160g-seagate-chinh-hang-moi-100', '', '', '', 0, 40, '850.000 - 900.000', 1, 0, '', '', '', '', 1, 454),
-(2102, 'Vỏ laptop HP DV6000 còn mới 98%', '', '2012-05-30 04:22:08', 'vo-laptop-hp-dv6000-con-moi-98-thumb.jpg', 'vo-laptop-hp-dv6000-con-moi-98.jpg', '', '<p>Vỏ laptop HP DV6000 còn mới 98%</p>\n<p>giá 500.000Đ</p>', '', '<p>Vỏ laptop HP DV6000 còn mới 98%</p>\n<p>giá 500.000Đ</p>', '', 'vo-laptop-hp-dv6000-con-moi-98', '', '', '', 0, 41, '500000', 1, 0, '', '', '', '', 1, 452),
-(2103, 'Vỏ laptop vaio sony PCG-7171L còn rất mới 98%', '', '2012-05-30 04:23:23', 'vo-laptop-vaio-sony-pcg-7171l-con-rat-moi-98-thumb.jpg', 'vo-laptop-vaio-sony-pcg-7171l-con-rat-moi-98.jpg', '', '<p>Vỏ laptop vaio sony PCG-7171L còn rất mới 98%</p>\n<p>giá 500.000Đ</p>', '', '<p>Vỏ laptop vaio sony PCG-7171L còn rất mới 98%</p>\n<p>giá 500.000Đ</p>', '', 'vo-laptop-vaio-sony-pcg-7171l-con-rat-moi-98', '', '', '', 0, 42, '500000', 1, 0, '', '', '', '', 1, 450),
-(2104, 'Bàn phím laptop củ, mới các loại', '', '2012-05-30 04:26:43', 'ban-phim-laptop-cu-moi-cac-loai-thumb.jpg', 'ban-phim-laptop-cu-moi-cac-loai.jpg', '', '<p>- Sửa bàn phím laptop................................giá 200k-300k<br />- Thay bàn phím laptop mới .....................giá 350k- 400k<br />( Lấy liền trong vòng 12h, sửa đảm bảo 100%, Bảo hành 1 tháng)</p>\n<p>- Chuyên hàn bản lề laptop bị gãy<br />(giá 1 cái 100k, 2 cái 150k, nếu khách lẽ cộng thêm 50k tiền công tháo lắp).<br />- Chuyên hàn vỏ nhựa bị bể mất 1 phần, chôn lại vít vặn ốc, chế lại võ,.,,,(giá 100-300k, tùy theo từng trường hợp)<br />(lấy liền trong vòng 1h, đảm bảo chắc chắn, đẹp, thẩm mỹ)</p>\n<p>Cty Phi vũ 380 nguyễn hoàng - ĐN - 0905.168.699</p>\n<p> </p>', '', '<p>- Sửa bàn phím laptop................................giá 200k-300k<br />- Thay bàn phím laptop mới .....................giá 350k- 400k<br />( Lấy liền trong vòng 12h, sửa đảm bảo 100%, Bảo hành 1 tháng)</p>\n<p>- Chuyên hàn bản lề laptop bị gãy<br />(giá 1 cái 100k, 2 cái 150k, nếu khách lẽ cộng thêm 50k tiền công tháo lắp).<br />- Chuyên hàn vỏ nhựa bị bể mất 1 phần, chôn lại vít vặn ốc, chế lại võ,.,,,(giá 100-300k, tùy theo từng trường hợp)<br />(lấy liền trong vòng 1h, đảm bảo chắc chắn, đẹp, thẩm mỹ)</p>\n<p>Cty Phi vũ 380 nguyễn hoàng - ĐN - 0905.168.699</p>\n<p> </p>', '', 'ban-phim-laptop-cu-moi-cac-loai', '', '', '', 0, 43, '', 0, 0, '', '', '', '', 1, 450),
-(2105, 'Pin laptop các loại Dell, Hp, Acer, Sony, Lenovo,....', '', '2012-05-30 04:29:36', 'pin-laptop-cac-loai-dell-hp-acer-sony-lenovo-----thumb.jpg', 'pin-laptop-cac-loai-dell-hp-acer-sony-lenovo----.jpg', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>Pin mới 100% bh 9 tháng<br />- Những loại Pin Laptop thông dụng: Dell, HP, Compaq, Acer, Toshiba, Lenovo,.. ........giá từ 550k-600k</p>\n<p>- Những loại Pin Laptop hiếm có như: samsung, gateway, Shap,Nec ...............................giá từ 800k-1tr</p>\n<p> </p>', '', '<p>Cty Phi Vũ - 380 Nguyễn Hoàng- ĐN- 0905.168.699</p>\n<p>Pin mới 100% bh 9 tháng<br />- Những loại Pin Laptop thông dụng: Dell, HP, Compaq, Acer, Toshiba, Lenovo,.. ........giá từ 550k-600k</p>\n<p>- Những loại Pin Laptop hiếm có như: samsung, gateway, Shap,Nec ...............................giá từ 800k-1tr</p>\n<p> </p>', '', 'pin-laptop-cac-loai-dell-hp-acer-sony-lenovo', '', '', '', 0, 44, '', 0, 0, '', '', '', '', 1, 450),
-(2106, 'chíp AMD Athlon 64 X2 laptop', '', '2012-05-30 07:28:36', 'chip-amd-athlon-64-x2-laptop-thumb.jpg', 'chip-amd-athlon-64-x2-laptop.jpg', '', '<p>chíp AMD Athlon 64 X2 laptop tháo trong máy HP DV6000</p>\n<p>giá 400k</p>', '', '<p>chíp AMD Athlon 64 X2 laptop tháo trong máy HP DV6000</p>\n<p>giá 400k</p>', '', 'chip-amd-athlon-64-x2-laptop', '', '', '', 0, 45, '400000', 0, 0, '', '', '', '', 1, 450),
-(2114, 'Pin laptop SONY VCG-7171L, lưu 2h, giá rẻ', '', '2012-05-30 07:38:31', 'pin-laptop-sony-vcg-7171l-luu-2h-gia-re-thumb.png', 'pin-laptop-sony-vcg-7171l-luu-2h-gia-re.png', '', '<p>Pin laptop SONY VCG-7171L, lưu 2h, nguyên rin</p>\n<p>giá 250k</p>', '', '<p>Pin laptop SONY VCG-7171L, lưu 2h, nguyên rin</p>\n<p>giá 250k</p>', '', 'pin-laptop-sony-vcg-7171l-luu-2h-gia-re', '', '', '', 0, 46, '250000', 0, 0, '', '', '', '', 1, 450),
-(2115, 'vỏ laptop Toshiba A100, giá rẻ', '', '2012-05-30 08:53:30', 'vo-laptop-toshiba-a100-gia-re-thumb.jpg', 'vo-laptop-toshiba-a100-gia-re.jpg', '', '<p>vỏ laptop Toshiba A100, còn 80%</p>\n<p>giá 400k</p>', '', '<p>vỏ laptop Toshiba A100, còn 80%</p>\n<p>giá 400k</p>', '', 'vo-laptop-toshiba-a100-gia-re', '', '', '', 0, 47, '400000', 0, 0, '', '', '', '', 1, 450),
-(2116, 'DDram2 1g laptop, chất lượng ok', '', '2012-05-30 10:37:08', 'ddram2-1g-laptop-chat-luong-ok-thumb.jpg', 'ddram2-1g-laptop-chat-luong-ok.jpg', '', '<p>DDram2 1g laptop, chất lượng ok</p>\n<p>Bảo hành 1 tháng</p>\n<p>giá 200.000đ</p>', '', '<p>DDram2 1g laptop, chất lượng ok</p>\n<p>Bảo hành 1 tháng</p>\n<p>giá 200.000đ</p>', '', 'ddram2-1g-laptop-chat-luong-ok', '', '', '', 0, 48, '200000', 0, 0, '', '', '', '', 1, 450),
-(2117, '5 cái LCD laptop 15.4'' WG, chất lượng 90%', '', '2012-05-30 10:40:22', '5-cai-lcd-laptop-15-4-wg-chat-luong-90-thumb.gif', '5-cai-lcd-laptop-15-4-wg-chat-luong-90.gif', '', '<p>5 cái LCD laptop 15.4'' WG, chất lượng 90%, sáng đẹp, không bầm, không trầy xướt.</p>\n<p>bảo hành 1 tháng</p>\n<p>giá 900k</p>', '', '<p>5 cái LCD laptop 15.4'' WG, chất lượng 90%, sáng đẹp, không bầm, không trầy xướt.</p>\n<p>bảo hành 1 tháng</p>\n<p>giá 900k</p>', '', '5-cai-lcd-laptop-154-wg-chat-luong-90', '', '', '', 0, 49, '900000', 0, 0, '', '', '', '', 1, 450),
-(2118, 'DDram1 256M laptop', '', '2012-05-30 10:43:41', 'ddram1-256m-laptop-thumb.jpg', 'ddram1-256m-laptop.jpg', '', '<p>DDram1 256M laptop, chạy ổn định</p>\n<p>bảo hành 1 tháng</p>\n<p>giá 150.000đ</p>', '', '<p>DDram1 256M laptop, chạy ổn định</p>\n<p>bảo hành 1 tháng</p>\n<p>giá 150.000đ</p>', '', 'ddram1-256m-laptop', '', '', '', 0, 50, '150000', 0, 0, '', '', '', '', 1, 450),
-(2119, 'ddram2 512m laptop, giá rẻ', '', '2012-05-30 10:44:49', 'ddram2-512m-laptop-gia-re-thumb.jpg', 'ddram2-512m-laptop-gia-re.jpg', '', '<p>DDram2 512M laptop, chạy ổn định</p>\n<p>bảo hành 1 tháng</p>\n<p>giá 70.000đ</p>', '', '<p>DDram2 512M laptop, chạy ổn định</p>\n<p>bảo hành 1 tháng</p>\n<p>giá 70.000đ</p>', '', 'ddram2-512m-laptop-gia-re', '', '', '', 0, 51, '70000', 0, 0, '', '', '', '', 1, 450),
-(2448, '5 cái VGA PCI EXP 256M Gigabyte, chính hãng', '', '2012-06-02 08:42:04', '5-cai-vga-pci-exp-256m-gigabyte-chinh-hang-thumb.jpg', '5-cai-vga-pci-exp-256m-gigabyte-chinh-hang.jpg', '', '<p>5 cái VGA PCI EXP 256M Gigabyte, chính hãng</p>\n<p>giá 250k</p>', '', '<p>5 cái VGA PCI EXP 256M Gigabyte, chính hãng</p>\n<p>giá 250k</p>', '', '5-cai-vga-pci-exp-256m-gigabyte-chinh-hang', '', '', '', 0, 52, '250000', 0, 0, '', '', '', '', 1, 452);
+(2438, 'In pp giá rẻ tại saigon', '', '2012-06-02 08:21:31', 'in-pp-gia-re-tai-saigon-thumb.jpg', 'in-pp-gia-re-tai-saigon.jpg', '', '<p>Qui cách Sản Phẩm : chất liệu PP ( có cán màng PVC )</p>\n<p>PP : có định lượng 130gsm Đơn giá lẽ : 70.000đ/m2 Khách hàng cung cấp file gốc , Ai, Corel , pdf ......In số nhiều có chiết khấu giá</p>', '', '<p>Với thế là hệ thống máy in kỹ thuật số khổ lớn hiện đại, tốc độ nhanh và chất lượng hình ảnh tuyệt đẹp, đã và đang là đối tác in ấn cho nhiều công ty quảng cáo, công ty kinh doanh thương mại trong cũng như ngoài thành phố. Xin vui lòng liên hệ với chúng tôi để có được sự hỗ trợ tốt nhất</p>', '', 'in-pp-gia-re-tai-saigon', '', '', '', 0, 3, '', 0, 0, '', '', '', '', 1, 534),
+(2439, 'In nhanh chất liệu pp', '', '2012-06-02 08:22:35', 'in-nhanh-chat-lieu-pp-thumb.jpg', 'in-nhanh-chat-lieu-pp.jpg', '', '<p>N PP NHANH ĐỢI LẤY NGAY<br />Qui cách Sản Phẩm : chất liệu PP ( có cán màng PVC )</p>\n<p>PP : có định lượng 130gsm Đơn giá lẽ : 70.000đ/m2 Khách hàng cung cấp file gốc , Ai, Corel , pdf ......In số nhiều có chiết khấu giá</p>\n<p> </p>', '', '<p>Độ phân giải của bản in tùy yêu cầu thực tế của khách hàng ( từ 600 DPI đến 1.440 DPI). Ngoài ra, chúng tôi cũng đáp ứng yêu cầu in cực đẹp (chất lượng ảnh) đối với các đơn hàng đặc biệt. Xin vui lòng liên hệ với chúng tôi để có được sự hỗ trợ tốt nhất.</p>', '', 'in-nhanh-chat-lieu-pp', '', '', '', 0, 4, '', 0, 0, '', '', '', '', 1, 534),
+(2440, 'Giải pháp in nhanh kỹ thuật số', '', '2012-06-02 08:23:50', 'giai-phap-in-nhanh-ky-thuat-so-thumb.jpg', 'giai-phap-in-nhanh-ky-thuat-so.jpg', '', '', '', '<p>• Bạn cần in từ 01 đến 100 giấy chứng nhận, giấy khen, thiệp mời có nội dung khác nhau?<br />• Bạn vừa được thông báo phải in thêm 10 bộ tài liệu trang trọng cho buổi hội thảo ngay sáng mai ?<br />• Bạn chỉ cần 05 cuốn catalogue chất lượng cao cho buổi họp giới thiệu sản phẩm, nhưng in offset với số lượng ít thì chi phí lại quá lớn ?<br />• Bạn chỉ cần in gấp một số tài liệu cá nhân như danh thiếp, bì thư, v.v. cho kịp chuyến công tác đột xuất ?<br />Rất đơn giản! Chúng tôi sẽ giúp bạn giải quyết dễ dàng tất cả những rắc rối này với in kỹ thuật số với các thiết bị in ấn hiện đại. Bạn sẽ hoàn toàn bất ngờ trước những sản phẩm in kỹ thuật số 6 màu có màu sắc vượt trội, chất lượng tương đương như in off-set và thỏa mãn tối đa với những ưu điểm vượt trội khác:<br />• Phù hợp cho tất cả các sản phẩm in ấn đòi hỏi chất lượng: tài liệu văn phòng, catalogs, tờ bướm, các loại thiệp, namecard, postcard, bao thư, giấy tiêu đề, menu, nhãn decal, tem bảo hành, giấy chứng nhận, phối cảnh kiến trúc màu, sổ cổ đông, giấy khen, kỷ yếu, bảng tin, hệ thống nhận dạng thương hiệu, báo cáo thường niên, profile công ty, v.v...<br />• In ảnh kỹ thuật số chất lượng cao trên giấy ảnh đẹp như in trong phòng Lab ảnh<br />• Có thể in dữ liệu biến đổi: tên và ảnh thay đổi theo từng sản phẩm khác nhau.<br />• Có thể in số lượng ít: 1 tờ, 1 cuốn, ...<br />• In 2 mặt tự động, định lượng đến 300 gsm.<br />• Có thể in trên giấy couche, fort, tất cả các lọai giấy mỹ thuật.</p>', '', 'giai-phap-in-nhanh-ky-thuat-so', '', '', '', 0, 5, '', 0, 0, '', '', '', '', 1, 534),
+(2441, 'Dây và bao đeo thẻ.', '', '2012-06-02 08:25:00', 'day-va-bao-deo-the--thumb.jpg', 'day-va-bao-deo-the-.jpg', '', '<p>Qui cách sản phẩm :</p>\n<p>Túi đựng thẻ : chất liệu PVC trong</p>\n<p>Kích thước : 6cm x 9.5cm Đơn giá : 1.500đ/túi</p>\n<p>Dây đeo thẻ : Chất liệu dây dù hoặc dây lụa</p>\n<p>Độ dài : 38cm Bề rộng dây : 1cm Đơn giá : 4.500đ/dây</p>\n<p>Mua số lượng nhiều có chiết khấu</p>\n<p>Đơn giá lẽ : 6.500đ/ bộ</p>', '', '<p>Chúng tôi cung cấp các phụ liệu khác đi kèm với THẺ NHỰA như BAO ĐỰNG THẺ và DÂY ĐEO THẺ. Chúng tôi có các loại DÂY ĐEO THẺ với nhiều mẩu phong phú, nhiều cách dệt dây khác nhau, đảm bảo Quý Khách Hàng sẽ hài lòng với trọn bộ dịch vụ quảng cáo của chúng tôi cung cấp</p>', '', 'day-va-bao-deo-the', '', '', '', 0, 6, '', 0, 0, '', '', '', '', 1, 534),
+(2442, 'C001', '', '2012-06-02 08:26:01', 'c001-thumb.jpg', 'c001.jpg', '', '', '', '<p>Đặt hàng</p>\n<p>Để phục vụ Quý khách tốt hơn, chúng tôi mong nhận được những góp ý từ Quý khách hàng. Xin email về địa chỉ: info@quangcaothienkim.com</p>', '', 'c001', '', '', '', 0, 7, '', 0, 0, '', '', '', '', 1, 518),
+(2443, 'P001', '', '2012-06-02 08:26:51', 'p001-thumb.jpg', 'p001.jpg', '', '', '', '<p>Đặt hàng</p>\n<p>Để phục vụ Quý khách tốt hơn, chúng tôi mong nhận được những góp ý từ Quý khách hàng. Xin email về địa chỉ: info@quangcaothienkim.com</p>', '', 'p001', '', '', '', 0, 8, '', 0, 0, '', '', '', '', 1, 524),
+(2444, 'In Offset', '', '2012-06-02 08:28:07', 'in-offset-thumb.jpg', 'in-offset.jpg', '', '<p>Các ưu điểm của kỹ thuật in Offset này là:<br />* Chất lượng hình ảnh cao – nét và sạch hơn in trực tiếp từ bản in lên giấy vì miếng cao su áp đều lên bề mặt cần in.<br />* Khả năng ứng dụng in ấn lên nhiều bề mặt, kể cả bề mặt không phẳng (như gỗ, vải, kim loại, da, giấy thô nhám).<br />* Việc chế tạo các bản in dễ dàng hơn.</p>\n<p>* Các bản in có tuổi thọ lâu hơn – vì không phải trực tiếp tiếp xúc với bề mặt cần in</p>\n<p> </p>', '', '<p>n Offset là một kỹ thuật in ấn trong đó, các hình ảnh dính mực in được ép lên các tấm cao su (còn gọi là các tấm offset) trước rồi mới ép từ miếng cao su này lên giấy. Khi sử dụng với in thạch bản, kỹ thuật này tránh được việc làm nước bị dính lên giấy theo mực in. In Offset được dùng để in ấn: Catalogue, Brochure, name Card, leaflet, Tờ rơi, lịch...</p>', '', 'in-offset', '', '', '', 0, 9, '', 0, 0, '', '', '', '', 1, 534),
+(2445, 'In hệ thống nhận diện thương hiệu', '', '2012-06-02 08:29:46', 'in-he-thong-nhan-dien-thuong-hieu-thumb.jpg', 'in-he-thong-nhan-dien-thuong-hieu.jpg', '', '', '', '<p>Hệ thống nhận diện thương hiệu được xây dựng dựa trên sự kết hợp của nhiều yếu tố mang tính đồng bộ và nhất quán của Thương hiệu. Bao gồm: Tên thương hiệu (Brand Name), Logo, Màu sắc chủ đạo, Font chữ, Danh thiếp (Namecard), Website, Cách bố trí biển hiệu tại văn phòng trụ sở, cơ quan, Đồng phục - Bảng tên.....</p>\n<p><img src="http://www.inkythuatso.com/images/stories/intrengiay/nhandienth-1.jpg" alt="" width="500" height="500" /></p>\n<p>Dịch vụ in hệ thống nhận diện thương hiệu: in danh thiếp, bao thư, catalogue, brochure.....</p>\n<p>Xin vui lòng liên hệ với chúng tôi để được dịch vụ tốt nhất.</p>', '', 'in-he-thong-nhan-dien-thuong-hieu', '', '', '', 0, 10, '', 0, 0, '', '', '', '', 1, 534),
+(2446, 'In giấy khen', '', '2012-06-02 08:30:52', 'in-giay-khen-thumb.jpg', 'in-giay-khen.jpg', '', '', '', '<p>In các loại giấy khen để khen thưởng học sinh, giấy khen thưởng cán bộ, công nhân viên, khen thưởng đơn vị cho các tổ chức, cơ quan, công ty, trường học...</p>\n<p>Xin vui lòng liên hệ chúng tôi để được tư vấn và dịch vụ tốt nhất.</p>', '', 'in-giay-khen', '', '', '', 0, 11, '', 0, 0, '', '', '', '', 1, 534),
+(2447, 'In decal gửi hàng', '', '2012-06-02 08:31:55', 'in-decal-gui-hang-thumb.jpg', 'in-decal-gui-hang.jpg', '', '', '', '<p>In các loại decal gửi hàng: là loại decal dán lên hành lý ký gởi, decal dán thùng hành lý, in decal dán nhãn hàng hóa. Vui lòng liên hệ dịch vụ in nhanh của chúng tôi để được tư vấn và dịch vụ tốt nhất.</p>', '', 'in-decal-gui-hang', '', '', '', 0, 12, '', 0, 0, '', '', '', '', 1, 534),
+(2491, 'TG003', '', '2012-06-02 17:33:22', 'tg003-thumb.jpg', 'tg003.jpg', '', '<p>- In, gia công túi đựng sản phẩm trên mọi chất liệu như:</p>\n<p>- Túi giấy</p>\n<p>- Túi nilong...</p>\n<p>- Đảm bảo chất lượng, giá thành hợp lý</p>', '', '<p>Để phục vụ Quý khách tốt hơn, chúng tôi mong nhận được những góp ý từ Quý khách hàng. Xin email về địa chỉ: info@quangcaothienkim.com</p>', '', 'tg003', '', '', '', 0, 13, '', 0, 0, '', '', '', '', 1, 522),
+(2492, 'TG002', '', '2012-06-02 17:35:21', 'tg002-thumb.jpg', 'tg002.jpg', '', '<p>- In, gia công túi đựng sản phẩm trên mọi chất liệu như:</p>\n<p>- Túi giấy</p>\n<p>- Túi nilong...</p>\n<p>- Đảm bảo chất lượng, giá thành hợp lý</p>', '', '<p>Đặt hàng</p>\n<p>Để phục vụ Quý khách tốt hơn, chúng tôi mong nhận được những góp ý từ Quý khách hàng. Xin email về địa chỉ: info@quangcaothienkim.com</p>', '', 'tg002', '', '', '', 0, 14, '', 0, 0, '', '', '', '', 1, 522);
 
 -- --------------------------------------------------------
 
@@ -698,19 +662,26 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=455 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=535 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
 --
 
 INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(449, 0, 'LAPTOP MỚI', '', '', '', 'laptop-moi', '', 'Laptop mới', '', 'laptop-mi.jpg', '', 1, '', '', 1, 'phivucomputer'),
-(450, 0, 'LINH KIỆN LAPTOP CŨ', '', '', '', 'linh-kien-laptop-cu', '', 'Laptop cũ', '', 'laptop-cu.jpg', '', 2, '', '', 1, 'phivucomputer'),
-(451, 0, 'PHÂN PHỐI MÁY BỘ CŨ', '', '', '', 'phan-phoi-may-bo-cu', '', 'PC để bàn cũ', '', 'my-b-c.jpg', '', 2, '', '', 1, 'phivucomputer'),
-(452, 0, 'PHÂN PHỐI LINH KIỆN PC CŨ', '', '', '', 'phan-phoi-linh-kien-pc-cu', '', 'Linh kiện vi tính cũ', '', 'linh-kin-c.jpg', '', 3, '', '', 1, 'phivucomputer'),
-(453, 0, 'MÁY BỘ MỚI', '', '', '', 'may-bo-moi', '', 'Máy bộ để bàn mới', '', 'my-b-mi.jpg', '', 1, '', '', 1, 'phivucomputer'),
-(454, 0, 'PHÂN PHỐI LINH KIỆN MỚI', '', '', '', 'phan-phoi-linh-kien-moi', '', 'Tổng hợp những thiết bị khác', '', 'thit-b-khc.jpg', '', 1, '', '', 1, 'phivucomputer');
+(516, 0, 'Bộ ấn phẩm văn phòng', '', '', '', 'bo-an-pham-van-phong', '', '', '', 'bo-an-pham-van-phong.jpg', '', 1, '', '', 1, 'quangcaothienkim'),
+(517, 0, 'Brochure', '', '', '', 'brochure', '', '', '', 'brochure.jpg', '', 2, '', '', 1, 'quangcaothienkim'),
+(518, 0, 'Catalogue', '', '', '', 'catalogue', '', '', '', 'catalogue.jpg', '', 3, '', '', 1, 'quangcaothienkim'),
+(519, 0, 'Folder', '', '', '', 'folder', '', '', '', 'folder.jpg', '', 4, '', '', 1, 'quangcaothienkim'),
+(520, 0, 'Lịch độc quyền', '', '', '', 'lich-doc-quyen', '', '', '', 'lich-doc-quyen.jpg', '', 5, '', '', 1, 'quangcaothienkim'),
+(521, 0, 'Tờ rơi', '', '', '', 'to-roi', '', '', '', 'to-roi.jpg', '', 6, '', '', 1, 'quangcaothienkim'),
+(522, 0, 'Túi giấy', '', '', '', 'tui-giay', '', '', '', 'tui-giay.jpg', '', 7, '', '', 1, 'quangcaothienkim'),
+(523, 0, 'Bao bì carton', '', '', '', 'bao-bi-carton', '', '', '', 'bao-bi-carton.jpg', '', 8, '', '', 1, 'quangcaothienkim'),
+(524, 0, 'Poster', '', '', '', 'poster', '', '', '', 'poster.jpg', '', 9, '', '', 1, 'quangcaothienkim'),
+(525, 0, 'Thiệp', '', '', '', 'thiep', '', '', '', 'thiep.jpg', '', 10, '', '', 1, 'quangcaothienkim'),
+(526, 0, 'Danh thiếp', '', '', '', 'danh-thiep', '', '', '', 'danh-thiep.jpg', '', 11, '', '', 1, 'quangcaothienkim'),
+(527, 0, 'Bandroll - Bảng quảng cáo', '', '', '', 'bandroll-bang-quang-cao', '', '', '', 'bandroll-bang-quang-cao.jpg', '', 12, '', '', 1, 'quangcaothienkim'),
+(534, 0, 'In kỹ thuật số khổ lớn', '', '', '', 'in-ky-thuat-so-kho-lon', '', '', '', 'in-ky-thuat-so.jpg', '', 13, '', '', 1, 'quangcaothienkim');
 
 -- --------------------------------------------------------
 
@@ -741,16 +712,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=89 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=103 ;
 
 --
 -- Dumping data for table `dos_module_services`
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(84, 'CHUYÊN SỬA MÁY VI TÍNH DESKTOP &amp; LAPTOP', '', '', '', '<p>CTY TNHH CÔNG NGHỆ TIN HỌC PHI VŨ<br />380 NGUYỄN HOÀNG - ĐÀ NẴNG<br />0905.168.699 - 3691973TRUNG TÂM SỬA MÁY TÍNH TẬN NƠI</p>\n<p>CHUYÊN:<br />- SỬA CHỮA VÀ THAY THẾ LINH KIỆN MÁY TÍNH TẬN NƠI.<br />- Chuyên hàn bản lề laptop, hàn vỏ nhựa laptop.<br />- Chuyên sửa bàn phím laptop, thay mới bàn phím laptop.<br />- BÁN MÁY CŨ GIÁ TỪ 1,4-2,5 TRIỆU.<br />- LẮP RÁP MÁY MỚI, ĐỔ MỰC MÁY IN.<br />- Cung cấp màn hình LCD 15",17" giá rẽ.</p>\n<p> </p>', '', 'cung-cp-my-b-linh-kin-mi-v-c.jpg', 24, '2012-05-27 04:02:03', 1, 1, '', '', 'chuyen-sua-may-vi-tinh-desktop-laptop', '', '', '', 1, 'phivucomputer'),
-(87, 'CHUYÊN SỬA BÀN PHÍM LAPTOP, THAY MỚI BÀN PHÍM LAPTOP', '', '', '', '<p>- Sửa bàn phím laptop................................giá 200k-300k<br />- Thay bàn phím laptop mới .....................giá 350k- 400k<br />( Lấy liền trong vòng 12h, sửa đảm bảo 100%, Bảo hành 1 tháng)</p>\n<p>- Chuyên hàn bản lề laptop bị gãy<br />(giá 1 cái 100k, 2 cái 150k, nếu khách lẽ cộng thêm 50k tiền công tháo lắp).<br />- Chuyên hàn vỏ nhựa bị bể mất 1 phần, chôn lại vít vặn ốc, chế lại võ,.,,,(giá 100-300k, tùy theo từng trường hợp)<br />(lấy liền trong vòng 1h, đảm bảo chắc chắn, đẹp, thẩm mỹ)</p>\n<p>Cty Phi vũ 380 nguyễn hoàng - ĐN - 0905.168.699</p>\n<p> </p>', '', 'chuyn-sa-bn-phm-laptop-thay-mi-bn-phm-laptop.jpg', 12, '2012-05-28 02:35:28', 2, 1, '', '', 'chuyen-sua-ban-phim-laptop-thay-moi-ban-phim-laptop', '', '', '', 1, 'phivucomputer'),
-(88, 'CHUYÊN HÀN BẢN LỀ LAPTOP, HÀN VỎ NHỰA LAPTOP', '', '', '', '<p>Cty đã nhập máy hàn đa năng như hình ảnh trên, hàn được nhiều loại vật liệu với kích cở nhỏ.</p>\n<p>- Hàn Bản lề laptop bị gãy: đảm bảo, chắc chắn không bị gãy lại.<br />...........Giá 100k/ 1 cái.........<br />............Giá 150k/ 2 cái.........<br />nếu khách lẽ, cộng thêm 50k tiền công tháo lắp.<br />(Lấy liền trong vòng 1h, đảm bảo chắc chắn như mới, không gãy lại)<br />- Hàn vỏ nhựa laptop, bị bể một phần hoặc nhiều phần nào đó, chôn lại phần vặn ốc, chế lại vỏ bị móp méo.<br />.............Giá 50k đến 300k, tùy theo từng trường hợp......................</p>\n<p>- Chuyên sửa bàn phím laptop các loại..............giá 200k-300k<br />- Thay mới bàn phím laptop...................................giá 350k-400k<br />(lấy liền trong vòng 12h, đảm bảo 100%, bảo hành 1 tháng)<br />Cty Phi Vũ - 380 Nguyễn Hoàng - ĐN- 0905.168.699</p>\n<p> </p>', '', 'chuyn-hn-bn-l-laptop-hn-v-nha-laptop.jpg', 10, '2012-05-28 03:58:55', 3, 1, '', '', 'chuyen-han-ban-le-laptop-han-vo-nhua-laptop', '', '', '', 1, 'phivucomputer');
+(101, 'Quảng cáo ngoài trời', '', '', '', '<p>Đang cập nhật</p>', '', '', 3, '2012-06-02 17:49:17', 1, 0, '', '', 'quang-cao-ngoai-troi', '', '', '', 1, 'quangcaothienkim'),
+(102, 'In hóa đơn', '', '', '', '<p>In hóa đơn</p>', '', '', 3, '2012-06-02 17:49:30', 2, 0, '', '', 'in-hoa-don', '', '', '', 1, 'quangcaothienkim');
 
 -- --------------------------------------------------------
 
@@ -769,14 +739,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=82 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=114 ;
 
 --
 -- Dumping data for table `dos_module_supports`
 --
 
 INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
-(81, 'kinh doanh', '', '0905.168.699', 'phivucomputer', 1, 'yahoo', 'phivucomputer');
+(112, 'Nữ Giám đốc', '', '0915 429 486', 'phuonganhdesign', 1, 'yahoo', 'quangcaothienkim'),
+(113, 'Hổ Trợ Khách Hàng', '', '0915 429 486', 'ctyinthienkim', 2, 'yahoo', 'quangcaothienkim');
 
 -- --------------------------------------------------------
 
@@ -804,14 +775,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_video` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_video_dos_module_video_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=56 ;
-
---
--- Dumping data for table `dos_module_video`
---
-
-INSERT INTO `dos_module_video` (`record_id`, `title`, `titleen`, `postdate`, `tag`, `tagen`, `description`, `descriptionen`, `pic_thumb`, `url`, `record_order`, `hits`, `extra_field1`, `extra_field2`, `hot`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(55, 'Túi xách thời trang', '', '2012-05-27 04:02:03', 'tui-xach-thoi-trang', '', '', '', 'tui-xach-thoi-trang.jpg', 'http://www.youtube.com/watch?v=IwckCuHqrDc&feature=fvsr', 1, 0, '', '', 0, 1, 45);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -834,14 +798,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_video_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=46 ;
-
---
--- Dumping data for table `dos_module_video_cat`
---
-
-INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat_title`, `cat_titleen`, `tag`, `tagen`, `description`, `descriptionen`, `cat_order`, `cat_enable`, `dos_usernames_username`) VALUES
-(45, 0, '', 'TÚI XÁCH', '', 'tui-xach', '', 'TÚI XÁCH', '', 1, 1, 'phivucomputer');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -861,10 +818,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
 --
 
 INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
-('keywords', 'phân phối máy laptop cũ, linh kiện cũ, laptop mới, linh kiện mới các loại, uy tín đảm bảo giá cạnh tranh', 'phivucomputer'),
-('description', 'phân phối máy laptop cũ, linh kiện cũ, laptop mới, linh kiện mới các loại, uy tín đảm bảo giá cạnh tranh', 'phivucomputer'),
-('title', 'Công Ty Công Nghệ Tin Học Phi Vũ - phivucomputer.com', 'phivucomputer'),
-('analytics', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-32380145-1'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>', 'phivucomputer');
+('keywords', 'in ấn, quảng cáo, in kỹ thuật số, in card, in ấn ', 'quangcaothienkim'),
+('description', 'CÔNG TY TNHH QUẢNG CÁO IN ẤN THIÊN KIM -In kỹ thuật số khổ lớn, in card, quảng cáo, hộp đèn,pano, in ấn, quảng cáo, in kỹ thuật số, in card, ', 'quangcaothienkim'),
+('title', 'Quảng cáo Thiên Kim - quangcaothienkim.com', 'quangcaothienkim');
 
 -- --------------------------------------------------------
 
@@ -987,7 +943,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 --
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
-('270412', 'Mẫu cơ khí: 270412', '2012-04-27 06:27:56', 'Chuyên bán các loại máy móc, thiết bị cơ khí, cửa sắt...');
+('020512', 'Mẫu hoa tươi: 020512', '2012-05-02 03:10:52', 'Chuyên cung cấp hoa tuoi, hoa cuoi, điện hoa, hoa tuoi van phong, hoa khai trương, hoa chúc mừng, hoa xe, hoa online, hoa chia buồn');
 
 -- --------------------------------------------------------
 
@@ -1008,7 +964,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_bussiness` (
 --
 
 INSERT INTO `dos_templates_has_dos_bussiness` (`dos_templates_template`, `dos_bussiness_bussiness_id`) VALUES
-('270412', 'co-khi-may-moc-thiet-bi');
+('020512', 'hoa-tuoi');
 
 -- --------------------------------------------------------
 
@@ -1046,47 +1002,43 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_modules` (
 --
 
 INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modules_module_id`, `dos_values_value_name`) VALUES
-('270412', 'about', 'advs_left'),
-('270412', 'about', 'advs_right'),
-('270412', 'about', 'list_supports'),
-('270412', 'about', 'menu_about'),
-('270412', 'about', 'products_hot'),
-('270412', 'contact', 'advs_left'),
-('270412', 'contact', 'advs_right'),
-('270412', 'contact', 'list_supports'),
-('270412', 'contact', 'menu_products'),
-('270412', 'contact', 'products_hot'),
-('270412', 'default', 'about_home'),
-('270412', 'default', 'advs_left'),
-('270412', 'default', 'advs_right'),
-('270412', 'default', 'list_supports'),
-('270412', 'default', 'menu_products'),
-('270412', 'default', 'products_hot'),
-('270412', 'default', 'products_new'),
-('270412', 'default', 'video_hot'),
-('270412', 'news', 'advs_left'),
-('270412', 'news', 'advs_right'),
-('270412', 'news', 'list_supports'),
-('270412', 'news', 'menu_news'),
-('270412', 'news', 'news_hot'),
-('270412', 'news', 'products_hot'),
-('270412', 'products', 'advs_left'),
-('270412', 'products', 'advs_right'),
-('270412', 'products', 'list_supports'),
-('270412', 'products', 'menu_products'),
-('270412', 'products', 'news_hot'),
-('270412', 'products', 'products_hot'),
-('270412', 'services', 'advs_left'),
-('270412', 'services', 'advs_right'),
-('270412', 'services', 'list_supports'),
-('270412', 'services', 'menu_services'),
-('270412', 'services', 'products_hot'),
-('270412', 'video', 'advs_left'),
-('270412', 'video', 'advs_right'),
-('270412', 'video', 'list_supports'),
-('270412', 'video', 'menu_video'),
-('270412', 'video', 'products_hot'),
-('270412', 'video', 'video_hot');
+('020512', 'about', 'advs_bottom'),
+('020512', 'about', 'advs_left'),
+('020512', 'about', 'advs_top'),
+('020512', 'about', 'list_supports'),
+('020512', 'about', 'menu_about'),
+('020512', 'contact', 'advs_bottom'),
+('020512', 'contact', 'advs_left'),
+('020512', 'contact', 'advs_top'),
+('020512', 'contact', 'list_supports'),
+('020512', 'contact', 'menu_products'),
+('020512', 'default', 'about_home'),
+('020512', 'default', 'advs_bottom'),
+('020512', 'default', 'advs_left'),
+('020512', 'default', 'advs_top'),
+('020512', 'default', 'list_supports'),
+('020512', 'default', 'menu_products'),
+('020512', 'default', 'products_new'),
+('020512', 'news', 'advs_bottom'),
+('020512', 'news', 'advs_left'),
+('020512', 'news', 'advs_top'),
+('020512', 'news', 'list_supports'),
+('020512', 'news', 'menu_news'),
+('020512', 'products', 'advs_bottom'),
+('020512', 'products', 'advs_left'),
+('020512', 'products', 'advs_top'),
+('020512', 'products', 'list_supports'),
+('020512', 'products', 'menu_products'),
+('020512', 'services', 'advs_bottom'),
+('020512', 'services', 'advs_center'),
+('020512', 'services', 'advs_top'),
+('020512', 'services', 'list_supports'),
+('020512', 'services', 'menu_services'),
+('020512', 'video', 'advs_bottom'),
+('020512', 'video', 'advs_left'),
+('020512', 'video', 'advs_top'),
+('020512', 'video', 'list_supports'),
+('020512', 'video', 'menu_video');
 
 -- --------------------------------------------------------
 
@@ -1122,7 +1074,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 --
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('phivucomputer', 'phivucomputer@yahoo.com.vn', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-27 04:01:45', '', '05113691973', '', 'user', 'vi', '', '2012-06-25 17:00:00', 0, 1, '270412', 15, 'cong-nghe-thong-tin-vien-thong');
+('quangcaothienkim', 'info@quangcaothienkim.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-29 04:32:53', 'Nguyễn Thị Phương', '0978273979', 'Công ty In ấn quảng cáo thiên kim', 'user', 'vi', '', '2012-06-27 17:00:00', 0, 1, '020512', 19, 'cong-nghe-thong-tin-vien-thong');
 
 -- --------------------------------------------------------
 
@@ -1160,10 +1112,12 @@ CREATE TABLE IF NOT EXISTS `dos_user_langs` (
 --
 
 INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_username`) VALUES
-('address1', '380 Nguyễn Hoàng, TP. Đà Nẵng', '', 'phivucomputer'),
-('company_name', 'Công Ty Công Nghệ Tin Học Phi Vũ', '', 'phivucomputer'),
-('company_name_footer', 'Công Ty Công Nghệ Tin Học Phi Vũ', '', 'phivucomputer'),
-('company_phone', 'Cam kết bảo hành nhanh 24h, 1 đổi 1 - DĐ Online: 0905.168.699', '', 'phivucomputer');
+('address1', 'Địa chỉ: 95/68, Nguyễn Ái Quốc, Kp.8, P.Tân Phong, Tp.Biên Hòa, Tỉnh Đồng Nai', '', 'quangcaothienkim'),
+('address2', 'ĐT/Fax: (061) 3 896 606  Hotline: 0915.429 486 / 0983 818 414', '', 'quangcaothienkim'),
+('company_name', 'CÔNG TY TNHH QUẢNG CÁO IN ẤN THIÊN KIM', '', 'quangcaothienkim'),
+('company_name_footer', 'CÔNG TY TNHH QUẢNG CÁO IN ẤN THIÊN KIM', '', 'quangcaothienkim'),
+('company_phone', 'Hotline: 0915 429 486', '', 'quangcaothienkim'),
+('copyright', 'Copyright © 2012 thienkim', '', 'quangcaothienkim');
 
 -- --------------------------------------------------------
 

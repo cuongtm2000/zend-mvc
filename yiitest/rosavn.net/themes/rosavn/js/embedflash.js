@@ -1,4 +1,0 @@
-function embedFlashObj(Embpath,Embwidth,Embheight){
-var flashCode = '<div class="panelflash"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="'+Embwidth+'" height="'+Embheight+'" id="Banner Home" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="allowFullScreen" value="false" /><param name="movie" value="'+Embpath+'" /><param name="quality" value="high" /><param name="wmode" value="transparent" /><param name="bgcolor" value="#ffffff" /><embed src="'+Embpath+'" quality="high" wmode="transparent" bgcolor="#ffffff" width="'+Embwidth+'" height="'+Embheight+'" name="Banner Home" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object></div>';
-document.write(flashCode) ;
-}
