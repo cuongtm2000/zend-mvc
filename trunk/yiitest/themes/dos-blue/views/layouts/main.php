@@ -57,7 +57,7 @@
             <li><a<?php echo (Yii::app()->controller->id == 'templates') ? ' class="select"' : ''?> href="<?php echo LANGURL.'/'.Yii::t('main', 'templates.link')?>" title="<?php echo Yii::t('main', 'templates.name')?>"><span><?php echo Yii::t('main', 'templates.name')?></span></a></li>
             <li><a<?php echo (Yii::app()->controller->id == 'articles') ? ' class="select"' : ''?> href="<?php echo LANGURL.'/'.Yii::t('main', 'articles.link')?>" title="<?php echo Yii::t('main', 'articles.name')?>"><span><?php echo Yii::t('main', 'articles.name')?></span></a></li>
             <li><a<?php echo (Yii::app()->controller->id == 'tutorial') ? ' class="select"' : ''?> href="<?php echo LANGURL.'/'.Yii::t('main', 'tutorial.link')?>" title="<?php echo Yii::t('main', 'tutorial.name')?>"><span><?php echo Yii::t('main', 'tutorial.name')?></span></a></li>
-            <li><a href="" title="Tính năng"><span>Tính năng</span></a></li>
+            <li><a<?php echo (Yii::app()->controller->id == 'features') ? ' class="select"' : ''?> href="<?php echo LANGURL.'/'.Yii::t('main', 'features.link')?>" title="<?php echo Yii::t('main', 'features.name')?>"><span><?php echo Yii::t('main', 'features.name')?></span></a></li>
             <!-- <li><a href="" title=""><span>Chính sách đại lý</span></a></li>
             <li><a href="" title=""><span>Dịch vụ</span></a></li>
             <li><a href="" title=""><span>Giải pháp</span></a></li>

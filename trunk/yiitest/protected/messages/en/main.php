@@ -14,6 +14,8 @@ return array(
 	'articles.link' => 'articles',
     'tutorial.name' => 'User Guide',
     'tutorial.link' => 'user-guide',
+    'features.name' => 'Features',
+    'features.link' => 'features',
 	'about.name' => 'About us',
 	'about.link' => 'about-us',
 	'contact.name' => 'Contact us',

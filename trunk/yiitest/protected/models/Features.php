@@ -28,11 +28,11 @@
 class Features extends CActiveRecord {
 
     private $_model;
-    private $_subdomain;
+    //private $_subdomain;
 
-    public function init() {
+    /*public function init() {
         $this->_subdomain = Yii::app()->session['subdomain'];
-    }
+    } */
 
     public static function model($className = __CLASS__) {
         return parent::model($className);
@@ -163,17 +163,17 @@ class Features extends CActiveRecord {
      * Front end for main Dos.vn - get list Menu by Username: dos
      * @return mixed
      */
-    public function listMenuByDos() {
-        $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag' . LANG . ' FROM ' . $this->tableName() . ' WHERE hot = 0 AND activated = 1 AND dos_usernames_username=\'dos\' ORDER BY record_order DESC, created DESC');
+    public function listMenu() {
+        $command = Yii::app()->db->createCommand('SELECT title' . LANG . ', tag' . LANG . ' FROM ' . $this->tableName() . ' WHERE activated = 1 ORDER BY record_order DESC, created DESC');
         return $command->queryAll();
     }
 
     /**
-     * Front end for main Dos.vn - Get first record by Username: dos
+     * Front end for main Dos.vn
      * @return mixed
      */
-    public function firstRecordByDos() {
-        $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE activated = 1 AND dos_usernames_username=\'dos\' ORDER BY record_order ASC, created ASC');
+    public function firstRecord() {
+        $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE activated = 1 ORDER BY record_order ASC, created ASC');
         $row = $command->queryRow();
         if ($row) {
             //Update hit
@@ -187,8 +187,8 @@ class Features extends CActiveRecord {
      * @param $tag
      * @return mixed
      */
-    public function detailRecordByDos($tag) {
-        $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE tag' . LANG . '=:tag AND dos_usernames_username=\'dos\'');
+    public function detailRecord($tag) {
+        $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE tag' . LANG . '=:tag AND activated = 1');
         $command->bindParam(":tag", $tag, PDO::PARAM_STR);
         $row = $command->queryRow();
         if ($row) {
@@ -199,14 +199,14 @@ class Features extends CActiveRecord {
     }
 
     //Front end - get list Menu
-    public function listMenu() {
+    /*public function listMenu() {
         $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag' . LANG . ' FROM ' . $this->tableName() . ' WHERE hot = 0 AND activated = 1 AND dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
         $command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
         return $command->queryAll();
-    }
+    }*/
 
     //Front end - Get home record
-    public function homeRecord() {
+    /*public function homeRecord() {
         $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit FROM ' . $this->tableName() . ' WHERE hot=1 AND activated = 1 AND dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
         $command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
         $row = $command->queryRow();
@@ -215,10 +215,10 @@ class Features extends CActiveRecord {
             $this->updateHit($row['hit'] + 1, $row['record_id']);
             return $row;
         }
-    }
+    }*/
 
     //Front end - Get first record
-    public function firstRecord() {
+    /*public function firstRecord() {
         $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE activated = 1 AND dos_usernames_username=:user ORDER BY record_order DESC, created DESC');
         $command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
         $row = $command->queryRow();
@@ -227,10 +227,10 @@ class Features extends CActiveRecord {
             $this->updateHit($row['hit'] + 1, $row['record_id']);
             return $row;
         }
-    }
+    }*/
 
     //Front end - Get detail record
-    public function detailRecord($tag) {
+    /*public function detailRecord($tag) {
         $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE tag' . LANG . '=:tag AND dos_usernames_username=:user');
         $command->bindParam(":tag", $tag, PDO::PARAM_STR);
         $command->bindParam(":user", $this->_subdomain, PDO::PARAM_STR);
@@ -240,7 +240,7 @@ class Features extends CActiveRecord {
             $this->updateHit($row['hit'] + 1, $row['record_id']);
             return $row;
         }
-    }
+    }*/
 
     //Front end - update hit view
     private function updateHit($hit, $id) {
@@ -374,10 +374,10 @@ class Features extends CActiveRecord {
     }
 
     //Back end - Count item by user post
-    public function countItemByUser() {
+    /*public function countItemByUser() {
         $user = Yii::app()->user->id;
         $command = Yii::app()->db->createCommand('SELECT COUNT(record_id) AS num FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user');
         $command->bindParam(":user", $user, PDO::PARAM_STR);
         return $command->queryScalar();
-    }
+    }*/
 }
