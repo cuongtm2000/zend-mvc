@@ -45,16 +45,14 @@
     </div>
     <div>
         <ul class="left sub-solution">
-            <li><a href="#" title="">Một tên miền quốc tế (.com, .net, .org,...)</a></li>
-            <li><a href="#" title="">Tạo email dùng riêng cho công ty</a></li>
-            <li><a href="#" title="">Hostting 1.000 MB, băng thông 50GB sever tốc độ nhanh, ổn định</a></li>
-            <li><a href="#" title="">Web động, có đầy đủ tính năng để giới thiệu, quảng cáo, bán hàng</a></li>
+            <?php foreach($featuresTwo as $value):?>
+            <li><a href="<?php echo $value['tag'.LANG]?>" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
+            <?php endforeach?>
         </ul>
         <ul class="right sub-solution">
-            <li><a href="#" title="">Tự thay đổi giao diện trang web, với nhiều mẫu thiết kế đep</a></li>
-            <li><a href="#" title="">Phầm mềm quản trị để người dùng tự thay đổi nội dùng trên web</a></li>
-            <li><a href="#" title="">Công cụ chèn từ khóa để website nhanh xuất hiện trên Google</a></li>
-            <li><a href="#" title="">Thống kê truy cập, hỗ trợ trực tuyến</a></li>
+            <?php foreach($featuresOne as $value):?>
+                <li><a href="<?php echo $value['tag'.LANG]?>" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
+            <?php endforeach?>
         </ul> <div class="clear"></div>
     </div>
 </div> <!--End bg-solution -->

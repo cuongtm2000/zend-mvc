@@ -41,9 +41,10 @@ class SiteController extends HomeController {
         $business_class = new Bussiness();
         $username_class = new Username();
         $article_class = new Articles();
+        $features_class = new Features();
 
         /*'listUserNewCreated' => $username_class->listUserNewCreated()*/
-        $this->render('index', array('listBusiness' => $business_class->listCats(1), 'listUserImport' => $username_class->listUserImport(), 'articleFirst' => $article_class->itemFirstNew(), 'listArticleLimitOne' => $article_class->listRecordLimit(1), 'listArticleLimitTwo' => $article_class->listRecordLimit(11)));
+        $this->render('index', array('listBusiness' => $business_class->listCats(1), 'listUserImport' => $username_class->listUserImport(), 'articleFirst' => $article_class->itemFirstNew(), 'listArticleLimitOne' => $article_class->listRecordLimit(1), 'listArticleLimitTwo' => $article_class->listRecordLimit(11), 'featuresOne' => $features_class->listTopHome(4), 'featuresTwo' => $features_class->listTopHome(0)));
     }
 
     public function actionSignup() {

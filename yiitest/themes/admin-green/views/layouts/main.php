@@ -51,6 +51,11 @@
                                     <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/tutorial">List Tutorial</a></li>
                                 </ul>
                             </li>
+                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/features">Features</a>
+                                <ul>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/features">List</a></li>
+                                </ul>
+                            </li>
                         </ul> 
                     </div>
                 </div>
