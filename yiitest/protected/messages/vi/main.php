@@ -14,6 +14,8 @@ return array(
 	'articles.link' => 'bai-viet',
     'tutorial.name' => 'Hướng dẫn',
     'tutorial.link' => 'huong-dan',
+    'features.name' => 'Tính năng',
+    'features.link' => 'tinh-nang',
 	'about.name' => 'Giới thiệu',
 	'about.link' => 'gioi-thieu',
 	'contact.name' => 'Liên hệ',

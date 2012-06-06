@@ -46,12 +46,12 @@
     <div>
         <ul class="left sub-solution">
             <?php foreach($featuresTwo as $value):?>
-            <li><a href="<?php echo $value['tag'.LANG]?>" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
+                <li><a href="<?php echo Yii::app()->session['langUrl'] . '/'. Yii::t('main', 'features.link')?>/<?php echo $value['tag'.LANG]?>" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
             <?php endforeach?>
         </ul>
         <ul class="right sub-solution">
             <?php foreach($featuresOne as $value):?>
-                <li><a href="<?php echo $value['tag'.LANG]?>" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
+                <li><a href="<?php echo Yii::app()->session['langUrl'] . '/'. Yii::t('main', 'features.link')?>/<?php echo $value['tag'.LANG]?>" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
             <?php endforeach?>
         </ul> <div class="clear"></div>
     </div>

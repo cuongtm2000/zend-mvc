@@ -96,6 +96,12 @@ return array(
 	'<aboutus:(gioi-thieu)>' => array('aboutus/index'), //index
 	'<language:(vi|en)>/<aboutus:(about-us)>/<id:[-a-z0-9]+>' => array('aboutus/view', 'urlSuffix' => '.html'), //view
 	'<aboutus:(gioi-thieu)>/<id:[-a-z0-9]+>' => array('aboutus/view', 'urlSuffix' => '.html'), //view
+
+    //features controller
+    '<language:(vi|en)>/<features:(features)>' => array('features/index'), //index
+    '<features:(tinh-nang)>' => array('features/index'), //index
+    '<language:(vi|en)>/<features:(features)>/<id:[-a-z0-9]+>' => array('features/view', 'urlSuffix' => '.html'), //view
+    '<features:(tinh-nang)>/<id:[-a-z0-9]+>' => array('features/view', 'urlSuffix' => '.html'), //view
     
     //modules multi language
     '<language:(vi|en)>' => 'site/index',
