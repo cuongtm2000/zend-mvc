@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 06, 2012 at 11:17 AM
+-- Generation Time: Jun 06, 2012 at 10:52 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -2111,10 +2111,12 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_modules` (
 
 INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modules_module_id`, `dos_values_value_name`) VALUES
 ('010312', 'about', 'advs_left'),
+('010312', 'about', 'advs_right'),
 ('010312', 'about', 'list_supports'),
 ('010312', 'about', 'menu_about'),
 ('010312', 'about', 'products_hot'),
 ('010312', 'contact', 'advs_left'),
+('010312', 'contact', 'advs_right'),
 ('010312', 'contact', 'list_supports'),
 ('010312', 'contact', 'menu_products'),
 ('010312', 'contact', 'products_hot'),
@@ -2128,20 +2130,24 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('010312', 'default', 'products_new'),
 ('010312', 'default', 'video_hot'),
 ('010312', 'news', 'advs_left'),
+('010312', 'news', 'advs_right'),
 ('010312', 'news', 'menu_news'),
 ('010312', 'news', 'news_hot'),
 ('010312', 'news', 'news_new'),
 ('010312', 'news', 'video_hot'),
 ('010312', 'products', 'advs_left'),
+('010312', 'products', 'advs_right'),
 ('010312', 'products', 'list_supports'),
 ('010312', 'products', 'menu_products'),
 ('010312', 'products', 'products_hot'),
 ('010312', 'services', 'advs_left'),
+('010312', 'services', 'advs_right'),
 ('010312', 'services', 'list_supports'),
 ('010312', 'services', 'menu_services'),
 ('010312', 'services', 'news_new'),
 ('010312', 'services', 'products_hot'),
 ('010312', 'video', 'advs_left'),
+('010312', 'video', 'advs_right'),
 ('010312', 'video', 'list_supports'),
 ('010312', 'video', 'menu_video'),
 ('010312', 'video', 'news_new'),
