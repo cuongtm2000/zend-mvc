@@ -15,18 +15,18 @@
 <script type="text/javascript" src="js/tab-sub-right.js"></script>
 <script type="text/javascript" src="js/jquery.tooltip.js"></script>
 
-<!--Slider thumb images-->
+<link rel="stylesheet" type="text/css" href="css/scroll.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+
+
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+
 <script type="text/javascript" src="js/jcarousellite_1.0.1.js"></script>
 <script type="text/javascript" src="js/scroller.js"></script>
-<link rel="stylesheet" type="text/css" href="css/product-detail.css" />
-<!--End slider thumb images-->
 
-<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
-<script type="text/javascript" src="js/jquery.prettyLoader.js"></script>
-<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-<script type="text/javascript" src="js/min.js"></script>
-<link rel="stylesheet" href="css/prettyLoader.css" type="text/css" />
-<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" />
+<script type="text/javascript" src="js/jquery.scroll-1.4.2-min.js"></script>
+<script type="text/javascript" src="js/jquery.serialScroll-1.2.2-min.js"></script>
+<script type="text/javascript" src="js/product.js"></script>
 
 </head>
 <body>
@@ -145,63 +145,32 @@
                     	</div> <!--End left info-->
                         
                         <div class="right-pro-info">
-                         	<div class="container-img">
-									<div class="zoomer">
-										<div class="holder">
-											<div class="image"><img src="images/pro-1.JPG" class="target" alt="product one" /></div>
-												<div class="console">
-													<ul class="left">
-														<li><span id="zoomerUp"></span>
-															<span id="zoomerDown"></span>
-															<span id="zoomerLeft"></span>
-															<span id="zoomerRight"></span>
-														</li>
-														<li><span id="zoomerIn"></span>
-															<span id="zoomerOut"></span>
-														</li>
-													</ul>
-													<ul class="right">
-														<li><span id="zoomerView"></span></li>
-														<li><span id="zoomerReset"></span></li>
-													</ul>
-												</div> <!--End console-->
-										</div> <!--End holder-->
-										<div class="prod_detail">
-											<!--Slide show Jquery Lightbox-->
-											<div class="big_thumb">
-												<!--Slide Prev-->
-												<span class="prevsmall"><img src="images/prev.gif" alt="" /></span>
-													<div class="thumbs anyClass" id="paginate-slider2">
-														<ul>
-															<li><img src="images/pro-1.JPG" alt="" /></li>
-															<li><img src="images/pro-2.JPG" alt="" /></li>
-															<li><img src="images/pro-3.JPG" alt="" /></li>
-															<li><img src="images/pro-4.JPG" alt="" /></li>
-														</ul>
-													</div>
-												<span class="nextsmall"><img src="images/next.gif" alt="" /></span>
-												<!--Slide Next-->
-											</div><!--END Slide show Jquery Lightbox-->
-										</div> <!--End prod detail-->
-
-										<div class="hidden lightbox">
-											<a href="images/pro-1.JPG" rel="prettyPhoto[gallery]"></a>
-											<a href="images/pro-2.JPG" rel="prettyPhoto[gallery]"></a>
-											<a href="images/pro-3.JPG" rel="prettyPhoto[gallery]"></a>
-											<a href="images/pro-4.JPG" rel="prettyPhoto[gallery]"></a>
-											<!--<a href="images/05.jpg" rel="prettyPhoto[gallery]"></a>
-											<a href="images/06.jpg" rel="prettyPhoto[gallery]"></a>
-											<a href="images/07.jpg" rel="prettyPhoto[gallery]"></a>
-											<a href="images/08.jpg" rel="prettyPhoto[gallery]"></a>-->
-										</div>
-									</div> <!--End Zoomer-->
-								</div> <!--End container img-->
-								<script type="text/javascript">
-									$(document).ready(function(){
-										$.zoomer();
-										$("a[rel^='prettyPhoto']").prettyPhoto({theme: 'pp_default',opacity: 0.90,overlay_gallery: true,autoplay_slideshow: false,slideshow:4000,social_tools: false	});
-									});
-								</script>
+                         	<div id="pb-right-column">
+								<!-- product img-->
+								<div id="image-block">
+											<img src="images/pro-1.jpg" title="Maxtor Central Axis" alt="Maxtor Central Axis"  id="bigpic"  />
+								</div>
+								<!-- thumbnails -->
+								<div id="views_block" class="prod_detail">
+									<!--Slide show Jquery Lightbox-->
+									<div class="big_thumb">
+										<!--Slide Prev-->
+										<span class="prevsmall"><img src="images/prev.gif" alt="" /></span>
+											<div class="thumbs anyClass" id="paginate-slider2">
+												<ul id="thumbs_list">
+													<li><a href="images/pro-1.jpg" rel="other-views" class="thickbox shown" title="Maxtor Central Axis"><img src="images/pro-1.jpg" alt="Maxtor Central Axis"  /></a></li>
+													<li><a href="images/pro-2.jpg" rel="other-views" class="thickbox" title="Maxtor box block cat"><img src="images/pro-2.jpg" alt="Maxtor Central Axis" /></a></li>
+													<li><a href="images/pro-3.jpg" rel="other-views" class="thickbox" title="Maxtor box block cat cat cat"><img src="images/pro-3.jpg" alt="Maxtor Central Axis" /></a></li>
+													<li><a href="images/pro-4.jpg" rel="other-views" class="thickbox" title="Maxtor box block cat cat cat"><img src="images/pro-4.jpg" alt="Maxtor Central Axis" /></a></li>
+													<li><a href="images/pro-5.jpg" rel="other-views" class="thickbox" title="Maxtor box block cat cat cat"><img src="images/pro-5.jpg" alt="Maxtor Central Axis" /></a></li>
+													<li><a href="images/pro-6.jpg" rel="other-views" class="thickbox" title="Maxtor box block cat cat cat"><img src="images/pro-6.jpg" alt="Maxtor Central Axis" /></a></li>
+												</ul>
+											</div>
+										<span class="nextsmall"><img src="images/next.gif" alt="" /></span>
+										<!--Slide Next-->
+									</div><!--END Slide show Jquery Lightbox-->
+								</div>
+							</div> <div class="clear"></div>
                                <div class="frame-detail">
                                		<h2 class="title-detail">Mô tả:</h2>
                                     <p>Cần bán gấp căn hộ chung cư Carina plaza , Quận 8, tp Hồ Chí Minh. Mặt tiền đường Võ Văn Kiệt, về Quận 1 chỉ 15 phút. Đường vào rộng: 60m. Giao thông thuận tiện.</p>
