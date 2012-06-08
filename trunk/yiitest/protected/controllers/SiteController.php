@@ -274,4 +274,7 @@ class SiteController extends HomeController {
         $this->redirect(Yii::app()->homeUrl);
     }
 
+    public function actionCheck() {
+        $this->render('check');
+    }
 }
