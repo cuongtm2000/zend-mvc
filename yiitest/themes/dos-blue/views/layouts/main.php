@@ -36,18 +36,18 @@
                 Chào <strong><?php echo Yii::app()->user->name?></strong>  <a class="welcome login" href="/admin" title="Admin">Admin</a> <a class="register" href="/<?php echo Yii::t('main', 'logout.link')?>"><?php echo Yii::t('main', 'logout.name')?></a>
             <?php endif;?>
         </div>
-        <form class="frm-test" action="" method="post">
+        <form class="frm-test" action="/site/check" method="post">
         	<label>www.</label>
-        	<input type="text" name="domain" size="25"/>
-            <select size="1">
-            	<option value="0">.com</option>
-                <option value="0">.net</option>
-                <option value="0">.info</option>
-                <option value="0">.biz</option>
-                <option value="0">.com.vn</option>
-                <option value="0">.vn</option>
+        	<input type="text" name="name" size="25"/>
+            <select name="domain">
+            	<option value=".com">.com</option>
+                <option value=".net">.net</option>
+                <option value=".org">.org</option>
+                <option value=".info">.info</option>
+                <option value=".com.vn">.com.vn</option>
+                <option value=".vn">.vn</option>
             </select>
-            <input type="button" class="bt-test" value="kiểm tra" title="kiểm tra" />
+            <input type="submit" class="bt-test" value="kiểm tra" title="kiểm tra" />
         </form> <div class="clear"></div>
     </div> <!--End top page-->
     <div id="header">
