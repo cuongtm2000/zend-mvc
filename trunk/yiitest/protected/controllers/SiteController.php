@@ -275,6 +275,19 @@ class SiteController extends HomeController {
     }
 
     public function actionCheck() {
-        $this->render('check');
+        Yii::app()->clientScript->registerCoreScript('jquery');
+
+        $domain = explode( ".", trim(Yii::app()->request->getPost('name')));
+        $types = array('com', 'net', 'org', 'info', 'com.vn', 'vn');
+
+        $this->render('check', array('domain' => $domain[0], 'types' => $types));
+    }
+
+    public function actionCheckdomain($domain) {
+        if (file_get_contents('http://checkdomain.matbao.vn/?domain=' . $domain) == 'True') {
+            echo 'da dang ky';
+        } else {
+            echo 'chua dang ky';
+        }
     }
 }
