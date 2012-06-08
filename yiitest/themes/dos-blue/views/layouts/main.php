@@ -40,6 +40,7 @@
         	<label>www.</label>
         	<input type="text" name="name" size="25"/>
             <select name="domain">
+                <option value="all">all</option>
             	<option value=".com">.com</option>
                 <option value=".net">.net</option>
                 <option value=".org">.org</option>
