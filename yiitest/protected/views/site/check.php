@@ -1,16 +1,17 @@
-<h1 class="heading-contact marginb10">Kiểm tra tên miền</h1>
+<h1 class="heading-contact marginb10">Kiểm tra tên miền </h1>
 
 <?php if($domain):?>
-    <div class="left" style="width: 200px">
-        <?php echo $domain;?>
-    </div>
-    <div>
-        <?php $i=1; foreach ($types as $value):?>
-            <div id="result-<?php echo $i?>" class="left" style="width: 80px; background: #ccc; margin-right: 10px">
-                <img src="<?php echo Yii::app()->theme->baseUrl ?>/images/ajax-loader.gif" alt="loading" />
-            </div>
-        <?php $i++; endforeach?>
-    </div>
+		<div class="left-domain">
+			<?php echo $domain;?>
+		</div>
+		<div class="left">
+			<?php $i=1; foreach ($types as $value):?>
+				<div id="result-<?php echo $i?>" class="frame-check">
+					<img src="<?php echo Yii::app()->theme->baseUrl ?>/images/ajax-loader.gif" alt="loading" />
+				</div>
+			<?php $i++; endforeach?>  
+			<p class="clear title-guide">Vui lòng Check vào ô màu xanh để đăng ký</p>
+		</div> <div class="clear"></div>	
     <script type="text/javascript">
         jQuery(function($) {
             <?php $i=1; foreach ($types as $value):?>

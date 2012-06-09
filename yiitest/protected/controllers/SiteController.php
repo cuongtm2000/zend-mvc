@@ -285,9 +285,9 @@ class SiteController extends HomeController {
 
     public function actionCheckdomain($domain) {
         if (file_get_contents('http://checkdomain.matbao.vn/?domain=' . $domain) == 'True') {
-            echo 'da dang ky';
+            echo '<img src="' . Yii::app()->theme->baseUrl . '/images/brown.jpg" alt="" /> <p class="domain-name">.com</p>';
         } else {
-            echo 'chua dang ky';
+            echo '<input class="check-none" type="checkbox" name="check" /> <img src="' . Yii::app()->theme->baseUrl . '/images/green.jpg" alt="" /> <p class="domain-name">.com.vn</p>';
         }
     }
 }

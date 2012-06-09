@@ -253,3 +253,11 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 #list-template p  a{color:#000;}
 #list-template p  a:hover{color:#ccc}
 .title-template{color:#208FFF;font-size:11pt;margin:0 0 5px 0}
+
+/** Kiem tra tien mien **/
+.left-domain{float:left;width:200px;color:#0275BE;font-size: 24px}
+.marginb10{margin:0 0 15px 0}
+.frame-check{float:left;width:48px; margin:0 10px 0 0 !important;position:relative;}
+.check-none{position:absolute; top:10px;left:18px}
+.domain-name{text-align:center;font-size:8.5pt;position:relative;top:-20px}
+.title-guide{font-size:10pt}
