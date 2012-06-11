@@ -75,7 +75,7 @@ class Services extends CActiveRecord {
         );
     }
 
-    public function checkExistsTag($attribute){
+    public function checkExistsTag($attribute) {
         if (GetTag::tag($this->tag, $this->record_id, $this->tableName())) {
             $this->addError($attribute, $attribute . ': <strong>' . $this->tag . '</strong> đã tồn tại, vui lòng chọn một liên kết khác');
         }
@@ -200,6 +200,45 @@ class Services extends CActiveRecord {
         }
 
         return parent::beforeSave();
+    }
+
+    /**
+     * Front end for main Dos.vn - get list Menu by Username: dos
+     * @return mixed
+     */
+    public function listMenuByDos() {
+        $command = Yii::app()->db->createCommand('SELECT title' . LANG . ', tag' . LANG . ' FROM ' . $this->tableName() . ' WHERE hot = 0 AND activated = 1 AND dos_usernames_username=\'dos\' ORDER BY record_order DESC, created DESC');
+        return $command->queryAll();
+    }
+
+    /**
+     * Front end for main Dos.vn - Get first record by Username: dos
+     * @return mixed
+     */
+    public function firstRecordByDos() {
+        $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE activated = 1 AND dos_usernames_username=\'dos\' ORDER BY record_order ASC, created ASC');
+        $row = $command->queryRow();
+        if ($row) {
+            //Update hit
+            $this->updateHit($row['hit'] + 1, $row['record_id']);
+            return $row;
+        }
+    }
+
+    /**
+     * Front end for main Dos.vn - Get detail record by Username: dos
+     * @param $tag
+     * @return mixed
+     */
+    public function detailRecordByDos($tag) {
+        $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', content' . LANG . ', hit, description' . LANG . ' FROM ' . $this->tableName() . ' WHERE tag' . LANG . '=:tag AND dos_usernames_username=\'dos\'');
+        $command->bindParam(":tag", $tag, PDO::PARAM_STR);
+        $row = $command->queryRow();
+        if ($row) {
+            //Update hit
+            $this->updateHit($row['hit'] + 1, $row['record_id']);
+            return $row;
+        }
     }
 
     //Front end - List menu

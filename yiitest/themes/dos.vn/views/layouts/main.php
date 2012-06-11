@@ -82,11 +82,9 @@
                 <li class="left">
                 	<div class="tent-nav-fter">
                         <h4>Quảng cáo trực tuyến</h4>
-                        <p><a href="#" title="">Trên google</a></p>
-                        <p><a href="#" title="">Các trang báo</a></p>
-                        <p><a href="#" title="">E-mail quảng cáo</a></p>
-                        <p><a href="#" title="">Seo web</a></p>
-                        <p><a href="#" title="">Quảng cáo trên rao vặt</a></p>
+                        <?php foreach($this->servicesLists as $value):?>
+                            <p><a href="<?php echo Yii::app()->session['langUrl'] . '/'. Yii::t('main', 'services.link')?>/<?php echo $value['tag'.LANG]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></p>
+                        <?php endforeach?>
                     </div>
                 </li>
                 <li class="left">
@@ -105,10 +103,11 @@
                     </div>    
                 </li>
                 <li  class="left row-5">
-                	<div class="tent-nav-fter">
-                        <h4>Hosting</h4>
-                        <p><a href="#" title="">Báo giá hosting</a></p>
-                        <p><a href="#" title="">Báo giá server</a></p>
+                    <div class="tent-nav-fter">
+                        <h4>Đại lý</h4>
+                        <p><a href="#" title="">Chính sách trả thưởng</a></p>
+                        <p><a href="#" title="">Danh sách đại lý</a></p>
+                        <p><a href="#" title="">Đăng ký làm đại lý</a></p>
                     </div>
                 </li>
                 <li  class="left row-6">
@@ -120,12 +119,12 @@
                 	</div>
                 </li>
                 <li class="row-7">
-                	<div class="tent-nav-fter">
-                        <h4>Đại lý</h4>
-                        <p><a href="#" title="">Chính sách trả thưởng</a></p>
-                        <p><a href="#" title="">Danh sách đại lý</a></p>
-                        <p><a href="#" title="">Đăng ký làm đại lý</a></p>
-                	</div>
+                    <div class="tent-nav-fter">
+                        <h4>Về chúng tôi</h4>
+                        <?php foreach($this->aboutLists as $value):?>
+                            <p><a href="<?php echo Yii::app()->session['langUrl'] . '/'. Yii::t('main', 'about.link')?>/<?php echo $value['tag'.LANG]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></p>
+                        <?php endforeach?>
+                    </div>
                 </li>
             </ul> <!--End menu footer--> <div class="clear"></div>
 		</div>

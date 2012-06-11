@@ -97,6 +97,10 @@ return array(
 	'<language:(vi|en)>/<aboutus:(about-us)>/<id:[-a-z0-9]+>' => array('aboutus/view', 'urlSuffix' => '.html'), //view
 	'<aboutus:(gioi-thieu)>/<id:[-a-z0-9]+>' => array('aboutus/view', 'urlSuffix' => '.html'), //view
 
+    //services controller
+    '<servicesus:(dich-vu-quang-cao)>' => array('servicesus/index'), //index
+    '<servicesus:(dich-vu-quang-cao)>/<id:[-a-z0-9]+>' => array('servicesus/view', 'urlSuffix' => '.html'), //view
+
     //features controller
     '<language:(vi|en)>/<features:(features)>' => array('features/index'), //index
     '<features:(tinh-nang)>' => array('features/index'), //index

@@ -18,6 +18,8 @@ return array(
     'features.link' => 'features',
 	'about.name' => 'About us',
 	'about.link' => 'about-us',
+    'services.name' => 'Advertising services',
+    'services.link' => 'services',
 	'contact.name' => 'Contact us',
 	'contact.link' => 'contact-us',
     'register' => 'Register',
