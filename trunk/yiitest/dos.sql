@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 06, 2012 at 10:52 AM
+-- Generation Time: Jun 11, 2012 at 02:01 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -1922,7 +1922,7 @@ CREATE TABLE IF NOT EXISTS `dos_sys_features` (
 --
 
 INSERT INTO `dos_sys_features` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(94, 'Thống kê truy cập, hỗ trợ trực tuyến', '', '<p>Thống kê truy cập, hỗ trợ trực tuyến</p>', '', 22, '2012-06-06 03:24:53', 1, 0, NULL, NULL, 'thong-ke-truy-cap-ho-tro-truc-tuyen', '', 'Thống kê truy cập, hỗ trợ trực tuyến', '', 1, 'dos'),
+(94, 'Thống kê truy cập, hỗ trợ trực tuyến', '', '<p>Thống kê truy cập, hỗ trợ trực tuyến</p>', '', 23, '2012-06-06 03:24:53', 1, 0, NULL, NULL, 'thong-ke-truy-cap-ho-tro-truc-tuyen', '', 'Thống kê truy cập, hỗ trợ trực tuyến', '', 1, 'dos'),
 (95, 'Công cụ chèn từ khóa để website nhanh xuất hiện trên Google', '', '<p>Công cụ chèn từ khóa để website nhanh xuất hiện trên Google</p>', '', 2, '2012-06-06 03:26:02', 2, 0, NULL, NULL, 'cong-cu-chen-tu-khoa-de-website-nhanh-xuat-hien-tren-google', '', 'Công cụ chèn từ khóa để website nhanh xuất hiện trên Google', '', 1, 'dos'),
 (96, 'Phầm mềm quản trị để người dùng tự thay đổi nội dùng trên web', '', '<p>Phầm mềm quản trị để người dùng tự thay đổi nội dùng trên web</p>', '', 1, '2012-06-06 03:52:18', 3, 0, NULL, NULL, 'pham-mem-quan-tri-de-nguoi-dung-tu-thay-doi-noi-dung-tren-web', '', 'Phầm mềm quản trị để người dùng tự thay đổi nội dùng trên web', '', 1, 'dos'),
 (97, 'Tự thay đổi giao diện trang web, với nhiều mẫu thiết kế đẹp', '', '<p>Tự thay đổi giao diện trang web, với nhiều mẫu thiết kế đẹp</p>', '', 1, '2012-06-06 03:52:31', 4, 0, NULL, NULL, 'tu-thay-doi-giao-dien-trang-web-voi-nhieu-mau-thiet-ke-dep', '', 'Tự thay đổi giao diện trang web, với nhiều mẫu thiết kế đẹp', '', 1, 'dos'),
