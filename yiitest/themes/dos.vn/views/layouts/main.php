@@ -79,7 +79,7 @@
                     <p><a href="#" title="">Nâng cấp website</a></p>
                     <p><a href="#" title="">Gia công website</a></p>
                 </li>
-                <li class="left">
+                <li class="left row-2">
                 	<div class="tent-nav-fter">
                         <h4>Quảng cáo trực tuyến</h4>
                         <?php foreach($this->servicesLists as $value):?>
@@ -87,14 +87,14 @@
                         <?php endforeach?>
                     </div>
                 </li>
-                <li class="left">
+                <li class="left row-5">
                 	<div class="tent-nav-fter">
                         <h4>Tên miền</h4>
                         <p><a href="#" title="">Kiểm tra tên miền</a></p>
                         <p><a href="#" title="">Bảng giá tên miền</a></p>
                     </div>
                 </li>
-                <li  class="left">
+                <li  class="left row-4">
                 	<div class="tent-nav-fter">
                         <h4>Mẫu website</h4>
                         <p><a href="#" title="">Doanh nghiệp</a></p>

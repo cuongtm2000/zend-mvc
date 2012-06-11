@@ -188,15 +188,17 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .logo-fter{margin:0 0 33px 0}
 
 #nav-fter{list-style:none;background:#6F0}
-#nav-fter li{width:135px;margin:0 10px 0 0;border-right:1px solid #D5D6D6}
+#nav-fter li{margin:0 10px 0 0;border-right:1px solid #D5D6D6}
 #nav-fter h4{font-weight:bold;color:#0082F0;margin:0 0 5px 0}
 .tent-nav-fter{padding:0 0 0 5px}
 #nav-fter a{color:#252525;display:block}
 #nav-fter a:hover{color:#f90}
-#nav-fter .row-1{width:150px}
-#nav-fter .row-5 ,#nav-fter .row-6{width:100px;}
-#nav-fter .row-6{margin:0}
-#nav-fter .row-7{float:right;margin:0;border:none}
+#nav-fter .row-2{width:175px}
+#nav-fter .row-1{width:158px}
+#nav-fter .row-5 {width:120px}
+#nav-fter .row-4{width:100px;}
+#nav-fter .row-6{width:80px;}
+#nav-fter .row-7{float:right;width:135px; margin:0;border:none}
 
 /* Error */
 .errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0 !important}
