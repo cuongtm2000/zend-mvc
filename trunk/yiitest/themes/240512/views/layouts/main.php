@@ -160,6 +160,14 @@
 							<?php endforeach; ?>
 						</ul>
 						<?php endif; ?>
+						<h2 class="title-support"><span><?php echo $this->lang['counter'] ?></span></h2>
+						<ul class="statistics">
+							<li><?php echo Yii::t('user', 'online')?>: <?php echo Yii::app()->counter->getOnline(); ?></li>
+							<li><?php echo Yii::t('user', 'today')?>: <?php echo Yii::app()->counter->getToday(); ?></li>
+							<li><?php echo Yii::t('user', 'yesterday')?>: <?php echo Yii::app()->counter->getYesterday(); ?></li>
+							<li><?php echo Yii::t('user', 'total')?>: <?php echo Yii::app()->counter->getTotal(); ?></li>
+							<li><?php echo Yii::t('user', 'maximum')?>: <?php echo Yii::app()->counter->getMaximal(); ?></li>
+						</ul>
 						<div class="bottom">&nbsp;</div>
 					</div>
 				</div> <!--End leftcol-->
