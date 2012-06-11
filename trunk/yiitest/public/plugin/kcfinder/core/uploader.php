@@ -637,13 +637,17 @@ if (!kc_CKEditor && !kc_FCKeditor && !kc_Custom)
     }
 
     protected function get_htaccess() {
-        return "<IfModule mod_php4.c>
+        return '<IfModule mod_php4.c>
   php_value engine off
 </IfModule>
 <IfModule mod_php5.c>
   php_value engine off
 </IfModule>
-";
+<Files ~ ".*\.php$">
+Order deny,allow
+Deny from all
+</Files>
+';
     }
 }
 
