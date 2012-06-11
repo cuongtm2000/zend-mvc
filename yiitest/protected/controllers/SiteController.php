@@ -277,17 +277,17 @@ class SiteController extends HomeController {
     public function actionCheck() {
         Yii::app()->clientScript->registerCoreScript('jquery');
 
-        $domain = explode( ".", trim(Yii::app()->request->getPost('name')));
-        $types = array('com', 'net', 'org', 'info', 'com.vn', 'vn');
+        $domain = explode(".", trim(Yii::app()->request->getPost('name')));
+        $types = array('com', 'net', 'org', 'info', 'vn', 'com.vn');
 
         $this->render('check', array('domain' => $domain[0], 'types' => $types));
     }
 
-    public function actionCheckdomain($domain) {
-        if (file_get_contents('http://checkdomain.matbao.vn/?domain=' . $domain) == 'True') {
-            echo '<img src="' . Yii::app()->theme->baseUrl . '/images/brown.jpg" alt="" /> <p class="domain-name">.com</p>';
+    public function actionCheckdomain($domain, $type) {
+        if (file_get_contents('http://www.matbao.net/domain.ashx?domain=' . $domain . '.' . $type) == 'True') {
+            echo '<img src="' . Yii::app()->theme->baseUrl . '/images/brown.jpg" alt="Taken" /> <p class="domain-name">.' . $type . '</p>';
         } else {
-            echo '<input class="check-none" type="checkbox" name="check" /> <img src="' . Yii::app()->theme->baseUrl . '/images/green.jpg" alt="" /> <p class="domain-name">.com.vn</p>';
+            echo '<input class="check-none" type="checkbox" name="check" /> <img src="' . Yii::app()->theme->baseUrl . '/images/green.jpg" alt="Available" /> <p class="domain-name">.' . $type . '</p>';
         }
     }
 }
