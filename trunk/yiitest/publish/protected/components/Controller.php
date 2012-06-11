@@ -50,13 +50,32 @@ class Controller extends CController {
 		$this->nav = $menus_class->setMenu();
 
 		//Set function
-		$load_function = new TemplateModule();
+		/*$load_function = new TemplateModule();
 		$func = $load_function->getFunction($info_user['dos_templates_template'], $this->module->id);
 		foreach ($func as $value) {
 			Yii::app()->getModule($value['module']);
 			$load = new $value['module_id']();
 			$this->function[$value['value_name']] = $load->$value['function_name']();
-		}
+		}*/
+
+        //Set function
+        $func_user = UsernamesModules::model()->getFunction($info_user['username'], $this->module->id);
+        if ($func_user) {
+            //function user
+            foreach ($func_user as $value) {
+                Yii::app()->getModule($value['module']);
+                $load = new $value['module_id']();
+                $this->function[$value['value_name']] = $load->$value['function_name']();
+            }
+        } else {
+            //function template
+            $func = TemplateModule::model()->getFunction($info_user['dos_templates_template'], $this->module->id);
+            foreach ($func as $value) {
+                Yii::app()->getModule($value['module']);
+                $load = new $value['module_id']();
+                $this->function[$value['value_name']] = $load->$value['function_name']();
+            }
+        }
 
 		//Set Logo, Banner
 		$banner = new Banner();
