@@ -18,6 +18,8 @@ return array(
     'features.link' => 'tinh-nang',
 	'about.name' => 'Giới thiệu',
 	'about.link' => 'gioi-thieu',
+    'services.name' => 'Dịch vụ quảng cáo',
+    'services.link' => 'dich-vu-quang-cao',
 	'contact.name' => 'Liên hệ',
 	'contact.link' => 'lien-he',
     'register' => 'Đăng ký',
