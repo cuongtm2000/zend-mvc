@@ -25,6 +25,7 @@
             });
         </script>
     <?php endif?>
+<?php echo $this->analytics?>
 </head>
 <body>
 <div id="wrapper">
