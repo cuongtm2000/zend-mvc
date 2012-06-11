@@ -229,14 +229,13 @@ class SiteController extends HomeController {
         if (isset($_POST['ContactForm'])) {
             $model->attributes = $_POST['ContactForm'];
             if ($model->validate()) {
-                /*Yii::import('application.extensions.phpmailer.JPhpMailer');
+                Yii::import('application.extensions.phpmailer.JPhpMailer');
                 $mail = new JPhpMailer;
                 $html = 'Chào <b>Dos</b>!<br /><br />Dưới đây là thông tin Khách hàng liên hệ từ website <b>http://dos.vn</b><br /><br/><b>Name</b>: ' . $model['name'] . '<br /><b>Website</b>: ' . $model['website'] . '<br /><b>Email</b>: ' . $model['email'] . '<br /><b>Type</b>: ' . $model['type'] . '<br /><b>Phone</b>: ' . $model['phone'] . '<br /><b>Content</b>: ' . nl2br($model['body']) . '<br /><br />--<br/>Dos.vn';
                 $mail->sendMailSmtp('sender@dos.vn', 'info@dos.vn', 'Dos.vn', 'Dos.vn', 'Liên hệ từ web Dos.vn', $html, 1, $model['email'], $model['name']);
 
                 Yii::app()->user->setFlash('contactSuccess', $this->lang['contactSuccess']);
-                $this->refresh();*/
-                var_dump($_POST['ContactForm']);
+                $this->refresh();
             }
         }
         $this->render('contact', array('model' => $model));
