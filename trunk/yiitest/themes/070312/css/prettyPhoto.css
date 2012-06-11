@@ -5,7 +5,7 @@
 	/* ----------------------------------
 		Default Theme
 	----------------------------------- */
-
+	div.pp_default{position:absolute; z-index:9999999}
 	div.pp_default .pp_top,
 	div.pp_default .pp_top .pp_middle,
 	div.pp_default .pp_top .pp_left,
@@ -73,7 +73,7 @@
 	div.light_rounded .pp_content_container .pp_left,
 	div.light_rounded .pp_content_container .pp_right { background: #fff; }
 	div.light_rounded .pp_content { background-color: #fff; } /* Content background */
-	div.light_rounded .pp_next:hover { background: url(../images/prettyPhoto/light_rounded/btnNext.png) center right  no-repeat; cursor: pointer; } /* Next button */
+	
 	div.light_rounded .pp_previous:hover { background: url(../images/prettyPhoto/light_rounded/btnPrevious.png) center left no-repeat; cursor: pointer; } /* Previous button */
 	div.light_rounded .pp_expand { background: url(../images/prettyPhoto/light_rounded/sprite.png) -31px -26px no-repeat; cursor: pointer; } /* Expand button */
 	div.light_rounded .pp_expand:hover { background: url(../images/prettyPhoto/light_rounded/sprite.png) -31px -47px no-repeat; cursor: pointer; } /* Expand button hover */
@@ -369,10 +369,9 @@
 		}
 		
 		.pp_gallery {
-			visibility:hidden;/*An nhung tam anh thumb trong lighbox*/
 			display: none;
 			left: 50%;
-			margin-top: -40px;
+			margin-top: -50px;
 			position: absolute;
 			z-index: 10000;
 		}
@@ -420,30 +419,16 @@
 				width: 50px;
 			}
 			
-			.pp_gallery li.default a img { display: none }
+			.pp_gallery li.default a img { display: none; }
 			
 			.pp_gallery .pp_arrow_previous,
 			.pp_gallery .pp_arrow_next {
 				margin-top: 7px !important;
 			}
 		
-		a.pp_next {
-			background: url(../images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
-			display: block;
-			float: right;
-			height: 100%;
-			text-indent: -10000px;
-			width: 49%;
-		}
+		
 			
-		a.pp_previous {
-			background: url(../images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
-			display: block;
-			float: left;
-			height: 100%;
-			text-indent: -10000px;
-			width: 49%;
-		}
+		
 		
 		a.pp_expand,
 		a.pp_contract {
