@@ -68,8 +68,8 @@ class Controller extends CController {
 				$this->nav = $menus_class->setMenu($user);
 
 				//Set function
-				$load_function = new TemplateModule();
-				$func = $load_function->getFunction($info_user['dos_templates_template'], $this->module->id);
+				$func = TemplateModule::model()->getFunction($info_user['dos_templates_template'], $this->module->id);
+                $func_user = UsernamesModules::model()->getFunction($user, $this->module->id);
 				foreach ($func as $value) {
 					Yii::app()->getModule($value['module']);
 					$load = new $value['module_id']();
