@@ -9,17 +9,17 @@ return CMap::mergeArray(
                 'username' => 'root',
                 'password' => '',
                 'charset' => 'utf8',
-                'enableProfiling' => true,
-                'enableParamLogging' => true,
+                //'enableProfiling' => true,
+                //'enableParamLogging' => true,
             ),
             'log' => array(
                 'class' => 'CLogRouter',
                 'routes' => array(
                     array(
-                        /*'class' => 'CFileLogRoute',
-                        'levels' => 'error, warning',*/
-                        'class'=>'CProfileLogRoute',
-                        'levels'=>'trace, info, error, warning',
+                        'class' => 'CFileLogRoute',
+                        'levels' => 'error, warning',
+                        /*'class'=>'CProfileLogRoute',
+                        'levels'=>'trace, info, error, warning',*/
                     ),
                 ),
             ),

@@ -7,7 +7,7 @@ return CMap::mergeArray(
                 'connectionString' => 'mysql:host=localhost;dbname=data',
                 'emulatePrepare' => true,
                 'username' => 'user',
-                'password' => 'Z3CYC5f3',
+                'password' => 'X9Caxl2n',
                 'charset' => 'utf8',
                 'schemaCachingDuration' => 60 * 60,
             ),

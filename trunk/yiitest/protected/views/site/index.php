@@ -62,7 +62,7 @@
         <div class="mid-panel">
             <h2 class="title-panel"><span class="ico-port green">Xây dựng nhanh chóng</span><img class="img-nel-1" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ico-nel-1.png" alt="" /></h2>
             <p>Bạn chỉ cần vài phút để có ngay một website cho doanh nghiệp hay cá nhân bạn, giao diện quản lý đơn giản &amp; trực quan, bạn chỉ cần nhập liệu và tùy chỉnh ứng dụng của mình mọi lúc, mọi nơi</p>
-            <p class="more"><a href="#" title="">Chi tiết</a></p>
+            <!-- <p class="more"><a href="#" title="">Chi tiết</a></p> -->
         </div>
         <div class="bttom-panel"></div>
     </div> <!--End panel-1 -->
@@ -71,7 +71,7 @@
         <div class="mid-panel">
             <h2 class="title-panel"><span class="ico-port blue">Mẫu giao diện</span><img class="img-nel-2" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ico-nel-2.png" alt="" /></h2>
             <p>Bộ thư viện mẫu website phong phú đã được nhiều khách hàng sử dụng sẽ giúp bạn hài lòng. Có thể thay đổi giao diện bất cứ lúc nào và bật, tắt các chức năng module. Tự do tùy biến ứng dụng của bạn</p>
-            <p class="more"><a href="#" title="">Chi tiết</a></p>
+            <!-- <p class="more"><a href="#" title="">Chi tiết</a></p> -->
         </div>
         <div class="bttom-panel"></div>
     </div> <!--End panel-1 -->
@@ -80,7 +80,7 @@
         <div class="mid-panel">
             <h2 class="title-panel"><span class="ico-port org">Công cụ tìm kiếm</span><img class="img-nel-3" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ico-nel-3.png" alt="" /></h2>
             <p>Mã nguồn để xây dựng web được lập trình tỉ mỉ đúng theo chuẩn W3C sẽ giúp website có thứ hạng trong các công cục tìm kiếm Google, yahoo, bring... với các từ khóa ngành nghề của bạn</p>
-            <p class="more"><a href="#" title="">Chi tiết</a></p>
+            <!-- <p class="more"><a href="#" title="">Chi tiết</a></p> -->
         </div>
         <div class="bttom-panel"></div>
     </div> <!--End panel-1 --> <div class="clear"></div>
@@ -122,10 +122,19 @@
             <li>
                 <div class="img-port"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-port.png" alt="" /></div>
                 <div class="ten-port">
+                    <p><a href="ymsgr:sendim?hongvietsoft"><img src="http://opi.yahoo.com/online?u=hongvietsoft&amp;m=g&amp;t=1&amp;l=us" alt="hongvietsoft" /></a></p>
+                    <p>E: info@dos.vn </p>
+                    <p>T: 0987 001 001</p>
+				</div><div class="clear"></div>
+            </li>
+			<li>
+				<div class="img-port"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-port.png" alt="" /></div>
+				<div class="ten-port">
                     <p><a href="ymsgr:sendim?thanhansoft"><img src="http://opi.yahoo.com/online?u=thanhansoft&amp;m=g&amp;t=1&amp;l=us" alt="thanhansoft" /></a></p>
                     <p>E: support@dos.vn </p>
-                    <p>T: 0929 001 001</p></div>  <div class="clear"></div>
-            </li>
+                    <p>T: 0929 001 001</p>
+				</div><div class="clear"></div>
+			</li>
         </ul> <!--End support-->
     </div> <!--End rightcontent--> <div class="clear"></div>
 </div><!--End content-->
