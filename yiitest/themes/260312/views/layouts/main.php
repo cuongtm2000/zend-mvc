@@ -192,9 +192,9 @@
 				 <p><?php echo $this->lang['copyright'] ?></p>
 			 </div>
 			 <div class="fter-right">
-				 <p><span>Đang truy cập: <b><?php echo Yii::app()->counter->getOnline(); ?></b> </span> - <span>Trong ngày: <b><?php echo Yii::app()->counter->getToday(); ?></b> </span></p>
-				 <p><span>Hôm qua: <b><?php echo Yii::app()->counter->getYesterday(); ?></b> </span> - <span>Tổng truy câp: <b><?php echo Yii::app()->counter->getTotal(); ?></b> </span></p>
-				 <p><span>Truy cập nhiều nhất: <b><?php echo Yii::app()->counter->getMaximal(); ?></b> </span> - <span>Ngày nhiều nhất: <b><?php echo date('d.m.Y', Yii::app()->counter->getMaximalTime()); ?></b> </span></p>
+				 <p><span><?php echo Yii::t('user', 'online')?> <b><?php echo Yii::app()->counter->getOnline(); ?></b> </span> - <span><?php echo Yii::t('user', 'today')?>: <b><?php echo Yii::app()->counter->getToday(); ?></b> </span></p>
+				 <p><span><?php echo Yii::t('user', 'yesterday')?>: <b><?php echo Yii::app()->counter->getYesterday(); ?></b> </span> - <span><?php echo Yii::t('user', 'total')?>: <b><?php echo Yii::app()->counter->getTotal(); ?></b> </span></p>
+				 <p><span><?php echo Yii::t('user', 'maximum')?>: <b><?php echo Yii::app()->counter->getMaximal(); ?></b> </span></p>
 				 <?php echo $this->lang['developed']?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></div> <div class="clear"></div>
 		 </div>
 	 </div><!--End Footer-->
