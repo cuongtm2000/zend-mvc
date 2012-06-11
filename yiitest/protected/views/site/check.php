@@ -1,4 +1,5 @@
-<h1 class="heading-contact marginb10">Kiểm tra tên miền </h1>
+<?php $this->pageTitle = 'Kiểm tra tên miền';?>
+<h1 class="heading-contact marginb10">Kiểm tra tên miền</h1>
 
 <div style="height: 320px">
 	<?php if($domain):?>
