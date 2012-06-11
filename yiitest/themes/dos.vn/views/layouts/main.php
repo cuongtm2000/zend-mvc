@@ -86,7 +86,7 @@
                         <p><a href="#" title="">Các trang báo</a></p>
                         <p><a href="#" title="">E-mail quảng cáo</a></p>
                         <p><a href="#" title="">Seo web</a></p>
-                        <p><a href="#" title="">Quảng cáo trên rao vật</a></p>
+                        <p><a href="#" title="">Quảng cáo trên rao vặt</a></p>
                     </div>
                 </li>
                 <li class="left">
