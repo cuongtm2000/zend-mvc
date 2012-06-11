@@ -5,9 +5,11 @@
 	<meta http-equiv="content-language" content="vi, en"/>
 	<meta name="revisit-after" content="1 days"/>
 	<meta name="robots" content="noodp,index,follow"/>
-	<title>Danh sách đại lý - Dos.vn</title>
-	<link href="/themes/dos.vn/css/agent.css" rel="stylesheet" type="text/css"/>
-	<script type="text/javascript" src="/themes/dos.vn/js/agent.js"></script>
+    <link rel="SHORTCUT ICON" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/gif" />
+    <title>Danh sách đại lý - Dos.vn</title>
+	<link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/agent.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/agent.js"></script>
 </head>
 <body>
 <select name="nationals">
