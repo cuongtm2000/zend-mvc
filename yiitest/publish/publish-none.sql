@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 16, 2012 at 04:41 PM
+-- Generation Time: Jun 12, 2012 at 04:02 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -603,6 +603,8 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
   `code` varchar(15) DEFAULT NULL,
   `expired` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `import` tinyint(1) NOT NULL DEFAULT '0',
+  `agent_sale` varchar(8) NOT NULL,
+  `agent_tech` varchar(8) DEFAULT NULL,
   `activated` tinyint(1) NOT NULL,
   `dos_templates_template` varchar(6) NOT NULL,
   `dos_provinces_province_id` int(11) NOT NULL,
