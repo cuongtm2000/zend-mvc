@@ -1,5 +1,5 @@
 <?php $this->breadcrumbs=array($this->lang[$this->module->id]);?>
-<h1 class="title-right"><span><?php echo CHtml::encode($this->lang[$this->module->id])?></span></h1>
+<h2 class="title-left"><span><?php echo CHtml::encode($this->lang[$this->module->id])?></span></h2>
 <div class="frame-tent-right">
 <?php if($listItemIndex['models']):?>
 	<ul class="masuring">
@@ -24,4 +24,3 @@
 	<?php echo $this->lang['no_record'] ?>
 <?php endif?> <div class="clear"></div>
 </div>
-<div class="btom-main"></div>

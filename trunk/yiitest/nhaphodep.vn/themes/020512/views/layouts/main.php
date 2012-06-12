@@ -48,9 +48,9 @@
                 <div class="hd-right">
                     <p class="hotline"><?php echo $this->lang['company_phone'] ?></p>
                     <ul class="sub-hdright">
-                        <li><a href="services" title="">Dịch vụ nhà đất</a></li>
-                        <li><a href="news" title="">Tư vấn phong thủy</a></li>
-                        <li class="sub-hdright-none"><a href="#" title="">Trợ giúp</a></li>
+                        <li><a href="/nhaphodep.vn/services" title="">Dịch vụ nhà đất</a></li>
+                        <li><a href="/nhaphodep.vn/news" title="">Tư vấn phong thủy</a></li>
+                        <li class="sub-hdright-none"><a href="#" title="">Liên hệ</a></li>
                     </ul>
                 </div> <!--End hot line-->
             </div><!--End header-->
@@ -150,7 +150,7 @@
                             <h2 class="title-fter-left">MUA BÁN NHÀ ĐẤT</h2>
                             <div class="item-sale">
                                 <div class="footer-left">
-                                    <div class="frame-img"><a href="product-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/home.jpg" alt="" /></a></div>
+                                    <div class="frame-img-pro"><a href="product-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/home.jpg" alt="" /></a></div>
                                     <div class="info-sale">
                                         <h2 class="title-sale"><a href="product-info.html" title="">CẦN BÁN GẤP NHÀ HẺM NGUYỄN TRI PHƯƠNG</a></h2>
                                         <ul class="sub-sale">
@@ -189,7 +189,6 @@
                 </div>  <!--End all left content-->
                 <div id="right-content">
                     <ul class="adv-right">
-                        <li><a href="#" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/adv-right1.jpg" alt="adv1" /></a></li>
                         <li><a href="#" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/adv-right2.jpg" alt="adv1" /></a></li>
                     </ul> <!--End quang cao-->
                     <div class="frame-right">
@@ -229,6 +228,17 @@
                         </ul>
                         <div class="clear"></div>
                     </div> <!--End tu van phong thuy-->
+					
+					<?php if(isset($this->function['menu_news']) && ($this->function['menu_news'])):?>
+					<div class="frame-right">
+						<h2 class="title-right"><span><?php echo CHtml::encode($this->lang['news']) ?></span></h2>
+						<ul class="sub-consultant">
+							<?php Common::menuMultiLevel($this->function['menu_news'], 'NewsCat', Yii::t('user', 'news.link')); ?>
+						</ul>
+						<p class="all-view-new"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-2.gif" alt="allview" /><a href="/nhaphodep.vn/news" title="" >Xem tất cả</a></p>
+					</div>	<!--End sub news-->
+					<?php endif; ?>
+					
 					<?php if(isset($this->function['menu_services']) && ($this->function['menu_services'])):?>
 					<div class="frame-right">
 						<h2 class="title-right"><span><?php echo $this->lang['services'] ?></span></h2>
@@ -239,14 +249,10 @@
 						</ul>
                     </div> <!--End dich vu nha dat-->
 					<?php endif;?>
+					
                 </div><!--End right content-->   <div class="clear"></div>
             </div><!--End content-->
             <div id="footer">
-                <div class="logo-footer"><a href="index.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="logo" /></a></div>
-                <ul class="nav-fter">
-                    <li><a href="" title="">Chào bán</a></li>
-                    <li><a href="" title="">Cho thuê</a></li>
-                </ul>
                 <div class="frame-info">
                     <h3 class="comname"><strong><?php echo $this->lang['company_name_footer'] ?></strong></h3>
                     <p><?php echo $this->lang['address1'] ?></p>
