@@ -1,11 +1,11 @@
 <?php
 
 return array(
-    'dashboard/<controller:\w+>/<action:\w+>/<id:\d+>' => 'dashboard/<controller>/<action>',
-    'dashboard/<controller:\w+>/<action:\w+>/page/<page:\d+>' => 'dashboard/<controller>/<action>', //paging dashboard
-    'dashboard/<controller:\w+>/<action:\w+>' => 'dashboard/<controller>/<action>',
-    'dashboard/<controller:\w+>' => 'dashboard/<controller>',
-    'dashboard' => 'dashboard/default',
+    '<module:(dashboard|administrator)>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<module>/<controller>/<action>',
+    '<module:(dashboard|administrator)>/<controller:\w+>/<action:\w+>/page/<page:\d+>' => '<module>/<controller>/<action>', //paging dashboard
+    '<module:(dashboard|administrator)>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
+    '<module:(dashboard|administrator)>/<controller:\w+>' => '<module>/<controller>',
+    '<module:(dashboard|administrator)>' => '<module>/default',
     
     'register/<action:\w+>' => 'register/<action>',
     'forgot-password' => 'login/forgot', //forgot password
