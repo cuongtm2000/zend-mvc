@@ -39,6 +39,7 @@
 					<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl'] ?>/" title="Logo"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a>
 				<?php endif; ?>
 			</div>
+			<?php echo ($this->lang['company_name']) ? '<h1 class="title-city">'.$this->lang['company_name'].'</h1>' : '' ?> <!--End title company-->
             <div class="lang">
 			   <?php if(count($this->numLang) > 1):?>
 				<?php foreach($this->numLang as $value): ?>
