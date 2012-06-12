@@ -81,6 +81,7 @@ fieldset input.login {cursor:pointer; width:80px; height:24px; color:#fff; borde
 fieldset input.login:hover, .login-a:hover{background:#5184D2}
 fieldset textarea{-moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; width:55.5%; padding:1px 3px}
 fieldset select{border:1px solid #ccc; padding:3px; cursor:pointer; -moz-border-radius: 3px; -webkit-border-radius: 3px; width:220px}
+fieldset input{width:50%; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
 fieldset .fileupload{width:30%}
 fieldset .fileupload-img{margin-left: 111px}
 fieldset .login-a {cursor:pointer; width:80px; height:24px; color:#fff; border:1px solid #ccc; background:#3A6AAD; -moz-border-radius: 3px; -webkit-border-radius: 3px; display:inline; margin-right:6px; padding:3px 18px 4px 18px}
@@ -96,6 +97,7 @@ fieldset .txt-very-large{width:55%; -moz-border-radius: 3px; -webkit-border-radi
 
 fieldset .select-100{width: 100px;}
 fieldset .select-130{width: 130px;}
+fieldset .radio input{width:15px}
 
 .col1{float: left; width:15%}
 .col2{float: left; width:85%}
