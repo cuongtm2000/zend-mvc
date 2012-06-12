@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 12, 2012 at 03:26 AM
+-- Generation Time: Jun 12, 2012 at 04:33 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -286,14 +286,14 @@ CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
 --
 
 INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
-('about', 'aasc'),
-('advs', 'aasc'),
-('banner', 'aasc'),
-('contact', 'aasc'),
-('news', 'aasc'),
-('products', 'aasc'),
-('services', 'aasc'),
-('supports', 'aasc');
+('about', 'trasammay'),
+('advs', 'trasammay'),
+('banner', 'trasammay'),
+('contact', 'trasammay'),
+('news', 'trasammay'),
+('products', 'trasammay'),
+('services', 'trasammay'),
+('supports', 'trasammay');
 
 -- --------------------------------------------------------
 
@@ -322,15 +322,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=177 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=108 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(175, 'Kính chào quý khách hàng!', '', '<p><span style="color:#ff0000;"><strong>AASCN</strong></span> đã được Ủy ban chứng khoán Nhà Nước chấp thuận được thực hiện kiểm toán cho các tổ chức phát hành, tổ chức niêm yết và tổ chức kinh doanh chứng khoán từ năm 2009 theo Quyết định số 798/QĐ-UBCK ngày 24/11/2009, năm 2012 Công ty kiểm toán Nam Việt tiếp tục được <span style="color:#ff0000;"><strong>Ủy ban chứng khoán Nhà Nước chấp thuận theo Quyết định số 874/QĐ-UBCK ngày 18/11/2011.</strong></span></p>\n<p>AASCN cũng là một trong các công ty kiểm toán nằm trong danh sách công bố công khai lần 1 danh sách các công ty kiểm toán đủ điều kiện thực hiện kiểm toán năm 2012 theo Văn bản số 16227/BTC-CĐKT ngày 29/11/2011 của Bộ Tài chính.</p>\n<ul><li><span style="color:#000080;"><strong>Mục tiêu hoạt động</strong></span></li>\n</ul><p>Với quan điểm vì lợi ích cao nhất của khách hàng, mục tiêu hoạt động của chúng tôi là cung cấp các dịch vụ chuyên ngành và các thông tin đáng tin cậy nhằm giúp khách hàng ra các quyết định quản lý, tài chính và kinh tế một cách có hiệu quả. Hơn thế nữa, với kinh nghiệm thực tiễn về chuyên ngành, gần gũi với khách hàng, tận tình, thông thạo nghiệp vụ, chúng tôi am hiểu các yêu cầu, các khó khăn mà khách hàng gặp phải khi tiến hành kinh doanh tại Việt Nam. Dựa trên cơ sở này, chúng tôi sẽ hỗ trợ khách hàng giải quyết tốt các vấn đề mà ít có một tổ chức dịch vụ chuyên ngành nào có thể thực hiện được.</p>\n<ul><li><span style="color:#000080;"><strong>Đội ngũ nhân viên</strong></span></li>\n</ul><p>Để hoạt động thành công và có hiệu quả chúng tôi luôn coi trọng vấn đề trình độ và kinh nghiệm đội ngũ nhân viên, hiện nay AASCN có đội ngũ bao gồm trên 60 cán bộ, kiểm toán viên được đào tạo đại học và trên đại học chuyên ngành tài chính - ngân hàng - kế toán và kiểm toán ở trong nước và ở nước ngoài, trong đó có 11 Kiểm toán viên được cấp chứng chỉ kiểm toán viên cấp Nhà nước, và Thạc sỹ, kỹ sư, chuyên gia đầu ngành với kinh nghiệm và chuyên môn dầy dạn chắc chắn sẽ đáp ứng những yêu cầu cao nhất của khách hàng.</p>\n<ul><li><span style="color:#000080;"><strong>Phương châm hoạt động</strong></span></li>\n</ul><p>Nhằm đảm bảo cung cấp những dịch vụ có chất lượng tốt nhất, mọi hoạt động của chúng tôi luôn tôn trọng nguyên tắc: độc lập, trung thực khách quan và bảo mật, tuân thủ các quy định của Nhà nước Việt nam, các Chuẩn mực kiểm toán Việt nam do Nhà nước ban hành cũng như các Chuẩn mực kiểm toán quốc tế được chấp nhận chung. Bên cạnh đó chúng tôi cũng luôn nhận thức đặt lợi ích hợp pháp của khách hàng lên hàng đầu.</p>\n<p>Năng lực và tính chuyên nghiệp của AASCN còn được thừa nhận tại tất các doanh nghiệp, các tổ chức kinh tế xã hội hoạt động tại Việt Nam như các Tổng Công ty CP Bia - Rượu – Nước giải khát Sài Gòn (SABECO), Tổng Công ty Bia – Rượu – Nước giải khát Hà Nội (Habeco), Tổng công ty xây dựng số 1, Tổng Công ty Xây dựng sài Gòn v.v…. và Doanh nghiệp có vốn đầu tư nước ngoài ...vv</p>\n<ul><li><span style="color:#000080;"><strong>Khách hàng</strong></span></li>\n</ul><p>Do chất lượng dịch vụ cung cấp, hiện nay AASCN đã có hàng trăm khách hàng hoạt động trên mọi lĩnh vực của nền kinh tế gồm các doanh nghiệp có vốn đầu tư nước ngoài, các doanh nghiệp Nhà nước (danh sách khách hàng được chúng tôi đính kèm phần sau).</p>\n<p>Góp phần vào sự phát triển chung của đất nước và cam kết đảm bảo chất lượng các dịch vụ cung cấp cho từng khách hàng, AASCN luôn là người bạn đồng hành, luôn chia sẻ kinh nghiệm của mình với khách hàng và sự thành công của khách hàng luôn là mục tiêu phấn đấu của chúng tôi.</p>\n<p>Với trình độ và những kinh nghiệm thực tiễn của mình, AASCN sẽ là đơn vị đi tiên phong, dẫn đầu trong hoạt động cung cấp dịch vụ chuyên ngành tại Việt nam và luôn đáp ứng mọi yêu cầu cao nhất của khách hàng.</p>', '', 446, '2012-06-06 08:06:52', 2, 1, '', '', 'kinh-chao-quy-khach-hang', '', '', '', 1, 'aasc'),
-(176, 'tong quan ve cty', '', '<p><span style="background-color:#ff6600;"><strong>tong quan ve cty</strong></span></p>', '', 16, '2012-06-08 01:57:32', 1, 0, '', '', 'tong-quan-ve-cty', '', '', '', 1, 'aasc');
+(107, 'Giới thiệu công ty', '', '<p style="text-align:justify;">Shop thời trang <strong>240312 </strong>là doanh nghiệp chuyên cung cấp các sản phẩm đồ da trên thị trường Việt Nam từ năm 2001.</p>\n<p style="text-align:justify;"><strong>240312 </strong>là nhà phân phối trực tuyến các sản phẩm túi xách, ví da, dây lưng da, kính thời trang, giầy, xăng đan, thời trang quốc tế được nhập khẩu từ nước ngoài về.</p>\n<p style="text-align:justify;">Bên cạnh việc phân phối trực tuyến cho các khách hàng Hà Nội, TPHCM và các tỉnh, shop còn có 4 showroom trưng bày tại Hà Nội, mở cửa từ 8h - 22h hàng ngày.</p>\n<p style="text-align:justify;">Nhịp sống hiện đại ngày càng ảnh hưởng đến lối sống của mọi tầng lớp xã hội. Trong đó, giới trẻ là những người chịu ảnh hưởng nhiều nhất của lối sống mới này. Trong một cuộc điều tra nhỏ về nhu cầu mua sắm và chăm chút cho vẻ bề ngoài xinh đẹp của giới nữ thì có tới 99% cho kết quả thuận. Bởi vì đời sống ngày càng phát triền, những bộ trang phục và theo đó những phụ kiệm đi kèm, có thể nói lên phong cách và cá tính rất riêng của họ. Chúng tôi hiểu và đã cho ra đời website <strong>240312</strong> nhằm đáp ứng nhu cầu đấy, nhưng theo một cách khác, mới hơn và hoàn hảo hơn.</p>\n<p style="text-align:justify;">Hiện nay, xu hướng thương mại điện tử đang phát triển rất mạnh, trong tương lai sẽ là mô hình chủ đạo và tất yếu, <strong>240312</strong> đã tạo nên sự khác biệt bởi chính hình thức này: Một mô hình cửa hàng trực tuyến, cung cấp mọi góc độ của sản phẩm nhằm giúp khách hàng dễ dàng chọn lựa sản phẩm yêu thích, liên tục cập nhật mẫu mã đa dạng và kèm theo đó là phong cách bán hàng chuyên nghiệp, chu đáo giúp cho bạn trẻ, những người bận rộn, những người làm việc văn phòng không có thời gian đi shopping vẫn có thể thỏa sức mua sắm. với mô hình này chúng tôi đã và đang làm hài lòng tất cả các Khách hàng.</p>', '', 52, '2012-05-11 02:49:55', 1, 0, '', '', 'gioi-thieu-cong-ty', '', 'tui xach  túi xách thời trang  giới thiệu  túi xách  túi hàng hiệu  túi hàng hiệu  cặp da cao cấp  túi ví  túi máy tính  cặp xách  tui dep  may tinh bo tui  túi xách nam  túi xách nữ  túi chống sốc  hang tui xach  túi xách đẹp  tui xach dep  công ty', '', 1, 'trasammay');
 
 -- --------------------------------------------------------
 
@@ -355,19 +354,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=202 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=91 ;
 
 --
 -- Dumping data for table `dos_module_advs`
 --
 
 INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`, `dos_usernames_username`) VALUES
-(194, 'Đăng ký doanh nghiệp', '', 'ang-ky-doanh-nghiep.jpg', 'http://www.dangkykinhdoanh.gov.vn/', '2012-06-06 08:21:34', '2012-06-05 16:00:00', '2012-07-30 16:00:00', 0, 1, 'right', '_bank', 1, 'aasc'),
-(197, 'Nhân sự', '', 'nhan-su.jpg', 'http://www.dangkykinhdoanh.gov.vn/', '2012-06-06 08:35:40', '2012-06-05 16:00:00', '2012-06-29 16:00:00', 0, 2, 'right', '_bank', 1, 'aasc'),
-(198, 'Phần mềm kế toán mới', '', 'phan-mem-ke-toan-moi4.jpg', 'http://aasc.dos.vn/dich-vu', '2012-06-07 06:05:57', '2012-06-06 16:00:00', '2012-07-30 16:00:00', 0, 3, 'left', '_bank', 1, 'aasc'),
-(199, 'Quảng cáo 5', '', 'quang-cao-5.jpg', 'http://aasc.dos.vn/gioi-thieu', '2012-06-07 06:07:11', '2012-06-06 16:00:00', '2012-07-30 16:00:00', 0, 4, 'left', '_bank', 1, 'aasc'),
-(200, 'quảng cáo 4', '', 'quang-cao-4.jpg', 'http://aasc.dos.vn/lien-he', '2012-06-07 06:08:14', '2012-06-06 16:00:00', '2012-07-30 16:00:00', 0, 5, 'right', '_bank', 1, 'aasc'),
-(201, 'quảng cáo 1', '', 'quang-cao-1.jpg', 'http://dos.vn/', '2012-06-07 06:09:29', '2012-06-06 16:00:00', '2012-07-30 16:00:00', 0, 6, 'right', '_bank', 1, 'aasc');
+(90, 'Quảng cáo', '', 'quang-cao.jpg', 'http://dos.vn', '2012-05-11 02:49:55', '2012-05-02 16:00:00', '2012-06-29 16:00:00', 0, 1, 'left', '_bank', 1, 'trasammay');
 
 -- --------------------------------------------------------
 
@@ -388,24 +382,24 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=788 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=795 ;
 
 --
 -- Dumping data for table `dos_module_banners`
 --
 
 INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_url`, `banner_link`, `banner_order`, `banner_type`, `position`, `enable`, `dos_usernames_username`) VALUES
-(773, '2012-06-06 08:02:57', 'logo_aascn', 'logoaascn.png', '', 1, 'logo', 'default', 1, 'aasc'),
-(778, '2012-06-06 08:12:33', 'Baner 1', 'baner-1.jpg', '', 2, 'banners', 'default', 1, 'aasc'),
-(779, '2012-06-06 08:12:51', 'Baner 2', 'baner-2.jpg', '', 3, 'banners', 'default', 1, 'aasc'),
-(780, '2012-06-06 08:13:03', 'Baner 3', 'baner-3.jpg', '', 4, 'banners', 'news', 1, 'aasc'),
-(781, '2012-06-06 08:13:14', 'Baner 4', 'baner-4.jpg', '', 5, 'banners', 'default', 1, 'aasc'),
-(782, '2012-06-07 05:56:40', 'Baner 5', 'baner-5.jpg', '', 6, 'banners', 'about', 1, 'aasc'),
-(783, '2012-06-07 05:57:19', 'Baner 6', 'baner-6.jpg', '', 7, 'banners', 'services', 1, 'aasc'),
-(784, '2012-06-07 06:04:42', 'Baner 7', 'baner-7.jpg', '', 8, 'banners', 'contact', 1, 'aasc'),
-(785, '2012-06-07 06:35:59', 'Baner 8', 'baner-8.jpg', '', 9, 'banners', 'news', 1, 'aasc'),
-(786, '2012-06-07 06:36:32', 'Baner 9', 'baner-9.jpg', '', 10, 'banners', 'services', 1, 'aasc'),
-(787, '2012-06-07 06:37:17', 'Baner 10', 'baner-10.jpg', '', 11, 'banners', 'contact', 1, 'aasc');
+(445, '2012-05-11 02:49:55', 'Banner', 'banner.jpg', '', 1, 'banners', 'default', 1, 'trasammay'),
+(446, '2012-05-11 02:49:55', 'Banner 1', 'banner-1.jpg', '', 2, 'banners', 'default', 1, 'trasammay'),
+(447, '2012-05-11 02:49:55', 'Banner 2', 'banner-2.jpg', '', 3, 'banners', 'default', 1, 'trasammay'),
+(448, '2012-05-14 01:15:13', 'logo-trasammay', 'logo-trasammay.png', '', 4, 'logo', 'default', 1, 'trasammay'),
+(788, '2012-06-07 07:30:44', 'Banner 3', 'banner-3.jpg', '', 5, 'banners', 'news', 1, 'trasammay'),
+(789, '2012-06-07 07:31:12', 'Banner 4', 'banner-4.jpg', '', 6, 'banners', 'services', 1, 'trasammay'),
+(790, '2012-06-07 07:32:02', 'Banner 5', 'banner-5.jpg', '', 7, 'banners', 'about', 1, 'trasammay'),
+(791, '2012-06-07 07:32:29', 'Banner 6', 'banner-6.jpg', '', 8, 'banners', 'news', 1, 'trasammay'),
+(792, '2012-06-07 07:32:52', 'Banner 7', 'banner-7.jpg', '', 9, 'banners', 'products', 1, 'trasammay'),
+(793, '2012-06-07 07:33:40', 'Banner 8', 'banner-8.jpg', '', 10, 'banners', 'products', 1, 'trasammay'),
+(794, '2012-06-07 07:34:00', 'Banner 9', 'banner-9.jpg', '', 11, 'banners', 'contact', 1, 'trasammay');
 
 -- --------------------------------------------------------
 
@@ -431,14 +425,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_contacts_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
-
---
--- Dumping data for table `dos_module_contacts`
---
-
-INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `tagen`, `description`, `descriptionen`, `enable`, `dos_usernames_username`) VALUES
-(19, 'Liên hệ với chúng tôi', '', '<p><span style="color:#0000ff;"><strong>CÔNG TY TNHH DỊCH VỤ TƯ VẤN TÀI CHÍNH KẾ TOÁN VÀ KIỂM TOÁN <span style="color:#ff0000;">NAM VIỆT</span></strong></span></p>\n<p>Trụ sở chính: 29 Hoàng Sa, Quận 1, TP. Hồ Chí Minh</p>\n<p>Điện thoại: (84-8) 10 3908 - 3910 4880</p>\n<p>Fax: (84-8) 3910 4880</p>\n<p>Website: <a href="http://www.aascn.com.vn">www.aascn.com.vn</a></p>', '', '2012-06-08 02:03:09', 1, 0, 0, 'lien-he-voi-chung-toi', '', '', '', '1', 'aasc');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -465,11 +452,12 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 --
 
 INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
-('Trang chủ', '', 'default', '', 1, '', '', '', '', 'aasc'),
-('Giới thiệu', '', 'about', '', 2, '', '', '', '', 'aasc'),
-('Dịch vụ', '', 'services', '', 4, '', '', '', '', 'aasc'),
-('Tin tức & sự kiện', '', 'news', '', 5, '', '', '', '', 'aasc'),
-('Liên hệ', '', 'contact', '', 6, '', '', '', '', 'aasc');
+('Trang chủ', '', 'default', '', 1, '', '', '', '', 'trasammay'),
+('Giới thiệu', '', 'about', '', 2, '', '', '', '', 'trasammay'),
+('Sản phẩm', '', 'products', '', 3, '', '', '', '', 'trasammay'),
+('Dịch vụ', '', 'services', '', 4, '', '', '', '', 'trasammay'),
+('Tin tức & sự kiện', '', 'news', '', 5, '', '', '', '', 'trasammay'),
+('Liên hệ', '', 'contact', '', 6, '', '', '', '', 'trasammay');
 
 -- --------------------------------------------------------
 
@@ -500,16 +488,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=209 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=98 ;
 
 --
 -- Dumping data for table `dos_module_news`
 --
 
 INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(206, 'Kỳ vọng gì về đầu tư gián tiếp trong năm 2012', '', '2012-06-06 08:17:57', 'ky-vong-gi-ve-dau-tu-gian-tiep-trong-nam-2012.jpg', '<p>Có lẽ 2011 là năm thất vọng nhất đối với dòng vốn đầu tư gián tiếp (FPI) chảy vào Việt Nam kể từ khi chúng ta trở thành thành viên của Tổ chức Thương mại thế giới (WTO)</p>', '', '<p>Có lẽ 2011 là năm thất vọng nhất đối với dòng vốn đầu tư gián tiếp (FPI) chảy vào Việt Nam kể từ khi chúng ta trở thành thành viên của Tổ chức Thương mại thế giới (WTO). Chứng khoán và bất động sản liên tục đi xuống, chưa thấy điểm dừng. Thị trường vay nợ bên ngoài gần như đóng băng do sự rắc rối từ khoản nợ của Vinashin.</p>\n<p>Liệu cơn mưa đã qua chưa để trời hửng sáng là điều được nhiều người quan tâm. Theo người viết, với những gì đang xảy ra trên thế giới và thực tế ở Việt Nam, chưa thể kỳ vọng có sự đột biến của dòng vốn FPI vào Việt Nam trong năm 2012.</p>\n<p>Tuy nhiên, nếu quyết tâm đảm bảo ổn định vĩ mô song song với việc cải thiện môi trường kinh doanh được duy trì thì bức tranh trong vài năm tới có khả năng sẽ sáng hơn.</p>\n<p>Bức tranh kinh tế toàn cầu vẫn chưa thể sáng</p>\n<p>Kinh tế Hoa Kỳ vẫn chưa thể thoát khỏi tình trạng trì trệ khi mà các động thái chính sách của cả hai đảng Dân chủ và Cộng hòa đều hướng đến tranh giành khả năng thắng cử trong cuộc đua vào Nhà trắng vào tháng 11 năm nay.</p>\n<p>Khả năng hai đảng cùng ngồi lại để đưa ra những chính sách cần thiết nhằm vực dậy nền kinh tế sẽ không cao. Xu hướng vẫn là giằng co và tranh giành ảnh hưởng.</p>\n<p>Đối với khu vực đồng euro, cả Thủ tướng Đức Merkel và Tổng thống Pháp Sarkozy đều thừa nhận rằng tình hình của khu vực này sẽ khó khăn trong thời gian tới. Goldman Sachs, một ngân hàng đầu tư hàng đầu trên thế giới, dự báo rằng khu vực châu Âu sẽ rơi vào suy thoái và chỉ có khả năng ổn định vào cuối năm 2012.</p>\n<p>Trong bốn nền kinh tế lớn nhất ở các nước đang phát triển (BRIC), có lẽ sẽ không có sự thay đổi đáng kể về chính sách ở Ấn Độ và Brazil, trong khi đó động thái “chờ” có thể xảy ra ở Trung Quốc và Nga.</p>\n<p>Ở trường hợp Trung Quốc, tuy ông Tập Cận Bình dường như chắc chắn sẽ là người kế nhiệm ông Hồ Cẩm Đào, nhưng vẫn còn nhiều ẩn số ở những vị trí chủ chốt khác. Ai lên, ai xuống sẽ ảnh hưởng đáng kể đến đường hướng kinh tế của nước này.</p>\n<p>Đối với Nga, khả năng ông Putin sẽ trở lại cương vị tổng thống gần như chắc chắn, nhưng cuộc bầu cử sắp tới là thước đo uy tín của người lãnh đạo nước Nga trong hơn một thập kỷ qua.</p>\n<p>Đỉnh điểm của mùa xuân Ả Rập đã qua, nhưng những dư chấn của nó vẫn đang kéo dài. Khả năng thêm một vài nước nữa mà trước mắt là Syria có sự thay đổi chế độ là rất cao. Định hình về địa chính trị trong khu vực này như thế nào vẫn đang là dấu hỏi lớn. Ai Cập vừa kỷ niệm một năm sự kiện này trong tình trạng chia rẽ sâu sắc.</p>\n<p>Sự qua đời của lãnh đạo Bắc Triều Tiên Kim Jong Il vừa đặt ra những thách thức cũng như cơ hội cho tam giác phát triển và cũng là động lực kinh tế của toàn thế giới gồm: Nhật Bản, Hàn Quốc và Trung Quốc. Nếu bức tranh theo chiều sáng thì dòng vốn sẽ chảy mạnh hơn vào khu vực này.</p>\n<p>Trong bối cảnh quốc tế như vậy, xu hướng chung của các nhà đầu tư quốc tế vẫn là phòng thủ và có lẽ không quan tâm nhiều đến các nền kinh tế còn nhỏ như Việt Nam.</p>\n<p>Chưa thể lạc quan với các yếu tố bên trong</p>\n<p>Thất bại của người này có thể là cơ hội cho người khác. Sự tuột dốc không phanh của chứng khoán và bất động sản đang đẩy nhiều doanh nghiệp đến bờ vực phá sản. Đây là cơ hội cho nhiều người.</p>\n<p>Do vậy, có giả thuyết cho rằng dòng vốn đầu tư gián tiếp sẽ quay trở lại. Việc mua bán, sáp nhập các doanh nghiệp, chuyển nhượng các dự án sẽ trở nên sôi động trong thời gian tới.</p>\n<p>Thực ra, có lẽ đây chỉ là cảm nhận của “người trong nhà” hay những nhà đầu tư đang ở Việt Nam. Góc nhìn từ bên ngoài có lẽ không lạc quan cho lắm. Các thông số vĩ mô căn bản vẫn chưa thể hiện xu hướng rõ ràng và các tín hiệu tích cực vẫn còn rất yếu.</p>\n<p>Bóng ma lạm phát, yếu tố gây ra bất ổn vĩ mô, xói mòn lòng tin và ảnh hưởng sức cạnh tranh của Việt Nam vẫn còn quá lớn. Thâm hụt ngân sách và thâm hụt thương mại đã được cải thiện, nhưng vẫn còn ở mức rất cao.</p>\n<p>Hơn thế, tuy đầu tư tính theo phần trăm GDP đã giảm, nhưng tỷ phần đầu tư công trong tổng đầu tư lại gia tăng. Đây chính là biểu hiện của sự chèn lấn và nguồn vốn chưa được sử dụng hiệu quả nhất.</p>\n<p>Điều đáng nói nhất là sự không nhất quán cộng với một số chính sách chữa cháy của chúng ta đã làm mai một rất nhiều lòng tin của các nhà đầu tư quốc tế.</p>\n<p>Cho dù đầu năm mới, nhưng vẫn phải nhắc lại rằng sự kiện chậm trả nợ của Vinashin đã tạo ra điểm đen rất lớn trong mắt các nhà đầu tư bên ngoài mà có lẽ phải một thời gian khá lâu mới có thể nhòa đi với điều kiện các chính sách của Việt Nam trong thời gian tới phải nhất quán hơn theo hướng đảm bảo ổn định vĩ mô và cải thiện môi trường kinh doanh.</p>\n<p>Tóm lại, cộng đồng các nhà đầu tư quốc tế, cho dù có “kinh nghiệm đầy mình” nhưng chủ yếu vẫn hành xử theo đám đông. Đây là cái khó của Việt Nam, ít nhất là trong ngắn hạn. Khi mô-men tích cực của năm 2007 đã bị bỏ lỡ, môi trường kinh tế vĩ mô trong nước trở nên bấp bênh hơn rất nhiều đã làm Việt Nam trở thành “địa điểm bị lãng quên” giống như Indonesia sau năm 1997.</p>\n<p>Điều này có khả năng sẽ làm cho dòng vốn gián tiếp, nhất là nguồn vốn của các nhà đầu tư lớn, chưa thể trở lại Việt Nam năm 2012 này.</p>', '', 'ky-vong-gi-ve-dau-tu-gian-tiep-trong-nam-2012', '', '', '', 0, 1, 1, '', '', 1, 117),
-(207, 'Ngân hàng hạ lãi suất cho vay: Chờ tiếp cận vốn “rẻ” hơn', '', '2012-06-06 08:19:31', 'ngan-hang-ha-lai-suat-cho-vay-cho-tiep-can-von-re-hon.jpg', '<p>Dấu hiệu lãi suất cho vay đang rục rịch hạ nhiệt khi các “ông lớn” trong hệ thống ngân hàng công khai mức lãi suất mới</p>', '', '<p>Dấu hiệu lãi suất cho vay đang rục rịch hạ nhiệt khi các “ông lớn” trong hệ thống ngân hàng công khai mức lãi suất mới. Tuy nhiên, khách hàng vẫn chờ lãi suất cho vay hạ nhiệt đồng loạt và nguồn vốn giá rẻ hơn thực sự đến tay.</p>\n<p>Lãi suất “ngập ngừng” hạ nhiệt</p>\n<p>Ngân hàng TMCP Vietinbank, Vietcombank, BIDV đã áp dụng mức lãi suất cho vay hạ hơn so với mặt bằng lãi suất chung trên thị trường. Đại diện Vietinbank cho biết: Lãi suất cho vay thấp nhất áp dụng với cho vay nông nghiệp, nông thôn là 16,3%/năm.</p>\n<p>Hiện tại, Vietinbank vẫn đang duy trì các chương trình tài trợ cho xuất khẩu, nông nghiệp nông thôn, công nghiệp phụ trợ... với mức cho vay thấp hơn 2% so với lãi suất thông thường. BIDV cũng đã hạ mức cho vay xuất khẩu là 15%, còn lĩnh vực nông nghiệp nông thôn ở mức 15,5%.</p>\n<p>Theo ghi nhận của NTNN, ngoài một vài NH đã công bố mức lãi suất hạ nhiệt, còn lại hầu hết các NHTM vẫn đang trong tình trạng “nghe ngóng” thị trường bởi lo ngại hạ lãi suất vào thời điểm này sẽ gây nên sự “xáo trộn” đối với nguồn vốn của NH.</p>\n<p>Bình luận về khả năng hạ lãi suất cho vay đồng loạt ở các NHTM, TS Nguyễn Minh Phong - Viện Nghiên cứu phát triển kinh tế xã hội Hà Nội) cho rằng: “Đang có rất nhiều cơ sở để giảm lãi suất, vấn đề chỉ là quyết định của các NHTM”.</p>\n<p>Về nguyên nhân khiến các NHTM chưa tích cực hưởng ứng xu hướng hạ lãi suất cho vay, ông Phong lý giải: Có hai lý do chính. Thứ nhất sức cản lạm phát chưa rõ ràng. Mặc dù chỉ số tiêu dùng tháng 1 ở dưới ngưỡng 1% nhưng tháng 2, và các tháng tiếp theo sẽ không giảm sâu và có thể cao hơn mức này. Thứ hai, thanh khoản của các NH hiện nay vẫn đang chưa thật “vững”.</p>\n<p>Cùng chung quan điểm này, TS Nguyễn Trí Hiếu -chuyên gia tài chính, ngân hàng nhận định: “Rất khó dự báo thời điểm nào lãi suất sẽ hạ, bởi ngay cả khi ở mức cao như hiện nay, nhiều NH vẫn trong tình trạng căng thẳng thanh khoản do đó nguồn vốn để cho vay vẫn còn bị bó hẹp”.</p>\n<p>Đầu tuần qua, NHNN cũng đã thông báo chỉ tiêu tăng trưởng tín dụng năm 2012, chia theo 4 nhóm mà theo lãnh đạo một ngân hàng cổ phần nhận xét đây vừa là tín hiệu vừa là cơ sở để lãi suất cho vay có thể hạ trong thời gian tới.</p>\n<p>Tuy nhiên, một số ý kiến chuyên gia thì lạc quan khi cho rằng: 5 NH vừa được Thống đốc NHNN Nguyễn Văn Bình cho phép áp dụng tỷ lệ dự trữ bắt buộc bằng VND bằng 1/5 mức thông thường được kỳ vọng sẽ là những NH có nguồn vốn dôi dư để có thể hạ nhiệt lãi suất, cho vay lĩnh vực sản xuất, mà ưu tiên được tập trung vào lĩnh vực nông nghiệp, nông thôn.</p>\n<p>Chờ cơ hội vay vốn giá rẻ!</p>\n<p>TS Nguyễn Trọng Tài - Phó Viện trưởng Viện Nghiên cứu Khoa học NH (Học viện NH) khẳng định: Hạ lãi suất là điều cần làm nhất thời điểm này. Các doanh nghiệp đang mong ngóng, hy vọng khả năng vay được vốn “giá rẻ” trong thời gian sớm nhất.</p>\n<p>Tuy nhiên, việc lãi suất cho vay hạ nhiệt với mức như công bố của nhiều NH vẫn chưa phải là đảm bảo để khách hàng là nông dân và các doanh nghiệp trong lĩnh vực nông nghiệp, nông thôn có thế vay được nguồn vốn giá rẻ này.</p>\n<p>“Lãi suất giảm, không có nghĩa tất cả các hồ sơ của doanh nghiệp đều được chấp nhận, giải ngân bởi những yêu cầu khắt khe về thủ tục giấy tờ mà quan trọng nhất là sẽ phải chứng minh doanh nghiệp hoạt động ổn định, an toàn và đảm bảo có khả năng trả nợ” - ông Nguyễn Huy Hùng - Giám đốc một doanh nghiệp may mặc xuất khẩu ở Hà Nội cho biết.</p>\n<p>Ông Lê Đức Nam - chủ trang trại nuôi gà tại Hòa Bình cho biết, ông nhiều lần vay vốn của NH, nhưng trên thực tế rất hiếm khi vay được vốn với mức lãi suất “rẻ” như công bố. Trong quá trình làm hồ sơ, thủ tục thường khách hàng sẽ bị nâng mức lãi suất lên cao hơn bởi những tiêu chí khắt khe do NH yêu cầu mình không đáp ứng được.</p>\n<p>Để những chính sách ưu đãi lãi suất và nguồn vốn đối với lĩnh vực “tam nông” trở thành hiện thực và phát huy hiệu quả, khách hàng khu vực nông thôn, nông nghiệp được có trong tay nguồn vốn giá rẻ, theo các chuyên gia kinh tế vẫn rất cần những chính sách hỗ trợ từ phía NHNN.</p>\n<p>Và một trong những biện pháp hỗ trợ từ phía NHNN được kỳ vọng là sớm hiện thực hóa lời cam kết của Thống đốc NHNN khi định hướng cho vay lĩnh vực nông nghiệp, nông thôn: “Sẽ dành một phần tiền cung ứng cho tái cấp vốn để các tổ chức tín dụng cho vay nông nghiệp và phát triển nông thôn”.</p>', '', 'ngan-hang-ha-lai-suat-cho-vay-cho-tiep-can-von-re-hon', '', '', '', 0, 2, 1, '', '', 1, 117),
-(208, 'Các ngân hàng lớn sẽ biến mất trong tương lai?', '', '2012-06-06 08:30:32', 'cac-ngan-hang-lon-se-bien-mat-trong-tuong-lai.jpg', '<p>Nhận định này chắc chắn khiến nhiều người ngạc nhiên bởi các định chế tài chính hàng đầu thế giới trong những năm gần đây đã có những bước phát triển vượt bậc.</p>', '', '<p>Nhận định này chắc chắn khiến nhiều người ngạc nhiên bởi các định chế tài chính hàng đầu thế giới trong những năm gần đây đã có những bước phát triển vượt bậc.</p>\n<p>Những ngày tháng tươi đẹp đối với các định chế tài chính xuyên quốc gia có thể đã kết thúc. Nhận định này chắc chắn khiến nhiều người ngạc nhiên bởi các định chế tài chính hàng đầu thế giới trong những năm gần đây đã có những bước phát triển vượt bậc. Bước qua nhiều lần khủng hoảng, các ngân hàng lớn sống sót, thâu tóm những ngân hàng yếu kém và dường như trở nên “bất khả chiến bại”.</p>\n<p>Ngày nay, khoảng 10 định chế tài chính lớn nhất thế giới quản lý 77% tổng số tài sản tài chính. Không chỉ “quá lớn để phá sản”, các ngân hàng này được dự báo sẽ ngày càng vững mạnh. Tuy nhiên, liệu các ngân hàng này sẽ tiếp tục vươn lên và thống trị trong tương lai hay ngược lại sẽ bị nhấn chìm bởi khủng hoảng?</p>\n<p>Trước hết, trong nội tại các ngân hàng lớn tồn tại rất nhiều mâu thuẫn. Với vai trò là người quản lý quỹ và nhà đầu tư tổ chức, các ngân hàng là bên mua trong khi với vai trò là người bảo lãnh và người giao dịch, họ lại là bên bán. Khi là nhà tư vấn tài chính, các ngân hàng đảm nhận cả 2 vai trò. Ăn sâu vào cơ cấu tổ chức, chiến lược và các quyết định của các ngân hàng lớn, những mâu thuẫn này khiến ngân hàng lâm vào tình trạng xung đột với lợi ích chung.</p>\n<p>Các định chế tài chính khổng lồ cũng có những yếu kém về cơ cấu khiến các lãnh đạo cấp cao khó có thể điều hành hiệu quả. Quyền lực ngày càng tập trung vào những lãnh đạo cấp trung vốn là những người hay có các quyết định rủi ro thậm chí là vô trách nhiệm. Các lãnh đạo cấp cao phải quản lý và giám sát quá nhiều hoạt động xảy ra tại các đơn vị xa xôi. Do thiếu thời gian và công cụ để có thể điều hành một cách sát sao, họ bắt buộc phải phụ thuộc vào tính trung thực của người khác.</p>\n<p>Đã có rất nhiều biện pháp được đưa ra để hạn chế sự bất cẩn tồn tại trong các định chế tài chính lớn. Tuy nhiên, các luật lệ với hàng tá các điều được làm và không được làm không phải là giải pháp có thể kiểm soát được hành vi của họ. Nâng tỷ lệ vốn yêu cầu cũng không phải là cách làm đúng đắn. Thậm chí, để có được tỷ lệ vốn như mong muốn, các ngân hàng còn tiến hành các hoạt động rủi ro hơn.</p>\n<p>Sức mạnh của các định chế tài chính toàn cầu cũng đang bị suy giảm. Sáng tạo ra các sản phẩm mới và áp dụng công nghệ cho phép các ngân hàng đi trước các nhà quản lý hàng thập kỷ. Tuy nhiên, giờ đây khoảng cách đã bị thu hẹp lại. Với khủng hoảng 2008, cả nhà đầu tư và cơ quan quản lý đều nhận ra những cải tiến này không thể đa dạng hóa rủi ro.</p>\n<p>Công nghệ thông tin giờ đây lại trở thành công cụ của các nhà quản lý. Không khó để hình dung trong một ngày không xa tất cả các dữ liệu về giao dịch, nợ, đầu tư, thay đổi trong tài sản… ngay lập tức được các nhà quản lý nắm bắt.</p>\n<p>Thậm chí, trong tương lai xa hơn, Chính phủ nắm quyền điều hành toàn bộ các ngân hàng thông qua mạng lưới điện toán đám mây. Chi nhánh ngân hàng trở nên lỗi thời bởi khách hàng thực hiện giao dịch trên các thiết bị cầm tay.</p>\n<p>Sự thay đổi này chắc chắn sẽ không làm hài lòng các ngân hàng lớn, đặc biệt là khi họ đang nắm vị thế dẫn đầu trong lĩnh vực quan trọng của nền kinh tế. Các cổ đông mới là những người cần hối thúc hành động. Các ngân hàng cần phải xóa bớt một số hoạt động và chỉ tập trung vào các nghiệp vụ cốt lõi. Chiến lược này mang lại lợi ích cho các ngân hàng, cho thị trường tài chính cũng như cho toàn bộ nền kinh tế.</p>\n<p style="text-align:right;">Thu Hương</p>\n<p style="text-align:right;">Theo TTVN/WSJ</p>', '', 'cac-ngan-hang-lon-se-bien-mat-trong-tuong-lai', '', '', '', 0, 3, 0, '', '', 1, 117);
+(96, 'Túi xách da, túi xách lông thú cho bạn gái', '', '2012-05-11 02:49:55', 'tui-xach-da-tui-xach-long-thu-cho-ban-gai.jpg', '<p>Dù bạn bao nhiêu tuổi, thân hình ra sao, phong cách thời trang như thế nào, bạn cũng có thể chọn cho mình một chiếc túi ưng ý...</p>', '', '<p style="text-align:justify;">Những chiếc túi xách bằng da được điểm xuyết lông thú với nhiều hình dáng, thích hợp cho các bạn gái.</p>\n<p style="text-align:justify;">Dù bạn bao nhiêu tuổi, thân hình ra sao, phong cách thời trang như thế nào, bạn cũng có thể chọn cho mình một chiếc túi xách ưng ý với đủ loại kích thước, kiểu dáng to, nhỏ khác nhau. Với túi xách da, túi xách lông thú, các bạn gái sẽ tự tin hơn trong việc thể hiện phong cách và cá tính bản thân.</p>\n<p><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/240312/image/tui-xach-ban-gai-2.jpg" alt="" width="550" height="410" /></p>\n<p><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/240312/image/tui-xach-ban-gai-3.jpg" alt="" width="550" height="407" /></p>\n<p style="text-align:center;"><img style="float:left;" src="/public/userfiles/image/240312/image/tui-xach-ban-gai-4.jpg" alt="" width="550" height="516" /></p>\n<p style="text-align:center;"><img style="float:left;" src="/public/userfiles/image/240312/image/tui-xach-ban-gai-5.jpg" alt="" width="550" height="531" /></p>\n<p style="text-align:justify;">Để hòa mình vào thế giới túi xách, túi xách da, túi xách thời trang sành điệu truy cập ngay http://shoptuixachda.com - chuyên cung cấp túi xách, túi xách thời trang, túi xách hàng hiệu, túi xách nam, túi xách nữ, túi xách laptop, túi xách đẹp, túi xách tay, túi xách da.</p>', '', 'tui-xach-da-tui-xach-long-thu-cho-ban-gai', '', 'Túi xách da, túi xách lông thú cho bạn gái', '', 0, 4, 0, '', '', 1, 64),
+(97, 'Túi xách của bạn, phong cách của bạn', '', '2012-05-11 02:49:55', 'tui-xach-cua-ban-phong-cach-cua-ban.jpg', '<p>Dù bạn bao nhiêu tuổi, thân hình ra sao, phong cách thời trang như thế nào, bạn cũng có thể chọn cho mình một chiếc túi ưng ý...</p>', '', '<p style="text-align:justify;">Các bạn gái hãy thể hiện cá tính riêng của mình với phong cách túi xách 2012.</p>\n<p style="text-align:justify;">Bên cạnh trang phục và phụ kiện đi kèm, túi xách là "người bạn thân thiết" khó thể tách rời mỗi khi các bạn gái đi ra ngoài. Chúng không chỉ giúp các cô gái chứa những vật dụng cần thiết, là một món "nữ trang" mà còn cho các nàng thỏa sức phô diễn phong cách thời trang riêng.</p>\n<p style="text-align:justify;">Với những cô bạn công sở hay yêu thích sự điệu đà, duyên dáng, chiếc túi xách hoặc khoác vai là lựa chọn hợp lý nhất.</p>\n<p><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/240312/image/tui-xach-phong-cach-3.jpg" alt="" width="541" height="660" /></p>\n<p> </p>\n<p><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/240312/image/tui-xach-phong-cach-2.jpg" alt="" width="550" height="397" /></p>\n<p style="text-align:justify;">Để hòa mình vào thế giới túi xách, túi xách da, túi xách thời trang sành điệu truy cập ngay http://240312.dos.vn - chuyên cung cấp túi xách, túi xách thời trang, túi xách hàng hiệu, túi xách nam, túi xách nữ, túi xách laptop, túi xách đẹp, túi xách tay, túi xách da.</p>', '', 'tui-xach-cua-ban-phong-cach-cua-ban', '', 'Dù bạn bao nhiêu tuổi, thân hình ra sao, phong cách thời trang như thế nào, bạn cũng có thể chọn cho mình một chiếc túi ưng ý...', '', 0, 3, 0, '', '', 1, 64);
 
 -- --------------------------------------------------------
 
@@ -536,16 +523,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=118 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=65 ;
 
 --
 -- Dumping data for table `dos_module_news_cat`
 --
 
 INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(115, 0, 'Tin từ công ty', '', '', '', 'tin-tu-cong-ty', '', '', '', '', 1, '', '', 1, 'aasc'),
-(116, 0, 'Tin thị trường', '', '', '', 'tin-thi-truong', '', '', '', '', 2, '', '', 1, 'aasc'),
-(117, 0, 'Tin pháp luật', '', '', '', 'tin-phap-luat', '', '', '', '', 3, '', '', 1, 'aasc');
+(64, 0, 'TIN TỨC THỜI TRANG', '', '', '', 'tin-tuc-thoi-trang', '', 'TIN TỨC THỜI TRANG', '', '', 1, '', '', 1, 'trasammay');
 
 -- --------------------------------------------------------
 
@@ -584,7 +569,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1339463951);
+('''127.0.0.1''', 1339467753);
 
 -- --------------------------------------------------------
 
@@ -621,7 +606,42 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=958 ;
+
+--
+-- Dumping data for table `dos_module_products`
+--
+
+INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(916, 'Mandarin Knitting Bag', '', '2012-05-11 02:49:55', 'mandarin-knitting-bag-thumb.jpg', 'mandarin-knitting-bag.jpg', '', '<p>Mandarin Knitting Bag</p>', '', '<p>Mandarin Knitting Bag</p>', '', 'mandarin-knitting-bag', '', 'Mandarin Knitting Bag', '', 0, 5, '', 0, 0, '', '', '', '', 1, 256),
+(917, 'Tribed Large Shopper', '', '2012-05-11 02:49:55', 'tribed-large-shopper-thumb.jpg', 'tribed-large-shopper.jpg', '', '<p>Tribed Large Shopper</p>', '', '<p>Tribed Large Shopper</p>', '', 'tribed-large-shopper', '', 'Tribed Large Shopper', '', 0, 10, '', 0, 0, '', '', '', '', 1, 256),
+(918, 'Rainbow Large Shopper', '', '2012-05-11 02:49:55', 'rainbow-large-shopper-thumb.jpg', 'rainbow-large-shopper.jpg', '', '<p>Rainbow Large Shopper</p>', '', '<p>Rainbow Large Shopper</p>', '', 'rainbow-large-shopper', '', 'Rainbow Large Shopper', '', 0, 11, '', 0, 0, '', '', '', '', 1, 256),
+(919, 'Croc Leather Handbag', '', '2012-05-11 02:49:55', 'croc-leather-handbag-thumb.jpg', 'croc-leather-handbag.jpg', '', '<p>Croc Leather Handbag</p>', '', '<p>Croc Leather Handbag</p>', '', 'croc-leather-handbag', '', 'Croc Leather Handbag', '', 0, 1, '', 0, 0, '', '', '', '', 1, 257),
+(920, 'Allison Leather Handbag', '', '2012-05-11 02:49:55', 'allison-leather-handbag-thumb.jpg', 'allison-leather-handbag.jpg', '', '<p>Allison Leather Handbag</p>', '', '<p>Allison Leather Handbag</p>', '', 'allison-leather-handbag', '', 'Allison Leather Handbag', '', 0, 4, '', 0, 0, '', '', '', '', 1, 257),
+(921, 'Animal Magnetism Handbag', '', '2012-05-11 02:49:55', 'animal-magnetism-handbag-thumb.jpg', 'animal-magnetism-handbag.jpg', '', '<p>Animal Magnetism Handbag</p>', '', '<p>Animal Magnetism Handbag</p>', '', 'animal-magnetism-handbag', '', 'Animal Magnetism Handbag', '', 0, 7, '', 0, 0, '', '', '', '', 1, 257),
+(922, 'Spirited Small Drawstring', '', '2012-05-11 02:49:55', 'spirited-small-drawstring-thumb.jpg', 'spirited-small-drawstring.jpg', '', '<p>Spirited Small Drawstring</p>', '', '<p>Spirited Small Drawstring</p>', '', 'spirited-small-drawstring', '', 'Spirited Small Drawstring', '', 0, 8, '', 0, 0, '', '', '', '', 1, 257),
+(926, 'Medium Grab Bag', '', '2012-05-11 02:49:55', 'medium-grab-bag-thumb.jpg', 'medium-grab-bag.jpg', '', '<p>Medium Grab Bag</p>', '', '<p>Medium Grab Bag</p>', '', 'medium-grab-bag', '', 'Medium Grab Bag', '', 0, 2, '', 0, 0, '', '', '', '', 1, 258),
+(927, 'Eve Knit &amp; Crochet Bag', '', '2012-05-11 02:49:55', 'eve-knit-amp-crochet-bag-thumb.jpg', 'eve-knit-amp-crochet-bag.jpg', '', '<p>Eve Knit &amp; Crochet Bag</p>', '', '<p>Eve Knit &amp; Crochet Bag</p>', '', 'eve-knit-crochet-bag', '', 'Eve Knit &amp; Crochet Bag', '', 0, 3, '', 0, 0, '', '', '', '', 1, 258),
+(928, 'Polly Floral Fabric Bag', '', '2012-05-11 02:49:55', 'polly-floral-fabric-bag-thumb.jpg', 'polly-floral-fabric-bag.jpg', '', '<p>Polly Floral Fabric Bag</p>', '', '<p>Polly Floral Fabric Bag</p>', '', 'polly-floral-fabric-bag', '', 'Polly Floral Fabric Bag', '', 0, 6, '', 0, 0, '', '', '', '', 1, 258),
+(929, 'Rocked Small Saddle Bag', '', '2012-05-11 02:49:55', 'rocked-small-saddle-bag-thumb.jpg', 'rocked-small-saddle-bag.jpg', '', '<p>Rocked Small Saddle Bag</p>', '', '<p>Rocked Small Saddle Bag</p>', '', 'rocked-small-saddle-bag', '', 'Rocked Small Saddle Bag', '', 0, 9, '', 0, 0, '', '', '', '', 1, 258),
+(930, 'Deep Coffee Keylock Bag', '', '2012-05-11 02:49:55', 'deep-coffee-keylock-bag-thumb.jpg', 'deep-coffee-keylock-bag.jpg', '', '<p>Deep Coffee Keylock Bag</p>', '', '<p>Deep Coffee Keylock Bag</p>', '', 'deep-coffee-keylock-bag', '', 'Deep Coffee Keylock Bag', '', 0, 12, '', 0, 0, '', '', '', '', 1, 258),
+(931, 'Plastic Summer Tote', '', '2012-05-11 02:49:55', 'plastic-summer-tote-thumb.jpg', 'plastic-summer-tote.jpg', '', '<p>Plastic Summer Tote</p>', '', '<p>Plastic Summer Tote</p>', '', 'plastic-summer-tote', '', 'Plastic Summer Tote', '', 0, 13, '', 0, 0, '', '', '', '', 1, 258),
+(933, '40109_Hồng', '', '2012-05-11 02:49:55', '40109hong-thumb.jpg', '40109hong.jpg', '40109hong-desc-1.jpg|40109hong-desc-2.jpg|40109hong-desc-3.jpg|40109hong-desc-4.jpg|40109hong-desc-5.jpg|40109hong-desc-6.jpg', '<p>Túi thời trang xuất Hàn độc đáo. Kiểu dáng Hermes.</p>\n<p>Chất liệu: da PU cao cấp, bề mặt dập nổi độc đáo.</p>\n<p>Màu sắc: Hồng, Trắng, Đen</p>\n<p>Kiểu dáng: xách tay</p>\n<p>Phong cách: Hermes</p>\n<p>Kích thước: 25/32/16 (cm)</p>\n<p>Cấu trúc bên trong túi: có ngăn đựng mobile phone, ngăn đựng tài liệu có khóa kéo.</p>', '', '<p>40109_Hồng</p>', '', '40109hong', '', 'Túi thời trang xuất Hàn độc đáo. Kiểu dáng Hermes. \nChất liệu: da PU cao cấp, bề mặt dập nổi độc đáo.\nMàu sắc: Hồng, Trắng, Đen\nKiểu dáng: xách tay\nPhong cách: Hermes\nKích thước: 25/32/16 (cm)', '', 0, 14, '', 0, 0, '', '', '', '', 1, 259),
+(934, '40023_Vàng', '', '2012-05-11 02:49:55', '40023vang-thumb.JPG', '40023vang.JPG', '40023vang-desc-1.JPG', '<p>Túi xách tay nữ, phong cách Hàn quốc. Kiểu dáng độc đáo</p>\n<p>Chất liệu: da PU cao cấp</p>\n<p>Kiểu dáng:xách tay, đeo chéo, đeo vai có thể điều chỉnh dây được</p>\n<p>Màu sắc: be, vàng, cam</p>\n<p>Kích thước: 28/19/6 (cm)</p>', '', '<p>40023_Vàng</p>', '', '40023vang', '', 'Túi xách tay nữ, phong cách Hàn quốc. Kiểu dáng độc đáo\nChất liệu: da PU cao cấp\nKiểu dáng:xách tay, đeo chéo, đeo vai có thể điều chỉnh dây được\nMàu sắc: be, vàng, cam\nKích thước: 28/19/6  (cm)', '', 0, 15, '', 0, 0, '', '', '', '', 1, 259),
+(935, '40023_Be', '', '2012-05-11 02:49:55', '40023be-thumb.JPG', '40023be.JPG', '40023be-desc-1.JPG', '<p>Túi thời trang xuất Hàn độc đáo. Kiểu dáng Hermes.</p>\n<p>Chất liệu: da PU cao cấp, bề mặt dập nổi độc đáo.</p>\n<p>Màu sắc: Hồng, Trắng, Đen</p>\n<p>Kiểu dáng: xách tay</p>\n<p>Phong cách: Hermes</p>\n<p>Kích thước: 25/32/16 (cm)</p>\n<p>Cấu trúc bên trong túi: có ngăn đựng mobile phone, ngăn đựng tài liệu có khóa kéo.</p>', '', '<p>40023_Be</p>', '', '40023be', '', 'Túi thời trang xuất Hàn độc đáo. Kiểu dáng Hermes.\nChất liệu: da PU cao cấp, bề mặt dập nổi độc đáo.\nMàu sắc: Hồng, Trắng, Đen\nKiểu dáng: xách tay', '', 0, 16, '', 0, 0, '', '', '', '', 1, 259),
+(936, '40023_Cam', '', '2012-05-11 02:49:55', '40023cam-thumb.JPG', '40023cam.JPG', '40023cam-desc-1.JPG', '<p>Túi xách tay nữ, phong cách Hàn quốc. Kiểu dáng độc đáo</p>\n<p>Chất liệu: da PU cao cấp</p>\n<p>Kiểu dáng:xách tay, đeo chéo, đeo vai có thể điều chỉnh dây được</p>\n<p>Màu sắc: be, vàng, cam</p>\n<p>Kích thước: 28/19/6 (cm)</p>', '', '<p>40023_Cam</p>', '', '40023cam', '', 'Túi xách tay nữ, phong cách Hàn quốc. Kiểu dáng độc đáo\nChất liệu: da PU cao cấp\nKiểu dáng:xách tay, đeo chéo, đeo vai có thể điều chỉnh dây được\nMàu sắc: be, vàng, cam\nKích thước: 28/19/6 (cm)', '', 0, 17, '', 0, 0, '', '', '', '', 1, 259),
+(937, '40092_Vàng bò', '', '2012-05-11 02:49:55', '40092vang-bo-thumb.jpg', '40092vang-bo.jpg', '40092vang-bo-desc-1.jpg|40092vang-bo-desc-2.jpg|40092vang-bo-desc-3.jpg|40092vang-bo-desc-4.jpg', '<p>Túi thời trang xuất Hàn độc đáo.</p>\n<p>Chất liệu: da PU cao cấp kết hợp lớp nhung mịn bề mặt. Có khóa an toàn.</p>\n<p>Màu sắc: Vàng bò, đen</p>\n<p>Kiểu dáng: xách tay, đeo vai (dây có thể điều chỉnh)</p>\n<p>Phong cách: Hàn quốc</p>\n<p>Kích thước: 33/25/17 (cm)</p>\n<p>Cấu trúc bên trong túi: có ngăn đựng mobile phone, ngăn đựng tài liệu có khóa kéo.</p>', '', '<p>40092_Vàng bò</p>', '', '40092vang-bo', '', 'Túi thời trang xuất Hàn độc đáo.\nChất liệu: da PU cao cấp kết hợp lớp nhung mịn bề mặt. Có khóa an toàn.\nMàu sắc: Vàng bò, đen\nKiểu dáng: xách tay, đeo vai (dây có thể điều chỉnh)', '', 0, 18, '', 0, 0, '', '', '', '', 1, 259),
+(938, '40092_Đen', '', '2012-05-11 02:49:55', '40092en-thumb.jpg', '40092en.jpg', '40092en-desc-1.jpg|40092en-desc-2.jpg', '<p>Túi thời trang xuất Hàn độc đáo.</p>\n<p>Chất liệu: da PU cao cấp kết hợp lớp nhung mịn bề mặt. Có khóa an toàn.</p>\n<p>Màu sắc: Vàng bò, đen</p>\n<p>Kiểu dáng: xách tay, đeo vai (dây có thể điều chỉnh)</p>\n<p>Phong cách: Hàn quốc</p>\n<p>Kích thước: 33/25/17 (cm)</p>\n<p>Cấu trúc bên trong túi: có ngăn đựng mobile phone, ngăn đựng tài liệu có khóa kéo.</p>', '', '<p>40092_Đen</p>', '', '40092den', '', 'Túi thời trang xuất Hàn độc đáo.\nChất liệu: da PU cao cấp kết hợp lớp nhung mịn bề mặt. Có khóa an toàn.\nMàu sắc: Vàng bò, đen\nKiểu dáng: xách tay, đeo vai (dây có thể điều chỉnh)', '', 0, 19, '', 0, 0, '', '', '', '', 1, 259),
+(939, '40051', '', '2012-05-11 02:49:55', '40051-thumb.JPG', '40051.JPG', '40051-desc-1.JPG', '<p>Túi thời trang xuất Hàn độc đáo. Kiểu dáng Hermes</p>\n<p>Chất liệu: da PU cao cấp. Chất liệu bền, đẹp</p>\n<p>Màu sắc: Như hình</p>\n<p>Kiểu dáng: xách tay</p>\n<p>Phong cách: Hàn quốc</p>\n<p>Kích thước: (cm)</p>\n<p>Cấu trúc bên trong túi: có ngăn đựng mobile phone, ngăn đựng tài liệu có khóa kéo. Nội thất đẹp</p>', '', '<p>40051</p>', '', '40051', '', 'Túi thời trang xuất Hàn độc đáo. Kiểu dáng Hermes\nChất liệu: da PU cao cấp. Chất liệu bền, đẹp\nMàu sắc: Như hình\nKiểu dáng: xách tay', '', 0, 20, '', 0, 0, '', '', '', '', 1, 259),
+(940, '40107_Đen', '', '2012-05-11 02:49:55', '40107en-thumb.jpg', '40107en.jpg', '40107en-desc-1.jpg|40107en-desc-2.jpg|40107en-desc-3.jpg', '<p>Túi thời trang xuất Hàn độc đáo. Có thể đựng được laptop 15 inches. Theo khuynh hướng túi thu đông LV 2012.</p>\n<p>Chất liệu: da PU cao cấp, dập nổi vân kiểu da rắn độc đáo, tinh xảo</p>\n<p>Màu sắc: Đen, Cam</p>\n<p>Kiểu dáng: xách tay</p>\n<p>Phong cách: Hàn quốc</p>\n<p>Kích thước: 38/30/16 (cm)</p>\n<p>Cấu trúc bên trong túi: có ngăn đựng mobile phone, ngăn đựng tài liệu có khóa kéo.</p>', '', '<p>40107_Đen</p>', '', '40107den', '', 'Túi thời trang xuất Hàn độc đáo. Có thể đựng được laptop 15 inches. Theo khuynh hướng túi thu đông LV 2012.\nChất liệu: dập nổi vân kiểu da rắn độc đáo, tinh xảo\nMàu sắc: Đen, Cam\nKiểu dáng: xách tay', '', 0, 21, '', 0, 0, '', '', '', '', 1, 259),
+(941, '0960', '', '2012-05-11 02:49:55', '0960-thumb.jpg', '0960.jpg', '', '<p>Túi da thật cao cấp, kiểu dáng trẻ trung, năng động, có cả dây xách và dây đeo dài.</p>\n<p>Đựng vừa laptop nhỏ, Galaxy, notebook.....</p>\n<p>Chất liệu: da bò cao cấp. mềm, mịn</p>\n<p>Kích thước: 22/20/6 (cm)</p>', '', '<p>0960</p>', '', '0960', '', '', '', 0, 22, '', 0, 0, '', '', '', '', 1, 259),
+(948, '1328', '', '2012-05-11 02:49:55', '1328-thumb.JPG', '1328.JPG', '40037den-desc-1.JPG|1328-desc-1.JPG|1328-desc-2.JPG|1328-desc-3.JPG', '<p>Túi da nam thương hiệu polo xuất khẩu Châu Âu.</p>\n<p>Có thể đựng được Ipad, Galaxy.</p>\n<p>Chất liệu: da bò cao cấp</p>\n<p>Phong cách: Hàn Quốc</p>\n<p>Độ cứng: Vừa</p>\n<p>Màu sắc: đen và nâu</p>\n<p>Kiểu dáng: Đeo dài (quai có thể điều chỉnh)</p>\n<p>Kích thước: 29/25/7 (cm)</p>', '', '<p>1328</p>', '', '1328', '', 'Túi da nam thương hiệu polo xuất khẩu Châu Âu.\nCó thể đựng được Ipad, Galaxy.\nChất liệu: da bò cao cấp\nPhong cách: Hàn Quốc', '', 0, 23, '', 0, 0, '', '', '', '', 1, 260),
+(949, '1358', '', '2012-05-11 02:49:55', '1358-thumb.JPG', '1358.JPG', '1358-desc-1.JPG|1358-desc-2.JPG|1358-desc-3.JPG', '<p>Túi da nam thương hiệu Vetework xuất khẩu Châu Âu.</p>\n<p>Túi có thể đựng được IPAD, Galaxy và notebook 10 inches.</p>\n<p>Chất liệu: da bò cao cấp</p>\n<p>Phong cách: Hàn Quốc</p>\n<p>Độ cứng: Vừa</p>\n<p>Màu sắc: nâu đậm</p>\n<p>Kiểu dáng: Xách tay hoặc đeo dài</p>\n<p>Kích thước: 34/26/6(cm)</p>', '', '<p>1358</p>', '', '1358', '', 'Túi da nam thương hiệu Vetework xuất khẩu Châu Âu.\nTúi có thể đựng được IPAD, Galaxy và notebook 10 inches.\nChất liệu: da bò cao cấp\nPhong cách: Hàn Quốc', '', 0, 24, '', 0, 0, '', '', '', '', 1, 260),
+(950, '1337', '', '2012-05-11 02:49:55', '1337-thumb.JPG', '1337.JPG', '1337-desc-1.JPG|1337-desc-2.JPG', '<p>Túi da nam thương hiệu Videng Polo xuất khẩu Châu Âu.</p>\n<p>Túi có nhiều ngăn tiện lợi. Có thể đựng được laptop, Galaxy 10 inches, IPAD.</p>\n<p>Chất liệu: da bò cao cấp</p>\n<p>Phong cách: Hàn Quốc</p>\n<p>Độ cứng: Vừa</p>\n<p>Màu sắc: nâu</p>\n<p>Kiểu dáng: Đeo chéo hoặc đeo dài (quai túi có thể điều chỉnh)</p>\n<p>Kích thước: 25/28/8(cm)</p>', '', '<p>1337</p>', '', '1337', '', 'Túi da nam thương hiệu Videng Polo xuất khẩu Châu Âu.\nTúi có nhiều ngăn tiện lợi. Có thể đựng được laptop, Galaxy 10 inches, IPAD.\nChất liệu: da bò cao cấp\nPhong cách: Hàn Quốc', '', 0, 25, '', 0, 0, '', '', '', '', 1, 260),
+(951, '10023', '', '2012-05-11 02:49:55', '10023-thumb.JPG', '10023.JPG', '10023-desc-1.JPG|10023-desc-2.JPG', '<p>Túi da nam thương hiệu GIORGIO ARMANI xuất khẩu Châu Âu.</p>\n<p>Chất liệu: da Composite (da PU)</p>\n<p>Phong cách: Châu Âu</p>\n<p>Độ cứng: Mềm mịn</p>\n<p>Màu sắc: DA BÒ</p>\n<p>Kiểu dáng: Xách tay hoặc đeo dài (quai túi có thể điều chỉnh)</p>\n<p>Kích thước: 29/ 34/ 8 (cm)</p>', '', '<p>10023</p>', '', '10023', '', 'Túi da nam thương hiệu GIORGIO ARMANI xuất khẩu Châu Âu.\nChất liệu: da Composite (da PU)\nPhong cách: Châu Âu\nĐộ cứng: Mềm mịn', '', 0, 26, '', 0, 0, '', '', '', '', 1, 260),
+(955, '30010', '', '2012-05-11 02:49:55', '30010-thumb.JPG', '30010.JPG', '30010-desc-1.jpg|30010-desc-2.jpg', '<p>Balo xuất Hàn 3 trong 1, vừa xách tay, đeo dài, đeo balo.</p>\n<p>Kiểu dáng trẻ trung</p>\n<p>Màu sắc: Vàng, vàng bò, đỏ, đen, nâu</p>', '', '<p>30010</p>', '', '30010', '', 'Balo xuất Hàn 3 trong 1, vừa xách tay, đeo dài, đeo balo.\nKiểu dáng trẻ trung\nMàu sắc: Vàng, vàng bò, đỏ, đen, nâu', '', 0, 27, '', 0, 0, '', '', '', '', 1, 261),
+(956, '1206', '', '2012-05-11 02:49:55', '1206-thumb.png', '1206.png', '', '<p>TẠM HẾT MÀU ĐEN, CHỈ CÒN MÀU NÂU</p>\n<p>Balo xuất Nhật, Hàn chất liệu da cừu, mềm mại. Kiểu dáng phong cách, nam tính.</p>\n<p>Kích thước vừa phải tiện dụng đi công tác, du lịch, đi chơi.</p>\n<p>Màu sắc: Màu cafe, màu đen.</p>\n<p>Giá thị trường: Không dưới 1.500.000</p>\n<p>Kích thước:</p>\n<p>Ngang: 31cm</p>\n<p>Cao: 46cm</p>\n<p>Rộng: 18cm</p>\n<p>Chiều dài tối đa dây đeo vai - khoảng 82cm</p>', '', '<p>1206</p>', '', '1206', '', 'Balo xuất Nhật, Hàn chất liệu da cừu, mềm mại. Kiểu dáng phong cách, nam tính.\nKích thước vừa phải tiện dụng đi công tác, du lịch, đi chơi.\nMàu sắc: Màu cafe, màu đen.', '', 0, 28, '', 0, 0, '', '', '', '', 1, 261),
+(957, '30025', '', '2012-05-11 02:49:55', '30025-thumb.jpg', '30025.jpg', '30025-desc-1.jpg|30025-desc-2.jpg|30025-desc-3.jpg|30025-desc-4.jpg', '<p>Balo chất liệu da PU mềm, kiểu dáng thời trang</p>', '', '<p>30025</p>', '', '30025', '', 'Balo chất liệu da PU mềm, kiểu dáng thời trang', '', 0, 29, '', 0, 0, '', '', '', '', 1, 261);
 
 -- --------------------------------------------------------
 
@@ -649,17 +669,19 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=591 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=262 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
 --
 
 INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(587, 0, 'Kế toán', '', '', '', 'ke-toan', '', '', '', '', '', 1, '', '', 0, 'aasc'),
-(588, 0, 'Kiểm toán', '', '', '', 'kiem-toan', '', '', '', '', '', 2, '', '', 0, 'aasc'),
-(589, 0, 'Tư Vấn', '', '', '', 'tu-van', '', '', '', '', '', 3, '', '', 0, 'aasc'),
-(590, 0, 'Kiểm toán Báo cáo Quyết toán vốn đầu tư', '', '', '', 'kiem-toan-bao-cao-quyet-toan-von-dau-tu', '', '', '', '', '', 4, '', '', 0, 'aasc');
+(256, 0, 'TÚI STYLE', '', '', '', 'tui-style', '', 'Túi phong cách', '', 'tui-phong-cach.jpg', '', 1, '', '', 1, 'trasammay'),
+(257, 0, 'TÚI DA THẬT', '', '', '', 'tui-da-that', '', 'Túi da thật', '', 'tui-da.jpg', '', 2, '', '', 1, 'trasammay'),
+(258, 0, 'TÚI THIẾT KẾ RIÊNG', '', '', '', 'tui-thiet-ke-rieng', '', 'Túi thiết kế', '', 'tui-thiet-ke.jpg', '', 2, '', '', 1, 'trasammay'),
+(259, 0, 'TÚI DOANH NHÂN', '', '', '', 'tui-doanh-nhan', '', 'TÚI DOANH NHÂN', '', 'ti-doanh-nhn.JPG', '', 1, '', '', 1, 'trasammay'),
+(260, 0, 'TÚI, BA LÔ LAPTOP, IPAD, GALAXY', '', '', '', 'tui-ba-lo-laptop-ipad-galaxy', '', 'TÚI, BA LÔ LAPTOP, IPAD, GALAXY', '', 'ti-ba-l-laptop-ipad-galaxy.JPG', '', 1, '', '', 1, 'trasammay'),
+(261, 0, 'TÚI MÁY ẢNH', '', '', '', 'tui-may-anh', '', 'TÚI MÁY ẢNH', '', 'ti-my-nh.JPG', '', 1, '', '', 1, 'trasammay');
 
 -- --------------------------------------------------------
 
@@ -690,19 +712,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=117 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=56 ;
 
 --
 -- Dumping data for table `dos_module_services`
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(111, 'Kế toán', '', '', '', '<p><span style="text-decoration:underline;color:#000080;"><strong>Kiểm toán:</strong></span></p>\n<p>- Kiểm toán các Báo cáo Tài chính</p>\n<p>- Kiểm toán hoạt động các Dự án</p>\n<p>- Kiểm toán Báo cáo Quyết toán công trình xây dựng cơ bản</p>\n<p>- Kiểm toán xác định vốn góp liên doanh</p>\n<p>- Giám định tài liệu kế toán, tài chính</p>\n<p>- Kiểm toán quyết toán tỷ lệ nội địa hóa</p>\n<p><span style="text-decoration:underline;"><strong><span style="color:#000080;text-decoration:underline;">Kế toán:</span></strong></span></p>\n<p>- Hướng dẫn áp dụng chế độ kế toán - tài chính.</p>\n<p>- Xây dựng các mô hình tổ chức bộ máy - tổ chức công tác kế toán</p>\n<p>- Mở, ghi sổ kế toán và lập các Báo cáo Tài chính</p>\n<p>- Lập hồ sơ đăng ký chế độ kế toán.</p>\n<p><span style="text-decoration:underline;"><strong><span style="color:#000080;text-decoration:underline;">Tư vấn:</span></strong></span></p>\n<p>- Tư vấn về thực hiện các quy định pháp luật</p>\n<p>- Tư vấn về thuế</p>\n<p>- Tư vấn thực hiện các quy định tài chính, huy động và sử dụng vốn, phân tích tài chính..v.v</p>\n<p>- Tư vấn quyết toán tài chính và quyết toán vốn đầu tư.</p>\n<p>- Thẩm định giá tài sản</p>\n<p><span style="text-decoration:underline;"><strong><span style="color:#000080;text-decoration:underline;">Xác định giá trị doanh nghiệp và tư vấn cổ phần hoá:</span></strong></span></p>\n<p>- Tư vấn xác định giá trị tài sản doanh nghiệp để cổ phần hóa</p>\n<p>- Tư vấn xác định và lập hồ sơ xác định giá trị doanh nghiệp</p>\n<p>- Tư vấn đề xuất phương án xử lý lao động sau khi chuyển sang Công ty cổ phần</p>\n<p>- Tư vấn xây dựng phương án kinh doanh sau khi chuyển sang Công ty cổ phần</p>\n<p>- Tư vấn xây dựng điều lệ Công ty cổ phần</p>\n<p>- Tư vấn tổ chức đại hội CNVC.</p>\n<p>- Tư vấn các vấn đề sau khi có quyết định chuyển đổi DNNN thành Công ty cổ phần</p>\n<p>- Tư vấn tổ chức đại hội đồng cổ đông</p>\n<p>- Tư vấn các công việc phải thực hện sau khi chuyển đổi doanh nghiệp:</p>\n<p><span style="text-decoration:underline;"><strong><span style="color:#000080;text-decoration:underline;">Đào tạo cán bộ và ứng dụng tin học:</span></strong></span></p>\n<p>- Tổ chức các khoá học bồi dưỡng kế toán trưởng, bồi dưỡng nghiệp vụ kế toán, kiểm toán nội bộ, quản trị doanh nghiệp, ứng dụng tin học trong công tác kế toán.</p>\n<p>- Cung cấp và hướng dẫn sử dụng phần mềm kế toán.</p>\n<p>- Cung cấp các văn bản pháp qui, các thông tin kinh tế - tài chính, sổ sách biểu mẫu, chứng từ.</p>\n<p>- Hỗ trợ tuyển dụng nhân viên.</p>', '', '', 16, '2012-06-06 08:08:53', 6, 0, '', '', 'ke-toan', '', '', '', 1, 'aasc'),
-(112, 'Kiểm toán', '', '', '', '<p><span style="text-decoration:underline;"><strong><span style="color:#ff6600;text-decoration:underline;">Kiểm toán:</span></strong></span></p>\n<p>- Kiểm toán các Báo cáo Tài chính</p>\n<p>- Kiểm toán hoạt động các Dự án</p>\n<p>- Kiểm toán Báo cáo Quyết toán công trình xây dựng cơ bản</p>\n<p>- Kiểm toán xác định vốn góp liên doanh</p>\n<p>- Giám định tài liệu kế toán, tài chính</p>\n<p>- Kiểm toán quyết toán tỷ lệ nội địa hóa</p>\n<p><span style="text-decoration:underline;color:#ff6600;"><strong>Kế toán:</strong></span></p>\n<p>- Hướng dẫn áp dụng chế độ kế toán - tài chính.</p>\n<p>- Xây dựng các mô hình tổ chức bộ máy - tổ chức công tác kế toán</p>\n<p>- Mở, ghi sổ kế toán và lập các Báo cáo Tài chính</p>\n<p>- Lập hồ sơ đăng ký chế độ kế toán.</p>\n<p><span style="text-decoration:underline;"><strong><span style="color:#ff6600;text-decoration:underline;">Tư vấn:</span></strong></span></p>\n<p>- Tư vấn về thực hiện các quy định pháp luật</p>\n<p>- Tư vấn về thuế</p>\n<p>- Tư vấn thực hiện các quy định tài chính, huy động và sử dụng vốn, phân tích tài chính..v.v</p>\n<p>- Tư vấn quyết toán tài chính và quyết toán vốn đầu tư.</p>\n<p>- Thẩm định giá tài sản</p>\n<p><span style="text-decoration:underline;color:#ff6600;"><strong>Xác định giá trị doanh nghiệp và tư vấn cổ phần hoá:</strong></span></p>\n<p>- Tư vấn xác định giá trị tài sản doanh nghiệp để cổ phần hóa</p>\n<p>- Tư vấn xác định và lập hồ sơ xác định giá trị doanh nghiệp</p>\n<p>- Tư vấn đề xuất phương án xử lý lao động sau khi chuyển sang Công ty cổ phần</p>\n<p>- Tư vấn xây dựng phương án kinh doanh sau khi chuyển sang Công ty cổ phần</p>\n<p>- Tư vấn xây dựng điều lệ Công ty cổ phần</p>\n<p>- Tư vấn tổ chức đại hội CNVC.</p>\n<p>- Tư vấn các vấn đề sau khi có quyết định chuyển đổi DNNN thành Công ty cổ phần</p>\n<p>- Tư vấn tổ chức đại hội đồng cổ đông</p>\n<p>- Tư vấn các công việc phải thực hện sau khi chuyển đổi doanh nghiệp:</p>\n<p><span style="text-decoration:underline;color:#ff6600;"><strong>Đào tạo cán bộ và ứng dụng tin học:</strong></span></p>\n<p>- Tổ chức các khoá học bồi dưỡng kế toán trưởng, bồi dưỡng nghiệp vụ kế toán, kiểm toán nội bộ, quản trị doanh nghiệp, ứng dụng tin học trong công tác kế toán.</p>\n<p>- Cung cấp và hướng dẫn sử dụng phần mềm kế toán.</p>\n<p>- Cung cấp các văn bản pháp qui, các thông tin kinh tế - tài chính, sổ sách biểu mẫu, chứng từ.</p>\n<p>- Hỗ trợ tuyển dụng nhân viên.</p>', '', '', 13, '2012-06-06 08:09:03', 5, 0, '', '', 'kiem-toan', '', '', '', 1, 'aasc'),
-(113, 'Tư vấn', '', '', '', '<p>ë Kiểm toán</p>\n<p>- Kiểm toán các Báo cáo Tài chính</p>\n<p>- Kiểm toán hoạt động các Dự án</p>\n<p>- Kiểm toán Báo cáo Quyết toán công trình xây dựng cơ bản</p>\n<p>- Kiểm toán xác định vốn góp liên doanh</p>\n<p>- Giám định tài liệu kế toán, tài chính</p>\n<p>- Kiểm toán quyết toán tỷ lệ nội địa hóa</p>\n<p>ë Kế toán</p>\n<p>- Hướng dẫn áp dụng chế độ kế toán - tài chính.</p>\n<p>- Xây dựng các mô hình tổ chức bộ máy - tổ chức công tác kế toán</p>\n<p>- Mở, ghi sổ kế toán và lập các Báo cáo Tài chính</p>\n<p>- Lập hồ sơ đăng ký chế độ kế toán.</p>\n<p>ë Tư vấn</p>\n<p>- Tư vấn về thực hiện các quy định pháp luật</p>\n<p>- Tư vấn về thuế</p>\n<p>- Tư vấn thực hiện các quy định tài chính, huy động và sử dụng vốn, phân tích tài chính..v.v</p>\n<p>- Tư vấn quyết toán tài chính và quyết toán vốn đầu tư.</p>\n<p>- Thẩm định giá tài sản</p>\n<p>ë Xác định giá trị doanh nghiệp và tư vấn cổ phần hoá</p>\n<p>- Tư vấn xác định giá trị tài sản doanh nghiệp để cổ phần hóa</p>\n<p>- Tư vấn xác định và lập hồ sơ xác định giá trị doanh nghiệp</p>\n<p>- Tư vấn đề xuất phương án xử lý lao động sau khi chuyển sang Công ty cổ phần</p>\n<p>- Tư vấn xây dựng phương án kinh doanh sau khi chuyển sang Công ty cổ phần</p>\n<p>- Tư vấn xây dựng điều lệ Công ty cổ phần</p>\n<p>- Tư vấn tổ chức đại hội CNVC.</p>\n<p>- Tư vấn các vấn đề sau khi có quyết định chuyển đổi DNNN thành Công ty cổ phần</p>\n<p>- Tư vấn tổ chức đại hội đồng cổ đông</p>\n<p>- Tư vấn các công việc phải thực hện sau khi chuyển đổi doanh nghiệp:</p>\n<p>ë Đào tạo cán bộ và ứng dụng tin học</p>\n<p>- Tổ chức các khoá học bồi dưỡng kế toán trưởng, bồi dưỡng nghiệp vụ kế toán, kiểm toán nội bộ, quản trị doanh nghiệp, ứng dụng tin học trong công tác kế toán.</p>\n<p>- Cung cấp và hướng dẫn sử dụng phần mềm kế toán.</p>\n<p>- Cung cấp các văn bản pháp qui, các thông tin kinh tế - tài chính, sổ sách biểu mẫu, chứng từ.</p>\n<p>- Hỗ trợ tuyển dụng nhân viên.</p>', '', '', 11, '2012-06-06 08:09:11', 4, 0, '', '', 'tu-van', '', '', '', 1, 'aasc'),
-(114, 'Xác định giá trị doanh nghiệp', '', '', '', '<p>ë Kiểm toán</p>\n<p>- Kiểm toán các Báo cáo Tài chính</p>\n<p>- Kiểm toán hoạt động các Dự án</p>\n<p>- Kiểm toán Báo cáo Quyết toán công trình xây dựng cơ bản</p>\n<p>- Kiểm toán xác định vốn góp liên doanh</p>\n<p>- Giám định tài liệu kế toán, tài chính</p>\n<p>- Kiểm toán quyết toán tỷ lệ nội địa hóa</p>\n<p>ë Kế toán</p>\n<p>- Hướng dẫn áp dụng chế độ kế toán - tài chính.</p>\n<p>- Xây dựng các mô hình tổ chức bộ máy - tổ chức công tác kế toán</p>\n<p>- Mở, ghi sổ kế toán và lập các Báo cáo Tài chính</p>\n<p>- Lập hồ sơ đăng ký chế độ kế toán.</p>\n<p>ë Tư vấn</p>\n<p>- Tư vấn về thực hiện các quy định pháp luật</p>\n<p>- Tư vấn về thuế</p>\n<p>- Tư vấn thực hiện các quy định tài chính, huy động và sử dụng vốn, phân tích tài chính..v.v</p>\n<p>- Tư vấn quyết toán tài chính và quyết toán vốn đầu tư.</p>\n<p>- Thẩm định giá tài sản</p>\n<p>ë Xác định giá trị doanh nghiệp và tư vấn cổ phần hoá</p>\n<p>- Tư vấn xác định giá trị tài sản doanh nghiệp để cổ phần hóa</p>\n<p>- Tư vấn xác định và lập hồ sơ xác định giá trị doanh nghiệp</p>\n<p>- Tư vấn đề xuất phương án xử lý lao động sau khi chuyển sang Công ty cổ phần</p>\n<p>- Tư vấn xây dựng phương án kinh doanh sau khi chuyển sang Công ty cổ phần</p>\n<p>- Tư vấn xây dựng điều lệ Công ty cổ phần</p>\n<p>- Tư vấn tổ chức đại hội CNVC.</p>\n<p>- Tư vấn các vấn đề sau khi có quyết định chuyển đổi DNNN thành Công ty cổ phần</p>\n<p>- Tư vấn tổ chức đại hội đồng cổ đông</p>\n<p>- Tư vấn các công việc phải thực hện sau khi chuyển đổi doanh nghiệp:</p>\n<p>ë Đào tạo cán bộ và ứng dụng tin học</p>\n<p>- Tổ chức các khoá học bồi dưỡng kế toán trưởng, bồi dưỡng nghiệp vụ kế toán, kiểm toán nội bộ, quản trị doanh nghiệp, ứng dụng tin học trong công tác kế toán.</p>\n<p>- Cung cấp và hướng dẫn sử dụng phần mềm kế toán.</p>\n<p>- Cung cấp các văn bản pháp qui, các thông tin kinh tế - tài chính, sổ sách biểu mẫu, chứng từ.</p>\n<p>- Hỗ trợ tuyển dụng nhân viên.</p>', '', '', 13, '2012-06-06 08:09:18', 3, 0, '', '', 'xac-dinh-gia-tri-doanh-nghiep', '', '', '', 1, 'aasc'),
-(115, 'Kiểm toán Báo cáo Quyết toán vốn đầu tư', '', '', '', '<p>Kiểm toán Báo cáo Quyết toán vốn đầu tư</p>', '', '', 16, '2012-06-06 08:22:28', 2, 0, '', '', 'kiem-toan-bao-cao-quyet-toan-von-dau-tu', '', '', '', 1, 'aasc'),
-(116, 'Dịch vụ mới', '', '', '', '<p>Đang cập nhật ...</p>', '', '', 6, '2012-06-08 01:52:51', 1, 0, '', '', 'dich-vu-moi', '', '', '', 1, 'aasc');
+(55, 'MAY ĐỒNG PHỤC', '', '', '', '<p style="text-align:justify;">Xã hội ngày càng phát triển con người không còn dừng lại ở việc ăn no, mặc ấm mà chính là ăn ngon mặc đẹp,mặc đẹp chính là một nhu cầu thể hiện bản thân ,nhu cầu thể hiện bản thân mình là ai? từ đâu? hiểu được nhu cầu ngày càng cao đó <strong>240312</strong> sẽ cung ứng cho quý khách những sản phẩm may mặc như:</p>\n<p style="text-align:justify;">Đồng phục học sinh Đồng phục văn phòng Đồng phục bệnh viên Đồng phục nhà máy xí nghiệp Đồng phục nhà hàng,khách sạn, đồng phục lớp, nhóm, tập thể</p>\n<p style="text-align:justify;">Khi quý khách khoác lên người bộ đồng phục mang thương hiệu của tổ chức, công ty mình, quý khách sẽ tự tin hơn về thương hiệu của mình đồng thời cũng phân biệt được quý khách là ai? đến từ đâu? Giữa muôn vạn các thương hiệu khác, mặc đồng phục để tạo nên sự chuyên nghiệp, ”khác biệt” và đặc biệt hơn là sự tỏa sáng cho thương hiệu mình.</p>\n<p style="text-align:justify;">Bên cạnh đó công ty chúng tôi còn cung cấp cho quý khách những sản phẩm làm quà tặng quảng cáo ,quà tặng khuyến mãi cho đối tác ,khách hàng của mình như:</p>\n<p style="text-align:justify;">Áo thun,áo gió ,áo mưa Mũ,nón Ba lô ,túi sách,ví Gối Giày dép</p>\n<p style="text-align:justify;">Tất cả những sản phẩm của chúng tôi đều có in, thêu logo,tên công ty trên sản phẩm.</p>\n<p style="text-align:justify;">Với giá cả cạnh tranh, sản phẩm chất lượng, uy tín đến với công ty chúng tôi là sự lựa chọn hoàn hảo của quý khách.</p>\n<p style="text-align:justify;">Với phương châm <strong>TỎA SÁNG THƯƠNG HIỆU – NÂNG BƯỚC THÀNH CÔNG</strong>. <strong>240312</strong> hy vọng sẽ mang đến cho quý khách sự tự tin ,thoải mái và nguồn năng lực dồi dào khi khoát lên mình sản phẩm của chúng tôi.</p>\n<p style="text-align:justify;">Thành công của quý khách là niềm tự hào của chúng tôi!</p>', '', '', 11, '2012-05-11 02:49:55', 1, 0, '', '', 'may-dong-phuc', '', '', '', 1, 'trasammay');
 
 -- --------------------------------------------------------
 
@@ -721,15 +738,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=119 ;
-
---
--- Dumping data for table `dos_module_supports`
---
-
-INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
-(117, 'Tư vấn kế toán', '', '0929 001 001', 'thanhansoft', 1, 'yahoo', 'aasc'),
-(118, 'Tư vấn kiểm toán', '', '0987 001 001', 'hongvietsoft', 1, 'yahoo', 'aasc');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -757,7 +766,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_video` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_video_dos_module_video_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=34 ;
+
+--
+-- Dumping data for table `dos_module_video`
+--
+
+INSERT INTO `dos_module_video` (`record_id`, `title`, `titleen`, `postdate`, `tag`, `tagen`, `description`, `descriptionen`, `pic_thumb`, `url`, `record_order`, `hits`, `extra_field1`, `extra_field2`, `hot`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(33, 'Túi xách thời trang', '', '2012-05-11 02:49:55', 'tui-xach-thoi-trang', '', '', '', 'tui-xach-thoi-trang.jpg', 'http://www.youtube.com/watch?v=IwckCuHqrDc&feature=fvsr', 1, 0, '', '', 0, 1, 25);
 
 -- --------------------------------------------------------
 
@@ -780,7 +796,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_video_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
+
+--
+-- Dumping data for table `dos_module_video_cat`
+--
+
+INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat_title`, `cat_titleen`, `tag`, `tagen`, `description`, `descriptionen`, `cat_order`, `cat_enable`, `dos_usernames_username`) VALUES
+(25, 0, '', 'TÚI XÁCH', '', 'tui-xach', '', 'TÚI XÁCH', '', 1, 1, 'trasammay');
 
 -- --------------------------------------------------------
 
@@ -1054,7 +1077,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 --
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `agent_sale`, `agent_tech`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('aasc', 'info@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-06-06 08:01:17', '', '', '', 'user', 'vi', '', '2012-07-05 16:00:00', 0, '20122012', '', 1, '010312', 30, 'luat-ke-toan');
+('trasammay', 'info@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-11 02:49:41', '', '0987001001', '', 'user', 'vi', '', '2012-07-09 16:00:00', 0, '20122012', '', 1, '010312', 55, 'tham-my-vien');
 
 -- --------------------------------------------------------
 
@@ -1092,12 +1115,8 @@ CREATE TABLE IF NOT EXISTS `dos_user_langs` (
 --
 
 INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_username`) VALUES
-('address1', 'Trụ sở chính: 29 Hoàng Sa, Quận 1, TP. Hồ Chí Minh - ĐT: (84-8) 10 3908 - 3910 4880 - Fax: (84-8) 3910 4880', '', 'aasc'),
-('address2', 'ĐT: (84-8) 10 3908 - 3910 4880 - Fax: (84-8) 3910 4880', '', 'aasc'),
-('advs', 'Đoi tac', '', 'aasc'),
-('company_name', '', '', 'aasc'),
-('company_phone', 'Tư vấn: (84-8) 3910 39 08 - 3910 48 81', '', 'aasc'),
-('products', '', '', 'aasc');
+('company_name', 'CÔNG TY CỔ PHẦN TRÀ SÂM MÂY', '', 'trasammay'),
+('company_name_footer', 'Mẫu 240312', '', 'trasammay');
 
 -- --------------------------------------------------------
 
