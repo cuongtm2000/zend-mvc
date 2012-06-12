@@ -177,7 +177,7 @@ a:hover{color:#000;}
 .adv-right li{margin:0 0 5px 0}
 
 /*Tu van phong thuy*/
-.frame-right{border:1px solid #CCDFEE;padding:10px;-webkit-border-radius:4px;-moz-border-radius:4px;margin:0 0 10px 0}
+.frame-right{border:1px solid #CCDFEE;padding:10px 5px 10px 10px;-webkit-border-radius:4px;-moz-border-radius:4px;margin:0 0 10px 0}
 .title-right{color:#ffa800;font-size:14px;font-weight:bold;margin:0 0 10px 0}
 .sub-consultant{list-style:none;padding:5px 0 0 18px;margin:0 0 5px 0}
 .sub-consultant li{list-style:disc;color:#ffa800;padding:0 0 6px 0}

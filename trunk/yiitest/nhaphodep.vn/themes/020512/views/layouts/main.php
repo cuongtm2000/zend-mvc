@@ -31,7 +31,7 @@
 
                 </div> <!--End logo-->
                 <div class="hd-cter">
-                    <p class="welcome">Xin mời ! <a href="registration.html" title="Đăng ký" class="regis">Đăng Ký</a> hoặc <a href="login.html" title="Đăng Nhập" class="login">Đăng Nhập</a> </p>
+                    <p class="welcome">Xin mời ! <a href="registration.html" title="Đăng ký" class="regis">Đăng Ký</a> hoặc <a href="login" title="Đăng Nhập" class="login">Đăng Nhập</a> </p>
                     <div class="frame-nav">
                         <div class="left-nav"></div>
                         <div class="bg-nav">
@@ -48,8 +48,8 @@
                 <div class="hd-right">
                     <p class="hotline"><?php echo $this->lang['company_phone'] ?></p>
                     <ul class="sub-hdright">
-                        <li><a href="#" title="">Dịch vụ nhà đất</a></li>
-                        <li><a href="#" title="">Tư vấn phong thủy</a></li>
+                        <li><a href="services" title="">Dịch vụ nhà đất</a></li>
+                        <li><a href="news" title="">Tư vấn phong thủy</a></li>
                         <li class="sub-hdright-none"><a href="#" title="">Trợ giúp</a></li>
                     </ul>
                 </div> <!--End hot line-->
@@ -229,16 +229,16 @@
                         </ul>
                         <div class="clear"></div>
                     </div> <!--End tu van phong thuy-->
-                    <div class="frame-right">
-                        <h1 class="title-right">Dịch vụ nhà đất</h1>
-                        <ul class="sub-consultant">
-                            <li><a href="#" title="">Bán nhà có sổ đỏ, gần trường, bệnh viện, chợ</a></li>
-                            <li><a href="#" title="">Bán căn hộ Hoàng Anh Gia Lai</a></li>
-                            <li><a href="#" title="">Cho thuê nhà giá rẻ gần cơ sở 2 trường Lạc Hồng</a></li>
-                            <li><a href="#" title="">Sang nhượng quán cafê gần công viên Nguyễn Văn Trị - Biên Hòa</a></li>
-                            <li><a href="#" title="">Bán nhà </a></li>
-                        </ul>
+					<?php if(isset($this->function['menu_services']) && ($this->function['menu_services'])):?>
+					<div class="frame-right">
+						<h2 class="title-right"><span><?php echo $this->lang['services'] ?></span></h2>
+						<ul class="sub-consultant">
+							<?php foreach($this->function['menu_services'] as $value): ?>
+							<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'services.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
+							<?php endforeach; ?>
+						</ul>
                     </div> <!--End dich vu nha dat-->
+					<?php endif;?>
                 </div><!--End right content-->   <div class="clear"></div>
             </div><!--End content-->
             <div id="footer">
