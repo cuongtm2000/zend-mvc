@@ -11,6 +11,7 @@ return array(
     'forgot-password' => 'login/forgot', //forgot password
     'reset-password/<email:.*?>/<code:[A-Za-z0-9]+>' => 'login/reset', //forgot password
     'activate/<email:.*?>/<code:[A-Za-z0-9]+>' => 'activate/index', //activate user
+    'report/<action:\w+>' => 'report/<action>', //report controller
 
     '<controller:\w+>/page/<page:\d+>' => array('<controller>/index'), //paging index
     '<controller:\w+>/<cid:[-a-z0-9]+>/page/<page:\d+>' => array('<controller>/cats'), //paging cats

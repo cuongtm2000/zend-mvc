@@ -16,7 +16,7 @@ return array(
         'application.components.*',
     ),
     'modules' => array(
-        'dashboard',
+        'dashboard', 'administrator',
         /*'gii' => array(
             'class' => 'system.gii.GiiModule',
             'password' => '123',
