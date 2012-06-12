@@ -4,7 +4,7 @@ return CMap::mergeArray(
     array(
         'components' => array(
             'db' => array(
-                'connectionString' => 'mysql:host=localhost;dbname=publish',
+                'connectionString' => 'mysql:host=localhost;dbname=nhaphodep',
                 'emulatePrepare' => true,
                 'username' => 'root',
                 'password' => '',

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 3.5.0
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 05, 2012 at 04:47 AM
--- Server version: 5.5.16
--- PHP Version: 5.3.8
+-- Generation Time: Jun 12, 2012 at 08:30 AM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `publish`
+-- Database: `nhaphodep`
 --
 
 -- --------------------------------------------------------
@@ -108,6 +108,20 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_num_paging_cat', 16, '', '020512'),
 ('video_num_paging_index', 16, '', '020512'),
 ('video_width_thumb', 170, '', '020512');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_districts`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_districts` (
+  `district_id` int(11) NOT NULL AUTO_INCREMENT,
+  `district_name` varchar(45) NOT NULL,
+  `dos_provinces_province` int(11) NOT NULL,
+  PRIMARY KEY (`district_id`),
+  KEY `dos_provinces_province` (`dos_provinces_province`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -331,7 +345,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(165, 'Giới thiệu', '', '<p><strong>Thiên Kim</strong> là công ty chuyên nghiệp về thiết kế đồ họa, cung cấp nhãn, bao bì hàng hóa, ấn phẩm quảng cáo và truyền thông thương hiệu.</p>\n<p>Nhóm thiết kế của chúng tôi gồm các họa sĩ, chuyên gia mỹ thuật công nghiệp giàu kinh nghiệm về thiết kế logo, bộ nhận diện thương hiệu, brochure, catalog, báo cáo thường niên, kỷ yếu, lịch, nhãn hiệu, bao bì và nhiều sản phẩm thiết kế khác.</p>\n<p>Chúng tôi cũng cung cấp cho khách hàng các loại nhãn, bao bì chất lượng cao và các ấn phẩm cao cấp, sang trọng sử dụng cho việc quảng bá thương hiệu và giới thiệu sản phẩm.</p>\n<p>Sản phẩm do chúng tôi cung cấp đáp ứng các yêu cầu khắt khe nhất về mỹ thuật, chất lượng in ấn và thành phẩm.</p>', '', 26, '2012-06-01 04:30:54', 1, 0, '', '', 'gioi-thieu', '', '', '', 1, 'quangcaothienkim');
+(165, 'Giới thiệu', '', '<p><strong>Thiên Kim</strong> là công ty chuyên nghiệp về thiết kế đồ họa, cung cấp nhãn, bao bì hàng hóa, ấn phẩm quảng cáo và truyền thông thương hiệu.</p>\n<p>Nhóm thiết kế của chúng tôi gồm các họa sĩ, chuyên gia mỹ thuật công nghiệp giàu kinh nghiệm về thiết kế logo, bộ nhận diện thương hiệu, brochure, catalog, báo cáo thường niên, kỷ yếu, lịch, nhãn hiệu, bao bì và nhiều sản phẩm thiết kế khác.</p>\n<p>Chúng tôi cũng cung cấp cho khách hàng các loại nhãn, bao bì chất lượng cao và các ấn phẩm cao cấp, sang trọng sử dụng cho việc quảng bá thương hiệu và giới thiệu sản phẩm.</p>\n<p>Sản phẩm do chúng tôi cung cấp đáp ứng các yêu cầu khắt khe nhất về mỹ thuật, chất lượng in ấn và thành phẩm.</p>', '', 29, '2012-06-01 04:30:54', 1, 0, '', '', 'gioi-thieu', '', '', '', 1, 'quangcaothienkim');
 
 -- --------------------------------------------------------
 
@@ -558,9 +572,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456084),
-('max_count', 0),
-('counter', 0),
+('day_time', 2456091),
+('max_count', 1),
+('counter', 3),
 ('yesterday', 0);
 
 -- --------------------------------------------------------
@@ -579,7 +593,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1338862396);
+('''127.0.0.1''', 1339478521);
 
 -- --------------------------------------------------------
 
@@ -614,27 +628,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `extra_field4` varchar(100) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
+  `dos_provinces_province_id` int(11) NOT NULL,
+  `dos_districts_district_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
-  KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2493 ;
-
---
--- Dumping data for table `dos_module_products`
---
-
-INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(2438, 'In pp giá rẻ tại saigon', '', '2012-06-02 08:21:31', 'in-pp-gia-re-tai-saigon-thumb.jpg', 'in-pp-gia-re-tai-saigon.jpg', '', '<p>Qui cách Sản Phẩm : chất liệu PP ( có cán màng PVC )</p>\n<p>PP : có định lượng 130gsm Đơn giá lẽ : 70.000đ/m2 Khách hàng cung cấp file gốc , Ai, Corel , pdf ......In số nhiều có chiết khấu giá</p>', '', '<p>Với thế là hệ thống máy in kỹ thuật số khổ lớn hiện đại, tốc độ nhanh và chất lượng hình ảnh tuyệt đẹp, đã và đang là đối tác in ấn cho nhiều công ty quảng cáo, công ty kinh doanh thương mại trong cũng như ngoài thành phố. Xin vui lòng liên hệ với chúng tôi để có được sự hỗ trợ tốt nhất</p>', '', 'in-pp-gia-re-tai-saigon', '', '', '', 0, 3, '', 0, 0, '', '', '', '', 1, 534),
-(2439, 'In nhanh chất liệu pp', '', '2012-06-02 08:22:35', 'in-nhanh-chat-lieu-pp-thumb.jpg', 'in-nhanh-chat-lieu-pp.jpg', '', '<p>N PP NHANH ĐỢI LẤY NGAY<br />Qui cách Sản Phẩm : chất liệu PP ( có cán màng PVC )</p>\n<p>PP : có định lượng 130gsm Đơn giá lẽ : 70.000đ/m2 Khách hàng cung cấp file gốc , Ai, Corel , pdf ......In số nhiều có chiết khấu giá</p>\n<p> </p>', '', '<p>Độ phân giải của bản in tùy yêu cầu thực tế của khách hàng ( từ 600 DPI đến 1.440 DPI). Ngoài ra, chúng tôi cũng đáp ứng yêu cầu in cực đẹp (chất lượng ảnh) đối với các đơn hàng đặc biệt. Xin vui lòng liên hệ với chúng tôi để có được sự hỗ trợ tốt nhất.</p>', '', 'in-nhanh-chat-lieu-pp', '', '', '', 0, 4, '', 0, 0, '', '', '', '', 1, 534),
-(2440, 'Giải pháp in nhanh kỹ thuật số', '', '2012-06-02 08:23:50', 'giai-phap-in-nhanh-ky-thuat-so-thumb.jpg', 'giai-phap-in-nhanh-ky-thuat-so.jpg', '', '', '', '<p>• Bạn cần in từ 01 đến 100 giấy chứng nhận, giấy khen, thiệp mời có nội dung khác nhau?<br />• Bạn vừa được thông báo phải in thêm 10 bộ tài liệu trang trọng cho buổi hội thảo ngay sáng mai ?<br />• Bạn chỉ cần 05 cuốn catalogue chất lượng cao cho buổi họp giới thiệu sản phẩm, nhưng in offset với số lượng ít thì chi phí lại quá lớn ?<br />• Bạn chỉ cần in gấp một số tài liệu cá nhân như danh thiếp, bì thư, v.v. cho kịp chuyến công tác đột xuất ?<br />Rất đơn giản! Chúng tôi sẽ giúp bạn giải quyết dễ dàng tất cả những rắc rối này với in kỹ thuật số với các thiết bị in ấn hiện đại. Bạn sẽ hoàn toàn bất ngờ trước những sản phẩm in kỹ thuật số 6 màu có màu sắc vượt trội, chất lượng tương đương như in off-set và thỏa mãn tối đa với những ưu điểm vượt trội khác:<br />• Phù hợp cho tất cả các sản phẩm in ấn đòi hỏi chất lượng: tài liệu văn phòng, catalogs, tờ bướm, các loại thiệp, namecard, postcard, bao thư, giấy tiêu đề, menu, nhãn decal, tem bảo hành, giấy chứng nhận, phối cảnh kiến trúc màu, sổ cổ đông, giấy khen, kỷ yếu, bảng tin, hệ thống nhận dạng thương hiệu, báo cáo thường niên, profile công ty, v.v...<br />• In ảnh kỹ thuật số chất lượng cao trên giấy ảnh đẹp như in trong phòng Lab ảnh<br />• Có thể in dữ liệu biến đổi: tên và ảnh thay đổi theo từng sản phẩm khác nhau.<br />• Có thể in số lượng ít: 1 tờ, 1 cuốn, ...<br />• In 2 mặt tự động, định lượng đến 300 gsm.<br />• Có thể in trên giấy couche, fort, tất cả các lọai giấy mỹ thuật.</p>', '', 'giai-phap-in-nhanh-ky-thuat-so', '', '', '', 0, 5, '', 0, 0, '', '', '', '', 1, 534),
-(2441, 'Dây và bao đeo thẻ.', '', '2012-06-02 08:25:00', 'day-va-bao-deo-the--thumb.jpg', 'day-va-bao-deo-the-.jpg', '', '<p>Qui cách sản phẩm :</p>\n<p>Túi đựng thẻ : chất liệu PVC trong</p>\n<p>Kích thước : 6cm x 9.5cm Đơn giá : 1.500đ/túi</p>\n<p>Dây đeo thẻ : Chất liệu dây dù hoặc dây lụa</p>\n<p>Độ dài : 38cm Bề rộng dây : 1cm Đơn giá : 4.500đ/dây</p>\n<p>Mua số lượng nhiều có chiết khấu</p>\n<p>Đơn giá lẽ : 6.500đ/ bộ</p>', '', '<p>Chúng tôi cung cấp các phụ liệu khác đi kèm với THẺ NHỰA như BAO ĐỰNG THẺ và DÂY ĐEO THẺ. Chúng tôi có các loại DÂY ĐEO THẺ với nhiều mẩu phong phú, nhiều cách dệt dây khác nhau, đảm bảo Quý Khách Hàng sẽ hài lòng với trọn bộ dịch vụ quảng cáo của chúng tôi cung cấp</p>', '', 'day-va-bao-deo-the', '', '', '', 0, 6, '', 0, 0, '', '', '', '', 1, 534),
-(2442, 'C001', '', '2012-06-02 08:26:01', 'c001-thumb.jpg', 'c001.jpg', '', '', '', '<p>Đặt hàng</p>\n<p>Để phục vụ Quý khách tốt hơn, chúng tôi mong nhận được những góp ý từ Quý khách hàng. Xin email về địa chỉ: info@quangcaothienkim.com</p>', '', 'c001', '', '', '', 0, 7, '', 0, 0, '', '', '', '', 1, 518),
-(2443, 'P001', '', '2012-06-02 08:26:51', 'p001-thumb.jpg', 'p001.jpg', '', '', '', '<p>Đặt hàng</p>\n<p>Để phục vụ Quý khách tốt hơn, chúng tôi mong nhận được những góp ý từ Quý khách hàng. Xin email về địa chỉ: info@quangcaothienkim.com</p>', '', 'p001', '', '', '', 0, 8, '', 0, 0, '', '', '', '', 1, 524),
-(2444, 'In Offset', '', '2012-06-02 08:28:07', 'in-offset-thumb.jpg', 'in-offset.jpg', '', '<p>Các ưu điểm của kỹ thuật in Offset này là:<br />* Chất lượng hình ảnh cao – nét và sạch hơn in trực tiếp từ bản in lên giấy vì miếng cao su áp đều lên bề mặt cần in.<br />* Khả năng ứng dụng in ấn lên nhiều bề mặt, kể cả bề mặt không phẳng (như gỗ, vải, kim loại, da, giấy thô nhám).<br />* Việc chế tạo các bản in dễ dàng hơn.</p>\n<p>* Các bản in có tuổi thọ lâu hơn – vì không phải trực tiếp tiếp xúc với bề mặt cần in</p>\n<p> </p>', '', '<p>n Offset là một kỹ thuật in ấn trong đó, các hình ảnh dính mực in được ép lên các tấm cao su (còn gọi là các tấm offset) trước rồi mới ép từ miếng cao su này lên giấy. Khi sử dụng với in thạch bản, kỹ thuật này tránh được việc làm nước bị dính lên giấy theo mực in. In Offset được dùng để in ấn: Catalogue, Brochure, name Card, leaflet, Tờ rơi, lịch...</p>', '', 'in-offset', '', '', '', 0, 9, '', 0, 0, '', '', '', '', 1, 534),
-(2445, 'In hệ thống nhận diện thương hiệu', '', '2012-06-02 08:29:46', 'in-he-thong-nhan-dien-thuong-hieu-thumb.jpg', 'in-he-thong-nhan-dien-thuong-hieu.jpg', '', '', '', '<p>Hệ thống nhận diện thương hiệu được xây dựng dựa trên sự kết hợp của nhiều yếu tố mang tính đồng bộ và nhất quán của Thương hiệu. Bao gồm: Tên thương hiệu (Brand Name), Logo, Màu sắc chủ đạo, Font chữ, Danh thiếp (Namecard), Website, Cách bố trí biển hiệu tại văn phòng trụ sở, cơ quan, Đồng phục - Bảng tên.....</p>\n<p><img src="http://www.inkythuatso.com/images/stories/intrengiay/nhandienth-1.jpg" alt="" width="500" height="500" /></p>\n<p>Dịch vụ in hệ thống nhận diện thương hiệu: in danh thiếp, bao thư, catalogue, brochure.....</p>\n<p>Xin vui lòng liên hệ với chúng tôi để được dịch vụ tốt nhất.</p>', '', 'in-he-thong-nhan-dien-thuong-hieu', '', '', '', 0, 10, '', 0, 0, '', '', '', '', 1, 534),
-(2446, 'In giấy khen', '', '2012-06-02 08:30:52', 'in-giay-khen-thumb.jpg', 'in-giay-khen.jpg', '', '', '', '<p>In các loại giấy khen để khen thưởng học sinh, giấy khen thưởng cán bộ, công nhân viên, khen thưởng đơn vị cho các tổ chức, cơ quan, công ty, trường học...</p>\n<p>Xin vui lòng liên hệ chúng tôi để được tư vấn và dịch vụ tốt nhất.</p>', '', 'in-giay-khen', '', '', '', 0, 11, '', 0, 0, '', '', '', '', 1, 534),
-(2447, 'In decal gửi hàng', '', '2012-06-02 08:31:55', 'in-decal-gui-hang-thumb.jpg', 'in-decal-gui-hang.jpg', '', '', '', '<p>In các loại decal gửi hàng: là loại decal dán lên hành lý ký gởi, decal dán thùng hành lý, in decal dán nhãn hàng hóa. Vui lòng liên hệ dịch vụ in nhanh của chúng tôi để được tư vấn và dịch vụ tốt nhất.</p>', '', 'in-decal-gui-hang', '', '', '', 0, 12, '', 0, 0, '', '', '', '', 1, 534),
-(2491, 'TG003', '', '2012-06-02 17:33:22', 'tg003-thumb.jpg', 'tg003.jpg', '', '<p>- In, gia công túi đựng sản phẩm trên mọi chất liệu như:</p>\n<p>- Túi giấy</p>\n<p>- Túi nilong...</p>\n<p>- Đảm bảo chất lượng, giá thành hợp lý</p>', '', '<p>Để phục vụ Quý khách tốt hơn, chúng tôi mong nhận được những góp ý từ Quý khách hàng. Xin email về địa chỉ: info@quangcaothienkim.com</p>', '', 'tg003', '', '', '', 0, 13, '', 0, 0, '', '', '', '', 1, 522),
-(2492, 'TG002', '', '2012-06-02 17:35:21', 'tg002-thumb.jpg', 'tg002.jpg', '', '<p>- In, gia công túi đựng sản phẩm trên mọi chất liệu như:</p>\n<p>- Túi giấy</p>\n<p>- Túi nilong...</p>\n<p>- Đảm bảo chất lượng, giá thành hợp lý</p>', '', '<p>Đặt hàng</p>\n<p>Để phục vụ Quý khách tốt hơn, chúng tôi mong nhận được những góp ý từ Quý khách hàng. Xin email về địa chỉ: info@quangcaothienkim.com</p>', '', 'tg002', '', '', '', 0, 14, '', 0, 0, '', '', '', '', 1, 522);
+  KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`),
+  KEY `dos_provinces_province` (`dos_provinces_province_id`),
+  KEY `dos_provinces_province_id` (`dos_provinces_province_id`),
+  KEY `dos_districts_district_id` (`dos_districts_district_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -682,6 +683,24 @@ INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `
 (526, 0, 'Danh thiếp', '', '', '', 'danh-thiep', '', '', '', 'danh-thiep.jpg', '', 11, '', '', 1, 'quangcaothienkim'),
 (527, 0, 'Bandroll - Bảng quảng cáo', '', '', '', 'bandroll-bang-quang-cao', '', '', '', 'bandroll-bang-quang-cao.jpg', '', 12, '', '', 1, 'quangcaothienkim'),
 (534, 0, 'In kỹ thuật số khổ lớn', '', '', '', 'in-ky-thuat-so-kho-lon', '', '', '', 'in-ky-thuat-so.jpg', '', 13, '', '', 1, 'quangcaothienkim');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_products_type`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_products_type` (
+  `type_id` int(11) NOT NULL AUTO_INCREMENT,
+  `type_title` varchar(100) NOT NULL,
+  `tag` varchar(100) NOT NULL,
+  `pic_desc` varchar(200) DEFAULT NULL,
+  `type_order` int(11) NOT NULL,
+  `type_enable` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_usernames_username` varchar(45) NOT NULL,
+  PRIMARY KEY (`type_id`),
+  KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1167,6 +1186,12 @@ ALTER TABLE `dos_configs`
   ADD CONSTRAINT `fk_dos_configs_dos_templates1` FOREIGN KEY (`dos_templates_template`) REFERENCES `dos_templates` (`template`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
+-- Constraints for table `dos_districts`
+--
+ALTER TABLE `dos_districts`
+  ADD CONSTRAINT `dos_districts_ibfk_1` FOREIGN KEY (`dos_provinces_province`) REFERENCES `dos_provinces` (`province_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `dos_loadfiles`
 --
 ALTER TABLE `dos_loadfiles`
@@ -1226,6 +1251,8 @@ ALTER TABLE `dos_module_news_cat`
 -- Constraints for table `dos_module_products`
 --
 ALTER TABLE `dos_module_products`
+  ADD CONSTRAINT `dos_module_products_ibfk_2` FOREIGN KEY (`dos_districts_district_id`) REFERENCES `dos_districts` (`district_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `dos_module_products_ibfk_1` FOREIGN KEY (`dos_provinces_province_id`) REFERENCES `dos_provinces` (`province_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_dos_module_products_dos_module_products_cat1` FOREIGN KEY (`dos_module_item_cat_cat_id`) REFERENCES `dos_module_products_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
