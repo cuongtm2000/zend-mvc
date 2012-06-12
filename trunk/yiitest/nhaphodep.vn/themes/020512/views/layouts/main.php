@@ -95,7 +95,7 @@
                         
                     </div> <!--End left content-->
                     <div class="frame-search-detail">
-                        <img src="images/img.jpg" alt="" />
+                        <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img.jpg" alt="" />
                         <form action="" name="searchdetail" method="post" class="frm-search-detail">
                             <h3 class="title-detail">TÌM KIẾM CHI TIẾT</h3>
                             <ul>
@@ -150,7 +150,7 @@
                             <h2 class="title-fter-left">MUA BÁN NHÀ ĐẤT</h2>
                             <div class="item-sale">
                                 <div class="footer-left">
-                                    <div class="frame-img"><a href="product-info.html" title=""><img src="images/home.jpg" alt="" /></a></div>
+                                    <div class="frame-img"><a href="product-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/home.jpg" alt="" /></a></div>
                                     <div class="info-sale">
                                         <h2 class="title-sale"><a href="product-info.html" title="">CẦN BÁN GẤP NHÀ HẺM NGUYỄN TRI PHƯƠNG</a></h2>
                                         <ul class="sub-sale">
@@ -168,7 +168,7 @@
                                                 <p class="ico-map tooltip">Bản đồ</p>
                                                 <div class="product-tool product-info">
                                                     <h2 class="product-name">Hẻm Nguyễn Tri Phương, Phường 5, Quận 5</h2>
-                                                    <img src="images/map.jpg" alt="" />
+                                                    <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/map.jpg" alt="" />
                                                 </div>
                                                 <p class="ico-save"><a href="#" title="">Lưu lại</a></p>
                                                 <p class="ico-contact"><a href="#" title="">Liên hệ</a></p>
@@ -179,18 +179,18 @@
                                 </div> <!--End footer left-->
                                 <div class="footer-right">
                                     <h3 class="title-footer-right">Hội viên</h3>
-                                    <img src="images/hoivien.jpg" alt="Hoi vien" />
+                                    <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/hoivien.jpg" alt="Hoi vien" />
                                 </div> <!---End footer right hoi vien--> <div class="clear"></div>
                             </div> <!--End item sale-->
 
                         </div> <!--End all tent footer-->
-                        <script type="text/javascript" src="js/tooltip-positon.js"></script>	
+                        <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/tooltip-positon.js"></script>	
                     </div> <!--End footer left content-->
                 </div>  <!--End all left content-->
                 <div id="right-content">
                     <ul class="adv-right">
-                        <li><a href="#" title=""><img src="images/adv-right1.jpg" alt="adv1" /></a></li>
-                        <li><a href="#" title=""><img src="images/adv-right2.jpg" alt="adv1" /></a></li>
+                        <li><a href="#" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/adv-right1.jpg" alt="adv1" /></a></li>
+                        <li><a href="#" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/adv-right2.jpg" alt="adv1" /></a></li>
                     </ul> <!--End quang cao-->
                     <div class="frame-right">
                         <h1 class="title-right">Tư vấn phong thủy</h1>
@@ -242,7 +242,7 @@
                 </div><!--End right content-->   <div class="clear"></div>
             </div><!--End content-->
             <div id="footer">
-                <div class="logo-footer"><a href="index.html" title=""><img src="images/logo.png" alt="logo" /></a></div>
+                <div class="logo-footer"><a href="index.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="logo" /></a></div>
                 <ul class="nav-fter">
                     <li><a href="" title="">Chào bán</a></li>
                     <li><a href="" title="">Cho thuê</a></li>
