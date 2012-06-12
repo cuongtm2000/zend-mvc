@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 05, 2012 at 04:47 AM
+-- Generation Time: Jun 12, 2012 at 03:26 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -72,42 +72,40 @@ CREATE TABLE IF NOT EXISTS `dos_configs` (
 --
 
 INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES
-('advs_bottom_height', 32, '', '020512'),
-('advs_bottom_width', 980, '', '020512'),
-('advs_left_height', 220, '', '020512'),
-('advs_left_width', 200, '', '020512'),
-('advs_top_height', 146, '', '020512'),
-('advs_top_width', 250, '', '020512'),
-('banner_height', 290, '', '020512'),
-('banner_width', 725, '', '020512'),
-('logo_height', 110, '', '020512'),
-('logo_width', 285, '', '020512'),
-('max_image_height', 670, '', '020512'),
-('max_image_width', 720, '', '020512'),
-('news_cat_height', 100, '', '020512'),
-('news_cat_width', 143, '', '020512'),
-('news_height_thumb', 100, '', '020512'),
-('news_num_paging_cat', 10, '', '020512'),
-('news_num_paging_hot', 6, '', '020512'),
-('news_num_paging_index', 10, '', '020512'),
-('news_num_paging_new', 6, '', '020512'),
-('news_width_thumb', 143, '', '020512'),
-('products_cat_height', 198, '', '020512'),
-('products_cat_width', 170, '', '020512'),
-('products_height', 500, '', '020512'),
-('products_height_thumb', 198, '', '020512'),
-('products_num_paging_cat', 20, '', '020512'),
-('products_num_paging_hot', 20, '', '020512'),
-('products_num_paging_new', 20, '', '020512'),
-('products_num_paging_other', 4, '', '020512'),
-('products_width', 500, '', '020512'),
-('products_width_thumb', 170, '', '020512'),
-('services_height', 170, '', '020512'),
-('services_width', 170, '', '020512'),
-('video_height_thumb', 150, '', '020512'),
-('video_num_paging_cat', 16, '', '020512'),
-('video_num_paging_index', 16, '', '020512'),
-('video_width_thumb', 170, '', '020512');
+('advs_left_height', 190, '', '010312'),
+('advs_left_width', 190, '', '010312'),
+('advs_right_height', 190, '', '010312'),
+('advs_right_width', 190, '', '010312'),
+('banner_height', 332, '', '010312'),
+('banner_width', 951, '', '010312'),
+('logo_height', 99, '', '010312'),
+('logo_width', 630, '', '010312'),
+('max_image_height', 667, '', '010312'),
+('max_image_width', 500, '', '010312'),
+('news_cat_height', 89, '', '010312'),
+('news_cat_width', 143, '', '010312'),
+('news_height_thumb', 89, '', '010312'),
+('news_num_paging_cat', 10, '', '010312'),
+('news_num_paging_hot', 6, '', '010312'),
+('news_num_paging_index', 10, '', '010312'),
+('news_num_paging_new', 6, '', '010312'),
+('news_width_thumb', 143, '', '010312'),
+('products_cat_height', 155, '', '010312'),
+('products_cat_width', 115, '', '010312'),
+('products_height', 400, '', '010312'),
+('products_height_thumb', 121, '', '010312'),
+('products_num_paging_cat', 15, '', '010312'),
+('products_num_paging_hot', 9, '', '010312'),
+('products_num_paging_new', 9, '', '010312'),
+('products_num_paging_other', 3, '', '010312'),
+('products_width', 500, '', '010312'),
+('products_width_thumb', 152, '', '010312'),
+('services_height', 90, '', '010312'),
+('services_width', 144, '', '010312'),
+('video_height_thumb', 115, '', '010312'),
+('video_num_paging_cat', 4, '', '010312'),
+('video_num_paging_index', 4, '', '010312'),
+('video_width_thumb', 115, '', '010312');
 
 -- --------------------------------------------------------
 
@@ -233,10 +231,10 @@ CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
 --
 
 INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, `loadfiles`, `typefile`) VALUES
-('020512', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
-('020512', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js|jquery.simplyscroll.vertical.js', 'javascript'),
-('020512', 'video', 'prettyPhoto.css', 'css'),
-('020512', 'video', 'jquery.prettyPhoto.js', 'javascript');
+('010312', 'default', 'prettyPhoto.css', 'css'),
+('010312', 'default', 'jquery.prettyPhoto.js', 'javascript'),
+('010312', 'video', 'prettyPhoto.css', 'css'),
+('010312', 'video', 'jquery.prettyPhoto.js', 'javascript');
 
 -- --------------------------------------------------------
 
@@ -288,14 +286,14 @@ CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
 --
 
 INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
-('about', 'quangcaothienkim'),
-('advs', 'quangcaothienkim'),
-('banner', 'quangcaothienkim'),
-('contact', 'quangcaothienkim'),
-('news', 'quangcaothienkim'),
-('products', 'quangcaothienkim'),
-('services', 'quangcaothienkim'),
-('supports', 'quangcaothienkim');
+('about', 'aasc'),
+('advs', 'aasc'),
+('banner', 'aasc'),
+('contact', 'aasc'),
+('news', 'aasc'),
+('products', 'aasc'),
+('services', 'aasc'),
+('supports', 'aasc');
 
 -- --------------------------------------------------------
 
@@ -324,14 +322,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=166 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=177 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(165, 'Giới thiệu', '', '<p><strong>Thiên Kim</strong> là công ty chuyên nghiệp về thiết kế đồ họa, cung cấp nhãn, bao bì hàng hóa, ấn phẩm quảng cáo và truyền thông thương hiệu.</p>\n<p>Nhóm thiết kế của chúng tôi gồm các họa sĩ, chuyên gia mỹ thuật công nghiệp giàu kinh nghiệm về thiết kế logo, bộ nhận diện thương hiệu, brochure, catalog, báo cáo thường niên, kỷ yếu, lịch, nhãn hiệu, bao bì và nhiều sản phẩm thiết kế khác.</p>\n<p>Chúng tôi cũng cung cấp cho khách hàng các loại nhãn, bao bì chất lượng cao và các ấn phẩm cao cấp, sang trọng sử dụng cho việc quảng bá thương hiệu và giới thiệu sản phẩm.</p>\n<p>Sản phẩm do chúng tôi cung cấp đáp ứng các yêu cầu khắt khe nhất về mỹ thuật, chất lượng in ấn và thành phẩm.</p>', '', 26, '2012-06-01 04:30:54', 1, 0, '', '', 'gioi-thieu', '', '', '', 1, 'quangcaothienkim');
+(175, 'Kính chào quý khách hàng!', '', '<p><span style="color:#ff0000;"><strong>AASCN</strong></span> đã được Ủy ban chứng khoán Nhà Nước chấp thuận được thực hiện kiểm toán cho các tổ chức phát hành, tổ chức niêm yết và tổ chức kinh doanh chứng khoán từ năm 2009 theo Quyết định số 798/QĐ-UBCK ngày 24/11/2009, năm 2012 Công ty kiểm toán Nam Việt tiếp tục được <span style="color:#ff0000;"><strong>Ủy ban chứng khoán Nhà Nước chấp thuận theo Quyết định số 874/QĐ-UBCK ngày 18/11/2011.</strong></span></p>\n<p>AASCN cũng là một trong các công ty kiểm toán nằm trong danh sách công bố công khai lần 1 danh sách các công ty kiểm toán đủ điều kiện thực hiện kiểm toán năm 2012 theo Văn bản số 16227/BTC-CĐKT ngày 29/11/2011 của Bộ Tài chính.</p>\n<ul><li><span style="color:#000080;"><strong>Mục tiêu hoạt động</strong></span></li>\n</ul><p>Với quan điểm vì lợi ích cao nhất của khách hàng, mục tiêu hoạt động của chúng tôi là cung cấp các dịch vụ chuyên ngành và các thông tin đáng tin cậy nhằm giúp khách hàng ra các quyết định quản lý, tài chính và kinh tế một cách có hiệu quả. Hơn thế nữa, với kinh nghiệm thực tiễn về chuyên ngành, gần gũi với khách hàng, tận tình, thông thạo nghiệp vụ, chúng tôi am hiểu các yêu cầu, các khó khăn mà khách hàng gặp phải khi tiến hành kinh doanh tại Việt Nam. Dựa trên cơ sở này, chúng tôi sẽ hỗ trợ khách hàng giải quyết tốt các vấn đề mà ít có một tổ chức dịch vụ chuyên ngành nào có thể thực hiện được.</p>\n<ul><li><span style="color:#000080;"><strong>Đội ngũ nhân viên</strong></span></li>\n</ul><p>Để hoạt động thành công và có hiệu quả chúng tôi luôn coi trọng vấn đề trình độ và kinh nghiệm đội ngũ nhân viên, hiện nay AASCN có đội ngũ bao gồm trên 60 cán bộ, kiểm toán viên được đào tạo đại học và trên đại học chuyên ngành tài chính - ngân hàng - kế toán và kiểm toán ở trong nước và ở nước ngoài, trong đó có 11 Kiểm toán viên được cấp chứng chỉ kiểm toán viên cấp Nhà nước, và Thạc sỹ, kỹ sư, chuyên gia đầu ngành với kinh nghiệm và chuyên môn dầy dạn chắc chắn sẽ đáp ứng những yêu cầu cao nhất của khách hàng.</p>\n<ul><li><span style="color:#000080;"><strong>Phương châm hoạt động</strong></span></li>\n</ul><p>Nhằm đảm bảo cung cấp những dịch vụ có chất lượng tốt nhất, mọi hoạt động của chúng tôi luôn tôn trọng nguyên tắc: độc lập, trung thực khách quan và bảo mật, tuân thủ các quy định của Nhà nước Việt nam, các Chuẩn mực kiểm toán Việt nam do Nhà nước ban hành cũng như các Chuẩn mực kiểm toán quốc tế được chấp nhận chung. Bên cạnh đó chúng tôi cũng luôn nhận thức đặt lợi ích hợp pháp của khách hàng lên hàng đầu.</p>\n<p>Năng lực và tính chuyên nghiệp của AASCN còn được thừa nhận tại tất các doanh nghiệp, các tổ chức kinh tế xã hội hoạt động tại Việt Nam như các Tổng Công ty CP Bia - Rượu – Nước giải khát Sài Gòn (SABECO), Tổng Công ty Bia – Rượu – Nước giải khát Hà Nội (Habeco), Tổng công ty xây dựng số 1, Tổng Công ty Xây dựng sài Gòn v.v…. và Doanh nghiệp có vốn đầu tư nước ngoài ...vv</p>\n<ul><li><span style="color:#000080;"><strong>Khách hàng</strong></span></li>\n</ul><p>Do chất lượng dịch vụ cung cấp, hiện nay AASCN đã có hàng trăm khách hàng hoạt động trên mọi lĩnh vực của nền kinh tế gồm các doanh nghiệp có vốn đầu tư nước ngoài, các doanh nghiệp Nhà nước (danh sách khách hàng được chúng tôi đính kèm phần sau).</p>\n<p>Góp phần vào sự phát triển chung của đất nước và cam kết đảm bảo chất lượng các dịch vụ cung cấp cho từng khách hàng, AASCN luôn là người bạn đồng hành, luôn chia sẻ kinh nghiệm của mình với khách hàng và sự thành công của khách hàng luôn là mục tiêu phấn đấu của chúng tôi.</p>\n<p>Với trình độ và những kinh nghiệm thực tiễn của mình, AASCN sẽ là đơn vị đi tiên phong, dẫn đầu trong hoạt động cung cấp dịch vụ chuyên ngành tại Việt nam và luôn đáp ứng mọi yêu cầu cao nhất của khách hàng.</p>', '', 446, '2012-06-06 08:06:52', 2, 1, '', '', 'kinh-chao-quy-khach-hang', '', '', '', 1, 'aasc'),
+(176, 'tong quan ve cty', '', '<p><span style="background-color:#ff6600;"><strong>tong quan ve cty</strong></span></p>', '', 16, '2012-06-08 01:57:32', 1, 0, '', '', 'tong-quan-ve-cty', '', '', '', 1, 'aasc');
 
 -- --------------------------------------------------------
 
@@ -356,16 +355,19 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=186 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=202 ;
 
 --
 -- Dumping data for table `dos_module_advs`
 --
 
 INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`, `dos_usernames_username`) VALUES
-(183, 'qc1', '', 'qc1.jpg', 'http://thuonghoi.com', '2012-06-02 17:07:53', '2012-06-02 17:00:00', '2013-06-02 17:00:00', 0, 1, 'top', '_bank', 1, 'quangcaothienkim'),
-(184, 'qc2', '', 'qc2.jpg', 'http://thuonghoi.com', '2012-06-02 17:08:37', '2012-06-02 17:00:00', '2013-06-02 17:00:00', 0, 2, 'top', '_bank', 1, 'quangcaothienkim'),
-(185, 'logo_thuonghoi', '', 'logothuonghoi.jpg', 'http://thuonghoi.com', '2012-06-02 17:31:19', '2012-06-02 17:00:00', '2013-06-02 17:00:00', 0, 3, 'left', '_bank', 0, 'quangcaothienkim');
+(194, 'Đăng ký doanh nghiệp', '', 'ang-ky-doanh-nghiep.jpg', 'http://www.dangkykinhdoanh.gov.vn/', '2012-06-06 08:21:34', '2012-06-05 16:00:00', '2012-07-30 16:00:00', 0, 1, 'right', '_bank', 1, 'aasc'),
+(197, 'Nhân sự', '', 'nhan-su.jpg', 'http://www.dangkykinhdoanh.gov.vn/', '2012-06-06 08:35:40', '2012-06-05 16:00:00', '2012-06-29 16:00:00', 0, 2, 'right', '_bank', 1, 'aasc'),
+(198, 'Phần mềm kế toán mới', '', 'phan-mem-ke-toan-moi4.jpg', 'http://aasc.dos.vn/dich-vu', '2012-06-07 06:05:57', '2012-06-06 16:00:00', '2012-07-30 16:00:00', 0, 3, 'left', '_bank', 1, 'aasc'),
+(199, 'Quảng cáo 5', '', 'quang-cao-5.jpg', 'http://aasc.dos.vn/gioi-thieu', '2012-06-07 06:07:11', '2012-06-06 16:00:00', '2012-07-30 16:00:00', 0, 4, 'left', '_bank', 1, 'aasc'),
+(200, 'quảng cáo 4', '', 'quang-cao-4.jpg', 'http://aasc.dos.vn/lien-he', '2012-06-07 06:08:14', '2012-06-06 16:00:00', '2012-07-30 16:00:00', 0, 5, 'right', '_bank', 1, 'aasc'),
+(201, 'quảng cáo 1', '', 'quang-cao-1.jpg', 'http://dos.vn/', '2012-06-07 06:09:29', '2012-06-06 16:00:00', '2012-07-30 16:00:00', 0, 6, 'right', '_bank', 1, 'aasc');
 
 -- --------------------------------------------------------
 
@@ -386,23 +388,24 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=752 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=788 ;
 
 --
 -- Dumping data for table `dos_module_banners`
 --
 
 INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_url`, `banner_link`, `banner_order`, `banner_type`, `position`, `enable`, `dos_usernames_username`) VALUES
-(742, '2012-06-02 16:58:43', 'banner1_cty', 'banner1cty7.jpg', '', 5, 'banners', 'default', 1, 'quangcaothienkim'),
-(743, '2012-06-02 17:04:47', 'banner2', 'banner2.jpg', '', 6, 'banners', 'default', 1, 'quangcaothienkim'),
-(744, '2012-06-02 17:14:03', 'logo_thienkim', 'logothienkim.jpg', '', 7, 'logo', 'default', 1, 'quangcaothienkim'),
-(745, '2012-06-02 17:22:37', 'banner3', 'banner3.jpg', '', 8, 'banners', 'products', 1, 'quangcaothienkim'),
-(746, '2012-06-02 17:22:50', 'banner4', 'banner4.jpg', '', 9, 'banners', 'products', 1, 'quangcaothienkim'),
-(747, '2012-06-02 17:24:18', 'banner5', 'banner5.jpg', '', 10, 'banners', 'about', 1, 'quangcaothienkim'),
-(748, '2012-06-02 17:24:30', 'banner6', 'banne6r.jpg', '', 11, 'banners', 'about', 1, 'quangcaothienkim'),
-(749, '2012-06-02 17:26:11', 'banner7', 'banner7.jpg', '', 12, 'banners', 'services', 1, 'quangcaothienkim'),
-(750, '2012-06-02 17:26:48', 'banner8', 'banner8.jpg', '', 13, 'banners', 'news', 1, 'quangcaothienkim'),
-(751, '2012-06-02 17:27:23', 'banner9', 'banner9.jpg', '', 14, 'banners', 'contact', 1, 'quangcaothienkim');
+(773, '2012-06-06 08:02:57', 'logo_aascn', 'logoaascn.png', '', 1, 'logo', 'default', 1, 'aasc'),
+(778, '2012-06-06 08:12:33', 'Baner 1', 'baner-1.jpg', '', 2, 'banners', 'default', 1, 'aasc'),
+(779, '2012-06-06 08:12:51', 'Baner 2', 'baner-2.jpg', '', 3, 'banners', 'default', 1, 'aasc'),
+(780, '2012-06-06 08:13:03', 'Baner 3', 'baner-3.jpg', '', 4, 'banners', 'news', 1, 'aasc'),
+(781, '2012-06-06 08:13:14', 'Baner 4', 'baner-4.jpg', '', 5, 'banners', 'default', 1, 'aasc'),
+(782, '2012-06-07 05:56:40', 'Baner 5', 'baner-5.jpg', '', 6, 'banners', 'about', 1, 'aasc'),
+(783, '2012-06-07 05:57:19', 'Baner 6', 'baner-6.jpg', '', 7, 'banners', 'services', 1, 'aasc'),
+(784, '2012-06-07 06:04:42', 'Baner 7', 'baner-7.jpg', '', 8, 'banners', 'contact', 1, 'aasc'),
+(785, '2012-06-07 06:35:59', 'Baner 8', 'baner-8.jpg', '', 9, 'banners', 'news', 1, 'aasc'),
+(786, '2012-06-07 06:36:32', 'Baner 9', 'baner-9.jpg', '', 10, 'banners', 'services', 1, 'aasc'),
+(787, '2012-06-07 06:37:17', 'Baner 10', 'baner-10.jpg', '', 11, 'banners', 'contact', 1, 'aasc');
 
 -- --------------------------------------------------------
 
@@ -428,14 +431,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_contacts_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
 
 --
 -- Dumping data for table `dos_module_contacts`
 --
 
 INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `tagen`, `description`, `descriptionen`, `enable`, `dos_usernames_username`) VALUES
-(16, 'Liên hệ với chung tôi', '', '<p><strong>CÔNG TY TNHH IN ẤN &amp; QUẢNG CÁO THIÊN KIM</strong></p>\n<p><strong>Địa chỉ:</strong> 95/68, Nguyễn Ái Quốc, Kp.8, P.Tân Phong, Tp.Biên Hòa, Tỉnh Đồng Nai</p>\n<p><strong>ĐT/Fax:</strong> (061) 3 896 606</p>\n<p><strong>Hotline:</strong> 0915.429 486 / 0983 818 414</p>\n<p><strong>Email:</strong> <a href="mailto:info@quangcaothienkim.com">info@quangcaothienkim.com</a></p>\n<p><strong>Website:</strong> <a href="http://quangcaothienkim.com">http://quangcaothienkim.com</a></p>', '', '2012-06-01 06:29:15', 1, 0, 0, 'lien-he-voi-chung-toi', '', '', '', '1', 'quangcaothienkim');
+(19, 'Liên hệ với chúng tôi', '', '<p><span style="color:#0000ff;"><strong>CÔNG TY TNHH DỊCH VỤ TƯ VẤN TÀI CHÍNH KẾ TOÁN VÀ KIỂM TOÁN <span style="color:#ff0000;">NAM VIỆT</span></strong></span></p>\n<p>Trụ sở chính: 29 Hoàng Sa, Quận 1, TP. Hồ Chí Minh</p>\n<p>Điện thoại: (84-8) 10 3908 - 3910 4880</p>\n<p>Fax: (84-8) 3910 4880</p>\n<p>Website: <a href="http://www.aascn.com.vn">www.aascn.com.vn</a></p>', '', '2012-06-08 02:03:09', 1, 0, 0, 'lien-he-voi-chung-toi', '', '', '', '1', 'aasc');
 
 -- --------------------------------------------------------
 
@@ -462,12 +465,11 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 --
 
 INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
-('Trang chủ', '', 'default', '', 1, '', '', '', '', 'quangcaothienkim'),
-('Giới thiệu', '', 'about', '', 2, '', '', '', '', 'quangcaothienkim'),
-('Sản phẩm', '', 'products', '', 3, '', '', '', '', 'quangcaothienkim'),
-('Dịch vụ', '', 'services', '', 4, '', '', '', '', 'quangcaothienkim'),
-('Tin tức & sự kiện', '', 'news', '', 5, '', '', '', '', 'quangcaothienkim'),
-('Liên hệ', '', 'contact', '', 6, '', '', '', '', 'quangcaothienkim');
+('Trang chủ', '', 'default', '', 1, '', '', '', '', 'aasc'),
+('Giới thiệu', '', 'about', '', 2, '', '', '', '', 'aasc'),
+('Dịch vụ', '', 'services', '', 4, '', '', '', '', 'aasc'),
+('Tin tức & sự kiện', '', 'news', '', 5, '', '', '', '', 'aasc'),
+('Liên hệ', '', 'contact', '', 6, '', '', '', '', 'aasc');
 
 -- --------------------------------------------------------
 
@@ -498,15 +500,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=191 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=209 ;
 
 --
 -- Dumping data for table `dos_module_news`
 --
 
 INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(189, 'Anapurna M2 UV – Gia tăng tốc độ và sản lượng', '', '2012-06-02 17:50:24', 'anapurna-m2-uv--gia-tang-toc-do-va-san-luong.jpg', '<p>Agfa Graphics tự hào công bố dòng máy in phun mực UV khổ lớn Anapurna M2 UV. Dựa trên dòng máy in phun mực UV khổ lớn Anapurna M từng đạt giải thưởng công nghiệp và giải thưởng bán chạy nhất, Anapurna M2 là một hệ thống in phun mực UV thuộc dòng máy công nghiệp nặng có đầy đủ mọi chức năng.</p>', '', '<p><strong>Agfa Graphics tự hào công bố dòng máy in phun mực UV khổ lớn Anapurna M2 UV. Dựa trên dòng máy in phun mực UV khổ lớn Anapurna M từng đạt giải thưởng công nghiệp và giải thưởng bán chạy nhất, Anapurna M2 là một hệ thống in phun mực UV thuộc dòng máy công nghiệp nặng có đầy đủ mọi chức năng.</strong></p>\n<p><strong><img src="http://vhp.dos.vn/public/userfiles/image/vhp/image/nss_1314782881.jpg" alt="" width="459" height="345" /></strong></p>\n<p>Nhiều chức năng tự động được bổ sung đã giúp cho Anapurna M2 trở thành dòng máy dẫn đầu trong thị trường in phun mực UV khổ lớn. Hệ thống điều khiển lực hút chân không đồng bộ được thiết kế phù hợp cho phép vật liệu có thể đi qua trơn tru với tốc độ rất nhanh. Dãy cảm biến an toàn có nhiệm vụ bảo vệ đầu in trong trường hợp vật liệu in có độ dày không ổn định, và bộ phận ion hóa ngăn chặn sự tích điện xảy ra trên vật liệu, bảo đảm điều kiện tốt nhất cho việc phun mực chính xác do đó giúp đạt được chất lượng in cao nhất. Các bộ phận của Anapurna M2 được thiết kế theo tiêu chuẩn nhằm đáp ứng tối đa các nhu cầu sản xuất đòi hỏi cao. Anapurna M2 tăng số đầu in lên 6 đơn vị với 1024 lỗ phun mực cho phép gia tăng tốc độ in. Với thiết kế tiện lợi, máy điều khiển vật liệu theo dạng in cuộn rất vững chãi, vật liệu được đưa thẳng trực tiếp vào máy in thông qua hệ thống định vị vật liệu tự động.</p>\n<p>Willy Van Dromme, quản lý hệ thống kinh doanh in khổ lớn của Agfa Graphics nói: “Anapurna M2 là ý tưởng thích hợp cho nhu cầu in quảng cáo, in thương mại, in bảng hiệu và các phòng photo lab yêu cầu chất lượng cao. Nó được chế tạo thật bền bỉ nhằm phục vụ cho yêu cầu công nghiệp. Nó là dòng máy in phun mực UV cao cấp có thể đáp ứng tối đa các nhu cầu sản xuất đòi hỏi cao”.</p>\n<p>Anapurna M2 đáp ứng vật liệu có khổ bề rộng tối đa là 62inch (1,57m) và sử dụng đầu in mới nhất Konica-Minolta 12 pico cho phép in hình ảnh có độ phân giải không đồng nhất (unparalleled image) 720 x 1440dpi.</p>\n<p>Cả hai chế độ in hai chiều và một chiều đều sắc nét, thể hiện được nhiều chi tiết và chữ rõ nét. In ở chế độ 8 lần một chiều cho hình ảnh có chất lượng cao nhất, chế độ 4 lần hai chiều cho sản lượng in cao nhất, khoảng 23m2/giờ.</p>\n<p>Khi kết hợp sử dụng với mực in UV Anapurna do Afga chế tạo, Anapurna M2 cho chất lượng ảnh nhìn sắc nét với tốc độ in cao.</p>', '', 'anapurna-m2-uv-gia-tang-toc-do-va-san-luong', '', '', '', 0, 1, 0, '', '', 1, 109),
-(190, 'Quite công bố phiên bản Quite Imposing Plus 3', '', '2012-06-02 17:52:41', 'quite-cong-bo-phien-ban-quite-imposing-plus-3.gif', '<p>Quite Software, công ty phát triển các giải pháp cho PDF trên toàn cầu vừa công bố phiên bản bình trang điện tử QUITE IMPOSING PLUS 3. Quite tập trung giải quyết những phản hồi của khách hàng về những yêu cầu của họ trong việc bình trang điện tử</p>', '', '<p>Quite Software, công ty phát triển các giải pháp cho PDF trên toàn cầu vừa công bố phiên bản bình trang điện tử QUITE IMPOSING PLUS 3. Quite tập trung giải quyết những phản hồi của khách hàng về những yêu cầu của họ trong việc bình trang điện tử. Những tính năng mới của Quite Imposing Plus 3 giúp cho công việc bình trang được nhanh chóng và thuận tiện hơn.Trong phiên bản update lần này, Quite nâng cấp các chức năng về xử lý trang trong PDF như: thêm trang, nhóm trang, nhân bản trang, chia tách trang, thay đổi kích thước trang, thêm dữ liệu biến đổi cho trang như thêm số trang, ngày và giờ, tên tài liệu. Quite củng bổ sung thêm chức năng Creep với việc cho khai báo độ dày giấy nhằm bù trừ hiện tượng các tay sách bên ngoài lệch so với các tay sách bên trong khi đóng xén. Quite cũng bổ sung thêm các chức năng cho phép chủ động hơn trong việc sử dụng Crop marks trong bình trang thủ công (Manual Imposition).</p>\n<p>Quite Imposing Plus 3 hỗ trợ đầy đủ cho phiên bản mới nhất của Acrobat X (10.0) và có thể làm việc với PDF/X-4 và PDF/X-5.</p>\n<p>Download Quite Imposing Plus 3 (Demo)</p>\n<p>Download Quite Imposing 3 (Demo)</p>\n<p>Vietnamprint</p>', '', 'quite-cong-bo-phien-ban-quite-imposing-plus-3', '', '', '', 0, 2, 0, '', '', 1, 109);
+(206, 'Kỳ vọng gì về đầu tư gián tiếp trong năm 2012', '', '2012-06-06 08:17:57', 'ky-vong-gi-ve-dau-tu-gian-tiep-trong-nam-2012.jpg', '<p>Có lẽ 2011 là năm thất vọng nhất đối với dòng vốn đầu tư gián tiếp (FPI) chảy vào Việt Nam kể từ khi chúng ta trở thành thành viên của Tổ chức Thương mại thế giới (WTO)</p>', '', '<p>Có lẽ 2011 là năm thất vọng nhất đối với dòng vốn đầu tư gián tiếp (FPI) chảy vào Việt Nam kể từ khi chúng ta trở thành thành viên của Tổ chức Thương mại thế giới (WTO). Chứng khoán và bất động sản liên tục đi xuống, chưa thấy điểm dừng. Thị trường vay nợ bên ngoài gần như đóng băng do sự rắc rối từ khoản nợ của Vinashin.</p>\n<p>Liệu cơn mưa đã qua chưa để trời hửng sáng là điều được nhiều người quan tâm. Theo người viết, với những gì đang xảy ra trên thế giới và thực tế ở Việt Nam, chưa thể kỳ vọng có sự đột biến của dòng vốn FPI vào Việt Nam trong năm 2012.</p>\n<p>Tuy nhiên, nếu quyết tâm đảm bảo ổn định vĩ mô song song với việc cải thiện môi trường kinh doanh được duy trì thì bức tranh trong vài năm tới có khả năng sẽ sáng hơn.</p>\n<p>Bức tranh kinh tế toàn cầu vẫn chưa thể sáng</p>\n<p>Kinh tế Hoa Kỳ vẫn chưa thể thoát khỏi tình trạng trì trệ khi mà các động thái chính sách của cả hai đảng Dân chủ và Cộng hòa đều hướng đến tranh giành khả năng thắng cử trong cuộc đua vào Nhà trắng vào tháng 11 năm nay.</p>\n<p>Khả năng hai đảng cùng ngồi lại để đưa ra những chính sách cần thiết nhằm vực dậy nền kinh tế sẽ không cao. Xu hướng vẫn là giằng co và tranh giành ảnh hưởng.</p>\n<p>Đối với khu vực đồng euro, cả Thủ tướng Đức Merkel và Tổng thống Pháp Sarkozy đều thừa nhận rằng tình hình của khu vực này sẽ khó khăn trong thời gian tới. Goldman Sachs, một ngân hàng đầu tư hàng đầu trên thế giới, dự báo rằng khu vực châu Âu sẽ rơi vào suy thoái và chỉ có khả năng ổn định vào cuối năm 2012.</p>\n<p>Trong bốn nền kinh tế lớn nhất ở các nước đang phát triển (BRIC), có lẽ sẽ không có sự thay đổi đáng kể về chính sách ở Ấn Độ và Brazil, trong khi đó động thái “chờ” có thể xảy ra ở Trung Quốc và Nga.</p>\n<p>Ở trường hợp Trung Quốc, tuy ông Tập Cận Bình dường như chắc chắn sẽ là người kế nhiệm ông Hồ Cẩm Đào, nhưng vẫn còn nhiều ẩn số ở những vị trí chủ chốt khác. Ai lên, ai xuống sẽ ảnh hưởng đáng kể đến đường hướng kinh tế của nước này.</p>\n<p>Đối với Nga, khả năng ông Putin sẽ trở lại cương vị tổng thống gần như chắc chắn, nhưng cuộc bầu cử sắp tới là thước đo uy tín của người lãnh đạo nước Nga trong hơn một thập kỷ qua.</p>\n<p>Đỉnh điểm của mùa xuân Ả Rập đã qua, nhưng những dư chấn của nó vẫn đang kéo dài. Khả năng thêm một vài nước nữa mà trước mắt là Syria có sự thay đổi chế độ là rất cao. Định hình về địa chính trị trong khu vực này như thế nào vẫn đang là dấu hỏi lớn. Ai Cập vừa kỷ niệm một năm sự kiện này trong tình trạng chia rẽ sâu sắc.</p>\n<p>Sự qua đời của lãnh đạo Bắc Triều Tiên Kim Jong Il vừa đặt ra những thách thức cũng như cơ hội cho tam giác phát triển và cũng là động lực kinh tế của toàn thế giới gồm: Nhật Bản, Hàn Quốc và Trung Quốc. Nếu bức tranh theo chiều sáng thì dòng vốn sẽ chảy mạnh hơn vào khu vực này.</p>\n<p>Trong bối cảnh quốc tế như vậy, xu hướng chung của các nhà đầu tư quốc tế vẫn là phòng thủ và có lẽ không quan tâm nhiều đến các nền kinh tế còn nhỏ như Việt Nam.</p>\n<p>Chưa thể lạc quan với các yếu tố bên trong</p>\n<p>Thất bại của người này có thể là cơ hội cho người khác. Sự tuột dốc không phanh của chứng khoán và bất động sản đang đẩy nhiều doanh nghiệp đến bờ vực phá sản. Đây là cơ hội cho nhiều người.</p>\n<p>Do vậy, có giả thuyết cho rằng dòng vốn đầu tư gián tiếp sẽ quay trở lại. Việc mua bán, sáp nhập các doanh nghiệp, chuyển nhượng các dự án sẽ trở nên sôi động trong thời gian tới.</p>\n<p>Thực ra, có lẽ đây chỉ là cảm nhận của “người trong nhà” hay những nhà đầu tư đang ở Việt Nam. Góc nhìn từ bên ngoài có lẽ không lạc quan cho lắm. Các thông số vĩ mô căn bản vẫn chưa thể hiện xu hướng rõ ràng và các tín hiệu tích cực vẫn còn rất yếu.</p>\n<p>Bóng ma lạm phát, yếu tố gây ra bất ổn vĩ mô, xói mòn lòng tin và ảnh hưởng sức cạnh tranh của Việt Nam vẫn còn quá lớn. Thâm hụt ngân sách và thâm hụt thương mại đã được cải thiện, nhưng vẫn còn ở mức rất cao.</p>\n<p>Hơn thế, tuy đầu tư tính theo phần trăm GDP đã giảm, nhưng tỷ phần đầu tư công trong tổng đầu tư lại gia tăng. Đây chính là biểu hiện của sự chèn lấn và nguồn vốn chưa được sử dụng hiệu quả nhất.</p>\n<p>Điều đáng nói nhất là sự không nhất quán cộng với một số chính sách chữa cháy của chúng ta đã làm mai một rất nhiều lòng tin của các nhà đầu tư quốc tế.</p>\n<p>Cho dù đầu năm mới, nhưng vẫn phải nhắc lại rằng sự kiện chậm trả nợ của Vinashin đã tạo ra điểm đen rất lớn trong mắt các nhà đầu tư bên ngoài mà có lẽ phải một thời gian khá lâu mới có thể nhòa đi với điều kiện các chính sách của Việt Nam trong thời gian tới phải nhất quán hơn theo hướng đảm bảo ổn định vĩ mô và cải thiện môi trường kinh doanh.</p>\n<p>Tóm lại, cộng đồng các nhà đầu tư quốc tế, cho dù có “kinh nghiệm đầy mình” nhưng chủ yếu vẫn hành xử theo đám đông. Đây là cái khó của Việt Nam, ít nhất là trong ngắn hạn. Khi mô-men tích cực của năm 2007 đã bị bỏ lỡ, môi trường kinh tế vĩ mô trong nước trở nên bấp bênh hơn rất nhiều đã làm Việt Nam trở thành “địa điểm bị lãng quên” giống như Indonesia sau năm 1997.</p>\n<p>Điều này có khả năng sẽ làm cho dòng vốn gián tiếp, nhất là nguồn vốn của các nhà đầu tư lớn, chưa thể trở lại Việt Nam năm 2012 này.</p>', '', 'ky-vong-gi-ve-dau-tu-gian-tiep-trong-nam-2012', '', '', '', 0, 1, 1, '', '', 1, 117),
+(207, 'Ngân hàng hạ lãi suất cho vay: Chờ tiếp cận vốn “rẻ” hơn', '', '2012-06-06 08:19:31', 'ngan-hang-ha-lai-suat-cho-vay-cho-tiep-can-von-re-hon.jpg', '<p>Dấu hiệu lãi suất cho vay đang rục rịch hạ nhiệt khi các “ông lớn” trong hệ thống ngân hàng công khai mức lãi suất mới</p>', '', '<p>Dấu hiệu lãi suất cho vay đang rục rịch hạ nhiệt khi các “ông lớn” trong hệ thống ngân hàng công khai mức lãi suất mới. Tuy nhiên, khách hàng vẫn chờ lãi suất cho vay hạ nhiệt đồng loạt và nguồn vốn giá rẻ hơn thực sự đến tay.</p>\n<p>Lãi suất “ngập ngừng” hạ nhiệt</p>\n<p>Ngân hàng TMCP Vietinbank, Vietcombank, BIDV đã áp dụng mức lãi suất cho vay hạ hơn so với mặt bằng lãi suất chung trên thị trường. Đại diện Vietinbank cho biết: Lãi suất cho vay thấp nhất áp dụng với cho vay nông nghiệp, nông thôn là 16,3%/năm.</p>\n<p>Hiện tại, Vietinbank vẫn đang duy trì các chương trình tài trợ cho xuất khẩu, nông nghiệp nông thôn, công nghiệp phụ trợ... với mức cho vay thấp hơn 2% so với lãi suất thông thường. BIDV cũng đã hạ mức cho vay xuất khẩu là 15%, còn lĩnh vực nông nghiệp nông thôn ở mức 15,5%.</p>\n<p>Theo ghi nhận của NTNN, ngoài một vài NH đã công bố mức lãi suất hạ nhiệt, còn lại hầu hết các NHTM vẫn đang trong tình trạng “nghe ngóng” thị trường bởi lo ngại hạ lãi suất vào thời điểm này sẽ gây nên sự “xáo trộn” đối với nguồn vốn của NH.</p>\n<p>Bình luận về khả năng hạ lãi suất cho vay đồng loạt ở các NHTM, TS Nguyễn Minh Phong - Viện Nghiên cứu phát triển kinh tế xã hội Hà Nội) cho rằng: “Đang có rất nhiều cơ sở để giảm lãi suất, vấn đề chỉ là quyết định của các NHTM”.</p>\n<p>Về nguyên nhân khiến các NHTM chưa tích cực hưởng ứng xu hướng hạ lãi suất cho vay, ông Phong lý giải: Có hai lý do chính. Thứ nhất sức cản lạm phát chưa rõ ràng. Mặc dù chỉ số tiêu dùng tháng 1 ở dưới ngưỡng 1% nhưng tháng 2, và các tháng tiếp theo sẽ không giảm sâu và có thể cao hơn mức này. Thứ hai, thanh khoản của các NH hiện nay vẫn đang chưa thật “vững”.</p>\n<p>Cùng chung quan điểm này, TS Nguyễn Trí Hiếu -chuyên gia tài chính, ngân hàng nhận định: “Rất khó dự báo thời điểm nào lãi suất sẽ hạ, bởi ngay cả khi ở mức cao như hiện nay, nhiều NH vẫn trong tình trạng căng thẳng thanh khoản do đó nguồn vốn để cho vay vẫn còn bị bó hẹp”.</p>\n<p>Đầu tuần qua, NHNN cũng đã thông báo chỉ tiêu tăng trưởng tín dụng năm 2012, chia theo 4 nhóm mà theo lãnh đạo một ngân hàng cổ phần nhận xét đây vừa là tín hiệu vừa là cơ sở để lãi suất cho vay có thể hạ trong thời gian tới.</p>\n<p>Tuy nhiên, một số ý kiến chuyên gia thì lạc quan khi cho rằng: 5 NH vừa được Thống đốc NHNN Nguyễn Văn Bình cho phép áp dụng tỷ lệ dự trữ bắt buộc bằng VND bằng 1/5 mức thông thường được kỳ vọng sẽ là những NH có nguồn vốn dôi dư để có thể hạ nhiệt lãi suất, cho vay lĩnh vực sản xuất, mà ưu tiên được tập trung vào lĩnh vực nông nghiệp, nông thôn.</p>\n<p>Chờ cơ hội vay vốn giá rẻ!</p>\n<p>TS Nguyễn Trọng Tài - Phó Viện trưởng Viện Nghiên cứu Khoa học NH (Học viện NH) khẳng định: Hạ lãi suất là điều cần làm nhất thời điểm này. Các doanh nghiệp đang mong ngóng, hy vọng khả năng vay được vốn “giá rẻ” trong thời gian sớm nhất.</p>\n<p>Tuy nhiên, việc lãi suất cho vay hạ nhiệt với mức như công bố của nhiều NH vẫn chưa phải là đảm bảo để khách hàng là nông dân và các doanh nghiệp trong lĩnh vực nông nghiệp, nông thôn có thế vay được nguồn vốn giá rẻ này.</p>\n<p>“Lãi suất giảm, không có nghĩa tất cả các hồ sơ của doanh nghiệp đều được chấp nhận, giải ngân bởi những yêu cầu khắt khe về thủ tục giấy tờ mà quan trọng nhất là sẽ phải chứng minh doanh nghiệp hoạt động ổn định, an toàn và đảm bảo có khả năng trả nợ” - ông Nguyễn Huy Hùng - Giám đốc một doanh nghiệp may mặc xuất khẩu ở Hà Nội cho biết.</p>\n<p>Ông Lê Đức Nam - chủ trang trại nuôi gà tại Hòa Bình cho biết, ông nhiều lần vay vốn của NH, nhưng trên thực tế rất hiếm khi vay được vốn với mức lãi suất “rẻ” như công bố. Trong quá trình làm hồ sơ, thủ tục thường khách hàng sẽ bị nâng mức lãi suất lên cao hơn bởi những tiêu chí khắt khe do NH yêu cầu mình không đáp ứng được.</p>\n<p>Để những chính sách ưu đãi lãi suất và nguồn vốn đối với lĩnh vực “tam nông” trở thành hiện thực và phát huy hiệu quả, khách hàng khu vực nông thôn, nông nghiệp được có trong tay nguồn vốn giá rẻ, theo các chuyên gia kinh tế vẫn rất cần những chính sách hỗ trợ từ phía NHNN.</p>\n<p>Và một trong những biện pháp hỗ trợ từ phía NHNN được kỳ vọng là sớm hiện thực hóa lời cam kết của Thống đốc NHNN khi định hướng cho vay lĩnh vực nông nghiệp, nông thôn: “Sẽ dành một phần tiền cung ứng cho tái cấp vốn để các tổ chức tín dụng cho vay nông nghiệp và phát triển nông thôn”.</p>', '', 'ngan-hang-ha-lai-suat-cho-vay-cho-tiep-can-von-re-hon', '', '', '', 0, 2, 1, '', '', 1, 117),
+(208, 'Các ngân hàng lớn sẽ biến mất trong tương lai?', '', '2012-06-06 08:30:32', 'cac-ngan-hang-lon-se-bien-mat-trong-tuong-lai.jpg', '<p>Nhận định này chắc chắn khiến nhiều người ngạc nhiên bởi các định chế tài chính hàng đầu thế giới trong những năm gần đây đã có những bước phát triển vượt bậc.</p>', '', '<p>Nhận định này chắc chắn khiến nhiều người ngạc nhiên bởi các định chế tài chính hàng đầu thế giới trong những năm gần đây đã có những bước phát triển vượt bậc.</p>\n<p>Những ngày tháng tươi đẹp đối với các định chế tài chính xuyên quốc gia có thể đã kết thúc. Nhận định này chắc chắn khiến nhiều người ngạc nhiên bởi các định chế tài chính hàng đầu thế giới trong những năm gần đây đã có những bước phát triển vượt bậc. Bước qua nhiều lần khủng hoảng, các ngân hàng lớn sống sót, thâu tóm những ngân hàng yếu kém và dường như trở nên “bất khả chiến bại”.</p>\n<p>Ngày nay, khoảng 10 định chế tài chính lớn nhất thế giới quản lý 77% tổng số tài sản tài chính. Không chỉ “quá lớn để phá sản”, các ngân hàng này được dự báo sẽ ngày càng vững mạnh. Tuy nhiên, liệu các ngân hàng này sẽ tiếp tục vươn lên và thống trị trong tương lai hay ngược lại sẽ bị nhấn chìm bởi khủng hoảng?</p>\n<p>Trước hết, trong nội tại các ngân hàng lớn tồn tại rất nhiều mâu thuẫn. Với vai trò là người quản lý quỹ và nhà đầu tư tổ chức, các ngân hàng là bên mua trong khi với vai trò là người bảo lãnh và người giao dịch, họ lại là bên bán. Khi là nhà tư vấn tài chính, các ngân hàng đảm nhận cả 2 vai trò. Ăn sâu vào cơ cấu tổ chức, chiến lược và các quyết định của các ngân hàng lớn, những mâu thuẫn này khiến ngân hàng lâm vào tình trạng xung đột với lợi ích chung.</p>\n<p>Các định chế tài chính khổng lồ cũng có những yếu kém về cơ cấu khiến các lãnh đạo cấp cao khó có thể điều hành hiệu quả. Quyền lực ngày càng tập trung vào những lãnh đạo cấp trung vốn là những người hay có các quyết định rủi ro thậm chí là vô trách nhiệm. Các lãnh đạo cấp cao phải quản lý và giám sát quá nhiều hoạt động xảy ra tại các đơn vị xa xôi. Do thiếu thời gian và công cụ để có thể điều hành một cách sát sao, họ bắt buộc phải phụ thuộc vào tính trung thực của người khác.</p>\n<p>Đã có rất nhiều biện pháp được đưa ra để hạn chế sự bất cẩn tồn tại trong các định chế tài chính lớn. Tuy nhiên, các luật lệ với hàng tá các điều được làm và không được làm không phải là giải pháp có thể kiểm soát được hành vi của họ. Nâng tỷ lệ vốn yêu cầu cũng không phải là cách làm đúng đắn. Thậm chí, để có được tỷ lệ vốn như mong muốn, các ngân hàng còn tiến hành các hoạt động rủi ro hơn.</p>\n<p>Sức mạnh của các định chế tài chính toàn cầu cũng đang bị suy giảm. Sáng tạo ra các sản phẩm mới và áp dụng công nghệ cho phép các ngân hàng đi trước các nhà quản lý hàng thập kỷ. Tuy nhiên, giờ đây khoảng cách đã bị thu hẹp lại. Với khủng hoảng 2008, cả nhà đầu tư và cơ quan quản lý đều nhận ra những cải tiến này không thể đa dạng hóa rủi ro.</p>\n<p>Công nghệ thông tin giờ đây lại trở thành công cụ của các nhà quản lý. Không khó để hình dung trong một ngày không xa tất cả các dữ liệu về giao dịch, nợ, đầu tư, thay đổi trong tài sản… ngay lập tức được các nhà quản lý nắm bắt.</p>\n<p>Thậm chí, trong tương lai xa hơn, Chính phủ nắm quyền điều hành toàn bộ các ngân hàng thông qua mạng lưới điện toán đám mây. Chi nhánh ngân hàng trở nên lỗi thời bởi khách hàng thực hiện giao dịch trên các thiết bị cầm tay.</p>\n<p>Sự thay đổi này chắc chắn sẽ không làm hài lòng các ngân hàng lớn, đặc biệt là khi họ đang nắm vị thế dẫn đầu trong lĩnh vực quan trọng của nền kinh tế. Các cổ đông mới là những người cần hối thúc hành động. Các ngân hàng cần phải xóa bớt một số hoạt động và chỉ tập trung vào các nghiệp vụ cốt lõi. Chiến lược này mang lại lợi ích cho các ngân hàng, cho thị trường tài chính cũng như cho toàn bộ nền kinh tế.</p>\n<p style="text-align:right;">Thu Hương</p>\n<p style="text-align:right;">Theo TTVN/WSJ</p>', '', 'cac-ngan-hang-lon-se-bien-mat-trong-tuong-lai', '', '', '', 0, 3, 0, '', '', 1, 117);
 
 -- --------------------------------------------------------
 
@@ -533,14 +536,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=110 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=118 ;
 
 --
 -- Dumping data for table `dos_module_news_cat`
 --
 
 INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(109, 0, 'Tin trong nước', '', '', '', 'tin-trong-nuoc', '', '', '', '', 1, '', '', 1, 'quangcaothienkim');
+(115, 0, 'Tin từ công ty', '', '', '', 'tin-tu-cong-ty', '', '', '', '', 1, '', '', 1, 'aasc'),
+(116, 0, 'Tin thị trường', '', '', '', 'tin-thi-truong', '', '', '', '', 2, '', '', 1, 'aasc'),
+(117, 0, 'Tin pháp luật', '', '', '', 'tin-phap-luat', '', '', '', '', 3, '', '', 1, 'aasc');
 
 -- --------------------------------------------------------
 
@@ -558,7 +563,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456084),
+('day_time', 2456091),
 ('max_count', 0),
 ('counter', 0),
 ('yesterday', 0);
@@ -579,7 +584,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1338862396);
+('''127.0.0.1''', 1339463951);
 
 -- --------------------------------------------------------
 
@@ -616,25 +621,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2493 ;
-
---
--- Dumping data for table `dos_module_products`
---
-
-INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(2438, 'In pp giá rẻ tại saigon', '', '2012-06-02 08:21:31', 'in-pp-gia-re-tai-saigon-thumb.jpg', 'in-pp-gia-re-tai-saigon.jpg', '', '<p>Qui cách Sản Phẩm : chất liệu PP ( có cán màng PVC )</p>\n<p>PP : có định lượng 130gsm Đơn giá lẽ : 70.000đ/m2 Khách hàng cung cấp file gốc , Ai, Corel , pdf ......In số nhiều có chiết khấu giá</p>', '', '<p>Với thế là hệ thống máy in kỹ thuật số khổ lớn hiện đại, tốc độ nhanh và chất lượng hình ảnh tuyệt đẹp, đã và đang là đối tác in ấn cho nhiều công ty quảng cáo, công ty kinh doanh thương mại trong cũng như ngoài thành phố. Xin vui lòng liên hệ với chúng tôi để có được sự hỗ trợ tốt nhất</p>', '', 'in-pp-gia-re-tai-saigon', '', '', '', 0, 3, '', 0, 0, '', '', '', '', 1, 534),
-(2439, 'In nhanh chất liệu pp', '', '2012-06-02 08:22:35', 'in-nhanh-chat-lieu-pp-thumb.jpg', 'in-nhanh-chat-lieu-pp.jpg', '', '<p>N PP NHANH ĐỢI LẤY NGAY<br />Qui cách Sản Phẩm : chất liệu PP ( có cán màng PVC )</p>\n<p>PP : có định lượng 130gsm Đơn giá lẽ : 70.000đ/m2 Khách hàng cung cấp file gốc , Ai, Corel , pdf ......In số nhiều có chiết khấu giá</p>\n<p> </p>', '', '<p>Độ phân giải của bản in tùy yêu cầu thực tế của khách hàng ( từ 600 DPI đến 1.440 DPI). Ngoài ra, chúng tôi cũng đáp ứng yêu cầu in cực đẹp (chất lượng ảnh) đối với các đơn hàng đặc biệt. Xin vui lòng liên hệ với chúng tôi để có được sự hỗ trợ tốt nhất.</p>', '', 'in-nhanh-chat-lieu-pp', '', '', '', 0, 4, '', 0, 0, '', '', '', '', 1, 534),
-(2440, 'Giải pháp in nhanh kỹ thuật số', '', '2012-06-02 08:23:50', 'giai-phap-in-nhanh-ky-thuat-so-thumb.jpg', 'giai-phap-in-nhanh-ky-thuat-so.jpg', '', '', '', '<p>• Bạn cần in từ 01 đến 100 giấy chứng nhận, giấy khen, thiệp mời có nội dung khác nhau?<br />• Bạn vừa được thông báo phải in thêm 10 bộ tài liệu trang trọng cho buổi hội thảo ngay sáng mai ?<br />• Bạn chỉ cần 05 cuốn catalogue chất lượng cao cho buổi họp giới thiệu sản phẩm, nhưng in offset với số lượng ít thì chi phí lại quá lớn ?<br />• Bạn chỉ cần in gấp một số tài liệu cá nhân như danh thiếp, bì thư, v.v. cho kịp chuyến công tác đột xuất ?<br />Rất đơn giản! Chúng tôi sẽ giúp bạn giải quyết dễ dàng tất cả những rắc rối này với in kỹ thuật số với các thiết bị in ấn hiện đại. Bạn sẽ hoàn toàn bất ngờ trước những sản phẩm in kỹ thuật số 6 màu có màu sắc vượt trội, chất lượng tương đương như in off-set và thỏa mãn tối đa với những ưu điểm vượt trội khác:<br />• Phù hợp cho tất cả các sản phẩm in ấn đòi hỏi chất lượng: tài liệu văn phòng, catalogs, tờ bướm, các loại thiệp, namecard, postcard, bao thư, giấy tiêu đề, menu, nhãn decal, tem bảo hành, giấy chứng nhận, phối cảnh kiến trúc màu, sổ cổ đông, giấy khen, kỷ yếu, bảng tin, hệ thống nhận dạng thương hiệu, báo cáo thường niên, profile công ty, v.v...<br />• In ảnh kỹ thuật số chất lượng cao trên giấy ảnh đẹp như in trong phòng Lab ảnh<br />• Có thể in dữ liệu biến đổi: tên và ảnh thay đổi theo từng sản phẩm khác nhau.<br />• Có thể in số lượng ít: 1 tờ, 1 cuốn, ...<br />• In 2 mặt tự động, định lượng đến 300 gsm.<br />• Có thể in trên giấy couche, fort, tất cả các lọai giấy mỹ thuật.</p>', '', 'giai-phap-in-nhanh-ky-thuat-so', '', '', '', 0, 5, '', 0, 0, '', '', '', '', 1, 534),
-(2441, 'Dây và bao đeo thẻ.', '', '2012-06-02 08:25:00', 'day-va-bao-deo-the--thumb.jpg', 'day-va-bao-deo-the-.jpg', '', '<p>Qui cách sản phẩm :</p>\n<p>Túi đựng thẻ : chất liệu PVC trong</p>\n<p>Kích thước : 6cm x 9.5cm Đơn giá : 1.500đ/túi</p>\n<p>Dây đeo thẻ : Chất liệu dây dù hoặc dây lụa</p>\n<p>Độ dài : 38cm Bề rộng dây : 1cm Đơn giá : 4.500đ/dây</p>\n<p>Mua số lượng nhiều có chiết khấu</p>\n<p>Đơn giá lẽ : 6.500đ/ bộ</p>', '', '<p>Chúng tôi cung cấp các phụ liệu khác đi kèm với THẺ NHỰA như BAO ĐỰNG THẺ và DÂY ĐEO THẺ. Chúng tôi có các loại DÂY ĐEO THẺ với nhiều mẩu phong phú, nhiều cách dệt dây khác nhau, đảm bảo Quý Khách Hàng sẽ hài lòng với trọn bộ dịch vụ quảng cáo của chúng tôi cung cấp</p>', '', 'day-va-bao-deo-the', '', '', '', 0, 6, '', 0, 0, '', '', '', '', 1, 534),
-(2442, 'C001', '', '2012-06-02 08:26:01', 'c001-thumb.jpg', 'c001.jpg', '', '', '', '<p>Đặt hàng</p>\n<p>Để phục vụ Quý khách tốt hơn, chúng tôi mong nhận được những góp ý từ Quý khách hàng. Xin email về địa chỉ: info@quangcaothienkim.com</p>', '', 'c001', '', '', '', 0, 7, '', 0, 0, '', '', '', '', 1, 518),
-(2443, 'P001', '', '2012-06-02 08:26:51', 'p001-thumb.jpg', 'p001.jpg', '', '', '', '<p>Đặt hàng</p>\n<p>Để phục vụ Quý khách tốt hơn, chúng tôi mong nhận được những góp ý từ Quý khách hàng. Xin email về địa chỉ: info@quangcaothienkim.com</p>', '', 'p001', '', '', '', 0, 8, '', 0, 0, '', '', '', '', 1, 524),
-(2444, 'In Offset', '', '2012-06-02 08:28:07', 'in-offset-thumb.jpg', 'in-offset.jpg', '', '<p>Các ưu điểm của kỹ thuật in Offset này là:<br />* Chất lượng hình ảnh cao – nét và sạch hơn in trực tiếp từ bản in lên giấy vì miếng cao su áp đều lên bề mặt cần in.<br />* Khả năng ứng dụng in ấn lên nhiều bề mặt, kể cả bề mặt không phẳng (như gỗ, vải, kim loại, da, giấy thô nhám).<br />* Việc chế tạo các bản in dễ dàng hơn.</p>\n<p>* Các bản in có tuổi thọ lâu hơn – vì không phải trực tiếp tiếp xúc với bề mặt cần in</p>\n<p> </p>', '', '<p>n Offset là một kỹ thuật in ấn trong đó, các hình ảnh dính mực in được ép lên các tấm cao su (còn gọi là các tấm offset) trước rồi mới ép từ miếng cao su này lên giấy. Khi sử dụng với in thạch bản, kỹ thuật này tránh được việc làm nước bị dính lên giấy theo mực in. In Offset được dùng để in ấn: Catalogue, Brochure, name Card, leaflet, Tờ rơi, lịch...</p>', '', 'in-offset', '', '', '', 0, 9, '', 0, 0, '', '', '', '', 1, 534),
-(2445, 'In hệ thống nhận diện thương hiệu', '', '2012-06-02 08:29:46', 'in-he-thong-nhan-dien-thuong-hieu-thumb.jpg', 'in-he-thong-nhan-dien-thuong-hieu.jpg', '', '', '', '<p>Hệ thống nhận diện thương hiệu được xây dựng dựa trên sự kết hợp của nhiều yếu tố mang tính đồng bộ và nhất quán của Thương hiệu. Bao gồm: Tên thương hiệu (Brand Name), Logo, Màu sắc chủ đạo, Font chữ, Danh thiếp (Namecard), Website, Cách bố trí biển hiệu tại văn phòng trụ sở, cơ quan, Đồng phục - Bảng tên.....</p>\n<p><img src="http://www.inkythuatso.com/images/stories/intrengiay/nhandienth-1.jpg" alt="" width="500" height="500" /></p>\n<p>Dịch vụ in hệ thống nhận diện thương hiệu: in danh thiếp, bao thư, catalogue, brochure.....</p>\n<p>Xin vui lòng liên hệ với chúng tôi để được dịch vụ tốt nhất.</p>', '', 'in-he-thong-nhan-dien-thuong-hieu', '', '', '', 0, 10, '', 0, 0, '', '', '', '', 1, 534),
-(2446, 'In giấy khen', '', '2012-06-02 08:30:52', 'in-giay-khen-thumb.jpg', 'in-giay-khen.jpg', '', '', '', '<p>In các loại giấy khen để khen thưởng học sinh, giấy khen thưởng cán bộ, công nhân viên, khen thưởng đơn vị cho các tổ chức, cơ quan, công ty, trường học...</p>\n<p>Xin vui lòng liên hệ chúng tôi để được tư vấn và dịch vụ tốt nhất.</p>', '', 'in-giay-khen', '', '', '', 0, 11, '', 0, 0, '', '', '', '', 1, 534),
-(2447, 'In decal gửi hàng', '', '2012-06-02 08:31:55', 'in-decal-gui-hang-thumb.jpg', 'in-decal-gui-hang.jpg', '', '', '', '<p>In các loại decal gửi hàng: là loại decal dán lên hành lý ký gởi, decal dán thùng hành lý, in decal dán nhãn hàng hóa. Vui lòng liên hệ dịch vụ in nhanh của chúng tôi để được tư vấn và dịch vụ tốt nhất.</p>', '', 'in-decal-gui-hang', '', '', '', 0, 12, '', 0, 0, '', '', '', '', 1, 534),
-(2491, 'TG003', '', '2012-06-02 17:33:22', 'tg003-thumb.jpg', 'tg003.jpg', '', '<p>- In, gia công túi đựng sản phẩm trên mọi chất liệu như:</p>\n<p>- Túi giấy</p>\n<p>- Túi nilong...</p>\n<p>- Đảm bảo chất lượng, giá thành hợp lý</p>', '', '<p>Để phục vụ Quý khách tốt hơn, chúng tôi mong nhận được những góp ý từ Quý khách hàng. Xin email về địa chỉ: info@quangcaothienkim.com</p>', '', 'tg003', '', '', '', 0, 13, '', 0, 0, '', '', '', '', 1, 522),
-(2492, 'TG002', '', '2012-06-02 17:35:21', 'tg002-thumb.jpg', 'tg002.jpg', '', '<p>- In, gia công túi đựng sản phẩm trên mọi chất liệu như:</p>\n<p>- Túi giấy</p>\n<p>- Túi nilong...</p>\n<p>- Đảm bảo chất lượng, giá thành hợp lý</p>', '', '<p>Đặt hàng</p>\n<p>Để phục vụ Quý khách tốt hơn, chúng tôi mong nhận được những góp ý từ Quý khách hàng. Xin email về địa chỉ: info@quangcaothienkim.com</p>', '', 'tg002', '', '', '', 0, 14, '', 0, 0, '', '', '', '', 1, 522);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -662,26 +649,17 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=535 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=591 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
 --
 
 INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(516, 0, 'Bộ ấn phẩm văn phòng', '', '', '', 'bo-an-pham-van-phong', '', '', '', 'bo-an-pham-van-phong.jpg', '', 1, '', '', 1, 'quangcaothienkim'),
-(517, 0, 'Brochure', '', '', '', 'brochure', '', '', '', 'brochure.jpg', '', 2, '', '', 1, 'quangcaothienkim'),
-(518, 0, 'Catalogue', '', '', '', 'catalogue', '', '', '', 'catalogue.jpg', '', 3, '', '', 1, 'quangcaothienkim'),
-(519, 0, 'Folder', '', '', '', 'folder', '', '', '', 'folder.jpg', '', 4, '', '', 1, 'quangcaothienkim'),
-(520, 0, 'Lịch độc quyền', '', '', '', 'lich-doc-quyen', '', '', '', 'lich-doc-quyen.jpg', '', 5, '', '', 1, 'quangcaothienkim'),
-(521, 0, 'Tờ rơi', '', '', '', 'to-roi', '', '', '', 'to-roi.jpg', '', 6, '', '', 1, 'quangcaothienkim'),
-(522, 0, 'Túi giấy', '', '', '', 'tui-giay', '', '', '', 'tui-giay.jpg', '', 7, '', '', 1, 'quangcaothienkim'),
-(523, 0, 'Bao bì carton', '', '', '', 'bao-bi-carton', '', '', '', 'bao-bi-carton.jpg', '', 8, '', '', 1, 'quangcaothienkim'),
-(524, 0, 'Poster', '', '', '', 'poster', '', '', '', 'poster.jpg', '', 9, '', '', 1, 'quangcaothienkim'),
-(525, 0, 'Thiệp', '', '', '', 'thiep', '', '', '', 'thiep.jpg', '', 10, '', '', 1, 'quangcaothienkim'),
-(526, 0, 'Danh thiếp', '', '', '', 'danh-thiep', '', '', '', 'danh-thiep.jpg', '', 11, '', '', 1, 'quangcaothienkim'),
-(527, 0, 'Bandroll - Bảng quảng cáo', '', '', '', 'bandroll-bang-quang-cao', '', '', '', 'bandroll-bang-quang-cao.jpg', '', 12, '', '', 1, 'quangcaothienkim'),
-(534, 0, 'In kỹ thuật số khổ lớn', '', '', '', 'in-ky-thuat-so-kho-lon', '', '', '', 'in-ky-thuat-so.jpg', '', 13, '', '', 1, 'quangcaothienkim');
+(587, 0, 'Kế toán', '', '', '', 'ke-toan', '', '', '', '', '', 1, '', '', 0, 'aasc'),
+(588, 0, 'Kiểm toán', '', '', '', 'kiem-toan', '', '', '', '', '', 2, '', '', 0, 'aasc'),
+(589, 0, 'Tư Vấn', '', '', '', 'tu-van', '', '', '', '', '', 3, '', '', 0, 'aasc'),
+(590, 0, 'Kiểm toán Báo cáo Quyết toán vốn đầu tư', '', '', '', 'kiem-toan-bao-cao-quyet-toan-von-dau-tu', '', '', '', '', '', 4, '', '', 0, 'aasc');
 
 -- --------------------------------------------------------
 
@@ -712,15 +690,19 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=103 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=117 ;
 
 --
 -- Dumping data for table `dos_module_services`
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(101, 'Quảng cáo ngoài trời', '', '', '', '<p>Đang cập nhật</p>', '', '', 3, '2012-06-02 17:49:17', 1, 0, '', '', 'quang-cao-ngoai-troi', '', '', '', 1, 'quangcaothienkim'),
-(102, 'In hóa đơn', '', '', '', '<p>In hóa đơn</p>', '', '', 3, '2012-06-02 17:49:30', 2, 0, '', '', 'in-hoa-don', '', '', '', 1, 'quangcaothienkim');
+(111, 'Kế toán', '', '', '', '<p><span style="text-decoration:underline;color:#000080;"><strong>Kiểm toán:</strong></span></p>\n<p>- Kiểm toán các Báo cáo Tài chính</p>\n<p>- Kiểm toán hoạt động các Dự án</p>\n<p>- Kiểm toán Báo cáo Quyết toán công trình xây dựng cơ bản</p>\n<p>- Kiểm toán xác định vốn góp liên doanh</p>\n<p>- Giám định tài liệu kế toán, tài chính</p>\n<p>- Kiểm toán quyết toán tỷ lệ nội địa hóa</p>\n<p><span style="text-decoration:underline;"><strong><span style="color:#000080;text-decoration:underline;">Kế toán:</span></strong></span></p>\n<p>- Hướng dẫn áp dụng chế độ kế toán - tài chính.</p>\n<p>- Xây dựng các mô hình tổ chức bộ máy - tổ chức công tác kế toán</p>\n<p>- Mở, ghi sổ kế toán và lập các Báo cáo Tài chính</p>\n<p>- Lập hồ sơ đăng ký chế độ kế toán.</p>\n<p><span style="text-decoration:underline;"><strong><span style="color:#000080;text-decoration:underline;">Tư vấn:</span></strong></span></p>\n<p>- Tư vấn về thực hiện các quy định pháp luật</p>\n<p>- Tư vấn về thuế</p>\n<p>- Tư vấn thực hiện các quy định tài chính, huy động và sử dụng vốn, phân tích tài chính..v.v</p>\n<p>- Tư vấn quyết toán tài chính và quyết toán vốn đầu tư.</p>\n<p>- Thẩm định giá tài sản</p>\n<p><span style="text-decoration:underline;"><strong><span style="color:#000080;text-decoration:underline;">Xác định giá trị doanh nghiệp và tư vấn cổ phần hoá:</span></strong></span></p>\n<p>- Tư vấn xác định giá trị tài sản doanh nghiệp để cổ phần hóa</p>\n<p>- Tư vấn xác định và lập hồ sơ xác định giá trị doanh nghiệp</p>\n<p>- Tư vấn đề xuất phương án xử lý lao động sau khi chuyển sang Công ty cổ phần</p>\n<p>- Tư vấn xây dựng phương án kinh doanh sau khi chuyển sang Công ty cổ phần</p>\n<p>- Tư vấn xây dựng điều lệ Công ty cổ phần</p>\n<p>- Tư vấn tổ chức đại hội CNVC.</p>\n<p>- Tư vấn các vấn đề sau khi có quyết định chuyển đổi DNNN thành Công ty cổ phần</p>\n<p>- Tư vấn tổ chức đại hội đồng cổ đông</p>\n<p>- Tư vấn các công việc phải thực hện sau khi chuyển đổi doanh nghiệp:</p>\n<p><span style="text-decoration:underline;"><strong><span style="color:#000080;text-decoration:underline;">Đào tạo cán bộ và ứng dụng tin học:</span></strong></span></p>\n<p>- Tổ chức các khoá học bồi dưỡng kế toán trưởng, bồi dưỡng nghiệp vụ kế toán, kiểm toán nội bộ, quản trị doanh nghiệp, ứng dụng tin học trong công tác kế toán.</p>\n<p>- Cung cấp và hướng dẫn sử dụng phần mềm kế toán.</p>\n<p>- Cung cấp các văn bản pháp qui, các thông tin kinh tế - tài chính, sổ sách biểu mẫu, chứng từ.</p>\n<p>- Hỗ trợ tuyển dụng nhân viên.</p>', '', '', 16, '2012-06-06 08:08:53', 6, 0, '', '', 'ke-toan', '', '', '', 1, 'aasc'),
+(112, 'Kiểm toán', '', '', '', '<p><span style="text-decoration:underline;"><strong><span style="color:#ff6600;text-decoration:underline;">Kiểm toán:</span></strong></span></p>\n<p>- Kiểm toán các Báo cáo Tài chính</p>\n<p>- Kiểm toán hoạt động các Dự án</p>\n<p>- Kiểm toán Báo cáo Quyết toán công trình xây dựng cơ bản</p>\n<p>- Kiểm toán xác định vốn góp liên doanh</p>\n<p>- Giám định tài liệu kế toán, tài chính</p>\n<p>- Kiểm toán quyết toán tỷ lệ nội địa hóa</p>\n<p><span style="text-decoration:underline;color:#ff6600;"><strong>Kế toán:</strong></span></p>\n<p>- Hướng dẫn áp dụng chế độ kế toán - tài chính.</p>\n<p>- Xây dựng các mô hình tổ chức bộ máy - tổ chức công tác kế toán</p>\n<p>- Mở, ghi sổ kế toán và lập các Báo cáo Tài chính</p>\n<p>- Lập hồ sơ đăng ký chế độ kế toán.</p>\n<p><span style="text-decoration:underline;"><strong><span style="color:#ff6600;text-decoration:underline;">Tư vấn:</span></strong></span></p>\n<p>- Tư vấn về thực hiện các quy định pháp luật</p>\n<p>- Tư vấn về thuế</p>\n<p>- Tư vấn thực hiện các quy định tài chính, huy động và sử dụng vốn, phân tích tài chính..v.v</p>\n<p>- Tư vấn quyết toán tài chính và quyết toán vốn đầu tư.</p>\n<p>- Thẩm định giá tài sản</p>\n<p><span style="text-decoration:underline;color:#ff6600;"><strong>Xác định giá trị doanh nghiệp và tư vấn cổ phần hoá:</strong></span></p>\n<p>- Tư vấn xác định giá trị tài sản doanh nghiệp để cổ phần hóa</p>\n<p>- Tư vấn xác định và lập hồ sơ xác định giá trị doanh nghiệp</p>\n<p>- Tư vấn đề xuất phương án xử lý lao động sau khi chuyển sang Công ty cổ phần</p>\n<p>- Tư vấn xây dựng phương án kinh doanh sau khi chuyển sang Công ty cổ phần</p>\n<p>- Tư vấn xây dựng điều lệ Công ty cổ phần</p>\n<p>- Tư vấn tổ chức đại hội CNVC.</p>\n<p>- Tư vấn các vấn đề sau khi có quyết định chuyển đổi DNNN thành Công ty cổ phần</p>\n<p>- Tư vấn tổ chức đại hội đồng cổ đông</p>\n<p>- Tư vấn các công việc phải thực hện sau khi chuyển đổi doanh nghiệp:</p>\n<p><span style="text-decoration:underline;color:#ff6600;"><strong>Đào tạo cán bộ và ứng dụng tin học:</strong></span></p>\n<p>- Tổ chức các khoá học bồi dưỡng kế toán trưởng, bồi dưỡng nghiệp vụ kế toán, kiểm toán nội bộ, quản trị doanh nghiệp, ứng dụng tin học trong công tác kế toán.</p>\n<p>- Cung cấp và hướng dẫn sử dụng phần mềm kế toán.</p>\n<p>- Cung cấp các văn bản pháp qui, các thông tin kinh tế - tài chính, sổ sách biểu mẫu, chứng từ.</p>\n<p>- Hỗ trợ tuyển dụng nhân viên.</p>', '', '', 13, '2012-06-06 08:09:03', 5, 0, '', '', 'kiem-toan', '', '', '', 1, 'aasc'),
+(113, 'Tư vấn', '', '', '', '<p>ë Kiểm toán</p>\n<p>- Kiểm toán các Báo cáo Tài chính</p>\n<p>- Kiểm toán hoạt động các Dự án</p>\n<p>- Kiểm toán Báo cáo Quyết toán công trình xây dựng cơ bản</p>\n<p>- Kiểm toán xác định vốn góp liên doanh</p>\n<p>- Giám định tài liệu kế toán, tài chính</p>\n<p>- Kiểm toán quyết toán tỷ lệ nội địa hóa</p>\n<p>ë Kế toán</p>\n<p>- Hướng dẫn áp dụng chế độ kế toán - tài chính.</p>\n<p>- Xây dựng các mô hình tổ chức bộ máy - tổ chức công tác kế toán</p>\n<p>- Mở, ghi sổ kế toán và lập các Báo cáo Tài chính</p>\n<p>- Lập hồ sơ đăng ký chế độ kế toán.</p>\n<p>ë Tư vấn</p>\n<p>- Tư vấn về thực hiện các quy định pháp luật</p>\n<p>- Tư vấn về thuế</p>\n<p>- Tư vấn thực hiện các quy định tài chính, huy động và sử dụng vốn, phân tích tài chính..v.v</p>\n<p>- Tư vấn quyết toán tài chính và quyết toán vốn đầu tư.</p>\n<p>- Thẩm định giá tài sản</p>\n<p>ë Xác định giá trị doanh nghiệp và tư vấn cổ phần hoá</p>\n<p>- Tư vấn xác định giá trị tài sản doanh nghiệp để cổ phần hóa</p>\n<p>- Tư vấn xác định và lập hồ sơ xác định giá trị doanh nghiệp</p>\n<p>- Tư vấn đề xuất phương án xử lý lao động sau khi chuyển sang Công ty cổ phần</p>\n<p>- Tư vấn xây dựng phương án kinh doanh sau khi chuyển sang Công ty cổ phần</p>\n<p>- Tư vấn xây dựng điều lệ Công ty cổ phần</p>\n<p>- Tư vấn tổ chức đại hội CNVC.</p>\n<p>- Tư vấn các vấn đề sau khi có quyết định chuyển đổi DNNN thành Công ty cổ phần</p>\n<p>- Tư vấn tổ chức đại hội đồng cổ đông</p>\n<p>- Tư vấn các công việc phải thực hện sau khi chuyển đổi doanh nghiệp:</p>\n<p>ë Đào tạo cán bộ và ứng dụng tin học</p>\n<p>- Tổ chức các khoá học bồi dưỡng kế toán trưởng, bồi dưỡng nghiệp vụ kế toán, kiểm toán nội bộ, quản trị doanh nghiệp, ứng dụng tin học trong công tác kế toán.</p>\n<p>- Cung cấp và hướng dẫn sử dụng phần mềm kế toán.</p>\n<p>- Cung cấp các văn bản pháp qui, các thông tin kinh tế - tài chính, sổ sách biểu mẫu, chứng từ.</p>\n<p>- Hỗ trợ tuyển dụng nhân viên.</p>', '', '', 11, '2012-06-06 08:09:11', 4, 0, '', '', 'tu-van', '', '', '', 1, 'aasc'),
+(114, 'Xác định giá trị doanh nghiệp', '', '', '', '<p>ë Kiểm toán</p>\n<p>- Kiểm toán các Báo cáo Tài chính</p>\n<p>- Kiểm toán hoạt động các Dự án</p>\n<p>- Kiểm toán Báo cáo Quyết toán công trình xây dựng cơ bản</p>\n<p>- Kiểm toán xác định vốn góp liên doanh</p>\n<p>- Giám định tài liệu kế toán, tài chính</p>\n<p>- Kiểm toán quyết toán tỷ lệ nội địa hóa</p>\n<p>ë Kế toán</p>\n<p>- Hướng dẫn áp dụng chế độ kế toán - tài chính.</p>\n<p>- Xây dựng các mô hình tổ chức bộ máy - tổ chức công tác kế toán</p>\n<p>- Mở, ghi sổ kế toán và lập các Báo cáo Tài chính</p>\n<p>- Lập hồ sơ đăng ký chế độ kế toán.</p>\n<p>ë Tư vấn</p>\n<p>- Tư vấn về thực hiện các quy định pháp luật</p>\n<p>- Tư vấn về thuế</p>\n<p>- Tư vấn thực hiện các quy định tài chính, huy động và sử dụng vốn, phân tích tài chính..v.v</p>\n<p>- Tư vấn quyết toán tài chính và quyết toán vốn đầu tư.</p>\n<p>- Thẩm định giá tài sản</p>\n<p>ë Xác định giá trị doanh nghiệp và tư vấn cổ phần hoá</p>\n<p>- Tư vấn xác định giá trị tài sản doanh nghiệp để cổ phần hóa</p>\n<p>- Tư vấn xác định và lập hồ sơ xác định giá trị doanh nghiệp</p>\n<p>- Tư vấn đề xuất phương án xử lý lao động sau khi chuyển sang Công ty cổ phần</p>\n<p>- Tư vấn xây dựng phương án kinh doanh sau khi chuyển sang Công ty cổ phần</p>\n<p>- Tư vấn xây dựng điều lệ Công ty cổ phần</p>\n<p>- Tư vấn tổ chức đại hội CNVC.</p>\n<p>- Tư vấn các vấn đề sau khi có quyết định chuyển đổi DNNN thành Công ty cổ phần</p>\n<p>- Tư vấn tổ chức đại hội đồng cổ đông</p>\n<p>- Tư vấn các công việc phải thực hện sau khi chuyển đổi doanh nghiệp:</p>\n<p>ë Đào tạo cán bộ và ứng dụng tin học</p>\n<p>- Tổ chức các khoá học bồi dưỡng kế toán trưởng, bồi dưỡng nghiệp vụ kế toán, kiểm toán nội bộ, quản trị doanh nghiệp, ứng dụng tin học trong công tác kế toán.</p>\n<p>- Cung cấp và hướng dẫn sử dụng phần mềm kế toán.</p>\n<p>- Cung cấp các văn bản pháp qui, các thông tin kinh tế - tài chính, sổ sách biểu mẫu, chứng từ.</p>\n<p>- Hỗ trợ tuyển dụng nhân viên.</p>', '', '', 13, '2012-06-06 08:09:18', 3, 0, '', '', 'xac-dinh-gia-tri-doanh-nghiep', '', '', '', 1, 'aasc'),
+(115, 'Kiểm toán Báo cáo Quyết toán vốn đầu tư', '', '', '', '<p>Kiểm toán Báo cáo Quyết toán vốn đầu tư</p>', '', '', 16, '2012-06-06 08:22:28', 2, 0, '', '', 'kiem-toan-bao-cao-quyet-toan-von-dau-tu', '', '', '', 1, 'aasc'),
+(116, 'Dịch vụ mới', '', '', '', '<p>Đang cập nhật ...</p>', '', '', 6, '2012-06-08 01:52:51', 1, 0, '', '', 'dich-vu-moi', '', '', '', 1, 'aasc');
 
 -- --------------------------------------------------------
 
@@ -739,15 +721,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=114 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=119 ;
 
 --
 -- Dumping data for table `dos_module_supports`
 --
 
 INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
-(112, 'Nữ Giám đốc', '', '0915 429 486', 'phuonganhdesign', 1, 'yahoo', 'quangcaothienkim'),
-(113, 'Hổ Trợ Khách Hàng', '', '0915 429 486', 'ctyinthienkim', 2, 'yahoo', 'quangcaothienkim');
+(117, 'Tư vấn kế toán', '', '0929 001 001', 'thanhansoft', 1, 'yahoo', 'aasc'),
+(118, 'Tư vấn kiểm toán', '', '0987 001 001', 'hongvietsoft', 1, 'yahoo', 'aasc');
 
 -- --------------------------------------------------------
 
@@ -812,15 +794,6 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   KEY `fk_dos_module_webs_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `dos_module_webs`
---
-
-INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
-('keywords', 'in ấn, quảng cáo, in kỹ thuật số, in card, in ấn ', 'quangcaothienkim'),
-('description', 'CÔNG TY TNHH QUẢNG CÁO IN ẤN THIÊN KIM -In kỹ thuật số khổ lớn, in card, quảng cáo, hộp đèn,pano, in ấn, quảng cáo, in kỹ thuật số, in card, ', 'quangcaothienkim'),
-('title', 'Quảng cáo Thiên Kim - quangcaothienkim.com', 'quangcaothienkim');
 
 -- --------------------------------------------------------
 
@@ -943,7 +916,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 --
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
-('020512', 'Mẫu hoa tươi: 020512', '2012-05-02 03:10:52', 'Chuyên cung cấp hoa tuoi, hoa cuoi, điện hoa, hoa tuoi van phong, hoa khai trương, hoa chúc mừng, hoa xe, hoa online, hoa chia buồn');
+('010312', 'Mẫu than đá: 010312', '2012-02-29 10:38:05', 'Chuyên bán các loại than đá, than cám');
 
 -- --------------------------------------------------------
 
@@ -964,7 +937,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_bussiness` (
 --
 
 INSERT INTO `dos_templates_has_dos_bussiness` (`dos_templates_template`, `dos_bussiness_bussiness_id`) VALUES
-('020512', 'hoa-tuoi');
+('010312', 'bds-kien-truc-xay-dung');
 
 -- --------------------------------------------------------
 
@@ -1002,43 +975,48 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_modules` (
 --
 
 INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modules_module_id`, `dos_values_value_name`) VALUES
-('020512', 'about', 'advs_bottom'),
-('020512', 'about', 'advs_left'),
-('020512', 'about', 'advs_top'),
-('020512', 'about', 'list_supports'),
-('020512', 'about', 'menu_about'),
-('020512', 'contact', 'advs_bottom'),
-('020512', 'contact', 'advs_left'),
-('020512', 'contact', 'advs_top'),
-('020512', 'contact', 'list_supports'),
-('020512', 'contact', 'menu_products'),
-('020512', 'default', 'about_home'),
-('020512', 'default', 'advs_bottom'),
-('020512', 'default', 'advs_left'),
-('020512', 'default', 'advs_top'),
-('020512', 'default', 'list_supports'),
-('020512', 'default', 'menu_products'),
-('020512', 'default', 'products_new'),
-('020512', 'news', 'advs_bottom'),
-('020512', 'news', 'advs_left'),
-('020512', 'news', 'advs_top'),
-('020512', 'news', 'list_supports'),
-('020512', 'news', 'menu_news'),
-('020512', 'products', 'advs_bottom'),
-('020512', 'products', 'advs_left'),
-('020512', 'products', 'advs_top'),
-('020512', 'products', 'list_supports'),
-('020512', 'products', 'menu_products'),
-('020512', 'services', 'advs_bottom'),
-('020512', 'services', 'advs_center'),
-('020512', 'services', 'advs_top'),
-('020512', 'services', 'list_supports'),
-('020512', 'services', 'menu_services'),
-('020512', 'video', 'advs_bottom'),
-('020512', 'video', 'advs_left'),
-('020512', 'video', 'advs_top'),
-('020512', 'video', 'list_supports'),
-('020512', 'video', 'menu_video');
+('010312', 'about', 'advs_left'),
+('010312', 'about', 'advs_right'),
+('010312', 'about', 'list_supports'),
+('010312', 'about', 'menu_about'),
+('010312', 'about', 'products_hot'),
+('010312', 'contact', 'advs_left'),
+('010312', 'contact', 'advs_right'),
+('010312', 'contact', 'list_supports'),
+('010312', 'contact', 'menu_products'),
+('010312', 'contact', 'products_hot'),
+('010312', 'default', 'about_home'),
+('010312', 'default', 'advs_left'),
+('010312', 'default', 'advs_right'),
+('010312', 'default', 'list_supports'),
+('010312', 'default', 'menu_products'),
+('010312', 'default', 'menu_services'),
+('010312', 'default', 'news_new'),
+('010312', 'default', 'products_hot'),
+('010312', 'default', 'products_new'),
+('010312', 'default', 'video_hot'),
+('010312', 'news', 'advs_left'),
+('010312', 'news', 'advs_right'),
+('010312', 'news', 'menu_news'),
+('010312', 'news', 'news_hot'),
+('010312', 'news', 'news_new'),
+('010312', 'news', 'video_hot'),
+('010312', 'products', 'advs_left'),
+('010312', 'products', 'advs_right'),
+('010312', 'products', 'list_supports'),
+('010312', 'products', 'menu_products'),
+('010312', 'products', 'products_hot'),
+('010312', 'services', 'advs_left'),
+('010312', 'services', 'advs_right'),
+('010312', 'services', 'list_supports'),
+('010312', 'services', 'menu_services'),
+('010312', 'services', 'news_new'),
+('010312', 'services', 'products_hot'),
+('010312', 'video', 'advs_left'),
+('010312', 'video', 'advs_right'),
+('010312', 'video', 'list_supports'),
+('010312', 'video', 'menu_video'),
+('010312', 'video', 'news_new');
 
 -- --------------------------------------------------------
 
@@ -1059,6 +1037,8 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
   `code` varchar(15) DEFAULT NULL,
   `expired` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `import` tinyint(1) NOT NULL DEFAULT '0',
+  `agent_sale` varchar(8) NOT NULL,
+  `agent_tech` varchar(8) DEFAULT NULL,
   `activated` tinyint(1) NOT NULL,
   `dos_templates_template` varchar(6) NOT NULL,
   `dos_provinces_province_id` int(11) NOT NULL,
@@ -1073,8 +1053,8 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 -- Dumping data for table `dos_usernames`
 --
 
-INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('quangcaothienkim', 'info@quangcaothienkim.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-29 04:32:53', 'Nguyễn Thị Phương', '0978273979', 'Công ty In ấn quảng cáo thiên kim', 'user', 'vi', '', '2012-06-27 17:00:00', 0, 1, '020512', 19, 'cong-nghe-thong-tin-vien-thong');
+INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `agent_sale`, `agent_tech`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
+('aasc', 'info@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-06-06 08:01:17', '', '', '', 'user', 'vi', '', '2012-07-05 16:00:00', 0, '20122012', '', 1, '010312', 30, 'luat-ke-toan');
 
 -- --------------------------------------------------------
 
@@ -1112,12 +1092,12 @@ CREATE TABLE IF NOT EXISTS `dos_user_langs` (
 --
 
 INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_username`) VALUES
-('address1', 'Địa chỉ: 95/68, Nguyễn Ái Quốc, Kp.8, P.Tân Phong, Tp.Biên Hòa, Tỉnh Đồng Nai', '', 'quangcaothienkim'),
-('address2', 'ĐT/Fax: (061) 3 896 606  Hotline: 0915.429 486 / 0983 818 414', '', 'quangcaothienkim'),
-('company_name', 'CÔNG TY TNHH QUẢNG CÁO IN ẤN THIÊN KIM', '', 'quangcaothienkim'),
-('company_name_footer', 'CÔNG TY TNHH QUẢNG CÁO IN ẤN THIÊN KIM', '', 'quangcaothienkim'),
-('company_phone', 'Hotline: 0915 429 486', '', 'quangcaothienkim'),
-('copyright', 'Copyright © 2012 thienkim', '', 'quangcaothienkim');
+('address1', 'Trụ sở chính: 29 Hoàng Sa, Quận 1, TP. Hồ Chí Minh - ĐT: (84-8) 10 3908 - 3910 4880 - Fax: (84-8) 3910 4880', '', 'aasc'),
+('address2', 'ĐT: (84-8) 10 3908 - 3910 4880 - Fax: (84-8) 3910 4880', '', 'aasc'),
+('advs', 'Đoi tac', '', 'aasc'),
+('company_name', '', '', 'aasc'),
+('company_phone', 'Tư vấn: (84-8) 3910 39 08 - 3910 48 81', '', 'aasc'),
+('products', '', '', 'aasc');
 
 -- --------------------------------------------------------
 
