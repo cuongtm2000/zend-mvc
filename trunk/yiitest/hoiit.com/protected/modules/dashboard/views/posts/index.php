@@ -5,7 +5,7 @@
         <thead>
             <tr>
                 <th class="txt15"><input onclick="javascript: select_switch(this.checked);" type="checkbox" name="checkall" /></th>
-                <th class="txt60">Order</th>
+                <!-- <th class="txt60">Order</th> -->
                 <th>Title</th>
                 <th>Categories</th>
                 <th>Hit</th>
@@ -30,7 +30,7 @@
                     ?>
                     <tr<?php echo $rowclass ?>>
                         <td><input type="checkbox" name="ids[]" value="<?php echo $value['post_id'] ?>" /></td>
-                        <td><input type="text" name="orders[<?php echo $value['post_id'] ?>]" maxlength="3" class="txt-sort" value="<?php echo $value['post_sort'] ?>" /></td>
+                        <!-- <td><input type="text" name="orders[<?php echo $value['post_id'] ?>]" maxlength="3" class="txt-sort" value="<?php echo $value['post_sort'] ?>" /></td> -->
                         <td><?php echo CHtml::link($title, array('edit', 'id' => $value->post_id)) ?></td>
                         <td><?php echo $value->hoiitCatsCat->cat_name ?></td>
                         <td><?php echo $value['post_hit'] ?></td>
@@ -44,8 +44,8 @@
             <?php endif; ?>
         </tbody>
     </table>
-    <div class="control-button"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/syn.png" alt="Synchronous" align="left" /> <input type="submit" name="syn" value=" Synchronous " /></div>
-    <div class="control-button"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/reorder.png" alt="Sort" align="left" /> <input type="submit" name="sort" value=" Sort " /></div>
+    <!-- <div class="control-button"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/syn.png" alt="Synchronous" align="left" /> <input type="submit" name="syn" value=" Synchronous " /></div>
+    <div class="control-button"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/reorder.png" alt="Sort" align="left" /> <input type="submit" name="sort" value=" Sort " /></div> -->
     <div class="control-button"><a href="javascript:submit_list('enable', '');" title="Show"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/visible.png" alt="Show" align="left" /> Show</a></div>
     <div class="control-button"><a href="javascript:submit_list('disable', '');" title="Hidden"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/hidden.png" alt="Hidden" align="left" /> Hidden</a></div>
     <div class="control-button"><a href="javascript:delete_list('');" title="Delete"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/delete.png" alt="Delete" align="left" /> Delete</a></div>
