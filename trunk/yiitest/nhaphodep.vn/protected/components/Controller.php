@@ -57,6 +57,9 @@ class Controller extends CController {
 			$load = new $value['module_id']();
 			$this->function[$value['value_name']] = $load->$value['function_name']();
 		}
+                Yii::app()->getModule('products');
+		$load = new ProductsCat();
+                $this->function['menu_products']=$load->listItem();
 
 		//Set Logo, Banner
 		$banner = new Banner();

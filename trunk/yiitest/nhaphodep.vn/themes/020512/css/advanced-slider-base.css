@@ -32,6 +32,10 @@
 
 /* END OF SLIDE CAPTION */
 /* main container of the navigation buttons */
+.pixel .navigation-buttons
+{
+	bottom:-50px;
+}
 
 
 /* TOOLTIP */
@@ -132,11 +136,10 @@
 /*Timer advanced slider*/
 .advanced-slider .timer-animation 
 {
-	visibility:hidden;
 	height:20px;
 	position:absolute;
 	z-index:60;
-	bottom:3px;
+	top:3px;
 	right:2px;
 }
 /*End Timer advanced slider*/

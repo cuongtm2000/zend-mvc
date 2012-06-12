@@ -369,9 +369,10 @@
 		}
 		
 		.pp_gallery {
+			visibility:hidden;/*An nhung tam anh thumb trong lighbox*/
 			display: none;
 			left: 50%;
-			margin-top: -50px;
+			margin-top: -40px;
 			position: absolute;
 			z-index: 10000;
 		}
@@ -419,7 +420,7 @@
 				width: 50px;
 			}
 			
-			.pp_gallery li.default a img { display: none; }
+			.pp_gallery li.default a img { display: none }
 			
 			.pp_gallery .pp_arrow_previous,
 			.pp_gallery .pp_arrow_next {
