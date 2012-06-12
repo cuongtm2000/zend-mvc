@@ -15,9 +15,11 @@
     </div> <!--End hd bt left-->
     <div id="banner">
         <ul class="slider">
-            <li class="slider-item"><a href="http://grouplaptrinh.com" title="grouplaptrinh"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner.png" alt="banner" /></a></li>
+            <li class="slider-item"><a href="http://dos.vn" title="dos"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner.png" alt="banner" /></a></li>
             <li class="slider-item"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner1.png" alt="banner1" /></li>
-        </ul>
+			<li class="slider-item"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner2.png" alt="banner1" /></li>
+			<li class="slider-item"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner3.png" alt="banner1" /></li>
+		</ul>
     </div> <!--End banner--> <div class="clear"></div>
 
 </div> <!--End header-btom -->
