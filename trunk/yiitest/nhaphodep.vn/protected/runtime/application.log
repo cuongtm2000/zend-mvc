@@ -736,3 +736,21 @@ Stack trace:
 REQUEST_URI=/nhaphodep.vn/news.html
 HTTP_REFERER=http://dos.vn/nhaphodep.vn/
 ---
+2012/06/13 02:41:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "registration.html".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('registration.ht...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/registration.html
+HTTP_REFERER=http://dos.vn/nhaphodep.vn/login
+---
+2012/06/13 02:41:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index.html".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('index.html')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/index.html
+HTTP_REFERER=http://dos.vn/nhaphodep.vn/news
+---
