@@ -1,0 +1,13 @@
+.infotab{padding: 5px}
+ul.tabs { margin:0 ;padding:0;width: 100%;}
+ul.tabs li {float: left;background:#396AAC;overflow: hidden;position: relative;}
+ul.tabs li a {color:#fff;display: block;padding: 5px 22px;border-right: 2px solid #fff}
+ul.tabs li a:hover {background: #ccc;}
+
+ul.tab_content {margin: 0; padding:5px;list-style: none}
+
+.tab_container {width: 100%;background: #F9F9FB;border: 1px solid #E4E3E3;-webkit-border-radius: 0 0 2px 2px;-moz-border-radius: 0 0 2px 2px}
+.tab_container label{color:#333; margin:0 !important;font-weight:bold;width:100px; float:left}
+.tab_content li{padding:4px 0; margin:0 !important}
+.tab_content input{ margin:0 20px 0 0; padding:3px;width:300px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.tab_content textarea{border:1px solid #ddd; -moz-border-radius: 3px; -webkit-border-radius:3px}
