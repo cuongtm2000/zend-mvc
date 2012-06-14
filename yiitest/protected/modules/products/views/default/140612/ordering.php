@@ -5,6 +5,7 @@
     <?php echo Yii::app()->user->getFlash('contactSuccess'); ?>
 <?php else: ?>
 <h2 class="title-right"><span><?php echo Yii::t('user', 'products.purchase.shopping')?></span></h2>
+
 <div class="frame-tent-right">  
   <table class="form_order" cellspacing="0" cellpadding="5" width="100%">
         <thead>
