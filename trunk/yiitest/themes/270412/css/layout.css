@@ -165,7 +165,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .menu-fter li{ list-style:none;float:left;}
 .menu-fter li a{padding:5px 10px;color:#fff;background:url(../images/bkg-pipe2.gif) no-repeat right}
 .menu-fter .none-line{background:none}
-.copyright { text-align:right;float:right; *margin:10px 0 0 0;*_margin:0;}
+.copyright {width:480px; text-align:right;float:right; *margin:10px 0 0 0;*_margin:0;}
 .copyright a{color:#fff; font-size:10pt}
 
 /* Error */
