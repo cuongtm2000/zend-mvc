@@ -3,6 +3,8 @@
 class DefaultController extends Controller
 {
     public function actionIndex() {
+        $this->layout = '//layouts/column2';
+
         $model = new LoginForm;
         if (isset($_POST['LoginForm'])) {
             $model->attributes = $_POST['LoginForm'];

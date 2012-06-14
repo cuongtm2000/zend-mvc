@@ -81,6 +81,9 @@
                     </form>
                 </div>  <div class="clear"></div>
             </div> <!--End header footer-->
+
+            <?php echo $content ?>
+
             <div id="content">
                 <div id="all-left-content">
                     <div id="left-content">
@@ -145,7 +148,7 @@
                     <div class="clear"></div>
                     <div class="bg-footer-left">
                         <div class="all-tent-fter">
-                            <?php echo $content ?>
+
                             <h2 class="title-fter-left">MUA BÁN NHÀ ĐẤT</h2>
                             <div class="item-sale">
                                 <div class="footer-left">

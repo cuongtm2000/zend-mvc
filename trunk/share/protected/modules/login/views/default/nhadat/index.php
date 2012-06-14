@@ -1,4 +1,4 @@
-<h1 class="title-right"><span>Ä�Äƒng nháº­p</span></h1>
+<h1 class="title-right"><span>Dang nhap</span></h1>
 <div class="frame-tent-right">
     <?php $form = $this->beginWidget('CActiveForm', array('id' => 'frm', 'enableAjaxValidation' => true, 'enableClientValidation' => true, 'htmlOptions' => array('class' => 'form-all'))); ?>
     <fieldset>
@@ -27,7 +27,7 @@
             </li>
             <li>
                 <label>&nbsp;</label>
-                <?php echo CHtml::submitButton('  Ä�Äƒng nháº­p  ', array('class' => 'login', 'name' => 'submit')); ?>
+                <?php echo CHtml::submitButton(' Dang nhap ', array('class' => 'login', 'name' => 'submit')); ?>
             </li>
         </ul>
     </fieldset>
