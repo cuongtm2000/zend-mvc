@@ -37,24 +37,25 @@
 <body>
 <div id="wrapper">
     	<div id="header">
-        	<div id="logo">
-				<?php if($this->logo):?>
-					<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl']?>/" title="<?php echo $this->logo['banner_name']?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/banner/<?php echo $this->logo['banner_url'] ?>" alt="<?php echo $this->logo['banner_name']?>" /></a>
-				<?php else:?>
-					<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl']?>/" title="Logo"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a>
-				<?php endif;?>
-        	</div><!--End Logo-->
-			<?php echo ($this->lang['company_name']) ? '<h1 class="title-city">'.$this->lang['company_name'].'</h1>' : '' ?> <!--End title company-->
-			<div class="clear"></div>
-			<div class="lang">
-				 <?php if(count($this->numLang) > 1):?>
-					 <?php foreach($this->numLang as $value): ?>
-						 <a href="<?php echo ($value=='vi') ? Yii::app()->request->baseUrl.'/' : Yii::app()->request->baseUrl.'/'.$value ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $value?>.gif" alt="<?php echo $this->lang[$value]?>" /> <?php echo $this->lang[$value]?></a>
-					 <?php endforeach?>
-				 <?php endif?>
-			</div>
-			<p class="hot-line"><?php echo $this->lang['company_phone']?></p>
-
+			<div class="header-tent">
+				<div id="logo">
+					<?php if($this->logo):?>
+						<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl']?>/" title="<?php echo $this->logo['banner_name']?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/banner/<?php echo $this->logo['banner_url'] ?>" alt="<?php echo $this->logo['banner_name']?>" /></a>
+					<?php else:?>
+						<a href="<?php echo Yii::app()->request->baseUrl.Yii::app()->session['langUrl']?>/" title="Logo"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a>
+					<?php endif;?>
+				</div><!--End Logo-->
+				<?php echo ($this->lang['company_name']) ? '<h1 class="title-city">'.$this->lang['company_name'].'</h1>' : '' ?> <!--End title company-->
+				<div class="clear"></div>
+				<div class="lang">
+					 <?php if(count($this->numLang) > 1):?>
+						 <?php foreach($this->numLang as $value): ?>
+							 <a href="<?php echo ($value=='vi') ? Yii::app()->request->baseUrl.'/' : Yii::app()->request->baseUrl.'/'.$value ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $value?>.gif" alt="<?php echo $this->lang[$value]?>" /> <?php echo $this->lang[$value]?></a>
+						 <?php endforeach?>
+					 <?php endif?>
+				</div>
+				<p class="hot-line"><?php echo $this->lang['company_phone']?></p>
+			</div>	<!--End header-tent  -->
         </div><!--End header--> 
         <ul id="nav">
 			<?php $size = count($this->nav); $i = 0; foreach($this->nav as $value):?>

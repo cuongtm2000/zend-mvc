@@ -9,8 +9,9 @@ a:hover{color:#000;}
 
 #wrapper {width:979px;margin:auto;}
 /*Header*/
-#header{ margin:5px 0 0 0;padding:10px 0;position:relative}
-#logo{float:left;margin: 0 20px 0 0;overflow:hidden;height:97px}
+#header{height:120px}
+.header-tent{padding:10px 0; margin:5px 0 0 0;position:relative;}
+#logo{float:left;margin: 0 20px 0 0;overflow:hidden;height:104px}
 .title-city{padding:30px 0 0 0; font-size:18pt;color:#EE6B11;font-weight:bold}
 
 .lang{position:absolute;bottom:35px; right:0}
