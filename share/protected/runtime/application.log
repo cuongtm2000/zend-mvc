@@ -1,0 +1,48 @@
+2012/06/14 09:28:38 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "nhadat/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('nhadat/index', NULL, true)
+#1 C:\xampp\htdocs\nhaphodep.vn\protected\modules\default\controllers\DefaultController.php(8): CController->render('nhadat/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/nhaphodep.vn/
+---
+2012/06/14 09:28:48 [error] [exception.CException] exception 'CException' with message 'DefaultController không tìm được view: "nhadat/index".' in C:\xampp\php\library\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('nhadat/index', NULL, true)
+#1 C:\xampp\htdocs\nhaphodep.vn\protected\modules\default\controllers\DefaultController.php(8): CController->render('nhadat/index')
+#2 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#3 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/nhaphodep.vn/
+---
+2012/06/14 09:35:11 [error] [php] file_get_contents(http://dos.vn/read-rss) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.0 500 Zend_Feed_Exception
+ (C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\DefaultController.php:23)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): DefaultController->runAction()
+#2 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): DefaultController->filterAccessControl()
+#5 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CWebApplication->run()
+REQUEST_URI=/nhaphodep.vn/admin/default/read
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\DefaultController.php (23)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)

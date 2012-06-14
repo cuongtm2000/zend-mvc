@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 12, 2012 at 10:23 AM
+-- Generation Time: Jun 14, 2012 at 09:35 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -72,42 +72,42 @@ CREATE TABLE IF NOT EXISTS `dos_configs` (
 --
 
 INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES
-('advs_bottom_height', 32, '', '020512'),
-('advs_bottom_width', 980, '', '020512'),
-('advs_left_height', 220, '', '020512'),
-('advs_left_width', 200, '', '020512'),
-('advs_top_height', 146, '', '020512'),
-('advs_top_width', 250, '', '020512'),
-('banner_height', 290, '', '020512'),
-('banner_width', 725, '', '020512'),
-('logo_height', 110, '', '020512'),
-('logo_width', 285, '', '020512'),
-('max_image_height', 670, '', '020512'),
-('max_image_width', 720, '', '020512'),
-('news_cat_height', 100, '', '020512'),
-('news_cat_width', 143, '', '020512'),
-('news_height_thumb', 100, '', '020512'),
-('news_num_paging_cat', 10, '', '020512'),
-('news_num_paging_hot', 6, '', '020512'),
-('news_num_paging_index', 10, '', '020512'),
-('news_num_paging_new', 6, '', '020512'),
-('news_width_thumb', 143, '', '020512'),
-('products_cat_height', 198, '', '020512'),
-('products_cat_width', 170, '', '020512'),
-('products_height', 500, '', '020512'),
-('products_height_thumb', 198, '', '020512'),
-('products_num_paging_cat', 20, '', '020512'),
-('products_num_paging_hot', 20, '', '020512'),
-('products_num_paging_new', 20, '', '020512'),
-('products_num_paging_other', 4, '', '020512'),
-('products_width', 500, '', '020512'),
-('products_width_thumb', 170, '', '020512'),
-('services_height', 170, '', '020512'),
-('services_width', 170, '', '020512'),
-('video_height_thumb', 150, '', '020512'),
-('video_num_paging_cat', 16, '', '020512'),
-('video_num_paging_index', 16, '', '020512'),
-('video_width_thumb', 170, '', '020512');
+('advs_bottom_height', 32, '', 'nhadat'),
+('advs_bottom_width', 980, '', 'nhadat'),
+('advs_left_height', 220, '', 'nhadat'),
+('advs_left_width', 200, '', 'nhadat'),
+('advs_top_height', 146, '', 'nhadat'),
+('advs_top_width', 250, '', 'nhadat'),
+('banner_height', 290, '', 'nhadat'),
+('banner_width', 725, '', 'nhadat'),
+('logo_height', 110, '', 'nhadat'),
+('logo_width', 285, '', 'nhadat'),
+('max_image_height', 670, '', 'nhadat'),
+('max_image_width', 720, '', 'nhadat'),
+('news_cat_height', 100, '', 'nhadat'),
+('news_cat_width', 143, '', 'nhadat'),
+('news_height_thumb', 100, '', 'nhadat'),
+('news_num_paging_cat', 10, '', 'nhadat'),
+('news_num_paging_hot', 6, '', 'nhadat'),
+('news_num_paging_index', 10, '', 'nhadat'),
+('news_num_paging_new', 6, '', 'nhadat'),
+('news_width_thumb', 143, '', 'nhadat'),
+('products_cat_height', 198, '', 'nhadat'),
+('products_cat_width', 170, '', 'nhadat'),
+('products_height', 500, '', 'nhadat'),
+('products_height_thumb', 198, '', 'nhadat'),
+('products_num_paging_cat', 20, '', 'nhadat'),
+('products_num_paging_hot', 20, '', 'nhadat'),
+('products_num_paging_new', 20, '', 'nhadat'),
+('products_num_paging_other', 4, '', 'nhadat'),
+('products_width', 500, '', 'nhadat'),
+('products_width_thumb', 170, '', 'nhadat'),
+('services_height', 170, '', 'nhadat'),
+('services_width', 170, '', 'nhadat'),
+('video_height_thumb', 150, '', 'nhadat'),
+('video_num_paging_cat', 16, '', 'nhadat'),
+('video_num_paging_index', 16, '', 'nhadat'),
+('video_width_thumb', 170, '', 'nhadat');
 
 -- --------------------------------------------------------
 
@@ -242,16 +242,6 @@ CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
   KEY `fk_dos_templates_has_dos_modules1_dos_templates1` (`dos_templates_template`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `dos_loadfiles`
---
-
-INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, `loadfiles`, `typefile`) VALUES
-('020512', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
-('020512', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js|jquery.simplyscroll.vertical.js', 'javascript'),
-('020512', 'video', 'prettyPhoto.css', 'css'),
-('020512', 'video', 'jquery.prettyPhoto.js', 'javascript');
-
 -- --------------------------------------------------------
 
 --
@@ -302,14 +292,14 @@ CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
 --
 
 INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
-('about', 'quangcaothienkim'),
-('advs', 'quangcaothienkim'),
-('banner', 'quangcaothienkim'),
-('contact', 'quangcaothienkim'),
-('news', 'quangcaothienkim'),
-('products', 'quangcaothienkim'),
-('services', 'quangcaothienkim'),
-('supports', 'quangcaothienkim');
+('about', 'nhaphodep'),
+('advs', 'nhaphodep'),
+('banner', 'nhaphodep'),
+('contact', 'nhaphodep'),
+('news', 'nhaphodep'),
+('products', 'nhaphodep'),
+('services', 'nhaphodep'),
+('supports', 'nhaphodep');
 
 -- --------------------------------------------------------
 
@@ -340,13 +330,6 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   KEY `tag` (`tag`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=166 ;
 
---
--- Dumping data for table `dos_module_abouts`
---
-
-INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(165, 'Giới thiệu', '', '<p><strong>Thiên Kim</strong> là công ty chuyên nghiệp về thiết kế đồ họa, cung cấp nhãn, bao bì hàng hóa, ấn phẩm quảng cáo và truyền thông thương hiệu.</p>\n<p>Nhóm thiết kế của chúng tôi gồm các họa sĩ, chuyên gia mỹ thuật công nghiệp giàu kinh nghiệm về thiết kế logo, bộ nhận diện thương hiệu, brochure, catalog, báo cáo thường niên, kỷ yếu, lịch, nhãn hiệu, bao bì và nhiều sản phẩm thiết kế khác.</p>\n<p>Chúng tôi cũng cung cấp cho khách hàng các loại nhãn, bao bì chất lượng cao và các ấn phẩm cao cấp, sang trọng sử dụng cho việc quảng bá thương hiệu và giới thiệu sản phẩm.</p>\n<p>Sản phẩm do chúng tôi cung cấp đáp ứng các yêu cầu khắt khe nhất về mỹ thuật, chất lượng in ấn và thành phẩm.</p>', '', 29, '2012-06-01 04:30:54', 1, 0, '', '', 'gioi-thieu', '', '', '', 1, 'quangcaothienkim');
-
 -- --------------------------------------------------------
 
 --
@@ -372,15 +355,6 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=186 ;
 
---
--- Dumping data for table `dos_module_advs`
---
-
-INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`, `dos_usernames_username`) VALUES
-(183, 'qc1', '', 'qc1.jpg', 'http://thuonghoi.com', '2012-06-02 17:07:53', '2012-06-02 17:00:00', '2013-06-02 17:00:00', 0, 1, 'top', '_bank', 1, 'quangcaothienkim'),
-(184, 'qc2', '', 'qc2.jpg', 'http://thuonghoi.com', '2012-06-02 17:08:37', '2012-06-02 17:00:00', '2013-06-02 17:00:00', 0, 2, 'top', '_bank', 1, 'quangcaothienkim'),
-(185, 'logo_thuonghoi', '', 'logothuonghoi.jpg', 'http://thuonghoi.com', '2012-06-02 17:31:19', '2012-06-02 17:00:00', '2013-06-02 17:00:00', 0, 3, 'left', '_bank', 0, 'quangcaothienkim');
-
 -- --------------------------------------------------------
 
 --
@@ -401,22 +375,6 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=752 ;
-
---
--- Dumping data for table `dos_module_banners`
---
-
-INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_url`, `banner_link`, `banner_order`, `banner_type`, `position`, `enable`, `dos_usernames_username`) VALUES
-(742, '2012-06-02 16:58:43', 'banner1_cty', 'banner1cty7.jpg', '', 5, 'banners', 'default', 1, 'quangcaothienkim'),
-(743, '2012-06-02 17:04:47', 'banner2', 'banner2.jpg', '', 6, 'banners', 'default', 1, 'quangcaothienkim'),
-(744, '2012-06-02 17:14:03', 'logo_thienkim', 'logothienkim.jpg', '', 7, 'logo', 'default', 0, 'quangcaothienkim'),
-(745, '2012-06-02 17:22:37', 'banner3', 'banner3.jpg', '', 8, 'banners', 'products', 1, 'quangcaothienkim'),
-(746, '2012-06-02 17:22:50', 'banner4', 'banner4.jpg', '', 9, 'banners', 'products', 1, 'quangcaothienkim'),
-(747, '2012-06-02 17:24:18', 'banner5', 'banner5.jpg', '', 10, 'banners', 'about', 1, 'quangcaothienkim'),
-(748, '2012-06-02 17:24:30', 'banner6', 'banne6r.jpg', '', 11, 'banners', 'about', 1, 'quangcaothienkim'),
-(749, '2012-06-02 17:26:11', 'banner7', 'banner7.jpg', '', 12, 'banners', 'services', 1, 'quangcaothienkim'),
-(750, '2012-06-02 17:26:48', 'banner8', 'banner8.jpg', '', 13, 'banners', 'news', 1, 'quangcaothienkim'),
-(751, '2012-06-02 17:27:23', 'banner9', 'banner9.jpg', '', 14, 'banners', 'contact', 1, 'quangcaothienkim');
 
 -- --------------------------------------------------------
 
@@ -444,13 +402,6 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   KEY `fk_dos_module_contacts_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
---
--- Dumping data for table `dos_module_contacts`
---
-
-INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `tagen`, `description`, `descriptionen`, `enable`, `dos_usernames_username`) VALUES
-(16, 'Liên hệ với chung tôi', '', '<p><strong>CÔNG TY TNHH IN ẤN &amp; QUẢNG CÁO THIÊN KIM</strong></p>\n<p><strong>Địa chỉ:</strong> 95/68, Nguyễn Ái Quốc, Kp.8, P.Tân Phong, Tp.Biên Hòa, Tỉnh Đồng Nai</p>\n<p><strong>ĐT/Fax:</strong> (061) 3 896 606</p>\n<p><strong>Hotline:</strong> 0915.429 486 / 0983 818 414</p>\n<p><strong>Email:</strong> <a href="mailto:info@quangcaothienkim.com">info@quangcaothienkim.com</a></p>\n<p><strong>Website:</strong> <a href="http://quangcaothienkim.com">http://quangcaothienkim.com</a></p>', '', '2012-06-01 06:29:15', 1, 0, 0, 'lien-he-voi-chung-toi', '', '', '', '1', 'quangcaothienkim');
-
 -- --------------------------------------------------------
 
 --
@@ -470,18 +421,6 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
   `dos_usernames_username` varchar(45) NOT NULL,
   KEY `fk_dos_module_menus_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `dos_module_menus`
---
-
-INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
-('Trang chủ', '', 'default', '', 1, '', '', '', '', 'quangcaothienkim'),
-('Giới thiệu', '', 'about', '', 2, '', '', '', '', 'quangcaothienkim'),
-('Sản phẩm', '', 'products', '', 3, '', '', '', '', 'quangcaothienkim'),
-('Dịch vụ', '', 'services', '', 4, '', '', '', '', 'quangcaothienkim'),
-('Tin tức & sự kiện', '', 'news', '', 5, '', '', '', '', 'quangcaothienkim'),
-('Liên hệ', '', 'contact', '', 6, '', '', '', '', 'quangcaothienkim');
 
 -- --------------------------------------------------------
 
@@ -557,9 +496,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
 --
 
 INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(109, 0, 'Tin trong nước', '', '', '', 'tin-trong-nuoc', '', '', '', '', 1, '', '', 1, 'quangcaothienkim'),
-(110, 0, 'Tin tức Thông tin Nhà đất mới nhất', '', NULL, NULL, 'tin-tuc-thong-tin-nha-dat-moi-nhat', '', 'Tin tức Thông tin Nhà đất mới nhất', '', '', 2, NULL, NULL, 1, 'quangcaothienkim'),
-(111, 0, 'Thị trường bật động sản', '', NULL, NULL, 'thi-truong-bat-dong-san', '', 'Thị trường bật động sản', '', '', 3, NULL, NULL, 1, 'quangcaothienkim');
+(109, 0, 'Tin trong nước', '', '', '', 'tin-trong-nuoc', '', '', '', '', 1, '', '', 1, 'nhaphodep'),
+(110, 0, 'Tin tức Thông tin Nhà đất mới nhất', '', NULL, NULL, 'tin-tuc-thong-tin-nha-dat-moi-nhat', '', 'Tin tức Thông tin Nhà đất mới nhất', '', '', 2, NULL, NULL, 1, 'nhaphodep'),
+(111, 0, 'Thị trường bật động sản', '', NULL, NULL, 'thi-truong-bat-dong-san', '', 'Thị trường bật động sản', '', '', 3, NULL, NULL, 1, 'nhaphodep');
 
 -- --------------------------------------------------------
 
@@ -675,19 +614,19 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
 --
 
 INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(516, 0, 'Bộ ấn phẩm văn phòng', '', '', '', 'bo-an-pham-van-phong', '', '', '', 'bo-an-pham-van-phong.jpg', '', 1, '', '', 1, 'quangcaothienkim'),
-(517, 0, 'Brochure', '', '', '', 'brochure', '', '', '', 'brochure.jpg', '', 2, '', '', 1, 'quangcaothienkim'),
-(518, 0, 'Catalogue', '', '', '', 'catalogue', '', '', '', 'catalogue.jpg', '', 3, '', '', 1, 'quangcaothienkim'),
-(519, 0, 'Folder', '', '', '', 'folder', '', '', '', 'folder.jpg', '', 4, '', '', 1, 'quangcaothienkim'),
-(520, 0, 'Lịch độc quyền', '', '', '', 'lich-doc-quyen', '', '', '', 'lich-doc-quyen.jpg', '', 5, '', '', 1, 'quangcaothienkim'),
-(521, 0, 'Tờ rơi', '', '', '', 'to-roi', '', '', '', 'to-roi.jpg', '', 6, '', '', 1, 'quangcaothienkim'),
-(522, 0, 'Túi giấy', '', '', '', 'tui-giay', '', '', '', 'tui-giay.jpg', '', 7, '', '', 1, 'quangcaothienkim'),
-(523, 0, 'Bao bì carton', '', '', '', 'bao-bi-carton', '', '', '', 'bao-bi-carton.jpg', '', 8, '', '', 1, 'quangcaothienkim'),
-(524, 0, 'Poster', '', '', '', 'poster', '', '', '', 'poster.jpg', '', 9, '', '', 1, 'quangcaothienkim'),
-(525, 0, 'Thiệp', '', '', '', 'thiep', '', '', '', 'thiep.jpg', '', 10, '', '', 1, 'quangcaothienkim'),
-(526, 0, 'Danh thiếp', '', '', '', 'danh-thiep', '', '', '', 'danh-thiep.jpg', '', 11, '', '', 1, 'quangcaothienkim'),
-(527, 0, 'Bandroll - Bảng quảng cáo', '', '', '', 'bandroll-bang-quang-cao', '', '', '', 'bandroll-bang-quang-cao.jpg', '', 12, '', '', 1, 'quangcaothienkim'),
-(534, 0, 'In kỹ thuật số khổ lớn', '', '', '', 'in-ky-thuat-so-kho-lon', '', '', '', 'in-ky-thuat-so.jpg', '', 13, '', '', 1, 'quangcaothienkim');
+(516, 0, 'Bộ ấn phẩm văn phòng', '', '', '', 'bo-an-pham-van-phong', '', '', '', 'bo-an-pham-van-phong.jpg', '', 1, '', '', 1, 'nhaphodep'),
+(517, 0, 'Brochure', '', '', '', 'brochure', '', '', '', 'brochure.jpg', '', 2, '', '', 1, 'nhaphodep'),
+(518, 0, 'Catalogue', '', '', '', 'catalogue', '', '', '', 'catalogue.jpg', '', 3, '', '', 1, 'nhaphodep'),
+(519, 0, 'Folder', '', '', '', 'folder', '', '', '', 'folder.jpg', '', 4, '', '', 1, 'nhaphodep'),
+(520, 0, 'Lịch độc quyền', '', '', '', 'lich-doc-quyen', '', '', '', 'lich-doc-quyen.jpg', '', 5, '', '', 1, 'nhaphodep'),
+(521, 0, 'Tờ rơi', '', '', '', 'to-roi', '', '', '', 'to-roi.jpg', '', 6, '', '', 1, 'nhaphodep'),
+(522, 0, 'Túi giấy', '', '', '', 'tui-giay', '', '', '', 'tui-giay.jpg', '', 7, '', '', 1, 'nhaphodep'),
+(523, 0, 'Bao bì carton', '', '', '', 'bao-bi-carton', '', '', '', 'bao-bi-carton.jpg', '', 8, '', '', 1, 'nhaphodep'),
+(524, 0, 'Poster', '', '', '', 'poster', '', '', '', 'poster.jpg', '', 9, '', '', 1, 'nhaphodep'),
+(525, 0, 'Thiệp', '', '', '', 'thiep', '', '', '', 'thiep.jpg', '', 10, '', '', 1, 'nhaphodep'),
+(526, 0, 'Danh thiếp', '', '', '', 'danh-thiep', '', '', '', 'danh-thiep.jpg', '', 11, '', '', 1, 'nhaphodep'),
+(527, 0, 'Bandroll - Bảng quảng cáo', '', '', '', 'bandroll-bang-quang-cao', '', '', '', 'bandroll-bang-quang-cao.jpg', '', 12, '', '', 1, 'nhaphodep'),
+(534, 0, 'In kỹ thuật số khổ lớn', '', '', '', 'in-ky-thuat-so-kho-lon', '', '', '', 'in-ky-thuat-so.jpg', '', 13, '', '', 1, 'nhaphodep');
 
 -- --------------------------------------------------------
 
@@ -743,9 +682,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(101, 'Dịch vụ Tư vấn Phong thủy Nhà ở, Văn phòng', '', '', '', '<p>Dịch vụ Tư vấn Phong thủy Nhà ở, Biệt thự, Văn phòng, Nhà hàng, Khách sạn, Quán Bar... Tư vấn Chọn đất, Mua nhà, chọn Hướng nhà, Hướng cửa, Màu sắc, Xem tuổi chủ nhà<br />Tư vấn Phong thuỷ, Nhà đất bao gồm:<br />Tư vấn chọn đất, mua nhà, cải tạo đất theo tuổi chủ nhà theo phong thuỷ<br />Tư vấn chọn hướng cửa chính, vị trí phòng ốc, cửa đi, cửa sổ<br />Tư vấn sự lưu thông không khí, không gian tránh tụ khí, ám khí<br />Tư vấn chọn màu sắc, chất liệu, cách bố trí các vật dụng, đồ đạc trong phòng theo ngũ hành<br />Tư vấn chọn màu sơn tường, sơn cửa, màu thảm, màu rèm theo ngũ hành<br />Xác định kích thước dài, rộng của cửa đi, cửa sổ, giường ngủ theo tuổi bằng thước Lỗ Ban<br />Xem tuổi chủ nhà để chọn ngày xây nhà, sửa nhà, chuyển nhà, đổ móng, đổ trần</p>', '', '', 12, '2012-06-02 17:49:17', 1, 0, '', '', 'dich-vu-tu-van-phong-thuy-nha-o-van-phong', '', 'Dịch vụ Tư vấn Phong thủy Nhà ở, Biệt thự, Văn phòng, Nhà hàng, Khách sạn, Quán Bar... Tư vấn Chọn đất, Mua nhà, chọn Hướng nhà, Hướng cửa, Màu sắc, Xem tuổi chủ nhà', '', 1, 'quangcaothienkim'),
-(102, 'Trung tâm tư vấn pháp luật và dịch vụ nhà - đất', '', '', '', '<p>Trung tâm tư vấn pháp luật và dịch vụ nhà - đất là một đơn vị trực thuộc của HSLAWS.<br />Trung tâm tư vấn pháp luật và dịch vụ nhà - đất là chuyên gia tư vấn về trình tự, thủ tục cấp các loại giấy phép liên quan đến lĩnh vực nhà - đất, thủ tục đăng ký biến động nhà - đất, thủ tục phê duyệt dự án, thủ tục thu hồi đất, bồi thường giải phóng mặt bằng, thủ tục giải quyết tranh chấp đất đai.</p>\r\n<p>Chúng tôi coi việc phát triển mối quan hệ lâu dài với khách hàng là tiêu chí hoạt động hàng đầu. Trung tâm tư vấn pháp luật và dịch vụ nhà - đất luôn xem công việc của khách hàng như chính công việc của mình để đưa ra những tư vấn hợp lý nhất nhằm đảm bảo quyền lợi tối đa cho khách hàng.</p>\r\n<p>Với đội ngũ chuyên viên tư vấn nhiều kinh nghiệm, có quá trình hoạt động thực tiễn lâu dài, có danh sách khách hàng thường xuyên đa dạng trên các lĩnh vực hoạt động, trung tâm tư vấn pháp luật và dịch vụ nhà - đất tích lũy được nhiều thành công và xây dựng được hệ thống tư vấn pháp luật chuyên nghiệp. Hơn nữa, chúng tôi còn thiết lập nhiều mối quan hệ hợp tác tốt với những Văn phòng Luật sư và cơ quan tiến hành thủ tục hành chính trong cả nước.</p>\r\n<p>Uy tín của từng thành viên kết hợp với tinh thần đoàn kết tập thể cùng phấn đấu vì mục tiêu chung là động lực quan trọng để trung tâm tư vấn pháp luật và dịch vụ nhà - đất luôn đáp ứng các yêu cầu ngày càng đa dạng và phức tạp của khách hàng nhằm đảm bảo mang lại sự hài lòng nhất cho khách hàng.</p>\r\n<p>Đến với trung tâm tư vấn pháp luật và dịch vụ nhà - đất, Khách hàng không chỉ nhận được sự tư vấn theo yêu cầu mà còn được tư vấn những phương án tối ưu nhất để đảm bảo quyền và lợi ích hợp pháp của khách hàng.</p>', '', '', 7, '2012-06-02 17:49:30', 2, 0, '', '', 'trung-tam-tu-van-phap-luat-va-dich-vu-nha-dat', '', 'Trung tâm tư vấn pháp luật và dịch vụ nhà - đất', '', 1, 'quangcaothienkim'),
-(103, 'Thiết kế Xây dựng', '', NULL, NULL, '<p>Tư vấn, Thiết kế Xây dựng, Thiết kế sơ bộ, Lập bản vẻ 3D, Thiết kế Kỹ thuật: Kiến trúc, Kết cấu, Điện nước, Khảo sát địa hình và Địa chất công trình, Thẩm định hồ sơ thiết kế<br />Dịch vụ Tư vấn Thiết kế Xây dựng bao gồm:<br />Khảo sát địa hình và Địa chất công trình<br />Tư vấn, Thiết kế, Quy hoạch tổng thể<br />Thiết kế sơ bộ, Lập bản vẽ 3D<br />Thiết kế kỹ thuật: Kiến trúc, Kết cấu, Điện nước<br />Tư vấn Thiết kế Ngoại thất, Cảnh quan, Sân vườn<br />Thiết kế Nhà ở, Nhà phố, Biệt thự, Văn phòng, Nhà hàng, Khách sạn, Quán Bar<br />Thẩm định Hồ sơ thiết kế</p>', '', '', 3, '2012-06-12 07:01:03', 3, 0, NULL, NULL, 'thiet-ke-xay-dung', '', 'Tư vấn, Thiết kế Xây dựng, Thiết kế sơ bộ, Lập bản vẻ 3D, Thiết kế Kỹ thuật: Kiến trúc, Kết cấu, Điện nước, Khảo sát địa hình và Địa chất công trình, Thẩm định hồ sơ thiết kế', '', 1, 'quangcaothienkim');
+(101, 'Dịch vụ Tư vấn Phong thủy Nhà ở, Văn phòng', '', '', '', '<p>Dịch vụ Tư vấn Phong thủy Nhà ở, Biệt thự, Văn phòng, Nhà hàng, Khách sạn, Quán Bar... Tư vấn Chọn đất, Mua nhà, chọn Hướng nhà, Hướng cửa, Màu sắc, Xem tuổi chủ nhà<br />Tư vấn Phong thuỷ, Nhà đất bao gồm:<br />Tư vấn chọn đất, mua nhà, cải tạo đất theo tuổi chủ nhà theo phong thuỷ<br />Tư vấn chọn hướng cửa chính, vị trí phòng ốc, cửa đi, cửa sổ<br />Tư vấn sự lưu thông không khí, không gian tránh tụ khí, ám khí<br />Tư vấn chọn màu sắc, chất liệu, cách bố trí các vật dụng, đồ đạc trong phòng theo ngũ hành<br />Tư vấn chọn màu sơn tường, sơn cửa, màu thảm, màu rèm theo ngũ hành<br />Xác định kích thước dài, rộng của cửa đi, cửa sổ, giường ngủ theo tuổi bằng thước Lỗ Ban<br />Xem tuổi chủ nhà để chọn ngày xây nhà, sửa nhà, chuyển nhà, đổ móng, đổ trần</p>', '', '', 12, '2012-06-02 17:49:17', 1, 0, '', '', 'dich-vu-tu-van-phong-thuy-nha-o-van-phong', '', 'Dịch vụ Tư vấn Phong thủy Nhà ở, Biệt thự, Văn phòng, Nhà hàng, Khách sạn, Quán Bar... Tư vấn Chọn đất, Mua nhà, chọn Hướng nhà, Hướng cửa, Màu sắc, Xem tuổi chủ nhà', '', 1, 'nhaphodep'),
+(102, 'Trung tâm tư vấn pháp luật và dịch vụ nhà - đất', '', '', '', '<p>Trung tâm tư vấn pháp luật và dịch vụ nhà - đất là một đơn vị trực thuộc của HSLAWS.<br />Trung tâm tư vấn pháp luật và dịch vụ nhà - đất là chuyên gia tư vấn về trình tự, thủ tục cấp các loại giấy phép liên quan đến lĩnh vực nhà - đất, thủ tục đăng ký biến động nhà - đất, thủ tục phê duyệt dự án, thủ tục thu hồi đất, bồi thường giải phóng mặt bằng, thủ tục giải quyết tranh chấp đất đai.</p>\r\n<p>Chúng tôi coi việc phát triển mối quan hệ lâu dài với khách hàng là tiêu chí hoạt động hàng đầu. Trung tâm tư vấn pháp luật và dịch vụ nhà - đất luôn xem công việc của khách hàng như chính công việc của mình để đưa ra những tư vấn hợp lý nhất nhằm đảm bảo quyền lợi tối đa cho khách hàng.</p>\r\n<p>Với đội ngũ chuyên viên tư vấn nhiều kinh nghiệm, có quá trình hoạt động thực tiễn lâu dài, có danh sách khách hàng thường xuyên đa dạng trên các lĩnh vực hoạt động, trung tâm tư vấn pháp luật và dịch vụ nhà - đất tích lũy được nhiều thành công và xây dựng được hệ thống tư vấn pháp luật chuyên nghiệp. Hơn nữa, chúng tôi còn thiết lập nhiều mối quan hệ hợp tác tốt với những Văn phòng Luật sư và cơ quan tiến hành thủ tục hành chính trong cả nước.</p>\r\n<p>Uy tín của từng thành viên kết hợp với tinh thần đoàn kết tập thể cùng phấn đấu vì mục tiêu chung là động lực quan trọng để trung tâm tư vấn pháp luật và dịch vụ nhà - đất luôn đáp ứng các yêu cầu ngày càng đa dạng và phức tạp của khách hàng nhằm đảm bảo mang lại sự hài lòng nhất cho khách hàng.</p>\r\n<p>Đến với trung tâm tư vấn pháp luật và dịch vụ nhà - đất, Khách hàng không chỉ nhận được sự tư vấn theo yêu cầu mà còn được tư vấn những phương án tối ưu nhất để đảm bảo quyền và lợi ích hợp pháp của khách hàng.</p>', '', '', 7, '2012-06-02 17:49:30', 2, 0, '', '', 'trung-tam-tu-van-phap-luat-va-dich-vu-nha-dat', '', 'Trung tâm tư vấn pháp luật và dịch vụ nhà - đất', '', 1, 'nhaphodep'),
+(103, 'Thiết kế Xây dựng', '', NULL, NULL, '<p>Tư vấn, Thiết kế Xây dựng, Thiết kế sơ bộ, Lập bản vẻ 3D, Thiết kế Kỹ thuật: Kiến trúc, Kết cấu, Điện nước, Khảo sát địa hình và Địa chất công trình, Thẩm định hồ sơ thiết kế<br />Dịch vụ Tư vấn Thiết kế Xây dựng bao gồm:<br />Khảo sát địa hình và Địa chất công trình<br />Tư vấn, Thiết kế, Quy hoạch tổng thể<br />Thiết kế sơ bộ, Lập bản vẽ 3D<br />Thiết kế kỹ thuật: Kiến trúc, Kết cấu, Điện nước<br />Tư vấn Thiết kế Ngoại thất, Cảnh quan, Sân vườn<br />Thiết kế Nhà ở, Nhà phố, Biệt thự, Văn phòng, Nhà hàng, Khách sạn, Quán Bar<br />Thẩm định Hồ sơ thiết kế</p>', '', '', 3, '2012-06-12 07:01:03', 3, 0, NULL, NULL, 'thiet-ke-xay-dung', '', 'Tư vấn, Thiết kế Xây dựng, Thiết kế sơ bộ, Lập bản vẻ 3D, Thiết kế Kỹ thuật: Kiến trúc, Kết cấu, Điện nước, Khảo sát địa hình và Địa chất công trình, Thẩm định hồ sơ thiết kế', '', 1, 'nhaphodep');
 
 -- --------------------------------------------------------
 
@@ -765,14 +704,6 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=114 ;
-
---
--- Dumping data for table `dos_module_supports`
---
-
-INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
-(112, 'Nữ Giám đốc', '', '0915 429 486', 'phuonganhdesign', 1, 'yahoo', 'quangcaothienkim'),
-(113, 'Hổ Trợ Khách Hàng', '', '0915 429 486', 'ctyinthienkim', 2, 'yahoo', 'quangcaothienkim');
 
 -- --------------------------------------------------------
 
@@ -837,15 +768,6 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   KEY `fk_dos_module_webs_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `dos_module_webs`
---
-
-INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
-('keywords', 'in ấn, quảng cáo, in kỹ thuật số, in card, in ấn ', 'quangcaothienkim'),
-('description', 'CÔNG TY TNHH QUẢNG CÁO IN ẤN THIÊN KIM -In kỹ thuật số khổ lớn, in card, quảng cáo, hộp đèn,pano, in ấn, quảng cáo, in kỹ thuật số, in card, ', 'quangcaothienkim'),
-('title', 'Quảng cáo Thiên Kim - quangcaothienkim.com', 'quangcaothienkim');
 
 -- --------------------------------------------------------
 
@@ -968,7 +890,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 --
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
-('020512', 'Mẫu hoa tươi: 020512', '2012-05-02 03:10:52', 'Chuyên cung cấp hoa tuoi, hoa cuoi, điện hoa, hoa tuoi van phong, hoa khai trương, hoa chúc mừng, hoa xe, hoa online, hoa chia buồn');
+('nhadat', 'Mẫu nhaphodep.vn', '2012-06-14 07:25:21', 'Mẫu nhà đất');
 
 -- --------------------------------------------------------
 
@@ -989,7 +911,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_bussiness` (
 --
 
 INSERT INTO `dos_templates_has_dos_bussiness` (`dos_templates_template`, `dos_bussiness_bussiness_id`) VALUES
-('020512', 'hoa-tuoi');
+('nhadat', 'bds-kien-truc-xay-dung');
 
 -- --------------------------------------------------------
 
@@ -1027,44 +949,44 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_modules` (
 --
 
 INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modules_module_id`, `dos_values_value_name`) VALUES
-('020512', 'about', 'advs_bottom'),
-('020512', 'about', 'advs_left'),
-('020512', 'about', 'advs_top'),
-('020512', 'about', 'list_supports'),
-('020512', 'about', 'menu_about'),
-('020512', 'contact', 'advs_bottom'),
-('020512', 'contact', 'advs_left'),
-('020512', 'contact', 'advs_top'),
-('020512', 'contact', 'list_supports'),
-('020512', 'contact', 'menu_products'),
-('020512', 'default', 'about_home'),
-('020512', 'default', 'advs_bottom'),
-('020512', 'default', 'advs_right'),
-('020512', 'default', 'advs_top'),
-('020512', 'default', 'list_supports'),
-('020512', 'default', 'menu_news'),
-('020512', 'default', 'menu_services'),
-('020512', 'default', 'products_new'),
-('020512', 'news', 'advs_bottom'),
-('020512', 'news', 'advs_left'),
-('020512', 'news', 'advs_top'),
-('020512', 'news', 'list_supports'),
-('020512', 'news', 'menu_news'),
-('020512', 'products', 'advs_bottom'),
-('020512', 'products', 'advs_left'),
-('020512', 'products', 'advs_top'),
-('020512', 'products', 'list_supports'),
-('020512', 'products', 'menu_products'),
-('020512', 'services', 'advs_bottom'),
-('020512', 'services', 'advs_center'),
-('020512', 'services', 'advs_top'),
-('020512', 'services', 'list_supports'),
-('020512', 'services', 'menu_services'),
-('020512', 'video', 'advs_bottom'),
-('020512', 'video', 'advs_left'),
-('020512', 'video', 'advs_top'),
-('020512', 'video', 'list_supports'),
-('020512', 'video', 'menu_video');
+('nhadat', 'about', 'advs_bottom'),
+('nhadat', 'about', 'advs_left'),
+('nhadat', 'about', 'advs_top'),
+('nhadat', 'about', 'list_supports'),
+('nhadat', 'about', 'menu_about'),
+('nhadat', 'contact', 'advs_bottom'),
+('nhadat', 'contact', 'advs_left'),
+('nhadat', 'contact', 'advs_top'),
+('nhadat', 'contact', 'list_supports'),
+('nhadat', 'contact', 'menu_products'),
+('nhadat', 'default', 'about_home'),
+('nhadat', 'default', 'advs_bottom'),
+('nhadat', 'default', 'advs_right'),
+('nhadat', 'default', 'advs_top'),
+('nhadat', 'default', 'list_supports'),
+('nhadat', 'default', 'menu_news'),
+('nhadat', 'default', 'menu_services'),
+('nhadat', 'default', 'products_new'),
+('nhadat', 'news', 'advs_bottom'),
+('nhadat', 'news', 'advs_left'),
+('nhadat', 'news', 'advs_top'),
+('nhadat', 'news', 'list_supports'),
+('nhadat', 'news', 'menu_news'),
+('nhadat', 'products', 'advs_bottom'),
+('nhadat', 'products', 'advs_left'),
+('nhadat', 'products', 'advs_top'),
+('nhadat', 'products', 'list_supports'),
+('nhadat', 'products', 'menu_products'),
+('nhadat', 'services', 'advs_bottom'),
+('nhadat', 'services', 'advs_center'),
+('nhadat', 'services', 'advs_top'),
+('nhadat', 'services', 'list_supports'),
+('nhadat', 'services', 'menu_services'),
+('nhadat', 'video', 'advs_bottom'),
+('nhadat', 'video', 'advs_left'),
+('nhadat', 'video', 'advs_top'),
+('nhadat', 'video', 'list_supports'),
+('nhadat', 'video', 'menu_video');
 
 -- --------------------------------------------------------
 
@@ -1100,7 +1022,8 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 --
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('quangcaothienkim', 'info@quangcaothienkim.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-29 04:32:53', 'Nguyễn Thị Phương', '0978273979', 'Công ty In ấn quảng cáo thiên kim', 'user', 'vi', '', '2012-06-27 17:00:00', 0, 1, '020512', 19, 'cong-nghe-thong-tin-vien-thong');
+('nhaphodep', 'info@nhaphodep.vn', 'e10adc3949ba59abbe56e057f20f883e', '2012-06-14 07:31:44', 'Nhà phố đẹp', '0929001001', 'Công ty cổ phần Thương Hội', 'user', 'vi', NULL, '2013-05-31 17:00:00', 0, 1, 'nhadat', 30, 'bds-kien-truc-xay-dung'),
+('quangcaothienkim', 'info@quangcaothienkim.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-29 04:32:53', 'Nguyễn Thị Phương', '0978273979', 'Công ty In ấn quảng cáo thiên kim', 'user', 'vi', '', '2012-06-27 17:00:00', 0, 1, 'nhadat', 19, 'bds-kien-truc-xay-dung');
 
 -- --------------------------------------------------------
 
@@ -1132,18 +1055,6 @@ CREATE TABLE IF NOT EXISTS `dos_user_langs` (
   PRIMARY KEY (`lang_name`),
   KEY `fk_dos_user_langs_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `dos_user_langs`
---
-
-INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_username`) VALUES
-('address1', 'Địa chỉ: 95/68, Nguyễn Ái Quốc, Kp.8, P.Tân Phong, Tp.Biên Hòa, Tỉnh Đồng Nai', '', 'quangcaothienkim'),
-('address2', 'ĐT/Fax: (061) 3 896 606  Hotline: 0915.429 486 / 0983 818 414', '', 'quangcaothienkim'),
-('company_name', 'CÔNG TY TNHH QUẢNG CÁO IN ẤN THIÊN KIM', '', 'quangcaothienkim'),
-('company_name_footer', 'CÔNG TY TNHH QUẢNG CÁO IN ẤN THIÊN KIM', '', 'quangcaothienkim'),
-('company_phone', 'Hotline: 0915 429 486', '', 'quangcaothienkim'),
-('copyright', 'Copyright © 2012 thienkim', '', 'quangcaothienkim');
 
 -- --------------------------------------------------------
 
