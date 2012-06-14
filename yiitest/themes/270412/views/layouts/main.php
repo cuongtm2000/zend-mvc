@@ -240,9 +240,10 @@
             </ul>
         </div>
         <div class="copyright">
-			<p><?php echo $this->lang['copyright'] ?></p>
+			<h3 class="title-company-fter"><strong><?php echo $this->lang['company_name_footer'] ?></strong></h3>
             <p><?php echo $this->lang['address1'] ?></p>
             <?php echo ($this->lang['address2']) ? '<p>'.$this->lang['address2'].'</p>' : '' ?>
+			<p><?php echo $this->lang['copyright'] ?></p>
 			<p><?php echo $this->lang['developed']?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></p>
         </div> <div class="clear"></div>
     </div><!--End Footer-->
