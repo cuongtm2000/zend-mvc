@@ -40,11 +40,11 @@ a:hover{color:#000;}
 /*header right*/
 .hd-right{position:absolute; right:0; top:0; text-align:right}
 .hotline{color:#ff8602;font-weight:bold}
-.sub-hdright{list-style:none;margin:10px 0 0 0}
+.sub-hdright{list-style:none;padding:23px 0 0 0}
 .sub-hdright li{display:inline}
-.sub-hdright li a{padding:0 7px;border-right:1px solid #3b64ca;color:#3b64ca;font-weight:bold}
+.sub-hdright li a{padding:0 8px 0 5px;background:url(../images/line-hdright.gif) no-repeat right;color:#3b64ca;font-weight:bold}
 .sub-hdright li a:hover{color:#ff8602}
-.sub-hdright .sub-hdright-none a{border:0;padding:0 0 0 7px}
+.sub-hdright .sub-hdright-none a{background:none;padding:0 0 0 7px}
 
 /*******   End header top   *********/
 
@@ -99,6 +99,8 @@ a:hover{color:#000;}
 
 /*Content*/
 #content{ margin:0 0 30px 0}
+.title-left{color:#FF8601;font-family:Times New Roman,Times,serif; font-size:18pt; font-weight:700;margin:0 0 10px 0}
+.frame-tent-right{margin:0 0 20px 0}
 
 /*All left content*/
 #all-left-content{float:left; width:75%}
@@ -135,7 +137,7 @@ a:hover{color:#000;}
 
 /*Item sale and khung img*/
 .item-sale{border-bottom:1px solid #C9E1F4;padding:0 0 15px 0;margin:0 0 20px 0}
-.frame-img{float:left; width:100px;margin:0 10px 5px 0;border:2px solid #A5A7A6;-webkit-border-radius:2px;-moz-border-radius:2px}
+.frame-img-pro{float:left; width:100px;margin:0 10px 5px 0;border:2px solid #A5A7A6;-webkit-border-radius:2px;-moz-border-radius:2px}
 .item-sale p{margin:0 !important}
 
 /*Thong tin ban hang*/
@@ -167,17 +169,30 @@ a:hover{color:#000;}
 .footer-right{float:right;width:60px}
 .title-footer-right{color:#86c61e;border:1px solid #E5E5E5;text-align:center; padding:2px 0;margin:0 0 7px 0; -webkit-border-radius:4px;-moz-border-radius:4px}
 
+/*   Page New  */
+.masuring{text-align:justify;font-size:10pt;list-style:none}
+.masuring li{margin:0 0 5px 0 !important }
+.masuring p{line-height:1.4em}
+.frame-img{float:left;width:143px;margin:0 10px 5px 0}
+.title-masuring{margin:0 0 2px 0}
+.title-masuring a{color:#3393EA;font-size:10pt;font-weight:bold}
+.title-masuring a:hover{color:#FF9119}
+
 /**************    End all left content        *******************/
 
 /*Right content*/
 #right-content{float:right; width:24%}
 
 /*Quang cao ben phai*/
-.adv-right{list-style:none}
+.adv-right{list-style:none;padding:3px 0 0 0}
 .adv-right li{margin:0 0 5px 0}
 
-/*Tu van phong thuy*/
-.frame-right{border:1px solid #CCDFEE;padding:10px;-webkit-border-radius:4px;-moz-border-radius:4px;margin:0 0 10px 0}
+.all-view-new{text-align:right}
+.all-view-new a{margin:0 0 0 3px;font-weight:bold;color:#004181} 
+.all-view-new a:hover{color:#f90}
+
+/* sub-consultant services and news */
+.frame-right{border:1px solid #CCDFEE;padding:10px 5px 10px 10px;-webkit-border-radius:4px;-moz-border-radius:4px;margin:0 0 10px 0}
 .title-right{color:#ffa800;font-size:14px;font-weight:bold;margin:0 0 10px 0}
 .sub-consultant{list-style:none;padding:5px 0 0 18px;margin:0 0 5px 0}
 .sub-consultant li{list-style:disc;color:#ffa800;padding:0 0 6px 0}
