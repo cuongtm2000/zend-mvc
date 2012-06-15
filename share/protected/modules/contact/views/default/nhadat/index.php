@@ -8,7 +8,7 @@
 	<?php $this->pageTitle = ($item) ? $item['title' . LANG] : $this->lang[$this->module->id]; $this->description = $item['description']; ?>
 
 <div class="frame-product-info">
-<h1 class="title-left"><span><?php echo ($item) ? $item['title' . LANG] : $this->lang[$this->module->id] ?></span></h1>
+<h1 class="title-fter-left"><span><?php echo ($item) ? $item['title' . LANG] : $this->lang[$this->module->id] ?></span></h1>
     <?php if($item):?>
 		<div id=""><?php echo $item['content' . LANG] ?></div>
 	<?php endif;?>

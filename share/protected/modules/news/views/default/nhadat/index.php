@@ -1,6 +1,6 @@
 <?php $this->breadcrumbs=array($this->lang[$this->module->id]);?>
 <div class="frame-product-info">
-<h2 class="title-left"><span><?php echo CHtml::encode($this->lang[$this->module->id])?></span></h2>
+<h2 class="title-fter-left"><span><?php echo CHtml::encode($this->lang[$this->module->id])?></span></h2>
 <?php if($listItemIndex['models']):?>
 	<ul class="masuring">
 	<?php foreach($listItemIndex['models'] as $value):?>

@@ -1,7 +1,7 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id] => Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id.'.link'), $info_cat['cat_title'.LANG]); ?>
 <?php $this->pageTitle = $info_cat['cat_title'.LANG]; $this->description = $info_cat['description'.LANG];?>
 <div class="frame-product-info">
-<h2 class="title-left"><span><?php echo $info_cat['cat_title'.LANG] ?></span></h2>
+<h2 class="title-fter-left"><span><?php echo $info_cat['cat_title'.LANG] ?></span></h2>
 	<?php if($list_items['models']): ?>
 	<ul class="masuring">
 		<?php foreach($list_items['models'] as $value): ?>
