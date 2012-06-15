@@ -99,12 +99,12 @@ a:hover{color:#000;}
 
 /*Content*/
 #content{ margin:0 0 30px 0}
-.title-left{color:#FF8601;font-family:Times New Roman,Times,serif; font-size:18pt; font-weight:700;margin:0 0 10px 0}
+.title-left{color:#FF8601;font-size:18pt; font-weight:700;margin:0 0 10px 0}
 .frame-tent-right{margin:0 0 20px 0}
 
 /*All left content*/
 #all-left-content{float:left; width:75%}
-#all-left-content p{margin:0 0 10px 0}
+#all-left-content p ,.frame-product-info p{margin:0 0 10px 0}
 #all-left-content ul li{margin:0 0 0 18px}
 
 /*Left content*/
@@ -226,7 +226,8 @@ a:hover{color:#000;}
 .link{padding:10px 5px 2px 5px}
 .link , .link a{color:#0064a6;font-weight:bold; font-size:10pt}
 
-.frame-product-info{border:1px solid #F0F0F0;-webkit-border-radius:3px;-moz-border-radius:3px;margin:10px 0 10px 0; padding:5px}
+.frame-product-info ,.bg-footer-left{margin:10px 0 10px 0;background:url(../images/bg-footer-content.gif) repeat-x;padding:10px;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0}
+
 .tent-info-product{border-bottom:1px dotted #ccc}
 
 /***** Left page info   ******/
