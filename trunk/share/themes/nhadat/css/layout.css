@@ -60,13 +60,12 @@ a:hover{color:#000;}
 /****   Form tim kiem san pham *****/
 #frm-search{float:left; width:79.5%;margin:0 0 0 15px;padding:5px 0 0 0}
 #frm-search select, #frm-search input{padding:1px;}
-.select{width:21%;float:left}
-.searchbox{width:50%;float:left;color:#f00}
-.searchbox input{width:86%}
-.bton-search{cursor:pointer; font-weight:bold; background:#FF9119;color:#fff;-webkit-border-radius:4px;-moz-border-radius:4px; text-align:center; height:31px;width:73px; border:none}
+.select{width:21%;}
+.input{width:45%}
+
 
 /***   header footer right ***/
-.hder-fter-right{position:absolute; right:5px; top:5px;}
+.hder-fter-right{position:absolute; right:5px; top:11px;}
 .members:hover, .deposit:hover{color:#fff;}
 .members{background:url(../images/bton-hoivien.png) no-repeat left top;padding:8px 10px 8px 35px;font-size:10pt; color:#fff;font-weight:bold}
 .deposit{background:url(../images/bton-kygui.png) no-repeat; padding:8px 35px 8px 20px;font-size:10pt; color:#fff;font-weight:bold }
@@ -129,7 +128,7 @@ a:hover{color:#000;}
 .bton-search-detail{font-weight:bold; background:#FF9119;color:#fff;-webkit-border-radius:4px;-moz-border-radius:4px; padding:5px 15px; border:none}
 
 /*BG footer left contet*/
-.bg-footer-left{background:url(../images/bg-footer-content.gif) repeat-x; width:100%;padding:10px 0;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0}
+.bg-footer-left{background:url(../images/bg-footer-content.gif) repeat-x;padding:10px 0;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0}
 .all-tent-fter{padding:0 10px}
 .title-fter-left{color:#FF8601;font-weight:bold;font-size:11pt;margin:0 0 10px 0}
 
