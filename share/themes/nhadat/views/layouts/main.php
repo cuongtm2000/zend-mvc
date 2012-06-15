@@ -31,7 +31,7 @@
 
                 </div> <!--End logo-->
                 <div class="hd-cter">
-                    <p class="welcome">Xin mời ! <a href="registration.html" title="Đăng ký" class="regis">Đăng Ký</a> hoặc <a href="<?php echo Yii::app()->request->baseUrl?>/dang-nhap" title="Đăng Nhập" class="login">Đăng Nhập</a></p>
+                    <p class="welcome">Xin mời ! <a href="registration.html" title="Đăng ký" class="regis">Đăng ký</a> hoặc <a href="<?php echo Yii::app()->request->baseUrl?>/dang-nhap" title="Đăng nhập" class="login">Đăng nhập</a></p>
                     <div class="frame-nav">
                         <div class="left-nav"></div>
                         <div class="bg-nav">
