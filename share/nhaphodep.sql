@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.0
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 14, 2012 at 03:30 PM
--- Server version: 5.5.8
--- PHP Version: 5.3.5
+-- Generation Time: Jun 15, 2012 at 10:39 AM
+-- Server version: 5.5.16
+-- PHP Version: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -76,8 +76,8 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('advs_bottom_width', 980, '', 'nhadat'),
 ('advs_left_height', 220, '', 'nhadat'),
 ('advs_left_width', 200, '', 'nhadat'),
-('advs_top_height', 146, '', 'nhadat'),
-('advs_top_width', 250, '', 'nhadat'),
+('advs_right_height', 400, '', 'nhadat'),
+('advs_right_width', 300, '', 'nhadat'),
 ('banner_height', 290, '', 'nhadat'),
 ('banner_width', 725, '', 'nhadat'),
 ('logo_height', 110, '', 'nhadat'),
@@ -245,6 +245,7 @@ CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
   KEY `fk_dos_templates_has_dos_modules1_dos_templates1` (`dos_templates_template`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `dos_modules`
@@ -330,7 +331,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=166 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `dos_module_advs`
@@ -353,7 +356,17 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=186 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `dos_module_advs`
+--
+
+INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`, `dos_usernames_username`) VALUES
+(1, 'Quang cao phai', NULL, 'quang-cao-phai.jpg', 'http://hoiit.com/', '2012-06-15 08:38:15', '2012-06-14 16:00:00', '2013-06-05 16:00:00', 0, 1, 'right', '_bank', 1, 'nhaphodep'),
+(2, 'Quảng cáo 2', NULL, 'quang-cao-2.jpg', 'http://mp3.zing.vn/radio', '2012-06-15 08:38:47', '2012-06-14 16:00:00', '2013-06-05 16:00:00', 0, 2, 'right', '_bank', 1, 'nhaphodep');
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `dos_module_banners`
@@ -372,7 +385,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=752 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `dos_module_contacts`
@@ -396,8 +411,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_contacts_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `dos_module_menus`
@@ -417,6 +433,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
   KEY `fk_dos_module_menus_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `dos_module_news`
@@ -484,7 +501,6 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=112 ;
-
 
 --
 -- Dumping data for table `dos_module_news_cat`
@@ -679,7 +695,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=104 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=105 ;
 
 --
 -- Dumping data for table `dos_module_services`
@@ -688,7 +704,10 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
 (101, 'Dịch vụ Tư vấn Phong thủy Nhà ở, Văn phòng', '', '', '', '<p>Dịch vụ Tư vấn Phong thủy Nhà ở, Biệt thự, Văn phòng, Nhà hàng, Khách sạn, Quán Bar... Tư vấn Chọn đất, Mua nhà, chọn Hướng nhà, Hướng cửa, Màu sắc, Xem tuổi chủ nhà<br />Tư vấn Phong thuỷ, Nhà đất bao gồm:<br />Tư vấn chọn đất, mua nhà, cải tạo đất theo tuổi chủ nhà theo phong thuỷ<br />Tư vấn chọn hướng cửa chính, vị trí phòng ốc, cửa đi, cửa sổ<br />Tư vấn sự lưu thông không khí, không gian tránh tụ khí, ám khí<br />Tư vấn chọn màu sắc, chất liệu, cách bố trí các vật dụng, đồ đạc trong phòng theo ngũ hành<br />Tư vấn chọn màu sơn tường, sơn cửa, màu thảm, màu rèm theo ngũ hành<br />Xác định kích thước dài, rộng của cửa đi, cửa sổ, giường ngủ theo tuổi bằng thước Lỗ Ban<br />Xem tuổi chủ nhà để chọn ngày xây nhà, sửa nhà, chuyển nhà, đổ móng, đổ trần</p>', '', '', 12, '2012-06-02 17:49:17', 1, 0, '', '', 'dich-vu-tu-van-phong-thuy-nha-o-van-phong', '', 'Dịch vụ Tư vấn Phong thủy Nhà ở, Biệt thự, Văn phòng, Nhà hàng, Khách sạn, Quán Bar... Tư vấn Chọn đất, Mua nhà, chọn Hướng nhà, Hướng cửa, Màu sắc, Xem tuổi chủ nhà', '', 1, 'nhaphodep'),
 (102, 'Trung tâm tư vấn pháp luật và dịch vụ nhà - đất', '', '', '', '<p>Trung tâm tư vấn pháp luật và dịch vụ nhà - đất là một đơn vị trực thuộc của HSLAWS.<br />Trung tâm tư vấn pháp luật và dịch vụ nhà - đất là chuyên gia tư vấn về trình tự, thủ tục cấp các loại giấy phép liên quan đến lĩnh vực nhà - đất, thủ tục đăng ký biến động nhà - đất, thủ tục phê duyệt dự án, thủ tục thu hồi đất, bồi thường giải phóng mặt bằng, thủ tục giải quyết tranh chấp đất đai.</p>\r\n<p>Chúng tôi coi việc phát triển mối quan hệ lâu dài với khách hàng là tiêu chí hoạt động hàng đầu. Trung tâm tư vấn pháp luật và dịch vụ nhà - đất luôn xem công việc của khách hàng như chính công việc của mình để đưa ra những tư vấn hợp lý nhất nhằm đảm bảo quyền lợi tối đa cho khách hàng.</p>\r\n<p>Với đội ngũ chuyên viên tư vấn nhiều kinh nghiệm, có quá trình hoạt động thực tiễn lâu dài, có danh sách khách hàng thường xuyên đa dạng trên các lĩnh vực hoạt động, trung tâm tư vấn pháp luật và dịch vụ nhà - đất tích lũy được nhiều thành công và xây dựng được hệ thống tư vấn pháp luật chuyên nghiệp. Hơn nữa, chúng tôi còn thiết lập nhiều mối quan hệ hợp tác tốt với những Văn phòng Luật sư và cơ quan tiến hành thủ tục hành chính trong cả nước.</p>\r\n<p>Uy tín của từng thành viên kết hợp với tinh thần đoàn kết tập thể cùng phấn đấu vì mục tiêu chung là động lực quan trọng để trung tâm tư vấn pháp luật và dịch vụ nhà - đất luôn đáp ứng các yêu cầu ngày càng đa dạng và phức tạp của khách hàng nhằm đảm bảo mang lại sự hài lòng nhất cho khách hàng.</p>\r\n<p>Đến với trung tâm tư vấn pháp luật và dịch vụ nhà - đất, Khách hàng không chỉ nhận được sự tư vấn theo yêu cầu mà còn được tư vấn những phương án tối ưu nhất để đảm bảo quyền và lợi ích hợp pháp của khách hàng.</p>', '', '', 7, '2012-06-02 17:49:30', 2, 0, '', '', 'trung-tam-tu-van-phap-luat-va-dich-vu-nha-dat', '', 'Trung tâm tư vấn pháp luật và dịch vụ nhà - đất', '', 1, 'nhaphodep'),
-(103, 'Thiết kế Xây dựng', '', NULL, NULL, '<p>Tư vấn, Thiết kế Xây dựng, Thiết kế sơ bộ, Lập bản vẻ 3D, Thiết kế Kỹ thuật: Kiến trúc, Kết cấu, Điện nước, Khảo sát địa hình và Địa chất công trình, Thẩm định hồ sơ thiết kế<br />Dịch vụ Tư vấn Thiết kế Xây dựng bao gồm:<br />Khảo sát địa hình và Địa chất công trình<br />Tư vấn, Thiết kế, Quy hoạch tổng thể<br />Thiết kế sơ bộ, Lập bản vẽ 3D<br />Thiết kế kỹ thuật: Kiến trúc, Kết cấu, Điện nước<br />Tư vấn Thiết kế Ngoại thất, Cảnh quan, Sân vườn<br />Thiết kế Nhà ở, Nhà phố, Biệt thự, Văn phòng, Nhà hàng, Khách sạn, Quán Bar<br />Thẩm định Hồ sơ thiết kế</p>', '', '', 3, '2012-06-12 07:01:03', 3, 0, NULL, NULL, 'thiet-ke-xay-dung', '', 'Tư vấn, Thiết kế Xây dựng, Thiết kế sơ bộ, Lập bản vẻ 3D, Thiết kế Kỹ thuật: Kiến trúc, Kết cấu, Điện nước, Khảo sát địa hình và Địa chất công trình, Thẩm định hồ sơ thiết kế', '', 1, 'nhaphodep');
+(103, 'Thiết kế Xây dựng', '', NULL, NULL, '<p>Tư vấn, Thiết kế Xây dựng, Thiết kế sơ bộ, Lập bản vẻ 3D, Thiết kế Kỹ thuật: Kiến trúc, Kết cấu, Điện nước, Khảo sát địa hình và Địa chất công trình, Thẩm định hồ sơ thiết kế<br />Dịch vụ Tư vấn Thiết kế Xây dựng bao gồm:<br />Khảo sát địa hình và Địa chất công trình<br />Tư vấn, Thiết kế, Quy hoạch tổng thể<br />Thiết kế sơ bộ, Lập bản vẽ 3D<br />Thiết kế kỹ thuật: Kiến trúc, Kết cấu, Điện nước<br />Tư vấn Thiết kế Ngoại thất, Cảnh quan, Sân vườn<br />Thiết kế Nhà ở, Nhà phố, Biệt thự, Văn phòng, Nhà hàng, Khách sạn, Quán Bar<br />Thẩm định Hồ sơ thiết kế</p>', '', '', 3, '2012-06-12 07:01:03', 3, 0, NULL, NULL, 'thiet-ke-xay-dung', '', 'Tư vấn, Thiết kế Xây dựng, Thiết kế sơ bộ, Lập bản vẻ 3D, Thiết kế Kỹ thuật: Kiến trúc, Kết cấu, Điện nước, Khảo sát địa hình và Địa chất công trình, Thẩm định hồ sơ thiết kế', '', 1, 'nhaphodep'),
+(104, 'cvbcvbcvb', '', NULL, NULL, '<p>bcbvcbcv</p>\r\n<p>vcbcvbvcbv<br />jnjnjnjnjn</p>\r\n<p>cvbcvbcvbcvb</p>\r\n<p>cvbcvbcvbcvbcvbcvbcvbcvb</p>', '', '', 15, '2012-06-15 03:33:16', 4, 0, NULL, NULL, 'cvbcvbcvb', '', '', '', 1, 'nhaphodep');
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `dos_module_supports`
@@ -705,7 +724,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=114 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `dos_module_video`
@@ -769,6 +790,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
   KEY `fk_dos_module_webs_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `dos_nationals`
@@ -887,14 +909,10 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 --
 -- Dumping data for table `dos_templates`
 --
---
--- Dumping data for table `dos_templates`
---
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
 ('nhadat', 'Mẫu nhaphodep.vn', '2012-06-14 07:25:21', 'Mẫu nhà đất');
 
--- ----
 -- --------------------------------------------------------
 
 --
@@ -909,6 +927,9 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_bussiness` (
   KEY `fk_dos_templates_has_dos_bussiness_dos_templates1` (`dos_templates_template`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `dos_templates_has_dos_bussiness`
+--
 
 INSERT INTO `dos_templates_has_dos_bussiness` (`dos_templates_template`, `dos_bussiness_bussiness_id`) VALUES
 ('nhadat', 'bds-kien-truc-xay-dung');
@@ -1021,10 +1042,10 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 -- Dumping data for table `dos_usernames`
 --
 
-
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('nhaphodep', 'info@nhaphodep.vn', 'e10adc3949ba59abbe56e057f20f883e', '2012-06-14 07:31:44', 'Nhà phố đẹp', '0929001001', 'Công ty cổ phần Thương Hội', 'user', 'vi', NULL, '2013-05-31 17:00:00', 0, 1, 'nhadat', 30, 'bds-kien-truc-xay-dung'),
-('quangcaothienkim', 'info@quangcaothienkim.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-29 04:32:53', 'Nguyễn Thị Phương', '0978273979', 'Công ty In ấn quảng cáo thiên kim', 'user', 'vi', '', '2012-06-27 17:00:00', 0, 1, 'nhadat', 19, 'bds-kien-truc-xay-dung');
+('nhaphodep', 'info@nhaphodep.vn', 'e10adc3949ba59abbe56e057f20f883e', '2012-06-14 07:31:44', 'Nhà phố đẹp', '0929001001', 'Công ty cổ phần Thương Hội', 'user', 'vi', NULL, '2013-05-31 17:00:00', 0, 1, 'nhadat', 30, 'bds-kien-truc-xay-dung');
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `dos_usernames_has_dos_modules`
@@ -1054,10 +1075,6 @@ CREATE TABLE IF NOT EXISTS `dos_user_langs` (
   PRIMARY KEY (`lang_name`),
   KEY `fk_dos_user_langs_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `dos_user_langs`
---
 
 -- --------------------------------------------------------
 

@@ -108,9 +108,16 @@
             </div> <!--End footer left content-->
         </div>  <!--End all left content-->
         <div id="right-content">
-            <ul class="adv-right">
-                <li><a href="#" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/adv-right2.jpg" alt="adv1" /></a></li>
-            </ul> <!--End quang cao-->
+			<?php if(isset($this->function['advs_right']) && ($this->function['advs_right'])):?>
+			<ul class="adv-right">
+				<?php foreach($this->function['advs_right'] as $value): ?>
+				<li>
+					<a href="<?php echo $value['url'] ?>" target="<?php echo $value['type'] ?>" title="<?php echo $value['title'.Yii::app()->session['lang']] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.Yii::app()->session['lang']] ?>" /></a>
+				</li>
+				<?php endforeach; ?>
+			</ul>
+			<?php endif;?>
+
             <div class="frame-right">
                 <h1 class="title-right">Tư vấn phong thủy</h1>
                 <ul id="tab1" class="sub-consultant tab_content">
