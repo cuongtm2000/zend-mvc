@@ -1,8 +1,7 @@
 <div class="frame-product-info">
-<h1 class="title-right"><span>Dang nhap</span></h1>
+<h1 class="title-right"><span>Đăng nhập</span></h1>
     <?php $form = $this->beginWidget('CActiveForm', array('id' => 'frm', 'enableAjaxValidation' => true, 'enableClientValidation' => true, 'htmlOptions' => array('class' => 'form-all'))); ?>
     <fieldset>
-
         <?php if (Yii::app()->user->hasFlash('message')): ?>
             <div class="errorSummary successSummary">
                 <ul>
@@ -27,7 +26,7 @@
             </li>
             <li>
                 <label>&nbsp;</label>
-                <?php echo CHtml::submitButton(' Dang nhap ', array('class' => 'singin', 'name' => 'submit')); ?>
+                <?php echo CHtml::submitButton(' Đăng nhập ', array('class' => 'singin', 'name' => 'submit')); ?>
             </li>
         </ul>
     </fieldset>

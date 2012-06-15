@@ -1,9 +1,8 @@
 <?php
 
-class DefaultController extends Controller
-{
+class DefaultController extends Controller {
     public function actionIndex() {
-        $this->layout = '//layouts/column2';
+        $this->layout = '//layouts/column-2';
 
         $model = new LoginForm;
         if (isset($_POST['LoginForm'])) {
@@ -17,7 +16,7 @@ class DefaultController extends Controller
             Yii::app()->user->setFlash('message', 'Successful registration.');
         }
 
-         $this->render(Yii::app()->session['template'].'/index', array('model' => $model));
+        $this->render(Yii::app()->session['template'] . '/index', array('model' => $model));
     }
 
 }
