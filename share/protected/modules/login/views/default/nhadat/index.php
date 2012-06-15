@@ -22,9 +22,8 @@
             </li>
             <li>
                 <label>&nbsp;</label>
-				<?php echo $form->label($model, 'rememberMe', array('class' => 'remember')); ?>
-                <?php echo $form->checkBox($model, 'rememberMe', array('class' => 'remember-check')); ?>
-                
+				<?php echo $form->checkBox($model, 'rememberMe', array('class' => 'remember-check')); ?>
+				<?php echo $form->label($model, 'rememberMe', array('class' => 'remember')); ?>  
             </li>
             <li>
                 <label>&nbsp;</label>

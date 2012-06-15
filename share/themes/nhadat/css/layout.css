@@ -303,8 +303,8 @@ a:hover{color:#000;}
 .bt-frm-login{ list-style:none;padding:0 0 15px 0}
 .forgot{color:#444; font-weight:bold}
 .forgot:hover{ color:#000;text-decoration:underline}
-.bt-frm-login .remember{float:none}
-.bt-frm-login .remember-check{width:auto;background:#f90}
+.bt-frm-login .remember{float:none;margin:0 0 0 5px}
+.bt-frm-login .remember-check{width:auto;position:relative;top:2px}
 .bt-frm-login .bton-dk,.bt-frm-login .singin{margin:10px 0 5px 0;background:#372D27;color:#fff;padding:7px 0px; text-align:center; cursor:pointer;width:100px;border:none;font-weight:bold}
 .bt-frm-login .bton-dk{margin:10px 0 5px 0}
 
