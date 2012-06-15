@@ -67,11 +67,11 @@
                             
                             <option value="12">Các loại khác</option>
                         </select>
-						<div class="searchbox">
-							<input type="text" name="search" />	
-						</div>  	
-                        <div class="hder-fter-right">
-                            <input type="submit"  value="Tìm kiếm" class="bton-search"/>  
+
+							<input type="text" name="search" class="input" />	
+							<input type="submit"  value="Tìm kiếm"/>  
+		
+                        <div class="hder-fter-right"> 
                             <a href="#" title="" class="members">Hội Viện</a>
                             <a href="#" title="" class="deposit">Ký Gửi</a>
                         </div>
