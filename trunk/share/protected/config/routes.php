@@ -48,4 +48,7 @@ return array(
 
     '<language:(vi|en)>/<module:\w+>' => '<module>/default/index', //ex: en/about, en/products
     '<language:(vi|en)>' => 'default/default',
+
+    //login modules
+    '<login:(dang-nhap)>' => 'login/default', //index
 );
