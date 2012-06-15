@@ -16,3 +16,236 @@ Stack trace:
 REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/line-hdright.gif
 HTTP_REFERER=http://localhost/nhaphodep.vn/
 ---
+2012/06/15 03:31:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/thi-truong-bat-dong-san-nhieu-dau-hieu-khoi-sac.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/thi-truong-bat-dong-san-nhieu-dau-hieu-khoi-sac.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/news
+---
+2012/06/15 03:31:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/ha-noi-ban-hanh-don-gia-xay-nha-o-moi.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/ha-noi-ban-hanh-don-gia-xay-nha-o-moi.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/news
+---
+2012/06/15 03:31:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/bat-dong-san-va-moi-quan-he-huu-co.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/bat-dong-san-va-moi-quan-he-huu-co.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/news
+---
+2012/06/15 03:31:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/quite-cong-bo-phien-ban-quite-imposing-plus-3.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/quite-cong-bo-phien-ban-quite-imposing-plus-3.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/news
+---
+2012/06/15 03:31:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/anapurna-m2-uv--gia-tang-toc-do-va-san-luong.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/anapurna-m2-uv--gia-tang-toc-do-va-san-luong.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/news
+---
+2012/06/15 03:32:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/bat-dong-san-va-moi-quan-he-huu-co.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/bat-dong-san-va-moi-quan-he-huu-co.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:32:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/anapurna-m2-uv--gia-tang-toc-do-va-san-luong.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/anapurna-m2-uv--gia-tang-toc-do-va-san-luong.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:32:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/thi-truong-bat-dong-san-nhieu-dau-hieu-khoi-sac.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/thi-truong-bat-dong-san-nhieu-dau-hieu-khoi-sac.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:32:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/ha-noi-ban-hanh-don-gia-xay-nha-o-moi.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/ha-noi-ban-hanh-don-gia-xay-nha-o-moi.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:32:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/quite-cong-bo-phien-ban-quite-imposing-plus-3.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/quite-cong-bo-phien-ban-quite-imposing-plus-3.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:32:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login/index".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('login/index')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/login/index
+---
+2012/06/15 03:34:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/bat-dong-san-va-moi-quan-he-huu-co.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/bat-dong-san-va-moi-quan-he-huu-co.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:34:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/quite-cong-bo-phien-ban-quite-imposing-plus-3.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/quite-cong-bo-phien-ban-quite-imposing-plus-3.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:34:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/anapurna-m2-uv--gia-tang-toc-do-va-san-luong.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/anapurna-m2-uv--gia-tang-toc-do-va-san-luong.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:34:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/ha-noi-ban-hanh-don-gia-xay-nha-o-moi.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/ha-noi-ban-hanh-don-gia-xay-nha-o-moi.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:34:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/thi-truong-bat-dong-san-nhieu-dau-hieu-khoi-sac.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/thi-truong-bat-dong-san-nhieu-dau-hieu-khoi-sac.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:44:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/bat-dong-san-va-moi-quan-he-huu-co.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/bat-dong-san-va-moi-quan-he-huu-co.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:44:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/thi-truong-bat-dong-san-nhieu-dau-hieu-khoi-sac.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/thi-truong-bat-dong-san-nhieu-dau-hieu-khoi-sac.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:44:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/ha-noi-ban-hanh-don-gia-xay-nha-o-moi.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/ha-noi-ban-hanh-don-gia-xay-nha-o-moi.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:44:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/quite-cong-bo-phien-ban-quite-imposing-plus-3.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/quite-cong-bo-phien-ban-quite-imposing-plus-3.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:44:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/anapurna-m2-uv--gia-tang-toc-do-va-san-luong.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/anapurna-m2-uv--gia-tang-toc-do-va-san-luong.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:45:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/thi-truong-bat-dong-san-nhieu-dau-hieu-khoi-sac.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/thi-truong-bat-dong-san-nhieu-dau-hieu-khoi-sac.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:45:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/quite-cong-bo-phien-ban-quite-imposing-plus-3.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/quite-cong-bo-phien-ban-quite-imposing-plus-3.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:45:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/bat-dong-san-va-moi-quan-he-huu-co.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/bat-dong-san-va-moi-quan-he-huu-co.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:45:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/anapurna-m2-uv--gia-tang-toc-do-va-san-luong.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/anapurna-m2-uv--gia-tang-toc-do-va-san-luong.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
+2012/06/15 03:45:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nhaphodep/image/news/ha-noi-ban-hanh-don-gia-xay-nha-o-moi.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/public/userfiles/image/nhaphodep/image/news/ha-noi-ban-hanh-don-gia-xay-nha-o-moi.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/tin-tuc-su-kien
+---
