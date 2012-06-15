@@ -67,8 +67,9 @@
                             
                             <option value="12">Các loại khác</option>
                         </select>
-
-                        <input type="text" name="search" class="searchbox" size="10"/>
+						<div class="searchbox">
+							<input type="text" name="search" />	
+						</div>  	
                         <div class="hder-fter-right">
                             <input type="submit"  value="Tìm kiếm" class="bton-search"/>  
                             <a href="#" title="" class="members">Hội Viện</a>

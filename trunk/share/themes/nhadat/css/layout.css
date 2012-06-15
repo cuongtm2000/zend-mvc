@@ -53,15 +53,16 @@ a:hover{color:#000;}
  
 /***  header footer left  ***/
 .hder-fter-left{float:left;width:182px}
-.title-list{background:url(../images/bg-list.gif) no-repeat;width:182px;color:#fff;padding: 8px 0 10px 0; text-align:center;font-weight:bold;font-size:
+.title-list{background:url(../images/bg-list.gif) no-repeat;width:100%;color:#fff;padding: 8px 0 10px 0; text-align:center;font-weight:bold;font-size:
 13px}
 .title-list a{color:#fff}
 
 /****   Form tim kiem san pham *****/
 #frm-search{float:left; width:79.5%;margin:0 0 0 15px;padding:5px 0 0 0}
 #frm-search select, #frm-search input{padding:1px;}
-.select{width:21%}
-.searchbox{width:55%;background:#fff;color:#f00}
+.select{width:21%;float:left}
+.searchbox{width:50%;float:left;color:#f00}
+.searchbox input{width:86%}
 .bton-search{cursor:pointer; font-weight:bold; background:#FF9119;color:#fff;-webkit-border-radius:4px;-moz-border-radius:4px; text-align:center; height:31px;width:73px; border:none}
 
 /***   header footer right ***/
@@ -330,6 +331,6 @@ a:hover{color:#000;}
 
 /* Moi  all-right-content */
 #all-right-content{float:right; width:84.6% }
-#left-content-2{float:left; width:14.7%;background:#3C64C7;padding:0 0 3px 0;-webkit-border-radius:0 0 0 5px }
+#left-content-2{float:left; width:14.57%;background:#3C64C7;padding:0 0 3px 0;-webkit-border-radius:0 0 0 5px }
 .frame-search-detail-2{float:left; width:71.5%; text-align:center}
 #right-content-2{float:right; width:28%}
