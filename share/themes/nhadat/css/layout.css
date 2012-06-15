@@ -223,10 +223,10 @@ a:hover{color:#000;}
 
 
 /*Page Info */
-.link{padding:10px 5px 10px 5px}
+.link{padding:10px 5px 2px 5px}
 .link , .link a{color:#0064a6;font-weight:bold; font-size:10pt}
 
-.frame-product-info{border:1px solid #F0F0F0;-webkit-border-radius:3px;-moz-border-radius:3px;margin:0 0 10px 0; padding:5px}
+.frame-product-info{border:1px solid #F0F0F0;-webkit-border-radius:3px;-moz-border-radius:3px;margin:10px 0 10px 0; padding:5px}
 .tent-info-product{border-bottom:1px dotted #ccc}
 
 /***** Left page info   ******/
@@ -259,8 +259,19 @@ a:hover{color:#000;}
 
 /****  End right pro info ***/
 
-/* Frame contact*/
-.frame-contact{background:url(../images/bg-footer-content.gif) repeat-x; border:1px solid #F0F0F0;margin:0 0 10px 0; padding:5px 0}
+
+/** Form lien he  **/
+.frame-contact{list-style:none;margin:0 0 10px 0}
+.frame-contact label{color:#555; margin:0 !important;font-weight:bold;width:100px; float:left}
+.frame-contact li{padding:4px 0; margin:0 !important}
+.frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.frame-contact textarea{border:1px solid #ddd; width:350px;-moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-contact span{color:#F00;margin:0 5px 0 0}
+
+.frame-contact .bton-dk{margin:10px 0 5px 30px;background:#372E27;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-contact .bton-dk{margin:10px 10px 5px 0}
+
+/*.frame-contact{background:url(../images/bg-footer-content.gif) repeat-x; border:1px solid #F0F0F0;margin:0 0 10px 0; padding:5px 0}
 .title-contact{font-size:14pt;border-bottom:1px solid #F0F0F0;margin:0 0 8px 0; padding:5px 0}
 .title-contact span{padding:0 0 0 10px}
 
@@ -277,7 +288,7 @@ a:hover{color:#000;}
 .frm-conact-post input, .frm-conact-post textarea  {border:1px solid #ccc;padding:3px; width:100%}
 .frm-conact-post p{font-weight:bold;color:#444}
 .bton-contact{width:60px !important; border:none; background:#436DD9;color:#fff; font-weight:bold;font-size:11pt;-webkit-border-radius:4px; -moz-border-radius:4px;cursor:pointer}
-
+*/
 /* End page info*/
 
 /* Form Dang ky va Dang nhap*/
@@ -292,7 +303,9 @@ a:hover{color:#000;}
 .bt-frm-login{ list-style:none;padding:0 0 15px 0}
 .forgot{color:#444; font-weight:bold}
 .forgot:hover{ color:#000;text-decoration:underline}
-.bt-frm-login .bton-dk,.bt-frm-login .singin{margin:10px 0 5px 30px;background:url(../images/button.gif) no-repeat;color:#fff;padding:7px 0px; text-align:center; cursor:pointer;width:100px;border:none;font-weight:bold}
+.bt-frm-login .remember{float:none}
+.bt-frm-login .remember-check{width:auto;background:#f90}
+.bt-frm-login .bton-dk,.bt-frm-login .singin{margin:10px 0 5px 0;background:#372D27;color:#fff;padding:7px 0px; text-align:center; cursor:pointer;width:100px;border:none;font-weight:bold}
 .bt-frm-login .bton-dk{margin:10px 0 5px 0}
 
 
@@ -308,6 +321,9 @@ a:hover{color:#000;}
 .price-tip{color:#f00; font-weight:bold}
 /*-- End Tooltip --*/
 
-
+/* Error */
+.errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
+.errorSummary ul{margin:10px; padding:0}
+.errorSummary ul li{padding:2px 0; color: red;margin:0 0 0 40px}
 
 

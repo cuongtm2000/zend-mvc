@@ -6,16 +6,17 @@
     </div>
 <?php else: ?>
 	<?php $this->pageTitle = ($item) ? $item['title' . LANG] : $this->lang[$this->module->id]; $this->description = $item['description']; ?>
-<h1 class="title-right"><span><?php echo ($item) ? $item['title' . LANG] : $this->lang[$this->module->id] ?></span></h1>
-<div class="frame-tent-right">
+
+<div class="frame-product-info">
+<h1 class="title-left"><span><?php echo ($item) ? $item['title' . LANG] : $this->lang[$this->module->id] ?></span></h1>
     <?php if($item):?>
-		<div id="frame-info-contact"><?php echo $item['content' . LANG] ?></div>
+		<div id=""><?php echo $item['content' . LANG] ?></div>
 	<?php endif;?>
 	
 	<?php $form = $this->beginWidget('CActiveForm', array('id'=>'frm', 'enableAjaxValidation'=>true, 'enableClientValidation' =>true));?>
 		<?php echo $form->errorSummary($contact, ''); ?>
 		<p><?php echo $this->lang['contact_msg']?></p>
-			<ul class="frame-contact">
+			<ul class="frame-contact ">
 				<li>
 					<?php echo $form->labelEx($contact, 'fullname') ?>
 					<?php echo $form->textField($contact, 'fullname'); ?> 
