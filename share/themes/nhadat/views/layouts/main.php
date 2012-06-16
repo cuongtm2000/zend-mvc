@@ -31,14 +31,35 @@
 
                 </div> <!--End logo-->
                 <div class="hd-cter">
-                    <p class="welcome">Xin mời ! <a href="registration.html" title="Đăng ký" class="regis">Đăng ký</a> hoặc <a href="<?php echo Yii::app()->request->baseUrl?>/dang-nhap" title="Đăng nhập" class="login">Đăng nhập</a></p>
+                <p class="welcome">
+                    <?php if (Yii::app()->user->isGuest == true): ?>
+                    Xin mời ! <a href="<?php echo Yii::app()->baseUrl ?>/dang-ky" title="Đăng ký" class="regis">Đăng ký</a> hoặc <a href="<?php echo Yii::app()->baseUrl ?>/dang-nhap" title="Đăng nhập" class="login">Đăng nhập</a>
+                <?php else :?>
+                   
+                       Chào <b><?php echo Yii::app()->user->name;?></b>! <a href="<?php echo Yii::app()->baseUrl ?>/login/default/logout" title="Thoát" class="login">Thoát</a>
+                    
+               <?php endif ?></p>
+                <div class="clear"></div>
+                
+                    
                     <div class="frame-nav">
                         <div class="left-nav"></div>
                         <div class="bg-nav">
                             <ul id="nav">
-                                <li><a href="index.html" title="" class="select-nav">Chào bán</a></li>
+                                <?php 
+                                    if(isset($this->function['menu_productstype']) && is_array($this->function['menu_productstype']))
+                                        foreach ($this->function['menu_productstype'] as $value) {
+                                            echo '<li><a href="'.Yii::app()->baseUrl.'/phan-loai/'.$value['tag'].'" title="'.$value['type_title'].'" >'.$value['type_title'].'</a></li>';
+                                        }
+                                ?>
+                                
+                                
+                                
+                                
+                                
+                                <!--li><a href="index.html" title="" class="select-nav">Chào bán</a></li>
                                 <li><a href="about.html" title="">Cho thuê</a></li>
-                                <li class="none-line"><a href="news.html" title="">Sang nhượng</a></li>
+                                <li class="none-line"><a href="news.html" title="">Sang nhượng</a></li-->
                             </ul>  
                         </div> <!--bg nav-->
                     </div> <!--End frame nav-->
@@ -46,31 +67,31 @@
                 <div class="hd-right">
                     <p class="hotline"><?php echo $this->lang['company_phone'] ?></p>
                     <ul class="sub-hdright">
-                        <li><a href="<?php echo Yii::app()->request->baseUrl?>/<?php echo Yii::t('user', 'services.link')?>" title="Dịch vụ nhà đất">Dịch vụ nhà đất</a></li>
-                        <li><a href="<?php echo Yii::app()->request->baseUrl?>/<?php echo Yii::t('user', 'news.link')?>" title="Tư vấn phong thủy">Tư vấn phong thủy</a></li>
-                        <li class="sub-hdright-none"><a href="<?php echo Yii::app()->request->baseUrl?>/<?php echo Yii::t('user', 'contact.link')?>" title="Liên hệ">Liên hệ</a></li>
+                        <li><a href="<?php echo Yii::app()->request->baseUrl ?>/<?php echo Yii::t('user', 'services.link') ?>" title="Dịch vụ nhà đất">Dịch vụ nhà đất</a></li>
+                        <li><a href="<?php echo Yii::app()->request->baseUrl ?>/<?php echo Yii::t('user', 'news.link') ?>" title="Tư vấn phong thủy">Tư vấn phong thủy</a></li>
+                        <li class="sub-hdright-none"><a href="<?php echo Yii::app()->request->baseUrl ?>/<?php echo Yii::t('user', 'contact.link') ?>" title="Liên hệ">Liên hệ</a></li>
                     </ul>
                 </div> <!--End hot line-->
             </div><!--End header-->
             <div class="hder-fter">
                 <div class="hder-fter-left">
-                    <h2 class="title-list"><span><a href="<?php echo Yii::app()->baseUrl?>">TRANG CHỦ</a></span></h2>
+                    <h2 class="title-list"><span><a href="<?php echo Yii::app()->baseUrl ?>">TRANG CHỦ</a></span></h2>
                 </div>
                 <div class="all-right-fter" >
                     <form action="" id="frm-search" name="frmlistproduct" method="post">
                         <select size="1" name="listproduct" class="select">
                             <option value="0">Chọn nhóm sản phẩm</option>
                             <?php foreach ($this->function['menu_products'] as $value): ?>
-                                <option value="<?php echo $value['tag']?>"><?php echo $value['cat_title']?></option>
+                                <option value="<?php echo $value['tag'] ?>"><?php echo $value['cat_title'] ?></option>
                             <?php endforeach; ?>
-                            
-                            
+
+
                             <option value="12">Các loại khác</option>
                         </select>
 
-							<input type="text" name="search" class="input" />	
-							<input type="submit"  value="Tìm kiếm"/>  
-		
+                        <input type="text" name="search" class="input" />	
+                        <input type="submit"  value="Tìm kiếm"/>  
+
                         <div class="hder-fter-right"> 
                             <a href="#" title="" class="members">Hội Viện</a>
                             <a href="#" title="" class="deposit">Ký Gửi</a>

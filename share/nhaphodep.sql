@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 3.5.0
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 15, 2012 at 10:39 AM
--- Server version: 5.5.16
--- PHP Version: 5.3.8
+-- Generation Time: Jun 16, 2012 at 08:58 PM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -657,14 +657,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_type` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`type_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `dos_module_products_type`
 --
 
 INSERT INTO `dos_module_products_type` (`type_id`, `type_title`, `tag`, `pic_desc`, `type_order`, `type_enable`, `dos_usernames_username`) VALUES
-(1, 'Nhà bán', 'nha-ban', NULL, 1, 1, '');
+(1, 'Nhà bán', 'nha-ban', NULL, 1, 1, ''),
+(2, 'Cho thuê', 'cho-thue', NULL, 1, 1, ''),
+(3, 'Sang nhượng', 'sang-nhuong', NULL, 3, 1, '');
 
 -- --------------------------------------------------------
 
@@ -1021,8 +1023,12 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
   `password` varchar(45) NOT NULL,
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `fullname` varchar(45) DEFAULT NULL,
+  `cmnd` int(10) NOT NULL,
+  `address` varchar(100) NOT NULL,
   `phone` varchar(15) DEFAULT NULL,
   `company` varchar(100) DEFAULT NULL,
+  `bank_name` varchar(45) NOT NULL,
+  `bank_number` int(13) NOT NULL,
   `role` varchar(45) NOT NULL,
   `language` varchar(20) NOT NULL,
   `code` varchar(15) DEFAULT NULL,
@@ -1042,8 +1048,11 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 -- Dumping data for table `dos_usernames`
 --
 
-INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('nhaphodep', 'info@nhaphodep.vn', 'e10adc3949ba59abbe56e057f20f883e', '2012-06-14 07:31:44', 'Nhà phố đẹp', '0929001001', 'Công ty cổ phần Thương Hội', 'user', 'vi', NULL, '2013-05-31 17:00:00', 0, 1, 'nhadat', 30, 'bds-kien-truc-xay-dung');
+INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `cmnd`, `address`, `phone`, `company`, `bank_name`, `bank_number`, `role`, `language`, `code`, `expired`, `import`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
+('nhaphodep', 'info@nhaphodep.vn', 'e10adc3949ba59abbe56e057f20f883e', '2012-06-14 07:31:44', 'Nhà phố đẹp', 0, '', '0929001001', 'Công ty cổ phần Thương Hội', '', 0, 'user', 'vi', NULL, '2013-05-31 17:00:00', 0, 1, 'nhadat', 30, 'bds-kien-truc-xay-dung'),
+('ninh', 'ninh@yac.com', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-06-16 17:48:55', 'Ninh', 2147483647, 'Đồng Nai', '235466789099089', NULL, 'ACB', 2147483647, 'user', 'vi', NULL, '2012-07-15 17:00:00', 0, 1, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
+('ninh1', 'ninh@yac.com', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-06-16 18:01:40', 'Ninh', 2147483647, 'Đồng Nai', '235466789099089', NULL, 'ACB', 2147483647, 'user', 'vi', NULL, '2012-07-15 17:00:00', 0, 1, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
+('tinhungphat', 'ninh@yac.com', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-06-16 18:05:20', 'ds', 2147483647, 'Đồng Nai', '235466789099089', NULL, 'ACB', 2147483647, 'user', 'vi', NULL, '2012-07-15 17:00:00', 0, 1, 'nhadat', 19, 'bds-kien-truc-xay-dung');
 
 -- --------------------------------------------------------
 

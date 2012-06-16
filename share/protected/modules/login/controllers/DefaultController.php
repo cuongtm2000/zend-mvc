@@ -4,6 +4,9 @@ class DefaultController extends Controller {
     public function actionIndex() {
         $this->layout = '//layouts/column-2';
 
+        if(Yii::app()->session['logged'])
+            $this->redirect(Yii::app()->user->returnUrl);
+            
         $model = new LoginForm;
         if (isset($_POST['LoginForm'])) {
             $model->attributes = $_POST['LoginForm'];
@@ -18,5 +21,8 @@ class DefaultController extends Controller {
 
         $this->render(Yii::app()->session['template'] . '/index', array('model' => $model));
     }
-
+	public function actionLogout() {
+		Yii::app()->user->logout();
+		$this->redirect(Yii::app()->homeUrl);
+	}
 }
