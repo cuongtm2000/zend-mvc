@@ -3,26 +3,23 @@
 class DefaultController extends Controller {
 
     public function actionIndex() {
-
-        $model = new Username('create');
-
-        if (isset($_POST['User'])) {
-            $model->attributes = $_POST['User'];
+        $model = new Username('register');
+        if (isset($_POST['Username'])) {
+            $model->attributes = $_POST['Username'];
             if ($model->save()) {
                 Yii::app()->session['reg_success'] = true;
+                $this->redirect(Yii::app()->baseUrl . '/dang-ky/thanh-cong');
             }
         }
 
-        $this->render('index', array(
-            'model' => $model,
-        ));
+        $this->render(Yii::app()->session['template'] . '/index', array('model' => $model));
     }
 
     public function actionSuccess() {
         if (!Yii::app()->session['reg_success']) {
-            $this->redirect(Yii::app()->request->baseUrl . '/dang-ky-thanh-vien.html');
+            $this->redirect(Yii::app()->request->baseUrl . '/dang-ky');
         }
-        $this->render('success');
+        $this->render(Yii::app()->session['template'] . '/success');
     }
 
 }

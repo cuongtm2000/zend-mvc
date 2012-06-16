@@ -51,4 +51,6 @@ return array(
 
     //login modules
     '<login:(dang-nhap)>' => 'login/default', //index
+    '<register:(dang-ky)>' => 'register', //index
+    '<register:(dang-ky)>/thanh-cong' => 'register/default/success', //index
 );
