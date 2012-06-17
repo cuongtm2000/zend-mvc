@@ -149,9 +149,7 @@
                     <li> <a class="pagenav" href="#tab2">2</a></li>
                     <li><a class="pagenav" href="#tab3">3</a></li>
                     <li> <a class="pagenav" href="#tab4">4</a></li>
-                    <li><b class="posted"><a href="#" title="">Đăng hỏi đáp</a></b>
-                        <b class="all-view"><a href="#" title="" >Xem tất cả</a></b>
-                    </li>
+                    <li><b class="all-view"><a href="#" title="Xem tất cả">Xem tất cả</a></b></li>
                 </ul>
                 <div class="clear"></div>
             </div> <!--End tu van phong thuy-->
