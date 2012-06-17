@@ -212,15 +212,14 @@ a:hover{color:#000;}
 .posted a:hover,.all-view a:hover{background:none; color:#f90}
 
 /*Footer*/
-#footer{text-align:center;font-size:10pt;}
+#footer{text-align:center;color:#0064a6;background:url(../images/bg-footer-page.gif) repeat-x;padding-top:10px}
+#footer p{padding: 0; margin: 1px 0}
 #footer a{color:#0064a6}
 #footer a:hover{color:#f90}
 .logo-footer{margin:0 0 10px 0}
 .nav-fter{list-style:none;margin:0 0 3px 0}
 .nav-fter li{display:inline}
 .nav-fter li a{padding:0 10px;font-size:10pt;font-weight:bold}
-.frame-info{line-height:1.5em; color:#0064a6;background:url(../images/bg-footer-page.gif) repeat-x;padding:10px 0}
-
 
 /*Page Info */
 .link{padding:10px 5px 2px 5px}
@@ -333,3 +332,10 @@ a:hover{color:#000;}
 #left-content-2{float:left; width:14.57%;background:#3C64C7;padding:0 0 3px 0;-webkit-border-radius:0 0 0 5px }
 .frame-search-detail-2{float:left; width:71.5%; text-align:center; background: red}
 #right-content-2{float:right; width:28%}
+
+/* table format */
+table {border-collapse : separate; border-spacing : 0;width : 100%; border : 1px solid #e5e5e5;}
+caption, th, td {text-align : left; font-weight : normal;}
+table, td, th {vertical-align : middle;}
+thead tr th {font-weight : bold; background : #C8EEF4; border-bottom : 1px solid #C6C6C6; padding : 5px; font-size:10pt; color:#333}
+tbody tr td {padding : 6px 5px; background : #fff; color : #111; cursor: pointer}

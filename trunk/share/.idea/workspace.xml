@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="a77bbcbe-2488-437e-aba1-ff45ffe09e28" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/runtime/cache/10d792e002d1d6c6d32933292c7223b5.bin" afterPath="$PROJECT_DIR$/protected/runtime/cache/10d792e002d1d6c6d32933292c7223b5.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/main.php" afterPath="$PROJECT_DIR$/protected/config/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/routes.php" afterPath="$PROJECT_DIR$/protected/config/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Username.php" afterPath="$PROJECT_DIR$/protected/models/Username.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/products/models/ProductsType.php" afterPath="$PROJECT_DIR$/protected/modules/products/models/ProductsType.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/nhadat/css/layout.css" afterPath="$PROJECT_DIR$/themes/nhadat/css/layout.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/nhadat/views/layouts/column-3.php" afterPath="$PROJECT_DIR$/themes/nhadat/views/layouts/column-3.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/nhadat/views/layouts/main.php" afterPath="$PROJECT_DIR$/themes/nhadat/views/layouts/main.php" />
     </list>
     <ignored path="nhaphodep.vn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,7 +30,53 @@
     <favorites_list name="nhaphodep.vn" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Username.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/models/Username.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="208" column="29" selection-start="9582" selection-end="9582" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/users/views/default/nhadat/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="88" selection-start="314" selection-end="314" vertical-scroll-proportion="-4.576923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/nhadat/views/layouts/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="73" column="31" selection-start="5131" selection-end="5141" vertical-scroll-proportion="0.1826923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/nhadat/css/layout.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="17" selection-start="2020" selection-end="2042" vertical-scroll-proportion="-6.92">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/users/controllers/DefaultController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="98" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -35,21 +86,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/themes/nhadat/views/layouts/column2.php" />
-        <option value="$PROJECT_DIR$/themes/nhadat/views/layouts/column1.php" />
-        <option value="$PROJECT_DIR$/protected/modules/login/views/default/nhadat/index.php" />
-        <option value="$PROJECT_DIR$/themes/nhadat/views/layouts/column-2.php" />
         <option value="$PROJECT_DIR$/protected/modules/login/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/protected/modules/default/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/protected/modules/services/controllers/DefaultController.php" />
-        <option value="$PROJECT_DIR$/protected/config/routes.php" />
         <option value="$PROJECT_DIR$/protected/modules/contact/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/protected/modules/register/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/protected/modules/default/views/default/nhadat/index.php" />
-        <option value="$PROJECT_DIR$/themes/nhadat/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/modules/products/controllers/DefaultController.php" />
-        <option value="$PROJECT_DIR$/themes/nhadat/css/layout.css" />
         <option value="$PROJECT_DIR$/themes/nhadat/views/layouts/column-3.php" />
+        <option value="$PROJECT_DIR$/protected/modules/products/models/ProductsType.php" />
+        <option value="$PROJECT_DIR$/protected/config/main.php" />
+        <option value="$PROJECT_DIR$/protected/config/routes.php" />
+        <option value="$PROJECT_DIR$/protected/modules/users/controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/protected/modules/users/views/default/nhadat/index.php" />
+        <option value="$PROJECT_DIR$/protected/models/Username.php" />
+        <option value="$PROJECT_DIR$/themes/nhadat/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/themes/nhadat/css/layout.css" />
       </list>
     </option>
   </component>
@@ -266,7 +318,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="register" />
+              <option name="myItemId" value="users" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -288,55 +340,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="register" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nhaphodep.vn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nhaphodep.vn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="products" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nhaphodep.vn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nhaphodep.vn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="products" />
+              <option name="myItemId" value="users" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -370,7 +374,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="products" />
+              <option name="myItemId" value="users" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -396,7 +400,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="login" />
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -418,7 +422,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="login" />
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -440,11 +444,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -462,49 +462,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nhadat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nhaphodep.vn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nhaphodep.vn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -580,14 +538,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22230652" sideWeight="0.0" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22230652" sideWeight="0.0" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -657,48 +615,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/modules/login/views/default/nhadat/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="14" selection-start="290" selection-end="290" vertical-scroll-proportion="0.098076925" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/services/controllers/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="26" selection-start="540" selection-end="540" vertical-scroll-proportion="0.57781756" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/nhadat/views/layouts/column-1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="275" selection-end="275" vertical-scroll-proportion="0.22326455" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="22" selection-start="2095" selection-end="2102" vertical-scroll-proportion="0.3761996" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/contact/views/default/nhadat/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/contact/controllers/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="45" selection-start="134" selection-end="134" vertical-scroll-proportion="0.15567766" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/nhadat/views/layouts/column-2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="80" selection-start="1141" selection-end="1141" vertical-scroll-proportion="0.54221386" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/login/controllers/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="8" selection-start="96" selection-end="133" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/register/controllers/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="45" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
@@ -709,13 +625,6 @@
     <entry file="file://$PROJECT_DIR$/protected/modules/default/views/default/nhadat/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="12.692307">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/nhadat/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="3734" selection-end="3734" vertical-scroll-proportion="-8.884615">
           <folding />
         </state>
       </provider>
@@ -741,16 +650,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/nhadat/css/layout.css">
+    <entry file="file://$PROJECT_DIR$/themes/nhadat/views/layouts/column-3.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="59" selection-start="4451" selection-end="4471" vertical-scroll-proportion="0.33333334">
+        <state line="22" column="21" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.7192308">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/nhadat/views/layouts/column-3.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/ProductsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="21" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.7192308">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/products/models/ProductsType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="143" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="13" selection-start="2176" selection-end="2184" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/services/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="8" selection-start="91" selection-end="128" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/users/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="98" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/users/views/default/nhadat/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="88" selection-start="314" selection-end="314" vertical-scroll-proportion="-4.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Username.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="208" column="29" selection-start="9582" selection-end="9582" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/nhadat/css/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="17" selection-start="2020" selection-end="2042" vertical-scroll-proportion="-6.92">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/nhadat/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="31" selection-start="5131" selection-end="5141" vertical-scroll-proportion="0.1826923">
           <folding />
         </state>
       </provider>
