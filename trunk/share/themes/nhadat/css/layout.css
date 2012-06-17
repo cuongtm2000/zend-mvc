@@ -108,7 +108,7 @@ a:hover{color:#000;}
 #all-left-content ul li{margin:0 0 0 18px}
 
 /*Left content*/
-#left-content{float:left; width:185px;background:#3C64C7;padding:0 0 3px 0;-webkit-border-radius:0 0 0 5px }
+#left-content{float:left; width:185px; background:#3C64C7; padding:0 0 3px 0; -webkit-border-radius:0 0 0 5px }
 
 .nav-left{list-style:none;background:#EDF7FF;margin:0 0 0 3px;border-right:1px solid #87A5AF}
 .nav-left li{padding:5px 0; border-bottom:1px solid #87A5AF;margin:0 !important}

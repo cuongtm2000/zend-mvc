@@ -2,13 +2,26 @@
     <div id="content">
         <div id="all-left-content">
             <div id="left-content">
-
                 <?php if (isset($this->function['menu_products']) && ($this->function['menu_products'])): ?>
                 <ul class="nav-left">
                     <?php Common::menuMultiLevel($this->function['menu_products'], 'ProductsCat', Yii::t('user', 'products.link')); ?>
                 </ul>
                 <?php endif; ?>
 
+                <?php if(isset($this->function['list_supports']) && ($this->function['list_supports'])):?>
+                <h2><span><?php echo $this->lang['supports'] ?></span></h2>
+                <ul class="support">
+                    <?php foreach($this->function['list_supports'] as $value): ?>
+                    <?php if($value['support_type']=='yahoo'): ?>
+                        <li>
+                            <?php if($value['support_name'.Yii::app()->session['lang']]) echo '<p>'.$value['support_name'.Yii::app()->session['lang']].'</p>'; ?>
+                            <?php if($value['support_phone']) echo '<p>'.$value['support_phone'].'</p>'; ?>
+                            <a href="ymsgr:sendIM?<?php echo $value['support_value'] ?>"><img src="http://mail.opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2" border="0" alt="<?php echo $value['support_value'] ?>" /></a>
+                        </li>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </ul>
+                <?php endif; ?>
 
             </div> <!--End left content-->
 
