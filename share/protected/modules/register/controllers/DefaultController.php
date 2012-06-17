@@ -3,6 +3,7 @@
 class DefaultController extends Controller {
 
     public function actionIndex() {
+        $this->layout = '//layouts/column-2';
         $model = new Username('register');
         if (isset($_POST['Username'])) {
             $model->attributes = $_POST['Username'];
