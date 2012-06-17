@@ -2,6 +2,7 @@
 
 class DefaultController extends Controller {
 	public function actionIndex() {
+		$this->layout = '//layouts/column-2';
 		$this->setSeoPage(); //set Seo page
 
 		$model = ucfirst($this->module->id);
@@ -10,6 +11,7 @@ class DefaultController extends Controller {
 	}
 
 	public function actionCats($cid, $page = 0) {
+		$this->layout = '//layouts/column-3';
 		$model = ucfirst($this->module->id);
 		$model_cat = $model . 'Cat';
 
@@ -21,6 +23,7 @@ class DefaultController extends Controller {
 	}
 
 	public function actionView($id) {
+		$this->layout = '//layouts/column-2';
 		$model = ucfirst($this->module->id);
 		$model_class = new $model();
 
