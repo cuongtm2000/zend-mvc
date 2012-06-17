@@ -11,58 +11,11 @@
 
 
             </div> <!--End left content-->
-            <div class="frame-search-detail">
+
 
                 <?php echo $content; ?>
 
-                <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img.jpg" alt="" />
-                <form action="" name="searchdetail" method="post" class="frm-search-detail">
-                    <h3 class="title-detail">TÌM KIẾM CHI TIẾT</h3>
-                    <ul>
-                        <li><label>
-                            <select size="1" name="hometype" class="hometype">
-                                <option value="0">Loại nhà đất</option>
-                                <option value="1">Đất thổ cư</option>
-                                <option value="2">Đất nông nghiệp</option>
-                                <option value="3">Đất chung cư</option>
-                                <option value="4">Nhà cấp 4</option>
-                                <option value="5">Nhà biêth thự</option>
-                            </select>
-                        </label>
-                            <select size="1" name="long">
-                                <option value="0">Dài</option>
-                                <option value="5">50m</option>
-                            </select>
-                            <select size="1" name="wide">
-                                <option value="0">Rộng</option>
-                                <option value="1">4m</option>
-                                <option value="6">25m</option>
-                            </select>
-                            <select size="1" name="price">
-                                <option value="0">Mức giá</option>
-                                <option value="1">200.000.000 Đồng</option>
-                                <option value="9">6.000.000.000 Đồng</option>
-                            </select>
-                        </li>
-                        <li>
-                            <label>
-                                <select id="location" name="location" class="location">
-                                    <option value="0">Tỉnh thành</option>
-                                    <option value="1">An Giang</option>
-                                    <option value="2">Bà rịa - Vũng tàu</option>
 
-                                </select>
-                            </label>
-                            <select size="1" name="district" class="district">
-                                <option value="0">Quận / Huyện</option>
-                                <option value="1">Quận 1</option>
-
-                            </select>
-                            <input type="submit" value="Tìm kiếm" class="bton-search-detail" />
-                        </li>
-                    </ul>
-                </form>
-            </div> <!--End frame-search-detail -->
             <div class="clear"></div>
             <div class="bg-footer-left">
                 <div class="all-tent-fter">

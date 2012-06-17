@@ -3,6 +3,7 @@
 class DefaultController extends Controller {
 
     public function actionIndex() {
+        $this->layout = '//layouts/column-3';
         $this->setSeoPage(); //set Seo page
 
         $model = new ProductsCat();
@@ -10,6 +11,7 @@ class DefaultController extends Controller {
     }
 
     public function actionCats($cid, $page = 0) {
+        $this->layout = '//layouts/column-3';
         $model = new ProductsCat();
         $items = new Products();
 

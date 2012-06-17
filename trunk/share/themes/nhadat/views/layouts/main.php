@@ -52,11 +52,7 @@
                                             echo '<li><a href="'.Yii::app()->baseUrl.'/phan-loai/'.$value['tag'].'" title="'.$value['type_title'].'" >'.$value['type_title'].'</a></li>';
                                         }
                                 ?>
-                                
-                                
-                                
-                                
-                                
+
                                 <!--li><a href="index.html" title="" class="select-nav">Chào bán</a></li>
                                 <li><a href="about.html" title="">Cho thuê</a></li>
                                 <li class="none-line"><a href="news.html" title="">Sang nhượng</a></li-->
