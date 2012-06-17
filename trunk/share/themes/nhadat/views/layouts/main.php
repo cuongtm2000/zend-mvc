@@ -36,7 +36,7 @@
                     Xin mời ! <a href="<?php echo Yii::app()->baseUrl ?>/dang-ky" title="Đăng ký" class="regis">Đăng ký</a> hoặc <a href="<?php echo Yii::app()->baseUrl ?>/dang-nhap" title="Đăng nhập" class="login">Đăng nhập</a>
                 <?php else :?>
                    
-                       Chào <b><?php echo Yii::app()->user->name;?></b>! <a href="<?php echo Yii::app()->baseUrl ?>/login/default/logout" title="Thoát" class="login">Thoát</a>
+                       Chào <b><?php echo Yii::app()->user->name;?></b>! <a href="<?php echo Yii::app()->baseUrl ?>/dang-tin" title="Đăng tin" class="login">Đăng tin</a> <a href="<?php echo Yii::app()->baseUrl ?>/login/default/logout" title="Thoát" class="login">Thoát</a>
                     
                <?php endif ?></p>
                 <div class="clear"></div>
@@ -49,7 +49,7 @@
                                 <?php 
                                     if(isset($this->function['menu_productstype']) && is_array($this->function['menu_productstype']))
                                         foreach ($this->function['menu_productstype'] as $value) {
-                                            echo '<li><a href="'.Yii::app()->baseUrl.'/phan-loai/'.$value['tag'].'" title="'.$value['type_title'].'" >'.$value['type_title'].'</a></li>';
+                                            echo '<li><a href="'.Yii::app()->baseUrl.'/san-pham/t/'.$value['tag'].'" title="'.$value['type_title'].'" >'.$value['type_title'].'</a></li>';
                                         }
                                 ?>
 

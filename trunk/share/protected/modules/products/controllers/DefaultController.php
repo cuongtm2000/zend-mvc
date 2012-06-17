@@ -18,7 +18,20 @@ class DefaultController extends Controller {
         $info_cat = $model->findCatByTag($cid); //find cat_id
         $this->render(Yii::app()->session['template'] . '/cats', array('info_cat' => $info_cat, 'list_sub_cats' => $model->listItem($info_cat['cat_id']), 'list_items' => $items->listItemByCat($info_cat['cat_id'])));
     }
+    public function actionTypes($cid) {
+        $model = new ProductsType();
+        $items = new Products();
 
+        $info_cat = $model->findTypeByTag($cid); 
+        $this->render(
+                Yii::app()->session['template'] . '/types', 
+                array(
+                    'info_cat' => $info_cat, 
+                    //'list_sub_cats' => $model->listItem($info_cat['cat_id']), 
+                    'list_items' => $items->listItemByType($info_cat['type_id'])
+                )
+        );
+    }
     public function actionView($id) {
         $model = ucfirst($this->module->id);
         $model_class = new $model();

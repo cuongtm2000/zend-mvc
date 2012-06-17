@@ -248,7 +248,7 @@ class Products extends CActiveRecord {
 		$criteria->condition = 'enable = 1';
 		$criteria->limit = Configs::configTemplate('products_num_paging_new', Yii::app()->session['template']);
 
-		return $this::model()->findAll($criteria);
+		return $this->model()->findAll($criteria);
 	}
 
 	//Front end - list item hot
@@ -260,7 +260,7 @@ class Products extends CActiveRecord {
 		$criteria->condition = 'hot = 1 AND enable = 1';
 		$criteria->limit = Configs::configTemplate('products_num_paging_hot', Yii::app()->session['template']);
 
-		return $this::model()->findAll($criteria);
+		return $this->model()->findAll($criteria);
 	}
 
 	//Front end - list Item by Cat
@@ -271,7 +271,7 @@ class Products extends CActiveRecord {
 		$criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
 		$criteria->params = array(':cid' => $cid);
 
-		$count = $this::model()->count($criteria);
+		$count = $this->model()->count($criteria);
 
 		// elements per page
 		$pages = new CPagination($count);
@@ -280,7 +280,22 @@ class Products extends CActiveRecord {
 
 		return array('models' => $this->model()->findAll($criteria), 'pages' => $pages);
 	}
+	public function listItemByType($cid) {
+		$criteria = new CDbCriteria();
+		$criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit,record_id';
+		$criteria->order = 'record_order DESC, postdate DESC';
+		$criteria->condition = 'enable=1 AND dos_module_item_type_type_id=:cid';
+		$criteria->params = array(':cid' => $cid);
 
+		$count = $this->model()->count($criteria);
+
+		// elements per page
+		$pages = new CPagination($count);
+		$pages->pageSize = Yii::app()->controller->configs['products_num_paging_cat'];
+		$pages->applyLimit($criteria);
+
+		return array('models' => $this->model()->findAll($criteria), 'pages' => $pages);
+	}
 	//Front end - get detail item
 	public function detailItem($tag) {
 		$id = $this->getIDByTag($tag);

@@ -1,17 +1,5 @@
 <?php
 
-/**
- * This is the model class for table "dos_module_products_type".
- *
- * The followings are the available columns in table 'dos_module_products_type':
- * @property integer $type_id
- * @property string $type_title
- * @property string $tag
- * @property string $pic_desc
- * @property integer $type_order
- * @property integer $type_enable
- * @property string $dos_usernames_username
- */
 class ProductsType extends CActiveRecord {
 
     /**
@@ -99,5 +87,445 @@ class ProductsType extends CActiveRecord {
     public function listItem() {
         return $this->model()->findAll();
     }
+      //Front end - find cat_id by tag
+    public function findTypeByTag($tag) {
+        $command = Yii::app()->db->createCommand('SELECT type_id, type_title' . LANG . ', tag' . LANG . ' FROM ' . $this->tableName() . ' WHERE tag' . LANG . '=:tag');
+        $command->bindParam(':tag', $tag, PDO::PARAM_STR);
+        return $command->queryRow();
+    }
+
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+    public function relations() {
+        // NOTE: you may need to adjust the relation name and the related
+        // class name for the relations automatically generated below.
+        return array(
+            'Products' => array(self::HAS_MANY, 'Products', 'dos_module_item_cat_cat_id'),
+                //'dosUsernamesUsername' => array(self::BELONGS_TO, 'DosUsernames', 'dos_usernames_username'),
+        );
+    }
+
+    public function beforeSave() {
+        $purifier = new CHtmlPurifier();
+        $this->cat_title = $purifier->purify(trim($this->cat_title));
+        $this->cat_titleen = $purifier->purify(trim($this->cat_titleen));
+        $this->tag = $purifier->purify(trim($this->tag));
+        $this->tagen = $purifier->purify(trim($this->tagen));
+        $this->description = $purifier->purify(trim($this->description));
+        $this->descriptionen = $purifier->purify(trim($this->descriptionen));
+
+        if ($this->isNewRecord) {
+            $this->cat_order = $this->maxRecordOrder();
+            $this->dos_usernames_username = Yii::app()->user->id;
+            if ($_FILES[ucfirst(Yii::app()->controller->id) . 'Cat']['name']['pic_full']) {
+                Yii::import('ext.EUploadedImage.EUploadedImage');
+                $this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(Configs::configTemplate(Yii::app()->controller->id . '_cat_width', Yii::app()->session['template']), Configs::configTemplate(Yii::app()->controller->id . '_cat_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id . 'Cat', $this->cat_title);
+            }
+        } else {
+            //check file old and upload
+            if ($_FILES[ucfirst(Yii::app()->controller->id) . 'Cat']['name']['pic_full']) {
+                Yii::import('ext.EUploadedImage.EUploadedImage');
+                $this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(Configs::configTemplate(Yii::app()->controller->id . '_cat_width', Yii::app()->session['template']), Configs::configTemplate(Yii::app()->controller->id . '_cat_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id . 'Cat', $this->cat_title, $this->_oldImage_full);
+            } else {
+                //remove picthumb
+                if (isset($_POST[ucfirst(Yii::app()->controller->id) . 'Cat']['remove_pic_full']) && $_POST[ucfirst(Yii::app()->controller->id) . 'Cat']['remove_pic_full'] == 1) {
+                    $common_class = new Common();
+                    $common_class->removePic($this->_oldImage_full);
+                    $this->pic_full = '';
+                } else {
+                    $this->pic_full = $this->_oldImage_full;
+                }
+            }
+        }
+
+        return parent::beforeSave();
+    }
+
+  
+    //Front end - List record for index
+    public function listCats($cid = 0, $prefix = NULL, $type = 0, $id = 0) {
+        if ($cid == 1) {
+            $this->_data[] = array('cat_id' => 0, 'cat_title_prefix' => 'Root', 'cat_title' => 'Root');
+        }
+
+        if ($type == 1) {
+            //for admin
+            if ($id != 0) {
+                $command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . LANG . ', tag' . LANG . ', cat_enable FROM ' . $this->tableName() . ' WHERE cat_id != ' . $id . ' ORDER BY cat_order DESC');
+            } else {
+                $command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . LANG . ', tag' . LANG . ', cat_enable FROM ' . $this->tableName() . ' ORDER BY cat_order DESC');
+            }
+        } else {
+            $command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . LANG . ', tag' . LANG . ', cat_enable FROM ' . $this->tableName() . ' WHERE cat_enable=1 ORDER BY cat_order DESC');
+        }
+
+        $this->_rows = $command->queryAll();
+        $this->_rowsize = count($this->_rows);
+        for ($i = 0; $i < $this->_rowsize; $i++) {
+            if ($this->_rows[$i]['cat_parent_id'] == 0) {
+                $this->_data[] = array('cat_id' => $this->_rows[$i]['cat_id'], 'cat_parent_id' => $this->_rows[$i]['cat_parent_id'], 'tag' . LANG => $this->_rows[$i]['tag' . LANG], 'cat_title_prefix' => $prefix . $this->_rows[$i]['cat_title' . LANG], 'cat_title' . LANG => $this->_rows[$i]['cat_title' . LANG], 'cat_enable' => $this->_rows[$i]['cat_enable']);
+                $this->loopItem($i, $prefix);
+            }
+        }
+        return $this->_data;
+    }
+
+    private function loopItem($i, $prefix, $tab = '|-- ') {
+        for ($j = 0; $j < $this->_rowsize; $j++) {
+            if ($this->_rows[$j]['cat_parent_id'] == $this->_rows[$i]['cat_id']) {
+                $this->_data[] = array('cat_id' => $this->_rows[$j]['cat_id'], 'cat_parent_id' => $this->_rows[$j]['cat_parent_id'], 'tag' . LANG => $this->_rows[$j]['tag' . LANG], 'cat_title_prefix' => $prefix . $tab . $this->_rows[$j]['cat_title' . LANG], 'cat_title' . LANG => $this->_rows[$j]['cat_title' . LANG], 'cat_enable' => $this->_rows[$j]['cat_enable']);
+                $this->loopItem($j, $prefix, $tab . '|-- ');
+            }
+        }
+    }
+
+    //Front end - list menu
+    public function listItem($cid = 0) {
+        if ($cid != 0) {
+            $command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . Yii::app()->session['lang'] . ', tag' . Yii::app()->session['lang'] . ', pic_full FROM ' . $this->tableName() . ' WHERE cat_parent_id=' . $cid . ' AND cat_enable=1 ORDER BY cat_order DESC');
+        } else {
+            $command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . Yii::app()->session['lang'] . ', tag' . Yii::app()->session['lang'] . ', pic_full FROM ' . $this->tableName() . ' WHERE cat_enable=1 ORDER BY cat_order DESC');
+        }
+        return $command->queryAll();
+    }
+
+    /*
+
+
+      public function listItemAdmin($cid = 0) {
+      $criteria = new CDbCriteria();
+      $criteria->order = 'cat_order DESC';
+      $criteria->condition = 'dos_usernames_username=:user';
+      $criteria->params = array(':user' => Yii::app()->user->id);
+      $count = ProductsCat::model()->count($criteria);
+
+      // elements per page
+      $pages = new CPagination($count);
+      $pages->pageSize = 15;
+      $pages->applyLimit($criteria);
+
+      $this->_cat_data = ProductsCat::model()->findAll($criteria);
+      $this->listSubItem($cid);
+
+      return array('models' => $this->_sub_cat_data, 'pages' => $pages);
+      }
+
+      private function listSubItem($cid = 0, $getall = 1, $parent_id = 0, $level = 1, $str = '', $parent_enabled = 1) {
+      $cat_level = 2;
+      $prefix = ($cat_level > 1) ? '|-- ' : '';
+      foreach ($this->_cat_data as $value) {
+      if (($value->cat_parent_id == $parent_id) && ($cid != $value->cat_id)) {
+      $this->_sub_cat_data[$this->_sortcat_count]['cat_id'] = $value->cat_id;
+      $this->_sub_cat_data[$this->_sortcat_count]['cat_title'] = $value->cat_title;
+      $this->_sub_cat_data[$this->_sortcat_count]['title_prefix'] = $str . $prefix;
+
+      if (!$parent_enabled || !$value->cat_enable) {
+      $cat_enabled = 0;
+      } else {
+      $cat_enabled = 1;
+      }
+
+      $this->_sub_cat_data[$this->_sortcat_count]['cat_enable'] = $cat_enabled;
+      $this->_sortcat_count++;
+
+      if ($getall || ($level < $cat_level - 1)) {
+      $str2 = $str . "&nbsp; &nbsp; &nbsp;";
+      $this->listSubItem($cid, $getall, $value->cat_id, $level + 1, $str2, $cat_enabled);
+      }
+      }
+      }
+      }
+
+      //Back end - List item for Add Edit
+      public function listItemAdminAction($cat = 0) {
+      $criteria = new CDbCriteria();
+      $criteria->order = 'cat_order DESC';
+      $criteria->condition = 'cat_enable=1 AND dos_usernames_username=:user';
+      $criteria->params = array(':user' => Yii::app()->user->id);
+
+      $this->_cat_data = ProductsCat::model()->findAll($criteria);
+
+      if ($cat == 1) {
+      $this->_sub_cat_data[0]['cat_id'] = 0;
+      $this->_sub_cat_data[0]['cat_title'] = 'Root';
+      $this->_sortcat_count++;
+      }
+
+      $this->listSubItemAction();
+      return $this->_sub_cat_data;
+      }
+
+      //Back end - List sub item for Add Edit
+      private function listSubItemAction($cid = 0, $getall = 1, $parent_id = 0, $level = 1, $str = '') {
+      $cat_level = 2;
+      $prefix = ($cat_level > 1) ? '|-- ' : '';
+      foreach ($this->_cat_data as $value) {
+      if (($value->cat_parent_id == $parent_id) && ($cid != $value->cat_id)) {
+      $this->_sub_cat_data[$this->_sortcat_count]['cat_id'] = $value->cat_id;
+      $this->_sub_cat_data[$this->_sortcat_count]['cat_title'] = $str . $prefix . $value->cat_title;
+
+      $this->_sortcat_count++;
+      if ($getall || ($level < $cat_level - 1)) {
+      $str2 = $str . "|-- ";
+      $this->listSubItemAction($cid, $getall, $value->cat_id, $level + 1, $str2);
+      }
+      }
+      }
+      } */
+
+    /*/Back end - Update Record
+    private function updateShowHidden($activated, $id) {
+        $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET cat_enable=:activated WHERE cat_id=:id');
+        $command->bindParam(":activated", $activated, PDO::PARAM_INT);
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        return $command->execute();
+    }
+
+    //Back end - Active Item
+    public function activeItem($data) {
+        $flag = $data->getPost('factive', 'disable');
+        $ids = $data->getPost('ids', '');
+        $syn = $data->getPost('syn', '');
+
+        if ($syn) {
+            $criteria = new CDbCriteria();
+            $criteria->order = 'cat_order ASC';
+            $criteria->condition = 'dos_usernames_username=:user';
+            $criteria->params = array(':user' => Yii::app()->user->id);
+
+            $models = ProductsCat::model()->findAll($criteria);
+
+            $i = 1;
+            foreach ($models as $model) {
+                ProductsCat::model()->updateByPk($model['cat_id'], array('cat_order' => $i));
+                $i++;
+            }
+        } else {
+            if (!empty($ids)) {
+                if (!is_array($ids)) {
+                    $record_id[0] = $ids;
+                } else {
+                    $record_id = $ids;
+                }
+                unset($ids);
+
+                if ($flag) {
+                    //show or hidden
+                    $active = ($flag == "enable") ? 1 : 0;
+
+                    foreach ($record_id as $value) {
+                        $id = intval($value);
+                        if ($id) {
+                            $this->updateShowHidden($active, $id);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Back end - Get max record
+    private function maxRecordOrder() {
+        $user = Yii::app()->user->id;
+        $command = Yii::app()->db->createCommand('SELECT max(cat_order) AS max FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user');
+        $command->bindParam(":user", $user, PDO::PARAM_STR);
+        return $command->queryScalar() + 1;
+    }
+
+    //Back end - Get record to Edit
+    public function loadEdit($id) {
+        $criteria = new CDbCriteria();
+        $criteria->condition = 'dos_usernames_username=:user';
+        $criteria->params = array(':user' => Yii::app()->user->id);
+
+        $this->_model = ProductsCat::model()->findByPk($id, $criteria);
+
+        if ($this->_model === null) {
+            throw new CHttpException(404, 'The requested page does not exist.');
+        }
+        return $this->_model;
+    }
+
+    //Back end - Get cat_parent_id, cat_order
+    public function getCatParent_CatOrder($cid) {
+        $command = Yii::app()->db->createCommand('SELECT cat_parent_id, cat_order FROM ' . $this->tableName() . ' WHERE cat_id=:cid');
+        $command->bindParam(":cid", $cid, PDO::PARAM_INT);
+        return $command->queryRow();
+    }
+
+    // Back end - Get cat_id, cat_order Next
+    public function getCatid_CatOrder_Next($cid, $order) {
+        $command = Yii::app()->db->createCommand('SELECT cat_id, cat_order FROM ' . $this->tableName() . ' WHERE cat_parent_id=:cid AND cat_order>:order ORDER BY cat_order ASC');
+        $command->bindParam(":cid", $cid, PDO::PARAM_INT);
+        $command->bindParam(":order", $order, PDO::PARAM_INT);
+        return $command->queryRow();
+    }
+
+    // Back end - Get cat_id, cat_order Previous
+    public function getCatid_CatOrder_Previous($cid, $order) {
+        $command = Yii::app()->db->createCommand('SELECT cat_id, cat_order FROM ' . $this->tableName() . ' WHERE cat_parent_id=:cid AND cat_order<:order ORDER BY cat_order DESC');
+        $command->bindParam(":cid", $cid, PDO::PARAM_INT);
+        $command->bindParam(":order", $order, PDO::PARAM_INT);
+        return $command->queryRow();
+    }
+
+    // Back end - Update for up, down
+    public function updateUpDown($cat_info, $next_info, $cid) {
+        $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET cat_order=:order WHERE cat_id=:id');
+        $command->bindParam(":order", $next_info['cat_order'], PDO::PARAM_INT);
+        $command->bindParam(":id", $cid, PDO::PARAM_INT);
+        $command->execute();
+
+        $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET cat_order=:order WHERE cat_id=:id');
+        $command->bindParam(":order", $cat_info['cat_order'], PDO::PARAM_INT);
+        $command->bindParam(":id", $next_info['cat_id'], PDO::PARAM_INT);
+        $command->execute();
+    }
+
+    //Back end - Get info cat
+    public function getInfoCat($id) {
+        $command = Yii::app()->db->createCommand('SELECT cat_title FROM ' . $this->tableName() . ' WHERE cat_id=:id');
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        return $command->queryScalar();
+    }
+
+    //Back end - Get info cat
+    public function countItemCat($id) {
+        $user = Yii::app()->user->id;
+        $command = Yii::app()->db->createCommand('SELECT COUNT(record_id) AS numcat FROM ' . $this->tableName() . ', dos_module_products WHERE ' . $this->tableName() . '.cat_id=dos_module_products.dos_module_item_cat_cat_id AND cat_id=:id AND dos_usernames_username=:user');
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        $command->bindParam(":user", $user, PDO::PARAM_STR);
+        return $command->queryScalar();
+    }
+
+    public function countSubcat($id) {
+        $this->loopCat($id);
+        return array('sub_cat_num' => $this->_sub_cat_num, 'sub_num_item' => $this->_sub_num_item);
+    }
+
+    private function loopCat($id) {
+        $command = Yii::app()->db->createCommand('SELECT cat_id FROM ' . $this->tableName() . ' WHERE cat_parent_id=:id');
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        $result = $command->queryAll();
+
+        foreach ($result as $value) {
+            $this->_sub_cat_num++;
+            $this->_sub_num_item += $this->countItembyCat($value['cat_id']);
+            $this->loopCat($value['cat_id']);
+        }
+    }
+
+    private function countItembyCat($id) {
+        $model = new Products();
+        return $model->countItemByCat($id);
+    }
+
+    //Back end - find Cat parent
+    public function findcatParent($cat_id, $cat_parent_id) {
+        $command = Yii::app()->db->createCommand('SELECT cat_id FROM ' . $this->tableName() . ' WHERE cat_parent_id=:id');
+        $command->bindParam(":id", $cat_id, PDO::PARAM_INT);
+        $result = $command->queryAll();
+
+        foreach ($result as $value) {
+            $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET cat_parent_id=:cat_parent_id WHERE cat_id=:cid');
+            $command->bindParam(":cat_parent_id", $cat_parent_id, PDO::PARAM_INT);
+            $command->bindParam(":cid", $value['cat_id'], PDO::PARAM_INT);
+            $command->execute();
+        }
+    }
+
+    //Back end - Delete Record
+    public function deleteRecord($id) {
+        $item = $this::model()->find('cat_id=:id', array(':id' => $id));
+        $common_class = new Common();
+        $common_class->removePic($item->pic_full, 0, 1, 'Cat');
+        $common_class->removePic($item->pic_desc, 1, 1, 'Cat');
+
+        /* $item = ProductsCat::model()->find('cat_id=:id', array(':id' => $id));
+          $path = YiiBase::getPathOfAlias('webroot') . USERFILES . '/ProductsCat/';
+          //Del pic_full field
+          if (($item->pic_full)) {
+          if (file_exists($path . $item->pic_full)) {
+          unlink($path . $item->pic_full);
+          }
+          }
+          //Del pic_desc field
+          if (($item->pic_desc)) {
+          $str = explode('|', $item->pic_desc);
+          foreach ($str as $value) {
+          if (file_exists($path . $value)) {
+          unlink($path . $value);
+          }
+          }
+          } 
+        $this::model()->findByPk($id)->delete(); //delete record
+    }
+
+    //Xóa tất cả item của phân loại con
+    public function loopDelItemtoCat($cat_id) {
+        $command = Yii::app()->db->createCommand('SELECT cat_id FROM ' . $this->tableName() . ' WHERE cat_parent_id=:id');
+        $command->bindParam(":id", $cat_id, PDO::PARAM_INT);
+        $result = $command->queryAll();
+
+        $product = new Products();
+        foreach ($result as $value) {
+            //update dos_module_product_cat_cat_id
+            $product->deleteItembyCat($value['cat_id']);
+            $this->loopDelItemtoCat($value['cat_id']);
+        }
+    }
+
+    //Di chuyển tất cả item của phân loại con đến phân loại:
+    public function loopMoveItemtoCat($cat_id, $cat_id_new) {
+        $command = Yii::app()->db->createCommand('SELECT cat_id FROM ' . $this->tableName() . ' WHERE cat_parent_id=:id');
+        $command->bindParam(":id", $cat_id, PDO::PARAM_INT);
+        $result = $command->queryAll();
+
+        $product = new Products();
+        foreach ($result as $value) {
+            //update dos_module_product_cat_cat_id
+            $product->updateItem($value['cat_id'], $cat_id_new);
+            $this->loopMoveItemtoCat($value['cat_id'], $cat_id_new);
+        }
+    }
+
+    //xóa phân loại con
+    public function loopDelSubCat($cat_id) {
+        $command = Yii::app()->db->createCommand('SELECT cat_id FROM ' . $this->tableName() . ' WHERE cat_parent_id=:cid');
+        $command->bindParam(":cid", $cat_id, PDO::PARAM_INT);
+        $result = $command->queryAll();
+
+        foreach ($result as $value) {
+            $this->deleteRecord($value['cat_id']);
+            $this->loopDelSubCat($value['cat_id']);
+        }
+    }
+
+    //Back end - Count item by user post
+    public function countItemByUser() {
+        $user = Yii::app()->user->id;
+        $command = Yii::app()->db->createCommand('SELECT COUNT(cat_id) AS num FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user');
+        $command->bindParam(":user", $user, PDO::PARAM_STR);
+        return $command->queryScalar();
+    }
+
+}*/
