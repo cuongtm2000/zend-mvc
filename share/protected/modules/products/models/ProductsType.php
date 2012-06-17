@@ -92,12 +92,12 @@ class ProductsType extends CActiveRecord {
         $criteria->compare('dos_usernames_username', $this->dos_usernames_username, true);
 
         return new CActiveDataProvider($this, array(
-                    'criteria' => $criteria,
-                ));
+            'criteria' => $criteria,
+        ));
     }
 
     public function listItem() {
-        return  $this->model()->findAll();          
+        return $this->model()->findAll();
     }
 
 }

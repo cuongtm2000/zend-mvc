@@ -18,7 +18,7 @@ return array(
         'application.components.*',
     ),
     'modules' => array(
-        'default', 'login','register','about', 'products', 'services', 'news', 'video', 'contact', 'search', 'admin', 'administrator',
+        'default', 'login','register','about', 'products', 'services', 'news', 'video', 'contact', 'search', 'admin', 'administrator', 'users',
         'gii' => array(
             'class' => 'system.gii.GiiModule',
             'password' => '123',

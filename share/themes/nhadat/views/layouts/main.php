@@ -89,8 +89,8 @@
                         <input type="submit"  value="Tìm kiếm"/>  
 
                         <div class="hder-fter-right"> 
-                            <a href="#" title="" class="members">Hội Viện</a>
-                            <a href="#" title="" class="deposit">Ký Gửi</a>
+                            <a href="<?php echo Yii::app()->baseUrl ?>/hoi-vien" title="Hội viên" class="members">Hội viên</a>
+                            <a href="#" title="" class="deposit">Ký gửi</a>
                         </div>
                     </form>
                 </div>  <div class="clear"></div>
@@ -99,13 +99,11 @@
             <?php echo $content ?>
 
             <div id="footer">
-                <div class="frame-info">
-                    <h3 class="comname"><strong><?php echo $this->lang['company_name_footer'] ?></strong></h3>
-                    <p><?php echo $this->lang['address1'] ?></p>
-                    <?php echo ($this->lang['address2']) ? '<p>' . $this->lang['address2'] . '</p>' : '' ?>
-                    <p><?php echo $this->lang['copyright'] ?></p>
-                    <p><?php echo $this->lang['developed'] ?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></p>
-                </div> <!--End frame info-->
+                <h3 class="comname"><strong><?php echo $this->lang['company_name_footer'] ?></strong></h3>
+                <p><?php echo $this->lang['address1'] ?></p>
+                <?php echo ($this->lang['address2']) ? '<p>' . $this->lang['address2'] . '</p>' : '' ?>
+                <p><?php echo $this->lang['copyright'] ?></p>
+                <p><?php echo $this->lang['developed'] ?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></p>
             </div><!--End footer-->
         </div><!--End wrapper-->
     </body>

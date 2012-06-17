@@ -34,6 +34,9 @@ return array(
     //contact modules
     '<contact:(lien-he)>' => 'contact/default/index', //index
 
+    //users modules
+    '<users:(hoi-vien)>' => 'users/default/index', //index
+
     //For multi language
     '<language:(vi|en)>/<module:\w+>/<cid:(order)>/<id:[-a-z0-9]+>' => array('<module>/default/order'), //order for products
     '<language:(vi|en)>/<module:\w+>/<cid:(cart-item)>' => array('<module>/default/cartitem'), //Cart item for products
