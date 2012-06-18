@@ -1,9 +1,8 @@
 <?php if(isset($this->function['about_home'])): ?>
-	<h1 class="title-right"><span><?php echo $this->function['about_home']['title'.LANG] ?></span></h1>
-	<div class="frame-tent-right">
+	<div class="frame-product-info">
+	<h2 class="title-fter-left"><span><?php echo $this->function['about_home']['title'.LANG] ?></span></h2>
 		<?php echo $this->function['about_home']['content'.LANG] ?>
 	</div> <!--End frame tent right-->
-<div class="btom-main"></div>
 <?php endif; ?>
 
 <?php if(isset($this->function['products_hot']) && $this->function['products_hot']):?>

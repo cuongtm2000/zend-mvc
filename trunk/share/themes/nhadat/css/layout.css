@@ -230,7 +230,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .link{padding:10px 5px 2px 5px}
 .link , .link a{color:#0064a6;font-weight:bold; font-size:10pt}
 
-.frame-product-info ,.bg-footer-left{margin:10px 0 10px 0;background:url(../images/bg-footer-content.gif) repeat-x;padding:10px;-webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0}
+.frame-product-info , .bg-footer-left{margin:10px 0 10px 0;background:url(../images/bg-footer-content.gif) repeat-x;padding:10px;-webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0}
 
 
 .tent-info-product{border-bottom:1px dotted #ccc}
