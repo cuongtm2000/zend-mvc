@@ -92,7 +92,6 @@ a:hover{color:#000;}
 /*Content*/
 #content{ margin:0 0 30px 0}
 
-
 /*Ho tro ky thuat*/
 .frame-box{text-align:center;padding:0 0 3px 3px !important;border-right:1px solid #87A5AF}
 .title-box{font-size:11pt;padding:5px 0;background:#EDF7FF;color:#3C64C7;font-weight:bold}
@@ -137,14 +136,14 @@ a:hover{color:#000;}
 
 /*BG footer left contet*/
 .bg-footer-left{background:url(../images/bg-footer-content.gif) repeat-x;padding:10px 0;-webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0}
-.all-tent-fter{padding:0 10px}
 .title-fter-left{color:#FF8601;font-weight:bold;font-size:11pt;margin:0 0 10px 0}
 
 /*footer-left*/
-.footer-left{float:left; width:88%}
+.footer-left{float:left; width:80%}
 
 /*Item sale and khung img*/
-.item-sale{border-bottom:1px solid #C9E1F4;padding:0 0 15px 0;margin:0 0 20px 0}
+.table-product, .bder-none{border:none}
+.table-product{border-bottom:1px solid #C9E1F4;;margin:0 0 20px 0}
 .frame-img-pro{float:left; width:100px;margin:0 10px 5px 0;border:2px solid #A5A7A6;-webkit-border-radius:2px;-moz-border-radius:2px}
 .item-sale p{margin:0 !important}
 
@@ -257,7 +256,6 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .sub-utility{list-style:none}
 .sub-utility li{padding:3px 0}
 .sub-utility input{float:right; color:#f90}
-
 /****      End left page info           *****/
 
 /***** right pro info *****/
@@ -277,24 +275,6 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .frame-contact .bton-dk{margin:10px 0 5px 30px;background:#372E27;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
 .frame-contact .bton-dk{margin:10px 10px 5px 0}
 
-/*.frame-contact{background:url(../images/bg-footer-content.gif) repeat-x; border:1px solid #F0F0F0;margin:0 0 10px 0; padding:5px 0}
-.title-contact{font-size:14pt;border-bottom:1px solid #F0F0F0;margin:0 0 8px 0; padding:5px 0}
-.title-contact span{padding:0 0 0 10px}
-
-.top-contact{padding:0 10px}
-.frame-img-contact{float:left; margin:0 5px 5px 0; width:84px}
-.title-top{margin:0 0 5px 0;font-size:12pt;color:#496DCB;font-weight:bold}
-.frame-info-contact p{margin:0 0 5px 0}
-.member-contact{border:1px solid #ccc; padding:3px 5px;color:#f90;-webkit-border-radius:4px; -moz-border-radius:4px;font-size:8pt;}
-
-.frm-conact-post{padding:0 10px}
-.frm-conact-post ul{list-style:none}
-.frm-conact-post ul li{margin:0 0 8px 0}
-.frm-conact-post ul li span{color:#f00;font-weight:bold}
-.frm-conact-post input, .frm-conact-post textarea  {border:1px solid #ccc;padding:3px; width:100%}
-.frm-conact-post p{font-weight:bold;color:#444}
-.bton-contact{width:60px !important; border:none; background:#436DD9;color:#fff; font-weight:bold;font-size:11pt;-webkit-border-radius:4px; -moz-border-radius:4px;cursor:pointer}
-*/
 /* End page info*/
 
 /* Form Dang ky va Dang nhap*/
@@ -318,7 +298,6 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 /** Tool tip images **/
 #preview{position:absolute;border:1px solid #ccc;background:#333;padding:5px;display:none;color:#fff;}
 
-
 /*** Tooltip ***/
 #tooltip{background:#FFFFFF;border:1px #CCCCCC solid;border-radius:0.5em;-moz-border-radius:0.5em;padding:8px 9px 8px 9px;position:absolute;z-index:3000;
 }
@@ -341,6 +320,25 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 #left-content-2{float:left; width:14.72%;background:#3C64C7;padding:0 0 3px 0;-webkit-border-radius:0 0 0 5px }
 .frame-search-detail-2{float:left; width:71.5%;}
 #right-content-2{float:right; width:28%}
+
+
+#container_content_left{width:185px;float:left}
+#container_content_left .container_content_left{position:absolute;width:185px;}
+
+#container_content_center, #container_content_center_left, #container_content_center_right{
+float:left;width:100%;}
+
+#container_content_center{margin:0 -305px 0 0}
+#container_content_center .container_content_center {margin:0 305px 0 190px;}
+
+#container_content_center_2, #container_content_center_left, #container_content_center_right{
+float:left;width:100%;}
+
+#container_content_center_2 .container_content_center_2{margin:0 0 0 190px;}
+
+
+#container_content_center_left{margin:0 -300px 0 0}
+#container_content_right{width:300px;float:right; }
 
 
 /* table format */
