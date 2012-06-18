@@ -21,9 +21,8 @@ a:hover{color:#000;}
 
 /*Welcome dang ky, dang nhap*/
 .welcome{margin:0 0 10px 0}
-.regis, .login{font-size:10pt;font-weight:bold}
-.regis, .login:hover{color:#3B64CA}
-.login, .regis:hover{color:#FE9A00}
+.register{background:url('../images/icon-register.png') no-repeat left top; padding-left:16px; margin-left: 7px; margin-right: 12px; color: #3C64C7}
+.login{background:url('../images/icon-login.png') no-repeat left top; padding-left:17px;  margin-left: 10px; color: #E97C03}
 
 /*Nav*/
 .frame-nav{float:left;}
