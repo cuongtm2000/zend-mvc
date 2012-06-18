@@ -202,14 +202,11 @@ a:hover{color:#000;}
 /* paging and tab */
 .tabs li { display:inline}
 
-.paging{list-style:none}
-.paging a{color:#004181}
-.paging a:hover{background:#44A4DE; color:#fff;}
-.pagenav , .pageactive{border: 1px solid #8AC1F9; padding: 2px 5px; color:#44A4DE; -moz-border-radius: 4px; -webkit-border-radius: 4px;}
-.pagecureent{border: 1px solid #8AC1F9; padding: 2px 5px; background:#44A4DE; color:#fff; font-weight:bold; -moz-border-radius: 4px; -webkit-border-radius: 4px}
-.posted{background:url(../images/icon-1.gif) no-repeat left 3px; padding:0 0 0 17px;margin:0 5px}
-.all-view{background:url(../images/icon-2.gif) no-repeat left 3px; padding:0 0 0 10px}
-.posted a:hover,.all-view a:hover{background:none; color:#f90}
+.paging{list-style:none;float:right;margin:10px 0 0 0 !important}
+ul.paging li{display: inline;margin:0 !important;}
+ul.paging .hidden{display: none;}
+ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{border: 1px solid #ccc; padding: 2px 5px; color: #036CB4; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{color:#f90; background:##0066A7}
 
 /*Footer*/
 #footer{text-align:center;color:#0064a6;background:url(../images/bg-footer-page.gif) repeat-x;padding-top:10px}
@@ -321,7 +318,10 @@ a:hover{color:#000;}
 .price-tip{color:#f00; font-weight:bold}
 /*-- End Tooltip --*/
 
+.table-user{margin:10px 0 0 0}
+
 /* Error */
+.required{color:red}
 .errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
 .errorSummary ul{margin:10px; padding:0}
 .errorSummary ul li{padding:2px 0; color: red;margin:0 0 0 40px}

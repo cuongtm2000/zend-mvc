@@ -1,4 +1,5 @@
-<table>
+
+<table class="table-user">
     <thead>
         <tr><th width="105">Hình ảnh</th><th>Username</th><th>Tỉnh thành</th><th>Group</th><th width="200">Chi tiết</th></tr>
     </thead>

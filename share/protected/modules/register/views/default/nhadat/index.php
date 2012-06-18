@@ -1,12 +1,11 @@
 <?php //$this->menu = array(array('label' => 'List User', 'url' => array('index')), array('label' => 'Manage User', 'url' => array('admin')),);?>
+<div class="frame-product-info">
 <h1 class="title-right"><span>Đăng ký thành viên</span></h1>
-
-<div class="frame-tent-right">
 	<?php $form = $this->beginWidget('CActiveForm', array('id' => 'user-form', 'enableAjaxValidation' => false, 'htmlOptions' => array('class' => 'form-all')));?>
 
 	<p class="note">Dấu <span class="required">*</span> là những thông tin bắt buộc nhập liệu.</p>
 	<?php echo $form->errorSummary($model, ''); ?>
-	<ul>
+	<ul class="bt-frm-login">
 		<li class="row">
 			<?php echo $form->labelEx($model, 'username'); ?>
 			<?php echo $form->textField($model, 'username', array('size' => 45, 'maxlength' => 45)); ?>
@@ -63,7 +62,7 @@
 
 		<li class="row buttons">
 			<label>&nbsp;</label>
-			<?php echo CHtml::submitButton(' Đăng ký ', array('class' => 'login')); ?>
+			<?php echo CHtml::submitButton(' Đăng ký ', array('class' => 'singin')); ?>
 		</li>
 	</ul>
 	<?php $this->endWidget(); ?>
