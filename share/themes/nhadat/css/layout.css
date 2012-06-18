@@ -99,6 +99,21 @@ a:hover{color:#000;}
 
 /*Content*/
 #content{ margin:0 0 30px 0}
+
+
+/*Ho tro ky thuat*/
+.frame-box{text-align:center;padding:0 0 3px 3px !important;border-right:1px solid #87A5AF}
+.title-box{font-size:11pt;padding:5px 0;background:#EDF7FF;color:#3C64C7;font-weight:bold}
+.support{list-style:none;padding:5px 0 0 0;background:#EDF7FF}
+#all-left-content .support p{margin:0}
+.support li {color:#000;border-bottom:1px solid #87A5AF; margin:0 0 4px 0!important; padding:2px 0; line-height: 1.5em}
+.support li img{margin:0 0 6px 0}
+
+/*Thong ke truy cap*/
+.statistics{list-style:none;padding:5px 3px 10px 15px;}
+.statistics li {color:#000; line-height:1.75em;}
+
+
 .title-left{color:#FF8601;font-size:18pt; font-weight:700;margin:0 0 10px 0}
 .frame-tent-right{margin:0 0 20px 0}
 
@@ -108,8 +123,9 @@ a:hover{color:#000;}
 #all-left-content ul li{margin:0 0 0 18px}
 
 /*Left content*/
-#left-content{float:left; width:185px; background:#3C64C7; padding:0 0 3px 0; -webkit-border-radius:0 0 0 5px }
+#left-content{float:left; width:185px;  padding:0 0 3px 0; }
 
+.frame-box ,.bg-nav-left{background:#3C64C7;margin:0 0 10px 0; padding:0 0 3px 0;-webkit-border-radius:0 0 0 5px;-moz-border-radius:0 0 0 5px}
 .nav-left{list-style:none;background:#EDF7FF;margin:0 0 0 3px;border-right:1px solid #87A5AF}
 .nav-left li{padding:5px 0; border-bottom:1px solid #87A5AF;margin:0 !important}
 .nav-left li a{color:#000;font-weight:bold;padding:0 0 0 10px;font-size:10pt;display:block}
