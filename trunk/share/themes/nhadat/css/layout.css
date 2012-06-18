@@ -191,7 +191,7 @@ a:hover{color:#000;}
 #right-content{float:right; width:24%}
 
 /*Quang cao ben phai*/
-.adv-right{list-style:none;padding:3px 0 0 0}
+.adv-right{list-style:none}
 .adv-right li{margin:0 0 4px 0}
 
 .all-view-new{text-align:right}
@@ -314,14 +314,6 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .errorSummary ul{margin:10px; padding:0}
 .errorSummary ul li{padding:2px 0; color: red;margin:0 0 0 40px}
 
-
-/* Moi  all-right-content */
-#all-right-content{float:right; width:84.6% }
-#left-content-2{float:left; width:14.72%;background:#3C64C7;padding:0 0 3px 0;-webkit-border-radius:0 0 0 5px }
-.frame-search-detail-2{float:left; width:71.5%;}
-#right-content-2{float:right; width:28%}
-
-
 #container_content_left{width:185px;float:left}
 #container_content_left .container_content_left{position:absolute;width:185px;}
 
@@ -338,7 +330,7 @@ float:left;width:100%;}
 
 
 #container_content_center_left{margin:0 -300px 0 0}
-#container_content_right{width:300px;float:right; }
+#container_content_right{width:300px;float:right;margin:10px 0 0 0}
 
 
 /* table format */
