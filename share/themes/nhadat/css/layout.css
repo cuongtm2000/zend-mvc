@@ -86,15 +86,7 @@ a:hover{color:#000;}
 .sub-menu-right li a:hover{color:#f90}
 .sub-menu-right .select-sub-right{color:#f90}
 
-/*frame-search-detail page index detail dung ID #frame-search-detail*/
-/*#frame-search-detail{text-align:center;}
-#frame-search-detail .hometype{width:15%}
-#frame-search-detail .district{width:19.6%}
-#frame-search-detail .location{width:15%}
-#frame-search-detail ul{list-style:none;padding:0 !important; position:relative; left:250px}*/
-
 /** End page index detail **/
-
 /****   End header footer  ****/
 
 /*Content*/
@@ -144,12 +136,12 @@ a:hover{color:#000;}
 .bton-search-detail{font-weight:bold; background:#FF9119;color:#fff;-webkit-border-radius:4px;-moz-border-radius:4px; padding:5px 15px; border:none}
 
 /*BG footer left contet*/
-.bg-footer-left{background:url(../images/bg-footer-content.gif) repeat-x;padding:10px 0;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0}
+.bg-footer-left{background:url(../images/bg-footer-content.gif) repeat-x;padding:10px 0;-webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0}
 .all-tent-fter{padding:0 10px}
 .title-fter-left{color:#FF8601;font-weight:bold;font-size:11pt;margin:0 0 10px 0}
 
 /*footer-left*/
-.footer-left{float:left; width:90%}
+.footer-left{float:left; width:88%}
 
 /*Item sale and khung img*/
 .item-sale{border-bottom:1px solid #C9E1F4;padding:0 0 15px 0;margin:0 0 20px 0}
@@ -157,12 +149,12 @@ a:hover{color:#000;}
 .item-sale p{margin:0 !important}
 
 /*Thong tin ban hang*/
-.info-sale{float:left; width:82.25%}
+.info-sale{float:left; width:77%}
 .title-sale{font-size:11pt;font-weight:bold; color:#3393EA;margin:0 0 10px 0}
 .title-sale a{color:#3393EA}
 .title-sale a:hover{color:#FF9119}
 .sub-sale{list-style:none}
-.sub-sale li{display:inline-block; vertical-align:top; color:#444; width:20%;margin:0 24px 0 0 !important; *float:left}
+.sub-sale li{display:inline-block; vertical-align:top; color:#444;width:20%;margin:0 15px 0 0 !important; *float:left}
 .sub-sale p{line-height:1.5em}
 
 .position{color:#f90;font-size:10pt;font-weight:bold}
@@ -238,7 +230,8 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .link{padding:10px 5px 2px 5px}
 .link , .link a{color:#0064a6;font-weight:bold; font-size:10pt}
 
-.frame-product-info ,.bg-footer-left{margin:10px 0 10px 0;background:url(../images/bg-footer-content.gif) repeat-x;padding:10px;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0}
+.frame-product-info ,.bg-footer-left{margin:10px 0 10px 0;background:url(../images/bg-footer-content.gif) repeat-x;padding:10px;-webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0}
+
 
 .tent-info-product{border-bottom:1px dotted #ccc}
 
@@ -345,9 +338,10 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 
 /* Moi  all-right-content */
 #all-right-content{float:right; width:84.6% }
-#left-content-2{float:left; width:14.57%;background:#3C64C7;padding:0 0 3px 0;-webkit-border-radius:0 0 0 5px }
-.frame-search-detail-2{float:left; width:71.5%; text-align:center; background: red}
+#left-content-2{float:left; width:14.72%;background:#3C64C7;padding:0 0 3px 0;-webkit-border-radius:0 0 0 5px }
+.frame-search-detail-2{float:left; width:71.5%;}
 #right-content-2{float:right; width:28%}
+
 
 /* table format */
 table {border-collapse : separate; border-spacing : 0;width : 100%; border : 1px solid #e5e5e5;}
