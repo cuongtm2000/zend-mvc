@@ -17,6 +17,7 @@ class DefaultController extends Controller {
     }
 
     public function actionSuccess() {
+        $this->layout = '//layouts/column-2';
         if (!Yii::app()->session['reg_success']) {
             $this->redirect(Yii::app()->request->baseUrl . '/dang-ky');
         }

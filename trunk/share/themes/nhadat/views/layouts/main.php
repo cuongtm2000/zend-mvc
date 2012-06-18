@@ -33,15 +33,13 @@
                 <div class="hd-cter">
                 <p class="welcome">
                     <?php if (Yii::app()->user->isGuest == true): ?>
-                    Xin mời ! <a href="<?php echo Yii::app()->baseUrl ?>/dang-ky" title="Đăng ký" class="regis">Đăng ký</a> hoặc <a href="<?php echo Yii::app()->baseUrl ?>/dang-nhap" title="Đăng nhập" class="login">Đăng nhập</a>
-                <?php else :?>
-                   
-                       Chào <b><?php echo Yii::app()->user->name;?></b>! <a href="<?php echo Yii::app()->baseUrl ?>/dang-tin" title="Đăng tin" class="login">Đăng tin</a> <a href="<?php echo Yii::app()->baseUrl ?>/login/default/logout" title="Thoát" class="login">Thoát</a>
-                    
-               <?php endif ?></p>
+                        Xin mời! <a href="<?php echo Yii::app()->baseUrl ?>/dang-ky" title="Đăng ký" class="register"><strong>Đăng ký</strong></a> <a href="<?php echo Yii::app()->baseUrl ?>/dang-nhap" title="Đăng nhập" class="login"><strong>Đăng nhập</strong></a>
+                    <?php else :?>
+                        Chào <b><?php echo Yii::app()->user->name;?></b>! <a href="<?php echo Yii::app()->baseUrl ?>/dang-tin" title="Đăng tin" class="register"><strong>Đăng tin</strong></a> <a href="<?php echo Yii::app()->baseUrl ?>/login/default/logout" title="Thoát" class="login"><strong>Thoát</strong></a>
+                    <?php endif ?>
+                </p>
                 <div class="clear"></div>
-                
-                    
+
                     <div class="frame-nav">
                         <div class="left-nav"></div>
                         <div class="bg-nav">

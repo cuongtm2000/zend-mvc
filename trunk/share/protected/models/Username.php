@@ -70,7 +70,7 @@ class Username extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('username, email, password,password2, cmnd,address,phone,bank_name,bank_number ', 'required', 'on' => 'register'),
+            array('username, email, password, password2, cmnd, address, phone', 'required', 'on' => 'register'),
             array('password2', 'compare', 'compareAttribute' => 'password', 'message' => "{attribute} is not match", 'on' => 'register'),
             array('password', 'length', 'min' => '6', 'message' => "{attribute} quá ngắn (tối thiểu là  {min} ký tự)."),
             array('cmnd', 'length', 'min' => 9, 'max' => 10,),
