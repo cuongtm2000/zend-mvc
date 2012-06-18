@@ -82,7 +82,7 @@
 		</div>  <!--End ID container_content_center-->	
 		
 		<div id="container_content_right">
-			<div class="container_content_center_right">
+			<div class="container_content_right">
 				<?php if(isset($this->function['advs_right']) && ($this->function['advs_right'])):?>
 				<ul class="adv-right">
 					<?php foreach($this->function['advs_right'] as $value): ?>
