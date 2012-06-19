@@ -12,7 +12,7 @@ return array(
     '<products:(san-pham)>/<cid:(thong-tin-dat-hang)>' => array('products/default/ordering'), //purchase
     '<products:(san-pham)>/<cid:[-a-z0-9]+>/trang/<page:\d+>' => array('products/default/cats'), //cat paging
     '<products:(san-pham)>/<cid:[-a-z0-9]+>' => array('products/default/cats'), //cat
-    '<products:(san-pham)>/t/<cid:[-a-z0-9]+>' => array('products/default/types'), //type
+    '<products:(san-pham)>/loai/<cid:[-a-z0-9]+>' => array('products/default/types'), //type
     '<products:(san-pham)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('products/default/view', 'urlSuffix' => '.html'), //view
 
     //services modules
