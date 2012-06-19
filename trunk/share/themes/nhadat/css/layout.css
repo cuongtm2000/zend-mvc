@@ -337,4 +337,4 @@ table {border-collapse : separate; border-spacing : 0;width : 100%; border : 1px
 caption, th, td {text-align : left; font-weight : normal;}
 table, td, th {vertical-align : middle;}
 thead tr th {font-weight : bold; background : #C8EEF4; border-bottom : 1px solid #C6C6C6; padding : 5px; font-size:10pt; color:#333}
-tbody tr td {padding : 6px 5px; background : #fff; color : #111; cursor: pointer}
+tbody tr td {padding : 6px 5px; background : #fff; color : #111}
