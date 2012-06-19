@@ -20,7 +20,7 @@ a:hover{color:#000;}
 .hd-cter{position:absolute; top:0; left:200px; width:59%}
 
 /*Welcome dang ky, dang nhap*/
-.welcome{margin:0 0 10px 0}
+.welcome{margin:0 0 11px 0}
 .register{background:url('../images/icon-register.png') no-repeat left top; padding-left:16px; margin-left: 7px; margin-right: 12px; color: #3C64C7}
 .login{background:url('../images/icon-login.png') no-repeat left top; padding-left:17px;  margin-left: 10px; color: #E97C03}
 
@@ -134,7 +134,7 @@ a:hover{color:#000;}
 .bton-search-detail{font-weight:bold; background:#FF9119;color:#fff;-webkit-border-radius:4px;-moz-border-radius:4px; padding:5px 15px; border:none}
 
 /*BG footer left contet*/
-.bg-footer-left{background:url(../images/bg-footer-content.gif) repeat-x;padding:10px 0;-webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0}
+.bg-footer-left{background:url(../images/bg-footer-content.gif) repeat-x;margin:10px 0; padding:10px 2px;-webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0}
 .title-fter-left{color:#FF8601;font-weight:bold;font-size:11pt;margin:0 0 10px 0}
 
 /*footer-left*/
@@ -143,7 +143,7 @@ a:hover{color:#000;}
 /*Item sale and khung img*/
 .table-product, .bder-none{border:none}
 .table-product{border-bottom:1px solid #C9E1F4;;margin:0 0 20px 0}
-.frame-img-pro{float:left; width:100px;border:2px solid #A5A7A6;-webkit-border-radius:2px;-moz-border-radius:2px}
+.frame-img-pro{border:2px solid #A5A7A6;-webkit-border-radius:2px;-moz-border-radius:2px}
 .item-sale p{margin:0 !important}
 
 /*Thong tin ban hang*/
@@ -228,7 +228,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .link{padding:10px 5px 2px 5px}
 .link , .link a{color:#0064a6;font-weight:bold; font-size:10pt}
 
-.frame-product-info , .bg-footer-left{margin:10px 0 10px 0;background:url(../images/bg-footer-content.gif) repeat-x;padding:10px;-webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0}
+.frame-product-info{margin:10px 0 10px 0;background:url(../images/bg-footer-content.gif) repeat-x;padding:10px;-webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0}
 
 
 .tent-info-product{border-bottom:1px dotted #ccc}

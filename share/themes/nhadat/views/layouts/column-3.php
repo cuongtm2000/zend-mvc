@@ -45,14 +45,14 @@
 					<table class="table-product">
 						<tbody>
 							<tr>
-								<td>	
+								<td width="100">	
 									<div class="frame-img-pro"><a href="product-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/home.jpg" alt="" /></a></div>
 								</td>
-								<td colspan="3" >
+								<td>
 									<h2 class="title-sale"><a href="product-info.html" title="">CẦN BÁN GẤP NHÀ HẺM NGUYỄN TRI PHƯƠNG</a></h2>
 									<table class="bder-none">
 										<tr>
-											<td>
+											<td width="110">
 												<p><span class="position">Vị trí:</span> Hẻm Nguyễn Tri Phương, Phường 5, Quận 5</p>
 											</td>
 											<td>		
