@@ -44,10 +44,10 @@
                         <div class="left-nav"></div>
                         <div class="bg-nav">
                             <ul id="nav">
-                                <?php 
+                                <?php
                                     if(isset($this->function['menu_productstype']) && is_array($this->function['menu_productstype']))
                                         foreach ($this->function['menu_productstype'] as $value) {
-                                            echo '<li><a href="'.Yii::app()->baseUrl.'/san-pham/t/'.$value['tag'].'" title="'.$value['type_title'].'" >'.$value['type_title'].'</a></li>';
+                                            echo '<li><a href="'.Yii::app()->baseUrl.'/san-pham/loai/'.$value['tag'].'" title="'.$value['type_title'].'" >'.$value['type_title'].'</a></li>';
                                         }
                                 ?>
 
