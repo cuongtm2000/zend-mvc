@@ -28,19 +28,22 @@
 <?php if(isset($this->function['news_new']) && ($this->function['news_new'])):?>
 <h3 class="title-right"><span><?php echo CHtml::encode($this->lang['news']) . ' ' . strtolower($this->lang['new'])?></span></h3>
 <ul class="sub-new">
-	<li>
-		<div class="img-new"><a href="#" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/image-5.jpg" alt="New" /></a></div>
-		<h2 class="title-new"><a href="#" title="">Chứng khoán toàn cầu thiệt hại hơn 4.000 tỷ USD</a></h2>
-		<p>Các nhà kinh tế Mỹ và thế giới ngày 14/8 nhận định những hỗn loạn trên thị trường tài chính tiền 
-	tệ toàn cầu trong hai tuần qua đã gây thiệt hại khổng lồ cho các thị trường chứng khoán, ước tính
-	lên tới từ 2.500 đến hơn 4.000 tỷ USD chỉ trong tuần giao dịch từ 1-5/8.</p>
-		<div class="clear"></div>
-	</li>
-	<?php foreach($this->function['news_new'] as $value):?>
-		<li class="ico-disc">
-			<a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a>
-		</li>
-	<?php endforeach?>
+	<?php $i=0; foreach($this->function['news_new'] as $value):?>
+        <?php if($i==0 && $value['pic_thumb']): ?>
+        <li>
+            <?php if($value['pic_thumb']): ?>
+                <div class="img-new"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/news/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG]?>" /></a></div>
+            <?php endif?>
+            <h2 class="title-new"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></h2>
+            <?php echo $value['preview'.LANG]?>
+            <div class="clear"></div>
+        </li>
+        <?php else:?>
+            <li class="ico-disc">
+                <a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a>
+            </li>
+        <?php endif?>
+	<?php $i++; endforeach?>
 </ul>
 <div class="bt-title-right"></div>
 <?php endif?>
