@@ -26,15 +26,17 @@
 <?php endif; ?>
 
 <h3 class="title-right"><span><?php echo $this->lang['news'] ?></span></h3>
-
 <?php if(isset($this->function['news_new']) && ($this->function['news_new'])):?>
 <ul class="sub-new">
-	<?php foreach($this->function['news_new'] as $value):?>
-		<li><div class="sub-new-img"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-new.jpg" alt=""/></div>
+	<?php $i=0; foreach($this->function['news_new'] as $value):?>
+		<li>
+            <?php if($i==0 && $value['pic_thumb']): ?>
+                <div class="sub-new-img"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/news/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG]?>" /></a></div>
+            <?php endif?>
 			<a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a>
 			<div class="clear"></div>
 		</li>
-	<?php endforeach?>
+	<?php $i++; endforeach?>
 </ul>
 <?php endif?>
 
