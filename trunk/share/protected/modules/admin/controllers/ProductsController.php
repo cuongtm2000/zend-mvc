@@ -145,10 +145,13 @@ class ProductsController extends AdminController {
         $model_cat_class = new $module_cat();
         $model_class = new $model();
         $model_type_class = new ProductsType();
+        $model_utility_class = new ProductsUtility();
+        $model_fearture_class = new ProductsFeature();
         $provice_class = new Provinces();
         
 
         if (isset($_POST[$model])) {
+            var_dump($_POST);
             $model_class->attributes = $_POST[$model];
 
             if ($model_class->validate()) {
@@ -157,13 +160,22 @@ class ProductsController extends AdminController {
             }
         }
 
+        
         $this->render('add', array(
                 'model' => $model_class,
+                'model_u' => $model_utility_class,
+                'model_f' => $model_fearture_class,
+                'listItemsF'=> $model_fearture_class->listItem(), 
+                'listItemsU'=> $model_utility_class->attributeLabels(), 
                 'listItemsType'=> $model_type_class->listItem(), 
                 'listItemsCat' => $model_cat_class->listCats(),
                 'listProvices' => $provice_class->listProvinceByCountry('VND'),
             
             ));
+    }
+    public function actionListdistrict($id) {
+        $pr = new Provinces();
+        $this->renderPartial('listdistrict', array('list'=>$pr->listDistrictProvince($id)), false, true);
     }
 
     public function actionEdit($id) {

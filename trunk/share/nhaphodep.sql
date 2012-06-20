@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 3.5.0
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 19, 2012 at 02:22 AM
--- Server version: 5.5.16
--- PHP Version: 5.3.8
+-- Generation Time: Jun 20, 2012 at 02:51 AM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -121,7 +121,7 @@ CREATE TABLE IF NOT EXISTS `dos_districts` (
   `dos_provinces_province` int(11) NOT NULL,
   PRIMARY KEY (`district_id`),
   KEY `dos_provinces_province` (`dos_provinces_province`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1025 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=698 ;
 
 --
 -- Dumping data for table `dos_districts`
@@ -973,7 +973,7 @@ INSERT INTO `dos_modules` (`module_id`, `module_url`, `module_title`, `module_so
 ('contact', 'contact', 'Danh sách', 7, 1),
 ('default', '', '', 1, 1),
 ('news', 'news/cats|news', 'Danh mục|Danh sách', 5, 1),
-('products', 'products/cats|products', 'Danh mục|Danh sách', 3, 1),
+('products', 'products/type|products/cats|products', 'Phân loại|Danh mục|Danh sách', 3, 1),
 ('services', 'services', 'Danh sách', 4, 1),
 ('supports', 'supports', 'Danh sách', 10, 0),
 ('video', 'video/cats|video', 'Danh mục|Danh sách', 6, 1);
@@ -1277,6 +1277,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `hits` int(11) NOT NULL DEFAULT '0',
   `record_order` int(11) NOT NULL DEFAULT '1',
   `unit` varchar(45) DEFAULT NULL,
+  `unit_currency` varchar(4) NOT NULL,
+  `unit_unit` varchar(45) NOT NULL,
   `hot` tinyint(1) NOT NULL DEFAULT '0',
   `specials` tinyint(1) DEFAULT NULL,
   `extra_field1` varchar(100) DEFAULT NULL,
@@ -1288,6 +1290,11 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   `dos_provinces_province_id` int(11) NOT NULL,
   `dos_districts_district_id` int(11) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `contact_name` varchar(45) NOT NULL,
+  `contact_add` varchar(100) NOT NULL,
+  `contact_mobile` varchar(11) NOT NULL,
+  `contact_tel` varchar(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`),
   KEY `dos_provinces_province` (`dos_provinces_province_id`),
@@ -1346,6 +1353,30 @@ INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `dos_module_products_feature`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_products_feature` (
+  `product_id` int(11) NOT NULL AUTO_INCREMENT,
+  `area` float NOT NULL,
+  `area_build` float NOT NULL,
+  `area_used` float NOT NULL,
+  `num_floor` int(11) NOT NULL,
+  `room` int(11) NOT NULL,
+  `sittingrom` int(11) NOT NULL,
+  `bedroom` int(11) NOT NULL,
+  `bathroom` int(11) NOT NULL,
+  `other_room` int(11) NOT NULL,
+  `direction` varchar(45) NOT NULL,
+  `street` varchar(45) NOT NULL,
+  `legal` varchar(45) NOT NULL,
+  `road` varchar(45) NOT NULL,
+  PRIMARY KEY (`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `dos_module_products_type`
 --
 
@@ -1369,6 +1400,30 @@ INSERT INTO `dos_module_products_type` (`type_id`, `type_title`, `tag`, `pic_des
 (1, 'Nhà bán', 'nha-ban', NULL, 1, 1, ''),
 (2, 'Cho thuê', 'cho-thue', NULL, 1, 1, ''),
 (3, 'Sang nhượng', 'sang-nhuong', NULL, 3, 1, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_products_utility`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_products_utility` (
+  `product_id` int(11) NOT NULL AUTO_INCREMENT,
+  `telephone` tinyint(1) NOT NULL DEFAULT '0',
+  `power_meter` tinyint(1) NOT NULL DEFAULT '0',
+  `heater` tinyint(1) NOT NULL DEFAULT '0',
+  `gara` tinyint(1) NOT NULL DEFAULT '0',
+  `cable_tv` tinyint(1) NOT NULL DEFAULT '0',
+  `water_meter` tinyint(1) NOT NULL DEFAULT '0',
+  `alarm_system` tinyint(1) NOT NULL DEFAULT '0',
+  `garden` tinyint(1) NOT NULL DEFAULT '0',
+  `internet` tinyint(1) NOT NULL DEFAULT '0',
+  `air_conditioner` tinyint(1) NOT NULL DEFAULT '0',
+  `parking` tinyint(1) NOT NULL DEFAULT '0',
+  `pool` tinyint(1) NOT NULL DEFAULT '0',
+  `furniture` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1754,8 +1809,8 @@ INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullna
 ('nhaphodep', 'info@nhaphodep.vn', 'e10adc3949ba59abbe56e057f20f883e', '2012-06-14 07:31:44', 'Nhà phố đẹp', 0, '', '0929001001', 'Công ty cổ phần Thương Hội', '', 0, 'user', 'vi', NULL, '2013-05-31 17:00:00', 0, 1, 'nhadat', 30, 'bds-kien-truc-xay-dung'),
 ('ninh', 'ninh@yac.com', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-06-16 17:48:55', 'Ninh', 2147483647, 'Đồng Nai', '235466789099089', NULL, 'ACB', 2147483647, 'user', 'vi', NULL, '2012-07-15 17:00:00', 0, 1, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
 ('ninh1', 'ninh@yac.com', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-06-16 18:01:40', 'Ninh', 2147483647, 'Đồng Nai', '235466789099089', NULL, 'ACB', 2147483647, 'user', 'vi', NULL, '2012-07-15 17:00:00', 0, 1, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
-('thanhansoft', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-06-18 08:46:09', 'Nguyen An', 271726306, 'J7, Kp1, Bửu Long, Bien Hoa, Dong Nai', '0929001001', NULL, '', NULL, 'user', 'vi', NULL, '2012-07-17 17:00:00', 0, 1, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
-('tinhungphat', 'ninh@yac.com', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-06-16 18:05:20', 'ds', 2147483647, 'Đồng Nai', '235466789099089', NULL, 'ACB', 2147483647, 'user', 'vi', NULL, '2012-07-15 17:00:00', 0, 1, 'nhadat', 19, 'bds-kien-truc-xay-dung');
+('tinhungphat', 'ninh@yac.com', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-06-16 18:05:20', 'ds', 2147483647, 'Đồng Nai', '235466789099089', NULL, 'ACB', 2147483647, 'user', 'vi', NULL, '2012-07-15 17:00:00', 0, 1, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
+('tinhungphat1', 'ninh@yac.com', '96e79218965eb72c92a549dd5a330112', '2012-06-19 16:07:13', 'f', 2147483647, 'f', 'f', NULL, '', NULL, 'user', 'vi', NULL, '2012-07-18 17:00:00', 0, 1, 'nhadat', 19, 'bds-kien-truc-xay-dung');
 
 -- --------------------------------------------------------
 
@@ -1911,6 +1966,18 @@ ALTER TABLE `dos_module_products`
 --
 ALTER TABLE `dos_module_products_cat`
   ADD CONSTRAINT `fk_dos_module_products_cat_dos_usernames1` FOREIGN KEY (`dos_usernames_username`) REFERENCES `dos_usernames` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `dos_module_products_feature`
+--
+ALTER TABLE `dos_module_products_feature`
+  ADD CONSTRAINT `dos_module_products_feature_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `dos_module_products` (`record_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `dos_module_products_utility`
+--
+ALTER TABLE `dos_module_products_utility`
+  ADD CONSTRAINT `dos_module_products_utility_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `dos_module_products` (`record_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `dos_module_services`
