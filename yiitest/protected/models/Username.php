@@ -36,7 +36,7 @@ class Username extends CActiveRecord {
             array('username, email, password, agent_sale, dos_templates_template, dos_provinces_province_id, dos_bussiness_bussiness_id, choose_modules, choose_feature', 'required', 'on' => 'register'),
             array('username, dos_bussiness_bussiness_id', 'required', 'on' => 'import'),
             array('dos_templates_template', 'required', 'on' => 'templates'),
-            array('email, fullname, phone, dos_templates_template, dos_provinces_province_id, dos_bussiness_bussiness_id', 'required', 'on' => 'changeInfo'),
+            array('email, fullname, phone, dos_templates_template, dos_provinces_province_id, expired, dos_bussiness_bussiness_id', 'required', 'on' => 'changeInfo'),
             array('import, activated, dos_provinces_province_id', 'numerical', 'integerOnly' => true),
             array('username, email, password, fullname', 'length', 'max' => 45),
             array('username', 'unique', 'on' => 'register', 'message' => '<strong>{value}</strong> {attribute} already exists please choose another user'),
@@ -237,7 +237,7 @@ class Username extends CActiveRecord {
     }
 
     //Back end - Change info
-    public function changeInfo($email, $fullname, $phone, $company, $province, $business, $user) {
+    public function changeInfo($email, $fullname, $phone, $company, $province, $business, $user, $expired) {
         $purifier = new CHtmlPurifier();
         $email = $purifier->purify($email);
         $fullname = $purifier->purify($fullname);
@@ -246,12 +246,13 @@ class Username extends CActiveRecord {
         $province = $purifier->purify($province);
         $business = $purifier->purify($business);
 
-        $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET email=:email, fullname=:fullname, phone=:phone, company=:company, dos_provinces_province_id=:province, dos_bussiness_bussiness_id=:business WHERE username=:user');
+        $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET email=:email, fullname=:fullname, phone=:phone, company=:company, expired=:expired, dos_provinces_province_id=:province, dos_bussiness_bussiness_id=:business WHERE username=:user');
         $command->bindParam(":user", $user, PDO::PARAM_STR);
         $command->bindParam(":email", $email, PDO::PARAM_STR);
         $command->bindParam(":fullname", $fullname, PDO::PARAM_STR);
         $command->bindParam(":phone", $phone, PDO::PARAM_STR);
         $command->bindParam(":company", $company, PDO::PARAM_STR);
+        $command->bindParam(":expired", $expired, PDO::PARAM_STR);
         $command->bindParam(":province", $province, PDO::PARAM_INT);
         $command->bindParam(":business", $business, PDO::PARAM_STR);
         $command->execute();

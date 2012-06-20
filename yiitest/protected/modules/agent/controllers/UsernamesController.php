@@ -8,6 +8,12 @@ class UsernamesController extends AgentController {
     }
 
     public function actionEdit($id) {
+        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/jquery-ui-1.8.14.custom.css');
+        Yii::app()->clientScript->registerCoreScript('jquery');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery-ui-1.8.14.custom.min.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.ui.datepicker-vi.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.datepicker.config.js');
+
         $model = new Username();
         $business_class = new Bussiness();
         $province_class = new Provinces();
@@ -18,7 +24,7 @@ class UsernamesController extends AgentController {
         if (isset($_POST['Username'])) {
             $model->attributes = $_POST['Username'];
             if ($model->validate()) {
-                $model->changeInfo($model->email, $model->fullname, $model->phone, $model->company, $model->dos_provinces_province_id, $model->dos_bussiness_bussiness_id, $id);
+                $model->changeInfo($model->email, $model->fullname, $model->phone, $model->company, $model->dos_provinces_province_id, $model->dos_bussiness_bussiness_id, $id, $model->expired);
                 $this->redirect(array('./usernames'));
             }
         }
