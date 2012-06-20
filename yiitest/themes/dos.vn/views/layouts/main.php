@@ -71,7 +71,7 @@
 	<div class="footer">
     	<div class="tent-footer">
 			<div class="logo-fter"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-footer.png" alt="Logo footer" /></div>
-            <ul id="nav-fter">
+            <!-- <ul id="nav-fter">
             	<li class="left row-1">
                 	<h4>Thiết kế website</h4>
                     <p><a href="#" title="">Tạo web trực tuyến</a></p>
@@ -127,7 +127,7 @@
                         <?php endforeach?>
                     </div>
                 </li>
-            </ul> <!--End menu footer--> <div class="clear"></div>
+            </ul> <div class="clear"></div> -->
 		</div>
     </div>
     <div class="copyright">
