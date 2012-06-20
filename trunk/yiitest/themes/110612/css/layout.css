@@ -62,8 +62,6 @@ a:hover{color:#000;}
 .support li{ line-height:1.5em}
 .support li img{margin:0 0 8px 0}
 
-
-
 /*Thong ke truy cap*/
 .statistics{list-style:none;padding:10px 5px 10px 25px;border-left:1px solid #D9D8A8; border-right:1px solid #D9D8A8;*_padding:10px 5px 0px 25px; }
 .statistics li{ line-height:1.75em}
@@ -87,6 +85,7 @@ a:hover{color:#000;}
 #rightcontent .sub-new li{margin:0; line-height:1.75em}
 #rightcontent .sub-new  .ico-disc{list-style:disc; margin:0 0 0 15px; color:#D98F00;}
 .sub-new a{ color:#D98F00;display:block}
+.img-new {float:left; margin:0 10px 5px 0; border:2px solid #D9D8A8}
 #rightcontent .sub-new  .ico-disc:hover ,.sub-new a:hover{color:#00FFFF}
 
 /*Page Gallery*/

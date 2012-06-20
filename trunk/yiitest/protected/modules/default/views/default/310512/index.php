@@ -25,17 +25,25 @@
 	</ul> <!--End all product-->
 <?php endif; ?>
 
-<h3 class="title-right"><span><?php echo $this->lang['news'] ?></span></h3>
+
 <?php if(isset($this->function['news_new']) && ($this->function['news_new'])):?>
+<h3 class="title-right"><span><?php echo CHtml::encode($this->lang['news']) . ' ' . strtolower($this->lang['new'])?></span></h3>
 <ul class="sub-new">
 	<?php $i=0; foreach($this->function['news_new'] as $value):?>
-		<li>
-            <?php if($i==0 && $value['pic_thumb']): ?>
-                <div class="sub-new-img"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/news/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG]?>" /></a></div>
+		 <?php if($i==0 && $value['pic_thumb']): ?>
+        <li class="sub-new-hot">
+            <?php if($value['pic_thumb']): ?>
+                <a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><img class="img-new" src="<?php echo Yii::app()->baseUrl.USERFILES ?>/news/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG]?>" /></a>
             <?php endif?>
-			<a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a>
-			<div class="clear"></div>
-		</li>
+            <h2 class="title-sub-new"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></h2>
+            <?php echo $value['preview'.LANG]?>
+            <div class="clear"></div>
+        </li>
+        <?php else:?>
+            <li class="ico-disc">
+                <a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a>
+            </li>
+        <?php endif?>
 	<?php $i++; endforeach?>
 </ul>
 <?php endif?>

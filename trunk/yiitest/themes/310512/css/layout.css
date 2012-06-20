@@ -52,11 +52,14 @@ a:hover{color:#000}
 .price-info span{margin: 0 0 0 10px;color: #DC692B}
 
 /*tin tuc*/
-.sub-new-hot, .sub-new{list-style:none; padding:0; margin:0}
+.sub-new{list-style:none; padding:0; margin:0}
 .sub-new li{line-height:1.5em;margin:0 0 5px 0}
 .sub-new .sub-new-hot{margin:0 0 15px 0}
-.sub-new-hot a, .sub-new li a{color:#DB1A1A; font-size:14px; font-weight:700;background:url(../images/icon-sao.jpg) no-repeat left -1px; display:block; padding:0 0 0 25px}
-.sub-new-img{float:left;margin:0 20px 0 0;border:1px solid #D1D0CE;-moz-border-radius:2px;-webkit-border-radius:2px}
+.sub-new-hot p{margin:0}
+.sub-new li a{color:#DB1A1A; font-size:14px; font-weight:700; display:block; padding:0 0 0 25px}
+.sub-new .sub-new-hot a{padding:0}
+.ico-disc{background:url(../images/icon-sao.jpg) no-repeat left -1px}
+.img-new{float:left;margin:0 10px 0 0;border:2px solid #D1D0CE;-moz-border-radius:2px;-webkit-border-radius:2px}
 .title-sub-new {margin:0 0 5px 0} .sub-new li .title-sub-new a{padding:0; background:none; color:#DB1A1A; font-size:14px; font-weight:700; }
 .sub-new li a:hover{ text-decoration:underline}
 
