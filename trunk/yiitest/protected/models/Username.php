@@ -181,7 +181,7 @@ class Username extends CActiveRecord {
         $this->dos_bussiness_bussiness_id = $purifier->purify($this->dos_bussiness_bussiness_id);
 
         if ($this->isNewRecord) {
-            $this->expired = date('Y-m-d', strtotime('now +30 days'));
+            $this->expired = date('Y-m-d', strtotime('now +90 days'));
         } else {
             //update
         }
