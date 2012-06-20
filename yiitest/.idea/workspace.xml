@@ -13,7 +13,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/cache/472f714c226873e2219db544625182ed.bin" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/cache" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/default/views/default/310512/index.php" afterPath="$PROJECT_DIR$/protected/modules/default/views/default/310512/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/default/views/default/110612/index.php" afterPath="$PROJECT_DIR$/protected/modules/default/views/default/110612/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/news/models/News.php" afterPath="$PROJECT_DIR$/protected/modules/news/models/News.php" />
     </list>
     <ignored path="svn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,25 +39,25 @@
       <file leaf-file-name="News.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/news/models/News.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="208" column="57" selection-start="8369" selection-end="8378" vertical-scroll-proportion="0.0">
+            <state line="208" column="79" selection-start="9471" selection-end="9471" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/default/views/default/310512/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="403" selection-start="2894" selection-end="3030" vertical-scroll-proportion="-10.192307">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/modules/default/views/default/310512/index.php">
+        <entry file="file://$PROJECT_DIR$/protected/modules/default/views/default/110612/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="401" selection-start="3028" selection-end="3028" vertical-scroll-proportion="0.5884615">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/310512/css/layout.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="12" selection-start="2610" selection-end="2621" vertical-scroll-proportion="-6.92">
+            <state line="37" column="44" selection-start="3558" selection-end="3558" vertical-scroll-proportion="0.5423077">
               <folding />
             </state>
           </provider>
@@ -75,6 +76,8 @@
         <option value="$PROJECT_DIR$/themes/dos.vn/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/models/Username.php" />
         <option value="$PROJECT_DIR$/protected/modules/default/views/default/310512/index.php" />
+        <option value="$PROJECT_DIR$/protected/modules/news/models/News.php" />
+        <option value="$PROJECT_DIR$/protected/modules/default/views/default/110612/index.php" />
       </list>
     </option>
   </component>
@@ -269,6 +272,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="110612" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="110612" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="protected" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -439,6 +482,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="110612" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -455,6 +532,11 @@
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method>
+        <option name="PhingTarget" enabled="false" />
+      </method>
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -591,23 +673,30 @@
         <state line="129" column="18" selection-start="9036" selection-end="9036" vertical-scroll-proportion="2.0461538" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/news/models/News.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="208" column="57" selection-start="8369" selection-end="8378" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/310512/css/layout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="12" selection-start="2610" selection-end="2621" vertical-scroll-proportion="-6.92">
+        <state line="58" column="12" selection-start="2610" selection-end="2621" vertical-scroll-proportion="0.33205375">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/default/views/default/310512/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="401" selection-start="3028" selection-end="3028" vertical-scroll-proportion="0.5884615">
+        <state line="33" column="403" selection-start="2894" selection-end="3030" vertical-scroll-proportion="-10.192307">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/news/models/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="208" column="79" selection-start="9471" selection-end="9471" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/default/views/default/110612/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="44" selection-start="3558" selection-end="3558" vertical-scroll-proportion="0.5423077">
           <folding />
         </state>
       </provider>
