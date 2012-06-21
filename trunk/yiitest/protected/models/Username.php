@@ -237,7 +237,7 @@ class Username extends CActiveRecord {
     }
 
     //Back end - Change info
-    public function changeInfo($email, $fullname, $phone, $company, $province, $business, $user, $expired) {
+    public function changeInfo($email, $fullname, $phone, $company, $province, $business, $user, $expired = NULL) {
         $purifier = new CHtmlPurifier();
         $email = $purifier->purify($email);
         $fullname = $purifier->purify($fullname);
@@ -246,13 +246,18 @@ class Username extends CActiveRecord {
         $province = $purifier->purify($province);
         $business = $purifier->purify($business);
 
-        $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET email=:email, fullname=:fullname, phone=:phone, company=:company, expired=:expired, dos_provinces_province_id=:province, dos_bussiness_bussiness_id=:business WHERE username=:user');
+        if ($expired == NULL) {
+            $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET email=:email, fullname=:fullname, phone=:phone, company=:company, dos_provinces_province_id=:province, dos_bussiness_bussiness_id=:business WHERE username=:user');
+        } else {
+            $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET email=:email, fullname=:fullname, phone=:phone, company=:company, expired=:expired, dos_provinces_province_id=:province, dos_bussiness_bussiness_id=:business WHERE username=:user');
+            $command->bindParam(":expired", $expired, PDO::PARAM_STR);
+        }
+
         $command->bindParam(":user", $user, PDO::PARAM_STR);
         $command->bindParam(":email", $email, PDO::PARAM_STR);
         $command->bindParam(":fullname", $fullname, PDO::PARAM_STR);
         $command->bindParam(":phone", $phone, PDO::PARAM_STR);
         $command->bindParam(":company", $company, PDO::PARAM_STR);
-        $command->bindParam(":expired", $expired, PDO::PARAM_STR);
         $command->bindParam(":province", $province, PDO::PARAM_INT);
         $command->bindParam(":business", $business, PDO::PARAM_STR);
         $command->execute();
