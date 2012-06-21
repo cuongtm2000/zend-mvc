@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 20, 2012 at 02:51 AM
+-- Generation Time: Jun 21, 2012 at 02:03 PM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -1288,7 +1288,6 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   `dos_module_item_type_type_id` int(11) NOT NULL,
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
-  `dos_provinces_province_id` int(11) NOT NULL,
   `dos_districts_district_id` int(11) NOT NULL,
   `address` varchar(100) NOT NULL,
   `contact_name` varchar(45) NOT NULL,
@@ -1297,8 +1296,6 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `contact_tel` varchar(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`),
-  KEY `dos_provinces_province` (`dos_provinces_province_id`),
-  KEY `dos_provinces_province_id` (`dos_provinces_province_id`),
   KEY `dos_districts_district_id` (`dos_districts_district_id`),
   KEY `dos_module_item_type_type_id` (`dos_module_item_type_type_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
@@ -1956,7 +1953,6 @@ ALTER TABLE `dos_module_news_cat`
 -- Constraints for table `dos_module_products`
 --
 ALTER TABLE `dos_module_products`
-  ADD CONSTRAINT `dos_module_products_ibfk_1` FOREIGN KEY (`dos_provinces_province_id`) REFERENCES `dos_provinces` (`province_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `dos_module_products_ibfk_2` FOREIGN KEY (`dos_districts_district_id`) REFERENCES `dos_districts` (`district_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `dos_module_products_ibfk_3` FOREIGN KEY (`dos_module_item_type_type_id`) REFERENCES `dos_module_products_type` (`type_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_dos_module_products_dos_module_products_cat1` FOREIGN KEY (`dos_module_item_cat_cat_id`) REFERENCES `dos_module_products_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;

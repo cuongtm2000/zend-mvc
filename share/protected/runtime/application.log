@@ -1003,3 +1003,1094 @@ in E:\xampp\htdocs\share\index.php (16)
 2012/06/19 21:17:02 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
 in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
 in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 16:57:12 [error] [php] Undefined variable: model_u (E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php:128)
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CController.php(870): ProductsController->renderFile()
+#1 E:\xampp\php\www\framework\web\CController.php(783): ProductsController->renderPartial()
+#2 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(174): ProductsController->render()
+#3 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
+#4 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): ProductsController->runAction()
+#6 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): ProductsController->filterAccessControl()
+#9 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#11 E:\xampp\php\www\framework\web\CController.php(266): ProductsController->runActionWithFilters()
+#12 E:\xampp\php\www\framework\web\CWebApplication.php(276): ProductsController->run()
+#13 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
+REQUEST_URI=/share/admin/products/add
+in E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php (128)
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (174)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 16:58:07 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 16:58:07 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 16:58:07 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 16:58:07 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 16:58:07 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 16:58:07 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 16:58:07 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 16:58:07 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 16:58:07 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:10:52 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:10:52 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:10:52 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:10:52 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:10:52 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:10:52 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:10:52 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:10:52 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:10:52 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:11:06 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:11:06 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:11:06 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:11:06 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:11:06 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:11:06 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:11:06 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:11:06 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:11:06 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:11:47 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:11:47 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:11:47 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:11:47 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:11:47 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:11:47 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:11:47 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:11:47 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:11:47 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:14:10 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:14:10 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:14:10 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:14:10 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:14:10 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:14:10 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:14:10 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:14:10 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:14:10 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:22:29 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:22:29 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:22:29 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:22:29 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:22:29 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:22:29 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:22:29 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:22:29 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:22:29 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:23:20 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:23:20 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:23:20 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:23:20 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:23:20 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:23:20 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:23:20 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:23:20 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:23:20 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "utility" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "utility" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:31:06 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:31:06 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:31:06 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:31:06 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:31:06 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:31:06 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:31:06 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:31:06 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:31:06 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:32:03 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:32:03 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:32:03 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:32:03 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:32:03 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:32:03 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:32:04 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:32:04 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 17:32:04 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 18:06:56 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 18:06:56 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 18:06:56 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 18:06:56 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 18:06:56 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 18:06:56 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 18:06:56 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 18:06:56 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/20 18:06:56 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 07:00:53 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 07:00:53 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 07:00:53 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 07:00:53 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 07:00:53 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 07:00:53 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 07:00:53 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 07:00:53 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 07:00:53 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 07:14:01 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "Products.area_used" chưa được định nghĩa.' in E:\xampp\php\www\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('area_used')
+#1 E:\xampp\php\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('area_used')
+#2 E:\xampp\php\www\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(Products), 'area_used')
+#3 E:\xampp\php\www\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(Products), 'area_used', Array)
+#4 E:\xampp\php\www\framework\web\widgets\CActiveForm.php(568): CHtml::activeTextField(Object(Products), 'area_used', Array)
+#5 E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php(161): CActiveForm->textField(Object(Products), 'area_used', Array)
+#6 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
+#7 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#8 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#9 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('add', Array, true)
+#10 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(172): CController->render('add', Array)
+#11 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
+#12 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#19 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('add')
+#21 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
+#22 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 E:\xampp\htdocs\share\index.php(16): CApplication->run()
+#24 {main}
+REQUEST_URI=/share/admin/products/add
+---
+2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "dos_districts_district_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "dos_districts_district_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:12:32 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "Products.dos_provinces_province_id" chưa được định nghĩa.' in E:\xampp\php\www\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('dos_provinces_p...')
+#1 E:\xampp\php\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('dos_provinces_p...')
+#2 E:\xampp\php\www\framework\web\helpers\CHtml.php(1402): CHtml::resolveValue(Object(Products), 'dos_provinces_p...')
+#3 E:\xampp\php\www\framework\web\widgets\CActiveForm.php(674): CHtml::activeDropDownList(Object(Products), 'dos_provinces_p...', Array, Array)
+#4 E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php(28): CActiveForm->dropDownList(Object(Products), 'dos_provinces_p...', Array, Array)
+#5 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
+#6 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#7 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#8 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('add', Array, true)
+#9 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(174): CController->render('add', Array)
+#10 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
+#11 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#14 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#15 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#16 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#18 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('add')
+#20 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
+#21 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 E:\xampp\htdocs\share\index.php(16): CApplication->run()
+#23 {main}
+REQUEST_URI=/share/admin/products/add
+---
+2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "dos_districts_district_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:04 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:04 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:04 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:04 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:04 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:04 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:04 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:04 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:04 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:13 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:13 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:13 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:13 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:13 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:13 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:13 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:13 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:13 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:39 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:39 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:39 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:39 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:39 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:39 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:39 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:39 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:14:39 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:25:39 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:25:39 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:25:39 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:25:39 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:25:39 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:25:39 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:25:39 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:25:39 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:25:39 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:28:32 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:28:32 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:28:32 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:28:32 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:28:32 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:28:32 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:28:32 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:28:32 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:28:32 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:29 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:29 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:29 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:29 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:29 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:29 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:29 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:29 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:29 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "dos_districts_district_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:10:09 [error] [php] Missing argument 2 for CHtml::listData(), called in E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php on line 195 and defined (E:\xampp\php\www\framework\web\helpers\CHtml.php:1652)
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CBaseController.php(96): ProductsController->renderInternal()
+#1 E:\xampp\php\www\framework\web\CController.php(870): ProductsController->renderFile()
+#2 E:\xampp\php\www\framework\web\CController.php(783): ProductsController->renderPartial()
+#3 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(174): ProductsController->render()
+#4 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
+#5 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#6 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): ProductsController->runAction()
+#7 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#9 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): ProductsController->filterAccessControl()
+#10 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#11 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#12 E:\xampp\php\www\framework\web\CController.php(266): ProductsController->runActionWithFilters()
+#13 E:\xampp\php\www\framework\web\CWebApplication.php(276): ProductsController->run()
+#14 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
+REQUEST_URI=/share/admin/products/add
+in E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php (195)
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (174)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:10:33 [error] [php] Missing argument 2 for CHtml::listData(), called in E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php on line 195 and defined (E:\xampp\php\www\framework\web\helpers\CHtml.php:1652)
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CBaseController.php(96): ProductsController->renderInternal()
+#1 E:\xampp\php\www\framework\web\CController.php(870): ProductsController->renderFile()
+#2 E:\xampp\php\www\framework\web\CController.php(783): ProductsController->renderPartial()
+#3 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(174): ProductsController->render()
+#4 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
+#5 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#6 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): ProductsController->runAction()
+#7 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#9 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): ProductsController->filterAccessControl()
+#10 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#11 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#12 E:\xampp\php\www\framework\web\CController.php(266): ProductsController->runActionWithFilters()
+#13 E:\xampp\php\www\framework\web\CWebApplication.php(276): ProductsController->run()
+#14 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
+REQUEST_URI=/share/admin/products/add
+in E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php (195)
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (174)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "dos_districts_district_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:48:09 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:48:09 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:48:09 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:48:09 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:48:09 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:48:09 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:48:09 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:48:09 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:48:09 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:49:17 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:49:17 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:49:17 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:49:17 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:49:17 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:49:17 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:49:17 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:49:17 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:49:17 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:54:01 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:54:01 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:54:01 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:54:01 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:54:01 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:54:01 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:54:01 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:54:01 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:54:01 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:54:51 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:54:51 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:54:51 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:54:51 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:54:51 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:54:51 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:54:51 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:54:51 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 11:54:51 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:05:28 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:05:28 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:05:28 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:05:28 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:05:28 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:05:28 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:05:28 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:05:28 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:05:28 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:06:02 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:06:02 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:06:02 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:06:02 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:06:02 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:06:02 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:06:02 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:06:02 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:06:02 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:05 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:05 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:05 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:05 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:05 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:05 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:05 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:05 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:05 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:11 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:11 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:11 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:11 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:11 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:11 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:11 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:11 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:11 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:25 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:25 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:25 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:25 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:25 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:25 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:25 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:25 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:25 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:38 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:38 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:38 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:38 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:38 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:38 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:38 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:38 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:07:38 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:09:44 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:09:44 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:09:44 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:09:44 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:09:44 [warning] [application] Failed to set unsafe attribute "address" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:09:44 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:09:44 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:09:44 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)
+2012/06/21 13:09:44 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
+in E:\xampp\htdocs\share\index.php (16)

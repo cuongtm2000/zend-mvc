@@ -8,8 +8,10 @@ class Products extends CActiveRecord {
 	private $_oldImage_full;
 	private $_oldImage_desc;
 	private $_model;
-
-	//public function init() {
+        public $utility;
+        public $feature;
+        public $dos_provinces_province_id;
+        //public function init() {
 		//$this->_subdomain = Yii::app()->session['subdomain'];
 	//}
 
@@ -36,7 +38,7 @@ class Products extends CActiveRecord {
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, content, tag, dos_module_item_cat_cat_id', 'required'),
+			array('title, content, tag,utility,feature, dos_module_item_cat_cat_id', 'required'),
 			array('hits, record_order, hot, specials, enable, dos_module_item_cat_cat_id', 'numerical', 'integerOnly' => true),
 			array('title, titleen, pic_thumb, pic_full, tag, tagen, extra_field1, extra_field2, extra_field3, extra_field4', 'length', 'max' => 100),
 			array('tag, tagen', 'unique'),
@@ -103,6 +105,10 @@ class Products extends CActiveRecord {
 			'dos_module_item_type_type_id' => Yii::app()->controller->lang['type_parent'],
 			'dos_provinces_province_id' => Yii::app()->controller->lang['province'],
 			'dos_districts_district_id' => Yii::app()->controller->lang['district'],
+			'contact_name' => 'Tên',
+			'contact_add' => 'Địa chỉ',
+			'contact_mobile' => 'Điện thoại DĐ',
+			'contact_tel' => 'Điện thoại bàn',
 		);
 	}
 
