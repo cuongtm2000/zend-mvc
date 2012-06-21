@@ -247,7 +247,7 @@ class EUploadedImage extends CComponent {
     }
 
     /**
-     * 
+     *
      * @param int $maxWidth image max width. is false if none is given
      * @param int $maxHeight image max height. is false if none is given
      */
@@ -351,7 +351,7 @@ class EUploadedImage extends CComponent {
      */
     public function getExtensionName() {
         if (($pos = strrpos($this->_name, '.')) !== false)
-            return (string) substr($this->_name, $pos + 1);
+            return (string)substr($this->_name, $pos + 1);
         else
             return '';
     }
@@ -364,15 +364,15 @@ class EUploadedImage extends CComponent {
     }
 
     public function processUpload($maxwidth, $maxheight, $path, $filename = '', $file_old = '', $type = 0, $txt_new_name = '') {
-        $this->maxWidth = (int) $maxwidth;
-        $this->maxHeight = (int) $maxheight;
+        $this->maxWidth = (int)$maxwidth;
+        $this->maxHeight = (int)$maxheight;
         //path and filename
         $path_upload = YiiBase::getPathOfAlias('webroot') . $path . '/';
 
         //check Directory Exists
         $common_class = new Common();
         $common_class->recursiveMkdir($path . '/');
-        
+
         /*if (!is_dir($path_upload)) {
             //$this->mkdir_r($path_upload);
             mkdir($path_upload, 0777, true);
@@ -393,9 +393,22 @@ class EUploadedImage extends CComponent {
         }
 
         //upload
-        if ($this->saveAs($path_upload . $filename)) {
-            return $filename;
+        if (($this->_width > $this->maxWidth) || ($this->_height > $this->maxHeight)) {
+            if ($this->saveAs($path_upload . $filename)) {
+                return $filename;
+            }
+        } else {
+            if (move_uploaded_file($this->_tempName, $path_upload . $filename)) {
+                return $filename;
+            }
         }
+
+        //move_uploaded_file($this->_tempName, $path_upload . $filename);
+        //return $filename;
+
+        //if ($this->saveAs($path_upload . $filename)) {
+        //  return $filename;
+        //}
     }
 
 }

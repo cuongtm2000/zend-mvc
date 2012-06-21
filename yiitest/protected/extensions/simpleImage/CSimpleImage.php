@@ -37,7 +37,7 @@ class CSimpleImage {
         
         if ($type == 1) {
             //change name using user input txt name
-            $filename = $this->getFileExists($path_upload, NoneUnicode::fileName($txt_new_name . '.' . $this->getExtensionName()));
+            //$filename = $this->getFileExists($path_upload, NoneUnicode::fileName($txt_new_name . '.' . $this->getExtensionName()));
         } else {
             //change name using user input name
             $this->_filename = $this->getFileExists($path_upload, NoneUnicode::fileName($filename . '.' . $this->getExtensionName($file_name)));
