@@ -127,15 +127,16 @@ a:hover{color:#0193DE}
 
 #footer{background-color:#000; color:#FFF; margin:0; padding:0}
 .menu-bottom{width: 920px;padding:15px 0; margin: auto}
+.menu-bottom  p{margin:0 0 5px 0}
 .menu-bottom a{text-decoration:none; color:#FFF}
 .menu-bottom a:hover{color:#0096EA}
-.tent-fter{float:left;width:700px}
-.nav-fter{list-style:none;margin:0;padding:0}
-.nav-fter li{display:inline;margin:0 10px 0 0;border-right:1px solid #fff}
-.nav-fter li a{padding:0 10px 0 0;text-transform:uppercase;}
+.tent-fter{float:left;width:470px }
+.nav-fter{list-style:none;margin:0 0 8px 0;padding:0}
+.nav-fter li{display:inline;margin:0 5px 0 0;border-right:1px solid #fff}
+.nav-fter li a{padding:0 5px 0 0}
 .nav-fter .none-line{border:none}
 
-.copright{float:right; text-align:right}
+.copright{float:right;text-align:right;width:445px}
 
 /* Error */
 .errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}

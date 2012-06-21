@@ -188,14 +188,20 @@
 			<div class="tent-fter">
 				<ul class="nav-fter">
 					<?php $size = count($this->nav); $i = 0; foreach($this->nav as $value):?>
-						<?php $selected = ($value['url']==$this->module->id) ?  ' class="select"' : ''?>
-						<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
-						<?php $none = ($i < ($size-1)) ? '' : ' class="none-line"' ?>
-						<li<?php echo $none?>><a<?php echo $selected ?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
-						<?php $i++; endforeach;?>
+					<?php $selected = ($value['url']==$this->module->id) ?  ' class="select"' : ''?>
+					<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
+					<?php $none = ($i < ($size-1)) ? '' : ' class="none-line"' ?>
+					<li<?php echo $none?>><a<?php echo $selected ?> href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a></li>
+					<?php $i++; endforeach;?>
 				</ul>
 				<p><?php echo $this->lang['copyright'] ?></p>
-			<div class="copright"><?php echo $this->lang['developed']?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></div>
+			</div>	
+			<div class="copright">
+				<h3 class="title-company-fter"><strong><?php echo $this->lang['company_name_footer'] ?></strong></h3>
+				<p><?php echo $this->lang['address1'] ?></p>
+				<?php echo ($this->lang['address2']) ? '<p>'.$this->lang['address2'].'</p>' : '' ?>
+				<?php echo $this->lang['developed']?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a>
+			</div><div class="clear"></div>
 		</div>
 	</div>
 </body>
