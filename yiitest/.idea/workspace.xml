@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="f190d1a4-4e3b-4b4f-b565-a2d4e8cbff85" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/administrator/views/usernames/edit.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/application.log" afterPath="" />
+      <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\application.log" afterPath="" />
       <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\CSS\4.4.0,4af9cb41e1f64636f725057634b6a44b,1.ser" afterPath="" />
       <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\CSS" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/HTML/4.4.0,7dbdc3d58ab57a278defc6669c7aa098,1.ser" afterPath="" />
@@ -14,10 +13,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/cache/472f714c226873e2219db544625182ed.bin" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/cache" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Username.php" afterPath="$PROJECT_DIR$/protected/models/Username.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/administrator/controllers/UsernamesController.php" afterPath="$PROJECT_DIR$/protected/modules/administrator/controllers/UsernamesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/agent/controllers/UsernamesController.php" afterPath="$PROJECT_DIR$/protected/modules/agent/controllers/UsernamesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/agent/views/usernames/edit.php" afterPath="$PROJECT_DIR$/protected/modules/agent/views/usernames/edit.php" />
     </list>
     <ignored path="svn.iws" />
     <ignored path=".idea/workspace.xml" />
