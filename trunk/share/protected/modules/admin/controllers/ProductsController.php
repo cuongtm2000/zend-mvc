@@ -151,7 +151,7 @@ class ProductsController extends AdminController {
         
 
         if (isset($_POST[$model])) {
-            var_dump($_POST);
+        //    var_dump($_POST);
             $model_class->attributes = $_POST[$model];
 
             if ($model_class->validate()) {
