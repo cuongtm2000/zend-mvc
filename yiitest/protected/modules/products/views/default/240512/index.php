@@ -9,7 +9,7 @@
 		<?php else :?>
 			<div class="product-img"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', $this->module->id.'.link')?>/<?php echo $value['tag'] ?>" title="<?php echo $value['cat_title'.LANG] ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt="<?php echo $value['cat_title'.LANG] ?>" /></a></div>
 		<?php endif; ?>
-		<h2 class="ico-point title-pro"><strong>Model:</strong> <a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', $this->module->id.'.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']] ?>" title='<?php echo $value['cat_title'.LANG] ?>'><?php echo $value['cat_title'.LANG] ?></a></h3>
+		<h3 class="ico-point title-pro"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', $this->module->id.'.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']] ?>" title='<?php echo $value['cat_title'.LANG] ?>'><strong><?php echo $value['cat_title'.LANG] ?></strong></a></h3>
 	</li>
 <?php endforeach; ?>	
 </ul> <!--End frame all product-->

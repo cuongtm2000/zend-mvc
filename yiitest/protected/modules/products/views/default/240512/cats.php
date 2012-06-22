@@ -14,7 +14,7 @@
 						<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt="<?php echo $value['cat_title'.LANG] ?>" />
             		<?php endif; ?>
 				</a></div>
-           <h3 class="ico-point title-pro"><strong>Model:</strong> <a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', $this->module->id . '.link')?>/<?php echo $value['tag'.LANG] ?>" title="<?php echo $value['cat_title'.LANG] ?>"><?php echo $value['cat_title'.LANG] ?></a></h3>
+           <h3 class="ico-point title-pro"><strong><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', $this->module->id . '.link')?>/<?php echo $value['tag'.LANG] ?>" title="<?php echo $value['cat_title'.LANG] ?>"><?php echo $value['cat_title'.LANG] ?></a></strong></h3>
         </li>
     <?php endforeach; ?>
 </ul>
@@ -34,8 +34,8 @@
 					<?php endif; ?>
 				</a>
 				</div>
-				<h3 class="ico-point title-pro"><strong>Model:</strong> <a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>"><?php echo $value['title' . LANG] ?></a></h3>
-				<p class="ico-point price"><strong>Giá:</strong> <?php echo Common::getPrice($value['unit']) ?></p>
+				<h3 class="ico-point title-pro"><strong><a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>"><?php echo $value['title' . LANG] ?></a></strong></h3>
+				<p class="ico-point price"><strong><?php echo Common::getPrice($value['unit']) ?></strong></p>
             </li>
         <?php endforeach; ?>
     </ul> <!--End All products--> <div class="clear"></div>
