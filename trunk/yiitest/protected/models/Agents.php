@@ -53,7 +53,8 @@ class Agents extends CActiveRecord {
         return array(
             array('agent_id, email, password, fullname, phone, address, parent_id, enable, dos_provinces_province_id', 'required'),
             array('enable, dos_provinces_province_id', 'numerical', 'integerOnly' => true),
-            array('agent_id, parent_id', 'length', 'max' => 8),
+            array('agent_id, parent_id', 'length', 'min' => 8, 'max' => 8),
+            array('agent_id, parent_id', 'numerical', 'integerOnly' => true),
             array('email, password, fullname, yahoo, skype, content, type', 'length', 'max' => 45),
             array('phone', 'length', 'max' => 30),
             array('company, address', 'length', 'max' => 100),
@@ -137,6 +138,15 @@ class Agents extends CActiveRecord {
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
+    }
+
+    public function beforeSave() {
+        $purifier = new CHtmlPurifier();
+
+        if ($this->isNewRecord) {
+            $this->password = $purifier->purify(md5(trim($this->password)));
+        }
+        return parent::beforeSave();
     }
 
     public function listAgentsByProvince($province_id) {
