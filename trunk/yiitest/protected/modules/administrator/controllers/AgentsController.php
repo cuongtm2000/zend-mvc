@@ -18,7 +18,9 @@ class AgentsController extends AdministratorController {
         if (isset($_POST['Agents'])) {
             $model->attributes = $_POST['Agents'];
             if ($model->validate()) {
+                 if($model->save()){
 
+                 }
             }
         }
         $this->render('add', array('model' => $model, 'listProvinces' => Provinces::model()->listProvinceByCountry('VND')));
