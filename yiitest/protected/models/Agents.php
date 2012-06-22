@@ -51,7 +51,7 @@ class Agents extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('agent_id, email, password, created_date, fullname, phone, address, parent_id, enable, dos_provinces_province_id', 'required'),
+            array('agent_id, email, password, fullname, phone, address, parent_id, enable, dos_provinces_province_id', 'required'),
             array('enable, dos_provinces_province_id', 'numerical', 'integerOnly' => true),
             array('agent_id, parent_id', 'length', 'max' => 8),
             array('email, password, fullname, yahoo, skype, content, type', 'length', 'max' => 45),
@@ -59,6 +59,7 @@ class Agents extends CActiveRecord {
             array('company, address', 'length', 'max' => 100),
             array('website, picture', 'length', 'max' => 60),
             array('point, bonus', 'length', 'max' => 15),
+            array('parent_id', 'exist', 'className' => 'Agents', 'attributeName' => 'agent_id'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
             array('agent_id, email, password, created_date, fullname, phone, company, website, picture, address, yahoo, skype, content, point, bonus, type, parent_id, enable, dos_provinces_province_id', 'safe', 'on' => 'search'),
@@ -99,7 +100,7 @@ class Agents extends CActiveRecord {
             'type' => 'Type',
             'parent_id' => 'Parent',
             'enable' => 'Enable',
-            'dos_provinces_province_id' => 'Dos Provinces Province',
+            'dos_provinces_province_id' => 'Province',
         );
     }
 
