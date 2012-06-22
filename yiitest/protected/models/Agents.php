@@ -28,6 +28,10 @@
  * @property DosProvinces $dosProvincesProvince
  */
 class Agents extends CActiveRecord {
+    private $_model;
+    public $pass_new; //for change password
+    public $pass_new_compare; //for change password
+
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
@@ -51,7 +55,8 @@ class Agents extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('agent_id, email, password, fullname, phone, address, parent_id, enable, dos_provinces_province_id', 'required'),
+            array('agent_id, email, password, fullname, phone, address, parent_id, enable, dos_provinces_province_id', 'required', 'on' => 'add'),
+            array('agent_id, email, fullname, phone, address, parent_id, enable, dos_provinces_province_id', 'required', 'on' => 'edit'),
             array('enable, dos_provinces_province_id', 'numerical', 'integerOnly' => true),
             array('agent_id, parent_id', 'length', 'min' => 8, 'max' => 8),
             array('agent_id, parent_id', 'numerical', 'integerOnly' => true),
@@ -61,6 +66,12 @@ class Agents extends CActiveRecord {
             array('website, picture', 'length', 'max' => 60),
             array('point, bonus', 'length', 'max' => 15),
             array('parent_id', 'exist', 'className' => 'Agents', 'attributeName' => 'agent_id'),
+
+            //rules for change password
+            array('pass_new, pass_new_compare', 'required', 'on' => 'changePass'),
+            array('pass_new, pass_new_compare', 'length', 'min' => 6, 'max' => 45),
+            array('pass_new', 'compare', 'compareAttribute' => 'pass_new_compare'),
+
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
             array('agent_id, email, password, created_date, fullname, phone, company, website, picture, address, yahoo, skype, content, point, bonus, type, parent_id, enable, dos_provinces_province_id', 'safe', 'on' => 'search'),
@@ -102,6 +113,8 @@ class Agents extends CActiveRecord {
             'parent_id' => 'Parent',
             'enable' => 'Enable',
             'dos_provinces_province_id' => 'Province',
+            'pass_new' => 'Mật khẩu mới',
+            'pass_new_compare' => 'Nhập lại',
         );
     }
 
@@ -218,5 +231,28 @@ class Agents extends CActiveRecord {
                 }
             }
         }
+    }
+
+    //Back end - Get record to Edit
+    public function loadEdit($id) {
+        $criteria = new CDbCriteria();
+
+        $this->_model = $this::model()->findByPk($id, $criteria);
+
+        if ($this->_model === null) {
+            throw new CHttpException(404, 'The requested page does not exist.');
+        }
+        return $this->_model;
+    }
+
+    //Back end - Change password
+    public function changePass($password, $agent_id) {
+        $purifier = new CHtmlPurifier();
+        $password = $purifier->purify(md5(trim($password)));
+
+        $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET password=:password WHERE agent_id=:agent_id');
+        $command->bindParam(":agent_id", $agent_id, PDO::PARAM_STR);
+        $command->bindParam(":password", $password, PDO::PARAM_STR);
+        $command->execute();
     }
 }
