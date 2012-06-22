@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 22, 2012 at 08:44 AM
+-- Generation Time: Jun 22, 2012 at 09:57 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -536,9 +536,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456098),
-('max_count', 0),
-('counter', 0),
+('day_time', 2456101),
+('max_count', 1),
+('counter', 1),
 ('yesterday', 0);
 
 -- --------------------------------------------------------
@@ -557,7 +557,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1340095165);
+('''127.0.0.1''', 1340347567);
 
 -- --------------------------------------------------------
 
