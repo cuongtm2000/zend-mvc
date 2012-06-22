@@ -313,14 +313,14 @@ class Username extends CActiveRecord {
         $criteria->order = 'created DESC';
         $criteria->condition = 'role !=:role';
         $criteria->params = array(':role' => 'administrator');
-        $count = Username::model()->count($criteria);
+        $count = $this::model()->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
         $pages->pageSize = 15;
         $pages->applyLimit($criteria);
 
-        return array('models' => Username::model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
     }
 
     //Back end - List item user for Agent

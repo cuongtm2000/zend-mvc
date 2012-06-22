@@ -28,32 +28,37 @@
                 <div class="menu-bar">
                     <div id="catmenu">
                         <ul class="menu-li"> 
-                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/templates">Templates</a>
+                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/templates">Mẫu Templates</a>
                                 <ul>
-                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/templates">List template</a></li>
-                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/templates/add">Add template</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/templates">Danh sách template</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/templates/add">Thêm template</a></li>
                                 </ul>
                             </li>
-                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/usernames">User</a>
+                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/agents">Đại lý</a>
                                 <ul>
-                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/usernames">List user</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/agents">Danh sách đại lý</a></li>
                                 </ul>
                             </li>
-                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/articles">Articles</a>
+                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/usernames">Thành viên</a>
                                 <ul>
-                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/articles/cat">List Articles cat</a></li>
-                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/articles">List Articles</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/usernames">Danh sách thành viên</a></li>
                                 </ul>
                             </li>
-                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/tutorial">Tutorial</a>
+                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/articles">Bài viết</a>
                                 <ul>
-                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/tutorial/cat">List Tutorial cat</a></li>
-                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/tutorial">List Tutorial</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/articles/cat">Danh mục</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/articles">Bài viết</a></li>
                                 </ul>
                             </li>
-                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/features">Features</a>
+                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/tutorial">Hướng dẫn</a>
                                 <ul>
-                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/features">List</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/tutorial/cat">Danh mục</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/tutorial">Bài viết</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/features">Tính năng</a>
+                                <ul>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/features">Bài viết</a></li>
                                 </ul>
                             </li>
                         </ul> 
