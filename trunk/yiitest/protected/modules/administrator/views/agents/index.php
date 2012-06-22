@@ -26,7 +26,7 @@
                         <td><?php echo $value['point'] ?></td>
                         <td><?php echo $value['bonus']?></td>
                         <td><?php echo $value->Provinces->province_name?></td>
-                        <td><?php echo CHtml::link('Edit', array('edit', 'id' => $value->agent_id)) ?></td>
+                        <td><?php echo CHtml::link('Edit', array('edit', 'id' => $value->agent_id)) ?> - <?php echo CHtml::link('Password', array('password', 'id' => $value->agent_id)) ?></td>
                     </tr>
                     <?php $i++; endforeach; ?>
 			<?php else:?>

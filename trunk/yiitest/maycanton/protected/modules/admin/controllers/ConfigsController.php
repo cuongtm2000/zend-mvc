@@ -28,7 +28,7 @@ class ConfigsController extends AdminController {
         //Submit
         if (Yii::app()->request->getIsPostRequest()) {
             $model->addItem(Yii::app()->request);
-			$this->refresh();
+			//$this->refresh();
         }
         $this->render('menu', array('models' => $model->listMenuByAdmin()));
     }

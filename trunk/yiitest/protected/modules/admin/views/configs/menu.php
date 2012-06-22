@@ -3,7 +3,7 @@
         var i = 0;
         $("#add-rows").click(function(){
             if(i<5){
-                $(".rows").before('<p><label>Menu</label><?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?><input name="menu<?php echo $lang?>[]" value="" maxlength="50" class="txt-small" /><?php endforeach; ?> <input name="url[]" value="" maxlength="100" class="txt-small" /> <input name="position[]" value="" maxlength="2" class="txt-very-tiny" /> <select name="target[]" class="select-110"><option value="">Cureent</option><option value="_blank">Page new</option></select></p>');
+                $(".rows").before('<p><label>Menu</label><?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?><input name="menu<?php echo $lang?>[]" value="" maxlength="50" class="txt-small" /><?php endforeach; ?> <input name="url[]" value="" maxlength="100" class="txt-small" /> <input name="position[]" value="" maxlength="2" class="txt-very-tiny" /> <select name="target[]" class="select-110"><option value="">Current</option><option value="_blank">Page new</option></select></p>');
                 i++;
             }
             return false;
