@@ -3,7 +3,7 @@
 class StatisticsModules {
 
     public function countItem($module_id, $url) {
-        if ($module_id == 'about' || $module_id == 'products' || $module_id == 'services' || $module_id == 'news' || $module_id == 'video' || $module_id == 'contact') {
+        if ($module_id == 'about' || $module_id == 'products' || $module_id == 'customers' || $module_id == 'forms' || $module_id == 'catalogue' || $module_id == 'news' || $module_id == 'video' || $module_id == 'contact') {
             Yii::app()->getModule($module_id);
         }
 
