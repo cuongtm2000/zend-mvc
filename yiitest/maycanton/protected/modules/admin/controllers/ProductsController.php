@@ -129,6 +129,7 @@ class ProductsController extends AdminController {
 		//Submit
 		if (Yii::app()->request->getIsPostRequest()) {
 			$model_class->activeItem(Yii::app()->request);
+            $this->redirect(array('index'));
 		}
 
 		$this->render('index', $model_class->listItemAdmin());
