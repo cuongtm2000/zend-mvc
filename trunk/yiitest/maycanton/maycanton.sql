@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 25, 2012 at 09:58 AM
+-- Generation Time: Jun 25, 2012 at 10:36 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -78,6 +78,8 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('banner_width', 745, '', 'ccsc'),
 ('catalogue_height', 800, '', 'ccsc'),
 ('catalogue_width', 710, '', 'ccsc'),
+('customers_height', 700, NULL, 'ccsc'),
+('customers_width', 650, NULL, 'ccsc'),
 ('forms_height', 160, '', 'ccsc'),
 ('forms_width', 160, '', 'ccsc'),
 ('logo_height', 53, '', 'ccsc'),
@@ -96,15 +98,15 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_cat_width', 165, '', 'ccsc'),
 ('products_height', 660, '', 'ccsc'),
 ('products_height_thumb', 165, '', 'ccsc'),
-('products_num_paging_cat', 16, '', 'ccsc'),
-('products_num_paging_hot', 8, '', 'ccsc'),
-('products_num_paging_new', 16, '', 'ccsc'),
+('products_num_paging_cat', 15, '', 'ccsc'),
+('products_num_paging_hot', 6, '', 'ccsc'),
+('products_num_paging_new', 15, '', 'ccsc'),
 ('products_num_paging_other', 4, '', 'ccsc'),
 ('products_width', 460, '', 'ccsc'),
 ('products_width_thumb', 165, '', 'ccsc'),
 ('video_height_thumb', 100, '', 'ccsc'),
-('video_num_paging_cat', 8, '', 'ccsc'),
-('video_num_paging_index', 8, '', 'ccsc'),
+('video_num_paging_cat', 12, '', 'ccsc'),
+('video_num_paging_index', 12, '', 'ccsc'),
 ('video_width_thumb', 165, '', 'ccsc');
 
 -- --------------------------------------------------------
@@ -335,8 +337,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(173, 'Giới thiệu công ty', '', '<p>Giới thiệu công ty Giới thiệu công ty</p>', '', 9, '2012-06-24 05:07:08', 2, 0, NULL, NULL, 'gioi-thieu-cong-ty', '', 'Giới thiệu công ty', '', 1, 'ccsc'),
-(174, 'Giới thiệu sơ lược', '', '<p>Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.</p>', '', 54, '2012-06-24 05:07:51', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', 'Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.', '', 1, 'ccsc');
+(173, 'Giới thiệu công ty', '', '<p>Giới thiệu công ty Giới thiệu công ty</p>', '', 11, '2012-06-24 05:07:08', 2, 0, NULL, NULL, 'gioi-thieu-cong-ty', '', 'Giới thiệu công ty', '', 1, 'ccsc'),
+(174, 'Giới thiệu sơ lược', '', '<p>Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.</p>', '', 60, '2012-06-24 05:07:51', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', 'Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.', '', 1, 'ccsc');
 
 -- --------------------------------------------------------
 
@@ -483,7 +485,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_customers` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_customers_dos_module_customers_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `dos_module_customers`
+--
+
+INSERT INTO `dos_module_customers` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(6, 'Đại Dũng', '', '2012-06-25 08:14:38', NULL, 'ai-dung.jpg', NULL, '', '', '', '', 'dai-dung', '', '', '', 0, 1, NULL, 0, NULL, NULL, NULL, NULL, NULL, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -545,6 +554,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 --
 
 INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
+('Giới thiệu', 'About us', 'about', '', 2, NULL, NULL, NULL, NULL, 'ccsc'),
 ('Trang chủ', '', 'default', '', 1, NULL, NULL, NULL, NULL, 'ccsc'),
 ('Sản phẩm', '', 'products', '', 3, NULL, NULL, NULL, NULL, 'ccsc'),
 ('Biến dạng', '', 'forms', '', 4, NULL, NULL, NULL, NULL, 'ccsc'),
@@ -818,7 +828,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_video` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_video_dos_module_video_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_module_video`
+--
+
+INSERT INTO `dos_module_video` (`record_id`, `title`, `titleen`, `postdate`, `tag`, `tagen`, `description`, `descriptionen`, `pic_thumb`, `url`, `record_order`, `hits`, `extra_field1`, `extra_field2`, `hot`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(1, 'Máy uốn', '', '2012-06-25 08:10:35', 'may-uon', '', '', '', '', 'http://www.youtube.com/watch?v=xoruDYRspvE&feature=related', 1, 0, NULL, NULL, 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -841,7 +858,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_video_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_module_video_cat`
+--
+
+INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat_title`, `cat_titleen`, `tag`, `tagen`, `description`, `descriptionen`, `cat_order`, `cat_enable`, `dos_usernames_username`) VALUES
+(1, 0, '', 'Máy uốn ống tự động', '', 'may-uon-ong-tu-dong', '', '', '', 1, 1, 'ccsc');
 
 -- --------------------------------------------------------
 
@@ -977,7 +1001,6 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 --
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
-('240312', 'Mẫu thời trang: 240312', '2012-03-23 19:00:26', 'Chuyên bán các loại túi xách cho phụ nữ, và nhiều phụ điện...'),
 ('ccsc', 'Mẫu Cơ khí công nghiệp Sài Gòn', '2012-06-24 03:05:42', NULL);
 
 -- --------------------------------------------------------
