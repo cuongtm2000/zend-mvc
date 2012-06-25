@@ -10,14 +10,13 @@ a:hover{color:#000;}
 #wrapper {width:980px;background:#fff;margin:auto;border-left:1px solid #000;border-right:1px solid #000}
 
 /*Header*/
-#header{position:relative;background:#000}
-#logo{float:left;padding:0 0 0 25px;margin:0 40px 0 0}
+#header{background:#000;padding:15px 0 0 0;position:relative}
 
 /**  Ten cong ty     **/
-.title-company{padding:15px 0 0 0; font-family:Verdana, Geneva, sans-serif;font-size:14pt;margin:0 0 5px 0; font-weight:bold;color:#fff}
+.title-company{padding:15px 0 0 0;font-family:Verdana, Geneva, sans-serif;font-size:14pt;margin:0 0 5px 0; font-weight:bold;color:#fff}
 
-.lang{position:absolute;top:5px;right:6px;text-align:right}
-.lang img{ margin:0 2px 0 10px; position:relative; top:1px}
+.lang{position:absolute;bottom:-27px;right:6px;text-align:right}
+.lang img{ margin:0 0 0 5px}
 .lang a{ color:#fff}
 .lang a:hover{color:#16A7E9}
 .hot-line{position:absolute;right:15px;top:5px ;color:#fff;font-size:10pt;font-weight:bold}
@@ -25,7 +24,7 @@ a:hover{color:#000;}
 #nav{ list-style:none;background:url(../images/line2.png) repeat-x;height:30px}
 #nav li{float:left;position:relative;background:url(../images/line.png) no-repeat right; }
 #nav .time-day{padding:9px 10px 8px 10px;color:#fff;font-size:8pt; font-weight: bold}
-#nav li a{padding:7px 36px;text-transform:capitalize;display:block; color:#fff;font-size:10pt}
+#nav li a{padding:7px 35px;text-transform:capitalize;display:block; color:#fff;font-size:10pt}
 #nav li a:hover{background:#fff;color:#000}
 #nav .none-line{background:none}
 #nav .none-line a{padding:7px 32px 7px 31px}
@@ -126,6 +125,28 @@ a:hover{color:#000;}
 .title-masuring{margin:0 0 5px 0}
 .title-masuring a{color:#333}
 .title-masuring a:hover{color:#72C0BA}
+
+/**Page Contact**/
+/*** Frame title company  ***/
+#frame-info-contact{margin:0 0 15px 0}
+
+/** Form lien he  **/
+.frame-contact{list-style:none;margin:0 0 10px 0}
+.frame-contact label{color:#555; margin:0 !important;font-weight:bold;width:100px; float:left}
+.frame-contact li{padding:4px 0; margin:0 !important}
+.frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.frame-contact textarea{border:1px solid #ddd; width:350px;-moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-contact span{color:#F00;margin:0 5px 0 0}
+
+.frame-contact .bton-dk{margin:10px 0 5px 30px;background:#372E27;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-contact .bton-dk{margin:10px 10px 5px 0}
+/****  End page contact     *****/
+
+/* Error */
+.errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
+.errorSummary ul{margin:0 10px; padding:0}
+.errorSummary ul li{padding:2px 0; color: red}
+.required span{font-weight:normal}
 
 /* paging */
 #rightcontent ul.paging{float: right; margin:10px 0 0 0; padding:0 0 5px 0; list-style: none;}

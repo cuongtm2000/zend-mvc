@@ -10,6 +10,7 @@
 <link rel="icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/gif" />
 
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" />
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.7.1.min.js"></script>
 
 <title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->title) ? ' - '.CHtml::encode($this->title) : '' ?></title>
 <meta name="keywords" content="<?php echo $this->keywords ?>" />
@@ -47,11 +48,18 @@ jQuery(document).ready(function(){
 <body>
 <div id="wrapper">
 	<div id="header">
-		<script type="text/javascript">embedFlashObj('<?php echo Yii::app()->theme->baseUrl; ?>/images/top.swf',980,140);</script>
+		<script type="text/javascript">embedFlashObj('<?php echo Yii::app()->theme->baseUrl; ?>/images/den.swf',980,135);</script>
+		<div class="lang">
+			<?php if(count($this->numLang) > 1):?>
+			<?php foreach($this->numLang as $value): ?>
+				<a href="<?php echo ($value=='vi') ? Yii::app()->request->baseUrl.'/' : Yii::app()->request->baseUrl.'/'.$value ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $value?>.jpg" alt="<?php echo $this->lang[$value]?>" /></a>
+				<?php endforeach?>
+			<?php endif?>
+		</div>
 		<div class="clear"></div>	
 	</div><!--End header-->
     <ul id="nav">
-    	<li class="time-day"><script type="text/javascript">document.write(dateText + " ")</script></li>
+    	<!--<li class="time-day"><script type="text/javascript">document.write(dateText + " ")</script></li>-->
 		<?php $size = count($this->nav); $i=0; foreach($this->nav as $value):?>
 			<?php $selected = ($value['url']==$this->module->id) ?  ' class="select"' : ''?>
 			<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
@@ -180,13 +188,13 @@ jQuery(document).ready(function(){
                 <p class="ico-online"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/online.png" alt="online" />Lượt Online : 2</p>
                 <p class="ico-total"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/visited.png" alt="visited" />Lượt Truy Cập : 18884</p>
             </div>
-			<p>&copy; Copyright 2012 CÔNG TY CƠ KHÍ CÔNG NGHIỆP SÀI GÒN. All Rights Reserved</p>
+			<p><?php echo $this->lang['copyright'] ?></p>
 		</div>
 		<div class="copyright">
-            <h3><strong>Mẫu 240312</strong></h3>
-            <p>Địa chỉ công ty</p>
-            <p>Địa chỉ chi nhánh</p>
-            Design by Website <a href="#" title="">azweb.vn</a>
+            <h3 class="title-company-fter"><strong><?php echo $this->lang['company_name_footer'] ?></strong></h3>
+			<p><?php echo $this->lang['address1'] ?></p>
+			<?php echo ($this->lang['address2']) ? '<p>'.$this->lang['address2'].'</p>' : '' ?>
+            <p><?php echo $this->lang['developed']?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></p>          
         </div> <div class="clear"></div>
 	</div><!--End Footer-->
 </div><!--End wrapper-->
