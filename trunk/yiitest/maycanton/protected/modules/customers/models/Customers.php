@@ -36,7 +36,7 @@ class Customers extends CActiveRecord {
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, content, tag, dos_module_item_cat_cat_id', 'required'),
+			array('title, tag, dos_module_item_cat_cat_id', 'required'),
 			array('hits, record_order, hot, specials, enable, dos_module_item_cat_cat_id', 'numerical', 'integerOnly' => true),
 			array('title, titleen, pic_thumb, pic_full, tag, tagen, extra_field1, extra_field2, extra_field3, extra_field4', 'length', 'max' => 100),
 			array('tag, tagen', 'unique'),
@@ -167,25 +167,25 @@ class Customers extends CActiveRecord {
 
 		if ($this->isNewRecord) {
 			$this->record_order = $this->maxRecordOrder();
-			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
+			/*if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
 				Yii::import('ext.simpleImage.CSimpleImage');
 				$file = new CSimpleImage();
 				$this->pic_thumb = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_thumb'], Configs::configTemplate('customers_width_thumb', Yii::app()->session['template']), Configs::configTemplate('customers_height_thumb', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id, $this->title . '-thumb');
-			}
+			}*/
 			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full']) {
 				Yii::import('ext.simpleImage.CSimpleImage');
 				$file = new CSimpleImage();
 				$this->pic_full = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_full'], Configs::configTemplate('customers_width', Yii::app()->session['template']), Configs::configTemplate('customers_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id, $this->title);
 			}
 			//pic_desc
-			if (isset($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_desc'])) {
+			/*if (isset($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_desc'])) {
 				Yii::import('ext.simpleImage.CSimpleImage');
 				$file = new CSimpleImage();
 				$this->pic_desc = implode("|", $file->uploadMulti($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_desc'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_desc'], Configs::configTemplate('customers_width', Yii::app()->session['template']), Configs::configTemplate('customers_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id, $this->title));
-			}
+			}*/
 		} else {
 			//check file old and upload
-			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
+			/*if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
 				Yii::import('ext.simpleImage.CSimpleImage');
 				$file = new CSimpleImage();
 				$this->pic_thumb = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_thumb'], Configs::configTemplate('customers_width_thumb', Yii::app()->session['template']), Configs::configTemplate('customers_height_thumb', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id, $this->title . '-thumb', $this->_oldImage_thumb);
@@ -199,7 +199,7 @@ class Customers extends CActiveRecord {
 				} else {
 					$this->pic_thumb = $this->_oldImage_thumb;
 				}
-			}
+			}*/
 			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full']) {
 				Yii::import('ext.simpleImage.CSimpleImage');
 				$file = new CSimpleImage();
@@ -208,7 +208,7 @@ class Customers extends CActiveRecord {
 				$this->pic_full = $this->_oldImage_full;
 			}
 			//check remove pic_desc
-			if (isset($_POST['Customers']['remove_pic_desc'])) {
+			/*if (isset($_POST['Customers']['remove_pic_desc'])) {
 				$str = explode('|', $this->_oldImage_desc);
 				foreach ($_POST['Customers']['remove_pic_desc'] as $value) {
 					$common_class = new Common();
@@ -230,7 +230,7 @@ class Customers extends CActiveRecord {
 					array_push($pic_desc, $value);
 				}
 				$this->pic_desc = implode("|", $pic_desc);
-			}
+			} */
 		}
 
 		return parent::beforeSave();
