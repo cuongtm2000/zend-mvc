@@ -1,13 +1,15 @@
 body{background:#494949}
+#wrapper{border:none}
+#header{background:#494949}
 #nav{ list-style:none;background:url(../images/menubiendang.jpg) repeat-x;height:30px}
-#nav li{float:left;position:relative;background:none}
-#nav .time-day{padding:9px 10px 8px 10px;color:#fff;font-size:8pt}
-#nav li a{padding:7px 31px;text-transform:uppercase;display:block; color:#fff;font-size:10pt}
+#nav li{float:left;position:relative}
+#nav li a{padding:7px 29px;display:block; color:#fff;font-size:10pt}
 #nav li a:hover{color:#02035D;background:none}
 #nav .select{color:#02035D;background:none}
 #nav .none-line{background:none}
 #nav .none-line a{padding:7px 30px 7px 30px}
 .title-left{background:url(../images/menubiendang.jpg) repeat-x}
 #content{background:url(../images/nenbiendang.jpg) no-repeat center fixed !important}
+/*#rightcontent .all-product-2{background:none}*/
 #footer{background:url(../images/topbiendang.jpg) repeat-x;padding:29px 35px !important;color:#999 !important}
 #footer a{color:#999 !important}

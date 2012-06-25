@@ -3,6 +3,7 @@
 class DefaultController extends Controller {
 
     public function actionIndex() {
+		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/page-nav-contact.css');
 		$model = ucfirst($this->module->getName());
         $items = new $model();
         
