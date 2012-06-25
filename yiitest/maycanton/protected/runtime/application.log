@@ -1,76 +1,94 @@
-2012/06/25 10:06:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
 #3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/
+REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
+HTTP_REFERER=http://localhost/maycanton/video/may-uon-ong-tu-dong
 ---
-2012/06/25 10:06:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "video/images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('video/images/ca...')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
 #3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/
+REQUEST_URI=/maycanton/video/images/catalog1.jpg
+HTTP_REFERER=http://localhost/maycanton/video/may-uon-ong-tu-dong
 ---
-2012/06/25 10:06:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "video/images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('video/images/e3...')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
 #3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/
+REQUEST_URI=/maycanton/video/images/e3.jpg
+HTTP_REFERER=http://localhost/maycanton/video/may-uon-ong-tu-dong
 ---
-2012/06/25 10:06:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "video/images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('video/images/cl...')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
 #3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/
+REQUEST_URI=/maycanton/video/images/cl_2.jpg
+HTTP_REFERER=http://localhost/maycanton/video/may-uon-ong-tu-dong
 ---
-2012/06/25 10:06:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "video/images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('video/images/ic...')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
 #3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/
+REQUEST_URI=/maycanton/video/images/icon-23.png
+HTTP_REFERER=http://localhost/maycanton/video/may-uon-ong-tu-dong
 ---
-2012/06/25 10:06:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
 #3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/
+REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
+HTTP_REFERER=http://localhost/maycanton/video/may-uon-ong-tu-dong
 ---
-2012/06/25 10:06:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "video/images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('video/images/ca...')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
 #3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/
+REQUEST_URI=/maycanton/video/images/catalog1.jpg
+HTTP_REFERER=http://localhost/maycanton/video/may-uon-ong-tu-dong
 ---
-2012/06/25 10:06:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "video/images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('video/images/ic...')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
 #3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/
+REQUEST_URI=/maycanton/video/images/icon-23.png
+HTTP_REFERER=http://localhost/maycanton/video/may-uon-ong-tu-dong
 ---
-2012/06/25 10:06:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "video/images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('video/images/cl...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/video/images/cl_2.jpg
+HTTP_REFERER=http://localhost/maycanton/video/may-uon-ong-tu-dong
+---
+2012/06/25 10:41:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "video/images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('video/images/e3...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/video/images/e3.jpg
+HTTP_REFERER=http://localhost/maycanton/video/may-uon-ong-tu-dong
+---
+2012/06/25 10:41:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
 #0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
@@ -79,16 +97,7 @@ Stack trace:
 REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
 HTTP_REFERER=http://localhost/maycanton/
 ---
-2012/06/25 10:06:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/
----
-2012/06/25 10:06:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
 #0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
@@ -97,16 +106,7 @@ Stack trace:
 REQUEST_URI=/maycanton/images/e3.jpg
 HTTP_REFERER=http://localhost/maycanton/
 ---
-2012/06/25 10:06:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/
----
-2012/06/25 10:06:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
 #0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
@@ -115,988 +115,7 @@ Stack trace:
 REQUEST_URI=/maycanton/images/catalog1.jpg
 HTTP_REFERER=http://localhost/maycanton/
 ---
-2012/06/25 10:07:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:07:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:07:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:07:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:07:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:08:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:08:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:08:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:08:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:08:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:08:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:08:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:08:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:08:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:08:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:08:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:08:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:08:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:08:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:08:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:10:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:10:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:10:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:10:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:10:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:13:45 [error] [php] imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions (E:\Customers\dos.vn\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php:269)
-Stack trace:
-#0 E:\Customers\dos.vn\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php(225): EUploadedImage->imagePrepare()
-#1 E:\Customers\dos.vn\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php(397): EUploadedImage->saveAs()
-#2 E:\Customers\dos.vn\svn\maycanton\protected\modules\customers\models\CustomersCat.php(187): EUploadedImage->processUpload()
-#3 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(1056): CustomersCat->beforeSave()
-#4 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(787): CustomersCat->update()
-#5 E:\Customers\dos.vn\svn\maycanton\protected\modules\admin\controllers\CustomersController.php(66): CustomersCat->save()
-#6 unknown(0): CustomersController->actionEditCat()
-#7 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
-#8 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#9 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
-#10 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CustomersController->runAction()
-#11 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#12 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
-#13 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CustomersController->filterAccessControl()
-#14 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
-#15 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
-#16 C:\xampp\php\library\framework\web\CController.php(266): CustomersController->runActionWithFilters()
-#17 C:\xampp\php\library\framework\web\CWebApplication.php(276): CustomersController->run()
-#18 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#19 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#20 E:\Customers\dos.vn\svn\maycanton\index.php(16): CWebApplication->run()
-REQUEST_URI=/maycanton/admin/customers/editcat/id/1
-in E:\Customers\dos.vn\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php (269)
-in E:\Customers\dos.vn\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php (256)
-in E:\Customers\dos.vn\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php (225)
-2012/06/25 10:19:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:19:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:19:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:19:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:19:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:19:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:19:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:19:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:19:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:19:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:20:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:20:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:20:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:20:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:20:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/scroller.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/scroller.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/css/scroll.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/css...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/css/scroll.css
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jquery.fancybox.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/jquery.fancybox.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jquery.scroll-1.4.2-min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/jquery.scroll-1.4.2-min.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jcarousellite_1.0.1.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/jcarousellite_1.0.1.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/css/jquery.fancybox.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/css...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/css/jquery.fancybox.css
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jquery.serialScroll-1.2.2-min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/jquery.serialScroll-1.2.2-min.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/product.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/product.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/css/scroll.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/css...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/css/scroll.css
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/css/jquery.fancybox.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/css...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/css/jquery.fancybox.css
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jcarousellite_1.0.1.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/jcarousellite_1.0.1.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/scroller.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/scroller.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jquery.fancybox.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/jquery.fancybox.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jquery.scroll-1.4.2-min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/jquery.scroll-1.4.2-min.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/product.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/product.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jquery.serialScroll-1.2.2-min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/jquery.serialScroll-1.2.2-min.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/css/scroll.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/css...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/css/scroll.css
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/css/jquery.fancybox.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/css...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/css/jquery.fancybox.css
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jcarousellite_1.0.1.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/jcarousellite_1.0.1.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/scroller.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/scroller.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jquery.scroll-1.4.2-min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/jquery.scroll-1.4.2-min.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jquery.fancybox.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/jquery.fancybox.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/product.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/product.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jquery.serialScroll-1.2.2-min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/jquery.serialScroll-1.2.2-min.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/san-pham
----
-2012/06/25 10:20:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:20:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:20:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:20:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:20:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/video
----
-2012/06/25 10:20:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:20:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:20:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:20:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:20:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:21:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:22:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "customers.link".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('customers.link')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/customers.link
-HTTP_REFERER=http://localhost/maycanton/lien-he
----
-2012/06/25 10:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/
----
-2012/06/25 10:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
 #0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
@@ -1105,25 +124,7 @@ Stack trace:
 REQUEST_URI=/maycanton/images/cl_2.jpg
 HTTP_REFERER=http://localhost/maycanton/
 ---
-2012/06/25 10:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/
----
-2012/06/25 10:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/
----
-2012/06/25 10:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
 #0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
@@ -1132,183 +133,93 @@ Stack trace:
 REQUEST_URI=/maycanton/images/icon-23.png
 HTTP_REFERER=http://localhost/maycanton/
 ---
-2012/06/25 10:28:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
 #0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
 #3 {main}
 REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/
+HTTP_REFERER=http://localhost/maycanton/video
 ---
-2012/06/25 10:28:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/
----
-2012/06/25 10:28:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
 #0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
 #3 {main}
 REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/
+HTTP_REFERER=http://localhost/maycanton/video
 ---
-2012/06/25 10:28:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
 #0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
 #3 {main}
 REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/
+HTTP_REFERER=http://localhost/maycanton/video
 ---
-2012/06/25 10:28:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/cl_2.jpg
+HTTP_REFERER=http://localhost/maycanton/video
+---
+2012/06/25 10:41:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
 #0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
 #3 {main}
 REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/
+HTTP_REFERER=http://localhost/maycanton/video
 ---
-2012/06/25 10:29:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
 #0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
 #3 {main}
 REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/
+HTTP_REFERER=http://localhost/maycanton/video
 ---
-2012/06/25 10:29:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
 #0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
 #3 {main}
 REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/
+HTTP_REFERER=http://localhost/maycanton/video
 ---
-2012/06/25 10:29:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/
----
-2012/06/25 10:29:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/
----
-2012/06/25 10:29:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
 #0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
 #3 {main}
 REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/
+HTTP_REFERER=http://localhost/maycanton/video
 ---
-2012/06/25 10:29:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/gioi-thieu
----
-2012/06/25 10:29:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/gioi-thieu
----
-2012/06/25 10:29:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
 #0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
 #3 {main}
 REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/gioi-thieu
+HTTP_REFERER=http://localhost/maycanton/video
 ---
-2012/06/25 10:29:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/gioi-thieu
----
-2012/06/25 10:29:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/25 10:41:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
 #0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
 #3 {main}
 REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/gioi-thieu
----
-2012/06/25 10:34:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/time-day.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/themes/ccsc/js/time-day.js
-HTTP_REFERER=http://localhost/maycanton/gioi-thieu
----
-2012/06/25 10:34:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/cl_2.jpg
-HTTP_REFERER=http://localhost/maycanton/gioi-thieu
----
-2012/06/25 10:34:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/catalog1.jpg
-HTTP_REFERER=http://localhost/maycanton/gioi-thieu
----
-2012/06/25 10:34:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/e3.jpg
-HTTP_REFERER=http://localhost/maycanton/gioi-thieu
----
-2012/06/25 10:34:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/maycanton/images/icon-23.png
-HTTP_REFERER=http://localhost/maycanton/gioi-thieu
+HTTP_REFERER=http://localhost/maycanton/video
 ---

@@ -2,6 +2,7 @@
 
 class DefaultController extends Controller {
 	public function actionIndex() {
+        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/page-nav-video.css');
 		$this->setSeoPage(); //set Seo page
 
 		$model = ucfirst($this->module->id);
@@ -10,6 +11,8 @@ class DefaultController extends Controller {
 	}
 
 	public function actionCats($cid, $page = 0) {
+        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/page-nav-video.css');
+
 		$model = ucfirst($this->module->id);
 		$model_cat = $model . 'Cat';
 
