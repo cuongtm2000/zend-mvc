@@ -94,7 +94,6 @@ class ProductsType extends CActiveRecord {
         return $command->queryRow();
     }
 
-
 }
 
 

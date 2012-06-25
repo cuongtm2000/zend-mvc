@@ -47,8 +47,8 @@ class ProductsFeature extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('area, area_build, area_used, num_floor, room, sittingrom, bedroom, bathroom, other_room, direction, street, legal, road', 'required'),
-            array('num_floor, room, sittingrom, bedroom, bathroom, other_room', 'numerical', 'integerOnly' => true),
+            array('area_used, num_floor, direction, legal, road', 'required'),
+            array('num_floor, sittingrom, bedroom, bathroom, other_room', 'numerical', 'integerOnly' => true),
             array('area, area_build, area_used', 'numerical'),
             array('direction, street, legal, road', 'length', 'max' => 45),
             // The following rule is used by search().
@@ -78,7 +78,6 @@ class ProductsFeature extends CActiveRecord {
             'area_build' => 'Diện tích xây dựng',
             'area_used' => 'Diện tích sử dụng',
             'num_floor' => 'Số tầng',
-            'room' => 'Số phòng',
             'sittingrom' => 'Số phòng khách',
             'bedroom' => 'Số phòng ngủ',
             'bathroom' => 'Số phòng tắm',
@@ -105,7 +104,6 @@ class ProductsFeature extends CActiveRecord {
         $criteria->compare('area_build', $this->area_build);
         $criteria->compare('area_used', $this->area_used);
         $criteria->compare('num_floor', $this->num_floor);
-        $criteria->compare('room', $this->room);
         $criteria->compare('sittingrom', $this->sittingrom);
         $criteria->compare('bedroom', $this->bedroom);
         $criteria->compare('bathroom', $this->bathroom);
@@ -122,6 +120,10 @@ class ProductsFeature extends CActiveRecord {
 
     public function listItem() {
         return $this->model()->findAll();
+    }
+    public function save_data($id) {
+        $this->product_id=$id;
+        $this->save();
     }
 
 }

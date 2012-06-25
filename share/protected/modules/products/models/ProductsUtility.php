@@ -119,6 +119,12 @@ class ProductsUtility extends CActiveRecord {
     public function listItem() {
         return $this->model()->getAttributes();
     }
-    
+    public function save_data($id,$data){
+        $this->product_id=$id;
+        foreach ($data as $value) {
+            $this->$value=1;
+        }
+        $this->save();
+    }
 
 }
