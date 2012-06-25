@@ -10,7 +10,7 @@ a:hover{color:#000;}
 #wrapper {width:980px;background:#fff;margin:auto;border-left:1px solid #000;border-right:1px solid #000}
 
 /*Header*/
-#header{background:#000;padding:7px 0 0 0;position:relative}
+#header{background:#000;padding:1px 0 0 0;position:relative}
 
 /**  Ten cong ty     **/
 .title-company{padding:15px 0 0 0;font-family:Verdana, Geneva, sans-serif;font-size:14pt;margin:0 0 5px 0; font-weight:bold;color:#fff}
