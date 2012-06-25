@@ -6,6 +6,8 @@
 <?php endif; ?>
 
 <?php if(isset($this->function['products_hot']) && $this->function['products_hot']):?>
+        
+        
 	<h3 class="title-right"><span><?php echo $this->lang['products'] . ' ' . strtolower($this->lang['hot']) ?></span></h3>
 	<ul class="all-product">
 		<?php foreach($this->function['products_hot'] as $value): ?>
@@ -25,6 +27,10 @@
 <?php endif;?>
 
 <?php if(isset($this->function['products_new']) && $this->function['products_new']):?>
+
+        <?php var_dump($this->function['products_new']) ?>
+        
+
 <h1 class="title-right"><span><?php echo $this->lang['products'] . ' ' . strtolower($this->lang['new']) ?></span></h1>
 		<ul class="all-product">
 			<?php foreach($this->function['products_new'] as $value): ?>

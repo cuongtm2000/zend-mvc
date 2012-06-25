@@ -7,6 +7,7 @@
 <?php else: ?>
     <?php $form = $this->beginWidget('CActiveForm', array('id' => 'frm', 'enableAjaxValidation' => true, 'enableClientValidation' => true, 'htmlOptions' => array('enctype' => 'multipart/form-data'))); ?>
     <?php echo $form->errorSummary($model, ''); ?>
+    <?php echo $form->errorSummary($model_f, ''); ?>
     <fieldset>
         <legend><?php echo $this->lang['add_new'] ?> <?php echo strtolower($this->lang[$this->ID]) ?></legend>
 
@@ -30,6 +31,9 @@
 
 
         <script type="text/javascript">
+              $(document).ready(function () {
+                  $("#dos_districts_district_id").load("<?php echo Yii::app()->baseUrl ?>/admin/products/listdistrict/id/"+ $("#Products_dos_provinces_province_id").val()<?php echo $model['dos_districts_district_id']?  '+"/idd/'.$model['dos_districts_district_id'].'"':"" ?>);
+});
             $("#Products_dos_provinces_province_id").change(function(){
                 $("#dos_districts_district_id").load("<?php echo Yii::app()->baseUrl ?>/admin/products/listdistrict/id/"+ $("#Products_dos_provinces_province_id").val());
             });
@@ -38,14 +42,13 @@
 
         <div class="col1"><?php echo $form->labelEx($model, 'dos_districts_district_id') ?></div>
         <div class="col2" id="dos_districts_district_id">
-            <select></select>
         </div><div class="clear space"></div>
 
         <div class="col1">Giá</div>
         <div class="col2">
             <?php echo $form->textField($model, 'unit', $htmlOptions = array('class' => 'txt-small')); ?>
             <?php
-            $d = array("VND", "USD", "SJC");
+            $d = array('VND', 'USD', 'SJC');
             echo $form->dropDownList($model, 'unit_currency', array_combine($d, $d), array('style' => "width:50pt",'prompt' => 'Chọn đơn vị tính'));
             ?>/
             <?php
@@ -118,9 +121,8 @@
         <?php endforeach; ?>
 
 
-        <div class="col1">Thông tin tiện ích</div>
+        <div class="col1"><?php echo $form->labelEx($model, 'utility') ?></div>
         <div class="col2">
-
             <?php echo $form->checkBoxList($model, 'utility', $listItemsU, array('template' => '<div class="choose-business">{label} {input}</div>', 'separator' => '')) ?>
         </div>
         <div class="clear space"></div>    
@@ -128,8 +130,6 @@
 
         <div class="col1"><b>Thông tin chi tiết</b></div>
         <div class="col2">  
-
-
             <div class="col1">Diện tích khuôn viên:</div>
             <div class="col2"> 
                 <label for="width_area_before" style="width:120px; float:left;">Chiều ngang trước</label>
