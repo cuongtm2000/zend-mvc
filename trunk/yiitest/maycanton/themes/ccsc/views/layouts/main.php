@@ -11,6 +11,7 @@
 
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" />
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/embed-flash.js"></script>
 
 <title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->title) ? ' - '.CHtml::encode($this->title) : '' ?></title>
 <meta name="keywords" content="<?php echo $this->keywords ?>" />
@@ -29,9 +30,6 @@
 	</script>
 <?php endif;?>
 
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/embed-flash.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/time-day.js"></script>
-
 <link rel="stylesheet" type="text/css"  href="<?php echo Yii::app()->theme->baseUrl; ?>/css/prettyPhoto.css" />
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.prettyPhoto.js" ></script>
 <script type="text/javascript" charset="utf-8">
@@ -48,7 +46,7 @@ jQuery(document).ready(function(){
 <body>
 <div id="wrapper">
 	<div id="header">
-		<script type="text/javascript">embedFlashObj('<?php echo Yii::app()->theme->baseUrl; ?>/images/den.swf',980,135);</script>
+		<script type="text/javascript">embedFlashObj('<?php echo Yii::app()->theme->baseUrl; ?>/images/den.swf',980,134);</script>
 		<div class="lang">
 			<?php if(count($this->numLang) > 1):?>
 			<?php foreach($this->numLang as $value): ?>

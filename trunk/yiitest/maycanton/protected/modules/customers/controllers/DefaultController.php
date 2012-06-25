@@ -3,6 +3,7 @@
 class DefaultController extends Controller {
 
     public function actionIndex() {
+		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/page-nav-customer.css');
         $this->setSeoPage(); //set Seo page
 
         $model = new ProductsCat();
@@ -10,6 +11,7 @@ class DefaultController extends Controller {
     }
 
     public function actionCats($cid, $page = 0) {
+		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/page-nav-customer.css');
         $model = new ProductsCat();
         $items = new Products();
 
