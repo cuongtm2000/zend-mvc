@@ -1789,3 +1789,30 @@ Stack trace:
 REQUEST_URI=/maycanton/images/catalog1.jpg
 HTTP_REFERER=http://dos.vn/maycanton/
 ---
+2012/06/25 10:24:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "customers.link".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('customers.link')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/customers.link
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/06/25 10:24:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "catalogue.link".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('catalogue.link')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/catalogue.link
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/06/25 10:24:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "customers.link".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('customers.link')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/customers.link
+HTTP_REFERER=http://dos.vn/maycanton/
+---
