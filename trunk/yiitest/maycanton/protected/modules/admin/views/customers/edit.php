@@ -17,7 +17,7 @@
     <div class="clear space"></div>
 	<?php endforeach; ?>
 
-	<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
+	<!-- <?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
 	<div class="col1"><?php echo $form->labelEx($model, 'preview'.$lang) ?></div>
 	<div class="col2">
 		<?php echo $form->textArea($model, 'preview'.$lang, $htmlOptions = array('cols' => 20, 'rows' => 10)); ?>
@@ -62,9 +62,9 @@
 		</script>
 	</div>
 	<div class="clear space"></div>
-	<?php endforeach; ?>
+	<?php endforeach; ?> -->
 
-	<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
+	<!-- <?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
     <div class="col1"><?php echo $form->labelEx($model, 'content'.$lang) ?></div>
     <div class="col2">
         <?php echo $form->textArea($model, 'content'.$lang, $htmlOptions = array('cols' => 20, 'rows' => 10)); ?>
@@ -107,13 +107,13 @@
 		</script>
     </div>
     <div class="clear space"></div>
-	<?php endforeach; ?>
+	<?php endforeach; ?> -->
 
-    <div class="col1"><?php echo $form->labelEx($model, 'unit') ?></div>
+    <!-- <div class="col1"><?php echo $form->labelEx($model, 'unit') ?></div>
     <div class="col2">
         <?php echo $form->textField($model, 'unit', $htmlOptions = array('class' => 'txt-very-large')); ?>
     </div>
-    <div class="clear space"></div>
+    <div class="clear space"></div> -->
 
 	<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
 	<div class="col1"><?php echo $form->labelEx($model, 'tag'.$lang) ?></div>
@@ -123,7 +123,7 @@
 	<div class="clear space"></div>
 	<?php endforeach; ?>
 
-	<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
+	<!-- <?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
 	<div class="col1"><?php echo $form->labelEx($model, 'description'.$lang) ?></div>
 	<div class="col2">
 		<?php echo $form->textArea($model, 'description'.$lang, $htmlOptions = array('cols' => 89, 'rows' => 5)); ?> <span class="info-keyup<?php echo $lang?>">0</span>
@@ -134,9 +134,9 @@
 			$('#<?php echo ucfirst($this->ID)?>_description<?php echo $lang?>').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup<?php echo $lang?>').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});
 		});
 	</script>
-	<?php endforeach; ?>
+	<?php endforeach; ?> -->
 
-    <div class="col1"><?php echo $form->labelEx($model, 'pic_thumb') ?></div>
+    <!-- <div class="col1"><?php echo $form->labelEx($model, 'pic_thumb') ?></div>
     <div class="col2">
         <?php if ($model->pic_thumb): ?>
             <div class="img-marginb5"><img src="<?php echo Yii::app()->request->baseUrl . USERFILES . '/' . $this->getId() . '/' . $model->pic_thumb ?>" alt="" />
@@ -145,7 +145,7 @@
         <?php endif; ?>
         <?php echo $form->fileField($model, 'pic_thumb', array('class' => 'fileupload', 'size' => '40%')); ?>
     </div>
-    <div class="clear space"></div>
+    <div class="clear space"></div> -->
 
     <div class="col1"><?php echo $form->labelEx($model, 'pic_full') ?></div>
     <div class="col2">
@@ -156,7 +156,7 @@
     </div>
     <div class="clear space"></div>
 
-    <?php if ($model->pic_desc): ?>
+    <!-- <?php if ($model->pic_desc): ?>
         <?php $str = explode('|', $model->pic_desc); ?>
         <?php foreach ($str as $value): ?>
             <div class="col1"><?php echo $form->labelEx($model, 'pic_desc') ?></div>
@@ -168,13 +168,13 @@
         <?php endforeach; ?>
     <?php endif; ?>
 
-    <p class="rows"><a href="#" id="add-rows"><?php echo $this->lang['pic_desc']?></a></p>
+    <p class="rows"><a href="#" id="add-rows"><?php echo $this->lang['pic_desc']?></a></p> -->
 
-    <div class="col1"><?php echo $form->labelEx($model, 'hot', $htmlOptions = array('for' => ucfirst($this->ID) . '_hot_0')) ?></div>
+    <!-- <div class="col1"><?php echo $form->labelEx($model, 'hot', $htmlOptions = array('for' => ucfirst($this->ID) . '_hot_0')) ?></div>
     <div class="col2 radio">
         <?php echo $form->radioButtonList($model, 'hot', array('0'=>$this->lang['normal'], '1'=>$this->lang['hot']), array('separator' => '&nbsp;&nbsp;')); ?>
     </div>
-    <div class="clear space"></div>
+    <div class="clear space"></div> -->
 
     <div class="col1"><?php echo $form->labelEx($model, 'enable', $htmlOptions = array('for' => ucfirst($this->ID) . '_enable_0')) ?></div>
     <div class="col2 radio">
@@ -193,11 +193,11 @@
 <?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
 	<?php $this->widget('ext.seoAlias.seoAlias', array('model' => $model, 'source' => 'title'.$lang, 'target' => 'tag'.$lang)); ?>
 <?php endforeach?>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     $(document).ready(function(){
         $("#add-rows").click(function(){
             $(".rows").before('<div class="col1"><?php echo $this->lang['pic_desc']?></div><div class="col2"><input type="file" name="<?php echo ucfirst($this->ID) ?>[pic_desc][]" size="40%" /></div><div class="clear space"></div>');
             return false;
         });
     });
-</script>
+</script> -->

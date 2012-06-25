@@ -38,7 +38,7 @@
 	</script>
 	<?php endforeach; ?>
 
-    <div class="col1"><?php echo $form->labelEx($model, 'pic_full') ?></div>
+    <!-- <div class="col1"><?php echo $form->labelEx($model, 'pic_full') ?></div>
     <div class="col2">
         <?php if ($model->pic_full): ?>
 			<div class="img-marginb5"><img src="<?php echo Yii::app()->request->baseUrl . USERFILES. '/'. $this->ID.'Cat/' . $model->pic_full ?>" alt="" />
@@ -47,7 +47,7 @@
         <?php endif; ?>
         <?php echo $form->fileField($model, 'pic_full', array('class' => 'fileupload')); ?>
     </div>
-    <div class="clear space"></div>
+    <div class="clear space"></div> -->
 
     <div class="col1"><?php echo $form->labelEx($model, 'cat_enable', $htmlOptions = array('for' => ucfirst($this->ID) . 'Cat_cat_enable_0')) ?></div>
     <div class="col2 radio">

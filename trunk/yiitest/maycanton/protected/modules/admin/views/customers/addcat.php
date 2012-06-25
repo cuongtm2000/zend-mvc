@@ -38,11 +38,11 @@
 	</script>
 	<?php endforeach; ?>
 
-    <div class="col1"><?php echo $form->labelEx($model, 'pic_full') ?></div>
+    <!-- <div class="col1"><?php echo $form->labelEx($model, 'pic_full') ?></div>
     <div class="col2">
         <?php echo $form->fileField($model, 'pic_full', array('class' => 'fileupload')); ?>
     </div>
-    <div class="clear space"></div>
+    <div class="clear space"></div> -->
 
     <div class="col1"><?php echo $form->labelEx($model, $this->lang['show'], $htmlOptions = array('for' => ucfirst($this->ID) . 'Cat_cat_enable_0')) ?></div>
     <div class="col2 radio">
