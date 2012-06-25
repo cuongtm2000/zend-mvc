@@ -10,21 +10,18 @@ a:hover{color:#000;}
 #wrapper {width:980px;background:#fff;margin:auto;border-left:1px solid #000;border-right:1px solid #000}
 
 /*Header*/
-#header{background:#000;padding:15px 0 0 0;position:relative}
+#header{background:#000;padding:7px 0 0 0;position:relative}
 
 /**  Ten cong ty     **/
 .title-company{padding:15px 0 0 0;font-family:Verdana, Geneva, sans-serif;font-size:14pt;margin:0 0 5px 0; font-weight:bold;color:#fff}
 
 .lang{position:absolute;bottom:-27px;right:6px;text-align:right}
-.lang img{ margin:0 0 0 5px}
-.lang a{ color:#fff}
-.lang a:hover{color:#16A7E9}
 .hot-line{position:absolute;right:15px;top:5px ;color:#fff;font-size:10pt;font-weight:bold}
 
 #nav{ list-style:none;background:url(../images/line2.png) repeat-x;height:30px}
 #nav li{float:left;position:relative;background:url(../images/line.png) no-repeat right; }
 #nav .time-day{padding:9px 10px 8px 10px;color:#fff;font-size:8pt; font-weight: bold}
-#nav li a{padding:7px 35px;text-transform:capitalize;display:block; color:#fff;font-size:10pt}
+#nav li a{padding:7px 29px;text-transform:capitalize;display:block; color:#fff;font-size:10pt}
 #nav li a:hover{background:#fff;color:#000}
 #nav .none-line{background:none}
 #nav .none-line a{padding:7px 32px 7px 31px}
@@ -89,7 +86,7 @@ a:hover{color:#000;}
 .view_full a{color:#000}
 
 /***** Product    *****/
-#rightcontent .all-product{margin:0 0 10px 0 ;list-style:none;padding:5px 0}
+#rightcontent .all-product{margin:0 0 5px 0 ;list-style:none;padding:5px 0}
 #rightcontent .product{width:220px;padding:0 0 5px 0;text-align:center;margin:0 0 20px 19px;display:inline-block; vertical-align:top;*float:left;*margin:0 10px 10px 0}
 .product-img{height:176px;background:url(../images/video.png) no-repeat;padding:0 0 7px 0; width:220px;display:table-cell;vertical-align:middle}
 #rightcontent .price{color:#145486; font-weight:700; font-size:13px; margin:5px 0 10px 0}
@@ -149,7 +146,7 @@ a:hover{color:#000;}
 .required span{font-weight:normal}
 
 /* paging */
-#rightcontent ul.paging{float: right; margin:10px 0 0 0; padding:0 0 5px 0; list-style: none;}
+#rightcontent ul.paging{float: right; margin:5px 0 0 0; padding:0 0 5px 0; list-style: none;}
 ul.paging li{display: inline;margin:0 !important;}
 ul.paging .hidden{display: none;}
 ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{border:1px solid #999;background:#999;color:#fff;padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}

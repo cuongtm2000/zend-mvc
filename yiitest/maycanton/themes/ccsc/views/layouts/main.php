@@ -70,7 +70,7 @@ jQuery(document).ready(function(){
 	<div id="content">
 		<div id="leftcontent">
 			<?php if(isset($this->function['menu_about']) && ($this->function['menu_about'])):?>
-				<h1 class="title-left"><span><?php echo $this->lang['about'] ?></span></h1>
+				<h2 class="title-left"><span><?php echo $this->lang['about'] ?></span></h2>
 				<ul class="frame-leftcontent sub-cat">
 					<?php foreach($this->function['menu_about'] as $value): ?>
 						<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'about.link')?>/<?php echo $value['tag'.LANG]?>.html" title="<?php echo $value['title'.LANG]?>"><span><?php echo $value['title'.LANG]?></span></a></li>
@@ -79,11 +79,18 @@ jQuery(document).ready(function(){
 			<?php endif;?>
 		
 			<?php if(isset($this->function['menu_products']) && ($this->function['menu_products'])):?>
-				<h1 class="title-left"><span><?php echo $this->lang['products'] ?></span></h1>
+				<h2 class="title-left"><span><?php echo $this->lang['products'] ?></span></h2>
 				<ul class="frame-leftcontent sub-cat">
 					<?php Common::menuMultiLevel($this->function['menu_products'], 'ProductsCat', Yii::t('user', 'products.link'), 'span'); ?>
 				</ul>
 			<?php endif;?>
+			
+			<?php if(isset($this->function['menu_video']) && ($this->function['menu_video'])):?>
+			<h2 class="title-left"><span><?php echo $this->lang['video'] ?></span></h2>
+			<ul class="frame-leftcontent sub-cat">
+				<?php Common::menuMultiLevel($this->function['menu_video'], 'VideoCat', Yii::t('user', 'video.link'),'span'); ?>
+			</ul>
+			<?php endif; ?>
 			
 			<h1 class="title-left"><span>Hỗ trợ trực tuyến</span></h1>
 			<ul class="frame-leftcontent support">
