@@ -1,72 +1,88 @@
-2012/06/22 09:11:43 [error] [php] Uninitialized string offset: 0 (D:\svn\maycanton\protected\models\Menus.php:158)
+2012/06/25 02:48:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
-#1 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): ConfigsController->runAction()
-#2 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#3 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
-#4 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): ConfigsController->filterAccessControl()
-#5 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
-#6 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
-#7 C:\xampp\php\library\framework\web\CController.php(266): ConfigsController->runActionWithFilters()
-#8 C:\xampp\php\library\framework\web\CWebApplication.php(276): ConfigsController->run()
-#9 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#10 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#11 D:\svn\maycanton\index.php(16): CWebApplication->run()
-REQUEST_URI=/maycanton/admin/configs/menu
-in D:\svn\maycanton\protected\models\Menus.php (158)
-in D:\svn\maycanton\protected\modules\admin\controllers\ConfigsController.php (30)
-in D:\svn\maycanton\index.php (16)
-2012/06/22 09:13:31 [error] [php] Uninitialized string offset: 0 (D:\svn\maycanton\protected\models\Menus.php:158)
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/catalog1...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/catalog1.jpg
+HTTP_REFERER=http://localhost/maycanton/
+---
+2012/06/25 02:48:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
-#1 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): ConfigsController->runAction()
-#2 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#3 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
-#4 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): ConfigsController->filterAccessControl()
-#5 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
-#6 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
-#7 C:\xampp\php\library\framework\web\CController.php(266): ConfigsController->runActionWithFilters()
-#8 C:\xampp\php\library\framework\web\CWebApplication.php(276): ConfigsController->run()
-#9 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#10 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#11 D:\svn\maycanton\index.php(16): CWebApplication->run()
-REQUEST_URI=/maycanton/admin/configs/menu
-in D:\svn\maycanton\protected\models\Menus.php (158)
-in D:\svn\maycanton\protected\modules\admin\controllers\ConfigsController.php (30)
-in D:\svn\maycanton\index.php (16)
-2012/06/22 09:13:42 [error] [php] Uninitialized string offset: 0 (D:\svn\maycanton\protected\models\Menus.php:158)
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/cl_2.jpg')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/cl_2.jpg
+HTTP_REFERER=http://localhost/maycanton/
+---
+2012/06/25 02:48:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/no-images.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
-#1 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): ConfigsController->runAction()
-#2 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#3 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
-#4 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): ConfigsController->filterAccessControl()
-#5 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
-#6 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
-#7 C:\xampp\php\library\framework\web\CController.php(266): ConfigsController->runActionWithFilters()
-#8 C:\xampp\php\library\framework\web\CWebApplication.php(276): ConfigsController->run()
-#9 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#10 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#11 D:\svn\maycanton\index.php(16): CWebApplication->run()
-REQUEST_URI=/maycanton/admin/configs/menu
-in D:\svn\maycanton\protected\models\Menus.php (158)
-in D:\svn\maycanton\protected\modules\admin\controllers\ConfigsController.php (30)
-in D:\svn\maycanton\index.php (16)
-2012/06/22 09:15:07 [error] [php] Uninitialized string offset: 0 (D:\svn\maycanton\protected\models\Menus.php:158)
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/no-image...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/no-images.jpg
+HTTP_REFERER=http://localhost/maycanton/
+---
+2012/06/25 02:48:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/no-product.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
-#1 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): ConfigsController->runAction()
-#2 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#3 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
-#4 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): ConfigsController->filterAccessControl()
-#5 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
-#6 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
-#7 C:\xampp\php\library\framework\web\CController.php(266): ConfigsController->runActionWithFilters()
-#8 C:\xampp\php\library\framework\web\CWebApplication.php(276): ConfigsController->run()
-#9 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#10 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#11 D:\svn\maycanton\index.php(16): CWebApplication->run()
-REQUEST_URI=/maycanton/admin/configs/menu
-in D:\svn\maycanton\protected\models\Menus.php (158)
-in D:\svn\maycanton\protected\modules\admin\controllers\ConfigsController.php (30)
-in D:\svn\maycanton\index.php (16)
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/no-produ...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/no-product.jpg
+HTTP_REFERER=http://localhost/maycanton/
+---
+2012/06/25 02:48:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/e3.jpg')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/e3.jpg
+HTTP_REFERER=http://localhost/maycanton/
+---
+2012/06/25 02:48:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/icon-23.png
+HTTP_REFERER=http://localhost/maycanton/
+---
+2012/06/25 02:48:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/online.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/online.p...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/online.png
+HTTP_REFERER=http://localhost/maycanton/
+---
+2012/06/25 02:48:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/visited.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/visited....')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/visited.png
+HTTP_REFERER=http://localhost/maycanton/
+---
+2012/06/25 02:48:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/ima...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/images/favicon.ico
+---
+2012/06/25 02:48:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/ima...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\Customers\dos.vn\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/images/favicon.ico
+---
