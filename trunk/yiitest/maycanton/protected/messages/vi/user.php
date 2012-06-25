@@ -24,7 +24,7 @@ return array(
     'emptycart' => 'Danh sách rỗng',
     'sum' => 'Tổng tiền',
 
-    'services.link' => 'dich-vu',
+    'forms.link' => 'bien-dang',
     'news.link' => 'tin-tuc-su-kien',
     'video.link' => 'video',
     'contact.link' => 'lien-he',

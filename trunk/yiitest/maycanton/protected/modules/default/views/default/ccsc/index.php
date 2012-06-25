@@ -30,6 +30,28 @@
 <?php endif; ?>
 
 <?php if(isset($this->function['products_new']) && $this->function['products_new']):?>
+<h2 class="title-right"><span><?php echo $this->lang['products'] . ' ' . strtolower($this->lang['new']) ?></span></h2>
+<ul class="all-product">
+    <li class="product">
+        <div class="product-img"><a href="product-info.html" title=""><img src="images/no-product.jpg" width="170" height="145" alt="Product" /></a></div><div class="clear"></div>
+        <h2 class="title-pro"><a href="product-info.html" title="Leonidas Chocolate Assortment">Harry Potter and the Chamber of Secrets</a></h2>
+        <p class="price">$165.00</p>
+        <a href="product-info.html" class="add-to-cart" title="Add to Cart"><span>Add to Cart</span></a>
+    </li>
+    <li class="product">
+        <div class="product-img"><a href="product-info.html" title="" ><img src="images/no-images.jpg" alt="Product" /></a></div>
+        <h2 class="title-pro"><a href="product-info.html" title="Leonidas Chocolate Assortment">Couture ring yellow gold paved</a></h2>
+        <p class="price">$275.00</p>
+        <a href="product-info.html" class="add-to-cart" title="Add to Cart"><span>Add to Cart</span></a>
+    </li>
+    <li class="product">
+        <div class="product-img"><a href="product-info.html" title=""><img src="images/no-images.jpg" alt="Product" /></a></div>
+        <h2 class="title-pro"><a href="product-info.html" title="Leonidas Chocolate Assortment">Diamond drop pendant</a></h2>
+        <p class="price">$326.00</p>
+        <a href="product-info.html" class="add-to-cart" title="Add to Cart"><span>Add to Cart</span></a>
+    </li>
+</ul><!--End All products-->
+
 <h1 class="title-right"><span><?php echo $this->lang['products'] . ' ' . strtolower($this->lang['new']) ?></span></h1>
 <ul class="all-product">
 	<?php foreach($this->function['products_new'] as $value): ?>
