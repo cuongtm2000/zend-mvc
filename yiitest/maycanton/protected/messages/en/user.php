@@ -24,7 +24,7 @@ return array(
     'emptycart' => 'Empty cart',
     'sum' => 'Total',
 
-    'services.link' => 'services',
+    'forms.link' => 'forms',
     'news.link' => 'news',
     'video.link' => 'video',
     'contact.link' => 'contact',

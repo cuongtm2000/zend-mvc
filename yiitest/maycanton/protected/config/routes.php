@@ -14,9 +14,9 @@ return array(
     '<products:(san-pham)>/<cid:[-a-z0-9]+>' => array('products/default/cats'), //cat
     '<products:(san-pham)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('products/default/view', 'urlSuffix' => '.html'), //view
 
-    //services modules
-    '<services:(dich-vu)>' => 'services/default/index', //index
-    '<services:(dich-vu)>/<id:[-a-z0-9]+>' => array('services/default/view', 'urlSuffix' => '.html'), //view
+    //forms modules
+    '<forms:(bien-dang)>' => 'forms/default/index', //index
+    '<forms:(bien-dang)>/<id:[-a-z0-9]+>' => array('forms/default/view', 'urlSuffix' => '.html'), //view
 
     //news modules
     '<news:(tin-tuc-su-kien)>/trang/<page:\d+>' => 'news/default/index', //index paging
