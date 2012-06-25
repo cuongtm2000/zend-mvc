@@ -5,7 +5,7 @@ dateText = ""
 // Get the cuurent day and convert it to the name of the day
 dayValue = d.getDay()
 if(dayValue == 0)
-dateText += "cn,  "
+dateText += "Cn,  "
 else if (dayValue == 1)
 dateText += "T2,  "
 else if (dayValue == 2)
@@ -60,6 +60,6 @@ minuteValue = "0" + minuteValue
 hourValue = d.getHours()
 // Customize the greeting based on the current hours
 
-timeText =  "Chào mừng các bạn đến với Cung Đàn Xưa. Let The Music Heal Your Soul !"
+timeText =  "Chào mừng các bạn đến với Công ty TNHH Cơ khí công nghiệp Sài Gòn!"
 // Write the greeting, the date, and the time to the page
 -->
