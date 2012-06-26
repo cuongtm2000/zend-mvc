@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 26, 2012 at 09:33 AM
+-- Generation Time: Jun 26, 2012 at 09:47 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -85,7 +85,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('forms_width', 700, '', 'ccsc'),
 ('logo_height', 53, '', 'ccsc'),
 ('logo_width', 367, '', 'ccsc'),
-('max_image_height', 660, '', 'ccsc'),
+('max_image_height', 880, '', 'ccsc'),
 ('max_image_width', 710, '', 'ccsc'),
 ('news_cat_height', 100, '', 'ccsc'),
 ('news_cat_width', 143, '', 'ccsc'),
@@ -679,7 +679,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1340695993),
+('''127.0.0.1''', 1340696488),
 ('''::1''', 1340683735);
 
 -- --------------------------------------------------------
@@ -717,7 +717,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `dos_module_products`
@@ -725,7 +725,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
 
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
 (1, 'MÁY CÁN TOLE GIẢ NGÓI', '', '2012-06-25 02:06:10', 'test-thumb.jpg', 'test.jpg', NULL, '<p>sadadsd</p>', '', '<p><strong>Độ dày nguyên liệu :</strong> 0,2 ~ 0,8<br /><strong>Tốc độ cán :</strong> 6 ~ 12m/min<br /><strong>Đường kính trục cán :</strong> DIA 70mm<br /><strong>Số cặp trục :</strong> Up/Down 20 ~ 23<br /><strong>Công suất điện :</strong> 15 ~ 20 HP<br /><strong>Dài * Rộng* Cao :</strong> 10m*1,8m *1,8 m<br /><strong>Khối lượng :</strong> 8000 ~ 11000 kg</p>', '', 'may-can-tole-gia-ngoi', '', 'MÁY CÁN TOLE GIẢ NGÓI', '', 0, 1, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 586),
-(2, 'Máy cán tôn 2 tầng', '', '2012-06-26 07:33:10', 'may-can-ton-2-tang-thumb.jpg', 'may-can-ton-2-tang.jpg', NULL, '', '', '<p>Đang cập nhật</p>', '', 'may-can-ton-2-tang', '', '', '', 0, 2, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 586);
+(2, 'Máy cán tôn 2 tầng', '', '2012-06-26 07:33:10', 'may-can-ton-2-tang-thumb.jpg', 'may-can-ton-2-tang.jpg', NULL, '', '', '<p>Đang cập nhật</p>', '', 'may-can-ton-2-tang', '', '', '', 0, 2, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 586),
+(3, 'MÁY CÁN TÔN 1 TẦNG', '', '2012-06-26 07:39:53', 'my-cn-tn-1-tng-thumb.png', 'my-cn-tn-1-tng.png', NULL, '', '', '<p><strong>Độ dày nguyên liệu : 0,16 ~ 0,8</strong><br /><strong>Tốc độ cán : 15 ~ 20m/min</strong><br /><strong>Đường kính trục cán : DIA 70mm</strong><br /><strong>Số cặp trục : Up/Down 20 ~ 26</strong><br /><strong>Công suất điện : 7,5 ~ 10 HP</strong><br /><strong>Dài * Rộng * Cao : 12 * 1,6 * 1,05</strong><br /><strong>Khối lượng : 8000 ~ 11000 kg</strong></p>', '', 'may-can-ton-1-tang', '', '', '', 0, 3, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 586);
 
 -- --------------------------------------------------------
 
