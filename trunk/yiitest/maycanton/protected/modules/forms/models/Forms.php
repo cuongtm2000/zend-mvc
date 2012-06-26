@@ -204,8 +204,17 @@ class Forms extends CActiveRecord {
 
     //Front end - List menu
     public function listItem() {
-        $command = Yii::app()->db->createCommand('SELECT title' . LANG . ', pic_full FROM ' . $this->tableName() . ' WHERE activated = 1 ORDER BY record_order DESC, created DESC');
-        return $command->queryAll();
+        $criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, created DESC';
+        $criteria->condition = 'activated=1';
+        $count = $this::model()->count($criteria);
+
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = 15;
+        $pages->applyLimit($criteria);
+
+        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
     }
 
     //Front end - List menu
