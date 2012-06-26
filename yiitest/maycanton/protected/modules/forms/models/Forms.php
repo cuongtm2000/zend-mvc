@@ -203,6 +203,12 @@ class Forms extends CActiveRecord {
     }
 
     //Front end - List menu
+    public function listItem() {
+        $command = Yii::app()->db->createCommand('SELECT title' . LANG . ', pic_full FROM ' . $this->tableName() . ' WHERE activated = 1 ORDER BY record_order DESC, created DESC');
+        return $command->queryAll();
+    }
+
+    //Front end - List menu
     public function listMenu() {
         $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag' . Yii::app()->session['lang'] . ' FROM ' . $this->tableName() . ' WHERE activated = 1 ORDER BY record_order DESC, created DESC');
         return $command->queryAll();
