@@ -149,45 +149,6 @@ jQuery(document).ready(function(){
 			<?php echo $content?>
             
            
-            <div class="bg-masuring">
-                <ul class="masuring">
-                    <li class="gallery">
-                        <div class="row-1"><a href="images/4.png" rel="prettyPhoto" title="
-    This will open Google.com in a new window"><img src="images/icon-23.png" alt="" /></a></div>
-                        <h3 class="row-2">CÔNG TY TNHH VINH CÚC</h3>
-                        <p class="row-3">VŨNG TÀU</p> <div class="clear"></div>
-                    </li>
-                    <li class="gallery">
-                        <div class="row-1"><a href="images/3.png" rel="prettyPhoto" title="
-    This will open Google.com in a new window 99"><img src="images/icon-23.png" alt="" /></a></div>
-                        <h3 class="row-2">CÔNG TY TNHH VINH CÚC</h3> 
-                        <p class="row-3">VŨNG TÀU</p> <div class="clear"></div>
-                    </li>
-                    <li class="gallery">
-                        <div class="row-1"><a href="images/2.png" rel="prettyPhoto" title="CONG TY THANH CONG"><img src="images/icon-23.png" alt="" /></a></div>
-                        <h3 class="row-2">CÔNG TY TNHH VINH CÚC</h3>
-                        <p class="row-3">VŨNG TÀU</p> <div class="clear"></div>
-                    </li>
-                    <li class="gallery">
-                        <div class="row-1"><a href="images/7.png" rel="prettyPhoto" title="CONG TY NHI THIEN DUONG"><img src="images/icon-23.png" alt="" /></a></div>
-                        <h3 class="row-2">CÔNG TY TNHH VINH CÚC</h3>
-                        <p class="row-3">VŨNG TÀU</p> <div class="clear"></div>
-                    </li>
-                    <li class="gallery">
-                        <div class="row-1"><a href="images/4.png" rel="prettyPhoto" title="CONG TY XD THANH DAT"><img src="images/icon-23.png" alt="" /></a></div>
-                        <h3 class="row-2">CÔNG TY TNHH VINH CÚC</h3>
-                        <p class="row-3">VŨNG TÀU</p> <div class="clear"></div>
-                    </li>
-                </ul> <div class="clear"></div>
-            </div>
-			<ul class="paging" id="yw0">
-				<li class="first hidden"><a href="/san-pham/thiet-bi-ve-sinh">Đầu tiên</a></li>
-				<li class="previous hidden"><a href="/san-pham/thiet-bi-ve-sinh">Lùi</a></li>
-				<li class="page selected"><a href="/san-pham/thiet-bi-ve-sinh">1</a></li>
-				<li class="page"><a href="/san-pham/thiet-bi-ve-sinh/trang/2">2</a></li>
-				<li class="next"><a href="/san-pham/thiet-bi-ve-sinh/trang/2">Tiếp</a></li>
-				<li class="last"><a href="/san-pham/thiet-bi-ve-sinh/trang/2">Cuối cùng</a></li>
-			</ul>
 		</div><!--End right content--> <div class="clear"></div>
 	</div><!--End content-->
 	<div id="footer">
