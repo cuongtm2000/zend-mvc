@@ -38,6 +38,8 @@ jQuery(document).ready(function(){
 	jQuery(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
 	jQuery(".product_2 a[rel^='photo']").prettyPhoto({animation_speed:'fast',slideshow:10000});
 	jQuery(".catalogue a[rel^='photo']").prettyPhoto({animation_speed:'fast',slideshow:10000});
+	jQuery(".img_info a[rel^='photo']").prettyPhoto({animation_speed:'fast',slideshow:10000});
+
 });
 </script>
 		
