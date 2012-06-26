@@ -36,7 +36,7 @@ class Customers extends CActiveRecord {
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, tag, dos_module_item_cat_cat_id', 'required'),
+			array('title, dos_module_item_cat_cat_id', 'required'),
 			array('hits, record_order, hot, specials, enable, dos_module_item_cat_cat_id', 'numerical', 'integerOnly' => true),
 			array('title, titleen, pic_thumb, pic_full, tag, tagen, extra_field1, extra_field2, extra_field3, extra_field4', 'length', 'max' => 100),
 			array('tag, tagen', 'unique'),
@@ -94,7 +94,7 @@ class Customers extends CActiveRecord {
 			'hot' => Yii::app()->controller->lang['hot'],
 			'specials' => 'Specials',
 			'remove_pic_thumb' => Yii::app()->controller->lang['remove_pic'],
-			//'extra_field1' => 'Extra Field1',
+			'extra_field1' => 'Địa chỉ',
 			//'extra_field2' => 'Extra Field2',
 			//'extra_field3' => 'Extra Field3',
 			//'extra_field4' => 'Extra Field4',
@@ -164,6 +164,7 @@ class Customers extends CActiveRecord {
 		$this->tagen = $purifier->purify(trim($this->tagen));
 		$this->description = $purifier->purify(trim($this->description));
 		$this->descriptionen = $purifier->purify(trim($this->descriptionen));
+        $this->extra_field1 = $purifier->purify(trim($this->extra_field1));
 
 		if ($this->isNewRecord) {
 			$this->record_order = $this->maxRecordOrder();
