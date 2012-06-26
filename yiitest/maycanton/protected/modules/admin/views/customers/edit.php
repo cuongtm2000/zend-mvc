@@ -115,13 +115,19 @@
     </div>
     <div class="clear space"></div> -->
 
-	<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
+	<!-- <?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
 	<div class="col1"><?php echo $form->labelEx($model, 'tag'.$lang) ?></div>
 	<div class="col2">
 		<?php echo $form->textField($model, 'tag'.$lang, $htmlOptions = array('class' => 'txt-very-large')); ?>
 	</div>
 	<div class="clear space"></div>
-	<?php endforeach; ?>
+	<?php endforeach; ?> -->
+
+    <div class="col1"><?php echo $form->labelEx($model, 'extra_field1') ?></div>
+    <div class="col2">
+        <?php echo $form->textField($model, 'extra_field1', $htmlOptions = array('class' => 'txt-very-large')); ?>
+    </div>
+    <div class="clear space"></div>
 
 	<!-- <?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
 	<div class="col1"><?php echo $form->labelEx($model, 'description'.$lang) ?></div>

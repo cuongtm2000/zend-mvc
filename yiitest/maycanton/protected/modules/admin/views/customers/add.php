@@ -120,15 +120,21 @@
 			</div>
 			<div class="clear space"></div> -->
 
-			<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
+			<!-- <?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
 			<div class="col1"><?php echo $form->labelEx($model, 'tag'.$lang) ?></div>
 			<div class="col2">
 				<?php echo $form->textField($model, 'tag'.$lang, $htmlOptions = array('class' => 'txt-very-large')); ?>
 			</div>
 			<div class="clear space"></div>
-			<?php endforeach; ?>
+			<?php endforeach; ?> -->
 
-			<!-- <?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
+            <div class="col1"><?php echo $form->labelEx($model, 'extra_field1') ?></div>
+            <div class="col2">
+                <?php echo $form->textField($model, 'extra_field1', $htmlOptions = array('class' => 'txt-very-large')); ?>
+            </div>
+            <div class="clear space"></div>
+
+            <!-- <?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
 			<div class="col1"><?php echo $form->labelEx($model, 'description'.$lang) ?></div>
 			<div class="col2">
 				<?php echo $form->textArea($model, 'description'.$lang, $htmlOptions = array('cols' => 89, 'rows' => 5)); ?> <span class="info-keyup<?php echo $lang?>">0</span>
