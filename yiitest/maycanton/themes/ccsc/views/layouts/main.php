@@ -216,13 +216,12 @@ jQuery(document).ready(function(){
 				<p class="ico-online"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/online.png" alt="yesterday" /><?php echo Yii::t('user', 'yesterday')?>: <?php echo Yii::app()->counter->getYesterday(); ?></p>
 				<p class="ico-total"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/visited.png" alt="total" /><?php echo Yii::t('user', 'total')?>: <?php echo Yii::app()->counter->getTotal(); ?></p>
 		   </div>
-			<p><?php echo $this->lang['copyright'] ?></p>
 		</div>
 		<div class="copyright">
             <h3 class="title-company-fter"><strong><?php echo $this->lang['company_name_footer'] ?></strong></h3>
 			<p><?php echo $this->lang['address1'] ?></p>
 			<?php echo ($this->lang['address2']) ? '<p>'.$this->lang['address2'].'</p>' : '' ?>
-            <p><?php echo $this->lang['developed']?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></p>          
+            <p><?php echo $this->lang['copyright'] ?>. <?php echo $this->lang['developed']?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></p>
         </div> <div class="clear"></div>
 	</div><!--End Footer-->
 </div><!--End wrapper-->
