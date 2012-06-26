@@ -25,6 +25,8 @@ return array(
     'sum' => 'Tổng tiền',
 
     'forms.link' => 'bien-dang',
+    'catalogue.link' => 'catalogue',
+    'customers.link' => 'khang-hang',
     'news.link' => 'tin-tuc-su-kien',
     'video.link' => 'video',
     'contact.link' => 'lien-he',
