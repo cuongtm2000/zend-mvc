@@ -38,7 +38,6 @@ jQuery(document).ready(function(){
 	jQuery(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
 	jQuery(".product_2 a[rel^='photo']").prettyPhoto({animation_speed:'fast',slideshow:10000});
 	jQuery(".catalogue a[rel^='photo']").prettyPhoto({animation_speed:'fast',slideshow:10000});
-
 });
 </script>
 		
@@ -46,7 +45,8 @@ jQuery(document).ready(function(){
 <body>
 <div id="wrapper">
 	<div id="header">
-		<script type="text/javascript">embedFlashObj('<?php echo Yii::app()->theme->baseUrl; ?>/images/den.swf',980,134);</script>
+        <?php $flash = ($this->module->id == 'video' || $this->module->id == 'contact') ? $this->module->id : 'home'?>
+		<script type="text/javascript">embedFlashObj('<?php echo Yii::app()->theme->baseUrl; ?>/flash/<?php echo $flash?>.swf',980,134);</script>
 		<div class="lang">
 			<?php if(count($this->numLang) > 1):?>
 			<?php foreach($this->numLang as $value): ?>
@@ -118,8 +118,6 @@ jQuery(document).ready(function(){
 			<?php endif; ?>
 			
 			<?php echo $content?>
-			
-
             
             <ul class="all-product-2">
             	<li class="product_2">
