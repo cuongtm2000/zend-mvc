@@ -5,9 +5,9 @@ body{background:#8B0100}
 #nav li{float:left;position:relative}
 #nav li a{padding:7px 29px;display:block; color:#fff;font-size:10pt}
 #nav li a:hover{background:none;color:#02035D}
-#nav .select{background:none;color:#02035D}
+#nav .select{color:#02035D}
 #nav .none-line{background:none}
 #nav .none-line a{padding:7px 30px 7px 30px}
 .title-left{background:url(../images/menukhachhang.jpg) repeat-x}
-#footer{background:url(../images/topkhachhang.jpg) repeat-x;padding:29px 35px !important;color:#939191 !important}
+#footer{background:url(../images/topkhachhang.jpg) repeat-x;padding:23px 35px !important;color:#939191 !important}
 #footer a{color:#939191 !important}
