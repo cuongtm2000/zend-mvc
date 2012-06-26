@@ -130,7 +130,7 @@
 					<li>
 						<?php if($value['support_name'.Yii::app()->session['lang']]) echo '<p>'.$value['support_name'.Yii::app()->session['lang']].'</p>'; ?>
 						<?php if($value['support_phone']) echo '<p>'.$value['support_phone'].'</p>'; ?>
-						<a href="ymsgr:sendIM?<?php echo $value['support_value'] ?>"><img src="http://mail.opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2" border="0" alt="<?php echo $value['support_value'] ?>" /></a>
+						<a href="ymsgr:sendIM?<?php echo $value['support_value'] ?>&m=Xin chào, tôi muốn hỏi về sản phẩm - dịch vụ của công ty bạn"><img src="http://mail.opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2" border="0" alt="<?php echo $value['support_value'] ?>" /></a>
 					</li>
 					<?php endif; ?>
 				<?php endforeach; ?>
