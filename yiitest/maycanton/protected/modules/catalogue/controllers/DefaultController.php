@@ -7,7 +7,7 @@ class DefaultController extends Controller{
         $model = ucfirst($this->module->getName());
         $items = new $model();
         
-        $data['item'] = $items->firstRecord();
+        $data['item'] = $items->listItem();
 		$this->render(Yii::app()->session['template'].'/index', $data);
 	}
     public function actionView($id){

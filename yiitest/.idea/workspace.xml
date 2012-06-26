@@ -4,6 +4,8 @@
     <list default="true" readonly="true" id="f190d1a4-4e3b-4b4f-b565-a2d4e8cbff85" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/maycanton/protected/runtime/application.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/application.log" afterPath="" />
+      <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\maycanton\protected\modules\customers\views\default\ccsc\cartitem.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\maycanton\protected\modules\customers\views\default\ccsc\ordering.php" afterPath="" />
       <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\CSS\4.4.0,4af9cb41e1f64636f725057634b6a44b,1.ser" afterPath="" />
       <change type="DELETED" beforePath="E:\Customers\dos.vn\svn\protected\runtime\CSS" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/HTML/4.4.0,7dbdc3d58ab57a278defc6669c7aa098,1.ser" afterPath="" />
@@ -15,7 +17,10 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime/cache" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/protected/runtime" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maycanton/themes/ccsc/views/layouts/main.php" afterPath="$PROJECT_DIR$/maycanton/themes/ccsc/views/layouts/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maycanton/protected/messages/vi/user.php" afterPath="$PROJECT_DIR$/maycanton/protected/messages/vi/user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maycanton/protected/modules/catalogue/controllers/DefaultController.php" afterPath="$PROJECT_DIR$/maycanton/protected/modules/catalogue/controllers/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maycanton/protected/modules/catalogue/models/Catalogue.php" afterPath="$PROJECT_DIR$/maycanton/protected/modules/catalogue/models/Catalogue.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maycanton/protected/modules/catalogue/views/default/ccsc/index.php" afterPath="$PROJECT_DIR$/maycanton/protected/modules/catalogue/views/default/ccsc/index.php" />
     </list>
     <ignored path="svn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,37 +42,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="user.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/maycanton/protected/messages/vi/user.php">
+      <file leaf-file-name="Catalogue.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/catalogue/models/Catalogue.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="14" selection-start="820" selection-end="829" vertical-scroll-proportion="0.0">
+            <state line="217" column="5" selection-start="9656" selection-end="9656" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/maycanton/protected/messages/en/user.php">
+      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/catalogue/controllers/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="26" selection-start="790" selection-end="790" vertical-scroll-proportion="0.0">
+            <state line="9" column="40" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/maycanton/protected/config/routes.php">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/catalogue/views/default/ccsc/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="36" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.0">
+            <state line="3" column="39" selection-start="176" selection-end="176" vertical-scroll-proportion="-1.9615384">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/maycanton/themes/ccsc/views/layouts/main.php">
+      <file leaf-file-name="view.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/forms/views/default/ccsc/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="217" column="17" selection-start="14535" selection-end="14535" vertical-scroll-proportion="0.37884617">
+            <state line="12" column="12" selection-start="744" selection-end="744" vertical-scroll-proportion="0.3923077">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/forms/views/default/ccsc/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="152" selection-end="181" vertical-scroll-proportion="-1.3076923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/forms/controllers/DefaultController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="40" selection-start="356" selection-end="364" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Forms.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/forms/models/Forms.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="204" column="4" selection-start="9131" selection-end="9623" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -83,9 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/publish/protected/modules/admin/controllers/ProductsController.php" />
-        <option value="$PROJECT_DIR$/maycanton/protected/modules/admin/controllers/ProductsController.php" />
-        <option value="$PROJECT_DIR$/maycanton/protected/modules/admin/views/customers/edit.php" />
         <option value="$PROJECT_DIR$/maycanton/protected/modules/admin/views/customers/add.php" />
         <option value="$PROJECT_DIR$/maycanton/protected/modules/admin/views/customers/addcat.php" />
         <option value="$PROJECT_DIR$/maycanton/protected/modules/admin/views/customers/editcat.php" />
@@ -94,11 +123,14 @@
         <option value="$PROJECT_DIR$/maycanton/protected/modules/forms/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/maycanton/protected/modules/forms/models/Forms.php" />
         <option value="$PROJECT_DIR$/maycanton/protected/modules/forms/views/default/ccsc/index.php" />
-        <option value="$PROJECT_DIR$/maycanton/protected/messages/vi/user.php" />
         <option value="$PROJECT_DIR$/maycanton/protected/messages/en/user.php" />
         <option value="$PROJECT_DIR$/maycanton/protected/config/routes.php" />
-        <option value="$PROJECT_DIR$/maycanton/protected/modules/customers/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/maycanton/themes/ccsc/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/maycanton/protected/modules/customers/controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/maycanton/protected/messages/vi/user.php" />
+        <option value="$PROJECT_DIR$/maycanton/protected/modules/catalogue/models/Catalogue.php" />
+        <option value="$PROJECT_DIR$/maycanton/protected/modules/catalogue/controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/maycanton/protected/modules/catalogue/views/default/ccsc/index.php" />
       </list>
     </option>
   </component>
@@ -312,70 +344,6 @@
               <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="video" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maycanton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="video" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ccsc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="svn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maycanton" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -523,7 +491,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="customers" />
+              <option name="myItemId" value="catalogue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -549,7 +517,75 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="customers" />
+              <option name="myItemId" value="catalogue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ccsc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maycanton" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalogue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maycanton" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalogue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -712,31 +748,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/admin/views/customers/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="9" selection-start="8480" selection-end="8480" vertical-scroll-proportion="-4.3076925" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/admin/views/customers/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="17" selection-start="7457" selection-end="7457" vertical-scroll-proportion="-8.115385" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/admin/views/customers/addcat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="9" selection-start="2214" selection-end="2214" vertical-scroll-proportion="-1.6923077" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/admin/views/customers/editcat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="9" selection-start="2208" selection-end="2208" vertical-scroll-proportion="0.22884615" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/video/controllers/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="8" selection-start="574" selection-end="574" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/maycanton/themes/ccsc/css/layout.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -747,13 +758,6 @@
         <state line="6" column="24" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/forms/models/Forms.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="23" selection-start="9173" selection-end="9623" vertical-scroll-proportion="0.64652014">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/video/views/default/ccsc/cats.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="4" selection-start="1414" selection-end="1646" vertical-scroll-proportion="0.68653846">
@@ -761,51 +765,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/forms/views/default/ccsc/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="232" selection-start="444" selection-end="444" vertical-scroll-proportion="0.19615385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/forms/controllers/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="40" selection-start="364" selection-end="364" vertical-scroll-proportion="0.3041145">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/maycanton/protected/messages/en/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="26" selection-start="790" selection-end="790" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/maycanton/protected/messages/vi/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="14" selection-start="820" selection-end="829" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/customers/controllers/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="19" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.74725276">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/maycanton/protected/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="36" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.0">
+        <state line="28" column="26" selection-start="790" selection-end="790" vertical-scroll-proportion="0.8515206">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/maycanton/themes/ccsc/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="17" selection-start="14535" selection-end="14535" vertical-scroll-proportion="0.37884617">
+        <state line="58" column="78" selection-start="3655" selection-end="3655" vertical-scroll-proportion="0.50961536">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maycanton/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="50" selection-start="721" selection-end="730" vertical-scroll-proportion="0.51699466">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/customers/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="8" selection-start="289" selection-end="289" vertical-scroll-proportion="0.2802198">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maycanton/protected/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="46" selection-start="230" selection-end="230" vertical-scroll-proportion="0.031135531">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maycanton/protected/messages/vi/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="30" selection-start="845" selection-end="845" vertical-scroll-proportion="0.57781756">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/catalogue/models/Catalogue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="217" column="5" selection-start="9656" selection-end="9656" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/forms/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="40" selection-start="356" selection-end="364" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/catalogue/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="40" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/forms/views/default/ccsc/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="152" selection-end="181" vertical-scroll-proportion="-1.3076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/forms/models/Forms.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="204" column="4" selection-start="9131" selection-end="9623" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/catalogue/views/default/ccsc/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="39" selection-start="176" selection-end="176" vertical-scroll-proportion="-1.9615384">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maycanton/protected/modules/forms/views/default/ccsc/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="12" selection-start="744" selection-end="744" vertical-scroll-proportion="0.3923077">
           <folding />
         </state>
       </provider>
