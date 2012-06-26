@@ -644,3 +644,57 @@ Stack trace:
 REQUEST_URI=/maycanton/bien-dang/images/icon-23.png
 HTTP_REFERER=http://dos.vn/maycanton/bien-dang/bien-dang-1.html
 ---
+2012/06/26 02:40:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "bien-dang/images/catalog1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('bien-dang/image...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/bien-dang/images/catalog1.jpg
+HTTP_REFERER=http://dos.vn/maycanton/bien-dang/bien-dang-1.html
+---
+2012/06/26 02:40:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "bien-dang/images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('bien-dang/image...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/bien-dang/images/icon-23.png
+HTTP_REFERER=http://dos.vn/maycanton/bien-dang/bien-dang-1.html
+---
+2012/06/26 02:40:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "bien-dang/images/e3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('bien-dang/image...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/bien-dang/images/e3.jpg
+HTTP_REFERER=http://dos.vn/maycanton/bien-dang/bien-dang-1.html
+---
+2012/06/26 02:40:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "bien-dang/images/cl_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('bien-dang/image...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/bien-dang/images/cl_2.jpg
+HTTP_REFERER=http://dos.vn/maycanton/bien-dang/bien-dang-1.html
+---
+2012/06/26 02:41:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "customers.link".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('customers.link')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/customers.link
+HTTP_REFERER=http://dos.vn/maycanton/bien-dang/bien-dang-1.html
+---
+2012/06/26 02:41:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "customers.link".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('customers.link')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/customers.link
+HTTP_REFERER=http://dos.vn/maycanton/bien-dang/bien-dang-1.html
+---
