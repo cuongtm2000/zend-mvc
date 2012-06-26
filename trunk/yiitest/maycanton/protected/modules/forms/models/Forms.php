@@ -211,7 +211,7 @@ class Forms extends CActiveRecord {
 
         // elements per page
         $pages = new CPagination($count);
-        $pages->pageSize = 15;
+        $pages->pageSize = 10;
         $pages->applyLimit($criteria);
 
         return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);

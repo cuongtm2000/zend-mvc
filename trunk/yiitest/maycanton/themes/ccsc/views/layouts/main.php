@@ -142,31 +142,7 @@ jQuery(document).ready(function(){
 			
 			<?php echo $content?>
             
-            <ul class="all-product-2">
-            	<li class="product_2">
-                	<div class="tent-product-2">
-                        <div class="product-img-2"><a rel="photo" href="images/e3.jpg" title="Biên dạng tôn 7 sóng La-phông loại 2" ><img src="images/e3.jpg" alt="Product" /></a></div>
-                        <h2 class="title-pro-2"><a href="" title="Leonidas Chocolate Assortment">Biên dạng tôn 7 sóng La-phông loại 2d</a></h2>
-                	</div>
-                </li>
-                <li class="product_2">
-                	<div class="tent-product-2">
-                        <div class="product-img-2"><a rel="photo" href="images/e2.jpg" title="Biên dạng tôn 10 sóng đỉnh tròn" ><img src="images/e3.jpg" alt="Product" /></a></div>
-                        <h2 class="title-pro-2"><a href="" title="Leonidas Chocolate Assortment">Biên dạng tôn 10 sóng đỉnh tròn</a></h2>
-                	</div>
-                </li>
-            </ul>
-            
-            <ul class="all-product-2">
-            	<li class="catalogue">
-                	<div class="catalogue_img"><a rel="photo" href="images/catalog1.jpg" title="Biên dạng tôn 7 sóng La-phông loại 2" ><img src="images/catalog1.jpg" alt="Product" /></a></div>
-                    <h2 class="title_catal"><a href="" title="Leonidas Chocolate Assortment">MÁY CÁN TOLE 1 TẦNG</a></h2>
-                </li>
-                <li class="catalogue">
-                    <div class="catalogue_img"><a rel="photo" href="images/cl_2.jpg" title="Biên dạng tôn 10 sóng đỉnh tròn" ><img src="images/cl_2.jpg" alt="Product" /></a></div>
-                    <h2 class="title_catal"><a href="" title="Leonidas Chocolate Assortment">MÁY CÁN TOLE 2 TẦNG</a></h2>
-                </li>
-            </ul>
+           
             <div class="bg-masuring">
                 <ul class="masuring">
                     <li class="gallery">

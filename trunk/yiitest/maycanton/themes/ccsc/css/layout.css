@@ -98,10 +98,10 @@ a:hover{color:#000;}
 
 /** Bien dang **/
 #rightcontent .all-product-2{border:none;background:#eee;padding:10px 0}
-#rightcontent .product_2{margin:0 0 10px 6px; text-align:center;display:inline-block; vertical-align:top;width:360px;border:1px solid #ccc}
+#rightcontent .product_2{margin:0 0 5px 6px; text-align:center;display:inline-block; vertical-align:top;width:360px;border:1px solid #ccc}
 .product-img-2{height:105px;width:360px;display:table-cell;vertical-align:middle}
 .product-img-2 img{width:350px;height:105px}
-.title-pro-2{background:#000;padding:10px 0}
+.title-pro-2{background:#000;padding:10px 0;color:#fff}
 .title_catal  a,.title-pro-2 a{color:#fff;}
 .tent-product-2{padding:5px 4px 5px 6px}
 

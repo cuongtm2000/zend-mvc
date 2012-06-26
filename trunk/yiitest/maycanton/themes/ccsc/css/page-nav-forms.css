@@ -10,6 +10,6 @@ body{background:#494949}
 #nav .none-line a{padding:7px 30px 7px 30px}
 .title-left{background:url(../images/menubiendang.jpg) repeat-x}
 #content{background:url(../images/nenbiendang.jpg) no-repeat center fixed !important}
-/*#rightcontent .all-product-2{background:none}*/
-#footer{background:url(../images/topbiendang.jpg) repeat-x;padding:29px 35px !important;color:#999 !important}
+#rightcontent .all-product-2{background:none;padding:10px 0 0 0}
+#footer{background:url(../images/topbiendang.jpg) repeat-x;padding:10px 35px !important;color:#999 !important}
 #footer a{color:#999 !important}
