@@ -203,6 +203,21 @@ class Catalogue extends CActiveRecord {
     }
 
     //Front end - List menu
+    public function listItem() {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, created DESC';
+        $criteria->condition = 'activated=1';
+        $count = $this::model()->count($criteria);
+
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = 10;
+        $pages->applyLimit($criteria);
+
+        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+    }
+
+    //Front end - List menu
     public function listMenu() {
         $command = Yii::app()->db->createCommand('SELECT record_id, title' . LANG . ', tag' . Yii::app()->session['lang'] . ' FROM ' . $this->tableName() . ' WHERE activated = 1 ORDER BY record_order DESC, created DESC');
         return $command->queryAll();
