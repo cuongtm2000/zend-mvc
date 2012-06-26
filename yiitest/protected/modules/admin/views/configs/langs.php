@@ -7,7 +7,7 @@
 		<label>Language</label>
 		<input name="lang_name[]" value="<?php echo $value['lang_name']?>" maxlength="30" class="txt-small" />
 		<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
-			<input name="lang<?php echo $lang?>[]" value="<?php echo $value['lang'.$lang]?>" maxlength="200" class="txt-large" />
+			<input name="lang<?php echo $lang?>[]" value="<?php echo CHtml::encode($value['lang'.$lang])?>" maxlength="200" class="txt-large" />
 		<?php endforeach?>
 	</p>
 	<?php endforeach?>

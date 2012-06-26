@@ -6,7 +6,7 @@ class CSimpleImage {
     private $image;
     private $image_type;
     private $image_info;
-    
+
     public function processUpload($file_name, $tmp, $width, $height, $path, $filename = '', $file_old = '', $type = 0, $txt_new_name = '') {
         $this->image_info = $image_info = getimagesize($tmp);
         $this->image_type = $image_info[2];
@@ -17,41 +17,46 @@ class CSimpleImage {
         } elseif ($this->image_type == IMAGETYPE_PNG) {
             $this->image = imagecreatefrompng($tmp);
         }
-        
+
         //path and filename
         $path_upload = YiiBase::getPathOfAlias('webroot') . $path . '/';
-        
+
         //check Directory Exists
-        if(!is_dir($path_upload)){
+        if (!is_dir($path_upload)) {
             mkdir($path_upload, 0777, true);
             chmod($path_upload, 0777);
         }
-        
+
         //check remove file old
         if (($file_old) && file_exists($path_upload . $file_old)) {
             unlink($path_upload . $file_old);
         }
-        
-        //type resize
-        $this->resizeToWidth($width, $height);
-        
+
         if ($type == 1) {
             //change name using user input txt name
-            $filename = $this->getFileExists($path_upload, NoneUnicode::fileName($txt_new_name . '.' . $this->getExtensionName()));
+            //$filename = $this->getFileExists($path_upload, NoneUnicode::fileName($txt_new_name . '.' . $this->getExtensionName()));
         } else {
             //change name using user input name
             $this->_filename = $this->getFileExists($path_upload, NoneUnicode::fileName($filename . '.' . $this->getExtensionName($file_name)));
         }
 
-        $this->save($path_upload . $this->_filename);
+        //upload
+        if (($this->getWidth() > $width) || ($this->getHeight() > $height)) {
+            //type resize
+            $this->resizeToWidth($width, $height);
+            $this->save($path_upload . $this->_filename);
+        } else {
+            move_uploaded_file($tmp, $path_upload . $this->_filename);
+        }
+
         return $this->_filename;
     }
-    
+
     public function uploadMulti($file_name, $tmp, $width, $height, $path, $filename = '') {
         $file_desc_multi = array();
         $size = count($file_name);
         for ($i = 0; $i < $size; $i++) {
-            $file_desc_multi[] = $this->processUpload($file_name[$i], $tmp[$i], $width, $height, $path, $filename . '-desc-' . ($i+1));
+            $file_desc_multi[] = $this->processUpload($file_name[$i], $tmp[$i], $width, $height, $path, $filename . '-desc-' . ($i + 1));
         }
         return $file_desc_multi;
     }
@@ -98,8 +103,8 @@ class CSimpleImage {
           $height = $this->getheight() * $ratio;
           $this->resize($width,$height); */
 
-        $width = (int) $width;
-        $height = (int) $height;
+        $width = (int)$width;
+        $height = (int)$height;
         if (is_int($width) && $this->getWidth() > $width) {
             $this->resize($width, ($width * $this->getheight() / $this->getWidth()));
         }
@@ -124,9 +129,10 @@ class CSimpleImage {
         imagecopyresampled($new_image, $this->image, 0, 0, 0, 0, $width, $height, $this->getWidth(), $this->getHeight());
         $this->image = $new_image;
     }
+
     public function getExtensionName($filename) {
         if (($pos = strrpos($filename, '.')) !== false)
-            return (string) substr($filename, $pos + 1);
+            return (string)substr($filename, $pos + 1);
         else
             return '';
     }
