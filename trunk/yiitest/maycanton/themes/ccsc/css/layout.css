@@ -52,7 +52,8 @@ a:hover{color:#000;}
 
 /*Ho tro ky thuat*/
 .support{list-style:none;padding:5px 0;text-align:center}
-.support li {color:#444444; line-height:2em;}
+.support li {line-height:1.5em}
+.support li img{margin:0 0 5px 0}
 
 /*bg-adv adv left*/
 .bg-adv{list-style:none;padding:5px 0 0 0;text-align:center}
@@ -153,7 +154,7 @@ ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a,
 ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{color:#000;background:none}
 
 /*Footer*/
-#footer{background:url(../images/bottom_x.png) repeat-x;padding:15px 35px;color:#FFF;font-size:10pt}
+#footer{background:#000 url(../images/bottom_x.png) repeat-x;padding:15px 35px;color:#FFF;font-size:10pt}
 #footer a:hover{text-decoration:underline}
 
 .statistics{margin:0 0 10px 0; }

@@ -90,24 +90,38 @@ jQuery(document).ready(function(){
 			</ul>
 			<?php endif; ?>
 			
-			<h1 class="title-left"><span>Hỗ trợ trực tuyến</span></h1>
+			<?php if(isset($this->function['list_supports']) && ($this->function['list_supports'])):?>
+			<h2 class="title-left"><span><?php echo $this->lang['supports'] ?></span></h2>
 			<ul class="frame-leftcontent support">
-				<li>Hỗ trợ kỹ thuật</li>
-				<li><a href="ymsgr:sendim?thanhansoft"><img src="http://opi.yahoo.com/online?u=thanhansoft&amp;m=g&amp;t=2&amp;l=us" alt="thanhansoft" /></a></li>
-				<li>Hỗ trợ doanh nghiệp</li>
-				<li><a href="ymsgr:sendIM?thanhansoft">
-					<img src="http://mail.opi.yahoo.com/online?u=thanhansoft&amp;m=g&amp;t=2" border="0" alt="yahoo" /></a></li>
-				<li>Hỗ trợ doanh nghiệp</li>
-				<li><a href="ymsgr:sendIM?thanhansoft">
-					<img src="http://mail.opi.yahoo.com/online?u=thanhansoft&amp;m=g&amp;t=2" border="0" alt="yahoo" /></a></li>
+				<?php foreach($this->function['list_supports'] as $value): ?>
+					<?php if($value['support_type']=='yahoo'): ?>
+					<li>
+						<?php if($value['support_name'.Yii::app()->session['lang']]) echo '<p>'.$value['support_name'.Yii::app()->session['lang']].'</p>'; ?>
+						<?php if($value['support_phone']) echo '<p>'.$value['support_phone'].'</p>'; ?>
+						<a href="ymsgr:sendIM?<?php echo $value['support_value'] ?>"><img src="http://mail.opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2" border="0" alt="<?php echo $value['support_value'] ?>" /></a>
+					</li>
+					<?php else:?>
+					<li>
+						<?php if($value['support_name'.Yii::app()->session['lang']]) echo '<p>'.$value['support_name'.Yii::app()->session['lang']].'</p>'; ?>
+						<?php if($value['support_phone']) echo '<p>'.$value['support_phone'].'</p>'; ?>
+						<a href="skype:<?php echo $value['support_value'] ?>?call"><img src="http://mystatus.skype.com/bigclassic/<?php echo $value['support_value'] ?>" style="border: none;" width="130" alt="<?php echo $value['support_value'] ?>" /></a>
+					</li>
+					<?php endif; ?>
+				<?php endforeach; ?>	
 			</ul>
-			<h2 class="title-left"><span>Quảng cáo</span></h2>
+			<?php endif; ?>
+			
+			<?php if(isset($this->function['advs_left']) && ($this->function['advs_left'])):?>
+			<h2 class="title-left"><span><?php echo $this->lang['advs'] ?></span></h2>
 			<ul class="frame-leftcontent bg-adv">
-				<li><a href="http://grouplaptrinh.com" title="grouplaptrinh"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/adv1.jpg" alt='' /></a></li>
-				<li><a href="http://grouplaptrinh.com" title="grouplaptrinh"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/adv1.jpg" alt='' /></a></li>
-				<li><a href="http://grouplaptrinh.com" title="grouplaptrinh"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/adv1.jpg" alt='' /></a></li>
+			<?php foreach($this->function['advs_left'] as $value): ?>
+				<li>
+					<a href="<?php echo $value['url'] ?>" target="<?php echo $value['type'] ?>" title="<?php echo $value['title'.Yii::app()->session['lang']] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.Yii::app()->session['lang']] ?>" /></a>
+				</li>
+			<?php endforeach; ?>
 			</ul>
-		</div><!--End left content-->
+			<?php endif;?>
+		</div> <!--End left content-->
 		<div id="rightcontent">
 			<?php if($this->banner): ?>
 				<ul class="slider">
@@ -188,9 +202,11 @@ jQuery(document).ready(function(){
 	<div id="footer">
 		<div class="fter-left">
 			<div class="statistics">
-                <p class="ico-online"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/online.png" alt="online" />Lượt Online : 2</p>
-                <p class="ico-total"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/visited.png" alt="visited" />Lượt Truy Cập : 18884</p>
-            </div>
+                <p class="ico-online"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/online.png" alt="online" /><?php echo Yii::t('user', 'online')?>: <?php echo Yii::app()->counter->getOnline(); ?></p>
+                <p class="ico-total"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/visited.png" alt="visited" /><?php echo Yii::t('user', 'today')?>: <?php echo Yii::app()->counter->getToday(); ?></p>
+				<p class="ico-online"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/online.png" alt="online" /><?php echo Yii::t('user', 'yesterday')?>: <?php echo Yii::app()->counter->getYesterday(); ?></p>
+				<p class="ico-total"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/visited.png" alt="visited" /><?php echo Yii::t('user', 'total')?>: <?php echo Yii::app()->counter->getTotal(); ?></p>
+		   </div>
 			<p><?php echo $this->lang['copyright'] ?></p>
 		</div>
 		<div class="copyright">
