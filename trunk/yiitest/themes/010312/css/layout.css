@@ -75,8 +75,8 @@ a:hover{color:#000;}
 
 /*Right content*/
 #right-content{float:left;width:525px; margin:0 0 0 15px}
-#right-content p{margin:0 0 8px 0}
-#right-content ul li, #right-content ol li{margin:0 0 0 18px}
+#right-content p{margin:0 0 10px 0}
+#right-content ul li, #right-content ol li{margin:0 0 10px 40px}
 
 .link{color:#444; font-weight:bold;margin:0 0 10px 0}
 .link img{margin:0 3px 0 0}
@@ -90,8 +90,8 @@ a:hover{color:#000;}
 
 /*** San pham noi bat of page index*****/
 .title-all-pro{color:#333; font-size:14px; font-weight:bold;margin:0 0 10px 0}
-.all-product{border:1px solid #F0F0F0;padding:5px 0;margin: 0 0 10px 0}
-.product{width:165px;text-align:center;padding:10px 0; border:1px solid #ccc;margin:0 1px 15px 3px !important ; display:inline-block; vertical-align:top;*float:left;*_margin:0 7px 10px 0; }
+#right-content .all-product{border:1px solid #F0F0F0;padding:5px 0;margin: 0 0 10px 0}
+#right-content .product{width:165px;text-align:center;padding:10px 0; border:1px solid #ccc;margin:0 1px 15px 3px !important ; display:inline-block; vertical-align:top;*float:left;*_margin:0 7px 10px 0; }
 
 /** Tent product and frame product img **/
 .tent-product{padding:0 5px}
@@ -148,7 +148,7 @@ a:hover{color:#000;}
 .frame-img-info img{margin:0 !important;border:2px solid #D1D1D1;padding:2px;-webkit-border-radius:3px;-moz-border-radius:3px}
 
 /*   Page New  */
-.masuring{text-align:justify;font-size:10pt;list-style:none}
+#right-content .masuring{margin:0 0 5px 0; text-align:justify;font-size:10pt;list-style:none}
 .masuring li{margin:0 0 5px 0 !important }
 .masuring p{line-height:1.4em}
 .frame-img{float:left;width:143px;margin:0 5px 5px 0}
@@ -161,7 +161,7 @@ a:hover{color:#000;}
 .frame-pro p{line-height:normal !important}
 
 /* paging */
-ul.paging{float: right; margin:0; padding:0 0 5px 0; list-style: none;}
+#right-content ul.paging{float: right; margin:0; padding:0 0 5px 0; list-style: none;}
 ul.paging li{display: inline;margin:0 !important;}
 ul.paging .hidden{display: none;}
 ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{color:#070BD9; border: 1px solid #ccc; padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
@@ -173,7 +173,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 
 /** Form lien he  **/
 .frame-contact label{color:#555; margin:0 !important;font-weight:bold;width:100px; float:left}
-.frame-contact{list-style:none;margin:15px 0 10px 0}
+#right-content .frame-contact{list-style:none;margin:15px 0 10px 0}
 .frame-contact li{padding:4px 0; margin:0 !important}
 .frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
 .frame-contact textarea{border:1px solid #ddd; width:350px;-moz-border-radius: 3px; -webkit-border-radius:3px}
