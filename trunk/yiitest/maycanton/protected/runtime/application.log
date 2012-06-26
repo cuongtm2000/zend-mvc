@@ -3971,3 +3971,120 @@ Stack trace:
 REQUEST_URI=/maycanton/khach-hang/images/icon-23.png
 HTTP_REFERER=http://dos.vn/maycanton/khach-hang/mien-nam
 ---
+2012/06/26 08:40:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "khach-hang/images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('khach-hang/imag...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/khach-hang/images/icon-23.png
+HTTP_REFERER=http://dos.vn/maycanton/khach-hang/mien-nam
+---
+2012/06/26 08:42:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "khach-hang/images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('khach-hang/imag...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/khach-hang/images/icon-23.png
+HTTP_REFERER=http://dos.vn/maycanton/khach-hang/mien-nam
+---
+2012/06/26 08:44:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/icon-23.png
+HTTP_REFERER=http://dos.vn/maycanton/bien-dang
+---
+2012/06/26 08:45:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "khach-hang/images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('khach-hang/imag...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/khach-hang/images/icon-23.png
+HTTP_REFERER=http://dos.vn/maycanton/khach-hang/mien-nam
+---
+2012/06/26 08:45:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "khach-hang/images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('khach-hang/imag...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/khach-hang/images/icon-23.png
+HTTP_REFERER=http://dos.vn/maycanton/khach-hang/mien-nam
+---
+2012/06/26 08:45:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "khach-hang/images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('khach-hang/imag...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/khach-hang/images/icon-23.png
+HTTP_REFERER=http://dos.vn/maycanton/khach-hang/mien-nam
+---
+2012/06/26 08:48:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "khach-hang/images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('khach-hang/imag...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/khach-hang/images/icon-23.png
+HTTP_REFERER=http://dos.vn/maycanton/khach-hang/mien-nam
+---
+2012/06/26 08:49:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/icon-23.png
+HTTP_REFERER=http://dos.vn/maycanton/bien-dang
+---
+2012/06/26 08:49:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/icon-23.png
+HTTP_REFERER=http://dos.vn/maycanton/catalogue
+---
+2012/06/26 08:50:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/icon-23.png
+HTTP_REFERER=http://dos.vn/maycanton/bien-dang
+---
+2012/06/26 08:50:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/icon-23.png
+HTTP_REFERER=http://dos.vn/maycanton/khach-hang
+---
+2012/06/26 08:50:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/4.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/4.png')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/4.png
+HTTP_REFERER=http://dos.vn/maycanton/khach-hang
+---
+2012/06/26 08:50:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "khach-hang/images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('khach-hang/imag...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/khach-hang/images/icon-23.png
+HTTP_REFERER=http://dos.vn/maycanton/khach-hang/mien-nam
+---

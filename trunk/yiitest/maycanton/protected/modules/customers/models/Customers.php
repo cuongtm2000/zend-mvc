@@ -241,7 +241,7 @@ class Customers extends CActiveRecord {
 	public function listItemNew() {
 		$criteria = new CDbCriteria();
 		$criteria->with = array(__CLASS__ . 'Cat');
-		$criteria->select = 'title' . LANG . ', pic_thumb, tag'.LANG.', unit, hot';
+		$criteria->select = 'title' . LANG . ', pic_full, tag'.LANG.', unit, hot';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'enable = 1';
 		$criteria->limit = Configs::configTemplate('customers_num_paging_new', Yii::app()->session['template']);
@@ -264,7 +264,7 @@ class Customers extends CActiveRecord {
 	//Front end - list Item by Cat
 	public function listItemByCat($cid) {
 		$criteria = new CDbCriteria();
-		$criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit, extra_field1, record_id';
+		$criteria->select = 'title' . LANG . ', pic_full, tag' . LANG . ', unit, extra_field1, record_id';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
 		$criteria->params = array(':cid' => $cid);
