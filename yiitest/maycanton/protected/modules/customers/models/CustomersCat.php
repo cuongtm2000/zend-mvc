@@ -176,13 +176,13 @@ class CustomersCat extends CActiveRecord {
 		if ($this->isNewRecord) {
 			$this->cat_order = $this->maxRecordOrder();
 			$this->dos_usernames_username = Yii::app()->user->id;
-			if ($_FILES[ucfirst(Yii::app()->controller->id) . 'Cat']['name']['pic_full']) {
+			/*if ($_FILES[ucfirst(Yii::app()->controller->id) . 'Cat']['name']['pic_full']) {
 				Yii::import('ext.EUploadedImage.EUploadedImage');
 				$this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(Configs::configTemplate(Yii::app()->controller->id . '_cat_width', Yii::app()->session['template']), Configs::configTemplate(Yii::app()->controller->id . '_cat_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id . 'Cat', $this->cat_title);
-			}
+			}*/
 		} else {
 			//check file old and upload
-			if ($_FILES[ucfirst(Yii::app()->controller->id) . 'Cat']['name']['pic_full']) {
+			/*if ($_FILES[ucfirst(Yii::app()->controller->id) . 'Cat']['name']['pic_full']) {
 				Yii::import('ext.EUploadedImage.EUploadedImage');
 				$this->pic_full = EUploadedImage::getInstance($this, 'pic_full')->processUpload(Configs::configTemplate(Yii::app()->controller->id . '_cat_width', Yii::app()->session['template']), Configs::configTemplate(Yii::app()->controller->id . '_cat_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id . 'Cat', $this->cat_title, $this->_oldImage_full);
 			} else {
@@ -194,7 +194,7 @@ class CustomersCat extends CActiveRecord {
 				} else {
 					$this->pic_full = $this->_oldImage_full;
 				}
-			}
+			}*/
 		}
 
 		return parent::beforeSave();
