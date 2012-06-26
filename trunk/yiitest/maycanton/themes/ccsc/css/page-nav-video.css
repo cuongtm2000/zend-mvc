@@ -5,9 +5,9 @@ body{background:#DD8D00}
 #nav li{float:left;position:relative}
 #nav li a{padding:7px 29px;display:block; color:#fff;font-size:10pt}
 #nav li a:hover{color:#02035D;background:none}
-#nav .select{color:#02035D;background:none}
+#nav .select{color:#02035D}
 #nav .none-line{background:none}
 #nav .none-line a{padding:7px 30px 7px 30px}
 .title-left{background:url(../images/menuvideo.jpg) repeat-x}
-#footer{background:url(../images/topvideo.jpg) repeat-x;padding:26px 35px !important;color:#fff !important}
+#footer{background:url(../images/topvideo.jpg) repeat-x;padding:23px 35px !important;color:#fff !important}
 #footer a{color:#fff !important}

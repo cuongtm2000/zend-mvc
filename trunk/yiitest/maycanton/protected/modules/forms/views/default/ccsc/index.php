@@ -18,7 +18,7 @@
 						<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-product.jpg" alt="<?php echo $value['title'.LANG] ?>" />
 					</a>
 				</div>	
-				<h2 class="title-pro-2"><a href="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-product.jpg" rel="photo" rel="photo" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h2>
+				<h2 class="title-pro-2"><a href="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-product.jpg" rel="photo" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h2>
 				<?php endif?>
 			</div>
 		</li>
