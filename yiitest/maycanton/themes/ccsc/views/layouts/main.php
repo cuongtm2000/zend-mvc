@@ -83,6 +83,15 @@ jQuery(document).ready(function(){
 				</ul>
 			<?php endif;?>
 			
+			<?php if(isset($this->function['menu_services']) && ($this->function['menu_services'])):?>
+			<h2 class="title-left"><span><?php echo $this->lang['forms'] ?></span></h2>
+			<ul class="frame-leftcontent sub-cat">
+				<?php foreach($this->function['menu_services'] as $value): ?>
+				<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'forms.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']]?>.html" title="<?php echo $value['title'.LANG]?>"><span><?php echo $value['title'.LANG]?></span></a></li>
+				<?php endforeach; ?>
+			</ul>
+			<?php endif;?>
+			
 			<?php if(isset($this->function['menu_video']) && ($this->function['menu_video'])):?>
 			<h2 class="title-left"><span><?php echo $this->lang['video'] ?></span></h2>
 			<ul class="frame-leftcontent sub-cat">
@@ -203,9 +212,9 @@ jQuery(document).ready(function(){
 		<div class="fter-left">
 			<div class="statistics">
                 <p class="ico-online"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/online.png" alt="online" /><?php echo Yii::t('user', 'online')?>: <?php echo Yii::app()->counter->getOnline(); ?></p>
-                <p class="ico-total"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/visited.png" alt="visited" /><?php echo Yii::t('user', 'today')?>: <?php echo Yii::app()->counter->getToday(); ?></p>
-				<p class="ico-online"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/online.png" alt="online" /><?php echo Yii::t('user', 'yesterday')?>: <?php echo Yii::app()->counter->getYesterday(); ?></p>
-				<p class="ico-total"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/visited.png" alt="visited" /><?php echo Yii::t('user', 'total')?>: <?php echo Yii::app()->counter->getTotal(); ?></p>
+                <p class="ico-total"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/visited.png" alt="today" /><?php echo Yii::t('user', 'today')?>: <?php echo Yii::app()->counter->getToday(); ?></p>
+				<p class="ico-online"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/online.png" alt="yesterday" /><?php echo Yii::t('user', 'yesterday')?>: <?php echo Yii::app()->counter->getYesterday(); ?></p>
+				<p class="ico-total"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/visited.png" alt="total" /><?php echo Yii::t('user', 'total')?>: <?php echo Yii::app()->counter->getTotal(); ?></p>
 		   </div>
 			<p><?php echo $this->lang['copyright'] ?></p>
 		</div>
