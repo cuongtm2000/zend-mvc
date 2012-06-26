@@ -3134,3 +3134,78 @@ Stack trace:
 REQUEST_URI=/maycanton/images/icon-23.png
 HTTP_REFERER=http://dos.vn/maycanton/
 ---
+2012/06/26 05:22:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/icon-23.png
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/06/26 05:22:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/icon-23.png
+HTTP_REFERER=http://dos.vn/maycanton/catalogue
+---
+2012/06/26 05:22:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/icon-23.png
+HTTP_REFERER=http://dos.vn/maycanton/khach-hang
+---
+2012/06/26 05:23:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/icon-23.png
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/06/26 05:24:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-23.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('images/icon-23....')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/images/icon-23.png
+HTTP_REFERER=http://dos.vn/maycanton/khach-hang
+---
+2012/06/26 05:24:31 [error] [php] Undefined index: customers_num_paging_cat (D:\svn\maycanton\protected\modules\customers\models\Customers.php:275)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#4 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#5 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\svn\maycanton\index.php(16): CWebApplication->run()
+REQUEST_URI=/maycanton/khach-hang/khach-hang
+in D:\svn\maycanton\protected\modules\customers\models\Customers.php (275)
+in D:\svn\maycanton\protected\modules\customers\controllers\DefaultController.php (19)
+in D:\svn\maycanton\index.php (16)
+2012/06/26 05:24:34 [error] [php] Undefined index: customers_num_paging_cat (D:\svn\maycanton\protected\modules\customers\models\Customers.php:275)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#4 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#5 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#6 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\svn\maycanton\index.php(16): CWebApplication->run()
+REQUEST_URI=/maycanton/khach-hang/khach-hang
+in D:\svn\maycanton\protected\modules\customers\models\Customers.php (275)
+in D:\svn\maycanton\protected\modules\customers\controllers\DefaultController.php (19)
+in D:\svn\maycanton\index.php (16)
