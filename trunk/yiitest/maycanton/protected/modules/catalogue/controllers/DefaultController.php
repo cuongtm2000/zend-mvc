@@ -2,6 +2,7 @@
 
 class DefaultController extends Controller{
 	public function actionIndex(){
+		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/page-nav-catalo.css');
 		$this->setSeoPage(); //set Seo page
 
         $model = ucfirst($this->module->getName());
@@ -11,6 +12,7 @@ class DefaultController extends Controller{
 		$this->render(Yii::app()->session['template'].'/index', $data);
 	}
     public function actionView($id){
+		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/page-nav-catalo.css');
         $model = ucfirst($this->module->getName());
         $items = new $model();
 

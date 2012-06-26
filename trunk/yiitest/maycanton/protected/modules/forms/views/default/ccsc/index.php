@@ -23,7 +23,7 @@
 			</div>
 		</li>
 		<?php endforeach?>
-	</ul>
+	</ul> <div class="clear"></div>
 <?php $this->widget('CLinkPager', array('pages' => $item['pages'], 'header'=>'', 'lastPageLabel'=>'Last', 'nextPageLabel'=>'Next', 'firstPageLabel'=>'First', 'prevPageLabel'=>'Prev', 'htmlOptions'=>array('class'=>'paging')))?>
 <?php endif; ?>
 <div class="clear"></div>
