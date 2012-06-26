@@ -25,6 +25,8 @@ return array(
     'sum' => 'Total',
 
     'forms.link' => 'forms',
+    'catalogue.link' => 'catalogue',
+    'customers.link' => 'Customers',
     'news.link' => 'news',
     'video.link' => 'video',
     'contact.link' => 'contact',

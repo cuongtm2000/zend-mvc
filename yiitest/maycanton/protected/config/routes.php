@@ -18,6 +18,17 @@ return array(
     '<forms:(bien-dang)>' => 'forms/default/index', //index
     '<forms:(bien-dang)>/<id:[-a-z0-9]+>' => array('forms/default/view', 'urlSuffix' => '.html'), //view
 
+    //forms modules
+    '<catalogue:(catalogue)>' => 'catalogue/default/index', //index
+    '<catalogue:(catalogue)>/<id:[-a-z0-9]+>' => array('catalogue/default/view', 'urlSuffix' => '.html'), //view
+
+    //news modules
+    '<customers:(khach-hang)>/trang/<page:\d+>' => 'customers/default/index', //index paging
+    '<customers:(khach-hang)>' => 'customers/default/index', //index
+    '<customers:(khach-hang)>/<cid:[-a-z0-9]+>/trang/<page:\d+>' => array('customers/default/cats'), //cat paging
+    '<customers:(khach-hang)>/<cid:[-a-z0-9]+>' => array('customers/default/cats'), //cat
+    '<customers:(khach-hang)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('customers/default/view', 'urlSuffix' => '.html'), //view
+
     //news modules
     '<news:(tin-tuc-su-kien)>/trang/<page:\d+>' => 'news/default/index', //index paging
     '<news:(tin-tuc-su-kien)>' => 'news/default/index', //index
