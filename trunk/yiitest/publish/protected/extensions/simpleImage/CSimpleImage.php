@@ -6,7 +6,7 @@ class CSimpleImage {
     private $image;
     private $image_type;
     private $image_info;
-    
+
     public function processUpload($file_name, $tmp, $width, $height, $path, $filename = '', $file_old = '', $type = 0, $txt_new_name = '') {
         $this->image_info = $image_info = getimagesize($tmp);
         $this->image_type = $image_info[2];
@@ -17,33 +17,38 @@ class CSimpleImage {
         } elseif ($this->image_type == IMAGETYPE_PNG) {
             $this->image = imagecreatefrompng($tmp);
         }
-        
+
         //path and filename
         $path_upload = YiiBase::getPathOfAlias('webroot') . $path . '/';
-        
+
         //check Directory Exists
-        if(!is_dir($path_upload)){
+        if (!is_dir($path_upload)) {
             mkdir($path_upload, 0777, true);
             chmod($path_upload, 0777);
         }
-        
+
         //check remove file old
         if (($file_old) && file_exists($path_upload . $file_old)) {
             unlink($path_upload . $file_old);
         }
-        
-        //type resize
-        $this->resizeToWidth($width, $height);
-        
+
         if ($type == 1) {
             //change name using user input txt name
-            $filename = $this->getFileExists($path_upload, NoneUnicode::fileName($txt_new_name . '.' . $this->getExtensionName()));
+            //$filename = $this->getFileExists($path_upload, NoneUnicode::fileName($txt_new_name . '.' . $this->getExtensionName()));
         } else {
             //change name using user input name
             $this->_filename = $this->getFileExists($path_upload, NoneUnicode::fileName($filename . '.' . $this->getExtensionName($file_name)));
         }
 
-        $this->save($path_upload . $this->_filename);
+        //upload
+        if (($this->getWidth() > $width) || ($this->getHeight() > $height)) {
+            //type resize
+            $this->resizeToWidth($width, $height);
+            $this->save($path_upload . $this->_filename);
+        } else {
+            move_uploaded_file($tmp, $path_upload . $this->_filename);
+        }
+
         return $this->_filename;
     }
     
