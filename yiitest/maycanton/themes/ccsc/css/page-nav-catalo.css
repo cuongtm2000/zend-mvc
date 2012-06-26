@@ -1,11 +1,14 @@
-body{background:#6C3B1A}
+body{background:#864C26}
+#wrapper{border-left:1px solid #6C3B1A;border-right:1px solid #6C3B1A}
+#header{background:#864C26}
 #nav{ list-style:none;background:url(../images/menucatalo.jpg) repeat-x;height:30px}
 #nav li{float:left;position:relative}
 #nav li a{padding:7px 29px;display:block; color:#fff;font-size:10pt}
 #nav li a:hover{color:#02035D;background:none}
-#nav .select{color:#02035D;background:none}
+#nav .select{color:#02035D}
 #nav .none-line{background:none}
 #nav .none-line a{padding:7px 30px 7px 30px}
 .title-left{background:url(../images/menucatalo.jpg) repeat-x}
+#rightcontent .all-product-2{border-left:1px solid #000 ;border-right:1px solid #000;border-bottom:1px solid #000}
 #footer{background:url(../images/topcatalo.jpg) repeat-x;padding:23px 35px !important;color:#B64901 !important}
 #footer a{color:#B64901 !important}

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 26, 2012 at 02:41 AM
+-- Generation Time: Jun 26, 2012 at 04:06 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -78,8 +78,8 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('banner_width', 745, '', 'ccsc'),
 ('catalogue_height', 800, '', 'ccsc'),
 ('catalogue_width', 710, '', 'ccsc'),
-('forms_height', 160, '', 'ccsc'),
-('forms_width', 160, '', 'ccsc'),
+('forms_height', 850, '', 'ccsc'),
+('forms_width', 700, '', 'ccsc'),
 ('logo_height', 53, '', 'ccsc'),
 ('logo_width', 367, '', 'ccsc'),
 ('max_image_height', 660, '', 'ccsc'),
@@ -335,8 +335,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(173, 'Giới thiệu công ty', '', '<p>Giới thiệu công ty Giới thiệu công ty</p>', '', 11, '2012-06-24 05:07:08', 2, 0, NULL, NULL, 'gioi-thieu-cong-ty', '', 'Giới thiệu công ty', '', 1, 'ccsc'),
-(174, 'Giới thiệu sơ lược', '', '<p>Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.</p>', '', 99, '2012-06-24 05:07:51', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', 'Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.', '', 1, 'ccsc');
+(173, 'Giới thiệu công ty', '', '<p>Giới thiệu công ty Giới thiệu công ty</p>', '', 14, '2012-06-24 05:07:08', 2, 0, NULL, NULL, 'gioi-thieu-cong-ty', '', 'Giới thiệu công ty', '', 1, 'ccsc'),
+(174, 'Giới thiệu sơ lược', '', '<p>Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.</p>', '', 106, '2012-06-24 05:07:51', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', 'Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.', '', 1, 'ccsc');
 
 -- --------------------------------------------------------
 
@@ -427,7 +427,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_catalogue` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_catalogue_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `dos_module_catalogue`
+--
+
+INSERT INTO `dos_module_catalogue` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
+(1, 'MÁY CÁN TOLE 1 TẦNG', '', NULL, NULL, '<p>MÁY CÁN TOLE 1 TẦNG</p>', '', 'my-cn-tole-1-tng.jpg', 1, '2012-06-26 01:28:46', 1, 0, NULL, NULL, 'may-can-tole-1-tang', '', 'MÁY CÁN TOLE 1 TẦNG', '', 1, 'ccsc'),
+(2, 'MÁY CÁN TOLE 2 TẦNG', '', NULL, NULL, '<p>MÁY CÁN TOLE 2 TẦNG</p>', '', 'my-cn-tole-2-tng.jpg', 1, '2012-06-26 01:53:44', 2, 0, NULL, NULL, 'may-can-tole-2-tang', '', 'MÁY CÁN TOLE 2 TẦNG', '', 1, 'ccsc');
 
 -- --------------------------------------------------------
 
@@ -663,7 +671,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1340671243);
+('''127.0.0.1''', 1340676393);
 
 -- --------------------------------------------------------
 
@@ -778,15 +786,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `dos_module_services`
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(1, 'Bien dang 1', '', NULL, NULL, '<p>Noi dung</p>', '', '', 4, '2012-06-24 09:34:59', 1, 0, NULL, NULL, 'bien-dang-1', '', 'asdasd', '', 1, 'ccsc'),
-(2, 'dfdfdf', '', NULL, NULL, '<p>dfdfdfdf</p>', '', '', 2, '2012-06-24 09:35:59', 2, 0, NULL, NULL, 'dfdfdf', '', 'ddfdfdf', '', 1, 'ccsc');
+(1, 'Biên dạng tôn 6 sóng công nghiệp', '', NULL, NULL, '<p>Noi dung</p>', '', 'bien-dang-ton-6-song-cong-nghiep.jpg', 10, '2012-06-24 09:34:59', 1, 0, NULL, NULL, 'bien-dang-ton-6-song-cong-nghiep', '', 'Biên dạng tôn 6 sóng công nghiệp', '', 1, 'ccsc'),
+(2, 'Biên dạng tôn 5 sóng lớn', '', NULL, NULL, '<p>dfdfdfdf</p>', '', 'dfdfdf.jpg', 4, '2012-06-24 09:35:59', 2, 0, NULL, NULL, 'bien-dang-ton-5-song-lon', '', 'Biên dạng tôn 5 sóng lớn', '', 1, 'ccsc'),
+(3, 'Biên dạng tôn 5 sóng công nghiệp', '', NULL, NULL, '<p>Biên dạng tôn 5 sóng công nghiệp fdflflsdkfd;f</p>', '', '', 4, '2012-06-26 00:59:54', 3, 0, NULL, NULL, 'bien-dang-ton-5-song-cong-nghiep', '', 'Biên dạng tôn 5 sóng công nghiệp', '', 1, 'ccsc');
 
 -- --------------------------------------------------------
 
@@ -1078,9 +1087,15 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('ccsc', 'about', 'advs_left'),
 ('ccsc', 'about', 'list_supports'),
 ('ccsc', 'about', 'menu_about'),
+('ccsc', 'catalogue', 'advs_left'),
+('ccsc', 'catalogue', 'list_supports'),
+('ccsc', 'catalogue', 'menu_products'),
 ('ccsc', 'contact', 'advs_left'),
 ('ccsc', 'contact', 'list_supports'),
 ('ccsc', 'contact', 'menu_products'),
+('ccsc', 'customers', 'advs_left'),
+('ccsc', 'customers', 'list_supports'),
+('ccsc', 'customers', 'menu_products'),
 ('ccsc', 'default', 'about_home'),
 ('ccsc', 'default', 'advs_left'),
 ('ccsc', 'default', 'list_supports'),
