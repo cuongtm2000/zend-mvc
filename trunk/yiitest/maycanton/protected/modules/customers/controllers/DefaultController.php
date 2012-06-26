@@ -19,12 +19,12 @@ class DefaultController extends Controller {
         $this->render(Yii::app()->session['template'] . '/cats', array('info_cat' => $info_cat, 'list_sub_cats' => $model->listItem($info_cat['cat_id']), 'list_items' => $items->listItemByCat($info_cat['cat_id'])));
     }
 
-    public function actionView($id) {
+    /*public function actionView($id) {
         $model = ucfirst($this->module->id);
         $model_class = new $model();
 
         $data['item'] = $model_class->detailItem($id);
         $data['item_other'] = $model_class->listItemOther($data['item']['record_id'], $data['item']['dos_module_item_cat_cat_id']);
         $this->render(Yii::app()->session['template'] . '/view', $data);
-    }
+    }*/
 }

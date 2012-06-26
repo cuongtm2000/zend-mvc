@@ -264,7 +264,7 @@ class Customers extends CActiveRecord {
 	//Front end - list Item by Cat
 	public function listItemByCat($cid) {
 		$criteria = new CDbCriteria();
-		$criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit,record_id';
+		$criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit, extra_field1, record_id';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
 		$criteria->params = array(':cid' => $cid);
