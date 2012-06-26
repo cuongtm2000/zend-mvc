@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 26, 2012 at 04:06 AM
+-- Generation Time: Jun 26, 2012 at 06:18 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -78,6 +78,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('banner_width', 745, '', 'ccsc'),
 ('catalogue_height', 800, '', 'ccsc'),
 ('catalogue_width', 710, '', 'ccsc'),
+('customers_num_paging_cat', 15, NULL, 'ccsc'),
 ('forms_height', 850, '', 'ccsc'),
 ('forms_width', 700, '', 'ccsc'),
 ('logo_height', 53, '', 'ccsc'),
@@ -335,8 +336,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(173, 'Giới thiệu công ty', '', '<p>Giới thiệu công ty Giới thiệu công ty</p>', '', 14, '2012-06-24 05:07:08', 2, 0, NULL, NULL, 'gioi-thieu-cong-ty', '', 'Giới thiệu công ty', '', 1, 'ccsc'),
-(174, 'Giới thiệu sơ lược', '', '<p>Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.</p>', '', 106, '2012-06-24 05:07:51', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', 'Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.', '', 1, 'ccsc');
+(173, 'Giới thiệu công ty', '', '<p>Giới thiệu công ty Giới thiệu công ty</p>', '', 15, '2012-06-24 05:07:08', 2, 0, NULL, NULL, 'gioi-thieu-cong-ty', '', 'Giới thiệu công ty', '', 1, 'ccsc'),
+(174, 'Giới thiệu sơ lược', '', '<p>Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.</p>', '', 108, '2012-06-24 05:07:51', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', 'Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.', '', 1, 'ccsc');
 
 -- --------------------------------------------------------
 
@@ -533,14 +534,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_customers_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_customers_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `dos_module_customers_cat`
 --
 
 INSERT INTO `dos_module_customers_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(1, 0, 'Khach hàng', '', NULL, NULL, 'khach-hang', '', '', '', '', NULL, 1, NULL, NULL, 1, 'ccsc');
+(1, 0, 'Miến Bắc', '', NULL, NULL, 'mien-bac', '', '', '', '', NULL, 1, NULL, NULL, 1, 'ccsc'),
+(2, 0, 'Miền Trung', '', NULL, NULL, 'mien-trung', '', '', '', NULL, NULL, 2, NULL, NULL, 1, 'ccsc'),
+(3, 0, 'Miền Nam', '', NULL, NULL, 'mien-nam', '', '', '', NULL, NULL, 3, NULL, NULL, 1, 'ccsc');
 
 -- --------------------------------------------------------
 
@@ -671,7 +674,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1340676393);
+('''127.0.0.1''', 1340676393),
+('''::1''', 1340683735);
 
 -- --------------------------------------------------------
 
@@ -1024,7 +1028,6 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 --
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
-('240312', 'Mẫu thời trang: 240312', '2012-03-23 19:00:26', 'Chuyên bán các loại túi xách cho phụ nữ, và nhiều phụ điện...'),
 ('ccsc', 'Mẫu Cơ khí công nghiệp Sài Gòn', '2012-06-24 03:05:42', NULL);
 
 -- --------------------------------------------------------
@@ -1095,6 +1098,7 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('ccsc', 'contact', 'menu_products'),
 ('ccsc', 'customers', 'advs_left'),
 ('ccsc', 'customers', 'list_supports'),
+('ccsc', 'customers', 'menu_customers'),
 ('ccsc', 'customers', 'menu_products'),
 ('ccsc', 'default', 'about_home'),
 ('ccsc', 'default', 'advs_left'),
@@ -1211,6 +1215,7 @@ INSERT INTO `dos_values` (`value_name`, `module`, `module_id`, `function_name`) 
 ('advs_top', 'advs', 'Advs', 'listItemsTop'),
 ('list_supports', 'supports', 'Supports', 'listItem'),
 ('menu_about', 'about', 'About', 'listMenu'),
+('menu_customers', 'customers', 'CustomersCat', 'listCats'),
 ('menu_news', 'news', 'NewsCat', 'listCats'),
 ('menu_products', 'products', 'ProductsCat', 'listCats'),
 ('menu_services', 'forms', 'Forms', 'listMenu'),

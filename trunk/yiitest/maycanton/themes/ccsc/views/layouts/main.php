@@ -45,7 +45,7 @@ jQuery(document).ready(function(){
 <body>
 <div id="wrapper">
 	<div id="header">
-        <?php $flash = ($this->module->id == 'video' || $this->module->id == 'contact') ? $this->module->id : 'home'?>
+        <?php $flash = ($this->module->id == 'video' || $this->module->id == 'contact' || $this->module->id == 'customers') ? $this->module->id : 'home'?>
 		<script type="text/javascript">embedFlashObj('<?php echo Yii::app()->theme->baseUrl; ?>/flash/<?php echo $flash?>.swf',980,134);</script>
 		<div class="lang">
 			<?php if(count($this->numLang) > 1):?>
@@ -57,7 +57,6 @@ jQuery(document).ready(function(){
 		<div class="clear"></div>	
 	</div><!--End header-->
     <ul id="nav">
-    	<!--<li class="time-day"><script type="text/javascript">document.write(dateText + " ")</script></li>-->
 		<?php $size = count($this->nav); $i=0; foreach($this->nav as $value):?>
 			<?php $selected = ($value['url']==$this->module->id) ?  ' class="select"' : ''?>
 			<?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
@@ -75,6 +74,13 @@ jQuery(document).ready(function(){
 					<?php endforeach; ?>
 				</ul>
 			<?php endif;?>
+
+            <?php if(isset($this->function['menu_customers']) && ($this->function['menu_customers'])):?>
+            <h2 class="title-left"><span><?php echo $this->lang['customers'] ?></span></h2>
+            <ul class="frame-leftcontent sub-cat">
+                <?php Common::menuMultiLevel($this->function['menu_customers'], 'CustomersCat', Yii::t('user', 'customers.link'), 'span'); ?>
+            </ul>
+            <?php endif;?>
 		
 			<?php if(isset($this->function['menu_products']) && ($this->function['menu_products'])):?>
 				<h2 class="title-left"><span><?php echo $this->lang['products'] ?></span></h2>
