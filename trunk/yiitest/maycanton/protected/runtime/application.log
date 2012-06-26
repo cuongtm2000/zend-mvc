@@ -6418,3 +6418,147 @@ Stack trace:
 REQUEST_URI=/maycanton/themes/ccsc/js/jquery.serialScroll-1.2.2-min.js
 HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton-dap-vom/may-can-tole-gia-ngoi.html
 ---
+2012/06/26 09:41:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/scroller.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/js/scroller.js
+HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton-dap-vom/may-can-tole-gia-ngoi.html
+---
+2012/06/26 09:41:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/css/jquery.fancybox.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/css...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/css/jquery.fancybox.css
+HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton-dap-vom/may-can-tole-gia-ngoi.html
+---
+2012/06/26 09:41:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jquery.scroll-1.4.2-min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/js/jquery.scroll-1.4.2-min.js
+HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton-dap-vom/may-can-tole-gia-ngoi.html
+---
+2012/06/26 09:41:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/css/scroll.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/css...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/css/scroll.css
+HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton-dap-vom/may-can-tole-gia-ngoi.html
+---
+2012/06/26 09:41:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jcarousellite_1.0.1.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/js/jcarousellite_1.0.1.js
+HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton-dap-vom/may-can-tole-gia-ngoi.html
+---
+2012/06/26 09:41:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jquery.fancybox.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/js/jquery.fancybox.js
+HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton-dap-vom/may-can-tole-gia-ngoi.html
+---
+2012/06/26 09:41:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/product.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/js/product.js
+HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton-dap-vom/may-can-tole-gia-ngoi.html
+---
+2012/06/26 09:41:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jquery.serialScroll-1.2.2-min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/js/jquery.serialScroll-1.2.2-min.js
+HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton-dap-vom/may-can-tole-gia-ngoi.html
+---
+2012/06/26 09:41:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/css/scroll.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/css...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/css/scroll.css
+HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton-dap-vom/may-can-ton-1-tang.html
+---
+2012/06/26 09:41:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jcarousellite_1.0.1.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/js/jcarousellite_1.0.1.js
+HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton-dap-vom/may-can-ton-1-tang.html
+---
+2012/06/26 09:41:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/css/jquery.fancybox.css".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/css...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/css/jquery.fancybox.css
+HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton-dap-vom/may-can-ton-1-tang.html
+---
+2012/06/26 09:41:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jquery.fancybox.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/js/jquery.fancybox.js
+HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton-dap-vom/may-can-ton-1-tang.html
+---
+2012/06/26 09:41:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jquery.scroll-1.4.2-min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/js/jquery.scroll-1.4.2-min.js
+HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton-dap-vom/may-can-ton-1-tang.html
+---
+2012/06/26 09:41:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/scroller.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/js/scroller.js
+HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton-dap-vom/may-can-ton-1-tang.html
+---
+2012/06/26 09:41:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/jquery.serialScroll-1.2.2-min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/js/jquery.serialScroll-1.2.2-min.js
+HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton-dap-vom/may-can-ton-1-tang.html
+---
+2012/06/26 09:41:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/js/product.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/js/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/js/product.js
+HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton-dap-vom/may-can-ton-1-tang.html
+---
