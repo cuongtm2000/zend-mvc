@@ -25,7 +25,7 @@
 			</div>
 			<h3 class="title-tomers"><a href="" title="">Customers Names</a></h3>
 		</li>
-	</ul>
+	</ul> <!--End customers-->
 
 	<?php var_dump($items['models']);?>
 	<?php if ($items['models']): ?>
