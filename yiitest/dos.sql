@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 20, 2012 at 10:11 AM
+-- Generation Time: Jun 27, 2012 at 05:02 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `dos_agents` (
   `bonus` varchar(15) NOT NULL DEFAULT '0',
   `type` varchar(45) NOT NULL DEFAULT '0',
   `parent_id` varchar(8) NOT NULL,
-  `enable` tinyint(1) NOT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
   `dos_provinces_province_id` int(11) NOT NULL,
   PRIMARY KEY (`agent_id`),
   KEY `fk_dos_agents_dos_provinces1` (`dos_provinces_province_id`)
@@ -55,6 +55,7 @@ CREATE TABLE IF NOT EXISTS `dos_agents` (
 --
 
 INSERT INTO `dos_agents` (`agent_id`, `email`, `password`, `created_date`, `fullname`, `phone`, `company`, `website`, `picture`, `address`, `yahoo`, `skype`, `content`, `point`, `bonus`, `type`, `parent_id`, `enable`, `dos_provinces_province_id`) VALUES
+('08001001', 'thanhansoft@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-06-22 04:39:37', 'An', '0929001001', '', '', NULL, 'J7, kp1, Buu Long, Biên Hòa, Đồng Nai', '', '', '', '0', '0', '0', '20122012', 1, 19),
 ('20122012', 'info@dos.vn', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-05-01 16:05:05', 'Dos.vn', '0929001001', 'Công ty cổ phần Thương Hội', 'http://dos.vn', NULL, 'Gò Dầu - P. Tân Sơn Nhì - Q. Tân Phú - TpHCM', NULL, NULL, NULL, '0', '0', '0', '20122012', 1, 30);
 
 -- --------------------------------------------------------
@@ -789,6 +790,36 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `dos_customers`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_customers` (
+  `customer_id` int(11) NOT NULL AUTO_INCREMENT,
+  `customer_name` varchar(70) NOT NULL,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `pic_full` varchar(100) DEFAULT NULL,
+  `address` varchar(45) DEFAULT NULL,
+  `website` varchar(100) NOT NULL,
+  `agent_sale` varchar(8) DEFAULT NULL,
+  `agent_tech` varchar(8) DEFAULT NULL,
+  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `expired_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  `dos_bussiness_bussiness_id` varchar(100) NOT NULL,
+  PRIMARY KEY (`customer_id`),
+  KEY `fk_dos_customers_dos_bussiness1` (`dos_bussiness_bussiness_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `dos_customers`
+--
+
+INSERT INTO `dos_customers` (`customer_id`, `customer_name`, `pic_thumb`, `pic_full`, `address`, `website`, `agent_sale`, `agent_tech`, `created_date`, `expired_date`, `enable`, `dos_bussiness_bussiness_id`) VALUES
+(1, 'Công ty cổ phần Thương Hội', NULL, NULL, 'Gò Dầu - P. Tân Sơn Nhì - Q. Tân Phú - TpHCM', 'http://dos.vn', NULL, NULL, '2012-06-27 01:28:34', '2012-06-05 17:00:00', 1, 'cong-nghe-thong-tin-vien-thong');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `dos_features`
 --
 
@@ -1136,8 +1167,8 @@ INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `co
 (82, '230412 COFFEE', '', '<p style="text-align:justify;">Các bạn thân mến,<br />Trong thời gian vừa qua. <span style="color:#993300;"><strong>230412 COFFEE </strong></span>đã chuyển qua 2 giai đoạn với 2 phiên bản demo và mở rộng. Tuy nhiên, chưa thực sự trở thành website hữu ích với mức độ tương tác giữa người truy cập. Do đó, chúng tôi hân hoan thông báo tới toàn thể thành viên thường xuyên truy cập vào <strong><span style="color:#993300;">230412 COFFEE</span></strong> , thành viên góp ý về việc nâng cấp phiên bản mới với các nội dung trong bản Beta như sau:<br />- Bạn có thể sử dụng guidebook cho các chuyến đi của mình trên 2 bản App cho điện thoại và online trực tuyến.<br />- Đăng kí thành viên. Tham gia trực tiếp và quản lý các hoạt động offline, chuyến đi của mình.<br />- Chia sẻ chuyến đi, post bài kinh nghiệm v.v qua khả năng kết nối mới.<br />- Giao diện thân thiện, dễ sử dụng<br />- Các tiện ích khác biệt, lợi ích vô hạn cho thành viên thường xuyên.<br />Và còn rất nhiều các tiện ích khác.</p>\n<p style="text-align:justify;">Dự tính phiên bản <strong><span style="color:#993300;">230412 COFFEE</span></strong> sẽ thử nghiệm online trong khoảng thời gian từ 15/2/2012 - 30/2/2012.</p>\n<p style="text-align:justify;">Rất mong trong thời gian chờ đợi phiên bản mới. Các bạn vẫn luôn theo sát chúng tôi và chia sẻ cùng chúng tôi tại phuotcafe.com hiện tại.</p>\n<p style="text-align:justify;"> </p>', '', 9, '2012-04-26 09:25:37', 1, 0, '', '', '230412-coffee', '', '230412 COFFEE', '', 1, '230412'),
 (86, 'Giới thiệu sơ lược', '', '<p>Hoà mình vào sự phát triển chung của đất nước với những biến đổi không ngừng của thời cuộc, mỗi doanh nghiệp bằng thực lực và những kế sách đúng đắn của mình luôn tìm được một vị trí xứng đáng trong nền kinh tế thị trường đầy khắc nghiệt. Không là một ngoại lệ với kinh nghiệm nhiều năm hoạt động trong lĩnh vực. SẮT - NHÔM – INOX, với một đội ngũ công nhân lành nghề, tác phong chuyên nghiệp, sản phẩm chất lượng, đa dạng phù hợp kiến trúc và thẩm mỹ mọi công trình, cùng với giá cả hợp lý, hậu mãi chu đáo đã nhanh chóng chiếm lĩnh và chinh phục nhiều khách hàng lớn và khó tính, dần dần khẳng định vị thế của mình trong lĩnh vực xây dựng nói chung và hoạt động sản xuất kinh doanh cửa panô, cửa cuốn, cửa sắt, cửa cổng xếp, trụ lan can kính, cầu thang kính, lan can, cầu thang sắt, Inox, mặt dựng nhôm kính, mặt dựng aluminium, vách ngăn</p>', '', 38, '2012-05-03 14:39:49', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', '', '', 1, 'ducpano'),
 (87, 'Giới thiệu công ty', '', '<p>Nội dung gioi thiệu</p>', '', 5, '2012-05-03 14:40:19', 2, 0, NULL, NULL, 'gioi-thieu-cong-ty', '', '', '', 1, 'ducpano'),
-(90, 'Giới thiệu công ty', '', '<p style="text-align:justify;">Shop thời trang <strong>240312 </strong>là doanh nghiệp chuyên cung cấp các sản phẩm đồ da trên thị trường Việt Nam từ năm 2001.</p>\r\n<p style="text-align:justify;"><strong>240312 </strong>là nhà phân phối trực tuyến các sản phẩm túi xách, ví da, dây lưng da, kính thời trang, giầy, xăng đan, thời trang quốc tế được nhập khẩu từ nước ngoài về.</p>\r\n<p style="text-align:justify;">Bên cạnh việc phân phối trực tuyến cho các khách hàng Hà Nội, TPHCM và các tỉnh, shop còn có 4 showroom trưng bày tại Hà Nội, mở cửa từ 8h - 22h hàng ngày.</p>\r\n<p style="text-align:justify;">Nhịp sống hiện đại ngày càng ảnh hưởng đến lối sống của mọi tầng lớp xã hội. Trong đó, giới trẻ là những người chịu ảnh hưởng nhiều nhất của lối sống mới này. Trong một cuộc điều tra nhỏ về nhu cầu mua sắm và chăm chút cho vẻ bề ngoài xinh đẹp của giới nữ thì có tới 99% cho kết quả thuận. Bởi vì đời sống ngày càng phát triền, những bộ trang phục và theo đó những phụ kiệm đi kèm, có thể nói lên phong cách và cá tính rất riêng của họ. Chúng tôi hiểu và đã cho ra đời website <strong>240312</strong> nhằm đáp ứng nhu cầu đấy, nhưng theo một cách khác, mới hơn và hoàn hảo hơn.</p>\r\n<p style="text-align:justify;">Hiện nay, xu hướng thương mại điện tử đang phát triển rất mạnh, trong tương lai sẽ là mô hình chủ đạo và tất yếu, <strong>240312</strong> đã tạo nên sự khác biệt bởi chính hình thức này: Một mô hình cửa hàng trực tuyến, cung cấp mọi góc độ của sản phẩm nhằm giúp khách hàng dễ dàng chọn lựa sản phẩm yêu thích, liên tục cập nhật mẫu mã đa dạng và kèm theo đó là phong cách bán hàng chuyên nghiệp, chu đáo giúp cho bạn trẻ, những người bận rộn, những người làm việc văn phòng không có thời gian đi shopping vẫn có thể thỏa sức mua sắm. với mô hình này chúng tôi đã và đang làm hài lòng tất cả các Khách hàng.</p>', '', 450, '2012-05-03 07:46:57', 1, 1, '', '', 'gioi-thieu-cong-ty', '', 'tui xach  túi xách thời trang  giới thiệu  túi xách  túi hàng hiệu  túi hàng hiệu  cặp da cao cấp  túi ví  túi máy tính  cặp xách  tui dep  may tinh bo tui  túi xách nam  túi xách nữ  túi chống sốc  hang tui xach  túi xách đẹp  tui xach dep  công ty', '', 1, '240312'),
-(91, 'Giới thiệu chung', '', '<p>Giới thiệu chung</p>', '', 104, '2012-05-24 02:41:56', 2, 0, NULL, NULL, 'gioi-thieu-chung', '', 'Giới thiệu chung', '', 1, '240312');
+(90, 'Giới thiệu công ty', '', '<p style="text-align:justify;">Shop thời trang <strong>240312 </strong>là doanh nghiệp chuyên cung cấp các sản phẩm đồ da trên thị trường Việt Nam từ năm 2001.</p>\r\n<p style="text-align:justify;"><strong>240312 </strong>là nhà phân phối trực tuyến các sản phẩm túi xách, ví da, dây lưng da, kính thời trang, giầy, xăng đan, thời trang quốc tế được nhập khẩu từ nước ngoài về.</p>\r\n<p style="text-align:justify;">Bên cạnh việc phân phối trực tuyến cho các khách hàng Hà Nội, TPHCM và các tỉnh, shop còn có 4 showroom trưng bày tại Hà Nội, mở cửa từ 8h - 22h hàng ngày.</p>\r\n<p style="text-align:justify;">Nhịp sống hiện đại ngày càng ảnh hưởng đến lối sống của mọi tầng lớp xã hội. Trong đó, giới trẻ là những người chịu ảnh hưởng nhiều nhất của lối sống mới này. Trong một cuộc điều tra nhỏ về nhu cầu mua sắm và chăm chút cho vẻ bề ngoài xinh đẹp của giới nữ thì có tới 99% cho kết quả thuận. Bởi vì đời sống ngày càng phát triền, những bộ trang phục và theo đó những phụ kiệm đi kèm, có thể nói lên phong cách và cá tính rất riêng của họ. Chúng tôi hiểu và đã cho ra đời website <strong>240312</strong> nhằm đáp ứng nhu cầu đấy, nhưng theo một cách khác, mới hơn và hoàn hảo hơn.</p>\r\n<p style="text-align:justify;">Hiện nay, xu hướng thương mại điện tử đang phát triển rất mạnh, trong tương lai sẽ là mô hình chủ đạo và tất yếu, <strong>240312</strong> đã tạo nên sự khác biệt bởi chính hình thức này: Một mô hình cửa hàng trực tuyến, cung cấp mọi góc độ của sản phẩm nhằm giúp khách hàng dễ dàng chọn lựa sản phẩm yêu thích, liên tục cập nhật mẫu mã đa dạng và kèm theo đó là phong cách bán hàng chuyên nghiệp, chu đáo giúp cho bạn trẻ, những người bận rộn, những người làm việc văn phòng không có thời gian đi shopping vẫn có thể thỏa sức mua sắm. với mô hình này chúng tôi đã và đang làm hài lòng tất cả các Khách hàng.</p>', '', 460, '2012-05-03 07:46:57', 1, 1, '', '', 'gioi-thieu-cong-ty', '', 'tui xach  túi xách thời trang  giới thiệu  túi xách  túi hàng hiệu  túi hàng hiệu  cặp da cao cấp  túi ví  túi máy tính  cặp xách  tui dep  may tinh bo tui  túi xách nam  túi xách nữ  túi chống sốc  hang tui xach  túi xách đẹp  tui xach dep  công ty', '', 1, '240312'),
+(91, 'Giới thiệu chung', '', '<p>Giới thiệu chung</p>', '', 105, '2012-05-24 02:41:56', 2, 0, NULL, NULL, 'gioi-thieu-chung', '', 'Giới thiệu chung', '', 1, '240312');
 
 -- --------------------------------------------------------
 
@@ -1314,13 +1345,13 @@ INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `
 ('Tin tức & sự kiện', NULL, 'news', NULL, 5, NULL, NULL, NULL, NULL, 'ducpano'),
 ('Video', NULL, 'video', NULL, 6, NULL, NULL, NULL, NULL, 'ducpano'),
 ('Liên hệ', NULL, 'contact', NULL, 7, NULL, NULL, NULL, NULL, 'ducpano'),
-('Trang chủ', '', 'default', '', 1, '', '', '', '', '240312'),
-('Giới thiệu', '', 'about', '', 2, '', '', '', '', '240312'),
-('Sản phẩm', '', 'products', '', 3, '', '', '', '', '240312'),
-('Dịch vụ', '', 'services', '', 4, '', '', '', '', '240312'),
-('Tin tức & sự kiện', '', 'news', '', 5, '', '', '', '', '240312'),
-('Video', '', 'video', '', 6, '', '', '', '', '240312'),
-('Liên hệ', '', 'contact', '', 7, '', '', '', '', '240312');
+('Trang chủ', '', 'default', '', 1, NULL, NULL, NULL, NULL, '240312'),
+('Giới thiệu', '', 'about', '', 2, NULL, NULL, NULL, NULL, '240312'),
+('Sản phẩm', '', 'products', '', 3, NULL, NULL, NULL, NULL, '240312'),
+('Dịch vụ', '', 'services', '', 4, NULL, NULL, NULL, NULL, '240312'),
+('Tin tức & sự kiện', '', 'news', '', 5, NULL, NULL, NULL, NULL, '240312'),
+('Video', '', 'video', '', 6, NULL, NULL, NULL, NULL, '240312'),
+('Liên hệ', '', 'contact', '', 7, NULL, NULL, NULL, NULL, '240312');
 
 -- --------------------------------------------------------
 
@@ -1451,9 +1482,9 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('max_count', 1, 'ducpano'),
 ('counter', 2, 'ducpano'),
 ('yesterday', 0, 'ducpano'),
-('day_time', 2456099, '240312'),
+('day_time', 2456100, '240312'),
 ('max_count', 1, '240312'),
-('counter', 14, '240312'),
+('counter', 15, '240312'),
 ('yesterday', 1, '240312');
 
 -- --------------------------------------------------------
@@ -1474,7 +1505,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1340179883, '240312');
+('''127.0.0.1''', 1340264815, '240312');
 
 -- --------------------------------------------------------
 
@@ -1744,10 +1775,10 @@ INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `
 (38, 'MAY ĐỒNG PHỤC', '', '', '', '<p style="text-align:justify;">Xã hội ngày càng phát triển con người không còn dừng lại ở việc ăn no, mặc ấm mà chính là ăn ngon mặc đẹp,mặc đẹp chính là một nhu cầu thể hiện bản thân ,nhu cầu thể hiện bản thân mình là ai? từ đâu? hiểu được nhu cầu ngày càng cao đó <strong>240312</strong> sẽ cung ứng cho quý khách những sản phẩm may mặc như:</p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/240312/image/tui-xach-ban-gai-5.jpg" alt="" width="550" height="531" /></p>\r\n<p style="text-align:justify;">Đồng phục học sinh Đồng phục văn phòng Đồng phục bệnh viên Đồng phục nhà máy xí nghiệp Đồng phục nhà hàng,khách sạn, đồng phục lớp, nhóm, tập thể</p>\r\n<p style="text-align:justify;">Khi quý khách khoác lên người bộ đồng phục mang thương hiệu của tổ chức, công ty mình, quý khách sẽ tự tin hơn về thương hiệu của mình đồng thời cũng phân biệt được quý khách là ai? đến từ đâu? Giữa muôn vạn các thương hiệu khác, mặc đồng phục để tạo nên sự chuyên nghiệp, ”khác biệt” và đặc biệt hơn là sự tỏa sáng cho thương hiệu mình.</p>\r\n<p style="text-align:justify;">Bên cạnh đó công ty chúng tôi còn cung cấp cho quý khách những sản phẩm làm quà tặng quảng cáo ,quà tặng khuyến mãi cho đối tác ,khách hàng của mình như:</p>\r\n<p style="text-align:justify;">Áo thun,áo gió ,áo mưa Mũ,nón Ba lô ,túi sách,ví Gối Giày dép</p>\r\n<p style="text-align:justify;">Tất cả những sản phẩm của chúng tôi đều có in, thêu logo,tên công ty trên sản phẩm.</p>\r\n<p style="text-align:justify;">Với giá cả cạnh tranh, sản phẩm chất lượng, uy tín đến với công ty chúng tôi là sự lựa chọn hoàn hảo của quý khách.</p>\r\n<p style="text-align:justify;">Với phương châm <strong>TỎA SÁNG THƯƠNG HIỆU – NÂNG BƯỚC THÀNH CÔNG</strong>. <strong>240312</strong> hy vọng sẽ mang đến cho quý khách sự tự tin ,thoải mái và nguồn năng lực dồi dào khi khoát lên mình sản phẩm của chúng tôi.</p>\r\n<p style="text-align:justify;">Thành công của quý khách là niềm tự hào của chúng tôi!</p>', '', '', 29, '2012-05-03 08:14:59', 1, 0, '', '', 'may-dong-phuc', '', 'Áo thun,áo gió ,áo mưa Mũ,nón Ba lô ,túi sách,ví Gối Giày dép\r\n\r\nTất cả những sản phẩm của chúng tôi đều có in, thêu logo,tên công ty trên sản phẩm.', '', 1, '240312'),
 (42, 'Chuyên sản xuất và gia công', '', NULL, NULL, '<ol><li>CỬA CUỐN - cửa cuốn, cửa cuốn cao cấp, cửa cuốn giá rẻ, cửa cuốn Đài Loan, cửa cuốn Úc, cửa cuốn đức, cửa cuốn khe thoáng, cửa cuốn hợp kim nhôm, cửa cuốn inox, cửa cuốn song ngang, cửa cuốn công nghệ đức.</li>\r\n<li>CỬA KÉO - cửa kéo Đài Loan, cửa kéo giả Đài Loan , cửa xếp đài loan.</li>\r\n<li>CỬA SẮT - cửa pano sắt, cửa số sắt, bông bảo vệ, hàng rào sắt, cửa cổng mở, cửa cổng lùa.</li>\r\n<li>CỬA NHÔM - cửa pano nhôm, cửa sổ nhôm, cửa bản lề sàn kính cường lực, cửa kính tự động, phòng tắm - phòng xông hơi kính, vách ngăn - mặt dựng nhôm kính - mặt dựng aluminium.</li>\r\n<li>CỬA INOX - cửa inox, cột cờ inox.</li>\r\n<li>LAN CAN - CẦU THANG.</li>\r\n<li>TRỤ CẦU THANG - trụ cầu thang inox, inox ốp gỗ, gỗ, gỗ xỏ giữa, inox xỏ giữa, sắt sơn tĩnh điện.</li>\r\n<li>CỬA CỔNG XẾP - xếp sơn tĩnh điện, xếp inox.</li>\r\n<li>MÁI NGÓI - BIỆT THỰ - mái ngói biệt thự, vì kèo - kho xưởng.</li>\r\n</ol>', '', '', 1, '2012-05-03 14:49:37', 1, 0, NULL, NULL, 'chuyen-san-xuat-va-gia-cong', '', '', '', 1, 'ducpano'),
 (43, 'Quảng cáo trên Google', 'Quảng cáo trên Google', NULL, NULL, '<p>Quảng cáo trên Google</p>', '<p>Quảng cáo trên Google</p>', '', 4, '2012-06-11 01:44:53', 5, 0, NULL, NULL, 'quang-cao-tren-google', 'quang-cao-tren-google', 'Quảng cáo trên Google', '', 1, 'dos'),
-(44, 'Các trang báo', '', NULL, NULL, '<p>Các trang báo</p>', '', '', 5, '2012-06-11 01:45:08', 4, 0, NULL, NULL, 'cac-trang-bao', '', 'Các trang báo', '', 1, 'dos'),
-(45, 'E-mail quảng cáo', '', NULL, NULL, '<p>E-mail quảng cáo</p>', '', '', 8, '2012-06-11 01:45:18', 3, 0, NULL, NULL, 'e-mail-quang-cao', '', 'E-mail quảng cáo', '', 1, 'dos'),
-(46, 'Tối ưu hóa website', 'Tối ưu hóa website', NULL, NULL, '<p>Tối ưu hóa website</p>', '', '', 7, '2012-06-11 01:46:25', 2, 0, NULL, NULL, 'toi-uu-hoa-website', 'toi-uu-hoa-website', 'Tối ưu hóa website', '', 1, 'dos'),
-(47, 'Quảng cáo các trang rao vặt', '', NULL, NULL, '<p>Quảng cáo trên các trang rao vặt</p>', '', '', 7, '2012-06-11 01:46:53', 1, 0, NULL, NULL, 'quang-cao-cac-trang-rao-vat', '', 'Quảng cáo trên các trang rao vặt', '', 1, 'dos');
+(44, 'Các trang báo', '', NULL, NULL, '<p>Các trang báo</p>', '', '', 6, '2012-06-11 01:45:08', 4, 0, NULL, NULL, 'cac-trang-bao', '', 'Các trang báo', '', 1, 'dos'),
+(45, 'E-mail quảng cáo', '', NULL, NULL, '<p>E-mail quảng cáo</p>', '', '', 9, '2012-06-11 01:45:18', 3, 0, NULL, NULL, 'e-mail-quang-cao', '', 'E-mail quảng cáo', '', 1, 'dos'),
+(46, 'Tối ưu hóa website', 'Tối ưu hóa website', NULL, NULL, '<p>Tối ưu hóa website</p>', '', '', 8, '2012-06-11 01:46:25', 2, 0, NULL, NULL, 'toi-uu-hoa-website', 'toi-uu-hoa-website', 'Tối ưu hóa website', '', 1, 'dos'),
+(47, 'Quảng cáo các trang rao vặt', '', NULL, NULL, '<p>Quảng cáo trên các trang rao vặt</p>', '', '', 12, '2012-06-11 01:46:53', 1, 0, NULL, NULL, 'quang-cao-cac-trang-rao-vat', '', 'Quảng cáo trên các trang rao vặt', '', 1, 'dos');
 
 -- --------------------------------------------------------
 
@@ -2076,13 +2107,13 @@ CREATE TABLE IF NOT EXISTS `dos_sys_features` (
 --
 
 INSERT INTO `dos_sys_features` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(94, 'Thống kê truy cập, hỗ trợ trực tuyến', '', '<p>Thống kê truy cập, hỗ trợ trực tuyến</p>', '', 30, '2012-06-06 03:24:53', 1, 0, NULL, NULL, 'thong-ke-truy-cap-ho-tro-truc-tuyen', '', 'Thống kê truy cập, hỗ trợ trực tuyến', '', 1, 'dos'),
-(95, 'Công cụ chèn từ khóa để website nhanh xuất hiện trên Google', '', '<p>Công cụ chèn từ khóa để website nhanh xuất hiện trên Google</p>', '', 2, '2012-06-06 03:26:02', 2, 0, NULL, NULL, 'cong-cu-chen-tu-khoa-de-website-nhanh-xuat-hien-tren-google', '', 'Công cụ chèn từ khóa để website nhanh xuất hiện trên Google', '', 1, 'dos'),
-(96, 'Phầm mềm quản trị để người dùng tự thay đổi nội dùng trên web', '', '<p>Phầm mềm quản trị để người dùng tự thay đổi nội dùng trên web</p>', '', 1, '2012-06-06 03:52:18', 3, 0, NULL, NULL, 'pham-mem-quan-tri-de-nguoi-dung-tu-thay-doi-noi-dung-tren-web', '', 'Phầm mềm quản trị để người dùng tự thay đổi nội dùng trên web', '', 1, 'dos'),
+(94, 'Thống kê truy cập, hỗ trợ trực tuyến', '', '<p>Thống kê truy cập, hỗ trợ trực tuyến</p>', '', 37, '2012-06-06 03:24:53', 1, 0, NULL, NULL, 'thong-ke-truy-cap-ho-tro-truc-tuyen', '', 'Thống kê truy cập, hỗ trợ trực tuyến', '', 1, 'dos'),
+(95, 'Công cụ chèn từ khóa để website nhanh xuất hiện trên Google', '', '<p>Công cụ chèn từ khóa để website nhanh xuất hiện trên Google</p>', '', 7, '2012-06-06 03:26:02', 2, 0, NULL, NULL, 'cong-cu-chen-tu-khoa-de-website-nhanh-xuat-hien-tren-google', '', 'Công cụ chèn từ khóa để website nhanh xuất hiện trên Google', '', 1, 'dos'),
+(96, 'Phầm mềm quản trị để người dùng tự thay đổi nội dùng trên web', '', '<p>Phầm mềm quản trị để người dùng tự thay đổi nội dùng trên web</p>', '', 4, '2012-06-06 03:52:18', 3, 0, NULL, NULL, 'pham-mem-quan-tri-de-nguoi-dung-tu-thay-doi-noi-dung-tren-web', '', 'Phầm mềm quản trị để người dùng tự thay đổi nội dùng trên web', '', 1, 'dos'),
 (97, 'Tự thay đổi giao diện trang web, với nhiều mẫu thiết kế đẹp', '', '<p>Tự thay đổi giao diện trang web, với nhiều mẫu thiết kế đẹp</p>', '', 2, '2012-06-06 03:52:31', 4, 0, NULL, NULL, 'tu-thay-doi-giao-dien-trang-web-voi-nhieu-mau-thiet-ke-dep', '', 'Tự thay đổi giao diện trang web, với nhiều mẫu thiết kế đẹp', '', 1, 'dos'),
-(98, 'Web động, có đầy đủ tính năng để giới thiệu, quảng cáo, bán hàng', '', '<p>Web động, có đầy đủ tính năng để giới thiệu, quảng cáo, bán hàng</p>', '', 3, '2012-06-06 03:52:40', 5, 0, NULL, NULL, 'web-dong-co-day-du-tinh-nang-de-gioi-thieu-quang-cao-ban-hang', '', 'Web động, có đầy đủ tính năng để giới thiệu, quảng cáo, bán hàng', '', 1, 'dos'),
-(99, 'Hostting 1.000 MB, băng thông 50GB sever tốc độ nhanh, ổn định', '', '<p>Hostting 1.000 MB, băng thông 50GB sever tốc độ nhanh, ổn định</p>', '', 4, '2012-06-06 03:52:49', 6, 0, NULL, NULL, 'hostting-1000-mb-bang-thong-50gb-sever-toc-do-nhanh-on-dinh', '', 'Hostting 1.000 MB, băng thông 50GB sever tốc độ nhanh, ổn định', '', 1, 'dos'),
-(100, 'Tạo email dùng riêng cho công ty', '', '<p>Tạo email dùng riêng cho công ty</p>', '', 3, '2012-06-06 03:52:57', 7, 0, NULL, NULL, 'tao-email-dung-rieng-cho-cong-ty', '', 'Tạo email dùng riêng cho công ty', '', 1, 'dos'),
+(98, 'Web động, có đầy đủ tính năng để giới thiệu, quảng cáo, bán hàng', '', '<p>Web động, có đầy đủ tính năng để giới thiệu, quảng cáo, bán hàng</p>', '', 4, '2012-06-06 03:52:40', 5, 0, NULL, NULL, 'web-dong-co-day-du-tinh-nang-de-gioi-thieu-quang-cao-ban-hang', '', 'Web động, có đầy đủ tính năng để giới thiệu, quảng cáo, bán hàng', '', 1, 'dos'),
+(99, 'Hostting 1.000 MB, băng thông 50GB sever tốc độ nhanh, ổn định', '', '<p>Hostting 1.000 MB, băng thông 50GB sever tốc độ nhanh, ổn định</p>', '', 5, '2012-06-06 03:52:49', 6, 0, NULL, NULL, 'hostting-1000-mb-bang-thong-50gb-sever-toc-do-nhanh-on-dinh', '', 'Hostting 1.000 MB, băng thông 50GB sever tốc độ nhanh, ổn định', '', 1, 'dos'),
+(100, 'Tạo email dùng riêng cho công ty', '', '<p>Tạo email dùng riêng cho công ty</p>', '', 4, '2012-06-06 03:52:57', 7, 0, NULL, NULL, 'tao-email-dung-rieng-cho-cong-ty', '', 'Tạo email dùng riêng cho công ty', '', 1, 'dos'),
 (101, 'Một tên miền quốc tế (.com, .net, .org,...)', '', '<p>Một tên miền quốc tế (.com, .net, .org,...)</p>', '', 1, '2012-06-06 03:53:06', 8, 0, NULL, NULL, 'mot-ten-mien-quoc-te-com-net-org', '', 'Một tên miền quốc tế (.com, .net, .org,...)', '', 1, 'dos');
 
 -- --------------------------------------------------------
@@ -2870,9 +2901,9 @@ INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullna
 ('070312', 'info@dos.vn', 'd85287e7f9ec18990d6d2dce0b1692b5', '2012-04-25 07:28:23', '', '', '', 'user', 'vi', '', '2012-05-24 17:00:00', 0, '20122012', NULL, 1, '070312', 19, 'thoi-trang'),
 ('200312', 'info@dos.vn', 'd85287e7f9ec18990d6d2dce0b1692b5', '2012-04-25 07:17:56', '', '', '', 'user', 'vi', '', '2012-05-24 17:00:00', 0, '20122012', NULL, 1, '200312', 1, 'giao-duc-dao-tao'),
 ('230412', 'info@dos.vn', 'd85287e7f9ec18990d6d2dce0b1692b5', '2012-04-26 09:03:32', '', '', '', 'user', 'vi', '', '2012-05-25 17:00:00', 0, '20122012', NULL, 1, '230412', 19, 'nha-hang-cafe'),
-('240312', 'info@dos.vn', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-03 02:01:30', 'Bảo', '01234 567 890', 'Công Ty CP Thương Hội', 'user', 'vi', '', '2013-06-14 17:00:00', 1, '20122012', NULL, 1, '240312', 1, 'thoi-trang'),
+('240312', 'info@dos.vn', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-03 02:01:30', 'Bảo', '01234 567 890', 'Công Ty CP Thương Hội', 'user', 'vi', '', '2013-06-14 17:00:00', 1, '20122012', NULL, 1, '200612', 1, 'thoi-trang'),
 ('dos', 'info@dos.vn', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi|en', NULL, '2012-04-14 17:00:00', 0, '20122012', NULL, 1, '230412', 2, 'cong-nghe-thong-tin-vien-thong'),
-('ducpano', 'ducpano@yahoo.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-03 14:10:09', NULL, '0903337654', NULL, 'user', 'vi', NULL, '2012-06-01 17:00:00', 0, '20122012', NULL, 1, '270412', 19, 'co-khi-may-moc-thiet-bi');
+('ducpano', 'ducpano@yahoo.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-03 14:10:09', 'Nguyen An', '0903337654', '', 'user', 'vi', NULL, '2012-06-21 17:00:00', 0, '20122012', NULL, 1, '270412', 19, 'co-khi-may-moc-thiet-bi');
 
 -- --------------------------------------------------------
 
@@ -2972,6 +3003,12 @@ ALTER TABLE `dos_agents`
 --
 ALTER TABLE `dos_configs`
   ADD CONSTRAINT `fk_dos_configs_dos_templates1` FOREIGN KEY (`dos_templates_template`) REFERENCES `dos_templates` (`template`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `dos_customers`
+--
+ALTER TABLE `dos_customers`
+  ADD CONSTRAINT `fk_dos_customers_dos_bussiness1` FOREIGN KEY (`dos_bussiness_bussiness_id`) REFERENCES `dos_bussiness` (`bussiness_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `dos_loadfiles`
