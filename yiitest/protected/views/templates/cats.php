@@ -14,4 +14,4 @@
 	<?php endif;?>
 </ul>
 </div>
-<?php echo $this->renderPartial('menu', array('listBusiness' => $listBusiness)) ?>
+<?php echo $this->renderPartial('menu') ?>

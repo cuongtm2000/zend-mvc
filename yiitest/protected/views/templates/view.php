@@ -4,4 +4,4 @@
 	<h3 class="title-template"><strong><?php echo $detail['template_name']?></strong></h3>
 	<p><?php echo $detail['description']?></p>
 </div>	
-	<?php echo $this->renderPartial('menu', array('listBusiness' => $listBusiness)) ?>
+<?php echo $this->renderPartial('menu') ?>
