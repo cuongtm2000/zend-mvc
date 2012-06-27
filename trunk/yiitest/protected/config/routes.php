@@ -69,16 +69,16 @@ return array(
 	'<templates:(mau-website)>/<cid:[-a-z0-9]+>' => array('templates/cats'),
     '<templates:(mau-website)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('templates/view', 'urlSuffix' => '.html'),
 
-	'<language:(vi|en)>/<articles:(articles|bai-viet)>/page/<page:\d+>' => array('articles/index'), //paging index
-	'<articles:(articles|bai-viet)>/page/<page:\d+>' => array('articles/index'), //paging index
-	'<language:(vi|en)>/<articles:(articles|bai-viet)>' => array('articles/index'), //index
-	'<articles:(articles|bai-viet)>' => array('articles/index'), //index
-	'<language:(vi|en)>/<articles:(articles|bai-viet)>/<cid:[-a-z0-9]+>/page/<page:\d+>' => array('articles/cats'), //paging cats
-	'<articles:(articles|bai-viet)>/<cid:[-a-z0-9]+>/page/<page:\d+>' => array('articles/cats'), //paging cats
-	'<language:(vi|en)>/<articles:(articles|bai-viet)>/<cid:[-a-z0-9]+>' => array('articles/cats'),
-	'<articles:(articles|bai-viet)>/<cid:[-a-z0-9]+>' => array('articles/cats'),
-	'<language:(vi|en)>/<articles:(articles|bai-viet)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('articles/view', 'urlSuffix' => '.html'),
-	'<articles:(articles|bai-viet)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('articles/view', 'urlSuffix' => '.html'),
+	'<language:(vi|en)>/<articles:(handbook|cam-nang)>/page/<page:\d+>' => array('articles/index'), //paging index
+	'<articles:(handbook|cam-nang)>/page/<page:\d+>' => array('articles/index'), //paging index
+	'<language:(vi|en)>/<articles:(handbook|cam-nang)>' => array('articles/index'), //index
+	'<articles:(handbook|cam-nang)>' => array('articles/index'), //index
+	'<language:(vi|en)>/<articles:(handbook|cam-nang)>/<cid:[-a-z0-9]+>/page/<page:\d+>' => array('articles/cats'), //paging cats
+	'<articles:(handbook|cam-nang)>/<cid:[-a-z0-9]+>/page/<page:\d+>' => array('articles/cats'), //paging cats
+	'<language:(vi|en)>/<articles:(handbook|cam-nang)>/<cid:[-a-z0-9]+>' => array('articles/cats'),
+	'<articles:(handbook|cam-nang)>/<cid:[-a-z0-9]+>' => array('articles/cats'),
+	'<language:(vi|en)>/<articles:(handbook|cam-nang)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('articles/view', 'urlSuffix' => '.html'),
+	'<articles:(handbook|cam-nang)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('articles/view', 'urlSuffix' => '.html'),
 
     '<language:(vi|en)>/<tutorial:(user-guide|huong-dan)>/page/<page:\d+>' => array('tutorial/index'), //paging index
     '<tutorial:(user-guide|huong-dan)>/page/<page:\d+>' => array('tutorial/index'), //paging index
@@ -98,14 +98,21 @@ return array(
 	'<aboutus:(gioi-thieu)>/<id:[-a-z0-9]+>' => array('aboutus/view', 'urlSuffix' => '.html'), //view
 
     //services controller
-    '<servicesus:(dich-vu-quang-cao)>' => array('servicesus/index'), //index
-    '<servicesus:(dich-vu-quang-cao)>/<id:[-a-z0-9]+>' => array('servicesus/view', 'urlSuffix' => '.html'), //view
+    '<servicesus:(dich-vu)>' => array('servicesus/index'), //index
+    '<servicesus:(dich-vu)>/<id:[-a-z0-9]+>' => array('servicesus/view', 'urlSuffix' => '.html'), //view
 
     //features controller
     '<language:(vi|en)>/<features:(features)>' => array('features/index'), //index
     '<features:(tinh-nang)>' => array('features/index'), //index
     '<language:(vi|en)>/<features:(features)>/<id:[-a-z0-9]+>' => array('features/view', 'urlSuffix' => '.html'), //view
     '<features:(tinh-nang)>/<id:[-a-z0-9]+>' => array('features/view', 'urlSuffix' => '.html'), //view
+
+    //customers controller
+    '<customers:(khach-hang)>/trang/<page:\d+>' => array('customers/index'), //paging index
+    '<customers:(khach-hang)>' => array('customers/index'), //index
+    '<customers:(khach-hang)>/<cid:[-a-z0-9]+>/trang/<page:\d+>' => array('customers/cats'), //paging cat
+    '<customers:(khach-hang)>/<cid:[-a-z0-9]+>' => array('customers/cats'),
+    '<customers:(khach-hang)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('customers/view', 'urlSuffix' => '.html'),
 
     //modules multi language
     '<language:(vi|en)>' => 'site/index',
