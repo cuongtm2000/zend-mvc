@@ -36,9 +36,9 @@ a:hover{color:#000;}
 #nav li a span{padding:9px 10px; display:block;color:#444;font-size:10pt}
 #nav li a span:hover{color:#0074BD}
 
-#nav li ul{display:none;border-left:1px solid #EEEEEE;border-right:1px solid #EEEEEE}
-#nav li:hover ul{list-style:none;background:#3C42FB;display:block;position:absolute;z-index:3000;top:46px;width:165px}
-#nav li ul li{width:100%;border-bottom:1px solid #EEEEEE}
+#nav li ul{display:none;-webkit-border-radius:0 0 5px 5px;-moz-border-radius:0 0 5px 5px}
+#nav li:hover ul{list-style:none;background:#3C42FB;display:block;position:absolute;z-index:3000;top:45px;width:165px}
+#nav li ul li{width:100%;border-top:1px solid #F0F0F0}
 #nav li ul li a{float:none;font-weight:normal;color:#fff;padding:5px 2px 5px 10px;display:block}
 #nav li ul li a:hover{background:#fff;color:#0074BD}
 
