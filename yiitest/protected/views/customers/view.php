@@ -1,15 +1,13 @@
 <div id="leftcontent">
 	<?php if ($item): ?>
-		<?php $this->breadcrumbs = array(Yii::t('main', 'features.name') => Yii::app()->session['langUrl'] . '/'. Yii::t('main', 'features.link'), $item['title'.LANG]); ?>
-		<?php $this->pageTitle = $item['title'.LANG]; $this->description = $item['description'.LANG];?>
-		<h3 class="heading-contact"><?php echo $item['title'.LANG]?></h3>
-		<div class="customer-img-info"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/customers-full.jpg" alt='' />
-			<h2><strong>CUSTOMERS NAMES</strong></h2>
-			<a href="#" title="">http://customernames.com</a>
-			<?php echo $item['content'.LANG] ?>	
+		<?php $this->breadcrumbs = array(Yii::t('main', 'customers.name') => Yii::app()->session['langUrl'] . '/'. Yii::t('main', 'customers.link'), $item['bussiness_name'] => Yii::app()->session['langUrl'] . '/'. Yii::t('main', 'customers.link').'/'.$item['bussiness_id'], $item['customer_name']); ?>
+		<?php $this->pageTitle = $item['customer_name'];?>
+
+		<div class="customer-img-info"><img src="<?php echo $item['website']?>" alt='<?php echo $item['customer_name']?>' />
+			<h2><strong><?php echo $item['customer_name']?></strong></h2>
+			<p><a href="#" title="<?php echo $item['website'] ?>"><?php echo $item['website'] ?></a></p>
+			<?php echo $item['address'] ?>
 		</div>
-		
 	<?php endif?>
 </div>
-
-<?php echo $this->renderPartial('menu', array('model_menu'=>$model_menu)) ?>
+<?php echo $this->renderPartial('menu', array('listBusiness' => $listBusiness)) ?>
