@@ -127,11 +127,16 @@
 			<ul class="support">
 				<?php foreach($this->function['list_supports'] as $value): ?>
 					<?php if($value['support_type']=='yahoo'): ?>
-
 						<li>
 							<?php if($value['support_name'.Yii::app()->session['lang']]) echo '<p>'.$value['support_name'.Yii::app()->session['lang']].'</p>'; ?>
 							<?php if($value['support_phone']) echo '<p>'.$value['support_phone'].'</p>'; ?>
 							<a href="ymsgr:sendIM?<?php echo $value['support_value'] ?>"><img src="http://mail.opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2" border="0" alt="<?php echo $value['support_value'] ?>" /></a>
+						</li>
+						<?php else:?>
+						<li>
+							<?php if($value['support_name'.Yii::app()->session['lang']]) echo '<p>'.$value['support_name'.Yii::app()->session['lang']].'</p>'; ?>
+							<?php if($value['support_phone']) echo '<p>'.$value['support_phone'].'</p>'; ?>
+							<a href="skype:<?php echo $value['support_value'] ?>?call"><img src="http://mystatus.skype.com/bigclassic/<?php echo $value['support_value'] ?>" style="border: none;" width="130" alt="<?php echo $value['support_value'] ?>" /></a>
 						</li>
 					<?php endif; ?>
 				<?php endforeach; ?>	
@@ -144,7 +149,6 @@
 				<li><?php echo Yii::t('user', 'today')?>: <?php echo Yii::app()->counter->getToday(); ?></li>
 				<li><?php echo Yii::t('user', 'yesterday')?>: <?php echo Yii::app()->counter->getYesterday(); ?></li>
 				<li><?php echo Yii::t('user', 'total')?>: <?php echo Yii::app()->counter->getTotal(); ?></li>
-				<li><?php echo Yii::t('user', 'maximum')?>: <?php echo Yii::app()->counter->getMaximal(); ?></li>
 			</ul>
 			 <?php if(isset($this->function['advs_left']) && ($this->function['advs_left'])):?>
 				<h1 class="title-box"><span><?php echo $this->lang['advs'] ?></span></h1>

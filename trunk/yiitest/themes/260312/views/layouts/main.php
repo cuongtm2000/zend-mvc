@@ -121,11 +121,17 @@
 				<h1 class="title-left"><span><?php echo $this->lang['supports'] ?></span></h1>
 				<ul class="support">
 					<?php foreach($this->function['list_supports'] as $value): ?>
-					<?php if($value['support_type']=='yahoo'): ?>
+						<?php if($value['support_type']=='yahoo'): ?>
 						<li>
 							<?php if($value['support_name'.Yii::app()->session['lang']]) echo '<p>'.$value['support_name'.Yii::app()->session['lang']].'</p>'; ?>
 							<?php if($value['support_phone']) echo '<p>'.$value['support_phone'].'</p>'; ?>
 							<a href="ymsgr:sendIM?<?php echo $value['support_value'] ?>"><img src="http://mail.opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=2" border="0" alt="<?php echo $value['support_value'] ?>" /></a>
+						</li>
+						<?php else:?>
+						<li>
+							<?php if($value['support_name'.Yii::app()->session['lang']]) echo '<p>'.$value['support_name'.Yii::app()->session['lang']].'</p>'; ?>
+							<?php if($value['support_phone']) echo '<p>'.$value['support_phone'].'</p>'; ?>
+							<a href="skype:<?php echo $value['support_value'] ?>?call"><img src="http://mystatus.skype.com/bigclassic/<?php echo $value['support_value'] ?>" style="border: none;" width="130" alt="<?php echo $value['support_value'] ?>" /></a>
 						</li>
 						<?php endif; ?>
 					<?php endforeach; ?>
@@ -194,7 +200,6 @@
 			 <div class="fter-right">
 				 <p><span><?php echo Yii::t('user', 'online')?> <b><?php echo Yii::app()->counter->getOnline(); ?></b> </span> - <span><?php echo Yii::t('user', 'today')?>: <b><?php echo Yii::app()->counter->getToday(); ?></b> </span></p>
 				 <p><span><?php echo Yii::t('user', 'yesterday')?>: <b><?php echo Yii::app()->counter->getYesterday(); ?></b> </span> - <span><?php echo Yii::t('user', 'total')?>: <b><?php echo Yii::app()->counter->getTotal(); ?></b> </span></p>
-				 <p><span><?php echo Yii::t('user', 'maximum')?>: <b><?php echo Yii::app()->counter->getMaximal(); ?></b> </span></p>
 				 <?php echo $this->lang['developed']?> <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></div> <div class="clear"></div>
 		 </div>
 	 </div><!--End Footer-->
