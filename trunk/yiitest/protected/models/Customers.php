@@ -14,6 +14,7 @@
  * @property string $agent_tech
  * @property string $created_date
  * @property string $expired_date
+ * @property string $tag
  * @property integer $enable
  * @property string $dos_bussiness_bussiness_id
  *
@@ -44,16 +45,16 @@ class Customers extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('customer_name, website, created_date, dos_bussiness_bussiness_id', 'required'),
+            array('customer_name, website, created_date, tag, dos_bussiness_bussiness_id', 'required'),
             array('enable', 'numerical', 'integerOnly' => true),
             array('customer_name', 'length', 'max' => 70),
-            array('pic_thumb, pic_full, website, dos_bussiness_bussiness_id', 'length', 'max' => 100),
+            array('pic_thumb, pic_full, website, tag, dos_bussiness_bussiness_id', 'length', 'max' => 100),
             array('address', 'length', 'max' => 45),
             array('agent_sale, agent_tech', 'length', 'max' => 8),
             array('expired_date', 'safe'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('customer_id, customer_name, pic_thumb, pic_full, address, website, agent_sale, agent_tech, created_date, expired_date, enable, dos_bussiness_bussiness_id', 'safe', 'on' => 'search'),
+            array('customer_id, customer_name, pic_thumb, pic_full, address, website, agent_sale, agent_tech, created_date, expired_date, tag, enable, dos_bussiness_bussiness_id', 'safe', 'on' => 'search'),
         );
     }
 
@@ -83,6 +84,7 @@ class Customers extends CActiveRecord {
             'agent_tech' => 'Agent Tech',
             'created_date' => 'Created Date',
             'expired_date' => 'Expired Date',
+            'tag' => 'Tag',
             'enable' => 'Enable',
             'dos_bussiness_bussiness_id' => 'Dos Bussiness Bussiness',
         );
@@ -108,6 +110,7 @@ class Customers extends CActiveRecord {
         $criteria->compare('agent_tech', $this->agent_tech, true);
         $criteria->compare('created_date', $this->created_date, true);
         $criteria->compare('expired_date', $this->expired_date, true);
+        $criteria->compare('tag', $this->tag, true);
         $criteria->compare('enable', $this->enable);
         $criteria->compare('dos_bussiness_bussiness_id', $this->dos_bussiness_bussiness_id, true);
 
@@ -147,5 +150,10 @@ class Customers extends CActiveRecord {
         $pages->applyLimit($criteria);
 
         return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+    }
+    public function detailRecord($id){
+        $command = Yii::app()->db->createCommand('SELECT customer_id, customer_name, pic_full, address, website, bussiness_id, bussiness_name FROM ' . $this->tableName() . ', dos_bussiness WHERE ' . $this->tableName() . '.dos_bussiness_bussiness_id = dos_bussiness.bussiness_id AND tag=:tag AND enable=1');
+        $command->bindParam(':tag', $id, PDO::PARAM_STR);
+        return $command->queryRow();
     }
 }

@@ -17,8 +17,10 @@ class CustomersController extends HomeController {
     }
 
 	public function actionView($id) {
+        $business_class = new Bussiness();
         $model_class = new Customers();
-		//$this->render('view', array('model_menu' => $model_class->listMenu(), 'item' => $model_class->detailRecord($id)));
+
+        $this->render('view', array('listBusiness' => $business_class->listCats(), 'item' => $model_class->detailRecord($id)));
 	}
 
 }
