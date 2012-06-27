@@ -109,6 +109,10 @@ a:hover{color:#000;}
 .customers li:hover .title-tomers a{color:#0076BC}
 .title-tomers a{color:#000;display:block} .title-tomers a:hover{color:#0076BC}
 
+.customer-img-info{text-align:center} 
+.customer-img-info h2{font-size:10pt;margin:15px 0 7px 0}
+
+
 /** form great page template **/
 .great-top{background:url(../images/top-bg-great.png) no-repeat; height:15px}
 .great-btom{background:url(../images/btom-bg-great.png) no-repeat; height:15px}
