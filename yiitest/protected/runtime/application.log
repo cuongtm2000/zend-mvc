@@ -262,3 +262,40 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2012/06/27 05:14:57 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dos.dos_customers' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `dos_customers`.
+in D:\svn\protected\controllers\CustomersController.php (7)
+in D:\svn\index.php (16)
+2012/06/27 05:14:57 [error] [exception.CDbException] exception 'CDbException' with message 'Bảng "dos_customers" dùng cho lớp active record "Customers" không có trong database.' in C:\xampp\php\library\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Customers))
+#1 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(394): CActiveRecord::model('Customers')
+#2 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 D:\svn\protected\controllers\CustomersController.php(7): CActiveRecord->__construct()
+#4 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): CustomersController->actionIndex()
+#5 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\php\library\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('index')
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('customers/index')
+#10 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\svn\index.php(16): CApplication->run()
+#12 {main}
+REQUEST_URI=/khach-hang
+HTTP_REFERER=http://dos.vn/
+---
+2012/06/27 05:14:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/06/27 04:42:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
