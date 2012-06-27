@@ -19,4 +19,4 @@
 	</ul><div class="clear"></div>
     <?php $this->widget('CLinkPager', array('pages' => $items['pages'], 'header'=>'', 'lastPageLabel'=>'last', 'nextPageLabel'=>'next', 'firstPageLabel'=>'first', 'prevPageLabel'=>'prev', 'htmlOptions'=>array('class'=>'paging', 'style' => 'float:left')))?>
 </div>
-<?php echo $this->renderPartial('menu', array('listBusiness' => $listBusiness)) ?>
+<?php echo $this->renderPartial('menu') ?>
