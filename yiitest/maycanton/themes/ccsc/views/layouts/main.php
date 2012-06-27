@@ -47,7 +47,7 @@ jQuery(document).ready(function(){
 <body>
 <div id="wrapper">
 	<div id="header">
-        <?php $flash = ($this->module->id == 'video' || $this->module->id == 'contact' || $this->module->id == 'customers') ? $this->module->id : 'home'?>
+        <?php $flash = ($this->module->id == 'video' || $this->module->id == 'contact' || $this->module->id == 'forms' || $this->module->id == 'catalogue' || $this->module->id == 'customers') ? $this->module->id : 'home'?>
 		<script type="text/javascript">embedFlashObj('<?php echo Yii::app()->theme->baseUrl; ?>/flash/<?php echo $flash?>.swf',980,134);</script>
 		<div class="lang">
 			<?php if(count($this->numLang) > 1):?>

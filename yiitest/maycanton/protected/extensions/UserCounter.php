@@ -124,7 +124,7 @@ class UserCounter extends CComponent {
 		}
 		else{
 			$output['max_count'] = $data['max_count'];
-			$output['max_time'] = $data['max_time'];
+			//$output['max_time'] = $data['max_time'];
 		}
 
 		$this->user_total = $output['counter'];
@@ -132,7 +132,7 @@ class UserCounter extends CComponent {
 		$this->user_today = $output['today'];
 		$this->user_yesterday = $output['yesterday'];
 		$this->user_max_count = $output['max_count'];
-		$this->user_time = $output['max_time'];
+		//$this->user_time = $output['max_time'];
 	}
 
 	public function getTotal() {
