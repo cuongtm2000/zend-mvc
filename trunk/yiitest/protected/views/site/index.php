@@ -5,7 +5,8 @@
         <form action="<?php echo Yii::t('main', 'msgButton')?>" class="select-title" method="post">
             <p class="list-title">
                 <select name="bussiness" size="1" class="frame-list">
-                    <?php foreach($listBusiness as $value):?>
+                    <option value="root">-- Vui lòng chọn ngành nghề --</option>
+                    <?php foreach($this->businessLists as $value):?>
                     <option value="<?php echo $value['bussiness_id']?>"><?php echo $value['bussiness_name']?></option>
                     <?php endforeach?>
                 </select>

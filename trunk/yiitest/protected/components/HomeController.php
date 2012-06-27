@@ -14,6 +14,7 @@ class HomeController extends CController {
 
     public $aboutLists = array();
     public $servicesLists = array();
+    public $businessLists = array();
 
     public function init() {
         Common::setLanguage(); //setting language
@@ -31,6 +32,8 @@ class HomeController extends CController {
 
         Yii::app()->getModule('services');
         $this->servicesLists = Services::model()->listMenuByDos();
+
+        $this->businessLists = Bussiness::model()->listCats();
     }
 
 }
