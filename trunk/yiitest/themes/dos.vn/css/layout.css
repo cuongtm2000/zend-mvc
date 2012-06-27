@@ -97,8 +97,17 @@ a:hover{color:#000;}
 /*Left content*/
 #leftcontent{float:left; width:679px}
 #leftcontent p{margin:0 0 10px 0}
-#leftcontent ul li, #leftcontent ol li{margin: 0 0 0 40px}
+#leftcontent ul li, #leftcontent ol li{margin: 0 0 5px 40px}
 #leftcontent ul ,#leftcontent ol{margin: 0 0 12px 0}
+
+/** customers khach hang **/
+#leftcontent .customers{list-style:none}
+#leftcontent .customers li{margin:0 40px 20px 0;text-align:center;width:184px;display:inline-block;vertical-align:top}
+.customers-img{margin:0 0 5px 0;padding:0 0 5px 0;background:url(../images/web_shadow.png) no-repeat 0 bottom}
+.customers-img img{border:1px solid #e1e1e1}
+.customers .customers-img:hover{opacity:0.7}
+.customers li:hover .title-tomers a{color:#0076BC}
+.title-tomers a{color:#000;display:block} .title-tomers a:hover{color:#0076BC}
 
 /** form great page template **/
 .great-top{background:url(../images/top-bg-great.png) no-repeat; height:15px}
@@ -253,7 +262,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 #list-template li img{border: 1px solid #ccc; cursor: pointer}
 #list-template p{font-size:10pt;margin:10px 0 15px 0}
 #list-template p  a{color:#000;}
-#list-template p  a:hover{color:#ccc}
+#list-template p  a:hover{color:#666}
 .title-template{color:#208FFF;font-size:11pt;margin:0 0 5px 0}
 
 /** Kiem tra tien mien **/
