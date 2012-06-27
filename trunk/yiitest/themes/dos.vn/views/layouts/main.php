@@ -55,7 +55,7 @@
     <div id="header">
     	<div id="logo"><a href="<?php echo Yii::app()->request->baseUrl.'/'.Yii::app()->session['lang']?>" title="Home page"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a></div>
         <ul id="nav">
-            <li><a<?php echo (Yii::app()->controller->id == 'site' && ($this->action->id == 'index')) ? ' class="select"' : ''?> href="<?php echo Yii::app()->request->baseUrl.'/'.Yii::app()->session['lang']?>" title="<?php echo Yii::t('main', 'home')?>"><span><?php echo Yii::t('main', 'home')?></span></a></li>
+            <li class="home-page"><a<?php echo (Yii::app()->controller->id == 'site' && ($this->action->id == 'index')) ? '' : ''?> href="<?php echo Yii::app()->request->baseUrl.'/'.Yii::app()->session['lang']?>" title="<?php echo Yii::t('main', 'home')?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/home.png" alt="home page" /></a></li>
             <li><a<?php echo (Yii::app()->controller->id == 'templates') ? ' class="select"' : ''?> href="<?php echo LANGURL.'/'.Yii::t('main', 'templates.link')?>" title="<?php echo Yii::t('main', 'templates.name')?>"><span><?php echo Yii::t('main', 'templates.name')?></span></a>
                 <ul>
                     <?php foreach($this->businessLists as $value):?>
