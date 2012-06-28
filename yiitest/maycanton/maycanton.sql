@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 26, 2012 at 09:47 AM
+-- Generation Time: Jun 28, 2012 at 03:23 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -236,8 +236,6 @@ CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
 --
 
 INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, `loadfiles`, `typefile`) VALUES
-('ccsc', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
-('ccsc', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
 ('ccsc', 'video', 'prettyPhoto.css', 'css'),
 ('ccsc', 'video', 'jquery.prettyPhoto.js', 'javascript');
 
@@ -338,8 +336,8 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(173, 'Giới thiệu công ty', '', '<p>Giới thiệu công ty Giới thiệu công ty</p>', '', 16, '2012-06-24 05:07:08', 2, 0, NULL, NULL, 'gioi-thieu-cong-ty', '', 'Giới thiệu công ty', '', 1, 'ccsc'),
-(174, 'Giới thiệu sơ lược', '', '<p>Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.</p>', '', 112, '2012-06-24 05:07:51', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', 'Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.', '', 1, 'ccsc');
+(173, 'Giới thiệu công ty', 'About the company', '<p><img style="float:left;margin-right:10px;border:3px solid #666666;" src="/public/userfiles/image/ccsc/image/hgt.jpg" alt="" width="350" height="224" /><strong>Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.</strong></p>\r\n<p>Các Sản Phẩm đã được đưa vào hoạt động:<br />- Máy cán tôn sóng vuông, sóng tròn, sóng giả ngói các loại<br />- Máy cán vòm, Máy dập vòm, Chấn máng xối<br />- Máy cán cửa sắt, cửa cuốn các loại.<br />- Máy cán xà gồ C, Z.<br />-Thiết kế, gia công các thiết bị cho ngành mạ tôn kẽm, tôn màu.<br />-Thiết kế và lắp đặt các hệ thống điều khiển dùng PLC, trạm thủy lực ... trong công nghiệp.</p>\r\n<p>Với chiến lược luôn đổi mới để phát triển, Công ty Cơ khí Công Nghiệp Sài Gòn không ngừng thay đổi công nghệ, nâng cao chất lượng sản phẩm đạt tiêu chuẩn chất lượng và thẩm mỹ cao , mang lại lợi ích thiết thực nhất cho khách hàng.</p>\r\n<p>Địa chỉ : Lô 12A Đường Số 9 KCN Tân Tạo Tphcm<br />Điện thoại : 08.54257575 - Fax : 08.54258989<br />Email : ccsc_co@yahoo.com.vn</p>', '<p><strong><img style="border:3px solid #666666;margin-right:10px;float:left;" src="/public/userfiles/image/ccsc/image/hgt.jpg" alt="" width="350" height="224" />Company SAIGON INDUSTRIAL ENGINEERING (CCSC) is one of the enterprises specializing in design, mechanical engineering and industrial manufacturing for the steel industry in Vietnam.</strong></p>\r\n<p>Products have been put into operation:<br />- The roll religion square wave, sine shape, wave fake tiles of all kinds<br />- The roll dome, dome stamping machine, gutter Chan<br />- Machine rolling steel doors, rolling doors of all kinds.<br />- C Purlin Machine, Z<br />-Design, processing equipment for the religious zinc plated, color religion.<br />-Design and installation of PLC control systems, hydraulic station ... in industry.</p>\r\n<p>With innovative strategies for development, Industrial Engineering Company Saigon constantly changing technology, improve product quality standards and aesthetic quality, delivering real benefits for customers row.</p>\r\n<p>Address: Lot 12A Street Tan Tao Industrial Park No. 9 Tphcm<br />Telephone: 08.54257575 - Fax: 08.54258989<br />Email: ccsc_co@yahoo.com.vn</p>', 23, '2012-06-24 05:07:08', 2, 0, NULL, NULL, 'gioi-thieu-cong-ty', 'about-the-company', 'Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.', 'Company SAIGON INDUSTRIAL ENGINEERING (CCSC) is one of the enterprises specializing in design, mechanical engineering and industrial manufacturing for the steel industry in Vietnam.', 1, 'ccsc'),
+(174, 'Giới thiệu sơ lược', 'Introduction', '<p><strong>Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC)</strong> là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.</p>', '<p><strong>Company SAIGON INDUSTRIAL ENGINEERING (CCSC)</strong> is one of the enterprises specializing in design, mechanical engineering and industrial manufacturing for the steel industry in Vietnam.</p>', 145, '2012-06-24 05:07:51', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'introduction', 'Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.', 'Company SAIGON INDUSTRIAL ENGINEERING (CCSC) is one of the enterprises specializing in design, mechanical engineering and industrial manufacturing for the steel industry in Vietnam.', 1, 'ccsc');
 
 -- --------------------------------------------------------
 
@@ -392,14 +390,17 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=768 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=771 ;
 
 --
 -- Dumping data for table `dos_module_banners`
 --
 
 INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_url`, `banner_link`, `banner_order`, `banner_type`, `position`, `enable`, `dos_usernames_username`) VALUES
-(767, '2012-06-24 04:17:24', 'Banner', 'banner.png', '', 1, 'banners', 'default', 1, 'ccsc');
+(767, '2012-06-24 04:17:24', 'Banner', 'banner.png', '', 1, 'banners', 'default', 1, 'ccsc'),
+(768, '2012-06-28 00:10:21', 'Banner2', 'banner2.png', '', 2, 'banners', 'default', 1, 'ccsc'),
+(769, '2012-06-28 00:25:28', 'banner3', 'banner3.jpg', '', 3, 'banners', 'default', 1, 'ccsc'),
+(770, '2012-06-28 00:25:40', 'banner4', 'banner4.png', '', 4, 'banners', 'default', 1, 'ccsc');
 
 -- --------------------------------------------------------
 
@@ -575,14 +576,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 --
 
 INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
-('Trang chủ', '', 'default', '', 1, NULL, NULL, NULL, NULL, 'ccsc'),
+('Trang chủ', 'Home page', 'default', '', 1, NULL, NULL, NULL, NULL, 'ccsc'),
 ('Giới thiệu', 'About us', 'about', '', 2, NULL, NULL, NULL, NULL, 'ccsc'),
-('Sản phẩm', '', 'products', '', 3, NULL, NULL, NULL, NULL, 'ccsc'),
-('Biến dạng', '', 'forms', '', 4, NULL, NULL, NULL, NULL, 'ccsc'),
+('Sản phẩm', 'Products', 'products', '', 3, NULL, NULL, NULL, NULL, 'ccsc'),
+('Biến dạng', 'Forms', 'forms', '', 4, NULL, NULL, NULL, NULL, 'ccsc'),
 ('Catalogue', 'Catalogue', 'catalogue', '', 5, NULL, NULL, NULL, NULL, 'ccsc'),
 ('Khách hàng', 'Customers', 'customers', '', 6, NULL, NULL, NULL, NULL, 'ccsc'),
-('Video', '', 'video', '', 7, NULL, NULL, NULL, NULL, 'ccsc'),
-('Liên hệ', '', 'contact', '', 8, NULL, NULL, NULL, NULL, 'ccsc');
+('Video', 'Video', 'video', '', 7, NULL, NULL, NULL, NULL, 'ccsc'),
+('Liên hệ', 'Contact', 'contact', '', 8, NULL, NULL, NULL, NULL, 'ccsc');
 
 -- --------------------------------------------------------
 
@@ -658,9 +659,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456105),
-('max_count', 1),
-('counter', 1),
+('day_time', 2456107),
+('max_count', 2),
+('counter', 3),
 ('yesterday', 0);
 
 -- --------------------------------------------------------
@@ -679,8 +680,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1340696488),
-('''::1''', 1340683735);
+('''127.0.0.1''', 1340845387);
 
 -- --------------------------------------------------------
 
@@ -717,16 +717,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `dos_module_products`
 --
 
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(1, 'MÁY CÁN TOLE GIẢ NGÓI', '', '2012-06-25 02:06:10', 'test-thumb.jpg', 'test.jpg', NULL, '<p>sadadsd</p>', '', '<p><strong>Độ dày nguyên liệu :</strong> 0,2 ~ 0,8<br /><strong>Tốc độ cán :</strong> 6 ~ 12m/min<br /><strong>Đường kính trục cán :</strong> DIA 70mm<br /><strong>Số cặp trục :</strong> Up/Down 20 ~ 23<br /><strong>Công suất điện :</strong> 15 ~ 20 HP<br /><strong>Dài * Rộng* Cao :</strong> 10m*1,8m *1,8 m<br /><strong>Khối lượng :</strong> 8000 ~ 11000 kg</p>', '', 'may-can-tole-gia-ngoi', '', 'MÁY CÁN TOLE GIẢ NGÓI', '', 0, 1, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 586),
 (2, 'Máy cán tôn 2 tầng', '', '2012-06-26 07:33:10', 'may-can-ton-2-tang-thumb.jpg', 'may-can-ton-2-tang.jpg', NULL, '', '', '<p>Đang cập nhật</p>', '', 'may-can-ton-2-tang', '', '', '', 0, 2, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 586),
-(3, 'MÁY CÁN TÔN 1 TẦNG', '', '2012-06-26 07:39:53', 'my-cn-tn-1-tng-thumb.png', 'my-cn-tn-1-tng.png', NULL, '', '', '<p><strong>Độ dày nguyên liệu : 0,16 ~ 0,8</strong><br /><strong>Tốc độ cán : 15 ~ 20m/min</strong><br /><strong>Đường kính trục cán : DIA 70mm</strong><br /><strong>Số cặp trục : Up/Down 20 ~ 26</strong><br /><strong>Công suất điện : 7,5 ~ 10 HP</strong><br /><strong>Dài * Rộng * Cao : 12 * 1,6 * 1,05</strong><br /><strong>Khối lượng : 8000 ~ 11000 kg</strong></p>', '', 'may-can-ton-1-tang', '', '', '', 0, 3, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 586);
+(4, 'Máy Dập Vòm 5 Sóng', '5 Wave Machine Arch', '2012-06-28 00:12:04', 'may-dap-vom-5-song-thumb.jpg', 'may-dap-vom-5-song.jpg', NULL, '', '<p>đang cập nhật</p>', '<p>đang cập nhật</p>', '', 'may-dap-vom-5-song', '5-wave-machine-arch', '', '', 0, 4, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 582),
+(5, 'Máy Dập Vòm 2 Tầng', 'Arch 2nd Floor Machine', '2012-06-28 00:42:45', 'may-dap-vom-2-tang-thumb.jpg', 'may-dap-vom-2-tang.jpg', NULL, '', '', '<p><strong>MÃ SỐ : CCSC</strong></p>', '', 'may-dap-vom-2-tang', 'arch-2nd-floor-machine', 'Máy Dập Vòm 2 Tầng', 'Arch 2nd Floor Machine', 0, 5, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 582);
 
 -- --------------------------------------------------------
 
@@ -754,19 +754,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=587 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=588 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
 --
 
 INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(581, 0, 'Máy cán tôn', '', NULL, NULL, 'may-can-ton', '', '', '', '', NULL, 1, NULL, NULL, 1, 'ccsc'),
-(582, 0, 'Máy dập tôn', '', NULL, NULL, 'may-dap-ton', '', '', '', '', NULL, 2, NULL, NULL, 1, 'ccsc'),
-(583, 582, 'Tops', '', NULL, NULL, 'tops', '', '', '', '', NULL, 3, NULL, NULL, 1, 'ccsc'),
-(584, 582, 'Skirts', '', NULL, NULL, 'skirts', '', '', '', '', NULL, 4, NULL, NULL, 1, 'ccsc'),
-(585, 582, 'Jackets', '', NULL, NULL, 'jackets', '', '', '', '', NULL, 5, NULL, NULL, 1, 'ccsc'),
-(586, 0, 'Máy cán tôn dập vòm', '', NULL, NULL, 'may-can-ton-dap-vom', '', '', '', '', NULL, 6, NULL, NULL, 1, 'ccsc');
+(581, 0, 'Máy cán tôn', 'Roof Forming Machinine', NULL, NULL, 'may-can-ton', 'roof-forming-machinine', 'Máy cán tôn', 'Roof Forming Machinine', 'may-can-ton.png', NULL, 6, NULL, NULL, 1, 'ccsc'),
+(582, 0, 'MÁY DẬP VÒM', 'Hydraulic Crimp Arch Machine', NULL, NULL, 'may-dap-vom', 'hydraulic-crimp-arch-machine', 'MÁY DẬP VÒM', 'Hydraulic Crimp Arch Machine', 'my-dp-vm.jpg', NULL, 2, NULL, NULL, 1, 'ccsc'),
+(586, 0, 'Máy cán tôn dập vòm', 'Single Layer Roofing - Arch', NULL, NULL, 'may-can-ton-dap-vom', 'single-layer-roofing-arch', 'Máy cán tôn dập vòm', 'Single Layer Roofing - Arch', 'may-can-ton-dap-vom.jpg', NULL, 1, NULL, NULL, 1, 'ccsc');
 
 -- --------------------------------------------------------
 
@@ -913,6 +910,13 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   KEY `fk_dos_module_webs_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dos_module_webs`
+--
+
+INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
+('analytics', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-32981961-1'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>', 'ccsc');
 
 -- --------------------------------------------------------
 
