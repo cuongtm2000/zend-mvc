@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 28, 2012 at 03:23 AM
+-- Generation Time: Jun 28, 2012 at 09:09 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -236,6 +236,7 @@ CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
 --
 
 INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, `loadfiles`, `typefile`) VALUES
+('ccsc', 'products', 'jquery.easing.1.3.js|jquery-galleryview-1.1/jquery.galleryview-1.1.js|jquery-galleryview-1.1/jquery.timers-1.1.2.js|galleryview-config.js', 'javascript'),
 ('ccsc', 'video', 'prettyPhoto.css', 'css'),
 ('ccsc', 'video', 'jquery.prettyPhoto.js', 'javascript');
 
@@ -337,7 +338,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
 (173, 'Giới thiệu công ty', 'About the company', '<p><img style="float:left;margin-right:10px;border:3px solid #666666;" src="/public/userfiles/image/ccsc/image/hgt.jpg" alt="" width="350" height="224" /><strong>Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.</strong></p>\r\n<p>Các Sản Phẩm đã được đưa vào hoạt động:<br />- Máy cán tôn sóng vuông, sóng tròn, sóng giả ngói các loại<br />- Máy cán vòm, Máy dập vòm, Chấn máng xối<br />- Máy cán cửa sắt, cửa cuốn các loại.<br />- Máy cán xà gồ C, Z.<br />-Thiết kế, gia công các thiết bị cho ngành mạ tôn kẽm, tôn màu.<br />-Thiết kế và lắp đặt các hệ thống điều khiển dùng PLC, trạm thủy lực ... trong công nghiệp.</p>\r\n<p>Với chiến lược luôn đổi mới để phát triển, Công ty Cơ khí Công Nghiệp Sài Gòn không ngừng thay đổi công nghệ, nâng cao chất lượng sản phẩm đạt tiêu chuẩn chất lượng và thẩm mỹ cao , mang lại lợi ích thiết thực nhất cho khách hàng.</p>\r\n<p>Địa chỉ : Lô 12A Đường Số 9 KCN Tân Tạo Tphcm<br />Điện thoại : 08.54257575 - Fax : 08.54258989<br />Email : ccsc_co@yahoo.com.vn</p>', '<p><strong><img style="border:3px solid #666666;margin-right:10px;float:left;" src="/public/userfiles/image/ccsc/image/hgt.jpg" alt="" width="350" height="224" />Company SAIGON INDUSTRIAL ENGINEERING (CCSC) is one of the enterprises specializing in design, mechanical engineering and industrial manufacturing for the steel industry in Vietnam.</strong></p>\r\n<p>Products have been put into operation:<br />- The roll religion square wave, sine shape, wave fake tiles of all kinds<br />- The roll dome, dome stamping machine, gutter Chan<br />- Machine rolling steel doors, rolling doors of all kinds.<br />- C Purlin Machine, Z<br />-Design, processing equipment for the religious zinc plated, color religion.<br />-Design and installation of PLC control systems, hydraulic station ... in industry.</p>\r\n<p>With innovative strategies for development, Industrial Engineering Company Saigon constantly changing technology, improve product quality standards and aesthetic quality, delivering real benefits for customers row.</p>\r\n<p>Address: Lot 12A Street Tan Tao Industrial Park No. 9 Tphcm<br />Telephone: 08.54257575 - Fax: 08.54258989<br />Email: ccsc_co@yahoo.com.vn</p>', 23, '2012-06-24 05:07:08', 2, 0, NULL, NULL, 'gioi-thieu-cong-ty', 'about-the-company', 'Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.', 'Company SAIGON INDUSTRIAL ENGINEERING (CCSC) is one of the enterprises specializing in design, mechanical engineering and industrial manufacturing for the steel industry in Vietnam.', 1, 'ccsc'),
-(174, 'Giới thiệu sơ lược', 'Introduction', '<p><strong>Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC)</strong> là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.</p>', '<p><strong>Company SAIGON INDUSTRIAL ENGINEERING (CCSC)</strong> is one of the enterprises specializing in design, mechanical engineering and industrial manufacturing for the steel industry in Vietnam.</p>', 145, '2012-06-24 05:07:51', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'introduction', 'Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.', 'Company SAIGON INDUSTRIAL ENGINEERING (CCSC) is one of the enterprises specializing in design, mechanical engineering and industrial manufacturing for the steel industry in Vietnam.', 1, 'ccsc');
+(174, 'Giới thiệu sơ lược', 'Introduction', '<p><strong>Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC)</strong> là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.</p>', '<p><strong>Company SAIGON INDUSTRIAL ENGINEERING (CCSC)</strong> is one of the enterprises specializing in design, mechanical engineering and industrial manufacturing for the steel industry in Vietnam.</p>', 149, '2012-06-24 05:07:51', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', 'introduction', 'Công ty CƠ KHÍ CÔNG NGHIỆP SÀI GÒN (CCSC) là một trong những doanh nghiệp chuyên thiết kế, ngành cơ khí chế tạo máy công nghiệp phục vụ cho ngành thép tại Việt Nam.', 'Company SAIGON INDUSTRIAL ENGINEERING (CCSC) is one of the enterprises specializing in design, mechanical engineering and industrial manufacturing for the steel industry in Vietnam.', 1, 'ccsc');
 
 -- --------------------------------------------------------
 
@@ -680,7 +681,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1340845387);
+('''127.0.0.1''', 1340867317);
 
 -- --------------------------------------------------------
 
@@ -717,16 +718,20 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `dos_module_products`
 --
 
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(2, 'Máy cán tôn 2 tầng', '', '2012-06-26 07:33:10', 'may-can-ton-2-tang-thumb.jpg', 'may-can-ton-2-tang.jpg', NULL, '', '', '<p>Đang cập nhật</p>', '', 'may-can-ton-2-tang', '', '', '', 0, 2, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 586),
+(2, 'MÁY CÁN TÔN 2 TẦNG 6 SÓNG - 25 SÓNG', '', '2012-06-26 07:33:10', 'may-can-ton-2-tang-thumb.jpg', 'may-can-ton-2-tang.jpg', NULL, '', '', '<p>Đang cập nhật</p>', '', 'may-can-ton-2-tang-6-song-25-song', '', '', '', 0, 2, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 581),
 (4, 'Máy Dập Vòm 5 Sóng', '5 Wave Machine Arch', '2012-06-28 00:12:04', 'may-dap-vom-5-song-thumb.jpg', 'may-dap-vom-5-song.jpg', NULL, '', '<p>đang cập nhật</p>', '<p>đang cập nhật</p>', '', 'may-dap-vom-5-song', '5-wave-machine-arch', '', '', 0, 4, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 582),
-(5, 'Máy Dập Vòm 2 Tầng', 'Arch 2nd Floor Machine', '2012-06-28 00:42:45', 'may-dap-vom-2-tang-thumb.jpg', 'may-dap-vom-2-tang.jpg', NULL, '', '', '<p><strong>MÃ SỐ : CCSC</strong></p>', '', 'may-dap-vom-2-tang', 'arch-2nd-floor-machine', 'Máy Dập Vòm 2 Tầng', 'Arch 2nd Floor Machine', 0, 5, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 582);
+(5, 'Máy Dập Vòm 2 Tầng', 'Arch 2nd Floor Machine', '2012-06-28 00:42:45', 'may-dap-vom-2-tang-thumb.jpg', 'may-dap-vom-2-tang.jpg', NULL, '', '', '<p><strong>MÃ SỐ : CCSC</strong></p>', '', 'may-dap-vom-2-tang', 'arch-2nd-floor-machine', 'Máy Dập Vòm 2 Tầng', 'Arch 2nd Floor Machine', 0, 5, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 582),
+(6, 'Máy cán tôn 2 tầng', '', '2012-06-28 06:30:50', 'may-can-ton-2-tang-thumb.png', 'may-can-ton-2-tang.png', NULL, '', '', '<p>đang cập nhật</p>', '', 'may-can-ton-2-tang', '', '', '', 0, 6, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 581),
+(7, 'MÁY CÁN TOLE DẬP VÒM', '', '2012-06-28 06:32:41', 'my-cn-tole-dp-vm-thumb.jpg', 'my-cn-tole-dp-vm.png', NULL, '', '', '<p>cập nhật</p>', '', 'may-can-tole-dap-vom', '', '', '', 0, 7, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 581),
+(8, 'MÁY CÁN TOLE GIẢ NGÓI', '', '2012-06-28 06:33:34', 'my-cn-tole-gi-ngi-thumb.jpg', 'my-cn-tole-gi-ngi.png', NULL, '', '', '<p>Độ dày nguyên liệu : 0,2 ~ 0,8<br />Tốc độ cán : 6 ~ 12m/min<br />Đường kính trục cán : DIA 70mm<br />Số cặp trục : Up/Down 20 ~ 23<br />Công suất điện : 15 ~ 20 HP<br />Dài * Rộng* Cao : 10m*1,8m *1,8 m<br />Khối lượng : 8000 ~ 11000 kg</p>', '', 'may-can-tole-gia-ngoi', '', '', '', 0, 8, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 581),
+(9, 'MÁY CÁN TÔN KLIP-LOCK', '', '2012-06-28 06:36:16', 'my-cn-tn-klip-lock-thumb.jpg', 'my-cn-tn-klip-lock.png', NULL, '', '', '<p>Độ dày nguyên liệu : 0,2 ~ 0,8<br />Tốc độ cán : 15 ~ 20m/min<br />Đường kính trục cán : DIA 70~80mm<br />Số cặp trục : Up/Down 23 ~ 28<br />Công suất điện : 10 ~ 15 HP<br />Dài * Rộng* Cao : 15m*1,6m *1,15 m<br />Khối lượng :12000 ~ 15000 kg</p>', '', 'may-can-ton-klip-lock', '', '', '', 0, 9, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 581);
 
 -- --------------------------------------------------------
 
@@ -754,7 +759,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=588 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=587 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`

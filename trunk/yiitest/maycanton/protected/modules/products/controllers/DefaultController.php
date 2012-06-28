@@ -10,6 +10,7 @@ class DefaultController extends Controller {
     }
 
     public function actionCats($cid, $page = 0) {
+	
         $model = new ProductsCat();
         $items = new Products();
 
@@ -18,6 +19,7 @@ class DefaultController extends Controller {
     }
 
     public function actionView($id) {
+		
         $model = ucfirst($this->module->id);
         $model_class = new $model();
 
@@ -27,6 +29,7 @@ class DefaultController extends Controller {
     }
 
     public function actionOrder($id) {
+	
         $model = ucfirst($this->module->id);
         $model_class = new $model();
 
@@ -43,6 +46,7 @@ class DefaultController extends Controller {
     }
 
     public function actionCartitem() {
+	
         $model = ucfirst($this->module->id);
         $model_class = new $model();
 
@@ -60,6 +64,7 @@ class DefaultController extends Controller {
     }
 
     public function actionCartdelete($id) {
+	
         $cart = Yii::app()->session['cart'];
         unset($cart[$id]);
         Yii::app()->session['cart'] = $cart;
@@ -68,11 +73,13 @@ class DefaultController extends Controller {
 
     // delete all item in cart
     public function actionDelallcart() {
+		
         Yii::app()->session['cart'] = '';
         $this->redirect(Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', 'products.link') . '/' . Yii::t('user', 'products.cartitem.link'));
     }
 
     public function actionOrdering() {
+		
         $model = ucfirst($this->module->id);
         $model_class = new $model();
         $cartform = new CartForm();
