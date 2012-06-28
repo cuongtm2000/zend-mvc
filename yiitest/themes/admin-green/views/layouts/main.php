@@ -36,17 +36,17 @@
                             </li>
                             <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/agents">Đại lý</a>
                                 <ul>
-                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/agents">Danh sách đại lý</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/agents">Danh sách</a></li>
                                 </ul>
                             </li>
                             <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/usernames">Thành viên</a>
                                 <ul>
-                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/usernames">Danh sách thành viên</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/usernames">Danh sách</a></li>
                                 </ul>
                             </li>
                             <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/customers">Khách hàng</a>
                                 <ul>
-                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/customers">Danh sách khách hàng</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/customers">Danh sách</a></li>
                                 </ul>
                             </li>
                             <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/articles">Bài viết</a>
