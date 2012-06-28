@@ -188,7 +188,7 @@ a:hover{color:#000;}
 /*   Page New  */
 .masuring{text-align:justify;font-size:10pt;list-style:none}
 .masuring li{margin:0 0 15px 0 !important }
-.masuring p{line-height:1.4em}
+.masuring p{line-height:1.4em;font-size:10pt}
 .frame-img{float:left;margin:0 12px 5px 0}
 .title-masuring{margin:0 0 5px 0}
 .title-masuring a{color:#208FFF;font-size:11pt;display: block}
