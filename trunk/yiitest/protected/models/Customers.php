@@ -8,6 +8,8 @@
  * @property string $customer_name
  * @property string $pic_thumb
  * @property string $pic_full
+ * @property string $email
+ * @property string $phone
  * @property string $address
  * @property string $website
  * @property string $agent_sale
@@ -47,16 +49,18 @@ class Customers extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('customer_name, website, created_date, tag, dos_bussiness_bussiness_id', 'required'),
+            array('customer_name, email, phone, website, tag, dos_bussiness_bussiness_id', 'required'),
             array('enable', 'numerical', 'integerOnly' => true),
             array('customer_name', 'length', 'max' => 70),
             array('pic_thumb, pic_full, website, tag, dos_bussiness_bussiness_id', 'length', 'max' => 100),
-            array('address', 'length', 'max' => 45),
+            array('email, phone', 'length', 'max' => 45),
+            array('address', 'length', 'max' => 60),
             array('agent_sale, agent_tech', 'length', 'max' => 8),
+            array('email', 'email'),
             array('expired_date', 'safe'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('customer_id, customer_name, pic_thumb, pic_full, address, website, agent_sale, agent_tech, created_date, expired_date, tag, enable, dos_bussiness_bussiness_id', 'safe', 'on' => 'search'),
+            array('customer_id, customer_name, pic_thumb, pic_full, email, phone, address, website, agent_sale, agent_tech, created_date, expired_date, tag, enable, dos_bussiness_bussiness_id', 'safe', 'on' => 'search'),
         );
     }
 
@@ -80,6 +84,8 @@ class Customers extends CActiveRecord {
             'customer_name' => 'Customer Name',
             'pic_thumb' => 'Pic Thumb',
             'pic_full' => 'Pic Full',
+            'email' => 'Email',
+            'phone' => 'Phone',
             'address' => 'Address',
             'website' => 'Website',
             'agent_sale' => 'Agent Sale',
@@ -106,6 +112,8 @@ class Customers extends CActiveRecord {
         $criteria->compare('customer_name', $this->customer_name, true);
         $criteria->compare('pic_thumb', $this->pic_thumb, true);
         $criteria->compare('pic_full', $this->pic_full, true);
+        $criteria->compare('email', $this->email, true);
+        $criteria->compare('phone', $this->phone, true);
         $criteria->compare('address', $this->address, true);
         $criteria->compare('website', $this->website, true);
         $criteria->compare('agent_sale', $this->agent_sale, true);
@@ -250,15 +258,17 @@ class Customers extends CActiveRecord {
     }
 
     //Back end - Change info
-    public function changeInfo($customer_id, $customer_name, $address, $website, $expired_date, $dos_bussiness_bussiness_id){
-        $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET customer_name=:customer_name, address=:address, website=:website, expired_date=:expired_date, dos_bussiness_bussiness_id=:bussiness WHERE customer_id=:customer_id');
+    public function changeInfo($customer_id, $customer_name, $email, $phone, $address, $website, $expired_date, $dos_bussiness_bussiness_id){
+        $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET customer_name=:customer_name, email=:email, phone=:phone, address=:address, website=:website, expired_date=:expired_date, dos_bussiness_bussiness_id=:bussiness WHERE customer_id=:customer_id');
 
         $command->bindParam(":customer_name", $customer_name, PDO::PARAM_STR);
+        $command->bindParam(":email", $email, PDO::PARAM_STR);
+        $command->bindParam(":phone", $phone, PDO::PARAM_STR);
         $command->bindParam(":address", $address, PDO::PARAM_STR);
         $command->bindParam(":website", $website, PDO::PARAM_STR);
         $command->bindParam(":expired_date", $expired_date, PDO::PARAM_STR);
         $command->bindParam(":bussiness", $dos_bussiness_bussiness_id, PDO::PARAM_STR);
-        $command->bindParam(":customer_id", $customer_id, PDO::PARAM_STR);
+        $command->bindParam(":customer_id", $customer_id, PDO::PARAM_INT);
         $command->execute();
     }
 }

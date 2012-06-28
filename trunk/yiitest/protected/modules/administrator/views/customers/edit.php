@@ -7,6 +7,14 @@
         <?php echo $form->textField($model, 'customer_name', $htmlOptions=array('class'=>'txt-large-x')); ?>
     </p>
     <p class="clear">
+        <?php echo $form->labelEx($model, 'email') ?>
+        <?php echo $form->textField($model, 'email', $htmlOptions=array('class'=>'txt-large-x')); ?>
+    </p>
+    <p class="clear">
+        <?php echo $form->labelEx($model, 'phone') ?>
+        <?php echo $form->textField($model, 'phone', $htmlOptions=array('class'=>'txt-large-x')); ?>
+    </p>
+    <p class="clear">
         <?php echo $form->labelEx($model, 'address') ?>
         <?php echo $form->textField($model, 'address', $htmlOptions=array('class'=>'txt-large-x')); ?>
     </p>
