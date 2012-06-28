@@ -142,7 +142,7 @@
 				<div class="img-port"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-port.png" alt="img support" /></div>
 				<div class="ten-port">
                     <p><a href="ymsgr:sendim?groupitsoft&amp;m=Xin chào, tôi muốn hỏi về sản phẩm - dịch vụ của Dos.vn" title="Chat groupitsoft"><img src="http://opi.yahoo.com/online?u=groupitsoft&amp;m=g&amp;t=1&amp;l=us" alt="groupitsoft" /></a></p>
-                    <p>E: groupitsoft@gmail.com </p>
+                    <p>E: technical@dos.vn </p>
                     <p>T: 0942 001 001</p>
 				</div><div class="clear"></div>
 			</li>
