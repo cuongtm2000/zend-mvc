@@ -1,50 +1,49 @@
-<?php if(isset($this->function['about_home'])): ?>
-	<div class="frame-product-info">
-	<h2 class="title-fter-left"><span><?php echo $this->function['about_home']['title'.LANG] ?></span></h2>
-		<?php echo $this->function['about_home']['content'.LANG] ?>
-	</div> <!--End frame tent right-->
-<?php endif; ?>
-
-<?php if(isset($this->function['products_hot']) && $this->function['products_hot']):?>
-        
-        
-	<h3 class="title-right"><span><?php echo $this->lang['products'] . ' ' . strtolower($this->lang['hot']) ?></span></h3>
-	<ul class="all-product">
-		<?php foreach($this->function['products_hot'] as $value): ?>
-			<li class="product">
-				<?php if($value['pic_thumb']): ?>
-					<div class="product-img"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" /></a></div>
-				<?php else :?>
-					<div class="product-img"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt="<?php echo $value['title'.LANG] ?>" /></a></div>
-				<?php endif; ?>
-				<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG] ?>"><strong><?php echo $value['title'.LANG] ?></strong></a></h2>
-				<p class="price">Giá : <?php echo (is_numeric($value['unit'])) ? '<strong>'.number_format($value['unit'], 0, '', '.').'</strong>' . ' VND' : (($value['unit']) ? $value['unit'] : $this->lang['contact']) ?></p>
-				<p class="bton-pro"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $this->lang['detail']?>: <?php echo $value['title' . LANG] ?>" class="bton-detail"><?php echo $this->lang['detail']?></a> <a href="<?php echo Yii::app()->baseUrl . LANGURL?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo Yii::t('user', 'products.order.link')?>/<?php echo $value['tag'.LANG] ?>" title="<?php echo $this->lang['addcart']?>: <?php echo $value['title' . LANG] ?>" class="bton-order"><?php echo $this->lang['addcart']?></a> </p>
-			</li>
-		<?php endforeach; ?>
-	 </ul><!--End sam pham noi bat-->
-<div class="btom-main"></div>
-<?php endif;?>
-
 <?php if(isset($this->function['products_new']) && $this->function['products_new']):?>
-
-        <?php var_dump($this->function['products_new']) ?>
-        
-
-<h1 class="title-right"><span><?php echo $this->lang['products'] . ' ' . strtolower($this->lang['new']) ?></span></h1>
-		<ul class="all-product">
-			<?php foreach($this->function['products_new'] as $value): ?>
-				<li class="product">
-					<?php if($value['pic_thumb']): ?>
-						<div class="product-img"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" /></a></div>
-					<?php else :?>
-						<div class="product-img"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt="<?php echo $value['title'.LANG] ?>" /></a></div>
-					<?php endif; ?>
-					<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG] ?>"><strong><?php echo $value['title'.LANG] ?></strong></a></h2>
-					<p class="price">Giá : <?php echo (is_numeric($value['unit'])) ? '<strong>'.number_format($value['unit'], 0, '', '.').'</strong>' . ' VND' : (($value['unit']) ? $value['unit'] : '<strong>'.$this->lang['contact'].'</strong>') ?></p>
-					<p class="bton-pro"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $this->lang['detail']?>: <?php echo $value['title' . LANG] ?>" class="bton-detail"><?php echo $this->lang['detail']?></a> <a href="<?php echo Yii::app()->baseUrl . LANGURL?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo Yii::t('user', 'products.order.link')?>/<?php echo $value['tag'.LANG] ?>" title="<?php echo $this->lang['addcart']?>: <?php echo $value['title' . LANG] ?>" class="bton-order"><?php echo $this->lang['addcart']?></a> </p>
-				</li>
-			<?php endforeach; ?>
-		</ul> <!--End San pham moi-->
-<div class="btom-main"></div>
+    <div class="bg-footer-left">
+        <h2 class="title-fter-left">Mua bán nhà đất</h2>
+        <table class="table-product">
+            <tbody>
+                <?php foreach($this->function['products_new'] as $value): ?>
+                <tr>
+                    <td width="100">
+                        <div class="frame-img-pro">
+                            <a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG] ?>">
+                                <?php if($value['pic_thumb']):?>
+                                    <img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" />
+                                <?php else:?>
+                                    <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt="<?php echo $value['title'.LANG] ?>" />
+                                <?php endif;?>
+                            </a></div>
+                    </td>
+                    <td>
+                        <h2 class="title-sale"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h2>
+                        <table class="bder-none">
+                            <tr>
+                                <td width="110">
+                                    <p><span class="position">Vị trí:</span> Hẻm Nguyễn Tri Phương, Phường 5, Quận 5</p>
+                                </td>
+                                <td>
+                                    <p><label class="long">Dài</label>: 5m</p>
+                                    <p><label class="wide">Rộng</label>: 10m</p>
+                                    <p><label class="direction">Hướng</label>: Đông Nam</p>
+                                </td>
+                                <td>
+                                    <p class="price">Giá:<span> <?php echo (is_numeric($value['unit'])) ? '<strong>'.number_format($value['unit'], 0, '', '.').'</strong>' . ' VND' : (($value['unit']) ? $value['unit'] : $this->lang['contact']) ?></span></p>
+                                    <p>Hiện trạng: <span>Đang được sử dụng</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><p class="date-posted">Đăng ngày: <?php echo date('d-m-Y', strtotime($value['postdate']))?>, Xem: <?php echo $value['hits']?></p></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <h3 class="title-footer-right">Hội viên</h3>
+                        <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/hoivien.jpg" alt="Hoi vien" />
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table> <!--End footer left-->
+    </div> <!--End footer left content-->
 <?php endif; ?>

@@ -38,46 +38,6 @@
 		<div id="container_content_center">
 			<div class="container_content_center">
 					<?php echo $content; ?>
-					
-				<div class="clear"></div>
-				<div class="bg-footer-left">
-					<h2 class="title-fter-left">MUA BÁN NHÀ ĐẤT</h2>
-					<table class="table-product">
-						<tbody>
-							<tr>
-								<td width="100">	
-									<div class="frame-img-pro"><a href="product-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/home.jpg" alt="" /></a></div>
-								</td>
-								<td>
-									<h2 class="title-sale"><a href="product-info.html" title="">CẦN BÁN GẤP NHÀ HẺM NGUYỄN TRI PHƯƠNG</a></h2>
-									<table class="bder-none">
-										<tr>
-											<td width="110">
-												<p><span class="position">Vị trí:</span> Hẻm Nguyễn Tri Phương, Phường 5, Quận 5</p>
-											</td>
-											<td>		
-												<p><label class="long">Dài</label>: 5m</p>
-												<p><label class="wide">Rộng</label>: 10m</p>
-												<p><label class="direction">Hướng</label>: Đông Nam</p>
-											</td>
-											<td>
-												<p class="price">Giá:<span> 1 tỷ 500 triệu VND</span></p>
-												<p>Hiện trạng: <span>Đang được sử dụng</span></p>
-											</td>
-										</tr>
-										<tr>
-											<td colspan="3"><p class="date-posted">Đăng ngày: 20/02/2012 , Xem: 120</p></td>
-										</tr>
-									</table>
-								</td>
-								<td>
-									<h3 class="title-footer-right">Hội viên</h3>
-									<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/hoivien.jpg" alt="Hoi vien" />
-								</td>
-							</tr>	
-						</tbody>	
-					</table> <!--End footer left-->
-				</div> <!--End footer left content-->
 			</div> <!--End class container_content_center -->
 		</div>  <!--End ID container_content_center-->	
 		
