@@ -1,2096 +1,288 @@
-2012/06/16 21:01:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "phan-loai/cho-thue".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+2012/06/28 11:09:06 [error] [php] file_get_contents(http://dos.vn/read-rss) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.0 500 Zend_Feed_Exception
+ (C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\DefaultController.php:23)
 Stack trace:
-#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('phan-loai/cho-t...')
-#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\xampp\htdocs\share\index.php(16): CApplication->run()
+#0 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): DefaultController->runAction()
+#2 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): DefaultController->filterAccessControl()
+#5 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CWebApplication->run()
+REQUEST_URI=/nhaphodep.vn/admin/default/read
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\DefaultController.php (23)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/06/28 11:16:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/no-product.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
 #3 {main}
-REQUEST_URI=/share/phan-loai/cho-thue
-HTTP_REFERER=http://localhost/share/tin-tuc-su-kien/thi-truong-bat-dong-san/bat-dong-san-va-moi-quan-he-huu-co.html
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/no-product.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
 ---
-2012/06/16 21:05:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "phan-loai/cho-thue".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+2012/06/28 11:16:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-detail.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('phan-loai/cho-t...')
-#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\xampp\htdocs\share\index.php(16): CApplication->run()
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
 #3 {main}
-REQUEST_URI=/share/phan-loai/cho-thue
-HTTP_REFERER=http://localhost/share/tin-tuc-su-kien/thi-truong-bat-dong-san/bat-dong-san-va-moi-quan-he-huu-co.html
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-detail.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
 ---
-2012/06/16 21:05:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "phan-loai/cho-thue".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+2012/06/28 11:16:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-buy.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('phan-loai/cho-t...')
-#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\xampp\htdocs\share\index.php(16): CApplication->run()
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
 #3 {main}
-REQUEST_URI=/share/phan-loai/cho-thue
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-buy.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
 ---
-2012/06/16 21:07:52 [error] [exception.CException] exception 'CException' with message 'ProductsType and its behaviors do not have a method or closure named "findTypeByTag".' in E:\xampp\php\www\framework\base\CComponent.php:266
+2012/06/28 11:16:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-buy.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(226): CComponent->__call('findTypeByTag', Array)
-#1 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(23): CActiveRecord->__call('findTypeByTag', Array)
-#2 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(23): ProductsType->findTypeByTag('cho-thue')
-#3 [internal function]: DefaultController->actionTypes('cho-thue')
-#4 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
-#5 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
-#6 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#7 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#8 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#9 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('types')
-#10 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
-#11 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#12 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#13 {main}
-REQUEST_URI=/share/san-pham/t/cho-thue
----
-2012/06/16 21:08:48 [error] [exception.CException] exception 'CException' with message 'ProductsType and its behaviors do not have a method or closure named "findTypeByTag".' in E:\xampp\php\www\framework\base\CComponent.php:266
-Stack trace:
-#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(226): CComponent->__call('findTypeByTag', Array)
-#1 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(23): CActiveRecord->__call('findTypeByTag', Array)
-#2 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(23): ProductsType->findTypeByTag('cho-thue')
-#3 [internal function]: DefaultController->actionTypes('cho-thue')
-#4 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
-#5 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
-#6 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#7 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#8 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#9 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('types')
-#10 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
-#11 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#12 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#13 {main}
-REQUEST_URI=/share/san-pham/t/cho-thue
-HTTP_REFERER=http://localhost/share/san-pham/
----
-2012/06/17 14:38:31 [error] [exception.CException] exception 'CException' with message 'ProductsType and its behaviors do not have a method or closure named "findTypeByTag".' in E:\xampp\php\www\framework\base\CComponent.php:266
-Stack trace:
-#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(226): CComponent->__call('findTypeByTag', Array)
-#1 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(25): CActiveRecord->__call('findTypeByTag', Array)
-#2 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(25): ProductsType->findTypeByTag('cho-thue')
-#3 [internal function]: DefaultController->actionTypes('cho-thue')
-#4 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
-#5 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
-#6 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#7 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#8 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#9 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('types')
-#10 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
-#11 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#12 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#13 {main}
-REQUEST_URI=/share/san-pham/t/cho-thue
----
-2012/06/17 14:38:46 [error] [exception.CException] exception 'CException' with message 'ProductsType and its behaviors do not have a method or closure named "findTypeByTag".' in E:\xampp\php\www\framework\base\CComponent.php:266
-Stack trace:
-#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(226): CComponent->__call('findTypeByTag', Array)
-#1 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(25): CActiveRecord->__call('findTypeByTag', Array)
-#2 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(25): ProductsType->findTypeByTag('cho-thue')
-#3 [internal function]: DefaultController->actionTypes('cho-thue')
-#4 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
-#5 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
-#6 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#7 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#8 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#9 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('types')
-#10 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
-#11 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#12 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#13 {main}
-REQUEST_URI=/share/san-pham/t/cho-thue
-HTTP_REFERER=http://localhost/share/san-pham/
----
-2012/06/17 14:39:02 [error] [exception.CException] exception 'CException' with message 'ProductsType and its behaviors do not have a method or closure named "findTypeByTag".' in E:\xampp\php\www\framework\base\CComponent.php:266
-Stack trace:
-#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(226): CComponent->__call('findTypeByTag', Array)
-#1 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(25): CActiveRecord->__call('findTypeByTag', Array)
-#2 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(25): ProductsType->findTypeByTag('sang-nhuong')
-#3 [internal function]: DefaultController->actionTypes('sang-nhuong')
-#4 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
-#5 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
-#6 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#7 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#8 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#9 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('types')
-#10 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
-#11 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#12 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#13 {main}
-REQUEST_URI=/share/san-pham/t/sang-nhuong
-HTTP_REFERER=http://localhost/share/
----
-2012/06/18 00:46:20 [error] [php] file_get_contents(http://dos.vn/read-rss) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
- (E:\xampp\htdocs\share\protected\modules\admin\controllers\DefaultController.php:23)
-Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
-#1 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): DefaultController->runAction()
-#2 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#3 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
-#4 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): DefaultController->filterAccessControl()
-#5 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
-#6 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#7 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
-#8 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
-#9 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#10 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#11 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
-REQUEST_URI=/share/admin/default/read
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\DefaultController.php (23)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/18 00:49:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-tin".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
-Stack trace:
-#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('dang-tin')
-#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 E:\xampp\htdocs\share\index.php(16): CApplication->run()
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
 #3 {main}
-REQUEST_URI=/share/dang-tin
-HTTP_REFERER=http://localhost/share/index.php
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-buy.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
 ---
-2012/06/18 00:49:55 [error] [exception.CException] exception 'CException' with message 'ProductsType and its behaviors do not have a method or closure named "findTypeByTag".' in E:\xampp\php\www\framework\base\CComponent.php:266
+2012/06/28 11:16:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-detail.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(226): CComponent->__call('findTypeByTag', Array)
-#1 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(25): CActiveRecord->__call('findTypeByTag', Array)
-#2 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(25): ProductsType->findTypeByTag('cho-thue')
-#3 [internal function]: DefaultController->actionTypes('cho-thue')
-#4 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
-#5 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
-#6 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#7 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#8 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#9 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('types')
-#10 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
-#11 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#12 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#13 {main}
-REQUEST_URI=/share/san-pham/t/cho-thue
-HTTP_REFERER=http://localhost/share/
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-detail.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
 ---
-2012/06/18 00:54:27 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'description' in 'field list'. The SQL statement executed was: SELECT type_id, type_title, tag, description FROM dos_module_products_type WHERE tag=:tag.
-in E:\xampp\htdocs\share\protected\modules\products\models\ProductsType.php (94)
-in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (25)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/18 00:54:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'description' in 'field list'. The SQL statement executed was: SELECT type_id, type_title, tag, description FROM dos_module_products_type WHERE tag=:tag' in E:\xampp\php\www\framework\db\CDbCommand.php:528
+2012/06/28 11:16:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/no-product.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
-#1 E:\xampp\htdocs\share\protected\modules\products\models\ProductsType.php(94): CDbCommand->queryRow()
-#2 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(25): ProductsType->findTypeByTag('cho-thue')
-#3 [internal function]: DefaultController->actionTypes('cho-thue')
-#4 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
-#5 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
-#6 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#7 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#8 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#9 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('types')
-#10 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
-#11 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#12 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#13 {main}
-REQUEST_URI=/share/san-pham/t/cho-thue
-HTTP_REFERER=http://localhost/share/
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/no-product.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
 ---
-2012/06/18 00:55:07 [error] [php] Undefined index: cat_id (E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php:30)
+2012/06/28 11:19:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/no-product.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#1 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
-#2 E:\xampp\php\www\framework\web\CController.php(287): DefaultController->runAction()
-#3 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
-#4 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
-#5 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#6 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#7 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
-REQUEST_URI=/share/san-pham/t/cho-thue
-in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (30)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/18 00:57:13 [error] [exception.CException] exception 'CException' with message 'Products and its behaviors do not have a method or closure named "listItemByType".' in E:\xampp\php\www\framework\base\CComponent.php:266
-Stack trace:
-#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(226): CComponent->__call('listItemByType', Array)
-#1 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(31): CActiveRecord->__call('listItemByType', Array)
-#2 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(31): Products->listItemByType('2')
-#3 [internal function]: DefaultController->actionTypes('cho-thue')
-#4 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
-#5 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
-#6 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#7 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#8 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#9 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('types')
-#10 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('products/defaul...')
-#11 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#12 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#13 {main}
-REQUEST_URI=/share/san-pham/t/cho-thue
-HTTP_REFERER=http://localhost/share/
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/no-product.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/loai/cho-thue
 ---
-2012/06/18 00:59:54 [error] [php] Undefined index: cat_title (E:\xampp\htdocs\share\protected\modules\products\views\default\nhadat\cats.php:1)
+2012/06/28 11:19:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-detail.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(870): DefaultController->renderFile()
-#1 E:\xampp\php\www\framework\web\CController.php(783): DefaultController->renderPartial()
-#2 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(33): DefaultController->render()
-#3 unknown(0): DefaultController->actionTypes()
-#4 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
-#5 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#6 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
-#7 E:\xampp\php\www\framework\web\CController.php(287): DefaultController->runAction()
-#8 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
-#9 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
-#10 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#11 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#12 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
-REQUEST_URI=/share/san-pham/t/cho-thue
-in E:\xampp\htdocs\share\protected\modules\products\views\default\nhadat\cats.php (1)
-in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (33)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/18 01:01:17 [error] [php] Undefined index: cat_title (E:\xampp\htdocs\share\protected\modules\products\views\default\nhadat\types.php:1)
-Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(870): DefaultController->renderFile()
-#1 E:\xampp\php\www\framework\web\CController.php(783): DefaultController->renderPartial()
-#2 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(33): DefaultController->render()
-#3 unknown(0): DefaultController->actionTypes()
-#4 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
-#5 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#6 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
-#7 E:\xampp\php\www\framework\web\CController.php(287): DefaultController->runAction()
-#8 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
-#9 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
-#10 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#11 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#12 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
-REQUEST_URI=/share/san-pham/t/cho-thue
-in E:\xampp\htdocs\share\protected\modules\products\views\default\nhadat\types.php (1)
-in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (33)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/18 01:01:48 [error] [php] Undefined index: cat_title (E:\xampp\htdocs\share\protected\modules\products\views\default\nhadat\types.php:1)
-Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(870): DefaultController->renderFile()
-#1 E:\xampp\php\www\framework\web\CController.php(783): DefaultController->renderPartial()
-#2 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(33): DefaultController->render()
-#3 unknown(0): DefaultController->actionTypes()
-#4 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
-#5 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#6 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
-#7 E:\xampp\php\www\framework\web\CController.php(287): DefaultController->runAction()
-#8 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
-#9 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
-#10 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#11 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#12 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
-REQUEST_URI=/share/san-pham/t/cho-thue
-in E:\xampp\htdocs\share\protected\modules\products\views\default\nhadat\types.php (1)
-in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (33)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/18 01:02:43 [error] [php] Undefined index: tyoe_title (E:\xampp\htdocs\share\protected\modules\products\views\default\nhadat\types.php:2)
-Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(870): DefaultController->renderFile()
-#1 E:\xampp\php\www\framework\web\CController.php(783): DefaultController->renderPartial()
-#2 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(33): DefaultController->render()
-#3 unknown(0): DefaultController->actionTypes()
-#4 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
-#5 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#6 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
-#7 E:\xampp\php\www\framework\web\CController.php(287): DefaultController->runAction()
-#8 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
-#9 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
-#10 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#11 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#12 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
-REQUEST_URI=/share/san-pham/t/cho-thue
-in E:\xampp\htdocs\share\protected\modules\products\views\default\nhadat\types.php (2)
-in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (33)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/18 01:02:58 [error] [php] Undefined variable: list_sub_cats (E:\xampp\htdocs\share\protected\modules\products\views\default\nhadat\types.php:5)
-Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(870): DefaultController->renderFile()
-#1 E:\xampp\php\www\framework\web\CController.php(783): DefaultController->renderPartial()
-#2 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(33): DefaultController->render()
-#3 unknown(0): DefaultController->actionTypes()
-#4 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
-#5 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#6 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
-#7 E:\xampp\php\www\framework\web\CController.php(287): DefaultController->runAction()
-#8 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
-#9 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
-#10 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#11 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#12 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
-REQUEST_URI=/share/san-pham/t/cho-thue
-in E:\xampp\htdocs\share\protected\modules\products\views\default\nhadat\types.php (5)
-in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (33)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/18 01:02:59 [error] [php] Undefined variable: list_sub_cats (E:\xampp\htdocs\share\protected\modules\products\views\default\nhadat\types.php:5)
-Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(870): DefaultController->renderFile()
-#1 E:\xampp\php\www\framework\web\CController.php(783): DefaultController->renderPartial()
-#2 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(33): DefaultController->render()
-#3 unknown(0): DefaultController->actionTypes()
-#4 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
-#5 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#6 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
-#7 E:\xampp\php\www\framework\web\CController.php(287): DefaultController->runAction()
-#8 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
-#9 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
-#10 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#11 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#12 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
-REQUEST_URI=/share/san-pham/t/cho-thue
-in E:\xampp\htdocs\share\protected\modules\products\views\default\nhadat\types.php (5)
-in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (33)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/18 01:03:49 [error] [php] Undefined variable: list_sub_cats (E:\xampp\htdocs\share\protected\modules\products\views\default\nhadat\types.php:5)
-Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(870): DefaultController->renderFile()
-#1 E:\xampp\php\www\framework\web\CController.php(783): DefaultController->renderPartial()
-#2 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(33): DefaultController->render()
-#3 unknown(0): DefaultController->actionTypes()
-#4 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
-#5 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#6 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
-#7 E:\xampp\php\www\framework\web\CController.php(287): DefaultController->runAction()
-#8 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
-#9 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
-#10 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#11 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#12 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
-REQUEST_URI=/share/san-pham/t/cho-thue
-in E:\xampp\htdocs\share\protected\modules\products\views\default\nhadat\types.php (5)
-in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (33)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/18 01:04:17 [error] [php] Undefined index: cat_title (E:\xampp\htdocs\share\protected\modules\products\views\default\nhadat\types.php:4)
-Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(870): DefaultController->renderFile()
-#1 E:\xampp\php\www\framework\web\CController.php(783): DefaultController->renderPartial()
-#2 E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php(33): DefaultController->render()
-#3 unknown(0): DefaultController->actionTypes()
-#4 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
-#5 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
-#6 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
-#7 E:\xampp\php\www\framework\web\CController.php(287): DefaultController->runAction()
-#8 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
-#9 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
-#10 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#11 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#12 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
-REQUEST_URI=/share/san-pham/t/cho-thue
-in E:\xampp\htdocs\share\protected\modules\products\views\default\nhadat\types.php (4)
-in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (33)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/18 08:34:47 [error] [php] Undefined variable: lang (E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php:51)
-Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(870): ProductsController->renderFile()
-#1 E:\xampp\php\www\framework\web\CController.php(783): ProductsController->renderPartial()
-#2 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(166): ProductsController->render()
-#3 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
-#4 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
-#5 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): ProductsController->runAction()
-#6 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#7 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
-#8 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): ProductsController->filterAccessControl()
-#9 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
-#10 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#11 E:\xampp\php\www\framework\web\CController.php(266): ProductsController->runActionWithFilters()
-#12 E:\xampp\php\www\framework\web\CWebApplication.php(276): ProductsController->run()
-#13 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#14 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#15 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
-REQUEST_URI=/share/admin/products/add
-in E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php (51)
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (166)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 18:04:10 [error] [php] file_get_contents(http://dos.vn/read-rss) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
- (E:\xampp\htdocs\share\protected\modules\admin\controllers\DefaultController.php:23)
-Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
-#1 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): DefaultController->runAction()
-#2 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#3 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
-#4 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): DefaultController->filterAccessControl()
-#5 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
-#6 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#7 E:\xampp\php\www\framework\web\CController.php(266): DefaultController->runActionWithFilters()
-#8 E:\xampp\php\www\framework\web\CWebApplication.php(276): DefaultController->run()
-#9 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#10 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#11 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
-REQUEST_URI=/share/admin/default/read
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\DefaultController.php (23)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 18:04:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "type".' in E:\xampp\php\www\framework\web\CController.php:484
-Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(271): CController->missingAction('type')
-#1 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('type')
-#2 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#3 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#4 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#5 {main}
-REQUEST_URI=/share/admin/products/type
-HTTP_REFERER=http://localhost/share/admin
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-detail.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/loai/cho-thue
 ---
-2012/06/19 18:06:08 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'bank_number' cannot be null. The SQL statement executed was: INSERT INTO `dos_usernames` (`expired`, `import`, `username`, `password`, `fullname`, `email`, `address`, `cmnd`, `phone`, `bank_number`, `bank_name`, `role`, `language`, `activated`, `dos_bussiness_bussiness_id`, `dos_provinces_province_id`, `dos_templates_template`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16).
-in E:\xampp\htdocs\share\protected\modules\register\controllers\DefaultController.php (10)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 18:06:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'bank_number' cannot be null. The SQL statement executed was: INSERT INTO `dos_usernames` (`expired`, `import`, `username`, `password`, `fullname`, `email`, `address`, `cmnd`, `phone`, `bank_number`, `bank_name`, `role`, `language`, `activated`, `dos_bussiness_bussiness_id`, `dos_provinces_province_id`, `dos_templates_template`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16)' in E:\xampp\php\www\framework\db\CDbCommand.php:354
+2012/06/28 11:19:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-buy.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(1014): CDbCommand->execute()
-#1 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(787): CActiveRecord->insert(NULL)
-#2 E:\xampp\htdocs\share\protected\modules\register\controllers\DefaultController.php(10): CActiveRecord->save()
-#3 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
-#4 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#5 E:\xampp\php\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#6 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#7 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('')
-#8 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('register')
-#9 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#10 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#11 {main}
-REQUEST_URI=/share/dang-ky
-HTTP_REFERER=http://localhost/share/dang-ky
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-buy.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/loai/cho-thue
 ---
-2012/06/19 18:55:03 [error] [php] Missing argument 2 for CHtml::ajaxLink(), called in E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php on line 30 and defined (E:\xampp\php\www\framework\web\helpers\CHtml.php:969)
+2012/06/28 11:19:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/no-product.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\web\CBaseController.php(96): ProductsController->renderInternal()
-#1 E:\xampp\php\www\framework\web\CController.php(870): ProductsController->renderFile()
-#2 E:\xampp\php\www\framework\web\CController.php(783): ProductsController->renderPartial()
-#3 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(166): ProductsController->render()
-#4 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
-#5 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
-#6 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): ProductsController->runAction()
-#7 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#8 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
-#9 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): ProductsController->filterAccessControl()
-#10 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
-#11 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#12 E:\xampp\php\www\framework\web\CController.php(266): ProductsController->runActionWithFilters()
-#13 E:\xampp\php\www\framework\web\CWebApplication.php(276): ProductsController->run()
-#14 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#15 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#16 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
-REQUEST_URI=/share/admin/products/add
-in E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php (30)
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (166)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 19:06:20 [error] [php] Undefined variable: url (E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php:42)
-Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(870): ProductsController->renderFile()
-#1 E:\xampp\php\www\framework\web\CController.php(783): ProductsController->renderPartial()
-#2 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(166): ProductsController->render()
-#3 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
-#4 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
-#5 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): ProductsController->runAction()
-#6 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#7 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
-#8 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): ProductsController->filterAccessControl()
-#9 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
-#10 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#11 E:\xampp\php\www\framework\web\CController.php(266): ProductsController->runActionWithFilters()
-#12 E:\xampp\php\www\framework\web\CWebApplication.php(276): ProductsController->run()
-#13 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#14 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#15 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
-REQUEST_URI=/share/admin/products/add
-in E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php (42)
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (166)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 19:07:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "ff".' in E:\xampp\php\www\framework\web\CController.php:484
-Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(271): CController->missingAction('ff')
-#1 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('ff')
-#2 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#3 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#4 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#5 {main}
-REQUEST_URI=/share/admin/products/ff
-HTTP_REFERER=http://localhost/share/admin/products/add
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/no-product.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/loai/cho-thue
 ---
-2012/06/19 19:15:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "ajax".' in E:\xampp\php\www\framework\web\CController.php:484
+2012/06/28 11:19:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-detail.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(271): CController->missingAction('ajax')
-#1 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('ajax')
-#2 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#3 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#4 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#5 {main}
-REQUEST_URI=/share/admin/products/ajax?_=1340126134390
-HTTP_REFERER=http://localhost/share/admin/products/add
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-detail.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/loai/cho-thue
 ---
-2012/06/19 19:15:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "ajax".' in E:\xampp\php\www\framework\web\CController.php:484
+2012/06/28 11:19:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-buy.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(271): CController->missingAction('ajax')
-#1 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('ajax')
-#2 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#3 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#4 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#5 {main}
-REQUEST_URI=/share/admin/products/ajax?_=1340126136235
-HTTP_REFERER=http://localhost/share/admin/products/add
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-buy.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/loai/cho-thue
 ---
-2012/06/19 19:15:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "ajax".' in E:\xampp\php\www\framework\web\CController.php:484
+2012/06/28 11:19:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/no-product.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(271): CController->missingAction('ajax')
-#1 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('ajax')
-#2 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#3 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#4 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#5 {main}
-REQUEST_URI=/share/admin/products/ajax?_=1340126136721
-HTTP_REFERER=http://localhost/share/admin/products/add
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/no-product.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/loai/cho-thue
 ---
-2012/06/19 19:15:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "ajax".' in E:\xampp\php\www\framework\web\CController.php:484
+2012/06/28 11:19:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-detail.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(271): CController->missingAction('ajax')
-#1 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('ajax')
-#2 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#3 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#4 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#5 {main}
-REQUEST_URI=/share/admin/products/ajax?_=1340126139218
-HTTP_REFERER=http://localhost/share/admin/products/add
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-detail.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/loai/cho-thue
 ---
-2012/06/19 19:15:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "ajax".' in E:\xampp\php\www\framework\web\CController.php:484
+2012/06/28 11:19:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-buy.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(271): CController->missingAction('ajax')
-#1 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('ajax')
-#2 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#3 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#4 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#5 {main}
-REQUEST_URI=/share/admin/products/ajax?_=1340126139691
-HTTP_REFERER=http://localhost/share/admin/products/add
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-buy.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/loai/cho-thue
 ---
-2012/06/19 19:15:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "ajax".' in E:\xampp\php\www\framework\web\CController.php:484
+2012/06/28 11:19:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/no-product.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(271): CController->missingAction('ajax')
-#1 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('ajax')
-#2 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#3 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#4 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#5 {main}
-REQUEST_URI=/share/admin/products/ajax?_=1340126141690
-HTTP_REFERER=http://localhost/share/admin/products/add
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/no-product.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
 ---
-2012/06/19 19:27:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Hệ thống không thể tìm được hành động yêu cầu "'.Yii::app()->baseUrl.'".' in E:\xampp\php\www\framework\web\CController.php:484
+2012/06/28 11:19:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-detail.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(271): CController->missingAction(''.Yii::app()->b...')
-#1 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run(''.Yii::app()->b...')
-#2 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#3 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#4 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#5 {main}
-REQUEST_URI=/share/admin/products/'.Yii::app()-%3EbaseUrl.'/site/echo/x/213
-HTTP_REFERER=http://localhost/share/admin/products/add
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-detail.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
 ---
-2012/06/19 19:34:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'district_id' in 'field list'. The SQL statement executed was: SELECT district_id, district_name FROM dos_provinces WHERE dos_provinces_province=:p.
-in E:\xampp\htdocs\share\protected\models\Provinces.php (97)
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (170)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 19:34:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'district_id' in 'field list'. The SQL statement executed was: SELECT district_id, district_name FROM dos_provinces WHERE dos_provinces_province=:p' in E:\xampp\php\www\framework\db\CDbCommand.php:528
+2012/06/28 11:19:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-buy.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
-#1 E:\xampp\htdocs\share\protected\models\Provinces.php(97): CDbCommand->queryAll()
-#2 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(170): Provinces->listDistrictProvince('11')
-#3 [internal function]: ProductsController->actionListdistrict('11')
-#4 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
-#5 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ProductsController), Object(ReflectionMethod), Array)
-#6 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#7 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
-#8 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#9 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
-#10 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
-#11 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#12 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#13 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#14 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('listdistrict')
-#15 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#16 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#17 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#18 {main}
-REQUEST_URI=/share/admin/products/listdistrict/id/11
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-buy.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
 ---
-2012/06/19 19:35:26 [error] [exception.CException] exception 'CException' with message 'ProductsController không tìm được view: "ajaxView".' in E:\xampp\php\www\framework\web\CController.php:879
+2012/06/28 11:20:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/no-product.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(170): CController->renderPartial('ajaxView', Array, false, true)
-#1 [internal function]: ProductsController->actionListdistrict('11')
-#2 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
-#3 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ProductsController), Object(ReflectionMethod), Array)
-#4 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#5 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
-#6 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#7 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
-#8 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
-#9 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#10 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#11 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('listdistrict')
-#13 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#14 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#15 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#16 {main}
-REQUEST_URI=/share/admin/products/listdistrict/id/11
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/no-product.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
 ---
-2012/06/19 20:49:32 [error] [php] Use of undefined constant listItemsU - assumed 'listItemsU' (E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php:130)
+2012/06/28 11:20:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-buy.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(870): ProductsController->renderFile()
-#1 E:\xampp\php\www\framework\web\CController.php(783): ProductsController->renderPartial()
-#2 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(173): ProductsController->render()
-#3 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
-#4 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
-#5 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): ProductsController->runAction()
-#6 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#7 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
-#8 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): ProductsController->filterAccessControl()
-#9 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
-#10 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#11 E:\xampp\php\www\framework\web\CController.php(266): ProductsController->runActionWithFilters()
-#12 E:\xampp\php\www\framework\web\CWebApplication.php(276): ProductsController->run()
-#13 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#14 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#15 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
-REQUEST_URI=/share/admin/products/add
-in E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php (130)
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (173)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 20:54:00 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "ProductsUtility.dos_provinces_province_id" chưa được định nghĩa.' in E:\xampp\php\www\framework\base\CComponent.php:131
-Stack trace:
-#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('dos_provinces_p...')
-#1 E:\xampp\php\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('dos_provinces_p...')
-#2 E:\xampp\php\www\framework\web\helpers\CHtml.php(1495): CHtml::resolveValue(Object(ProductsUtility), 'dos_provinces_p...')
-#3 E:\xampp\php\www\framework\web\widgets\CActiveForm.php(706): CHtml::activeCheckBoxList(Object(ProductsUtility), 'dos_provinces_p...', Array, Array)
-#4 E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php(131): CActiveForm->checkBoxList(Object(ProductsUtility), 'dos_provinces_p...', Array)
-#5 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
-#6 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
-#7 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
-#8 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('add', Array, true)
-#9 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(173): CController->render('add', Array)
-#10 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
-#11 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#12 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
-#13 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#14 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
-#15 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
-#16 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#17 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#18 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#19 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('add')
-#20 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#21 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#22 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#23 {main}
-REQUEST_URI=/share/admin/products/add
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-buy.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
 ---
-2012/06/19 20:54:05 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "ProductsUtility.dos_provinces_province_id" chưa được định nghĩa.' in E:\xampp\php\www\framework\base\CComponent.php:131
+2012/06/28 11:20:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-detail.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('dos_provinces_p...')
-#1 E:\xampp\php\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('dos_provinces_p...')
-#2 E:\xampp\php\www\framework\web\helpers\CHtml.php(1495): CHtml::resolveValue(Object(ProductsUtility), 'dos_provinces_p...')
-#3 E:\xampp\php\www\framework\web\widgets\CActiveForm.php(706): CHtml::activeCheckBoxList(Object(ProductsUtility), 'dos_provinces_p...', Array, Array)
-#4 E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php(131): CActiveForm->checkBoxList(Object(ProductsUtility), 'dos_provinces_p...', Array)
-#5 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
-#6 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
-#7 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
-#8 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('add', Array, true)
-#9 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(173): CController->render('add', Array)
-#10 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
-#11 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#12 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
-#13 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#14 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
-#15 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
-#16 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#17 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#18 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#19 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('add')
-#20 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#21 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#22 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#23 {main}
-REQUEST_URI=/share/admin/products/add
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-detail.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
 ---
-2012/06/19 21:01:10 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "ProductsUtility." chưa được định nghĩa.' in E:\xampp\php\www\framework\base\CComponent.php:131
+2012/06/28 11:20:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-detail.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('')
-#1 E:\xampp\php\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('')
-#2 E:\xampp\php\www\framework\web\helpers\CHtml.php(1495): CHtml::resolveValue(Object(ProductsUtility), '')
-#3 E:\xampp\php\www\framework\web\widgets\CActiveForm.php(706): CHtml::activeCheckBoxList(Object(ProductsUtility), '', Array, Array)
-#4 E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php(131): CActiveForm->checkBoxList(Object(ProductsUtility), '', Array)
-#5 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
-#6 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
-#7 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
-#8 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('add', Array, true)
-#9 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(173): CController->render('add', Array)
-#10 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
-#11 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#12 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
-#13 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#14 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
-#15 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
-#16 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#17 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#18 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#19 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('add')
-#20 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#21 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#22 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#23 {main}
-REQUEST_URI=/share/admin/products/add
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-detail.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
 ---
-2012/06/19 21:01:19 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "ProductsUtility." chưa được định nghĩa.' in E:\xampp\php\www\framework\base\CComponent.php:131
+2012/06/28 11:20:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/no-product.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('')
-#1 E:\xampp\php\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('')
-#2 E:\xampp\php\www\framework\web\helpers\CHtml.php(1495): CHtml::resolveValue(Object(ProductsUtility), '')
-#3 E:\xampp\php\www\framework\web\widgets\CActiveForm.php(706): CHtml::activeCheckBoxList(Object(ProductsUtility), '', Array, Array)
-#4 E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php(131): CActiveForm->checkBoxList(Object(ProductsUtility), '', Array)
-#5 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
-#6 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
-#7 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
-#8 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('add', Array, true)
-#9 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(173): CController->render('add', Array)
-#10 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
-#11 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#12 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
-#13 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#14 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
-#15 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
-#16 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#17 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#18 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#19 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('add')
-#20 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#21 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#22 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#23 {main}
-REQUEST_URI=/share/admin/products/add
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/no-product.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
 ---
-2012/06/19 21:08:52 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:08:52 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:08:52 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:08:52 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:08:52 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:08:52 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:08:52 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:15 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:15 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:15 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:15 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:15 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:15 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:15 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:26 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:26 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:26 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:26 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:26 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:26 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:26 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:48 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:48 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:48 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:48 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:48 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:48 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:09:48 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:13:58 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:13:58 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:13:58 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:13:58 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:13:58 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:13:58 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:13:58 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:13:58 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "ProductsUtility.utility" chưa được định nghĩa.' in E:\xampp\php\www\framework\base\CComponent.php:131
+2012/06/28 11:20:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-buy.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('utility')
-#1 E:\xampp\php\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('utility')
-#2 E:\xampp\php\www\framework\web\helpers\CHtml.php(1495): CHtml::resolveValue(Object(ProductsUtility), 'utility')
-#3 E:\xampp\php\www\framework\web\widgets\CActiveForm.php(706): CHtml::activeCheckBoxList(Object(ProductsUtility), 'utility', Array, Array)
-#4 E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php(132): CActiveForm->checkBoxList(Object(ProductsUtility), 'utility', Array, Array)
-#5 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
-#6 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
-#7 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
-#8 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('add', Array, true)
-#9 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(174): CController->render('add', Array)
-#10 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
-#11 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#12 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
-#13 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#14 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
-#15 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
-#16 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#17 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#18 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#19 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('add')
-#20 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#21 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#22 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#23 {main}
-REQUEST_URI=/share/admin/products/add
-HTTP_REFERER=http://localhost/share/admin/products/add
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-buy.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
 ---
-2012/06/19 21:14:37 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:14:37 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:14:37 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:14:37 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:14:37 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:14:37 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:14:37 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:15:52 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:15:52 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:15:52 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:15:52 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:15:52 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:15:52 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:15:52 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:16:34 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:16:34 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:16:34 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:16:34 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:16:34 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:16:34 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:16:34 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:16:34 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "Products.product_id" chưa được định nghĩa.' in E:\xampp\php\www\framework\base\CComponent.php:131
+2012/06/28 11:21:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-detail.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('product_id')
-#1 E:\xampp\php\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('product_id')
-#2 E:\xampp\php\www\framework\web\helpers\CHtml.php(1495): CHtml::resolveValue(Object(Products), 'product_id')
-#3 E:\xampp\php\www\framework\web\widgets\CActiveForm.php(706): CHtml::activeCheckBoxList(Object(Products), 'product_id', Array, Array)
-#4 E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php(132): CActiveForm->checkBoxList(Object(Products), 'product_id', Array, Array)
-#5 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
-#6 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
-#7 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
-#8 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('add', Array, true)
-#9 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(174): CController->render('add', Array)
-#10 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
-#11 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#12 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
-#13 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#14 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
-#15 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
-#16 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#17 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#18 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#19 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('add')
-#20 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#21 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#22 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#23 {main}
-REQUEST_URI=/share/admin/products/add
-HTTP_REFERER=http://localhost/share/admin/products/add
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-detail.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/loai/cho-thue
 ---
-2012/06/19 21:17:02 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:17:02 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:17:02 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:17:02 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:17:02 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:17:02 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/19 21:17:02 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 16:57:12 [error] [php] Undefined variable: model_u (E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php:128)
+2012/06/28 11:21:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/no-product.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\web\CController.php(870): ProductsController->renderFile()
-#1 E:\xampp\php\www\framework\web\CController.php(783): ProductsController->renderPartial()
-#2 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(174): ProductsController->render()
-#3 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
-#4 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
-#5 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): ProductsController->runAction()
-#6 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#7 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
-#8 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): ProductsController->filterAccessControl()
-#9 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
-#10 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#11 E:\xampp\php\www\framework\web\CController.php(266): ProductsController->runActionWithFilters()
-#12 E:\xampp\php\www\framework\web\CWebApplication.php(276): ProductsController->run()
-#13 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#14 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#15 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
-REQUEST_URI=/share/admin/products/add
-in E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php (128)
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (174)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 16:58:07 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 16:58:07 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 16:58:07 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 16:58:07 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 16:58:07 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 16:58:07 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 16:58:07 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 16:58:07 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 16:58:07 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:10:52 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:10:52 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:10:52 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:10:52 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:10:52 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:10:52 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:10:52 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:10:52 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:10:52 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:11:06 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:11:06 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:11:06 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:11:06 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:11:06 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:11:06 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:11:06 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:11:06 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:11:06 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:11:47 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:11:47 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:11:47 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:11:47 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:11:47 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:11:47 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:11:47 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:11:47 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:11:47 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:14:10 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:14:10 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:14:10 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:14:10 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:14:10 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:14:10 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:14:10 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:14:10 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:14:10 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:22:29 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:22:29 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:22:29 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:22:29 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:22:29 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:22:29 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:22:29 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:22:29 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:22:29 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:23:20 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:23:20 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:23:20 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:23:20 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:23:20 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:23:20 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:23:20 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:23:20 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:23:20 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "utility" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:35 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "utility" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:28:55 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:31:06 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:31:06 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:31:06 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:31:06 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:31:06 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:31:06 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:31:06 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:31:06 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:31:06 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:32:03 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:32:03 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:32:03 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:32:03 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:32:03 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:32:03 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:32:04 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:32:04 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 17:32:04 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 18:06:56 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 18:06:56 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 18:06:56 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 18:06:56 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 18:06:56 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 18:06:56 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 18:06:56 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 18:06:56 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/20 18:06:56 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 07:00:53 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 07:00:53 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 07:00:53 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 07:00:53 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 07:00:53 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 07:00:53 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 07:00:53 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 07:00:53 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 07:00:53 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 07:14:01 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "Products.area_used" chưa được định nghĩa.' in E:\xampp\php\www\framework\base\CComponent.php:131
-Stack trace:
-#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('area_used')
-#1 E:\xampp\php\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('area_used')
-#2 E:\xampp\php\www\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(Products), 'area_used')
-#3 E:\xampp\php\www\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(Products), 'area_used', Array)
-#4 E:\xampp\php\www\framework\web\widgets\CActiveForm.php(568): CHtml::activeTextField(Object(Products), 'area_used', Array)
-#5 E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php(161): CActiveForm->textField(Object(Products), 'area_used', Array)
-#6 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
-#7 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
-#8 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
-#9 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('add', Array, true)
-#10 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(172): CController->render('add', Array)
-#11 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
-#12 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#13 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
-#14 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#15 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
-#16 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
-#17 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#18 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#19 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#20 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('add')
-#21 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#22 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#23 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#24 {main}
-REQUEST_URI=/share/admin/products/add
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/no-product.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/loai/cho-thue
 ---
-2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "dos_districts_district_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:10:22 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "dos_districts_district_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:11:47 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:12:32 [error] [exception.CException] exception 'CException' with message 'Thuộc tính "Products.dos_provinces_province_id" chưa được định nghĩa.' in E:\xampp\php\www\framework\base\CComponent.php:131
+2012/06/28 11:21:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-buy.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('dos_provinces_p...')
-#1 E:\xampp\php\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('dos_provinces_p...')
-#2 E:\xampp\php\www\framework\web\helpers\CHtml.php(1402): CHtml::resolveValue(Object(Products), 'dos_provinces_p...')
-#3 E:\xampp\php\www\framework\web\widgets\CActiveForm.php(674): CHtml::activeDropDownList(Object(Products), 'dos_provinces_p...', Array, Array)
-#4 E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php(28): CActiveForm->dropDownList(Object(Products), 'dos_provinces_p...', Array, Array)
-#5 E:\xampp\php\www\framework\web\CBaseController.php(127): require('E:\xampp\htdocs...')
-#6 E:\xampp\php\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
-#7 E:\xampp\php\www\framework\web\CController.php(870): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
-#8 E:\xampp\php\www\framework\web\CController.php(783): CController->renderPartial('add', Array, true)
-#9 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(174): CController->render('add', Array)
-#10 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
-#11 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#12 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
-#13 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#14 E:\xampp\php\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
-#15 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
-#16 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
-#17 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#18 E:\xampp\php\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#19 E:\xampp\php\www\framework\web\CWebApplication.php(276): CController->run('add')
-#20 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
-#21 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#22 E:\xampp\htdocs\share\index.php(16): CApplication->run()
-#23 {main}
-REQUEST_URI=/share/admin/products/add
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-buy.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/loai/cho-thue
 ---
-2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "dos_districts_district_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:13:21 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:04 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:04 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:04 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:04 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:04 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:04 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:04 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:04 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:04 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:13 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:13 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:13 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:13 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:13 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:13 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:13 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:13 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:13 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:39 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:39 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:39 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:39 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:39 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:39 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:39 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:39 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:14:39 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:25:39 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:25:39 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:25:39 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:25:39 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:25:39 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:25:39 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:25:39 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:25:39 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:25:39 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:28:32 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:28:32 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:28:32 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:28:32 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:28:32 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:28:32 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:28:32 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:28:32 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:28:32 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:29 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:29 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:29 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:29 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:29 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:29 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:29 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:29 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:29 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "dos_districts_district_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 08:33:46 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:10:09 [error] [php] Missing argument 2 for CHtml::listData(), called in E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php on line 195 and defined (E:\xampp\php\www\framework\web\helpers\CHtml.php:1652)
+2012/06/28 11:21:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/no-product.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\web\CBaseController.php(96): ProductsController->renderInternal()
-#1 E:\xampp\php\www\framework\web\CController.php(870): ProductsController->renderFile()
-#2 E:\xampp\php\www\framework\web\CController.php(783): ProductsController->renderPartial()
-#3 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(174): ProductsController->render()
-#4 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
-#5 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
-#6 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): ProductsController->runAction()
-#7 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#8 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
-#9 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): ProductsController->filterAccessControl()
-#10 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
-#11 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#12 E:\xampp\php\www\framework\web\CController.php(266): ProductsController->runActionWithFilters()
-#13 E:\xampp\php\www\framework\web\CWebApplication.php(276): ProductsController->run()
-#14 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#15 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#16 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
-REQUEST_URI=/share/admin/products/add
-in E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php (195)
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (174)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:10:33 [error] [php] Missing argument 2 for CHtml::listData(), called in E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php on line 195 and defined (E:\xampp\php\www\framework\web\helpers\CHtml.php:1652)
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/no-product.jpg
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
+---
+2012/06/28 11:21:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-buy.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 E:\xampp\php\www\framework\web\CBaseController.php(96): ProductsController->renderInternal()
-#1 E:\xampp\php\www\framework\web\CController.php(870): ProductsController->renderFile()
-#2 E:\xampp\php\www\framework\web\CController.php(783): ProductsController->renderPartial()
-#3 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(174): ProductsController->render()
-#4 E:\xampp\php\www\framework\web\actions\CInlineAction.php(50): ProductsController->actionAdd()
-#5 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
-#6 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): ProductsController->runAction()
-#7 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
-#8 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
-#9 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): ProductsController->filterAccessControl()
-#10 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
-#11 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
-#12 E:\xampp\php\www\framework\web\CController.php(266): ProductsController->runActionWithFilters()
-#13 E:\xampp\php\www\framework\web\CWebApplication.php(276): ProductsController->run()
-#14 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
-#15 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#16 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
-REQUEST_URI=/share/admin/products/add
-in E:\xampp\htdocs\share\protected\modules\admin\views\products\add.php (195)
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (174)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "dos_districts_district_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:33:00 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:48:09 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:48:09 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:48:09 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:48:09 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:48:09 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:48:09 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:48:09 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:48:09 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:48:09 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:49:17 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:49:17 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:49:17 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:49:17 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:49:17 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:49:17 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:49:17 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:49:17 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:49:17 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:54:01 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:54:01 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:54:01 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:54:01 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:54:01 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:54:01 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:54:01 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:54:01 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:54:01 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:54:51 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:54:51 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:54:51 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:54:51 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:54:51 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:54:51 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:54:51 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:54:51 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 11:54:51 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:05:28 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:05:28 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:05:28 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:05:28 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:05:28 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:05:28 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:05:28 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:05:28 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:05:28 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:06:02 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:06:02 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:06:02 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:06:02 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:06:02 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:06:02 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:06:02 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:06:02 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:06:02 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:05 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:05 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:05 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:05 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:05 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:05 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:05 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:05 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:05 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:11 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:11 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:11 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:11 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:11 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:11 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:11 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:11 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:11 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:25 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:25 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:25 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:25 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:25 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:25 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:25 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:25 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:25 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:38 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:38 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:38 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:38 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:38 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:38 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:38 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:38 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:07:38 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:09:44 [warning] [application] Failed to set unsafe attribute "dos_module_item_type_type_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:09:44 [warning] [application] Failed to set unsafe attribute "dos_provinces_province_id" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:09:44 [warning] [application] Failed to set unsafe attribute "unit_currency" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:09:44 [warning] [application] Failed to set unsafe attribute "unit_unit" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:09:44 [warning] [application] Failed to set unsafe attribute "address" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:09:44 [warning] [application] Failed to set unsafe attribute "contact_name" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:09:44 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:09:44 [warning] [application] Failed to set unsafe attribute "contact_mobile" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
-2012/06/21 13:09:44 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
-in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (155)
-in E:\xampp\htdocs\share\index.php (16)
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-buy.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
+---
+2012/06/28 11:21:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-detail.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-detail.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
+---

@@ -37,6 +37,8 @@ class DefaultController extends Controller {
     }
 
     public function actionView($id) {
+        $this->layout = '//layouts/column-3';
+
         $model = ucfirst($this->module->id);
         $model_class = new $model();
 
