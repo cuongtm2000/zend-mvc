@@ -44,6 +44,11 @@
                                     <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/usernames">Danh sách thành viên</a></li>
                                 </ul>
                             </li>
+                            <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/customers">Khách hàng</a>
+                                <ul>
+                                    <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/customers">Danh sách khách hàng</a></li>
+                                </ul>
+                            </li>
                             <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/articles">Bài viết</a>
                                 <ul>
                                     <li><a href="<?php echo Yii::app()->request->baseUrl ?>/administrator/articles/cat">Danh mục</a></li>

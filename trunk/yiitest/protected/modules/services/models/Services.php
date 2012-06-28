@@ -282,14 +282,14 @@ class Services extends CActiveRecord {
         $criteria->order = 'record_order DESC, created DESC';
         $criteria->condition = 'dos_usernames_username=:user';
         $criteria->params = array(':user' => Yii::app()->user->id);
-        $count = Services::model()->count($criteria);
+        $count = $this::model()->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
         $pages->pageSize = 15;
         $pages->applyLimit($criteria);
 
-        return array('models' => Services::model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
     }
 
     //Back end - Update Record
@@ -310,12 +310,12 @@ class Services extends CActiveRecord {
 
     //Back end - Delete Record
     private function deleteRecord($id) {
-        $item = Services::model()->find('record_id=:id', array(':id' => $id));
+        $item = $this::model()->find('record_id=:id', array(':id' => $id));
         $path = YiiBase::getPathOfAlias('webroot') . USERFILES . '/' . Yii::app()->controller->id . '/';
         if ($item->pic_full && file_exists($path . $item->pic_full)) {
             unlink($path . $item->pic_full);
         }
-        Services::model()->findByPk($id)->delete(); //delete record_id
+        $this::model()->findByPk($id)->delete(); //delete record_id
     }
 
     //Back end - Active Item
@@ -342,11 +342,11 @@ class Services extends CActiveRecord {
             $criteria->condition = 'dos_usernames_username=:user';
             $criteria->params = array(':user' => Yii::app()->user->id);
 
-            $models = Services::model()->findAll($criteria);
+            $models = $this::model()->findAll($criteria);
 
             $i = 1;
             foreach ($models as $model) {
-                Services::model()->updateByPk($model['record_id'], array('record_order' => $i));
+                $this::model()->updateByPk($model['record_id'], array('record_order' => $i));
                 $i++;
             }
         } else {
@@ -395,7 +395,7 @@ class Services extends CActiveRecord {
         $criteria->condition = 'dos_usernames_username=:user';
         $criteria->params = array(':user' => Yii::app()->user->id);
 
-        $this->_model = Services::model()->findByPk($id, $criteria);
+        $this->_model = $this::model()->findByPk($id, $criteria);
 
         if ($this->_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');
