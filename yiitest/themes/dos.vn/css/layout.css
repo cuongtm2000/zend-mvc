@@ -32,7 +32,7 @@ a:hover{color:#000;}
 /*nav*/
 #nav{list-style:none;float:right;padding:10px 0 0 0}
 #nav li{float:left;margin:0 1px 0 0;position:relative}
-#nav .home-page a{padding:4px 5px 0 0}
+#nav .home-page a{padding:8px 5px 0 0}
 #nav li a{padding: 0 0 12px 5px; float:left}
 #nav li a span{padding:9px 10px; display:block;color:#444;font-size:10pt}
 #nav li a span:hover{color:#0074BD}
