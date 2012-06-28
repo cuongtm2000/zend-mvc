@@ -65,7 +65,7 @@ class Customers extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'dosBussinessBussiness' => array(self::BELONGS_TO, 'DosBussiness', 'dos_bussiness_bussiness_id'),
+            'Bussiness' => array(self::BELONGS_TO, 'Bussiness', 'dos_bussiness_bussiness_id'),
         );
     }
 
@@ -151,9 +151,89 @@ class Customers extends CActiveRecord {
 
         return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
     }
-    public function detailRecord($id){
+
+    public function detailRecord($id) {
         $command = Yii::app()->db->createCommand('SELECT customer_id, customer_name, pic_full, address, website, bussiness_id, bussiness_name FROM ' . $this->tableName() . ', dos_bussiness WHERE ' . $this->tableName() . '.dos_bussiness_bussiness_id = dos_bussiness.bussiness_id AND tag=:tag AND enable=1');
         $command->bindParam(':tag', $id, PDO::PARAM_STR);
         return $command->queryRow();
+    }
+
+    //Back end - List item admin
+    public function listItemAdmin() {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'created_date DESC';
+
+        $count = $this::model()->count($criteria);
+
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = 15;
+        $pages->applyLimit($criteria);
+
+        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+    }
+
+    //Back end - Update Record for Administrator
+    private function updateShowHidden($enable, $customer_id) {
+        $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET enable=:enable WHERE customer_id=:customer_id');
+        $command->bindParam(":enable", $enable, PDO::PARAM_INT);
+        $command->bindParam(":customer_id", $customer_id, PDO::PARAM_STR);
+        return $command->execute();
+    }
+
+    //Back end - Delete Record
+    private function deleteRecord($id) {
+        $item = $this::model()->find('customer_id=:id', array(':id' => $id));
+
+        $common_class = new Common();
+        $common_class->removePic($item->pic_thumb, 0, 1);
+        $common_class->removePic($item->pic_full, 0, 1);
+
+        $this::model()->findByPk($id)->delete(); //delete record_id
+    }
+
+    //Back end - Active Item
+    public function activeItem($data) {
+        $flag = $data->getPost('factive', 'disable');
+        $ids = $data->getPost('ids', '');
+
+        if (!empty($ids)) {
+            if (!is_array($ids)) {
+                $record_id[0] = $ids;
+            } else {
+                $record_id = $ids;
+            }
+            unset($ids);
+
+            if ($flag) {
+                if ($flag == 'export') {
+                    foreach ($record_id as $value) {
+                        $id = strval($value);
+                        if ($id) {
+                            DatabaseHelper::export(trim($id), 'user');
+                        }
+                    }
+                } else {
+                    //show or hidden
+                    $active = ($flag == "enable") ? 1 : 0;
+
+                    foreach ($record_id as $value) {
+                        $id = strval($value);
+                        if ($id) {
+                            $this->updateShowHidden($active, $id);
+                        }
+                    }
+                }
+
+            } else {
+                //delete
+                foreach ($record_id as $value) {
+                    $id = strval($value);
+                    if ($id) {
+                        $this->deleteRecord($id);
+                    }
+                }
+            }
+        }
     }
 }
