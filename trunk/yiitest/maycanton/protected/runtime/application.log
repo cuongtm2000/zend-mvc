@@ -6562,3 +6562,201 @@ Stack trace:
 REQUEST_URI=/maycanton/themes/ccsc/js/product.js
 HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton-dap-vom/may-can-ton-1-tang.html
 ---
+2012/06/28 02:11:07 [warning] [application] Failed to set unsafe attribute "remove_pic_thumb" of "Products".
+in D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php (178)
+in D:\svn\maycanton\index.php (16)
+2012/06/28 02:33:29 [warning] [application] Failed to set unsafe attribute "remove_pic_full" of "ProductsCat".
+in D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php (64)
+in D:\svn\maycanton\index.php (16)
+2012/06/28 02:38:14 [warning] [application] Failed to set unsafe attribute "remove_pic_full" of "ProductsCat".
+in D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php (64)
+in D:\svn\maycanton\index.php (16)
+2012/06/28 02:38:14 [error] [php] imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions (D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php:269)
+Stack trace:
+#0 D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php(225): EUploadedImage->imagePrepare()
+#1 D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php(397): EUploadedImage->saveAs()
+#2 D:\svn\maycanton\protected\modules\products\models\ProductsCat.php(187): EUploadedImage->processUpload()
+#3 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(1056): ProductsCat->beforeSave()
+#4 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(787): ProductsCat->update()
+#5 D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php(66): ProductsCat->save()
+#6 unknown(0): ProductsController->actionEditCat()
+#7 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#8 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#9 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): ProductsController->runAction()
+#11 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#13 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): ProductsController->filterAccessControl()
+#14 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#15 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\xampp\php\library\framework\web\CController.php(266): ProductsController->runActionWithFilters()
+#17 C:\xampp\php\library\framework\web\CWebApplication.php(276): ProductsController->run()
+#18 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#19 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 D:\svn\maycanton\index.php(16): CWebApplication->run()
+REQUEST_URI=/maycanton/admin/products/editcat/id/582
+in D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php (269)
+in D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php (256)
+in D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php (225)
+2012/06/28 02:38:24 [warning] [application] Failed to set unsafe attribute "remove_pic_full" of "ProductsCat".
+in D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php (64)
+in D:\svn\maycanton\index.php (16)
+2012/06/28 02:38:24 [error] [php] imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions (D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php:269)
+Stack trace:
+#0 D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php(225): EUploadedImage->imagePrepare()
+#1 D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php(397): EUploadedImage->saveAs()
+#2 D:\svn\maycanton\protected\modules\products\models\ProductsCat.php(187): EUploadedImage->processUpload()
+#3 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(1056): ProductsCat->beforeSave()
+#4 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(787): ProductsCat->update()
+#5 D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php(66): ProductsCat->save()
+#6 unknown(0): ProductsController->actionEditCat()
+#7 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#8 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#9 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): ProductsController->runAction()
+#11 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#13 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): ProductsController->filterAccessControl()
+#14 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#15 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\xampp\php\library\framework\web\CController.php(266): ProductsController->runActionWithFilters()
+#17 C:\xampp\php\library\framework\web\CWebApplication.php(276): ProductsController->run()
+#18 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#19 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 D:\svn\maycanton\index.php(16): CWebApplication->run()
+REQUEST_URI=/maycanton/admin/products/editcat/id/582
+in D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php (269)
+in D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php (256)
+in D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php (225)
+2012/06/28 02:38:38 [warning] [application] Failed to set unsafe attribute "remove_pic_full" of "ProductsCat".
+in D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php (64)
+in D:\svn\maycanton\index.php (16)
+2012/06/28 02:38:52 [error] [php] imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions (D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php:269)
+Stack trace:
+#0 D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php(225): EUploadedImage->imagePrepare()
+#1 D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php(397): EUploadedImage->saveAs()
+#2 D:\svn\maycanton\protected\modules\products\models\ProductsCat.php(187): EUploadedImage->processUpload()
+#3 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(1056): ProductsCat->beforeSave()
+#4 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(787): ProductsCat->update()
+#5 D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php(66): ProductsCat->save()
+#6 unknown(0): ProductsController->actionEditCat()
+#7 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#8 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#9 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): ProductsController->runAction()
+#11 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#13 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): ProductsController->filterAccessControl()
+#14 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#15 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\xampp\php\library\framework\web\CController.php(266): ProductsController->runActionWithFilters()
+#17 C:\xampp\php\library\framework\web\CWebApplication.php(276): ProductsController->run()
+#18 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#19 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 D:\svn\maycanton\index.php(16): CWebApplication->run()
+REQUEST_URI=/maycanton/admin/products/editcat/id/582
+in D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php (269)
+in D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php (256)
+in D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php (225)
+2012/06/28 02:39:06 [warning] [application] Failed to set unsafe attribute "remove_pic_full" of "ProductsCat".
+in D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php (64)
+in D:\svn\maycanton\index.php (16)
+2012/06/28 02:39:07 [error] [php] imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions (D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php:269)
+Stack trace:
+#0 D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php(225): EUploadedImage->imagePrepare()
+#1 D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php(397): EUploadedImage->saveAs()
+#2 D:\svn\maycanton\protected\modules\products\models\ProductsCat.php(187): EUploadedImage->processUpload()
+#3 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(1056): ProductsCat->beforeSave()
+#4 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(787): ProductsCat->update()
+#5 D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php(66): ProductsCat->save()
+#6 unknown(0): ProductsController->actionEditCat()
+#7 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#8 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#9 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): ProductsController->runAction()
+#11 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#13 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): ProductsController->filterAccessControl()
+#14 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#15 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\xampp\php\library\framework\web\CController.php(266): ProductsController->runActionWithFilters()
+#17 C:\xampp\php\library\framework\web\CWebApplication.php(276): ProductsController->run()
+#18 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#19 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 D:\svn\maycanton\index.php(16): CWebApplication->run()
+REQUEST_URI=/maycanton/admin/products/editcat/id/581
+in D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php (269)
+in D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php (256)
+in D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php (225)
+2012/06/28 02:39:11 [warning] [application] Failed to set unsafe attribute "remove_pic_full" of "ProductsCat".
+in D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php (64)
+in D:\svn\maycanton\index.php (16)
+2012/06/28 02:39:11 [error] [php] imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions (D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php:269)
+Stack trace:
+#0 D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php(225): EUploadedImage->imagePrepare()
+#1 D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php(397): EUploadedImage->saveAs()
+#2 D:\svn\maycanton\protected\modules\products\models\ProductsCat.php(187): EUploadedImage->processUpload()
+#3 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(1056): ProductsCat->beforeSave()
+#4 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(787): ProductsCat->update()
+#5 D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php(66): ProductsCat->save()
+#6 unknown(0): ProductsController->actionEditCat()
+#7 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#8 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#9 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): ProductsController->runAction()
+#11 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#13 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): ProductsController->filterAccessControl()
+#14 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#15 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\xampp\php\library\framework\web\CController.php(266): ProductsController->runActionWithFilters()
+#17 C:\xampp\php\library\framework\web\CWebApplication.php(276): ProductsController->run()
+#18 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#19 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 D:\svn\maycanton\index.php(16): CWebApplication->run()
+REQUEST_URI=/maycanton/admin/products/editcat/id/581
+in D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php (269)
+in D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php (256)
+in D:\svn\maycanton\protected\extensions\EUploadedImage\EUploadedImage.php (225)
+2012/06/28 02:39:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/productsCat/may-can-ton.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/productsCat/may-can-ton.png
+HTTP_REFERER=http://dos.vn/maycanton/san-pham
+---
+2012/06/28 02:39:41 [warning] [application] Failed to set unsafe attribute "remove_pic_full" of "ProductsCat".
+in D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php (64)
+in D:\svn\maycanton\index.php (16)
+2012/06/28 02:39:53 [warning] [application] Failed to set unsafe attribute "remove_pic_full" of "ProductsCat".
+in D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php (64)
+in D:\svn\maycanton\index.php (16)
+2012/06/28 02:40:23 [warning] [application] Failed to set unsafe attribute "remove_pic_full" of "ProductsCat".
+in D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php (64)
+in D:\svn\maycanton\index.php (16)
+2012/06/28 02:44:18 [warning] [application] Failed to set unsafe attribute "remove_pic_thumb" of "Products".
+in D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php (178)
+in D:\svn\maycanton\index.php (16)
+2012/06/28 02:44:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/images/delete-cart.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/ima...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/images/delete-cart.png
+HTTP_REFERER=http://dos.vn/maycanton/san-pham/gio-hang
+---
+2012/06/28 02:47:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/ccsc/images/delete-cart.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/ccsc/ima...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/themes/ccsc/images/delete-cart.png
+HTTP_REFERER=http://dos.vn/maycanton/san-pham/gio-hang
+---
+2012/06/28 02:54:47 [warning] [application] Failed to set unsafe attribute "company" of "ContactUserForm".
+in D:\svn\maycanton\protected\modules\contact\controllers\DefaultController.php (12)
+in D:\svn\maycanton\index.php (16)

@@ -109,33 +109,49 @@
                     <li><a href="<?php echo Yii::app()->session['langUrl'] . '/' . Yii::t('main', 'articles.link')?>/<?php echo $value['tag_cat']?>/<?php echo $value['tag']?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></li>
                 <?php endforeach?>
             </ul>
-            <ul class="right sub-hdbook">
+            <!--<ul class="right sub-hdbook">
                 <?php foreach($listArticleLimitTwo as $value):?>
                     <li><a href="<?php echo Yii::app()->session['langUrl'] . '/' . Yii::t('main', 'articles.link')?>/<?php echo $value['tag_cat']?>/<?php echo $value['tag']?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></li>
                 <?php endforeach?>
-            </ul> <div class="clear"></div>
+            </ul> --><div class="clear"></div>
         </div> <!--End bg sub hand-->
     </div> <!--End leftcontent-->
     <div id="rightcontent">
-        <!-- <div class="ico-mid">
+        <div class="ico-mid">
             <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ico-right.png" alt="Support" />
             <p>Đừng ngần ngại hãy liên hệ với chúng tôi để được tư vẫn miễn phí</p>
-        </div> -->
+        </div>
         <ul class="support">
             <li>
-                <div class="img-port"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-port.png" alt="" /></div>
+                <div class="img-port"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-port.png" alt="img support" /></div>
                 <div class="ten-port">
-                    <p><a href="ymsgr:sendim?hongvietsoft"><img src="http://opi.yahoo.com/online?u=hongvietsoft&amp;m=g&amp;t=1&amp;l=us" alt="hongvietsoft" /></a></p>
+                    <p><a href="ymsgr:sendim?hongvietsoft&amp;m=Xin chào, tôi muốn hỏi về sản phẩm - dịch vụ của Dos.vn" title="Chat hongvietsoft"><img src="http://opi.yahoo.com/online?u=hongvietsoft&amp;m=g&amp;t=1&amp;l=us" alt="hongvietsoft" /></a></p>
                     <p>E: info@dos.vn </p>
                     <p>T: 0987 001 001</p>
 				</div><div class="clear"></div>
             </li>
 			<li>
-				<div class="img-port"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-port.png" alt="" /></div>
+				<div class="img-port"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-port.png" alt="img support" /></div>
 				<div class="ten-port">
-                    <p><a href="ymsgr:sendim?thanhansoft"><img src="http://opi.yahoo.com/online?u=thanhansoft&amp;m=g&amp;t=1&amp;l=us" alt="thanhansoft" /></a></p>
+                    <p><a href="ymsgr:sendim?thanhansoft&amp;m=Xin chào, tôi muốn hỏi về sản phẩm - dịch vụ của Dos.vn" title="Chat thanhansoft"><img src="http://opi.yahoo.com/online?u=thanhansoft&amp;m=g&amp;t=1&amp;l=us" alt="thanhansoft" /></a></p>
                     <p>E: support@dos.vn </p>
                     <p>T: 0929 001 001</p>
+				</div><div class="clear"></div>
+			</li>
+			<li>
+				<div class="img-port"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-port.png" alt="img support" /></div>
+				<div class="ten-port">
+                    <p><a href="ymsgr:sendim?groupitsoft&amp;m=Xin chào, tôi muốn hỏi về sản phẩm - dịch vụ của Dos.vn" title="Chat groupitsoft"><img src="http://opi.yahoo.com/online?u=groupitsoft&amp;m=g&amp;t=1&amp;l=us" alt="groupitsoft" /></a></p>
+                    <p>E: support@dos.vn </p>
+                    <p>T: 0942 001 001</p>
+				</div><div class="clear"></div>
+			</li>
+			<li>
+				<div class="img-port"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img-port-2.png" alt="img support" /></div>
+				<div class="ten-port">
+                    <p><a href="ymsgr:sendim?maioanh7887&amp;m=Xin chào, tôi muốn hỏi về sản phẩm - dịch vụ của Dos.vn" title="Chat maioanh7887"><img src="http://opi.yahoo.com/online?u=maioanh7887&amp;m=g&amp;t=1&amp;l=us" alt="groupitsoft" /></a></p>
+                    <p>E: maioanh@dos.vn </p>
+                    <p>T: 0942 001 001</p>
 				</div><div class="clear"></div>
 			</li>
         </ul> <!--End support-->

@@ -2,6 +2,7 @@
 <?php $this->pageTitle = $this->lang['cart'] . ' - ' . $this->lang[$this->module->id]; ?>
 
 <h1 class="title-right"><span><?php echo Yii::t('user', 'shoppingcart')?></span></h1>
+<div class="frame-tent-right">
 <form name="order" action="" method="post" >
     <table class="form_order" cellspacing="0" cellpadding="5" width="100%">
         <thead>
@@ -48,3 +49,4 @@
         <a href="<?php echo Yii::app()->baseUrl . LANGURL?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo Yii::t('user', 'products.delallcart.link')?>" class="btn_order" title="<?php echo Yii::t('user', 'products.delallcart.name')?>"><?php echo Yii::t('user', 'products.delallcart.name')?></a>
     </div>
 </form>
+</div>

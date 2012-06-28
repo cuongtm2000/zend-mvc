@@ -4,6 +4,8 @@
 <?php if(Yii::app()->user->hasFlash('contactSuccess')): ?>
     <?php echo Yii::app()->user->getFlash('contactSuccess'); ?>
 <?php else: ?>
+<h1 class="title-right"><span><?php echo Yii::t('user', 'products.purchase.shopping')?></span></h1>
+<div class="frame-tent-right">
     <table class="form_order" cellspacing="0" cellpadding="5" width="100%">
         <thead>
             <tr align="center">
@@ -46,7 +48,7 @@
     </table>
 
     <h3 class="notificaion"><strong><?php echo Yii::t('user', 'shoppingcart')?></strong></h3>
-     <div class="frame-tent-right"><?php $form = $this->beginWidget('CActiveForm', array('id' => 'user-form', 'enableAjaxValidation' => false, 'htmlOptions' => array('class' => 'form-all'))); ?>
+    <?php $form = $this->beginWidget('CActiveForm', array('id' => 'user-form', 'enableAjaxValidation' => false, 'htmlOptions' => array('class' => 'form-all'))); ?>
         <p class="note"><?php echo $this->lang['contact_msg']?></p>
         <?php echo $form->errorSummary($model, ''); ?>
         <ul class="frame-contact frm-cart">
@@ -76,5 +78,5 @@
             </li>
         </ul>
         <?php $this->endWidget(); ?>
-    </div>
+</div>
 <?php endif?>
