@@ -6,7 +6,7 @@
 <div class="frame-pro-info">
 	<?php if($item['pic_full']): ?>
 	<div class="img_info"><a href="<?php echo Yii::app()->baseUrl.USERFILES ?>/<?php echo $this->module->id?>/<?php echo $item['pic_full'] ?>" rel="photo" title="<?php echo $item['title'.LANG] ?>">
-		<img id="bigpic" src="<?php echo Yii::app()->baseUrl.USERFILES ?>/<?php echo $this->module->id?>/<?php echo $item['pic_thumb'] ?>" title="<?php echo $item['title'.LANG] ?>" alt="<?php echo $item['title'.LANG] ?>" />
+		<img id="bigpic" src="<?php echo Yii::app()->baseUrl.USERFILES ?>/<?php echo $this->module->id?>/<?php echo $item['pic_full'] ?>" title="<?php echo $item['title'.LANG] ?>" alt="<?php echo $item['title'.LANG] ?>" />
 		</a>
 		<p class="view_full"><a href="<?php echo Yii::app()->baseUrl.USERFILES ?>/<?php echo $this->module->id?>/<?php echo $item['pic_full'] ?>" rel="photo" title="<?php echo $item['title'.LANG] ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/img_zoom.png" alt="zoom" />Xem đầy đủ</a></p>
 	</div>
