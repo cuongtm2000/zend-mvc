@@ -22,6 +22,8 @@
  * @property DosBussiness $dosBussinessBussiness
  */
 class Customers extends CActiveRecord {
+    private $_model;
+
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
@@ -235,5 +237,28 @@ class Customers extends CActiveRecord {
                 }
             }
         }
+    }
+
+    //Back end - Get record to Edit
+    public function loadEdit($id) {
+        $this->_model = $this::model()->findByPk($id);
+
+        if ($this->_model === null) {
+            throw new CHttpException(404, 'The requested page does not exist.');
+        }
+        return $this->_model;
+    }
+
+    //Back end - Change info
+    public function changeInfo($customer_id, $customer_name, $address, $website, $expired_date, $dos_bussiness_bussiness_id){
+        $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET customer_name=:customer_name, address=:address, website=:website, expired_date=:expired_date, dos_bussiness_bussiness_id=:bussiness WHERE customer_id=:customer_id');
+
+        $command->bindParam(":customer_name", $customer_name, PDO::PARAM_STR);
+        $command->bindParam(":address", $address, PDO::PARAM_STR);
+        $command->bindParam(":website", $website, PDO::PARAM_STR);
+        $command->bindParam(":expired_date", $expired_date, PDO::PARAM_STR);
+        $command->bindParam(":bussiness", $dos_bussiness_bussiness_id, PDO::PARAM_STR);
+        $command->bindParam(":customer_id", $customer_id, PDO::PARAM_STR);
+        $command->execute();
     }
 }
