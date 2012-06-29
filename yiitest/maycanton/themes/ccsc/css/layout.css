@@ -20,8 +20,7 @@ a:hover{color:#000;}
 
 #nav{ list-style:none;background:url(../images/line2.png) repeat-x;height:30px}
 #nav li{float:left;position:relative;background:url(../images/line.png) no-repeat right; }
-#nav .time-day{padding:9px 10px 8px 10px;color:#fff;font-size:8pt; font-weight: bold}
-#nav li a{padding:7px 29px;text-transform:capitalize;display:block; color:#fff;font-size:10pt}
+#nav li a{padding:7px 38px;text-transform:capitalize;display:block; color:#fff;font-size:10pt}
 #nav li a:hover{background:#fff;color:#000}
 #nav .none-line{background:none}
 #nav .none-line a{padding:7px 32px 7px 31px}
@@ -192,9 +191,10 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .notificaion{color:#2C2C2C;font-size:10pt;margin:0 0 10px 0}
 .note span{color:#f00}
 
-
 .galleryview {text-align:center}
 .panel-overlay{text-align:left;top:300px;position:absolute; z-index:999}
+.panel-overlay a{text-decoration:none !important}
+.panel-overlay a:hover{color:#f90 !important}
 
 .filmstrip{list-style:none;margin:0 !important;padding:18px 0 0 0}
 .filmstrip li{margin:0 10px 0 0 !important}
