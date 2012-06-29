@@ -24,6 +24,8 @@
  */
 class ProductsFeature extends CActiveRecord {
 
+    public $area_n, $area_d, $area_build_n, $area_build_d;
+
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
@@ -49,7 +51,7 @@ class ProductsFeature extends CActiveRecord {
         return array(
             array('area_used, num_floor, direction, legal, road', 'required'),
             array('num_floor, sittingrom, bedroom, bathroom, other_room', 'numerical', 'integerOnly' => true),
-            array('area, area_build, area_used', 'numerical'),
+            array('area_used', 'numerical'), //$area_n,$area_d,$area_build_n,$area_build_d
             array('direction, street, legal, road', 'length', 'max' => 45),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
@@ -121,8 +123,12 @@ class ProductsFeature extends CActiveRecord {
     public function listItem() {
         return $this->model()->findAll();
     }
-    public function save_data($id) {
-        $this->product_id=$id;
+
+    public function save_data($id, $data) {
+        $this->attributes = $data;
+        $this->product_id = $id;
+        $this->area = $data['area_n'] . 'm x ' . $data['area_d'] . 'm';
+        $this->area_build = $data['area_build_n'] . 'm x ' . $data['area_build_d'] . 'm';
         $this->save();
     }
 

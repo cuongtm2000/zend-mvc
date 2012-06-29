@@ -69,7 +69,7 @@ class Products extends CActiveRecord {
         // class name for the relations automatically generated below.
         return array(
             'ProductsCat' => array(self::BELONGS_TO, 'ProductsCat', 'dos_module_item_cat_cat_id'),
-            'dosDistrictsDistrict' => array(self::BELONGS_TO, 'DosDistricts', 'dos_districts_district_id'),
+            'District' => array(self::BELONGS_TO, 'Districts', 'dos_districts_district_id'),
             'dosModuleItemTypeType' => array(self::BELONGS_TO, 'ProductsType', 'dos_module_item_type_type_id'),
             'productsFeature' => array(self::HAS_ONE, 'ProductsFeature', 'product_id'),
             'productsUtility' => array(self::HAS_ONE, 'ProductsUtility', 'product_id'),
