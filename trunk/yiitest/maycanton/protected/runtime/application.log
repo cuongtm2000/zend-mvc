@@ -6856,3 +6856,6 @@ HTTP_REFERER=http://dos.vn/maycanton/san-pham/may-can-ton
 2012/06/28 09:03:19 [warning] [application] Failed to set unsafe attribute "remove_pic_thumb" of "Products".
 in D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php (178)
 in D:\svn\maycanton\index.php (16)
+2012/06/29 04:49:19 [warning] [application] Failed to set unsafe attribute "remove_pic_thumb" of "Products".
+in D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php (178)
+in D:\svn\maycanton\index.php (16)
