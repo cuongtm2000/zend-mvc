@@ -1,5 +1,6 @@
 <?php $this->beginContent('//layouts/main'); ?>
-<div id="content">
-	abc <?php echo $content; ?>
+<div>
+	<?php echo $content; ?>
 </div><!-- content -->
+Alo 123
 <?php $this->endContent(); ?>

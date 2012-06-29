@@ -43,8 +43,8 @@
 	<?php endif?>
 	
 	<div style="background: red">
-		<?php //echo $this->renderPartial('menu_about') ?>
-		<?php //echo $this->renderPartial('support') ?>
+		<?php echo $this->renderPartial('//about/default/menu_about') ?>
+		<?php echo $this->renderPartial('//services/menu_services') ?>
 	</div>
 
 	<?php echo $content; ?>
