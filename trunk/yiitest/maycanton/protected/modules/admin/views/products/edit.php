@@ -115,6 +115,12 @@
     </div>
     <div class="clear space"></div>
 
+    <div class="col1"><?php echo $form->labelEx($model, 'extra_field1') ?></div>
+    <div class="col2">
+        <?php echo $form->textField($model, 'extra_field1', $htmlOptions = array('class' => 'txt-very-large')); ?>
+    </div>
+    <div class="clear space"></div>
+
 	<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
 	<div class="col1"><?php echo $form->labelEx($model, 'tag'.$lang) ?></div>
 	<div class="col2">
@@ -156,7 +162,7 @@
     </div>
     <div class="clear space"></div>
 
-    <?php if ($model->pic_desc): ?>
+    <!-- <?php if ($model->pic_desc): ?>
         <?php $str = explode('|', $model->pic_desc); ?>
         <?php foreach ($str as $value): ?>
             <div class="col1"><?php echo $form->labelEx($model, 'pic_desc') ?></div>
@@ -168,7 +174,7 @@
         <?php endforeach; ?>
     <?php endif; ?>
 
-    <p class="rows"><a href="#" id="add-rows"><?php echo $this->lang['pic_desc']?></a></p>
+    <p class="rows"><a href="#" id="add-rows"><?php echo $this->lang['pic_desc']?></a></p> -->
 
     <div class="col1"><?php echo $form->labelEx($model, 'hot', $htmlOptions = array('for' => ucfirst($this->ID) . '_hot_0')) ?></div>
     <div class="col2 radio">
@@ -193,11 +199,11 @@
 <?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
 	<?php $this->widget('ext.seoAlias.seoAlias', array('model' => $model, 'source' => 'title'.$lang, 'target' => 'tag'.$lang)); ?>
 <?php endforeach?>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     $(document).ready(function(){
         $("#add-rows").click(function(){
             $(".rows").before('<div class="col1"><?php echo $this->lang['pic_desc']?></div><div class="col2"><input type="file" name="<?php echo ucfirst($this->ID) ?>[pic_desc][]" size="40%" /></div><div class="clear space"></div>');
             return false;
         });
     });
-</script>
+</script> -->

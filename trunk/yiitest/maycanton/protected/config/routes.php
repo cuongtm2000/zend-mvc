@@ -41,6 +41,7 @@ return array(
     '<video:(video)>' => 'video/default/index', //index
     '<video:(video)>/<cid:[-a-z0-9]+>/trang/<page:\d+>' => array('video/default/cats'), //cat paging
     '<video:(video)>/<cid:[-a-z0-9]+>' => array('video/default/cats'), //cat
+    '<video:(video)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('video/default/view', 'urlSuffix' => '.html'), //view
 
     //contact modules
     '<contact:(lien-he)>' => 'contact/default/index', //index

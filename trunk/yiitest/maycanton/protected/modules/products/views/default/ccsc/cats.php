@@ -39,7 +39,9 @@
 					</a> 
 				<?php endif; ?>
 				<div class="panel-overlay">      
-				  <p><strong>Model: <?php echo $value['title' . LANG] ?> , Video clip  <a href='hien_thi_noi_dung_vd.php?MSP=16&MND=51'><img src='<?php echo Yii::app()->theme->baseUrl; ?>/images/icon38.png' border='0'/></a>. Chi tiết sản phẩm <a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/kedit.png" alt="kedit"/></a></strong></p>
+				  <p><strong>Model: <?php echo $value['title' . LANG] ?> ,
+                      <?php if($value['extra_field1']): ?>Video clip  <a href="<?php echo $value['extra_field1'] ?>" title="Video <?php echo $value['title' . LANG] ?>"><img src='<?php echo Yii::app()->theme->baseUrl; ?>/images/icon38.png' border='0'/></a>,<?php endif?>
+                      Chi tiết sản phẩm <a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/kedit.png" alt="kedit"/></a></strong></p>
 				</div>
 			</div>
 		 <?php endforeach; ?>
