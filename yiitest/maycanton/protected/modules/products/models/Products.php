@@ -94,7 +94,7 @@ class Products extends CActiveRecord {
 			'hot' => Yii::app()->controller->lang['hot'],
 			'specials' => 'Specials',
 			'remove_pic_thumb' => Yii::app()->controller->lang['remove_pic'],
-			//'extra_field1' => 'Extra Field1',
+			'extra_field1' => 'Link Video',
 			//'extra_field2' => 'Extra Field2',
 			//'extra_field3' => 'Extra Field3',
 			//'extra_field4' => 'Extra Field4',
@@ -164,6 +164,7 @@ class Products extends CActiveRecord {
 		$this->tagen = $purifier->purify(trim($this->tagen));
 		$this->description = $purifier->purify(trim($this->description));
 		$this->descriptionen = $purifier->purify(trim($this->descriptionen));
+        $this->extra_field1 = $purifier->purify(trim($this->extra_field1));
 
 		if ($this->isNewRecord) {
 			$this->record_order = $this->maxRecordOrder();
@@ -178,11 +179,11 @@ class Products extends CActiveRecord {
 				$this->pic_full = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_full'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id, $this->title);
 			}
 			//pic_desc
-			if (isset($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_desc'])) {
+			/*if (isset($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_desc'])) {
 				Yii::import('ext.simpleImage.CSimpleImage');
 				$file = new CSimpleImage();
 				$this->pic_desc = implode("|", $file->uploadMulti($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_desc'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_desc'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id, $this->title));
-			}
+			}*/
 		} else {
 			//check file old and upload
 			if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
@@ -208,7 +209,7 @@ class Products extends CActiveRecord {
 				$this->pic_full = $this->_oldImage_full;
 			}
 			//check remove pic_desc
-			if (isset($_POST['Products']['remove_pic_desc'])) {
+			/*if (isset($_POST['Products']['remove_pic_desc'])) {
 				$str = explode('|', $this->_oldImage_desc);
 				foreach ($_POST['Products']['remove_pic_desc'] as $value) {
 					$common_class = new Common();
@@ -230,7 +231,7 @@ class Products extends CActiveRecord {
 					array_push($pic_desc, $value);
 				}
 				$this->pic_desc = implode("|", $pic_desc);
-			}
+			}*/
 		}
 
 		return parent::beforeSave();
@@ -263,7 +264,7 @@ class Products extends CActiveRecord {
 	//Front end - list Item by Cat
 	public function listItemByCat($cid) {
 		$criteria = new CDbCriteria();
-		$criteria->select = 'title' . LANG . ', pic_thumb, pic_full, tag' . LANG . ', unit,record_id';
+		$criteria->select = 'title' . LANG . ', pic_thumb, pic_full, tag' . LANG . ', unit,record_id,extra_field1';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
 		$criteria->params = array(':cid' => $cid);
