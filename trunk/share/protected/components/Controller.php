@@ -1,94 +1,92 @@
 <?php
 
 class Controller extends CController {
-	public $menu = array();
-	public $breadcrumbs = array();
 
-	public $nav;
-	public $title;
-	public $keywords;
-	public $description;
-	public $analytics;
+    public $menu = array();
+    public $breadcrumbs = array();
+    public $nav;
+    public $title;
+    public $keywords;
+    public $description;
+    public $analytics;
+    public $function = array(); //for show, hidden function
+    public $lang = array(); //language
+    public $configs = array();
+    public $numLang = array();
+    public $logo = array(); //Logo
+    public $banner = array(); //Banner
 
-	public $function = array(); //for show, hidden function
-	public $lang = array(); //language
-	public $configs = array();
+    public function init() {
+        Common::setLanguage(); //setting language
 
-	public $numLang = array();
+        $username = new Username();
+        $info_user = $username->infoUser('user');
 
-	public $logo = array(); //Logo
-	public $banner = array(); //Banner
+        Yii::app()->theme = $info_user['dos_templates_template']; //template use by 'admin'
+        Yii::app()->session['template'] = $info_user['dos_templates_template']; //session template use
+        define('USERFILES', '/public/userfiles/image/' . $info_user['username'] . '/image');
 
-	public function init() {
-		Common::setLanguage(); //setting language
+        $this->numLang = explode('|', $info_user['language']);
+        if (isset($_GET['language']) && !in_array($_GET['language'], $this->numLang)) {
+            $this->redirect(Yii::app()->request->baseUrl . '/error'); //Ngon ngu khong duoc su dung
+        }
 
-		$username = new Username();
-		$info_user = $username->infoUser('user');
+        //Set title, keywords and description
+        $web_class = new Web();
+        $this->title = $web_class->setWebValue('title');
+        $this->keywords = $web_class->setWebValue('keywords');
+        $this->description = $web_class->setWebValue('description');
+        $this->analytics = $web_class->setWebValue('analytics');
 
-		Yii::app()->theme = $info_user['dos_templates_template']; //template use by 'admin'
-		Yii::app()->session['template'] = $info_user['dos_templates_template']; //session template use
-		define('USERFILES', '/public/userfiles/image/' . $info_user['username'] . '/image');
+        //Set page load file
+        $loadFiles_class = new Loadfiles;
+        $loadFiles_class->getFileByTemplateModule($info_user['dos_templates_template'], $this->module->id);
 
-		$this->numLang = explode('|', $info_user['language']);
-		if (isset($_GET['language']) && !in_array($_GET['language'], $this->numLang)) {
-			$this->redirect(Yii::app()->request->baseUrl . '/error'); //Ngon ngu khong duoc su dung
-		}
+        //Set navigation
+        $menus_class = new Menus();
+        $this->nav = $menus_class->setMenu();
 
-		//Set title, keywords and description
-		$web_class = new Web();
-		$this->title = $web_class->setWebValue('title');
-		$this->keywords = $web_class->setWebValue('keywords');
-		$this->description = $web_class->setWebValue('description');
-		$this->analytics = $web_class->setWebValue('analytics');
+        //Set function
+        $load_function = new TemplateModule();
+        $func = $load_function->getFunction($info_user['dos_templates_template'], $this->module->id);
+        foreach ($func as $value) {
+            Yii::app()->getModule($value['module']);
+            $load = new $value['module_id']();
+            $this->function[$value['value_name']] = $load->$value['function_name']();
+        }
+        Yii::app()->getModule('products');
+        $load = new ProductsCat();
+        $this->function['menu_products'] = $load->listItem();
+        $load = new ProductsType();
+        $this->function['menu_productstype'] = $load->listItem();
 
-		//Set page load file
-		$loadFiles_class = new Loadfiles;
-		$loadFiles_class->getFileByTemplateModule($info_user['dos_templates_template'], $this->module->id);
+        //Set Logo, Banner
+        $banner = new Banner();
+        $this->logo = $banner->getLogo();
+        $this->banner = $banner->getBanner($this->module->getName());
 
-		//Set navigation
-		$menus_class = new Menus();
-		$this->nav = $menus_class->setMenu();
+        //Set configs
+        $this->configs = Configs::template($info_user['dos_templates_template']);
 
-		//Set function
-		$load_function = new TemplateModule();
-		$func = $load_function->getFunction($info_user['dos_templates_template'], $this->module->id);
-		foreach ($func as $value) {
-			Yii::app()->getModule($value['module']);
-			$load = new $value['module_id']();
-			$this->function[$value['value_name']] = $load->$value['function_name']();
-		}
-                Yii::app()->getModule('products');
-		$load = new ProductsCat();
-                $this->function['menu_products']=$load->listItem();
-                $load = new ProductsType();
-                $this->function['menu_productstype']=$load->listItem();
+        //Setup lang
+        $this->lang = Langs::setLangs();
+    }
 
-		//Set Logo, Banner
-		$banner = new Banner();
-		$this->logo = $banner->getLogo();
-		$this->banner = $banner->getBanner($this->module->getName());
+    /**
+     * Set tag title, description web page
+     */
+    protected function setSeoPage() {
+        $seo = Menus::getSeoPage($this->module->id);
 
-		//Set configs
-		$this->configs = Configs::template($info_user['dos_templates_template']);
+        if ($seo['title' . LANG]) {
+            $this->pageTitle = $seo['title' . LANG];
+        } else {
+            $this->pageTitle = $this->lang[$this->module->id];
+        }
 
-		//Setup lang
-		$this->lang = Langs::setLangs();
-	}
+        if ($seo['description' . LANG]) {
+            $this->description = $seo['description' . LANG];
+        }
+    }
 
-	/**
-	 * Set tag title, description web page
-	 */
-	protected function setSeoPage() {
-		$seo = Menus::getSeoPage($this->module->id);
-
-		if ($seo['title' . LANG]) {
-			$this->pageTitle = $seo['title' . LANG];
-		} else {
-			$this->pageTitle = $this->lang[$this->module->id];
-		}
-
-		if ($seo['description' . LANG]) {
-			$this->description = $seo['description' . LANG];
-		}
-	}
 }

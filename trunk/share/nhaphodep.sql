@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 25, 2012 at 02:32 AM
+-- Generation Time: Jun 29, 2012 at 06:29 AM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -1298,14 +1298,26 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`),
   KEY `dos_districts_district_id` (`dos_districts_district_id`),
   KEY `dos_module_item_type_type_id` (`dos_module_item_type_type_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
 
 --
 -- Dumping data for table `dos_module_products`
 --
 
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `unit_currency`, `unit_unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_type_type_id`, `dos_module_item_cat_cat_id`, `dos_districts_district_id`, `address`, `contact_name`, `contact_add`, `contact_mobile`, `contact_tel`) VALUES
-(12, 'Nhà mới', '', '2012-06-25 00:13:10', '', '', NULL, '', '', '<p>gghgjkl;</p>', '', 'nha-moi-12', '', '', '', 0, 12, '76', 'VND', 'm2', 0, NULL, NULL, NULL, NULL, NULL, 1, 2, 534, 103, 'Vinh Cuu', 'NInh', '', '24356577879', '');
+(12, 'Nhà mới', '', '2012-06-25 00:13:10', '', '', NULL, '', '', '<p>gghgjkl;</p>', '', 'nha-moi-12', '', '', '', 0, 12, '76', 'VND', 'm2', 0, NULL, NULL, NULL, NULL, NULL, 1, 2, 534, 103, 'Vinh Cuu', 'NInh', '', '24356577879', ''),
+(13, 'Nhà bán nè, ai mua ko', '', '2012-06-29 02:08:11', '', '', NULL, '', '', '<p>VI TÍNHThứ sáu, 29/6/2012, 00:31 GMT+7<br />E-mail Bản In<br />Thị trường tablet chính thức bước vào cuộc đại chiến</p>\r\n<p>Hai lễ công bố đặc biệt cùng diễn ra vào cuối tháng 6/2012 của Microsoft và Google đã hình thành bộ tứ quyền lực trên thị trường máy tính bảng gồm iPad, Kindle Fire, Surface và Nexus 7.</p>\r\n<p>Cơn sốt máy tính bảng được Apple mở ra đầu năm 2010 trở thành nỗi thất vọng khi sau gần 2 năm, các nhà sản xuất vẫn chưa thể cho ra đời một sản phẩm đủ sức tạo nên cuộc đua song mã, tam mã với iPad. Giới phân tích không nhìn thấy cuộc cạnh tranh thực sự trong mảng máy tính bảng mà họ có cảm giác các hãng chỉ như đang "thử nghiệm", "tập dượt" chứ chưa thực sự biết mình phải làm gì.</p>\r\n<p>Kindle Fire thành công nhờ giá rẻ và hệ sinh thái thiết bị - nội dung - dịch vụ hoàn thiện.<br />Khi Amazon quyết định giới thiệu tablet, nhiều người cho rằng họ sẽ rơi vào cảnh "trâu chậm uống nước đục" vì iPad đã tung hoành được gần 2 năm. Nhưng Kindle Fire đã nhanh chóng trở thành máy tính bảng Android hot nhất trên thị trường dù nó không hẳn là một thiết bị có kiểu dáng đẹp. Có hai nguyên nhân chính cho sự thành công của sản phẩm. Thứ nhất, Amazon không cố tạo ra một sản phẩm đối đầu trực tiếp với Apple như Motorola, Samsung... mà hướng đến thị trường bình dân. Tuy nhiên, Kindle Fire không phải tablet giá rẻ đầu tiên xuất hiện, nhưng nó lại thu hút sự chú ý nhất. Đó là nhờ nguyên nhân thứ hai mà CEO Jeff Bezos đã chỉ ra: "Các hãng không thành công vì họ chỉ cố tạo ra tablet. Họ không tạo ra dịch vụ". Amazon nắm trong tay thứ mà các nhà sản xuất khác đều hiểu là họ cần phải thực hiện nhưng lại không dễ xây dựng: nội dung đủ lớn để tạo nên một hệ sinh thái hoàn chỉnh xung quanh thiết bị (giống như iPad với App Store).</p>', '', 'nha-ban-ne-ai-mua-ko', '', '', '', 0, 13, '12312', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 2, 534, 6, 'Lô J số 7', 'NInh', '', '24356577879', ''),
+(14, 'Nhà bán nè, ai mua ko', '', '2012-06-29 02:45:12', '', 'nh-bn-n-ai-mua-ko.jpg', NULL, '', '', '<p>VI TÍNHThứ sáu, 29/6/2012, 00:31 GMT+7<br />E-mail Bản In<br />Thị trường tablet chính thức bước vào cuộc đại chiến</p>\r\n<p>Hai lễ công bố đặc biệt cùng diễn ra vào cuối tháng 6/2012 của Microsoft và Google đã hình thành bộ tứ quyền lực trên thị trường máy tính bảng gồm iPad, Kindle Fire, Surface và Nexus 7.</p>\r\n<p>Cơn sốt máy tính bảng được Apple mở ra đầu năm 2010 trở thành nỗi thất vọng khi sau gần 2 năm, các nhà sản xuất vẫn chưa thể cho ra đời một sản phẩm đủ sức tạo nên cuộc đua song mã, tam mã với iPad. Giới phân tích không nhìn thấy cuộc cạnh tranh thực sự trong mảng máy tính bảng mà họ có cảm giác các hãng chỉ như đang "thử nghiệm", "tập dượt" chứ chưa thực sự biết mình phải làm gì.</p>\r\n<p>Kindle Fire thành công nhờ giá rẻ và hệ sinh thái thiết bị - nội dung - dịch vụ hoàn thiện.<br />Khi Amazon quyết định giới thiệu tablet, nhiều người cho rằng họ sẽ rơi vào cảnh "trâu chậm uống nước đục" vì iPad đã tung hoành được gần 2 năm. Nhưng Kindle Fire đã nhanh chóng trở thành máy tính bảng Android hot nhất trên thị trường dù nó không hẳn là một thiết bị có kiểu dáng đẹp. Có hai nguyên nhân chính cho sự thành công của sản phẩm. Thứ nhất, Amazon không cố tạo ra một sản phẩm đối đầu trực tiếp với Apple như Motorola, Samsung... mà hướng đến thị trường bình dân. Tuy nhiên, Kindle Fire không phải tablet giá rẻ đầu tiên xuất hiện, nhưng nó lại thu hút sự chú ý nhất. Đó là nhờ nguyên nhân thứ hai mà CEO Jeff Bezos đã chỉ ra: "Các hãng không thành công vì họ chỉ cố tạo ra tablet. Họ không tạo ra dịch vụ". Amazon nắm trong tay thứ mà các nhà sản xuất khác đều hiểu là họ cần phải thực hiện nhưng lại không dễ xây dựng: nội dung đủ lớn để tạo nên một hệ sinh thái hoàn chỉnh xung quanh thiết bị (giống như iPad với App Store).</p>', '', 'nha-ban-ne-ai-mua-ko1', '', '', '', 0, 14, '12312', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 2, 534, 6, 'Lô J số 7', 'NInh', '', '24356577879', ''),
+(15, 'Nhà bán nè, ai mua ko', '', '2012-06-29 03:26:48', '', '', NULL, '', '', '<p>VI TÍNHThứ sáu, 29/6/2012, 00:31 GMT+7<br />E-mail Bản In<br />Thị trường tablet chính thức bước vào cuộc đại chiến</p>\r\n<p>Hai lễ công bố đặc biệt cùng diễn ra vào cuối tháng 6/2012 của Microsoft và Google đã hình thành bộ tứ quyền lực trên thị trường máy tính bảng gồm iPad, Kindle Fire, Surface và Nexus 7.</p>\r\n<p>Cơn sốt máy tính bảng được Apple mở ra đầu năm 2010 trở thành nỗi thất vọng khi sau gần 2 năm, các nhà sản xuất vẫn chưa thể cho ra đời một sản phẩm đủ sức tạo nên cuộc đua song mã, tam mã với iPad. Giới phân tích không nhìn thấy cuộc cạnh tranh thực sự trong mảng máy tính bảng mà họ có cảm giác các hãng chỉ như đang "thử nghiệm", "tập dượt" chứ chưa thực sự biết mình phải làm gì.</p>', '', 'nha-ban-ne-ai-mua-ko2', '', '', '', 0, 15, '12312', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 2, 534, 6, 'Lô J số 7', 'NInh', '', '24356577879', ''),
+(16, 'Nhà bán nè, ai mua ko', '', '2012-06-29 03:33:31', '', '', NULL, '', '', '<p>VI TÍNHThứ sáu, 29/6/2012, 00:31 GMT+7<br />E-mail Bản In<br />Thị trường tablet chính thức bước vào cuộc đại chiến</p>\r\n<p>Hai lễ công bố đặc biệt cùng diễn ra vào cuối tháng 6/2012 của Microsoft và Google đã hình thành bộ tứ quyền lực trên thị trường máy tính bảng gồm iPad, Kindle Fire, Surface và Nexus 7.</p>\r\n<p>Cơn sốt máy tính bảng được Apple mở ra đầu năm 2010 trở thành nỗi thất vọng khi sau gần 2 năm, các nhà sản xuất vẫn chưa thể cho ra đời một sản phẩm đủ sức tạo nên cuộc đua song mã, tam mã với iPad. Giới phân tích không nhìn thấy cuộc cạnh tranh thực sự trong mảng máy tính bảng mà họ có cảm giác các hãng chỉ như đang "thử nghiệm", "tập dượt" chứ chưa thực sự biết mình phải làm gì.</p>', '', 'nha-ban-ne-ai-mua-ko3', '', '', '', 0, 16, '12312', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 2, 534, 6, 'Lô J số 7', 'Ninh', '', '24356577879', ''),
+(17, 'Nhà bán nè, ai mua ko', '', '2012-06-29 03:35:52', '', 'nh-bn-n-ai-mua-ko-3.jpg', NULL, '', '', '<p>VI TÍNHThứ sáu, 29/6/2012, 00:31 GMT+7<br />E-mail Bản In<br />Thị trường tablet chính thức bước vào cuộc đại chiến</p>\r\n<p>Hai lễ công bố đặc biệt cùng diễn ra vào cuối tháng 6/2012 của Microsoft và Google đã hình thành bộ tứ quyền lực trên thị trường máy tính bảng gồm iPad, Kindle Fire, Surface và Nexus 7.</p>\r\n<p>Cơn sốt máy tính bảng được Apple mở ra đầu năm 2010 trở thành nỗi thất vọng khi sau gần 2 năm, các nhà sản xuất vẫn chưa thể cho ra đời một sản phẩm đủ sức tạo nên cuộc đua song mã, tam mã với iPad. Giới phân tích không nhìn thấy cuộc cạnh tranh thực sự trong mảng máy tính bảng mà họ có cảm giác các hãng chỉ như đang "thử nghiệm", "tập dượt" chứ chưa thực sự biết mình phải làm gì.</p>', '', 'nha-ban-ne-ai-mua-ko4', '', '', '', 0, 17, '12312', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 2, 534, 6, 'Lô J số 7', 'Ninh', '', '24356577879', ''),
+(18, 'Nhà bán nè, ai mua ko', '', '2012-06-29 03:37:51', '', 'nh-bn-n-ai-mua-ko-7.jpg', NULL, '', '', '<p>VI TÍNHThứ sáu, 29/6/2012, 00:31 GMT+7<br />E-mail Bản In<br />Thị trường tablet chính thức bước vào cuộc đại chiến</p>\r\n<p>Hai lễ công bố đặc biệt cùng diễn ra vào cuối tháng 6/2012 của Microsoft và Google đã hình thành bộ tứ quyền lực trên thị trường máy tính bảng gồm iPad, Kindle Fire, Surface và Nexus 7.</p>\r\n<p>Cơn sốt máy tính bảng được Apple mở ra đầu năm 2010 trở thành nỗi thất vọng khi sau gần 2 năm, các nhà sản xuất vẫn chưa thể cho ra đời một sản phẩm đủ sức tạo nên cuộc đua song mã, tam mã với iPad. Giới phân tích không nhìn thấy cuộc cạnh tranh thực sự trong mảng máy tính bảng mà họ có cảm giác các hãng chỉ như đang "thử nghiệm", "tập dượt" chứ chưa thực sự biết mình phải làm gì.</p>', '', 'nha-ban-ne-ai-mua-ko5', '', '', '', 0, 18, '12312', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 2, 534, 6, 'Lô J số 7', 'Ninh', '', '24356577879', ''),
+(19, 'Nhà bán nè, ai mua ko', '', '2012-06-29 03:41:16', '', 'nh-bn-n-ai-mua-ko-3-5.jpg', NULL, '', '', '<p>VI TÍNHThá»© sáu, 29/6/2012, 00:31 GMT+7<br />E-mail Báº£n In<br />Thá»‹ trÆ°á»ng tablet chính thá»©c bÆ°á»›c vào cuá»™c Ä‘áº¡i chiáº¿n</p>\r\n<p>Hai lá»… công bá»‘ Ä‘áº·c biá»‡t cùng diá»…n ra vào cuá»‘i tháng 6/2012 cá»§a Microsoft và Google Ä‘ã hình thành bá»™ tá»© quyá»n lá»±c trên thá»‹ trÆ°á»ng máy tính báº£ng gá»“m iPad, Kindle Fire, Surface và Nexus 7.</p>\r\n<p>CÆ¡n sá»‘t máy tính báº£ng Ä‘Æ°á»£c Apple má»Ÿ ra Ä‘áº§u nÄƒm 2010 trá»Ÿ thành ná»—i tháº¥t vá»ng khi sau gáº§n 2 nÄƒm, các nhà sáº£n xuáº¥t váº«n chÆ°a thá»ƒ cho ra Ä‘á»i má»™t sáº£n pháº©m Ä‘á»§ sá»©c táº¡o nên cuá»™c Ä‘ua song mã, tam mã vá»›i iPad. Giá»›i phân tích không nhìn tháº¥y cuá»™c cáº¡nh tranh thá»±c sá»± trong máº£ng máy tính báº£ng mà há» có cáº£m giác các hãng chá»‰ nhÆ° Ä‘ang "thá»­ nghiá»‡m", "táº­p dÆ°á»£t" chá»© chÆ°a thá»±c sá»± biáº¿t mình pháº£i làm gì.</p>', '', 'nha-ban-ne-ai-mua-ko6', '', '', '', 0, 19, '12312', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 2, 534, 6, 'Lô J số 7', 'Ninh', '', '24356577879', ''),
+(20, 'Nhà bán nè, ai mua ko', '', '2012-06-29 03:42:26', '', 'nh-bn-n-ai-mua-ko-7-6.jpg', NULL, '', '', '<p>VI TÍNHThÂ»Â© su, 29/6/2012, 00:31 GMT+7<br />E-mail BÂºÂ£n In<br />ThÂ»â€¹ trÂ°Â»ng tablet chnh thÂ»Â©c bÂ°Â»â€ºc vo cuÂ»â„¢c â€˜ÂºÂ¡i chiÂºÂ¿n</p>\r\n<p>Hai lÂ»â€¦ cng bÂ»â€˜ â€˜ÂºÂ·c biÂ»â€¡t cng diÂ»â€¦n ra vo cuÂ»â€˜i thng 6/2012 cÂ»Â§a Microsoft v Google â€˜ hnh thnh bÂ»â„¢ tÂ»Â© quyÂ»n lÂ»Â±c trn thÂ»â€¹ trÂ°Â»ng my tnh bÂºÂ£ng gÂ»â€œm iPad, Kindle Fire, Surface v Nexus 7.</p>\r\n<p>CÂ¡n sÂ»â€˜t my tnh bÂºÂ£ng â€˜Â°Â»Â£c Apple mÂ»Å¸ ra â€˜ÂºÂ§u nÆ’m 2010 trÂ»Å¸ thnh nÂ»â€”i thÂºÂ¥t vÂ»ng khi sau gÂºÂ§n 2 nÆ’m, cc nh sÂºÂ£n xuÂºÂ¥t vÂºÂ«n chÂ°a thÂ»Æ’ cho ra â€˜Â»i mÂ»â„¢t sÂºÂ£n phÂºÂ©m â€˜Â»Â§ sÂ»Â©c tÂºÂ¡o nn cuÂ»â„¢c â€˜ua song m, tam m vÂ»â€ºi iPad. GiÂ»â€ºi phn tch khng nhn thÂºÂ¥y cuÂ»â„¢c cÂºÂ¡nh tranh thÂ»Â±c sÂ»Â± trong mÂºÂ£ng my tnh bÂºÂ£ng m hÂ» c cÂºÂ£m gic cc hng chÂ»â€° nhÂ° â€˜ang "thÂ»Â­ nghiÂ»â€¡m", "tÂºÂ­p dÂ°Â»Â£t" chÂ»Â© chÂ°a thÂ»Â±c sÂ»Â± biÂºÂ¿t mnh phÂºÂ£i lm g.</p>', '', 'nha-ban-ne-ai-mua-ko7', '', '', '', 0, 20, '12312', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 2, 534, 6, 'Lô J số 7', 'Ninh', '', '24356577879', ''),
+(21, 'Nhà bán nè, ai mua ko', '', '2012-06-29 03:47:46', '', 'nh-bn-n-ai-mua-ko-8.jpg', NULL, '', '', '<p>VI TÍNHThÂ»Â© su, 29/6/2012, 00:31 GMT+7<br />E-mail BÂºÂ£n In<br />ThÂ»â‚¬Â¹ trÂ°Â»ng tablet chnh thÂ»Â©c bÂ°Â»â‚¬Âºc vo cuÂ»â€Â¢c â‚¬ËœÂºÂ¡i chiÂºÂ¿n</p>\r\n<p>Hai lÂ»â‚¬Â¦ cng bÂ»â‚¬Ëœ â‚¬ËœÂºÂ·c biÂ»â‚¬Â¡t cng diÂ»â‚¬Â¦n ra vo cuÂ»â‚¬Ëœi thng 6/2012 cÂ»Â§a Microsoft v Google â‚¬Ëœ hnh thnh bÂ»â€Â¢ tÂ»Â© quyÂ»n lÂ»Â±c trn thÂ»â‚¬Â¹ trÂ°Â»ng my tnh bÂºÂ£ng gÂ»â‚¬Å“m iPad, Kindle Fire, Surface v Nexus 7.</p>\r\n<p>CÂ¡n sÂ»â‚¬Ëœt my tnh bÂºÂ£ng â‚¬ËœÂ°Â»Â£c Apple mÂ»Â¸ ra â‚¬ËœÂºÂ§u nâ€™m 2010 trÂ»Â¸ thnh nÂ»â‚¬â€i thÂºÂ¥t vÂ»ng khi sau gÂºÂ§n 2 nâ€™m, cc nh sÂºÂ£n xuÂºÂ¥t vÂºÂ«n chÂ°a thÂ»â€™ cho ra â‚¬ËœÂ»i mÂ»â€Â¢t sÂºÂ£n phÂºÂ©m â‚¬ËœÂ»Â§ sÂ»Â©c tÂºÂ¡o nn cuÂ»â€Â¢c â‚¬Ëœua song m, tam m vÂ»â‚¬Âºi iPad. GiÂ»â‚¬Âºi phn tch khng nhn thÂºÂ¥y cuÂ»â€Â¢c cÂºÂ¡nh tranh thÂ»Â±c sÂ»Â± trong mÂºÂ£ng my tnh bÂºÂ£ng m hÂ» c cÂºÂ£m gic cc hng chÂ»â‚¬Â° nhÂ° â‚¬Ëœang "thÂ»Â­ nghiÂ»â‚¬Â¡m", "tÂºÂ­p dÂ°Â»Â£t" chÂ»Â© chÂ°a thÂ»Â±c sÂ»Â± biÂºÂ¿t mnh phÂºÂ£i lm g.</p>', '', 'nha-ban-ne-ai-mua-ko8', '', '', '', 0, 21, '12312', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 2, 534, 6, 'Lô J số 7', 'Ninh', '', '24356577879', ''),
+(22, 'Nhà bán nè, ai mua ko', '', '2012-06-29 03:51:53', '', 'nh-bn-n-ai-mua-ko-5.jpg', NULL, '', '', '<p>VI TÍNHThÂ»Â© su, 29/6/2012, 00:31 GMT+7<br />E-mail BÂºÂ£n In<br />ThÂ»â€Â¬Â¹ trÂ°Â»ng tablet chnh thÂ»Â©c bÂ°Â»â€Â¬Âºc vo cuÂ»â‚¬Â¢c â€Â¬Å“ÂºÂ¡i chiÂºÂ¿n</p>\r\n<p>Hai lÂ»â€Â¬Â¦ cng bÂ»â€Â¬Å“ â€Â¬Å“ÂºÂ·c biÂ»â€Â¬Â¡t cng diÂ»â€Â¬Â¦n ra vo cuÂ»â€Â¬Å“i thng 6/2012 cÂ»Â§a Microsoft v Google â€Â¬Å“ hnh thnh bÂ»â‚¬Â¢ tÂ»Â© quyÂ»n lÂ»Â±c trn thÂ»â€Â¬Â¹ trÂ°Â»ng my tnh bÂºÂ£ng gÂ»â€Â¬â€œm iPad, Kindle Fire, Surface v Nexus 7.</p>\r\n<p>CÂ¡n sÂ»â€Â¬Å“t my tnh bÂºÂ£ng â€Â¬Å“Â°Â»Â£c Apple mÂ»Â¸ ra â€Â¬Å“ÂºÂ§u nâ‚¬â„¢m 2010 trÂ»Â¸ thnh nÂ»â€Â¬â‚¬i thÂºÂ¥t vÂ»ng khi sau gÂºÂ§n 2 nâ‚¬â„¢m, cc nh sÂºÂ£n xuÂºÂ¥t vÂºÂ«n chÂ°a thÂ»â‚¬â„¢ cho ra â€Â¬Å“Â»i mÂ»â‚¬Â¢t sÂºÂ£n phÂºÂ©m â€Â¬Å“Â»Â§ sÂ»Â©c tÂºÂ¡o nn cuÂ»â‚¬Â¢c â€Â¬Å“ua song m, tam m vÂ»â€Â¬Âºi iPad. GiÂ»â€Â¬Âºi phn tch khng nhn thÂºÂ¥y cuÂ»â‚¬Â¢c cÂºÂ¡nh tranh thÂ»Â±c sÂ»Â± trong mÂºÂ£ng my tnh bÂºÂ£ng m hÂ» c cÂºÂ£m gic cc hng chÂ»â€Â¬Â° nhÂ° â€Â¬Å“ang "thÂ»Â­ nghiÂ»â€Â¬Â¡m", "tÂºÂ­p dÂ°Â»Â£t" chÂ»Â© chÂ°a thÂ»Â±c sÂ»Â± biÂºÂ¿t mnh phÂºÂ£i lm g.</p>', '', 'nha-ban-ne-ai-mua-ko9', '', '', '', 0, 22, '12312', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 2, 534, 6, 'Lô J số 7', 'Ninh', '', '24356577879', ''),
+(23, 'Nhà bán nè, ai mua ko', '', '2012-06-29 03:53:47', '', 'nh-bn-n-ai-mua-ko-3-3.jpg', NULL, '', '', '<p>dshdgsgdf</p>\r\n<p>g</p>\r\n<p>d</p>\r\n<p>gd</p>', '', 'nha-ban-ne-ai-mua-ko10', '', '', '', 0, 23, '12312', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 2, 534, 6, 'Lô J số 7', 'Ninh', '', '24356577879', ''),
+(24, 'Nhà bán nè, ai mua ko', '', '2012-06-29 03:56:41', '', 'nh-bn-n-ai-mua-ko-9.jpg', NULL, '', '', '<p>dshdgsgdf</p>\r\n<p>g</p>\r\n<p>d</p>\r\n<p>gd</p>', '', 'nha-ban-ne-ai-mua-ko11', '', '', '', 0, 24, '12312', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 2, 534, 6, 'Lô J số 7', 'Ninh', '', '24356577879', '');
 
 -- --------------------------------------------------------
 
@@ -1362,27 +1374,35 @@ INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `
 
 CREATE TABLE IF NOT EXISTS `dos_module_products_feature` (
   `product_id` int(11) NOT NULL AUTO_INCREMENT,
-  `area` float NOT NULL,
-  `area_build` float NOT NULL,
+  `area` varchar(45) NOT NULL,
+  `area_build` varchar(45) NOT NULL,
   `area_used` float NOT NULL,
-  `num_floor` int(11) DEFAULT NULL,
-  `sittingrom` int(11) DEFAULT NULL,
-  `bedroom` int(11) DEFAULT NULL,
-  `bathroom` int(11) DEFAULT NULL,
-  `other_room` int(11) DEFAULT NULL,
+  `num_floor` int(11) DEFAULT '0',
+  `sittingrom` int(11) DEFAULT '0',
+  `bedroom` int(11) DEFAULT '0',
+  `bathroom` int(11) DEFAULT '0',
+  `other_room` int(11) DEFAULT '0',
   `direction` varchar(45) NOT NULL,
   `street` varchar(45) NOT NULL,
   `legal` varchar(45) NOT NULL,
   `road` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
 
 --
 -- Dumping data for table `dos_module_products_feature`
 --
 
 INSERT INTO `dos_module_products_feature` (`product_id`, `area`, `area_build`, `area_used`, `num_floor`, `sittingrom`, `bedroom`, `bathroom`, `other_room`, `direction`, `street`, `legal`, `road`) VALUES
-(12, 0, 0, 1, 3, 4, NULL, 1, NULL, 'Tây', '', 'Giấy tờ hợp lệ', '768');
+(12, '0', '0', 1, 3, 4, NULL, 1, NULL, 'Tây', '', 'Giấy tờ hợp lệ', '768'),
+(13, '0', '0', 124, 5, NULL, NULL, NULL, NULL, 'Nam', '', 'Giấy tay', 'Huynh Van Nghe'),
+(14, '0', '0', 124, 5, NULL, NULL, NULL, NULL, 'Nam', '', 'Giấy tay', 'Huynh Van Nghe'),
+(18, 'm x m', 'm x m', 124, 5, NULL, NULL, NULL, NULL, 'Nam', '', 'Giấy tay', 'Huynh Van Nghe'),
+(19, 'm x m', 'm x m', 124, 5, NULL, NULL, NULL, NULL, 'Nam', '', 'Giấy tay', 'Huynh Van Nghe'),
+(20, 'm x m', 'm x m', 124, 5, NULL, NULL, NULL, NULL, 'Nam', '', 'Giấy tay', 'Huynh Van Nghe'),
+(21, 'm x m', 'm x m', 124, 5, NULL, NULL, NULL, NULL, 'Nam', '', 'Giấy tay', 'Huynh Van Nghe'),
+(23, '13m x 13m', 'm x m', 124, 5, NULL, NULL, NULL, NULL, 'Nam', '', 'Giấy tay', 'Huynh Van Nghe'),
+(24, '13m x 13m', 'm x m', 124, 5, NULL, NULL, NULL, NULL, 'Nam', '', 'Giấy tay', 'Huynh Van Nghe');
 
 -- --------------------------------------------------------
 
@@ -1433,14 +1453,25 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_utility` (
   `pool` tinyint(1) NOT NULL DEFAULT '0',
   `furniture` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
 
 --
 -- Dumping data for table `dos_module_products_utility`
 --
 
 INSERT INTO `dos_module_products_utility` (`product_id`, `telephone`, `power_meter`, `heater`, `gara`, `cable_tv`, `water_meter`, `alarm_system`, `garden`, `internet`, `air_conditioner`, `parking`, `pool`, `furniture`) VALUES
-(12, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0);
+(12, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0),
+(13, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0),
+(14, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0),
+(15, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0),
+(16, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0),
+(17, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0),
+(18, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0),
+(19, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0),
+(20, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0),
+(21, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0),
+(23, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0),
+(24, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1911,7 +1942,7 @@ ALTER TABLE `dos_configs`
 -- Constraints for table `dos_districts`
 --
 ALTER TABLE `dos_districts`
-  ADD CONSTRAINT `dos_districts_ibfk_1` FOREIGN KEY (`dos_provinces_province`) REFERENCES `dos_provinces` (`province_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `dos_districts_ibfk_2` FOREIGN KEY (`dos_provinces_province`) REFERENCES `dos_provinces` (`province_id`);
 
 --
 -- Constraints for table `dos_loadfiles`

@@ -27,12 +27,11 @@ class DefaultController extends Controller {
 
         $info_cat = $model->findTypeByTag($cid);
         $this->render(
-            Yii::app()->session['template'] . '/types',
-            array(
-                'info_cat' => $info_cat,
-                //'list_sub_cats' => $model->listItem($info_cat['cat_id']),
-                'list_items' => $items->listItemByType($info_cat['type_id'])
-            )
+                Yii::app()->session['template'] . '/types', array(
+            'info_cat' => $info_cat,
+            //'list_sub_cats' => $model->listItem($info_cat['cat_id']),
+            'list_items' => $items->listItemByType($info_cat['type_id'])
+                )
         );
     }
 
@@ -41,8 +40,14 @@ class DefaultController extends Controller {
 
         $model = ucfirst($this->module->id);
         $model_class = new $model();
-
-        $data['item'] = $model_class->detailItem($id);
+        
+        $tmp = $model_class->detailItem($id);
+        //$tmp['feature']=$tmp->productsFeature;
+        //$tmp['utility'] = $tmp->productsUtility;
+        $tmp['dos_provinces_province_id'] = Districts::getProvinceName($tmp['dos_districts_district_id']);
+        $tmp['dos_districts_district_id'] = $tmp->District['district_name'];
+        
+        $data['item'] = $tmp;
         $data['item_other'] = $model_class->listItemOther($data['item']['record_id'], $data['item']['dos_module_item_cat_cat_id']);
         $this->render(Yii::app()->session['template'] . '/view', $data);
     }

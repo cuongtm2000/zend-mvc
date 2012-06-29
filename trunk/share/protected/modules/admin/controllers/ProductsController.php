@@ -154,10 +154,10 @@ class ProductsController extends AdminController {
          //   var_dump($_POST[$model]);
             $model_class->attributes = $_POST[$model];
             $model_fearture_class->attributes = $_POST[$model]['feature'];
-           
+            //var_dump($_POST[$model]['feature']);
             if ($model_class->validate() && $model_fearture_class->validate()) {
                 $model_class->save();                
-                $model_fearture_class->save_data($model_class->record_id);
+                $model_fearture_class->save_data($model_class->record_id,$_POST[$model]['feature']);
                 $model_utility_class->save_data($model_class->record_id, $_POST[$model]['utility']);
              //   $this->redirect(array('index'));
             }

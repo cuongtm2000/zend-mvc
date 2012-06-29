@@ -31,9 +31,9 @@
 
 
         <script type="text/javascript">
-              $(document).ready(function () {
-                  $("#dos_districts_district_id").load("<?php echo Yii::app()->baseUrl ?>/admin/products/listdistrict/id/"+ $("#Products_dos_provinces_province_id").val()<?php echo $model['dos_districts_district_id']?  '+"/idd/'.$model['dos_districts_district_id'].'"':"" ?>);
-});
+            $(document).ready(function () {
+                $("#dos_districts_district_id").load("<?php echo Yii::app()->baseUrl ?>/admin/products/listdistrict/id/"+ $("#Products_dos_provinces_province_id").val()<?php echo $model['dos_districts_district_id'] ? '+"/idd/' . $model['dos_districts_district_id'] . '"' : "" ?>);
+            });
             $("#Products_dos_provinces_province_id").change(function(){
                 $("#dos_districts_district_id").load("<?php echo Yii::app()->baseUrl ?>/admin/products/listdistrict/id/"+ $("#Products_dos_provinces_province_id").val());
             });
@@ -49,7 +49,7 @@
             <?php echo $form->textField($model, 'unit', $htmlOptions = array('class' => 'txt-small')); ?>
             <?php
             $d = array('VND', 'USD', 'SJC');
-            echo $form->dropDownList($model, 'unit_currency', array_combine($d, $d), array('style' => "width:50pt",'prompt' => 'Chọn đơn vị tính'));
+            echo $form->dropDownList($model, 'unit_currency', array_combine($d, $d), array('style' => "width:50pt", 'prompt' => 'Chọn đơn vị tính'));
             ?>/
             <?php
             $dir = array("Tổng diện tích", "m2", "Tháng");
@@ -132,22 +132,20 @@
         <div class="col2">  
             <div class="col1">Diện tích khuôn viên:</div>
             <div class="col2"> 
-                <label for="width_area_before" style="width:120px; float:left;">Chiều ngang trước</label>
-                <input type="text" name="width_area_before" value="" size="10"> m
+                <label for="Products[feature][area_n]" style="width:120px; float:left;">Chiều ngang trước</label>
+                <?php echo $form->textField($model, 'feature[area_n]', $htmlOptions = array('class' => 'txt-small')); ?>m
                 <p></p>
-                <label for="width_area_after" style="width:120px; float:left;">Chiều dài</label>
-                <input type="text" name="height_area" value="" size="10"> m<p>
-
+                <label for="Products[feature][area_d]" style="width:120px; float:left;">Chiều dài</label>
+                <?php echo $form->textField($model, 'feature[area_d]', $htmlOptions = array('class' => 'txt-small')); ?>m
             </div>  <div class="clear space"></div> 
 
             <div class="col1">Diện tích xây dựng:</div>
             <div class="col2"> 
-                <label for="width_area_build_before" style="width:120px; float:left;">Chiều ngang trước</label>
-                <input type="text" name="width_area_build_before" value="" size="10"> m
+                <label for="Products[feature][area_build_n]" style="width:120px; float:left;">Chiều ngang trước</label>
+                <?php echo $form->textField($model, 'feature[area_build_n]', $htmlOptions = array('class' => 'txt-small')); ?>m
                 <p></p>
-                <label for="width_area_after" style="width:120px; float:left;">Chiều dài</label>
-                <input type="text" name="height_area_build" value="" size="10"> m
-
+                <label for="Products[feature][area_build_d]" style="width:120px; float:left;">Chiều dài</label>
+                <?php echo $form->textField($model, 'feature[area_build_d]', $htmlOptions = array('class' => 'txt-small')); ?>m    
             </div>  <div class="clear space"></div> 
 
 
