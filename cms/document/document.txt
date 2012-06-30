@@ -1,0 +1,7 @@
+Thêm Module
+	Trong module sẽ có các Function
+		Các function sẽ có các cấu hình liên quan
+		Các function sẽ hiện thị theo thứ tự tại các module khác nhau
+		
+Them template
+	Trong cac template se co các cau hinh lien quan
