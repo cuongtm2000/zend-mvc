@@ -2,7 +2,7 @@
 
 class DefaultController extends Controller {
 
-    public function actionIndex() {
+    public function actionIndex() {	
         $this->layout = '//layouts/column-3';
         $this->setSeoPage(); //set Seo page
 
@@ -36,6 +36,18 @@ class DefaultController extends Controller {
     }
 
     public function actionView($id) {
+		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/scroll.css');
+		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/jquery.fancybox.css');
+		
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jcarousellite_1.0.1.js');
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/scroller.js');
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.fancybox.js');
+		
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.scroll-1.4.2-min.js');
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.serialScroll-1.2.2-min.js');
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/product.js');
+		
+	
         $this->layout = '//layouts/column-3';
 
         $model = ucfirst($this->module->id);

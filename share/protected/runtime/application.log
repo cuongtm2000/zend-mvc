@@ -1,4 +1,4 @@
-2012/06/29 03:37:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-tin".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/30 02:41:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-tin".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
 #0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('dang-tin')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
@@ -7,64 +7,147 @@ Stack trace:
 REQUEST_URI=/nhaphodep.vn/dang-tin
 HTTP_REFERER=http://localhost/nhaphodep.vn/
 ---
-2012/06/29 03:37:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-tin.html".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('dang-tin.html')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/nhaphodep.vn/dang-tin.html
----
-2012/06/29 03:37:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-tin".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/30 02:41:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-tin".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
 #0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('dang-tin')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
 #3 {main}
 REQUEST_URI=/nhaphodep.vn/dang-tin
+HTTP_REFERER=http://localhost/nhaphodep.vn/
 ---
-2012/06/29 03:39:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-tin".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('dang-tin')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/nhaphodep.vn/dang-tin
-HTTP_REFERER=http://localhost/nhaphodep.vn/index.php
----
-2012/06/29 03:39:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-tin".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('dang-tin')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
-#3 {main}
-REQUEST_URI=/nhaphodep.vn/dang-tin
-HTTP_REFERER=http://localhost/nhaphodep.vn/index.php
----
-2012/06/29 03:42:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-detail.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/30 02:52:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-detail.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
 #0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
 #3 {main}
 REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-detail.gif
-HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/loai/cho-thue
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
 ---
-2012/06/29 03:42:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-buy.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/30 02:52:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-buy.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
 #0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
 #3 {main}
 REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-buy.gif
-HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/loai/cho-thue
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
 ---
-2012/06/29 03:42:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-tin".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+2012/06/30 02:53:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/css/jcarousellite_1.0.1.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('dang-tin')
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/c...')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
 #3 {main}
-REQUEST_URI=/nhaphodep.vn/dang-tin
-HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/loai/cho-thue
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/css/jcarousellite_1.0.1.js
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon/nha-ban-ne-ai-mua-ko11.html
+---
+2012/06/30 02:53:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/css/jquery.serialScroll-1.2.2-min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/c...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/css/jquery.serialScroll-1.2.2-min.js
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon/nha-ban-ne-ai-mua-ko11.html
+---
+2012/06/30 02:53:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/css/product.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/c...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/css/product.js
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon/nha-ban-ne-ai-mua-ko11.html
+---
+2012/06/30 02:53:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/css/jquery.scroll-1.4.2-min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/c...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/css/jquery.scroll-1.4.2-min.js
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon/nha-ban-ne-ai-mua-ko11.html
+---
+2012/06/30 02:53:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/css/scroller.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/c...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/css/scroller.js
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon/nha-ban-ne-ai-mua-ko11.html
+---
+2012/06/30 02:53:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/css/jcarousellite_1.0.1.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/c...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/css/jcarousellite_1.0.1.js
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon/nha-ban-ne-ai-mua-ko11.html
+---
+2012/06/30 02:53:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/css/product.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/c...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/css/product.js
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon/nha-ban-ne-ai-mua-ko11.html
+---
+2012/06/30 02:53:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/css/scroller.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/c...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/css/scroller.js
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon/nha-ban-ne-ai-mua-ko11.html
+---
+2012/06/30 02:53:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/css/jquery.serialScroll-1.2.2-min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/c...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/css/jquery.serialScroll-1.2.2-min.js
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon/nha-ban-ne-ai-mua-ko11.html
+---
+2012/06/30 02:53:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/css/jquery.scroll-1.4.2-min.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/c...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/css/jquery.scroll-1.4.2-min.js
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon/nha-ban-ne-ai-mua-ko11.html
+---
+2012/06/30 02:54:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/css/jcarousellite_1.0.1.js".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/c...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/css/jcarousellite_1.0.1.js
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon/nha-ban-ne-ai-mua-ko11.html
+---
+2012/06/30 03:16:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-detail.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-detail.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
+---
+2012/06/30 03:16:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/icon-pro-buy.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-buy.gif
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
 ---

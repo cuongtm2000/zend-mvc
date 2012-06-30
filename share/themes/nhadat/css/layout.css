@@ -228,41 +228,6 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .link{padding:10px 5px 2px 5px}
 .link , .link a{color:#0064a6;font-weight:bold; font-size:10pt}
 
-.frame-product-info{margin:10px 0 10px 0;background:url(../images/bg-footer-content.gif) repeat-x;padding:10px;-webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0}
-
-
-.tent-info-product{border-bottom:1px dotted #ccc}
-
-/***** Left page info   ******/
-.left-pro-info{float:left; width:24%}
-.left-pro-info ul li{}
-
-/* Bg top left info*/
-.bg-top-left-info{background:#FFE6C7 url(../images/bg-info.gif) repeat-x;margin:0 0 10px 0;list-style:none;padding:5px}
-.item-info-1 img, .item-info-2 img,.item-info-3 img{margin:0 8px 0 0}
-.item-info-1,.item-info-2,.item-info-3{float:left; width:100px}
-
-.bg-top-left-info li{margin:0 !important;padding:5px 0}
-
-/**  Sub pro info  **/
-.sub-pro-info{margin:0 0 10px 0;list-style:none;padding:0 0 0 5px}
-.sub-pro-info li{margin:0 !important;padding:3px 0}
-.sub-pro-info span{float:right}
-.sub-pro-info li label{font-weight:bold}
-
-/*Tien ich*/
-.title-utility{color:#FF8601;font-size:11pt; text-decoration:underline;margin:0 0 10px 0}
-.sub-utility{list-style:none}
-.sub-utility li{padding:3px 0}
-.sub-utility input{float:right; color:#f90}
-/****      End left page info           *****/
-
-/***** right pro info *****/
-.right-pro-info{float:right; width:55%;margin:0 60px 0}
-
-/****  End right pro info ***/
-
-
 /** Form lien he  **/
 .frame-contact{list-style:none;margin:0 0 10px 0}
 .frame-contact label{color:#555; margin:0 !important;font-weight:bold;width:100px; float:left}
@@ -327,10 +292,8 @@ float:left;width:100%;}
 
 #container_content_center_2 .container_content_center_2{margin:0 0 0 190px;}
 
-
 #container_content_center_left{margin:0 -300px 0 0}
 #container_content_right{width:300px;float:right;margin:10px 0 0 0}
-
 
 /* table format */
 table {border-collapse : separate; border-spacing : 0;width : 100%; border : 1px solid #e5e5e5;}
@@ -338,3 +301,7 @@ caption, th, td {text-align : left; font-weight : normal;}
 table, td, th {vertical-align : middle;}
 thead tr th {font-weight : bold; background : #C8EEF4; border-bottom : 1px solid #C6C6C6; padding : 5px; font-size:10pt; color:#333}
 tbody tr td {padding : 6px 5px; background : #fff; color : #111}
+
+/***  Trinh bay product info ***/
+.frame-pro-info{}
+.right-info{}

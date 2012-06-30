@@ -16,7 +16,6 @@ $this->description = $item['description' . LANG];
         <div class="row-info">
             <div id="pb-right-column">
                 <!-- product img-->
-
                 <div id="image-block">
                     <img id="bigpic" src="<?php echo Yii::app()->baseUrl . USERFILES ?>/<?php echo $this->module->id ?>/<?php echo $item['pic_full'] ?>" title="<?php echo $item['title' . LANG] ?>" alt="<?php echo $item['title' . LANG] ?>" />
                 </div>
@@ -109,7 +108,7 @@ $this->description = $item['description' . LANG];
 
 
 
-<?php var_dump($item) ?>
+
 
 
 
