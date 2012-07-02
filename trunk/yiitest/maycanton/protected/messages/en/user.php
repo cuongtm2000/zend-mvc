@@ -26,7 +26,7 @@ return array(
 
     'forms.link' => 'forms',
     'catalogue.link' => 'catalogue',
-    'customers.link' => 'Customers',
+    'customers.link' => 'customers',
     'news.link' => 'news',
     'video.link' => 'video',
     'contact.link' => 'contact',
