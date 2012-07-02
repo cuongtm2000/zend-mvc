@@ -32,7 +32,9 @@
         <div class="thumbs anyClass" id="paginate-slider2">
             <ul>
                 <?php foreach($listUserImport as $value):?>
-                    <li><a href="http://<?php echo $value['username']?>.dos.vn" target="_blank"><img src="<?php echo Yii::app()->baseUrl; ?>/public/userfiles/image/<?php echo $value['username']?>/image/demo.png" alt="<?php echo $value['username']?>" /></a></li>
+                    <li><a href="http://<?php echo $value['username']?>.dos.vn" target="_blank"><img src="<?php echo Yii::app()->baseUrl; ?>/public/userfiles/image/<?php echo $value['username']?>/image/demo.png" alt="<?php echo $value['username']?>" /></a>
+						<h4><a href="" title="">Web tao dos.vn</a></h4>
+					</li>
                 <?php endforeach?>
             </ul>
         </div>

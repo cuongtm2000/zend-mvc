@@ -65,8 +65,10 @@ a:hover{color:#000;}
 .prod_detail{position:relative;top:-20px}
 .prod_detail .big_thumb{width:960px;background:url(../images/bg-carousel-1.gif) repeat-x;border:1px solid #fff; height:158px;overflow:hidden !important;-webkit-border-radius:4px;-moz-border-radius:4px}
 .big_thumb #paginate-slider2{width:870px !important;overflow:hidden;float:left;margin:15px 0 15px 40px}
-.prod_detail #paginate-slider2 li{margin:0 15px 0 0}
-.prod_detail #paginate-slider2 img{height:112px;width:162px}
+.prod_detail #paginate-slider2 li{margin:0 15px 0 0;text-align:center}
+.prod_detail #paginate-slider2 img{height:112px;width:162px;margin:0 0 2px 0}
+.prod_detail #paginate-slider2  h4 a{color:#0275BE;display:block}
+.prod_detail #paginate-slider2  h4 a:hover{color:#000}
 .prod_detail span.prevsmall {position:absolute;left:-9px; z-index:20;margin:50px 5px 0 0; cursor:pointer}
 .prod_detail span.nextsmall {position:absolute;right:-12px;margin:50px 2px 0 0; cursor:pointer}
 
