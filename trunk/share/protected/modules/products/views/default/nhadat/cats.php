@@ -20,7 +20,6 @@
 		</li>
     <?php endforeach; ?>
 </ul>
-<div class="btom-main"></div>
 <div class="clear"></div>
 <?php endif; ?>
 
