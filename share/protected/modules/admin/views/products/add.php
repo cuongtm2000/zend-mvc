@@ -123,15 +123,15 @@
 
         <div class="col1"><?php echo $form->labelEx($model, 'utility') ?></div>
         <div class="col2">
-            <?php echo $form->checkBoxList($model, 'utility', $listItemsU, array('template' => '<div class="choose-business">{label} {input}</div>', 'separator' => '')) ?>
+            <?php echo $form->checkBoxList($model, 'utility', $listItemsU, array('template' => '<p class="check_info">{label} {input}</p>', 'separator' => '')) ?>
         </div>
         <div class="clear space"></div>    
 
 
         <div class="col1"><b>Thông tin chi tiết</b></div>
         <div class="col2">  
-            <div class="col1">Diện tích khuôn viên:</div>
-            <div class="col2"> 
+            <div class=""><b>Diện tích khuôn viên:</b></div>
+            <div class=""> 
                 <label for="Products[feature][area_n]" style="width:120px; float:left;">Chiều ngang trước</label>
                 <?php echo $form->textField($model, 'feature[area_n]', $htmlOptions = array('class' => 'txt-small')); ?>m
                 <p></p>
@@ -139,8 +139,8 @@
                 <?php echo $form->textField($model, 'feature[area_d]', $htmlOptions = array('class' => 'txt-small')); ?>m
             </div>  <div class="clear space"></div> 
 
-            <div class="col1">Diện tích xây dựng:</div>
-            <div class="col2"> 
+            <div class=""><b>Diện tích xây dựng:</b></div>
+            <div class=""> 
                 <label for="Products[feature][area_build_n]" style="width:120px; float:left;">Chiều ngang trước</label>
                 <?php echo $form->textField($model, 'feature[area_build_n]', $htmlOptions = array('class' => 'txt-small')); ?>m
                 <p></p>
