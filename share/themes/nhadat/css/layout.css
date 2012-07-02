@@ -134,7 +134,7 @@ a:hover{color:#000;}
 .bton-search-detail{font-weight:bold; background:#FF9119;color:#fff;-webkit-border-radius:4px;-moz-border-radius:4px; padding:5px 15px; border:none}
 
 /*BG footer left contet*/
-.bg-footer-left{background:url(../images/bg-footer-content.gif) repeat-x;margin:10px 0; padding:10px 2px;-webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0}
+.frame-product-info,.bg-footer-left{background:url(../images/bg-footer-content.gif) repeat-x;margin:10px 0; padding:10px 2px;-webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0}
 .title-fter-left{color:#FF8601;font-weight:bold;font-size:11pt;margin:0 0 10px 0}
 
 /*footer-left*/
