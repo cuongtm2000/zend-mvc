@@ -48,7 +48,7 @@ class DefaultController extends Controller {
 		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/product.js');
 		
 	
-        $this->layout = '//layouts/column-3';
+       $this->layout = '//layouts/column-3';
 
         $model = ucfirst($this->module->id);
         $model_class = new $model();
