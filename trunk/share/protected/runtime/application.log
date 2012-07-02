@@ -196,3 +196,39 @@ Stack trace:
 REQUEST_URI=/nhaphodep.vn/themes/nhadat/images/icon-pro-buy.gif
 HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/loai/cho-thue
 ---
+2012/07/02 06:08:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "san-pham//nha-ban-ne-ai-mua-ko11.html".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('san-pham//nha-b...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/san-pham//nha-ban-ne-ai-mua-ko11.html
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/loai/cho-thue
+---
+2012/07/02 06:08:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "san-pham//nha-ban-ne-ai-mua-ko10.html".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('san-pham//nha-b...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/san-pham//nha-ban-ne-ai-mua-ko10.html
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/loai/cho-thue
+---
+2012/07/02 06:09:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "san-pham//nha-ban-ne-ai-mua-ko11.html".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('san-pham//nha-b...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/san-pham//nha-ban-ne-ai-mua-ko11.html
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
+---
+2012/07/02 06:12:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "san-pham//nha-ban-ne-ai-mua-ko11.html".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('san-pham//nha-b...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/san-pham//nha-ban-ne-ai-mua-ko11.html
+HTTP_REFERER=http://localhost/nhaphodep.vn/san-pham/in-ky-thuat-so-kho-lon
+---
