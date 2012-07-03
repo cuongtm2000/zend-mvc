@@ -8,7 +8,6 @@
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
     'name' => 'My Web Application',
-    'theme' => 'classic',
 
     // preloading 'log' component
     'preload' => array('log'),
@@ -22,16 +21,12 @@ return array(
     'modules' => require(dirname(__FILE__) . '/LoadModules.php'),
 
     /*'modules' => array(
-        $str
-        // uncomment the following to enable the Gii tool
-
         'gii' => array(
             'class' => 'system.gii.GiiModule',
             'password' => '123',
             // If removed, Gii defaults to localhost only. Edit carefully to taste.
             'ipFilters' => array('127.0.0.1', '::1'),
         ),
-
     ),*/
 
     // application components
@@ -39,6 +34,7 @@ return array(
         'user' => array(
             // enable cookie-based authentication
             'allowAutoLogin' => true,
+            'loginUrl' => array('login')
         ),
         // uncomment the following to enable URLs in path-format
 
@@ -53,18 +49,15 @@ return array(
         ),
 
         'db' => array(
-            'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/testdrive.db',
+            'connectionString' => 'mysql:host=localhost;dbname=cms',
+            'emulatePrepare' => true,
+            'username' => 'root',
+            'password' => '',
+            'charset' => 'utf8',
+            //'enableProfiling' => true,
+            //'enableParamLogging' => true,
         ),
-        // uncomment the following to use a MySQL database
-        /*
-                  'db'=>array(
-                      'connectionString' => 'mysql:host=localhost;dbname=testdrive',
-                      'emulatePrepare' => true,
-                      'username' => 'root',
-                      'password' => '',
-                      'charset' => 'utf8',
-                  ),
-                  */
+
         'errorHandler' => array(
             // use 'site/error' action to display errors
             'errorAction' => 'site/error',
