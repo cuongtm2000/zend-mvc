@@ -88,7 +88,7 @@
                     tinyMCE.init({
                         file_browser_callback: 'openKCFinder',
                         mode:"exact",
-                        elements : "<?php echo ucfirst($this->ID) ?>_content<?php echo $lang ?>",
+                        elements : "Products_content<?php echo $lang ?>",
                         theme:"advanced",
                         language : "vi",
                         //skin : "o2k7",
