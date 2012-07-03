@@ -119,6 +119,8 @@ class ProductsUtility extends CActiveRecord {
     public function listItem() {
         return $this->model()->getAttributes();
     }
+
+
     public function getItem($id) {
           $command = Yii::app()->db->createCommand('SELECT * FROM ' . $this->tableName() . ' WHERE product_id' . LANG . '=:id');
         $command->bindParam(":id", $id, PDO::PARAM_STR);
