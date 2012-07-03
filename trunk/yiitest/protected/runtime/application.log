@@ -1,8 +1,8 @@
-﻿2012/07/02 08:12:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+﻿2012/07/03 09:33:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "nhaphodep.vn".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
 Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('nhaphodep.vn')
 #1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
 #2 D:\svn\index.php(16): CApplication->run()
 #3 {main}
-REQUEST_URI=/favicon.ico
+REQUEST_URI=/nhaphodep.vn
 ---

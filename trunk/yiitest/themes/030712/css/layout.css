@@ -1,0 +1,188 @@
+body {background:#333;font:9pt Tahoma, Verdana, Segoe, sans-serif;}
+.left{float: left;}
+.right{float:right}
+.clear{clear: both;}
+a{text-decoration:none; color:#720E3B}
+a:hover{color:#000;}
+/*layout*/
+*{margin:0; padding:0}
+
+#wrapper {width:980px;background:#fff;margin:auto;border-left:1px solid #000;border-right:1px solid #000}
+
+/*Header*/
+#header{background:#000; padding:10px 0 5px 20px; position:relative}
+.logo{float:left;margin:0 30px 0 0}
+
+/**  Ten cong ty     **/
+.title-company{padding:40px 0 0 0;font-size:16pt;margin:0 0 5px 0;color:#fff}
+
+.lang{position:absolute;bottom:-27px;right:6px;text-align:right}
+.hot-line{position:absolute;right:15px;top:10px ;color:#fff;font-size:10pt;font-weight:bold}
+
+#nav{ list-style:none;background:url(../images/line2.png) repeat-x;height:30px}
+#nav li{float:left;position:relative;background:url(../images/line.png) no-repeat right; }
+#nav li a{padding:7px 38px;text-transform:capitalize;display:block; color:#fff;font-size:10pt}
+#nav li a:hover{background:#fff;color:#000}
+#nav .none-line{background:none}
+#nav .none-line a{padding:7px 32px 7px 31px}
+#nav .select{background:#fff;color:#000}
+
+/** Banner **/
+.slider{margin:0 0 10px 0}
+
+/* Page Content*/
+#content{padding:3px 3px 5px 2px; background:#fff}
+
+/*Left content*/
+#leftcontent{float:left; width:220px}
+
+.frame-leftcontent{border:1px solid #999;background:#eee;margin:0 0 10px 0}
+.title-left{background:url(../images/lap_left.jpg) repeat-x;text-transform:uppercase;text-align:center; color:#fff;padding:8px 0 7px 0;font-size:10pt; font-weight:bold}
+
+/*sub cat*/
+.sub-cat{list-style:none;border-bottom:none}
+.sub-cat li{border-bottom:1px solid #999; text-transform:uppercase}
+.sub-cat li a{font-weight:bold; padding:8px 0 8px 12px;color:#000;display:block}
+.sub-cat li a span{background:url(../images/nutplay.png) no-repeat left 10px;padding:8px 0 8px 15px}
+.sub-cat li a:hover{color:#fff;background:#999}
+.sub-cat li ul{padding:0 0 8px 20px;list-style:none}
+.sub-cat li ul li{padding:2px 0;border:none}
+.sub-cat li ul li a{text-transform:none; color:#333;background:none;padding:0 0 0 10px; *_display:inherit} 
+.sub-cat li ul li a:hover{color:#A80000;background:none}
+
+/*Ho tro ky thuat*/
+.support{list-style:none;padding:5px 0;text-align:center}
+.support li {line-height:1.5em}
+.support li img{margin:0 0 5px 0}
+
+/*bg-adv adv left*/
+.bg-adv{list-style:none;padding:5px 0 0 0;text-align:center}
+.bg-adv li{padding:0 0 3px 0}
+
+/*Right content*/
+#rightcontent{float:right; width:745px;}
+#rightcontent p{margin:0 0 10px 0}
+#rightcontent ul li, #right-content ol li{margin: 4px 0 4px 40px}
+#rightcontent ul ,#right-content ol{margin: 0 0 12px 0}
+
+.frame-tent-right ,.all-product{background:#eee;border:1px solid #ccc;padding:5px 10px;margin:0 0 10px 0}
+.frame-tent-right p{line-height:1.5em}
+
+.title-right{padding:8px 0 11px 35px;text-transform:uppercase;color:#000;background:url(../images/bg-title-right.jpg) no-repeat;font-weight:bold;}
+
+.link{color:#000;padding:5px 0 5px 0; margin:0 0 5px 0}
+.link  b{padding:0 5px}
+.link span{color:#145486; font-weight:normal}
+.link a{ color:#000; font-weight:normal}
+.link a:hover{color:#145486}
+
+/***    Page product-info     ****/
+#rightcontent  .frame-product-info p{margin:0 0 0 0}
+.title-info{margin:0 0 8px 0;color:#000}
+.title-info span{border-bottom:1px solid #000;font-weight:bold;text-transform:uppercase}
+.panel-preview{margin:0 0 10px 0}
+
+.black{margin:0 !important; font-size:10pt;text-align:right !important}
+.black a{color:#000;background:url(../images/bull-1.gif) no-repeat left 5px;padding:0 0 0 10px}
+.black a:hover{background:url(../images/bull.gif) no-repeat left 5px;color:#ED2121}
+.img_info{text-align:center;margin:0 0 10px 0;background:#ccc;border:1px solid #000;padding:10px 0}
+.view_full a{color:#000}
+
+/***** Product    *****/
+#rightcontent .all-product{margin:0 0 5px 0 ;list-style:none;padding:5px 0}
+#rightcontent .product{width:220px;padding:0 0 5px 0;text-align:center;margin:0 0 20px 19px;display:inline-block; vertical-align:top;*float:left;*margin:0 10px 10px 0}
+.product-img{height:176px;background:url(../images/video.png) no-repeat;padding:0 0 7px 0; width:220px;display:table-cell;vertical-align:middle}
+#rightcontent .price{color:#145486; font-weight:700; font-size:13px; margin:5px 0 10px 0}
+.title-pro {margin:0 0 12px 0}
+.title-pro a{color:#666}
+.title-pro a:hover{color:#A80000}
+.add-to-cart{padding: 5px 0 8px 5px; font-weight:700;background:url(../images/bkg_btn.png) no-repeat left top;*padding:0 0 0 5px;*height:25px}
+.add-to-cart span{background:url(../images/bkg_btn.png) no-repeat right top; padding:5px 15px 8px 10px; height:25px;color:#145486}
+
+
+/**Page Contact**/
+/*** Frame title company  ***/
+#frame-info-contact{margin:0 0 15px 0}
+
+/** Form lien he  **/
+.frame-contact{list-style:none;margin:0 0 10px 0}
+.frame-contact label{color:#555; margin:0 !important;font-weight:bold;width:100px; float:left}
+.frame-contact li{padding:4px 0; margin:0 !important}
+.frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.frame-contact textarea{border:1px solid #ddd; width:350px;-moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-contact span{color:#F00;margin:0 5px 0 0}
+
+.frame-contact .bton-dk{margin:10px 0 5px 30px;background:#372E27;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-contact .bton-dk{margin:10px 10px 5px 0}
+/****  End page contact     *****/
+
+/* Error */
+.errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
+.errorSummary ul{margin:0 10px; padding:0}
+.errorSummary ul li{padding:2px 0; color: red}
+.required span{font-weight:normal}
+
+/*   Page New  */
+.masuring{list-style: none; text-align:justify;font-size:10pt;margin:0 0 20px 0}
+.masuring li{ margin:0 0 10px 0 !important}
+.frame-img{float:left;width:143px; margin:0 10px 0 0}
+.title-masuring{margin:0 0 5px 0}
+.title-masuring a{color:#333}
+.title-masuring a:hover{color:#72C0BA}
+
+/* paging */
+#rightcontent ul.paging{float: right; margin:5px 0 0 0; padding:0 0 5px 0; list-style: none;}
+ul.paging li{display: inline;margin:0 !important;}
+ul.paging .hidden{display: none;}
+ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{border:1px solid #999;background:#999;color:#fff;padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{color:#000;background:none}
+
+/*Footer*/
+#footer{background:#000 url(../images/bottom_x.png) repeat-x;padding:15px 35px;color:#FFF;font-size:10pt}
+#footer a:hover{text-decoration:underline}
+
+.statistics{margin:0 0 10px 0; }
+.statistics img{margin:0 5px 0 0}
+
+.fter-left{float:left; width:460px}
+.menu-fter {margin:0 0 10px 0; list-style:none}
+.menu-fter li{display:inline;padding:0 4px 0 0}
+.menu-fter li a{color:#FFF;padding:0 8px 0 0; background:url(../images/bkg_pipe2.gif) no-repeat right}
+.menu-fter .none-line a{background:none;padding:0}
+.copyright {float:right;width:400px}
+.copyright a{color:#fff; font-size:10pt}
+
+/* Error */
+.errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
+.errorSummary ul{margin:0 10px; padding:0}
+.errorSummary ul li{padding:2px 0; color: red}
+
+/*Add to cart*/
+.form_order{background:#fff;margin:0 0 15px 0;-webkit-border-radius:0 0 4px 6px;-moz-border-radius:0 0 6px 4px}
+.form_order thead{background:#3D4B56}
+.form_order thead tr td{font-weight : bold;padding : 5px !important; color:#fff;font-size:10pt}
+
+.form_order tbody tr td{border : 1px solid #ddd;}
+.form_order tbody tr .pic-order{padding:5px 0}
+.form_order tbody tr input{border:1px solid #ccc}
+.form_order tbody tr td a{color:#3D4B56}
+.form_order tbody tr td a:hover{color:#EE6B11}
+
+.btn_order{cursor:pointer; border:none;font-weight:bold;background:#2C2C2C;padding:5px 7px;color:#fff;-webkit-border-radius:4px;-moz-border-radius:4px;margin:0 10px 0 0}
+.btn_order:hover{color:#fff}
+
+.frm-cart label{width:100px}
+.notificaion{color:#2C2C2C;font-size:10pt;margin:0 0 10px 0}
+.note span{color:#f00}
+
+
+
+
+
+
+
+
+
+
+
+
