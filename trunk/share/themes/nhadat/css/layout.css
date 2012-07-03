@@ -343,6 +343,7 @@ fieldset .label-select{width: 248px;}
 .col1{float: left; width:15%}
 .col2{float: left; width:85%;margin:0 0 5px 0}
 .col1 label.required{color:#000}
+.col2 span#Products_utility{float:none}
 .col-left{float: left; width:350px}
 .col-right{float: left}
 .space{height: 8px;}

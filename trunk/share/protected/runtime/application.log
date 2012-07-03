@@ -1,0 +1,291 @@
+2012/07/03 03:54:51 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (179)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:54:51 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (179)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:54:51 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:54:51 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:54:51 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:54:51 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:54:52 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (179)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:54:52 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (179)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:54:52 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:54:52 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:54:52 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:54:52 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:56:15 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (179)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:56:15 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (179)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:56:15 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:56:15 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:56:15 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:56:15 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:58:57 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (179)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:58:57 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (179)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:58:57 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:58:57 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:58:57 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:58:57 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:58:59 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (179)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:58:59 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (179)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:58:59 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:58:59 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:58:59 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:58:59 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:59:00 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (179)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:59:00 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (179)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:59:00 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:59:00 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:59:00 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:59:00 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:59:00 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (179)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:59:00 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (179)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:59:00 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:59:00 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:59:00 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:59:00 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:59:10 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (179)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:59:10 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (179)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:59:10 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:59:10 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:59:10 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 03:59:10 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\controllers\DefaultController.php (180)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:01:50 [error] [php] file_get_contents(http://dos.vn/read-rss) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ (C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\DefaultController.php:23)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): DefaultController->runAction()
+#2 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): DefaultController->filterAccessControl()
+#5 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CWebApplication->run()
+REQUEST_URI=/nhaphodep.vn/admin/default/read
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\DefaultController.php (23)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:02:10 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (210)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:02:10 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (210)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:02:10 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (210)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:02:10 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (210)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:02:28 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (210)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:02:28 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (210)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:02:28 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (210)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:02:28 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (210)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:18:03 [error] [php] file_get_contents(http://dos.vn/read-rss) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ (C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\DefaultController.php:23)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): DefaultController->runAction()
+#2 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): DefaultController->filterAccessControl()
+#5 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CWebApplication->run()
+REQUEST_URI=/nhaphodep.vn/admin/default/read
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\DefaultController.php (23)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:21:54 [error] [php] file_get_contents(http://dos.vn/read-rss) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ (C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\DefaultController.php:23)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): DefaultController->runAction()
+#2 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\xampp\php\library\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): DefaultController->filterAccessControl()
+#5 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(276): DefaultController->run()
+#9 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CWebApplication->run()
+REQUEST_URI=/nhaphodep.vn/admin/default/read
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\DefaultController.php (23)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:22:17 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (210)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:22:17 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (210)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:22:17 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (210)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:22:17 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (210)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:23:10 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (210)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:23:10 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (210)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:23:10 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (210)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:23:10 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (210)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:23:11 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\models\ProductsFeature.php (128)
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (213)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:23:11 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\models\ProductsFeature.php (128)
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (213)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:23:11 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\models\ProductsFeature.php (128)
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (213)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:23:11 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\models\ProductsFeature.php (128)
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (213)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:23:11 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '26' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `dos_module_products_feature` (`num_floor`, `sittingrom`, `bedroom`, `bathroom`, `other_room`, `area_used`, `direction`, `street`, `legal`, `road`, `product_id`, `area`, `area_build`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12).
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\models\ProductsFeature.php (132)
+in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (213)
+in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
+2012/07/03 04:23:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand không thể thi hành câu truy vấn SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '26' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `dos_module_products_feature` (`num_floor`, `sittingrom`, `bedroom`, `bathroom`, `other_room`, `area_used`, `direction`, `street`, `legal`, `road`, `product_id`, `area`, `area_build`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12)' in C:\xampp\php\library\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(1014): CDbCommand->execute()
+#1 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\nhaphodep.vn\protected\modules\products\models\ProductsFeature.php(132): CActiveRecord->save()
+#3 C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php(213): ProductsFeature->save_data('26', Array)
+#4 [internal function]: ProductsController->actionEdit('26')
+#5 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#6 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ProductsController), Object(ReflectionMethod), Array)
+#7 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#14 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('edit')
+#16 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/products/...')
+#17 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\nhaphodep.vn\index.php(16): CApplication->run()
+#19 {main}
+REQUEST_URI=/nhaphodep.vn/admin/products/edit/id/26
+HTTP_REFERER=http://localhost/nhaphodep.vn/admin/products/edit/id/26
+---
