@@ -45,7 +45,6 @@ $this->description = $item['description' . LANG];
                             </div><!--END Slide show Jquery Lightbox-->
                         </div>
                     </td>	
-
                     <td class="right-info">
                         <p class="price">Mã số:  <?php echo $item['record_id'] ?> </p>
                         <p class="price"><strong>Giá: <span><?php echo (is_numeric($item['unit'])) ? number_format($item['unit'], 0, '', '.') . ' ' . $item['unit_currency'] . '/' . $item['unit_unit'] : (($item['unit']) ? $item['unit'] : $this->lang['contact']) ?></span></strong></p>
@@ -59,35 +58,40 @@ $this->description = $item['description' . LANG];
                         <h4 class="title-info"><span><?php echo $this->lang['description'] . ' ' . strtolower($this->lang[$this->module->id]) ?></span></h4>
                         <?php echo $item['preview' . LANG] ?>
                     </td>
-                </tr>	
+                </tr>
+				<tr>
+					<td>
+						<h4 class="title-info"><span>Thông tin:</span></h4>
+						<div>
+							<p><b>Diện tích khuôn viên:</b> <?php echo $item->productsFeature['area'] ?></p>
+							<p><b>Diện tích xây dựng:</b> <?php echo $item->productsFeature['area_build'] ?></p>
+							<p><b>Diện tích sử dụng:</b> <?php echo $item->productsFeature['area_used'] ?>m<sup>2</sup></p>
+							<p><b>Tình trạng pháp lý:</b> <?php echo $item->productsFeature['legal'] ?></p>
+							<p><b>Hướng:</b> <?php echo $item->productsFeature['direction'] ?></p>
+							<p><b>Đường trước nhà:</b> <?php echo $item->productsFeature['road'] ?></p>
+							<p><b>Số lầu:</b> <?php echo $item->productsFeature['num_floor'] ?></p>
+							<p><b>Phòng tắm:</b> <?php echo $item->productsFeature['bathroom'] ?></p>
+							<p><b>Phòng khách:</b> <?php echo $item->productsFeature['sittingrom'] ?></p>
+							<p><b>Phòng ngủ:</b> <?php echo $item->productsFeature['bedroom'] ?></p>
+							<p><b>Phòng khác:</b> <?php echo $item->productsFeature['other_room'] ?></p>
+						</div>
+					</td>
+					<td>
+						 <h4 class="title-info"><span>Tiện ích:</span></h4>
+						<div>
+							<?php
+							$labels = ProductsUtility::model()->attributeLabels();
+
+							foreach ($labels as $key => $value) {
+								if ($item->productsUtility[$key] == 1)
+									echo '<p>' . $value . '</p>';
+							}
+							?>
+						</div>
+					</td>
+				</tr>
             </table>
         <?php endif; ?>
-        <h4 class="title-info"><span>Thông tin:</span></h4>
-        <div>
-            <p><b>Diện tích khuôn viên:</b> <?php echo $item->productsFeature['area'] ?></p>
-            <p><b>Diện tích xây dựng:</b> <?php echo $item->productsFeature['area_build'] ?></p>
-            <p><b>Diện tích sử dụng:</b> <?php echo $item->productsFeature['area_used'] ?>m<sup>2</sup></p>
-            <p><b>Tình trạng pháp lý:</b> <?php echo $item->productsFeature['legal'] ?></p>
-            <p><b>Hướng:</b> <?php echo $item->productsFeature['direction'] ?></p>
-            <p><b>Đường trước nhà:</b> <?php echo $item->productsFeature['road'] ?></p>
-            <p><b>Số lầu:</b> <?php echo $item->productsFeature['num_floor'] ?></p>
-            <p><b>Phòng tắm:</b> <?php echo $item->productsFeature['bathroom'] ?></p>
-            <p><b>Phòng khách:</b> <?php echo $item->productsFeature['sittingrom'] ?></p>
-            <p><b>Phòng ngủ:</b> <?php echo $item->productsFeature['bedroom'] ?></p>
-            <p><b>Phòng khác:</b> <?php echo $item->productsFeature['other_room'] ?></p>
-        </div>
-
-        <h4 class="title-info"><span>Tiện ích:</span></h4>
-        <div>
-            <?php
-            $labels = ProductsUtility::model()->attributeLabels();
-
-            foreach ($labels as $key => $value) {
-                if ($item->productsUtility[$key] == 1)
-                    echo '<p>' . $value . '</p>';
-            }
-            ?>
-        </div>
         <h4 class="title-info"><span><?php echo $this->lang['detail'] . ' ' . strtolower($this->lang[$this->module->id]) ?></span></h4>
         <div class="panel-content">
             <?php echo $item['content' . LANG] ?>

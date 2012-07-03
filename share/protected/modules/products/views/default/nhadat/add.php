@@ -128,7 +128,7 @@
 
         <div class="col1"><?php echo $form->labelEx($model, 'utility') ?></div>
         <div class="col2">
-            <?php echo $form->checkBoxList($model, 'utility', $listItemsU, array('template' => '<p class="check_info">{label} {input}</p>', 'separator' => '')) ?>
+            <?php echo $form->checkBoxList($model, 'utility', $listItemsU, array('template' => '<p>{label} {input}</p>', 'separator' => '')) ?>
         </div>
         <div class="clear space"></div>    
 
