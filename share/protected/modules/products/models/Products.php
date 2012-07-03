@@ -257,8 +257,8 @@ class Products extends CActiveRecord {
     //Front end - list item new
     public function listItemNew() {
         $criteria = new CDbCriteria();
-        $criteria->with = array(__CLASS__ . 'Cat');
-        $criteria->select = 'title' . LANG . ', postdate, pic_thumb, tag' . LANG . ', hits, unit, hot';
+        $criteria->with = array('ProductsCat','productsFeature');
+       //$criteria->select = 'title' . LANG . ', postdate, pic_thumb, tag' . LANG . ', hits, unit, hot';
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable = 1';
         $criteria->limit = Configs::configTemplate('products_num_paging_new', Yii::app()->session['template']);
@@ -270,7 +270,7 @@ class Products extends CActiveRecord {
     public function listItemHot() {
         $criteria = new CDbCriteria();
         $criteria->with = array(__CLASS__ . 'Cat');
-        $criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit, hot';
+       $criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit, hot';
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'hot = 1 AND enable = 1';
         $criteria->limit = Configs::configTemplate('products_num_paging_hot', Yii::app()->session['template']);
@@ -300,7 +300,7 @@ class Products extends CActiveRecord {
     public function listItemByType($cid) {
         $criteria = new CDbCriteria();
         $criteria->with = array(__CLASS__ . 'Cat','productsFeature');
-    
+     
         $criteria->select = 'title' . LANG . ', pic_thumb,address, postdate,hits, tag' . LANG . ', unit,unit_unit,unit_currency,record_id';
         
         $criteria->order = 'record_order DESC, postdate DESC';

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 03, 2012 at 03:21 AM
+-- Generation Time: Jul 03, 2012 at 07:23 AM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -1300,14 +1300,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   KEY `dos_districts_district_id` (`dos_districts_district_id`),
   KEY `dos_module_item_type_type_id` (`dos_module_item_type_type_id`),
   KEY `dos_username` (`dos_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
 
 --
 -- Dumping data for table `dos_module_products`
 --
 
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `unit_currency`, `unit_unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_type_type_id`, `dos_module_item_cat_cat_id`, `dos_districts_district_id`, `address`, `contact_name`, `contact_add`, `contact_mobile`, `contact_tel`, `dos_username`) VALUES
-(26, 'Nhà bán', '', '2012-07-02 17:35:09', '', 'nh-bn.jpg', NULL, '', '', 'dflbfdnb,db,', '', 'nha-ban', '', '', '', 8, 1, '123', 'VND', 'm2', 0, NULL, NULL, NULL, NULL, NULL, 1, 2, 525, 76, '134 J7 Buu Long', 'Bao', '', '012312', '', 'nhaphodep');
+(29, 'Nhà bán nè, ai mua ko', '', '2012-07-03 01:57:54', '', 'nh-bn-n-ai-mua-ko-6.jpg', NULL, '', '', '<p>----------------------------------------</p>\r\n<p> </p>\r\n<p>-----------------------------------------</p>\r\n<p> sdf</p>\r\n<p> g</p>\r\n<p> </p>\r\n<p>----------------------------------------</p>', '', 'nha-ban-ne-ai-mua-ko', '', '', '', 11, 1, '12312', 'USD', 'Tháng', 1, NULL, NULL, NULL, NULL, NULL, 1, 1, 526, 4, 'J7 Buu Long', 'Thành An', '', '24356577879', '', 'nhaphodep');
 
 -- --------------------------------------------------------
 
@@ -1368,14 +1368,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_feature` (
   `legal` varchar(45) NOT NULL,
   `road` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
 
 --
 -- Dumping data for table `dos_module_products_feature`
 --
 
 INSERT INTO `dos_module_products_feature` (`product_id`, `area`, `area_build`, `area_used`, `num_floor`, `sittingrom`, `bedroom`, `bathroom`, `other_room`, `direction`, `street`, `legal`, `road`) VALUES
-(26, 'm x m', 'm x m', 43, 1, NULL, NULL, NULL, NULL, 'Tây Bắc', '', 'Đang hợp thức hoá', '768');
+(29, '12m x 21m', '21m x 21m', 124, 1, NULL, NULL, NULL, NULL, 'Đông Nam', '', 'Chủ quyền tư nhân', 'Huynh Van Nghe');
 
 -- --------------------------------------------------------
 
@@ -1426,14 +1426,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_utility` (
   `pool` tinyint(1) NOT NULL DEFAULT '0',
   `furniture` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
 
 --
 -- Dumping data for table `dos_module_products_utility`
 --
 
 INSERT INTO `dos_module_products_utility` (`product_id`, `telephone`, `power_meter`, `heater`, `gara`, `cable_tv`, `water_meter`, `alarm_system`, `garden`, `internet`, `air_conditioner`, `parking`, `pool`, `furniture`) VALUES
-(26, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(29, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0);
 
 -- --------------------------------------------------------
 

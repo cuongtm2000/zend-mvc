@@ -131,5 +131,18 @@ class ProductsFeature extends CActiveRecord {
         $this->area_build = $data['area_build_n'] . 'm x ' . $data['area_build_d'] . 'm';
         $this->save();
     }
+    public function loadEdit(){
+        $tmp=$this->getAttributes();
+  
+        $t=  explode('x', $this->area);
+        $tmp['area_n']= substr(trim($t[0]),0,-1);
+        $tmp['area_d']= substr(trim($t[1]),0,-1);
+        
+        $t=  explode('x', $this->area_build);
+        $tmp['area_build_n']=substr(trim($t[0]),0,-1);
+        $tmp['area_build_d']=substr(trim($t[0]),0,-1);
+        
+        return $tmp;
+    }
 
 }

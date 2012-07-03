@@ -188,9 +188,9 @@ class DefaultController extends Controller {
 
         $this->render(Yii::app()->session['template'] . '/add', array(
             'model' => $model_class,
-            'model_u' => $model_utility_class,
+           // 'model_u' => $model_utility_class,
             'model_f' => $model_fearture_class,
-            'listItemsF' => $model_fearture_class->listItem(),
+          //  'listItemsF' => $model_fearture_class->listItem(),
             'listItemsU' => $model_utility_class->attributeLabels(),
             'listItemsType' => $model_type_class->listItem(),
             'listItemsCat' => $model_cat_class->listCats(),
@@ -198,44 +198,55 @@ class DefaultController extends Controller {
         ));
     }
 
-    public function actionEdit() {
+    public function actionEdit($id) {
 
         $this->layout = '//layouts/column-3';
 
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/public/plugin/tiny_mce/config.js');
+     Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/config.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.nyromodal.custom.min.js');
+        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/nyromodal.css');
+        Yii::app()->clientScript->registerScript('', "$(function() { $('.nyroModal').nyroModal();});", CClientScript::POS_READY);
 
         $model = 'Products';
-        $module_cat = 'ProductsCat';
+        $module_cat = $model . 'Cat';
 
-        $model_cat_class = new $module_cat();
-        $model_class = new $model();
         $model_type_class = new ProductsType();
         $model_utility_class = new ProductsUtility();
         $model_fearture_class = new ProductsFeature();
         $provice_class = new Provinces();
 
+        $model_cat_class = new $module_cat();
+        $model_class = new $model();
+        $model_class = $model_class->loadEdit($id); //load form models
+        
+        $model_class['dos_provinces_province_id']=$model_class->District['dos_provinces_province'];
+        $model_class['feature']=$model_class->productsFeature->loadEdit();
+        $model_class['utility'] = array_keys(array_filter($model_class->productsUtility->getAttributes(),'checked'));
+      //  var_dump($model_class);
         if (isset($_POST[$model])) {
+            
             $model_class->attributes = $_POST[$model];
             $model_fearture_class->attributes = $_POST[$model]['feature'];
             if ($model_class->validate() && $model_fearture_class->validate()) {
                 $model_class->save();
-                $model_fearture_class->save_data($model_class->record_id, $_POST[$model]['feature']);
-                $model_utility_class->save_data($model_class->record_id, $_POST[$model]['utility']);
-                $this->redirect(array('index'));
+                $model_class->productsFeature->save_data($model_class->record_id, $_POST[$model]['feature']);
+                $model_class->productsUtility->save_data($model_class->record_id, $_POST[$model]['utility']);
+                $this->redirect(array('list'));
             }
         }
 
-        $this->render(Yii::app()->session['template'] . '/add', array(
+        $this->render(
+            Yii::app()->session['template'] . '/edit', array(
             'model' => $model_class,
-            'model_u' => $model_utility_class,
             'model_f' => $model_fearture_class,
-            'listItemsF' => $model_fearture_class->listItem(),
-            'listItemsU' => $model_utility_class->attributeLabels(),
             'listItemsType' => $model_type_class->listItem(),
             'listItemsCat' => $model_cat_class->listCats(),
+            'listItemsU' => $model_utility_class->attributeLabels(),
             'listProvices' => $provice_class->listProvinceByCountry('VND'),
-        ));
+                )
+        );
+
     }
 
     public function actionList() {
@@ -251,3 +262,4 @@ class DefaultController extends Controller {
     }
 
 }
+function checked($v){return $v == 1;}

@@ -166,7 +166,7 @@ class ProductsController extends AdminController {
             'model' => $model_class,
             'model_u' => $model_utility_class,
             'model_f' => $model_fearture_class,
-            'listItemsF' => $model_fearture_class->listItem(),
+       //s     'listItemsF' => $model_fearture_class->listItem(),
             'listItemsU' => $model_utility_class->attributeLabels(),
             'listItemsType' => $model_type_class->listItem(),
             'listItemsCat' => $model_cat_class->listCats(),
@@ -182,7 +182,6 @@ class ProductsController extends AdminController {
     public function actionEdit($id) {
         Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
         Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/config.js');
-
         Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.nyromodal.custom.min.js');
         Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/nyromodal.css');
         Yii::app()->clientScript->registerScript('', "$(function() { $('.nyroModal').nyroModal();});", CClientScript::POS_READY);
@@ -201,17 +200,17 @@ class ProductsController extends AdminController {
         $model_class = $model_class->loadEdit($id); //load form models
         
         $model_class['dos_provinces_province_id']=$model_class->District['dos_provinces_province'];
-        $model_class['feature']=$model_class->productsFeature;
-        $model_class['utility'] = $model_class->productsUtility;
-
+        $model_class['feature']=$model_class->productsFeature->loadEdit();
+        $model_class['utility'] = array_keys(array_filter($model_class->productsUtility->getAttributes(),'checked'));
+      //  var_dump($model_class);
         if (isset($_POST[$model])) {
             
             $model_class->attributes = $_POST[$model];
             $model_fearture_class->attributes = $_POST[$model]['feature'];
             if ($model_class->validate() && $model_fearture_class->validate()) {
                 $model_class->save();
-                $model_fearture_class->save_data($model_class->record_id, $_POST[$model]['feature']);
-                $model_utility_class->save_data($model_class->record_id, $_POST[$model]['utility']);
+                $model_class->productsFeature->save_data($model_class->record_id, $_POST[$model]['feature']);
+                $model_class->productsUtility->save_data($model_class->record_id, $_POST[$model]['utility']);
                 $this->redirect(array('index'));
             }
         }
@@ -223,11 +222,13 @@ class ProductsController extends AdminController {
             'model_f' => $model_fearture_class,
             'listItemsType' => $model_type_class->listItem(),
             'listItemsCat' => $model_cat_class->listCats(),
-            'listItemsF' => $model_fearture_class->listItem(),
+            //'listItemsF' => $model_fearture_class->listItem(),
             'listItemsU' => $model_utility_class->attributeLabels(),
             'listProvices' => $provice_class->listProvinceByCountry('VND'),
                 )
         );
     }
+  
+}   
 
-}
+function checked($v){return $v == 1;}
