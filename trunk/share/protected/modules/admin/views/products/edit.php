@@ -124,7 +124,7 @@ echo $form->errorSummary($model_f, '');
         
         <div class="col1"><?php echo $form->labelEx($model, 'utility') ?></div>
         <div class="col2">
-            <?php echo $form->checkBoxList($model, 'utility', $listItemsU, array('template' => '<div class="choose-business">{label} {input}</div>', 'separator' => '')) ?>
+           <?php // echo $form->checkBoxList($model, 'utility', $listItemsU, array('template' => '<div class="choose-business">{label} {input}</div>', 'separator' => '')) ?>
         </div>
         <div class="clear space"></div>    
 
@@ -210,6 +210,7 @@ echo $form->errorSummary($model_f, '');
             <div class="col1"><?php echo $form->labelEx($model_f, 'road') ?></div>
             <div class="col2">
                 <?php echo $form->textField($model, 'feature[road]', $htmlOptions = array('class' => 'txt-very-large')); ?>
+              
             </div>    <div class="clear space"></div>   
         </div>  <div class="clear space"></div> 
 

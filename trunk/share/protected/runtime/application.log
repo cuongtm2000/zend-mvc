@@ -5115,3 +5115,238 @@ in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\views\products\add.php (
 in C:\xampp\htdocs\nhaphodep.vn\protected\modules\admin\controllers\ProductsController.php (177)
 in C:\xampp\htdocs\nhaphodep.vn\index.php (16)
 >>>>>>> .r1015
+2012/07/03 03:32:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/delete.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\share\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/share/themes/nhadat/images/delete.png
+HTTP_REFERER=http://localhost/share/tin-da-dang
+---
+2012/07/03 03:32:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/delete.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\share\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/share/themes/nhadat/images/delete.png
+HTTP_REFERER=http://localhost/share/tin-da-dang
+---
+2012/07/03 03:37:27 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (179)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:37:27 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (179)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:37:27 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (180)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:37:27 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (180)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:37:27 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (180)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:37:27 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (180)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:37:29 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\models\ProductsFeature.php (128)
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (183)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:37:29 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\models\ProductsFeature.php (128)
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (183)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:37:29 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\models\ProductsFeature.php (128)
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (183)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:37:29 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\models\ProductsFeature.php (128)
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (183)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:37:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/delete.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\share\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/share/themes/nhadat/images/delete.png
+HTTP_REFERER=http://localhost/share/tin-da-dang
+---
+2012/07/03 03:37:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/delete.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\share\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/share/themes/nhadat/images/delete.png
+HTTP_REFERER=http://localhost/share/tin-da-dang
+---
+2012/07/03 03:37:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/delete.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\share\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/share/themes/nhadat/images/delete.png
+HTTP_REFERER=http://localhost/share/tin-da-dang
+---
+2012/07/03 03:45:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/delete.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\share\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/share/themes/nhadat/images/delete.png
+HTTP_REFERER=http://localhost/share/tin-da-dang
+---
+2012/07/03 03:45:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/delete.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\share\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/share/themes/nhadat/images/delete.png
+HTTP_REFERER=http://localhost/share/tin-da-dang
+---
+2012/07/03 03:48:13 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (179)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:48:13 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (179)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:48:13 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (180)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:48:13 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (180)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:48:13 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (180)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:48:13 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (180)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:48:14 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\models\ProductsFeature.php (128)
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (183)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:48:14 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\models\ProductsFeature.php (128)
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (183)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:48:14 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\models\ProductsFeature.php (128)
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (183)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:48:14 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\models\ProductsFeature.php (128)
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (183)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:51:49 [error] [php] strcmp() expects parameter 2 to be string, object given (E:\xampp\php\www\framework\web\helpers\CHtml.php:875)
+Stack trace:
+#0 E:\xampp\php\www\framework\web\widgets\CActiveForm.php(706): activeCheckBoxList()
+#1 E:\xampp\htdocs\share\protected\modules\admin\views\products\edit.php(127): CActiveForm->checkBoxList()
+#2 E:\xampp\php\www\framework\web\CBaseController.php(127): require()
+#3 E:\xampp\php\www\framework\web\CBaseController.php(96): ProductsController->renderInternal()
+#4 E:\xampp\php\www\framework\web\CController.php(870): ProductsController->renderFile()
+#5 E:\xampp\php\www\framework\web\CController.php(783): ProductsController->renderPartial()
+#6 E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php(230): ProductsController->render()
+#7 unknown(0): ProductsController->actionEdit()
+#8 E:\xampp\php\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#9 E:\xampp\php\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#10 E:\xampp\php\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 E:\xampp\php\www\framework\web\filters\CFilterChain.php(134): ProductsController->runAction()
+#12 E:\xampp\php\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 E:\xampp\php\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#14 E:\xampp\php\www\framework\web\filters\CInlineFilter.php(59): ProductsController->filterAccessControl()
+#15 E:\xampp\php\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#16 E:\xampp\php\www\framework\web\CController.php(292): CFilterChain->run()
+#17 E:\xampp\php\www\framework\web\CController.php(266): ProductsController->runActionWithFilters()
+#18 E:\xampp\php\www\framework\web\CWebApplication.php(276): ProductsController->run()
+#19 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#20 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 E:\xampp\htdocs\share\index.php(16): CWebApplication->run()
+REQUEST_URI=/share/admin/products/edit/id/28
+in E:\xampp\htdocs\share\protected\modules\admin\views\products\edit.php (127)
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (230)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/delete.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\share\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/share/themes/nhadat/images/delete.png
+HTTP_REFERER=http://localhost/share/tin-da-dang
+---
+2012/07/03 03:56:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/nhadat/images/delete.png".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/nhadat/i...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\share\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/share/themes/nhadat/images/delete.png
+HTTP_REFERER=http://localhost/share/tin-da-dang
+---
+2012/07/03 03:57:51 [warning] [application] Failed to set unsafe attribute "contact_add" of "Products".
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (179)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:57:51 [warning] [application] Failed to set unsafe attribute "contact_tel" of "Products".
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (179)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:57:51 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (180)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:57:51 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (180)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:57:51 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (180)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:57:51 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (180)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:57:54 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\models\ProductsFeature.php (128)
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (183)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:57:54 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\models\ProductsFeature.php (128)
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (183)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:57:54 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\models\ProductsFeature.php (128)
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (183)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 03:57:54 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\products\models\ProductsFeature.php (128)
+in E:\xampp\htdocs\share\protected\modules\products\controllers\DefaultController.php (183)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 04:03:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "san-pham//nha-ban-ne-ai-mua-ko.html".' in E:\xampp\php\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 E:\xampp\php\www\framework\web\CWebApplication.php(135): CWebApplication->runController('san-pham//nha-b...')
+#1 E:\xampp\php\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\share\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/share/san-pham//nha-ban-ne-ai-mua-ko.html
+HTTP_REFERER=http://localhost/share/san-pham/loai/nha-ban
+---
+2012/07/03 04:10:54 [warning] [application] Failed to set unsafe attribute "remove_pic_thumb" of "Products".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (209)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 04:10:54 [warning] [application] Failed to set unsafe attribute "area_n" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (210)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 04:10:54 [warning] [application] Failed to set unsafe attribute "area_d" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (210)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 04:10:54 [warning] [application] Failed to set unsafe attribute "area_build_n" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (210)
+in E:\xampp\htdocs\share\index.php (16)
+2012/07/03 04:10:54 [warning] [application] Failed to set unsafe attribute "area_build_d" of "ProductsFeature".
+in E:\xampp\htdocs\share\protected\modules\admin\controllers\ProductsController.php (210)
+in E:\xampp\htdocs\share\index.php (16)
