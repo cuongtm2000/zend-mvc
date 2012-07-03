@@ -5,7 +5,7 @@
 
 <form name="frm" id="frm" action="" method="post">
     <input type="hidden" name="factive" value="" />
-    <table>
+    <table class="table-list">
         <thead>
             <tr>
                 <th class="txt15"><input onclick="javascript: select_switch(this.checked);" type="checkbox" name="checkall" /></th>

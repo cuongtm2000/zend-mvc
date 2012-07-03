@@ -347,3 +347,5 @@ fieldset .label-select{width: 248px;}
 .space{height: 8px;}
 .radio label{float: none; cursor: pointer;}
 .readme{color: #555; font-style: italic}
+.table-list{margin:10px 0 10px 0}
+.table-list a{color:#000} .table-list a:hover{color:#3C64C7}
