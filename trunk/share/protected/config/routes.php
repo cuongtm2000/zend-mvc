@@ -14,6 +14,8 @@ return array(
     '<products:(san-pham)>/<cid:[-a-z0-9]+>' => array('products/default/cats'), //cat
     '<products:(san-pham)>/loai/<cid:[-a-z0-9]+>' => array('products/default/types'), //type
     '<products:(san-pham)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('products/default/view', 'urlSuffix' => '.html'), //view
+    '<products:(dang-tin)>' => array('products/default/add'), //add
+    '<products:(tin-da-dang)>' => array('products/default/list'), //
 
     //services modules
     '<services:(dich-vu)>' => 'services/default/index', //index

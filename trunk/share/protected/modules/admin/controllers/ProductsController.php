@@ -135,8 +135,8 @@ class ProductsController extends AdminController {
     }
 
     public function actionAdd() {
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/config.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/public/plugin/tiny_mce/config.js');
 
         Yii::app()->getModule($this->ID);
         $model = ucfirst($this->ID);
@@ -148,37 +148,35 @@ class ProductsController extends AdminController {
         $model_utility_class = new ProductsUtility();
         $model_fearture_class = new ProductsFeature();
         $provice_class = new Provinces();
-        
+
 
         if (isset($_POST[$model])) {
-         //   var_dump($_POST[$model]);
             $model_class->attributes = $_POST[$model];
             $model_fearture_class->attributes = $_POST[$model]['feature'];
-            //var_dump($_POST[$model]['feature']);
             if ($model_class->validate() && $model_fearture_class->validate()) {
-                $model_class->save();                
-                $model_fearture_class->save_data($model_class->record_id,$_POST[$model]['feature']);
+                $model_class->save();
+                $model_fearture_class->save_data($model_class->record_id, $_POST[$model]['feature']);
                 $model_utility_class->save_data($model_class->record_id, $_POST[$model]['utility']);
-             //   $this->redirect(array('index'));
+                $this->redirect(array('index'));
             }
         }
 
-        
+
         $this->render('add', array(
-                'model' => $model_class,
-                'model_u' => $model_utility_class,
-                'model_f' => $model_fearture_class,
-                'listItemsF'=> $model_fearture_class->listItem(), 
-                'listItemsU'=> $model_utility_class->attributeLabels(), 
-                'listItemsType'=> $model_type_class->listItem(), 
-                'listItemsCat' => $model_cat_class->listCats(),
-                'listProvices' => $provice_class->listProvinceByCountry('VND'),
-            
-            ));
+            'model' => $model_class,
+            'model_u' => $model_utility_class,
+            'model_f' => $model_fearture_class,
+            'listItemsF' => $model_fearture_class->listItem(),
+            'listItemsU' => $model_utility_class->attributeLabels(),
+            'listItemsType' => $model_type_class->listItem(),
+            'listItemsCat' => $model_cat_class->listCats(),
+            'listProvices' => $provice_class->listProvinceByCountry('VND'),
+        ));
     }
-    public function actionListdistrict($id,$idd=0) {
+
+    public function actionListdistrict($id, $idd = 0) {
         $pr = new Provinces();
-        $this->renderPartial('listdistrict', array('list'=>$pr->listDistrictProvince($id),'idd'=>$idd), false, true);
+        $this->renderPartial('listdistrict', array('list' => $pr->listDistrictProvince($id), 'idd' => $idd), false, true);
     }
 
     public function actionEdit($id) {
@@ -194,19 +192,42 @@ class ProductsController extends AdminController {
         $module_cat = ucfirst($this->ID) . 'Cat';
 
         $model_type_class = new ProductsType();
+        $model_utility_class = new ProductsUtility();
+        $model_fearture_class = new ProductsFeature();
+        $provice_class = new Provinces();
+
         $model_cat_class = new $module_cat();
         $model_class = new $model();
         $model_class = $model_class->loadEdit($id); //load form models
         
+        $model_class['dos_provinces_province_id']=$model_class->District['dos_provinces_province'];
+        $model_class['feature']=$model_class->productsFeature;
+        $model_class['utility'] = $model_class->productsUtility;
+
         if (isset($_POST[$model])) {
+            
             $model_class->attributes = $_POST[$model];
-            if ($model_class->validate()) {
+            $model_fearture_class->attributes = $_POST[$model]['feature'];
+            if ($model_class->validate() && $model_fearture_class->validate()) {
                 $model_class->save();
+                $model_fearture_class->save_data($model_class->record_id, $_POST[$model]['feature']);
+                $model_utility_class->save_data($model_class->record_id, $_POST[$model]['utility']);
                 $this->redirect(array('index'));
             }
         }
 
-        $this->render('edit', array('model' => $model_class, 'listItemsType'=> $model_type_class->listItem(),'listItemsCat' => $model_cat_class->listCats()));
+        $this->render(
+            'edit', array(
+            'model' => $model_class,
+            'model_u' => $model_utility_class,
+            'model_f' => $model_fearture_class,
+            'listItemsType' => $model_type_class->listItem(),
+            'listItemsCat' => $model_cat_class->listCats(),
+            'listItemsF' => $model_fearture_class->listItem(),
+            'listItemsU' => $model_utility_class->attributeLabels(),
+            'listProvices' => $provice_class->listProvinceByCountry('VND'),
+                )
+        );
     }
 
 }

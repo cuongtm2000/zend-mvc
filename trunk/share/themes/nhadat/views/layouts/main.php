@@ -35,7 +35,7 @@
                     <?php if (Yii::app()->user->isGuest == true): ?>
                         Xin mời! <a href="<?php echo Yii::app()->baseUrl ?>/dang-ky" title="Đăng ký" class="register"><strong>Đăng ký</strong></a> <a href="<?php echo Yii::app()->baseUrl ?>/dang-nhap" title="Đăng nhập" class="login"><strong>Đăng nhập</strong></a>
                     <?php else :?>
-                        Chào <b><?php echo Yii::app()->user->name;?></b>! <a href="<?php echo Yii::app()->baseUrl ?>/dang-tin" title="Đăng tin" class="register"><strong>Đăng tin</strong></a> <a href="<?php echo Yii::app()->baseUrl ?>/login/default/logout" title="Thoát" class="login"><strong>Thoát</strong></a>
+                        Chào <b><?php echo Yii::app()->user->name;?></b>! <a href="<?php echo Yii::app()->baseUrl ?>/tin-da-dang" title="Tin đã đăng" class="register"><strong>Tin đã đăng</strong></a><a href="<?php echo Yii::app()->baseUrl ?>/dang-tin" title="Đăng tin" class="register"><strong>Viết bài</strong></a> <a href="<?php echo Yii::app()->baseUrl ?>/login/default/logout" title="Thoát" class="login"><strong>Thoát</strong></a>
                     <?php endif ?>
                 </p>
                 <div class="clear"></div>
