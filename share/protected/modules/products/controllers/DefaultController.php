@@ -256,6 +256,7 @@ class DefaultController extends Controller {
         //Submit
         if (Yii::app()->request->getIsPostRequest()) {
             $model_class->activeItem(Yii::app()->request);
+			$this->refresh();
         }
 
         $this->render(Yii::app()->session['template'] . '/list', $model_class->listItemPosted());

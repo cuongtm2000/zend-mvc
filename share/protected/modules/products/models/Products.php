@@ -407,14 +407,30 @@ class Products extends CActiveRecord {
     //Back end - Delete Record
     public function deleteRecord($id) {
         $item = Products::model()->find('record_id=:id', array(':id' => $id));
+		$path = YiiBase::getPathOfAlias('webroot') . USERFILES . '/products/';
+		
+		if ($item->pic_thumb && file_exists($path . $item->pic_thumb)) {
+			unlink($path . $item->pic_thumb);
+		}
+		if ($item->pic_full && file_exists($path . $item->pic_full)) {
+			unlink($path . $item->pic_full);
+		}
+		if ($item->pic_desc) {
+			$str = explode('|', $item->pic_desc);
+			foreach ($str as $value) {
+				if (file_exists($path . $value)) {
+					unlink($path . $value);
+				}
+			}
+		}
 
-        $common_class = new Common();
+        /*$common_class = new Common();
         //Del pic_thumb field
         $common_class->removePic($item->pic_thumb);
         //Del pic_full field
         $common_class->removePic($item->pic_full);
         //Del pic_desc field
-        $common_class->removePic($item->pic_desc, 1);
+        $common_class->removePic($item->pic_desc, 1);*/
         Products::model()->findByPk($id)->delete(); //delete record_id
     }
 
