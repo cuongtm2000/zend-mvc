@@ -125,7 +125,7 @@ echo $form->errorSummary($model_f, '');
         <div class="col1"><?php echo $form->labelEx($model, 'utility') ?></div>
         <div class="col2">
             <?php //var_dump($listItemsU) ?>
-           <?php echo $form->checkBoxList($model, 'utility', $listItemsU, array('template' => '<div class="choose-business">{label} {input}</div>', 'separator' => '')) ?>
+           <?php echo $form->checkBoxList($model, 'utility', $listItemsU, array('template' => '<p class="choose-business">{label} {input}</p>', 'separator' => '')) ?>
         </div>
         <div class="clear space"></div>    
 
