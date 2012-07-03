@@ -340,9 +340,10 @@ fieldset .label-txt-large{width:190px; padding-right:7px}
 fieldset .label-select{width: 248px;}
 
 .col1{float: left; width:15%}
-.col2{float: left; width:85%}
+.col2{float: left; width:85%;margin:0 0 5px 0}
+.col1 label.required{color:#000}
 .col-left{float: left; width:350px}
 .col-right{float: left}
 .space{height: 8px;}
 .radio label{float: none; cursor: pointer;}
-.readme{color: #555; font-style: italic;}
+.readme{color: #555; font-style: italic}
