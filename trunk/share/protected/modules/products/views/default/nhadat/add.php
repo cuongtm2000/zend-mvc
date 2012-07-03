@@ -278,7 +278,7 @@
 
         <div class="col1">&nbsp;</div>
         <div class="col2">
-            <?php echo CHtml::submitButton($this->lang['add_new'], array('name' => 'submit', 'class' => 'login', 'title' => $this->lang['add_new'])); ?>
+            <?php echo CHtml::submitButton($this->lang['add_new'], array('name' => 'submit', 'class' => 'login-b', 'title' => $this->lang['add_new'])); ?>
             <?php echo Chtml::link($this->lang['cancel'], 'javascript:history.back()', $htmlOptions = array('class' => 'login-a', 'title' => $this->lang['cancel'])) ?>
         </div>
         <div class="clear space"></div>
