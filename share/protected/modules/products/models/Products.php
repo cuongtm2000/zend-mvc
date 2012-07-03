@@ -185,31 +185,31 @@ class Products extends CActiveRecord {
 
         if ($this->isNewRecord) {
             $this->record_order = $this->maxRecordOrder();
-            if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
+            if ($_FILES[__CLASS__]['name']['pic_thumb']) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $this->pic_thumb = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_thumb'], Configs::configTemplate('products_width_thumb', Yii::app()->session['template']), Configs::configTemplate('products_height_thumb', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id, $this->title . '-thumb');
+                $this->pic_thumb = $file->processUpload($_FILES[__CLASS__]['name']['pic_thumb'], $_FILES[__CLASS__]['tmp_name']['pic_thumb'], Configs::configTemplate('products_width_thumb', Yii::app()->session['template']), Configs::configTemplate('products_height_thumb', Yii::app()->session['template']), USERFILES . '/' . lcfirst(__CLASS__), $this->title . '-thumb');
             }
-            if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full']) {
+            if ($_FILES[__CLASS__]['name']['pic_full']) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $this->pic_full = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_full'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id, $this->title);
+                $this->pic_full = $file->processUpload($_FILES[__CLASS__]['name']['pic_full'], $_FILES[__CLASS__]['tmp_name']['pic_full'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), USERFILES . '/' . lcfirst(__CLASS__), $this->title);
             }
             //pic_desc
-            if (isset($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_desc'])) {
+            if (isset($_FILES[__CLASS__]['name']['pic_desc'])) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $this->pic_desc = implode("|", $file->uploadMulti($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_desc'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_desc'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id, $this->title));
+                $this->pic_desc = implode("|", $file->uploadMulti($_FILES[__CLASS__]['name']['pic_desc'], $_FILES[__CLASS__]['tmp_name']['pic_desc'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), USERFILES . '/' . lcfirst(__CLASS__), $this->title));
             }
         } else {
             //check file old and upload
-            if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
+            if ($_FILES[__CLASS__]['name']['pic_thumb']) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $this->pic_thumb = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_thumb'], Configs::configTemplate('products_width_thumb', Yii::app()->session['template']), Configs::configTemplate('products_height_thumb', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id, $this->title . '-thumb', $this->_oldImage_thumb);
+                $this->pic_thumb = $file->processUpload($_FILES[__CLASS__]['name']['pic_thumb'], $_FILES[__CLASS__]['tmp_name']['pic_thumb'], Configs::configTemplate('products_width_thumb', Yii::app()->session['template']), Configs::configTemplate('products_height_thumb', Yii::app()->session['template']), USERFILES . '/' . lcfirst(__CLASS__), $this->title . '-thumb', $this->_oldImage_thumb);
             } else {
                 //remove picthumb
-                if (isset($_POST[ucfirst(Yii::app()->controller->id)]['remove_pic_thumb']) && $_POST[ucfirst(Yii::app()->controller->id)]['remove_pic_thumb'] == 1) {
+                if (isset($_POST[__CLASS__]['remove_pic_thumb']) && $_POST[__CLASS__]['remove_pic_thumb'] == 1) {
                     $common_class = new Common();
                     $common_class->removePic($this->_oldImage_thumb);
                     //$this->removePic($this->_oldImage_thumb);
@@ -218,17 +218,17 @@ class Products extends CActiveRecord {
                     $this->pic_thumb = $this->_oldImage_thumb;
                 }
             }
-            if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full']) {
+            if ($_FILES[__CLASS__]['name']['pic_full']) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $this->pic_full = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_full'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id, $this->title, $this->_oldImage_full);
+                $this->pic_full = $file->processUpload($_FILES[__CLASS__]['name']['pic_full'], $_FILES[__CLASS__]['tmp_name']['pic_full'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), USERFILES . '/' . lcfirst(__CLASS__), $this->title, $this->_oldImage_full);
             } else {
                 $this->pic_full = $this->_oldImage_full;
             }
             //check remove pic_desc
-            if (isset($_POST['Products']['remove_pic_desc'])) {
+            if (isset($_POST[__CLASS__]['remove_pic_desc'])) {
                 $str = explode('|', $this->_oldImage_desc);
-                foreach ($_POST['Products']['remove_pic_desc'] as $value) {
+                foreach ($_POST[__CLASS__]['remove_pic_desc'] as $value) {
                     $common_class = new Common();
                     $common_class->removePic($value);
                     //$this->removePic($value);
@@ -237,10 +237,10 @@ class Products extends CActiveRecord {
                 $this->_oldImage_desc = $this->pic_desc = implode("|", $str); //parse value to $str $this->_oldImage_desc
             }
             //pic_desc
-            if (isset($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_desc'])) {
+            if (isset($_FILES[__CLASS__]['name']['pic_desc'])) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $uploaded = $file->uploadMulti($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_desc'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_desc'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), USERFILES . '/' . Yii::app()->controller->id, $this->title);
+                $uploaded = $file->uploadMulti($_FILES[__CLASS__]['name']['pic_desc'], $_FILES[__CLASS__]['tmp_name']['pic_desc'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), USERFILES . '/' . lcfirst(__CLASS__), $this->title);
 
                 $pic_desc = ($this->_oldImage_desc) ? explode('|', $this->_oldImage_desc) : array();
                 //push value
@@ -250,7 +250,7 @@ class Products extends CActiveRecord {
                 $this->pic_desc = implode("|", $pic_desc);
             }
         }
-
+        $this->dos_username=Yii::app()->user->name;
         return parent::beforeSave();
     }
 
@@ -281,8 +281,10 @@ class Products extends CActiveRecord {
     //Front end - list Item by Cat
     public function listItemByCat($cid) {
         $criteria = new CDbCriteria();
-        $criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit,record_id';
-        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->with = array(__CLASS__ . 'Cat');
+        $criteria->with = array('productsFeature');
+        $criteria->select = 'title' . LANG . ', pic_thumb, address, postdate,hits, tag' . LANG . ', unit,unit_unit,unit_currency,record_id';
+         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
         $criteria->params = array(':cid' => $cid);
 
@@ -298,7 +300,10 @@ class Products extends CActiveRecord {
 
     public function listItemByType($cid) {
         $criteria = new CDbCriteria();
-        $criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit,record_id';
+        $criteria->with = array(__CLASS__ . 'Cat');
+        $criteria->with = array('productsFeature');
+        $criteria->select = 'title' . LANG . ', pic_thumb,address, postdate,hits, tag' . LANG . ', unit,unit_unit,unit_currency,record_id';
+        
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable=1 AND dos_module_item_type_type_id=:cid';
         $criteria->params = array(':cid' => $cid);
@@ -325,6 +330,9 @@ class Products extends CActiveRecord {
         if ($this->_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');
         }
+       
+        $command = Yii::app()->db->createCommand('update ' . $this->tableName() . ' set hits=hits+1 WHERE record_id='.$id);
+        $command->execute();
         return $this->_model;
     }
 
@@ -353,8 +361,8 @@ class Products extends CActiveRecord {
         $criteria->with = array(__CLASS__ . 'Cat');
         $criteria->select = 'record_id, title, hits, record_order, hot, enable';
         $criteria->order = 'record_order DESC, postdate DESC';
-        $criteria->condition = 'dos_usernames_username=:user';
-        $criteria->params = array(':user' => Yii::app()->user->id);
+     //   $criteria->condition = 'dos_usernames_username=:user';
+      //  $criteria->params = array(':user' => Yii::app()->user->id);
 
         $count = $this->model()->count($criteria);
 
@@ -365,7 +373,22 @@ class Products extends CActiveRecord {
 
         return array('models' => $this->model()->findAll($criteria), 'pages' => $pages);
     }
+    public function listItemPosted() {
+        $criteria = new CDbCriteria();
+        $criteria->with = array(__CLASS__ . 'Cat');
+        $criteria->select = 'record_id, title, hits, tag,  record_order, hot, enable';
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'dos_usernames_username=:user';
+        $criteria->params = array(':user' => Yii::app()->user->id);
 
+        $count = $this->model()->count($criteria);
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = 15;
+        $pages->applyLimit($criteria);
+
+        return array('models' => $this->model()->findAll($criteria), 'pages' => $pages);
+    }
     //Back end - Update Record
     private function updateSort($order, $id) {
         $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET record_order=:order WHERE record_id=:id');
@@ -471,12 +494,13 @@ class Products extends CActiveRecord {
 
     //Back end - Get record to Edit
     public function loadEdit($id) {
-        $criteria = new CDbCriteria();
-        $criteria->with = array(__CLASS__ . 'Cat');
-        $criteria->condition = 'dos_usernames_username=:user';
-        $criteria->params = array(':user' => Yii::app()->user->id);
+//        $criteria = new CDbCriteria();
+//        $criteria->with = array(__CLASS__ . 'Cat');
+//        $criteria->condition = 'dos_usernames_username=:user';
+//        $criteria->params = array(':user' => Yii::app()->user->id);
 
-        $this->_model = $this->model()->findByPk($id, $criteria);
+        //$this->_model = $this->model()->findByPk($id, $criteria);
+        $this->_model = $this->model()->findByPk($id);
 
         if ($this->_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');

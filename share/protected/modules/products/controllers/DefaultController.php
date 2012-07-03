@@ -2,7 +2,7 @@
 
 class DefaultController extends Controller {
 
-    public function actionIndex() {	
+    public function actionIndex() {
         $this->layout = '//layouts/column-3';
         $this->setSeoPage(); //set Seo page
 
@@ -36,31 +36,32 @@ class DefaultController extends Controller {
     }
 
     public function actionView($id) {
-		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/scroll.css');
-		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/jquery.fancybox.css');
-		
-		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jcarousellite_1.0.1.js');
-		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/scroller.js');
-		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.fancybox.js');
-		
-		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.scroll-1.4.2-min.js');
-		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.serialScroll-1.2.2-min.js');
-		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/product.js');
-		
-	
-       $this->layout = '//layouts/column-3';
+        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/scroll.css');
+        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/jquery.fancybox.css');
+
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jcarousellite_1.0.1.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/scroller.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.fancybox.js');
+
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.scroll-1.4.2-min.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.serialScroll-1.2.2-min.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/product.js');
+
+
+        $this->layout = '//layouts/column-3';
 
         $model = ucfirst($this->module->id);
         $model_class = new $model();
-        
+
         $tmp = $model_class->detailItem($id);
         //$tmp['feature']=$tmp->productsFeature;
         //$tmp['utility'] = $tmp->productsUtility;
         $tmp['dos_provinces_province_id'] = Districts::getProvinceName($tmp['dos_districts_district_id']);
         $tmp['dos_districts_district_id'] = $tmp->District['district_name'];
-        
+
         $data['item'] = $tmp;
         $data['item_other'] = $model_class->listItemOther($data['item']['record_id'], $data['item']['dos_module_item_cat_cat_id']);
+
         $this->render(Yii::app()->session['template'] . '/view', $data);
     }
 
@@ -155,6 +156,98 @@ class DefaultController extends Controller {
         }
 
         $this->render(Yii::app()->session['template'] . '/ordering', array('Items' => $items, 'carts' => $cart, 'model' => $cartform));
+    }
+
+    public function actionAdd() {
+
+        $this->layout = '//layouts/column-3';
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/public/plugin/tiny_mce/config.js');
+
+        //Yii::app()->getModule($this->ID);
+        $model = 'Products';
+        $module_cat = 'ProductsCat';
+
+        $model_cat_class = new $module_cat();
+        $model_class = new $model();
+        $model_type_class = new ProductsType();
+        $model_utility_class = new ProductsUtility();
+        $model_fearture_class = new ProductsFeature();
+        $provice_class = new Provinces();
+
+        if (isset($_POST[$model])) {
+            $model_class->attributes = $_POST[$model];
+            $model_fearture_class->attributes = $_POST[$model]['feature'];
+            if ($model_class->validate() && $model_fearture_class->validate()) {
+                $model_class->save();
+                $model_fearture_class->save_data($model_class->record_id, $_POST[$model]['feature']);
+                $model_utility_class->save_data($model_class->record_id, $_POST[$model]['utility']);
+                $this->redirect(array('index'));
+            }
+        }
+
+        $this->render(Yii::app()->session['template'] . '/add', array(
+            'model' => $model_class,
+            'model_u' => $model_utility_class,
+            'model_f' => $model_fearture_class,
+            'listItemsF' => $model_fearture_class->listItem(),
+            'listItemsU' => $model_utility_class->attributeLabels(),
+            'listItemsType' => $model_type_class->listItem(),
+            'listItemsCat' => $model_cat_class->listCats(),
+            'listProvices' => $provice_class->listProvinceByCountry('VND'),
+        ));
+    }
+
+    public function actionEdit() {
+
+        $this->layout = '//layouts/column-3';
+
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/public/plugin/tiny_mce/config.js');
+
+        $model = 'Products';
+        $module_cat = 'ProductsCat';
+
+        $model_cat_class = new $module_cat();
+        $model_class = new $model();
+        $model_type_class = new ProductsType();
+        $model_utility_class = new ProductsUtility();
+        $model_fearture_class = new ProductsFeature();
+        $provice_class = new Provinces();
+
+        if (isset($_POST[$model])) {
+            $model_class->attributes = $_POST[$model];
+            $model_fearture_class->attributes = $_POST[$model]['feature'];
+            if ($model_class->validate() && $model_fearture_class->validate()) {
+                $model_class->save();
+                $model_fearture_class->save_data($model_class->record_id, $_POST[$model]['feature']);
+                $model_utility_class->save_data($model_class->record_id, $_POST[$model]['utility']);
+                $this->redirect(array('index'));
+            }
+        }
+
+        $this->render(Yii::app()->session['template'] . '/add', array(
+            'model' => $model_class,
+            'model_u' => $model_utility_class,
+            'model_f' => $model_fearture_class,
+            'listItemsF' => $model_fearture_class->listItem(),
+            'listItemsU' => $model_utility_class->attributeLabels(),
+            'listItemsType' => $model_type_class->listItem(),
+            'listItemsCat' => $model_cat_class->listCats(),
+            'listProvices' => $provice_class->listProvinceByCountry('VND'),
+        ));
+    }
+
+    public function actionList() {
+        $this->layout = '//layouts/column-3';
+
+        $model_class = new Products();
+        //Submit
+        if (Yii::app()->request->getIsPostRequest()) {
+            $model_class->activeItem(Yii::app()->request);
+        }
+
+        $this->render(Yii::app()->session['template'] . '/list', $model_class->listItemPosted());
     }
 
 }

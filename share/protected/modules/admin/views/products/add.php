@@ -5,9 +5,16 @@
         </ul>
     </div>
 <?php else: ?>
-    <?php $form = $this->beginWidget('CActiveForm', array('id' => 'frm', 'enableAjaxValidation' => true, 'enableClientValidation' => true, 'htmlOptions' => array('enctype' => 'multipart/form-data'))); ?>
-    <?php echo $form->errorSummary($model, ''); ?>
-    <?php echo $form->errorSummary($model_f, ''); ?>
+    <?php $form = $this->beginWidget(
+            'CActiveForm', 
+            array(
+                'id' => 'frm', 
+                'enableAjaxValidation' => true, 
+                'enableClientValidation' => true, 
+                'htmlOptions' => array('enctype' => 'multipart/form-data'))); 
+        echo $form->errorSummary($model, ''); 
+        echo $form->errorSummary($model_f, ''); 
+     ?>
     <fieldset>
         <legend><?php echo $this->lang['add_new'] ?> <?php echo strtolower($this->lang[$this->ID]) ?></legend>
 
@@ -19,8 +26,7 @@
         <div class="col1"><?php echo $form->labelEx($model, 'dos_module_item_cat_cat_id') ?></div>
         <div class="col2">
             <?php echo $form->dropDownList($model, 'dos_module_item_cat_cat_id', CHtml::listData($listItemsCat, 'cat_id', 'cat_title_prefix')); ?>
-        </div>
-        <div class="clear space"></div>
+        </div> <div class="clear space"></div>
 
         <div class="col1"><?php echo $form->labelEx($model, 'dos_provinces_province_id') ?></div>
         <div class="col2">
@@ -28,7 +34,6 @@
             echo $form->dropDownList($model, 'dos_provinces_province_id', CHtml::listData($listProvices, 'province_id', 'province_name'), array('prompt' => 'Chọn tỉnh/thành'));
             ?>
         </div>
-
 
         <script type="text/javascript">
             $(document).ready(function () {
