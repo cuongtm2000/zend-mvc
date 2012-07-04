@@ -1,0 +1,138 @@
+<div class="content">
+	<?php if(count($this->error) > 0): ?>
+		<ul class="error-li">
+			<?php 
+			foreach ($this->error as $value){
+				echo '<li>'.$value.'</li>';
+			}
+			?>
+		</ul>
+	<?php endif; ?>
+	
+	<script type="text/javascript" src="<?php echo $this->baseUrl() ?>/public/plugin/ckeditor/ckeditor.js"></script>
+	<form action="" method="post" enctype="multipart/form-data" id="frm" name="frm">
+	<fieldset>
+		<legend><?php echo $this->lang['sys_addpost'] ?></legend>
+		<div class="col1"><?php echo $this->lang['catparent'] ?></div>
+	    <div class="col2">
+	        <select name="parentcat" id="parentcat">
+	        <?php 
+	        	foreach ($this->cat as $value){
+	        		echo '<option value="'.$value['cat_id'].'">'.$value['title_prefix'].$value['cat_title'.LANG].'</option>';
+	        	}
+	        ?>
+	        </select>
+	    </div>
+	    <div class="clear space"></div>
+		
+	    <?php
+	        $lang = $this->langlist();
+	        foreach($lang as $value){
+	            echo '<div class="col1">'.$this->lang['sys_title'].' '.strtoupper($value).'</div>
+	                <div class="col2">
+	                    <input name="title'.$value.'" value="'.$this->items['title'.$value].'" maxlength="100" class="txt-very-large" />
+	                </div>
+	                <div class="clear space"></div>';
+	        }
+	        foreach($lang as $value){
+	            echo '<div class="col1">'.$this->lang['sys_preview'].' '.strtoupper($value).'</div>
+	                <div class="col2">
+	                    <textarea name="preview'.$value.'" cols="70" rows="10">'.$this->items['preview'.$value].'</textarea>
+	                    <script type="text/javascript">
+	                    //<![CDATA[
+	                    	CKEDITOR.replace( \'preview'.$value.'\' );
+	                    //]]>
+	                    </script>
+	                </div><div class="clear space"></div>';
+	        }
+	        foreach($lang as $value){
+	            echo '<div class="col1">'.$this->lang['sys_detail'].' '.strtoupper($value).'</div>
+	                <div class="col2">
+	                    <textarea name="detail'.$value.'" cols="70" rows="10">'.$this->items['detail'.$value].'</textarea>
+	                    <script type="text/javascript">
+	                    //<![CDATA[
+	                    	CKEDITOR.replace( \'detail'.$value.'\' );
+	                    //]]>
+	                    </script>
+	                </div><div class="clear space"></div>';
+	        }
+	    ?>
+	    
+	    <div class="col1"><?php echo $this->lang['picture_thumb'] ?></div>
+	    <div class="col2">
+	        <input type="file" name="file_thumb" size="48%" />
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <div class="col1"><?php echo $this->lang['sys_picture'] ?></div>
+	    <div class="col2">
+	        <input type="file" name="file_full" size="48%" />
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <p class="rows"><a href="#" id="add-rows">Hình mô tả</a></p>
+	
+		<div class="col1"><?php echo $this->lang['product_unit'] ?></div>
+	    <div class="col2">
+	        <input name="unit" value="<?php echo $this->items['unit'] ?>" maxlength="45" class="txt-very-large" />
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <!-- <div class="col1"><?php echo $this->lang['product_extra1'] ?></div>
+	    <div class="col2">
+	        <input name="extra1" value="<?php echo $this->items['extra1'] ?>" maxlength="200" class="txt-very-large" />
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <div class="col1"><?php echo $this->lang['product_extra2'] ?></div>
+	    <div class="col2">
+	        <input name="extra2" value="<?php echo $this->items['extra2'] ?>" maxlength="200" class="txt-very-large" />
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <div class="col1"><?php echo $this->lang['product_extra3'] ?></div>
+	    <div class="col2">
+	        <input name="extra3" value="<?php echo $this->items['extra3'] ?>" maxlength="200" class="txt-very-large" />
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <div class="col1"><?php echo $this->lang['product_extra4'] ?></div>
+	    <div class="col2">
+	        <input name="extra4" value="<?php echo $this->items['extra4'] ?>" maxlength="200" class="txt-very-large" />
+	    </div>
+	    <div class="clear space"></div> -->
+	    
+	    <div class="col1"><?php echo $this->lang['sys_hot'] ?></div>
+	    <div class="col2 radio">
+	        <input type="radio" checked="checked" name="hot" id="nohot" value="0" /> <label for="nohot"><?php echo $this->lang['sys_nohot'] ?></label> &nbsp;&nbsp; <input type="radio" name="hot" id="hot" value="1" /> <label for="hot"><?php echo $this->lang['sys_hot'] ?></label>
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <div class="col1"><?php echo $this->lang['sys_specials'] ?></div>
+	    <div class="col2 radio">
+	        <input type="radio" checked="checked" name="specials" id="nospecials" value="0" /> <label for="nospecials"><?php echo $this->lang['sys_nospecials'] ?></label> &nbsp;&nbsp; <input type="radio" name="specials" id="specials" value="1" /> <label for="specials"><?php echo $this->lang['sys_specials'] ?></label>
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <div class="col1"><?php echo $this->lang['sys_active'] ?></div>
+	    <div class="col2 radio">
+	        <input type="radio" checked="checked" name="active" id="active" value="1" /> <label for="active"><?php echo $this->lang['sys_active'] ?></label> &nbsp;&nbsp; <input type="radio"  name="active" id="deactive" value="0" /> <label for="deactive"><?php echo $this->lang['sys_hidden'] ?></label>
+	    </div>
+	    <div class="clear space"></div>
+	    
+	    <div class="col1">&nbsp;</div>
+	    <div class="col2">
+	        <input type="submit" name="submit" value="  <?php echo $this->lang['sys_add'] ?>  " class="login" /> <a href="javascript:history.back()" class="login-a"><?php echo $this->lang['sys_cancel'] ?></a>
+	    </div>
+	    <div class="clear space"></div>
+	</fieldset>
+	</form>
+	<script type="text/javascript">
+	$(document).ready(function(){
+	    $("#add-rows").click(function(){
+	        $(".rows").before('<div class="col1"><?php echo $this->lang['sys_picture'] ?></div><div class="col2"><input type="file" name="file_desc[]" size="48%" /></div><div class="clear space"></div>');
+	        return false;
+	    });
+	});
+	</script>
+</div>

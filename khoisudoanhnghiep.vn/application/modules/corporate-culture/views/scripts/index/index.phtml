@@ -1,0 +1,18 @@
+<h1 class="title-left"><span><a href="<?php echo $this->baseUrl() ?>/van-hoa-doanh-nghiep" title='<?php echo $this->lang[$this->module]?>'><?php echo $this->lang[$this->module]?></a></span></h1>
+<div class="frame-tent-left">
+	<?php if($this->list_items_index):?>
+	 <?php foreach ($this->list_items_index as $value):?>
+		<?php $picthumb = ($value['pic_thumb']!='') ? IMAGES_PATH.$this->module.'/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg'; ?>
+	 		<div class="masuring">
+				<div class="masuring-img"><a href="<?php echo $this->baseUrl() ?>/van-hoa-doanh-nghiep/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'>
+					<img src="<?php echo $this->baseUrl().$picthumb ?>" class="imgcon" alt='<?php echo $value['title'] ?>' /></a></div>
+                <h2 class="title-masuring"><a href="<?php echo $this->baseUrl() ?>/van-hoa-doanh-nghiep/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'><?php echo $value['title'] ?></a></h2>
+     			<?php echo $value['preview'] ?>
+     		</div><div class="clear"></div>
+		<?php endforeach;?>
+        <?php echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml');?>
+	<?php else: ?>
+		<?php echo $this->lang['norecord'] ?>
+	<?php endif;?>	
+</div><!--End frame tent-->
+<div class="bd-bt-tenf-left"></div>
