@@ -9,9 +9,9 @@ $this->description = $item['description' . LANG];
 <div class="bg-footer-left">
     <h2 class="title-right"><span><?php echo $item['title' . LANG] ?></span></h2>
     <div class="frame-pro-info">
-        <?php if ($item['pic_full']): ?>
             <table class="row-info">
                 <tr>
+					<?php if ($item['pic_full']): ?>
                     <td id="pb-right-column">
                         <!-- product img-->
                         <div id="image-block">
@@ -45,6 +45,7 @@ $this->description = $item['description' . LANG];
                             </div><!--END Slide show Jquery Lightbox-->
                         </div>
                     </td>	
+					<?php endif; ?>
                     <td class="right-info">
                         <p class="price">Mã số:  <?php echo $item['record_id'] ?> </p>
                         <p class="price"><strong>Giá: <span><?php echo (is_numeric($item['unit'])) ? number_format($item['unit'], 0, '', '.') . ' ' . $item['unit_currency'] . '/' . $item['unit_unit'] : (($item['unit']) ? $item['unit'] : $this->lang['contact']) ?></span></strong></p>
@@ -94,8 +95,6 @@ $this->description = $item['description' . LANG];
 					</td>
 				</tr>
             </table>
-        <?php endif; ?>
-
     </div> <!--End frame tent right-->
 </div>	
 
