@@ -1,0 +1,170 @@
+body {font-family:Tahoma, Geneva, sans-serif; font-size:9pt;padding:10px 0 0 0}
+.left{float: left;}
+.right{float:right}
+.clear{clear: both;}
+a{text-decoration:none; color:#720E3B}
+a:hover{color:#000;}
+*{margin:0;padding:0}
+/*layout*/
+#wrapper {margin:auto; width:950px;background:#fff}
+
+/*Header*/
+#header{position: relative;margin: 0 0 10px 0;padding: 5px 0 0 0}
+.logo{float:left;}
+
+.title-company{font-size:18pt;color:#f00;font-weight:bold;float:left;padding:35px 0 0 30px}
+/*Lang*/
+.lang{position: absolute;bottom:0; right: 0; text-align: right}
+.lang img{position:relative;top:2px}
+.lang a{color:#228BC8;font-weight:bold; margin:0 5px}
+.lang a:hover{color:#000}
+.hot-line{color:#228BC8;margin: 10px 0 0 0}
+
+/*Nav*/
+#nav{list-style:none;background:url(../images/nav-bg.jpg) no-repeat; height:36px;padding:0 10px 0 15px;margin:0 0 5px 0}
+#nav li{float:left; background:url(../images/nav-line.jpg) no-repeat right;}
+#nav li a{color:#fff; padding:9px 33px;display:block;font-size:10pt;font-weight:bold;*padding:9px 46px}
+#nav li a:hover{background:#228BC8}
+#nav .select{background:#228BC8}
+#nav .none-line{background: none}
+
+/** Banner **/
+#banner{ margin:0 0 10px 0}
+
+/* Page Content*/
+#content{margin:0 0 10px 0}
+
+/*Left content*/
+#leftcontent{float:left; width:206px}
+.frame-leftcontent{margin:0 0 10px 0;border-bottom:1px solid #EEEEEE ;border-left:1px solid #EEEEEE ; border-right:1px solid #EEEEEE}
+
+.title-left{color:#fff; font-weight:bold; padding:8px 0 8px 0;font-weight:bold; background:url(../images/titalbg.gif) no-repeat}
+.title-left span{padding:0px 10px 0 15px; }
+
+.title-box{color:#3B3B3B; font-weight:bold; padding:8px 0 8px 0;font-weight:bold; background:#EEE url(../images/tital-bullet.gif) no-repeat 10px;}
+.title-box span{padding:0px 10px 0 25px}
+
+/*sub cat*/
+.sub-cat{list-style:none;padding:10px 5px 10px 10px}
+.sub-cat li{padding:5px 0}
+.sub-cat li a{color:#444;padding:0 0 0 10px;display:block;background:url(../images/bullet.gif) left 4px no-repeat}
+.sub-cat li a:hover{ color:#3CBEDA}
+.sub-cat li ul{list-style:none;padding:5px 0 0 10px}
+.sub-cat li ul li{padding:2px 0;border-bottom:1px dotted #e1e1e1}
+.sub-cat li ul li a{background:url(../images/bull.jpg) left 3px no-repeat; *_display:inherit}
+
+/*Ho tro ky thuat*/
+.support{list-style:none;padding:10px 3px 15px 0px;text-align:center}
+.support li {color:#444444; line-height:2em;}
+
+/*Thong ke truy cap*/
+.statistics{list-style:none;padding:10px 3px 15px 25px}
+.statistics li {color:#444444; line-height:1.75em;}
+
+/*bg-adv adv left*/
+.bg-adv{list-style:none;border:1px solid #F2F2F2;text-align:center;padding:5px 0 0 0}
+.bg-adv li{padding:0 0 5px 0}
+
+/*Right content*/
+#rightcontent{float:right; width:735px}
+#rightcontent p{margin:0 0 10px 0}
+#rightcontent ul li, #right-content ol li{margin: 4px 0 4px 40px}
+#rightcontent ul ,#right-content ol{margin: 0 0 12px 0}
+
+.title-right{margin:0 0 10px 0;padding:5px 0 0 20px;color:#3CBEDA; font-size:12pt;background:url(../images/bullet2.gif) no-repeat left 9px;  font-weight:bold;}
+
+.frame-tent-right {padding:10px;border:1px solid #EEEEEE;margin:0 0 10px 0;-webkit-border-radius:1px;-moz-border-radius:1px}
+.frame-tent-right p{text-align:justify;line-height:1.5em}
+
+.link{color:#000;padding:5px 0 5px 0; border-bottom:1px dashed #e1e1e1; margin:0 0 5px 0}
+.link b{font-weight:normal;padding:0 5px}
+.link span{color:#D2A800}
+.link a{ color:#333}
+.link a:hover{color:#228BC8}
+
+/***** Product    *****/
+#rightcontent .all-product{margin:0 ;list-style:none;padding:0}
+#rightcontent .product{width:170px;padding:5px 0 15px 0;text-align:center;margin:0 0 10px 8px; border:1px solid #ddd;display:inline-block; vertical-align:top;*float:left;*margin:0 10px 10px 0}
+.product-img{height:160px; width:170px;display:table-cell;vertical-align:middle; padding:0 0 10px 0}
+.tent-product{padding:0 5px}
+#rightcontent .price{color:#000; font-weight:700; font-size:13px; margin:7px 0 10px 0}
+.title-pro{padding:7px 0 0 0 ; font-size:10pt}
+.title-pro a{color:#666666}
+.title-pro a:hover{ text-decoration:underline}
+.add-to-cart{padding: 5px 0 8px 5px; font-weight:700;background:url(../images/bkg_btn.png) no-repeat left top;*padding:0 0 0 5px;*height:25px}
+.add-to-cart span{background:url(../images/bkg_btn.png) no-repeat right top; padding:5px 15px 8px 10px; height:25px;color:#fff}
+
+/***    Page product-info     ****/
+.frame-pro-info{padding:0 0}
+.row-info{margin: 0 0 15px 0}
+.right-info{float:right;width:430px}
+.tent-right-info{padding:0 10px}
+.title-info{margin:0 0 10px 0;color: #fff}
+.title-info span{background: #444444;padding:3px 10px}
+.price-info{color:#000;margin:0 0 10px 0 !important;font-size: 10pt}
+.price-info span{margin: 0 0 0 10px;color: #DC692B}
+
+/** Form lien he  **/
+.title-contact{ background:#CCC195;margin:0 0 10px 0; padding:7px 2px 7px 10px; font-family:Tahoma, Geneva, sans-serif;font-weight:bold; color:#33220C}
+#frm{margin:0 0 10px 0;}
+.frame-contact label{color:#555;font-weight:700; margin:0 !important;width:150px; float:left}
+.frame-contact{list-style:none;margin:15px 0 10px 0}
+.frame-contact li{padding:4px 0; margin:0 !important}
+.frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.frame-contact textarea{border:1px solid #ddd;width: 350px; -moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-contact span{color:#f00;margin:0 5px 0 0}
+
+.frame-contact .bton-dk{margin:10px 0 5px 30px;background:#1F1F1F;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-contact .bton-dk{margin:10px 10px 5px 0}
+/****  End page contact     *****/
+
+/*   Page New  */
+.masuring{list-style: none; text-align:justify;font-size:10pt;margin:0 0 20px 0}
+.masuring li{ margin:0 0 10px 0 !important}
+.frame-img{float:left;width:143px; margin:0 10px 0 0}
+.title-masuring{margin:0 0 5px 0}
+.title-masuring a{color:#666}
+.title-masuring a:hover{color:#3CBEDA}
+
+/* paging */
+ul.paging{float: right; margin:0; padding:0 0 5px 0; list-style: none;}
+ul.paging li{display: inline;margin:0 !important;}
+ul.paging .hidden{display: none;}
+ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{color:#3CBEDA; border: 1px solid #ccc; padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{color:#fff; background:#3CBEDA}
+
+/*Columns 3*/
+#columns3{ float:right; width:206px}
+
+/*Footer*/
+#footer{text-align:center;margin:0 0 5px 0}
+.nav-fter{list-style:none; margin:0 0 15px 0}
+.nav-fter li{display:inline}
+.nav-fter li a{color:#1A4C98;padding:0 10px;background:url(../images/bkg-pipe2.gif) no-repeat right}
+.nav-fter li a:hover{color:#f90}
+.nav-fter .none-line a{background:none}
+.frame-info{line-height:1.5em; color:#fff;background:url(../images/footer-bg.jpg) no-repeat;padding:0 0 0 0}
+.frame-info a{color:#fff} .frame-info a:hover{color:#D2A800}
+
+/* Error */
+.errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
+.errorSummary ul{margin:0 32px; padding:0}
+.errorSummary ul li{padding:2px 0; color: red}
+
+/*Add to cart*/
+.form_order{background:#fff;margin:0 0 15px 0;-webkit-border-radius:0 0 4px 6px;-moz-border-radius:0 0 6px 4px}
+.form_order thead{background:#1F1F1F}
+.form_order thead tr td{font-weight:bold;padding :5px !important; color:#fff;font-size:10pt}
+
+.form_order tbody tr td{border : 1px solid #ddd;}
+.form_order tbody tr .pic-order{padding:5px 0}
+.form_order tbody tr input{border:1px solid #ccc}
+.form_order tbody tr td a{color:#444}
+.form_order tbody tr td a:hover{color:#3CBEDA}
+
+.btn_order{cursor:pointer; border:none;font-weight:bold;background:#2C2C2C;padding:5px 7px;color:#fff;-webkit-border-radius:4px;-moz-border-radius:4px;margin:0 10px 0 0}
+.btn_order:hover{color:#fff}
+
+.frm-cart label{width:100px}
+.notificaion{color:#2C2C2C;font-size:10pt;margin:0 0 10px 0}
+.note span{color:#f00}
