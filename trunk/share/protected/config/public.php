@@ -4,10 +4,10 @@ return CMap::mergeArray(
     array(
         'components' => array(
             'db' => array(
-                'connectionString' => 'mysql:host=localhost;dbname=publish',
+                'connectionString' => 'mysql:host=localhost;dbname=nhaphodep_data',
                 'emulatePrepare' => true,
-                'username' => 'root',
-                'password' => '',
+                'username' => 'nhaphodep_user',
+                'password' => 'cnbMx1bt',
                 'charset' => 'utf8',
                 'schemaCachingDuration' => 60 * 60,
             ),
