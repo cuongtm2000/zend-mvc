@@ -1,0 +1,116 @@
+body {background:#fff url(../images/bg-no.gif) repeat-x; font-family:Verdana; font-size:9pt }
+.left{float: left;}
+.right{float:right}
+.clear{clear: both;}
+a{text-decoration:none; color:#720E3B}
+a:hover{color:#000;}
+ul{list-style:none}
+/*layout*/
+*{margin:0; padding:0}
+#wrapper { margin:auto; width:950px;   }
+
+/*header*/
+#top{}
+.logo { margin:10px 0 0 0;float:left; }
+.cart { margin:10px 0 0 0; padding:0; float:right; width:198px; }
+.cart img { margin:0 15px 0 0; padding:0; float:left; }
+.cart p { margin:0; padding:0;  font-size:34px; color:#fff;   }
+.cart p span { color:#f89800; float:left; margin-right:10px; }
+.cart a { margin:0; padding:0; color:#fff; text-decoration:none; }
+.cart a:hover { text-decoration:underline; }
+
+/*Menu*/
+/*#menu { margin:0 0px 0 0; padding:0 0px 0 0; clear:both; background:url(../images/menu-bg.png) no-repeat;  height:54px; float:right; }
+#menu ul { margin:0; padding:0; }
+#menu ul li { margin:0; padding:0; list-style:none; display:inline; }
+#menu ul li a { margin:0; padding:17px 20px 19px 19px; font-size:15px; color:#f89800; text-align:center; display:block; background:url(../images/line.jpg) no-repeat right; float:left;  text-decoration:none;}
+#menu ul li a:hover {  color:white; }*/
+#allmenu{ float:right;position:relative;z-index:300; top:25px;right:8px; 
+ *_right:8px;
+}
+.leftmenu{float:left;background:url(../images/bg-left-menu.gif) no-repeat; height:54px; width:10px;color:#FFF}
+.menu{float:left;background:url(../images/bg-right-menu.gif)  repeat-x  right; height:54px;color:#FFF}
+.menu li{float:left; position:relative;background:url(../images/line.jpg) no-repeat right;}
+.menu a{padding:20px 20px; color:#f89800; text-decoration:none; display:block;  }
+.menu a:hover{color:#fff}
+.menu li ul{display:none}
+.menu li:hover ul{ background:#ED6C12; display:block;width:180px;position:absolute;border-radius:4px;-moz-border-radius:5px;-webkit-border-radius:5px; z-index:200; top:54px; padding:5px 0 5px 0}
+.menu li ul li{width:100%; background:none;}
+.menu li ul li a{padding:5px 20px;color:#fff; margin:4px 0px}
+.menu li ul li a:hover{color:#500; background:#FFF;}
+
+
+/*Baner*/
+.banner{ }
+
+/*Mid area*/
+.titleh1 { margin:0; padding:10px 0 10px 15px; font-family: Trebuchet MS, Arial; font-size:16px; color:#000; font-weight:bold;text-transform:uppercase; display:block; }
+.titleh1 span { color:#ff5400; }
+.titleh2 { margin:0; padding:0 0 10px 55px; font-family:Trebuchet MS, Arial; font-size:25px; color:#ff5400;  display:block; font-weight:normal;  }
+#mid-area { margin:25px 0 10px 0;  }
+
+/*Left column*/
+#left-column  { margin:0 4px 0 0px; padding:0px 0 0px 0;  width:198px; float:left; }
+.categories { margin:0; padding:0 0 15px 0; border:solid 1px #e8e8e8;
+*margin:0; *padding:0;}
+.categories ul { padding:0 20px}
+.categories ul li { list-style:none; }
+.categories ul li a {padding:3px 5px; font-family: Trebuchet MS, Arial; font-size:13px; color:#000;  text-decoration:none; display:block; border-bottom: dashed 1px #c7c5c5;
+*margin:0px; *padding:3px 0 3px 0;  _font-size:13px; _color:#000;  *text-decoration:none; *display:block;  *border-bottom: dashed 1px #c7c5c5;
+}
+.categories ul li a:hover { background:#ff6000; color:white; }
+
+.manufact { margin:5px 0 5px 0; padding:0 0 20px 0; background:#eeeeee;  }
+.list { margin:0 0 0 13px; padding:0; width:168px; height:20px; border: solid 1px #d4d4d4; color:#838383; font-size:12px;   }
+
+/*Quảng cáo*/
+.adment-pr{margin:2px 0; padding:0 0 10px 0;border:1px solid #e8e8e8}
+.adment-pr ul{ text-align:center}
+.adment-pr ul li{list-style:none;margin:5px 0; }
+.adment-pr h1{ text-align:center}
+
+.test{width: 300px; *width: 298px}
+
+/*Center-column*/
+#center-column {width:547px; float:left;background:url(../images/center-column-bg.png) no-repeat center top #FFF; }
+#allproducts{ padding:0 5px 0 15px}
+.products {margin:5px 5px 20px 5px; padding:20px 2px 20px 15px; border:solid 1px #e8e8e8; background:#FFF; width:227px; display:inline-block; vertical-align:text-top;*float:left; }
+.products p { margin:0; padding:10px 0 10px 0; font-family: Trebuchet MS, Arial; font-size:13px; color:#000;  display:block; line-height:23px;  }
+/*2 button*/
+.btn-1 { margin:0 20px 0 0px; padding:0; background:url(../images/detail.jpg) no-repeat; border:none; width:77px; height:25px; cursor:pointer; } 
+.btn-2 { margin:0; padding:0; background:url(../images/add-to.jpg) no-repeat; border:none; width:103px; height:25px; cursor:pointer; } 
+
+/*Right column*/
+#right-column {width:198px; float:right;}
+
+.search { margin:0; padding:0 0 20px 0; border:solid 1px #e8e8e8; }
+.bar { margin:0 0 0 13px; padding:0; width:112px; height:24px; border: solid 1px #d4d4d4; color:#838383; font-size:12px; font-family:Tahoma;  }
+.go { margin:0 0 0 0; padding:0px 0 0 0; background:url(../images/go.jpg) no-repeat; width:46px; height:23px; border:none; cursor:pointer;  }
+
+/*Currency*/
+.currency { margin:5px 0 5px 0; padding:0 0 20px 0; background:#eeeeee;  }
+.list-2 { margin:0 0px 0 15px; padding:0; width:103px; height:20px; border: solid 1px #d4d4d4; color:#838383; font-size:12px;   }
+.change { margin:0; padding:0; width:52px; height:20px; border:solid 1px #d4d4d4; cursor:pointer; background:#FFF; font-size:10px; font-family:Tahoma; color:#838383; text-align:center; }
+
+/*BEST SELLERS*/
+.sellers { margin:0 0 10px 0; padding:0 0 10px 0; border:solid 1px #e8e8e8;  }
+.best-sellers{ margin:0 0 0 25px}
+.best-sellers li{list-style:decimal; color:#ff9c00; margin:10px 0;*margin:5px 0;}
+.best-sellers a{display:block; color:#000; text-decoration:none}
+.best-sellers a:hover{color:#FE8005}
+/*.sellers p  { margin:0 20px 0 18px; padding:4px 0 4px 0px; font-family: Trebuchet MS, Arial; font-size:13px; color:#000;  text-decoration:none; display:block; border-bottom: dashed 1px #c7c5c5; }
+.sellers p span { color:#ff9c00; padding-right:3px;  }*/
+
+
+/*Footer*/
+#allfooter{background:#000}
+#footer {margin:auto; width:950px;padding:25px 0 20px 0; background:#000; color:#FFF;text-align:center;}
+#menufooter li{ display:inline; list-style:none;}
+#menufooter li a{text-transform:capitalize;font-family:Trebuchet MS, Arial; font-size:13px; padding:10px 5px; color:#FFF; text-decoration:none}
+#menufooter a:hover { text-decoration:underline; }
+#footer p { margin:15px 0 0 0; padding:0; font-family:Trebuchet MS, Arial; font-size:13px; color:#ff6709; text-align:center; display:block; }
+
+
+
+
+

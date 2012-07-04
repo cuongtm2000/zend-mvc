@@ -3,7 +3,9 @@
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
 
-$config = array(
+// This is the main Web application configuration. Any writable
+// CWebApplication properties can be configured here.
+return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
     'name' => 'My Web Application',
 
@@ -16,7 +18,7 @@ $config = array(
         'application.components.*',
     ),
 
-    //'modules' => require(dirname(__FILE__) . '/LoadModules.php'),
+    'modules' => require(dirname(__FILE__) . '/LoadModules.php'),
 
     /*'modules' => array(
         'gii' => array(
@@ -27,6 +29,7 @@ $config = array(
         ),
     ),*/
 
+    // application components
     'components' => array(
         'user' => array(
             // enable cookie-based authentication
@@ -39,15 +42,9 @@ $config = array(
             'urlFormat' => 'path',
             'showScriptName' => false,
             'rules' => array(
-                /*'<controller:\w+>/<id:\d+>' => '<controller>/view',
+                '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',*/
-
-                //admin rules
-                'admin/<action:(dashboard|forgot|logout)>' => 'admin/<action>',
-                'admin/<module:\w+>/<action:\w+>/<id:\d+>' => '<module>/admin/<action>',
-                'admin/<module:\w+>/<action:\w+>' => '<module>/admin/<action>',
-                'admin/<module:\w+>' => '<module>/admin',
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ),
         ),
 
@@ -74,10 +71,10 @@ $config = array(
                 ),
                 // uncomment the following to show log messages on web pages
                 /*
-                array(
-                    'class'=>'CWebLogRoute',
-                ),
-                */
+                            array(
+                                'class'=>'CWebLogRoute',
+                            ),
+                            */
             ),
         ),
     ),
@@ -89,14 +86,3 @@ $config = array(
         'adminEmail' => 'webmaster@example.com',
     ),
 );
-
-$modules_dir = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR;
-$handle = opendir($modules_dir);
-while (false !== ($file = readdir($handle))) {
-    if ($file != "." && $file != ".." && is_dir($modules_dir . $file)) {
-        $config = CMap::mergeArray($config, require($modules_dir . $file . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'main.php'));
-    }
-}
-closedir($handle);
-
-return $config;
