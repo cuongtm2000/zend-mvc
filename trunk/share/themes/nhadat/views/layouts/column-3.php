@@ -59,7 +59,7 @@
 					<ul class="sub-consultant">
 						<?php Common::menuMultiLevel($this->function['menu_news'], 'NewsCat', Yii::t('user', 'news.link')); ?>
 					</ul>
-					<p class="all-view-new"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-2.gif" alt="allview" /><a href="/nhaphodep.vn/news" title="" >Xem tất cả</a></p>
+					<p class="all-view-new"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-2.gif" alt="allview" /><a href="<?php echo Yii::app()->baseUrl?>/tin-tuc-su-kien" title="" >Xem tất cả</a></p>
 				</div>	<!--End sub news-->
 				<?php endif; ?>
 
