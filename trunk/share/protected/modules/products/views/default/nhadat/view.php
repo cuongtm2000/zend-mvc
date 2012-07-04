@@ -55,8 +55,8 @@ $this->description = $item['description' . LANG];
                         <p>Địa chỉ: <?php echo $item['contact_add'] ?></p>
                         <p>ĐTDĐ: <?php echo $item['contact_mobile'] ?></p>
                         <p>ĐT bàn: <?php echo $item['contact_tel'] ?></p>
-                        <h4 class="title-info"><span><?php echo $this->lang['description'] . ' ' . strtolower($this->lang[$this->module->id]) ?></span></h4>
-                        <?php echo $item['preview' . LANG] ?>
+						<h4 class="title-info"><span><?php echo $this->lang['detail'] . ' ' . strtolower($this->lang[$this->module->id]) ?></span></h4>
+							<?php echo $item['content' . LANG] ?>
                     </td>
                 </tr>
 				<tr>
@@ -77,7 +77,7 @@ $this->description = $item['description' . LANG];
 						</div>
 					</td>
 					<td>
-						 <h4 class="title-info"><span>Tiện ích:</span></h4>
+						<h4 class="title-info"><span>Tiện ích:</span></h4>
 						<div>
 							<?php
 							$labels = ProductsUtility::model()->attributeLabels();
@@ -92,10 +92,7 @@ $this->description = $item['description' . LANG];
 				</tr>
             </table>
         <?php endif; ?>
-        <h4 class="title-info"><span><?php echo $this->lang['detail'] . ' ' . strtolower($this->lang[$this->module->id]) ?></span></h4>
-        <div class="panel-content">
-            <?php echo $item['content' . LANG] ?>
-        </div>
+
     </div> <!--End frame tent right-->
 </div>	
 

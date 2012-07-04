@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.0
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 03, 2012 at 07:23 AM
--- Server version: 5.5.8
--- PHP Version: 5.3.5
+-- Generation Time: Jul 04, 2012 at 03:41 AM
+-- Server version: 5.5.16
+-- PHP Version: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -1300,14 +1300,21 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   KEY `dos_districts_district_id` (`dos_districts_district_id`),
   KEY `dos_module_item_type_type_id` (`dos_module_item_type_type_id`),
   KEY `dos_username` (`dos_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=37 ;
 
 --
 -- Dumping data for table `dos_module_products`
 --
 
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `unit_currency`, `unit_unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_type_type_id`, `dos_module_item_cat_cat_id`, `dos_districts_district_id`, `address`, `contact_name`, `contact_add`, `contact_mobile`, `contact_tel`, `dos_username`) VALUES
-(29, 'Nhà bán nè, ai mua ko', '', '2012-07-03 01:57:54', '', 'nh-bn-n-ai-mua-ko-6.jpg', NULL, '', '', '<p>----------------------------------------</p>\r\n<p> </p>\r\n<p>-----------------------------------------</p>\r\n<p> sdf</p>\r\n<p> g</p>\r\n<p> </p>\r\n<p>----------------------------------------</p>', '', 'nha-ban-ne-ai-mua-ko', '', '', '', 11, 1, '12312', 'USD', 'Tháng', 1, NULL, NULL, NULL, NULL, NULL, 1, 1, 526, 4, 'J7 Buu Long', 'Thành An', '', '24356577879', '', 'nhaphodep');
+(29, 'Nhà bán nè, ai mua ko', '', '2012-07-03 01:57:54', 'nha-ban-ne-ai-mua-ko-thumb.jpg', 'nha-ban-ne-ai-mua-ko.jpg', NULL, '', '', '<p>Thông tin đang đc cập nhật</p>', '', 'nha-ban-ne-ai-mua-ko', '', 'nha ban ne thong tin cap nhat', '', 20, 1, '12312', 'USD', 'Tháng', 1, NULL, NULL, NULL, NULL, NULL, 1, 1, 526, 4, 'J7 Buu Long', 'Thành An', '', '24356577879', '', 'nhaphodep'),
+(30, 'Bán hoặc cho thuê nhà mặt tiền đường Xuân Hồng, phường 12, Tân Bình', '', '2012-07-04 00:53:05', 'ban-hoac-cho-thue-nha-mat-tien-duong-xuan-hong-phuong-12-tan-binh-thumb.JPG', 'ban-hoac-cho-thue-nha-mat-tien-duong-xuan-hong-phuong-12-tan-binh.JPG', NULL, '', '', '<p>Bán hoặc cho thuê nhà mặt tiền đường Xuân Hồng, P12, Tân Bình. Nhà đối diện Hội Chợ Triển Lãm Tân Bình. Xung quanh có hồ bơi, sân vườn tạo không khí trong lành và thoáng mát. Đường trước nhà dài 20m rất thuận tiện cho giao thông đi lại.</p>\r\n<p>Cấu trúc nhà: 5 tầng, 1 PK, 9 PN, 1 phòng bếp, 10 toilet. Hướng Đông Nam rất đẹp. Rất thuận tiện cho việc mở văn phòng, kinh doanh, khách sạn mini và đặc biệt là rất rộng rãi thích hợp cho gia đình đông người.</p>\r\n<p>Giá bán : 10,5 tỷ, giá thuê : 25 triệu/tháng. Liên hệ chủ nhà : Mr Bao 0942 001 001 - 01203 17 1510</p>', '', 'ban-hoac-cho-thue-nha-mat-tien-duong-xuan-hong-phuong-12-tan-binh', '', 'Bán hoặc cho thuê nhà mặt tiền đường Xuân Hồng, P12, Tân Bình. Nhà đối diện Hội Chợ Triển Lãm Tân Bình. Xung quanh có hồ bơi, sân vườn tạo không khí trong lành và thoáng mát. Đường trước nhà dài 20m rất thuận tiện cho giao thông đi lại.', '', 6, 2, '10500000000', 'VND', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 1, 527, 586, '171 Xuân Hồng, P12, Q.Tân Bình, TP. HCM', 'Bảo', '', '0942 001 00', '', 'nhaphodep'),
+(31, 'Bán nhà mặt tiền Nguyễn Thị Thập,Quận 7. vị trí cực đẹp, tiện kinh doanh.', '', '2012-07-04 01:03:59', 'ban-nha-mat-tien-nguyen-thi-thapquan-7--vi-tri-cuc-dep-tien-kinh-doanh--thumb.jpg', 'ban-nha-mat-tien-nguyen-thi-thapquan-7--vi-tri-cuc-dep-tien-kinh-doanh-.jpg', NULL, '', '', '<p>Nhà mặt tiền đường Nguyễn Thị Thập, Phường Tân Phú, Quận 7.<br />Khu kinh doanh sầm uất, sôi động bậc nhất quận 7, xung quanh nhiều ngân hàng, công ty, show room, nhà hàng, karaoke.<br />Liền kề Phú Mỹ Hưng, Lote Mart. Cách trung tâm Q1 chỉ 5 phút.<br />Nhà cấp 4, tiện xây khách sạn, ngân hàng, công ty, show room, karaoke, cafê…<br />Diện tích: 6m x 35m (vuông vức).<br />Hướng: Bắc<br />Sổ hồng 2011<br />Giá: 15,8 tỷ (còn thương lượng).<br />Liên hệ: 0934109179 – Mr.Thắng<br />Bảo đảm xem nhà và vị trí sẽ thích ngay.</p>', '', 'ban-nha-mat-tien-nguyen-thi-thapquan-7-vi-tri-cuc-dep-tien-kinh-doanh', '', 'Nhà mặt tiền đường Nguyễn Thị Thập, Phường Tân Phú, Quận 7.\r\nKhu kinh doanh sầm uất, sôi động bậc nhất quận 7, xung quanh nhiều ngân hàng, công ty, show room, nhà hàng, karaoke.', '', 3, 3, '10800000000', 'VND', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 1, 527, 582, 'Nguyễn Thị Thập , phường Tân Phú, Quận 7, TP.HCM.', 'Thắng', '', '0934109179 ', '', 'nhaphodep'),
+(32, 'Cần bán căn hộ Phú Mỹ - Vạn Phát Hưng giá 22 triệu/m2 DT: 87m2, 2pn, 2wc', '', '2012-07-04 01:12:53', 'can-ban-can-ho-phu-my-van-phat-hung-gia-22-trieum2-dt-87m2-2pn-2wc-thumb.jpg', 'can-ban-can-ho-phu-my-van-phat-hung-gia-22-trieum2-dt-87m2-2pn-2wc.jpg', NULL, '', '', '<p>Cần bán gấp căn hộ Phú Mỹ - Vạn Phát hưng, Q.7. giá cực sốc 22 triệu/m2, DT: 87m2, 2pn, nhà hoàn thiện, bảo vệ 24/24, có hồ bơi, siêu thị, phòng cộng đồng, sân thể thao,.v.v…vị trí giao thông thuận lợi liền kề Phú Mỹ Hưng, sử dụng toàn bộ tiện ích Phú Mỹ Hưng.</p>\r\n<p>Nếu bạn có nhu cầu mua căn hộ xin vui lòng LH: 0919 126 445 ( Ms.Hương) để xem căn hộ thực tế.</p>', '', 'can-ban-can-ho-phu-my-van-phat-hung-gia-22-trieum2-dt-87m2-2pn-2wc', '', 'Cần bán gấp căn hộ Phú Mỹ - Vạn Phát hưng, Q.7. giá cực sốc 22 triệu/m2, DT: 87m2, 2pn, nhà hoàn thiện, bảo vệ 24/24, có hồ bơi, siêu thị, phòng cộng đồng, sân thể thao', '', 0, 4, '22000000', 'VND', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 1, 529, 582, 'Cần bán căn hộ Phú Mỹ - Vạn Phát Hưng, Quận 7', 'Thùy Hương', '', '0919126445 ', '', 'nhaphodep'),
+(33, 'Cần bán căn hộ Phú Mỹ - Vạn Phát Hưng', '', '2012-07-04 01:15:07', 'can-ban-can-ho-phu-my-van-phat-hung-thumb.jpg', 'can-ban-can-ho-phu-my-van-phat-hung.jpg', NULL, '', '', '<p>Cần bán gấp căn hộ Phú Mỹ - Vạn Phát hưng, Q.7. giá cực sốc 22 triệu/m2, DT: 87m2, 2pn, nhà hoàn thiện, bảo vệ 24/24, có hồ bơi, siêu thị, phòng cộng đồng, sân thể thao,.v.v…vị trí giao thông thuận lợi liền kề Phú Mỹ Hưng, sử dụng toàn bộ tiện ích Phú Mỹ Hưng.</p>\r\n<p>Nếu bạn có nhu cầu mua căn hộ xin vui lòng LH: 0919 126 445 ( Ms.Hương) để xem căn hộ thực tế.</p>', '', 'can-ban-can-ho-phu-my-van-phat-hung', '', 'Cần bán gấp căn hộ Phú Mỹ - Vạn Phát hưng, Q.7. giá cực sốc 22 triệu/m2, DT: 87m2, 2pn, nhà hoàn thiện, bảo vệ 24/24, có hồ bơi, siêu thị, phòng cộng đồng, sân thể thao', '', 0, 5, '22000000', 'VND', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 1, 529, 563, 'Cần bán căn hộ Phú Mỹ - Vạn Phát Hưng, Quận 7', 'Thùy Hương', '', '0919126445 ', '', 'nhaphodep'),
+(34, 'Bán căn hộ hoàn thiện giá 2 tỉ quận Bình Thạnh, giáp Quận 1', '', '2012-07-04 01:17:35', 'ban-can-ho-hoan-thien-gia-2-ti-quan-binh-thanh-giap-quan-1-thumb.jpg', 'ban-can-ho-hoan-thien-gia-2-ti-quan-binh-thanh-giap-quan-1.jpg', NULL, '', '', '<p>The Hyco4 Tower tọa lạc ngay mặt tiền đường Nguyễn Xí (30m) kết nối với đường vành đai Bình Lợi – Tân Sơn Nhất, cách TT Tp chưa đầy 5p xe máy, sân bay Tân Sơn Nhất khoảng 15p. Hạ tầng bao quanh: Bến xe Miền Đông, Sân bay Tân Sơn Nhất, Khu du lịch Bình Quới – Văn Thánh – Tân Cảng – Thanh Đa, Trường học, Bệnh viện, Ngân hàng…<br />The Hyco4 Tower bao gồm 3 tháp .<br />Với giá bán chỉ từ 21 triệu/m2 cùng với phương thức thanh toán linh hoạt, Quý khách hàng có thể yên tâm lựa chọn cho mình 1 sản phẩm căn hộ vừa ý.<br />Để biết thêm thông tin chi tiết về căn hộ, Quý khách hàng vui lòng gọi Hotline: 0908.68.19.16 – Mrs Diệp –PKD Himlamland.</p>', '', 'ban-can-ho-hoan-thien-gia-2-ti-quan-binh-thanh-giap-quan-1', '', 'Cần bán gấp căn hộ Phú Mỹ - Vạn Phát hưng, Q.7. giá cực sốc 22 triệu/m2, DT: 87m2, 2pn, nhà hoàn thiện, bảo vệ 24/24, có hồ bơi, siêu thị, phòng cộng đồng, sân thể thao', '', 0, 6, '22000000', 'VND', 'm2', 0, NULL, NULL, NULL, NULL, NULL, 1, 1, 529, 563, 'Bán căn hộ hoàn thiện giá 2 tỉ quận Bình Thạnh, giáp Quận 1', 'Hồng Diệp - Cty Himlam', '', ' 0862949495', '', 'nhaphodep'),
+(35, 'Cho thuê căn hộ Satra-Eximland, 163 Phan Đăng Lưu, Q.Phú Nhuận', '', '2012-07-04 01:19:15', 'cho-thue-can-ho-satra-eximland-163-phan-ang-luu-q-phu-nhuan-thumb.jpg', 'cho-thue-can-ho-satra-eximland-163-phan-ang-luu-q-phu-nhuan.jpg', NULL, '', '', '<p>Cần bán gấp căn hộ Phú Mỹ - Vạn Phát hưng, Q.7. giá cực sốc 22 triệu/m2, DT: 87m2, 2pn, nhà hoàn thiện, bảo vệ 24/24, có hồ bơi, siêu thị, phòng cộng đồng, sân thể thao,.v.v…vị trí giao thông thuận lợi liền kề Phú Mỹ Hưng, sử dụng toàn bộ tiện ích Phú Mỹ Hưng.</p>\r\n<p>Nếu bạn có nhu cầu mua căn hộ xin vui lòng LH: 0919 126 445 ( Ms.Hương) để xem căn hộ thực tế.</p>', '', 'cho-thue-can-ho-satra-eximland-163-phan-dang-luu-qphu-nhuan', '', 'Cần bán gấp căn hộ Phú Mỹ - Vạn Phát hưng, Q.7. giá cực sốc 22 triệu/m2, DT: 87m2, 2pn, nhà hoàn thiện, bảo vệ 24/24, có hồ bơi, siêu thị, phòng cộng đồng, sân thể thao', '', 0, 7, '22000000', 'VND', 'm2', 0, NULL, NULL, NULL, NULL, NULL, 1, 1, 529, 563, 'Cần bán căn hộ Phú Mỹ - Vạn Phát Hưng, Quận 7', 'Thùy Hương', '', '0919126445 ', '', 'nhaphodep'),
+(36, 'CH B1 Trường Sa Q. Bình Thạnh tận hưởng khoảng không', '', '2012-07-04 01:21:33', 'ch-b1-truong-sa-q--binh-thanh-tan-huong-khoang-khong-thumb.jpg', 'ch-b1-truong-sa-q--binh-thanh-tan-huong-khoang-khong.jpg', NULL, '', '', '<p>Cần bán gấp căn hộ Phú Mỹ - Vạn Phát hưng, Q.7. giá cực sốc 22 triệu/m2, DT: 87m2, 2pn, nhà hoàn thiện, bảo vệ 24/24, có hồ bơi, siêu thị, phòng cộng đồng, sân thể thao,.v.v…vị trí giao thông thuận lợi liền kề Phú Mỹ Hưng, sử dụng toàn bộ tiện ích Phú Mỹ Hưng.</p>\r\n<p>Nếu bạn có nhu cầu mua căn hộ xin vui lòng LH: 0919 126 445 ( Ms.Hương) để xem căn hộ thực tế.</p>', '', 'ch-b1-truong-sa-q-binh-thanh-tan-huong-khoang-khong', '', 'Cần bán gấp căn hộ Phú Mỹ - Vạn Phát hưng, Q.7. giá cực sốc 22 triệu/m2, DT: 87m2, 2pn, nhà hoàn thiện, bảo vệ 24/24', '', 2, 8, '22000000', 'VND', 'm2', 0, NULL, NULL, NULL, NULL, NULL, 1, 1, 529, 563, 'Cần bán căn hộ Phú Mỹ - Vạn Phát Hưng, Quận 7', 'Thùy Hương', '', '0919126445 ', '', 'nhaphodep');
 
 -- --------------------------------------------------------
 
@@ -1342,10 +1349,18 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
 --
 
 INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(519, 0, 'Folder', '', '', '', 'folder', '', '', '', 'folder.jpg', '', 4, '', '', 1, 'nhaphodep'),
-(521, 0, 'Tờ rơi', '', '', '', 'to-roi', '', '', '', 'to-roi.jpg', '', 6, '', '', 1, 'nhaphodep'),
-(525, 0, 'Thiệp', '', '', '', 'thiep', '', '', '', 'thiep.jpg', '', 10, '', '', 1, 'nhaphodep'),
-(526, 0, 'Danh thiếp', '', '', '', 'danh-thiep', '', '', '', 'danh-thiep.jpg', '', 11, '', '', 1, 'nhaphodep');
+(519, 0, 'Nhà hàng - Khách sạn', '', '', '', 'nha-hang-khach-san', '', 'Nhà hàng - Khách sạn', '', 'folder.jpg', '', 4, '', '', 1, 'nhaphodep'),
+(521, 0, 'Đất nông nghiệp', '', '', '', 'dat-nong-nghiep', '', 'Đất nông nghiệp', '', 'to-roi.jpg', '', 6, '', '', 1, 'nhaphodep'),
+(525, 0, 'Đất dự án - Quy hoạch', '', '', '', 'dat-du-an-quy-hoach', '', 'Đất dự án - Quy hoạch', '', 'thiep.jpg', '', 10, '', '', 1, 'nhaphodep'),
+(526, 0, 'Đất cho sản xuất', '', '', '', 'dat-cho-san-xuat', '', 'Đất cho sản xuất', '', 'danh-thiep.jpg', '', 11, '', '', 1, 'nhaphodep'),
+(527, 0, 'Nhà phố', '', NULL, NULL, 'nha-pho', '', 'Nhà phố', '', 'nha-pho.jpg', NULL, 12, NULL, NULL, 1, 'nhaphodep'),
+(528, 0, 'Nhà tạm', '', NULL, NULL, 'nha-tam', '', 'Nhà tạm', '', 'nha-tam.jpg', NULL, 13, NULL, NULL, 1, 'nhaphodep'),
+(529, 0, 'Căn hộ cao cấp', '', NULL, NULL, 'can-ho-cao-cap', '', 'Căn hộ cao cấp', '', 'can-ho-cao-cap.jpg', NULL, 14, NULL, NULL, 1, 'nhaphodep'),
+(530, 0, 'Đất lâm nghiệp', '', NULL, NULL, 'dat-lam-nghiep', '', 'Căn hộ cao cấp', '', 'at-lam-nghiep.jpg', NULL, 15, NULL, NULL, 1, 'nhaphodep'),
+(531, 0, 'Nhà kho - Xưởng', '', NULL, NULL, 'nha-kho-xuong', '', 'Nhà kho - Xưởng', '', '', NULL, 16, NULL, NULL, 1, 'nhaphodep'),
+(532, 0, 'Văn phòng', '', NULL, NULL, 'van-phong', '', 'Văn phòng', '', '', NULL, 17, NULL, NULL, 1, 'nhaphodep'),
+(533, 0, 'Đất ở - Đất thổ cư', '', NULL, NULL, 'dat-o-dat-tho-cu', '', 'Đất ở - Đất thổ cư', '', '', NULL, 18, NULL, NULL, 1, 'nhaphodep'),
+(534, 0, 'Mặt bằng - Cửa hàng', '', NULL, NULL, 'mat-bang-cua-hang', '', 'Mặt bằng - Cửa hàng', '', '', NULL, 19, NULL, NULL, 1, 'nhaphodep');
 
 -- --------------------------------------------------------
 
@@ -1368,14 +1383,21 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_feature` (
   `legal` varchar(45) NOT NULL,
   `road` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=37 ;
 
 --
 -- Dumping data for table `dos_module_products_feature`
 --
 
 INSERT INTO `dos_module_products_feature` (`product_id`, `area`, `area_build`, `area_used`, `num_floor`, `sittingrom`, `bedroom`, `bathroom`, `other_room`, `direction`, `street`, `legal`, `road`) VALUES
-(29, '12m x 21m', '21m x 21m', 124, 1, NULL, NULL, NULL, NULL, 'Đông Nam', '', 'Chủ quyền tư nhân', 'Huynh Van Nghe');
+(29, '12m x 21m', '21m x 21m', 124, 1, NULL, NULL, NULL, NULL, 'Đông Nam', '', 'Chủ quyền tư nhân', 'Huynh Van Nghe'),
+(30, '4m x 19m', '4m x 4m', 435, 5, 1, 9, 3, 1, 'Đông Nam', '20 m', 'Sổ hồng', '171 Xuân Hồng, P12, Tân Bình '),
+(31, '6m x 35m', '6m x 6m', 210, 4, 1, 4, 2, 1, 'Đông Bắc', '20m', 'Sổ hồng', 'Nguyễn Thị Thập , phường Tân Phú, Quận 7'),
+(32, 'm x m', 'm x m', 87, 1, 1, 2, 2, NULL, 'Đông Nam', '20m', 'Sổ hồng', 'căn hộ Phú Mỹ - Vạn Phát Hưng'),
+(33, 'm x m', 'm x m', 87, 1, 1, 2, 2, NULL, 'Đông Nam', '20m', 'Sổ hồng', 'căn hộ Phú Mỹ - Vạn Phát Hưng'),
+(34, 'm x m', 'm x m', 87, 1, 1, 2, 2, NULL, 'Đông Nam', '20m', 'Sổ hồng', 'căn hộ Phú Mỹ - Vạn Phát Hưng'),
+(35, 'm x m', 'm x m', 87, 1, 1, 2, 2, NULL, 'Đông Nam', '20m', 'Sổ hồng', 'căn hộ Phú Mỹ - Vạn Phát Hưng'),
+(36, 'm x m', 'm x m', 87, 1, 1, 2, 2, NULL, 'Đông Nam', '20m', 'Sổ hồng', 'căn hộ Phú Mỹ - Vạn Phát Hưng');
 
 -- --------------------------------------------------------
 
@@ -1426,14 +1448,21 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_utility` (
   `pool` tinyint(1) NOT NULL DEFAULT '0',
   `furniture` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=37 ;
 
 --
 -- Dumping data for table `dos_module_products_utility`
 --
 
 INSERT INTO `dos_module_products_utility` (`product_id`, `telephone`, `power_meter`, `heater`, `gara`, `cable_tv`, `water_meter`, `alarm_system`, `garden`, `internet`, `air_conditioner`, `parking`, `pool`, `furniture`) VALUES
-(29, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0);
+(29, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0),
+(30, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1),
+(31, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1),
+(32, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1),
+(33, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1),
+(34, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1),
+(35, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1),
+(36, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -1966,9 +1995,9 @@ ALTER TABLE `dos_module_news_cat`
 -- Constraints for table `dos_module_products`
 --
 ALTER TABLE `dos_module_products`
-  ADD CONSTRAINT `dos_module_products_ibfk_4` FOREIGN KEY (`dos_username`) REFERENCES `dos_usernames` (`username`),
   ADD CONSTRAINT `dos_module_products_ibfk_2` FOREIGN KEY (`dos_districts_district_id`) REFERENCES `dos_districts` (`district_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `dos_module_products_ibfk_3` FOREIGN KEY (`dos_module_item_type_type_id`) REFERENCES `dos_module_products_type` (`type_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `dos_module_products_ibfk_4` FOREIGN KEY (`dos_username`) REFERENCES `dos_usernames` (`username`),
   ADD CONSTRAINT `fk_dos_module_products_dos_module_products_cat1` FOREIGN KEY (`dos_module_item_cat_cat_id`) REFERENCES `dos_module_products_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
