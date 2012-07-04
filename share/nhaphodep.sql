@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 04, 2012 at 06:38 AM
+-- Generation Time: Jul 04, 2012 at 09:17 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -1190,7 +1190,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=112 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=113 ;
+
+--
+-- Dumping data for table `dos_module_news_cat`
+--
+
+INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
+(112, 0, 'Danh mục', '', NULL, NULL, 'danh-muc', '', '', '', '', 1, NULL, NULL, 1, 'nhaphodep');
 
 -- --------------------------------------------------------
 
@@ -1430,7 +1437,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=105 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=106 ;
+
+--
+-- Dumping data for table `dos_module_services`
+--
+
+INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
+(105, 'Dịch vụ nhà đất', '', NULL, NULL, '<p>Nội dung Dịch vụ nhà đất</p>', '', '', 1, '2012-07-04 07:10:08', 1, 0, NULL, NULL, 'dich-vu-nha-dat', '', '', '', 1, 'nhaphodep');
 
 -- --------------------------------------------------------
 
