@@ -46,14 +46,14 @@ $this->description = $info_cat['description' . LANG]; ?>
                             <h2 class="title-sale"><a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag' . LANG] ?>/<?php echo $value['tag' . LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>"><?php echo $value['title' . LANG] ?></a></h2>
                             <table class="bder-none">
                                 <tr>
-                                    <td width="110">
+                                    <td width="90">
                                         <p><span class="position">Vị trí:</span> <?php echo $value['address'];?></p>
                                     </td>
-                                    <td>
+                                    <td width="70">
                                         <p><label class="wide">Pháp lý:</label> <?php echo $value->productsFeature['legal'];?></p>
                                         <p><label class="direction">Hướng:</label> <?php echo $value->productsFeature['direction'];?></p>
                                     </td>
-                                    <td>
+                                    <td width="120">
                                         <p class="price">Giá:<span> <?php echo '<strong>' . number_format($value['unit'], 0, '', '.').' '. $value['unit_currency'] . '/' . $value['unit_unit']  . '</strong>'?></span></p>
                                         <p>Diện tích sử dụng: <span><?php echo $value->productsFeature['area_used'];?>m<sup>2</sup></span></p>
                                     </td>

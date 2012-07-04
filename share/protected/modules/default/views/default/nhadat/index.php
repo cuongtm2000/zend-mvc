@@ -20,14 +20,14 @@
                             <h2 class="title-sale"><a href="<?php echo Yii::app()->baseUrl . LANGURL . '/' . Yii::t('user', 'products'. '.link') . '/' . $value->ProductsCat['tag' . LANG] ?>/<?php echo $value['tag' . LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>"><?php echo $value['title' . LANG] ?></a></h2>
                             <table class="bder-none">
                                 <tr>
-                                    <td width="110">
+                                    <td width="90">
                                         <p><span class="position">Vị trí:</span> <?php echo $value['address']; ?></p>
                                     </td>
-                                    <td>
+                                    <td  width="80">
                                         <p><label class="wide">Pháp lý:</label> <?php echo $value->productsFeature['legal']; ?></p>
                                         <p><label class="direction">Hướng:</label> <?php echo $value->productsFeature['direction']; ?></p>
                                     </td>
-                                    <td>
+                                    <td  width="110">
                                         <p class="price">Giá:<span> <?php echo '<strong>' . number_format($value['unit'], 0, '', '.') . ' ' . $value['unit_currency'] . '/' . $value['unit_unit'] . '</strong>' ?></span></p>
                                         <p>Diện tích sử dụng: <span><?php echo $value->productsFeature['area_used']; ?>m<sup>2</sup></span></p>
                                     </td>
