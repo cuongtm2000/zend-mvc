@@ -4,7 +4,7 @@
  * Controller is the customized base controller class.
  * All controller classes for this application should extend from this base class.
  */
-class AdminController extends CController {
+class BackEndController extends CController {
     public $layout = '//layouts/column1';
     public $breadcrumbs = array();
 

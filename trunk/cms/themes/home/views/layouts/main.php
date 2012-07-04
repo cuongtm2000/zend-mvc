@@ -2,12 +2,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="en" />
+<meta name="revisit-after" content="1 days" />
+<meta name="robots" content="noodp,index,follow" />
+
+<link rel="SHORTCUT ICON" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/gif" />
 
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/wt-rotator.css" /> 
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.6.4.min.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-banner-rotato.js"></script> 
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-banner-rotato.effect.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/advanced-slider-base.css" />
+
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.advancedSlider.min.js"></script>
+<!--[if IE]><script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/excanvas.compiled-ie.js"></script><![endif]-->
+<!--[if lt IE 8]><script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.sider.banner-ie.js"></script> <![endif]-->
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.sider.banner.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		runbanner(950,332);
@@ -17,63 +26,46 @@
 <title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 <body>
- <div id="wrapper">
-	<div id="top">
-        	<a href="#"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" class="logo" alt="" /></a>
-           <!-- <div class="cart">
-                 <img src="images/cart.png" width="49" height="42" border="0" alt="" />
-                 <p><span>0</span> <a href="#">Items</a></p>
-            </div>--> <!-- cart-->
-        <div class="clear"></div>
-        <div id="allmenu">
-            <div class="leftmenu"> </div>
-            <ul class="menu">
-            	<li><a href="#" title="">Home</a></li>
-                <li><a href="#" title="">About</a>
+	<div id="wrapper">
+        <div id="header">
+            <div id="logo"><a href="index.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a></div><!--End logo-->
+            <h1 class="title-company">CÔNG TY TNHH MTV THAN PHÚC AN</h1>
+            <div class="lang">
+                <a href="#" title="English"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/en.gif" alt="English" /> English</a>
+                <a href="#" title="Tiếng Việt"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/vi.gif" alt="Việt Nam" /> Tiếng Việt</a>
+                <p class="tent-lang">Tư vấn : 0933 472 626 (Mr Hạnh)</p> 
+            </div> <!--End lang-->	<div class="clear"></div>
+        </div><!--End header-->
+        <div id="all-nav">
+     	   <ul id="nav">
+                <li><a href="index.html" title="">Trang chủ</a></li>
+                <li><a href="about.html" title="">Giới thiệu</a>
                 	<ul>
                         <li><a href="#" title="">About 2</a></li>
                         <li><a href="#" title="">About 3</a></li>
                         <li><a href="#" title="">About 3</a></li>
                 	</ul>
-                 </li>   
-                <li><a href="#" title="">Online store</a>
-                	<ul>
-						<li><a href="#" title="">Firm Overview</a></li>
-						<li><a href="#" title="">Areas </a></li>
-						<li><a href="#" title="">News </a></li>
-						<li><a href="#" title="">Recent cases </a></li>
-						<li><a href="#" title="">Reservation </a></li>
-						<li><a href="#" title="">FAQ</a></li>
-					</ul> 
                 </li>
-                <li><a href="#" title="">News</a></li>
-                <li><a href="#" title="">Login</a></li>
-                <li style="background:none"><a href="#" title="">Liên hệ</a></li>
-            </ul>
-       </div><!--END  menu -->
-		<div class="clear"></div>
-	</div><!--End top -->
+                <li><a href="product.html" title="">Sản phẩm</a></li>
+                <li><a href="services.html" title="">Dịch vụ</a></li>
+                <li><a href="news.html" title="">Tin tức</a></li>
+                <li style="background:none"><a href="contact.html" title="">Liên hệ</a></li>
+            </ul>	
+        </div> <!--End all nav--><div class="clear"></div>
 
 	<div class="banner">
-	     <div class="container"> 
-				<div class="wt-rotator">
-					<a href="#"></a>   
-					<div class="thumbnails"> 
-						  <ul> 
-								<li><a href="images/banner.jpg" title="architecture"></a></li> 
-								<li><a href="images/banner1.jpg" title="architecture"></a></li> 
-								<li><a href="images/banner2.jpg" title="architecture"></a></li> 
-								<li><a href="images/banner3.jpg" title="architecture"></a></li> 
-						  </ul> 
-					</div>  
-				</div> 
-            </div>
+	    <ul class="slider">
+            <li class="slider-item"><img src="images/banner.jpg" alt="banner" /></li>
+            <li class="slider-item"><img src="images/banner1.jpg" alt="banner1" /></li>
+            <li class="slider-item"><img src="images/banner2.jpg" alt="banner2" /></li>
+            <li class="slider-item"><img src="images/banner3.jpg" alt="banner2" /></li>
+        </ul>
 	</div><!--End banner -->
-	<div id="mid-area">
-	   <div id="left-column">
-			<div class="categories">
-			 <h1 class="titleh1">CATEGORIES</h1>
-				 <ul>
+	<div id="content">
+	   <div id="leftcontent">
+			<div class="frame-leftcontent">
+			 <h2 class="title-box">CATEGORIES</h2>
+				 <ul class="sub-cat">
 					 <li><a href="#">Living Room</a></li>
 					 <li><a href="#">Kitchen</a></li>
 					 <li><a href="#">Bedroom</a></li>
@@ -87,105 +79,41 @@
 					 <li><a href="#">Office furniture</a></li>
 				 </ul>
 			</div>  <!-- categories -->
-			<div class="manufact">
-			 <h1 class="titleh1">MANUFACTURERs</h1>
-			 <select name="" class="list">
-			   <option>Select</option>
-			   <option>Number 2</option>
-			   <option>Number 3</option>
-			   <option>Number 4</option>
-			   <option>Number 5</option>
-			 </select>
-			</div> <!-- categories -->
-			<div class="adment-pr">
-			 	<h1 class="titleh1">New Product</h1>
-                <ul>
+            
+			<div class="frame-leftcontent">
+			 	<h2 class="title-box">Quảng cáo</h2>
+                <ul class="bg-adv">
                 	<li><img src="images/logo_thuonghoi.jpg" alt="" /></li>
 			 		<li><img src="images/new-pr.jpg" width="168" height="218" alt=""  /></li> 
                 </ul>
 			</div> <!-- Adment-pr-->
 		</div> <!-- End Left-column -->
 
-	   <div id="center-column">
-		<h1 class="titleh1"><span>FEATURED PRODUCTS</span></h1>
-			<div id="allproducts">
-				<div class="products">
-					 <img src="images/pr-1.jpg" width="207" height="172" border="0" alt="" />
-					 <p>Avenue Six Slick Cube Orange New Occasional Table</p>
-					 <h2 class="titleh2">$149.00</h2>
-					 <input name="" type="button" class="btn-1" />
-					 <input name="" type="button" class="btn-2" />
-				</div> <!-- products -->
-				<div class="products">
-					 <img src="images/pr-2.jpg" width="207" height="172" border="0" alt="" />
-					 <p>Avenue Six Slick Cube Orange New Occasional Table</p>
-					 <h2 class="titleh2">$149.00</h2>
-					 <input name="" type="button" class="btn-1" />
-					 <input name="" type="button" class="btn-2" />
-				</div> <!-- products -->
-				<div class="products">
-					 <img src="images/pr-3.jpg" width="207" height="172" border="0" alt="" />
-					 <p>Avenue Six Slick Cube Orange New Occasional Table</p>
-					 <h2  class="titleh2">$149.00</h2>
-					 <input name="" type="button" class="btn-1" />
-					 <input name="" type="button" class="btn-2" />
-				</div> <!-- products -->
-				<div class="products">
-					 <img src="images/pr-4.jpg" width="207" height="172" border="0" alt="" />
-					 <p>Avenue Six Slick Cube Orange New Occasional Table</p>
-					 <h2 class="titleh2">$149.00</h2>
-					 <input name="" type="button" class="btn-1" />
-					 <input name="" type="button" class="btn-2" />
-				</div> <!-- products -->
-				<div class="products">
-					 <img src="images/pr-1.jpg" width="207" height="172" border="0" alt="" />
-					 <p>Avenue Six Slick Cube Orange New Occasional Table</p>
-					 <h2 class="titleh2">$149.00</h2>
-					 <input name="" type="button" class="btn-1" />
-					 <input name="" type="button" class="btn-2" />
-				</div> <!-- products -->
-				<div class="products">
-					 <img src="images/pr-2.jpg" width="207" height="172" border="0" alt="" />
-					 <p>Avenue Six Slick Cube Orange New Occasional Table</p>
-					 <h2 class="titleh2">$149.00</h2>
-					 <input name="" type="button" class="btn-1" />
-					 <input name="" type="button" class="btn-2" />
-				</div> <!-- products -->
-				<div class="products">
-					 <img src="images/pr-3.jpg" width="207" height="172" border="0" alt="" />
-					 <p>Avenue Six Slick Cube Orange New Occasional Table</p>
-					 <h2  class="titleh2">$149.00</h2>
-					 <input name="" type="button" class="btn-1" />
-					 <input name="" type="button" class="btn-2" />
-				</div> <!-- products -->
-				<div class="products">
-					 <img src="images/pr-4.jpg" width="207" height="172" border="0" alt="" />
-					 <p>Avenue Six Slick Cube Orange New Occasional Table</p>
-					 <h2  class="titleh2">$149.00</h2>
-					 <input name="" type="button" class="btn-1" />
-					 <input name="" type="button" class="btn-2" />
-				</div> <!-- products -->
-			</div><!--End All products-->
+	   <div id="rightcontent">
+		<h2 class="title-right"><span>FEATURED PRODUCTS</span></h2>
+			<ul class="all-product">
+                <li class="product">
+                    <div class="tent-product">
+                        <div class="product-img"><a href="product-info.html" title=""><img src="images/pr-1.jpg" alt="Product" /></a></div><div class="clear"></div>
+                        <h2 class="title-pro"><a href="product-info.html" title="Leonidas Chocolate Assortment">Woven ring white gold paved</a></h2>
+                        <p class="price">$165.00</p>
+                        <p class="bton-pro"><a href="product-info.html" title="CHI TIẾT" class="bton-detail">CHI TIẾT</a> <a href="order.html" title="ĐẶT HÀNG" class="bton-order">ĐẶT HÀNG</a> </p>
+                    </div>
+                </li>
+                <li class="product">
+                    <div class="tent-product">
+                        <div class="product-img"><a href="product-info.html" title=""><img src="images/pr-1.jpg" alt="Product" /></a></div><div class="clear"></div>
+                        <h2 class="title-pro"><a href="product-info.html" title="Leonidas Chocolate Assortment">Woven ring white gold paved</a></h2>
+                        <p class="price">$165.00</p>
+                        <p class="bton-pro"><a href="product-info.html" title="CHI TIẾT" class="bton-detail">CHI TIẾT</a> <a href="order.html" title="ĐẶT HÀNG" class="bton-order">ĐẶT HÀNG</a> </p>
+                    </div>
+                </li>
+             </ul>   
 	   </div> <!--END center-column -->
-	   <div id="right-column">
-		<div class="search">
-			 <h1 class="titleh1">SEARCH</h1>
-			 <input name="" type="text" class="bar" value=" Search..." /> 
-			 <input name="" type="button" class="go"  />
-		</div> <!-- search -->
-		<div class="currency">
-			 <h1 class="titleh1">Currency</h1>
-			 <select name="" class="list-2">
-			   <option>US Dollar</option>
-			   <option>Euro</option>
-			   <option>Pound</option>
-			 </select>
-			 <input name="" type="button" class="change" value="CHANGE" />
-		</div>  
-		<!-- END currency -->
+	   <div id="column-3">
 		<div class="sellers">
-			 <h1 class="titleh1">BEST SELLERS</h1>
-			 <ul class="best-sellers">
+			 <h1 class="title-box">BEST SELLERS</h1>
+			 <ul class="sub-new">
              	<li><a href="#" title="">Coco Modern Leather</a> </li>
                 <li><a href="#" title="">Classic modern chairs</a></li>
                 <li><a href="#" title="">Christine Schwarzer</a></li>
@@ -195,11 +123,16 @@
 
 			 </ul>
 		</div>  <!--End sellers -->
-		<div><img src="images/special.jpg"  alt="" /></div>
-		<div class="clear"></div>
-	   </div>  <!-- End right-column --> 
-	</div> <!--End mid-area -->
-    <div class="clear"></div>
+		<div class="frame-leftcontent">
+			 	<h2 class="title-box">Quảng cáo</h2>
+                <ul class="bg-adv">
+                	<li><img src="images/logo_thuonghoi.jpg" alt="" /></li>
+			 		<li><img src="images/new-pr.jpg" width="168" height="218" alt=""  /></li> 
+                </ul>
+			</div> <!-- Adment-pr-->
+	   </div>  <!-- End column-3-->  <div class="clear"></div>
+	</div> <!--End content -->
+    
  </div> <!-- wrapper-main -->
 <!--Footer-->
 <div id="allfooter">
