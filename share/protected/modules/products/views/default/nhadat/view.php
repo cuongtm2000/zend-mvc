@@ -51,10 +51,13 @@ $this->description = $item['description' . LANG];
                         <p class="price">Địa chỉ:  <?php echo $item['address'] ?> </p>
                         <p class="price">Quận/huyện:  <?php echo $item['dos_districts_district_id'] ?> </p>
                         <p class="price">Tỉnh/thành phố: <?php echo $item['dos_provinces_province_id'] ?></p>
-                        <p>Tên: <?php echo $item['contact_name'] ?></p>
-                        <p>Địa chỉ: <?php echo $item['contact_add'] ?></p>
-                        <p>ĐTDĐ: <?php echo $item['contact_mobile'] ?></p>
-                        <p>ĐT bàn: <?php echo $item['contact_tel'] ?></p>
+						<div class="frame-contact-info">
+							<h4 class="title-contact-info"><strong><?php echo $this->lang['contact'] ?></strong></h4>
+							<p><strong>Tên: <?php echo $item['contact_name'] ?></strong></p>
+							<p>Địa chỉ: <?php echo $item['contact_add'] ?></p>
+							<p>ĐTDĐ: <?php echo $item['contact_mobile'] ?></p>
+							<p>ĐT bàn: <?php echo $item['contact_tel'] ?></p>
+						</div>
 						<h4 class="title-info"><span><?php echo $this->lang['detail'] . ' ' . strtolower($this->lang[$this->module->id]) ?></span></h4>
 							<?php echo $item['content' . LANG] ?>
                     </td>
