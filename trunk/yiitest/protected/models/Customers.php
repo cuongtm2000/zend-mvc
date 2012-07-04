@@ -24,6 +24,8 @@
  * @property DosBussiness $dosBussinessBussiness
  */
 class Customers extends CActiveRecord {
+    private $_oldImageThumb;
+    private $_oldImageFull;
     private $_model;
 
     /**
@@ -127,6 +129,46 @@ class Customers extends CActiveRecord {
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
+    }
+
+    public function afterFind() {
+        parent::afterFind();
+        $this->_oldImageThumb = $this->pic_thumb;
+        $this->_oldImageFull = $this->pic_full;
+    }
+
+    public function beforeSave() {
+        if ($this->isNewRecord) {
+            if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
+                Yii::import('ext.simpleImage.CSimpleImage');
+                $file = new CSimpleImage();
+                $this->pic_thumb = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_thumb'], 184, 164, '/public/userfiles/image/dos/image/' . Yii::app()->controller->id, $this->customer_name . '-thumb');
+            }
+            if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full']) {
+                Yii::import('ext.simpleImage.CSimpleImage');
+                $file = new CSimpleImage();
+                $this->pic_full = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_full'], 665, 800, '/public/userfiles/image/dos/image/' . Yii::app()->controller->id, $this->customer_name);
+            }
+        } else {
+            //check file old and upload
+            if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
+                Yii::import('ext.simpleImage.CSimpleImage');
+                $file = new CSimpleImage();
+                $this->pic_thumb = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_thumb'], 184, 164, '/public/userfiles/image/dos/image/' . Yii::app()->controller->id, $this->customer_name . '-thumb', $this->_oldImageThumb);
+            } else {
+                $this->pic_thumb = $this->_oldImageThumb;
+            }
+            //check file old and upload
+            if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full']) {
+                Yii::import('ext.simpleImage.CSimpleImage');
+                $file = new CSimpleImage();
+                $this->pic_full = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_full'], 665, 800, '/public/userfiles/image/dos/image/' . Yii::app()->controller->id, $this->customer_name, $this->_oldImageFull);
+            } else {
+                $this->pic_full = $this->_oldImageFull;
+            }
+        }
+
+        return parent::beforeSave();
     }
 
     //Back end - List item admin
@@ -258,7 +300,7 @@ class Customers extends CActiveRecord {
     }
 
     //Back end - Change info
-    public function changeInfo($customer_id, $customer_name, $email, $phone, $address, $website, $expired_date, $dos_bussiness_bussiness_id){
+    /*public function changeInfo($customer_id, $customer_name, $email, $phone, $address, $website, $expired_date, $dos_bussiness_bussiness_id) {
         $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET customer_name=:customer_name, email=:email, phone=:phone, address=:address, website=:website, expired_date=:expired_date, dos_bussiness_bussiness_id=:bussiness WHERE customer_id=:customer_id');
 
         $command->bindParam(":customer_name", $customer_name, PDO::PARAM_STR);
@@ -270,5 +312,5 @@ class Customers extends CActiveRecord {
         $command->bindParam(":bussiness", $dos_bussiness_bussiness_id, PDO::PARAM_STR);
         $command->bindParam(":customer_id", $customer_id, PDO::PARAM_INT);
         $command->execute();
-    }
+    }*/
 }
