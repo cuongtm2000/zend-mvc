@@ -1,0 +1,59 @@
+<div class="content">
+	<ul class="modals"><li><a href="<?php echo $this->baseUrl().$this->currentController ?>/add" title="<?php echo $this->lang['sys_add'] ?>"><img src="<?php echo $this->baseUrl().TEMPLATE_ADMIN ?>/images/add.png" alt="<?php echo $this->lang['sys_add'] ?>" /><span><?php echo $this->lang['sys_add'] ?></span></a></li></ul><div class="clear"></div>
+	<form name="frm" id="frm" action="" method="post">
+	<input type="hidden" name="factive" value="" />
+	<table>
+	<thead>
+		<tr>
+			<th class="txt15"><input onclick="javascript: select_switch(this.checked);" type="checkbox" name="checkall" /></th>
+			<th class="txt60"><?php echo $this->lang['sys_order'] ?></th>
+			<th><?php echo $this->lang['sys_title'] ?></th>
+	        <th><?php echo $this->lang['createdate'] ?></th>
+			<th><?php echo $this->lang['hit'] ?></th>
+			<th><?php echo $this->lang['action'] ?></th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php
+		if(is_array($this->items)){
+		    $k = 1;
+		    foreach($this->items as $value){
+		    	if($value['enable'] == 0){
+		    		$rowclass = ' class="disable"';
+		    	}else{
+		        	$rowclass = ($k%2==0) ? '' : ' class="alt"';
+		    	}
+		    
+		    	if($value['hot'] == 1){
+		    		$title = '<b>'.$value['title'.LANG].'</b> <img src="'.$this->baseUrl().TEMPLATE_ADMIN.'/images/hot.gif" alt="Hot" />';
+		    	}else{
+		        	$title = $value['title'.LANG];
+		    	}
+		        echo '<tr'.$rowclass.'>
+		               <td><input type="checkbox" name="ids[]" value="'.$value['record_id'].'" /></td>
+		               <td><input type="text" name="orders['.$value['record_id'].']" maxlength="3" class="txt-sort" value="'.$value['record_order'].'" /></td>
+		               <td>'.$title.'</td>
+		               <td>'.date('d-m-Y', strtotime($value['posted_date'])).'</td>
+		               <td>'.$value['hits'].'</td>
+		               <td><a href="'.$this->controller.'/edit/id/'.$value['record_id'].'" title="'.$this->lang['sys_edit'].'">'.$this->lang['sys_edit'].'</a></td>
+		            </tr>';
+		        $k++;
+		    } 
+		}else{
+				echo '<tr><td colspan="6">'.$this->items.'</td></tr>';
+			}
+	?>
+	
+	</tbody>
+	</table>
+	
+	<div class="control-button"><img src="<?php echo $this->baseUrl().TEMPLATE_ADMIN ?>/images/reorder.png" alt="<?php echo $this->lang['sys_sort'] ?>" align="left" /> <input type="submit" name="sort" value=" <?php echo $this->lang['sys_sort'] ?> " /></div>
+	<div class="control-button"><img src="<?php echo $this->baseUrl().TEMPLATE_ADMIN ?>/images/visible.png" alt="<?php echo $this->lang['sys_active'] ?>" align="left" /> <a href="javascript:submit_list('enable', '');" title="<?php echo $this->lang['sys_active'] ?>"><?php echo $this->lang['sys_active'] ?></a></div>
+	<div class="control-button"><img src="<?php echo $this->baseUrl().TEMPLATE_ADMIN ?>/images/hidden.png" alt="<?php echo $this->lang['sys_hidden'] ?>" align="left" /> <a href="javascript:submit_list('disable', '');" title="<?php echo $this->lang['sys_hidden'] ?>"><?php echo $this->lang['sys_hidden'] ?></a></div>
+	<div class="control-button"><img src="<?php echo $this->baseUrl().TEMPLATE_ADMIN ?>/images/delete.png" alt="<?php echo $this->lang['sys_delete'] ?>" align="left" /> <a href="javascript:delete_list('');" title="<?php echo $this->lang['sys_delete'] ?>"><?php echo $this->lang['sys_delete'] ?></a></div>
+	<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE_ADMIN ?>/js/common.js"></script>
+	</form>
+	<?php	
+		echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml');
+	?>
+</div>

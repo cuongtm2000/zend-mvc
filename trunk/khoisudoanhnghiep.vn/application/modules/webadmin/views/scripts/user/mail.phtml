@@ -1,0 +1,66 @@
+<div class="content">
+
+<script type="text/javascript" src="<?php echo $this->baseUrl() ?>/public/plugin/ckeditor/ckeditor.js"></script>
+<script type="text/javascript">
+	function addmail(){
+		var the_form = window.document.frm;		
+		//alert(the_form.reciever.value);
+		the_form.recipient.value  =	
+			the_form.recipient.value + 
+			the_form.reciever.value + "; ";
+	}
+</script>
+
+<form action="" method="post" enctype="multipart/form-data" id="frm" name="frm">
+<fieldset>
+	<legend>Viết thư</legend>	<div class="clear space"></div>
+	<?php if(count($this->error) > 0): ?>
+	<ul class="error">
+		<?php 
+		foreach ($this->error as $value){
+			echo '<li>'.$value.'</li>';
+		}
+		?>
+	</ul>
+	<?php endif; ?>	<div class="clear space"></div>
+	<div class="col1">Người nhận</div>
+	<div class="col2">
+	
+	<textarea name="recipient" cols="100" rows="4"></textarea>
+	(Cách nhau bởi dấu ';')
+	<br />
+		<select name="reciever" onchange="addmail()">
+			<option value="0" style="font-style: italic;">Chọn người nhận</option>
+			<?php foreach ($this->listUser as $value) :	?>
+				<option value="<?php echo $value['email']?>"><?php echo $value['username']?></option>
+			<?php endforeach;?>
+		</select>
+	</div>
+	<div class="clear space"></div>
+	
+	<div class="col1">Tiêu đề</div>
+	<div class="col2">
+		<input name="title" maxlength="100" value="<?php echo $this->item['title']?>"  class="txt-very-large" />
+	</div>
+	<div class="clear space"></div>
+		
+	<div class="col1">Nội dung</div>
+	<div class="col2">
+		<textarea name="detail" cols="70" rows="10"><?php echo $this->item['detail']?></textarea>
+		<script type="text/javascript">
+		//<![CDATA[
+			CKEDITOR.replace('detail');
+		//]]>
+		</script>
+	</div>
+	<div class="clear space"></div>
+				
+	<div class="col1">&nbsp;</div>
+	<div class="col2">
+		<input type="submit" name="submit" value="   Gửi thư " class="login" />
+		 <a href="javascript:history.back()" class="login-a"><?php echo $this->lang['sys_cancel'] ?></a>
+	</div>
+	<div class="clear space"></div>
+</fieldset>
+</form>
+</div>

@@ -1,0 +1,19 @@
+<h1 class="title-left"><span><?php echo $this->lang[$this->module]?> &raquo; <?php echo $this->detailcat['cat_title'.LANG] ?></span></h1>
+<div class="frame-tent-left">
+	<?php if(is_array($this->items)):?>
+	 <?php foreach ($this->items as $value):?>
+		<?php $picthumb = ($value['pic_thumb']!='') ? IMAGES_PATH.$this->module.'/'.$value['pic_thumb'] : TEMPLATE.'/images/no-images.jpg'; ?>
+	 		<div class="masuring">
+				<div class="masuring-img"><a href="<?php echo $this->baseUrl().'/'.LANGURL.$this->module ?>/index/view/id/<?php echo $value['record_id'] ?>" title='<?php echo $value['title'.LANG] ?>'>
+					<img src="<?php echo $this->baseUrl().$picthumb ?>" class="imgcon" alt='<?php echo $value['title'.LANG] ?>' /></a></div>
+                <h2 class="title-masuring"><a href="<?php echo $this->baseUrl().'/'.LANGURL.$this->module ?>/index/view/id/<?php echo $value['record_id'] ?>" title='<?php echo $value['title'.LANG] ?>'><?php echo $value['title'.LANG] ?></a></h2>
+     			<?php echo $value['preview'.LANG] ?>
+     		</div><div class="clear"></div>
+		<?php endforeach;?>
+		<?php echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml'); ?>
+	<?php else: ?>
+		<?php echo $this->items?>
+	<?php endif;?>
+</div><!--End frame tent-->
+<div class="bd-bt-tenf-left"></div>
+	
