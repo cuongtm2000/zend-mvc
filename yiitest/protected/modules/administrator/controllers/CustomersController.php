@@ -28,7 +28,8 @@ class CustomersController extends AdministratorController {
         if (isset($_POST['Customers'])) {
             $model->attributes = $_POST['Customers'];
             if ($model->validate()) {
-                $model->changeInfo($model->customer_id, $model->customer_name, $model->email, $model->phone, $model->address, $model->website, $model->expired_date, $model->dos_bussiness_bussiness_id);
+                $model->save();
+                //$model->changeInfo($model->customer_id, $model->customer_name, $model->email, $model->phone, $model->address, $model->website, $model->expired_date, $model->dos_bussiness_bussiness_id);
                 $this->redirect(array('index'));
             }
         }

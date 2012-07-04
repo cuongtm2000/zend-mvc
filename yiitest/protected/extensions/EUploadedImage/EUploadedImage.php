@@ -373,12 +373,6 @@ class EUploadedImage extends CComponent {
         $common_class = new Common();
         $common_class->recursiveMkdir($path . '/');
 
-        /*if (!is_dir($path_upload)) {
-            //$this->mkdir_r($path_upload);
-            mkdir($path_upload, 0777, true);
-            //chmod($path_upload, 0777);
-        }*/
-
         //remove file old
         if ($file_old && file_exists($path_upload . $file_old)) {
             unlink($path_upload . $file_old);
@@ -402,13 +396,6 @@ class EUploadedImage extends CComponent {
                 return $filename;
             }
         }
-
-        //move_uploaded_file($this->_tempName, $path_upload . $filename);
-        //return $filename;
-
-        //if ($this->saveAs($path_upload . $filename)) {
-        //  return $filename;
-        //}
     }
 
 }
