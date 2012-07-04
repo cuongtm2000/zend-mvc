@@ -352,3 +352,7 @@ fieldset .label-select{width: 248px;}
 #add-rows{color:#0066CC} #add-rows:hover{color:#004C25}
 .table-list{margin:10px 0 10px 0}
 .table-list a{color:#000} .table-list a:hover{color:#3C64C7}
+
+.frame-contact-info{border:1px solid #FA7003;background:#FCBD83 url(../images/contact_bg.gif) repeat-x;padding:5px 10px;margin:10px 0  15px 0;-webkit-border-radius:2px;-moz-border-radius:2px}
+.title-contact-info{color:#FA7003;margin:0 0 5px 0;text-transform:uppercase}
+
