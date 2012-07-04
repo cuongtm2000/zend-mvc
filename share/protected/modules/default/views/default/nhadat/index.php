@@ -1,7 +1,6 @@
 <?php if (isset($this->function['products_new']) && $this->function['products_new']): ?>
     <div class="bg-footer-left">
-
-       <h1 class="title-right"><span>Thông tin mới</span></h1>
+       <h1 class="title-right"><span>Mua bán nhà đất</span></h1>
 
         <table class="table-product">
             <tbody>
@@ -45,13 +44,6 @@
                 <?php endforeach; ?>
             </tbody>
         </table> <!--End footer left-->
-       
         <div class="clear"></div>
     </div>	
-
-
-
-
-
-
 <?php endif; ?>

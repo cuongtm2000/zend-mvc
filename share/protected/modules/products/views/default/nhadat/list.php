@@ -1,8 +1,6 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id] => Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link'), 'Tin đã đăng'); ?>
 <?php $this->pageTitle = 'Tin đã đăng' . ' - ' . $this->lang[$this->module->id]; ?>
 
-
-
 <form name="frm" id="frm" action="" method="post">
     <input type="hidden" name="factive" value="" />
     <table class="table-list">
@@ -36,7 +34,7 @@
                     <tr<?php echo $rowclass ?>>
                         <td><input type="checkbox" name="ids[]" value="<?php echo $value->record_id ?>" /></td>
                         <td><input readonly="readonly" name="orders[<?php echo $value->record_id ?>]" maxlength="3"  style="width: 30pt" value="<?php echo $value->record_order ?>" /></td>
-                        <td><?php echo CHtml::link($title, array('view', 'id' => $value->tag)) ?></td>
+                        <td><a href="<?php echo Yii::app()->baseUrl . LANGURL . '/' . Yii::t('user', 'products' . '.link') . '/' . $value->ProductsCat['tag' . LANG] ?>/<?php echo $value['tag' . LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>"><?php echo $title?></a></td>
                         <td><?php echo $value->ProductsCat['cat_title'] ?></td>
                         <td><?php echo $value->hits ?></td>
                         <td><?php echo CHtml::link($this->lang['edit'], array('edit', 'id' => $value->record_id)) ?></td>
@@ -48,7 +46,7 @@
 <?php endif; ?>
         </tbody>
     </table>
-   
+
     <div class="control-button">
         <a href="javascript:delete_list('');" title="Xóa">
             <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/delete.png" alt="Xóa" align="left" /> Xóa
