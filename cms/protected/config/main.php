@@ -6,6 +6,8 @@
 $config = array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
     'name' => 'My Web Application',
+    'defaultController' => 'default',
+    'language' => 'vi',
 
     // preloading 'log' component
     'preload' => array('log'),
@@ -18,14 +20,14 @@ $config = array(
 
     //'modules' => require(dirname(__FILE__) . '/LoadModules.php'),
 
-    /*'modules' => array(
+    'modules' => array(
         'gii' => array(
             'class' => 'system.gii.GiiModule',
             'password' => '123',
             // If removed, Gii defaults to localhost only. Edit carefully to taste.
             'ipFilters' => array('127.0.0.1', '::1'),
         ),
-    ),*/
+    ),
 
     'components' => array(
         'user' => array(
@@ -36,6 +38,9 @@ $config = array(
         // uncomment the following to enable URLs in path-format
 
         'urlManager' => array(
+            'class' => 'ext.urlManager.LangUrlManager',
+            'languages' => array('vi', 'en'),
+            'langParam' => 'lang',
             'urlFormat' => 'path',
             'showScriptName' => false,
             'rules' => array(
@@ -44,6 +49,11 @@ $config = array(
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',*/
 
                 //admin rules
+                '<lang:[a-z]{2}>' => 'default/default',
+                '<lang:[a-z]{2}>/<controller:\w+>/<action:\w+>/page/<page:\d+>'=>'<controller>/<action>',
+                '<lang:[a-z]{2}>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
+                '<lang:[a-z]{2}>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+                '<lang:[a-z]{2}>/<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
                 'admin/<action:(dashboard|forgot|logout)>' => 'admin/<action>',
                 'admin/<module:\w+>/<action:\w+>/<id:\d+>' => '<module>/admin/<action>',
                 'admin/<module:\w+>/<action:\w+>' => '<module>/admin/<action>',
@@ -62,8 +72,7 @@ $config = array(
         ),
 
         'errorHandler' => array(
-            // use 'site/error' action to display errors
-            'errorAction' => 'site/error',
+            'errorAction' => 'error',
         ),
         'log' => array(
             'class' => 'CLogRouter',
@@ -94,6 +103,7 @@ $modules_dir = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'modules' . DI
 $handle = opendir($modules_dir);
 while (false !== ($file = readdir($handle))) {
     if ($file != "." && $file != ".." && is_dir($modules_dir . $file)) {
+        //var_dump($modules_dir.$file.DIRECTORY_SEPARATOR);
         $config = CMap::mergeArray($config, require($modules_dir . $file . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'main.php'));
     }
 }

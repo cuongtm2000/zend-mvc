@@ -21,6 +21,8 @@ class Controller extends CController {
     public $breadcrumbs = array();
 
     public function init() {
+        //var_dump($_GET);
+        var_dump(Yii::app()->language);
         Yii::app()->theme = Template::model()->getTemplateDefault();
     }
 }

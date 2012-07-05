@@ -10,6 +10,7 @@
  * @property string $template_desc
  * @property string $template_author
  * @property string $template_web
+ * @property integer $template_admin
  * @property integer $template_activated
  *
  * The followings are the available model relations:
@@ -39,14 +40,14 @@ class Template extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('template_id, template_name, template_date', 'required'),
-            array('template_activated', 'numerical', 'integerOnly' => true),
+            array('template_id, template_name, template_date, template_admin', 'required'),
+            array('template_admin, template_activated', 'numerical', 'integerOnly' => true),
             array('template_id', 'length', 'max' => 30),
             array('template_name, template_author', 'length', 'max' => 45),
             array('template_desc, template_web', 'length', 'max' => 100),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('template_id, template_name, template_date, template_desc, template_author, template_web, template_activated', 'safe', 'on' => 'search'),
+            array('template_id, template_name, template_date, template_desc, template_author, template_web, template_admin, template_activated', 'safe', 'on' => 'search'),
         );
     }
 
@@ -72,6 +73,7 @@ class Template extends CActiveRecord {
             'template_desc' => 'Template Desc',
             'template_author' => 'Template Author',
             'template_web' => 'Template Web',
+            'template_admin' => 'Template Admin',
             'template_activated' => 'Template Activated',
         );
     }
@@ -92,6 +94,7 @@ class Template extends CActiveRecord {
         $criteria->compare('template_desc', $this->template_desc, true);
         $criteria->compare('template_author', $this->template_author, true);
         $criteria->compare('template_web', $this->template_web, true);
+        $criteria->compare('template_admin', $this->template_admin);
         $criteria->compare('template_activated', $this->template_activated);
 
         return new CActiveDataProvider($this, array(
