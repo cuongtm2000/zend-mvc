@@ -1,5 +1,5 @@
 <?php if(isset($this->function['about_home'])): ?>
-	<h1 class="title-right"><span><?php echo $this->function['about_home']['title'.LANG] ?></span></h1>
+	<h2 class="title-right"><span><?php echo $this->function['about_home']['title'.LANG] ?></span></h2>
 	<div class="frame-tent-right">
 		<?php echo $this->function['about_home']['content'.LANG] ?>
 	</div> <!--End frame tent right-->

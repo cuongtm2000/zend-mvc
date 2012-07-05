@@ -1,0 +1,181 @@
+body {background:#EBEAEA url(../images/bg.gif) repeat-x; font-family:Arial, Helvetica, sans-serif;font-size:9pt;}
+.left{float: left;}
+.right{float:right}
+.clear{clear: both;}
+a{text-decoration:none; color:#720E3B}
+a:hover{color:#000;}
+
+/*layout*/
+*{margin:0; padding:0}
+#wrapper {margin:auto; width:950px;}
+
+/*Header*/
+#header{position:relative;height:100px}
+/*Logo*/
+.logo{float:left;overflow:hidden; height:77px; margin:0 30px 0 0;padding:15px 0 0 15px}
+
+/**  Ten cong ty     **/
+.title-company{font-size:16pt;padding:40px 0 0 0; color:#FE0000}
+
+/*Lang ( Ngon ngu) */
+.lang{position:absolute;bottom:10px; right:0;text-align:right}
+.lang img{margin:0 2px 0 0}
+.lang a{color:#007CC3;font-weight:bold; margin:0 5px 0  10px}
+.lang a:hover{color:#F99617}
+.hot-line{color:#007CC3;font-size:10pt;font-weight:bold;margin:5px 0 0 0}
+
+#nav, .nav{list-style:none;padding:8px 0 ; margin:0 0 10px 0}
+#nav li, .nav li{display:inline}
+#nav li a, .nav li a{padding:5px 20px; text-transform:uppercase;background:url(../images/nav-line-1.gif) no-repeat right; color:#fff;font-size:10pt}
+#nav li a:hover,.nav li a:hover{color:#D4760C}
+#nav .select ,.nav .select{color:#fff;font-weight:bold}
+#nav .none-line a,.nav .none-line a{background:none}
+
+/*Banner*/
+#banner{margin:0 0 10px 0;*_margin:0 0 0px 0}
+
+/*Content*/
+#content{margin:0 0 10px 0}
+
+/**  Title box   **/
+.title-left,.title-right, .title-box{text-transform:uppercase;color:#fff;padding:8px 0;background:url(../images/bg-title-box.png) no-repeat}
+.title-left span,.title-right span, .title-box span{padding:0 0 0 15px}
+
+.title-left{background:url(../images/bg-title-box-2.png) no-repeat;color:#007CC3;font-weight:bold}
+
+
+/*Left content*/
+#leftcontent{float:left; width:210px}
+.frame-leftcontent{background:#fff; margin:0 0 10px 0;border:1px solid #D8D6D7;-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px}
+
+/*Sub sản phẩm SGS*/
+.sub-cat{list-style:none;padding:10px 5px 10px 15px}
+.sub-cat li a{font-weight:bold;display:block;color:#333;background:url(../images/arrow.gif) no-repeat left 4px; padding:3px 0 3px 18px}
+.sub-cat li a:hover{color:#F99617}
+.sub-cat li ul{list-style:none;padding:5px 0 5px 15px}
+.sub-cat li ul li{padding:2px 0 !important; }
+.sub-cat li ul li a{background:url(../images/bullet.gif) no-repeat left;padding:0 0 0 10px;font-weight:normal}
+
+/*Ho tro ky thuat*/
+.support{list-style:none;padding:5px 3px 10px 0;text-align:center}
+.support li {color:#000; line-height:2em;}
+
+/*Thong ke truy cap*/
+.statistics{list-style:none;padding:5px 3px 10px 15px}
+.statistics li {color:#000; line-height:1.75em}
+
+/*bg-adv adv left*/
+.bg-adv{list-style:none;text-align:center;padding:5px 0 0 0}
+.bg-adv li{padding:0 0 3px 0}
+
+/*Right content*/
+#rightcontent{float:left;width:520px;margin:0 0 0 5px}
+#rightcontent p{margin:0 0 10px 0}
+#rightcontent ul li, #right-content ol li{margin: 4px 0 4px 40px}
+#rightcontent ul ,#right-content ol{margin: 0 0 10px 0}
+
+.link{color:#000;font-size:10pt; margin:0 0 10px 0}
+.link b{font-weight:normal;padding:0 5px;position:relative;top:-1px}
+.link span{color:#007CC3}
+.link a{ color:#D90F0F}
+.link a:hover{color:#228BC8}
+
+.title-right{background:url(../images/bg-title-right.png) no-repeat}
+
+/*Frame tent right*/
+.frame-tent-right {background:#fff;padding:10px 10px 5px 10px;margin:0 0 10px 0;border:1px solid #D8D6D7;-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px}
+.frame-tent-right p{text-align:justify;line-height:1.5em}
+
+/***** Product    *****/
+#rightcontent .all-product{list-style:none;padding:10px 0 0 0}
+#rightcontent .product{width:123px;padding:0 0 5px 0;text-align:center;margin:0 0 10px 3px;display:inline-block; vertical-align:top;*float:left}
+.product-img{height:90px; width:122px;display:table-cell;vertical-align:middle;border:1px solid #D9D9D9;padding:1px}
+#rightcontent .price{color:#145486; font-weight:700; font-size:13px; margin:0 0 12px 0}
+.title-pro{margin:5px 0 7px 0}
+.title-pro a{color:#007CC3}
+.title-pro a:hover{color:#F99617}
+.add-to-cart{padding: 5px 0 8px 5px; font-weight:700;background:url(../images/bkg_btn.png) no-repeat left top;*padding:0 0 0 5px;*height:25px}
+.add-to-cart span{background:url(../images/bkg_btn.png) no-repeat right top; padding:5px 15px 8px 10px; height:25px;color:#145486}
+
+/***    Page product-info     ****/
+#rightcontent  .frame-pro-info p{margin:0}
+.title-info{margin:0 0 8px 0;color:#000}
+.title-info span{border-bottom:1px solid #000;font-weight:bold;text-transform:uppercase}
+.panel-preview{margin:0 0 10px 0}
+
+.black{margin:0 !important; font-size:10pt;text-align:right !important}
+.black a{color:#000;background:url(../images/bull-1.gif) no-repeat left 5px;padding:0 0 0 10px}
+.black a:hover{background:url(../images/bull.gif) no-repeat left 5px;color:#ED2121}
+.img_info{text-align:center;margin:0 0 10px 0}
+
+/** Form lien he  **/
+.title-contact{ background:#CCC195;margin:0 0 10px 0; padding:7px 2px 7px 10px; font-family:Tahoma, Geneva, sans-serif;font-weight:bold; color:#33220C}
+#frm{margin:0 0 10px 0;}
+.frame-contact label{color:#555;font-weight:700; margin:0 !important;width:120px; float:left}
+.frame-contact{list-style:none;margin:15px 0 10px 0}
+.frame-contact li{padding:4px 0; margin:0 !important}
+.frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.frame-contact textarea{border:1px solid #ddd;width: 300px; -moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-contact span{color:#f00;margin:0 5px 0 0}
+
+.frame-contact .bton-dk{margin:10px 0 5px 30px;background:#1F1F1F;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-contact .bton-dk{margin:10px 10px 5px 0}
+
+/*   Page New  */
+.masuring{list-style: none; text-align:justify;font-size:10pt;margin:0 0 20px 0}
+.masuring li{ margin:0 0 10px 0 !important}
+.frame-img{float:left;width:143px; margin:0 8px 0 0}
+.title-masuring{margin:0 0 5px 0}
+.title-masuring a{color:#666}
+.title-masuring a:hover{color:#F99617}
+
+/* paging */
+ul.paging{float: right; margin:0; padding:0 0 5px 0; list-style: none;}
+ul.paging li{display: inline;margin:0 !important;}
+ul.paging .hidden{display: none;}
+ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{background:#0294DD; color:#fff; padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{background:#3CBEDA}
+
+/** Column3  **/
+#colum3{float:right; width:210px}
+
+.video{text-align:center;padding:5px 0}
+
+/**  Sub new   **/
+.sub-new{list-style:none;padding:10px 10px 10px 15px}
+.sub-new li{padding:3x 0;line-height:1.5em}
+.sub-new li a{ display:block;color:#161616;background:url(../images/bullet.gif) no-repeat left 7px; padding:1px 0 1px 15px}
+.sub-new li a:hover{color:#f90}
+
+/*Footer*/
+#bg-footer{background:#B4C3CD url(../images/footer_bg.gif) repeat-x; min-width:950px;margin:0 0 10px 0}
+#footer{margin:auto; width:957px;padding:23px 0 10px 0 ;line-height:1.7em}
+.tent-footer{text-align:center;font-size:10pt}
+.com-name{color:#007CC3; font-weight:bold; font-size:13pt; text-transform:uppercase}
+
+/* Error */
+.errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
+.errorSummary ul{margin:0 32px; padding:0}
+.errorSummary ul li{padding:2px 0; color: red}
+
+/*Add to cart*/
+.form_order{background:#fff;margin:0 0 15px 0;-webkit-border-radius:0 0 4px 6px;-moz-border-radius:0 0 6px 4px}
+.form_order thead{background:#1F1F1F}
+.form_order thead tr td{font-weight:bold;padding :5px !important; color:#fff;font-size:10pt}
+
+.form_order tbody tr td{border : 1px solid #ddd;}
+.form_order tbody tr .pic-order{padding:5px 0}
+.form_order tbody tr input{border:1px solid #ccc}
+.form_order tbody tr td a{color:#444}
+.form_order tbody tr td a:hover{color:#3CBEDA}
+
+.btn_order{cursor:pointer; border:none;font-weight:bold;background:#2C2C2C;padding:5px 7px;color:#fff;-webkit-border-radius:4px;-moz-border-radius:4px;margin:0 10px 0 0}
+.btn_order:hover{color:#fff}
+
+.frm-cart label{width:100px}
+.notificaion{color:#2C2C2C;font-size:10pt;margin:0 0 10px 0}
+.note span{color:#f00}
+
+
+
+
