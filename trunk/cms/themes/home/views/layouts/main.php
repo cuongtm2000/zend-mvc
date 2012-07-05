@@ -28,7 +28,7 @@
 <body>
 	<div id="wrapper">
         <div id="header">
-            <div id="logo"><a href="index.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a></div><!--End logo-->
+            <div id="logo"><a href="<?php echo Yii::app()->baseUrl?>" title="Logo"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a></div><!--End logo-->
             <h1 class="title-company">CÔNG TY TNHH MTV THAN PHÚC AN</h1>
             <div class="lang">
                 <a href="#" title="English"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/en.gif" alt="English" /> English</a>
@@ -37,7 +37,17 @@
             </div> <!--End lang-->	<div class="clear"></div>
         </div><!--End header-->
         <div id="all-nav">
-     	   <ul id="nav">
+            <?php $this->widget('zii.widgets.CMenu',array(
+                'id' => 'nav',
+                'items'=>array(
+                    array('label'=>'Home', 'url'=>array('/site/index')),
+                    array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+                    array('label'=>'Contact', 'url'=>array('/site/contact')),
+                    array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+                    array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+                ),
+            )); ?>
+     	   <!-- <ul id="nav">
                 <li><a href="index.html" title="">Trang chủ</a></li>
                 <li><a href="about.html" title="">Giới thiệu</a>
                 	<ul>
@@ -50,7 +60,7 @@
                 <li><a href="services.html" title="">Dịch vụ</a></li>
                 <li><a href="news.html" title="">Tin tức</a></li>
                 <li style="background:none"><a href="contact.html" title="">Liên hệ</a></li>
-            </ul>	
+            </ul> -->
         </div> <!--End all nav--><div class="clear"></div>
 
 	<div class="banner">
@@ -64,6 +74,10 @@
 	<div id="content">
 	   <div id="leftcontent">
 			<div class="frame-leftcontent">
+            <?php $positions = Position::model()->setPosition('left', isset($this->module->id) ? $this->module->id : null);?>
+            <?php foreach($positions as $value):?>
+                <?php echo $this->renderPartial('//'.$value['hoiit_modules_module_id'].'/'.$value['function_value'], array($value['function_value'] => $value['function_name']::model()->$value['functiol_call']())) ?>
+            <?php endforeach;?>
 			 <h2 class="title-box">CATEGORIES</h2>
 				 <ul class="sub-cat">
 					 <li><a href="#">Living Room</a></li>
@@ -90,6 +104,7 @@
 		</div> <!-- End Left-column -->
 
 	   <div id="rightcontent">
+			<?php echo $content; ?>
 		<h2 class="title-right"><span>FEATURED PRODUCTS</span></h2>
 			<ul class="all-product">
                 <li class="product">
@@ -112,6 +127,10 @@
 	   </div> <!--END center-column -->
 	   <div id="column-3">
 		<div class="sellers">
+            <?php $positions = Position::model()->setPosition('right', isset($this->module->id) ? $this->module->id : null);?>
+            <?php foreach($positions as $value):?>
+                <?php echo $this->renderPartial('//'.$value['hoiit_modules_module_id'].'/'.$value['function_value'], array($value['function_value'] => $value['function_name']::model()->$value['functiol_call']())) ?>
+            <?php endforeach;?>
 			 <h1 class="title-box">BEST SELLERS</h1>
 			 <ul class="sub-new">
              	<li><a href="#" title="">Coco Modern Leather</a> </li>
