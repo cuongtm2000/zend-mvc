@@ -19,6 +19,10 @@ class Controller extends CController {
 	public $logo = array(); //Logo
 	public $banner = array(); //Banner
 
+	public $about_list = array();
+	public $services_list = array();
+	public $news_list = array();
+	
 	public function init() {
 		Common::setLanguage(); //setting language
 
@@ -82,6 +86,13 @@ class Controller extends CController {
 		$this->logo = $banner->getLogo();
 		$this->banner = $banner->getBanner($this->module->getName());
 
+		Yii::app()->getModule('about');
+		$this->about_list = About::model()->listMenu();
+		Yii::app()->getModule('services');
+		$this->services_list = Services::model()->listMenu();
+		Yii::app()->getModule('news');
+		$this->news_list = NewsCat::model()->listCats();
+		
 		//Set configs
 		$this->configs = Configs::template($info_user['dos_templates_template']);
 
