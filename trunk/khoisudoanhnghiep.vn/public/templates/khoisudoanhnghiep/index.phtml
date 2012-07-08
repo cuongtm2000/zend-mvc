@@ -164,49 +164,44 @@
                         <div class="bg-support">
                             <h1>Thăm dò ý kiến</h1>
                             <?php if (isset($this->vote)): ?>
-                            <p><?php echo $this->vote['question']; ?></p>
+                                <p><?php echo $this->vote['question']; ?></p>
                                 <ul class="sub-bun">
-                                 <?php foreach ($this->vote['answer'] as $value) : ?>
-                                    <li><input type="radio" name="vote" value="<?php echo $value['id'] ?>" /><?php echo $value['answer'] ?></li>
-                                <?php endforeach; ?>
+                                    <?php foreach ($this->vote['answer'] as $value) : ?>
+                                    <li><input type="radio" name="vote" value="<?php echo $value['id'] ?>" />
+                                            <?php
+                                            if ($value['url'] != '')
+                                                echo '<a target="_blank" href="' . $value['url'] . '" title="' . $value['answer'] . '">' . $value['answer'] . '</a>';
+                                            else
+                                                echo $value['answer'];
+                                            ?></li>
+                                    <?php endforeach; ?>
                                 </ul>
-                            <div class="f-action">
-                                <input  class="button" rel="button"  type="button" value="Bình chọn" />
-                                <a title="Kết quả" rel="prettyPhoto[iframes]"  href="<?php echo $this->baseUrl()?>/vote?iframe=true&width=70%&height=70%" >&nbsp; Kết quả</a>
-</div>
+                                <div class="f-action">
+                                    <input onclick="sendvoting(<?php echo $this->vote['record_id']; ?>)" class="button" type="button" value="Bình chọn" />
+                                    <a title="Kết quả" rel="prettyPhoto[iframes]"  href="<?php echo $this->baseUrl() ?>/vote/index/index/vid/<?php echo $this->vote['record_id']; ?>?iframe=true&width=70%&height=70%" >&nbsp; Kết quả</a>
+                                </div>
                             <?php endif; ?>
-                          
+
                         </div><!--End bg support-->  <div class="clear"></div>
                     </div><!--End row 2-->
 
                     <?php if ($this->video_first): ?>
                         <div class="video">
                             <a href="<?php echo $this->video_first['url'] ?>" rel="prettyPhoto" title="<?php echo $this->video_first['title'] ?>"><img src="<?php echo $this->baseUrl() . IMAGES_PATH ?>/video/<?php echo $this->video_first['pic_full'] ?>" alt="<?php echo $this->video_first['title'] ?>" /></a>
+                  
                             <script type="text/javascript" charset="utf-8">
                                 $(document).ready(function(){
                                     $(".video a[rel^='prettyPhoto']").prettyPhoto();
                                     $(".f-action a[rel^='prettyPhoto[iframes]']").prettyPhoto();
-                                    $(".button [rel^='button']").prettyPhoto();
                                 });
-                              /*  var total=0;
-                                function nv_check_accept_number(a,f,c){
-                                    for(var a=a["option[]"],d=total=0;d<a.length;d++)
-                                        if(a[d].checked&&(total+=1),total>f)
-                                            return alert(c),!1
+                                    
+                                function sendvoting(){
+                                    if($('input[name=vote]:checked').val()==undefined)
+                                        alert('Bạn chưa chọn câu trả lời nào.');
+                                    else
+                                        $.prettyPhoto.open('<?php echo $this->baseUrl() ?>/vote/index/index/vid/<?php echo $this->vote['record_id']; ?>/id/'+$('input[name=vote]:checked').val()+'?iframe=true&width=70%&height=70%','Kết quả thăm dò ý kiến','');   
                                 }
-                                function nv_sendvoting(a,f,c,d,g){
-                                    var e="0",c=parseInt(c);
-                                    if(1==c)
-                                        for(var a=a.option,b=0;b<a.length;b++)
-                                            a[b].checked&&(e=a[b].value);
-                                        else if(1<c){
-                                            a=a["option[]"];
-                                            for(b=0;b<a.length;b++)a[b].checked&&(e=e+","+a[b].value)
-                                        }
-                                        "0"==e&&0<c?alert(g):Shadowbox.open({
-                                            content:'<iframe src="'+nv_siteroot+"index.php?"+nv_lang_variable+"="+nv_sitelang+"&"+nv_name_variable+"=voting&"+nv_fc_variable+"=main&vid="+f+"&checkss="+d+"&lid="+e+'" border="0" frameborder="0" style="width:670px;height:400px"></iframe>'
-                                     ,player:"html",
-                                 }height:400,width:670});return!1};*/
+                                     
                             </script>
                         </div>
                     <?php endif; ?>
@@ -223,30 +218,34 @@
                         <h1 class="title-right"><span><?php echo $this->lang['adv'] ?></span></h1>
                         <div class="bg-sub-ad">
                             <ul class="sub-ad-1">
-                                <?php $i = 0;
+                                <?php
+                                $i = 0;
                                 foreach ($this->list_adv_right as $value):
                                     ?>
                                     <?php if (($i % 2) == 0): ?>
                                         <li><a href="<?php echo $value['url'] ?>" target="<?php echo $value['type'] ?>" title="<?php echo $value['title' . LANG] . ' ' . $value['description'] ?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title' . LANG] . ' ' . $value['description'] ?>"/></a></li>
                                     <?php endif; ?>
-                                    <?php $i++;
+                                    <?php
+                                    $i++;
                                 endforeach;
                                 ?>
                             </ul>
                             <ul class="sub-ad-2">
-                                <?php $i = 0;
+                                <?php
+                                $i = 0;
                                 foreach ($this->list_adv_right as $value):
                                     ?>
                                     <?php if (($i % 2) != 0): ?>
                                         <li><a href="<?php echo $value['url'] ?>" target="<?php echo $value['type'] ?>" title="<?php echo $value['title' . LANG] . ' ' . $value['description'] ?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title' . LANG] . ' ' . $value['description'] ?>"/></a></li>
-        <?php endif; ?>
-        <?php $i++;
-    endforeach;
-    ?>
+                                    <?php endif; ?>
+                                    <?php
+                                    $i++;
+                                endforeach;
+                                ?>
                             </ul>  <div class="clear"></div>
                         </div>
                         <div class="bd-bt-scroll"></div>
-<?php endif; ?>
+                    <?php endif; ?>
                 </div> <!--End right content--> <div class="clear"></div>
             </div><!--End content-->
             <!--  h1 class="title-buy-ad"><span>Bố cáo thành lập</span></h1>

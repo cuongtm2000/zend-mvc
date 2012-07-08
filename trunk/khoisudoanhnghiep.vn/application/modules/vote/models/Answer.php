@@ -57,8 +57,11 @@ class Vote_Model_Answer extends Zend_Db_Table {
         $select = $this->select()->from($this->_name, array('*'))->where('vote_id=?', $vid);
         return $this->fetchAll($select)->toArray();
     }
-    public function updateVote($id) {
-        $this->update('num_vote=num_vote+1', 'id=' . $id);
+    public function updateVote($vid,$id) {
+        $_db = Zend_Registry::get('connectDb');
+        $sql = "UPDATE `".$this->_name."` SET `num_vote` = `num_vote`+1 WHERE `id` = ".$id." and `vote_id` = ".$vid.";";
+    	$_db->query($sql);
     }
+    
 
 }

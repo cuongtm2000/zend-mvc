@@ -12,7 +12,7 @@ class Vote_Model_Vote extends Zend_Db_Table {
         $this->_xss = Zend_Registry::get('xss');
     }
 
-    //Front end - Danh sách quảng cáo 
+    //Front end - Danh sách
     public function getListmenu() {
         $select = $this->select()->from($this->_name, array('record_id', 'pic_thumb', 'title' . LANG, 'url', 'description', 'position', 'type'))
                 ->where('enable = ?', 1)
@@ -20,6 +20,7 @@ class Vote_Model_Vote extends Zend_Db_Table {
         $result = $this->fetchAll($select)->toArray();
         return $result;
     }
+    
     public function getFirstVote(){
          $time= time();
          $select = $this->select()->from($this->_name, array('record_id', 'question'))
@@ -30,17 +31,19 @@ class Vote_Model_Vote extends Zend_Db_Table {
         
         $ans= new Vote_Model_Answer();
         $result['answer']= $ans->getAnswerView($result['record_id']);     
-        var_dump($result);
+     //   var_dump($result);
         return $result;
     }
     
 
     public function getDetail($id) {
-        $select = $this->select()->from($this->_name, array('title' . LANG, 'content' . LANG))
-                ->where('enable = ?', 1)
+        $select = $this->select()->from($this->_name, array('record_id', 'question','begin_date'))
                 ->where('record_id = ?', $id);
-        $result = $this->fetchAll($select)->toArray();
-        return $result;
+        $result= $this->fetchRow($select)->toArray();
+        
+        $ans= new Vote_Model_Answer();
+        $result['answer']= $ans->getAnswerView($result['record_id']);     
+        return $result;    
     }
 
     //Back end - Danh sách menu trong Admin
