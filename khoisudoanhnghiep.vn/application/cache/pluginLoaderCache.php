@@ -13,3 +13,8 @@ include_once 'Zend/View/Helper/HeadMeta.php';
 include_once 'Zend/View/Helper/HeadLink.php';
 include_once 'Zend/View/Helper/HeadScript.php';
 include_once 'GLT/View/Helper/Menubar.php';
+include_once 'GLT/View/Helper/Infouser.php';
+include_once 'Zend/View/Helper/PaginationControl.php';
+include_once 'Zend/Paginator/ScrollingStyle/Sliding.php';
+include_once 'Zend/View/Helper/Partial.php';
+include_once 'GLT/View/Helper/Langlist.php';

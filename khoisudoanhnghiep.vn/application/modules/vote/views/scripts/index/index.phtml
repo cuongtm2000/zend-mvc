@@ -1,28 +1,36 @@
-<p style="color: #0000ff;padding-top:10px"><strong>Hệ thống đã ghi nhận bình chọn của bạn.</strong></p>
-<h3>Bạn biết gì về NukeViet 3?</h3>
+<?php
+    $i = 1;
+    $sum = 0;
+    foreach ($this->item['answer'] as $value) {
+        $sum+=$value['num_vote'];
+    }
+    if ($sum == 0)
+        $sum = -1;
+?>
+<?php if($this->time_remain==-1):?>
+    <p style="color: #0000ff;padding-top:10px"><strong>Hệ thống đã ghi nhận bình chọn của bạn.</strong></p>
+<?php elseif ($this->time_remain>0): ?>
+    <p style="color: #0000ff;padding-top:10px"><strong>Bạn mới vừa bình chọn xong. Hãy thử lại sau <?php echo number_format(60-$this->time_remain/60) ?> phút nữa</strong></p>
+<?php endif;?>
+
+    <h3><?php echo $this->item['question']; ?></h3>
 <dl class="graph">
-    <dt class="bar-title">Một bộ sourcecode cho web hoàn toàn mới.</dt>
-    <dd class="bar-container">
-        <div style="width: 0%;display: block;" id="bar1">&nbsp;</div>
-        <strong>0%</strong>
-    </dd>
-    <dt class="bar-title">Mã nguồn mở, sử dụng miễn phí.</dt>
-    <dd class="bar-container">
-        <div style="width: 50%;display: block;background-color: rgb(0, 102, 204);" id="bar2">&nbsp;</div>
-        <strong>5%</strong>
-    </dd>
-    <dt class="bar-title">Sử dụng xHTML, CSS và hỗ trợ Ajax</dt>
-    <dd class="bar-container">
-        <div style="width: 50%;display: block;" id="bar3">&nbsp;</div>
-        <strong>50%</strong>
-    </dd>
-    <dt class="bar-title">Tất cả các ý kiến trên</dt>
-    <dd class="bar-container">
-        <div style="width: 59%;display: block;" id="bar4">&nbsp;</div>
-        <strong>59%</strong>
-    </dd>
+    <?php foreach ($this->item['answer'] as $value) : ?>
+        <dt class="bar-title">
+        <?php
+        if ($value['url'] != '')
+            echo '<a target="_blank" href="' . $value['url'] . '" title="' . $value['answer'] . '">' . $value['answer'] . '</a>';
+        else
+            echo $value['answer'];
+        ?>
+        </dt>
+        <dd class="bar-container">
+            <div style="width: <?php echo $value['num_vote'] * 100 / $sum; ?>%; display: block;" id="bar<?php echo $i++; ?>">&nbsp;</div>
+            <strong><?php echo number_format($value['num_vote'] * 100 / $sum, 1); ?>%</strong>
+        </dd>
+    <?php endforeach; ?>
 </dl>
 <p style="padding-top:10px">
-    <strong>Tổng số</strong>: 2 lượt - <strong>Tính từ:</strong>
-    Thứ hai - 31/05/2010  11:09
+    <strong>Tổng số</strong>: <?php echo $sum == -1 ? '0' : number_format($sum); ?> lượt - <strong>Tính từ ngày:</strong>
+    <?php echo date('d-m-Y', $this->item['begin_date']); ?>
 </p>

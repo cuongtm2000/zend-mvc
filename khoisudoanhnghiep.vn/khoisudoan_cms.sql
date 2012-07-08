@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 08, 2012 at 12:14 PM
+-- Generation Time: Jul 08, 2012 at 09:20 PM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -2106,12 +2106,12 @@ INSERT INTO `dos_module_vote_rows` (`id`, `answer`, `url`, `num_vote`, `vote_id`
 (2, 'An', 'google.com', 0, 1),
 (3, 'Ninh', 'training', 0, 2),
 (4, 'Minh', 'google.com', 0, 2),
-(5, 'Ninh', 'google.com', 0, 3),
-(6, 'Hoc', '', 0, 4),
-(7, 'Choi', '', 0, 4),
-(10, 'df___________', 'google.com', 0, 4),
-(11, 'dsjakgh', '', 0, 4),
-(12, '.................', '', 0, 4);
+(5, 'Ninh', 'http://google.com', 0, 3),
+(6, 'Hoc', '', 4, 4),
+(7, 'Choi', '', 11, 4),
+(10, 'df___________', 'http://google.com', 27, 4),
+(11, 'dsjakgh', '', 8, 4),
+(12, '.................', '', 12, 4);
 
 -- --------------------------------------------------------
 
@@ -2652,7 +2652,7 @@ CREATE TABLE IF NOT EXISTS `dos_sys_statistics` (
 --
 
 INSERT INTO `dos_sys_statistics` (`session_id`, `time`) VALUES
-('e0xqoh65c', 1341487222);
+('e0xqoh65c', 1341767487);
 
 -- --------------------------------------------------------
 
@@ -2704,7 +2704,7 @@ INSERT INTO `dos_sys_webs` (`web_name`, `web_value`) VALUES
 ('description', 'Khởi sự doanh nghiệp,cẩm nang doanh nghiệp,kinh nghiệm thương trường'),
 ('email_subject', 'Liên hệ từ website'),
 ('keywords', 'Khởi sự doanh nghiệp,cẩm nang doanh nghiệp,kinh nghiệm thương trường'),
-('timestamp_today', '1341421200'),
+('timestamp_today', '1341766800'),
 ('titleweb', 'khoisudoanhnghiep.vn'),
 ('total_visit', '55815'),
 ('total_visit_today', '1'),
