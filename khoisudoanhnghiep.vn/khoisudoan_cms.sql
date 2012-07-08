@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.10.1
+-- version 3.5.0
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 04, 2012 at 03:08 AM
--- Server version: 5.1.61
--- PHP Version: 5.3.10
+-- Generation Time: Jul 08, 2012 at 12:14 PM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `khoisudoan_cms`
+-- Database: `khoisudoanhnghiep`
 --
 
 -- --------------------------------------------------------
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_about` (
   `hot` tinyint(1) NOT NULL DEFAULT '0',
   `enable` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=34 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
 
 --
 -- Dumping data for table `dos_module_about`
@@ -237,7 +237,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_contact` (
   `hot` tinyint(1) NOT NULL DEFAULT '0',
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `dos_module_contact`
@@ -448,7 +448,7 @@ INSERT INTO `dos_module_entertainment` (`record_id`, `pic_thumb`, `title`, `titl
 (66, 'chacon.jpg', 'Tiền ở đâu ra?', '', '', '<p style="text-align:justify;">\n	Một giám đốc vừa về đến nhà sau một tuần đi công tác đã rất đổi ngạc nhiên khi thấy cậu con trai của mình có chiếc điện thoại mới.</p>\n', '', '', '<p style="text-align:justify;">\n	Một giám đốc vừa về đến nhà sau một tuần đi công tác đã rất đổi ngạc nhiên vì thấy cậu con trai của mình có chiếc điện thoại mới.</p>\n<p style="text-align:justify;">\n	- Ở đâu mà con có điện thoại mới vậy, nó tới tới mấy triệu đồng một cái mà? Ông ta hỏi.</p>\n<p style="text-align:justify;">\n	- Con mua từ tiền con có được nhờ đi chơi đó bố à. Cậu bé trả lời.</p>\n<p style="text-align:justify;">\n	- Con trai à, làm gì có ai đi chơi mà có tiền nào, con hãy nói cho bố biết sự thật đi, ở đâu mà con có tiền? </p>\n<p style="text-align:justify;">\n	- Con nói thật mà bố chẳng chịu tin gì cả. Từ khi bố vắng nhà, cứ mỗi buổi tối, ông Bảy chủ tiệm vàng đều tới nhà gặp mẹ. Ông ấy bảo con đi chơi đi và cho con 500 ngàn.</p>\n<p style="text-align:right;">\n	<strong>PH (sưu tầm)</strong></p>\n<p>\n	 </p>\n', '', '', 'tien-o-dau-ra', 'dao choi, thu nhap, kiem tien', NULL, 84, '2012-06-24 12:46:45', 87, 0, NULL, NULL, 1, 3),
 (67, 'nguoiduatintien.jpg', 'Được giữ lại tiền thừa', '', '', '<p style="text-align:justify;">\n	Một khách hàng tới quầy tính tiền của siêu thị nói:</p>\n<p>\n	 </p>\n<p>\n	 </p>\n', '', '', '<p style="text-align:justify;">\n	Một khách hàng tới quầy tính tiền của siêu thị nói:</p>\n<p>\n	 </p>\n<p style="text-align:justify;">\n	- Hôm qua tôi mua hàng ở đây và hóa đơn bị tính nhầm tới 100 USD.</p>\n<p style="text-align:justify;">\n	- Quá muộn thưa ông - người quản lý siêu thị nhún vai. Đáng lẽ ông phải nói ngay từ hôm qua vì bây giờ chúng tôi đã khóa sổ rồi.</p>\n<p>\n	 </p>\n<p style="text-align:justify;">\n	- Có nghĩa là tôi được giữ lại 100 USD tiền thừa này? ông khách mừng rỡ.</p>\n<p style="text-align:right;">\n	<strong>PH (sưu tầm)</strong></p>\n', '', '', 'duoc-giu-lai-tien-thua', 'sieu thi, thoi tien, gian lan', NULL, 74, '2012-06-24 12:53:13', 86, 0, NULL, NULL, 1, 3),
 (68, 'thu_ky_iso.jpg', 'Sếp ở trong toilet', '', '', '<p style="text-align:justify;">\n	Cô thư ký mới vào làm việc ngày đầu tiên. Trưởng phòng tổ chức đang hướng dẫn công việc cho cô thì sếp ra khỏi phòng. Ngay lúc đó, chuông điện thoại reo.</p>\n<p>\n	 </p>\n<p style="text-align:justify;">\n	 </p>\n', '', '', '<p style="text-align:justify;">\n	Cô thư ký mới vào làm việc ngày đầu tiên. Trưởng phòng tổ chức đang hướng dẫn công việc cho cô thì sếp ra khỏi phòng. Ngay lúc đó, chuông điện thoại reo.</p>\n<p>\n	 </p>\n<p style="text-align:justify;">\n	Cô thư ký cầm ống nghe và trả lời trông rất chuyên nghiệp, nhưng lại bật ra câu:</p>\n<p style="text-align:justify;">\n	- Dạ, hiện giờ sếp tôi đang ở trong toilet ạ!</p>\n<p>\n	 </p>\n<p style="text-align:justify;">\n	- Ồ không - Trưởng phòng nhắc - Nói là sếp đang ngồi với khách.</p>\n<p style="text-align:justify;">\n	- Dạ, hiện giờ sếp tôi đang ở trong toilet với khách ạ! - Cô thư ký nhanh nhảu sửa lời liền với người nghe!</p>\n<p style="text-align:right;">\n	<strong>PH (sưu tầm)</strong></p>\n', '', '', 'sep-o-trong-toilet', 'sep, thu ky van phong, nhan vien, toilet', NULL, 9, '2012-06-26 11:18:41', 84, 0, NULL, NULL, 1, 3),
-(69, 'larger_ofy1336108119.jpg', 'Thợ sửa khóa trong nhà', '', '', '<p style="text-align:justify;">\n	Một ông giám đốc doanh nghiệp đi công tác về, gọi cửa mãi không thấy ai ra mở cửa nên ông ta bực bội phá cửa vào nhà. Vợ ông ta thấy vậy hớt hải từ phòng ngủ chạy ra và la lớn.</p>\n<p style="text-align:justify;">\n	 </p>\n', '', '', '<p style="text-align:justify;">\n	Một ông giám đốc doanh nghiệp đi công tác về, gọi cửa mãi không thấy ai ra mở cửa nên ông ta bực bội phá cửa vào nhà. Vợ ông ta thấy vậy hớt hải từ phòng ngủ chạy ra và la lớn.<br /><br />\n	- Tôi chờ ông mấy ngày thì không sao, ông mới chờ có mấy phút mà đã phá cửa! May mà đang có ông thợ sửa khóa trong nhà, để tôi nói anh ta ra sửa lại.</p>\n<p style="text-align:right;">\n	<strong>PH (sưu tầm)</strong></p>\n', '', '', 'tho-sua-khoa-trong-nha', 'chu doanh nghiep, tho dien, ngoai tinh, sex, tinh duc', NULL, 18, '2012-06-28 14:33:59', 89, 0, NULL, NULL, 1, 3),
+(69, 'larger_ofy1336108119.jpg', 'Thợ sửa khóa trong nhà', '', '', '<p style="text-align:justify;">\n	Một ông giám đốc doanh nghiệp đi công tác về, gọi cửa mãi không thấy ai ra mở cửa nên ông ta bực bội phá cửa vào nhà. Vợ ông ta thấy vậy hớt hải từ phòng ngủ chạy ra và la lớn.</p>\n<p style="text-align:justify;">\n	 </p>\n', '', '', '<p style="text-align:justify;">\n	Một ông giám đốc doanh nghiệp đi công tác về, gọi cửa mãi không thấy ai ra mở cửa nên ông ta bực bội phá cửa vào nhà. Vợ ông ta thấy vậy hớt hải từ phòng ngủ chạy ra và la lớn.<br /><br />\n	- Tôi chờ ông mấy ngày thì không sao, ông mới chờ có mấy phút mà đã phá cửa! May mà đang có ông thợ sửa khóa trong nhà, để tôi nói anh ta ra sửa lại.</p>\n<p style="text-align:right;">\n	<strong>PH (sưu tầm)</strong></p>\n', '', '', 'tho-sua-khoa-trong-nha', 'chu doanh nghiep, tho dien, ngoai tinh, sex, tinh duc', NULL, 20, '2012-06-28 14:33:59', 89, 0, NULL, NULL, 1, 3),
 (70, 'thumbnailhandler.jpg', 'Henry Ford và Thượng Đế', '', '', '<p style="text-align:justify;">\n	Ông Henry Ford là cha đẻ của nghành công nghiệp xe hơi thế giới khi từ trần được lên thiên đàng. </p>\n', '', '', '<p style="text-align:justify;">\n	Ông Henry Ford là cha đẻ của nghành công nghiệp xe hơi thế giới khi từ trần được lên thiên đàng. Tại cửa thiên đàng Thánh Phê-Rô (St. Peter) chào mừng Henry Ford và nói: “ Tốt, con là người tốt và sự phát minh ra dây chuyền lắp ráp trong kỹ nghệ xe hơi của con đã làm thay đổi bộ mặt công nghệ xe hơi thế giới. Để trọng thưởng con, con có thể được quyền giao tiếp với bất cứ ai trên Thiên Đàng mà con thích”. Ông Ford suy nghĩ rồi đáp lại, “ Con xin được giao tiếp với Thượng Đế”.</p>\n<p>\n	<span style="text-align:justify;">Thánh Phê-Rô đưa ông Ford đến cung điện của Thượng đế và giới thiệu Ford với Thượng Đế. Ông Ford liền hỏi Thượng Đế:</span></p>\n<p style="text-align:justify;">\n	“Ngài đã nghĩ  như thè nào khi Ngài sáng tác ra người phụ nữ?”</p>\n<p>\n	<span style="text-align:justify;">Thượng Đế hỏi lại: “ Ý của con là thế nào”</span></p>\n<p style="text-align:justify;">\n	Ông Ford trả lời: “Người phụ nử do Thượng Đế sáng tác có quá nhiều lỗi trầm trọng, điểm qua sơ sơ vài cái nhé:</p>\n<p>\n	<span style="text-align:justify;">1.Phần trước và sau bị nhô ra quá nhiều (tức là ngực tấn công, mông phòng thủ :-) )</span></p>\n<p style="text-align:justify;">\n	2.Ở tốc độ nhanh quá nhiều tiếng ồn lạch cạch.</p>\n<p style="text-align:justify;">\n	3.Tiền bảo trì quá tốn kém.</p>\n<p style="text-align:justify;">\n	4.Phải được thường xuyên sơn phết và tái tu sửa.</p>\n<p style="text-align:justify;">\n	5.Mỗi 28 ngày là có khoảng 5-6 ngày không xử dụng được.</p>\n<p style="text-align:justify;">\n	6.Phần sau thì bị lắc qua lắc lại quá nhiều.</p>\n<p style="text-align:justify;">\n	7.Chổ dẫn vào quá gần với chổ thải ra.</p>\n<p style="text-align:justify;">\n	8.Đèn pha thì thường là quá nhỏ.</p>\n<p style="text-align:justify;">\n	9.Sức tiêu thụ xăng dầu thì quá mãnh liệt.</p>\n<p style="text-align:justify;">\n	Nghe đến đây Thượng đế trả lời: “ Hmmm, chờ ta 1 phút”.</p>\n<p style="text-align:justify;">\n	Thượng đế đến cái máy siêu điện toán Celestial, gõ vài phím và chờ đợi kết quả. Liền sau đó máy điện toán in ra kết quả, và Thượng đế đọc báo cáo rồi bảo ông Ford:</p>\n<p>\n	<span style="text-align:justify;">“Rất có thể tác phẩm sáng tạo của ta bị nhiều sai lỗi, nhưng theo báo cáo thống kê này thì nhiều đàn ông thích lái sản phẩm của ta hơn của con”.</span></p>\n<p style="text-align:right;">\n	<strong><span style="text-align:justify;">PH (sưu tầm)</span></strong></p>\n', '', '', 'henry-ford-va-thuong-de', 'Henry Ford, thuong de, xe hoi, phu nu\n', NULL, 18, '2012-06-28 15:02:42', 90, 0, NULL, NULL, 1, 3);
 
 -- --------------------------------------------------------
@@ -468,7 +468,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_entertainment_cat` (
   `cat_order` int(11) NOT NULL DEFAULT '1',
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `dos_module_entertainment_cat`
@@ -2057,6 +2057,65 @@ INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `dos_module_vote`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_vote` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `question` varchar(255) NOT NULL,
+  `begin_date` int(11) NOT NULL DEFAULT '0',
+  `end_date` int(11) NOT NULL DEFAULT '0',
+  `order` smallint(6) DEFAULT '1',
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `enable` tinyint(4) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`record_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `dos_module_vote`
+--
+
+INSERT INTO `dos_module_vote` (`record_id`, `question`, `begin_date`, `end_date`, `order`, `create_date`, `enable`) VALUES
+(1, 'Tui là ai?', 1657731600, 1944752400, 4, '2012-07-05 03:29:54', 1),
+(2, 'Tui là ai?', 1341939600, 1343322000, 3, '2012-07-05 03:34:59', 0),
+(3, 'Tui là ai?', 1341248400, 1345482000, 2, '2012-07-05 03:36:52', 1),
+(4, 'Tui dang lam gi?', 1341334800, 1344963600, 1, '2012-07-05 04:00:29', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dos_module_vote_rows`
+--
+
+CREATE TABLE IF NOT EXISTS `dos_module_vote_rows` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `answer` varchar(255) NOT NULL,
+  `url` varchar(255) DEFAULT NULL,
+  `num_vote` int(11) NOT NULL DEFAULT '0',
+  `vote_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `vote_id` (`vote_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+
+--
+-- Dumping data for table `dos_module_vote_rows`
+--
+
+INSERT INTO `dos_module_vote_rows` (`id`, `answer`, `url`, `num_vote`, `vote_id`) VALUES
+(1, 'Ninh', '', 0, 1),
+(2, 'An', 'google.com', 0, 1),
+(3, 'Ninh', 'training', 0, 2),
+(4, 'Minh', 'google.com', 0, 2),
+(5, 'Ninh', 'google.com', 0, 3),
+(6, 'Hoc', '', 0, 4),
+(7, 'Choi', '', 0, 4),
+(10, 'df___________', 'google.com', 0, 4),
+(11, 'dsjakgh', '', 0, 4),
+(12, '.................', '', 0, 4);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `dos_module_wedding`
 --
 
@@ -2359,6 +2418,7 @@ INSERT INTO `dos_sys_groups_has_dos_sys_models` (`dos_sys_groups_group_name`, `d
 ('member', 'news', 'allow'),
 ('member', 'support', 'allow'),
 ('member', 'video', 'allow'),
+('member', 'vote', 'allow'),
 ('member', 'world-business', 'allow');
 
 -- --------------------------------------------------------
@@ -2472,6 +2532,7 @@ INSERT INTO `dos_sys_langs` (`lang_name`, `lang`, `langen`, `langfr`) VALUES
 ('user_cmt', 'Người bình luận', '', ''),
 ('video', 'Video', '', ''),
 ('video_url', 'Link video', '', ''),
+('vote', 'Bình chọn', 'Vote', NULL),
 ('welcome_chat', 'Xin chào, tôi muốn hỏi về sản phẩm - dịch vụ của công ty bạn', '', ''),
 ('world-business', 'Thế giới doanh nhân', '', '');
 
@@ -2520,6 +2581,7 @@ INSERT INTO `dos_sys_models` (`model_id`, `record_order`) VALUES
 ('techniques', 23),
 ('termsofuse', 12),
 ('video', 10),
+('vote', 29),
 ('wedding', 13),
 ('world-business', 27);
 
@@ -2590,10 +2652,7 @@ CREATE TABLE IF NOT EXISTS `dos_sys_statistics` (
 --
 
 INSERT INTO `dos_sys_statistics` (`session_id`, `time`) VALUES
-('avnhfbs0p', 1341369672),
-('pdknf0q5i', 1341369883),
-('t51u0fmoq', 1341369864),
-('we6q2l78x', 1341370954);
+('e0xqoh65c', 1341487222);
 
 -- --------------------------------------------------------
 
@@ -2645,10 +2704,10 @@ INSERT INTO `dos_sys_webs` (`web_name`, `web_value`) VALUES
 ('description', 'Khởi sự doanh nghiệp,cẩm nang doanh nghiệp,kinh nghiệm thương trường'),
 ('email_subject', 'Liên hệ từ website'),
 ('keywords', 'Khởi sự doanh nghiệp,cẩm nang doanh nghiệp,kinh nghiệm thương trường'),
-('timestamp_today', '1341334800'),
+('timestamp_today', '1341421200'),
 ('titleweb', 'khoisudoanhnghiep.vn'),
-('total_visit', '55813'),
-('total_visit_today', '94'),
+('total_visit', '55815'),
+('total_visit_today', '1'),
 ('type', '1');
 
 --
@@ -2697,6 +2756,12 @@ ALTER TABLE `dos_module_studies_comments`
 --
 ALTER TABLE `dos_module_video`
   ADD CONSTRAINT `fk_dos_module_video_dos_module_video_cat` FOREIGN KEY (`dos_module_video_cat_cat_id`) REFERENCES `dos_module_video_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `dos_module_vote_rows`
+--
+ALTER TABLE `dos_module_vote_rows`
+  ADD CONSTRAINT `dos_module_vote_rows_ibfk_1` FOREIGN KEY (`vote_id`) REFERENCES `dos_module_vote` (`record_id`);
 
 --
 -- Constraints for table `dos_sys_groups_has_dos_sys_models`

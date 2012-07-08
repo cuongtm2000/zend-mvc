@@ -1,0 +1,129 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Bạn biết gì về NukeViet 3?</title>
+        <meta  http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta  http-equiv="content-language" content="vi" />
+        <style type="text/css">
+            body{
+                font-family:arial,verdana,helvetica,sans-serif;
+                font-size:12px;
+                cursor:default;
+                background-color:#fff
+            }
+            *{
+                margin:0;padding:0;
+                text-decoration:none
+            }
+            html{
+                height:100%;
+                margin-bottom:1px
+            }
+            #wrapper{
+                width:650px;
+                margin:auto
+            }
+            hr{
+                border:0;
+                color:#ccc;
+                background-color:#cdcdcd;
+                height:1px;
+                width:100%;
+                text-align:left
+            }
+            h1{
+                font-size:28px;
+                color:#c00;
+                background-color:#fff;
+                font-family:Arial,Verdana,Helvetica,sans-serif;
+                font-weight:300
+            }
+            h2{
+                font-size:15px;
+                color:gray;
+                font-family:Arial,Verdana,Helvetica,sans-serif;
+                font-weight:300;
+                background-color:#fff
+            }
+            h3{
+                color:#c00;
+                font-size:150%;
+                text-align:left;
+                font-weight:600;
+                padding:10px 5px 15px 5px;
+                margin-top:5px;
+                text-align:center
+            }
+            p{
+                color:#000;
+                background-color:#fff;
+                line-height:20px;
+                padding:5px
+            }
+            .graph{
+                width:100%;
+                position:relative;
+                right:1%
+            }
+            .bar-title{
+                position:relative;
+                float:left;
+                width:50%;
+                line-height:20px;
+                margin-right:17px;
+                font-weight:bold;
+                text-align:right
+            }
+            .bar-container{
+                position:relative;
+                float:left;
+                width:40%;
+                height:10px;
+                margin:0 0 15px
+            }
+            .bar-container div{
+                background-color:#c40;height:20px
+            }
+            .bar-container strong{
+                position:absolute;
+                right:-32px;top:0;
+                overflow:hidden
+            }
+            #poll-results p{
+                text-align:center;
+                clear:both
+            }
+        </style>
+       <script type="text/javascript" src="<?php echo $this->baseUrl() . TEMPLATE ?>/js/jquery-1.6.4.min.js"></script>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            $(document).ready(function(){
+                if ($("#poll-results").length > 0) {
+                    animateResults();
+                }
+            });
+            function animateResults(){
+                $("#poll-results div").each(function(){
+                    var percentage = $(this).next().text();
+                    $(this).css({
+                        width: "0%"
+                    }).animate({
+                        width: percentage
+                    }, 'slow');
+                });
+            }
+            //]]>
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="poll-container">
+                <div id="poll-results">
+                     <?php echo $this->layout()->content ?>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
