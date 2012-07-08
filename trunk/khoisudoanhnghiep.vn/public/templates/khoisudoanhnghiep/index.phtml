@@ -1,289 +1,320 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="content-language" content="vi" />
-<meta name="revisit-after" content="1 days" />
-<meta name="robots" content="noodp,index,follow" />
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="content-language" content="vi" />
+        <meta name="revisit-after" content="1 days" />
+        <meta name="robots" content="noodp,index,follow" />
 
-<link rel="SHORTCUT ICON" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/x-icon" />
-<link rel="icon" href="<?php echo $this->baseUrl().TEMPLATE ?>/images/favicon.ico" type="image/gif" />
-<link href="<?php echo $this->baseUrl().TEMPLATE ?>/css/dosvn.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo $this->baseUrl().TEMPLATE ?>/css/csstab.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery-1.6.4.min.js"></script>
+        <link rel="SHORTCUT ICON" href="<?php echo $this->baseUrl() . TEMPLATE ?>/images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="<?php echo $this->baseUrl() . TEMPLATE ?>/images/favicon.ico" type="image/gif" />
+        <link href="<?php echo $this->baseUrl() . TEMPLATE ?>/css/dosvn.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo $this->baseUrl() . TEMPLATE ?>/css/csstab.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="<?php echo $this->baseUrl() . TEMPLATE ?>/js/jquery-1.6.4.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl().TEMPLATE ?>/css/skin.css" />
-<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery.jcarousel.js"></script>
-<script type="text/javascript">
-jQuery(document).ready(function() {
-    jQuery('#mycarousel').jcarousel({
-    	wrap: 'circular',
-		auto: 2,
-        speed: 100,
-		scroll: 1,
-    });
-});
-</script>
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl() . TEMPLATE ?>/css/skin.css" />
+        <script type="text/javascript" src="<?php echo $this->baseUrl() . TEMPLATE ?>/js/jquery.jcarousel.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                jQuery('#mycarousel').jcarousel({
+                    wrap: 'circular',
+                    auto: 2,
+                    speed: 100,
+                    scroll: 1,
+                });
+            });
+        </script>
 
-<!--<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/common-tab.js"></script>
-<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/tab.js"></script>-->
-<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/open-windows.js"></script>
-<!-- Video -->
-<script type="text/javascript" src="<?php echo $this->baseUrl().TEMPLATE ?>/js/jquery.prettyphoto.js"></script>
-<link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl().TEMPLATE ?>/css/prettyphoto.css" />
+<!--<script type="text/javascript" src="<?php echo $this->baseUrl() . TEMPLATE ?>/js/common-tab.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl() . TEMPLATE ?>/js/tab.js"></script>-->
+        <script type="text/javascript" src="<?php echo $this->baseUrl() . TEMPLATE ?>/js/open-windows.js"></script>
+        <!-- Video -->
+        <script type="text/javascript" src="<?php echo $this->baseUrl() . TEMPLATE ?>/js/jquery.prettyphoto.js"></script>
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl() . TEMPLATE ?>/css/prettyphoto.css" />
 
-<?php echo $this->headTitle() ?>
-<?php echo $this->headMeta() ?>
-<?php echo $this->headLink() ?>
-<?php echo $this->headScript() ?>
-<?php echo $this->google_analytic; ?>
+        <?php echo $this->headTitle() ?>
+        <?php echo $this->headMeta() ?>
+        <?php echo $this->headLink() ?>
+        <?php echo $this->headScript() ?>
+        <?php echo $this->google_analytic; ?>
 
-<script type="text/javascript">
-    $(document).ready(function() {
-		$("#nav li.none").hover(function(){
-            $(this).find('ul:first').css({visibility: "visible", display: "inherit"}); 
-			$('#nav li ul.selected ,#nav li ul.tainment').css({visibility: "hidden", display: "none"}); 
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#nav li.none").hover(function(){
+                    $(this).find('ul:first').css({visibility: "visible", display: "inherit"}); 
+                    $('#nav li ul.selected ,#nav li ul.tainment').css({visibility: "hidden", display: "none"}); 
 
-        },function(){
-			$(this).find('ul:first').css({visibility: "hidden", display: "none"}); 
-            $('#nav li ul.selected ,#nav li ul.tainment').css({visibility: "visible", display: "inherit"});
+                },function(){
+                    $(this).find('ul:first').css({visibility: "hidden", display: "none"}); 
+                    $('#nav li ul.selected ,#nav li ul.tainment').css({visibility: "visible", display: "inherit"});
 			
-        });
-    });  
-</script>
-</head>
-<body>
-    <div id="wrapper"> 
+                });
+            });  
+        </script>
+    </head>
+    <body>
+        <div id="wrapper"> 
             <div id="header">
                 <div class="logo">
-                	<a href="<?php echo $this->baseUrl()?>/" title="">
-                		<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/logo.png" alt="Logo" />
-                	</a>
+                    <a href="<?php echo $this->baseUrl() ?>/" title="">
+                        <img src="<?php echo $this->baseUrl() . TEMPLATE ?>/images/logo.png" alt="Logo" />
+                    </a>
                 </div>
                 <div id="header-right">
-					<ul class="menu-hd-right">
-						<li><a href="/" title="">Trang chủ</a></li>
-						<li><a href="/about" title="">Giới thiệu</a></li>
-						<li class="bg-none"><a href="/contact" title="">Liên hệ</a></li>
-					</ul>
-					<img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/key.png" alt="Key" />
+                    <ul class="menu-hd-right">
+                        <li><a href="/" title="">Trang chủ</a></li>
+                        <li><a href="/about" title="">Giới thiệu</a></li>
+                        <li class="bg-none"><a href="/contact" title="">Liên hệ</a></li>
+                    </ul>
+                    <img src="<?php echo $this->baseUrl() . TEMPLATE ?>/images/key.png" alt="Key" />
                 </div><!--End header right--><div class="clear"></div>
             </div><!--End header--> 
             <ul id="nav">
-				<li class="home"><a href="<?php echo $this->baseUrl()?>/" title="Home"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/home.png" alt="Home" title=""/></a></li>
-				
-				<?php 
-					$folders = $this->menubar();
-					$n = sizeof($folders); $i=0;
-					
-					foreach($folders as $models){		
-						$style = ($i++ ==$n-1) ? ' id="none-line"' : $style=''; 
-						$target = ($models['target']=='') ? '' : ' target="'.$models['target'].'"';
-						$tainment = ($this->module==$models['moduleid']) ? ' class="tainment"': '';
-						$select = ($this->module==$models['moduleid']) ? ' class="select"': ' class="none"';
-						$selected = ($this->module==$models['moduleid']) ? ' class="selected subnav"': '';
-						echo '<li'.$style.$select.'><a href="'.$this->baseUrl().'/'.LANGURL.$models['url'].'" title="'.$models['module'.LANG].'"'.$target.'>'.html_entity_decode($models['module'.LANG]).'</a>';
-                        if($models['moduleid']=='handbook'){
-                            echo '<ul'.$selected.'>';
-                            foreach($this->menu_cat_handbook as $value){
-                                echo '<li><a href="'.$this->baseUrl().'/cam-nang-khoi-su/'.$value['tag'].'" title="'.$value['cat_title'].'">'.$value['cat_title'].'</a></li>';
-                            }
-                            echo '</ul>';
+                <li class="home"><a href="<?php echo $this->baseUrl() ?>/" title="Home"><img src="<?php echo $this->baseUrl() . TEMPLATE ?>/images/home.png" alt="Home" title=""/></a></li>
+
+                <?php
+                $folders = $this->menubar();
+                $n = sizeof($folders);
+                $i = 0;
+
+                foreach ($folders as $models) {
+                    $style = ($i++ == $n - 1) ? ' id="none-line"' : $style = '';
+                    $target = ($models['target'] == '') ? '' : ' target="' . $models['target'] . '"';
+                    $tainment = ($this->module == $models['moduleid']) ? ' class="tainment"' : '';
+                    $select = ($this->module == $models['moduleid']) ? ' class="select"' : ' class="none"';
+                    $selected = ($this->module == $models['moduleid']) ? ' class="selected subnav"' : '';
+                    echo '<li' . $style . $select . '><a href="' . $this->baseUrl() . '/' . LANGURL . $models['url'] . '" title="' . $models['module' . LANG] . '"' . $target . '>' . html_entity_decode($models['module' . LANG]) . '</a>';
+                    if ($models['moduleid'] == 'handbook') {
+                        echo '<ul' . $selected . '>';
+                        foreach ($this->menu_cat_handbook as $value) {
+                            echo '<li><a href="' . $this->baseUrl() . '/cam-nang-khoi-su/' . $value['tag'] . '" title="' . $value['cat_title'] . '">' . $value['cat_title'] . '</a></li>';
                         }
-                        if($models['moduleid']=='experience'){
-                            echo '<ul'.$selected.'>';
-                            foreach($this->menu_cat_experience as $value){
-                                echo '<li><a href="'.$this->baseUrl().'/kinh-nghiem-thuong-truong/'.$value['tag'].'" title="'.$value['cat_title'].'">'.$value['cat_title'].'</a></li>';
-                            }
-                            echo '</ul>';
+                        echo '</ul>';
+                    }
+                    if ($models['moduleid'] == 'experience') {
+                        echo '<ul' . $selected . '>';
+                        foreach ($this->menu_cat_experience as $value) {
+                            echo '<li><a href="' . $this->baseUrl() . '/kinh-nghiem-thuong-truong/' . $value['tag'] . '" title="' . $value['cat_title'] . '">' . $value['cat_title'] . '</a></li>';
                         }
-                        if($models['moduleid']=='knows'){
-                            echo '<ul'.$selected.'>';
-                            foreach($this->menu_cat_knows as $value){
-                                echo '<li><a href="'.$this->baseUrl().'/kien-thuc-quan-ly/'.$value['tag'].'" title="'.$value['cat_title'].'">'.$value['cat_title'].'</a></li>';
-                            }
-                            echo '</ul>';
+                        echo '</ul>';
+                    }
+                    if ($models['moduleid'] == 'knows') {
+                        echo '<ul' . $selected . '>';
+                        foreach ($this->menu_cat_knows as $value) {
+                            echo '<li><a href="' . $this->baseUrl() . '/kien-thuc-quan-ly/' . $value['tag'] . '" title="' . $value['cat_title'] . '">' . $value['cat_title'] . '</a></li>';
                         }
-                        if($models['moduleid']=='consulting'){
-							echo '<ul'.$selected.'>';
-                            foreach($this->menu_cat_consulting as $value){
-                                echo '<li><a href="'.$this->baseUrl().'/goc-tu-van/'.$value['tag'].'" title="'.$value['cat_title'].'">'.$value['cat_title'].'</a></li>';
-                            }
-                            echo '</ul>';
+                        echo '</ul>';
+                    }
+                    if ($models['moduleid'] == 'consulting') {
+                        echo '<ul' . $selected . '>';
+                        foreach ($this->menu_cat_consulting as $value) {
+                            echo '<li><a href="' . $this->baseUrl() . '/goc-tu-van/' . $value['tag'] . '" title="' . $value['cat_title'] . '">' . $value['cat_title'] . '</a></li>';
                         }
-                        if($models['moduleid']=='world-business'){
-                            echo '<ul'.$selected.'>';
-                            foreach($this->menu_cat_worldbusiness as $value){
-                                echo '<li><a href="'.$this->baseUrl().'/the-gioi-doanh-nhan/'.$value['tag'].'" title="'.$value['cat_title'].'">'.$value['cat_title'].'</a></li>';
-                            }
-                            echo '</ul>';
+                        echo '</ul>';
+                    }
+                    if ($models['moduleid'] == 'world-business') {
+                        echo '<ul' . $selected . '>';
+                        foreach ($this->menu_cat_worldbusiness as $value) {
+                            echo '<li><a href="' . $this->baseUrl() . '/the-gioi-doanh-nhan/' . $value['tag'] . '" title="' . $value['cat_title'] . '">' . $value['cat_title'] . '</a></li>';
                         }
-                        if($models['moduleid']=='corporate-culture'){
-                            echo '<ul'.$selected.'>';
-                            foreach($this->menu_cat_corporateculture as $value){
-                                echo '<li><a href="'.$this->baseUrl().'/van-hoa-doanh-nghiep/'.$value['tag'].'" title="'.$value['cat_title'].'">'.$value['cat_title'].'</a></li>';
-                            }
-                            echo '</ul>';
+                        echo '</ul>';
+                    }
+                    if ($models['moduleid'] == 'corporate-culture') {
+                        echo '<ul' . $selected . '>';
+                        foreach ($this->menu_cat_corporateculture as $value) {
+                            echo '<li><a href="' . $this->baseUrl() . '/van-hoa-doanh-nghiep/' . $value['tag'] . '" title="' . $value['cat_title'] . '">' . $value['cat_title'] . '</a></li>';
                         }
-                        if($models['moduleid']=='entertainment'){
-                            echo '<ul'.$tainment.'>';
-                            foreach($this->menu_cat_entertainment as $value){
-                                echo '<li><a href="'.$this->baseUrl().'/giai-tri/'.$value['tag'].'" title="'.$value['cat_title'].'">'.$value['cat_title'].'</a></li>';
-                            }
-                            echo '</ul>';
+                        echo '</ul>';
+                    }
+                    if ($models['moduleid'] == 'entertainment') {
+                        echo '<ul' . $tainment . '>';
+                        foreach ($this->menu_cat_entertainment as $value) {
+                            echo '<li><a href="' . $this->baseUrl() . '/giai-tri/' . $value['tag'] . '" title="' . $value['cat_title'] . '">' . $value['cat_title'] . '</a></li>';
                         }
-                        
-						echo '</li>';
-					}
-				?>
+                        echo '</ul>';
+                    }
+
+                    echo '</li>';
+                }
+                ?>
             </ul><div class="clear"></div>            
             <div id="content">
-            	<div id="leftcontent">
-                	<?php echo $this->layout()->content ?>
+                <div id="leftcontent">
+                    <?php echo $this->layout()->content ?>
                 </div><!--End left content-->
-                
+
                 <div id="rightcontent">
-                	<form action="" class="frm-search" method="post">
-                    	<label class="title-search">Tìm kiếm</label>
+                    <form action="" class="frm-search" method="post">
+                        <label class="title-search">Tìm kiếm</label>
                         <input type="text" class="input" name="" />
                         <input type="submit" value="&nbsp;" class="bt-go" />
                     </form> <div class="clear"></div>
                     <div class="row2">
-                    	<div class="info-know">
-                        	<h1 class="title-info">Thông tin cần biết</h1>
+                        <div class="info-know">
+                            <h1 class="title-info">Thông tin cần biết</h1>
                             <ul class="sub-info">
-                            	<li><p class="info-1"><a target="_blank" href="http://finance.vietstock.vn/default.aspx" title="Chỉ số chứng khoán"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-info1.gif" alt="Chỉ số chứng khoán" />Chỉ số chứng khoán</a></p></li>
-                                <li><p class="info-2"><a target="_blank" href="http://vov.vn/Services/Infopage.aspx?svc=exchangerates" title="Tỉ giá ngoại tệ"><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-info2.gif" alt="Tỉ giá ngoại tệ" />Tỉ giá ngoại tệ</a></p></li>
-								<li><p class="info-3" onclick='javascript:openViewPage("http://118.69.35.146/sjc",1020,700, 10, 10)'><a href=""><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-info3.gif" alt="giá vàng" />Giá vàng</a></p></li>
-                                <li><p class="info-1" onclick='javascript:openViewPage("http://service.thesaigontimes.vn/Commodities/Energy.aspx",820,320, 10, 10)'><a href=""><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-info4.png" alt="Giá nhiên liệu" />Giá nhiên liệu</a></p></li>
-                                <li style="border:none"><p class="info-2" onclick='javascript:openViewPage("http://service.thesaigontimes.vn/Commodities/commodities.aspx",820,720, 10, 10)'><a href=""><img src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-info5.png" alt="Nông sản" />Giá nông sản</a></p></li>
+                                <li><p class="info-1"><a target="_blank" href="http://finance.vietstock.vn/default.aspx" title="Chỉ số chứng khoán"><img src="<?php echo $this->baseUrl() . TEMPLATE ?>/images/ico-info1.gif" alt="Chỉ số chứng khoán" />Chỉ số chứng khoán</a></p></li>
+                                <li><p class="info-2"><a target="_blank" href="http://vov.vn/Services/Infopage.aspx?svc=exchangerates" title="Tỉ giá ngoại tệ"><img src="<?php echo $this->baseUrl() . TEMPLATE ?>/images/ico-info2.gif" alt="Tỉ giá ngoại tệ" />Tỉ giá ngoại tệ</a></p></li>
+                                <li><p class="info-3" onclick='javascript:openViewPage("http://118.69.35.146/sjc",1020,700, 10, 10)'><a href=""><img src="<?php echo $this->baseUrl() . TEMPLATE ?>/images/ico-info3.gif" alt="giá vàng" />Giá vàng</a></p></li>
+                                <li><p class="info-1" onclick='javascript:openViewPage("http://service.thesaigontimes.vn/Commodities/Energy.aspx",820,320, 10, 10)'><a href=""><img src="<?php echo $this->baseUrl() . TEMPLATE ?>/images/ico-info4.png" alt="Giá nhiên liệu" />Giá nhiên liệu</a></p></li>
+                                <li style="border:none"><p class="info-2" onclick='javascript:openViewPage("http://service.thesaigontimes.vn/Commodities/commodities.aspx",820,720, 10, 10)'><a href=""><img src="<?php echo $this->baseUrl() . TEMPLATE ?>/images/ico-info5.png" alt="Nông sản" />Giá nông sản</a></p></li>
                             </ul>
                             <div class="bd-bt-info"></div>
                         </div><!--End info know-->
                         <div class="bg-support">
-                        	<h1><?php echo $this->lang['support'] ?></h1>
-                           	<?php if(isset($this->menu_support)): ?>
-			              		<ul class="support">
-									<?php foreach ($this->menu_support as $value): ?>
-										<li>
-											<a href="ymsgr:sendim?<?php echo $value['support_value'] ?>&amp;m=<?php echo $this->lang['welcome_chat']?>" title="Chat <?php echo $value['support_value'] ?>">
-												<img src="http://opi.yahoo.com/online?u=<?php echo $value['support_value'] ?>&amp;m=g&amp;t=1&amp;l=us" alt="<?php echo $value['support_value'] ?>" />
-											</a>
-											<?php echo $value['support_name'] ?>
-										</li>
-									<?php endforeach;?>
-								</ul>
-						    <?php endif;?>
-                    	</div><!--End bg support-->  <div class="clear"></div>
+                            <h1>Thăm dò ý kiến</h1>
+                            <?php if (isset($this->vote)): ?>
+                            <p><?php echo $this->vote['question']; ?></p>
+                                <ul class="sub-bun">
+                                 <?php foreach ($this->vote['answer'] as $value) : ?>
+                                    <li><input type="radio" name="vote" value="<?php echo $value['id'] ?>" /><?php echo $value['answer'] ?></li>
+                                <?php endforeach; ?>
+                                </ul>
+                            <div class="f-action">
+                                <input  class="button" rel="button"  type="button" value="Bình chọn" />
+                                <a title="Kết quả" rel="prettyPhoto[iframes]"  href="<?php echo $this->baseUrl()?>/vote?iframe=true&width=70%&height=70%" >&nbsp; Kết quả</a>
+</div>
+                            <?php endif; ?>
+                          
+                        </div><!--End bg support-->  <div class="clear"></div>
                     </div><!--End row 2-->
-                    
-                    <?php if($this->video_first): ?>
-                    <div class="video">
-                        <a href="<?php echo $this->video_first['url'] ?>" rel="prettyPhoto" title="<?php echo $this->video_first['title'] ?>"><img src="<?php echo $this->baseUrl().IMAGES_PATH ?>/video/<?php echo $this->video_first['pic_full'] ?>" alt="<?php echo $this->video_first['title'] ?>" /></a>
-                        <script type="text/javascript" charset="utf-8">
-                          $(document).ready(function(){
-                            $(".video a[rel^='prettyPhoto']").prettyPhoto();
-                          });
-                        </script>
-            		</div>
+
+                    <?php if ($this->video_first): ?>
+                        <div class="video">
+                            <a href="<?php echo $this->video_first['url'] ?>" rel="prettyPhoto" title="<?php echo $this->video_first['title'] ?>"><img src="<?php echo $this->baseUrl() . IMAGES_PATH ?>/video/<?php echo $this->video_first['pic_full'] ?>" alt="<?php echo $this->video_first['title'] ?>" /></a>
+                            <script type="text/javascript" charset="utf-8">
+                                $(document).ready(function(){
+                                    $(".video a[rel^='prettyPhoto']").prettyPhoto();
+                                    $(".f-action a[rel^='prettyPhoto[iframes]']").prettyPhoto();
+                                    $(".button [rel^='button']").prettyPhoto();
+                                });
+                              /*  var total=0;
+                                function nv_check_accept_number(a,f,c){
+                                    for(var a=a["option[]"],d=total=0;d<a.length;d++)
+                                        if(a[d].checked&&(total+=1),total>f)
+                                            return alert(c),!1
+                                }
+                                function nv_sendvoting(a,f,c,d,g){
+                                    var e="0",c=parseInt(c);
+                                    if(1==c)
+                                        for(var a=a.option,b=0;b<a.length;b++)
+                                            a[b].checked&&(e=a[b].value);
+                                        else if(1<c){
+                                            a=a["option[]"];
+                                            for(b=0;b<a.length;b++)a[b].checked&&(e=e+","+a[b].value)
+                                        }
+                                        "0"==e&&0<c?alert(g):Shadowbox.open({
+                                            content:'<iframe src="'+nv_siteroot+"index.php?"+nv_lang_variable+"="+nv_sitelang+"&"+nv_name_variable+"=voting&"+nv_fc_variable+"=main&vid="+f+"&checkss="+d+"&lid="+e+'" border="0" frameborder="0" style="width:670px;height:400px"></iframe>'
+                                     ,player:"html",
+                                 }height:400,width:670});return!1};*/
+                            </script>
+                        </div>
                     <?php endif; ?>
-                    
-					<h1 class="title-right"><span>Hướng dẫn lập hồ sơ ĐKKD</span></h1>
-					<ul class="sub-bun">
-						<li><img class="img-bun" src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-bun.png" /><p><a>Lập hồ sơ đăng ký kinh doanh</a></p></li>
-						<li><img class="img-bun" src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-bun.png" /><p><a>Hướng dẫn hỗ trợ doanh nghiệp</a></p></li>
-						<li><img class="img-bun" src="<?php echo $this->baseUrl().TEMPLATE ?>/images/ico-bun.png" /><p><a>Những thủ tục kinh doanh</a></p></li>
-					</ul>
-					<div class="bd-bt-scroll"></div> 
-					  
-                    <?php if($this->list_adv_right): ?>
-                    <h1 class="title-right"><span><?php echo $this->lang['adv'] ?></span></h1>
-                    <div class="bg-sub-ad">
-                        <ul class="sub-ad-1">
-                            <?php $i=0; foreach($this->list_adv_right as $value): ?>
-                                <?php if(($i%2)==0): ?>
-                                <li><a href="<?php echo $value['url']?>" target="<?php echo $value['type']?>" title="<?php echo $value['title'.LANG].' '.$value['description']?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['title'.LANG].' '.$value['description']?>"/></a></li>
-                                <?php endif; ?>
-                            <?php $i++; endforeach; ?>
-                        </ul>
-                        <ul class="sub-ad-2">
-                            <?php $i=0; foreach($this->list_adv_right as $value): ?>
-                                <?php if(($i%2)!=0): ?>
-                                <li><a href="<?php echo $value['url']?>" target="<?php echo $value['type']?>" title="<?php echo $value['title'.LANG].' '.$value['description']?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['title'.LANG].' '.$value['description']?>"/></a></li>
-                                <?php endif; ?>
-                            <?php $i++; endforeach; ?>
-                        </ul>  <div class="clear"></div>
-                    </div>
-                    <div class="bd-bt-scroll"></div>
-                    <?php endif; ?>
-               </div> <!--End right content--> <div class="clear"></div>
-        </div><!--End content-->
-        <!--  h1 class="title-buy-ad"><span>Bố cáo thành lập</span></h1>
-        <div class="mid-buy-ad">
-        	<ul class="sub-buy-ad">
-            	<li><h3 class="title-sub-buy"><a href="#" title="">Sữa chữa điện máy điện lạnh tại Hà Nội</a></h3>
-                	<img src="images/pic1.jpg" style="float:left" alt="pic 1" title="" />
-                	<p class="link-buy"><a href="#" title="" >dienlanhbachkhoa.net</a></p>
-                    <p>Công Ty TNHH DV &amp; KT Điện Tử Điện Lạnh Bách Khoa Trung tâm dịch vụ sửa chữa, bảo trì chuyên nghiệp tại Hà Nội </p>
-                </li>
-                <li><h3 class="title-sub-buy"><a href="#" title="">Túi khí cách nhiệt Cát Tường - Gỉai pháp chinh phục thiên nhiên</a></h3>
-                	<img src="images/pic2.jpg" style="float:left" alt="pic 2" title="" />
-                	<p class="link-buy"><a href="#" title="">vatgia.com</a></p>
-                    <p>Công Ty TNHH DV &amp;KT Điện Tử Điện Lạnh Bách Khoa Trung tâm dịch vụ sửa chữa, bảo trì chuyên nghiệp tại Hà Nội </p>
-                </li>
-                <li><h3 class="title-sub-buy"><a href="#" title="">Sữa chữa điện máy điện lạnh tại Hà Nội</a></h3>
-                	<img src="images/pic1.jpg" style="float:left" alt="pic 1" title="" />
-                	<p class="link-buy"><a href="#" title="">dienlanhbachkhoa.net</a></p>
-                    <p>Công Ty TNHH DV &amp;KT Điện Tử Điện Lạnh Bách Khoa Trung tâm dịch vụ sửa chữa, bảo trì chuyên nghiệp tại Hà Nội </p>
-                </li>
-                <li style="border:none"><h3 class="title-sub-buy"><a href="#" title="">Túi khí cách nhiệt Cát Tường - Gỉai pháp chinh phục thiên nhiên</a></h3>
-                	<img src="images/pic2.jpg" style="float:left" alt="pic 2" title="" />
-                	<p class="link-buy"><a href="#" title="">vatgia.com</a></p>
-                    <p>Công Ty TNHH DV &amp;KT Điện Tử Điện Lạnh Bách Khoa Trung tâm dịch vụ sửa chữa, bảo trì chuyên nghiệp tại Hà Nội </p>
-                </li>
-            </ul><div class="clear"></div>
-        </div>
-        <div class="bd-bt-buy-ad"></div>
-        <div class="frame-new-fter">
-        	<ul class="sub-new-fter">
-            	<li><img src="images/adv.jpg" alt="Sao Việt phía sau ánh hào quang" title="Sao Việt phía sau ánh hòa quang" />
-                	<a href="#">Sao Việt - phía sau ánh hào quang</a>
-                </li>
-                <li><img src="images/adv-1.jpg" alt="Sao Việt phía sau ánh hào quang" title="Sao Việt phía sau ánh hòa quang" />
-                	<a href="#">Sao Việt - phía sau ánh hào quang</a>
-                </li>
-                <li><img src="images/adv-2.jpg" alt="Sao Việt phía sau ánh hào quang" title="Sao Việt phía sau ánh hòa quang" />
-                	<a href="#">Sao Việt - phía sau ánh hào quang</a>
-                </li>
-                <li><img src="images/adv-3.jpg" alt="Sao Việt phía sau ánh hào quang" title="Sao Việt phía sau ánh hòa quang" />
-                	<a href="#">Sao Việt - phía sau ánh hào quang</a>
-                </li>
-                <li><img src="images/adv-4.jpg" alt="Sao Việt phía sau ánh hào quang" title="Sao Việt phía sau ánh hòa quang" />
-                	<a href="#">Sao Việt - phía sau ánh hào quang</a>
-                </li>
-                <li><img src="images/adv-5.jpg" alt="Sao Việt phía sau ánh hào quang" title="Sao Việt phía sau ánh hòa quang" />
-                	<a href="#">Sao Việt - phía sau ánh hào quang</a>
-                </li>
-                <li class="last"><img src="images/adv-6.jpg" alt="Sao Việt phía sau ánh hào quang" title="Sao Việt phía sau ánh hòa quang" />
-                	<a href="#">Sao Việt - phía sau ánh hào quang</a>
-                </li>
-            </ul>	<div class="clear"></div>
-        </div -->
-</div><!--End wrapper-->
-<div id="bg-fter">
-    <div id="footer">
-    	<div class="fter-left">
-            <p>Copyright &copy; 2011 by Khoisudoanhnghiep.vn. All rights reserved</p>
-            <p class="copyright"> Design by Website <a href="http://dos.vn" title="Dos.vn">Dos.vn</a></p>
-    	</div>
-    		
-		 <!-- <ul class="statistics">
-			<li>Truy cập trong ngày: <?php echo $this->onlinetoday?></li>
-			<li>Đang online: <?php echo $this->online?></li>
-			<li>Tổng lượt truy cập: <?php echo $this->onlinetotal?></li>
-		</ul> -->
-        <div class="clear"></div>
-    </div><!--End Footer-->
-</div><!--End bg fter-->
-</body>
+
+                    <h1 class="title-right"><span>Hướng dẫn lập hồ sơ ĐKKD</span></h1>
+                    <ul class="sub-bun">
+                        <li><img class="img-bun" src="<?php echo $this->baseUrl() . TEMPLATE ?>/images/ico-bun.png" /><p><a>Lập hồ sơ đăng ký kinh doanh</a></p></li>
+                        <li><img class="img-bun" src="<?php echo $this->baseUrl() . TEMPLATE ?>/images/ico-bun.png" /><p><a>Hướng dẫn hỗ trợ doanh nghiệp</a></p></li>
+                        <li><img class="img-bun" src="<?php echo $this->baseUrl() . TEMPLATE ?>/images/ico-bun.png" /><p><a>Những thủ tục kinh doanh</a></p></li>
+                    </ul>
+                    <div class="bd-bt-scroll"></div> 
+
+                    <?php if ($this->list_adv_right): ?>
+                        <h1 class="title-right"><span><?php echo $this->lang['adv'] ?></span></h1>
+                        <div class="bg-sub-ad">
+                            <ul class="sub-ad-1">
+                                <?php $i = 0;
+                                foreach ($this->list_adv_right as $value):
+                                    ?>
+                                    <?php if (($i % 2) == 0): ?>
+                                        <li><a href="<?php echo $value['url'] ?>" target="<?php echo $value['type'] ?>" title="<?php echo $value['title' . LANG] . ' ' . $value['description'] ?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title' . LANG] . ' ' . $value['description'] ?>"/></a></li>
+                                    <?php endif; ?>
+                                    <?php $i++;
+                                endforeach;
+                                ?>
+                            </ul>
+                            <ul class="sub-ad-2">
+                                <?php $i = 0;
+                                foreach ($this->list_adv_right as $value):
+                                    ?>
+                                    <?php if (($i % 2) != 0): ?>
+                                        <li><a href="<?php echo $value['url'] ?>" target="<?php echo $value['type'] ?>" title="<?php echo $value['title' . LANG] . ' ' . $value['description'] ?>"><img src="<?php echo $this->baseUrl() ?>/public/userfiles/images/adv/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title' . LANG] . ' ' . $value['description'] ?>"/></a></li>
+        <?php endif; ?>
+        <?php $i++;
+    endforeach;
+    ?>
+                            </ul>  <div class="clear"></div>
+                        </div>
+                        <div class="bd-bt-scroll"></div>
+<?php endif; ?>
+                </div> <!--End right content--> <div class="clear"></div>
+            </div><!--End content-->
+            <!--  h1 class="title-buy-ad"><span>Bố cáo thành lập</span></h1>
+            <div class="mid-buy-ad">
+                    <ul class="sub-buy-ad">
+                    <li><h3 class="title-sub-buy"><a href="#" title="">Sữa chữa điện máy điện lạnh tại Hà Nội</a></h3>
+                            <img src="images/pic1.jpg" style="float:left" alt="pic 1" title="" />
+                            <p class="link-buy"><a href="#" title="" >dienlanhbachkhoa.net</a></p>
+                        <p>Công Ty TNHH DV &amp; KT Điện Tử Điện Lạnh Bách Khoa Trung tâm dịch vụ sửa chữa, bảo trì chuyên nghiệp tại Hà Nội </p>
+                    </li>
+                    <li><h3 class="title-sub-buy"><a href="#" title="">Túi khí cách nhiệt Cát Tường - Gỉai pháp chinh phục thiên nhiên</a></h3>
+                            <img src="images/pic2.jpg" style="float:left" alt="pic 2" title="" />
+                            <p class="link-buy"><a href="#" title="">vatgia.com</a></p>
+                        <p>Công Ty TNHH DV &amp;KT Điện Tử Điện Lạnh Bách Khoa Trung tâm dịch vụ sửa chữa, bảo trì chuyên nghiệp tại Hà Nội </p>
+                    </li>
+                    <li><h3 class="title-sub-buy"><a href="#" title="">Sữa chữa điện máy điện lạnh tại Hà Nội</a></h3>
+                            <img src="images/pic1.jpg" style="float:left" alt="pic 1" title="" />
+                            <p class="link-buy"><a href="#" title="">dienlanhbachkhoa.net</a></p>
+                        <p>Công Ty TNHH DV &amp;KT Điện Tử Điện Lạnh Bách Khoa Trung tâm dịch vụ sửa chữa, bảo trì chuyên nghiệp tại Hà Nội </p>
+                    </li>
+                    <li style="border:none"><h3 class="title-sub-buy"><a href="#" title="">Túi khí cách nhiệt Cát Tường - Gỉai pháp chinh phục thiên nhiên</a></h3>
+                            <img src="images/pic2.jpg" style="float:left" alt="pic 2" title="" />
+                            <p class="link-buy"><a href="#" title="">vatgia.com</a></p>
+                        <p>Công Ty TNHH DV &amp;KT Điện Tử Điện Lạnh Bách Khoa Trung tâm dịch vụ sửa chữa, bảo trì chuyên nghiệp tại Hà Nội </p>
+                    </li>
+                </ul><div class="clear"></div>
+            </div>
+            <div class="bd-bt-buy-ad"></div>
+            <div class="frame-new-fter">
+                    <ul class="sub-new-fter">
+                    <li><img src="images/adv.jpg" alt="Sao Việt phía sau ánh hào quang" title="Sao Việt phía sau ánh hòa quang" />
+                            <a href="#">Sao Việt - phía sau ánh hào quang</a>
+                    </li>
+                    <li><img src="images/adv-1.jpg" alt="Sao Việt phía sau ánh hào quang" title="Sao Việt phía sau ánh hòa quang" />
+                            <a href="#">Sao Việt - phía sau ánh hào quang</a>
+                    </li>
+                    <li><img src="images/adv-2.jpg" alt="Sao Việt phía sau ánh hào quang" title="Sao Việt phía sau ánh hòa quang" />
+                            <a href="#">Sao Việt - phía sau ánh hào quang</a>
+                    </li>
+                    <li><img src="images/adv-3.jpg" alt="Sao Việt phía sau ánh hào quang" title="Sao Việt phía sau ánh hòa quang" />
+                            <a href="#">Sao Việt - phía sau ánh hào quang</a>
+                    </li>
+                    <li><img src="images/adv-4.jpg" alt="Sao Việt phía sau ánh hào quang" title="Sao Việt phía sau ánh hòa quang" />
+                            <a href="#">Sao Việt - phía sau ánh hào quang</a>
+                    </li>
+                    <li><img src="images/adv-5.jpg" alt="Sao Việt phía sau ánh hào quang" title="Sao Việt phía sau ánh hòa quang" />
+                            <a href="#">Sao Việt - phía sau ánh hào quang</a>
+                    </li>
+                    <li class="last"><img src="images/adv-6.jpg" alt="Sao Việt phía sau ánh hào quang" title="Sao Việt phía sau ánh hòa quang" />
+                            <a href="#">Sao Việt - phía sau ánh hào quang</a>
+                    </li>
+                </ul>	<div class="clear"></div>
+            </div -->
+        </div><!--End wrapper-->
+        <div id="bg-fter">
+            <div id="footer">
+                <div class="fter-left">
+                    <p>Copyright &copy; 2011 by Khoisudoanhnghiep.vn. All rights reserved</p>
+                    <p class="copyright"> Design by Website <a href="http://dos.vn" title="Dos.vn">Dos.vn</a></p>
+                </div>
+
+                <!-- <ul class="statistics">
+                       <li>Truy cập trong ngày: <?php echo $this->onlinetoday ?></li>
+                       <li>Đang online: <?php echo $this->online ?></li>
+                       <li>Tổng lượt truy cập: <?php echo $this->onlinetotal ?></li>
+               </ul> -->
+                <div class="clear"></div>
+            </div><!--End Footer-->
+        </div><!--End bg fter-->
+    </body>
 </html>

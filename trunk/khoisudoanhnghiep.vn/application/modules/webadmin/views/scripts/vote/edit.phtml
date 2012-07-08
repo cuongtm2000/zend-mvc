@@ -1,0 +1,103 @@
+<div class="content">
+    <?php if (count($this->error) > 0): ?>
+        <ul class="error-li">
+            <?php
+            foreach ($this->error as $value) {
+                echo '<li>' . $value . '</li>';
+            }
+            ?>
+        </ul>
+    <?php endif; ?>
+
+    <?php if (count($this->item)): ?>
+        <form action="" method="post" enctype="multipart/form-data" id="frm" name="frm">
+            <fieldset>
+                <legend><?php echo $this->lang['sys_editpost'] ?></legend>
+                <?php
+                $lang = $this->langlist();
+                foreach ($lang as $value) {
+                    echo '<div class="col1">' . $this->lang['sys_title'] . ' ' . $value . '</div>
+	                <div class="col2">
+	                    <input name="question' . $value . '" value="' . $this->item['question' . $value] . '" maxlength="45" class="txt-very-large" />
+	                </div>
+	                <div class="clear space"></div>';
+                }
+                ?>
+
+
+
+                <div class="col1"><?php echo $this->lang['adv_start_date'] ?> <span class="error">*</span></div>
+                <div class="col2">
+                    <input name="begin_date" id="begin_date" value="<?php echo $this->item['begin_date'] ?>" maxlength="10" class="txt-very-large" /><span class="readme">(dd-mm-YYYY)</span>
+                </div>	    <div class="clear space"></div>
+
+                <div class="col1"><?php echo $this->lang['adv_end_date'] ?> <span class="error">*</span></div>
+                <div class="col2">
+                    <input name="end_date" id="end_date" value="<?php echo $this->item['end_date'] ?>" maxlength="10" class="txt-very-large" /><span class="readme">(dd-mm-YYYY)</span>
+                </div>	    <div class="clear space"></div>
+
+                <div class="col2 radio">
+                    <table class="tab1" id="items">
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td>Các phương án trả lời</td>
+                                <td>Liên kết tới trang</td>
+                            </tr>
+                        </thead>
+
+                        <?php
+                        $count = 1;
+                        if (is_array($this->item['answer'])) {
+                            $count = count($this->item['answer']);
+                        }
+                        for ($i = 0; $i < $count; $i++) {
+                            ?>
+                            <tbody  class="additem">
+                                <tr>
+                                    <td style="text-align:right">Trả lời số <?php echo $i + 1 ?><input value="<?php echo $this->item['ids'][$i] ?>" name="ids[]" type="hidden" /></td>
+                                    <td><input value="<?php echo $this->item['answer'][$i] ?>" name="answer[]" style="width:300px" /></td>
+                                    <td><input value="<?php echo $this->item['url'][$i] ?>" name="url[]" style="width:350px" /></td>
+                                </tr>
+                            </tbody>
+                        <?php } ?>
+
+                    </table>		   
+                </div>    <div class="clear space"></div>
+
+                <div class="col1">&nbsp; </div>
+                <div class="col2 radio">
+                    <a href="javascript:void(0)" id="items" onclick="vote_additem('Trả lời số ');">Thêm phương án trả lời</a>
+                </div><div class="clear space"></div>
+
+
+                <div class="col1"><?php echo $this->lang['sys_active'] ?></div>
+                <div class="col2 radio">
+                    <input type="radio" checked="checked" name="enable" id="active" value="1" /> <label for="active"><?php echo $this->lang['sys_active'] ?></label> &nbsp;&nbsp; <input type="radio"  name="enable" id="deactive" value="0" /> <label for="deactive"><?php echo $this->lang['sys_hidden'] ?></label>
+                </div>
+                <div class="clear space"></div>
+
+                <div class="col1">&nbsp;</div>
+                <div class="col2">
+                    <input type="submit" name="submit" value="  <?php echo $this->lang['sys_edit'] ?>  " class="login" /> <a href="/" class="login-a"><?php echo $this->lang['sys_cancel'] ?></a>
+                </div>
+                <div class="clear space"></div>
+            </fieldset>
+        </form>
+        <script type="text/javascript">
+            var items=<?php echo $count ?>;
+            var the_form = window.document.frm;		
+            radio_list("<?php echo $this->item['enable'] ?>", the_form.enable);
+            /*function del_content(a,b){
+                        confirm(is_del_confirm[0])&&nv_ajax("post",script_name,nv_name_variable+"="+nv_module_name+"&"+nv_fc_variable+"=del&vid="+a+"&checkss="+b,"","nv_del_content_result");return!1}
+                function nv_del_content_result(a){
+                        a=a.split("_");
+                        "OK"==a[0]?window.location.href=script_name+"?"+nv_name_variable+"="+nv_module_name+"&"+nv_fc_variable+"=main":"ERR"==a[0]?alert(a[1]):alert(nv_is_del_confirm[2]);return!1
+                }*/
+            function vote_additem(a){
+                items++;
+                $("#items").append("<tbody"+(0==items%2?' class="second"':"")+"><tr>"+('\t<td style="text-align:right">'+a+" "+items+'<input value="0" name="ids[]" type="hidden" /></td>')+'\t<td><input type="text" value="" name="answer[]" style="width:300px"></td>\t<td><input type="text" value="" name="url[]" style="width:350px"></td>\t</tr></tbody>')
+            };
+        </script>
+    <?php endif; ?>
+</div>
