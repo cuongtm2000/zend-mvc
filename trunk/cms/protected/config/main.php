@@ -7,7 +7,6 @@ $config = array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
     'name' => 'My Web Application',
     'defaultController' => 'default',
-    'language' => 'vi',
 
     // preloading 'log' component
     'preload' => array('log'),
@@ -38,9 +37,6 @@ $config = array(
         // uncomment the following to enable URLs in path-format
 
         'urlManager' => array(
-            'class' => 'ext.urlManager.LangUrlManager',
-            'languages' => array('vi', 'en'),
-            'langParam' => 'lang',
             'urlFormat' => 'path',
             'showScriptName' => false,
             'rules' => array(
@@ -48,12 +44,18 @@ $config = array(
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',*/
 
-                //admin rules
-                '<lang:[a-z]{2}>' => 'default/default',
+                '<lang:[a-z]{2}>/<module:\w+>/<controller:\w+>/<id:\d+>' => '<module>/<controller>/view',
+                '<lang:[a-z]{2}>/<module:\w+>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<module>/<controller>/<action>',
+                '<lang:[a-z]{2}>/<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
+                '<lang:[a-z]{2}>/<module:\w+>' => '<module>',
+
                 '<lang:[a-z]{2}>/<controller:\w+>/<action:\w+>/page/<page:\d+>'=>'<controller>/<action>',
                 '<lang:[a-z]{2}>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
                 '<lang:[a-z]{2}>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
                 '<lang:[a-z]{2}>/<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+                '<lang:[a-z]{2}>' => '/',
+
+                //admin rules
                 'admin/<action:(dashboard|forgot|logout)>' => 'admin/<action>',
                 'admin/<module:\w+>/<action:\w+>/<id:\d+>' => '<module>/admin/<action>',
                 'admin/<module:\w+>/<action:\w+>' => '<module>/admin/<action>',
@@ -103,7 +105,9 @@ $modules_dir = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'modules' . DI
 $handle = opendir($modules_dir);
 while (false !== ($file = readdir($handle))) {
     if ($file != "." && $file != ".." && is_dir($modules_dir . $file)) {
-        //var_dump($modules_dir.$file.DIRECTORY_SEPARATOR);
+        /*if(file_exists){
+
+        }*/
         $config = CMap::mergeArray($config, require($modules_dir . $file . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'main.php'));
     }
 }

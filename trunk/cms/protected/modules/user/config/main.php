@@ -16,6 +16,8 @@ return array(
     'components' => array(
         'urlManager' => array(
             'rules' => array(
+                //$module_name . '/<controller:\w+>/<action:\w+>' => $module_name . '/<controller>/<action>',
+                //$module_name . '/<controller:\w+>' => $module_name . '/<controller>',
                 $module_name . '/<action:\w+>/<id:\d+>' => $module_name . '/' . $default_controller . '/<action>',
                 $module_name . '/<action:\w+>' => $module_name . '/' . $default_controller . '/<action>',
             ),

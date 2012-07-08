@@ -20,9 +20,22 @@ class Controller extends CController {
      */
     public $breadcrumbs = array();
 
+    public $listLang = array();
+
     public function init() {
-        //var_dump($_GET);
-        var_dump(Yii::app()->language);
-        Yii::app()->theme = Template::model()->getTemplateDefault();
+        Common::setLanguage(); //Setup language
+        Yii::app()->theme = Template::model()->getTemplateDefault(); //Setup template
+
+        //Get list language
+        $this->listLang = Language::model()->listItem();
+    }
+
+    public function setLangUrl() {
+        $langDefault = 'vi';
+        if (Yii::app()->language == $langDefault) {
+            return '';
+        } else {
+            return '/' . Yii::app()->language;
+        }
     }
 }

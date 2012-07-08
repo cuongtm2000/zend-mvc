@@ -8,6 +8,8 @@
  * @property integer $pos_sort
  * @property string $pos_activated
  * @property string $module_id
+ * @property string $action_id
+ * @property string $controller_id
  * @property string $hoiit_functions_function_value
  *
  * The followings are the available model relations:
@@ -39,11 +41,11 @@ class Position extends CActiveRecord {
         return array(
             array('pos_id, pos_sort, pos_activated, module_id, hoiit_functions_function_value', 'required'),
             array('pos_sort', 'numerical', 'integerOnly' => true),
-            array('pos_id, module_id, hoiit_functions_function_value', 'length', 'max' => 30),
+            array('pos_id, module_id, action_id, controller_id, hoiit_functions_function_value', 'length', 'max' => 30),
             array('pos_activated', 'length', 'max' => 45),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('pos_id, pos_sort, pos_activated, module_id, hoiit_functions_function_value', 'safe', 'on' => 'search'),
+            array('pos_id, pos_sort, pos_activated, module_id, action_id, controller_id, hoiit_functions_function_value', 'safe', 'on' => 'search'),
         );
     }
 
@@ -67,6 +69,8 @@ class Position extends CActiveRecord {
             'pos_sort' => 'Pos Sort',
             'pos_activated' => 'Pos Activated',
             'module_id' => 'Module',
+            'action_id' => 'Action',
+            'controller_id' => 'Controller',
             'hoiit_functions_function_value' => 'Hoiit Functions Function Value',
         );
     }
@@ -85,6 +89,8 @@ class Position extends CActiveRecord {
         $criteria->compare('pos_sort', $this->pos_sort);
         $criteria->compare('pos_activated', $this->pos_activated, true);
         $criteria->compare('module_id', $this->module_id, true);
+        $criteria->compare('action_id', $this->action_id, true);
+        $criteria->compare('controller_id', $this->controller_id, true);
         $criteria->compare('hoiit_functions_function_value', $this->hoiit_functions_function_value, true);
 
         return new CActiveDataProvider($this, array(

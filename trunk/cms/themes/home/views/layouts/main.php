@@ -28,12 +28,13 @@
 <body>
 	<div id="wrapper">
         <div id="header">
-            <div id="logo"><a href="<?php echo Yii::app()->baseUrl?>" title="Logo"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a></div><!--End logo-->
+            <div id="logo"><a href="<?php echo Yii::app()->baseUrl.$this->setLangUrl()?>" title="Logo"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a></div><!--End logo-->
             <h1 class="title-company">CÔNG TY TNHH MTV THAN PHÚC AN</h1>
             <div class="lang">
-                <a href="#" title="English"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/en.gif" alt="English" /> English</a>
-                <a href="#" title="Tiếng Việt"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/vi.gif" alt="Việt Nam" /> Tiếng Việt</a>
-                <p class="tent-lang">Tư vấn : 0933 472 626 (Mr Hạnh)</p> 
+                <?php foreach($this->listLang as $value):?>
+                    <a href="<?php echo Yii::app()->baseUrl?>/<?php echo $value['language_id']?>" title="<?php echo $value['language_name']?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $value['language_id']?>.gif" alt="<?php echo $value['language_name']?>" /></a>
+                <?php endforeach?>
+                <p class="phone">Tư vấn : 0933 472 626 (Mr Hạnh)</p>
             </div> <!--End lang-->	<div class="clear"></div>
         </div><!--End header-->
         <div id="all-nav">
@@ -65,16 +66,16 @@
 
 	<div class="banner">
 	    <ul class="slider">
-            <li class="slider-item"><img src="images/banner.jpg" alt="banner" /></li>
-            <li class="slider-item"><img src="images/banner1.jpg" alt="banner1" /></li>
-            <li class="slider-item"><img src="images/banner2.jpg" alt="banner2" /></li>
-            <li class="slider-item"><img src="images/banner3.jpg" alt="banner2" /></li>
+            <li class="slider-item"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner.jpg" alt="banner" /></li>
+            <li class="slider-item"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner1.jpg" alt="banner1" /></li>
+            <li class="slider-item"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner2.jpg" alt="banner2" /></li>
+            <li class="slider-item"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner3.jpg" alt="banner2" /></li>
         </ul>
 	</div><!--End banner -->
 	<div id="content">
 	   <div id="leftcontent">
 			<div class="frame-leftcontent">
-            <?php $positions = Position::model()->setPosition('left', isset($this->module->id) ? $this->module->id : null);?>
+            <?php var_dump($this->action->id); $positions = Position::model()->setPosition('left', isset($this->module->id) ? $this->module->id : null);?>
             <?php foreach($positions as $value):?>
                 <?php echo $this->renderPartial('//'.$value['hoiit_modules_module_id'].'/'.$value['function_value'], array($value['function_value'] => $value['function_name']::model()->$value['functiol_call']())) ?>
             <?php endforeach;?>
@@ -97,8 +98,8 @@
 			<div class="frame-leftcontent">
 			 	<h2 class="title-box">Quảng cáo</h2>
                 <ul class="bg-adv">
-                	<li><img src="images/logo_thuonghoi.jpg" alt="" /></li>
-			 		<li><img src="images/new-pr.jpg" width="168" height="218" alt=""  /></li> 
+                	<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo_thuonghoi.jpg" alt="" /></li>
+			 		<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/new-pr.jpg" width="168" height="218" alt=""  /></li>
                 </ul>
 			</div> <!-- Adment-pr-->
 		</div> <!-- End Left-column -->
@@ -109,7 +110,7 @@
 			<ul class="all-product">
                 <li class="product">
                     <div class="tent-product">
-                        <div class="product-img"><a href="product-info.html" title=""><img src="images/pr-1.jpg" alt="Product" /></a></div><div class="clear"></div>
+                        <div class="product-img"><a href="product-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/pr-1.jpg" alt="Product" /></a></div><div class="clear"></div>
                         <h2 class="title-pro"><a href="product-info.html" title="Leonidas Chocolate Assortment">Woven ring white gold paved</a></h2>
                         <p class="price">$165.00</p>
                         <p class="bton-pro"><a href="product-info.html" title="CHI TIẾT" class="bton-detail">CHI TIẾT</a> <a href="order.html" title="ĐẶT HÀNG" class="bton-order">ĐẶT HÀNG</a> </p>
@@ -117,7 +118,7 @@
                 </li>
                 <li class="product">
                     <div class="tent-product">
-                        <div class="product-img"><a href="product-info.html" title=""><img src="images/pr-1.jpg" alt="Product" /></a></div><div class="clear"></div>
+                        <div class="product-img"><a href="product-info.html" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/pr-1.jpg" alt="Product" /></a></div><div class="clear"></div>
                         <h2 class="title-pro"><a href="product-info.html" title="Leonidas Chocolate Assortment">Woven ring white gold paved</a></h2>
                         <p class="price">$165.00</p>
                         <p class="bton-pro"><a href="product-info.html" title="CHI TIẾT" class="bton-detail">CHI TIẾT</a> <a href="order.html" title="ĐẶT HÀNG" class="bton-order">ĐẶT HÀNG</a> </p>
@@ -145,8 +146,8 @@
 		<div class="frame-leftcontent">
 			 	<h2 class="title-box">Quảng cáo</h2>
                 <ul class="bg-adv">
-                	<li><img src="images/logo_thuonghoi.jpg" alt="" /></li>
-			 		<li><img src="images/new-pr.jpg" width="168" height="218" alt=""  /></li> 
+                	<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo_thuonghoi.jpg" alt="" /></li>
+			 		<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/new-pr.jpg" width="168" height="218" alt=""  /></li>
                 </ul>
 			</div> <!-- Adment-pr-->
 	   </div>  <!-- End column-3-->  <div class="clear"></div>
