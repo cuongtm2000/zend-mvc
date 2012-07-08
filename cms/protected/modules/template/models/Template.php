@@ -102,8 +102,11 @@ class Template extends CActiveRecord {
         ));
     }
 
-    public function getTemplateDefault() {
-        $command = Yii::app()->db->createCommand('SELECT template_id FROM ' . $this->tableName() . ' WHERE template_activated=1');
+    public function getTemplateDefault($admin=0) {
+        $command = Yii::app()->db->createCommand('SELECT template_id FROM ' . $this->tableName() . ' WHERE template_admin=0 AND template_activated=1');
+        if($admin==1){
+            $command = Yii::app()->db->createCommand('SELECT template_id FROM ' . $this->tableName() . ' WHERE template_admin=1 AND template_activated=1');
+        }
         return $command->queryScalar();
     }
 }

@@ -54,7 +54,7 @@ class About extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'hoiitLanguages' => array(self::MANY_MANY, 'HoiitLanguages', 'hoiit_module_about_hoiit_languages(record_id, language_id)'),
+            //'Language' => array(self::MANY_MANY, 'Language', 'hoiit_module_about_hoiit_languages(record_id, language_id)'),
         );
     }
 
@@ -99,7 +99,7 @@ class About extends CActiveRecord {
      * @return mixed
      */
     public function listItem() {
-        $command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE hot = 0 ORDER BY record_order DESC, created DESC');
+        $command = Yii::app()->db->createCommand('SELECT title, tag FROM ' . $this->tableName() . ', hoiit_module_about_languages WHERE ' . $this->tableName() . '.record_id = hoiit_module_about_languages.record_id AND language_id =\'' . Yii::app()->language . '\' AND hot = 0 ORDER BY record_order DESC, created DESC');
         return $command->queryAll();
     }
 }

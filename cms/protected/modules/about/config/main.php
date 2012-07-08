@@ -16,8 +16,11 @@ return array(
     'components' => array(
         'urlManager' => array(
             'rules' => array(
-                $module_name . '/<action:\w+>/<id:\d+>' => $module_name . '/' . $default_controller . '/<action>',
-                $module_name . '/<action:\w+>' => $module_name . '/' . $default_controller . '/<action>',
+                //$module_name . '/<action:\w+>/<id:\d+>' => $module_name . '/' . $default_controller . '/<action>',
+                //$module_name . '/<action:\w+>' => $module_name . '/' . $default_controller . '/<action>',
+
+                '(gioi-thieu)' => $module_name . '/default/index', //index
+                '(gioi-thieu)/<id:[-a-z0-9]+>' => array($module_name . '/default/view', 'urlSuffix' => '.html'), //view
             ),
         ),
     ),
