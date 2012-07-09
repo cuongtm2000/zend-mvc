@@ -76,7 +76,8 @@ class Username extends CActiveRecord {
             array('cmnd', 'length', 'min' => 9, 'max' => 10,),
             array('bank_number', 'length', 'max' => 13),
             array('bank_name', 'length', 'max' => 45),
-
+			
+			array('username', 'match', 'pattern'=>'/^([a-z0-9_])+$/'),
 
             array('email, fullname, phone, company, dos_templates_template, dos_provinces_province_id, dos_bussiness_bussiness_id', 'required', 'on' => 'changeInfo'),
             array('activated, dos_provinces_province_id', 'numerical', 'integerOnly' => true),
