@@ -21,6 +21,8 @@ class LoginForm extends CFormModel {
         return array(
             // username and password are required
             array('username, password', 'required'),
+            //Validate a username: only letters, numbers and underscore:
+            array('username', 'match', 'pattern' => '/^([a-z0-9_])+$/'),
             // rememberMe needs to be a boolean
             array('rememberMe', 'boolean'),
             // password needs to be authenticated
