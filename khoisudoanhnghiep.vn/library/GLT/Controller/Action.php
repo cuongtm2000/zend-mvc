@@ -15,7 +15,6 @@ class GLT_Controller_Action extends Zend_Controller_Action {
 //        $this->view->onlinetoday = $statistics->getOnlineToday();
 //        $this->view->online = $statistics->getOnline();
 //        $this->view->onlinetotal = $statistics->visit_total();
-
         //handbook
         $handbook_cat_class = new Handbook_Model_HandbookCat();
         $this->view->menu_cat_handbook = $handbook_cat_class->getListmenuParentID(0);
@@ -53,16 +52,31 @@ class GLT_Controller_Action extends Zend_Controller_Action {
         $select = $db->select()->from('dos_sys_seos', array('seo_content'))->where("seo_name = 'google_analytic'");
         $result = $db->fetchRow($select);
         $this->view->google_analytic = stripslashes($result['seo_content']);
-        
+
         //vote
-        $vote= new Vote_Model_Vote();
-        $this->view->vote= $vote->getFirstVote();
+        $vote = new Vote_Model_Vote();
+        $this->view->vote = $vote->getFirstVote();
     }
 
     public function webTitle($str) {
         $this->view->headTitle(html_entity_decode($str) . ' - ' . $this->view->web['titleweb']);
         $this->view->headMeta()->appendName('keywords', $str . ' - ' . $this->view->web['keywords'] . ' - ' . $this->view->web['titleweb']);
         $this->view->headMeta()->appendName('description', $str . ' - ' . $this->view->web['description'] . ' - ' . $this->view->web['titleweb']);
+    }
+
+    public function checkcommment($session_id, $period) {
+        if (isset($_SESSION[$session_id])) {
+            $now = new Zend_Date();
+            $last = new Zend_Date($_SESSION[$session_id]);
+
+            $giay = $now->get(Zend_Date::TIMESTAMP) - $last->get(Zend_Date::TIMESTAMP);
+            if ($giay > $period)
+                $_SESSION[$session_id] = new Zend_Date();
+            return ($giay - $period);
+        }else {
+            $_SESSION[$session_id] = new Zend_Date();
+            return 0;
+        }
     }
 
 }
