@@ -7,3 +7,6 @@ Them template
 	Trong cac template se co các cau hinh lien quan
 
 Luu y: Neu dat view trong theme thi dung trong theme, nguoc lai thi dung trong view. Cho nen se de trong module lam system
+
+Request:
+	1. Di chuyen enable vao module_about

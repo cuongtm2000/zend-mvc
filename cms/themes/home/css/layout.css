@@ -33,7 +33,7 @@ a:hover{color:#000;}
 #nav .select{color:#fff}
 
 #nav li ul{display:none}
-#nav li:hover ul{ background:#ED6C12; display:block;width:165px;position:absolute;border-radius:4px;-moz-border-radius:0 0 5px 5px;-webkit-border-radius:0 0 5px 5px; z-index:200; top:54px; padding:5px 0 5px 0}
+#nav li:hover ul{list-style: none; background:#ED6C12; display:block;width:165px;position:absolute;border-radius:4px;-moz-border-radius:0 0 5px 5px;-webkit-border-radius:0 0 5px 5px; z-index:200; top:54px; padding:5px 0 5px 0}
 #nav li ul li{width:100%; background:none;}
 #nav li ul li a{padding:5px 20px;color:#fff}
 #nav li ul li a:hover{color:#500; background:#FFF;}
