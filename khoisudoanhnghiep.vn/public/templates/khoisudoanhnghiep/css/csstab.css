@@ -1,6 +1,6 @@
 .hostNewsTab{width:203px;float:right;position:relative;background:url(../images/material-bg-horizontal.png) repeat-x 0px -391px;margin:2px 0 0 5px}
 .hostNewsTabHeader{width:auto;height:23px;position:absolute;top:-3px;}
-.hostNewsTabHeader ul li{float:left;margin:0 !important}
+.hostNewsTabHeader ul li{margin:0 !important}
 .hostNewsTabHeader ul li a{height:26px !important;padding-left:6px;background:url(../images/material-button.png) no-repeat 0px -52px;display:inline-block;font-size:10pt;font-weight:bold;color:#f00}
 .hostNewsTabHeader ul li a span{height:26px !important;line-height:26px; padding-right:12px;display:inline-block;background:url(../images/material-button.png) no-repeat 100% -78px;}
 .hostNewsTabHeader ul li a.current, .hostNewsTabHeader ul li a:hover{color:#A80000}

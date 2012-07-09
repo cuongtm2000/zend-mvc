@@ -89,8 +89,9 @@ ul#nav li ul.tainment{display:inherit;width:500% }
 
 /**  sub fucus tent**/
 .fucus-tent{padding:10px 0 0 0;list-style:none}
-.fucus-tent li{padding:2px 0 2px 0;height:30px; margin:0 !important;}
-.fucus-tent li p{line-height:normal !important; padding:1px 0 3px 0; background:#E5E5E5; margin:0 !important}
+.fucus-tent li{margin:0 !important}
+.fucus-tent .panel-fucus{display:table-cell;vertical-align:middle;height:30px}
+.fucus-tent li p{line-height:normal !important; padding:2px 0; background:#E5E5E5; margin:0 !important}
 .fucus-tent li a{color:#000;display:block;background:url(../images/ico-new.gif) no-repeat 4px 4px; padding:0 0 0 20px}
 .fucus-tent li a:hover{color:#00F}
 
@@ -164,13 +165,13 @@ ul#nav li ul.tainment{display:inherit;width:500% }
 
 /** Row 2 Thong tin can biet va support**/
 .row2{margin:0 0 10px 0}
-.info-know{float:left;width:170px}
-.title-info{background:url(../images/bg-title-info.gif) no-repeat; padding:8px 10px;font-weight:bold}
-.bd-bt-info{background:url(../images/bd-bt-info.gif) no-repeat;height:6px;width:170px}
-.sub-info{list-style:none;padding:10px 2px 0 2px;background:url(../images/mid-info.gif) repeat-y}
+.info-know{float:left;width:150px}
+.title-info{background:url(../images/bg-title-info-1.gif) no-repeat;color:#8A0000; padding:8px 10px;font-weight:bold}
+.bd-bt-info{background:url(../images/bd-bt-info-1.gif) no-repeat;height:6px;width:150px}
+.sub-info{list-style:none;padding:10px 2px 0 2px;background:url(../images/mid-info-1.gif) repeat-y}
 .sub-info li{padding:5px 0;border-bottom:1px solid #ccc}
 .sub-info li p{cursor: pointer}
-.sub-info li img{margin:0 10px}
+.sub-info li img{margin:0 5px}
 .sub-info li a{display:block}
 .info-1 a{color:#83E193}
 .info-2 a{color:#7C8C71}
@@ -199,6 +200,18 @@ ul#nav li ul.tainment{display:inherit;width:500% }
 .sub-bun li p{display:table-cell; vertical-align:middle;height:32px}
 .sub-bun li a{color:#003476;cursor:pointer; font-weight:bold} .sub-bun li a:hover{color:#FF9900}
 
+/** Tham do y kien **/
+.bg-polls{float:right;width:190px;border:1px solid #D5D8DE;padding:5px 0 5px 0;-webkit-border-radius:2px;-moz-border-radius:2px}
+.title-polls{color:#8A0000;font-weight:bold;margin:0 0 8px 0;padding:0 0 0 10px}
+.tent-polls{padding:2px 0 5px 0}
+.panel-polls{background:#EEEEDD;padding:5px 0 5px 10px;margin:0 0 5px 0}
+.sub-polls{list-style:none;padding:10px 0 0 0}
+.sub-polls li{padding:0 0 6px 0}
+.sub-polls li a{color:#000}
+
+.f-action{padding:0 0 0 10px}
+.button{padding:2px 5px;cursor:pointer}
+.f-action a{color:#000} .f-action a:hover{color:#8A0000}
 
 /*Thong ke truy cap*/
 .statistics{list-style:none; float:right}

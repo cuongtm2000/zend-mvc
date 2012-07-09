@@ -18,3 +18,5 @@ include_once 'Zend/View/Helper/PaginationControl.php';
 include_once 'Zend/Paginator/ScrollingStyle/Sliding.php';
 include_once 'Zend/View/Helper/Partial.php';
 include_once 'GLT/View/Helper/Langlist.php';
+include_once 'Zend/Controller/Action/Helper/Redirector.php';
+include_once 'Zend/View/Helper/Url.php';
