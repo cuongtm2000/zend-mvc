@@ -184,6 +184,19 @@
 										<input onclick="sendvoting(<?php echo $this->vote['record_id']; ?>)" class="button" type="button" value="Bình chọn" />
 										<a title="Kết quả" rel="prettyPhoto[iframes]"  href="<?php echo $this->baseUrl() ?>/vote/index/index/vid/<?php echo $this->vote['record_id']; ?>?iframe=true&amp;width=70%&amp;height=70%" >&nbsp; Kết quả</a>
 									</div>
+									 <script type="text/javascript">
+										$(document).ready(function(){
+											$(".f-action a[rel^='prettyPhoto[iframes]']").prettyPhoto();
+										});
+											
+										function sendvoting(){
+											if($('input[name=vote]:checked').val()==undefined)
+												alert('Bạn chưa chọn câu trả lời nào.');
+											else
+												$.prettyPhoto.open('<?php echo $this->baseUrl() ?>/vote/index/index/vid/<?php echo $this->vote['record_id']; ?>/id/'+$('input[name=vote]:checked').val()+'?iframe=true&amp;width=70%&amp;height=70%','Kết quả thăm dò ý kiến','');   
+										}
+											 
+									</script>
 								<?php endif; ?>
 							</div>	
                         </div><!--End bg support-->  <div class="clear"></div>
@@ -193,19 +206,10 @@
                         <div class="video">
                             <a href="<?php echo $this->video_first['url'] ?>" rel="prettyPhoto" title="<?php echo $this->video_first['title'] ?>"><img src="<?php echo $this->baseUrl() . IMAGES_PATH ?>/video/<?php echo $this->video_first['pic_full'] ?>" alt="<?php echo $this->video_first['title'] ?>" /></a>
                   
-                            <script type="text/javascript" charset="utf-8">
+                            <script type="text/javascript">
                                 $(document).ready(function(){
                                     $(".video a[rel^='prettyPhoto']").prettyPhoto();
-                                    $(".f-action a[rel^='prettyPhoto[iframes]']").prettyPhoto();
-                                });
-                                    
-                                function sendvoting(){
-                                    if($('input[name=vote]:checked').val()==undefined)
-                                        alert('Bạn chưa chọn câu trả lời nào.');
-                                    else
-                                        $.prettyPhoto.open('<?php echo $this->baseUrl() ?>/vote/index/index/vid/<?php echo $this->vote['record_id']; ?>/id/'+$('input[name=vote]:checked').val()+'?iframe=true&amp;width=70%&amp;height=70%','Kết quả thăm dò ý kiến','');   
-                                }
-                                     
+                                });  
                             </script>
                         </div>
                     <?php endif; ?>
