@@ -182,7 +182,7 @@ class DefaultController extends Controller {
                 $model_class->save();
                 $model_fearture_class->save_data($model_class->record_id, $_POST[$model]['feature']);
                 $model_utility_class->save_data($model_class->record_id, $_POST[$model]['utility']);
-                $this->redirect(Yii::app()->baseUrl . '/tin-da-dang');
+               // $this->redirect(Yii::app()->baseUrl . '/tin-da-dang');
             }
         }
 

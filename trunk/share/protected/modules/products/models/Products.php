@@ -183,30 +183,32 @@ class Products extends CActiveRecord {
         $this->description = $purifier->purify(trim($this->description));
         $this->descriptionen = $purifier->purify(trim($this->descriptionen));
 
+        $_USERFILES= '/public/userfiles/image/' . Yii::app()->user->name . '/image/';    
+        
         if ($this->isNewRecord) {
             $this->record_order = $this->maxRecordOrder();
             if ($_FILES[__CLASS__]['name']['pic_thumb']) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $this->pic_thumb = $file->processUpload($_FILES[__CLASS__]['name']['pic_thumb'], $_FILES[__CLASS__]['tmp_name']['pic_thumb'], Configs::configTemplate('products_width_thumb', Yii::app()->session['template']), Configs::configTemplate('products_height_thumb', Yii::app()->session['template']), USERFILES . '/' . lcfirst(__CLASS__), $this->title . '-thumb');
+                $this->pic_thumb = $file->processUpload($_FILES[__CLASS__]['name']['pic_thumb'], $_FILES[__CLASS__]['tmp_name']['pic_thumb'], Configs::configTemplate('products_width_thumb', Yii::app()->session['template']), Configs::configTemplate('products_height_thumb', Yii::app()->session['template']),  $_USERFILES. lcfirst(__CLASS__), $this->title . '-thumb');
             }
             if ($_FILES[__CLASS__]['name']['pic_full']) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $this->pic_full = $file->processUpload($_FILES[__CLASS__]['name']['pic_full'], $_FILES[__CLASS__]['tmp_name']['pic_full'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), USERFILES . '/' . lcfirst(__CLASS__), $this->title);
+                $this->pic_full = $file->processUpload($_FILES[__CLASS__]['name']['pic_full'], $_FILES[__CLASS__]['tmp_name']['pic_full'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), $_USERFILES . lcfirst(__CLASS__), $this->title);
             }
             //pic_desc
             if (isset($_FILES[__CLASS__]['name']['pic_desc'])) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $this->pic_desc = implode("|", $file->uploadMulti($_FILES[__CLASS__]['name']['pic_desc'], $_FILES[__CLASS__]['tmp_name']['pic_desc'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), USERFILES . '/' . lcfirst(__CLASS__), $this->title));
+                $this->pic_desc = implode("|", $file->uploadMulti($_FILES[__CLASS__]['name']['pic_desc'], $_FILES[__CLASS__]['tmp_name']['pic_desc'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), $_USERFILES . lcfirst(__CLASS__), $this->title));
             }
         } else {
             //check file old and upload
             if ($_FILES[__CLASS__]['name']['pic_thumb']) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $this->pic_thumb = $file->processUpload($_FILES[__CLASS__]['name']['pic_thumb'], $_FILES[__CLASS__]['tmp_name']['pic_thumb'], Configs::configTemplate('products_width_thumb', Yii::app()->session['template']), Configs::configTemplate('products_height_thumb', Yii::app()->session['template']), USERFILES . '/' . lcfirst(__CLASS__), $this->title . '-thumb', $this->_oldImage_thumb);
+                $this->pic_thumb = $file->processUpload($_FILES[__CLASS__]['name']['pic_thumb'], $_FILES[__CLASS__]['tmp_name']['pic_thumb'], Configs::configTemplate('products_width_thumb', Yii::app()->session['template']), Configs::configTemplate('products_height_thumb', Yii::app()->session['template']), $_USERFILES . lcfirst(__CLASS__), $this->title . '-thumb', $this->_oldImage_thumb);
             } else {
                 //remove picthumb
                 if (isset($_POST[__CLASS__]['remove_pic_thumb']) && $_POST[__CLASS__]['remove_pic_thumb'] == 1) {
@@ -221,7 +223,7 @@ class Products extends CActiveRecord {
             if ($_FILES[__CLASS__]['name']['pic_full']) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $this->pic_full = $file->processUpload($_FILES[__CLASS__]['name']['pic_full'], $_FILES[__CLASS__]['tmp_name']['pic_full'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), USERFILES . '/' . lcfirst(__CLASS__), $this->title, $this->_oldImage_full);
+                $this->pic_full = $file->processUpload($_FILES[__CLASS__]['name']['pic_full'], $_FILES[__CLASS__]['tmp_name']['pic_full'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), $_USERFILES . lcfirst(__CLASS__), $this->title, $this->_oldImage_full);
             } else {
                 $this->pic_full = $this->_oldImage_full;
             }
@@ -240,7 +242,7 @@ class Products extends CActiveRecord {
             if (isset($_FILES[__CLASS__]['name']['pic_desc'])) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $uploaded = $file->uploadMulti($_FILES[__CLASS__]['name']['pic_desc'], $_FILES[__CLASS__]['tmp_name']['pic_desc'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), USERFILES . '/' . lcfirst(__CLASS__), $this->title);
+                $uploaded = $file->uploadMulti($_FILES[__CLASS__]['name']['pic_desc'], $_FILES[__CLASS__]['tmp_name']['pic_desc'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), $_USERFILES . lcfirst(__CLASS__), $this->title);
 
                 $pic_desc = ($this->_oldImage_desc) ? explode('|', $this->_oldImage_desc) : array();
                 //push value
