@@ -86,6 +86,7 @@ ul#nav li ul.tainment{display:inherit;width:500% }
 
 /** left-tent-new **/
 .left-tent-new{float:left; width:395px}
+.left-tent-new img{width:393px; height:295px}
 
 /**  sub fucus tent**/
 .fucus-tent{padding:10px 0 0 0;list-style:none}
