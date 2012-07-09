@@ -20,7 +20,7 @@ class Controller extends CController {
         Common::setLanguage(); //setting language
 
         $username = new Username();
-        $info_user = $username->infoUser('user');
+        $info_user = $username->infoUser('admin');
 
         Yii::app()->theme = $info_user['dos_templates_template']; //template use by 'admin'
         Yii::app()->session['template'] = $info_user['dos_templates_template']; //session template use
