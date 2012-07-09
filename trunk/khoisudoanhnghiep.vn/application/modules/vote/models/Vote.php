@@ -182,9 +182,10 @@ class Vote_Model_Vote extends Zend_Db_Table {
                     $where = 'record_id = -1';
                     foreach ($record_id as $value) {
                         $id = intval($value);
+                        $ans=new Vote_Model_Answer();
                         if ($id) {
                             $where .= ' OR record_id=' . $id;
-                            $this->delPic($id);
+                            $ans->del($id);
                         }
                     }
 

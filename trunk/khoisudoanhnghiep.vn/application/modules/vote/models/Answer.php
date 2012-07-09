@@ -19,6 +19,9 @@ class Vote_Model_Answer extends Zend_Db_Table {
             }
         }
     }
+    public function del($vid){
+        $this->delete('vote_id = '.$vid);
+    }
 
     public function updateItem($data = NULL) {
         $size = count($data['answer']);
