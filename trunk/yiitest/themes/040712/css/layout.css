@@ -41,15 +41,15 @@ a:hover{color:#000;}
 .title-left{color:#fff; font-weight:bold; padding:8px 0 8px 0;font-weight:bold; background:url(../images/titalbg.gif) no-repeat}
 .title-left span{padding:0px 10px 0 15px; }
 
-.title-box{color:#3B3B3B; font-weight:bold; padding:8px 0 8px 0;font-weight:bold; background:#EEE url(../images/tital-bullet.gif) no-repeat 10px;-webkit-border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0}
-.title-box span{padding:0px 10px 0 25px}
+.title-box , .title-right{color:#3B3B3B; font-weight:bold; padding:8px 0 8px 0;font-weight:bold; background:#EEE url(../images/tital-bullet.gif) no-repeat 10px;-webkit-border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0}
+.title-box span, .title-right span{padding:0px 10px 0 25px}
 
 /*sub cat*/
-.sub-cat{list-style:none;padding:10px 5px 10px 10px}
+.sub-cat{list-style:none; padding:10px 5px 10px 10px}
 .sub-cat li{padding:5px 0}
-.sub-cat li a{color:#444;padding:0 0 0 10px;display:block;background:url(../images/bullet.gif) left 4px no-repeat}
+.sub-cat li a{color:#444;padding:0 0 0 10px;display:block;background:url(../images/ico-dot.gif) left 4px no-repeat}
 .sub-cat li a:hover{ color:#3CBEDA}
-.sub-cat li ul{list-style:none;padding:5px 0 0 10px}
+.sub-cat li ul{list-style:none;padding:5px 0 0 15px}
 .sub-cat li ul li{padding:2px 0;border-bottom:1px dotted #e1e1e1}
 .sub-cat li ul li a{background:url(../images/bull.jpg) left 3px no-repeat; *_display:inherit}
 
@@ -58,7 +58,7 @@ a:hover{color:#000;}
 .support li {color:#444444; line-height:2em;}
 
 /*Thong ke truy cap*/
-.statistics{list-style:none;padding:10px 3px 15px 25px}
+.statistics{list-style:none;padding:5px 3px 15px 10px}
 .statistics li {color:#444444; line-height:1.75em;}
 
 /*bg-adv adv left*/
@@ -71,7 +71,7 @@ a:hover{color:#000;}
 #rightcontent ul li, #right-content ol li{margin: 4px 0 4px 40px}
 #rightcontent ul ,#right-content ol{margin: 0 0 12px 0}
 
-.title-right{margin:0 0 10px 0;padding:5px 0 0 20px;color:#3CBEDA; font-size:12pt;background:url(../images/bullet2.gif) no-repeat left 9px;  font-weight:bold;}
+
 
 .frame-tent-right {padding:10px;border:1px solid #EEEEEE;margin:0 0 10px 0;-webkit-border-radius:1px;-moz-border-radius:1px}
 .frame-tent-right p{text-align:justify;line-height:1.5em}
@@ -83,7 +83,7 @@ a:hover{color:#000;}
 .link a:hover{color:#228BC8}
 
 /***** Product    *****/
-#rightcontent .all-product{margin:0 ;list-style:none;padding:0}
+#rightcontent .all-product{margin:10px 0 0 0;list-style:none;padding:0}
 #rightcontent .product{width:165px;padding:5px 0 15px 0;text-align:center;margin:0 0 10px 3px; border:1px solid #ddd;display:inline-block; vertical-align:top;*float:left;*margin:0 10px 10px 0}
 .product-img{height:160px; width:165px;display:table-cell;vertical-align:middle; padding:0 0 10px 0}
 .product-img img{width:155px; height:155px}
@@ -139,9 +139,9 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .video{text-align:center;padding:5px 0}
 
 /**  Sub new   **/
-.sub-new{list-style:none;padding:10px 10px 10px 15px}
+.sub-new{list-style:none;padding:10px 10px 10px 10px}
 .sub-new li{padding:3x 0;line-height:1.5em}
-.sub-new li a{ display:block;color:#161616;background:url(../images/bullet.gif) no-repeat left 7px; padding:1px 0 1px 15px}
+.sub-new li a{ display:block;color:#161616;background:url(../images/ico-dot.gif) no-repeat left 7px; padding:1px 0 1px 15px}
 .sub-new li a:hover{color:#f90}
 
 /*Footer*/
