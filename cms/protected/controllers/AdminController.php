@@ -10,7 +10,8 @@ class AdminController extends BackEndController {
     }
 
     public function actionLogout() {
-        //$this->render('index');
+        Yii::app()->user->logout();
+        $this->redirect(Yii::app()->homeUrl);
     }
 
     public function actionForgot() {

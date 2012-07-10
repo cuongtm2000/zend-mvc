@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 10, 2012 at 05:18 AM
+-- Generation Time: Jul 10, 2012 at 10:19 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -170,8 +170,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
 --
 
 INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(1, 'en', 'Tam nhin su menh', 'Tam nhin', 'tam-nhin-su-menh', NULL, 4, NULL, NULL),
-(1, 'vi', 'Gioi thieu cong ty', 'Noi dung', 'gioi-thieu-cong-ty', NULL, 4, NULL, NULL);
+(1, 'en', 'Tam nhin su menh', 'Tam nhin', 'tam-nhin-su-menh', NULL, 8, NULL, NULL),
+(1, 'vi', 'Gioi thieu cong ty', 'Noi dung', 'gioi-thieu-cong-ty', NULL, 8, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -182,25 +182,50 @@ INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`,
 CREATE TABLE IF NOT EXISTS `hoiit_module_menus` (
   `menu_id` smallint(6) NOT NULL AUTO_INCREMENT,
   `parent_id` smallint(6) NOT NULL DEFAULT '0',
-  `menu_name` varchar(100) NOT NULL,
-  `menu_url` varchar(255) NOT NULL,
   `menu_target` enum('_self','_blank') DEFAULT NULL,
   `menu_sort` smallint(6) NOT NULL DEFAULT '0',
   `menu_homepage` tinyint(1) NOT NULL DEFAULT '0',
   `menu_activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `hoiit_module_menus`
 --
 
-INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_name`, `menu_url`, `menu_target`, `menu_sort`, `menu_homepage`, `menu_activated`) VALUES
-(1, 0, 'Home page', 'default', '', 1, 1, 1),
-(2, 0, 'About', 'about', NULL, 2, 0, 1),
-(3, 0, 'Contact', 'contact', NULL, 3, 0, 1),
-(4, 2, 'About Sub', 'about-sub', NULL, 1, 0, 1),
-(5, 4, 'Sub', 'sub', NULL, 0, 0, 1);
+INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_target`, `menu_sort`, `menu_homepage`, `menu_activated`) VALUES
+(1, 0, NULL, 1, 1, 1),
+(2, 0, NULL, 2, 0, 1),
+(3, 2, NULL, 1, 0, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_menus_languages`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_menus_languages` (
+  `menu_id` smallint(6) NOT NULL,
+  `language_id` varchar(2) NOT NULL,
+  `menu_name` varchar(100) NOT NULL,
+  `menu_url` varchar(255) NOT NULL,
+  `menu_description` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`menu_id`,`language_id`),
+  KEY `fk_hoiit_module_menus_has_hoiit_languages_hoiit_languages1` (`language_id`),
+  KEY `fk_hoiit_module_menus_has_hoiit_languages_hoiit_module_menus1` (`menu_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_menus_languages`
+--
+
+INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name`, `menu_url`, `menu_description`) VALUES
+(1, 'en', 'Home page', 'default', NULL),
+(1, 'vi', 'Trang chủ', 'trang-chu', NULL),
+(2, 'en', 'About', 'about', NULL),
+(2, 'vi', 'Giới thiệu', 'about', NULL),
+(3, 'en', 'About Sub', 'sub', NULL),
+(3, 'vi', 'Tầm nhìn', 'sub', NULL);
 
 -- --------------------------------------------------------
 
@@ -246,6 +271,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_settings` (
 
 INSERT INTO `hoiit_settings` (`setting_name`, `setting_value`) VALUES
 ('default_language', 'vi'),
+('description', 'Description'),
+('keywords', 'Keywords'),
 ('title', 'Welcome to Yii Project');
 
 -- --------------------------------------------------------
@@ -324,6 +351,13 @@ ALTER TABLE `hoiit_functions`
 ALTER TABLE `hoiit_module_about_languages`
   ADD CONSTRAINT `fk_hoiit_about_has_hoiit_languages_hoiit_about1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_about` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_hoiit_about_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `hoiit_module_menus_languages`
+--
+ALTER TABLE `hoiit_module_menus_languages`
+  ADD CONSTRAINT `fk_hoiit_module_menus_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_hoiit_module_menus_has_hoiit_languages_hoiit_module_menus1` FOREIGN KEY (`menu_id`) REFERENCES `hoiit_module_menus` (`menu_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `hoiit_positions`
