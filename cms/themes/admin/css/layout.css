@@ -59,10 +59,18 @@ ul.menu-li li ul li a:hover{;-moz-border-radius: 2px; -webkit-border-radius: 2px
 #footer p{padding: 0 10px}
 
 /* Menu */
-ul#tabs{margin:0 10px;padding:5px 10px 0 5px;list-style:none; overflow:hidden; background:#5184D2; margin-bottom:8px; height:29px;-webkit-border-radius:3px; -moz-border-radius:3px}
-ul#tabs li {display:inline}
+ul#tabs{margin:0 10px;padding:5px 10px 0 5px;list-style:none;  background:#5184D2; margin-bottom:8px; height:29px;-webkit-border-radius:3px; -moz-border-radius:3px}
+ul#tabs li {float:left;position:relative}
 ul#tabs a {float:left;background:url(../images/left.png) no-repeat left top;margin:0;padding:0 0 0 6px; text-decoration:none; margin-left:3px}
 ul#tabs a span {float:left;display:block; background:url(../images/right.png) no-repeat right top; padding:6px 15px 8px 6px; margin-right:2px;	color:#FFF}
+
+ul#tabs li ul{display:none}
+ul#tabs li:hover ul{ list-style:none;height:auto; background:#3A6AAD; display:block;width:160px;position:absolute;border-radius:4px;-moz-border-radius:0 0 5px 5px;-webkit-border-radius:0 0 5px 5px; z-index:20; top:29px; padding:5px 0;margin:0 0 0 3px}
+ul#tabs li ul li{width:100%; background:none;}
+ul#tabs li ul li a{float:none;padding:2px 0;color:#fff;background:none}
+ul#tabs li ul li a span{background:none;float:none;padding:4px 10px;display:block;}
+ul#tabs li ul li a:hover span{color:#F79634;}
+
 
 /* Commented Backslash Hack hides rule from IE5-Mac \*/
 ul#tabs a span {float:none;}
