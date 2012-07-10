@@ -91,8 +91,9 @@ ul#nav li ul.tainment{display:inherit;width:500% }
 /**  sub fucus tent**/
 .fucus-tent{padding:10px 0 0 0;list-style:none}
 .fucus-tent li{margin:0 !important}
-.fucus-tent .panel-fucus{display:table-cell;vertical-align:middle;height:30px}
-.fucus-tent li p{line-height:normal !important; padding:2px 0; background:#E5E5E5; margin:0 !important}
+.fucus-tent .panel-fucus{display:table-cell;vertical-align:middle;height:32px;width:205px}
+.fucus-tent .xamtoi{background:#E5E5E5;padding:1px 0 2px 0}
+.fucus-tent li p{line-height:normal !important;background:#E5E5E5; width:202px; margin:0 !important}
 .fucus-tent li a{color:#000;display:block;background:url(../images/ico-new.gif) no-repeat 4px 4px; padding:0 0 0 20px}
 .fucus-tent li a:hover{color:#00F}
 
