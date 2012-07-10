@@ -72,9 +72,15 @@
 		</div><!--End banner-->
 		
        <div id="content">
+				<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+				'homeLink' => CHtml::link($this->lang['default'], (LANGURL) ? LANGURL : Yii::app()->homeUrl),
+				'links'=>$this->breadcrumbs,
+				'htmlOptions'=>array('class'=>'link'),
+				'separator'=>'<b>&raquo;</b>',
+				)); ?> <!-- breadcrumbs -->
         	<div id="leftcontent">
             	<?php if(isset($this->function['menu_about']) && ($this->function['menu_about'])):?>
-				<h2 class="title-left"><span><?php echo $this->lang['about'] ?></span></h2>
+				<h2 class="title-box"><span><?php echo $this->lang['about'] ?></span></h2>
 				<ul class="frame-leftcontent sub-cat">
 					<?php foreach($this->function['menu_about'] as $value): ?>
 					<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'about.link')?>/<?php echo $value['tag'.LANG]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
@@ -83,7 +89,7 @@
 				<?php endif;?>
 
 				<?php if(isset($this->function['menu_services']) && ($this->function['menu_services'])):?>
-				<h2 class="title-left"><span><?php echo $this->lang['services'] ?></span></h2>
+				<h2 class="title-box"><span><?php echo $this->lang['services'] ?></span></h2>
 				<ul class="frame-leftcontent sub-cat">
 					<?php foreach($this->function['menu_services'] as $value): ?>
 					<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'services.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
@@ -92,21 +98,21 @@
 				<?php endif;?>
 
 				<?php if(isset($this->function['menu_news']) && ($this->function['menu_news'])):?>
-				<h2 class="title-left"><span><?php echo CHtml::encode($this->lang['news']) ?></span></h2>
+				<h2 class="title-box"><span><?php echo CHtml::encode($this->lang['news']) ?></span></h2>
 				<ul class="frame-leftcontent sub-cat">
 					<?php Common::menuMultiLevel($this->function['menu_news'], 'NewsCat', Yii::t('user', 'news.link')); ?>
 				</ul>
 				<?php endif; ?>
 
 				<?php if(isset($this->function['menu_video']) && ($this->function['menu_video'])):?>
-				<h2 class="title-left"><span><?php echo $this->lang['video'] ?></span></h2>
+				<h2 class="title-box"><span><?php echo $this->lang['video'] ?></span></h2>
 				<ul class="frame-leftcontent sub-cat">
 					<?php Common::menuMultiLevel($this->function['menu_video'], 'VideoCat', Yii::t('user', 'video.link')); ?>
 				</ul>
 				<?php endif; ?>
 
 				<?php if(isset($this->function['menu_products']) && ($this->function['menu_products'])):?>
-				<h2 class="title-left"><span><?php echo $this->lang['products'] ?></span></h2>
+				<h2 class="title-box"><span><?php echo $this->lang['products'] ?></span></h2>
 				<ul class="frame-leftcontent sub-cat">
 					<?php Common::menuMultiLevel($this->function['menu_products'], 'ProductsCat', Yii::t('user', 'products.link')); ?>
 				</ul>
@@ -153,12 +159,6 @@
 				<?php endif;?>
             </div><!--End left content-->
             <div id="rightcontent">
-            	<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-				'homeLink' => CHtml::link($this->lang['default'], (LANGURL) ? LANGURL : Yii::app()->homeUrl),
-				'links'=>$this->breadcrumbs,
-				'htmlOptions'=>array('class'=>'link'),
-				'separator'=>'<b>|</b>',
-				)); ?> <!-- breadcrumbs -->
             	<?php echo $content ?>
             </div><!--End right content--> 
 			<div id="columns3">
@@ -191,7 +191,7 @@
 				<?php endif?>
 			
 				<?php if(isset($this->function['advs_right']) && ($this->function['advs_right'])):?>
-				<h2 class="title-left"><span><?php echo $this->lang['advs'] ?></span></h2>
+				<h2 class="title-box"><span><?php echo $this->lang['advs'] ?></span></h2>
 				<ul class="frame-leftcontent bg-adv">
 					<?php foreach($this->function['advs_right'] as $value): ?>
 					<li>
