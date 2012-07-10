@@ -8,6 +8,8 @@ class BackEndController extends CController {
     public $layout = '//layouts/column1';
     public $breadcrumbs = array();
 
+    public $setting = array();
+
     public function filters() {
         return array(
             'accessControl',
@@ -27,5 +29,8 @@ class BackEndController extends CController {
 
     public function init() {
         Yii::app()->theme = 'admin';
+
+        //Get Setting
+        $this->setting = Setting::model()->getSetting();
     }
 }

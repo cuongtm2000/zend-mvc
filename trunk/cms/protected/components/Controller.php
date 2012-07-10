@@ -20,6 +20,7 @@ class Controller extends CController {
      */
     public $breadcrumbs = array();
 
+    public $setting = array();
     public $listLang = array();
 
     public function init() {
@@ -28,6 +29,9 @@ class Controller extends CController {
 
         //Get list language
         $this->listLang = Language::model()->listItem();
+
+        //Get Setting
+        $this->setting = Setting::model()->getSetting();
     }
 
     public function setLangUrl() {
