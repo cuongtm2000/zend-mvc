@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="3f30d847-1f89-4446-aa71-d42f19a5f6f9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/extensions/MenuMultiLevel" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/extensions/MenuMultiLevel/MenuMultiLevel.php" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\cms\themes\home\views\layouts\1main.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/document/document.txt" afterPath="$PROJECT_DIR$/document/document.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/LoginForm.php" afterPath="$PROJECT_DIR$/protected/models/LoginForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/home/css/layout.css" afterPath="$PROJECT_DIR$/themes/home/css/layout.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/home/views/layouts/main.php" afterPath="$PROJECT_DIR$/themes/home/views/layouts/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/about/models/About.php" afterPath="$PROJECT_DIR$/protected/modules/about/models/About.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/about/models/AboutLanguage.php" afterPath="$PROJECT_DIR$/protected/modules/about/models/AboutLanguage.php" />
     </list>
     <ignored path="cms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,10 +43,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/home/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="20" selection-start="5036" selection-end="5036" vertical-scroll-proportion="0.7519231">
+            <state line="77" column="20" selection-start="5036" selection-end="5036" vertical-scroll-proportion="-40.53846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AboutLanguage.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/about/models/AboutLanguage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="108" column="180" selection-start="4043" selection-end="4043" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="About.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/modules/about/models/About.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="101" column="290" selection-start="3596" selection-end="3596" vertical-scroll-proportion="0.7197802">
               <folding />
             </state>
           </provider>
@@ -79,8 +91,6 @@
       <list>
         <option value="$PROJECT_DIR$/protected/modules/about/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/protected/modules/template/models/Template.php" />
-        <option value="$PROJECT_DIR$/protected/modules/about/models/AboutLanguage.php" />
-        <option value="$PROJECT_DIR$/protected/modules/about/models/About.php" />
         <option value="$PROJECT_DIR$/protected/models/Language.php" />
         <option value="$PROJECT_DIR$/themes/home/views/about/menu_about.php" />
         <option value="$PROJECT_DIR$/protected/components/Controller.php" />
@@ -93,6 +103,8 @@
         <option value="$PROJECT_DIR$/themes/home/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/extensions/MenuMultiLevel/MenuMultiLevel.php" />
         <option value="$PROJECT_DIR$/document/document.txt" />
+        <option value="$PROJECT_DIR$/protected/modules/about/models/AboutLanguage.php" />
+        <option value="$PROJECT_DIR$/protected/modules/about/models/About.php" />
       </list>
     </option>
   </component>
@@ -265,6 +277,72 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="about" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="about" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="extensions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -313,8 +391,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.PHP" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -399,7 +477,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25493172" sideWeight="0.0" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25948405" sideWeight="0.0" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -469,16 +547,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/modules/about/models/AboutLanguage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="73" selection-start="156" selection-end="156" vertical-scroll-proportion="-2.7362638" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/about/models/About.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="4" selection-start="3277" selection-end="3668" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/models/Language.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="91" column="5" selection-start="3200" selection-end="3200" vertical-scroll-proportion="0.9065934" />
@@ -501,72 +569,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/extensions/MenuMultiLevel/source/dd-smooth-menu.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="11" selection-start="1860" selection-end="1860" vertical-scroll-proportion="0.47859922">
-          <folding />
-        </state>
+        <state line="87" column="11" selection-start="1860" selection-end="1860" vertical-scroll-proportion="0.47859922" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/extensions/MenuMultiLevel/source/dd-smooth-menu-v.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/extensions/MenuMultiLevel/source/dd-smooth-menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="11" selection-start="4216" selection-end="4216" vertical-scroll-proportion="0.37362638">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="74" column="11" selection-start="4216" selection-end="4216" vertical-scroll-proportion="0.37362638" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/extensions/MenuMultiLevel/source/dd-smooth-menu-config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/home/css/layout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="34" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.43589744">
-          <folding />
-        </state>
+        <state line="35" column="34" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.43589744" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/extensions/MenuMultiLevel/MenuMultiLevel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="40" selection-start="584" selection-end="601" vertical-scroll-proportion="-0.1252236">
-          <folding />
-        </state>
+        <state line="21" column="40" selection-start="584" selection-end="601" vertical-scroll-proportion="-0.1252236" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/document/document.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="44" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="11" column="44" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/config/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="23" selection-start="2677" selection-end="2677" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="65" column="23" selection-start="2677" selection-end="2677" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/models/Position.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="23" selection-start="3769" selection-end="3772" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="100" column="23" selection-start="3769" selection-end="3772" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/home/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="20" selection-start="5036" selection-end="5036" vertical-scroll-proportion="0.7519231">
+        <state line="77" column="20" selection-start="5036" selection-end="5036" vertical-scroll-proportion="-40.53846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/about/models/AboutLanguage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="180" selection-start="4043" selection-end="4043" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/about/models/About.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="290" selection-start="3596" selection-end="3596" vertical-scroll-proportion="0.7197802">
           <folding />
         </state>
       </provider>
