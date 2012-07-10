@@ -5,16 +5,17 @@
 					<div id="hostNewsTabContent-tab1" class="hostNewsTabContent-item">
 						<?php if(isset($this->news_items)):?>
 						<ul class="ulListLink fucus-tent">
-						<?php $i=0; foreach ($this->news_items as $value): $p=($i%2==1)?'<p>':''; $cp=($i%2==1)?'</p>':''?>
-								<li><div class="panel-fucus">
-										<?php echo $p?>
-										<a href="<?php echo $this->baseUrl() ?>/tin-tuc/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title']?>'>
-											<?php echo $value['title']?>
-										</a>
-										<?php echo $cp?>
-									</div>	
-								</li>
-							<?php $i++; endforeach;?>
+						<?php $i=0; foreach ($this->news_items as $value): $class = ($i%2==1) ? ' xamtoi' : ''; $p=($i%2==1)?'<p>':''; $cp=($i%2==1)?'</p>':''?>
+							<li>
+								<div class="panel-fucus<?php echo $class ?>">
+									<?php //echo $p?>
+									<a href="<?php echo $this->baseUrl() ?>/tin-tuc/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title']?>'>
+										<?php echo $value['title']?>
+									</a>
+									<?php //echo $cp?>
+								</div>	
+							</li>
+						<?php $i++; endforeach;?>
 						</ul>
 						<?php endif; ?>
 					</div> <!--End tab 1-->
@@ -72,38 +73,38 @@
 			<ul id="mycarousel" class="jcarousel-skin-tango">
 				<?php foreach($this->handbookHot as $value):?>
 				<li>
-					<a href="<?php echo $this->baseUrl() ?>/cam-nang-khoi-su/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title']?>'><img src="<?php echo $this->baseUrl().IMAGES_PATH.'handbook/'.$value['pic_thumb'] ?>" alt='<?php echo $value['title']?>' /></a>
-					<h4><a href="<?php echo $this->baseUrl() ?>/cam-nang-khoi-su/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title']?>'><?php echo $value['title']?></a></h4>
+					<a href="<?php echo $this->baseUrl() ?>/cam-nang-khoi-su/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title']?>"><img src="<?php echo $this->baseUrl().IMAGES_PATH.'handbook/'.$value['pic_thumb'] ?>" alt="<?php echo $value['title']?>" /></a>
+					<h4><a href="<?php echo $this->baseUrl() ?>/cam-nang-khoi-su/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></h4>
 				</li>
 				<?php endforeach?>
 				<?php foreach($this->experienceHot as $value):?>
 				<li>
-					<a href="<?php echo $this->baseUrl() ?>/kinh-nghiem-thuong-truong/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title']?>'><img src="<?php echo $this->baseUrl().IMAGES_PATH.'experience/'.$value['pic_thumb'] ?>" alt='<?php echo $value['title']?>' /></a>
-					<h4><a href="<?php echo $this->baseUrl() ?>/kinh-nghiem-thuong-truong/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title']?>'><?php echo $value['title']?></a></h4>
+					<a href="<?php echo $this->baseUrl() ?>/kinh-nghiem-thuong-truong/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title']?>"><img src="<?php echo $this->baseUrl().IMAGES_PATH.'experience/'.$value['pic_thumb'] ?>" alt="<?php echo $value['title']?>" /></a>
+					<h4><a href="<?php echo $this->baseUrl() ?>/kinh-nghiem-thuong-truong/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></h4>
 				</li>
 				<?php endforeach?>
 				<?php foreach($this->knowsHot as $value):?>
 				<li>
-					<a href="<?php echo $this->baseUrl() ?>/kien-thuc-quan-ly/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title']?>'><img src="<?php echo $this->baseUrl().IMAGES_PATH.'knows/'.$value['pic_thumb'] ?>" alt='<?php echo $value['title']?>' /></a>
-					<h4><a href="<?php echo $this->baseUrl() ?>/kien-thuc-quan-ly/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title']?>'><?php echo $value['title']?></a></h4>
+					<a href="<?php echo $this->baseUrl() ?>/kien-thuc-quan-ly/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title']?>"><img src="<?php echo $this->baseUrl().IMAGES_PATH.'knows/'.$value['pic_thumb'] ?>" alt="<?php echo $value['title']?>" /></a>
+					<h4><a href="<?php echo $this->baseUrl() ?>/kien-thuc-quan-ly/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></h4>
 				</li>
 				<?php endforeach?>
 				<?php foreach($this->consultingHot as $value):?>
 				<li>
-					<a href="<?php echo $this->baseUrl() ?>/goc-tu-van/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title']?>'><img src="<?php echo $this->baseUrl().IMAGES_PATH.'consulting/'.$value['pic_thumb'] ?>" alt='<?php echo $value['title']?>' /></a>
-					<h4><a href="<?php echo $this->baseUrl() ?>/goc-tu-van/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title']?>'><?php echo $value['title']?></a></h4>
+					<a href="<?php echo $this->baseUrl() ?>/goc-tu-van/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title']?>"><img src="<?php echo $this->baseUrl().IMAGES_PATH.'consulting/'.$value['pic_thumb'] ?>" alt="<?php echo $value['title']?>" /></a>
+					<h4><a href="<?php echo $this->baseUrl() ?>/goc-tu-van/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></h4>
 				</li>
 				<?php endforeach?>
 				<?php foreach($this->worldBusinessHot as $value):?>
 				<li>
-					<a href="<?php echo $this->baseUrl() ?>/the-gioi-doanh-nhan/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title']?>'><img src="<?php echo $this->baseUrl().IMAGES_PATH.'world-business/'.$value['pic_thumb'] ?>" alt='<?php echo $value['title']?>' /></a>
-					<h4><a href="<?php echo $this->baseUrl() ?>/the-gioi-doanh-nhan/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title']?>'><?php echo $value['title']?></a></h4>
+					<a href="<?php echo $this->baseUrl() ?>/the-gioi-doanh-nhan/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title']?>"><img src="<?php echo $this->baseUrl().IMAGES_PATH.'world-business/'.$value['pic_thumb'] ?>" alt="<?php echo $value['title']?>" /></a>
+					<h4><a href="<?php echo $this->baseUrl() ?>/the-gioi-doanh-nhan/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></h4>
 				</li>
 				<?php endforeach?>
 				<?php foreach($this->corporateCultureHot as $value):?>
 				<li>
-					<a href="<?php echo $this->baseUrl() ?>/van-hoa-doanh-nghiep/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title']?>'><img src="<?php echo $this->baseUrl().IMAGES_PATH.'corporate-culture/'.$value['pic_thumb'] ?>" alt='<?php echo $value['title']?>' /></a>
-					<h4><a href="<?php echo $this->baseUrl() ?>/van-hoa-doanh-nghiep/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title']?>'><?php echo $value['title']?></a></h4>
+					<a href="<?php echo $this->baseUrl() ?>/van-hoa-doanh-nghiep/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title']?>"><img src="<?php echo $this->baseUrl().IMAGES_PATH.'corporate-culture/'.$value['pic_thumb'] ?>" alt="<?php echo $value['title']?>" /></a>
+					<h4><a href="<?php echo $this->baseUrl() ?>/van-hoa-doanh-nghiep/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title']?>"><?php echo $value['title']?></a></h4>
 				</li>
 				<?php endforeach?>
 			</ul>
@@ -276,7 +277,7 @@
 		<?php  if(isset($this->menu_cat_worldbusiness)):?>
 			<ul class="sub-top-tent">
 				<?php foreach ($this->menu_cat_worldbusiness as $value) :?>
-				 <li style="border:none"><a href="<?php echo $this->baseUrl() ?>/the-gioi-doanh-nhan/<?php echo $value['tag'] ?>" title='<?php echo $value['cat_title'] ?>'><?php echo $value['cat_title'] ?></a></li>
+				 <li style="border:none"><a href="<?php echo $this->baseUrl() ?>/the-gioi-doanh-nhan/<?php echo $value['tag'] ?>" title="<?php echo $value['cat_title'] ?>"><?php echo $value['cat_title'] ?></a></li>
 				 <?php endforeach;?>
 			</ul> <div class="clear"></div>
 		<?php endif;?>
@@ -284,9 +285,9 @@
         <div class="tent-sub-new">
 			<?php if($this->worldbusiness_item_first): ?>
 			<div class="tent-new-left">
-				<h3 class="title-box-left"><a href="<?php echo $this->baseUrl()?>/the-gioi-doanh-nhan/<?php echo $this->worldbusiness_item_first['tag'] ?>.html" title='<?php echo $this->worldbusiness_item_first['title'] ?>'><?php echo $this->worldbusiness_item_first['title'] ?></a></h3>
+				<h3 class="title-box-left"><a href="<?php echo $this->baseUrl()?>/the-gioi-doanh-nhan/<?php echo $this->worldbusiness_item_first['tag'] ?>.html" title="<?php echo $this->worldbusiness_item_first['title'] ?>"><?php echo $this->worldbusiness_item_first['title'] ?></a></h3>
 				<?php if($this->worldbusiness_item_first['pic_thumb']): ?>
-					<a href="<?php echo $this->baseUrl()?>/the-gioi-doanh-nhan/<?php echo $this->worldbusiness_item_first['tag'] ?>.html" title='<?php echo $this->worldbusiness_item_first['title'] ?>'><img src="<?php echo $this->baseUrl().IMAGES_PATH?>world-business/<?php echo $this->worldbusiness_item_first['pic_thumb'] ?>" alt='<?php echo $this->worldbusiness_item_first['title'] ?>' style="float:left" /></a>
+					<a href="<?php echo $this->baseUrl()?>/the-gioi-doanh-nhan/<?php echo $this->worldbusiness_item_first['tag'] ?>.html" title="<?php echo $this->worldbusiness_item_first['title'] ?>"><img src="<?php echo $this->baseUrl().IMAGES_PATH?>world-business/<?php echo $this->worldbusiness_item_first['pic_thumb'] ?>" alt="<?php echo $this->worldbusiness_item_first['title'] ?>" style="float:left" /></a>
 				<?php endif; ?>
 				<?php echo $this->worldbusiness_item_first['preview'] ?>             
 			</div>
@@ -302,7 +303,7 @@
 							<li><a href="<?php echo $this->baseUrl()?>/the-gioi-doanh-nhan/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'] ?>"><?php echo $value['title'] ?></a></li>
 						<?php endif; ?>
 					<?php else: ?>
-						<li class="ico-dot"><a href="<?php echo $this->baseUrl()?>/the-gioi-doanh-nhan/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'><?php echo $value['title'] ?></a></li>
+						<li class="ico-dot"><a href="<?php echo $this->baseUrl()?>/the-gioi-doanh-nhan/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'] ?>"><?php echo $value['title'] ?></a></li>
 					<?php endif; ?>
 				<?php $i++; endforeach; ?>
 			</ul>
@@ -316,7 +317,7 @@
         <?php  if(isset($this->menu_cat_corporateculture)):?>
 			<ul class="sub-top-tent">
 				<?php foreach ($this->menu_cat_corporateculture as $value) :?>
-				 <li style="border:none"><a href="<?php echo $this->baseUrl() ?>/van-hoa-doanh-nghiep/<?php echo $value['tag'] ?>" title='<?php echo $value['cat_title'] ?>'><?php echo $value['cat_title'] ?></a></li>
+				 <li style="border:none"><a href="<?php echo $this->baseUrl() ?>/van-hoa-doanh-nghiep/<?php echo $value['tag'] ?>" title="<?php echo $value['cat_title'] ?>"><?php echo $value['cat_title'] ?></a></li>
 				 <?php endforeach;?>
 			</ul> <div class="clear"></div>
 		<?php endif;?>
@@ -324,7 +325,7 @@
 		<div class="tent-sub-new">
 			<?php if($this->corporateculture_item_first): ?>
 			<div class="tent-new-left">
-				<h3 class="title-box-left"><a href="<?php echo $this->baseUrl()?>/van-hoa-doanh-nghiep/<?php echo $this->corporateculture_item_first['tag'] ?>.html" title='<?php echo $this->corporateculture_item_first['title'] ?>'><?php echo $this->corporateculture_item_first['title'] ?></a></h3>
+				<h3 class="title-box-left"><a href="<?php echo $this->baseUrl()?>/van-hoa-doanh-nghiep/<?php echo $this->corporateculture_item_first['tag'] ?>.html" title="<?php echo $this->corporateculture_item_first['title'] ?>"><?php echo $this->corporateculture_item_first['title'] ?></a></h3>
 				<?php if($this->corporateculture_item_first['pic_thumb']): ?>
 					<a href="<?php echo $this->baseUrl()?>/van-hoa-doanh-nghiep/<?php echo $this->corporateculture_item_first['tag'] ?>.html" title='<?php echo $this->corporateculture_item_first['title'] ?>'><img src="<?php echo $this->baseUrl().IMAGES_PATH?>corporate-culture/<?php echo $this->corporateculture_item_first['pic_thumb'] ?>" alt='<?php echo $this->corporateculture_item_first['title'] ?>' style="float:left" /></a>
 				<?php endif; ?>
@@ -356,7 +357,7 @@
         <?php  if(isset($this->menu_cat_entertainment)):?>
 			<ul class="sub-top-tent">
 				<?php foreach ($this->menu_cat_entertainment as $value) :?>
-				 <li style="border:none"><a href="<?php echo $this->baseUrl() ?>/giai-tri/<?php echo $value['tag'] ?>" title='<?php echo $value['cat_title'] ?>'><?php echo $value['cat_title'] ?></a></li>
+				 <li style="border:none"><a href="<?php echo $this->baseUrl() ?>/giai-tri/<?php echo $value['tag'] ?>" title="<?php echo $value['cat_title'] ?>"><?php echo $value['cat_title'] ?></a></li>
 				 <?php endforeach;?>
 			</ul> <div class="clear"></div>
 		<?php endif;?> <div class="clear"></div>
@@ -364,7 +365,7 @@
 		<div class="tent-sub-new">
 			<?php if($this->entertainment_item_first): ?>
 			<div class="tent-new-left">
-				<h3 class="title-box-left"><a href="<?php echo $this->baseUrl()?>/giai-tri/<?php echo $this->entertainment_item_first['tag'] ?>.html" title='<?php echo $this->entertainment_item_first['title'] ?>'><?php echo $this->entertainment_item_first['title'] ?></a></h3>
+				<h3 class="title-box-left"><a href="<?php echo $this->baseUrl()?>/giai-tri/<?php echo $this->entertainment_item_first['tag'] ?>.html" title="<?php echo $this->entertainment_item_first['title'] ?>"><?php echo $this->entertainment_item_first['title'] ?></a></h3>
 				<?php if($this->entertainment_item_first['pic_thumb']): ?>
 					<a href="<?php echo $this->baseUrl()?>/giai-tri/<?php echo $this->entertainment_item_first['tag'] ?>.html" title='<?php echo $this->entertainment_item_first['title'] ?>'><img src="<?php echo $this->baseUrl().IMAGES_PATH?>entertainment/<?php echo $this->entertainment_item_first['pic_thumb'] ?>" alt='<?php echo $this->entertainment_item_first['title'] ?>' style="float:left" /></a>
 				<?php endif; ?>
@@ -377,12 +378,12 @@
 				<?php $i=0; foreach($this->entertainment_items as $value): ?>
 					<?php if($i==0):?>
 						<?php if($value['pic_thumb']): ?>
-							<li style="list-style:none"><a href="<?php echo $this->baseUrl()?>/giai-tri/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'><img src="<?php echo $this->baseUrl().IMAGES_PATH ?>entertainment/<?php echo $value['pic_thumb'] ?>" alt='<?php echo $value['title'] ?>' style="float:left"/><?php echo $value['title'] ?></a></li>
+							<li style="list-style:none"><a href="<?php echo $this->baseUrl()?>/giai-tri/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'] ?>"><img src="<?php echo $this->baseUrl().IMAGES_PATH ?>entertainment/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'] ?>" style="float:left"/><?php echo $value['title'] ?></a></li>
 						<?php else: ?>
-							<li><a href="<?php echo $this->baseUrl()?>/giai-tri/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'><?php echo $value['title'] ?></a></li>
+							<li><a href="<?php echo $this->baseUrl()?>/giai-tri/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'] ?>"><?php echo $value['title'] ?></a></li>
 						<?php endif; ?>
 					<?php else: ?>
-						<li  class="ico-dot"><a href="<?php echo $this->baseUrl()?>/giai-tri/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'><?php echo $value['title'] ?></a></li>
+						<li  class="ico-dot"><a href="<?php echo $this->baseUrl()?>/giai-tri/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'] ?>"><?php echo $value['title'] ?></a></li>
 					<?php endif; ?>
 				<?php $i++; endforeach; ?>
 			</ul>
