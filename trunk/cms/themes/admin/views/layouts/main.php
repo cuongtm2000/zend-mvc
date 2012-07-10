@@ -6,10 +6,10 @@
 	<link rel="SHORTCUT ICON" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/x-icon" />
 	<link rel="icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/gif" />
 
+    <link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" />
     <title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->setting['title']) ? ' - '.CHtml::encode($this->setting['title']) : '' ?></title>
     <meta name="keywords" content="<?php echo CHtml::encode($this->setting['keywords']) ?>" />
     <meta name="description" content="<?php echo CHtml::encode($this->setting['description']) ?>" />
-	<link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" />
 
 	<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/ddaccordion.js"></script>
 	<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/ddaccordion.effect.js"></script>
@@ -96,6 +96,14 @@
                         <li><a href="" title="">Sub</a></li>
 					</ul>
 				</li>
+                <li><a class="headerbar" href="">Menu</a>
+                    <ul class="submenu">
+                        <li><a href="" title="">Sub</a></li>
+                        <li><a href="" title="">Sub</a></li>
+                        <li><a href="" title="">Sub</a></li>
+                        <li><a href="" title="">Sub</a></li>
+                    </ul>
+                </li>
 			</ul>
 		</div>
 	</div>

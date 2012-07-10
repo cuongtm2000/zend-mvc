@@ -28,6 +28,7 @@ class BackEndController extends CController {
     }
 
     public function init() {
+        Yii::app()->getClientScript()->registerCoreScript('jquery');
         Yii::app()->theme = 'admin';
 
         //Get Setting
