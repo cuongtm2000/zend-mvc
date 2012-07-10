@@ -160,7 +160,48 @@
 				'separator'=>'<b>|</b>',
 				)); ?> <!-- breadcrumbs -->
             	<?php echo $content ?>
-            </div><!--End right content--> <div class="clear"></div>
+            </div><!--End right content--> 
+			<div id="columns3">
+				<?php if(isset($this->function['video_hot']) && ($this->function['video_hot'])):?>
+				<h2 class="title-box"><span><?php echo $this->lang['video'] . ' ' . strtolower($this->lang['hot'])?></span></h2>
+				<div class="frame-leftcontent video">
+					<a href="<?php echo CHtml::encode($this->function['video_hot']['url']) ?>" rel="prettyPhoto" title="<?php echo $this->function['video_hot']['title'.LANG] ?>">
+						<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/video/<?php echo $this->function['video_hot']['pic_thumb'] ?>" alt="<?php echo $this->function['video_hot']['title'.LANG] ?>"/>
+					</a>
+				</div>
+					<script type="text/javascript">$(document).ready(function () {$(".video a[rel^='prettyPhoto']").prettyPhoto();});</script>
+				<?php endif?>
+				
+				<?php if(isset($this->function['news_new']) && ($this->function['news_new'])):?>
+				<h2 class="title-box"><span><?php echo CHtml::encode($this->lang['news']) . ' ' . strtolower($this->lang['new'])?></span></h2>
+				<ul class="frame-leftcontent sub-new">
+					<?php foreach($this->function['news_new'] as $value):?>
+						<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
+					<?php endforeach?>
+				</ul>
+				<?php endif?>
+				
+				<?php if(isset($this->function['news_hot']) && ($this->function['news_hot'])):?>
+				<h2 class="title-box"><span><?php echo CHtml::encode($this->lang['news']) . ' ' . strtolower($this->lang['hot'])?></span></h2>
+				<ul class="frame-leftcontent sub-new">
+					<?php foreach($this->function['news_hot'] as $value):?>
+					<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
+					<?php endforeach?>
+				</ul>
+				<?php endif?>
+			
+				<?php if(isset($this->function['advs_right']) && ($this->function['advs_right'])):?>
+				<h2 class="title-left"><span><?php echo $this->lang['advs'] ?></span></h2>
+				<ul class="frame-leftcontent bg-adv">
+					<?php foreach($this->function['advs_right'] as $value): ?>
+					<li>
+						<a href="<?php echo $value['url'] ?>" target="<?php echo $value['type'] ?>" title="<?php echo $value['title'.Yii::app()->session['lang']] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.Yii::app()->session['lang']] ?>" /></a>
+					</li>
+					<?php endforeach; ?>
+				</ul>
+				<?php endif;?>
+			</div> <!--End columns3-->
+			<div class="clear"></div>
         </div><!--End content-->
     <div id="footer">
         <ul class="nav-fter">
