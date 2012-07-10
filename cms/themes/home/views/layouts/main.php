@@ -10,9 +10,9 @@
 <link rel="icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/gif" />
 
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/advanced-slider-base.css" />
-
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.7.1.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/advanced-slider-base.css" />
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.advancedSlider.min.js"></script>
 <!--[if IE]><script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/excanvas.compiled-ie.js"></script><![endif]-->
 <!--[if lt IE 8]><script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.sider.banner-ie.js"></script> <![endif]-->
@@ -38,9 +38,8 @@
             </div> <!--End lang-->	<div class="clear"></div>
         </div><!--End header-->
         <div id="all-nav">
-            <div id="smoothmenu1" class="ddsmoothmenu">
-                <?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel');?>
-            </div>
+            <?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel');?>
+
             <?php /*$this->widget('zii.widgets.CMenu',array(
                 'id' => 'nav',
                 'items'=>array(
@@ -70,7 +69,7 @@
 	<div id="content">
 	   <div id="leftcontent">
 			<div class="frame-leftcontent">
-            <?php var_dump($this->action->id); $positions = Position::model()->setPosition('left', isset($this->module->id) ? $this->module->id : null);?>
+            <?php $positions = Position::model()->setPosition('left', isset($this->module->id) ? $this->module->id : null);?>
             <?php foreach($positions as $value):?>
                 <?php echo $this->renderPartial('//'.$value['hoiit_modules_module_id'].'/'.$value['function_value'], array($value['function_value'] => $value['function_name']::model()->$value['functiol_call']())) ?>
             <?php endforeach;?>
