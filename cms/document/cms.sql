@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 08, 2012 at 12:19 PM
+-- Generation Time: Jul 10, 2012 at 05:18 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -126,11 +126,13 @@ INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_sort`) VALUES
 
 CREATE TABLE IF NOT EXISTS `hoiit_module_about` (
   `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `pic_thumb` varchar(100) DEFAULT NULL,
   `created` varchar(45) NOT NULL DEFAULT 'CURRENT_TIMESTAMP',
   `record_order` smallint(6) DEFAULT NULL,
   `hot` tinyint(1) NOT NULL DEFAULT '0',
   `field1` varchar(100) DEFAULT NULL,
   `field2` varchar(100) DEFAULT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`record_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
@@ -138,8 +140,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about` (
 -- Dumping data for table `hoiit_module_about`
 --
 
-INSERT INTO `hoiit_module_about` (`record_id`, `created`, `record_order`, `hot`, `field1`, `field2`) VALUES
-(1, 'CURRENT_TIMESTAMP', NULL, 0, NULL, NULL);
+INSERT INTO `hoiit_module_about` (`record_id`, `pic_thumb`, `created`, `record_order`, `hot`, `field1`, `field2`, `enable`) VALUES
+(1, NULL, 'CURRENT_TIMESTAMP', 1, 0, NULL, NULL, 1),
+(2, NULL, 'CURRENT_TIMESTAMP', 2, 0, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -157,7 +160,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
   `hit` int(11) NOT NULL DEFAULT '0',
   `extra_field1` varchar(100) DEFAULT NULL,
   `extra_field2` varchar(100) DEFAULT NULL,
-  `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`,`language_id`),
   KEY `fk_hoiit_about_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_about_has_hoiit_languages_hoiit_about1` (`record_id`)
@@ -167,9 +169,38 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
 -- Dumping data for table `hoiit_module_about_languages`
 --
 
-INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`, `enable`) VALUES
-(1, 'en', 'saasas', 'asasasa', 'assasssa', NULL, 3, NULL, NULL, 1),
-(1, 'vi', 'Tieu de', 'Noi dung', 'tieu-de', 'Mo ta noi dung', 34, NULL, NULL, 1);
+INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
+(1, 'en', 'Tam nhin su menh', 'Tam nhin', 'tam-nhin-su-menh', NULL, 4, NULL, NULL),
+(1, 'vi', 'Gioi thieu cong ty', 'Noi dung', 'gioi-thieu-cong-ty', NULL, 4, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_menus`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_menus` (
+  `menu_id` smallint(6) NOT NULL AUTO_INCREMENT,
+  `parent_id` smallint(6) NOT NULL DEFAULT '0',
+  `menu_name` varchar(100) NOT NULL,
+  `menu_url` varchar(255) NOT NULL,
+  `menu_target` enum('_self','_blank') DEFAULT NULL,
+  `menu_sort` smallint(6) NOT NULL DEFAULT '0',
+  `menu_homepage` tinyint(1) NOT NULL DEFAULT '0',
+  `menu_activated` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`menu_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `hoiit_module_menus`
+--
+
+INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_name`, `menu_url`, `menu_target`, `menu_sort`, `menu_homepage`, `menu_activated`) VALUES
+(1, 0, 'Home page', 'default', '', 1, 1, 1),
+(2, 0, 'About', 'about', NULL, 2, 0, 1),
+(3, 0, 'Contact', 'contact', NULL, 3, 0, 1),
+(4, 2, 'About Sub', 'about-sub', NULL, 1, 0, 1),
+(5, 4, 'Sub', 'sub', NULL, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -206,7 +237,6 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 CREATE TABLE IF NOT EXISTS `hoiit_settings` (
   `setting_name` varchar(30) NOT NULL,
   `setting_value` varchar(100) NOT NULL,
-  `setting_desc` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`setting_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -214,8 +244,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_settings` (
 -- Dumping data for table `hoiit_settings`
 --
 
-INSERT INTO `hoiit_settings` (`setting_name`, `setting_value`, `setting_desc`) VALUES
-('default_language', 'vi', NULL);
+INSERT INTO `hoiit_settings` (`setting_name`, `setting_value`) VALUES
+('default_language', 'vi'),
+('title', 'Welcome to Yii Project');
 
 -- --------------------------------------------------------
 
