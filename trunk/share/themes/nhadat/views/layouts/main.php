@@ -69,7 +69,7 @@
             </div><!--End header-->
             <div class="hder-fter">
                 <div class="hder-fter-left">
-                    <h2 class="title-list"><span><a href="<?php echo Yii::app()->baseUrl ?>">TRANG CHỦ</a></span></h2>
+                    <h2 class="title-list"><span><a href="<?php echo Yii::app()->baseUrl ?>/">TRANG CHỦ</a></span></h2>
                 </div>
                 <div class="all-right-fter" >
                     <form action="" id="frm-search" name="frmlistproduct" method="post">

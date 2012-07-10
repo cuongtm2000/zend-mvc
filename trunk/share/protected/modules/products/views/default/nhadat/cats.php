@@ -11,7 +11,7 @@ $this->description = $info_cat['description' . LANG]; ?>
                 <div class="product-img">
                     <a href="<?php echo Yii::app()->request->baseUrl . LANGURL ?>/<?php echo Yii::t('user', $this->module->id . '.link') ?>/<?php echo $value['tag' . LANG] ?>" title="<?php echo $value['cat_title' . LANG] ?>">
                         <?php if ($value['pic_full']): ?>
-                            <img src="<?php echo Yii::app()->baseUrl . USERFILES ?>/<?php echo $this->module->id ?>Cat/<?php echo $value['pic_full'] ?>" alt="<?php echo $value['cat_title' . LANG] ?>" />
+                            <img src="<?php echo Yii::app()->baseUrl .'/public/userfiles/image/' . $value['dos_username'] . '/image/'?>/productsCat/<?php echo $value['pic_full'] ?>" alt="<?php echo $value['cat_title' . LANG] ?>" />
                         <?php else : ?>
                             <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-product.jpg" alt="" />
         <?php endif; ?>
@@ -35,7 +35,7 @@ $this->description = $info_cat['description' . LANG]; ?>
                             <div class="frame-img-pro"> 
                                 <a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag' . LANG] ?>/<?php echo $value['tag' . LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>">
                                     <?php if ($value['pic_thumb']): ?>
-                                        <img src="<?php echo Yii::app()->baseUrl . USERFILES ?>/<?php echo $this->module->id ?>/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title' . LANG] ?>" />
+                                        <img src="<?php echo Yii::app()->baseUrl .'/public/userfiles/image/' . $value['dos_username'] . '/image/'?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title' . LANG] ?>" />
                                     <?php else : ?>
                                         <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-product.jpg" alt="no product" />
         <?php endif; ?>

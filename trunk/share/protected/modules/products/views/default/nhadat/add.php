@@ -290,7 +290,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $("#add-rows").click(function(){
-                $(".rows").before('<div class="col1"><?php echo $this->lang['pic_desc'] ?></div><div class="col2"><input type="file" name="<?php echo ucfirst($this->ID) ?>[pic_desc][]" size="40%" /></div><div class="clear space"></div>');
+                $(".rows").before('<div class="col1"><?php echo $this->lang['pic_desc'] ?></div><div class="col2"><input type="file" name="Products[pic_desc][]" size="40%" /></div><div class="clear space"></div>');
                 return false;
             });
         });

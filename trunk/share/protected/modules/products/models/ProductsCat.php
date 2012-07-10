@@ -500,7 +500,7 @@ class ProductsCat extends CActiveRecord {
 
     //Back end - Delete Record
     public function deleteRecord($id) {
-        $item = $this::model()->find('cat_id=:id', array(':id' => $id));
+        $item = $this->model()->find('cat_id=:id', array(':id' => $id));
         $common_class = new Common();
         $common_class->removePic($item->pic_full, 0, 1, 'Cat');
         $common_class->removePic($item->pic_desc, 1, 1, 'Cat');
@@ -522,7 +522,7 @@ class ProductsCat extends CActiveRecord {
           }
           }
           } */
-        $this::model()->findByPk($id)->delete(); //delete record
+        $this->model()->findByPk($id)->delete(); //delete record
     }
 
     //Xóa tất cả item của phân loại con
