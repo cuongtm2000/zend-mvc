@@ -106,7 +106,7 @@ class AboutLanguage extends CActiveRecord {
 
     //Front end - Get detail record
     public function detailRecord($tag) {
-        $command = Yii::app()->db->createCommand('SELECT title, content, description FROM ' . $this->tableName() . ' WHERE language_id=\'' . Yii::app()->language . '\' AND tag=:tag AND enable=1');
+        $command = Yii::app()->db->createCommand('SELECT title, content, description FROM ' . $this->tableName() . ' WHERE language_id=\'' . Yii::app()->language . '\' AND tag=:tag');
         $command->bindParam(":tag", $tag, PDO::PARAM_STR);
 
         $row = $command->queryRow();
