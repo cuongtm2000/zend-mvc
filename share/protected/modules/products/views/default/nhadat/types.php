@@ -11,7 +11,7 @@
                         <td width="100">
                             <div class="frame-img-pro"> <a href="<?php echo Yii::app()->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag' . LANG] ?>/<?php echo $value['tag' . LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>">
                                     <?php if ($value['pic_thumb']): ?>
-                                        <img src="<?php echo Yii::app()->baseUrl . USERFILES ?>/<?php echo $this->module->id ?>/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title' . LANG] ?>" />
+                                        <img src="<?php echo Yii::app()->baseUrl .'/public/userfiles/image/' . $value['dos_username'] . '/image/'?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title' . LANG] ?>" />
                                     <?php else : ?>
                                         <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-product.jpg" alt="no product" />
                                     <?php endif; ?>
