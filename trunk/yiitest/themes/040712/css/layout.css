@@ -66,7 +66,7 @@ a:hover{color:#000;}
 .bg-adv li{padding:0 0 5px 0}
 
 /*Right content*/
-#rightcontent{float:right; width:735px}
+#rightcontent{float:left; width:520px;margin:0 0 0 8px}
 #rightcontent p{margin:0 0 10px 0}
 #rightcontent ul li, #right-content ol li{margin: 4px 0 4px 40px}
 #rightcontent ul ,#right-content ol{margin: 0 0 12px 0}
@@ -84,8 +84,9 @@ a:hover{color:#000;}
 
 /***** Product    *****/
 #rightcontent .all-product{margin:0 ;list-style:none;padding:0}
-#rightcontent .product{width:170px;padding:5px 0 15px 0;text-align:center;margin:0 0 10px 8px; border:1px solid #ddd;display:inline-block; vertical-align:top;*float:left;*margin:0 10px 10px 0}
-.product-img{height:160px; width:170px;display:table-cell;vertical-align:middle; padding:0 0 10px 0}
+#rightcontent .product{width:165px;padding:5px 0 15px 0;text-align:center;margin:0 0 10px 3px; border:1px solid #ddd;display:inline-block; vertical-align:top;*float:left;*margin:0 10px 10px 0}
+.product-img{height:160px; width:165px;display:table-cell;vertical-align:middle; padding:0 0 10px 0}
+.product-img img{width:155px; height:155px}
 .tent-product{padding:0 5px}
 #rightcontent .price{color:#000; font-weight:700; font-size:13px; margin:7px 0 10px 0}
 .title-pro{padding:7px 0 0 0 ; font-size:10pt}
@@ -93,7 +94,6 @@ a:hover{color:#000;}
 .title-pro a:hover{ text-decoration:underline}
 .add-to-cart{padding: 5px 0 8px 5px; font-weight:700;background:url(../images/bkg_btn.png) no-repeat left top;*padding:0 0 0 5px;*height:25px}
 .add-to-cart span{background:url(../images/bkg_btn.png) no-repeat right top; padding:5px 15px 8px 10px; height:25px;color:#fff}
-
 /***    Page product-info     ****/
 .frame-pro-info{padding:0 0}
 .row-info{margin: 0 0 15px 0}
@@ -135,6 +135,14 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 
 /*Columns 3*/
 #columns3{ float:right; width:206px}
+
+.video{text-align:center;padding:5px 0}
+
+/**  Sub new   **/
+.sub-new{list-style:none;padding:10px 10px 10px 15px}
+.sub-new li{padding:3x 0;line-height:1.5em}
+.sub-new li a{ display:block;color:#161616;background:url(../images/bullet.gif) no-repeat left 7px; padding:1px 0 1px 15px}
+.sub-new li a:hover{color:#f90}
 
 /*Footer*/
 #footer{text-align:center;margin:0 0 5px 0}

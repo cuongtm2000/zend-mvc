@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 05, 2012 at 10:55 AM
+-- Generation Time: Jul 10, 2012 at 02:16 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -118,6 +118,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('advs_left_height', 220, '', '020512'),
 ('advs_left_height', 287, '', '030712'),
 ('advs_left_height', 267, '', '040612'),
+('advs_left_height', 238, '', '040712'),
 ('advs_left_height', 273, '', '050712'),
 ('advs_left_height', 160, '', '070312'),
 ('advs_left_height', 200, '', '070512'),
@@ -166,6 +167,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('advs_right_height', 300, '', '270412'),
 ('advs_right_height', 300, '', '310512'),
 ('advs_right_width', 190, '', '010312'),
+('advs_right_width', 206, '', '040712'),
 ('advs_right_width', 205, '', '050712'),
 ('advs_right_width', 190, '', '220312'),
 ('advs_right_width', 164, '', '270412'),
@@ -509,7 +511,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_cat_height', 198, '', '020512'),
 ('products_cat_height', 145, '', '030712'),
 ('products_cat_height', 170, '', '040612'),
-('products_cat_height', 160, '', '040712'),
+('products_cat_height', 155, '', '040712'),
 ('products_cat_height', 90, '', '050712'),
 ('products_cat_height', 200, '', '070312'),
 ('products_cat_height', 160, '', '070512'),
@@ -533,7 +535,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_cat_width', 170, '', '020512'),
 ('products_cat_width', 170, '', '030712'),
 ('products_cat_width', 170, '', '040612'),
-('products_cat_width', 160, '', '040712'),
+('products_cat_width', 155, '', '040712'),
 ('products_cat_width', 120, '', '050712'),
 ('products_cat_width', 150, '', '070312'),
 ('products_cat_width', 160, '', '070512'),
@@ -557,7 +559,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_height', 500, '', '020512'),
 ('products_height', 900, '', '030712'),
 ('products_height', 880, '', '040612'),
-('products_height', 930, '', '040712'),
+('products_height', 667, '', '040712'),
 ('products_height', 667, '', '050712'),
 ('products_height', 500, '', '070312'),
 ('products_height', 860, '', '070512'),
@@ -581,7 +583,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_height_thumb', 198, '', '020512'),
 ('products_height_thumb', 145, '', '030712'),
 ('products_height_thumb', 170, '', '040612'),
-('products_height_thumb', 160, '', '040712'),
+('products_height_thumb', 155, '', '040712'),
 ('products_height_thumb', 90, '', '050712'),
 ('products_height_thumb', 200, '', '070312'),
 ('products_height_thumb', 160, '', '070512'),
@@ -605,7 +607,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_cat', 20, '', '020512'),
 ('products_num_paging_cat', 15, '', '030712'),
 ('products_num_paging_cat', 15, '', '040612'),
-('products_num_paging_cat', 20, '', '040712'),
+('products_num_paging_cat', 15, '', '040712'),
 ('products_num_paging_cat', 20, '', '050712'),
 ('products_num_paging_cat', 16, '', '070312'),
 ('products_num_paging_cat', 16, '', '070512'),
@@ -629,7 +631,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_hot', 20, '', '020512'),
 ('products_num_paging_hot', 15, '', '030712'),
 ('products_num_paging_hot', 15, '', '040612'),
-('products_num_paging_hot', 20, '', '040712'),
+('products_num_paging_hot', 15, '', '040712'),
 ('products_num_paging_hot', 20, '', '050712'),
 ('products_num_paging_hot', 8, '', '070312'),
 ('products_num_paging_hot', 12, '', '070512'),
@@ -652,7 +654,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_new', 20, '', '020512'),
 ('products_num_paging_new', 15, '', '030712'),
 ('products_num_paging_new', 15, '', '040612'),
-('products_num_paging_new', 20, '', '040712'),
+('products_num_paging_new', 15, '', '040712'),
 ('products_num_paging_new', 20, '', '050712'),
 ('products_num_paging_new', 16, '', '070312'),
 ('products_num_paging_new', 12, '', '070512'),
@@ -676,7 +678,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_num_paging_other', 4, '', '020512'),
 ('products_num_paging_other', 3, '', '030712'),
 ('products_num_paging_other', 3, '', '040612'),
-('products_num_paging_other', 4, '', '040712'),
+('products_num_paging_other', 3, '', '040712'),
 ('products_num_paging_other', 4, '', '050712'),
 ('products_num_paging_other', 4, '', '070312'),
 ('products_num_paging_other', 4, '', '070512'),
@@ -700,7 +702,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_width', 500, '', '020512'),
 ('products_width', 680, '', '030712'),
 ('products_width', 660, '', '040612'),
-('products_width', 700, '', '040712'),
+('products_width', 500, '', '040712'),
 ('products_width', 500, '', '050712'),
 ('products_width', 600, '', '070312'),
 ('products_width', 660, '', '070512'),
@@ -724,7 +726,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('products_width_thumb', 170, '', '020512'),
 ('products_width_thumb', 170, '', '030712'),
 ('products_width_thumb', 170, '', '040612'),
-('products_width_thumb', 160, '', '040712'),
+('products_width_thumb', 155, '', '040712'),
 ('products_width_thumb', 120, '', '050712'),
 ('products_width_thumb', 150, '', '070312'),
 ('products_width_thumb', 160, '', '070512'),
@@ -796,7 +798,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_height_thumb', 150, '', '020512'),
 ('video_height_thumb', 145, '', '030712'),
 ('video_height_thumb', 170, '', '040612'),
-('video_height_thumb', 160, '', '040712'),
+('video_height_thumb', 155, '', '040712'),
 ('video_height_thumb', 90, '', '050712'),
 ('video_height_thumb', 160, '', '070312'),
 ('video_height_thumb', 160, '', '070512'),
@@ -867,7 +869,7 @@ INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_te
 ('video_width_thumb', 170, '', '020512'),
 ('video_width_thumb', 170, '', '030712'),
 ('video_width_thumb', 170, '', '040612'),
-('video_width_thumb', 160, '', '040712'),
+('video_width_thumb', 155, '', '040712'),
 ('video_width_thumb', 120, '', '050712'),
 ('video_width_thumb', 160, '', '070312'),
 ('video_width_thumb', 160, '', '070512'),
@@ -1058,6 +1060,8 @@ INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, 
 ('040612', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
 ('040612', 'video', 'prettyPhoto.css', 'css'),
 ('040612', 'video', 'jquery.prettyPhoto.js', 'javascript'),
+('040712', 'default', 'prettyPhoto.css', 'css'),
+('040712', 'default', 'jquery.prettyPhoto.js', 'javascript'),
 ('040712', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
 ('040712', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
 ('040712', 'video', 'prettyPhoto.css', 'css'),
@@ -1280,7 +1284,7 @@ INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `co
 (82, '230412 COFFEE', '', '<p style="text-align:justify;">Các bạn thân mến,<br />Trong thời gian vừa qua. <span style="color:#993300;"><strong>230412 COFFEE </strong></span>đã chuyển qua 2 giai đoạn với 2 phiên bản demo và mở rộng. Tuy nhiên, chưa thực sự trở thành website hữu ích với mức độ tương tác giữa người truy cập. Do đó, chúng tôi hân hoan thông báo tới toàn thể thành viên thường xuyên truy cập vào <strong><span style="color:#993300;">230412 COFFEE</span></strong> , thành viên góp ý về việc nâng cấp phiên bản mới với các nội dung trong bản Beta như sau:<br />- Bạn có thể sử dụng guidebook cho các chuyến đi của mình trên 2 bản App cho điện thoại và online trực tuyến.<br />- Đăng kí thành viên. Tham gia trực tiếp và quản lý các hoạt động offline, chuyến đi của mình.<br />- Chia sẻ chuyến đi, post bài kinh nghiệm v.v qua khả năng kết nối mới.<br />- Giao diện thân thiện, dễ sử dụng<br />- Các tiện ích khác biệt, lợi ích vô hạn cho thành viên thường xuyên.<br />Và còn rất nhiều các tiện ích khác.</p>\n<p style="text-align:justify;">Dự tính phiên bản <strong><span style="color:#993300;">230412 COFFEE</span></strong> sẽ thử nghiệm online trong khoảng thời gian từ 15/2/2012 - 30/2/2012.</p>\n<p style="text-align:justify;">Rất mong trong thời gian chờ đợi phiên bản mới. Các bạn vẫn luôn theo sát chúng tôi và chia sẻ cùng chúng tôi tại phuotcafe.com hiện tại.</p>\n<p style="text-align:justify;"> </p>', '', 9, '2012-04-26 09:25:37', 1, 0, '', '', '230412-coffee', '', '230412 COFFEE', '', 1, '230412'),
 (86, 'Giới thiệu sơ lược', '', '<p>Hoà mình vào sự phát triển chung của đất nước với những biến đổi không ngừng của thời cuộc, mỗi doanh nghiệp bằng thực lực và những kế sách đúng đắn của mình luôn tìm được một vị trí xứng đáng trong nền kinh tế thị trường đầy khắc nghiệt. Không là một ngoại lệ với kinh nghiệm nhiều năm hoạt động trong lĩnh vực. SẮT - NHÔM – INOX, với một đội ngũ công nhân lành nghề, tác phong chuyên nghiệp, sản phẩm chất lượng, đa dạng phù hợp kiến trúc và thẩm mỹ mọi công trình, cùng với giá cả hợp lý, hậu mãi chu đáo đã nhanh chóng chiếm lĩnh và chinh phục nhiều khách hàng lớn và khó tính, dần dần khẳng định vị thế của mình trong lĩnh vực xây dựng nói chung và hoạt động sản xuất kinh doanh cửa panô, cửa cuốn, cửa sắt, cửa cổng xếp, trụ lan can kính, cầu thang kính, lan can, cầu thang sắt, Inox, mặt dựng nhôm kính, mặt dựng aluminium, vách ngăn</p>', '', 38, '2012-05-03 14:39:49', 1, 1, NULL, NULL, 'gioi-thieu-so-luoc', '', '', '', 1, 'ducpano'),
 (87, 'Giới thiệu công ty', '', '<p>Nội dung gioi thiệu</p>', '', 5, '2012-05-03 14:40:19', 2, 0, NULL, NULL, 'gioi-thieu-cong-ty', '', '', '', 1, 'ducpano'),
-(90, 'Giới thiệu công ty', '', '<p style="text-align:justify;">Shop thời trang <strong>240312 </strong>là doanh nghiệp chuyên cung cấp các sản phẩm đồ da trên thị trường Việt Nam từ năm 2001.</p>\r\n<p style="text-align:justify;"><strong>240312 </strong>là nhà phân phối trực tuyến các sản phẩm túi xách, ví da, dây lưng da, kính thời trang, giầy, xăng đan, thời trang quốc tế được nhập khẩu từ nước ngoài về.</p>\r\n<p style="text-align:justify;">Bên cạnh việc phân phối trực tuyến cho các khách hàng Hà Nội, TPHCM và các tỉnh, shop còn có 4 showroom trưng bày tại Hà Nội, mở cửa từ 8h - 22h hàng ngày.</p>\r\n<p style="text-align:justify;">Nhịp sống hiện đại ngày càng ảnh hưởng đến lối sống của mọi tầng lớp xã hội. Trong đó, giới trẻ là những người chịu ảnh hưởng nhiều nhất của lối sống mới này. Trong một cuộc điều tra nhỏ về nhu cầu mua sắm và chăm chút cho vẻ bề ngoài xinh đẹp của giới nữ thì có tới 99% cho kết quả thuận. Bởi vì đời sống ngày càng phát triền, những bộ trang phục và theo đó những phụ kiệm đi kèm, có thể nói lên phong cách và cá tính rất riêng của họ. Chúng tôi hiểu và đã cho ra đời website <strong>240312</strong> nhằm đáp ứng nhu cầu đấy, nhưng theo một cách khác, mới hơn và hoàn hảo hơn.</p>\r\n<p style="text-align:justify;">Hiện nay, xu hướng thương mại điện tử đang phát triển rất mạnh, trong tương lai sẽ là mô hình chủ đạo và tất yếu, <strong>240312</strong> đã tạo nên sự khác biệt bởi chính hình thức này: Một mô hình cửa hàng trực tuyến, cung cấp mọi góc độ của sản phẩm nhằm giúp khách hàng dễ dàng chọn lựa sản phẩm yêu thích, liên tục cập nhật mẫu mã đa dạng và kèm theo đó là phong cách bán hàng chuyên nghiệp, chu đáo giúp cho bạn trẻ, những người bận rộn, những người làm việc văn phòng không có thời gian đi shopping vẫn có thể thỏa sức mua sắm. với mô hình này chúng tôi đã và đang làm hài lòng tất cả các Khách hàng.</p>', '', 537, '2012-05-03 07:46:57', 1, 1, '', '', 'gioi-thieu-cong-ty', '', 'tui xach  túi xách thời trang  giới thiệu  túi xách  túi hàng hiệu  túi hàng hiệu  cặp da cao cấp  túi ví  túi máy tính  cặp xách  tui dep  may tinh bo tui  túi xách nam  túi xách nữ  túi chống sốc  hang tui xach  túi xách đẹp  tui xach dep  công ty', '', 1, '240312'),
+(90, 'Giới thiệu công ty', '', '<p style="text-align:justify;">Shop thời trang <strong>240312 </strong>là doanh nghiệp chuyên cung cấp các sản phẩm đồ da trên thị trường Việt Nam từ năm 2001.</p>\r\n<p style="text-align:justify;"><strong>240312 </strong>là nhà phân phối trực tuyến các sản phẩm túi xách, ví da, dây lưng da, kính thời trang, giầy, xăng đan, thời trang quốc tế được nhập khẩu từ nước ngoài về.</p>\r\n<p style="text-align:justify;">Bên cạnh việc phân phối trực tuyến cho các khách hàng Hà Nội, TPHCM và các tỉnh, shop còn có 4 showroom trưng bày tại Hà Nội, mở cửa từ 8h - 22h hàng ngày.</p>\r\n<p style="text-align:justify;">Nhịp sống hiện đại ngày càng ảnh hưởng đến lối sống của mọi tầng lớp xã hội. Trong đó, giới trẻ là những người chịu ảnh hưởng nhiều nhất của lối sống mới này. Trong một cuộc điều tra nhỏ về nhu cầu mua sắm và chăm chút cho vẻ bề ngoài xinh đẹp của giới nữ thì có tới 99% cho kết quả thuận. Bởi vì đời sống ngày càng phát triền, những bộ trang phục và theo đó những phụ kiệm đi kèm, có thể nói lên phong cách và cá tính rất riêng của họ. Chúng tôi hiểu và đã cho ra đời website <strong>240312</strong> nhằm đáp ứng nhu cầu đấy, nhưng theo một cách khác, mới hơn và hoàn hảo hơn.</p>\r\n<p style="text-align:justify;">Hiện nay, xu hướng thương mại điện tử đang phát triển rất mạnh, trong tương lai sẽ là mô hình chủ đạo và tất yếu, <strong>240312</strong> đã tạo nên sự khác biệt bởi chính hình thức này: Một mô hình cửa hàng trực tuyến, cung cấp mọi góc độ của sản phẩm nhằm giúp khách hàng dễ dàng chọn lựa sản phẩm yêu thích, liên tục cập nhật mẫu mã đa dạng và kèm theo đó là phong cách bán hàng chuyên nghiệp, chu đáo giúp cho bạn trẻ, những người bận rộn, những người làm việc văn phòng không có thời gian đi shopping vẫn có thể thỏa sức mua sắm. với mô hình này chúng tôi đã và đang làm hài lòng tất cả các Khách hàng.</p>', '', 538, '2012-05-03 07:46:57', 1, 1, '', '', 'gioi-thieu-cong-ty', '', 'tui xach  túi xách thời trang  giới thiệu  túi xách  túi hàng hiệu  túi hàng hiệu  cặp da cao cấp  túi ví  túi máy tính  cặp xách  tui dep  may tinh bo tui  túi xách nam  túi xách nữ  túi chống sốc  hang tui xach  túi xách đẹp  tui xach dep  công ty', '', 1, '240312'),
 (91, 'Giới thiệu chung', '', '<p>Giới thiệu chung</p>', '', 136, '2012-05-24 02:41:56', 2, 0, NULL, NULL, 'gioi-thieu-chung', '', 'Giới thiệu chung', '', 1, '240312');
 
 -- --------------------------------------------------------
@@ -1596,10 +1600,10 @@ INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`, `dos_username
 ('max_count', 1, 'ducpano'),
 ('counter', 2, 'ducpano'),
 ('yesterday', 0, 'ducpano'),
-('day_time', 2456114, '240312'),
+('day_time', 2456119, '240312'),
 ('max_count', 1, '240312'),
-('counter', 18, '240312'),
-('yesterday', 1, '240312');
+('counter', 19, '240312'),
+('yesterday', 0, '240312');
 
 -- --------------------------------------------------------
 
@@ -1619,7 +1623,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`, `dos_usernames_username`) VALUES
-('''127.0.0.1''', 1341478500, '240312');
+('''127.0.0.1''', 1341879346, '240312');
 
 -- --------------------------------------------------------
 
@@ -2548,28 +2552,43 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('040612', 'video', 'list_supports'),
 ('040612', 'video', 'menu_video'),
 ('040712', 'about', 'advs_left'),
+('040712', 'about', 'advs_right'),
 ('040712', 'about', 'list_supports'),
 ('040712', 'about', 'menu_about'),
+('040712', 'about', 'news_new'),
 ('040712', 'contact', 'advs_left'),
+('040712', 'contact', 'advs_right'),
 ('040712', 'contact', 'list_supports'),
 ('040712', 'contact', 'menu_products'),
+('040712', 'contact', 'news_new'),
 ('040712', 'default', 'about_home'),
 ('040712', 'default', 'advs_left'),
+('040712', 'default', 'advs_right'),
 ('040712', 'default', 'list_supports'),
 ('040712', 'default', 'menu_products'),
+('040712', 'default', 'news_new'),
 ('040712', 'default', 'products_new'),
 ('040712', 'news', 'advs_left'),
+('040712', 'news', 'advs_right'),
 ('040712', 'news', 'list_supports'),
 ('040712', 'news', 'menu_news'),
+('040712', 'news', 'news_hot'),
+('040712', 'news', 'news_new'),
 ('040712', 'products', 'advs_left'),
+('040712', 'products', 'advs_right'),
 ('040712', 'products', 'list_supports'),
 ('040712', 'products', 'menu_products'),
+('040712', 'products', 'news_new'),
 ('040712', 'services', 'advs_left'),
+('040712', 'services', 'advs_right'),
 ('040712', 'services', 'list_supports'),
 ('040712', 'services', 'menu_services'),
+('040712', 'services', 'news_new'),
 ('040712', 'video', 'advs_left'),
+('040712', 'video', 'advs_right'),
 ('040712', 'video', 'list_supports'),
 ('040712', 'video', 'menu_video'),
+('040712', 'video', 'news_hot'),
 ('050712', 'about', 'advs_left'),
 ('050712', 'about', 'advs_right'),
 ('050712', 'about', 'list_supports'),
@@ -3106,7 +3125,7 @@ INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullna
 ('070312', 'info@dos.vn', 'd85287e7f9ec18990d6d2dce0b1692b5', '2012-04-25 07:28:23', '', '', '', 'user', 'vi', '', '2012-05-24 17:00:00', 0, '20122012', NULL, 1, '070312', 19, 'thoi-trang'),
 ('200312', 'info@dos.vn', 'd85287e7f9ec18990d6d2dce0b1692b5', '2012-04-25 07:17:56', '', '', '', 'user', 'vi', '', '2012-05-24 17:00:00', 0, '20122012', NULL, 1, '200312', 1, 'giao-duc-dao-tao'),
 ('230412', 'info@dos.vn', 'd85287e7f9ec18990d6d2dce0b1692b5', '2012-04-26 09:03:32', '', '', '', 'user', 'vi', '', '2012-05-25 17:00:00', 0, '20122012', NULL, 1, '230412', 19, 'nha-hang-cafe'),
-('240312', 'info@dos.vn', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-03 02:01:30', 'Bảo', '01234 567 890', 'Công Ty CP Thương Hội', 'user', 'vi|en', '', '2013-06-14 17:00:00', 1, '20122012', NULL, 1, '050712', 1, 'thoi-trang'),
+('240312', 'info@dos.vn', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-03 02:01:30', 'Bảo', '01234 567 890', 'Công Ty CP Thương Hội', 'user', 'vi|en', '', '2013-06-14 17:00:00', 1, '20122012', NULL, 1, '040712', 1, 'thoi-trang'),
 ('dos', 'info@dos.vn', '1960fdca5ecf16c0ddb74fdc814ee348', '2012-02-06 09:58:28', '', '', '', 'administrator', 'vi|en', NULL, '2012-04-14 17:00:00', 0, '20122012', NULL, 1, '230412', 2, 'cong-nghe-thong-tin-vien-thong'),
 ('ducpano', 'ducpano@yahoo.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-05-03 14:10:09', 'Nguyen An', '0903337654', '', 'user', 'vi', NULL, '2012-06-21 17:00:00', 0, '20122012', NULL, 1, '270412', 19, 'co-khi-may-moc-thiet-bi');
 
