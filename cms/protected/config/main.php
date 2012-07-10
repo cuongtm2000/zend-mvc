@@ -56,7 +56,7 @@ $config = array(
                 '<lang:[a-z]{2}>' => '/',
 
                 //admin rules
-                'admin/<action:(dashboard|forgot|logout)>' => 'admin/<action>',
+                'admin/<action:(dashboard|config|forgot|logout)>' => 'admin/<action>',
                 'admin/<module:\w+>/<action:\w+>/<id:\d+>' => '<module>/admin/<action>',
                 'admin/<module:\w+>/<action:\w+>' => '<module>/admin/<action>',
                 'admin/<module:\w+>' => '<module>/admin',

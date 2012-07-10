@@ -18,6 +18,10 @@ class AdminController extends BackEndController {
         //$this->render('index');
     }
 
+    public function actionConfig() {
+        $this->render('config');
+    }
+
     // Uncomment the following methods and override them if needed
     /*
    public function filters()
