@@ -36,12 +36,12 @@ a:hover{color:#000;}
 
 /*Left content*/
 #leftcontent{float:left; width:206px}
-.frame-leftcontent{margin:0 0 10px 0;border-bottom:1px solid #EEEEEE ;border-left:1px solid #EEEEEE ; border-right:1px solid #EEEEEE}
+.frame-leftcontent{margin:0 0 10px 0;border-bottom:1px solid #EEE ;border-left:1px solid #EEE ; border-right:1px solid #EEE}
 
 .title-left{color:#fff; font-weight:bold; padding:8px 0 8px 0;font-weight:bold; background:url(../images/titalbg.gif) no-repeat}
 .title-left span{padding:0px 10px 0 15px; }
 
-.title-box{color:#3B3B3B; font-weight:bold; padding:8px 0 8px 0;font-weight:bold; background:#EEE url(../images/tital-bullet.gif) no-repeat 10px;}
+.title-box{color:#3B3B3B; font-weight:bold; padding:8px 0 8px 0;font-weight:bold; background:#EEE url(../images/tital-bullet.gif) no-repeat 10px;-webkit-border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0}
 .title-box span{padding:0px 10px 0 25px}
 
 /*sub cat*/
@@ -76,8 +76,8 @@ a:hover{color:#000;}
 .frame-tent-right {padding:10px;border:1px solid #EEEEEE;margin:0 0 10px 0;-webkit-border-radius:1px;-moz-border-radius:1px}
 .frame-tent-right p{text-align:justify;line-height:1.5em}
 
-.link{color:#000;padding:5px 0 5px 0; border-bottom:1px dashed #e1e1e1; margin:0 0 5px 0}
-.link b{font-weight:normal;padding:0 5px}
+.link{color:#000;padding:5px 0 5px 0; margin:0 0 8px 0}
+.link b{padding:0 5px;color:#444}
 .link span{color:#D2A800}
 .link a{ color:#333}
 .link a:hover{color:#228BC8}
