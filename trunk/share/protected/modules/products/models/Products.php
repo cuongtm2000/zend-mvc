@@ -13,9 +13,14 @@ class Products extends CActiveRecord {
     public $feature;
     public $dos_provinces_province_id;
 
-    //public function init() {
+    public function init() {
     //$this->_subdomain = Yii::app()->session['subdomain'];
-    //}
+        $user= Username::model()->findByPk(Yii::app()->user->name);
+        $this->contact_name=$user['fullname'];
+        $this->contact_add=$user['address'];
+        $this->contact_mobile=$user['phone'];
+        $this->dos_username = Yii::app()->user->name;
+    }
 
     /**
      * Returns the static model of the specified AR class.
@@ -41,7 +46,7 @@ class Products extends CActiveRecord {
         // will receive user inputs.
         return array(
             array('title, dos_provinces_province_id,dos_module_item_type_type_id,dos_districts_district_id,address,content,unit,unit_currency, unit_unit ,tag,contact_name, contact_mobile,utility,feature, dos_module_item_cat_cat_id', 'required'),
-            array('hits,unit, record_order,hot, specials, enable, dos_module_item_cat_cat_id', 'numerical', 'integerOnly' => true),
+            array('hits, record_order,hot, specials, enable, dos_module_item_cat_cat_id', 'numerical', 'integerOnly' => true),
             array('title, titleen, pic_thumb, pic_full, tag, tagen, extra_field1, extra_field2, extra_field3, extra_field4', 'length', 'max' => 100),
             array('tag, tagen', 'unique'),
             array('pic_desc', 'length', 'max' => 200),
@@ -73,6 +78,7 @@ class Products extends CActiveRecord {
             'dosModuleItemTypeType' => array(self::BELONGS_TO, 'ProductsType', 'dos_module_item_type_type_id'),
             'productsFeature' => array(self::HAS_ONE, 'ProductsFeature', 'product_id'),
             'productsUtility' => array(self::HAS_ONE, 'ProductsUtility', 'product_id'),
+            //'Username' => array(self::BELONGS_TO, 'Username', 'dos_username'),
         );
     }
 
@@ -265,7 +271,6 @@ class Products extends CActiveRecord {
                 $this->pic_desc = implode("|", $pic_desc);
             }
         }
-        $this->dos_username = Yii::app()->user->name;
         return parent::beforeSave();
     }
 
@@ -354,7 +359,7 @@ class Products extends CActiveRecord {
     public function listItemOther($id, $cid) {
         $criteria = new CDbCriteria();
         $criteria->with = array(__CLASS__ . 'Cat');
-        $criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit, hot';
+        $criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit,unit_unit,unit_currency, hot';
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'record_id NOT IN (:id) AND dos_module_item_cat_cat_id=:cid AND enable = 1';
         $criteria->params = array(':id' => $id, ':cid' => $cid);

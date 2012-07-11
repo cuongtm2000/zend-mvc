@@ -1,10 +1,10 @@
 <?php
 $form = $this->beginWidget(
-    'CActiveForm', array(
-        'id' => 'frm',
-        'enableAjaxValidation' => true,
-        'enableClientValidation' => true,
-        'htmlOptions' => array('enctype' => 'multipart/form-data')
+        'CActiveForm', array(
+    'id' => 'frm',
+    'enableAjaxValidation' => true,
+    'enableClientValidation' => true,
+    'htmlOptions' => array('enctype' => 'multipart/form-data')
         )
 );
 echo $form->errorSummary($model, '');
@@ -13,12 +13,12 @@ echo $form->errorSummary($model_f, '');
 <fieldset>
     <legend><?php echo $this->lang['edit'] ?> <?php echo strtolower($this->lang[$this->ID]) ?></legend>
 
-            <div class="col1"><?php echo $form->labelEx($model, 'dos_module_item_type_type_id') ?></div>
-        <div class="col2">
-            <?php echo $form->dropDownList($model, 'dos_module_item_type_type_id', CHtml::listData($listItemsType, 'type_id', 'type_title')); ?>
-        </div>
+    <div class="col1"><?php echo $form->labelEx($model, 'dos_module_item_type_type_id') ?></div>
+    <div class="col2">
+        <?php echo $form->dropDownList($model, 'dos_module_item_type_type_id', CHtml::listData($listItemsType, 'type_id', 'type_title')); ?>
+    </div>
 
-    
+
     <div class="col1"><?php echo $form->labelEx($model, 'dos_module_item_cat_cat_id') ?></div>
     <div class="col2">
         <?php echo $form->dropDownList($model, 'dos_module_item_cat_cat_id', CHtml::listData($listItemsCat, 'cat_id', 'cat_title_prefix')); ?>
@@ -26,41 +26,40 @@ echo $form->errorSummary($model_f, '');
     <div class="clear space"></div>
 
     <div class="col1"><?php echo $form->labelEx($model, 'dos_provinces_province_id') ?></div>
-        <div class="col2">
-            <?php
-            echo $form->dropDownList($model, 'dos_provinces_province_id', CHtml::listData($listProvices, 'province_id', 'province_name'), array('prompt' => 'Chọn tỉnh/thành'));
-            ?>
-        </div>
+    <div class="col2">
+        <?php
+        echo $form->dropDownList($model, 'dos_provinces_province_id', CHtml::listData($listProvices, 'province_id', 'province_name'), array('prompt' => 'Chọn tỉnh/thành'));
+        ?>
+    </div>
 
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $("#dos_districts_district_id").load("<?php echo Yii::app()->baseUrl ?>/admin/products/listdistrict/id/"+ $("#Products_dos_provinces_province_id").val()<?php echo $model['dos_districts_district_id'] ? '+"/idd/' . $model['dos_districts_district_id'] . '"' : "" ?>);
-            });
-            $("#Products_dos_provinces_province_id").change(function(){
-                $("#dos_districts_district_id").load("<?php echo Yii::app()->baseUrl ?>/admin/products/listdistrict/id/"+ $("#Products_dos_provinces_province_id").val());
-            });
-        </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#dos_districts_district_id").load("<?php echo Yii::app()->baseUrl ?>/admin/products/listdistrict/id/"+ $("#Products_dos_provinces_province_id").val()<?php echo $model['dos_districts_district_id'] ? '+"/idd/' . $model['dos_districts_district_id'] . '"' : "" ?>);
+        });
+        $("#Products_dos_provinces_province_id").change(function(){
+            $("#dos_districts_district_id").load("<?php echo Yii::app()->baseUrl ?>/admin/products/listdistrict/id/"+ $("#Products_dos_provinces_province_id").val());
+        });
+    </script>
 
 
-        <div class="col1"><?php echo $form->labelEx($model, 'dos_districts_district_id') ?></div>
-        <div class="col2" id="dos_districts_district_id">
-        </div><div class="clear space"></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'dos_districts_district_id') ?></div>
+    <div class="col2" id="dos_districts_district_id">
+    </div><div class="clear space"></div>
 
-        <div class="col1">Giá</div>
-        <div class="col2">
-            <?php echo $form->textField($model, 'unit', $htmlOptions = array('class' => 'txt-small')); ?>
-            <?php
-            $d = array('VND', 'USD', 'SJC');
-            echo $form->dropDownList($model, 'unit_currency', array_combine($d, $d), array('style' => "width:50pt", 'prompt' => 'Chọn đơn vị tính'));
-            ?>/
-            <?php
-            $dir = array("Tổng diện tích", "m2", "Tháng");
-            echo $form->dropDownList($model, 'unit_unit', array_combine($dir, $dir), array('style' => "width:85pt"));
-            ?>
-        </div>
+    <div class="col1">Giá</div>
+    <div class="col2">
+         <?php echo $form->textField($model, 'unit', $htmlOptions = array('class' => 'txt-small', 'onkeyup' => 'this.value = FormatNumber(this.value);')) ?>
+        <?php          $d = array('VND', 'USD', 'SJC');
+        echo $form->dropDownList($model, 'unit_currency', array_combine($d, $d), array('style' => "width:70pt", 'prompt' => 'Chọn ĐVT'));
+        ?>/
+        <?php
+        $dir = array("Tổng diện tích", "m2", "Tháng");
+        echo $form->dropDownList($model, 'unit_unit', array_combine($dir, $dir), array('style' => "width:85pt"));
+        ?>
+    </div>
 
-    
-    
+
+
     <?php foreach (Yii::app()->user->numLang as $lang): $lang = ($lang == 'vi') ? '' : $lang; ?>
         <div class="col1"><?php echo $form->labelEx($model, 'title' . $lang) ?></div>
         <div class="col2">
@@ -69,12 +68,12 @@ echo $form->errorSummary($model_f, '');
         <div class="clear space"></div>
     <?php endforeach; ?>
 
-                <div class="col1"><?php echo $form->labelEx($model, 'address') ?></div>
-        <div class="col2">
-            <?php echo $form->textField($model, 'address', $htmlOptions = array('class' => 'txt-very-large')); ?>
-        </div> <div class="clear space"></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'address') ?></div>
+    <div class="col2">
+        <?php echo $form->textField($model, 'address', $htmlOptions = array('class' => 'txt-very-large')); ?>
+    </div> <div class="clear space"></div>
 
-        
+
     <?php foreach (Yii::app()->user->numLang as $lang): $lang = ($lang == 'vi') ? '' : $lang; ?>
         <div class="col1"><?php echo $form->labelEx($model, 'content' . $lang) ?></div>
         <div class="col2">
@@ -113,117 +112,97 @@ echo $form->errorSummary($model_f, '');
                     //theme_advanced_statusbar_location : "bottom",
                     theme_advanced_resizing : true,
                     width : "100%",
-                    height: "300"
+                    height: "250"
                 });
             </script>
         </div>
         <div class="clear space"></div>
     <?php endforeach; ?>
+    <div class="col1">Thông tin</div>
+    <div class="col2">
 
- 
-        
-        <div class="col1"><?php echo $form->labelEx($model, 'utility') ?></div>
-        <div class="col2">
-            <?php //var_dump($listItemsU) ?>
-           <?php echo $form->checkBoxList($model, 'utility', $listItemsU, array('template' => '<p class="choose-business">{label} {input}</p>', 'separator' => '')) ?>
-        </div>
-        <div class="clear space"></div>    
+        <table>
+            <tr>
+                <th>Tiện ích</th>
+                <th>Chi tiết</th>
+            </tr>
+            <tr>
+                <td> <?php echo $form->checkBoxList($model, 'utility', $listItemsU, array('template' => '<p>{label} {input}</p>', 'separator' => '')) ?></td>
+                <td>
+                    <div class=""><b>Diện tích khuôn viên:</b></div>
+                    <div class=""> 
+                        <label for="Products[feature][area_n]" style="width:120px; float:left;">Chiều ngang trước</label>
+                        <?php echo $form->textField($model, 'feature[area_n]', $htmlOptions = array('class' => 'txt-small')); ?>m
+                        <p></p>
+                        <label for="Products[feature][area_d]" style="width:120px; float:left;">Chiều dài</label>
+                        <?php echo $form->textField($model, 'feature[area_d]', $htmlOptions = array('class' => 'txt-small')); ?>m
+                    </div>  <div class="clear space"></div> 
 
-
-        <div class="col1"><b>Thông tin chi tiết</b></div>
-        <div class="col2">  
-            <div class="col1">Diện tích khuôn viên:</div>
-            <div class="col2"> 
-                <label for="Products[feature][area_n]" style="width:120px; float:left;">Chiều ngang trước</label>
-                <?php echo $form->textField($model, 'feature[area_n]', $htmlOptions = array('class' => 'txt-small')); ?>m
-                <p></p>
-                <label for="Products[feature][area_d]" style="width:120px; float:left;">Chiều dài</label>
-                <?php echo $form->textField($model, 'feature[area_d]', $htmlOptions = array('class' => 'txt-small')); ?>m
-            </div>  <div class="clear space"></div> 
-
-            <div class="col1">Diện tích xây dựng:</div>
-            <div class="col2"> 
-                <label for="Products[feature][area_build_n]" style="width:120px; float:left;">Chiều ngang trước</label>
-                <?php echo $form->textField($model, 'feature[area_build_n]', $htmlOptions = array('class' => 'txt-small')); ?>m
-                <p></p>
-                <label for="Products[feature][area_build_d]" style="width:120px; float:left;">Chiều dài</label>
-                <?php echo $form->textField($model, 'feature[area_build_d]', $htmlOptions = array('class' => 'txt-small')); ?>m    
-            </div>  <div class="clear space"></div> 
+                    <div class=""><b>Diện tích xây dựng:</b></div>
+                    <div class=""> 
+                        <label for="Products[feature][area_build_n]" style="width:120px; float:left;">Chiều ngang trước</label>
+                        <?php echo $form->textField($model, 'feature[area_build_n]', $htmlOptions = array('class' => 'txt-small')); ?>m
+                        <p></p>
+                        <label for="Products[feature][area_build_d]" style="width:120px; float:left;">Chiều dài</label>
+                        <?php echo $form->textField($model, 'feature[area_build_d]', $htmlOptions = array('class' => 'txt-small')); ?>m    
+                    </div>  <div class="clear space"></div> 
 
 
-            <div class="col1"><?php echo $form->labelEx($model_f, 'area_used') ?></div>
-            <div class="col2">
-                <?php echo $form->textField($model, 'feature[area_used]', $htmlOptions = array('class' => 'txt-small')); ?>m<sup>2</sup>
-            </div>    <div class="clear space"></div>  
+                    <div class=""><?php echo $form->labelEx($model_f, 'area_used') ?></div>
+                    <div class="">
+                        <?php echo $form->textField($model, 'feature[area_used]', $htmlOptions = array('class' => 'txt-small')); ?>m<sup>2</sup>
+                    </div>    <div class="clear space"></div>  
 
-            <div class="col1"><?php echo $form->labelEx($model_f, 'num_floor') ?></div>
-            <div class="col2">
-                <?php echo $form->textField($model, 'feature[num_floor]', $htmlOptions = array('class' => 'txt-small')); ?>
-            </div>    <div class="clear space"></div>   
+                    <div class=""><?php echo $form->labelEx($model_f, 'num_floor') ?></div>
+                    <div class="">
+                        <?php echo $form->textField($model, 'feature[num_floor]', $htmlOptions = array('class' => 'txt-small')); ?>
+                    </div>    <div class="clear space"></div>   
 
+                    <div class=""><?php echo $form->labelEx($model_f, 'sittingrom') ?></div>
+                    <div class="">
+                        <?php echo $form->textField($model, 'feature[sittingrom]', $htmlOptions = array('class' => 'txt-small')); ?>
+                    </div>    <div class="clear space"></div>   
 
-            <div class="col1"><?php echo $form->labelEx($model_f, 'sittingrom') ?></div>
-            <div class="col2">
-                <?php echo $form->textField($model, 'feature[sittingrom]', $htmlOptions = array('class' => 'txt-small')); ?>
-            </div>    <div class="clear space"></div>   
+                    <div class=""><?php echo $form->labelEx($model_f, 'bedroom') ?></div>
+                    <div class="">
+                        <?php echo $form->textField($model, 'feature[bedroom]', $htmlOptions = array('class' => 'txt-small')); ?>
+                    </div>    <div class="clear space"></div>   
 
-            <div class="col1"><?php echo $form->labelEx($model_f, 'bedroom') ?></div>
-            <div class="col2">
-                <?php echo $form->textField($model, 'feature[bedroom]', $htmlOptions = array('class' => 'txt-small')); ?>
-            </div>    <div class="clear space"></div>   
+                    <div class=""><?php echo $form->labelEx($model_f, 'bathroom') ?></div>
+                    <div class="">
+                        <?php echo $form->textField($model, 'feature[bathroom]', $htmlOptions = array('class' => 'txt-small')); ?>
+                    </div>    <div class="clear space"></div>   
 
+                    <div class=""><?php echo $form->labelEx($model_f, 'other_room') ?></div>
+                    <div class="">
+                        <?php echo $form->textField($model, 'feature[other_room]', $htmlOptions = array('class' => 'txt-small')); ?>
+                    </div>    <div class="clear space"></div>
 
-            <div class="col1"><?php echo $form->labelEx($model_f, 'bathroom') ?></div>
-            <div class="col2">
-                <?php echo $form->textField($model, 'feature[bathroom]', $htmlOptions = array('class' => 'txt-small')); ?>
-            </div>    <div class="clear space"></div>   
+                    <div class=""><?php echo $form->labelEx($model_f, 'direction') ?></div>
+                    <div class="">
+                        <?php
+                        $dir = array("Chưa xác định", "Đông", "Tây", "Nam", "Bắc", "Đông Bắc", "Đông Nam", "Tây Bắc", "Tây Nam");
+                        echo $form->dropDownList($model, 'feature[direction]', array_combine($dir, $dir), array('style' => "width:100pt"));
+                        ?>
+                    </div><div class="clear space"></div> 
 
-            <div class="col1"><?php echo $form->labelEx($model_f, 'other_room') ?></div>
-            <div class="col2">
-                <?php echo $form->textField($model, 'feature[other_room]', $htmlOptions = array('class' => 'txt-small')); ?>
-            </div>    <div class="clear space"></div>
+                    <div class=""><?php echo $form->labelEx($model_f, 'street') ?></div>
+                    <div class="">
+                        <?php echo $form->textField($model, 'feature[street]', $htmlOptions = array('class' => 'txt-very-large')); ?>
+                    </div>    <div class="clear space"></div>
 
-            <div class="col1"><?php echo $form->labelEx($model_f, 'direction') ?></div>
-            <div class="col2">
-                <?php
-                $dir = array("Không xác định", "Đông", "Tây", "Nam", "Bắc", "Đông Bắc", "Đông Nam", "Tây Bắc", "Tây Nam");
-                echo $form->dropDownList($model, 'feature[direction]', array_combine($dir, $dir), array('style' => "width:100pt"));
-                ?>
-            </div><div class="clear space"></div> 
-
-
-            <div class="col1"><?php echo $form->labelEx($model_f, 'street') ?></div>
-            <div class="col2">
-                <?php echo $form->textField($model, 'feature[street]', $htmlOptions = array('class' => 'txt-very-large')); ?>
-            </div>    <div class="clear space"></div>
-
-
-
-            <div class="col1"><?php echo $form->labelEx($model_f, 'legal') ?></div>
-            <div class="col2">
-                <?php
-                $dir = array("Sổ hồng", "Sổ đỏ", "Giấy tay", "Đang hợp thức hoá", "Giấy tờ hợp lệ", "Chủ quyền tư nhân", "Hợp đồng");
-                echo $form->dropDownList($model, 'feature[legal]', array_combine($dir, $dir), array('style' => "width:120pt"));
-                ?>
-            </div><div class="clear space"></div> 
-
-
-            <div class="col1"><?php echo $form->labelEx($model_f, 'road') ?></div>
-            <div class="col2">
-                <?php echo $form->textField($model, 'feature[road]', $htmlOptions = array('class' => 'txt-very-large')); ?>
-              
-            </div>    <div class="clear space"></div>   
-        </div>  <div class="clear space"></div> 
-
-        
-    <?php foreach (Yii::app()->user->numLang as $lang): $lang = ($lang == 'vi') ? '' : $lang; ?>
-        <div class="col1"><?php echo $form->labelEx($model, 'tag' . $lang) ?></div>
-        <div class="col2">
-            <?php echo $form->textField($model, 'tag' . $lang, $htmlOptions = array('class' => 'txt-very-large')); ?>
-        </div>
-        <div class="clear space"></div>
-    <?php endforeach; ?>
-
+                    <div class=""><?php echo $form->labelEx($model_f, 'legal') ?></div>
+                    <div class="">
+                        <?php
+                        $dir = array("Sổ hồng", "Sổ đỏ", "Giấy tay", "Đang hợp thức hoá", "Giấy tờ hợp lệ", "Chủ quyền tư nhân", "Hợp đồng");
+                        echo $form->dropDownList($model, 'feature[legal]', array_combine($dir, $dir), array('style' => "width:120pt"));
+                        ?>
+                    </div><div class="clear space"></div> 
+                </td>
+            </tr>
+        </table>
+    </div><div class="clear space"></div>    
+<?php echo $form->textField($model, 'tag' . $lang, $htmlOptions = array('class' => 'txt-very-large','hidden'=>'hidden')); ?>
     <?php foreach (Yii::app()->user->numLang as $lang): $lang = ($lang == 'vi') ? '' : $lang; ?>
         <div class="col1"><?php echo $form->labelEx($model, 'description' . $lang) ?></div>
         <div class="col2">
@@ -254,8 +233,8 @@ echo $form->errorSummary($model_f, '');
         <?php if ($model->pic_full): ?>
             <a class="nyroModal" href="<?php echo Yii::app()->request->baseUrl . USERFILES . '/products/' . $model->pic_full ?>">Xem ảnh lớn</a>
         <?php endif; ?>
-    </div>
-    <div class="clear space"></div>
+        <p style="color: red"><b>Lưu ý</b>:Chỉ chấp nhận hình ảnh là JPG và GIF, có dung lượng nhỏ hơn 5 MB. Không đăng logo, hình quảng cáo, nếu vi phạm sẽ bị xoá tin rao và khoá tài khoản đăng tin.</p>
+    </div>  <div class="clear space"></div>
 
     <?php if ($model->pic_desc): ?>
         <?php $str = explode('|', $model->pic_desc); ?>
@@ -270,6 +249,7 @@ echo $form->errorSummary($model_f, '');
     <?php endif; ?>
 
     <p class="rows"><a href="#" id="add-rows"><?php echo $this->lang['pic_desc'] ?></a></p>
+
 
     <div class="col1"><?php echo $form->labelEx($model, 'hot', $htmlOptions = array('for' => ucfirst($this->ID) . '_hot_0')) ?></div>
     <div class="col2 radio">
@@ -301,4 +281,54 @@ echo $form->errorSummary($model_f, '');
             return false;
         });
     });
+</script>
+
+
+<script>
+    function FormatNumber(str){
+        var strTemp = GetNumber(str);
+        if(strTemp.length <= 3)
+            return strTemp;
+        strResult = "";
+        for(var i =0; i< strTemp.length; i++)
+            strTemp = strTemp.replace(".", "");		        
+        var m=strTemp.lastIndexOf(",");
+        
+        if(m==-1)        {    
+            for(var i = strTemp.length; i>=0; i--)            {
+                if(strResult.length >0 && (strTemp.length - i -1) % 3 == 0)
+                    strResult = "." + strResult;			         
+                strResult = strTemp.substring(i, i + 1) + strResult;		                
+            }   
+        }
+        else        {
+            //pháº§n nguyĂªn
+            var strphannguyen=strTemp.substring(0,strTemp.lastIndexOf(","));
+            var strphanthapphan=strTemp.substring(strTemp.lastIndexOf(","),strTemp.length);
+            //pháº§n tháº­p phĂ¢n
+            var tam=0;	               
+            for(var i = strphannguyen.length; i>=0; i--)            {
+                if(strResult.length>0 && tam==4)
+                   strResult = "." + strResult;
+                strResult = strphannguyen.substring(i, i + 1) + strResult;
+                tam=tam+1;		                		                
+            }
+            strResult =strResult + strphanthapphan;
+        }
+        return strResult;
+    }
+    function GetNumber(str)  {
+        for(var i = 0; i < str.length; i++)
+        {	
+            var temp = str.substring(i, i + 1);		
+            if(!(temp == "," || temp == "." || (temp >= 0 && temp <=9)))
+            {
+                alert("Vui lòng nhập số (0-9)!");
+                return str.substring(0, i);
+            }
+            if(temp == " ")
+                return str.substring(0, i);
+        }
+        return str;
+    }
 </script>

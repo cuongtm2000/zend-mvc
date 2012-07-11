@@ -9,7 +9,7 @@
                 <th class="txt15"><input onclick="javascript: select_switch(this.checked);" type="checkbox" name="checkall" /></th>
                 <th class="txt60">Thứ tự</th>
                 <th>Tiêu đề</th>
-                <th>Phân loại</th>
+                <th>Danh mục</th>
                 <th>Lượt xem</th>
                 <th>Thao tác</th>
             </tr>
