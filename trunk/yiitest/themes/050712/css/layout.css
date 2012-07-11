@@ -71,8 +71,8 @@ a:hover{color:#000;}
 /*Right content*/
 #rightcontent{float:left;width:520px;margin:0 0 0 5px}
 #rightcontent p{margin:0 0 10px 0}
-#rightcontent ul li, #right-content ol li{margin: 4px 0 4px 40px}
-#rightcontent ul ,#right-content ol{margin: 0 0 10px 0}
+#rightcontent ul li, #rightcontent ol li{margin: 4px 0 4px 40px}
+#rightcontent ul ,#rightcontent ol{margin: 0 0 10px 0}
 
 .link{color:#000;font-size:10pt; margin:0 0 10px 0}
 .link b{font-weight:normal;padding:0 5px;position:relative;top:-1px}

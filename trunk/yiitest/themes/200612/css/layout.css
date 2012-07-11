@@ -80,8 +80,8 @@ a:hover{color:#000;}
 /*Right content*/
 #rightcontent{float:right; width:723px;}
 #rightcontent p{margin:0 0 10px 0}
-#rightcontent ul li, #right-content ol li{margin: 0 0 0 40px}
-#rightcontent ul ,#right-content ol{margin: 0 0 12px 0}
+#rightcontent ul li, #rightcontent ol li{margin:4px 0 4px 40px}
+#rightcontent ul ,#rightcontent ol{margin: 0 0 12px 0}
 .top-tent-right{background:url(../images/bg-top-right.gif) no-repeat; height:4px}
 .bttom-tent-right{background:url(../images/bg-bttom-right.gif) no-repeat; height:4px;margin:0 0 10px 0}
 .frame-tent-right{background:#fff;border-left:1px solid #CACACA;border-right:1px solid #CACACA;padding:5px 8px}
