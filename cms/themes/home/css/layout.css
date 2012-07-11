@@ -10,8 +10,6 @@ a:hover{color:#000;}
 
 /*Header*/
 #header{padding:20px 0 40px 0;margin:0 0 20px 0; position:relative}
-
-/*Logo*/
 #logo{float:left;margin:0 30px 0 0}
 
 /**  Ten cong ty     **/
@@ -90,9 +88,4 @@ a:hover{color:#000;}
 #menufooter li{ display:inline; list-style:none;}
 #menufooter li a{text-transform:capitalize;font-family:Trebuchet MS, Arial; font-size:13px; padding:10px 5px; color:#FFF; text-decoration:none}
 #menufooter a:hover { text-decoration:underline; }
-#footer p { margin:15px 0 0 0; padding:0; font-family:Trebuchet MS, Arial; font-size:13px; color:#ff6709; text-align:center; display:block; }
-
-
-
-
-
+#footer p { margin:15px 0 0 0; padding:0; font-family:Trebuchet MS, Arial; font-size:13px; color:#ff6709; text-align:center; display:block}
