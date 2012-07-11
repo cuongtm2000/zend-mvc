@@ -48,7 +48,7 @@ $this->description = $item['description' . LANG];
                 <?php endif; ?>
                 <td class="right-info">
                     <p class="price">Mã số: <?php echo $item['record_id'] ?> </p>
-                    <p class="price"><strong>Giá: <span> <?php echo $item['unit'].' ' . $item['unit_currency'] . '/' . $item['unit_unit']; ?></span></strong></p>
+                    <p class="price"><strong>Giá: <span> <?php echo number_format($value['unit'],0,',','.').' ' . $value['unit_currency'] . '/' . $value['unit_unit']; ?></span></strong></p>
                     <p class="price">Địa chỉ:  <?php echo $item['address'] ?> </p>
                     <p class="price">Quận/huyện:  <?php echo $item['dos_districts_district_id'] ?> </p>
                     <p class="price">Tỉnh/thành phố: <?php echo $item['dos_provinces_province_id'] ?></p>
@@ -128,7 +128,7 @@ $this->description = $item['description' . LANG];
                                         <p><label class="direction">Hướng</label>: Đông Nam</p>
                                     </td>
                                     <td>
-                                        <p class="price">Giá: <span><?php echo $value['unit'].' ' . $value['unit_currency'] . '/' . $value['unit_unit']; ?></span></p>
+                                        <p class="price">Giá: <span><?php echo number_format($value['unit'],0,',','.').' ' . $value['unit_currency'] . '/' . $value['unit_unit']; ?></span></p>
                                         <p>Hiện trạng: <span>Đang được sử dụng</span></p>
                                     </td>
                                 </tr>

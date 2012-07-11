@@ -188,7 +188,7 @@ class Products extends CActiveRecord {
         $this->tagen = $purifier->purify(trim($this->tagen));
         $this->description = $purifier->purify(trim($this->description));
         $this->descriptionen = $purifier->purify(trim($this->descriptionen));
-
+        $this->unit = str_replace('.','',trim($this->unit));
         $_USERFILES = '/public/userfiles/image/' . Yii::app()->user->name . '/image/';
 
         if ($this->isNewRecord) {
