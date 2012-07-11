@@ -8,11 +8,11 @@
  * @property string $setting_value
  */
 class Setting extends CActiveRecord {
-    /**
-     * Returns the static model of the specified AR class.
-     * @param string $className active record class name.
-     * @return Setting the static model class
-     */
+    public $default_language;
+    public $title;
+    public $keywords;
+    public $description;
+
     public static function model($className = __CLASS__) {
         return parent::model($className);
     }
@@ -31,12 +31,13 @@ class Setting extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('setting_name, setting_value', 'required'),
+            array('default_language, title', 'required'),
+            array('title', 'length', 'max' => 100),
+            array('keywords, description', 'length', 'max' => 250),
+            /*array('setting_name, setting_value', 'required'),
             array('setting_name', 'length', 'max' => 30),
             array('setting_value', 'length', 'max' => 100),
-            // The following rule is used by search().
-            // Please remove those attributes that should not be searched.
-            array('setting_name, setting_value', 'safe', 'on' => 'search'),
+            array('setting_name, setting_value', 'safe', 'on' => 'search'),*/
         );
     }
 
@@ -55,8 +56,8 @@ class Setting extends CActiveRecord {
      */
     public function attributeLabels() {
         return array(
-            'setting_name' => 'Setting Name',
-            'setting_value' => 'Setting Value',
+            //'setting_name' => 'Setting Name',
+            //'setting_value' => 'Setting Value',
         );
     }
 
@@ -86,5 +87,27 @@ class Setting extends CActiveRecord {
             $data[$rows['setting_name']] = $rows['setting_value'];
         }
         return $data;
+    }
+
+    public function saveSetting() {
+        $purifier = new CHtmlPurifier();
+        $this->title = $purifier->purify(trim($this->title));
+        $this->default_language = $purifier->purify(trim($this->default_language));
+        $this->keywords = $purifier->purify(trim($this->keywords));
+        $this->description = $purifier->purify(trim($this->description));
+
+        $this->addSetting('title', $this->title);
+        $this->addSetting('default_language', $this->default_language);
+        $this->addSetting('keywords', $this->keywords);
+        $this->addSetting('description', $this->description);
+
+        return true;
+    }
+
+    private function addSetting($name, $value) {
+        $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET setting_value=:value WHERE setting_name=:name');
+        $command->bindParam(":value", $value, PDO::PARAM_STR);
+        $command->bindParam(":name", $name, PDO::PARAM_STR);
+        $command->execute();
     }
 }
