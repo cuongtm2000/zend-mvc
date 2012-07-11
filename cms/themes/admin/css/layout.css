@@ -115,17 +115,17 @@ tbody tr.green td, tbody tr.green a{background: #c2ecb7; color : #aaa}
 .txt15{width: 15px}
 .txt-sort{width:35px; -moz-border-radius: 2px; -webkit-border-radius: 2px; border:1px solid #ccc; padding:1px 3px; text-align: center;}
 
-select{border:1px solid #ccc; padding:3px; cursor:pointer; -moz-border-radius: 3px; -webkit-border-radius: 3px; width:258px}
+select{border:1px solid #ccc; padding:3px; cursor:pointer; -moz-border-radius: 3px; -webkit-border-radius: 3px; width:22%}
 legend{color:#0066CC; font-weight:bold; font-size:11pt}
 fieldset{padding:15px; border : 1px solid #E4E3E3; background:#F9F9FB; -moz-border-radius:3px; -webkit-border-radius:3px; margin:5px}
-fieldset p{clear: both; margin: 4px auto; padding-bottom: 0}
-fieldset label{float:left; width:90px; padding:3px}
+fieldset p{clear: both; margin: 5px auto}
+fieldset label{float:left; width:110px; padding:3px}
 fieldset label.remove{float: none}
-fieldset input.login {cursor:pointer; width:80px; height:24px; color:#fff; border:1px solid #ccc; background:#3A6AAD; -moz-border-radius: 3px; -webkit-border-radius: 3px; display:inline; margin-right:6px}
+fieldset input.login {cursor:pointer; padding: 3px 7px; color:#fff; border:1px solid #ccc; background:#3A6AAD; -moz-border-radius: 3px; -webkit-border-radius: 3px; display:inline; margin-right:6px}
 fieldset input.login:hover, .login-a:hover{background:#5184D2}
-fieldset textarea{-moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; width:55.1%; padding:1px 3px}
+fieldset textarea{-moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; width:40%; padding:1px 3px}
 fieldset .fileupload{width:32%}
-fieldset .login-a {cursor:pointer; width:80px; height:24px; color:#fff; border:1px solid #ccc; background:#3A6AAD; -moz-border-radius: 3px; -webkit-border-radius: 3px; display:inline; margin-right:6px; padding:3px 18px 4px 18px}
+fieldset .login-a {cursor:pointer; color:#fff; border:1px solid #ccc; background:#3A6AAD; -moz-border-radius: 3px; -webkit-border-radius: 3px; display:inline; margin-right:6px; padding:3px 18px 4px 18px}
 fieldset .login-a:hover{text-decoration:none}
 
 fieldset .txt-small{width:100px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
@@ -192,3 +192,5 @@ ul#list-template li p{margin: 0; padding: 0}
 ul#list-template li img{margin-right: 10px; margin-bottom: 3px; border: 1px solid #ddd; padding: 1px; -webkit-border-radius:2px;-moz-border-radius:2px}
 ul#list-template li label, #scrollbar ul li p input{cursor: pointer}
 .psion-submit{text-align: center}
+
+.success{border: 1px solid green; color: green; -moz-border-radius: 2px; -webkit-border-radius: 2px; font-weight: bold; margin-left: 5px; margin-right: 5px; padding: 1px 3px; background: #eee}

@@ -90,4 +90,13 @@ class Language extends CActiveRecord {
         $command = Yii::app()->db->createCommand('SELECT language_id, language_name FROM ' . $this->tableName() . ' ORDER BY language_sort ASC');
         return $command->queryAll();
     }
+
+    public function listLanguage() {
+        $data = array();
+        $rows = $this->listItem();
+        foreach ($rows as $value) {
+            $data[$value['language_id']] = $value['language_name'];
+        }
+        return $data;
+    }
 }

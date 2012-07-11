@@ -41,7 +41,7 @@
         array('label'=>'Configuration', 'url'=>array('/admin/config'),
             'items'=>array(
                 array('label'=>'System', 'url'=>array('/admin/config')),
-            ), 'active' => true
+            )
         ),
         array('label'=>'Contact', 'url'=>array('/site/contact')),
         array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),

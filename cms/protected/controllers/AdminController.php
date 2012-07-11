@@ -19,7 +19,25 @@ class AdminController extends BackEndController {
     }
 
     public function actionConfig() {
-        $this->render('config');
+        $model = new Setting();
+        $data = $model->getSetting();
+
+        if (isset($_POST['Setting'])) {
+            $model->attributes = $_POST['Setting'];
+            if ($model->validate()) {
+                if($model->saveSetting()){
+                    Yii::app()->user->setFlash('message', 'Success! System Configuration updated successfully!');
+                    $this->refresh();
+                }
+            }
+        } else {
+            $model->title = $data['title'];
+            $model->default_language = $data['default_language'];
+            $model->keywords = $data['keywords'];
+            $model->description = $data['description'];
+        }
+
+        $this->render('config', array('model' => $model));
     }
 
     // Uncomment the following methods and override them if needed
