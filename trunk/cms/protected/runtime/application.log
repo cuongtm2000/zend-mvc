@@ -1,9 +1,0 @@
-2012/07/10 09:31:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "product/index".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
-Stack trace:
-#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('product/index')
-#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#2 C:\xampp\htdocs\cms\index.php(14): CApplication->run()
-#3 {main}
-REQUEST_URI=/cms/product/index
-HTTP_REFERER=http://localhost/cms/admin
----

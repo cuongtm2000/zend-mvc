@@ -49,10 +49,10 @@ $config = array(
                 '<lang:[a-z]{2}>/<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
                 '<lang:[a-z]{2}>/<module:\w+>' => '<module>',
 
-                '<lang:[a-z]{2}>/<controller:\w+>/<action:\w+>/page/<page:\d+>'=>'<controller>/<action>',
-                '<lang:[a-z]{2}>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
-                '<lang:[a-z]{2}>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-                '<lang:[a-z]{2}>/<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+                '<lang:[a-z]{2}>/<controller:\w+>/<action:\w+>/page/<page:\d+>' => '<controller>/<action>',
+                '<lang:[a-z]{2}>/<controller:\w+>/<id:\d+>' => '<controller>/view',
+                '<lang:[a-z]{2}>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                '<lang:[a-z]{2}>/<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 '<lang:[a-z]{2}>' => '/',
 
                 //admin rules
@@ -105,10 +105,10 @@ $modules_dir = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'modules' . DI
 $handle = opendir($modules_dir);
 while (false !== ($file = readdir($handle))) {
     if ($file != "." && $file != ".." && is_dir($modules_dir . $file)) {
-        /*if(file_exists){
-
-        }*/
-        $config = CMap::mergeArray($config, require($modules_dir . $file . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'main.php'));
+        $path = $modules_dir . $file . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'main.php';
+        if (file_exists($path)) {
+            $config = CMap::mergeArray($config, require($path));
+        }
     }
 }
 closedir($handle);

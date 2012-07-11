@@ -71,10 +71,8 @@
 	<div id="content">
 	   <div id="leftcontent">
 			<div class="frame-leftcontent">
-            <?php $positions = Position::model()->setPosition('left', isset($this->module->id) ? $this->module->id : null);?>
-            <?php foreach($positions as $value):?>
-                <?php echo $this->renderPartial('//'.$value['hoiit_modules_module_id'].'/'.$value['function_value'], array($value['function_value'] => $value['function_name']::model()->$value['functiol_call']())) ?>
-            <?php endforeach;?>
+                <?php //$this->renderPartial('//counter/counter', $this->widget('ext.Counter.Counter')->publishAssets());?>
+                <?php $this->getPosition('left');?>
 			 <h2 class="title-box">CATEGORIES</h2>
 				 <ul class="sub-cat">
 					 <li><a href="#">Living Room</a></li>
@@ -102,6 +100,7 @@
 
 	   <div id="rightcontent">
 			<?php echo $content; ?>
+            <?php $this->getPosition('center');?>
 		<h2 class="title-right"><span>FEATURED PRODUCTS</span></h2>
 			<ul class="all-product">
                 <li class="product">
@@ -124,10 +123,7 @@
 	   </div> <!--END center-column -->
 	   <div id="column-3">
 		<div class="sellers">
-            <?php $positions = Position::model()->setPosition('right', isset($this->module->id) ? $this->module->id : null);?>
-            <?php foreach($positions as $value):?>
-                <?php echo $this->renderPartial('//'.$value['hoiit_modules_module_id'].'/'.$value['function_value'], array($value['function_value'] => $value['function_name']::model()->$value['functiol_call']())) ?>
-            <?php endforeach;?>
+            <?php $this->getPosition('right');?>
 			 <h1 class="title-box">BEST SELLERS</h1>
 			 <ul class="sub-new">
              	<li><a href="#" title="">Coco Modern Leather</a> </li>

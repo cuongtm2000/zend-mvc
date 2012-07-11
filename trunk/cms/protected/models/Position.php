@@ -99,7 +99,7 @@ class Position extends CActiveRecord {
     }
 
     public function setPosition($position, $page) {
-        $command = Yii::app()->db->createCommand('SELECT function_value, function_name, functiol_call, hoiit_modules_module_id FROM ' . $this->tableName() . ', hoiit_functions WHERE ' . $this->tableName() . '.hoiit_functions_function_value = hoiit_functions.function_value AND pos_id =:pos AND module_id =:module AND pos_activated = 1 ORDER BY pos_sort ASC');
+        $command = Yii::app()->db->createCommand('SELECT function_value, function_name, function_class, function_call, hoiit_modules_module_id, module_type FROM ' . $this->tableName() . ', hoiit_functions, hoiit_modules WHERE ' . $this->tableName() . '.hoiit_functions_function_value = hoiit_functions.function_value AND hoiit_functions.hoiit_modules_module_id = hoiit_modules.module_id AND pos_id =:pos AND ' . $this->tableName() . '.module_id =:module AND pos_activated = 1 ORDER BY pos_sort ASC');
         $command->bindParam(":pos", $position, PDO::PARAM_STR);
         $command->bindParam(":module", $page, PDO::PARAM_STR);
         return $command->queryAll();
