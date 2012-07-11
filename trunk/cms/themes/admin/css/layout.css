@@ -76,7 +76,7 @@ ul#tabs a span {float:none;}
 /* End IE5-Mac hack */
 ul#tabs a:hover {background-position:0% -42px; }
 ul#tabs a:hover span {background-position:100% -42px;color:#444}
-ul#tabs .select {background-position:0% -42px; }
+ul#tabs .select a{background-position:0% -42px; }
 ul#tabs .select span{background-position:100% -42px;color:#444}
 
 /* modals */
