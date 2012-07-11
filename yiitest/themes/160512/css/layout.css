@@ -69,7 +69,7 @@ a:hover{color:#000;}
 /*Right content*/
 #rightcontent{float:right;width:717px;}
 #rightcontent p{margin:0 0 8px 0}
-#rightcontent ul li, #rightcontent ol li{margin: 0 0 0 40px}
+#rightcontent ul li, #rightcontent ol li{margin:4px 0 4px 40px}
 #rightcontent ul ,#rightcontent ol{margin:10px 0}
 
 .title-right{margin:0 0 10px 0;font-size:13pt; color:#DC692B; font-weight:bold;padding:6px 0 5px 0; border-bottom:3px solid #D4D4D4}
@@ -81,6 +81,7 @@ a:hover{color:#000;}
 
 /*  Frame about page index*/
 .frame-tent-right{padding:5px 0 2px 0; text-align:justify;margin:0 0 5px 0}
+.frame-tent-right p{line-height:1.5em}
 
 /***** Product    *****/
 .all-product{margin:0 !important}

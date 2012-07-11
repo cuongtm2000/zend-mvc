@@ -11,7 +11,6 @@
 
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" />
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/dropdown.js"></script>
 <title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->title) ? ' - '.CHtml::encode($this->title) : '' ?> </title>
 <meta name="keywords" content="<?php echo $this->keywords ?>" />
 <meta name="description" content="<?php echo $this->description ?>" />

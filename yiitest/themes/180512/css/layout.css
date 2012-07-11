@@ -86,12 +86,13 @@ a:hover{color:#000;}
 .tent-rightcontent{background:#fff;padding:15px 0; border-left:1px solid #CECBBA;border-top:1px solid #CECBBA;border-right:1px solid #CECBBA}
 .bg-bt-right{background:url(../images/btom-right.jpg) no-repeat ;border-top:1px solid #CECBBA; height:11px}
 
-#rightcontent p{margin:0 0 8px 0}
-#rightcontent ul li, #rightcontent ol li{margin: 0 0 0 40px}
+#rightcontent p{margin:0 0 10px 0}
+#rightcontent ul li, #rightcontent ol li{margin:4px 0 4px 40px}
 #rightcontent ul ,#rightcontent ol{margin:10px 0}
 
 /*  Frame about page index*/
 .frame-tent-right{padding:5px 10px 2px 10px; text-align:justify;margin:0 0 10px 0}
+.frame-tent-right p{line-height:1.5em}
 
 .title-right{ margin:0 0 10px 0; font-size:10pt;color:#66552C; font-size:11pt;background:url(../images/bullet.gif) no-repeat 10px 5px;  font-weight:bold;}
 .title-right span{padding:00 0 0 30px}
