@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 10, 2012 at 10:19 AM
+-- Generation Time: Jul 11, 2012 at 06:02 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -261,7 +261,7 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 
 CREATE TABLE IF NOT EXISTS `hoiit_settings` (
   `setting_name` varchar(30) NOT NULL,
-  `setting_value` varchar(100) NOT NULL,
+  `setting_value` varchar(1000) NOT NULL,
   PRIMARY KEY (`setting_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -273,7 +273,7 @@ INSERT INTO `hoiit_settings` (`setting_name`, `setting_value`) VALUES
 ('default_language', 'vi'),
 ('description', 'Description'),
 ('keywords', 'Keywords'),
-('title', 'Welcome to Yii Project');
+('title', 'Welcome to Yii Thanhansoft');
 
 -- --------------------------------------------------------
 
