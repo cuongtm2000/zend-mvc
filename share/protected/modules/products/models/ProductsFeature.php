@@ -49,7 +49,7 @@ class ProductsFeature extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('area_used, num_floor, direction, legal, road', 'required'),
+            array('area_used, num_floor, direction, legal', 'required'),
             array('num_floor, sittingrom, bedroom, bathroom, other_room', 'numerical', 'integerOnly' => true),
             array('area_used', 'numerical'), //$area_n,$area_d,$area_build_n,$area_build_d
             array('direction, street, legal, road', 'length', 'max' => 45),

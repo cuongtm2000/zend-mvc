@@ -47,8 +47,8 @@ $this->description = $item['description' . LANG];
                     </td>	
                 <?php endif; ?>
                 <td class="right-info">
-                    <p class="price">Mã số:  <?php echo $item['record_id'] ?> </p>
-                    <p class="price"><strong>Giá: <span><?php echo (is_numeric($item['unit'])) ? number_format($item['unit'], 0, '', '.') . ' ' . $item['unit_currency'] . '/' . $item['unit_unit'] : (($item['unit']) ? $item['unit'] : $this->lang['contact']) ?></span></strong></p>
+                    <p class="price">Mã số: <?php echo $item['record_id'] ?> </p>
+                    <p class="price"><strong>Giá: <span> <?php echo $item['unit'].' ' . $item['unit_currency'] . '/' . $item['unit_unit']; ?></span></strong></p>
                     <p class="price">Địa chỉ:  <?php echo $item['address'] ?> </p>
                     <p class="price">Quận/huyện:  <?php echo $item['dos_districts_district_id'] ?> </p>
                     <p class="price">Tỉnh/thành phố: <?php echo $item['dos_provinces_province_id'] ?></p>
@@ -110,7 +110,7 @@ $this->description = $item['description' . LANG];
                                     <?php if ($value['pic_thumb']): ?>
                                         <img src="<?php echo Yii::app()->baseUrl . USERFILES ?>/<?php echo $this->module->id ?>/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title' . LANG] ?>" />
                                     <?php else : ?>
-                                        <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt="<?php echo $value['title' . LANG] ?>" />
+                                        <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="<?php echo $value['title' . LANG] ?>" />
                                     <?php endif ?>
                                 </a></div>
                         </td>
@@ -120,6 +120,7 @@ $this->description = $item['description' . LANG];
                                 <tr>
                                     <td width="110">
                                         <p><span class="position">Vị trí:</span> Hẻm Nguyễn Tri Phương, Phường 5, Quận 5</p>
+                                         <p class="price">Khuôn viên: <?php echo $value->productsFeature['area'] ?></p>
                                     </td>
                                     <td>
                                         <p><label class="long">Dài</label>: 5m</p>
@@ -127,7 +128,7 @@ $this->description = $item['description' . LANG];
                                         <p><label class="direction">Hướng</label>: Đông Nam</p>
                                     </td>
                                     <td>
-                                        <p class="price">Giá:<span> <?php echo (is_numeric($value['unit'])) ? '<strong>' . number_format($value['unit'], 0, '', '.') . '</strong>' . ' VND' : (($value['unit']) ? $value['unit'] : $this->lang['contact']) ?></span></p>
+                                        <p class="price">Giá: <span><?php echo $value['unit'].' ' . $value['unit_currency'] . '/' . $value['unit_unit']; ?></span></p>
                                         <p>Hiện trạng: <span>Đang được sử dụng</span></p>
                                     </td>
                                 </tr>
@@ -139,6 +140,7 @@ $this->description = $item['description' . LANG];
                         <td>
                             <h3 class="title-footer-right">Hội viên</h3>
                             <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/hoivien.jpg" alt="Hoi vien" />
+                            <p class="price">ĐT liên hệ: <?php echo $value['contact_mobile'] ?></p>
                         </td>
                     </tr>
                 <?php endforeach; ?>

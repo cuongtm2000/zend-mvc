@@ -25,7 +25,7 @@ return array(
     'sum' => 'Tổng tiền',
 
     'services.link' => 'dich-vu',
-    'news.link' => 'tin-tuc-su-kien',
+    'news.link' => 'tu-van-phong-thuy',
     'video.link' => 'video',
     'contact.link' => 'lien-he',
 

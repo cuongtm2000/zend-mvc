@@ -20,7 +20,7 @@ class DefaultController extends Controller {
     }
 
     public function actionTypes($cid) {
-        $this->layout = '//layouts/column-2';
+        $this->layout = '//layouts/column-3';
 
         $model = new ProductsType();
         $items = new Products();
