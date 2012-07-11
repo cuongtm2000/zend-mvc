@@ -55,7 +55,7 @@ $this->description = $info_cat['description' . LANG]; ?>
                                         <p><label class="position">Hướng:</label> <?php echo $value->productsFeature['direction'];?></p>
                                     </td>
                                     <td width="120">
-                                        <p class="price">Giá: <span><?php echo $value['unit'].' ' . $value['unit_currency'] . '/' . $value['unit_unit']; ?></span></p>
+                                        <p class="price">Giá: <span><?php echo number_format($value['unit'],0,',','.').' ' . $value['unit_currency'] . '/' . $value['unit_unit']; ?></span></p>
                                         <p>Diện tích sử dụng: <span><?php echo $value->productsFeature['area_used'];?>m<sup>2</sup></span></p>
                                     </td>
                                 </tr>
