@@ -22,7 +22,7 @@ span#wrapResetImages div {padding:12px 0 0 0;}
 
 .prod_detail .big_thumb{width:330px;overflow:hidden !important;}
 .big_thumb #paginate-slider2{width:285px !important;overflow:hidden;float:left;margin:10px 0;}
-.prod_detail #paginate-slider2 li{margin:0 8px 0 2px !important;width:80px;height:80px;float:left;cursor:pointer}
+.prod_detail #paginate-slider2 li{margin:0 10px 0 2px !important;width:85px;height:80px;float:left;cursor:pointer}
 
-.prod_detail span.prevsmall {float:left;margin:40px 7px 0 0; cursor:pointer}
-.prod_detail span.nextsmall {float:right;margin:40px 2px 0 0; cursor:pointer}
+.prod_detail span.prevsmall {float:left;margin:40px 7px 0 5px; cursor:pointer}
+.prod_detail span.nextsmall {float:right;margin:40px 5px 0 0; cursor:pointer}
