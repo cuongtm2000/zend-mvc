@@ -35,10 +35,10 @@ $config = array(
             'loginUrl' => array('login')
         ),
 
-        'cache' => array(
+        /*'cache' => array(
             'class' => 'CDbCache',
             'class'=>'CFileCache',
-        ),
+        ),*/
 
         'urlManager' => array(
             'class' => 'UrlManager',
@@ -70,7 +70,7 @@ $config = array(
 
         'db' => array(
             'connectionString' => 'mysql:host=localhost;dbname=cms',
-            'schemaCachingDuration' => 3600,
+            //'schemaCachingDuration' => 3600,
             'emulatePrepare' => true,
             'username' => 'root',
             'password' => '',
@@ -104,7 +104,9 @@ $config = array(
     ),
 );
 
-$modules_dir = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR;
+require(dirname(__FILE__) . '/LoadModules.php');
+
+/*$modules_dir = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR;
 $handle = opendir($modules_dir);
 while (false !== ($file = readdir($handle))) {
     if ($file != "." && $file != ".." && is_dir($modules_dir . $file)) {
@@ -114,6 +116,6 @@ while (false !== ($file = readdir($handle))) {
         }
     }
 }
-closedir($handle);
+closedir($handle);*/
 
 return $config;

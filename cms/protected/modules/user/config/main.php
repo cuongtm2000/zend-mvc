@@ -13,7 +13,7 @@ return array(
         ),
     ),
 
-    'components' => array(
+    /*'components' => array(
         'urlManager' => array(
             'rules' => array(
                 //$module_name . '/<controller:\w+>/<action:\w+>' => $module_name . '/<controller>/<action>',
@@ -22,5 +22,5 @@ return array(
                 $module_name . '/<action:\w+>' => $module_name . '/' . $default_controller . '/<action>',
             ),
         ),
-    ),
+    ),*/
 );
