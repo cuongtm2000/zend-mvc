@@ -1,14 +1,15 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id] => Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link'), $info_cat['type_title' . LANG]); ?>
 <?php $this->pageTitle = $info_cat['type_title' . LANG] . ' - ' . $this->lang[$this->module->id]; ?>
 
-<div class="bg-footer-left">
-    <h1 class="title-right"><span><?php echo $info_cat['type_title' . LANG] ?></span></h1>
-    <?php if ($list_items['models']): ?>
+
+<?php if ($list_items['models']): ?>
+ <div class="bg-footer-left">
+	<h1 class="title-right"><span><?php echo $info_cat['type_title' . LANG] ?></span></h1>
         <table class="table-product">
             <tbody>
                 <?php foreach ($list_items['models'] as $value): ?>
                     <tr>
-                        <td width="100" align="center">
+                        <td width="100">
                             <div class="frame-img-pro"> <a href="<?php echo Yii::app()->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag' . LANG] ?>/<?php echo $value['tag' . LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>">
                                     <?php if ($value['pic_thumb']): ?>
                                         <img src="<?php echo Yii::app()->baseUrl .'/public/userfiles/image/' . $value['dos_username'] . '/image/'?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title' . LANG] ?>" />
@@ -39,7 +40,7 @@
                                 </tr>
                             </table>
                         </td>
-                        <td align="center">
+                        <td style="text-align:center" width="90">
                             <h3 class="title-footer-right">Hội viên</h3>
                             <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/hoivien.jpg" alt="Hoi vien" />
                             <p class="price">ĐT liên hệ: <?php echo $value['contact_mobile'] ?></p>
@@ -50,7 +51,7 @@
         </table> <!--End footer left-->
         <?php $this->widget('CLinkPager', array('pages' => $list_items['pages'], 'header' => '', 'lastPageLabel' => Yii::t('user', 'last'), 'nextPageLabel' => Yii::t('user', 'next'), 'firstPageLabel' => Yii::t('user', 'first'), 'prevPageLabel' => Yii::t('user', 'prev'), 'htmlOptions' => array('class' => 'paging'))) ?>
         <div class="clear"></div>
-    </div>	
+</div> 
 <?php else: ?>
-    <?php echo $this->lang['no_record'] ?>
+    <div class="bg-footer-left"> <?php echo $this->lang['no_record'] ?></div>
 <?php endif; ?>
