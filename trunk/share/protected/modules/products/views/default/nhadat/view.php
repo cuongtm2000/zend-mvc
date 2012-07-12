@@ -110,7 +110,7 @@ $this->description = $item['description' . LANG];
                                 <a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $value[ucfirst($this->module->id) . 'Cat']['tag' . LANG] ?>/<?php echo $value['tag' . LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>">
                                     <?php if ($value['pic_thumb']): ?>
                                         
-                                    <img src="<?php echo Yii::app()->baseUrl . USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title' . LANG] ?>" />
+                                    <img src="<?php echo Yii::app()->baseUrl?>/public/userfiles/image/<?php echo $value['dos_username'] ?>/image/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title' . LANG] ?>" />
                                     <?php else : ?>
                                         <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="<?php echo $value['title' . LANG] ?>" />
                                     <?php endif ?>
