@@ -8,7 +8,7 @@
             <tbody>
                 <?php foreach ($list_items['models'] as $value): ?>
                     <tr>
-                        <td width="100">
+                        <td width="100" align="center">
                             <div class="frame-img-pro"> <a href="<?php echo Yii::app()->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag' . LANG] ?>/<?php echo $value['tag' . LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>">
                                     <?php if ($value['pic_thumb']): ?>
                                         <img src="<?php echo Yii::app()->baseUrl .'/public/userfiles/image/' . $value['dos_username'] . '/image/'?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title' . LANG] ?>" />
@@ -39,7 +39,7 @@
                                 </tr>
                             </table>
                         </td>
-                        <td>
+                        <td align="center">
                             <h3 class="title-footer-right">Hội viên</h3>
                             <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/hoivien.jpg" alt="Hoi vien" />
                             <p class="price">ĐT liên hệ: <?php echo $value['contact_mobile'] ?></p>
