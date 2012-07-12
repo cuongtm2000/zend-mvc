@@ -37,7 +37,7 @@
                                 </tr>
                             </table>
                         </td>
-                        <td style="text-align:center">
+                        <td style="text-align:center" width="90">
                             <h3 class="title-footer-right">Hội viên</h3>
                             <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/hoivien.jpg" alt="Hoi vien" />
                             <p class="price">ĐT liên hệ: <?php echo $value['contact_mobile'] ?></p>
