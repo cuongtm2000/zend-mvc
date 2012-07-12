@@ -48,7 +48,7 @@ $this->description = $item['description' . LANG];
                 <?php endif; ?>
                 <td class="right-info">
                     <p class="price">Mã số: <?php echo $item['record_id'] ?> </p>
-                    <p class="price"><strong>Giá: <span> <?php echo number_format($value['unit'],0,',','.').' ' . $value['unit_currency'] . '/' . $value['unit_unit']; ?></span></strong></p>
+                    <p class="price"><strong>Giá: <span> <?php echo number_format($item['unit'],0,',','.').' ' . $item['unit_currency'] . '/' . $item['unit_unit']; ?></span></strong></p>
                     <p class="price">Địa chỉ:  <?php echo $item['address'] ?> </p>
                     <p class="price">Quận/huyện:  <?php echo $item['dos_districts_district_id'] ?> </p>
                     <p class="price">Tỉnh/thành phố: <?php echo $item['dos_provinces_province_id'] ?></p>
@@ -106,9 +106,11 @@ $this->description = $item['description' . LANG];
                 <?php foreach ($item_other as $value): ?>
                     <tr>
                         <td width="100">
-                            <div class="frame-img-pro"> <a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $value[ucfirst($this->module->id) . 'Cat']['tag' . LANG] ?>/<?php echo $value['tag' . LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>">
+                            <div class="frame-img-pro"> 
+                                <a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $value[ucfirst($this->module->id) . 'Cat']['tag' . LANG] ?>/<?php echo $value['tag' . LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>">
                                     <?php if ($value['pic_thumb']): ?>
-                                        <img src="<?php echo Yii::app()->baseUrl . USERFILES ?>/<?php echo $this->module->id ?>/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title' . LANG] ?>" />
+                                        
+                                    <img src="<?php echo Yii::app()->baseUrl . USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title' . LANG] ?>" />
                                     <?php else : ?>
                                         <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="<?php echo $value['title' . LANG] ?>" />
                                     <?php endif ?>
