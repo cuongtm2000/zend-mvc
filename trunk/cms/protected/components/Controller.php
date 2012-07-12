@@ -32,6 +32,10 @@ class Controller extends CController {
 
         //Get Setting
         $this->setting = Setting::model()->getSetting();
+
+        /*$str = 'about/default/view|.html';
+        $test = explode('|', $str);
+        var_dump($test);*/
     }
 
     public function setLangUrl() {
