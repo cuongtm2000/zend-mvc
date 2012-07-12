@@ -59,8 +59,6 @@ echo $form->errorSummary($model_f, '');
             ?>
         </div>
 
-    
-    
     <?php foreach (Yii::app()->user->numLang as $lang): $lang = ($lang == 'vi') ? '' : $lang; ?>
         <div class="col1"><?php echo $form->labelEx($model, 'title' . $lang) ?></div>
         <div class="col2">
