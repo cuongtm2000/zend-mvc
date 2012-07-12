@@ -104,6 +104,18 @@ class AboutLanguage extends CActiveRecord {
         ));
     }
 
+    //Front end - Get first record
+    public function firstRecord() {
+        $command = Yii::app()->db->createCommand('SELECT title, content, tag, description FROM ' . $this->tableName() . ', hoiit_module_about WHERE hoiit_module_about.record_id = ' . $this->tableName() . '.record_id AND language_id=\'' . Yii::app()->language . '\' AND enable = 1 ORDER BY record_order DESC, created DESC');
+        $row = $command->queryRow();
+
+        if ($row) {
+            //update hit view
+            $this::model()->updateCounters(array('hit' => 1, 'tag =:tag', ':tag' => $row['tag']));
+            return $row;
+        }
+    }
+
     //Front end - Get detail record
     public function detailRecord($tag) {
         $command = Yii::app()->db->createCommand('SELECT title, content, description FROM ' . $this->tableName() . ' WHERE language_id=\'' . Yii::app()->language . '\' AND tag=:tag');

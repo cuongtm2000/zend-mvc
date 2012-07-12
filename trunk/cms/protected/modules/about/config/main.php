@@ -13,7 +13,7 @@ return array(
         ),
     ),
 
-    'components' => array(
+    /*'components' => array(
         'urlManager' => array(
             'rules' => array(
                 //$module_name . '/<action:\w+>/<id:\d+>' => $module_name . '/' . $default_controller . '/<action>',
@@ -23,5 +23,5 @@ return array(
                 '(gioi-thieu)/<id:[-a-z0-9]+>' => array($module_name . '/default/view', 'urlSuffix' => '.html'), //view
             ),
         ),
-    ),
+    ),*/
 );

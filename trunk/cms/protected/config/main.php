@@ -34,15 +34,20 @@ $config = array(
             'allowAutoLogin' => true,
             'loginUrl' => array('login')
         ),
-        // uncomment the following to enable URLs in path-format
+
+        'cache' => array(
+            'class' => 'CDbCache',
+            'class'=>'CFileCache',
+        ),
 
         'urlManager' => array(
+            'class' => 'UrlManager',
             'urlFormat' => 'path',
             'showScriptName' => false,
             'rules' => array(
-                /*'<controller:\w+>/<id:\d+>' => '<controller>/view',
-                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',*/
+                //'<controller:\w+>/<id:\d+>' => '<controller>/view',
+                //'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                //'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
 
                 '<lang:[a-z]{2}>/<module:\w+>/<controller:\w+>/<id:\d+>' => '<module>/<controller>/view',
                 '<lang:[a-z]{2}>/<module:\w+>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<module>/<controller>/<action>',
@@ -65,6 +70,7 @@ $config = array(
 
         'db' => array(
             'connectionString' => 'mysql:host=localhost;dbname=cms',
+            'schemaCachingDuration' => 3600,
             'emulatePrepare' => true,
             'username' => 'root',
             'password' => '',
@@ -77,18 +83,15 @@ $config = array(
             'errorAction' => 'error',
         ),
         'log' => array(
-            'class' => 'CLogRouter',
-            'routes' => array(
+            'class'=>'CLogRouter',
+            'routes'=>array(
                 array(
-                    'class' => 'CFileLogRoute',
-                    'levels' => 'error, warning',
+                    'class'=>'CFileLogRoute',
+                    'levels'=>'error, warning',
                 ),
-                // uncomment the following to show log messages on web pages
-                /*
                 array(
                     'class'=>'CWebLogRoute',
                 ),
-                */
             ),
         ),
     ),

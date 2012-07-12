@@ -44,7 +44,7 @@ class MenuMultiLevel extends CMenu {
 
             $items[] = array(
                 'label' => $result['menu_name'],
-                'url' => $result['menu_url'],
+                'url' => Yii::app()->baseUrl . '/' . $result['menu_url'],
                 //'itemOptions' => array('class' => 'listItem'),
                 'linkOptions' => array( /*'class' => 'listItemLink', */
                     'title' => $result['menu_name']),
