@@ -41,7 +41,6 @@ jQuery(document).ready(function(){
 	jQuery(".img_info a[rel^='photo']").prettyPhoto({animation_speed:'fast',slideshow:10000});
 });
 </script>
-		
 </head>
 <body>
 <div id="wrapper">
