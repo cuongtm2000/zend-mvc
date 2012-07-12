@@ -6,9 +6,11 @@ class AdminController extends CController {
 
 	public function init() {
 		Common::setLanguage(); //setting language
+		
+		if(isset(Yii::app()->user->role) && Yii::app()->user->role!='admin') die;
 
 		$user_class = new Username();
-		Yii::app()->session['userAdmin'] = $user_class->getUserByRole('user');
+		Yii::app()->session['userAdmin'] = $user_class->getUserByRole('admin');
 		define('USERFILES', '/public/userfiles/image/' . Yii::app()->session['userAdmin'] . '/image');
 
 		//Setup module user
