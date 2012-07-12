@@ -219,7 +219,7 @@ echo $form->errorSummary($model_f, '');
     <div class="col1"><?php echo $form->labelEx($model, 'pic_thumb') ?></div>
     <div class="col2">
         <?php if ($model->pic_thumb): ?>
-            <div class="img-marginb5"><img src="<?php echo Yii::app()->request->baseUrl . USERFILES . '/products/' . $model->pic_thumb ?>" alt="" />
+            <div class="img-marginb5"><img src="<?php echo Yii::app()->request->baseUrl . '/public/userfiles/image/' . Yii::app()->user->id . '/image/products/' . $model->pic_thumb ?>" alt="" />
                 <?php echo $form->checkBox($model, 'remove_pic_thumb') ?><?php echo $form->labelEx($model, 'remove_pic_thumb', array('class' => 'remove')) ?>
             </div>
         <?php endif; ?>
@@ -231,7 +231,7 @@ echo $form->errorSummary($model_f, '');
     <div class="col2">
         <?php echo $form->fileField($model, 'pic_full', array('class' => 'fileupload', 'size' => '40%')); ?>
         <?php if ($model->pic_full): ?>
-            <a class="nyroModal" href="<?php echo Yii::app()->request->baseUrl . USERFILES . '/products/' . $model->pic_full ?>">Xem ảnh lớn</a>
+            <a class="nyroModal" href="<?php echo Yii::app()->request->baseUrl . '/public/userfiles/image/' . Yii::app()->user->id . '/image/products/' . $model->pic_full ?>">Xem ảnh lớn</a>
         <?php endif; ?>
         <p style="color: red"><b>Lưu ý</b>:Chỉ chấp nhận hình ảnh là JPG và GIF, có dung lượng nhỏ hơn 5 MB. Không đăng logo, hình quảng cáo, nếu vi phạm sẽ bị xoá tin rao và khoá tài khoản đăng tin.</p>
     </div>  <div class="clear space"></div>
@@ -241,7 +241,7 @@ echo $form->errorSummary($model_f, '');
         <?php foreach ($str as $value): ?>
             <div class="col1"><?php echo $form->labelEx($model, 'pic_desc') ?></div>
             <div class="col2">
-                <a class="nyroModal" href="<?php echo Yii::app()->request->baseUrl . USERFILES . '/' . $this->getId() . '/' . $value ?>">Xem ảnh lớn</a>
+                <a class="nyroModal" href="<?php echo Yii::app()->request->baseUrl . '/public/userfiles/image/' . Yii::app()->user->id . '/image/products/' . $value ?>">Xem ảnh lớn</a>
                 <label class="remove"><input type="checkbox" value="<?php echo $value ?>" name="<?php echo ucfirst($this->ID) ?>[remove_pic_desc][]" /> Remove</label>
             </div>
             <div class="clear space"></div>
