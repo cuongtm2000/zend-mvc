@@ -133,6 +133,7 @@ fieldset .txt-very-tiny{width:22px; -moz-border-radius: 3px; -webkit-border-radi
 fieldset .txt-large{width:190px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
 fieldset .txt-large-x{width:40%; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
 fieldset .txt-very-large{width:55%; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
+fieldset .textarea-very-large{width:55%}
 
 fieldset .select-110{width: 110px;}
 

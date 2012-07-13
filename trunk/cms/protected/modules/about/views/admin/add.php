@@ -3,26 +3,27 @@
 <fieldset>
     <legend>Thêm mới about</legend>
 
-    <?php foreach($this->listLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
-    <div class="col1"><?php echo $form->labelEx($model, 'title'.$lang) ?></div>
+    <?php foreach($this->listLanguage as $key => $lang):?>
+    <div class="col1"><?php echo $form->labelEx($model, 'title'.$key) ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'title'.$lang, $htmlOptions=array('class'=>'txt-very-large')); ?>
+        <?php echo $form->textField($model, 'title'.$key, $htmlOptions=array('class'=>'txt-very-large')); ?>
 		<!-- <a class='west' href='' title='Hôm nay là 1 ngày gần chuẩn bị dinh cô '><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/mark.png"  alt="Mark" /></a> -->
     </div>
     <div class="clear space"></div>
     <?php endforeach; ?>
 
-    <?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
-    <div class="col1"><?php echo $form->labelEx($model, 'content'.$lang) ?></div>
+    <?php foreach($this->listLanguage as $key => $lang):?>
+    <div class="col1"><?php echo $form->labelEx($model, 'content'.$key) ?></div>
     <div class="col2">
-        <?php echo $form->textArea($model, 'content'.$lang, $htmlOptions=array('cols'=>20, 'rows'=>10)); ?>
+        <?php echo $form->textArea($model, 'content'.$key, array('cols'=>20, 'rows'=>10, 'class'=>'textarea-very-large')); ?>
         <script type="text/javascript">
+			writeCookie('sessionPath', '<?php echo Yii::app()->baseUrl?>', 1);
 			tinyMCE.init({
 				 file_browser_callback: 'openKCFinder',
 				 mode:"exact",
-				 elements : "<?php echo ucfirst($this->ID)?>_content<?php echo $lang?>",
+				 elements : "<?php echo get_class($model)?>_content<?php echo $key?>",
 				 theme:"advanced",
-				 language : "vi",
+				 language : "<?php echo $key?>",
 				 plugins : "paste, autolink,lists,style,layer,table,save,advhr,advimage,advlink,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
 
 				 theme_advanced_buttons1 : "bold,italic,underline,strikethrough,formatselect,fontsizeselect,|,justifyleft,justifycenter,justifyright,justifyfull,pastetext,pasteword,|,link,unlink,|,image,media,|,fullscreen",
@@ -57,47 +58,47 @@
     <div class="clear space"></div>
     <?php endforeach; ?>
 
-	<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
-    <div class="col1"><?php echo $form->labelEx($model, 'tag'.$lang) ?></div>
+	<?php foreach($this->listLanguage as $key => $lang):?>
+    <div class="col1"><?php echo $form->labelEx($model, 'tag'.$key) ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'tag'.$lang, $htmlOptions=array('class'=>'txt-very-large')); ?>
+        <?php echo $form->textField($model, 'tag'.$key, array('class'=>'txt-very-large')); ?>
     </div>
     <div class="clear space"></div>
 	<?php endforeach?>
 
-	<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
-    <div class="col1"><?php echo $form->labelEx($model, 'description'.$lang) ?></div>
+	<?php foreach($this->listLanguage as $key => $lang):?>
+    <div class="col1"><?php echo $form->labelEx($model, 'description'.$key) ?></div>
     <div class="col2">
-        <?php echo $form->textArea($model, 'description'.$lang, $htmlOptions=array('cols'=>89, 'rows'=>5)); ?> <span class="info-keyup<?php echo $lang?>">0</span>
+        <?php echo $form->textArea($model, 'description'.$key, array('cols'=>20, 'rows'=>5, 'class'=>'textarea-very-large')); ?> <span class="info-keyup<?php echo $key?>">0</span>
     </div>
     <div class="clear space"></div>
 	<script type="text/javascript">
 		jQuery(function($) {
-			$('#<?php echo ucfirst($this->ID)?>_description<?php echo $lang?>').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup<?php echo $lang?>').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});
+			$('#<?php echo get_class($model)?>_description<?php echo $key?>').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup<?php echo $key?>').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});
 		});
 	</script>
 	<?php endforeach?>
 
-    <div class="col1"><?php echo $form->labelEx($model, $this->lang['hot'], $htmlOptions=array('for'=>ucfirst($this->ID).'_hot_0')) ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'Hot', array('for'=>ucfirst($this->ID).'_hot_0')) ?></div>
     <div class="col2 radio">
-        <?php echo $form->radioButtonList($model, 'hot', array('0'=>$this->lang['normal'], '1'=>$this->lang['hot']), array('separator'=>'&nbsp;&nbsp;')); ?>
+        <?php echo $form->radioButtonList($model, 'hot', array('0'=>'Normal', '1'=>'Hot'), array('separator'=>'&nbsp;&nbsp;')); ?>
     </div>
     <div class="clear space"></div>
 
-    <div class="col1"><?php echo $form->labelEx($model, $this->lang['show'], $htmlOptions=array('for'=>ucfirst($this->ID).'_activated_0')) ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'Show', array('for'=>ucfirst($this->ID).'_enable_0')) ?></div>
     <div class="col2 radio">
-        <?php echo $form->radioButtonList($model, 'activated', array('1'=>$this->lang['show'], '0'=>$this->lang['hidden']), array('separator'=>'&nbsp;&nbsp;')); ?>
+        <?php echo $form->radioButtonList($model, 'enable', array('1'=>'Show', '0'=>'Hidden'), array('separator'=>'&nbsp;&nbsp;')); ?>
     </div>
     <div class="clear space"></div>
 
     <div class="col1">&nbsp;</div>
     <div class="col2">
-        <?php echo CHtml::submitButton($this->lang['add_new'], array('name'=>'submit', 'class'=>'login', 'title'=>$this->lang['add_new'])); ?>
-        <?php echo Chtml::link($this->lang['cancel'], 'javascript:history.back()', $htmlOptions=array('class'=>'login-a', 'title'=>$this->lang['cancel'])) ?>
+        <?php echo CHtml::submitButton('Add', array('name'=>'submit', 'class'=>'login', 'title'=>'Add')); ?>
+        <?php echo Chtml::link('Cancel', 'javascript:history.back()', array('class'=>'login-a', 'title'=>'Cancel')) ?>
     </div><div class="clear space"></div>
 </fieldset>
 <?php $this->endWidget();?>
 
-<?php foreach(Yii::app()->user->numLang as $lang): $lang = ($lang=='vi') ? '' : $lang;?>
-	<?php $this->widget('ext.seoAlias.seoAlias', array('model'=>$model, 'source'=>'title'.$lang, 'target'=>'tag'.$lang)); ?>
+<?php foreach($this->listLanguage as $key => $lang):?>
+	<?php $this->widget('ext.SeoAlias.SeoAlias', array('model'=>$model, 'source'=>'title'.$key, 'target'=>'tag'.$key)); ?>
 <?php endforeach?>
