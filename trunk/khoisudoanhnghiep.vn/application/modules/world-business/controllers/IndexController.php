@@ -58,9 +58,12 @@ class WorldBusiness_IndexController extends GLT_Controller_Action {
 		$item = new $this->_model();
 		$detail = $item->detailItem($this->_data);
 		$this->view->item = $detail;
-		$this->view->otherItem = $item->itemByCatNoneid(
-									$detail['dos_module_item_cat_cat_id'], 
-									$this->_data['id']);
+		$this->view->otherItem = $item->itemByCatNoneid($detail['dos_module_item_cat_cat_id'], $this->_data['id']);
+		
+		if($this->_request->isPost()){	
+			var_dump($this->_data);
+		}
+		
 		$this->webTitle($detail['title'.LANG]. ' - '.$this->view->lang[$this->_data['module']]);
 	}
 }
