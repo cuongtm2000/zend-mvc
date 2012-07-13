@@ -32,7 +32,7 @@
 			</div>
 		</div>
 		<div class="right-info">
-			<p class="price"><strong>Giá: <span><?php echo (is_numeric($item['unit'])) ? number_format($item['unit'], 0, '', '.') . ' VND' : (($item['unit']) ? $item['unit'] : $this->lang['contact']) ?></span></strong></p>
+			<p class="price-info"><strong>Giá: <span><?php echo (is_numeric($item['unit'])) ? number_format($item['unit'], 0, '', '.') . ' VND' : (($item['unit']) ? $item['unit'] : $this->lang['contact']) ?></span></strong></p>
 			<h4 class="title-info"><span><?php echo $this->lang['description'] . ' ' . strtolower($this->lang[$this->module->id]) ?></span></h4>
 			<?php echo $item['preview'.LANG] ?>
 		</div> <div class="clear"></div>
