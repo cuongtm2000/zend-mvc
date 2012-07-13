@@ -195,7 +195,7 @@ class Webadmin_NewsController extends GLT_Controller_Backend {
                 $this->view->item = $item->editItem($this->_data);
             } else {
                 $item->saveItem($this->_data);
-                $this->_redirect($this->_module . '/' . $this->_controller);
+             //   $this->_redirect($this->_module . '/' . $this->_controller);
             }
         }
     }
