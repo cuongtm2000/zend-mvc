@@ -129,4 +129,11 @@ class AboutLanguage extends CActiveRecord {
         }
 
     }
+
+    //Front end - delete
+    public function deleteRecord($id) {
+        $command = Yii::app()->db->createCommand('DELETE FROM ' . $this->tableName() . ' WHERE record_id=:id');
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        $command->execute();
+    }
 }

@@ -79,12 +79,9 @@
 		<?php endif;?>
 		<div class="catmenu">
 			<ul class="menu-li">
-				<li><a class="headerbar" href="">Menu</a>
+				<li><a class="headerbar" href="">About</a>
 					<ul class="submenu">
-						<li><a href="" title="">Sub</a></li>
-                        <li><a href="" title="">Sub</a></li>
-                        <li><a href="" title="">Sub</a></li>
-                        <li><a href="" title="">Sub</a></li>
+						<li><a href="<?php echo Yii::app()->baseUrl ?>/admin/about" title="">Danh sách</a></li>
 					</ul>
 				</li>
                 <li><a class="headerbar" href="">Menu</a>
