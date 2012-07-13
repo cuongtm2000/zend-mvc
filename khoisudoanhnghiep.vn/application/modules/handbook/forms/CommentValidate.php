@@ -13,6 +13,14 @@ class Productions_Form_CommentValidate {
         if (!$validator->isValid($arrParam['commenttitle'])) {
             $this->_error['title'] = 'Tiêu đề không được rỗng và từ 6 - 100 ký tự';
         }
+		
+		//Validate email
+		$validator = new Zend_Validate();
+		$validator->addValidator(new Zend_Validate_EmailAddress());
+		
+		if (!$validator->isValid($arrParam['email'])) {
+			$this->_error['email'] ='Email không hợp lệ. Ví dụ: info@dos.vn';
+		}
 
         //Validate detail
         $validator = new Zend_Validate();
