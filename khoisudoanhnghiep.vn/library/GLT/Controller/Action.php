@@ -80,6 +80,11 @@ class GLT_Controller_Action extends Zend_Controller_Action {
     }
     public function showComment($data, $record_id){
         $tmp=ucfirst($data['module']).'_Model_Comments';
+        if($data['module']== 'world-business')
+            $tmp= 'WorldBusiness_Model_Comments';
+        if($data['module']== 'corporate-culture')
+            $tmp= 'CorporateCulture_Model_Comments';
+        
         $cmt = new $tmp();
         if ($this->_request->isPost()) {
             $validate = new GLT_Form_CmtValidate($data);
@@ -96,7 +101,7 @@ class GLT_Controller_Action extends Zend_Controller_Action {
                     $this->view->error = array('* Bình luận của bạn đã được gửi thành công.');
                     $data['id']=$record_id;
                     $id = $cmt->addItem($data);
-                    $this->_redirect('http://'.$_SERVER["SERVER_NAME"].$this->_request->getRequestUri().'#cmt'.$id);
+                    $this->_redirect('http://'.$_SERVER["SERVER_NAME"].$this->_request->getRequestUri().'#cmt'.($id-1));
                 }
             }
         }

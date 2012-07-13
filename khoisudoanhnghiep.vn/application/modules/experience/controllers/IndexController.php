@@ -62,5 +62,6 @@ class Experience_IndexController extends GLT_Controller_Action {
 									$detail['dos_module_item_cat_cat_id'], 
 									$this->_data['id']);
 		$this->webTitle($detail['title'.LANG]. ' - '.$this->view->lang[$this->_data['module']]);
+                $this->showComment($this->_data, $detail['record_id']);
 	}
 }

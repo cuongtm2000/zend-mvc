@@ -201,4 +201,52 @@ class Webadmin_CorporateCultureController extends GLT_Controller_Backend{
     		}
 		}
     }
+     public function commentAction() {// echo'<pre>';		print_r($this->_data);		echo'</pre>';
+       
+        $cmt = new CorporateCulture_Model_Comments();
+        $stu = new CorporateCulture_Model_CorporateCulture();
+
+        $this->view->headScript()->appendFile($this->_request->getBaseUrl() . TEMPLATE . '/js/jquery.prettyphoto.js');
+        $this->view->headLink()->appendStylesheet($this->_request->getBaseUrl() . TEMPLATE . '/css/prettyphoto.css');
+
+        if (isset($this->_data['id'])) {
+            if ($this->_request->isPost()) {
+                $cmt->updateItem($this->_data);
+                $this->_redirect($this->_module . '/' . $this->_controller . '/comment');
+            }
+            $this->view->item = $cmt->getItem($this->_data['id']);
+            return;
+        }
+        if ($this->_request->isPost()) {
+            switch ($this->_data['factive']) {
+                case '':
+                    foreach ($this->_data['ids'] as $id) {
+                        $cmt->delItem($id);
+                    }
+                    break;
+                case 'enable':
+                    foreach ($this->_data['ids'] as $id) {
+                        $cmt->enableItem($id);
+                    }
+                    break;
+                case 'disable':
+                    foreach ($this->_data['ids'] as $id) {
+                        $cmt->disableItem($id);
+                    }
+                    break;
+            }
+            $this->_redirect($this->_module . '/' . $this->_controller . '/comment');
+        }
+        $allCmt = $cmt->listItems($this->_data);
+
+        foreach ($allCmt as &$value) {
+            $value['dos_module_item_record_name'] = $stu->getItem($value['dos_module_item_record_id']);
+        }
+
+        $this->view->items = $allCmt;
+        $totalItem = $cmt->countItem();
+        $paginator = new GLT_Paginator();
+        $this->view->paginator = $paginator->createPaginator($totalItem, $this->_paginator);
+    }
+
 }

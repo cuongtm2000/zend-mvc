@@ -4,6 +4,36 @@
  		<h2 class="title-masuring"><?php echo $this->item['title']?></h2>
         <?php echo $this->item['content'] ?>        
     <?php endif;?>
+                
+                   <!--Loi binh-->
+    <div class="mid-boxright">
+        <h2 class="title-comments"><span>Gửi Lời Bình</span></h2>
+        <form id="contact" method="post"  action="">
+            <p><input name="cmt_name" value="<?php echo ($this->items['cmt_name'] != '') ? $this->items['cmt_name'] : 'Họ và tên' ?>" onblur="if(this.value=='') this.value='Họ và tên'" onfocus="if(this.value =='Họ và tên') this.value=''" /></p>
+            <p><input value="<?php echo ($this->items['cmt_email'] != '') ? $this->items['cmt_email'] : 'Email' ?>"  name="cmt_email" onblur="if(this.value=='') this.value='Email'" onfocus="if(this.value =='Email') this.value=''" /></p>
+            <p><input name="cmt_title" value="<?php echo ($this->items['cmt_title'] != '') ? $this->items['cmt_title'] : 'Tiêu đề' ?>" onblur="if(this.value=='') this.value='Tiêu đề'" onfocus="if(this.value =='Tiêu đề') this.value=''" /></p>
+            <textarea name="cmt_content"  rows="10" cols="70" onblur="if(this.value=='') this.value='Nội dung'" onfocus="if(this.value =='Nội dung' ) this.value=''"><?php echo $this->items['cmt_content'] ?></textarea>
+            <?php if ($this->error) foreach ($this->error as $er): ?>
+                    <div style="color:#ff0000;"><?php echo $er ?></div>
+            <?php endforeach ?>
+
+            <p>
+                <input type="submit" value="Gửi lời bình" class="bton-comment" />
+                <input type="reset" value="Xóa trắng" class="bton-comment" />
+            </p>
+
+            <div class="bg-comment">
+                <?php if (sizeof($this->comments) > 0) foreach ($this->comments as $cmt): ?>
+                        <div class="comment">
+                            <h3 class="title-comment"><a href="#" name="cmt<?php echo $cmt['cmt_id'] ?>"><?php echo $cmt['cmt_title'] ?></a> </h3>
+                            <?php echo $cmt['cmt_content'] ?>
+                            <div> <?php echo $cmt['cmt_name'] ?> ( <?php echo date('H:i d-m-Y', $cmt['cmt_date']) ?> )</div>
+                        </div>	
+                    <?php endforeach ?>	
+            </div>
+        </form>
+    </div>
+
     
     <?php if($this->otherItem){ ?>
     	<h2 class="title-others">Các Tin khác</h2>
