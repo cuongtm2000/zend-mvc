@@ -86,10 +86,10 @@ class Language extends CActiveRecord {
         ));
     }
 
-    public function listItem() {
+    /*public function listItem() {
         $command = Yii::app()->db->createCommand('SELECT language_id, language_name FROM ' . $this->tableName() . ' ORDER BY language_sort ASC');
         return $command->queryAll();
-    }
+    }*/
 
     public function listLanguage() {
         $data = array();
