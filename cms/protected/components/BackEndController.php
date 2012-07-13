@@ -9,7 +9,7 @@ class BackEndController extends CController {
     public $breadcrumbs = array();
 
     public $setting = array();
-	public $listLanguage = array();
+    public $listLanguage = array();
 
     public function filters() {
         return array(
@@ -30,14 +30,10 @@ class BackEndController extends CController {
 
     public function init() {
         Yii::app()->getClientScript()->registerCoreScript('jquery');
-		
-        Common::setLanguage(); //Setup language
         Yii::app()->theme = 'admin'; //Setup template
-		
-		//Get list language
-        $this->listLanguage = Language::model()->listLanguage();
 
-        //Get Setting
-        $this->setting = Setting::model()->getSetting();
+        $this->setting = Setting::model()->getSetting(); //Get Setting: title, keywords...
+        $this->listLanguage = Language::model()->listLanguage(); //Get list language: vi, en
+        Common::setLanguage(); //Setup language
     }
 }

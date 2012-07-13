@@ -1,8 +1,11 @@
 <?php
 class Common {
     public static function setLanguage() {
-        $languages = array('vi', 'en');
-        $langDefault = 'vi';
+        $langDefault = Yii::app()->controller->setting['default_language'];
+        $languages = array();
+        foreach (Yii::app()->controller->listLanguage as $key => $value) {
+            $languages[] = $key;
+        }
 
         if (isset($_GET['lang']) && in_array($_GET['lang'], $languages)) {
             Yii::app()->language = $_GET['lang']; //Set language query
