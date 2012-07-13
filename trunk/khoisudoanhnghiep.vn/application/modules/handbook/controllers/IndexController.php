@@ -66,28 +66,7 @@ class Handbook_IndexController extends GLT_Controller_Action {
         $this->view->otherItem = $item->itemByCatNoneid($detail['dos_module_item_cat_cat_id'], $this->_data['id']);
         $this->webTitle($detail['title' . LANG] . ' - ' . $this->view->lang[$this->_data['module']]);
     
-        $tmp=ucfirst($this->_data['module']).'_Model_Comments';
-        $cmt = new $tmp();
-        if ($this->_request->isPost()) {
-            $validate = new GLT_Form_CmtValidate($this->_data);
-            var_dump($this->_data);
-            if ($validate->isError() == true) {
-                $this->view->error = $validate->getError();
-                $this->view->items = $this->_data;
-            } else {
-                $giay = $this->checkcommment('last_commnent', 60);        //	echo $giay;
-                if ($giay < 0) {
-                    $this->view->error = array('*Bạn gửi bình luận quá nhanh. Hãy thử lại sau ' . (-$giay) . ' giây!');
-                    $this->view->items = $this->_data;
-                } else {
-                    $this->view->error = array('* Bình luận của bạn đã được gửi thành công.');
-                    $this->_data['id']=$detail['record_id'];
-                    $id = $cmt->addItem($this->_data);
-                    //$this->_redirect('http://'.$_SERVER["SERVER_NAME"].$this->_request->getRequestUri().'#comment'.$id);
-                }
-            }
-        }
-        $this->view->comments = $cmt->listItem($detail['record_id']);
+        $this->showComment($this->_data, $detail['record_id']);
     }
 
 }

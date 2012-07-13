@@ -78,5 +78,29 @@ class GLT_Controller_Action extends Zend_Controller_Action {
             return 0;
         }
     }
+    public function showComment($data, $record_id){
+        $tmp=ucfirst($data['module']).'_Model_Comments';
+        $cmt = new $tmp();
+        if ($this->_request->isPost()) {
+            $validate = new GLT_Form_CmtValidate($data);
+   
+            if ($validate->isError() == true) {
+                $this->view->error = $validate->getError();
+                $this->view->items = $data;
+            } else {
+                $giay = $this->checkcommment('last_commnent', 60);        //	echo $giay;
+                if ($giay < 0) {
+                    $this->view->error = array('*Bạn gửi bình luận quá nhanh. Hãy thử lại sau ' . (-$giay) . ' giây!');
+                    $this->view->items = $data;
+                } else {
+                    $this->view->error = array('* Bình luận của bạn đã được gửi thành công.');
+                    $data['id']=$record_id;
+                    $id = $cmt->addItem($data);
+                    $this->_redirect('http://'.$_SERVER["SERVER_NAME"].$this->_request->getRequestUri().'#cmt'.$id);
+                }
+            }
+        }
+        $this->view->comments = $cmt->listItem($record_id);
+    }
 
 }
