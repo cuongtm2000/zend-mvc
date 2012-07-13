@@ -25,23 +25,20 @@ class Handbook_Model_Comments extends Zend_Db_Table {
         }
     }
 
-    public function listItem($data = NULL) {
-        /* /get paging number
-          $paginator = $data['paginator'];
-          if ($paginator['itemCountPerPage']>0){
-          $page = $paginator['currentPage'];
-          $rowCount = $paginator['itemCountPerPage'];
-          } */
-
-        $select = $this->select()->from($this->_name, array('comment_id', 'comment_title', 'comment_content', 'dos_sys_users_username', 'comment_date'))
+    public function listItem($id) {
+        $select = $this->select()
+                ->from($this->_name, array('comment_id', 'comment_title', 'comment_content', 'comment_date'))
                 ->where('comment_enable = 1')
-                ->where('dos_module_item_record_id = ?', $data['id'])
+                ->where('dos_module_item_record_id = ?', $id)
                 ->order('comment_date ASC')
-        //->limitPage($page,$rowCount)
         ;
 
-        return $this->fetchAll($select)->toArray();
-    }
+        try {
+            return $this->fetchAll($select)->toArray();
+        } catch (Exception $exc) {
+            var_dump($exc);
+        }
+        }
 
     public function listItems($data = NULL) {
         //get paging number

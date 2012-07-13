@@ -31,7 +31,6 @@ class Vote_Model_Vote extends Zend_Db_Table {
         
         $ans= new Vote_Model_Answer();
         $result['answer']= $ans->getAnswerView($result['record_id']);     
-     //   var_dump($result);
         return $result;
     }
     

@@ -57,7 +57,15 @@ class Handbook_IndexController extends GLT_Controller_Action {
         $this->view->paginator = $paginator->createPaginator($totalItem, $this->_paginator);
 
         $this->webTitle($this->view->lang[$this->_data['module']]);
+    }
 
+    public function viewAction() {
+        $item = new $this->_model();
+        $detail = $item->detailItem($this->_data);
+        $this->view->item = $detail;
+        $this->view->otherItem = $item->itemByCatNoneid($detail['dos_module_item_cat_cat_id'], $this->_data['id']);
+        $this->webTitle($detail['title' . LANG] . ' - ' . $this->view->lang[$this->_data['module']]);
+    
         $tmp=ucfirst($this->_data['module']).'_Model_Comments';
         $cmt = new $tmp();
         if ($this->_request->isPost()) {
@@ -80,15 +88,7 @@ class Handbook_IndexController extends GLT_Controller_Action {
                 }
             }
         }
-        $this->view->comments = $cmt->listItem($this->_data);
-    }
-
-    public function viewAction() {
-        $item = new $this->_model();
-        $detail = $item->detailItem($this->_data);
-        $this->view->item = $detail;
-        $this->view->otherItem = $item->itemByCatNoneid($detail['dos_module_item_cat_cat_id'], $this->_data['id']);
-        $this->webTitle($detail['title' . LANG] . ' - ' . $this->view->lang[$this->_data['module']]);
+        $this->view->comments = $cmt->listItem($detail['record_id']);
     }
 
 }
