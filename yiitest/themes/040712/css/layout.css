@@ -21,12 +21,12 @@ a:hover{color:#000;}
 .hot-line{color:#228BC8;margin: 10px 0 0 0}
 
 /*Nav*/
-#nav{list-style:none;background:url(../images/nav-bg.jpg) no-repeat; text-align:center; padding:9px 0;margin:0 0 5px 0}
-#nav li{display:inline;}
-#nav li a{color:#fff;background:url(../images/nav-line.jpg) no-repeat right; padding:9px 30px;font-size:10pt;font-weight:bold}
+#nav{list-style:none;background:url(../images/nav-bg.jpg) no-repeat; height:36px;padding:0 10px 0 15px;margin:0 0 5px 0}
+#nav li{float:left; background:url(../images/nav-line.jpg) no-repeat right;}
+#nav li a{color:#fff; padding:9px 33px;display:block;font-size:10pt;font-weight:bold;*padding:9px 46px}
 #nav li a:hover{background:#228BC8}
 #nav .select{background:#228BC8}
-#nav .none-line a{background:none}
+#nav .none-line{background: none}
 
 /** Banner **/
 #banner{ margin:0 0 10px 0}
@@ -66,7 +66,7 @@ a:hover{color:#000;}
 .bg-adv li{padding:0 0 5px 0}
 
 /*Right content*/
-#rightcontent{float:left; width:520px;margin:0 0 0 8px}
+#rightcontent{float:right; width:735px}
 #rightcontent p{margin:0 0 10px 0}
 #rightcontent ul li, #rightcontent ol li{margin: 4px 0 4px 40px}
 #rightcontent ul ,#rightcontent ol{margin: 0 0 12px 0}
@@ -82,8 +82,8 @@ a:hover{color:#000;}
 
 /***** Product    *****/
 #rightcontent .all-product{margin:10px 0 0 0;list-style:none;padding:0}
-#rightcontent .product{width:165px;padding:5px 0 15px 0;text-align:center;margin:0 0 10px 3px; border:1px solid #ddd;display:inline-block; vertical-align:top;*float:left;*margin:0 10px 10px 0}
-.product-img{height:155px; width:165px;display:table-cell;vertical-align:middle}
+#rightcontent .product{width:170px;padding:5px 0 15px 0;text-align:center;margin:0 0 10px 7px; border:1px solid #ddd;display:inline-block; vertical-align:top;*float:left;*margin:0 10px 10px 0}
+.product-img{height:160px; width:170px;display:table-cell;vertical-align:middle;text-align:center}
 .tent-product{padding:0 5px}
 #rightcontent .price{color:#000; font-weight:700; font-size:13px; margin:7px 0 10px 0}
 .title-pro{padding:7px 0 0 0 ; font-size:10pt}
@@ -94,12 +94,12 @@ a:hover{color:#000;}
 /***    Page product-info     ****/
 .frame-pro-info{padding:5px;border:1px solid #EEEEEE;margin:0 0 10px 0}
 .row-info{margin: 0 0 15px 0}
-.right-info{float:right;width:210px}
+.right-info{float:right;width:420px}
 .tent-right-info{padding:0 10px}
 .title-info{margin:0 0 10px 0;color: #fff}
 .title-info span{background: #444444;padding:3px 10px}
 .price-info{color:#000;margin:0 0 10px 0 !important;font-size: 10pt}
-.price-info span{margin: 0 0 0 10px;color: #DC692B}
+.price-info span{margin: 0 0 0 10px;color:#228BC8}
 
 /** Form lien he  **/
 .title-contact{ background:#CCC195;margin:0 0 10px 0; padding:7px 2px 7px 10px; font-family:Tahoma, Geneva, sans-serif;font-weight:bold; color:#33220C}
