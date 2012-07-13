@@ -1,28 +1,59 @@
-<h1 class="title-left"><span><?php echo $this->lang[$this->module]?></span></h1>
+<h1 class="title-left"><span><?php echo $this->lang[$this->module] ?></span></h1>
 <div class="frame-tent-left">
-	<?php if(is_array($this->item)): ?>
- 		<h2 class="title-masuring"><?php echo $this->item['title']?></h2>
+    <?php if (is_array($this->item)): ?>
+        <h2 class="title-masuring"><?php echo $this->item['title'] ?></h2>
         <?php echo $this->item['content'] ?>        
-    <?php endif;?>
-    
-    <?php if($this->otherItem){ ?>
-    	<h2 class="title-others">Các Tin khác</h2>
-		<ul class="sub-others">
-    	<?php $i=0;	foreach ($this->otherItem as $value){if($i++ % 2==0){?>
-        	<li>
-        		<a href="<?php echo $this->baseUrl() ?>/tin-tuc/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title']?>'>
-        			<?php echo $value['title']?>
-        		</a>
-        	</li>    
-        	<?php }else{ ?>
-        	<li><p>
-        		<a href="<?php echo $this->baseUrl() ?>/tin-tuc/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title']?>'>
-        			<?php echo $value['title']?>
-        		</a>
-        	</p></li>   
-        <?php }}?>
+    <?php endif; ?>
+
+        <!--Binh luan-->
+<?php if (sizeof($this->comments) > 0) foreach ($this->comments as $cmt): ?>
+        <div class="comment">
+            <h3><a href="#" name="cmt<?php echo $cmt['cmt_id'] ?>"><?php echo $cmt['cmt_title'] ?></a> </h3>
+            <?php echo $cmt['cmt_content'] ?>
+            <div> <?php echo $cmt['cmt_name'] ?> ( <?php echo date('H:i d-m-Y', $cmt['cmt_date']) ?> )</div>
+        </div>	
+    <?php endforeach ?>
+
+<div class="clear"></div>
+<!--Loi binh-->
+<h2 class="title-box-right"><span>Gửi Lời Bình</span></h2>
+<div class="mid-boxright">
+    <form id="contact" method="post"  action="">
+        <input name="cmt_name" value="<?php echo ($this->items['cmt_name'] != '') ? $this->items['cmt_name'] : 'Họ và tên' ?>" >
+        <input value="<?php echo ($this->items['cmt_email'] != '') ? $this->items['cmt_email'] : 'Email' ?>"  name="cmt_email" >
+        <input name="cmt_title" value="<?php echo ($this->items['cmt_title'] != '') ? $this->items['cmt_title'] : 'Tiêu đề' ?>" />
+        <textarea name="cmt_content"  rows="10" cols="70"><?php echo $this->items['cmt_content'] ?></textarea>
+        <?php if ($this->error) foreach ($this->error as $er): ?>
+                <div style="color:#ff0000;"><?php echo $er ?></div>
+            <?php endforeach ?>
+        <input type="submit" value="Gửi lời bình"/>
+        <input type="reset" value="Xóa trắng"">
+    </form>
+
+</div><!--End bg binh luan-->
+<!--End loi binh-->
+        
+        
+    <?php if ($this->otherItem) { ?>
+        <h2 class="title-others">Các Tin khác</h2>
+        <ul class="sub-others">
+            <?php
+            $i = 0;
+            foreach ($this->otherItem as $value) {
+                if ($i++ % 2 == 0) {
+                    ?>
+                    <li>    <a href="<?php echo $this->baseUrl() ?>/tin-tuc/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'>                    <?php echo $value['title'] ?>    </a>          </li>    
+                            <?php } else { ?>
+                    <li><p>
+                            <a href="<?php echo $this->baseUrl() ?>/tin-tuc/<?php echo $value['tag'] ?>.html" title='<?php echo $value['title'] ?>'>
+                    <?php echo $value['title'] ?>
+                            </a>
+                        </p></li>   
+            <?php }
+        }
+        ?>
         </ul>
-     <?php }?>
+<?php } ?>
 
 </div><!--End frame tent-->
 <div class="bd-bt-tenf-left"></div>
