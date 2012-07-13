@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="3f30d847-1f89-4446-aa71-d42f19a5f6f9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/BackEndController.php" afterPath="$PROJECT_DIR$/protected/components/BackEndController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Common.php" afterPath="$PROJECT_DIR$/protected/components/Common.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/Controller.php" afterPath="$PROJECT_DIR$/protected/components/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/home/views/layouts/main.php" afterPath="$PROJECT_DIR$/themes/home/views/layouts/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Language.php" afterPath="$PROJECT_DIR$/protected/models/Language.php" />
     </list>
     <ignored path="cms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,55 +23,7 @@
     <favorites_list name="cms" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="BackEndController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/components/BackEndController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="27" selection-start="953" selection-end="965" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Common.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/components/Common.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="27" selection-start="400" selection-end="412" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/themes/home/views/layouts/main.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="6" selection-start="1936" selection-end="1936" vertical-scroll-proportion="-0.50384617">
-              <folding>
-                <element signature="e#2909#3926#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Language.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/models/Language.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="63" selection-start="3389" selection-end="3389" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -84,7 +33,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/models/Language.php" />
         <option value="$PROJECT_DIR$/protected/modules/about/views/admin/view.php" />
         <option value="$PROJECT_DIR$/protected/modules/about/models/AboutLanguage.php" />
         <option value="$PROJECT_DIR$/protected/modules/about/models/About.php" />
@@ -100,6 +48,7 @@
         <option value="$PROJECT_DIR$/protected/components/Common.php" />
         <option value="$PROJECT_DIR$/protected/components/Controller.php" />
         <option value="$PROJECT_DIR$/themes/home/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/protected/models/Language.php" />
       </list>
     </option>
   </component>
@@ -684,13 +633,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2754173" sideWeight="0.0" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2754173" sideWeight="0.0" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -823,10 +772,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Language.php">
+    <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="63" selection-start="3389" selection-end="3389" vertical-scroll-proportion="0.0">
+        <state line="13" column="27" selection-start="400" selection-end="412" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/home/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="6" selection-start="1936" selection-end="1936" vertical-scroll-proportion="10.076923">
+          <folding>
+            <element signature="e#2909#3926#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -837,19 +795,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
+    <entry file="file://$PROJECT_DIR$/protected/models/Language.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="27" selection-start="400" selection-end="412" vertical-scroll-proportion="0.0">
+        <state line="88" column="6" selection-start="2962" selection-end="2962" vertical-scroll-proportion="0.4084249">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/home/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="6" selection-start="1936" selection-end="1936" vertical-scroll-proportion="-0.50384617">
-          <folding>
-            <element signature="e#2909#3926#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
