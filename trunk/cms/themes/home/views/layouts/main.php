@@ -33,8 +33,8 @@
             <div id="logo"><a href="<?php echo Yii::app()->baseUrl.$this->setLangUrl()?>" title="Logo"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a></div><!--End logo-->
             <h1 class="title-company">CÔNG TY TNHH MTV THAN PHÚC AN</h1>
             <div class="lang">
-                <?php foreach($this->listLang as $value):?>
-                    <a href="<?php echo Yii::app()->baseUrl?>/<?php echo $value['language_id']?>" title="<?php echo $value['language_name']?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $value['language_id']?>.gif" alt="<?php echo $value['language_name']?>" /></a>
+                <?php foreach($this->listLanguage as $key => $value):?>
+                    <a href="<?php echo Yii::app()->baseUrl?>/<?php echo $key?>" title="<?php echo $value?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $key?>.gif" alt="<?php echo $value?>" /></a>
                 <?php endforeach?>
                 <p class="phone">Tư vấn : 0933 472 626 (Mr Hạnh)</p>
             </div> <!--End lang-->	<div class="clear"></div>
