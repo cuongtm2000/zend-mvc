@@ -20,7 +20,7 @@
                 $request = ($i == 0) ? '<span class="error">*</span>' : '';
                 echo '<div class="col1">' . 'Câu hỏi' . ' ' . $value . ' ' . $request . '</div>
 	                <div class="col2">
-	                    <input name="question' . $value . '" value="' . $this->item['question' . $value] . '" maxlength="45" class="txt-very-large" />
+	                    <input name="question' . $value . '" value="' . $this->item['question' . $value] . '" maxlength="255" class="txt-very-large" />
 	                </div><div class="clear space"></div>';
                 $i++;
             }
@@ -29,7 +29,7 @@
 
             <div class="col1"><?php echo $this->lang['adv_start_date'] ?> <span class="error">*</span></div>
             <div class="col2">
-                <input name="begin_date" id="begin_date" value="<?php echo $this->item['begin_date'] ?>" maxlength="45" class="txt-very-large" /> <span class="readme">(dd-mm-YYYY)</span>
+                <input name="begin_date" id="start_date" value="<?php echo $this->item['begin_date'] ?>" maxlength="45" class="txt-very-large" /> <span class="readme">(dd-mm-YYYY)</span>
             </div><div class="clear space"></div>
 
             <div class="col1"><?php echo $this->lang['adv_end_date'] ?> <span class="error">*</span></div>

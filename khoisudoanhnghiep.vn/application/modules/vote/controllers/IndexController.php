@@ -13,20 +13,19 @@ class Vote_IndexController extends Zend_Controller_Action {
 
     public function indexAction() {
         $vote =new Vote_Model_Vote();
-          
-        //unset($_SESSION['voting']);
+
         $diff=0;
         if(isset($this->_data['id'])){
             $is_update=FALSE;
-            if(isset($_SESSION['voting'])){
-                $diff= time()-$_SESSION['voting'];
+            if(isset($_SESSION['voting'.$this->_data['vid']])){
+                $diff= time()-$_SESSION['voting'.$this->_data['vid']];
                 if($diff > 3600)
                     $is_update=TRUE;
             }  else {
                 $is_update=TRUE;
             }
             if($is_update){
-                $_SESSION['voting']=  time();
+                $_SESSION['voting'.$this->_data['vid']]=  time();
                 $ans=new Vote_Model_Answer();
                 $ans->updateVote($this->_data['vid'],$this->_data['id']);
                 $diff=-1;
