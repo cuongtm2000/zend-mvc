@@ -258,11 +258,11 @@ ul#nav li ul.tainment{display:inherit;width:500% }
 .frame-contact label{color:#555; margin:0 !important;font-weight:bold;width:100px; float:left}
 .frame-contact li{padding:4px 0; margin:0 !important}
 .frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
-.frame-contact textarea{border:1px solid #ddd; width:350px;-moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-contact textarea ,#contact textarea{border:1px solid #ddd; width:350px;-moz-border-radius: 3px; -webkit-border-radius:3px}
 .frame-contact span{color:#F00;margin:0 5px 0 0}
 
-.frame-contact .bton-dk{margin:10px 0 5px 30px;background:#372E27;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
-.frame-contact .bton-dk{margin:10px 10px 5px 0}
+.frame-contact .bton-dk , .bton-comment{margin:10px 0 5px 30px;background:#372E27;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-contact .bton-dk , .bton-comment{margin:10px 10px 5px 0}
 /****  End page contact     *****/
 
 /* paging */
@@ -271,3 +271,15 @@ ul#nav li ul.tainment{display:inherit;width:500% }
 .paging a:hover{background:#A18852; color:#fff}
 .pagenav , .pageactive{border: 1px solid #ccc; padding: 2px 5px; color:#FFF; -moz-border-radius: 2px; -webkit-border-radius: 2px;}
 .pagecureent{border: 1px solid #ccc; padding: 2px 5px; background:#0C87D9; color:#42342C; font-weight:bold; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+
+/** Binh luan**/
+.mid-boxright{padding:20px 0 0 0}
+.title-comments{color:#BE0000;font-weight:bold;margin:0 0 10px 0;font-size:11pt}
+#contact input{padding:5px;width:220px;border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+#contact p{margin:0 0 10px 0 !important}
+#contact textarea{width:400px;padding:5px}
+#contact .bton-comment{width:100px}
+
+.bg-comment{padding:20px 0 0 0}
+.comment{margin:0 0 15px 0}
+.title-comment {margin:0 0 5px 0} .title-comment a{color:#444;font-weight:bold;font-size:10pt}
