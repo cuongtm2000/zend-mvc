@@ -54,7 +54,8 @@ class About extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            //'Language' => array(self::MANY_MANY, 'Language', 'hoiit_module_about_hoiit_languages(record_id, language_id)'),
+            'Language' => array(self::MANY_MANY, 'Language', 'hoiit_module_about_languages(record_id, language_id)'),
+            'AboutLanguage' => array(self::HAS_MANY, 'AboutLanguage', 'record_id', 'index' => 'language_id'),
         );
     }
 
@@ -101,5 +102,81 @@ class About extends CActiveRecord {
     public function listItem() {
         $command = Yii::app()->db->createCommand('SELECT title, tag FROM ' . $this->tableName() . ', hoiit_module_about_languages WHERE ' . $this->tableName() . '.record_id = hoiit_module_about_languages.record_id AND language_id =\'' . Yii::app()->language . '\' AND hot = 0 AND enable = 1 ORDER BY record_order DESC, created DESC');
         return $command->queryAll();
+    }
+
+    //Back end - List item admin
+    public function listItemAdmin() {
+        $criteria = new CDbCriteria();
+        $criteria->with = array('Language', 'AboutLanguage');
+        $criteria->order = 'record_order DESC, created DESC';
+        $count = $this::model()->count($criteria);
+
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = 15;
+        $pages->applyLimit($criteria);
+
+        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+    }
+
+    //Back end - Active Item
+    public function activeItem($data) {
+        $flag = $data->getPost('factive', 'disable');
+        $ids = $data->getPost('ids', '');
+        $orders = $data->getPost('orders', '');
+        $sort = $data->getPost('sort', '');
+        $syn = $data->getPost('syn', '');
+
+        if ($sort) {
+            if (is_array($orders)) {
+                while (list($id, $order) = each($orders)) {
+                    $id = intval($id);
+                    $order = intval($order);
+                    if ($id && $order) {
+                        $this::model()->updateByPk($id, array('record_order' => $order));
+                    }
+                }
+            }
+        } else if ($syn) {
+            $criteria = new CDbCriteria();
+            $criteria->order = 'record_order ASC, created ASC';
+            $models = $this::model()->findAll($criteria);
+
+            $i = 1;
+            foreach ($models as $model) {
+                $this::model()->updateByPk($model['record_id'], array('record_order' => $i));
+                $i++;
+            }
+        } else {
+            if (!empty($ids)) {
+                if (!is_array($ids)) {
+                    $record_id[0] = $ids;
+                } else {
+                    $record_id = $ids;
+                }
+                unset($ids);
+
+                if ($flag) {
+                    //show or hidden
+                    $active = ($flag == "enable") ? 1 : 0;
+
+                    foreach ($record_id as $value) {
+                        $id = intval($value);
+                        if ($id) {
+                            $this::model()->updateByPk($id, array('enable' => $active));
+                        }
+                    }
+                } else {
+                    //delete
+                    foreach ($record_id as $value) {
+                        $id = intval($value);
+                        if ($id) {
+                            AboutLanguage::model()->deleteRecord($id);
+                            $this::model()->deleteByPk($id);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
