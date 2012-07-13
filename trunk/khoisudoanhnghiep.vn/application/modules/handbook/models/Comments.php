@@ -3,7 +3,7 @@
 class Handbook_Model_Comments extends Zend_Db_Table {
 
     protected $_name = 'dos_module_handbook_comments';
-    protected $_primary = 'comment_id';
+    protected $_primary = 'cmt_id';
     protected $_config = null;
     private $_xss = NULL;
 
@@ -14,11 +14,14 @@ class Handbook_Model_Comments extends Zend_Db_Table {
 
     public function addItem($data = NULL) {
         try {
-            $bind = array('comment_title' => $this->_xss->purify(trim($data['commenttitle'])),
-                'comment_content' => $this->_xss->purify($data['commentdetail']),
+            $bind = array(
+                'cmt_name' => $this->_xss->purify(trim($data['cmt_name'])),
+                'cmt_title' => $this->_xss->purify(trim($data['cmt_title'])),
+                'cmt_content' => $this->_xss->purify($data['cmt_content']),
+                'cmt_email' => $this->_xss->purify($data['cmt_email']),
+                'cmt_date' => time(),
                 'dos_module_item_record_id' => $this->_xss->purify($data['id']),
-                'comment_enable' => 0)
-            ;
+             );
             return $this->insert($bind);
         } catch (Exception $e) {
             var_dump($e);
@@ -27,10 +30,10 @@ class Handbook_Model_Comments extends Zend_Db_Table {
 
     public function listItem($id) {
         $select = $this->select()
-                ->from($this->_name, array('comment_id', 'comment_title', 'comment_content', 'comment_date'))
-                ->where('comment_enable = 1')
+                ->from($this->_name, array('cmt_id', 'cmt_name', 'cmt_title', 'cmt_content', 'cmt_date'))
+                ->where('cmt_enable = 1')
                 ->where('dos_module_item_record_id = ?', $id)
-                ->order('comment_date ASC')
+                ->order('cmt_date ASC')
         ;
 
         try {
@@ -47,8 +50,8 @@ class Handbook_Model_Comments extends Zend_Db_Table {
             $page = $paginator['currentPage'];
             $rowCount = $paginator['itemCountPerPage'];
         }
-        $select = $this->select()->from($this->_name, array('comment_id', 'comment_title', 'comment_content', 'comment_enable', 'dos_sys_users_username', 'dos_module_item_record_id', 'comment_date'))
-                ->order('comment_date DESC')
+        $select = $this->select()->from($this->_name, array('cmt_id', 'cmt_title', 'cmt_content', 'cmt_email','cmt_enable','cmt_name', 'dos_module_item_record_id', 'cmt_date'))
+                ->order('cmt_date DESC')
                 ->limitPage($page, $rowCount)
         ;
 
@@ -57,19 +60,23 @@ class Handbook_Model_Comments extends Zend_Db_Table {
 
     public function getItem($id) {
         $db = $this->getAdapter();
-        $select = $db->select()->from($this->_name, array('comment_title', 'comment_content'))
-                ->where('comment_id = ?', $id);
-        return $db->fetchRow($select);
-    }
+        $select = $db->select()->from($this->_name, array('cmt_title', 'cmt_content'))
+                ->where('cmt_id = ?', $id);
+        try {
+            return $db->fetchRow($select);
+        } catch (Exception $exc) {
+            echo $exc->getTraceAsString();
+        }
+        }
 
     public function countItem() {
         $db = $this->getAdapter();
-        $select = $db->select()->from($this->_name, array('count(comment_id)'));
+        $select = $db->select()->from($this->_name, array('count(cmt_id)'));
         return $db->fetchOne($select);
     }
 
     public function delItem($id) {
-        $this->delete('comment_id=' . $id);
+        $this->delete('cmt_id=' . $id);
     }
 
     public function delItemFrom($post_id) {
@@ -78,7 +85,7 @@ class Handbook_Model_Comments extends Zend_Db_Table {
 
     public function enableItem($id) {
         try {
-            $r = $this->update(array('comment_enable' => 1), 'comment_id=\'' . $id . '\'');
+            $r = $this->update(array('cmt_enable' => 1), 'cmt_id=\'' . $id . '\'');
         } catch (Exception $e) {
             var_dump($e);
         }
@@ -87,9 +94,9 @@ class Handbook_Model_Comments extends Zend_Db_Table {
     public function updateItem($data = NULL) {
         try {
             $r = $this->update(array(
-                'comment_title' => $this->_xss->purify(trim($data['commenttitle'])),
-                'comment_content' => $this->_xss->purify($data['commentdetail'])
-                    ), 'comment_id=\'' . $data['id'] . '\'');
+                'cmt_title' => $this->_xss->purify(trim($data['cmt_title'])),
+                'cmt_content' => $this->_xss->purify($data['cmt_content'])
+                    ), 'cmt_id=\'' . $data['id'] . '\'');
         } catch (Exception $e) {
             var_dump($e);
         }
@@ -97,7 +104,7 @@ class Handbook_Model_Comments extends Zend_Db_Table {
 
     public function disableItem($id) {
         try {
-            $r = $this->update(array('comment_enable' => 0), 'comment_id=\'' . $id . '\'');
+            $r = $this->update(array('cmt_enable' => 0), 'cmt_id=\'' . $id . '\'');
         } catch (Exception $e) {
             var_dump($e);
         }
