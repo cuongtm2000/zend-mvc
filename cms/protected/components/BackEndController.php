@@ -9,7 +9,7 @@ class BackEndController extends CController {
     public $breadcrumbs = array();
 
     public $setting = array();
-	public $listLang = array();
+	public $listLanguage = array();
 
     public function filters() {
         return array(
@@ -35,7 +35,7 @@ class BackEndController extends CController {
         Yii::app()->theme = 'admin'; //Setup template
 		
 		//Get list language
-        $this->listLang = Language::model()->listItem();
+        $this->listLanguage = Language::model()->listLanguage();
 
         //Get Setting
         $this->setting = Setting::model()->getSetting();

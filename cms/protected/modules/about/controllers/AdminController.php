@@ -39,25 +39,25 @@ class AdminController extends BackEndController {
     }
 
     public function actionAdd() {
-		$model_class = ucfirst($this->module->id);
+		$model_class = ucfirst($this->module->id).'Form';
         $model = new $model_class();
 
 		/*Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/tipsy.css');
 		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/jquery.tipsy.js');
 		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/jquery.tooltip.tipsy.js');
-
+*/
 		Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
-		Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/config.js');*/
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/config.js');
 
-        /*if (isset($_POST[$module])) {
-            $model->attributes = $_POST[$module];
+        if (isset($_POST[$model_class])) {
+            $model->attributes = $_POST[$model_class];
 
             if ($model->validate()) {
-                $model->save();
-                $this->redirect(array('index'));
+                //$model->save();
+                //$this->redirect(array('index'));
             }
-        }*/
+        }
 
-        $this->render('test', array('model' => $model));
+        $this->render('add', array('model' => $model));
     }
 }
