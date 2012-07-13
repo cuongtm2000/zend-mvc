@@ -1,15 +1,11 @@
 <?php
 
-class Handbook_Form_Validate {
+class GLT_Form_CmtValidate {
 
     private $_error = null;
 
-    private $_config = null;
-
     public function __construct($data = array()) {
-        $this->_config = Zend_Registry::get("config");
-  
-        //Validate title
+//Validate title
         $validator = new Zend_Validate();
         $validator->addValidator(new Zend_Validate_NotEmpty())
                 ->addValidator(new Zend_Validate_StringLength(array('min' => 3, 'max' => 100)));

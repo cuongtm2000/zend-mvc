@@ -8,8 +8,9 @@
     <!--Binh luan-->
     <?php if (sizeof($this->comments) > 0) foreach ($this->comments as $cmt): ?>
             <div class="comment">
-                <h3><a href="#" name="comment<?php echo $cmt['comment_id'] ?>"><?php echo $cmt['comment_title'] ?></a> - <?php echo $cmt['dos_sys_users_username'] ?> ( <?php echo $cmt['comment_date'] ?> )</h3>
-                <?php echo $cmt['comment_content'] ?>
+                <h3><a href="#" name="cmt<?php echo $cmt['cmt_id'] ?>"><?php echo $cmt['cmt_title'] ?></a> </h3>
+                <?php echo $cmt['cmt_content'] ?>
+                <div> <?php echo $cmt['cmt_name'] ?> ( <?php echo date('H:i d-m-Y',$cmt['cmt_date']) ?> )</div>
             </div>	
         <?php endforeach ?>
 
@@ -17,16 +18,18 @@
     <!--Loi binh-->
     <h2 class="title-box-right"><span>Gửi Lời Bình</span></h2>
     <div class="mid-boxright">
-        <form id="contact" method="post" name="dangky" class="frame-frm-comment" action="">
-            <input type="text" value="Họ tên" size="29" >
-            <input type="text" value="Email"  style="width:172px" size="29" >
-            <input type="text" name="cmt_title" id="cmt_title" style="width:280px;" size="29" value="<?php echo $this->items['cmt_title'] ?>" />
-            <textarea name="cmt_content" id="cmt_content" rows="10" cols="70"><?php echo $this->items['cmt_content'] ?></textarea>
+        <form id="contact" method="post"  action="">
+            <input name="cmt_name" value="<?php echo ($this->items['cmt_name']!='')? $this->items['cmt_name']:'Họ và tên'  ?>" >
+            <input value="<?php echo ($this->items['cmt_email']!='')? $this->items['cmt_email']:'Email'  ?>"  name="cmt_email" >
+            <input name="cmt_title" value="<?php echo ($this->items['cmt_title']!='')? $this->items['cmt_title']:'Tiêu đề'  ?>" />
+            <textarea name="cmt_content"  rows="10" cols="70"><?php echo $this->items['cmt_content'] ?>
+                Làm thêm JS để khi nhấp chuột vào sẽ biết mất ở các textbox trên.
+            </textarea>
             <?php if ($this->error) foreach ($this->error as $er): ?>
                 <div style="color:#ff0000;"><?php echo $er ?></div>
             <?php endforeach ?>
 
-            <input type="submit" value="Gửi lời bình" class="bton-comment"/>
+            <input type="submit" value="Gửi lời bình"/>
             <input type="reset" value="Xóa trắng"">
         </form>
 
