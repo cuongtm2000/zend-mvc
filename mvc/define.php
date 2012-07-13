@@ -15,6 +15,11 @@ define('TEMPLATE_DIR', '/public/templates');
 define('TEM_INDEX', '/thanda'); //Template Front end
 define('TEM_ADMIN', '/webadmin'); //Template Back end
 
+
+define('REAL_PATH', realpath(dirname(__FILE__)));
+define('IMAGES_PATH',  '/public/userfiles/images/');
+
+
 define('PUBLIC_PATH', realpath(dirname(__FILE__) . '/public'));
 define('TEMPLATE_PATH', PUBLIC_PATH .'/templates'. TEM_INDEX);
 define('DEBUG_MODE',0);

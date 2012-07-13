@@ -298,8 +298,12 @@ class GLT_Models_News extends Zend_Db_Table {
         $file_thumb = $data['fileold_thumb'];
         if (!empty($_FILES['file_thumb']['name'])) {
             $upload = new GLT_File_Upload();
-            $upload->upload($_FILES['file_thumb'], $this->_config[$this->_module . '_width_thumb'], $this->_config[$this->_module . '_height_thumb'], $this->_config['sys_size_upload'], REAL_PATH . IMAGES_PATH . $this->_module . '/');
-
+            $upload->upload($_FILES['file_thumb'], 
+                    $this->_config[$this->_module . '_width_thumb'], 
+                    $this->_config[$this->_module . '_height_thumb'], 
+                    $this->_config['sys_size_upload'], 
+                    REAL_PATH . IMAGES_PATH . $this->_module . '/');
+echo REAL_PATH . IMAGES_PATH . $this->_module . '/';
             if ($upload->isVail() == false) {
                 $file_thumb = $upload->transferFile(); //upload file
                 $upload->removeFile(REAL_PATH . IMAGES_PATH . $this->_module . '/' . $data['fileold_thumb']);
