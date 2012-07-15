@@ -251,18 +251,6 @@ echo $form->errorSummary($model_f, '');
     <p class="rows"><a href="#" id="add-rows"><?php echo $this->lang['pic_desc'] ?></a></p>
 
 
-    <div class="col1"><?php echo $form->labelEx($model, 'hot', $htmlOptions = array('for' => ucfirst($this->ID) . '_hot_0')) ?></div>
-    <div class="col2 radio">
-        <?php echo $form->radioButtonList($model, 'hot', array('0' => $this->lang['normal'], '1' => $this->lang['hot']), array('separator' => '&nbsp;&nbsp;')); ?>
-    </div>
-    <div class="clear space"></div>
-
-    <div class="col1"><?php echo $form->labelEx($model, 'enable', $htmlOptions = array('for' => ucfirst($this->ID) . '_enable_0')) ?></div>
-    <div class="col2 radio">
-        <?php echo $form->radioButtonList($model, 'enable', array('1' => $this->lang['show'], '0' => $this->lang['hidden']), array('separator' => '&nbsp;&nbsp;')); ?>
-    </div>
-    <div class="clear space"></div>
-
     <div class="col1">&nbsp;</div>
     <div class="col2">
         <?php echo CHtml::submitButton($this->lang['edit'], array('name' => 'submit', 'class' => 'login-b', 'title' => $this->lang['edit'])); ?>

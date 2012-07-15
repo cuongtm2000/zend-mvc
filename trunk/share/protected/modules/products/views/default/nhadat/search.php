@@ -1,16 +1,17 @@
-<?php $this->breadcrumbs = array($this->lang[$this->module->id] => Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link'), $info_cat['type_title' . LANG]); ?>
-<?php $this->pageTitle = $info_cat['type_title' . LANG] . ' - ' . $this->lang[$this->module->id]; ?>
+<?php $this->breadcrumbs = array($this->lang[$this->module->id] => Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link'), 'Tìm kiếm'); ?>
+
+    <?php $this->pageTitle = 'Tìm kiếm - ' . $this->lang[$this->module->id]; ?>
 
 
 <?php if ($list_items['models']): ?>
  <div class="bg-footer-left">
-	<h1 class="title-right"><span><?php echo $info_cat['type_title' . LANG] ?></span></h1>
+	<h1 class="title-right"><span><?php //echo $info_cat['type_title' . LANG] ?></span></h1>
         <table class="table-product">
             <tbody>
                 <?php foreach ($list_items['models'] as $value): $hot = ($value['hot']==1) ? ' <img src="'.Yii::app()->theme->baseUrl.'/images/hot.gif" alt="Hot" ' : ''; ?>
                     <tr>
                         <td width="100">
-                            <div class="frame-img-pro"> <a href="<?php echo Yii::app()->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag' . LANG] ?>/<?php echo $value['tag' . LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>">
+                            <div class="frame-img-pro"> <a href="<?php echo Yii::app()->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $value->ProductsCat['tag'] ?>/<?php echo $value['tag' . LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>">
                                     <?php if ($value['pic_thumb']): ?>
                                         <img src="<?php echo Yii::app()->baseUrl .'/public/userfiles/image/' . $value['dos_username'] . '/image/'?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title' . LANG] ?>" />
                                     <?php else : ?>
@@ -19,7 +20,7 @@
                                 </a></div>
                         </td>
                         <td>
-                            <h2 class="title-sale"><a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' .$info_cat['tag'.LANG]  ?>/<?php echo $value['tag' . LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>"><?php echo $value['title' . LANG].$hot ?></a></h2>
+                            <h2 class="title-sale"><a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' .$value->ProductsCat['tag'] ?>/<?php echo $value['tag' . LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>"><?php echo $value['title' . LANG].$hot ?></a></h2>
                             <table class="bder-none">
                                 <tr>
                                     <td width="110">

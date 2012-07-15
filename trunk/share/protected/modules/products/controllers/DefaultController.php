@@ -260,7 +260,18 @@ class DefaultController extends Controller {
 
         $this->render(Yii::app()->session['template'] . '/list', $model_class->listItemPosted());
     }
-
+    public function actionSearch(){
+        $this->layout = '//layouts/column-3';
+     //   var_dump($_POST);
+        $data=NULL;
+        if(isset($_POST['keyword'])){
+            $pro=new Products();
+            $data=$pro->searchByCat($_POST['cat'], $_POST['keyword']);
+        }
+       // var_dump($data);
+        $this->render(Yii::app()->session['template'] . '/search', 
+                array('list_items' => $data));
+    }
 }
 
 function checked($v) {
