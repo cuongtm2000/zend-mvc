@@ -103,7 +103,7 @@ $this->description = $item['description' . LANG];
         <h3 class="title-right"><span><?php echo $this->lang[$this->module->id] ?> <?php echo strtolower($this->lang['other']) ?></span></h3>
         <table class="table-product">
             <tbody>
-                <?php foreach ($item_other as $value): ?>
+                <?php foreach ($item_other as $value):$hot = ($value['hot']==1) ? ' <img src="'.Yii::app()->theme->baseUrl.'/images/hot.gif" alt="Hot" ' : ''; ?>
                     <tr>
                         <td width="100">
                             <div class="frame-img-pro"> 
@@ -117,7 +117,7 @@ $this->description = $item['description' . LANG];
                                 </a></div>
                         </td>
                         <td>
-                            <h2 class="title-sale"><a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $value[ucfirst($this->module->id) . 'Cat']['tag' . LANG] ?>/<?php echo $value['tag' . LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>"><?php echo $value['title' . LANG] ?></a></h2>
+                            <h2 class="title-sale"><a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $value[ucfirst($this->module->id) . 'Cat']['tag' . LANG] ?>/<?php echo $value['tag' . LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>"><?php echo $value['title' . LANG].$hot ?></a></h2>
                             <table class="bder-none">
                                 <tr>
                                     <td width="110">
@@ -142,7 +142,7 @@ $this->description = $item['description' . LANG];
                         <td>
                             <h3 class="title-footer-right">Hội viên</h3>
                             <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/hoivien.jpg" alt="Hoi vien" />
-                            <p class="price">ĐT liên hệ: <?php echo $value['contact_mobile'] ?></p>
+                            <p class="price"><?php echo $value['contact_mobile'] ?></p>
                         </td>
                     </tr>
                 <?php endforeach; ?>

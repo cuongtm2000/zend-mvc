@@ -14,11 +14,11 @@ class Products extends CActiveRecord {
     public $dos_provinces_province_id;
 
     public function init() {
-    //$this->_subdomain = Yii::app()->session['subdomain'];
-        $user= Username::model()->findByPk(Yii::app()->user->name);
-        $this->contact_name=$user['fullname'];
-        $this->contact_add=$user['address'];
-        $this->contact_mobile=$user['phone'];
+        //$this->_subdomain = Yii::app()->session['subdomain'];
+        $user = Username::model()->findByPk(Yii::app()->user->name);
+        $this->contact_name = $user['fullname'];
+        $this->contact_add = $user['address'];
+        $this->contact_mobile = $user['phone'];
         $this->dos_username = Yii::app()->user->name;
     }
 
@@ -78,7 +78,7 @@ class Products extends CActiveRecord {
             'dosModuleItemTypeType' => array(self::BELONGS_TO, 'ProductsType', 'dos_module_item_type_type_id'),
             'productsFeature' => array(self::HAS_ONE, 'ProductsFeature', 'product_id'),
             'productsUtility' => array(self::HAS_ONE, 'ProductsUtility', 'product_id'),
-            //'Username' => array(self::BELONGS_TO, 'Username', 'dos_username'),
+                //'Username' => array(self::BELONGS_TO, 'Username', 'dos_username'),
         );
     }
 
@@ -188,7 +188,7 @@ class Products extends CActiveRecord {
         $this->tagen = $purifier->purify(trim($this->tagen));
         $this->description = $purifier->purify(trim($this->description));
         $this->descriptionen = $purifier->purify(trim($this->descriptionen));
-        $this->unit = str_replace('.','',trim($this->unit));
+        $this->unit = str_replace('.', '', trim($this->unit));
         $_USERFILES = '/public/userfiles/image/' . Yii::app()->user->name . '/image/';
 
         if ($this->isNewRecord) {
@@ -208,7 +208,7 @@ class Products extends CActiveRecord {
                 );
             }
             //pic_desc
-            
+
             if (isset($_FILES[__CLASS__]['name']['pic_desc'])) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
@@ -302,7 +302,7 @@ class Products extends CActiveRecord {
     public function listItemByCat($cid) {
         $criteria = new CDbCriteria();
         $criteria->with = array('ProductsCat', 'productsFeature');
-        $criteria->select = 'title' . LANG . ', pic_thumb, address, postdate,hits, tag' . LANG . ', unit,unit_unit,unit_currency,record_id, dos_username';
+        // $criteria->select = 'title' . LANG . ', pic_thumb, address, postdate,hits, tag' . LANG . ', unit,unit_unit,unit_currency,record_id, dos_username';
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
         $criteria->params = array(':cid' => $cid);
@@ -321,7 +321,7 @@ class Products extends CActiveRecord {
         $criteria = new CDbCriteria();
         $criteria->with = array(__CLASS__ . 'Cat', 'productsFeature');
 
-        $criteria->select = 'title' . LANG . ', pic_thumb,address, postdate,hits, tag' . LANG . ', unit,unit_unit,unit_currency,record_id,dos_username';
+        // $criteria->select = 'title' . LANG . ', pic_thumb,address, postdate,hits, tag' . LANG . ', unit,unit_unit,unit_currency,record_id,dos_username';
 
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable=1 AND dos_module_item_type_type_id=:cid';
@@ -359,7 +359,7 @@ class Products extends CActiveRecord {
     public function listItemOther($id, $cid) {
         $criteria = new CDbCriteria();
         $criteria->with = array(__CLASS__ . 'Cat');
-        $criteria->select = 'title' . LANG . ', pic_thumb,dos_username ,tag' . LANG . ', unit,unit_unit,unit_currency, hot';
+        //   $criteria->select = 'title' . LANG . ', pic_thumb,dos_username ,tag' . LANG . ', unit,unit_unit,unit_currency, hot';
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'record_id NOT IN (:id) AND dos_module_item_cat_cat_id=:cid AND enable = 1';
         $criteria->params = array(':id' => $id, ':cid' => $cid);
@@ -627,6 +627,25 @@ class Products extends CActiveRecord {
         $criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit, hot,record_id';
         $criteria->condition = 'enable = 1 and record_id IN(' . $ids . ')';
         return $this->model()->findAll($criteria);
+    }
+
+    public function searchByCat($cid, $keyword) {
+        $criteria = new CDbCriteria();
+        $criteria->with = array('ProductsCat', 'productsFeature');
+        $criteria->compare('title', $keyword, true);
+        $criteria->compare('enable', 1);
+        if ($cid != 0)
+            $criteria->compare('dos_module_item_cat_cat_id', $cid);
+
+        
+        $criteria->order = 'record_order DESC, postdate DESC';
+        
+        $count = $this->model()->count($criteria);
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = Yii::app()->controller->configs['products_num_paging_cat'];
+        $pages->applyLimit($criteria);
+        return array('models' => $this->model()->findAll($criteria), 'pages' => $pages);
     }
 
 }

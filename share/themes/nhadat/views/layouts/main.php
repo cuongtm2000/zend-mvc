@@ -50,10 +50,6 @@
                                             echo '<li><a href="'.Yii::app()->baseUrl.'/san-pham/loai/'.$value['tag'].'" title="'.$value['type_title'].'" >'.$value['type_title'].'</a></li>';
                                         }
                                 ?>
-
-                                <!--li><a href="index.html" title="" class="select-nav">Chào bán</a></li>
-                                <li><a href="about.html" title="">Cho thuê</a></li>
-                                <li class="none-line"><a href="news.html" title="">Sang nhượng</a></li-->
                             </ul>  
                         </div> <!--bg nav-->
                     </div> <!--End frame nav-->
@@ -72,18 +68,15 @@
                     <h2 class="title-list"><span><a href="<?php echo Yii::app()->baseUrl ?>/">TRANG CHỦ</a></span></h2>
                 </div>
                 <div class="all-right-fter" >
-                    <form action="" id="frm-search" name="frmlistproduct" method="post">
-                        <select size="1" name="listproduct" class="select">
+                    <form action="<?php echo Yii::app()->baseUrl ?>/tim-kiem" id="frm-search" name="frmlistproduct" method="post">
+                        <select size="1" name="cat" class="select">
                             <option value="0">Chọn nhóm sản phẩm</option>
                             <?php foreach ($this->function['menu_products'] as $value): ?>
-                                <option value="<?php echo $value['tag'] ?>"><?php echo $value['cat_title'] ?></option>
+                                <option value="<?php echo $value['cat_id'] ?>"><?php echo $value['cat_title'] ?></option>
                             <?php endforeach; ?>
-
-
-                            <option value="12">Các loại khác</option>
                         </select>
 
-                        <input type="text" name="search" class="input" />	
+                        <input type="text" name="keyword" class="input" />	
                         <input type="submit"  value="Tìm kiếm"/>  
 
                         <div class="hder-fter-right"> 

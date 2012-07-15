@@ -16,6 +16,7 @@ return array(
     '<products:(san-pham)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('products/default/view', 'urlSuffix' => '.html'), //view
     '<products:(dang-tin)>' => array('products/default/add'), //add
     '<products:(tin-da-dang)>' => array('products/default/list'), //
+    '<products:(tim-kiem)>' => array('products/default/search'), //
 
     //services modules
     '<services:(dich-vu)>' => 'services/default/index', //index
