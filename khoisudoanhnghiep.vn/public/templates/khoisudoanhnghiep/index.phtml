@@ -170,12 +170,12 @@
                                         <p><strong><?php echo $this->vote['question']; ?></strong></p>
                                         <ul class="sub-polls">
                                             <?php foreach ($this->vote['answer'] as $value) : ?>
-                                                <li><input type="radio" name="vote" value="<?php echo $value['id'] ?>" />
+                                                <li><input type="radio" id="vote<?php echo $value['id'] ?>" name="vote" value="<?php echo $value['id'] ?>" />
                                                     <?php
                                                     if ($value['url'] != '')
-                                                        echo '<a target="_blank" href="' . $value['url'] . '" title="' . $value['answer'] . '">' . $value['answer'] . '</a>';
+                                                        echo '<a target="_blank" href="' . $value['url'] . '" title="' . $value['answer'] . '"><label for="vote'.$value['id'].'">' . $value['answer'] . '</label></a>';
                                                     else
-                                                        echo $value['answer'];
+                                                        echo '<label for="vote'.$value['id'].'">'.$value['answer'].'</label>';
                                                     ?></li>
                                             <?php endforeach; ?>
                                         </ul>
