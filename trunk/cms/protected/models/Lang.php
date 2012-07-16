@@ -89,4 +89,20 @@ class Lang extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
+
+    public function lang($lang, $type = 0) {
+        $data = array();
+        $command = Yii::app()->db->createCommand('SELECT lang_id, lang_name FROM ' . $this->tableName() . ' WHERE hoiit_languages_language_id=:lang');
+        if ($type == 1) {
+            $command = Yii::app()->db->createCommand('SELECT lang_id, lang_name FROM ' . $this->tableName() . ' WHERE lang_admin=:admin AND hoiit_languages_language_id=:lang');
+            $command->bindParam(":admin", $type, PDO::PARAM_INT);
+
+        }
+        $command->bindParam(":lang", $lang, PDO::PARAM_STR);
+        $rows = $command->queryAll();
+        foreach ($rows as $value) {
+            $data[$value['lang_id']] = $value['lang_name'];
+        }
+        return $data;
+    }
 }
