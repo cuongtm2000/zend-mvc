@@ -15,11 +15,6 @@
  * @property HoiitLanguages[] $hoiitLanguages
  */
 class About extends CActiveRecord {
-    /**
-     * Returns the static model of the specified AR class.
-     * @param string $className active record class name.
-     * @return About the static model class
-     */
     public static function model($className = __CLASS__) {
         return parent::model($className);
     }
@@ -38,12 +33,12 @@ class About extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('record_order, hot', 'numerical', 'integerOnly' => true),
+            array('record_order, hot, enable', 'numerical', 'integerOnly' => true),
+            array('pic_thumb, field1, field2', 'length', 'max' => 100),
             array('created', 'length', 'max' => 45),
-            array('field1, field2', 'length', 'max' => 100),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('record_id, created, record_order, hot, field1, field2', 'safe', 'on' => 'search'),
+            array('record_id, pic_thumb, created, record_order, hot, field1, field2, enable', 'safe', 'on' => 'search'),
         );
     }
 
@@ -65,11 +60,13 @@ class About extends CActiveRecord {
     public function attributeLabels() {
         return array(
             'record_id' => 'Record',
+            'pic_thumb' => 'Pic Thumb',
             'created' => 'Created',
             'record_order' => 'Record Order',
             'hot' => 'Hot',
             'field1' => 'Field1',
             'field2' => 'Field2',
+            'enable' => 'Enable',
         );
     }
 
@@ -84,11 +81,13 @@ class About extends CActiveRecord {
         $criteria = new CDbCriteria;
 
         $criteria->compare('record_id', $this->record_id);
+        $criteria->compare('pic_thumb', $this->pic_thumb, true);
         $criteria->compare('created', $this->created, true);
         $criteria->compare('record_order', $this->record_order);
         $criteria->compare('hot', $this->hot);
         $criteria->compare('field1', $this->field1, true);
         $criteria->compare('field2', $this->field2, true);
+        $criteria->compare('enable', $this->enable);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
@@ -178,5 +177,33 @@ class About extends CActiveRecord {
                 }
             }
         }
+    }
+
+    //Back end - save
+    public function saveRecord($model, $id = null) {
+        if (Yii::app()->controller->action->id == 'add') {
+            $this->hot = $model->hot;
+            $this->enable = $model->enable;
+            $this->save();
+
+            $id = Yii::app()->db->getLastInsertId();
+            $this::model()->updateByPk($id, array('record_order' => $id));
+
+            AboutLanguage::model()->saveRecord($id, $model);
+        } else {
+            $item = $this::model()->findByPk($id);
+            $item->hot = $model->hot;
+            $item->enable = $model->enable;
+            $item->save();
+
+            AboutLanguage::model()->saveRecord($id, $model);
+        }
+    }
+
+    //Back end - Get record to Edit
+    public function loadEdit($id) {
+        $command = Yii::app()->db->createCommand('SELECT pic_thumb, hot, enable FROM ' . $this->tableName() . ' WHERE record_id=:id');
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        return $command->queryRow();
     }
 }
