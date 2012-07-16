@@ -17,7 +17,7 @@ class Controller extends CController {
     }
 
     public function setLangUrl() {
-        $langDefault = 'vi';
+        $langDefault = Yii::app()->controller->setting['default_language'];
         if (Yii::app()->language == $langDefault) {
             return '';
         } else {
