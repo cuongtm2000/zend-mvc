@@ -20,10 +20,18 @@ a:hover{color:#0193DE}
 .left2{float:left;background:url(../images/left_topmenu.jpg) no-repeat left; height:57px; width:16px; padding-top:26px}
 #nav{float:left}
 #nav ul{background:url(../images/topmenu_bg.jpg) center center repeat-x; height:59px; margin:0; padding:0; margin-top:12px}
-#nav ul li{display:inline; list-style:none; font-family:Tahoma; font-size:13px; background:url(../images/space_menu.gif) no-repeat right; height:43px; float:left; padding:22px 15px 0 15px}
-#nav ul li a{font-weight:bold}
+#nav ul li{display:inline; list-style:none; font-size:13px;
+float:left; padding:22px 0 0 0;width:120px;height:43px; 
+background:url(../images/space_menu.gif) no-repeat right 20px;text-align:center}
+#nav ul li a{font-weight:bold;  }
 #nav .select{color:#0294DD}
-#nav .none-line{background:none}
+#nav .none-line {background:none}
+
+#nav li ul{display:none;height:auto;}
+#nav li:hover ul{list-style:none;background:#D90F0F; display:block;width:165px;position:absolute;-moz-border-radius:0 0 5px 5px;-webkit-border-radius:0 0 5px 5px; z-index:200; top:53px; padding:5px 0 5px 0}
+#nav li ul li{width:100%;text-align:left; background:none;height:auto;padding:0}
+#nav li ul li a{padding:5px 20px;color:#fff;display:block}
+#nav li ul li a:hover{color:#0294DD; background:#FFF;}
 
 .right2{float:right; background:url(../images/right_topmenu.jpg) no-repeat left; height:57px; width:16px;padding-top:26px}
 
