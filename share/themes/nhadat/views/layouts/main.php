@@ -58,7 +58,7 @@
                     <p class="hotline"><?php echo $this->lang['company_phone'] ?></p>
                     <ul class="sub-hdright">
                         <li><a href="<?php echo Yii::app()->request->baseUrl ?>/<?php echo Yii::t('user', 'services.link') ?>" title="Dịch vụ nhà đất">Dịch vụ nhà đất</a></li>
-                        <li><a href="<?php echo Yii::app()->request->baseUrl ?>/<?php echo Yii::t('user', 'news.link') ?>" title="Tư vấn phong thủy">Tư vấn phong thủy</a></li>
+                        <li><a href="<?php echo Yii::app()->request->baseUrl ?>/<?php echo Yii::t('user', 'news.link') ?>" title="Tư vấn phong thủy">Tin tức</a></li>
                         <li class="sub-hdright-none"><a href="<?php echo Yii::app()->request->baseUrl ?>/<?php echo Yii::t('user', 'contact.link') ?>" title="Liên hệ">Liên hệ</a></li>
                     </ul>
                 </div> <!--End hot line-->
