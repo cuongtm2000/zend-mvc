@@ -117,7 +117,7 @@
 				<?php endif;?>
 
 				<?php if(isset($this->function['list_supports']) && ($this->function['list_supports'])):?>
-				<h2 class="title-left"><span><?php echo $this->lang['supports'] ?></span></h2>
+				<h2 class="title-box"><span><?php echo $this->lang['supports'] ?></span></h2>
 				<ul class="frame-leftcontent support">
 					<?php foreach($this->function['list_supports'] as $value): ?>
 						<?php if($value['support_type']=='yahoo'): ?>
@@ -137,7 +137,7 @@
 				</ul>
 				<?php endif; ?>
 				
-				<h2 class="title-left"><span><?php echo $this->lang['counter'] ?></span></h2>
+				<h2 class="title-box"><span><?php echo $this->lang['counter'] ?></span></h2>
 				<ul class="frame-leftcontent statistics">
 					<li><?php echo Yii::t('user', 'online')?>: <?php echo Yii::app()->counter->getOnline(); ?></li>
 					<li><?php echo Yii::t('user', 'today')?>: <?php echo Yii::app()->counter->getToday(); ?></li>
@@ -146,7 +146,7 @@
 				</ul>
 				
 				<?php if(isset($this->function['advs_left']) && ($this->function['advs_left'])):?>
-				<h2 class="title-left"><span><?php echo $this->lang['advs'] ?></span></h2>
+				<h2 class="title-box"><span><?php echo $this->lang['advs'] ?></span></h2>
 				<ul class="frame-leftcontent bg-adv">
 					<?php foreach($this->function['advs_left'] as $value): ?>
 					<li>
@@ -189,7 +189,7 @@
 				<?php endif?>
 			
 				<?php if(isset($this->function['advs_right']) && ($this->function['advs_right'])):?>
-				<h2 class="title-left"><span><?php echo $this->lang['advs'] ?></span></h2>
+				<h2 class="title-box"><span><?php echo $this->lang['advs'] ?></span></h2>
 				<ul class="frame-leftcontent bg-adv">
 					<?php foreach($this->function['advs_right'] as $value): ?>
 					<li>
