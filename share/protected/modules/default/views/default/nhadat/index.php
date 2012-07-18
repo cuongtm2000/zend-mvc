@@ -4,7 +4,7 @@
 
         <table class="table-product">
             <tbody>
-                <?php foreach ($this->function['products_new'] as $value): $hot = ($value['hot']==1) ? ' <img src="'.Yii::app()->theme->baseUrl.'/images/hot.gif" alt="Hot" ' : ''; ?>
+                <?php foreach ($this->function['products_new'] as $value): $hot = ($value['hot']==1) ? ' <img src="'.Yii::app()->theme->baseUrl.'/images/hot.gif" alt="Hot" />' : ''; ?>
                     <tr>
                         <td width="100" align="center">
                             <div class="frame-img-pro"> <a href="<?php echo Yii::app()->baseUrl . LANGURL . '/' . Yii::t('user', 'products' . '.link') . '/' . $value->ProductsCat['tag' . LANG] ?>/<?php echo $value['tag' . LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>">

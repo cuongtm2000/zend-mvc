@@ -31,7 +31,150 @@
 						<?php endforeach; ?>
 					</ul>
 				</div>	
-					<?php endif; ?>
+				<?php endif; ?>
+				
+			<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/tk.png" alt="Công cụ tìm kiếm"/>	
+			<div class="contents">
+				<!--begin tab-->
+				<div class="tab">
+					<div id="divTabRESale" class="divSearchAct" onclick="ShowTab(1);">
+						<a>Nhà đất <br/>bán </a>
+					</div>
+					<div class="tab-lines" id="tab-line_1" style="display: none;">
+					</div>
+					<div id="divTabREBorrow" class="divSearchInAct" onclick="ShowTab(2);">
+						<a>Nhà đất <br/>cho thuê </a>
+					</div>
+					<div class="tab-lines" id="tab-line_2">
+					</div>
+					<div id="divTabRESaler" class="divSearchInAct" onclick="ShowTab(3);">
+						<a>Tìm môi <br/>giới</a></div>
+					<div style="clear: both">
+					</div>
+				</div>
+				<!--end tab-->
+				<div id="divOfSeach">
+					<!--begin combobox-->
+					<form action="" method="post" id="frmSearchProduct" name="frmSearchProduct">
+						<div id="searchArea">
+							<div class="comboboxs" id="listCategoryRe">
+								<select class="select-box" id="cboTypeRe" name="cboTypeRe">
+									<option value="">---Chọn Loại nhà đất---</option>
+								</select>
+							</div>
+							<div class="comboboxs" id="listCity">
+								<select class="select-box" id="cboCity" name="cboCity">
+								<option value="">---Chọn Tỉnh-Thành phố---</option>
+									<option value="SG">Tp.HCM</option>
+									<option value="HN">Hà Nội</option>
+									<option value="BD">Bình Dương</option>
+									<option value="DDN">Đà Nẵng</option>
+									<option value="HP">Hải Phòng</option>
+									<option value="DNA">Đồng Nai</option>
+								</select>
+							</div>
+							<div class="comboboxs" id="listDistrict">
+								<select class="select-box" id="cboDistrict" name="cboDistrict">
+									<option value="">---Chọn Quận/Huyện---</option>
+								</select>
+							</div>
+							<div class="comboboxs">
+								<select class="select-box" id="cboArea" name="cboArea" onchange="SearchCount();">
+									<option value="">---Chọn Diện tích---</option>
+									<option value="0">Không xác định</option>
+									<option value="1">&lt;= 30 m2</option>
+									<option value="2">30-50 m2</option>
+									<option value="3">50-80 m2</option>
+									<option value="4">80-100 m2</option>
+									<option value="5">100-150 m2</option>
+									<option value="6">150-200 m2</option>
+									<option value="7">200-250 m2</option>
+									<option value="8">250-300 m2</option>
+									<option value="9">300-500 m2</option>
+									<option value="10">&gt;=500 m2</option>
+								</select>
+							</div>
+							<div class="comboboxs" id="divPrice">
+								<select class="select-box" id="cboPrice" name="cboPrice">
+									<option value="">---Chọn mức giá---</option>
+								</select>
+							</div>
+							<div class="comboboxs adv-search" >
+								<select class="select-box" id="cboBedRoom" name="cboBedRoom" onchange="SearchCount();">
+									<option value="">---Chọn số phòng---</option>
+										<option value="0">Không xác định</option>
+										<option value="1">1+</option>
+										<option value="2">2+</option>
+										<option value="3">3+</option>
+										<option value="4">4+</option>
+									<option value="5">5+</option>
+								</select>
+							</div>
+							<div class="comboboxs adv-search" >
+								<select class="select-box" id="cboHomeDirection" name="cboHomeDirection" onchange="SearchCount();">
+								<option value="">---Chọn hướng nhà---</option>
+									<option value="0">Không xác định</option>
+									<option value="1">Đông</option>
+									<option value="2">Tây</option>
+									<option value="3">Nam</option>
+									<option value="4">Bắc</option>
+									<option value="5">Đông-Bắc</option>
+									<option value="6">Tây-Bắc</option>
+									<option value="7">Tây-Nam</option>
+									<option value="8">Đông-Nam</option>
+								</select>
+							</div>
+							<div class="comboboxs adv-search"  id="listProj">
+								<select class="select-box" id="cboListProj" name="cboListProj" onchange="SearchCount();">
+									<option value="">---Chọn dự án BĐS---</option>
+								</select>
+							</div>
+						</div>
+							<input class="bt-search" type="image" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ts_button-search.jpg" />
+						</form>
+						<!--end combobox-->
+				</div> <!--End divOfSeach tab 1 2-->
+				
+				<div id="divReSaler" style="display: none">
+					<!--begin combobox-->
+					<form id="frmBrokerSearch" action="" name="frmBrokerSearch" method="post" enctype="multipart/form-data">
+						<div class="comboboxs">
+							<select class="select-box" id="cmbCategory" name="cmbCategory">
+								<option value="">--Chọn giao dịch--</option>
+								<option value="38">Nhà đất bán</option>
+								<option value="49">Nhà đất cho thuê</option>
+							</select>
+						</div>
+						<div class="comboboxs" id="listTypeBDS">
+							<select class="select-box" id="cmbTypeBDS" name="cmbTypeBDS">
+								<option value="">--Chọn Loại nhà đất--</option>
+							</select>
+						</div>
+						<div class="comboboxs">
+							<select class="select-box" id="cmbCity" name="cmbCity"><option value="">--Chọn Tỉnh / Th&#224;nh phố--</option>
+								<option value="SG">Tp.HCM</option>
+								<option value="HN">Hà Nội</option>
+								<option value="BD">Bình Dương</option>
+								<option value="DDN">Đà Nẵng</option>
+							</select>
+						</div>
+						<div class="comboboxs" id="divListDistrict">
+							<select class="select-box" id="cmbDistrict" name="cmbDistrict">
+								<option value="">--Chọn Quận / Huyện--</option>
+							</select>
+						</div>
+						<div class="comboboxs" id="divListProject">
+							<select class="select-box" id="cmbProject" name="cmbProject">
+								<option value="">--Chọn Dự án--</option>
+							</select>
+						</div>
+						<input class="bt-search" type="image" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ts_button-search.jpg" />
+					</form>
+					<!--end combobox-->
+				</div>
+			</div> <!--End contents tab-->
+			<div class="bd-bt-search"></div>	
+				
 			</div>	<!--End class container_content_left -->
 		</div>  <!--End ID container_content_left -->	
 		

@@ -9,11 +9,14 @@
         <link rel="SHORTCUT ICON" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/gif" />
 
-        <link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/search.css" />
+		
         <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.7.1.min.js"></script>
-        <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/tab-sub-right.js"></script>
+		<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/tab-search.js"></script>
         <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.tooltip.js"></script>
-        <?php echo $this->analytics ?>
+        
+		<?php echo $this->analytics ?>
 
         <title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->title) ? ' - ' . CHtml::encode($this->title) : '' ?> </title>
         <meta name="keywords" content="<?php echo $this->keywords ?>" />

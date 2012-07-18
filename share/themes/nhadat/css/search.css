@@ -1,0 +1,132 @@
+#searchArea{width:185px;}
+
+.contents{
+	width:183px;
+	border-left: 1px #b0aeae solid;
+	border-right: 1px #b0aeae solid;
+	background:url(../images/ts_bg.jpg);
+	background-repeat:no-repeat;
+	background-position:bottom;
+}
+.tab{
+	background:url(../images/ts_tab-bg-repeat.jpg);
+	background-repeat:repeat-x;
+	width:183px;
+	height:45px;
+}
+.divSearchAct{
+	background:#fff;border-left:1px solid #90A3B2; border-right:1px solid #90A3B2;border-top:1px solid #90A3B2;
+	width:50px;height:37px;margin:6px 0 0 2px;float:left;text-align:center;padding-top:1px;
+	-webkit-border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0
+}
+.divSearchAct a{
+	text-decoration:none;
+	text-align:center;
+	color:#000;
+	font-family:arial;
+	font-weight:bold;
+	}
+.divSearchAct a:hover{
+	text-decoration: none;
+	cursor: pointer;
+}
+.divSearchInAct{
+	width:50px;
+	font-family:arial;
+	font-weight:bold;
+
+	color:#414040;
+	float:left;
+	margin-top:8px;
+	margin-left: 4px;
+	text-align:center;
+	}
+.divSearchInAct a {
+	text-decoration:none;
+	color:#414040;
+	}
+.divSearchInAct a:hover{
+	text-decoration:underline;
+	 cursor: pointer;}
+.tab-lines{
+	background:url(../images/ts_line.jpg);
+	background-repeat:no-repeat;
+	width:2px;
+	height:42px;
+	float:left;
+	margin-left:3px;
+	}
+.comboboxs{
+	padding-top: 5px;
+	/*text-align:left;*/
+	position:relative;
+	}
+/*
+.comboboxs select{
+	width:192px;
+	height:29px;
+	font-family:arial;
+	color:#000000;
+	font-size:13px;
+	text-align:left;
+	}
+	*/
+.box-contents{
+	text-align:right;
+	padding-top:10px;
+	font-family:arial;
+	font-size:13px;
+	color:#303030;
+	}
+
+.hides{
+	display: none;
+}
+.bt-search {padding:10px 0 3px 5px;border:none; width:89px;height:25px}
+.timkiems{
+	
+	float:left;
+	width:192px;
+	vertical-align:middle;
+	margin-left:22px;}
+.timkiems a{
+
+	color:#046283;}
+	
+/*update box search 3-7-2012*/
+
+select.select-box{
+	position:relative;
+	z-index:10;
+	width:175px !important;
+	height:29px !important;
+	line-height:29px;
+	color:#000000;
+	text-align:left;
+	margin-left:5px;
+}
+/* dynamically created SPAN, placed below the SELECT */
+span.select-text{
+	position:absolute;
+	bottom:0;
+	float:left;
+	left:0;
+	width:175px;
+	height:29px;
+	line-height:29px;
+	background:url(../images/bg-select-box.gif) no-repeat 0 0;
+	z-index:1;
+	overflow:hidden;
+	cursor:pointer;
+	text-align:left;
+	margin-left:5px;
+	}
+span.select-text-content{
+	width:172px;
+	height:29px;
+	line-height:29px;
+	text-align:left;
+	float:left;
+	cursor:text;
+	margin-left:5px;
+}

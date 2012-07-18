@@ -43,8 +43,8 @@
 				</li>
 				<li>
 					<label>&nbsp;</label>
-					<?php echo CHtml::submitButton(Yii::t('main', 'send'), array('name'=>'submit', 'class'=>'bton-dk', 'title'=>Yii::t('main', 'send'))); ?>
-					<?php echo CHtml::resetButton(Yii::t('main', 'reset'), array('name'=>'reset', 'class'=>'bton-dk', 'title'=>Yii::t('main', 'reset'))); ?>
+					<?php echo CHtml::submitButton(Yii::t('main', 'Send'), array('name'=>'submit', 'class'=>'bton-dk', 'title'=>Yii::t('main', 'send'))); ?>
+					<?php echo CHtml::resetButton(Yii::t('main', 'Reset'), array('name'=>'reset', 'class'=>'bton-dk', 'title'=>Yii::t('main', 'reset'))); ?>
 				</li>					
 			</ul>               
 	   <?php $this->endWidget();?>
