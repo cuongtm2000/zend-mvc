@@ -205,8 +205,14 @@ a:hover{color:#000;}
 .sub-consultant li a{color:#000;font-size:10pt; display:block}
 .sub-consultant li a:hover{color:#E97D13}
 
-/* paging and tab */
-.tabs li { display:inline}
+/* Tim kiem tab */
+.bg-search{border-left:1px solid #B0AEAE;border-right:1px solid #B0AEAE}
+.bd-bt-search{background:url(../images/ts_bottom.png) no-repeat;height:5px}
+
+#divTabRESale{ width:50px}
+#divTabREBorrow{ width:60px;}
+#divTabRESaler{ width:55px}
+
 
 .paging{list-style:none;float:right;margin:10px 0 0 0 !important}
 ul.paging li{display: inline;margin:0 !important;}

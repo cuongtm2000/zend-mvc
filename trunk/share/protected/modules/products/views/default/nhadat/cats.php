@@ -29,7 +29,7 @@ $this->description = $info_cat['description' . LANG]; ?>
         <h1 class="title-right"><span><?php echo $info_cat['cat_title' . LANG] ?></span></h1>
         <table class="table-product">
             <tbody>
-    <?php foreach ($list_items['models'] as $value): $hot = ($value['hot']==1) ? ' <img src="'.Yii::app()->theme->baseUrl.'/images/hot.gif" alt="Hot" ' : '';?>
+    <?php foreach ($list_items['models'] as $value): $hot = ($value['hot']==1) ? ' <img src="'.Yii::app()->theme->baseUrl.'/images/hot.gif" alt="Hot" /> ' : '';?>
                     <tr>
                         <td width="100">
                             <div class="frame-img-pro"> 

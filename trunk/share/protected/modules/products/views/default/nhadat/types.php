@@ -7,7 +7,7 @@
 	<h1 class="title-right"><span><?php echo $info_cat['type_title' . LANG] ?></span></h1>
         <table class="table-product">
             <tbody>
-                <?php foreach ($list_items['models'] as $value): $hot = ($value['hot']==1) ? ' <img src="'.Yii::app()->theme->baseUrl.'/images/hot.gif" alt="Hot" ' : ''; ?>
+                <?php foreach ($list_items['models'] as $value): $hot = ($value['hot']==1) ? ' <img src="'.Yii::app()->theme->baseUrl.'/images/hot.gif" alt="Hot" />' : ''; ?>
                     <tr>
                         <td width="100">
                             <div class="frame-img-pro"> <a href="<?php echo Yii::app()->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag' . LANG] ?>/<?php echo $value['tag' . LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>">
