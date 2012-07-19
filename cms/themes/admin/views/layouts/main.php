@@ -37,7 +37,7 @@
     'activeCssClass' => 'select',
     'linkLabelWrapper' => 'span',
     'items'=>array(
-        array('label'=>'Home', 'url'=>array('/admin')),
+        array('label'=>$this->lang['default'], 'url'=>array('/admin')),
         array('label'=>'Configuration', 'url'=>array('/admin/config'),
             'items'=>array(
                 array('label'=>'System', 'url'=>array('/admin/config')),
@@ -79,19 +79,13 @@
 		<?php endif;?>
 		<div class="catmenu">
 			<ul class="menu-li">
-				<li><a class="headerbar" href="">About</a>
-					<ul class="submenu">
-						<li><a href="<?php echo Yii::app()->baseUrl ?>/admin/about" title="">Danh sách</a></li>
-					</ul>
-				</li>
-                <li><a class="headerbar" href="">Menu</a>
+				<?php foreach($this->listModule as $value):?>
+                <li><a class="headerbar" href="" title="<?php echo $this->lang[$value['module_id']]?>"><?php echo $this->lang[$value['module_id']]?></a>
                     <ul class="submenu">
-                        <li><a href="" title="">Sub</a></li>
-                        <li><a href="" title="">Sub</a></li>
-                        <li><a href="" title="">Sub</a></li>
-                        <li><a href="" title="">Sub</a></li>
+                        <li><a href="<?php echo Yii::app()->baseUrl ?>/admin/about" title="Danh sách">Danh sách</a></li>
                     </ul>
                 </li>
+				<?php endforeach?>
 			</ul>
 		</div>
 	</div>

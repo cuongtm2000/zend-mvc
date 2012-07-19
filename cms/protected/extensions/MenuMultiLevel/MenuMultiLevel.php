@@ -1,12 +1,15 @@
 <?php
 
-Yii::import('zii.widgets.CMenu');
-class MenuMultiLevel extends CMenu {
+class MenuMultiLevel extends Menu {
     public $id = 'nav';
     public $activeCssClass = 'selected';
     public $linkLabelWrapper = null;
     public $htmlOptions = array();
     public $jquery = 0;
+    public $subTagOpen = null;
+    public $tagOpen = null;
+    public $subTagClose = null;
+    public $tagClose = null;
 
     private $baseUrl;
 
@@ -18,16 +21,18 @@ class MenuMultiLevel extends CMenu {
         if ($items = $this->getItems()) {
             $this->registerFiles();
 
-            echo '<div id="smoothmenu1" class="ddsmoothmenu">';
+            echo $this->tagOpen;
             $menu = array(
                 'id' => $this->id,
                 'activeCssClass' => $this->activeCssClass,
                 'linkLabelWrapper' => $this->linkLabelWrapper,
                 'htmlOptions' => $this->htmlOptions,
-                'items' => $items
+                'items' => $items,
+                'subTagOpen' => $this->subTagOpen,
+                'subTagClose' => $this->subTagClose
             );
-            $this->widget('zii.widgets.CMenu', $menu);
-            echo '</div>';
+            $this->widget('application.components.Menu', $menu);
+            echo $this->tagClose;
         }
     }
 
@@ -48,7 +53,7 @@ class MenuMultiLevel extends CMenu {
                 //'itemOptions' => array('class' => 'listItem'),
                 'linkOptions' => array( /*'class' => 'listItemLink', */
                     'title' => $result['menu_name']),
-                'submenuOptions' => array(),
+                //'submenuOptions' => array(),
                 'items' => $childItems,
             );
         }
