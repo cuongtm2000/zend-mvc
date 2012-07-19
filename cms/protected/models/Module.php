@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'hoiit_modules':
  * @property string $module_id
  * @property string $module_title
+ * @property string $module_url
  * @property integer $module_sort
  * @property integer $module_type
  *
@@ -41,9 +42,10 @@ class Module extends CActiveRecord {
             array('module_sort, module_type', 'numerical', 'integerOnly' => true),
             array('module_id', 'length', 'max' => 30),
             array('module_title', 'length', 'max' => 45),
+            array('module_url', 'length', 'max' => 100),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('module_id, module_title, module_sort, module_type', 'safe', 'on' => 'search'),
+            array('module_id, module_title, module_url, module_sort, module_type', 'safe', 'on' => 'search'),
         );
     }
 
@@ -54,8 +56,8 @@ class Module extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'hoiitFunctions' => array(self::HAS_MANY, 'HoiitFunctions', 'hoiit_modules_module_id'),
-            'hoiitUrls' => array(self::HAS_MANY, 'HoiitUrls', 'hoiit_modules_module_id'),
+            //'hoiitFunctions' => array(self::HAS_MANY, 'HoiitFunctions', 'hoiit_modules_module_id'),
+            //'hoiitUrls' => array(self::HAS_MANY, 'HoiitUrls', 'hoiit_modules_module_id'),
         );
     }
 
@@ -66,6 +68,7 @@ class Module extends CActiveRecord {
         return array(
             'module_id' => 'Module',
             'module_title' => 'Module Title',
+            'module_url' => 'Module Url',
             'module_sort' => 'Module Sort',
             'module_type' => 'Module Type',
         );
@@ -83,6 +86,7 @@ class Module extends CActiveRecord {
 
         $criteria->compare('module_id', $this->module_id, true);
         $criteria->compare('module_title', $this->module_title, true);
+        $criteria->compare('module_url', $this->module_url, true);
         $criteria->compare('module_sort', $this->module_sort);
         $criteria->compare('module_type', $this->module_type);
 
@@ -92,7 +96,7 @@ class Module extends CActiveRecord {
     }
 
     public function listItem() {
-        $command = Yii::app()->db->createCommand('SELECT module_id FROM ' . $this->tableName() . ' WHERE module_id!=\'default\' AND module_type=1 ORDER BY module_sort ASC');
+        $command = Yii::app()->db->createCommand('SELECT module_id, module_title, module_url FROM ' . $this->tableName() . ' WHERE module_id!=\'default\' AND module_type=1 ORDER BY module_sort ASC');
         return $command->queryAll();
     }
 }
