@@ -82,7 +82,9 @@
 				<?php foreach($this->listModule as $value):?>
                 <li><a class="headerbar" href="" title="<?php echo $this->lang[$value['module_id']]?>"><?php echo $this->lang[$value['module_id']]?></a>
                     <ul class="submenu">
-                        <li><a href="<?php echo Yii::app()->baseUrl ?>/admin/about" title="Danh sách">Danh sách</a></li>
+                        <?php $urls = explode('|', $value['module_url']); $title = explode('|', $value['module_title']); $i = 0; foreach ($urls as $url): ?>
+                            <li><a href="<?php echo Yii::app()->request->baseUrl . '/admin/' . $url ?>"><?php echo $title[$i] ?></a></li>
+                        <?php $i++; endforeach; ?>
                     </ul>
                 </li>
 				<?php endforeach?>
