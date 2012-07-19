@@ -11,6 +11,7 @@ class BackEndController extends CController {
     public $setting = array();
     public $listLanguage = array();
     public $lang = array();
+	public $listModule =array();
 
     public function filters() {
         return array(
@@ -36,6 +37,8 @@ class BackEndController extends CController {
         $this->setting = Setting::model()->getSetting(); //Get Setting: title, keywords...
         $this->listLanguage = Language::model()->listLanguage(); //Get list language: vi, en
         Common::setLanguage(); //Setup language
-        $this->lang = Lang::model()->lang(Yii::app()->language);
+        $this->lang = Lang::model()->getLang(Yii::app()->language, 1);
+		
+		$this->listModule = Module::model()->listItem();
     }
 }

@@ -40,24 +40,7 @@
             </div> <!--End lang-->	<div class="clear"></div>
         </div><!--End header-->
         <div id="all-nav">
-            <?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel');?>
-
-            <?php /*$this->widget('zii.widgets.CMenu',array(
-                'id' => 'nav',
-                'items'=>array(
-                    array('label'=>'Home', 'url'=>array('/site/index')),
-                    array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-                    array('label'=>'Products', 'url'=>array('product/index'),
-                        'items'=>array(
-                            array('label'=>'New Arrivals', 'url'=>array('product/new', 'tag'=>'new')),
-                            array('label'=>'Most Popular', 'url'=>array('product/index', 'tag'=>'popular')),
-                        )
-                    ),
-                    array('label'=>'Contact', 'url'=>array('/site/contact')),
-                    array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-                    array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-                ),
-            ));*/ ?>
+            <?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel', array('tagOpen' => '<div id="smoothmenu1" class="ddsmoothmenu">', 'tagClose' => '</div>'));?>
         </div> <!--End all nav--><div class="clear"></div>
 
 	<div class="banner">

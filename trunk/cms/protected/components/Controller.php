@@ -6,14 +6,15 @@ class Controller extends CController {
 
     public $setting = array();
     public $listLanguage = array();
+	public $lang = array();
 
     public function init() {
         Yii::app()->theme = Template::model()->getTemplateDefault(); //Setup template
 
         $this->setting = Setting::model()->getSetting(); //Get Setting: title, keywords...
         $this->listLanguage = Language::model()->listLanguage(); //Get list language: vi, en
-
         Common::setLanguage(); //Setup language
+		$this->lang = Lang::model()->getLang(Yii::app()->language);
     }
 
     public function setLangUrl() {
