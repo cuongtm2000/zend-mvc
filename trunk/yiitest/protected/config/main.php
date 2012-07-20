@@ -28,6 +28,7 @@ return array(
     'components' => array(
         // UserCounter
         'counter' => array('class' => 'application.extensions.UserCounter',),
+		'file'=>array('class'=>'application.extensions.CFile.CFile'),
         'user' => array(
             'allowAutoLogin' => true,
             'loginUrl' => array('admin/login')
