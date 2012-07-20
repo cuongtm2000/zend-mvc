@@ -1,3 +1,4 @@
+<ul class="modals"><li><a href="<?php echo Yii::app()->request->baseUrl ?>/<?php echo $this->module->getName() ?>/<?php echo $this->ID ?>/add" title="Add Customer"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/add.png" alt="Add Customer" /><span>Add Customer</span></a></li></ul><div class="clear"></div>
 <form name="frm" id="frm" action="" method="post">
     <input type="hidden" name="factive" value="" />
     <table>

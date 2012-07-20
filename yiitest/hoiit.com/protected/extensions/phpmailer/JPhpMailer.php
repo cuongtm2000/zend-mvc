@@ -30,17 +30,19 @@ class JPhpMailer extends PHPMailer {
 
     public function sendMailSmtp($from, $to, $namefrom, $nameto, $subject, $content, $type = 0, $addreplyto = '', $reply_name = '') {
         $this->IsSMTP();
+		$this->SMTPSecure = 'ssl'; 
         $this->Host = 'smtp.gmail.com';
+        $this->Port = 465;
         $this->SMTPAuth = true;
         $this->Username = 'sender@dos.vn';
-        $this->Password = '123sender!@#';
+        $this->Password = 'fdbhbibbonploilc';
         $this->Subject = $subject;
         $this->AltBody = 'To view the message, please use an HTML compatible email viewer!';
         $this->MsgHTML($content);
         $this->AddAddress($to, $nameto);
         if ($type == 1) {
             $this->AddReplyTo($addreplyto, $reply_name);
-        } else {
+        }else{
             $this->SetFrom($from, $namefrom);
         }
         //$this->AddBCC($address);

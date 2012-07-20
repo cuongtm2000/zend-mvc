@@ -11,7 +11,7 @@ class DefaultController extends Controller {
             $contact->attributes = $_POST['ContactUserForm'];
             if ($contact->validate()) {
                 $username_class = new Username;
-                $username = $username_class->infoUser(Yii::app()->session['subdomain']);
+                $username = $username_class->infoUser('user');
                 
                 Yii::import('application.extensions.phpmailer.JPhpMailer');
                 $mail = new JPhpMailer;
