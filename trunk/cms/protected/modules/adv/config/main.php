@@ -1,6 +1,6 @@
 <?php
 $module_name = basename(dirname(dirname(__FILE__)));
-$default_controller = 'default';
+//$default_controller = 'default';
 
 return array(
     'import' => array(
@@ -9,7 +9,7 @@ return array(
 
     'modules' => array(
         $module_name => array(
-            'defaultController' => $default_controller,
+            //'defaultController' => $default_controller,
         ),
     ),
 );

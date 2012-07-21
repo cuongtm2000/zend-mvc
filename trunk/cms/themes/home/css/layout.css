@@ -55,6 +55,10 @@ a:hover{color:#000;}
 .bg-adv{list-style:none;text-align:center;padding:5px 0 0 0}
 .bg-adv li{padding:0 0 5px 0}
 
+/*Frame tent right*/
+.frame-tent-right {padding:10px 10px 5px 10px;border:1px solid #F0F0F0;margin:0 0 15px 0;-webkit-border-radius:1px;-moz-border-radius:1px}
+.frame-tent-right p{text-align:justify;line-height:1.5em}
+
 /*  rightcontent  */
 #rightcontent {width:547px; float:left;background:url(../images/center-column-bg.png) no-repeat center top}
 

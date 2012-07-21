@@ -1,11 +1,9 @@
 <?php
 
-// uncomment the following to define a path alias
-// Yii::setPathOfAlias('local','path/to/local-folder');
-
+Yii::setPathOfAlias('filePathUpload', '/public/userfiles/');
 $config = array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-    'name' => 'My Web Application',
+    'name' => 'YiiProject.com',
     'defaultController' => 'default',
 
     // preloading 'log' component
@@ -83,14 +81,14 @@ $config = array(
             'errorAction' => 'error',
         ),
         'log' => array(
-            'class'=>'CLogRouter',
-            'routes'=>array(
+            'class' => 'CLogRouter',
+            'routes' => array(
                 array(
-                    'class'=>'CFileLogRoute',
-                    'levels'=>'error, warning',
+                    'class' => 'CFileLogRoute',
+                    'levels' => 'error, warning',
                 ),
                 //array(
-                    //'class'=>'CWebLogRoute',
+                //'class'=>'CWebLogRoute',
                 //),
             ),
         ),

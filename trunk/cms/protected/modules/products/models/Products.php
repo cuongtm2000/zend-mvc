@@ -1,20 +1,35 @@
 <?php
 
 /**
- * This is the model class for table "hoiit_module_about".
+ * This is the model class for table "hoiit_module_products".
  *
- * The followings are the available columns in table 'hoiit_module_about':
+ * The followings are the available columns in table 'hoiit_module_products':
  * @property integer $record_id
- * @property string $created
+ * @property string $postdate
+ * @property string $pic_thumb
+ * @property string $pic_full
+ * @property string $pic_desc
  * @property integer $record_order
+ * @property string $unit
  * @property integer $hot
+ * @property integer $specials
  * @property string $field1
  * @property string $field2
+ * @property string $field3
+ * @property string $field4
+ * @property integer $enable
+ * @property integer $hoiit_module_item_cat_cat_id
  *
  * The followings are the available model relations:
+ * @property HoiitModuleProductsCat $hoiitModuleItemCatCat
  * @property HoiitLanguages[] $hoiitLanguages
  */
-class About extends CActiveRecord {
+class Products extends CActiveRecord {
+    /**
+     * Returns the static model of the specified AR class.
+     * @param string $className active record class name.
+     * @return Products the static model class
+     */
     public static function model($className = __CLASS__) {
         return parent::model($className);
     }
@@ -23,7 +38,7 @@ class About extends CActiveRecord {
      * @return string the associated database table name
      */
     public function tableName() {
-        return 'hoiit_module_about';
+        return 'hoiit_module_products';
     }
 
     /**
@@ -33,12 +48,14 @@ class About extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('record_order, hot, enable', 'numerical', 'integerOnly' => true),
-            array('pic_thumb, field1, field2', 'length', 'max' => 100),
-            array('created', 'length', 'max' => 45),
+            array('postdate, hoiit_module_item_cat_cat_id', 'required'),
+            array('record_order, hot, specials, enable, hoiit_module_item_cat_cat_id', 'numerical', 'integerOnly' => true),
+            array('pic_thumb, pic_full', 'length', 'max' => 100),
+            array('pic_desc', 'length', 'max' => 500),
+            array('unit, field1, field2, field3, field4', 'length', 'max' => 45),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('record_id, pic_thumb, created, record_order, hot, field1, field2, enable', 'safe', 'on' => 'search'),
+            array('record_id, postdate, pic_thumb, pic_full, pic_desc, record_order, unit, hot, specials, field1, field2, field3, field4, enable, hoiit_module_item_cat_cat_id', 'safe', 'on' => 'search'),
         );
     }
 
@@ -49,8 +66,9 @@ class About extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'Language' => array(self::MANY_MANY, 'Language', 'hoiit_module_about_languages(record_id, language_id)'),
-            'AboutLanguage' => array(self::HAS_MANY, 'AboutLanguage', 'record_id', 'index' => 'language_id'),
+            'ProductsCat' => array(self::BELONGS_TO, 'ProductsCat', 'hoiit_module_item_cat_cat_id'),
+            'Language' => array(self::MANY_MANY, 'Language', 'hoiit_module_products_languages(record_id, language_id)'),
+            'ProductsLanguage' => array(self::HAS_MANY, 'ProductsLanguage', 'record_id', 'index' => 'language_id'),
         );
     }
 
@@ -60,13 +78,20 @@ class About extends CActiveRecord {
     public function attributeLabels() {
         return array(
             'record_id' => 'Record',
+            'postdate' => 'Postdate',
             'pic_thumb' => 'Pic Thumb',
-            'created' => 'Created',
+            'pic_full' => 'Pic Full',
+            'pic_desc' => 'Pic Desc',
             'record_order' => 'Record Order',
+            'unit' => 'Unit',
             'hot' => 'Hot',
+            'specials' => 'Specials',
             'field1' => 'Field1',
             'field2' => 'Field2',
+            'field3' => 'Field3',
+            'field4' => 'Field4',
             'enable' => 'Enable',
+            'hoiit_module_item_cat_cat_id' => 'Hoiit Module Item Cat Cat',
         );
     }
 
@@ -81,43 +106,31 @@ class About extends CActiveRecord {
         $criteria = new CDbCriteria;
 
         $criteria->compare('record_id', $this->record_id);
+        $criteria->compare('postdate', $this->postdate, true);
         $criteria->compare('pic_thumb', $this->pic_thumb, true);
-        $criteria->compare('created', $this->created, true);
+        $criteria->compare('pic_full', $this->pic_full, true);
+        $criteria->compare('pic_desc', $this->pic_desc, true);
         $criteria->compare('record_order', $this->record_order);
+        $criteria->compare('unit', $this->unit, true);
         $criteria->compare('hot', $this->hot);
+        $criteria->compare('specials', $this->specials);
         $criteria->compare('field1', $this->field1, true);
         $criteria->compare('field2', $this->field2, true);
+        $criteria->compare('field3', $this->field3, true);
+        $criteria->compare('field4', $this->field4, true);
         $criteria->compare('enable', $this->enable);
+        $criteria->compare('hoiit_module_item_cat_cat_id', $this->hoiit_module_item_cat_cat_id);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
     }
 
-    //Front end - Get first record
-    public function firstHotRecord() {
-        $criteria = new CDbCriteria();
-        $criteria->order = 'record_order DESC, created DESC';
-        $criteria->condition = 'hot = 1 AND enable = 1';
-
-        $viewer = $this::model()->find($criteria);
-        return $viewer->AboutLanguage[Yii::app()->language];
-    }
-
-    /**
-     * get list Menu
-     * @return mixed
-     */
-    public function listItem() {
-        $command = Yii::app()->db->createCommand('SELECT title, tag FROM ' . $this->tableName() . ', hoiit_module_about_languages WHERE ' . $this->tableName() . '.record_id = hoiit_module_about_languages.record_id AND language_id =\'' . Yii::app()->language . '\' AND hot = 0 AND enable = 1 ORDER BY record_order DESC, created DESC');
-        return $command->queryAll();
-    }
-
-    //Back end - List item admin
     public function listItemAdmin() {
         $criteria = new CDbCriteria();
-        $criteria->with = array('Language', 'AboutLanguage');
-        $criteria->order = 'record_order DESC, created DESC';
+        $criteria->with = array('Language', 'ProductsLanguage');
+        $criteria->order = 'record_order DESC, postdate DESC';
+
         $count = $this::model()->count($criteria);
 
         // elements per page
@@ -126,6 +139,16 @@ class About extends CActiveRecord {
         $pages->applyLimit($criteria);
 
         return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+    }
+
+    //Back end - Delete Record
+    private function deleteRecord($id) {
+        ProductsLanguage::model()->deleteRecord($id);
+        $item = $this::model()->find('record_id=:id', array(':id' => $id));
+        Common::removePic($item->pic_thumb, '/image/' . strtolower(__CLASS__)); // remove pic_thumb
+        Common::removePic($item->pic_full, '/image/' . strtolower(__CLASS__)); // remove pic_full
+        Common::removePic($item->pic_desc, '/image/' . strtolower(__CLASS__), 1); // remove pic_desc
+        $this::model()->findByPk($id)->delete(); //delete record_id
     }
 
     //Back end - Active Item
@@ -148,7 +171,8 @@ class About extends CActiveRecord {
             }
         } else if ($syn) {
             $criteria = new CDbCriteria();
-            $criteria->order = 'record_order ASC, created ASC';
+            $criteria->order = 'record_order ASC, postdate ASC';
+
             $models = $this::model()->findAll($criteria);
 
             $i = 1;
@@ -180,40 +204,11 @@ class About extends CActiveRecord {
                     foreach ($record_id as $value) {
                         $id = intval($value);
                         if ($id) {
-                            AboutLanguage::model()->deleteRecord($id);
-                            $this::model()->deleteByPk($id);
+                            $this->deleteRecord($id);
                         }
                     }
                 }
             }
         }
-    }
-
-    //Back end - save
-    public function saveRecord($model, $id = null) {
-        if (Yii::app()->controller->action->id == 'add') {
-            $this->hot = $model->hot;
-            $this->enable = $model->enable;
-            $this->save();
-
-            $id = Yii::app()->db->getLastInsertId();
-            $this::model()->updateByPk($id, array('record_order' => $id));
-
-            AboutLanguage::model()->saveRecord($id, $model);
-        } else {
-            $item = $this::model()->findByPk($id);
-            $item->hot = $model->hot;
-            $item->enable = $model->enable;
-            $item->save();
-
-            AboutLanguage::model()->saveRecord($id, $model);
-        }
-    }
-
-    //Back end - Get record to Edit
-    public function loadEdit($id) {
-        $command = Yii::app()->db->createCommand('SELECT pic_thumb, hot, enable FROM ' . $this->tableName() . ' WHERE record_id=:id');
-        $command->bindParam(":id", $id, PDO::PARAM_INT);
-        return $command->queryRow();
     }
 }
