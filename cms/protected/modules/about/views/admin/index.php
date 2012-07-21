@@ -1,4 +1,4 @@
-<ul class="modals"><li><a href="<?php echo Yii::app()->request->baseUrl ?>/<?php echo $this->module->getName() ?>/<?php echo $this->ID ?>/add" title="<?php echo $this->lang['add_new']?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/add.png" alt="<?php echo $this->lang['add_new']?>" /><span><?php echo $this->lang['add_new']?></span></a></li></ul><div class="clear"></div>
+<ul class="modals"><li><a href="<?php echo Yii::app()->request->baseUrl . '/'. $this->ID . '/'. $this->module->getName() ?>/add" title="<?php echo $this->lang['add_new']?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/add.png" alt="<?php echo $this->lang['add_new']?>" /><span><?php echo $this->lang['add_new']?></span></a></li></ul><div class="clear"></div>
 <form name="frm" id="frm" action="" method="post">
     <input type="hidden" name="factive" value="" />
     <table>

@@ -71,14 +71,6 @@
 					 <li><a href="#">Office furniture</a></li>
 				 </ul>
 			</div>  <!-- categories -->
-            
-			<div class="frame-leftcontent">
-			 	<h2 class="title-box">Quảng cáo</h2>
-                <ul class="bg-adv">
-                	<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo_thuonghoi.jpg" alt="" /></li>
-			 		<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/new-pr.jpg" width="168" height="218" alt=""  /></li>
-                </ul>
-			</div> <!-- Adment-pr-->
 		</div> <!-- End Left-column -->
 
 	   <div id="rightcontent">
