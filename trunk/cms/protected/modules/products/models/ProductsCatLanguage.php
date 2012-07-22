@@ -92,4 +92,40 @@ class ProductsCatLanguage extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
+
+    //Back end - add
+    public function saveRecord($id, $model) {
+        foreach (Yii::app()->controller->listLanguage as $key => $value) {
+            $this->executeRecord($id, $key, $model['cat_title' . $key], $model['preview' . $key], $model['tag' . $key], $model['description' . $key]);
+        }
+    }
+
+    //Back end - save
+    private function executeRecord($id, $lang, $cat_title, $preview, $tag, $description) {
+        $purifier = new CHtmlPurifier();
+        $cat_title = $purifier->purify(trim($cat_title));
+        $preview = $purifier->purify(trim($preview));
+        $tag = $purifier->purify(trim($tag));
+        $description = $purifier->purify(trim($description));
+
+        $command = Yii::app()->db->createCommand('INSERT INTO ' . $this->tableName() . ' (cat_id, language_id, cat_title, preview, tag, description) VALUES (:cat_id, :language_id, :cat_title, :preview, :tag, :description)');
+        if (Yii::app()->controller->action->id == 'editcat') {
+            $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET cat_title=:cat_title, preview=:preview, tag=:tag, description=:description WHERE cat_id=:cat_id AND language_id=:language_id');
+        }
+
+        $command->bindParam(":cat_id", $id, PDO::PARAM_INT);
+        $command->bindParam(":language_id", $lang, PDO::PARAM_STR);
+        $command->bindParam(":cat_title", $cat_title, PDO::PARAM_STR);
+        $command->bindParam(":preview", $preview, PDO::PARAM_STR);
+        $command->bindParam(":tag", $tag, PDO::PARAM_STR);
+        $command->bindParam(":description", $description, PDO::PARAM_STR);
+        $command->execute();
+    }
+
+    //Back end - Get record to Edit
+    public function loadEdit($id) {
+        $command = Yii::app()->db->createCommand('SELECT language_id, cat_title, preview, tag, description FROM ' . $this->tableName() . ' WHERE cat_id=:id');
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        return $command->queryAll();
+    }
 }

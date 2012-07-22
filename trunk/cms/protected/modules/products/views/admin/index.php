@@ -32,7 +32,7 @@
                         <td><input type="checkbox" name="ids[]" value="<?php echo $value->record_id ?>" /></td>
                         <td><input type="text" name="orders[<?php echo $value->record_id ?>]" maxlength="3" class="txt-sort" value="<?php echo $value->record_order ?>" /></td>
                         <td><?php echo CHtml::link($title, array('edit', 'id'=>$value->record_id)) ?></td>
-                        <td><?php //echo $value->ProductsCat->cat_title ?></td>
+                        <td><?php echo $value->ProductsCat->ProductsCatLanguage[Yii::app()->language]['cat_title'] ?></td>
                         <td><?php echo $value->ProductsLanguage[Yii::app()->language]['hit'] ?></td>
                         <td><?php echo CHtml::link($this->lang['edit'], array('edit', 'id'=>$value->record_id)) ?></td>
                     </tr>

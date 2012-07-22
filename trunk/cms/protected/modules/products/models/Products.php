@@ -48,7 +48,7 @@ class Products extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('postdate, hoiit_module_item_cat_cat_id', 'required'),
+            array('hoiit_module_item_cat_cat_id', 'required'),
             array('record_order, hot, specials, enable, hoiit_module_item_cat_cat_id', 'numerical', 'integerOnly' => true),
             array('pic_thumb, pic_full', 'length', 'max' => 100),
             array('pic_desc', 'length', 'max' => 500),
@@ -210,5 +210,44 @@ class Products extends CActiveRecord {
                 }
             }
         }
+    }
+
+    //Back end - save
+    public function saveRecord($model, $id = null) {
+        if (Yii::app()->controller->action->id == 'add') {
+            $this->unit = $model->unit;
+            $this->hot = $model->hot;
+            $this->enable = $model->enable;
+            $this->hoiit_module_item_cat_cat_id = $model->hoiit_module_item_cat_cat_id;
+
+            //upload picture thumb
+            Yii::import('ext.simpleImage.CSimpleImage');
+            $file = new CSimpleImage();
+            $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], 123, 123, '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']].'-thumb');
+            $this->pic_full = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_full'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_full'], 223, 223, '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]);
+            $this->pic_desc = implode("|", $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_desc'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_desc'], 222, 222, '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]));
+
+            $this->save();
+            $id = Yii::app()->db->getLastInsertId();
+            $this::model()->updateByPk($id, array('record_order' => $id));
+
+            ProductsLanguage::model()->saveRecord($id, $model);
+        } else {
+            $item = $this::model()->findByPk($id);
+            $item->unit = $model->unit;
+            $item->hot = $model->hot;
+            $item->enable = $model->enable;
+            $item->hoiit_module_item_cat_cat_id = $model->hoiit_module_item_cat_cat_id;
+            $item->save();
+
+            ProductsLanguage::model()->saveRecord($id, $model);
+        }
+    }
+
+    //Back end - Get record to Edit
+    public function loadEdit($id) {
+        $command = Yii::app()->db->createCommand('SELECT pic_thumb, pic_full, pic_desc, unit, hot, enable, hoiit_module_item_cat_cat_id FROM ' . $this->tableName() . ' WHERE record_id=:id');
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        return $command->queryRow();
     }
 }

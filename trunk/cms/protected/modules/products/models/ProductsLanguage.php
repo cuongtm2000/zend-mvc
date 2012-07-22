@@ -111,4 +111,42 @@ class ProductsLanguage extends CActiveRecord {
         $command->bindParam(":id", $id, PDO::PARAM_INT);
         $command->execute();
     }
+
+    //Back end - add
+    public function saveRecord($id, $model) {
+        foreach (Yii::app()->controller->listLanguage as $key => $value) {
+            $this->executeRecord($id, $key, $model['title' . $key], $model['preview' . $key], $model['content' . $key], $model['tag' . $key], $model['description' . $key]);
+        }
+    }
+
+    //Back end - save
+    private function executeRecord($id, $lang, $title, $preview, $content, $tag, $description) {
+        $purifier = new CHtmlPurifier();
+        $title = $purifier->purify(trim($title));
+        $preview = $purifier->purify(trim($preview));
+        $content = $purifier->purify(trim($content));
+        $tag = $purifier->purify(trim($tag));
+        $description = $purifier->purify(trim($description));
+
+        $command = Yii::app()->db->createCommand('INSERT INTO ' . $this->tableName() . ' (record_id, language_id, title, preview, content, tag, description) VALUES (:record_id, :language_id, :title, :preview, :content, :tag, :description)');
+        if (Yii::app()->controller->action->id == 'edit') {
+            $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET title=:title, preview=:preview, content=:content, tag=:tag, description=:description WHERE record_id=:record_id AND language_id=:language_id');
+        }
+
+        $command->bindParam(":record_id", $id, PDO::PARAM_INT);
+        $command->bindParam(":language_id", $lang, PDO::PARAM_STR);
+        $command->bindParam(":title", $title, PDO::PARAM_STR);
+        $command->bindParam(":preview", $preview, PDO::PARAM_STR);
+        $command->bindParam(":content", $content, PDO::PARAM_STR);
+        $command->bindParam(":tag", $tag, PDO::PARAM_STR);
+        $command->bindParam(":description", $description, PDO::PARAM_STR);
+        $command->execute();
+    }
+
+    //Back end - Get record to Edit
+    public function loadEdit($id) {
+        $command = Yii::app()->db->createCommand('SELECT language_id, title, preview, content, tag, description FROM ' . $this->tableName() . ' WHERE record_id=:id');
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        return $command->queryAll();
+    }
 }
