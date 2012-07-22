@@ -46,7 +46,7 @@ class ProductsCat extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('cat_created', 'required'),
+            //array('cat_created', 'required'),
             array('cat_parent_id, cat_hot, cat_order, cat_enable', 'numerical', 'integerOnly' => true),
             array('pic_thumb, cat_extra1, cat_extra2', 'length', 'max' => 100),
             array('pic_desc', 'length', 'max' => 200),
@@ -126,8 +126,9 @@ class ProductsCat extends CActiveRecord {
         if ($type == 1) {
             //for admin
             if ($id != 0) {
-                $criteria->condition = 'cat_id !=:id';
+                $criteria->condition = 't.cat_id !=:id';
                 $criteria->params = array(':id' => $id);
+
                 //$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . LANG . ', tag' . LANG . ', cat_enable FROM ' . $this->tableName() . ' WHERE cat_id != ' . $id . ' AND dos_usernames_username=:user ORDER BY cat_order DESC');
             } /*else {
                 $criteria->condition = 'cat_id !=:id';
@@ -198,5 +199,39 @@ class ProductsCat extends CActiveRecord {
                 }
             }
         }
+    }
+
+    //Back end - save
+    public function saveRecord($model, $id = null) {
+        if (Yii::app()->controller->action->id == 'addcat') {
+            $this->cat_parent_id = $model->cat_parent_id;
+            $this->cat_hot = $model->cat_hot;
+            $this->cat_enable = $model->cat_enable;
+            //upload picture
+            Yii::import('ext.simpleImage.CSimpleImage');
+            $file = new CSimpleImage();
+            $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], 123, 123, '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']]);
+
+            $this->save();
+            $id = Yii::app()->db->getLastInsertId();
+            $this::model()->updateByPk($id, array('cat_order' => $id));
+
+            ProductsCatLanguage::model()->saveRecord($id, $model);
+        } else {
+            $item = $this::model()->findByPk($id);
+            $item->cat_parent_id = $model->cat_parent_id;
+            $item->cat_hot = $model->cat_hot;
+            $item->cat_enable = $model->cat_enable;
+            $item->save();
+
+            ProductsCatLanguage::model()->saveRecord($id, $model);
+        }
+    }
+
+    //Back end - Get record to Edit
+    public function loadEdit($id) {
+        $command = Yii::app()->db->createCommand('SELECT cat_parent_id, pic_thumb, cat_hot, cat_enable FROM ' . $this->tableName() . ' WHERE cat_id=:id');
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        return $command->queryRow();
     }
 }

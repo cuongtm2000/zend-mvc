@@ -63,15 +63,15 @@ class AdminController extends BackEndController {
     }
 
     public function actionEdit($id) {
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/config.js');
+
         $model_class = ucfirst($this->module->id);
         $model_form_class = $model_class . 'Form';
         $model_language_class = $model_class . 'Language';
         $model = new $model_class();
         $model_form = new $model_form_class();
         $model_language = new $model_language_class();
-
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/config.js');
 
 		//Load Edit
         $model_data = $model->loadEdit($id);
