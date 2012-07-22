@@ -34,21 +34,30 @@
             echo $form->dropDownList($model, 'dos_provinces_province_id', CHtml::listData($listProvices, 'province_id', 'province_name'), array('prompt' => 'Chọn tỉnh/thành'));
             ?>
         </div>
-
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $("#dos_districts_district_id").load("<?php echo Yii::app()->baseUrl ?>/admin/products/listdistrict/id/"+ $("#Products_dos_provinces_province_id").val()<?php echo $model['dos_districts_district_id'] ? '+"/idd/' . $model['dos_districts_district_id'] . '"' : "" ?>);
-            });
-            $("#Products_dos_provinces_province_id").change(function(){
-                $("#dos_districts_district_id").load("<?php echo Yii::app()->baseUrl ?>/admin/products/listdistrict/id/"+ $("#Products_dos_provinces_province_id").val());
-            });
-        </script>
-
-
         <div class="col1"><?php echo $form->labelEx($model, 'dos_districts_district_id') ?></div>
         <div class="col2" id="dos_districts_district_id">
         </div><div class="clear space"></div>
 
+        <div class="col1"><?php echo $form->labelEx($model, 'dos_wards_ward_id') ?></div>
+        <div class="col2" id="dos_wards_ward_id">
+        </div><div class="clear space"></div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#dos_districts_district_id").load("<?php echo Yii::app()->baseUrl ?>/products/default/listdistrict/id/"+ $("#Products_dos_provinces_province_id").val()<?php echo $model['dos_districts_district_id'] ? '+"/idd/' . $model['dos_districts_district_id'] . '"' : "" ?>);
+            $("#dos_wards_ward_id").load("<?php echo Yii::app()->baseUrl ?>/products/default/listward/id/"+ <?php echo ($model['dos_districts_district_id']?$model['dos_districts_district_id']:'0').($model['dos_wards_ward_id'] ? '+"/idd/' . $model['dos_wards_ward_id'] . '"' : "") ?>);
+                    
+        });
+        $("#Products_dos_provinces_province_id").change(function(){
+            $("#dos_districts_district_id").load("<?php echo Yii::app()->baseUrl ?>/products/default/listdistrict/id/"+ $("#Products_dos_provinces_province_id").val());
+                        
+        });
+    </script>
+    
+        <div class=""><?php echo $form->labelEx($model_f, 'road') ?></div>
+        <div class="">
+            <?php echo $form->textField($model, 'feature[road]', $htmlOptions = array('class' => 'txt-very-large')); ?>
+        </div>    <div class="clear space"></div>
         <div class="col1">Giá</div>
         <div class="col2">
             <?php echo $form->textField($model, 'unit', $htmlOptions = array('class' => 'txt-small', 'onkeyup' => 'this.value = FormatNumber(this.value);')) ?>
@@ -87,7 +96,7 @@
                     tinyMCE.init({
                         file_browser_callback: 'openKCFinder',
                         mode:"exact",
-                        elements : "<?php echo ucfirst($this->ID) ?>_content<?php echo $lang ?>",
+                        elements : "Products_content<?php echo $lang ?>",
                         theme:"advanced",
                         language : "vi",
                         //skin : "o2k7",
@@ -217,7 +226,7 @@
             <div class="clear space"></div>
             <script type="text/javascript">
                 jQuery(function($) {
-                    $('#<?php echo ucfirst($this->ID) ?>_description<?php echo $lang ?>').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup<?php echo $lang ?>').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});
+                    $('#Products_description<?php echo $lang ?>').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup<?php echo $lang ?>').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});
                 });
             </script>
         <?php endforeach; ?>
@@ -227,13 +236,23 @@
             <?php echo $form->fileField($model, 'pic_thumb', array('class' => 'fileupload')); ?>
         </div>
         <div class="clear space"></div>
-
+    
+        
         <div class="col1"><?php echo $form->labelEx($model, 'pic_full') ?></div>
         <div class="col2">
             <?php echo $form->fileField($model, 'pic_full', array('class' => 'fileupload')); ?>
             <p style="color: red"><b>Lưu ý</b>:Chỉ chấp nhận hình ảnh là JPG và GIF, có dung lượng nhỏ hơn 5 MB. Không đăng logo, hình quảng cáo, nếu vi phạm sẽ bị xoá tin rao và khoá tài khoản đăng tin.</p>
         </div> <div class="clear space"></div>
-
+        
+        <div class="col1"><?php echo $this->lang['pic_desc'] ?></div>
+        <div class="col2">
+            <input type="file" name="Products[pic_desc][]" size="40%" />
+        </div><div class="clear space"></div>
+        <div class="col1"><?php echo $this->lang['pic_desc'] ?></div>
+        <div class="col2">
+            <input type="file" name="Products[pic_desc][]" size="40%" />
+        </div><div class="clear space"></div>
+        <p class="rows"><a href="#" id="add-rows">Thêm hình mô tả</a></p>
 
         <div class="col1"><b>Thông tin liên hệ</b></div>
         <div class="col2">
@@ -255,8 +274,7 @@
             </div> <div class="clear space"></div>
         </div> <div class="clear space"></div>
 
-        <p class="rows"><a href="#" id="add-rows"><?php echo $this->lang['pic_desc'] ?></a></p>
-
+      
         <div class="col1"><?php echo $form->labelEx($model, 'hot', $htmlOptions = array('for' => ucfirst($this->ID) . '_hot_0')) ?></div>
         <div class="col2 radio">
             <?php echo $form->radioButtonList($model, 'hot', array('0' => $this->lang['normal'], '1' => $this->lang['hot']), array('separator' => '&nbsp;&nbsp;')); ?>
@@ -282,7 +300,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $("#add-rows").click(function(){
-                $(".rows").before('<div class="col1"><?php echo $this->lang['pic_desc'] ?></div><div class="col2"><input type="file" name="<?php echo ucfirst($this->ID) ?>[pic_desc][]" size="40%" /></div><div class="clear space"></div>');
+                $(".rows").before('<div class="col1"><?php echo $this->lang['pic_desc'] ?></div><div class="col2"><input type="file" name="Products[pic_desc][]" size="40%" /></div><div class="clear space"></div>');
                 return false;
             });
         });

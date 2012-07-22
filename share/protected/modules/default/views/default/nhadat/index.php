@@ -38,8 +38,8 @@
                             </table>
                         </td>
                         <td style="text-align:center" width="90">
-                            <h3 class="title-footer-right">Hội viên</h3>
-                            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/hoivien.jpg" alt="Hoi vien" />
+                            <h3 class="title-footer-right"><?php echo $value->Username['fullname'] ?></h3>
+                           <img src="<?php echo Yii::app()->baseUrl.' /public/userfiles/image/' . $value->dos_username . '/image/'.$value->dos_username.'.jpg' ?>" alt="<?php echo $value->dos_username ?>" />
                             <p class="price"><?php echo $value['contact_mobile'] ?></p>
                         </td>
                     </tr>

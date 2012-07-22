@@ -174,11 +174,6 @@ class ProductsController extends AdminController {
         ));
     }
 
-    public function actionListdistrict($id, $idd = 0) {
-        $pr = new Provinces();
-        $this->renderPartial('listdistrict', array('list' => $pr->listDistrictProvince($id), 'idd' => $idd), false, true);
-    }
-
     public function actionEdit($id) {
         Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
         Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/config.js');

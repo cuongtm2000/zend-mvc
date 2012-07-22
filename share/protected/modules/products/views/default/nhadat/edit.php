@@ -22,8 +22,7 @@ echo $form->errorSummary($model_f, '');
     <div class="col1"><?php echo $form->labelEx($model, 'dos_module_item_cat_cat_id') ?></div>
     <div class="col2">
         <?php echo $form->dropDownList($model, 'dos_module_item_cat_cat_id', CHtml::listData($listItemsCat, 'cat_id', 'cat_title_prefix')); ?>
-    </div>
-    <div class="clear space"></div>
+    </div>    <div class="clear space"></div>
 
     <div class="col1"><?php echo $form->labelEx($model, 'dos_provinces_province_id') ?></div>
     <div class="col2">
@@ -31,25 +30,35 @@ echo $form->errorSummary($model_f, '');
         echo $form->dropDownList($model, 'dos_provinces_province_id', CHtml::listData($listProvices, 'province_id', 'province_name'), array('prompt' => 'Chọn tỉnh/thành'));
         ?>
     </div>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#dos_districts_district_id").load("<?php echo Yii::app()->baseUrl ?>/admin/products/listdistrict/id/"+ $("#Products_dos_provinces_province_id").val()<?php echo $model['dos_districts_district_id'] ? '+"/idd/' . $model['dos_districts_district_id'] . '"' : "" ?>);
-        });
-        $("#Products_dos_provinces_province_id").change(function(){
-            $("#dos_districts_district_id").load("<?php echo Yii::app()->baseUrl ?>/admin/products/listdistrict/id/"+ $("#Products_dos_provinces_province_id").val());
-        });
-    </script>
-
-
     <div class="col1"><?php echo $form->labelEx($model, 'dos_districts_district_id') ?></div>
     <div class="col2" id="dos_districts_district_id">
     </div><div class="clear space"></div>
 
+    <div class="col1"><?php echo $form->labelEx($model, 'dos_wards_ward_id') ?></div>
+    <div class="col2" id="dos_wards_ward_id">
+    </div><div class="clear space"></div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#dos_districts_district_id").load("<?php echo Yii::app()->baseUrl ?>/products/default/listdistrict/id/"+ $("#Products_dos_provinces_province_id").val()<?php echo $model['dos_districts_district_id'] ? '+"/idd/' . $model['dos_districts_district_id'] . '"' : "" ?>);
+            $("#dos_wards_ward_id").load("<?php echo Yii::app()->baseUrl ?>/products/default/listward/id/"+ <?php echo ($model['dos_districts_district_id']?$model['dos_districts_district_id']:'0').($model['dos_wards_ward_id'] ? '+"/idd/' . $model['dos_wards_ward_id'] . '"' : "") ?>);
+        });
+        $("#Products_dos_provinces_province_id").change(function(){
+            $("#dos_districts_district_id").load("<?php echo Yii::app()->baseUrl ?>/products/default/listdistrict/id/"+ $("#Products_dos_provinces_province_id").val());
+                        
+        });
+    </script>
+
+    <div class=""><?php echo $form->labelEx($model_f, 'road') ?></div>
+    <div class="">
+        <?php echo $form->textField($model, 'feature[road]', $htmlOptions = array('class' => 'txt-very-large')); ?>
+    </div>    <div class="clear space"></div>
+
     <div class="col1">Giá</div>
     <div class="col2">
-         <?php echo $form->textField($model, 'unit', $htmlOptions = array('class' => 'txt-small', 'onkeyup' => 'this.value = FormatNumber(this.value);')) ?>
-        <?php          $d = array('VND', 'USD', 'SJC');
+        <?php echo $form->textField($model, 'unit', $htmlOptions = array('class' => 'txt-small', 'onkeyup' => 'this.value = FormatNumber(this.value);')) ?>
+        <?php
+        $d = array('VND', 'USD', 'SJC');
         echo $form->dropDownList($model, 'unit_currency', array_combine($d, $d), array('style' => "width:70pt", 'prompt' => 'Chọn ĐVT'));
         ?>/
         <?php
@@ -60,24 +69,24 @@ echo $form->errorSummary($model_f, '');
 
 
 
-    <?php foreach (Yii::app()->user->numLang as $lang): $lang = ($lang == 'vi') ? '' : $lang; ?>
+<?php foreach (Yii::app()->user->numLang as $lang): $lang = ($lang == 'vi') ? '' : $lang; ?>
         <div class="col1"><?php echo $form->labelEx($model, 'title' . $lang) ?></div>
         <div class="col2">
-            <?php echo $form->textField($model, 'title' . $lang, $htmlOptions = array('class' => 'txt-very-large')); ?>
+    <?php echo $form->textField($model, 'title' . $lang, $htmlOptions = array('class' => 'txt-very-large')); ?>
         </div>
         <div class="clear space"></div>
-    <?php endforeach; ?>
+<?php endforeach; ?>
 
     <div class="col1"><?php echo $form->labelEx($model, 'address') ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'address', $htmlOptions = array('class' => 'txt-very-large')); ?>
+<?php echo $form->textField($model, 'address', $htmlOptions = array('class' => 'txt-very-large')); ?>
     </div> <div class="clear space"></div>
 
 
-    <?php foreach (Yii::app()->user->numLang as $lang): $lang = ($lang == 'vi') ? '' : $lang; ?>
+<?php foreach (Yii::app()->user->numLang as $lang): $lang = ($lang == 'vi') ? '' : $lang; ?>
         <div class="col1"><?php echo $form->labelEx($model, 'content' . $lang) ?></div>
         <div class="col2">
-            <?php echo $form->textArea($model, 'content' . $lang, $htmlOptions = array('cols' => 20, 'rows' => 10)); ?>
+    <?php echo $form->textArea($model, 'content' . $lang, $htmlOptions = array('cols' => 20, 'rows' => 10)); ?>
             <script type="text/javascript">
                 tinyMCE.init({
                     file_browser_callback: 'openKCFinder',
@@ -117,7 +126,7 @@ echo $form->errorSummary($model_f, '');
             </script>
         </div>
         <div class="clear space"></div>
-    <?php endforeach; ?>
+<?php endforeach; ?>
     <div class="col1">Thông tin</div>
     <div class="col2">
 
@@ -132,50 +141,50 @@ echo $form->errorSummary($model_f, '');
                     <div class=""><b>Diện tích khuôn viên:</b></div>
                     <div class=""> 
                         <label for="Products[feature][area_n]" style="width:120px; float:left;">Chiều ngang trước</label>
-                        <?php echo $form->textField($model, 'feature[area_n]', $htmlOptions = array('class' => 'txt-small')); ?>m
+<?php echo $form->textField($model, 'feature[area_n]', $htmlOptions = array('class' => 'txt-small')); ?>m
                         <p></p>
                         <label for="Products[feature][area_d]" style="width:120px; float:left;">Chiều dài</label>
-                        <?php echo $form->textField($model, 'feature[area_d]', $htmlOptions = array('class' => 'txt-small')); ?>m
+<?php echo $form->textField($model, 'feature[area_d]', $htmlOptions = array('class' => 'txt-small')); ?>m
                     </div>  <div class="clear space"></div> 
 
                     <div class=""><b>Diện tích xây dựng:</b></div>
                     <div class=""> 
                         <label for="Products[feature][area_build_n]" style="width:120px; float:left;">Chiều ngang trước</label>
-                        <?php echo $form->textField($model, 'feature[area_build_n]', $htmlOptions = array('class' => 'txt-small')); ?>m
+<?php echo $form->textField($model, 'feature[area_build_n]', $htmlOptions = array('class' => 'txt-small')); ?>m
                         <p></p>
                         <label for="Products[feature][area_build_d]" style="width:120px; float:left;">Chiều dài</label>
-                        <?php echo $form->textField($model, 'feature[area_build_d]', $htmlOptions = array('class' => 'txt-small')); ?>m    
+<?php echo $form->textField($model, 'feature[area_build_d]', $htmlOptions = array('class' => 'txt-small')); ?>m    
                     </div>  <div class="clear space"></div> 
 
 
                     <div class=""><?php echo $form->labelEx($model_f, 'area_used') ?></div>
                     <div class="">
-                        <?php echo $form->textField($model, 'feature[area_used]', $htmlOptions = array('class' => 'txt-small')); ?>m<sup>2</sup>
+<?php echo $form->textField($model, 'feature[area_used]', $htmlOptions = array('class' => 'txt-small')); ?>m<sup>2</sup>
                     </div>    <div class="clear space"></div>  
 
                     <div class=""><?php echo $form->labelEx($model_f, 'num_floor') ?></div>
                     <div class="">
-                        <?php echo $form->textField($model, 'feature[num_floor]', $htmlOptions = array('class' => 'txt-small')); ?>
+<?php echo $form->textField($model, 'feature[num_floor]', $htmlOptions = array('class' => 'txt-small')); ?>
                     </div>    <div class="clear space"></div>   
 
                     <div class=""><?php echo $form->labelEx($model_f, 'sittingrom') ?></div>
                     <div class="">
-                        <?php echo $form->textField($model, 'feature[sittingrom]', $htmlOptions = array('class' => 'txt-small')); ?>
+<?php echo $form->textField($model, 'feature[sittingrom]', $htmlOptions = array('class' => 'txt-small')); ?>
                     </div>    <div class="clear space"></div>   
 
                     <div class=""><?php echo $form->labelEx($model_f, 'bedroom') ?></div>
                     <div class="">
-                        <?php echo $form->textField($model, 'feature[bedroom]', $htmlOptions = array('class' => 'txt-small')); ?>
+<?php echo $form->textField($model, 'feature[bedroom]', $htmlOptions = array('class' => 'txt-small')); ?>
                     </div>    <div class="clear space"></div>   
 
                     <div class=""><?php echo $form->labelEx($model_f, 'bathroom') ?></div>
                     <div class="">
-                        <?php echo $form->textField($model, 'feature[bathroom]', $htmlOptions = array('class' => 'txt-small')); ?>
+<?php echo $form->textField($model, 'feature[bathroom]', $htmlOptions = array('class' => 'txt-small')); ?>
                     </div>    <div class="clear space"></div>   
 
                     <div class=""><?php echo $form->labelEx($model_f, 'other_room') ?></div>
                     <div class="">
-                        <?php echo $form->textField($model, 'feature[other_room]', $htmlOptions = array('class' => 'txt-small')); ?>
+<?php echo $form->textField($model, 'feature[other_room]', $htmlOptions = array('class' => 'txt-small')); ?>
                     </div>    <div class="clear space"></div>
 
                     <div class=""><?php echo $form->labelEx($model_f, 'direction') ?></div>
@@ -188,7 +197,7 @@ echo $form->errorSummary($model_f, '');
 
                     <div class=""><?php echo $form->labelEx($model_f, 'street') ?></div>
                     <div class="">
-                        <?php echo $form->textField($model, 'feature[street]', $htmlOptions = array('class' => 'txt-very-large')); ?>
+<?php echo $form->textField($model, 'feature[street]', $htmlOptions = array('class' => 'txt-very-large')); ?>
                     </div>    <div class="clear space"></div>
 
                     <div class=""><?php echo $form->labelEx($model_f, 'legal') ?></div>
@@ -202,28 +211,28 @@ echo $form->errorSummary($model_f, '');
             </tr>
         </table>
     </div><div class="clear space"></div>    
-<?php echo $form->textField($model, 'tag' . $lang, $htmlOptions = array('class' => 'txt-very-large','hidden'=>'hidden')); ?>
-    <?php foreach (Yii::app()->user->numLang as $lang): $lang = ($lang == 'vi') ? '' : $lang; ?>
+    <?php echo $form->textField($model, 'tag' . $lang, $htmlOptions = array('class' => 'txt-very-large', 'hidden' => 'hidden')); ?>
+<?php foreach (Yii::app()->user->numLang as $lang): $lang = ($lang == 'vi') ? '' : $lang; ?>
         <div class="col1"><?php echo $form->labelEx($model, 'description' . $lang) ?></div>
         <div class="col2">
-            <?php echo $form->textArea($model, 'description' . $lang, $htmlOptions = array('cols' => 89, 'rows' => 5)); ?> <span class="info-keyup<?php echo $lang ?>">0</span>
+    <?php echo $form->textArea($model, 'description' . $lang, $htmlOptions = array('cols' => 89, 'rows' => 5)); ?> <span class="info-keyup<?php echo $lang ?>">0</span>
         </div>
         <div class="clear space"></div>
         <script type="text/javascript">
             jQuery(function($) {
-                $('#<?php echo ucfirst($this->ID) ?>_description<?php echo $lang ?>').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup<?php echo $lang ?>').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});
+                $('#Products_description<?php echo $lang ?>').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup<?php echo $lang ?>').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});
             });
         </script>
-    <?php endforeach; ?>
+<?php endforeach; ?>
 
     <div class="col1"><?php echo $form->labelEx($model, 'pic_thumb') ?></div>
     <div class="col2">
-        <?php if ($model->pic_thumb): ?>
+            <?php if ($model->pic_thumb): ?>
             <div class="img-marginb5"><img src="<?php echo Yii::app()->request->baseUrl . '/public/userfiles/image/' . Yii::app()->user->id . '/image/products/' . $model->pic_thumb ?>" alt="" />
-                <?php echo $form->checkBox($model, 'remove_pic_thumb') ?><?php echo $form->labelEx($model, 'remove_pic_thumb', array('class' => 'remove')) ?>
+            <?php echo $form->checkBox($model, 'remove_pic_thumb') ?><?php echo $form->labelEx($model, 'remove_pic_thumb', array('class' => 'remove')) ?>
             </div>
         <?php endif; ?>
-        <?php echo $form->fileField($model, 'pic_thumb', array('class' => 'fileupload', 'size' => '40%')); ?>
+<?php echo $form->fileField($model, 'pic_thumb', array('class' => 'fileupload', 'size' => '40%')); ?>
     </div>
     <div class="clear space"></div>
 
@@ -232,21 +241,21 @@ echo $form->errorSummary($model_f, '');
         <?php echo $form->fileField($model, 'pic_full', array('class' => 'fileupload', 'size' => '40%')); ?>
         <?php if ($model->pic_full): ?>
             <a class="nyroModal" href="<?php echo Yii::app()->request->baseUrl . '/public/userfiles/image/' . Yii::app()->user->id . '/image/products/' . $model->pic_full ?>">Xem ảnh lớn</a>
-        <?php endif; ?>
+<?php endif; ?>
         <p style="color: red"><b>Lưu ý</b>:Chỉ chấp nhận hình ảnh là JPG và GIF, có dung lượng nhỏ hơn 5 MB. Không đăng logo, hình quảng cáo, nếu vi phạm sẽ bị xoá tin rao và khoá tài khoản đăng tin.</p>
     </div>  <div class="clear space"></div>
 
     <?php if ($model->pic_desc): ?>
         <?php $str = explode('|', $model->pic_desc); ?>
-        <?php foreach ($str as $value): ?>
+    <?php foreach ($str as $value): ?>
             <div class="col1"><?php echo $form->labelEx($model, 'pic_desc') ?></div>
             <div class="col2">
                 <a class="nyroModal" href="<?php echo Yii::app()->request->baseUrl . '/public/userfiles/image/' . Yii::app()->user->id . '/image/products/' . $value ?>">Xem ảnh lớn</a>
-                <label class="remove"><input type="checkbox" value="<?php echo $value ?>" name="<?php echo ucfirst($this->ID) ?>[remove_pic_desc][]" /> Remove</label>
+                <label class="remove"><input type="checkbox" value="<?php echo $value ?>" name="Products[remove_pic_desc][]" /> Remove</label>
             </div>
             <div class="clear space"></div>
         <?php endforeach; ?>
-    <?php endif; ?>
+<?php endif; ?>
 
     <p class="rows"><a href="#" id="add-rows"><?php echo $this->lang['pic_desc'] ?></a></p>
 
@@ -254,7 +263,7 @@ echo $form->errorSummary($model_f, '');
     <div class="col1">&nbsp;</div>
     <div class="col2">
         <?php echo CHtml::submitButton($this->lang['edit'], array('name' => 'submit', 'class' => 'login-b', 'title' => $this->lang['edit'])); ?>
-        <?php echo Chtml::link($this->lang['cancel'], 'javascript:history.back()', $htmlOptions = array('class' => 'login-a', 'title' => $this->lang['cancel'])) ?>
+<?php echo Chtml::link($this->lang['cancel'], 'javascript:history.back()', $htmlOptions = array('class' => 'login-a', 'title' => $this->lang['cancel'])) ?>
     </div>
     <div class="clear space"></div>
 </fieldset>
@@ -297,7 +306,7 @@ echo $form->errorSummary($model_f, '');
             var tam=0;	               
             for(var i = strphannguyen.length; i>=0; i--)            {
                 if(strResult.length>0 && tam==4)
-                   strResult = "." + strResult;
+                    strResult = "." + strResult;
                 strResult = strphannguyen.substring(i, i + 1) + strResult;
                 tam=tam+1;		                		                
             }
