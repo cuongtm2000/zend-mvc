@@ -50,6 +50,8 @@ $this->description = $item['description' . LANG];
                     <p class="price">Mã số: <?php echo $item['record_id'] ?> </p>
                     <p class="price"><strong>Giá: <span> <?php echo number_format($item['unit'],0,',','.').' ' . $item['unit_currency'] . '/' . $item['unit_unit']; ?></span></strong></p>
                     <p class="price">Địa chỉ:  <?php echo $item['address'] ?> </p>
+                    <p class="price">Tuyến đường:  <?php echo $item->productsFeature['road'] ?> </p>
+                    <p class="price">Phường/xã:  <?php echo $item['dos_wards_ward_id'] ?> </p>
                     <p class="price">Quận/huyện:  <?php echo $item['dos_districts_district_id'] ?> </p>
                     <p class="price">Tỉnh/thành phố: <?php echo $item['dos_provinces_province_id'] ?></p>
                     <div class="frame-contact-info">
@@ -140,8 +142,9 @@ $this->description = $item['description' . LANG];
                             </table>
                         </td>
                         <td>
-                            <h3 class="title-footer-right">Hội viên</h3>
-                            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/hoivien.jpg" alt="Hoi vien" />
+                            <h3 class="title-footer-right"><?php echo $value->Username['fullname'] ?></h3>
+                            <img src="<?php echo Yii::app()->baseUrl.' /public/userfiles/image/' . $value->dos_username . '/image/'.$value->dos_username.'.jpg' ?>" alt="<?php echo $value->dos_username ?>" />
+                            
                             <p class="price"><?php echo $value['contact_mobile'] ?></p>
                         </td>
                     </tr>

@@ -23,11 +23,11 @@ return array(
     '<services:(dich-vu)>/<id:[-a-z0-9]+>' => array('services/default/view', 'urlSuffix' => '.html'), //view
 
     //news modules
-    '<news:(tu-van-phong-thuy)>/trang/<page:\d+>' => 'news/default/index', //index paging
-    '<news:(tu-van-phong-thuy)>' => 'news/default/index', //index
-    '<news:(tu-van-phong-thuy)>/<cid:[-a-z0-9]+>/trang/<page:\d+>' => array('news/default/cats'), //cat paging
-    '<news:(tu-van-phong-thuy)>/<cid:[-a-z0-9]+>' => array('news/default/cats'), //cat
-    '<news:(tu-van-phong-thuy)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('news/default/view', 'urlSuffix' => '.html'), //view
+    '<news:(tin-tuc)>/trang/<page:\d+>' => 'news/default/index', //index paging
+    '<news:(tin-tuc)>' => 'news/default/index', //index
+    '<news:(tin-tuc)>/<cid:[-a-z0-9]+>/trang/<page:\d+>' => array('news/default/cats'), //cat paging
+    '<news:(tin-tuc)>/<cid:[-a-z0-9]+>' => array('news/default/cats'), //cat
+    '<news:(tin-tuc)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('news/default/view', 'urlSuffix' => '.html'), //view
 
     //video modules
     '<video:(video)>/trang/<page:\d+>' => 'video/default/index', //index paging
@@ -40,6 +40,7 @@ return array(
 
     //users modules
     '<users:(hoi-vien)>' => 'users/default/index', //index
+    '<users:(thay-doi-thong-tin)>' => 'users/default/edit', //index
 
     //For multi language
     '<language:(vi|en)>/<module:\w+>/<cid:(order)>/<id:[-a-z0-9]+>' => array('<module>/default/order'), //order for products

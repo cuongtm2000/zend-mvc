@@ -57,6 +57,7 @@ class DefaultController extends Controller {
         //$tmp['feature']=$tmp->productsFeature;
         //$tmp['utility'] = $tmp->productsUtility;
         $tmp['dos_provinces_province_id'] = Districts::getProvinceName($tmp['dos_districts_district_id']);
+        $tmp['dos_wards_ward_id'] = $tmp->Ward['ward_name'];
         $tmp['dos_districts_district_id'] = $tmp->District['district_name'];
 
         $data['item'] = $tmp;
@@ -179,6 +180,7 @@ class DefaultController extends Controller {
             $model_class->attributes = $_POST[$model];
             $model_fearture_class->attributes = $_POST[$model]['feature'];
             if ($model_class->validate() && $model_fearture_class->validate()) {
+               // var_dump($_FILES);
                 $model_class->save();
                 $model_fearture_class->save_data($model_class->record_id, $_POST[$model]['feature']);
                 $model_utility_class->save_data($model_class->record_id, $_POST[$model]['utility']);
@@ -271,6 +273,14 @@ class DefaultController extends Controller {
        // var_dump($data);
         $this->render(Yii::app()->session['template'] . '/search', 
                 array('list_items' => $data));
+    }
+    public function actionListdistrict($id, $idd = 0) {
+        $pr = new Provinces();
+        $this->renderPartial(Yii::app()->session['template'] .'/listdistrict', array('list' => $pr->listDistrictProvince($id), 'idd' => $idd), false, true);
+    }
+    public function actionListward($id, $idd = 0) {
+        $pr = new Provinces();
+        $this->renderPartial(Yii::app()->session['template'] .'/listward', array('list' => $pr->listWardDistrict($id), 'idd' => $idd), false, true);
     }
 }
 

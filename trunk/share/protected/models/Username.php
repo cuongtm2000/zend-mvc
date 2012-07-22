@@ -1,44 +1,5 @@
 <?php
 
-/**
- * This is the model class for table "dos_usernames".
- *
- * The followings are the available columns in table 'dos_usernames':
- * @property string $username
- * @property string $email
- * @property string $password
- * @property string $created
- * @property string $fullname
- * @property string $phone
- * @property string $company
- * @property string $role
- * @property string $language
- * @property string $code
- * @property string $expired
- * @property integer $activated
- * @property string $dos_templates_template
- * @property integer $dos_provinces_province_id
- * @property string $dos_bussiness_bussiness_id
- *
- * The followings are the available model relations:
- * @property DosModuleAbouts[] $dosModuleAbouts
- * @property DosModuleAdvs[] $dosModuleAdvs
- * @property DosModuleBanners[] $dosModuleBanners
- * @property DosModuleContacts[] $dosModuleContacts
- * @property DosModuleMenus[] $dosModuleMenuses
- * @property DosModulePcounterSave[] $dosModulePcounterSaves
- * @property DosModulePcounterUsers[] $dosModulePcounterUsers
- * @property DosModuleProductsCat[] $dosModuleProductsCats
- * @property DosModuleServices[] $dosModuleServices
- * @property DosModuleSupports[] $dosModuleSupports
- * @property DosModuleWebs[] $dosModuleWebs
- * @property DosModules[] $dosModules
- * @property DosUserLangs[] $dosUserLangs
- * @property DosBussiness $dosBussinessBussiness
- * @property DosProvinces $dosProvincesProvince
- * @property DosTemplates $dosTemplatesTemplate
- * @property DosUsernamesHasDosModules[] $dosUsernamesHasDosModules
- */
 class Username extends CActiveRecord {
 
     private $_model;
@@ -47,31 +8,25 @@ class Username extends CActiveRecord {
     public $template = '';
     public $choose_business;
     public $password2;
+    public $rule;
 
-    /**
-     * Returns the static model of the specified AR class.
-     * @return Username the static model class
-     */
     public static function model($className = __CLASS__) {
         return parent::model($className);
     }
 
-    /**
-     * @return string the associated database table name
-     */
     public function tableName() {
         return 'dos_usernames';
     }
 
-    /**
-     * @return array validation rules for model attributes.
-     */
     public function rules() {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('username, email, password, password2, cmnd, address, phone', 'required', 'on' => 'register'),
-            array('password2', 'compare', 'compareAttribute' => 'password', 'message' => "{attribute} is not match", 'on' => 'register'),
+            array('username', 'unique', 'on' => 'register', 'message' => '{attribute} <strong>{value}</strong>  đã tồn tại vui lòng chọn tên khác.'),
+            array('username,rule, password, password2', 'required', 'on' => 'register'),
+            array('email,fullname, cmnd, address, phone', 'required'),
+            array('password', 'compare', 'compareAttribute' => 'password2', 'message' => "{attribute} không trùng nhau.",'on' => 'register',),
+            array('rule', 'compare', 'compareValue' => 1, 'message' => "Chưa chọn Đồng ý các quy định tại nhaphodep.vn ", 'on' => 'register'),
             array('password', 'length', 'min' => '6', 'message' => "{attribute} quá ngắn (tối thiểu là  {min} ký tự)."),
             array('cmnd', 'length', 'min' => 9, 'max' => 10,),
             array('bank_number', 'length', 'max' => 13),
@@ -80,7 +35,6 @@ class Username extends CActiveRecord {
             array('email, fullname, phone, company, dos_templates_template, dos_provinces_province_id, dos_bussiness_bussiness_id', 'required', 'on' => 'changeInfo'),
             array('activated, dos_provinces_province_id', 'numerical', 'integerOnly' => true),
             array('username, email, password, fullname', 'length', 'max' => 45),
-            array('username', 'unique', 'on' => 'register', 'message' => '<strong>{value}</strong> {attribute} already exists please choose another user'),
             array('dos_bussiness_bussiness_id', 'checkChooseBusiness'),
             array('email', 'email'),
             array('phone, code', 'length', 'max' => 15),
@@ -146,6 +100,9 @@ class Username extends CActiveRecord {
             'dos_templates_template' => 'Dos Templates Template',
             'dos_provinces_province_id' => 'Dos Provinces Province',
             'dos_bussiness_bussiness_id' => 'Dos Bussiness Bussiness',
+            'avartar' => 'Ảnh đại diện',
+            'rule' => 'Quy định',
+            'address' => 'Địa chỉ',
         );
     }
 
@@ -178,23 +135,62 @@ class Username extends CActiveRecord {
 
     public function beforeSave() {
         $purifier = new CHtmlPurifier();
-        $this->username = $purifier->purify(strtolower($this->username));
-        $this->email = $purifier->purify(strtolower($this->email));
-        $this->password = md5($this->password);
-        $this->role = 'user';
-        $this->language = 'vi';
-        $this->activated = 1;
-        $this->dos_bussiness_bussiness_id = 'bds-kien-truc-xay-dung';
-        $this->dos_provinces_province_id = 19;
-        $this->dos_templates_template = 'nhadat';
 
         if ($this->isNewRecord) {
+            $this->username = $purifier->purify(strtolower($this->username));
+            $this->email = $purifier->purify(strtolower($this->email));
+            $this->password = md5($this->password);
+            $this->role = 'user';
+            $this->language = 'vi';
+            $this->activated = 1;
+            $this->dos_bussiness_bussiness_id = 'bds-kien-truc-xay-dung';
+            $this->dos_provinces_province_id = 19;
+            $this->dos_templates_template = 'nhadat';
             $this->expired = date('Y-m-d', strtotime('now +30 days'));
         } else {
-            //update
+            //$this->username = Yii::app()->user->name;            
+        }
+
+        if (($_FILES[__CLASS__]['name']['avartar']) != '') {
+            $link = YiiBase::getPathOfAlias('webroot') . '/public/userfiles/image/' . Yii::app()->user->name . '/image/' . Yii::app()->user->name . '.jpg';
+            if (file_exists($link))
+                unlink($link);
+            Yii::import('ext.simpleImage.CSimpleImage');
+            $file = new CSimpleImage();
+            $this->avartar = $file->processUpload(
+                    $_FILES[__CLASS__]['name']['avartar'], $_FILES[__CLASS__]['tmp_name']['avartar'], 100, 100, '/public/userfiles/image/' . $this->username . '/image', $this->username);
         }
 
         return parent::beforeSave();
+    }
+
+    public function updateInfo($data) {
+        $purifier = new CHtmlPurifier();
+        //update avatar
+        if (($_FILES[__CLASS__]['name']['avartar']) != '') {
+            $link = YiiBase::getPathOfAlias('webroot') . '/public/userfiles/image/' . Yii::app()->user->name . '/image/' . Yii::app()->user->name . '.jpg';
+            if (file_exists($link))
+                unlink($link);
+            Yii::import('ext.simpleImage.CSimpleImage');
+            $file = new CSimpleImage();
+            $avartar = $file->processUpload($_FILES[__CLASS__]['name']['avartar'], $_FILES[__CLASS__]['tmp_name']['avartar'], 100, 100, '/public/userfiles/image/' . $this->username . '/image', $this->username);
+            $this->updateByPk(Yii::app()->user->id, array('avartar' => $avartar));
+        }
+
+        if($data['password']!= '')
+            $this->updateByPk(Yii::app()->user->id, array('password' => md5($data['password'])));
+        
+        $this->updateByPk(Yii::app()->user->id, array(
+            'email' => $purifier->purify($data['email']),
+            'fullname' => $purifier->purify($data['fullname']),
+            'address' => $purifier->purify($data['address']),
+            'cmnd' => $purifier->purify($data['cmnd']),
+            'phone' => $purifier->purify($data['phone']),
+            'bank_name' => $purifier->purify($data['bank_name']),
+            'bank_number' => $purifier->purify($data['bank_number']),
+                )
+        );
+
     }
 
     public function listUsernames() {

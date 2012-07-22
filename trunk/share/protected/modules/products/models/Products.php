@@ -45,7 +45,7 @@ class Products extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('title, dos_provinces_province_id,dos_module_item_type_type_id,dos_districts_district_id,address,content,unit,unit_currency, unit_unit ,tag,contact_name, contact_mobile,utility,feature, dos_module_item_cat_cat_id', 'required'),
+            array('title, dos_provinces_province_id,dos_module_item_type_type_id,dos_districts_district_id,dos_wards_ward_id,address,content,unit,unit_currency, unit_unit ,tag,contact_name, contact_mobile,utility,feature, dos_module_item_cat_cat_id', 'required'),
             array('hits, record_order,hot, specials, enable, dos_module_item_cat_cat_id', 'numerical', 'integerOnly' => true),
             array('title, titleen, pic_thumb, pic_full, tag, tagen, extra_field1, extra_field2, extra_field3, extra_field4', 'length', 'max' => 100),
             array('tag, tagen', 'unique'),
@@ -78,7 +78,8 @@ class Products extends CActiveRecord {
             'dosModuleItemTypeType' => array(self::BELONGS_TO, 'ProductsType', 'dos_module_item_type_type_id'),
             'productsFeature' => array(self::HAS_ONE, 'ProductsFeature', 'product_id'),
             'productsUtility' => array(self::HAS_ONE, 'ProductsUtility', 'product_id'),
-                //'Username' => array(self::BELONGS_TO, 'Username', 'dos_username'),
+             'Username' => array(self::BELONGS_TO, 'Username', 'dos_username'),
+            'Ward' => array(self::BELONGS_TO, 'Wards', 'dos_wards_ward_id'),
         );
     }
 
@@ -124,6 +125,7 @@ class Products extends CActiveRecord {
             'utility' => 'Thông tin tiện ích',
             'unit_currency' => 'Tiền tệ',
             'address' => 'Địa chỉ',
+            'dos_wards_ward_id'=>'Phường xã',
         );
     }
 
@@ -208,7 +210,6 @@ class Products extends CActiveRecord {
                 );
             }
             //pic_desc
-
             if (isset($_FILES[__CLASS__]['name']['pic_desc'])) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
@@ -279,7 +280,8 @@ class Products extends CActiveRecord {
         $criteria = new CDbCriteria();
         $criteria->with = array('ProductsCat', 'productsFeature');
         //$criteria->select = 'title' . LANG . ', postdate, pic_thumb, tag' . LANG . ', hits, unit, hot';
-        $criteria->order = 'record_order DESC, postdate DESC';
+        
+        $criteria->order = 'hot DESC, record_order DESC, postdate DESC';
         $criteria->condition = 'enable = 1';
         $criteria->limit = Configs::configTemplate('products_num_paging_new', Yii::app()->session['template']);
 
@@ -291,7 +293,7 @@ class Products extends CActiveRecord {
         $criteria = new CDbCriteria();
         $criteria->with = array(__CLASS__ . 'Cat');
         $criteria->select = 'title' . LANG . ', pic_thumb, tag' . LANG . ', unit, hot';
-        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->order = 'hot DESC, record_order DESC, postdate DESC';
         $criteria->condition = 'hot = 1 AND enable = 1';
         $criteria->limit = Configs::configTemplate('products_num_paging_hot', Yii::app()->session['template']);
 
@@ -303,7 +305,7 @@ class Products extends CActiveRecord {
         $criteria = new CDbCriteria();
         $criteria->with = array('ProductsCat', 'productsFeature');
         // $criteria->select = 'title' . LANG . ', pic_thumb, address, postdate,hits, tag' . LANG . ', unit,unit_unit,unit_currency,record_id, dos_username';
-        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->order = 'hot DESC,record_order DESC, postdate DESC';
         $criteria->condition = 'enable=1 AND dos_module_item_cat_cat_id=:cid';
         $criteria->params = array(':cid' => $cid);
 
@@ -323,7 +325,7 @@ class Products extends CActiveRecord {
 
         // $criteria->select = 'title' . LANG . ', pic_thumb,address, postdate,hits, tag' . LANG . ', unit,unit_unit,unit_currency,record_id,dos_username';
 
-        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->order = 'hot DESC,record_order DESC, postdate DESC';
         $criteria->condition = 'enable=1 AND dos_module_item_type_type_id=:cid';
         $criteria->params = array(':cid' => $cid);
 
@@ -360,7 +362,7 @@ class Products extends CActiveRecord {
         $criteria = new CDbCriteria();
         $criteria->with = array(__CLASS__ . 'Cat');
         //   $criteria->select = 'title' . LANG . ', pic_thumb,dos_username ,tag' . LANG . ', unit,unit_unit,unit_currency, hot';
-        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->order = 'hot DESC, record_order DESC, postdate DESC';
         $criteria->condition = 'record_id NOT IN (:id) AND dos_module_item_cat_cat_id=:cid AND enable = 1';
         $criteria->params = array(':id' => $id, ':cid' => $cid);
         $criteria->limit = 2;
@@ -379,7 +381,7 @@ class Products extends CActiveRecord {
         $criteria = new CDbCriteria();
         $criteria->with = array(__CLASS__ . 'Cat');
         $criteria->select = 'record_id, title, hits, record_order, hot, enable';
-        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->order = 'hot DESC, record_order DESC, postdate DESC';
         //   $criteria->condition = 'dos_usernames_username=:user';
         //  $criteria->params = array(':user' => Yii::app()->user->id);
 
@@ -397,7 +399,7 @@ class Products extends CActiveRecord {
         $criteria = new CDbCriteria();
         $criteria->with = array(__CLASS__ . 'Cat');
         $criteria->select = 'record_id, title, hits, tag,  record_order, hot, enable';
-        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->order = 'hot DESC, record_order DESC, postdate DESC';
         $criteria->condition = 'dos_username=:user';
         $criteria->params = array(':user' => Yii::app()->user->id);
 
@@ -638,7 +640,7 @@ class Products extends CActiveRecord {
             $criteria->compare('dos_module_item_cat_cat_id', $cid);
 
         
-        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->order = 'hot DESC, record_order DESC, postdate DESC';
         
         $count = $this->model()->count($criteria);
         // elements per page

@@ -7,9 +7,10 @@ class DefaultController extends Controller {
         $model = new Username('register');
         if (isset($_POST['Username'])) {
             $model->attributes = $_POST['Username'];
+         //   var_dump($_POST['Username']);
             if ($model->save()) {
                 Yii::app()->session['reg_success'] = true;
-                $this->redirect(Yii::app()->baseUrl . '/dang-ky/thanh-cong');
+               $this->redirect(Yii::app()->baseUrl . '/dang-ky/thanh-cong');
             }
         }
 
