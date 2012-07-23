@@ -112,8 +112,8 @@ a:hover{color:#000;}
 
 /** customers khach hang **/
 #leftcontent .customers{list-style:none}
-#leftcontent .customers li{margin:0 40px 20px 0;text-align:center;width:184px;display:inline-block;vertical-align:top}
-.customers-img{margin:0 0 5px 0;padding:0 0 5px 0;background:url(../images/web_shadow.png) no-repeat 0 bottom}
+#leftcontent .customers li{margin:0 17px 20px 0;text-align:center;width:150px;display:inline-block;vertical-align:top}
+.customers-img{margin:0 0 5px 0;padding:0 0 5px 0}
 .customers-img img{border:1px solid #e1e1e1}
 .customers .customers-img:hover{opacity:0.7}
 .customers li:hover .title-tomers a{color:#0076BC}
