@@ -295,3 +295,75 @@ Stack trace:
 REQUEST_URI=/public/userfiles/image/cuongthuan/image/loi%20cam%20on.jpg
 HTTP_REFERER=http://dos.vn/publish/gioi-thieu
 ---
+2012/07/17 10:05:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "nhaphodep.vn".' in C:\xampp\php\library\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('nhaphodep.vn')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/nhaphodep.vn/
+---
+2012/07/23 02:16:20 [error] [exception.CException] exception 'CException' with message 'Property "Customers.email" is not defined.' in C:\xampp\php\library\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(144): CComponent->__get('email')
+#1 C:\xampp\php\library\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('email')
+#2 C:\xampp\php\library\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(Customers), 'email')
+#3 C:\xampp\php\library\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(Customers), 'email', Array)
+#4 C:\xampp\php\library\framework\web\widgets\CActiveForm.php(568): CHtml::activeTextField(Object(Customers), 'email', Array)
+#5 D:\svn\protected\modules\administrator\views\customers\edit.php(11): CActiveForm->textField(Object(Customers), 'email', Array)
+#6 C:\xampp\php\library\framework\web\CBaseController.php(127): require('D:\svn\protecte...')
+#7 C:\xampp\php\library\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\svn\protecte...', Array, true)
+#8 C:\xampp\php\library\framework\web\CController.php(870): CBaseController->renderFile('D:\svn\protecte...', Array, true)
+#9 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('edit', Array, true)
+#10 D:\svn\protected\modules\administrator\controllers\CustomersController.php(36): CController->render('edit', Array)
+#11 [internal function]: CustomersController->actionEdit('1')
+#12 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(CustomersController), Array)
+#13 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(CustomersController), Object(ReflectionMethod), Array)
+#14 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('edit')
+#23 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('administrator/c...')
+#24 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 D:\svn\index.php(16): CApplication->run()
+#26 {main}
+REQUEST_URI=/administrator/customers/edit/id/1
+HTTP_REFERER=http://dos.vn/administrator/customers
+---
+2012/07/23 02:16:26 [error] [exception.CException] exception 'CException' with message 'Property "Customers.email" is not defined.' in C:\xampp\php\library\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\php\library\framework\db\ar\CActiveRecord.php(144): CComponent->__get('email')
+#1 C:\xampp\php\library\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('email')
+#2 C:\xampp\php\library\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(Customers), 'email')
+#3 C:\xampp\php\library\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(Customers), 'email', Array)
+#4 C:\xampp\php\library\framework\web\widgets\CActiveForm.php(568): CHtml::activeTextField(Object(Customers), 'email', Array)
+#5 D:\svn\protected\modules\administrator\views\customers\edit.php(11): CActiveForm->textField(Object(Customers), 'email', Array)
+#6 C:\xampp\php\library\framework\web\CBaseController.php(127): require('D:\svn\protecte...')
+#7 C:\xampp\php\library\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\svn\protecte...', Array, true)
+#8 C:\xampp\php\library\framework\web\CController.php(870): CBaseController->renderFile('D:\svn\protecte...', Array, true)
+#9 C:\xampp\php\library\framework\web\CController.php(783): CController->renderPartial('edit', Array, true)
+#10 D:\svn\protected\modules\administrator\controllers\CustomersController.php(36): CController->render('edit', Array)
+#11 [internal function]: CustomersController->actionEdit('1')
+#12 C:\xampp\php\library\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(CustomersController), Array)
+#13 C:\xampp\php\library\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(CustomersController), Object(ReflectionMethod), Array)
+#14 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\xampp\php\library\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\php\library\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\xampp\php\library\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\php\library\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\php\library\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\php\library\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\xampp\php\library\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\php\library\framework\web\CWebApplication.php(276): CController->run('edit')
+#23 C:\xampp\php\library\framework\web\CWebApplication.php(135): CWebApplication->runController('administrator/c...')
+#24 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 D:\svn\index.php(16): CApplication->run()
+#26 {main}
+REQUEST_URI=/administrator/customers/edit/id/1
+HTTP_REFERER=http://dos.vn/administrator/customers
+---

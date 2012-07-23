@@ -142,7 +142,7 @@ class Customers extends CActiveRecord {
             if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $this->pic_thumb = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_thumb'], 184, 164, '/public/userfiles/image/dos/image/' . Yii::app()->controller->id, $this->customer_name . '-thumb');
+                $this->pic_thumb = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_thumb'], 150, 130, '/public/userfiles/image/dos/image/' . Yii::app()->controller->id, $this->customer_name . '-thumb');
             }
             if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full']) {
                 Yii::import('ext.simpleImage.CSimpleImage');
@@ -154,7 +154,7 @@ class Customers extends CActiveRecord {
             if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb']) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $this->pic_thumb = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_thumb'], 184, 164, '/public/userfiles/image/dos/image/' . Yii::app()->controller->id, $this->customer_name . '-thumb', $this->_oldImageThumb);
+                $this->pic_thumb = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_thumb'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_thumb'], 150, 130, '/public/userfiles/image/dos/image/' . Yii::app()->controller->id, $this->customer_name . '-thumb', $this->_oldImageThumb);
             } else {
                 $this->pic_thumb = $this->_oldImageThumb;
             }
