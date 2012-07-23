@@ -58,7 +58,7 @@ class Agents extends CActiveRecord {
             array('agent_id, email, password, fullname, phone, address, parent_id, enable, dos_provinces_province_id', 'required', 'on' => 'add'),
             array('agent_id, email, fullname, phone, address, parent_id, enable, dos_provinces_province_id', 'required', 'on' => 'edit'),
             array('enable, dos_provinces_province_id', 'numerical', 'integerOnly' => true),
-            array('agent_id, parent_id', 'length', 'min' => 8, 'max' => 8),
+            array('agent_id, parent_id', 'length', 'min' => 8, 'max' => 20),
             array('agent_id, parent_id', 'numerical', 'integerOnly' => true),
             array('email, password, fullname, yahoo, skype, content, type', 'length', 'max' => 45),
             array('phone', 'length', 'max' => 30),

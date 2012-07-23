@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 11, 2012 at 10:22 AM
+-- Generation Time: Jul 23, 2012 at 09:43 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `dos_agents` (
-  `agent_id` varchar(8) NOT NULL,
+  `agent_id` varchar(20) NOT NULL,
   `email` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `dos_agents` (
   `point` varchar(15) NOT NULL DEFAULT '0',
   `bonus` varchar(15) NOT NULL DEFAULT '0',
   `type` varchar(45) NOT NULL DEFAULT '0',
-  `parent_id` varchar(8) NOT NULL,
+  `parent_id` varchar(20) NOT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   `dos_provinces_province_id` int(11) NOT NULL,
   PRIMARY KEY (`agent_id`),
@@ -932,6 +932,8 @@ CREATE TABLE IF NOT EXISTS `dos_customers` (
   `customer_name` varchar(70) NOT NULL,
   `pic_thumb` varchar(100) DEFAULT NULL,
   `pic_full` varchar(100) DEFAULT NULL,
+  `email` varchar(45) NOT NULL,
+  `phone` varchar(45) NOT NULL,
   `address` varchar(45) DEFAULT NULL,
   `website` varchar(100) NOT NULL,
   `agent_sale` varchar(8) DEFAULT NULL,
@@ -943,14 +945,7 @@ CREATE TABLE IF NOT EXISTS `dos_customers` (
   `dos_bussiness_bussiness_id` varchar(100) NOT NULL,
   PRIMARY KEY (`customer_id`),
   KEY `fk_dos_customers_dos_bussiness1` (`dos_bussiness_bussiness_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `dos_customers`
---
-
-INSERT INTO `dos_customers` (`customer_id`, `customer_name`, `pic_thumb`, `pic_full`, `address`, `website`, `agent_sale`, `agent_tech`, `created_date`, `expired_date`, `tag`, `enable`, `dos_bussiness_bussiness_id`) VALUES
-(1, 'Công ty cổ phần Thương Hội', NULL, NULL, 'Gò Dầu - P. Tân Sơn Nhì - Q. Tân Phú - TpHCM', 'http://dos.vn', NULL, NULL, '2012-06-27 01:28:34', '2012-06-05 17:00:00', 'cong-ty-co-phan-thuong-hoi', 1, 'cong-nghe-thong-tin-vien-thong');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
