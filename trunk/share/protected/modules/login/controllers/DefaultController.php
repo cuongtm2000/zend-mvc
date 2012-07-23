@@ -11,8 +11,11 @@ class DefaultController extends Controller {
         if (isset($_POST['LoginForm'])) {
             $model->attributes = $_POST['LoginForm'];
             if ($model->validate() && $model->login()) {
-                Yii::app()->session['logged'] = 1; //session for ckfinder logged
-                Yii::app()->session['user'] = Yii::app()->user->id; //session for ckfinder subdomain
+				$_SESSION['KCFINDER'] = array();
+				$_SESSION['KCFINDER']['disabled'] = false;
+				$_SESSION['KCFINDER']['uploadURL'] = Yii::app()->baseUrl.'/public/userfiles/image/'.Yii::app()->user->id;
+                //Yii::app()->session['logged'] = 1; //session for ckfinder logged
+                //Yii::app()->session['user'] = Yii::app()->user->id; //session for ckfinder subdomain
                 $this->redirect(Yii::app()->user->returnUrl);
             }
         } elseif (Yii::app()->session['activated']) {
