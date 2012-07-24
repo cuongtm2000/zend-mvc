@@ -154,6 +154,7 @@
         <?php echo $form->fileField($model, 'pic_full', array('class' => 'fileupload', 'size' => '40%')); ?>
         <?php if ($model->pic_full): ?>
             <a class="nyroModal" href="<?php echo Yii::app()->request->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/'.$this->module->id.'/'.$model->pic_full ?>">Xem ảnh lớn</a>
+            <?php echo $form->checkBox($model, 'remove_pic_full') ?><?php echo $form->labelEx($model, 'remove_pic_full', array('class' => 'remove')) ?>
         <?php endif; ?>
     </div>
     <div class="clear space"></div>

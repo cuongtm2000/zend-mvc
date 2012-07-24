@@ -128,4 +128,19 @@ class ProductsCatLanguage extends CActiveRecord {
         $command->bindParam(":id", $id, PDO::PARAM_INT);
         return $command->queryAll();
     }
+
+    //Back end - get cat_title
+    public function getInfoCat($id, $lang) {
+        $command = Yii::app()->db->createCommand('SELECT cat_title FROM ' . $this->tableName() . ' WHERE cat_id=:id AND language_id=:lang');
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        $command->bindParam(":lang", $lang, PDO::PARAM_STR);
+        return $command->queryScalar();
+    }
+
+    //Back end - delete
+    public function deleteRecord($id) {
+        $command = Yii::app()->db->createCommand('DELETE FROM ' . $this->tableName() . ' WHERE cat_id=:id');
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        $command->execute();
+    }
 }

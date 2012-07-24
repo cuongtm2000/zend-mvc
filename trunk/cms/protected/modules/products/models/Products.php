@@ -126,6 +126,7 @@ class Products extends CActiveRecord {
         ));
     }
 
+    //Back end - List item admin
     public function listItemAdmin() {
         $criteria = new CDbCriteria();
         $criteria->with = array('Language', 'ProductsLanguage');
@@ -144,6 +145,7 @@ class Products extends CActiveRecord {
     //Back end - Delete Record
     private function deleteRecord($id) {
         ProductsLanguage::model()->deleteRecord($id);
+
         $item = $this::model()->find('record_id=:id', array(':id' => $id));
         Common::removePic($item->pic_thumb, '/image/' . strtolower(__CLASS__)); // remove pic_thumb
         Common::removePic($item->pic_full, '/image/' . strtolower(__CLASS__)); // remove pic_full
@@ -223,25 +225,61 @@ class Products extends CActiveRecord {
             //upload picture thumb
             Yii::import('ext.simpleImage.CSimpleImage');
             $file = new CSimpleImage();
-            $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], 123, 123, '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']].'-thumb');
+            $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], 123, 123, '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']] . '-thumb');
             $this->pic_full = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_full'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_full'], 223, 223, '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]);
-            $this->pic_desc = implode("|", $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_desc'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_desc'], 222, 222, '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]));
+            if (isset($_FILES[__CLASS__ . 'Form']['name']['pic_desc'])) {
+                $this->pic_desc = implode("|", $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_desc'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_desc'], 222, 222, '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]));
+            }
 
             $this->save();
             $id = Yii::app()->db->getLastInsertId();
             $this::model()->updateByPk($id, array('record_order' => $id));
-
-            ProductsLanguage::model()->saveRecord($id, $model);
         } else {
             $item = $this::model()->findByPk($id);
             $item->unit = $model->unit;
             $item->hot = $model->hot;
             $item->enable = $model->enable;
             $item->hoiit_module_item_cat_cat_id = $model->hoiit_module_item_cat_cat_id;
-            $item->save();
 
-            ProductsLanguage::model()->saveRecord($id, $model);
+            //remove pic_thumb
+            if (isset($model->remove_pic_thumb) && $model->remove_pic_thumb == 1) {
+                Common::removePic($item->pic_thumb, '/image/' . strtolower(__CLASS__)); // remove pic_thumb
+                $item->pic_thumb = null;
+            }
+            //remove pic_full
+            if (isset($model->remove_pic_full) && $model->remove_pic_full == 1) {
+                Common::removePic($item->pic_full, '/image/' . strtolower(__CLASS__)); // remove pic_full
+                $item->pic_full = null;
+            }
+            //remove pic_desc
+            if (isset($model->remove_pic_desc)) {
+                $str = explode('|', $item->pic_desc);
+                foreach ($model->remove_pic_desc as $value) {
+                    Common::removePic($value, '/image/' . strtolower(__CLASS__));
+                    unset($str[array_search($value, $str)]);
+                }
+                $item->pic_desc = implode("|", $str); //parse value to $str $this->_oldImage_desc
+            }
+
+            //upload picture
+            Yii::import('ext.simpleImage.CSimpleImage');
+            $file = new CSimpleImage();
+            $item->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], 123, 123, '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']] . '-thumb', $item->pic_thumb);
+            $item->pic_full = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_full'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_full'], 223, 223, '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']], $item->pic_full);
+            //upload pic_desc
+            if (isset($_FILES[__CLASS__ . 'Form']['name']['pic_desc'])) {
+                $uploaded = $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_desc'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_desc'], 222, 222, '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]);
+                $pic_desc = ($item->pic_desc) ? explode('|', $item->pic_desc) : array();
+                //push value
+                foreach ($uploaded as $value) {
+                    array_push($pic_desc, $value);
+                }
+                $item->pic_desc = implode("|", $pic_desc);
+            }
+
+            $item->save();
         }
+        ProductsLanguage::model()->saveRecord($id, $model);
     }
 
     //Back end - Get record to Edit
@@ -249,5 +287,51 @@ class Products extends CActiveRecord {
         $command = Yii::app()->db->createCommand('SELECT pic_thumb, pic_full, pic_desc, unit, hot, enable, hoiit_module_item_cat_cat_id FROM ' . $this->tableName() . ' WHERE record_id=:id');
         $command->bindParam(":id", $id, PDO::PARAM_INT);
         return $command->queryRow();
+    }
+
+    //Back end - Get ID by Cat
+    private function getIdByCatId($id) {
+        $command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE hoiit_module_item_cat_cat_id=:cid');
+        $command->bindParam(":cid", $id, PDO::PARAM_INT);
+        return $command->queryAll();
+    }
+
+    //Back end - delete item new cat
+    public function deleteItembyCat($cat_id) {
+        $result = $this->getIdByCatId($cat_id);
+        foreach ($result as $value) {
+            $this->deleteRecord($value['record_id']);
+        }
+    }
+
+    //Back end - delete Item for Cat
+    public function delItembyCat($data = NULL) {
+        $id = $data->getQuery('id');
+        $result = $this->getIdByCatId($id);
+
+        if ($data->getPost('delitems') == 'del') {
+            foreach ($result as $value) {
+                $this->deleteRecord($value['record_id']); //delete record
+            }
+        } elseif ($data->getPost('delitems') == 'move') {
+            $cat_move = $data->getPost('catmove');
+            foreach ($result as $value) {
+                $this::model()->updateByPk($value['record_id'], array('hoiit_module_item_cat_cat_id' => $cat_move));
+            }
+        }
+        //move all sub cat to new cat parent
+        $cat = new ProductsCat();
+        if ($data->getPost('delcat') == 'move') {
+            $cat->findcatParent($id, $data->getPost('movetocat'));
+        } elseif ($data->getPost('delcat') == 'del') {
+            if ($data->getPost('movecat') == 'del') {
+                $cat->loopDelItemtoCat($id);
+            } elseif ($data->getPost('movecat') == 'move') {
+                $cat->loopMoveItemtoCat($id, $data->getPost('moveprotocat'));
+            }
+            //delete all sub cat
+            $cat->loopDelSubCat($id);
+        }
+        $cat->deleteRecord($id);
     }
 }

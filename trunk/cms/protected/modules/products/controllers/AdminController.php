@@ -68,51 +68,46 @@ class AdminController extends BackEndController {
     }
 
     public function actionUpcat($id) {
-        Yii::app()->getModule($this->ID);
-        $model_cat = ucfirst($this->ID) . 'Cat';
-        $model_cat_class = new $model_cat();
+        $model_class = ucfirst($this->module->id) . 'Cat';
+        $model = new $model_class;
 
-        $cat_info = $model_cat_class->getCatParent_CatOrder($id);
+        $cat_info = $model->getCatParent_CatOrder($id);
         //Next info
-        $next_info = $model_cat_class->getCatid_CatOrder_Next($cat_info['cat_parent_id'], $cat_info['cat_order']);
+        $next_info = $model->getCatid_CatOrder_Next($cat_info['cat_parent_id'], $cat_info['cat_order']);
 
         if (isset($next_info['cat_id']) && isset($next_info['cat_order'])) {
-            $model_cat_class->updateUpDown($cat_info, $next_info, $id);
+            $model->updateUpDown($cat_info, $next_info, $id);
         }
-        $this->redirect(array('cats'));
+        $this->redirect(array('cat'));
     }
 
     public function actionDowncat($id) {
-        Yii::app()->getModule($this->ID);
-        $model_cat = ucfirst($this->ID) . 'Cat';
-        $model_cat_class = new $model_cat();
+        $model_class = ucfirst($this->module->id) . 'Cat';
+        $model = new $model_class;
 
-        $cat_info = $model_cat_class->getCatParent_CatOrder($id);
+        $cat_info = $model->getCatParent_CatOrder($id);
         //Previous info
-        $previous_info = $model_cat_class->getCatid_CatOrder_Previous($cat_info['cat_parent_id'], $cat_info['cat_order']);
+        $previous_info = $model->getCatid_CatOrder_Previous($cat_info['cat_parent_id'], $cat_info['cat_order']);
 
         if (isset($previous_info['cat_id']) && isset($previous_info['cat_order'])) {
-            $model_cat_class->updateUpDown($cat_info, $previous_info, $id);
+            $model->updateUpDown($cat_info, $previous_info, $id);
         }
-        $this->redirect(array('cats'));
+        $this->redirect(array('cat'));
     }
 
     public function actionDelcat($id) {
-        Yii::app()->getModule($this->ID);
-        $model = ucfirst($this->ID);
-        $model_cat = $model . 'Cat';
+        $model = ucfirst($this->module->id);
+        $model_class = $model . 'Cat';
+        $model_language_class = $model_class . 'Language';
 
-        $model_cat_class = new $model_cat();
-        $model_class = new $model();
-
-        $data['infocat'] = $model_cat_class->getInfoCat($id); //Tên phân loại
-        $data['numcat'] = $model_cat_class->countItemCat($id); //Số sản phẩm con
-        $data['subcat'] = $model_cat_class->countSubcat($id);
-        $data['listcat'] = $model_cat_class->listCats(0, null, 1, $id);
+        $data['infocat'] = $model_language_class::model()->getInfoCat($id, Yii::app()->language); //Tên phân loại
+        $data['numcat'] = $model::model()->count('hoiit_module_item_cat_cat_id=:cat_id', array(':cat_id' => $id)); //Số sản phẩm con
+        $data['subcat'] = $model_class::model()->countSubcat($id);
+        $data['listcat'] = $model_class::model()->listCats(0, null, 1, $id);
 
         if (Yii::app()->request->getIsPostRequest()) {
-            $model_class->delItembyCat(Yii::app()->request);
-            $this->redirect(array('cats'));
+            $model::model()->delItembyCat(Yii::app()->request);
+            $this->redirect(array('cat'));
         }
         $this->render('delcat', $data);
     }
@@ -181,7 +176,7 @@ class AdminController extends BackEndController {
         $model_form['hoiit_module_item_cat_cat_id'] = $model_data['hoiit_module_item_cat_cat_id'];
 
         $model_language_data = $model_language->loadEdit($id);
-        foreach ($model_language_data as $key => $value) {
+        foreach ($model_language_data as $value) {
             $model_form['title' . $value['language_id']] = $value['title'];
             $model_form['preview' . $value['language_id']] = $value['preview'];
             $model_form['content' . $value['language_id']] = $value['content'];
@@ -192,7 +187,8 @@ class AdminController extends BackEndController {
         if (isset($_POST[$model_form_class])) {
             $model_form->attributes = $_POST[$model_form_class];
             if ($model_form->validate()) {
-                $model->saveRecord($model_form);
+                $model->saveRecord($model_form, $id);
+                $this->redirect(array('index'));
             }
         }
 
