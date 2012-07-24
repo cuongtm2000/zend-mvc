@@ -21,6 +21,8 @@ class ProductsForm extends CFormModel {
     public $descriptionen;
 
     public $remove_pic_thumb;
+    public $remove_pic_full;
+    public $remove_pic_desc;
 
     public function rules() {
         return array(
@@ -30,7 +32,7 @@ class ProductsForm extends CFormModel {
             array('descriptionvi, descriptionen', 'length', 'max' => 250),
             array('pic_desc', 'length', 'max' => 500),
             array('unit', 'length', 'max' => 45),
-            array('pic_thumb, pic_full, pic_desc, unit, previewvi, previewen, contentvi, contenten, remove_pic_thumb', 'safe')
+            array('pic_thumb, pic_full, pic_desc, unit, previewvi, previewen, contentvi, contenten, remove_pic_thumb, remove_pic_full, remove_pic_desc', 'safe')
         );
     }
 

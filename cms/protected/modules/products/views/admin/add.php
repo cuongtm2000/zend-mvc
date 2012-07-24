@@ -1,9 +1,5 @@
 <?php if (!$listItemsCat): ?>
-    <div class="errorSummary">
-        <ul>
-            <li>Vui lòng <a href="addcat" title="thêm mới Danh mục">thêm mới danh mục</a> trước khi thêm mới sản phẩm</li>
-        </ul>
-    </div>
+    <p class="success">Vui lòng <a href="addcat" title="thêm mới Danh mục">Thêm mới danh mục</a> trước khi thêm mới sản phẩm</p>
 <?php else:?>
 	<?php $form = $this->beginWidget('CActiveForm', array('id' => 'frm', 'enableAjaxValidation' => true, 'enableClientValidation' => true, 'htmlOptions' => array('enctype' => 'multipart/form-data'))); ?>
 		<?php echo $form->errorSummary($model, ''); ?>

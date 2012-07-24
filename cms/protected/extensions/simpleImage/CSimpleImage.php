@@ -50,12 +50,13 @@ class CSimpleImage {
 
             return $this->_filename;
         }
-        return null;
+        return $file_old;
     }
 
     public function uploadMulti($file_name, $tmp, $width, $height, $path, $filename = '') {
         $file_desc_multi = array();
         $size = count($file_name);
+
         for ($i = 0; $i < $size; $i++) {
             $file_desc_multi[] = $this->processUpload($file_name[$i], $tmp[$i], $width, $height, $path, $filename . '-desc-' . ($i + 1));
         }

@@ -23,6 +23,9 @@ class ProductsCat extends CActiveRecord {
     private $_rows;
     private $_rowsize;
 
+    private $_sub_cat_num;
+    private $_sub_num_item;
+
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
@@ -233,5 +236,99 @@ class ProductsCat extends CActiveRecord {
         $command = Yii::app()->db->createCommand('SELECT cat_parent_id, pic_thumb, cat_hot, cat_enable FROM ' . $this->tableName() . ' WHERE cat_id=:id');
         $command->bindParam(":id", $id, PDO::PARAM_INT);
         return $command->queryRow();
+    }
+
+    //Back end - Get cat_id by Parent_id
+    private function getIdByParentId($id) {
+        $command = Yii::app()->db->createCommand('SELECT cat_id FROM ' . $this->tableName() . ' WHERE cat_parent_id=:id');
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        return $command->queryAll();
+    }
+
+    //Back end - Count sub cat
+    public function countSubcat($id) {
+        $this->loopCat($id);
+        return array('sub_cat_num' => $this->_sub_cat_num, 'sub_num_item' => $this->_sub_num_item);
+    }
+
+    private function loopCat($id) {
+        $result = $this->getIdByParentId($id);
+        foreach ($result as $value) {
+            $this->_sub_cat_num++;
+            $this->_sub_num_item += Products::model()->countItemCat($value['cat_id']);
+            $this->loopCat($value['cat_id']);
+        }
+    }
+
+    //Back end - find Cat parent
+    public function findcatParent($cat_id, $cat_parent_id) {
+        $result = $this->getIdByParentId($cat_id);
+        foreach ($result as $value) {
+            $this::model()->updateByPk($value['cat_id'], array('cat_parent_id' => $cat_parent_id));
+        }
+    }
+
+    //Back end - Delete all item Sub
+    public function loopDelItemtoCat($cat_id) {
+        $result = $this->getIdByParentId($cat_id);
+        foreach ($result as $value) {
+            Products::model()->deleteItembyCat($value['cat_id']);
+            $this->loopDelItemtoCat($value['cat_id']);
+        }
+    }
+
+    //Back end - Delete all Sub
+    public function loopDelSubCat($cat_id) {
+        $result = $this->getIdByParentId($cat_id);
+        foreach ($result as $value) {
+            $this->deleteRecord($value['cat_id']);
+            $this->loopDelSubCat($value['cat_id']);
+        }
+    }
+
+    //Back end - Delete Record
+    public function deleteRecord($id) {
+        ProductsCatLanguage::model()->deleteRecord($id);
+
+        $item = $this::model()->find('cat_id=:id', array(':id' => $id));
+        Common::removePic($item->pic_thumb, '/image/' . lcfirst(__CLASS__)); // remove pic_thumb
+        Common::removePic($item->pic_desc, '/image/' . lcfirst(__CLASS__), 1); // remove pic_desc
+        $this::model()->findByPk($id)->delete(); //delete record
+    }
+
+    //Back end - Get cat_parent_id, cat_order
+    public function getCatParent_CatOrder($cid) {
+        $command = Yii::app()->db->createCommand('SELECT cat_parent_id, cat_order FROM ' . $this->tableName() . ' WHERE cat_id=:cid');
+        $command->bindParam(":cid", $cid, PDO::PARAM_INT);
+        return $command->queryRow();
+    }
+
+    // Back end - Get cat_id, cat_order Next
+    public function getCatid_CatOrder_Next($cid, $order) {
+        $command = Yii::app()->db->createCommand('SELECT cat_id, cat_order FROM ' . $this->tableName() . ' WHERE cat_parent_id=:cid AND cat_order>:order ORDER BY cat_order ASC');
+        $command->bindParam(":cid", $cid, PDO::PARAM_INT);
+        $command->bindParam(":order", $order, PDO::PARAM_INT);
+        return $command->queryRow();
+    }
+
+    // Back end - Get cat_id, cat_order Previous
+    public function getCatid_CatOrder_Previous($cid, $order) {
+        $command = Yii::app()->db->createCommand('SELECT cat_id, cat_order FROM ' . $this->tableName() . ' WHERE cat_parent_id=:cid AND cat_order<:order ORDER BY cat_order DESC');
+        $command->bindParam(":cid", $cid, PDO::PARAM_INT);
+        $command->bindParam(":order", $order, PDO::PARAM_INT);
+        return $command->queryRow();
+    }
+
+    // Back end - Update for up, down
+    public function updateUpDown($cat_info, $next_info, $cid) {
+        $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET cat_order=:order WHERE cat_id=:id');
+        $command->bindParam(":order", $next_info['cat_order'], PDO::PARAM_INT);
+        $command->bindParam(":id", $cid, PDO::PARAM_INT);
+        $command->execute();
+
+        $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET cat_order=:order WHERE cat_id=:id');
+        $command->bindParam(":order", $cat_info['cat_order'], PDO::PARAM_INT);
+        $command->bindParam(":id", $next_info['cat_id'], PDO::PARAM_INT);
+        $command->execute();
     }
 }
