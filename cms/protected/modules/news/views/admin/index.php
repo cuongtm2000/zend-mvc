@@ -1,4 +1,4 @@
-<ul class="modals"><li><a href="<?php echo Yii::app()->request->baseUrl ?>/<?php echo $this->module->getName() ?>/<?php echo $this->ID ?>/add" title="Thêm mới"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/add.png" alt="Thêm mới" /><span>Thêm mới</span></a></li></ul><div class="clear"></div>
+<ul class="modals"><li><a href="<?php echo Yii::app()->request->baseUrl .'/' . $this->ID .'/'. $this->module->getName() ?>/add" title="Thêm mới"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/add.png" alt="Thêm mới" /><span>Thêm mới</span></a></li></ul><div class="clear"></div>
 <form name="frm" id="frm" action="" method="post">
     <input type="hidden" name="factive" value="" />
     <table>
@@ -16,13 +16,13 @@
             <?php if ($models): ?>
                 <?php $i = 1; foreach ($models as $value): ?>
                     <?php if ($value['enable'] == 0) {$rowclass = ' class="disable"';} else {$rowclass = ($i % 2 == 0) ? '' : ' class="alt"';}?>
-					<?php if($value['hot'] == 1){$title = '<strong>'.$value['title'].'</strong> <img src="'.Yii::app()->theme->baseUrl.'/images/hot.gif" alt="Hot" />'; }else{$title = $value['title'];}?>
+					<?php if($value['hot'] == 1){$title = '<strong>'.$value->NewsLanguage[Yii::app()->language]['title'].'</strong> <img src="'.Yii::app()->theme->baseUrl.'/images/hot.gif" alt="Hot" />'; }else{$title = $value->NewsLanguage[Yii::app()->language]['title'];}?>
                     <tr<?php echo $rowclass ?>>
                         <td><input type="checkbox" name="ids[]" value="<?php echo $value['record_id'] ?>" /></td>
                         <td><input type="text" name="orders[<?php echo $value['record_id'] ?>]" maxlength="3" class="txt-sort" value="<?php echo $value['record_order'] ?>" /></td>
                         <td><?php echo $title?></td>
-                        <td><?php echo $value->NewsCat->cat_title ?></td>
-                        <td><?php echo $value->hits ?></td>
+                        <td><?php echo $value->NewsCat->NewsCatLanguage[Yii::app()->language]['cat_title'] ?></td>
+                        <td><?php echo $value->NewsLanguage[Yii::app()->language]['hit'] ?></td>
                         <td><?php echo CHtml::link($this->lang['edit'], array('edit', 'id' => $value->record_id)) ?></td>
                     </tr>
                     <?php $i++; endforeach; ?>
