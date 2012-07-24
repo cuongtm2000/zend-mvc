@@ -210,6 +210,7 @@ class ProductsCat extends CActiveRecord {
             $this->cat_parent_id = $model->cat_parent_id;
             $this->cat_hot = $model->cat_hot;
             $this->cat_enable = $model->cat_enable;
+
             //upload picture
             Yii::import('ext.simpleImage.CSimpleImage');
             $file = new CSimpleImage();
@@ -225,6 +226,17 @@ class ProductsCat extends CActiveRecord {
             $item->cat_parent_id = $model->cat_parent_id;
             $item->cat_hot = $model->cat_hot;
             $item->cat_enable = $model->cat_enable;
+
+            //remove pic_thumb
+            if (isset($model->remove_pic_thumb) && $model->remove_pic_thumb == 1) {
+                Common::removePic($item->pic_thumb, '/image/' . lcfirst(__CLASS__)); // remove pic_thumb
+                $item->pic_thumb = null;
+            }
+            //upload picture
+            Yii::import('ext.simpleImage.CSimpleImage');
+            $file = new CSimpleImage();
+            $item->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], 123, 123, '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']], $item->pic_thumb);
+
             $item->save();
 
             ProductsCatLanguage::model()->saveRecord($id, $model);

@@ -47,7 +47,7 @@ class NewsCat extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('cat_created', 'required'),
+            //array('cat_created', 'required'),
             array('cat_parent_id, cat_hot, cat_order, cat_enable', 'numerical', 'integerOnly' => true),
             array('pic_thumb, cat_extra1, cat_extra2', 'length', 'max' => 100),
             array('pic_desc', 'length', 'max' => 200),
@@ -160,5 +160,126 @@ class NewsCat extends CActiveRecord {
                 $this->loopItem($j, $prefix, $tab . '|-- ');
             }
         }
+    }
+
+    //Back end - Active Item
+    public function activeItem($data) {
+        $flag = $data->getPost('factive', 'disable');
+        $ids = $data->getPost('ids', '');
+        $syn = $data->getPost('syn', '');
+
+        if ($syn) {
+            $criteria = new CDbCriteria();
+            $criteria->order = 'cat_order ASC';
+            $models = $this::model()->findAll($criteria);
+
+            $i = 1;
+            foreach ($models as $model) {
+                $this::model()->updateByPk($model['cat_id'], array('cat_order' => $i));
+                $i++;
+            }
+        } else {
+            if (!empty($ids)) {
+                if (!is_array($ids)) {
+                    $record_id[0] = $ids;
+                } else {
+                    $record_id = $ids;
+                }
+                unset($ids);
+
+                if ($flag) {
+                    //show or hidden
+                    $active = ($flag == "enable") ? 1 : 0;
+
+                    foreach ($record_id as $value) {
+                        $id = intval($value);
+                        if ($id) {
+                            $this::model()->updateByPk($id, array('cat_enable' => $active));
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Back end - save
+    public function saveRecord($model, $id = null) {
+        if (Yii::app()->controller->action->id == 'addcat') {
+            $this->cat_parent_id = $model->cat_parent_id;
+            $this->cat_hot = $model->cat_hot;
+            $this->cat_enable = $model->cat_enable;
+
+            //upload picture
+            Yii::import('ext.simpleImage.CSimpleImage');
+            $file = new CSimpleImage();
+            $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], 123, 123, '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']]);
+
+            $this->save();
+            $id = Yii::app()->db->getLastInsertId();
+            $this::model()->updateByPk($id, array('cat_order' => $id));
+
+            NewsCatLanguage::model()->saveRecord($id, $model);
+        } else {
+            $item = $this::model()->findByPk($id);
+            $item->cat_parent_id = $model->cat_parent_id;
+            $item->cat_hot = $model->cat_hot;
+            $item->cat_enable = $model->cat_enable;
+
+            //remove pic_thumb
+            if (isset($model->remove_pic_thumb) && $model->remove_pic_thumb == 1) {
+                Common::removePic($item->pic_thumb, '/image/' . lcfirst(__CLASS__)); // remove pic_thumb
+                $item->pic_thumb = null;
+            }
+            //upload picture
+            Yii::import('ext.simpleImage.CSimpleImage');
+            $file = new CSimpleImage();
+            $item->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], 123, 123, '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']], $item->pic_thumb);
+
+            $item->save();
+            NewsCatLanguage::model()->saveRecord($id, $model);
+        }
+    }
+
+    //Back end - Get record to Edit
+    public function loadEdit($id) {
+        $command = Yii::app()->db->createCommand('SELECT cat_parent_id, pic_thumb, cat_hot, cat_enable FROM ' . $this->tableName() . ' WHERE cat_id=:id');
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        return $command->queryRow();
+    }
+
+    //Back end - Get cat_parent_id, cat_order
+    public function getCatParent_CatOrder($cid) {
+        $command = Yii::app()->db->createCommand('SELECT cat_parent_id, cat_order FROM ' . $this->tableName() . ' WHERE cat_id=:cid');
+        $command->bindParam(":cid", $cid, PDO::PARAM_INT);
+        return $command->queryRow();
+    }
+
+    // Back end - Get cat_id, cat_order Next
+    public function getCatid_CatOrder_Next($cid, $order) {
+        $command = Yii::app()->db->createCommand('SELECT cat_id, cat_order FROM ' . $this->tableName() . ' WHERE cat_parent_id=:cid AND cat_order>:order ORDER BY cat_order ASC');
+        $command->bindParam(":cid", $cid, PDO::PARAM_INT);
+        $command->bindParam(":order", $order, PDO::PARAM_INT);
+        return $command->queryRow();
+    }
+
+    // Back end - Get cat_id, cat_order Previous
+    public function getCatid_CatOrder_Previous($cid, $order) {
+        $command = Yii::app()->db->createCommand('SELECT cat_id, cat_order FROM ' . $this->tableName() . ' WHERE cat_parent_id=:cid AND cat_order<:order ORDER BY cat_order DESC');
+        $command->bindParam(":cid", $cid, PDO::PARAM_INT);
+        $command->bindParam(":order", $order, PDO::PARAM_INT);
+        return $command->queryRow();
+    }
+
+    // Back end - Update for up, down
+    public function updateUpDown($cat_info, $next_info, $cid) {
+        $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET cat_order=:order WHERE cat_id=:id');
+        $command->bindParam(":order", $next_info['cat_order'], PDO::PARAM_INT);
+        $command->bindParam(":id", $cid, PDO::PARAM_INT);
+        $command->execute();
+
+        $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET cat_order=:order WHERE cat_id=:id');
+        $command->bindParam(":order", $cat_info['cat_order'], PDO::PARAM_INT);
+        $command->bindParam(":id", $next_info['cat_id'], PDO::PARAM_INT);
+        $command->execute();
     }
 }
