@@ -15,7 +15,7 @@
             <?php foreach($this->listLanguage as $key => $lang):?>
 			<div class="col1"><?php echo $form->labelEx($model, 'title'.$key) ?></div>
 			<div class="col2">
-				<?php echo $form->textField($model, 'title'.$key, $htmlOptions = array('class' => 'txt-very-large')); ?>
+				<?php echo $form->textField($model, 'title'.$key, array('class' => 'txt-very-large')); ?>
 			</div>
 			<div class="clear space"></div>
 			<?php endforeach; ?>
@@ -23,7 +23,7 @@
             <?php foreach($this->listLanguage as $key => $lang):?>
 			<div class="col1"><?php echo $form->labelEx($model, 'preview'.$key) ?></div>
 			<div class="col2">
-				<?php echo $form->textArea($model, 'preview'.$key, $htmlOptions = array('cols' => 20, 'rows' => 10)); ?>
+				<?php echo $form->textArea($model, 'preview'.$key, array('cols' => 20, 'rows' => 10)); ?>
 				<script type="text/javascript">
 					tinyMCE.init({
 						 file_browser_callback: 'openKCFinder',
@@ -68,7 +68,7 @@
             <?php foreach($this->listLanguage as $key => $lang):?>
 			<div class="col1"><?php echo $form->labelEx($model, 'content'.$key) ?></div>
 			<div class="col2">
-				<?php echo $form->textArea($model, 'content'.$key, $htmlOptions = array('cols' => 20, 'rows' => 10)); ?>
+				<?php echo $form->textArea($model, 'content'.$key, array('cols' => 20, 'rows' => 10)); ?>
 				<script type="text/javascript">
 					tinyMCE.init({
 						 file_browser_callback: 'openKCFinder',
@@ -112,14 +112,14 @@
 
 			<div class="col1"><?php echo $form->labelEx($model, 'unit') ?></div>
 			<div class="col2">
-				<?php echo $form->textField($model, 'unit', $htmlOptions = array('class' => 'txt-very-large')); ?>
+				<?php echo $form->textField($model, 'unit', array('class' => 'txt-very-large')); ?>
 			</div>
 			<div class="clear space"></div>
 
             <?php foreach($this->listLanguage as $key => $lang):?>
 			<div class="col1"><?php echo $form->labelEx($model, 'tag'.$key) ?></div>
 			<div class="col2">
-				<?php echo $form->textField($model, 'tag'.$key, $htmlOptions = array('class' => 'txt-very-large')); ?>
+				<?php echo $form->textField($model, 'tag'.$key, array('class' => 'txt-very-large')); ?>
 			</div>
 			<div class="clear space"></div>
 			<?php endforeach; ?>
@@ -151,13 +151,13 @@
 
 			<p class="rows"><a href="#" id="add-rows">Hinh mo ta</a></p>
 
-			<div class="col1"><?php echo $form->labelEx($model, 'hot', $htmlOptions = array('for' => ucfirst($this->ID) . '_hot_0')) ?></div>
+			<div class="col1"><?php echo $form->labelEx($model, 'hot', array('for' => ucfirst($this->ID) . '_hot_0')) ?></div>
 			<div class="col2 radio">
 				<?php echo $form->radioButtonList($model, 'hot', array('0'=>'Normal', '1'=>'Hot'), array('separator' => '&nbsp;&nbsp;')); ?>
 			</div>
 			<div class="clear space"></div>
 
-			<div class="col1"><?php echo $form->labelEx($model, 'enable', $htmlOptions = array('for' => ucfirst($this->ID) . '_enable_0')) ?></div>
+			<div class="col1"><?php echo $form->labelEx($model, 'enable', array('for' => ucfirst($this->ID) . '_enable_0')) ?></div>
 			<div class="col2 radio">
 				<?php echo $form->radioButtonList($model, 'enable', array('1'=>$this->lang['show'], '0'=>$this->lang['hidden']), array('separator' => '&nbsp;&nbsp;')); ?>
 			</div>
@@ -166,7 +166,7 @@
 			<div class="col1">&nbsp;</div>
 			<div class="col2">
 				<?php echo CHtml::submitButton($this->lang['add_new'], array('name' => 'submit', 'class' => 'login', 'title' => $this->lang['add_new'])); ?>
-				<?php echo Chtml::link($this->lang['cancel'], 'javascript:history.back()', $htmlOptions = array('class' => 'login-a', 'title' => $this->lang['cancel'])) ?>
+				<?php echo Chtml::link($this->lang['cancel'], 'javascript:history.back()', array('class' => 'login-a', 'title' => $this->lang['cancel'])) ?>
 			</div>
 			<div class="clear space"></div>
 		</fieldset>

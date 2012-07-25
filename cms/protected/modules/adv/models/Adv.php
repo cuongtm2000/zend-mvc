@@ -145,22 +145,16 @@ class Adv extends CActiveRecord {
         if ($this->isNewRecord) {
             $this->record_order = $this->maxRecordOrder();
             if ($_FILES[__CLASS__]['name']['pic_thumb']) {
-                $width = Config::getValue('adv_' . $this->position . '_width');
-                $height = Config::getValue('adv_' . $this->position . '_height');
-
                 //import class upload images
                 Yii::import('ext.EUploadedImage.EUploadedImage');
-                $this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload($width, $height, '/image/' . strtolower(__CLASS__), $this->title);
+                $this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload(Config::getValue('adv_' . $this->position . '_width'), Config::getValue('adv_' . $this->position . '_height'), '/image/' . strtolower(__CLASS__), $this->title);
             }
         } else {
             //check file old and upload
             if ($_FILES[__CLASS__]['name']['pic_thumb']) {
-                $width = Config::getValue('adv_' . $this->position . '_width');
-                $height = Config::getValue('adv_' . $this->position . '_height');
-
                 //import class upload images
                 Yii::import('ext.EUploadedImage.EUploadedImage');
-                $this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload($width, $height, '/image/' . strtolower(__CLASS__), $this->title, $this->_oldImageThumb);
+                $this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload(Config::getValue('adv_' . $this->position . '_width'), Config::getValue('adv_' . $this->position . '_height'), '/image/' . strtolower(__CLASS__), $this->title, $this->_oldImageThumb);
             } else {
                 $this->pic_thumb = $this->_oldImageThumb;
             }

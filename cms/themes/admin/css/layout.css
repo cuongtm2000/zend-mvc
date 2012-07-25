@@ -46,7 +46,6 @@ ul.menu-li li ul li a:hover{;-moz-border-radius: 2px; -webkit-border-radius: 2px
 .left-col ul li{margin-left:23px}
 .left-col ul li a{display:block}
 .left-col h3{margin:0 5px}
-.col-right{margin-left:10px; width:25%}
 
 .panel-title{border:1px solid #ccc; margin-bottom:1em}
 .panel-title h1{color:#fff; font-size:10pt;padding:3px 5px; font-weight:bold; background:#5184D2}
@@ -136,6 +135,7 @@ fieldset .txt-very-large{width:55%; -moz-border-radius: 3px; -webkit-border-radi
 fieldset .textarea-very-large{width:55%}
 
 fieldset .select-110{width: 110px;}
+fieldset .select-55{width: 55%}
 
 fieldset .label-txt-very-tiny{width:22px; padding-right:7px}
 fieldset .label-txt-tiny{width:70px; padding-right:7px}
@@ -146,7 +146,7 @@ fieldset .label-select{width: 248px;}
 .col1{float: left; width:15%}
 .col2{float: left; width:85%}
 .col-left{float: left; width:350px}
-.col-right{float: left}
+.col-right{float: left; margin-left:10px; width: 43%}
 .space{height: 8px;}
 .radio label{float: none; cursor: pointer;}
 .readme{color: #555; font-style: italic;}

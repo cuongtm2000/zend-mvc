@@ -37,7 +37,7 @@
         <?php if ($listcat): ?>
             <div class="col-left"><label style="width:340px"><input type="radio" name="delitems" value="move" /> Di chuyển tất cả sản phẩm này đến phân loại</label></div>
             <div class="col-right">
-                <select name="catmove">
+                <select name="catmove" class="select-55">
                     <?php foreach ($listcat as $value): ?>
                         <option value="<?php echo $value['cat_id'] ?>"><?php echo $value['cat_title_prefix'] ?></option>
                     <?php endforeach ?>
@@ -64,7 +64,7 @@
 		<div style="margin-left:20px">
 			<div class="col-left"><label style="width:340px"><input type="radio" name="movecat" value="move" />Di chuyển tất cả sản phẩm của phân loại con đến phân loại:</label></div>
 			<div class="col-right">
-				<select name="moveprotocat">
+				<select name="moveprotocat" class="select-55">
 					<?php foreach ($listcat as $value): ?>
 					<option value="<?php echo $value['cat_id'] ?>"><?php echo $value['cat_title_prefix'] ?></option>
 					<?php endforeach ?>
@@ -77,7 +77,7 @@
 		<?php if ($listcat): ?>
 		<div class="col-left"><label style="width:340px"><input type="radio" name="delcat" value="move" /> Di chuyển tất cả các phân loại con này đến phân loại:</label></div>
 		<div class="col-right">
-			<select name="movetocat">
+			<select name="movetocat" class="select-55">
 				<?php foreach ($listcat as $value): ?>
 				<option value="<?php echo $value['cat_id'] ?>"><?php echo $value['cat_title_prefix'] ?></option>
 				<?php endforeach ?>

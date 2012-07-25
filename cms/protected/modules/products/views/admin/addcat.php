@@ -12,7 +12,7 @@
     <?php foreach($this->listLanguage as $key => $lang):?>
     <div class="col1"><?php echo $form->labelEx($model, 'cat_title'.$key) ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'cat_title'.$key, $htmlOptions = array('class' => 'txt-very-large')); ?>
+        <?php echo $form->textField($model, 'cat_title'.$key, array('class' => 'txt-very-large')); ?>
     </div>
     <div class="clear space"></div>
 	<?php endforeach; ?>
@@ -20,7 +20,7 @@
     <?php foreach($this->listLanguage as $key => $lang):?>
     <div class="col1"><?php echo $form->labelEx($model, 'tag'.$key) ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'tag'.$key, $htmlOptions = array('class' => 'txt-very-large')); ?>
+        <?php echo $form->textField($model, 'tag'.$key, array('class' => 'txt-very-large')); ?>
     </div>
     <div class="clear space"></div>
 	<?php endforeach; ?>
@@ -44,7 +44,7 @@
     </div>
     <div class="clear space"></div>
 
-    <div class="col1"><?php echo $form->labelEx($model, $this->lang['show'], $htmlOptions = array('for' => ucfirst($this->ID) . 'Cat_cat_enable_0')) ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, $this->lang['show'], array('for' => ucfirst($this->ID) . 'Cat_cat_enable_0')) ?></div>
     <div class="col2 radio">
         <?php echo $form->radioButtonList($model, 'cat_enable', array('1'=>$this->lang['show'], '0'=>$this->lang['hidden']), array('separator' => '&nbsp;&nbsp;')); ?>
     </div>
@@ -53,7 +53,7 @@
     <div class="col1">&nbsp;</div>
     <div class="col2">
         <?php echo CHtml::submitButton($this->lang['add_new'], array('name' => 'submit', 'class' => 'login', 'title' => $this->lang['add_new'])); ?>
-        <?php echo Chtml::link($this->lang['cancel'], 'javascript:history.back()', $htmlOptions = array('class' => 'login-a', 'title' => $this->lang['cancel'])) ?>
+        <?php echo Chtml::link($this->lang['cancel'], 'javascript:history.back()', array('class' => 'login-a', 'title' => $this->lang['cancel'])) ?>
     </div>
     <div class="clear space"></div>
 </fieldset>

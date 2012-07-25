@@ -214,13 +214,11 @@ class ProductsCat extends CActiveRecord {
             //upload picture
             Yii::import('ext.simpleImage.CSimpleImage');
             $file = new CSimpleImage();
-            $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], 123, 123, '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']]);
+            $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('products_cat_width_thumb'), Config::getValue('products_cat_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']]);
 
             $this->save();
             $id = Yii::app()->db->getLastInsertId();
             $this::model()->updateByPk($id, array('cat_order' => $id));
-
-            ProductsCatLanguage::model()->saveRecord($id, $model);
         } else {
             $item = $this::model()->findByPk($id);
             $item->cat_parent_id = $model->cat_parent_id;
@@ -235,12 +233,11 @@ class ProductsCat extends CActiveRecord {
             //upload picture
             Yii::import('ext.simpleImage.CSimpleImage');
             $file = new CSimpleImage();
-            $item->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], 123, 123, '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']], $item->pic_thumb);
+            $item->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('products_cat_width_thumb'), Config::getValue('products_cat_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']], $item->pic_thumb);
 
             $item->save();
-
-            ProductsCatLanguage::model()->saveRecord($id, $model);
         }
+        ProductsCatLanguage::model()->saveRecord($id, $model);
     }
 
     //Back end - Get record to Edit
@@ -267,7 +264,7 @@ class ProductsCat extends CActiveRecord {
         $result = $this->getIdByParentId($id);
         foreach ($result as $value) {
             $this->_sub_cat_num++;
-            $this->_sub_num_item += Products::model()->countItemCat($value['cat_id']);
+            $this->_sub_num_item += Products::model()->count('hoiit_module_item_cat_cat_id=:cat_id', array(':cat_id' => $value['cat_id']));
             $this->loopCat($value['cat_id']);
         }
     }
@@ -286,6 +283,15 @@ class ProductsCat extends CActiveRecord {
         foreach ($result as $value) {
             Products::model()->deleteItembyCat($value['cat_id']);
             $this->loopDelItemtoCat($value['cat_id']);
+        }
+    }
+
+    //Back end - Move all item Cat to Cat:
+    public function loopMoveItemtoCat($cat_id, $cat_id_new) {
+        $result = $this->getIdByParentId($cat_id);
+        foreach ($result as $value) {
+            Products::model()->updateByPk($value['cat_id'], array('hoiit_module_item_cat_cat_id' => $cat_id_new));
+            $this->loopMoveItemtoCat($value['cat_id'], $cat_id_new);
         }
     }
 

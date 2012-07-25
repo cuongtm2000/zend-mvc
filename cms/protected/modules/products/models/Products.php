@@ -225,10 +225,10 @@ class Products extends CActiveRecord {
             //upload picture thumb
             Yii::import('ext.simpleImage.CSimpleImage');
             $file = new CSimpleImage();
-            $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], 123, 123, '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']] . '-thumb');
-            $this->pic_full = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_full'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_full'], 223, 223, '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]);
+            $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('products_width_thumb'), Config::getValue('products_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']] . '-thumb');
+            $this->pic_full = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_full'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_full'], Config::getValue('products_width_full'), Config::getValue('products_height_full'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]);
             if (isset($_FILES[__CLASS__ . 'Form']['name']['pic_desc'])) {
-                $this->pic_desc = implode("|", $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_desc'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_desc'], 222, 222, '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]));
+                $this->pic_desc = implode("|", $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_desc'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_desc'], Config::getValue('products_width_desc'), Config::getValue('products_height_desc'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]));
             }
 
             $this->save();
@@ -264,11 +264,11 @@ class Products extends CActiveRecord {
             //upload picture
             Yii::import('ext.simpleImage.CSimpleImage');
             $file = new CSimpleImage();
-            $item->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], 123, 123, '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']] . '-thumb', $item->pic_thumb);
-            $item->pic_full = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_full'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_full'], 223, 223, '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']], $item->pic_full);
+            $item->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('products_width_thumb'), Config::getValue('products_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']] . '-thumb', $item->pic_thumb);
+            $item->pic_full = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_full'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_full'], Config::getValue('products_width_full'), Config::getValue('products_height_full'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']], $item->pic_full);
             //upload pic_desc
             if (isset($_FILES[__CLASS__ . 'Form']['name']['pic_desc'])) {
-                $uploaded = $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_desc'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_desc'], 222, 222, '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]);
+                $uploaded = $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_desc'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_desc'], Config::getValue('products_width_desc'), Config::getValue('products_height_desc'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]);
                 $pic_desc = ($item->pic_desc) ? explode('|', $item->pic_desc) : array();
                 //push value
                 foreach ($uploaded as $value) {

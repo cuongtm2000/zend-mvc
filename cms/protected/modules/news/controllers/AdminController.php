@@ -68,21 +68,18 @@ class AdminController extends BackEndController {
     }
 
     public function actionDelcat($id) {
-        Yii::app()->getModule($this->ID);
-        $model = ucfirst($this->ID);
-        $model_cat = $model . 'Cat';
+		$model = ucfirst($this->module->id);
+        $model_class = $model . 'Cat';
+        $model_language_class = $model_class . 'Language';
 
-        $model_cat_class = new $model_cat();
-        $model_class = new $model();
-
-        $data['infocat'] = $model_cat_class->getInfoCat($id); //Tên phân loại
-        $data['numcat'] = $model_cat_class->countItemCat($id); //Số sản phẩm con
-        $data['subcat'] = $model_cat_class->countSubcat($id);
-        $data['listcat'] = $model_cat_class->listCats(0, null, 1, $id);
+        $data['infocat'] = $model_language_class::model()->getInfoCat($id, Yii::app()->language); //Tên phân loại
+        $data['numcat'] = $model::model()->count('hoiit_module_item_cat_cat_id=:cat_id', array(':cat_id' => $id)); //Số sản phẩm con
+        $data['subcat'] = $model_class::model()->countSubcat($id);
+        $data['listcat'] = $model_class::model()->listCats(0, null, 1, $id);
 
         if (Yii::app()->request->getIsPostRequest()) {
-            $model_class->delItembyCat(Yii::app()->request);
-            $this->redirect(array('cats'));
+            $model::model()->delItembyCat(Yii::app()->request);
+            $this->redirect(array('cat'));
         }
         $this->render('delcat', $data);
     }
@@ -132,46 +129,63 @@ class AdminController extends BackEndController {
         Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
         Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/config.js');
 
-        Yii::app()->getModule($this->ID);
-        $model = ucfirst($this->ID);
-        $module_cat = $model . 'Cat';
+        $model_class = ucfirst($this->module->id);
+        $model_cat_class = $model_class . 'Cat';
+        $model_form_class = $model_class . 'Form';
+        $model = new $model_class;
+        $model_cat = new $model_cat_class;
+        $model_form = new $model_form_class;
 
-        $model_cat_class = new $module_cat();
-        $model_class = new $model();
+        if (isset($_POST[$model_form_class])) {
+            $model_form->attributes = $_POST[$model_form_class];
 
-        if (isset($_POST[$model])) {
-            $model_class->attributes = $_POST[$model];
-
-            if ($model_class->validate()) {
-                $model_class->save();
+            if ($model_form->validate()) {
+                $model->saveRecord($model_form);
                 $this->redirect(array('index'));
             }
         }
 
-        $this->render('add', array('model' => $model_class, 'listItemsCat' => $model_cat_class->listCats()));
+        $this->render('add', array('model' => $model_form, 'listItemsCat' => $model_cat->listCats()));
     }
 
     public function actionEdit($id) {
         Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
         Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/config.js');
 
-        Yii::app()->getModule($this->ID);
-        $model = ucfirst($this->ID);
-        $module_cat = $model . 'Cat';
+        $model_class = ucfirst($this->module->id);
+        $model_cat_class = $model_class . 'Cat';
+        $model_form_class = $model_class . 'Form';
+        $model_language_class = $model_class . 'Language';
+        $model = new $model_class;
+        $model_cat = new $model_cat_class;
+        $model_form = new $model_form_class;
+        $model_language = new $model_language_class();
 
-        $model_cat_class = new $module_cat();
-        $model_class = new $model();
-        $model_class = $model_class->loadEdit($id); //load form models
+        //Load Edit
+        $model_data = $model->loadEdit($id);
+        $model_form['pic_thumb'] = $model_data['pic_thumb'];
+        $model_form['hot'] = $model_data['hot'];
+        $model_form['enable'] = $model_data['enable'];
+        $model_form['hoiit_module_item_cat_cat_id'] = $model_data['hoiit_module_item_cat_cat_id'];
 
-        if (isset($_POST[$model])) {
-            $model_class->attributes = $_POST[$model];
-            if ($model_class->validate()) {
-                $model_class->save();
+        $model_language_data = $model_language->loadEdit($id);
+        foreach ($model_language_data as $value) {
+            $model_form['title' . $value['language_id']] = $value['title'];
+            $model_form['preview' . $value['language_id']] = $value['preview'];
+            $model_form['content' . $value['language_id']] = $value['content'];
+            $model_form['tag' . $value['language_id']] = $value['tag'];
+            $model_form['description' . $value['language_id']] = $value['description'];
+        }
+
+        if (isset($_POST[$model_form_class])) {
+            $model_form->attributes = $_POST[$model_form_class];
+            if ($model_form->validate()) {
+                $model->saveRecord($model_form, $id);
                 $this->redirect(array('index'));
             }
         }
 
-        $this->render('edit', array('model' => $model_class, 'listItemsCat' => $model_cat_class->listCats()));
+        $this->render('edit', array('model' => $model_form, 'listItemsCat' => $model_cat->listCats()));
     }
 
 }
