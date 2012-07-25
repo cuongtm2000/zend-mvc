@@ -145,16 +145,16 @@ class Adv extends CActiveRecord {
         if ($this->isNewRecord) {
             $this->record_order = $this->maxRecordOrder();
             if ($_FILES[__CLASS__]['name']['pic_thumb']) {
-                //import class upload images
-                Yii::import('ext.EUploadedImage.EUploadedImage');
-                $this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload(Config::getValue('adv_' . $this->position . '_width'), Config::getValue('adv_' . $this->position . '_height'), '/image/' . strtolower(__CLASS__), $this->title);
+                Yii::import('ext.SimpleImage.CSimpleImage');
+                $file = new CSimpleImage();
+                $this->pic_thumb = $file->processUpload($_FILES[__CLASS__]['name']['pic_thumb'], $_FILES[__CLASS__]['tmp_name']['pic_thumb'], Config::getValue('adv_' . $this->position . '_width'), Config::getValue('adv_' . $this->position . '_height'), '/image/' . strtolower(__CLASS__), $this->title);
             }
         } else {
             //check file old and upload
             if ($_FILES[__CLASS__]['name']['pic_thumb']) {
-                //import class upload images
-                Yii::import('ext.EUploadedImage.EUploadedImage');
-                $this->pic_thumb = EUploadedImage::getInstance($this, 'pic_thumb')->processUpload(Config::getValue('adv_' . $this->position . '_width'), Config::getValue('adv_' . $this->position . '_height'), '/image/' . strtolower(__CLASS__), $this->title, $this->_oldImageThumb);
+                Yii::import('ext.SimpleImage.CSimpleImage');
+                $file = new CSimpleImage();
+                $this->pic_thumb = $file->processUpload($_FILES[__CLASS__]['name']['pic_thumb'], $_FILES[__CLASS__]['tmp_name']['pic_thumb'], Config::getValue('adv_' . $this->position . '_width'), Config::getValue('adv_' . $this->position . '_height'), '/image/' . strtolower(__CLASS__), $this->title, $this->_oldImageThumb);
             } else {
                 $this->pic_thumb = $this->_oldImageThumb;
             }
