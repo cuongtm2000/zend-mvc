@@ -58,7 +58,9 @@ class CSimpleImage {
         $size = count($file_name);
 
         for ($i = 0; $i < $size; $i++) {
-            $file_desc_multi[] = $this->processUpload($file_name[$i], $tmp[$i], $width, $height, $path, $filename . '-desc-' . ($i + 1));
+            if ($file_name[$i]) {
+                $file_desc_multi[] = $this->processUpload($file_name[$i], $tmp[$i], $width, $height, $path, $filename . '-desc-' . ($i + 1));
+            }
         }
         return $file_desc_multi;
     }
