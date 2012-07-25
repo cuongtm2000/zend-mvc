@@ -41,6 +41,7 @@
         array('label'=>'Configuration', 'url'=>array('/admin/config'),
             'items'=>array(
                 array('label'=>'System', 'url'=>array('/admin/config')),
+                array('label'=>'Function position', 'url'=>array('/admin/position')),
             )
         ),
         array('label'=>'Contact', 'url'=>array('/site/contact')),
