@@ -12,7 +12,7 @@
     <?php foreach($this->listLanguage as $key => $lang):?>
     <div class="col1"><?php echo $form->labelEx($model, 'cat_title'.$key) ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'cat_title'.$key, $htmlOptions = array('class' => 'txt-very-large')); ?>
+        <?php echo $form->textField($model, 'cat_title'.$key, array('class' => 'txt-very-large')); ?>
     </div>
     <div class="clear space"></div>
     <?php endforeach; ?>

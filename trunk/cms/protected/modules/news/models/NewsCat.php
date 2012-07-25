@@ -24,6 +24,9 @@ class NewsCat extends CActiveRecord {
     private $_rows;
     private $_rowsize;
 
+    private $_sub_cat_num;
+    private $_sub_num_item;
+
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
@@ -129,16 +132,9 @@ class NewsCat extends CActiveRecord {
             if ($id != 0) {
                 $criteria->condition = 't.cat_id !=:id';
                 $criteria->params = array(':id' => $id);
-
-                //$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . LANG . ', tag' . LANG . ', cat_enable FROM ' . $this->tableName() . ' WHERE cat_id != ' . $id . ' AND dos_usernames_username=:user ORDER BY cat_order DESC');
-            } /*else {
-                $criteria->condition = 'cat_id !=:id';
-                $criteria->params = array(':id' => $id);
-                $command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . LANG . ', tag' . LANG . ', cat_enable FROM ' . $this->tableName() . ' WHERE dos_usernames_username=:user ORDER BY cat_order DESC');
-            }   */
+            }
         } else {
             $criteria->condition = 'cat_enable=1';
-            //$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . LANG . ', tag' . LANG . ', cat_enable FROM ' . $this->tableName() . ' WHERE cat_enable=1 AND dos_usernames_username=:user ORDER BY cat_order DESC');
         }
 
         $this->_rows = $this::model()->findAll($criteria);
@@ -212,13 +208,11 @@ class NewsCat extends CActiveRecord {
             //upload picture
             Yii::import('ext.simpleImage.CSimpleImage');
             $file = new CSimpleImage();
-            $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], 123, 123, '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']]);
+            $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('news_cat_width_thumb'), Config::getValue('news_cat_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']]);
 
             $this->save();
             $id = Yii::app()->db->getLastInsertId();
             $this::model()->updateByPk($id, array('cat_order' => $id));
-
-            NewsCatLanguage::model()->saveRecord($id, $model);
         } else {
             $item = $this::model()->findByPk($id);
             $item->cat_parent_id = $model->cat_parent_id;
@@ -233,11 +227,11 @@ class NewsCat extends CActiveRecord {
             //upload picture
             Yii::import('ext.simpleImage.CSimpleImage');
             $file = new CSimpleImage();
-            $item->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], 123, 123, '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']], $item->pic_thumb);
+            $item->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('news_cat_width_thumb'), Config::getValue('news_cat_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']], $item->pic_thumb);
 
             $item->save();
-            NewsCatLanguage::model()->saveRecord($id, $model);
         }
+        NewsCatLanguage::model()->saveRecord($id, $model);
     }
 
     //Back end - Get record to Edit
@@ -281,5 +275,72 @@ class NewsCat extends CActiveRecord {
         $command->bindParam(":order", $cat_info['cat_order'], PDO::PARAM_INT);
         $command->bindParam(":id", $next_info['cat_id'], PDO::PARAM_INT);
         $command->execute();
+    }
+
+    //Back end - Get cat_id by Parent_id
+    private function getIdByParentId($id) {
+        $command = Yii::app()->db->createCommand('SELECT cat_id FROM ' . $this->tableName() . ' WHERE cat_parent_id=:id');
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        return $command->queryAll();
+    }
+
+    //Back end - Count sub cat
+    public function countSubcat($id) {
+        $this->loopCat($id);
+        return array('sub_cat_num' => $this->_sub_cat_num, 'sub_num_item' => $this->_sub_num_item);
+    }
+
+    private function loopCat($id) {
+        $result = $this->getIdByParentId($id);
+        foreach ($result as $value) {
+            $this->_sub_cat_num++;
+            $this->_sub_num_item += News::model()->count('hoiit_module_item_cat_cat_id=:cat_id', array(':cat_id' => $value['cat_id']));
+            $this->loopCat($value['cat_id']);
+        }
+    }
+
+    //Back end - find Cat parent
+    public function findcatParent($cat_id, $cat_parent_id) {
+        $result = $this->getIdByParentId($cat_id);
+        foreach ($result as $value) {
+            $this::model()->updateByPk($value['cat_id'], array('cat_parent_id' => $cat_parent_id));
+        }
+    }
+
+    //Back end - Delete all item Sub
+    public function loopDelItemtoCat($cat_id) {
+        $result = $this->getIdByParentId($cat_id);
+        foreach ($result as $value) {
+            News::model()->deleteItembyCat($value['cat_id']);
+            $this->loopDelItemtoCat($value['cat_id']);
+        }
+    }
+
+    //Back end - Move all item Cat to Cat:
+    public function loopMoveItemtoCat($cat_id, $cat_id_new) {
+        $result = $this->getIdByParentId($cat_id);
+        foreach ($result as $value) {
+            News::model()->updateByPk($value['cat_id'], array('hoiit_module_item_cat_cat_id' => $cat_id_new));
+            $this->loopMoveItemtoCat($value['cat_id'], $cat_id_new);
+        }
+    }
+
+    //Back end - Delete all Sub
+    public function loopDelSubCat($cat_id) {
+        $result = $this->getIdByParentId($cat_id);
+        foreach ($result as $value) {
+            $this->deleteRecord($value['cat_id']);
+            $this->loopDelSubCat($value['cat_id']);
+        }
+    }
+
+    //Back end - Delete Record
+    public function deleteRecord($id) {
+        NewsCatLanguage::model()->deleteRecord($id);
+
+        $item = $this::model()->find('cat_id=:id', array(':id' => $id));
+        Common::removePic($item->pic_thumb, '/image/' . lcfirst(__CLASS__)); // remove pic_thumb
+        Common::removePic($item->pic_desc, '/image/' . lcfirst(__CLASS__), 1); // remove pic_desc
+        $this::model()->findByPk($id)->delete(); //delete record
     }
 }

@@ -198,16 +198,13 @@ class About extends CActiveRecord {
 
             $id = Yii::app()->db->getLastInsertId();
             $this::model()->updateByPk($id, array('record_order' => $id));
-
-            AboutLanguage::model()->saveRecord($id, $model);
         } else {
             $item = $this::model()->findByPk($id);
             $item->hot = $model->hot;
             $item->enable = $model->enable;
             $item->save();
-
-            AboutLanguage::model()->saveRecord($id, $model);
         }
+        AboutLanguage::model()->saveRecord($id, $model);
     }
 
     //Back end - Get record to Edit

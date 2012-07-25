@@ -46,7 +46,7 @@ class News extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('postdate, hoiit_module_item_cat_cat_id', 'required'),
+            array('hoiit_module_item_cat_cat_id', 'required'),
             array('record_order, hot, specials, enable, hoiit_module_item_cat_cat_id', 'numerical', 'integerOnly' => true),
             array('pic_thumb', 'length', 'max' => 100),
             array('pic_desc', 'length', 'max' => 500),
@@ -204,5 +204,95 @@ class News extends CActiveRecord {
                 }
             }
         }
+    }
+
+    //Back end - save
+    public function saveRecord($model, $id = null) {
+        if (Yii::app()->controller->action->id == 'add') {
+            $this->hot = $model->hot;
+            $this->enable = $model->enable;
+            $this->hoiit_module_item_cat_cat_id = $model->hoiit_module_item_cat_cat_id;
+
+            //upload picture thumb
+            Yii::import('ext.simpleImage.CSimpleImage');
+            $file = new CSimpleImage();
+            $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('news_width_thumb'), Config::getValue('news_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]);
+
+            $this->save();
+            $id = Yii::app()->db->getLastInsertId();
+            $this::model()->updateByPk($id, array('record_order' => $id));
+        } else {
+            $item = $this::model()->findByPk($id);
+            $item->hot = $model->hot;
+            $item->enable = $model->enable;
+            $item->hoiit_module_item_cat_cat_id = $model->hoiit_module_item_cat_cat_id;
+
+            //remove pic_thumb
+            if (isset($model->remove_pic_thumb) && $model->remove_pic_thumb == 1) {
+                Common::removePic($item->pic_thumb, '/image/' . strtolower(__CLASS__)); // remove pic_thumb
+                $item->pic_thumb = null;
+            }
+
+            //upload picture
+            Yii::import('ext.simpleImage.CSimpleImage');
+            $file = new CSimpleImage();
+            $item->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('news_width_thumb'), Config::getValue('news_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']], $item->pic_thumb);
+
+            $item->save();
+        }
+        NewsLanguage::model()->saveRecord($id, $model);
+    }
+
+    //Back end - Get record to Edit
+    public function loadEdit($id) {
+        $command = Yii::app()->db->createCommand('SELECT pic_thumb, hot, enable, hoiit_module_item_cat_cat_id FROM ' . $this->tableName() . ' WHERE record_id=:id');
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        return $command->queryRow();
+    }
+
+    //Back end - Get ID by Cat
+    private function getIdByCatId($id) {
+        $command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE hoiit_module_item_cat_cat_id=:cid');
+        $command->bindParam(":cid", $id, PDO::PARAM_INT);
+        return $command->queryAll();
+    }
+
+    //Back end - delete item new cat
+    public function deleteItembyCat($cat_id) {
+        $result = $this->getIdByCatId($cat_id);
+        foreach ($result as $value) {
+            $this->deleteRecord($value['record_id']);
+        }
+    }
+
+    //Back end - delete Item for Cat
+    public function delItembyCat($data = NULL) {
+        $id = $data->getQuery('id');
+        $result = $this->getIdByCatId($id);
+
+        if ($data->getPost('delitems') == 'del') {
+            foreach ($result as $value) {
+                $this->deleteRecord($value['record_id']); //delete record
+            }
+        } elseif ($data->getPost('delitems') == 'move') {
+            $cat_move = $data->getPost('catmove');
+            foreach ($result as $value) {
+                $this::model()->updateByPk($value['record_id'], array('hoiit_module_item_cat_cat_id' => $cat_move));
+            }
+        }
+        //move all sub cat to new cat parent
+        $cat = new NewsCat();
+        if ($data->getPost('delcat') == 'move') {
+            $cat->findcatParent($id, $data->getPost('movetocat'));
+        } elseif ($data->getPost('delcat') == 'del') {
+            if ($data->getPost('movecat') == 'del') {
+                $cat->loopDelItemtoCat($id);
+            } elseif ($data->getPost('movecat') == 'move') {
+                $cat->loopMoveItemtoCat($id, $data->getPost('moveprotocat'));
+            }
+            //delete all sub cat
+            $cat->loopDelSubCat($id);
+        }
+        $cat->deleteRecord($id);
     }
 }
