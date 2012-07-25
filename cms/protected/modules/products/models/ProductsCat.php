@@ -212,7 +212,7 @@ class ProductsCat extends CActiveRecord {
             $this->cat_enable = $model->cat_enable;
 
             //upload picture
-            Yii::import('ext.simpleImage.CSimpleImage');
+            Yii::import('ext.SimpleImage.CSimpleImage');
             $file = new CSimpleImage();
             $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('products_cat_width_thumb'), Config::getValue('products_cat_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']]);
 
@@ -231,7 +231,7 @@ class ProductsCat extends CActiveRecord {
                 $item->pic_thumb = null;
             }
             //upload picture
-            Yii::import('ext.simpleImage.CSimpleImage');
+            Yii::import('ext.SimpleImage.CSimpleImage');
             $file = new CSimpleImage();
             $item->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('products_cat_width_thumb'), Config::getValue('products_cat_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']], $item->pic_thumb);
 

@@ -223,7 +223,7 @@ class Products extends CActiveRecord {
             $this->hoiit_module_item_cat_cat_id = $model->hoiit_module_item_cat_cat_id;
 
             //upload picture thumb
-            Yii::import('ext.simpleImage.CSimpleImage');
+            Yii::import('ext.SimpleImage.CSimpleImage');
             $file = new CSimpleImage();
             $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('products_width_thumb'), Config::getValue('products_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']] . '-thumb');
             $this->pic_full = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_full'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_full'], Config::getValue('products_width_full'), Config::getValue('products_height_full'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]);
@@ -262,7 +262,7 @@ class Products extends CActiveRecord {
             }
 
             //upload picture
-            Yii::import('ext.simpleImage.CSimpleImage');
+            Yii::import('ext.SimpleImage.CSimpleImage');
             $file = new CSimpleImage();
             $item->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('products_width_thumb'), Config::getValue('products_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']] . '-thumb', $item->pic_thumb);
             $item->pic_full = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_full'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_full'], Config::getValue('products_width_full'), Config::getValue('products_height_full'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']], $item->pic_full);
