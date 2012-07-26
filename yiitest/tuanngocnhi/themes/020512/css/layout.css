@@ -46,7 +46,7 @@ a:hover{color:#000;}
 .panel-img-2 img{margin:0 12px 0 0} 
 .panel-img-3 img{margin:0 35px 0 0}
 
-#nav .select{background:url(../images/nav-select-top.png) repeat-x top; border-left:1px solid #5D607A;border-right:1px solid #5D607A;color:#EED49D}
+#nav .select{background:#fff url(../images/nav-hover.png) no-repeat center top;color:#9F9F9F}
 
 /** Banner **/
 #banner{ margin:0 0 20px 0}
