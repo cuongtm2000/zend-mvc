@@ -25,7 +25,7 @@ class AdminController extends BackEndController {
         if (isset($_POST['Setting'])) {
             $model->attributes = $_POST['Setting'];
             if ($model->validate()) {
-                if($model->saveSetting()){
+                if ($model->saveSetting()) {
                     Yii::app()->user->setFlash('message', 'Success! System Configuration updated successfully!');
                     $this->refresh();
                 }
