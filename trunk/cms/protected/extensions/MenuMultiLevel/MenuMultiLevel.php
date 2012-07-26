@@ -4,6 +4,7 @@ class MenuMultiLevel extends Menu {
     public $id = 'nav';
     public $activeCssClass = 'selected';
     public $linkLabelWrapper = null;
+    public $lastItemCssClass = null;
     public $htmlOptions = array();
     public $jquery = 0;
     public $subTagOpen = null;
@@ -29,7 +30,8 @@ class MenuMultiLevel extends Menu {
                 'htmlOptions' => $this->htmlOptions,
                 'items' => $items,
                 'subTagOpen' => $this->subTagOpen,
-                'subTagClose' => $this->subTagClose
+                'subTagClose' => $this->subTagClose,
+                'lastItemCssClass' => $this->lastItemCssClass
             );
             $this->widget('application.components.Menu', $menu);
             echo $this->tagClose;
