@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 25, 2012 at 09:43 AM
+-- Generation Time: Jul 26, 2012 at 08:19 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -229,8 +229,8 @@ CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
 --
 
 INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, `loadfiles`, `typefile`) VALUES
-('020512', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
-('020512', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js|jquery.simplyscroll.vertical.js', 'javascript'),
+('020512', 'products', 'prettyPhoto.css', 'css'),
+('020512', 'products', 'jquery.prettyPhoto.js', 'javascript'),
 ('020512', 'video', 'prettyPhoto.css', 'css'),
 ('020512', 'video', 'jquery.prettyPhoto.js', 'javascript');
 
@@ -329,7 +329,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
 (186, 'Giới thiệu về công ty', '', '<p><span style="font-size:medium;color:#0000ff;">Công ty TNHH TUẤN NGỌC NHI</span><br /><span style="font-size:medium;color:#0000ff;">Xin hân hạnh kính chào quý khách hàng.</span></p>\r\n<p><span style="color:#0000ff;font-size:small;">Xuất phát từ suy nghĩ nhỏ, chúng tôi đã hình thành ý tưởng lớn . Nhằm phần nào đáp ứng nhu cầu trang trí nội, ngoại thất làm đẹp thêm cho ý tưởng của khách hàng. Mang đậm dấu ấn cá nhân và nôi bật trên đường phố. Nhằm thúc đẩy mạnh mẽ trong thời đại hiện nay, Công ty TUẤN NGỌC NHI được hình thành và phát triển cùng quý khách .</span></p>\r\n<p><span style="color:#0000ff;font-size:small;">Từ một xưởng cơ khí nhỏ với máy móc chủ yếu là tự chế, hoặc mua lại máy cũ đã qua sử dụng. Nhưng với sự quyết tâm của tập thể người lao động và ý tưởng của lãnh đạo cơ sở, cùng với sự quý mến của quý khách hàng gần xa.</span></p>\r\n<p><span style="color:#0000ff;font-size:small;">Sau hơn mười năm tham gia thị trường làm đẹp cho những chiếc xe yêu quý. Công ty chúng tôi , dưới sự bàn bạc thống nhất đã thành lập nên công ty TUẤN NGỌC NHI và cho ra đời những sản phẩm mang thương hiệu TUẤN NGỌC NHI để phục vụ tốt hơn cho quý khách hàng.</span></p>\r\n<p><span style="color:#0000ff;font-size:small;">Cùng với đội ngũ công nhân tay nghề cao và sự hỗ trợ của máy móc hiện đại đã làm nên những sản phẩm chất lượng tốt, độ tinh xảo của từng đường nét , đạt nét thẩm mỹ và làm vùa lòng đến những khách hàng khó tính.</span></p>\r\n<p><span style="color:#0000ff;font-size:small;">Ngoài ra chúng tôi cũng đầu tư mạnh để làm ra những sản phẩm xi ( Mạ Crom) dùng cho các sản phẩm trang trí ngoại thất thêm phần nổi bật. Để đạt chất lượng tốt công ty chúng tôi đã mạnh dạn đầu tư công nghệ cao về xi mạ, tư vấn giám sát cũng như kiểm định chất lương trên từng sản phẩm. Với một quy trình khép kín từ khâu tao dáng đến khâu thành phẩm và máy móc hiện đại hỗ trợ .</span></p>\r\n<p><span style="color:#0000ff;font-size:small;">Để thêm phần phong phú và chuyên nghiệp hơn trong việc làm hài lòng quý khách hàng. Công ty chúng tôi được sự uỷ nhiệm là đại lý độc quyền tại Đồng Nai cung cấp và dán phim cách nhiệt cho xe hơi , nhà cửa, văn phòng. Với đội ngũ kỹ thuật viên chuyên nghiệp, sáng tạo. Sẽ làm hài lòng quý khách hàng gần xa.</span></p>', '', 419, '2012-06-19 06:43:45', 1, 0, '', '', 'gioi-thieu-ve-cong-ty', '', 'Công ty TNHH TUẤN NGỌC NHI\r\nXin hân hạnh kính chào quý khách hàng.', '', 1, 'khungtroiviets'),
-(187, 'Giới thiệu chung', '', '<p style="text-align:center;"><span style="font-size:medium;"><strong><span style="color:#ff0000;">Hoan nghênh và chào đón quý khách hàng đến với chúng tôi.</span></strong></span></p>\r\n<p style="text-align:center;"><span style="font-size:medium;"><strong><span style="color:#ff0000;">CÔNG TY TRÁCH NHIỆM HỮU HẠN</span></strong></span><br /><span style="font-size:medium;"><strong><span style="color:#ff0000;">TUẤN NGỌC NHI</span></strong></span></p>\r\n<p>Với phương châm một thị trường năng động của những người năng động.<br />Nhằm đáp ứng và khám phá những điều mới lạ trong một thế giới đầy màu sắc. Một phần nào làm thoả mãn cảm xúc của các bạn bên cạnh những chiếc xe yêu quý của mình, với những sản phẩm cách điệu, làm nổi bật đường nét, cá tính và phong cách sành điệu của các dòng xe trên thị trường.<br />Là một công ty chuyên sản xuất các loại mặt hàng trang trí nội, ngoại thất xe hơi.<br />Với hơn 5 năm hoạt động và trưởng thành Và với hơn 15 năm trải nghiệm và tích tụ kinh nghiệm .<br />Hiện nay công ty chúng tôi dưới sự lãnh đạo của những cán bộ có nhiều năng lực, tràn đầy nhiệt huyết và năng động cùng đội ngủ công nhân được đào tạo tốt, tay nghề cao, đã cho ra đời các sản phẩm đạt trình độ cao. Chuyên cung cấp các mặt hàng này trên toàn quốc, thông qua các đại lý ở thành phố Hồ chí Minh – Hà Nội - Cần Thơ và các tỉnh khác.<br />Các sản phẩm chính được công ty sản xuất :<br />+ Cản sau Inox, baga mui nhôm, cản hông (bệ bước), kèo mui…của các lọai xe<br />+ Phụ tùng trang trí nội ngoại thất nhựa xi crome , composite : Chóa đèn , viền đèn , chén cửa , ốp hông , đuôi cá ...<br />+ Bên cạnh đó, cty đang là đại lý chính thức về bán hàng và lắp đặt film cách nhiệt Solargard- Hoa Kỳ.<br />Đến với chúng tôi, Quý khách sẽ luôn an tâm về chất lượng, giá cả hợp lý!<br />+ Chất lượng sản phẩm ngày càng được minh chứng khi ngày càng nhiều những hảnh xe nổi tiếng khó tính như Toyota , Ford , Kia ,Mercedes ... sản xuất và lắp đặt tại Việt Nam đều ủng hộ sản phẩm của công ty chúng tôi . Nhằm giới thiệu rộng rãi đến Quý khách hàng gần xa<br />Hiện nay công ty chúng tôi thành lập website hỗ trợ trực tiếp đến quý khách hàng. Các thông tin luôn được cập nhật đầy đủ chi tiết và thuận lợi để quý khách hàng tham khảo.<br />Với tiêu chí: Sự hài lòng của các bạn là niềm hạnh phúc của chúng tôi.<br />Mong rằng sẽ nhận được sự góp ý cũng như ủng hộ của Quý vị trong thời gian tới, nhằm nâng cao chất lượng phục vụ Quý khách hàng ngày một tốt hơn.<br />Công ty hy vọng sẽ có cơ hội được đón tiếp và phục vụ quý khách tại các địa chỉ :<br />519 F - Ấp Ngũ Phúc - Hố Nai 3 – Biên Hòa – Đồng Nai<br />ĐT : 0618889297 Fax : 061.8889043<br />Phòng k.Doanh : Mr Minh : 0974851777 /email : minhtnn10@gmail.com / Ms Hà : 01669936274<br />www.tuanngocnhi.com – www.dochoixehoitnn.com</p>\r\n<p>Xin chào thân ái, hợp tác và cùng tiến bộ!</p>', '', 11, '2012-07-25 03:04:10', 2, 0, NULL, NULL, 'gioi-thieu-chung', '', 'Hoan nghênh và chào đón quý khách hàng đến với chúng tôi.\r\n\r\nCÔNG TY TRÁCH NHIỆM HỮU HẠN\r\nTUẤN NGỌC NHI', '', 1, 'khungtroiviets');
+(187, 'Giới thiệu chung', '', '<p style="text-align:center;"><span style="font-size:medium;"><strong><span style="color:#ff0000;">Hoan nghênh và chào đón quý khách hàng đến với chúng tôi.</span></strong></span></p>\r\n<p style="text-align:center;"><span style="font-size:medium;"><strong><span style="color:#ff0000;">CÔNG TY TRÁCH NHIỆM HỮU HẠN</span></strong></span><br /><span style="font-size:medium;"><strong><span style="color:#ff0000;">TUẤN NGỌC NHI</span></strong></span></p>\r\n<p>Với phương châm một thị trường năng động của những người năng động.<br />Nhằm đáp ứng và khám phá những điều mới lạ trong một thế giới đầy màu sắc. Một phần nào làm thoả mãn cảm xúc của các bạn bên cạnh những chiếc xe yêu quý của mình, với những sản phẩm cách điệu, làm nổi bật đường nét, cá tính và phong cách sành điệu của các dòng xe trên thị trường.<br />Là một công ty chuyên sản xuất các loại mặt hàng trang trí nội, ngoại thất xe hơi.<br />Với hơn 5 năm hoạt động và trưởng thành Và với hơn 15 năm trải nghiệm và tích tụ kinh nghiệm .<br />Hiện nay công ty chúng tôi dưới sự lãnh đạo của những cán bộ có nhiều năng lực, tràn đầy nhiệt huyết và năng động cùng đội ngủ công nhân được đào tạo tốt, tay nghề cao, đã cho ra đời các sản phẩm đạt trình độ cao. Chuyên cung cấp các mặt hàng này trên toàn quốc, thông qua các đại lý ở thành phố Hồ chí Minh – Hà Nội - Cần Thơ và các tỉnh khác.<br />Các sản phẩm chính được công ty sản xuất :<br />+ Cản sau Inox, baga mui nhôm, cản hông (bệ bước), kèo mui…của các lọai xe<br />+ Phụ tùng trang trí nội ngoại thất nhựa xi crome , composite : Chóa đèn , viền đèn , chén cửa , ốp hông , đuôi cá ...<br />+ Bên cạnh đó, cty đang là đại lý chính thức về bán hàng và lắp đặt film cách nhiệt Solargard- Hoa Kỳ.<br />Đến với chúng tôi, Quý khách sẽ luôn an tâm về chất lượng, giá cả hợp lý!<br />+ Chất lượng sản phẩm ngày càng được minh chứng khi ngày càng nhiều những hảnh xe nổi tiếng khó tính như Toyota , Ford , Kia ,Mercedes ... sản xuất và lắp đặt tại Việt Nam đều ủng hộ sản phẩm của công ty chúng tôi . Nhằm giới thiệu rộng rãi đến Quý khách hàng gần xa<br />Hiện nay công ty chúng tôi thành lập website hỗ trợ trực tiếp đến quý khách hàng. Các thông tin luôn được cập nhật đầy đủ chi tiết và thuận lợi để quý khách hàng tham khảo.<br />Với tiêu chí: Sự hài lòng của các bạn là niềm hạnh phúc của chúng tôi.<br />Mong rằng sẽ nhận được sự góp ý cũng như ủng hộ của Quý vị trong thời gian tới, nhằm nâng cao chất lượng phục vụ Quý khách hàng ngày một tốt hơn.<br />Công ty hy vọng sẽ có cơ hội được đón tiếp và phục vụ quý khách tại các địa chỉ :<br />519 F - Ấp Ngũ Phúc - Hố Nai 3 – Biên Hòa – Đồng Nai<br />ĐT : 0618889297 Fax : 061.8889043<br />Phòng k.Doanh : Mr Minh : 0974851777 /email : minhtnn10@gmail.com / Ms Hà : 01669936274<br />www.tuanngocnhi.com – www.dochoixehoitnn.com</p>\r\n<p>Xin chào thân ái, hợp tác và cùng tiến bộ!</p>', '', 18, '2012-07-25 03:04:10', 2, 0, NULL, NULL, 'gioi-thieu-chung', '', 'Hoan nghênh và chào đón quý khách hàng đến với chúng tôi.\r\n\r\nCÔNG TY TRÁCH NHIỆM HỮU HẠN\r\nTUẤN NGỌC NHI', '', 1, 'khungtroiviets');
 
 -- --------------------------------------------------------
 
@@ -456,11 +456,11 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 
 INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
 ('Trang chủ', '', 'default', '', 1, NULL, NULL, NULL, NULL, 'khungtroiviets'),
-('Sản phẩm', '', 'products', '', 2, NULL, NULL, NULL, NULL, 'khungtroiviets'),
-('Giới thiệu', '', 'about', '', 3, NULL, NULL, NULL, NULL, 'khungtroiviets'),
+('Giới thiệu', '', 'about', '', 2, NULL, NULL, NULL, NULL, 'khungtroiviets'),
+('Sản phẩm', '', 'products', '', 3, NULL, NULL, NULL, NULL, 'khungtroiviets'),
 ('Xi mạ', '', 'services', '', 4, NULL, NULL, NULL, NULL, 'khungtroiviets'),
-('Nổi bật', '', 'news', '', 5, NULL, NULL, NULL, NULL, 'khungtroiviets'),
-('Sự kiện', '', 'video', '', 6, NULL, NULL, NULL, NULL, 'khungtroiviets'),
+('Nổi bật', '', 'video', '', 5, NULL, NULL, NULL, NULL, 'khungtroiviets'),
+('Sự kiện', '', 'news', '', 6, NULL, NULL, NULL, NULL, 'khungtroiviets'),
 ('Liên hệ', '', 'contact', '', 7, NULL, NULL, NULL, NULL, 'khungtroiviets');
 
 -- --------------------------------------------------------
@@ -556,9 +556,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456134),
+('day_time', 2456135),
 ('max_count', 1),
-('counter', 1),
+('counter', 2),
 ('yesterday', 1);
 
 -- --------------------------------------------------------
@@ -577,7 +577,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1343202213);
+('''127.0.0.1''', 1343283474);
 
 -- --------------------------------------------------------
 
@@ -668,10 +668,10 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
 
 INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
 (677, 0, 'ACCENT', '', '', '', 'accent', '', 'ACCENT', '', '', '', 1, '', '', 1, 'khungtroiviets'),
-(678, 0, 'Trang trí ngoại thất', 'Exterior decoration', '', '', 'trang-tri-ngoai-that', 'exterior-decoration', 'Trang trí ngoại thất', 'exterior decoration', '', '', 2, '', '', 1, 'khungtroiviets'),
+(678, 0, 'Trang trí ngoại thất', 'Exterior decoration', '', '', 'trang-tri-ngoai-that', 'exterior-decoration', 'Trang trí ngoại thất', 'exterior decoration', 'trang-tri-ngoai-that.jpg', '', 2, '', '', 1, 'khungtroiviets'),
 (679, 0, 'KHÁCH SẠN', '', '', '', 'khach-san', '', 'KHÁCH SẠN', '', 'khch-sn.jpg', '', 1, '', '', 0, 'khungtroiviets'),
 (680, 0, 'VISA', '', '', '', 'visa', '', 'LÀM VISA', '', 'visa.jpg', '', 1, '', '', 0, 'khungtroiviets'),
-(1071, 0, 'Trang trí nội thật', 'Home Decor', '', '', 'trang-tri-noi-that', 'home-decor', 'Trang trí nội thật', 'Home Decor', '', '', 3, '', '', 1, 'khungtroiviets');
+(1071, 0, 'Trang trí nội thật', 'Home Decor', '', '', 'trang-tri-noi-that', 'home-decor', 'Trang trí nội thật', 'Home Decor', 'trang-tri-noi-that.jpg', '', 3, '', '', 1, 'khungtroiviets');
 
 -- --------------------------------------------------------
 
