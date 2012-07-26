@@ -28,7 +28,7 @@
 </script>
 <?php endif;?>
 <!--[if lt IE 7]>
-<link rel="stylesheet" type="text/css" href="css/ie6.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>css/ie6.css" />
 <![endif]-->
 <?php echo $this->analytics?>
 </head>

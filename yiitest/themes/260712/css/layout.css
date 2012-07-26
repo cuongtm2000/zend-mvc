@@ -1,0 +1,209 @@
+body {background:#fff url(../images/bkg_body.gif) repeat-x; font:9pt cursive, arial, helvetica, sans-serif; }
+.left{float: left;}
+.right{float:right}
+.clear{clear: both;}
+a{text-decoration:none; color:#720E3B}
+a:hover{color:#000;}
+/*layout*/
+*{margin:0; padding:0}
+
+#wrapper {width:1020px;margin:auto;background:url(../images/main_centerbg.gif) repeat-y  }
+
+/*Header*/
+.top-header{position:relative;background:url(../images/welcometext_bg.gif) no-repeat; height:31px;margin:0 0 0 19px;}
+
+.lang{position:absolute;top:8px; left:20px}
+.lang img{ margin:0 2px 0 10px; position:relative; top:2px}
+.lang a{ color:#000}
+.lang a:hover{color:#3EA0B9}
+.hot-line{position:absolute;top:8px; right:27px;color:#FEC10B;font-size:10pt;font-weight:bold}
+
+#header{}
+#logo{padding:10px 0 0 24px;float:left;margin:0 30px 0 0}
+
+/**  nav **/
+.bg-nav{background:url(../images/nav_bg.gif) no-repeat;width:1012px;margin:0 0 0 4px}
+#nav{ list-style:none;padding:0 0 0 37px}
+#nav li{float:left; margin:0 2px 0 0; background:url(../images/nav_spacer.gif) no-repeat right center; position:relative}
+#nav li a{padding:18px 15px;display:block;font-weight:bold;color:#000;font-size:10pt}
+#nav li a:hover{color:#fff}
+#nav li:hover >a{color:#fff}
+#nav li ul{ display:none;border-left:1px dashed #fff;border-right:1px dashed #fff;border-bottom:1px dashed #fff}
+#nav li:hover ul{list-style:none;display:block;background:#FEC10B;position:absolute; z-index:200; top:48px; width:15em}
+#nav li ul li{width:100%;background:none}
+#nav li ul li a{font-weight:normal;color:#fff; padding:3px 5px 3px 15px} 
+#nav li ul li a:hover{ background:#FFD455}
+#nav .select{color:#fff}
+
+/**  Ten cong ty     **/
+.title-company{padding:45px 0 0 0;  font-size:18pt;color:#3CBEDA;font-weight:bold}
+
+/** Banner **/
+#banner{ margin:0 0 10px 0}
+
+/* Page Content*/
+.main-content{padding:0 10px}
+#content{background:url(../images/main_centermidbg.gif) repeat;padding:10px}
+
+/*Left content*/
+#leftcontent{float:left; width:222px }
+
+.frame-leftcontent{margin:0 0 10px 0;background:#fff}
+
+.title-left, .title-red , .title-grey{font-size:10pt;padding:9px 0;background:url(../images/blue_titalbg.gif) no-repeat}
+.title-left span, .title-red span , .title-grey span{padding:0 0 0 15px;font-weight:bold;}
+
+/*sub cat*/
+.sub-cat{list-style:none;padding:10px 5px 10px 15px}
+.sub-cat li{padding:5px 0}
+.sub-cat li a{color:#444;display:block;font-weight:bold}
+.sub-cat li a:hover{ color:#9FBD43}
+.sub-cat li ul{padding:7px 0 0 10px;list-style:none}
+.sub-cat li ul li{padding:4px 0 0 0}
+.sub-cat li ul li a{color:#333;background:url(../images/bullet.jpg) no-repeat left 4px;padding:0 0 0 10px;font-weight:normal} 
+
+/*Ho tro ky thuat*/
+.support{list-style:none;padding:10px 0;text-align:center}
+.support li {color:#444444; line-height:2em;}
+
+/*Thong ke truy cap*/
+.statistics{list-style:none;padding:10px 3px 10px 15px}
+.statistics li {color:#444;padding:0 0 4px 0}
+
+/*bg-adv adv left*/
+.bg-adv{list-style:none;text-align:center;padding:10px 0}
+.bg-adv li{padding:0 0 3px 0}
+
+/*Right content*/
+#rightcontent{float:right; width:750px}
+#rightcontent p{margin:0 0 10px 0}
+#rightcontent ul li, #right-content ol li{margin:4px 0 4px 40px}
+#rightcontent ul ,#right-content ol{margin: 0 0 12px 0}
+
+.frame-panel{background:#fff;margin:0 0 10px 0;padding:2px}
+.frame-tent-right{padding:0 5px 5px 5px}
+.frame-tent-right p{line-height:1.6em}
+
+.title-right{margin:0 0 5px 0; font-size:10pt;padding:9px 0 9px 10px;background:url(../images/tital_bg.gif) repeat-x;font-weight:bold}
+
+.link{color:#000;font-size:11pt;margin:0 0 10px 0}
+.link b{padding:0 5px;font-weight:normal}
+.link a{ color:#249ABB}
+.link a:hover{text-decoration:underline}
+
+/**  product **/
+.main-all-product{background:#fff;padding:2px;margin:0 0 10px 0}
+#rightcontent .all-product{margin:0;padding:5px 0 0 0; list-style:none}
+#rightcontent .all-product .product{width:240px;text-align:center;padding:8px 0;margin:0 0 15px 5px;display:inline-block;background:#DEDEDE;vertical-align:top}
+#rightcontent .all-product li.last{margin:0;} 
+.product-img{width:220px; height:220px;display:table-cell;vertical-align:middle}
+.tent-product{padding:0 10px}
+#rightcontent .price{font-size:14px; font-weight:bold; color:#B6150D;margin:7px 0 0 0}
+.title-pro{padding:7px 0 0 0 ;}
+.title-pro a{color:#000;font-weight:bold}
+.title-pro a:hover{color:#3994AB}
+#rightcontent .bton-cart{margin:0 0 5px 0}
+.add-to-cart{padding: 5px 0 8px 5px; font-weight:700;background:url(../images/bkg_btn.png) no-repeat left top}
+.add-to-cart span{background:url(../images/bkg_btn.png) no-repeat right top; padding:5px 15px 8px 10px; height:25px;color:#fff}
+
+/***    Page product-info     ****/
+.frame-pro-info{padding:0 10px}
+.row-info{margin: 0 0 15px 0}
+.right-info{float:right;width:400px}
+.tent-right-info{padding:0 10px}
+.title-info{margin:0 0 10px 0;color: #fff}
+.title-info span{background: #444444;padding:3px 10px}
+.price-info{color:#000;margin:0 0 10px 0 !important;font-size: 10pt}
+.price-info span{margin: 0 0 0 10px;color:#f33b96}
+.black{font-size:10pt;text-align:right}
+.black a{color:#000;background:url(../images/bull-1.gif) no-repeat left 7px;padding:0 10px 0 8px}
+.black a:hover{background:url(../images/bull.gif) no-repeat left 7px;color:#ED2121}
+
+/*   Page New  */
+.masuring{list-style: none; text-align:justify;font-size:10pt;margin:0 0 20px 0}
+.masuring li{ margin:0 0 10px 0 !important}
+.frame-img{float:left;width:143px; margin:0 8px 0 0}
+.title-masuring{margin:0 0 5px 0}
+.title-masuring a{color:#000}
+.title-masuring a:hover{color:#3994AB}
+
+/* paging */
+ul.paging{float: right; margin:0; padding:0 0 5px 0; list-style: none;}
+ul.paging li{display: inline;margin:0 !important;}
+ul.paging .hidden{display: none;}
+ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{color:#fff;background:#9FBD43;padding:2px 6px;border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px}
+ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{background:#3EA0B9}
+
+/** Form lien he  **/
+#frm{margin:0 0 10px 0;}
+.frame-contact label{color:#000;margin:0;font-weight:bold; width:130px; float:left}
+.frame-contact{list-style:none;margin:15px 0 10px 0}
+.frame-contact li{padding:4px 0; margin:0 !important}
+.frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.frame-contact textarea{border:1px solid #ddd;width: 350px; -moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-contact span{color:#f00;margin:0 5px 0 0;}
+
+.frame-contact .bton-dk{margin:10px 0 5px 30px;background:#9FBD43;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-contact .bton-dk{margin:10px 10px 5px 0}
+/****  End page contact     *****/
+
+/** Column3  **/
+#colum3{float:right; width:222px}
+
+.title-red{background:url(../images/red_titalbg.gif) no-repeat;color:#fff}
+.title-grey{background:url(../images/grey_titalbg.gif) no-repeat}
+
+/**  Sub new   **/
+.sub-new{list-style:none;padding:5px 5px 10px 10px}
+.sub-new li{padding:4px 0}
+.sub-new li a{ display:block;color:#3EA0B9}
+.sub-new li a:hover{color:#CC0000}
+
+/*Footer*/
+.panel-fter{margin:0 0 0 4px}
+.fter-top{background:url(../images/footer-bg-top.gif) no-repeat; height:11px}
+.fter-bottom{background:url(../images/footer-bg-bottom.gif) no-repeat; height:12px}
+#footer{background:url(../images/footer-bg-mid.gif) repeat-y;text-align:center;color:#000;line-height:1.5em}
+#footer a:hover{color:#fff}
+#footer a{color:#000}
+.menu-fter {margin:0 0 5px 0; list-style:none}
+.menu-fter li{display:inline;margin:0 5px 0 0}
+.menu-fter li a{padding:0 8px 0 0;color:#000;background:url(../images/bkg_pipe3.gif) no-repeat right}
+.menu-fter .none-line{margin:0} .menu-fter .none-line a{background:none;padding:0}
+
+/* Error */
+.errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
+.errorSummary ul{margin:0 10px; padding:0}
+.errorSummary ul li{padding:2px 0; color: red}
+/*Add to cart*/
+.form_order{background:#fff;margin:0 0 15px 0;-webkit-border-radius:0 0 4px 6px;-moz-border-radius:0 0 6px 4px}
+.form_order thead{background:#342925}
+.form_order thead tr td{font-weight : bold;padding : 5px !important; color:#fff;font-size:10pt}
+
+.form_order tbody tr td{border : 1px solid #ddd;}
+.form_order tbody tr .pic-order{padding:5px 0}
+.form_order tbody tr input{border:1px solid #ccc}
+.form_order tbody tr td a{color:#2C2C2C}
+.form_order tbody tr td a:hover{color:#3994AB}
+
+.btn_order{cursor:pointer; border:none;font-weight:bold;background:#342925;padding:5px 7px;color:#fff;-webkit-border-radius:4px;-moz-border-radius:4px;margin:0 10px 0 0}
+.btn_order:hover{color:#fff}
+
+.frm-cart label{width:100px}
+.notificaion{color:#2C2C2C;font-size:10pt;margin:0 0 10px 0}
+.note span{color:#f00}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
