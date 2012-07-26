@@ -40,8 +40,13 @@
         array('label'=>$this->lang['default'], 'url'=>array('/admin')),
         array('label'=>'Configuration', 'url'=>array('/admin/config'),
             'items'=>array(
-                array('label'=>'System', 'url'=>array('/admin/config')),
-                array('label'=>'Function position', 'url'=>array('/admin/position')),
+                array('label'=>'System', 'url'=>array('/admin/config'))
+            )
+        ),
+        array('label'=>'Setting', 'url'=>array('/admin/setting'),
+            'items'=>array(
+                array('label'=>'System', 'url'=>array('/admin/setting')),
+                array('label'=>'Modules', 'url'=>array('/admin/setting/modules')),
             )
         ),
         array('label'=>'Contact', 'url'=>array('/site/contact')),

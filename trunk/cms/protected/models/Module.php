@@ -99,4 +99,39 @@ class Module extends CActiveRecord {
         $command = Yii::app()->db->createCommand('SELECT module_id, module_title, module_url FROM ' . $this->tableName() . ' WHERE module_id!=\'default\' AND module_type=1 ORDER BY module_sort ASC');
         return $command->queryAll();
     }
+
+    public function listItemAdmin() {
+        $command = Yii::app()->db->createCommand('SELECT module_id, module_title, module_url, module_sort FROM ' . $this->tableName() . ' WHERE module_type=1 ORDER BY module_sort ASC');
+        return $command->queryAll();
+    }
+
+    //Back end - Active Item
+    public function activeItem($data) {
+        $orders = $data->getPost('orders', '');
+        $sort = $data->getPost('sort', '');
+        $syn = $data->getPost('syn', '');
+
+        if ($sort) {
+            if (is_array($orders)) {
+                while (list($id, $order) = each($orders)) {
+                    $id = strval($id);
+                    $order = intval($order);
+                    if ($id && $order) {
+                        $this::model()->updateByPk($id, array('module_sort' => $order));
+                    }
+                }
+            }
+        } else if ($syn) {
+            $criteria = new CDbCriteria();
+            $criteria->order = 'module_sort ASC';
+            $criteria->condition = 'module_type=1';
+            $models = $this::model()->findAll($criteria);
+
+            $i = 1;
+            foreach ($models as $model) {
+                $this::model()->updateByPk($model['module_id'], array('module_sort' => $i));
+                $i++;
+            }
+        }
+    }
 }

@@ -136,6 +136,7 @@ fieldset .textarea-very-large{width:55%}
 
 fieldset .select-110{width: 110px;}
 fieldset .select-55{width: 55%}
+fieldset .reset-label{float: none; cursor: pointer}
 
 fieldset .label-txt-very-tiny{width:22px; padding-right:7px}
 fieldset .label-txt-tiny{width:70px; padding-right:7px}

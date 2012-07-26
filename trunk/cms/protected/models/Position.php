@@ -104,4 +104,50 @@ class Position extends CActiveRecord {
         $command->bindParam(":module", $page, PDO::PARAM_STR);
         return $command->queryAll();
     }
+
+    //Back end - Data position
+    public function dataPosition() {
+        return array('header', 'left', 'center', 'right', 'footer');
+    }
+
+    //Back end - Function, Position by Page
+    public function getFuncByModule($page) {
+        $command = Yii::app()->db->createCommand('SELECT pos_id, hoiit_functions_function_value FROM ' . $this->tableName() . ' WHERE module_id=:module ORDER BY pos_sort ASC');
+        $command->bindParam(":module", $page, PDO::PARAM_STR);
+        return $command->queryAll();
+    }
+
+    //Back end - Add item
+    public function addItem($id, $data = NULL) {
+        $function = $data->getPost('function', '');
+        $position = $data->getPost('position', '');
+        $delete = $data->getPost('delete', '');
+        $function = array_unique($function); //Removes duplicate values from an array
+
+        $this->deleteItem($id); //delete
+        $i = 1;
+        foreach ($function as $key => $value) {
+            if (!(isset($delete[$key]) && $delete[$key] == 1)) {
+                $this->insertItem($position[$key], $i, $id, $function[$key]);
+                $i++;
+            }
+
+        }
+    }
+
+    private function deleteItem($page) {
+        $command = Yii::app()->db->createCommand('DELETE FROM ' . $this->tableName() . ' WHERE module_id=:id');
+        $command->bindParam(":id", $page, PDO::PARAM_STR);
+        $command->execute();
+    }
+
+    //Back end - insert item
+    private function insertItem($pos_id, $pos_sort, $module_id, $function_value) {
+        $command = Yii::app()->db->createCommand('INSERT INTO ' . $this->tableName() . ' (pos_id, pos_sort, pos_activated, module_id, hoiit_functions_function_value) VALUES (:pos_id, :pos_sort, 1, :module_id, :function_value)');
+        $command->bindParam(":pos_id", $pos_id, PDO::PARAM_STR);
+        $command->bindParam(":pos_sort", $pos_sort, PDO::PARAM_INT);
+        $command->bindParam(":module_id", $module_id, PDO::PARAM_STR);
+        $command->bindParam(":function_value", $function_value, PDO::PARAM_STR);
+        $command->execute();
+    }
 }
