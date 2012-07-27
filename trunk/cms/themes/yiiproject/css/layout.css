@@ -85,7 +85,7 @@ a:hover{color:#000;}
 .title-left{color:#444; font-weight:bold; padding:8px 0 8px 0;font-weight:bold; background:url(../images/titalbg.gif) no-repeat;font-size:10pt}
 .title-left span{padding:0 10px 0 10px; }
 
-.title-box{color:#3B3B3B; font-weight:bold; padding:8px 0 8px 0;font-weight:bold; background:#EEE url(../images/tital-bullet.gif) no-repeat 10px;}
+.title-box{color:#3B3B3B; font-weight:bold; padding:8px 0 8px 0;font-weight:bold; font-size:100%; background:#EEE url(../images/tital-bullet.gif) no-repeat 10px;}
 .title-box span{padding:0px 10px 0 25px}
 
 /*sub cat*/
