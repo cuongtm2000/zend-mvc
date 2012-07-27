@@ -118,6 +118,7 @@
         </div>
         <div id="content">
         	 <div id="rightcontent">
+				<?php echo $content; ?>
             	<div class="">
                     <div class="img-panel"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/webmaster_tools-128.png" alt="tool" /></div>
                     <h3 class="title-panel">Công cụ quản trị trang web</h3>
@@ -132,6 +133,7 @@
                 </div>
             </div><!--End right content-->
         	<div id="leftcontent">
+				<?php $this->getPosition('right');?>
             	<h1 class="title-left"><span>Sản phẩm</span></h1>
                 <ul class="frame-leftcontent sub-cat">
                 	<li><a href="#" title="" >Women</a>
@@ -183,8 +185,8 @@
 			<li><a href="#">Advanced Search</a></li>
 			<li><a class="none-line" href="contact.html">Contact Us</a></li>
 		</ul> <div class="clear"></div>
-		<p>&copy; 2011 Jewelry Vip. All Rights Reserved.</p>
-		<div class="copyright">Design by Website <a href="#" title="">azweb.vn</a></div> <div class="clear"></div>
+		<p>&copy; <?php echo date('Y') . ' ' . Yii::app()->name ?>. All Rights Reserved.</p>
+		<div class="copyright">Design by <a href="http://yiiproject.com" title="Go to YiiProject.com" target="_blank">YiiProject.com</a></div> <div class="clear"></div>
     </div><!--End Footer-->
 </div><!--End bg fter-->
 </body>

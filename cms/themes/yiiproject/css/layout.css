@@ -48,6 +48,8 @@ a:hover{color:#000;}
 #nav .select:hover{background: none}
 #nav .select span:hover{color: #eee}*/
 
+.box{border:1px solid #F2F2F2;background:#FBFBFB;padding:10px; margin:0 0 20px 0}
+
 /****    *****/
 .fonttext{font-family:"open sans",arial,sans-serif}
 .main-about{padding:40px 0 30px 0;border-bottom:1px solid #E5E5E5;margin:0 0 40px 0}

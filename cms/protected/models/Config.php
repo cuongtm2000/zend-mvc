@@ -94,4 +94,31 @@ class Config extends CActiveRecord {
         $command->bindParam(":value", $name, PDO::PARAM_STR);
         return $command->queryScalar();
     }
+	
+	//Back end - config_name, config_value By module_id
+	public function getNameValue($module_id) {
+        $command = Yii::app()->db->createCommand('SELECT config_name, config_value, config_desc FROM '. $this->tableName().' WHERE hoiit_modules_module_id =:module_id');
+        $command->bindParam(":module_id", $module_id, PDO::PARAM_STR);
+        return $command->queryAll();
+    }
+	
+	//Back end - Add item
+	public function addItem($id, $data){
+		$name = $data->getPost('name', '');
+        $values = $data->getPost('value', '');
+		
+		$this::model()->deleteAll('hoiit_modules_module_id=:module', array(':module'=>$id));
+		foreach ($name as $key => $value) {
+			$this->insertItem($name[$key], $values[$key], $id);
+		}
+	}
+	
+	//Back end - insert item
+    private function insertItem($config_name, $config_value, $module_id) {
+        $command = Yii::app()->db->createCommand('INSERT INTO ' . $this->tableName() . ' (config_name, config_value, hoiit_modules_module_id) VALUES (:config_name, :config_value, :module_id)');
+        $command->bindParam(":config_name", $config_name, PDO::PARAM_STR);
+        $command->bindParam(":config_value", $config_value, PDO::PARAM_INT);
+        $command->bindParam(":module_id", $module_id, PDO::PARAM_STR);
+        $command->execute();
+    }
 }
