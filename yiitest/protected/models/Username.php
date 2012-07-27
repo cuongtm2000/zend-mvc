@@ -263,6 +263,16 @@ class Username extends CActiveRecord {
         $command->execute();
     }
 
+    //Back end - Count agent
+    public function countUser($id, $type = 0) {
+        $command = Yii::app()->db->createCommand('SELECT COUNT(agent_sale) as num FROM ' . $this->tableName() . ' WHERE agent_sale=:agent');
+        if($type==1){
+            $command = Yii::app()->db->createCommand('SELECT COUNT(agent_tech) as num FROM ' . $this->tableName() . ' WHERE agent_tech=:agent');
+        }
+        $command->bindParam(":agent", $id, PDO::PARAM_INT);
+        return $command->queryScalar();
+    }
+
     //Back end - Change password
     public function changePass($password, $user) {
         $purifier = new CHtmlPurifier();
