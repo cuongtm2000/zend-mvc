@@ -18,7 +18,7 @@ class AdminController extends BackEndController {
         //$this->render('index');
     }
 
-    public function actionConfig() {
+    /*public function actionConfig() {
         $model = new Setting();
         $data = $model->getSetting();
 
@@ -38,7 +38,7 @@ class AdminController extends BackEndController {
         }
 
         $this->render('config', array('model' => $model));
-    }
+    }*/
 
     // Uncomment the following methods and override them if needed
     /*

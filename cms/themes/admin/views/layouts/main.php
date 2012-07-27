@@ -38,15 +38,10 @@
     'linkLabelWrapper' => 'span',
     'items'=>array(
         array('label'=>$this->lang['default'], 'url'=>array('/admin')),
-        array('label'=>'Configuration', 'url'=>array('/admin/config'),
+        array('label'=>'Configuration', 'url'=>array('/admin/setting'),
             'items'=>array(
-                array('label'=>'System', 'url'=>array('/admin/config'))
-            )
-        ),
-        array('label'=>'Setting', 'url'=>array('/admin/setting'),
-            'items'=>array(
-                array('label'=>'System', 'url'=>array('/admin/setting')),
-                array('label'=>'Modules', 'url'=>array('/admin/setting/modules')),
+                array('label'=>'System Configuration', 'url'=>array('/admin/setting/config')),
+                array('label'=>'Modules Configuration', 'url'=>array('/admin/setting/modules')),
             )
         ),
         array('label'=>'Menus', 'url'=>array('/site/contact'))

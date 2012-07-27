@@ -7,6 +7,7 @@ class MenuMultiLevel extends Menu {
     public $lastItemCssClass = null;
     public $htmlOptions = array();
     public $jquery = 0;
+    public $effectDefault = 0;
     public $subTagOpen = null;
     public $tagOpen = null;
     public $subTagClose = null;
@@ -20,7 +21,7 @@ class MenuMultiLevel extends Menu {
 
     public function publishAssets() {
         if ($items = $this->getItems()) {
-            $this->registerFiles();
+            if($this->effectDefault == 1) $this->registerFiles();
 
             echo $this->tagOpen;
             $menu = array(
