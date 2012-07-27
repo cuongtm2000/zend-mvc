@@ -147,7 +147,7 @@ class Customers extends CActiveRecord {
             if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full']) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $this->pic_full = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_full'], 665, 800, '/public/userfiles/image/dos/image/' . Yii::app()->controller->id, $this->customer_name);
+                $this->pic_full = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_full'], 665, 1200, '/public/userfiles/image/dos/image/' . Yii::app()->controller->id, $this->customer_name);
             }
         } else {
             //check file old and upload
@@ -162,7 +162,7 @@ class Customers extends CActiveRecord {
             if ($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full']) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $this->pic_full = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_full'], 665, 800, '/public/userfiles/image/dos/image/' . Yii::app()->controller->id, $this->customer_name, $this->_oldImageFull);
+                $this->pic_full = $file->processUpload($_FILES[ucfirst(Yii::app()->controller->id)]['name']['pic_full'], $_FILES[ucfirst(Yii::app()->controller->id)]['tmp_name']['pic_full'], 665, 1200, '/public/userfiles/image/dos/image/' . Yii::app()->controller->id, $this->customer_name, $this->_oldImageFull);
             } else {
                 $this->pic_full = $this->_oldImageFull;
             }
