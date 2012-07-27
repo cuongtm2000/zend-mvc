@@ -116,6 +116,7 @@ a:hover{color:#000;}
 .customers-img{margin:0 0 5px 0;padding:0 0 5px 0}
 .customers-img img{border:1px solid #e1e1e1}
 .customers .customers-img:hover{opacity:0.7}
+.title-tomers {font-size:9pt;font-weight:normal}
 .customers li:hover .title-tomers a{color:#0076BC}
 .title-tomers a{color:#000;display:block} .title-tomers a:hover{color:#0076BC}
 
@@ -235,7 +236,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 
 #sign-up{margin:-12px 0 0 0; background: #fff url(../images/white-top-shadow.png) repeat-x; border-left: 2px solid #D7D5D0; border-right: 2px solid #D7D5D0; padding: 20px}
 .sign-up-heading{background: url(../images/bullet.png) no-repeat left; position: relative; padding-left: 32px; margin-top: 15px; margin-right: 32px}
-.sign-up-heading h1, .heading-contact{font-size: 14pt; font-weight: bold; font-family: tahoma; color: #434343}
+.sign-up-heading h1, .heading-contact{font-size: 14pt; font-weight: bold; font-family: tahoma; color: #434343;margin:0 0 10px 0}
 .sign-up-heading h1.small{font-size: 13pt; font-weight: bold; font-family: tahoma; color: #434343; padding:2px 0}
 .sign-up-heading h1.small span{top: 1px}
 .sign-up-heading span{color: #fff; font-size: 12pt; position: absolute; left: 8px; top: 5px}
