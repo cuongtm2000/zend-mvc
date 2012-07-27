@@ -8,55 +8,60 @@ class CSimpleImage {
     private $image_info;
 
     public function processUpload($file_name, $tmp, $width, $height, $path, $filename = '', $file_old = '', $type = 0, $txt_new_name = '') {
-        $this->image_info = $image_info = getimagesize($tmp);
-        $this->image_type = $image_info[2];
-        if ($this->image_type == IMAGETYPE_JPEG) {
-            $this->image = imagecreatefromjpeg($tmp);
-        } elseif ($this->image_type == IMAGETYPE_GIF) {
-            $this->image = imagecreatefromgif($tmp);
-        } elseif ($this->image_type == IMAGETYPE_PNG) {
-            $this->image = imagecreatefrompng($tmp);
-        }
+		if ($file_name) {
+			$this->image_info = $image_info = getimagesize($tmp);
+			$this->image_type = $image_info[2];
+			if ($this->image_type == IMAGETYPE_JPEG) {
+				$this->image = imagecreatefromjpeg($tmp);
+			} elseif ($this->image_type == IMAGETYPE_GIF) {
+				$this->image = imagecreatefromgif($tmp);
+			} elseif ($this->image_type == IMAGETYPE_PNG) {
+				$this->image = imagecreatefrompng($tmp);
+			}
 
-        //path and filename
-        $path_upload = YiiBase::getPathOfAlias('webroot') . $path . '/';
+			//path and filename
+			$path_upload = YiiBase::getPathOfAlias('webroot') . $path . '/';
 
-        //check Directory Exists
-        if (!is_dir($path_upload)) {
-            mkdir($path_upload, 0777, true);
-            chmod($path_upload, 0777);
-        }
+			//check Directory Exists
+			if (!is_dir($path_upload)) {
+				mkdir($path_upload, 0777, true);
+				chmod($path_upload, 0777);
+			}
 
-        //check remove file old
-        if (($file_old) && file_exists($path_upload . $file_old)) {
-            unlink($path_upload . $file_old);
-        }
+			//check remove file old
+			if (($file_old) && file_exists($path_upload . $file_old)) {
+				unlink($path_upload . $file_old);
+			}
 
-        if ($type == 1) {
-            //change name using user input txt name
-            //$filename = $this->getFileExists($path_upload, NoneUnicode::fileName($txt_new_name . '.' . $this->getExtensionName()));
-        } else {
-            //change name using user input name
-            $this->_filename = $this->getFileExists($path_upload, NoneUnicode::fileName($filename . '.' . $this->getExtensionName($file_name)));
-        }
+			if ($type == 1) {
+				//change name using user input txt name
+				//$filename = $this->getFileExists($path_upload, NoneUnicode::fileName($txt_new_name . '.' . $this->getExtensionName()));
+			} else {
+				//change name using user input name
+				$this->_filename = $this->getFileExists($path_upload, NoneUnicode::fileName($filename . '.' . $this->getExtensionName($file_name)));
+			}
 
-        //upload
-        if (($this->getWidth() > $width) || ($this->getHeight() > $height)) {
-            //type resize
-            $this->resizeToWidth($width, $height);
-            $this->save($path_upload . $this->_filename);
-        } else {
-            move_uploaded_file($tmp, $path_upload . $this->_filename);
-        }
+			//upload
+			if (($this->getWidth() > $width) || ($this->getHeight() > $height)) {
+				//type resize
+				$this->resizeToWidth($width, $height);
+				$this->save($path_upload . $this->_filename);
+			} else {
+				move_uploaded_file($tmp, $path_upload . $this->_filename);
+			}
 
-        return $this->_filename;
+			return $this->_filename;
+		}
+		return $this->_filename;
     }
 
     public function uploadMulti($file_name, $tmp, $width, $height, $path, $filename = '') {
         $file_desc_multi = array();
         $size = count($file_name);
         for ($i = 0; $i < $size; $i++) {
-            $file_desc_multi[] = $this->processUpload($file_name[$i], $tmp[$i], $width, $height, $path, $filename . '-desc-' . ($i + 1));
+			if ($file_name[$i]) {
+				$file_desc_multi[] = $this->processUpload($file_name[$i], $tmp[$i], $width, $height, $path, $filename . '-desc-' . ($i + 1));
+			}
         }
         return $file_desc_multi;
     }

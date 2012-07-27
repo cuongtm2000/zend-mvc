@@ -8,6 +8,8 @@
                 <th class="txt60">Mã số</th>
                 <th>Họ và tên</th>
                 <th>Phone</th>
+                <th>User Sale</th>
+                <th>User Tech</th>
                 <th>Điểm</th>
                 <th>Thưởng</th>
                 <th>Tỉnh thành</th>
@@ -23,10 +25,12 @@
                         <td><?php echo CHtml::link($value['agent_id'], array('edit', 'id' =>$value['agent_id'])) ?></td>
                         <td><?php echo $value['fullname'] ?></td>
                         <td><?php echo $value['phone'] ?></td>
+                        <td><?php echo Username::model()->countUser($value['agent_id'])?></td>
+                        <td><?php echo Username::model()->countUser($value['agent_id'], 1)?></td>
                         <td><?php echo $value['point'] ?></td>
                         <td><?php echo $value['bonus']?></td>
                         <td><?php echo $value->Provinces->province_name?></td>
-                        <td><?php echo CHtml::link('Edit', array('edit', 'id' => $value->agent_id)) ?> - <?php echo CHtml::link('Password', array('password', 'id' => $value->agent_id)) ?></td>
+                        <td><?php echo CHtml::link('Edit', array('edit', 'id' => $value->agent_id)) ?> - <?php echo CHtml::link('Password', array('password', 'id' => $value->agent_id)) ?> - <?php echo CHtml::link('Delete', array('delete', 'id' => $value->agent_id)) ?></td>
                     </tr>
                     <?php $i++; endforeach; ?>
 			<?php else:?>

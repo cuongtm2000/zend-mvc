@@ -1,8 +1,8 @@
 <?php
 return array(
 	'pageTitle' => 'Tạo website trực tuyến',
-	'keywords' => 'Dịch vụ tạo website trực tuyến, chọn mẫu, đăng ký và chạy thử mẫu website, dễ dàng quản lý, khởi tạo nhanh chóng, đúng chuẩn W3C',
-	'description' => 'Dịch vụ tạo website trực tuyến: Chọn mẫu website, đăng ký tài khoản, chạy thử website, dể dàng quản lý và nhập liệu, dữ liệu được nhập tự động theo ngành nghề bạn chọn',
+	'keywords' => 'Dịch vụ thiết kế website, tạo website trực tuyến, web đúng chuẩn W3C, nhanh xuất hiện google, xây dựng web cá nhân, doanh nghiệp',
+	'description' => 'Thiết kế website trực tuyến Ấn tượng, nhanh chóng, hiệu quả. Hỗ trợ quảng cáo miễn phí đến cộng đồng. Xuất hiện trên google sau 24h, dữ liệu nhập tự động theo ngành nghề, dễ dàng nhập liệu, quản lý, báo cáo thống kê',
 
 	'article-pageTitle' => 'Bản tin website Dos.vn',
     'tutorial-pageTitle' => 'Hướng dẫn sử dụng',
