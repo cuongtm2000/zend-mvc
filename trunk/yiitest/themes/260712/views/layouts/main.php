@@ -74,58 +74,47 @@
 				)); ?> <!-- breadcrumbs -->
         	<div id="leftcontent">
 				<?php if(isset($this->function['menu_about']) && ($this->function['menu_about'])):?>
-				<div class="frame-leftcontent">
-					<h2 class="title-left"><span><?php echo $this->lang['about'] ?></span></h2>
-					<ul class="sub-cat">
-						<?php foreach($this->function['menu_about'] as $value): ?>
-						<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'about.link')?>/<?php echo $value['tag'.LANG]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
-						<?php endforeach; ?>
-					</ul>
-				</div> <!--End frame-leftcontent-->
+				<h2 class="title-left"><span><?php echo $this->lang['about'] ?></span></h2>
+				<ul class="frame-leftcontent sub-cat">
+					<?php foreach($this->function['menu_about'] as $value): ?>
+					<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'about.link')?>/<?php echo $value['tag'.LANG]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
+					<?php endforeach; ?>
+				</ul>
 				<?php endif;?>
 
 				<?php if(isset($this->function['menu_services']) && ($this->function['menu_services'])):?>
-				<div class="frame-leftcontent">
-					<h2 class="title-left"><span><?php echo $this->lang['services'] ?></span></h2>
-					<ul class="sub-cat">
-						<?php foreach($this->function['menu_services'] as $value): ?>
-						<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'services.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
-						<?php endforeach; ?>
-					</ul>
-				</div> <!--End frame-leftcontent-->
+				<h2 class="title-left"><span><?php echo $this->lang['services'] ?></span></h2>
+				<ul class="frame-leftcontent sub-cat">
+					<?php foreach($this->function['menu_services'] as $value): ?>
+					<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'services.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
+					<?php endforeach; ?>
+				</ul>
 				<?php endif;?>
 
 				<?php if(isset($this->function['menu_news']) && ($this->function['menu_news'])):?>
-				<div class="frame-leftcontent">
-					<h2 class="title-left"><span><?php echo CHtml::encode($this->lang['news']) ?></span></h2>
-					<ul class="sub-cat">
-						<?php Common::menuMultiLevel($this->function['menu_news'], 'NewsCat', Yii::t('user', 'news.link')); ?>
-					</ul>
-				</div> <!--End frame-leftcontent-->	
+				<h2 class="title-left"><span><?php echo CHtml::encode($this->lang['news']) ?></span></h2>
+				<ul class="frame-leftcontent sub-cat">
+					<?php Common::menuMultiLevel($this->function['menu_news'], 'NewsCat', Yii::t('user', 'news.link')); ?>
+				</ul>
 				<?php endif; ?>
 
 				<?php if(isset($this->function['menu_video']) && ($this->function['menu_video'])):?>
-				<div class="frame-leftcontent">
-					<h2 class="title-left"><span><?php echo $this->lang['video'] ?></span></h2>
-					<ul class="sub-cat">
-						<?php Common::menuMultiLevel($this->function['menu_video'], 'VideoCat', Yii::t('user', 'video.link')); ?>
-					</ul>
-				</div> <!--End frame-leftcontent-->	
+				<h2 class="title-left"><span><?php echo $this->lang['video'] ?></span></h2>
+				<ul class="frame-leftcontent sub-cat">
+					<?php Common::menuMultiLevel($this->function['menu_video'], 'VideoCat', Yii::t('user', 'video.link')); ?>
+				</ul>
 				<?php endif; ?>
 
 				<?php if(isset($this->function['menu_products']) && ($this->function['menu_products'])):?>
-				<div class="frame-leftcontent">
 				<h2 class="title-left"><span><?php echo $this->lang['products'] ?></span></h2>
-				<ul class="sub-cat">
+				<ul class="frame-leftcontent sub-cat">
 					<?php Common::menuMultiLevel($this->function['menu_products'], 'ProductsCat', Yii::t('user', 'products.link')); ?>
 				</ul>
-				</div> <!--End frame-leftcontent-->
 				<?php endif;?>
 
 				<?php if(isset($this->function['list_supports']) && ($this->function['list_supports'])):?>
-				<div class="frame-leftcontent">
 				<h2 class="title-left"><span><?php echo $this->lang['supports'] ?></span></h2>
-				<ul class="support">
+				<ul class="frame-leftcontent  support">
 					<?php foreach($this->function['list_supports'] as $value): ?>
 						<?php if($value['support_type']=='yahoo'): ?>
 						<li>
@@ -142,30 +131,25 @@
 						<?php endif; ?>
 					<?php endforeach; ?>
 				</ul>
-				</div> <!--End frame-leftcontent-->
 				<?php endif; ?>
 				
-				<div class="frame-leftcontent">
 					<h2 class="title-left"><span><?php echo $this->lang['counter'] ?></span></h2>
-					<ul class="statistics">
+					<ul class="frame-leftcontent  statistics">
 						<li><?php echo Yii::t('user', 'online')?>: <?php echo Yii::app()->counter->getOnline(); ?></li>
 						<li><?php echo Yii::t('user', 'today')?>: <?php echo Yii::app()->counter->getToday(); ?></li>
 						<li><?php echo Yii::t('user', 'yesterday')?>: <?php echo Yii::app()->counter->getYesterday(); ?></li>
 						<li><?php echo Yii::t('user', 'total')?>: <?php echo Yii::app()->counter->getTotal(); ?></li>
 					</ul>
-				</div> <!--End frame-leftcontent-->
 				
 				<?php if(isset($this->function['advs_left']) && ($this->function['advs_left'])):?>
-				<div class="frame-leftcontent">
 					<h2 class="title-left"><span><?php echo $this->lang['advs'] ?></span></h2>
-					<ul class="bg-adv">
+					<ul class="frame-leftcontent  bg-adv">
 						<?php foreach($this->function['advs_left'] as $value): ?>
 						<li>
 							<a href="<?php echo $value['url'] ?>" target="<?php echo $value['type'] ?>" title="<?php echo $value['title'.Yii::app()->session['lang']] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.Yii::app()->session['lang']] ?>" /></a>
 						</li>
 						<?php endforeach; ?>
 					</ul>
-				</div> <!--End frame-leftcontent-->
 				<?php endif;?>
             </div><!--End left content-->
             <div id="rightcontent">
