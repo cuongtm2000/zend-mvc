@@ -1,4 +1,4 @@
-body {background:#fff url(../images/bkg_body.gif) repeat-x; font:9pt cursive, arial, helvetica, sans-serif; }
+body {background:#fff url(../images/bkg_body.gif) repeat; font:9pt cursive, arial, helvetica, sans-serif; }
 .left{float: left;}
 .right{float:right}
 .clear{clear: both;}
@@ -22,7 +22,7 @@ a:hover{color:#000;}
 #logo{padding:10px 0 0 24px;float:left;margin:0 30px 0 0}
 
 /**  nav **/
-.bg-nav{background:#f00 url(../images/nav_bg.gif) no-repeat;width:1012px;margin:0 0 0 4px}
+.bg-nav{background: url(../images/nav_bg.gif) no-repeat;width:1012px;margin:0 0 0 4px}
 #nav{ list-style:none;padding:0 0 0 37px}
 #nav li{float:left; margin:0 2px 0 0; background:url(../images/nav_spacer.gif) no-repeat right center; position:relative}
 #nav li a{padding:18px 15px;display:block;font-weight:bold;color:#000;font-size:10pt}
@@ -33,7 +33,7 @@ a:hover{color:#000;}
 #nav li ul li{width:100%;background:none}
 #nav li ul li a{font-weight:normal;color:#fff; padding:3px 5px 3px 15px} 
 #nav li ul li a:hover{ background:#FFD455}
-#nav .select{background:url(../images/nav_hover.jpg) repeat-x left center; color:#000;}
+#nav .select{color:#fff;}
 
 /**  Ten cong ty     **/
 .title-company{padding:45px 0 0 0;  font-size:18pt;color:#3CBEDA;font-weight:bold}
@@ -46,15 +46,14 @@ a:hover{color:#000;}
 #content{background:url(../images/main_centermidbg.gif) repeat;padding:10px}
 
 /*Left content*/
-#leftcontent{float:left; width:222px }
-
+#leftcontent{float:left; width:222px; overflow: hidden}
 .frame-leftcontent{margin:0 0 10px 0;background:#fff}
 
-.title-left, .title-red , .title-grey{font-size:10pt;padding:9px 0;background:#f00 url(../images/blue_titalbg.gif) no-repeat}
+.title-left, .title-red , .title-grey{font-size:10pt;padding:9px 0;background: url(../images/blue_titalbg.gif) no-repeat}
 .title-left span, .title-red span , .title-grey span{padding:0 0 0 15px;font-weight:bold;}
 
 /*sub cat*/
-.sub-cat{list-style:none;padding:10px 5px 10px 15px}
+.sub-cat{list-style:none;padding:10px 5px 10px 15px; margin:0 0 10px 0;background:#fff}
 .sub-cat li{padding:5px 0}
 .sub-cat li a{color:#444;display:block;font-weight:bold}
 .sub-cat li a:hover{ color:#9FBD43}
@@ -75,16 +74,20 @@ a:hover{color:#000;}
 .bg-adv li{padding:0 0 3px 0}
 
 /*Right content*/
-#rightcontent{float:left; width:520px;margin:0 0 0 8px}
+#rightcontent{float:left; width:520px;margin:0 0 0 8px; overflow: hidden;}
 #rightcontent p{margin:0 0 10px 0}
 #rightcontent ul li, #right-content ol li{margin:4px 0 4px 40px}
 #rightcontent ul ,#right-content ol{margin: 0 0 12px 0}
+
+/* column 2*/
+#rightcontent-col2{float:right; width:750px; overflow: hidden}
+#rightcontent-col2 .all-product .product{width:240px;text-align:center;padding:8px 0;margin:0 0 15px 5px;display:inline-block;background:#DEDEDE;vertical-align:top}
 
 .frame-panel{background:#fff;margin:0 0 10px 0;padding:2px}
 .frame-tent-right{padding:0 5px 5px 5px}
 .frame-tent-right p{line-height:1.6em}
 
-.title-right{margin:0 0 5px 0; font-size:10pt;padding:9px 0 9px 10px;background:#f00 url(../images/tital_bg.gif) repeat-x;font-weight:bold}
+.title-right{margin:0 0 5px 0; font-size:10pt;padding:9px 0 9px 10px;background: url(../images/tital_bg.gif) repeat-x;font-weight:bold}
 
 .link{color:#000;padding:5px 0 5px 0; border-bottom:1px dashed #e1e1e1; margin:0 0 10px 0}
 .link span{color:#D2A800; font-weight:normal}
@@ -145,7 +148,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 /****  End page contact     *****/
 
 /** Column3  **/
-#colum3{float:right; width:222px}
+#colum3{float:right; width:222px; overflow:hidden}
 
 .title-red{background:url(../images/red_titalbg.gif) no-repeat;color:#fff}
 .title-grey{background:url(../images/grey_titalbg.gif) no-repeat}
@@ -189,18 +192,3 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .frm-cart label{width:100px}
 .notificaion{color:#2C2C2C;font-size:10pt;margin:0 0 10px 0}
 .note span{color:#f00}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

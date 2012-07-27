@@ -89,12 +89,12 @@ ul.modals li a img {float:left; display:inline; width:48px; height:48px; margin-
 table{border-collapse : separate; border-spacing : 0;}
 caption, th, td {text-align : left; font-weight : normal;}
 table, td, th {vertical-align : middle;}
-table {width : 100%; border : 1px solid #ccc;} 
+table {width : 100%; border : 1px solid #ccc;}
 table table{border:0!important;}
 thead tr th {font-weight : bold; background :#E1E3EC; border-bottom : 1px solid #C6C6C6; padding : 5px; font-size:10pt}
 thead tr th a{color: #000}
-thead tr th a:hover{color: #3A6AAD} 
-tbody tr td {padding : 6px 5px; background : #fff; color : #111; cursor: pointer}
+thead tr th a:hover{color: #3A6AAD}
+tbody tr td {padding : 6px 5px; color : #111; cursor: pointer}
 tbody tr.alt td {background : #eee}
 tbody tr.disable td{background: #F9F5F5; color : #aaa}
 tbody tr td a{color: #000}
@@ -102,6 +102,10 @@ tbody tr td a:hover{color: #1E335F;}
 tbody tr.red td{background: #f3c1c1; color : #aaa}
 tbody tr.red td a{color : #aaa}
 tbody tr.green td, tbody tr.green a{background: #c2ecb7; color : #aaa}
+
+#table{border: none}
+#table tr.alt td {background-color: #ecf6fc}
+#table tbody tr td{padding: 3px 2px; cursor: move}
 
 .control-button{width: auto; float: left; margin: 6px 0;}
 .control-button input{background: none; border: none; cursor: pointer; color: #3A66DD; font-size: 10pt; padding-right:7px}
