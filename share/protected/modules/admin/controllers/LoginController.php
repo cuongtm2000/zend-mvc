@@ -13,7 +13,7 @@ class LoginController extends AdminController {
                 Yii::app()->session['subdomain'] = Yii::app()->user->id; //coi lai 1 so cai can thoi
 				$_SESSION['KCFINDER'] = array();
 				$_SESSION['KCFINDER']['disabled'] = false;
-				$_SESSION['KCFINDER']['uploadURL'] = "/public/userfiles/image/" . Yii::app()->user->id;
+				$_SESSION['KCFINDER']['uploadURL'] = Yii::app()->baseUrl.'/public/userfiles/image/' . Yii::app()->user->id;
 				$_SESSION['KCFINDER']['maxImageWidth'] = Configs::configTemplate('max_image_width', Yii::app()->session['template']);
 				$_SESSION['KCFINDER']['maxImageHeight'] = Configs::configTemplate('max_image_height', Yii::app()->session['template']);
 
