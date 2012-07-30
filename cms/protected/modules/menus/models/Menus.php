@@ -105,7 +105,7 @@ class Menus extends CActiveRecord {
     public function listCats($cid = 0, $prefix = NULL, $type = 0, $id = 0) {
         $criteria = new CDbCriteria();
         $criteria->with = array('Language', 'MenusLanguage');
-        $criteria->order = 'menu_sort DESC';
+        $criteria->order = 'menu_sort';
 
         if ($cid == 1) {
             //for add, edit cat
@@ -235,6 +235,7 @@ class Menus extends CActiveRecord {
         if (Yii::app()->controller->action->id == 'add') {
             $menu = new Menus();
             $menu->parent_id = $model->parent_id;
+            $menu->menu_type = $model->menu_type;
             $menu->menu_target = $model->menu_target;
             $menu->menu_homepage = $model->menu_homepage;
             $menu->menu_activated = $model->menu_activated;
@@ -245,6 +246,7 @@ class Menus extends CActiveRecord {
         } else {
             $item = $this::model()->findByPk($id);
             $item->parent_id = $model->parent_id;
+            $item->menu_type = $model->menu_type;
             $item->menu_target = $model->menu_target;
             $item->menu_homepage = $model->menu_homepage;
             $item->menu_activated = $model->menu_activated;

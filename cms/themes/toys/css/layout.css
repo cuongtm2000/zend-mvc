@@ -33,7 +33,7 @@ a:hover{color:#000;}
 #nav li ul li{width:100%;background:none}
 #nav li ul li a{font-weight:normal;color:#fff; padding:3px 5px 3px 15px} 
 #nav li ul li a:hover{ background:#FFD455}
-#nav .select{color:#fff;}
+#nav .selected a{color:#fff;}
 
 /**  Ten cong ty     **/
 .title-company{padding:45px 0 0 0;  font-size:18pt;color:#3CBEDA;font-weight:bold}
