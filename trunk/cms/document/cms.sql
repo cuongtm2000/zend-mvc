@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 28, 2012 at 05:21 PM
+-- Generation Time: Jul 30, 2012 at 12:40 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -50,10 +50,6 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('adv_right_width', 222, NULL, 'adv'),
 ('adv_top_height', 222, NULL, 'adv'),
 ('adv_top_width', 222, NULL, 'adv'),
-('news_cat_height_thumb', 89, NULL, 'news'),
-('news_cat_width_thumb', 143, NULL, 'news'),
-('news_height_thumb', 89, NULL, 'news'),
-('news_width_thumb', 143, NULL, 'news'),
 ('products_cat_height_thumb', 200, NULL, 'products'),
 ('products_cat_width_thumb', 200, NULL, 'products'),
 ('products_height_desc', 700, NULL, 'products'),
@@ -184,7 +180,7 @@ INSERT INTO `hoiit_languages` (`language_id`, `language_name`, `language_sort`) 
 
 CREATE TABLE IF NOT EXISTS `hoiit_modules` (
   `module_id` varchar(30) NOT NULL,
-  `module_title` varchar(45) NOT NULL,
+  `module_title` varchar(100) NOT NULL,
   `module_url` varchar(100) DEFAULT NULL,
   `module_sort` tinyint(4) NOT NULL,
   `module_type` tinyint(1) NOT NULL DEFAULT '0',
@@ -196,12 +192,12 @@ CREATE TABLE IF NOT EXISTS `hoiit_modules` (
 --
 
 INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_url`, `module_sort`, `module_type`) VALUES
-('about', 'Danh sách', 'about', 2, 1),
-('adv', 'Danh sách|Cấu hình', 'adv|adv/config', 5, 1),
+('about', 'Danh sách|Cấu hình Url', 'about|about/url', 2, 1),
+('adv', 'Danh sách|Cấu hình upload', 'adv|adv/upload', 5, 1),
 ('counter', 'Counter', NULL, 4, 0),
 ('default', 'Default', NULL, 1, 1),
-('news', 'Danh mục|Danh sách|Cấu hình', 'news/cat|news|news/config', 4, 1),
-('products', 'Danh mục|Danh sách|Cấu hình', 'products/cat|products|products/config', 3, 1);
+('news', 'Danh mục|Danh sách|Cấu hình upload|Cấu hình Url', 'news/cat|news|news/upload|news/url', 4, 1),
+('products', 'Danh mục|Danh sách|Cấu hình upload|Cấu hình Url', 'products/cat|products|products/upload|products/url', 3, 1);
 
 -- --------------------------------------------------------
 
@@ -255,10 +251,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
 --
 
 INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(46, 'en', '', '<p>asdas</p>', '', 'dasd', 83, NULL, NULL),
-(46, 'vi', 'Welcome to Yiiproject.com', '<p>Welcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to</p>\r\n<h3>Welcome to Yiiproject.com</h3>\r\n<p>Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.com</p>', 'welcome-to-yiiprojectcom', 'das', 83, NULL, NULL),
-(47, 'en', 'About', '<p>Con tnet</p>', 'about', 'dasdsadsads', 83, NULL, NULL),
-(47, 'vi', 'Gioi thieu sd', '<p>Noi dung</p>', 'gioi-thieu-sd', 'asdasdsd', 83, NULL, NULL);
+(46, 'en', '', '<p>asdas</p>', '', 'dasd', 133, NULL, NULL),
+(46, 'vi', 'Welcome to Yiiproject.com', '<p>Welcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to</p>\r\n<h3>Welcome to Yiiproject.com</h3>\r\n<p>Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.com</p>', 'welcome-to-yiiprojectcom', 'das', 133, NULL, NULL),
+(47, 'en', 'About', '<p>Con tnet</p>', 'about', 'dasdsadsads', 133, NULL, NULL),
+(47, 'vi', 'Gioi thieu sd', '<p>Noi dung</p>', 'gioi-thieu-sd', 'asdasdsd', 133, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -303,19 +299,23 @@ INSERT INTO `hoiit_module_advs` (`record_id`, `title`, `pic_thumb`, `url`, `crea
 CREATE TABLE IF NOT EXISTS `hoiit_module_menus` (
   `menu_id` smallint(6) NOT NULL AUTO_INCREMENT,
   `parent_id` smallint(6) NOT NULL DEFAULT '0',
+  `menu_type` tinyint(1) NOT NULL DEFAULT '1',
   `menu_target` enum('_self','_blank') DEFAULT NULL,
   `menu_sort` smallint(6) NOT NULL DEFAULT '0',
   `menu_homepage` tinyint(1) NOT NULL DEFAULT '0',
   `menu_activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
 
 --
 -- Dumping data for table `hoiit_module_menus`
 --
 
-INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_target`, `menu_sort`, `menu_homepage`, `menu_activated`) VALUES
-(9, 0, '', 9, 1, 1);
+INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_type`, `menu_target`, `menu_sort`, `menu_homepage`, `menu_activated`) VALUES
+(27, 0, 1, '', 27, 1, 1),
+(28, 0, 1, '', 28, 0, 1),
+(29, 0, 1, '', 29, 0, 1),
+(30, 28, 0, '', 30, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -339,8 +339,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus_languages` (
 --
 
 INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name`, `menu_url`, `menu_description`) VALUES
-(9, 'en', 'Home page', 'home-page', 'Description'),
-(9, 'vi', 'Trang chủ', 'trang-chu', 'Mo ta');
+(27, 'en', 'Home page', 'home-page', 'Home page description'),
+(27, 'vi', 'Trang chủ', 'trang-chu', 'Trang chu mô tả'),
+(28, 'en', 'About us', '', 'Desctip about'),
+(28, 'vi', 'Giới thiệu', 'gioi-thieu', 'Mo ta gioi thieu'),
+(29, 'en', 'Products', '', ''),
+(29, 'vi', 'Sản phẩm', '', ''),
+(30, 'en', '', '', ''),
+(30, 'vi', 'Sub', 'gioi-thieu/welcome-to-yiiprojectcom.html', '');
 
 -- --------------------------------------------------------
 
@@ -475,9 +481,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_save` (
 --
 
 INSERT INTO `hoiit_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456137),
+('day_time', 2456139),
 ('max_count', 1),
-('counter', 17),
+('counter', 19),
 ('yesterday', 1);
 
 -- --------------------------------------------------------
@@ -496,7 +502,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''::1''', 1343487303);
+('''::1''', 1343636735);
 
 -- --------------------------------------------------------
 
@@ -693,6 +699,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_urls` (
   `url_pattern` varchar(100) NOT NULL,
   `url_route` varchar(100) NOT NULL,
   `url_param` varchar(200) DEFAULT NULL,
+  `url_type` tinyint(1) NOT NULL DEFAULT '0',
   `hoiit_modules_module_id` varchar(30) NOT NULL,
   `hoiit_languages_language_id` varchar(2) NOT NULL,
   PRIMARY KEY (`url_pattern`),
@@ -704,10 +711,13 @@ CREATE TABLE IF NOT EXISTS `hoiit_urls` (
 -- Dumping data for table `hoiit_urls`
 --
 
-INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `hoiit_modules_module_id`, `hoiit_languages_language_id`) VALUES
-('(gioi-thieu)', 'about/default/index', NULL, 'about', 'vi'),
-('(gioi-thieu)/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 'about', 'vi'),
-('trang-chu', 'default/default/index', NULL, 'default', 'vi');
+INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_type`, `hoiit_modules_module_id`, `hoiit_languages_language_id`) VALUES
+('(gioi-thieu)/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 0, 'about', 'vi'),
+('gioi-thieu', 'about/default/index', '', 1, 'about', 'vi'),
+('home-page', 'default/default/index', NULL, 1, 'default', 'en'),
+('news', 'news/default/index', '', 1, 'news', 'en'),
+('tin-tuc', 'news/default/index', '', 1, 'news', 'vi'),
+('trang-chu', 'default/default/index', NULL, 1, 'default', 'vi');
 
 -- --------------------------------------------------------
 
