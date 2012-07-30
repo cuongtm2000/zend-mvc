@@ -186,16 +186,6 @@
 
     <div id="container_content_right">
         <div class="container_content_right">
-            <?php if (isset($this->function['advs_right']) && ($this->function['advs_right'])): ?>
-                <ul class="adv-right">
-                    <?php foreach ($this->function['advs_right'] as $value): ?>
-                        <li>
-                            <a href="<?php echo $value['url'] ?>" target="<?php echo $value['type'] ?>" title="<?php echo $value['title' . Yii::app()->session['lang']] ?>"><img src="<?php echo Yii::app()->baseUrl . USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title' . Yii::app()->session['lang']] ?>" /></a>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
-
             <?php if (isset($this->function['menu_news']) && ($this->function['menu_news'])): ?>
                 <div class="frame-right">
                     <h2 class="title-right"><span><?php echo CHtml::encode($this->lang['news']) ?></span></h2>
@@ -215,6 +205,16 @@
                         <?php endforeach; ?>
                     </ul>
                 </div> <!--End dich vu nha dat-->
+            <?php endif; ?>
+			
+			<?php if (isset($this->function['advs_right']) && ($this->function['advs_right'])): ?>
+                <ul class="adv-right">
+                    <?php foreach ($this->function['advs_right'] as $value): ?>
+                        <li>
+                            <a href="<?php echo $value['url'] ?>" target="<?php echo $value['type'] ?>" title="<?php echo $value['title' . Yii::app()->session['lang']] ?>"><img src="<?php echo Yii::app()->baseUrl . USERFILES ?>/advs/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title' . Yii::app()->session['lang']] ?>" /></a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
             <?php endif; ?>
         </div> <!--End class container_content_right-->	
     </div> <!--End ID container_content_right-->   <div class="clear"></div>
