@@ -92,7 +92,7 @@ class Provinces extends CActiveRecord {
         return $command->queryAll();
     }
     public function listDistrictProvince($province){
-        $command = Yii::app()->db->createCommand('SELECT district_id, district_name FROM dos_districts WHERE dos_provinces_province=:p');
+        $command = Yii::app()->db->createCommand('SELECT district_id, district_name FROM dos_districts WHERE dos_provinces_province=:p order by district_order');
         $command->bindParam(":p", $province, PDO::PARAM_STR);
         return $command->queryAll();
     }
