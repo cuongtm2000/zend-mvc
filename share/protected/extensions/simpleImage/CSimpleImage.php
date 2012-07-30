@@ -8,6 +8,7 @@ class CSimpleImage {
     private $image_info;
 
     public function processUpload($file_name, $tmp, $width, $height, $path, $filename = '', $file_old = '', $type = 0, $txt_new_name = '') {
+	if ($file_name) {
         $this->image_info = $image_info = getimagesize($tmp);
         $this->image_type = $image_info[2];
         if ($this->image_type == IMAGETYPE_JPEG) {
@@ -50,13 +51,17 @@ class CSimpleImage {
         }
 
         return $this->_filename;
+		}
+        return $file_old;
     }
 
     public function uploadMulti($file_name, $tmp, $width, $height, $path, $filename = '') {
         $file_desc_multi = array();
         $size = count($file_name);
         for ($i = 0; $i < $size; $i++) {
-            $file_desc_multi[] = $this->processUpload($file_name[$i], $tmp[$i], $width, $height, $path, $filename . '-desc-' . ($i + 1));
+			if ($file_name[$i]) {
+				$file_desc_multi[] = $this->processUpload($file_name[$i], $tmp[$i], $width, $height, $path, $filename . '-desc-' . ($i + 1));
+			}
         }
         return $file_desc_multi;
     }

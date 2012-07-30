@@ -210,12 +210,10 @@ class Products extends CActiveRecord {
                 );
             }
             //pic_desc
-            if (isset($_FILES[__CLASS__]['name']['pic_desc'])) {
+            if ($_FILES[__CLASS__]['name']['pic_desc']){
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $this->pic_desc = implode("|", $file->uploadMulti(
-                                $_FILES[__CLASS__]['name']['pic_desc'], $_FILES[__CLASS__]['tmp_name']['pic_desc'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), $_USERFILES . lcfirst(__CLASS__), $this->title
-                        ));
+                $this->pic_desc = implode("|", $file->uploadMulti($_FILES[__CLASS__]['name']['pic_desc'], $_FILES[__CLASS__]['tmp_name']['pic_desc'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), $_USERFILES . lcfirst(__CLASS__), $this->title));
             }
         } else {
             //check file old and upload
@@ -431,7 +429,8 @@ class Products extends CActiveRecord {
     //Back end - Delete Record
     public function deleteRecord($id) {
         $item = Products::model()->find('record_id=:id', array(':id' => $id));
-        $path = YiiBase::getPathOfAlias('webroot') . USERFILES . '/products/';
+		$_USERFILES = '/public/userfiles/image/' . Yii::app()->user->name . '/image/';
+        $path = YiiBase::getPathOfAlias('webroot') . $_USERFILES . '/products/';
 
         if ($item->pic_thumb && file_exists($path . $item->pic_thumb)) {
             unlink($path . $item->pic_thumb);
@@ -442,7 +441,7 @@ class Products extends CActiveRecord {
         if ($item->pic_desc) {
             $str = explode('|', $item->pic_desc);
             foreach ($str as $value) {
-                if (file_exists($path . $value)) {
+                if ($item->pic_desc && file_exists($path . $value)) {
                     unlink($path . $value);
                 }
             }
