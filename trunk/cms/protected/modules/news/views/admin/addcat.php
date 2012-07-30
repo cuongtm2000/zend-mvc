@@ -44,7 +44,7 @@
     </div>
     <div class="clear space"></div>
 
-    <div class="col1"><?php echo $form->labelEx($model, $this->lang['show'], array('for' => ucfirst($this->ID) . 'Cat_cat_enable_0')) ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, $this->lang['show'], array('for' => get_class($model) . '_cat_enable_0')) ?></div>
     <div class="col2 radio">
         <?php echo $form->radioButtonList($model, 'cat_enable', array('1'=>$this->lang['show'], '0'=>$this->lang['hidden']), array('separator' => '&nbsp;&nbsp;')); ?>
     </div>

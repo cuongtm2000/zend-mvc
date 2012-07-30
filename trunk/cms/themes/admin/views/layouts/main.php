@@ -42,9 +42,15 @@
             'items'=>array(
                 array('label'=>'System Configuration', 'url'=>array('/admin/setting/config')),
                 array('label'=>'Modules Configuration', 'url'=>array('/admin/setting/modules')),
+                array('label'=>'Menu Configuration', 'url'=>array('/admin/setting/addmenu')),
             )
         ),
-        array('label'=>'Menus', 'url'=>array('/site/contact'))
+        array('label'=>'Menus', 'url'=>array('/admin/menus'),
+            'items'=>array(
+                array('label'=>'Lists', 'url'=>array('/admin/menus/index')),
+                array('label'=>'Add', 'url'=>array('/admin/menus/add'))
+            )
+        ),
     ),
 )); ?> <div class="clear"></div>
 <div class="paddinglr10">

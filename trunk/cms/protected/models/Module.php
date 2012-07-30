@@ -11,7 +11,9 @@
  * @property integer $module_type
  *
  * The followings are the available model relations:
+ * @property HoiitConfigs[] $hoiitConfigs
  * @property HoiitFunctions[] $hoiitFunctions
+ * @property HoiitLanguages[] $hoiitLanguages
  * @property HoiitUrls[] $hoiitUrls
  */
 class Module extends CActiveRecord {
@@ -56,7 +58,9 @@ class Module extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
+            //'hoiitConfigs' => array(self::HAS_MANY, 'HoiitConfigs', 'hoiit_modules_module_id'),
             //'hoiitFunctions' => array(self::HAS_MANY, 'HoiitFunctions', 'hoiit_modules_module_id'),
+            //'hoiitLanguages' => array(self::MANY_MANY, 'HoiitLanguages', 'hoiit_modules_languages(module_id, language_id)'),
             //'hoiitUrls' => array(self::HAS_MANY, 'HoiitUrls', 'hoiit_modules_module_id'),
         );
     }
