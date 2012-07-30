@@ -154,6 +154,8 @@ fieldset .label-select{width: 248px;}
 .col-right{float: left; margin-left:10px; width: 43%}
 .space{height: 8px;}
 .radio label{float: none; cursor: pointer;}
+p.radio{margin: 6px 0}
+p.radio label.p-label{width: 110px; float: left; margin-top: -5px}
 .readme{color: #555; font-style: italic;}
 
 span.required, .errorMessage{color: red;}

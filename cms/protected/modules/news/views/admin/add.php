@@ -137,13 +137,13 @@
 		</script>
 		<?php endforeach?>
 
-		<div class="col1"><?php echo $form->labelEx($model, 'hot', array('for'=>ucfirst($this->ID).'_hot_0')) ?></div>
+		<div class="col1"><?php echo $form->labelEx($model, 'hot', array('for'=>get_class($model).'_hot_0')) ?></div>
 		<div class="col2 radio">
 			<?php echo $form->radioButtonList($model, 'hot', array('0'=>'Normal', '1'=>'Hot'), array('separator'=>'&nbsp;&nbsp;')); ?>
 		</div>
 		<div class="clear space"></div>
 
-		<div class="col1"><?php echo $form->labelEx($model, 'enable', array('for'=>ucfirst($this->ID).'_enable_0')) ?></div>
+		<div class="col1"><?php echo $form->labelEx($model, 'enable', array('for'=>get_class($model).'_enable_0')) ?></div>
 		<div class="col2 radio">
 			<?php echo $form->radioButtonList($model, 'enable', array('1'=>$this->lang['show'], '0'=>$this->lang['hidden']), array('separator'=>'&nbsp;&nbsp;')); ?>
 		</div>

@@ -37,7 +37,7 @@ class AdminController extends BackEndController {
     }
 
     public function actionPosition($id) {
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/jquery.tablednd.0.7.min.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.tablednd.0.7.min.js');
         if (Yii::app()->request->getIsPostRequest()) {
             Position::model()->addItem($id, Yii::app()->request);
             $this->refresh();

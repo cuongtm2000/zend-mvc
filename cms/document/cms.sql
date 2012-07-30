@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 25, 2012 at 09:24 AM
+-- Generation Time: Jul 28, 2012 at 05:21 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -40,16 +40,16 @@ CREATE TABLE IF NOT EXISTS `hoiit_configs` (
 --
 
 INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoiit_modules_module_id`) VALUES
-('adv_bottom_height', 200, NULL, 'adv'),
-('adv_bottom_width', 200, NULL, 'adv'),
-('adv_center_height', 200, NULL, 'adv'),
-('adv_center_width', 200, NULL, 'adv'),
-('adv_left_height', 300, NULL, 'adv'),
-('adv_left_width', 192, NULL, 'adv'),
-('adv_right_height', 300, NULL, 'adv'),
-('adv_right_width', 192, NULL, 'adv'),
-('adv_top_height', 200, NULL, 'adv'),
-('adv_top_width', 200, NULL, 'adv'),
+('adv_bottom_height', 222, NULL, 'adv'),
+('adv_bottom_width', 222, NULL, 'adv'),
+('adv_center_height', 222, NULL, 'adv'),
+('adv_center_width', 222, NULL, 'adv'),
+('adv_left_height', 222, NULL, 'adv'),
+('adv_left_width', 222, NULL, 'adv'),
+('adv_right_height', 222, NULL, 'adv'),
+('adv_right_width', 222, NULL, 'adv'),
+('adv_top_height', 222, NULL, 'adv'),
+('adv_top_width', 222, NULL, 'adv'),
 ('news_cat_height_thumb', 89, NULL, 'news'),
 ('news_cat_width_thumb', 143, NULL, 'news'),
 ('news_height_thumb', 89, NULL, 'news'),
@@ -197,11 +197,11 @@ CREATE TABLE IF NOT EXISTS `hoiit_modules` (
 
 INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_url`, `module_sort`, `module_type`) VALUES
 ('about', 'Danh sách', 'about', 2, 1),
-('adv', 'Danh sách', 'adv', 3, 1),
-('counter', 'Counter', NULL, 3, 0),
+('adv', 'Danh sách|Cấu hình', 'adv|adv/config', 5, 1),
+('counter', 'Counter', NULL, 4, 0),
 ('default', 'Default', NULL, 1, 1),
-('news', 'Danh mục|Danh sách', 'news/cat|news', 4, 1),
-('products', 'Danh mục|Danh sách', 'products/cat|products', 3, 1);
+('news', 'Danh mục|Danh sách|Cấu hình', 'news/cat|news|news/config', 4, 1),
+('products', 'Danh mục|Danh sách|Cấu hình', 'products/cat|products|products/config', 3, 1);
 
 -- --------------------------------------------------------
 
@@ -255,10 +255,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
 --
 
 INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(46, 'en', '', '<p>asdas</p>', '', 'dasd', 4, NULL, NULL),
-(46, 'vi', 'Thanh an', '<p>dasd</p>', 'thanh-an', 'das', 4, NULL, NULL),
-(47, 'en', 'About', '<p>Con tnet</p>', 'about', 'dasdsadsads', 4, NULL, NULL),
-(47, 'vi', 'Gioi thieu sd', '<p>Noi dung</p>', 'gioi-thieu-sd', 'asdasdsd', 4, NULL, NULL);
+(46, 'en', '', '<p>asdas</p>', '', 'dasd', 83, NULL, NULL),
+(46, 'vi', 'Welcome to Yiiproject.com', '<p>Welcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to</p>\r\n<h3>Welcome to Yiiproject.com</h3>\r\n<p>Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.com</p>', 'welcome-to-yiiprojectcom', 'das', 83, NULL, NULL),
+(47, 'en', 'About', '<p>Con tnet</p>', 'about', 'dasdsadsads', 83, NULL, NULL),
+(47, 'vi', 'Gioi thieu sd', '<p>Noi dung</p>', 'gioi-thieu-sd', 'asdasdsd', 83, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -308,16 +308,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus` (
   `menu_homepage` tinyint(1) NOT NULL DEFAULT '0',
   `menu_activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `hoiit_module_menus`
 --
 
 INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_target`, `menu_sort`, `menu_homepage`, `menu_activated`) VALUES
-(1, 0, NULL, 1, 1, 1),
-(2, 0, NULL, 2, 0, 1),
-(3, 2, NULL, 1, 0, 1);
+(9, 0, '', 9, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -341,12 +339,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus_languages` (
 --
 
 INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name`, `menu_url`, `menu_description`) VALUES
-(1, 'en', 'Home page', 'default', NULL),
-(1, 'vi', 'Trang chủ', 'trang-chu', NULL),
-(2, 'en', 'About', 'about', NULL),
-(2, 'vi', 'Giới thiệu', 'gioi-thieu', NULL),
-(3, 'en', 'About Sub', 'sub', NULL),
-(3, 'vi', 'Tầm nhìn', 'sub', NULL);
+(9, 'en', 'Home page', 'home-page', 'Description'),
+(9, 'vi', 'Trang chủ', 'trang-chu', 'Mo ta');
 
 -- --------------------------------------------------------
 
@@ -481,9 +475,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_save` (
 --
 
 INSERT INTO `hoiit_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456134),
+('day_time', 2456137),
 ('max_count', 1),
-('counter', 14),
+('counter', 17),
 ('yesterday', 1);
 
 -- --------------------------------------------------------
@@ -502,7 +496,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''::1''', 1343190206);
+('''::1''', 1343487303);
 
 -- --------------------------------------------------------
 
@@ -528,7 +522,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products` (
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_hoiit_module_products_hoiit_module_products_cat1` (`hoiit_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -630,13 +624,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_positions` (
 --
 
 INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id`, `action_id`, `controller_id`, `hoiit_functions_function_value`) VALUES
-('left', 1, '1', 'default', NULL, NULL, 'menu_about'),
-('left', 2, '1', 'about', NULL, NULL, 'menu_about'),
+('right', 1, '1', 'about', NULL, NULL, 'adv_left'),
+('right', 2, '1', 'about', NULL, NULL, 'counter'),
+('right', 3, '1', 'about', NULL, NULL, 'menu_about'),
+('right', 1, '1', 'default', NULL, NULL, 'menu_about'),
 ('left', 2, '1', 'default', NULL, NULL, 'counter'),
-('right', 1, '1', 'about', NULL, NULL, 'counter'),
-('left', 3, '1', 'default', NULL, NULL, 'adv_left'),
-('right', 2, '1', 'default', NULL, NULL, 'adv_right'),
-('center', 1, '1', 'default', NULL, NULL, 'about_home');
+('center', 3, '1', 'default', NULL, NULL, 'about_home'),
+('right', 4, '1', 'default', NULL, NULL, 'adv_right'),
+('left', 5, '1', 'default', NULL, NULL, 'adv_left');
 
 -- --------------------------------------------------------
 
@@ -658,7 +653,7 @@ INSERT INTO `hoiit_settings` (`setting_name`, `setting_value`) VALUES
 ('default_language', 'vi'),
 ('description', 'Description'),
 ('keywords', 'Keywords'),
-('title', 'Welcome to Yii Thanhansoft');
+('title', 'Welcome to YiiProject');
 
 -- --------------------------------------------------------
 
@@ -684,7 +679,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_templates` (
 
 INSERT INTO `hoiit_templates` (`template_id`, `template_name`, `template_date`, `template_desc`, `template_author`, `template_web`, `template_admin`, `template_activated`) VALUES
 ('default', 'Default', '2012-06-30 14:47:02', NULL, 'Yii project', 'http://yiiproject.com', 0, 0),
-('home', 'Home', '2012-07-04 10:54:29', NULL, 'Yii project', 'http://yiiproject.com', 0, 1);
+('home', 'Home', '2012-07-04 10:54:29', NULL, 'Yii project', 'http://yiiproject.com', 0, 0),
+('toys', 'Toys Store', '2012-07-27 04:55:47', NULL, NULL, NULL, 0, 1),
+('yiiproject', 'YiiProject', '2012-07-26 13:47:49', NULL, 'Yii project', NULL, 0, 0);
 
 -- --------------------------------------------------------
 
