@@ -43,8 +43,7 @@ class Module extends CActiveRecord {
             array('module_id, module_title, module_sort', 'required'),
             array('module_sort, module_type', 'numerical', 'integerOnly' => true),
             array('module_id', 'length', 'max' => 30),
-            array('module_title', 'length', 'max' => 45),
-            array('module_url', 'length', 'max' => 100),
+            array('module_title, module_url', 'length', 'max' => 100),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
             array('module_id, module_title, module_url, module_sort, module_type', 'safe', 'on' => 'search'),
