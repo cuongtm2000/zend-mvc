@@ -76,6 +76,7 @@ class AdminController extends BackEndController {
         $model_language_data = $model_language->loadEdit($id);
         foreach($model_language_data as $value){
             $model_form['menu_name'.$value['language_id']] = $value['menu_name'];
+            $model_form['menu_url_content_page'] = Urls::model()->getModuleByPattern($value['menu_url'], Yii::app()->language);
             $model_form['menu_url'.$value['language_id']] = $value['menu_url'];
             $model_form['menu_description'.$value['language_id']] = $value['menu_description'];
         }

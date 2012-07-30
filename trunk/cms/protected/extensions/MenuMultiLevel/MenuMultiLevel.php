@@ -43,14 +43,14 @@ class MenuMultiLevel extends Menu {
         $items = array();
         $results = Yii::app()->db->createCommand()->select('hoiit_module_menus.menu_id, menu_name, menu_url')->from('hoiit_module_menus')->join('hoiit_module_menus_languages', 'hoiit_module_menus.menu_id=hoiit_module_menus_languages.menu_id');
         ($parent_id === null) ? $results->where('language_id=:lang AND parent_id=0', array(':lang' => Yii::app()->language)) : $results->where('language_id=:lang AND parent_id=:pid', array(':lang' => Yii::app()->language, ':pid' => $parent_id));
-        $results = $results->order('menu_sort DESC, menu_name ASC')->queryAll();
+        $results = $results->order('menu_sort ASC, menu_name ASC')->queryAll();
 
         if (empty($results)) return $items;
 
         foreach ($results AS $result) {
             $childItems = $this->getItems($result['menu_id']);
-
             $items[] = array(
+                'active' => (Urls::model()->getModuleByPattern($result['menu_url'], Yii::app()->language) == Yii::app()->controller->module->id) ? true : false,
                 'label' => $result['menu_name'],
                 'url' => Yii::app()->baseUrl . '/' . $result['menu_url'],
                 //'itemOptions' => array('class' => 'listItem'),

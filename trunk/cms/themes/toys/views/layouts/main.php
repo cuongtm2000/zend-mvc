@@ -100,12 +100,6 @@
                     <li><a href="ymsgr:sendIM?thanhansoft">
                         <img src="http://mail.opi.yahoo.com/online?u=thanhansoft&amp;m=g&amp;t=2" border="0" alt="yahoo" /></a></li>
                 </ul>
-
-                <h4 class="title-left"><span>Quảng cáo</span></h4>
-                <ul class="frame-leftcontent bg-adv">
-                    <li><a href="http://grouplaptrinh.com" title="grouplaptrinh"><img src="images/adv1.jpg" alt='' /></a></li>
-                    <li><a href="http://grouplaptrinh.com" title="grouplaptrinh"><img src="images/adv1.jpg" alt='' /></a></li>
-                </ul>
             </div><!--End left content-->
             <div id="rightcontent">
                 <div id="banner">
@@ -192,12 +186,6 @@
                     <li><a href="/tin-tuc-su-kien/tin-tuc-moi/doi-moi-phuong-phap-quy-hoach.html" title="Đổi mới phương pháp quy hoạch">Đổi mới phương pháp quy hoạch</a></li>
                     <li><a href="/tin-tuc-su-kien/tin-tuc-moi/du-bao-kinh-te-2012-dau-sao-cung-nhe-nhang-hon.html" title='Dự báo kinh tế 2012: "Dẫu sao cũng nhẹ nhàng hơn"'>Dự báo kinh tế 2012: "Dẫu sao cũng nhẹ nhàng hơn"</a></li>
                     <li><a href="/tin-tuc-su-kien/thong-tin-kinh-te/dau-tu-tin-chi-cac-bon-trong-lam-nghiep-thi-truong-con-bo-ngo.html" title='Đầu tư tín chỉ các-bon trong lâm nghiệp: Thị trường còn bỏ ngỏ'>Đầu tư tín chỉ các-bon trong lâm nghiệp: Thị trường còn bỏ ngỏ</a></li>
-                </ul>
-
-                <h2 class="title-left"><span>Quảng cáo</span></h2>
-                <ul class="frame-leftcontent bg-adv">
-                    <li><a href="http://grouplaptrinh.com" title="grouplaptrinh"><img src="images/adv1.jpg" alt='' /></a></li>
-                    <li><a href="http://grouplaptrinh.com" title="grouplaptrinh"><img src="images/adv1.jpg" alt='' /></a></li>
                 </ul>
             </div> <!--End colum3--> <div class="clear"></div>
         </div><!--End content-->
