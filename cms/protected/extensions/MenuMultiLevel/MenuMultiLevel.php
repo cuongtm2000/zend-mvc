@@ -50,7 +50,7 @@ class MenuMultiLevel extends Menu {
         foreach ($results AS $result) {
             $childItems = $this->getItems($result['menu_id']);
             $items[] = array(
-                'active' => (Urls::model()->getModuleByPattern($result['menu_url'], Yii::app()->language) == Yii::app()->controller->module->id) ? true : false,
+                'active' => isset(Yii::app()->controller->module->id) ? ((Urls::model()->getModuleByPattern($result['menu_url'], Yii::app()->language) == Yii::app()->controller->module->id) ? true : false) : false,
                 'label' => $result['menu_name'],
                 'url' => Yii::app()->baseUrl . '/' . $result['menu_url'],
                 //'itemOptions' => array('class' => 'listItem'),

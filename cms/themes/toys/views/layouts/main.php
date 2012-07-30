@@ -67,27 +67,6 @@
         <div id="content">
         	<div id="leftcontent">
                 <?php $this->getPosition('left');?>
-                <h4 class="title-left"><span>Sản phẩm</span></h4>
-                <ul class="sub-cat frame-leftcontent">
-                    <li><a href="#" title="" >Women</a>
-                        <ul>
-                            <li><a href="#" title="">Tops</a></li>
-                            <li><a href="#" title="">Skirts</a></li>
-                            <li><a href="#" title="">Jackets</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" title="">Men</a>
-                        <ul>
-                            <li><a href="#" title="">Tops</a></li>
-                            <li><a href="#" title="">Skirts</a></li>
-                            <li><a href="#" title="">Jackets</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" title="">Day Dresses</a></li>
-                    <li><a href="#" title="">Evening Dresses</a></li>
-                    <li><a href="#" title="">Coats</a></li>
-                    <li><a href="#" title="">Sweemwear</a></li>
-                </ul> <!--End frame-leftcontent-->
 
                 <h4 class="title-left"><span>Hỗ trợ trực tuyến</span></h4>
                 <ul class="support frame-leftcontent">
@@ -111,7 +90,6 @@
                 </div>
                 <?php echo $content; ?>
                 <?php $this->getPosition('center');?>
-
                 <div class="frame-panel">
 					<h2 class="title-right">Tin tức &amp; Sự kiện</h2>
                     <div class="frame-tent-right">        
