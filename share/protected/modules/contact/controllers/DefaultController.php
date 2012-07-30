@@ -3,6 +3,7 @@
 class DefaultController extends Controller {
 
     public function actionIndex() {
+		$this->layout = '//layouts/column-3';
 		$model = ucfirst($this->module->getName());
         $items = new $model();
         
