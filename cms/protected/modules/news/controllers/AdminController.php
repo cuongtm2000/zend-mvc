@@ -68,7 +68,7 @@ class AdminController extends BackEndController {
     }
 
     public function actionDelcat($id) {
-		$model = ucfirst($this->module->id);
+        $model = ucfirst($this->module->id);
         $model_class = $model . 'Cat';
         $model_language_class = $model_class . 'Language';
 
@@ -197,6 +197,11 @@ class AdminController extends BackEndController {
     }
 
     public function actionUrl() {
-
+        $model = new Urls();
+        if (Yii::app()->request->getIsPostRequest()) {
+            $model->addItem($this->module->id, Yii::app()->request);
+            $this->refresh();
+        }
+        $this->render('url', array('items' => $model->listByModule($this->module->id)));
     }
 }

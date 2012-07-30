@@ -195,11 +195,20 @@ class AdminController extends BackEndController {
         $this->render('edit', array('model' => $model_form, 'listItemsCat' => $model_cat->listCats()));
     }
 
-    public function actionConfig() {
+    public function actionUpload() {
         if (Yii::app()->request->getIsPostRequest()) {
             Config::model()->addItem($this->module->id, Yii::app()->request);
             $this->refresh();
         }
-        $this->render('config', array('items' => Config::model()->getNameValue($this->module->id)));
+        $this->render('upload', array('items' => Config::model()->getNameValue($this->module->id)));
+    }
+	
+	public function actionUrl() {
+        $model = new Urls();
+        if (Yii::app()->request->getIsPostRequest()) {
+            $model->addItem($this->module->id, Yii::app()->request);
+            $this->refresh();
+        }
+        $this->render('url', array('items' => $model->listByModule($this->module->id)));
     }
 }

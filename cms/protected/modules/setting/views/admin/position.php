@@ -34,7 +34,7 @@
         $("#table").tableDnD();
         $("#table tr:even").addClass("alt");
         $("#add-rows").click(function(){
-            $(".rows").before('<p class="clear"><select name="function[]"><?php foreach ($listFunction as $list_func): ?><option value="<?php echo $list_func['function_value']?>"><?php echo $list_func['function_value']?></option><?php endforeach?></select> <select name="position[]"><?php foreach ($listPosition as $list_pos): ?><option value="<?php echo $list_pos?>"><?php echo $list_pos?></option><?php endforeach?></select> <label class="reset-label"><input type="checkbox" onclick="$(this).parent().parent().remove();" name="delete[]" value="1" /> Delete item</label></p>');
+            $(".rows").before('<p class="clear"><select name="function[]"><?php foreach ($listFunction as $list_func): ?><option value="<?php echo $list_func['function_value']?>"><?php echo $list_func['function_value']?></option><?php endforeach?></select> <select name="position[]"><?php foreach ($listPosition as $list_pos): ?><option value="<?php echo $list_pos?>"><?php echo $list_pos?></option><?php endforeach?></select> <label class="reset-label"><input type="checkbox" title="Remove this item" onclick="$(this).parent().parent().remove();" name="delete[]" value="1" /> Delete item</label></p>');
             return false;
         });
     });

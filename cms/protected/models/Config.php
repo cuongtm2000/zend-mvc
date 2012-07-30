@@ -109,7 +109,7 @@ class Config extends CActiveRecord {
 		
 		$this::model()->deleteAll('hoiit_modules_module_id=:module', array(':module'=>$id));
 		foreach ($name as $key => $value) {
-			$this->insertItem($name[$key], $values[$key], $id);
+			$this->insertItem(trim($name[$key]), trim($values[$key]), $id);
 		}
 	}
 	

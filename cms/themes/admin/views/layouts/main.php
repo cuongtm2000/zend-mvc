@@ -41,8 +41,7 @@
         array('label'=>'Configuration', 'url'=>array('/admin/setting'),
             'items'=>array(
                 array('label'=>'System Configuration', 'url'=>array('/admin/setting/config')),
-                array('label'=>'Modules Configuration', 'url'=>array('/admin/setting/modules')),
-                array('label'=>'Menu Configuration', 'url'=>array('/admin/setting/addmenu')),
+                array('label'=>'Modules Configuration', 'url'=>array('/admin/setting/modules'))
             )
         ),
         array('label'=>'Menus', 'url'=>array('/admin/menus'),
