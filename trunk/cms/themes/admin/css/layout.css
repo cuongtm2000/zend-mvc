@@ -138,6 +138,8 @@ fieldset .txt-large-x{width:40%; -moz-border-radius: 3px; -webkit-border-radius:
 fieldset .txt-very-large{width:55%; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
 fieldset .textarea-very-large{width:55%}
 
+fieldset .select-75{width: 75px;}
+fieldset .select-82{width: 82px;}
 fieldset .select-110{width: 110px;}
 fieldset .select-55{width: 55%}
 fieldset .reset-label{float: none; cursor: pointer}

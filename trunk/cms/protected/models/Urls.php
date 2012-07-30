@@ -110,10 +110,47 @@ class Urls extends CActiveRecord {
         return $data;
     }
 
+    //Back end
     public function getModuleByPattern($pattern, $lang) {
         $command = Yii::app()->db->createCommand('SELECT hoiit_modules_module_id FROM ' . $this->tableName() . ' WHERE url_pattern=:pattern AND hoiit_languages_language_id=:lang');
         $command->bindParam(":pattern", $pattern, PDO::PARAM_STR);
         $command->bindParam(":lang", $lang, PDO::PARAM_STR);
         return $command->queryScalar();
+    }
+
+    //Back end
+    public function listByModule($module) {
+        $command = Yii::app()->db->createCommand('SELECT url_pattern, url_route, url_param, url_type, hoiit_languages_language_id FROM ' . $this->tableName() . ' WHERE hoiit_modules_module_id=:module');
+        $command->bindParam(":module", $module, PDO::PARAM_STR);
+        return $command->queryAll();
+    }
+
+    //Back end - Add item
+    public function addItem($id, $data) {
+        $pattern = $data->getPost('pattern', '');
+        $pattern = array_unique($pattern); //Removes duplicate values from an array
+        $route = $data->getPost('route', '');
+        $param = $data->getPost('param', '');
+        $type = $data->getPost('type', '');
+        $lang = $data->getPost('lang', '');
+
+        $this::model()->deleteAll('hoiit_modules_module_id=:module', array(':module'=>$id));
+        foreach ($pattern as $key => $value) {
+            if ($pattern[$key] && $route[$key]) {
+                $this->insertItem(trim($pattern[$key]), trim($route[$key]), trim($param[$key]), trim($type[$key]), $id, $lang[$key]);
+            }
+        }
+    }
+
+    //Back end - insert item
+    private function insertItem($pattern, $route, $param, $type, $module_id, $language_id) {
+        $command = Yii::app()->db->createCommand('INSERT INTO ' . $this->tableName() . ' (url_pattern, url_route, url_param, url_type, hoiit_modules_module_id, hoiit_languages_language_id) VALUES (:pattern, :route, :param, :type, :module_id, :language_id)');
+        $command->bindParam(":pattern", $pattern, PDO::PARAM_STR);
+        $command->bindParam(":route", $route, PDO::PARAM_STR);
+        $command->bindParam(":param", $param, PDO::PARAM_STR);
+        $command->bindParam(":type", $type, PDO::PARAM_INT);
+        $command->bindParam(":module_id", $module_id, PDO::PARAM_STR);
+        $command->bindParam(":language_id", $language_id, PDO::PARAM_STR);
+        $command->execute();
     }
 }

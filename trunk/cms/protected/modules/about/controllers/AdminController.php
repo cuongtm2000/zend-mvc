@@ -73,18 +73,18 @@ class AdminController extends BackEndController {
         $model_form = new $model_form_class();
         $model_language = new $model_language_class();
 
-		//Load Edit
+        //Load Edit
         $model_data = $model->loadEdit($id);
         $model_form['hot'] = $model_data['hot'];
         $model_form['enable'] = $model_data['enable'];
 
         $model_language_data = $model_language->loadEdit($id);
-		foreach($model_language_data as $key => $value){
-			$model_form['title'.$value['language_id']] = $value['title'];
-			$model_form['content'.$value['language_id']] = $value['content'];
-			$model_form['tag'.$value['language_id']] = $value['tag'];
-			$model_form['description'.$value['language_id']] = $value['description'];
-		}
+        foreach ($model_language_data as $key => $value) {
+            $model_form['title' . $value['language_id']] = $value['title'];
+            $model_form['content' . $value['language_id']] = $value['content'];
+            $model_form['tag' . $value['language_id']] = $value['tag'];
+            $model_form['description' . $value['language_id']] = $value['description'];
+        }
 
         if (isset($_POST[$model_form_class])) {
             $model_form->attributes = $_POST[$model_form_class];
@@ -95,5 +95,14 @@ class AdminController extends BackEndController {
         }
 
         $this->render('edit', array('model' => $model_form));
+    }
+
+    public function actionUrl() {
+        $model = new Urls();
+        if (Yii::app()->request->getIsPostRequest()) {
+            $model->addItem($this->module->id, Yii::app()->request);
+            $this->refresh();
+        }
+        $this->render('url', array('items' => $model->listByModule($this->module->id)));
     }
 }
