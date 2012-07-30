@@ -143,7 +143,7 @@ a:hover{color:#000;}
 /*Item sale and khung img*/
 .table-product, .bder-none{border:none}
 .table-product{border-bottom:1px solid #C9E1F4;;margin:0 0 20px 0}
-.frame-img-pro{border:2px solid #A5A7A6;-webkit-border-radius:2px;-moz-border-radius:2px;text-align:center;}
+.frame-img-pro{border:2px solid #EDEDED;-webkit-border-radius:2px;-moz-border-radius:2px;text-align:center;}
 .item-sale p{margin:0 !important}
 
 /*Thong tin ban hang*/
