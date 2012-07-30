@@ -2,7 +2,7 @@
 
 class DefaultController extends Controller{
 	public function actionIndex(){
-        $this->layout = '//layouts/column-2';
+        $this->layout = '//layouts/column-3';
 
 		$this->setSeoPage(); //set Seo page
 
@@ -13,7 +13,7 @@ class DefaultController extends Controller{
 		$this->render(Yii::app()->session['template'].'/index', $data);
 	}
     public function actionView($id){
-		$this->layout = '//layouts/column-2';
+		$this->layout = '//layouts/column-3';
 		
         $model = ucfirst($this->module->getName());
         $items = new $model();

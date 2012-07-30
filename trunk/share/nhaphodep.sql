@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.0
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 23, 2012 at 01:20 AM
--- Server version: 5.5.8
--- PHP Version: 5.3.5
+-- Generation Time: Jul 30, 2012 at 04:13 AM
+-- Server version: 5.5.16
+-- PHP Version: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -128,7 +128,6 @@ CREATE TABLE IF NOT EXISTS `dos_districts` (
 --
 
 INSERT INTO `dos_districts` (`district_id`, `district_name`, `dos_provinces_province`) VALUES
-(1, '___', 1),
 (2, 'Long Xuyên', 1),
 (3, 'Châu Thành', 1),
 (4, 'Châu Phú', 1),
@@ -1034,14 +1033,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `dos_module_abouts`
---
-
-INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(1, 'Các quy định tại NhaPhoDep.vn', '', '<p>fdjhgsl;djf''hgfds</p>\r\n<p>hg''dsfhgdsfhg;dfhg;hdf''gh''dsfg</p>\r\n<p>dfg</p>\r\n<p>d</p>\r\n<p>gjdfgids''jkgh''sdhgjsd''h</p>', '', 4, '2012-07-21 09:43:20', 1, 0, NULL, NULL, 'cac-quy-dinh-tai-nhaphodepvn', '', '', '', 1, 'nhaphodep');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1283,7 +1275,6 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_type_type_id` int(11) NOT NULL,
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   `dos_districts_district_id` int(11) NOT NULL,
-  `dos_wards_ward_id` int(11) NOT NULL DEFAULT '0',
   `address` varchar(100) NOT NULL,
   `contact_name` varchar(45) NOT NULL,
   `contact_add` varchar(100) NOT NULL,
@@ -1294,24 +1285,19 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`),
   KEY `dos_districts_district_id` (`dos_districts_district_id`),
   KEY `dos_module_item_type_type_id` (`dos_module_item_type_type_id`),
-  KEY `dos_username` (`dos_username`),
-  KEY `dos_wards_ward_id` (`dos_wards_ward_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=49 ;
+  KEY `dos_username` (`dos_username`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=45 ;
 
 --
 -- Dumping data for table `dos_module_products`
 --
 
-INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `unit_currency`, `unit_unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_type_type_id`, `dos_module_item_cat_cat_id`, `dos_districts_district_id`, `dos_wards_ward_id`, `address`, `contact_name`, `contact_add`, `contact_mobile`, `contact_tel`, `dos_username`) VALUES
-(38, 'Nhà bán nè, ai mua ko', '', '2012-07-09 02:47:19', 'nh-bn-n-ai-mua-ko-thumb.jpg', '', NULL, '', '', '<p>trsyd</p>\r\n<p>ẻyi</p>\r\n<p>ựth</p>\r\n<p>struh</p>\r\n<p>atou</p>\r\n<p>hu</p>\r\n<p>ỏahua</p>\r\n<p>rthu</p>\r\n<p>srhuj</p>\r\n<p>s</p>', '', 'nha-ban-ne-ai-mua-ko', '', '', '', 14, 1, '5.433', 'VND', 'm2', 0, NULL, NULL, NULL, NULL, NULL, 1, 1, 534, 70, 325, 'Vinh Cuu', 'Ninh', '', '24356577879', '', 'nhaphodep'),
-(41, 'Nhà mới', '', '2012-07-09 16:09:08', 'nh-moi-thumb.jpg', 'nh-moi.jpg', 'nh-moi-desc-1.jpg|nh-moi-desc-2.jpg|nh-moi-desc-3.jpg', '', '', '<p>rtqriyrg</p>\r\n<p>\\qeugeag</p>\r\n<p>aergua</p>\r\n<p>eug</p>\r\n<p>aergu</p>\r\n<p>ẻ</p>\r\n<p> </p>\r\n<p>toug</p>', '', 'nha-moi', '', '', '', 5, 1, '13442', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 1, 534, 80, 325, 'Vinh Cuu', 'NInh', '', '24356577879', '', 'abc'),
-(42, 'Nhà mới', '', '2012-07-10 00:35:51', '', '', NULL, '', '', '<p>rtqriyrg</p>\r\n<p>\\qeugeag</p>\r\n<p>aergua</p>\r\n<p>eug</p>\r\n<p>aergu</p>\r\n<p>ẻ</p>\r\n<p> </p>\r\n<p>toug</p>', '', 'nha-moi3', '', '', '', 15, 1, '13442', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 1, 534, 80, 325, 'Vinh Cuu', 'NInh', '', '24356577879', '', 'abc'),
-(43, 'Nhà bán nè, ai mua ko ha ta', '', '2012-07-11 10:10:14', '', 'nh-bn-n-ai-mua-ko-ha-ta.jpg', NULL, '', '', '<p>dfzk''lgbjadbfhd''a''hjbkzdbjk''bgzs''j</p>', '', 'nha-ban-ne-ai-mua-ko-ha-ta', '', '', '', 40, 2, '5646', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 1, 528, 637, 325, '13 CMT8', 'Nhà phố đẹp', '', '0929001001', '', 'nhaphodep'),
-(44, 'Thử lần 1', '', '2012-07-11 11:32:36', 'thu-lan-1-thumb.jpg', '', NULL, '', '', '<p>ahg''a</p>\r\n<p>gjdhfg</p>\r\n<p>adhfg</p>\r\n<p>ahdfg</p>\r\n<p>hadf</p>\r\n<p>gh</p>\r\n<p>ágh</p>\r\n<p>se</p>', '', 'thu-lan-1', '', '', '', 20, 3, '12312', 'USD', 'Tổng diện tích', 1, NULL, NULL, NULL, NULL, NULL, 1, 1, 534, 569, 87, 'Vinh Cuu', 'Nhà phố đẹp', '', '0929001001', '', 'nhaphodep'),
-(45, 'Nhà bán nè, ai mua ko243543', '', '2012-07-20 12:54:04', 'nh-bn-n-ai-mua-ko243543-thumb.jpg', 'nh-bn-n-ai-mua-ko243543.jpg', 'nh-bn-n-ai-mua-ko243543-desc-1.jpg', '', '', '<p>reyqyge</p>\r\n<p>yherkhy</p>\r\n<p>eqkr</p>\r\n<p>hkg</p>\r\n<p>qe</p>', '', 'nha-ban-ne-ai-mua-ko243543', '', '', '', 8, 4, '423', 'USD', 'Tổng diện tích', 1, NULL, NULL, NULL, NULL, NULL, 1, 1, 534, 567, 60, 'J7 Buu Long', 'Nhà phố đẹp', '', '0929001001', '', 'nhaphodep'),
-(46, 'Nhà mới23433543', '', '2012-07-20 12:59:00', 'nh-moi23433543-thumb.jpg', 'nh-moi23433543.jpg', 'nh-moi23433543-desc-1.jpg', '', '', '<p>esdgferhs''g''sdf</p>\r\n<p>rs</p>', '', 'nha-moi23433543', '', '', '', 0, 5, '12312', 'VND', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 1, 534, 61, 325, 'J7 Buu Long', 'Nhà phố đẹp', '', '0929001001', '', 'nhaphodep'),
-(47, 'Nhà mới23433543ytu', '', '2012-07-20 13:02:26', 'nh-moi23433543ytu-thumb.jpg', 'nh-moi23433543ytu.jpg', 'nh-moi23433543ytu-desc-1.jpg|nh-moi23433543ytu-desc-2.jpg|nh-moi23433543ytu-desc-3.jpg|nh-moi23433543ytu-desc-4.jpg', '', '', '<p>esdgferhs''g''sdf</p>\r\n<p>rs</p>', '', 'nha-moi23433543ytu', '', '', '', 0, 6, '12312', 'VND', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 1, 534, 61, 325, 'J7 Buu Long', 'Nhà phố đẹp', '', '0929001001', '', 'nhaphodep'),
-(48, 'Nhà bán nè, ai mua kosfdsagfdsgsdfgsdf', '', '2012-07-20 13:04:15', 'nh-bn-n-ai-mua-kosfdsagfdsgsdfgsdf-thumb.jpg', 'nh-bn-n-ai-mua-kosfdsagfdsgsdfgsdf.jpg', 'nh-bn-n-ai-mua-kosfdsagfdsgsdfgsdf-desc-1.jpg|nh-bn-n-ai-mua-kosfdsagfdsgsdfgsdf-desc-2.jpg|nh-bn-n-ai-mua-kosfdsagfdsgsdfgsdf-desc-3.jpg|nh-bn-n-ai-mua-kosfdsagfdsgsdfgsdf-desc-4.jpg', '', '', '<p>dsfgsfdh</p>\r\n<p>hg</p>\r\n<p>hfds</p>\r\n<p>gh</p>\r\n<p>dsfhg</p>\r\n<p>s</p>', '', 'nha-ban-ne-ai-mua-kosfdsagfdsgsdfgsdf', '', '', '', 2, 7, '123', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 1, 534, 62, 325, 'Vinh Cuu', 'Nhà phố đẹp', '', '0929001001', '', 'nhaphodep');
+INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `unit_currency`, `unit_unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_type_type_id`, `dos_module_item_cat_cat_id`, `dos_districts_district_id`, `address`, `contact_name`, `contact_add`, `contact_mobile`, `contact_tel`, `dos_username`) VALUES
+(38, 'Nhà bán nè, ai mua ko', '', '2012-07-09 02:47:19', 'nh-bn-n-ai-mua-ko-thumb.jpg', '', NULL, '', '', '<p>trsyd</p>\r\n<p>ẻyi</p>\r\n<p>ựth</p>\r\n<p>struh</p>\r\n<p>atou</p>\r\n<p>hu</p>\r\n<p>ỏahua</p>\r\n<p>rthu</p>\r\n<p>srhuj</p>\r\n<p>s</p>', '', 'nha-ban-ne-ai-mua-ko', '', '', '', 15, 1, '5.433', 'VND', 'm2', 0, NULL, NULL, NULL, NULL, NULL, 1, 1, 534, 70, 'Vinh Cuu', 'Ninh', '', '24356577879', '', 'nhaphodep'),
+(41, 'Nhà mới', '', '2012-07-09 16:09:08', 'nh-moi-thumb.jpg', 'nh-moi.jpg', 'nh-moi-desc-1.jpg|nh-moi-desc-2.jpg|nh-moi-desc-3.jpg', '', '', '<p>rtqriyrg</p>\r\n<p>\\qeugeag</p>\r\n<p>aergua</p>\r\n<p>eug</p>\r\n<p>aergu</p>\r\n<p>ẻ</p>\r\n<p> </p>\r\n<p>toug</p>', '', 'nha-moi', '', '', '', 5, 1, '13442', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 1, 534, 80, 'Vinh Cuu', 'NInh', '', '24356577879', '', 'abc'),
+(42, 'Nhà mới', '', '2012-07-10 00:35:51', '', '', NULL, '', '', '<p>rtqriyrg</p>\r\n<p>\\qeugeag</p>\r\n<p>aergua</p>\r\n<p>eug</p>\r\n<p>aergu</p>\r\n<p>ẻ</p>\r\n<p> </p>\r\n<p>toug</p>', '', 'nha-moi3', '', '', '', 16, 1, '13442', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 1, 534, 80, 'Vinh Cuu', 'NInh', '', '24356577879', '', 'abc'),
+(43, 'Nhà bán nè, ai mua ko ha ta', '', '2012-07-11 10:10:14', '', 'nh-bn-n-ai-mua-ko-ha-ta.jpg', NULL, '', '', '<p>dfzk''lgbjadbfhd''a''hjbkzdbjk''bgzs''j</p>', '', 'nha-ban-ne-ai-mua-ko-ha-ta', '', '', '', 26, 2, '5.646', 'USD', 'Tổng diện tích', 0, NULL, NULL, NULL, NULL, NULL, 1, 1, 534, 637, '13 CMT8', 'Nhà phố đẹp', '', '0929001001', '', 'nhaphodep'),
+(44, 'Thử lần 1', '', '2012-07-11 11:32:36', 'thu-lan-1-thumb.JPG', 'thu-lan-1.JPG', 'thu-lan-1-desc-1-5.jpg|thu-lan-1-desc-2-2.jpg|thu-lan-1-desc-3.jpg|thu-lan-1-desc-4.JPG|thu-lan-1-desc-5.jpg', '', '', '<p>ahg''a</p>\r\n<p>gjdhfg</p>\r\n<p>adhfg</p>\r\n<p>ahdfg</p>\r\n<p>hadf</p>\r\n<p>gh</p>\r\n<p>ágh</p>\r\n<p>se</p>', '', 'thu-lan-1', '', '', '', 32, 3, '12312', 'USD', 'Tổng diện tích', 1, NULL, NULL, NULL, NULL, NULL, 1, 1, 534, 62, 'Vinh Cuu', 'Nhà phố đẹp', '', '0929001001', '', 'nhaphodep');
 
 -- --------------------------------------------------------
 
@@ -1380,7 +1366,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_feature` (
   `legal` varchar(45) NOT NULL,
   `road` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=49 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=45 ;
 
 --
 -- Dumping data for table `dos_module_products_feature`
@@ -1391,11 +1377,7 @@ INSERT INTO `dos_module_products_feature` (`product_id`, `area`, `area_build`, `
 (41, '13m x 12m', '21m x 21m', 124, 1, NULL, NULL, NULL, NULL, 'Đông Nam', '', 'Sổ đỏ', 'Huynh Van Nghe'),
 (42, '13m x 12m', '21m x 21m', 124, 1, NULL, NULL, NULL, NULL, 'Đông Nam', '', 'Sổ đỏ', 'Huynh Van Nghe'),
 (43, 'm x m', 'm x m', 124, 5, NULL, NULL, NULL, NULL, 'Tây Nam', '', 'Sổ đỏ', NULL),
-(44, 'm x m', 'm x m', 11, 1, NULL, NULL, NULL, NULL, 'Bắc', '', 'Đang hợp thức hoá', 'Nguyễn Tri Phương'),
-(45, 'm x m', 'm x m', 124, 1, NULL, NULL, NULL, NULL, 'Tây Bắc', '', 'Sổ hồng', 'fdhgjlafhgljkafhgljafhglajkh'),
-(46, 'm x m', 'm x m', 124, 2, NULL, NULL, NULL, NULL, 'Tây Bắc', '', 'Đang hợp thức hoá', NULL),
-(47, 'm x m', 'm x m', 124, 2, NULL, NULL, NULL, NULL, 'Tây Bắc', '', 'Đang hợp thức hoá', NULL),
-(48, 'm x m', 'm x m', 124, 2, NULL, NULL, NULL, NULL, 'Đông', '', 'Sổ hồng', NULL);
+(44, 'm x m', 'm x m', 11, 1, NULL, NULL, NULL, NULL, 'Bắc', '', 'Đang hợp thức hoá', NULL);
 
 -- --------------------------------------------------------
 
@@ -1446,7 +1428,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_utility` (
   `pool` tinyint(1) NOT NULL DEFAULT '0',
   `furniture` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=49 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=45 ;
 
 --
 -- Dumping data for table `dos_module_products_utility`
@@ -1457,11 +1439,7 @@ INSERT INTO `dos_module_products_utility` (`product_id`, `telephone`, `power_met
 (41, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0),
 (42, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0),
 (43, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0),
-(44, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0),
-(45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0),
-(46, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0),
-(47, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0),
-(48, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0);
+(44, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1591,10 +1569,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
 INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
 ('keywords', 'Bất động sản, môi giới đầu tư dự án, đầu tư bất động sản, môi giới thương mại, đại lý ký gởi giao dịch', 'nhaphodep'),
 ('description', 'Bất động sản Khang Danh chuyên: Môi giới đầu tư dự án, đầu tư bất động sản, môi giới thương mại, đại lý ký gởi giao dịch', 'nhaphodep'),
-('title', 'Sàn giao dịch Nhà đất - nhaphodep.vn', 'nhaphodep'),
-('keywords', '', 'abc'),
-('description', '', 'abc'),
-('title', '', 'abc');
+('title', 'Sàn giao dịch Nhà đất - nhaphodep.vn', 'nhaphodep');
 
 -- --------------------------------------------------------
 
@@ -1776,16 +1751,15 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_modules` (
 --
 
 INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modules_module_id`, `dos_values_value_name`) VALUES
-('nhadat', 'about', 'advs_bottom'),
-('nhadat', 'about', 'advs_left'),
-('nhadat', 'about', 'advs_top'),
+('nhadat', 'about', 'advs_right'),
 ('nhadat', 'about', 'list_supports'),
 ('nhadat', 'about', 'menu_about'),
-('nhadat', 'contact', 'advs_bottom'),
 ('nhadat', 'contact', 'advs_left'),
-('nhadat', 'contact', 'advs_top'),
+('nhadat', 'contact', 'advs_right'),
 ('nhadat', 'contact', 'list_supports'),
+('nhadat', 'contact', 'menu_news'),
 ('nhadat', 'contact', 'menu_products'),
+('nhadat', 'contact', 'menu_services'),
 ('nhadat', 'default', 'about_home'),
 ('nhadat', 'default', 'advs_bottom'),
 ('nhadat', 'default', 'advs_right'),
@@ -1794,11 +1768,10 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('nhadat', 'default', 'menu_news'),
 ('nhadat', 'default', 'menu_services'),
 ('nhadat', 'default', 'products_new'),
-('nhadat', 'news', 'advs_bottom'),
-('nhadat', 'news', 'advs_left'),
-('nhadat', 'news', 'advs_top'),
+('nhadat', 'news', 'advs_right'),
 ('nhadat', 'news', 'list_supports'),
 ('nhadat', 'news', 'menu_news'),
+('nhadat', 'news', 'menu_services'),
 ('nhadat', 'products', 'advs_bottom'),
 ('nhadat', 'products', 'advs_left'),
 ('nhadat', 'products', 'advs_right'),
@@ -1808,9 +1781,9 @@ INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modu
 ('nhadat', 'products', 'menu_products'),
 ('nhadat', 'products', 'menu_services'),
 ('nhadat', 'services', 'advs_bottom'),
-('nhadat', 'services', 'advs_center'),
-('nhadat', 'services', 'advs_top'),
+('nhadat', 'services', 'advs_right'),
 ('nhadat', 'services', 'list_supports'),
+('nhadat', 'services', 'menu_news'),
 ('nhadat', 'services', 'menu_services'),
 ('nhadat', 'video', 'advs_bottom'),
 ('nhadat', 'video', 'advs_left'),
@@ -1842,7 +1815,6 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
   `expired` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `import` tinyint(1) NOT NULL DEFAULT '0',
   `activated` tinyint(1) NOT NULL,
-  `avartar` varchar(45) DEFAULT NULL,
   `dos_templates_template` varchar(6) NOT NULL,
   `dos_provinces_province_id` int(11) NOT NULL,
   `dos_bussiness_bussiness_id` varchar(100) NOT NULL,
@@ -1856,25 +1828,13 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 -- Dumping data for table `dos_usernames`
 --
 
-INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `cmnd`, `address`, `phone`, `company`, `bank_name`, `bank_number`, `role`, `language`, `code`, `expired`, `import`, `activated`, `avartar`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('abc', 'ninh@yac.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-07-09 14:12:17', '', 2147483647, 'Đồng Nai', '235466789099089', NULL, '', NULL, 'user', 'vi', NULL, '2012-08-18 17:00:00', 0, 1, 'abc.jpg', 'nhadat', 19, 'bds-kien-truc-xay-dung'),
-('abc1', 'ninh@yac.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-07-20 09:17:47', '', 2147483647, 'Đồng Nai', '235466789099089', NULL, '', NULL, 'user', 'vi', NULL, '2012-08-18 17:00:00', 0, 1, NULL, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
-('abc2', 'ninh@yac.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-07-20 09:21:56', '', 2147483647, 'Đồng Nai', '235466789099089', NULL, '', NULL, 'user', 'vi', NULL, '2012-08-18 17:00:00', 0, 1, NULL, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
-('abc22', 'ninh@yac.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-07-20 10:58:56', '', 2147483647, 'Đồng Nai', '45345235', NULL, '', NULL, 'user', 'vi', NULL, '0000-00-00 00:00:00', 0, 1, 'abc22.jpg', 'nhadat', 19, 'bds-kien-truc-xay-dung'),
-('abc23', 'ninh@yac.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-07-21 09:23:58', 'Lê Hữu Ninh', 2147483647, 'Đồng Nai', '45345235', NULL, '', NULL, 'user', 'vi', NULL, '2012-08-19 17:00:00', 0, 1, NULL, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
-('abc26', 'ninh@yac.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-07-21 09:46:20', 'Nhà phố đẹp', 2147483647, 'Đồng Nai', '45345235', NULL, '', NULL, 'user', 'vi', NULL, '2012-08-19 17:00:00', 0, 1, NULL, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
-('abc3', 'ninh@yac.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-07-20 09:23:31', '', 2147483647, 'Đồng Nai', '235466789099089', NULL, '', NULL, 'user', 'vi', NULL, '2012-08-18 17:00:00', 0, 1, NULL, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
-('abc4', 'ninh@yac.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-07-20 09:25:40', '', 2147483647, 'Đồng Nai', '235466789099089', NULL, '', NULL, 'user', 'vi', NULL, '2012-08-18 17:00:00', 0, 1, NULL, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
-('abc5', 'ninh@yac.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-07-20 09:26:58', '', 2147483647, 'Đồng Nai', '235466789099089', NULL, '', NULL, 'user', 'vi', NULL, '2012-08-18 17:00:00', 0, 1, NULL, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
-('abc7', 'ninh@yac.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-07-20 09:32:19', '', 2147483647, 'Đồng Nai', '45345235', NULL, '', NULL, 'user', 'vi', NULL, '2012-08-18 17:00:00', 0, 1, NULL, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
-('abc8', 'ninh@yac.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-07-20 09:30:03', '', 2147483647, 'Đồng Nai', '45345235', NULL, '', NULL, 'user', 'vi', NULL, '2012-08-18 17:00:00', 0, 1, NULL, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
-('abc9', 'ninh@yac.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-07-20 09:35:49', '', 2147483647, 'Đồng Nai', '45345235', NULL, '', NULL, 'user', 'vi', NULL, '2012-08-18 17:00:00', 0, 1, NULL, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
-('abc91', '', '', '2012-07-20 09:41:17', '', 2147483647, 'sfggdsgs', '45345235', NULL, '', NULL, 'user', 'vi', NULL, '2012-08-18 17:00:00', 0, 1, 'abc91.jpg', 'nhadat', 19, 'bds-kien-truc-xay-dung'),
-('nhaphodep', 'info2@nhaphodep.vn', '4297f44b13955235245b2497399d7a93', '2012-06-14 07:31:44', 'Nhà phố đẹp', 2147483647, 'Đồng Nai4', '0929001001', 'Công ty cổ phần Thương Hội', 'VCB', 21312312, 'admin', 'vi', NULL, '2012-08-18 17:00:00', 0, 1, 'nhaphodep.jpg', 'nhadat', 30, 'bds-kien-truc-xay-dung'),
-('ninh', 'ninh@yac.com', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-06-16 17:48:55', 'Ninh', 2147483647, 'Đồng Nai', '235466789099089', NULL, 'ACB', 2147483647, 'user', 'vi', NULL, '2012-07-15 17:00:00', 0, 1, NULL, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
-('ninh1', 'ninh@yac.com', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-06-16 18:01:40', 'Ninh', 2147483647, 'Đồng Nai', '235466789099089', NULL, 'ACB', 2147483647, 'user', 'vi', NULL, '2012-07-15 17:00:00', 0, 1, NULL, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
-('tinhungphat', 'ninh@yac.com', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-06-16 18:05:20', 'ds', 2147483647, 'Đồng Nai', '235466789099089', NULL, 'ACB', 2147483647, 'user', 'vi', NULL, '2012-07-15 17:00:00', 0, 1, NULL, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
-('tinhungphat1', 'ninh@yac.com', '96e79218965eb72c92a549dd5a330112', '2012-06-19 16:07:13', 'f', 2147483647, 'f', 'f', NULL, '', NULL, 'user', 'vi', NULL, '2012-07-18 17:00:00', 0, 1, NULL, 'nhadat', 19, 'bds-kien-truc-xay-dung');
+INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `cmnd`, `address`, `phone`, `company`, `bank_name`, `bank_number`, `role`, `language`, `code`, `expired`, `import`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
+('abc', 'ninh@yac.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-07-09 14:12:17', '', 2147483647, 'Đồng Nai', '235466789099089', NULL, '', NULL, 'user', 'vi', NULL, '2012-08-07 17:00:00', 0, 1, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
+('nhaphodep', 'info@nhaphodep.vn', 'e10adc3949ba59abbe56e057f20f883e', '2012-06-14 07:31:44', 'Nhà phố đẹp', 0, '', '0929001001', 'Công ty cổ phần Thương Hội', '', 0, 'admin', 'vi', NULL, '2013-05-31 17:00:00', 0, 1, 'nhadat', 30, 'bds-kien-truc-xay-dung'),
+('ninh', 'ninh@yac.com', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-06-16 17:48:55', 'Ninh', 2147483647, 'Đồng Nai', '235466789099089', NULL, 'ACB', 2147483647, 'user', 'vi', NULL, '2012-07-15 17:00:00', 0, 1, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
+('ninh1', 'ninh@yac.com', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-06-16 18:01:40', 'Ninh', 2147483647, 'Đồng Nai', '235466789099089', NULL, 'ACB', 2147483647, 'user', 'vi', NULL, '2012-07-15 17:00:00', 0, 1, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
+('tinhungphat', 'ninh@yac.com', 'aa7b65c231f7cd2e0ab4fa9c26ccdaf5', '2012-06-16 18:05:20', 'ds', 2147483647, 'Đồng Nai', '235466789099089', NULL, 'ACB', 2147483647, 'user', 'vi', NULL, '2012-07-15 17:00:00', 0, 1, 'nhadat', 19, 'bds-kien-truc-xay-dung'),
+('tinhungphat1', 'ninh@yac.com', '96e79218965eb72c92a549dd5a330112', '2012-06-19 16:07:13', 'f', 2147483647, 'f', 'f', NULL, '', NULL, 'user', 'vi', NULL, '2012-07-18 17:00:00', 0, 1, 'nhadat', 19, 'bds-kien-truc-xay-dung');
 
 -- --------------------------------------------------------
 
@@ -1950,349 +1910,6 @@ INSERT INTO `dos_values` (`value_name`, `module`, `module_id`, `function_name`) 
 ('products_hot', 'products', 'Products', 'listItemHot'),
 ('products_new', 'products', 'Products', 'listItemNew'),
 ('video_hot', 'video', 'Video', 'itemHot');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `dos_wards`
---
-
-CREATE TABLE IF NOT EXISTS `dos_wards` (
-  `ward_id` int(11) NOT NULL AUTO_INCREMENT,
-  `ward_name` varchar(45) NOT NULL,
-  `dos_districts_district` int(11) NOT NULL,
-  PRIMARY KEY (`ward_id`),
-  KEY `dos_districts_district` (`dos_districts_district`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=326 ;
-
---
--- Dumping data for table `dos_wards`
---
-
-INSERT INTO `dos_wards` (`ward_id`, `ward_name`, `dos_districts_district`) VALUES
-(1, 'Phường 01', 563),
-(2, 'Phường 02', 563),
-(3, 'Phường 03', 563),
-(4, 'Phường 04', 563),
-(5, 'Phường 05', 563),
-(6, 'Phường 06', 563),
-(7, 'Phường 08', 563),
-(8, 'Phường 09', 563),
-(9, 'Phường 10', 563),
-(10, 'Phường 12', 563),
-(11, 'Phường 13', 563),
-(12, 'Phường 14', 563),
-(13, 'Phường 15', 563),
-(14, 'Phường 16', 563),
-(15, 'Phường 18', 563),
-(16, 'Phường 01', 564),
-(17, 'Phường 02', 564),
-(18, 'Phường 03', 564),
-(19, 'Phường 04', 564),
-(20, 'Phường 05', 564),
-(21, 'Phường 06', 564),
-(22, 'Phường 07', 564),
-(23, 'Phường 08', 564),
-(24, 'Phường 09', 564),
-(25, 'Phường 10', 564),
-(26, 'Phường 11', 564),
-(27, 'Phường 12', 564),
-(28, 'Phường 13', 564),
-(29, 'Phường 14', 564),
-(30, 'Phường An Khánh', 565),
-(31, 'Phường An Lợi Đông', 565),
-(32, 'Phường An Phú', 565),
-(33, 'Phường Bình An', 565),
-(34, 'Phường Bình Khánh', 565),
-(35, 'Phường Bình Trưng Đông', 565),
-(36, 'Phường Bình Trưng Tây', 565),
-(37, 'Phường Cát Lái', 565),
-(38, 'Phường Thạnh Mỹ Lợi', 565),
-(39, 'Phường Thảo Điền', 565),
-(40, 'Phường Thủ Thiêm', 565),
-(41, 'Phường An Phú Đông', 566),
-(42, 'Phường Đông Hưng Thuận', 566),
-(43, 'Phường Hiệp Thành', 566),
-(44, 'Phường Tân Chánh Hiệp', 566),
-(45, 'Phường Tân Hưng Thuận', 566),
-(46, 'Phường Tân Thới Hiệp', 566),
-(47, 'Phường Tân Thới Nhất', 566),
-(48, 'Phường Thạnh Lộc', 566),
-(49, 'Phường Thạnh Xuân', 566),
-(50, 'Phường Thới An', 566),
-(51, 'Phường Trung Mỹ Tây', 566),
-(52, 'Phường 01', 567),
-(53, 'Phường 02', 567),
-(54, 'Phường 03', 567),
-(55, 'Phường 04', 567),
-(56, 'Phường 05', 567),
-(57, 'Phường 06', 567),
-(58, 'Phường 07', 567),
-(59, 'Phường 08', 567),
-(60, 'Phường 09', 567),
-(61, 'Phường 10', 567),
-(62, 'Phường 11', 567),
-(63, 'Phường 12', 567),
-(64, 'Phường 13', 567),
-(65, 'Phường 14', 567),
-(66, 'Phường 15', 567),
-(67, 'Phường 16', 567),
-(68, 'Phường 01', 568),
-(69, 'Phường 02', 568),
-(70, 'Phường 03', 568),
-(71, 'Phường 04', 568),
-(72, 'Phường 05', 568),
-(73, 'Phường 06', 568),
-(74, 'Phường 07', 568),
-(75, 'Phường 08', 568),
-(76, 'Phường 09', 568),
-(77, 'Phường 10', 568),
-(78, 'Phường 11', 568),
-(79, 'Phường 12', 568),
-(80, 'Phường 13', 568),
-(81, 'Phường 14', 568),
-(82, 'Phường 15', 568),
-(83, 'Phường Bến Nghé', 569),
-(84, 'Phường Bến Thành', 569),
-(85, 'Phường Cầu Kho', 569),
-(86, 'Phường Cầu Ông Lãnh', 569),
-(87, 'Phường Cô Giang', 569),
-(88, 'Phường Đa Kao', 569),
-(89, 'Phường Nguyễn Cư Trinh', 569),
-(90, 'Phường Nguyễn Thái Bình', 569),
-(91, 'Phường Phạm Ngũ Lão', 569),
-(92, 'Phường Tân Định', 569),
-(93, 'Phường 01', 570),
-(94, 'Phường 02', 570),
-(95, 'Phường 03', 570),
-(96, 'Phường 04', 570),
-(97, 'Phường 05', 570),
-(98, 'Phường 07', 570),
-(99, 'Phường 08', 570),
-(100, 'Phường 09', 570),
-(101, 'Phường 10', 570),
-(102, 'Phường 11', 570),
-(103, 'Phường 12', 570),
-(104, 'Phường 13', 570),
-(105, 'Phường 14', 570),
-(106, 'Phường 15', 570),
-(107, 'Phường 17', 570),
-(108, 'Thị trấn Nhà Bè', 571),
-(109, 'Xã Hiệp Phước', 571),
-(110, 'Xã Long Thới', 571),
-(111, 'Xã Nhơn Đức', 571),
-(112, 'Xã Phú Xuân', 571),
-(113, 'Xã Phước Kiển', 571),
-(114, 'Xã Phước Lộc', 571),
-(115, 'Phường Bình Chiểu', 572),
-(116, 'Phường Bình Thọ', 572),
-(117, 'Phường Hiệp Bình Chánh', 572),
-(118, 'Phường Hiệp Bình Phước', 572),
-(119, 'Phường Linh Chiểu', 572),
-(120, 'Phường Linh Đông', 572),
-(121, 'Phường Linh Tây', 572),
-(122, 'Phường Linh Trung', 572),
-(123, 'Phường Linh Xuân', 572),
-(124, 'Phường Tam Bình', 572),
-(125, 'Phường Tam Phú', 572),
-(126, 'Phường Trường Thọ', 572),
-(127, 'Phường 01', 573),
-(128, 'Phường 03', 573),
-(129, 'Phường 04', 573),
-(130, 'Phường 05', 573),
-(131, 'Phường 06', 573),
-(132, 'Phường 07', 573),
-(133, 'Phường 08', 573),
-(134, 'Phường 09', 573),
-(135, 'Phường 10', 573),
-(136, 'Phường 11', 573),
-(137, 'Phường 12', 573),
-(138, 'Phường 13', 573),
-(139, 'Phường 14', 573),
-(140, 'Phường 15', 573),
-(141, 'Phường 16', 573),
-(142, 'Phường 17', 573),
-(143, 'Thị trấn Củ Chi', 574),
-(144, 'Xã An Nhơn Tây', 574),
-(145, 'Xã An Phú', 574),
-(146, 'Xã Bình Mỹ', 574),
-(147, 'Xã Hòa Phú', 574),
-(148, 'Xã Nhuận Đức', 574),
-(149, 'Xã Phạm Văn Cội', 574),
-(150, 'Xã Phú Hòa Đông', 574),
-(151, 'Xã Phú Mỹ Hưng', 574),
-(152, 'Xã Phước Hiệp', 574),
-(153, 'Xã Phước Thạnh', 574),
-(154, 'Xã Phước Vĩnh An', 574),
-(155, 'Xã Tân An Hội', 574),
-(156, 'Xã Tân Phú Trung', 574),
-(157, 'Xã Tân Thạnh Đông', 574),
-(158, 'Xã Tân Thạnh Tây', 574),
-(159, 'Xã Tân Thông Hội', 574),
-(160, 'Xã Thái Mỹ', 574),
-(161, 'Xã Trung An', 574),
-(162, 'Xã Trung Lập Hạ', 574),
-(163, 'Xã Trung Lập Thượng', 574),
-(164, 'Thị trấn Cần Thạnh', 575),
-(165, 'Xã An Thới Đông', 575),
-(166, 'Xã Bình Khánh', 575),
-(167, 'Xã Long Hòa', 575),
-(168, 'Xã Lý Nhơn', 575),
-(169, 'Xã Tam Thôn Hiệp', 575),
-(170, 'Xã Thạnh An', 575),
-(171, 'Phường 01', 576),
-(172, 'Phường 02', 576),
-(173, 'Phường 03', 576),
-(174, 'Phường 05', 576),
-(175, 'Phường 06', 576),
-(176, 'Phường 07', 576),
-(177, 'Phường 11', 576),
-(178, 'Phường 12', 576),
-(179, 'Phường 13', 576),
-(180, 'Phường 14', 576),
-(181, 'Phường 15', 576),
-(182, 'Phường 17', 576),
-(183, 'Phường 19', 576),
-(184, 'Phường 21', 576),
-(185, 'Phường 22', 576),
-(186, 'Phường 24', 576),
-(187, 'Phường 25', 576),
-(188, 'Phường 26', 576),
-(189, 'Phường 27', 576),
-(190, 'Phường 28', 576),
-(191, 'Phường An Lạc', 577),
-(192, 'Phường An Lạc A', 577),
-(193, 'Phường Bình Hưng Hòa', 577),
-(194, 'Phường Bình Hưng Hoà A', 577),
-(195, 'Phường Bình Hưng Hoà B', 577),
-(196, 'Phường Bình Trị Đông', 577),
-(197, 'Phường Bình Trị Đông A', 577),
-(198, 'Phường Bình Trị Đông B', 577),
-(199, 'Phường Tân Tạo', 577),
-(200, 'Phường Tân Tạo A', 577),
-(201, 'Thị trấn Tân Túc', 578),
-(202, 'Xã An Phú Tây', 578),
-(203, 'Xã Bình Chánh', 578),
-(204, 'Xã Bình Hưng', 578),
-(205, 'Xã Bình Lợi', 578),
-(206, 'Xã Đa Phước', 578),
-(207, 'Xã Hưng Long', 578),
-(208, 'Xã Lê Minh Xuân', 578),
-(209, 'Xã Phạm Văn Hai', 578),
-(210, 'Xã Phong Phú', 578),
-(211, 'Xã Quy Đức', 578),
-(212, 'Xã Tân Kiên', 578),
-(213, 'Xã Tân Nhựt', 578),
-(214, 'Xã Tân Quý Tây', 578),
-(215, 'Xã Vĩnh Lộc A', 578),
-(216, 'Xã Vĩnh Lộc B', 578),
-(217, 'Thị trấn Hóc Môn', 579),
-(218, 'Xã Bà Điểm', 579),
-(219, 'Xã Đông Thạnh', 579),
-(220, 'Xã Nhị Bình', 579),
-(221, 'Xã Tân Hiệp', 579),
-(222, 'Xã Tân Thới Nhì', 579),
-(223, 'Xã Tân Xuân', 579),
-(224, 'Xã Thới Tam Thôn', 579),
-(225, 'Xã Trung Chánh', 579),
-(226, 'Xã Xuân Thới Đông', 579),
-(227, 'Xã Xuân Thới Sơn', 579),
-(228, 'Xã Xuân Thới Thượng', 579),
-(229, 'Phường Hiệp Phú', 580),
-(230, 'Phường Long Bình', 580),
-(231, 'Phường Long Phước', 580),
-(232, 'Phường Long Thạnh Mỹ', 580),
-(233, 'Phường Long Trường', 580),
-(234, 'Phường Phú Hữu', 580),
-(235, 'Phường Phước Bình', 580),
-(236, 'Phường Phước Long A', 580),
-(237, 'Phường Phước Long B', 580),
-(238, 'Phường Tân Phú', 580),
-(239, 'Phường Tăng Nhơn Phú A', 580),
-(240, 'Phường Tăng Nhơn Phú B', 580),
-(241, 'Phường Trường Thạnh', 580),
-(242, 'Phường 01', 581),
-(243, 'Phường 02', 581),
-(244, 'Phường 03', 581),
-(245, 'Phường 04', 581),
-(246, 'Phường 05', 581),
-(247, 'Phường 06', 581),
-(248, 'Phường 07', 581),
-(249, 'Phường 08', 581),
-(250, 'Phường 09', 581),
-(251, 'Phường 10', 581),
-(252, 'Phường 11', 581),
-(253, 'Phường 12', 581),
-(254, 'Phường 13', 581),
-(255, 'Phường 14', 581),
-(256, 'Phường 15', 581),
-(257, 'Phường 16', 581),
-(258, 'Phường Bình Thuận', 582),
-(259, 'Phường Phú Mỹ', 582),
-(260, 'Phường Phú Thuận', 582),
-(261, 'Phường Tân Hưng', 582),
-(262, 'Phường Tân Kiểng', 582),
-(263, 'Phường Tân Phong', 582),
-(264, 'Phường Tân Phú', 582),
-(265, 'Phường Tân Quy', 582),
-(266, 'Phường Tân Thuận Đông', 582),
-(267, 'Phường Tân Thuận Tây', 582),
-(268, 'Phường 01', 583),
-(269, 'Phường 02', 583),
-(270, 'Phường 03', 583),
-(271, 'Phường 04', 583),
-(272, 'Phường 05', 583),
-(273, 'Phường 06', 583),
-(274, 'Phường 07', 583),
-(275, 'Phường 08', 583),
-(276, 'Phường 09', 583),
-(277, 'Phường 10', 583),
-(278, 'Phường 11', 583),
-(279, 'Phường 12', 583),
-(280, 'Phường 13', 583),
-(281, 'Phường 14', 583),
-(282, 'Phường 01', 584),
-(283, 'Phường 02', 584),
-(284, 'Phường 03', 584),
-(285, 'Phường 04', 584),
-(286, 'Phường 05', 584),
-(287, 'Phường 06', 584),
-(288, 'Phường 07', 584),
-(289, 'Phường 08', 584),
-(290, 'Phường 09', 584),
-(291, 'Phường 10', 584),
-(292, 'Phường 11', 584),
-(293, 'Phường 12', 584),
-(294, 'Phường 13', 584),
-(295, 'Phường 14', 584),
-(296, 'Phường 15', 584),
-(297, 'Phường Hiệp Tân', 585),
-(298, 'Phường Hoà Thạnh', 585),
-(299, 'Phường Phú Thạnh', 585),
-(300, 'Phường Phú Thọ Hoà', 585),
-(301, 'Phường Phú Trung', 585),
-(302, 'Phường Sơn Kỳ', 585),
-(303, 'Phường Tân Qúy', 585),
-(304, 'Phường Tân Sơn Nhì', 585),
-(305, 'Phường Tân Thành', 585),
-(306, 'Phường Tân Thới Hoà', 585),
-(307, 'Phường Tây Thạnh', 585),
-(308, 'Phường 01', 586),
-(309, 'Phường 02', 586),
-(310, 'Phường 03', 586),
-(311, 'Phường 04', 586),
-(312, 'Phường 05', 586),
-(313, 'Phường 06', 586),
-(314, 'Phường 07', 586),
-(315, 'Phường 08', 586),
-(316, 'Phường 09', 586),
-(317, 'Phường 10', 586),
-(318, 'Phường 11', 586),
-(319, 'Phường 12', 586),
-(320, 'Phường 13', 586),
-(321, 'Phường 14', 586),
-(322, 'Phường 15', 586),
-(325, '____', 1);
 
 --
 -- Constraints for dumped tables
@@ -2373,7 +1990,6 @@ ALTER TABLE `dos_module_products`
   ADD CONSTRAINT `dos_module_products_ibfk_2` FOREIGN KEY (`dos_districts_district_id`) REFERENCES `dos_districts` (`district_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `dos_module_products_ibfk_3` FOREIGN KEY (`dos_module_item_type_type_id`) REFERENCES `dos_module_products_type` (`type_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `dos_module_products_ibfk_4` FOREIGN KEY (`dos_username`) REFERENCES `dos_usernames` (`username`),
-  ADD CONSTRAINT `dos_module_products_ibfk_5` FOREIGN KEY (`dos_wards_ward_id`) REFERENCES `dos_wards` (`ward_id`),
   ADD CONSTRAINT `fk_dos_module_products_dos_module_products_cat1` FOREIGN KEY (`dos_module_item_cat_cat_id`) REFERENCES `dos_module_products_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
@@ -2473,12 +2089,6 @@ ALTER TABLE `dos_usernames_has_dos_modules`
 --
 ALTER TABLE `dos_user_langs`
   ADD CONSTRAINT `fk_dos_user_langs_dos_usernames1` FOREIGN KEY (`dos_usernames_username`) REFERENCES `dos_usernames` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `dos_wards`
---
-ALTER TABLE `dos_wards`
-  ADD CONSTRAINT `dos_wards_ibfk_1` FOREIGN KEY (`dos_districts_district`) REFERENCES `dos_districts` (`district_id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
