@@ -50,7 +50,7 @@ a:hover{color:#000;}
 /** header-btom **/
 .header-btom{}
 .hd-bt-left{float:left; width:520px}
-.title-company{font-size:29pt;color:#fff;padding:30px 0 0 0;margin:0 0 10px 0}
+.title-company{font-size:29pt;font-weight:normal;color:#fff;padding:30px 0 0 0;margin:0 0 10px 0}
 .white{color:#fff;font-size:11pt;margin:0 0 15px 0}
 
 /**  Form list-title  **/ 
@@ -67,7 +67,7 @@ a:hover{color:#000;}
 .big_thumb #paginate-slider2{width:870px !important;overflow:hidden;float:left;margin:15px 0 15px 40px}
 .prod_detail #paginate-slider2 li{margin:0 15px 0 0;text-align:center}
 .prod_detail #paginate-slider2 img{height:112px;width:162px;margin:0 0 2px 0}
-.prod_detail #paginate-slider2  h4 a{color:#0275BE;display:block}
+.prod_detail #paginate-slider2  h4 a{color:#0275BE;display:block;font-weight:normal}
 .prod_detail #paginate-slider2  h4 a:hover{color:#000}
 .prod_detail span.prevsmall {position:absolute;left:-9px; z-index:20;margin:50px 5px 0 0; cursor:pointer}
 .prod_detail span.nextsmall {position:absolute;right:-12px;margin:50px 2px 0 0; cursor:pointer}
