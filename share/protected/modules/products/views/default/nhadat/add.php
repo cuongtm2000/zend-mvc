@@ -82,12 +82,11 @@
             <?php echo $form->textField($model, 'address', $htmlOptions = array('class' => 'txt-very-large')); ?>
         </div> <div class="clear space"></div>
 
-        <?php foreach (Yii::app()->user->numLang as $lang): $lang = ($lang == 'vi') ? '' : $lang; ?>
+		<?php foreach (Yii::app()->user->numLang as $lang): $lang = ($lang == 'vi') ? '' : $lang; ?>
             <div class="col1"><?php echo $form->labelEx($model, 'content' . $lang) ?></div>
             <div class="col2">
                 <?php echo $form->textArea($model, 'content' . $lang, $htmlOptions = array('cols' => 20, 'rows' => 10)); ?>
                 <script type="text/javascript">
-					writeCookie('sessionPath', '<?php echo Yii::app()->baseUrl?>', 1);
                     tinyMCE.init({
                         file_browser_callback: 'openKCFinder',
                         mode:"exact",
@@ -127,6 +126,7 @@
             </div>
             <div class="clear space"></div>
         <?php endforeach; ?>
+		
         <div class="col1">Thông tin</div>
         <div class="col2">
             <table>
