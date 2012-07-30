@@ -6,9 +6,9 @@
             <?php foreach($items['models'] as $value):?>
             <li>
                 <div class="customers-img">
-                    <a href="<?php echo Yii::t('main', 'customers.link')?>/<?php echo $value['dos_bussiness_bussiness_id'] ?>/<?php echo $value['tag']?>.html" title="<?php echo $value['customer_name'] ?>"><img src="<?php echo Yii::app()->baseUrl; ?>/public/userfiles/image/dos/image/customers/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['customer_name'] ?>" /></a>
+                    <a href="<?php echo Yii::app()->baseUrl .'/'. Yii::t('main', 'customers.link')?>/<?php echo $value['dos_bussiness_bussiness_id'] ?>/<?php echo $value['tag']?>.html" title="<?php echo $value['customer_name'] ?>"><img src="<?php echo Yii::app()->baseUrl; ?>/public/userfiles/image/dos/image/customers/<?php echo $value['pic_thumb']?>" alt="<?php echo $value['customer_name'] ?>" /></a>
                 </div>
-                <h3 class="title-tomers"><a href="<?php echo Yii::t('main', 'customers.link')?>/<?php echo $value['dos_bussiness_bussiness_id'] ?>/<?php echo $value['tag']?>.html" title="<?php echo $value['customer_name'] ?>"><?php echo $value['customer_name'] ?></a></h3>
+                <h3 class="title-tomers"><a href="<?php echo Yii::app()->baseUrl .'/'.Yii::t('main', 'customers.link')?>/<?php echo $value['dos_bussiness_bussiness_id'] ?>/<?php echo $value['tag']?>.html" title="<?php echo $value['customer_name'] ?>"><?php echo $value['customer_name'] ?></a></h3>
             </li>
             <?php endforeach?>
         <?php endif?>
