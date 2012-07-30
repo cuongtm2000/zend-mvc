@@ -46,7 +46,7 @@
          <p class="hot-line">Hot line: 01234 567 890 Mr.Bảo</p>   <div class="clear"></div>
     </div>
     <div class="bg-nav">
-		<?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel', array());?>
+		<?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel', array('lastItemCssClass' => 'last'));?>
          <!-- <ul id="nav">
             <li><a href="rings.html" title="" class="select">Trang chủ</a></li>
             <li><a href="necklace.html" title="">Giới thiệu</a></li>
