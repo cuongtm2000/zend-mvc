@@ -68,17 +68,6 @@
         	<div id="leftcontent">
                 <?php $this->getPosition('left');?>
 
-                <h4 class="title-left"><span>Hỗ trợ trực tuyến</span></h4>
-                <ul class="support frame-leftcontent">
-                    <li>Hỗ trợ kỹ thuật</li>
-                    <li><a href="ymsgr:sendim?thanhansoft"><img src="http://opi.yahoo.com/online?u=thanhansoft&amp;m=g&amp;t=2&amp;l=us" alt="thanhansoft" /></a></li>
-                    <li>Hỗ trợ doanh nghiệp</li>
-                    <li><a href="ymsgr:sendIM?thanhansoft">
-                        <img src="http://mail.opi.yahoo.com/online?u=thanhansoft&amp;m=g&amp;t=2" border="0" alt="yahoo" /></a></li>
-                    <li>Hỗ trợ doanh nghiệp</li>
-                    <li><a href="ymsgr:sendIM?thanhansoft">
-                        <img src="http://mail.opi.yahoo.com/online?u=thanhansoft&amp;m=g&amp;t=2" border="0" alt="yahoo" /></a></li>
-                </ul>
             </div><!--End left content-->
             <div id="rightcontent">
                 <div id="banner">
@@ -150,21 +139,7 @@
             <div id="colum3">
                 <?php $this->getPosition('right');?>
 
-                <h3 class="title-red"><span>Tin tức &amp; Sự kiện mới</span></h3>
-                <ul class="sub-new frame-leftcontent">
-                    <li><a href="/tin-tuc-su-kien/tin-noi-bo/chung-nhan-thuong-hieu.html" title='Chứng nhận thương hiệu'>Chứng nhận thương hiệu</a></li>
-                    <li><a href="/tin-tuc-su-kien/tin-tuc-moi/doi-moi-phuong-phap-quy-hoach.html" title="Đổi mới phương pháp quy hoạch">Đổi mới phương pháp quy hoạch</a></li>
-                    <li><a href="/tin-tuc-su-kien/tin-tuc-moi/du-bao-kinh-te-2012-dau-sao-cung-nhe-nhang-hon.html" title='Dự báo kinh tế 2012: "Dẫu sao cũng nhẹ nhàng hơn"'>Dự báo kinh tế 2012: "Dẫu sao cũng nhẹ nhàng hơn"</a></li>
-                    <li><a href="/tin-tuc-su-kien/thong-tin-kinh-te/dau-tu-tin-chi-cac-bon-trong-lam-nghiep-thi-truong-con-bo-ngo.html" title='Đầu tư tín chỉ các-bon trong lâm nghiệp: Thị trường còn bỏ ngỏ'>Đầu tư tín chỉ các-bon trong lâm nghiệp: Thị trường còn bỏ ngỏ</a></li>
-                </ul>
 
-                <h3 class="title-grey"><span>Tin tức hot</span></h3>
-                <ul class="sub-new">
-                    <li><a href="/tin-tuc-su-kien/tin-noi-bo/chung-nhan-thuong-hieu.html" title='Chứng nhận thương hiệu'>Chứng nhận thương hiệu</a></li>
-                    <li><a href="/tin-tuc-su-kien/tin-tuc-moi/doi-moi-phuong-phap-quy-hoach.html" title="Đổi mới phương pháp quy hoạch">Đổi mới phương pháp quy hoạch</a></li>
-                    <li><a href="/tin-tuc-su-kien/tin-tuc-moi/du-bao-kinh-te-2012-dau-sao-cung-nhe-nhang-hon.html" title='Dự báo kinh tế 2012: "Dẫu sao cũng nhẹ nhàng hơn"'>Dự báo kinh tế 2012: "Dẫu sao cũng nhẹ nhàng hơn"</a></li>
-                    <li><a href="/tin-tuc-su-kien/thong-tin-kinh-te/dau-tu-tin-chi-cac-bon-trong-lam-nghiep-thi-truong-con-bo-ngo.html" title='Đầu tư tín chỉ các-bon trong lâm nghiệp: Thị trường còn bỏ ngỏ'>Đầu tư tín chỉ các-bon trong lâm nghiệp: Thị trường còn bỏ ngỏ</a></li>
-                </ul>
             </div> <!--End colum3--> <div class="clear"></div>
         </div><!--End content-->
 	</div> <!--End main-content-->

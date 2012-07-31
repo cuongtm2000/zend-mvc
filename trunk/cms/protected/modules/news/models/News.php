@@ -120,6 +120,26 @@ class News extends CActiveRecord {
         ));
     }
 
+    public function listItemsNew() {
+        $criteria = new CDbCriteria();
+        $criteria->with = array(__CLASS__ . 'Language');
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'enable = 1';
+        $criteria->limit = 7;
+
+        return $this::model()->findAll($criteria);
+    }
+
+    public function listItemsHot() {
+        $criteria = new CDbCriteria();
+        $criteria->with = array(__CLASS__ . 'Language');
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'hot = 1 AND enable = 1';
+        $criteria->limit = 7;
+
+        return $this::model()->findAll($criteria);
+    }
+
     //Back end - List item admin
     public function listItemAdmin() {
         $criteria = new CDbCriteria();

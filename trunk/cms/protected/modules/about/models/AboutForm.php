@@ -20,6 +20,7 @@ class AboutForm extends CFormModel {
             array('hot, enable', 'numerical', 'integerOnly' => true),
             array('titlevi, titleen, tagvi, tagen, extra_field1, extra_field2', 'length', 'max' => 100),
             array('descriptionvi, descriptionen', 'length', 'max' => 250),
+            //array('tagvi, tagen', 'unique', 'className' => 'AboutLanguage', 'attributeName' => 'tag'),
             array('contentvi, contenten', 'safe')
         );
     }

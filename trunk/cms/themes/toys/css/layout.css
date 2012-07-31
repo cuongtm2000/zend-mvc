@@ -64,7 +64,8 @@ a:hover{color:#000;}
 
 /*Ho tro ky thuat*/
 .support{list-style:none;padding:10px 0;text-align:center}
-.support li {color:#444444; line-height:2em;}
+.support li {color:#444;line-height: 1.5em}
+.support li img{margin:0 0 8px 0}
 
 /*Thong ke truy cap*/
 .statistics{list-style:none;padding:10px 3px 10px 15px}
