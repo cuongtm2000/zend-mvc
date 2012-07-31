@@ -90,51 +90,7 @@
                         </ul>
                     </div>
                 </div> <!--End frame-panel -->
-               <div class="main-all-product">
-                    <h2 class="title-right">Sản phẩm mới</h2>
-                    <ul class="all-product">
-                        <li class="product">
-                            <div class="tent-product">
-                                <div class="product-img"><a href="product-info.html" title=""><img src="images/pro.jpg" alt="Product" /></a></div>
-                                <h2 class="title-pro"><a href="product-info.html" title="Leonidas Chocolate Assortment">Woven ring white gold paved</a></h2>
-                                <p class="price">$165.00</p>
-                                <p class="bton-cart"><a href="product-info.html" class="add-to-cart" title="Add to Cart"><span>Add to Cart</span></a></p>
-                            </div>
-                        </li>
-                         <li class="product">
-                            <div class="tent-product">
-                                <div class="product-img"><a href="product-info.html" title=""><img src="images/pro.jpg" alt="Product" /></a></div>
-                                <h2 class="title-pro"><a href="product-info.html" title="Leonidas Chocolate Assortment">Woven ring white gold paved</a></h2>
-                                <p class="price">$165.00</p>
-                                <p class="bton-cart"><a href="product-info.html" class="add-to-cart" title="Add to Cart"><span>Add to Cart</span></a></p>
-                            </div>
-                        </li>
-                        <li class="product">
-                            <div class="tent-product">
-                                <div class="product-img"><a href="product-info.html" title=""><img src="images/pro.jpg" alt="Product" /></a></div>
-                                <h2 class="title-pro"><a href="product-info.html" title="Leonidas Chocolate Assortment">Woven ring white gold paved</a></h2>
-                                <p class="price">$165.00</p>
-                                <p class="bton-cart"><a href="product-info.html" class="add-to-cart" title="Add to Cart"><span>Add to Cart</span></a></p>
-                            </div>
-                        </li>
-                         <li class="product">
-                            <div class="tent-product">
-                                <div class="product-img"><a href="product-info.html" title=""><img src="images/pro.jpg" alt="Product" /></a></div>
-                                <h2 class="title-pro"><a href="product-info.html" title="Leonidas Chocolate Assortment">Woven ring white gold paved</a></h2>
-                                <p class="price">$165.00</p>
-                                <p class="bton-cart"><a href="product-info.html" class="add-to-cart" title="Add to Cart"><span>Add to Cart</span></a></p>
-                            </div>
-                        </li>
-                    </ul><!--End All products--> <div class="clear"></div>
-                </div> <!--End main-content-->         
-                <ul class="paging" id="yw0">
-					<li class="first hidden"><a href="/san-pham/thiet-bi-ve-sinh">Đầu tiên</a></li>
-					<li class="previous hidden"><a href="/san-pham/thiet-bi-ve-sinh">Lùi</a></li>
-					<li class="page selected"><a href="/san-pham/thiet-bi-ve-sinh">1</a></li>
-					<li class="page"><a href="/san-pham/thiet-bi-ve-sinh/trang/2">2</a></li>
-					<li class="next"><a href="/san-pham/thiet-bi-ve-sinh/trang/2">Tiếp</a></li>
-					<li class="last"><a href="/san-pham/thiet-bi-ve-sinh/trang/2">Cuối cùng</a></li>
-				</ul>
+
             </div><!--End right content--> 
             <div id="colum3">
                 <?php $this->getPosition('right');?>

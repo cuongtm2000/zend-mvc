@@ -2,7 +2,7 @@
 class UrlManager extends CUrlManager {
     protected function processRules() {
         $data = array();
-        $command = Yii::app()->db->createCommand("SELECT url_pattern, url_route, url_param FROM hoiit_urls");
+        $command = Yii::app()->db->createCommand("SELECT url_pattern, url_route, url_param FROM hoiit_urls ORDER BY url_sort ASC");
         $urlRules = $command->queryAll();
 
         foreach ($urlRules as $value) {

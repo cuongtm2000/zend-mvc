@@ -211,7 +211,7 @@ class NewsCat extends CActiveRecord {
             $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('news_cat_width_thumb'), Config::getValue('news_cat_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']]);
 
             $this->save();
-            $id = Yii::app()->db->getLastInsertId();
+            $id = $this->cat_id;
             $this::model()->updateByPk($id, array('cat_order' => $id));
         } else {
             $item = $this::model()->findByPk($id);
