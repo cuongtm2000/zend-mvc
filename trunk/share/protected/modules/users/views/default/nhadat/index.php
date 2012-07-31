@@ -6,7 +6,13 @@
     <tbody>
     <?php foreach ($models as $value): ?>
         <tr>
-            <td><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt="<?php echo $value['username']?>" width="100" /></td>
+            <td>
+				<?php if($value['avartar']):?>
+					<img src="<?php echo Yii::app()->baseUrl.' /public/userfiles/image/' . $value['username'] . '/image/'.$value['avartar'] ?>" alt="<?php echo $value['username']?>" width="100" />
+				<?php else:?>
+					<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt="<?php echo $value['username']?>" width="100" />
+				<?php endif?>
+			</td>
             <td><h6><strong><?php echo $value['username']?></strong></h6></td>
             <td><?php echo $value['fullname']?></td>
             <td><?php echo $value['address']?></td>
