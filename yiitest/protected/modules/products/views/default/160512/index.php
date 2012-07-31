@@ -2,6 +2,7 @@
 <h2 class="title-right"><span><?php echo $this->lang['products'] ?></span></h2>
 <ul id="all-product">
 	<?php foreach($items as $value): ?>
+	<?php if($value['cat_parent_id'] == 0):?>
 	<li class="product">
 		<div class="product-top"></div>
 			<div class="product-mid">	
@@ -18,6 +19,7 @@
 			</div>
 		<div class="product-btom"></div>
 	</li>
+	<?php endif?>
 	<?php endforeach; ?>
 </ul> <!--End all product-->
 

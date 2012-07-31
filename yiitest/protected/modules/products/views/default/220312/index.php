@@ -3,6 +3,7 @@
 <h1 class="title-right"><span><?php echo $this->lang[$this->module->id]?></span></h1>
 <ul class="all_product">
 <?php foreach($items as $value): ?>
+	<?php if($value['cat_parent_id'] == 0):?>
 	<li class="product">
 		<div class="tent-product">
 			<?php if($value['pic_full']): ?>
@@ -13,6 +14,7 @@
 			<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', $this->module->id.'.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']] ?>" title='<?php echo $value['cat_title'.LANG] ?>'><?php echo $value['cat_title'.LANG] ?></a></h2>
 		</div>
 	</li>
+	<?php endif?>
 <?php endforeach; ?>	
 </ul> <!--End frame all product-->
 

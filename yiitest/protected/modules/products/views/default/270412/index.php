@@ -3,6 +3,7 @@
 <h1 class="title-right"><span><?php echo $this->lang[$this->module->id]?></span></h1>
 <ul class="all-product">
 <?php foreach($items as $value): ?>
+	<?php if($value['cat_parent_id'] == 0):?>
 	<li class="product">
 		<?php if($value['pic_full']): ?>
 			<div class="product-img"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', $this->module->id.'.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']] ?>" title='<?php echo $value['cat_title'.LANG] ?>'><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/<?php echo $this->module->id?>Cat/<?php echo $value['pic_full'] ?>" alt='<?php echo $value['cat_title'.LANG] ?>' /></a></div>
@@ -11,6 +12,7 @@
 		<?php endif; ?>
 		<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', $this->module->id.'.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']] ?>" title='<?php echo $value['cat_title'.LANG] ?>'><strong><?php echo $value['cat_title'.LANG] ?></strong></a></h2>
 	</li>
+	<?php endif; ?>
 <?php endforeach; ?>	
 </ul> <!--End frame all product-->
 
