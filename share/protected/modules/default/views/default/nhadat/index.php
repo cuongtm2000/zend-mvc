@@ -40,7 +40,7 @@
                         <td style="text-align:center" width="90">
                             <h3 class="title-footer-right"><?php echo $value->Username['fullname'] ?></h3>
 							<?php if($value->Username['avartar']):?>
-								<img src="<?php echo Yii::app()->baseUrl.' /public/userfiles/image/' . $value->dos_username . '/image/'.$value->dos_username.'.jpg' ?>" alt="<?php echo $value->dos_username ?>" />
+								<img src="<?php echo Yii::app()->baseUrl.' /public/userfiles/image/' . $value->dos_username . '/image/'.$value->Username['avartar'] ?>" alt="<?php echo $value->dos_username ?>" />
 							<?php else:?>
 								<img src="<?php echo Yii::app()->theme->baseUrl.'/images/no-images.jpg' ?>" alt="<?php echo $value->dos_username ?>" />
 							<?php endif?>
