@@ -239,7 +239,7 @@ class News extends CActiveRecord {
             $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('news_width_thumb'), Config::getValue('news_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]);
 
             $this->save();
-            $id = Yii::app()->db->getLastInsertId();
+            $id = $this->record_id;
             $this::model()->updateByPk($id, array('record_order' => $id));
         } else {
             $item = $this::model()->findByPk($id);

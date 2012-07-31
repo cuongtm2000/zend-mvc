@@ -98,6 +98,7 @@ class AdminController extends BackEndController {
     }
 
     public function actionUrl() {
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.tablednd.0.7.min.js');
         $model = new Urls();
         if (Yii::app()->request->getIsPostRequest()) {
             $model->addItem($this->module->id, Yii::app()->request);

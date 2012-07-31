@@ -2,8 +2,10 @@
     <fieldset>
         <legend>Configuration Url: <?php echo $this->lang[$this->module->id]?></legend>
         <p class="rows"><a href="#" id="add-rows">Thêm dòng</a></p>
-        <?php foreach($items as $value):?>
-            <p class="clear">
+        <table id="table">
+            <?php foreach($items as $value):?>
+            <tr>
+                <td>
                 <input class="txt-large" type="text" name="pattern[]" value="<?php echo $value['url_pattern']?>" />
                 <input class="txt-small" type="text" name="route[]" value="<?php echo $value['url_route']?>" />
                 <input class="txt-small" type="text" name="param[]" value="<?php echo $value['url_param']?>" />
@@ -19,8 +21,10 @@
                         <option<?php echo $selected?> value="<?php echo $key?>"><?php echo $lang?></option>
                     <?php endforeach?>
                 </select>
-            </p>
-        <?php endforeach?>
+                </td>
+            </tr>
+            <?php endforeach?>
+        </table>
         <p class="clear">
             <label style="width:195px">&nbsp;</label>
             <input type="submit" name="submit" value="  <?php echo $this->lang['edit'] ?>  " class="login"/>
@@ -29,6 +33,8 @@
 </form>
 <script type="text/javascript">
     $(document).ready(function(){
+        $("#table").tableDnD();
+        $("#table tr:even").addClass("alt");
         $("#add-rows").click(function(){
             $(".rows").before('<p class="clear"><input class="txt-large" type="text" name="pattern[]" value="" /> <input class="txt-small" type="text" name="route[]" value="" /> <input class="txt-small" type="text" name="param[]" value="" /> <select name="type[]" class="select-75"><option value="0">None</option><option value="1">Default</option></select> <select name="lang[]" class="select-82"><?php foreach($this->listLanguage as $key => $lang):?><option value="<?php echo $key?>"><?php echo $lang?></option><?php endforeach?></select> <label class="reset-label"><input type="checkbox" title="Remove this item" onclick="$(this).parent().parent().remove();" name="delete[]" value="1" /></label></p>');
             return false;

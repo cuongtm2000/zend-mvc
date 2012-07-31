@@ -25,6 +25,8 @@
  * @property HoiitLanguages[] $hoiitLanguages
  */
 class Products extends CActiveRecord {
+    private $_model;
+
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
@@ -124,6 +126,48 @@ class Products extends CActiveRecord {
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
+    }
+
+    //Front end - get detail item
+    public function detailItem($tag) {
+        $id = ProductsLanguage::model()->getIDByTag($tag);
+        $criteria = new CDbCriteria();
+        $criteria->condition = 'enable=1';
+
+        $this->_model = $this::model()->findByPk($id, $criteria);
+
+        if ($this->_model === null) {
+            throw new CHttpException(404, 'The requested page does not exist.');
+        }
+        return $this->_model;
+    }
+
+    //Front end - list Item by Cat
+    public function listOtherItems($id, $cid) {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'record_id NOT IN (:id) AND hoiit_module_item_cat_cat_id=:cid AND enable = 1';
+        $criteria->params = array(':id' => $id, ':cid' => $cid);
+        $criteria->limit = 4;
+
+        return $this::model()->findAll($criteria);
+    }
+
+    //Front end - list Item by Cat
+    public function listItemByCat($cid) {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'enable=1 AND hoiit_module_item_cat_cat_id=:cid';
+        $criteria->params = array(':cid' => $cid);
+
+        $count = $this::model()->count($criteria);
+
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = 2;
+        $pages->applyLimit($criteria);
+
+        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
     }
 
     //Back end - List item admin
@@ -232,7 +276,7 @@ class Products extends CActiveRecord {
             }
 
             $this->save();
-            $id = Yii::app()->db->getLastInsertId();
+            $id = $this->record_id;
             $this::model()->updateByPk($id, array('record_order' => $id));
         } else {
             $item = $this::model()->findByPk($id);
