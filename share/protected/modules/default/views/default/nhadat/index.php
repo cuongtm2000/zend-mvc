@@ -42,7 +42,7 @@
 							<?php if($value->Username['avartar']):?>
 								<img src="<?php echo Yii::app()->baseUrl.' /public/userfiles/image/' . $value->dos_username . '/image/'.$value->Username['avartar'] ?>" alt="<?php echo $value->dos_username ?>" />
 							<?php else:?>
-								<img src="<?php echo Yii::app()->theme->baseUrl.'/images/no-images.jpg' ?>" alt="<?php echo $value->dos_username ?>" />
+								<img src="<?php echo Yii::app()->theme->baseUrl.'/images/no-img-members.jpg' ?>" alt="<?php echo $value->dos_username ?>" />
 							<?php endif?>
                             <p class="price"><?php echo $value['contact_mobile'] ?></p>
                         </td>
