@@ -196,7 +196,7 @@ class About extends CActiveRecord {
             $this->enable = $model->enable;
             $this->save();
 
-            $id = Yii::app()->db->getLastInsertId();
+            $id = $this->record_id;
             $this::model()->updateByPk($id, array('record_order' => $id));
         } else {
             $item = $this::model()->findByPk($id);

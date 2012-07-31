@@ -88,7 +88,7 @@ $config = array(
                     'levels' => 'error, warning',
                 ),
                 //array(
-                //'class'=>'CWebLogRoute',
+					//'class'=>'CWebLogRoute',
                 //),
             ),
         ),
