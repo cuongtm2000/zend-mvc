@@ -46,8 +46,7 @@
         ),
         array('label'=>'Menus', 'url'=>array('/admin/menus'),
             'items'=>array(
-                array('label'=>'Lists', 'url'=>array('/admin/menus/index')),
-                array('label'=>'Add', 'url'=>array('/admin/menus/add'))
+                array('label'=>'Lists', 'url'=>array('/admin/menus/index'))
             )
         ),
     ),
