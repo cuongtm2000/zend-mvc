@@ -17,13 +17,17 @@ class Controller extends CController {
         $this->lang = Lang::model()->getLang(Yii::app()->language);
     }
 
-    public function setLangUrl() {
+    public function setLangUrl() { //kiem tra lai xem co ai sai ko, ko thi xoa di
         $langDefault = Yii::app()->controller->setting['default_language'];
         if (Yii::app()->language == $langDefault) {
             return '';
         } else {
             return '/' . Yii::app()->language;
         }
+    }
+
+    public function setUrlModule(){
+        return $this->setLangUrl().'/'.Urls::model()->getPatternModule($this->module->id);
     }
 
     public function getPosition($position) {

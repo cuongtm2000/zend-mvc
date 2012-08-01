@@ -102,6 +102,20 @@ class Urls extends CActiveRecord {
         ));
     }
 
+    /**
+     * Function: Get url_pattern by url_type, hoiit_modules_module_id, hoiit_languages_language_id
+     * @param $pattern
+     * @param $lang
+     * @return mixed
+     */
+    public function getPatternModule($module) {
+        $lang = Yii::app()->language;
+        $command = Yii::app()->db->createCommand('SELECT url_pattern FROM ' . $this->tableName() . ' WHERE url_type=1 AND hoiit_modules_module_id=:module AND hoiit_languages_language_id=:lang');
+        $command->bindParam(":module", $module, PDO::PARAM_STR);
+        $command->bindParam(":lang", $lang, PDO::PARAM_STR);
+        return $command->queryScalar();
+    }
+
     public function getPatternByType($module) {
         $data = array();
         $command = Yii::app()->db->createCommand('SELECT url_pattern, hoiit_languages_language_id FROM ' . $this->tableName() . ' WHERE url_type=1 AND hoiit_modules_module_id=:module');
