@@ -21,7 +21,7 @@
 </div>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$(".panel-items li:even").addClass("alt");
+		$(".panel-items li:odd").addClass("alt");
 	});
 </script>
 <?php else:?>
