@@ -1,5 +1,6 @@
 <p><?php echo $item->ProductsLanguage[Yii::app()->language]['title']?></p>
 <p><?php echo $item->ProductsLanguage[Yii::app()->language]['content']?></p>
+<p><?php echo $item['unit']?></p>
 <p><?php echo $item->ProductsLanguage[Yii::app()->language]['description']?></p>
 <p><?php echo $item['pic_full']?></p>
 <p><?php echo $item['pic_desc']?></p>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 31, 2012 at 05:35 PM
+-- Generation Time: Aug 01, 2012 at 02:49 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -262,10 +262,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
 --
 
 INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(46, 'en', '', '<p>asdas</p>', '', 'dasd', 150, NULL, NULL),
-(46, 'vi', 'Welcome to Yiiproject.com', '<p>Welcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to</p>\r\n<h3>Welcome to Yiiproject.com</h3>\r\n<p>Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.com</p>', 'welcome-to-yiiprojectcom', 'das', 150, NULL, NULL),
-(47, 'en', 'About', '<p>Con tnet</p>', 'about', 'dasdsadsads', 150, NULL, NULL),
-(47, 'vi', 'Gioi thieu', '<p>Noi dung</p>', 'gioi-thieu', 'asdasdsd', 150, NULL, NULL);
+(46, 'en', '', '<p>asdas</p>', '', 'dasd', 156, NULL, NULL),
+(46, 'vi', 'Welcome to Yiiproject.com', '<p>Welcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to</p>\r\n<h3>Welcome to Yiiproject.com</h3>\r\n<p>Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.com</p>', 'welcome-to-yiiprojectcom', 'das', 156, NULL, NULL),
+(47, 'en', 'About', '<p>Con tnet</p>', 'about', 'dasdsadsads', 156, NULL, NULL),
+(47, 'vi', 'Gioi thieu', '<p>Noi dung</p>', 'gioi-thieu', 'asdasdsd', 156, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -492,10 +492,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_save` (
 --
 
 INSERT INTO `hoiit_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456140),
-('max_count', 1),
-('counter', 20),
-('yesterday', 1);
+('day_time', 2456141),
+('max_count', 0),
+('counter', 0),
+('yesterday', 0);
 
 -- --------------------------------------------------------
 
@@ -513,8 +513,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''::1''', 1343747199),
-('''127.0.0.1''', 1343701326);
+('''::1''', 1343777818);
 
 -- --------------------------------------------------------
 
@@ -548,7 +547,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products` (
 
 INSERT INTO `hoiit_module_products` (`record_id`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `record_order`, `unit`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
 (1, '2012-07-31 03:58:20', '', '', NULL, 1, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 5),
-(2, '2012-07-31 04:54:34', '', '', NULL, 2, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 5),
+(2, '2012-07-31 04:54:34', '', '', NULL, 2, '123456', 0, NULL, NULL, NULL, NULL, NULL, 1, 5),
 (3, '2012-07-31 04:54:43', '', '', NULL, 3, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 5);
 
 -- --------------------------------------------------------
