@@ -19,6 +19,11 @@
     <?php $this->widget('CLinkPager', array('pages' => $listItemIndex['pages'], 'header'=>'', 'lastPageLabel'=>'Last', 'nextPageLabel'=>'Next', 'firstPageLabel'=>'First', 'prevPageLabel'=>'Prev', 'htmlOptions'=>array('class'=>'paging')))?>
 	<div class="clear"></div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".panel-items li:even").addClass("alt");
+    });
+</script>
 <?php else:?>
 <div class="frame-panel">
     <p>khong co mau tin</p>
