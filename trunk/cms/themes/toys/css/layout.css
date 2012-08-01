@@ -140,7 +140,7 @@ a:hover{color:#000;}
 
 /* paging */
 #rightcontent ul.paging{float: right; margin:0; padding:0 0 5px 0; list-style: none;}
-ul.paging li{display: inline;margin:0 !important;}
+ul.paging li{display: inline;margin:0 !important;padding:0}
 ul.paging .hidden{display: none;}
 ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{color:#fff;background:#9FBD43;padding:2px 6px;border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px}
 ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{background:#3EA0B9}
