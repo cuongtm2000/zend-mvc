@@ -1,6 +1,6 @@
 <?php if($items['models']):?>
 <div class="frame-panel">
-    <h2 class="title-right"><?php echo CHtml::encode($this->lang['news'])?></h2>
+    <h2 class="title-right"><?php echo CHtml::encode($items['models'][0]->NewsCat->NewsCatLanguage[Yii::app()->language]['cat_title'])?></h2>
 	<ul class="panel-items">
 		<?php foreach($items['models'] as $value):?>
         <li>
