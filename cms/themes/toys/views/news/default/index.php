@@ -1,7 +1,6 @@
 <?php if($listItemIndex['models']):?>
 <div class="frame-panel">
 	<h2 class="title-right"><?php echo CHtml::encode($this->lang['news'])?></h2>
-
 	<ul class="panel-items">
 		<?php foreach($listItemIndex['models'] as $value):?>
         <li>
