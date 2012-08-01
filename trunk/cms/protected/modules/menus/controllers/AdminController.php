@@ -18,11 +18,11 @@ class AdminController extends BackEndController {
         $model = new $model_class;
 
         $cat_info = $model->getCatParent_CatOrder($id);
-        //Next info
-        $next_info = $model->getCatid_CatOrder_Next($cat_info['parent_id'], $cat_info['menu_sort']);
+        //Previous info
+        $previous_info = $model->getCatid_CatOrder_Previous($cat_info['parent_id'], $cat_info['menu_sort']);
 
-        if (isset($next_info['menu_id']) && isset($next_info['menu_sort'])) {
-            $model->updateUpDown($cat_info, $next_info, $id);
+        if (isset($previous_info['menu_id']) && isset($previous_info['menu_sort'])) {
+            $model->updateUpDown($cat_info, $previous_info, $id);
         }
         $this->redirect(array('index'));
     }
@@ -32,11 +32,11 @@ class AdminController extends BackEndController {
         $model = new $model_class;
 
         $cat_info = $model->getCatParent_CatOrder($id);
-        //Previous info
-        $previous_info = $model->getCatid_CatOrder_Previous($cat_info['parent_id'], $cat_info['menu_sort']);
+        //Next info
+        $next_info = $model->getCatid_CatOrder_Next($cat_info['parent_id'], $cat_info['menu_sort']);
 
-        if (isset($previous_info['menu_id']) && isset($previous_info['menu_sort'])) {
-            $model->updateUpDown($cat_info, $previous_info, $id);
+        if (isset($next_info['menu_id']) && isset($next_info['menu_sort'])) {
+            $model->updateUpDown($cat_info, $next_info, $id);
         }
         $this->redirect(array('index'));
     }
