@@ -14,7 +14,7 @@
 	
 	<title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->setting['title']) ? ' - '.CHtml::encode($this->setting['title']) : '' ?></title>
     <meta name="keywords" content="<?php echo CHtml::encode($this->setting['keywords']) ?>" />
-    <meta name="description" content="<?php echo CHtml::encode($this->setting['description']) ?>" />
+    <meta name="description" content="<?php echo ($this->description) ? CHtml::encode($this->description) : CHtml::encode($this->setting['description']) ?>" />
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/advanced-slider-base.css" media="screen"/>
 	<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.advancedSlider.min.js"></script>

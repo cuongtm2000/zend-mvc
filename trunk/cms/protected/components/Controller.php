@@ -8,6 +8,8 @@ class Controller extends CController {
     public $listLanguage = array();
     public $lang = array();
 
+    public $description;
+
     public function init() {
         Yii::app()->theme = Template::model()->getTemplateDefault(); //Setup template
 

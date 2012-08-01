@@ -112,7 +112,7 @@ class Position extends CActiveRecord {
 
     //Back end - Function, Position by Page
     public function getFuncByModule($page) {
-        $command = Yii::app()->db->createCommand('SELECT pos_id, hoiit_functions_function_value FROM ' . $this->tableName() . ' WHERE module_id=:module ORDER BY pos_sort ASC');
+        $command = Yii::app()->db->createCommand('SELECT pos_id, hoiit_functions_function_value FROM ' . $this->tableName() . ' WHERE module_id=:module ORDER BY pos_id ASC, pos_sort ASC');
         $command->bindParam(":module", $page, PDO::PARAM_STR);
         return $command->queryAll();
     }
@@ -131,7 +131,6 @@ class Position extends CActiveRecord {
                 $this->insertItem($position[$key], $i, $id, $function[$key]);
                 $i++;
             }
-
         }
     }
 
