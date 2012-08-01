@@ -70,7 +70,7 @@
 
             </div><!--End left content-->
             <div id="rightcontent">
-				<div class="breadcrumbs"><a href="" title="">Trang chủ</a><b>&raquo;</b><span>Giới thiệu</span> </div>
+
                 <div id="banner">
                     <ul class="slider">
                         <li class="slider-item"><a href="http://grouplaptrinh.com" title="grouplaptrinh"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner.jpg" alt="banner" /></a></li>
@@ -78,6 +78,7 @@
                         <li class="slider-item"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner2.jpg" alt="banner6" /></li>
                     </ul>
                 </div>
+				<div class="breadcrumbs"><a href="" title="">Trang chủ</a><b>&raquo;</b><span>Giới thiệu</span> </div>
                 <?php echo $content; ?>
                 <?php $this->getPosition('center');?>
             </div><!--End right content--> 
