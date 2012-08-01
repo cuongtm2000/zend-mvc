@@ -186,6 +186,23 @@ class News extends CActiveRecord {
         return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
     }
 
+    //Front end - list Item by Cat
+    public function listItemByCat($cid) {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'enable=1 AND hoiit_module_item_cat_cat_id=:cid';
+        $criteria->params = array(':cid' => $cid);
+
+        $count = $this::model()->count($criteria);
+
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = 3;
+        $pages->applyLimit($criteria);
+
+        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+    }
+
     //Back end - List item admin
     public function listItemAdmin() {
         $criteria = new CDbCriteria();
