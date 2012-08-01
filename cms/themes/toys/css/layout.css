@@ -125,7 +125,7 @@ a:hover{color:#000;}
 .black a:hover{background:url(../images/bull.gif) no-repeat left 7px;color:#ED2121}
 
 /*   Page New  */
-.panel-items{list-style: none; text-align:justify;font-size:10pt;margin:0 0 20px 0 }
+.panel-items{list-style: none;text-align:justify;font-size:10pt;margin:0 0 20px 0;padding:0 10px}
 .panel-items li.alt{background: #F4F4F4}
 #rightcontent .panel-items li{ margin:0 0 10px 0}
 .frame-img{float:left;margin:0 8px 3px 0}
@@ -140,9 +140,10 @@ a:hover{color:#000;}
 .panel-items-related a:hover{color:#73BFD3}
 
 /**  panel-items-other tin tuc khac **/
-.title-item-other{color:#8A0000;margin:20px 0 10px;font-size: 11pt}
-.panel-items-other li{list-style:square;color:#0D2364; padding:0}
-.panel-items-other li a{color:#000}
+.title-item-other{color:#8A0000;margin:20px 0 10px;font-size:11pt;padding-left:10px}
+.panel-items-other li{list-style:none}
+.panel-items-other li a{color:#000;display:block;background:url(../images/square.gif) no-repeat left;padding-left:10px }
+.panel-items-other li a:hover{text-decoration:underline}
 
 /* paging */
 #rightcontent ul.paging{float: right; margin:0; padding:0 0 5px 0; list-style: none;}
