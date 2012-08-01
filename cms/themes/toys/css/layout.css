@@ -126,8 +126,7 @@ a:hover{color:#000;}
 
 /*   Page New  */
 .panel-items{list-style: none; text-align:justify;font-size:10pt;margin:0 0 20px 0 }
-.panel-items li{background: #F4F4F4}
-.panel-items li.alt{background: none}
+.panel-items li.alt{background: #F4F4F4}
 #rightcontent .panel-items li{ margin:0 0 10px 0}
 .frame-img{float:left;margin:0 8px 3px 0}
 .title-items{margin:0 0 5px 0;font-size:10pt}
