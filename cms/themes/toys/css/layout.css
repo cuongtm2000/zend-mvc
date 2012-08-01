@@ -125,12 +125,18 @@ a:hover{color:#000;}
 .black a:hover{background:url(../images/bull.gif) no-repeat left 7px;color:#ED2121}
 
 /*   Page New  */
-.masuring{list-style: none; text-align:justify;font-size:10pt;margin:0 0 20px 0}
-.masuring li{ margin:0 0 10px 0 !important}
-.frame-img{float:left;width:143px; margin:0 8px 0 0}
-.title-masuring{margin:0 0 5px 0}
-.title-masuring a{color:#000}
-.title-masuring a:hover{color:#3994AB}
+.panel-items{list-style: none; text-align:justify;font-size:10pt;margin:0 0 20px 0}
+.panel-items li{ margin:0 0 10px 0 !important}
+.frame-img{float:left;margin:0 8px 0 0}
+.title-items{margin:0 0 5px 0;font-size:10pt}
+.title-items a{color:#000}
+.title-items a:hover{color:#3994AB}
+
+/*** panel-items-related ***/
+.panel-items-related li{color:#000}
+.panel-items-related a{color:#000;font-weight:bold;display:block}
+.panel-items-related li:hover{color:#73BFD3}
+.panel-items-related a:hover{color:#73BFD3}
 
 /* paging */
 ul.paging{float: right; margin:0; padding:0 0 5px 0; list-style: none;}
