@@ -1,5 +1,6 @@
-<?php if($listItemIndex['models']):?>
+<?php $this->breadcrumbs = array($this->lang[$this->module->id]); ?>
 <div class="frame-panel">
+    <?php if($listItemIndex['models']):?>
 	<h2 class="title-right"><?php echo CHtml::encode($this->lang['news'])?></h2>
 	<ul class="panel-items">
 		<?php foreach($listItemIndex['models'] as $value):?>
@@ -18,14 +19,12 @@
     </ul>
     <?php $this->widget('CLinkPager', array('pages' => $listItemIndex['pages'], 'header'=>'', 'lastPageLabel'=>'Last', 'nextPageLabel'=>'Next', 'firstPageLabel'=>'First', 'prevPageLabel'=>'Prev', 'htmlOptions'=>array('class'=>'paging')))?>
 	<div class="clear"></div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".panel-items li:odd").addClass("alt");
+        });
+    </script>
+    <?php else:?>
+        khong co mau tin
+    <?php endif?>
 </div>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $(".panel-items li:odd").addClass("alt");
-    });
-</script>
-<?php else:?>
-<div class="frame-panel">
-    <p>khong co mau tin</p>
-</div>
-<?php endif?>
