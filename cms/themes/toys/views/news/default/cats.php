@@ -1,8 +1,8 @@
 <?php if($items['models']):?>
 <div class="frame-panel">
     <h2 class="title-right"><?php echo CHtml::encode($this->lang['news'])?></h2>
-    <?php foreach($items['models'] as $value):?>
 	<ul class="panel-items">
+		<?php foreach($items['models'] as $value):?>
         <li>
             <?php if($value['pic_thumb']):?>
             <div class="frame-img">
@@ -17,7 +17,13 @@
     <?php endforeach?>
 </ul>
     <?php $this->widget('CLinkPager', array('pages' => $items['pages'], 'header'=>'', 'lastPageLabel'=>'Last', 'nextPageLabel'=>'Next', 'firstPageLabel'=>'First', 'prevPageLabel'=>'Prev', 'htmlOptions'=>array('class'=>'paging')))?>
+	<div class="clear"></div>
 </div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".panel-items li:even").addClass("alt");
+	});
+</script>
 <?php else:?>
 <div class="frame-panel">
     <p>khong co mau tin</p>
