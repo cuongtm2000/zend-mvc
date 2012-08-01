@@ -116,6 +116,61 @@ class NewsCat extends CActiveRecord {
         ));
     }
 
+    public function listItem($cid = 0) {
+        $criteria = new CDbCriteria();
+        //$criteria->with = array('Language', 'ProductsCatLanguage');
+        $criteria->order = 'cat_order DESC, cat_created DESC';
+        if ($cid != 0) {
+            $criteria->condition = 'cat_parent_id=:cid AND cat_enable=1';
+            $criteria->params = array(':cid' => $cid);
+        } else {
+            $criteria->condition = 'cat_enable=1';
+        }
+        return $this::model()->findAll($criteria);
+    }
+
+    //Front end - make menu multi level
+    public function makeMenu($data, $cat_id, $strOpen = '<ul>', $strClose = '</ul>', $tag = 'li', $subTag = 'ul', $subTagItem = 'li') {
+        $str = null;
+        $parent_id = $this->makeSubMenu($data, 1, $cat_id);
+        foreach ($data as $value) {
+            if ($value['cat_parent_id'] == 0) {
+                $str .= '<' . $tag . '>' . CHtml::link($value->NewsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setLangUrl() . '/tin-tuc/' . $value->NewsCatLanguage[Yii::app()->language]['tag']), array('title' => $value->NewsCatLanguage[Yii::app()->language]['cat_title']));
+                if ($parent_id && ($parent_id == $value['cat_id'])) {
+                    $str .= $this->makeSubMenu($data, 0, $value['cat_id'], $subTag, $subTagItem);
+                }
+                $str .= '</' . $tag . '>';
+            }
+        }
+        return $strOpen . $str . $strClose;
+    }
+
+    private function makeSubMenu($data, $type = 0, $cat_id, $subTag = 'ul', $subTagItem = 'li') {
+        if ($type == 1) { //return $parent_id
+            $cat_id = NewsCatLanguage::model()->findCatByTag($cat_id);
+            $parent_id = $cat_id;
+            if ($cat_id) {
+                foreach ($data as $value) {
+                    if ($cat_id == $value['cat_id']) {
+                        if ($value['cat_parent_id']) {
+                            $parent_id = $value['cat_parent_id'];
+                        }
+                        break;
+                    }
+                }
+                return $parent_id;
+            }
+        } else {
+            $str = null;
+            foreach ($data as $subItem) {
+                if ($subItem['cat_parent_id'] == $cat_id) {
+                    $str .= '<' . $subTagItem . '>' . CHtml::link($subItem->NewsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setLangUrl() . '/san-pham/' . $subItem->NewsCatLanguage[Yii::app()->language]['tag']), array('title' => $subItem->NewsCatLanguage[Yii::app()->language]['cat_title'])) . '</' . $subTagItem . '>';
+                }
+            }
+            return ($str) ? ('<' . $subTag . '>' . $str . '</' . $subTag . '>') : '';
+        }
+    }
+
     //Front end - List record for index
     public function listCats($cid = 0, $prefix = NULL, $type = 0, $id = 0) {
         $criteria = new CDbCriteria();
