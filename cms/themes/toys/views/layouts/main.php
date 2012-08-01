@@ -79,18 +79,6 @@
                 </div>
                 <?php echo $content; ?>
                 <?php $this->getPosition('center');?>
-                <div class="frame-panel">
-					<h2 class="title-right">Tin tức &amp; Sự kiện</h2>
-                    <div class="frame-tent-right">        
-                        <ul class="masuring">
-                            <li><div class="frame-img"><a href="#" title='Chứng nhận thương hiệu'><img src="images/no-images.jpg" alt='Chứng nhận thương hiệu' /></a></div>
-                                <h3 class="title-masuring"><a href="#" title='Chứng nhận thương hiệu'><strong>Chứng nhận thương hiệu</strong></a></h3>
-                                <p>Chứng nhận thương hiệu</p> <div class="clear"></div>
-                             </li>
-                        </ul>
-                    </div>
-                </div> <!--End frame-panel -->
-
             </div><!--End right content--> 
             <div id="colum3">
                 <?php $this->getPosition('right');?>
