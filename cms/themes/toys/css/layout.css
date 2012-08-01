@@ -91,10 +91,10 @@ a:hover{color:#000;}
 
 .title-right{margin:0 0 5px 0; font-size:10pt;padding:9px 0 9px 10px;background: url(../images/tital_bg.gif) repeat-x;font-weight:bold}
 
-.link{color:#000;padding:5px 0 5px 0; border-bottom:1px dashed #e1e1e1; margin:0 0 10px 0}
-.link span{color:#D2A800; font-weight:normal}
-.link a{ color:#C3C3C3; font-weight:normal}
-.link a:hover{text-decoration:underline}
+.breadcrumbs{background:#fff;color:#000;padding:3px 3px 3px 10px;font-size:10pt;margin:0 0 10px 0}
+.breadcrumbs b{padding:0 5px;font-weight:normal;position:relative;top:-1px}
+.breadcrumbs a{ color:#249ABB}
+.breadcrumbs a:hover{text-decoration:underline}
 
 /**  product **/
 .main-all-product{background:#fff;padding:2px;margin:0 0 10px 0}
