@@ -21,7 +21,7 @@
 
 	<h4 class="title-item-other">Tin tức khác</h4>
 	<ul class="panel-items-other">
-		<li><a href="#" title="">Thắp sáng Trường Sa bằng điện sạch</a></li>
+		<li><a href="#" title="">Thắp sáng Trường Sa bằng điện sạch Thắp sáng Trường Sa bằng điện sạch Thắp sáng Trường Sa bằng điện sạch</a></li>
 		<li><a href="#" title="">Thắp sáng Trường Sa bằng điện sạch</a></li>
 		<li><a href="#" title="">Thắp sáng Trường Sa bằng điện sạch</a></li>
 		<li><a href="#" title="">Thắp sáng Trường Sa bằng điện sạch</a></li>

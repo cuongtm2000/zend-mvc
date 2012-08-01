@@ -141,9 +141,9 @@ a:hover{color:#000;}
 
 /**  panel-items-other tin tuc khac **/
 .title-item-other{color:#8A0000;margin:20px 0 10px;font-size:11pt;padding-left:10px}
-.panel-items-other li{list-style:none}
-.panel-items-other li a{color:#000;display:block;background:url(../images/square.gif) no-repeat left;padding-left:10px }
-.panel-items-other li a:hover{text-decoration:underline}
+#rightcontent .panel-items-other li{list-style:square;color:#0D2364}
+.panel-items-other li a{color:#000;margin:0 0 0 -6px; display:block;/*background:url(../images/square.gif) no-repeat left 6px;padding-left:10px */}
+.panel-items-other li a:hover{color:#0D2364}
 
 /* paging */
 #rightcontent ul.paging{float: right; margin:0; padding:0 0 5px 0; list-style: none;}
