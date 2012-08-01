@@ -2,7 +2,10 @@
 
 class DefaultController extends Controller {
     public function actionIndex() {
-        $this->render('index');
+        $model_class = ucfirst($this->module->id);
+        $model = new $model_class();
+
+        $this->render('index', array('listItemIndex' => $model->listItemsIndex()));
     }
 
     public function actionView($id) {

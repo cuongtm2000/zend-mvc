@@ -154,7 +154,7 @@ class News extends CActiveRecord {
 
     public function listItemsNew() {
         $criteria = new CDbCriteria();
-        $criteria->with = array(__CLASS__ . 'Language');
+        //$criteria->with = array(__CLASS__ . 'Language');
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable = 1';
         $criteria->limit = 7;
@@ -164,12 +164,26 @@ class News extends CActiveRecord {
 
     public function listItemsHot() {
         $criteria = new CDbCriteria();
-        $criteria->with = array(__CLASS__ . 'Language');
+        //$criteria->with = array(__CLASS__ . 'Language');
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'hot = 1 AND enable = 1';
         $criteria->limit = 7;
 
         return $this::model()->findAll($criteria);
+    }
+
+    public function listItemsIndex() {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'enable = 1';
+        $count = $this::model()->count($criteria);
+
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = 3;
+        $pages->applyLimit($criteria);
+
+        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
     }
 
     //Back end - List item admin
