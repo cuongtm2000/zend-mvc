@@ -70,6 +70,7 @@
 
             </div><!--End left content-->
             <div id="rightcontent">
+				<div class="breadcrumbs"><a href="" title="">Trang chủ</a><b>&raquo;</b><span>Giới thiệu</span> </div>
                 <div id="banner">
                     <ul class="slider">
                         <li class="slider-item"><a href="http://grouplaptrinh.com" title="grouplaptrinh"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner.jpg" alt="banner" /></a></li>
