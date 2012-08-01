@@ -106,6 +106,14 @@ class NewsLanguage extends CActiveRecord {
         ));
     }
 
+    public function getIDByTag($tag) {
+        $lang = Yii::app()->language;
+        $command = Yii::app()->db->createCommand('SELECT record_id FROM ' . $this->tableName() . ' WHERE language_id=:lang AND tag=:tag');
+        $command->bindParam(":tag", $tag, PDO::PARAM_STR);
+        $command->bindParam(":lang", $lang, PDO::PARAM_STR);
+        return $command->queryScalar();
+    }
+
     //Back end - delete
     public function deleteRecord($id) {
         $command = Yii::app()->db->createCommand('DELETE FROM ' . $this->tableName() . ' WHERE record_id=:id');

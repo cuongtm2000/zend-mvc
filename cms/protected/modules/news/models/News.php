@@ -23,6 +23,8 @@
  * @property HoiitLanguages[] $hoiitLanguages
  */
 class News extends CActiveRecord {
+    private $_model;
+
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
@@ -119,22 +121,36 @@ class News extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
-	
-	public function ListFirst(){
-		$criteria = new CDbCriteria();
+
+    //Front end - get detail item
+    public function detailItem($tag) {
+        $id = NewsLanguage::model()->getIDByTag($tag);
+        $criteria = new CDbCriteria();
+        $criteria->condition = 'enable=1';
+
+        $this->_model = $this::model()->findByPk($id, $criteria);
+
+        if ($this->_model === null) {
+            throw new CHttpException(404, 'The requested page does not exist.');
+        }
+        return $this->_model;
+    }
+
+    public function ListFirst() {
+        $criteria = new CDbCriteria();
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable = 1';
         return array('item_first' => $this::model()->find($criteria), 'list_next' => $this->listNext());
-	}
-	
-	private function listNext(){
-		$criteria = new CDbCriteria();
+    }
+
+    private function listNext() {
+        $criteria = new CDbCriteria();
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable = 1';
-		$criteria->limit = 7;
-		$criteria->offset = 1;
-		return $this::model()->findAll($criteria);
-	}
+        $criteria->limit = 7;
+        $criteria->offset = 1;
+        return $this::model()->findAll($criteria);
+    }
 
     public function listItemsNew() {
         $criteria = new CDbCriteria();

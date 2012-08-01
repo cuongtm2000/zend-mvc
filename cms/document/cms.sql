@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 01, 2012 at 03:15 AM
+-- Generation Time: Aug 01, 2012 at 04:41 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -88,6 +88,7 @@ INSERT INTO `hoiit_functions` (`function_value`, `function_name`, `function_clas
 ('counter', 'Counter', 'Counter.Counter', 'publishAssets', 'counter'),
 ('list_support', 'Support', '', 'listItem', 'support'),
 ('menu_about', 'About', '', 'listItem', 'about'),
+('menu_news', 'NewsCat', '', 'listItem', 'news'),
 ('menu_products', 'ProductsCat', '', 'listItem', 'products'),
 ('news_hot', 'News', '', 'listItemsHot', 'news'),
 ('news_list_first', 'News', '', 'ListFirst', 'news'),
@@ -149,7 +150,7 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('delete', 'Xóa', 1, 'vi'),
 ('edit', 'Chỉnh sửa', 0, 'vi'),
 ('hidden', 'Ẩn', 1, 'vi'),
-('news', 'Tin tức', 0, 'vi'),
+('news', 'Tin tức & sự kiện', 0, 'vi'),
 ('no_record', 'Không tồn tại mẫu tin', 0, 'vi'),
 ('order', 'Order', 1, 'en'),
 ('order', 'Thứ tự', 1, 'vi'),
@@ -319,17 +320,18 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus` (
   `menu_homepage` tinyint(1) NOT NULL DEFAULT '0',
   `menu_activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
 
 --
 -- Dumping data for table `hoiit_module_menus`
 --
 
 INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_type`, `menu_target`, `menu_sort`, `menu_homepage`, `menu_activated`) VALUES
-(27, 0, 1, '', 27, 1, 1),
-(28, 0, 1, '', 28, 0, 1),
-(29, 0, 1, '', 29, 0, 1),
-(30, 28, 0, '', 30, 0, 1);
+(27, 0, 1, '', 1, 1, 1),
+(28, 0, 1, '', 2, 0, 1),
+(29, 0, 1, '', 5, 0, 1),
+(30, 28, 0, '', 4, 0, 1),
+(31, 0, 1, '', 3, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -360,7 +362,9 @@ INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name
 (29, 'en', 'Products', '', ''),
 (29, 'vi', 'Sản phẩm', 'san-pham', ''),
 (30, 'en', '', '', ''),
-(30, 'vi', 'Sub', 'gioi-thieu/welcome-to-yiiprojectcom.html', '');
+(30, 'vi', 'Sub', 'gioi-thieu/welcome-to-yiiprojectcom.html', ''),
+(31, 'en', '', 'news', ''),
+(31, 'vi', 'Tin tức & sự kiện', 'tin-tuc', '');
 
 -- --------------------------------------------------------
 
@@ -384,14 +388,16 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news` (
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_hoiit_module_news_hoiit_module_news_cat_1` (`hoiit_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `hoiit_module_news`
 --
 
 INSERT INTO `hoiit_module_news` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
-(1, '2012-07-25 06:18:56', 'tieu-de-bac.jpg', NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 1, 16);
+(1, '2012-07-25 06:18:56', 'tieu-de-bac.jpg', NULL, 3, 1, NULL, NULL, NULL, NULL, NULL, 1, 16),
+(2, '2012-08-01 01:35:08', '', NULL, 2, 0, NULL, NULL, NULL, NULL, NULL, 1, 16),
+(3, '2012-08-01 01:35:15', '', NULL, 1, 0, NULL, NULL, NULL, NULL, NULL, 1, 16);
 
 -- --------------------------------------------------------
 
@@ -477,7 +483,11 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_languages` (
 
 INSERT INTO `hoiit_module_news_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
 (1, 'en', '', '', '', '', '', 0, NULL, NULL),
-(1, 'vi', 'Tieu de "bac"', '<p>sdfsdfsdfsdf</p>', '<p>asdasdsa</p>', 'tieu-de-bac', '', 0, NULL, NULL);
+(1, 'vi', 'Tieu de "bac"', '<p>sdfsdfsdfsdf</p>', '<p>asdasdsa</p>', 'tieu-de-bac', '', 0, NULL, NULL),
+(2, 'en', '', '<p>asd</p>', '', '', '', 0, NULL, NULL),
+(2, 'vi', 'asdas', '<p>dasdas</p>', '<p>asdsad</p>', 'asdas', '', 0, NULL, NULL),
+(3, 'en', '', '', '', '', '', 0, NULL, NULL),
+(3, 'vi', 'asdasdssdd', '<p>dasdsads</p>', '<p>asdsa</p>', 'asdasdssdd', '', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -516,7 +526,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''::1''', 1343783673);
+('''::1''', 1343788858);
 
 -- --------------------------------------------------------
 
@@ -702,16 +712,19 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('left', 1, '1', 'about', NULL, NULL, 'adv_left'),
 ('right', 2, '1', 'about', NULL, NULL, 'counter'),
 ('right', 3, '1', 'about', NULL, NULL, 'menu_about'),
-('center', 1, '1', 'default', NULL, NULL, 'news_list_first'),
-('right', 2, '1', 'default', NULL, NULL, 'news_hot'),
-('right', 3, '1', 'default', NULL, NULL, 'news_new'),
-('left', 4, '1', 'default', NULL, NULL, 'menu_about'),
-('left', 5, '1', 'default', NULL, NULL, 'list_support'),
-('left', 6, '1', 'default', NULL, NULL, 'menu_products'),
-('left', 7, '1', 'default', NULL, NULL, 'counter'),
-('center', 8, '1', 'default', NULL, NULL, 'about_home'),
-('right', 9, '1', 'default', NULL, NULL, 'adv_right'),
-('left', 10, '1', 'default', NULL, NULL, 'adv_left');
+('right', 1, '1', 'news', NULL, NULL, 'adv_right'),
+('left', 2, '1', 'news', NULL, NULL, 'adv_left'),
+('left', 1, '1', 'default', NULL, NULL, 'menu_news'),
+('center', 2, '1', 'default', NULL, NULL, 'news_list_first'),
+('right', 3, '1', 'default', NULL, NULL, 'news_hot'),
+('right', 4, '1', 'default', NULL, NULL, 'news_new'),
+('left', 5, '1', 'default', NULL, NULL, 'menu_about'),
+('left', 6, '1', 'default', NULL, NULL, 'list_support'),
+('left', 7, '1', 'default', NULL, NULL, 'menu_products'),
+('left', 8, '1', 'default', NULL, NULL, 'counter'),
+('center', 9, '1', 'default', NULL, NULL, 'about_home'),
+('right', 10, '1', 'default', NULL, NULL, 'adv_right'),
+('left', 11, '1', 'default', NULL, NULL, 'adv_left');
 
 -- --------------------------------------------------------
 
@@ -790,12 +803,13 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('(gioi-thieu)/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 0, 0, 'about', 'vi'),
 ('gioi-thieu', 'about/default/index', '', 1, 1, 'about', 'vi'),
 ('home-page', 'default/default/index', NULL, NULL, 1, 'default', 'en'),
-('news', 'news/default/index', '', 1, 1, 'news', 'en'),
+('news', 'news/default/index', '', 2, 1, 'news', 'en'),
 ('san-pham', 'products/default/index', '', 3, 1, 'products', 'vi'),
 ('san-pham/<cid:[-a-z0-9]+>', 'products/default/cats', '', 2, 0, 'products', 'vi'),
 ('san-pham/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'products/default/view', 'urlSuffix=>.html', 0, 0, 'products', 'vi'),
 ('san-pham/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'products/default/cats', '', 1, 0, 'products', 'vi'),
-('tin-tuc', 'news/default/index', '', 0, 1, 'news', 'vi'),
+('tin-tuc', 'news/default/index', '', 1, 1, 'news', 'vi'),
+('tin-tuc/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'news/default/view', 'urlSuffix=>.html', 0, 0, 'news', 'vi'),
 ('trang-chu', 'default/default/index', NULL, NULL, 1, 'default', 'vi');
 
 -- --------------------------------------------------------
