@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 01, 2012 at 02:49 AM
+-- Generation Time: Aug 01, 2012 at 03:15 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -50,6 +50,8 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('adv_right_width', 222, NULL, 'adv'),
 ('adv_top_height', 222, NULL, 'adv'),
 ('adv_top_width', 222, NULL, 'adv'),
+('news_height_thumb', 200, NULL, 'news'),
+('news_width_thumb', 200, NULL, 'news'),
 ('products_cat_height_thumb', 200, NULL, 'products'),
 ('products_cat_width_thumb', 200, NULL, 'products'),
 ('products_height_desc', 700, NULL, 'products'),
@@ -88,6 +90,7 @@ INSERT INTO `hoiit_functions` (`function_value`, `function_name`, `function_clas
 ('menu_about', 'About', '', 'listItem', 'about'),
 ('menu_products', 'ProductsCat', '', 'listItem', 'products'),
 ('news_hot', 'News', '', 'listItemsHot', 'news'),
+('news_list_first', 'News', '', 'ListFirst', 'news'),
 ('news_new', 'News', '', 'listItemsNew', 'news');
 
 -- --------------------------------------------------------
@@ -388,7 +391,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news` (
 --
 
 INSERT INTO `hoiit_module_news` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
-(1, '2012-07-25 06:18:56', NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 1, 16);
+(1, '2012-07-25 06:18:56', 'tieu-de-bac.jpg', NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, 1, 16);
 
 -- --------------------------------------------------------
 
@@ -474,7 +477,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_languages` (
 
 INSERT INTO `hoiit_module_news_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
 (1, 'en', '', '', '', '', '', 0, NULL, NULL),
-(1, 'vi', 'Tieu de "bac"', '', '<p>asdasdsa</p>', 'tieu-de-bac', '', 0, NULL, NULL);
+(1, 'vi', 'Tieu de "bac"', '<p>sdfsdfsdfsdf</p>', '<p>asdasdsa</p>', 'tieu-de-bac', '', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -513,7 +516,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''::1''', 1343777818);
+('''::1''', 1343783673);
 
 -- --------------------------------------------------------
 
@@ -699,15 +702,16 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('left', 1, '1', 'about', NULL, NULL, 'adv_left'),
 ('right', 2, '1', 'about', NULL, NULL, 'counter'),
 ('right', 3, '1', 'about', NULL, NULL, 'menu_about'),
-('right', 1, '1', 'default', NULL, NULL, 'news_hot'),
-('right', 2, '1', 'default', NULL, NULL, 'news_new'),
-('left', 3, '1', 'default', NULL, NULL, 'menu_about'),
-('left', 4, '1', 'default', NULL, NULL, 'list_support'),
-('left', 5, '1', 'default', NULL, NULL, 'menu_products'),
-('left', 6, '1', 'default', NULL, NULL, 'counter'),
-('center', 7, '1', 'default', NULL, NULL, 'about_home'),
-('right', 8, '1', 'default', NULL, NULL, 'adv_right'),
-('left', 9, '1', 'default', NULL, NULL, 'adv_left');
+('center', 1, '1', 'default', NULL, NULL, 'news_list_first'),
+('right', 2, '1', 'default', NULL, NULL, 'news_hot'),
+('right', 3, '1', 'default', NULL, NULL, 'news_new'),
+('left', 4, '1', 'default', NULL, NULL, 'menu_about'),
+('left', 5, '1', 'default', NULL, NULL, 'list_support'),
+('left', 6, '1', 'default', NULL, NULL, 'menu_products'),
+('left', 7, '1', 'default', NULL, NULL, 'counter'),
+('center', 8, '1', 'default', NULL, NULL, 'about_home'),
+('right', 9, '1', 'default', NULL, NULL, 'adv_right'),
+('left', 10, '1', 'default', NULL, NULL, 'adv_left');
 
 -- --------------------------------------------------------
 
