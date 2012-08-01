@@ -119,6 +119,13 @@ class News extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
+	
+	public function ListFirst(){
+		$criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'enable = 1';
+        return $this::model()->find($criteria);
+	}
 
     public function listItemsNew() {
         $criteria = new CDbCriteria();
