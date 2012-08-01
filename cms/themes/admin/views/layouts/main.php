@@ -83,7 +83,7 @@
 		<div class="catmenu">
 			<ul class="menu-li">
 				<?php foreach($this->listModule as $value):?>
-                <li><a class="headerbar" href="" title="<?php echo $this->lang[$value['module_id']]?>"><?php echo $this->lang[$value['module_id']]?></a>
+                <li><a class="headerbar" href="" title="<?php echo CHtml::encode($this->lang[$value['module_id']])?>"><?php echo CHtml::encode($this->lang[$value['module_id']])?></a>
                     <ul class="submenu">
                         <?php $urls = explode('|', $value['module_url']); $title = explode('|', $value['module_title']); $i = 0; foreach ($urls as $url): ?>
                             <li><a href="<?php echo Yii::app()->request->baseUrl . '/admin/' . $url ?>"><?php echo $title[$i] ?></a></li>
