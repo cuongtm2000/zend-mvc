@@ -15,8 +15,9 @@
             <?php echo $value->NewsLanguage[Yii::app()->language]['preview'] ?> <div class="clear"></div>
         </li>
         <?php endforeach?>
-    </ul>
+    </ul><div class="clear"></div>
     <?php $this->widget('CLinkPager', array('pages' => $listItemIndex['pages'], 'header'=>'', 'lastPageLabel'=>'Last', 'nextPageLabel'=>'Next', 'firstPageLabel'=>'First', 'prevPageLabel'=>'Prev', 'htmlOptions'=>array('class'=>'paging')))?>
+	<div class="clear"></div>
 </div>
 <?php else:?>
 <div class="frame-panel">
