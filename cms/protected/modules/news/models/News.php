@@ -157,7 +157,7 @@ class News extends CActiveRecord {
         //$criteria->with = array(__CLASS__ . 'Language');
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable = 1';
-        $criteria->limit = 7;
+        $criteria->limit = Config::getValue('news_num_item_new');
 
         return $this::model()->findAll($criteria);
     }
@@ -167,7 +167,7 @@ class News extends CActiveRecord {
         //$criteria->with = array(__CLASS__ . 'Language');
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'hot = 1 AND enable = 1';
-        $criteria->limit = 7;
+        $criteria->limit = Config::getValue('news_num_item_hot');
 
         return $this::model()->findAll($criteria);
     }
@@ -180,7 +180,7 @@ class News extends CActiveRecord {
 
         // elements per page
         $pages = new CPagination($count);
-        $pages->pageSize = 3;
+        $pages->pageSize = Config::getValue('news_num_item_index');
         $pages->applyLimit($criteria);
 
         return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
@@ -197,7 +197,7 @@ class News extends CActiveRecord {
 
         // elements per page
         $pages = new CPagination($count);
-        $pages->pageSize = 3;
+        $pages->pageSize = Config::getValue('news_num_item_cat');
         $pages->applyLimit($criteria);
 
         return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);

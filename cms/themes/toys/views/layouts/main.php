@@ -78,14 +78,17 @@
                         <li class="slider-item"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner2.jpg" alt="banner6" /></li>
                     </ul>
                 </div>
-				<div class="breadcrumbs"><a href="" title="">Trang chủ</a><b>&raquo;</b><span>Giới thiệu</span> </div>
+                <?php $this->widget('zii.widgets.CBreadcrumbs', array(
+                    'homeLink' => CHtml::link($this->lang['default'], Yii::app()->baseUrl.$this->setLangUrl(), array('title' => $this->lang['default'])),
+                    'links'=>$this->breadcrumbs,
+                    //'htmlOptions'=>array('class'=>'link'),
+                    //'separator'=>' <img src="'.Yii::app()->theme->baseUrl.'/images/bull.jpg" alt="Bull" title="Bull" />',
+                )); ?>
                 <?php echo $content; ?>
                 <?php $this->getPosition('center');?>
             </div><!--End right content--> 
             <div id="colum3">
                 <?php $this->getPosition('right');?>
-
-
             </div> <!--End colum3--> <div class="clear"></div>
         </div><!--End content-->
 	</div> <!--End main-content-->
