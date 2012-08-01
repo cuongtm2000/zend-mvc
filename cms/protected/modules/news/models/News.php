@@ -124,7 +124,16 @@ class News extends CActiveRecord {
 		$criteria = new CDbCriteria();
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable = 1';
-        return $this::model()->find($criteria);
+        return array('item_first' => $this::model()->find($criteria), 'list_next' => $this->listNext());
+	}
+	
+	private function listNext(){
+		$criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'enable = 1';
+		$criteria->limit = 7;
+		$criteria->offset = 1;
+		return $this::model()->findAll($criteria);
 	}
 
     public function listItemsNew() {

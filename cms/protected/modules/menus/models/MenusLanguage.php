@@ -105,7 +105,8 @@ class MenusLanguage extends CActiveRecord {
     //Back end - save
     public function executeRecord($id, $lang, $menu_name, $menu_url, $menu_description) {
         $purifier = new CHtmlPurifier();
-        $menu_name = $purifier->purify(trim($menu_name));
+        //$menu_name = $purifier->purify(trim($menu_name));
+        $menu_name = trim($menu_name);
         $menu_url = $purifier->purify(trim($menu_url));
         $menu_description = $purifier->purify(trim($menu_description));
 
