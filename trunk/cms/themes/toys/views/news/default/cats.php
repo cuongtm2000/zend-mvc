@@ -18,6 +18,14 @@
 </ul>
     <?php $this->widget('CLinkPager', array('pages' => $items['pages'], 'header'=>'', 'lastPageLabel'=>'Last', 'nextPageLabel'=>'Next', 'firstPageLabel'=>'First', 'prevPageLabel'=>'Prev', 'htmlOptions'=>array('class'=>'paging')))?>
 	<div class="clear"></div>
+
+	<h4 class="title-item-other">Tin tức khác</h4>
+	<ul class="panel-items-other">
+		<li><a href="#" title="">Thắp sáng Trường Sa bằng điện sạch</a></li>
+		<li><a href="#" title="">Thắp sáng Trường Sa bằng điện sạch</a></li>
+		<li><a href="#" title="">Thắp sáng Trường Sa bằng điện sạch</a></li>
+		<li><a href="#" title="">Thắp sáng Trường Sa bằng điện sạch</a></li>
+	</ul>
 </div>
 <script type="text/javascript">
 	$(document).ready(function(){
