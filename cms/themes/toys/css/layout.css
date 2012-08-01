@@ -139,6 +139,11 @@ a:hover{color:#000;}
 .panel-items-related li:hover{color:#73BFD3}
 .panel-items-related a:hover{color:#73BFD3}
 
+/**  panel-items-other tin tuc khac **/
+.title-item-other{color:#8A0000;margin:20px 0 10px;font-size: 11pt}
+.panel-items-other li{list-style:square;color:#0D2364; padding:0}
+.panel-items-other li a{color:#000}
+
 /* paging */
 #rightcontent ul.paging{float: right; margin:0; padding:0 0 5px 0; list-style: none;}
 ul.paging li{display: inline;margin:0 !important;padding:0}
