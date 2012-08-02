@@ -25,7 +25,7 @@ class Username extends CActiveRecord {
             array('username', 'unique', 'on' => 'register', 'message' => '{attribute} <strong>{value}</strong>  đã tồn tại vui lòng chọn tên khác.'),
             array('username,rule, password, password2', 'required', 'on' => 'register'),
             array('email,fullname, cmnd, address, phone', 'required'),
-            array('password', 'compare', 'compareAttribute' => 'password2', 'message' => "{attribute} không trùng nhau.",'on' => 'register',),
+            array('password', 'compare', 'compareAttribute' => 'password2', 'message' => "{attribute} không trùng nhau.", 'on' => 'register',),
             array('rule', 'compare', 'compareValue' => 1, 'message' => "Chưa chọn Đồng ý các quy định tại nhaphodep.vn ", 'on' => 'register'),
             array('password', 'length', 'min' => '6', 'message' => "{attribute} quá ngắn (tối thiểu là  {min} ký tự)."),
             array('cmnd', 'length', 'min' => 9, 'max' => 10,),
@@ -103,6 +103,7 @@ class Username extends CActiveRecord {
             'avartar' => 'Ảnh đại diện',
             'rule' => 'Quy định',
             'address' => 'Địa chỉ',
+            'created'=>'Ngày đăng ký',
         );
     }
 
@@ -177,9 +178,9 @@ class Username extends CActiveRecord {
             $this->updateByPk(Yii::app()->user->id, array('avartar' => $avartar));
         }
 
-        if($data['password']!= '')
+        if ($data['password'] != '')
             $this->updateByPk(Yii::app()->user->id, array('password' => md5($data['password'])));
-        
+
         $this->updateByPk(Yii::app()->user->id, array(
             'email' => $purifier->purify($data['email']),
             'fullname' => $purifier->purify($data['fullname']),
@@ -190,7 +191,6 @@ class Username extends CActiveRecord {
             'bank_number' => $purifier->purify($data['bank_number']),
                 )
         );
-
     }
 
     public function listUsernames() {
@@ -344,75 +344,80 @@ class Username extends CActiveRecord {
     //Back end - Delete record for Administrator
     private function deleteRecord($user) {
         //delete table: dos_modules_has_dos_usernames
-        $moduleUsername = new ModuleUsername;
-        $moduleUsername->deleteRecord($user);
+        /*    $moduleUsername = new ModuleUsername;
+          $moduleUsername->deleteRecord($user);
 
-        //delete counter table: dos_module_pcounter_save, dos_module_pcounter_users
-        $command = Yii::app()->db->createCommand('DELETE FROM dos_module_pcounter_save WHERE dos_usernames_username=:user');
-        $command->bindParam(":user", $user, PDO::PARAM_STR);
-        $command->execute();
-        $command = Yii::app()->db->createCommand('DELETE FROM dos_module_pcounter_users WHERE dos_usernames_username=:user');
-        $command->bindParam(":user", $user, PDO::PARAM_STR);
-        $command->execute();
+          //delete counter table: dos_module_pcounter_save, dos_module_pcounter_users
+          $command = Yii::app()->db->createCommand('DELETE FROM dos_module_pcounter_save WHERE dos_usernames_username=:user');
+          $command->bindParam(":user", $user, PDO::PARAM_STR);
+          $command->execute();
+          $command = Yii::app()->db->createCommand('DELETE FROM dos_module_pcounter_users WHERE dos_usernames_username=:user');
+          $command->bindParam(":user", $user, PDO::PARAM_STR);
+          $command->execute();
 
-        //delete table: dos_module_menus
-        $menus = new Menus;
-        $menus->deleteRecord($user);
+          //delete table: dos_module_menus
+          $menus = new Menus;
+          $menus->deleteRecord($user);
 
-        //delete table: dos_module_supports
-        $supports = new Supports;
-        $supports->deleteRecord($user);
+          //delete table: dos_module_supports
+          $supports = new Supports;
+          $supports->deleteRecord($user);
 
-        //delete about
-        Yii::app()->getModule('about');
-        About::model()->deleteAllByAttributes(array('dos_usernames_username' => $user));
+          //delete about
+          Yii::app()->getModule('about');
+          About::model()->deleteAllByAttributes(array('dos_usernames_username' => $user));
 
-        //delete advs
-        Advs::model()->deleteAllByAttributes(array('dos_usernames_username' => $user));
+          //delete advs
+          Advs::model()->deleteAllByAttributes(array('dos_usernames_username' => $user));
 
-        //delete banners
-        Banner::model()->deleteAllByAttributes(array('dos_usernames_username' => $user));
+          //delete banners
+          Banner::model()->deleteAllByAttributes(array('dos_usernames_username' => $user));
 
-        //delete contact
-        Yii::app()->getModule('contact');
-        Contact::model()->deleteAllByAttributes(array('dos_usernames_username' => $user));
+          //delete contact
+          Yii::app()->getModule('contact');
+          Contact::model()->deleteAllByAttributes(array('dos_usernames_username' => $user));
 
-        //delete services
-        Yii::app()->getModule('services');
-        Services::model()->deleteAllByAttributes(array('dos_usernames_username' => $user));
+          //delete services
+          Yii::app()->getModule('services');
+          Services::model()->deleteAllByAttributes(array('dos_usernames_username' => $user));
 
-        //delete webs
-        Web::model()->deleteAllByAttributes(array('dos_usernames_username' => $user));
+          //delete webs
+          Web::model()->deleteAllByAttributes(array('dos_usernames_username' => $user));
 
-        //delete user lang
-        UserLangs::model()->deleteAllByAttributes(array('dos_usernames_username' => $user));
+          //delete user lang
+          UserLangs::model()->deleteAllByAttributes(array('dos_usernames_username' => $user));
 
-        //delete ProductsCat and products
+          //delete ProductsCat and products
+          Yii::app()->getModule('products');
+          $values = ProductsCat::model()->findAllByAttributes(array('dos_usernames_username' => $user));
+          foreach ($values as $value) {
+          Products::model()->deleteAllByAttributes(array('dos_module_item_cat_cat_id' => $value['cat_id'])); //delete products
+          }
+          ProductsCat::model()->deleteAllByAttributes(array('dos_usernames_username' => $user)); //delete ProductsCat
+          //delete NewsCat and news
+          Yii::app()->getModule('news');
+          $values = NewsCat::model()->findAllByAttributes(array('dos_usernames_username' => $user));
+          foreach ($values as $value) {
+          News::model()->deleteAllByAttributes(array('dos_module_item_cat_cat_id' => $value['cat_id'])); //delete news
+          }
+          NewsCat::model()->deleteAllByAttributes(array('dos_usernames_username' => $user)); //delete NewsCat
+          //delete VideoCat and video
+          Yii::app()->getModule('video');
+          $values = VideoCat::model()->findAllByAttributes(array('dos_usernames_username' => $user));
+          foreach ($values as $value) {
+          Video::model()->deleteAllByAttributes(array('dos_module_item_cat_cat_id' => $value['cat_id'])); //delete video
+          }
+          VideoCat::model()->deleteAllByAttributes(array('dos_usernames_username' => $user)); //delete VideoCat
+          //delete table: dos_usernames
+
+         */
         Yii::app()->getModule('products');
-        $values = ProductsCat::model()->findAllByAttributes(array('dos_usernames_username' => $user));
-        foreach ($values as $value) {
-            Products::model()->deleteAllByAttributes(array('dos_module_item_cat_cat_id' => $value['cat_id'])); //delete products
-        }
-        ProductsCat::model()->deleteAllByAttributes(array('dos_usernames_username' => $user)); //delete ProductsCat
-        //delete NewsCat and news
-        Yii::app()->getModule('news');
-        $values = NewsCat::model()->findAllByAttributes(array('dos_usernames_username' => $user));
-        foreach ($values as $value) {
-            News::model()->deleteAllByAttributes(array('dos_module_item_cat_cat_id' => $value['cat_id'])); //delete news
-        }
-        NewsCat::model()->deleteAllByAttributes(array('dos_usernames_username' => $user)); //delete NewsCat
-        //delete VideoCat and video
-        Yii::app()->getModule('video');
-        $values = VideoCat::model()->findAllByAttributes(array('dos_usernames_username' => $user));
-        foreach ($values as $value) {
-            Video::model()->deleteAllByAttributes(array('dos_module_item_cat_cat_id' => $value['cat_id'])); //delete video
-        }
-        VideoCat::model()->deleteAllByAttributes(array('dos_usernames_username' => $user)); //delete VideoCat
-        //delete table: dos_usernames
+        Products::model()->deleteAll('dos_username= \'' . $user . '\'');
+
         Username::model()->findByPk($user)->delete();
 
         //delete forder
-        $file = new File;
+        $file = new Files();
         $file->deleteFolderUser(YiiBase::getPathOfAlias('webroot') . '/public/userfiles/images/' . $user);
     }
 

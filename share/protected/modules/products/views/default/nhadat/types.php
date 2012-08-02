@@ -1,5 +1,6 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id] => Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link'), $info_cat['type_title' . LANG]); ?>
-<?php $this->pageTitle = $info_cat['type_title' . LANG] . ' - ' . $this->lang[$this->module->id]; ?>
+<?php $this->pageTitle = $info_cat['type_title' . LANG] . ' - ' . $this->lang[$this->module->id]; 
+?>
 
 
 <?php if ($list_items['models']): ?>

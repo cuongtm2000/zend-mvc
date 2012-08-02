@@ -38,17 +38,17 @@
                 <!--begin tab-->
                 <div class="tab">
                     <div id="divTabRESale" class="divSearchAct" onclick="ShowTab(1);">
-                        <a>Nhà đất <br/>bán </a>
+                        <a>BĐS bán </a>
                     </div>
                     <div class="tab-lines" id="tab-line_1" style="display: none;">
                     </div>
                     <div id="divTabREBorrow" class="divSearchInAct" onclick="ShowTab(2);">
-                        <a>Nhà đất <br/>cho thuê </a>
+                        <a>BĐS cho thuê </a>
                     </div>
                     <div class="tab-lines" id="tab-line_2">
                     </div>
                     <div id="divTabRESaler" class="divSearchInAct" onclick="ShowTab(3);">
-                        <a>Tìm môi <br/>giới</a></div>
+                        <a>BĐS sang nhượng</a></div>
                     <div style="clear: both">
                     </div>
                 </div>
@@ -138,20 +138,13 @@
                 <div id="divReSaler" style="display: none">
                     <!--begin combobox-->
                     <form id="frmBrokerSearch" action="" name="frmBrokerSearch" method="post" enctype="multipart/form-data">
-                        <div class="comboboxs">
-                            <select class="select-box" id="cmbCategory" name="cmbCategory">
-                                <option value="">--Chọn giao dịch--</option>
-                                <option value="38">Nhà đất bán</option>
-                                <option value="49">Nhà đất cho thuê</option>
-                            </select>
-                        </div>
                         <div class="comboboxs" id="listTypeBDS">
                             <select class="select-box" id="cmbTypeBDS" name="cmbTypeBDS">
                                 <option value="">--Chọn Loại nhà đất--</option>
                             </select>
                         </div>
                         <div class="comboboxs">
-                            <select class="select-box" id="cmbCity" name="cmbCity"><option value="">--Chọn Tỉnh / Th&#224;nh phố--</option>
+                            <select class="select-box" id="cmbCity" name="cmbCity"><option value="">--Chọn Tỉnh / Thành phố--</option>
                                 <option value="SG">Tp.HCM</option>
                                 <option value="HN">Hà Nội</option>
                                 <option value="BD">Bình Dương</option>
@@ -161,11 +154,6 @@
                         <div class="comboboxs" id="divListDistrict">
                             <select class="select-box" id="cmbDistrict" name="cmbDistrict">
                                 <option value="">--Chọn Quận / Huyện--</option>
-                            </select>
-                        </div>
-                        <div class="comboboxs" id="divListProject">
-                            <select class="select-box" id="cmbProject" name="cmbProject">
-                                <option value="">--Chọn Dự án--</option>
                             </select>
                         </div>
                         <input class="bt-search" type="image" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ts_button-search.jpg" />

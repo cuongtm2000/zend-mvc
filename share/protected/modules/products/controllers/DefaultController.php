@@ -21,7 +21,8 @@ class DefaultController extends Controller {
 
     public function actionTypes($cid) {
         $this->layout = '//layouts/column-3';
-
+        $this->type=$cid;
+        
         $model = new ProductsType();
         $items = new Products();
 
@@ -30,9 +31,11 @@ class DefaultController extends Controller {
             Yii::app()->session['template'] . '/types', array(
                 'info_cat' => $info_cat,
                 //'list_sub_cats' => $model->listItem($info_cat['cat_id']),
-                'list_items' => $items->listItemByType($info_cat['type_id'])
+                'list_items' => $items->listItemByType($info_cat['type_id']),
+              
             )
         );
+        
     }
 
     public function actionView($id) {
@@ -63,6 +66,7 @@ class DefaultController extends Controller {
         $data['item'] = $tmp;
         $data['item_other'] = $model_class->listItemOther($data['item']['record_id'], $data['item']['dos_module_item_cat_cat_id']);
 
+        $this->type=$tmp->dosModuleItemTypeType['tag'];
         $this->render(Yii::app()->session['template'] . '/view', $data);
     }
 

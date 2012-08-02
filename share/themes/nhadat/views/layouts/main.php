@@ -10,13 +10,13 @@
         <link rel="icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/gif" />
 
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" />
-		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/search.css" />
-		
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/search.css" />
+
         <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.7.1.min.js"></script>
-		<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/tab-search.js"></script>
+        <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/tab-search.js"></script>
         <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.tooltip.js"></script>
-        
-		<?php echo $this->analytics ?>
+
+        <?php echo $this->analytics ?>
 
         <title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->title) ? ' - ' . CHtml::encode($this->title) : '' ?> </title>
         <meta name="keywords" content="<?php echo $this->keywords ?>" />
@@ -34,24 +34,25 @@
 
                 </div> <!--End logo-->
                 <div class="hd-cter">
-                <p class="welcome">
-                    <?php if (Yii::app()->user->isGuest == true): ?>
-                        Xin mời! <a href="<?php echo Yii::app()->baseUrl ?>/dang-ky" title="Đăng ký" class="register"><strong>Đăng ký</strong></a> <a href="<?php echo Yii::app()->baseUrl ?>/dang-nhap" title="Đăng nhập" class="login"><strong>Đăng nhập</strong></a>
-                    <?php else :?>
-                        Chào <b><?php echo Yii::app()->user->name;?></b>! <a href="<?php echo Yii::app()->baseUrl ?>/tin-da-dang" title="Tin đã đăng" class="register"><strong>Tin đã đăng</strong></a><a href="<?php echo Yii::app()->baseUrl ?>/dang-tin" title="Đăng tin" class="register"><strong>Đăng tin</strong></a> <a href="<?php echo Yii::app()->baseUrl ?>/thay-doi-thong-tin" title="Thay đổi thông tin" class="login"><strong>Thay đổi thông tin</strong></a><a href="<?php echo Yii::app()->baseUrl ?>/login/default/logout" title="Thoát" class="login"><strong>Thoát</strong></a>
-                    <?php endif ?>
-                </p>
-                <div class="clear"></div>
+                    <p class="welcome">
+                        <?php if (Yii::app()->user->isGuest == true): ?>
+                            Xin mời! <a href="<?php echo Yii::app()->baseUrl ?>/dang-ky" title="Đăng ký" class="register"><strong>Đăng ký</strong></a> <a href="<?php echo Yii::app()->baseUrl ?>/dang-nhap" title="Đăng nhập" class="login"><strong>Đăng nhập</strong></a>
+                        <?php else : ?>
+                            Chào <b><?php echo Yii::app()->user->name; ?></b>! <a href="<?php echo Yii::app()->baseUrl ?>/tin-da-dang" title="Tin đã đăng" class="register"><strong>Tin đã đăng</strong></a><a href="<?php echo Yii::app()->baseUrl ?>/dang-tin" title="Đăng tin" class="register"><strong>Đăng tin</strong></a> <a href="<?php echo Yii::app()->baseUrl ?>/thay-doi-thong-tin" title="Thay đổi thông tin" class="login"><strong>Thay đổi thông tin</strong></a><a href="<?php echo Yii::app()->baseUrl ?>/login/default/logout" title="Thoát" class="login"><strong>Thoát</strong></a>
+                        <?php endif ?>
+                    </p>
+                    <div class="clear"></div>
 
                     <div class="frame-nav">
                         <div class="left-nav"></div>
                         <div class="bg-nav">
                             <ul id="nav">
                                 <?php
-                                    if(isset($this->function['menu_productstype']) && is_array($this->function['menu_productstype']))
-                                        foreach ($this->function['menu_productstype'] as $value) {
-                                            echo '<li><a href="'.Yii::app()->baseUrl.'/san-pham/loai/'.$value['tag'].'" title="'.$value['type_title'].'" >'.$value['type_title'].'</a></li>';
-                                        }
+                                if (isset($this->function['menu_productstype']) && is_array($this->function['menu_productstype']))
+                                    foreach ($this->function['menu_productstype'] as $value) {
+                                        $class = ($this->type == $value['tag']) ? '  class="select-nav"' : '';
+                                        echo '<li' . $class . '><a href="' . Yii::app()->baseUrl . '/san-pham/loai/' . $value['tag'] . '" title="' . $value['type_title'] . '" >' . $value['type_title'] . '</a></li>';
+                                    }
                                 ?>
                             </ul>  
                         </div> <!--bg nav-->
