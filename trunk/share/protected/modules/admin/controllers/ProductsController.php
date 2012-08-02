@@ -133,6 +133,15 @@ class ProductsController extends AdminController {
 
         $this->render('index', $model_class->listItemAdmin());
     }
+    public function actionListposted($id) {
+        Yii::app()->getModule('products');
+        $product=new Products();
+        //Submit
+        if (Yii::app()->request->getIsPostRequest()) {
+            $product->activeItem(Yii::app()->request);
+        }
+        $this->render('listposted', $product->listItemAdminOfUser($id));
+    }
 
     public function actionAdd() {
         Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');

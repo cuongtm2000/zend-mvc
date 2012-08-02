@@ -392,6 +392,26 @@ class Products extends CActiveRecord {
 
         return array('models' => $this->model()->findAll($criteria), 'pages' => $pages);
     }
+    
+           public function listItemAdminOfUser($id) {
+        $criteria = new CDbCriteria();
+        $criteria->with = array(__CLASS__ . 'Cat');
+        $criteria->select = 'record_id, title, hits, record_order, hot, enable';
+        $criteria->order = 'hot DESC, record_order DESC, postdate DESC';
+           $criteria->condition = 'dos_username=:user';
+          $criteria->params = array(':user' => $id);
+
+        $count = $this->model()->count($criteria);
+
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = 15;
+        $pages->applyLimit($criteria);
+
+        return array('models' => $this->model()->findAll($criteria), 'pages' => $pages);
+    }
+
+    
 
     public function listItemPosted() {
         $criteria = new CDbCriteria();

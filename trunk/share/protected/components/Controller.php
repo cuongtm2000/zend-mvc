@@ -15,6 +15,7 @@ class Controller extends CController {
     public $numLang = array();
     public $logo = array(); //Logo
     public $banner = array(); //Banner
+    public $type;
 
     public function init() {
         Common::setLanguage(); //setting language
