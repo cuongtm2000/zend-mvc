@@ -9,8 +9,8 @@ class DefaultController extends Controller {
     }
 
     public function actionCats($cid, $page = 0) {
-        $cat_id = NewsCatLanguage::model()->findCatByTag($cid);
-        $this->render('cats', array('items' => News::model()->listItemByCat($cat_id)));
+        $info_cat = NewsCatLanguage::model()->findCatByTag($cid);
+        $this->render('cats', array('info_cat' => $info_cat, 'items' => News::model()->listItemByCat($info_cat['cat_id'])));
     }
 
     public function actionView($id) {

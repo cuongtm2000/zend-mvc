@@ -1,7 +1,8 @@
+<?php $this->breadcrumbs = array($this->lang[$this->module->id] => array($this->setUrlModule()), $info_cat['cat_title']); ?>
+<?php $this->pageTitle = $info_cat['cat_title'] . ' - ' . $this->lang[$this->module->id]; $this->setDescription($info_cat['description'])?>
 <div class="frame-panel">
     <?php if($items['models']):?>
-    <?php $this->breadcrumbs = array($this->lang[$this->module->id] => array($this->setUrlModule()), $cat_title = $items['models'][0]->NewsCat->NewsCatLanguage[Yii::app()->language]['cat_title']); ?>
-    <h2 class="title-right"><?php echo $cat_title?></h2>
+    <h2 class="title-right"><?php echo $info_cat['cat_title']?></h2>
 	<ul class="panel-items">
 		<?php foreach($items['models'] as $value):?>
         <li>

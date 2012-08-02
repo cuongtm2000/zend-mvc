@@ -14,7 +14,7 @@
 	
 	<title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->setting['title']) ? ' - '.CHtml::encode($this->setting['title']) : '' ?></title>
     <meta name="keywords" content="<?php echo CHtml::encode($this->setting['keywords']) ?>" />
-    <meta name="description" content="<?php echo ($this->description) ? CHtml::encode($this->description) : CHtml::encode($this->setting['description']) ?>" />
+    <meta name="description" content="<?php echo CHtml::encode($this->description) ?>" />
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/advanced-slider-base.css" media="screen"/>
 	<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.advancedSlider.min.js"></script>
@@ -43,34 +43,17 @@
 				<a href="<?php echo Yii::app()->baseUrl?>/<?php echo $key?>" title="<?php echo $value?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $key?>.gif" alt="<?php echo $value?>" /> <?php echo $value?></a>
 			<?php endforeach?>
          </div>
-         <p class="hot-line">Hot line: 01234 567 890 Mr.Bảo</p>   <div class="clear"></div>
+         <?php if($this->setting['hotline']):?><p class="hot-line"><?php echo $this->setting['hotline']?></p><?php endif?> <div class="clear"></div>
     </div>
     <div class="bg-nav">
-		<?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel', array('lastItemCssClass' => 'last'));?>
-         <!-- <ul id="nav">
-            <li><a href="rings.html" title="" class="select">Trang chủ</a></li>
-            <li><a href="necklace.html" title="">Giới thiệu</a></li>
-            <li><a href="earrings.html" title="">Sản phẩm</a>
-                 <ul>
-                    <li><a href="#" title="">Tops</a></li>
-                    <li><a href="#" title="">Skirts</a></li>
-                    <li><a href="#" title="">Jackets</a></li>
-                </ul>
-            </li>
-            <li><a href="pandants.html" title="">Dịch vụ</a></li>
-            <li><a href="bracelets.html" title="">Tin tức &amp; Sự kiện</a></li>
-            <li><a href="pandants.html" title="">Video</a></li>
-            <li><a href="watches.html" title="">Liên hệ</a></li>
-        </ul> --><!--End menu--> <div class="clear"></div>
+		<?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel', array('lastItemCssClass' => 'last'));?><div class="clear"></div>
     </div>
     <div class="main-content">    
         <div id="content">
         	<div id="leftcontent">
                 <?php $this->getPosition('left');?>
-
             </div><!--End left content-->
             <div id="rightcontent">
-
                 <div id="banner">
                     <ul class="slider">
                         <li class="slider-item"><a href="http://grouplaptrinh.com" title="grouplaptrinh"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner.jpg" alt="banner" /></a></li>
@@ -112,4 +95,3 @@
 </div><!--End wrapper-->
 </body>
 </html>
-

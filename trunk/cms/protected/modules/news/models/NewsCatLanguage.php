@@ -95,10 +95,10 @@ class NewsCatLanguage extends CActiveRecord {
 
     public function findCatByTag($tag) {
         $lang = Yii::app()->language;
-        $command = Yii::app()->db->createCommand('SELECT cat_id FROM ' . $this->tableName() . ' WHERE language_id=:lang AND tag=:tag');
+        $command = Yii::app()->db->createCommand('SELECT cat_id, cat_title, description FROM ' . $this->tableName() . ' WHERE language_id=:lang AND tag=:tag');
         $command->bindParam(":tag", $tag, PDO::PARAM_STR);
         $command->bindParam(":lang", $lang, PDO::PARAM_STR);
-        return $command->queryScalar();
+        return $command->queryRow();
     }
 
     //Back end - add

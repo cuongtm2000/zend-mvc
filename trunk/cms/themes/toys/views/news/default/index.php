@@ -1,4 +1,5 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id]); ?>
+<?php $this->pageTitle = $this->lang[$this->module->id]; $this->setDescription()?>
 <div class="frame-panel">
     <?php if($listItemIndex['models']):?>
 	<h2 class="title-right"><?php echo CHtml::encode($this->lang['news'])?></h2>

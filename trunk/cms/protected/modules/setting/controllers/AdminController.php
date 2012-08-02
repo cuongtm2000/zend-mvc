@@ -30,7 +30,6 @@ class AdminController extends BackEndController {
             $model->title = $data['title'];
             $model->default_language = $data['default_language'];
             $model->keywords = $data['keywords'];
-            $model->description = $data['description'];
         }
 
         $this->render('config', array('model' => $model));
