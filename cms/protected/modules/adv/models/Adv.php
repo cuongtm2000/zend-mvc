@@ -15,7 +15,7 @@
  * @property integer $record_order
  * @property string $position
  * @property string $type
- * @property string $click
+ * @property integer $click
  * @property integer $enable
  */
 class Adv extends CActiveRecord {
@@ -46,13 +46,13 @@ class Adv extends CActiveRecord {
         // will receive user inputs.
         return array(
             array('title, position', 'required'),
-            array('hits, record_order, enable', 'numerical', 'integerOnly' => true),
+            array('hits, record_order, click, enable', 'numerical', 'integerOnly' => true),
             array('pic_thumb', 'file', 'types' => 'gif,png,jpg,jpeg,icon', 'allowEmpty' => false, 'maxSize' => 1024 * 1024 * 5, 'on' => 'add'),
             array('pic_thumb', 'file', 'types' => 'gif,png,jpg,jpeg,icon', 'allowEmpty' => true, 'maxSize' => 1024 * 1024 * 5, 'on' => 'edit'),
             array('title, pic_thumb', 'length', 'max' => 100),
             array('url', 'length', 'max' => 200),
             array('url', 'url'),
-            array('position, type, click', 'length', 'max' => 45),
+            array('position, type', 'length', 'max' => 45),
             array('start_date, end_date', 'safe'),
             array('start_date, end_date', 'type', 'type' => 'date', 'message' => '{attribute}: is not a date!', 'dateFormat' => 'dd-MM-yyyy'),
             array('start_date', 'compareDateRange', 'type' => 'date', 'message' => '{attribute}: is not a date!', 'dateFormat' => 'dd-MM-yyyy'),
