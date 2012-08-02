@@ -16,10 +16,6 @@
         <?php echo $form->textField($model, 'keywords', array('class'=>'txt-large-x')); ?>
     </p>
     <p class="clear">
-        <?php echo $form->labelEx($model, 'description') ?>
-        <?php echo $form->textArea($model, 'description', array('rows' => 5, 'cols' => 20)); ?>
-    </p>
-    <p class="clear">
         <label>&nbsp;</label>
         <?php echo CHtml::submitButton('Update Configuration', array('name' => 'submit', 'class' => 'login', 'title' => 'Update Configuration')); ?>
     </p>

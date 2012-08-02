@@ -28,8 +28,16 @@ class Controller extends CController {
         }
     }
 
-    public function setUrlModule(){
-        return $this->setLangUrl().'/'.Urls::model()->getPatternModule($this->module->id);
+    public function setUrlModule() {
+        return $this->setLangUrl() . '/' . Urls::model()->getPatternModule($this->module->id);
+    }
+
+    public function setDescription($value = null) {
+        if ($value) {
+            $this->description = $value;
+        } else {
+            $this->description = MenusLanguage::model()->getDescriptionByUrl(Urls::model()->getPatternModule($this->module->id));
+        }
     }
 
     public function getPosition($position) {

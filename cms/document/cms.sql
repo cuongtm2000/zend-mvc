@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 01, 2012 at 05:39 AM
+-- Generation Time: Aug 02, 2012 at 02:47 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -50,7 +50,13 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('adv_right_width', 222, NULL, 'adv'),
 ('adv_top_height', 222, NULL, 'adv'),
 ('adv_top_width', 222, NULL, 'adv'),
+('news_cat_height_thumb', 200, NULL, 'news'),
+('news_cat_width_thumb', 200, NULL, 'news'),
 ('news_height_thumb', 200, NULL, 'news'),
+('news_num_item_cat', 3, NULL, 'news'),
+('news_num_item_hot', 7, '', 'news'),
+('news_num_item_index', 3, NULL, 'news'),
+('news_num_item_new', 7, NULL, 'news'),
 ('news_width_thumb', 200, NULL, 'news'),
 ('products_cat_height_thumb', 200, NULL, 'products'),
 ('products_cat_width_thumb', 200, NULL, 'products'),
@@ -142,14 +148,16 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('adv', 'Quảng cáo', 0, 'vi'),
 ('cancel', 'Cancel', 1, 'en'),
 ('cancel', 'Hủy bỏ', 1, 'vi'),
-('cat_title', 'Danh mục', 1, 'vi'),
+('cat_title', 'Danh mục', 0, 'vi'),
 ('counter', 'Counter', 0, 'en'),
 ('counter', 'Thống kê truy cập', 0, 'vi'),
 ('create_date', 'Ngày tạo', 1, 'vi'),
+('default', 'Home page', 0, 'en'),
 ('default', 'Trang chủ', 0, 'vi'),
 ('delete', 'Xóa', 1, 'vi'),
 ('edit', 'Chỉnh sửa', 0, 'vi'),
 ('hidden', 'Ẩn', 1, 'vi'),
+('news', 'News', 0, 'en'),
 ('news', 'Tin tức & sự kiện', 0, 'vi'),
 ('no_record', 'Không tồn tại mẫu tin', 0, 'vi'),
 ('order', 'Order', 1, 'en'),
@@ -207,11 +215,11 @@ CREATE TABLE IF NOT EXISTS `hoiit_modules` (
 
 INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_url`, `module_sort`, `module_type`) VALUES
 ('about', 'Danh sách|Cấu hình Url', 'about|about/url', 2, 1),
-('adv', 'Danh sách|Cấu hình upload', 'adv|adv/upload', 5, 1),
+('adv', 'Danh sách|Cấu hình', 'adv|adv/upload', 5, 1),
 ('counter', 'Counter', NULL, 4, 0),
 ('default', 'Default', NULL, 1, 1),
-('news', 'Danh mục|Danh sách|Cấu hình upload|Cấu hình Url', 'news/cat|news|news/upload|news/url', 4, 1),
-('products', 'Danh mục|Danh sách|Cấu hình upload|Cấu hình Url', 'products/cat|products|products/upload|products/url', 3, 1),
+('news', 'Danh mục|Danh sách|Cấu hình|Cấu hình Url', 'news/cat|news|news/upload|news/url', 4, 1),
+('products', 'Danh mục|Danh sách|Cấu hình|Cấu hình Url', 'products/cat|products|products/upload|products/url', 3, 1),
 ('support', 'Danh sách', 'support', 6, 1);
 
 -- --------------------------------------------------------
@@ -266,10 +274,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
 --
 
 INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(46, 'en', '', '<p>asdas</p>', '', 'dasd', 156, NULL, NULL),
-(46, 'vi', 'Welcome to Yiiproject.com', '<p>Welcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to</p>\r\n<h3>Welcome to Yiiproject.com</h3>\r\n<p>Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.com</p>', 'welcome-to-yiiprojectcom', 'das', 156, NULL, NULL),
-(47, 'en', 'About', '<p>Con tnet</p>', 'about', 'dasdsadsads', 156, NULL, NULL),
-(47, 'vi', 'Gioi thieu', '<p>Noi dung</p>', 'gioi-thieu', 'asdasdsd', 156, NULL, NULL);
+(46, 'en', 'Welcome english', '<p>asdas asa</p>', 'welcome-english', 'dasd', 227, NULL, NULL),
+(46, 'vi', 'Welcome to Yiiproject.com', '<p>Welcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to</p>\r\n<h3>Welcome to Yiiproject.com</h3>\r\n<p>Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.com</p>', 'welcome-to-yiiprojectcom', 'das', 227, NULL, NULL),
+(47, 'en', 'About', '<p>Con tnet</p>', 'about', 'dasdsadsads', 227, NULL, NULL),
+(47, 'vi', 'Gioi thieu', '<p>Noi dung</p>', 'gioi-thieu', 'asdasdsd', 227, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -329,9 +337,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus` (
 INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_type`, `menu_target`, `menu_sort`, `menu_homepage`, `menu_activated`) VALUES
 (27, 0, 1, '', 1, 1, 1),
 (28, 0, 1, '', 2, 0, 1),
-(29, 0, 1, '', 5, 0, 1),
+(29, 0, 1, '', 3, 0, 1),
 (30, 28, 0, '', 4, 0, 1),
-(31, 0, 1, '', 3, 0, 1);
+(31, 0, 1, '', 5, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -359,12 +367,12 @@ INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name
 (27, 'vi', 'Trang chủ', 'trang-chu', 'Trang chu mô tả'),
 (28, 'en', 'About us', '', 'Desctip about'),
 (28, 'vi', 'Giới thiệu', 'gioi-thieu', 'Mo ta gioi thieu'),
-(29, 'en', 'Products', '', ''),
+(29, 'en', 'Products', '', 'English'),
 (29, 'vi', 'Sản phẩm', 'san-pham', ''),
 (30, 'en', '', '', ''),
 (30, 'vi', 'Sub', 'gioi-thieu/welcome-to-yiiprojectcom.html', ''),
-(31, 'en', '', 'news', ''),
-(31, 'vi', 'Tin tức & sự kiện', 'tin-tuc', '');
+(31, 'en', '', 'news', 'dasdsadsad'),
+(31, 'vi', 'Tin tức & sự kiện', 'tin-tuc', 'Co mo ta tin tuc');
 
 -- --------------------------------------------------------
 
@@ -455,7 +463,7 @@ INSERT INTO `hoiit_module_news_cat_languages` (`cat_id`, `language_id`, `cat_tit
 (15, 'en', '', '', '', ''),
 (15, 'vi', 'An', '', 'an', ''),
 (16, 'en', '', '', '', ''),
-(16, 'vi', 'Danh muc', '', 'danh-muc', '');
+(16, 'vi', 'Danh muc "an" sa', '', 'danh-muc-an-sa', '');
 
 -- --------------------------------------------------------
 
@@ -484,8 +492,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_languages` (
 --
 
 INSERT INTO `hoiit_module_news_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(1, 'en', '', '', '', '', '', 0, NULL, NULL),
-(1, 'vi', 'Tieu de "bac"', '<p>sdfsdfsdfsdf</p>', '<p>asdasdsa</p>', 'tieu-de-bac', '', 0, NULL, NULL),
+(1, 'en', '', '', '', '', 'fsdfdfsdfsdf', 0, NULL, NULL),
+(1, 'vi', 'Tieu de "bac"', '<p>sdfsdfsdfsdf</p>', '<p>asdasdsa</p>', 'tieu-de-bac', 'sdfsd', 0, NULL, NULL),
 (2, 'en', '', '<p>asd</p>', '', '', '', 0, NULL, NULL),
 (2, 'vi', 'asdas', '<p>dasdas</p>', '<p>asdsad</p>', 'asdas', '', 0, NULL, NULL),
 (3, 'en', '', '', '', '', '', 0, NULL, NULL),
@@ -511,10 +519,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_save` (
 --
 
 INSERT INTO `hoiit_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456141),
-('max_count', 0),
-('counter', 0),
-('yesterday', 0);
+('day_time', 2456142),
+('max_count', 1),
+('counter', 1),
+('yesterday', 1);
 
 -- --------------------------------------------------------
 
@@ -532,7 +540,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''::1''', 1343792185);
+('''::1''', 1343868427);
 
 -- --------------------------------------------------------
 
@@ -625,7 +633,7 @@ INSERT INTO `hoiit_module_products_cat_languages` (`cat_id`, `language_id`, `cat
 (4, 'en', '', '', '', ''),
 (4, 'vi', 'Danh muc 2', '', 'danh-muc-2', 'sdsdsdsd'),
 (5, 'en', '', '', '', ''),
-(5, 'vi', 'Danh mục', '', 'danh-muc', ''),
+(5, 'vi', 'Danh mục', '', 'danh-muc', 'bnbnbbnbnnbnb'),
 (6, 'en', '', '', '', ''),
 (6, 'vi', 'Sub cat', '', 'sub-cat', ''),
 (7, 'en', '', '', '', ''),
@@ -718,19 +726,20 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('left', 1, '1', 'about', NULL, NULL, 'adv_left'),
 ('right', 2, '1', 'about', NULL, NULL, 'counter'),
 ('right', 3, '1', 'about', NULL, NULL, 'menu_about'),
-('right', 1, '1', 'news', NULL, NULL, 'adv_right'),
-('left', 2, '1', 'news', NULL, NULL, 'adv_left'),
-('left', 1, '1', 'default', NULL, NULL, 'menu_news'),
+('left', 1, '1', 'news', NULL, NULL, 'menu_news'),
+('right', 2, '1', 'news', NULL, NULL, 'adv_right'),
+('left', 3, '1', 'news', NULL, NULL, 'adv_left'),
+('center', 1, '1', 'default', NULL, NULL, 'about_home'),
 ('center', 2, '1', 'default', NULL, NULL, 'news_list_first'),
-('right', 3, '1', 'default', NULL, NULL, 'news_hot'),
-('right', 4, '1', 'default', NULL, NULL, 'news_new'),
-('left', 5, '1', 'default', NULL, NULL, 'menu_about'),
+('left', 3, '1', 'default', NULL, NULL, 'menu_news'),
+('left', 4, '1', 'default', NULL, NULL, 'menu_about'),
+('left', 5, '1', 'default', NULL, NULL, 'menu_products'),
 ('left', 6, '1', 'default', NULL, NULL, 'list_support'),
-('left', 7, '1', 'default', NULL, NULL, 'menu_products'),
-('left', 8, '1', 'default', NULL, NULL, 'counter'),
-('center', 9, '1', 'default', NULL, NULL, 'about_home'),
-('right', 10, '1', 'default', NULL, NULL, 'adv_right'),
-('left', 11, '1', 'default', NULL, NULL, 'adv_left');
+('left', 7, '1', 'default', NULL, NULL, 'counter'),
+('left', 8, '1', 'default', NULL, NULL, 'adv_left'),
+('right', 9, '1', 'default', NULL, NULL, 'news_hot'),
+('right', 10, '1', 'default', NULL, NULL, 'news_new'),
+('right', 11, '1', 'default', NULL, NULL, 'adv_right');
 
 -- --------------------------------------------------------
 
@@ -751,6 +760,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_settings` (
 INSERT INTO `hoiit_settings` (`setting_name`, `setting_value`) VALUES
 ('default_language', 'vi'),
 ('description', 'Description'),
+('hotline', ''),
 ('keywords', 'Keywords'),
 ('title', 'Welcome to YiiProject');
 
@@ -806,8 +816,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_urls` (
 --
 
 INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `url_type`, `hoiit_modules_module_id`, `hoiit_languages_language_id`) VALUES
-('(gioi-thieu)/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 0, 0, 'about', 'vi'),
-('gioi-thieu', 'about/default/index', '', 1, 1, 'about', 'vi'),
+('<lang:[a-z]{2}>/about-us/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 0, 0, 'about', 'en'),
+('about-us', 'about/default/index', '', 2, 1, 'about', 'en'),
+('gioi-thieu', 'about/default/index', '', 2, 1, 'about', 'vi'),
+('gioi-thieu/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 1, 0, 'about', 'vi'),
 ('home-page', 'default/default/index', NULL, NULL, 1, 'default', 'en'),
 ('news', 'news/default/index', '', 4, 1, 'news', 'en'),
 ('san-pham', 'products/default/index', '', 3, 1, 'products', 'vi'),

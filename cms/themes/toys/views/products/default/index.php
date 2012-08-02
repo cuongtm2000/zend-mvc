@@ -1,5 +1,8 @@
+<?php $this->breadcrumbs = array($this->lang[$this->module->id]); ?>
+<?php $this->pageTitle = $this->lang[$this->module->id]; $this->setDescription()?>
 <div class="main-all-product">
-    <h2 class="title-right">Sản phẩm mới</h2>
+    <h2 class="title-right"><?php echo $this->lang['cat_title'] . ' ' . strtolower($this->lang[$this->module->id])?></h2>
+    <?php if($items):?>
     <ul class="all-product">
         <?php foreach($items as $value): ?>
             <?php if($value['cat_parent_id']==0):?>
@@ -15,5 +18,8 @@
             </li>
             <?php endif?>
         <?php endforeach; ?>
-    </ul><!--End All products--> <div class="clear"></div>
+    </ul>
+    <?php else:?>
+        Khong ton tai mau tin
+    <?php endif;?><div class="clear"></div>
 </div> <!--End main-content-->

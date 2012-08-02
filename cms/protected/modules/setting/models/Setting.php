@@ -11,7 +11,6 @@ class Setting extends CActiveRecord {
     public $default_language;
     public $title;
     public $keywords;
-    public $description;
 
     public static function model($className = __CLASS__) {
         return parent::model($className);
@@ -33,7 +32,7 @@ class Setting extends CActiveRecord {
         return array(
             array('default_language, title', 'required'),
             array('title', 'length', 'max' => 100),
-            array('keywords, description', 'length', 'max' => 250),
+            array('keywords', 'length', 'max' => 250),
             /*array('setting_name, setting_value', 'required'),
             array('setting_name', 'length', 'max' => 30),
             array('setting_value', 'length', 'max' => 100),
@@ -94,12 +93,10 @@ class Setting extends CActiveRecord {
         $this->title = $purifier->purify(trim($this->title));
         $this->default_language = $purifier->purify(trim($this->default_language));
         $this->keywords = $purifier->purify(trim($this->keywords));
-        $this->description = $purifier->purify(trim($this->description));
 
         $this->addSetting('title', $this->title);
         $this->addSetting('default_language', $this->default_language);
         $this->addSetting('keywords', $this->keywords);
-        $this->addSetting('description', $this->description);
 
         return true;
     }

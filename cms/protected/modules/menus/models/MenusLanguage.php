@@ -89,6 +89,16 @@ class MenusLanguage extends CActiveRecord {
         ));
     }
 
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function getDescriptionByUrl($url) {
+        $command = Yii::app()->db->createCommand('SELECT menu_description FROM ' . $this->tableName() . ' WHERE menu_url=:url');
+        $command->bindParam(":url", $url, PDO::PARAM_STR);
+        return $command->queryScalar();
+    }
+
     //Back end - add
     public function saveRecord($id, $model) {
         $url = Urls::model()->getPatternByType($model['menu_url_content_page']);
