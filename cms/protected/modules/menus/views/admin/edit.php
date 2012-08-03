@@ -18,7 +18,7 @@
         </p>
         <p class="clear" id="url-select">
             <?php echo $form->labelEx($model, 'menu_url_content_page') ?>
-            <?php echo $form->dropDownList($model, 'menu_url_content_page', CHtml::listData(Module::model()->listItemAdmin(), 'module_id', 'module_id')); ?>
+            <?php echo $form->dropDownList($model, 'menu_url_content_page', Module::model()->listModuleByLang()); ?>
         </p>
         <?php foreach($this->listLanguage as $key => $lang):?>
         <p class="clear" id="url<?php echo $key?>">
