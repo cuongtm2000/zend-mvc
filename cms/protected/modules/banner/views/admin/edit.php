@@ -23,7 +23,7 @@
         <div class="col1"><?php echo $form->labelEx($model, 'banner_picture') ?></div>
         <div class="col2">
             <?php if($model->banner_picture): ?>
-                <a class="nyroModal" href="<?php echo Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/'.$this->module->id.'/'.$model->banner_picture ?>"><img src="<?php echo Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/'.$this->module->id.'/'.$model->banner_picture ?>" alt="" class="img-marginb5 img-banner" /></a><br />
+                <a class="nyroModal" href="<?php echo Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/'.$this->module->id.'/'.$model->banner_picture ?>"><img src="<?php echo Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/'.$this->module->id.'/'.$model->banner_picture ?>" alt="" class="img-banner" /></a><br />
             <?php endif;?>
             <?php echo $form->fileField($model, 'banner_picture', array('class'=>'fileupload')); ?>
         </div>
