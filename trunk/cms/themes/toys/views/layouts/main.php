@@ -72,6 +72,20 @@
             </div><!--End right content--> 
             <div id="colum3">
                 <?php $this->getPosition('right');?>
+				<h4 class="title-grey"><span>Thăm dò ý kiến</span></h4>
+				<div class="panel-polls">
+					<p>Màu sắc bạn yêu thích của bạn là gì?</p>
+					<ul class="sub-polls">
+						<li><input type="radio" id="vote17" name="vote" value="17" /><label for="vote17">Xanh</label></li>
+						<li><input type="radio" id="vote18" name="vote" value="18" /><label for="vote18">Red</label></li>
+						<li><input type="radio" id="vote19" name="vote" value="19" /><label for="vote19">Đen</label></li>
+						<li><input type="radio" id="vote20" name="vote" value="20" /><label for="vote20">Cam</label></li>
+					</ul>
+					<div class="f-action">
+						<input onclick="sendvoting(6)" class="button_polls" type="button" value="Bình chọn" />
+						<a title="Kết quả" rel="prettyPhoto[iframes]"  href="/vote/index/index/vid/6?iframe=true&amp;width=70%&amp;height=70%" >&nbsp; Kết quả</a>
+					</div>
+				</div>
             </div> <!--End colum3--> <div class="clear"></div>
         </div><!--End content-->
 	</div> <!--End main-content-->

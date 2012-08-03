@@ -85,7 +85,7 @@ a:hover{color:#000;}
 #rightcontent-col2{float:right; width:750px; overflow: hidden}
 #rightcontent-col2 .all-product .product{width:240px;text-align:center;padding:8px 0;margin:0 0 15px 5px;display:inline-block;background:#DEDEDE;vertical-align:top}
 
-.frame-panel{background:#fff;margin:0 0 10px 0;padding:2px}
+.panel-polls, .frame-panel{background:#fff;margin:0 0 10px 0;padding:2px}
 .frame-tent-right{padding:0 5px 5px 10px}
 .frame-tent-right p{line-height:1.6em}
 
@@ -209,3 +209,11 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .frm-cart label{width:100px}
 .notificaion{color:#2C2C2C;font-size:10pt;margin:0 0 10px 0}
 .note span{color:#f00}
+
+/** vote polls **/
+.panel-polls{padding:5px 10px}
+.sub-polls{list-style:none;padding:10px 0;border-bottom:1px solid #ddd;margin:0 0 10px 0}
+.sub-polls li{padding:2px 0}
+.sub-polls li input{margin:0 5px 0 0} .sub-polls li label{font-weight:bold}
+.button_polls{background:url(../images/bkg_btn.png) no-repeat right;border:none;padding:5px 12px;color:#fff;font-weight:bold;cursor:pointer}
+.f-action a{color:#B6150D;font-weight:bold}
