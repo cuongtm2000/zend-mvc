@@ -288,9 +288,7 @@ class Adv extends CActiveRecord {
 
     //Back end - Get record to Edit
     public function loadEdit($id) {
-        $criteria = new CDbCriteria();
-        $this->_model = $this::model()->findByPk($id, $criteria);
-
+        $this->_model = $this::model()->findByPk($id);
         if ($this->_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');
         }
