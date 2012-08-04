@@ -125,7 +125,7 @@ class About extends CActiveRecord {
         $pages->pageSize = 15;
         $pages->applyLimit($criteria);
 
-        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => $this->model()->findAll($criteria), 'pages' => $pages);
     }
 
     //Back end - Active Item
@@ -142,7 +142,7 @@ class About extends CActiveRecord {
                     $id = intval($id);
                     $order = intval($order);
                     if ($id && $order) {
-                        $this::model()->updateByPk($id, array('record_order' => $order));
+                        $this->model()->updateByPk($id, array('record_order' => $order));
                     }
                 }
             }
