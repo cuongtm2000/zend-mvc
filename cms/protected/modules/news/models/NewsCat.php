@@ -126,7 +126,7 @@ class NewsCat extends CActiveRecord {
         } else {
             $criteria->condition = 'cat_enable=1';
         }
-        return $this::model()->findAll($criteria);
+        return $this->findAll($criteria);
     }
 
     //Front end - make menu multi level
@@ -192,7 +192,7 @@ class NewsCat extends CActiveRecord {
             $criteria->condition = 'cat_enable=1';
         }
 
-        $this->_rows = $this::model()->findAll($criteria);
+        $this->_rows = $this->findAll($criteria);
         $this->_rowsize = count($this->_rows);
 
         foreach ($this->_rows as $key => $value) {
@@ -222,11 +222,11 @@ class NewsCat extends CActiveRecord {
         if ($syn) {
             $criteria = new CDbCriteria();
             $criteria->order = 'cat_order ASC';
-            $models = $this::model()->findAll($criteria);
+            $models = $this->findAll($criteria);
 
             $i = 1;
             foreach ($models as $model) {
-                $this::model()->updateByPk($model['cat_id'], array('cat_order' => $i));
+                $this->updateByPk($model['cat_id'], array('cat_order' => $i));
                 $i++;
             }
         } else {
@@ -245,7 +245,7 @@ class NewsCat extends CActiveRecord {
                     foreach ($record_id as $value) {
                         $id = intval($value);
                         if ($id) {
-                            $this::model()->updateByPk($id, array('cat_enable' => $active));
+                            $this->updateByPk($id, array('cat_enable' => $active));
                         }
                     }
                 }
@@ -267,9 +267,9 @@ class NewsCat extends CActiveRecord {
 
             $this->save();
             $id = $this->cat_id;
-            $this::model()->updateByPk($id, array('cat_order' => $id));
+            $this->updateByPk($id, array('cat_order' => $id));
         } else {
-            $item = $this::model()->findByPk($id);
+            $item = $this->findByPk($id);
             $item->cat_parent_id = $model->cat_parent_id;
             $item->cat_hot = $model->cat_hot;
             $item->cat_enable = $model->cat_enable;
@@ -358,7 +358,7 @@ class NewsCat extends CActiveRecord {
     public function findcatParent($cat_id, $cat_parent_id) {
         $result = $this->getIdByParentId($cat_id);
         foreach ($result as $value) {
-            $this::model()->updateByPk($value['cat_id'], array('cat_parent_id' => $cat_parent_id));
+            $this->updateByPk($value['cat_id'], array('cat_parent_id' => $cat_parent_id));
         }
     }
 
@@ -393,9 +393,9 @@ class NewsCat extends CActiveRecord {
     public function deleteRecord($id) {
         NewsCatLanguage::model()->deleteRecord($id);
 
-        $item = $this::model()->find('cat_id=:id', array(':id' => $id));
+        $item = $this->find('cat_id=:id', array(':id' => $id));
         Common::removePic($item->pic_thumb, '/image/' . lcfirst(__CLASS__)); // remove pic_thumb
         Common::removePic($item->pic_desc, '/image/' . lcfirst(__CLASS__), 1); // remove pic_desc
-        $this::model()->findByPk($id)->delete(); //delete record
+        $this->findByPk($id)->delete(); //delete record
     }
 }

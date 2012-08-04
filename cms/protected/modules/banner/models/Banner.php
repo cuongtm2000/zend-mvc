@@ -155,20 +155,20 @@ class Banner extends CActiveRecord {
         $criteria = new CDbCriteria();
         $criteria->order = 'banner_order DESC, banner_date DESC';
         $criteria->condition = 'banner_type=\'banner\'';
-        $count = $this::model()->count($criteria);
+        $count = $this->count($criteria);
 
         $pages = new CPagination($count);
         $pages->pageSize = 15;
         $pages->applyLimit($criteria);
 
-        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => $this->findAll($criteria), 'pages' => $pages);
     }
 
     //Back end - Delete Record
     private function deleteRecord($id) {
-        $item = $this::model()->find('banner_id=:id', array(':id' => $id));
+        $item = $this->find('banner_id=:id', array(':id' => $id));
         Common::removePic($item->banner_picture, '/image/' . strtolower(__CLASS__)); // remove picture
-        $this::model()->findByPk($id)->delete(); //delete record_id
+        $this->findByPk($id)->delete(); //delete record_id
     }
 
     //Back end - Active Item
@@ -185,7 +185,7 @@ class Banner extends CActiveRecord {
                     $id = intval($id);
                     $order = intval($order);
                     if ($id && $order) {
-                        $this::model()->updateByPk($id, array('banner_order' => $order));
+                        $this->updateByPk($id, array('banner_order' => $order));
                     }
                 }
             }
@@ -193,11 +193,11 @@ class Banner extends CActiveRecord {
             $criteria = new CDbCriteria();
             $criteria->order = 'banner_order ASC, banner_date ASC';
 
-            $models = $this::model()->findAll($criteria);
+            $models = $this->findAll($criteria);
 
             $i = 1;
             foreach ($models as $model) {
-                $this::model()->updateByPk($model['banner_id'], array('banner_order' => $i));
+                $this->updateByPk($model['banner_id'], array('banner_order' => $i));
                 $i++;
             }
         } else {
@@ -216,7 +216,7 @@ class Banner extends CActiveRecord {
                     foreach ($record_id as $value) {
                         $id = intval($value);
                         if ($id) {
-                            $this::model()->updateByPk($id, array('enable' => $active));
+                            $this->updateByPk($id, array('enable' => $active));
                         }
                     }
                 } else {
@@ -240,7 +240,7 @@ class Banner extends CActiveRecord {
 
     //Back end - Get record to Edit
     public function loadEdit($id) {
-        $this->_model = $this::model()->findByPk($id);
+        $this->_model = $this->findByPk($id);
 
         if ($this->_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');

@@ -56,7 +56,7 @@ class Position extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'hoiitFunctionsFunctionValue' => array(self::BELONGS_TO, 'HoiitFunctions', 'hoiit_functions_function_value'),
+            //'hoiitFunctionsFunctionValue' => array(self::BELONGS_TO, 'HoiitFunctions', 'hoiit_functions_function_value'),
         );
     }
 

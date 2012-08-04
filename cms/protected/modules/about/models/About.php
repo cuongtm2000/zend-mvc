@@ -118,14 +118,14 @@ class About extends CActiveRecord {
         $criteria = new CDbCriteria();
         $criteria->with = array('Language', 'AboutLanguage');
         $criteria->order = 'record_order DESC, created DESC';
-        $count = $this::model()->count($criteria);
+        $count = $this->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
         $pages->pageSize = 15;
         $pages->applyLimit($criteria);
 
-        return array('models' => $this->model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => $this->findAll($criteria), 'pages' => $pages);
     }
 
     //Back end - Active Item
@@ -142,18 +142,18 @@ class About extends CActiveRecord {
                     $id = intval($id);
                     $order = intval($order);
                     if ($id && $order) {
-                        $this->model()->updateByPk($id, array('record_order' => $order));
+                        $this->updateByPk($id, array('record_order' => $order));
                     }
                 }
             }
         } else if ($syn) {
             $criteria = new CDbCriteria();
             $criteria->order = 'record_order ASC, created ASC';
-            $models = $this::model()->findAll($criteria);
+            $models = $this->findAll($criteria);
 
             $i = 1;
             foreach ($models as $model) {
-                $this::model()->updateByPk($model['record_id'], array('record_order' => $i));
+                $this->updateByPk($model['record_id'], array('record_order' => $i));
                 $i++;
             }
         } else {
@@ -172,7 +172,7 @@ class About extends CActiveRecord {
                     foreach ($record_id as $value) {
                         $id = intval($value);
                         if ($id) {
-                            $this::model()->updateByPk($id, array('enable' => $active));
+                            $this->updateByPk($id, array('enable' => $active));
                         }
                     }
                 } else {
@@ -181,7 +181,7 @@ class About extends CActiveRecord {
                         $id = intval($value);
                         if ($id) {
                             AboutLanguage::model()->deleteRecord($id);
-                            $this::model()->deleteByPk($id);
+                            $this->deleteByPk($id);
                         }
                     }
                 }
@@ -197,9 +197,9 @@ class About extends CActiveRecord {
             $this->save();
 
             $id = $this->record_id;
-            $this::model()->updateByPk($id, array('record_order' => $id));
+            $this->updateByPk($id, array('record_order' => $id));
         } else {
-            $item = $this::model()->findByPk($id);
+            $item = $this->findByPk($id);
             $item->hot = $model->hot;
             $item->enable = $model->enable;
             $item->save();

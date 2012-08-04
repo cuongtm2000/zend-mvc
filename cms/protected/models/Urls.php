@@ -151,7 +151,7 @@ class Urls extends CActiveRecord {
         $type = $data->getPost('type', '');
         $lang = $data->getPost('lang', '');
 
-        $this::model()->deleteAll('hoiit_modules_module_id=:module', array(':module' => $id));
+        $this->deleteAll('hoiit_modules_module_id=:module', array(':module' => $id));
         foreach ($pattern as $key => $value) {
             if ($pattern[$key] && $route[$key]) {
                 $this->insertItem(trim($pattern[$key]), trim($route[$key]), trim($param[$key]), $key, trim($type[$key]), $id, $lang[$key]);

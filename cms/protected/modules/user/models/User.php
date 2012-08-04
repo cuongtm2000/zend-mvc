@@ -60,7 +60,7 @@ class User extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'hoiitGroupsGroup' => array(self::BELONGS_TO, 'HoiitGroups', 'hoiit_groups_group_id'),
+            //'hoiitGroupsGroup' => array(self::BELONGS_TO, 'HoiitGroups', 'hoiit_groups_group_id'),
         );
     }
 

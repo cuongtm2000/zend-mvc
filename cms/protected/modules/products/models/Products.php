@@ -134,7 +134,7 @@ class Products extends CActiveRecord {
         $criteria = new CDbCriteria();
         $criteria->condition = 'enable=1';
 
-        $this->_model = $this::model()->findByPk($id, $criteria);
+        $this->_model = $this->findByPk($id, $criteria);
 
         if ($this->_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');
@@ -150,7 +150,7 @@ class Products extends CActiveRecord {
         $criteria->params = array(':id' => $id, ':cid' => $cid);
         $criteria->limit = 4;
 
-        return $this::model()->findAll($criteria);
+        return $this->findAll($criteria);
     }
 
     //Front end - list Item by Cat
@@ -160,14 +160,14 @@ class Products extends CActiveRecord {
         $criteria->condition = 'enable=1 AND hoiit_module_item_cat_cat_id=:cid';
         $criteria->params = array(':cid' => $cid);
 
-        $count = $this::model()->count($criteria);
+        $count = $this->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
         $pages->pageSize = 2;
         $pages->applyLimit($criteria);
 
-        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => $this->findAll($criteria), 'pages' => $pages);
     }
 
     //Back end - List item admin
@@ -176,14 +176,14 @@ class Products extends CActiveRecord {
         $criteria->with = array('Language', 'ProductsLanguage');
         $criteria->order = 'record_order DESC, postdate DESC';
 
-        $count = $this::model()->count($criteria);
+        $count = $this->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
         $pages->pageSize = 15;
         $pages->applyLimit($criteria);
 
-        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => $this->findAll($criteria), 'pages' => $pages);
     }
 
     //Back end - Delete Record
@@ -194,7 +194,7 @@ class Products extends CActiveRecord {
         Common::removePic($item->pic_thumb, '/image/' . strtolower(__CLASS__)); // remove pic_thumb
         Common::removePic($item->pic_full, '/image/' . strtolower(__CLASS__)); // remove pic_full
         Common::removePic($item->pic_desc, '/image/' . strtolower(__CLASS__), 1); // remove pic_desc
-        $this::model()->findByPk($id)->delete(); //delete record_id
+        $this->findByPk($id)->delete(); //delete record_id
     }
 
     //Back end - Active Item
@@ -211,7 +211,7 @@ class Products extends CActiveRecord {
                     $id = intval($id);
                     $order = intval($order);
                     if ($id && $order) {
-                        $this::model()->updateByPk($id, array('record_order' => $order));
+                        $this->updateByPk($id, array('record_order' => $order));
                     }
                 }
             }
@@ -219,11 +219,11 @@ class Products extends CActiveRecord {
             $criteria = new CDbCriteria();
             $criteria->order = 'record_order ASC, postdate ASC';
 
-            $models = $this::model()->findAll($criteria);
+            $models = $this->findAll($criteria);
 
             $i = 1;
             foreach ($models as $model) {
-                $this::model()->updateByPk($model['record_id'], array('record_order' => $i));
+                $this->updateByPk($model['record_id'], array('record_order' => $i));
                 $i++;
             }
         } else {
@@ -242,7 +242,7 @@ class Products extends CActiveRecord {
                     foreach ($record_id as $value) {
                         $id = intval($value);
                         if ($id) {
-                            $this::model()->updateByPk($id, array('enable' => $active));
+                            $this->updateByPk($id, array('enable' => $active));
                         }
                     }
                 } else {
@@ -277,9 +277,9 @@ class Products extends CActiveRecord {
 
             $this->save();
             $id = $this->record_id;
-            $this::model()->updateByPk($id, array('record_order' => $id));
+            $this->updateByPk($id, array('record_order' => $id));
         } else {
-            $item = $this::model()->findByPk($id);
+            $item = $this->findByPk($id);
             $item->unit = $model->unit;
             $item->hot = $model->hot;
             $item->enable = $model->enable;
@@ -360,7 +360,7 @@ class Products extends CActiveRecord {
         } elseif ($data->getPost('delitems') == 'move') {
             $cat_move = $data->getPost('catmove');
             foreach ($result as $value) {
-                $this::model()->updateByPk($value['record_id'], array('hoiit_module_item_cat_cat_id' => $cat_move));
+                $this->updateByPk($value['record_id'], array('hoiit_module_item_cat_cat_id' => $cat_move));
             }
         }
         //move all sub cat to new cat parent

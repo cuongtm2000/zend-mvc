@@ -122,7 +122,7 @@ class Menus extends CActiveRecord {
             $criteria->condition = 'menu_activated=1';
         }
 
-        $this->_rows = $this::model()->findAll($criteria);
+        $this->_rows = $this->findAll($criteria);
         $this->_rowsize = count($this->_rows);
 
         foreach ($this->_rows as $key => $value) {
@@ -154,11 +154,11 @@ class Menus extends CActiveRecord {
         if ($syn) {
             $criteria = new CDbCriteria();
             $criteria->order = 'menu_sort ASC';
-            $models = $this::model()->findAll($criteria);
+            $models = $this->findAll($criteria);
 
             $i = 1;
             foreach ($models as $model) {
-                $this::model()->updateByPk($model['menu_id'], array('menu_sort' => $i));
+                $this->updateByPk($model['menu_id'], array('menu_sort' => $i));
                 $i++;
             }
         } else {
@@ -177,7 +177,7 @@ class Menus extends CActiveRecord {
                     foreach ($record_id as $value) {
                         $id = intval($value);
                         if ($id) {
-                            $this::model()->updateByPk($id, array('menu_activated' => $active));
+                            $this->updateByPk($id, array('menu_activated' => $active));
                         }
                     }
                 } else {
@@ -186,7 +186,7 @@ class Menus extends CActiveRecord {
                         $id = intval($value);
                         if ($id) {
                             MenusLanguage::model()->deleteRecord($id);
-                            $this::model()->deleteByPk($id);
+                            $this->deleteByPk($id);
                         }
                     }
                 }
@@ -242,7 +242,7 @@ class Menus extends CActiveRecord {
             $menu->save();
 
             $id = Yii::app()->db->getLastInsertId();
-            $this::model()->updateByPk($id, array('menu_sort' => $id));
+            $this->updateByPk($id, array('menu_sort' => $id));
         } else {
             $item = $this::model()->findByPk($id);
             $item->parent_id = $model->parent_id;
