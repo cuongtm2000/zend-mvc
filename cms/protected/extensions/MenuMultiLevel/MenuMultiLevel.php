@@ -69,7 +69,6 @@ class MenuMultiLevel extends Menu {
         $this->baseUrl = Yii::app()->getAssetManager()->publish($dir);
 
         $cs = Yii::app()->getClientScript();
-
         if ($this->jquery != 0) $cs->registerCoreScript('jquery');
         $cs->registerCssFile($this->baseUrl . '/dd-smooth-menu.css');
         $cs->registerCssFile($this->baseUrl . '/dd-smooth-menu-v.css');

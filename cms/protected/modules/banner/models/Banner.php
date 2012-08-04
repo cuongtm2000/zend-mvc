@@ -140,7 +140,6 @@ class Banner extends CActiveRecord {
                 $this->banner_picture = $this->_oldImage;
             }
         }
-
         return parent::beforeSave();
     }
 
@@ -155,6 +154,7 @@ class Banner extends CActiveRecord {
     public function listItemAdmin() {
         $criteria = new CDbCriteria();
         $criteria->order = 'banner_order DESC, banner_date DESC';
+        $criteria->condition = 'banner_type=\'banner\'';
         $count = $this::model()->count($criteria);
 
         $pages = new CPagination($count);
@@ -240,7 +240,7 @@ class Banner extends CActiveRecord {
 
     //Back end - Get record to Edit
     public function loadEdit($id) {
-        $this->_model = Banner::model()->findByPk($id);
+        $this->_model = $this::model()->findByPk($id);
 
         if ($this->_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');
