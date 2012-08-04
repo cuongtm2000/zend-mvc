@@ -42,14 +42,14 @@ class Logo extends CActiveRecord {
             if ($_FILES[__CLASS__]['name']['banner_picture']) {
                 Yii::import('ext.SimpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $item->banner_picture = $file->processUpload($_FILES[__CLASS__]['name']['banner_picture'], $_FILES[__CLASS__]['tmp_name']['banner_picture'], 123, 123, '/image/' . strtolower(__CLASS__), 'logo', $data['banner_picture']);
+                $item->banner_picture = $file->processUpload($_FILES[__CLASS__]['name']['banner_picture'], $_FILES[__CLASS__]['tmp_name']['banner_picture'], Config::getValue('logo_width'), Config::getValue('logo_height'), '/image/' . strtolower(__CLASS__), 'logo', $data['banner_picture']);
             }
             $item->save();
         } else {
             if ($_FILES[__CLASS__]['name']['banner_picture']) {
                 Yii::import('ext.SimpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $this->banner_picture = $file->processUpload($_FILES[__CLASS__]['name']['banner_picture'], $_FILES[__CLASS__]['tmp_name']['banner_picture'], 123, 123, '/image/' . strtolower(__CLASS__), 'logo');
+                $this->banner_picture = $file->processUpload($_FILES[__CLASS__]['name']['banner_picture'], $_FILES[__CLASS__]['tmp_name']['banner_picture'], Config::getValue('logo_width'), Config::getValue('logo_height'), '/image/' . strtolower(__CLASS__), 'logo');
             }
             $this->save();
         }
