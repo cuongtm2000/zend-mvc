@@ -107,7 +107,7 @@ class Config extends CActiveRecord {
 		$name = $data->getPost('name', '');
         $values = $data->getPost('value', '');
 		
-		$this::model()->deleteAll('hoiit_modules_module_id=:module', array(':module'=>$id));
+		$this->deleteAll('hoiit_modules_module_id=:module', array(':module'=>$id));
 		foreach ($name as $key => $value) {
 			$this->insertItem(trim($name[$key]), trim($values[$key]), $id);
 		}

@@ -111,7 +111,7 @@ class AboutLanguage extends CActiveRecord {
 
         if ($row) {
             //update hit view
-            $this::model()->updateCounters(array('hit' => 1, 'tag =:tag', ':tag' => $row['tag']));
+            $this->updateCounters(array('hit' => 1, 'tag =:tag', ':tag' => $row['tag']));
             return $row;
         }
     }
@@ -124,7 +124,7 @@ class AboutLanguage extends CActiveRecord {
         $row = $command->queryRow();
         if ($row) {
             //update hit view
-            $this::model()->updateCounters(array('hit' => 1, 'tag =:tag', ':tag' => $tag));
+            $this->updateCounters(array('hit' => 1, 'tag =:tag', ':tag' => $tag));
             return $row;
         }
     }

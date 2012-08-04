@@ -202,21 +202,21 @@ class Adv extends CActiveRecord {
     public function listItemAdmin() {
         $criteria = new CDbCriteria();
         $criteria->order = 'record_order DESC, create_date DESC';
-        $count = $this::model()->count($criteria);
+        $count = $this->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
         $pages->pageSize = 15;
         $pages->applyLimit($criteria);
 
-        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => $this->findAll($criteria), 'pages' => $pages);
     }
 
     //Back end - Delete Record
     private function deleteRecord($id) {
         $item = $this::model()->find('record_id=:id', array(':id' => $id));
         Common::removePic($item->pic_thumb, '/image/' . strtolower(__CLASS__)); // remove picture
-        $this::model()->findByPk($id)->delete(); //delete record_id
+        $this->findByPk($id)->delete(); //delete record_id
     }
 
     //Back end - Active Item
@@ -233,7 +233,7 @@ class Adv extends CActiveRecord {
                     $id = intval($id);
                     $order = intval($order);
                     if ($id && $order) {
-                        $this::model()->updateByPk($id, array('record_order' => $order));
+                        $this->updateByPk($id, array('record_order' => $order));
                     }
                 }
             }
@@ -241,11 +241,11 @@ class Adv extends CActiveRecord {
             $criteria = new CDbCriteria();
             $criteria->order = 'record_order ASC, create_date ASC';
 
-            $models = $this::model()->findAll($criteria);
+            $models = $this->findAll($criteria);
 
             $i = 1;
             foreach ($models as $model) {
-                $this::model()->updateByPk($model['record_id'], array('record_order' => $i));
+                $this->updateByPk($model['record_id'], array('record_order' => $i));
                 $i++;
             }
         } else {
@@ -264,7 +264,7 @@ class Adv extends CActiveRecord {
                     foreach ($record_id as $value) {
                         $id = intval($value);
                         if ($id) {
-                            $this::model()->updateByPk($id, array('enable' => $active));
+                            $this->updateByPk($id, array('enable' => $active));
                         }
                     }
                 } else {
@@ -288,7 +288,7 @@ class Adv extends CActiveRecord {
 
     //Back end - Get record to Edit
     public function loadEdit($id) {
-        $this->_model = $this::model()->findByPk($id);
+        $this->_model = $this->findByPk($id);
         if ($this->_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');
         }

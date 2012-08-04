@@ -128,7 +128,7 @@ class News extends CActiveRecord {
         $criteria = new CDbCriteria();
         $criteria->condition = 'enable=1';
 
-        $this->_model = $this->model()->findByPk($id, $criteria);
+        $this->_model = $this->findByPk($id, $criteria);
 
         if ($this->_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');
@@ -140,7 +140,7 @@ class News extends CActiveRecord {
         $criteria = new CDbCriteria();
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable = 1';
-        return array('item_first' => $this->model()->find($criteria), 'list_next' => $this->listNext());
+        return array('item_first' => $this->find($criteria), 'list_next' => $this->listNext());
     }
 
     private function listNext() {
@@ -149,7 +149,7 @@ class News extends CActiveRecord {
         $criteria->condition = 'enable = 1';
         $criteria->limit = 7;
         $criteria->offset = 1;
-        return $this->model()->findAll($criteria);
+        return $this->findAll($criteria);
     }
 
     public function listItemsNew() {
@@ -159,7 +159,7 @@ class News extends CActiveRecord {
         $criteria->condition = 'enable = 1';
         $criteria->limit = Config::getValue('news_num_item_new');
 
-        return $this->model()->findAll($criteria);
+        return $this->findAll($criteria);
     }
 
     public function listItemsHot() {
@@ -169,21 +169,21 @@ class News extends CActiveRecord {
         $criteria->condition = 'hot = 1 AND enable = 1';
         $criteria->limit = Config::getValue('news_num_item_hot');
 
-        return $this->model()->findAll($criteria);
+        return $this->findAll($criteria);
     }
 
     public function listItemsIndex() {
         $criteria = new CDbCriteria();
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable = 1';
-        $count = $this->model()->count($criteria);
+        $count = $this->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
         $pages->pageSize = Config::getValue('news_num_item_index');
         $pages->applyLimit($criteria);
 
-        return array('models' => $this->model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => $this->findAll($criteria), 'pages' => $pages);
     }
 
     //Front end - list Item by Cat
@@ -200,7 +200,7 @@ class News extends CActiveRecord {
         $pages->pageSize = Config::getValue('news_num_item_cat');
         $pages->applyLimit($criteria);
 
-        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => $this->findAll($criteria), 'pages' => $pages);
     }
 
     //Back end - List item admin
@@ -209,14 +209,14 @@ class News extends CActiveRecord {
         $criteria->with = array('Language', 'NewsLanguage');
         $criteria->order = 'record_order DESC, postdate DESC';
 
-        $count = $this::model()->count($criteria);
+        $count = $this->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
         $pages->pageSize = 15;
         $pages->applyLimit($criteria);
 
-        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => $this->findAll($criteria), 'pages' => $pages);
     }
 
     //Back end - Delete Record
@@ -225,7 +225,7 @@ class News extends CActiveRecord {
 
         $item = $this::model()->find('record_id=:id', array(':id' => $id));
         Common::removePic($item->pic_thumb, '/image/' . strtolower(__CLASS__)); // remove pic_thumb
-        $this::model()->findByPk($id)->delete(); //delete record_id
+        $this->findByPk($id)->delete(); //delete record_id
     }
 
     //Back end - Active Item
@@ -242,7 +242,7 @@ class News extends CActiveRecord {
                     $id = intval($id);
                     $order = intval($order);
                     if ($id && $order) {
-                        $this::model()->updateByPk($id, array('record_order' => $order));
+                        $this->updateByPk($id, array('record_order' => $order));
                     }
                 }
             }
@@ -250,11 +250,11 @@ class News extends CActiveRecord {
             $criteria = new CDbCriteria();
             $criteria->order = 'record_order ASC, postdate ASC';
 
-            $models = $this::model()->findAll($criteria);
+            $models = $this->findAll($criteria);
 
             $i = 1;
             foreach ($models as $model) {
-                $this::model()->updateByPk($model['record_id'], array('record_order' => $i));
+                $this->updateByPk($model['record_id'], array('record_order' => $i));
                 $i++;
             }
         } else {
@@ -273,7 +273,7 @@ class News extends CActiveRecord {
                     foreach ($record_id as $value) {
                         $id = intval($value);
                         if ($id) {
-                            $this::model()->updateByPk($id, array('enable' => $active));
+                            $this->updateByPk($id, array('enable' => $active));
                         }
                     }
                 } else {
@@ -303,7 +303,7 @@ class News extends CActiveRecord {
 
             $this->save();
             $id = $this->record_id;
-            $this::model()->updateByPk($id, array('record_order' => $id));
+            $this->updateByPk($id, array('record_order' => $id));
         } else {
             $item = $this::model()->findByPk($id);
             $item->hot = $model->hot;
@@ -360,7 +360,7 @@ class News extends CActiveRecord {
         } elseif ($data->getPost('delitems') == 'move') {
             $cat_move = $data->getPost('catmove');
             foreach ($result as $value) {
-                $this::model()->updateByPk($value['record_id'], array('hoiit_module_item_cat_cat_id' => $cat_move));
+                $this->updateByPk($value['record_id'], array('hoiit_module_item_cat_cat_id' => $cat_move));
             }
         }
         //move all sub cat to new cat parent
