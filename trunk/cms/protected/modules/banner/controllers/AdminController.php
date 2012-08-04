@@ -20,7 +20,8 @@ class AdminController extends BackEndController {
 
     public function actionAdd() {
         $model_class = ucfirst($this->module->id);
-        $model = new $model_class('add');
+        $model = new $model_class();
+        $model->scenario = 'add';
 
         if (isset($_POST[$model_class])) {
             $model->attributes = $_POST[$model_class];
@@ -39,7 +40,8 @@ class AdminController extends BackEndController {
         Yii::app()->clientScript->registerScript('', "$(function() { $('.nyroModal').nyroModal();});", CClientScript::POS_READY);
 
         $model_class = ucfirst($this->module->id);
-        $model = new $model_class('edit');
+        $model = new $model_class();
+        $model->scenario = 'edit';
         $model = $model->loadEdit($id); //load form models
 
         if (isset($_POST[$model_class])) {
@@ -59,5 +61,21 @@ class AdminController extends BackEndController {
             $this->refresh();
         }
         $this->render('config', array('items' => Config::model()->getNameValue($this->module->id)));
+    }
+
+    public function actionLogo() {
+        $model = new Logo();
+        $data = $model->getLogo();
+        $model->banner_picture = $data['banner_picture'];
+
+        if (isset($_POST['Logo'])) {
+            $model->attributes = $_POST['Logo'];
+            if ($model->validate()) {
+                $model->saveItem();
+                $this->redirect(array('logo'));
+            }
+        }
+
+        $this->render('logo', array('model' => $model));
     }
 }
