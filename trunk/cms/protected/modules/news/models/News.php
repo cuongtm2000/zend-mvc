@@ -128,7 +128,7 @@ class News extends CActiveRecord {
         $criteria = new CDbCriteria();
         $criteria->condition = 'enable=1';
 
-        $this->_model = $this::model()->findByPk($id, $criteria);
+        $this->_model = $this->model()->findByPk($id, $criteria);
 
         if ($this->_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');
@@ -140,7 +140,7 @@ class News extends CActiveRecord {
         $criteria = new CDbCriteria();
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable = 1';
-        return array('item_first' => $this::model()->find($criteria), 'list_next' => $this->listNext());
+        return array('item_first' => $this->model()->find($criteria), 'list_next' => $this->listNext());
     }
 
     private function listNext() {
@@ -149,7 +149,7 @@ class News extends CActiveRecord {
         $criteria->condition = 'enable = 1';
         $criteria->limit = 7;
         $criteria->offset = 1;
-        return $this::model()->findAll($criteria);
+        return $this->model()->findAll($criteria);
     }
 
     public function listItemsNew() {
@@ -159,7 +159,7 @@ class News extends CActiveRecord {
         $criteria->condition = 'enable = 1';
         $criteria->limit = Config::getValue('news_num_item_new');
 
-        return $this::model()->findAll($criteria);
+        return $this->model()->findAll($criteria);
     }
 
     public function listItemsHot() {
@@ -169,21 +169,21 @@ class News extends CActiveRecord {
         $criteria->condition = 'hot = 1 AND enable = 1';
         $criteria->limit = Config::getValue('news_num_item_hot');
 
-        return $this::model()->findAll($criteria);
+        return $this->model()->findAll($criteria);
     }
 
     public function listItemsIndex() {
         $criteria = new CDbCriteria();
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable = 1';
-        $count = $this::model()->count($criteria);
+        $count = $this->model()->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
         $pages->pageSize = Config::getValue('news_num_item_index');
         $pages->applyLimit($criteria);
 
-        return array('models' => $this::model()->findAll($criteria), 'pages' => $pages);
+        return array('models' => $this->model()->findAll($criteria), 'pages' => $pages);
     }
 
     //Front end - list Item by Cat
@@ -193,7 +193,7 @@ class News extends CActiveRecord {
         $criteria->condition = 'enable=1 AND hoiit_module_item_cat_cat_id=:cid';
         $criteria->params = array(':cid' => $cid);
 
-        $count = $this::model()->count($criteria);
+        $count = $this->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
