@@ -143,9 +143,8 @@ class Banner extends CActiveRecord {
         return parent::beforeSave();
     }
 
-    public function listItem($module, $type) {
-        $command = Yii::app()->db->createCommand('SELECT banner_name, banner_picture, banner_link FROM ' . $this->tableName() . ' WHERE banner_type=:type AND module_id=:module AND enable=1');
-        $command->bindParam(":type", $type, PDO::PARAM_STR);
+    public function listItem($module) {
+        $command = Yii::app()->db->createCommand('SELECT banner_name, banner_picture, banner_link FROM ' . $this->tableName() . ' WHERE banner_type=\'banner\' AND module_id=:module AND enable=1');
         $command->bindParam(":module", $module, PDO::PARAM_STR);
         return $command->queryAll();
     }

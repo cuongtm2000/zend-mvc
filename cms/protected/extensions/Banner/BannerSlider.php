@@ -10,7 +10,7 @@ class BannerSlider extends CWidget {
     }
 
     private function publishAssets() {
-        $items = isset(Yii::app()->controller->module->id) ? Banner::model()->listItem(Yii::app()->controller->module->id, 'banner') : null;
+        $items = isset(Yii::app()->controller->module->id) ? Banner::model()->listItem(Yii::app()->controller->module->id) : null;
         if ($items) {
             $this->registerClientScript();
 

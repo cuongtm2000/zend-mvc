@@ -1,6 +1,7 @@
 <?php
 
 class Logo extends CActiveRecord {
+    public $remove_picture;
 
     public static function model($className = __CLASS__) {
         return parent::model($className);
@@ -21,7 +22,8 @@ class Logo extends CActiveRecord {
         // will receive user inputs.
         return array(
             array('banner_picture', 'file', 'types' => 'gif,png,jpg,jpeg,icon', 'allowEmpty' => true, 'maxSize' => 1024 * 1024 * 5),
-            array('banner_picture', 'length', 'max' => 100)
+            array('banner_picture', 'length', 'max' => 100),
+            array('remove_picture', 'safe')
         );
     }
 
@@ -34,11 +36,18 @@ class Logo extends CActiveRecord {
         );
     }
 
-    public function saveItem() {
+    public function saveItem($model) {
         $data = $this->getLogo();
         if ($data) {
             //Edit
             $item = $this::model()->findByPk($data['banner_id']);
+
+            //remove pic_thumb
+            if (isset($model->remove_picture) && $model->remove_picture == 1) {
+                Common::removePic($item->banner_picture, '/image/' . strtolower(__CLASS__)); // remove pic_thumb
+                $item->banner_picture = null;
+            }
+
             if ($_FILES[__CLASS__]['name']['banner_picture']) {
                 Yii::import('ext.SimpleImage.CSimpleImage');
                 $file = new CSimpleImage();

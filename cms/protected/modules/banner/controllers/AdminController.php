@@ -71,7 +71,7 @@ class AdminController extends BackEndController {
         if (isset($_POST['Logo'])) {
             $model->attributes = $_POST['Logo'];
             if ($model->validate()) {
-                $model->saveItem();
+                $model->saveItem($model);
                 $this->redirect(array('logo'));
             }
         }
