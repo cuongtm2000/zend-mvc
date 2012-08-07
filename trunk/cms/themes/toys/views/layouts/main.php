@@ -22,11 +22,9 @@
 </head>
 <body>
 <div id="wrapper">
-    <div id="header">
-        <div id="logo"><a href="<?php echo Yii::app()->baseUrl.$this->setLangUrl()?>" title="Logo Yii Project"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo Yii Project" /></a></div><!--End left header-->
-        <?php if($this->setting['slogan']):?><h1 class="title-company"><?php echo CHtml::encode($this->setting['slogan'])?></h1><?php endif?>
-        <div class="clear"></div>	
-    </div><!--End header-->
+    <div id="logo"><?php $this->widget('ext.Logo.LogoStatic')?></div>
+    <?php if($this->setting['slogan']):?><h1 class="title-company"><?php echo CHtml::encode($this->setting['slogan'])?></h1><?php endif?>
+    <div class="clear"></div>
     <div class="top-header">
          <div class="lang">
 			<?php foreach($this->listLanguage as $key => $value):?>

@@ -52,13 +52,6 @@ class Controller extends CController {
             } else {
                 $data[$value['function_value']] = $this->widget('ext.' . $value['function_class'])->$value['function_call']();
             }
-            //($value['functiol_call']) ? $data[$value['function_value']] = $value['function_name']::model()->$value['functiol_call']() : null;
-            /*if (file_exists(Yii::app()->basePath . DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR . $value['hoiit_modules_module_id'] . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . $value['function_value'] . '.php')) {
-                $this->renderPartial('application.modules.' . $value['hoiit_modules_module_id'] . '.views.' . $value['function_value'], $data);
-            } else {
-                $this->renderPartial('//' . $value['hoiit_modules_module_id'] . '/' . $value['function_value'], $data);
-            }*/
-
             if (file_exists(dirname(Yii::app()->basePath) . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . Yii::app()->theme->name . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . $value['hoiit_modules_module_id'] . DIRECTORY_SEPARATOR . $value['function_value'] . '.php')) {
                 //If exist file in themes
                 $this->renderPartial('//' . $value['hoiit_modules_module_id'] . '/' . $value['function_value'], $data);
