@@ -14,11 +14,11 @@
 					<p><label for="ContactUserForm_fullname" class="required">Họ và tên <span class="required">*</span></label></p>		<input name="ContactUserForm[fullname]" id="ContactUserForm_fullname" type="text" />		</li>
 				<li>
 					<p><label for="ContactUserForm_company">Công ty</label></p>		<input name="ContactUserForm[company]" id="ContactUserForm_company" type="text" maxlength="60" />		</li>				
-				<li class="left-contact">
+				<li class="clear left-contact">
 					<p><label for="ContactUserForm_address" class="required">Địa chỉ <span class="required">*</span></label></p>			<input name="ContactUserForm[address]" id="ContactUserForm_address" type="text" />		</li>
 				<li>
 					<p><label for="ContactUserForm_email" class="required">Địa chỉ email <span class="required">*</span></label></p>			<input name="ContactUserForm[email]" id="ContactUserForm_email" type="text" />		</li>
-				<li  class="left-contact">
+				<li  class="clear left-contact">
 					<p><label for="ContactUserForm_phone" class="required">Số điện thoại <span class="required">*</span></label></p>			<input name="ContactUserForm[phone]" id="ContactUserForm_phone" type="text" />		</li>
 				<li class="clear">
 					<p><label for="ContactUserForm_content" class="required">Nội dung <span class="required">*</span></label></p>			<textarea cols="10" rows="10" name="ContactUserForm[content]" id="ContactUserForm_content"></textarea>		</li>
