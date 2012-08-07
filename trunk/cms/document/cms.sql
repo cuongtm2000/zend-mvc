@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 04, 2012 at 02:17 AM
+-- Generation Time: Aug 07, 2012 at 03:38 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -52,6 +52,8 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('adv_top_width', 222, NULL, 'adv'),
 ('banner_height', 275, NULL, 'banner'),
 ('banner_width', 520, NULL, 'banner'),
+('logo_height', 114, NULL, 'banner'),
+('logo_width', 403, NULL, 'banner'),
 ('news_cat_height_thumb', 200, NULL, 'news'),
 ('news_cat_width_thumb', 200, NULL, 'news'),
 ('news_height_thumb', 200, NULL, 'news'),
@@ -152,6 +154,8 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('cancel', 'Cancel', 1, 'en'),
 ('cancel', 'Hủy bỏ', 1, 'vi'),
 ('cat_title', 'Danh mục', 0, 'vi'),
+('contact', 'Contact', 0, 'en'),
+('contact', 'Liên hệ', 0, 'vi'),
 ('counter', 'Counter', 0, 'en'),
 ('counter', 'Thống kê truy cập', 0, 'vi'),
 ('create_date', 'Ngày tạo', 1, 'vi'),
@@ -221,6 +225,7 @@ INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_url`, `module_
 ('about', 'Danh sách|Cấu hình Url', 'about|about/url', 2, 1, 1),
 ('adv', 'Danh sách|Cấu hình', 'adv|adv/config', 5, 1, 0),
 ('banner', 'Danh sách Banner|Danh sách Logo|Cấu hình', 'banner|banner/logo|banner/config', 6, 1, 0),
+('contact', 'Danh sách', 'contact', 2, 1, 1),
 ('counter', 'Counter', NULL, 4, 0, 0),
 ('default', 'Default', NULL, 1, 1, 1),
 ('news', 'Danh mục|Danh sách|Cấu hình|Cấu hình Url', 'news/cat|news|news/config|news/url', 4, 1, 1),
@@ -279,10 +284,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
 --
 
 INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(46, 'en', 'Welcome english', '<p>asdas asa</p>', 'welcome-english', 'dasd', 254, NULL, NULL),
-(46, 'vi', 'Welcome to Yiiproject.com', '<p>Welcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to</p>\r\n<h3>Welcome to Yiiproject.com</h3>\r\n<p>Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.com</p>', 'welcome-to-yiiprojectcom', 'das', 254, NULL, NULL),
-(47, 'en', 'About', '<p>Con tnet</p>', 'about', 'dasdsadsads', 254, NULL, NULL),
-(47, 'vi', 'Gioi thieu', '<p>Noi dung</p>', 'gioi-thieu', 'asdasdsd', 254, NULL, NULL);
+(46, 'en', 'Welcome english', '<p>asdas asa</p>', 'welcome-english', 'dasd', 262, NULL, NULL),
+(46, 'vi', 'Welcome to Yiiproject.com', '<p>Welcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to</p>\r\n<h3>Welcome to Yiiproject.com</h3>\r\n<p>Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.com</p>', 'welcome-to-yiiprojectcom', 'das', 262, NULL, NULL),
+(47, 'en', 'About', '<p>Con tnet</p>', 'about', 'dasdsadsads', 262, NULL, NULL),
+(47, 'vi', 'Gioi thieu', '<p>Noi dung</p>', 'gioi-thieu', 'asdasdsd', 262, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -348,6 +353,55 @@ INSERT INTO `hoiit_module_banners` (`banner_id`, `banner_date`, `banner_name`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `hoiit_module_contacts`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_contacts` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `record_order` int(11) DEFAULT NULL,
+  `hot` tinyint(1) DEFAULT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`record_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `hoiit_module_contacts`
+--
+
+INSERT INTO `hoiit_module_contacts` (`record_id`, `created`, `record_order`, `hot`, `enable`) VALUES
+(2, '2012-08-07 01:08:47', 2, 0, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_contacts_languages`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_contacts_languages` (
+  `record_id` int(11) NOT NULL,
+  `language_id` varchar(2) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `content` text NOT NULL,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `hit` int(11) DEFAULT '0',
+  PRIMARY KEY (`record_id`,`language_id`),
+  KEY `fk_hoiit_module_contacts_has_hoiit_languages_hoiit_languages1` (`language_id`),
+  KEY `fk_hoiit_module_contacts_has_hoiit_languages_hoiit_module_con1` (`record_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_contacts_languages`
+--
+
+INSERT INTO `hoiit_module_contacts_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`) VALUES
+(2, 'en', 'sdddsds', '', 'sdddsds', 'sdds', 0),
+(2, 'vi', 'sddsds', '<p>dssdds</p>', 'sddsds', 'sdsd', 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `hoiit_module_menus`
 --
 
@@ -360,7 +414,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus` (
   `menu_homepage` tinyint(1) NOT NULL DEFAULT '0',
   `menu_activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=33 ;
 
 --
 -- Dumping data for table `hoiit_module_menus`
@@ -371,7 +425,8 @@ INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_type`, `menu_tar
 (28, 0, 1, '', 2, 0, 1),
 (29, 0, 1, '', 3, 0, 1),
 (30, 28, 0, '', 4, 0, 1),
-(31, 0, 1, '', 5, 0, 1);
+(31, 0, 1, '', 5, 0, 1),
+(32, 0, 1, '', 32, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -404,7 +459,9 @@ INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name
 (30, 'en', '', '', ''),
 (30, 'vi', 'Sub', 'gioi-thieu/welcome-to-yiiprojectcom.html', ''),
 (31, 'en', '', 'news', 'dasdsadsad'),
-(31, 'vi', 'Tin tức & sự kiện', 'tin-tuc', 'Co mo ta tin tuc');
+(31, 'vi', 'Tin tức & sự kiện', 'tin-tuc', 'Co mo ta tin tuc'),
+(32, 'en', '', '', ''),
+(32, 'vi', 'Liên hệ', 'lien-he', '');
 
 -- --------------------------------------------------------
 
@@ -551,9 +608,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_save` (
 --
 
 INSERT INTO `hoiit_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456143),
+('day_time', 2456147),
 ('max_count', 1),
-('counter', 2),
+('counter', 5),
 ('yesterday', 1);
 
 -- --------------------------------------------------------
@@ -572,7 +629,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''::1''', 1343995629);
+('''::1''', 1344303492);
 
 -- --------------------------------------------------------
 
@@ -771,7 +828,9 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('left', 8, '1', 'default', NULL, NULL, 'adv_left'),
 ('right', 9, '1', 'default', NULL, NULL, 'news_hot'),
 ('right', 10, '1', 'default', NULL, NULL, 'news_new'),
-('right', 11, '1', 'default', NULL, NULL, 'adv_right');
+('right', 11, '1', 'default', NULL, NULL, 'adv_right'),
+('right', 1, '1', 'contact', NULL, NULL, 'adv_right'),
+('left', 2, '1', 'contact', NULL, NULL, 'list_support');
 
 -- --------------------------------------------------------
 
@@ -853,6 +912,7 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('gioi-thieu', 'about/default/index', '', 2, 1, 'about', 'vi'),
 ('gioi-thieu/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 1, 0, 'about', 'vi'),
 ('home-page', 'default/default/index', NULL, NULL, 1, 'default', 'en'),
+('lien-he', 'contact/default/index', '', 1, 1, 'contact', 'vi'),
 ('news', 'news/default/index', '', 4, 1, 'news', 'en'),
 ('san-pham', 'products/default/index', '', 3, 1, 'products', 'vi'),
 ('san-pham/<cid:[-a-z0-9]+>', 'products/default/cats', '', 2, 0, 'products', 'vi'),
@@ -921,6 +981,13 @@ ALTER TABLE `hoiit_langs`
 ALTER TABLE `hoiit_module_about_languages`
   ADD CONSTRAINT `fk_hoiit_about_has_hoiit_languages_hoiit_about1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_about` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_hoiit_about_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `hoiit_module_contacts_languages`
+--
+ALTER TABLE `hoiit_module_contacts_languages`
+  ADD CONSTRAINT `fk_hoiit_module_contacts_has_hoiit_languages_hoiit_module_con1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_contacts` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_hoiit_module_contacts_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `hoiit_module_menus_languages`
