@@ -2,27 +2,32 @@
 
 class DefaultController extends Controller {
     public function actionIndex() {
-		$this->layout = '//layouts/column-2';
-	
-        $model = ucfirst($this->module->id);
+        $this->layout = '//layouts/column-2';
 
-        $contact = new ContactUserForm(); //contact user form
+        $model = new ContactUserForm();
         if (isset($_POST['ContactUserForm'])) {
-            $contact->attributes = $_POST['ContactUserForm'];
-            if ($contact->validate()) {
-                /*$username_class = new Username;
-                $username = $username_class->infoUser('user');
+            $model->attributes = $_POST['ContactUserForm'];
+            if ($model->validate()) {
+                $send_type = Config::getValue('contact_send_mail_smtp');
+                $contact_email_received = Config::getValue('contact_email_received');
 
-                Yii::import('application.extensions.phpmailer.JPhpMailer');
-                $mail = new JPhpMailer;
-                $html = 'Chào <b>' . $username['fullname'] . '</b>!<br /><br />Cảm ơn bạn đã sử dụng dịch vụ công ty chúng tôi. Dưới đây là thông tin Khách hàng liên hệ từ website <b>http://' . $_SERVER['HTTP_HOST'] . '</b><br /><br/><b>Fullname</b>: ' . $contact->fullname . '<br /><b>Company</b>: ' . $contact->company . '<br /><b>Address</b>: ' . $contact->address . '<br /><b>Phone</b>: ' . $contact->phone . '<br /><b>Email</b>: ' . $contact->email . '<br /><b>Content</b>: ' . nl2br($contact->content).'<br /><br />--<br/>Dos.vn';
-                $mail->sendMailSmtp('sender@dos.vn', $username['email'], 'Dos.vn', $username['fullname'], 'Liên hệ từ web: ' . ucfirst($_SERVER['HTTP_HOST']), $html, 1, $contact->email, $contact->fullname);
-                  */
+                if ($send_type == 1) {
+                    $contact_username = Config::getValue('contact_username');
+
+                    Yii::import('ext.Phpmailer.JPhpMailer');
+                    $mail = new JPhpMailer;
+                    $html = 'Hi <b>' . $_SERVER['HTTP_HOST'] . '</b>!<br /><br />Below is contact information from website customers <b>http://' . $_SERVER['HTTP_HOST'] . '</b><br /><br/><b>Fullname</b>: ' . $model->fullname . '<br /><b>Company</b>: ' . $model->company . '<br /><b>Address</b>: ' . $model->address . '<br /><b>Phone</b>: ' . $model->phone . '<br /><b>Email</b>: ' . $model->email . '<br /><b>Content</b>: ' . nl2br($model->content) . '<br /><br />--<br/>YiiProject.com';
+                    $mail->sendMailSmtp($contact_username, $contact_email_received, $_SERVER['HTTP_HOST'], 'Name to', 'Contact from ' . $_SERVER['HTTP_HOST'] . ' website', $html, 1, $model->email, $model->fullname);
+                } else {
+                    $headers = "From: {$model->email}\r\nReply-To: {$model->email}";
+                    mail($contact_email_received, 'Contact from ' . $_SERVER['HTTP_HOST'] . ' website', $model->content, $headers);
+                }
+
                 Yii::app()->user->setFlash('contactSuccess', 'Thank you for contacting us. We will respond to you as soon as possible.');
                 $this->refresh();
             }
         }
 
-        $this->render('index', array('item' => $model::model()->firstItem(), 'model' => $contact));
+        $this->render('index', array('item' => Contact::model()->firstItem(), 'model' => $model));
     }
 }

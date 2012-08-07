@@ -7,9 +7,9 @@ return array(
         'application.modules.' . $module_name . '.models.*',
     ),
 
-    'modules' => array(
+    /*'modules' => array(
         $module_name => array(
             //'defaultController' => $default_controller,
         ),
-    ),
+    ),*/
 );
