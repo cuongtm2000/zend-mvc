@@ -5,7 +5,7 @@
  *
  * The followings are the available columns in table 'hoiit_configs':
  * @property string $config_name
- * @property integer $config_value
+ * @property string $config_value
  * @property string $config_desc
  * @property string $hoiit_modules_module_id
  *
@@ -37,8 +37,8 @@ class Config extends CActiveRecord {
         // will receive user inputs.
         return array(
             array('config_name, config_value, hoiit_modules_module_id', 'required'),
-            array('config_value', 'numerical', 'integerOnly' => true),
             array('config_name, hoiit_modules_module_id', 'length', 'max' => 30),
+            array('config_value', 'length', 'max' => 45),
             array('config_desc', 'length', 'max' => 100),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
@@ -53,7 +53,7 @@ class Config extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            //'hoiitModulesModule' => array(self::BELONGS_TO, 'HoiitModules', 'hoiit_modules_module_id'),
+            'hoiitModulesModule' => array(self::BELONGS_TO, 'HoiitModules', 'hoiit_modules_module_id'),
         );
     }
 
@@ -80,7 +80,7 @@ class Config extends CActiveRecord {
         $criteria = new CDbCriteria;
 
         $criteria->compare('config_name', $this->config_name, true);
-        $criteria->compare('config_value', $this->config_value);
+        $criteria->compare('config_value', $this->config_value, true);
         $criteria->compare('config_desc', $this->config_desc, true);
         $criteria->compare('hoiit_modules_module_id', $this->hoiit_modules_module_id, true);
 
@@ -94,26 +94,26 @@ class Config extends CActiveRecord {
         $command->bindParam(":value", $name, PDO::PARAM_STR);
         return $command->queryScalar();
     }
-	
-	//Back end - config_name, config_value By module_id
-	public function getNameValue($module_id) {
-        $command = Yii::app()->db->createCommand('SELECT config_name, config_value, config_desc FROM '. $this->tableName().' WHERE hoiit_modules_module_id =:module_id');
+
+    //Back end - config_name, config_value By module_id
+    public function getNameValue($module_id) {
+        $command = Yii::app()->db->createCommand('SELECT config_name, config_value, config_desc FROM ' . $this->tableName() . ' WHERE hoiit_modules_module_id =:module_id');
         $command->bindParam(":module_id", $module_id, PDO::PARAM_STR);
         return $command->queryAll();
     }
-	
-	//Back end - Add item
-	public function addItem($id, $data){
-		$name = $data->getPost('name', '');
+
+    //Back end - Add item
+    public function addItem($id, $data) {
+        $name = $data->getPost('name', '');
         $values = $data->getPost('value', '');
-		
-		$this->deleteAll('hoiit_modules_module_id=:module', array(':module'=>$id));
-		foreach ($name as $key => $value) {
-			$this->insertItem(trim($name[$key]), trim($values[$key]), $id);
-		}
-	}
-	
-	//Back end - insert item
+
+        $this->deleteAll('hoiit_modules_module_id=:module', array(':module' => $id));
+        foreach ($name as $key => $value) {
+            $this->insertItem(trim($name[$key]), trim($values[$key]), $id);
+        }
+    }
+
+    //Back end - insert item
     private function insertItem($config_name, $config_value, $module_id) {
         $command = Yii::app()->db->createCommand('INSERT INTO ' . $this->tableName() . ' (config_name, config_value, hoiit_modules_module_id) VALUES (:config_name, :config_value, :module_id)');
         $command->bindParam(":config_name", $config_name, PDO::PARAM_STR);
