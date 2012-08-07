@@ -1,6 +1,7 @@
 <?php
 
 class Controller extends CController {
+    //public $layout = '//layouts/column-default';
     public $menu = array();
     public $breadcrumbs = array();
 
@@ -12,6 +13,7 @@ class Controller extends CController {
 
     public function init() {
         Yii::app()->theme = Template::model()->getTemplateDefault(); //Setup template
+        $this->layout = '//layouts/column-default';
 
         $this->setting = Setting::model()->getSetting(); //Get Setting: title, keywords...
         $this->listLanguage = Language::model()->listLanguage(); //Get list language: vi, en

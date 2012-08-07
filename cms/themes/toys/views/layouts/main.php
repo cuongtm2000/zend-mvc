@@ -20,7 +20,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/ie6.css" />
 	<![endif]-->
 </head>
-<body>               <?php var_dump(Yii::app())?>
+<body>
 <div id="wrapper">
     <div id="header">
         <div id="logo"><a href="<?php echo Yii::app()->baseUrl.$this->setLangUrl()?>" title="Logo Yii Project"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo Yii Project" /></a></div><!--End left header-->
@@ -43,20 +43,7 @@
         	<div id="leftcontent">
                 <?php $this->getPosition('left');?>
             </div><!--End left content-->
-            <div id="rightcontent">
-                <?php $this->widget('ext.Banner.BannerSlider');?>
-                <?php $this->widget('zii.widgets.CBreadcrumbs', array(
-                    'homeLink' => CHtml::link($this->lang['default'], Yii::app()->baseUrl.$this->setLangUrl(), array('title' => $this->lang['default'])),
-                    'links'=>$this->breadcrumbs,
-                    //'htmlOptions'=>array('class'=>'link'),
-                    //'separator'=>' <img src="'.Yii::app()->theme->baseUrl.'/images/bull.jpg" alt="Bull" title="Bull" />',
-                )); ?>
-                <?php echo $content; ?>
-                <?php $this->getPosition('center');?>
-            </div><!--End right content--> 
-            <div id="colum3">
-                <?php $this->getPosition('right');?>				
-            </div> <!--End colum3--> <div class="clear"></div>
+            <?php echo $content; ?> <div class="clear"></div>
         </div><!--End content-->
 	</div> <!--End main-content-->
     <div class="panel-fter">

@@ -10,3 +10,5 @@ Luu y: Neu dat view trong theme thi dung trong theme, nguoc lai thi dung trong v
 
 Request:
 	1. Di chuyen enable vao module_about
+
+//layouts/main dung layout trong theme
