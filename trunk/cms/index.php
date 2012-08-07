@@ -1,5 +1,4 @@
 <?php
-
 // change the following paths if necessary
 set_include_path(implode(PATH_SEPARATOR, array(dirname(__FILE__) . '/framework', get_include_path(),)));
 $yii = 'framework/yii.php';

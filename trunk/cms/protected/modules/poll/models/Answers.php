@@ -100,7 +100,6 @@ class Answers extends CActiveRecord {
 
     public function getAnswer($vid) {
         $r = $this->findAll('vote_id= ' . $vid);
-     //   var
         $tmp = null;
         if (count($r)) {
             foreach ($r as $value) {
@@ -112,4 +111,10 @@ class Answers extends CActiveRecord {
         return $tmp;
     }
 
+    public function updateVote($vid, $id) {
+        $command = Yii::app()->db->createCommand("UPDATE `" . $this->tableName() . "` SET `num_vote` = `num_vote`+1 WHERE `id` = :id and `vote_id` = :vid");
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        $command->bindParam(":vid", $vid, PDO::PARAM_INT);
+        $command->query();
+    }
 }
