@@ -6,7 +6,7 @@
     <?php foreach($this->listLanguage as $key => $lang):?>
     <div class="col1"><?php echo $form->labelEx($model, 'title'.$key) ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'title'.$key, $htmlOptions=array('class'=>'txt-very-large')); ?>
+        <?php echo $form->textField($model, 'title'.$key, array('class'=>'txt-very-large')); ?>
     </div>
     <div class="clear space"></div>
     <?php endforeach; ?>

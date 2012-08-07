@@ -12,15 +12,12 @@
  * @property string $template_web
  * @property integer $template_admin
  * @property integer $template_activated
- *
- * The followings are the available model relations:
- * @property HoiitSettings[] $hoiitSettings
  */
-class Template extends CActiveRecord {
+class Templates extends CActiveRecord {
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
-     * @return Template the static model class
+     * @return Templates the static model class
      */
     public static function model($className = __CLASS__) {
         return parent::model($className);
@@ -58,7 +55,6 @@ class Template extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            //'hoiitSettings' => array(self::HAS_MANY, 'HoiitSettings', 'hoiit_templates_template_id'),
         );
     }
 
@@ -102,11 +98,40 @@ class Template extends CActiveRecord {
         ));
     }
 
-    public function getTemplateDefault($admin=0) {
+    public function beforeSave() {
+        $this->updateAll(array('template_activated' => 0, 'template_admin=0')); //updat all record before active template
+        if ($this->isNewRecord) {
+
+        } else {
+
+        }
+        return parent::beforeSave();
+    }
+
+    public function getTemplateDefault($admin = 0) {
         $command = Yii::app()->db->createCommand('SELECT template_id FROM ' . $this->tableName() . ' WHERE template_admin=0 AND template_activated=1');
-        if($admin==1){
+        if ($admin == 1) {
             $command = Yii::app()->db->createCommand('SELECT template_id FROM ' . $this->tableName() . ' WHERE template_admin=1 AND template_activated=1');
         }
         return $command->queryScalar();
+    }
+
+    //Back end - List item admin
+    public function listItemAdmin() {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'template_date DESC';
+        $count = $this->count($criteria);
+
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = 15;
+        $pages->applyLimit($criteria);
+
+        return array('models' => $this->findAll($criteria), 'pages' => $pages);
+    }
+
+    //Back end - Get record to Edit
+    public function loadEdit($id) {
+        return $this->findByPk($id);
     }
 }

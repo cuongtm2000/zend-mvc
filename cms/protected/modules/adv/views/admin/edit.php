@@ -1,4 +1,3 @@
-
 <?php $form = $this->beginWidget('CActiveForm', array('id'=>'frm', 'enableAjaxValidation'=>true, 'enableClientValidation' =>true, 'htmlOptions'=>array('enctype' =>'multipart/form-data')));?>
     <?php echo $form->errorSummary($model, ''); ?>
     <fieldset>
@@ -6,13 +5,13 @@
 
         <div class="col1"><?php echo $form->labelEx($model, 'title') ?></div>
         <div class="col2">
-            <?php echo $form->textField($model, 'title', $htmlOptions=array('class'=>'txt-very-large')); ?>
+            <?php echo $form->textField($model, 'title', array('class'=>'txt-very-large')); ?>
         </div>
         <div class="clear space"></div>
 
         <div class="col1"><?php echo $form->labelEx($model, 'url') ?></div>
         <div class="col2">
-            <?php echo $form->textField($model, 'url', $htmlOptions=array('class'=>'txt-very-large')); ?>
+            <?php echo $form->textField($model, 'url', array('class'=>'txt-very-large')); ?>
         </div>
         <div class="clear space"></div>
 
@@ -40,19 +39,19 @@
 
         <div class="col1"><?php echo $form->labelEx($model, 'start_date', array('for' => 'start_date')) ?></div>
         <div class="col2">
-            <?php $model->start_date = date("d-m-Y",strtotime($model->start_date )); echo $form->textField($model, 'start_date', $htmlOptions=array('class'=>'txt-very-large', 'id'=>'start_date')); ?>
+            <?php $model->start_date = date("d-m-Y",strtotime($model->start_date )); echo $form->textField($model, 'start_date', array('class'=>'txt-very-large', 'id'=>'start_date')); ?>
             <span class="readme">(dd-mm-YYYY)</span>
         </div>
         <div class="clear space"></div>
 
         <div class="col1"><?php echo $form->labelEx($model, 'end_date', array('for' => 'end_date')) ?></div>
         <div class="col2">
-            <?php $model->end_date = date("d-m-Y",strtotime($model->end_date )); echo $form->textField($model, 'end_date', $htmlOptions=array('class'=>'txt-very-large', 'id'=>'end_date')); ?>
+            <?php $model->end_date = date("d-m-Y",strtotime($model->end_date )); echo $form->textField($model, 'end_date', array('class'=>'txt-very-large', 'id'=>'end_date')); ?>
             <span class="readme">(dd-mm-YYYY)</span>
         </div>
         <div class="clear space"></div>
 
-        <div class="col1"><?php echo $form->labelEx($model, 'enable', $htmlOptions=array('for'=>get_class($model).'_enable_0')) ?></div>
+        <div class="col1"><?php echo $form->labelEx($model, 'enable', array('for'=>get_class($model).'_enable_0')) ?></div>
         <div class="col2 radio">
             <?php echo $form->radioButtonList($model, 'enable', array('1'=>'Hiển thị', '0'=>'Ẩn'), array('separator'=>'&nbsp;&nbsp;')); ?>
         </div>

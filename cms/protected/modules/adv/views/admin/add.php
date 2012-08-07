@@ -5,13 +5,13 @@
 
     <div class="col1"><?php echo $form->labelEx($model, 'title') ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'title', $htmlOptions=array('class'=>'txt-very-large')); ?>
+        <?php echo $form->textField($model, 'title', array('class'=>'txt-very-large')); ?>
     </div>
     <div class="clear space"></div>
 
     <div class="col1"><?php echo $form->labelEx($model, 'url') ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'url', $htmlOptions=array('class'=>'txt-very-large')); ?>
+        <?php echo $form->textField($model, 'url', array('class'=>'txt-very-large')); ?>
     </div>
     <div class="clear space"></div>
 
@@ -35,19 +35,19 @@
 
     <div class="col1"><?php echo $form->labelEx($model, 'start_date', array('for' => 'start_date')) ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'start_date', $htmlOptions=array('class'=>'txt-very-large', 'id'=>'start_date')); ?>
+        <?php echo $form->textField($model, 'start_date', array('class'=>'txt-very-large', 'id'=>'start_date')); ?>
         <span class="readme">(dd-mm-YYYY)</span>
     </div>
     <div class="clear space"></div>
 
     <div class="col1"><?php echo $form->labelEx($model, 'end_date', array('for' => 'end_date')) ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'end_date', $htmlOptions=array('class'=>'txt-very-large', 'id'=>'end_date')); ?>
+        <?php echo $form->textField($model, 'end_date', array('class'=>'txt-very-large', 'id'=>'end_date')); ?>
         <span class="readme">(dd-mm-YYYY)</span>
     </div>
     <div class="clear space"></div>
 
-    <div class="col1"><?php echo $form->labelEx($model, 'enable', $htmlOptions=array('for'=>get_class($model).'_enable_0')) ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'enable', array('for'=>get_class($model).'_enable_0')) ?></div>
         <div class="col2 radio">
         <?php echo $form->radioButtonList($model, 'enable', array('1'=>$this->lang['show'], '0'=>$this->lang['hidden']), array('separator'=>'&nbsp;&nbsp;')); ?>
         </div>
@@ -56,7 +56,7 @@
     <div class="col1">&nbsp;</div>
 	<div class="col2">
 		<?php echo CHtml::submitButton($this->lang['add_new'], array('name'=>'submit', 'class'=>'login', 'title'=>$this->lang['add_new'])); ?>
-		<?php echo Chtml::link($this->lang['cancel'], 'javascript:history.back()', $htmlOptions=array('class'=>'login-a', 'title'=>$this->lang['cancel'])) ?>
+		<?php echo Chtml::link($this->lang['cancel'], 'javascript:history.back()', array('class'=>'login-a', 'title'=>$this->lang['cancel'])) ?>
 	</div>
 	<div class="clear space"></div>
 </fieldset>
