@@ -151,14 +151,14 @@ ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a,
 ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{background:#3EA0B9}
 
 /** Form lien he  **/
-#frm{margin:0 0 10px 0;}
-.frame-contact label{color:#555;margin:0;font-weight:bold; width:130px; float:left}
+#frm{margin:0 0 10px 0}
+.frame-contact label{color:#555;margin:0;font-weight:bold}
 .frame-contact{list-style:none;margin:15px 0 10px 0}
 .frame-contact li{padding:4px 0; margin:0 !important}
-.frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.frame-contact input{ margin:0 20px 0 0; padding:3px;width:250px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
 .frame-contact textarea{border:1px solid #ddd;width: 350px; -moz-border-radius: 3px; -webkit-border-radius:3px}
 .frame-contact span{color:#f00;margin:0 5px 0 0;}
-
+.left-contact{float:left;width:300px}
 .frame-contact .bton-dk{margin:10px 0 5px 30px;background:#9FBD43;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
 .frame-contact .bton-dk{margin:10px 10px 5px 0}
 /****  End page contact     *****/
