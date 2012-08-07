@@ -112,6 +112,9 @@ class Poll extends CActiveRecord {
         $criteria->params = array(':time' => time());
         return $this->model()->find($criteria);
     }
+    public function getDetail($id) {
+        return $this->model()->findByPk($id);
+    }
 
     //Back end - List item admin
     public function listItemAdmin() {

@@ -216,3 +216,11 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .sub-polls li input{margin:0 5px 0 0} .sub-polls li label{font-weight:bold}
 .button_polls{background:url(../images/bkg_btn.png) no-repeat right;border:none;padding:5px 12px;color:#fff;font-weight:bold;cursor:pointer}
 .f-action a{color:#B6150D;font-weight:bold}
+
+
+.graph{    width:100%;    position:relative;    right:1%}
+.bar-title{    position:relative;    float:left;    width:50%;    line-height:20px;    margin-right:17px;    font-weight:bold;    text-align:right}
+.bar-container{    position:relative;    float:left;    width:40%;    height:10px;    margin:0 0 15px}
+.bar-container div{    background-color:#c40;height:20px}
+.bar-container strong{    position:absolute;    right:-32px;top:0;    overflow:hidden}
+#poll-results p{    text-align:center;    clear:both}
