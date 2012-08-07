@@ -17,7 +17,7 @@ class ContactUserForm extends CFormModel {
         );
     }
 
-    public function attributeLabels() {
+    /*public function attributeLabels() {
         return array(
             'fullname' => Yii::t('user', 'fullname'),
             'company' => Yii::t('user', 'company'),
@@ -26,6 +26,6 @@ class ContactUserForm extends CFormModel {
             'phone' => Yii::t('user', 'phone'),
             'content' => Yii::t('user', 'content'),
         );
-    }
+    }*/
 
 }
