@@ -11,7 +11,7 @@ class ContactUserForm extends CFormModel {
 
     public function rules() {
         return array(
-            array('fullname, address, phone, email, content', 'required'),
+            array('fullname, email, content', 'required'),
             array('email', 'email'),
             array('content', 'length', 'min' => 10),
         );

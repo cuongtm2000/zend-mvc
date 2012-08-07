@@ -2,29 +2,45 @@
 <?php $this->pageTitle = $this->lang[$this->module->id]; $this->setDescription($item['description'])?>
 
 <div class="frame-panel">
-	<h4 class="title-right"><span><?php echo $item['title']?></span></h4>
-	<div class="frame-tent-right"><?php echo $item['content']?>
-		<form id="frm" action="/lien-he" method="post">	
-			<div id="frm_es_" class="errorSummary" style="display:none">
-				<ul><li>dummy</li></ul>
-			</div>	
-			<p>Quý khách có thể liên hệ với chúng tôi bằng cách điền đầy đủ thông tin vào mẫu sau:</p>
-			<ul class="frame-contact">
-				<li class="left-contact">
-					<p><label for="ContactUserForm_fullname" class="required">Họ và tên <span class="required">*</span></label></p>		<input name="ContactUserForm[fullname]" id="ContactUserForm_fullname" type="text" />		</li>
-				<li>
-					<p><label for="ContactUserForm_company">Công ty</label></p>		<input name="ContactUserForm[company]" id="ContactUserForm_company" type="text" maxlength="60" />		</li>				
-				<li class="clear left-contact">
-					<p><label for="ContactUserForm_address" class="required">Địa chỉ <span class="required">*</span></label></p>			<input name="ContactUserForm[address]" id="ContactUserForm_address" type="text" />		</li>
-				<li>
-					<p><label for="ContactUserForm_email" class="required">Địa chỉ email <span class="required">*</span></label></p>			<input name="ContactUserForm[email]" id="ContactUserForm_email" type="text" />		</li>
-				<li  class="clear left-contact">
-					<p><label for="ContactUserForm_phone" class="required">Số điện thoại <span class="required">*</span></label></p>			<input name="ContactUserForm[phone]" id="ContactUserForm_phone" type="text" />		</li>
-				<li class="clear">
-					<p><label for="ContactUserForm_content" class="required">Nội dung <span class="required">*</span></label></p>			<textarea cols="10" rows="10" name="ContactUserForm[content]" id="ContactUserForm_content"></textarea>		</li>
-				<li>
-					<input name="submit" class="bton-dk" title="Gửi" type="submit" value="Gửi" />			<input name="reset" class="bton-dk" title="Nhập lại" type="reset" value="Nhập lại" />		</li>
-			</ul>
-		</form>
-	</div>
+    <?php if(Yii::app()->user->hasFlash('contactSuccess')): ?>
+        <h4 class="title-right"><span>Contact success</span></h4>
+        <p><?php echo Yii::app()->user->getFlash('contactSuccess'); ?></p>
+    <?php else: ?>
+        <h4 class="title-right"><span><?php echo $item['title']?></span></h4>
+        <div class="frame-tent-right"><?php echo $item['content']?>
+            <?php $form = $this->beginWidget('CActiveForm', array('id'=>'frm', 'enableAjaxValidation'=>true, 'enableClientValidation' =>true));?>
+                <?php echo $form->errorSummary($model, ''); ?>
+                <p>Quý khách có thể liên hệ với chúng tôi bằng cách điền đầy đủ thông tin vào mẫu sau:</p>
+                <ul class="frame-contact">
+                    <li class="left-contact">
+                        <p><?php echo $form->labelEx($model, 'fullname') ?></p>
+                        <?php echo $form->textField($model, 'fullname'); ?>
+                    </li>
+                    <li>
+                        <p><?php echo $form->labelEx($model, 'company') ?></p>
+                        <?php echo $form->textField($model, 'company'); ?>
+                    </li>
+                    <li class="clear left-contact">
+                        <p><?php echo $form->labelEx($model, 'address') ?></p>
+                        <?php echo $form->textField($model, 'address'); ?>
+                    </li>
+                    <li>
+                        <p><?php echo $form->labelEx($model, 'email') ?></p>
+                        <?php echo $form->textField($model, 'email'); ?>
+                    </li>
+                    <li  class="clear left-contact">
+                        <p><?php echo $form->labelEx($model, 'phone') ?></p>
+                        <?php echo $form->textField($model, 'phone'); ?>
+                    </li>
+                    <li class="clear">
+                        <p><?php echo $form->labelEx($model, 'content') ?></p>
+                        <?php echo $form->textArea($model, 'content', array('cols'=>20, 'rows'=>7)); ?></li>
+                    <li>
+                        <?php echo CHtml::submitButton(Yii::t('main', 'send'), array('name'=>'submit', 'class'=>'button-submit', 'title'=>Yii::t('main', 'send'))); ?>
+                        <?php echo CHtml::resetButton(Yii::t('main', 'reset'), array('name'=>'reset', 'class'=>'button-submit', 'title'=>Yii::t('main', 'reset'))); ?>
+                    </li>
+                </ul>
+            <?php $this->endWidget();?>
+        </div>
+    <?php endif?>
 </div>
