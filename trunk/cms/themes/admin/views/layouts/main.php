@@ -49,6 +49,11 @@
                 array('label'=>'Lists', 'url'=>array('/admin/menus/index'))
             )
         ),
+        array('label'=>'Templates', 'url'=>array('/admin/templates'),
+            'items'=>array(
+                array('label'=>'Lists', 'url'=>array('/admin/templates/index'))
+            )
+        )
     ),
 )); ?> <div class="clear"></div>
 <div class="paddinglr10">

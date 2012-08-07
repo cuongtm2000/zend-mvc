@@ -6,7 +6,7 @@
     <?php foreach($this->listLanguage as $key => $lang):?>
     <div class="col1"><?php echo $form->labelEx($model, 'title'.$key) ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'title'.$key, $htmlOptions=array('class'=>'txt-very-large')); ?>
+        <?php echo $form->textField($model, 'title'.$key, array('class'=>'txt-very-large')); ?>
 		<!-- <a class='west' href='' title='Hôm nay là 1 ngày gần chuẩn bị dinh cô '><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/mark.png"  alt="Mark" /></a> -->
     </div>
     <div class="clear space"></div>

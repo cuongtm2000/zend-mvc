@@ -12,7 +12,7 @@ class Controller extends CController {
     public $description;
 
     public function init() {
-        Yii::app()->theme = Template::model()->getTemplateDefault(); //Setup template
+        Yii::app()->theme = Templates::model()->getTemplateDefault(); //Setup template
         $this->layout = '//layouts/column-default';
 
         $this->setting = Setting::model()->getSetting(); //Get Setting: title, keywords...
