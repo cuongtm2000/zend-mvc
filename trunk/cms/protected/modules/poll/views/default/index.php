@@ -11,7 +11,8 @@ if ($item):
     }
     if ($sum == 0)
         $sum = -1;
-    ?>
+?>
+<div class="frame-panel">
     <?php if ($time_remain == -1): ?>
         <p style="color: #0000ff;padding-top:10px"><strong>Hệ thống đã ghi nhận bình chọn của bạn.</strong></p>
     <?php elseif ($time_remain > 0): ?>
@@ -78,6 +79,7 @@ if ($item):
         }
         //]]>
     </script>
+</div>	
 <?php endif; ?>
 
 
