@@ -43,7 +43,6 @@ class NewsLanguage extends CActiveRecord {
             array('record_id, hit', 'numerical', 'integerOnly' => true),
             array('language_id', 'length', 'max' => 2),
             array('title, tag, extra_field1, extra_field2', 'length', 'max' => 100),
-            array('content', 'length', 'max' => 45),
             array('description', 'length', 'max' => 250),
             array('preview', 'safe'),
             // The following rule is used by search().
