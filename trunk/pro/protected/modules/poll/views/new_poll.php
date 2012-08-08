@@ -1,6 +1,6 @@
 <?php if ($new_poll): ?>
-    <h4 class="title-grey"><span>Thăm dò ý kiến</span></h4>
-    <div class="panel-polls">
+    <h4 class="title-box"><span>Thăm dò ý kiến</span></h4>
+    <div class="frame-leftcontent panel-polls">
         <p><?php echo $new_poll['question'] ?></p>
         <ul class="sub-polls">
             <?php
