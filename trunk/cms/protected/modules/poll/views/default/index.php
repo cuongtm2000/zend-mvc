@@ -21,8 +21,6 @@ if ($item):
 
     <h3><?php echo $item['question']; ?></h3>
     <div id="poll-results">
-
-
         <dl class="graph">
             <?php foreach ($item->Answers as $value) : ?>
                 <dt class="bar-title">
@@ -38,20 +36,9 @@ if ($item):
                     <strong><?php echo number_format($value['num_vote'] * 100 / $sum, 1); ?>%</strong>
                 </dd>  
             <?php endforeach; ?>
-        </dl></div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+        </dl>
+	</div> <div class="clear"></div>
+
     <p style="padding-top:10px">
         <strong>Tổng số</strong>: <?php echo $sum == -1 ? '0' : number_format($sum); ?> lượt - <strong>Tính từ ngày:</strong>
         <?php echo date('d-m-Y', $item['begin_date']); ?>
