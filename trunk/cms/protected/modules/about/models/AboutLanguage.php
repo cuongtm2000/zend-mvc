@@ -104,29 +104,19 @@ class AboutLanguage extends CActiveRecord {
         ));
     }
 
-    //Front end - Get first record
-    public function firstRecord() {
-        $command = Yii::app()->db->createCommand('SELECT title, content, tag, description FROM ' . $this->tableName() . ', hoiit_module_about WHERE hoiit_module_about.record_id = ' . $this->tableName() . '.record_id AND language_id=\'' . Yii::app()->language . '\' AND enable = 1 ORDER BY record_order DESC, created DESC');
-        $row = $command->queryRow();
-
-        if ($row) {
-            //update hit view
-            $this->updateCounters(array('hit' => 1, 'tag =:tag', ':tag' => $row['tag']));
-            return $row;
-        }
-    }
-
     //Front end - Get detail record
     public function detailRecord($tag) {
-        $command = Yii::app()->db->createCommand('SELECT title, content, description FROM ' . $this->tableName() . ' WHERE language_id=\'' . Yii::app()->language . '\' AND tag=:tag');
-        $command->bindParam(":tag", $tag, PDO::PARAM_STR);
+        $criteria = new CDbCriteria();
+        $criteria->condition = 'language_id=:lang AND tag=:tag';
+        $criteria->params = array(':lang' => Yii::app()->language, ':tag' => $tag);
 
-        $row = $command->queryRow();
-        if ($row) {
+        $item = $this::model()->find($criteria);
+        if ($item) {
             //update hit view
-            $this->updateCounters(array('hit' => 1, 'tag =:tag', ':tag' => $tag));
-            return $row;
+            $this->updateCounters(array('hit' => 1), 'record_id=:id AND language_id=:lang', array(':id' => $item->record_id, ':lang' => Yii::app()->language));
+            return $item;
         }
+
     }
 
     //Back end - delete
