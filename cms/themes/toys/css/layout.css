@@ -127,9 +127,9 @@ a:hover{color:#000;}
 .title-items a:hover{color:#3994AB}
 
 /*** panel-items-related ***/
-#rightcontent .panel-items-related li{color:#000;margin:4px 0 4px 30px}
+#rightcontent .panel-items-related li{color:#000;margin:4px 0 4px 25px}
 .panel-items-related a{color:#000;font-weight:bold;display:block}
-.panel-items-related li:hover{color:#73BFD3}
+#rightcontent  .panel-items-related li:hover{color:#73BFD3}
 .panel-items-related a:hover{color:#73BFD3}
 
 /**  panel-items-other tin tuc khac **/
