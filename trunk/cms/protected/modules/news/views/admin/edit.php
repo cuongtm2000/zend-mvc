@@ -22,6 +22,7 @@
     <div class="col2">
         <?php echo $form->textArea($model, 'preview'.$key, array('cols'=>20, 'rows'=>10)); ?>
 		<script type="text/javascript">
+			writeCookie('sessionPath', '<?php echo Yii::app()->baseUrl?>', 1);
 			tinyMCE.init({
 				 file_browser_callback: 'openKCFinder',
 				 mode:"exact",
@@ -67,6 +68,7 @@
     <div class="col2">
         <?php echo $form->textArea($model, 'content'.$key, array('cols'=>20, 'rows'=>10)); ?>
 		<script type="text/javascript">
+			writeCookie('sessionPath', '<?php echo Yii::app()->baseUrl?>', 1);
 			tinyMCE.init({
 				 file_browser_callback: 'openKCFinder',
 				 mode:"exact",

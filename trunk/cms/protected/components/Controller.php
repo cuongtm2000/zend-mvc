@@ -13,7 +13,11 @@ class Controller extends CController {
 
     public function init() {
         Yii::app()->theme = Templates::model()->getTemplateDefault(); //Setup template
-        $this->layout = '//layouts/column-default';
+        if (file_exists(dirname(Yii::app()->basePath) . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . Yii::app()->theme->name . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . 'layouts' . DIRECTORY_SEPARATOR . 'column-default.php')) {
+            $this->layout = '//layouts/column-default';
+        }else{
+            $this->layout = null;
+        }
 
         $this->setting = Setting::model()->getSetting(); //Get Setting: title, keywords...
         $this->listLanguage = Language::model()->listLanguage(); //Get list language: vi, en
