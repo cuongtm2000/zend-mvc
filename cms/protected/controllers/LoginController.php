@@ -4,8 +4,9 @@ class LoginController extends Controller {
 
     public function actionIndex() {
         Yii::app()->theme = 'login';
-        $model = new LoginForm;
+        $this->layout = null;
 
+        $model = new LoginForm;
         // if it is ajax validation request
         if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form') {
             echo CActiveForm::validate($model);

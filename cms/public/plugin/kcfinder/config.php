@@ -28,8 +28,8 @@ $_CONFIG = array(
 	'uploadURL' => "upload",
 	'uploadDir' => "",
 
-	'dirPerms' => 0755,
-	'filePerms' => 0644,
+	'dirPerms' => 0777,
+	'filePerms' => 0777,
 
 	'access' => array(
 
