@@ -217,4 +217,5 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .bar-container{    position:relative;    float:left;    width:40%;    height:10px;    margin:0 0 15px}
 .bar-container div{    background-color:#c40;height:20px}
 .bar-container strong{    position:absolute;    right:-32px;top:0;    overflow:hidden}
+#poll-results{margin-bottom:30px}
 #poll-results p{    text-align:center;    clear: both}
