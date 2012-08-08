@@ -22,19 +22,24 @@
 </head>
 <body>
 <div id="wrapper">
-    <div id="header">
-        <div id="logo"><a href="<?php echo Yii::app()->baseUrl.$this->setLangUrl()?>" title="Logo Yii Project"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo Yii Project" /></a></div><!--End left header-->
-        <?php if($this->setting['slogan']):?><h1 class="title-company"><?php echo CHtml::encode($this->setting['slogan'])?></h1><?php endif?>
-        <div class="clear"></div>	
-    </div><!--End header-->
-    <div class="top-header">
-         <div class="lang">
-			<?php foreach($this->listLanguage as $key => $value):?>
-				<a href="<?php echo Yii::app()->baseUrl?>/<?php echo $key?>" title="<?php echo $value?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $key?>.gif" alt="<?php echo $value?>" /> <?php echo $value?></a>
-			<?php endforeach?>
-         </div>
+	<div class="lang">
+		<?php foreach($this->listLanguage as $key => $value):?>
+			<a href="<?php echo Yii::app()->baseUrl?>/<?php echo $key?>" title="<?php echo $value?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $key?>.gif" alt="<?php echo $value?>" /> <?php echo $value?></a>
+		<?php endforeach?>
+	</div>
+	<div class="top-header">
+		<form  id="frmsearch" name="frm-search" action="" method="post">
+            <input type="text" class="input"  value="Search entire store here ..." onblur="if(this.value=='') this.value='Search entire store here ...'" onfocus="if(this.value =='Search entire store here ...' ) this.value=''"/>
+            <input type="submit" class="bt-search" value=""  />
+        </form>
          <?php if($this->setting['hotline']):?><p class="hot-line"><?php echo $this->setting['hotline']?></p><?php endif?> <div class="clear"></div>
     </div>
+    <div id="header">
+        <div id="logo"><a href="<?php echo Yii::app()->baseUrl.$this->setLangUrl()?>" title="Logo Yii Project"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo Yii Project" /></a></div><!--End left header-->
+        <!--<?php if($this->setting['slogan']):?><h1 class="title-company"><?php echo CHtml::encode($this->setting['slogan'])?></h1><?php endif?>-->
+        <div class="clear"></div>	
+    </div><!--End header-->
+    
     <div class="bg-nav">
 		<?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel', array('lastItemCssClass' => 'last'));?><div class="clear"></div>
     </div>

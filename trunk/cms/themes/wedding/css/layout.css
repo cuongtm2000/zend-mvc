@@ -37,7 +37,9 @@ a:hover{color:#000;}
 #nav li ul li{width:100%;background:#F27DAC;border:1px solid #F59EC1}
 #nav li ul li a{font-weight:normal;color:#fff; padding:5px 5px 5px 15px} 
 #nav li ul li a:hover{background:#F59EC1}
-#nav .select{color:#fff}
+#nav .selected a{color:#000}
+#nav li ul li.last{background:#F27DAC}
+#nav .last{background:none}
 
 /**  Ten cong ty     **/
 .title-company{padding:45px 0 0 0;  font-size:18pt;color:#3CBEDA;font-weight:bold}
@@ -83,12 +85,16 @@ a:hover{color:#000;}
 
 /*Right content*/
 #rightcontent{float:left; width:503px;margin:0 0 0 8px}
-#rightcontent p{margin:0 0 10px 0}
-#rightcontent ul li, #right-content ol li{margin:4px 0 4px 40px}
-#rightcontent ul ,#right-content ol{margin: 0 0 12px 0}
+#rightcontent p ,#rightcontent-col2 p{margin:0 0 10px 0}
+#rightcontent ul li, #rightcontent ol li , #rightcontent-col2 ul li,#rightcontent-col2 ol li{margin:4px 0 4px 40px}
+#rightcontent ul ,#rightcontent ol ,#rightcontent-col2 ul , #rightcontent-col2 ol{margin: 0 0 12px 0}
 
+#rightcontent-col2{float:right; width:720px; overflow: hidden}
+
+.top-bt-right-2{background:url(../images/right_topbg_1.gif) no-repeat; height:12px}
 .top-bt-right{background:url(../images/right_topbg.gif) no-repeat; height:12px}
 .bd-bt-right{background:url(../images/right_bottombg.gif) no-repeat; height:12px;margin:0 0 10px}
+.bd-bt-right-2{background:url(../images/right_bottombg_1.gif) no-repeat; height:12px;margin:0 0 10px}
 
 .panel-polls,.frame-panel{padding:0 8px}
 .frame-tent-right{padding:0 5px 5px 5px}
@@ -128,12 +134,24 @@ a:hover{color:#000;}
 .black a:hover{background:url(../images/bull.gif) no-repeat left 7px;color:#ED2121}
 
 /*   Page New  */
-#rightcontent .masuring{list-style: none; text-align:justify;font-size:10pt;margin:0 0 20px 0}
-.masuring li{ margin:0 0 10px 0 !important}
+#rightcontent .panel-items{list-style: none; text-align:justify;font-size:10pt;margin:0 0 20px 0}
+.panel-items li{ margin:0 0 10px 0 !important}
 .frame-img{float:left;margin:0 8px 0 0}
-.title-masuring{margin:0 0 5px 0;font-size:10pt}
-.title-masuring a{color:#000}
-.title-masuring a:hover{color:#3994AB}
+.title-items{margin:0 0 5px 0;font-size:10pt}
+.title-items a{color:#000}
+.title-items a:hover{color:#3994AB}
+
+/*** panel-items-related ***/
+#rightcontent .panel-items-related li{color:#000;margin:4px 0 4px 30px}
+.panel-items-related a{color:#000;font-weight:bold;display:block}
+.panel-items-related li:hover{color:#73BFD3}
+.panel-items-related a:hover{color:#73BFD3}
+
+/**  panel-items-other tin tuc khac **/
+.title-item-other{color:#D73576;margin:20px 0 10px;font-size:11pt;padding-left:10px}
+#rightcontent .panel-items-other li{list-style:square;color:#0D2364}
+.panel-items-other li a{color:#000;margin:0 0 0 -6px; display:block;/*background:url(../images/square.gif) no-repeat left 6px;padding-left:10px */}
+.panel-items-other li a:hover{color:#D73576}
 
 /* paging */
 #rightcontent  ul.paging{float: right; margin:0;padding-right:5px;list-style: none;}
@@ -144,15 +162,16 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 
 /** Form lien he  **/
 #frm{margin:0 0 10px 0;}
-.frame-contact label{color:#000;margin:0;font-weight:bold; width:130px; float:left}
+.frame-contact label{color:#000;font-weight:bold}
 .frame-contact{list-style:none;margin:15px 0 10px 0}
-.frame-contact li{padding:4px 0; margin:0 !important}
+#rightcontent-col2 .frame-contact p{margin-bottom:5px;line-height:normal}
+#rightcontent-col2 .frame-contact li{padding:4px 0; margin:0}
 .frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
 .frame-contact textarea{border:1px solid #ddd;width: 350px; -moz-border-radius: 3px; -webkit-border-radius:3px}
 .frame-contact span{color:#f00;margin:0 5px 0 0;}
-
-.frame-contact .bton-dk{margin:10px 0 5px 30px;background:#9FBD43;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
-.frame-contact .bton-dk{margin:10px 10px 5px 0}
+.left-contact{float:left;width:280px}
+.frame-contact .button-submit{margin:10px 0 5px 30px;background:#D44D64;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-contact .button-submit{margin:10px 10px 5px 0}
 /****  End page contact     *****/
 
 /** Column3  **/
