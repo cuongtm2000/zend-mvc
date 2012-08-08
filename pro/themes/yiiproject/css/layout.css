@@ -133,7 +133,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 /**  Sub new   **/
 .sub-new{list-style:none;padding:5px 5px 10px 15px}
 .sub-new li{padding:4px 0}
-.sub-new li a{ display:block;color:#3EA0B9}
+.sub-new li a{ display:block;color:#1155CC}
 .sub-new li a:hover{color:#CC0000}
 
 /*Footer*/
