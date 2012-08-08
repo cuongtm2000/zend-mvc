@@ -147,7 +147,7 @@ class ProductsCat extends CActiveRecord {
     private function makeSubMenu($data, $type = 0, $cat_id, $subTag = 'ul', $subTagItem = 'li') {
         if ($type == 1) { //return $parent_id
             $cat_id = ProductsCatLanguage::model()->findCatByTag($cat_id);
-            $parent_id = $cat_id;
+            $parent_id = $cat_id['cat_id'];
             if ($cat_id) {
                 foreach ($data as $value) {
                     if ($cat_id == $value['cat_id']) {
