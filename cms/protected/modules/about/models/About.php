@@ -95,13 +95,29 @@ class About extends CActiveRecord {
     }
 
     //Front end - Get first record
+    public function firstRecord() {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, created DESC';
+        $criteria->condition = 'hot=0 AND enable = 1';
+
+        $viewer = $this->find($criteria);
+        if ($viewer) {
+            //update hit view
+            AboutLanguage::model()->updateCounters(array('hit' => 1), 'record_id=:id AND language_id=:lang', array(':id' => $viewer->record_id, ':lang' => Yii::app()->language));
+            return $viewer->AboutLanguage[Yii::app()->language];
+        }
+    }
+
+    //Front end - Get first record
     public function firstHotRecord() {
         $criteria = new CDbCriteria();
         $criteria->order = 'record_order DESC, created DESC';
         $criteria->condition = 'hot = 1 AND enable = 1';
 
         $viewer = $this::model()->find($criteria);
-        return $viewer->AboutLanguage[Yii::app()->language];
+        if ($viewer) {
+            return $viewer->AboutLanguage[Yii::app()->language];
+        }
     }
 
     /**
