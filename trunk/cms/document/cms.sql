@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 07, 2012 at 05:35 AM
+-- Generation Time: Aug 08, 2012 at 04:25 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `hoiit_configs` (
   `config_name` varchar(30) NOT NULL,
-  `config_value` int(11) NOT NULL,
+  `config_value` varchar(45) NOT NULL,
   `config_desc` varchar(100) DEFAULT NULL,
   `hoiit_modules_module_id` varchar(30) NOT NULL,
   PRIMARY KEY (`config_name`),
@@ -40,36 +40,42 @@ CREATE TABLE IF NOT EXISTS `hoiit_configs` (
 --
 
 INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoiit_modules_module_id`) VALUES
-('adv_bottom_height', 222, NULL, 'adv'),
-('adv_bottom_width', 222, NULL, 'adv'),
-('adv_center_height', 222, NULL, 'adv'),
-('adv_center_width', 222, NULL, 'adv'),
-('adv_left_height', 222, NULL, 'adv'),
-('adv_left_width', 222, NULL, 'adv'),
-('adv_right_height', 222, NULL, 'adv'),
-('adv_right_width', 222, NULL, 'adv'),
-('adv_top_height', 222, NULL, 'adv'),
-('adv_top_width', 222, NULL, 'adv'),
-('banner_height', 275, NULL, 'banner'),
-('banner_width', 520, NULL, 'banner'),
-('logo_height', 114, NULL, 'banner'),
-('logo_width', 403, NULL, 'banner'),
-('news_cat_height_thumb', 200, NULL, 'news'),
-('news_cat_width_thumb', 200, NULL, 'news'),
-('news_height_thumb', 200, NULL, 'news'),
-('news_num_item_cat', 3, NULL, 'news'),
-('news_num_item_hot', 7, '', 'news'),
-('news_num_item_index', 3, NULL, 'news'),
-('news_num_item_new', 7, NULL, 'news'),
-('news_width_thumb', 200, NULL, 'news'),
-('products_cat_height_thumb', 200, NULL, 'products'),
-('products_cat_width_thumb', 200, NULL, 'products'),
-('products_height_desc', 700, NULL, 'products'),
-('products_height_full', 700, NULL, 'products'),
-('products_height_thumb', 220, NULL, 'products'),
-('products_width_desc', 520, NULL, 'products'),
-('products_width_full', 520, NULL, 'products'),
-('products_width_thumb', 220, NULL, 'products');
+('adv_bottom_height', '222', NULL, 'adv'),
+('adv_bottom_width', '222', NULL, 'adv'),
+('adv_center_height', '222', NULL, 'adv'),
+('adv_center_width', '222', NULL, 'adv'),
+('adv_left_height', '222', NULL, 'adv'),
+('adv_left_width', '222', NULL, 'adv'),
+('adv_right_height', '222', NULL, 'adv'),
+('adv_right_width', '222', NULL, 'adv'),
+('adv_top_height', '222', NULL, 'adv'),
+('adv_top_width', '222', NULL, 'adv'),
+('banner_height', '275', NULL, 'banner'),
+('banner_width', '520', NULL, 'banner'),
+('contact_email_received', 'thanhansoft@gmail.com', NULL, 'contact'),
+('contact_host', 'smtp.gmail.com', NULL, 'contact'),
+('contact_password', 'assas', NULL, 'contact'),
+('contact_port', '465', NULL, 'contact'),
+('contact_send_mail_smtp', '1', NULL, 'contact'),
+('contact_username', 'thanhansoft', NULL, 'contact'),
+('logo_height', '114', NULL, 'banner'),
+('logo_width', '403', NULL, 'banner'),
+('news_cat_height_thumb', '200', NULL, 'news'),
+('news_cat_width_thumb', '200', NULL, 'news'),
+('news_height_thumb', '200', NULL, 'news'),
+('news_num_item_cat', '3', NULL, 'news'),
+('news_num_item_hot', '7', '', 'news'),
+('news_num_item_index', '3', NULL, 'news'),
+('news_num_item_new', '7', NULL, 'news'),
+('news_width_thumb', '200', NULL, 'news'),
+('products_cat_height_thumb', '200', NULL, 'products'),
+('products_cat_width_thumb', '200', NULL, 'products'),
+('products_height_desc', '700', NULL, 'products'),
+('products_height_full', '700', NULL, 'products'),
+('products_height_thumb', '220', NULL, 'products'),
+('products_width_desc', '520', NULL, 'products'),
+('products_width_full', '520', NULL, 'products'),
+('products_width_thumb', '220', NULL, 'products');
 
 -- --------------------------------------------------------
 
@@ -102,7 +108,8 @@ INSERT INTO `hoiit_functions` (`function_value`, `function_name`, `function_clas
 ('menu_products', 'ProductsCat', '', 'listItem', 'products'),
 ('news_hot', 'News', '', 'listItemsHot', 'news'),
 ('news_list_first', 'News', '', 'ListFirst', 'news'),
-('news_new', 'News', '', 'listItemsNew', 'news');
+('news_new', 'News', '', 'listItemsNew', 'news'),
+('new_poll', 'Poll', '', 'getFirstItem', 'poll');
 
 -- --------------------------------------------------------
 
@@ -169,6 +176,7 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('no_record', 'Không tồn tại mẫu tin', 0, 'vi'),
 ('order', 'Order', 1, 'en'),
 ('order', 'Thứ tự', 1, 'vi'),
+('poll', 'Bình chọn', 0, 'vi'),
 ('products', 'Products', 0, 'en'),
 ('products', 'Sản phẩm', 0, 'vi'),
 ('show', 'Hiển thị', 1, 'vi'),
@@ -225,10 +233,11 @@ INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_url`, `module_
 ('about', 'Danh sách|Cấu hình Url', 'about|about/url', 2, 1, 1),
 ('adv', 'Danh sách|Cấu hình', 'adv|adv/config', 5, 1, 0),
 ('banner', 'Danh sách Banner|Danh sách Logo|Cấu hình', 'banner|banner/logo|banner/config', 6, 1, 0),
-('contact', 'Danh sách', 'contact', 2, 1, 1),
+('contact', 'Danh sách|Cấu hình|Cấu hình Url', 'contact|contact/config|contact/url', 2, 1, 1),
 ('counter', 'Counter', NULL, 4, 0, 0),
 ('default', 'Default', NULL, 1, 1, 1),
 ('news', 'Danh mục|Danh sách|Cấu hình|Cấu hình Url', 'news/cat|news|news/config|news/url', 4, 1, 1),
+('poll', 'Danh sách|Cấu hình Url', 'poll|poll/url', 7, 1, 0),
 ('products', 'Danh mục|Danh sách|Cấu hình|Cấu hình Url', 'products/cat|products|products/config|products/url', 3, 1, 1),
 ('support', 'Danh sách', 'support', 6, 1, 0);
 
@@ -284,10 +293,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
 --
 
 INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(46, 'en', 'Welcome english', '<p>asdas asa</p>', 'welcome-english', 'dasd', 282, NULL, NULL),
-(46, 'vi', 'Welcome to Yiiproject.com', '<p>Welcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to</p>\r\n<h3>Welcome to Yiiproject.com</h3>\r\n<p>Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.com</p>', 'welcome-to-yiiprojectcom', 'das', 282, NULL, NULL),
-(47, 'en', 'About', '<p>Con tnet</p>', 'about', 'dasdsadsads', 282, NULL, NULL),
-(47, 'vi', 'Gioi thieu', '<p>Noi dung</p>', 'gioi-thieu', 'asdasdsd', 282, NULL, NULL);
+(46, 'en', 'Welcome english', '<p>asdas asa</p>', 'welcome-english', 'dasd', 299, NULL, NULL),
+(46, 'vi', 'Welcome to Yiiproject.com', '<p>Welcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to</p>\r\n<h3>Welcome to Yiiproject.com</h3>\r\n<p>Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.com</p>', 'welcome-to-yiiprojectcom', 'das', 317, NULL, NULL),
+(47, 'en', 'About', '<p>Con tnet</p>', 'about', 'dasdsadsads', 293, NULL, NULL),
+(47, 'vi', 'Gioi thieu', '<p>Noi dung</p>', 'gioi-thieu', 'asdasdsd', 293, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -341,14 +350,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_banners` (
   `module_id` varchar(30) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`banner_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=58 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=59 ;
 
 --
 -- Dumping data for table `hoiit_module_banners`
 --
 
 INSERT INTO `hoiit_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_picture`, `banner_link`, `banner_order`, `banner_type`, `banner_click`, `module_id`, `enable`) VALUES
-(57, '2012-08-03 13:34:54', '', 'logo.gif', NULL, NULL, 'logo', 0, NULL, 1);
+(58, '2012-08-07 09:42:19', '', NULL, NULL, NULL, 'logo', 0, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -608,9 +617,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_save` (
 --
 
 INSERT INTO `hoiit_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456147),
+('day_time', 2456148),
 ('max_count', 1),
-('counter', 5),
+('counter', 6),
 ('yesterday', 1);
 
 -- --------------------------------------------------------
@@ -629,7 +638,56 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''::1''', 1344310416);
+('''::1''', 1344392723);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_poll`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_poll` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `question` varchar(255) NOT NULL,
+  `begin_date` int(11) NOT NULL,
+  `end_date` int(11) NOT NULL,
+  `record_order` smallint(6) DEFAULT '1',
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `enable` tinyint(4) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`record_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `hoiit_module_poll`
+--
+
+INSERT INTO `hoiit_module_poll` (`record_id`, `question`, `begin_date`, `end_date`, `record_order`, `create_date`, `enable`) VALUES
+(2, 'Bạn tích con khỉ nào nhất', 1344376800, 1345327199, 1, '2012-08-08 02:06:57', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_poll_rows`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_poll_rows` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `answer` varchar(255) NOT NULL,
+  `url` varchar(255) DEFAULT NULL,
+  `num_vote` int(11) NOT NULL DEFAULT '0',
+  `vote_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `vote_id` (`vote_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `hoiit_module_poll_rows`
+--
+
+INSERT INTO `hoiit_module_poll_rows` (`id`, `answer`, `url`, `num_vote`, `vote_id`) VALUES
+(1, 'Khỉ gió', '', 0, 2),
+(2, 'Khỉ lửa', '', 1, 2),
+(3, 'Khỉ đột', '', 0, 2);
 
 -- --------------------------------------------------------
 
@@ -664,7 +722,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products` (
 INSERT INTO `hoiit_module_products` (`record_id`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `record_order`, `unit`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
 (1, '2012-07-31 03:58:20', '', '', NULL, 1, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 5),
 (2, '2012-07-31 04:54:34', '', '', NULL, 2, '123456', 0, NULL, NULL, NULL, NULL, NULL, 1, 5),
-(3, '2012-07-31 04:54:43', '', '', NULL, 3, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 5);
+(3, '2012-07-31 04:54:43', 'dsdds-thumb.jpg', '', NULL, 3, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -829,7 +887,8 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('right', 9, '1', 'default', NULL, NULL, 'news_hot'),
 ('right', 10, '1', 'default', NULL, NULL, 'news_new'),
 ('right', 11, '1', 'default', NULL, NULL, 'adv_right'),
-('left', 1, '1', 'contact', NULL, NULL, 'list_support');
+('left', 1, '1', 'contact', NULL, NULL, 'list_support'),
+('right', 6, '1', 'default', NULL, NULL, 'new_poll');
 
 -- --------------------------------------------------------
 
@@ -880,8 +939,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_templates` (
 INSERT INTO `hoiit_templates` (`template_id`, `template_name`, `template_date`, `template_desc`, `template_author`, `template_web`, `template_admin`, `template_activated`) VALUES
 ('default', 'Default', '2012-06-30 14:47:02', NULL, 'Yii project', 'http://yiiproject.com', 0, 0),
 ('home', 'Home', '2012-07-04 10:54:29', NULL, 'Yii project', 'http://yiiproject.com', 0, 0),
-('toys', 'Toys Store', '2012-07-27 04:55:47', NULL, NULL, NULL, 0, 0),
-('wedding', 'Wedding Pink', '2012-08-07 04:55:47', NULL, NULL, NULL, 0, 1),
+('toys', 'Toys Store', '2012-07-27 04:55:47', NULL, NULL, NULL, 0, 1),
+('wedding', 'Wedding Pink', '2012-08-07 04:55:47', NULL, NULL, NULL, 0, 0),
 ('yiiproject', 'YiiProject', '2012-07-26 13:47:49', NULL, 'Yii project', NULL, 0, 0);
 
 -- --------------------------------------------------------
@@ -987,8 +1046,8 @@ ALTER TABLE `hoiit_module_about_languages`
 -- Constraints for table `hoiit_module_contacts_languages`
 --
 ALTER TABLE `hoiit_module_contacts_languages`
-  ADD CONSTRAINT `fk_hoiit_module_contacts_has_hoiit_languages_hoiit_module_con1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_contacts` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_hoiit_module_contacts_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_hoiit_module_contacts_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_hoiit_module_contacts_has_hoiit_languages_hoiit_module_con1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_contacts` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `hoiit_module_menus_languages`
@@ -1016,6 +1075,12 @@ ALTER TABLE `hoiit_module_news_cat_languages`
 ALTER TABLE `hoiit_module_news_languages`
   ADD CONSTRAINT `fk_hoiit_module_news_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_hoiit_module_news_has_hoiit_languages_hoiit_module_news1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_news` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `hoiit_module_poll_rows`
+--
+ALTER TABLE `hoiit_module_poll_rows`
+  ADD CONSTRAINT `hoiit_module_poll_rows_ibfk_1` FOREIGN KEY (`vote_id`) REFERENCES `hoiit_module_poll` (`record_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `hoiit_module_products`
