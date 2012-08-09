@@ -206,7 +206,7 @@ class News extends CActiveRecord {
     //Back end - List item admin
     public function listItemAdmin() {
         $criteria = new CDbCriteria();
-        $criteria->with = array('Language', 'NewsLanguage');
+        //$criteria->with = array('Language', 'NewsLanguage');
         $criteria->order = 'record_order DESC, postdate DESC';
 
         $count = $this->count($criteria);

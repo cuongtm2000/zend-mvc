@@ -174,7 +174,7 @@ class NewsCat extends CActiveRecord {
     //Front end - List record for index
     public function listCats($cid = 0, $prefix = NULL, $type = 0, $id = 0) {
         $criteria = new CDbCriteria();
-        $criteria->with = array('Language', 'NewsCatLanguage');
+        //$criteria->with = array('Language', 'NewsCatLanguage');
         $criteria->order = 'cat_order DESC, cat_created DESC';
 
         if ($cid == 1) {

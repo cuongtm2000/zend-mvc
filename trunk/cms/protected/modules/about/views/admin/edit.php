@@ -1,7 +1,7 @@
 <?php $form = $this->beginWidget('CActiveForm', array('id'=>'frm', 'enableAjaxValidation'=>true, 'enableClientValidation' =>true,));?>
 <?php echo $form->errorSummary($model, ''); ?>
 <fieldset>
-    <legend>Chỉnh sửa</legend>
+    <legend><?php echo $this->lang['edit'] ?> <?php echo strtolower($this->lang[$this->module->id]) ?></legend>
 
     <?php foreach($this->listLanguage as $key => $lang):?>
     <div class="col1"><?php echo $form->labelEx($model, 'title'.$key) ?></div>
@@ -92,8 +92,8 @@
 
     <div class="col1">&nbsp;</div>
     <div class="col2">
-        <?php echo CHtml::submitButton('Add', array('name'=>'submit', 'class'=>'login', 'title'=>'Add')); ?>
-        <?php echo Chtml::link('Cancel', 'javascript:history.back()', array('class'=>'login-a', 'title'=>'Cancel')) ?>
+        <?php echo CHtml::submitButton($this->lang['edit'], array('name'=>'submit', 'class'=>'login', 'title'=>$this->lang['edit'])); ?>
+        <?php echo Chtml::link($this->lang['cancel'], 'javascript:history.back()', array('class'=>'login-a', 'title'=>$this->lang['cancel'])) ?>
     </div><div class="clear space"></div>
 </fieldset>
 <?php $this->endWidget();?>
