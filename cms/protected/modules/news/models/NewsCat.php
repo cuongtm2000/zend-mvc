@@ -118,7 +118,6 @@ class NewsCat extends CActiveRecord {
 
     public function listItem($cid = 0) {
         $criteria = new CDbCriteria();
-        //$criteria->with = array('Language', 'ProductsCatLanguage');
         $criteria->order = 'cat_order DESC, cat_created DESC';
         if ($cid != 0) {
             $criteria->condition = 'cat_parent_id=:cid AND cat_enable=1';
@@ -132,12 +131,13 @@ class NewsCat extends CActiveRecord {
     //Front end - make menu multi level
     public function makeMenu($data, $cat_id, $strOpen = '<ul>', $strClose = '</ul>', $tag = 'li', $subTag = 'ul', $subTagItem = 'li') {
         $str = null;
-        $parent_id = $this->makeSubMenu($data, 1, $cat_id);
+        $root_find = $this->findCatID($cat_id);
+
         foreach ($data as $value) {
             if ($value['cat_parent_id'] == 0) {
                 $str .= '<' . $tag . '>' . CHtml::link($value->NewsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $value->NewsCatLanguage[Yii::app()->language]['tag']), array('title' => $value->NewsCatLanguage[Yii::app()->language]['cat_title']));
-                if ($parent_id && ($parent_id == $value['cat_id'])) {
-                    $str .= $this->makeSubMenu($data, 0, $value['cat_id'], $subTag, $subTagItem);
+                if ($value['cat_id'] == $root_find) {
+                    $str .= $this->menuRecursive($value['cat_id'], $data, '', '', $subTag, $subTagItem);
                 }
                 $str .= '</' . $tag . '>';
             }
@@ -145,36 +145,41 @@ class NewsCat extends CActiveRecord {
         return $strOpen . $str . $strClose;
     }
 
-    private function makeSubMenu($data, $type = 0, $cat_id, $subTag = 'ul', $subTagItem = 'li') {
-        if ($type == 1) { //return $parent_id
-            $cat_id = NewsCatLanguage::model()->findCatByTag($cat_id);
-            $parent_id = $cat_id['cat_id'];
-            if ($cat_id) {
-                foreach ($data as $value) {
-                    if ($cat_id == $value['cat_id']) {
-                        if ($value['cat_parent_id']) {
-                            $parent_id = $value['cat_parent_id'];
-                        }
-                        break;
-                    }
-                }
-                return $parent_id;
+    private function menuRecursive($parent_id, $data, $res = '', $sep = '', $subTag = 'ul', $subTagItem = 'li') {
+        $tmp='';
+        foreach ($data as $v) {
+            if ($v['cat_parent_id'] == $parent_id) {
+                $re = $sep . '<' . $subTagItem . '>' . CHtml::link($v->NewsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $v->NewsCatLanguage[Yii::app()->language]['tag']), array('title' => $v->NewsCatLanguage[Yii::app()->language]['cat_title']));
+                $tmp .= $this->menuRecursive($v['cat_id'], $data, $re, $sep . '');
+                $tmp .= '</' . $subTagItem . '>';
             }
-        } else {
-            $str = null;
-            foreach ($data as $subItem) {
-                if ($subItem['cat_parent_id'] == $cat_id) {
-                    $str .= '<' . $subTagItem . '>' . CHtml::link($subItem->NewsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $subItem->NewsCatLanguage[Yii::app()->language]['tag']), array('title' => $subItem->NewsCatLanguage[Yii::app()->language]['cat_title'])) . '</' . $subTagItem . '>';
-                }
-            }
-            return ($str) ? ('<' . $subTag . '>' . $str . '</' . $subTag . '>') : '';
         }
+        $res.=($tmp!= '')?'<'.$subTag.'>'.$tmp.'</'.$subTag.'>':'';
+        return $res;
+    }
+
+    private function findCatID($tag) {
+        $cat_id = NewsCatLanguage::model()->findCatByTag($tag);
+        $temp = $cat_id['cat_id'];
+        $result = -1;
+
+        do {
+            $parent_id = $this->getParentIdOfCatID($temp);
+            $result = $temp;
+            $temp = $parent_id;
+        } while ($parent_id != 0);
+
+        return $result;
+    }
+
+    private function getParentIdOfCatID($id) {
+        $row = $this->loadEdit($id);
+        return $row['cat_parent_id'];
     }
 
     //Front end - List record for index
     public function listCats($cid = 0, $prefix = NULL, $type = 0, $id = 0) {
         $criteria = new CDbCriteria();
-        //$criteria->with = array('Language', 'NewsCatLanguage');
         $criteria->order = 'cat_order DESC, cat_created DESC';
 
         if ($cid == 1) {
