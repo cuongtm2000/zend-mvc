@@ -34,8 +34,8 @@ class Controller extends CController {
         }
     }
 
-    public function setUrlModule() {
-        return $this->setLangUrl() . '/' . Urls::model()->getPatternModule($this->module->id);
+    public function setUrlModule($module = null) {
+        return $this->setLangUrl() . '/' . Urls::model()->getPatternModule(($module) ? $module : $this->module->id);
     }
 
     public function setDescription($value = null) {

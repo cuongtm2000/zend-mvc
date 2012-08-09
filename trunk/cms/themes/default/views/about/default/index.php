@@ -1,1 +1,0 @@
-Trong theme
