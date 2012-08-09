@@ -132,7 +132,7 @@ class About extends CActiveRecord {
     //Back end - List item admin
     public function listItemAdmin() {
         $criteria = new CDbCriteria();
-        $criteria->with = array('Language', 'AboutLanguage');
+        //$criteria->with = array('Language', 'AboutLanguage');
         $criteria->order = 'record_order DESC, created DESC';
         $count = $this->count($criteria);
 

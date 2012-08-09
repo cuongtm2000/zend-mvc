@@ -173,7 +173,7 @@ class Products extends CActiveRecord {
     //Back end - List item admin
     public function listItemAdmin() {
         $criteria = new CDbCriteria();
-        $criteria->with = array('Language', 'ProductsLanguage');
+        //$criteria->with = array('Language', 'ProductsLanguage');
         $criteria->order = 'record_order DESC, postdate DESC';
 
         $count = $this->count($criteria);
