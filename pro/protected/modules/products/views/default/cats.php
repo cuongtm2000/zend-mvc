@@ -2,7 +2,7 @@
 <?php $this->pageTitle = $info_cat['cat_title'] . ' - ' . $this->lang[$this->module->id]; $this->setDescription($info_cat['description'])?>
 <?php if($sub_cats):?>
 <div class="main-all-product">
-    <h2 class="title-right">Danh muc con</h2>
+    <h2 class="title-right"><span>Danh muc con</span></h2>
     <ul class="all-product">
         <?php foreach($sub_cats as $value): ?>
             <li class="product">
@@ -21,7 +21,7 @@
 <?php endif?>
 
 <div class="main-all-product">
-    <h2 class="title-right">Sản phẩm danh muc này</h2>
+    <h2 class="title-right"><span>Sản phẩm danh muc này</span></h2>
     <?php if($items['models']):?>
     <ul class="all-product">
         <?php foreach($items['models'] as $item): ?>
