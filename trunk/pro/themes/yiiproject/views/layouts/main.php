@@ -26,7 +26,7 @@
 		<h1 id="company">Cms versatile</h1>
 		<div id="navigation">
             <?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel', array('linkLabelWrapper' => 'span', 'lastItemCssClass' => 'last', 'subTagOpen' => '<div class="dd-holder"><div class="dd-t"></div><div class="dd">', 'subTagClose' => '<div class="cl">&nbsp;</div></div><div class="dd-b"></div></div>'));?>
-			<a href="#" class="buy-now">Buy Now</a>
+			<!-- <a href="#" class="buy-now">Buy Now</a> -->
 		</div><!--End menu-->
         <div class="clear"></div>
         <div class="main-about">
