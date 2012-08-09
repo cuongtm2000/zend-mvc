@@ -131,12 +131,15 @@ class ProductsCat extends CActiveRecord {
     //Front end - make menu multi level
     public function makeMenu($data, $cat_id, $strOpen = '<ul>', $strClose = '</ul>', $tag = 'li', $subTag = 'ul', $subTagItem = 'li') {
         $str = null;
-        $parent_id = $this->makeSubMenu($data, 1, $cat_id);
+        $root_find = $this->findCatID($cat_id);
+
         foreach ($data as $value) {
             if ($value['cat_parent_id'] == 0) {
-                $str .= '<' . $tag . '>' . CHtml::link($value->ProductsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setLangUrl() . '/san-pham/' . $value->ProductsCatLanguage[Yii::app()->language]['tag']), array('title' => $value->ProductsCatLanguage[Yii::app()->language]['cat_title']));
-                if ($parent_id && ($parent_id == $value['cat_id'])) {
-                    $str .= $this->makeSubMenu($data, 0, $value['cat_id'], $subTag, $subTagItem);
+                $str .= '<' . $tag . '>' . CHtml::link($value->ProductsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $value->ProductsCatLanguage[Yii::app()->language]['tag']), array('title' => $value->ProductsCatLanguage[Yii::app()->language]['cat_title']));
+                if ($value['cat_id'] == $root_find) {
+                    //$str .= '<ul>';
+                    $str .= $this->menuRecursive($value['cat_id'], $data);
+                    //$str .= '</ul>';
                 }
                 $str .= '</' . $tag . '>';
             }
@@ -144,30 +147,38 @@ class ProductsCat extends CActiveRecord {
         return $strOpen . $str . $strClose;
     }
 
-    private function makeSubMenu($data, $type = 0, $cat_id, $subTag = 'ul', $subTagItem = 'li') {
-        if ($type == 1) { //return $parent_id
-            $cat_id = ProductsCatLanguage::model()->findCatByTag($cat_id);
-            $parent_id = $cat_id['cat_id'];
-            if ($cat_id) {
-                foreach ($data as $value) {
-                    if ($cat_id == $value['cat_id']) {
-                        if ($value['cat_parent_id']) {
-                            $parent_id = $value['cat_parent_id'];
-                        }
-                        break;
-                    }
-                }
-                return $parent_id;
+    private function menuRecursive($parent_id, $data, $res = '', $sep = '', $subTag = 'ul', $subTagItem = 'li') {
+        foreach ($data as $v) {
+            if ($v['cat_parent_id'] == $parent_id) {
+                $res .= '<' . $subTag . '>';
+
+                $re = $sep . '<' . $subTagItem . '>' . CHtml::link($v->ProductsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $v->ProductsCatLanguage[Yii::app()->language]['tag']), array('title' => $v->ProductsCatLanguage[Yii::app()->language]['cat_title']));
+                $res .= $this->menuRecursive($v['cat_id'], $data, $re, $sep . '');
+                $res .= '</' . $subTagItem . '>';
+
+                $res .= '</' . $subTag . '>';
             }
-        } else {
-            $str = null;
-            foreach ($data as $subItem) {
-                if ($subItem['cat_parent_id'] == $cat_id) {
-                    $str .= '<' . $subTagItem . '>' . CHtml::link($subItem->ProductsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setLangUrl() . '/san-pham/' . $subItem->ProductsCatLanguage[Yii::app()->language]['tag']), array('title' => $subItem->ProductsCatLanguage[Yii::app()->language]['cat_title'])) . '</' . $subTagItem . '>';
-                }
-            }
-            return ($str) ? ('<' . $subTag . '>' . $str . '</' . $subTag . '>') : '';
         }
+        return $res;
+    }
+
+    private function findCatID($tag) {
+        $cat_id = ProductsCatLanguage::model()->findCatByTag($tag);
+        $temp = $cat_id['cat_id'];
+        $result = -1;
+
+        do {
+            $parent_id = $this->getParentIdOfCatID($temp);
+            $result = $temp;
+            $temp = $parent_id;
+        } while ($parent_id != 0);
+
+        return $result;
+    }
+
+    private function getParentIdOfCatID($id) {
+        $row = $this->loadEdit($id);
+        return $row['cat_parent_id'];
     }
 
     //Front end - List record for index
