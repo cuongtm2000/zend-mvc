@@ -146,6 +146,19 @@ ul.paging .hidden{display: none;}
 ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{color:#3CBEDA; border: 1px solid #ccc; padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
 ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{color:#fff; background:#3CBEDA}
 
+/** Form lien he  **/
+#frm{margin:0 0 10px 0}
+.frame-contact label{color:#555;margin:0;font-weight:bold}
+.frame-contact{list-style:none;margin:15px 0 10px 0}
+.frame-contact li{padding:4px 0; margin:0 !important}
+.frame-contact input{ margin:0 20px 0 0; padding:3px;width:250px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.frame-contact textarea{border:1px solid #ddd;width: 540px; -moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-contact span{color:#f00;margin:0 5px 0 0;}
+.left-contact{float:left;width:280px}
+.frame-contact .button-submit{margin:10px 0 5px 30px;background:#eee;color:#3B3B3B; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-contact .button-submit{margin:10px 10px 5px 0}
+/****  End page contact     *****/
+
 /*Columns 3*/
 #columns3{ float:right; width:206px}
 
@@ -167,6 +180,11 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .menu-footer .none-line{background:none}
 .copyright {position: absolute; top:20px; right: 0; *margin:10px 0 0 0;*_margin:0;}
 .copyright a{color:#C8C8C8; font-size:10pt}
+
+/* Error */
+.errorSummary{border: 1px solid #FA8C1E; padding:2px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
+.errorSummary ul{margin:0 10px; padding:0}
+.errorSummary ul li{padding:2px 0; color: red}
 
 /** vote polls **/
 .panel-polls{padding:5px 5px 5px 15px}
