@@ -71,7 +71,7 @@ a:hover{color:#000;}
 
 /*Left content*/
 #leftcontent{float:right; width:265px}
-.frame-leftcontent{margin:0 0 10px 0;border-bottom:1px solid #EEEEEE ;border-left:1px solid #EEEEEE ; border-right:1px solid #EEEEEE}
+.frame-leftcontent{margin:0 0 10px 0;border-bottom:1px solid #DCDCDC ;border-left:1px solid #DCDCDC ; border-right:1px solid #DCDCDC}
 
 .title-left,.title-right{color:#444; font-weight:bold; padding:7px 0;font-weight:bold; background:url(../images/titalbg.gif) no-repeat;font-size:10pt}
 .title-left span, .title-right span{padding:0 10px 0 15px}
@@ -106,7 +106,7 @@ a:hover{color:#000;}
 #rightcontent ul li, #right-content ol li{margin:4px 0 4px 40px}
 #rightcontent ul ,#right-content ol{margin: 0 0 12px 0}
 
-.title-right{margin:0 0 10px 0;background:#F3F3F3;border:1px solid #DCDCDC;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px}
+.title-right{background:#F3F3F3;border-top:1px solid #DCDCDC;border-left:1px solid #DCDCDC;border-right:1px solid #DCDCDC;border-radius:2px;-webkit-border-radius:2px 2px 0 0;-moz-border-radius:2px 2px 0 0}
 
 .frame-tent-right{padding:5px;border:1px solid #DCDCDC;margin:0 0 10px 0}
 .frame-tent-right p{line-height:1.6em}
