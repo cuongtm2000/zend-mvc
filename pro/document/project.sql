@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 08, 2012 at 10:47 AM
+-- Generation Time: Aug 09, 2012 at 03:37 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `yiiproject`
+-- Database: `project`
 --
 
 -- --------------------------------------------------------
@@ -75,7 +75,9 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('products_height_thumb', '220', NULL, 'products'),
 ('products_width_desc', '520', NULL, 'products'),
 ('products_width_full', '520', NULL, 'products'),
-('products_width_thumb', '220', NULL, 'products');
+('products_width_thumb', '220', NULL, 'products'),
+('services_height_thumb', '128', NULL, 'services'),
+('services_width_thumb', '128', NULL, 'services');
 
 -- --------------------------------------------------------
 
@@ -109,7 +111,8 @@ INSERT INTO `hoiit_functions` (`function_value`, `function_name`, `function_clas
 ('news_hot', 'News', '', 'listItemsHot', 'news'),
 ('news_list_first', 'News', '', 'ListFirst', 'news'),
 ('news_new', 'News', '', 'listItemsNew', 'news'),
-('new_poll', 'Poll', '', 'getFirstItem', 'poll');
+('new_poll', 'Poll', '', 'getFirstItem', 'poll'),
+('services_list_home', 'Services', '', 'listHome', 'services');
 
 -- --------------------------------------------------------
 
@@ -589,9 +592,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_save` (
 --
 
 INSERT INTO `hoiit_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456148),
+('day_time', 2456149),
 ('max_count', 1),
-('counter', 6),
+('counter', 7),
 ('yesterday', 1);
 
 -- --------------------------------------------------------
@@ -610,7 +613,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''::1''', 1344415517);
+('''::1''', 1344475890);
 
 -- --------------------------------------------------------
 
@@ -658,7 +661,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_poll_rows` (
 
 INSERT INTO `hoiit_module_poll_rows` (`id`, `answer`, `url`, `num_vote`, `vote_id`) VALUES
 (1, 'Khỉ gió', '', 0, 2),
-(2, 'Khỉ lửa', '', 1, 2),
+(2, 'Khỉ lửa', '', 2, 2),
 (3, 'Khỉ đột', '', 0, 2);
 
 -- --------------------------------------------------------
@@ -808,9 +811,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_services` (
 --
 
 INSERT INTO `hoiit_module_services` (`record_id`, `pic_thumb`, `created`, `record_order`, `hot`, `field1`, `field2`, `enable`) VALUES
-(1, NULL, '2012-08-08 08:17:31', 1, 0, NULL, NULL, 1),
-(2, NULL, '2012-08-08 08:37:30', 2, 0, NULL, NULL, 1),
-(3, NULL, '2012-08-08 08:37:40', 3, 0, NULL, NULL, 1);
+(1, 'cong-cu-quan-tri-trang-web.png', '2012-08-08 08:17:31', 1, 0, NULL, NULL, 1),
+(2, 'giao-duc-quan-tri-vien-web.png', '2012-08-08 08:37:30', 2, 0, NULL, NULL, 1),
+(3, 'trung-tam-tro-giup.png', '2012-08-08 08:37:40', 3, 0, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -899,13 +902,14 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('left', 2, '1', 'poll', NULL, NULL, 'list_support'),
 ('right', 1, '1', 'products', NULL, NULL, 'menu_products'),
 ('right', 2, '1', 'products', NULL, NULL, 'adv_right'),
-('right', 1, '1', 'default', NULL, NULL, 'list_support'),
-('right', 2, '1', 'default', NULL, NULL, 'menu_products'),
-('right', 3, '1', 'default', NULL, NULL, 'counter'),
-('right', 4, '1', 'default', NULL, NULL, 'new_poll'),
-('right', 5, '1', 'default', NULL, NULL, 'news_hot'),
-('right', 6, '1', 'default', NULL, NULL, 'news_new'),
-('right', 7, '1', 'default', NULL, NULL, 'adv_right');
+('center', 1, '1', 'default', NULL, NULL, 'services_list_home'),
+('right', 2, '1', 'default', NULL, NULL, 'list_support'),
+('right', 3, '1', 'default', NULL, NULL, 'menu_products'),
+('right', 4, '1', 'default', NULL, NULL, 'counter'),
+('right', 5, '1', 'default', NULL, NULL, 'new_poll'),
+('right', 6, '1', 'default', NULL, NULL, 'news_hot'),
+('right', 7, '1', 'default', NULL, NULL, 'news_new'),
+('right', 8, '1', 'default', NULL, NULL, 'adv_right');
 
 -- --------------------------------------------------------
 
@@ -1115,8 +1119,8 @@ ALTER TABLE `hoiit_module_products_languages`
 -- Constraints for table `hoiit_module_services_languages`
 --
 ALTER TABLE `hoiit_module_services_languages`
-  ADD CONSTRAINT `fk_hoiit_services_has_hoiit_languages_hoiit_services1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_services` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_hoiit_services_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_hoiit_services_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_hoiit_services_has_hoiit_languages_hoiit_services1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_services` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `hoiit_positions`

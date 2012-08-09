@@ -93,6 +93,15 @@ class Services extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
+	
+	//Front end - Get list homepage
+    public function listHome() {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, created DESC';
+        $criteria->condition = 'enable = 1';
+
+        return $this->findAll($criteria);
+    }
 
     //Front end - Get first record
     public function firstRecord() {
@@ -132,7 +141,6 @@ class Services extends CActiveRecord {
     //Back end - List item admin
     public function listItemAdmin() {
         $criteria = new CDbCriteria();
-        //$criteria->with = array('Language', 'ServicesLanguage');
         $criteria->order = 'record_order DESC, created DESC';
         $count = $this->count($criteria);
 
@@ -210,6 +218,12 @@ class Services extends CActiveRecord {
         if (Yii::app()->controller->action->id == 'add') {
             $this->hot = $model->hot;
             $this->enable = $model->enable;
+			
+			//upload picture thumb
+            Yii::import('ext.SimpleImage.CSimpleImage');
+            $file = new CSimpleImage();
+            $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('services_width_thumb'), Config::getValue('services_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]);
+			
             $this->save();
 
             $id = $this->record_id;
@@ -218,6 +232,18 @@ class Services extends CActiveRecord {
             $item = $this->findByPk($id);
             $item->hot = $model->hot;
             $item->enable = $model->enable;
+			
+			//remove pic_thumb
+            if (isset($model->remove_pic_thumb) && $model->remove_pic_thumb == 1) {
+                Common::removePic($item->pic_thumb, '/image/' . strtolower(__CLASS__)); // remove pic_thumb
+                $item->pic_thumb = null;
+            }
+
+            //upload picture
+            Yii::import('ext.SimpleImage.CSimpleImage');
+            $file = new CSimpleImage();
+            $item->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('services_width_thumb'), Config::getValue('services_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']], $item->pic_thumb);
+			
             $item->save();
         }
         ServicesLanguage::model()->saveRecord($id, $model);

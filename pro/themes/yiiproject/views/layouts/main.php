@@ -33,37 +33,17 @@
         	<div class="left-main-about">
             	<h1 class="maia-super">Bạn muốn được tìm thấy trên web. Chúng tôi muốn&nbsp;giúp bạn.</h1>
                 <p class="maia-small">Nhận dữ liệu, công cụ và chẩn đoán để có trang web tốt, thân thiện với Google.</p>
-                <a class="maia-button" href="#" title="">Đăng nhập vào Công cụ quản trị trang web</a>
+                <a class="maia-button" href="#" title="">Demo Front end</a> <a class="maia-button" href="#" title="">Demo Back end</a>
             </div> <!--End left-main-about-->
             <div class="right-main-about">
             	<a class="lb" data-lightbox-height="422" data-lightbox-width="750" href="http://www.youtube.com/v/COcl6ax38IY?autoplay=1&amp;hl=vi&amp;cc_lang_pref=vi&amp;cc_load_policy=1"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/stage.png" alt="stage" /></a>
-				
 				<script type="text/javascript">
 					var stageTeaser = new gweb.ui.LightBox();
 					stageTeaser.init();
 				</script>
             </div> <!--End right-main-about--> <div class="clear"></div>
         </div> <!--End main-about -->
-        <div class="frame-panel">
-        	<div class="panel">
-                <div class="img-panel"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/webmaster_tools-128.png" alt="tool" /></div>
-                <h3 class="title-panel">Công cụ quản trị trang web</h3>
-                <p>Hiểu và cải tiến trang web của bạn trong Tìm kiếm của Google.</p>
-                <a href="" title="">Bắt đầu</a>
-            </div>
-            <div class="panel">
-                <div class="img-panel"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/webmaster_tools-128.png" alt="tool" /></div>
-                <h3 class="title-panel">Công cụ quản trị trang web</h3>
-                <p>Hiểu và cải tiến trang web của bạn trong Tìm kiếm của Google.</p>
-                <a href="" title="">Bắt đầu</a>
-            </div>
-            <div class="panel-right">
-                <div class="img-panel"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/webmaster_tools-128.png" alt="tool" /></div>
-                <h3 class="title-panel">Công cụ quản trị trang web</h3>
-                <p>Hiểu và cải tiến trang web của bạn trong Tìm kiếm của Google.</p>
-                <a href="" title="">Bắt đầu</a>
-            </div> <div class="clear"></div>
-        </div>
+		<?php $this->getPosition('center');?>
         <div id="content">
         	 <div id="rightcontent">
 				<?php echo $content; ?>

@@ -117,7 +117,7 @@ class ProductsCat extends CActiveRecord {
 
     public function listItem($cid = 0) {
         $criteria = new CDbCriteria();
-        $criteria->with = array('Language', 'ProductsCatLanguage');
+        //$criteria->with = array('Language', 'ProductsCatLanguage');
         $criteria->order = 'cat_order DESC, cat_created DESC';
         if ($cid != 0) {
             $criteria->condition = 'cat_parent_id=:cid AND cat_enable=1';
@@ -173,7 +173,7 @@ class ProductsCat extends CActiveRecord {
     //Front end - List record for index
     public function listCats($cid = 0, $prefix = NULL, $type = 0, $id = 0) {
         $criteria = new CDbCriteria();
-        $criteria->with = array('Language', 'ProductsCatLanguage');
+        //$criteria->with = array('Language', 'ProductsCatLanguage');
         $criteria->order = 'cat_order DESC, cat_created DESC';
 
         if ($cid == 1) {

@@ -110,10 +110,10 @@ class Poll extends CActiveRecord {
         $criteria->condition = 'enable = 1 AND begin_date < :time AND end_date > :time ';
         $criteria->order = 'record_order ASC';
         $criteria->params = array(':time' => time());
-        return $this->model()->find($criteria);
+        return $this->find($criteria);
     }
     public function getDetail($id) {
-        return $this->model()->findByPk($id);
+        return $this->findByPk($id);
     }
 
     //Back end - List item admin
@@ -121,14 +121,14 @@ class Poll extends CActiveRecord {
         $criteria = new CDbCriteria();
         //$criteria->with = array('Language', 'AboutLanguage');
         $criteria->order = 'record_order DESC, create_date DESC';
-        $count = $this->model()->count($criteria);
+        $count = $this->count($criteria);
 
         // elements per page
         $pages = new CPagination($count);
         $pages->pageSize = 15;
         $pages->applyLimit($criteria);
 
-        $tmp = $this->model()->findAll($criteria);
+        $tmp = $this->findAll($criteria);
         $ans = new Answers();
         foreach ($tmp as &$value) {
             $value['views'] = $ans->countView($value->record_id);
@@ -188,18 +188,18 @@ class Poll extends CActiveRecord {
                     $id = intval($id);
                     $order = intval($order);
                     if ($id && $order) {
-                        $this->model()->updateByPk($id, array('record_order' => $order));
+                        $this->updateByPk($id, array('record_order' => $order));
                     }
                 }
             }
         } else if ($syn) {
             $criteria = new CDbCriteria();
             $criteria->order = 'record_order ASC, create_date ASC';
-            $models = $this->model()->findAll($criteria);
+            $models = $this->findAll($criteria);
 
             $i = 1;
             foreach ($models as $model) {
-                $this->model()->updateByPk($model['record_id'], array('record_order' => $i));
+                $this->updateByPk($model['record_id'], array('record_order' => $i));
                 $i++;
             }
         } else {
@@ -216,14 +216,14 @@ class Poll extends CActiveRecord {
                     foreach ($record_id as $value) {
                         $id = intval($value);
                         if ($id)
-                            $this->model()->updateByPk($id, array('enable' => $active));
+                            $this->updateByPk($id, array('enable' => $active));
                     }
                 } else {                    //delete
                     foreach ($record_id as $value) {
                         $id = intval($value);
                         if ($id) {
                           //  AboutLanguage::model()->deleteRecord($id);
-                            $this->model()->deleteByPk($id);
+                            $this->deleteByPk($id);
                         }
                     }
                 }

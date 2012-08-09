@@ -26,5 +26,4 @@
         else
             $(window.location).attr('href', '<?php echo Yii::app()->baseUrl ?>/poll/default/index/vid/<?php echo $new_poll['record_id']; ?>/id/'+$('input[name=vote]:checked').val()); 
     }
-    											 
 </script>
