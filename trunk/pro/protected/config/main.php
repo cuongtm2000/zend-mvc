@@ -67,7 +67,7 @@ $config = array(
         ),
 
         'db' => array(
-            'connectionString' => 'mysql:host=localhost;dbname=yiiproject',
+            'connectionString' => 'mysql:host=localhost;dbname=project',
             //'schemaCachingDuration' => 3600,
             'emulatePrepare' => true,
             'username' => 'root',

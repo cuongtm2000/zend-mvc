@@ -46,6 +46,7 @@ class AdminController extends BackEndController {
 
         //Load Edit
         $model_data = $model->loadEdit($id);
+		$model_form['pic_thumb'] = $model_data['pic_thumb'];
         $model_form['hot'] = $model_data['hot'];
         $model_form['enable'] = $model_data['enable'];
 

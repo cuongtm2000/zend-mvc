@@ -1,6 +1,9 @@
 <?php
 
 class ServicesForm extends CFormModel {
+	public $pic_thumb;
+	public $remove_pic_thumb;
+
     public $titlevi;
     public $titleen;
     public $contentvi;
@@ -18,10 +21,11 @@ class ServicesForm extends CFormModel {
         return array(
             array('titlevi, contentvi, tagvi', 'required'),
             array('hot, enable', 'numerical', 'integerOnly' => true),
-            array('titlevi, titleen, tagvi, tagen, extra_field1, extra_field2', 'length', 'max' => 100),
+			array('pic_thumb', 'file', 'types' => 'gif,png,jpg,jpeg,icon', 'allowEmpty' => true, 'maxSize' => 1024 * 1024 * 5),
+            array('pic_thumb, titlevi, titleen, tagvi, tagen, extra_field1, extra_field2', 'length', 'max' => 100),
             array('descriptionvi, descriptionen', 'length', 'max' => 250),
             //array('tagvi, tagen', 'unique', 'className' => 'AboutLanguage', 'attributeName' => 'tag'),
-            array('contentvi, contenten', 'safe')
+            array('contentvi, contenten, remove_pic_thumb', 'safe')
         );
     }
 

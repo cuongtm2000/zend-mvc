@@ -151,25 +151,17 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 
 /** vote polls **/
 .panel-polls{padding:5px 5px 5px 15px}
-.sub-polls{list-style:none;padding:10px 0;border-bottom:1px solid #ddd;margin:0 0 10px 0}
+.sub-polls{list-style:none;padding:10px 0;margin:0 0 0 0}
 .sub-polls li{padding:2px 0}
 .sub-polls li input{margin:0 5px 0 0} .sub-polls li label{font-weight:bold}
-.button_polls{background:#ccc;border:none;padding:5px 12px;color:#3B3B3B;font-weight:bold;cursor:pointer}
+.sub-polls li label{cursor:point}
+.button_polls{background:#ccc;border:none;padding:5px 12px;color:#3B3B3B;font-weight:bold;cursor:pointer;-moz-border-radius: 1px; -webkit-border-radius: 1px}
 .f-action a{color:#B6150D;font-weight:bold}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.graph{width:100%; position:relative; right:1%}
+.bar-title{position:relative; float:left; width:50%; line-height:20px; margin-right:17px; font-weight: bold; text-align:right}
+.bar-container{position:relative; float:left; width:40%; height:10px; margin:0 0 15px}
+.bar-container div{background-color:#c40;height:20px}
+.bar-container strong{position:absolute; right:-32px;top:0; overflow:hidden}
+#poll-results{margin-bottom:30px}
+#poll-results p{text-align:center; clear: both}
