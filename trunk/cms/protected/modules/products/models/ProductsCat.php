@@ -111,13 +111,12 @@ class ProductsCat extends CActiveRecord {
         $criteria->compare('cat_enable', $this->cat_enable);
 
         return new CActiveDataProvider($this, array(
-                    'criteria' => $criteria,
-                ));
+            'criteria' => $criteria,
+        ));
     }
 
     public function listItem($cid = 0) {
         $criteria = new CDbCriteria();
-        //$criteria->with = array('Language', 'ProductsCatLanguage');
         $criteria->order = 'cat_order DESC, cat_created DESC';
         if ($cid != 0) {
             $criteria->condition = 'cat_parent_id=:cid AND cat_enable=1';
@@ -130,19 +129,6 @@ class ProductsCat extends CActiveRecord {
 
     //Front end - make menu multi level
     public function makeMenu($data, $cat_id, $strOpen = '<ul>', $strClose = '</ul>', $tag = 'li', $subTag = 'ul', $subTagItem = 'li') {
-        /* $str = null;
-          $parent_id = 6;
-          foreach ($data as $value) {
-          if ($value['cat_parent_id'] == 0) {
-          $str .= '<' . $tag . '>' . CHtml::link($value->ProductsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $value->ProductsCatLanguage[Yii::app()->language]['tag']), array('title' => $value->ProductsCatLanguage[Yii::app()->language]['cat_title']));
-          if ($parent_id && ($parent_id == $value['cat_id'])) {
-          $str .= $this->makeSubMenu($data, 0, $value['cat_id'], $subTag, $subTagItem);
-          }
-          $str .= '</' . $tag . '>';
-          }
-          }
-          return $strOpen . $str . $strClose; */
-
         $str = null;
         $root_find = $this->findCatID($cat_id);
 
@@ -150,9 +136,7 @@ class ProductsCat extends CActiveRecord {
             if ($value['cat_parent_id'] == 0) {
                 $str .= '<' . $tag . '>' . CHtml::link($value->ProductsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $value->ProductsCatLanguage[Yii::app()->language]['tag']), array('title' => $value->ProductsCatLanguage[Yii::app()->language]['cat_title']));
                 if ($value['cat_id'] == $root_find) {
-                    //$str .= '<ul>';
-                    $str .= $this->menuRecursive($value['cat_id'], $data);
-                    //$str .= '</ul>';
+                    $str .= $this->menuRecursive($value['cat_id'], $data, '', '', $subTag, $subTagItem);
                 }
                 $str .= '</' . $tag . '>';
             }
@@ -169,7 +153,7 @@ class ProductsCat extends CActiveRecord {
                 $tmp .= '</' . $subTagItem . '>';
             }
         }
-        $res.=($tmp!= '')?'<ul>'.$tmp.'</ul>':'';
+        $res.=($tmp!= '')?'<'.$subTag.'>'.$tmp.'</'.$subTag.'>':'';
         return $res;
     }
 
@@ -191,40 +175,10 @@ class ProductsCat extends CActiveRecord {
         $row = $this->loadEdit($id);
         return $row['cat_parent_id'];
     }
-
-    /* private function makeSubMenu($data, $type = 0, $cat_id, $subTag = 'ul', $subTagItem = 'li') {
-      if ($type == 1) { //return $parent_id
-      $cat_id = ProductsCatLanguage::model()->findCatByTag($cat_id);
-      $cat_id = $cat_id['cat_id'];
-      $cat_info = $this->loadEdit($cat_id);
-      $parent_id = $cat_info['cat_parent_id'];
-      //$parent_id = $cat_id['cat_id'];
-      if ($cat_id) {
-      foreach ($data as $value) {
-      if ($cat_id == $value['cat_id']) {
-      if ($value['cat_parent_id']) {
-      $parent_id = $value['cat_parent_id'];
-      }
-      break;
-      }
-      }
-      return $parent_id;
-      }
-      } else {
-      $str = null;
-      foreach ($data as $subItem) {
-      if ($subItem['cat_parent_id'] == $cat_id) {
-      $str .= '<' . $subTagItem . '>' . CHtml::link($subItem->ProductsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $subItem->ProductsCatLanguage[Yii::app()->language]['tag']), array('title' => $subItem->ProductsCatLanguage[Yii::app()->language]['cat_title'])) . '</' . $subTagItem . '>';
-      }
-      }
-      return ($str) ? ('<' . $subTag . '>' . $str . '</' . $subTag . '>') : '';
-      }
-      } */
-
+	
     //Front end - List record for index
     public function listCats($cid = 0, $prefix = NULL, $type = 0, $id = 0) {
         $criteria = new CDbCriteria();
-        //$criteria->with = array('Language', 'ProductsCatLanguage');
         $criteria->order = 'cat_order DESC, cat_created DESC';
 
         if ($cid == 1) {
