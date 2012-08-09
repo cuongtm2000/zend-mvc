@@ -135,7 +135,7 @@ class NewsCat extends CActiveRecord {
         $parent_id = $this->makeSubMenu($data, 1, $cat_id);
         foreach ($data as $value) {
             if ($value['cat_parent_id'] == 0) {
-                $str .= '<' . $tag . '>' . CHtml::link($value->NewsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setLangUrl() . '/tin-tuc/' . $value->NewsCatLanguage[Yii::app()->language]['tag']), array('title' => $value->NewsCatLanguage[Yii::app()->language]['cat_title']));
+                $str .= '<' . $tag . '>' . CHtml::link($value->NewsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $value->NewsCatLanguage[Yii::app()->language]['tag']), array('title' => $value->NewsCatLanguage[Yii::app()->language]['cat_title']));
                 if ($parent_id && ($parent_id == $value['cat_id'])) {
                     $str .= $this->makeSubMenu($data, 0, $value['cat_id'], $subTag, $subTagItem);
                 }
@@ -164,7 +164,7 @@ class NewsCat extends CActiveRecord {
             $str = null;
             foreach ($data as $subItem) {
                 if ($subItem['cat_parent_id'] == $cat_id) {
-                    $str .= '<' . $subTagItem . '>' . CHtml::link($subItem->NewsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setLangUrl() . '/san-pham/' . $subItem->NewsCatLanguage[Yii::app()->language]['tag']), array('title' => $subItem->NewsCatLanguage[Yii::app()->language]['cat_title'])) . '</' . $subTagItem . '>';
+                    $str .= '<' . $subTagItem . '>' . CHtml::link($subItem->NewsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $subItem->NewsCatLanguage[Yii::app()->language]['tag']), array('title' => $subItem->NewsCatLanguage[Yii::app()->language]['cat_title'])) . '</' . $subTagItem . '>';
                 }
             }
             return ($str) ? ('<' . $subTag . '>' . $str . '</' . $subTag . '>') : '';
