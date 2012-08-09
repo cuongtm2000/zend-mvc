@@ -19,10 +19,10 @@
  * @property HoiitLanguages[] $hoiitLanguages
  */
 class ProductsCat extends CActiveRecord {
+
     private $_data;
     private $_rows;
     private $_rowsize;
-
     private $_sub_cat_num;
     private $_sub_num_item;
 
@@ -117,7 +117,6 @@ class ProductsCat extends CActiveRecord {
 
     public function listItem($cid = 0) {
         $criteria = new CDbCriteria();
-        //$criteria->with = array('Language', 'ProductsCatLanguage');
         $criteria->order = 'cat_order DESC, cat_created DESC';
         if ($cid != 0) {
             $criteria->condition = 'cat_parent_id=:cid AND cat_enable=1';
@@ -137,9 +136,7 @@ class ProductsCat extends CActiveRecord {
             if ($value['cat_parent_id'] == 0) {
                 $str .= '<' . $tag . '>' . CHtml::link($value->ProductsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $value->ProductsCatLanguage[Yii::app()->language]['tag']), array('title' => $value->ProductsCatLanguage[Yii::app()->language]['cat_title']));
                 if ($value['cat_id'] == $root_find) {
-                    //$str .= '<ul>';
-                    $str .= $this->menuRecursive($value['cat_id'], $data);
-                    //$str .= '</ul>';
+                    $str .= $this->menuRecursive($value['cat_id'], $data, '', '', $subTag, $subTagItem);
                 }
                 $str .= '</' . $tag . '>';
             }
@@ -148,17 +145,15 @@ class ProductsCat extends CActiveRecord {
     }
 
     private function menuRecursive($parent_id, $data, $res = '', $sep = '', $subTag = 'ul', $subTagItem = 'li') {
+        $tmp='';
         foreach ($data as $v) {
             if ($v['cat_parent_id'] == $parent_id) {
-                $res .= '<' . $subTag . '>';
-
                 $re = $sep . '<' . $subTagItem . '>' . CHtml::link($v->ProductsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $v->ProductsCatLanguage[Yii::app()->language]['tag']), array('title' => $v->ProductsCatLanguage[Yii::app()->language]['cat_title']));
-                $res .= $this->menuRecursive($v['cat_id'], $data, $re, $sep . '');
-                $res .= '</' . $subTagItem . '>';
-
-                $res .= '</' . $subTag . '>';
+                $tmp .= $this->menuRecursive($v['cat_id'], $data, $re, $sep . '');
+                $tmp .= '</' . $subTagItem . '>';
             }
         }
+        $res.=($tmp!= '')?'<'.$subTag.'>'.$tmp.'</'.$subTag.'>':'';
         return $res;
     }
 
@@ -180,11 +175,10 @@ class ProductsCat extends CActiveRecord {
         $row = $this->loadEdit($id);
         return $row['cat_parent_id'];
     }
-
+	
     //Front end - List record for index
     public function listCats($cid = 0, $prefix = NULL, $type = 0, $id = 0) {
         $criteria = new CDbCriteria();
-        //$criteria->with = array('Language', 'ProductsCatLanguage');
         $criteria->order = 'cat_order DESC, cat_created DESC';
 
         if ($cid == 1) {
@@ -408,4 +402,5 @@ class ProductsCat extends CActiveRecord {
         $command->bindParam(":id", $next_info['cat_id'], PDO::PARAM_INT);
         $command->execute();
     }
+
 }
