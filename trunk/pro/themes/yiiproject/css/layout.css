@@ -73,20 +73,20 @@ a:hover{color:#000;}
 #leftcontent{float:right; width:265px}
 .frame-leftcontent{margin:0 0 10px 0;border-bottom:1px solid #EEEEEE ;border-left:1px solid #EEEEEE ; border-right:1px solid #EEEEEE}
 
-.title-left{color:#444; font-weight:bold; padding:7px 0;font-weight:bold; background:url(../images/titalbg.gif) no-repeat;font-size:10pt}
-.title-left span{padding:0 10px 0 15px}
+.title-left,.title-right{color:#444; font-weight:bold; padding:7px 0;font-weight:bold; background:url(../images/titalbg.gif) no-repeat;font-size:10pt}
+.title-left span, .title-right span{padding:0 10px 0 15px}
 
-.title-box{color:#3B3B3B; font-weight:bold; padding:8px 0 8px 0;font-weight:bold; font-size:100%; background:#EEE url(../images/tital-bullet.gif) no-repeat 10px;}
+.title-box {color:#3B3B3B; font-weight:bold; padding:8px 0 8px 0;font-weight:bold; font-size:100%; background:#EEE url(../images/tital-bullet.gif) no-repeat 10px;}
 .title-box span{padding:0px 10px 0 15px}
 
 /*sub cat*/
 .sub-cat{list-style:none;padding:10px 5px 10px 15px}
 .sub-cat li{padding:5px 0}
-.sub-cat li a{color:#444;display:block; *_display:inherit}
+.sub-cat li a{color:#444;display:block}
 .sub-cat li a:hover{ color:#3CBEDA}
-.sub-cat li ul{padding:5px 0 0 20px}
-.sub-cat li ul li{padding:2px 0;border-bottom:1px dotted #e1e1e1}
-.sub-cat li ul li a{*_display:inherit}
+.sub-cat li ul{padding:5px 0 0 20px;list-style:none}
+.sub-cat li ul li{padding:2px 0;list-style-image:url(../images/bull.jpg);border-bottom:1px dotted #e1e1e1}
+.sub-cat li ul li a{}
 
 /*Ho tro ky thuat*/
 .support{list-style:none;padding:10px 3px 15px 0;text-align:center}
@@ -102,16 +102,19 @@ a:hover{color:#000;}
 
 /*Right content*/
 #rightcontent{float:left; width:700px;}
-#rightcontent p{margin:0 0 10px 0}
+#rightcontent p{margin:0 0 10px 0;line-height:1.53em}
 #rightcontent ul li, #right-content ol li{margin:4px 0 4px 40px}
 #rightcontent ul ,#right-content ol{margin: 0 0 12px 0}
 
-.title-right{  margin:0 0 10px 0; font-size:10pt;padding:0px 0px 0px 20px;color:#3CBEDA; font-size:17px;background:url(../images/bullet2.gif) no-repeat left 2px;  font-weight:bold;}
+.title-right{margin:0 0 10px 0;background:#F3F3F3;border:1px solid #DCDCDC;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px}
+
+.frame-tent-right{padding:5px;border:1px solid #DCDCDC;margin:0 0 10px 0}
+.frame-tent-right p{line-height:1.6em}
 
 /***** Product    *****/
 #rightcontent .all-product{margin:0 ;list-style:none}
-#rightcontent .all-product .product{width:185px;padding:5px 0 15px 0;text-align:center;margin:0 0 10px 5px; border:1px solid #ddd;display:inline-block; vertical-align:top;*float:left;*margin:0 10px 10px 0}
-.product-img{height:175px; width:185px;display:table-cell;vertical-align:middle; padding:0 0 10px 0}
+#rightcontent .all-product .product{width:165px;padding:5px 0 15px 0;text-align:center;margin:0 0 10px 4px; border:1px solid #ddd;display:inline-block; vertical-align:top;*float:left;*margin:0 10px 10px 0}
+.product-img{height:155px;width:165px;display:table-cell;vertical-align:middle; padding:0 0 10px 0}
 .tent-product{padding:0 5px}
 #rightcontent .price{color:#000; font-weight:700; font-size:13px; margin:7px 0 10px 0}
 .title-pro{padding:7px 0 0 0 ; font-size:10pt}
@@ -120,8 +123,24 @@ a:hover{color:#000;}
 .add-to-cart{padding: 5px 0 8px 5px; font-weight:700;background:url(../images/bkg_btn.png) no-repeat left top;*padding:0 0 0 5px;*height:25px}
 .add-to-cart span{background:url(../images/bkg_btn.png) no-repeat right top; padding:5px 15px 8px 10px; height:25px;color:#fff}
 
+/*   Page New  */
+.panel-items{list-style: none;text-align:justify;font-size:10pt;margin:0 0 20px 0}
+.panel-items li.alt, .panel-items-other li.alt{background: #F4F4F4}
+#rightcontent .panel-items li{ margin:0 0 10px 0}
+.frame-img{float:left;margin:0 8px 3px 0}
+.title-items{margin:0 0 5px 0;font-size:10pt}
+.title-items a{color:#000}
+.title-items a:hover{color:#3994AB}
+
+/**  panel-items-other tin tuc khac **/
+.title-item-other{color:#8A0000;margin:20px 0 10px;font-size:11pt;padding-left:10px}
+#rightcontent .panel-items-other li{list-style:square;color:#0D2364}
+.panel-items-other li a{color:#000;margin:0 0 0 -4px; display:block;/*background:url(../images/square.gif) no-repeat left 6px;padding-left:10px */}
+#rightcontent .panel-items-other li:hover{color:#666}
+.panel-items-other li a:hover{color:#666}
+
 /* paging */
-ul.paging{float: right; margin:0; padding:0 0 5px 0; list-style: none;}
+#rightcontent  ul.paging{float: right; margin:0; padding:0 0 5px 0; list-style: none;}
 ul.paging li{display: inline;margin:0 !important;}
 ul.paging .hidden{display: none;}
 ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{color:#3CBEDA; border: 1px solid #ccc; padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}

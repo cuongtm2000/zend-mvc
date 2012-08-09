@@ -1,7 +1,7 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id]); ?>
 <?php $this->pageTitle = $this->lang[$this->module->id]; $this->setDescription()?>
 <div class="main-all-product">
-    <h2 class="title-right"><?php echo $this->lang['cat_title'] . ' ' . strtolower($this->lang[$this->module->id])?></h2>
+    <h2 class="title-right"><span><?php echo $this->lang['cat_title'] . ' ' . strtolower($this->lang[$this->module->id])?></span></h2>
     <?php if($items):?>
     <ul class="all-product">
         <?php foreach($items as $value): ?>
