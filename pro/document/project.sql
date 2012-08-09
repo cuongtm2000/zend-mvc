@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 09, 2012 at 03:37 AM
+-- Generation Time: Aug 09, 2012 at 04:14 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -413,7 +413,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus` (
   `menu_homepage` tinyint(1) NOT NULL DEFAULT '0',
   `menu_activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=33 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=34 ;
 
 --
 -- Dumping data for table `hoiit_module_menus`
@@ -421,10 +421,11 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus` (
 
 INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_type`, `menu_target`, `menu_sort`, `menu_homepage`, `menu_activated`) VALUES
 (27, 0, 1, '', 1, 1, 1),
-(29, 0, 1, '', 3, 0, 1),
-(30, 28, 0, '', 4, 0, 1),
+(29, 0, 1, '', 4, 0, 1),
+(30, 28, 0, '', 3, 0, 1),
 (31, 0, 1, '', 5, 0, 1),
-(32, 0, 1, '', 32, 0, 1);
+(32, 0, 1, '', 6, 0, 1),
+(33, 0, 1, '', 2, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -448,11 +449,12 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus_languages` (
 --
 
 INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name`, `menu_url`, `menu_description`) VALUES
-(27, 'vi', 'Trang chủ', 'trang-chu', 'Trang chu mô tả'),
-(29, 'vi', 'Sản phẩm', 'san-pham', ''),
+(27, 'vi', 'Home page', 'home-page', 'Home page'),
+(29, 'vi', 'Projects', 'san-pham', 'Project'),
 (30, 'vi', 'Sub', 'gioi-thieu/welcome-to-yiiprojectcom.html', ''),
-(31, 'vi', 'Tin tức & sự kiện', 'tin-tuc', 'Co mo ta tin tuc'),
-(32, 'vi', 'Liên hệ', 'lien-he', '');
+(31, 'vi', 'Tutorial programming', 'tin-tuc', 'Tutorial programming'),
+(32, 'vi', 'Contact', 'lien-he', ''),
+(33, 'vi', 'Outsource', 'outsource', '');
 
 -- --------------------------------------------------------
 
@@ -613,7 +615,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''::1''', 1344475890);
+('''::1''', 1344504516);
 
 -- --------------------------------------------------------
 
@@ -897,7 +899,6 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('left', 1, '1', 'news', NULL, NULL, 'menu_news'),
 ('right', 2, '1', 'news', NULL, NULL, 'adv_right'),
 ('left', 3, '1', 'news', NULL, NULL, 'adv_left'),
-('left', 1, '1', 'contact', NULL, NULL, 'list_support'),
 ('right', 1, '1', 'poll', NULL, NULL, 'adv_right'),
 ('left', 2, '1', 'poll', NULL, NULL, 'list_support'),
 ('right', 1, '1', 'products', NULL, NULL, 'menu_products'),
@@ -909,7 +910,9 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('right', 5, '1', 'default', NULL, NULL, 'new_poll'),
 ('right', 6, '1', 'default', NULL, NULL, 'news_hot'),
 ('right', 7, '1', 'default', NULL, NULL, 'news_new'),
-('right', 8, '1', 'default', NULL, NULL, 'adv_right');
+('right', 8, '1', 'default', NULL, NULL, 'adv_right'),
+('right', 1, '1', 'contact', NULL, NULL, 'list_support'),
+('right', 2, '1', 'contact', NULL, NULL, 'adv_right');
 
 -- --------------------------------------------------------
 
@@ -984,19 +987,20 @@ CREATE TABLE IF NOT EXISTS `hoiit_urls` (
 --
 
 INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `url_type`, `hoiit_modules_module_id`, `hoiit_languages_language_id`) VALUES
+('contact', 'contact/default/index', '', 0, 1, 'contact', 'vi'),
 ('gioi-thieu', 'about/default/index', '', 2, 1, 'about', 'vi'),
 ('gioi-thieu/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 1, 0, 'about', 'vi'),
-('lien-he', 'contact/default/index', '', 1, 1, 'contact', 'vi'),
-('san-pham', 'products/default/index', '', 3, 1, 'products', 'vi'),
-('san-pham/<cid:[-a-z0-9]+>', 'products/default/cats', '', 2, 0, 'products', 'vi'),
-('san-pham/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'products/default/view', 'urlSuffix=>.html', 0, 0, 'products', 'vi'),
-('san-pham/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'products/default/cats', '', 1, 0, 'products', 'vi'),
-('tin-tuc', 'news/default/index', '', 1, 1, 'news', 'vi'),
-('tin-tuc/<cid:[-a-z0-9]+>', 'news/default/cats', '', 3, 0, 'news', 'vi'),
-('tin-tuc/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'news/default/view', 'urlSuffix=>.html', 5, 0, 'news', 'vi'),
-('tin-tuc/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'news/default/cats', '', 2, 0, 'news', 'vi'),
-('tin-tuc/trang/<page:\\d+>', 'news/default/index', '', 0, 0, 'news', 'vi'),
-('trang-chu', 'default/default/index', NULL, NULL, 1, 'default', 'vi');
+('home-page', 'default/default/index', NULL, NULL, 1, 'default', 'vi'),
+('outsource', 'services/default/index', '', 0, 1, 'services', 'vi'),
+('projects', 'products/default/index', '', 3, 1, 'products', 'vi'),
+('projects/<cid:[-a-z0-9]+>', 'products/default/cats', '', 2, 0, 'products', 'vi'),
+('projects/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'products/default/view', 'urlSuffix=>.html', 0, 0, 'products', 'vi'),
+('projects/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'products/default/cats', '', 1, 0, 'products', 'vi'),
+('tutorial-programming', 'news/default/index', '', 1, 1, 'news', 'vi'),
+('tutorial-programming/<cid:[-a-z0-9]+>', 'news/default/cats', '', 3, 0, 'news', 'vi'),
+('tutorial-programming/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'news/default/view', 'urlSuffix=>.html', 4, 0, 'news', 'vi'),
+('tutorial-programming/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'news/default/cats', '', 2, 0, 'news', 'vi'),
+('tutorial-programming/trang/<page:\\d+>', 'news/default/index', '', 0, 0, 'news', 'vi');
 
 -- --------------------------------------------------------
 
