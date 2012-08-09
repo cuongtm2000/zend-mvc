@@ -163,13 +163,13 @@ class ProductsCat extends CActiveRecord {
     private function menuRecursive($parent_id, $data, $res = '', $sep = '', $subTag = 'ul', $subTagItem = 'li') {
         foreach ($data as $v) {
             if ($v['cat_parent_id'] == $parent_id) {
-                $res .= '<' . $subTag . '>';
+                $res .= '<ul>';
 
                 $re = $sep . '<' . $subTagItem . '>' . CHtml::link($v->ProductsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $v->ProductsCatLanguage[Yii::app()->language]['tag']), array('title' => $v->ProductsCatLanguage[Yii::app()->language]['cat_title']));
                 $res .= $this->menuRecursive($v['cat_id'], $data, $re, $sep . '');
                 $res .= '</' . $subTagItem . '>';
 
-                $res .= '</' . $subTag . '>';
+                $res .= '</ul>';
             }
         }
         return $res;
