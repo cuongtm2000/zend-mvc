@@ -34,7 +34,7 @@
                     </li>
                     <li class="clear">
                         <p><?php echo $form->labelEx($model, 'content') ?></p>
-                        <?php echo $form->textArea($model, 'content', array('cols'=>20, 'rows'=>7)); ?></li>
+                        <?php echo $form->textArea($model, 'content', array('cols'=>20, 'rows'=>10)); ?></li>
                     <li>
                         <?php echo CHtml::submitButton(Yii::t('main', 'send'), array('name'=>'submit', 'class'=>'button-submit', 'title'=>Yii::t('main', 'send'))); ?>
                         <?php echo CHtml::resetButton(Yii::t('main', 'reset'), array('name'=>'reset', 'class'=>'button-submit', 'title'=>Yii::t('main', 'reset'))); ?>
