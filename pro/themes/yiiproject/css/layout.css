@@ -43,7 +43,7 @@ a:hover{color:#000;}
 
 /****    *****/
 .fonttext{font-family:"open sans",arial,sans-serif}
-.main-about{padding:40px 0 30px 0;border-bottom:1px solid #E5E5E5;margin:0 0 40px 0}
+.main-about{padding:40px 0 30px 0;border-bottom:1px dashed #eee;margin:0 0 20px 0}
 .left-main-about{float:left;width:460px}
 .maia-super, .title-panel{color:#444;font-size:27px;line-height:1.55em;margin:0 0 10px 0; font-weight: bold}
 .maia-small{font-size:16px; margin:0 0 30px 0; line-height:1.50em; font-family: 'open sans',arial,sans-serif}
@@ -54,7 +54,6 @@ a:hover{color:#000;}
 .right-main-about{width:511px; float:right}
 
 /*** panel ***/
-.frame-panel{}
 .panel,.panel-right{width:310px;float:left;margin:0 25px 0 0;color:#444;font-size:10pt}
 .panel,.panel-right p{line-height:1.5em}
 .panel a,.panel-right a{color:#1155CC} .panel a:hover,.panel-right a:hover{text-decoration:underline}
@@ -67,9 +66,7 @@ a:hover{color:#000;}
 #banner{ margin:0 0 10px 0}
 
 /* Page Content*/
-#content{margin:0 0 10px 0}
-
-/*Left content*/
+#content{margin:5px 0 10px 0}
 #leftcontent{float:right; width:265px}
 .frame-leftcontent{margin:0 0 10px 0;border-bottom:1px solid #DCDCDC ;border-left:1px solid #DCDCDC ; border-right:1px solid #DCDCDC}
 
@@ -206,7 +203,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .sub-polls{list-style:none;padding:10px 0;margin:0 0 0 0}
 .sub-polls li{padding:2px 0}
 .sub-polls li input{margin:0 5px 0 0} .sub-polls li label{font-weight:bold}
-.sub-polls li label{cursor:point}
+.sub-polls li label{cursor:pointer}
 .button_polls{background:#ccc;border:none;padding:5px 12px;color:#3B3B3B;font-weight:bold;cursor:pointer;-moz-border-radius: 1px; -webkit-border-radius: 1px}
 .f-action a{color:#B6150D;font-weight:bold}
 
