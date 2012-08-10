@@ -1,5 +1,5 @@
 <?php if(isset($list_support)) :?>
-	<h1 class="title-box"><span><?php echo $this->lang['support'] ?></span></h1>
+	<h5 class="title-left"><span><?php echo $this->lang['support'] ?></span></h5>
 	<ul class="frame-leftcontent support">
 		<?php foreach($list_support as $key => $value): ?>
 			<?php if($value['support_type']=='yahoo'): ?>

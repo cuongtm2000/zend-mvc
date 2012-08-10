@@ -46,20 +46,13 @@
 		<?php $this->getPosition('center');?>
         <div id="content">
         	 <div id="rightcontent">
+				<?php $this->widget('ext.Banner.BannerSlider');?>
+				<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+					'homeLink' => CHtml::link($this->lang['default'], Yii::app()->baseUrl.$this->setLangUrl(), array('title' => $this->lang['default'])),
+					'links'=>$this->breadcrumbs
+				)); ?>
 				<?php echo $content; ?>
 				<?php $this->getPosition('left');?>
-            	<!-- <div class="">
-                    <div class="img-panel"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/webmaster_tools-128.png" alt="tool" /></div>
-                    <h3 class="title-panel">Công cụ quản trị trang web</h3>
-                    <p>Hiểu và cải tiến trang web của bạn trong Tìm kiếm của Google.</p>
-                    <a href="" title="">Bắt đầu</a>
-                </div>
-                <div class="">
-                    <div class="img-panel"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/webmaster_tools-128.png" alt="tool" /></div>
-                    <h3 class="title-panel">Công cụ quản trị trang web</h3>
-                    <p>Hiểu và cải tiến trang web của bạn trong Tìm kiếm của Google.</p>
-                    <a href="" title="">Bắt đầu</a>
-                </div> -->
             </div><!--End right content-->
         	<div id="leftcontent">
 				<?php $this->getPosition('right');?>				
