@@ -1,8 +1,8 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id] => array($this->setUrlModule()), $info_cat['cat_title']); ?>
 <?php $this->pageTitle = $info_cat['cat_title'] . ' - ' . $this->lang[$this->module->id]; $this->setDescription($info_cat['description'])?>
 <?php if($sub_cats):?>
-<div class="main-all-product">
-    <h2 class="title-right"><span>Danh muc con</span></h2>
+<h2 class="title-right"><span>Danh muc con</span></h2>
+<div class="main-all-product">	
     <ul class="all-product">
         <?php foreach($sub_cats as $value): ?>
             <li class="product">
