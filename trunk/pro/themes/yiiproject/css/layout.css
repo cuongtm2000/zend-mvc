@@ -71,7 +71,7 @@ a:hover{color:#000;}
 .frame-leftcontent{margin:0 0 10px 0;border:1px solid #DCDCDC}
 
 .title-left,.title-right{color:#444; font-weight:bold; padding:7px 5px;font-weight:bold; background:url(../images/titalbg-1.gif) no-repeat;font-size:10pt}
-.title-left span, .title-right span{padding:0 10px 0 15px}
+.title-left span, .title-right span{padding:0 10px 0 0}
 
 .title-left{padding:8px 0}
 .title-box {color:#3B3B3B; font-weight:bold; padding:8px 0 8px 0;font-weight:bold; font-size:100%; background:#EEE url(../images/tital-bullet.gif) no-repeat 10px;}
@@ -220,3 +220,5 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .bar-container strong{position:absolute; right:-32px;top:0; overflow:hidden}
 #poll-results{margin-bottom:30px}
 #poll-results p{text-align:center; clear: both}
+
+.no-record{padding-left: 5px}
