@@ -10,7 +10,7 @@
         <div class="frame-tent-right"><?php echo $item['content']?>
             <?php $form = $this->beginWidget('CActiveForm', array('id'=>'frm', 'enableAjaxValidation'=>true, 'enableClientValidation' =>true));?>
                 <?php echo $form->errorSummary($model, ''); ?>
-                <p>Quý khách có thể liên hệ với chúng tôi bằng cách điền đầy đủ thông tin vào mẫu sau:</p>
+                <p>Complete the form below to contact us:</p>
                 <ul class="frame-contact">
                     <li class="left-contact">
                         <p><?php echo $form->labelEx($model, 'fullname') ?></p>
