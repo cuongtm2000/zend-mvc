@@ -49,7 +49,8 @@
 				<?php $this->widget('ext.Banner.BannerSlider');?>
 				<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 					'homeLink' => CHtml::link($this->lang['default'], Yii::app()->baseUrl.$this->setLangUrl(), array('title' => $this->lang['default'])),
-					'links'=>$this->breadcrumbs
+					'links'=>$this->breadcrumbs,
+					'separator' =>'<b>&raquo;</b>'
 				)); ?>
 				<?php echo $content; ?>
 				<?php $this->getPosition('left');?>
