@@ -31,7 +31,7 @@
         <div class="clear"></div>
         <div class="main-about">
         	<div class="left-main-about">
-            	<h1 class="maia-super">Bạn muốn được tìm thấy trên web. Chúng tôi muốn&nbsp;giúp bạn.</h1>
+            	<h1 class="maia-super">You want a Website quality, usability. We want to help.</h1>
                 <p class="maia-small">Nhận dữ liệu, công cụ và chẩn đoán để có trang web tốt, thân thiện với Google.</p>
                 <a class="maia-button" href="#" title="">Demo Front end</a> <a class="maia-button" href="#" title="">Demo Back end</a>
             </div> <!--End left-main-about-->
