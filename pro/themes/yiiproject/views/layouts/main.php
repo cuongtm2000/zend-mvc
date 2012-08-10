@@ -36,7 +36,7 @@
                 <a class="maia-button" href="#" title="">Demo Front end</a> <a class="maia-button" href="#" title="">Demo Back end</a>
             </div> <!--End left-main-about-->
             <div class="right-main-about">
-            	<a class="lb" data-lightbox-height="422" data-lightbox-width="750" href="http://www.youtube.com/v/COcl6ax38IY?autoplay=1&amp;hl=vi&amp;cc_lang_pref=vi&amp;cc_load_policy=1"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/stage.png" alt="stage" /></a>
+            	<a class="lb" data-lightbox-height="422" data-lightbox-width="750" href="http://www.youtube.com/v/COcl6ax38IY?autoplay=1&amp;hl=vi&amp;cc_lang_pref=vi&amp;cc_load_policy=1"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/intro.png" alt="stage" /></a>
 				<script type="text/javascript">
 					var stageTeaser = new gweb.ui.LightBox();
 					stageTeaser.init();

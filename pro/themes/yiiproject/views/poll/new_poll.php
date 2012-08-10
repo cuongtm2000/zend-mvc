@@ -1,5 +1,5 @@
 <?php if ($new_poll): ?>
-    <h4 class="title-box"><span>Thăm dò ý kiến</span></h4>
+    <h4 class="title-box"><span><?php echo $this->lang['poll']?></span></h4>
     <div class="frame-leftcontent panel-polls">
         <p><?php echo $new_poll['question'] ?></p>
         <ul class="sub-polls">
@@ -13,14 +13,14 @@
             ?> 
         </ul>
         <div class="f-action">
-            <input class="button_polls" type="button" onclick="sendvoting()" value="Bình chọn" />
+            <input class="button_polls" type="button" onclick="sendVoting()" value="Vote" />
         </div>
     </div>
 
 <?php endif ?>
 
 <script type="text/javascript">
-    function sendvoting(){
+    function sendVoting(){
         if($('input[name=vote]:checked').val()==undefined)
             alert('Bạn chưa chọn câu trả lời nào.');
         else
