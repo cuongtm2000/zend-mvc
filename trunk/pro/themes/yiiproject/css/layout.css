@@ -109,6 +109,11 @@ a:hover{color:#000;}
 .frame-tent-right{padding:5px;border:1px solid #DCDCDC;margin:0 0 10px 0}
 .frame-tent-right p{line-height:1.6em}
 
+.breadcrumbs{color:#000;padding:9px 10px}
+.breadcrumbs b{}
+.breadcrumbs a{color:#249ABB}
+.breadcrumbs a:hover{text-decoration:underline}
+
 /***** Product    *****/
 .main-all-product{padding:5px 0;border:1px solid #DCDCDC}
 #rightcontent .all-product{margin:0 ;list-style:none}
