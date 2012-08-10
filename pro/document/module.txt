@@ -1,3 +1,0 @@
-Add module:
-	Them record: hoiit_modules
-	Them record: hoiit_langs
