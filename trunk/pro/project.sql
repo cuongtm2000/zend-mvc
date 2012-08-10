@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 09, 2012 at 04:14 PM
+-- Generation Time: Aug 10, 2012 at 10:29 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -103,7 +103,7 @@ INSERT INTO `hoiit_functions` (`function_value`, `function_name`, `function_clas
 ('about_home', 'About', '', 'firstHotRecord', 'about'),
 ('adv_left', 'Adv', '', 'listItemsLeft', 'adv'),
 ('adv_right', 'Adv', '', 'listItemsRight', 'adv'),
-('counter', 'Counter', 'Counter.Counter', 'publishAssets', 'counter'),
+('counter_session', 'CounterSession', 'CounterSession.Counter', 'publishAssets', 'counterSession'),
 ('list_support', 'Support', '', 'listItem', 'support'),
 ('menu_about', 'About', '', 'listItem', 'about'),
 ('menu_news', 'NewsCat', '', 'listItem', 'news'),
@@ -153,33 +153,33 @@ CREATE TABLE IF NOT EXISTS `hoiit_langs` (
 --
 
 INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_languages_language_id`) VALUES
-('about', 'Giới thiệu', 0, 'vi'),
-('action', 'Thao tác', 1, 'vi'),
-('add_new', 'Thêm mới', 1, 'vi'),
-('add_row', 'Thêm dòng', 1, 'vi'),
-('adv', 'Quảng cáo', 0, 'vi'),
-('banner', 'Banner', 1, 'vi'),
-('cancel', 'Hủy bỏ', 1, 'vi'),
-('cat_title', 'Danh mục', 0, 'vi'),
-('contact', 'Liên hệ', 0, 'vi'),
-('counter', 'Thống kê truy cập', 0, 'vi'),
-('create_date', 'Ngày tạo', 1, 'vi'),
-('default', 'Trang chủ', 0, 'vi'),
-('delete', 'Xóa', 1, 'vi'),
-('edit', 'Chỉnh sửa', 0, 'vi'),
-('hidden', 'Ẩn', 1, 'vi'),
-('news', 'Tin tức & sự kiện', 0, 'vi'),
-('no_record', 'Không tồn tại mẫu tin', 0, 'vi'),
-('order', 'Thứ tự', 1, 'vi'),
-('poll', 'Bình chọn', 0, 'vi'),
-('products', 'Sản phẩm', 0, 'vi'),
-('services', 'Dịch vụ', 0, 'vi'),
-('show', 'Hiển thị', 1, 'vi'),
-('sort', 'Sắp xếp', 1, 'vi'),
-('support', 'Hỗ trợ trực tuyến', 0, 'vi'),
-('synchronous', 'Đồng bộ', 1, 'vi'),
-('title', 'Tiêu đề', 1, 'vi'),
-('view', 'Lượt xem', 1, 'vi');
+('about', 'Giới thiệu', 0, 'en'),
+('action', 'Thao tác', 1, 'en'),
+('add_new', 'Thêm mới', 1, 'en'),
+('add_row', 'Thêm dòng', 1, 'en'),
+('adv', 'Quảng cáo', 0, 'en'),
+('banner', 'Banner', 1, 'en'),
+('cancel', 'Hủy bỏ', 1, 'en'),
+('cat_title', 'Danh mục', 0, 'en'),
+('contact', 'Liên hệ', 0, 'en'),
+('counterSession', 'Thống kê truy cập', 0, 'en'),
+('create_date', 'Ngày tạo', 1, 'en'),
+('default', 'Trang chủ', 0, 'en'),
+('delete', 'Xóa', 1, 'en'),
+('edit', 'Chỉnh sửa', 0, 'en'),
+('hidden', 'Ẩn', 1, 'en'),
+('news', 'Tin tức & sự kiện', 0, 'en'),
+('no_record', 'Không tồn tại mẫu tin', 0, 'en'),
+('order', 'Thứ tự', 1, 'en'),
+('poll', 'Bình chọn', 0, 'en'),
+('products', 'Sản phẩm', 0, 'en'),
+('services', 'Dịch vụ', 0, 'en'),
+('show', 'Hiển thị', 1, 'en'),
+('sort', 'Sắp xếp', 1, 'en'),
+('support', 'Hỗ trợ trực tuyến', 0, 'en'),
+('synchronous', 'Đồng bộ', 1, 'en'),
+('title', 'Tiêu đề', 1, 'en'),
+('view', 'Lượt xem', 1, 'en');
 
 -- --------------------------------------------------------
 
@@ -199,6 +199,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_languages` (
 --
 
 INSERT INTO `hoiit_languages` (`language_id`, `language_name`, `language_sort`) VALUES
+('en', 'English', 1),
 ('vi', 'Việt Nam', 1);
 
 -- --------------------------------------------------------
@@ -226,7 +227,7 @@ INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_url`, `module_
 ('adv', 'Danh sách|Cấu hình', 'adv|adv/config', 5, 1, 0),
 ('banner', 'Danh sách Banner|Danh sách Logo|Cấu hình', 'banner|banner/logo|banner/config', 6, 1, 0),
 ('contact', 'Danh sách|Cấu hình|Cấu hình Url', 'contact|contact/config|contact/url', 2, 1, 1),
-('counter', 'Counter', NULL, 4, 0, 0),
+('counterSession', 'CounterSession', NULL, 4, 0, 0),
 ('default', 'Default', NULL, 1, 1, 1),
 ('news', 'Danh mục|Danh sách|Cấu hình|Cấu hình Url', 'news/cat|news|news/config|news/url', 4, 1, 1),
 ('poll', 'Danh sách|Cấu hình Url', 'poll|poll/url', 7, 1, 1),
@@ -252,14 +253,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about` (
   PRIMARY KEY (`record_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=48 ;
 
---
--- Dumping data for table `hoiit_module_about`
---
-
-INSERT INTO `hoiit_module_about` (`record_id`, `pic_thumb`, `created`, `record_order`, `hot`, `field1`, `field2`, `enable`) VALUES
-(46, NULL, '2012-07-16 03:15:05', 1, 0, NULL, NULL, 1),
-(47, NULL, '2012-07-16 03:20:52', 2, 1, NULL, NULL, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -280,14 +273,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
   KEY `fk_hoiit_about_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_about_has_hoiit_languages_hoiit_about1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_about_languages`
---
-
-INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(46, 'vi', 'Welcome to Yiiproject.com', '<p>Welcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to</p>\r\n<h3>Welcome to Yiiproject.com</h3>\r\n<p>Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.com</p>', 'welcome-to-yiiprojectcom', 'das', 323, NULL, NULL),
-(47, 'vi', 'Gioi thieu', '<p>Noi dung</p>', 'gioi-thieu', 'asdasdsd', 293, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -365,13 +350,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_contacts` (
   PRIMARY KEY (`record_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
---
--- Dumping data for table `hoiit_module_contacts`
---
-
-INSERT INTO `hoiit_module_contacts` (`record_id`, `created`, `record_order`, `hot`, `enable`) VALUES
-(2, '2012-08-07 01:08:47', 2, 0, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -391,12 +369,49 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_contacts_languages` (
   KEY `fk_hoiit_module_contacts_has_hoiit_languages_hoiit_module_con1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `hoiit_module_contacts_languages`
+-- Table structure for table `hoiit_module_counter_session`
 --
 
-INSERT INTO `hoiit_module_contacts_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`) VALUES
-(2, 'vi', 'sddsds', '<p>dssdds</p>', 'sddsds', 'sdsd', 0);
+CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
+  `session_id` varchar(9) NOT NULL,
+  `session_time` int(11) NOT NULL,
+  PRIMARY KEY (`session_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_counter_session`
+--
+
+INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
+('2n7sqfhg1', 1344586827),
+('qbchvnr1g', 1344587236);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_counter_value`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_counter_value` (
+  `save_name` varchar(32) NOT NULL,
+  `save_value` int(11) NOT NULL,
+  PRIMARY KEY (`save_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_counter_value`
+--
+
+INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
+('max_visit_day', 1344549600),
+('max_visit_value', 2),
+('time_start_today', 1344549600),
+('today_visited', 2),
+('total_visited', 2),
+('yesterday_visited', 0);
 
 -- --------------------------------------------------------
 
@@ -449,12 +464,12 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus_languages` (
 --
 
 INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name`, `menu_url`, `menu_description`) VALUES
-(27, 'vi', 'Home page', 'home-page', 'Home page'),
-(29, 'vi', 'Projects', 'san-pham', 'Project'),
-(30, 'vi', 'Sub', 'gioi-thieu/welcome-to-yiiprojectcom.html', ''),
-(31, 'vi', 'Tutorial programming', 'tin-tuc', 'Tutorial programming'),
-(32, 'vi', 'Contact', 'lien-he', ''),
-(33, 'vi', 'Outsource', 'outsource', '');
+(27, 'en', 'Home page', 'home-page', 'Home page'),
+(29, 'en', 'Projects', 'projects', 'Project'),
+(30, 'en', 'Sub', 'gioi-thieu/welcome-to-yiiprojectcom.html', ''),
+(31, 'en', 'Tutorial programming', 'tutorial-programming', 'Tutorial programming'),
+(32, 'en', 'Contact', 'contact', ''),
+(33, 'en', 'Outsource', 'outsource', '');
 
 -- --------------------------------------------------------
 
@@ -480,17 +495,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news` (
   KEY `fk_hoiit_module_news_hoiit_module_news_cat_1` (`hoiit_module_item_cat_cat_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
---
--- Dumping data for table `hoiit_module_news`
---
-
-INSERT INTO `hoiit_module_news` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
-(1, '2012-07-25 06:18:56', 'tieu-de-bac.jpg', NULL, 3, 1, NULL, NULL, NULL, NULL, NULL, 1, 16),
-(2, '2012-08-01 01:35:08', '', NULL, 2, 0, NULL, NULL, NULL, NULL, NULL, 1, 16),
-(3, '2012-08-01 01:35:15', '', NULL, 1, 0, NULL, NULL, NULL, NULL, NULL, 1, 16),
-(4, '2012-08-01 03:20:22', '', NULL, 4, 0, NULL, NULL, NULL, NULL, NULL, 1, 16),
-(5, '2012-08-01 03:20:33', '', NULL, 5, 0, NULL, NULL, NULL, NULL, NULL, 1, 16);
-
 -- --------------------------------------------------------
 
 --
@@ -511,14 +515,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_cat` (
   PRIMARY KEY (`cat_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
---
--- Dumping data for table `hoiit_module_news_cat`
---
-
-INSERT INTO `hoiit_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
-(15, 16, '2012-07-25 04:16:17', NULL, NULL, 0, 15, NULL, NULL, 1),
-(16, 0, '2012-07-25 06:11:55', 'danh-muc.jpg', NULL, 0, 16, NULL, NULL, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -536,14 +532,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_cat_languages` (
   KEY `fk_hoiit_module_news_cat_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_news_cat_has_hoiit_languages_hoiit_module_ne1` (`cat_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_news_cat_languages`
---
-
-INSERT INTO `hoiit_module_news_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
-(15, 'vi', 'An', '', 'an', ''),
-(16, 'vi', 'Danh muc "an" sa', '', 'danh-muc-an-sa', '');
 
 -- --------------------------------------------------------
 
@@ -566,56 +554,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_languages` (
   KEY `fk_hoiit_module_news_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_news_has_hoiit_languages_hoiit_module_news1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_news_languages`
---
-
-INSERT INTO `hoiit_module_news_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(1, 'vi', 'Tieu de "bac"', '<p>sdfsdfsdfsdf</p>', '<p>asdasdsa</p>', 'tieu-de-bac', 'sdfsd', 0, NULL, NULL),
-(2, 'vi', 'asdas', '<p>dasdas</p>', '<p>asdsad</p>', 'asdas', '', 0, NULL, NULL),
-(3, 'vi', 'asdasdssdd', '<p>dasdsads</p>', '<p>asdsa</p>', 'asdasdssdd', '', 0, NULL, NULL),
-(4, 'vi', 'asdsad', '<p>asd</p>', '<p>asdsadsa</p>', 'asdsad', '', 0, NULL, NULL),
-(5, 'vi', 'asdasd', '<p>asdasdsad</p>', '<p>saveRecordsaveRecordsaveRecordsaveRecordsasaveRecordsaveRecordsaveRecordsaveRecordsasaveRecordsaveRecordsaveRecordsaveRecordsasaveRecordsaveRecordsaveRecordsaveRecordsasaveRecordsaveRecordsaveRecordsaveRecordsasaveRecordsaveRecordsaveRecordsaveRecordsasaveRecordsaveRecordsaveRecordsaveRecordsasaveRecordsaveRecordsaveRecordsaveRecordsa</p>', 'asdasd', '', 0, NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `hoiit_module_pcounter_save`
---
-
-CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_save` (
-  `save_name` varchar(10) NOT NULL,
-  `save_value` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_pcounter_save`
---
-
-INSERT INTO `hoiit_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456149),
-('max_count', 1),
-('counter', 7),
-('yesterday', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `hoiit_module_pcounter_users`
---
-
-CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
-  `user_ip` varchar(39) NOT NULL,
-  `user_time` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_pcounter_users`
---
-
-INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''::1''', 1344504516);
 
 -- --------------------------------------------------------
 
@@ -692,15 +630,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products` (
   KEY `fk_hoiit_module_products_hoiit_module_products_cat1` (`hoiit_module_item_cat_cat_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
---
--- Dumping data for table `hoiit_module_products`
---
-
-INSERT INTO `hoiit_module_products` (`record_id`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `record_order`, `unit`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
-(1, '2012-07-31 03:58:20', '', '', NULL, 1, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 5),
-(2, '2012-07-31 04:54:34', '', '', NULL, 2, '123456', 0, NULL, NULL, NULL, NULL, NULL, 1, 5),
-(3, '2012-07-31 04:54:43', 'dsdds-thumb.jpg', '', NULL, 3, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 5);
-
 -- --------------------------------------------------------
 
 --
@@ -721,16 +650,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products_cat` (
   PRIMARY KEY (`cat_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
---
--- Dumping data for table `hoiit_module_products_cat`
---
-
-INSERT INTO `hoiit_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
-(4, 0, '2012-07-25 04:20:15', 'ddddsd.jpg', NULL, 0, 4, NULL, NULL, 1),
-(5, 0, '2012-07-25 06:28:10', 'sddsffsdsd.jpg', NULL, 0, 5, NULL, NULL, 1),
-(6, 5, '2012-07-30 13:45:47', '', NULL, 0, 6, NULL, NULL, 1),
-(7, 0, '2012-07-31 04:00:12', '', NULL, 0, 7, NULL, NULL, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -748,16 +667,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products_cat_languages` (
   KEY `fk_hoiit_module_products_cat_has_hoiit_languages_hoiit_langua1` (`language_id`),
   KEY `fk_hoiit_module_products_cat_has_hoiit_languages_hoiit_module1` (`cat_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_products_cat_languages`
---
-
-INSERT INTO `hoiit_module_products_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
-(4, 'vi', 'Danh muc 2', '', 'danh-muc-2', 'sdsdsdsd'),
-(5, 'vi', 'Danh mục', '', 'danh-muc', 'bnbnbbnbnnbnb'),
-(6, 'vi', 'Sub cat', '', 'sub-cat', ''),
-(7, 'vi', 'dfdfdfdfdf', '', 'dfdfdfdfdf', '');
 
 -- --------------------------------------------------------
 
@@ -780,15 +689,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products_languages` (
   KEY `fk_hoiit_module_products_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_products_has_hoiit_languages_hoiit_module_pro1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_products_languages`
---
-
-INSERT INTO `hoiit_module_products_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(1, 'vi', 'asdasdasd', '<p>asdasd sa</p>', '<p>asdasd</p>', 'asdasdasd', '', 0, NULL, NULL),
-(2, 'vi', 'ddssd', '<p>dsds</p>', '<p>sddsds</p>', 'ddssd', '', 0, NULL, NULL),
-(3, 'vi', 'dsdds', '<p>dsds</p>', '<p>sddsd</p>', 'dsdds', '', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -843,9 +743,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_services_languages` (
 --
 
 INSERT INTO `hoiit_module_services_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(1, 'vi', 'Công cụ quản trị trang web', '<p>Nhận dữ liệu, công cụ và chẩn đoán để có trang web tốt, thân thiện với Google.</p>', 'cong-cu-quan-tri-trang-web', 'Nhận dữ liệu, công cụ và chẩn đoán để có trang web tốt, thân thiện với Google.', 0, NULL, NULL),
-(2, 'vi', 'Giáo dục quản trị viên web', '<p>Giáo dục quản trị viên web</p>', 'giao-duc-quan-tri-vien-web', '', 0, NULL, NULL),
-(3, 'vi', 'Trung tâm trợ giúp', '<p>Trung tâm trợ giúp</p>', 'trung-tam-tro-giup', '', 0, NULL, NULL);
+(1, 'en', 'Công cụ quản trị trang web', '<p>Nhận dữ liệu, công cụ và chẩn đoán để có trang web tốt, thân thiện với Google.</p>', 'cong-cu-quan-tri-trang-web', 'Nhận dữ liệu, công cụ và chẩn đoán để có trang web tốt, thân thiện với Google.', 0, NULL, NULL),
+(2, 'en', 'Giáo dục quản trị viên web', '<p>Giáo dục quản trị viên web</p>', 'giao-duc-quan-tri-vien-web', '', 0, NULL, NULL),
+(3, 'en', 'Trung tâm trợ giúp', '<p>Trung tâm trợ giúp</p>', 'trung-tam-tro-giup', '', 15, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -893,26 +793,26 @@ CREATE TABLE IF NOT EXISTS `hoiit_positions` (
 --
 
 INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id`, `action_id`, `controller_id`, `hoiit_functions_function_value`) VALUES
-('left', 1, '1', 'about', NULL, NULL, 'adv_left'),
-('right', 2, '1', 'about', NULL, NULL, 'counter'),
-('right', 3, '1', 'about', NULL, NULL, 'menu_about'),
-('left', 1, '1', 'news', NULL, NULL, 'menu_news'),
-('right', 2, '1', 'news', NULL, NULL, 'adv_right'),
-('left', 3, '1', 'news', NULL, NULL, 'adv_left'),
 ('right', 1, '1', 'poll', NULL, NULL, 'adv_right'),
 ('left', 2, '1', 'poll', NULL, NULL, 'list_support'),
 ('right', 1, '1', 'products', NULL, NULL, 'menu_products'),
 ('right', 2, '1', 'products', NULL, NULL, 'adv_right'),
-('center', 1, '1', 'default', NULL, NULL, 'services_list_home'),
-('right', 2, '1', 'default', NULL, NULL, 'list_support'),
-('right', 3, '1', 'default', NULL, NULL, 'menu_products'),
-('right', 4, '1', 'default', NULL, NULL, 'counter'),
-('right', 5, '1', 'default', NULL, NULL, 'new_poll'),
-('right', 6, '1', 'default', NULL, NULL, 'news_hot'),
-('right', 7, '1', 'default', NULL, NULL, 'news_new'),
-('right', 8, '1', 'default', NULL, NULL, 'adv_right'),
 ('right', 1, '1', 'contact', NULL, NULL, 'list_support'),
-('right', 2, '1', 'contact', NULL, NULL, 'adv_right');
+('right', 2, '1', 'contact', NULL, NULL, 'adv_right'),
+('right', 1, '1', 'services', NULL, NULL, 'list_support'),
+('right', 1, '1', 'news', NULL, NULL, 'menu_news'),
+('right', 2, '1', 'news', NULL, NULL, 'adv_right'),
+('center', 1, '1', 'default', NULL, NULL, 'services_list_home'),
+('left', 2, '1', 'default', NULL, NULL, 'news_list_first'),
+('right', 3, '1', 'default', NULL, NULL, 'counter_session'),
+('right', 4, '1', 'default', NULL, NULL, 'list_support'),
+('right', 5, '1', 'default', NULL, NULL, 'menu_products'),
+('right', 6, '1', 'default', NULL, NULL, 'new_poll'),
+('right', 7, '1', 'default', NULL, NULL, 'news_hot'),
+('right', 8, '1', 'default', NULL, NULL, 'news_new'),
+('right', 9, '1', 'default', NULL, NULL, 'adv_right'),
+('left', 1, '1', 'about', NULL, NULL, 'adv_left'),
+('right', 2, '1', 'about', NULL, NULL, 'menu_about');
 
 -- --------------------------------------------------------
 
@@ -931,7 +831,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_settings` (
 --
 
 INSERT INTO `hoiit_settings` (`setting_name`, `setting_value`) VALUES
-('default_language', 'vi'),
+('default_language', 'en'),
 ('description', 'Description'),
 ('hotline', ''),
 ('keywords', 'Keywords'),
@@ -987,20 +887,20 @@ CREATE TABLE IF NOT EXISTS `hoiit_urls` (
 --
 
 INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `url_type`, `hoiit_modules_module_id`, `hoiit_languages_language_id`) VALUES
-('contact', 'contact/default/index', '', 0, 1, 'contact', 'vi'),
-('gioi-thieu', 'about/default/index', '', 2, 1, 'about', 'vi'),
-('gioi-thieu/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 1, 0, 'about', 'vi'),
-('home-page', 'default/default/index', NULL, NULL, 1, 'default', 'vi'),
-('outsource', 'services/default/index', '', 0, 1, 'services', 'vi'),
-('projects', 'products/default/index', '', 3, 1, 'products', 'vi'),
-('projects/<cid:[-a-z0-9]+>', 'products/default/cats', '', 2, 0, 'products', 'vi'),
-('projects/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'products/default/view', 'urlSuffix=>.html', 0, 0, 'products', 'vi'),
-('projects/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'products/default/cats', '', 1, 0, 'products', 'vi'),
-('tutorial-programming', 'news/default/index', '', 1, 1, 'news', 'vi'),
-('tutorial-programming/<cid:[-a-z0-9]+>', 'news/default/cats', '', 3, 0, 'news', 'vi'),
-('tutorial-programming/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'news/default/view', 'urlSuffix=>.html', 4, 0, 'news', 'vi'),
-('tutorial-programming/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'news/default/cats', '', 2, 0, 'news', 'vi'),
-('tutorial-programming/trang/<page:\\d+>', 'news/default/index', '', 0, 0, 'news', 'vi');
+('about-us', 'about/default/index', '', 1, 1, 'about', 'en'),
+('about-us/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 0, 0, 'about', 'en'),
+('contact', 'contact/default/index', '', 0, 1, 'contact', 'en'),
+('home-page', 'default/default/index', NULL, NULL, 1, 'default', 'en'),
+('outsource', 'services/default/index', '', 0, 1, 'services', 'en'),
+('projects', 'products/default/index', '', 3, 1, 'products', 'en'),
+('projects/<cid:[-a-z0-9]+>', 'products/default/cats', '', 2, 0, 'products', 'en'),
+('projects/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'products/default/view', 'urlSuffix=>.html', 0, 0, 'products', 'en'),
+('projects/<cid:[-a-z0-9]+>/page/<page:\\d+>', 'products/default/cats', '', 1, 0, 'products', 'en'),
+('tutorial-programming', 'news/default/index', '', 1, 1, 'news', 'en'),
+('tutorial-programming/<cid:[-a-z0-9]+>', 'news/default/cats', '', 3, 0, 'news', 'en'),
+('tutorial-programming/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'news/default/view', 'urlSuffix=>.html', 4, 0, 'news', 'en'),
+('tutorial-programming/<cid:[-a-z0-9]+>/page/<page:\\d+>', 'news/default/cats', '', 2, 0, 'news', 'en'),
+('tutorial-programming/page/<page:\\d+>', 'news/default/index', '', 0, 0, 'news', 'en');
 
 -- --------------------------------------------------------
 
