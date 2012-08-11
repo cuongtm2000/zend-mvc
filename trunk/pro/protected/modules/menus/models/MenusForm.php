@@ -16,7 +16,7 @@ class MenusForm extends CFormModel {
 
     public function rules() {
         return array(
-            array('parent_id, menu_namevi', 'required'),
+            //array('parent_id, menu_namevi', 'required'),
             array('parent_id, menu_type, menu_homepage, menu_activated', 'numerical', 'integerOnly' => true),
             array('menu_namevi, menu_nameen', 'length', 'max' => 100),
             array('menu_descriptionvi, menu_descriptionen', 'length', 'max' => 250),

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 10, 2012 at 10:29 AM
+-- Generation Time: Aug 11, 2012 at 04:09 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -108,6 +108,7 @@ INSERT INTO `hoiit_functions` (`function_value`, `function_name`, `function_clas
 ('menu_about', 'About', '', 'listItem', 'about'),
 ('menu_news', 'NewsCat', '', 'listItem', 'news'),
 ('menu_products', 'ProductsCat', '', 'listItem', 'products'),
+('menu_services', 'Services', '', 'listItem', 'services'),
 ('news_hot', 'News', '', 'listItemsHot', 'news'),
 ('news_list_first', 'News', '', 'ListFirst', 'news'),
 ('news_new', 'News', '', 'listItemsNew', 'news'),
@@ -161,22 +162,22 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('banner', 'Banner', 1, 'en'),
 ('cancel', 'Hủy bỏ', 1, 'en'),
 ('cat_title', 'Danh mục', 0, 'en'),
-('contact', 'Liên hệ', 0, 'en'),
-('counterSession', 'Thống kê truy cập', 0, 'en'),
+('contact', 'Contact', 0, 'en'),
+('counterSession', 'Counter', 0, 'en'),
 ('create_date', 'Ngày tạo', 1, 'en'),
-('default', 'Trang chủ', 0, 'en'),
+('default', 'Home page', 0, 'en'),
 ('delete', 'Xóa', 1, 'en'),
 ('edit', 'Chỉnh sửa', 0, 'en'),
 ('hidden', 'Ẩn', 1, 'en'),
 ('news', 'Tin tức & sự kiện', 0, 'en'),
 ('no_record', 'Không tồn tại mẫu tin', 0, 'en'),
 ('order', 'Thứ tự', 1, 'en'),
-('poll', 'Bình chọn', 0, 'en'),
-('products', 'Sản phẩm', 0, 'en'),
-('services', 'Dịch vụ', 0, 'en'),
+('poll', 'Poll', 0, 'en'),
+('products', 'Projects', 0, 'en'),
+('services', 'Outsource', 0, 'en'),
 ('show', 'Hiển thị', 1, 'en'),
 ('sort', 'Sắp xếp', 1, 'en'),
-('support', 'Hỗ trợ trực tuyến', 0, 'en'),
+('support', 'Online support', 0, 'en'),
 ('synchronous', 'Đồng bộ', 1, 'en'),
 ('title', 'Tiêu đề', 1, 'en'),
 ('view', 'Lượt xem', 1, 'en');
@@ -199,8 +200,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_languages` (
 --
 
 INSERT INTO `hoiit_languages` (`language_id`, `language_name`, `language_sort`) VALUES
-('en', 'English', 1),
-('vi', 'Việt Nam', 1);
+('en', 'English', 1);
 
 -- --------------------------------------------------------
 
@@ -251,7 +251,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about` (
   `field2` varchar(100) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=48 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -295,18 +295,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_advs` (
   `click` int(11) NOT NULL DEFAULT '0',
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
-
---
--- Dumping data for table `hoiit_module_advs`
---
-
-INSERT INTO `hoiit_module_advs` (`record_id`, `title`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `click`, `enable`) VALUES
-(15, 'Quảng cáo Logo', 'quang-cao-logo.jpg', 'http://dos.vn', '2012-07-20 00:22:52', '2012-07-19 17:00:00', '2012-07-22 17:00:00', 0, 3, 'left', '_bank', 0, 1),
-(16, 'Logo right', 'logo-right.png', '', '2012-07-20 01:45:53', '2012-07-19 17:00:00', '2012-08-12 17:00:00', 0, 2, 'right', '_bank', 0, 1),
-(17, 'Quảng cáo', 'quang-cao.jpg', '', '2012-07-20 01:51:12', '2012-07-19 17:00:00', '2012-07-20 17:00:00', 0, 1, 'left', '_bank', 0, 1),
-(18, 'Quảng cáo', 'quang-cao1.jpg', '', '2012-07-20 01:54:15', '2012-07-19 17:00:00', '2012-08-06 17:00:00', 0, 4, 'left', '_bank', 0, 1),
-(19, 'Quảng cáo Logo', 'quang-cao-logo1.jpg', '', '2012-07-22 02:16:26', '2012-07-30 17:00:00', '2012-08-20 17:00:00', 0, 5, 'left', '_bank', 0, 1);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -348,7 +337,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_contacts` (
   `hot` tinyint(1) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -386,8 +375,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('2n7sqfhg1', 1344586827),
-('qbchvnr1g', 1344587236);
+('vswhocp4j', 1344650929);
 
 -- --------------------------------------------------------
 
@@ -407,11 +395,11 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_value` (
 
 INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
 ('max_visit_day', 1344549600),
-('max_visit_value', 2),
-('time_start_today', 1344549600),
+('max_visit_value', 3),
+('time_start_today', 1344636000),
 ('today_visited', 2),
-('total_visited', 2),
-('yesterday_visited', 0);
+('total_visited', 5),
+('yesterday_visited', 3);
 
 -- --------------------------------------------------------
 
@@ -428,7 +416,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus` (
   `menu_homepage` tinyint(1) NOT NULL DEFAULT '0',
   `menu_activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=34 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=37 ;
 
 --
 -- Dumping data for table `hoiit_module_menus`
@@ -440,7 +428,10 @@ INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_type`, `menu_tar
 (30, 28, 0, '', 3, 0, 1),
 (31, 0, 1, '', 5, 0, 1),
 (32, 0, 1, '', 6, 0, 1),
-(33, 0, 1, '', 2, 0, 1);
+(33, 0, 1, '', 2, 0, 1),
+(34, 33, 0, '', 34, 0, 1),
+(35, 33, 0, '', 35, 0, 1),
+(36, 33, 0, '', 36, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -469,7 +460,10 @@ INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name
 (30, 'en', 'Sub', 'gioi-thieu/welcome-to-yiiprojectcom.html', ''),
 (31, 'en', 'Tutorial programming', 'tutorial-programming', 'Tutorial programming'),
 (32, 'en', 'Contact', 'contact', ''),
-(33, 'en', 'Outsource', 'outsource', '');
+(33, 'en', 'Outsource', 'outsource', ''),
+(34, 'en', 'Website design', 'outsource/website-design.html', ''),
+(35, 'en', 'Extention development', 'extention-development.html', ''),
+(36, 'en', 'PSD to HTML Service', 'outsource/psd-to-html-service.html', '');
 
 -- --------------------------------------------------------
 
@@ -493,7 +487,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news` (
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_hoiit_module_news_hoiit_module_news_cat_1` (`hoiit_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -513,7 +507,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_cat` (
   `cat_extra2` varchar(100) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -628,7 +622,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products` (
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_hoiit_module_products_hoiit_module_products_cat1` (`hoiit_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -648,7 +642,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products_cat` (
   `cat_extra2` varchar(100) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -743,9 +737,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_services_languages` (
 --
 
 INSERT INTO `hoiit_module_services_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(1, 'en', 'Công cụ quản trị trang web', '<p>Nhận dữ liệu, công cụ và chẩn đoán để có trang web tốt, thân thiện với Google.</p>', 'cong-cu-quan-tri-trang-web', 'Nhận dữ liệu, công cụ và chẩn đoán để có trang web tốt, thân thiện với Google.', 0, NULL, NULL),
-(2, 'en', 'Giáo dục quản trị viên web', '<p>Giáo dục quản trị viên web</p>', 'giao-duc-quan-tri-vien-web', '', 0, NULL, NULL),
-(3, 'en', 'Trung tâm trợ giúp', '<p>Trung tâm trợ giúp</p>', 'trung-tam-tro-giup', '', 15, NULL, NULL);
+(1, 'en', 'PSD to HTML Service', '<p>PSD to HTML Service</p>', 'psd-to-html-service', 'Send us your design and We convert it into a pixel perfect and standards compliant XHTML/CSS', 7, NULL, NULL),
+(2, 'en', 'Extention development', '<p>Make Extention</p>', 'extention-development', 'Make extentions for YiiProject CMS', 4, NULL, NULL),
+(3, 'en', 'Website design', '<p>Website design</p>', 'website-design', 'Build a website, blog using YiiProject CMS platform Yiiframework', 36, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -799,20 +793,20 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('right', 2, '1', 'products', NULL, NULL, 'adv_right'),
 ('right', 1, '1', 'contact', NULL, NULL, 'list_support'),
 ('right', 2, '1', 'contact', NULL, NULL, 'adv_right'),
-('right', 1, '1', 'services', NULL, NULL, 'list_support'),
 ('right', 1, '1', 'news', NULL, NULL, 'menu_news'),
 ('right', 2, '1', 'news', NULL, NULL, 'adv_right'),
+('left', 1, '1', 'about', NULL, NULL, 'adv_left'),
+('right', 2, '1', 'about', NULL, NULL, 'menu_about'),
 ('center', 1, '1', 'default', NULL, NULL, 'services_list_home'),
 ('left', 2, '1', 'default', NULL, NULL, 'news_list_first'),
-('right', 3, '1', 'default', NULL, NULL, 'counter_session'),
-('right', 4, '1', 'default', NULL, NULL, 'list_support'),
-('right', 5, '1', 'default', NULL, NULL, 'menu_products'),
+('right', 3, '1', 'default', NULL, NULL, 'menu_products'),
+('right', 4, '1', 'default', NULL, NULL, 'news_hot'),
+('right', 5, '1', 'default', NULL, NULL, 'news_new'),
 ('right', 6, '1', 'default', NULL, NULL, 'new_poll'),
-('right', 7, '1', 'default', NULL, NULL, 'news_hot'),
-('right', 8, '1', 'default', NULL, NULL, 'news_new'),
-('right', 9, '1', 'default', NULL, NULL, 'adv_right'),
-('left', 1, '1', 'about', NULL, NULL, 'adv_left'),
-('right', 2, '1', 'about', NULL, NULL, 'menu_about');
+('right', 7, '1', 'default', NULL, NULL, 'list_support'),
+('right', 8, '1', 'default', NULL, NULL, 'counter_session'),
+('right', 1, '1', 'services', NULL, NULL, 'menu_services'),
+('right', 2, '1', 'services', NULL, NULL, 'list_support');
 
 -- --------------------------------------------------------
 
@@ -891,7 +885,8 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('about-us/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 0, 0, 'about', 'en'),
 ('contact', 'contact/default/index', '', 0, 1, 'contact', 'en'),
 ('home-page', 'default/default/index', NULL, NULL, 1, 'default', 'en'),
-('outsource', 'services/default/index', '', 0, 1, 'services', 'en'),
+('outsource', 'services/default/index', '', 1, 1, 'services', 'en'),
+('outsource/<id:[-a-z0-9]+>', 'services/default/view', 'urlSuffix=>.html', 0, 0, 'services', 'en'),
 ('projects', 'products/default/index', '', 3, 1, 'products', 'en'),
 ('projects/<cid:[-a-z0-9]+>', 'products/default/cats', '', 2, 0, 'products', 'en'),
 ('projects/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'products/default/view', 'urlSuffix=>.html', 0, 0, 'products', 'en'),
