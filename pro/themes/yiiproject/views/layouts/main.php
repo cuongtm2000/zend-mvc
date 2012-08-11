@@ -15,7 +15,7 @@
 
     <title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->setting['title']) ? ' - '.CHtml::encode($this->setting['title']) : '' ?></title>
     <meta name="keywords" content="<?php echo CHtml::encode($this->setting['keywords']) ?>" />
-    <meta name="description" content="<?php echo CHtml::encode($this->setting['description']) ?>" />
+    <meta name="description" content="<?php echo CHtml::encode($this->description) ?>" />
 </head>
 <body>
 <div id="wrapper">
