@@ -30,10 +30,12 @@ a:hover{color:#000;}
 #navigation ul li .dd { background: url(../images/dd-bg.png) repeat-y 0 0; padding-top: 5px; }
 #navigation ul li .cl { display: block; height: 0; font-size: 0; line-height: 0; text-indent: -4000px; clear: both; }
 #navigation ul li .dd ul { float: none; }
-#navigation ul li .dd ul li { float: none; display: block; height: 23px; background: url(../images/sub-menu-divider.gif) no-repeat center bottom; margin: 0; font-size: 0; line-height: 0;  }
+#navigation ul li .dd ul li { float: none; display: block; height: 23px; background: url(../images/sub-menu-divider.gif) no-repeat center bottom; margin: 0; font-size: 0; line-height: 0}
 #navigation ul li .dd ul li.last {background: none}
-#navigation ul li .dd ul li a { float: none; display: block; width: 112px; height: 20px; color: #babab7; font-size: 12px; line-height: 19px; padding-left: 15px;  }
-#navigation ul li .dd ul li a:hover { color: #28a1c3; }
+#navigation ul li .dd ul li a { float: none;color: #babab7;line-height:normal; font-size: 12px;display:block; }
+
+#navigation ul li .dd ul li a span{padding:0;float:left;color:#BABAB7}
+#navigation ul li .dd ul li a:hover span{color: #28a1c3}
 #navigation ul li .dd ul li a.hover { background: none; }
 #navigation ul li .dd ul li a.subhover { background: transparent url(../images/blue-arrow.gif) no-repeat right 8px; }
 #navigation ul li .dd-holder .dd-holder { top: -5px; left: 100%; }
