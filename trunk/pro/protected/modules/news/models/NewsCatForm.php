@@ -18,7 +18,7 @@ class NewsCatForm extends CFormModel {
 
     public function rules() {
         return array(
-            array('cat_parent_id, cat_titlevi, tagvi', 'required'),
+            //array('cat_parent_id, cat_titlevi, tagvi', 'required'),
             array('cat_id, cat_parent_id, cat_hot, cat_enable', 'numerical', 'integerOnly' => true),
             array('pic_thumb', 'file', 'types' => 'gif,png,jpg,jpeg,icon', 'allowEmpty' => true, 'maxSize' => 1024 * 1024 * 5),
             array('pic_thumb, cat_titlevi, cat_titleen, tagvi, tagen', 'length', 'max' => 100),
