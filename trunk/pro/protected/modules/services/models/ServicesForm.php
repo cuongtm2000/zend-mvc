@@ -19,7 +19,7 @@ class ServicesForm extends CFormModel {
 
     public function rules() {
         return array(
-            array('titlevi, contentvi, tagvi', 'required'),
+            //array('titlevi, contentvi, tagvi', 'required'),
             array('hot, enable', 'numerical', 'integerOnly' => true),
 			array('pic_thumb', 'file', 'types' => 'gif,png,jpg,jpeg,icon', 'allowEmpty' => true, 'maxSize' => 1024 * 1024 * 5),
             array('pic_thumb, titlevi, titleen, tagvi, tagen, extra_field1, extra_field2', 'length', 'max' => 100),
