@@ -1,6 +1,6 @@
 <?php if($news_list_first['item_first']):?>
 <div class="frame-panel">
-	<h2 class="title-right"><?php echo CHtml::encode($this->lang['news'])?></h2>
+	<h3 class="title-right"><span><?php echo CHtml::encode($this->lang['news'])?></span></h3>
 	<div class="frame-tent-right">        
 		<ul class="panel-items">
 			<li>
@@ -9,9 +9,9 @@
 					<?php echo CHtml::link(CHtml::image(Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/news/'.$news_list_first['item_first']['pic_thumb'], $news_list_first['item_first']->NewsLanguage[Yii::app()->language]['title']) , array($this->setUrlModule('news').'/'.$news_list_first['item_first']->NewsCat->NewsCatLanguage[Yii::app()->language]['tag'].'/'.$news_list_first['item_first']->NewsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$news_list_first['item_first']->NewsLanguage[Yii::app()->language]['title'])); ?>
 				</div>
 				<?php endif?>
-				<h3 class="title-items">
+				<h4 class="title-items">
 					<?php echo CHtml::link($news_list_first['item_first']->NewsLanguage[Yii::app()->language]['title'], array($this->setUrlModule('news').'/'.$news_list_first['item_first']->NewsCat->NewsCatLanguage[Yii::app()->language]['tag'].'/'.$news_list_first['item_first']->NewsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$news_list_first['item_first']->NewsLanguage[Yii::app()->language]['title'])); ?>
-				</h3>
+				</h4>
 				<?php echo $news_list_first['item_first']->NewsLanguage[Yii::app()->language]['preview']?> <div class="clear"></div>
 			 </li>
 		</ul>
