@@ -13,9 +13,6 @@
     <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/js-func.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/lightbox.css" media="screen"/>
-    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/lightbox.js"></script>
-
     <title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->setting['title']) ? ' - '.CHtml::encode($this->setting['title']) : '' ?></title>
     <meta name="keywords" content="<?php echo CHtml::encode($this->setting['keywords']) ?>" />
     <meta name="description" content="<?php echo CHtml::encode($this->setting['description']) ?>" />
@@ -36,11 +33,7 @@
                 <a class="maia-button" href="#" title="">Demo Front end</a> <a class="maia-button" href="#" title="">Demo Back end</a>
             </div> <!--End left-main-about-->
             <div class="right-main-about">
-            	<a class="lb" data-lightbox-height="422" data-lightbox-width="750" href="http://www.youtube.com/v/COcl6ax38IY?autoplay=1&amp;hl=vi&amp;cc_lang_pref=vi&amp;cc_load_policy=1"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/intro.png" alt="stage" /></a>
-				<script type="text/javascript">
-					var stageTeaser = new gweb.ui.LightBox();
-					stageTeaser.init();
-				</script>
+            	<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/intro.png" alt="introdution" />
             </div> <!--End right-main-about--> <div class="clear"></div>
         </div> <!--End main-about -->
 		<?php $this->getPosition('center');?>
@@ -63,12 +56,10 @@
 <div id="bg-footer">
     <div id="footer">
 		<ul class="menu-footer">
-			<li><a class="first" href="about.html">About us</a></li>
-			<li><a href="services.html">Customer Service</a></li>
-			<li><a href="#">Site Map</a></li>
-			<li><a href="#">Search Terms</a></li>
-			<li><a href="#">Advanced Search</a></li>
-			<li><a class="none-line" href="contact.html">Contact Us</a></li>
+			<li><a class="first" href="<?php echo Yii::app()->baseUrl.$this->setUrlModule('about')?>" title="About us">About us</a></li>
+			<li><a href="<?php echo Yii::app()->baseUrl.$this->setUrlModule('services')?>" title="Customer service">Customer service</a></li>
+			<li><a href="#" title="Site map">Site map</a></li>
+			<li><a class="none-line" href="<?php echo Yii::app()->baseUrl.$this->setUrlModule('contact')?>" title="Contact us">Contact us</a></li>
 		</ul> <div class="clear"></div>
 		<p>&copy; <?php echo date('Y') . ' ' . Yii::app()->name ?>. All Rights Reserved.</p>
 		<div class="copyright">Design by <a href="http://yiiproject.com" title="Go to YiiProject.com" target="_blank">YiiProject.com</a></div> <div class="clear"></div>
