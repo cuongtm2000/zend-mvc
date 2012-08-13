@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 08, 2012 at 08:44 AM
+-- Generation Time: Aug 13, 2012 at 04:12 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -152,40 +152,53 @@ CREATE TABLE IF NOT EXISTS `hoiit_langs` (
 INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_languages_language_id`) VALUES
 ('about', 'About us', 0, 'en'),
 ('about', 'Giới thiệu', 0, 'vi'),
+('action', 'Action', 1, 'en'),
 ('action', 'Thao tác', 1, 'vi'),
+('add_new', 'Add new', 1, 'en'),
 ('add_new', 'Thêm mới', 1, 'vi'),
 ('add_row', 'Thêm dòng', 1, 'vi'),
 ('adv', 'Adv', 0, 'en'),
 ('adv', 'Quảng cáo', 0, 'vi'),
+('banner', 'Banner', 1, 'en'),
 ('banner', 'Banner', 1, 'vi'),
 ('cancel', 'Cancel', 1, 'en'),
 ('cancel', 'Hủy bỏ', 1, 'vi'),
+('cat_title', 'Cat title', 0, 'en'),
 ('cat_title', 'Danh mục', 0, 'vi'),
 ('contact', 'Contact', 0, 'en'),
 ('contact', 'Liên hệ', 0, 'vi'),
 ('counter', 'Counter', 0, 'en'),
 ('counter', 'Thống kê truy cập', 0, 'vi'),
+('create_date', 'Created date', 1, 'en'),
 ('create_date', 'Ngày tạo', 1, 'vi'),
 ('default', 'Home page', 0, 'en'),
 ('default', 'Trang chủ', 0, 'vi'),
+('delete', 'Delete', 1, 'en'),
 ('delete', 'Xóa', 1, 'vi'),
+('edit', 'Edit', 0, 'en'),
 ('edit', 'Chỉnh sửa', 0, 'vi'),
+('hidden', 'Hidden', 1, 'en'),
 ('hidden', 'Ẩn', 1, 'vi'),
 ('news', 'News', 0, 'en'),
 ('news', 'Tin tức & sự kiện', 0, 'vi'),
 ('no_record', 'Không tồn tại mẫu tin', 0, 'vi'),
 ('order', 'Order', 1, 'en'),
 ('order', 'Thứ tự', 1, 'vi'),
+('poll', 'Bình chọn', 0, 'en'),
 ('poll', 'Bình chọn', 0, 'vi'),
 ('products', 'Products', 0, 'en'),
 ('products', 'Sản phẩm', 0, 'vi'),
+('show', 'Show', 1, 'en'),
 ('show', 'Hiển thị', 1, 'vi'),
+('sort', 'Sort', 1, 'en'),
 ('sort', 'Sắp xếp', 1, 'vi'),
 ('support', 'Support', 0, 'en'),
 ('support', 'Hỗ trợ trực tuyến', 0, 'vi'),
+('synchronous', 'Synchronous', 1, 'en'),
 ('synchronous', 'Đồng bộ', 1, 'vi'),
 ('title', 'Title', 1, 'en'),
 ('title', 'Tiêu đề', 1, 'vi'),
+('view', 'View', 1, 'en'),
 ('view', 'Lượt xem', 1, 'vi');
 
 -- --------------------------------------------------------
@@ -293,8 +306,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
 --
 
 INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(46, 'en', 'Welcome english', '<p>asdas asa</p>', 'welcome-english', 'dasd', 299, NULL, NULL),
-(46, 'vi', 'Welcome to Yiiproject.com', '<p>Welcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to</p>\r\n<h3>Welcome to Yiiproject.com</h3>\r\n<p>Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.com</p>', 'welcome-to-yiiprojectcom', 'das', 321, NULL, NULL),
+(46, 'en', 'Welcome english', '<p>asdas asa</p>', 'welcome-english', 'dasd', 301, NULL, NULL),
+(46, 'vi', 'Welcome to Yiiproject.com', '<p>Welcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to</p>\r\n<h3>Welcome to Yiiproject.com</h3>\r\n<p>Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.com</p>', 'welcome-to-yiiprojectcom', 'das', 331, NULL, NULL),
 (47, 'en', 'About', '<p>Con tnet</p>', 'about', 'dasdsadsads', 293, NULL, NULL),
 (47, 'vi', 'Gioi thieu', '<p>Noi dung</p>', 'gioi-thieu', 'asdasdsd', 293, NULL, NULL);
 
@@ -433,7 +446,6 @@ INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_type`, `menu_tar
 (27, 0, 1, '', 1, 1, 1),
 (28, 0, 1, '', 2, 0, 1),
 (29, 0, 1, '', 3, 0, 1),
-(30, 28, 0, '', 4, 0, 1),
 (31, 0, 1, '', 5, 0, 1),
 (32, 0, 1, '', 32, 0, 1);
 
@@ -461,15 +473,13 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus_languages` (
 INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name`, `menu_url`, `menu_description`) VALUES
 (27, 'en', 'Home page', 'home-page', 'Home page description'),
 (27, 'vi', 'Trang chủ', 'trang-chu', 'Trang chu mô tả'),
-(28, 'en', 'About us', '', 'Desctip about'),
+(28, 'en', 'About us', 'about-us', 'Desctip about'),
 (28, 'vi', 'Giới thiệu', 'gioi-thieu', 'Mo ta gioi thieu'),
-(29, 'en', 'Products', '', 'English'),
+(29, 'en', 'Products', 'products', 'English'),
 (29, 'vi', 'Sản phẩm', 'san-pham', ''),
-(30, 'en', '', '', ''),
-(30, 'vi', 'Sub', 'gioi-thieu/welcome-to-yiiprojectcom.html', ''),
-(31, 'en', '', 'news', 'dasdsadsad'),
+(31, 'en', 'News', 'news', 'dasdsadsad'),
 (31, 'vi', 'Tin tức & sự kiện', 'tin-tuc', 'Co mo ta tin tuc'),
-(32, 'en', '', '', ''),
+(32, 'en', 'Contact', 'contact', ''),
 (32, 'vi', 'Liên hệ', 'lien-he', '');
 
 -- --------------------------------------------------------
@@ -528,7 +538,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_cat` (
   `cat_extra2` varchar(100) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 --
 -- Dumping data for table `hoiit_module_news_cat`
@@ -536,7 +546,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_cat` (
 
 INSERT INTO `hoiit_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
 (16, 0, '2012-07-25 06:11:55', 'tin-tuc-cho-ba-bau.jpg', NULL, 0, 16, NULL, NULL, 1),
-(17, 0, '2012-08-08 07:37:28', 'tin-tuc-trong-ngay.jpg', NULL, 0, 17, NULL, NULL, 1);
+(17, 0, '2012-08-08 07:37:28', 'tin-tuc-trong-ngay.jpg', NULL, 0, 17, NULL, NULL, 1),
+(18, 17, '2012-08-09 02:14:55', '', NULL, 0, 18, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -564,7 +575,9 @@ INSERT INTO `hoiit_module_news_cat_languages` (`cat_id`, `language_id`, `cat_tit
 (16, 'en', 'News for pregnant women', '', 'news-for-pregnant-women', 'News for pregnant women'),
 (16, 'vi', 'Tin tức cho bà bầu', '', 'tin-tuc-cho-ba-bau', 'Tin tức cho bà bầu'),
 (17, 'en', 'News of the day', '', 'news-of-the-day', ''),
-(17, 'vi', 'Tin tức trong ngày', '', 'tin-tuc-trong-ngay', '');
+(17, 'vi', 'Tin tức trong ngày', '', 'tin-tuc-trong-ngay', ''),
+(18, 'en', '', '', '', ''),
+(18, 'vi', 'sdsdsds', '', 'sdsdsds', '');
 
 -- --------------------------------------------------------
 
@@ -626,9 +639,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_save` (
 --
 
 INSERT INTO `hoiit_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456148),
+('day_time', 2456153),
 ('max_count', 1),
-('counter', 6),
+('counter', 3),
 ('yesterday', 1);
 
 -- --------------------------------------------------------
@@ -647,8 +660,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''::1''', 1344393475),
-('''127.0.0.1''', 1344408255);
+('''::1''', 1344823960);
 
 -- --------------------------------------------------------
 
@@ -755,7 +767,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products_cat` (
   `cat_extra2` varchar(100) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `hoiit_module_products_cat`
@@ -764,7 +776,13 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products_cat` (
 INSERT INTO `hoiit_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
 (5, 0, '2012-07-25 06:28:10', 'giay-dep.jpg', NULL, 0, 5, NULL, NULL, 1),
 (6, 5, '2012-07-30 13:45:47', '', NULL, 0, 6, NULL, NULL, 1),
-(7, 0, '2012-07-31 04:00:12', '', NULL, 0, 7, NULL, NULL, 1);
+(7, 0, '2012-07-31 04:00:12', '', NULL, 0, 7, NULL, NULL, 1),
+(8, 6, '2012-08-09 02:56:41', '', NULL, 0, 8, NULL, NULL, 1),
+(9, 5, '2012-08-09 04:01:21', '', NULL, 0, 9, NULL, NULL, 1),
+(10, 5, '2012-08-09 07:34:14', '', NULL, 0, 10, NULL, NULL, 1),
+(11, 10, '2012-08-09 07:34:33', '', NULL, 0, 11, NULL, NULL, 1),
+(12, 10, '2012-08-09 07:34:43', '', NULL, 0, 12, NULL, NULL, 1),
+(13, 6, '2012-08-09 10:10:45', '', NULL, 0, 13, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -794,7 +812,19 @@ INSERT INTO `hoiit_module_products_cat_languages` (`cat_id`, `language_id`, `cat
 (6, 'en', '', '', '', ''),
 (6, 'vi', 'Sub cat', '', 'sub-cat', ''),
 (7, 'en', 'Outdoor Toys', '', 'outdoor-toys', 'Outdoor Toys'),
-(7, 'vi', 'Ngoài trời đồ chơi', '', 'ngoai-troi-do-choi', 'Ngoài trời đồ chơi');
+(7, 'vi', 'Ngoài trời đồ chơi', '', 'ngoai-troi-do-choi', 'Ngoài trời đồ chơi'),
+(8, 'en', '', '', '', ''),
+(8, 'vi', 'Sub sub', '', 'sub-sub', ''),
+(9, 'en', '', '', '', ''),
+(9, 'vi', 'Khi', '', 'khi', ''),
+(10, 'en', '', '', '', ''),
+(10, 'vi', 'Xe hơi', '', 'xe-hoi', ''),
+(11, 'en', '', '', '', ''),
+(11, 'vi', 'Xe có hơi', '', 'xe-co-hoi', ''),
+(12, 'en', '', '', '', ''),
+(12, 'vi', 'Xe hết hơi', '', 'xe-het-hoi', ''),
+(13, 'en', '', '', '', ''),
+(13, 'vi', 'Sub sub cat', '', 'sub-sub-cat', '');
 
 -- --------------------------------------------------------
 
@@ -925,7 +955,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_settings` (
 --
 
 INSERT INTO `hoiit_settings` (`setting_name`, `setting_value`) VALUES
-('default_language', 'vi'),
+('default_language', 'en'),
 ('description', 'Description'),
 ('hotline', ''),
 ('keywords', 'Keywords'),
@@ -955,7 +985,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_templates` (
 --
 
 INSERT INTO `hoiit_templates` (`template_id`, `template_name`, `template_date`, `template_desc`, `template_author`, `template_web`, `template_admin`, `template_activated`) VALUES
-('default', 'Default', '2012-06-30 14:47:02', NULL, 'Yii project', 'http://yiiproject.com', 0, 0),
 ('home', 'Home', '2012-07-04 10:54:29', NULL, 'Yii project', 'http://yiiproject.com', 0, 0),
 ('toys', 'Toys Store', '2012-07-27 04:55:47', NULL, NULL, NULL, 0, 1),
 ('wedding', 'Wedding Pink', '2012-08-07 04:55:47', NULL, NULL, NULL, 0, 0),
@@ -987,20 +1016,22 @@ CREATE TABLE IF NOT EXISTS `hoiit_urls` (
 INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `url_type`, `hoiit_modules_module_id`, `hoiit_languages_language_id`) VALUES
 ('<lang:[a-z]{2}>/about-us/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 0, 0, 'about', 'en'),
 ('about-us', 'about/default/index', '', 2, 1, 'about', 'en'),
+('contact', 'contact/default/index', '', 0, 1, 'contact', 'en'),
 ('gioi-thieu', 'about/default/index', '', 2, 1, 'about', 'vi'),
 ('gioi-thieu/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 1, 0, 'about', 'vi'),
 ('home-page', 'default/default/index', NULL, NULL, 1, 'default', 'en'),
 ('lien-he', 'contact/default/index', '', 1, 1, 'contact', 'vi'),
-('news', 'news/default/index', '', 4, 1, 'news', 'en'),
+('news', 'news/default/index', '', 5, 1, 'news', 'en'),
+('products', 'products/default/index', '', 4, 1, 'products', 'en'),
 ('san-pham', 'products/default/index', '', 3, 1, 'products', 'vi'),
 ('san-pham/<cid:[-a-z0-9]+>', 'products/default/cats', '', 2, 0, 'products', 'vi'),
 ('san-pham/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'products/default/view', 'urlSuffix=>.html', 0, 0, 'products', 'vi'),
 ('san-pham/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'products/default/cats', '', 1, 0, 'products', 'vi'),
-('tin-tuc', 'news/default/index', '', 1, 1, 'news', 'vi'),
+('tin-tuc', 'news/default/index', '', 4, 1, 'news', 'vi'),
 ('tin-tuc/<cid:[-a-z0-9]+>', 'news/default/cats', '', 3, 0, 'news', 'vi'),
-('tin-tuc/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'news/default/view', 'urlSuffix=>.html', 5, 0, 'news', 'vi'),
+('tin-tuc/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'news/default/view', 'urlSuffix=>.html', 0, 0, 'news', 'vi'),
 ('tin-tuc/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'news/default/cats', '', 2, 0, 'news', 'vi'),
-('tin-tuc/trang/<page:\\d+>', 'news/default/index', '', 0, 0, 'news', 'vi'),
+('tin-tuc/trang/<page:\\d+>', 'news/default/index', '', 1, 0, 'news', 'vi'),
 ('trang-chu', 'default/default/index', NULL, NULL, 1, 'default', 'vi');
 
 -- --------------------------------------------------------
