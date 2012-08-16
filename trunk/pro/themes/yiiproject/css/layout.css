@@ -188,7 +188,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 #bg-footer{background: #F5F5F5 url(../images/bg-footer.gif) repeat-x; min-width:1000px}
 #footer{margin:auto; width:980px; padding:20px 0; color:#333; position: relative;}
 #footer a{color:#1155CC}
-#footer a:hover, #footer a:active, #footer a:visited{color: #333}
+#footer a:hover, #footer a:active, #footer a:visited, #footer .menu-footer li a:hover{color: #333}
 .menu-footer {margin:0 0 10px 0; list-style:none}
 .menu-footer li{display:inline}
 #footer .menu-footer li a{padding-right: 13px; padding-left: 6px; color:#1155CC; background: url(../images/line.gif) no-repeat right}
