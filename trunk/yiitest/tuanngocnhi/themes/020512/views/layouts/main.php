@@ -55,21 +55,21 @@
 			    <?php $target = ($value['target']=='') ? '' : ' target="'.$value['target'].'"'; ?>
 			    <li><a<?php echo $selected ?>  href="<?php echo (strpos($value['url'], 'http://') === false) ? (($value['url'] == 'default') ? Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/' : Yii::app()->request->baseUrl.Yii::app()->session['langUrl'].'/'.Yii::t('user', $value['url'].'.link')) : $value['url'] ?>" title="<?php echo CHtml::encode($value['menu'.LANG]) ?>"<?php echo $target ?>><?php echo CHtml::encode($value['menu'.LANG]) ?></a>
                     <?php if($value['url'] == 'about'):?>
-                        <ul class="sub-nav-product">
+                        <ul class="sub-nav-new">
                             <?php foreach($this->about_list as $sub):?>
                                 <li><a href="<?php echo Yii::app()->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'about.link')?>/<?php echo $sub['tag'.LANG]?>.html" title="<?php echo $sub['title'.LANG]?>"><?php echo $sub['title'.LANG]?></a></li>
                             <?php endforeach?>
                         </ul>
                     <?php endif?>
                     <?php if($value['url'] == 'services'):?>
-                        <ul class="sub-nav-product">
+                        <ul class="sub-nav-new">
                             <?php foreach($this->services_list as $sub):?>
                             <li><a href="<?php echo Yii::app()->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'services.link')?>/<?php echo $sub['tag'.LANG]?>.html" title="<?php echo $sub['title'.LANG]?>"><?php echo $sub['title'.LANG]?></a></li>
                             <?php endforeach?>
                         </ul>
                     <?php endif?>
                     <?php if($value['url'] == 'news'):?>
-                        <ul class="sub-nav-product">
+                        <ul class="sub-nav-new">
                             <?php if($this->news_list): foreach($this->news_list as $sub):?>
                             <li><a href="<?php echo Yii::app()->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $sub['tag'.LANG]?>" title="<?php echo $sub['cat_title'.LANG]?>"><?php echo $sub['cat_title'.LANG]?></a></li>
                             <?php endforeach; endif;?>
