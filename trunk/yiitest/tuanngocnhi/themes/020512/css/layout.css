@@ -59,7 +59,7 @@ a:hover{color:#000;}
 #leftcontent{float:left; width:195px}
 .frame-leftcontent{margin:0 0 10px 0;padding:10px 5px 10px 5px; border:1px solid #ddd;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}
 
-.title-left{color:#000; font-weight:bold;font-size:11pt; text-transform:uppercase}
+.title-left{color:#000;font-size:11pt; text-transform:uppercase}
 
 /*sub cat*/
 .sub-cat{list-style:none;padding:10px 5px 0 10px}
@@ -92,7 +92,7 @@ a:hover{color:#000;}
 .frame-tent-right{padding:10px;margin:0 0 10px 0;border:1px solid #ddd;border-radius:2px; -webkit-border-radius:2px;-moz-border-radius:2px}
 .frame-tent-right p{line-height:1.6em}
 
-.title-right{padding-top:5px; margin:0 0 10px 0; font-size:10pt;color:#C8A051; font-size:18px;text-transform:uppercase}
+.title-right{padding-top:5px;font-weight:normal; margin:0 0 10px 0; font-size:10pt;color:#C8A051; font-size:18px;text-transform:uppercase}
 
 .link{color:#868686;padding:15px 0 0;font-size:11pt; margin:0 0 15px 0}
 .link b{font-weight:normal;padding:0 4px}
@@ -107,10 +107,10 @@ a:hover{color:#000;}
 .tent-product{padding:0 5px}
 #rightcontent .price{color:#C8A051;font-size:25px;font-family:Verdana; margin:5px 0 10px 0}
 
-.title-pro-2{background:#6F0 url(../images/bg_prod_main_att.jpg) no-repeat center; padding:4px 0;margin:3px 0 0 0}
-.title-pro-2 a{color:#fff;font-weight:bold}
+.title-pro-2{background:url(../images/bg_prod_main_att.jpg) no-repeat center; padding:4px 0;margin:3px 0 0 0;font-weight:normal}
+.title-pro-2 a{color:#fff}
 
-.title-pro{margin:10px 0 0 0;font-size:18pt}
+.title-pro{margin:10px 0 0 0;font-size:18pt;font-weight:normal}
 .title-pro a{color:#fff;background:#0A0426;padding:2px 20px;text-transform:uppercase}
 .add-to-cart{padding: 5px 0 8px 5px; font-weight:700;background:url(../images/bkg_btn.png) no-repeat left top;*padding:0 0 0 5px;*height:25px}
 .add-to-cart span{background:url(../images/bkg_btn.png) no-repeat right top; padding:5px 15px 8px 10px; height:25px;color:#fff}
