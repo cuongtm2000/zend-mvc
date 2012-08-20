@@ -27,13 +27,14 @@ a:hover{color:#000;}
 #nav .none-line{}
 
 #nav li .sub-nav-product{display:none;list-style:none;background:#FFF;padding:20px 0 0 0}
-#nav li:hover .sub-nav-product{display:block; position:absolute; z-index:200; left:-20px;top:41px; width:735px}
+#nav li:hover .sub-nav-product{display:block; position:absolute; z-index:200; left:-20px;top:41px; width:605px}
 #nav li .sub-nav-product li ,#nav li .sub-nav-product .sub-nav-line{width:100%;padding:0 0 10px 0} 
 #nav li .sub-nav-product .sub-nav-line{background:url(../images/sub-nav-product-line.png) repeat-x bottom;margin:0 0 10px 0}
 
 #nav li:hover >a{background:#fff url(../images/nav-hover.png) no-repeat center top;color:#9F9F9F}
 
 .sub-nav-1{float:left; width:155px;background:#C3C0D1;padding:5px 0 0 0;text-align:center;margin:0 0 0 20px}
+.sub-nav-1 img{width:155p;height:105px}
 #nav li .sub-nav-product .sub-nav-1 a,#nav li .sub-nav-product .sub-nav-2 a{color:#FFFEFF;padding:0}
 #nav li .sub-nav-product .sub-nav-1 a:hover,#nav li .sub-nav-product .sub-nav-2 a:hover{background:none;color:#666}
 .sub-nav-2{float:right; width:511px;margin:0 10px 0 0}
@@ -45,6 +46,14 @@ a:hover{color:#000;}
 .panel-img-1 img {margin:0 21px 0 0} 
 .panel-img-2 img{margin:0 12px 0 0} 
 .panel-img-3 img{margin:0 35px 0 0}
+
+/**sub-nav-new **/
+#nav li .sub-nav-new{display:none;list-style:none;background:#FFF;padding-top:10px;border-left:1px solid #DDD;border-right:1px solid #DDD;border-bottom:1px solid #DDD}
+#nav li:hover .sub-nav-new{display:block; position:absolute; z-index:200; left:-20px;top:41px; width:16em}
+#nav li .sub-nav-new li:hover  a{background:none}
+#nav li .sub-nav-new li {width:100%;padding-bottom:10px} 
+#nav li .sub-nav-new li  a{color:#CAA357;padding:0 0 0 20px;font-size:11pt;text-transform:inherit;background:none}
+#nav li .sub-nav-new li  a:hover{color:#000;background:none}
 
 #nav .select{background:#fff url(../images/nav-hover.png) no-repeat center top;color:#9F9F9F}
 
