@@ -92,7 +92,7 @@ a:hover{color:#000;}
 .frame-tent-right{padding:10px;margin:0 0 10px 0;border:1px solid #ddd;border-radius:2px; -webkit-border-radius:2px;-moz-border-radius:2px}
 .frame-tent-right p{line-height:1.6em}
 
-.title-right{  margin:0 0 10px 0; font-size:10pt;color:#C8A051; font-size:18px;text-transform:uppercase}
+.title-right{padding-top:5px; margin:0 0 10px 0; font-size:10pt;color:#C8A051; font-size:18px;text-transform:uppercase}
 
 .link{color:#868686;padding:15px 0 0;font-size:11pt; margin:0 0 15px 0}
 .link b{font-weight:normal;padding:0 4px}
