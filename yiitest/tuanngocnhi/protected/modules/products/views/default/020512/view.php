@@ -9,8 +9,7 @@
 	</div>
 	<?php endif;?>
 	<div class="right-info">
-		<p><label>Mã sản phẩm</label><b>:</b> </p>
-		<p><label>Loại xe</label><b>:</b>   ACCENT</p>
+		<p><label>Loại xe</label><b>:</b><?php echo $item[ucfirst($this->module->id).'Cat']['cat_title' . LANG] ?></p>
 		<p><label>Tên sản phẩm</label><b>:</b> <strong><?php echo $item['title'.LANG] ?></strong></p>
 		<p class="price-info"><label>Giá</label><b>:</b> <span><?php echo Common::getPrice($item['unit']) ?></span></p>
 		<p class="btn_info"><a href="<?php echo Yii::app()->baseUrl . LANGURL?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo Yii::t('user', 'products.order.link')?>/<?php echo $item['tag'.LANG] ?>" title="<?php echo $this->lang['detail']?>: <?php echo $item['title' . LANG] ?>" class="add-to-cart"><span><?php echo $this->lang['addcart']?></span></a></p>
