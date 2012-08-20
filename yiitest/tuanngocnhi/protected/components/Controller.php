@@ -22,6 +22,7 @@ class Controller extends CController {
 	public $about_list = array();
 	public $services_list = array();
 	public $news_list = array();
+    public $products_list = array();
 	
 	public function init() {
 		Common::setLanguage(); //setting language
@@ -92,6 +93,8 @@ class Controller extends CController {
 		$this->services_list = Services::model()->listMenu();
 		Yii::app()->getModule('news');
 		$this->news_list = NewsCat::model()->listCats();
+        Yii::app()->getModule('products');
+        $this->products_list = ProductsCat::model()->listCats();
 		
 		//Set configs
 		$this->configs = Configs::template($info_user['dos_templates_template']);
