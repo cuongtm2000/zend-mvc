@@ -132,7 +132,7 @@ a:hover{color:#000;}
 .masuring{list-style: none; text-align:justify;font-size:10pt;margin:0 0 20px 0}
 .masuring li{ margin:0 0 10px 0 !important}
 .frame-img{float:left;width:143px; margin:0 10px 0 0}
-.title-masuring{margin:0 0 5px 0}
+.title-masuring{margin:0 0 5px 0;font-size:9pt}
 .title-masuring a{color:#C8A051}
 .title-masuring a:hover{color:#111A37}
 
