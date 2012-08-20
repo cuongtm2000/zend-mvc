@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 20, 2012 at 10:27 AM
+-- Generation Time: Aug 20, 2012 at 10:28 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -321,7 +321,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=188 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=189 ;
+
+--
+-- Dumping data for table `dos_module_abouts`
+--
+
+INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
+(188, 'Giới thiệu sơ lược', 'Brief Introduction', '<p style="text-align:center;"><span style="font-size:medium;color:#0000ff;"><strong>Công ty TNHH TUẤN NGỌC NHI</strong></span></p>\r\n<p style="text-align:left;">Xin hân hạnh kính chào quý khách hàng.</p>\r\n<p>Xuất phát từ suy nghĩ nhỏ, chúng tôi đã hình thành ý tưởng lớn . Nhằm phần nào đáp ứng nhu cầu trang trí nội, ngoại thất làm đẹp thêm cho ý tưởng của khách hàng. Mang đậm dấu ấn cá nhân và nôi bật trên đường phố. Nhằm thúc đẩy mạnh mẽ trong thời đại hiện nay, Công ty TUẤN NGỌC NHI được hình thành và phát triển cùng quý khách .</p>\r\n<p>Từ một xưởng cơ khí nhỏ với máy móc chủ yếu là tự chế, hoặc mua lại máy cũ đã qua sử dụng. Nhưng với sự quyết tâm của tập thể người lao động và ý tưởng của lãnh đạo cơ sở, cùng với sự quý mến của quý khách hàng gần xa.</p>\r\n<p>Sau hơn mười năm tham gia thị trường làm đẹp cho những chiếc xe yêu quý. Công ty chúng tôi , dưới sự bàn bạc thống nhất đã thành lập nên công ty TUẤN NGỌC NHI và cho ra đời những sản phẩm mang thương hiệu TUẤN NGỌC NHI để phục vụ tốt hơn cho quý khách hàng.</p>\r\n<p>Cùng với đội ngũ công nhân tay nghề cao và sự hỗ trợ của máy móc hiện đại đã làm nên những sản phẩm chất lượng tốt, độ tinh xảo của từng đường nét , đạt nét thẩm mỹ và làm vùa lòng đến những khách hàng khó tính.</p>\r\n<p>Ngoài ra chúng tôi cũng đầu tư mạnh để làm ra những sản phẩm xi ( Mạ Crom) dùng cho các sản phẩm trang trí ngoại thất thêm phần nổi bật. Để đạt chất lượng tốt công ty chúng tôi đã mạnh dạn đầu tư công nghệ cao về xi mạ, tư vấn giám sát cũng như kiểm định chất lương trên từng sản phẩm. Với một quy trình khép kín từ khâu tao dáng đến khâu thành phẩm và máy móc hiện đại hỗ trợ .</p>\r\n<p>Để thêm phần phong phú và chuyên nghiệp hơn trong việc làm hài lòng quý khách hàng. Công ty chúng tôi được sự uỷ nhiệm là đại lý độc quyền tại Đồng Nai cung cấp và dán phim cách nhiệt cho xe hơi , nhà cửa, văn phòng. Với đội ngũ kỹ thuật viên chuyên nghiệp, sáng tạo. Sẽ làm hài lòng quý khách hàng gần xa.</p>', '<p>Tuan Ngoc Co., Ltd. NHI</p>\r\n<p>Pleased to greet customers.</p>\r\n<p>Starting from small thinking, we have formed great idea. In order to partially meet the needs of interior and exterior beauty for the customer''s ideas. Sexism and prominent individuals on the street. To promote strong in the current era, NGOC TUAN NHI company formed and developed with you.</p>\r\n<p>From a small mechanical workshop machinery mostly homemade or bought old machines used. But with the determination of the labor leaders and the idea of the basis, along with the affection of our customers near and far.</p>\r\n<p>After more than ten years of market participants the beauty of the beloved car. Our company, under the unified discussion established the NHI and NGOC TUAN company formed for the branded product NGOC TUAN NHI to better serve our customers.</p>\r\n<p>Along with a team of highly skilled workers and the support of modern machinery has made good quality products, sophistication of each line, to aesthetics and to satisfy demanding customers .</p>\r\n<p>In addition, we also invest heavily to make cement products (chromium plating) for the exterior decoration products more prominent part. To achieve good quality companies we have invested high plating technology, consultancy and supervision of quality control on each product. With a closed process from the stage to finished products shaping of modern machinery and support.</p>\r\n<p>To add a richer and more professional to satisfy our customers. Our company is the authorized exclusive agent in Dong Nai and paste film provides insulation for cars, houses, offices. With a team of professional technicians and creative. Will satisfy our customers near and far.</p>', 5, '2012-08-20 08:07:50', 1, 0, NULL, NULL, 'gioi-thieu-so-luoc', 'brief-introduction', 'Xuất phát từ suy nghĩ nhỏ, chúng tôi đã hình thành ý tưởng lớn . Nhằm phần nào đáp ứng nhu cầu trang trí nội, ngoại thất làm đẹp thêm cho ý tưởng của khách hàng. Mang đậm dấu ấn cá nhân và nôi bật trên đường phố.', 'Starting from small thinking, we have formed great idea. In order to partially meet the needs of interior and exterior beauty for the customer''s ideas. Sexism and prominent individuals on the street.', 1, 'tuanngocnhi');
 
 -- --------------------------------------------------------
 
@@ -367,7 +374,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1717 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1720 ;
+
+--
+-- Dumping data for table `dos_module_banners`
+--
+
+INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_url`, `banner_link`, `banner_order`, `banner_type`, `position`, `enable`, `dos_usernames_username`) VALUES
+(1717, '2012-08-20 07:38:32', 'banner1', 'banner1.jpg', '', 1, 'banners', 'default', 1, 'tuanngocnhi'),
+(1718, '2012-08-20 07:38:42', 'banner2', 'banner2.jpg', '', 2, 'banners', 'default', 1, 'tuanngocnhi'),
+(1719, '2012-08-20 07:38:51', 'banner3', 'banner3.jpg', '', 3, 'banners', 'default', 1, 'tuanngocnhi');
 
 -- --------------------------------------------------------
 
@@ -484,7 +500,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=147 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=150 ;
+
+--
+-- Dumping data for table `dos_module_news_cat`
+--
+
+INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
+(147, 0, 'Tin khuyến mãi', '', NULL, NULL, 'tin-khuyen-mai', '', '', '', 'tin-khuyen-mai.jpg', 1, NULL, NULL, 1, 'tuanngocnhi'),
+(148, 0, 'Người đẹp và xe', '', NULL, NULL, 'nguoi-dep-va-xe', '', '', '', 'nguoi-dep-va-xe.jpg', 2, NULL, NULL, 1, 'tuanngocnhi'),
+(149, 0, 'Tin sản phẩm mới', '', NULL, NULL, 'tin-san-pham-moi', '', '', 'Tin sản phẩm mới', 'tin-san-pham-moi.jpg', 3, NULL, NULL, 1, 'tuanngocnhi');
 
 -- --------------------------------------------------------
 
@@ -523,7 +548,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1345450662);
+('''127.0.0.1''', 1345450671);
 
 -- --------------------------------------------------------
 
@@ -560,7 +585,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5591 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5592 ;
 
 -- --------------------------------------------------------
 
@@ -588,7 +613,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1072 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1077 ;
+
+--
+-- Dumping data for table `dos_module_products_cat`
+--
+
+INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
+(1072, 0, 'XE MÁY', '', NULL, NULL, 'xe-may', '', '', '', 'xe-my.jpg', NULL, 1, NULL, NULL, 1, 'tuanngocnhi'),
+(1073, 0, 'XE HƠI', '', NULL, NULL, 'xe-hoi', '', '', '', 'xe-hi.jpg', NULL, 2, NULL, NULL, 1, 'tuanngocnhi');
 
 -- --------------------------------------------------------
 
@@ -619,7 +652,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=216 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=217 ;
+
+--
+-- Dumping data for table `dos_module_services`
+--
+
+INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
+(216, 'Phủ Pha Lê Chống: Bụi, Xước Bề Mặt Sơn', '', NULL, NULL, '<p>Phủ Pha Lê Chống: Bụi, Xước Bề Mặt Sơn</p>\r\n<p style="text-align:center;"><img style="margin-top:5px;margin-bottom:5px;" src="/public/userfiles/image/tuanngocnhi/image/8124.JPG" alt="" width="300" height="225" /></p>\r\n<p style="text-align:center;"><img style="margin-top:5px;margin-bottom:5px;" src="/public/userfiles/image/tuanngocnhi/image/14356.JPG" alt="" width="640" height="480" /></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/tuanngocnhi/image/14355.JPG" alt="" width="640" height="480" /></p>', '<p style="text-align:center;"><img style="margin-top:5px;margin-bottom:5px;" src="/public/userfiles/image/tuanngocnhi/image/8124.JPG" alt="" width="300" height="225" /></p>\r\n<p style="text-align:center;"><img style="margin-top:5px;margin-bottom:5px;" src="/public/userfiles/image/tuanngocnhi/image/14356.JPG" alt="" width="640" height="480" /></p>\r\n<p style="text-align:center;"><img src="/public/userfiles/image/tuanngocnhi/image/14355.JPG" alt="" width="640" height="480" /></p>', '', 7, '2012-08-20 08:10:34', 1, 0, NULL, NULL, 'phu-pha-le-chong-bui-xuoc-be-mat-son', '', '', '', 1, 'tuanngocnhi');
 
 -- --------------------------------------------------------
 
