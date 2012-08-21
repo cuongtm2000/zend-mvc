@@ -74,7 +74,7 @@
                 <div class="all-right-fter" >
                     <form action="<?php echo Yii::app()->baseUrl ?>/tim-kiem" id="frm-search" name="frmlistproduct" method="post">
                         <select size="1" name="cat" class="select">
-                            <option value="0">Chọn nhóm sản phẩm</option>
+                            <option value="">Chọn nhóm sản phẩm</option>
                             <?php foreach ($this->function['menu_products'] as $value): ?>
                                 <option value="<?php echo $value['cat_id'] ?>"><?php echo $value['cat_title'] ?></option>
                             <?php endforeach; ?>

@@ -268,19 +268,26 @@ class DefaultController extends Controller {
     }
     public function actionSearch(){
         $this->layout = '//layouts/column-3';
-     //   var_dump($_POST);
+    
         $data=NULL;
-        if(isset($_POST['keyword'])){
-            $pro=new Products();
+        $pro=new Products();
+        if(isset($_POST['keyword'])){   
             $data=$pro->searchByCat($_POST['cat'], $_POST['keyword']);
         }
-       // var_dump($data);
+        
+        if(isset($_POST['type_id'])){   
+            $data=$pro->search($_POST);
+        }  
         $this->render(Yii::app()->session['template'] . '/search', 
                 array('list_items' => $data));
     }
     public function actionListdistrict($id, $idd = 0) {
         $pr = new Provinces();
         $this->renderPartial(Yii::app()->session['template'] .'/listdistrict', array('list' => $pr->listDistrictProvince($id), 'idd' => $idd), false, true);
+    }
+    public function actionListdistrict2($id, $idd = 0) {
+        $pr = new Provinces();
+        $this->renderPartial(Yii::app()->session['template'] .'/listdistrict2', array('list' => $pr->listDistrictProvince($id), 'idd' => $idd), false, true);
     }
     public function actionListward($id, $idd = 0) {
         $pr = new Provinces();

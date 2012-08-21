@@ -35,74 +35,73 @@
 
             <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/tk.png" alt="Công cụ tìm kiếm"/>	
             <div class="contents">
-                <!--begin tab-->
+                <!--begin tab -->
                 <div class="tab">
-                    <div id="divTabRESale" class="divSearchAct" onclick="ShowTab(1);">
+                    <div id="div1" class="divSearchAct" onclick="setActive(1);">
                         <a>BĐS bán </a>
                     </div>
-                    <div class="tab-lines" id="tab-line_1" style="display: none;">
-                    </div>
-                    <div id="divTabREBorrow" class="divSearchInAct" onclick="ShowTab(2);">
+                    <div class="tab-lines" id="tab-line_1" style="display: none;"></div>
+                    <div id="div2" class="divSearchInAct" onclick="setActive(2);">
                         <a>BĐS cho thuê </a>
-                    </div>
-                    <div class="tab-lines" id="tab-line_2">
-                    </div>
-                    <div id="divTabRESaler" class="divSearchInAct" onclick="ShowTab(3);">
+                    </div><div class="tab-lines" id="tab-line_2"> </div>
+                    <div id="div3" class="divSearchInAct" onclick="setActive(3);">
                         <a>BĐS sang nhượng</a></div>
-                    <div style="clear: both">
-                    </div>
+                    <div style="clear: both"> </div>
                 </div>
                 <!--end tab-->
                 <div id="divOfSeach">
                     <!--begin combobox-->
-                    <form action="" method="post" id="frmSearchProduct" name="frmSearchProduct">
+                    <form action="<?php echo Yii::app()->baseUrl ?>/tim-kiem" method="post" id="frmSearchProduct" name="frmSearchProduct">
                         <div id="searchArea">
+                            <input type="hidden" name="type_id" id="type_id" value="1" />
+
                             <div class="comboboxs" id="listCategoryRe">
-                                <select class="select-box" id="cboTypeRe" name="cboTypeRe">
+                                <select  name="cat_id" class="select-box">
                                     <option value="">---Chọn Loại nhà đất---</option>
+                                    <?php foreach ($this->function['menu_products'] as $value): ?>
+                                        <option value="<?php echo $value['cat_id'] ?>"><?php echo $value['cat_title'] ?></option>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
                             <div class="comboboxs" id="listCity">
-                                <select class="select-box" id="cboCity" name="cboCity">
+                                <select  name="province_id" id="province_id" class="select-box">
                                     <option value="">---Chọn Tỉnh-Thành phố---</option>
-                                    <option value="SG">Tp.HCM</option>
-                                    <option value="HN">Hà Nội</option>
-                                    <option value="BD">Bình Dương</option>
-                                    <option value="DDN">Đà Nẵng</option>
-                                    <option value="HP">Hải Phòng</option>
-                                    <option value="DNA">Đồng Nai</option>
+                                    <?php foreach ($this->function['menu_province'] as $value): ?>
+                                        <option value="<?php echo $value['province_id'] ?>"><?php echo $value['province_name'] ?></option>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
-                            <div class="comboboxs" id="listDistrict">
-                                <select class="select-box" id="cboDistrict" name="cboDistrict">
+
+                            <div class="comboboxs" id="district_id">
+                                <select class="select-box" name="district_id">
                                     <option value="">---Chọn Quận/Huyện---</option>
                                 </select>
                             </div>
                             <div class="comboboxs">
-                                <select class="select-box" id="cboArea" name="cboArea" onchange="SearchCount();">
+                                <select class="select-box" id="area" name="area">
                                     <option value="">---Chọn Diện tích---</option>
-                                    <option value="0">Không xác định</option>
-                                    <option value="1">&lt;= 30 m2</option>
-                                    <option value="2">30-50 m2</option>
-                                    <option value="3">50-80 m2</option>
-                                    <option value="4">80-100 m2</option>
-                                    <option value="5">100-150 m2</option>
-                                    <option value="6">150-200 m2</option>
-                                    <option value="7">200-250 m2</option>
-                                    <option value="8">250-300 m2</option>
-                                    <option value="9">300-500 m2</option>
-                                    <option value="10">&gt;=500 m2</option>
+                                    <option value="">Không xác định</option>
+                                    <option value="0_30">&lt;= 30 m2</option>
+                                    <option value="30_50">30-50 m2</option>
+                                    <option value="50_80">50-80 m2</option>
+                                    <option value="80_100">80-100 m2</option>
+                                    <option value="100_150">100-150 m2</option>
+                                    <option value="150_200">150-200 m2</option>
+                                    <option value="200_250">200-250 m2</option>
+                                    <option value="250_300">250-300 m2</option>
+                                    <option value="300_500">300-500 m2</option>
+                                    <option value="500_1000">&gt;=500 m2</option>
                                 </select>
                             </div>
-                            <div class="comboboxs" id="divPrice">
-                                <select class="select-box" id="cboPrice" name="cboPrice">
+                            <!--div class="comboboxs" id="unit">
+                                <select class="select-box" id="price" name="price">
                                     <option value="">---Chọn mức giá---</option>
                                 </select>
-                            </div>
+                            </div-->
                             <div class="comboboxs adv-search" >
-                                <select class="select-box" id="cboBedRoom" name="cboBedRoom" onchange="SearchCount();">
+                                <select class="select-box" id="room" name="room">
                                     <option value="">---Chọn số phòng---</option>
-                                    <option value="0">Không xác định</option>
+                                    <option value="">Không xác định</option>
                                     <option value="1">1+</option>
                                     <option value="2">2+</option>
                                     <option value="3">3+</option>
@@ -111,55 +110,27 @@
                                 </select>
                             </div>
                             <div class="comboboxs adv-search" >
-                                <select class="select-box" id="cboHomeDirection" name="cboHomeDirection" onchange="SearchCount();">
-                                    <option value="">---Chọn hướng nhà---</option>
-                                    <option value="0">Không xác định</option>
-                                    <option value="1">Đông</option>
-                                    <option value="2">Tây</option>
-                                    <option value="3">Nam</option>
-                                    <option value="4">Bắc</option>
-                                    <option value="5">Đông-Bắc</option>
-                                    <option value="6">Tây-Bắc</option>
-                                    <option value="7">Tây-Nam</option>
-                                    <option value="8">Đông-Nam</option>
-                                </select>
+                                <select class="select-box" id="direction" name="direction">
+                                    <option value="">Chọn hướng nhà</option>
+                                    <option value="">Chưa xác định</option>
+                                    <option value="Đông">Đông</option>
+                                    <option value="Tây">Tây</option>
+                                    <option value="Nam">Nam</option>
+                                    <option value="Bắc">Bắc</option>
+                                    <option value="Đông Bắc">Đông Bắc</option>
+                                    <option value="Đông Nam">Đông Nam</option>
+                                    <option value="Tây Bắc">Tây Bắc</option>
+                                    <option value="Tây Nam">Tây Nam</option>
+                                </select> 
                             </div>
-                            <div class="comboboxs adv-search"  id="listProj">
-                                <select class="select-box" id="cboListProj" name="cboListProj" onchange="SearchCount();">
-                                    <option value="">---Chọn dự án BĐS---</option>
-                                </select>
-                            </div>
-                        </div>
-                        <input class="bt-search" type="image" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ts_button-search.jpg" />
-                    </form>
-                    <!--end combobox-->
-                </div> <!--End divOfSeach tab 1 2-->
 
-                <div id="divReSaler" style="display: none">
-                    <!--begin combobox-->
-                    <form id="frmBrokerSearch" action="" name="frmBrokerSearch" method="post" enctype="multipart/form-data">
-                        <div class="comboboxs" id="listTypeBDS">
-                            <select class="select-box" id="cmbTypeBDS" name="cmbTypeBDS">
-                                <option value="">--Chọn Loại nhà đất--</option>
-                            </select>
                         </div>
-                        <div class="comboboxs">
-                            <select class="select-box" id="cmbCity" name="cmbCity"><option value="">--Chọn Tỉnh / Thành phố--</option>
-                                <option value="SG">Tp.HCM</option>
-                                <option value="HN">Hà Nội</option>
-                                <option value="BD">Bình Dương</option>
-                                <option value="DDN">Đà Nẵng</option>
-                            </select>
-                        </div>
-                        <div class="comboboxs" id="divListDistrict">
-                            <select class="select-box" id="cmbDistrict" name="cmbDistrict">
-                                <option value="">--Chọn Quận / Huyện--</option>
-                            </select>
-                        </div>
-                        <input class="bt-search" type="image" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ts_button-search.jpg" />
+                        <input class="bt-search" type="image" onclick="doSubmit();" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ts_button-search.jpg" />
                     </form>
                     <!--end combobox-->
-                </div>
+                </div> <!-- End divOfSeach tab 1 2 -->
+
+
             </div> <!--End contents tab-->
             <div class="bd-bt-search"></div>	
 
@@ -194,8 +165,8 @@
                     </ul>
                 </div> <!--End dich vu nha dat-->
             <?php endif; ?>
-			
-			<?php if (isset($this->function['advs_right']) && ($this->function['advs_right'])): ?>
+
+            <?php if (isset($this->function['advs_right']) && ($this->function['advs_right'])): ?>
                 <ul class="adv-right">
                     <?php foreach ($this->function['advs_right'] as $value): ?>
                         <li>
@@ -207,4 +178,23 @@
         </div> <!--End class container_content_right-->	
     </div> <!--End ID container_content_right-->   <div class="clear"></div>
 </div><!--End content-->
+
+<script>
+    function setActive(value){
+        $('#div1').removeClass('divSearchAct').addClass('divSearchInAct');
+        $('#div2').removeClass('divSearchAct').addClass('divSearchInAct');
+        $('#div3').removeClass('divSearchAct').addClass('divSearchInAct');
+        $('#div'+value).removeClass('divSearchInAct').addClass('divSearchAct');
+        $('input[name="type_id"]').val(value);        
+    }   
+    $("#province_id").change(function(){
+        $("#district_id").load("<?php echo Yii::app()->baseUrl ?>/products/default/listdistrict2/id/"+ $("#province_id").val());
+                        
+    });
+</script>
+
+
+
+
+
 <?php $this->endContent(); ?>
