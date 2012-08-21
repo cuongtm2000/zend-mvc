@@ -85,16 +85,16 @@
                                 </div>
                                 <div class="sub-nav-2">
                                     <div class="panel-img-1">
-                                        <?php $items = Products::model()->listItemByCat($sub['cat_id']); $m=0; foreach($items['models'] as $item):?>
+                                        <?php $items = ProductsCat::model()->listItem($sub['cat_id']); $m=0; foreach($items as $item):?>
                                             <?php if($m%2==0):?>
-                                                <a href="<?php echo Yii::app()->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $item->ProductsCat['tag'.LANG]?>/<?php echo $item['tag'.LANG]?>.html" title="<?php echo $item['title'.LANG]?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES?>/products/<?php echo $item['pic_thumb']?>" alt="<?php echo $item['title'.LANG]?>" /></a>
+                                                <a href="<?php echo Yii::app()->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $item['tag'.LANG]?>" title="<?php echo $item['cat_title'.LANG]?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES?>/productsCat/<?php echo $item['pic_full']?>" alt="<?php echo $item['cat_title'.LANG]?>" /></a>
                                             <?php endif?>
                                         <?php $m++; endforeach?>
                                     </div> <div class="clear"></div>
                                     <div class="panel-img-2">
-                                        <?php $m=0; foreach($items['models'] as $item):?>
+                                        <?php $m=0; foreach($items as $item):?>
                                         <?php if($m%2!=0):?>
-                                            <a href="<?php echo Yii::app()->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $item->ProductsCat['tag'.LANG]?>/<?php echo $item['tag'.LANG]?>.html" title="<?php echo $item['title'.LANG]?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES?>/products/<?php echo $item['pic_thumb']?>" alt="<?php echo $item['title'.LANG]?>" /></a>
+                                            <a href="<?php echo Yii::app()->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $item['tag'.LANG]?>" title="<?php echo $item['cat_title'.LANG]?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES?>/productsCat/<?php echo $item['pic_full']?>" alt="<?php echo $item['cat_title'.LANG]?>" /></a>
                                             <?php endif?>
                                         <?php $m++;endforeach?>
                                     </div>

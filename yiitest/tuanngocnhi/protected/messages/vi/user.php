@@ -5,6 +5,7 @@ return array(
 	
     'about.link' => 'gioi-thieu',
     'products.link' => 'san-pham',
+    'productshot.link' => 'san-pham-noi-bat',
 
     'products.order.link' => 'dat-hang',
     'products.cartitem.link' => 'gio-hang',
