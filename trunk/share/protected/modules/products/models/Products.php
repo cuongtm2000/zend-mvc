@@ -78,7 +78,7 @@ class Products extends CActiveRecord {
             'dosModuleItemTypeType' => array(self::BELONGS_TO, 'ProductsType', 'dos_module_item_type_type_id'),
             'productsFeature' => array(self::HAS_ONE, 'ProductsFeature', 'product_id'),
             'productsUtility' => array(self::HAS_ONE, 'ProductsUtility', 'product_id'),
-             'Username' => array(self::BELONGS_TO, 'Username', 'dos_username'),
+            'Username' => array(self::BELONGS_TO, 'Username', 'dos_username'),
             'Ward' => array(self::BELONGS_TO, 'Wards', 'dos_wards_ward_id'),
         );
     }
@@ -125,7 +125,7 @@ class Products extends CActiveRecord {
             'utility' => 'Thông tin tiện ích',
             'unit_currency' => 'Tiền tệ',
             'address' => 'Địa chỉ',
-            'dos_wards_ward_id'=>'Phường xã',
+            'dos_wards_ward_id' => 'Phường xã',
         );
     }
 
@@ -133,42 +133,38 @@ class Products extends CActiveRecord {
      * Retrieves a list of models based on the current search/filter conditions.
      * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
      */
-    public function search() {
-        // Warning: Please modify the following code to remove attributes that
-        // should not be searched.
+    public function search($data) {
+
 
         $criteria = new CDbCriteria;
+        $criteria->with = array('ProductsCat', 'productsFeature');
 
-        $criteria->compare('record_id', $this->record_id);
-        $criteria->compare('title', $this->title, true);
-        $criteria->compare('titleen', $this->titleen, true);
-        $criteria->compare('postdate', $this->postdate, true);
-        $criteria->compare('pic_thumb', $this->pic_thumb, true);
-        $criteria->compare('pic_full', $this->pic_full, true);
-        $criteria->compare('pic_desc', $this->pic_desc, true);
-        $criteria->compare('preview', $this->preview, true);
-        $criteria->compare('previewen', $this->previewen, true);
-        $criteria->compare('content', $this->content, true);
-        $criteria->compare('contenten', $this->contenten, true);
-        $criteria->compare('tag', $this->tag, true);
-        $criteria->compare('tagen', $this->tagen, true);
-        $criteria->compare('description', $this->description, true);
-        $criteria->compare('descriptionen', $this->descriptionen, true);
-        $criteria->compare('hits', $this->hits);
-        $criteria->compare('record_order', $this->record_order);
-        $criteria->compare('unit', $this->unit, true);
-        $criteria->compare('hot', $this->hot);
-        $criteria->compare('specials', $this->specials);
-        $criteria->compare('extra_field1', $this->extra_field1, true);
-        $criteria->compare('extra_field2', $this->extra_field2, true);
-        $criteria->compare('extra_field3', $this->extra_field3, true);
-        $criteria->compare('extra_field4', $this->extra_field4, true);
-        $criteria->compare('enable', $this->enable);
-        $criteria->compare('dos_module_item_cat_cat_id', $this->dos_module_item_cat_cat_id);
+        $criteria->compare('enable', 1);
+        $criteria->compare('dos_module_item_type_type_id', $data['type_id'], true);
+        $criteria->compare('dos_module_item_cat_cat_id', $data['cat_id'], true);
+        $criteria->compare('dos_districts_district_id', $data['district_id'], true);
 
-        return new CActiveDataProvider($this, array(
-                    'criteria' => $criteria,
-                ));
+        if ($data['area']) {
+            $area = explode('_', $data['area']);
+     //       echo $area[0];
+      //     $criteria->compare('area_used', $area[0], TRUE, '>');
+    //      $criteria->compare('area_used', $area[1], FALSE, '<=');
+        }
+
+//        $criteria->compare('unit', $data['price'], true);
+        $criteria->compare('direction', $data['direction'], true);
+        $criteria->compare('bedroom', $data['room'], true);
+
+
+        $criteria->order = 'hot DESC, record_order DESC, postdate DESC';
+        
+       // var_dump($criteria);
+        $count = $this->model()->count($criteria);
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = Yii::app()->controller->configs['products_num_paging_cat'];
+        $pages->applyLimit($criteria);
+        return array('models' => $this->model()->findAll($criteria), 'pages' => $pages);
     }
 
     public function afterFind() {
@@ -210,7 +206,7 @@ class Products extends CActiveRecord {
                 );
             }
             //pic_desc
-            if ($_FILES[__CLASS__]['name']['pic_desc']){
+            if ($_FILES[__CLASS__]['name']['pic_desc']) {
                 Yii::import('ext.simpleImage.CSimpleImage');
                 $file = new CSimpleImage();
                 $this->pic_desc = implode("|", $file->uploadMulti($_FILES[__CLASS__]['name']['pic_desc'], $_FILES[__CLASS__]['tmp_name']['pic_desc'], Configs::configTemplate('products_width', Yii::app()->session['template']), Configs::configTemplate('products_height', Yii::app()->session['template']), $_USERFILES . lcfirst(__CLASS__), $this->title));
@@ -278,7 +274,7 @@ class Products extends CActiveRecord {
         $criteria = new CDbCriteria();
         $criteria->with = array('ProductsCat', 'productsFeature');
         //$criteria->select = 'title' . LANG . ', postdate, pic_thumb, tag' . LANG . ', hits, unit, hot';
-        
+
         $criteria->order = 'hot DESC, record_order DESC, postdate DESC';
         $criteria->condition = 'enable = 1';
         $criteria->limit = Configs::configTemplate('products_num_paging_new', Yii::app()->session['template']);
@@ -392,14 +388,14 @@ class Products extends CActiveRecord {
 
         return array('models' => $this->model()->findAll($criteria), 'pages' => $pages);
     }
-    
-           public function listItemAdminOfUser($id) {
+
+    public function listItemAdminOfUser($id) {
         $criteria = new CDbCriteria();
         $criteria->with = array(__CLASS__ . 'Cat');
         $criteria->select = 'record_id, title, hits, record_order, hot, enable';
         $criteria->order = 'hot DESC, record_order DESC, postdate DESC';
-           $criteria->condition = 'dos_username=:user';
-          $criteria->params = array(':user' => $id);
+        $criteria->condition = 'dos_username=:user';
+        $criteria->params = array(':user' => $id);
 
         $count = $this->model()->count($criteria);
 
@@ -410,8 +406,6 @@ class Products extends CActiveRecord {
 
         return array('models' => $this->model()->findAll($criteria), 'pages' => $pages);
     }
-
-    
 
     public function listItemPosted() {
         $criteria = new CDbCriteria();
@@ -449,7 +443,7 @@ class Products extends CActiveRecord {
     //Back end - Delete Record
     public function deleteRecord($id) {
         $item = Products::model()->find('record_id=:id', array(':id' => $id));
-		$_USERFILES = '/public/userfiles/image/' . Yii::app()->user->name . '/image/';
+        $_USERFILES = '/public/userfiles/image/' . Yii::app()->user->name . '/image/';
         $path = YiiBase::getPathOfAlias('webroot') . $_USERFILES . '/products/';
 
         if ($item->pic_thumb && file_exists($path . $item->pic_thumb)) {
@@ -655,12 +649,10 @@ class Products extends CActiveRecord {
         $criteria->with = array('ProductsCat', 'productsFeature');
         $criteria->compare('title', $keyword, true);
         $criteria->compare('enable', 1);
-        if ($cid != 0)
-            $criteria->compare('dos_module_item_cat_cat_id', $cid);
+        $criteria->compare('dos_module_item_cat_cat_id', $cid);
 
-        
         $criteria->order = 'hot DESC, record_order DESC, postdate DESC';
-        
+
         $count = $this->model()->count($criteria);
         // elements per page
         $pages = new CPagination($count);

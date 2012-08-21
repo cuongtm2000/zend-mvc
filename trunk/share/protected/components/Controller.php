@@ -60,7 +60,9 @@ class Controller extends CController {
         $this->function['menu_products'] = $load->listItem();
         $load = new ProductsType();
         $this->function['menu_productstype'] = $load->listItem();
-
+ 
+        $load = new Provinces();
+        $this->function['menu_province'] = $load->listProvinceByCountry('VND');
         //Set Logo, Banner
         $banner = new Banner();
         $this->logo = $banner->getLogo();
