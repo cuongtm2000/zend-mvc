@@ -243,6 +243,12 @@ class ProductsCat extends CActiveRecord {
 			}
 		}
 	}
+	
+	//Front end - list menu
+	public function listItemParent($cid) {
+		$command = Yii::app()->db->createCommand('SELECT cat_id, cat_parent_id, cat_title' . Yii::app()->session['lang'] . ', tag' . Yii::app()->session['lang'] . ', pic_full FROM ' . $this->tableName() . ' WHERE cat_parent_id=' . $cid . ' AND cat_enable=1 ORDER BY cat_order DESC');
+		return $command->queryAll();
+	}
 
 	//Front end - list menu
 	public function listItem($cid = 0) {

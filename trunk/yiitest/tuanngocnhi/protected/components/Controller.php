@@ -94,7 +94,7 @@ class Controller extends CController {
 		Yii::app()->getModule('news');
 		$this->news_list = NewsCat::model()->listCats();
         Yii::app()->getModule('products');
-        $this->products_list = ProductsCat::model()->listCats();
+        $this->products_list = ProductsCat::model()->listItemParent(0);
 		
 		//Set configs
 		$this->configs = Configs::template($info_user['dos_templates_template']);
