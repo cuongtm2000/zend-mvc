@@ -5,6 +5,7 @@ return array(
 
     'about.link' => 'about',
     'products.link' => 'products',
+    'productshot.link' => 'hot-products',
 
     'products.order.link' => 'order',
     'products.cartitem.link' => 'cart-item',

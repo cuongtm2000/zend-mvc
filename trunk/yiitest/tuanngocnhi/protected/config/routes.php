@@ -13,6 +13,7 @@ return array(
     '<products:(san-pham)>/<cid:[-a-z0-9]+>/trang/<page:\d+>' => array('products/default/cats'), //cat paging
     '<products:(san-pham)>/<cid:[-a-z0-9]+>' => array('products/default/cats'), //cat
     '<products:(san-pham)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>' => array('products/default/view', 'urlSuffix' => '.html'), //view
+    '<productshot:(san-pham-noi-bat)>' => array('productshot/default/index'), //cat
 
     //services modules
     '<services:(dich-vu)>' => 'services/default/index', //index
@@ -35,6 +36,7 @@ return array(
     '<contact:(lien-he)>' => 'contact/default/index', //index
 
     //For multi language
+    '<language:(vi|en)>/<productshot:(hot-products)>' => array('productshot/default/index'), //cat
     '<language:(vi|en)>/<module:\w+>/<cid:(order)>/<id:[-a-z0-9]+>' => array('<module>/default/order'), //order for products
     '<language:(vi|en)>/<module:\w+>/<cid:(cart-item)>' => array('<module>/default/cartitem'), //Cart item for products
     '<language:(vi|en)>/<module:\w+>/<cid:(del-all-cart)>' => array('<module>/default/delallcart'), //Delete all cart for products

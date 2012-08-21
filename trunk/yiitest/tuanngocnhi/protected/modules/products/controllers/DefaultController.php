@@ -3,8 +3,8 @@
 class DefaultController extends Controller {
 
     public function actionIndex() {
-		$this->layout = '//layouts/column-2';
-		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/main.css');
+        $this->layout = '//layouts/column-2';
+        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/main.css');
         $this->setSeoPage(); //set Seo page
 
         $model = new ProductsCat();
@@ -12,8 +12,8 @@ class DefaultController extends Controller {
     }
 
     public function actionCats($cid, $page = 0) {
-		$this->layout = '//layouts/column-2';
-		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/main.css');
+        $this->layout = '//layouts/column-2';
+        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/main.css');
         $model = new ProductsCat();
         $items = new Products();
 
@@ -22,9 +22,9 @@ class DefaultController extends Controller {
     }
 
     public function actionView($id) {
-		$this->layout = '//layouts/column-2';
-		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/main.css');
-		
+        $this->layout = '//layouts/column-2';
+        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/main.css');
+
         $model = ucfirst($this->module->id);
         $model_class = new $model();
 
@@ -34,9 +34,9 @@ class DefaultController extends Controller {
     }
 
     public function actionOrder($id) {
-		$this->layout = '//layouts/column-2';
-		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/main.css');
-		
+        $this->layout = '//layouts/column-2';
+        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/main.css');
+
         $model = ucfirst($this->module->id);
         $model_class = new $model();
 
@@ -53,9 +53,9 @@ class DefaultController extends Controller {
     }
 
     public function actionCartitem() {
-		$this->layout = '//layouts/column-2';
-		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/main.css');
-		
+        $this->layout = '//layouts/column-2';
+        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/main.css');
+
         $model = ucfirst($this->module->id);
         $model_class = new $model();
 
@@ -73,9 +73,9 @@ class DefaultController extends Controller {
     }
 
     public function actionCartdelete($id) {
-		$this->layout = '//layouts/column-2';
-		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/main.css');
-		
+        $this->layout = '//layouts/column-2';
+        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/main.css');
+
         $cart = Yii::app()->session['cart'];
         unset($cart[$id]);
         Yii::app()->session['cart'] = $cart;
@@ -84,17 +84,17 @@ class DefaultController extends Controller {
 
     // delete all item in cart
     public function actionDelallcart() {
-		$this->layout = '//layouts/column-2';
-		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/main.css');
-		
+        $this->layout = '//layouts/column-2';
+        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/main.css');
+
         Yii::app()->session['cart'] = '';
         $this->redirect(Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', 'products.link') . '/' . Yii::t('user', 'products.cartitem.link'));
     }
 
     public function actionOrdering() {
-		$this->layout = '//layouts/column-2';
-		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/main.css');
-		
+        $this->layout = '//layouts/column-2';
+        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/main.css');
+
         $model = ucfirst($this->module->id);
         $model_class = new $model();
         $cartform = new CartForm();
@@ -140,5 +140,4 @@ class DefaultController extends Controller {
 
         $this->render(Yii::app()->session['template'] . '/ordering', array('Items' => $items, 'carts' => $cart, 'model' => $cartform));
     }
-
 }
