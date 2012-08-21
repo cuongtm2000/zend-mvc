@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 21, 2012 at 04:00 AM
+-- Generation Time: Aug 21, 2012 at 05:25 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -328,7 +328,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(188, 'Giới thiệu sơ lược', 'Brief Introduction', '<p style="text-align:center;"><span style="font-size:medium;color:#0000ff;"><strong>Công ty TNHH TUẤN NGỌC NHI</strong></span></p>\r\n<p style="text-align:left;">Xin hân hạnh kính chào quý khách hàng.</p>\r\n<p>Xuất phát từ suy nghĩ nhỏ, chúng tôi đã hình thành ý tưởng lớn . Nhằm phần nào đáp ứng nhu cầu trang trí nội, ngoại thất làm đẹp thêm cho ý tưởng của khách hàng. Mang đậm dấu ấn cá nhân và nôi bật trên đường phố. Nhằm thúc đẩy mạnh mẽ trong thời đại hiện nay, Công ty TUẤN NGỌC NHI được hình thành và phát triển cùng quý khách .</p>\r\n<p>Từ một xưởng cơ khí nhỏ với máy móc chủ yếu là tự chế, hoặc mua lại máy cũ đã qua sử dụng. Nhưng với sự quyết tâm của tập thể người lao động và ý tưởng của lãnh đạo cơ sở, cùng với sự quý mến của quý khách hàng gần xa.</p>\r\n<p>Sau hơn mười năm tham gia thị trường làm đẹp cho những chiếc xe yêu quý. Công ty chúng tôi , dưới sự bàn bạc thống nhất đã thành lập nên công ty TUẤN NGỌC NHI và cho ra đời những sản phẩm mang thương hiệu TUẤN NGỌC NHI để phục vụ tốt hơn cho quý khách hàng.</p>\r\n<p>Cùng với đội ngũ công nhân tay nghề cao và sự hỗ trợ của máy móc hiện đại đã làm nên những sản phẩm chất lượng tốt, độ tinh xảo của từng đường nét , đạt nét thẩm mỹ và làm vùa lòng đến những khách hàng khó tính.</p>\r\n<p>Ngoài ra chúng tôi cũng đầu tư mạnh để làm ra những sản phẩm xi ( Mạ Crom) dùng cho các sản phẩm trang trí ngoại thất thêm phần nổi bật. Để đạt chất lượng tốt công ty chúng tôi đã mạnh dạn đầu tư công nghệ cao về xi mạ, tư vấn giám sát cũng như kiểm định chất lương trên từng sản phẩm. Với một quy trình khép kín từ khâu tao dáng đến khâu thành phẩm và máy móc hiện đại hỗ trợ .</p>\r\n<p>Để thêm phần phong phú và chuyên nghiệp hơn trong việc làm hài lòng quý khách hàng. Công ty chúng tôi được sự uỷ nhiệm là đại lý độc quyền tại Đồng Nai cung cấp và dán phim cách nhiệt cho xe hơi , nhà cửa, văn phòng. Với đội ngũ kỹ thuật viên chuyên nghiệp, sáng tạo. Sẽ làm hài lòng quý khách hàng gần xa.</p>', '<p>Tuan Ngoc Co., Ltd. NHI</p>\r\n<p>Pleased to greet customers.</p>\r\n<p>Starting from small thinking, we have formed great idea. In order to partially meet the needs of interior and exterior beauty for the customer''s ideas. Sexism and prominent individuals on the street. To promote strong in the current era, NGOC TUAN NHI company formed and developed with you.</p>\r\n<p>From a small mechanical workshop machinery mostly homemade or bought old machines used. But with the determination of the labor leaders and the idea of the basis, along with the affection of our customers near and far.</p>\r\n<p>After more than ten years of market participants the beauty of the beloved car. Our company, under the unified discussion established the NHI and NGOC TUAN company formed for the branded product NGOC TUAN NHI to better serve our customers.</p>\r\n<p>Along with a team of highly skilled workers and the support of modern machinery has made good quality products, sophistication of each line, to aesthetics and to satisfy demanding customers .</p>\r\n<p>In addition, we also invest heavily to make cement products (chromium plating) for the exterior decoration products more prominent part. To achieve good quality companies we have invested high plating technology, consultancy and supervision of quality control on each product. With a closed process from the stage to finished products shaping of modern machinery and support.</p>\r\n<p>To add a richer and more professional to satisfy our customers. Our company is the authorized exclusive agent in Dong Nai and paste film provides insulation for cars, houses, offices. With a team of professional technicians and creative. Will satisfy our customers near and far.</p>', 19, '2012-08-20 08:07:50', 1, 0, NULL, NULL, 'gioi-thieu-so-luoc', 'brief-introduction', 'Xuất phát từ suy nghĩ nhỏ, chúng tôi đã hình thành ý tưởng lớn . Nhằm phần nào đáp ứng nhu cầu trang trí nội, ngoại thất làm đẹp thêm cho ý tưởng của khách hàng. Mang đậm dấu ấn cá nhân và nôi bật trên đường phố.', 'Starting from small thinking, we have formed great idea. In order to partially meet the needs of interior and exterior beauty for the customer''s ideas. Sexism and prominent individuals on the street.', 1, 'tuanngocnhi');
+(188, 'Giới thiệu sơ lược', 'Brief Introduction', '<p style="text-align:center;"><span style="font-size:medium;color:#0000ff;"><strong>Công ty TNHH TUẤN NGỌC NHI</strong></span></p>\r\n<p style="text-align:left;">Xin hân hạnh kính chào quý khách hàng.</p>\r\n<p>Xuất phát từ suy nghĩ nhỏ, chúng tôi đã hình thành ý tưởng lớn . Nhằm phần nào đáp ứng nhu cầu trang trí nội, ngoại thất làm đẹp thêm cho ý tưởng của khách hàng. Mang đậm dấu ấn cá nhân và nôi bật trên đường phố. Nhằm thúc đẩy mạnh mẽ trong thời đại hiện nay, Công ty TUẤN NGỌC NHI được hình thành và phát triển cùng quý khách .</p>\r\n<p>Từ một xưởng cơ khí nhỏ với máy móc chủ yếu là tự chế, hoặc mua lại máy cũ đã qua sử dụng. Nhưng với sự quyết tâm của tập thể người lao động và ý tưởng của lãnh đạo cơ sở, cùng với sự quý mến của quý khách hàng gần xa.</p>\r\n<p>Sau hơn mười năm tham gia thị trường làm đẹp cho những chiếc xe yêu quý. Công ty chúng tôi , dưới sự bàn bạc thống nhất đã thành lập nên công ty TUẤN NGỌC NHI và cho ra đời những sản phẩm mang thương hiệu TUẤN NGỌC NHI để phục vụ tốt hơn cho quý khách hàng.</p>\r\n<p>Cùng với đội ngũ công nhân tay nghề cao và sự hỗ trợ của máy móc hiện đại đã làm nên những sản phẩm chất lượng tốt, độ tinh xảo của từng đường nét , đạt nét thẩm mỹ và làm vùa lòng đến những khách hàng khó tính.</p>\r\n<p>Ngoài ra chúng tôi cũng đầu tư mạnh để làm ra những sản phẩm xi ( Mạ Crom) dùng cho các sản phẩm trang trí ngoại thất thêm phần nổi bật. Để đạt chất lượng tốt công ty chúng tôi đã mạnh dạn đầu tư công nghệ cao về xi mạ, tư vấn giám sát cũng như kiểm định chất lương trên từng sản phẩm. Với một quy trình khép kín từ khâu tao dáng đến khâu thành phẩm và máy móc hiện đại hỗ trợ .</p>\r\n<p>Để thêm phần phong phú và chuyên nghiệp hơn trong việc làm hài lòng quý khách hàng. Công ty chúng tôi được sự uỷ nhiệm là đại lý độc quyền tại Đồng Nai cung cấp và dán phim cách nhiệt cho xe hơi , nhà cửa, văn phòng. Với đội ngũ kỹ thuật viên chuyên nghiệp, sáng tạo. Sẽ làm hài lòng quý khách hàng gần xa.</p>', '<p>Tuan Ngoc Co., Ltd. NHI</p>\r\n<p>Pleased to greet customers.</p>\r\n<p>Starting from small thinking, we have formed great idea. In order to partially meet the needs of interior and exterior beauty for the customer''s ideas. Sexism and prominent individuals on the street. To promote strong in the current era, NGOC TUAN NHI company formed and developed with you.</p>\r\n<p>From a small mechanical workshop machinery mostly homemade or bought old machines used. But with the determination of the labor leaders and the idea of the basis, along with the affection of our customers near and far.</p>\r\n<p>After more than ten years of market participants the beauty of the beloved car. Our company, under the unified discussion established the NHI and NGOC TUAN company formed for the branded product NGOC TUAN NHI to better serve our customers.</p>\r\n<p>Along with a team of highly skilled workers and the support of modern machinery has made good quality products, sophistication of each line, to aesthetics and to satisfy demanding customers .</p>\r\n<p>In addition, we also invest heavily to make cement products (chromium plating) for the exterior decoration products more prominent part. To achieve good quality companies we have invested high plating technology, consultancy and supervision of quality control on each product. With a closed process from the stage to finished products shaping of modern machinery and support.</p>\r\n<p>To add a richer and more professional to satisfy our customers. Our company is the authorized exclusive agent in Dong Nai and paste film provides insulation for cars, houses, offices. With a team of professional technicians and creative. Will satisfy our customers near and far.</p>', 20, '2012-08-20 08:07:50', 1, 0, NULL, NULL, 'gioi-thieu-so-luoc', 'brief-introduction', 'Xuất phát từ suy nghĩ nhỏ, chúng tôi đã hình thành ý tưởng lớn . Nhằm phần nào đáp ứng nhu cầu trang trí nội, ngoại thất làm đẹp thêm cho ý tưởng của khách hàng. Mang đậm dấu ấn cá nhân và nôi bật trên đường phố.', 'Starting from small thinking, we have formed great idea. In order to partially meet the needs of interior and exterior beauty for the customer''s ideas. Sexism and prominent individuals on the street.', 1, 'tuanngocnhi');
 
 -- --------------------------------------------------------
 
@@ -548,7 +548,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1345514401);
+('''127.0.0.1''', 1345518361);
 
 -- --------------------------------------------------------
 
@@ -620,7 +620,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1079 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1089 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
@@ -629,8 +629,18 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
 INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
 (1072, 0, 'XE MÁY', '', NULL, NULL, 'xe-may', '', '', '', 'xe-my.jpg', NULL, 1, NULL, NULL, 1, 'tuanngocnhi'),
 (1073, 0, 'XE HƠI', '', NULL, NULL, 'xe-hoi', '', '', '', 'xe-hi.jpg', NULL, 2, NULL, NULL, 1, 'tuanngocnhi'),
-(1077, 1073, 'Hoi dỏm', '', NULL, NULL, 'hoi-dom', '', '', '', 'hoi-dom.jpg', NULL, 3, NULL, NULL, 1, 'tuanngocnhi'),
-(1078, 1073, 'Hơi hơi', '', NULL, NULL, 'hoi-hoi', '', '', '', 'hoi-hoi.jpg', NULL, 4, NULL, NULL, 1, 'tuanngocnhi');
+(1077, 1073, 'hyundai', '', NULL, NULL, 'hyundai', '', '', '', 'hyundai.jpg', NULL, 3, NULL, NULL, 1, 'tuanngocnhi'),
+(1078, 1073, 'toyota', '', NULL, NULL, 'toyota', '', '', '', 'toyota.jpg', NULL, 14, NULL, NULL, 1, 'tuanngocnhi'),
+(1079, 1072, 'HONDA', '', NULL, NULL, 'honda', '', '', '', 'honda.jpg', NULL, 7, NULL, NULL, 1, 'tuanngocnhi'),
+(1080, 1072, 'YAMAHA', '', NULL, NULL, 'yamaha', '', '', '', 'yamaha.jpg', NULL, 6, NULL, NULL, 1, 'tuanngocnhi'),
+(1081, 1072, 'piaggo', '', NULL, NULL, 'piaggo', '', '', '', 'piaggo.jpg', NULL, 5, NULL, NULL, 1, 'tuanngocnhi'),
+(1082, 1073, 'isuzu', '', NULL, NULL, 'isuzu', '', '', '', 'isuzu.jpg', NULL, 4, NULL, NULL, 1, 'tuanngocnhi'),
+(1083, 1073, 'chevrolet', '', NULL, NULL, 'chevrolet', '', '', '', 'chevrolet.jpg', NULL, 8, NULL, NULL, 1, 'tuanngocnhi'),
+(1084, 1073, 'mazda', '', NULL, NULL, 'mazda', '', '', '', 'mazda.jpg', NULL, 9, NULL, NULL, 1, 'tuanngocnhi'),
+(1085, 1073, 'mercedes', '', NULL, NULL, 'mercedes', '', '', '', 'mercedes.jpg', NULL, 10, NULL, NULL, 1, 'tuanngocnhi'),
+(1086, 1073, 'mitsubishi', '', NULL, NULL, 'mitsubishi', '', '', '', 'mitsubishi.jpg', NULL, 11, NULL, NULL, 1, 'tuanngocnhi'),
+(1087, 1073, 'kia', '', NULL, NULL, 'kia', '', '', '', 'kia.jpg', NULL, 12, NULL, NULL, 1, 'tuanngocnhi'),
+(1088, 1073, 'ford', '', NULL, NULL, 'ford', '', '', '', 'ford.jpg', NULL, 13, NULL, NULL, 1, 'tuanngocnhi');
 
 -- --------------------------------------------------------
 
@@ -758,9 +768,10 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
 --
 
 INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
-('keywords', 'Công ty chúng tôi được sự uỷ nhiệm là đại lý độc quyền tại Đồng Nai cung cấp và dán phim cách nhiệt cho xe hơi , nhà cửa, văn phòng. Với đội ngũ kỹ thuật viên chuyên nghiệp, sáng tạo. Sẽ làm hài lòng quý khách hàng gần xa', 'tuanngocnhi'),
-('description', 'Công ty chúng tôi được sự uỷ nhiệm là đại lý độc quyền tại Đồng Nai cung cấp và dán phim cách nhiệt cho xe hơi , nhà cửa, văn phòng. Với đội ngũ kỹ thuật viên chuyên nghiệp, sáng tạo. Sẽ làm hài lòng quý khách hàng gần xa', 'tuanngocnhi'),
-('title', 'Đại lý xe hơi Tuấn Ngọc Nhi -Tuanngocnhi.com', 'tuanngocnhi');
+('keywords', 'Tuấn NgọcNhi Chuyên sản xuất các loại mặt hàng trang trí nội, ngoại thất xe hơi.15 năm kinh nghiệm,sản phẩm đa dạng cho các xe hơi,an tâm về chất lượng, giá cả hợp lý', 'tuanngocnhi'),
+('description', 'Tuấn NgọcNhi Chuyên sản xuất các loại mặt hàng trang trí nội, ngoại thất xe hơi.15 năm kinh nghiệm,sản phẩm đa dạng cho các xe hơi,an tâm về chất lượng, giá cả hợp lý', 'tuanngocnhi'),
+('title', 'Đại lý xe hơi Tuấn Ngọc Nhi -Tuanngocnhi.com', 'tuanngocnhi'),
+('analytics', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-30151015-7'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>', 'tuanngocnhi');
 
 -- --------------------------------------------------------
 

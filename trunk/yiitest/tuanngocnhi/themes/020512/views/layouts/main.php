@@ -82,8 +82,10 @@
                                 <div class="sub-nav-1">
                                     <a href="<?php echo Yii::app()->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $sub['tag'.LANG]?>" title="<?php echo $sub['cat_title'.LANG]?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES?>/productsCat/<?php echo $sub['pic_full']?>" alt="<?php echo $sub['cat_title'.LANG]?>" /></a>
                                     <h4><a href="<?php echo Yii::app()->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $sub['tag'.LANG]?>" title="<?php echo $sub['cat_title'.LANG]?>"><?php echo $sub['cat_title'.LANG]?></a></h4>
-                                </div>
+                                </div>	
+
                                 <div class="sub-nav-2">
+									<?php if($j==0):?>
                                     <div class="panel-img-1">
                                         <?php $items = ProductsCat::model()->listItem($sub['cat_id']); $m=0; foreach($items as $item):?>
                                             <?php if($m%2==0):?>
@@ -98,6 +100,15 @@
                                             <?php endif?>
                                         <?php $m++;endforeach?>
                                     </div>
+									<?php else:?>
+										<div class="panel-img-3">
+											<?php $items = ProductsCat::model()->listItem($sub['cat_id']);  foreach($items as $item):?>
+								
+												<a href="<?php echo Yii::app()->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $item['tag'.LANG]?>" title="<?php echo $item['cat_title'.LANG]?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES?>/productsCat/<?php echo $item['pic_full']?>" alt="<?php echo $item['cat_title'.LANG]?>" /></a>
+											
+											<?php endforeach?>
+										</div>
+									<?php endif ?>
                                 </div> <div class="clear"></div>
                             </li>
                             <?php $j++; endforeach; endif;?>
@@ -109,33 +120,33 @@
             <li><a href="product.html" title="">Sản phẩm</a>
                 <ul class="sub-nav-product">
                     <li class="sub-nav-line">
-                        <div class="sub-nav-1"><img src="images/car.jpg" alt="" />
+                        <div class="sub-nav-1"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/car.jpg" alt="" />
                             <h4><a href="#" title="">XE HƠI</a></h4>
                         </div>
                         <div class="sub-nav-2">
                             <div class="panel-img-1">
-                                <a href="toyota" title=""><img src="images/logo-toyota.jpg" alt="toyota" /></a> 
-                                <a href="ford" title=""><img src="images/logo-ford.jpg" alt="ford" /></a>
-                                <a href="kia" title=""><img src="images/logo-kia.jpg" alt="kia" /></a> 
-                                <a href="mitsu" title=""><img src="images/logo-mitsu.jpg" alt="mitsubishi" /></a>
+                                <a href="toyota" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-toyota.jpg" alt="toyota" /></a> 
+                                <a href="ford" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-ford.jpg" alt="ford" /></a>
+                                <a href="kia" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-kia.jpg" alt="kia" /></a> 
+                                <a href="mitsu" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-mitsu.jpg" alt="mitsubishi" /></a>
                             </div> <div class="clear"></div>
                             <div class="panel-img-2">
-                                <a href="mercedes" title=""><img src="images/logo-mercedes.jpg" alt="mercedes benz" /></a> 
-                                <a href="mazda" title=""><img src="images/logo-mazda.jpg" alt="mazda" /></a>
-                                <a href="chevrolet" title=""><img src="images/logo-chevrolet.jpg" alt="chevrolet" /></a> 
-                                <a href="isuzu" title=""><img src="images/logo-isuzu.jpg" alt="isuzu" /></a>
-                                <a href="hyundai" title=""><img src="images/logo-hyundai.jpg" alt="Hyundai" /></a>
+                                <a href="mercedes" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/mages/logo-mercedes.jpg" alt="mercedes benz" /></a> 
+                                <a href="mazda" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-mazda.jpg" alt="mazda" /></a>
+                                <a href="chevrolet" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-chevrolet.jpg" alt="chevrolet" /></a> 
+                                <a href="isuzu" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-isuzu.jpg" alt="isuzu" /></a>
+                                <a href="hyundai" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-hyundai.jpg" alt="Hyundai" /></a>
                             </div>
                         </div> <div class="clear"></div>
                     </li>
                     <li>
-                        <div class="sub-nav-1"><img src="images/motor.jpg" alt="motor" />
+                        <div class="sub-nav-1"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/motor.jpg" alt="motor" />
                             <h4><a href="#" title="">XE MÁY</a></h4>
                         </div>
                         <div class="sub-nav-2">
-                            <div class="panel-img-3"><a href="#" title=""><img src="images/logo-yamaha.jpg" alt="yamaha" /></a> 
-                                <a href="#" title=""><img src="images/logo-honda.jpg" alt="honda" /></a>
-                                <a href="#" title=""><img src="images/logo-piaggio.jpg" alt="piaggio" /></a>
+                            <div class="panel-img-3"><a href="#" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-yamaha.jpg" alt="yamaha" /></a> 
+                                <a href="#" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-honda.jpg" alt="honda" /></a>
+                                <a href="#" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-piaggio.jpg" alt="piaggio" /></a>
                             </div>
                         </div> <div class="clear"></div>
                     </li>
