@@ -1,9 +1,0 @@
-2012/08/20 09:55:27 [warning] [application] Failed to set unsafe attribute "remove_pic_full" of "ProductsCat".
-in D:\svn\tuanngocnhi\protected\modules\admin\controllers\ProductsController.php (64)
-in D:\svn\tuanngocnhi\index.php (16)
-2012/08/20 09:57:19 [warning] [application] Failed to set unsafe attribute "remove_pic_full" of "ProductsCat".
-in D:\svn\tuanngocnhi\protected\modules\admin\controllers\ProductsController.php (64)
-in D:\svn\tuanngocnhi\index.php (16)
-2012/08/20 10:00:19 [warning] [application] Failed to set unsafe attribute "remove_pic_full" of "ProductsCat".
-in D:\svn\tuanngocnhi\protected\modules\admin\controllers\ProductsController.php (64)
-in D:\svn\tuanngocnhi\index.php (16)
