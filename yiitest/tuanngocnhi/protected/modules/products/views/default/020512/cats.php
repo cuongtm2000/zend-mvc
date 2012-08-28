@@ -52,3 +52,4 @@
 <?php else: ?>
      <div class="frame-tent-right"> <?php echo $this->lang['no_record'] ?></div> <div class="btom-main"></div>
 <?php endif; ?>
+

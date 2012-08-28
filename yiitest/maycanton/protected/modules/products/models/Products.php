@@ -241,7 +241,7 @@ class Products extends CActiveRecord {
 	public function listItemNew() {
 		$criteria = new CDbCriteria();
 		$criteria->with = array(__CLASS__ . 'Cat');
-		$criteria->select = 'title' . LANG . ', pic_thumb, tag'.LANG.', unit, hot';
+		$criteria->select = 'title' . LANG . ', pic_thumb, pic_full, tag'.LANG.', unit, hot';
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'enable = 1';
 		$criteria->limit = Configs::configTemplate('products_num_paging_new', Yii::app()->session['template']);

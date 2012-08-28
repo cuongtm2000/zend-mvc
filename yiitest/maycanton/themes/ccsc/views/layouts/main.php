@@ -17,18 +17,6 @@
 <meta name="keywords" content="<?php echo $this->keywords ?>" />
 <meta name="description" content="<?php echo $this->description ?>" />
 
-<?php if($this->banner):?>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/advanced-slider-base.css" media="screen"/>
-	<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.advancedSlider.min.js"></script>
-	<!--[if IE]><script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/excanvas.compiled-ie.js"></script><![endif]-->
-	<!--[if lt IE 8]><script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.sider.banner-ie.js"></script> <![endif]-->
-	<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.sider.banner.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			runbanner(<?php echo $this->configs['banner_width'] ?>, <?php echo $this->configs['banner_height'] ?>);
-		});
-	</script>
-<?php endif;?>
 
 <link rel="stylesheet" type="text/css"  href="<?php echo Yii::app()->theme->baseUrl; ?>/css/prettyPhoto.css" />
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.prettyPhoto.js" ></script>
@@ -138,14 +126,7 @@ jQuery(document).ready(function(){
 			<?php endif;?>
 		</div> <!--End left content-->
 		<div id="rightcontent">
-			<?php if($this->banner): ?>
-				<ul class="slider">
-					<?php foreach($this->banner as $value): ?>
-					<li class="slider-item"><a href="<?php echo $value['banner_link'] ?>" title=""><img src="<?php echo Yii::app()->request->baseUrl.USERFILES; ?>/banner/<?php echo $value['banner_url'] ?>" alt="<?php echo $value['banner_name'] ?>" /></a></li>
-					<?php endforeach ?>
-				</ul>
-			<?php endif; ?>
-			
+		
 			<?php echo $content?>
              
 		</div><!--End right content--> <div class="clear"></div>

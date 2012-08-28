@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 25, 2012 at 09:33 AM
+-- Generation Time: Aug 27, 2012 at 11:03 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -72,38 +72,38 @@ CREATE TABLE IF NOT EXISTS `dos_configs` (
 --
 
 INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES
-('advs_left_height', 200, '', '160512'),
-('advs_left_width', 203, '', '160512'),
-('banner_height', 315, '', '160512'),
-('banner_width', 717, '', '160512'),
-('logo_height', 77, '', '160512'),
-('logo_width', 650, '', '160512'),
-('max_image_height', 860, '', '160512'),
-('max_image_width', 700, '', '160512'),
-('news_cat_height', 90, '', '160512'),
-('news_cat_width', 143, '', '160512'),
-('news_height_thumb', 90, '', '160512'),
-('news_num_paging_cat', 10, '', '160512'),
-('news_num_paging_hot', 6, '', '160512'),
-('news_num_paging_index', 10, '', '160512'),
-('news_num_paging_new', 6, '', '160512'),
-('news_width_thumb', 143, '', '160512'),
-('products_cat_height', 160, '', '160512'),
-('products_cat_width', 160, '', '160512'),
-('products_height', 700, '', '160512'),
-('products_height_thumb', 160, '', '160512'),
-('products_num_paging_cat', 4, '', '160512'),
-('products_num_paging_hot', 16, '', '160512'),
-('products_num_paging_new', 20, '', '160512'),
-('products_num_paging_other', 4, '', '160512'),
-('products_width', 850, '', '160512'),
-('products_width_thumb', 160, '', '160512'),
-('services_height', 850, '', '160512'),
-('services_width', 700, '', '160512'),
-('video_height_thumb', 160, '', '160512'),
-('video_num_paging_cat', 16, '', '160512'),
-('video_num_paging_index', 16, '', '160512'),
-('video_width_thumb', 160, '', '160512');
+('advs_left_height', 267, '', '180512'),
+('advs_left_width', 203, '', '180512'),
+('banner_height', 323, '', '180512'),
+('banner_width', 929, '', '180512'),
+('logo_height', 143, '', '180512'),
+('logo_width', 970, '', '180512'),
+('max_image_height', 950, '', '180512'),
+('max_image_width', 750, '', '180512'),
+('news_cat_height', 100, '', '180512'),
+('news_cat_width', 143, '', '180512'),
+('news_height_thumb', 100, '', '180512'),
+('news_num_paging_cat', 10, '', '180512'),
+('news_num_paging_hot', 8, '', '180512'),
+('news_num_paging_index', 10, '', '180512'),
+('news_num_paging_new', 8, '', '180512'),
+('news_width_thumb', 143, '', '180512'),
+('products_cat_height', 145, '', '180512'),
+('products_cat_width', 145, '', '180512'),
+('products_height', 650, '', '180512'),
+('products_height_thumb', 145, '', '180512'),
+('products_num_paging_cat', 20, '', '180512'),
+('products_num_paging_hot', 20, '', '180512'),
+('products_num_paging_new', 20, '', '180512'),
+('products_num_paging_other', 5, '', '180512'),
+('products_width', 650, '', '180512'),
+('products_width_thumb', 145, '', '180512'),
+('services_height', 950, '', '180512'),
+('services_width', 750, '', '180512'),
+('video_height_thumb', 145, '', '180512'),
+('video_num_paging_cat', 8, '', '180512'),
+('video_num_paging_index', 8, '', '180512'),
+('video_width_thumb', 145, '', '180512');
 
 -- --------------------------------------------------------
 
@@ -229,10 +229,10 @@ CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
 --
 
 INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, `loadfiles`, `typefile`) VALUES
-('160512', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
-('160512', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
-('160512', 'video', 'prettyPhoto.css', 'css'),
-('160512', 'video', 'jquery.prettyPhoto.js', 'javascript');
+('180512', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
+('180512', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
+('180512', 'video', 'prettyPhoto.css', 'css'),
+('180512', 'video', 'jquery.prettyPhoto.js', 'javascript');
 
 -- --------------------------------------------------------
 
@@ -284,14 +284,15 @@ CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
 --
 
 INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
-('about', 'diemhenbienhoa'),
-('advs', 'diemhenbienhoa'),
-('banner', 'diemhenbienhoa'),
-('contact', 'diemhenbienhoa'),
-('news', 'diemhenbienhoa'),
-('products', 'diemhenbienhoa'),
-('services', 'diemhenbienhoa'),
-('supports', 'diemhenbienhoa');
+('about', 'thinhduong'),
+('advs', 'thinhduong'),
+('banner', 'thinhduong'),
+('contact', 'thinhduong'),
+('news', 'thinhduong'),
+('products', 'thinhduong'),
+('services', 'thinhduong'),
+('supports', 'thinhduong'),
+('video', 'thinhduong');
 
 -- --------------------------------------------------------
 
@@ -320,15 +321,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=328 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=374 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(326, 'Giới thiệu', '', '<p style="text-align:center;"><strong><span style="font-size:14pt;color:#0000ff;">Chào mừng bạn đến với cafe Olympia - Điểm hẹn Biên Hòa</span></strong></p>\n<p style="text-align:center;"><span style="font-size:12pt;text-align:left;">Cafe Olympia tọa lạc trên trục đường Phạm Văn Thuận là trục đường sầm uất nhất của TP. Biên Hòa, Đồng Nai. Ngay phía trước quán là siêu thị CO.OP MARK Biên Hòa . Với kiến trúc cổ xen lẫn hiện đại, khéo léo kết hợp giữa vườn kiểng, thác tràn, nhà thủy tạ, hồ sen…thoáng mát &amp; độc đáo... Olympia xứng đáng là địa điểm để bạn chọn làm nơi thư giãn, hẹn gặp bạn bè, khách hàng trong &amp; ngoài nước.</span></p>\n<p style="text-align:center;"><span style="font-size:14pt;color:#0000ff;"><span style="color:#000000;font-size:12pt;"><img src="/public/userfiles/image/diemhenbienhoa/image/san%20vuon.jpg" alt="" width="598" height="446" /><br /></span></span></p>\n<p style="text-align:center;"><span style="font-size:14pt;color:#0000ff;"><span style="color:#000000;font-size:12pt;">Ngoài ra Cafe Olympia có 02 phòng lạnh rất thích hợp cho hội nghị, tổ chức sự kiện với sức chứa từ 80 - 120 người.<br /><img style="margin:5px;" src="/public/userfiles/image/diemhenbienhoa/image/phong%20lanh.jpg" alt="" width="598" height="396" /><br /></span></span></p>\n<p><span style="font-size:14pt;color:#0000ff;"><span style="color:#000000;font-size:12pt;">Đến với Cafe Olympia ngoài tận hưởng không gian thoáng đãng, trong lành và hương vị cafe Trung nguyên quý khách còn được thưởng thức nhiều món ăn đặc sản của nhiều vùng miền như: ....</span></span></p>', '', 5, '2012-07-25 05:16:10', 1, 0, '', '', 'gioi-thieu', '', '', '', 1, 'diemhenbienhoa'),
-(327, 'Cafe Olympia điểm hẹn Biên Hòa', '', '<p><strong style="margin:0px;padding:0px;line-height:18px;text-align:justify;"><span style="margin:0px;padding:0px;font-size:14pt;color:#0000ff;">Chào mừng bạn đến với cafe Olympia - Điểm hẹn Biên Hòa</span></strong></p>\n<div class="widget" style="margin:0px;padding:0px;border:0px;font-size:12px;vertical-align:baseline;color:#414040;font-family:Georgia, ''Times New Roman'', Times, serif;font-weight:normal;line-height:normal;">\n<div class="widget" style="margin:0px;padding:0px;border:0px;vertical-align:baseline;">\n<div class="textwidget" style="margin:0px;padding:0px;border:0px;vertical-align:baseline;background-color:transparent;"><span style="color:#000000;font-size:12pt;line-height:18px;text-align:justify;">cafe Olympia tọa lạc trên trục đường Phạm Văn Thuận là trục đường sầm uất nhất của TP. Biên Hòa, Đồng Nai. Ngay phía trước quán là siêu thị CO.OP MARK Biên Hòa . Với kiến trúc cổ xen lẫn hiện đại, khéo léo kết hợp giữa vườn kiểng, thác tràn, nhà thủy tạ, hồ sen…thoáng mát &amp; độc đáo... Olympia xứng đáng là địa điểm để bạn chọn làm nơi thư giãn, hẹn gặp bạn bè, khách hàng trong &amp; ngoài nước.</span></div>\n<div class="textwidget" style="margin:0px;padding:0px;border:0px;vertical-align:baseline;background-color:transparent;text-align:center;"><span style="color:#000000;font-size:12pt;line-height:18px;text-align:justify;"><img style="margin:5px;" src="/public/userfiles/image/diemhenbienhoa/image/san%20vuon.jpg" alt="" width="598" height="446" /></span></div>\n</div>\n</div>\n<p><span style="margin:0px;padding:0px;line-height:18px;text-align:justify;font-size:14pt;color:#0000ff;"><span style="margin:0px;padding:0px;color:#000000;font-size:12pt;">Đến với cafe Olympia để cùng tận hưởng<br /></span></span></p>\n<p><span style="margin:0px;padding:0px;line-height:18px;text-align:justify;font-size:14pt;color:#0000ff;"><span style="margin:0px;padding:0px;color:#000000;font-size:12pt;"> </span></span></p>', '', 18, '2012-07-25 05:28:02', 2, 1, '', '', 'cafe-olympia-diem-hen-bien-hoa', '', 'cafe Olympia tọa lạc trên trục đường Phạm Văn Thuận là trục đường sầm uất nhất của TP. Biên Hòa, Đồng Nai.', '', 1, 'diemhenbienhoa');
+(371, 'GIỚI THIỆU CÔNG TY', '', '<p style="text-align:justify;"><strong><span style="color:#ff0000;">Chào mừng quý khách ghé thăm website của Công ty Bất Động Sản Thịnh Đường.</span></strong></p>\n<p style="text-align:justify;">Nhu cầu mua BĐS để ở cũng như để đầu tư ngày càng tăng cao, việc mua bán, chuyển nhượng BĐS rất cần đến sự hỗ trợ của một Công ty chức năng.</p>\n<p style="text-align:justify;">Với ngành nghề chuyên môi giới và tiếp thị Bất Động Sản, <strong>Thịnh Đường</strong> bước đầu tập trung vào các BĐS nhỏ lẻ tại Thành phố Biên Hòa, để đáp ứng một cách nhanh nhất cho nhu cầu tìm kiếm thông tin của quý vị.</p>\n<p style="text-align:justify;">Chúng tôi cũng đặc biệt mong nhận được sự hợp tác tốt đẹp của các chủ đầu tư khi muốn phân phối dự án tại Biên Hòa.</p>\n<p style="text-align:justify;"><span style="color:#000080;"><strong>NGÀNH NGHỀ KINH DOANH</strong></span></p>\n<p style="text-align:justify;">• Môi giới Bất động sản<br />• Tư vấn, thực hiện Dịch vụ pháp lý<br />• Quảng cáo Bất động sản<br />• Thẩm định giá Bất động sản<br />• Tư vấn đầu tư và kinh doanh BĐS</p>', '', 440, '2012-08-08 12:32:35', 1, 1, '', '', 'gioi-thieu-cong-ty', '', '', '', 1, 'thinhduong'),
+(372, 'Giới thiệu về công ty', '', '<p style="text-align:justify;"><span style="font-size:11pt;"><strong><span style="color:#ff0000;">Chào mừng quý khách ghé thăm website của Công ty Bất Động Sản Vàng Ngọc Phát.</span></strong></span></p>\n<p style="text-align:justify;">Nhu cầu mua BĐS để ở cũng như để đầu tư ngày càng tăng cao, việc mua bán, chuyển nhượng BĐS rất cần đến sự hỗ trợ của một Công ty chức năng.</p>\n<p style="text-align:justify;">Với ngành nghề chuyên môi giới và tiếp thị Bất Động Sản, <strong>Thịnh Đường</strong> bước đầu tập trung vào các BĐS nhỏ lẻ tại Thành phố Biên Hòa, để đáp ứng một cách nhanh nhất cho nhu cầu tìm kiếm thông tin của quý vị.</p>\n<p style="text-align:justify;">Chúng tôi cũng đặc biệt mong nhận được sự hợp tác tốt đẹp của các chủ đầu tư khi muốn phân phối dự án tại Biên Hòa.</p>\n<p style="text-align:justify;"><strong><span style="color:#000080;">NGÀNH NGHỀ KINH DOANH<img style="float:right;" src="/public/userfiles/image/vangngocphat/image/gt.jpg" alt="" width="200" height="96" /></span></strong></p>\n<p style="text-align:justify;">• Môi giới Bất động sản<br />• Tư vấn, thực hiện Dịch vụ pháp lý<br />• Quảng cáo Bất động sản<br />• Thẩm định giá Bất động sản<br />• Tư vấn đầu tư và kinh doanh BĐS</p>\n<p style="text-align:justify;"> </p>', '', 58, '2012-08-08 12:32:35', 3, 0, '', '', 'gioi-thieu-ve-cong-ty', '', '', '', 1, 'thinhduong'),
+(373, 'Lĩnh vực hoạt động', '', '<p style="text-align:justify;"><span style="color:#ff0000;font-size:12pt;"><strong>NGÀNH NGHỀ KINH DOANH:</strong></span></p>\n<p style="text-align:justify;">• Môi giới Bất động sản</p>\n<p style="text-align:justify;">• Tư vấn, thực hiện Dịch vụ pháp lý</p>\n<p style="text-align:justify;">• Quảng cáo Bất động sản</p>\n<p style="text-align:justify;">• Thẩm định giá Bất động sản</p>\n<p style="text-align:justify;">• Tư vấn đầu tư và kinh doanh BĐS</p>', '', 13, '2012-08-08 12:32:35', 2, 0, '', '', 'linh-vuc-hoat-dong', '', '', '', 1, 'thinhduong');
 
 -- --------------------------------------------------------
 
@@ -353,7 +355,17 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=596 ;
+
+--
+-- Dumping data for table `dos_module_advs`
+--
+
+INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`, `dos_usernames_username`) VALUES
+(592, 'Quảng cáo', '', 'quang-cao.jpeg', 'http://dos.vn', '2012-08-08 12:32:35', '2012-04-30 16:00:00', '2012-06-29 16:00:00', 0, 2, 'left', '_bank', 1, 'thinhduong'),
+(593, 'Quảng cáo 1', '', 'quang-cao-1.jpeg', 'http://dos.vn', '2012-08-08 12:32:35', '2012-04-30 16:00:00', '2012-06-29 16:00:00', 0, 3, 'left', '_bank', 1, 'thinhduong'),
+(594, 'Quảng cáo 2', '', 'quang-cao-2.jpeg', 'http://dos.vn', '2012-08-08 12:32:35', '2012-04-30 16:00:00', '2012-06-28 16:00:00', 0, 4, 'left', '_bank', 1, 'thinhduong'),
+(595, 'Quảng cáo 3', '', 'quang-cao-3.jpeg', 'http://dos.vn', '2012-08-08 12:32:35', '2012-04-30 16:00:00', '2012-05-30 16:00:00', 0, 1, 'left', '_bank', 1, 'thinhduong');
 
 -- --------------------------------------------------------
 
@@ -374,26 +386,27 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2168 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2871 ;
 
 --
 -- Dumping data for table `dos_module_banners`
 --
 
 INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_url`, `banner_link`, `banner_order`, `banner_type`, `position`, `enable`, `dos_usernames_username`) VALUES
-(2155, '2012-07-25 04:32:48', 'Logo', 'logo.png', '', 1, 'logo', 'default', 1, 'diemhenbienhoa'),
-(2156, '2012-07-25 04:55:22', 'trang chu 1', 'trang-chu-1.jpg', '', 2, 'banners', 'default', 1, 'diemhenbienhoa'),
-(2157, '2012-07-25 04:55:46', 'trang chu 2', 'trang-chu-2.jpg', '', 3, 'banners', 'default', 1, 'diemhenbienhoa'),
-(2158, '2012-07-25 04:57:18', 'goi thieu1', 'goi-thieu1.jpg', '', 4, 'banners', 'about', 1, 'diemhenbienhoa'),
-(2159, '2012-07-25 04:57:43', 'gioi thieu 2', 'gioi-thieu-2.jpg', '', 5, 'banners', 'about', 1, 'diemhenbienhoa'),
-(2160, '2012-07-25 04:58:06', 'lien he1', 'lien-he1.jpg', '', 6, 'banners', 'contact', 1, 'diemhenbienhoa'),
-(2161, '2012-07-25 04:58:28', 'lien he2', 'lien-he2.jpg', '', 7, 'banners', 'contact', 1, 'diemhenbienhoa'),
-(2162, '2012-07-25 04:58:52', 'tin tuc 1', 'tin-tuc-1.jpg', '', 8, 'banners', 'news', 1, 'diemhenbienhoa'),
-(2163, '2012-07-25 04:59:23', 'tin tuc 2', 'tin-tuc-2.jpg', '', 9, 'banners', 'news', 1, 'diemhenbienhoa'),
-(2164, '2012-07-25 05:00:03', 'menu thực đơn 1', 'menu-thuc-don-1.jpg', '', 10, 'banners', 'products', 1, 'diemhenbienhoa'),
-(2165, '2012-07-25 05:00:35', 'menu thực đơn 2', 'menu-thuc-don-2.jpg', '', 11, 'banners', 'products', 1, 'diemhenbienhoa'),
-(2166, '2012-07-25 05:01:16', 'đối tác 1', 'doi-tac-1.jpg', '', 12, 'banners', 'services', 1, 'diemhenbienhoa'),
-(2167, '2012-07-25 05:01:39', 'đối tác 2', 'doi-tac-2.jpg', '', 13, 'banners', 'services', 1, 'diemhenbienhoa');
+(2581, '2012-08-08 12:32:35', 'Banner 4', 'banner-4.jpg', '', 2, 'banners', 'services', 1, 'thinhduong'),
+(2582, '2012-08-08 12:32:35', 'Banner 3', 'banner-3.jpg', '', 3, 'banners', 'news', 1, 'thinhduong'),
+(2583, '2012-08-08 12:32:35', 'Banner ', 'banner.jpg', '', 4, 'banners', 'default', 1, 'thinhduong'),
+(2584, '2012-08-08 12:32:35', 'Banner 5', 'banner-5.jpg', '', 5, 'banners', 'news', 1, 'thinhduong'),
+(2585, '2012-08-08 12:32:35', 'Banner 8', 'banner-8.jpg', '', 6, 'banners', 'about', 1, 'thinhduong'),
+(2586, '2012-08-08 12:32:35', 'Banner 7', 'banner-7.jpg', '', 7, 'banners', 'about', 1, 'thinhduong'),
+(2587, '2012-08-08 12:32:35', 'Banner 6', 'banner-6.jpg', '', 8, 'banners', 'products', 1, 'thinhduong'),
+(2588, '2012-08-08 12:32:35', 'Banner 1', 'banner-1.jpg', '', 9, 'banners', 'products', 1, 'thinhduong'),
+(2589, '2012-08-08 12:32:35', 'Banner 2', 'banner-2.jpg', '', 10, 'banners', 'services', 1, 'thinhduong'),
+(2590, '2012-08-08 12:32:35', 'Banner 9', 'banner-9.jpg', '', 11, 'banners', 'default', 1, 'thinhduong'),
+(2591, '2012-08-08 12:32:35', 'Banner 10', 'banner-10.jpg', '', 12, 'banners', 'contact', 1, 'thinhduong'),
+(2592, '2012-08-08 12:32:35', 'Banner 11', 'banner-11.jpg', '', 13, 'banners', 'default', 1, 'thinhduong'),
+(2869, '2012-08-27 07:33:15', 'video', 'video.jpg', '', 14, 'banners', 'video', 1, 'thinhduong'),
+(2870, '2012-08-27 07:40:00', 'Logo', 'logo.png', '', 15, 'logo', 'default', 1, 'thinhduong');
 
 -- --------------------------------------------------------
 
@@ -446,12 +459,13 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 --
 
 INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
-('Trang chủ', '', 'default', '', 1, 'thanh', '', 'thanh', '', 'diemhenbienhoa'),
-('Giới thiệu', '', 'about', '', 2, '', '', '', '', 'diemhenbienhoa'),
-('Đồ uống - Ẩm thực', '', 'products', '', 3, '', '', '', '', 'diemhenbienhoa'),
-('Hình Ảnh', '', 'services', '', 4, '', '', '', '', 'diemhenbienhoa'),
-('Tin tức & sự kiện', '', 'news', '', 5, '', '', '', '', 'diemhenbienhoa'),
-('Liên hệ', '', 'contact', '', 6, '', '', '', '', 'diemhenbienhoa');
+('Trang chủ', '', 'default', '', 1, '', '', '', '', 'thinhduong'),
+('Giới thiệu', '', 'about', '', 2, '', '', '', '', 'thinhduong'),
+('Bất động sản', '', 'products', '', 3, '', '', '', '', 'thinhduong'),
+('Đào tạo', '', 'services', '', 4, '', '', '', '', 'thinhduong'),
+('Thông tin', '', 'news', '', 5, '', '', '', '', 'thinhduong'),
+('Video', '', 'video', '', 6, '', '', '', '', 'thinhduong'),
+('Liên hệ', '', 'contact', '', 7, '', '', '', '', 'thinhduong');
 
 -- --------------------------------------------------------
 
@@ -509,7 +523,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=348 ;
+
+--
+-- Dumping data for table `dos_module_news_cat`
+--
+
+INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
+(345, 0, 'Tin thị trường bất động sản', '', '', '', 'tin-thi-truong-bat-dong-san', '', '', '', '', 1, '', '', 1, 'thinhduong'),
+(346, 0, 'Thông tin đào tạo', '', '', '', 'thong-tin-dao-tao', '', '', '', '', 2, '', '', 1, 'thinhduong'),
+(347, 0, 'Tin tức', '', '', '', 'tin-tuc', '', '', '', '', 3, '', '', 1, 'thinhduong');
 
 -- --------------------------------------------------------
 
@@ -527,7 +550,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456134),
+('day_time', 2456167),
 ('max_count', 0),
 ('counter', 0),
 ('yesterday', 0);
@@ -548,7 +571,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1343200127);
+('''127.0.0.1''', 1346057832);
 
 -- --------------------------------------------------------
 
@@ -585,7 +608,33 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8159 ;
+
+--
+-- Dumping data for table `dos_module_products`
+--
+
+INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(8127, 'Nhà Trảng Dài 110m²', '', '2012-08-08 12:32:35', 'nha-trang-dai-110m-thumb.jpeg', 'nha-trang-dai-110m.jpg', 'nha-trang-dai-110m-desc-1.JPG|nha-trang-dai-110m-desc-2.jpg|nha-trang-dai-110m-desc-3.JPG|nha-trang-dai-110m-desc-4.jpg', '<p><strong>Mã Sp : NTD - VNP</strong></p>\n<p>Khu phố 5 - Phường Trảng Dài</p>\n<p>Diện tích : 4,8 x 23 = 110 m²</p>\n<p>Pháp lý : Giấy tờ hợp lệ</p>\n<p>Giá : 1,7 tỷ (thương lượng)</p>\n<p>Hướng: Tây Nam</p>\n<p> </p>\n<p> </p>\n<p> </p>', '', '<p style="text-align:justify;">Nhà có vị trí đẹp vào ở liền, có 1 phòng khách, 3 phòng ngủ, 1 nhà ăn, 1 phòng karaokê, 1 phòng thờ,có máy nước nóng năng lượng mặt trời, đầy đủ điện nước, nội thất cao cấp, tặng 2 máy lạnh, đường rộng 10 m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần bệnh viện, gần chợ Phú Thọ, mặt bằng buôn bán kinh doanh rất tốt, trường học, nhà trẻ, thích hợp ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 A.Chương</p>', '', 'nha-trang-dai-110m', '', 'nhà trảng dài\n\nnhà đất biên hòa\n\nnhà đất đồng nai\n\nhttp://vangngocphat.com', '', 0, 19, '', 0, 0, '', '', '', '', 1, 1473),
+(8128, 'Nhà Trảng Dài 220m²', '', '2012-08-08 12:32:35', 'nha-trang-dai-220m-thumb.jpeg', 'nha-trang-dai-220m.jpg', 'nha-trang-dai-220m-desc-1.jpg|nha-trang-dai-220m-desc-2.JPG', '<p><strong>Mã Sp : NTD - VNP</strong></p>\n<p>Khu phố 5 - Phường Trảng Dài</p>\n<p>Diện tích : 6 x 36,5 = 220 m²</p>\n<p>Pháp lý : Sổ đỏ chính chủ</p>\n<p>Giá : 1,350 tỷ (thương lượng)</p>\n<p>Hướng: Đông Nam</p>\n<p> </p>\n<p> </p>', '', '<p style="text-align:justify;">Nhà có vị trí đẹp vào ở liền, có 1 phòng khách, 3 phòng ngủ, 1 nhà bếp, đầy đủ điện nước, có sân rông rãi để xe, đường rộng 6m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần bệnh viện, gần chợ Phú Thọ, trường học, nhà trẻ, thích hợp ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 A.Chương</p>', '', 'nha-trang-dai-220m', '', 'nhà trảng dài\n\nnhà đất biên hòa\n\nnhà đất đồng nai\n\nhttp://vangngocphat.com', '', 0, 20, '', 0, 0, '', '', '', '', 1, 1473),
+(8129, 'Nhà Trảng Dài 44m²', '', '2012-08-08 12:32:35', 'nha-trang-dai-44m-thumb.jpeg', 'nha-trang-dai-44m.jpg', 'nha-trang-dai-44m-desc-1.jpg', '<p><strong>Mã Sp : NTD - VNPT</strong></p>\n<p>Nhà Trảng Dài: Khu phố 5 - Phường Trảng Dài</p>\n<p>Diện tích : 4 x 11 = 44 m²</p>\n<p>Pháp lý : Sổ hồng chính chủ</p>\n<p>Giá : 410 triệu (thương lượng)</p>\n<p>Hướng : Đông Nam</p>\n<p> </p>\n<p> </p>', '', '<p style="text-align:justify;">Nhà có vị trí đẹp, 1 gác, 1 phòng ngủ, đường rộng 6m, có điện nước máy đầy đủ, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần bệnh viện, gần chợ Phú Thọ, trường học, nhà trẻ, thích hợp ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 A Chương</p>', '', 'nha-trang-dai-44m', '', '', '', 0, 12, '', 0, 0, '', '', '', '', 1, 1473),
+(8130, 'Đất Trảng Dài 100 m²', '', '2012-08-08 12:32:35', 'at-trang-dai-100-m-thumb.jpeg', 'at-trang-dai-100-m.jpg', 'at-trang-dai-100-m-desc-1.jpg|at-trang-dai-100-m-desc-2.jpg', '<p><strong>Mã Sp : ĐTD - VNPT</strong></p>\n<p>Đất Trảng Dài: Khu phố 3 - Phường Trảng Dài</p>\n<p>Diện tích : 5 x 20 = 100 m² (2 lô)</p>\n<p>Pháp lý : Giấy tờ hợp lệ</p>\n<p>Giá : 170 triệu (thương lượng)</p>\n<p>Hướng : Đông nam</p>', '', '<p style="text-align:justify;">Đất có vị trí đẹp, mặt tiền rộng, cách đường 39m gần 50m, đường rộng 5m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần chợ, nhà trẻ, trường học, thích hợp để ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0918 539 780 A. Tịnh</p>', '', 'dat-trang-dai-100-m', '', '', '', 0, 13, '', 0, 0, '', '', '', '', 1, 1473),
+(8131, 'Đất Trảng Dài 384m²', '', '2012-08-08 12:32:35', 'at-trang-dai-384m-thumb.jpeg', 'at-trang-dai-384m.jpg', '', '<p><strong>Mã Sp : ĐTD - VNP</strong></p>\n<p>Nhà Đất Trảng Dài: Khu phố 4 - Phường Trảng Dài</p>\n<p>Diện tích : 12 x 32 = 384 m²</p>\n<p>Pháp lý : Giấy tờ hợp lệ</p>\n<p>Giá : 580 triệu (thương lượng)</p>', '', '<p style="text-align:justify;">Đất có vị trí đẹp, mặt tiền rộng, đường rộng 5m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần chợ, nhà trẻ, trường học, thích hợp để ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 A.Chương</p>', '', 'dat-trang-dai-384m', '', '', '', 0, 14, '', 0, 0, '', '', '', '', 1, 1473),
+(8132, 'Đất Trảng Dài 150m²', '', '2012-08-08 12:32:35', 'at-trang-dai-150m-thumb.jpeg', 'at-trang-dai-150m.jpg', 'at-trang-dai-150m-desc-1.JPG', '<p><strong>Mã Sp : ĐTD - VNPM</strong></p>\n<p>Đất Trảng Dài : Khu phố 4 - Phường Trảng Dài</p>\n<p>Diện tích : 5 x 30 = 150 m²</p>\n<p>Pháp lý : Giấy biên nhận</p>\n<p>Giá : 195 triệu (thương lượng)</p>\n<p> </p>', '', '<p>Đất có vị trí đẹp, đường rộng 6m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, cách trường Đại học Công Nghệ Đồng Nai 800m, trường học, nhà trẻ, bệnh viện, thích hợp ở lâu dài.</p>\n<p>Liên hệ : 0935 434 886 C.Mỹ</p>', '', 'dat-trang-dai-150m', '', 'đất trảng dài\n\nnhà đất biên hòa\n\nnhà đất đồng nai\n\nhttp://batdongsan.com.vn', '', 0, 16, '', 0, 0, '', '', '', '', 1, 1473),
+(8133, 'Đất Trảng Dài 140m²', '', '2012-08-08 12:32:35', 'at-trang-dai-140m-thumb.jpeg', 'at-trang-dai-140m.jpg', 'at-trang-dai-140m-desc-1.JPG', '<p><strong>Mã Sp : ĐTD - VNP</strong></p>\n<p>Đất Trảng Dài: Khu phố 5 - Phường Trảng Dài</p>\n<p>Diện tích : 7 x 20 =140 m²</p>\n<p>Pháp lý : Giấy tờ hợp lệ</p>\n<p>Giá : 270 triệu (thương lượng)</p>\n<p>Hướng : Đông nam</p>', '', '<p style="text-align:justify;">Đất có vị trí đẹp, đường rộng 5m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, cách trường Đại học Công Nghệ Đồng Nai 500m, gần chợ Phú Thọ, gần trung tâm thành phố, các ngân hàng, trường học, nhà trẻ, bệnh viện, thích hợp ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0918 539 780 A.Tịnh - 0977 369 322 A.Chương</p>', '', 'dat-trang-dai-140m', '', 'đất trảng dài\n\nnhà đất đồng nai\n\nnhà đất biên hòa', '', 0, 17, '', 0, 0, '', '', '', '', 1, 1473),
+(8140, 'Nhà Hố Nai 68m²', '', '2012-08-08 12:32:35', 'nha-ho-nai-68m-thumb.jpeg', 'nha-ho-nai-68m.jpg', 'nha-ho-nai-68m-desc-1.JPG', '<p><strong>Mã Sp : NHN - VNP</strong></p>\n<p>Nhà Hố Nai: Khu phố 3 - Phường Hố Nai</p>\n<p>Diện tích : 4,2 x 16 = 68 m²</p>\n<p>Pháp lý : Sổ hồng chính chủ</p>\n<p>Giá : 650 triệu (thương lượng)</p>\n<p>Hướng : Nam</p>\n<p> </p>\n<p> </p>\n<p> </p>', '', '<p> </p>\n<p style="text-align:justify;">Nhà có vị trí đẹp, 1 sân rộng, 1 phòng khách, 1 phòng ngủ, ph2ong ăn, vào ở liền, đường rộng 5m, cách đường Nguyễn Ái Quốc 50m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần trường học, gần nhà thờ, nhà trẻ, bệnh viện, thích hợp để ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 Mr Chương</p>\n<p> </p>', '', 'nha-ho-nai-68m', '', 'nhà hố nai\n\nnhà đất biên hòa\n\nnhà đất đồng nai\n\nhttp://vangngocphat.com', '', 0, 21, '', 0, 0, '', '', '', '', 1, 1474),
+(8141, 'Nhà Hố Nai 130m²', '', '2012-08-08 12:32:35', 'nha-ho-nai-130m-thumb.jpeg', 'nha-ho-nai-130m.jpg', 'nha-ho-nai-130m-desc-1.JPG', '<p style="text-align:justify;"><strong>Mã Sp : NHN - VNP</strong></p>\n<p style="text-align:justify;">Nhà Hố Nai: Khu phố 3 - Phường Hố Nai</p>\n<p style="text-align:justify;">Diện tích : 8,4 x 15,8 = 130 m²</p>\n<p style="text-align:justify;">Pháp lý : Sổ hồng chính chủ</p>\n<p style="text-align:justify;">Giá : 1,3 tỷ (thương lượng)</p>\n<p style="text-align:justify;">Hướng : Nam</p>\n<p> </p>\n<p style="text-align:justify;"> </p>\n<p style="text-align:justify;"> </p>', '', '<p>Nhà có vị trí đẹp, 1 phòng khách rộng, 3 phòng ngủ vào ở liền, đường rộng 5m, cách đường Nguyễn Ái Quốc 50m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần trường học, gần nhà thờ, nhà trẻ, bệnh viện, thích hợp để ở lâu dài.</p>\n<p>Liên hệ : 0977 369 322 Mr Chương</p>', '', 'nha-ho-nai-130m', '', 'nhà hố nai\n\nnhà đất biên hòa\n\nnhà đất đồng nai\n\nhttp://vangngocphat.com', '', 0, 22, '', 0, 0, '', '', '', '', 1, 1474),
+(8142, 'Nhà Hố Nai 150m²', '', '2012-08-08 12:32:35', 'nha-ho-nai-150m-thumb.jpeg', 'nha-ho-nai-150m.jpg', 'nha-ho-nai-150m-desc-1.jpg', '<p> </p>\n<p style="text-align:justify;"><strong>Mã Sp : NHN - VNP</strong></p>\n<p style="text-align:justify;">Nhà Hố Nai: Khu phố 11 - Phường Hố Nai</p>\n<p style="text-align:justify;">Diện tích : 150m² (Đất đô thị)</p>\n<p style="text-align:justify;">Pháp lý : Sổ đỏ chính chủ</p>\n<p style="text-align:justify;">Giá : 900 triệu (thương lượng)</p>\n<p style="text-align:justify;">Hướng : Tây</p>\n<p> </p>\n<p style="text-align:justify;"> </p>\n<p style="text-align:justify;"> </p>\n<p> </p>', '', '<p>Nhà có vị trí đẹp, mặt tiền rộng 17m, đường rộng 4m, cách đường Nguyễn Ái Quốc 50m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần trường học, gần nhà thờ, nhà trẻ, bệnh viện, thích hợp để ở lâu dài.</p>\n<p>Liên hệ : 0977 369 322 anh Chương</p>', '', 'nha-ho-nai-150m', '', 'nhà hố nai\n\nnhà đất biên hòa\n\nnhà đất đồng nai\n\nhttp://vangngocphat.com', '', 0, 23, '', 0, 0, '', '', '', '', 1, 1474),
+(8143, 'Nhà Hố Nai 100m²', '', '2012-08-08 12:32:35', 'nha-ho-nai-100m-thumb.jpeg', 'nha-ho-nai-100m.jpg', 'nha-ho-nai-100m-desc-1.JPG', '<p style="text-align:justify;"><strong>Mã Sp : NHN - VNP</strong></p>\n<p style="text-align:justify;">Nhà Hố Nai: Khu phố 5 - Phường Hố Nai</p>\n<p style="text-align:justify;">Diện tích : 6 x 17,1 = 100m² (Đất đô thị)</p>\n<p style="text-align:justify;">Pháp lý : Sổ đỏ chính chủ</p>\n<p style="text-align:justify;">Giá : 620 triệu (thương lượng)</p>\n<p style="text-align:justify;">Hướng : Đông nam</p>\n<p> </p>\n<p style="text-align:justify;"> </p>', '', '<p>Nhà có vị trí đẹp, đường rộng 5m, 1 phòng khách, 1 phòng ngủ, cách đường Nguyễn Ái Quốc 150m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần trường học, cách nhà thờ 50m, nhà trẻ, bệnh viện, thích hợp để ở lâu dài.</p>\n<p>Liên hệ : 0986 232 230 A.Đại</p>', '', 'nha-ho-nai-100m', '', 'nhà hố nai\n\nnhà đất biên hòa\n\nnhà đất đồng nai', '', 0, 24, '', 0, 0, '', '', '', '', 1, 1474),
+(8144, 'Nhà Hố Nai 200m²', '', '2012-08-08 12:32:35', 'nha-ho-nai-200m-thumb.jpeg', 'nha-ho-nai-200m.jpg', 'nha-ho-nai-200m-desc-1.JPG|nha-ho-nai-200m-desc-2.JPG|nha-ho-nai-200m-desc-3.jpg', '<p> </p>\n<p style="text-align:justify;"><strong>Mã Sp : NHN - VNPT</strong></p>\n<p style="text-align:justify;">Nhà Hố Nai: Khu phố 1 - Phường Hố Nai</p>\n<p style="text-align:justify;">Diện tích : 15,8 x 14 = 200m²</p>\n<p style="text-align:justify;">Pháp lý : Sổ đỏ chính chủ</p>\n<p style="text-align:justify;">Giá : 1,3 tỷ (thương lượng)</p>\n<p style="text-align:justify;">Hướng : Đông nam</p>\n<p> </p>\n<p style="text-align:justify;"> </p>\n<p> </p>', '', '<p style="text-align:justify;">Nhà đẹp, nội thất sang trọng, có 1 phòng khách, 2 phòng ngủ, a nhà bếp rộng, gara để xe hơi, 1 kho chứa hàng, gần nhà thờ, gần siêu thị, cách đường Nguyễn Ái Quốc 150m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần trường học, nhà trẻ, bệnh viện, thích hợp để ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0918 539 780 A.Tịnh - 0977 369 322 A.Chương</p>', '', 'nha-ho-nai-200m', '', 'nhà hố nai\n\nnhà đất biên hòa\n\nnhà đất đồng nai\n\nhttp://batdongsan.com.vn', '', 0, 25, '', 0, 0, '', '', '', '', 1, 1474),
+(8145, 'Nhà xưởng Hố Nai 284m²', '', '2012-08-08 12:32:35', 'nha-xuong-ho-nai-284m-thumb.jpeg', 'nha-xuong-ho-nai-284m.jpg', 'nha-xuong-ho-nai-284m-desc-1.JPG|nha-xuong-ho-nai-284m-desc-2.JPG|nha-xuong-ho-nai-284m-desc-3.JPG|nha-xuong-ho-nai-284m-desc-4.JPG', '<p><strong>Mã Sp : NHN - VNP</strong></p>\n<p>Nhà xưởng hố nai</p>\n<p>Khu phố 3 - Phường Hố Nai</p>\n<p>Diện tích : 10 x 25 = 284 m² (nở hậu 12m)</p>\n<p>Pháp lý : Sổ đỏ chính chủ</p>\n<p>Giá : 3,7 tỷ (thương lượng)</p>\n<p> </p>\n<p> </p>', '', '<p style="text-align:justify;">Thông tin : Nhà xưởng rộng, 2 mặt tiền, có vị trí đẹp, đường rộng 6m, cách đường Nguyễn Ái Quốc 30m, xây dựng kiên cố, có gác lửng và văn phòng cho nhân viên, thích hợp làm kho chứa hàng, hàng xuất khẩu, vào hoạt động ngay.</p>\n<p style="text-align:justify;">0977 369 322 A.Chương</p>', '', 'nha-xuong-ho-nai-284m', '', 'nhà xưởng hố nai\n\nnhà đất biên hòa\n\nnhà đất đồng nai', '', 0, 26, '', 0, 0, '', '', '', '', 1, 1474),
+(8146, 'Nhà xưởng Hố Nai 165m²', '', '2012-08-08 12:32:35', 'nha-xuong-ho-nai-165m-thumb.jpeg', 'nha-xuong-ho-nai-165m.jpg', 'nha-xuong-ho-nai-165m-desc-1.JPG', '<p><strong>Mã Sp : NHN - VNP</strong></p>\n<p>Nhà xưởng Hố Nai: Khu phố 3 - Phường Hố Nai</p>\n<p>Diện tích : 11 x 15 = 165m²</p>\n<p>Pháp lý : Sổ đỏ chính chủ</p>\n<p>Giá : 1,8 tỷ (thương lượng)</p>\n<p> </p>', '', '<p style="text-align:justify;">Xưởng kho mặt tiền rộng, xây dựng kiên cố, giao thông thuận lợi, thích hợp làm đồ thủ công mỹ nghệ, làm kho chứa hàng, có gác lửng làm văn phòng, vào hoạt động sản xuất ngay.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 A.Chương</p>', '', 'nha-xuong-ho-nai-165m', '', 'nhà kho hố nai\n\nnhà đất biên hòa\n\nnhà đất đồng nai', '', 0, 27, '', 0, 0, '', '', '', '', 1, 1474),
+(8147, 'Nhà Hố Nai 100 m²', '', '2012-08-08 12:32:35', 'nha-ho-nai-100-m-thumb.jpeg', 'nha-ho-nai-100-m.jpg', 'nha-ho-nai-100-m-desc-1.jpg', '<p><strong>Mã Sp : NHN - VNP</strong></p>\n<p>Nhà Hố Nai: Khu phố 4 - Phường Hố Nai</p>\n<p>Diện tích : 5 x 20 = 100m²</p>\n<p>Pháp lý : Sổ đỏ chính chủ</p>\n<p>Giá : 1,150 tỷ (thương lượng)</p>', '', '<p style="text-align:justify;">Nhà có vị trí đẹp, đường rộng 5m, nhà có 1 phòng khách, 2 phòng ngủ, cách đường Nguyễn Ái Quốc 40m, cách chợ số 6 khoảng 20m. Khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần trường học cấp I,II, gần nhà thờ, nhà trẻ, bệnh viện, siêu thị, thích hợp để ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 A.Chương</p>', '', 'nha-ho-nai-100-m', '', 'nhà hố nai\n\nnhà đất biên hòa\n\nnhà đất đồng nai', '', 0, 28, '', 0, 0, '', '', '', '', 1, 1474),
+(8148, 'Đất Hố Nai 180m²', '', '2012-08-08 12:32:35', 'at-ho-nai-180m-thumb.jpeg', 'at-ho-nai-180m.jpg', 'at-ho-nai-180m-desc-1.jpg|at-ho-nai-180m-desc-2.jpg', '<p><strong>Mã Sp : ĐHN - VNP</strong></p>\n<p>Khu phố 12 - Hố Nai</p>\n<p>Diện tích : 9 x 20 = 180 m². Đất đô thị.</p>\n<p>Pháp lý : Sổ hồng chính chủ</p>\n<p>Giá : 1,2 tỷ (thương lượng)</p>\n<p> </p>\n<p> </p>\n<p> </p>', '', '<p style="text-align:justify;">Đất có vị trí đẹp, đường rộng 4m, cách đường Nguyễn Ái Quốc 300m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần trường học, nhà trẻ, nhà thờ, bệnh viện, thích hợp xây biệt thự vườn.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 A.Chương</p>', '', 'dat-ho-nai-180m', '', 'đất hố nai', '', 0, 16, '', 0, 0, '', '', '', '', 1, 1474),
+(8155, 'Đất Tân Hiệp 525m²', '', '2012-08-08 12:32:35', 'at-tan-hiep-525m-thumb.jpeg', 'at-tan-hiep-525m.jpg', 'at-tan-hiep-525m-desc-1.JPG', '<p><strong>Mã Sp : ĐTH - VNP</strong></p>\n<p>Đất Tân Hiệp: Khu phố 2 - Phường Tân Hiệp</p>\n<p>Diện tích : 9,5 x 55 = 525 m²</p>\n<p>Pháp lý : Sổ đỏ chính chủ</p>\n<p>Giá : 2,25 tỷ (thương lượng)</p>\n<p>Hướng : Đông bắc</p>', '', '<p style="text-align:justify;">Đất có vị trí đẹp, dài, rộng, đường rộng 6m, cách đường Nguyễn Ái Quốc 200m, gần bệnh viện, trung tâm thương mại, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần chợ, nhà trẻ, trường học, thích hợp để ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 A.Chương</p>', '', 'dat-tan-hiep-525m', '', 'đất tân hiệp\n\nnhà đất biên hòa\n\nnhà đất đồng nai', '', 0, 15, '', 0, 0, '', '', '', '', 1, 1475),
+(8156, 'Đất Tân Hiệp 136,5m²', '', '2012-08-08 12:32:35', 'at-tan-hiep-1365m-thumb.jpeg', 'at-tan-hiep-1365m.jpg', 'at-tan-hiep-1365m-desc-1.JPG', '<p><strong>Mã Sp : ĐTH - VNP</strong></p>\n<p>Đất Tân Hiệp: Khu phố 1 - Phường Tân Hiệp</p>\n<p>Diện tích : 6,5 x 21 = 136,5 m²</p>\n<p>Pháp lý : Giấy tờ hợp lệ</p>\n<p>Giá : 380 triệu (thương lượng)</p>\n<p>Hướng : Đông nam</p>', '', '<p>Đất có vị trí đẹp, đường rộng 4m, cách đường Nguyễn Ái Quốc 700m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần chợ, nhà trẻ, trường học, bệnh viện, thích hợp để ở lâu dài.</p>\n<p>Liên hệ : 0977 369 322 A.Chương</p>', '', 'dat-tan-hiep-1365m', '', 'Đất tân hiệp\n\nnhà đất biên hòa\n\nnhà đất đồng nai', '', 0, 18, '', 0, 0, '', '', '', '', 1, 1475),
+(8157, 'Nhà Tân Hiệp 111,7m²', '', '2012-08-08 12:32:35', 'nha-tan-hiep-1117m-thumb.jpeg', 'nha-tan-hiep-1117m.jpg', '', '<p> </p>\n<p style="text-align:justify;"><strong>Mã Sp : NTH - VNP</strong></p>\n<p style="text-align:justify;">Nhà Tân Hiệp: Khu phố 1 - Phường Tân Hiệp</p>\n<p style="text-align:justify;">Diện tích : 5 x 22,4 = 111,7m²</p>\n<p style="text-align:justify;">Pháp lý : Sổ đỏ chính chủ</p>\n<p style="text-align:justify;">Giá : 850 triệu (thương lượng)</p>\n<p style="text-align:justify;">Hướng : Đông nam</p>\n<p> </p>\n<p style="text-align:justify;"> </p>\n<p> </p>', '', '<p>Nhà đẹp, nội thất sang trọng, mặt tiền đường rộng 5m, cách đường Nguyễn Ái Quốc 500m, gần siên thị Đồng Nai, gần nhiều bệnh viện, trung tâm thương mại, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần chợ, nhà trẻ, trường học, thích hợp để ở lâu dài.</p>\n<p>Liên hệ : 0977 369 322 A.Chương</p>', '', 'nha-tan-hiep-1117m', '', 'nhà tân hiệp\n\nnhà đất biên hòa\n\nnhà đất đồng nai', '', 0, 29, '', 0, 0, '', '', '', '', 1, 1475),
+(8158, 'Nhà Tân Hiệp 130m²', '', '2012-08-08 12:32:35', 'nha-tan-hiep-130m-thumb.jpeg', 'nha-tan-hiep-130m.jpeg', 'nha-tan-hiep-130m-desc-1.JPG', '<p style="text-align:justify;"><strong>Mã Sp : NTH - VNP</strong></p>\n<p style="text-align:justify;">Nhà Tân Hiệp: Khu phố 2 - Phường Tân Hiệp</p>\n<p style="text-align:justify;">Diện tích : 6,5 x 20 = 130m²</p>\n<p style="text-align:justify;">Pháp lý : Sổ đỏ chính chủ</p>\n<p style="text-align:justify;">Giá : 1,45 tỷ (thương lượng)</p>\n<p style="text-align:justify;">Hướng : Tây</p>\n<p style="text-align:justify;"> </p>', '', '<p style="text-align:justify;">Nhà đẹp có 1 phòng khách, 2 phòng ngủ, đường rộng 5m, ô tô ra vào thuận lợi, gần siêu thị, cách đường Nguyễn Ái Quốc 300m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần trường học, nhà trẻ, bệnh viện, thích hợp để ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 A.Chương</p>', '', 'nha-tan-hiep-130m', '', 'nhà tân hiệp\n\nnhà đất biên hòa\n\nnhà đất đồng nai', '', 0, 30, '', 0, 0, '', '', '', '', 1, 1475);
 
 -- --------------------------------------------------------
 
@@ -613,7 +662,27 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1485 ;
+
+--
+-- Dumping data for table `dos_module_products_cat`
+--
+
+INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
+(1471, 0, 'ĐẤT ĐẦU TƯ', '', '', '', 'dat-dau-tu', '', 'ĐẤT ĐẦU TƯ', '', 't-u-t.jpeg', '', 14, '', '', 1, 'thinhduong'),
+(1472, 0, 'HUYỆN TRẢNG BOM', '', '', '', 'huyen-trang-bom', '', 'HUYỆN TRẢNG BOM', '', 'huyn-trng-bom.jpeg', '', 13, '', '', 1, 'thinhduong'),
+(1473, 0, 'PHƯỜNG TRẢNG DÀI', '', '', '', 'phuong-trang-dai', '', 'PHƯỜNG TRẢNG DÀI', '', 'phng-trng-di.jpeg', '', 13, '', '', 1, 'thinhduong'),
+(1474, 0, 'PHƯỜNG HỐ NAI', '', '', '', 'phuong-ho-nai', '', 'PHƯỜNG HỐ NAI', '', 'phng-h-nai.jpeg', '', 13, '', '', 1, 'thinhduong'),
+(1475, 0, 'PHƯỜNG TÂN HIỆP', '', '', '', 'phuong-tan-hiep', '', 'PHƯỜNG TÂN HIỆP', '', 'phng-tn-hip.jpeg', '', 9, '', '', 1, 'thinhduong'),
+(1476, 0, 'PHƯỜNG TÂN TIẾN', '', '', '', 'phuong-tan-tien', '', '', '', 'phng-tn-tin.jpeg', '', 6, '', '', 1, 'thinhduong'),
+(1477, 0, 'PHƯỜNG TAM HIỆP', '', '', '', 'phuong-tam-hiep', '', 'PHƯỜNG TAM HIỆP', '', 'phng-tam-hip.jpeg', '', 6, '', '', 1, 'thinhduong'),
+(1478, 0, 'PHƯỜNG TÂN BIÊN', '', '', '', 'phuong-tan-bien', '', 'PHƯỜNG TÂN BIÊN', '', 'phng-tn-bin.jpeg', '', 8, '', '', 1, 'thinhduong'),
+(1479, 0, 'PHƯỜNG TÂN HÒA', '', '', '', 'phuong-tan-hoa', '', 'PHƯỜNG TÂN HÒA', '', 'phng-tn-ha.jpeg', '', 5, '', '', 1, 'thinhduong'),
+(1480, 0, 'PHƯỜNG TAM HÒA', '', '', '', 'phuong-tam-hoa', '', '', '', 'phng-tam-ha.jpeg', '', 6, '', '', 1, 'thinhduong'),
+(1481, 0, 'PHƯỜNG TÂN MAI', '', '', '', 'phuong-tan-mai', '', '', '', 'phng-tn-mai.jpeg', '', 7, '', '', 1, 'thinhduong'),
+(1482, 0, 'PHƯỜNG TÂN PHONG', '', '', '', 'phuong-tan-phong', '', 'PHƯỜNG TÂN PHONG', '', 'phng-tn-phong.jpeg', '', 5, '', '', 1, 'thinhduong'),
+(1483, 0, 'PHƯỜNG BỬU LONG', '', '', '', 'phuong-buu-long', '', 'PHƯỜNG BỬU LONG', '', 'phng-bu-long.jpeg', '', 8, '', '', 1, 'thinhduong'),
+(1484, 0, 'VI TRÍ ĐẸP KHÁC', '', '', '', 'vi-tri-dep-khac', '', 'VI TRÍ ĐẸP KHÁC', '', 'vi-tr-p-khc.jpeg', '', 2, '', '', 1, 'thinhduong');
 
 -- --------------------------------------------------------
 
@@ -644,16 +713,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=259 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=311 ;
 
 --
 -- Dumping data for table `dos_module_services`
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(256, 'Cafe Ollympia về đêm', '', '', '', '<p>đang cập nhật</p>', '', '', 2, '2012-07-25 05:31:03', 1, 0, '', '', 'cafe-ollympia-ve-dem', '', '', '', 1, 'diemhenbienhoa'),
-(257, 'Không gian sân vườn', '', '', '', '<p>Đang cập nhật</p>', '', '', 2, '2012-07-25 05:31:27', 2, 0, '', '', 'khong-gian-san-vuon', '', '', '', 1, 'diemhenbienhoa'),
-(258, 'Phòng hội nghị', '', '', '', '<p>Đang cập nhật</p>', '', '', 2, '2012-07-25 05:31:52', 3, 0, '', '', 'phong-hoi-nghi', '', '', '', 1, 'diemhenbienhoa');
+(309, 'Máy Ion', '', '', '', '<p>đang cập nhật</p>', '', '', 1, '2012-08-27 07:58:34', 1, 0, '', '', 'may-ion', '', '', '', 1, 'thinhduong'),
+(310, 'Chương trình đào tạo', '', '', '', '<p>đang cập nhật</p>', '', '', 1, '2012-08-27 07:59:03', 2, 0, '', '', 'chuong-trinh-dao-tao', '', '', '', 1, 'thinhduong');
 
 -- --------------------------------------------------------
 
@@ -737,6 +805,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   KEY `fk_dos_module_webs_dos_usernames1` (`dos_usernames_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dos_module_webs`
+--
+
+INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
+('keywords', 'Công ty BĐS Thịnh Đường.Chuyên Môi giới Bất động sản,Tư vấn, thực hiện Dịch vụ pháp lý,Quảng cáo Bất động sản,Thẩm định giá Bất động sản,Tư vấn đầu tư và kinh doanh BĐS', 'thinhduong'),
+('description', 'Công ty BĐS Thịnh Đường.Chuyên Môi giới Bất động sản,Tư vấn, thực hiện Dịch vụ pháp lý,Quảng cáo Bất động sản,Thẩm định giá Bất động sản,Tư vấn đầu tư và kinh doanh BĐS', 'thinhduong'),
+('title', 'Công ty BĐS Thịnh Đường - Batdongsanthinhduong.com', 'thinhduong'),
+('analytics', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-30151015-8'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>', 'thinhduong');
 
 -- --------------------------------------------------------
 
@@ -859,7 +937,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 --
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
-('160512', 'Mẫu ẩm thực 160512', '2012-05-15 20:22:58', 'Chuyên bán các loại ẩm thực đồ uống các loại.');
+('180512', 'Mẫu nội thất: 180512', '2012-05-18 00:57:47', 'Chuyên bán các loại đồ nội thất, dân dụng');
 
 -- --------------------------------------------------------
 
@@ -880,7 +958,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_bussiness` (
 --
 
 INSERT INTO `dos_templates_has_dos_bussiness` (`dos_templates_template`, `dos_bussiness_bussiness_id`) VALUES
-('160512', 'am-thuc-drink');
+('180512', 'noi-that-ngoai-that');
 
 -- --------------------------------------------------------
 
@@ -918,29 +996,29 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_modules` (
 --
 
 INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modules_module_id`, `dos_values_value_name`) VALUES
-('160512', 'about', 'advs_left'),
-('160512', 'about', 'list_supports'),
-('160512', 'about', 'menu_about'),
-('160512', 'contact', 'advs_left'),
-('160512', 'contact', 'list_supports'),
-('160512', 'contact', 'menu_products'),
-('160512', 'default', 'about_home'),
-('160512', 'default', 'advs_left'),
-('160512', 'default', 'list_supports'),
-('160512', 'default', 'menu_products'),
-('160512', 'default', 'products_new'),
-('160512', 'news', 'advs_left'),
-('160512', 'news', 'list_supports'),
-('160512', 'news', 'menu_news'),
-('160512', 'products', 'advs_left'),
-('160512', 'products', 'list_supports'),
-('160512', 'products', 'menu_products'),
-('160512', 'services', 'advs_left'),
-('160512', 'services', 'list_supports'),
-('160512', 'services', 'menu_services'),
-('160512', 'video', 'advs_left'),
-('160512', 'video', 'list_supports'),
-('160512', 'video', 'menu_video');
+('180512', 'about', 'advs_left'),
+('180512', 'about', 'list_supports'),
+('180512', 'about', 'menu_about'),
+('180512', 'contact', 'advs_left'),
+('180512', 'contact', 'list_supports'),
+('180512', 'contact', 'menu_products'),
+('180512', 'default', 'about_home'),
+('180512', 'default', 'advs_left'),
+('180512', 'default', 'list_supports'),
+('180512', 'default', 'menu_products'),
+('180512', 'default', 'products_new'),
+('180512', 'news', 'advs_left'),
+('180512', 'news', 'list_supports'),
+('180512', 'news', 'menu_news'),
+('180512', 'products', 'advs_left'),
+('180512', 'products', 'list_supports'),
+('180512', 'products', 'menu_products'),
+('180512', 'services', 'advs_left'),
+('180512', 'services', 'list_supports'),
+('180512', 'services', 'menu_services'),
+('180512', 'video', 'advs_left'),
+('180512', 'video', 'advs_top'),
+('180512', 'video', 'menu_video');
 
 -- --------------------------------------------------------
 
@@ -978,7 +1056,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 --
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `agent_sale`, `agent_tech`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('diemhenbienhoa', 'info@diemdenbienhoa.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-07-20 08:52:58', '', '0973662972', '', 'user', 'vi', '', '2012-10-17 16:00:00', 0, '73662972', '', 1, '160512', 19, 'am-thuc-drink');
+('thinhduong', 'xuantrung@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-08-08 12:32:28', '', '', '', 'user', 'vi', '', '2012-11-05 16:00:00', 0, '07251943', '', 1, '180512', 19, 'bds-kien-truc-xay-dung');
 
 -- --------------------------------------------------------
 
@@ -1016,13 +1094,15 @@ CREATE TABLE IF NOT EXISTS `dos_user_langs` (
 --
 
 INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_username`) VALUES
-('address1', 'Đc: 248 Phạm Văn Thuận, P.Thống Nhất – BH- ĐN.', '', 'diemhenbienhoa'),
-('address2', 'Website: www.diemhenbienhoa.com - ĐT: - Email:', '', 'diemhenbienhoa'),
-('company_name', 'Cafe Olympia - Điểm Hẹn Biên Hòa', '', 'diemhenbienhoa'),
-('company_name_footer', 'Cafe Olympia - Điểm Hẹn Biên Hòa', '', 'diemhenbienhoa'),
-('company_phone', 'Mr Hiếu 0973.662.972', '', 'diemhenbienhoa'),
-('products', 'Đồ uống - Ẩm thực', '', 'diemhenbienhoa'),
-('services', 'Hình Ành', '', 'diemhenbienhoa');
+('address1', 'KP2, P.Trảng Dài, Biên Hòa, Đồng Nai', '', 'thinhduong'),
+('address2', 'Hotline: 0919 860 397 - Email: tiendung_saoviet@yahoo.com', '', 'thinhduong'),
+('company_name', 'CÔNG TY TNHH BĐS THỊNH ĐƯỜNG', '', 'thinhduong'),
+('company_name_footer', 'CÔNG TY TNHH BĐS THỊNH ĐƯỜNG', '', 'thinhduong'),
+('company_phone', '', '', 'thinhduong'),
+('new', '', '', 'thinhduong'),
+('news', 'Thông tin', '', 'thinhduong'),
+('products', 'BẤT ĐỘNG SẢN', '', 'thinhduong'),
+('services', 'Đào tạo', '', 'thinhduong');
 
 -- --------------------------------------------------------
 
