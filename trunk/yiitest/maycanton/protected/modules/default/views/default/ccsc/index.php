@@ -1,40 +1,32 @@
-<?php if(isset($this->function['about_home'])): ?>
-	<h2 class="title-right"><span><?php echo $this->function['about_home']['title'.LANG] ?></span></h2>
-	<div class="frame-tent-right">
-		<?php echo $this->function['about_home']['content'.LANG] ?>
-	</div>
-<?php endif; ?>
-
-<?php if(isset($this->function['products_hot']) && $this->function['products_hot']):?>
-<h3 class="title-right"><span><?php echo $this->lang['products'] . ' ' . strtolower($this->lang['hot']) ?></span></h3>
-	<ul class="all-product">
-	<?php foreach($this->function['products_hot'] as $value): ?>
-		<li class="product">
-			<?php if($value['pic_thumb']): ?>
-				<div class="product-img"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" /></a></div>
-			<?php else :?>
-				<div class="product-img"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt="no-product.jpg" /></a></div>
-			<?php endif; ?>
-			<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h2>
-			<a href="<?php echo Yii::app()->baseUrl . LANGURL?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo Yii::t('user', 'products.order.link')?>/<?php echo $value['tag'.LANG] ?>" title="<?php echo $this->lang['addcart']?>: <?php echo $value['title' . LANG] ?>" class="add-to-cart"><span><?php echo $this->lang['addcart']?></span></a>
-		</li>
-	<?php endforeach; ?>
-	</ul> <!--End all product-->
-<?php endif; ?>
-
+<h1 class="title-right"><span><?php echo $this->lang['default'] ?></span></h1>
 <?php if(isset($this->function['products_new']) && $this->function['products_new']):?>
-<h3 class="title-right"><span><?php echo $this->lang['products'] . ' ' . strtolower($this->lang['new']) ?></span></h3>
-<ul class="all-product">
-	<?php foreach($this->function['products_new'] as $value): ?>
-	<li class="product">
-		<?php if($value['pic_thumb']): ?>
-			<div class="product-img"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" /></a></div>
-		<?php else :?>
-			<div class="product-img"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG] ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt="no-product.jpg" /></a></div>
-		<?php endif; ?>
-		<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h2>
-		<a href="<?php echo Yii::app()->baseUrl . LANGURL?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo Yii::t('user', 'products.order.link')?>/<?php echo $value['tag'.LANG] ?>" title="<?php echo $this->lang['addcart']?>: <?php echo $value['title' . LANG] ?>" class="add-to-cart"><span><?php echo $this->lang['addcart']?></span></a>
-	</li>
-	<?php endforeach; ?>
-</ul> <!--End all product-->
+	<div id="photos" class="galleryview" >
+		 <?php foreach($this->function['products_new'] as $value): ?>
+			<div class="panel">
+				<?php if($value['pic_full']): ?>
+					<a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG] ?>">
+						<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_full'] ?>" alt="<?php echo $value['title'.LANG] ?>" />	
+					</a> 
+				<?php endif; ?>
+				<div class="panel-overlay">      
+				  <p><strong>Model: <?php echo $value['title' . LANG] ?> ,
+                      <?php if($value['extra_field1']): ?>Video clip  <a href="<?php echo $value['extra_field1'] ?>" title="Video <?php echo $value['title' . LANG] ?>"><img src='<?php echo Yii::app()->theme->baseUrl; ?>/images/icon38.png' border='0'/></a>,<?php endif?>
+                      <a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title='<?php echo $this->lang['detail']?> <?php echo strtolower($this->lang['products'])?>'><?php echo $this->lang['detail']?> <?php echo strtolower($this->lang['products'])?></a> 
+					  <a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['ProductsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/kedit.png" alt="kedit"/></a></strong></p>
+				</div>
+			</div>
+		 <?php endforeach; ?>
+
+
+		<ul class="filmstrip">
+			 <?php foreach($this->function['products_new'] as $value): ?>
+				<li>
+					<?php if($value['pic_thumb']): ?>
+						<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.LANG] ?>" />
+					<?php endif; ?>
+				</li>
+			<?php endforeach; ?>
+		</ul>
+	</div>
+	<div class="frame-view"></div> <div class="clear"></div>
 <?php endif; ?>

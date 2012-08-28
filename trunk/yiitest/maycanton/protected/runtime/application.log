@@ -6859,3 +6859,332 @@ in D:\svn\maycanton\index.php (16)
 2012/06/29 04:49:19 [warning] [application] Failed to set unsafe attribute "remove_pic_thumb" of "Products".
 in D:\svn\maycanton\protected\modules\admin\controllers\ProductsController.php (178)
 in D:\svn\maycanton\index.php (16)
+2012/08/24 08:23:23 [error] [php] Undefined variable: info_cat (D:\svn\maycanton\protected\modules\default\views\default\ccsc\index.php:7)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): DefaultController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 D:\svn\maycanton\protected\modules\default\controllers\DefaultController.php(8): DefaultController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(283): DefaultController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\svn\maycanton\index.php(16): CWebApplication->run()
+REQUEST_URI=/maycanton/
+in D:\svn\maycanton\protected\modules\default\views\default\ccsc\index.php (7)
+in D:\svn\maycanton\protected\modules\default\controllers\DefaultController.php (8)
+in D:\svn\maycanton\index.php (16)
+2012/08/24 08:27:05 [error] [php] Undefined variable: list_items (D:\svn\maycanton\protected\modules\default\views\default\ccsc\index.php:22)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): DefaultController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 D:\svn\maycanton\protected\modules\default\controllers\DefaultController.php(8): DefaultController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(283): DefaultController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\svn\maycanton\index.php(16): CWebApplication->run()
+REQUEST_URI=/maycanton/
+in D:\svn\maycanton\protected\modules\default\views\default\ccsc\index.php (22)
+in D:\svn\maycanton\protected\modules\default\controllers\DefaultController.php (8)
+in D:\svn\maycanton\index.php (16)
+2012/08/24 08:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/my-cn-tn-klip-lock.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/my-cn-tn-klip-lock.png
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/my-cn-tole-gi-ngi.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/my-cn-tole-gi-ngi.png
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/may-can-ton-2-tang.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/may-can-ton-2-tang.png
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/my-cn-tole-dp-vm.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/my-cn-tole-dp-vm.png
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/may-dap-vom-2-tang.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/may-dap-vom-2-tang.jpg
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/my-cn-tole-gi-ngi-thumb.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/my-cn-tole-gi-ngi-thumb.jpg
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/may-dap-vom-5-song.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/may-dap-vom-5-song.jpg
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/my-cn-tn-klip-lock-thumb.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/my-cn-tn-klip-lock-thumb.jpg
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/may-can-ton-2-tang.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/may-can-ton-2-tang.jpg
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/may-can-ton-2-tang-thumb.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/may-can-ton-2-tang-thumb.png
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/my-cn-tole-dp-vm-thumb.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/my-cn-tole-dp-vm-thumb.jpg
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/may-dap-vom-2-tang-thumb.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/may-dap-vom-2-tang-thumb.jpg
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/may-can-ton-2-tang-thumb.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/may-can-ton-2-tang-thumb.jpg
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/may-dap-vom-5-song-thumb.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/may-dap-vom-5-song-thumb.jpg
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/my-cn-tole-dp-vm.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/my-cn-tole-dp-vm.png
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/my-cn-tn-klip-lock.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/my-cn-tn-klip-lock.png
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/my-cn-tole-gi-ngi.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/my-cn-tole-gi-ngi.png
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/may-dap-vom-2-tang.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/may-dap-vom-2-tang.jpg
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/may-dap-vom-5-song.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/may-dap-vom-5-song.jpg
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/may-can-ton-2-tang.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/may-can-ton-2-tang.png
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/my-cn-tole-gi-ngi-thumb.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/my-cn-tole-gi-ngi-thumb.jpg
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/may-can-ton-2-tang.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/may-can-ton-2-tang.jpg
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/my-cn-tn-klip-lock-thumb.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/my-cn-tn-klip-lock-thumb.jpg
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/my-cn-tole-dp-vm-thumb.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/my-cn-tole-dp-vm-thumb.jpg
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/may-can-ton-2-tang-thumb.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/may-can-ton-2-tang-thumb.png
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/may-dap-vom-5-song-thumb.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/may-dap-vom-5-song-thumb.jpg
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/may-dap-vom-2-tang-thumb.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/may-dap-vom-2-tang-thumb.jpg
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/may-can-ton-2-tang-thumb.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/may-can-ton-2-tang-thumb.jpg
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:27:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/ccsc/image/default/my-cn-tn-klip-lock.png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\maycanton\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/maycanton/public/userfiles/image/ccsc/image/default/my-cn-tn-klip-lock.png
+HTTP_REFERER=http://dos.vn/maycanton/
+---
+2012/08/24 08:31:52 [error] [php] Undefined index: detailen (D:\svn\maycanton\protected\modules\default\views\default\ccsc\index.php:14)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): DefaultController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 D:\svn\maycanton\protected\modules\default\controllers\DefaultController.php(8): DefaultController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(283): DefaultController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\svn\maycanton\index.php(16): CWebApplication->run()
+REQUEST_URI=/maycanton/en
+in D:\svn\maycanton\protected\modules\default\views\default\ccsc\index.php (14)
+in D:\svn\maycanton\protected\modules\default\controllers\DefaultController.php (8)
+in D:\svn\maycanton\index.php (16)
+2012/08/24 08:35:50 [error] [php] Undefined index: detailen (D:\svn\maycanton\protected\modules\default\views\default\ccsc\index.php:14)
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CController.php(870): DefaultController->renderFile()
+#1 C:\xampp\php\library\framework\web\CController.php(783): DefaultController->renderPartial()
+#2 D:\svn\maycanton\protected\modules\default\controllers\DefaultController.php(8): DefaultController->render()
+#3 C:\xampp\php\library\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#4 C:\xampp\php\library\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\php\library\framework\web\CController.php(287): DefaultController->runAction()
+#6 C:\xampp\php\library\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\web\CWebApplication.php(283): DefaultController->run()
+#8 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\svn\maycanton\index.php(16): CWebApplication->run()
+REQUEST_URI=/maycanton/en
+in D:\svn\maycanton\protected\modules\default\views\default\ccsc\index.php (14)
+in D:\svn\maycanton\protected\modules\default\controllers\DefaultController.php (8)
+in D:\svn\maycanton\index.php (16)
