@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 27, 2012 at 11:03 AM
+-- Generation Time: Aug 30, 2012 at 04:26 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -72,38 +72,39 @@ CREATE TABLE IF NOT EXISTS `dos_configs` (
 --
 
 INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES
-('advs_left_height', 267, '', '180512'),
-('advs_left_width', 203, '', '180512'),
-('banner_height', 323, '', '180512'),
-('banner_width', 929, '', '180512'),
-('logo_height', 143, '', '180512'),
-('logo_width', 970, '', '180512'),
-('max_image_height', 950, '', '180512'),
-('max_image_width', 750, '', '180512'),
-('news_cat_height', 100, '', '180512'),
-('news_cat_width', 143, '', '180512'),
-('news_height_thumb', 100, '', '180512'),
-('news_num_paging_cat', 10, '', '180512'),
-('news_num_paging_hot', 8, '', '180512'),
-('news_num_paging_index', 10, '', '180512'),
-('news_num_paging_new', 8, '', '180512'),
-('news_width_thumb', 143, '', '180512'),
-('products_cat_height', 145, '', '180512'),
-('products_cat_width', 145, '', '180512'),
-('products_height', 650, '', '180512'),
-('products_height_thumb', 145, '', '180512'),
-('products_num_paging_cat', 20, '', '180512'),
-('products_num_paging_hot', 20, '', '180512'),
-('products_num_paging_new', 20, '', '180512'),
-('products_num_paging_other', 5, '', '180512'),
-('products_width', 650, '', '180512'),
-('products_width_thumb', 145, '', '180512'),
-('services_height', 950, '', '180512'),
-('services_width', 750, '', '180512'),
-('video_height_thumb', 145, '', '180512'),
-('video_num_paging_cat', 8, '', '180512'),
-('video_num_paging_index', 8, '', '180512'),
-('video_width_thumb', 145, '', '180512');
+('advs_left_height', 190, '', '220312'),
+('advs_left_width', 190, '', '220312'),
+('advs_right_height', 190, '', '220312'),
+('advs_right_width', 190, '', '220312'),
+('banner_height', 332, '', '220312'),
+('banner_width', 950, '', '220312'),
+('logo_height', 79, '', '220312'),
+('logo_width', 259, '', '220312'),
+('max_image_height', 667, '', '220312'),
+('max_image_width', 500, '', '220312'),
+('news_cat_height', 100, '', '220312'),
+('news_cat_width', 145, '', '220312'),
+('news_height_thumb', 100, '', '220312'),
+('news_num_paging_cat', 10, '', '220312'),
+('news_num_paging_hot', 6, '', '220312'),
+('news_num_paging_index', 10, '', '220312'),
+('news_num_paging_new', 6, '', '220312'),
+('news_width_thumb', 145, '', '220312'),
+('products_cat_height', 150, '', '220312'),
+('products_cat_width', 200, '', '220312'),
+('products_height', 400, '', '220312'),
+('products_height_thumb', 135, '', '220312'),
+('products_num_paging_cat', 8, '', '220312'),
+('products_num_paging_new', 4, '', '220312'),
+('products_num_paging_other', 2, '', '220312'),
+('products_width', 500, '', '220312'),
+('products_width_thumb', 200, '', '220312'),
+('services_height', 90, '', '220312'),
+('services_width', 145, '', '220312'),
+('video_height_thumb', 150, '', '220312'),
+('video_num_paging_cat', 2, '', '220312'),
+('video_num_paging_index', 2, '', '220312'),
+('video_width_thumb', 200, '', '220312');
 
 -- --------------------------------------------------------
 
@@ -229,10 +230,10 @@ CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
 --
 
 INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, `loadfiles`, `typefile`) VALUES
-('180512', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
-('180512', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
-('180512', 'video', 'prettyPhoto.css', 'css'),
-('180512', 'video', 'jquery.prettyPhoto.js', 'javascript');
+('220312', 'default', 'prettyPhoto.css', 'css'),
+('220312', 'default', 'jquery.prettyPhoto.js', 'javascript'),
+('220312', 'video', 'prettyPhoto.css', 'css'),
+('220312', 'video', 'jquery.prettyPhoto.js', 'javascript');
 
 -- --------------------------------------------------------
 
@@ -284,15 +285,15 @@ CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
 --
 
 INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
-('about', 'thinhduong'),
-('advs', 'thinhduong'),
-('banner', 'thinhduong'),
-('contact', 'thinhduong'),
-('news', 'thinhduong'),
-('products', 'thinhduong'),
-('services', 'thinhduong'),
-('supports', 'thinhduong'),
-('video', 'thinhduong');
+('about', 'lienngocphat'),
+('advs', 'lienngocphat'),
+('banner', 'lienngocphat'),
+('contact', 'lienngocphat'),
+('news', 'lienngocphat'),
+('products', 'lienngocphat'),
+('services', 'lienngocphat'),
+('supports', 'lienngocphat'),
+('video', 'lienngocphat');
 
 -- --------------------------------------------------------
 
@@ -321,16 +322,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=374 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=410 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(371, 'GIỚI THIỆU CÔNG TY', '', '<p style="text-align:justify;"><strong><span style="color:#ff0000;">Chào mừng quý khách ghé thăm website của Công ty Bất Động Sản Thịnh Đường.</span></strong></p>\n<p style="text-align:justify;">Nhu cầu mua BĐS để ở cũng như để đầu tư ngày càng tăng cao, việc mua bán, chuyển nhượng BĐS rất cần đến sự hỗ trợ của một Công ty chức năng.</p>\n<p style="text-align:justify;">Với ngành nghề chuyên môi giới và tiếp thị Bất Động Sản, <strong>Thịnh Đường</strong> bước đầu tập trung vào các BĐS nhỏ lẻ tại Thành phố Biên Hòa, để đáp ứng một cách nhanh nhất cho nhu cầu tìm kiếm thông tin của quý vị.</p>\n<p style="text-align:justify;">Chúng tôi cũng đặc biệt mong nhận được sự hợp tác tốt đẹp của các chủ đầu tư khi muốn phân phối dự án tại Biên Hòa.</p>\n<p style="text-align:justify;"><span style="color:#000080;"><strong>NGÀNH NGHỀ KINH DOANH</strong></span></p>\n<p style="text-align:justify;">• Môi giới Bất động sản<br />• Tư vấn, thực hiện Dịch vụ pháp lý<br />• Quảng cáo Bất động sản<br />• Thẩm định giá Bất động sản<br />• Tư vấn đầu tư và kinh doanh BĐS</p>', '', 440, '2012-08-08 12:32:35', 1, 1, '', '', 'gioi-thieu-cong-ty', '', '', '', 1, 'thinhduong'),
-(372, 'Giới thiệu về công ty', '', '<p style="text-align:justify;"><span style="font-size:11pt;"><strong><span style="color:#ff0000;">Chào mừng quý khách ghé thăm website của Công ty Bất Động Sản Vàng Ngọc Phát.</span></strong></span></p>\n<p style="text-align:justify;">Nhu cầu mua BĐS để ở cũng như để đầu tư ngày càng tăng cao, việc mua bán, chuyển nhượng BĐS rất cần đến sự hỗ trợ của một Công ty chức năng.</p>\n<p style="text-align:justify;">Với ngành nghề chuyên môi giới và tiếp thị Bất Động Sản, <strong>Thịnh Đường</strong> bước đầu tập trung vào các BĐS nhỏ lẻ tại Thành phố Biên Hòa, để đáp ứng một cách nhanh nhất cho nhu cầu tìm kiếm thông tin của quý vị.</p>\n<p style="text-align:justify;">Chúng tôi cũng đặc biệt mong nhận được sự hợp tác tốt đẹp của các chủ đầu tư khi muốn phân phối dự án tại Biên Hòa.</p>\n<p style="text-align:justify;"><strong><span style="color:#000080;">NGÀNH NGHỀ KINH DOANH<img style="float:right;" src="/public/userfiles/image/vangngocphat/image/gt.jpg" alt="" width="200" height="96" /></span></strong></p>\n<p style="text-align:justify;">• Môi giới Bất động sản<br />• Tư vấn, thực hiện Dịch vụ pháp lý<br />• Quảng cáo Bất động sản<br />• Thẩm định giá Bất động sản<br />• Tư vấn đầu tư và kinh doanh BĐS</p>\n<p style="text-align:justify;"> </p>', '', 58, '2012-08-08 12:32:35', 3, 0, '', '', 'gioi-thieu-ve-cong-ty', '', '', '', 1, 'thinhduong'),
-(373, 'Lĩnh vực hoạt động', '', '<p style="text-align:justify;"><span style="color:#ff0000;font-size:12pt;"><strong>NGÀNH NGHỀ KINH DOANH:</strong></span></p>\n<p style="text-align:justify;">• Môi giới Bất động sản</p>\n<p style="text-align:justify;">• Tư vấn, thực hiện Dịch vụ pháp lý</p>\n<p style="text-align:justify;">• Quảng cáo Bất động sản</p>\n<p style="text-align:justify;">• Thẩm định giá Bất động sản</p>\n<p style="text-align:justify;">• Tư vấn đầu tư và kinh doanh BĐS</p>', '', 13, '2012-08-08 12:32:35', 2, 0, '', '', 'linh-vuc-hoat-dong', '', '', '', 1, 'thinhduong');
+(408, 'Giới thiệu', '', '<p style="text-align:justify;">Cty TNHH Liên Ngọc Phát xin trân trọng kính chào!</p>\n<p style="text-align:justify;">Sau nhiều năm kinh doanh phân phối mặt hàng mỹ phẩm trên thị trường cả nước. Vào năm 2010, Liên Ngọc Phát thêm mặt hàng khăn cao cấp Mollis vào các danh mục kinh doanh của mình và Khăn cao cấp Mollis Mai Hân ra đời từ ngày ấy.</p>\n<p style="text-align:justify;">Cty TNHH Liên Ngọc Phát là nhà phân phối trực tuyến các sản phẩm khăn Mollis, khăn khách sạn, khăn Spa, áo choàng tắm, khăn tắm, khăn quà tặng, khăn 100% Cotton, khăn du lịch, khăn Mollis Extra ... được sản xuất từ các hãng nối tiếng trong nước và nhập khẩu từ nước ngoài.</p>\n<p style="text-align:justify;">Đến với Liên Ngọc Phát bạn có thể lựa chọn được những sản phẩm khăn cao cấp tốt nhất cho khách sạn, Spa hoặc cho mục đích sử dụng khác của bạn.</p>\n<p style="text-align:justify;">Khách hàng là giá trị cơ bản của bất kỳ doanh nghiệp nào, là lý do duy nhất để doanh nghiệp tồn tại và phát triển. Cty TNHH Liên Ngọc Phát luôn lắng nghe, phân tích và thấu hiểu nhu cầu của từng khách hàng và áp dụng kinh nghiệm, kỹ năng tư duy của mình để giải quyết tối ưu những nhu cầu đó.</p>', '', 2, '2012-08-29 07:05:08', 2, 0, '', '', 'gioi-thieu', '', '', '', 1, 'lienngocphat'),
+(409, 'Chào mừng bạn ghé thăm website của chúng tôi!', '', '<p style="text-align:justify;">Cty TNHH Liên Ngọc Phát là nhà phân phối trực tuyến các sản phẩm khăn Mollis, khăn khách sạn, khăn Spa, áo choàng tắm, khăn tắm, khăn quà tặng, khăn 100% Cotton, khăn du lịch, khăn Mollis Extra ... được sản xuất từ các hãng nối tiếng trong nước và nhập khẩu từ nước ngoài.</p>\n<p style="text-align:justify;">Đến với Liên Ngọc Phát bạn có thể lựa chọn được những sản phẩm khăn cao cấp tốt nhất cho khách sạn, Spa hoặc cho mục đích sử dụng khác của bạn.</p>', '', 27, '2012-08-29 07:06:17', 1, 1, '', '', 'chao-mung-ban-ghe-tham-website-cua-chung-toi', '', '', '', 1, 'lienngocphat');
 
 -- --------------------------------------------------------
 
@@ -355,17 +355,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=596 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=639 ;
 
 --
 -- Dumping data for table `dos_module_advs`
 --
 
 INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`, `dos_usernames_username`) VALUES
-(592, 'Quảng cáo', '', 'quang-cao.jpeg', 'http://dos.vn', '2012-08-08 12:32:35', '2012-04-30 16:00:00', '2012-06-29 16:00:00', 0, 2, 'left', '_bank', 1, 'thinhduong'),
-(593, 'Quảng cáo 1', '', 'quang-cao-1.jpeg', 'http://dos.vn', '2012-08-08 12:32:35', '2012-04-30 16:00:00', '2012-06-29 16:00:00', 0, 3, 'left', '_bank', 1, 'thinhduong'),
-(594, 'Quảng cáo 2', '', 'quang-cao-2.jpeg', 'http://dos.vn', '2012-08-08 12:32:35', '2012-04-30 16:00:00', '2012-06-28 16:00:00', 0, 4, 'left', '_bank', 1, 'thinhduong'),
-(595, 'Quảng cáo 3', '', 'quang-cao-3.jpeg', 'http://dos.vn', '2012-08-08 12:32:35', '2012-04-30 16:00:00', '2012-05-30 16:00:00', 0, 1, 'left', '_bank', 1, 'thinhduong');
+(636, 'Quảng cáo', '', 'quang-cao.gif', 'http://dos.vn', '2012-08-29 07:47:20', '2012-08-28 16:00:00', '2012-09-29 16:00:00', 0, 1, 'left', '_bank', 1, 'lienngocphat'),
+(637, 'Quảng cáo 1', '', 'quang-cao-1.jpeg', 'http://dos.vn', '2012-08-29 07:50:00', '2012-08-28 16:00:00', '2012-09-29 16:00:00', 0, 3, 'right', '_bank', 1, 'lienngocphat'),
+(638, 'Quảng cáo 2', '', 'quang-cao-2.jpg', 'http://dos.vn', '2012-08-29 07:50:59', '2012-08-28 16:00:00', '2012-09-29 16:00:00', 0, 2, 'right', '_bank', 1, 'lienngocphat');
 
 -- --------------------------------------------------------
 
@@ -386,27 +385,23 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2871 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2882 ;
 
 --
 -- Dumping data for table `dos_module_banners`
 --
 
 INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_url`, `banner_link`, `banner_order`, `banner_type`, `position`, `enable`, `dos_usernames_username`) VALUES
-(2581, '2012-08-08 12:32:35', 'Banner 4', 'banner-4.jpg', '', 2, 'banners', 'services', 1, 'thinhduong'),
-(2582, '2012-08-08 12:32:35', 'Banner 3', 'banner-3.jpg', '', 3, 'banners', 'news', 1, 'thinhduong'),
-(2583, '2012-08-08 12:32:35', 'Banner ', 'banner.jpg', '', 4, 'banners', 'default', 1, 'thinhduong'),
-(2584, '2012-08-08 12:32:35', 'Banner 5', 'banner-5.jpg', '', 5, 'banners', 'news', 1, 'thinhduong'),
-(2585, '2012-08-08 12:32:35', 'Banner 8', 'banner-8.jpg', '', 6, 'banners', 'about', 1, 'thinhduong'),
-(2586, '2012-08-08 12:32:35', 'Banner 7', 'banner-7.jpg', '', 7, 'banners', 'about', 1, 'thinhduong'),
-(2587, '2012-08-08 12:32:35', 'Banner 6', 'banner-6.jpg', '', 8, 'banners', 'products', 1, 'thinhduong'),
-(2588, '2012-08-08 12:32:35', 'Banner 1', 'banner-1.jpg', '', 9, 'banners', 'products', 1, 'thinhduong'),
-(2589, '2012-08-08 12:32:35', 'Banner 2', 'banner-2.jpg', '', 10, 'banners', 'services', 1, 'thinhduong'),
-(2590, '2012-08-08 12:32:35', 'Banner 9', 'banner-9.jpg', '', 11, 'banners', 'default', 1, 'thinhduong'),
-(2591, '2012-08-08 12:32:35', 'Banner 10', 'banner-10.jpg', '', 12, 'banners', 'contact', 1, 'thinhduong'),
-(2592, '2012-08-08 12:32:35', 'Banner 11', 'banner-11.jpg', '', 13, 'banners', 'default', 1, 'thinhduong'),
-(2869, '2012-08-27 07:33:15', 'video', 'video.jpg', '', 14, 'banners', 'video', 1, 'thinhduong'),
-(2870, '2012-08-27 07:40:00', 'Logo', 'logo.png', '', 15, 'logo', 'default', 1, 'thinhduong');
+(2872, '2012-08-28 08:26:56', 'Banner', 'banner.jpg', '', 1, 'banners', 'default', 1, 'lienngocphat'),
+(2873, '2012-08-28 08:27:13', 'Banner 1', 'banner-1.jpg', '', 2, 'banners', 'about', 1, 'lienngocphat'),
+(2874, '2012-08-28 08:27:29', 'Banner 2', 'banner-2.jpg', '', 3, 'banners', 'contact', 1, 'lienngocphat'),
+(2875, '2012-08-28 08:27:46', 'Banner 3', 'banner-3.jpg', '', 4, 'banners', 'news', 1, 'lienngocphat'),
+(2876, '2012-08-28 08:28:03', 'Banner 4', 'banner-4.jpg', '', 5, 'banners', 'products', 1, 'lienngocphat'),
+(2877, '2012-08-28 08:28:25', 'Banner 5', 'banner-5.jpg', '', 6, 'banners', 'services', 1, 'lienngocphat'),
+(2878, '2012-08-28 08:28:41', 'Banner 6', 'banner-6.jpg', '', 7, 'banners', 'video', 1, 'lienngocphat'),
+(2879, '2012-08-28 08:29:34', 'Banner 8', 'banner-8.jpg', '', 8, 'banners', 'default', 1, 'lienngocphat'),
+(2880, '2012-08-28 08:29:50', 'Banner 7', 'banner-7.jpg', '', 9, 'banners', 'default', 1, 'lienngocphat'),
+(2881, '2012-08-29 01:21:55', 'Logo-lienngocphat', 'logo-lienngocphat.png', '', 10, 'logo', 'default', 1, 'lienngocphat');
 
 -- --------------------------------------------------------
 
@@ -459,13 +454,13 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 --
 
 INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
-('Trang chủ', '', 'default', '', 1, '', '', '', '', 'thinhduong'),
-('Giới thiệu', '', 'about', '', 2, '', '', '', '', 'thinhduong'),
-('Bất động sản', '', 'products', '', 3, '', '', '', '', 'thinhduong'),
-('Đào tạo', '', 'services', '', 4, '', '', '', '', 'thinhduong'),
-('Thông tin', '', 'news', '', 5, '', '', '', '', 'thinhduong'),
-('Video', '', 'video', '', 6, '', '', '', '', 'thinhduong'),
-('Liên hệ', '', 'contact', '', 7, '', '', '', '', 'thinhduong');
+('Trang chủ', '', 'default', '', 1, '', '', '', '', 'lienngocphat'),
+('Giới thiệu', '', 'about', '', 2, '', '', '', '', 'lienngocphat'),
+('Sản phẩm', '', 'products', '', 3, '', '', '', '', 'lienngocphat'),
+('Dịch vụ', '', 'services', '', 4, '', '', '', '', 'lienngocphat'),
+('Tin tức & sự kiện', '', 'news', '', 5, '', '', '', '', 'lienngocphat'),
+('Video', '', 'video', '', 6, '', '', '', '', 'lienngocphat'),
+('Liên hệ', '', 'contact', '', 7, '', '', '', '', 'lienngocphat');
 
 -- --------------------------------------------------------
 
@@ -496,7 +491,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=464 ;
+
+--
+-- Dumping data for table `dos_module_news`
+--
+
+INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(461, 'Khăn cao cấp Mollis và cuộc sống', '', '2012-08-29 07:15:32', 'khan-cao-cap-mollis-va-cuoc-song.jpg', '<p style="text-align:justify;">Dòng sản phẩm cao cấp Mollis Extra bao gồm các loại: Khăn sử dụng chất liệu đặc biệt; Khăn 100% cotton xơ dài, khăn du lịch, thể thao, quà tặng, khăn khách sạn, khăn theo mùa, áo choàng, thảm và các sản phẩm khác</p>', '', '<p style="text-align:justify;">Dòng sản phẩm cao cấp Mollis Extra bao gồm các loại: Khăn sử dụng chất liệu đặc biệt; Khăn 100% cotton xơ dài, khăn du lịch, thể thao, quà tặng, khăn khách sạn, khăn theo mùa, áo choàng, thảm và các sản phẩm khác. Mollis Extra khác với dòng sản phẩm Mollis cơ bản bởi sử dụng những nguyên liệu đặc biệt như: Sợi cotton xơ dài, sợi Modal, sợi Bamboo, Soybean, sợi Egypt, Cocona (sợi hoạt tính),... có khả năng bảo vệ sức khỏe, ngăn tia cực tím, chống khuẩn; đặc biệt sau quá trình sử dụng sẽtự phân hủy trong môi trường thiên nhiên, tốt cho cả tự nhiên và con người. Bên cạnh đó, sản phẩm Mollis có mẫu mã, kiểu dáng hiện đại, hoa văn trang trí và màu sắc đạt tiêu chuẩn Châu Âu; sản phẩm có độ thấm hút tốt, mềm mịn thích hợp với mọi loại da, độ bóng mượt cao, giữ màu<br />tốt và các tính năng ưu việt khác.</p>\n<p style="text-align:justify;"><strong>Khăn sợi tre BAMBO</strong></p>\n<p style="text-align:justify;">Khăn sản xuất từ tre (Bamboo)Khăn bông cao cấp với nguyên liệu từ cây tre thiên nhiên phương pháp sản xuất và ưu điểm : tre dùng làm nguyên liệu được chăm sóc và sau sáu năm mới được khai thác, kết hợp với công nghệ tẩy trắng bằng oxy ở nhiệt độ cao, xơ có cấu trúc tổ ong nên có nhiều ưu điểm vượt trội như: có tính chống khuẩn tốt ngăn ngừa tia hồng ngoại, bền màu cao, không bị khô cứng sau nhiều lần giặt, tính hút ẩm và thoáng khí tốt.</p>\n<p><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/lienngocphat/image/bambo1.jpg" alt="" width="250" height="188" /></p>\n<p style="text-align:justify;"><strong>Khăn sợi Cotton sơ dài</strong></p>\n<p style="text-align:justify;">Được sản xuất trên dây chuyền công nghệ hiện đại của Châu Âu, Mỹ với mẫu mã đa dạng, màu sắc tinh tế, sang trọng, mềm mại, thấm nước tốt, độ bềnmàu cao. Không mẫn cảm với da, tạo cảm giác thoải mái khi sử dụng.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/lienngocphat/image/bambo2.jpg" alt="" width="250" height="188" /><img style="float:right;" src="/public/userfiles/image/lienngocphat/image/bambo3.jpg" alt="" width="250" height="188" /><img src="/public/userfiles/image/lienngocphat/image/bambo4.jpg" alt="" width="250" height="188" /></p>\n<p style="text-align:justify;"><strong>Khăn sợi sữa Soybean</strong></p>\n<p style="text-align:justify;">Chất liệu:sữa sau quá trình sàng lọc loại bỏ chất béo bằng quy trình công nghệ cao để lấy được xơ protein và tiếp theo đó là công nghệ kéo ướt thành sợi sữa.<br />Điểm nổi bật: sự hiện diện của xơ<br />protein sữa làm cho màu sắc khăn thêm phần sinh động, tạo độ bền cao, mềm mại, thoáng khí, hút ẩm tốt. Bên cạnh đó, 17 loại acid amin trong sợi sữa còn có tác dụng chống khuẩn gây bệnh, giúp làn da thêm mịn màng, khỏe mạnh.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/lienngocphat/image/bambo5.jpg" alt="" width="250" height="188" /></p>\n<p style="text-align:justify;"><strong>Khăn sợi MODAL</strong></p>\n<p style="text-align:justify;">Khăn bông cao cấp với nguyên liệu sợi Modal (cenlluose) được sản xuất từ gỗ sồi thiên nhiên. Với chất liệu 50% cenllulose từ gỗ sồi và 50% bông cotton, siêu mềm, hút nước tốt, màu sắc đa dạng, không mẫn cảm với da, tạo cảm giác thoải mái khi sử dụng, đặc biệt độ bóng mượt cao, độ giãn dài thấp cải thiện được trạng thái co rút.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/lienngocphat/image/bambo6.jpg" alt="" width="250" height="188" /></p>\n<p style="text-align:justify;"><strong>Khăn sợi NONTWIST</strong></p>\n<p style="text-align:justify;">Khăn nontwist Mollis được biết đến như một loại khăn được sản xuất bằng qui trình công nghệ đặc biệt, khăn có lớp bông mềm mại, tơi xốp, màu sắc hài hòa, hút ẩm cao.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/lienngocphat/image/bambo7.jpg" alt="" width="250" height="188" /></p>\n<p style="text-align:justify;"><strong>Khăn sợi Cocona</strong></p>\n<p style="text-align:justify;">Sản xuất từ 60% cocona (sợi hoạt tính từ xơ dừa) và 40% cotton. Với ưu điểm: mềm mại, thấm nước tốt, giặt mau khô và có độ bền màu cao. Đặc biệt khăn có tính năng kháng khuần, khử mồ hôi, ngăn ngừa tia cực tím bảo vệ cho làn da, hoàn toàn than thiện với môi trường.</p>\n<p style="text-align:justify;"><strong>Khăn 100% Cotton Egyptian</strong></p>\n<p style="text-align:justify;">Được sản xuất trên dây chuyền công nghệ hiện đại của Châu Âu, Mỹ với mẫu mã<br />đa dạng, màu sắc tinh tế, sang trọng, mềm mại, thấm nước tốt, độ bền màu cao. Không mẫn cảm với da, tạo cảm giác thoải mái khi sử dụng. Đặc biệt khăn sản xuất từ sợi Cotton Egyptian có độ dài xơ đều, chuyên dùng trong các khách sạn</p>', '', 'khan-cao-cap-mollis-va-cuoc-song', '', '', '', 0, 1, 0, '', '', 1, 349),
+(462, 'Những cách làm mới nhà đơn giản bằng sơn', '', '2012-08-29 07:38:24', 'nhung-cach-lam-moi-nha-don-gian-bang-son.jpg', '<p>Với những cách thú vị dường đây bạn có thể khoác chiếc áo mới cho nhà mình mà không cần phải mua bất kì đồ vật nào mới.</p>', '', '<p>Với những cách thú vị dường đây bạn có thể khoác chiếc áo mới cho nhà mình mà không cần phải mua bất kì đồ vật nào mới.</p>\n<p><strong>Tường nhà</strong></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_2.jpg" alt="" width="300" height="250" /></p>\n<p style="text-align:center;">Bạn có thể dùng giấy dán lên tường theo mẫu hoa văn mà bạn muốn, sau đó sơn tường và bóc lớp giấy dán, bức tường của bạn sẽ rất độc đáo và cá tính.</p>\n<p style="text-align:center;"> </p>\n<p style="text-align:center;"><img src="/public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_6.jpg" alt="" width="300" height="400" /></p>\n<p style="text-align:center;">Nếu muốn các hoa văn phức tạp hơn, các bạn có thể in sau đó cắt các hoa văn yêu thích dán lên tường trước khi sơn, tất cả thật đơn giản phải không nào ?!</p>\n<p style="text-align:center;"> </p>\n<p style="text-align:center;"><img src="/public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_7.jpg" alt="" width="300" height="400" /></p>\n<p style="text-align:center;">Hoặc chỉ đơn giản là các chấm màu tự nhiên trên tường cũng rất đẹp.</p>\n<p><strong>Các đồ vật khác</strong></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_3.jpg" alt="" width="300" height="400" /></p>\n<p style="text-align:center;">Tự chế tấm lót sàn độc đáo bằng cách sơn trang trí lên tấm lót thường.</p>\n<p style="text-align:center;"> </p>\n<p style="text-align:center;"><img src="/public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_4.jpg" alt="" width="300" height="400" /></p>\n<p style="text-align:center;">Những bức tranh trừu tượng mang dấu ấn của riêng bạn.</p>\n<p style="text-align:center;"> </p>\n<p style="text-align:center;"><img src="/public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_8.jpg" alt="" width="300" height="250" /></p>\n<p style="text-align:center;">Những chiếc gương cũ kĩ sẽ là vật trang trí tuyệt vời khi bạn bỏ một chút thời gian ra sơn sửa lại cho chúng.</p>\n<p style="text-align:center;"> </p>\n<p style="text-align:center;"><img src="/public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_9.jpg" alt="" width="300" height="400" /></p>\n<p style="text-align:center;">Khung cửa sổ cũ trở thành một tác phẩm nghệ thuật độc đáo.</p>\n<p style="text-align:center;"> </p>\n<p style="text-align:center;"><img src="/public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_15.jpg" alt="" width="300" height="400" /></p>\n<p style="text-align:center;">Những chiếc lót li bằng gỗ được sơn nhiều màu sặc sỡ.</p>\n<p style="text-align:center;"> </p>\n<p style="text-align:center;"><img src="/public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_16.jpg" alt="" width="300" height="400" /></p>\n<p style="text-align:center;">Với một lớp áo sơn, bộ bàn ghế cũ trông không khác gì đồ mới.</p>', '', 'nhung-cach-lam-moi-nha-don-gian-bang-son', '', '', '', 0, 2, 0, '', '', 1, 351),
+(463, 'Quy tắc sắp xếp nhà cửa theo phong thủy', '', '2012-08-29 07:45:32', 'quy-tac-sap-xep-nha-cua-theo-phong-thuy.jpg', '<p style="text-align:justify;">Nhắc đến phong thuỷ nhà ở là nhắc đến nghệ thuật sắp xếp và bài trí sao cho phù hợp với nguồn năng lượng thiên nhiên, với luồng khí âm dương để có một không gian sống yên bình, tốt cho sức khoẻ và sự thuận hòa trong gia đình.</p>', '', '<p style="text-align:justify;"><strong>Nhắc đến phong thuỷ nhà ở là nhắc đến nghệ thuật sắp xếp và bài trí sao cho phù hợp với nguồn năng lượng thiên nhiên, với luồng khí âm dương để có một không gian sống yên bình, tốt cho sức khoẻ và sự thuận hòa trong gia đình.</strong></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/lienngocphat/image/cach-treo-dong-ho-hop-phong-thuy-_1.jpg" alt="" width="450" height="396" /></p>\n<p style="text-align:justify;">Nhiều người không biết rằng việc bài trí, sắp xếp nhà cửa cũng có những quy tắc cơ bản để phù hợp với các nguyên tắc của phong thuỷ để có một cuộc sống tốt đẹp hơn. Chúng tôi xin giới thiệu một số nguyên tắc sắp xếp cơ bản sau:</p>\n<p style="text-align:justify;"><strong>Gương soi</strong></p>\n<p style="text-align:justify;">Theo quan niệm trong phong thuỷ nhà ở thì gương soi là tượng trưng của việc gia tăng năng lượng. Để vị trí đặt gương theo đúng phong thuỷ, bạn cần lứu ý như sau:</p>\n<p style="text-align:justify;">Không nên đặt gương chiếu thẳng vào vị trí gường ngủ vì gương có thể làm khí bị phản xạ, gương phản chiếu trực tiếp hình ảnh của giường ngủ sẽ tạo ra năng lượng âm, phá vỡ mối quan hệ vợ chồng theo nguyên tắc phong thuỷ thì đây là việc tối kỵ. Ngoài ra gương còn làm bạn giật mình khi mới thức giấc, còn đang ngái ngủ thì thấy bóng mình trong gương, gây bất an.</p>\n<p style="text-align:justify;">Không đặt gương ở tiền sảnh, đối diện với cửa chính vì gương có thể sẽ phản chiếu, làm các luồng khí tốt bị đẩy ra bên ngoài, khiến cho trong nhà không còn khí tốt.</p>\n<p style="text-align:justify;">Không đặt gương đối diện với bếp, vì gương theo phong thuỷ là yếu tố của nước trong khi bếp luôn luôn có lửa, hai yếu tố này kỵ nhau.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/lienngocphat/image/cach-treo-dong-ho-hop-phong-thuy-_2.jpg" alt="" width="383" height="344" /></p>\n<p style="text-align:center;"><em>Chú ý khi xếp đặt những chiếc gương soi trong nhà</em></p>\n<p style="text-align:justify;"><strong>Giường ngủ</strong></p>\n<p style="text-align:justify;">Đầu cuối giường không nên trực diện với cửa ra vào vì sẽ gây tâm lý bất an, đau đầu.</p>\n<p style="text-align:justify;">Giường ngủ nên để tránh hướng cửa ra vào vì hiện tượng thuộc loại “Hung khí xung” dễ gây mất ngủ, dẫn tới sự bất an, suy giảm về sức khoẻ</p>\n<p style="text-align:justify;">Không kê giường ngủ dưới dầm ngang vì tạo cảm giác như luôn bị đè nén, trong phong thủy gọi là “hung hình”, ảnh hưởng tới sức khỏe. Bạn nên chuyển giường tới vị trí khác hoặc làm trần giả che lấp dầm ngang.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/lienngocphat/image/nen-va-khong-nen-trong-phong-thuy1_6.jpg" alt="" width="391" height="350" /></p>\n<p style="text-align:center;"><em>Giường ngủ không nên xếp đối diện cửa ra vào</em></p>\n<p style="text-align:justify;"><strong>Hành lang</strong></p>\n<p style="text-align:justify;">Theo phong thủy, hành lang cũng có một ý nghĩa quan trọng vì là đường giao thông của thực khí đi từ cửa chính tới các phòng khác. Vì vậy hành lang không được xuyên tâm hoặc chia cắt ngôi nhà, vì nếu bị xuyên hoặc chia cắt, trong phong thuỷ gọi là “trảm tâm sát” gây mâu thuẫn trong gia đình.</p>\n<p style="text-align:justify;"><strong>Vứt đồ đạc bị vỡ</strong></p>\n<p style="text-align:justify;">Những vật dụng đã rạn nứt, vỡ một phần thì đó là một điều không tốt, nó thể hiện sự tan vỡ do đó cần lập tức phải vứt đi và thay mới những món đồ đó.</p>\n<p style="text-align:center;"><strong><img src="/public/userfiles/image/lienngocphat/image/cach-treo-dong-ho-hop-phong-thuy-_4.jpg" alt="" width="290" height="480" /><br /></strong></p>\n<p style="text-align:center;">Không nên dùng đồ đạc bị rạn nứt</p>\n<p style="text-align:justify;"><strong>Hướng nhà bếp</strong></p>\n<p style="text-align:justify;">Nên tránh đặt đối điện với cửa nhà vệ sinh là nơi dẫn các uế khí. Nếu không thể thay đổi được vị trí thì có thể làm một vách ngăn che chắn.</p>\n<p style="text-align:justify;">Tránh đặt bếp nấu ăn ở giữa hai vật dụng có nước như máy giặt, tủ lạnh, bồn chậu… vì bếp nấu ăn có lửa (hỏa, còn những vật dụng kia có chứa thủy, mà hoả thì kỵ thủy.</p>\n<p style="text-align:justify;">Hướng nhà bếp cần tránh với hướng cửa nhà vệ sinh</p>\n<p style="text-align:justify;">Màu sắc trong phòng bếp nên có màu tương đối nhạt vì đây là khu vực nấu ăn nên phát ra năng lượng rất nóng, cần màu sắc dịu lại làm khống chế độ nóng trong bếp.</p>\n<p style="text-align:justify;"><strong>Ban công</strong></p>\n<p style="text-align:justify;">Không đặt đối diện trực tiếp với phòng bếp vì đây là kiểu xuyên tâm trong phong thuỷ có thể khiến cho khả năng đoàn tụ trong nhà yếu. Tuy nhiên nếu bạn không thể thay đổi vị trí thì có thể cải thiện bằng cách dùng rèm hay chậu cây để ban công và bếp không không với nhau.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/lienngocphat/image/cach-treo-dong-ho-hop-phong-thuy-_5.jpg" alt="" width="350" height="262" /></p>\n<p style="text-align:center;">Không đặt đối diện trực tiếp với phòng bếp</p>\n<p style="text-align:justify;"><strong>Cửa chính</strong>:</p>\n<p style="text-align:justify;">Không nên đặt bất cứ vật dụng nào che chắn hoặc gây cản trở lối đi vào cửa chính thì theo phong thuỷ thì cửa chính sẽ là nơi hội tụ, thu hút khí, năng lượng vào ngôi nhà của bạn. Nếu bị cản trở luồng khí này sẽ không tốt, do đó cửa chính và lối đi cần rộng mở để luồng khí có thể được hấp thu và truyền dễ dàng trong nhà.</p>\n<p style="text-align:justify;"><strong>Cửa nhà vệ sinh</strong></p>\n<p style="text-align:justify;">Cửa nhà vệ sinh không được đối diện với cửa lớn vào nhà vì cửa chính là nơi đón các luồng sinh khí tự nhiên vào nhà, nếu nhà cửa nhà vệ sinh đối diện với của chính thì luồng khí này sẽ di chuyển thẳng vào khu vực nhà vệ sinh, vốn là nơi khí uế. Như vậy thì sinh khí và khí uế đối kháng với nhau sẽ không tốt.</p>', '', 'quy-tac-sap-xep-nha-cua-theo-phong-thuy', '', '', '', 0, 3, 0, '', '', 1, 351);
 
 -- --------------------------------------------------------
 
@@ -523,16 +527,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=348 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=352 ;
 
 --
 -- Dumping data for table `dos_module_news_cat`
 --
 
 INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(345, 0, 'Tin thị trường bất động sản', '', '', '', 'tin-thi-truong-bat-dong-san', '', '', '', '', 1, '', '', 1, 'thinhduong'),
-(346, 0, 'Thông tin đào tạo', '', '', '', 'thong-tin-dao-tao', '', '', '', '', 2, '', '', 1, 'thinhduong'),
-(347, 0, 'Tin tức', '', '', '', 'tin-tuc', '', '', '', '', 3, '', '', 1, 'thinhduong');
+(349, 0, 'Tin sản phẩm mới', '', '', '', 'tin-san-pham-moi', '', '', '', 'tin-san-pham-moi.jpg', 2, '', '', 1, 'lienngocphat'),
+(350, 0, 'Tin tức trong ngành', '', '', '', 'tin-tuc-trong-nganh', '', '', '', 'tin-tuc-trong-nganh.jpg', 3, '', '', 1, 'lienngocphat'),
+(351, 0, 'Tin tức khác', '', '', '', 'tin-tuc-khac', '', '', '', '', 2, '', '', 1, 'lienngocphat');
 
 -- --------------------------------------------------------
 
@@ -550,7 +554,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456167),
+('day_time', 2456170),
 ('max_count', 0),
 ('counter', 0),
 ('yesterday', 0);
@@ -571,7 +575,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1346057832);
+('''127.0.0.1''', 1346293204);
 
 -- --------------------------------------------------------
 
@@ -608,33 +612,18 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8159 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8734 ;
 
 --
 -- Dumping data for table `dos_module_products`
 --
 
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(8127, 'Nhà Trảng Dài 110m²', '', '2012-08-08 12:32:35', 'nha-trang-dai-110m-thumb.jpeg', 'nha-trang-dai-110m.jpg', 'nha-trang-dai-110m-desc-1.JPG|nha-trang-dai-110m-desc-2.jpg|nha-trang-dai-110m-desc-3.JPG|nha-trang-dai-110m-desc-4.jpg', '<p><strong>Mã Sp : NTD - VNP</strong></p>\n<p>Khu phố 5 - Phường Trảng Dài</p>\n<p>Diện tích : 4,8 x 23 = 110 m²</p>\n<p>Pháp lý : Giấy tờ hợp lệ</p>\n<p>Giá : 1,7 tỷ (thương lượng)</p>\n<p>Hướng: Tây Nam</p>\n<p> </p>\n<p> </p>\n<p> </p>', '', '<p style="text-align:justify;">Nhà có vị trí đẹp vào ở liền, có 1 phòng khách, 3 phòng ngủ, 1 nhà ăn, 1 phòng karaokê, 1 phòng thờ,có máy nước nóng năng lượng mặt trời, đầy đủ điện nước, nội thất cao cấp, tặng 2 máy lạnh, đường rộng 10 m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần bệnh viện, gần chợ Phú Thọ, mặt bằng buôn bán kinh doanh rất tốt, trường học, nhà trẻ, thích hợp ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 A.Chương</p>', '', 'nha-trang-dai-110m', '', 'nhà trảng dài\n\nnhà đất biên hòa\n\nnhà đất đồng nai\n\nhttp://vangngocphat.com', '', 0, 19, '', 0, 0, '', '', '', '', 1, 1473),
-(8128, 'Nhà Trảng Dài 220m²', '', '2012-08-08 12:32:35', 'nha-trang-dai-220m-thumb.jpeg', 'nha-trang-dai-220m.jpg', 'nha-trang-dai-220m-desc-1.jpg|nha-trang-dai-220m-desc-2.JPG', '<p><strong>Mã Sp : NTD - VNP</strong></p>\n<p>Khu phố 5 - Phường Trảng Dài</p>\n<p>Diện tích : 6 x 36,5 = 220 m²</p>\n<p>Pháp lý : Sổ đỏ chính chủ</p>\n<p>Giá : 1,350 tỷ (thương lượng)</p>\n<p>Hướng: Đông Nam</p>\n<p> </p>\n<p> </p>', '', '<p style="text-align:justify;">Nhà có vị trí đẹp vào ở liền, có 1 phòng khách, 3 phòng ngủ, 1 nhà bếp, đầy đủ điện nước, có sân rông rãi để xe, đường rộng 6m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần bệnh viện, gần chợ Phú Thọ, trường học, nhà trẻ, thích hợp ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 A.Chương</p>', '', 'nha-trang-dai-220m', '', 'nhà trảng dài\n\nnhà đất biên hòa\n\nnhà đất đồng nai\n\nhttp://vangngocphat.com', '', 0, 20, '', 0, 0, '', '', '', '', 1, 1473),
-(8129, 'Nhà Trảng Dài 44m²', '', '2012-08-08 12:32:35', 'nha-trang-dai-44m-thumb.jpeg', 'nha-trang-dai-44m.jpg', 'nha-trang-dai-44m-desc-1.jpg', '<p><strong>Mã Sp : NTD - VNPT</strong></p>\n<p>Nhà Trảng Dài: Khu phố 5 - Phường Trảng Dài</p>\n<p>Diện tích : 4 x 11 = 44 m²</p>\n<p>Pháp lý : Sổ hồng chính chủ</p>\n<p>Giá : 410 triệu (thương lượng)</p>\n<p>Hướng : Đông Nam</p>\n<p> </p>\n<p> </p>', '', '<p style="text-align:justify;">Nhà có vị trí đẹp, 1 gác, 1 phòng ngủ, đường rộng 6m, có điện nước máy đầy đủ, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần bệnh viện, gần chợ Phú Thọ, trường học, nhà trẻ, thích hợp ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 A Chương</p>', '', 'nha-trang-dai-44m', '', '', '', 0, 12, '', 0, 0, '', '', '', '', 1, 1473),
-(8130, 'Đất Trảng Dài 100 m²', '', '2012-08-08 12:32:35', 'at-trang-dai-100-m-thumb.jpeg', 'at-trang-dai-100-m.jpg', 'at-trang-dai-100-m-desc-1.jpg|at-trang-dai-100-m-desc-2.jpg', '<p><strong>Mã Sp : ĐTD - VNPT</strong></p>\n<p>Đất Trảng Dài: Khu phố 3 - Phường Trảng Dài</p>\n<p>Diện tích : 5 x 20 = 100 m² (2 lô)</p>\n<p>Pháp lý : Giấy tờ hợp lệ</p>\n<p>Giá : 170 triệu (thương lượng)</p>\n<p>Hướng : Đông nam</p>', '', '<p style="text-align:justify;">Đất có vị trí đẹp, mặt tiền rộng, cách đường 39m gần 50m, đường rộng 5m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần chợ, nhà trẻ, trường học, thích hợp để ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0918 539 780 A. Tịnh</p>', '', 'dat-trang-dai-100-m', '', '', '', 0, 13, '', 0, 0, '', '', '', '', 1, 1473),
-(8131, 'Đất Trảng Dài 384m²', '', '2012-08-08 12:32:35', 'at-trang-dai-384m-thumb.jpeg', 'at-trang-dai-384m.jpg', '', '<p><strong>Mã Sp : ĐTD - VNP</strong></p>\n<p>Nhà Đất Trảng Dài: Khu phố 4 - Phường Trảng Dài</p>\n<p>Diện tích : 12 x 32 = 384 m²</p>\n<p>Pháp lý : Giấy tờ hợp lệ</p>\n<p>Giá : 580 triệu (thương lượng)</p>', '', '<p style="text-align:justify;">Đất có vị trí đẹp, mặt tiền rộng, đường rộng 5m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần chợ, nhà trẻ, trường học, thích hợp để ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 A.Chương</p>', '', 'dat-trang-dai-384m', '', '', '', 0, 14, '', 0, 0, '', '', '', '', 1, 1473),
-(8132, 'Đất Trảng Dài 150m²', '', '2012-08-08 12:32:35', 'at-trang-dai-150m-thumb.jpeg', 'at-trang-dai-150m.jpg', 'at-trang-dai-150m-desc-1.JPG', '<p><strong>Mã Sp : ĐTD - VNPM</strong></p>\n<p>Đất Trảng Dài : Khu phố 4 - Phường Trảng Dài</p>\n<p>Diện tích : 5 x 30 = 150 m²</p>\n<p>Pháp lý : Giấy biên nhận</p>\n<p>Giá : 195 triệu (thương lượng)</p>\n<p> </p>', '', '<p>Đất có vị trí đẹp, đường rộng 6m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, cách trường Đại học Công Nghệ Đồng Nai 800m, trường học, nhà trẻ, bệnh viện, thích hợp ở lâu dài.</p>\n<p>Liên hệ : 0935 434 886 C.Mỹ</p>', '', 'dat-trang-dai-150m', '', 'đất trảng dài\n\nnhà đất biên hòa\n\nnhà đất đồng nai\n\nhttp://batdongsan.com.vn', '', 0, 16, '', 0, 0, '', '', '', '', 1, 1473),
-(8133, 'Đất Trảng Dài 140m²', '', '2012-08-08 12:32:35', 'at-trang-dai-140m-thumb.jpeg', 'at-trang-dai-140m.jpg', 'at-trang-dai-140m-desc-1.JPG', '<p><strong>Mã Sp : ĐTD - VNP</strong></p>\n<p>Đất Trảng Dài: Khu phố 5 - Phường Trảng Dài</p>\n<p>Diện tích : 7 x 20 =140 m²</p>\n<p>Pháp lý : Giấy tờ hợp lệ</p>\n<p>Giá : 270 triệu (thương lượng)</p>\n<p>Hướng : Đông nam</p>', '', '<p style="text-align:justify;">Đất có vị trí đẹp, đường rộng 5m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, cách trường Đại học Công Nghệ Đồng Nai 500m, gần chợ Phú Thọ, gần trung tâm thành phố, các ngân hàng, trường học, nhà trẻ, bệnh viện, thích hợp ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0918 539 780 A.Tịnh - 0977 369 322 A.Chương</p>', '', 'dat-trang-dai-140m', '', 'đất trảng dài\n\nnhà đất đồng nai\n\nnhà đất biên hòa', '', 0, 17, '', 0, 0, '', '', '', '', 1, 1473),
-(8140, 'Nhà Hố Nai 68m²', '', '2012-08-08 12:32:35', 'nha-ho-nai-68m-thumb.jpeg', 'nha-ho-nai-68m.jpg', 'nha-ho-nai-68m-desc-1.JPG', '<p><strong>Mã Sp : NHN - VNP</strong></p>\n<p>Nhà Hố Nai: Khu phố 3 - Phường Hố Nai</p>\n<p>Diện tích : 4,2 x 16 = 68 m²</p>\n<p>Pháp lý : Sổ hồng chính chủ</p>\n<p>Giá : 650 triệu (thương lượng)</p>\n<p>Hướng : Nam</p>\n<p> </p>\n<p> </p>\n<p> </p>', '', '<p> </p>\n<p style="text-align:justify;">Nhà có vị trí đẹp, 1 sân rộng, 1 phòng khách, 1 phòng ngủ, ph2ong ăn, vào ở liền, đường rộng 5m, cách đường Nguyễn Ái Quốc 50m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần trường học, gần nhà thờ, nhà trẻ, bệnh viện, thích hợp để ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 Mr Chương</p>\n<p> </p>', '', 'nha-ho-nai-68m', '', 'nhà hố nai\n\nnhà đất biên hòa\n\nnhà đất đồng nai\n\nhttp://vangngocphat.com', '', 0, 21, '', 0, 0, '', '', '', '', 1, 1474),
-(8141, 'Nhà Hố Nai 130m²', '', '2012-08-08 12:32:35', 'nha-ho-nai-130m-thumb.jpeg', 'nha-ho-nai-130m.jpg', 'nha-ho-nai-130m-desc-1.JPG', '<p style="text-align:justify;"><strong>Mã Sp : NHN - VNP</strong></p>\n<p style="text-align:justify;">Nhà Hố Nai: Khu phố 3 - Phường Hố Nai</p>\n<p style="text-align:justify;">Diện tích : 8,4 x 15,8 = 130 m²</p>\n<p style="text-align:justify;">Pháp lý : Sổ hồng chính chủ</p>\n<p style="text-align:justify;">Giá : 1,3 tỷ (thương lượng)</p>\n<p style="text-align:justify;">Hướng : Nam</p>\n<p> </p>\n<p style="text-align:justify;"> </p>\n<p style="text-align:justify;"> </p>', '', '<p>Nhà có vị trí đẹp, 1 phòng khách rộng, 3 phòng ngủ vào ở liền, đường rộng 5m, cách đường Nguyễn Ái Quốc 50m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần trường học, gần nhà thờ, nhà trẻ, bệnh viện, thích hợp để ở lâu dài.</p>\n<p>Liên hệ : 0977 369 322 Mr Chương</p>', '', 'nha-ho-nai-130m', '', 'nhà hố nai\n\nnhà đất biên hòa\n\nnhà đất đồng nai\n\nhttp://vangngocphat.com', '', 0, 22, '', 0, 0, '', '', '', '', 1, 1474),
-(8142, 'Nhà Hố Nai 150m²', '', '2012-08-08 12:32:35', 'nha-ho-nai-150m-thumb.jpeg', 'nha-ho-nai-150m.jpg', 'nha-ho-nai-150m-desc-1.jpg', '<p> </p>\n<p style="text-align:justify;"><strong>Mã Sp : NHN - VNP</strong></p>\n<p style="text-align:justify;">Nhà Hố Nai: Khu phố 11 - Phường Hố Nai</p>\n<p style="text-align:justify;">Diện tích : 150m² (Đất đô thị)</p>\n<p style="text-align:justify;">Pháp lý : Sổ đỏ chính chủ</p>\n<p style="text-align:justify;">Giá : 900 triệu (thương lượng)</p>\n<p style="text-align:justify;">Hướng : Tây</p>\n<p> </p>\n<p style="text-align:justify;"> </p>\n<p style="text-align:justify;"> </p>\n<p> </p>', '', '<p>Nhà có vị trí đẹp, mặt tiền rộng 17m, đường rộng 4m, cách đường Nguyễn Ái Quốc 50m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần trường học, gần nhà thờ, nhà trẻ, bệnh viện, thích hợp để ở lâu dài.</p>\n<p>Liên hệ : 0977 369 322 anh Chương</p>', '', 'nha-ho-nai-150m', '', 'nhà hố nai\n\nnhà đất biên hòa\n\nnhà đất đồng nai\n\nhttp://vangngocphat.com', '', 0, 23, '', 0, 0, '', '', '', '', 1, 1474),
-(8143, 'Nhà Hố Nai 100m²', '', '2012-08-08 12:32:35', 'nha-ho-nai-100m-thumb.jpeg', 'nha-ho-nai-100m.jpg', 'nha-ho-nai-100m-desc-1.JPG', '<p style="text-align:justify;"><strong>Mã Sp : NHN - VNP</strong></p>\n<p style="text-align:justify;">Nhà Hố Nai: Khu phố 5 - Phường Hố Nai</p>\n<p style="text-align:justify;">Diện tích : 6 x 17,1 = 100m² (Đất đô thị)</p>\n<p style="text-align:justify;">Pháp lý : Sổ đỏ chính chủ</p>\n<p style="text-align:justify;">Giá : 620 triệu (thương lượng)</p>\n<p style="text-align:justify;">Hướng : Đông nam</p>\n<p> </p>\n<p style="text-align:justify;"> </p>', '', '<p>Nhà có vị trí đẹp, đường rộng 5m, 1 phòng khách, 1 phòng ngủ, cách đường Nguyễn Ái Quốc 150m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần trường học, cách nhà thờ 50m, nhà trẻ, bệnh viện, thích hợp để ở lâu dài.</p>\n<p>Liên hệ : 0986 232 230 A.Đại</p>', '', 'nha-ho-nai-100m', '', 'nhà hố nai\n\nnhà đất biên hòa\n\nnhà đất đồng nai', '', 0, 24, '', 0, 0, '', '', '', '', 1, 1474),
-(8144, 'Nhà Hố Nai 200m²', '', '2012-08-08 12:32:35', 'nha-ho-nai-200m-thumb.jpeg', 'nha-ho-nai-200m.jpg', 'nha-ho-nai-200m-desc-1.JPG|nha-ho-nai-200m-desc-2.JPG|nha-ho-nai-200m-desc-3.jpg', '<p> </p>\n<p style="text-align:justify;"><strong>Mã Sp : NHN - VNPT</strong></p>\n<p style="text-align:justify;">Nhà Hố Nai: Khu phố 1 - Phường Hố Nai</p>\n<p style="text-align:justify;">Diện tích : 15,8 x 14 = 200m²</p>\n<p style="text-align:justify;">Pháp lý : Sổ đỏ chính chủ</p>\n<p style="text-align:justify;">Giá : 1,3 tỷ (thương lượng)</p>\n<p style="text-align:justify;">Hướng : Đông nam</p>\n<p> </p>\n<p style="text-align:justify;"> </p>\n<p> </p>', '', '<p style="text-align:justify;">Nhà đẹp, nội thất sang trọng, có 1 phòng khách, 2 phòng ngủ, a nhà bếp rộng, gara để xe hơi, 1 kho chứa hàng, gần nhà thờ, gần siêu thị, cách đường Nguyễn Ái Quốc 150m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần trường học, nhà trẻ, bệnh viện, thích hợp để ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0918 539 780 A.Tịnh - 0977 369 322 A.Chương</p>', '', 'nha-ho-nai-200m', '', 'nhà hố nai\n\nnhà đất biên hòa\n\nnhà đất đồng nai\n\nhttp://batdongsan.com.vn', '', 0, 25, '', 0, 0, '', '', '', '', 1, 1474),
-(8145, 'Nhà xưởng Hố Nai 284m²', '', '2012-08-08 12:32:35', 'nha-xuong-ho-nai-284m-thumb.jpeg', 'nha-xuong-ho-nai-284m.jpg', 'nha-xuong-ho-nai-284m-desc-1.JPG|nha-xuong-ho-nai-284m-desc-2.JPG|nha-xuong-ho-nai-284m-desc-3.JPG|nha-xuong-ho-nai-284m-desc-4.JPG', '<p><strong>Mã Sp : NHN - VNP</strong></p>\n<p>Nhà xưởng hố nai</p>\n<p>Khu phố 3 - Phường Hố Nai</p>\n<p>Diện tích : 10 x 25 = 284 m² (nở hậu 12m)</p>\n<p>Pháp lý : Sổ đỏ chính chủ</p>\n<p>Giá : 3,7 tỷ (thương lượng)</p>\n<p> </p>\n<p> </p>', '', '<p style="text-align:justify;">Thông tin : Nhà xưởng rộng, 2 mặt tiền, có vị trí đẹp, đường rộng 6m, cách đường Nguyễn Ái Quốc 30m, xây dựng kiên cố, có gác lửng và văn phòng cho nhân viên, thích hợp làm kho chứa hàng, hàng xuất khẩu, vào hoạt động ngay.</p>\n<p style="text-align:justify;">0977 369 322 A.Chương</p>', '', 'nha-xuong-ho-nai-284m', '', 'nhà xưởng hố nai\n\nnhà đất biên hòa\n\nnhà đất đồng nai', '', 0, 26, '', 0, 0, '', '', '', '', 1, 1474),
-(8146, 'Nhà xưởng Hố Nai 165m²', '', '2012-08-08 12:32:35', 'nha-xuong-ho-nai-165m-thumb.jpeg', 'nha-xuong-ho-nai-165m.jpg', 'nha-xuong-ho-nai-165m-desc-1.JPG', '<p><strong>Mã Sp : NHN - VNP</strong></p>\n<p>Nhà xưởng Hố Nai: Khu phố 3 - Phường Hố Nai</p>\n<p>Diện tích : 11 x 15 = 165m²</p>\n<p>Pháp lý : Sổ đỏ chính chủ</p>\n<p>Giá : 1,8 tỷ (thương lượng)</p>\n<p> </p>', '', '<p style="text-align:justify;">Xưởng kho mặt tiền rộng, xây dựng kiên cố, giao thông thuận lợi, thích hợp làm đồ thủ công mỹ nghệ, làm kho chứa hàng, có gác lửng làm văn phòng, vào hoạt động sản xuất ngay.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 A.Chương</p>', '', 'nha-xuong-ho-nai-165m', '', 'nhà kho hố nai\n\nnhà đất biên hòa\n\nnhà đất đồng nai', '', 0, 27, '', 0, 0, '', '', '', '', 1, 1474),
-(8147, 'Nhà Hố Nai 100 m²', '', '2012-08-08 12:32:35', 'nha-ho-nai-100-m-thumb.jpeg', 'nha-ho-nai-100-m.jpg', 'nha-ho-nai-100-m-desc-1.jpg', '<p><strong>Mã Sp : NHN - VNP</strong></p>\n<p>Nhà Hố Nai: Khu phố 4 - Phường Hố Nai</p>\n<p>Diện tích : 5 x 20 = 100m²</p>\n<p>Pháp lý : Sổ đỏ chính chủ</p>\n<p>Giá : 1,150 tỷ (thương lượng)</p>', '', '<p style="text-align:justify;">Nhà có vị trí đẹp, đường rộng 5m, nhà có 1 phòng khách, 2 phòng ngủ, cách đường Nguyễn Ái Quốc 40m, cách chợ số 6 khoảng 20m. Khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần trường học cấp I,II, gần nhà thờ, nhà trẻ, bệnh viện, siêu thị, thích hợp để ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 A.Chương</p>', '', 'nha-ho-nai-100-m', '', 'nhà hố nai\n\nnhà đất biên hòa\n\nnhà đất đồng nai', '', 0, 28, '', 0, 0, '', '', '', '', 1, 1474),
-(8148, 'Đất Hố Nai 180m²', '', '2012-08-08 12:32:35', 'at-ho-nai-180m-thumb.jpeg', 'at-ho-nai-180m.jpg', 'at-ho-nai-180m-desc-1.jpg|at-ho-nai-180m-desc-2.jpg', '<p><strong>Mã Sp : ĐHN - VNP</strong></p>\n<p>Khu phố 12 - Hố Nai</p>\n<p>Diện tích : 9 x 20 = 180 m². Đất đô thị.</p>\n<p>Pháp lý : Sổ hồng chính chủ</p>\n<p>Giá : 1,2 tỷ (thương lượng)</p>\n<p> </p>\n<p> </p>\n<p> </p>', '', '<p style="text-align:justify;">Đất có vị trí đẹp, đường rộng 4m, cách đường Nguyễn Ái Quốc 300m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần trường học, nhà trẻ, nhà thờ, bệnh viện, thích hợp xây biệt thự vườn.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 A.Chương</p>', '', 'dat-ho-nai-180m', '', 'đất hố nai', '', 0, 16, '', 0, 0, '', '', '', '', 1, 1474),
-(8155, 'Đất Tân Hiệp 525m²', '', '2012-08-08 12:32:35', 'at-tan-hiep-525m-thumb.jpeg', 'at-tan-hiep-525m.jpg', 'at-tan-hiep-525m-desc-1.JPG', '<p><strong>Mã Sp : ĐTH - VNP</strong></p>\n<p>Đất Tân Hiệp: Khu phố 2 - Phường Tân Hiệp</p>\n<p>Diện tích : 9,5 x 55 = 525 m²</p>\n<p>Pháp lý : Sổ đỏ chính chủ</p>\n<p>Giá : 2,25 tỷ (thương lượng)</p>\n<p>Hướng : Đông bắc</p>', '', '<p style="text-align:justify;">Đất có vị trí đẹp, dài, rộng, đường rộng 6m, cách đường Nguyễn Ái Quốc 200m, gần bệnh viện, trung tâm thương mại, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần chợ, nhà trẻ, trường học, thích hợp để ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 A.Chương</p>', '', 'dat-tan-hiep-525m', '', 'đất tân hiệp\n\nnhà đất biên hòa\n\nnhà đất đồng nai', '', 0, 15, '', 0, 0, '', '', '', '', 1, 1475),
-(8156, 'Đất Tân Hiệp 136,5m²', '', '2012-08-08 12:32:35', 'at-tan-hiep-1365m-thumb.jpeg', 'at-tan-hiep-1365m.jpg', 'at-tan-hiep-1365m-desc-1.JPG', '<p><strong>Mã Sp : ĐTH - VNP</strong></p>\n<p>Đất Tân Hiệp: Khu phố 1 - Phường Tân Hiệp</p>\n<p>Diện tích : 6,5 x 21 = 136,5 m²</p>\n<p>Pháp lý : Giấy tờ hợp lệ</p>\n<p>Giá : 380 triệu (thương lượng)</p>\n<p>Hướng : Đông nam</p>', '', '<p>Đất có vị trí đẹp, đường rộng 4m, cách đường Nguyễn Ái Quốc 700m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần chợ, nhà trẻ, trường học, bệnh viện, thích hợp để ở lâu dài.</p>\n<p>Liên hệ : 0977 369 322 A.Chương</p>', '', 'dat-tan-hiep-1365m', '', 'Đất tân hiệp\n\nnhà đất biên hòa\n\nnhà đất đồng nai', '', 0, 18, '', 0, 0, '', '', '', '', 1, 1475),
-(8157, 'Nhà Tân Hiệp 111,7m²', '', '2012-08-08 12:32:35', 'nha-tan-hiep-1117m-thumb.jpeg', 'nha-tan-hiep-1117m.jpg', '', '<p> </p>\n<p style="text-align:justify;"><strong>Mã Sp : NTH - VNP</strong></p>\n<p style="text-align:justify;">Nhà Tân Hiệp: Khu phố 1 - Phường Tân Hiệp</p>\n<p style="text-align:justify;">Diện tích : 5 x 22,4 = 111,7m²</p>\n<p style="text-align:justify;">Pháp lý : Sổ đỏ chính chủ</p>\n<p style="text-align:justify;">Giá : 850 triệu (thương lượng)</p>\n<p style="text-align:justify;">Hướng : Đông nam</p>\n<p> </p>\n<p style="text-align:justify;"> </p>\n<p> </p>', '', '<p>Nhà đẹp, nội thất sang trọng, mặt tiền đường rộng 5m, cách đường Nguyễn Ái Quốc 500m, gần siên thị Đồng Nai, gần nhiều bệnh viện, trung tâm thương mại, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần chợ, nhà trẻ, trường học, thích hợp để ở lâu dài.</p>\n<p>Liên hệ : 0977 369 322 A.Chương</p>', '', 'nha-tan-hiep-1117m', '', 'nhà tân hiệp\n\nnhà đất biên hòa\n\nnhà đất đồng nai', '', 0, 29, '', 0, 0, '', '', '', '', 1, 1475),
-(8158, 'Nhà Tân Hiệp 130m²', '', '2012-08-08 12:32:35', 'nha-tan-hiep-130m-thumb.jpeg', 'nha-tan-hiep-130m.jpeg', 'nha-tan-hiep-130m-desc-1.JPG', '<p style="text-align:justify;"><strong>Mã Sp : NTH - VNP</strong></p>\n<p style="text-align:justify;">Nhà Tân Hiệp: Khu phố 2 - Phường Tân Hiệp</p>\n<p style="text-align:justify;">Diện tích : 6,5 x 20 = 130m²</p>\n<p style="text-align:justify;">Pháp lý : Sổ đỏ chính chủ</p>\n<p style="text-align:justify;">Giá : 1,45 tỷ (thương lượng)</p>\n<p style="text-align:justify;">Hướng : Tây</p>\n<p style="text-align:justify;"> </p>', '', '<p style="text-align:justify;">Nhà đẹp có 1 phòng khách, 2 phòng ngủ, đường rộng 5m, ô tô ra vào thuận lợi, gần siêu thị, cách đường Nguyễn Ái Quốc 300m, khu dân cư đông, an ninh tốt, nhiều tiện ích xung quanh, gần trường học, nhà trẻ, bệnh viện, thích hợp để ở lâu dài.</p>\n<p style="text-align:justify;">Liên hệ : 0977 369 322 A.Chương</p>', '', 'nha-tan-hiep-130m', '', 'nhà tân hiệp\n\nnhà đất biên hòa\n\nnhà đất đồng nai', '', 0, 30, '', 0, 0, '', '', '', '', 1, 1475);
+(8729, 'HMH1 - 29 x 29 cm - 23g', '', '2012-08-29 06:51:42', 'hmh1-29-x-29-cm-23g-thumb.jpg', 'hmh1-29-x-29-cm-23g.jpg', '', '<p>Khăn Mollis</p>', '', '<p>Khăn Mollis</p>', '', 'hmh1-29-x-29-cm-23g', '', '', '', 0, 2, '', 0, 0, '', '', '', '', 1, 1644),
+(8730, 'BMH1 - 70X130 cm - 470', '', '2012-08-29 06:54:44', 'bmh1-70x130-cm-470-thumb.jpg', 'bmh1-70x130-cm-470.jpg', '', '<p>Khăn Mollis Extra</p>', '', '<p>BMH1 - 70X130 cm - 470</p>', '', 'bmh1-70x130-cm-470', '', '', '', 0, 1, '', 0, 0, '', '', '', '', 1, 1640),
+(8731, 'BMB4 - 65x130 cm - 405.6g', '', '2012-08-29 06:57:30', 'bmb4-65x130-cm-405-6g-thumb.jpg', 'bmb4-65x130-cm-405-6g.jpg', '', '<p>Khăn Micio</p>', '', '<p>BMB4 - 65x130 cm - 405.6g</p>', '', 'bmb4-65x130-cm-4056g', '', '', '', 0, 3, '', 0, 0, '', '', '', '', 1, 1641),
+(8732, 'BMC2 - 65x130 cm - 338g', '', '2012-08-29 07:00:45', 'bmc2-65x130-cm-338g-thumb.jpg', 'bmc2-65x130-cm-338g.jpg', '', '<p>Khăn Mollis Premium</p>', '', '<p>BMC2 - 65x130 cm - 338g</p>', '', 'bmc2-65x130-cm-338g', '', '', '', 0, 4, '', 0, 0, '', '', '', '', 1, 1639),
+(8733, 'BMI6 - 60x120 cm - 345.58 g', '', '2012-08-29 07:02:35', 'bmi6-60x120-cm-345-58-g-thumb.jpg', 'bmi6-60x120-cm-345-58-g.jpg', '', '<p>Khăn Hải Vân</p>', '', '<p>BMI6 - 60x120 cm - 345.58 g</p>', '', 'bmi6-60x120-cm-34558-g', '', '', '', 0, 5, '', 0, 0, '', '', '', '', 1, 1642);
 
 -- --------------------------------------------------------
 
@@ -662,27 +651,20 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1485 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1645 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
 --
 
 INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(1471, 0, 'ĐẤT ĐẦU TƯ', '', '', '', 'dat-dau-tu', '', 'ĐẤT ĐẦU TƯ', '', 't-u-t.jpeg', '', 14, '', '', 1, 'thinhduong'),
-(1472, 0, 'HUYỆN TRẢNG BOM', '', '', '', 'huyen-trang-bom', '', 'HUYỆN TRẢNG BOM', '', 'huyn-trng-bom.jpeg', '', 13, '', '', 1, 'thinhduong'),
-(1473, 0, 'PHƯỜNG TRẢNG DÀI', '', '', '', 'phuong-trang-dai', '', 'PHƯỜNG TRẢNG DÀI', '', 'phng-trng-di.jpeg', '', 13, '', '', 1, 'thinhduong'),
-(1474, 0, 'PHƯỜNG HỐ NAI', '', '', '', 'phuong-ho-nai', '', 'PHƯỜNG HỐ NAI', '', 'phng-h-nai.jpeg', '', 13, '', '', 1, 'thinhduong'),
-(1475, 0, 'PHƯỜNG TÂN HIỆP', '', '', '', 'phuong-tan-hiep', '', 'PHƯỜNG TÂN HIỆP', '', 'phng-tn-hip.jpeg', '', 9, '', '', 1, 'thinhduong'),
-(1476, 0, 'PHƯỜNG TÂN TIẾN', '', '', '', 'phuong-tan-tien', '', '', '', 'phng-tn-tin.jpeg', '', 6, '', '', 1, 'thinhduong'),
-(1477, 0, 'PHƯỜNG TAM HIỆP', '', '', '', 'phuong-tam-hiep', '', 'PHƯỜNG TAM HIỆP', '', 'phng-tam-hip.jpeg', '', 6, '', '', 1, 'thinhduong'),
-(1478, 0, 'PHƯỜNG TÂN BIÊN', '', '', '', 'phuong-tan-bien', '', 'PHƯỜNG TÂN BIÊN', '', 'phng-tn-bin.jpeg', '', 8, '', '', 1, 'thinhduong'),
-(1479, 0, 'PHƯỜNG TÂN HÒA', '', '', '', 'phuong-tan-hoa', '', 'PHƯỜNG TÂN HÒA', '', 'phng-tn-ha.jpeg', '', 5, '', '', 1, 'thinhduong'),
-(1480, 0, 'PHƯỜNG TAM HÒA', '', '', '', 'phuong-tam-hoa', '', '', '', 'phng-tam-ha.jpeg', '', 6, '', '', 1, 'thinhduong'),
-(1481, 0, 'PHƯỜNG TÂN MAI', '', '', '', 'phuong-tan-mai', '', '', '', 'phng-tn-mai.jpeg', '', 7, '', '', 1, 'thinhduong'),
-(1482, 0, 'PHƯỜNG TÂN PHONG', '', '', '', 'phuong-tan-phong', '', 'PHƯỜNG TÂN PHONG', '', 'phng-tn-phong.jpeg', '', 5, '', '', 1, 'thinhduong'),
-(1483, 0, 'PHƯỜNG BỬU LONG', '', '', '', 'phuong-buu-long', '', 'PHƯỜNG BỬU LONG', '', 'phng-bu-long.jpeg', '', 8, '', '', 1, 'thinhduong'),
-(1484, 0, 'VI TRÍ ĐẸP KHÁC', '', '', '', 'vi-tri-dep-khac', '', 'VI TRÍ ĐẸP KHÁC', '', 'vi-tr-p-khc.jpeg', '', 2, '', '', 1, 'thinhduong');
+(1638, 0, 'Open', '', '', '', 'open', '', '', '', 'open.jpg', '', 1, '', '', 1, 'lienngocphat'),
+(1639, 0, 'Mollis Premium', '', '', '', 'mollis-premium', '', '', '', 'mollis-premium.jpg', '', 7, '', '', 1, 'lienngocphat'),
+(1640, 0, 'Mollis Extra', '', '', '', 'mollis-extra', '', '', '', 'mollis-extra.jpg', '', 5, '', '', 1, 'lienngocphat'),
+(1641, 0, 'Macio', '', '', '', 'macio', '', '', '', 'macio.jpg', '', 4, '', '', 1, 'lienngocphat'),
+(1642, 0, 'Hải Vân', '', '', '', 'hai-van', '', '', '', 'hai-van.jpg', '', 5, '', '', 1, 'lienngocphat'),
+(1643, 0, 'Hera', '', '', '', 'hera', '', '', '', 'hera.jpg', '', 6, '', '', 1, 'lienngocphat'),
+(1644, 0, 'Mollis', '', '', '', 'mollis', '', '', '', 'mollis.jpg', '', 6, '', '', 1, 'lienngocphat');
 
 -- --------------------------------------------------------
 
@@ -713,15 +695,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=311 ;
-
---
--- Dumping data for table `dos_module_services`
---
-
-INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(309, 'Máy Ion', '', '', '', '<p>đang cập nhật</p>', '', '', 1, '2012-08-27 07:58:34', 1, 0, '', '', 'may-ion', '', '', '', 1, 'thinhduong'),
-(310, 'Chương trình đào tạo', '', '', '', '<p>đang cập nhật</p>', '', '', 1, '2012-08-27 07:59:03', 2, 0, '', '', 'chuong-trinh-dao-tao', '', '', '', 1, 'thinhduong');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -740,7 +714,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=299 ;
+
+--
+-- Dumping data for table `dos_module_supports`
+--
+
+INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
+(297, 'Hỗ trợ Khách hàng 1', '', '', 'maioanh7887', 1, 'yahoo', 'lienngocphat'),
+(298, 'Hỗ trợ Khách hàng 2', '', '', 'maioanh7887', 1, 'yahoo', 'lienngocphat');
 
 -- --------------------------------------------------------
 
@@ -811,10 +793,10 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
 --
 
 INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
-('keywords', 'Công ty BĐS Thịnh Đường.Chuyên Môi giới Bất động sản,Tư vấn, thực hiện Dịch vụ pháp lý,Quảng cáo Bất động sản,Thẩm định giá Bất động sản,Tư vấn đầu tư và kinh doanh BĐS', 'thinhduong'),
-('description', 'Công ty BĐS Thịnh Đường.Chuyên Môi giới Bất động sản,Tư vấn, thực hiện Dịch vụ pháp lý,Quảng cáo Bất động sản,Thẩm định giá Bất động sản,Tư vấn đầu tư và kinh doanh BĐS', 'thinhduong'),
-('title', 'Công ty BĐS Thịnh Đường - Batdongsanthinhduong.com', 'thinhduong'),
-('analytics', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-30151015-8'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>', 'thinhduong');
+('keywords', 'Cty TNHH Liên Ngọc Phát.Chuyên phân phối sản phẩm khăn Mollis, khăn khách sạn, khăn Spa, áo choàng tắm, khăn tắm, khăn quà tặng, khăn 100% Cotton, khăn du lịch, khăn Mollis Extra , được sản xuất  từ các hãng nổi tiếng trong nước, nước ngoài', 'lienngocphat'),
+('description', 'Cty TNHH Liên Ngọc Phát.Chuyên phân phối sản phẩm khăn Mollis, khăn khách sạn, khăn Spa, áo choàng tắm, khăn tắm, khăn quà tặng, khăn 100% Cotton, khăn du lịch, khăn Mollis Extra , được sản xuất  từ các hãng nổi tiếng trong nước, nước ngoài', 'lienngocphat'),
+('title', 'Công ty TNHH Liên Ngọc Phát - Lienngocphat.com', 'lienngocphat'),
+('analytics', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-30151015-9'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>', 'lienngocphat');
 
 -- --------------------------------------------------------
 
@@ -937,7 +919,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 --
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
-('180512', 'Mẫu nội thất: 180512', '2012-05-18 00:57:47', 'Chuyên bán các loại đồ nội thất, dân dụng');
+('220312', 'Mẫu nội thất: 220312', '2012-03-21 19:04:36', 'Chuyên bán các loại đồ nội thất, dân dụng');
 
 -- --------------------------------------------------------
 
@@ -958,7 +940,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_bussiness` (
 --
 
 INSERT INTO `dos_templates_has_dos_bussiness` (`dos_templates_template`, `dos_bussiness_bussiness_id`) VALUES
-('180512', 'noi-that-ngoai-that');
+('220312', 'noi-that-ngoai-that');
 
 -- --------------------------------------------------------
 
@@ -996,29 +978,41 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_modules` (
 --
 
 INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modules_module_id`, `dos_values_value_name`) VALUES
-('180512', 'about', 'advs_left'),
-('180512', 'about', 'list_supports'),
-('180512', 'about', 'menu_about'),
-('180512', 'contact', 'advs_left'),
-('180512', 'contact', 'list_supports'),
-('180512', 'contact', 'menu_products'),
-('180512', 'default', 'about_home'),
-('180512', 'default', 'advs_left'),
-('180512', 'default', 'list_supports'),
-('180512', 'default', 'menu_products'),
-('180512', 'default', 'products_new'),
-('180512', 'news', 'advs_left'),
-('180512', 'news', 'list_supports'),
-('180512', 'news', 'menu_news'),
-('180512', 'products', 'advs_left'),
-('180512', 'products', 'list_supports'),
-('180512', 'products', 'menu_products'),
-('180512', 'services', 'advs_left'),
-('180512', 'services', 'list_supports'),
-('180512', 'services', 'menu_services'),
-('180512', 'video', 'advs_left'),
-('180512', 'video', 'advs_top'),
-('180512', 'video', 'menu_video');
+('220312', 'about', 'advs_left'),
+('220312', 'about', 'advs_right'),
+('220312', 'about', 'list_supports'),
+('220312', 'about', 'menu_about'),
+('220312', 'about', 'news_new'),
+('220312', 'about', 'products_hot'),
+('220312', 'contact', 'advs_left'),
+('220312', 'contact', 'advs_right'),
+('220312', 'contact', 'list_supports'),
+('220312', 'contact', 'menu_products'),
+('220312', 'contact', 'news_new'),
+('220312', 'contact', 'products_hot'),
+('220312', 'default', 'about_home'),
+('220312', 'default', 'advs_left'),
+('220312', 'default', 'advs_right'),
+('220312', 'default', 'list_supports'),
+('220312', 'default', 'menu_products'),
+('220312', 'default', 'news_new'),
+('220312', 'default', 'products_hot'),
+('220312', 'default', 'products_new'),
+('220312', 'default', 'video_hot'),
+('220312', 'news', 'advs_right'),
+('220312', 'news', 'menu_news'),
+('220312', 'news', 'news_hot'),
+('220312', 'news', 'news_new'),
+('220312', 'products', 'advs_right'),
+('220312', 'products', 'list_supports'),
+('220312', 'products', 'menu_products'),
+('220312', 'products', 'news_new'),
+('220312', 'services', 'advs_right'),
+('220312', 'services', 'menu_services'),
+('220312', 'services', 'news_new'),
+('220312', 'video', 'advs_right'),
+('220312', 'video', 'menu_video'),
+('220312', 'video', 'news_new');
 
 -- --------------------------------------------------------
 
@@ -1056,7 +1050,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 --
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `agent_sale`, `agent_tech`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('thinhduong', 'xuantrung@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-08-08 12:32:28', '', '', '', 'user', 'vi', '', '2012-11-05 16:00:00', 0, '07251943', '', 1, '180512', 19, 'bds-kien-truc-xay-dung');
+('lienngocphat', 'maioanh@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-08-28 08:04:17', '', '0987522003', '', 'user', 'vi', '', '2012-11-25 16:00:00', 0, '87522003', '', 1, '220312', 19, 'thoi-trang');
 
 -- --------------------------------------------------------
 
@@ -1094,15 +1088,12 @@ CREATE TABLE IF NOT EXISTS `dos_user_langs` (
 --
 
 INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_username`) VALUES
-('address1', 'KP2, P.Trảng Dài, Biên Hòa, Đồng Nai', '', 'thinhduong'),
-('address2', 'Hotline: 0919 860 397 - Email: tiendung_saoviet@yahoo.com', '', 'thinhduong'),
-('company_name', 'CÔNG TY TNHH BĐS THỊNH ĐƯỜNG', '', 'thinhduong'),
-('company_name_footer', 'CÔNG TY TNHH BĐS THỊNH ĐƯỜNG', '', 'thinhduong'),
-('company_phone', '', '', 'thinhduong'),
-('new', '', '', 'thinhduong'),
-('news', 'Thông tin', '', 'thinhduong'),
-('products', 'BẤT ĐỘNG SẢN', '', 'thinhduong'),
-('services', 'Đào tạo', '', 'thinhduong');
+('address1', 'Địa chỉ: 60A, KP3, P. An Bình, TP. Biên Hòa, Tỉnh Đồng Nai', '', 'lienngocphat'),
+('address2', 'Đại lý LNP: Đường Bắc Sơn, P. Vĩnh Hải, TP. Nha Trang, Tỉnh Khánh Hòa', '', 'lienngocphat'),
+('company_name', 'CÔNG TY TNHH LIÊN NGỌC PHÁT', '', 'lienngocphat'),
+('company_name_footer', 'CÔNG TY TNHH LIÊN NGỌC PHÁT', '', 'lienngocphat'),
+('company_phone', 'Hotline: 0918 116 026 (Mr. Ngọc)', '', 'lienngocphat'),
+('copyright', 'Email: lienngocphat@gmail.com - Website: www.lienngocphat.vn', '', 'lienngocphat');
 
 -- --------------------------------------------------------
 
