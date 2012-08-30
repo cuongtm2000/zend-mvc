@@ -214,3 +214,100 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2012/08/30 04:06:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/08/30 04:19:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_2.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_2.jpg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/tin-tuc-khac/nhung-cach-lam-moi-nha-don-gian-bang-son.html
+---
+2012/08/30 04:19:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_3.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_3.jpg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/tin-tuc-khac/nhung-cach-lam-moi-nha-don-gian-bang-son.html
+---
+2012/08/30 04:19:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_7.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_7.jpg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/tin-tuc-khac/nhung-cach-lam-moi-nha-don-gian-bang-son.html
+---
+2012/08/30 04:19:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_6.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_6.jpg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/tin-tuc-khac/nhung-cach-lam-moi-nha-don-gian-bang-son.html
+---
+2012/08/30 04:19:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_4.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_4.jpg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/tin-tuc-khac/nhung-cach-lam-moi-nha-don-gian-bang-son.html
+---
+2012/08/30 04:19:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_8.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_8.jpg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/tin-tuc-khac/nhung-cach-lam-moi-nha-don-gian-bang-son.html
+---
+2012/08/30 04:19:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_9.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_9.jpg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/tin-tuc-khac/nhung-cach-lam-moi-nha-don-gian-bang-son.html
+---
+2012/08/30 04:19:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_15.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_15.jpg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/tin-tuc-khac/nhung-cach-lam-moi-nha-don-gian-bang-son.html
+---
+2012/08/30 04:19:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_16.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/lienngocphat/image/lam-moi-nha-sua-nha-don-tet_16.jpg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/tin-tuc-khac/nhung-cach-lam-moi-nha-don-gian-bang-son.html
+---
+2012/08/30 04:21:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
