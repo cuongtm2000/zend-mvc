@@ -114,10 +114,11 @@ class About extends CActiveRecord {
         $criteria->order = 'record_order DESC, created DESC';
         $criteria->condition = 'hot = 1 AND enable = 1';
 
-        $viewer = $this::model()->find($criteria);
-        if ($viewer) {
+        return $this::model()->findAll($criteria);
+        //$viewer = $this::model()->findAll($criteria);
+        /*if ($viewer) {
             return $viewer->AboutLanguage[Yii::app()->language];
-        }
+        }*/
     }
 
     /**
