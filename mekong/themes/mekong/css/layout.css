@@ -27,6 +27,7 @@ a:hover{color:#000;}
 #nav li ul{ display:none}
 #nav li:hover ul{list-style:none;display:block;background:#3162C6;position:absolute; z-index:200; top:32px; width:18em;border-radius:0 0 4px 4px;-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;padding-bottom:3px}
 #nav li ul li{width:100%;border-bottom:1px solid #fff}
+#nav li ul li.last{border:none}
 #nav li ul li a{color:#fff; padding:5px 5px 5px 10px;text-transform:inherit} 
 #nav li ul li a:hover{background:#073A83;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0}
 #nav .selected{background:url(../images/nav-select.png) repeat-x;border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0}

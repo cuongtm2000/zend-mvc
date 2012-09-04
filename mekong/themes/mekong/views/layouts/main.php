@@ -65,7 +65,7 @@
 </div><!--End header-->
 <div class="bg-nav">
 	<div class="page-main">
-		<?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel');?>
+		<?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel',array('lastItemCssClass' => 'last'));?>
         <div class="clear"></div>
      </div>   
 </div> <!--End bg-nav -->
