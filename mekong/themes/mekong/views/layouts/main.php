@@ -12,6 +12,13 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" media="screen"/>
 	<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.7.2.min.js"></script>
 	
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/simplyscroll.horizontal.css"  />
+	<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/simplyscroll.horizontal.js"></script>
+	<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/horizontal-config.js"></script>
+	
+	<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.scrollTo.js"></script>
+	<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/top-page-config.js"></script>
+
 	<title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->setting['title']) ? ' - '.CHtml::encode($this->setting['title']) : '' ?></title>
     <meta name="keywords" content="<?php echo CHtml::encode($this->setting['keywords']) ?>" />
     <meta name="description" content="<?php echo CHtml::encode($this->description) ?>" />
@@ -31,12 +38,8 @@
 <link rel="stylesheet" type="text/css" href="css/advanced-slider-base.css" media="screen"/>
 
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
-<script type="text/javascript" src="js/top-page-config.js"></script>
 
-<link rel="stylesheet" type="text/css" href="css/simplyscroll.horizontal.css"  />
-<script type="text/javascript" src="js/simplyscroll.horizontal.js"></script>
-<script type="text/javascript" src="js/horizontal-config.js"></script>
+
 
 <script type="text/javascript" src="js/jquery.advancedSlider.min.js"></script> -->
 <!--[if IE]><script type="text/javascript" src="js/excanvas.compiled.js"></script><![endif]-->
@@ -74,7 +77,7 @@
 			<?php echo $content; ?>
 		
 		
-			<div class="breadcrumbs"><a href="" title="" >Trang chủ</a><b>&raquo;</b><span>Giới thiệu</span></div>
+			<!--<div class="breadcrumbs"><a href="" title="" >Trang chủ</a><b>&raquo;</b><span>Giới thiệu</span></div>
         	<div id="leftcontent">
             	<div class="frame-leftcontent">
                     <h4 class="title-project"><span>DỰ ÁN TIÊU BIỂU</span></h4>
@@ -119,8 +122,8 @@
                         <li>Tổng số lượt truy cập: 038082</li>
                     </ul>
                 </div>
-        	</div><!--End left content-->
-            <div id="rightcontent">
+        	</div> --><!--End left content-->
+           <!-- <div id="rightcontent">
             	
 					<h2 class="title-right">Giới thiệu</h2>
                     <div class="frame-tent-right">     
@@ -165,7 +168,8 @@
                             <div class="line-bottom-pro"></div>
                             <h2 class="title-product"><a href="product-info.html" title="Leonidas Chocolate Assortment">Cửa sổ 2 cánh mở trong</a></h2>
                         </li>
-                    </ul><!--End All products--> <div class="clear"></div>
+                    </ul> --><!--End All products--> 
+					<!--<div class="clear"></div>
                     <ul class="paging">
                         <li class="first hidden"><a href="/san-pham/thiet-bi-ve-sinh">Đầu tiên</a></li>
                         <li class="previous hidden"><a href="/san-pham/thiet-bi-ve-sinh">Lùi</a></li>
@@ -174,20 +178,20 @@
                         <li class="next"><a href="/san-pham/thiet-bi-ve-sinh/trang/2">Tiếp</a></li>
                         <li class="last"><a href="/san-pham/thiet-bi-ve-sinh/trang/2">Cuối cùng</a></li>
                     </ul> <div class="clear"></div>
-			</div> <!--End right-content--> <div class="clear"></div>        
+			</div>--> <!--End right-content--> <div class="clear"></div>       
 		</div> <!--End content--> 
 	</div><!--End main-content-->
 </div><!--End wrapper-->
 <div class="partner-top-line">
 	<div class="page-main">
-    	<img class="partner" src="images/partner.png" alt="partner" />
+    	<img class="partner" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner.png" alt="partner" />
     	<ul id="scroller" class="partner-group">
-        	<li><div class="partner-img"><a href="" title=""><img src="images/partner-1.jpg" alt="" /></a></div></li>
-            <li><div class="partner-img"><a href="" title=""><img src="images/partner-2.jpg" alt="" /></a></div></li>
-			<li><div class="partner-img"><a href="" title=""><img src="images/partner-3.jpg" alt="" /></a></div></li>
-			<li><div class="partner-img"><a href="" title=""><img src="images/partner-4.jpg" alt="" /></a></div></li>
-			<li><div class="partner-img"><a href="" title=""><img src="images/partner-5.jpg" alt="" /></a></div></li>
-			<li><div class="partner-img"><a href="" title=""><img src="images/partner-6.jpg" alt="" /></a></div></li>
+        	<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-1.jpg" alt="" /></a></div></li>
+            <li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-2.jpg" alt="" /></a></div></li>
+			<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-3.jpg" alt="" /></a></div></li>
+			<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-4.jpg" alt="" /></a></div></li>
+			<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-5.jpg" alt="" /></a></div></li>
+			<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-6.jpg" alt="" /></a></div></li>
         </ul>
     </div> <div class="clear"></div> 
 </div>
@@ -204,11 +208,11 @@
             <li><a href="" title="">Tuyển dụng</a></li>
             <li class="none-line"><a href="" title="">Liên hệ</a></li>
         </ul>
-        <a href="" id="top-link" title=""><img src="images/top-page.png" alt="top page" /></a>
+        <a href="" id="top-link" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/top-page.png" alt="top page" /></a>
     </div>
 </div><!--End Footer-->
 <div class="page-main page-footer">
-	<div class="logo-footer"><img src="images/logo-footer.png" alt=""  /></div>
+	<div class="logo-footer"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-footer.png" alt=""  /></div>
     <div class="copyright"><h3 class="company-footer">Công ty Cổ phần đầu tư ngôi sao MÊKONG</h3>
     	<p>Trụ sở chính tại HCM: 184 Quốc lộ 13, Quận Thủ Đức</p>
         <p>Điện thoại: (84 - 4) 37 47 47 00 - Fax: (84 - 4) 37 47 47 11 - Email: infoew@mekongstarwindow.com</p>

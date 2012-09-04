@@ -38,7 +38,7 @@ a:hover{color:#000;}
 
 /* Page Content*/
 .main-content{padding:10px 0}
-#content{background:url(../images/content-bg.png) no-repeat center top;padding:0 14px}
+#content{background:url(../images/content-bg.png) no-repeat center top;padding:10px 14px}
 
 /*Left content*/
 #leftcontent{float:right; width:311px}
@@ -83,7 +83,7 @@ a:hover{color:#000;}
 .frame-tent-right p{line-height:1.6em}
 
 /**  panel-about  **/
-.panel-about{line-height:1.6em;margin-bottom:10px; background:url(../images/line-about.png) repeat-y 312px; text-align:justify}
+.panel-about{line-height:1.6em;margin-bottom:10px; background:url(../images/line-about.png) repeat-y 312px ; text-align:justify}
 .panel-about-left{float:left;width:290px}
 .panel-about-right{float:right;width:290px}
 
@@ -98,7 +98,7 @@ a:hover{color:#000;}
 #rightcontent .all-product{margin:0;padding:5px 0 0 0; list-style:none}
 #rightcontent .all-product .product{width:200px;text-align:center;margin:0 0 15px 5px;display:inline-block;vertical-align:top}
 .product-img{width:200px; height:140px;display:table-cell;vertical-align:middle;border-bottom:1px solid #FDD7E4;border:2px solid #EDECEC;padding:5px 0;border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0}
-.line-bottom-pro{background:url(../images/pro-line-footer.png) no-repeat; height:6px;margin-bottom:2px}
+.line-bottom-product{background:url(../images/pro-line-footer.png) no-repeat; height:6px;margin-bottom:2px}
 #rightcontent .price{font-size:14px; font-weight:bold; color:#0b51b5;margin-top:5px}
 .title-product a{color:#ff0000;font-size:16px} .title-product{font-weight:normal}
 .title-product a:hover{color:#073C86}
@@ -141,9 +141,9 @@ tbody tr td{padding : 6px 5px;color : #111}
 #rightcontent .panel-items{list-style: none; text-align:justify;font-size:10pt;margin:0 0 20px 0}
 .panel-items li{ margin:0 0 5px 0 !important;border-bottom:1px solid #EAEAEA;padding-bottom:5px}
 .frame-img{float:left;margin:0 8px 0 0}
-.title-items-new{margin:0 0 5px 0;font-size:10pt}
-.title-items-new a{color:#0084D5}
-.title-items-new a:hover{color:#FF0000}
+.title-items-news{margin:0 0 5px 0;font-size:10pt}
+.title-items-news a{color:#0084D5}
+.title-items-news a:hover{color:#FF0000}
 
 /*** panel-items-related  tin tuc dau tien page index***/
 #rightcontent .panel-items-related li{color:#000;margin:4px 0 4px 30px}
@@ -173,8 +173,8 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .frame-contact textarea{border:1px solid #ddd;width: 350px; -moz-border-radius: 3px; -webkit-border-radius:3px}
 .frame-contact span{color:#f00;margin:0 5px 0 0;}
 
-.frame-contact .bton-submit{margin:10px 0 5px 30px;background:#9FBD43;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
-.frame-contact .bton-submit{margin:10px 10px 5px 0}
+.frame-contact .button-submit{margin:10px 0 5px 30px;background:#084396;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-contact .button-submit{margin:10px 10px 5px 0}
 /****  End page contact     *****/
 
 /**  partner đối tác **/

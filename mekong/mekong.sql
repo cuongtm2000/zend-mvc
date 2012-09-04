@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 04, 2012 at 05:13 AM
+-- Generation Time: Sep 04, 2012 at 09:07 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -44,10 +44,10 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('adv_bottom_width', '222', NULL, 'adv'),
 ('adv_center_height', '222', NULL, 'adv'),
 ('adv_center_width', '222', NULL, 'adv'),
-('adv_left_height', '222', NULL, 'adv'),
-('adv_left_width', '222', NULL, 'adv'),
-('adv_right_height', '222', NULL, 'adv'),
-('adv_right_width', '222', NULL, 'adv'),
+('adv_left_height', '288', NULL, 'adv'),
+('adv_left_width', '384', NULL, 'adv'),
+('adv_right_height', '265', NULL, 'adv'),
+('adv_right_width', '353', NULL, 'adv'),
 ('adv_top_height', '222', NULL, 'adv'),
 ('adv_top_width', '222', NULL, 'adv'),
 ('banner_height', '275', NULL, 'banner'),
@@ -68,14 +68,14 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('news_num_item_index', '3', NULL, 'news'),
 ('news_num_item_new', '7', NULL, 'news'),
 ('news_width_thumb', '200', NULL, 'news'),
-('products_cat_height_thumb', '200', NULL, 'products'),
-('products_cat_width_thumb', '200', NULL, 'products'),
+('products_cat_height_thumb', '140', NULL, 'products'),
+('products_cat_width_thumb', '180', NULL, 'products'),
 ('products_height_desc', '700', NULL, 'products'),
 ('products_height_full', '700', NULL, 'products'),
-('products_height_thumb', '220', NULL, 'products'),
+('products_height_thumb', '140', NULL, 'products'),
 ('products_width_desc', '520', NULL, 'products'),
 ('products_width_full', '520', NULL, 'products'),
-('products_width_thumb', '220', NULL, 'products');
+('products_width_thumb', '180', NULL, 'products');
 
 -- --------------------------------------------------------
 
@@ -306,10 +306,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
 --
 
 INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(46, 'en', 'Welcome english', '<p>asdas asa</p>', 'welcome-english', 'dasd', 304, NULL, NULL),
-(46, 'vi', 'Welcome to Yiiproject.com', '<p>Welcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to</p>\r\n<h3>Welcome to Yiiproject.com</h3>\r\n<p>Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.com</p>', 'welcome-to-yiiprojectcom', 'das', 332, NULL, NULL),
-(47, 'en', 'About', '<p>Con tnet</p>', 'about', 'dasdsadsads', 293, NULL, NULL),
-(47, 'vi', 'Gioi thieu', '<p>Noi dung</p>', 'gioi-thieu', 'asdasdsd', 293, NULL, NULL);
+(46, 'en', 'Advantages of uPVC', '<p>Produced by the European quality standards, product of uPVC branded MEKONGSTAR window is synchronized set of components, including: uPVC profile bars box-like structure, is divided into the hollow cavity fitted with steel corereinforcement to increase the bearing capacity for the door, combined with double rings and glass box inert gas is pumped to ensure high-sealed, with good sound insulation. In addition, high-grade uPVC material has the advantages such as: no warping, shrinkage, small painting, routine maintenance, high fire resistance, oxidation, aging or stained gold in terms of solar radiation or acid rain. Therefore, the door retains the original beauty during use. These advantages allow the door to long-term economic efficiency for the user by saving energy costs and routine maintenance.</p>', 'advantages-of-upvc', 'Produced by the European quality standards, product of uPVC branded MEKONGSTAR window is synchronized set of components, including: uPVC profile bars box-like structure', 304, NULL, NULL),
+(46, 'vi', 'Ưu Việt cửa uPVC', '<p>Được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp, được chia thành nhiều khoang rỗng có lắp lõi thép gia cường để tăng khả năng chịu lực cho bộ cửa, kết hợp với hệ gioăng kép và hộp kính được bơm khí trơ đảm bảo độ kín khít cao, có tính cách âm, cách nhiệt tốt. Ngoài ra, vật liệu uPVC cao cấp còn có những ưu điểm khác như: không cong vênh, co ngót, ít phải sơn sửa, bảo dưỡng định kỳ, khả năng chống cháy cao, không bị oxy hóa, không bị lão hóa hay ố vàng trong điều kiện bức xạ mặt trời hay mưa a xít. Chính vì vậy, cửa luôn giữ được vẻ đẹp ban đầu trong suốt thời gian sử dụng. Những ưu điểm này cho phép cửa đem lại hiệu quả kinh tế lâu dài cho người sử dụng nhờ tiết kiệm chi phí điện năng và bảo dưỡng định kỳ.</p>', 'uu-viet-cua-upvc', 'Được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp', 332, NULL, NULL),
+(47, 'en', 'About uPVC door', '<p>Produced by the European quality standards, product of uPVC branded MEKONGSTAR window is synchronized set of components, including: uPVC profile bars box-like structure, is divided into the hollow cavity fitted with steel corereinforcement to increase the bearing capacity for the door, combined with double rings and glass box inert gas is pumped to ensure high-sealed, with good sound insulation. In addition, high-grade uPVC material has the advantages such as: no warping, shrinkage, small painting, routine maintenance, high fire resistance, oxidation, aging or stained gold in terms of solar radiation or acid rain. Therefore, the door retains the original beauty during use. These advantages allow the door to long-term economic efficiency for the user by saving energy costs and routine maintenance.</p>', 'about-upvc-door', 'Produced by the European quality standards, product of uPVC branded MEKONGSTAR window is synchronized set of components, including: uPVC profile bars box-like structure,', 293, NULL, NULL),
+(47, 'vi', 'Giới thiệu cửa uPVC', '<p>Được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp, được chia thành nhiều khoang rỗng có lắp lõi thép gia cường để tăng khả năng chịu lực cho bộ cửa, kết hợp với hệ gioăng kép và hộp kính được bơm khí trơ đảm bảo độ kín khít cao, có tính cách âm, cách nhiệt tốt. Ngoài ra, vật liệu uPVC cao cấp còn có những ưu điểm khác như: không cong vênh, co ngót, ít phải sơn sửa, bảo dưỡng định kỳ, khả năng chống cháy cao, không bị oxy hóa, không bị lão hóa hay ố vàng trong điều kiện bức xạ mặt trời hay mưa a xít. Chính vì vậy, cửa luôn giữ được vẻ đẹp ban đầu trong suốt thời gian sử dụng. Những ưu điểm này cho phép cửa đem lại hiệu quả kinh tế lâu dài cho người sử dụng nhờ tiết kiệm chi phí điện năng và bảo dưỡng định kỳ.</p>', 'gioi-thieu-cua-upvc', 'Được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp,', 293, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -332,7 +332,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_advs` (
   `click` int(11) NOT NULL DEFAULT '0',
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
 
 --
 -- Dumping data for table `hoiit_module_advs`
@@ -343,7 +343,9 @@ INSERT INTO `hoiit_module_advs` (`record_id`, `title`, `pic_thumb`, `url`, `crea
 (16, 'Logo right', 'logo-right.png', '', '2012-07-20 01:45:53', '2012-07-19 17:00:00', '2012-08-12 17:00:00', 0, 2, 'right', '_bank', 0, 1),
 (17, 'Quảng cáo', 'quang-cao.jpg', '', '2012-07-20 01:51:12', '2012-07-19 17:00:00', '2012-07-20 17:00:00', 0, 1, 'left', '_bank', 0, 1),
 (18, 'Quảng cáo', 'quang-cao1.jpg', '', '2012-07-20 01:54:15', '2012-07-19 17:00:00', '2012-08-06 17:00:00', 0, 4, 'left', '_bank', 0, 1),
-(19, 'Quảng cáo Logo', 'quang-cao-logo1.jpg', '', '2012-07-22 02:16:26', '2012-07-30 17:00:00', '2012-08-20 17:00:00', 0, 5, 'left', '_bank', 0, 1);
+(19, 'Quảng cáo Logo', 'quang-cao-logo1.jpg', '', '2012-07-22 02:16:26', '2012-07-30 17:00:00', '2012-08-20 17:00:00', 0, 5, 'left', '_bank', 0, 1),
+(20, 'Iso', 'iso.jpg', '', '2012-09-04 06:25:59', '2012-09-03 16:00:00', '2012-10-24 16:00:00', 0, 6, 'right', '_bank', 0, 1),
+(21, 'Khu biet thu Phu My Hung', 'khu-biet-thu-phu-my-hung.jpg', '', '2012-09-04 06:54:13', '2012-09-03 16:00:00', '2012-10-21 16:00:00', 0, 7, 'left', '_bank', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -388,13 +390,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_contacts` (
   PRIMARY KEY (`record_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
---
--- Dumping data for table `hoiit_module_contacts`
---
-
-INSERT INTO `hoiit_module_contacts` (`record_id`, `created`, `record_order`, `hot`, `enable`) VALUES
-(2, '2012-08-07 01:08:47', 2, 0, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -414,14 +409,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_contacts_languages` (
   KEY `fk_hoiit_module_contacts_has_hoiit_languages_hoiit_module_con1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `hoiit_module_contacts_languages`
---
-
-INSERT INTO `hoiit_module_contacts_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`) VALUES
-(2, 'en', 'sdddsds', '', 'sdddsds', 'sdds', 0),
-(2, 'vi', 'sddsds', '<p>dssdds</p>', 'sddsds', 'sdsd', 0);
-
 -- --------------------------------------------------------
 
 --
@@ -437,7 +424,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus` (
   `menu_homepage` tinyint(1) NOT NULL DEFAULT '0',
   `menu_activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=34 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=35 ;
 
 --
 -- Dumping data for table `hoiit_module_menus`
@@ -449,7 +436,8 @@ INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_type`, `menu_tar
 (29, 0, 1, '', 3, 0, 1),
 (31, 0, 1, '', 4, 0, 1),
 (32, 0, 1, '', 5, 0, 1),
-(33, 29, 0, '', 33, 0, 1);
+(33, 29, 0, '', 33, 0, 1),
+(34, 29, 0, '', 34, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -483,8 +471,10 @@ INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name
 (31, 'vi', 'Tin tức & sự kiện', 'tin-tuc', 'Co mo ta tin tuc'),
 (32, 'en', 'Contact', 'contact', ''),
 (32, 'vi', 'Liên hệ', 'lien-he', ''),
-(33, 'en', 'asdasd', 'asdasdsad', ''),
-(33, 'vi', 'Cửa sổ mở quay vào trong', 'asdasd', '');
+(33, 'en', 'Open window turned into', 'Open window turned into', ''),
+(33, 'vi', 'Cửa sổ mở quay vào trong', 'Cửa sổ mở quay vào trong', ''),
+(34, 'en', 'Sliding window open', 'Sliding window open', ''),
+(34, 'vi', 'Cửa sổ mở trượt', 'Cửa sổ mở trượt', '');
 
 -- --------------------------------------------------------
 
@@ -664,7 +654,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''::1''', 1346727643);
+('''::1''', 1346727643),
+('''127.0.0.1''', 1346742471);
 
 -- --------------------------------------------------------
 
@@ -739,19 +730,16 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products` (
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_hoiit_module_products_hoiit_module_products_cat1` (`hoiit_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `hoiit_module_products`
 --
 
 INSERT INTO `hoiit_module_products` (`record_id`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `record_order`, `unit`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
-(1, '2012-07-31 03:58:20', 'xe-day-3-banh-cho-be-thumb.jpg', 'xe-day-3-banh-cho-be.jpg', NULL, 1, '175000', 0, NULL, NULL, NULL, NULL, NULL, 1, 5),
-(2, '2012-07-31 04:54:34', 'car-racer-bac-speedster-thumb.jpg', 'car-racer-bac-speedster.jpg', NULL, 2, '45000', 0, NULL, NULL, NULL, NULL, NULL, 1, 5),
-(3, '2012-07-31 04:54:43', 'famosa-magic-fairy-quad-bike-thumb.jpg', 'famosa-magic-fairy-quad-bike.jpg', NULL, 3, '250000', 0, NULL, NULL, NULL, NULL, NULL, 1, 5),
-(4, '2012-08-08 02:58:58', 'peppa-pig-standard-playhouse-thumb.jpg', 'peppa-pig-standard-playhouse.jpg', NULL, 4, '110000', 0, NULL, NULL, NULL, NULL, NULL, 1, 7),
-(5, '2012-08-08 03:00:43', 'maxi-cosi-cabriofix-infant-carrier-thumb.jpg', 'maxi-cosi-cabriofix-infant-carrier.jpg', NULL, 5, '145000', 0, NULL, NULL, NULL, NULL, NULL, 1, 5),
-(6, '2012-08-08 03:02:20', 'kids-toy-piano-thumb.jpg', 'kids-toy-piano.jpg', NULL, 6, '98000', 0, NULL, NULL, NULL, NULL, NULL, 1, 5);
+(7, '2012-09-04 06:17:01', 'cua-so-2-canh-mo-trong-thumb.jpg', '', NULL, 7, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 14),
+(8, '2012-09-04 06:17:37', 'cua-di-2-canh-thumb.jpg', '', NULL, 8, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 14),
+(9, '2012-09-04 06:18:21', 'cua-di-2-canh-mo-ngoai-thumb.jpg', '', NULL, 9, '', 0, NULL, NULL, NULL, NULL, NULL, 1, 14);
 
 -- --------------------------------------------------------
 
@@ -771,22 +759,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products_cat` (
   `cat_extra2` varchar(100) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `hoiit_module_products_cat`
 --
 
 INSERT INTO `hoiit_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
-(5, 0, '2012-07-25 06:28:10', 'giay-dep.jpg', NULL, 0, 5, NULL, NULL, 1),
-(6, 5, '2012-07-30 13:45:47', '', NULL, 0, 6, NULL, NULL, 1),
-(7, 0, '2012-07-31 04:00:12', '', NULL, 0, 7, NULL, NULL, 1),
-(8, 6, '2012-08-09 02:56:41', '', NULL, 0, 8, NULL, NULL, 1),
-(9, 5, '2012-08-09 04:01:21', '', NULL, 0, 9, NULL, NULL, 1),
-(10, 5, '2012-08-09 07:34:14', '', NULL, 0, 10, NULL, NULL, 1),
-(11, 10, '2012-08-09 07:34:33', '', NULL, 0, 11, NULL, NULL, 1),
-(12, 10, '2012-08-09 07:34:43', '', NULL, 0, 12, NULL, NULL, 1),
-(13, 6, '2012-08-09 10:10:45', '', NULL, 0, 13, NULL, NULL, 1);
+(14, 0, '2012-09-04 06:11:32', '', NULL, 0, 14, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -811,24 +791,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products_cat_languages` (
 --
 
 INSERT INTO `hoiit_module_products_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
-(5, 'en', 'Footwear', '', 'footwear', 'Footwear'),
-(5, 'vi', 'Giày dép', '', 'giay-dep', 'Giày dép'),
-(6, 'en', '', '', '', ''),
-(6, 'vi', 'Sub cat', '', 'sub-cat', ''),
-(7, 'en', 'Outdoor Toys', '', 'outdoor-toys', 'Outdoor Toys'),
-(7, 'vi', 'Ngoài trời đồ chơi', '', 'ngoai-troi-do-choi', 'Ngoài trời đồ chơi'),
-(8, 'en', '', '', '', ''),
-(8, 'vi', 'Sub sub', '', 'sub-sub', ''),
-(9, 'en', '', '', '', ''),
-(9, 'vi', 'Khi', '', 'khi', ''),
-(10, 'en', '', '', '', ''),
-(10, 'vi', 'Xe hơi', '', 'xe-hoi', ''),
-(11, 'en', '', '', '', ''),
-(11, 'vi', 'Xe có hơi', '', 'xe-co-hoi', ''),
-(12, 'en', '', '', '', ''),
-(12, 'vi', 'Xe hết hơi', '', 'xe-het-hoi', ''),
-(13, 'en', '', '', '', ''),
-(13, 'vi', 'Sub sub cat', '', 'sub-sub-cat', '');
+(14, 'en', 'Open window turned into', '', 'open-window-turned-into', 'Open window turned into'),
+(14, 'vi', 'Cửa sổ mở quay vào trong', '', 'cua-so-mo-quay-vao-trong', 'Cửa sổ mở quay vào trong');
 
 -- --------------------------------------------------------
 
@@ -857,18 +821,12 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products_languages` (
 --
 
 INSERT INTO `hoiit_module_products_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(1, 'en', 'Quinny Buzz 3-wheeler pushchair', '<p>Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h</p>', '<p>Delivery<br />Home delivery only. Delivery to most customers in the UK is within 5 working days. Please note, we can only deliver this item to mainland UK addresses.</p>\r\n<p>This product is only available for delivery to mainland UK</p>\r\n<p>No Quibble Returns<br />ELC are happy to refund or exchange any unused merchandise returned within 28 days of purchase upon production of your receipt, as long as they are returned in an unused condition and in their original packaging. Please see Terms and Conditions for details</p>', 'quinny-buzz-3-wheeler-pushchair', 'Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h', 0, NULL, NULL),
-(1, 'vi', 'Xe đẩy 3 bánh cho bé', '<p>Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h</p>', '<p>Trang chủ Giao hàng tận nơi chỉ phát. Giao hàng tận nơi hầu hết khách hàng tại Vương quốc Anh trong vòng 5 ngày làm việc. Xin lưu ý, chúng tôi chỉ có thể cung cấp mặt hàng này vào đất liền địa chỉ Vương quốc Anh. Sản phẩm này chỉ có sẵn để giao hàng cho đại lục Vương quốc Anh Không có Trả về phân minh ELC là hạnh phúc hoàn lại hoặc trao đổi bất kỳ hàng hóa không sử dụng trở lại trong vòng 28 ngày kể từ ngày mua khi sản xuất nhận của bạn, miễn là họ được trả về trong một điều kiện không sử dụng và trong bao bì gốc của họ. Xin vui lòng xem Điều khoản và Điều kiện để biết thêm chi tiết</p>', 'xe-day-3-banh-cho-be', 'Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h', 0, NULL, NULL),
-(2, 'en', 'Car Racer bạc Speedster', '<p>Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h</p>', '<p>Delivery<br />Home delivery only. Delivery to most customers in the UK is within 5 working days. Please note, we can only deliver this item to mainland UK addresses.</p>\r\n<p>This product is only available for delivery to mainland UK</p>\r\n<p>No Quibble Returns<br />ELC are happy to refund or exchange any unused merchandise returned within 28 days of purchase upon production of your receipt, as long as they are returned in an unused condition and in their original packaging. Please see Terms and Conditions for details</p>', 'car-racer-bac-speedster', '', 0, NULL, NULL),
-(2, 'vi', 'Car Racer bạc Speedster', '<p>Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h</p>', '<p>Trang chủ Giao hàng tận nơi chỉ phát. Giao hàng tận nơi hầu hết khách hàng tại Vương quốc Anh trong vòng 5 ngày làm việc. Xin lưu ý, chúng tôi chỉ có thể cung cấp mặt hàng này vào đất liền địa chỉ Vương quốc Anh. Sản phẩm này chỉ có sẵn để giao hàng cho đại lục Vương quốc Anh Không có Trả về phân minh ELC là hạnh phúc hoàn lại hoặc trao đổi bất kỳ hàng hóa không sử dụng trở lại trong vòng 28 ngày kể từ ngày mua khi sản xuất nhận của bạn, miễn là họ được trả về trong một điều kiện không sử dụng và trong bao bì gốc của họ. Xin vui lòng xem Điều khoản và Điều kiện để biết thêm chi tiết</p>', 'car-racer-bac-speedster', '', 0, NULL, NULL),
-(3, 'en', 'Famosa Magic Fairy Quad Bike', '', '', 'famosa-magic-fairy-quad-bike', '', 0, NULL, NULL),
-(3, 'vi', 'Famosa Magic Fairy Quad Bike', '<p>Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h</p>', '<p>Trang chủ Giao hàng tận nơi chỉ phát. Giao hàng tận nơi hầu hết khách hàng tại Vương quốc Anh trong vòng 5 ngày làm việc. Xin lưu ý, chúng tôi chỉ có thể cung cấp mặt hàng này vào đất liền địa chỉ Vương quốc Anh. Sản phẩm này chỉ có sẵn để giao hàng cho đại lục Vương quốc Anh Không có Trả về phân minh ELC là hạnh phúc hoàn lại hoặc trao đổi bất kỳ hàng hóa không sử dụng trở lại trong vòng 28 ngày kể từ ngày mua khi sản xuất nhận của bạn, miễn là họ được trả về trong một điều kiện không sử dụng và trong bao bì gốc của họ. Xin vui lòng xem Điều khoản và Điều kiện để biết thêm chi tiết</p>', 'famosa-magic-fairy-quad-bike', '', 0, NULL, NULL),
-(4, 'en', 'Peppa Pig Standard Playhouse', '<p>Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h</p>', '<p>Delivery<br />Home delivery only. Delivery to most customers in the UK is within 5 working days. Please note, we can only deliver this item to mainland UK addresses.</p>\r\n<p>This product is only available for delivery to mainland UK</p>\r\n<p>No Quibble Returns<br />ELC are happy to refund or exchange any unused merchandise returned within 28 days of purchase upon production of your receipt, as long as they are returned in an unused condition and in their original packaging. Please see Terms and Conditions for details</p>', 'peppa-pig-standard-playhouse', 'Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h', 0, NULL, NULL),
-(4, 'vi', 'Peppa Pig Standard Playhouse', '<p>Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h</p>', '<p>Trang chủ Giao hàng tận nơi chỉ phát. Giao hàng tận nơi hầu hết khách hàng tại Vương quốc Anh trong vòng 5 ngày làm việc. Xin lưu ý, chúng tôi chỉ có thể cung cấp mặt hàng này vào đất liền địa chỉ Vương quốc Anh. Sản phẩm này chỉ có sẵn để giao hàng cho đại lục Vương quốc Anh Không có Trả về phân minh ELC là hạnh phúc hoàn lại hoặc trao đổi bất kỳ hàng hóa không sử dụng trở lại trong vòng 28 ngày kể từ ngày mua khi sản xuất nhận của bạn, miễn là họ được trả về trong một điều kiện không sử dụng và trong bao bì gốc của họ. Xin vui lòng xem Điều khoản và Điều kiện để biết thêm chi tiết</p>', 'peppa-pig-standard-playhouse', 'Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h', 0, NULL, NULL),
-(5, 'en', 'Maxi-Cosi CabrioFix Infant Carrier', '<p>Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h</p>', '<p>Delivery<br />Home delivery only. Delivery to most customers in the UK is within 5 working days. Please note, we can only deliver this item to mainland UK addresses.</p>\r\n<p>This product is only available for delivery to mainland UK</p>\r\n<p>No Quibble Returns<br />ELC are happy to refund or exchange any unused merchandise returned within 28 days of purchase upon production of your receipt, as long as they are returned in an unused condition and in their original packaging. Please see Terms and Conditions for details</p>', 'maxi-cosi-cabriofix-infant-carrier', 'Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h', 0, NULL, NULL),
-(5, 'vi', 'Maxi-Cosi CabrioFix Infant Carrier', '<p>Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h</p>', '<p>Trang chủ Giao hàng tận nơi chỉ phát. Giao hàng tận nơi hầu hết khách hàng tại Vương quốc Anh trong vòng 5 ngày làm việc. Xin lưu ý, chúng tôi chỉ có thể cung cấp mặt hàng này vào đất liền địa chỉ Vương quốc Anh. Sản phẩm này chỉ có sẵn để giao hàng cho đại lục Vương quốc Anh Không có Trả về phân minh ELC là hạnh phúc hoàn lại hoặc trao đổi bất kỳ hàng hóa không sử dụng trở lại trong vòng 28 ngày kể từ ngày mua khi sản xuất nhận của bạn, miễn là họ được trả về trong một điều kiện không sử dụng và trong bao bì gốc của họ. Xin vui lòng xem Điều khoản và Điều kiện để biết thêm chi tiết</p>', 'maxi-cosi-cabriofix-infant-carrier', 'Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h', 0, NULL, NULL),
-(6, 'en', 'Kids Toy Piano', '<p>Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h</p>', '<p>Delivery<br />Home delivery only. Delivery to most customers in the UK is within 5 working days. Please note, we can only deliver this item to mainland UK addresses.</p>\r\n<p>This product is only available for delivery to mainland UK</p>\r\n<p>No Quibble Returns<br />ELC are happy to refund or exchange any unused merchandise returned within 28 days of purchase upon production of your receipt, as long as they are returned in an unused condition and in their original packaging. Please see Terms and Conditions for details</p>', 'kids-toy-piano', 'Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h', 0, NULL, NULL),
-(6, 'vi', 'Kids Toy Piano', '<p>Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h</p>', '<p>Trang chủ Giao hàng tận nơi chỉ phát. Giao hàng tận nơi hầu hết khách hàng tại Vương quốc Anh trong vòng 5 ngày làm việc. Xin lưu ý, chúng tôi chỉ có thể cung cấp mặt hàng này vào đất liền địa chỉ Vương quốc Anh. Sản phẩm này chỉ có sẵn để giao hàng cho đại lục Vương quốc Anh Không có Trả về phân minh ELC là hạnh phúc hoàn lại hoặc trao đổi bất kỳ hàng hóa không sử dụng trở lại trong vòng 28 ngày kể từ ngày mua khi sản xuất nhận của bạn, miễn là họ được trả về trong một điều kiện không sử dụng và trong bao bì gốc của họ. Xin vui lòng xem Điều khoản và Điều kiện để biết thêm chi tiết</p>', 'kids-toy-piano', 'Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h', 0, NULL, NULL);
+(7, 'en', '', '', '', '', '', 0, NULL, NULL),
+(7, 'vi', 'Cửa sổ 2 cánh mở trong', '<p>Cửa sổ 2 cánh mở trong</p>', '<p>Cửa sổ 2 cánh mở trong</p>', 'cua-so-2-canh-mo-trong', 'Cửa sổ 2 cánh mở trong', 0, NULL, NULL),
+(8, 'en', '', '', '', '', '', 0, NULL, NULL),
+(8, 'vi', 'Cửa đi 2 cánh', '<p>Cửa đi 2 cánh</p>', '<p>Cửa đi 2 cánh</p>', 'cua-di-2-canh', '', 0, NULL, NULL),
+(9, 'en', '', '', '', '', '', 0, NULL, NULL),
+(9, 'vi', 'Cửa đi 2 cánh mở ngoài', '<p>Cửa đi 2 cánh mở ngoài</p>', '<p>Cửa đi 2 cánh mở ngoài</p>', 'cua-di-2-canh-mo-ngoai', '', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -916,22 +874,27 @@ CREATE TABLE IF NOT EXISTS `hoiit_positions` (
 --
 
 INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id`, `action_id`, `controller_id`, `hoiit_functions_function_value`) VALUES
-('left', 1, '1', 'products', NULL, NULL, 'menu_products'),
-('left', 2, '1', 'products', NULL, NULL, 'list_support'),
-('left', 3, '1', 'products', NULL, NULL, 'adv_left'),
-('right', 4, '1', 'products', NULL, NULL, 'adv_right'),
-('left', 1, '1', 'about', NULL, NULL, 'adv_left'),
-('right', 2, '1', 'about', NULL, NULL, 'counter'),
-('right', 3, '1', 'about', NULL, NULL, 'menu_about'),
-('left', 1, '1', 'news', NULL, NULL, 'menu_news'),
-('right', 2, '1', 'news', NULL, NULL, 'adv_right'),
-('left', 3, '1', 'news', NULL, NULL, 'adv_left'),
-('left', 1, '1', 'contact', NULL, NULL, 'list_support'),
 ('right', 1, '1', 'poll', NULL, NULL, 'adv_right'),
 ('left', 2, '1', 'poll', NULL, NULL, 'list_support'),
-('right', 1, '1', 'default', NULL, NULL, 'list_support'),
+('right', 1, '1', 'products', NULL, NULL, 'adv_right'),
+('right', 2, '1', 'products', NULL, NULL, 'list_support'),
+('right', 3, '1', 'products', NULL, NULL, 'counter'),
+('right', 1, '1', 'news', NULL, NULL, 'adv_right'),
+('right', 2, '1', 'news', NULL, NULL, 'list_support'),
+('right', 3, '1', 'news', NULL, NULL, 'counter'),
+('right', 1, '1', 'default', NULL, NULL, 'adv_left'),
 ('left', 2, '1', 'default', NULL, NULL, 'about_home'),
-('right', 3, '1', 'default', NULL, NULL, 'adv_right');
+('right', 3, '1', 'default', NULL, NULL, 'adv_right'),
+('right', 4, '1', 'default', NULL, NULL, 'list_support'),
+('right', 5, '1', 'default', NULL, NULL, 'counter'),
+('right', 1, '1', 'contact', NULL, NULL, 'adv_left'),
+('right', 2, '1', 'contact', NULL, NULL, 'adv_right'),
+('right', 3, '1', 'contact', NULL, NULL, 'list_support'),
+('right', 4, '1', 'contact', NULL, NULL, 'counter'),
+('right', 1, '1', 'about', NULL, NULL, 'adv_left'),
+('right', 2, '1', 'about', NULL, NULL, 'adv_right'),
+('right', 3, '1', 'about', NULL, NULL, 'list_support'),
+('right', 4, '1', 'about', NULL, NULL, 'counter');
 
 -- --------------------------------------------------------
 
@@ -1024,10 +987,10 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('san-pham/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'products/default/view', 'urlSuffix=>.html', 0, 0, 'products', 'vi'),
 ('san-pham/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'products/default/cats', '', 1, 0, 'products', 'vi'),
 ('tin-tuc', 'news/default/index', '', 4, 1, 'news', 'vi'),
-('tin-tuc/<cid:[-a-z0-9]+>', 'news/default/cats', '', 3, 0, 'news', 'vi'),
+('tin-tuc/<cid:[-a-z0-9]+>', 'news/default/cats', '', 2, 0, 'news', 'vi'),
 ('tin-tuc/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'news/default/view', 'urlSuffix=>.html', 0, 0, 'news', 'vi'),
-('tin-tuc/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'news/default/cats', '', 2, 0, 'news', 'vi'),
-('tin-tuc/trang/<page:\\d+>', 'news/default/index', '', 1, 0, 'news', 'vi'),
+('tin-tuc/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'news/default/cats', '', 1, 0, 'news', 'vi'),
+('tin-tuc/trang/<page:\\d+>', 'news/default/index', '', 3, 0, 'news', 'vi'),
 ('trang-chu', 'default/default/index', NULL, NULL, 1, 'default', 'vi');
 
 -- --------------------------------------------------------
