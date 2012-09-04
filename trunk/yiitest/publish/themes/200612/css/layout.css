@@ -1,0 +1,196 @@
+body {padding:24px 0 0 0; background:#fff url(../images/bkg_body.jpg) repeat-x;font:9pt arial, helvetica, sans-serif;}
+.left{float: left;}
+.right{float:right}
+.clear{clear: both;}
+a{text-decoration:none; color:#720E3B}
+a:hover{color:#000;}
+/*layout*/
+*{margin:0; padding:0}
+
+#wrapper {width:964px;margin:auto }
+
+/*Header*/
+#header{position:relative; padding:11px 0;background:url(../images/headerbg-1.gif) no-repeat}
+#logo{float:left;padding:0 0 0 25px;margin:0 40px 0 0;height:53px; overflow:hidden}
+
+/**  Ten cong ty     **/
+.title-company{padding:15px 0 0 0; font-size:18pt;color:#fff;font-weight:bold}
+
+.hder-bttom{background:url(../images/headerbg-btom.gif) no-repeat; height:26px;position:relative}
+.lang{position:absolute;top:5px;left:6px;text-align:right}
+.lang img{ margin:0 2px 0 10px; position:relative; top:1px}
+.lang a{ color:#fff;font-size:8pt}
+.lang a:hover{color:#16A7E9}
+.hot-line{position:absolute;right:15px;top:5px ;color:#fff;font-size:10pt;font-weight:bold}
+
+
+/**  Menu **/
+#nav{ list-style:none;background:url(../images/nav_bg.gif) repeat-x;height:41px;}
+#nav li{float:left;position:relative}
+#nav li a{padding:12px 15px;font-weight:bold; background:url(../images/spacer_nav.gif) no-repeat right; display:block; color:#fff;font-size:10pt}
+#nav li a:hover{color:#D5E6F0}
+/*#nav li:hover >a{color:#D5E6F0}
+#nav li ul{ display:none;background:#DAE8F3;border-left:1px solid #A3C5E1;border-right:1px solid #A3C5E1;border-top:1px solid #A3C5E1;}
+#nav li:hover ul{list-style:none; display:block; position:absolute; z-index:20000; top:40px; width:15em}
+#nav li ul li{width:100%;border-bottom:1px solid #A3C5E1}
+#nav li ul li a{font-weight:normal;color:#000;background:none; padding:8px 10px}
+#nav li ul li a:hover{ background:#0FA4E7; color:#fff}*/
+#nav .select{color:#D5E6F0}
+#nav .none-line a{background:none}
+
+/** Banner **/
+#banner{ margin:0 0 10px 0}
+
+/* Page Content*/
+#content{padding:10px 5px 5px 5px; background:#E2E9EF;border-left:1px solid #9EC2DF;border-right:1px solid #9EC2DF }
+
+/*Left content*/
+#leftcontent{float:left; width:220px}
+
+.mid-left{background:url(../images/block_midbg.gif) repeat-y }
+.bt-left-penal{background:url(../images/block_bottombg.gif) no-repeat; height:5px;margin:0 0 10px 0}
+.title-box ,.title-left{color:#fff; font-weight:bold; padding:10px 0;font-size:10pt; font-weight:bold; background:url(../images/block_topbg.gif) no-repeat}
+.title-left span{background:url(../images/bullet.gif) no-repeat 8px 1px; padding:0 0 0 25px; }
+
+.title-box{ background:url(../images/block_topbg2.gif) no-repeat}
+.title-box span{background:url(../images/bullet2.gif) no-repeat 8px 1px; padding:0 0 0 25px;}
+
+/*sub cat*/
+.sub-cat{list-style:none;padding:5px 10px 0 10px}
+.sub-cat li{padding:5px 0}
+.sub-cat li a{color:#1794D0;display:block;font-size:11px; *_display:inherit}
+.sub-cat li a:hover{ color:#444}
+.sub-cat li ul{padding:5px 0 2px 10px;list-style:none}
+.sub-cat li ul li{padding:2px 0;border:none}
+.sub-cat li ul li a{color:#333;background:url(../images/bullet4.gif) no-repeat left 4px;padding:0 0 0 10px; *_display:inherit} 
+.sub-cat li ul li a:hover{color:#16A7E9}
+
+/*Ho tro ky thuat*/
+.support{list-style:none;padding:10px 3px 5px 0;text-align:center}
+.support li {padding:2px 0;color:#444; line-height:1.5em;margin:0 0 8px 0}
+
+/*Thong ke truy cap*/
+.statistics{list-style:none;padding:10px 3px 5px 10px}
+.statistics li {color:#444444; line-height:1.75em;}
+
+/*bg-adv adv left*/
+.bg-adv{list-style:none;padding:5px 0 0 0;text-align:center}
+.bg-adv li{padding:0 0 3px 0}
+
+/*Right content*/
+#rightcontent{float:right; width:723px;}
+#rightcontent p{margin:0 0 10px 0}
+#rightcontent ul li, #rightcontent ol li{margin:4px 0 4px 40px}
+#rightcontent ul ,#rightcontent ol{margin: 0 0 12px 0}
+.top-tent-right{background:url(../images/bg-top-right.gif) no-repeat; height:4px}
+.bttom-tent-right{background:url(../images/bg-bttom-right.gif) no-repeat; height:4px;margin:0 0 10px 0}
+.frame-tent-right{background:#fff;border-left:1px solid #CACACA;border-right:1px solid #CACACA;padding:5px 8px}
+
+.title-right{  margin:0 0 10px 0; font-size:10pt;padding:0px 0px 0px 20px;color:#304D6B;font-size:17px;background:url(../images/bullet3.gif) no-repeat left 2px;  font-weight:bold;}
+
+.link{margin:0 0 10px 0;font-size:10pt}
+.link b{margin:0 4px;color:#34A8E2;position:relative;top:-1px}
+.link span{color:#000;font-weight:bold}
+.link a{ color:#34A8E2}
+.link a:hover{color:#000}
+
+/***** Product    *****/
+#rightcontent .all-product{margin:0 ;list-style:none }
+#rightcontent .product{width:165px;padding:0 0 5px 0;text-align:center;margin:0 9px 10px 0;display:inline-block; vertical-align:top;*float:left;*margin:0 10px 10px 0}
+.product-img{height:160px; width:165px;display:table-cell;vertical-align:middle;padding:0 0 7px 0}
+#rightcontent .price{color:#145486; font-weight:700; font-size:13px; margin:7px 0 10px 0}
+.title-pro a{color:#7C7C7C}
+.title-pro a:hover{color:#145486}
+.add-to-cart{padding: 5px 0 8px 5px; font-weight:700;background:url(../images/bkg_btn.png) no-repeat left top;*padding:0 0 0 5px;*height:25px}
+.add-to-cart span{background:url(../images/bkg_btn.png) no-repeat right top; padding:5px 15px 8px 10px; height:25px;color:#145486}
+
+/***    Page product-info     ****/
+.frame-pro-info{padding:10px 0}
+
+.row-info{margin: 0 0 15px 0}
+.right-info{float:right;width:405px}
+.tent-right-info{padding:0 10px}
+.title-info{margin:0 0 10px 0;color: #fff}
+.title-info span{background: #444444;padding:3px 10px}
+#rightcontent .price-info{color:#145486;margin:0 0 10px 0;font-size: 10pt}
+.price-info span{margin: 0 0 0 5px;color: #000}
+
+/** Form lien he  **/
+.title-contact{ background:#CCC195;margin:0 0 10px 0; padding:7px 2px 7px 10px; font-family:Tahoma, Geneva, sans-serif;font-weight:bold; color:#33220C}
+#frm{margin:0 0 10px 0;}
+.frame-contact label{color:#555;font-weight:700; margin:0 !important;width:150px; float:left}
+.frame-contact{list-style:none;margin:15px 0 10px 0}
+.frame-contact li{padding:4px 0; margin:0 !important}
+.frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.frame-contact textarea{border:1px solid #ddd;width: 350px; -moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-contact span{color:#f00;margin:0 5px 0 0}
+
+.frame-contact .bton-dk{margin:10px 0 5px 30px;background:#145486;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-contact .bton-dk{margin:10px 10px 5px 0}
+/****  End page contact   
+
+/*   Page New  */
+.masuring{list-style: none; text-align:justify;font-size:10pt;margin:0 0 20px 0}
+.masuring li{ margin:0 0 10px 0 !important}
+.frame-img{float:left;width:143px; margin:0 5px 0 0}
+.title-masuring{margin:0 0 5px 0}
+.title-masuring a{color:#666666}
+.title-masuring a:hover{color:#3CBEDA}
+
+/* paging */
+#rightcontent ul.paging{float: right; margin:0;padding:10px 0 2px 0; list-style: none;}
+ul.paging li{display: inline;margin:0 !important;}
+ul.paging .hidden{display: none;}
+ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{background:#3CBEDA;color:#fff;padding: 2px 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
+ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{color:#fff; background:#145486}
+
+/*Footer*/
+.footer-top{background:url(../images/footer_bg_top.gif) no-repeat; height:7px}
+.footer-bttom{background:url(../images/footer_bg_bttom.gif) no-repeat; height:7px;margin:0 0 10px 0}
+#footer{background:url(../images/footer_bg_mid.gif) repeat-y;padding:5px 10px 0 10px;color:#fff}
+#footer a:hover{text-decoration:underline}
+.fter-left{float:left; width:500px}
+.menu-fter {margin:0 0 10px 0; list-style:none}
+.menu-fter li{display:inline;padding:0 4px 0 0}
+.menu-fter li a{color:#fff;padding:0 8px 0 0; background:url(../images/bkg_pipe2.gif) no-repeat right}
+.menu-fter .none-line a{background:none;padding:0}
+.copyright {text-align:right;float:right; width:430px; *margin:10px 0 0 0;*_margin:0;}
+.copyright a{color:#fff; font-size:10pt}
+
+/* Error */
+.errorSummary{border: 1px solid #FA8C1E; padding:5px 0; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin:10px 0 5px 0}
+#rightcontent .errorSummary ul{margin:0 10px; padding:0}
+.errorSummary ul li{padding:2px 0; color: red}
+
+/*Add to cart*/
+.form_order{background:#fff;margin:0 0 15px 0;-webkit-border-radius:0 0 4px 6px;-moz-border-radius:0 0 6px 4px}
+.form_order thead{background:#34A8E2}
+.form_order thead tr td{font-weight:bold;padding :5px !important; color:#fff;font-size:10pt}
+
+.form_order tbody tr td{border : 1px solid #ddd;}
+.form_order tbody tr .pic-order{padding:5px 0}
+.form_order tbody tr input{border:1px solid #ccc}
+.form_order tbody tr td a{color:#444}
+.form_order tbody tr td a:hover{color:#3CBEDA}
+
+.btn_order{cursor:pointer; border:none;font-weight:bold;background:#2C2C2C;padding:5px 7px;color:#fff;-webkit-border-radius:4px;-moz-border-radius:4px;margin:0 10px 0 0}
+.btn_order:hover{color:#fff}
+
+.frm-cart label{width:100px}
+.notificaion{color:#2C2C2C;font-size:10pt;margin:0 0 10px 0}
+.note span{color:#f00}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
