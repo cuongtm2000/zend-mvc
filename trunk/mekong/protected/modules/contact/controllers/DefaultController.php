@@ -2,8 +2,7 @@
 
 class DefaultController extends Controller {
     public function actionIndex() {
-        $this->layout = '//layouts/column-2';
-
+	
         $model = new ContactUserForm();
         if (isset($_POST['ContactUserForm'])) {
             $model->attributes = $_POST['ContactUserForm'];
