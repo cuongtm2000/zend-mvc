@@ -5829,3 +5829,228 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
 ---
+2012/09/04 09:48:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/ajax-loader.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/ajax-loader.gif
+HTTP_REFERER=http://localhost/mekong/
+---
+2012/09/04 09:48:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
+---
+2012/09/04 09:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
+---
+2012/09/04 09:48:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/ajax-loader.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/ajax-loader.gif
+HTTP_REFERER=http://localhost/mekong/
+---
+2012/09/04 09:48:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
+---
+2012/09/04 09:48:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
+---
+2012/09/04 09:54:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/ajax-loader.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/ajax-loader.gif
+HTTP_REFERER=http://localhost/mekong/
+---
+2012/09/04 09:54:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
+---
+2012/09/04 09:54:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
+---
+2012/09/04 09:54:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/ajax-loader.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/ajax-loader.gif
+HTTP_REFERER=http://localhost/mekong/
+---
+2012/09/04 09:54:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
+---
+2012/09/04 09:54:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
+---
+2012/09/04 09:55:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/ajax-loader.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/ajax-loader.gif
+HTTP_REFERER=http://localhost/mekong/
+---
+2012/09/04 09:55:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
+---
+2012/09/04 09:55:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
+---
+2012/09/04 10:01:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/ajax-loader.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/ajax-loader.gif
+HTTP_REFERER=http://localhost/mekong/
+---
+2012/09/04 10:01:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
+---
+2012/09/04 10:01:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
+---
+2012/09/04 10:02:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/ajax-loader.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/ajax-loader.gif
+HTTP_REFERER=http://localhost/mekong/
+---
+2012/09/04 10:02:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
+---
+2012/09/04 10:02:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
+---
+2012/09/04 10:02:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/ajax-loader.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/ajax-loader.gif
+HTTP_REFERER=http://localhost/mekong/
+---
+2012/09/04 10:02:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
+---
+2012/09/04 10:02:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
+---
+2012/09/04 10:03:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/ajax-loader.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/ajax-loader.gif
+HTTP_REFERER=http://localhost/mekong/
+---
+2012/09/04 10:03:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
+---
+2012/09/04 10:03:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/mekong/images/favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/mekong/i...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mekong\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mekong/themes/mekong/images/favicon.ico
+---
