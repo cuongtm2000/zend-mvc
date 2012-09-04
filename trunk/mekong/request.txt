@@ -1,0 +1,5 @@
+Project: Mekongstartwindows.vn
+1. Sử dụng 2 ngôn ngữ: vi, en
+2. Module: Nhà máy, Dịch vụ, Tuyển dụng giống module about (Giới thiệu), chỉ khác cách trình bày
+	Module: Khách hàng: Giống như khách hàng trên website dos.vn/khach-hang
+			Bao gồm thông tin: TenKH, địa chỉ, hình nhỏ, hình lớn, website (nếu có), mô tả khách hàng (TEXT), tag (dùng cho seo)
