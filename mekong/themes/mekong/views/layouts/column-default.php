@@ -6,13 +6,13 @@
 		//'separator'=>' <img src="'.Yii::app()->theme->baseUrl.'/images/bull.jpg" alt="Bull" title="Bull" />',
 	)); ?>
 	
-	<div id="rightcontent">
+	<div id="right-content">
 		<?php $this->getPosition('left');?>
 		<?php //$this->getPosition('center');?>
 		<?php echo $content; ?>
 	</div>
 	
-	<div id="leftcontent">
+	<div id="left-content">
 		<?php $this->getPosition('right');?>
 	</div>
 <?php $this->endContent(); ?>
