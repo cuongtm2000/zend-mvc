@@ -201,10 +201,10 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .line-menu-footer{border-top:1px solid #DFDFDF;border-bottom:1px solid #DFDFDF;padding:10px 0;margin-bottom:15px}
 .panel-footer{position:relative}
 #top-link{position:absolute; top:0; right:0}
-.menu-footer {list-style:none}
-.menu-footer li{display:inline;margin-right:10px}
-.menu-footer li a{padding-right:14px;color:#313030;text-transform:uppercase;font-size:10pt;background:url(../images/nav-footer-line.png) no-repeat right}
-.menu-footer li a:hover{color:#073C86} .menu-footer .none-line a{background:none }
+#menu-footer {list-style:none}
+#menu-footer li{display:inline;margin-right:10px}
+#menu-footer li a{padding-right:14px;color:#313030;text-transform:uppercase;font-size:10pt;background:url(../images/nav-footer-line.png) no-repeat right}
+#menu-footer li a:hover{color:#073C86} #menu-footer .none-line a{background:none }
 
 /**  page-footer and copyright **/
 .page-footer{background:url(../images/footer-line.png) repeat-y 300px;padding-bottom:15px;line-height:1.4em;font-size:10pt;color:#1e1d1d;margin-bottom:10px}

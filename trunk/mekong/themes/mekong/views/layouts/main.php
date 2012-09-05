@@ -197,7 +197,8 @@
 </div>
 <div class="line-menu-footer">
 	<div class="page-main panel-footer">
-        <ul class="menu-footer">
+		<?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel', array('id' => 'menu-footer', 'lastItemCssClass' => 'none-line'));?>
+        <!--<ul class="menu-footer">
             <li><a href="" title="" class="select">Trang chủ</a></li>
             <li><a href="" title="">Giới thiệu</a></li>
             <li><a href="" title="">Nhà máy</a></li>
@@ -207,7 +208,7 @@
             <li><a href="" title="">Dịch vụ</a></li>
             <li><a href="" title="">Tuyển dụng</a></li>
             <li class="none-line"><a href="" title="">Liên hệ</a></li>
-        </ul>
+        </ul>-->
         <a href="" id="top-link" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/top-page.png" alt="top page" /></a>
     </div>
 </div><!--End Footer-->
