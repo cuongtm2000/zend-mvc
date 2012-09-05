@@ -1,0 +1,20 @@
+1. Hình dùng cho Ngôn ngữ phải cùng định dang: gif hay png
+2. Khi copy module vẫn phải đổi tên file rất nhiều
+3. About.php dòng 128, 107
+
+
+	    public function listItem() {
+        $command = Yii::app()->db->createCommand('SELECT title, tag FROM ' . $this->tableName() . ', hoiit_module_about_languages WHERE ' . $this->tableName() . '.record_id = hoiit_module_about_languages.record_id AND language_id =\'' . Yii::app()->language . '\' AND hot = 0 AND enable = 1 ORDER BY record_order DESC, created DESC');
+        return $command->queryAll();
+    }
+	
+	query chưa tối ưu
+	
+4. Trong view van con ten module: about_home,  menu_about
+
+5.  class DefaultController extends Controller {
+ 
+     public function actionIndex() {
+         $this->render('index', array('item' => About::model()->firstRecord()));
+     }
+ 
