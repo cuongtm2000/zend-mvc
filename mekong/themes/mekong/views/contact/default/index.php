@@ -6,7 +6,7 @@
         <h4 class="title-right"><span>Contact success</span></h4>
         <p><?php echo Yii::app()->user->getFlash('contactSuccess'); ?></p>
     <?php else: ?>
-        <h4 class="title-right"><span><?php echo ($item) ? $item['title' . LANG] : $this->lang[$this->module->id] ?></span></h4>
+        <h4 class="title-right"><span><?php echo ($item) ? $item['title'] : $this->lang[$this->module->id] ?></span></h4>
         <div class="frame-tent-right"><?php echo $item['content']?>
             <?php $form = $this->beginWidget('CActiveForm', array('id'=>'frm', 'enableAjaxValidation'=>true, 'enableClientValidation' =>true));?>
                 <?php echo $form->errorSummary($model, ''); ?>
