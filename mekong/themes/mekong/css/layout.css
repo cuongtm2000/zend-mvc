@@ -53,10 +53,10 @@ a:hover{color:#000;}
 
 /*sub cat*/
 .sub-cat{padding:0 5px 10px 17px;list-style:none}
-.sub-cat li{padding:4px 0}
+.sub-cat li{padding:4px 0;list-style:disc;margin-left:18px}
 .sub-cat li a{color:#073D88;display:block;font-size:10pt;}
 .sub-cat li a:hover{color:#f00}
-.sub-cat li ul{padding:5px 0 0 15px;list-style:none}
+.sub-cat li ul{padding:5px 0 0 0;list-style:none}
 .sub-cat li ul li{padding:2px 0 0 0;list-style:square;margin-left:20px;color:#0083D2}
 .sub-cat li ul li a{color:#0083D2;margin-left:-6px} 
 
