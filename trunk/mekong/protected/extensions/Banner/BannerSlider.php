@@ -32,7 +32,6 @@ class BannerSlider extends CWidget {
         $cs->registerCssFile($this->baseUrl . '/advanced-slider-base.css');
         $cs->registerScriptFile($this->baseUrl . '/jquery.advancedSlider.min.js');
         $cs->registerScriptFile($this->baseUrl . '/excanvas.compiled-ie.js');
-        $cs->registerScriptFile($this->baseUrl . '/jquery.sider.banner-ie.js');
         $cs->registerScriptFile($this->baseUrl . '/jquery.sider.banner.js');
         $cs->registerScript('config', "$(document).ready(function(){runbanner(".Config::getValue('banner_width').",".Config::getValue('banner_height').");});", CClientScript::POS_HEAD);
     }
