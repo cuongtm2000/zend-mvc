@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 05, 2012 at 04:33 AM
+-- Generation Time: Sep 05, 2012 at 04:58 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -50,8 +50,8 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('adv_right_width', '222', NULL, 'adv'),
 ('adv_top_height', '222', NULL, 'adv'),
 ('adv_top_width', '222', NULL, 'adv'),
-('banner_height', '275', NULL, 'banner'),
-('banner_width', '520', NULL, 'banner'),
+('banner_height', '220', NULL, 'banner'),
+('banner_width', '950', NULL, 'banner'),
 ('contact_email_received', 'thanhansoft@gmail.com', NULL, 'contact'),
 ('contact_host', 'smtp.gmail.com', NULL, 'contact'),
 ('contact_password', 'assas', NULL, 'contact'),
@@ -68,14 +68,14 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('news_num_item_index', '3', NULL, 'news'),
 ('news_num_item_new', '7', NULL, 'news'),
 ('news_width_thumb', '200', NULL, 'news'),
-('products_cat_height_thumb', '200', NULL, 'products'),
-('products_cat_width_thumb', '200', NULL, 'products'),
+('products_cat_height_thumb', '140', NULL, 'products'),
+('products_cat_width_thumb', '180', NULL, 'products'),
 ('products_height_desc', '700', NULL, 'products'),
 ('products_height_full', '700', NULL, 'products'),
-('products_height_thumb', '220', NULL, 'products'),
+('products_height_thumb', '140', NULL, 'products'),
 ('products_width_desc', '520', NULL, 'products'),
 ('products_width_full', '520', NULL, 'products'),
-('products_width_thumb', '220', NULL, 'products');
+('products_width_thumb', '180', NULL, 'products');
 
 -- --------------------------------------------------------
 
@@ -369,14 +369,15 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_banners` (
   `module_id` varchar(30) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`banner_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=59 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=60 ;
 
 --
 -- Dumping data for table `hoiit_module_banners`
 --
 
 INSERT INTO `hoiit_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_picture`, `banner_link`, `banner_order`, `banner_type`, `banner_click`, `module_id`, `enable`) VALUES
-(58, '2012-08-07 09:42:19', '', NULL, NULL, NULL, 'logo', 0, NULL, 1);
+(58, '2012-08-07 09:42:19', '', NULL, NULL, NULL, 'logo', 0, NULL, 1),
+(59, '2012-09-05 02:53:36', 'Banner', 'banner-1.jpg', '', 1, 'banner', 0, 'default', 1);
 
 -- --------------------------------------------------------
 
@@ -726,7 +727,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1346812337);
+('''127.0.0.1''', 1346813633);
 
 -- --------------------------------------------------------
 
@@ -813,7 +814,7 @@ INSERT INTO `hoiit_module_products` (`record_id`, `postdate`, `pic_thumb`, `pic_
 (3, '2012-07-31 04:54:43', 'famosa-magic-fairy-quad-bike-thumb.jpg', 'famosa-magic-fairy-quad-bike.jpg', NULL, 3, '250000', 0, NULL, NULL, NULL, NULL, NULL, 1, 5),
 (4, '2012-08-08 02:58:58', 'peppa-pig-standard-playhouse-thumb.jpg', 'peppa-pig-standard-playhouse.jpg', NULL, 4, '110000', 0, NULL, NULL, NULL, NULL, NULL, 1, 7),
 (5, '2012-08-08 03:00:43', 'maxi-cosi-cabriofix-infant-carrier-thumb.jpg', 'maxi-cosi-cabriofix-infant-carrier.jpg', NULL, 5, '145000', 0, NULL, NULL, NULL, NULL, NULL, 1, 5),
-(6, '2012-08-08 03:02:20', 'kids-toy-piano-thumb.jpg', 'kids-toy-piano.jpg', NULL, 6, '98000', 0, NULL, NULL, NULL, NULL, NULL, 1, 5);
+(6, '2012-08-08 03:02:20', 'kids-toy-piano-thumb.jpg', 'kids-toy-piano.jpg', NULL, 6, '98 000 VNĐ', 0, NULL, NULL, NULL, NULL, NULL, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -1032,10 +1033,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_positions` (
 --
 
 INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id`, `action_id`, `controller_id`, `hoiit_functions_function_value`) VALUES
-('left', 1, '1', 'products', NULL, NULL, 'menu_products'),
-('left', 2, '1', 'products', NULL, NULL, 'list_support'),
-('left', 3, '1', 'products', NULL, NULL, 'adv_left'),
-('right', 4, '1', 'products', NULL, NULL, 'adv_right'),
 ('right', 1, '1', 'poll', NULL, NULL, 'adv_right'),
 ('left', 2, '1', 'poll', NULL, NULL, 'list_support'),
 ('right', 1, '1', 'factory', NULL, NULL, 'adv_left'),
@@ -1058,7 +1055,11 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('right', 3, '1', 'default', NULL, NULL, 'adv_left'),
 ('right', 4, '1', 'default', NULL, NULL, 'adv_right'),
 ('right', 5, '1', 'default', NULL, NULL, 'list_support'),
-('right', 6, '1', 'default', NULL, NULL, 'counter');
+('right', 6, '1', 'default', NULL, NULL, 'counter'),
+('right', 1, '1', 'products', NULL, NULL, 'menu_products'),
+('right', 2, '1', 'products', NULL, NULL, 'list_support'),
+('right', 3, '1', 'products', NULL, NULL, 'adv_left'),
+('right', 4, '1', 'products', NULL, NULL, 'adv_right');
 
 -- --------------------------------------------------------
 
