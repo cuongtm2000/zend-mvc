@@ -56,11 +56,14 @@ a:hover{color:#000;}
 .sub-cat li{padding:4px 0}
 .sub-cat li a{color:#073D88;display:block;font-size:10pt;}
 .sub-cat li a:hover{color:#f00}
-.sub-cat li ul{padding:5px 0 0 10px;list-style:none}
-.sub-cat li ul li{padding:2px 0 0 0;list-style:square;margin-left:20px;color:#4CB2E2}
-.sub-cat li ul li a{color:#4CB2E2;margin-left:-6px} 
-.sub-cat li ul li:hover{color:#f00}
+.sub-cat li ul{padding:5px 0 0 15px;list-style:none}
+.sub-cat li ul li{padding:2px 0 0 0;list-style:square;margin-left:20px;color:#0083D2}
+.sub-cat li ul li a{color:#0083D2;margin-left:-6px} 
 
+
+.sub-cat li ul li ul{padding:4px 5px 5px 10px}
+.sub-cat li ul li ul li{margin-left:10px;color:#4CB2E2}
+.sub-cat li ul li ul li a{color:#4CB2E2}
 /*Ho tro ky thuat*/
 .support{list-style:none;padding:10px 0 0 0;text-align:center}
 .support li {color:#444; line-height:1.5em}
@@ -103,11 +106,16 @@ a:hover{color:#000;}
 #right-content .price{font-size:14px; font-weight:bold; color:#0b51b5;margin-top:5px}
 .title-product a{color:#ff0000;font-size:16px} .title-product{font-weight:normal}
 .title-product a:hover{color:#073C86}
+#right-content .bton-cart{margin:10px 0 5px 0}
+.add-to-cart{padding: 5px 0 8px 5px; font-weight:700;background:url(../images/bkg_btn.png) no-repeat left top}
+.add-to-cart span{background:url(../images/bkg_btn.png) no-repeat right top; padding:5px 15px 8px 10px; height:25px;color:#fff}
+
 
 /***    Page product-info     ****/
-.frame-pro-info{padding:0 10px}
+.frame-pro-info{margin-bottom:20px}
+.frame-pro-info p{line-height:1.55em;font-size:10pt}
 .row-info{margin: 0 0 15px 0}
-.right-info{float:right;width:400px}
+.right-info{float:right;width:314px}
 .tent-right-info{padding:0 10px}
 .title-info{margin:0 0 10px 0;color: #fff;font-size:9pt}
 .title-info span{background: #444444;padding:3px 10px}
