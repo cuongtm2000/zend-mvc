@@ -81,7 +81,7 @@ a:hover{color:#000;}
 #right-content ul ,#right-content ol{margin: 0 0 12px 0}
 
 /**  frame-tent-right  **/
-.frame-tent-right{padding:5px 0}
+.frame-tent-right{padding:5px 0;text-align:justify}
 .frame-tent-right p{line-height:1.6em}
 
 /**  panel-about  **/
