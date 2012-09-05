@@ -42,7 +42,7 @@ a:hover{color:#000;}
 #content{background:url(../images/content-bg.png) no-repeat center top;padding:10px 14px}
 
 /*Left content*/
-#leftcontent{float:right; width:311px}
+#left-content{float:right; width:311px}
 .frame-leftcontent{background:url(../images/panel-right-bg.png) no-repeat top;padding-top:8px;margin-bottom:12px}
 
 .title-project ,.title-left ,.title-right{font-size:10pt;color:#ff0000;text-transform:uppercase;margin-bottom:10px} 
@@ -52,13 +52,14 @@ a:hover{color:#000;}
 .video_hot{text-align:center;padding-top:10px}
 
 /*sub cat*/
-.sub-cat{list-style:none;padding:0 5px 0 15px}
+.sub-cat{padding:0 5px 10px 17px;list-style:none}
 .sub-cat li{padding:4px 0}
-.sub-cat li a{color:#676767;display:block}
-.sub-cat li a:hover{color:#D13272}
-.sub-cat li ul{padding:3px 0 0 10px;list-style:none}
-.sub-cat li ul li{padding:2px 0 0 0}
-.sub-cat li ul li a{color:#333;background:url(../images/cat_bullet.gif) no-repeat left 4px;padding:0 0 0 10px;font-weight:normal} 
+.sub-cat li a{color:#073D88;display:block;font-size:10pt;}
+.sub-cat li a:hover{color:#f00}
+.sub-cat li ul{padding:5px 0 0 10px;list-style:none}
+.sub-cat li ul li{padding:2px 0 0 0;list-style:square;margin-left:20px;color:#4CB2E2}
+.sub-cat li ul li a{color:#4CB2E2;margin-left:-6px} 
+.sub-cat li ul li:hover{color:#f00}
 
 /*Ho tro ky thuat*/
 .support{list-style:none;padding:10px 0 0 0;text-align:center}
@@ -74,13 +75,13 @@ a:hover{color:#000;}
 .bg-adv li{padding:0 0 3px 0}
 
 /*Right content*/
-#rightcontent{float:left; width:625px}
-#rightcontent p{margin:0 0 10px 0}
-#rightcontent ul li, #right-content ol li{margin:4px 0 4px 40px}
-#rightcontent ul ,#right-content ol{margin: 0 0 12px 0}
+#right-content{float:left; width:625px}
+#right-content p{margin:0 0 10px 0}
+#right-content ul li, #right-content ol li{margin:4px 0 4px 40px}
+#right-content ul ,#right-content ol{margin: 0 0 12px 0}
 
 /**  frame-tent-right  **/
-.frame-tent-right{padding:0 5px 5px 5px}
+.frame-tent-right{padding:5px 0}
 .frame-tent-right p{line-height:1.6em}
 
 /**  panel-about  **/
@@ -89,18 +90,17 @@ a:hover{color:#000;}
 .panel-about-right{float:right;width:290px}
 
 /**  breadcrumbs  **/
-.breadcrumbs{color:#444;padding:0 10px;margin-bottom:10px }
-.breadcrumbs b{padding:0 5px;position:relative;top:-1px}
-.breadcrumbs span{font-weight:bold}
-.breadcrumbs a{color:#7F7F7F}
-.breadcrumbs a:hover{text-decoration:underline}
+.breadcrumbs{color:#0B51B5;margin-bottom:15px }
+.breadcrumbs b{padding:0 6px;position:relative;top:-2px}
+.breadcrumbs a{color:#073D88}
+.breadcrumbs a:hover{color:#ED1F24}
 
 /**  product **/
-#rightcontent .all-product{margin:0;padding:5px 0 0 0; list-style:none}
-#rightcontent .all-product .product{width:200px;text-align:center;margin:0 0 15px 5px;display:inline-block;vertical-align:top}
+#right-content .all-product{margin:0;padding:5px 0 0 0; list-style:none}
+#right-content .all-product .product{width:200px;text-align:center;margin:0 0 15px 5px;display:inline-block;vertical-align:top}
 .product-img{width:200px; height:140px;display:table-cell;vertical-align:middle;border-bottom:1px solid #FDD7E4;border:2px solid #EDECEC;padding:5px 0;border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0}
 .line-bottom-product{background:url(../images/pro-line-footer.png) no-repeat; height:6px;margin-bottom:2px}
-#rightcontent .price{font-size:14px; font-weight:bold; color:#0b51b5;margin-top:5px}
+#right-content .price{font-size:14px; font-weight:bold; color:#0b51b5;margin-top:5px}
 .title-product a{color:#ff0000;font-size:16px} .title-product{font-weight:normal}
 .title-product a:hover{color:#073C86}
 
@@ -137,9 +137,8 @@ tbody tr td{padding : 6px 5px;color : #111}
 .profile-date{width:80px; text-align:center}
 .working{width:100px; text-align:center}
 
-
 /*   Page New  */
-#rightcontent .panel-items{list-style: none; text-align:justify;font-size:10pt;margin:0 0 20px 0}
+#right-content .panel-items{list-style: none; text-align:justify;font-size:10pt;margin:0 0 20px 0}
 .panel-items li{ margin:0 0 5px 0 !important;border-bottom:1px solid #EAEAEA;padding-bottom:5px}
 .frame-img{float:left;margin:0 8px 0 0}
 .title-items-news{margin:0 0 5px 0;font-size:10pt}
@@ -147,19 +146,19 @@ tbody tr td{padding : 6px 5px;color : #111}
 .title-items-news a:hover{color:#FF0000}
 
 /*** panel-items-related  tin tuc dau tien page index***/
-#rightcontent .panel-items-related li{color:#000;margin:4px 0 4px 30px}
+#right-content .panel-items-related li{color:#000;margin:4px 0 4px 30px}
 .panel-items-related a{color:#000;font-weight:bold;display:block}
 .panel-items-related li:hover{color:#73BFD3}
 .panel-items-related a:hover{color:#73BFD3}
 
 /**  panel-items-other tin tuc lien quan **/
 .title-item-other{color:#0084D5;margin:20px 0 10px;font-size:11pt}
-#rightcontent .panel-items-other li{list-style:none; color:#0D2364;margin-left:10px}
+#right-content .panel-items-other li{list-style:none; color:#0D2364;margin-left:10px}
 .panel-items-other li a{color:#0084D5;display:block;padding:3px 0; background:url(../images/iconnew.gif) no-repeat left 4px;padding-left:17px}
 .panel-items-other li a:hover{color:#f90}
 
 /* paging */
-#rightcontent  ul.paging{margin-top:15px;padding-right:5px;list-style: none;float:right}
+#right-content  ul.paging{margin-top:15px;padding-right:5px;list-style: none;float:right}
 ul.paging li{display: inline;margin:0 !important;}
 ul.paging .hidden{display: none;}
 ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{color:#fff;background:#0C56BE;padding:2px 6px;border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px}
