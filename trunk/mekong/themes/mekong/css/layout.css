@@ -68,7 +68,7 @@ a:hover{color:#000;}
 .support{list-style:none;padding:10px 0 0 0;text-align:center}
 .support li {color:#444; line-height:1.5em}
 .support li img{margin-bottom:8px}
-
+.support .hot-line{margin:0}
 /*Thong ke truy cap*/
 .statistics{list-style:none;padding:0 3px 0 15px}
 .statistics li {color:#444;padding:0 0 4px 0}
