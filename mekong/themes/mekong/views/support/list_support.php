@@ -11,7 +11,7 @@
 <div class="frame-leftcontent">	
 	<h4 class="title-left"><span><?php echo $this->lang['support'] ?></span></h4>
 	<ul class="support">
-		<li><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/hot-line.png" alt="hot-line" /></li>
+		<li><img class="hot-line" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/hot-line.png" alt="hot-line" /></li>
 	   <?php foreach($list_support as $key => $value): ?>
 			<?php if($value['support_type']=='yahoo'): ?>
 				<li>
