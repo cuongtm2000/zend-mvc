@@ -172,6 +172,19 @@ ul.paging .hidden{display: none;}
 ul.paging .page a, ul.paging .previous a, ul.paging .first a, ul.paging .next a, ul.paging .last a{color:#fff;background:#0C56BE;padding:2px 6px;border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px}
 ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, ul.paging .next a:hover, ul.paging .last a:hover, ul.paging .selected a{background:#073C86}
 
+/** customers khach hang **/
+#right-content .customers{list-style:none}
+#right-content .customers li{margin:0 0 20px 10px;text-align:center;width:140px;display:inline-block;vertical-align:top}
+.customers-img{margin:0 0 5px 0;padding:0 0 5px 0}
+.customers-img img{border:1px solid #e1e1e1;width:140px}
+.customers .customers-img:hover{opacity:0.7}
+.title-tomers {font-size:9pt;font-weight:normal}
+.customers li:hover .title-tomers a{color:#0076BC}
+.title-tomers a{color:#000;display:block} .title-tomers a:hover{color:#0076BC}
+
+.customer-img-info{text-align:center} 
+.customer-img-info h2{font-size:10pt;margin:15px 0 7px 0}
+
 /** Form lien he  **/
 #frm{margin:0 0 10px 0;}
 .frame-contact label{color:#000;margin:0;font-weight:bold; width:130px; float:left}
