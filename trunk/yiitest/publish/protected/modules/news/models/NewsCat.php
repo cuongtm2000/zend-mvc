@@ -302,6 +302,42 @@ class NewsCat extends CActiveRecord {
 		return $this->_model;
 	}
 
+	//Back end - Get cat_parent_id, cat_order
+	public function getCatParent_CatOrder($cid) {
+		$command = Yii::app()->db->createCommand('SELECT cat_parent_id, cat_order FROM ' . $this->tableName() . ' WHERE cat_id=:cid');
+		$command->bindParam(":cid", $cid, PDO::PARAM_INT);
+		return $command->queryRow();
+	}
+
+	// Back end - Get cat_id, cat_order Next
+	public function getCatid_CatOrder_Next($cid, $order) {
+		$command = Yii::app()->db->createCommand('SELECT cat_id, cat_order FROM ' . $this->tableName() . ' WHERE cat_parent_id=:cid AND cat_order>:order ORDER BY cat_order ASC');
+		$command->bindParam(":cid", $cid, PDO::PARAM_INT);
+		$command->bindParam(":order", $order, PDO::PARAM_INT);
+		return $command->queryRow();
+	}
+
+	// Back end - Get cat_id, cat_order Previous
+	public function getCatid_CatOrder_Previous($cid, $order) {
+		$command = Yii::app()->db->createCommand('SELECT cat_id, cat_order FROM ' . $this->tableName() . ' WHERE cat_parent_id=:cid AND cat_order<:order ORDER BY cat_order DESC');
+		$command->bindParam(":cid", $cid, PDO::PARAM_INT);
+		$command->bindParam(":order", $order, PDO::PARAM_INT);
+		return $command->queryRow();
+	}
+
+	// Back end - Update for up, down
+	public function updateUpDown($cat_info, $next_info, $cid) {
+		$command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET cat_order=:order WHERE cat_id=:id');
+		$command->bindParam(":order", $next_info['cat_order'], PDO::PARAM_INT);
+		$command->bindParam(":id", $cid, PDO::PARAM_INT);
+		$command->execute();
+
+		$command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET cat_order=:order WHERE cat_id=:id');
+		$command->bindParam(":order", $cat_info['cat_order'], PDO::PARAM_INT);
+		$command->bindParam(":id", $next_info['cat_id'], PDO::PARAM_INT);
+		$command->execute();
+	}	
+	
 	//Back end - Get info cat
 	public function getInfoCat($id) {
 		$command = Yii::app()->db->createCommand('SELECT cat_title FROM ' . $this->tableName() . ' WHERE cat_id=:id');
