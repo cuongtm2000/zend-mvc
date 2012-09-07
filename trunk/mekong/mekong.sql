@@ -190,6 +190,8 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('poll', 'Bình chọn', 0, 'vi'),
 ('products', 'Products', 0, 'en'),
 ('products', 'Sản phẩm', 0, 'vi'),
+('service', 'Service', 0, 'en'),
+('service', 'Dịch vụ', 0, 'vi'),
 ('show', 'Show', 1, 'en'),
 ('show', 'Hiển thị', 1, 'vi'),
 ('sort', 'Sort', 1, 'en'),
@@ -253,6 +255,7 @@ INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_url`, `module_
 ('default', 'Default', NULL, 1, 1, 1),
 ('factory', 'Danh sách|Cấu hình Url', 'factory|factory/url', 2, 1, 1),
 ('news', 'Danh mục|Danh sách|Cấu hình|Cấu hình Url', 'news/cat|news|news/config|news/url', 4, 1, 1),
+('service', 'Danh sách|Cấu hình Url', 'service|service/url', 2, 1, 1),
 ('poll', 'Danh sách|Cấu hình Url', 'poll|poll/url', 7, 1, 1),
 ('products', 'Danh mục|Danh sách|Cấu hình|Cấu hình Url', 'products/cat|products|products/config|products/url', 3, 1, 1),
 ('support', 'Danh sách', 'support', 6, 1, 0);
@@ -497,7 +500,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus` (
   `menu_homepage` tinyint(1) NOT NULL DEFAULT '0',
   `menu_activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=34 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=35 ;
 
 --
 -- Dumping data for table `hoiit_module_menus`
@@ -509,7 +512,8 @@ INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_type`, `menu_tar
 (29, 0, 1, '', 5, 0, 1),
 (31, 0, 1, '', 32, 0, 1),
 (32, 0, 1, '', 33, 0, 1),
-(33, 0, 1, '', 3, 0, 1);
+(33, 0, 1, '', 3, 0, 1),
+(34, 0, 1, '', 33, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -544,7 +548,9 @@ INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name
 (32, 'en', 'Contact', 'contact', ''),
 (32, 'vi', 'Liên hệ', 'lien-he', ''),
 (33, 'en', 'Factory', 'factory', ''),
-(33, 'vi', 'Nhà máy', 'nha-may', '');
+(33, 'vi', 'Nhà máy', 'nha-may', ''),
+(34, 'en', 'Service', 'service', ''),
+(34, 'vi', 'Dịch vụ', 'dich-vu', '');
 
 -- --------------------------------------------------------
 
@@ -1158,6 +1164,8 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('tin-tuc/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'news/default/view', 'urlSuffix=>.html', 0, 0, 'news', 'vi'),
 ('tin-tuc/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'news/default/cats', '', 2, 0, 'news', 'vi'),
 ('tin-tuc/trang/<page:\\d+>', 'news/default/index', '', 1, 0, 'news', 'vi'),
+('dich-vu', 'service/default/index', '', 2, 1, 'service', 'vi'),
+('service', 'service/default/index', '', 2, 1, 'service', 'en'),
 ('trang-chu', 'default/default/index', NULL, NULL, 1, 'default', 'vi');
 
 -- --------------------------------------------------------
