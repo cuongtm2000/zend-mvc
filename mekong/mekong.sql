@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.0
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 07, 2012 at 04:18 AM
--- Server version: 5.5.8
--- PHP Version: 5.3.5
+-- Generation Time: Sep 07, 2012 at 04:25 AM
+-- Server version: 5.5.16
+-- PHP Version: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -50,8 +50,8 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('adv_right_width', '222', NULL, 'adv'),
 ('adv_top_height', '222', NULL, 'adv'),
 ('adv_top_width', '222', NULL, 'adv'),
-('banner_height', '220', NULL, 'banner'),
-('banner_width', '950', NULL, 'banner'),
+('banner_height', '300', NULL, 'banner'),
+('banner_width', '830', NULL, 'banner'),
 ('contact_email_received', 'thanhansoft@gmail.com', NULL, 'contact'),
 ('contact_host', 'smtp.gmail.com', NULL, 'contact'),
 ('contact_password', 'assas', NULL, 'contact'),
@@ -109,7 +109,8 @@ INSERT INTO `hoiit_functions` (`function_value`, `function_name`, `function_clas
 ('news_hot', 'News', '', 'listItemsHot', 'news'),
 ('news_list_first', 'News', '', 'ListFirst', 'news'),
 ('news_new', 'News', '', 'listItemsNew', 'news'),
-('new_poll', 'Poll', '', 'getFirstItem', 'poll');
+('new_poll', 'Poll', '', 'getFirstItem', 'poll'),
+('products_new', 'Products', '', 'listItemsNew', 'products');
 
 -- --------------------------------------------------------
 
@@ -181,6 +182,8 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('factory', 'Nhà máy', 0, 'vi'),
 ('hidden', 'Hidden', 1, 'en'),
 ('hidden', 'Ẩn', 1, 'vi'),
+('new', 'new', 0, 'en'),
+('new', 'mới', 0, 'vi'),
 ('news', 'News', 0, 'en'),
 ('news', 'Tin tức & sự kiện', 0, 'vi'),
 ('no_record', 'Không tồn tại mẫu tin', 0, 'vi'),
@@ -375,7 +378,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_banners` (
   `module_id` varchar(30) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`banner_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=60 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=62 ;
 
 --
 -- Dumping data for table `hoiit_module_banners`
@@ -383,7 +386,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_banners` (
 
 INSERT INTO `hoiit_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_picture`, `banner_link`, `banner_order`, `banner_type`, `banner_click`, `module_id`, `enable`) VALUES
 (58, '2012-08-07 09:42:19', '', NULL, NULL, NULL, 'logo', 0, NULL, 1),
-(59, '2012-09-05 02:53:36', 'Banner', 'banner-1.jpg', '', 1, 'banner', 0, 'default', 1);
+(59, '2012-09-05 02:53:36', 'Banner', 'banner-6.jpg', '', 1, 'banner', 0, 'default', 1),
+(60, '2012-09-07 02:00:52', 'banner2', 'banner2-9.jpg', '', 2, 'banner', 0, 'default', 1),
+(61, '2012-09-07 02:00:59', 'banner3', 'banner3-8.jpg', '', 3, 'banner', 0, 'default', 1);
 
 -- --------------------------------------------------------
 
@@ -739,7 +744,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1346982786);
+('''127.0.0.1''', 1346984503);
 
 -- --------------------------------------------------------
 
@@ -997,7 +1002,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_recruitment_languages` (
 
 INSERT INTO `hoiit_module_recruitment_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
 (56, 'en', 'Factory', '<p>sadflhashd''kfl</p>\r\n<p>dshf</p>\r\n<ul><li>shkd</li>\r\n<li>hfhk</li>\r\n<li>ádhf</li>\r\n<li>dshfhasdhf</li>\r\n<li>shk</li>\r\n</ul><p>adhf</p>\r\n<ol><li>sdfHladsfds</li>\r\n<li>hfhds</li>\r\n<li>hf</li>\r\n<li>shad</li>\r\n<li>fh</li>\r\n</ol><p>sad</p>', 'factory', '', 1, NULL, NULL),
-(56, 'vi', 'Nhà máy', '<p>ssafgdfgh/hdsf/gh/dfshgdsfhg<br />H</p>\r\n<p>gh</p>\r\n<ol><li>dfh</li>\r\n<li>gdsfh</li>\r\n<li>g</li>\r\n<li>hdfhkgshdf</li>\r\n<li>ghkldsfhg</li>\r\n<li>dsfh</li>\r\n<li>gh</li>\r\n<li>dsf</li>\r\n<li>gdsf</li>\r\n<li>g</li>\r\n<li>dsf</li>\r\n</ol>', 'nha-may', '', 8, NULL, NULL);
+(56, 'vi', 'Nhà máy', '<p>ssafgdfgh/hdsf/gh/dfshgdsfhg<br />H</p>\r\n<p>gh</p>\r\n<ol><li>dfh</li>\r\n<li>gdsfh</li>\r\n<li>g</li>\r\n<li>hdfhkgshdf</li>\r\n<li>ghkldsfhg</li>\r\n<li>dsfh</li>\r\n<li>gh</li>\r\n<li>dsf</li>\r\n<li>gdsf</li>\r\n<li>g</li>\r\n<li>dsf</li>\r\n</ol>', 'nha-may', '', 9, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1112,12 +1117,6 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('right', 2, '1', 'contact', NULL, NULL, 'adv_right'),
 ('right', 3, '1', 'contact', NULL, NULL, 'list_support'),
 ('right', 4, '1', 'contact', NULL, NULL, 'counter'),
-('left', 1, '1', 'default', NULL, NULL, 'about_home'),
-('right', 2, '1', 'default', NULL, NULL, 'news_new'),
-('right', 3, '1', 'default', NULL, NULL, 'adv_left'),
-('right', 4, '1', 'default', NULL, NULL, 'adv_right'),
-('right', 5, '1', 'default', NULL, NULL, 'list_support'),
-('right', 6, '1', 'default', NULL, NULL, 'counter'),
 ('right', 1, '1', 'products', NULL, NULL, 'menu_products'),
 ('right', 2, '1', 'products', NULL, NULL, 'list_support'),
 ('right', 3, '1', 'products', NULL, NULL, 'adv_left'),
@@ -1125,7 +1124,14 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('right', 1, '1', 'about', NULL, NULL, 'adv_left'),
 ('right', 2, '1', 'about', NULL, NULL, 'adv_right'),
 ('right', 3, '1', 'about', NULL, NULL, 'list_support'),
-('right', 4, '1', 'about', NULL, NULL, 'counter');
+('right', 4, '1', 'about', NULL, NULL, 'counter'),
+('left', 1, '1', 'default', NULL, NULL, 'about_home'),
+('left', 2, '1', 'default', NULL, NULL, 'products_new'),
+('right', 3, '1', 'default', NULL, NULL, 'news_new'),
+('right', 4, '1', 'default', NULL, NULL, 'adv_left'),
+('right', 5, '1', 'default', NULL, NULL, 'adv_right'),
+('right', 6, '1', 'default', NULL, NULL, 'list_support'),
+('right', 7, '1', 'default', NULL, NULL, 'counter');
 
 -- --------------------------------------------------------
 
