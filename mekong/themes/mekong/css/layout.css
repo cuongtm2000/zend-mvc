@@ -1,4 +1,4 @@
-body {background:url(../images/bg.png) no-repeat top center fixed; font:9pt Arial, Helvetica, sans-serif}
+body {background:#083D67 url(../images/bg.png) no-repeat top center fixed; font:9pt Arial, Helvetica, sans-serif}
 .left{float: left;}
 .right{float:right}
 .clear{clear: both;}
@@ -14,7 +14,7 @@ a:hover{color:#000;}
 .lang{position:absolute; top:12px; right:10px}
 .lang a{margin-left:5px}
 
-#wrapper {width:1190px;margin:auto;background:url(../images/bg-content-1.png) repeat-y center top;padding-bottom:10px}
+#wrapper {width:1190px;margin:auto;background:url(../images/bg-content-2.png) repeat-y center top;padding-bottom:10px}
 
 /**  nav **/
 .position-lang{position:relative}
