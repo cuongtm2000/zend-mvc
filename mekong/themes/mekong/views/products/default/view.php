@@ -1,3 +1,15 @@
+<?php
+	Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/scroll.css');
+    Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/jquery.fancybox.css');
+
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jcarousellite_1.0.1.js');
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/scroller.js');
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.fancybox.js');
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.scroll-1.4.2-min.js');
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.serialScroll-1.2.2-min.js');
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/product.js');
+?>
+<?php $this->breadcrumbs = array($this->lang[$this->module->id] => array($this->setUrlModule()),$item->ProductsLanguage[Yii::app()->language]['title']); ?>
 <div class="frame-panel">
 <h2 class="title-right"><span><?php echo $item->ProductsLanguage[Yii::app()->language]['title']?></span></h2>
 	<div class="frame-pro-info">
