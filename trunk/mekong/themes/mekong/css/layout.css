@@ -1,4 +1,4 @@
-body {background:#fff; font:9pt Arial, Helvetica, sans-serif}
+body {background:url(../images/bg.png) no-repeat top center fixed; font:9pt Arial, Helvetica, sans-serif}
 .left{float: left;}
 .right{float:right}
 .clear{clear: both;}
@@ -8,19 +8,19 @@ a:hover{color:#000;}
 *{margin:0; padding:0}
 
 /** header **/
-.page-main{width:975px;margin:auto}
-#header{background:url(../images/bg-header.png) no-repeat;position:relative}
-#logo{text-align:center}
+.page-main{width:1190px;margin:auto}
+#logo{}
 
-.lang{position:absolute; top:5px; right:10px}
+.lang{position:absolute; top:12px; right:10px}
 .lang a{margin-left:5px}
 
-#wrapper {width:975px;margin:auto;background:url(../images/bg-content.png) no-repeat top}
+#wrapper {width:1190px;margin:auto;background:#fff}
 
 /**  nav **/
+.position-lang{position:relative}
 .bg-nav{background:url(../images/nav-bg.png) repeat-x}
-#nav{ list-style:none;padding-top:5px;padding-left:10px}
-#nav li{float:left;margin-right:3px;position:relative}
+#nav{ list-style:none;padding-top:5px;padding-left:0}
+#nav li{float:left;margin-right:5px;position:relative}
 #nav li a{padding:7px 13px 11px 13px;display:block;color:#fff;text-transform:uppercase}
 #nav li a:hover{background:url(../images/nav-select.png) repeat-x;border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0}
 #nav li:hover >a{background:url(../images/nav-select.png) repeat-x;border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0}
@@ -214,7 +214,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .line-menu-footer{border-top:1px solid #DFDFDF;border-bottom:1px solid #DFDFDF;padding:10px 0;margin-bottom:15px}
 .panel-footer{position:relative}
 #top-link{position:absolute; top:0; right:0}
-#menu-footer {list-style:none}
+#menu-footer {list-style:none;text-align:center}
 #menu-footer li{display:inline;margin-right:10px}
 #menu-footer li a{padding-right:14px;color:#313030;text-transform:uppercase;font-size:10pt;background:url(../images/nav-footer-line.png) no-repeat right}
 #menu-footer li a:hover{color:#073C86} #menu-footer .none-line a{background:none }
