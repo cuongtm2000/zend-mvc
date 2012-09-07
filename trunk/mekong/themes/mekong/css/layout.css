@@ -35,11 +35,11 @@ a:hover{color:#000;}
 #nav li ul .none-line{border:none}
 
 /** Banner **/
-#banner{margin:0 0 10px 0;padding:0 12px}
+#banner{margin:0 0 15px 0}
 
 /* Page Content*/
-.main-content{padding:10px 0}
-#content{background:url(../images/content-bg.png) no-repeat center top;padding:10px 14px}
+.main-content{}
+#content{background:url(../images/content-bg-1.png) no-repeat center top;padding:10px 14px}
 
 /*Left content*/
 #left-content{float:right; width:311px}
@@ -78,7 +78,7 @@ a:hover{color:#000;}
 .bg-adv li{padding:0 0 3px 0}
 
 /*Right content*/
-#right-content{float:left; width:625px}
+#right-content{float:left; width:830px}
 #right-content p{margin:0 0 10px 0}
 #right-content ul li, #right-content ol li{margin:4px 0 4px 40px}
 #right-content ul ,#right-content ol{margin: 0 0 12px 0}
@@ -88,9 +88,9 @@ a:hover{color:#000;}
 .frame-tent-right p{line-height:1.6em}
 
 /**  panel-about  **/
-.panel-about{line-height:1.6em;margin-bottom:10px; background:url(../images/line-about.png) repeat-y 312px ; text-align:justify}
-.panel-about-left{float:left;width:290px}
-.panel-about-right{float:right;width:290px}
+.panel-about{line-height:1.6em;margin-bottom:10px; background:url(../images/line-about.png) repeat-y 410px ; text-align:justify}
+.panel-about-left{float:left;width:360px}
+.panel-about-right{float:right;width:360px}
 
 /**  breadcrumbs  **/
 .breadcrumbs{color:#0B51B5;margin-bottom:15px }

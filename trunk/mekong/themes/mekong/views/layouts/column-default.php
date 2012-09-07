@@ -7,6 +7,7 @@
 	)); ?>
 	
 	<div id="right-content">
+		<?php $this->widget('ext.Banner.BannerSlider');?>  
 		<?php $this->getPosition('left');?>
 		<?php //$this->getPosition('center');?>
 		<?php echo $content; ?>
