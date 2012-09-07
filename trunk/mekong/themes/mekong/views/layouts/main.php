@@ -18,37 +18,15 @@
 	
 	<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.scrollTo.js"></script>
 	<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/top-page-config.js"></script>
-
+	
+	
 	<title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->setting['title']) ? ' - '.CHtml::encode($this->setting['title']) : '' ?></title>
     <meta name="keywords" content="<?php echo CHtml::encode($this->setting['keywords']) ?>" />
     <meta name="description" content="<?php echo CHtml::encode($this->description) ?>" />
 
-
-<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="content-language" content="vi, en" />
-<meta name="keywords" content="Chuyên bán những túi sách hàng hiệu sang trọng cho các lứa tuổi" />
-<meta name="description" content="Chuyên bán những túi sách hàng hiệu sang trọng cho các lứa tuổi" /> 
-<meta name="revisit-after" content="1 days" />
-<meta name="robots" content="noodp,index,follow" />
-<link rel="SHORTCUT ICON" href="images/favicon.ico" type="image/x-icon" />
-<link rel="icon" href="images/favicon.ico" type="image/gif" />
-<title>Home Page</title>
-<link rel="stylesheet" type="text/css" href="css/dosvn.css" media="screen"/>
-
-<link rel="stylesheet" type="text/css" href="css/advanced-slider-base.css" media="screen"/>
-
-<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-
-
-
-<script type="text/javascript" src="js/jquery.advancedSlider.min.js"></script> -->
-<!--[if IE]><script type="text/javascript" src="js/excanvas.compiled.js"></script><![endif]-->
-<!-- <script type="text/javascript" src="js/jquery.sider.banner.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		runbanner(950, 219);
-	});
-</script> -->
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/prettyPhoto.css"  />
+	<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.prettyPhoto.js"></script>
+	
 
 <!--[if lt IE 8]>
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/ie6.css" />
