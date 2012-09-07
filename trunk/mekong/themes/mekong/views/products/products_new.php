@@ -1,6 +1,6 @@
 <?php if($products_new):?>
 <div class="main-all-product">
-    <h2 class="title-right"><?php echo $this->lang['products'] . ' ' . $this->lang['new']?></h2>
+    <!--<h2 class="title-right"><?php echo $this->lang['products'] . ' ' . $this->lang['new']?></h2>-->
     <ul class="all-product">
         <?php foreach($products_new as $item): ?>
             <li class="product">
