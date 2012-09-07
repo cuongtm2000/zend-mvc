@@ -1,4 +1,4 @@
-body {background:#083D67 url(../images/bg.png) no-repeat top center fixed; font:9pt Arial, Helvetica, sans-serif}
+body {padding-top:10px; background:#083D67 url(../images/bg.png) no-repeat top center fixed; font:9pt Arial, Helvetica, sans-serif}
 .left{float: left;}
 .right{float:right}
 .clear{clear: both;}
