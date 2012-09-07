@@ -127,6 +127,17 @@ class Products extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
+	
+	//Front end - list item new
+    public function listItemsNew() {
+        $criteria = new CDbCriteria();
+        $criteria->with = array(__CLASS__ . 'Cat');
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'enable = 1';
+        $criteria->limit = 8;
+
+        return $this->findAll($criteria);
+    }
 
     //Front end - get detail item
     public function detailItem($tag) {

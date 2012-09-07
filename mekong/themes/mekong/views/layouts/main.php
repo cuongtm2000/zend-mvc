@@ -50,7 +50,6 @@
 </div> <!--End bg-nav -->
 <div id="wrapper">
     <div class="main-content">
-		<?php $this->widget('ext.Banner.BannerSlider');?>  
         <div id="content">
 			
 			<?php echo $content; ?>
@@ -58,13 +57,7 @@
 		
 			<!--<div class="breadcrumbs"><a href="" title="" >Trang chủ</a><b>&raquo;</b><span>Giới thiệu</span></div>
         	<div id="leftcontent">
-            	<div class="frame-leftcontent">
-                    <h4 class="title-project"><span>DỰ ÁN TIÊU BIỂU</span></h4>
-                    <ul class="bg-adv">
-                        <li><a href="http://grouplaptrinh.com" title="grouplaptrinh"><img src="images/img.jpg" alt='' /></a></li>
-                    </ul>
-                </div>
-                
+            
                 <div class="frame-leftcontent">
                    <div class="video_hot"><a href="" title="" rel="prettyPhoto" ><img src="images/video-hot.jpg" alt="" /></a></div>
 					<script type="text/javascript">
@@ -74,38 +67,6 @@
 					</script>
 				</div>
                 
-                <div class="frame-leftcontent">
-                    <h4 class="title-project"><span>giải thưởng</span></h4>
-                    <ul class="bg-adv">
-                        <li><a href="http://grouplaptrinh.com" title="grouplaptrinh"><img src="images/adv1.jpg" alt='' /></a></li>
-                    </ul>
-                </div>
-                
-                <div class="frame-leftcontent">
-                    <h4 class="title-left"><span>Hỗ trợ trực tuyến</span></h4>
-                    <ul class="support">
-                    	<li><img src="images/hot-line.png" alt="hot line" /></li>
-                        <li>
-                            <p>Hỗ trợ kỹ thuật</p>
-                            <p>0942 001 001</p>
-                            <p><a href="ymsgr:sendim?groupitsoft&amp;m=Xin chào, tôi muốn hỏi về sản phẩm - dịch vụ của Dos.vn" title="Chat groupitsoft"><img src="http://opi.yahoo.com/online?u=groupitsoft&amp;m=g&amp;t=2&amp;l=us" alt="groupitsoft" /></a></p>
-                        </li>
-                        <li>
-                            <p>Hỗ trợ kỹ thuật</p>
-                            <p>0942 001 001</p>
-                            <p><a href="ymsgr:sendim?groupitsoft&amp;m=Xin chào, tôi muốn hỏi về sản phẩm - dịch vụ của Dos.vn" title="Chat groupitsoft"><img src="http://opi.yahoo.com/online?u=groupitsoft&amp;m=g&amp;t=2&amp;l=us" alt="groupitsoft" /></a></p>
-                        </li>
-                    </ul>
-				</div>
-                
-                <div class="frame-leftcontent">
-                    <h4 class="title-left"><span>Thống Kê Truy Cập</span></h4>
-                    <ul class="statistics">
-                        <li>Truy cập trong ngày: 000018</li>
-                        <li>Đang online: 3</li>
-                        <li>Tổng số lượt truy cập: 038082</li>
-                    </ul>
-                </div>
         	</div> --><!--End left content-->
            <!-- <div id="rightcontent">
             	
@@ -164,43 +125,45 @@
                     </ul> <div class="clear"></div>
 			</div>--> <!--End right-content--> <div class="clear"></div>       
 		</div> <!--End content--> 
-	</div><!--End main-content-->
-	<div class="partner-top-line">
-			<img class="partner" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner.png" alt="partner" />
-			<ul id="scroller" class="partner-group">
-				<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-1.jpg" alt="" /></a></div></li>
-				<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-2.jpg" alt="" /></a></div></li>
-				<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-3.jpg" alt="" /></a></div></li>
-				<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-4.jpg" alt="" /></a></div></li>
-				<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-5.jpg" alt="" /></a></div></li>
-				<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-6.jpg" alt="" /></a></div></li>
-			</ul> <div class="clear"></div> 
-	</div>
-	<div class="line-menu-footer">
-		<div class="panel-footer">
-			<?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel', array('id' => 'menu-footer', 'lastItemCssClass' => 'none-line'));?>
-			<!--<ul class="menu-footer">
-				<li><a href="" title="" class="select">Trang chủ</a></li>
-				<li><a href="" title="">Giới thiệu</a></li>
-				<li><a href="" title="">Nhà máy</a></li>
-				<li><a href="" title="">Sản phẩm</a></li>
-				<li><a href="" title="">Khách hàng - đối tác</a></li>
-				<li><a href="" title="">Tin tức &amp; Sự kiện</a></li>
-				<li><a href="" title="">Dịch vụ</a></li>
-				<li><a href="" title="">Tuyển dụng</a></li>
-				<li class="none-line"><a href="" title="">Liên hệ</a></li>
-			</ul>-->
-			<a href="" id="top-link" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/top-page.png" alt="top page" /></a>
+		<div class="partner-top-line">
+				<img class="partner" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner.png" alt="partner" />
+				<ul id="scroller" class="partner-group">
+					<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-1.jpg" alt="" /></a></div></li>
+					<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-2.jpg" alt="" /></a></div></li>
+					<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-3.jpg" alt="" /></a></div></li>
+					<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-4.jpg" alt="" /></a></div></li>
+					<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-5.jpg" alt="" /></a></div></li>
+					<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-6.jpg" alt="" /></a></div></li>
+				</ul> <div class="clear"></div> 
 		</div>
-	</div><!--End line-menu-footer-->
-	<div class="page-footer">
-		<div class="logo-footer"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-footer.png" alt=""  /></div>
-		<div class="copyright"><h3 class="company-footer">Công ty Cổ phần đầu tư ngôi sao MÊKONG</h3>
-			<p>Trụ sở chính tại HCM: 184 Quốc lộ 13, Quận Thủ Đức</p>
-			<p>Điện thoại: (84 - 4) 37 47 47 00 - Fax: (84 - 4) 37 47 47 11 - Email: infoew@mekongstarwindow.com</p>
-			<p>Bản quyền website thuộc về Mekongstarwindow</p>
-		</div> <div class="clear"></div>
-	</div>
+		<div class="line-menu-footer">
+			<div class="panel-footer">
+				<?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel', array('id' => 'menu-footer', 'lastItemCssClass' => 'none-line'));?>
+				<!--<ul class="menu-footer">
+					<li><a href="" title="" class="select">Trang chủ</a></li>
+					<li><a href="" title="">Giới thiệu</a></li>
+					<li><a href="" title="">Nhà máy</a></li>
+					<li><a href="" title="">Sản phẩm</a></li>
+					<li><a href="" title="">Khách hàng - đối tác</a></li>
+					<li><a href="" title="">Tin tức &amp; Sự kiện</a></li>
+					<li><a href="" title="">Dịch vụ</a></li>
+					<li><a href="" title="">Tuyển dụng</a></li>
+					<li class="none-line"><a href="" title="">Liên hệ</a></li>
+				</ul>-->
+				<a href="" id="top-link" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/top-page.png" alt="top page" /></a>
+			</div>
+		</div><!--End line-menu-footer-->
+		<div class="page-footer">
+			<div class="logo-footer"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-footer.png" alt=""  /></div>
+			<div class="copyright"><h3 class="company-footer">Công ty Cổ phần đầu tư ngôi sao MÊKONG</h3>
+				<p>Trụ sở chính tại HCM: 184 Quốc lộ 13, Quận Thủ Đức</p>
+				<p>Điện thoại: (84 - 4) 37 47 47 00 - Fax: (84 - 4) 37 47 47 11 - Email: infoew@mekongstarwindow.com</p>
+				<p>Bản quyền website thuộc về Mekongstarwindow</p>
+			</div> <div class="clear"></div>
+		</div>
+		
+	</div><!--End main-content-->
+	
 </div><!--End wrapper-->
 </body>
 </html>
