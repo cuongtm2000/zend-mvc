@@ -161,9 +161,7 @@
 				<p>Bản quyền website thuộc về Mekongstarwindow</p>
 			</div> <div class="clear"></div>
 		</div>
-		
 	</div><!--End main-content-->
-	
 </div><!--End wrapper-->
 </body>
 </html>
