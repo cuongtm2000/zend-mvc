@@ -35,16 +35,17 @@
 <body>
 <div id="header" class="page-main">
     <div id="logo"><?php $this->widget('ext.Logo.LogoStatic')?></div>
-    <div class="lang">
-		<?php foreach($this->listLanguage as $key => $value):?>
-			<a href="<?php echo Yii::app()->baseUrl?>/<?php echo $key?>" title="<?php echo $value?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $key?>.gif" alt="<?php echo $value?>" /></a>
-		<?php endforeach?>
-    </div>
+    
 </div><!--End header-->
 <div class="bg-nav">
-	<div class="page-main">
+	<div class="page-main position-lang" >
 		<?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel',array('lastItemCssClass' => 'last'));?>
-        <div class="clear"></div>
+        <div class="lang">
+			<?php foreach($this->listLanguage as $key => $value):?>
+				<a href="<?php echo Yii::app()->baseUrl?>/<?php echo $key?>" title="<?php echo $value?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $key?>.gif" alt="<?php echo $value?>" /></a>
+			<?php endforeach?>
+		</div>
+		<div class="clear"></div>
      </div>   
 </div> <!--End bg-nav -->
 <div id="wrapper">
@@ -65,7 +66,12 @@
                 </div>
                 
                 <div class="frame-leftcontent">
-                   <div class="video_hot"><a href="" title=""><img src="images/video-hot.jpg" alt="" /></a></div>
+                   <div class="video_hot"><a href="" title="" rel="prettyPhoto" ><img src="images/video-hot.jpg" alt="" /></a></div>
+					<script type="text/javascript">
+						$(document).ready(function(){
+							$(".video_hot a[rel^='prettyPhoto']").prettyPhoto();
+						});  
+					</script>
 				</div>
                 
                 <div class="frame-leftcontent">
@@ -159,45 +165,43 @@
 			</div>--> <!--End right-content--> <div class="clear"></div>       
 		</div> <!--End content--> 
 	</div><!--End main-content-->
+	<div class="partner-top-line">
+			<img class="partner" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner.png" alt="partner" />
+			<ul id="scroller" class="partner-group">
+				<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-1.jpg" alt="" /></a></div></li>
+				<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-2.jpg" alt="" /></a></div></li>
+				<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-3.jpg" alt="" /></a></div></li>
+				<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-4.jpg" alt="" /></a></div></li>
+				<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-5.jpg" alt="" /></a></div></li>
+				<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-6.jpg" alt="" /></a></div></li>
+			</ul> <div class="clear"></div> 
+	</div>
+	<div class="line-menu-footer">
+		<div class="panel-footer">
+			<?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel', array('id' => 'menu-footer', 'lastItemCssClass' => 'none-line'));?>
+			<!--<ul class="menu-footer">
+				<li><a href="" title="" class="select">Trang chủ</a></li>
+				<li><a href="" title="">Giới thiệu</a></li>
+				<li><a href="" title="">Nhà máy</a></li>
+				<li><a href="" title="">Sản phẩm</a></li>
+				<li><a href="" title="">Khách hàng - đối tác</a></li>
+				<li><a href="" title="">Tin tức &amp; Sự kiện</a></li>
+				<li><a href="" title="">Dịch vụ</a></li>
+				<li><a href="" title="">Tuyển dụng</a></li>
+				<li class="none-line"><a href="" title="">Liên hệ</a></li>
+			</ul>-->
+			<a href="" id="top-link" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/top-page.png" alt="top page" /></a>
+		</div>
+	</div><!--End line-menu-footer-->
+	<div class="page-footer">
+		<div class="logo-footer"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-footer.png" alt=""  /></div>
+		<div class="copyright"><h3 class="company-footer">Công ty Cổ phần đầu tư ngôi sao MÊKONG</h3>
+			<p>Trụ sở chính tại HCM: 184 Quốc lộ 13, Quận Thủ Đức</p>
+			<p>Điện thoại: (84 - 4) 37 47 47 00 - Fax: (84 - 4) 37 47 47 11 - Email: infoew@mekongstarwindow.com</p>
+			<p>Bản quyền website thuộc về Mekongstarwindow</p>
+		</div> <div class="clear"></div>
+	</div>
 </div><!--End wrapper-->
-<div class="partner-top-line">
-	<div class="page-main">
-    	<img class="partner" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner.png" alt="partner" />
-    	<ul id="scroller" class="partner-group">
-        	<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-1.jpg" alt="" /></a></div></li>
-            <li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-2.jpg" alt="" /></a></div></li>
-			<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-3.jpg" alt="" /></a></div></li>
-			<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-4.jpg" alt="" /></a></div></li>
-			<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-5.jpg" alt="" /></a></div></li>
-			<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-6.jpg" alt="" /></a></div></li>
-        </ul>
-    </div> <div class="clear"></div> 
-</div>
-<div class="line-menu-footer">
-	<div class="page-main panel-footer">
-		<?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel', array('id' => 'menu-footer', 'lastItemCssClass' => 'none-line'));?>
-        <!--<ul class="menu-footer">
-            <li><a href="" title="" class="select">Trang chủ</a></li>
-            <li><a href="" title="">Giới thiệu</a></li>
-            <li><a href="" title="">Nhà máy</a></li>
-            <li><a href="" title="">Sản phẩm</a></li>
-            <li><a href="" title="">Khách hàng - đối tác</a></li>
-            <li><a href="" title="">Tin tức &amp; Sự kiện</a></li>
-            <li><a href="" title="">Dịch vụ</a></li>
-            <li><a href="" title="">Tuyển dụng</a></li>
-            <li class="none-line"><a href="" title="">Liên hệ</a></li>
-        </ul>-->
-        <a href="" id="top-link" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/top-page.png" alt="top page" /></a>
-    </div>
-</div><!--End Footer-->
-<div class="page-main page-footer">
-	<div class="logo-footer"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-footer.png" alt=""  /></div>
-    <div class="copyright"><h3 class="company-footer">Công ty Cổ phần đầu tư ngôi sao MÊKONG</h3>
-    	<p>Trụ sở chính tại HCM: 184 Quốc lộ 13, Quận Thủ Đức</p>
-        <p>Điện thoại: (84 - 4) 37 47 47 00 - Fax: (84 - 4) 37 47 47 11 - Email: infoew@mekongstarwindow.com</p>
-        <p>Bản quyền website thuộc về Mekongstarwindow</p>
-    </div> <div class="clear"></div>
-</div>
 </body>
 </html>
 
