@@ -50,80 +50,16 @@
 </div> <!--End bg-nav -->
 <div id="wrapper">
     <div class="main-content">
-        <div id="content">
-			
-			<?php echo $content; ?>
-		
-		
-			<!--<div class="breadcrumbs"><a href="" title="" >Trang chủ</a><b>&raquo;</b><span>Giới thiệu</span></div>
-        	<div id="leftcontent">
-            
-                <div class="frame-leftcontent">
+        <div id="content">	
+			<?php echo $content; ?>    
+                <!--<div class="frame-leftcontent">
                    <div class="video_hot"><a href="" title="" rel="prettyPhoto" ><img src="images/video-hot.jpg" alt="" /></a></div>
 					<script type="text/javascript">
 						$(document).ready(function(){
 							$(".video_hot a[rel^='prettyPhoto']").prettyPhoto();
 						});  
 					</script>
-				</div>
-                
-        	</div> --><!--End left content-->
-           <!-- <div id="rightcontent">
-            	
-					<h2 class="title-right">Giới thiệu</h2>
-                    <div class="frame-tent-right">     
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit.</p>
-                        <p>Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui.</p> 
-                        <p> Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</p>               	</div>
-    
-
-                    <h2 class="title-right">Tin tức &amp; Sự kiện</h2>
-                    <div class="frame-tent-right">        
-                        <ul class="panel-items">
-                            <li><div class="frame-img"><a href="#" title='Chứng nhận thương hiệu'><img src="images/no-images.jpg" alt='Chứng nhận thương hiệu' /></a></div>
-                                <h3 class="title-items-new"><a href="#" title='Chứng nhận thương hiệu'><strong>Chứng nhận thương hiệu</strong></a></h3>
-                                <p>Chứng nhận thương hiệu</p> <div class="clear"></div>
-                             </li>
-                             <li><div class="frame-img"><a href="#" title='Chứng nhận thương hiệu'><img src="images/no-images.jpg" alt='Chứng nhận thương hiệu' /></a></div>
-                                <h3 class="title-items-new"><a href="#" title='Chứng nhận thương hiệu'><strong>Chứng nhận thương hiệu</strong></a></h3>
-                                <p>Chứng nhận thương hiệu</p> <div class="clear"></div>
-                             </li>
-                        </ul>
-                    </div>
-
-                    <h2 class="title-right">Sản phẩm mới</h2>
-                    <ul class="all-product">
-                        <li class="product">
-                            <div class="product-img"><a href="product-info.html" title=""><img src="images/pro.jpg" alt="Product" /></a></div>
-                            <div class="line-bottom-pro"></div>
-                            <h2 class="title-product"><a href="product-info.html" title="Leonidas Chocolate Assortment">Cửa sổ 2 cánh mở trong</a></h2>
-                        </li>
-                         <li class="product">
-                            <div class="product-img"><a href="product-info.html" title=""><img src="images/pro.jpg" alt="Product" /></a></div>
-                            <div class="line-bottom-pro"></div>
-                            <h2 class="title-product"><a href="product-info.html" title="Leonidas Chocolate Assortment">Cửa đi 2 cánh</a></h2>
-                        </li>
-                        <li class="product">
-                            <div class="product-img"><a href="product-info.html" title=""><img src="images/pro.jpg" alt="Product" /></a></div>
-                            <div class="line-bottom-pro"></div>
-                            <h2 class="title-product"><a href="product-info.html" title="Leonidas Chocolate Assortment">Cửa đi 2 cánh mở ngoài</a></h2>
-                        </li>
-                        <li class="product">
-                            <div class="product-img"><a href="product-info.html" title=""><img src="images/pro.jpg" alt="Product" /></a></div>
-                            <div class="line-bottom-pro"></div>
-                            <h2 class="title-product"><a href="product-info.html" title="Leonidas Chocolate Assortment">Cửa sổ 2 cánh mở trong</a></h2>
-                        </li>
-                    </ul> --><!--End All products--> 
-					<!--<div class="clear"></div>
-                    <ul class="paging">
-                        <li class="first hidden"><a href="/san-pham/thiet-bi-ve-sinh">Đầu tiên</a></li>
-                        <li class="previous hidden"><a href="/san-pham/thiet-bi-ve-sinh">Lùi</a></li>
-                        <li class="page selected"><a href="/san-pham/thiet-bi-ve-sinh">1</a></li>
-                        <li class="page"><a href="/san-pham/thiet-bi-ve-sinh/trang/2">2</a></li>
-                        <li class="next"><a href="/san-pham/thiet-bi-ve-sinh/trang/2">Tiếp</a></li>
-                        <li class="last"><a href="/san-pham/thiet-bi-ve-sinh/trang/2">Cuối cùng</a></li>
-                    </ul> <div class="clear"></div>
-			</div>--> <!--End right-content--> <div class="clear"></div>       
+				</div> --> <div class="clear"></div>       
 		</div> <!--End content--> 
 		<div class="partner-top-line">
 				<img class="partner" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner.png" alt="partner" />
