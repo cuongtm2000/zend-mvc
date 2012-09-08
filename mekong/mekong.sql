@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 08, 2012 at 02:12 AM
+-- Generation Time: Sep 08, 2012 at 02:30 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -155,6 +155,10 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('about', 'Giới thiệu', 0, 'vi'),
 ('action', 'Action', 1, 'en'),
 ('action', 'Thao tác', 1, 'vi'),
+('address_1', 'Headquartered in City: 184 Highway 13, Thu Duc District', 0, 'en'),
+('address_1', 'Trụ sở chính tại HCM: 184 Quốc lộ 13, Quận Thủ Đức', 0, 'vi'),
+('address_2', 'Tel: (84-4) 37 47 47 00 - Fax: (84-4) 37 47 47 11 - Email: infoew@mekongstarwindow.com', 0, 'en'),
+('address_2', 'Điện thoại: (84 - 4) 37 47 47 00 - Fax: (84 - 4) 37 47 47 11 - Email: infoew@mekongstarwindow.com', 0, 'vi'),
 ('add_new', 'Add new', 1, 'en'),
 ('add_new', 'Thêm mới', 1, 'vi'),
 ('add_row', 'Thêm dòng', 1, 'vi'),
@@ -166,8 +170,12 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('cancel', 'Hủy bỏ', 1, 'vi'),
 ('cat_title', 'Cat title', 0, 'en'),
 ('cat_title', 'Danh mục', 0, 'vi'),
+('company_footer', 'Investment Corporation star Mekong', 0, 'en'),
+('company_footer', 'Công ty Cổ phần đầu tư ngôi sao MÊKÔNG', 0, 'vi'),
 ('contact', 'Contact', 0, 'en'),
 ('contact', 'Liên hệ', 0, 'vi'),
+('copyright', 'Copyright by the Mekongstarwindow', 0, 'en'),
+('copyright', 'Bản quyền website thuộc về Mekongstarwindow', 0, 'vi'),
 ('counter', 'Counter', 0, 'en'),
 ('counter', 'Thống kê truy cập', 0, 'vi'),
 ('create_date', 'Created date', 1, 'en'),
@@ -737,7 +745,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1347063142);
+('''127.0.0.1''', 1347064093);
 
 -- --------------------------------------------------------
 
