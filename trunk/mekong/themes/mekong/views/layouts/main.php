@@ -144,10 +144,10 @@
 		</div><!--End line-menu-footer-->
 		<div class="page-footer">
 			<div class="logo-footer"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-footer.png" alt=""  /></div>
-			<div class="copyright"><h3 class="company-footer">Công ty Cổ phần đầu tư ngôi sao MÊKONG</h3>
-				<p>Trụ sở chính tại HCM: 184 Quốc lộ 13, Quận Thủ Đức</p>
-				<p>Điện thoại: (84 - 4) 37 47 47 00 - Fax: (84 - 4) 37 47 47 11 - Email: infoew@mekongstarwindow.com</p>
-				<p>Bản quyền website thuộc về Mekongstarwindow</p>
+			<div class="copyright"><h3 class="company-footer"><?php echo $this->lang['company_footer']?></h3>
+				<p><?php echo $this->lang['address_1'] ?></p>
+				<p><?php echo $this->lang['address_2'] ?></p>
+				<p><?php echo $this->lang['copyright'] ?></p>
 			</div> <div class="clear"></div>
 		</div>
 	</div><!--End main-content-->
