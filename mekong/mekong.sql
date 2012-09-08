@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 07, 2012 at 04:25 AM
+-- Generation Time: Sep 08, 2012 at 02:12 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -63,19 +63,19 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('news_cat_height_thumb', '200', NULL, 'news'),
 ('news_cat_width_thumb', '200', NULL, 'news'),
 ('news_height_thumb', '200', NULL, 'news'),
-('news_num_item_cat', '3', NULL, 'news'),
-('news_num_item_hot', '7', '', 'news'),
+('news_num_item_cat', '10', NULL, 'news'),
+('news_num_item_hot', '7', NULL, 'news'),
 ('news_num_item_index', '3', NULL, 'news'),
 ('news_num_item_new', '7', NULL, 'news'),
 ('news_width_thumb', '200', NULL, 'news'),
-('products_cat_height_thumb', '140', NULL, 'products'),
-('products_cat_width_thumb', '180', NULL, 'products'),
-('products_height_desc', '700', NULL, 'products'),
-('products_height_full', '700', NULL, 'products'),
-('products_height_thumb', '140', NULL, 'products'),
-('products_width_desc', '520', NULL, 'products'),
-('products_width_full', '520', NULL, 'products'),
-('products_width_thumb', '180', NULL, 'products');
+('products_cat_height_thumb', '150', NULL, 'products'),
+('products_cat_width_thumb', '195', NULL, 'products'),
+('products_height_desc', '600', NULL, 'products'),
+('products_height_full', '600', NULL, 'products'),
+('products_height_thumb', '150', NULL, 'products'),
+('products_width_desc', '800', NULL, 'products'),
+('products_width_full', '800', NULL, 'products'),
+('products_width_thumb', '195', NULL, 'products');
 
 -- --------------------------------------------------------
 
@@ -189,6 +189,8 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('no_record', 'Không tồn tại mẫu tin', 0, 'vi'),
 ('order', 'Order', 1, 'en'),
 ('order', 'Thứ tự', 1, 'vi'),
+('other', 'other', 0, 'en'),
+('other', 'khác', 0, 'vi'),
 ('poll', 'Bình chọn', 0, 'en'),
 ('poll', 'Bình chọn', 0, 'vi'),
 ('products', 'Products', 0, 'en'),
@@ -324,7 +326,7 @@ INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`,
 (2, 'en', 'Advantages of uPVC', '<p><img style="float:left;margin:0 10px 8px 0;" src="/mekong/public/userfiles/image/img.png" alt="" width="123" height="98" />Produced by the European quality standards, product of uPVC branded MEKONGSTAR window is synchronized set of components, including: uPVC profile bars box-like structure, is divided into the hollow cavity fitted with steel corereinforcement to increase the bearing capacity for the door, combined with double rings and glass box inert gas is pumped to ensure high-sealed, with good sound insulation. In addition, high-grade uPVC material has the advantages such as: no warping, shrinkage, small painting, routine maintenance, high fire resistance, oxidation, aging or stained gold in terms of solar radiation or acid rain. Therefore, the door retains the original beauty during use. These advantages allow the door to long-term economic efficiency for the user by saving energy costs and routine maintenance.</p>', 'advantages-of-upvc', 'Produced by the European quality standards, product of uPVC branded MEKONGSTAR window is synchronized set of components, including: uPVC profile bars box-like structure', 0, NULL, NULL),
 (2, 'vi', 'Ưu Việt cửa uPVC', '<p><img style="float:left;margin:0 10px 8px 0;" src="/mekong/public/userfiles/image/img.png" alt="" width="123" height="98" />Được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp, được chia thành nhiều khoang rỗng có lắp lõi thép gia cường để tăng khả năng chịu lực cho bộ cửa, kết hợp với hệ gioăng kép và hộp kính được bơm khí trơ đảm bảo độ kín khít cao, có tính cách âm, cách nhiệt tốt. Ngoài ra, vật liệu uPVC cao cấp còn có những ưu điểm khác như: không cong vênh, co ngót, ít phải sơn sửa, bảo dưỡng định kỳ, khả năng chống cháy cao, không bị oxy hóa, không bị lão hóa hay ố vàng trong điều kiện bức xạ mặt trời hay mưa a xít. Chính vì vậy, cửa luôn giữ được vẻ đẹp ban đầu trong suốt thời gian sử dụng. Những ưu điểm này cho phép cửa đem lại hiệu quả kinh tế lâu dài cho người sử dụng nhờ tiết kiệm chi phí điện năng và bảo dưỡng định kỳ.</p>', 'uu-viet-cua-upvc', 'Được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp', 0, NULL, NULL),
 (3, 'en', 'About MekongStar', '<p>MekongStar specialized in manufacturing all kinds of doors are manufactured according to European standards of quality, brand products uPVC door MEKONGSTAR WINDOW synchronized set of components, including: uPVC profile bars box-like structure, which is divided intomany empty cabins fitted with steel core to increase the bearing capacity for the door, combined with double rings and glass box inert gas is pumped to ensure high-sealed, with good sound insulation. In addition, high-grade uPVC material has the advantages such as: no warping, shrinkage, small painting, routine maintenance, high fire resistance, oxidation, aging or stained gold in terms of solar radiation or acid rain. Therefore, the door retains the original beauty during use. These advantages allow the door to long-term economic efficiency for the user by saving energy costs and routine maintenance.</p>', 'about-mekongstar', 'MekongStar specialized in manufacturing all kinds of doors are manufactured according to European standards of quality, brand products uPVC door MEKONGSTAR WINDOW', 0, NULL, NULL),
-(3, 'vi', 'Giới thiệu về MekongStar', '<p>MekongStar chuyên sản xuất các loại cửa được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp, được chia thành nhiều khoang rỗng có lắp lõi thép gia cường để tăng khả năng chịu lực cho bộ cửa, kết hợp với hệ gioăng kép và hộp kính được bơm khí trơ đảm bảo độ kín khít cao, có tính cách âm, cách nhiệt tốt. Ngoài ra, vật liệu uPVC cao cấp còn có những ưu điểm khác như: không cong vênh, co ngót, ít phải sơn sửa, bảo dưỡng định kỳ, khả năng chống cháy cao, không bị oxy hóa, không bị lão hóa hay ố vàng trong điều kiện bức xạ mặt trời hay mưa a xít. Chính vì vậy, cửa luôn giữ được vẻ đẹp ban đầu trong suốt thời gian sử dụng. Những ưu điểm này cho phép cửa đem lại hiệu quả kinh tế lâu dài cho người sử dụng nhờ tiết kiệm chi phí điện năng và bảo dưỡng định kỳ.</p>', 'gioi-thieu-ve-mekongstar', 'MekongStar chuyên sản xuất các loại cửa được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm', 23, NULL, NULL);
+(3, 'vi', 'Giới thiệu về MekongStar', '<p>MekongStar chuyên sản xuất các loại cửa được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp, được chia thành nhiều khoang rỗng có lắp lõi thép gia cường để tăng khả năng chịu lực cho bộ cửa, kết hợp với hệ gioăng kép và hộp kính được bơm khí trơ đảm bảo độ kín khít cao, có tính cách âm, cách nhiệt tốt. Ngoài ra, vật liệu uPVC cao cấp còn có những ưu điểm khác như: không cong vênh, co ngót, ít phải sơn sửa, bảo dưỡng định kỳ, khả năng chống cháy cao, không bị oxy hóa, không bị lão hóa hay ố vàng trong điều kiện bức xạ mặt trời hay mưa a xít. Chính vì vậy, cửa luôn giữ được vẻ đẹp ban đầu trong suốt thời gian sử dụng. Những ưu điểm này cho phép cửa đem lại hiệu quả kinh tế lâu dài cho người sử dụng nhờ tiết kiệm chi phí điện năng và bảo dưỡng định kỳ.</p>', 'gioi-thieu-ve-mekongstar', 'MekongStar chuyên sản xuất các loại cửa được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm', 24, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -491,7 +493,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_factory_languages` (
 
 INSERT INTO `hoiit_module_factory_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
 (56, 'en', 'Factory', '<p>The factory Eurowindow are equipped with advanced production lines, modern and imported from leading vendors of the Federal Republic of Germany, Italy, Finland and Spain.</p>\r\n<p>The main lines are:</p>\r\n<p><strong>+</strong> Production line windows, doors, walls uPVC;<br /><strong>+</strong> Production line of aluminum doors, aluminum and glass curtain wall. large, chain paint, PVDF &amp; Powder Coating; timber production line aluminum doors.<br /><strong>+</strong> Production line pine wood, fire resistant wooden door. Laminate flooring production lines;<br /><strong>+</strong> Glass production line, glass, safety glass, glass cutting and glass production, large glass box.</p>\r\n<p>There are also some other auxiliary lines, such as: necklaces paste laminate, frosted glass production equipment. economic patterns, systems and equipment in mechanical processing, aluminum cladding and assembly equipment automatic security doors.</p>\r\n<p style="text-align:center;"><img src="/mekong/public/userfiles/image/img-nhamay.png" alt="" width="595" height="395" /></p>\r\n<p style="text-align:center;"><img src="/mekong/public/userfiles/image/img-nhamay-2.png" alt="" width="598" height="325" /></p>\r\n<p style="text-align:center;"><img src="/mekong/public/userfiles/image/img-nhamay-3.png" alt="" width="595" height="249" /></p>', 'factory', 'The factory Eurowindow are equipped with advanced production lines, modern and imported from leading vendors of the Federal Republic of Germany, Italy, Finland and Spain.', 1, NULL, NULL),
-(56, 'vi', 'Nhà máy', '<p>Các nhà máy của Eurowindow đều được trang bị dây chuyên sản xuất tiên tiến, hiện đại, đồng bộ được nhập khẩu từ các nhà cung cấp hàng đầu của CHLB Đức, Italia, Phần Lan và Tây Ban Nha.</p>\r\n<p><strong>Các dây chuyền chính gồm:</strong></p>\r\n<p><strong>+</strong> Dây chuyền sản xuất cửa sổ, cửa đi, vách ngăn uPVC;<br /><strong>+</strong> Dây chuyền sản xuất cửa nhôm, hệ vách nhôm kính. lớn, dây chuyền sơn, PVDF &amp; Powder Coating; Dây chuyền sản xuất cửa nhôm gỗ.<br /><strong>+</strong> Dây chuyền sản xuất gỗ thông phòng, cửa gỗ chống cháy. Dây chuyền sản xuất gỗ ván sàn;<br /><strong>+</strong> Dây chuyền sản xuất kính, kính cường lực, kính an toàn, cắt kính và sản xuất hộp kính, hộp kính khổ lớn.</p>\r\n<p>Ngoài ra còn có một số dây chuyền phụ trợ khác như: dây chuyền dán laminate, thiết bị sản xuất kính mờ. kinh hoa văn, hệ thống máy móc thiết bị gia công cơ khí, tấm ốp nhôm và các thiết bị lắp ráp cửa an toàn, cửa tự động.</p>\r\n<p style="text-align:center;"><img src="/mekong/public/userfiles/image/img-nhamay.png" alt="" width="595" height="395" /></p>\r\n<p style="text-align:center;"><img src="/mekong/public/userfiles/image/img-nhamay-2.png" alt="" width="598" height="325" /></p>\r\n<p style="text-align:center;"><img src="/mekong/public/userfiles/image/img-nhamay-3.png" alt="" width="595" height="249" /></p>', 'nha-may', 'Các nhà máy của Eurowindow đều được trang bị dây chuyên sản xuất tiên tiến, hiện đại, đồng bộ được nhập khẩu từ các nhà cung cấp hàng đầu của CHLB Đức, Italia, Phần Lan và Tây Ban Nha.', 41, NULL, NULL);
+(56, 'vi', 'Nhà máy', '<p>Các nhà máy của Eurowindow đều được trang bị dây chuyên sản xuất tiên tiến, hiện đại, đồng bộ được nhập khẩu từ các nhà cung cấp hàng đầu của CHLB Đức, Italia, Phần Lan và Tây Ban Nha.</p>\r\n<p><strong>Các dây chuyền chính gồm:</strong></p>\r\n<p><strong>+</strong> Dây chuyền sản xuất cửa sổ, cửa đi, vách ngăn uPVC;<br /><strong>+</strong> Dây chuyền sản xuất cửa nhôm, hệ vách nhôm kính. lớn, dây chuyền sơn, PVDF &amp; Powder Coating; Dây chuyền sản xuất cửa nhôm gỗ.<br /><strong>+</strong> Dây chuyền sản xuất gỗ thông phòng, cửa gỗ chống cháy. Dây chuyền sản xuất gỗ ván sàn;<br /><strong>+</strong> Dây chuyền sản xuất kính, kính cường lực, kính an toàn, cắt kính và sản xuất hộp kính, hộp kính khổ lớn.</p>\r\n<p>Ngoài ra còn có một số dây chuyền phụ trợ khác như: dây chuyền dán laminate, thiết bị sản xuất kính mờ. kinh hoa văn, hệ thống máy móc thiết bị gia công cơ khí, tấm ốp nhôm và các thiết bị lắp ráp cửa an toàn, cửa tự động.</p>\r\n<p style="text-align:center;"><img src="/mekong/public/userfiles/image/img-nhamay.png" alt="" width="595" height="395" /></p>\r\n<p style="text-align:center;"><img src="/mekong/public/userfiles/image/img-nhamay-2.png" alt="" width="598" height="325" /></p>\r\n<p style="text-align:center;"><img src="/mekong/public/userfiles/image/img-nhamay-3.png" alt="" width="595" height="249" /></p>', 'nha-may', 'Các nhà máy của Eurowindow đều được trang bị dây chuyên sản xuất tiên tiến, hiện đại, đồng bộ được nhập khẩu từ các nhà cung cấp hàng đầu của CHLB Đức, Italia, Phần Lan và Tây Ban Nha.', 43, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -592,9 +594,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news` (
 --
 
 INSERT INTO `hoiit_module_news` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
-(1, '2012-07-25 06:18:56', 'tieu-de-bac.jpg', NULL, 3, 1, NULL, NULL, NULL, NULL, NULL, 1, 16),
-(2, '2012-08-01 01:35:08', '', NULL, 2, 0, NULL, NULL, NULL, NULL, NULL, 1, 16),
-(3, '2012-08-01 01:35:15', '', NULL, 1, 0, NULL, NULL, NULL, NULL, NULL, 1, 16),
 (4, '2012-08-01 03:20:22', 'che-bung-bau-kheo-nhu-sao-viet.jpg', NULL, 4, 0, NULL, NULL, NULL, NULL, NULL, 1, 16),
 (5, '2012-08-01 03:20:33', 'bi-kip-giam-dau-dau-khi-mang-thai.jpg', NULL, 5, 0, NULL, NULL, NULL, NULL, NULL, 1, 16),
 (6, '2012-08-08 03:13:09', 'chon-giay-nang-niu-doi-chan-ba-bau.jpg', NULL, 6, 0, NULL, NULL, NULL, NULL, NULL, 1, 16),
@@ -690,12 +689,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_languages` (
 --
 
 INSERT INTO `hoiit_module_news_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(1, 'en', '', '', '', '', 'fsdfdfsdfsdf', 0, NULL, NULL),
-(1, 'vi', 'Tieu de "bac"', '<p>sdfsdfsdfsdf</p>', '<p>asdasdsa</p>', 'tieu-de-bac', 'sdfsd', 0, NULL, NULL),
-(2, 'en', '', '<p>asd</p>', '', '', '', 0, NULL, NULL),
-(2, 'vi', 'asdas', '<p>dasdas</p>', '<p>asdsad</p>', 'asdas', '', 0, NULL, NULL),
-(3, 'en', '', '', '', '', '', 0, NULL, NULL),
-(3, 'vi', 'asdasdssdd', '<p>dasdsads</p>', '<p>asdsa</p>', 'asdasdssdd', '', 0, NULL, NULL),
 (4, 'en', 'Cover your belly like a star Vietnamese smart', '<p>Smart dresses that pregnant women are showing that the body is very neat fashion.</p>', '<p><strong>Smart dresses that pregnant women are showing that the body is very neat fashion.</strong></p>\r\n<p>When pregnant, though no longer owns the slim body, sexy as before but has always kept a beautiful fashion pictures for his appearances in public. No longer hugging dresses, sexy rather starry Vietnamese often choose their own design style skirt goes well, baggy belly that just obscures the beauty can still fashionable, so smooth is also being considered as a in the mainstream of the fashion world today. In addition, the vignette style skirt or dress in dark colors is also an effective public service to mask the bloated belly, but when looked through, it was hardly recognizable.</p>\r\n<p>Let''s learn overheard Vietnamese pregnant women in showbiz they cleverly hide belly like circumstances:</p>', 'cover-your-belly-like-a-star-vietnamese-smart', 'Smart dresses that pregnant women are showing that the body is very neat fashion.', 0, NULL, NULL),
 (4, 'vi', 'Che bụng bầu khéo như sao Việt', '<p>Những chiếc váy thông minh giúp các bà bầu khoe được cơ thể gọn gàng mà vẫn thật thời trang.</p>', '<p><strong>Những chiếc váy thông minh giúp các bà bầu khoe được cơ thể gọn gàng mà vẫn thật thời trang.</strong></p>\r\n<p>Khi mang bầu, dù không còn sở hữu thân hình thon gọn, gợi cảm như trước kia nhưng các người đẹp vẫn luôn giữ một hình ảnh thời trang cho mình khi xuất hiện trước công chúng. Không còn là những bộ đầm ôm sát, sexy thay vào đấy sao Việt thường xuyên chọn cho mình các kiểu váy dáng suôn, thụng vừa che lấp bụng bầu mà vẫn thể hiện nét đẹp thời thượng, bởi váy suôn cũng đang được xem là một trong những trào lưu của thời trang thế giới hiện nay. Bên cạnh đó, các kiểu váy in họa tiết hoặc váy tối màu cũng là một công vụ hữu hiệu nhằm che đi chiếc bụng bầu cồng kềnh mà khi nhìn qua, người ta khó có thể nhận ra được.</p>\r\n<p>Hãy cùng học lỏm các bà bầu trong showbiz Việt xem họ khéo léo che bụng bầu như thế nào nhé:</p>\r\n<p style="text-align:center;"><img style="margin-top:5px;margin-bottom:5px;" src="/cms/public/userfiles/image/1344330556-1.jpg" alt="" width="259" height="550" /></p>\r\n<p style="text-align:center;"><img style="margin-top:5px;margin-bottom:5px;" src="/cms/public/userfiles/image/1344330556-2.jpg" alt="" width="470" height="550" /></p>\r\n<p style="text-align:center;"><img style="margin-top:5px;margin-bottom:5px;" src="/cms/public/userfiles/image/1344330556-6.jpg" alt="" width="409" height="550" /></p>\r\n<p style="text-align:left;"> </p>', 'che-bung-bau-kheo-nhu-sao-viet', 'Những chiếc váy thông minh giúp các bà bầu khoe được cơ thể gọn gàng mà vẫn thật thời trang.', 0, NULL, NULL),
 (5, 'en', 'Tip pain of pregnancy', '<p>Headaches are fairly common disease in women, especially women who work office.</p>', '<p>Headaches are fairly common disease in women, especially women who work office.</p>\r\n<p>There are many ways to prevent headaches during pregnancy, without medication, try some of the following measures:</p>\r\n<p>- Determining causes of headache. You should monitor your diet, activity and headaches for a few days to determine the cause and try to avoid headache triggers.</p>\r\n<p>- Exercise daily. Try walking or aerobic exercise all in accordance with your health.</p>\r\n<p>- Control strain. Look for a healthy solution to control stress in life as a reasonable allocation of work and spend more time with loved ones.</p>\r\n<p>- Try eating small meals. The small and regular meals help you maintain stable blood sugar and prevent headaches.</p>\r\n<p>- Drink plenty of water. Providing enough water for your body gives you a sense of euphoria.</p>\r\n<p style="text-align:center;"><img style="margin-top:5px;margin-bottom:5px;" src="/cms/public/userfiles/image/1344333382-babaudaudau1.jpg" alt="" width="500" height="381" /></p>\r\n<p>- Go to bed on time. Sleep disturbances and lack of sleep will lead to headaches during pregnancy. You should go to bed early and wake up on time every day, including weekends.</p>\r\n<p>- Consider biofeedback therapy. With mind-body techniques, you can learn how to control body functions - such as muscle tension, heart rate and blood pressure-to prevent headaches and pain. If you want to try biofeedback therapy to treat headaches during pregnancy, please consult your therapist.</p>\r\n<p><strong>When pain strikes, you go:</strong></p>\r\n<p>- Rest. You are in a dark room, quiet and close your eyes to rest.</p>\r\n<p>- Chuom warm. Apply a warm pad (or a warm towel) on the face, eyes and temples of you or put a piece of ice behind the neck.</p>\r\n<p>- Try massage. Please bother someone shoulder and neck massage to relieve stress, or self-massage temples.</p>\r\n<p>If these measures are not effective, go to the doctor to treat headaches during pregnancy.</p>\r\n<p>Most pregnant women can use acetaminophen and some other drugs to stop headaches. Your doctor can diagnose and prescribe medications for you.</p>', 'tip-pain-of-pregnancy', 'Headaches are fairly common disease in women, especially women who work office.', 0, NULL, NULL),
@@ -723,9 +716,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_save` (
 --
 
 INSERT INTO `hoiit_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456178),
+('day_time', 2456179),
 ('max_count', 1),
-('counter', 4),
+('counter', 5),
 ('yesterday', 1);
 
 -- --------------------------------------------------------
@@ -744,7 +737,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1346984503);
+('''127.0.0.1''', 1347063142);
 
 -- --------------------------------------------------------
 
@@ -948,7 +941,7 @@ INSERT INTO `hoiit_module_products_languages` (`record_id`, `language_id`, `titl
 (5, 'en', 'Maxi-Cosi CabrioFix Infant Carrier', '<p>Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h</p>', '<p>Delivery<br />Home delivery only. Delivery to most customers in the UK is within 5 working days. Please note, we can only deliver this item to mainland UK addresses.</p>\r\n<p>This product is only available for delivery to mainland UK</p>\r\n<p>No Quibble Returns<br />ELC are happy to refund or exchange any unused merchandise returned within 28 days of purchase upon production of your receipt, as long as they are returned in an unused condition and in their original packaging. Please see Terms and Conditions for details</p>', 'maxi-cosi-cabriofix-infant-carrier', 'Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h', 0, NULL, NULL),
 (5, 'vi', 'Maxi-Cosi CabrioFix Infant Carrier', '<p>Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h</p>', '<p>Trang chủ Giao hàng tận nơi chỉ phát. Giao hàng tận nơi hầu hết khách hàng tại Vương quốc Anh trong vòng 5 ngày làm việc. Xin lưu ý, chúng tôi chỉ có thể cung cấp mặt hàng này vào đất liền địa chỉ Vương quốc Anh. Sản phẩm này chỉ có sẵn để giao hàng cho đại lục Vương quốc Anh Không có Trả về phân minh ELC là hạnh phúc hoàn lại hoặc trao đổi bất kỳ hàng hóa không sử dụng trở lại trong vòng 28 ngày kể từ ngày mua khi sản xuất nhận của bạn, miễn là họ được trả về trong một điều kiện không sử dụng và trong bao bì gốc của họ. Xin vui lòng xem Điều khoản và Điều kiện để biết thêm chi tiết</p>', 'maxi-cosi-cabriofix-infant-carrier', 'Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h', 0, NULL, NULL),
 (6, 'en', 'Kids Toy Piano', '<p>Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h</p>', '<p>Delivery<br />Home delivery only. Delivery to most customers in the UK is within 5 working days. Please note, we can only deliver this item to mainland UK addresses.</p>\r\n<p>This product is only available for delivery to mainland UK</p>\r\n<p>No Quibble Returns<br />ELC are happy to refund or exchange any unused merchandise returned within 28 days of purchase upon production of your receipt, as long as they are returned in an unused condition and in their original packaging. Please see Terms and Conditions for details</p>', 'kids-toy-piano', 'Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h', 0, NULL, NULL),
-(6, 'vi', 'Kids Toy Piano', '<p>Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h</p>', '<p>Trang chủ Giao hàng tận nơi chỉ phát. Giao hàng tận nơi hầu hết khách hàng tại Vương quốc Anh trong vòng 5 ngày làm việc. Xin lưu ý, chúng tôi chỉ có thể cung cấp mặt hàng này vào đất liền địa chỉ Vương quốc Anh. Sản phẩm này chỉ có sẵn để giao hàng cho đại lục Vương quốc Anh Không có Trả về phân minh ELC là hạnh phúc hoàn lại hoặc trao đổi bất kỳ hàng hóa không sử dụng trở lại trong vòng 28 ngày kể từ ngày mua khi sản xuất nhận của bạn, miễn là họ được trả về trong một điều kiện không sử dụng và trong bao bì gốc của họ. Xin vui lòng xem Điều khoản và Điều kiện để biết thêm chi tiết</p>', 'kids-toy-piano', 'Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h', 0, NULL, NULL);
+(6, 'vi', 'Kids Toy Piano', '<p>Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h</p>', '<p>Trang chủ Giao hàng tận nơi chỉ phát. Giao hàng tận nơi hầu hết khách hàng tại Vương quốc Anh trong vòng 5 ngày làm việc.</p>\r\n<p>Xin lưu ý, chúng tôi chỉ có thể cung cấp mặt hàng này vào đất liền địa chỉ Vương quốc Anh. Sản phẩm này chỉ có sẵn để giao hàng cho đại lục Vương quốc Anh Không có Trả về phân minh ELC là hạnh phúc hoàn lại hoặc trao đổi bất kỳ hàng hóa không sử dụng trở lại trong vòng 28 ngày kể từ ngày mua khi sản xuất nhận của bạn, miễn là họ được trả về trong một điều kiện không sử dụng và trong bao bì gốc của họ.</p>\r\n<p>Xin vui lòng xem Điều khoản và Điều kiện để biết thêm chi tiết</p>', 'kids-toy-piano', 'Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1002,7 +995,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_recruitment_languages` (
 
 INSERT INTO `hoiit_module_recruitment_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
 (56, 'en', 'Factory', '<p>sadflhashd''kfl</p>\r\n<p>dshf</p>\r\n<ul><li>shkd</li>\r\n<li>hfhk</li>\r\n<li>ádhf</li>\r\n<li>dshfhasdhf</li>\r\n<li>shk</li>\r\n</ul><p>adhf</p>\r\n<ol><li>sdfHladsfds</li>\r\n<li>hfhds</li>\r\n<li>hf</li>\r\n<li>shad</li>\r\n<li>fh</li>\r\n</ol><p>sad</p>', 'factory', '', 1, NULL, NULL),
-(56, 'vi', 'Nhà máy', '<p>ssafgdfgh/hdsf/gh/dfshgdsfhg<br />H</p>\r\n<p>gh</p>\r\n<ol><li>dfh</li>\r\n<li>gdsfh</li>\r\n<li>g</li>\r\n<li>hdfhkgshdf</li>\r\n<li>ghkldsfhg</li>\r\n<li>dsfh</li>\r\n<li>gh</li>\r\n<li>dsf</li>\r\n<li>gdsf</li>\r\n<li>g</li>\r\n<li>dsf</li>\r\n</ol>', 'nha-may', '', 9, NULL, NULL);
+(56, 'vi', 'Nhà máy', '<p>ssafgdfgh/hdsf/gh/dfshgdsfhg<br />H</p>\r\n<p>gh</p>\r\n<ol><li>dfh</li>\r\n<li>gdsfh</li>\r\n<li>g</li>\r\n<li>hdfhkgshdf</li>\r\n<li>ghkldsfhg</li>\r\n<li>dsfh</li>\r\n<li>gh</li>\r\n<li>dsf</li>\r\n<li>gdsf</li>\r\n<li>g</li>\r\n<li>dsf</li>\r\n</ol>', 'nha-may', '', 16, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1125,13 +1118,16 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('right', 2, '1', 'about', NULL, NULL, 'adv_right'),
 ('right', 3, '1', 'about', NULL, NULL, 'list_support'),
 ('right', 4, '1', 'about', NULL, NULL, 'counter'),
+('right', 1, '1', 'recruitment', NULL, NULL, 'adv_left'),
+('right', 2, '1', 'recruitment', NULL, NULL, 'adv_right'),
+('right', 3, '1', 'recruitment', NULL, NULL, 'list_support'),
+('right', 4, '1', 'recruitment', NULL, NULL, 'counter'),
 ('left', 1, '1', 'default', NULL, NULL, 'about_home'),
 ('left', 2, '1', 'default', NULL, NULL, 'products_new'),
-('right', 3, '1', 'default', NULL, NULL, 'news_new'),
-('right', 4, '1', 'default', NULL, NULL, 'adv_left'),
-('right', 5, '1', 'default', NULL, NULL, 'adv_right'),
-('right', 6, '1', 'default', NULL, NULL, 'list_support'),
-('right', 7, '1', 'default', NULL, NULL, 'counter');
+('right', 3, '1', 'default', NULL, NULL, 'adv_left'),
+('right', 4, '1', 'default', NULL, NULL, 'adv_right'),
+('right', 5, '1', 'default', NULL, NULL, 'list_support'),
+('right', 6, '1', 'default', NULL, NULL, 'counter');
 
 -- --------------------------------------------------------
 
@@ -1219,7 +1215,7 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('gioi-thieu/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 1, 0, 'about', 'vi'),
 ('home-page', 'default/default/index', NULL, NULL, 1, 'default', 'en'),
 ('lien-he', 'contact/default/index', '', 1, 1, 'contact', 'vi'),
-('news', 'news/default/index', '', 5, 1, 'news', 'en'),
+('news', 'news/default/index', '', 2, 1, 'news', 'en'),
 ('nha-may', 'factory/default/index', '', 2, 1, 'factory', 'vi'),
 ('products', 'products/default/index', '', 4, 1, 'products', 'en'),
 ('recruitment', 'recruitment/default/index', '', 0, 1, 'recruitment', 'en'),
@@ -1228,11 +1224,11 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('san-pham/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'products/default/view', 'urlSuffix=>.html', 0, 0, 'products', 'vi'),
 ('san-pham/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'products/default/cats', '', 1, 0, 'products', 'vi'),
 ('service', 'service/default/index', '', 2, 1, 'service', 'en'),
-('tin-tuc', 'news/default/index', '', 4, 1, 'news', 'vi'),
-('tin-tuc/<cid:[-a-z0-9]+>', 'news/default/cats', '', 3, 0, 'news', 'vi'),
-('tin-tuc/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'news/default/view', 'urlSuffix=>.html', 0, 0, 'news', 'vi'),
-('tin-tuc/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'news/default/cats', '', 2, 0, 'news', 'vi'),
-('tin-tuc/trang/<page:\\d+>', 'news/default/index', '', 1, 0, 'news', 'vi'),
+('tin-tuc', 'news/default/index', '', 1, 1, 'news', 'vi'),
+('tin-tuc/<cid:[-a-z0-9]+>', 'news/default/cats', '', 4, 0, 'news', 'vi'),
+('tin-tuc/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'news/default/view', 'urlSuffix=>.html', 5, 0, 'news', 'vi'),
+('tin-tuc/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'news/default/cats', '', 3, 0, 'news', 'vi'),
+('tin-tuc/trang/<page:\\d+>', 'news/default/index', '', 0, 0, 'news', 'vi'),
 ('trang-chu', 'default/default/index', NULL, NULL, 1, 'default', 'vi'),
 ('tuyen-dung', 'recruitment/default/index', '', 2, 1, 'recruitment', 'vi');
 
@@ -1364,8 +1360,8 @@ ALTER TABLE `hoiit_module_products_languages`
 -- Constraints for table `hoiit_module_recruitment_languages`
 --
 ALTER TABLE `hoiit_module_recruitment_languages`
-  ADD CONSTRAINT `hoiit_module_recruitment_languages_ibfk_2` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`),
-  ADD CONSTRAINT `hoiit_module_recruitment_languages_ibfk_1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_recruitment` (`record_id`);
+  ADD CONSTRAINT `hoiit_module_recruitment_languages_ibfk_1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_recruitment` (`record_id`),
+  ADD CONSTRAINT `hoiit_module_recruitment_languages_ibfk_2` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`);
 
 --
 -- Constraints for table `hoiit_module_service_languages`
