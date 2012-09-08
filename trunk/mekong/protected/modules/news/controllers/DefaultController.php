@@ -17,7 +17,8 @@ class DefaultController extends Controller {
         $model_class = ucfirst($this->module->id);
         $model = new $model_class();
 		
+		$id = NewsLanguage::model()->getIDByTag($id);
 		
-        $this->render('view', array('item' => $model->detailItem($id)));
+        $this->render('view', array('item' => $model->detailItem($id), 'items_other' => $model->listItemOther($id)));
     }
 }
