@@ -3,6 +3,7 @@
 		'homeLink' => CHtml::link($this->lang['default'], Yii::app()->baseUrl.$this->setLangUrl(), array('title' => $this->lang['default'])),
 		'links'=>$this->breadcrumbs,
 		//'htmlOptions'=>array('class'=>'link'),
+		'separator'=>'<b>&raquo;</b>',
 		//'separator'=>' <img src="'.Yii::app()->theme->baseUrl.'/images/bull.jpg" alt="Bull" title="Bull" />',
 	)); ?>
 	
