@@ -68,4 +68,14 @@ class AdminController extends BackEndController {
         }
 		$this->render('config', array('items' => Config::model()->getNameValue($this->module->id)));
 	}
+        
+    public function actionUrl() {
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.tablednd.0.7.min.js');
+        $model = new Urls();
+        if (Yii::app()->request->getIsPostRequest()) {
+            $model->addItem($this->module->id, Yii::app()->request);
+            $this->refresh();
+        }
+        $this->render('url', array('items' => $model->listByModule($this->module->id)));
+    }
 }
