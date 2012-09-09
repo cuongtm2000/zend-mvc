@@ -3,7 +3,7 @@
 Yii::setPathOfAlias('filePathUpload', '/public/userfiles/');
 $config = array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-    'name' => 'YiiProject.com',
+    'name' => 'Mekongstarwindow.vn',
     'defaultController' => 'default',
 
     // preloading 'log' component

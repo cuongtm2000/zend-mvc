@@ -2,7 +2,7 @@
 <?php $this->pageTitle = $info_cat['cat_title'] . ' - ' . $this->lang[$this->module->id]; $this->setDescription($info_cat['description'])?>
 <?php if($sub_cats):?>
 <div class="main-all-product">
-    <h2 class="title-right">Danh muc con</h2>
+    <h2 class="title-right"><?php echo $info_cat['cat_title']?></h2>
     <ul class="all-product">
         <?php foreach($sub_cats as $value): ?>
             <li class="product">
@@ -20,7 +20,7 @@
 <?php endif?>
 
 <div class="main-all-product">
-    <h2 class="title-right">Sản phẩm danh muc này</h2>
+    <h2 class="title-right"><?php echo $this->lang[$this->module->id] . ' ' . $info_cat['cat_title']?></h2>
     <?php if($items['models']):?>
     <ul class="all-product">
         <?php foreach($items['models'] as $item): ?>
@@ -38,7 +38,7 @@
     </ul><!--End All products-->
     <?php $this->widget('CLinkPager', array('pages' => $items['pages'], 'header'=>'', 'lastPageLabel'=>Yii::t('user', 'last'), 'nextPageLabel'=>Yii::t('user', 'next'), 'firstPageLabel'=>Yii::t('user', 'first'), 'prevPageLabel'=>Yii::t('user', 'prev'), 'htmlOptions'=>array('class'=>'paging')))?>
     <?php else:?>
-        Khong ton tai mau tin
+        <?php echo $this->lang['no_record']?>
     <?php endif?>
     <div class="clear"></div>
 </div>
