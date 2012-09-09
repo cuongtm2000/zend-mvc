@@ -19,6 +19,6 @@
         <?php endforeach; ?>
     </ul>
     <?php else:?>
-        Khong ton tai mau tin
+        <?php echo $this->lang['no_record']?>
     <?php endif;?><div class="clear"></div>
 </div> <!--End main-content-->
