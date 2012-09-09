@@ -46,7 +46,6 @@
 				<p class="price-info"><strong>Giá: <span><?php echo $item['unit']?></span></strong></p>
 				<h4 class="title-info"><span>Mô tả sơ lược</span></h4>
 				<?php echo $item->ProductsLanguage[Yii::app()->language]['preview']?>
-				<p class="bton-cart"><a href="" class="add-to-cart" title="Add to Cart"><span>Đặt hàng</span></a></p>
 			</div> <div class="clear"></div>
 		</div>
 		<?php endif; ?>
@@ -58,7 +57,7 @@
 
 <?php if($other_items):?>
 <div class="frame-panel">
-	<h3 class="title-right"><span>Sản phẩm khác</span></h3>
+	<h3 class="title-right"><span><?php echo $this->lang['products']?> <?php echo $this->lang['other']?></span></h3>
 	<ul class="all-product">
 		<?php foreach($other_items as $value):?>
 		<li class="product">

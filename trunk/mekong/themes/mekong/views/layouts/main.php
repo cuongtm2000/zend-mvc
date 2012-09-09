@@ -35,20 +35,20 @@
 <body>
 <div id="header" class="page-main">
     <div id="logo"><?php $this->widget('ext.Logo.LogoStatic')?></div>
-    
 </div><!--End header-->
-<div class="bg-nav">
-	<div class="page-main position-lang" >
-		<?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel',array('lastItemCssClass' => 'last'));?>
-        <div class="lang">
-			<?php foreach($this->listLanguage as $key => $value):?>
-				<a href="<?php echo Yii::app()->baseUrl?>/<?php echo $key?>" title="<?php echo $value?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $key?>.gif" alt="<?php echo $value?>" /></a>
-			<?php endforeach?>
-		</div>
-		<div class="clear"></div>
-     </div>   
-</div> <!--End bg-nav -->
+
 <div id="wrapper">
+	<div class="bg-nav">
+		<div class="position-lang" >
+			<?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel',array('lastItemCssClass' => 'last'));?>
+			<div class="lang">
+				<?php foreach($this->listLanguage as $key => $value):?>
+					<a href="<?php echo Yii::app()->baseUrl?>/<?php echo $key?>" title="<?php echo $value?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/<?php echo $key?>.gif" alt="<?php echo $value?>" /></a>
+				<?php endforeach?>
+			</div>
+			<div class="clear"></div>
+		 </div>   
+	</div> <!--End bg-nav -->
     <div class="main-content">
         <div id="content">	
 			<?php echo $content; ?>    
@@ -72,12 +72,14 @@
 					<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-6.jpg" alt="" /></a></div></li>
 				</ul> <div class="clear"></div> 
 		</div>
-		<div class="line-menu-footer">
+		
+		<div class="bg-nav">
 			<div class="panel-footer">
 				<?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel', array('id' => 'menu-footer', 'lastItemCssClass' => 'none-line'));?>
 				<a href="" id="top-link" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/top-page.png" alt="top page" /></a>
 			</div>
-		</div><!--End line-menu-footer-->
+		</div>
+		
 		<div class="page-footer">
 			<div class="logo-footer"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo-footer.png" alt=""  /></div>
 			<div class="copyright"><h3 class="company-footer"><?php echo $this->lang['company_footer']?></h3>
