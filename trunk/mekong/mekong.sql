@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 08, 2012 at 12:44 PM
+-- Generation Time: Sep 09, 2012 at 05:57 AM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -271,7 +271,7 @@ INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_url`, `module_
 ('banner', 'Danh sách Banner|Danh sách Logo|Cấu hình', 'banner|banner/logo|banner/config', 6, 1, 0),
 ('contact', 'Danh sách|Cấu hình|Cấu hình Url', 'contact|contact/config|contact/url', 2, 1, 1),
 ('counter', 'Counter', NULL, 4, 0, 0),
-('customer', 'Danh sách|Cấu hình Url', 'customer|customer/url', 2, 1, 1),
+('customer', 'Danh sách|Cấu hình|Cấu hình Url', 'customer|customer/config|customer/url', 2, 1, 1),
 ('default', 'Default', NULL, 1, 1, 1),
 ('factory', 'Danh sách|Cấu hình Url', 'factory|factory/url', 2, 1, 1),
 ('news', 'Danh mục|Danh sách|Cấu hình|Cấu hình Url', 'news/cat|news|news/config|news/url', 4, 1, 1),
@@ -339,7 +339,7 @@ INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`,
 (2, 'en', 'Advantages of uPVC', '<p><img style="float:left;margin:0 10px 8px 0;" src="/mekong/public/userfiles/image/img.png" alt="" width="123" height="98" />Produced by the European quality standards, product of uPVC branded MEKONGSTAR window is synchronized set of components, including: uPVC profile bars box-like structure, is divided into the hollow cavity fitted with steel corereinforcement to increase the bearing capacity for the door, combined with double rings and glass box inert gas is pumped to ensure high-sealed, with good sound insulation. In addition, high-grade uPVC material has the advantages such as: no warping, shrinkage, small painting, routine maintenance, high fire resistance, oxidation, aging or stained gold in terms of solar radiation or acid rain. Therefore, the door retains the original beauty during use. These advantages allow the door to long-term economic efficiency for the user by saving energy costs and routine maintenance.</p>', 'advantages-of-upvc', 'Produced by the European quality standards, product of uPVC branded MEKONGSTAR window is synchronized set of components, including: uPVC profile bars box-like structure', 0, NULL, NULL),
 (2, 'vi', 'Ưu Việt cửa uPVC', '<p><img style="float:left;margin:0 10px 8px 0;" src="/mekong/public/userfiles/image/img.png" alt="" width="123" height="98" />Được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp, được chia thành nhiều khoang rỗng có lắp lõi thép gia cường để tăng khả năng chịu lực cho bộ cửa, kết hợp với hệ gioăng kép và hộp kính được bơm khí trơ đảm bảo độ kín khít cao, có tính cách âm, cách nhiệt tốt. Ngoài ra, vật liệu uPVC cao cấp còn có những ưu điểm khác như: không cong vênh, co ngót, ít phải sơn sửa, bảo dưỡng định kỳ, khả năng chống cháy cao, không bị oxy hóa, không bị lão hóa hay ố vàng trong điều kiện bức xạ mặt trời hay mưa a xít. Chính vì vậy, cửa luôn giữ được vẻ đẹp ban đầu trong suốt thời gian sử dụng. Những ưu điểm này cho phép cửa đem lại hiệu quả kinh tế lâu dài cho người sử dụng nhờ tiết kiệm chi phí điện năng và bảo dưỡng định kỳ.</p>', 'uu-viet-cua-upvc', 'Được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp', 0, NULL, NULL),
 (3, 'en', 'About MekongStar', '<p>MekongStar specialized in manufacturing all kinds of doors are manufactured according to European standards of quality, brand products uPVC door MEKONGSTAR WINDOW synchronized set of components, including: uPVC profile bars box-like structure, which is divided intomany empty cabins fitted with steel core to increase the bearing capacity for the door, combined with double rings and glass box inert gas is pumped to ensure high-sealed, with good sound insulation. In addition, high-grade uPVC material has the advantages such as: no warping, shrinkage, small painting, routine maintenance, high fire resistance, oxidation, aging or stained gold in terms of solar radiation or acid rain. Therefore, the door retains the original beauty during use. These advantages allow the door to long-term economic efficiency for the user by saving energy costs and routine maintenance.</p>', 'about-mekongstar', 'MekongStar specialized in manufacturing all kinds of doors are manufactured according to European standards of quality, brand products uPVC door MEKONGSTAR WINDOW', 0, NULL, NULL),
-(3, 'vi', 'Giới thiệu về MekongStar', '<p>MekongStar chuyên sản xuất các loại cửa được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp, được chia thành nhiều khoang rỗng có lắp lõi thép gia cường để tăng khả năng chịu lực cho bộ cửa, kết hợp với hệ gioăng kép và hộp kính được bơm khí trơ đảm bảo độ kín khít cao, có tính cách âm, cách nhiệt tốt. Ngoài ra, vật liệu uPVC cao cấp còn có những ưu điểm khác như: không cong vênh, co ngót, ít phải sơn sửa, bảo dưỡng định kỳ, khả năng chống cháy cao, không bị oxy hóa, không bị lão hóa hay ố vàng trong điều kiện bức xạ mặt trời hay mưa a xít. Chính vì vậy, cửa luôn giữ được vẻ đẹp ban đầu trong suốt thời gian sử dụng. Những ưu điểm này cho phép cửa đem lại hiệu quả kinh tế lâu dài cho người sử dụng nhờ tiết kiệm chi phí điện năng và bảo dưỡng định kỳ.</p>', 'gioi-thieu-ve-mekongstar', 'MekongStar chuyên sản xuất các loại cửa được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm', 25, NULL, NULL);
+(3, 'vi', 'Giới thiệu về MekongStar', '<p>MekongStar chuyên sản xuất các loại cửa được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp, được chia thành nhiều khoang rỗng có lắp lõi thép gia cường để tăng khả năng chịu lực cho bộ cửa, kết hợp với hệ gioăng kép và hộp kính được bơm khí trơ đảm bảo độ kín khít cao, có tính cách âm, cách nhiệt tốt. Ngoài ra, vật liệu uPVC cao cấp còn có những ưu điểm khác như: không cong vênh, co ngót, ít phải sơn sửa, bảo dưỡng định kỳ, khả năng chống cháy cao, không bị oxy hóa, không bị lão hóa hay ố vàng trong điều kiện bức xạ mặt trời hay mưa a xít. Chính vì vậy, cửa luôn giữ được vẻ đẹp ban đầu trong suốt thời gian sử dụng. Những ưu điểm này cho phép cửa đem lại hiệu quả kinh tế lâu dài cho người sử dụng nhờ tiết kiệm chi phí điện năng và bảo dưỡng định kỳ.</p>', 'gioi-thieu-ve-mekongstar', 'MekongStar chuyên sản xuất các loại cửa được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm', 26, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -481,7 +481,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_customer` (
 
 INSERT INTO `hoiit_module_customer` (`record_id`, `title`, `pic_thumb`, `pic_full`, `address`, `website`, `create_date`, `description`, `record_order`, `tag`, `enable`) VALUES
 (15, 'Quảng cáo Logo', 'quang-cao-logo.jpg', '', '', 'http://dos.vn', '2012-07-20 00:22:52', '0', 2, '', 1),
-(16, 'Group Lap trình', 'logo-right-7.jpg', 'logo-right-4.jpg', 'dfgdsa', 'http://grouplaptrinh.com', '2012-07-20 01:45:53', '012agjlk;ahga\r\ngha\r\nh\r\ng\r\náh\r\nghá\r\nghákd\r\ngà\r\ngjsadfkhska\r\nfj\r\nkd\r\nksfhas\r\nldkf\r\nư lê', 5, '', 1),
+(16, 'Group Lap trình', 'logo-right-7.jpg', 'logo-right-4.jpg', 'dfgdsa', 'http://grouplaptrinh.com', '2012-07-20 01:45:53', '012agjlk;ahga\r\ngha\r\nh\r\ng\r\náh\r\nghá\r\nghákd\r\ngà\r\ngjsadfkhska\r\nfj\r\nkd\r\nksfhas\r\nldkf\r\nư lê', 5, 'group-lap-trinh', 1),
 (17, 'Quảng cáo', 'quang-cao.jpg', '', '', '', '2012-07-20 01:51:12', '0', 1, '', 1),
 (18, 'Quảng cáo', 'quang-cao1.jpg', '', '', '', '2012-07-20 01:54:15', '0', 3, '', 1),
 (19, 'Quảng cáo Logo', '', '', 'df', '', '2012-07-22 02:16:26', '0', 4, '', 1);
@@ -764,9 +764,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_save` (
 --
 
 INSERT INTO `hoiit_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456179),
+('day_time', 2456180),
 ('max_count', 1),
-('counter', 5),
+('counter', 6),
 ('yesterday', 1);
 
 -- --------------------------------------------------------
@@ -785,7 +785,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1347100877);
+('''127.0.0.1''', 1347162245);
 
 -- --------------------------------------------------------
 
@@ -1257,13 +1257,14 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('<lang:[a-z]{2}>/about-us/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 0, 0, 'about', 'en'),
 ('about-us', 'about/default/index', '', 2, 1, 'about', 'en'),
 ('contact', 'contact/default/index', '', 0, 1, 'contact', 'en'),
-('customer', 'customer/default/index', '', 2, 1, 'customer', 'en'),
+('customer', 'customer/default/index', '', 0, 0, 'customer', 'en'),
 ('dich-vu', 'service/default/index', '', 2, 1, 'service', 'vi'),
 ('factory', 'factory/default/index', '', 2, 1, 'factory', 'en'),
 ('gioi-thieu', 'about/default/index', '', 2, 1, 'about', 'vi'),
 ('gioi-thieu/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 1, 0, 'about', 'vi'),
 ('home-page', 'default/default/index', NULL, NULL, 1, 'default', 'en'),
-('khach-hang-doi-tac', 'customer/default/index', '', 2, 1, 'customer', 'vi'),
+('khach-hang-doi-tac', 'customer/default/index', '', 1, 1, 'customer', 'vi'),
+('khach-hang-doi-tac/<id:[-a-z0-9]+>', 'customer/default/view', 'urlSuffix=>.html', 0, 0, 'customer', 'vi'),
 ('lien-he', 'contact/default/index', '', 1, 1, 'contact', 'vi'),
 ('news', 'news/default/index', '', 2, 1, 'news', 'en'),
 ('nha-may', 'factory/default/index', '', 2, 1, 'factory', 'vi'),
