@@ -24,16 +24,23 @@ class Controller extends CController {
         Common::setLanguage(); //Setup language
         $this->lang = Lang::model()->getLang(Yii::app()->language);
     }
-
-    public function setLangUrl() { //kiem tra lai xem co ai sai ko, ko thi xoa di
-        $langDefault = Yii::app()->controller->setting['default_language'];
-        if (Yii::app()->language == $langDefault) {
-            return '';
-        } else {
-            return '/' . Yii::app()->language;
+ 
+    
+    
+    
+    public function setLangUrl($type = 0) {
+        $url ='';// Yii::app()->baseUrl;
+        $lang = isset(Yii::app()->controller->setting['default_language']) ? Yii::app()->controller->setting['default_language'] : Yii::app()->params['default_language'];
+        if (Yii::app()->language == $lang) {
+            return $url;
+        } else if ($type == 1) {
+            return $url . Yii::app()->language;
         }
+        return $url . Yii::app()->language . '/';
     }
-
+    
+    
+    
     public function setUrlModule($module = null) {
         return $this->setLangUrl() . '/' . Urls::model()->getPatternModule(($module) ? $module : $this->module->id);
     }
