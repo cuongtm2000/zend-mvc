@@ -43,7 +43,7 @@ class Customer extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('title,  address, create_date, description', 'required'),
+            array('title, tag, address, create_date, description', 'required'),
             array('record_order, enable', 'numerical', 'integerOnly' => true),
             array('title, pic_thumb, pic_full', 'length', 'max' => 100),
             array('address', 'length', 'max' => 255),
