@@ -3,7 +3,7 @@
 class DefaultController extends Controller {
 
     public function actionIndex() {
-        $this->render('index', array('item' => About::model()->firstRecord()));
+        $this->render('index', array('item' => Customer::model()->listItemAdmin()));
     }
 
     public function actionView($id) {
