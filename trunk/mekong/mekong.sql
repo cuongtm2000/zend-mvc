@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.0
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 09, 2012 at 05:57 AM
--- Server version: 5.5.8
--- PHP Version: 5.3.5
+-- Generation Time: Sep 09, 2012 at 10:01 AM
+-- Server version: 5.5.16
+-- PHP Version: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -58,8 +58,8 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('contact_port', '465', NULL, 'contact'),
 ('contact_send_mail_smtp', '1', NULL, 'contact'),
 ('contact_username', 'thanhansoft', NULL, 'contact'),
-('customer_height', '200', NULL, 'customer'),
-('customer_width', '200', NULL, 'customer'),
+('customer_height', '130', NULL, 'customer'),
+('customer_width', '140', NULL, 'customer'),
 ('logo_height', '114', NULL, 'banner'),
 ('logo_width', '403', NULL, 'banner'),
 ('news_cat_height_thumb', '200', NULL, 'news'),
@@ -339,7 +339,7 @@ INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`,
 (2, 'en', 'Advantages of uPVC', '<p><img style="float:left;margin:0 10px 8px 0;" src="/mekong/public/userfiles/image/img.png" alt="" width="123" height="98" />Produced by the European quality standards, product of uPVC branded MEKONGSTAR window is synchronized set of components, including: uPVC profile bars box-like structure, is divided into the hollow cavity fitted with steel corereinforcement to increase the bearing capacity for the door, combined with double rings and glass box inert gas is pumped to ensure high-sealed, with good sound insulation. In addition, high-grade uPVC material has the advantages such as: no warping, shrinkage, small painting, routine maintenance, high fire resistance, oxidation, aging or stained gold in terms of solar radiation or acid rain. Therefore, the door retains the original beauty during use. These advantages allow the door to long-term economic efficiency for the user by saving energy costs and routine maintenance.</p>', 'advantages-of-upvc', 'Produced by the European quality standards, product of uPVC branded MEKONGSTAR window is synchronized set of components, including: uPVC profile bars box-like structure', 0, NULL, NULL),
 (2, 'vi', 'Ưu Việt cửa uPVC', '<p><img style="float:left;margin:0 10px 8px 0;" src="/mekong/public/userfiles/image/img.png" alt="" width="123" height="98" />Được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp, được chia thành nhiều khoang rỗng có lắp lõi thép gia cường để tăng khả năng chịu lực cho bộ cửa, kết hợp với hệ gioăng kép và hộp kính được bơm khí trơ đảm bảo độ kín khít cao, có tính cách âm, cách nhiệt tốt. Ngoài ra, vật liệu uPVC cao cấp còn có những ưu điểm khác như: không cong vênh, co ngót, ít phải sơn sửa, bảo dưỡng định kỳ, khả năng chống cháy cao, không bị oxy hóa, không bị lão hóa hay ố vàng trong điều kiện bức xạ mặt trời hay mưa a xít. Chính vì vậy, cửa luôn giữ được vẻ đẹp ban đầu trong suốt thời gian sử dụng. Những ưu điểm này cho phép cửa đem lại hiệu quả kinh tế lâu dài cho người sử dụng nhờ tiết kiệm chi phí điện năng và bảo dưỡng định kỳ.</p>', 'uu-viet-cua-upvc', 'Được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp', 0, NULL, NULL),
 (3, 'en', 'About MekongStar', '<p>MekongStar specialized in manufacturing all kinds of doors are manufactured according to European standards of quality, brand products uPVC door MEKONGSTAR WINDOW synchronized set of components, including: uPVC profile bars box-like structure, which is divided intomany empty cabins fitted with steel core to increase the bearing capacity for the door, combined with double rings and glass box inert gas is pumped to ensure high-sealed, with good sound insulation. In addition, high-grade uPVC material has the advantages such as: no warping, shrinkage, small painting, routine maintenance, high fire resistance, oxidation, aging or stained gold in terms of solar radiation or acid rain. Therefore, the door retains the original beauty during use. These advantages allow the door to long-term economic efficiency for the user by saving energy costs and routine maintenance.</p>', 'about-mekongstar', 'MekongStar specialized in manufacturing all kinds of doors are manufactured according to European standards of quality, brand products uPVC door MEKONGSTAR WINDOW', 0, NULL, NULL),
-(3, 'vi', 'Giới thiệu về MekongStar', '<p>MekongStar chuyên sản xuất các loại cửa được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp, được chia thành nhiều khoang rỗng có lắp lõi thép gia cường để tăng khả năng chịu lực cho bộ cửa, kết hợp với hệ gioăng kép và hộp kính được bơm khí trơ đảm bảo độ kín khít cao, có tính cách âm, cách nhiệt tốt. Ngoài ra, vật liệu uPVC cao cấp còn có những ưu điểm khác như: không cong vênh, co ngót, ít phải sơn sửa, bảo dưỡng định kỳ, khả năng chống cháy cao, không bị oxy hóa, không bị lão hóa hay ố vàng trong điều kiện bức xạ mặt trời hay mưa a xít. Chính vì vậy, cửa luôn giữ được vẻ đẹp ban đầu trong suốt thời gian sử dụng. Những ưu điểm này cho phép cửa đem lại hiệu quả kinh tế lâu dài cho người sử dụng nhờ tiết kiệm chi phí điện năng và bảo dưỡng định kỳ.</p>', 'gioi-thieu-ve-mekongstar', 'MekongStar chuyên sản xuất các loại cửa được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm', 26, NULL, NULL);
+(3, 'vi', 'Giới thiệu về MekongStar', '<p>MekongStar chuyên sản xuất các loại cửa được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp, được chia thành nhiều khoang rỗng có lắp lõi thép gia cường để tăng khả năng chịu lực cho bộ cửa, kết hợp với hệ gioăng kép và hộp kính được bơm khí trơ đảm bảo độ kín khít cao, có tính cách âm, cách nhiệt tốt. Ngoài ra, vật liệu uPVC cao cấp còn có những ưu điểm khác như: không cong vênh, co ngót, ít phải sơn sửa, bảo dưỡng định kỳ, khả năng chống cháy cao, không bị oxy hóa, không bị lão hóa hay ố vàng trong điều kiện bức xạ mặt trời hay mưa a xít. Chính vì vậy, cửa luôn giữ được vẻ đẹp ban đầu trong suốt thời gian sử dụng. Những ưu điểm này cho phép cửa đem lại hiệu quả kinh tế lâu dài cho người sử dụng nhờ tiết kiệm chi phí điện năng và bảo dưỡng định kỳ.</p>', 'gioi-thieu-ve-mekongstar', 'MekongStar chuyên sản xuất các loại cửa được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm', 39, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -480,11 +480,11 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_customer` (
 --
 
 INSERT INTO `hoiit_module_customer` (`record_id`, `title`, `pic_thumb`, `pic_full`, `address`, `website`, `create_date`, `description`, `record_order`, `tag`, `enable`) VALUES
-(15, 'Quảng cáo Logo', 'quang-cao-logo.jpg', '', '', 'http://dos.vn', '2012-07-20 00:22:52', '0', 2, '', 1),
-(16, 'Group Lap trình', 'logo-right-7.jpg', 'logo-right-4.jpg', 'dfgdsa', 'http://grouplaptrinh.com', '2012-07-20 01:45:53', '012agjlk;ahga\r\ngha\r\nh\r\ng\r\náh\r\nghá\r\nghákd\r\ngà\r\ngjsadfkhska\r\nfj\r\nkd\r\nksfhas\r\nldkf\r\nư lê', 5, 'group-lap-trinh', 1),
+(15, 'Quảng cáo 1', 'quang-cao-1.jpg', 'quang-cao-1-6.jpg', 'fdsfsdffs', 'http://dos.vn', '2012-07-20 00:22:52', '0', 2, 'quang-cao-1', 1),
+(16, 'Group Lap trình', 'group-lap-trinh.jpg', 'group-lap-trinh-8.jpg', 'dfgdsa', 'http://grouplaptrinh.com', '2012-07-20 01:45:53', 'Cửa sổ mở trượt\r\nCửa sổ mở hất ra ngoài\r\nCửa sổ mở quay lật vào trong\r\nCửa sổ mở quay\r\nCửa đi mở trượt\r\nCửa chống đạn\r\nCửa sổ mở quay ra ngoài\r\nCửa nhôm gỗ\r\nCửa nhôm Domal', 5, 'group-lap-trinh', 1),
 (17, 'Quảng cáo', 'quang-cao.jpg', '', '', '', '2012-07-20 01:51:12', '0', 1, '', 1),
 (18, 'Quảng cáo', 'quang-cao1.jpg', '', '', '', '2012-07-20 01:54:15', '0', 3, '', 1),
-(19, 'Quảng cáo Logo', '', '', 'df', '', '2012-07-22 02:16:26', '0', 4, '', 1);
+(19, 'Quảng cáo 2', 'quang-cao-2-3.jpg', 'quang-cao-2-4.jpg', 'df', 'http://', '2012-07-22 02:16:26', '0', 4, 'quang-cao-2', 1);
 
 -- --------------------------------------------------------
 
@@ -555,7 +555,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus` (
   `menu_homepage` tinyint(1) NOT NULL DEFAULT '0',
   `menu_activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=37 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=38 ;
 
 --
 -- Dumping data for table `hoiit_module_menus`
@@ -570,7 +570,8 @@ INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_type`, `menu_tar
 (33, 0, 1, '', 3, 0, 1),
 (34, 0, 1, '', 33, 0, 1),
 (35, 0, 1, '', 35, 0, 1),
-(36, 0, 1, '', 32, 0, 1);
+(36, 0, 1, '', 32, 0, 1),
+(37, 29, 0, '', 37, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -607,11 +608,13 @@ INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name
 (33, 'en', 'Factory', 'factory', ''),
 (33, 'vi', 'Nhà máy', 'nha-may', ''),
 (34, 'en', 'Service', 'service', ''),
-(34, 'vi', 'Dịch vụ', 'dich-vu', ''),
+(34, 'vi', 'Tư Vấn - Dịch vụ', 'dich-vu', ''),
 (35, 'en', 'Recruitment', 'recruitment', ''),
 (35, 'vi', 'Tuyển dụng', 'tuyen-dung', ''),
-(36, 'en', 'Customer', 'customer', ''),
-(36, 'vi', 'Đối tác-Khách hàng', 'khach-hang-doi-tac', '');
+(36, 'en', 'Customer', '', ''),
+(36, 'vi', 'Khách hàng - Đối tác', 'khach-hang-doi-tac', 'Khách hàng - Đối tác'),
+(37, 'en', 'Open window turned into', 'product/open-window-turned-into', ''),
+(37, 'vi', 'Cửa sổ mở quay vào trong', 'san-pham/cua-so-mo-quay-vao-trong', '');
 
 -- --------------------------------------------------------
 
@@ -785,7 +788,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1347162245);
+('''127.0.0.1''', 1347172823);
 
 -- --------------------------------------------------------
 
@@ -892,22 +895,30 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products_cat` (
   `cat_extra2` varchar(100) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
 
 --
 -- Dumping data for table `hoiit_module_products_cat`
 --
 
 INSERT INTO `hoiit_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
-(5, 0, '2012-07-25 06:28:10', 'giay-dep.jpg', NULL, 0, 5, NULL, NULL, 1),
+(5, 0, '2012-07-25 06:28:10', 'giay-dep.jpg', NULL, 0, 20, NULL, NULL, 1),
 (6, 5, '2012-07-30 13:45:47', '', NULL, 0, 6, NULL, NULL, 1),
-(7, 0, '2012-07-31 04:00:12', '', NULL, 0, 7, NULL, NULL, 1),
+(7, 0, '2012-07-31 04:00:12', '', NULL, 0, 21, NULL, NULL, 1),
 (8, 6, '2012-08-09 02:56:41', '', NULL, 0, 8, NULL, NULL, 1),
 (9, 5, '2012-08-09 04:01:21', '', NULL, 0, 9, NULL, NULL, 1),
 (10, 5, '2012-08-09 07:34:14', '', NULL, 0, 10, NULL, NULL, 1),
 (11, 10, '2012-08-09 07:34:33', '', NULL, 0, 11, NULL, NULL, 1),
 (12, 10, '2012-08-09 07:34:43', '', NULL, 0, 12, NULL, NULL, 1),
-(13, 6, '2012-08-09 10:10:45', '', NULL, 0, 13, NULL, NULL, 1);
+(13, 6, '2012-08-09 10:10:45', '', NULL, 0, 13, NULL, NULL, 1),
+(14, 0, '2012-09-09 06:18:17', '', NULL, 0, 19, NULL, NULL, 1),
+(15, 0, '2012-09-09 06:18:33', '', NULL, 0, 18, NULL, NULL, 1),
+(16, 0, '2012-09-09 06:18:53', '', NULL, 0, 17, NULL, NULL, 1),
+(17, 0, '2012-09-09 06:19:15', '', NULL, 0, 16, NULL, NULL, 1),
+(18, 0, '2012-09-09 06:19:32', '', NULL, 0, 15, NULL, NULL, 1),
+(19, 0, '2012-09-09 06:19:50', '', NULL, 0, 14, NULL, NULL, 1),
+(20, 0, '2012-09-09 06:20:31', '', NULL, 0, 7, NULL, NULL, 1),
+(21, 0, '2012-09-09 06:20:45', '', NULL, 0, 5, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -932,12 +943,12 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products_cat_languages` (
 --
 
 INSERT INTO `hoiit_module_products_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
-(5, 'en', 'Footwear', '', 'footwear', 'Footwear'),
-(5, 'vi', 'Giày dép', '', 'giay-dep', 'Giày dép'),
+(5, 'en', 'Sliding window open', '', 'sliding-window-open', 'Sliding window open'),
+(5, 'vi', 'Cửa sổ mở trượt', '', 'cua-so-mo-truot', 'Cửa sổ mở trượt'),
 (6, 'en', '', '', '', ''),
 (6, 'vi', 'Sub cat', '', 'sub-cat', ''),
-(7, 'en', 'Outdoor Toys', '', 'outdoor-toys', 'Outdoor Toys'),
-(7, 'vi', 'Ngoài trời đồ chơi', '', 'ngoai-troi-do-choi', 'Ngoài trời đồ chơi'),
+(7, 'en', 'Open window turned into', '', 'open-window-turned-into', 'Open window turned into'),
+(7, 'vi', 'Cửa sổ mở quay vào trong', '', 'cua-so-mo-quay-vao-trong', 'Cửa sổ mở quay vào trong'),
 (8, 'en', '', '', '', ''),
 (8, 'vi', 'Sub sub', '', 'sub-sub', ''),
 (9, 'en', '', '', '', ''),
@@ -949,7 +960,23 @@ INSERT INTO `hoiit_module_products_cat_languages` (`cat_id`, `language_id`, `cat
 (12, 'en', '', '', '', ''),
 (12, 'vi', 'Xe hết hơi', '', 'xe-het-hoi', ''),
 (13, 'en', '', '', '', ''),
-(13, 'vi', 'Sub sub cat', '', 'sub-sub-cat', '');
+(13, 'vi', 'Sub sub cat', '', 'sub-sub-cat', ''),
+(14, 'en', 'Open windows knocked out', '', 'open-windows-knocked-out', 'Open windows knocked out'),
+(14, 'vi', 'Cửa sổ mở hất ra ngoài', '', 'cua-so-mo-hat-ra-ngoai', 'Cửa sổ mở hất ra ngoài'),
+(15, 'en', 'Back flip into the open window', '', 'back-flip-into-the-open-window', 'Back flip into the open window'),
+(15, 'vi', 'Cửa sổ mở quay lật vào trong', '', 'cua-so-mo-quay-lat-vao-trong', 'Cửa sổ mở quay lật vào trong'),
+(16, 'en', 'Open back window', '', 'open-back-window', 'Open back window'),
+(16, 'vi', 'Cửa sổ mở quay', '', 'cua-so-mo-quay', 'Cửa sổ mở quay'),
+(17, 'en', 'Sliding doors open', '', 'sliding-doors-open', 'Sliding doors open'),
+(17, 'vi', 'Cửa đi mở trượt', '', 'cua-di-mo-truot', 'Cửa đi mở trượt'),
+(18, 'en', 'Bulletproof doors', '', 'bulletproof-doors', 'Bulletproof doors'),
+(18, 'vi', 'Cửa chống đạn', '', 'cua-chong-dan', 'Cửa chống đạn'),
+(19, 'en', 'Open window turned out', '', 'open-window-turned-out', 'Open window turned out'),
+(19, 'vi', 'Cửa sổ mở quay ra ngoài', '', 'cua-so-mo-quay-ra-ngoai', 'Cửa sổ mở quay ra ngoài'),
+(20, 'en', 'Aluminum windows wood', '', 'aluminum-windows-wood', 'Aluminum windows wood'),
+(20, 'vi', 'Cửa nhôm gỗ', '', 'cua-nhom-go', 'Cửa nhôm gỗ'),
+(21, 'en', 'Aluminum doors Domal', '', 'aluminum-doors-domal', 'Aluminum doors Domal'),
+(21, 'vi', 'Cửa nhôm Domal', '', 'cua-nhom-domal', 'Cửa nhôm Domal');
 
 -- --------------------------------------------------------
 
@@ -1043,7 +1070,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_recruitment_languages` (
 
 INSERT INTO `hoiit_module_recruitment_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
 (56, 'en', 'Factory', '<p>sadflhashd''kfl</p>\r\n<p>dshf</p>\r\n<ul><li>shkd</li>\r\n<li>hfhk</li>\r\n<li>ádhf</li>\r\n<li>dshfhasdhf</li>\r\n<li>shk</li>\r\n</ul><p>adhf</p>\r\n<ol><li>sdfHladsfds</li>\r\n<li>hfhds</li>\r\n<li>hf</li>\r\n<li>shad</li>\r\n<li>fh</li>\r\n</ol><p>sad</p>', 'factory', '', 1, NULL, NULL),
-(56, 'vi', 'Nhà máy', '<p>ssafgdfgh/hdsf/gh/dfshgdsfhg<br />H</p>\r\n<p>gh</p>\r\n<ol><li>dfh</li>\r\n<li>gdsfh</li>\r\n<li>g</li>\r\n<li>hdfhkgshdf</li>\r\n<li>ghkldsfhg</li>\r\n<li>dsfh</li>\r\n<li>gh</li>\r\n<li>dsf</li>\r\n<li>gdsf</li>\r\n<li>g</li>\r\n<li>dsf</li>\r\n</ol>', 'nha-may', '', 17, NULL, NULL);
+(56, 'vi', 'Nhà máy', '<p>ssafgdfgh/hdsf/gh/dfshgdsfhg<br />H</p>\r\n<p>gh</p>\r\n<ol><li>dfh</li>\r\n<li>gdsfh</li>\r\n<li>g</li>\r\n<li>hdfhkgshdf</li>\r\n<li>ghkldsfhg</li>\r\n<li>dsfh</li>\r\n<li>gh</li>\r\n<li>dsf</li>\r\n<li>gdsf</li>\r\n<li>g</li>\r\n<li>dsf</li>\r\n</ol>', 'nha-may', '', 18, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1097,7 +1124,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_service_languages` (
 
 INSERT INTO `hoiit_module_service_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
 (56, 'en', 'Factory', '<p>sadflhashd''kfl</p>\r\n<p>dshf</p>\r\n<ul><li>shkd</li>\r\n<li>hfhk</li>\r\n<li>ádhf</li>\r\n<li>dshfhasdhf</li>\r\n<li>shk</li>\r\n</ul><p>adhf</p>\r\n<ol><li>sdfHladsfds</li>\r\n<li>hfhds</li>\r\n<li>hf</li>\r\n<li>shad</li>\r\n<li>fh</li>\r\n</ol><p>sad</p>', 'factory', '', 1, NULL, NULL),
-(56, 'vi', 'Nhà máy', '<p>ssafgdfgh/hdsf/gh/dfshgdsfhg<br />H</p>\r\n<p>gh</p>\r\n<ol><li>dfh</li>\r\n<li>gdsfh</li>\r\n<li>g</li>\r\n<li>hdfhkgshdf</li>\r\n<li>ghkldsfhg</li>\r\n<li>dsfh</li>\r\n<li>gh</li>\r\n<li>dsf</li>\r\n<li>gdsf</li>\r\n<li>g</li>\r\n<li>dsf</li>\r\n</ol>', 'nha-may', '', 8, NULL, NULL);
+(56, 'vi', 'Nhà máy', '<p>ssafgdfgh/hdsf/gh/dfshgdsfhg<br />H</p>\r\n<p>gh</p>\r\n<ol><li>dfh</li>\r\n<li>gdsfh</li>\r\n<li>g</li>\r\n<li>hdfhkgshdf</li>\r\n<li>ghkldsfhg</li>\r\n<li>dsfh</li>\r\n<li>gh</li>\r\n<li>dsf</li>\r\n<li>gdsf</li>\r\n<li>g</li>\r\n<li>dsf</li>\r\n</ol>', 'nha-may', '', 11, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1162,20 +1189,23 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('right', 2, '1', 'products', NULL, NULL, 'list_support'),
 ('right', 3, '1', 'products', NULL, NULL, 'adv_left'),
 ('right', 4, '1', 'products', NULL, NULL, 'adv_right'),
-('right', 1, '1', 'about', NULL, NULL, 'adv_left'),
-('right', 2, '1', 'about', NULL, NULL, 'adv_right'),
-('right', 3, '1', 'about', NULL, NULL, 'list_support'),
-('right', 4, '1', 'about', NULL, NULL, 'counter'),
-('right', 1, '1', 'recruitment', NULL, NULL, 'adv_left'),
-('right', 2, '1', 'recruitment', NULL, NULL, 'adv_right'),
-('right', 3, '1', 'recruitment', NULL, NULL, 'list_support'),
-('right', 4, '1', 'recruitment', NULL, NULL, 'counter'),
 ('left', 1, '1', 'default', NULL, NULL, 'about_home'),
 ('left', 2, '1', 'default', NULL, NULL, 'products_new'),
 ('right', 3, '1', 'default', NULL, NULL, 'adv_left'),
 ('right', 4, '1', 'default', NULL, NULL, 'adv_right'),
 ('right', 5, '1', 'default', NULL, NULL, 'list_support'),
-('right', 6, '1', 'default', NULL, NULL, 'counter');
+('right', 1, '1', 'about', NULL, NULL, 'adv_left'),
+('right', 2, '1', 'about', NULL, NULL, 'adv_right'),
+('right', 3, '1', 'about', NULL, NULL, 'list_support'),
+('right', 1, '1', 'recruitment', NULL, NULL, 'adv_left'),
+('right', 2, '1', 'recruitment', NULL, NULL, 'adv_right'),
+('right', 3, '1', 'recruitment', NULL, NULL, 'list_support'),
+('right', 1, '1', 'service', NULL, NULL, 'list_support'),
+('right', 2, '1', 'service', NULL, NULL, 'adv_left'),
+('right', 3, '1', 'service', NULL, NULL, 'adv_right'),
+('right', 1, '1', 'customer', NULL, NULL, 'adv_left'),
+('right', 2, '1', 'customer', NULL, NULL, 'adv_right'),
+('right', 3, '1', 'customer', NULL, NULL, 'list_support');
 
 -- --------------------------------------------------------
 
