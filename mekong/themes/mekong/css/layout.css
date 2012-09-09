@@ -104,7 +104,7 @@ a:hover{color:#000;}
 #right-content .all-product{margin:0;padding:5px 0 0 0; list-style:none}
 #right-content .all-product .product{width:200px;text-align:center;margin:0 0 15px 5px;display:inline-block;vertical-align:top}
 .product-img{width:200px;background:#fff;height:140px;display:table-cell;vertical-align:middle;border:2px solid #D4D5D9}
-.line-bottom-product{background:url(../images/pro-line-footer.png) no-repeat; height:6px;margin-bottom:2px}
+.line-bottom-product{background:url(../images/pro-line-footer-2.png) no-repeat; height:6px;margin-bottom:2px}
 #right-content .price{font-size:14px; font-weight:bold; color:#0b51b5;margin-top:5px}
 .title-product a{color:#fff;font-size:16px} .title-product{font-weight:normal;margin-top:5px}
 .title-product a:hover{color:#009cfb}
@@ -206,7 +206,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .partner-top-line{background:url(../images/partner-line-top.png) repeat-x;padding:20px 10px 0 10px;margin-bottom:20px}
 .partner{float:left;padding-top:5px}
 .partner-group{list-style:none}
-.partner-group li{float:left; width:140px;background:url(../images/partner-line.png) no-repeat right;margin-left:20px}
+.partner-group li{float:left; width:140px;background:url(../images/partner-line-2.png) no-repeat right;margin-left:20px}
 .partner-img{display:table-cell; vertical-align:middle;height:90px}
 
 /*Footer*/
