@@ -122,6 +122,7 @@ class Customer extends CActiveRecord {
 
     //Back end - Get record to Edit
     public function loadEdit($id) {
+        echo $id;
         $_model = $this->findByPk($id);
         if ($_model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');
