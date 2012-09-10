@@ -23,14 +23,10 @@
 	<title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->setting['title']) ? ' - '.CHtml::encode($this->setting['title']) : '' ?></title>
     <meta name="keywords" content="<?php echo CHtml::encode($this->setting['keywords']) ?>" />
     <meta name="description" content="<?php echo CHtml::encode($this->description) ?>" />
-
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/prettyPhoto.css"  />
-	<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.prettyPhoto.js"></script>
 	
-
-<!--[if lt IE 8]>
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/ie6.css" />
-<![endif]-->
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/ie6.css" />
+	<![endif]-->
 </head>
 <body>
 <div id="header" class="page-main">
