@@ -2,7 +2,11 @@
 
 class DefaultController extends Controller {
     public function actionIndex() {
-        $model_class = ucfirst($this->module->id) . 'Cat';
+		
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/css/prettyPhoto.css');
+		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/js/jquery.prettyPhoto.js');
+        
+		$model_class = ucfirst($this->module->id) . 'Cat';
         $model = new $model_class;
 
         $this->render('index', array('items' => $model->listItem()));

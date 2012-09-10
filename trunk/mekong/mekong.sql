@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 10, 2012 at 10:42 AM
+-- Generation Time: Sep 10, 2012 at 10:46 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -87,13 +87,13 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('products_width_full', '800', NULL, 'products'),
 ('products_width_thumb', '195', NULL, 'products'),
 ('video_cat_height_thumb', '150', NULL, 'video'),
-('video_cat_width_thumb', '195', NULL, 'video'),
+('video_cat_width_thumb', '280', NULL, 'video'),
 ('video_height_desc', '600', NULL, 'video'),
 ('video_height_full', '600', NULL, 'video'),
-('video_height_thumb', '150', NULL, 'video'),
+('video_height_thumb', '200', NULL, 'video'),
 ('video_width_desc', '800', NULL, 'video'),
 ('video_width_full', '800', NULL, 'video'),
-('video_width_thumb', '195', NULL, 'video');
+('video_width_thumb', '280', NULL, 'video');
 
 -- --------------------------------------------------------
 
@@ -222,6 +222,8 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('order', 'Thứ tự', 1, 'vi'),
 ('other', 'other', 0, 'en'),
 ('other', 'khác', 0, 'vi'),
+('other_post', 'Other post', 0, 'en'),
+('other_post', 'Các tin đã đăng', 0, 'vi'),
 ('pictures', 'Pictures', 0, 'en'),
 ('pictures', 'Hình ảnh', 0, 'vi'),
 ('poll', 'Bình chọn', 0, 'en'),
@@ -364,7 +366,7 @@ INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`,
 (2, 'en', 'Advantages of uPVC', '<p><img style="float:left;margin:0 10px 8px 0;" src="/mekong/public/userfiles/image/img.png" alt="" width="123" height="98" />Produced by the European quality standards, product of uPVC branded MEKONGSTAR window is synchronized set of components, including: uPVC profile bars box-like structure, is divided into the hollow cavity fitted with steel corereinforcement to increase the bearing capacity for the door, combined with double rings and glass box inert gas is pumped to ensure high-sealed, with good sound insulation. In addition, high-grade uPVC material has the advantages such as: no warping, shrinkage, small painting, routine maintenance, high fire resistance, oxidation, aging or stained gold in terms of solar radiation or acid rain. Therefore, the door retains the original beauty during use. These advantages allow the door to long-term economic efficiency for the user by saving energy costs and routine maintenance.</p>', 'advantages-of-upvc', 'Produced by the European quality standards, product of uPVC branded MEKONGSTAR window is synchronized set of components, including: uPVC profile bars box-like structure', 0, NULL, NULL),
 (2, 'vi', 'Ưu Việt cửa uPVC', '<p><img style="float:left;margin:0 10px 8px 0;" src="/mekong/public/userfiles/image/img.png" alt="" width="123" height="98" />Được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp, được chia thành nhiều khoang rỗng có lắp lõi thép gia cường để tăng khả năng chịu lực cho bộ cửa, kết hợp với hệ gioăng kép và hộp kính được bơm khí trơ đảm bảo độ kín khít cao, có tính cách âm, cách nhiệt tốt. Ngoài ra, vật liệu uPVC cao cấp còn có những ưu điểm khác như: không cong vênh, co ngót, ít phải sơn sửa, bảo dưỡng định kỳ, khả năng chống cháy cao, không bị oxy hóa, không bị lão hóa hay ố vàng trong điều kiện bức xạ mặt trời hay mưa a xít. Chính vì vậy, cửa luôn giữ được vẻ đẹp ban đầu trong suốt thời gian sử dụng. Những ưu điểm này cho phép cửa đem lại hiệu quả kinh tế lâu dài cho người sử dụng nhờ tiết kiệm chi phí điện năng và bảo dưỡng định kỳ.</p>', 'uu-viet-cua-upvc', 'Được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp', 0, NULL, NULL),
 (3, 'en', 'About MekongStar', '<p>MekongStar specialized in manufacturing all kinds of doors are manufactured according to European standards of quality, brand products uPVC door MEKONGSTAR WINDOW synchronized set of components, including: uPVC profile bars box-like structure, which is divided intomany empty cabins fitted with steel core to increase the bearing capacity for the door, combined with double rings and glass box inert gas is pumped to ensure high-sealed, with good sound insulation. In addition, high-grade uPVC material has the advantages such as: no warping, shrinkage, small painting, routine maintenance, high fire resistance, oxidation, aging or stained gold in terms of solar radiation or acid rain. Therefore, the door retains the original beauty during use. These advantages allow the door to long-term economic efficiency for the user by saving energy costs and routine maintenance.</p>', 'about-mekongstar', 'MekongStar specialized in manufacturing all kinds of doors are manufactured according to European standards of quality, brand products uPVC door MEKONGSTAR WINDOW', 2, NULL, NULL),
-(3, 'vi', 'Giới thiệu về MekongStar', '<p>MekongStar chuyên sản xuất các loại cửa được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp, được chia thành nhiều khoang rỗng có lắp lõi thép gia cường để tăng khả năng chịu lực cho bộ cửa, kết hợp với hệ gioăng kép và hộp kính được bơm khí trơ đảm bảo độ kín khít cao, có tính cách âm, cách nhiệt tốt. Ngoài ra, vật liệu uPVC cao cấp còn có những ưu điểm khác như: không cong vênh, co ngót, ít phải sơn sửa, bảo dưỡng định kỳ, khả năng chống cháy cao, không bị oxy hóa, không bị lão hóa hay ố vàng trong điều kiện bức xạ mặt trời hay mưa a xít. Chính vì vậy, cửa luôn giữ được vẻ đẹp ban đầu trong suốt thời gian sử dụng. Những ưu điểm này cho phép cửa đem lại hiệu quả kinh tế lâu dài cho người sử dụng nhờ tiết kiệm chi phí điện năng và bảo dưỡng định kỳ.</p>', 'gioi-thieu-ve-mekongstar', 'MekongStar chuyên sản xuất các loại cửa được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm', 28, NULL, NULL);
+(3, 'vi', 'Giới thiệu về MekongStar', '<p>MekongStar chuyên sản xuất các loại cửa được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm: thanh profile uPVC có cấu trúc dạng hộp, được chia thành nhiều khoang rỗng có lắp lõi thép gia cường để tăng khả năng chịu lực cho bộ cửa, kết hợp với hệ gioăng kép và hộp kính được bơm khí trơ đảm bảo độ kín khít cao, có tính cách âm, cách nhiệt tốt. Ngoài ra, vật liệu uPVC cao cấp còn có những ưu điểm khác như: không cong vênh, co ngót, ít phải sơn sửa, bảo dưỡng định kỳ, khả năng chống cháy cao, không bị oxy hóa, không bị lão hóa hay ố vàng trong điều kiện bức xạ mặt trời hay mưa a xít. Chính vì vậy, cửa luôn giữ được vẻ đẹp ban đầu trong suốt thời gian sử dụng. Những ưu điểm này cho phép cửa đem lại hiệu quả kinh tế lâu dài cho người sử dụng nhờ tiết kiệm chi phí điện năng và bảo dưỡng định kỳ.</p>', 'gioi-thieu-ve-mekongstar', 'MekongStar chuyên sản xuất các loại cửa được sản xuất theo tiêu chuẩn chất lượng châu Âu, sản phẩm cửa uPVC mang thương hiệu MEKONGSTAR WINDOW là tập hợp đồng bộ của các linh kiện gồm', 29, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1167,14 +1169,15 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_recruitment` (
   `field2` varchar(100) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=57 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=58 ;
 
 --
 -- Dumping data for table `hoiit_module_recruitment`
 --
 
 INSERT INTO `hoiit_module_recruitment` (`record_id`, `pic_thumb`, `created`, `record_order`, `hot`, `field1`, `field2`, `enable`) VALUES
-(56, NULL, '2012-09-04 15:23:58', 56, 0, NULL, NULL, 1);
+(56, NULL, '2012-09-04 15:23:58', 56, 0, NULL, NULL, 1),
+(57, NULL, '2012-09-10 08:19:44', 57, 0, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -1203,7 +1206,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_recruitment_languages` (
 
 INSERT INTO `hoiit_module_recruitment_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
 (56, 'en', 'Recruitment', '<p>Đang cập nhật</p>', 'recruitment', '', 3, NULL, NULL),
-(56, 'vi', 'Tuyển dụng', '<p>Đang cập nhật</p>', 'tuyen-dung', '', 30, NULL, NULL);
+(56, 'vi', 'Nhân viên Marketing &amp; PTTT', '<p>Vị trí tuyển dụng :<br />Nhân viên Marketing &amp; PTTT<br />Hồ sơ gồm có :<br />Tờ khai xin việc theo mẫu của công ty, có thể nhận trực tiếp tại công ty hoặc download theo hướng dẫn phía dưới và 02 ảnh 4x6. Các hồ sơ khác ứng viên sẽ nộp khi có yêu cầu.<br />Yêu cầu :<br />1. Tốt nghiệp đại học Marketing hoặc hoặc tương đương.<br />2. Ứng viên có kinh nghiệm từ 02 năm trở lên với các vị trí marketing, nghiên cứu, phát triển thị trường.<br />3. Ứng viên có sức khỏe tốt, chịu được sức ép công việc, năng động, nhiệt tình, trung thực.<br />4. Hình thức dễ gần, chững chạc, khả năng giao tiếp tốt.<br />Địa điểm làm việc :<br />30 BCD Lý Nam Đế, Hoàn Kiếm, Hà Nội<br />Hạn nộp hồ sơ :<br />25/9/2012</p>', 'nhan-vien-marketing-pttt', '', 34, NULL, NULL),
+(57, 'en', '', '', '', '', 0, NULL, NULL),
+(57, 'vi', 'Phó bộ phận phụ trách công nợ thuộc Phòng TCKT', '<p>Vị trí tuyển dụng :<br />Phó bộ phận phụ trách công nợ thuộc Phòng TCKT<br />Hồ sơ gồm có :<br />Tờ khai xin việc theo mẫu của công ty, có thể nhận trực tiếp tại công ty hoặc download theo hướng dẫn phía dưới và 02 ảnh 4x6. Các hồ sơ khác ứng viên sẽ nộp khi có yêu cầu.<br />Yêu cầu :<br />1. Tốt nghiệp đại học chuyên ngành TC - KT.<br />2. Ứng viên tốt nghiệp loại khá, giỏi có kinh nghiệm theo dõi và quản lý công nợ.<br />3. Sử dụng thành thạo vi tính văn phòng và kinh nghiệm làm việc với phần mềm kế toán.<br />4. Theo dõi chặt chẽ, thường xuyên tình hình công nợ các SR tại Hà Nội.<br />5. Phân tích đánh giá tình hình thu hồi công nợ, thực trạng các khoản nợ của các SR tại Hà Nội<br />6. Phối hợp với bộ phận liên quan giải quyết các vấn đề còn tồn tại để thu hồi công nợ.<br />Địa điểm làm việc :<br />30 BCD Lý Nam Đế, Hoàn Kiếm, Hà Nội<br />Hạn nộp hồ sơ :<br />25/9/2012</p>', 'pho-bo-phan-phu-trach-cong-no-thuoc-phong-tckt', '', 5, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1456,8 +1461,7 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('left', 2, '1', 'default', NULL, NULL, 'about_home'),
 ('left', 3, '1', 'default', NULL, NULL, 'products_new'),
 ('right', 4, '1', 'default', NULL, NULL, 'adv_left'),
-('right', 5, '1', 'default', NULL, NULL, 'adv_right'),
-('right', 6, '1', 'default', NULL, NULL, 'list_support');
+('right', 5, '1', 'default', NULL, NULL, 'adv_right');
 
 -- --------------------------------------------------------
 
@@ -1551,7 +1555,7 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('<lang:[a-z]{2}>/products/<cid:[-a-z0-9]+>', 'products/default/cats', '', 2, 0, 'products', 'en'),
 ('<lang:[a-z]{2}>/products/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'products/default/view', 'urlSuffix=>.html', 0, 0, 'products', 'en'),
 ('<lang:[a-z]{2}>/products/<cid:[-a-z0-9]+>/page/<page:\\d+>', 'products/default/cats', '', 1, 0, 'products', 'en'),
-('<lang:[a-z]{2}>/recruitment', 'recruitment/default/index', '', 0, 1, 'recruitment', 'en'),
+('<lang:[a-z]{2}>/recruitment', 'recruitment/default/index', '', 1, 1, 'recruitment', 'en'),
 ('<lang:[a-z]{2}>/services', 'service/default/index', '', 1, 1, 'service', 'en'),
 ('<lang:[a-z]{2}>/services/<id:[-a-z0-9]+>', 'service/default/view', '', 0, 0, 'service', 'en'),
 ('gioi-thieu', 'about/default/index', '', 3, 1, 'about', 'vi'),
@@ -1577,7 +1581,8 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('trang-chu', 'default/default/index', NULL, NULL, 1, 'default', 'vi'),
 ('tu-van-dich-vu', 'service/default/index', '', 3, 1, 'service', 'vi'),
 ('tu-van-dich-vu/<id:[-a-z0-9]+>', 'service/default/view', 'urlSuffix=>.html', 2, 0, 'service', 'vi'),
-('tuyen-dung', 'recruitment/default/index', '', 1, 1, 'recruitment', 'vi');
+('tuyen-dung', 'recruitment/default/index', '', 2, 1, 'recruitment', 'vi'),
+('tuyen-dung/<id:[-a-z0-9]+>', 'recruitment/default/view', 'urlSuffix=>.html', 0, 0, 'recruitment', 'vi');
 
 -- --------------------------------------------------------
 
