@@ -114,7 +114,7 @@ class Customer extends CActiveRecord {
 
         // elements per page
         $pages = new CPagination($count);
-        $pages->pageSize = 15;
+        $pages->pageSize = 20;
         $pages->applyLimit($criteria);
 
         return array('models' => $this->findAll($criteria), 'pages' => $pages);
