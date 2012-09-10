@@ -125,6 +125,7 @@
 		<?php echo $form->textField($model, 'tag'.$key, array('class' => 'txt-very-large')); ?>
 	</div>
 	<div class="clear space"></div>
+	<?php $this->widget('ext.SeoAlias.SeoAlias', array('model'=>$model, 'source'=>'title'.$key, 'target'=>'tag'.$key)); ?>
 	<?php endforeach; ?>
 
     <?php foreach($this->listLanguage as $key => $lang):?>
@@ -195,9 +196,6 @@
     <div class="clear space"></div>
 </fieldset>
 <?php $this->endWidget(); ?>
-<?php foreach($this->listLanguage as $key => $lang):?>
-	<?php $this->widget('ext.seoAlias.seoAlias', array('model' => $model, 'source' => 'title'.$key, 'target' => 'tag'.$key)); ?>
-<?php endforeach?>
 <script type="text/javascript">
     $(document).ready(function(){
         $("#add-rows").click(function(){
