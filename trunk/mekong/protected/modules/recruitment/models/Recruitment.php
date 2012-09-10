@@ -93,6 +93,15 @@ class Recruitment extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
+	
+	//Front end - Get other record
+    public function otherRecord($id) {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, created DESC';
+        $criteria->condition = 'record_id != :id AND enable = 1';
+        $criteria->params = array(':id' => $id);
+		return $this->findAll($criteria);
+	}
 
     //Front end - Get first record
     public function firstRecord() {
