@@ -100,5 +100,5 @@
 <?php $this->endWidget();?>
 
 <?php foreach($this->listLanguage as $key => $lang):?>
-	<?php $this->widget('ext.seoAlias.seoAlias', array('model'=>$model, 'source'=>'title'.$key, 'target'=>'tag'.$key)); ?>
+	<?php $this->widget('ext.SeoAlias.SeoAlias', array('model'=>$model, 'source'=>'title'.$key, 'target'=>'tag'.$key)); ?>
 <?php endforeach?>
