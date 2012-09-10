@@ -49,7 +49,7 @@ class Service extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'Language' => array(self::MANY_MANY, 'Language', $this->tableName() . 'languages(record_id, language_id)'),
+            //'Language' => array(self::MANY_MANY, 'Language', $this->tableName() . 'languages(record_id, language_id)'),
             'ItemLanguage' => array(self::HAS_MANY, __CLASS__.'Language', 'record_id', 'index' => 'language_id'),
         );
     }
@@ -126,8 +126,13 @@ class Service extends CActiveRecord {
      * get list Menu
      * @return mixed
      */
-    public function listItem() {
+    /*public function listItem() {
         $command = Yii::app()->db->createCommand('SELECT title, tag FROM ' . $this->tableName() . ' as Item, ' . $this->tableName() . 'languages as ItemLang WHERE Item.record_id = ItemLang.record_id AND language_id =\'' . Yii::app()->language . '\' AND hot = 0 AND enable = 1 ORDER BY record_order DESC, created DESC');
+        return $command->queryAll();
+    }*/
+	
+	public function listItem() {
+        $command = Yii::app()->db->createCommand('SELECT title, tag FROM ' . $this->tableName() . ', hoiit_module_service_languages WHERE ' . $this->tableName() . '.record_id = hoiit_module_service_languages.record_id AND language_id =\'' . Yii::app()->language . '\' AND hot = 0 AND enable = 1 ORDER BY record_order DESC, created DESC');
         return $command->queryAll();
     }
 
