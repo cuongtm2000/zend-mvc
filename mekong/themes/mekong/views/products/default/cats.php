@@ -32,7 +32,6 @@
 			<h3 class="title-product">
 				<?php echo CHtml::link($item->ProductsLanguage[Yii::app()->language]['title'], array($this->setUrlModule('products').'/'.$item->ProductsCat->ProductsCatLanguage[Yii::app()->language]['tag'].'/'.$item->ProductsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$item->ProductsLanguage[Yii::app()->language]['title'])); ?>
 			</h3>
-			<?php echo ($item['unit']) ? '<p class="price">'.$item['unit'].'</p>' : ''?>
         </li>
         <?php endforeach; ?>
     </ul><!--End All products-->

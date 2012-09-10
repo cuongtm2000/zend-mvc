@@ -53,6 +53,7 @@
     <div class="col1"><?php echo $form->labelEx($model, 'tag') ?></div>
     <div class="col2">
         <?php echo $form->textField($model, 'tag', array('class' => 'txt-very-large')); ?>
+		<?php $this->widget('ext.SeoAlias.SeoAlias', array('model'=>$model, 'source'=>'title', 'target'=>'tag')); ?>
     </div> <div class="clear space"></div>
 
     <div class="col1"><?php echo $form->labelEx($model, 'enable', array('for' => get_class($model) . '_enable_0')) ?></div>

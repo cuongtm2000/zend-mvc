@@ -8,7 +8,7 @@
             <?php if($value['cat_parent_id']==0):?>
             <li class="product">
 				<div class="product-img">
-					<?php echo CHtml::link(($value['pic_thumb']) ? '<img src="'.Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/picturesCat/'.$value['pic_thumb'].'" alt="'.$value->PicturesCatLanguage[Yii::app()->language]['cat_title'].'" />' : '<img src="'.Yii::app()->theme->baseUrl.'/images/no-pictures-cat.jpg" alt="'.$value->PicturesCatLanguage[Yii::app()->language]['cat_title'].'" />', array($this->setLangUrl().'/san-pham/'.$value->PicturesCatLanguage[Yii::app()->language]['tag']), array('title'=>$value->PicturesCatLanguage[Yii::app()->language]['cat_title'])); ?>
+					<?php echo CHtml::link(($value['pic_thumb']) ? '<img src="'.Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/picturesCat/'.$value['pic_thumb'].'" alt="'.$value->PicturesCatLanguage[Yii::app()->language]['cat_title'].'" />' : '<img src="'.Yii::app()->theme->baseUrl.'/images/no-products-cat.jpg" alt="'.$value->PicturesCatLanguage[Yii::app()->language]['cat_title'].'" />', array($this->setLangUrl().'/hinh-anh/'.$value->PicturesCatLanguage[Yii::app()->language]['tag']), array('title'=>$value->PicturesCatLanguage[Yii::app()->language]['cat_title'])); ?>
 				</div>
 				<div class="line-bottom-product"></div>
 				<h2 class="title-product">
