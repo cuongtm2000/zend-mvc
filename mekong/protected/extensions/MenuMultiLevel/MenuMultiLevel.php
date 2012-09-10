@@ -52,7 +52,7 @@ class MenuMultiLevel extends Menu {
             $items[] = array(
                 'active' => isset(Yii::app()->controller->module->id) ? ((Urls::model()->getModuleByPattern($result['menu_url'], Yii::app()->language) == Yii::app()->controller->module->id) ? true : false) : false,
                 'label' => $result['menu_name'],
-                'url' => Yii::app()->baseUrl . '/' . $result['menu_url'],
+                'url' => Yii::app()->baseUrl . Yii::app()->controller->setLangUrl() . $result['menu_url'],
                 //'itemOptions' => array('class' => 'listItem'),
                 'linkOptions' => array( /*'class' => 'listItemLink', */
                     'title' => $result['menu_name']),

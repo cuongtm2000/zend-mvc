@@ -24,25 +24,38 @@ class Controller extends CController {
         Common::setLanguage(); //Setup language
         $this->lang = Lang::model()->getLang(Yii::app()->language);
     }
- 
-    
-    
-    
+
     public function setLangUrl($type = 0) {
-        $url ='';// Yii::app()->baseUrl;
+        /*$url ='';// Yii::app()->baseUrl;
         $lang = isset(Yii::app()->controller->setting['default_language']) ? Yii::app()->controller->setting['default_language'] : Yii::app()->params['default_language'];
         if (Yii::app()->language == $lang) {
             return $url;
         } else if ($type == 1) {
             return $url . Yii::app()->language;
         }
-        return $url . Yii::app()->language . '/';
+        return $url . Yii::app()->language . '/';*/
+		
+		/*$url = '/'; // /mekong/
+        $lang = isset(Yii::app()->controller->setting['default_language']) ? Yii::app()->controller->setting['default_language'] : Yii::app()->params['default_language'];
+
+        if (Yii::app()->language == $lang) {
+            return $url;
+        } else if ($type == 1) {
+            return $url . Yii::app()->language;
+        }
+        return $url . Yii::app()->language . '/';*/
+		
+		$url = '/';
+		$lang_default = isset(Yii::app()->controller->setting['default_language']) ? Yii::app()->controller->setting['default_language'] : Yii::app()->params['default_language'];
+		if (Yii::app()->language == $lang_default) {
+			return $url;
+		}
+		
+		return $url.Yii::app()->language.'/';
     }
-    
-    
-    
+
     public function setUrlModule($module = null) {
-        return $this->setLangUrl() . '/' . Urls::model()->getPatternModule(($module) ? $module : $this->module->id);
+        return $this->setLangUrl().Urls::model()->getPatternModule(($module) ? $module : $this->module->id);
     }
 
     public function setDescription($value = null) {

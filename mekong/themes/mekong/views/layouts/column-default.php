@@ -1,6 +1,6 @@
 <?php $this->beginContent('//layouts/main'); ?>
 	<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-		'homeLink' => CHtml::link($this->lang['default'], Yii::app()->baseUrl.$this->setLangUrl(), array('title' => $this->lang['default'])),
+		'homeLink' => CHtml::link($this->lang['default'], $this->setLangUrl(), array('title' => $this->lang['default'])),
 		'links'=>$this->breadcrumbs,
 		//'htmlOptions'=>array('class'=>'link'),
 		'separator'=>'<b>&raquo;</b>',

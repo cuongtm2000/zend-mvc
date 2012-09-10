@@ -47,7 +47,7 @@ $config = array(
                 //'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 //'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
 
-                '<lang:[a-z]{2}>/<module:\w+>/<controller:\w+>/<id:\d+>' => '<module>/<controller>/view',
+                /*'<lang:[a-z]{2}>/<module:\w+>/<controller:\w+>/<id:\d+>' => '<module>/<controller>/view',
                 '<lang:[a-z]{2}>/<module:\w+>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<module>/<controller>/<action>',
                 '<lang:[a-z]{2}>/<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
                 '<lang:[a-z]{2}>/<module:\w+>' => '<module>',
@@ -55,7 +55,7 @@ $config = array(
                 '<lang:[a-z]{2}>/<controller:\w+>/<action:\w+>/page/<page:\d+>' => '<controller>/<action>',
                 '<lang:[a-z]{2}>/<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<lang:[a-z]{2}>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-                '<lang:[a-z]{2}>/<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                '<lang:[a-z]{2}>/<controller:\w+>/<action:\w+>' => '<controller>/<action>',*/
                 '<lang:[a-z]{2}>' => '/',
 
                 //admin rules
