@@ -113,7 +113,10 @@ class Urls extends CActiveRecord {
         $command = Yii::app()->db->createCommand('SELECT url_pattern FROM ' . $this->tableName() . ' WHERE url_type=1 AND hoiit_modules_module_id=:module AND hoiit_languages_language_id=:lang');
         $command->bindParam(":module", $module, PDO::PARAM_STR);
         $command->bindParam(":lang", $lang, PDO::PARAM_STR);
-        return $command->queryScalar();
+        $row = $command->queryScalar();
+		
+		$pattern = explode('/', $row);
+        return end($pattern);
     }
 
     public function getPatternByType($module) {
