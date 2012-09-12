@@ -23,3 +23,23 @@
         Khong ton tai mau tin
     <?php endif;?><div class="clear"></div>
 </div> <!--End main-content-->
+
+<!--<?php if($new_items['models']):?>
+<div class="main-all-product">
+   <h2 class="title-right"><span><?php echo $this->lang['products'] . ' ' . $this->lang['new']?></span></h2>
+    <ul class="all-product">
+        <?php foreach($new_items['models'] as $item): ?>
+            <li class="product">
+				<div class="product-img">
+					<?php echo CHtml::link(($item['pic_thumb']) ? '<img src="'.Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/products/'.$item['pic_thumb'].'" alt="'.$item->ProductsLanguage[Yii::app()->language]['title'].'" />' : '<img src="'.Yii::app()->theme->baseUrl.'/images/no-products.jpg" alt="'.$item->ProductsLanguage[Yii::app()->language]['title'].'" />', array($this->setUrlModule('products').'/'.$item->ProductsCat->ProductsCatLanguage[Yii::app()->language]['tag'].'/'.$item->ProductsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$item->ProductsLanguage[Yii::app()->language]['title'])); ?>
+				</div>
+				<div class="line-bottom-product"></div>
+				<h2 class="title-product">
+					<?php echo CHtml::link($item->ProductsLanguage[Yii::app()->language]['title'], array($this->setUrlModule('products').'/'.$item->ProductsCat->ProductsCatLanguage[Yii::app()->language]['tag'].'/'.$item->ProductsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$item->ProductsLanguage[Yii::app()->language]['title'])); ?>
+				</h2>
+            </li>
+        <?php endforeach; ?>
+    </ul> <div class="clear"></div>
+	 <?php $this->widget('CLinkPager', array('pages' => $new_items['pages'], 'header'=>'', 'lastPageLabel'=>Yii::t('user', 'last'), 'nextPageLabel'=>Yii::t('user', 'next'), 'firstPageLabel'=>Yii::t('user', 'first'), 'prevPageLabel'=>Yii::t('user', 'prev'), 'htmlOptions'=>array('class'=>'paging')))?>
+</div>
+<?php endif;?>-->

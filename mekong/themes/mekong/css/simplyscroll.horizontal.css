@@ -1,29 +1,52 @@
 /* Container DIV - automatically generated */
-.simply-scroll-container { 
-	float:left;margin-left:20px
+.simply-scroll-container{float:left;margin-left:20px}
+/* Clip DIV - automatically generated */
+.simply-scroll-clip{overflow: hidden;}
+
+/* UL/OL/DIV - the element that simplyScroll is inited on
+Class name automatically added to element */
+.simply-scroll-list { overflow: hidden;}
+	
+.simply-scroll-list li {}
+	
+/* Custom class modifications - adds to / overrides above
+
+.simply-scroll is default base class */
+
+/* Container DIV */
+.simply-scroll { width: 1090px}
+
+/* Clip DIV */
+.simply-scroll .simply-scroll-clip {width: 1090px}
+	
+/* Explicitly set height/width of each list item */	
+.simply-scroll .simply-scroll-list li {
+	/* Horizontal scroll only */width: 137px;}
+
+/**  scroll prject **/
+
+.simply-scroll-container-2 { 
+	margin-left:12px;padding:7px 0
 }
 
 /* Clip DIV - automatically generated */
-.simply-scroll-clip { 
-	
+.simply-scroll-clip-2 { 
 	overflow: hidden;
-	
 }
 
 /* UL/OL/DIV - the element that simplyScroll is inited on
 Class name automatically added to element */
-.simply-scroll-list { 
-
+.simply-scroll-list-2 { 
 	overflow: hidden;
+	margin:0;padding:0
+}
+	
+.simply-scroll-list-2 li {
+	list-style: none;
+}
+	
+.simply-scroll-list-2 li img {
 
-}
-	
-.simply-scroll-list li {
-	
-}
-	
-.simply-scroll-list li img {
-	border: none;
 }
 
 /* Custom class modifications - adds to / overrides above
@@ -31,22 +54,21 @@ Class name automatically added to element */
 .simply-scroll is default base class */
 
 /* Container DIV */
-.simply-scroll { 
-	width: 1090px
-
-
+.simply-scroll-2 { 
+	width: 288px;
+	height: 232px;
 }
 
 /* Clip DIV */
-.simply-scroll .simply-scroll-clip {
-	width: 1090px;
-
+.simply-scroll-2 .simply-scroll-clip-2 {
+	width: 288px;
+	height: 232px;
 }
 	
 /* Explicitly set height/width of each list item */	
-.simply-scroll .simply-scroll-list li {
-	/* Horizontal scroll only */
-	width: 137px;
-	 
+.simply-scroll-2 .simply-scroll-list-2 li {
+	float: left; /* Horizontal scroll only */
+	width: 288px;
+	margin-right:5px;
+	height: 232px;
 }
-
