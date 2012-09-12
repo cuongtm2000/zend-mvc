@@ -149,7 +149,7 @@ tbody tr td{padding : 6px 5px;color : #111}
 
 /*   Page New  */
 #right-content .panel-items{list-style: none; text-align:justify;font-size:10pt;margin:0 0 20px 0}
-.panel-items li{ margin:0 0 5px 0 !important;border-bottom:1px solid #EAEAEA;padding-bottom:5px}
+.panel-items li{ margin:0 0 5px 0 !important;border-bottom:1px solid #EAEAEA;padding-bottom:5px;color:#fff}
 .panel-items li.bottom-none{border:none}
 .frame-img{float:left;margin:0 8px 0 0}
 .title-items-news{margin:0 0 5px 0;font-size:10pt}
@@ -192,13 +192,14 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 
 /** Form lien he  **/
 #frm{margin:0 0 10px 0;}
-.frame-contact label{color:#fff;font-weight:bold; width:100px; float:left}
-.frame-contact{list-style:none;margin:15px 0 10px 0}
-.frame-contact li{padding:4px 0; margin:0 !important}
-.frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
-.frame-contact textarea{border:1px solid #ddd;width: 350px; -moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-contact label{color:#fff;font-weight:bold; width:100px}
+#right-content .frame-contact{list-style:none;margin:15px 0 10px 70px}
+.frame-contact li{margin:0 0 10px 0 !important}
+#right-content .frame-contact  p{margin-bottom:3px}
+.frame-contact input{ margin:0 20px 0 0; padding:3px;width:270px; border:1px solid #ddd;-moz-border-radius: 3px; -webkit-border-radius: 3px}
+.frame-contact textarea{border:1px solid #ddd;width: 680px; -moz-border-radius: 3px; -webkit-border-radius:3px}
 .frame-contact span{color:#f00;margin:0 5px 0 0;}
-
+.left-contact{float:left;width:400px}
 .frame-contact .button-submit{margin:10px 0 5px 30px;background:#084396;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
 .frame-contact .button-submit{margin:10px 10px 5px 0}
 /****  End page contact     *****/

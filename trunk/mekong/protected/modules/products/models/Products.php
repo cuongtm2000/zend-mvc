@@ -129,6 +129,22 @@ class Products extends CActiveRecord {
     }
 	
 	//Front end - list item new
+    public function listItemsNewTops() {
+		$criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'enable = 1';
+
+        $count = $this->count($criteria);
+
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = 20;
+        $pages->applyLimit($criteria);
+
+        return array('models' => $this->findAll($criteria), 'pages' => $pages);
+    }
+	
+	//Front end - list item new
     public function listItemsNew() {
         $criteria = new CDbCriteria();
         $criteria->with = array(__CLASS__ . 'Cat');
