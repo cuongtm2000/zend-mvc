@@ -16,5 +16,6 @@
 	
 	<div id="left-content">
 		<?php $this->getPosition('right');?>
-	</div>
+	</div> <div class="clear"></div>
+	
 <?php $this->endContent(); ?>

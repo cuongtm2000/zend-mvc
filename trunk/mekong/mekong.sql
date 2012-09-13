@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 12, 2012 at 10:56 AM
+-- Generation Time: Sep 13, 2012 at 10:07 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -40,8 +40,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_configs` (
 --
 
 INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoiit_modules_module_id`) VALUES
-('adv_bottom_height', '222', NULL, 'adv'),
-('adv_bottom_width', '222', NULL, 'adv'),
+('adv_bottom_height', '90', NULL, 'adv'),
+('adv_bottom_width', '140', NULL, 'adv'),
 ('adv_center_height', '200', NULL, 'adv'),
 ('adv_center_width', '265', NULL, 'adv'),
 ('adv_left_height', '232', NULL, 'adv'),
@@ -117,6 +117,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_functions` (
 
 INSERT INTO `hoiit_functions` (`function_value`, `function_name`, `function_class`, `function_call`, `hoiit_modules_module_id`) VALUES
 ('about_home', 'About', '', 'firstHotRecord', 'about'),
+('adv_bottom', 'Adv', '', 'listItemsBottom', 'adv'),
 ('adv_center', 'Adv', '', 'listItemsCenter', 'adv'),
 ('adv_left', 'Adv', '', 'listItemsLeft', 'adv'),
 ('adv_right', 'Adv', '', 'listItemsRight', 'adv'),
@@ -392,7 +393,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_advs` (
   `click` int(11) NOT NULL DEFAULT '0',
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=24 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
 
 --
 -- Dumping data for table `hoiit_module_advs`
@@ -407,7 +408,9 @@ INSERT INTO `hoiit_module_advs` (`record_id`, `title`, `pic_thumb`, `url`, `crea
 (20, 'Chứng chỉ chất lượng iso 9001', 'chung-chi-chat-luong-iso-9001.jpg', '', '2012-09-11 01:46:22', '2012-09-10 17:00:00', '2012-10-10 17:00:00', 0, 6, 'center', '_bank', 0, 1),
 (21, 'du an tieu bieu', 'du-an-tieu-bieu.jpg', '', '2012-09-12 02:06:17', '2012-09-11 16:00:00', '2012-09-26 16:00:00', 0, 7, 'left', '_bank', 0, 1),
 (22, 'du an tieu bieu2', 'du-an-tieu-bieu2.jpg', '', '2012-09-12 02:06:28', '2012-09-11 16:00:00', '2012-10-27 16:00:00', 0, 8, 'left', '_bank', 0, 1),
-(23, 'du an tieu bieu3', 'du-an-tieu-bieu3.jpg', '', '2012-09-12 02:09:07', '2012-09-11 16:00:00', '2012-10-27 16:00:00', 0, 9, 'left', '_bank', 0, 1);
+(23, 'du an tieu bieu3', 'du-an-tieu-bieu3.jpg', '', '2012-09-12 02:09:07', '2012-09-11 16:00:00', '2012-10-27 16:00:00', 0, 9, 'left', '_bank', 0, 1),
+(24, 'doi tac 1', 'doi-tac-1.jpg', '', '2012-09-13 07:01:07', '2012-09-12 16:00:00', '2012-09-21 16:00:00', 0, 10, 'bottom', '_bank', 0, 1),
+(25, 'deluxe window', 'deluxe-window.jpg', '', '2012-09-13 07:30:41', '2012-09-12 16:00:00', '2012-10-27 16:00:00', 0, 11, 'bottom', '_bank', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -573,7 +576,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_factory_languages` (
 
 INSERT INTO `hoiit_module_factory_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
 (56, 'en', 'Factory', '<p>The factory Eurowindow are equipped with advanced production lines, modern and imported from leading vendors of the Federal Republic of Germany, Italy, Finland and Spain.</p>\n<p>The main lines are:</p>\n<p><strong>+</strong> Production line windows, doors, walls uPVC;<br /><strong>+</strong> Production line of aluminum doors, aluminum and glass curtain wall. large, chain paint, PVDF &amp; Powder Coating; timber production line aluminum doors.<br /><strong>+</strong> Production line pine wood, fire resistant wooden door. Laminate flooring production lines;<br /><strong>+</strong> Glass production line, glass, safety glass, glass cutting and glass production, large glass box.</p>\n<p>There are also some other auxiliary lines, such as: necklaces paste laminate, frosted glass production equipment. economic patterns, systems and equipment in mechanical processing, aluminum cladding and assembly equipment automatic security doors.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/img-nhamay.png" alt="" width="595" height="395" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/img-nhamay-2.png" alt="" width="598" height="325" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/img-nhamay-3.png" alt="" width="595" height="249" /></p>', 'factory', 'The factory Eurowindow are equipped with advanced production lines, modern and imported from leading vendors of the Federal Republic of Germany, Italy, Finland and Spain.', 1, NULL, NULL),
-(56, 'vi', 'Nhà máy', '<p>Các nhà máy của Eurowindow đều được trang bị dây chuyên sản xuất tiên tiến, hiện đại, đồng bộ được nhập khẩu từ các nhà cung cấp hàng đầu của CHLB Đức, Italia, Phần Lan và Tây Ban Nha.</p>\n<p>Các dây chuyền chính gồm:</p>\n<p><strong>+</strong> Dây chuyền sản xuất cửa sổ, cửa đi, vách ngăn uPVC;</p>\n<p><strong>+</strong> Dây chuyền sản xuất cửa nhôm, hệ vách nhôm kính. lớn, dây chuyền sơn, PVDF &amp; Powder Coating; Dây chuyền sản xuất cửa nhôm gỗ.<br /><strong>+</strong> Dây chuyền sản xuất gỗ thông phòng, cửa gỗ chống cháy. Dây chuyền sản xuất gỗ ván sàn;<br /><strong>+</strong> Dây chuyền sản xuất kính, kính cường lực, kính an toàn, cắt kính và sản xuất hộp kính, hộp kính khổ lớn.</p>\n<p>Ngoài ra còn có một số dây chuyền phụ trợ khác như: dây chuyền dán laminate, thiết bị sản xuất kính mờ. kinh hoa văn, hệ thống máy móc thiết bị gia công cơ khí, tấm ốp nhôm và các thiết bị lắp ráp cửa an toàn, cửa tự động.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/img-nhamay.png" alt="" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/img-nhamay-2.png" alt="" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/img-nhamay-3.png" alt="" /></p>', 'nha-may', 'Các nhà máy của Eurowindow đều được trang bị dây chuyên sản xuất tiên tiến, hiện đại, đồng bộ được nhập khẩu từ các nhà cung cấp hàng đầu của CHLB Đức, Italia, Phần Lan và Tây Ban Nha.', 58, NULL, NULL);
+(56, 'vi', 'Nhà máy', '<p>Các nhà máy của Eurowindow đều được trang bị dây chuyên sản xuất tiên tiến, hiện đại, đồng bộ được nhập khẩu từ các nhà cung cấp hàng đầu của CHLB Đức, Italia, Phần Lan và Tây Ban Nha.</p>\n<p>Các dây chuyền chính gồm:</p>\n<p><strong>+</strong> Dây chuyền sản xuất cửa sổ, cửa đi, vách ngăn uPVC;</p>\n<p><strong>+</strong> Dây chuyền sản xuất cửa nhôm, hệ vách nhôm kính. lớn, dây chuyền sơn, PVDF &amp; Powder Coating; Dây chuyền sản xuất cửa nhôm gỗ.<br /><strong>+</strong> Dây chuyền sản xuất gỗ thông phòng, cửa gỗ chống cháy. Dây chuyền sản xuất gỗ ván sàn;<br /><strong>+</strong> Dây chuyền sản xuất kính, kính cường lực, kính an toàn, cắt kính và sản xuất hộp kính, hộp kính khổ lớn.</p>\n<p>Ngoài ra còn có một số dây chuyền phụ trợ khác như: dây chuyền dán laminate, thiết bị sản xuất kính mờ. kinh hoa văn, hệ thống máy móc thiết bị gia công cơ khí, tấm ốp nhôm và các thiết bị lắp ráp cửa an toàn, cửa tự động.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/img-nhamay.png" alt="" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/img-nhamay-2.png" alt="" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/img-nhamay-3.png" alt="" /></p>', 'nha-may', 'Các nhà máy của Eurowindow đều được trang bị dây chuyên sản xuất tiên tiến, hiện đại, đồng bộ được nhập khẩu từ các nhà cung cấp hàng đầu của CHLB Đức, Italia, Phần Lan và Tây Ban Nha.', 59, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1476,13 +1479,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_positions` (
 INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id`, `action_id`, `controller_id`, `hoiit_functions_function_value`) VALUES
 ('right', 1, '1', 'poll', NULL, NULL, 'adv_right'),
 ('left', 2, '1', 'poll', NULL, NULL, 'list_support'),
-('left', 1, '1', 'default', NULL, NULL, 'about_home'),
-('left', 2, '1', 'default', NULL, NULL, 'products_new'),
-('right', 3, '1', 'default', NULL, NULL, 'adv_left'),
-('right', 4, '1', 'default', NULL, NULL, 'video_hot'),
-('right', 5, '1', 'default', NULL, NULL, 'adv_right'),
-('right', 6, '1', 'default', NULL, NULL, 'adv_center'),
-('right', 7, '1', 'default', NULL, NULL, 'list_support'),
 ('right', 1, '1', 'about', NULL, NULL, 'adv_left'),
 ('right', 2, '1', 'about', NULL, NULL, 'video_hot'),
 ('right', 3, '1', 'about', NULL, NULL, 'adv_right'),
@@ -1527,7 +1523,15 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('right', 2, '1', 'service', NULL, NULL, 'video_hot'),
 ('right', 3, '1', 'service', NULL, NULL, 'adv_right'),
 ('right', 4, '1', 'service', NULL, NULL, 'adv_center'),
-('right', 5, '1', 'service', NULL, NULL, 'list_support');
+('right', 5, '1', 'service', NULL, NULL, 'list_support'),
+('center', 1, '1', 'default', NULL, NULL, 'adv_bottom'),
+('left', 2, '1', 'default', NULL, NULL, 'about_home'),
+('left', 3, '1', 'default', NULL, NULL, 'products_new'),
+('right', 4, '1', 'default', NULL, NULL, 'adv_left'),
+('right', 5, '1', 'default', NULL, NULL, 'video_hot'),
+('right', 6, '1', 'default', NULL, NULL, 'adv_right'),
+('right', 7, '1', 'default', NULL, NULL, 'adv_center'),
+('right', 8, '1', 'default', NULL, NULL, 'list_support');
 
 -- --------------------------------------------------------
 
