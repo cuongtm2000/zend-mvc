@@ -56,17 +56,18 @@
 					</script>
 				</div> --> <div class="clear"></div>       
 		</div> <!--End content--> 
-		<div class="partner-top-line">
+		<!--<div class="partner-top-line">
 				<img class="partner" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner.png" alt="partner" />
-				<ul id="scroller" class="partner-group">
+			-->	<?php $this->getPosition('center');?>
+				<!--<ul id="scroller" class="partner-group">
 					<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-1.jpg" alt="" /></a></div></li>
 					<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-2.jpg" alt="" /></a></div></li>
 					<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-3.jpg" alt="" /></a></div></li>
 					<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-4.jpg" alt="" /></a></div></li>
 					<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-5.jpg" alt="" /></a></div></li>
 					<li><div class="partner-img"><a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/partner-6.jpg" alt="" /></a></div></li>
-				</ul> <div class="clear"></div> 
-		</div>
+				</ul>-->
+		<!--</div>-->
 		
 		<div class="bg-nav">
 			<div class="panel-footer">

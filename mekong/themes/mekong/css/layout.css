@@ -205,7 +205,7 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 /****  End page contact     *****/
 
 /**  partner đối tác **/
-.partner-top-line{background:url(../images/partner-line-top.png) repeat-x;padding:20px 10px 0 10px;margin-bottom:20px}
+.partner-top-line{background:url(../images/partner-line-top.png) repeat-x;padding:20px 10px 0 10px;}
 .partner{float:left;padding-top:5px}
 .partner-group{list-style:none}
 .partner-group li{float:left; width:140px;background:url(../images/partner-line-2.png) no-repeat right;margin-left:20px}
