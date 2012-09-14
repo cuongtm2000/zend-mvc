@@ -21,10 +21,4 @@
 	</li>
 	<?php endif?>
 	<?php endforeach; ?>
-</ul> <!--End all product-->
-
-
-
-
-
-		
+</ul> <!--End all product-->		

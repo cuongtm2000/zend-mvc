@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 04, 2012 at 04:47 AM
+-- Generation Time: Sep 14, 2012 at 02:19 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -72,38 +72,38 @@ CREATE TABLE IF NOT EXISTS `dos_configs` (
 --
 
 INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES
-('advs_left_height', 287, '', '200612'),
-('advs_left_width', 215, '', '200612'),
-('banner_height', 281, '', '200612'),
-('banner_width', 723, '', '200612'),
-('logo_height', 53, '', '200612'),
-('logo_width', 242, '', '200612'),
-('max_image_height', 920, '', '200612'),
-('max_image_width', 680, '', '200612'),
-('news_cat_height', 107, '', '200612'),
-('news_cat_width', 143, '', '200612'),
-('news_height_thumb', 107, '', '200612'),
-('news_num_paging_cat', 10, '', '200612'),
-('news_num_paging_hot', 6, '', '200612'),
-('news_num_paging_index', 10, '', '200612'),
-('news_num_paging_new', 6, '', '200612'),
-('news_width_thumb', 143, '', '200612'),
-('products_cat_height', 160, '', '200612'),
-('products_cat_width', 160, '', '200612'),
-('products_height', 920, '', '200612'),
-('products_height_thumb', 260, '', '200612'),
-('products_num_paging_cat', 20, '', '200612'),
-('products_num_paging_hot', 20, '', '200612'),
-('products_num_paging_new', 20, '', '200612'),
-('products_num_paging_other', 4, '', '200612'),
-('products_width', 690, '', '200612'),
-('products_width_thumb', 160, '', '200612'),
-('services_height', 100, '', '200612'),
-('services_width', 143, '', '200612'),
-('video_height_thumb', 160, '', '200612'),
-('video_num_paging_cat', 8, '', '200612'),
-('video_num_paging_index', 8, '', '200612'),
-('video_width_thumb', 160, '', '200612');
+('advs_left_height', 200, '', '160512'),
+('advs_left_width', 203, '', '160512'),
+('banner_height', 315, '', '160512'),
+('banner_width', 750, '', '160512'),
+('logo_height', 77, '', '160512'),
+('logo_width', 650, '', '160512'),
+('max_image_height', 860, '', '160512'),
+('max_image_width', 700, '', '160512'),
+('news_cat_height', 90, '', '160512'),
+('news_cat_width', 143, '', '160512'),
+('news_height_thumb', 90, '', '160512'),
+('news_num_paging_cat', 10, '', '160512'),
+('news_num_paging_hot', 6, '', '160512'),
+('news_num_paging_index', 10, '', '160512'),
+('news_num_paging_new', 6, '', '160512'),
+('news_width_thumb', 143, '', '160512'),
+('products_cat_height', 160, '', '160512'),
+('products_cat_width', 160, '', '160512'),
+('products_height', 700, '', '160512'),
+('products_height_thumb', 160, '', '160512'),
+('products_num_paging_cat', 4, '', '160512'),
+('products_num_paging_hot', 16, '', '160512'),
+('products_num_paging_new', 20, '', '160512'),
+('products_num_paging_other', 4, '', '160512'),
+('products_width', 850, '', '160512'),
+('products_width_thumb', 160, '', '160512'),
+('services_height', 850, '', '160512'),
+('services_width', 700, '', '160512'),
+('video_height_thumb', 160, '', '160512'),
+('video_num_paging_cat', 16, '', '160512'),
+('video_num_paging_index', 16, '', '160512'),
+('video_width_thumb', 160, '', '160512');
 
 -- --------------------------------------------------------
 
@@ -229,10 +229,10 @@ CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
 --
 
 INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, `loadfiles`, `typefile`) VALUES
-('200612', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
-('200612', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
-('200612', 'video', 'prettyPhoto.css', 'css'),
-('200612', 'video', 'jquery.prettyPhoto.js', 'javascript');
+('160512', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
+('160512', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
+('160512', 'video', 'prettyPhoto.css', 'css'),
+('160512', 'video', 'jquery.prettyPhoto.js', 'javascript');
 
 -- --------------------------------------------------------
 
@@ -284,15 +284,15 @@ CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
 --
 
 INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
-('about', 'isuzubienhoa'),
-('advs', 'isuzubienhoa'),
-('banner', 'isuzubienhoa'),
-('contact', 'isuzubienhoa'),
-('news', 'isuzubienhoa'),
-('products', 'isuzubienhoa'),
-('services', 'isuzubienhoa'),
-('supports', 'isuzubienhoa'),
-('video', 'isuzubienhoa');
+('about', 'muayensao'),
+('advs', 'muayensao'),
+('banner', 'muayensao'),
+('contact', 'muayensao'),
+('news', 'muayensao'),
+('products', 'muayensao'),
+('services', 'muayensao'),
+('supports', 'muayensao'),
+('video', 'muayensao');
 
 -- --------------------------------------------------------
 
@@ -321,7 +321,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=449 ;
+
+--
+-- Dumping data for table `dos_module_abouts`
+--
+
+INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
+(275, 'GIỚI THIỆU VỀ YẾN SÀO', '', '<p>Yến sào có hình chén trà bổ đôi, được làm từ nước bọt của chim yến trống và chim yến mái từ tuyến nước bọt dưới lưỡi. Nó bị đông cứng lại sau khi tiếp xúc với không khí. Là một vật chất hữu cơ thiên nhiên và hầu như là một dạng tươi tự nhiên và dễ hấp thụ ….</p>\n<p><span style="color:#ff0000;"><strong>YẾN SÀO LÀ GÌ?</strong></span><br />Yến sào xét theo nghĩa từ nguyên có nghĩa là cái tổ của chim yến.<br />Yến sào có hình chén trà bổ đôi, được làm từ nước bọt của chim yến trống và chim yến mái từ tuyến nước bọt dưới lưỡi. Nó bị đông cứng lại sau khi tiếp xúc với không khí. Là một vật chất hữu cơ thiên nhiên và hầu như là một dạng tươi tự nhiên và dễ hấp thụ.<br />Người ta cho rằng tổ yến là một loại thuốc bổ cung cấp thêm năng lượng cuộc sống, tăng cường trao đổi chất, cải thiện sự tiêu hóa và hấp thu dinh dưỡng, có tác dụng dưỡng da, làm đẹp da hơn và cải thiện tình trạng của tóc. Ăn tổ yến liên tục sau một thời gian sẽ giữ cho cơ thể trẻ, khỏe, không bị bệnh, nhờ đó cải thiện sức khỏe kéo dài tuổi thọ. Tổ yến cũng có tác dụng nâng cao hoạt động sinh dục, có tác dụng bổ phổi, làm ẩm ướt đường hô hấp, giúp cải thiện tình trạng hen suyễn, lên đờm quá mức trong phổi và cổ họng, chống ho, nhổ ra máu và chiều hướng bị lao phổi, cũng tốt cho tim và sự tuần hoàn máu.<br />Sử dụng tổ yến trong thời gian mang thai làm tăng sức khỏe của cả mẹ và con. Phụ nữ dùng súp yến sau khi sinh con sẽ nhanh chóng mảnh mai, thon thả hơn, giữ gìn sắc đẹp của mình. Chức năng của dạ dày và lá lách của trẻ em nhỏ tuổi còn yếu ớt, cho trẻ em ăn yến có thể cải thiện và bổ sung sự thiếu hụt dinh dưỡng, khỏe mạnh và tăng trưởng. Tổ yến có thể dùng cho các nhóm tuổi khác nhau và cả nam – nữ.</p>\n<p>Ăn tổ yến giúp phục hồi sức khỏe của các bệnh nhân sau phẫu thuật và sau bị bệnh tật. Đặc biệt là tăng cường hệ thống miễn dịch và chức năng của hệ nội tiết. Gần đây người ta còn cho rằng tổ yến giúp hạn chế sự phát triển của bệnh AIDS qua con đường kích hoạt sự phân chia tế bào trong hệ thống miễn dịch.<br />Thành phần hóa học của tổ yến quyết định tác dụng của tổ yến:<br />- Có 31 nguyên tố đa vi lượng. Phương pahps huỳnh quang tia X, rất giàu Ca, Fe. Các nguyên tố có ích cho ổn định thần kinh, trí nhớ như Mn, Br, Cu, Zn cũng có hàm lượng cao, Se chất phóng xạ.<br />- Theo số liệu của trung tâm công nghệ sinh học Đại học Thủy sản và Viện Công nghệ sinh học thuộc trung tâm khoa học tự nhiên và công nghệ quốc gia. Trong thành phần Yến sào có 18 loại Acid amin, một số hàm lượng rất cao như: Acpartic Acid, Serine, Tyrosine, Leucine… là những chất có tác dụng phục hồi nhanh chóng các tổn thương khi bị nhiễm xạ hoặc chất độc hại.</p>\n<p><span style="color:#ff0000;"><strong>SỰ KHÁC BIỆT GIỮA YẾN ĐẢO VÀ YẾN NHÀ.</strong></span><br />Có một số ý kiến cho rằng chất lượng Yến Đảo tự nhiên tốt hơn Yến Nhà do giá bán cao hơn. Mùi vị các loại yến khác nhau có đem lại sự cảm nhận khác nhau. Nhưng sự thật là chim yến sống trong nhà cũng hoàn toàn kiếm ăn ngoài tự nhiên như Yến Đảo. nhiều người vẫn nghĩ rằng yến nhà là yến có thể nuôi được và trong thực tế chúng ta chỉ có thể dựa vào kỹ thuật và thiết kế để dẫn dụ chim yến vào nhà làm tổ chứ không thể cho chúng ăn như gà công nghiệp.<br />Nói cách khác đơn giản là chúng ta có thể làm nhà cho chúng làm tổ, đẻ trứng, nuôi con và ngủ đêm chứ không chạm vào họa bắt chúng vì chim yến là loài chim đặc biệt, chúng bay kiên tục không đậu trên mặt đất hoặc cành cây (đặc tính đôi chân bé mãnh), chúng ăn côn trùng bay trong thiên nhiên, chỉ có thiên nhiên là nơi cung cấp thức ăn cho chúng<br />Hơn nữa yến nhà còn được bảo vệ khỏi các dịch hại như: chuột, gián, nấm mốc, bọ… vốn khó phòng ngừa tại các hang động, do vậy tổ yến trong nhà sạch hơn và không cần dùng những hóa chất để tẩy sạch vết bẩn. Nhũng phân tích tại Hồng Kông cho thấy Yến Nhà có thành phần tương đương Yến Đảo. Theo những người sử dụng và buôn bán Yến Sào lâu năm thì yến trong nhà Việt Nam có chất lượng vượt trội thể hiện qua mùi vị và sợi yến còn nguyên sau khi chưng.</p>', '', 188, '2012-07-15 23:41:19', 1, 0, '', '', 'gioi-thieu-ve-yen-sao', '', '', '', 1, 'muayensao'),
+(448, 'Giới thiệu về công ty', '', '<p>Yến sào có hình chén trà bổ đôi, được làm từ nước bọt của chim yến trống và chim yến mái từ tuyến nước bọt dưới lưỡi. Nó bị đông cứng lại sau khi tiếp xúc với không khí. Là một vật chất hữu cơ thiên nhiên và hầu như là một dạng tươi tự nhiên và dễ hấp thụ ….</p>', '', 8, '2012-09-13 03:51:12', 2, 1, '', '', 'gioi-thieu-ve-cong-ty', '', 'Yến sào có hình chén trà bổ đôi, được làm từ nước bọt của chim yến trống và chim yến mái từ tuyến nước bọt dưới lưỡi. Nó bị đông cứng lại sau khi tiếp xúc với không khí.', '', 0, 'muayensao');
 
 -- --------------------------------------------------------
 
@@ -346,18 +354,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=662 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=418 ;
 
 --
 -- Dumping data for table `dos_module_advs`
 --
 
 INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`, `dos_usernames_username`) VALUES
-(657, 'Quảng cáo', '', 'quang-cao.jpeg', 'http://dos.vn', '2012-09-01 02:15:57', '2012-08-31 16:00:00', '2012-10-30 16:00:00', 0, 2, 'left', '_bank', 0, 'isuzubienhoa'),
-(658, 'Quảng cáo 1', '', 'quang-cao-1.jpg', 'http://dos.vn', '2012-09-01 02:23:30', '2012-08-31 16:00:00', '2012-10-30 16:00:00', 0, 1, 'left', '_bank', 1, 'isuzubienhoa'),
-(659, 'Quảng cáo 2', '', 'quang-cao-2.jpg', 'http://dos.vn', '2012-09-01 02:23:49', '2012-08-31 16:00:00', '2012-10-30 16:00:00', 0, 3, 'left', '_bank', 1, 'isuzubienhoa'),
-(660, 'Quảng cáo 3', '', 'quang-cao-3.jpg', 'http://dos.vn', '2012-09-01 02:24:10', '2012-08-31 16:00:00', '2012-10-30 16:00:00', 0, 4, 'left', '_bank', 1, 'isuzubienhoa'),
-(661, 'Quảng cáo 4', '', 'quang-cao-4.jpg', 'http://dos.vn', '2012-09-01 02:30:31', '2012-08-31 16:00:00', '2012-10-30 16:00:00', 0, 5, 'left', '_bank', 1, 'isuzubienhoa');
+(417, 'quang cao 1', '', 'quang-cao-1.png', 'http://muayensao.dos.vn/san-pham', '2012-07-16 01:23:34', '2012-07-15 16:00:00', '2012-08-30 16:00:00', 0, 1, 'left', '_bank', 1, 'muayensao');
 
 -- --------------------------------------------------------
 
@@ -378,28 +382,25 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2943 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1617 ;
 
 --
 -- Dumping data for table `dos_module_banners`
 --
 
 INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_url`, `banner_link`, `banner_order`, `banner_type`, `position`, `enable`, `dos_usernames_username`) VALUES
-(2928, '2012-09-01 00:59:30', 'logo-isuzubienhoa', 'logo-isuzubienhoa.png', '', 1, 'logo', 'default', 1, 'isuzubienhoa'),
-(2929, '2012-09-01 02:05:40', 'Banner 1', 'banner-1.jpg', '', 2, 'banners', 'default', 1, 'isuzubienhoa'),
-(2930, '2012-09-01 02:06:00', 'Banner 2', 'banner-2.jpg', '', 3, 'banners', 'default', 1, 'isuzubienhoa'),
-(2931, '2012-09-01 02:06:24', 'Banner 3', 'banner-3.jpg', '', 4, 'banners', 'products', 1, 'isuzubienhoa'),
-(2932, '2012-09-01 02:06:40', 'Banner 4', 'banner-4.jpg', '', 5, 'banners', 'about', 1, 'isuzubienhoa'),
-(2933, '2012-09-01 02:07:02', 'Banner 5', 'banner-5.jpg', '', 6, 'banners', 'services', 1, 'isuzubienhoa'),
-(2934, '2012-09-01 02:07:19', 'Banner 6', 'banner-6.jpg', '', 7, 'banners', 'products', 1, 'isuzubienhoa'),
-(2935, '2012-09-01 02:07:42', 'Banner 7', 'banner-7.jpg', '', 8, 'banners', 'news', 1, 'isuzubienhoa'),
-(2936, '2012-09-01 02:08:02', 'Banner 8', 'banner-8.jpg', '', 9, 'banners', 'video', 1, 'isuzubienhoa'),
-(2937, '2012-09-01 02:08:19', 'Banner 9', 'banner-9.jpg', '', 10, 'banners', 'about', 1, 'isuzubienhoa'),
-(2938, '2012-09-01 02:08:36', 'Banner 10', 'banner-10.jpg', '', 11, 'banners', 'contact', 1, 'isuzubienhoa'),
-(2939, '2012-09-01 02:09:08', 'Banner 11', 'banner-11.jpg', '', 12, 'banners', 'default', 1, 'isuzubienhoa'),
-(2940, '2012-09-01 02:09:26', 'Banner 12', 'banner-12.jpg', '', 13, 'banners', 'products', 1, 'isuzubienhoa'),
-(2941, '2012-09-01 02:10:04', 'Banner 13', 'banner-13.jpg', '', 14, 'banners', 'services', 1, 'isuzubienhoa'),
-(2942, '2012-09-01 02:24:44', 'Banner 14', 'banner-14.jpg', '', 15, 'banners', 'default', 0, 'isuzubienhoa');
+(1605, '2012-07-16 00:56:08', 'logo-muayensao', 'logo-muayensao.png', '', 1, 'logo', 'default', 0, 'muayensao'),
+(1606, '2012-07-16 01:10:06', 'Banner 1', 'banner-1.jpg', '', 2, 'banners', 'default', 1, 'muayensao'),
+(1607, '2012-07-16 01:15:41', 'Banner 2', 'banner-2.jpg', '', 3, 'banners', 'default', 1, 'muayensao'),
+(1608, '2012-07-16 01:16:06', 'Banner 3', 'banner-3.jpg', '', 4, 'banners', 'products', 1, 'muayensao'),
+(1609, '2012-07-16 01:16:19', 'Banner 4', 'banner-4.jpg', '', 5, 'banners', 'products', 1, 'muayensao'),
+(1610, '2012-07-16 01:16:36', 'Banner 5', 'banner-5.jpg', '', 6, 'banners', 'about', 1, 'muayensao'),
+(1611, '2012-07-16 01:16:54', 'Banner 6', 'banner-6.jpg', '', 7, 'banners', 'services', 1, 'muayensao'),
+(1612, '2012-07-16 01:17:16', 'Banner 7', 'banner-7.jpg', '', 8, 'banners', 'services', 1, 'muayensao'),
+(1613, '2012-07-16 01:17:33', 'Banner 8', 'banner-8.jpg', '', 9, 'banners', 'news', 1, 'muayensao'),
+(1614, '2012-07-16 01:17:49', 'Banner 9', 'banner-9.jpg', '', 10, 'banners', 'contact', 1, 'muayensao'),
+(1615, '2012-07-16 01:18:07', 'Banner 10', 'banner-10.jpg', '', 11, 'banners', 'video', 1, 'muayensao'),
+(1616, '2012-07-16 01:18:38', 'Banner 11', 'banner-11.jpg', '', 12, 'banners', 'about', 1, 'muayensao');
 
 -- --------------------------------------------------------
 
@@ -425,7 +426,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_contacts_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=54 ;
+
+--
+-- Dumping data for table `dos_module_contacts`
+--
+
+INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `tagen`, `description`, `descriptionen`, `enable`, `dos_usernames_username`) VALUES
+(53, 'Liên hệ với chúng tôi', '', '<p>Công Ty Cổ Phần Yến Quê Hương</p>\n<p>R4 - 16 Đường Hưng Gia 3 - Phú Mỹ Hưng Q.7 Tp.HCM</p>\n<p>CHUYÊN CUNG CẤP CÁC SẢN PHẨM YẾN VIỆT NAM</p>', '', '2012-07-27 08:08:03', 1, 0, 0, 'lien-he-voi-chung-toi', '', '', '', '1', 'muayensao');
 
 -- --------------------------------------------------------
 
@@ -452,13 +460,13 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 --
 
 INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
-('Trang chủ', '', 'default', '', 1, '', '', '', '', 'isuzubienhoa'),
-('Giới thiệu', '', 'about', '', 2, '', '', '', '', 'isuzubienhoa'),
-('Sản phẩm', '', 'products', '', 3, '', '', '', '', 'isuzubienhoa'),
-('Khuyến mãi', '', 'services', '', 4, '', '', '', '', 'isuzubienhoa'),
-('Tin tức & sự kiện', '', 'news', '', 5, '', '', '', '', 'isuzubienhoa'),
-('Video', '', 'video', '', 6, '', '', '', '', 'isuzubienhoa'),
-('Liên hệ', '', 'contact', '', 7, '', '', '', '', 'isuzubienhoa');
+('Trang chủ', '', 'default', '', 0, NULL, NULL, NULL, NULL, 'muayensao'),
+('Giới thiệu', '', 'about', '', 1, NULL, NULL, NULL, NULL, 'muayensao'),
+('Sản phẩm', '', 'products', '', 2, NULL, NULL, NULL, NULL, 'muayensao'),
+('Chế Biến', '', 'services', '', 3, NULL, NULL, NULL, NULL, 'muayensao'),
+('Tin tức', '', 'news', '', 5, NULL, NULL, NULL, NULL, 'muayensao'),
+('Video', '', 'video', '', 6, NULL, NULL, NULL, NULL, 'muayensao'),
+('Liên hệ', '', 'contact', '', 7, NULL, NULL, NULL, NULL, 'muayensao');
 
 -- --------------------------------------------------------
 
@@ -489,19 +497,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=476 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=315 ;
 
 --
 -- Dumping data for table `dos_module_news`
 --
 
 INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(470, 'Xe Isuzu D-MAX pickup mới giá từ 14.499 bảng Anh', '', '2012-09-01 02:36:17', 'xe-isuzu-d-max-pickup-moi-gia-tu-14-499-bang-anh.jpg', '<p style="text-align:justify;">Thế hệ mới của mẫu xe tải Isuzu D-MAX pickup sẽ có giá từ 14.499 bảng Anh tới 21.499 bảng khi nó được tung ra bán tại thị trường Anh trong tháng 6 này, sau khi nó được giới thiệu trước toàn thế giới ở triển lãm xe thương mại 2012 diễn ra ở Birmingham vào ngày 24/4 năm nay</p>', '', '<p style="text-align:justify;"><strong><img style="margin:5px 10px;float:left;" src="/public/userfiles/image/isuzubienhoa/image/tt.jpg" alt="" width="314" height="235" />Thế hệ mới của mẫu xe tải Isuzu D-MAX pickup sẽ có giá từ 14.499 bảng Anh tới 21.499 bảng khi nó được tung ra bán tại thị trường Anh trong tháng 6 này, sau khi nó được giới thiệu trước toàn thế giới ở triển lãm xe thương mại 2012 diễn ra ở Birmingham vào ngày 24/4 năm nay</strong></p>\n<p style="text-align:justify;">Mẫu D-MAX đời 2012 trên, gần giống với mẫu Chevrolet Colorado mới, lần đầu tiên có bốn phiên bản ở Anh. Cụ thể, phiên bản tiêu chuẩn có giá từ 14.499 bảng, được trang bị các thiết bị tiêu chuẩn như điều hòa không khí, đèn chạy ban ngày, cửa sổ điều khiển điện, có túi khí đằng trước, bên cạnh.</p>\n<p style="text-align:justify;">Cao hơn một chút là phiên bản Eiger có giá từ 18.499 bảng, được bổ sung thêm đèn pha kiểu máy chiếu, kết nối Bluetooth và iPod, bánh xe 16 inch làm bằng hợp kim, giảm chấn cùng màu thân xe trong khi phiên bản Yukon có giá 18.999 bảng, có vô lăng bọc da trên đó có hệ thống điều khiển hành trình và âm thanh, hệ thống âm thanh sáu loa, bánh xe 17 inch.</p>\n<p style="text-align:justify;">Phiên bản cao cấp Utah có giá 21.499 bảng. Phiên bản này có thêm nội thất bọc da, ghế ngồi trước có sưởi, điều hòa không khí tự động, bộ cảm biến đỗ sau. Phiên bản này sử dụng số tự động.</p>\n<p style="text-align:justify;">Tại Anh, mẫu D-MAX mới trên sử dụng động cơ diesel twin-turbo 2.5, hộp số sàn sáu cấp hoặc hộp số tự động năm cấp. Động cơ tuân thủ theo tiêu chuẩn khí thải Euro5 bốn xylanh này có công suất 161 sức ngựa và mômen xoắn cực đại 400 Nm tại 1.400 vòng/phút.</p>\n<p style="text-align:justify;">Ngoài ra, mẫu xe này còn trang bị hệ thống chuyển cầu điện tử “shift-on-the-fly” mới, cho phép người lái có thể điều chỉnh sang trạng thái truyền động hai bánh hoặc bốn bánh trong khi đang đi với tận tốc lên tới 96 km/giờ.</p>\n<p style="text-align:justify;">Mẫu D-MAX này có khả năng kéo ba tấn và khả năng tải là 1.000 kg.</p>\n<p style="text-align:justify;"><strong> </strong></p>', '', 'xe-isuzu-d-max-pickup-moi-gia-tu-14499-bang-anh', '', '', '', 0, 4, 0, '', '', 1, 355),
-(471, 'Những loại ôtô được hưởng lệ phí trước bạ 2%', '', '2012-09-01 02:38:09', 'nhung-loai-oto-duoc-huong-le-phi-truoc-ba-2.JPG', '<p style="text-align:justify;">Bộ Tài chính cho biết, căn cứ theo Nghị định số 45/2011/NĐ-CP ngày 17/6/2011 của Chính phủ về lệ phí trước bạ quy định, ô tô, rơ moóc hoặc sơ mi rơ moóc được kéo bởi ô tô có mức thu là 2%.</p>', '', '<p style="text-align:justify;"><strong><img style="float:left;margin:5px 10px;" src="/public/userfiles/image/isuzubienhoa/image/tt2.JPG" alt="" width="300" height="204" />Bộ Tài chính cho biết, căn cứ theo Nghị định số 45/2011/NĐ-CP ngày 17/6/2011 của Chính phủ về lệ phí trước bạ quy định, ô tô, rơ moóc hoặc sơ mi rơ moóc được kéo bởi ô tô có mức thu là 2%.</strong></p>\n<p style="text-align:justify;">Bộ Tài chính đã có Công văn số 2824/BTC-TCT giải đáp chính sách về lệ phí trước bạ để các cục thuế địa phương xác định lại cho đúng tỷ lệ lệ phí trước bạ đối với xe ô tô.</p>\n<p style="text-align:justify;">Đối với ô tô chở người dưới 10 chỗ ngồi (kể cả lái xe) nộp lệ phí trước bạ theo mức từ 10% đến 20%. Căn cứ quy định mức thu lệ phí trước bạ này, Hội đồng nhân dân tỉnh, thành phố trực thuộc Trung ương quyết định cụ thể mức thu lệ phí trước bạ đối với ô tô chở người dưới 10 chỗ ngồi (kể cả lái xe) cho phù hợp với điều kiện thực tế của địa phương.</p>\n<p style="text-align:justify;">Theo Thông tư 124/2011/TT-BTC ngày 31/8/2011 của Bộ Tài chính về lệ phí trước bạ quy định tỷ lệ (%) lệ phí trước bạ thì ô tô, rơ moóc hoặc sơ mi rơ moóc được kéo bởi ô tô là 2%. Riêng đối với ô tô chở người dưới 10 chỗ (kể cả lái xe) bao gồm cả trường hợp ô tô bán tải vừa chở người, vừa chở hàng thì nộp lệ phí trước bạ theo tỷ lệ từ 10% đến 20%. Và cũng căn cứ quy định này, Hội đồng nhân dân tỉnh, thành phố trực thuộc Trung ương quyết định cụ thể mức thu lệ phí trước bạ đối với ô tô chở người dưới 10 chỗ ngồi (kể cả lái xe) cho phù hợp với điều kiện thực tế của địa phương.</p>\n<p style="text-align:justify;">Như vậy, theo Thông tư 124/2011/TT-BTC thì các loại ô tô thuộc diện chịu lệ phí trước bạ từ 10% đến 20% bao gồm: Ô tô chở người, ô tô Pick up chở người và ô tô Van chở người có số chỗ ngồi bao gồm cả lái xe từ 4 chỗ đến dưới 10 chỗ ngồi.</p>\n<p style="text-align:justify;">Trường hợp ô tô của các tổ chức, cá nhân không phải là xe ô tô chở người, ô tô Pick up chở người và ô tô Van chở người có số chỗ ngồi bao gồm cả lái xe từ 4 chỗ đến dưới 10 chỗ ngồi nhưng đã nộp lệ phí trước bạ theo tỷ lệ 10% đến 20% thì được hoàn lại số tiền đã nộp thừa theo quy định.</p>\n<p style="text-align:justify;">Bộ Tài chính đề nghị các cục thuế địa phương căn cứ đơn yêu cầu và hồ sơ cụ thể của từng trường hợp để làm thủ tục hoàn lại số tiền nộp thừa của các tổ chức, cá nhân theo đúng quy định của pháp luật.</p>\n<p style="text-align:justify;"><strong> </strong></p>', '', 'nhung-loai-oto-duoc-huong-le-phi-truoc-ba-2', '', '', '', 0, 1, 0, '', '', 1, 355),
-(472, 'Ô tô bay đầu tiên thế giới... giá 26 tỷ đồng', '', '2012-09-01 02:39:38', '-to-bay-dau-tien-the-gioi----gia-26-ty-dong.JPG', '<p style="text-align:justify;">Với chiếc Aerocar, chỉ trong 10 phút, người lái có thể thực hiện ước mơ chạy trên đường chuyển sang bay trên không, nhưng để "tậu" nó thì giá không rẻ chút nào, khoảng 800.000 bảng Anh (tương đương 26 tỷ đồng).</p>', '', '<p style="text-align:justify;"><strong><img style="float:right;margin:5px 10px;" src="/public/userfiles/image/isuzubienhoa/image/tt3.JPG" alt="" width="300" height="191" />Với chiếc Aerocar, chỉ trong 10 phút, người lái có thể thực hiện ước mơ chạy trên đường chuyển sang bay trên không, nhưng để "tậu" nó thì giá không rẻ chút nào, khoảng 800.000 bảng Anh (tương đương 26 tỷ đồng).</strong></p>\n<p style="text-align:justify;">Aerocar là 1 trong 6 chiếc ô tô bay từng được sản xuất bởi nhà phát minh Moulton “Molt” Taylor. Ông lần đầu tiên thiết kế loại xe này vào năm 1946 và 3 năm sau thì hoàn thành, là chiếc xe bay đầu tiên trên thế giới có thể đạt tốc độ 60 km/h trên mặt đất và 110 km/h ở độ cao 12.000 m.</p>\n<p>Vào tháng 11/1946, Aerocar không thể cất cánh trong lần bay thử nghiệm đầu tiên. Tuy nhiên, chỉ một tháng sau đó, sau khi sửa đổi một số chi tiết, xe có thể bay lượn trên bầu trời Longview, Washington (Mỹ) và thế là, Moulton “Molt” Taylor bắt đầu nhận được nguồn tài trợ từ các nhà đầu tư quan tâm.</p>\n<p>Ba mô hình ô tô bay đầu tiên của nhà phát minh Taylor đã được bán với giá 15.800 bảng Anh. Nhưng để sản xuất hàng loạt, hãng đã thất bại vì không nhận được đủ số đơn đặt hàng - ít nhất phải 500 đơn.</p>\n<p>"Chiếc Aerocar do Molt Taylor chế tạo là chiếc xe bay đầu tiên được chứng nhận bởi Cục Hàng không Liên bang Mỹ”, Ron Twellman, người phụ trách tại Bảo tàng EAA AirVenture (Mỹ) cho biết.</p>\n<p style="text-align:justify;"><strong> </strong></p>', '', 'o-to-bay-dau-tien-the-gioi-gia-26-ty-dong', '', '', '', 0, 3, 0, '', '', 1, 356),
-(473, 'Hành trình siêu xe 2012: Sau hoãn là...hủy !', '', '2012-09-01 02:43:00', 'hanh-trinh-sieu-xe-2012-sau-hoan-la---huy-.jpg', '<p style="text-align:justify;">Một thành viên ban tổ chức cho biết, Hành trình siêu xe 2012 (Car &amp; Passion) tiếp tục hoãn lần 2 vô hạn định. Mặc dù chưa có thông tin chính thức nhưng nhiều nguồn tin cho hay chương trình năm nay bị hủy do khó khăn kinh tế.</p>', '', '<p style="text-align:justify;"> </p>\n<p style="text-align:justify;"><strong>Một thành viên ban tổ chức cho biết, Hành trình siêu xe 2012 (Car &amp; Passion) tiếp tục hoãn lần 2 vô hạn định. Mặc dù chưa có thông tin chính thức nhưng nhiều nguồn tin cho hay chương trình năm nay bị hủy do khó khăn kinh tế.</strong></p>\n<p style="text-align:justify;">Như vậy, sau hai lần trì hoãn, thời gian của năm 2012 chỉ còn 4 tháng phía trước mà chưa có lịch trình cụ thể, nên thông tin hủy chương trình cũng được củng cố thêm. Theo kế hoạch ban đầu, Car &amp; Passion được tổ chức đúng dịp giải phóng miền Nam 30/4/2012 nhưng vì một số lý do khách quan, Ban tổ chức đã ấn định lùi chương trình vào dịp trước Quốc khánh, tức là khởi hành ngày 25/8, tiếp tục hội ngộ tại Đà Nẵng và kết thúc vào 30/8.</p>\n<p style="text-align:justify;">Tuy nhiên cho tới hôm nay, 31/8, khi thời gian của kế hoạch lần 2 đã trôi qua, chương trình vẫn chưa diễn ra và Ban tổ chức Car &amp; Passion 2012 cũng chưa công bố nguyên nhân. Một thành viên của ban tổ chức xác nhận, kế hoạch lần 2 đã bị hoãn nhưng không khẳng định chương trình có bị hủy hay không.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/isuzubienhoa/image/tt4.jpg" alt="" width="480" height="319" /></p>\n<p style="text-align:center;"><em>Hành trình siêu xe 2011 đã để lại ấn tượng tốt. ảnh carpassion</em></p>\n<p style="text-align:justify;">Hiện tại, nhiều diễn đàn ô tô, mạng xã hội đã thông tin chương trình bị hủy. Trên trang web chính thức của chương trình, thông tin mới nhất đã có cách đây vài tháng và thời gian dự kiến diễn ra (25-30/8) đã qua.</p>\n<p style="text-align:justify;">Dù không nói rõ cụ thể nguyên nhân nhưng một số nguồn tin cho hay, khó khăn nhất vẫn là vấn đề kinh tế. Nằm trong khó khăn chung của nền kinh tế cả nước, nhiều doanh nghiệp, đơn vị thành viên CLB siêu xe cũng gặp không ít khó khăn, bản thân công ty Quốc Cường Gia Lai do ông Nguyễn Quốc Cường - biệt danh Cường đô la, chủ tịch CLB siêu xe Việt Nam - cũng gặp không ít khó khăn trong hoạt động kinh doanh, cổ phiếu sụt giảm. Trong bối cảnh đó, một thành viên ban tổ chức cho hay, việc cố tổ chức chương trình không chỉ đứng trước nguy cơ thất bại, lợi bất cập hại...</p>\n<p style="text-align:justify;"><strong> </strong></p>\n<p> </p>', '', 'hanh-trinh-sieu-xe-2012-sau-hoan-lahuy-', '', '', '', 0, 2, 0, '', '', 1, 356),
-(474, 'Siêu xe sexy nhất thế giới', '', '2012-09-01 02:49:34', 'sieu-xe-sexy-nhat-the-gioi.jpg', '<p style="text-align:justify;">Danh hiệu này được trao cho siêu xe Pagani Huayra, trị giá 840.000 Bảng Anh, tương đương gần 28 tỷ đồng.</p>', '', '<p style="text-align:justify;"><strong>Danh hiệu này được trao cho siêu xe Pagani Huayra, trị giá 840.000 Bảng Anh, tương đương gần 28 tỷ đồng.</strong></p>\n<p style="text-align:justify;">Dựa trên hệ khung gầm bằng sợi các-bon đúc liền, chiếc Huayra nặng 1.350 kg này sử dụng động cơ turbo kép V12 dung tích 6 lít của hãng độ Mercedes AMG, cho công suất cực đại tới 730 mã lực và tăng tốc từ 0-100 km/h chỉ vẻn vẹn 3,2 giây. Tốc độ tối đa của siêu xe này có thể đạt được là 376 km/h.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/isuzubienhoa/image/tt5.jpg" alt="" width="480" height="290" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/isuzubienhoa/image/tt5.1.jpg" alt="" width="480" height="341" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/isuzubienhoa/image/tt5.2.jpg" alt="" width="480" height="318" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/isuzubienhoa/image/tt5.3.jpg" alt="" width="480" height="587" /></p>', '', 'sieu-xe-sexy-nhat-the-gioi', '', '', '', 0, 6, 0, '', '', 1, 355),
-(475, 'Ô tô nhập khẩu không chính hãng lại về Việt Nam', '', '2012-09-01 02:51:45', '-to-nhap-khau-khong-chinh-hang-lai-ve-viet-nam.jpg', '<p style="text-align:justify;">Bộ Công Thương sắp ban hành quy định cho phép các lô hàng xe ô tô chở người từ 9 chỗ ngồi trở xuống nhập khẩu và thanh toán trước ngày ban hành Thông tư 20 được phép nhập về Việt Nam</p>', '', '<p style="text-align:justify;"><strong>Bộ Công Thương sắp ban hành quy định cho phép các lô hàng xe ô tô chở người từ 9 chỗ ngồi trở xuống nhập khẩu và thanh toán trước ngày ban hành Thông tư 20 được phép nhập về Việt Nam.</strong></p>\n<p style="text-align:justify;">Mới đây, Phó Thủ tướng Hoàng Trung Hải đã đồng ý về nguyên tắc các doanh nghiệp được tiếp tục nhập khẩu xe ô tô theo hợp đồng đã ký mà thanh toán một phần hoặc toàn bộ hợp đồng trước ngày ban hành Thông tư 20/2011/TT-BCT của Bộ Công Thương(12/5/2011).</p>\n<p style="text-align:justify;">Thực hiện ý kiến chỉ đạo này, Bộ Công Thương đang xin ý kiến của Ngân hàng Nhà nước và Tổng cục Hải quan để hoàn thiện quy định cho phép doanh nghiệp được nhập xe theo hợp đồng đã ký. Nguyên tắc được đưa ra với các trường hợp này là khi làm thủ tục nhập khẩu, ngoài các giấy tờ thông thường theo quy định, doanh nghiệp phải nộp bổ sung chứng từ thanh toán lô hàng của Ngân hàng thương mại có thời điểm thanh toán trước ngày 12/5/2011. Trường hợp thanh toán cho nhiều lô hàng, giao nhiều đợt khác nhau cần đảm bảo số lượng xe nhập khẩu có giá trị tương ứng với số tiền đã thanh toán và phù hợp với hợp đồng nhập khẩu đã ký.</p>\n<p style="text-align:justify;">Khó cho doanh nghiệp nếu nhập xe theo đúng chủng loại, số lượng đã đặt cọc.</p>\n<p style="text-align:center;"><em> </em></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/isuzubienhoa/image/tt6.jpg" alt="" width="480" height="355" /><br /><em>Ảnh có tính minh họa.</em></p>\n<p style="text-align:justify;">Ngoài ra, dự kiến Bộ Công Thương còn yêu cầu có thêm văn bản của người bán gửi cho người mua thể hiện việc đã nhận tiền của người mua trước ngày 12/5/2011 (cụ thể hợp đồng, chứng từ thanh toán, số tiền), số lượng xe chưa giao theo chứng từ thanh toán; xác nhận không đồng ý hoàn lại tiền mà người mua đã chuyển nhưng chưa giao hàng.</p>\n<p style="text-align:justify;">Tuy nhiên, theo đại diện một số doanh nghiệp nhập khẩu xe ô tô, việc cho phép nhập khẩu theo đúng số lượng, chủng loại xe đã ký theo hợp đồng sẽ làm nảy sinh nhiều khó khăn, bất cập.</p>\n<p style="text-align:justify;">Đại diện công ty cổ phần Xe Hàn cho hay, hiện công ty đang còn tồn tại Hợp đồng nhập khẩu ký với đối tác ngày 14/02/2011, từ thời điểm ký hợp đồng đến nay đã được gần 20 tháng và trong 20 tháng này thị trường ô tô thế giới đã có rất nhiều thay đổi, một số model xe trong hợp đồng đã ký đối tác không thể cung cấp được vì những model này hiện không còn được sản xuất nữa.</p>\n<p style="text-align:justify;">Bên cạnh đó, khi ký kết hợp đồng mua xe thì yếu tố đầu tiên phải xem xét đến là nhu cầu của thị trường nhưng trong 20 tháng qua, thị trường xe ô tô đã xảy ra rất nhiều biến động, một số model xe trong hợp đồng đã ký không còn phù hợp với thị hiếu của khách hàng nên nếu nhập về sẽ không tiêu thụ được hoặc chỉ tiêu thụ được rất ít.</p>\n<p style="text-align:justify;">Trước khó khăn này, công ty Xe Hàn đề nghị Bộ Công Thương cho phép được điều chỉnh số lượng, chủng loại xe trong phạm vi giá trị hợp đồng đã ký cho phù hợp với thị trường.</p>', '', 'o-to-nhap-khau-khong-chinh-hang-lai-ve-viet-nam', '', '', '', 0, 5, 0, '', '', 1, 356);
+(314, 'Yến sào chống lão hóa da cho phụ nữ', '', '2012-07-13 06:56:33', 'yen-sao-chong-lao-hoa-da-cho-phu-nu.jpg', '<p>Yến sào bí quyết giử gìn nét thanh xuân cho phụ nữ: Làm cách nào để có thể giữ được một sức khoẻ “dẻo dai” cùng nét thanh xuân, tươi trẻ trên gương mặt và cơ thể? Đây có lẽ là nỗi lo lớn nhất của rất nhiều chị em phụ nữ. Họ thật sự đang ở đỉnh cao của cuộc đời nhờ sự từng trải, chín chắn nhưng cũng đang bắt đầu thấy lo âu nhiều hơn là tự tin.</p>', '', '<p><img src="/public/userfiles/image/muayensao/image/1a.jpg" alt="" width="202" height="148" />Yến sào bí quyết giử gìn nét thanh xuân cho phụ nữ: Làm cách nào để có thể giữ được một sức khoẻ “dẻo dai” cùng nét thanh xuân, tươi trẻ trên gương mặt và cơ thể? Đây có lẽ là nỗi lo lớn nhất của rất nhiều chị em phụ nữ. Họ thật sự đang ở đỉnh cao của cuộc đời nhờ sự từng trải, chín chắn nhưng cũng đang bắt đầu thấy lo âu nhiều hơn là tự tin.<br />Tại sao phụ nữ U30 có nhiều nỗi lo?</p>\n<p>Nói chung phụ nữ ở lứa tuổi nào dùng yến cũng phù hợp. Đặc biệt, khi chị em bước vào thời kỳ lão hóa sau tuổi 30 thì lượng collagen bắt đấu suy giảm, khiến xuất hiện các nếp nhăn quanh miệng, quanh mắt. Ngoài ra nếu cơ thể đang trong tình trạng suy kiệt do bệnh tật, phẫu thuật hoặc sau khi sinh… thì lượng hồng cầu bị suy giảm, người mệt mỏi, sụt cân, sức đề kháng yếu.</p>\n<p>Lý do ở đây khá đơn giản vì ở độ tuổi từ 30 tuổi trở lên, phụ nữ thường là từng mang thai nên cơ thể bị chèn ép, vóc dáng thay đổi nhiều. Họ sinh con và bận rộn chăm sóc con cái cùng với gia đình nên cũng dành ít thời gian chăm sóc bản thân hơn trước.</p>\n<p>Ở tuổi này, chị em đã bắt đầu chín chắn trong công việc, muốn khẳng định mình ở vị trí cao hơn, nên cũng đầu tư nhiều thời gian phấn đấu cho sự nghiệp, cuộc sống của họ trở nên vô cùng tất bật, thiếu vận động, thiếu thời gian nghỉ ngơi… và theo thời gian các nếp nhăn trên da bắt dầu xuất hiện trên khuôn mặt của chị e phụ nử. đó cũng là nỗi lo của chị e phụ nữ</p>\n<p><span style="color:#0000ff;"><strong>Yến sào hỗ trợ làm đẹp da, đẹp dáng cho phụ nữ.</strong></span></p>\n<p>Ngoài việc bồi bổ thể lực và trí lực, yến sào còn được nhiều người công nhận là một “trợ tá đắc lực” trong việc duy trì sức khỏe và sắc đẹp cho phụ nữ. Thành phần yến sào chứa nhiều threonine là chất hình thành elastine và collagen giúp ngăn ngừa lão hóa, duy trì làn da tươi trẻ, giúp kéo dài nét thanh xuân cho chị em. Hơn nữa, trong yến chỉ có đường tự nhiên galactose mà không chứa chất béo, có thể dùng mỗi ngày mà không sợ tăng cân. Phụ nữ nếu ăn yến thường xuyên sẽ ít bị nổi mụn, tàn nhang, vết nám, hơn nữa còn có được làn da mịn màng, đặc biệt làm chậm quá trình lão hóa.</p>\n<p>Đối tượng cũng nên dùng bổ sung yến sào là phụ nữ mang thai (thai sau 03 tháng) để tăng dưỡng chất cho cả mẹ và thai nhi. Thai phụ nếu ăn yến được thì cũng ăn trước 01 lượng nhỏ và theo dõi trước khi bắt đầu dùng thường xuyên.</p>\n<p><strong><span style="color:#0000ff;">Cách chế biến yến sào:</span></strong></p>\n<p>Yến sào có thể chế biến thành nhiều món ăn khác nhau nhưng mà cách đơn giản nhất và hiệu quả nhất là chưng cách thủy với đường phèn.</p>\n<p>Việc ngâm nở và chưng cất yến sào khá đơn giản, người tiêu dùng hoàn toàn có thể tự làm. Sau khi ngâm nở nếu để trong tủ lạnh thì có thể bảo quản tới 10 ngày. Ngâm tổ yến trong nước sạch để có thể lấy ra được lông chim và các tạp chất khác trong các loại tổ khác nhau sẻ có thời gian ngâm khác nhau thường thì 3h trở lên. Tổ càng có chất lượng tốt thì có thời gian ngâm lâu hơn. Sau khi ngâm kích thướt tổ sẻ lớn hơn rất nhiều so với trước khi ngâm. Loại tổ yến tự nhiên thường có lẫn tạp chất và lông chim, do đó ta nên sử dụng dòng nước chảy và nhíp để làm sạch tổ.</p>\n<p>Đầu tiên ngâm nở tổ yến trong nước khoản 600C. Khi ngâm cần lưu ý nước phải ngậm tổ yến để tổ yến hút đủ lượng nước cần thiết.</p>\n<p>Dùng nhíp để lấy sạch lông chim và tạp chất ra khỏi tổ yến. Nếu yến vẫn còn nguyên tổ quý khách tách thành từng sợi sau đó cho yến vào tay, đặt tay vào tô nước dùng muỗn khuấy đều nhẹ nhưng đồng thời nhấc lên nhấc xuống lông tơ yến sẻ theo nước ra ngoài. Thay nước 4-5 lần, quý khách sẻ có tổ yến trắng sạch.</p>\n<p><strong><span style="color:#0000ff;">Với tổ yến đã làm sạch ra khỏi nước để một lúc cho ráo.</span></strong></p>\n<p>Dùng hai nồi có kích thướt khác nhau để chưng tổ yến. Cho một ít nước sôi vào nồi nhỏ đổ đầy nước vào nồi lớn cho tổ yến đã làm sạch vào nồi nhỏ đun lửa nhỏ. Thời gian chưng tùy thuột vào loại tổ yến nếu chưng quá lâu tổ yến sẻ mền và nát vụn.</p>\n<p>Thời điểm ăn yến sào là lúc bụng đói vào buổi sáng hoặc buổi tối trước khi đi ngủ để dưỡng chất được hấp thụ tốt nhất.</p>', '', 'yen-sao-chong-lao-hoa-da-cho-phu-nu', '', '', '', 0, 1, 0, '', '', 1, 204);
 
 -- --------------------------------------------------------
 
@@ -528,15 +531,18 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=357 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=388 ;
 
 --
 -- Dumping data for table `dos_module_news_cat`
 --
 
 INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(355, 0, 'Thế giới xe', '', '', '', 'the-gioi-xe', '', '', '', '', 1, '', '', 1, 'isuzubienhoa'),
-(356, 0, 'Văn hóa xe', '', '', '', 'van-hoa-xe', '', '', '', '', 2, '', '', 1, 'isuzubienhoa');
+(204, 0, 'Cẩm Nang Yến Sào', '', '', '', 'cam-nang-yen-sao', '', '', '', 'cam-nang-yen-sao.jpg', 1, '', '', 1, 'muayensao'),
+(384, 0, 'Tác dụng của yến sào', '', '', '', 'tac-dung-cua-yen-sao', '', '', '', '', 2, '', '', 1, 'muayensao'),
+(385, 384, 'Chữa bệnh', '', '', '', 'chua-benh', '', '', '', '', 3, '', '', 1, 'muayensao'),
+(386, 384, 'Nâng cáo sức khỏe', '', '', '', 'nang-cao-suc-khoe', '', '', '', '', 4, '', '', 1, 'muayensao'),
+(387, 0, 'Lịch sử của yến sáo', '', '', '', 'lich-su-cua-yen-sao', '', '', '', '', 5, '', '', 1, 'muayensao');
 
 -- --------------------------------------------------------
 
@@ -554,7 +560,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456175),
+('day_time', 2456184),
 ('max_count', 0),
 ('counter', 0),
 ('yesterday', 0);
@@ -575,7 +581,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1346725840);
+('''127.0.0.1''', 1347516751);
 
 -- --------------------------------------------------------
 
@@ -612,25 +618,25 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9277 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5494 ;
 
 --
 -- Dumping data for table `dos_module_products`
 --
 
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(9265, 'Dmax X Limited', '', '2012-09-01 01:26:04', 'dmax-x-limited-thumb.jpg', 'dmax-x-limited.jpg', 'dmax-x-limited-desc-1.jpg|dmax-x-limited-desc-2.jpg|dmax-x-limited-desc-3.jpg|dmax-x-limited-desc-4.jpg|dmax-x-limited-desc-5.png|dmax-x-limited-desc-6.jpg', '<p><strong><span style="color:#ff0000;">Phong cách thể thao – Nâng tầm đẳng cấp</span></strong></p>\n<p> - Trang bị cản trước và cản sau kiểu mới, thể thao và mạnh mẽ.</p>\n<p> -  Tem xe X-Limited phong cách, tinh tế với tâm điểm logo Isuzu màu đỏ sang trọng.</p>\n<p> - Trang bị phim cách nhiệt chính hãng.</p>\n<p> - Bộ mâm xe màu đen khói sang trọng, lịch lãm.</p>\n<p> - Bộ ghế da hai màu đỏ đen cao cấp, tiện nghi (tùy chọn thêm)</p>\n<p><strong><span style="color:#ff0000;"> </span></strong></p>', '', '<p>Liên hệ Isuzu Biên Hòa</p>', '', 'dmax-x-limited', '', '', '', 0, 12, '', 0, 0, '', '', '', '', 1, 1668),
-(9266, 'LS AT (4×2) – xe nhập khẩu', '', '2012-09-01 01:35:59', 'ls-at-42--xe-nhap-khau-thumb.jpg', 'ls-at-42--xe-nhap-khau.jpeg', 'ls-at-42--xe-nhap-khau-desc-1.jpg|ls-at-42--xe-nhap-khau-desc-2.jpg|ls-at-42--xe-nhap-khau-desc-3.jpg|ls-at-42--xe-nhap-khau-desc-4.jpg', '<p>- Trang bị cản trước và cản sau kiểu mới, thể thao và mạnh mẽ. </p>\n<p>- Trang bị phim cách nhiệt chính hãng.</p>\n<p>- Bộ mâm xe màu đen khói sang trọng, lịch lãm.</p>\n<p>- Bộ ghế da hai màu đỏ đen cao cấp, tiện nghi (tùy chọn thêm)</p>', '', '<p>Liên hệ Isuzu Biên Hòa</p>', '', 'ls-at-42-xe-nhap-khau', '', '', '', 0, 11, '', 0, 0, '', '', '', '', 1, 1668),
-(9267, 'S MT (4×4)', '', '2012-09-01 01:39:54', 's-mt-44-thumb.jpg', 's-mt-44.jpg', '', '<p>- Trang bị cản trước và cản sau kiểu mới, thể thao và mạnh mẽ.</p>\n<p>- Trang bị phim cách nhiệt chính hãng.</p>\n<p>- Bộ mâm xe màu đen khói sang trọng, lịch lãm.</p>\n<p>- Bộ ghế da hai màu đỏ đen cao cấp, tiện nghi (tùy chọn thêm)</p>', '', '<p>Liên hệ Isuzu Biên Hòa</p>', '', 's-mt-44', '', '', '', 0, 10, '', 0, 0, '', '', '', '', 1, 1668),
-(9268, 'LS MT (4×4)', '', '2012-09-01 01:46:55', 'ls-mt-44-thumb.jpg', 'ls-mt-44.jpeg', 'ls-mt-44-desc-1.jpg|ls-mt-44-desc-2.jpg|ls-mt-44-desc-3.jpg|ls-mt-44-desc-4.jpg', '<p>- Trang bị cản trước và cản sau kiểu mới, thể thao và mạnh mẽ.</p>\n<p>- Trang bị phim cách nhiệt chính hãng.</p>\n<p>- Bộ mâm xe màu đen khói sang trọng, lịch lãm.</p>\n<p>- Bộ ghế da hai màu đỏ đen cao cấp, tiện nghi (tùy chọn thêm)</p>', '', '<p>Liên hệ Isuzu Biên Hòa</p>', '', 'ls-mt-44', '', '', '', 0, 9, '', 0, 0, '', '', '', '', 1, 1668),
-(9269, 'QKR55F (sát-xi ngắn)', '', '2012-09-01 01:49:09', 'qkr55f-sat-xi-ngan-thumb.jpg', 'qkr55f-sat-xi-ngan.jpg', '', '<p>Tổng trọng tải: 3,550 kg</p>\n<p>Tải trọng: 1,400 kg</p>', '', '<p>Liên hệ Isuzu Biên Hòa</p>', '', 'qkr55f-sat-xi-ngan', '', '', '', 0, 1, '', 0, 0, '', '', '', '', 1, 1669),
-(9270, 'QKR55H (sát-xi dài)', '', '2012-09-01 01:50:19', 'qkr55h-sat-xi-dai-thumb.jpg', 'qkr55h-sat-xi-dai.jpg', '', '<p>Tổng trọng tải: 4,700 kg</p>\n<p>Tải trọng: 1,900 kg</p>\n<p> </p>', '', '<p>Liên hệ Isuzu Biên Hòa</p>', '', 'qkr55h-sat-xi-dai', '', '', '', 0, 2, '', 0, 0, '', '', '', '', 1, 1669),
-(9271, 'NLR55E', '', '2012-09-01 01:52:17', 'nlr55e-thumb.jpg', 'nlr55e.jpg', '', '<p>Tổng trọng tải: 3,400 kg</p>\n<p>Tải trọng: 1,300 kg</p>', '', '<p>Liên hệ Isuzu Biên Hòa</p>', '', 'nlr55e', '', '', '', 0, 3, '', 0, 0, '', '', '', '', 1, 1670),
-(9272, 'FRR90N', '', '2012-09-01 01:54:13', 'frr90n-thumb.png', 'frr90n.png', '', '<p>Tổng trọng tải: 10,400 kg</p>\n<p>Tải trọng: 6,200 kg</p>', '', '<p>Liên hệ Isuzu Biên Hòa</p>', '', 'frr90n', '', '', '', 0, 4, '', 0, 0, '', '', '', '', 1, 1670),
-(9273, 'GVR34UL-WDN (Xe đầu kéo)', '', '2012-09-01 02:00:46', 'gvr34ul-wdn-xe-dau-keo-thumb.jpg', 'gvr34ul-wdn-xe-dau-keo.jpg', '', '<p>Tổng trọng tải (Xe &amp; Rơ-moóc): 40,000 kg</p>\n<p>Theo thiết kế</p>', '', '<p style="text-align:center;"><img src="/public/userfiles/image/isuzubienhoa/image/a.jpg" alt="" width="558" height="543" /></p>', '', 'gvr34ul-wdn-xe-dau-keo', '', '', '', 0, 5, '', 0, 0, '', '', '', '', 1, 1671),
-(9274, 'FVM34-T', '', '2012-09-01 02:01:46', 'fvm34-t-thumb.jpg', 'fvm34-t.gif', '', '<p>Tổng trọng tải: 24,300 kg</p>\n<p>Tải trọng: 16,100 kg</p>', '', '<p>Liên hệ Isuzu Biên Hòa</p>', '', 'fvm34-t', '', '', '', 0, 6, '', 0, 0, '', '', '', '', 1, 1671),
-(9275, 'FVZ34U-P (Xe ben tự đỗ)', '', '2012-09-01 02:05:35', 'fvz34u-p-xe-ben-tu-do-thumb.jpg', 'fvz34u-p-xe-ben-tu-do.jpg', '', '<p>- Tổng trọng tải: 24,950 kg</p>\n<p>- Theo thiết kế</p>', '', '<p style="text-align:center;"><img src="/public/userfiles/image/isuzubienhoa/image/b.jpg" alt="" width="543" height="545" /></p>', '', 'fvz34u-p-xe-ben-tu-do', '', '', '', 0, 7, '', 0, 0, '', '', '', '', 1, 1671),
-(9276, 'EXR51E (Xe đầu kéo)', '', '2012-09-01 02:07:35', 'exr51e-xe-dau-keo-thumb.jpg', 'exr51e-xe-dau-keo.jpg', '', '<p>- Tổng trọng tải (Xe &amp; Rơ-moóc): 43,000 kg</p>\n<p>- Theo thiết kế</p>', '', '<p style="text-align:center;"><img src="/public/userfiles/image/isuzubienhoa/image/c.jpg" alt="" width="546" height="605" /></p>', '', 'exr51e-xe-dau-keo', '', '', '', 0, 8, '', 0, 0, '', '', '', '', 1, 1671);
+(5482, 'Yến đảo trắng còn nguyên', '', '2012-07-15 23:47:44', 'yen-dao-trang-con-nguyen-to-thumb.jpg', 'yen-dao-trang-con-nguyen-to.jpg', '', '<p>MSP : YTNT01</p>', '', '<p><strong>Yến đảo trắng còn nguyên tổ ( <span style="color:#ff0000;">7.500.000 đến 7.800.000 VND/100Gr</span> )</strong></p>\n<p>Yến trắng đẹp, thân dày và tròn, còn nguyên tổ, nở nhiều trong nước, nguồn yến được lấy trực tiếp từ Khánh Hòa, HộiAn ..., luôn đạt chất lượng tốt nhất và độ khô tối đa, luôn có tại cửa hàng.</p>', '', 'yen-dao-trang-con-nguyen', '', '', '', 0, 12, '', 0, 0, '', '', '', '', 1, 972),
+(5483, 'yến huyết còn nguyên tổ', '', '2012-07-15 23:49:11', 'to-yen-huyet-con-nguyen-to-thumb.jpg', 'to-yen-huyet-con-nguyen-to.jpg', '', '<p>MSP : YHNT01</p>', '', '<p><strong>Tổ yến huyết còn nguyên tổ (<span style="color:#ff0000;">giá 15.000.000 đến 15.200.000 VNĐ</span>)</strong></p>\n<p>Yến màu đỏ và đỏ nâu còn nguyên tổ, do chim yến làm tổ trên lớp đá vôi, hấp thụ khoáng và các chất vi lượng từ đá, rất tốt cho người đang bệnh nặng. Nở nhiều trong nước, nguồn Yến được lấy trực tiếp từ Khánh Hòa, Hội An, các tỉnh miền trung Việt Nam, luôn đạt chất lượng tốt nhất và độ khô tối đa, luôn có tại cửa hàng.</p>', '', 'yen-huyet-con-nguyen-to', '', '', '', 0, 11, '', 0, 0, '', '', '', '', 1, 972),
+(5484, 'Yến còn nguyên tổ', '', '2012-07-15 23:50:31', 'yen-con-nguyen-to-thumb.jpg', 'yen-con-nguyen-to.jpg', '', '<p>MSP : YNT01</p>', '', '<p>MSP : YNT01</p>', '', 'yen-con-nguyen-to', '', '', '', 0, 10, '', 0, 0, '', '', '', '', 1, 972),
+(5485, 'Tổ Yến nhà còn nguyên', '', '2012-07-15 23:54:03', 'to-yen-nha-con-nguyen-thumb.jpg', 'to-yen-nha-con-nguyen.jpg', '', '<p>MSP : YNNT01</p>', '', '<p><strong>Yến nhà tổ trắng, còn nguyên tổ (<span style="color:#ff0000;">3.700.000 đến 4.800.000 VND/100Gr</span>)</strong></p>\n<p>Yến trắng đẹp, thân mỏng và dài, còn nguyên tổ, nở nhiều trong nước, nguồn yến được lấy trực tiếp từ các nhà yến tại Khánh Hòa, Hội An và các tỉnh miền trung Việt Nam, luôn đạt chất lượng tốt nhất và độ khô tối đa, luôn có tại cửa hàng.</p>', '', 'to-yen-nha-con-nguyen', '', '', '', 0, 9, '', 0, 0, '', '', '', '', 1, 971),
+(5486, 'Yến đảo đã làm sạch', '', '2012-07-15 23:55:58', 'yen-dao-da-lam-sach-thumb.jpg', 'yen-dao-da-lam-sach.jpg', '', '<p>MSP : YDLS01</p>', '', '<p><strong>Yến đảo đã làm sạch (<span style="color:#ff0000;">giá 6.200.000 VNĐ/ 100gr</span>)</strong></p>\n<p>Có hộp 50gr</p>', '', 'yen-dao-da-lam-sach', '', '', '', 0, 8, '', 0, 0, '', '', '', '', 1, 970),
+(5487, 'Yến nhà đã làm sạch', '', '2012-07-16 00:02:11', 'yen-nha-da-lam-sach-thumb.jpg', 'yen-nha-da-lam-sach.jpg', '', '<p>MSP : YNLS01</p>', '', '<p><strong>Yến nhà đã làm sạch (<span style="color:#ff0000;">4.000.000 VND/100Gr</span>)</strong></p>\n<p>Yến trắng đẹp, được đóng thành bánh nhỏ, dễ sử dụng, đã được làm sạch lông, nở nhiều trong nước, nguồn yến được lấy trực tiếp từ các nhà yến các tỉnh miền trung Việt Nam, luôn đạt chất lượng tốt nhất và độ khô tối đa, luôn có tại cửa hàng.</p>', '', 'yen-nha-da-lam-sach', '', '', '', 0, 6, '', 0, 0, '', '', '', '', 1, 970),
+(5488, 'Yến đảo sơ chế loại 2', '', '2012-07-16 00:27:55', 'yen-dao-so-che-loai-2-thumb.jpg', 'yen-dao-so-che-loai-2.jpg', '', '<p>Chi tiết sản phẩm</p>', '', '<p>Chi tiết sản phẩm</p>', '', 'yen-dao-so-che-loai-2', '', '', '', 0, 7, '', 0, 0, '', '', '', '', 1, 972),
+(5489, 'Tổ huyết yến thô', '', '2012-07-16 00:29:24', 'to-huyet-yen-tho-thumb.jpg', 'to-huyet-yen-tho.jpg', '', '<p>Chi tiết sản phẩm</p>', '', '<p>Chi tiết sản phẩm</p>', '', 'to-huyet-yen-tho', '', '', '', 0, 5, '', 0, 0, '', '', '', '', 1, 970),
+(5490, 'Huyết yến tinh chế loại 1', '', '2012-07-16 00:30:27', 'huyet-yen-tinh-che-loai-1-thumb.jpg', 'huyet-yen-tinh-che-loai-1.jpg', '', '<p>Chi tiết sản phẩm</p>', '', '<p>Chi tiết sản phẩm</p>', '', 'huyet-yen-tinh-che-loai-1', '', '', '', 0, 4, '', 0, 0, '', '', '', '', 1, 970),
+(5491, 'Chè yến bạch quả', '', '2012-07-16 00:31:34', 'che-yen-bach-qua-thumb.jpg', 'che-yen-bach-qua.jpg', '', '<p>Chi tiết sản phẩm</p>', '', '<p>Chi tiết sản phẩm</p>', '', 'che-yen-bach-qua', '', '', '', 0, 3, '', 0, 0, '', '', '', '', 1, 1044),
+(5492, 'Chè yến thập cẩm', '', '2012-07-16 00:32:27', 'che-yen-thap-cam-thumb.jpg', 'che-yen-thap-cam.jpg', '', '<p>Chi tiết sản phẩm</p>', '', '<p>Chi tiết sản phẩm</p>', '', 'che-yen-thap-cam', '', '', '', 0, 2, '', 0, 0, '', '', '', '', 1, 1044),
+(5493, 'Chè yến táo', '', '2012-07-16 00:35:12', 'che-yen-tao-thumb.jpg', 'che-yen-tao.jpg', '', '<p>Chi tiết sản phẩm</p>', '', '<p>Chi tiết sản phẩm</p>', '', 'che-yen-tao', '', '', '', 0, 1, '', 0, 0, '', '', '', '', 1, 1044);
 
 -- --------------------------------------------------------
 
@@ -658,17 +664,20 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1672 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1783 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
 --
 
 INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(1668, 0, 'D-Max (Xe bán tải)', '', '', '', 'd-max-xe-ban-tai', '', '', '', 'd-max-xe-ban-tai.jpg', '', 4, '', '', 1, 'isuzubienhoa'),
-(1669, 0, 'Xe tải Q-series', '', '', '', 'xe-tai-q-series', '', '', '', 'xe-tai-q-series.jpg', '', 4, '', '', 1, 'isuzubienhoa'),
-(1670, 0, 'Xe tải Forward', '', '', '', 'xe-tai-forward', '', '', '', 'xe-tai-forward.jpg', '', 4, '', '', 1, 'isuzubienhoa'),
-(1671, 0, 'Xe tải nặng Forward', '', '', '', 'xe-tai-nang-forward', '', '', '', 'xe-tai-nang-forward.jpg', '', 4, '', '', 1, 'isuzubienhoa');
+(970, 0, 'Tổ Yến Đã Làm Sạch', '', '', '', 'to-yen-da-lam-sach', '', '', '', 'to-yen-a-lam-sach.jpg', '', 4, '', '', 1, 'muayensao'),
+(971, 0, 'Tổ Yến Nhà', '', '', '', 'to-yen-nha', '', '', '', 'to-yen-nha.jpg', '', 6, '', '', 1, 'muayensao'),
+(972, 0, 'Tổ Yến Đảo', '', '', '', 'to-yen-dao', '', '', '', 'to-yen-ao.jpg', '', 4, '', '', 1, 'muayensao'),
+(1044, 0, 'Món Ăn Từ Yến', '', '', '', 'mon-an-tu-yen', '', '', '', 'mon-n-tu-yen.jpg', '', 4, '', '', 1, 'muayensao'),
+(1780, 0, 'Yến khánh hòa', '', '', '', 'yen-khanh-hoa', '', '', '', '', '', 7, '', '', 1, 'muayensao'),
+(1781, 1780, 'Tổ yến nhà aaa', '', '', '', 'to-yen-nha-aaa', '', '', '', '', '', 8, '', '', 1, 'muayensao'),
+(1782, 1780, 'Tổ yến đã làm sạch ddd', '', '', '', 'to-yen-da-lam-sach-ddd', '', '', '', '', '', 9, '', '', 1, 'muayensao');
 
 -- --------------------------------------------------------
 
@@ -699,7 +708,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=212 ;
+
+--
+-- Dumping data for table `dos_module_services`
+--
+
+INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
+(209, 'Công dụng của yến sào', '', '', '', '<p><strong>Yến sào,</strong> theo dân gian vẫn gọi, hay tổ yến là tên một loại thực phẩm - dược phẩm nổi tiếng được tìm thấy trên vách đá, hang động nơi chim yến sinh sống.</p>\n<p>Tổ yến được kết tinh từ nước bọt được tiết ra từ cặp tuyến dưới lưỡi chim yến. Đây là một trong tám món ăn cao lương mĩ vị hay bát trân mà từ ngàn xưa đã được các vua chúa dùng trong các buổi yến tiệc, làm quà tặng cho nhau, xem như một tặng phẩm quý giá.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/muayensao/image/hnh11.jpg" alt="" width="400" height="283" /></p>\n<p>Ngày nay, các nhà nghiên cứu khoa học trên thế giới và các chuyên gia dinh dưỡng trong nước đã nghiên cứu và một lần nữa khẳng định cho chúng ta thấy tổ yến là một loại thực phẩm có giá trị dinh dưỡng rất cao.</p>\n<p> </p>\n<p><img src="/public/userfiles/image/muayensao/image/h_10.jpg" alt="" width="99" height="100" />Yến sào cũng được cho là thần dược với tác dụng tăng cường hệ miễn dịch, tình dục, cải thiện giọng nói, tăng cường tập trung. Phục hồi nhanh các tế bào bị tổn thương, chống lão hóa, có tác dụng hỗ trợ điều trị các bệnh như lao phổi,viêm gan siêu vi B,C... tiêu đờm, ho, viêm phế quản mãn tính, suyễn, huyết áp cao, tiểu đường, đau dạ dày, mụn,nám, giảm khả năng bị cúm thường xuyên...</p>\n<p>Theo số liệu của Trung tâm Công nghệ Sinh học Đại học Thủy sản và Viện Công nghệ sinh học thuộc Trung tâm Khoa học Tự nhiên và công nghệ quốc gia, trong thành phần yến sào có 18 loại acid amin, một số có hàm lượng rất cao như Aspartic acid, Serine, Tyrosine, Phenylalanine, Valine, Arginine, Leucine, ... Đặc biệt, acid syalic với hàm lượng 8,6% và Tyrosine là những chất có tác dụng phục hồi nhanh chóng các tổn thương khi bị nhiễm xạ hay chất độc hại, kích thích sinh trưởng hồng cầu. Ngoài ra, yến sào có cấu trúc glucoprotein, có năng lượng cao, cơ thể dễ hấp thụ. Các nguyên tố đa, vi lượng trong yến sào rất phong phú, có đến 31 nguyên tố xuất hiện bằng phương pháp huỳnh quang tia X, rất giàu Ca và Fe là các khoáng chất cần thiết cho cơ thể.</p>\n<p>Các nguyên tố có ích cho ổn định thần kinh trí nhớ như Mn, Br, Cu, Zn cũng có hàm lượng cao. Một số nguyên tố hiếm tuy với hàm lượng thấp, nhưng rất quý giá trong kích thích tăng tiêu hóa hấp thu qua màng ruột như Cr, chống lão hóa, chống chất phóng xạ như Se..</p>\n<p>Qua đó chúng ta càng không ngạc nhiên về giá trị dinh dưỡng cao và quý giá của yến sào. Yến sào có tác dụng làm sạch phổi và các cơ quan hô hấp, làm giảm bệnh cúm và các triệu chứng dị ứng, làm tăng thể trọng, cân bằng các quá trình trao đổi chất trong cơ thể, tăng cường khả năng hoạt động thể lực và phản xạ thần kinh, bổ đối với hệ huyết học, làm tăng số lượng hồng cầu, huyết sắc tố, giảm thời gian đông máu, tăng cường các kích thích sinh trưởng cho các tế bào, phục hồi các tế bào bị thương tổn, chống lão hóa, hồi xuân, tăng tuổi thọ. Gần đây, khi nghiên cứu tác dụng của yến sào trong trường hợp cơ thể bị nhiễm chất độc hại, người ta nhận thấy yến sào hạn chế mức độ sút cân, phục hồi sức khoẻ nhanh , ổn định các chỉ tiêu huyết học. Người ta cũng đang nghiên cứu dùng yến sào điều trị các bệnh ung thư và HIV/AIDS vì phát hiện có một số hoạt chất sinh học kích thích sinh trưởng tế bào bạch cầu ngoại biên trong yến sào.</p>', '', '', 15, '2012-07-16 00:09:09', 1, 0, '', '', 'cong-dung-cua-yen-sao', '', '', '', 1, 'muayensao'),
+(210, 'Khuyên dùng Yến sào', '', '', '', '<p><strong>NGƯỜI LỚN:</strong><br />- Những người ốm đau, bệnh tật (đặc biệt là đối với các bệnh nặng như ung thư, tiểu đường, viêm gan, chạy thận, hậu phẫu...)<br />- Người già sức khỏe yếu<br />- Người suy nhược cơ thể (ăn ngủ kém, mất ngủ, ăn không ngon)<br />- Người có hệ hô hấp kém, thở gấp, hay viêm họng, viêm mũi<br />- Người có hệ tiêu hóa kém, bị đường ruột</p>\n<p><strong>PHỤ NỮ</strong><br />- Phụ nữ mang bầu, sau sinh<br />- Phụ nữ muốn trẻ hóa, đẹp da</p>\n<p><strong>TRẺ EM</strong><br />- Trẻ em biếng ăn, suy dinh dưỡng, kém ăn (trẻ có thể ăn tổ yến từ khi biết ăn bột)<br />- Trẻ hay bị viêm họng, viêm mũi</p>\n<p><strong>LIỀU LƯỢNG:</strong></p>\n<p>- Người lớn: 5gr/1lần;<br />- Trẻ em: Dưới 2 tuổi: 1.5gr-2gr/lần;<br />- Trẻ em từ 2 tuổi trở lên: 2.5gr/lần;</p>\n<p><strong>1. Đối với người ốm hoặc đang suy nhược cơ thể, mệt mỏi:</strong></p>\n<p>- Ăn hàng ngày</p>\n<p>- Ăn cách ngày</p>\n<p>- Ăn 3 lần/ tuần</p>\n<p><strong>2. Đối với người khỏe mạnh, chỉ cần duy trì sức khỏe, tăng sức đề kháng: có thể ăn ít nhất 2 lần/1 tuần</strong></p>\n<p><strong>Lưu ý</strong><br />- Phụ nữ mang thai và trẻ em biết ăn bột đều dùng được.<br />- Những người huyết áp cao, huyết áp thấp, tim mạch, tiểu đường...đều sử dụng được.(có thể tham khảo thêm ý kiến bác sĩ)</p>\n<p>- Nên ăn vào buổi tối, trước khi đi ngủ.</p>\n<p>Tham khảo thêm CÔNG DỤNG để hiểu thêm tại sao chúng ta nên sử dụng tổ yến để giữ sức khoẻ và chống lão hoá</p>', '', '', 17, '2012-07-16 00:10:25', 2, 0, '', '', 'khuyen-dung-yen-sao', '', '', '', 1, 'muayensao'),
+(211, 'Hướng dẫn ngâm tổ yến', '', '', '', '<p>Việc ngâm nở và chưng tổ yến khá đơn giản, người tiêu dùng hoàn toàn có thể tự làm. Sau khi ngâm nở nếu để trong tủ lạnh tổ yến có thể được bảo quản tới 10 ngày. Ngâm tổ yến trong nước để có thể lấy ra được lông chim và các tạp chất khác dính trong tổ, các loại tổ khác nhau có thời gian ngâm khác nhau thường thì 3 giờ trở lên. Tổ càng có chất lượng tốt thì đòi hỏi thời gian ngâm lâu hơn. Sau khi ngâm kích thước tổ sẽ lớn hơn rất nhiều so với trước khi ngâm. Loại tổ yến tự nhiên thường có lẩn tạp chất và lông chim do đó ta nên sử dụng dòng nước chảy và nhíp để làm sạch tổ.<br />1. Đầu tiên ngâm nở tổ trong nước khoảng 30oC.<br />Khi ngâm cần lưu ý nước phải ngập tổ để tổ yến hút đủ lượng nước cần thiết.<br />2. Dùng nhíp để lấy sạch lông chim và tạp chất ra khỏi tổ yến.<br />Nếu yến còn nguyên tổ Quý khách tách từng sợi sau đó cho yến vào ray, đặt ray vào tô nước dùng muỗng khuấy nhẹ đồng thời nhấc lên nhấc xuống lông tơ yến sẽ theo nước ra ngoài. Thay nước 4-5 lần. Quý khách sẽ có tổ yến trắng sạch.<br />3. Vớt tổ yến đã sạch ra khỏi nước để một lúc cho ráo<br />4. Dùng 1 cái nồi và 1 cái tô để chưng tổ yến.<br />Cho một ít nước sôi để nguội vào tô - đổ đầy nước vào nồi, cho tổ yến đã làm sạch vào tổ để đun lửa nhỏ.<br />Thời gian chưng tùy thuộc vào loại tổ yến, nếu chưng quá lâu, tổ yến rất mềm và dễ nát vụng</p>', '', '', 19, '2012-07-16 00:24:13', 3, 0, '', '', 'huong-dan-ngam-to-yen', '', '', '', 1, 'muayensao');
 
 -- --------------------------------------------------------
 
@@ -718,15 +736,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=302 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=218 ;
 
 --
 -- Dumping data for table `dos_module_supports`
 --
 
 INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
-(300, 'Hỗ trợ Khách hàng 1', '', '', 'maioanh7887', 1, 'yahoo', 'isuzubienhoa'),
-(301, 'Hỗ trợ Khách hàng 2', '', '', 'maioanh7887', 1, 'yahoo', 'isuzubienhoa');
+(215, 'Hoàng Long', '', '0909206808', 'hoanglong808', 2, 'yahoo', 'muayensao'),
+(216, 'Thiên Lý', '', '0908808004', 'lely1003', 0, 'yahoo', 'muayensao'),
+(217, 'Minh Hoàng', '', '0984168117', 'hoangdiaoc', 1, 'yahoo', 'muayensao');
 
 -- --------------------------------------------------------
 
@@ -754,7 +773,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_video` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_video_dos_module_video_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=97 ;
+
+--
+-- Dumping data for table `dos_module_video`
+--
+
+INSERT INTO `dos_module_video` (`record_id`, `title`, `titleen`, `postdate`, `tag`, `tagen`, `description`, `descriptionen`, `pic_thumb`, `url`, `record_order`, `hits`, `extra_field1`, `extra_field2`, `hot`, `enable`, `dos_module_item_cat_cat_id`) VALUES
+(96, 'Chế Biến Yến Sào', '', '2012-07-27 07:55:34', 'che-bien-yen-sao', '', '', '', 'che-bien-yen-sao.jpg', 'http://www.youtube.com/watch?v=wF70WUFaU7c', 1, 0, '', '', 0, 1, 83);
 
 -- --------------------------------------------------------
 
@@ -777,7 +803,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_video_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=84 ;
+
+--
+-- Dumping data for table `dos_module_video_cat`
+--
+
+INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat_title`, `cat_titleen`, `tag`, `tagen`, `description`, `descriptionen`, `cat_order`, `cat_enable`, `dos_usernames_username`) VALUES
+(83, 0, '', 'Qui Trình Chế Biến Yến Sào', '', 'qui-trinh-che-bien-yen-sao', '', '', '', 1, 1, 'muayensao');
 
 -- --------------------------------------------------------
 
@@ -797,10 +830,10 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
 --
 
 INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
-('keywords', 'Isuzubienhoa - Chuyên cung cấp các loại xe D-Max, Xe Tải Q-series, Xe Tải Forward, Xe tải nặng Forward, uy tính, chất lượng', 'isuzubienhoa'),
-('description', 'Isuzubienhoa - Chuyên cung cấp các loại xe D-Max, Xe Tải Q-series, Xe Tải Forward, Xe tải nặng Forward, uy tính, chất lượng', 'isuzubienhoa'),
-('title', 'ISUZU BIEN HOA -  Isuzubienhoa.com', 'isuzubienhoa'),
-('analytics', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-30151015-10'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>', 'isuzubienhoa');
+('keywords', 'Chuyên mua bán yến sào các loại,tổ yến giúp hạn chế sự phát triển của bệnh AIDS,,dinh dưỡng, khỏe mạnh và tăng trưởng', 'muayensao'),
+('description', 'Chuyên mua bán yến sào các loại,tổ yến giúp hạn chế sự phát triển của bệnh AIDS,,dinh dưỡng, khỏe mạnh và tăng trưởng', 'muayensao'),
+('title', 'Công Ty Cổ Phần Yến Quê Hương - Muayensao.com', 'muayensao'),
+('analytics', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-30151015-12'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>', 'muayensao');
 
 -- --------------------------------------------------------
 
@@ -923,7 +956,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 --
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
-('200612', 'Mẫu Sách: 200612', '2012-06-19 22:26:45', 'Chuyên bán các loại sách cho sinh viên, giá cả bình dân');
+('160512', 'Mẫu ẩm thực 160512', '2012-05-15 20:22:58', 'Chuyên bán các loại ẩm thực đồ uống các loại.');
 
 -- --------------------------------------------------------
 
@@ -944,7 +977,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_bussiness` (
 --
 
 INSERT INTO `dos_templates_has_dos_bussiness` (`dos_templates_template`, `dos_bussiness_bussiness_id`) VALUES
-('200612', 'giao-duc-dao-tao');
+('160512', 'am-thuc-drink');
 
 -- --------------------------------------------------------
 
@@ -982,29 +1015,29 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_modules` (
 --
 
 INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modules_module_id`, `dos_values_value_name`) VALUES
-('200612', 'about', 'advs_left'),
-('200612', 'about', 'list_supports'),
-('200612', 'about', 'menu_about'),
-('200612', 'contact', 'advs_left'),
-('200612', 'contact', 'list_supports'),
-('200612', 'contact', 'menu_products'),
-('200612', 'default', 'about_home'),
-('200612', 'default', 'advs_left'),
-('200612', 'default', 'list_supports'),
-('200612', 'default', 'menu_products'),
-('200612', 'default', 'products_new'),
-('200612', 'news', 'advs_left'),
-('200612', 'news', 'list_supports'),
-('200612', 'news', 'menu_news'),
-('200612', 'products', 'advs_left'),
-('200612', 'products', 'list_supports'),
-('200612', 'products', 'menu_products'),
-('200612', 'services', 'advs_left'),
-('200612', 'services', 'list_supports'),
-('200612', 'services', 'menu_services'),
-('200612', 'video', 'advs_left'),
-('200612', 'video', 'list_supports'),
-('200612', 'video', 'menu_video');
+('160512', 'about', 'advs_left'),
+('160512', 'about', 'list_supports'),
+('160512', 'about', 'menu_about'),
+('160512', 'contact', 'advs_left'),
+('160512', 'contact', 'list_supports'),
+('160512', 'contact', 'menu_products'),
+('160512', 'default', 'about_home'),
+('160512', 'default', 'advs_left'),
+('160512', 'default', 'list_supports'),
+('160512', 'default', 'menu_products'),
+('160512', 'default', 'products_new'),
+('160512', 'news', 'advs_left'),
+('160512', 'news', 'list_supports'),
+('160512', 'news', 'menu_news'),
+('160512', 'products', 'advs_left'),
+('160512', 'products', 'list_supports'),
+('160512', 'products', 'menu_products'),
+('160512', 'services', 'advs_left'),
+('160512', 'services', 'list_supports'),
+('160512', 'services', 'menu_services'),
+('160512', 'video', 'advs_left'),
+('160512', 'video', 'list_supports'),
+('160512', 'video', 'menu_video');
 
 -- --------------------------------------------------------
 
@@ -1042,7 +1075,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 --
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `agent_sale`, `agent_tech`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('isuzubienhoa', 'maioanh@thuonghoi.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-09-01 00:40:06', '', '0987522003', '', 'user', 'vi', '', '2012-11-29 16:00:00', 0, '87522003', '', 1, '200612', 19, 'co-khi-may-moc-thiet-bi');
+('muayensao', 'minhhoangpkd@gmail.com', '25f9e794323b453885f5181f1b624d0b', '2012-07-13 06:39:16', 'Nguyễn Minh Hoàng', '0909802368', 'Công ty CP TM - DV BĐS Khang Danh', 'user', 'vi', '', '2012-10-10 16:00:00', 0, '20122012', '', 1, '160512', 30, 'am-thuc-drink');
 
 -- --------------------------------------------------------
 
@@ -1080,11 +1113,13 @@ CREATE TABLE IF NOT EXISTS `dos_user_langs` (
 --
 
 INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_username`) VALUES
-('company_name', 'CHUYÊN CUNG CẤP XE TẢI ISUZU', '', 'isuzubienhoa'),
-('company_name_footer', 'CHUYÊN CUNG CẤP XE TẢI ISUZU', '', 'isuzubienhoa'),
-('company_phone', 'Hotline: 0987 001 001', '', 'isuzubienhoa'),
-('contact', 'Đơn giá', '', 'isuzubienhoa'),
-('services', 'Khuyến mãi', '', 'isuzubienhoa');
+('address1', 'R4 - 16 Đường Hưng Gia 3 - Phú Mỹ Hưng Q.7 Tp.HCM', '', 'muayensao'),
+('address2', '', '', 'muayensao'),
+('company_name', '', '', 'muayensao'),
+('company_name_footer', 'Công Ty Cổ Phần Yến Quê Hương', '', 'muayensao'),
+('company_phone', '0916 368 001 (Mr Hoàng)', '', 'muayensao'),
+('copyright', 'Copyright © 2012 by Muayensao.com', '', 'muayensao'),
+('services', 'Chế biết', '', 'muayensao');
 
 -- --------------------------------------------------------
 
