@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 14, 2012 at 02:19 AM
+-- Generation Time: Sep 17, 2012 at 10:55 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -72,38 +72,42 @@ CREATE TABLE IF NOT EXISTS `dos_configs` (
 --
 
 INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES
-('advs_left_height', 200, '', '160512'),
-('advs_left_width', 203, '', '160512'),
-('banner_height', 315, '', '160512'),
-('banner_width', 750, '', '160512'),
-('logo_height', 77, '', '160512'),
-('logo_width', 650, '', '160512'),
-('max_image_height', 860, '', '160512'),
-('max_image_width', 700, '', '160512'),
-('news_cat_height', 90, '', '160512'),
-('news_cat_width', 143, '', '160512'),
-('news_height_thumb', 90, '', '160512'),
-('news_num_paging_cat', 10, '', '160512'),
-('news_num_paging_hot', 6, '', '160512'),
-('news_num_paging_index', 10, '', '160512'),
-('news_num_paging_new', 6, '', '160512'),
-('news_width_thumb', 143, '', '160512'),
-('products_cat_height', 160, '', '160512'),
-('products_cat_width', 160, '', '160512'),
-('products_height', 700, '', '160512'),
-('products_height_thumb', 160, '', '160512'),
-('products_num_paging_cat', 4, '', '160512'),
-('products_num_paging_hot', 16, '', '160512'),
-('products_num_paging_new', 20, '', '160512'),
-('products_num_paging_other', 4, '', '160512'),
-('products_width', 850, '', '160512'),
-('products_width_thumb', 160, '', '160512'),
-('services_height', 850, '', '160512'),
-('services_width', 700, '', '160512'),
-('video_height_thumb', 160, '', '160512'),
-('video_num_paging_cat', 16, '', '160512'),
-('video_num_paging_index', 16, '', '160512'),
-('video_width_thumb', 160, '', '160512');
+('advs_center_height', 90, '', '050712'),
+('advs_center_width', 120, '', '050712'),
+('advs_left_height', 273, '', '050712'),
+('advs_left_width', 205, '', '050712'),
+('advs_right_height', 273, '', '050712'),
+('advs_right_width', 205, '', '050712'),
+('banner_height', 330, '', '050712'),
+('banner_width', 950, '', '050712'),
+('logo_height', 100, '', '050712'),
+('logo_width', 950, '', '050712'),
+('max_image_height', 667, '', '050712'),
+('max_image_width', 500, '', '050712'),
+('news_cat_height', 90, '', '050712'),
+('news_cat_width', 130, '', '050712'),
+('news_height_thumb', 90, '', '050712'),
+('news_num_paging_cat', 10, '', '050712'),
+('news_num_paging_hot', 6, '', '050712'),
+('news_num_paging_index', 10, '', '050712'),
+('news_num_paging_new', 6, '', '050712'),
+('news_width_thumb', 130, '', '050712'),
+('products_cat_height', 90, '', '050712'),
+('products_cat_width', 120, '', '050712'),
+('products_height', 667, '', '050712'),
+('products_height_thumb', 90, '', '050712'),
+('products_num_paging_cat', 20, '', '050712'),
+('products_num_paging_hot', 20, '', '050712'),
+('products_num_paging_new', 20, '', '050712'),
+('products_num_paging_other', 4, '', '050712'),
+('products_width', 500, '', '050712'),
+('products_width_thumb', 120, '', '050712'),
+('services_height', 150, '', '050712'),
+('services_width', 150, '', '050712'),
+('video_height_thumb', 90, '', '050712'),
+('video_num_paging_cat', 20, '', '050712'),
+('video_num_paging_index', 20, '', '050712'),
+('video_width_thumb', 120, '', '050712');
 
 -- --------------------------------------------------------
 
@@ -229,10 +233,10 @@ CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
 --
 
 INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, `loadfiles`, `typefile`) VALUES
-('160512', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
-('160512', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
-('160512', 'video', 'prettyPhoto.css', 'css'),
-('160512', 'video', 'jquery.prettyPhoto.js', 'javascript');
+('050712', 'default', 'prettyPhoto.css|skin.css', 'css'),
+('050712', 'default', 'jquery.prettyPhoto.js|jquery.jcarousel.js|adv-config.js', 'javascript'),
+('050712', 'video', 'prettyPhoto.css', 'css'),
+('050712', 'video', 'jquery.prettyPhoto.js', 'javascript');
 
 -- --------------------------------------------------------
 
@@ -284,15 +288,14 @@ CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
 --
 
 INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
-('about', 'muayensao'),
-('advs', 'muayensao'),
-('banner', 'muayensao'),
-('contact', 'muayensao'),
-('news', 'muayensao'),
-('products', 'muayensao'),
-('services', 'muayensao'),
-('supports', 'muayensao'),
-('video', 'muayensao');
+('about', 'nguyenanphuc'),
+('advs', 'nguyenanphuc'),
+('banner', 'nguyenanphuc'),
+('contact', 'nguyenanphuc'),
+('news', 'nguyenanphuc'),
+('products', 'nguyenanphuc'),
+('services', 'nguyenanphuc'),
+('supports', 'nguyenanphuc');
 
 -- --------------------------------------------------------
 
@@ -321,15 +324,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=449 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=463 ;
 
 --
 -- Dumping data for table `dos_module_abouts`
 --
 
 INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(275, 'GIỚI THIỆU VỀ YẾN SÀO', '', '<p>Yến sào có hình chén trà bổ đôi, được làm từ nước bọt của chim yến trống và chim yến mái từ tuyến nước bọt dưới lưỡi. Nó bị đông cứng lại sau khi tiếp xúc với không khí. Là một vật chất hữu cơ thiên nhiên và hầu như là một dạng tươi tự nhiên và dễ hấp thụ ….</p>\n<p><span style="color:#ff0000;"><strong>YẾN SÀO LÀ GÌ?</strong></span><br />Yến sào xét theo nghĩa từ nguyên có nghĩa là cái tổ của chim yến.<br />Yến sào có hình chén trà bổ đôi, được làm từ nước bọt của chim yến trống và chim yến mái từ tuyến nước bọt dưới lưỡi. Nó bị đông cứng lại sau khi tiếp xúc với không khí. Là một vật chất hữu cơ thiên nhiên và hầu như là một dạng tươi tự nhiên và dễ hấp thụ.<br />Người ta cho rằng tổ yến là một loại thuốc bổ cung cấp thêm năng lượng cuộc sống, tăng cường trao đổi chất, cải thiện sự tiêu hóa và hấp thu dinh dưỡng, có tác dụng dưỡng da, làm đẹp da hơn và cải thiện tình trạng của tóc. Ăn tổ yến liên tục sau một thời gian sẽ giữ cho cơ thể trẻ, khỏe, không bị bệnh, nhờ đó cải thiện sức khỏe kéo dài tuổi thọ. Tổ yến cũng có tác dụng nâng cao hoạt động sinh dục, có tác dụng bổ phổi, làm ẩm ướt đường hô hấp, giúp cải thiện tình trạng hen suyễn, lên đờm quá mức trong phổi và cổ họng, chống ho, nhổ ra máu và chiều hướng bị lao phổi, cũng tốt cho tim và sự tuần hoàn máu.<br />Sử dụng tổ yến trong thời gian mang thai làm tăng sức khỏe của cả mẹ và con. Phụ nữ dùng súp yến sau khi sinh con sẽ nhanh chóng mảnh mai, thon thả hơn, giữ gìn sắc đẹp của mình. Chức năng của dạ dày và lá lách của trẻ em nhỏ tuổi còn yếu ớt, cho trẻ em ăn yến có thể cải thiện và bổ sung sự thiếu hụt dinh dưỡng, khỏe mạnh và tăng trưởng. Tổ yến có thể dùng cho các nhóm tuổi khác nhau và cả nam – nữ.</p>\n<p>Ăn tổ yến giúp phục hồi sức khỏe của các bệnh nhân sau phẫu thuật và sau bị bệnh tật. Đặc biệt là tăng cường hệ thống miễn dịch và chức năng của hệ nội tiết. Gần đây người ta còn cho rằng tổ yến giúp hạn chế sự phát triển của bệnh AIDS qua con đường kích hoạt sự phân chia tế bào trong hệ thống miễn dịch.<br />Thành phần hóa học của tổ yến quyết định tác dụng của tổ yến:<br />- Có 31 nguyên tố đa vi lượng. Phương pahps huỳnh quang tia X, rất giàu Ca, Fe. Các nguyên tố có ích cho ổn định thần kinh, trí nhớ như Mn, Br, Cu, Zn cũng có hàm lượng cao, Se chất phóng xạ.<br />- Theo số liệu của trung tâm công nghệ sinh học Đại học Thủy sản và Viện Công nghệ sinh học thuộc trung tâm khoa học tự nhiên và công nghệ quốc gia. Trong thành phần Yến sào có 18 loại Acid amin, một số hàm lượng rất cao như: Acpartic Acid, Serine, Tyrosine, Leucine… là những chất có tác dụng phục hồi nhanh chóng các tổn thương khi bị nhiễm xạ hoặc chất độc hại.</p>\n<p><span style="color:#ff0000;"><strong>SỰ KHÁC BIỆT GIỮA YẾN ĐẢO VÀ YẾN NHÀ.</strong></span><br />Có một số ý kiến cho rằng chất lượng Yến Đảo tự nhiên tốt hơn Yến Nhà do giá bán cao hơn. Mùi vị các loại yến khác nhau có đem lại sự cảm nhận khác nhau. Nhưng sự thật là chim yến sống trong nhà cũng hoàn toàn kiếm ăn ngoài tự nhiên như Yến Đảo. nhiều người vẫn nghĩ rằng yến nhà là yến có thể nuôi được và trong thực tế chúng ta chỉ có thể dựa vào kỹ thuật và thiết kế để dẫn dụ chim yến vào nhà làm tổ chứ không thể cho chúng ăn như gà công nghiệp.<br />Nói cách khác đơn giản là chúng ta có thể làm nhà cho chúng làm tổ, đẻ trứng, nuôi con và ngủ đêm chứ không chạm vào họa bắt chúng vì chim yến là loài chim đặc biệt, chúng bay kiên tục không đậu trên mặt đất hoặc cành cây (đặc tính đôi chân bé mãnh), chúng ăn côn trùng bay trong thiên nhiên, chỉ có thiên nhiên là nơi cung cấp thức ăn cho chúng<br />Hơn nữa yến nhà còn được bảo vệ khỏi các dịch hại như: chuột, gián, nấm mốc, bọ… vốn khó phòng ngừa tại các hang động, do vậy tổ yến trong nhà sạch hơn và không cần dùng những hóa chất để tẩy sạch vết bẩn. Nhũng phân tích tại Hồng Kông cho thấy Yến Nhà có thành phần tương đương Yến Đảo. Theo những người sử dụng và buôn bán Yến Sào lâu năm thì yến trong nhà Việt Nam có chất lượng vượt trội thể hiện qua mùi vị và sợi yến còn nguyên sau khi chưng.</p>', '', 188, '2012-07-15 23:41:19', 1, 0, '', '', 'gioi-thieu-ve-yen-sao', '', '', '', 1, 'muayensao'),
-(448, 'Giới thiệu về công ty', '', '<p>Yến sào có hình chén trà bổ đôi, được làm từ nước bọt của chim yến trống và chim yến mái từ tuyến nước bọt dưới lưỡi. Nó bị đông cứng lại sau khi tiếp xúc với không khí. Là một vật chất hữu cơ thiên nhiên và hầu như là một dạng tươi tự nhiên và dễ hấp thụ ….</p>', '', 8, '2012-09-13 03:51:12', 2, 1, '', '', 'gioi-thieu-ve-cong-ty', '', 'Yến sào có hình chén trà bổ đôi, được làm từ nước bọt của chim yến trống và chim yến mái từ tuyến nước bọt dưới lưỡi. Nó bị đông cứng lại sau khi tiếp xúc với không khí.', '', 0, 'muayensao');
+(461, 'Thẩm mỹ viện - Đánh thức vẻ đẹp tiềm ẩn', '', '<p>Là phụ nữ, ai cũng muốn sở hữu một khuôn mặt đẹp, một làn da trắng mịn, một vóc dáng hoàn hảo cân đối. Một người phụ nữ đẹp sẽ dễ dàng thành công hơn trong cuộc sống gia đình và sự nghiệp. Có ai đó đã nói rằng: “Không có phụ nữ xấu chỉ có phụ nữ không biết làm đẹp”, vậy bạn đã biết đánh thức vẻ đẹp tiềm ẩn của mình để tự tin hơn với những đường nét, vóc dáng và làn da… Thẩm mỹ viện Việt Mỹ sẽ là nơi giúp bạn trả lời những câu hỏi đó.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/anh%20nha%20272%20copy.JPG" alt="" width="500" height="334" /></p>\n<p>Tọa lạc trên con phố Bà Triệu sầm uất, thẩm mỹ viện Việt Mỹ là một trong những địa chỉ uy tín hàng đầu về chăm sóc sức khỏe và vẻ đẹp cho phụ nữ.</p>\n<p>Với trang thiết bị công nghệ cao nhập khẩu hoàn toàn từ Châu Âu Việt Mỹ luôn mang lại phương pháp làm đẹp an toàn và hiệu quả. Việt Mỹ là nơi luôn đi đầu ứng dụng những thành tựu của công nghệ làm đẹp trên thế giới vào việc chăm sóc vẻ đẹp cho chị em phụ nữ tại Việt Nam. Đến với Việt Mỹ bạn sẽ được các chuyên gia tư vấn tận tình hướng dẫn và lựa chọn các phương pháp làm đẹp hiệu quả nhất tùy theo tính chất, đặc thù và các yêu cầu của cá nhân bạn.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Gioi%20thieu/gt3.jpg" alt="" width="500" height="607" /></p>\n<p>Bạn đã biết công dụng của vàng như những món trang sức bên ngoài nhưng hiện nay vàng còn là một tác nhân quan trọng của công nghệ trẻ hóa da. Các khoa học gia ngày nay đã mô tả vàng như một thành phần hữu ích trong thẩm mỹ và cả sức khỏe, có thể đẩy mạnh hệ miễn dịch, khiến da trở nên rạng rỡ và khỏe mạnh hơn. Việt Mỹ đã ứng dụng phương pháp cải thiện da tiên tiến bằng mặt nạ vàng 24K giúp da trẻ và điều trị nám da trong thời gian ngắn. Với những tác dụng bất ngờ của mặt nạ vàng mang lại Việt Mỹ đã trở thành địa chỉ thường xuyên của nhiều bạn trẻ.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Gioi%20thieu/gt5.jpg" alt="" width="500" height="769" /></p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Gioi%20thieu/thammyvietmytc2121.jpg" alt="" width="550" height="367" /></p>\n<p>Đôi mắt đẹp quyến rũ, với ánh nhìn rộng mở, thu hút, phần lớn là nhờ vào làn lông mi dày, dài và cong của bạn. Nếu bạn cảm thấy thiếu tự tin về điều đó hãy đến Việt Mỹ để được sử dụng dịch vụ công nghệ kéo dài mi. Không chỉ thế khi đến với Việt Mỹ bạn còn được phục vụ những dịch vụ tốt nhất cho sức khỏe và vẻ đẹp của mình.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Gioi%20thieu/8(3).jpg" alt="" width="500" height="411" /></p>\n<p>Ngoài ra tại Việt Mỹ bạn có thể lựa chọn nhiều dịch vụ khác nhau, như: Triệt lông vĩnh viễn, trẻ hóa da bằng công nghệ ánh sáng;trị nám, tàn nhang, trị mụn, tắm trắng, massage, xông hơi bằng gỗ bách xanh, giảm béo bằng máy ánh sáng và thông kinh lạc; xóa xăm lông mày</p>\n<p>Đặc biệt là sản phẩm mặt nạ cá hồi; mặt nạ bằng cá hồi có tác dụng bổ sung và duy trì độ ẩm cho da, cung cấp dinh dưỡng và bảo vệ da chống lại môi trường ô nhiễm bên ngoài. Ngoài ra, sản phẩm còn có khả năng xoá bỏ các nếp nhăn nông, cải thiện và làm mờ các nếp nhăn sâu do tuổi tác, phục hồi lại khả năng đàn hồi tự nhiên cho da, ngăn chặn sự hình thành nếp nhăn trên da, thúc đẩy trẻ hoá tế bào theo cơ chế tự nhiên.<br />Với dịch vụ đa dạng và phong cách phục vụ chuyên nghiệp Thẩm mỹ viện Việt Mỹ sẽ làm bạn hài lòng và trở thành địa chỉ ghé thăm thường xuyên của bạn.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Gioi%20thieu/gt7.jpg" alt="" width="500" height="325" /></p>\n<p>Trong không gian ấm áp và nhẹ nhàng, đắm mình trong các liệu pháp hương hoa thiên nhiên, dưới bàn tay điêu luyện của các nhân viên được đào tạo bài bản tại Việt Mỹ khách hàng sẽ cảm thấy hài lòng nhất!</p>', '', 186, '2012-09-16 10:56:03', 1, 0, '', '', 'tham-my-vien-danh-thuc-ve-dep-tiem-an', '', '', '', 1, 'nguyenanphuc'),
+(462, 'AN PHÚC KÍNH CHÀO QUÝ KHÁCH!', '', '<p><strong><span style="color:#ff0000;">        AN PHÚC</span></strong> được thành lập năm 2007, với hơn 5 năm kinh nghiệm khám và chữa bệnh, với đội ngũ Bác Sỹ, Y tá có nhiều năm kinh nghiệm, có trình độ chuyên môn cao, có tâm huyến trong nghề, có tấm lòng "Lương y như từ mẫu" đã được bệnh nhân đánh giá cáo là "<strong>TẬN TÌNH VÀ CHUYÊN NGHIỆP"</strong>, là nơi tin tưởng, an tâm cho người dân khám chữa bệnh ở TP. Biên Hòa, đặt biệt là Tân Phong, Trảng Dài.</p>\n<p><strong>        CÁC DỊCH VỤ Y TẾ CỦA PHÒNG KHÁM ĐA KHOA AN PHÚC</strong></p>\n<ul><li><strong>Khám chữa bệnh BHYT đúng tuyến, trái tuyến</strong></li>\n<li><strong>Khám sức khỏe tổng quán định kỳ</strong> (Dịch vụ này đã mang lại những ưu điểm trong việc phát hiện những căn bệnh tiền ẩn và nguy hiểm như ung thư, tiểu đường, huyết áp cao, bướu cổ, viêm gan siêu vi,...)</li>\n<li><strong>Khám điều trị, chăm sóc sức khỏe tại nhà.</strong></li>\n<li><strong>Tiêm phòng</strong></li>\n<li><strong>Dịch vụ đưa đón bệnh nhân.<br /><br /><span style="color:#ff0000;"><em>Đặt biệt:</em> Nhân viên tư vấn sức khỏe miễn phí 24/7.</span></strong></li>\n</ul>', '', 26, '2012-09-16 11:01:31', 2, 1, '', '', 'an-phuc-kinh-chao-quy-khach', '', 'khám chữa bệnh, phòng khám biên hòa, phong kham dong nai,', '', 1, 'nguyenanphuc');
 
 -- --------------------------------------------------------
 
@@ -354,14 +357,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=418 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=757 ;
 
 --
 -- Dumping data for table `dos_module_advs`
 --
 
 INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`, `dos_usernames_username`) VALUES
-(417, 'quang cao 1', '', 'quang-cao-1.png', 'http://muayensao.dos.vn/san-pham', '2012-07-16 01:23:34', '2012-07-15 16:00:00', '2012-08-30 16:00:00', 0, 1, 'left', '_bank', 1, 'muayensao');
+(754, 'Bí mật của làn da', '', 'bi-mat-cua-lan-da.png', 'http://thammyvien.dos.vn/', '2012-09-16 10:56:03', '2012-06-21 16:00:00', '2012-07-30 16:00:00', 0, 1, 'left', '_bank', 1, 'nguyenanphuc'),
+(755, 'làn da khỏe', '', 'lan-da-khoe.png', 'http://thammyvien.dos.vn/gioi-thieu', '2012-09-16 10:56:03', '2012-06-21 16:00:00', '2012-07-30 16:00:00', 0, 2, 'left', '_bank', 0, 'nguyenanphuc'),
+(756, 'Giảm giá', '', 'giam-gia.png', 'http://thammyvien.dos.vn/dich-vu', '2012-09-16 10:56:03', '2012-06-21 16:00:00', '2012-07-30 16:00:00', 0, 3, 'left', '_bank', 0, 'nguyenanphuc');
 
 -- --------------------------------------------------------
 
@@ -382,25 +387,25 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1617 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3318 ;
 
 --
 -- Dumping data for table `dos_module_banners`
 --
 
 INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_url`, `banner_link`, `banner_order`, `banner_type`, `position`, `enable`, `dos_usernames_username`) VALUES
-(1605, '2012-07-16 00:56:08', 'logo-muayensao', 'logo-muayensao.png', '', 1, 'logo', 'default', 0, 'muayensao'),
-(1606, '2012-07-16 01:10:06', 'Banner 1', 'banner-1.jpg', '', 2, 'banners', 'default', 1, 'muayensao'),
-(1607, '2012-07-16 01:15:41', 'Banner 2', 'banner-2.jpg', '', 3, 'banners', 'default', 1, 'muayensao'),
-(1608, '2012-07-16 01:16:06', 'Banner 3', 'banner-3.jpg', '', 4, 'banners', 'products', 1, 'muayensao'),
-(1609, '2012-07-16 01:16:19', 'Banner 4', 'banner-4.jpg', '', 5, 'banners', 'products', 1, 'muayensao'),
-(1610, '2012-07-16 01:16:36', 'Banner 5', 'banner-5.jpg', '', 6, 'banners', 'about', 1, 'muayensao'),
-(1611, '2012-07-16 01:16:54', 'Banner 6', 'banner-6.jpg', '', 7, 'banners', 'services', 1, 'muayensao'),
-(1612, '2012-07-16 01:17:16', 'Banner 7', 'banner-7.jpg', '', 8, 'banners', 'services', 1, 'muayensao'),
-(1613, '2012-07-16 01:17:33', 'Banner 8', 'banner-8.jpg', '', 9, 'banners', 'news', 1, 'muayensao'),
-(1614, '2012-07-16 01:17:49', 'Banner 9', 'banner-9.jpg', '', 10, 'banners', 'contact', 1, 'muayensao'),
-(1615, '2012-07-16 01:18:07', 'Banner 10', 'banner-10.jpg', '', 11, 'banners', 'video', 1, 'muayensao'),
-(1616, '2012-07-16 01:18:38', 'Banner 11', 'banner-11.jpg', '', 12, 'banners', 'about', 1, 'muayensao');
+(3306, '2012-09-16 10:56:03', 'Banner', 'banner.jpg', '', 1, 'banners', 'default', 1, 'nguyenanphuc'),
+(3307, '2012-09-16 10:56:03', 'Banner 1', 'banner-1.jpg', '', 2, 'banners', 'default', 1, 'nguyenanphuc'),
+(3308, '2012-09-16 10:56:03', 'Banner 2', 'banner-2.jpg', '', 3, 'banners', 'default', 1, 'nguyenanphuc'),
+(3309, '2012-09-16 10:56:03', 'Banner 3', 'banner-3.jpg', '', 4, 'banners', 'default', 1, 'nguyenanphuc'),
+(3310, '2012-09-16 10:56:03', 'home logo', 'home-logo.png', '', 5, 'logo', 'default', 1, 'nguyenanphuc'),
+(3311, '2012-09-16 10:56:03', 'Banner 4', 'banner-4.jpg', '', 6, 'banners', 'about', 1, 'nguyenanphuc'),
+(3312, '2012-09-16 10:56:03', 'Banner 5', 'banner-5.jpg', '', 7, 'banners', 'products', 1, 'nguyenanphuc'),
+(3313, '2012-09-16 10:56:03', 'Banner 6', 'banner-6.jpg', '', 8, 'banners', 'services', 1, 'nguyenanphuc'),
+(3314, '2012-09-16 10:56:03', 'Banner 7', 'banner-7.jpg', '', 9, 'banners', 'products', 1, 'nguyenanphuc'),
+(3315, '2012-09-16 10:56:03', 'Banner 8', 'banner-8.jpg', '', 10, 'banners', 'news', 1, 'nguyenanphuc'),
+(3316, '2012-09-16 10:56:03', 'Banner 9', 'banner-9.jpg', '', 11, 'banners', 'contact', 1, 'nguyenanphuc'),
+(3317, '2012-09-16 10:56:03', 'Banner 10', 'banner-10.jpg', '', 12, 'banners', 'video', 1, 'nguyenanphuc');
 
 -- --------------------------------------------------------
 
@@ -426,14 +431,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_contacts_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=54 ;
-
---
--- Dumping data for table `dos_module_contacts`
---
-
-INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `tagen`, `description`, `descriptionen`, `enable`, `dos_usernames_username`) VALUES
-(53, 'Liên hệ với chúng tôi', '', '<p>Công Ty Cổ Phần Yến Quê Hương</p>\n<p>R4 - 16 Đường Hưng Gia 3 - Phú Mỹ Hưng Q.7 Tp.HCM</p>\n<p>CHUYÊN CUNG CẤP CÁC SẢN PHẨM YẾN VIỆT NAM</p>', '', '2012-07-27 08:08:03', 1, 0, 0, 'lien-he-voi-chung-toi', '', '', '', '1', 'muayensao');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -460,13 +458,12 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 --
 
 INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
-('Trang chủ', '', 'default', '', 0, NULL, NULL, NULL, NULL, 'muayensao'),
-('Giới thiệu', '', 'about', '', 1, NULL, NULL, NULL, NULL, 'muayensao'),
-('Sản phẩm', '', 'products', '', 2, NULL, NULL, NULL, NULL, 'muayensao'),
-('Chế Biến', '', 'services', '', 3, NULL, NULL, NULL, NULL, 'muayensao'),
-('Tin tức', '', 'news', '', 5, NULL, NULL, NULL, NULL, 'muayensao'),
-('Video', '', 'video', '', 6, NULL, NULL, NULL, NULL, 'muayensao'),
-('Liên hệ', '', 'contact', '', 7, NULL, NULL, NULL, NULL, 'muayensao');
+('Trang chủ', '', 'default', '', 1, '', '', '', '', 'nguyenanphuc'),
+('Giới thiệu', '', 'about', '', 2, '', '', '', '', 'nguyenanphuc'),
+('Thư Viện Ảnh', '', 'products', '', 4, '', '', '', '', 'nguyenanphuc'),
+('Dịch Vụ Khám Chữ Bệnh', '', 'services', '', 3, '', '', '', '', 'nguyenanphuc'),
+('Cảm Nang', '', 'news', '', 5, '', '', '', '', 'nguyenanphuc'),
+('Liên hệ', '', 'contact', '', 6, '', '', '', '', 'nguyenanphuc');
 
 -- --------------------------------------------------------
 
@@ -497,14 +494,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_news` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_news_dos_module_news_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=315 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=520 ;
 
 --
 -- Dumping data for table `dos_module_news`
 --
 
 INSERT INTO `dos_module_news` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(314, 'Yến sào chống lão hóa da cho phụ nữ', '', '2012-07-13 06:56:33', 'yen-sao-chong-lao-hoa-da-cho-phu-nu.jpg', '<p>Yến sào bí quyết giử gìn nét thanh xuân cho phụ nữ: Làm cách nào để có thể giữ được một sức khoẻ “dẻo dai” cùng nét thanh xuân, tươi trẻ trên gương mặt và cơ thể? Đây có lẽ là nỗi lo lớn nhất của rất nhiều chị em phụ nữ. Họ thật sự đang ở đỉnh cao của cuộc đời nhờ sự từng trải, chín chắn nhưng cũng đang bắt đầu thấy lo âu nhiều hơn là tự tin.</p>', '', '<p><img src="/public/userfiles/image/muayensao/image/1a.jpg" alt="" width="202" height="148" />Yến sào bí quyết giử gìn nét thanh xuân cho phụ nữ: Làm cách nào để có thể giữ được một sức khoẻ “dẻo dai” cùng nét thanh xuân, tươi trẻ trên gương mặt và cơ thể? Đây có lẽ là nỗi lo lớn nhất của rất nhiều chị em phụ nữ. Họ thật sự đang ở đỉnh cao của cuộc đời nhờ sự từng trải, chín chắn nhưng cũng đang bắt đầu thấy lo âu nhiều hơn là tự tin.<br />Tại sao phụ nữ U30 có nhiều nỗi lo?</p>\n<p>Nói chung phụ nữ ở lứa tuổi nào dùng yến cũng phù hợp. Đặc biệt, khi chị em bước vào thời kỳ lão hóa sau tuổi 30 thì lượng collagen bắt đấu suy giảm, khiến xuất hiện các nếp nhăn quanh miệng, quanh mắt. Ngoài ra nếu cơ thể đang trong tình trạng suy kiệt do bệnh tật, phẫu thuật hoặc sau khi sinh… thì lượng hồng cầu bị suy giảm, người mệt mỏi, sụt cân, sức đề kháng yếu.</p>\n<p>Lý do ở đây khá đơn giản vì ở độ tuổi từ 30 tuổi trở lên, phụ nữ thường là từng mang thai nên cơ thể bị chèn ép, vóc dáng thay đổi nhiều. Họ sinh con và bận rộn chăm sóc con cái cùng với gia đình nên cũng dành ít thời gian chăm sóc bản thân hơn trước.</p>\n<p>Ở tuổi này, chị em đã bắt đầu chín chắn trong công việc, muốn khẳng định mình ở vị trí cao hơn, nên cũng đầu tư nhiều thời gian phấn đấu cho sự nghiệp, cuộc sống của họ trở nên vô cùng tất bật, thiếu vận động, thiếu thời gian nghỉ ngơi… và theo thời gian các nếp nhăn trên da bắt dầu xuất hiện trên khuôn mặt của chị e phụ nử. đó cũng là nỗi lo của chị e phụ nữ</p>\n<p><span style="color:#0000ff;"><strong>Yến sào hỗ trợ làm đẹp da, đẹp dáng cho phụ nữ.</strong></span></p>\n<p>Ngoài việc bồi bổ thể lực và trí lực, yến sào còn được nhiều người công nhận là một “trợ tá đắc lực” trong việc duy trì sức khỏe và sắc đẹp cho phụ nữ. Thành phần yến sào chứa nhiều threonine là chất hình thành elastine và collagen giúp ngăn ngừa lão hóa, duy trì làn da tươi trẻ, giúp kéo dài nét thanh xuân cho chị em. Hơn nữa, trong yến chỉ có đường tự nhiên galactose mà không chứa chất béo, có thể dùng mỗi ngày mà không sợ tăng cân. Phụ nữ nếu ăn yến thường xuyên sẽ ít bị nổi mụn, tàn nhang, vết nám, hơn nữa còn có được làn da mịn màng, đặc biệt làm chậm quá trình lão hóa.</p>\n<p>Đối tượng cũng nên dùng bổ sung yến sào là phụ nữ mang thai (thai sau 03 tháng) để tăng dưỡng chất cho cả mẹ và thai nhi. Thai phụ nếu ăn yến được thì cũng ăn trước 01 lượng nhỏ và theo dõi trước khi bắt đầu dùng thường xuyên.</p>\n<p><strong><span style="color:#0000ff;">Cách chế biến yến sào:</span></strong></p>\n<p>Yến sào có thể chế biến thành nhiều món ăn khác nhau nhưng mà cách đơn giản nhất và hiệu quả nhất là chưng cách thủy với đường phèn.</p>\n<p>Việc ngâm nở và chưng cất yến sào khá đơn giản, người tiêu dùng hoàn toàn có thể tự làm. Sau khi ngâm nở nếu để trong tủ lạnh thì có thể bảo quản tới 10 ngày. Ngâm tổ yến trong nước sạch để có thể lấy ra được lông chim và các tạp chất khác trong các loại tổ khác nhau sẻ có thời gian ngâm khác nhau thường thì 3h trở lên. Tổ càng có chất lượng tốt thì có thời gian ngâm lâu hơn. Sau khi ngâm kích thướt tổ sẻ lớn hơn rất nhiều so với trước khi ngâm. Loại tổ yến tự nhiên thường có lẫn tạp chất và lông chim, do đó ta nên sử dụng dòng nước chảy và nhíp để làm sạch tổ.</p>\n<p>Đầu tiên ngâm nở tổ yến trong nước khoản 600C. Khi ngâm cần lưu ý nước phải ngậm tổ yến để tổ yến hút đủ lượng nước cần thiết.</p>\n<p>Dùng nhíp để lấy sạch lông chim và tạp chất ra khỏi tổ yến. Nếu yến vẫn còn nguyên tổ quý khách tách thành từng sợi sau đó cho yến vào tay, đặt tay vào tô nước dùng muỗn khuấy đều nhẹ nhưng đồng thời nhấc lên nhấc xuống lông tơ yến sẻ theo nước ra ngoài. Thay nước 4-5 lần, quý khách sẻ có tổ yến trắng sạch.</p>\n<p><strong><span style="color:#0000ff;">Với tổ yến đã làm sạch ra khỏi nước để một lúc cho ráo.</span></strong></p>\n<p>Dùng hai nồi có kích thướt khác nhau để chưng tổ yến. Cho một ít nước sôi vào nồi nhỏ đổ đầy nước vào nồi lớn cho tổ yến đã làm sạch vào nồi nhỏ đun lửa nhỏ. Thời gian chưng tùy thuột vào loại tổ yến nếu chưng quá lâu tổ yến sẻ mền và nát vụn.</p>\n<p>Thời điểm ăn yến sào là lúc bụng đói vào buổi sáng hoặc buổi tối trước khi đi ngủ để dưỡng chất được hấp thụ tốt nhất.</p>', '', 'yen-sao-chong-lao-hoa-da-cho-phu-nu', '', '', '', 0, 1, 0, '', '', 1, 204);
+(517, 'Trị nám da: Đơn giản nếu biết cách', '', '2012-09-16 10:56:03', 'tri-nam-da-on-gian-neu-biet-cach.jpg', '<p>40% phụ nữ trên 30 tuổi và 90% phụ nữ trên 40 tuổi bị nám da, đốm nâu. 66% phụ nữ bị nám da sau khi sinh. Rõ ràng đây là mối lo lắng không nhỏ của nhiều phụ nữ.</p>', '', '<p>Nám da, đốm nâu không phải là bệnh nhưng ảnh hưởng nhiều đến thẩm mỹ, khiến họ mất tự tin trong giao tiếp với bạn bè, đồng nghiệp, đặc biệt là với người khác giới.<br />Gian nan trị chứng nám da</p>\n<p>Nhiều phụ nữ đã tìm đến những biện pháp trị nám khác nhau như điều trị bằng laser, sử dụng hóa chất lột tẩy hay dùng sóng điện từ. Tuy nhiên, kết quả không làm nhiều người hài lòng, thậm chí họ còn chịu những tác dụng phụ nguy hiểm.</p>\n<p>Việc sử dụng hóa chất lột tẩy, bào mòn da dễ gây dị ứng, khiến da tổn thương và tình trạng nám da càng nghiêm trọng hơn. Trong khi đó, sử dụng tia laser không những gây đau mà còn có thể gây bỏng da.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Tin%20tuc/trinam.jpg" alt="" width="333" height="500" /></p>\n<p>Muốn trị nám, bạn cần hiểu rõ nguồn gốc của vấn đề này. Nguyên nhân chính gây ra tình trạng nám da là do tác động của ánh nắng mặt trời. Tác nhân này kích thích lớp đáy của thượng bì (là nơi chứa tế bào hắc tố melanin) sản sinh nhiều melanin. Chúng bị đẩy dần lên trên bề mặt da rồi tạo thành những đốm nâu, vết nám.</p>\n<p>Quá trình hình thành nám, sạm da bắt đầu từ sự hình thành của các gốc tự do trong cơ thể dưới tác động của ánh nắng mặt trời. Vì thế, muốn cải thiện tình trạng này, bạn cần bổ sung những chất chống ô-xy hóa ngoại sinh mà cơ thể không tự tổng hợp được.</p>\n<p>Dưỡng chất trị nám từ thực phẩm bổ sung</p>\n<p>Theo nghiên cứu, procianidin, vitamin C, beta carotene, vtamin E, selenium là những hoạt chất có khả năng chống lại các gốc tự do gây nám. Chúng phân bố trong một số thực phẩm. Tuy nhiên, với hàm lượng thấp, lại dễ "thất thoát" trong quá trình chế biến nên thực phẩm tự nhiên hàng ngày không thể giúp điều trị nám.</p>\n<p>Ngày nay, việc dùng viên uống bổ sung, chứa hoạt chất chống ô-xy hóa đã tinh chế được xem là giải pháp trị nám, sạm da khả thi. Hiệu quả của chúng cao hơn nhiều so với những cách điều trị trước đây. Không những vậy, viên uống bổ sung còn nhỏ gọn, tiện lợi cho bạn mang theo.</p>\n<p>Một số nhà sản xuất đã nghiên cứu và đưa ra thị trường loại thực phẩm bổ sung giúp loại bỏ nám da và đốm nâu. Sản phẩm có thành phần chiết xuát 100% từ thiên nhiên và sản xuất theo công nghệ tiên tiến Actisome để đạt hiệu quả điều trị tối ưu.</p>\n<p>Cơ chế trị nám hiệu quả, an toàn từ tự nhiên</p>\n<p>Công thức trị nám, sạm da hoàn hảo nhất là sử dụng procianidin, phối hợp với beta carotene, vitamin C và vitamin E. Procianidin chiết xuất từ vỏ thông biển Pháp, có hoạt tính chống ô-xy hóa cực mạnh, gấp 20 lần vitamin C và 50 lần vitamin E. Thành phần này có tác dụng đẩy lùi các gốc tự do, bảo vệ tế bào khỏi tác hại của tia cực tím. Nó cũng giúp ức chế men tyrosinase, tức là ức chế quá trình tổng hợp melanin.</p>\n<p>Bên cạnh đó, những chất chống ô-xy hóa trong công thức này còn có tác dụng chống lão hóa, kích thích quá trình tuần hoàn máu, giúp da hồng hào và khỏe mạnh.</p>\n<p>Nhiều nghiên cứ đã chứng minh tính an toàn và hiệu quả của procianidin đối với người châu Á. Trên 95% người sử dụng công nhận tình trạng nám da cải thiện cả về độ đậm màu và diện tích. Nhờ đó, da sáng lên đáng kể.</p>\n<p>Để đạt hiệu quả trị nám tối ưu, bạn cần kết hợp các biện pháp bảo vệ da khi ra nắng, uống nhiều nước và bổ sung thêm vitamin từ thực phẩm.</p>', '', 'tri-nam-da-don-gian-neu-biet-cach', '', '40% phụ nữ trên 30 tuổi và 90% phụ nữ trên 40 tuổi bị nám da, đốm nâu. 66% phụ nữ bị nám da sau khi sinh. Rõ ràng đây là mối lo lắng không nhỏ của nhiều phụ nữ.', '', 0, 1, 0, '', '', 1, 397),
+(518, 'Trị mụn mủ - Chăm sóc da sai cách', '', '2012-09-16 10:56:03', 'tri-mun-mu-cham-soc-da-sai-cach.png', '<p style="text-align:left;">Phụ nữ ai cũng quan tâm chăm sóc làn da của mình hàng ngày. Nhưng chăm sóc thế nào là đúng? thế nào mới hiệu quả? Có rất nhiều ý kiến trái chiều trong việc chăm sóc da khiến khá nhiều người cảm thấy hoang mang.</p>', '', '<p>1. Mụn là vấn đề thường gặp phải với môi trường sống ô nhiễm như hiện nay. Đã có khá nhiều sản phẩm dành riêng cho việc điều trị mụn và cũng có nhiều phương pháp trị mụn dân gian. Tuy nhiên để điều trị mụn “tận gốc”, hiện đang có hai trường phái đối lập nhau. Một bên thì cho rằng nên lấy cồi mụn ra rồi sử dụng kem chống mụn. Một bên lại bảo rằng không nên nặn mụn vì sẽ làm cho da bị sưng tấy, đôi khi còn nổi thêm mụn ở vùng xung quanh nữa. Sự thật như thế nào?<br />Mụn là bệnh lý thường gặp ở tuổi dậy thì do tắc nghẽn nang lông, tăng tiết bã, bội nhiễm vi khuẩn.<br />Ở phụ nữ có rất nhiều yếu tố gây ra tình trạng nổi mụn: Sự thay đổi hàm lượng hóc-môn khi bắt đầu hoặc ngừng uống thuốc tránh thai, hoặc khi bị mãn kinh. Ngoài ra còn do một số loại thuốc, đặc biệt là thuốc chữa trầm cảm và chứng động kinh, hoặc do mỹ phẩm,...<br />Biểu hiện của mụn rất đa dạng: sẩn, mụn mủ, cồi đóng (trắng), cồi đen (mở), nang, cục, sẹo lõm, sẹo lồi. Da đỏ, nhờn. Để điều trị mụn tận gốc đầu tiên cần phải tuân theo những chế độ sau:</p>\n<p>-Tránh xa các thức ăn có chứa chất ngọt, mỡ, và chất kích thích như rượu, café và thuốc lá. Trong bữa ăn hằng ngày cần phải bổ sung nhiều rau xanh. Ăn nhiều trái cây.<br />- Thức khuya và căng thẳng là hai nguyên nhân dễ nổi mụn và tàn phá làn da nhanh nhất.<br />- Không nên để cơ thể bị thiếu nước dẫn đến táo bón. Nên uống đủ nước, đừng đợi đến khi cảm thấy khát nước mới uống. Vì khi ấy cơ thể bạn đã thiếu nước trầm trọng nên nó mới đòi hỏi bạn bổ sung nước. Ít nhất phải uống 2 lít mỗi ngày.</p>\n<p> <img src="/public/userfiles/image/thammyvien/image/Tin%20tuc/tri-mun-mu-cham-soc-da%20(1).png" alt="" width="400" height="300" /></p>\n<p>- Chống viêm, chống nhiễm trùng, mở chỗ tắc ở nang lông, giảm tiết bã.<br />Quá trình điều trị sẽ được bác sĩ da liễu quyết định sau khi thăm khám toàn diện và cẩn thận. Vì vậy theo Đẹp, để điều trị mụn có hiệu quả nhất thiết không nên tiến hành nặn mụn vì có thể gây nhiễm trùng lan rộng, phá vỡ cấu trúc da gây tụ máu, tạo sẹo xấu, để lại vết thâm, lõm trên làn da.<br />Nhất là trước khi nặn mụn nhiều người không rửa tay, vi khuẩn từ tay sẽ xâm nhập vào bên trong gây sưng tấy. Đừng lo lắng việc cồi mụn vẫn còn. Cứ để các nốt mụn khô và cồi mụn sẽ tự tróc ra.<br />2. Mùa nắng ở Việt Nam rất gắt, nên khi ra đường ai cũng phải cố gắng che chắn cho thật kỹ. Và một giải pháp rất được chị em ưa chuộng là sử dụng kem chống nắng. Tuy nhiên, hiện nay có một số tranh cãi về việc sử dụng kem chống nắng. Có chuyên gia cho rằng những người có làn da nhạy cảm và trẻ em không nên sử dụng kem chống nắng, còn một số khác lại khuyên tất cả mọi người đều cần sử dụng kem chống nắng khi bước ra ngoài đường. Sự thật là như thế nào?<br />Trẻ em từ 6 tháng trở lên và người có da nhạy cảm vẫn sử dụng được kem chống nắng, tuy nhiên cần phải lưu ý một số vấn đề sau:<br />- Trong thành phần của kem chống nắng không chứa chất bảo quản, tinh dầu thơm, PABA (Paraamino benzoic acid).<br />- Không có thành phần gây dị ứng, không nhờn, không cay mắt.<br />- Không chứa cồn vì có thể làm say em bé.<br />Những điều lưu ý khi sử dụng kem chống nắng<br />- Thoa một lớp đủ dày, khi ra mồ hôi nhiều hoặc xuống nước, đi bơi, sau 2 giờ phải thoa lại.<br />- Không dùng chung một loại kem chống nắng cho cả cơ thể và da mặt.<br />- Chọn loại kem chống cả được tia cực tím (Ultra Violet) bước sóng A và B.<br />- Ngoài ra cần dùng thêm áo, găng, nón, kính (chống được cả tia UVA và UVB)<br />- Nên hạn chế ra nắng trong thời gian từ 9 giờ sáng đến 3 giờ chiều.<br />- Tia UVA chính là nguyên nhân gây ung thư da vì làm tổn thương DNA của tế bào.<br />- Nên chọn loại kem chống nắng có SPF30, nếu đi biển thì dùng loại 50 hoặc 80.<br />- Thoa kem chống nắng đúng theo hướng dẫn, không quá mỏng hoặc quá dày.</p>\n<p>3. Các nhà khoa học đã đem những phát minh mới áp dụng vào công nghệ làm đẹp. Trên thị trường đã xuất hiện một số loại mỹ phẩm có thành phần chiết xuất từ tế bào gốc. Hiện nay đang có nhiều tranh cãi giữa việc nên hay không nên sử dụng các sản phẩm chăm sóc da từ tế bào gốc? Có ý kiến đang tranh cãi là nếu lấy tế bào gốc từ tế bào của con người thì có thể mang những mầm bệnh của người vào trong sản phẩm. Điều này đúng hay sai?<br />Tế bào gốc (TBG) trong cơ thể con người làm việc như một hệ thống sửa chữa, tái tạo bằng cách phân chia thành các tế bào chuyên biệt để bổ sung cho các dạng tế bào cần được thay thế. (Có những chức năng tương ứng với các tế bào này)<br />TBG chỉ có ở một vài nơi ở người đã trưởng thành như: phôi thai, dây rốn. Công nghệ TBG tìm kiếm các nguồn TBG tối ưu như TBG phôi thai, TBG từ dây rốn, TBG ở người trưởng thành.<br />Các tế bào này sẽ được nuôi cấy, nhân rộng, được tác động một cách khoa học để có thể biệt hóa thành những dòng tế bào khác nhau. Các sản phẩm tế bào khác nhau này để chữa bệnh, chăm sóc sắc đẹp, sức khỏe, chống lão hóa. Việc sử dụng TBG sẽ không làm lây truyền bệnh. Hiện nay có công nghệ TBG từ dây rốn ở Việt Nam rất hiệu quả, hạn chế được tác dụng phụ và duy trì tác dụng lâu so với sản phẩm TBG từ phôi bò hoặc sinh tổng hợp.<br />4. Phụ nữ bước qua tuổi 30 làn da bắt đầu lão hóa, xuất hiện một số nếp nhăn ở khóe mắt và quanh miệng, biện pháp giảm vết nhăn nhanh nhất là tiêm botox, nhưng hiện nay các bác sỹ khuyên không nên tiêm botox nữa maf nên dùng các sản phẩm chống lão hóa chăm sóc hàng ngày. Một số ý kiến khác lại cho rằng việc sử dụng sản phẩm chống lão hóa thực ra không có hiệu quả như mong đợi mà phải có chế độ ăn uống, chăm sóc và bảo vệ da ngay từ lúc còn trẻ chứ không nên lạm dụng quá nhiều vào các sản phẩm chống lão hóa. Thực sự thì nên làm gì để có làn da đẹp?<br />Botox là một loại độc chất có tên là Botulinum Toxin type A do công ty Allergan của Mỹ sản xuất.<br />Độc chất này do vi khuẩn Clostridium Botilinum tiết ra, có tác dụng ngăn các kích thích từ thần kinh đến sợi cơ do đó gây giãn cơ và xóa vết nhăn.<br />Ngoài ra Botox còn được dùng trong điều trị một số bệnh lý khác như: chứng co thắt cơ, rối loạn tiết mố hôi, rối loạn trương lực, đau nửa đầu.<br />Tuy nhiên việc tiêm Botox cần được thưc hiện bởi bác sĩ có tay nghề (đào tạo bài bản, kinh nghiệm) để hạn chế những tai biến và tác dụng phụ không mong muốn như: tụ máu, ngộ độc (do tiêm quá nhiều thuốc): yếu cơ, chóng mặt, chùng mi, mất kiểm soát chức năng bàng quang, mặt không biểu lộ cảm xúc, xệ môi miệng làm chảy nước bọt.<br />Vì vậy chỉ nên tiêm Botox ở vùng xung quanh mắt và trán.<br />Lão hóa da là một quá trình tự nhiên của cơ thể, bắt đầu ngay từ những năm 30 tuổi. Do 2 yếu tố nội và ngoại sinh.<br />Chúng ta chỉ có thể can thiệp vào yếu tố ngoại sinh để làm chậm quá trình này.<br />Việc sử dụng các sản phẩm chăm sóc da hàng ngày là việc cần thiết, tuy nhiên không nên lạm dụng.<br />Với kinh nghiệm trong ngành thẩm mỹ.Việt mỹ sẵn sàng tư vấn và mang đến cho bạn thông tin bổ ích cho làm da và các trị mụ hiệu quả nhất.</p>', '', 'tri-mun-mu-cham-soc-da-sai-cach', '', 'Phụ nữ ai cũng quan tâm chăm sóc làn da của mình hàng ngày. Nhưng chăm sóc thế nào là đúng? thế nào mới hiệu quả? Có rất nhiều ý kiến trái chiều trong việc chăm sóc da khiến khá nhiều người cảm thấy hoang mang.', '', 0, 3, 0, '', '', 1, 398),
+(519, 'Tắm trắng tại nhà bằng trái cây', '', '2012-09-16 10:56:03', 'tam-trang-tai-nha-bang-trai-cay.jpg', '<p>Làn da của bạn sẽ trắng đẹp rạng ngời dưới nắng hè nhờ được tắm trắng tại nhà. Bạn có tin không? Các bước thực hiện cực kì đơn giản và dễ dàng nhé!</p>', '', '<p>Làn da của bạn sẽ trắng đẹp rạng ngời dưới nắng hè nhờ được tắm trắng tại nhà. Bạn có tin không? Các bước thực hiện cực kì đơn giản và dễ dàng nhé!</p>\n<p>1. Chuẩn bị:</p>\n<p>- Để làm hỗn hợp tắm trắng, bạn hãy sử dụng trái dâu tằm. Trong quả dâu tằm có chứa alpha hydro acid, chất có tác dụng tẩy tế bào chết, tái tạo tế bào mới và giúp làn da trắng mịn.<br />- Mật ong<br />- Đường cát/ muối (loại chuyên dụng để tẩy tế bào chết).</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Tin%20tuc/17__.jpg" alt="" width="500" height="365" /></p>\n<p>2. Thực hiện:</p>\n<p>Trước hết bạn cần làm ẩm da rồi tẩy tế bào chết: Sử dụng đường hoặc muối (loại chuyên dụng để tẩy tế bào chết). Bước này nhằm mục đích loại bỏ tế bào chết và tái tạo tế bào mới.<br />Làm hỗn hợp tắm trắng: Bạn hãy xay nhuyễn hai muỗng cà phê nước dâu tằm rồi trộn với 3 muỗng mật ong, sau đó trộng đều.<br />Thoa hỗn hợp này lên da và để khoảng 10 - 15 phút rồi tắm lại bằng nước mát. Như vậy là bạn đã có một làn da trằng hồng, mịn màng đầy sức sống hè này rồi.<br />Mách nhỏ: Nếu không có trái dâu tằm, bạn có thể sử dụng nước cốt cam để thay thế vì cam cũng có tác dụng tương tự dâu tằm trong việc tẩy tế bào chết và làm da trắng mịn.<br />Tam trang,tri tan nhang</p>', '', 'tam-trang-tai-nha-bang-trai-cay', '', 'Làn da của bạn sẽ trắng đẹp rạng ngời dưới nắng hè nhờ được tắm trắng tại nhà. Bạn có tin không? Các bước thực hiện cực kì đơn giản và dễ dàng nhé!', '', 0, 2, 0, '', '', 1, 399);
 
 -- --------------------------------------------------------
 
@@ -531,18 +530,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_news_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_news_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=388 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=400 ;
 
 --
 -- Dumping data for table `dos_module_news_cat`
 --
 
 INSERT INTO `dos_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(204, 0, 'Cẩm Nang Yến Sào', '', '', '', 'cam-nang-yen-sao', '', '', '', 'cam-nang-yen-sao.jpg', 1, '', '', 1, 'muayensao'),
-(384, 0, 'Tác dụng của yến sào', '', '', '', 'tac-dung-cua-yen-sao', '', '', '', '', 2, '', '', 1, 'muayensao'),
-(385, 384, 'Chữa bệnh', '', '', '', 'chua-benh', '', '', '', '', 3, '', '', 1, 'muayensao'),
-(386, 384, 'Nâng cáo sức khỏe', '', '', '', 'nang-cao-suc-khoe', '', '', '', '', 4, '', '', 1, 'muayensao'),
-(387, 0, 'Lịch sử của yến sáo', '', '', '', 'lich-su-cua-yen-sao', '', '', '', '', 5, '', '', 1, 'muayensao');
+(397, 0, 'Tri nám da', '', '', '', 'tri-nam-da', '', '', '', '', 1, '', '', 1, 'nguyenanphuc'),
+(398, 0, 'Trị mụn', '', '', '', 'tri-mun', '', '', '', '', 2, '', '', 1, 'nguyenanphuc'),
+(399, 0, 'Tắm trắng', '', '', '', 'tam-trang', '', '', '', '', 3, '', '', 1, 'nguyenanphuc');
 
 -- --------------------------------------------------------
 
@@ -560,7 +557,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_save` (
 --
 
 INSERT INTO `dos_module_pcounter_save` (`save_name`, `save_value`) VALUES
-('day_time', 2456184),
+('day_time', 2456188),
 ('max_count', 0),
 ('counter', 0),
 ('yesterday', 0);
@@ -581,7 +578,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1347516751);
+('''127.0.0.1''', 1347871546);
 
 -- --------------------------------------------------------
 
@@ -618,25 +615,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5494 ;
-
---
--- Dumping data for table `dos_module_products`
---
-
-INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(5482, 'Yến đảo trắng còn nguyên', '', '2012-07-15 23:47:44', 'yen-dao-trang-con-nguyen-to-thumb.jpg', 'yen-dao-trang-con-nguyen-to.jpg', '', '<p>MSP : YTNT01</p>', '', '<p><strong>Yến đảo trắng còn nguyên tổ ( <span style="color:#ff0000;">7.500.000 đến 7.800.000 VND/100Gr</span> )</strong></p>\n<p>Yến trắng đẹp, thân dày và tròn, còn nguyên tổ, nở nhiều trong nước, nguồn yến được lấy trực tiếp từ Khánh Hòa, HộiAn ..., luôn đạt chất lượng tốt nhất và độ khô tối đa, luôn có tại cửa hàng.</p>', '', 'yen-dao-trang-con-nguyen', '', '', '', 0, 12, '', 0, 0, '', '', '', '', 1, 972),
-(5483, 'yến huyết còn nguyên tổ', '', '2012-07-15 23:49:11', 'to-yen-huyet-con-nguyen-to-thumb.jpg', 'to-yen-huyet-con-nguyen-to.jpg', '', '<p>MSP : YHNT01</p>', '', '<p><strong>Tổ yến huyết còn nguyên tổ (<span style="color:#ff0000;">giá 15.000.000 đến 15.200.000 VNĐ</span>)</strong></p>\n<p>Yến màu đỏ và đỏ nâu còn nguyên tổ, do chim yến làm tổ trên lớp đá vôi, hấp thụ khoáng và các chất vi lượng từ đá, rất tốt cho người đang bệnh nặng. Nở nhiều trong nước, nguồn Yến được lấy trực tiếp từ Khánh Hòa, Hội An, các tỉnh miền trung Việt Nam, luôn đạt chất lượng tốt nhất và độ khô tối đa, luôn có tại cửa hàng.</p>', '', 'yen-huyet-con-nguyen-to', '', '', '', 0, 11, '', 0, 0, '', '', '', '', 1, 972),
-(5484, 'Yến còn nguyên tổ', '', '2012-07-15 23:50:31', 'yen-con-nguyen-to-thumb.jpg', 'yen-con-nguyen-to.jpg', '', '<p>MSP : YNT01</p>', '', '<p>MSP : YNT01</p>', '', 'yen-con-nguyen-to', '', '', '', 0, 10, '', 0, 0, '', '', '', '', 1, 972),
-(5485, 'Tổ Yến nhà còn nguyên', '', '2012-07-15 23:54:03', 'to-yen-nha-con-nguyen-thumb.jpg', 'to-yen-nha-con-nguyen.jpg', '', '<p>MSP : YNNT01</p>', '', '<p><strong>Yến nhà tổ trắng, còn nguyên tổ (<span style="color:#ff0000;">3.700.000 đến 4.800.000 VND/100Gr</span>)</strong></p>\n<p>Yến trắng đẹp, thân mỏng và dài, còn nguyên tổ, nở nhiều trong nước, nguồn yến được lấy trực tiếp từ các nhà yến tại Khánh Hòa, Hội An và các tỉnh miền trung Việt Nam, luôn đạt chất lượng tốt nhất và độ khô tối đa, luôn có tại cửa hàng.</p>', '', 'to-yen-nha-con-nguyen', '', '', '', 0, 9, '', 0, 0, '', '', '', '', 1, 971),
-(5486, 'Yến đảo đã làm sạch', '', '2012-07-15 23:55:58', 'yen-dao-da-lam-sach-thumb.jpg', 'yen-dao-da-lam-sach.jpg', '', '<p>MSP : YDLS01</p>', '', '<p><strong>Yến đảo đã làm sạch (<span style="color:#ff0000;">giá 6.200.000 VNĐ/ 100gr</span>)</strong></p>\n<p>Có hộp 50gr</p>', '', 'yen-dao-da-lam-sach', '', '', '', 0, 8, '', 0, 0, '', '', '', '', 1, 970),
-(5487, 'Yến nhà đã làm sạch', '', '2012-07-16 00:02:11', 'yen-nha-da-lam-sach-thumb.jpg', 'yen-nha-da-lam-sach.jpg', '', '<p>MSP : YNLS01</p>', '', '<p><strong>Yến nhà đã làm sạch (<span style="color:#ff0000;">4.000.000 VND/100Gr</span>)</strong></p>\n<p>Yến trắng đẹp, được đóng thành bánh nhỏ, dễ sử dụng, đã được làm sạch lông, nở nhiều trong nước, nguồn yến được lấy trực tiếp từ các nhà yến các tỉnh miền trung Việt Nam, luôn đạt chất lượng tốt nhất và độ khô tối đa, luôn có tại cửa hàng.</p>', '', 'yen-nha-da-lam-sach', '', '', '', 0, 6, '', 0, 0, '', '', '', '', 1, 970),
-(5488, 'Yến đảo sơ chế loại 2', '', '2012-07-16 00:27:55', 'yen-dao-so-che-loai-2-thumb.jpg', 'yen-dao-so-che-loai-2.jpg', '', '<p>Chi tiết sản phẩm</p>', '', '<p>Chi tiết sản phẩm</p>', '', 'yen-dao-so-che-loai-2', '', '', '', 0, 7, '', 0, 0, '', '', '', '', 1, 972),
-(5489, 'Tổ huyết yến thô', '', '2012-07-16 00:29:24', 'to-huyet-yen-tho-thumb.jpg', 'to-huyet-yen-tho.jpg', '', '<p>Chi tiết sản phẩm</p>', '', '<p>Chi tiết sản phẩm</p>', '', 'to-huyet-yen-tho', '', '', '', 0, 5, '', 0, 0, '', '', '', '', 1, 970),
-(5490, 'Huyết yến tinh chế loại 1', '', '2012-07-16 00:30:27', 'huyet-yen-tinh-che-loai-1-thumb.jpg', 'huyet-yen-tinh-che-loai-1.jpg', '', '<p>Chi tiết sản phẩm</p>', '', '<p>Chi tiết sản phẩm</p>', '', 'huyet-yen-tinh-che-loai-1', '', '', '', 0, 4, '', 0, 0, '', '', '', '', 1, 970),
-(5491, 'Chè yến bạch quả', '', '2012-07-16 00:31:34', 'che-yen-bach-qua-thumb.jpg', 'che-yen-bach-qua.jpg', '', '<p>Chi tiết sản phẩm</p>', '', '<p>Chi tiết sản phẩm</p>', '', 'che-yen-bach-qua', '', '', '', 0, 3, '', 0, 0, '', '', '', '', 1, 1044),
-(5492, 'Chè yến thập cẩm', '', '2012-07-16 00:32:27', 'che-yen-thap-cam-thumb.jpg', 'che-yen-thap-cam.jpg', '', '<p>Chi tiết sản phẩm</p>', '', '<p>Chi tiết sản phẩm</p>', '', 'che-yen-thap-cam', '', '', '', 0, 2, '', 0, 0, '', '', '', '', 1, 1044),
-(5493, 'Chè yến táo', '', '2012-07-16 00:35:12', 'che-yen-tao-thumb.jpg', 'che-yen-tao.jpg', '', '<p>Chi tiết sản phẩm</p>', '', '<p>Chi tiết sản phẩm</p>', '', 'che-yen-tao', '', '', '', 0, 1, '', 0, 0, '', '', '', '', 1, 1044);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -664,20 +643,16 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1783 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1830 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
 --
 
 INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(970, 0, 'Tổ Yến Đã Làm Sạch', '', '', '', 'to-yen-da-lam-sach', '', '', '', 'to-yen-a-lam-sach.jpg', '', 4, '', '', 1, 'muayensao'),
-(971, 0, 'Tổ Yến Nhà', '', '', '', 'to-yen-nha', '', '', '', 'to-yen-nha.jpg', '', 6, '', '', 1, 'muayensao'),
-(972, 0, 'Tổ Yến Đảo', '', '', '', 'to-yen-dao', '', '', '', 'to-yen-ao.jpg', '', 4, '', '', 1, 'muayensao'),
-(1044, 0, 'Món Ăn Từ Yến', '', '', '', 'mon-an-tu-yen', '', '', '', 'mon-n-tu-yen.jpg', '', 4, '', '', 1, 'muayensao'),
-(1780, 0, 'Yến khánh hòa', '', '', '', 'yen-khanh-hoa', '', '', '', '', '', 7, '', '', 1, 'muayensao'),
-(1781, 1780, 'Tổ yến nhà aaa', '', '', '', 'to-yen-nha-aaa', '', '', '', '', '', 8, '', '', 1, 'muayensao'),
-(1782, 1780, 'Tổ yến đã làm sạch ddd', '', '', '', 'to-yen-da-lam-sach-ddd', '', '', '', '', '', 9, '', '', 1, 'muayensao');
+(1827, 0, 'Cơ Sở Hạ Tần', '', '', '', 'co-so-ha-tan', '', '', '', 'giam-beo.jpg', '', 6, '', '', 1, 'nguyenanphuc'),
+(1828, 0, 'Máy Móc - Thiết Bị', '', '', '', 'may-moc-thiet-bi', '', '', '', 'cham-soc-than-the.jpg', '', 6, '', '', 1, 'nguyenanphuc'),
+(1829, 0, 'Khám Chữa Bệnh', '', '', '', 'kham-chua-benh', '', '', '', 'spa.JPG', '', 6, '', '', 1, 'nguyenanphuc');
 
 -- --------------------------------------------------------
 
@@ -708,16 +683,17 @@ CREATE TABLE IF NOT EXISTS `dos_module_services` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_services_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=212 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=356 ;
 
 --
 -- Dumping data for table `dos_module_services`
 --
 
 INSERT INTO `dos_module_services` (`record_id`, `title`, `titleen`, `preview`, `previewen`, `content`, `contenten`, `pic_full`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
-(209, 'Công dụng của yến sào', '', '', '', '<p><strong>Yến sào,</strong> theo dân gian vẫn gọi, hay tổ yến là tên một loại thực phẩm - dược phẩm nổi tiếng được tìm thấy trên vách đá, hang động nơi chim yến sinh sống.</p>\n<p>Tổ yến được kết tinh từ nước bọt được tiết ra từ cặp tuyến dưới lưỡi chim yến. Đây là một trong tám món ăn cao lương mĩ vị hay bát trân mà từ ngàn xưa đã được các vua chúa dùng trong các buổi yến tiệc, làm quà tặng cho nhau, xem như một tặng phẩm quý giá.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/muayensao/image/hnh11.jpg" alt="" width="400" height="283" /></p>\n<p>Ngày nay, các nhà nghiên cứu khoa học trên thế giới và các chuyên gia dinh dưỡng trong nước đã nghiên cứu và một lần nữa khẳng định cho chúng ta thấy tổ yến là một loại thực phẩm có giá trị dinh dưỡng rất cao.</p>\n<p> </p>\n<p><img src="/public/userfiles/image/muayensao/image/h_10.jpg" alt="" width="99" height="100" />Yến sào cũng được cho là thần dược với tác dụng tăng cường hệ miễn dịch, tình dục, cải thiện giọng nói, tăng cường tập trung. Phục hồi nhanh các tế bào bị tổn thương, chống lão hóa, có tác dụng hỗ trợ điều trị các bệnh như lao phổi,viêm gan siêu vi B,C... tiêu đờm, ho, viêm phế quản mãn tính, suyễn, huyết áp cao, tiểu đường, đau dạ dày, mụn,nám, giảm khả năng bị cúm thường xuyên...</p>\n<p>Theo số liệu của Trung tâm Công nghệ Sinh học Đại học Thủy sản và Viện Công nghệ sinh học thuộc Trung tâm Khoa học Tự nhiên và công nghệ quốc gia, trong thành phần yến sào có 18 loại acid amin, một số có hàm lượng rất cao như Aspartic acid, Serine, Tyrosine, Phenylalanine, Valine, Arginine, Leucine, ... Đặc biệt, acid syalic với hàm lượng 8,6% và Tyrosine là những chất có tác dụng phục hồi nhanh chóng các tổn thương khi bị nhiễm xạ hay chất độc hại, kích thích sinh trưởng hồng cầu. Ngoài ra, yến sào có cấu trúc glucoprotein, có năng lượng cao, cơ thể dễ hấp thụ. Các nguyên tố đa, vi lượng trong yến sào rất phong phú, có đến 31 nguyên tố xuất hiện bằng phương pháp huỳnh quang tia X, rất giàu Ca và Fe là các khoáng chất cần thiết cho cơ thể.</p>\n<p>Các nguyên tố có ích cho ổn định thần kinh trí nhớ như Mn, Br, Cu, Zn cũng có hàm lượng cao. Một số nguyên tố hiếm tuy với hàm lượng thấp, nhưng rất quý giá trong kích thích tăng tiêu hóa hấp thu qua màng ruột như Cr, chống lão hóa, chống chất phóng xạ như Se..</p>\n<p>Qua đó chúng ta càng không ngạc nhiên về giá trị dinh dưỡng cao và quý giá của yến sào. Yến sào có tác dụng làm sạch phổi và các cơ quan hô hấp, làm giảm bệnh cúm và các triệu chứng dị ứng, làm tăng thể trọng, cân bằng các quá trình trao đổi chất trong cơ thể, tăng cường khả năng hoạt động thể lực và phản xạ thần kinh, bổ đối với hệ huyết học, làm tăng số lượng hồng cầu, huyết sắc tố, giảm thời gian đông máu, tăng cường các kích thích sinh trưởng cho các tế bào, phục hồi các tế bào bị thương tổn, chống lão hóa, hồi xuân, tăng tuổi thọ. Gần đây, khi nghiên cứu tác dụng của yến sào trong trường hợp cơ thể bị nhiễm chất độc hại, người ta nhận thấy yến sào hạn chế mức độ sút cân, phục hồi sức khoẻ nhanh , ổn định các chỉ tiêu huyết học. Người ta cũng đang nghiên cứu dùng yến sào điều trị các bệnh ung thư và HIV/AIDS vì phát hiện có một số hoạt chất sinh học kích thích sinh trưởng tế bào bạch cầu ngoại biên trong yến sào.</p>', '', '', 15, '2012-07-16 00:09:09', 1, 0, '', '', 'cong-dung-cua-yen-sao', '', '', '', 1, 'muayensao'),
-(210, 'Khuyên dùng Yến sào', '', '', '', '<p><strong>NGƯỜI LỚN:</strong><br />- Những người ốm đau, bệnh tật (đặc biệt là đối với các bệnh nặng như ung thư, tiểu đường, viêm gan, chạy thận, hậu phẫu...)<br />- Người già sức khỏe yếu<br />- Người suy nhược cơ thể (ăn ngủ kém, mất ngủ, ăn không ngon)<br />- Người có hệ hô hấp kém, thở gấp, hay viêm họng, viêm mũi<br />- Người có hệ tiêu hóa kém, bị đường ruột</p>\n<p><strong>PHỤ NỮ</strong><br />- Phụ nữ mang bầu, sau sinh<br />- Phụ nữ muốn trẻ hóa, đẹp da</p>\n<p><strong>TRẺ EM</strong><br />- Trẻ em biếng ăn, suy dinh dưỡng, kém ăn (trẻ có thể ăn tổ yến từ khi biết ăn bột)<br />- Trẻ hay bị viêm họng, viêm mũi</p>\n<p><strong>LIỀU LƯỢNG:</strong></p>\n<p>- Người lớn: 5gr/1lần;<br />- Trẻ em: Dưới 2 tuổi: 1.5gr-2gr/lần;<br />- Trẻ em từ 2 tuổi trở lên: 2.5gr/lần;</p>\n<p><strong>1. Đối với người ốm hoặc đang suy nhược cơ thể, mệt mỏi:</strong></p>\n<p>- Ăn hàng ngày</p>\n<p>- Ăn cách ngày</p>\n<p>- Ăn 3 lần/ tuần</p>\n<p><strong>2. Đối với người khỏe mạnh, chỉ cần duy trì sức khỏe, tăng sức đề kháng: có thể ăn ít nhất 2 lần/1 tuần</strong></p>\n<p><strong>Lưu ý</strong><br />- Phụ nữ mang thai và trẻ em biết ăn bột đều dùng được.<br />- Những người huyết áp cao, huyết áp thấp, tim mạch, tiểu đường...đều sử dụng được.(có thể tham khảo thêm ý kiến bác sĩ)</p>\n<p>- Nên ăn vào buổi tối, trước khi đi ngủ.</p>\n<p>Tham khảo thêm CÔNG DỤNG để hiểu thêm tại sao chúng ta nên sử dụng tổ yến để giữ sức khoẻ và chống lão hoá</p>', '', '', 17, '2012-07-16 00:10:25', 2, 0, '', '', 'khuyen-dung-yen-sao', '', '', '', 1, 'muayensao'),
-(211, 'Hướng dẫn ngâm tổ yến', '', '', '', '<p>Việc ngâm nở và chưng tổ yến khá đơn giản, người tiêu dùng hoàn toàn có thể tự làm. Sau khi ngâm nở nếu để trong tủ lạnh tổ yến có thể được bảo quản tới 10 ngày. Ngâm tổ yến trong nước để có thể lấy ra được lông chim và các tạp chất khác dính trong tổ, các loại tổ khác nhau có thời gian ngâm khác nhau thường thì 3 giờ trở lên. Tổ càng có chất lượng tốt thì đòi hỏi thời gian ngâm lâu hơn. Sau khi ngâm kích thước tổ sẽ lớn hơn rất nhiều so với trước khi ngâm. Loại tổ yến tự nhiên thường có lẩn tạp chất và lông chim do đó ta nên sử dụng dòng nước chảy và nhíp để làm sạch tổ.<br />1. Đầu tiên ngâm nở tổ trong nước khoảng 30oC.<br />Khi ngâm cần lưu ý nước phải ngập tổ để tổ yến hút đủ lượng nước cần thiết.<br />2. Dùng nhíp để lấy sạch lông chim và tạp chất ra khỏi tổ yến.<br />Nếu yến còn nguyên tổ Quý khách tách từng sợi sau đó cho yến vào ray, đặt ray vào tô nước dùng muỗng khuấy nhẹ đồng thời nhấc lên nhấc xuống lông tơ yến sẽ theo nước ra ngoài. Thay nước 4-5 lần. Quý khách sẽ có tổ yến trắng sạch.<br />3. Vớt tổ yến đã sạch ra khỏi nước để một lúc cho ráo<br />4. Dùng 1 cái nồi và 1 cái tô để chưng tổ yến.<br />Cho một ít nước sôi để nguội vào tô - đổ đầy nước vào nồi, cho tổ yến đã làm sạch vào tổ để đun lửa nhỏ.<br />Thời gian chưng tùy thuộc vào loại tổ yến, nếu chưng quá lâu, tổ yến rất mềm và dễ nát vụng</p>', '', '', 19, '2012-07-16 00:24:13', 3, 0, '', '', 'huong-dan-ngam-to-yen', '', '', '', 1, 'muayensao');
+(352, 'Chăm sóc toàn thân bằng bùn biển chết', '', '', '', '<p>Mùa thu – đông đem lại cho bạn một bầu không khí thanh mát, dịu dàng nhưng cũng lại gây ra chút phiền toái cho làn da vốn cần đủ dinh dưỡng và độ ẩm trước những thay đổi mưa – nắng thất thường của thời tiết. Vì vậy, dù có bận rộn thế nào bạn cũng đừng bỏ quên việc chăm sóc làn da của mình, tránh cho làn da trở nên khô ráp và sạm màu. Thẩm mỹ viện Việt Mỹ sẽ giúp bạn vừa thư giãn hiệu quả vừa có thể đem tới một làn da toàn thân tươi sáng, mịn màng với dịch vụ chăm sóc toàn thân bằng bùn biển chết.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Dich%20vu/27(1).jpg" alt="" width="500" height="500" /></p>\n<p>Tương truyền, nữ hoàng Ai Cập cổ xưa là người khám phá ra phương thức dùng bùn Biển Chết - Israel để tẩy da chết, kích thích các mạch máu và duy trì làn da trẻ trung, tươi tắn. Chình nhờ phương pháp độc đáo này mà các nữ hoàng Ai Cập luôn đẹp bí ấn và đầy cuốn hút, làm đắm say bao người.</p>\n<p>Kế thừa những tinh hoa của nghệ thuật chăm sóc sắc đẹp, Thẩm mỹ viện Việt Mỹ mang đến cho quý khách những giờ phút thật sự thoải mái sau một ngày làm việc vất vả. Chỉ 90 phút thư giãn, quý khách sẽ thấy ngay sự thay đổi bất ngờ khi thực hiện gói dịch vụ chăm sóc toàn thân bằng bùn Biển Chết. Đặc biệt, khi đến chăm sóc toàn thân bằng bùn Biển Chết, quý khách sẽ yên tâm tuyệt đối về chất lượng và hiệu quả cả dịch vụ. Việt Mỹ luôn cam kết chữ tín quý hơn vàng.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Dich%20vu/28__.jpg" alt="" width="500" height="375" /></p>\n<p>Sau đây là các bước chăm sóc toàn thân bằng bùn Biển Chết ở Thẩm mỹ viện Việt Mỹ</p>\n<p>Bước 1: bạn sẽ được tẩy da chết toàn thân bằng Body Microfoliant. Đây là một liệu pháp tẩy da chết nhẹ nhàng, đem lại cảm giác ấm nóng. Thành phần từ bột Yến Mạch và Cám Gạo giúp lấy đi tế bào da chết một cách nhẹ nhàng, đem lại cảm giác sáng bóng, ngăn chặn sự xuất hiện nám. Chiết xuất từ dầu tự nhiên giúp làn da mịn màng, đem lại sức sống cho làn da.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Dich%20vu/29(1).jpg" alt="" width="500" height="465" /></p>\n<p>Bước 2: Bạn được Massage body bằng Liệu pháp bùn biển (Bôi kem, massage ấn huyệt, tắm tráng). Một trị liệu độc đáo với sự kết hợp giữa làm sạch và giải độc của bùn biển thiên nhiên với dầu giữ ẩm quyền năng. Tinh dầu Oliu và Hạt Nho cung cấp độ mềm mượt và làm khỏe da, đồng thời chống oxy hóa, gia cố hàng rào bảo vệ da. Hỗn hợp thảo mộc Châu Á kích thích tuần hoàn.Tinh dầu cô đặc làm tăng khả năng thư giãn cơ bắp, giảm căng thẳng, kích thích các giác quan hoạt động.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Dich%20vu/30.jpeg" alt="" width="500" height="464" /></p>\n<p>Bước 3: (30’) Nuôi dưỡng da bằng bùn biển (Đắp dưỡng toàn thân, quấn ủ ấm, tắm tráng). Bước này giúp làm sạch sâu và giải độc cơ thể với thành phần đất sét tự nhiên. Chiết xuất Tảo Bẹ, Tảo đơn bào giúp lấy đi những tạp chất trên da, mang lại cảm giác mềm mịn, bóng khỏe. Caffein và Ilex giúp làm đều tông màu da. Tinh dầu Chanh chống oxy hóa. Chiết xuất rễ cây Wasabi và Gừng kích thích tuần hoàn, làm dịu da. Chiết xuất Trà Trắng, Oải Hương, Cam Đắng, Chanh Vàng, Vở Quýt làm tinh khiết da, chống lão hóa.</p>\n<p>Bước 4: (10’) Thoa kem dưỡng toàn thân bằng Ultra Rich Body Cream. Đây là loại kem không chứa dầu, lý tưởng cho cả làn da nhạy cảm nhất. Công thức dạng lỏng độc nhất giữ được lâu trên da, cho làn da độ ẩm và sự trơn mượt, không để lại cảm giác nhờn dính. Chiết xuất Fumaric Acid, cây Lam Cận và Chanh giúp bảo vệ da khỏi ô nhiễm môi trường, nhiệt độ cao và dị ứng mỹ phẩm. Dầu Hoa Anh Thảo giúp chỉnh sửa làn da thiếu nước. Vitamin B5 phục hồi làn da cằn cỗi thiếu nước.</p>', '', '', 69, '2012-09-16 10:56:03', 1, 0, '', '', 'cham-soc-toan-than-bang-bun-bien-chet', '', 'Mùa thu – đông đem lại cho bạn một bầu không khí thanh mát, dịu dàng nhưng cũng lại gây ra chút phiền toái cho làn da vốn cần đủ dinh dưỡng..', '', 1, 'nguyenanphuc'),
+(353, 'Tẩy da chết toàn thân bằng muối khoáng', '', '', '', '<p>Những cơn mưa phùn, gió bấc và bầu trời u ám khiến cho mọi vật đều khoác lên mình màu xám xịt. Mùa hanh khô làm làn da chúng ta khô đi và “sắc đẹp” của mỗi người dường như đều giảm sút phần nào. Bạn – một đại diện cho phái đẹp hãy là “tia nắng ấm áp” trong mùa Đông này. Hãy làm mới mình, đến Thẩm mỹ viện Việt Mỹ để lấy lại nét xuân và “tỏa sáng” nhé.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Dich%20vu/23(1).jpg" alt="" width="500" height="348" /></p>\n<p>Đầu tiên bạn sẽ được tẩy da chết toàn thân bằng muối khoáng Hydro Active Mineral Salts (trong 30 phút). Liệu pháp tẩy da chết bằng muối khoáng giúp đánh bóng cơ thể, làm mịn và sáng bóng da, thêm ẩm và chất dinh dưỡng cho da. Chiết xuất dầu tự nhiên giúp làm sạch, đồng thời kích thích các giác quan. Ngay từ bước này bạn sẽ thấy cảm giác sảng khoái, mọi căng thẳng bay biến. Không chỉ làn da bạn được tiếp năng lượng đầu óc bạn cũng trở nên thư giãn sảng khoái.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Dich%20vu/24__.jpg" alt="" width="500" height="598" /></p>\n<p>Sau khi có làn da thật sạch với muối khoáng bạn hãy sẵn sàng tận hưởng cảm giác tuyệt vời của quá trình Massage body bằng Clean Massage Oil Base. Trong tiếng nhạc nhẹ nhàng, thoang thưởng hương tinh dầu bạn hãy nhắm mắt lại cảm nhận đôi bàn tay mềm mại của các chuyên gia Việt Mỹ nhẹ nhàng chăm sóc cơ thể bạn. Những ngón tay bé nhỏ dường như đang trả lại, đánh thức sức sống căng tràn của làn da bạn. Những động tác miết dài, xoay vòng rồi nhấn vào những huyệt đạo quan trọng trên cơ thể cho bạn những phút giây thư thái nhất.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Dich%20vu/25_____.jpeg" alt="" width="500" height="375" /></p>\n<p>Tinh dầu chiết xuất từ tinh dầu quả Oliu và Hạt Nho, tinh dầu Quả Mơ, vitamin E, sẽ làm mềm và chống oxy hóa cho làn da bạn. Rễ cây Wasabi và Gừng: kích thích tuần hoàn và làm dịu da. Cây Trà Trắng ngăn ngừa lão hóa. Thành phần Sillicone thấm sâu vào trong da, giúp giảm bớt các vết chân chim và làm mềm kết cấu da.</p>\n<p>Bước 3, trong 30 phút bạn sẽ được đắp dưỡng toàn thân bằng Power Recovery Pack cho toàn bộ cơ thể. Phương pháp quyền năng từ bột Yến Mạch và bột Đậu Nành giúp nuôi dưỡng, đồng thời thêm ẩm và làm khỏe da. Mật ong giúp làm mềm mịn bề mặt da. Chiết xuất từ rễ cây Wasabi và Camellia Sinensis (Trà Trắng) giàu chất Polyphenon giúp bảo vệ chống lại sự hủy hoại của các gốc tự do. Qúa trình này thật hoàn hảo khi trị liệu cho cơ thể, lý tưởng cho những vùng da bị chàm hay các bệnh về da như khô, bong tróc, ngứa rát, cháy nắng hoặc thiếu chất dinh dưỡng.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Dich%20vu/26.jpg" alt="" width="500" height="332" /></p>\n<p>Sau khi có làn da thật sạch với muối khoáng bạn hãy sẵn sàng tận hưởng cảm giác tuyệt vời của quá trình Massage body bằng Clean Massage Oil Base (trong 20 phút). Trong tiếng nhạc nhẹ nhàng, thoang thưởng hương tinh dầu bạn hãy nhắm mắt lại cảm nhận đôi bàn tay mềm mại của các chuyên gia nhẹ nhàng chăm sóc cơ thể bạn. Những ngón tay bé nhỏ dường như đang trả lại, đánh thức sức sống căng tràn của làn da bạn. Những động tác miết dài, xoay vòng rồi nhấn vào những huyệt đạo quan trọng trên cơ thể cho bạn những phút giây thư thái nhất.</p>\n<p>Thêm một bước nữa để làn da bạn thực sự đẹp xinh, mịn màng, tỏa sáng khi được thoa kem dưỡng toàn thân cao cấp nhập khẩu từ Hoa Kỳ. Đây là loại kem dưỡng không chứa dầu, lý tưởng cho cả làn da nhạy cảm nhất. Công thức dạng lỏng độc nhất giữ được lâu trên da, cho làn da độ ẩm và sự trơn mượt, không để lại cảm giác nhờn dính.</p>\n<p>Liệu pháp Tái Sinh quyền năng quả thực sẽ trả lại cho bạn làn da đẹp đẽ, căng tràn sức sống. Đó chính là liệu pháp nuôi dưỡng da bằng muối khoáng. Một phương pháp thật tuyệt chỉ có ở Thẩm mỹ viện Việt Mỹ.</p>', '', '', 64, '2012-09-16 10:56:03', 2, 0, '', '', 'tay-da-chet-toan-than-bang-muoi-khoang', '', 'Những cơn mưa phùn, gió bấc và bầu trời u ám khiến cho mọi vật đều khoác lên mình màu xám xịt.', '', 1, 'nguyenanphuc'),
+(354, 'Trẻ hóa toàn thân với parafin', '', '', '', '<p>Những làn da dễ mất nước có thể tìm lại vẻ săn chắc, hồng hào, khoẻ mạnh bằng mặt nạ Parafin. Đây là một dịch vụ rất được ưa thích, đặc biệt khi thời tiết đã bắt đầu lạnh và khô hơn vào mùa đông. Điều trị với mặt nạ nóng Parafin khi chăm sóc làn da có tác dụng tăng cường vòng tuần hoàn máu, cải thiện quá trình trao đổi chất của các tế bào, đồng thời tăng cường sự đàn hồi của làn da, mang lại sự cân bằng tươi trẻ cho làn da. Tuy nhiên, để có được hiểu quả tốt nhất thì chỉ có ở Thẩm mỹ viện Việt Mỹ</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Dich%20vu/19(2).jpg" alt="" width="500" height="300" /></p>\n<p>Parafinlà tên gọi chung cho nhóm các hydrocacbon dạng ankan với phân tử lượng lớn. Nó được dùng để sản xuất nến, tạo lớp phủ cho các loại giấy hay vải sáp, tạo các mẫu trong nghiên cứu thuộc lĩnh vực mô học... Trong da liễu học, nó được dùng làm thuốc làm mềm (giữ ẩm) đem lại làn da láng mượt, mịn màng.</p>\n<p>Parafin đặc biệt có tác dụng trong việc làm trẻ hoá và mịn màng đối với những bàn tay, bàn chân khô sần, gân guốc đồng thời có khả năng thấm sâu vào từng lớp cơ đem lại sự thư giãn tuyệt vời cho toàn cơ thể.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Dich%20vu/20(2).jpg" alt="" width="500" height="334" /></p>\n<p>Từ những ưu điểm đó, Việt Mỹ đã áp dụng thành công liệu pháp ủ nóng bằng Parafin. Trước khi sử dụng Parafin, bạn sẽ được thanh tẩy cơ thể (xông hơi thải độc cơ thể, tẩy sạch lớp tế bào sừng, tế bào chết trên bề mặt da) thật sự với liệu pháp Spa, liệu pháp ngâm bồn thuốc bắc. Đó là tổng hợp hương vị thảo dược thơm và muối biển với hơn 40 khoáng chất và tinh dầu trị liệu. Bước đầu, bồn thuốc sẽ giúp cơ thể bạn giải độc tố và tuần hoàn máu.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Dich%20vu/tm21.jpg" alt="" width="500" height="368" /></p>\n<p>Tiếp theo, toàn thân bạn sẽ được thả lỏng, cảm nhận hơi ấm lan tỏa từ đôi bàn tay massage, ấn huyệt, xoa dịu cơ thể và hương thơm làm tan biến mệt mỏi với các loại tinh dầu mà bạn ưa thích.<br />Cuối cùng chúng tôi ủ nóng toàn thân bạn trong sáp nóng Parafin. Nhiệt ấm sẽ kích thích toàn thân, làm cơ thể nóng ran lên, đẩy nhanh tuần hoàn máu. Sức nóng sẽ thấm sâu vào tận lớp cơ, xương cho bạn một cảm giác thật sự thoải mái và thư giãn hoàn toàn. Làn da bạn nhờ vậy luôn ẩm, căng mịn, sáng bóng và tăng tính đàn hồi.</p>\n<p>Cũng nhờ vậy, liệu pháp Parafin còn là một phương thuốc hữu hiệu trong điều trị giảm đau khớp, phong thấp, đổ mồ hôi tay chân, ngừa bệnh tật, giảm đi sự gân guốc và thô sần nhất là vùng tay và chân, giúp nuôi dưỡng cơ thể khỏe mạnh từ trong ra ngoài và ngăn ngừa lão hóa toàn thân cho Bạn</p>\n<p>Bạn là người quan tâm tới sức khỏe của mình? Chúng tôi khuyên Bạn nên dành chút thời gian chăm sóc cho cơ thể bằng Liệu pháp Parafin 1 tháng / 1 lần. Đó là phần thưởng tuyệt vời bạn dành cho cơ thể của mình.</p>\n<p>Một làn da luôn sáng đẹp và mịn màng như nhung khiến bạn luôn sảng khoái, lạc quan, tự tin và thành công hơn nữa.</p>', '', '', 39, '2012-09-16 10:56:03', 3, 0, '', '', 'tre-hoa-toan-than-voi-parafin', '', 'Những làn da dễ mất nước có thể tìm lại vẻ săn chắc, hồng hào, khoẻ mạnh bằng mặt nạ Parafin. Đây là một dịch vụ rất được ưa thích', '', 1, 'nguyenanphuc'),
+(355, 'Thắp sáng làn da với ngọc Trân châu', '', '', '', '<p>Hiện nay, tại các thẩm mỹ viện có rất nhiều hình thức làm trắng da: Tẩy trắng da, tắm trắng bằng mỹ phẩm và tắm trắng bằng dược thảo. Riêng tắm trắng bằng dược thảo cũng có nhiều hình thức: tắm trắng hoàn toàn bằng thảo dược, linh dược quý từ thiên nhiên và tắm bằng thảo dược nhưng có pha trộn hoá chất.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Dich%20vu/16.JPG" alt="" width="500" height="375" /></p>\n<p style="text-align:center;">Tẩy trắng da là hình thức lột nhẹ lớp da đen bên ngoài để phơi bày ra lớp da bên trong, trắng và mịn hơn. Phương pháp này cần được thực hiện một cách cẩn trọng và không nên lạm dụng vì da có thể dị ứng hoá chất. Bên cạnh đó, sau khi tẩy trắng da, bạn cần một chế độ bảo vệ nghiêm ngặt vì lớp da non rất dễ bắt nắng và bị tổn hại.</p>\n<p><img style="margin-left:auto;margin-right:auto;" src="/public/userfiles/image/thammyvien/image/Dich%20vu/17__.jpg" alt="" /></p>\n<p>Tắm trắng bằng mỹ phẩm là phương pháp sử dụng mỹ phẩm có chất làm trắng da, loại bỏ các tế bào sừng và các hắc sắc tố melanin. Tại các thẩm mỹ viện, các loại mỹ phẩm sử dụng để làm trắng da rất khác nhau, bạn cần chọn những địa chỉ tin cậy để tránh gây hại cho da.<br />Hiện nay, Thẩm mỹ viện Việt Mỹ đang áp dụng phương pháp tắm trắng bằng Ngọc trai Trân châu, là phương pháp an toàn 100% tự nhiên và mang lại hiệu quả trắng sáng một cách tự nhiên không gây kích ứng, không bắt nắng.</p>\n<p style="text-align:center;"><img src="/public/userfiles/image/thammyvien/image/Dich%20vu/18(1).jpg" alt="" width="500" height="376" /></p>\n<p>Với tinh chất từ Ngọc trai thiên nhiên hòa trộn với mật ong chúa hỗ trợ tẩy da chết nhẹ nhàng, đồng thời kiểm soát các sắc tố da, tiêu hủy tế bào sạm đen, phương pháp này không có tác dụng phụ ảnh hưởng tới sức khỏe. Đặc biệt, chỉ với 75 phút cho 1 lần chăm sóc bạn sẽ thấy ngay được kết quả là làn da trắng sáng với sắc hồng tự nhiên. Với 1 liệu trình từ 4 đến 6 lần bạn sẽ thấy vết thâm, giám nắng trên da mất đi trả lại nước da trắng sáng tự nhiên, mịn màng hồng hào không còn thiếu độ ẩm đó là nhờ sự cung cấp độ ẩm từ ngọc trai và sữa ong chúa. Sau khi xông hơi ủ trắng bằng gỗ Bách xanh giúp bạn tăng cường sức khỏe, thải hết mọi độc tố, tràn đầy năng lượng, cơ thể trở nên nhẹ nhàng.</p>', '', '', 42, '2012-09-16 10:56:03', 4, 0, '', '', 'thap-sang-lan-da-voi-ngoc-tran-chau', '', 'Hiện nay, tại các thẩm mỹ viện có rất nhiều hình thức làm trắng da: Tẩy trắng da, tắm trắng bằng mỹ phẩm và tắm trắng bằng dược thảo', '', 1, 'nguyenanphuc');
 
 -- --------------------------------------------------------
 
@@ -736,16 +712,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=218 ;
-
---
--- Dumping data for table `dos_module_supports`
---
-
-INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
-(215, 'Hoàng Long', '', '0909206808', 'hoanglong808', 2, 'yahoo', 'muayensao'),
-(216, 'Thiên Lý', '', '0908808004', 'lely1003', 0, 'yahoo', 'muayensao'),
-(217, 'Minh Hoàng', '', '0984168117', 'hoangdiaoc', 1, 'yahoo', 'muayensao');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -773,14 +740,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_video` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_video_dos_module_video_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=97 ;
-
---
--- Dumping data for table `dos_module_video`
---
-
-INSERT INTO `dos_module_video` (`record_id`, `title`, `titleen`, `postdate`, `tag`, `tagen`, `description`, `descriptionen`, `pic_thumb`, `url`, `record_order`, `hits`, `extra_field1`, `extra_field2`, `hot`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(96, 'Chế Biến Yến Sào', '', '2012-07-27 07:55:34', 'che-bien-yen-sao', '', '', '', 'che-bien-yen-sao.jpg', 'http://www.youtube.com/watch?v=wF70WUFaU7c', 1, 0, '', '', 0, 1, 83);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -803,14 +763,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_video_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_video_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=84 ;
-
---
--- Dumping data for table `dos_module_video_cat`
---
-
-INSERT INTO `dos_module_video_cat` (`cat_id`, `cat_parent_id`, `pic_thumb`, `cat_title`, `cat_titleen`, `tag`, `tagen`, `description`, `descriptionen`, `cat_order`, `cat_enable`, `dos_usernames_username`) VALUES
-(83, 0, '', 'Qui Trình Chế Biến Yến Sào', '', 'qui-trinh-che-bien-yen-sao', '', '', '', 1, 1, 'muayensao');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -830,10 +783,10 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
 --
 
 INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
-('keywords', 'Chuyên mua bán yến sào các loại,tổ yến giúp hạn chế sự phát triển của bệnh AIDS,,dinh dưỡng, khỏe mạnh và tăng trưởng', 'muayensao'),
-('description', 'Chuyên mua bán yến sào các loại,tổ yến giúp hạn chế sự phát triển của bệnh AIDS,,dinh dưỡng, khỏe mạnh và tăng trưởng', 'muayensao'),
-('title', 'Công Ty Cổ Phần Yến Quê Hương - Muayensao.com', 'muayensao'),
-('analytics', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-30151015-12'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>', 'muayensao');
+('keywords', 'AN PHÚC Khám chữa bệnh BHYT đúng tuyến, trái tuyến,Khám sức khỏe tổng quán định kỳ  Khám điều trị, chăm sóc sức khỏe tại nhà.,Tiêm phòng,Dịch vụ đưa đón bệnh nhân. Đặt biệt: Nhân viên tư vấn sức khỏe miễn phí 24/7', 'nguyenanphuc'),
+('description', 'AN PHÚC Khám chữa bệnh BHYT đúng tuyến, trái tuyến,Khám sức khỏe tổng quán định kỳ  Khám điều trị, chăm sóc sức khỏe tại nhà.,Tiêm phòng,Dịch vụ đưa đón bệnh nhân. Đặt biệt: Nhân viên tư vấn sức khỏe miễn phí 24/7', 'nguyenanphuc'),
+('title', 'An Phúc Nguyenanphuc.com', 'nguyenanphuc'),
+('analytics', '<script type="text/javascript">\r\n\r\n  var _gaq = _gaq || [];\r\n  _gaq.push([''_setAccount'', ''UA-30151015-13'']);\r\n  _gaq.push([''_trackPageview'']);\r\n\r\n  (function() {\r\n    var ga = document.createElement(''script''); ga.type = ''text/javascript''; ga.async = true;\r\n    ga.src = (''https:'' == document.location.protocol ? ''https://ssl'' : ''http://www'') + ''.google-analytics.com/ga.js'';\r\n    var s = document.getElementsByTagName(''script'')[0]; s.parentNode.insertBefore(ga, s);\r\n  })();\r\n\r\n</script>', 'nguyenanphuc');
 
 -- --------------------------------------------------------
 
@@ -956,7 +909,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 --
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
-('160512', 'Mẫu ẩm thực 160512', '2012-05-15 20:22:58', 'Chuyên bán các loại ẩm thực đồ uống các loại.');
+('050712', 'Mẫu viễn thông: 050712', '2012-07-04 22:32:23', 'Chuyên tổ chức sự kiện, truyền thông, quảng cáo event, event dalat, phan anh media, truyền thông, quảng cáo');
 
 -- --------------------------------------------------------
 
@@ -977,7 +930,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_bussiness` (
 --
 
 INSERT INTO `dos_templates_has_dos_bussiness` (`dos_templates_template`, `dos_bussiness_bussiness_id`) VALUES
-('160512', 'am-thuc-drink');
+('050712', 'cong-nghe-thong-tin-vien-thong');
 
 -- --------------------------------------------------------
 
@@ -1015,29 +968,44 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_modules` (
 --
 
 INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modules_module_id`, `dos_values_value_name`) VALUES
-('160512', 'about', 'advs_left'),
-('160512', 'about', 'list_supports'),
-('160512', 'about', 'menu_about'),
-('160512', 'contact', 'advs_left'),
-('160512', 'contact', 'list_supports'),
-('160512', 'contact', 'menu_products'),
-('160512', 'default', 'about_home'),
-('160512', 'default', 'advs_left'),
-('160512', 'default', 'list_supports'),
-('160512', 'default', 'menu_products'),
-('160512', 'default', 'products_new'),
-('160512', 'news', 'advs_left'),
-('160512', 'news', 'list_supports'),
-('160512', 'news', 'menu_news'),
-('160512', 'products', 'advs_left'),
-('160512', 'products', 'list_supports'),
-('160512', 'products', 'menu_products'),
-('160512', 'services', 'advs_left'),
-('160512', 'services', 'list_supports'),
-('160512', 'services', 'menu_services'),
-('160512', 'video', 'advs_left'),
-('160512', 'video', 'list_supports'),
-('160512', 'video', 'menu_video');
+('050712', 'about', 'advs_left'),
+('050712', 'about', 'advs_right'),
+('050712', 'about', 'list_supports'),
+('050712', 'about', 'menu_about'),
+('050712', 'about', 'news_new'),
+('050712', 'contact', 'advs_left'),
+('050712', 'contact', 'advs_right'),
+('050712', 'contact', 'list_supports'),
+('050712', 'contact', 'menu_services'),
+('050712', 'contact', 'news_new'),
+('050712', 'default', 'about_home'),
+('050712', 'default', 'advs_center'),
+('050712', 'default', 'advs_left'),
+('050712', 'default', 'advs_right'),
+('050712', 'default', 'list_supports'),
+('050712', 'default', 'menu_services'),
+('050712', 'default', 'news_new'),
+('050712', 'default', 'video_hot'),
+('050712', 'news', 'advs_left'),
+('050712', 'news', 'advs_right'),
+('050712', 'news', 'list_supports'),
+('050712', 'news', 'menu_news'),
+('050712', 'news', 'news_hot'),
+('050712', 'products', 'advs_left'),
+('050712', 'products', 'advs_right'),
+('050712', 'products', 'list_supports'),
+('050712', 'products', 'menu_products'),
+('050712', 'products', 'news_new'),
+('050712', 'services', 'advs_left'),
+('050712', 'services', 'advs_right'),
+('050712', 'services', 'list_supports'),
+('050712', 'services', 'menu_services'),
+('050712', 'services', 'news_new'),
+('050712', 'video', 'advs_left'),
+('050712', 'video', 'advs_right'),
+('050712', 'video', 'list_supports'),
+('050712', 'video', 'menu_video'),
+('050712', 'video', 'video_hot');
 
 -- --------------------------------------------------------
 
@@ -1075,7 +1043,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 --
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `agent_sale`, `agent_tech`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('muayensao', 'minhhoangpkd@gmail.com', '25f9e794323b453885f5181f1b624d0b', '2012-07-13 06:39:16', 'Nguyễn Minh Hoàng', '0909802368', 'Công ty CP TM - DV BĐS Khang Danh', 'user', 'vi', '', '2012-10-10 16:00:00', 0, '20122012', '', 1, '160512', 30, 'am-thuc-drink');
+('nguyenanphuc', 'info@nguyenanphuc.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-09-16 10:55:55', '', '', '', 'user', 'vi', '', '2012-12-14 16:00:00', 0, '87522003', '', 1, '050712', 19, 'tham-my-vien');
 
 -- --------------------------------------------------------
 
@@ -1113,13 +1081,11 @@ CREATE TABLE IF NOT EXISTS `dos_user_langs` (
 --
 
 INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_username`) VALUES
-('address1', 'R4 - 16 Đường Hưng Gia 3 - Phú Mỹ Hưng Q.7 Tp.HCM', '', 'muayensao'),
-('address2', '', '', 'muayensao'),
-('company_name', '', '', 'muayensao'),
-('company_name_footer', 'Công Ty Cổ Phần Yến Quê Hương', '', 'muayensao'),
-('company_phone', '0916 368 001 (Mr Hoàng)', '', 'muayensao'),
-('copyright', 'Copyright © 2012 by Muayensao.com', '', 'muayensao'),
-('services', 'Chế biết', '', 'muayensao');
+('addcart', '', '', 'nguyenanphuc'),
+('company_phone', '', '', 'nguyenanphuc'),
+('contact', '', '', 'nguyenanphuc'),
+('news', 'CẨM NANG', '', 'nguyenanphuc'),
+('products', 'THƯ VIỆN ẢNH', '', 'nguyenanphuc');
 
 -- --------------------------------------------------------
 
