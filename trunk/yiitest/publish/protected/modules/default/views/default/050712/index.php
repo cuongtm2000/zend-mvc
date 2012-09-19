@@ -25,6 +25,20 @@
 	</ul> <!--End all product-->
 <?php endif; ?>
 
+<h2 class="title-right"><span><?php echo $this->lang['products'] ?></span></h2>
+<ul class="frame-leftcontent all-product">
+<?php foreach($list_productsCat as $value):?>
+	<?php if($value['cat_parent_id']==0):?>
+		<li class="product">
+			<div class="product-img">	
+				<a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['tag'.LANG]?>" title="<?php echo $value['cat_title'.LANG]?>" ><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/productsCat/<?php echo $value['pic_full'] ?>" alt="<?php echo $value['cat_title'.LANG]?>" /></a>
+			</div>
+			<h3 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value['tag'.LANG]?>" title="<?php echo $value['cat_title'.LANG]?>"><?php echo $value['cat_title'.LANG]?></a></h3>
+		</li>
+	<?php endif?>
+<?php endforeach?>
+</ul>
+
 <?php if(isset($this->function['products_new']) && $this->function['products_new']):?>
 <h2 class="title-right"><span><?php echo $this->lang['products'] . ' ' . strtolower($this->lang['new']) ?></span></h2>
 <ul class="frame-leftcontent all-product">
