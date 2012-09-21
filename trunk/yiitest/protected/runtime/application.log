@@ -276,3 +276,387 @@ Stack trace:
 REQUEST_URI=/public/userfiles/image/vihoang/image/hinh-5.jpg
 HTTP_REFERER=http://dos.vn/publish/gioi-thieu
 ---
+2012/09/20 17:26:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/qbs5k4oz.pfl.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/qbs5k4oz.pfl.jpg
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:26:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/Hung-dien-newtown-project(1).png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/Hung-dien-newtown-project(1).png
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:26:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/0120-PicBox1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/0120-PicBox1.jpg
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:26:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/hinh-6.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/hinh-6.jpg
+HTTP_REFERER=http://dos.vn/publish/gioi-thieu
+---
+2012/09/20 17:26:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/hinh-5.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/hinh-5.jpg
+HTTP_REFERER=http://dos.vn/publish/gioi-thieu
+---
+2012/09/20 17:26:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/Hung-dien-newtown-project(1).png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/Hung-dien-newtown-project(1).png
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:26:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/qbs5k4oz.pfl.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/qbs5k4oz.pfl.jpg
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:26:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/0120-PicBox1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/0120-PicBox1.jpg
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:28:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/20 17:28:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/20 17:28:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/20 17:28:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/20 17:28:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/20 17:28:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/20 17:28:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/20 17:28:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/20 17:28:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/20 17:28:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/qbs5k4oz.pfl.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/qbs5k4oz.pfl.jpg
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:28:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/Hung-dien-newtown-project(1).png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/Hung-dien-newtown-project(1).png
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:28:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/0120-PicBox1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/0120-PicBox1.jpg
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:28:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/hinh-5.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/hinh-5.jpg
+HTTP_REFERER=http://dos.vn/publish/gioi-thieu
+---
+2012/09/20 17:28:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/hinh-6.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/hinh-6.jpg
+HTTP_REFERER=http://dos.vn/publish/gioi-thieu
+---
+2012/09/20 17:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/qbs5k4oz.pfl.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/qbs5k4oz.pfl.jpg
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/0120-PicBox1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/0120-PicBox1.jpg
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/Hung-dien-newtown-project(1).png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/Hung-dien-newtown-project(1).png
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:30:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/qbs5k4oz.pfl.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/qbs5k4oz.pfl.jpg
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:30:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/0120-PicBox1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/0120-PicBox1.jpg
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:30:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/Hung-dien-newtown-project(1).png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/Hung-dien-newtown-project(1).png
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:30:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/qbs5k4oz.pfl.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/qbs5k4oz.pfl.jpg
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:30:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/0120-PicBox1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/0120-PicBox1.jpg
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:30:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/Hung-dien-newtown-project(1).png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/Hung-dien-newtown-project(1).png
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:30:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/20 17:30:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/hinh-6.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/hinh-6.jpg
+HTTP_REFERER=http://dos.vn/publish/gioi-thieu
+---
+2012/09/20 17:30:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/hinh-5.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/hinh-5.jpg
+HTTP_REFERER=http://dos.vn/publish/gioi-thieu
+---
+2012/09/20 17:31:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/0120-PicBox1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/0120-PicBox1.jpg
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:31:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/Hung-dien-newtown-project(1).png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/Hung-dien-newtown-project(1).png
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:31:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/qbs5k4oz.pfl.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/qbs5k4oz.pfl.jpg
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:31:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/hinh-5.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/hinh-5.jpg
+HTTP_REFERER=http://dos.vn/publish/gioi-thieu
+---
+2012/09/20 17:31:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/hinh-6.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/hinh-6.jpg
+HTTP_REFERER=http://dos.vn/publish/gioi-thieu
+---
+2012/09/20 17:31:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/20 17:31:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/20 17:31:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/Hung-dien-newtown-project(1).png".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/Hung-dien-newtown-project(1).png
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:31:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/qbs5k4oz.pfl.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/qbs5k4oz.pfl.jpg
+HTTP_REFERER=http://dos.vn/publish/
+---
+2012/09/20 17:31:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vihoang/image/0120-PicBox1.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vihoang/image/0120-PicBox1.jpg
+HTTP_REFERER=http://dos.vn/publish/
+---
