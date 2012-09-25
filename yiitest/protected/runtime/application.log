@@ -660,3 +660,110 @@ Stack trace:
 REQUEST_URI=/public/userfiles/image/vihoang/image/0120-PicBox1.jpg
 HTTP_REFERER=http://dos.vn/publish/
 ---
+2012/09/24 20:53:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/thaisonglass/image/vpchinhanhbd.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/thaisonglass/image/vpchinhanhbd.jpg
+HTTP_REFERER=http://dos.vn/publish/gioi-thieu
+---
+2012/09/24 20:57:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/thaisonglass/image/13.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/thaisonglass/image/13.jpg
+HTTP_REFERER=http://dos.vn/publish/san-pham/kinh/kinh-an-toan-cuong-luc-phang.html
+---
+2012/09/24 20:58:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/thaisonglass/image/13.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/thaisonglass/image/13.jpg
+HTTP_REFERER=http://dos.vn/publish/san-pham/kinh/kinh-an-toan-cuong-luc-phang.html
+---
+2012/09/24 21:00:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/thaisonglass/image/13.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/thaisonglass/image/13.jpg
+HTTP_REFERER=http://dos.vn/publish/san-pham/kinh/kinh-an-toan-cuong-luc-phang.html
+---
+2012/09/24 21:00:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/thaisonglass/image/13.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/thaisonglass/image/13.jpg
+HTTP_REFERER=http://dos.vn/publish/san-pham/kinh/kinh-an-toan-cuong-luc-phang.html
+---
+2012/09/24 21:05:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/thaisonglass/image/13.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/thaisonglass/image/13.jpg
+HTTP_REFERER=http://dos.vn/publish/san-pham/kinh/kinh-an-toan-cuong-luc-phang.html
+---
+2012/09/24 21:09:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/thaisonglass/image/vpchinhanhbd.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/thaisonglass/image/vpchinhanhbd.jpg
+HTTP_REFERER=http://dos.vn/publish/gioi-thieu
+---
+2012/09/24 21:09:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/hosontu/image/hinh_anh/sac-mau-ngoi-nha-theo-phong-thuy.jpeg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/hosontu/image/hinh_anh/sac-mau-ngoi-nha-theo-phong-thuy.jpeg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/noi-that-phong-thuy/chon-mau-sac-hop-phong-thuy-de-dem-van-may-den-cho-ngoi-nha-cua-ban.html
+---
+2012/09/24 21:10:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/thaisonglass/image/13.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/thaisonglass/image/13.jpg
+HTTP_REFERER=http://dos.vn/publish/san-pham/kinh/kinh-an-toan-cuong-luc-phang.html
+---
+2012/09/24 21:14:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/24 21:40:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/hosontu/image/hinh_anh/sac-mau-ngoi-nha-theo-phong-thuy.jpeg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/hosontu/image/hinh_anh/sac-mau-ngoi-nha-theo-phong-thuy.jpeg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/noi-that-phong-thuy/chon-mau-sac-hop-phong-thuy-de-dem-van-may-den-cho-ngoi-nha-cua-ban.html
+---
+2012/09/24 21:40:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/hosontu/image/hinh_anh/sac-mau-ngoi-nha-theo-phong-thuy.jpeg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/hosontu/image/hinh_anh/sac-mau-ngoi-nha-theo-phong-thuy.jpeg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/noi-that-phong-thuy/chon-mau-sac-hop-phong-thuy-de-dem-van-may-den-cho-ngoi-nha-cua-ban.html
+---
