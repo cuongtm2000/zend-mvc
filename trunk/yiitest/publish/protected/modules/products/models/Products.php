@@ -301,7 +301,7 @@ class Products extends CActiveRecord {
 		$criteria->order = 'record_order DESC, postdate DESC';
 		$criteria->condition = 'record_id NOT IN (:id) AND dos_module_item_cat_cat_id=:cid AND enable = 1';
 		$criteria->params = array(':id' => $id, ':cid' => $cid);
-		$criteria->limit = 2;
+		$criteria->limit = Yii::app()->controller->configs['products_num_paging_other'];
 
 		return $this::model()->findAll($criteria);
 	}

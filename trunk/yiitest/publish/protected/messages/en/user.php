@@ -47,4 +47,5 @@ return array(
     'prev' => 'Prev',
     'next' => 'Next',
     'last' => 'Last',
+	'goback' => 'Go back',
 );

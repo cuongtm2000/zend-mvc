@@ -47,4 +47,6 @@ return array(
     'prev' => 'Lùi',
     'next' => 'Tiếp',
     'last' => 'Cuối cùng',
+    'goback' => 'Trở lại',
+	
 );
