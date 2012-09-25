@@ -767,3 +767,48 @@ Stack trace:
 REQUEST_URI=/public/userfiles/image/hosontu/image/hinh_anh/sac-mau-ngoi-nha-theo-phong-thuy.jpeg
 HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/noi-that-phong-thuy/chon-mau-sac-hop-phong-thuy-de-dem-van-may-den-cho-ngoi-nha-cua-ban.html
 ---
+2012/09/24 22:10:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "anhvu_version2/images/banners".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('anhvu_version2/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/anhvu_version2/images/banners/
+HTTP_REFERER=http://anhvumobile.vn/sanpham-iStorevn-971/iPhone-4S-16GB-%28Quoc-te%29.html
+---
+2012/09/24 22:11:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "anhvu_version2/images/banners".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('anhvu_version2/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/anhvu_version2/images/banners/
+HTTP_REFERER=http://anhvumobile.vn/home_intro
+---
+2012/09/24 22:11:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "anhvu_version2/images/banners".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('anhvu_version2/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/anhvu_version2/images/banners/
+HTTP_REFERER=http://anhvumobile.vn/home_index
+---
+2012/09/24 22:11:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "anhvu_version2/images/banners".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('anhvu_version2/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/anhvu_version2/images/banners/
+HTTP_REFERER=http://anhvumobile.vn/event-7.html
+---
+2012/09/24 22:11:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "anhvu_version2/images/banners".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('anhvu_version2/...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/anhvu_version2/images/banners/
+HTTP_REFERER=http://anhvumobile.vn/contact.html
+---
