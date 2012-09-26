@@ -812,3 +812,143 @@ Stack trace:
 REQUEST_URI=/anhvu_version2/images/banners/
 HTTP_REFERER=http://anhvumobile.vn/contact.html
 ---
+2012/09/25 14:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vhp/image/nss_1314782993.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vhp/image/nss_1314782993.jpg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/tin-tuc/tranh-dong-ho.html
+---
+2012/09/25 14:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vhp/image/1298_1306402103_clover.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vhp/image/1298_1306402103_clover.jpg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/tin-tuc/tranh-dong-ho.html
+---
+2012/09/25 14:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vhp/image/1298_1306402308_clover.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vhp/image/1298_1306402308_clover.jpg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/tin-tuc/tranh-dong-ho.html
+---
+2012/09/25 14:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vhp/image/1298_1306402228_clover.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vhp/image/1298_1306402228_clover.jpg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/tin-tuc/tranh-dong-ho.html
+---
+2012/09/25 14:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vhp/image/1298_1306402347_clover.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vhp/image/1298_1306402347_clover.jpg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/tin-tuc/tranh-dong-ho.html
+---
+2012/09/25 14:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vhp/image/1298_1306402139_clover.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vhp/image/1298_1306402139_clover.jpg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/tin-tuc/tranh-dong-ho.html
+---
+2012/09/25 14:39:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/25 14:40:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/25 15:05:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/09/25 15:16:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "error".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('error')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/error
+HTTP_REFERER=http://vangngocphat.dos.vn/lien-he
+---
+2012/09/25 15:16:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "error".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('error')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/error
+HTTP_REFERER=http://vangngocphat.dos.vn/video
+---
+2012/09/25 15:16:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "error".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('error')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/error
+HTTP_REFERER=http://vangngocphat.dos.vn/lien-he
+---
+2012/09/25 15:16:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "error".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('error')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/error
+HTTP_REFERER=http://vangngocphat.dos.vn/video
+---
+2012/09/25 15:16:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "error".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('error')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/error
+HTTP_REFERER=http://vangngocphat.dos.vn/tin-tuc-su-kien
+---
+2012/09/25 15:16:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "error".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('error')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/error
+HTTP_REFERER=http://vangngocphat.dos.vn/dich-vu
+---
+2012/09/25 15:16:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "error".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('error')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/error
+---

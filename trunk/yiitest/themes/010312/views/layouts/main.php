@@ -13,6 +13,12 @@
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" />
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.7.1.min.js"></script> 
 
+<?php if(isset($this->function['products_hot']) && $this->function['products_hot']):?>
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/simplyscroll.verticall.css" />
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.simplyscroll.vertical.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/verticall-config.js"></script>
+<?php endif;?>
+
 <title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->title) ? ' - '.CHtml::encode($this->title) : '' ?></title>
 <meta name="keywords" content="<?php echo $this->keywords ?>" />
 <meta name="description" content="<?php echo $this->description ?>" />
@@ -73,8 +79,7 @@
 		<?php else:?>
 			<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner.jpg" alt="Banner" />
 		<?php endif; ?>
-	</div><!--End banner-->
-	
+	</div>
 	<div id="content">
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'homeLink' => CHtml::link($this->lang['default'], (LANGURL) ? LANGURL : Yii::app()->homeUrl),
@@ -84,7 +89,7 @@
 		)); ?> <!-- breadcrumbs -->
 		<div id="left-content">
 			<?php if(isset($this->function['menu_about']) && ($this->function['menu_about'])):?>
-			<h1 class="title-box"><span><?php echo $this->lang['about'] ?></span></h1>
+			<h4 class="title-box"><span><?php echo $this->lang['about'] ?></span></h4>
 			<ul class="sub-cat">
 				<?php foreach($this->function['menu_about'] as $value): ?>
 				<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'about.link')?>/<?php echo $value['tag'.LANG]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
@@ -93,7 +98,7 @@
 			<?php endif;?>
 
 			<?php if(isset($this->function['menu_services']) && ($this->function['menu_services'])):?>
-			<h1 class="title-box"><span><?php echo $this->lang['services'] ?></span></h1>
+			<h4 class="title-box"><span><?php echo $this->lang['services'] ?></span></h4>
 			<ul class="sub-cat">
 				<?php foreach($this->function['menu_services'] as $value): ?>
 				<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'services.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']]?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
@@ -102,28 +107,40 @@
 			<?php endif;?>
 
 			<?php if(isset($this->function['menu_news']) && ($this->function['menu_news'])):?>
-			<h1 class="title-box"><span><?php echo CHtml::encode($this->lang['news']) ?></span></h1>
+			<h4 class="title-box"><span><?php echo CHtml::encode($this->lang['news']) ?></span></h4>
 			<ul class="sub-cat">
 				<?php Common::menuMultiLevel($this->function['menu_news'], 'NewsCat', Yii::t('user', 'news.link')); ?>
 			</ul>
 			<?php endif; ?>
 
 			<?php if(isset($this->function['menu_video']) && ($this->function['menu_video'])):?>
-			<h1 class="title-box"><span><?php echo $this->lang['video'] ?></span></h1>
+			<h4 class="title-box"><span><?php echo $this->lang['video'] ?></span></h4>
 			<ul class="sub-cat">
 				<?php Common::menuMultiLevel($this->function['menu_video'], 'VideoCat', Yii::t('user', 'video.link')); ?>
 			</ul>
 			<?php endif; ?>
 
 			<?php if(isset($this->function['menu_products']) && ($this->function['menu_products'])):?>
-			<h1 class="title-box"><span><?php echo $this->lang['products'] ?></span></h1>
+			<h4 class="title-box"><span><?php echo $this->lang['products'] ?></span></h4>
 			<ul class="sub-cat">
 				<?php Common::menuMultiLevel($this->function['menu_products'], 'ProductsCat', Yii::t('user', 'products.link')); ?>
 			</ul>
 			<?php endif;?>
-
+			<?php if(isset($this->function['products_hot']) && $this->function['products_hot']):?>
+			<h4 class="title-box"><span><?php echo $this->lang['products'] . ' ' . strtolower($this->lang['hot']) ?></span></h4>
+			<ul id="scroller" class="typical-product">
+				<?php foreach($this->function['products_hot'] as $value): ?>
+				<?php if($value['pic_thumb']): ?>
+						<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value->ProductsCat->tag ?>/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'.Yii::app()->session['lang']] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.Yii::app()->session['lang']] ?>" /></a></li>
+					<?php else: ?>
+						<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value->ProductsCat->tag ?>/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'.Yii::app()->session['lang']] ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt="<?php echo $value['title'.Yii::app()->session['lang']] ?>" /></a></li>
+					<?php endif; ?>
+				<?php endforeach; ?>
+			</ul>
+			<?php endif;?>
+			
 			<?php if(isset($this->function['list_supports']) && ($this->function['list_supports'])):?>
-			<h1 class="title-box"><span><?php echo $this->lang['supports'] ?></span></h1>
+			<h4 class="title-box"><span><?php echo $this->lang['supports'] ?></span></h4>
 			<ul class="support">
 				<?php foreach($this->function['list_supports'] as $value): ?>
 					<?php if($value['support_type']=='yahoo'): ?>
@@ -143,7 +160,7 @@
 			</ul>
 			<?php endif; ?>
 
-			<h1 class="title-box"><span><?php echo $this->lang['counter'] ?></span></h1>
+			<h4 class="title-box"><span><?php echo $this->lang['counter'] ?></span></h4>
 			<ul class="statistics">
 				<li><?php echo Yii::t('user', 'online')?>: <?php echo Yii::app()->counter->getOnline(); ?></li>
 				<li><?php echo Yii::t('user', 'today')?>: <?php echo Yii::app()->counter->getToday(); ?></li>
@@ -151,7 +168,7 @@
 				<li><?php echo Yii::t('user', 'total')?>: <?php echo Yii::app()->counter->getTotal(); ?></li>
 			</ul>
 			<?php if(isset($this->function['advs_left']) && ($this->function['advs_left'])):?>
-			<h1 class="title-box"><span><?php echo $this->lang['advs'] ?></span></h1>
+			<h4 class="title-box"><span><?php echo $this->lang['advs'] ?></span></h4>
 			<ul class="bg-adv">
 				<?php foreach($this->function['advs_left'] as $value): ?>
 				<li>
@@ -166,7 +183,7 @@
 		</div><!--End right content-->
 		<div id="colum3">
 			<?php if(isset($this->function['video_hot']) && ($this->function['video_hot'])):?>
-			<h1 class="title-box"><span><?php echo $this->lang['video'] . ' ' . strtolower($this->lang['hot'])?></span></h1>
+			<h4 class="title-box"><span><?php echo $this->lang['video'] . ' ' . strtolower($this->lang['hot'])?></span></h4>
 			<div class="video">
 				<a href="<?php echo CHtml::encode($this->function['video_hot']['url']) ?>" rel="prettyPhoto" title="<?php echo $this->function['video_hot']['title'.LANG] ?>">
 					<img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/video/<?php echo $this->function['video_hot']['pic_thumb'] ?>" alt="<?php echo $this->function['video_hot']['title'.LANG] ?>"/>
@@ -176,7 +193,7 @@
 			<?php endif?>
 
 			<?php if(isset($this->function['news_new']) && ($this->function['news_new'])):?>
-			<h1 class="title-box"><span><?php echo CHtml::encode($this->lang['news']) . ' ' . strtolower($this->lang['new'])?></span></h1>
+			<h4 class="title-box"><span><?php echo CHtml::encode($this->lang['news']) . ' ' . strtolower($this->lang['new'])?></span></h4>
 			<ul class="sub-new">
 				<?php foreach($this->function['news_new'] as $value):?>
 				<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
@@ -185,7 +202,7 @@
 			<?php endif?>
 
 			<?php if(isset($this->function['news_hot']) && ($this->function['news_hot'])):?>
-			<h1 class="title-box"><span><?php echo CHtml::encode($this->lang['news']) . ' ' . strtolower($this->lang['hot'])?></span></h1>
+			<h4 class="title-box"><span><?php echo CHtml::encode($this->lang['news']) . ' ' . strtolower($this->lang['hot'])?></span></h4>
 			<ul class="sub-new">
 				<?php foreach($this->function['news_hot'] as $value):?>
 				<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'news.link')?>/<?php echo $value['NewsCat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></li>
@@ -193,21 +210,8 @@
 			</ul>
 			<?php endif?>
 
-			<?php if(isset($this->function['products_hot']) && $this->function['products_hot']):?>
-			<h1 class="title-box"><span><?php echo $this->lang['products'] . ' ' . strtolower($this->lang['hot']) ?></span></h1>
-			<ul id="scroller" class="typical-product">
-				<?php foreach($this->function['products_hot'] as $value): ?>
-				<?php if($value['pic_thumb']): ?>
-						<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value->ProductsCat->tag ?>/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'.Yii::app()->session['lang']] ?>"><img src="<?php echo Yii::app()->baseUrl.USERFILES ?>/products/<?php echo $value['pic_thumb'] ?>" alt="<?php echo $value['title'.Yii::app()->session['lang']] ?>" /></a></li>
-					<?php else: ?>
-						<li><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', 'products.link')?>/<?php echo $value->ProductsCat->tag ?>/<?php echo $value['tag'] ?>.html" title="<?php echo $value['title'.Yii::app()->session['lang']] ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt="<?php echo $value['title'.Yii::app()->session['lang']] ?>" /></a></li>
-					<?php endif; ?>
-				<?php endforeach; ?>
-			</ul>
-			<?php endif;?>
-
 			<?php if(isset($this->function['advs_right']) && ($this->function['advs_right'])):?>
-			<h1 class="title-box"><span><?php echo $this->lang['advs'] ?></span></h1>
+			<h4 class="title-box"><span><?php echo $this->lang['advs'] ?></span></h4>
 			<ul class="bg-adv">
 				<?php foreach($this->function['advs_right'] as $value): ?>
 				<li>
