@@ -1,0 +1,7 @@
+.sub-cat li{padding:3px 0}
+.sub-cat li a{display:inherit}
+.sub-cat li ul li{padding:0 0 0 0}
+.product{float:left;margin:0 6px 10px 5px}
+#footer{padding:5px 10px}
+.add-to-cart{padding:0 0 0 5px;height:25px}
+
