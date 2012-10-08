@@ -1576,3 +1576,839 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2012/10/02 08:14:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 08:15:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 08:34:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nghethuatsonthuy/image/products/200%20tan%20xuan.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/nghethuatsonthuy/image/products/200%2520tan%2520xuan.jpg
+HTTP_REFERER=http://dos.vn/publish/san-pham/hon-non-bo/ms-nb283.html
+---
+2012/10/02 08:34:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/nghethuatsonthuy/image/products/1286450743_Tcnb%20(7).jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/nghethuatsonthuy/image/products/1286450743_Tcnb%2520(7).jpg
+HTTP_REFERER=http://dos.vn/publish/san-pham/hon-non-bo/ms-nb282.html
+---
+2012/10/02 09:17:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 09:49:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 09:50:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 09:51:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 09:51:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 09:52:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 09:53:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 09:57:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 09:58:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 09:59:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:00:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:01:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:02:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:02:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:04:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:04:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:05:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:05:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:05:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:08:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:08:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:09:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:09:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:09:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:09:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:09:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:10:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:10:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:10:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:10:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:10:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:10:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:10:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:17:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:18:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:18:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:19:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:19:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:20:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/02 10:21:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/04 03:38:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vandongtam/image/136-cua1_4c946.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vandongtam/image/136-cua1_4c946.jpg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/kien-thuc-phong-thuy/luu-y-khi-thiet-ke-cua-chinh-va-cua-so.html
+---
+2012/10/04 03:38:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/userfiles/image/vandongtam/image/136-cua1_4c946.jpg".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('public/userfile...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/userfiles/image/vandongtam/image/136-cua1_4c946.jpg
+HTTP_REFERER=http://dos.vn/publish/tin-tuc-su-kien/kien-thuc-phong-thuy/luu-y-khi-thiet-ke-cua-chinh-va-cua-so.html
+---
+2012/10/04 03:55:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 02:02:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 03:35:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 03:35:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 03:35:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 03:35:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 03:35:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 03:36:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 03:36:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 03:36:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 03:36:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 03:37:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 03:37:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 04:20:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 04:20:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 04:20:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 04:20:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:01:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:12:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:13:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:13:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:13:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:14:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:14:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:15:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:16:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:17:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:17:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:17:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:18:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:18:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:20:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:21:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:21:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:21:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:51:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:54:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:54:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:56:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 05:56:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 06:10:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 06:12:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 06:17:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 06:19:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 06:48:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 06:48:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 06:50:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 06:50:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 07:07:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 07:11:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 07:21:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 07:40:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 07:41:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/05 07:41:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/08 02:55:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/08 03:06:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/08 03:07:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\svn\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---

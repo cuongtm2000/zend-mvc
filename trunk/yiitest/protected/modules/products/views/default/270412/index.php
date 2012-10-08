@@ -1,6 +1,6 @@
 <?php $this->breadcrumbs=array($this->lang[$this->module->id]);?>
 
-<h1 class="title-right"><span><?php echo $this->lang[$this->module->id]?></span></h1>
+<h2 class="title-right"><span><?php echo $this->lang[$this->module->id]?></span></h2>
 <ul class="all-product">
 <?php foreach($items as $value): ?>
 	<?php if($value['cat_parent_id'] == 0):?>
@@ -10,11 +10,14 @@
 		<?php else :?>
 			<div class="product-img"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', $this->module->id.'.link')?>/<?php echo $value['tag'] ?>" title="<?php echo $value['cat_title'.LANG] ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/no-images.jpg" alt="<?php echo $value['cat_title'.LANG] ?>" /></a></div>
 		<?php endif; ?>
-		<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', $this->module->id.'.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']] ?>" title='<?php echo $value['cat_title'.LANG] ?>'><strong><?php echo $value['cat_title'.LANG] ?></strong></a></h2>
+		<h3 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl.LANGURL ?>/<?php echo Yii::t('user', $this->module->id.'.link')?>/<?php echo $value['tag'.Yii::app()->session['lang']] ?>" title='<?php echo $value['cat_title'.LANG] ?>'><strong><?php echo $value['cat_title'.LANG] ?></strong></a></h3>
 	</li>
 	<?php endif; ?>
 <?php endforeach; ?>	
 </ul> <!--End frame all product-->
+<script type="text/javascript">
+	$(".all-product li:nth-child(4n)").addClass("last-product");
+</script>
 
 
 
