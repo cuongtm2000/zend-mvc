@@ -2,9 +2,9 @@
 <?php $this->pageTitle = $item['title'.LANG] . ' - ' . $item[ucfirst($this->module->id).'Cat']['cat_title' . LANG] . ' - ' . $this->lang[$this->module->id]; $this->description = $item['description'.LANG];?>
 
 <h2 class="title-right"><span><?php echo $item['title'.LANG] ?></span></h2>
-<div class="frame-pro-info">
-	<?php if($item['pic_full']): ?>
+<div class="frame-pro-info">	
 	<div class="row-info">
+		<?php if($item['pic_full']): ?>
 		<div id="pb-right-column">
 			<!-- product img-->
 			<div id="image-block">
@@ -31,19 +31,22 @@
 				</div><!--END Slide show Jquery Lightbox-->
 			</div>
 		</div>
+		<?php endif; ?>
 		<div class="right-info">
 			<p class="price-info"><strong>Giá: <span><?php echo (is_numeric($item['unit'])) ? number_format($item['unit'], 0, '', '.') . ' VND' : (($item['unit']) ? $item['unit'] : $this->lang['contact']) ?></span></strong></p>
-			<h4 class="title-info"><span><?php echo $this->lang['description'] . ' ' . strtolower($this->lang[$this->module->id]) ?></span></h4>
-			<?php echo $item['preview'.LANG] ?>
+			<?php if($item['preview'.LANG]) :?>
+				<h4 class="title-info"><span><?php echo $this->lang['description'] . ' ' . strtolower($this->lang[$this->module->id]) ?></span></h4>
+				<?php echo $item['preview'.LANG] ?>
+			<?php endif;?>	
 		</div> <div class="clear"></div>
 	</div>
-	<?php endif; ?>
+	
 	<h4 class="title-info"><span><?php echo $this->lang['detail'] . ' ' . strtolower($this->lang[$this->module->id])?></span></h4>
 	<?php echo $item['content'.LANG] ?>
 </div> <!--End frame tent right-->
 
 <?php if($item_other):?>
-<h3 class="title-right"><span><?php echo $this->lang[$this->module->id]?> <?php echo strtolower($this->lang['other'])?></span></h3>
+<h2 class="title-right"><span><?php echo $this->lang[$this->module->id]?> <?php echo strtolower($this->lang['other'])?></span></h2>
 <ul class="all-product">
 	<?php foreach($item_other as $value):?>
 	<li class="product">
@@ -56,7 +59,7 @@
 			<?php endif?>
 			</a>
 		</div>
-		<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $value[ucfirst($this->module->id).'Cat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></h2>
+		<h3 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $value[ucfirst($this->module->id).'Cat']['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title'.LANG]?>"><?php echo $value['title'.LANG]?></a></h3>
 	</li>
 	<?php endforeach?>
 </ul>
