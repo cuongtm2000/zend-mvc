@@ -1,6 +1,6 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id] => Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id.'.link'), $info_cat['cat_title'.LANG]); ?>
 <?php $this->pageTitle = $info_cat['cat_title'.LANG]; $this->description = $info_cat['description'.LANG];?>
-<h1 class="title-right"><span><?php echo $info_cat['cat_title'.LANG] ?></span></h1>
+<h2 class="title-right"><span><?php echo $info_cat['cat_title'.LANG] ?></span></h2>
 <?php if($list_items['models']): ?>
 	<ul class="all-product">
 	<?php foreach($list_items['models'] as $value): ?>
@@ -15,7 +15,7 @@
 						<?php endif?>
 					</a>
 				</div>
-				<h2 class="title-pro"><a href="<?php echo CHtml::encode($value['url'])?>" rel="prettyPhoto" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h2>
+				<h3 class="title-pro"><a href="<?php echo CHtml::encode($value['url'])?>" rel="prettyPhoto" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h3>
 			</div>
 		</li>
 	<?php endforeach?>

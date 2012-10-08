@@ -1,0 +1,13 @@
+
+Database:	nghethuats_data
+Host:	localhost
+Username:	nghethuats_user
+Password:	vxp2bGZ0
+
+
+
+
+Database:	nghethuatd_data
+Host:	localhost
+Username:	nghethuatd_user
+Password:	cr0tqJKs

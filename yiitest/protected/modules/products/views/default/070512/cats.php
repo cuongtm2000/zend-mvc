@@ -3,7 +3,7 @@
 
 <!-- for cat -->
 <?php if($list_sub_cats): ?>
-<h1 class="title-right"><span><?php echo $info_cat['cat_title'.LANG] ?></span></h1>
+<h2 class="title-right"><span><?php echo $info_cat['cat_title'.LANG] ?></span></h2>
 <ul class="all-product">
     <?php foreach($list_sub_cats as $value): ?>
         <li class="product">
@@ -23,7 +23,7 @@
 <div class="clear"></div>
 <?php endif; ?>
 
-<h1 class="title-right"><span><?php echo $info_cat['cat_title'.LANG] ?></span></h1>
+<h2 class="title-right"><span><?php echo $info_cat['cat_title'.LANG] ?></span></h2>
 <?php if($list_items['models']): ?>
     <ul class="all-product">
         <?php foreach($list_items['models'] as $value): ?>
@@ -39,7 +39,6 @@
 				</div>
 				<p class="price"><?php echo Common::getPrice($value['unit']) ?></p>
 				<h2 class="title-pro"><a href="<?php echo Yii::app()->request->baseUrl . LANGURL . '/' . Yii::t('user', $this->module->id . '.link') . '/' . $info_cat['tag'.LANG] ?>/<?php echo $value['tag'.LANG] ?>.html" title="<?php echo $value['title' . LANG] ?>"><?php echo $value['title' . LANG] ?></a></h2>
-
 		  </li>
         <?php endforeach; ?>
     </ul><!--End All products-->

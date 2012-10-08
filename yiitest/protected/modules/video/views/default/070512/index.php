@@ -1,5 +1,5 @@
 <?php $this->breadcrumbs=array($this->lang[$this->module->id]);?>
-<h1 class="title-right"><span><?php echo $this->lang[$this->module->id]?></span></h1>
+<h2 class="title-right"><span><?php echo $this->lang[$this->module->id]?></span></h2>
 <?php if($listItemIndex['models']):?>
 	<ul class="all-product">
 	<?php foreach($listItemIndex['models'] as $value):?>
@@ -13,7 +13,7 @@
 						<?php endif?>
 					</a>
 				</div>
-				<h2 class="title-pro"><a href="<?php echo CHtml::encode($value['url'])?>" rel="prettyPhoto" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h2>
+				<h3 class="title-pro"><a href="<?php echo CHtml::encode($value['url'])?>" rel="prettyPhoto" title="<?php echo $value['title'.LANG] ?>"><?php echo $value['title'.LANG] ?></a></h3>
 		</li>
 	<?php endforeach?>
 <script type="text/javascript">$(document).ready(function () {$(".product a[rel^='prettyPhoto']").prettyPhoto();});</script>

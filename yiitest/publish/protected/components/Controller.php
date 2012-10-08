@@ -22,6 +22,7 @@ class Controller extends CController {
 	public $about_list = array();
 	public $services_list = array();
 	public $news_list = array();
+	public $products_list = array();
 	
 	public function init() {
 		Common::setLanguage(); //setting language
@@ -88,8 +89,11 @@ class Controller extends CController {
 
 		Yii::app()->getModule('about');
 		$this->about_list = About::model()->listMenu();
+		
+		
 		Yii::app()->getModule('services');
 		$this->services_list = Services::model()->listMenu();
+		
 		Yii::app()->getModule('news');
 		$this->news_list = NewsCat::model()->listCats();
 		

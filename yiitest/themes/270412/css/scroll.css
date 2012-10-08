@@ -1,5 +1,5 @@
 #primary_block {}
-#pb-right-column {width:290px;float:left;background:#fff;}
+#pb-right-column {width:290px;float:left;margin-right:10px}
 
 /* product img */
 #image-block {width:290px;height:330px;}

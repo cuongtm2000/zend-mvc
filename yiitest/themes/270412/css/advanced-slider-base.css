@@ -55,13 +55,13 @@
 }
 
 
-.advanced-slider *
+.advanced-slider
 {
 	margin:0px;
 	padding:0px;
 }
 
-.slider{list-style:none}
+.slider{list-style:none;margin:0;padding:0}
 .slider-item
 {
 	position:absolute;
