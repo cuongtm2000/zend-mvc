@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 08, 2012 at 03:27 AM
+-- Generation Time: Oct 08, 2012 at 05:05 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -72,38 +72,40 @@ CREATE TABLE IF NOT EXISTS `dos_configs` (
 --
 
 INSERT INTO `dos_configs` (`config_name`, `config_value`, `config_desc`, `dos_templates_template`) VALUES
-('advs_left_height', 267, '', '180512'),
-('advs_left_width', 203, '', '180512'),
-('banner_height', 323, '', '180512'),
-('banner_width', 929, '', '180512'),
-('logo_height', 137, '', '180512'),
-('logo_width', 929, '', '180512'),
-('max_image_height', 950, '', '180512'),
-('max_image_width', 750, '', '180512'),
-('news_cat_height', 100, '', '180512'),
-('news_cat_width', 143, '', '180512'),
-('news_height_thumb', 100, '', '180512'),
-('news_num_paging_cat', 10, '', '180512'),
-('news_num_paging_hot', 8, '', '180512'),
-('news_num_paging_index', 10, '', '180512'),
-('news_num_paging_new', 8, '', '180512'),
-('news_width_thumb', 143, '', '180512'),
-('products_cat_height', 145, '', '180512'),
-('products_cat_width', 145, '', '180512'),
-('products_height', 650, '', '180512'),
-('products_height_thumb', 145, '', '180512'),
-('products_num_paging_cat', 20, '', '180512'),
-('products_num_paging_hot', 20, '', '180512'),
-('products_num_paging_new', 20, '', '180512'),
-('products_num_paging_other', 5, '', '180512'),
-('products_width', 650, '', '180512'),
-('products_width_thumb', 145, '', '180512'),
-('services_height', 950, '', '180512'),
-('services_width', 750, '', '180512'),
-('video_height_thumb', 145, '', '180512'),
-('video_num_paging_cat', 8, '', '180512'),
-('video_num_paging_index', 8, '', '180512'),
-('video_width_thumb', 145, '', '180512');
+('advs_left_height', 238, '', '040712'),
+('advs_left_width', 206, '', '040712'),
+('advs_right_height', 238, '', '040712'),
+('advs_right_width', 206, '', '040712'),
+('banner_height', 300, '', '040712'),
+('banner_width', 950, '', '040712'),
+('logo_height', 100, '', '040712'),
+('logo_width', 950, '', '040712'),
+('max_image_height', 947, '', '040712'),
+('max_image_width', 710, '', '040712'),
+('news_cat_height', 100, '', '040712'),
+('news_cat_width', 143, '', '040712'),
+('news_height_thumb', 100, '', '040712'),
+('news_num_paging_cat', 10, '', '040712'),
+('news_num_paging_hot', 6, '', '040712'),
+('news_num_paging_index', 10, '', '040712'),
+('news_num_paging_new', 6, '', '040712'),
+('news_width_thumb', 143, '', '040712'),
+('products_cat_height', 160, '', '040712'),
+('products_cat_width', 160, '', '040712'),
+('products_height', 947, '', '040712'),
+('products_height_thumb', 160, '', '040712'),
+('products_num_paging_cat', 20, '', '040712'),
+('products_num_paging_hot', 20, '', '040712'),
+('products_num_paging_new', 20, '', '040712'),
+('products_num_paging_other', 4, '', '040712'),
+('products_width', 710, '', '040712'),
+('products_width_thumb', 160, '', '040712'),
+('services_height', 170, '', '040712'),
+('services_width', 170, '', '040712'),
+('video_height_thumb', 160, '', '040712'),
+('video_num_paging_cat', 9, '', '040712'),
+('video_num_paging_index', 9, '', '040712'),
+('video_width_thumb', 160, '', '040712');
 
 -- --------------------------------------------------------
 
@@ -229,10 +231,10 @@ CREATE TABLE IF NOT EXISTS `dos_loadfiles` (
 --
 
 INSERT INTO `dos_loadfiles` (`dos_templates_template`, `dos_modules_module_id`, `loadfiles`, `typefile`) VALUES
-('180512', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
-('180512', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
-('180512', 'video', 'prettyPhoto.css', 'css'),
-('180512', 'video', 'jquery.prettyPhoto.js', 'javascript');
+('040712', 'products', 'scroll.css|jquery.fancybox.css', 'css'),
+('040712', 'products', 'jcarousellite_1.0.1.js|scroller.js|jquery.fancybox.js|jquery.scroll-1.4.2-min.js|jquery.serialScroll-1.2.2-min.js|product.js', 'javascript'),
+('040712', 'video', 'prettyPhoto.css', 'css'),
+('040712', 'video', 'jquery.prettyPhoto.js', 'javascript');
 
 -- --------------------------------------------------------
 
@@ -284,14 +286,15 @@ CREATE TABLE IF NOT EXISTS `dos_modules_has_dos_usernames` (
 --
 
 INSERT INTO `dos_modules_has_dos_usernames` (`dos_modules_module_id`, `dos_usernames_username`) VALUES
-('about', 'vtnv'),
-('advs', 'vtnv'),
-('banner', 'vtnv'),
-('contact', 'vtnv'),
-('news', 'vtnv'),
-('products', 'vtnv'),
-('services', 'vtnv'),
-('supports', 'vtnv');
+('about', 'longthinhphat'),
+('advs', 'longthinhphat'),
+('banner', 'longthinhphat'),
+('contact', 'longthinhphat'),
+('news', 'longthinhphat'),
+('products', 'longthinhphat'),
+('services', 'longthinhphat'),
+('supports', 'longthinhphat'),
+('video', 'longthinhphat');
 
 -- --------------------------------------------------------
 
@@ -320,7 +323,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_abouts` (
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_abouts_dos_usernames1` (`dos_usernames_username`),
   KEY `tag` (`tag`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=466 ;
+
+--
+-- Dumping data for table `dos_module_abouts`
+--
+
+INSERT INTO `dos_module_abouts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `hit`, `created`, `record_order`, `hot`, `extra_field1`, `extra_field2`, `tag`, `tagen`, `description`, `descriptionen`, `activated`, `dos_usernames_username`) VALUES
+(460, 'Giới Thiệu', '', '<p style="text-align:justify;"><span style="color:#ff0000;"><span style="color:#888888;"><span style="color:#000000;"><strong><span style="color:#0000ff;">Salon ô tô </span><span style="color:#ff0000;">Long Thịnh Phát</span></strong> chuyên mua, bán, ký gửi, trao đổi tất cả các loại xe ô tô cũ, mới, nhập khẩu. Hiện nay công ty chúng tôi đang ngày càng phát triển và mở rộng trong lĩnh vực cung cấp các loại xe ô tô cho khách hàng . </span></span></span></p>\n<p style="text-align:justify;"><span style="color:#ff0000;"><span style="color:#888888;"><span style="color:#000000;">Với đội ngũ nhân viên giỏi lành nghề và nhiệt tình trong công việc. Đến với <span style="color:#0000ff;"><strong>Salon ô tô <span style="color:#ff0000;">Long Thịnh Phát</span></strong></span> quý khách hàng sẽ được hài lòng về cung cách phục vụ cũng như thái độ nhiệt tình của nhân viên. </span></span></span></p>\n<p style="text-align:justify;"><span style="color:#ff0000;"><span style="color:#888888;"><span style="color:#000000;"><span style="color:#0000ff;"><strong>Salon ô tô <span style="color:#ff0000;">Long Thịnh Phát</span></strong></span><span style="color:#ff0000;"> </span>là nơi tập trung giao lưu mua bán, trao đổi nhộn nhịp các loại xe ô tô trên thị trường Đồng Nai. Đến với <span style="color:#ff0000;"><strong><span style="color:#0000ff;">Salon ô tô</span> Long Thịnh Phát </strong></span>quý khách hàng sẽ được giao lưu trao đổi kinh nghiệm và tìm hiểu thêm về các dòng xe ô tô mới với nhiều loại xe đa dạng và đa chủng loại khác nhau. Uy tín và chất lượng là thương hiệu hàng đầu để đưa Quý khách hàng đến với<span style="color:#ff0000;"> <strong>Long Thịnh Phát</strong></span> và <strong><span style="color:#ff0000;">Long Thịnh Phát</span></strong> - luôn sát cánh cùng bạn đến thành công.</span></span></span></p>', '', 430, '2012-09-16 10:31:24', 2, 0, '', '', 'gioi-thieu', '', 'mua bán trao đổi xe, mua ban trao doi xe, mua ban xe cu, mua bán xe cũ', '', 1, 'longthinhphat'),
+(465, 'Chào mừng bạn ghé thăm website www.longthinhphat.com.vn', '', '<p style="text-align:justify;"><strong><span style="color:#0000ff;">Salon ô tô</span> <span style="color:#ff0000;">Long Thịnh Phát</span></strong> là nơi tập trung giao lưu mua bán, trao đổi nhộn nhịp các loại xe ô tô trên thị trường Đồng Nai. Đến với <strong><span style="color:#ff0000;">Long Thịnh Phát</span></strong> quý khách hàng sẽ được giao lưu trao đổi kinh nghiệm và tìm hiểu thêm về các dòng xe ô tô mới với nhiều loại xe đa dạng và đa chủng loại khác nhau.</p>', '', 180, '2012-09-17 01:48:11', 1, 1, '', '', 'chao-mung-ban-ghe-tham-website-wwwlongthinhphatcomvn', '', '', '', 1, 'longthinhphat');
 
 -- --------------------------------------------------------
 
@@ -345,7 +356,19 @@ CREATE TABLE IF NOT EXISTS `dos_module_advs` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_advs_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=747 ;
+
+--
+-- Dumping data for table `dos_module_advs`
+--
+
+INSERT INTO `dos_module_advs` (`record_id`, `title`, `titleen`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `enable`, `dos_usernames_username`) VALUES
+(741, 'Quảng cáo 2', '', 'quang-cao-2.jpg', 'http://dos.vn', '2012-09-16 10:31:24', '2012-05-30 16:00:00', '2012-12-30 16:00:00', 0, 4, 'left', '_bank', 1, 'longthinhphat'),
+(742, 'Quảng cáo 3', '', 'quang-cao-3.jpg', 'http://dos.vn/', '2012-09-16 10:31:24', '2012-05-29 16:00:00', '2012-12-30 16:00:00', 0, 6, 'left', '_bank', 1, 'longthinhphat'),
+(743, 'Quảng cáo 4', '', 'quang-cao-4.jpg', 'http://dos.vn', '2012-09-16 10:31:24', '2012-05-29 16:00:00', '2012-12-30 16:00:00', 0, 3, 'left', '_bank', 1, 'longthinhphat'),
+(744, 'Quảng cáo 5', '', 'quang-cao-5.jpg', 'http://dos.vn', '2012-09-16 10:31:24', '2012-05-29 16:00:00', '2012-12-30 16:00:00', 0, 8, 'left', '_bank', 1, 'longthinhphat'),
+(745, 'Quảng cáo 7', '', 'quang-cao-7.jpeg', 'http://dos.vn', '2012-09-16 10:31:24', '2012-05-29 16:00:00', '2012-12-30 16:00:00', 0, 5, 'left', '_bank', 1, 'longthinhphat'),
+(746, 'Quảng cáo 8', '', 'quang-cao-8.jpeg', 'http://dos.vn', '2012-09-16 10:31:24', '2012-06-29 16:00:00', '2012-12-30 16:00:00', 0, 7, 'left', '_bank', 0, 'longthinhphat');
 
 -- --------------------------------------------------------
 
@@ -366,20 +389,32 @@ CREATE TABLE IF NOT EXISTS `dos_module_banners` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`banner_id`),
   KEY `fk_dos_module_banners_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3824 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3388 ;
 
 --
 -- Dumping data for table `dos_module_banners`
 --
 
 INSERT INTO `dos_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_url`, `banner_link`, `banner_order`, `banner_type`, `position`, `enable`, `dos_usernames_username`) VALUES
-(3817, '2012-10-05 13:49:54', 'Logo', 'logo.png', '', 1, 'logo', 'default', 1, 'vtnv'),
-(3818, '2012-10-05 14:31:36', 'banner', 'banner.jpg', '', 2, 'banners', 'default', 1, 'vtnv'),
-(3819, '2012-10-05 14:32:14', 'banner1', 'banner1.jpg', '', 3, 'banners', 'about', 1, 'vtnv'),
-(3820, '2012-10-05 14:32:35', 'banner2', 'banner2.jpg', '', 4, 'banners', 'contact', 1, 'vtnv'),
-(3821, '2012-10-05 14:32:55', 'banner3', 'banner3.jpg', '', 5, 'banners', 'news', 1, 'vtnv'),
-(3822, '2012-10-05 14:33:14', 'banner4', 'banner4.jpg', '', 6, 'banners', 'products', 1, 'vtnv'),
-(3823, '2012-10-05 14:33:36', 'banner5', 'banner5.jpg', '', 7, 'banners', 'services', 1, 'vtnv');
+(3369, '2012-09-17 00:57:15', 'logo-longthinhphat', 'logo-longthinhphat.png', '', 1, 'logo', 'default', 1, 'longthinhphat'),
+(3370, '2012-09-17 01:14:27', 'Banner 1', 'banner-1.jpg', '', 2, 'banners', 'default', 1, 'longthinhphat'),
+(3371, '2012-09-17 01:18:51', 'Banner 2', 'banner-2.jpg', '', 3, 'banners', 'products', 1, 'longthinhphat'),
+(3372, '2012-09-17 01:22:07', 'Banner 3', 'banner-3.jpg', '', 4, 'banners', 'about', 1, 'longthinhphat'),
+(3373, '2012-09-17 01:55:51', 'Banner 4', 'banner-4.jpg', '', 5, 'banners', 'services', 1, 'longthinhphat'),
+(3374, '2012-09-17 01:56:03', 'Banner 5', 'banner-5.jpg', '', 6, 'banners', 'default', 1, 'longthinhphat'),
+(3375, '2012-09-17 01:56:15', 'Banner 6', 'banner-6.jpg', '', 7, 'banners', 'contact', 1, 'longthinhphat'),
+(3376, '2012-09-17 01:56:35', 'Banner 7', 'banner-7.jpg', '', 8, 'banners', 'products', 1, 'longthinhphat'),
+(3377, '2012-09-17 01:56:47', 'Banner 8', 'banner-8.jpg', '', 9, 'banners', 'about', 1, 'longthinhphat'),
+(3378, '2012-09-17 01:57:03', 'Banner 9', 'banner-9.jpg', '', 10, 'banners', 'news', 1, 'longthinhphat'),
+(3379, '2012-09-17 01:57:17', 'Banner 10', 'banner-10.jpg', '', 11, 'banners', 'video', 1, 'longthinhphat'),
+(3380, '2012-09-17 01:57:51', 'Banner 11', 'banner-11.jpg', '', 12, 'banners', 'default', 1, 'longthinhphat'),
+(3381, '2012-09-17 01:58:14', 'Banner 12', 'banner-12.jpg', '', 13, 'banners', 'products', 1, 'longthinhphat'),
+(3382, '2012-09-17 01:58:44', 'Banner 13', 'banner-13.jpg', '', 14, 'banners', 'about', 1, 'longthinhphat'),
+(3383, '2012-09-17 02:33:35', 'Banner 14', 'banner-14.jpg', '', 15, 'banners', 'contact', 1, 'longthinhphat'),
+(3384, '2012-09-17 02:33:58', 'Banner 15', 'banner-15.jpg', '', 16, 'banners', 'services', 1, 'longthinhphat'),
+(3385, '2012-09-17 02:34:20', 'Banner 16', 'banner-16.jpg', '', 17, 'banners', 'news', 1, 'longthinhphat'),
+(3386, '2012-09-17 02:34:34', 'Banner 17', 'banner-17.jpg', '', 18, 'banners', 'video', 1, 'longthinhphat'),
+(3387, '2012-09-17 06:32:15', 'Banner 18', 'banner-18.jpg', '', 19, 'banners', 'video', 1, 'longthinhphat');
 
 -- --------------------------------------------------------
 
@@ -405,14 +440,14 @@ CREATE TABLE IF NOT EXISTS `dos_module_contacts` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_contacts_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=78 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=69 ;
 
 --
 -- Dumping data for table `dos_module_contacts`
 --
 
 INSERT INTO `dos_module_contacts` (`record_id`, `title`, `titleen`, `content`, `contenten`, `create_date`, `record_order`, `hit`, `hot`, `tag`, `tagen`, `description`, `descriptionen`, `enable`, `dos_usernames_username`) VALUES
-(77, 'Thông tin liên hệ', '', '<p><span style="font-size:14pt;color:#0000ff;"><strong>Công ty Cổ phần TM-DV VIP Tầm Nhìn Việt</strong></span><br /><br /><span style="font-size:11pt;"><strong>Địa chỉ: Lô L4, Kp.1, P. Bửu Long, Tp. Biên Hoà, Đồng Nai</strong></span><br /><span style="font-size:11pt;"><strong>Website: <span style="color:#0000ff;"><a href="http://www.viptamnhinviet.com"><span style="color:#0000ff;">www.viptamnhinviet.com</span></a></span>  - Email: <span style="color:#0000ff;"><a href="mailto:viptamnhinviet@gmail.com"><span style="color:#0000ff;">viptamnhinviet@gmail.com</span></a> </span></strong></span></p>', '', '2012-10-05 14:18:43', 1, 0, 0, 'thong-tin-lien-he', '', '', '', '1', 'vtnv');
+(68, 'Liên hệ với chúng tôi', '', '<p><strong>CÔNG TY TNHH<span style="color:#ff0000;"> LONG THỊNH PHÁT</span></strong></p>\r\n<p>Địa chỉ: 162 QL1A, Xuân Tân, Thị trấn Long Khánh, Đồng Nai</p>\r\n<p>Điện thoại: (061) 3722 573</p>\r\n<p>Hot line: 0937 144 249 - 0938 918 254</p>\r\n<p>Email: <a>info@longthinhphat.com.vn</a></p>\r\n<p>Website: <a href="http://www.longthinhphat.com.vn">www.longthinhphat.com.vn</a></p>\r\n<p> </p>', '', '2012-09-16 10:31:24', 1, 0, 0, 'lien-he-voi-chung-toi', '', '', '', '1', 'longthinhphat');
 
 -- --------------------------------------------------------
 
@@ -439,12 +474,13 @@ CREATE TABLE IF NOT EXISTS `dos_module_menus` (
 --
 
 INSERT INTO `dos_module_menus` (`menu`, `menuen`, `url`, `target`, `position`, `title`, `titleen`, `description`, `descriptionen`, `dos_usernames_username`) VALUES
-('Trang chủ', '', 'default', '', 1, 'Coffee Yumy', '', 'Cà phê - kich Yumy', '', 'vtnv'),
-('Giới thiệu', '', 'about', '', 2, 'Coffee Yumy', '', 'Cà phê - kich Yumy', '', 'vtnv'),
-('Sản phẩm', '', 'products', '', 3, '', '', '', '', 'vtnv'),
-('Dịch vụ', '', 'services', '', 4, '', '', '', '', 'vtnv'),
-('Tin tức & sự kiện', '', 'news', '', 5, '', '', '', '', 'vtnv'),
-('Liên hệ', '', 'contact', '', 6, '', '', '', '', 'vtnv');
+('Trang chủ', '', 'default', '', 1, 'Coffee Yumy', '', 'Cà phê - kich Yumy', '', 'longthinhphat'),
+('Giới thiệu', '', 'about', '', 2, 'Coffee Yumy', '', 'Cà phê - kich Yumy', '', 'longthinhphat'),
+('Sản phẩm', '', 'products', '', 3, '', '', '', '', 'longthinhphat'),
+('Dịch vụ', '', 'services', '', 4, '', '', '', '', 'longthinhphat'),
+('Tin tức & sự kiện', '', 'news', '', 5, '', '', '', '', 'longthinhphat'),
+('Video', '', 'video', '', 6, '', '', '', '', 'longthinhphat'),
+('Liên hệ', '', 'contact', '', 7, '', '', '', '', 'longthinhphat');
 
 -- --------------------------------------------------------
 
@@ -541,7 +577,7 @@ CREATE TABLE IF NOT EXISTS `dos_module_pcounter_users` (
 --
 
 INSERT INTO `dos_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1349659538);
+('''127.0.0.1''', 1349665103);
 
 -- --------------------------------------------------------
 
@@ -578,14 +614,29 @@ CREATE TABLE IF NOT EXISTS `dos_module_products` (
   `dos_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_dos_module_products_dos_module_products_cat1` (`dos_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11072 ;
 
 --
 -- Dumping data for table `dos_module_products`
 --
 
 INSERT INTO `dos_module_products` (`record_id`, `title`, `titleen`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `preview`, `previewen`, `content`, `contenten`, `tag`, `tagen`, `description`, `descriptionen`, `hits`, `record_order`, `unit`, `hot`, `specials`, `extra_field1`, `extra_field2`, `extra_field3`, `extra_field4`, `enable`, `dos_module_item_cat_cat_id`) VALUES
-(1, 'Thiet bi bep nung', '', '2012-10-08 01:12:51', 'thiet-bi-bep-nung-thumb.jpg', 'thiet-bi-bep-nung.jpg', NULL, '', '', '<p>dang cap nhat</p>', '', 'thiet-bi-bep-nung', '', '', '', 0, 1, '450000', 0, NULL, NULL, NULL, NULL, NULL, 1, 2193);
+(11054, 'TOYOTA (50Z - 6415)', '', '2012-09-17 00:54:28', 'toyota-50z-6415-thumb.jpg', 'toyota.JPG', 'toyota-desc-1.JPG|toyota-desc-1-5.JPG|toyota-50z-6415-desc-1.JPG|toyota-50z-6415-desc-2.JPG', '', '', '<p>TOYOTA</p>', '', 'toyota-50z-6415', '', '', '', 0, 15, '', 0, 0, '', '', '', '', 1, 1820),
+(11055, 'SUV 4x4 (61K - 1849)', '', '2012-09-17 01:06:20', 'suv-4x4-61k-1849-thumb.jpg', 'suv-4x4.JPG', 'suv-4x4-desc-1.JPG', '', '', '<p>SUV 4x4 (61K - 1849)</p>', '', 'suv-4x4-61k-1849', '', '', '', 0, 16, '', 0, 0, '', '', '', '', 1, 1820),
+(11056, 'HONDA', '', '2012-09-17 01:08:01', 'honda-thumb.jpg', 'honda.JPG', 'honda-desc-1.JPG', '', '', '<p>HONDA</p>', '', 'honda', '', '', '', 0, 14, '', 0, 0, '', '', '', '', 1, 1820),
+(11057, 'MISUBISHI', '', '2012-09-17 01:08:32', 'misubishi-thumb.jpg', 'misubishi.JPG', '', '', '', '<p>MISUBISHI</p>', '', 'misubishi', '', '', '', 0, 13, '', 0, 0, '', '', '', '', 1, 1821),
+(11058, 'MEW MORNING', '', '2012-09-17 01:09:37', 'mew-morning-thumb.jpg', 'mew-morning.JPG', '', '', '', '<p>MEW MORNING</p>', '', 'mew-morning', '', '', '', 0, 12, '', 0, 0, '', '', '', '', 1, 1820),
+(11059, 'TOYOTA ĐỎ', '', '2012-09-17 01:10:00', 'toyota--thumb.jpg', 'toyota-.JPG', '', '', '', '<p>TOYOTA ĐỎ</p>', '', 'toyota-do', '', '', '', 0, 11, '', 0, 0, '', '', '', '', 1, 1820),
+(11060, 'HYUNHDAI', '', '2012-09-17 01:10:41', 'hyunhdai-thumb.jpg', 'hyunhdai.JPG', '', '', '', '<p>HYUNHDAI</p>', '', 'hyunhdai', '', '', '', 0, 10, '', 0, 0, '', '', '', '', 1, 1821),
+(11061, 'JAC (T60 - 068.90)', '', '2012-09-17 01:11:01', 'jac-t60-068-90-thumb.jpg', 'jac.JPG', '', '', '', '<p>JAC</p>', '', 'jac-t60-06890', '', '', '', 0, 9, '', 0, 0, '', '', '', '', 1, 1822),
+(11062, 'CHEVROLET (93A - 003.47)', '', '2012-09-17 01:12:00', 'chevrolet-93a-003-47-thumb.jpg', 'chevrolet.JPG', '', '', '', '<p>CHEVROLET (93A - 003.47)</p>', '', 'chevrolet-93a-00347', '', '', '', 0, 8, '', 0, 0, '', '', '', '', 1, 1820),
+(11064, 'ACURA (24X - 4609)', '', '2012-09-17 01:14:40', 'acura-24x-4609-thumb.jpg', 'acura.JPG', '', '', '', '<p>ACURA (24X - 4609)</p>', '', 'acura-24x-4609', '', '', '', 0, 7, '', 0, 0, '', '', '', '', 1, 1820),
+(11065, 'TOYOTA (72A - 007.38)', '', '2012-09-17 01:15:05', 'toyota-72a-007-38-thumb.jpg', 'toyota-en.JPG', '', '', '', '<p>TOYOTA (72A - 007.38)</p>', '', 'toyota-72a-00738', '', '', '', 0, 6, '', 0, 0, '', '', '', '', 1, 1820),
+(11066, 'CHEVROLET (51A - 091.56)', '', '2012-09-17 01:15:46', 'chevrolet-51a-091-56-thumb.jpg', 'chevrolet-.JPG', 'chevrolet--desc-1.JPG|chevrolet--desc-2.JPG', '', '', '<p>CHEVROLET (51A - 091.56)</p>', '', 'chevrolet-51a-09156', '', '', '', 0, 5, '', 0, 0, '', '', '', '', 1, 1820),
+(11067, 'KIA (60S - 4937)', '', '2012-09-17 01:16:14', 'kia-60s-4937-thumb.jpg', 'kia.JPG', 'kia-desc-1.JPG', '', '', '<p>KIA (60S - 4937)</p>', '', 'kia-60s-4937', '', '', '', 0, 4, '', 0, 0, '', '', '', '', 1, 1820),
+(11069, 'JOLIE (52T - 8375)', '', '2012-09-17 01:17:30', 'jolie-52t-8375-thumb.jpg', 'jolie.JPG', '', '', '', '<p>JOLIE (52T - 8375)</p>', '', 'jolie-52t-8375', '', '', '', 0, 3, '', 0, 0, '', '', '', '', 1, 1821),
+(11070, 'HONDA (51A-233.85)', '', '2012-09-17 01:18:20', 'honda-51a-233-85-thumb.jpg', 'honda-51a-233-85.JPG', 'honda-51a-233-85-desc-1.JPG|honda-51a-233-85-desc-1-4.JPG', '', '', '<p>HONDA (51A-233.85)</p>', '', 'honda-51a-23385', '', '', '', 0, 2, '', 0, 0, '', '', '', '', 1, 1820),
+(11071, 'ZACE', '', '2012-09-17 01:21:16', 'zace-thumb.jpg', 'zace.JPG', '', '', '', '<p>ZACE</p>', '', 'zace', '', '', '', 0, 1, '', 0, 0, '', '', '', '', 1, 1821);
 
 -- --------------------------------------------------------
 
@@ -613,17 +664,17 @@ CREATE TABLE IF NOT EXISTS `dos_module_products_cat` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`cat_id`),
   KEY `fk_dos_module_products_cat_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2194 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1823 ;
 
 --
 -- Dumping data for table `dos_module_products_cat`
 --
 
 INSERT INTO `dos_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_title`, `cat_titleen`, `preview`, `previewen`, `tag`, `tagen`, `description`, `descriptionen`, `pic_full`, `pic_desc`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`, `dos_usernames_username`) VALUES
-(2190, 0, 'Thiết bị bảo hộ lao động', '', '', '', 'thiet-bi-bao-ho-lao-dong', '', 'thiết bị bảo hộ lao động, thiet bi bao ho lao dong, vip tam nhin viet, viptamnhinviet.com', '', 'thiet-bi-bao-ho-lao-dong.jpg', '', 1, '', '', 1, 'vtnv'),
-(2191, 0, 'Thiết bị phòng cháy chữa cháy', '', '', '', 'thiet-bi-phong-chay-chua-chay', '', 'phong chay chua chay, phong chong chay no', '', 'thiet-bi-phong-chay-chua-chay.jpg', '', 2, '', '', 1, 'vtnv'),
-(2192, 0, 'Thiết bị an ninh', '', '', '', 'thiet-bi-an-ninh', '', 'thiet bi an ninh, thiết bị an ninh bien hoa,', '', 'thiet-bi-an-ninh.jpg', '', 3, '', '', 1, 'vtnv'),
-(2193, 0, 'Thiết bị nhà bếp', '', '', '', 'thiet-bi-nha-bep', '', 'thiet bi nha bep bien hoa, van an toan, van chong chay no ga, van ga', '', 'thiet-bi-nha-bep.jpg', '', 4, '', '', 1, 'vtnv');
+(1819, 425, 'Tủ ti vi', '', '', '', 'tu-ti-vi', '', 'Tủ ti vi', '', 'tu-ti-vi.jpg', '', 11, '', '', 1, 'longthinhphat'),
+(1820, 0, 'XE 4 CHỖ', '', '', '', 'xe-4-cho', '', '', '', 'xe-4-ch.jpg', '', 14, '', '', 1, 'longthinhphat'),
+(1821, 0, 'XE 7 CHỖ', '', '', '', 'xe-7-cho', '', '', '', 'xe-7-ch.jpg', '', 13, '', '', 1, 'longthinhphat'),
+(1822, 0, 'XE TẢI NHỎ', '', '', '', 'xe-tai-nho', '', '', '', 'xe-ti-nh.jpg', '', 13, '', '', 1, 'longthinhphat');
 
 -- --------------------------------------------------------
 
@@ -673,7 +724,15 @@ CREATE TABLE IF NOT EXISTS `dos_module_supports` (
   `dos_usernames_username` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`),
   KEY `fk_dos_module_supports_dos_usernames1` (`dos_usernames_username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=319 ;
+
+--
+-- Dumping data for table `dos_module_supports`
+--
+
+INSERT INTO `dos_module_supports` (`support_id`, `support_name`, `support_nameen`, `support_phone`, `support_value`, `support_order`, `support_type`, `dos_usernames_username`) VALUES
+(317, 'Tư vấn trực tuyến 1', '', '', 'maioanh7887', 1, 'yahoo', 'longthinhphat'),
+(318, 'Tư vấn trực tuyến 2', '', '', 'maioanh7887', 1, 'yahoo', 'longthinhphat');
 
 -- --------------------------------------------------------
 
@@ -744,9 +803,9 @@ CREATE TABLE IF NOT EXISTS `dos_module_webs` (
 --
 
 INSERT INTO `dos_module_webs` (`web_name`, `web_value`, `dos_usernames_username`) VALUES
-('keywords', 'Viptamnhinviet nơi mua bán trao đổi các loại hàng hóa thương mại điện tử', 'vtnv'),
-('description', 'Viptamnhinviet nơi mua bán trao đổi các loại hàng hóa thương mại điện tử', 'vtnv'),
-('title', 'Vip Tầm Nhìn Việt - Viptamnhinviet.com', 'vtnv');
+('keywords', 'Long Thịnh Phát mua bán, trao đổi xe ô tô trên thị trường Đồng Nai,giao lưu trao đổi kinh nghiệm và tìm hiểu thêm về các dòng xe ô tô mới ', 'longthinhphat'),
+('description', 'Long Thịnh Phát mua bán, trao đổi xe ô tô trên thị trường Đồng Nai,giao lưu trao đổi kinh nghiệm và tìm hiểu thêm về các dòng xe ô tô mới ', 'longthinhphat'),
+('title', 'Salon ô tô Long Thịnh Phát - Longthinhphat.com.vn', 'longthinhphat');
 
 -- --------------------------------------------------------
 
@@ -869,7 +928,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates` (
 --
 
 INSERT INTO `dos_templates` (`template`, `template_name`, `created`, `description`) VALUES
-('180512', 'Mẫu nội thất: 180512', '2012-05-18 00:57:47', 'Chuyên bán các loại đồ nội thất, dân dụng');
+('040712', 'Mẫu cơ khí: 040712', '2012-07-03 22:08:53', 'Chuyên bán các loại máy móc, thiết bị cơ khí, cửa sắt...');
 
 -- --------------------------------------------------------
 
@@ -890,7 +949,7 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_bussiness` (
 --
 
 INSERT INTO `dos_templates_has_dos_bussiness` (`dos_templates_template`, `dos_bussiness_bussiness_id`) VALUES
-('180512', 'noi-that-ngoai-that');
+('040712', 'co-khi-may-moc-thiet-bi');
 
 -- --------------------------------------------------------
 
@@ -928,29 +987,45 @@ CREATE TABLE IF NOT EXISTS `dos_templates_has_dos_modules` (
 --
 
 INSERT INTO `dos_templates_has_dos_modules` (`dos_templates_template`, `dos_modules_module_id`, `dos_values_value_name`) VALUES
-('180512', 'about', 'advs_left'),
-('180512', 'about', 'list_supports'),
-('180512', 'about', 'menu_about'),
-('180512', 'contact', 'advs_left'),
-('180512', 'contact', 'list_supports'),
-('180512', 'contact', 'menu_products'),
-('180512', 'default', 'about_home'),
-('180512', 'default', 'advs_left'),
-('180512', 'default', 'list_supports'),
-('180512', 'default', 'menu_products'),
-('180512', 'default', 'products_new'),
-('180512', 'news', 'advs_left'),
-('180512', 'news', 'list_supports'),
-('180512', 'news', 'menu_news'),
-('180512', 'products', 'advs_left'),
-('180512', 'products', 'list_supports'),
-('180512', 'products', 'menu_products'),
-('180512', 'services', 'advs_left'),
-('180512', 'services', 'list_supports'),
-('180512', 'services', 'menu_services'),
-('180512', 'video', 'advs_left'),
-('180512', 'video', 'advs_top'),
-('180512', 'video', 'menu_video');
+('040712', 'about', 'advs_left'),
+('040712', 'about', 'advs_right'),
+('040712', 'about', 'list_supports'),
+('040712', 'about', 'menu_about'),
+('040712', 'about', 'news_new'),
+('040712', 'contact', 'advs_left'),
+('040712', 'contact', 'advs_right'),
+('040712', 'contact', 'list_supports'),
+('040712', 'contact', 'menu_products'),
+('040712', 'contact', 'news_new'),
+('040712', 'default', 'about_home'),
+('040712', 'default', 'advs_left'),
+('040712', 'default', 'advs_right'),
+('040712', 'default', 'list_supports'),
+('040712', 'default', 'menu_products'),
+('040712', 'default', 'news_new'),
+('040712', 'default', 'products_new'),
+('040712', 'default', 'video_hot'),
+('040712', 'news', 'advs_left'),
+('040712', 'news', 'advs_right'),
+('040712', 'news', 'list_supports'),
+('040712', 'news', 'menu_news'),
+('040712', 'news', 'news_hot'),
+('040712', 'news', 'news_new'),
+('040712', 'products', 'advs_left'),
+('040712', 'products', 'advs_right'),
+('040712', 'products', 'list_supports'),
+('040712', 'products', 'menu_products'),
+('040712', 'products', 'news_new'),
+('040712', 'services', 'advs_left'),
+('040712', 'services', 'advs_right'),
+('040712', 'services', 'list_supports'),
+('040712', 'services', 'menu_services'),
+('040712', 'services', 'news_new'),
+('040712', 'video', 'advs_left'),
+('040712', 'video', 'advs_right'),
+('040712', 'video', 'list_supports'),
+('040712', 'video', 'menu_video'),
+('040712', 'video', 'news_new');
 
 -- --------------------------------------------------------
 
@@ -988,7 +1063,7 @@ CREATE TABLE IF NOT EXISTS `dos_usernames` (
 --
 
 INSERT INTO `dos_usernames` (`username`, `email`, `password`, `created`, `fullname`, `phone`, `company`, `role`, `language`, `code`, `expired`, `import`, `agent_sale`, `agent_tech`, `activated`, `dos_templates_template`, `dos_provinces_province_id`, `dos_bussiness_bussiness_id`) VALUES
-('vtnv', 'viptamnhinviet@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-10-01 14:12:17', 'Mr Tân', '0908273266', 'Công ty Cổ phần TM-DV VIP Tầm Nhìn Việt', 'user', 'vi', '', '2012-12-29 16:00:00', 0, '73662972', '', 1, '180512', 19, 'co-khi-may-moc-thiet-bi');
+('longthinhphat', 'info@longthinhphat.com', 'e10adc3949ba59abbe56e057f20f883e', '2012-09-16 10:31:15', '', '', '', 'user', 'vi', '', '2012-12-14 16:00:00', 0, '87522003', '', 1, '040712', 19, 'noi-that-ngoai-that');
 
 -- --------------------------------------------------------
 
@@ -1026,10 +1101,12 @@ CREATE TABLE IF NOT EXISTS `dos_user_langs` (
 --
 
 INSERT INTO `dos_user_langs` (`lang_name`, `lang`, `langen`, `dos_usernames_username`) VALUES
-('address1', 'Địa chỉ: Lô L4, Kp.1, P. Bửu Long, Tp. Biên Hoà, Đồng Nai', '', 'vtnv'),
-('address2', 'Website: www.viptamnhinviet.com - Email: viptamnhinviet@gmail.com', '', 'vtnv'),
-('company_name_footer', 'Công ty Cổ phần TM-DV VIP Tầm Nhìn Việt', '', 'vtnv'),
-('company_phone', 'Điện thoại: (061) 8850 747', '', 'vtnv');
+('address1', 'Địa chỉ: 162 Quốc Lộ 1A - Xuân Tân - TX. Long Khánh - Đồng Nai', '', 'longthinhphat'),
+('address2', 'Điện thoại: (061) 3722 537 - 0937 144 249 - 0938 918 524', '', 'longthinhphat'),
+('company_name', '', '', 'longthinhphat'),
+('company_name_footer', 'SALON Ô TÔ LONG THỊNH PHÁT', '', 'longthinhphat'),
+('company_phone', '', '', 'longthinhphat'),
+('copyright', '', '', 'longthinhphat');
 
 -- --------------------------------------------------------
 
