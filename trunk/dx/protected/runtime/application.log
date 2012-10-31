@@ -1,0 +1,18 @@
+2012/10/31 09:51:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/yiiproject/images/tital-bullet.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/yiiproje...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\cms\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/cms/themes/yiiproject/images/tital-bullet.gif
+HTTP_REFERER=http://localhost/cms/
+---
+2012/10/31 09:51:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/yiiproject/images/bullet2.gif".' in C:\xampp\php\library\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\php\library\framework\web\CWebApplication.php(142): CWebApplication->runController('themes/yiiproje...')
+#1 C:\xampp\php\library\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\cms\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/cms/themes/yiiproject/images/bullet2.gif
+HTTP_REFERER=http://localhost/cms/
+---
