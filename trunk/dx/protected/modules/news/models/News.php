@@ -219,6 +219,13 @@ class News extends CActiveRecord {
         return array('models' => $this->findAll($criteria), 'pages' => $pages);
     }
 
+    //Back end - Count items by Cat
+    public function countItemCatId($cid) {
+        $command = Yii::app()->db->createCommand('SELECT COUNT(record_id) FROM ' . $this->tableName() . ' WHERE hoiit_module_item_cat_cat_id=:cid');
+        $command->bindParam(":cid", $cid, PDO::PARAM_INT);
+        return $command->queryScalar();
+    }
+
     //Back end - Delete Record
     private function deleteRecord($id) {
         NewsLanguage::model()->deleteRecord($id);

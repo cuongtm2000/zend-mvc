@@ -65,4 +65,4 @@
         <div class="clear space"></div>
     </fieldset>
 <?php $this->endWidget();?>
-<?php $this->widget('ext.seoAlias.seoAlias', array('model'=>$model, 'source'=>'title', 'target'=>'tag')); ?>
+<?php $this->widget('ext.SeoAlias.SeoAlias', array('model'=>$model, 'source'=>'title', 'target'=>'tag')); ?>

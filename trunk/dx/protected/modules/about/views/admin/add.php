@@ -3,27 +3,26 @@
 <fieldset>
     <legend><?php echo $this->lang['add_new'] ?> <?php echo strtolower($this->lang[$this->module->id]) ?></legend>
 
-    <?php foreach($this->listLanguage as $key => $lang):?>
-    <div class="col1"><?php echo $form->labelEx($model, 'title'.$key) ?></div>
+    <?php foreach($this->listLanguage as $lang):?>
+    <div class="col1"><?php echo $form->labelEx($model, 'title'.$lang) ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'title'.$key, array('class'=>'txt-very-large')); ?>
-		<!-- <a class='west' href='' title='Text here'><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/mark.png"  alt="Mark" /></a> -->
+        <?php echo $form->textField($model, 'title'.$lang, array('class'=>'txt-very-large')); ?>
     </div>
     <div class="clear space"></div>
     <?php endforeach; ?>
 
-    <?php foreach($this->listLanguage as $key => $lang):?>
-    <div class="col1"><?php echo $form->labelEx($model, 'content'.$key) ?></div>
+    <?php foreach($this->listLanguage as $lang):?>
+    <div class="col1"><?php echo $form->labelEx($model, 'content'.$lang) ?></div>
     <div class="col2">
-        <?php echo $form->textArea($model, 'content'.$key, array('cols'=>20, 'rows'=>10, 'class'=>'textarea-very-large')); ?>
+        <?php echo $form->textArea($model, 'content'.$lang, array('cols'=>20, 'rows'=>10, 'class'=>'textarea-very-large')); ?>
         <script type="text/javascript">
 			writeCookie('sessionPath', '<?php echo Yii::app()->baseUrl?>', 1);
 			tinyMCE.init({
 				 file_browser_callback: 'openKCFinder',
 				 mode:"exact",
-				 elements : "<?php echo get_class($model)?>_content<?php echo $key?>",
+				 elements : "<?php echo get_class($model)?>_content<?php echo $lang?>",
 				 theme:"advanced",
-				 language : "<?php echo $key?>",
+				 language : "<?php echo $lang?>",
 				 plugins : "paste, autolink,lists,style,layer,table,save,advhr,advimage,advlink,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
 
 				 theme_advanced_buttons1 : "bold,italic,underline,strikethrough,formatselect,fontsizeselect,|,justifyleft,justifycenter,justifyright,justifyfull,pastetext,pasteword,|,link,unlink,|,image,media,|,fullscreen",
@@ -58,36 +57,37 @@
     <div class="clear space"></div>
     <?php endforeach; ?>
 
-	<?php foreach($this->listLanguage as $key => $lang):?>
-    <div class="col1"><?php echo $form->labelEx($model, 'tag'.$key) ?></div>
-    <div class="col2">
-        <?php echo $form->textField($model, 'tag'.$key, array('class'=>'txt-very-large')); ?>
-    </div>
-    <div class="clear space"></div>
+	<?php foreach($this->listLanguage as $lang):?>
+        <div class="col1"><?php echo $form->labelEx($model, 'tag'.$lang) ?></div>
+        <div class="col2">
+            <?php echo $form->textField($model, 'tag'.$lang, array('class'=>'txt-very-large')); ?>
+        </div>
+        <div class="clear space"></div>
+        <?php $this->widget('ext.SeoAlias.SeoAlias', array('model'=>$model, 'source'=>'title'.$lang, 'target'=>'tag'.$lang)); ?>
 	<?php endforeach?>
 
-	<?php foreach($this->listLanguage as $key => $lang):?>
-    <div class="col1"><?php echo $form->labelEx($model, 'description'.$key) ?></div>
+	<?php foreach($this->listLanguage as $lang):?>
+    <div class="col1"><?php echo $form->labelEx($model, 'description'.$lang) ?></div>
     <div class="col2">
-        <?php echo $form->textArea($model, 'description'.$key, array('cols'=>20, 'rows'=>5, 'class'=>'textarea-very-large')); ?> <span class="info-keyup<?php echo $key?>">0</span>
+        <?php echo $form->textArea($model, 'description'.$lang, array('cols'=>20, 'rows'=>5, 'class'=>'textarea-very-large')); ?> <span class="info-keyup<?php echo $lang?>">0</span>
     </div>
     <div class="clear space"></div>
 	<script type="text/javascript">
 		jQuery(function($) {
-			$('#<?php echo get_class($model)?>_description<?php echo $key?>').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup<?php echo $key?>').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});
+			$('#<?php echo get_class($model)?>_description<?php echo $lang?>').keyup(function(){var max=250;var valLen=$(this).val().length;$('.info-keyup<?php echo $lang?>').text( valLen+'/'+max); var val = $(this).val(); if (val.length > 250){ $(this).val(val.slice(0, 250));}});
 		});
 	</script>
 	<?php endforeach?>
 
-    <div class="col1"><?php echo $form->labelEx($model, 'Hot', array('for'=>get_class($model).'_hot_0')) ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'hot', array('for'=>get_class($model).'_hot_0')) ?></div>
     <div class="col2 radio">
-        <?php echo $form->radioButtonList($model, 'hot', array('0'=>'Normal', '1'=>'Hot'), array('separator'=>'&nbsp;&nbsp;')); ?>
+        <?php echo $form->radioButtonList($model, 'hot', array('0'=>Yii::t('admin', 'no'), '1'=>Yii::t('admin', 'hot')), array('separator'=>'&nbsp;&nbsp;')); ?>
     </div>
     <div class="clear space"></div>
 
-    <div class="col1"><?php echo $form->labelEx($model, 'Show', array('for'=>get_class($model).'_enable_0')) ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'enable', array('for'=>get_class($model).'_enable_0')) ?></div>
     <div class="col2 radio">
-        <?php echo $form->radioButtonList($model, 'enable', array('1'=>'Show', '0'=>'Hidden'), array('separator'=>'&nbsp;&nbsp;')); ?>
+        <?php echo $form->radioButtonList($model, 'enable', array('1'=>Yii::t('admin', 'show'), '0'=>Yii::t('admin', 'hidden')), array('separator'=>'&nbsp;&nbsp;')); ?>
     </div>
     <div class="clear space"></div>
 
@@ -98,7 +98,3 @@
     </div><div class="clear space"></div>
 </fieldset>
 <?php $this->endWidget();?>
-
-<?php foreach($this->listLanguage as $key => $lang):?>
-	<?php $this->widget('ext.SeoAlias.SeoAlias', array('model'=>$model, 'source'=>'title'.$key, 'target'=>'tag'.$key)); ?>
-<?php endforeach?>

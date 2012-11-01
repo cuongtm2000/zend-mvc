@@ -3,7 +3,7 @@
 <fieldset>
     <legend><?php echo $this->lang['add_new'] ?> <?php echo strtolower($this->lang[$this->module->id])?></legend>
 
-    <?php foreach($this->listLanguage as $key => $lang):?>
+    <?php foreach($this->listLanguage as $key):?>
     <div class="col1"><?php echo $form->labelEx($model, 'title'.$key) ?></div>
     <div class="col2">
         <?php echo $form->textField($model, 'title'.$key, array('class'=>'txt-very-large')); ?>
@@ -11,7 +11,7 @@
     <div class="clear space"></div>
     <?php endforeach; ?>
 
-    <?php foreach($this->listLanguage as $key => $lang):?>
+    <?php foreach($this->listLanguage as $key):?>
     <div class="col1"><?php echo $form->labelEx($model, 'content'.$key) ?></div>
     <div class="col2">
         <?php echo $form->textArea($model, 'content'.$key, array('cols'=>20, 'rows'=>10)); ?>
@@ -57,15 +57,16 @@
     <div class="clear space"></div>
     <?php endforeach; ?>
 
-    <?php foreach($this->listLanguage as $key => $lang):?>
+    <?php foreach($this->listLanguage as $key):?>
 	<div class="col1"><?php echo $form->labelEx($model, 'tag'.$key) ?></div>
 	<div class="col2">
 		<?php echo $form->textField($model, 'tag'.$key, array('class'=>'txt-very-large')); ?>
+        <?php $this->widget('ext.SeoAlias.SeoAlias', array('model'=>$model, 'source'=>'title'.$key, 'target'=>'tag'.$key)); ?>
 	</div>
 	<div class="clear space"></div>
 	<?php endforeach?>
 
-    <?php foreach($this->listLanguage as $key => $lang):?>
+    <?php foreach($this->listLanguage as $key):?>
 	<div class="col1"><?php echo $form->labelEx($model, 'description'.$key) ?></div>
 	<div class="col2">
 		<?php echo $form->textArea($model, 'description'.$key, array('cols'=>20, 'rows'=>5, 'class'=>'textarea-very-large')); ?> <span class="info-keyup<?php echo $key?>">0</span>
@@ -98,7 +99,3 @@
     <div class="clear space"></div>
 </fieldset>
 <?php $this->endWidget();?>
-
-<?php foreach($this->listLanguage as $key => $lang):?>
-	<?php $this->widget('ext.seoAlias.seoAlias', array('model'=>$model, 'source'=>'title'.$key, 'target'=>'tag'.$key)); ?>
-<?php endforeach?>

@@ -3,7 +3,7 @@
 <fieldset>
     <legend><?php echo $this->lang['edit'] ?> <?php echo strtolower($this->lang[$this->module->id]) ?></legend>
 
-    <?php foreach($this->listLanguage as $key => $lang):?>
+    <?php foreach($this->listLanguage as $key):?>
     <div class="col1"><?php echo $form->labelEx($model, 'title'.$key) ?></div>
     <div class="col2">
         <?php echo $form->textField($model, 'title'.$key, array('class'=>'txt-very-large')); ?>
@@ -11,7 +11,7 @@
     <div class="clear space"></div>
     <?php endforeach; ?>
 
-    <?php foreach($this->listLanguage as $key => $lang):?>
+    <?php foreach($this->listLanguage as $key):?>
     <div class="col1"><?php echo $form->labelEx($model, 'content'.$key) ?></div>
     <div class="col2">
         <?php echo $form->textArea($model, 'content'.$key, array('cols'=>20, 'rows'=>10, 'class'=>'textarea-very-large')); ?>
@@ -57,15 +57,16 @@
     <div class="clear space"></div>
     <?php endforeach; ?>
 
-	<?php foreach($this->listLanguage as $key => $lang):?>
-    <div class="col1"><?php echo $form->labelEx($model, 'tag'.$key) ?></div>
-    <div class="col2">
-        <?php echo $form->textField($model, 'tag'.$key, array('class'=>'txt-very-large')); ?>
-    </div>
-    <div class="clear space"></div>
+	<?php foreach($this->listLanguage as $key):?>
+        <div class="col1"><?php echo $form->labelEx($model, 'tag'.$key) ?></div>
+        <div class="col2">
+            <?php echo $form->textField($model, 'tag'.$key, array('class'=>'txt-very-large')); ?>
+        </div>
+        <div class="clear space"></div>
+        <?php $this->widget('ext.SeoAlias.SeoAlias', array('model'=>$model, 'source'=>'title'.$key, 'target'=>'tag'.$key)); ?>
 	<?php endforeach?>
 
-	<?php foreach($this->listLanguage as $key => $lang):?>
+	<?php foreach($this->listLanguage as $key):?>
     <div class="col1"><?php echo $form->labelEx($model, 'description'.$key) ?></div>
     <div class="col2">
         <?php echo $form->textArea($model, 'description'.$key, array('cols'=>20, 'rows'=>5, 'class'=>'textarea-very-large')); ?> <span class="info-keyup<?php echo $key?>">0</span>
@@ -78,15 +79,15 @@
 	</script>
 	<?php endforeach?>
 
-    <div class="col1"><?php echo $form->labelEx($model, 'Hot', array('for'=>get_class($model).'_hot_0')) ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'hot', array('for'=>get_class($model).'_hot_0')) ?></div>
     <div class="col2 radio">
-        <?php echo $form->radioButtonList($model, 'hot', array('0'=>'Normal', '1'=>'Hot'), array('separator'=>'&nbsp;&nbsp;')); ?>
+        <?php echo $form->radioButtonList($model, 'hot', array('0'=>Yii::t('admin', 'no'), '1'=>Yii::t('admin', 'hot')), array('separator'=>'&nbsp;&nbsp;')); ?>
     </div>
     <div class="clear space"></div>
 
-    <div class="col1"><?php echo $form->labelEx($model, 'Show', array('for'=>get_class($model).'_enable_0')) ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'enable', array('for'=>get_class($model).'_enable_0')) ?></div>
     <div class="col2 radio">
-        <?php echo $form->radioButtonList($model, 'enable', array('1'=>'Show', '0'=>'Hidden'), array('separator'=>'&nbsp;&nbsp;')); ?>
+        <?php echo $form->radioButtonList($model, 'enable', array('1'=>Yii::t('admin', 'show'), '0'=>Yii::t('admin', 'hidden')), array('separator'=>'&nbsp;&nbsp;')); ?>
     </div>
     <div class="clear space"></div>
 
@@ -97,7 +98,3 @@
     </div><div class="clear space"></div>
 </fieldset>
 <?php $this->endWidget();?>
-
-<?php foreach($this->listLanguage as $key => $lang):?>
-	<?php $this->widget('ext.SeoAlias.SeoAlias', array('model'=>$model, 'source'=>'title'.$key, 'target'=>'tag'.$key)); ?>
-<?php endforeach?>
