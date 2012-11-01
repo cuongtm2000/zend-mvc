@@ -1,13 +1,5 @@
 <?php
 
-/* -----------------------------------------------------------------------------
-  Pluginseite:
-  http://www.yiiframework.com/extension/usercounter/
-
-  Projektseite:
-  http://andreas.droesch.de/projekte/pcounter/
-  ----------------------------------------------------------------------------- */
-
 class UserCounter extends CComponent {
     public $action;
     public $data;
