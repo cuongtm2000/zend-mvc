@@ -2,10 +2,10 @@
 -- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 01, 2012 at 08:39 AM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
+-- Host: localhost
+-- Generation Time: Nov 01, 2012 at 09:47 AM
+-- Server version: 5.5.16
+-- PHP Version: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -50,8 +50,8 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('adv_right_width', '222', NULL, 'adv'),
 ('adv_top_height', '222', NULL, 'adv'),
 ('adv_top_width', '222', NULL, 'adv'),
-('banner_height', '270', NULL, 'banner'),
-('banner_width', '930', NULL, 'banner'),
+('banner_height', '275', NULL, 'banner'),
+('banner_width', '520', NULL, 'banner'),
 ('contact_email_received', 'thanhansoft@gmail.com', NULL, 'contact'),
 ('contact_host', 'smtp.gmail.com', NULL, 'contact'),
 ('contact_password', 'assas', NULL, 'contact'),
@@ -75,7 +75,15 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('products_height_thumb', '220', NULL, 'products'),
 ('products_width_desc', '520', NULL, 'products'),
 ('products_width_full', '520', NULL, 'products'),
-('products_width_thumb', '220', NULL, 'products');
+('products_width_thumb', '220', NULL, 'products'),
+('projects_cat_height_thumb', '200', NULL, 'projects'),
+('projects_cat_width_thumb', '200', NULL, 'projects'),
+('projects_height_thumb', '200', NULL, 'projects'),
+('projects_num_item_cat', '3', NULL, 'projects'),
+('projects_num_item_hot', '7', '', 'projects'),
+('projects_num_item_index', '3', NULL, 'projects'),
+('projects_num_item_new', '7', NULL, 'projects'),
+('projects_width_thumb', '200', NULL, 'projects');
 
 -- --------------------------------------------------------
 
@@ -188,6 +196,8 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('poll', 'Bình chọn', 0, 'vi'),
 ('products', 'Products', 0, 'en'),
 ('products', 'Sản phẩm', 0, 'vi'),
+('projects', 'Projects', 0, 'en'),
+('projects', 'Dự án', 0, 'vi'),
 ('show', 'Show', 1, 'en'),
 ('show', 'Hiển thị', 1, 'vi'),
 ('sort', 'Sort', 1, 'en'),
@@ -252,6 +262,7 @@ INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_url`, `module_
 ('news', 'Danh mục|Danh sách|Cấu hình', 'news/cat|news|news/config', 4, 1, 1),
 ('poll', 'Danh sách', 'poll', 7, 1, 1),
 ('products', 'Danh mục|Danh sách|Cấu hình', 'products/cat|products|products/config', 3, 1, 1),
+('projects', 'Danh mục|Danh sách|Cấu hình', 'projects/cat|projects|projects/config', 4, 1, 1),
 ('support', 'Danh sách', 'support', 6, 1, 0);
 
 -- --------------------------------------------------------
@@ -303,15 +314,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about` (
   `field2` varchar(100) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=48 ;
-
---
--- Dumping data for table `hoiit_module_about`
---
-
-INSERT INTO `hoiit_module_about` (`record_id`, `pic_thumb`, `created`, `record_order`, `hot`, `field1`, `field2`, `enable`) VALUES
-(46, NULL, '2012-07-16 03:15:05', 1, 0, NULL, NULL, 1),
-(47, NULL, '2012-07-16 03:20:52', 2, 1, NULL, NULL, 1);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -333,16 +336,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
   KEY `fk_hoiit_about_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_about_has_hoiit_languages_hoiit_about1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_about_languages`
---
-
-INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(46, 'en', 'Welcome english', '<p>asdas asa</p>', 'welcome-english', 'dasd', 304, NULL, NULL),
-(46, 'vi', 'Welcome to Yiiproject.com', '<p>Welcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to</p>\r\n<h3>Welcome to Yiiproject.com</h3>\r\n<p>Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.comWelcome to Yiiproject.com Welcome to Yiiproject.com</p>', 'welcome-to-yiiprojectcom', 'das', 353, NULL, NULL),
-(47, 'en', 'About', '<p>Con tnet</p>', 'about', 'dasdsadsads', 293, NULL, NULL),
-(47, 'vi', 'Gioi thieu', '<p>Noi dung</p>', 'gioi-thieu', 'asdasdsd', 293, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -367,17 +360,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_advs` (
   PRIMARY KEY (`record_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
 
---
--- Dumping data for table `hoiit_module_advs`
---
-
-INSERT INTO `hoiit_module_advs` (`record_id`, `title`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `click`, `enable`) VALUES
-(15, 'Quảng cáo Logo', 'quang-cao-logo.jpg', 'http://dos.vn', '2012-07-20 00:22:52', '2012-07-19 17:00:00', '2012-07-22 17:00:00', 0, 3, 'left', '_bank', 0, 1),
-(16, 'Logo right', 'logo-right.png', '', '2012-07-20 01:45:53', '2012-07-19 17:00:00', '2012-08-12 17:00:00', 0, 2, 'right', '_bank', 0, 1),
-(17, 'Quảng cáo', 'quang-cao.jpg', '', '2012-07-20 01:51:12', '2012-07-19 17:00:00', '2012-07-20 17:00:00', 0, 1, 'left', '_bank', 0, 1),
-(18, 'Quảng cáo', 'quang-cao1.jpg', '', '2012-07-20 01:54:15', '2012-07-19 17:00:00', '2012-08-06 17:00:00', 0, 4, 'left', '_bank', 0, 1),
-(19, 'Quảng cáo Logo', 'quang-cao-logo1.jpg', '', '2012-07-22 02:16:26', '2012-07-30 17:00:00', '2012-08-20 17:00:00', 0, 5, 'left', '_bank', 0, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -396,16 +378,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_banners` (
   `module_id` varchar(30) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`banner_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=61 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=59 ;
 
 --
 -- Dumping data for table `hoiit_module_banners`
 --
 
 INSERT INTO `hoiit_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_picture`, `banner_link`, `banner_order`, `banner_type`, `banner_click`, `module_id`, `enable`) VALUES
-(58, '2012-08-07 09:42:19', '', NULL, NULL, NULL, 'logo', 0, NULL, 1),
-(59, '2012-11-01 06:11:07', 'banner', 'banner-8.jpg', '', 1, 'banner', 0, 'default', 1),
-(60, '2012-11-01 06:11:23', 'banner2', 'banner2-5.jpg', '', 2, 'banner', 0, 'default', 1);
+(58, '2012-08-07 09:42:19', '', NULL, NULL, NULL, 'logo', 0, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -421,13 +401,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_contacts` (
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
-
---
--- Dumping data for table `hoiit_module_contacts`
---
-
-INSERT INTO `hoiit_module_contacts` (`record_id`, `created`, `record_order`, `hot`, `enable`) VALUES
-(2, '2012-08-07 01:08:47', 2, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -447,14 +420,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_contacts_languages` (
   KEY `fk_hoiit_module_contacts_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_contacts_has_hoiit_languages_hoiit_module_con1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_contacts_languages`
---
-
-INSERT INTO `hoiit_module_contacts_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`) VALUES
-(2, 'en', 'sdddsds', '', 'sdddsds', 'sdds', 0),
-(2, 'vi', 'sddsds', '<p>dssdds</p>', 'sddsds', 'sdsd', 0);
 
 -- --------------------------------------------------------
 
@@ -575,21 +540,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news` (
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_hoiit_module_news_hoiit_module_news_cat_1` (`hoiit_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
-
---
--- Dumping data for table `hoiit_module_news`
---
-
-INSERT INTO `hoiit_module_news` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
-(1, '2012-07-25 06:18:56', 'tieu-de-bac.jpg', NULL, 3, 1, NULL, NULL, NULL, NULL, NULL, 1, 16),
-(2, '2012-08-01 01:35:08', '', NULL, 2, 0, NULL, NULL, NULL, NULL, NULL, 1, 16),
-(3, '2012-08-01 01:35:15', '', NULL, 1, 0, NULL, NULL, NULL, NULL, NULL, 1, 16),
-(4, '2012-08-01 03:20:22', 'che-bung-bau-kheo-nhu-sao-viet.jpg', NULL, 4, 0, NULL, NULL, NULL, NULL, NULL, 1, 16),
-(5, '2012-08-01 03:20:33', 'bi-kip-giam-dau-dau-khi-mang-thai.jpg', NULL, 5, 0, NULL, NULL, NULL, NULL, NULL, 1, 16),
-(6, '2012-08-08 03:13:09', 'chon-giay-nang-niu-doi-chan-ba-bau.jpg', NULL, 6, 0, NULL, NULL, NULL, NULL, NULL, 1, 16),
-(7, '2012-08-08 07:39:59', 'vu-nhat-duoc-22-trieu-eu-la-tien-gia.jpg', NULL, 7, 0, NULL, NULL, NULL, NULL, NULL, 1, 17),
-(8, '2012-08-08 07:43:26', 'la-chan-ten-lua-my-trung-chay-dua-ky-1.jpg', NULL, 8, 0, NULL, NULL, NULL, NULL, NULL, 1, 17);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -609,16 +560,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_cat` (
   `cat_extra2` varchar(100) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
-
---
--- Dumping data for table `hoiit_module_news_cat`
---
-
-INSERT INTO `hoiit_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
-(16, 0, '2012-07-25 06:11:55', 'tin-tuc-cho-ba-bau.jpg', NULL, 0, 16, NULL, NULL, 1),
-(17, 0, '2012-08-08 07:37:28', 'tin-tuc-trong-ngay.jpg', NULL, 0, 17, NULL, NULL, 1),
-(18, 17, '2012-08-09 02:14:55', '', NULL, 0, 18, NULL, NULL, 1);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -637,18 +579,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_cat_languages` (
   KEY `fk_hoiit_module_news_cat_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_news_cat_has_hoiit_languages_hoiit_module_ne1` (`cat_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_news_cat_languages`
---
-
-INSERT INTO `hoiit_module_news_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
-(16, 'en', 'News for pregnant women', '', 'news-for-pregnant-women', 'News for pregnant women'),
-(16, 'vi', 'Tin tức cho bà bầu', '', 'tin-tuc-cho-ba-bau', 'Tin tức cho bà bầu'),
-(17, 'en', 'News of the day', '', 'news-of-the-day', ''),
-(17, 'vi', 'Tin tức trong ngày', '', 'tin-tuc-trong-ngay', ''),
-(18, 'en', '', '', '', ''),
-(18, 'vi', 'sdsdsds', '', 'sdsdsds', '');
 
 -- --------------------------------------------------------
 
@@ -671,28 +601,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_languages` (
   KEY `fk_hoiit_module_news_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_news_has_hoiit_languages_hoiit_module_news1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_news_languages`
---
-
-INSERT INTO `hoiit_module_news_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(1, 'en', '', '', '', '', 'fsdfdfsdfsdf', 0, NULL, NULL),
-(1, 'vi', 'Tieu de "bac"', '<p>sdfsdfsdfsdf</p>', '<p>asdasdsa</p>', 'tieu-de-bac', 'sdfsd', 0, NULL, NULL),
-(2, 'en', '', '<p>asd</p>', '', '', '', 0, NULL, NULL),
-(2, 'vi', 'asdas', '<p>dasdas</p>', '<p>asdsad</p>', 'asdas', '', 0, NULL, NULL),
-(3, 'en', '', '', '', '', '', 0, NULL, NULL),
-(3, 'vi', 'asdasdssdd', '<p>dasdsads</p>', '<p>asdsa</p>', 'asdasdssdd', '', 0, NULL, NULL),
-(4, 'en', 'Cover your belly like a star Vietnamese smart', '<p>Smart dresses that pregnant women are showing that the body is very neat fashion.</p>', '<p><strong>Smart dresses that pregnant women are showing that the body is very neat fashion.</strong></p>\r\n<p>When pregnant, though no longer owns the slim body, sexy as before but has always kept a beautiful fashion pictures for his appearances in public. No longer hugging dresses, sexy rather starry Vietnamese often choose their own design style skirt goes well, baggy belly that just obscures the beauty can still fashionable, so smooth is also being considered as a in the mainstream of the fashion world today. In addition, the vignette style skirt or dress in dark colors is also an effective public service to mask the bloated belly, but when looked through, it was hardly recognizable.</p>\r\n<p>Let''s learn overheard Vietnamese pregnant women in showbiz they cleverly hide belly like circumstances:</p>', 'cover-your-belly-like-a-star-vietnamese-smart', 'Smart dresses that pregnant women are showing that the body is very neat fashion.', 0, NULL, NULL),
-(4, 'vi', 'Che bụng bầu khéo như sao Việt', '<p>Những chiếc váy thông minh giúp các bà bầu khoe được cơ thể gọn gàng mà vẫn thật thời trang.</p>', '<p><strong>Những chiếc váy thông minh giúp các bà bầu khoe được cơ thể gọn gàng mà vẫn thật thời trang.</strong></p>\r\n<p>Khi mang bầu, dù không còn sở hữu thân hình thon gọn, gợi cảm như trước kia nhưng các người đẹp vẫn luôn giữ một hình ảnh thời trang cho mình khi xuất hiện trước công chúng. Không còn là những bộ đầm ôm sát, sexy thay vào đấy sao Việt thường xuyên chọn cho mình các kiểu váy dáng suôn, thụng vừa che lấp bụng bầu mà vẫn thể hiện nét đẹp thời thượng, bởi váy suôn cũng đang được xem là một trong những trào lưu của thời trang thế giới hiện nay. Bên cạnh đó, các kiểu váy in họa tiết hoặc váy tối màu cũng là một công vụ hữu hiệu nhằm che đi chiếc bụng bầu cồng kềnh mà khi nhìn qua, người ta khó có thể nhận ra được.</p>\r\n<p>Hãy cùng học lỏm các bà bầu trong showbiz Việt xem họ khéo léo che bụng bầu như thế nào nhé:</p>\r\n<p style="text-align:center;"><img style="margin-top:5px;margin-bottom:5px;" src="/cms/public/userfiles/image/1344330556-1.jpg" alt="" width="259" height="550" /></p>\r\n<p style="text-align:center;"><img style="margin-top:5px;margin-bottom:5px;" src="/cms/public/userfiles/image/1344330556-2.jpg" alt="" width="470" height="550" /></p>\r\n<p style="text-align:center;"><img style="margin-top:5px;margin-bottom:5px;" src="/cms/public/userfiles/image/1344330556-6.jpg" alt="" width="409" height="550" /></p>\r\n<p style="text-align:left;"> </p>', 'che-bung-bau-kheo-nhu-sao-viet', 'Những chiếc váy thông minh giúp các bà bầu khoe được cơ thể gọn gàng mà vẫn thật thời trang.', 0, NULL, NULL),
-(5, 'en', 'Tip pain of pregnancy', '<p>Headaches are fairly common disease in women, especially women who work office.</p>', '<p>Headaches are fairly common disease in women, especially women who work office.</p>\r\n<p>There are many ways to prevent headaches during pregnancy, without medication, try some of the following measures:</p>\r\n<p>- Determining causes of headache. You should monitor your diet, activity and headaches for a few days to determine the cause and try to avoid headache triggers.</p>\r\n<p>- Exercise daily. Try walking or aerobic exercise all in accordance with your health.</p>\r\n<p>- Control strain. Look for a healthy solution to control stress in life as a reasonable allocation of work and spend more time with loved ones.</p>\r\n<p>- Try eating small meals. The small and regular meals help you maintain stable blood sugar and prevent headaches.</p>\r\n<p>- Drink plenty of water. Providing enough water for your body gives you a sense of euphoria.</p>\r\n<p style="text-align:center;"><img style="margin-top:5px;margin-bottom:5px;" src="/cms/public/userfiles/image/1344333382-babaudaudau1.jpg" alt="" width="500" height="381" /></p>\r\n<p>- Go to bed on time. Sleep disturbances and lack of sleep will lead to headaches during pregnancy. You should go to bed early and wake up on time every day, including weekends.</p>\r\n<p>- Consider biofeedback therapy. With mind-body techniques, you can learn how to control body functions - such as muscle tension, heart rate and blood pressure-to prevent headaches and pain. If you want to try biofeedback therapy to treat headaches during pregnancy, please consult your therapist.</p>\r\n<p><strong>When pain strikes, you go:</strong></p>\r\n<p>- Rest. You are in a dark room, quiet and close your eyes to rest.</p>\r\n<p>- Chuom warm. Apply a warm pad (or a warm towel) on the face, eyes and temples of you or put a piece of ice behind the neck.</p>\r\n<p>- Try massage. Please bother someone shoulder and neck massage to relieve stress, or self-massage temples.</p>\r\n<p>If these measures are not effective, go to the doctor to treat headaches during pregnancy.</p>\r\n<p>Most pregnant women can use acetaminophen and some other drugs to stop headaches. Your doctor can diagnose and prescribe medications for you.</p>', 'tip-pain-of-pregnancy', 'Headaches are fairly common disease in women, especially women who work office.', 0, NULL, NULL),
-(5, 'vi', 'Bí kíp giảm đau đầu khi mang thai', '<p>Đau đầu là chứng bệnh khá thường gặp ở thai phụ, nhất là những phụ nữ làm việc văn phòng.</p>', '<p>Đau đầu là chứng bệnh khá thường gặp ở thai phụ, nhất là những phụ nữ làm việc văn phòng.</p>\r\n<p>Có rất nhiều cách phòng ngừa chứng đau đầu trong thời kỳ mang thai mà không cần dùng thuốc, bạn hãy thử một số biện pháp sau:</p>\r\n<p>- Xác định nguyên nhân gây đau đầu. Bạn nên theo dõi các bữa ăn, hoạt động và cơn đau đầu trong một vài ngày để xác định nguyên nhân và cố gắng tránh các yếu tố gây đau đầu.</p>\r\n<p>- Tập luyện hàng ngày. Hãy thử đi bộ hoặc luyện tập các bài aerobic phù hợp với sức khỏe của bạn.</p>\r\n<p>- Kiểm soát căng thẳng. Hãy tìm các giải pháp lành mạnh để kiểm soát áp lực trong cuộc sống như phân bổ công việc hợp lý và giành nhiều thời gian bên cạnh người thân.</p>\r\n<p>- Ăn thành nhiều bữa nhỏ. Các bữa ăn nhỏ và đều đặn giúp bạn duy trì lượng đường huyết ổn định và ngăn ngừa cơn đau đầu.</p>\r\n<p>- Uống nhiều nước. Cung cấp đủ lượng nước cho cơ thể sẽ mang lại cho bạn cảm giác sảng khoái.</p>\r\n<p style="text-align:center;"><img style="margin-top:5px;margin-bottom:5px;" src="/cms/public/userfiles/image/1344333382-babaudaudau1.jpg" alt="" width="500" height="381" /></p>\r\n<p style="text-align:left;">- Đi ngủ đúng giờ. Ngủ chập chờn và thiếu ngủ sẽ dẫn đến đau đầu trong thời kỳ mang thai. Bạn nên đi ngủ sớm và thức dậy đúng giờ hàng ngày, kể cả ngày cuối tuần.</p>\r\n<p>- Xem xét liệu pháp phản hồi sinh học. Với kỹ thuật tâm-thể, bạn có thể học cách kiểm soát các chức năng cơ thể - như căng cơ, nhịp tim và huyết áp- để phòng ngừa đau đầu và giảm đau. Nếu bạn muốn thử liệu pháp phản hồi sinh học để chữa trị cơn đau đầu trong thời kỳ mang thai, hãy xin tư vấn của bác sĩ trị liệu.</p>\r\n<p><strong>Khi cơn đau đầu tấn công, bạn hãy:</strong></p>\r\n<p>- Nghỉ ngơi. Bạn hãy nằm trong phòng tối, yên tĩnh và nhắm mắt lại để nghỉ ngơi.</p>\r\n<p>- Chườm ấm. Đắp một miếng gạc ấm (hoặc một khăn ấm) lên mặt, mắt và thái dương của bạn hoặc đặt một miếng chườm lạnh phía sau cổ.</p>\r\n<p>- Thử xoa bóp. Bạn hãy phiền ai đó xoa bóp vai và cổ để giảm căng thẳng, hoặc tự xoa bóp thái dương.</p>\r\n<p>Nếu những biện pháp trên không hiệu quả, bạn hãy đến gặp bác sĩ để điều trị chứng đau đầu trong thời kỳ mang thai.</p>\r\n<p>Hầu hết phụ nữ mang thai có thể sử dụng thuốc acetaminophen và một số loại thuốc khác để chấm dứt cơn đau đầu. Bác sĩ có thể khám và kê đơn loại thuốc phù hợp với bạn.</p>', 'bi-kip-giam-dau-dau-khi-mang-thai', 'Đau đầu là chứng bệnh khá thường gặp ở thai phụ, nhất là những phụ nữ làm việc văn phòng.', 0, NULL, NULL),
-(6, 'en', 'Choose shoes cherish her ​​legs elected', '<p>Choose a suitable pair of shoes will make her feel safe voting and comfortable pregnancy.</p>', '<p>The selection of shoes during pregnancy is extremely important especially for pregnant mothers often have to travel a lot. We all know that during pregnancy, body weight increased significantly and this means that elected her legs also increase the size to support the body safely.</p>\r\n<p>According to researchers, foot size women during pregnancy will change and this much to the difficulty in choosing the appropriate shoes. In addition, safety shoes is also essential for pregnant women are often out of sight down the leg by the belly, so walking is easy to be tripped or slipped.</p>', 'choose-shoes-cherish-her-legs-elected', 'Choose a suitable pair of shoes will make her feel safe voting and comfortable pregnancy.', 0, NULL, NULL),
-(6, 'vi', 'Chọn giày nâng niu đôi chân bà bầu', '<p>Chọn được một đôi giày phù hợp sẽ khiến mẹ bầu có cảm giác an toàn và thoải mái khi bầu bí.</p>', '<div><span style="font-size:11pt;">Việc chọn giày dép trong thời gian mang bầu là vô cùng quan trọng nhất là với những mẹ bầu thường xuyên phải đi lại nhiều. Chúng ta đều biết trong thời gian mang bầu, trọng lượng cơ thể sẽ tăng lên đáng kể và điều này đồng nghĩa với việc đôi chân mẹ bầu cũng tăng kích cỡ để nâng đỡ cơ thể một cách an toàn.</span></div>\r\n<div><span style="font-size:11pt;">Theo các nhà nghiên cứu, kích cỡ chân chị em trong thời gian mang thai sẽ thay đổi nhiều và điều này tạo lên sự khó khăn trong việc chọn được đôi giày phù hợp. Ngoài ra, sự an toàn của đôi giày cũng là điều rất cần thiết vì khi mang thai chị em thường bị khuất tầm nhìn xuống chân bởi bụng bầu, vì vậy khi đi lại rất dễ bị vấp hoặc trượt chân.</span></div>\r\n<p style="text-align:center;"><img style="margin-top:5px;margin-bottom:5px;" src="/cms/public/userfiles/image/1344332156-babau.jpg" alt="" width="500" height="333" /></p>\r\n<p style="text-align:left;"><span style="font-size:11pt;"><strong>Vì sao chân lại phình to khi mang thai?</strong></span></p>\r\n<p>Có 3 lí do dưới đây khiến chân bà bầu phình to ra:</p>\r\n<p>Lí do thứ nhất là chân của bạn bị to ra do chứng phù – là một trong những triệu chứng bạn thường gặp trong thai kì. Nguyên nhân của chứng phù là do sự trữ nước. Chân bạn càng to hơn nếu như bạn lại diện một đôi tất dày. Chính vì vậy mà đôi giày đang đi không thể nào mà đi nổi nữa. Tuy nhiên, không phải là do uống nhiều nước khiến bạn như thế đâu. Bạn không nên cắt giảm lượng nước uống vào. Mỗi ngày uống khoảng 8 ly nước, chứng phù sẽ giảm.</p>\r\n<p>Lí do thứ hai là chắc chắn trong thai kì, bạn tăng cân tới mức “khủng” rồi cho nên chân to ra là điều dĩ nhiên. Cần phải có được một chế độ ăn cân bằng theo hướng dẫn của các chuyên gia dinh dưỡng để sau sinh, chân bạn trở lại bình thường.</p>\r\n<p>Lí do cuối cùng là do hormone gọi là relaxin. Để chuẩn bị cho sự ra đời của bé yêu, cơ thể bạn sẽ làm lỏng các gân, cơ khiến cho bé có không gian trong bụng để phát triển, cũng là để cơ thể bạn có độ đàn hồi vào thời gian bé “chui” ra. Thật không may là hormone relaxin không chỉ có ở chỗ cần có mà còn có ở chỗ không cần có ấy là ở đôi chân của bạn. Chân bạn cũng sẽ bị to ra.</p>\r\n<p style="text-align:center;"><img style="margin-top:5px;margin-bottom:5px;" src="/cms/public/userfiles/image/1344332198-babau4.jpg" alt="" width="366" height="550" /></p>\r\n<p style="text-align:left;"><span style="font-size:11pt;"><strong>Lưu ý khi chọn giầy cho bà bầu</strong></span></p>\r\n<p><span style="font-size:11pt;">- Kích cỡ: Ở mỗi tư thế khác nhau, chân sẽ dãn nở theo chiều hướng khác nhau, vì thế nên cân nhắc kĩ đến số size của giày, tốt nhất là nên chọn đôi to hơn chân khoảng 10mm.</span></p>\r\n<p><span style="font-size:11pt;">- Kiểu dáng: Nên chọn những đôi có mõm tròn, to, rộng, ôm chân, chất liệu giày mềm giúp các bà mẹ đi lại thuận tiện.</span></p>\r\n<p><span style="font-size:11pt;">Bạn cũng nên chọn những đôi giầy có quai dán hoặc dây buộc có độ co dãn cao, tạo sự nhanh chóng khi mang tháo cũng là ưu tiên số 1.</span></p>\r\n<p><span style="font-size:11pt;">- Thời gian thay giày: Giày đi trong 6 tháng đầu và 3 tháng cuối cũng không giống nhau. Ở những tháng cuối, các bà mẹ nên chọn đôi có phần bảo vệ gót, tránh hiện tượng đau chân và tạo sự an toàn cho mẹ và bé.</span></p>\r\n<p><span style="font-size:11pt;">- Lưu ý đến độ cao của gót: Độ cao lý tưởng cho gót là 15 - 30mm. Dù cho những đôi giày cao gót thời trang luôn hấp dẫn nhưng với trọng lượng cơ thể ngày 1 tăng, bước đi ngày 1 nặng nề, đi giày gót cao có thể ảnh hưởng đến lòng bàn chân và các khớp gối.</span></p>\r\n<p><span style="font-size:11pt;">- Cuối cùng đó là độ ma sát của đế giày: Nên chọn đôi có độ ma sát cao, tạo sự tự tin, vững chắc trong mỗi bước đi.</span></p>', 'chon-giay-nang-niu-doi-chan-ba-bau', 'Chọn được một đôi giày phù hợp sẽ khiến mẹ bầu có cảm giác an toàn và thoải mái khi bầu bí.', 0, NULL, NULL),
-(7, 'en', 'Department for "pick up" is 22 million: Property is counterfeit money', '<p>On 7/8, from Phan Thiet Police (Binh Thuan) said polymer assessment results captured in the field of construction residential areas north of Xuan An (Ward Spring Security) gave results counterfeit money</p>', '<p><img style="float:left;margin:5px;" src="/cms/public/userfiles/image/1344410472_tien-roi.jpg" alt="" width="200" height="200" />On 7/8, from Phan Thiet Police (Binh Thuan) said polymer assessment results captured in the field of construction residential areas north of Xuan An (Ward Spring Security) gave results counterfeit money</p>\r\n<p>To date, the collection and submission of the people themselves have seized more than 22 million (including two par value 500 thousand and 200 thousand). Detection characteristics of money and can have many different materials with real money in circulation. At the same time as the money you hand creases. Has not yet determined how much money people found to be occupied ...</p>\r\n<p>As previously reported, on 1/8, while the vehicle draw construction residential North Spring Security, workers discovered a bag of money. Then the workers and people have picked up an enormous amount of money different denominations of 500 thousand and 200 thousand dollars.</p>', 'department-for-pick-up-is-22-million-property-is-counterfeit-money', 'On 7/8, from Phan Thiet Police (Binh Thuan) said polymer assessment results captured in the field of construction residential areas north of Xuan An (Ward Spring Security) gave results counterfeit money', 0, NULL, NULL),
-(7, 'vi', 'Vụ "nhặt" được 22 triệu: Đều là tiền giả', '<p>Ngày 7/8, tin từ Công an TP.Phan Thiết (Bình Thuận) cho biết: Kết quả giám định tiền polymer thu giữ được tại hiện trường thi công khu dân cư bắc Xuân An (phường Xuân An) đã cho kết quả là tiền giả</p>', '<p><img style="float:left;margin:5px;" src="/cms/public/userfiles/image/1344410472_tien-roi.jpg" alt="" width="200" height="200" />Ngày 7/8, tin từ Công an TP.Phan Thiết (Bình Thuận) cho biết: Kết quả giám định tiền polymer thu giữ được tại hiện trường thi công khu dân cư bắc Xuân An (phường Xuân An) đã cho kết quả là tiền giả</p>\r\n<p>Đến nay, qua thu gom và người dân tự giao nộp đã thu giữ được trên 22 triệu đồng (bao gồm cả hai mệnh giá 500 ngàn đồng và 200 ngàn đồng). Đặc điểm của tiền phát hiện có nhiều điểm và có chất liệu khác so với tiền thật đang lưu hành. Đồng thời khi dùng tay vò thì tiền nhăn lại. Đến nay vẫn chưa xác định còn bao nhiêu tiền phát hiện đang được người dân chiếm giữ...</p>\r\n<p>Như đã đưa tin, ngày 1/8, trong lúc dùng xe múc thi công khu dân cư bắc Xuân An, các công nhân phát hiện một túi tiền. Sau đó công nhân và người dân đã nhặt lấy đi một lượng lớn tiền loại mệnh giá 500 ngàn đồng và 200 ngàn đồng.</p>', 'vu-nhat-duoc-22-trieu-deu-la-tien-gia', 'Ngày 7/8, tin từ Công an TP.Phan Thiết (Bình Thuận) cho biết: Kết quả giám định tiền polymer thu giữ được tại hiện trường thi công khu dân cư bắc Xuân An (phường Xuân An) đã cho kết quả là tiền giả', 0, NULL, NULL),
-(8, 'en', 'Missile shield: U.S. - China racing (Term 1)', '<p>March / 2012, revealed the Pentagon, the U.S. will deploy a global missile defense, including its Asia - Pacific with missile interceptor base located in the sea and the base in the U.S. west coast region.</p>', '<p>March / 2012, revealed the Pentagon, the U.S. will deploy a global missile defense, including its Asia - Pacific with missile interceptor base located in the sea and the base in the U.S. west coast region.</p>\r\n<p>Americans are hoping to win the absolute advantage in all aspects of Asian regions - Pacific, especially showing his strength with China. However, Washington does not want and can not direct military confrontation with Beijing, but only want to prevent, restrain, which encircle China "have won according to orbit."</p>\r\n<p>Beijing expressed concern</p>\r\n<p>Related to missile defense in Asia - Pacific, Assistant Secretary of Defense on issues of global strategy, said Ms. Madelyn Creedon, the effort to build this system are located in the tripartite dialogue mechanism , one with Japan and Australia, one with Japan and South Korea.</p>\r\n<p>According to the Pentagon, the missile defense shield could help combat the threat from Iran and North Korea with its neighbors and help protect America against all attacks by long-range missile that two country can develop in the future.</p>\r\n<p>After the statement of the U.S., China immediately expressed concern, saying plans to deploy missile defense system in Asia of the U.S. imbalance will make the military balance in this area. To maintain a deterrent force reliable, Beijing can not modernize its nuclear arsenal to meet the practical requirements of modern warfare.<br />The Tigers Major General Zhu, Chinese Academy of National Defense said that the "missile defense system would undermine strategic stability." The general soon became famous in 2005 when the event loudly declared, if the U.S. military intervention on the issue of conflict resolution between the mainland and Taiwan, Beijing might use nuclear weapons, for that, "China needs to improve viability, the ability to phase through to its nuclear weapons; if not, we can not ensure the reliability of nuclear deterrence."</p>\r\n<p>Over the next three U.S. defense department, China is implementing 130-195 ballistic missiles carrying nuclear warheads. Forecast vague figures proved American intelligence about nuclear weapons storage China is inaccurate or does not want to publish the real numbers. So far, Chinese military officials have not given any information mentioned specifically linked to Beijing will use any measures to modernize its nuclear arsenal to be able to deal successfully with the missile shield the U.S. plans to deploy in the area in the future.</p>\r\n<p>War without guns?</p>\r\n<p>According to today''s Russia, if the U.S. could make China a year wasted hundreds of billions of dollars to strengthen the military was an arms race with them, can lead to the weakening of the economy and the consequences social evil that Washington does not take a gun, a gun.</p>\r\n<p>China''s GDP in 2011 was nearly 7,500 billion, only half of Americans (15 100 billion). Furthermore, many economic experts believe that, to assess an economic substance, must come from the GDP per capita. As reported by the World Bank (WB) in 2005, some countries have per capita incomes greater than China''s 127 countries.</p>\r\n<p>In 2009, per capita income of China reached only $ 3,650, lower than 124 countries around the world. Data from the International Monetary Fund (IMF) in 2009 also showed that per capita GDP of U.S. $ 46,000, then Japan for about $ 40,000, while China''s is $ 4000, while China''s GDP and Japan is nearly equal to each other. So, while China now ranks as the second largest economy in the world but with far inferior resources, to cope with my test is still a long way.</p>', 'missile-shield-us-china-racing-term-1', 'March / 2012, revealed the Pentagon, the U.S. will deploy a global missile defense, including its Asia - Pacific with missile interceptor base located in the sea and the base in the U.S. west coast region.', 0, NULL, NULL),
-(8, 'vi', 'Lá chắn tên lửa: Mỹ - Trung chạy đua (Kỳ 1)', '<p>Tháng 3/2012, Lầu Năm Góc tiết lộ, Mỹ sẽ triển khai hệ thống phòng thủ tên lửa toàn cầu của mình trong đó có châu Á - TBD với các tên lửa đánh chặn bố trí tại các căn cứ trên biển và các căn cứ ở khu vực bờ tây nước Mỹ.</p>', '<p>Tháng 3/2012, Lầu Năm Góc tiết lộ, Mỹ sẽ triển khai hệ thống phòng thủ tên lửa toàn cầu của mình trong đó có châu Á - TBD với các tên lửa đánh chặn bố trí tại các căn cứ trên biển và các căn cứ ở khu vực bờ tây nước Mỹ.</p>\r\n<p>Mỹ đang hy vọng giành được ưu thế tuyệt đối về mọi mặt ở khu vực châu Á - TBD, đặc biệt là thể hiện sức mạnh của mình với Trung Quốc. Tuy nhiên, Washington không muốn và có thể không đối đầu quân sự trực tiếp với Bắc Kinh mà chỉ muốn ngăn chặn, kiềm chế, bao vây khiến Trung Quốc "phải uốn theo quỹ đạo của mình".</p>\r\n<p>Bắc Kinh bày tỏ lo ngại</p>\r\n<p>Liên quan đến lá chắn tên lửa châu Á - TBD, trợ lý Bộ trưởng Quốc phòng Mỹ về các vấn đề chiến lược toàn cầu bà Madelyn Creedon cho biết, các nỗ lực xây dựng hệ thống này được đặt trong cơ chế đối thoại ba bên, một với Nhật Bản và Australia, một với Nhật Bản và Hàn Quốc.</p>\r\n<p>Theo Lầu Năm Góc, những lá chắn phòng thủ tên lửa này có thể giúp chống lại những mối đe dọa từ Iran và CHDCND Triều Tiên với các nước láng giềng và giúp bảo vệ Mỹ trước mọi cuộc tấn công bằng tên lửa tầm xa mà hai nước có thể phát triển trong tương lai.</p>\r\n<p>Sau tuyên bố của Mỹ, Trung Quốc ngay lập tức bày tỏ sự lo ngại khi cho rằng, kế hoạch triển khai hệ thống phòng thủ tên lửa của Mỹ tại châu Á sẽ làm mất thăng bằng cán cân quân sự ở khu vực này. Để duy trì một lực lượng răn đe đáng tin cậy, Bắc Kinh không thể không hiện đại hóa kho vũ khí hạt nhân của mình để đáp ứng với yêu cầu thực tiễn của chiến tranh hiện đại.</p>\r\n<p style="text-align:center;"><img style="margin-top:5px;margin-bottom:5px;" src="/cms/public/userfiles/image/1344402826-chay-dua-1.jpg" alt="" width="400" height="268" /></p>\r\n<p style="text-align:left;">Thiếu tướng Chu Thành Hổ, Học viện Quốc phòng Trung Quốc nhận định, "hệ thống phòng thủ tên lửa sẽ phá hoại sự ổn định chiến lược". Viên tướng sớm nổi tiếng với sự kiện năm 2005 khi lớn tiếng tuyên bố, nếu như Mỹ can thiệp quân sự vào vấn đề giải quyết xung đột giữa Đại Lục và Đài Loan thì Bắc Kinh có thể sẽ sử dụng vũ khí hạt nhân, cho rằng, "Trung Quốc cần phải nâng cao khả năng tồn tại, khả năng xuyên phá cho vũ khí hạt nhân của mình; nếu không, chúng ta không thể bảo đảm độ tin cậy của răn đe hạt nhân".</p>\r\n<p>Theo tính toán của Bộ Quốc phòng Mỹ, Trung Quốc hiện đang triển khai 130 - 195 tên lửa đạn đạo mang đầu đạn hạt nhân. Dự đoán mơ hồ này chứng tỏ số liệu tình báo của Mỹ về kho vũ khí hạt nhân của Trung Quốc là không chính xác hoặc không muốn công bố con số thực sự. Cho đến nay, giới chức quân sự Trung Quốc vẫn chưa đưa ra bất cứ thông tin đề cập cụ thể đến việc Bắc Kinh sẽ sử dụng biện pháp nào để hiện đại hóa kho vũ khí hạt nhân của mình để có thể đối phó thành công với lá chắn tên lửa mà Mỹ dự định triển khai ở khu vực này trong tương lai.</p>\r\n<p>Cuộc chiến không tiếng súng?</p>\r\n<p>Theo báo Nước Nga ngày nay, nếu Mỹ có thể làm cho Trung Quốc hao phí mỗi năm hàng trăm tỷ USD để tăng cường quân bị chạy đua vũ trang với mình, có thể dẫn đến sự suy yếu của nền kinh tế và các hệ quả xấu về mặt xã hội mà Washington không tốn một khẩu súng, một viên đạn nào.</p>\r\n<p>Tổng GDP của Trung Quốc năm 2011 là gần 7.500 tỷ USD, chỉ bằng một nửa của Mỹ (15.100 tỷ). Hơn nữa, nhiều chuyên gia kinh tế cho rằng, để đánh giá thực chất một nền kinh tế, phải xuất phát từ GDP tính theo đầu người. Theo báo cáo của Ngân hàng Thế giới (WB) năm 2005, số nước có thu nhập bình quân đầu người lớn hơn Trung Quốc là 127 nước.</p>\r\n<p>Năm 2009, thu nhập bình quân đầu người của Trung Quốc chỉ đạt 3.650 USD, còn thấp hơn 124 nước trên thế giới. Số liệu của Quỹ tiền tệ quốc tế (IMF) năm 2009 cũng cho thấy GDP bình quân đầu người của Mỹ là 46.000 USD, sau đó là Nhật khoảng 40.000 USD, còn của Trung Quốc chỉ là 4.000 USD, trong khi GDP của Trung Quốc và Nhật Bản gần tương đương với nhau. Vì vậy, tuy hiện nay Trung Quốc được xếp hạng là nền kinh tế lớn thứ hai trên thế giới nhưng với tiềm lực thua kém quá xa, để đối đầu với Mỹ thì vẫn còn là một chặng đường dài.</p>', 'la-chan-ten-lua-my-trung-chay-dua-ky-1', 'March / 2012, revealed the Pentagon, the U.S. will deploy a global missile defense, including its Asia - Pacific with missile interceptor base located in the sea and the base in the U.S. west coast region.', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -731,7 +639,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_pcounter_users` (
 --
 
 INSERT INTO `hoiit_module_pcounter_users` (`user_ip`, `user_time`) VALUES
-('''127.0.0.1''', 1351754044);
+('''::1''', 1351743750);
 
 -- --------------------------------------------------------
 
@@ -808,18 +716,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products` (
   KEY `fk_hoiit_module_products_hoiit_module_products_cat1` (`hoiit_module_item_cat_cat_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
---
--- Dumping data for table `hoiit_module_products`
---
-
-INSERT INTO `hoiit_module_products` (`record_id`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `record_order`, `unit`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
-(1, '2012-07-31 03:58:20', 'xe-day-3-banh-cho-be-thumb.jpg', 'xe-day-3-banh-cho-be.jpg', NULL, 1, '175000', 0, NULL, NULL, NULL, NULL, NULL, 1, 5),
-(2, '2012-07-31 04:54:34', 'car-racer-bac-speedster-thumb.jpg', 'car-racer-bac-speedster.jpg', NULL, 2, '45000', 0, NULL, NULL, NULL, NULL, NULL, 1, 5),
-(3, '2012-07-31 04:54:43', 'famosa-magic-fairy-quad-bike-thumb.jpg', 'famosa-magic-fairy-quad-bike.jpg', NULL, 3, '250000', 0, NULL, NULL, NULL, NULL, NULL, 1, 5),
-(4, '2012-08-08 02:58:58', 'peppa-pig-standard-playhouse-thumb.jpg', 'peppa-pig-standard-playhouse.jpg', NULL, 4, '110000', 0, NULL, NULL, NULL, NULL, NULL, 1, 7),
-(5, '2012-08-08 03:00:43', 'maxi-cosi-cabriofix-infant-carrier-thumb.jpg', 'maxi-cosi-cabriofix-infant-carrier.jpg', NULL, 5, '145000', 0, NULL, NULL, NULL, NULL, NULL, 1, 5),
-(6, '2012-08-08 03:02:20', 'kids-toy-piano-thumb.jpg', 'kids-toy-piano.jpg', NULL, 6, '98000', 0, NULL, NULL, NULL, NULL, NULL, 1, 5);
-
 -- --------------------------------------------------------
 
 --
@@ -840,21 +736,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products_cat` (
   PRIMARY KEY (`cat_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
---
--- Dumping data for table `hoiit_module_products_cat`
---
-
-INSERT INTO `hoiit_module_products_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
-(5, 0, '2012-07-25 06:28:10', 'giay-dep.jpg', NULL, 0, 5, NULL, NULL, 1),
-(6, 5, '2012-07-30 13:45:47', '', NULL, 0, 6, NULL, NULL, 1),
-(7, 0, '2012-07-31 04:00:12', '', NULL, 0, 7, NULL, NULL, 1),
-(8, 6, '2012-08-09 02:56:41', '', NULL, 0, 8, NULL, NULL, 1),
-(9, 5, '2012-08-09 04:01:21', '', NULL, 0, 9, NULL, NULL, 1),
-(10, 5, '2012-08-09 07:34:14', '', NULL, 0, 10, NULL, NULL, 1),
-(11, 10, '2012-08-09 07:34:33', '', NULL, 0, 11, NULL, NULL, 1),
-(12, 10, '2012-08-09 07:34:43', '', NULL, 0, 12, NULL, NULL, 1),
-(13, 6, '2012-08-09 10:10:45', '', NULL, 0, 13, NULL, NULL, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -872,30 +753,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products_cat_languages` (
   KEY `fk_hoiit_module_products_cat_has_hoiit_languages_hoiit_langua1` (`language_id`),
   KEY `fk_hoiit_module_products_cat_has_hoiit_languages_hoiit_module1` (`cat_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_products_cat_languages`
---
-
-INSERT INTO `hoiit_module_products_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
-(5, 'en', 'Footwear', '', 'footwear', 'Footwear'),
-(5, 'vi', 'Giày dép', '', 'giay-dep', 'Giày dép'),
-(6, 'en', '', '', '', ''),
-(6, 'vi', 'Sub cat', '', 'sub-cat', ''),
-(7, 'en', 'Outdoor Toys', '', 'outdoor-toys', 'Outdoor Toys'),
-(7, 'vi', 'Ngoài trời đồ chơi', '', 'ngoai-troi-do-choi', 'Ngoài trời đồ chơi'),
-(8, 'en', '', '', '', ''),
-(8, 'vi', 'Sub sub', '', 'sub-sub', ''),
-(9, 'en', '', '', '', ''),
-(9, 'vi', 'Khi', '', 'khi', ''),
-(10, 'en', '', '', '', ''),
-(10, 'vi', 'Xe hơi', '', 'xe-hoi', ''),
-(11, 'en', '', '', '', ''),
-(11, 'vi', 'Xe có hơi', '', 'xe-co-hoi', ''),
-(12, 'en', '', '', '', ''),
-(12, 'vi', 'Xe hết hơi', '', 'xe-het-hoi', ''),
-(13, 'en', '', '', '', ''),
-(13, 'vi', 'Sub sub cat', '', 'sub-sub-cat', '');
 
 -- --------------------------------------------------------
 
@@ -919,23 +776,104 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products_languages` (
   KEY `fk_hoiit_module_products_has_hoiit_languages_hoiit_module_pro1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `hoiit_module_products_languages`
+-- Table structure for table `hoiit_module_projects`
 --
 
-INSERT INTO `hoiit_module_products_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(1, 'en', 'Quinny Buzz 3-wheeler pushchair', '<p>Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h</p>', '<p>Delivery<br />Home delivery only. Delivery to most customers in the UK is within 5 working days. Please note, we can only deliver this item to mainland UK addresses.</p>\r\n<p>This product is only available for delivery to mainland UK</p>\r\n<p>No Quibble Returns<br />ELC are happy to refund or exchange any unused merchandise returned within 28 days of purchase upon production of your receipt, as long as they are returned in an unused condition and in their original packaging. Please see Terms and Conditions for details</p>', 'quinny-buzz-3-wheeler-pushchair', 'Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h', 0, NULL, NULL),
-(1, 'vi', 'Xe đẩy 3 bánh cho bé', '<p>Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h</p>', '<p>Trang chủ Giao hàng tận nơi chỉ phát. Giao hàng tận nơi hầu hết khách hàng tại Vương quốc Anh trong vòng 5 ngày làm việc. Xin lưu ý, chúng tôi chỉ có thể cung cấp mặt hàng này vào đất liền địa chỉ Vương quốc Anh. Sản phẩm này chỉ có sẵn để giao hàng cho đại lục Vương quốc Anh Không có Trả về phân minh ELC là hạnh phúc hoàn lại hoặc trao đổi bất kỳ hàng hóa không sử dụng trở lại trong vòng 28 ngày kể từ ngày mua khi sản xuất nhận của bạn, miễn là họ được trả về trong một điều kiện không sử dụng và trong bao bì gốc của họ. Xin vui lòng xem Điều khoản và Điều kiện để biết thêm chi tiết</p>', 'xe-day-3-banh-cho-be', 'Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h', 0, NULL, NULL),
-(2, 'en', 'Car Racer bạc Speedster', '<p>Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h</p>', '<p>Delivery<br />Home delivery only. Delivery to most customers in the UK is within 5 working days. Please note, we can only deliver this item to mainland UK addresses.</p>\r\n<p>This product is only available for delivery to mainland UK</p>\r\n<p>No Quibble Returns<br />ELC are happy to refund or exchange any unused merchandise returned within 28 days of purchase upon production of your receipt, as long as they are returned in an unused condition and in their original packaging. Please see Terms and Conditions for details</p>', 'car-racer-bac-speedster', '', 0, NULL, NULL),
-(2, 'vi', 'Car Racer bạc Speedster', '<p>Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h</p>', '<p>Trang chủ Giao hàng tận nơi chỉ phát. Giao hàng tận nơi hầu hết khách hàng tại Vương quốc Anh trong vòng 5 ngày làm việc. Xin lưu ý, chúng tôi chỉ có thể cung cấp mặt hàng này vào đất liền địa chỉ Vương quốc Anh. Sản phẩm này chỉ có sẵn để giao hàng cho đại lục Vương quốc Anh Không có Trả về phân minh ELC là hạnh phúc hoàn lại hoặc trao đổi bất kỳ hàng hóa không sử dụng trở lại trong vòng 28 ngày kể từ ngày mua khi sản xuất nhận của bạn, miễn là họ được trả về trong một điều kiện không sử dụng và trong bao bì gốc của họ. Xin vui lòng xem Điều khoản và Điều kiện để biết thêm chi tiết</p>', 'car-racer-bac-speedster', '', 0, NULL, NULL),
-(3, 'en', 'Famosa Magic Fairy Quad Bike', '', '', 'famosa-magic-fairy-quad-bike', '', 0, NULL, NULL),
-(3, 'vi', 'Famosa Magic Fairy Quad Bike', '<p>Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h</p>', '<p>Trang chủ Giao hàng tận nơi chỉ phát. Giao hàng tận nơi hầu hết khách hàng tại Vương quốc Anh trong vòng 5 ngày làm việc. Xin lưu ý, chúng tôi chỉ có thể cung cấp mặt hàng này vào đất liền địa chỉ Vương quốc Anh. Sản phẩm này chỉ có sẵn để giao hàng cho đại lục Vương quốc Anh Không có Trả về phân minh ELC là hạnh phúc hoàn lại hoặc trao đổi bất kỳ hàng hóa không sử dụng trở lại trong vòng 28 ngày kể từ ngày mua khi sản xuất nhận của bạn, miễn là họ được trả về trong một điều kiện không sử dụng và trong bao bì gốc của họ. Xin vui lòng xem Điều khoản và Điều kiện để biết thêm chi tiết</p>', 'famosa-magic-fairy-quad-bike', '', 0, NULL, NULL),
-(4, 'en', 'Peppa Pig Standard Playhouse', '<p>Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h</p>', '<p>Delivery<br />Home delivery only. Delivery to most customers in the UK is within 5 working days. Please note, we can only deliver this item to mainland UK addresses.</p>\r\n<p>This product is only available for delivery to mainland UK</p>\r\n<p>No Quibble Returns<br />ELC are happy to refund or exchange any unused merchandise returned within 28 days of purchase upon production of your receipt, as long as they are returned in an unused condition and in their original packaging. Please see Terms and Conditions for details</p>', 'peppa-pig-standard-playhouse', 'Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h', 0, NULL, NULL),
-(4, 'vi', 'Peppa Pig Standard Playhouse', '<p>Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h</p>', '<p>Trang chủ Giao hàng tận nơi chỉ phát. Giao hàng tận nơi hầu hết khách hàng tại Vương quốc Anh trong vòng 5 ngày làm việc. Xin lưu ý, chúng tôi chỉ có thể cung cấp mặt hàng này vào đất liền địa chỉ Vương quốc Anh. Sản phẩm này chỉ có sẵn để giao hàng cho đại lục Vương quốc Anh Không có Trả về phân minh ELC là hạnh phúc hoàn lại hoặc trao đổi bất kỳ hàng hóa không sử dụng trở lại trong vòng 28 ngày kể từ ngày mua khi sản xuất nhận của bạn, miễn là họ được trả về trong một điều kiện không sử dụng và trong bao bì gốc của họ. Xin vui lòng xem Điều khoản và Điều kiện để biết thêm chi tiết</p>', 'peppa-pig-standard-playhouse', 'Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h', 0, NULL, NULL),
-(5, 'en', 'Maxi-Cosi CabrioFix Infant Carrier', '<p>Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h</p>', '<p>Delivery<br />Home delivery only. Delivery to most customers in the UK is within 5 working days. Please note, we can only deliver this item to mainland UK addresses.</p>\r\n<p>This product is only available for delivery to mainland UK</p>\r\n<p>No Quibble Returns<br />ELC are happy to refund or exchange any unused merchandise returned within 28 days of purchase upon production of your receipt, as long as they are returned in an unused condition and in their original packaging. Please see Terms and Conditions for details</p>', 'maxi-cosi-cabriofix-infant-carrier', 'Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h', 0, NULL, NULL),
-(5, 'vi', 'Maxi-Cosi CabrioFix Infant Carrier', '<p>Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h</p>', '<p>Trang chủ Giao hàng tận nơi chỉ phát. Giao hàng tận nơi hầu hết khách hàng tại Vương quốc Anh trong vòng 5 ngày làm việc. Xin lưu ý, chúng tôi chỉ có thể cung cấp mặt hàng này vào đất liền địa chỉ Vương quốc Anh. Sản phẩm này chỉ có sẵn để giao hàng cho đại lục Vương quốc Anh Không có Trả về phân minh ELC là hạnh phúc hoàn lại hoặc trao đổi bất kỳ hàng hóa không sử dụng trở lại trong vòng 28 ngày kể từ ngày mua khi sản xuất nhận của bạn, miễn là họ được trả về trong một điều kiện không sử dụng và trong bao bì gốc của họ. Xin vui lòng xem Điều khoản và Điều kiện để biết thêm chi tiết</p>', 'maxi-cosi-cabriofix-infant-carrier', 'Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h', 0, NULL, NULL),
-(6, 'en', 'Kids Toy Piano', '<p>Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h</p>', '<p>Delivery<br />Home delivery only. Delivery to most customers in the UK is within 5 working days. Please note, we can only deliver this item to mainland UK addresses.</p>\r\n<p>This product is only available for delivery to mainland UK</p>\r\n<p>No Quibble Returns<br />ELC are happy to refund or exchange any unused merchandise returned within 28 days of purchase upon production of your receipt, as long as they are returned in an unused condition and in their original packaging. Please see Terms and Conditions for details</p>', 'kids-toy-piano', 'Pretty pink battery operated quad bike with fairy motifs, which is operated with a foot accelerator. It comes complete with a 6V rechargeable battery and charger and has a maximum speed of 2km/h', 0, NULL, NULL),
-(6, 'vi', 'Kids Toy Piano', '<p>Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h</p>', '<p>Trang chủ Giao hàng tận nơi chỉ phát. Giao hàng tận nơi hầu hết khách hàng tại Vương quốc Anh trong vòng 5 ngày làm việc. Xin lưu ý, chúng tôi chỉ có thể cung cấp mặt hàng này vào đất liền địa chỉ Vương quốc Anh. Sản phẩm này chỉ có sẵn để giao hàng cho đại lục Vương quốc Anh Không có Trả về phân minh ELC là hạnh phúc hoàn lại hoặc trao đổi bất kỳ hàng hóa không sử dụng trở lại trong vòng 28 ngày kể từ ngày mua khi sản xuất nhận của bạn, miễn là họ được trả về trong một điều kiện không sử dụng và trong bao bì gốc của họ. Xin vui lòng xem Điều khoản và Điều kiện để biết thêm chi tiết</p>', 'kids-toy-piano', 'Pin hoạt động khá màu hồng xe đạp quad với các họa tiết cổ tích, mà là hoạt động với một máy gia tốc chân. Nó đi kèm với một pin sạc và bộ sạc 6V và có tốc độ tối đa là 2km / h', 0, NULL, NULL);
+CREATE TABLE IF NOT EXISTS `hoiit_module_projects` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `postdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `pic_desc` varchar(500) DEFAULT NULL,
+  `record_order` int(11) DEFAULT NULL,
+  `hot` tinyint(1) NOT NULL DEFAULT '0',
+  `specials` tinyint(1) DEFAULT NULL,
+  `field1` varchar(500) DEFAULT NULL,
+  `field2` varchar(500) DEFAULT NULL,
+  `field3` varchar(500) DEFAULT NULL,
+  `field4` varchar(500) DEFAULT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `fk_hoiit_module_pro_hoiit_module_pro_cat_1` (`hoiit_module_item_cat_cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_projects_cat`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_projects_cat` (
+  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_parent_id` int(11) NOT NULL DEFAULT '0',
+  `cat_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `pic_desc` varchar(200) DEFAULT NULL,
+  `cat_hot` tinyint(1) DEFAULT NULL,
+  `cat_order` int(11) DEFAULT NULL,
+  `cat_extra1` varchar(100) DEFAULT NULL,
+  `cat_extra2` varchar(100) DEFAULT NULL,
+  `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `hoiit_module_projects_cat`
+--
+
+INSERT INTO `hoiit_module_projects_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
+(1, 0, '2012-11-01 05:33:52', '', NULL, 0, 1, NULL, NULL, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_projects_cat_languages`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_projects_cat_languages` (
+  `cat_id` int(11) NOT NULL,
+  `language_id` varchar(2) NOT NULL,
+  `cat_title` varchar(100) NOT NULL,
+  `preview` text,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`cat_id`,`language_id`),
+  KEY `fk_hoiit_module_pro_cat_has_hoiit_languages_hoiit_languages1` (`language_id`),
+  KEY `fk_hoiit_module_pro_cat_has_hoiit_languages_hoiit_module_ne1` (`cat_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_projects_cat_languages`
+--
+
+INSERT INTO `hoiit_module_projects_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
+(1, 'vi', 'Dự án', '', 'du-an', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_projects_languages`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_projects_languages` (
+  `record_id` int(11) NOT NULL,
+  `language_id` varchar(2) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `preview` text,
+  `content` text NOT NULL,
+  `detail` text,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `hit` int(11) NOT NULL DEFAULT '0',
+  `extra_field1` varchar(100) DEFAULT NULL,
+  `extra_field2` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`record_id`,`language_id`),
+  KEY `fk_hoiit_module_pro_has_hoiit_languages_hoiit_languages1` (`language_id`),
+  KEY `fk_hoiit_module_pro_has_hoiit_languages_hoiit_module_pro1` (`record_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -996,8 +934,18 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('left', 1, '1', 'contact', NULL, NULL, 'list_support'),
 ('right', 1, '1', 'poll', NULL, NULL, 'adv_right'),
 ('left', 2, '1', 'poll', NULL, NULL, 'list_support'),
-('right', 1, '1', 'default', NULL, NULL, 'news_list_first'),
-('left', 2, '1', 'default', NULL, NULL, 'adv_left');
+('center', 1, '1', 'default', NULL, NULL, 'about_home'),
+('center', 2, '1', 'default', NULL, NULL, 'news_list_first'),
+('left', 3, '1', 'default', NULL, NULL, 'menu_news'),
+('left', 4, '1', 'default', NULL, NULL, 'menu_about'),
+('left', 5, '1', 'default', NULL, NULL, 'menu_products'),
+('left', 6, '1', 'default', NULL, NULL, 'list_support'),
+('left', 7, '1', 'default', NULL, NULL, 'counter'),
+('left', 8, '1', 'default', NULL, NULL, 'adv_left'),
+('right', 9, '1', 'default', NULL, NULL, 'new_poll'),
+('right', 10, '1', 'default', NULL, NULL, 'news_hot'),
+('right', 11, '1', 'default', NULL, NULL, 'news_new'),
+('right', 12, '1', 'default', NULL, NULL, 'adv_right');
 
 -- --------------------------------------------------------
 
@@ -1020,6 +968,7 @@ INSERT INTO `hoiit_settings` (`setting_name`, `setting_value`) VALUES
 ('description', 'Description'),
 ('hotline', ''),
 ('keywords', 'Keywords'),
+('num_language', 'vi'),
 ('slogan', 'Thế giới đồ chơi cho khỉ'),
 ('title', 'Welcome to YiiProject');
 
@@ -1046,10 +995,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_templates` (
 --
 
 INSERT INTO `hoiit_templates` (`template_id`, `template_name`, `template_date`, `template_desc`, `template_author`, `template_web`, `template_admin`, `template_activated`) VALUES
-('datxanh', 'Đất xanh hoàn cầu', '2012-07-26 13:47:49', NULL, 'dos.vn', NULL, 0, 1),
-('home', 'Home', '2012-07-04 10:54:29', NULL, 'Yii project', 'http://yiiproject.com', 0, 0),
-('toys', 'Toys Store', '2012-07-27 04:55:47', NULL, NULL, NULL, 0, 0),
-('wedding', 'Wedding Pink', '2012-08-07 04:55:47', NULL, NULL, NULL, 0, 0),
+('toys', 'Toys Store', '2012-07-27 04:55:47', NULL, NULL, NULL, 0, 1),
 ('yiiproject', 'YiiProject', '2012-07-26 13:47:49', NULL, 'Yii project', NULL, 0, 0);
 
 -- --------------------------------------------------------
@@ -1077,6 +1023,18 @@ CREATE TABLE IF NOT EXISTS `hoiit_urls` (
 
 INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `url_type`, `hoiit_modules_module_id`, `hoiit_languages_language_id`) VALUES
 ('<lang:[a-z]{2}>/about-us/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 0, 0, 'about', 'en'),
+('<news:(tin-tuc)>', 'news/default/index', '', 4, 1, 'news', 'vi'),
+('<news:(tin-tuc)>/<cid:[-a-z0-9]+>', 'news/default/cats', '', 3, 0, 'news', 'vi'),
+('<news:(tin-tuc)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'news/default/view', 'urlSuffix=>.html', 0, 0, 'news', 'vi'),
+('<news:(tin-tuc)>/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'news/default/cats', '', 2, 0, 'news', 'vi'),
+('<news:(tin-tuc)>/trang/<page:\\d+>', 'news/default/index', '', 1, 0, 'news', 'vi'),
+('<products:(san-pham)>', 'products/default/index', '', 3, 1, 'products', 'vi'),
+('<products:(san-pham)>/<cid:[-a-z0-9]+>', 'products/default/cats', '', 2, 0, 'products', 'vi'),
+('<products:(san-pham)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'products/default/view', 'urlSuffix=>.html', 0, 0, 'products', 'vi'),
+('<products:(san-pham)>/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'products/default/cats', '', 1, 0, 'products', 'vi'),
+('<projects:(du-an)>', 'projects/default/index', '', 4, 1, 'projects', 'vi'),
+('<projects:(du-an)>/<cid:[-a-z0-9]+>', 'projects/default/cats', '', 3, 0, 'projects', 'vi'),
+('<projects:(du-an)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'projects/default/view', 'urlSuffix=>.html', 0, 0, 'projects', 'vi'),
 ('about-us', 'about/default/index', '', 2, 1, 'about', 'en'),
 ('contact', 'contact/default/index', '', 0, 1, 'contact', 'en'),
 ('gioi-thieu', 'about/default/index', '', 2, 1, 'about', 'vi'),
@@ -1085,15 +1043,7 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('lien-he', 'contact/default/index', '', 1, 1, 'contact', 'vi'),
 ('news', 'news/default/index', '', 5, 1, 'news', 'en'),
 ('products', 'products/default/index', '', 4, 1, 'products', 'en'),
-('san-pham', 'products/default/index', '', 3, 1, 'products', 'vi'),
-('san-pham/<cid:[-a-z0-9]+>', 'products/default/cats', '', 2, 0, 'products', 'vi'),
-('san-pham/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'products/default/view', 'urlSuffix=>.html', 0, 0, 'products', 'vi'),
-('san-pham/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'products/default/cats', '', 1, 0, 'products', 'vi'),
-('tin-tuc', 'news/default/index', '', 4, 1, 'news', 'vi'),
-('tin-tuc/<cid:[-a-z0-9]+>', 'news/default/cats', '', 3, 0, 'news', 'vi'),
-('tin-tuc/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'news/default/view', 'urlSuffix=>.html', 0, 0, 'news', 'vi'),
-('tin-tuc/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'news/default/cats', '', 2, 0, 'news', 'vi'),
-('tin-tuc/trang/<page:\\d+>', 'news/default/index', '', 1, 0, 'news', 'vi'),
+('projects', 'projects/default/index', '', 5, 1, 'projects', 'en'),
 ('trang-chu', 'default/default/index', NULL, NULL, 1, 'default', 'vi');
 
 -- --------------------------------------------------------
@@ -1219,6 +1169,26 @@ ALTER TABLE `hoiit_module_products_cat_languages`
 ALTER TABLE `hoiit_module_products_languages`
   ADD CONSTRAINT `fk_hoiit_module_products_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_hoiit_module_products_has_hoiit_languages_hoiit_module_pro1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_products` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `hoiit_module_projects`
+--
+ALTER TABLE `hoiit_module_projects`
+  ADD CONSTRAINT `fk_hoiit_module_pro_hoiit_module_pro_cat_1` FOREIGN KEY (`hoiit_module_item_cat_cat_id`) REFERENCES `hoiit_module_projects_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `hoiit_module_projects_cat_languages`
+--
+ALTER TABLE `hoiit_module_projects_cat_languages`
+  ADD CONSTRAINT `fk_hoiit_module_pro_cat__has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_hoiit_module_pro_cat__has_hoiit_languages_hoiit_module_ne1` FOREIGN KEY (`cat_id`) REFERENCES `hoiit_module_projects_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `hoiit_module_projects_languages`
+--
+ALTER TABLE `hoiit_module_projects_languages`
+  ADD CONSTRAINT `fk_hoiit_module_pro_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_hoiit_module_pro_has_hoiit_languages_hoiit_module_pro1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_projects` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `hoiit_positions`
