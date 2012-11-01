@@ -27,7 +27,7 @@ a:hover{color:#000;}
 
 /*Content*/
 #content{margin-bottom:15px}
-.banner-none{background:url(../images/banner-none.jpg) no-repeat; height:184px;margin-bottom:10px}
+.banner-none{background:url(../images/banner-none.jpg) no-repeat; height:184px}
 .partners{margin:10px 0}
  
 /**  Title box   **/
@@ -97,7 +97,7 @@ a:hover{color:#000;}
 .frame-tent-right p ,.frame-info-product p{text-align:justify;line-height:1.6em;margin:0;margin-bottom:12px}
 
 /*** product****/
-.main-all-product{border:1px solid #F0F0F0;padding:5px 2px;margin: 0 0 10px 0}
+.main-all-product{padding:5px 2px;margin: 0 0 10px 0}
 .all-product{margin:0;padding:0;list-style:none}
 .product{width:165px;text-align:center;padding:10px 0; border:1px solid #ccc;margin:0 0 15px 0;display:inline-block; vertical-align:top;}
 .tent-product{padding:0 5px}

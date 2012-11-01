@@ -72,8 +72,9 @@ jQuery(document).ready(function() {
             <p>ĐT:(08) 35 114 1114</p>
         </div>
         <div class="statistics">
-        	<p>Đang truy cập: 70</p>
-            <p>Tổng số truy cập: 25090</p>
+			<?php if ($this->getPosition('footer')): ?>
+				<?php $this->setPosition('footer');?>
+			<?php endif ?>
             <p>Phát triển bởi <a href="" title="">Dos.vn</a></p>
         </div> <div class="clear"></div>
     </div><!--End footer-->

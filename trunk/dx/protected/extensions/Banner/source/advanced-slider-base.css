@@ -202,7 +202,7 @@
 
 .pixel .navigation-arrows a
 {
-	background:url(../images/arrows.png) no-repeat;
+	background:url(arrows.png) no-repeat;
 	width:38px;
 	height:38px;
 	bottom:0;
@@ -229,7 +229,7 @@
 
 .pixel .slideshow-controls
 {
-	background:url(../images/playpause.png) no-repeat;
+	background:url(playpause.png) no-repeat;
 	width:38px;
 	height:38px;
 	bottom:0;
