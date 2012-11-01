@@ -23,15 +23,15 @@
         
 		
         <?php foreach($this->listLanguage as $key):?>
-		<div class="col1"><?php echo $form->labelEx($model, 'content'.$key) ?></div>
+		<div class="col1"><?php echo $form->labelEx($model, 'preview'.$key) ?></div>
 		<div class="col2">
-			<?php echo $form->textArea($model, 'content'.$key, array('cols'=>20, 'rows'=>10)); ?>
+			<?php echo $form->textArea($model, 'preview'.$key, array('cols'=>20, 'rows'=>10)); ?>
 			<script type="text/javascript">
 				writeCookie('sessionPath', '<?php echo Yii::app()->baseUrl?>', 1);
 				tinyMCE.init({
 					 file_browser_callback: 'openKCFinder',
 					 mode:"exact",
-					 elements : "<?php echo get_class($model)?>_content<?php echo $key?>",
+					 elements : "<?php echo get_class($model)?>_preview<?php echo $key?>",
 					 theme:"advanced",
 					 language : "vi",
 					 plugins : "paste, autolink,lists,style,layer,table,save,advhr,advimage,advlink,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
@@ -79,15 +79,15 @@
 			<div class="tab_container">
 				<div id="tab1" class="tab_content">
 					<?php foreach($this->listLanguage as $key):?>
-					<div class="col1"><?php echo $form->labelEx($model, 'preview'.$key) ?></div>
+					<div class="col1"><?php echo $form->labelEx($model, 'content'.$key) ?></div>
 					<div class="col2">
-						<?php echo $form->textArea($model, 'preview'.$key, array('cols'=>20, 'rows'=>10)); ?>
+						<?php echo $form->textArea($model, 'content'.$key, array('cols'=>20, 'rows'=>10)); ?>
 						<script type="text/javascript">
 							writeCookie('sessionPath', '<?php echo Yii::app()->baseUrl?>', 1);
 							tinyMCE.init({
 								 file_browser_callback: 'openKCFinder',
 								 mode:"exact",
-								 elements : "<?php echo get_class($model)?>_preview<?php echo $key?>",
+								 elements : "<?php echo get_class($model)?>_content<?php echo $key?>",
 								 theme:"advanced",
 								 language : "vi",
 								 plugins : "paste, autolink,lists,style,layer,table,save,advhr,advimage,advlink,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
@@ -178,7 +178,7 @@
 				</div>
 				
 				<div id="tab4" class="tab_content">
-					<p class="pic_slide"><a href="#" id="pic_slide">Thêm hình ảnh 2</a></p>
+					<p class="pic_slide"><a href="#" id="pic_slide">Thêm hình ảnh</a></p>
 				</div>
 				<div id="tab5" class="tab_content">
 					<div class="col1"><?php echo $form->labelEx($model, 'video_youtube') ?></div>
