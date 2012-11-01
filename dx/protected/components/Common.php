@@ -34,6 +34,22 @@ class Common {
     }
 
     //Front end - Create folder and Chmod
+    public static function recursiveMakeDir($path, $mode = 0777) {
+        $dirs = explode('/', $path);
+        $count = count($dirs);
+
+        $path_system = YiiBase::getPathOfAlias('webroot');
+        $location = '/';
+        for ($i = 1; $i < ($count - 1); ++$i) {
+            $location .= $dirs[$i] . '/';
+            if (!is_dir($path_system . $location)) {
+                mkdir($path_system . $location, $mode);
+                chmod($path_system . $location, $mode);
+            }
+        }
+    }
+
+    //Front end - Create folder and Chmod
     public function recursiveMkdir($path, $mode = 0777) {
         $dirs = explode('/', $path);
         $count = count($dirs);

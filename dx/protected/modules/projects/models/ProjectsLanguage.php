@@ -123,22 +123,23 @@ class ProjectsLanguage extends CActiveRecord {
     //Back end - add
     public function saveRecord($id, $model) {
         foreach (Yii::app()->controller->listLanguage as $key) {
-            $this->executeRecord($id, $key, $model['title' . $key], $model['preview' . $key], $model['content' . $key], $model['tag' . $key], $model['description' . $key]);
+            $this->executeRecord($id, $key, $model['title' . $key], $model['preview' . $key], $model['content' . $key], $model['detail' . $key], $model['tag' . $key], $model['description' . $key]);
         }
     }
 
     //Back end - save
-    private function executeRecord($id, $lang, $title, $preview, $content, $tag, $description) {
+    private function executeRecord($id, $lang, $title, $preview, $content, $detail, $tag, $description) {
         $purifier = new CHtmlPurifier();
         $title = $purifier->purify(trim($title));
         $preview = $purifier->purify(trim($preview));
         $content = $purifier->purify(trim($content));
+        $detail = $purifier->purify(trim($detail));
         $tag = $purifier->purify(trim($tag));
         $description = $purifier->purify(trim($description));
 
-        $command = Yii::app()->db->createCommand('INSERT INTO ' . $this->tableName() . ' (record_id, language_id, title, preview, content, tag, description) VALUES (:record_id, :language_id, :title, :preview, :content, :tag, :description)');
+        $command = Yii::app()->db->createCommand('INSERT INTO ' . $this->tableName() . ' (record_id, language_id, title, preview, content, detail, tag, description) VALUES (:record_id, :language_id, :title, :preview, :content, :detail, :tag, :description)');
         if (Yii::app()->controller->action->id == 'edit') {
-            $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET title=:title, preview=:preview, content=:content, tag=:tag, description=:description WHERE record_id=:record_id AND language_id=:language_id');
+            $command = Yii::app()->db->createCommand('UPDATE ' . $this->tableName() . ' SET title=:title, preview=:preview, content=:content, detail=:detail, tag=:tag, description=:description WHERE record_id=:record_id AND language_id=:language_id');
         }
 
         $command->bindParam(":record_id", $id, PDO::PARAM_INT);
@@ -146,6 +147,7 @@ class ProjectsLanguage extends CActiveRecord {
         $command->bindParam(":title", $title, PDO::PARAM_STR);
         $command->bindParam(":preview", $preview, PDO::PARAM_STR);
         $command->bindParam(":content", $content, PDO::PARAM_STR);
+        $command->bindParam(":detail", $detail, PDO::PARAM_STR);
         $command->bindParam(":tag", $tag, PDO::PARAM_STR);
         $command->bindParam(":description", $description, PDO::PARAM_STR);
         $command->execute();
@@ -153,7 +155,7 @@ class ProjectsLanguage extends CActiveRecord {
 
     //Back end - Get record to Edit
     public function loadEdit($id) {
-        $command = Yii::app()->db->createCommand('SELECT language_id, title, preview, content, tag, description FROM ' . $this->tableName() . ' WHERE record_id=:id');
+        $command = Yii::app()->db->createCommand('SELECT language_id, title, preview, content, detail, tag, description FROM ' . $this->tableName() . ' WHERE record_id=:id');
         $command->bindParam(":id", $id, PDO::PARAM_INT);
         return $command->queryAll();
     }

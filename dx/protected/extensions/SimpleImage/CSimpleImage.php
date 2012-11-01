@@ -7,6 +7,40 @@ class CSimpleImage {
     private $image_type;
     private $image_info;
 
+    public function uploadImage($file_name, $tmp, $width, $height, $path, $filename = '', $file_old = '') {
+        if ($file_name) {
+            $this->image_info = $image_info = getimagesize($tmp);
+            $this->image_type = $image_info[2];
+            if ($this->image_type == IMAGETYPE_JPEG) {
+                $this->image = imagecreatefromjpeg($tmp);
+            } elseif ($this->image_type == IMAGETYPE_GIF) {
+                $this->image = imagecreatefromgif($tmp);
+            } elseif ($this->image_type == IMAGETYPE_PNG) {
+                $this->image = imagecreatefrompng($tmp);
+            }
+
+            $path_upload = YiiBase::getPathOfAlias('webroot') . $path; //path and filename
+            Common::recursiveMakeDir($path); //check Directory Exists
+
+            //check remove file old
+            if (($file_old) && file_exists($path_upload . $file_old)) {
+                unlink($path_upload . $file_old);
+            }
+            //set file name
+            $this->_filename = $this->getFileExists($path_upload, NoneUnicode::fileName($filename . '.' . $this->getExtensionName($file_name)));
+
+            //upload
+            if (($this->getWidth() > $width) || ($this->getHeight() > $height)) {
+                $this->resizeToWidth($width, $height);
+                $this->save($path_upload . $this->_filename);
+            } else {
+                move_uploaded_file($tmp, $path_upload . $this->_filename);
+            }
+            return $this->_filename;
+        }
+        return $file_old;
+    }
+
     public function processUpload($file_name, $tmp, $width, $height, $path, $filename = '', $file_old = '', $type = 0, $txt_new_name = '') {
         if ($file_name) {
             $this->image_info = $image_info = getimagesize($tmp);
@@ -53,13 +87,26 @@ class CSimpleImage {
         return $file_old;
     }
 
-    public function uploadMulti($file_name, $tmp, $width, $height, $path, $filename = '') {
+    /*public function uploadMulti($file_name, $tmp, $width, $height, $path, $filename = '') {
         $file_desc_multi = array();
         $size = count($file_name);
 
         for ($i = 0; $i < $size; $i++) {
             if ($file_name[$i]) {
                 $file_desc_multi[] = $this->processUpload($file_name[$i], $tmp[$i], $width, $height, $path, $filename . '-desc-' . ($i + 1));
+            }
+        }
+        return $file_desc_multi;
+    }*/
+
+    public function uploadMulti($file_name, $tmp, $width, $height, $path, $filename = '') {
+        $file_desc_multi = array();
+        $size = count($file_name);
+
+        for ($i = 0; $i < $size; $i++) {
+            if ($file_name[$i]) {
+                //$file_desc_multi[] = $this->processUpload($file_name[$i], $tmp[$i], $width, $height, $path, $filename . '-desc-' . ($i + 1));
+                $file_desc_multi[] = $this->uploadImage($file_name[$i], $tmp[$i], $width, $height, $path, $filename . ($i + 1));
             }
         }
         return $file_desc_multi;
