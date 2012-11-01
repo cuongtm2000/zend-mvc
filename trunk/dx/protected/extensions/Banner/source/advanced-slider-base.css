@@ -2,8 +2,8 @@
 
 .pixel .slide-wrapper
 {
-	background-color:#FFF;
-	/*border:4px solid #FFF;
+	/*background-color:#FFF;
+	border:4px solid #FFF;
 	-moz-box-shadow: 0px 0px 10px #CCC;
 	-webkit-box-shadow: 0px 0px 10px #CCC;
 	box-shadow: 0px 0px 10px #CCC;*/
@@ -55,7 +55,7 @@
 }
 
 
-.advanced-slider *
+.advanced-slider 
 {
 	margin:0px;
 	padding:0px;
@@ -130,12 +130,12 @@
 
 /*Timer advanced slider*/
 .advanced-slider .timer-animation 
-{	
+{
 	height:20px;
-	position:absolute; visibility:hidden;
+	position:absolute;
 	z-index:60;
-	bottom:3px;
-	right:2px;
+	top:0;
+	right:0;
 }
 /*End Timer advanced slider*/
 
@@ -198,3 +198,56 @@
 }
 
 /************          End advanced-slider            *******************/
+
+
+.pixel .navigation-arrows a
+{
+	background:url(../images/arrows.png) no-repeat;
+	width:38px;
+	height:38px;
+	bottom:0;
+	margin-top:-19px;
+}
+
+
+.pixel .navigation-arrows a.previous
+{
+	right:80px;
+}
+
+
+.pixel .navigation-arrows a.next
+{
+	right:0;
+	background-position: -38px 0px;
+}
+
+/* END SLIDE ARROWS */
+
+
+/* SLIDESHOW CONTROLS */
+
+.pixel .slideshow-controls
+{
+	background:url(../images/playpause.png) no-repeat;
+	width:38px;
+	height:38px;
+	bottom:0;
+	right:40px;
+	margin-top:-19px;
+	margin-left:-19px;
+}
+
+
+.pixel .slideshow-controls.pause
+{
+	background-position: 0px 0px;
+}
+
+
+.pixel .slideshow-controls.play
+{
+	background-position: -38px 0px;
+}
+
+/* END OF SLIDESHOW CONTROLS */

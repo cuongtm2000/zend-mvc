@@ -1,0 +1,1 @@
+<?php $this->breadcrumbs = array($this->lang[$this->module->id]); ?><?php $this->pageTitle = $this->lang[$this->module->id]; $this->setDescription()?>    <?php if ($item): ?>    <h2 class="title-box"><?php echo $item['title']?></h2>    <div class="frame-tent-right">        <?php echo $item['content']?>    </div>    <?php else: ?>    No record    <?php endif;?>

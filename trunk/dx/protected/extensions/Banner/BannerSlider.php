@@ -14,11 +14,11 @@ class BannerSlider extends CWidget {
         if ($items) {
             $this->registerClientScript();
 
-            echo '<ul id="' . $this->id . '" class="slider">';
+            echo '<div class="bgbanner"><ul id="' . $this->id . '" class="slider">';
             foreach ($items as $value) {
                 echo '<li class="slider-item"><a href="' . $value['banner_link'] . '" title="' . $value['banner_name'] . '"><img src="' . Yii::app()->baseUrl . Yii::getPathOfAlias('filePathUpload') . '/image/banner/' . $value['banner_picture'] . '" alt="' . $value['banner_name'] . '" /></a></li>';
             }
-            echo '</ul>';
+            echo '</ul> </div>';
         } else if ($this->default_banner) {
             echo '<img src="' . Yii::app()->theme->baseUrl . '/images/banner.jpg" alt="Banner" />';
         }
@@ -32,7 +32,6 @@ class BannerSlider extends CWidget {
         $cs->registerCssFile($this->baseUrl . '/advanced-slider-base.css');
         $cs->registerScriptFile($this->baseUrl . '/jquery.advancedSlider.min.js');
         $cs->registerScriptFile($this->baseUrl . '/excanvas.compiled-ie.js');
-        $cs->registerScriptFile($this->baseUrl . '/jquery.sider.banner-ie.js');
         $cs->registerScriptFile($this->baseUrl . '/jquery.sider.banner.js');
         $cs->registerScript('config', "$(document).ready(function(){runbanner(".Config::getValue('banner_width').",".Config::getValue('banner_height').");});", CClientScript::POS_HEAD);
     }
