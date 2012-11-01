@@ -229,6 +229,8 @@ class Projects extends CActiveRecord {
 
         $item = $this::model()->find('record_id=:id', array(':id' => $id));
         Common::removePic($item->pic_thumb, '/image/' . strtolower(__CLASS__)); // remove pic_thumb
+        Common::removePic($item->pic_desc, '/image/' . strtolower(__CLASS__)); // remove pic_thumb
+        Common::removePic($item->field1, '/image/' . strtolower(__CLASS__)); // remove pic_thumb
         $this->findByPk($id)->delete(); //delete record_id
     }
 
@@ -296,6 +298,7 @@ class Projects extends CActiveRecord {
     //Back end - save
     public function saveRecord($model, $id = null) {
         if (Yii::app()->controller->action->id == 'add') {
+            $this->field2 = $model->video_youtube;
             $this->hot = $model->hot;
             $this->enable = $model->enable;
             $this->hoiit_module_item_cat_cat_id = $model->hoiit_module_item_cat_cat_id;
@@ -305,11 +308,20 @@ class Projects extends CActiveRecord {
             $file = new CSimpleImage();
             $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('projects_width_thumb'), Config::getValue('projects_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]);
 
+            if (isset($_FILES[__CLASS__ . 'Form']['name']['pic_desc'])) {
+                $this->pic_desc = implode("|", $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_desc'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_desc'], Config::getValue('projects_width_thumb'), Config::getValue('projects_height_thumb'), Yii::getPathOfAlias('filePathUpload') . '/image/' . strtolower(__CLASS__) . '/', $model['title' . Yii::app()->params['default_language']].'-desc-'));
+            }
+
+            if (isset($_FILES[__CLASS__ . 'Form']['name']['pic_slide'])) {
+                $this->field1 = implode("|", $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_slide'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_slide'], Config::getValue('projects_width_thumb'), Config::getValue('projects_height_thumb'), Yii::getPathOfAlias('filePathUpload') . '/image/' . strtolower(__CLASS__) . '/', $model['title' . Yii::app()->params['default_language']].'-slide-'));
+            }
+
             $this->save();
             $id = $this->record_id;
             $this->updateByPk($id, array('record_order' => $id));
         } else {
             $item = $this::model()->findByPk($id);
+            $item->field2 = $model->video_youtube;
             $item->hot = $model->hot;
             $item->enable = $model->enable;
             $item->hoiit_module_item_cat_cat_id = $model->hoiit_module_item_cat_cat_id;
@@ -320,10 +332,52 @@ class Projects extends CActiveRecord {
                 $item->pic_thumb = null;
             }
 
+            //remove pic_desc
+            if (isset($model->remove_pic_desc)) {
+                $str = explode('|', $item->pic_desc);
+                foreach ($model->remove_pic_desc as $value) {
+                    Common::removePic($value, '/image/' . strtolower(__CLASS__));
+                    unset($str[array_search($value, $str)]);
+                }
+                $item->pic_desc = implode("|", $str); //parse value to $str $this->_oldImage_desc
+            }
+
+            //remove pic_slide
+            if (isset($model->remove_pic_slide)) {
+                $str = explode('|', $item->field1);
+                foreach ($model->remove_pic_desc as $value) {
+                    Common::removePic($value, '/image/' . strtolower(__CLASS__));
+                    unset($str[array_search($value, $str)]);
+                }
+                $item->field1 = implode("|", $str);
+            }
+
             //upload picture
             Yii::import('ext.SimpleImage.CSimpleImage');
             $file = new CSimpleImage();
             $item->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('projects_width_thumb'), Config::getValue('projects_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']], $item->pic_thumb);
+
+            //upload pic_desc
+            if (isset($_FILES[__CLASS__ . 'Form']['name']['pic_desc'])) {
+                $uploaded = $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_desc'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_desc'], Config::getValue('products_width_desc'), Config::getValue('products_height_desc'), Yii::getPathOfAlias('filePathUpload') . '/image/' . '/' . strtolower(__CLASS__) . '/', $model['title' . Yii::app()->params['default_language']].'-desc-');
+                $pic_desc = ($item->pic_desc) ? explode('|', $item->pic_desc) : array();
+                //push value
+                foreach ($uploaded as $value) {
+                    array_push($pic_desc, $value);
+                }
+                $item->pic_desc = implode("|", $pic_desc);
+            }
+
+            //upload pic_desc
+            if (isset($_FILES[__CLASS__ . 'Form']['name']['pic_slide'])) {
+                $uploaded = $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_slide'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_slide'], Config::getValue('products_width_desc'), Config::getValue('products_height_desc'), Yii::getPathOfAlias('filePathUpload') . '/image/' . '/' . strtolower(__CLASS__) . '/', $model['title' . Yii::app()->params['default_language']].'-slide-');
+                $pic_slide = ($item->field1) ? explode('|', $item->field1) : array();
+                //push value
+                foreach ($uploaded as $value) {
+                    array_push($pic_slide, $value);
+                }
+                $item->field1 = implode("|", $pic_slide);
+            }
 
             $item->save();
         }
@@ -332,7 +386,7 @@ class Projects extends CActiveRecord {
 
     //Back end - Get record to Edit
     public function loadEdit($id) {
-        $command = Yii::app()->db->createCommand('SELECT pic_thumb, hot, enable, hoiit_module_item_cat_cat_id FROM ' . $this->tableName() . ' WHERE record_id=:id');
+        $command = Yii::app()->db->createCommand('SELECT pic_thumb, pic_desc, field1, field2, hot, enable, hoiit_module_item_cat_cat_id FROM ' . $this->tableName() . ' WHERE record_id=:id');
         $command->bindParam(":id", $id, PDO::PARAM_INT);
         return $command->queryRow();
     }

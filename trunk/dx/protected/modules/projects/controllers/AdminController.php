@@ -152,6 +152,10 @@ class AdminController extends BackEndController {
         Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
         Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/config.js');
 
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.nyromodal.custom.min.js');
+        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/nyromodal.css');
+        Yii::app()->clientScript->registerScript('', "$(function() { $('.nyroModal').nyroModal();});", CClientScript::POS_READY);
+
         $model_class = ucfirst($this->module->id);
         $model_cat_class = $model_class . 'Cat';
         $model_form_class = $model_class . 'Form';
@@ -164,6 +168,9 @@ class AdminController extends BackEndController {
         //Load Edit
         $model_data = $model->loadEdit($id);
         $model_form['pic_thumb'] = $model_data['pic_thumb'];
+        $model_form['pic_desc'] = $model_data['pic_desc'];
+        $model_form['pic_slide'] = $model_data['field1'];
+        $model_form['video_youtube'] = $model_data['field2'];
         $model_form['hot'] = $model_data['hot'];
         $model_form['enable'] = $model_data['enable'];
         $model_form['hoiit_module_item_cat_cat_id'] = $model_data['hoiit_module_item_cat_cat_id'];
@@ -173,6 +180,7 @@ class AdminController extends BackEndController {
             $model_form['title' . $value['language_id']] = $value['title'];
             $model_form['preview' . $value['language_id']] = $value['preview'];
             $model_form['content' . $value['language_id']] = $value['content'];
+            $model_form['detail' . $value['language_id']] = $value['detail'];
             $model_form['tag' . $value['language_id']] = $value['tag'];
             $model_form['description' . $value['language_id']] = $value['description'];
         }
