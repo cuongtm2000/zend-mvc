@@ -50,3 +50,15 @@
     <?php $this->widget('CLinkPager', array('pages' => $pages, 'header'=>'', 'htmlOptions'=>array('class'=>'yiiPager paging')))?>
     <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/common.js"></script>
 </form><div class="clear"></div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('table tbody tr').click(function(event) {
+            $(this).toggleClass('blue');
+            if (event.target.type !== 'checkbox') {
+                $(':checkbox', this).attr('checked', function() {
+                    return !this.checked;
+                });
+            }
+        });
+    });
+</script>

@@ -27,6 +27,16 @@ class AboutForm extends CFormModel {
 
     public function attributeLabels() {
         return array(
+            'titlevi' => Yii::t('admin', 'title') . ' vi',
+            'titleen' => Yii::t('admin', 'title') . ' en',
+            'contentvi' => Yii::t('admin', 'content') . ' vi',
+            'contenten' => Yii::t('admin', 'content') . ' en',
+            'tagvi' => Yii::t('admin', 'tag') . ' vi',
+            'tagen' => Yii::t('admin', 'tag') . ' en',
+            'descriptionvi' => Yii::t('admin', 'description') . ' vi',
+            'descriptionen' => Yii::t('admin', 'description') . ' en',
+            'hot' => Yii::t('admin', 'hot'),
+            'enable' => Yii::t('admin', 'show')
         );
     }
 }

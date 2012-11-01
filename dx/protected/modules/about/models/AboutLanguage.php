@@ -128,7 +128,7 @@ class AboutLanguage extends CActiveRecord {
 
     //Back end - add
     public function saveRecord($id, $model) {
-        foreach (Yii::app()->controller->listLanguage as $key => $value) {
+        foreach (Yii::app()->controller->listLanguage as $key) {
             $this->executeRecord($id, $key, $model['title' . $key], $model['content' . $key], $model['tag' . $key], $model['description' . $key]);
         }
     }

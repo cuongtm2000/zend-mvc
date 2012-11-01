@@ -104,7 +104,7 @@ class ProductsCatLanguage extends CActiveRecord {
 
     //Back end - add
     public function saveRecord($id, $model) {
-        foreach (Yii::app()->controller->listLanguage as $key => $value) {
+        foreach (Yii::app()->controller->listLanguage as $key) {
             $this->executeRecord($id, $key, $model['cat_title' . $key], $model['preview' . $key], $model['tag' . $key], $model['description' . $key]);
         }
     }

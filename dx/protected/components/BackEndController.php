@@ -5,7 +5,7 @@
  * All controller classes for this application should extend from this base class.
  */
 class BackEndController extends CController {
-    public $layout = '//layouts/column1';
+    public $layout = '//layouts/column-1';
     public $breadcrumbs = array();
 
     public $setting = array();
@@ -35,7 +35,7 @@ class BackEndController extends CController {
         Yii::app()->theme = 'admin'; //Setup template
 
         $this->setting = Setting::model()->getSetting(); //Get Setting: title, keywords...
-        $this->listLanguage = Language::model()->listLanguage(); //Get list language: vi, en
+        $this->listLanguage = explode('|', $this->setting['num_language']); //Get list language: vi, en
         Common::setLanguage(); //Setup language
         $this->lang = Lang::model()->getLang(Yii::app()->language, 1);
 		
