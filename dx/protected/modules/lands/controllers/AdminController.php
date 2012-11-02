@@ -124,7 +124,17 @@ class AdminController extends BackEndController {
 
         $this->render('index', $model->listItemAdmin());
     }
+    public function actionMember() {
+        $model_class = ucfirst($this->module->id);
+        $model = new $model_class;
 
+        //Submit
+        if (Yii::app()->request->getIsPostRequest()) {
+            $model->activeItem(Yii::app()->request);
+            $this->refresh();
+        }
+        $this->render('member', LandsUsers::model()->listUsernames());
+    }
     public function actionAdd() {
         Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
         Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/config.js');
@@ -132,10 +142,13 @@ class AdminController extends BackEndController {
         $model_class = ucfirst($this->module->id);
         $model_cat_class = $model_class . 'Cat';
         $model_form_class = $model_class . 'Form';
+        $model_type_class = $model_class . 'Type';
         $model = new $model_class;
         $model_cat = new $model_cat_class;
         $model_form = new $model_form_class;
-
+        $model_type = new $model_type_class;
+        $provice_class = new Provinces();
+        
         if (isset($_POST[$model_form_class])) {
             $model_form->attributes = $_POST[$model_form_class];
 
@@ -145,7 +158,12 @@ class AdminController extends BackEndController {
             }
         }
 
-        $this->render('add', array('model' => $model_form, 'listItemsCat' => $model_cat->listCats()));
+        $this->render('add', array(
+            'model' => $model_form, 
+            'listItemsCat' => $model_cat->listCats(),
+            'listItemsType' => $model_type->listTypes(),
+            'listProvices' => $provice_class->listProvince(),
+        ));
     }
 
     public function actionEdit($id) {

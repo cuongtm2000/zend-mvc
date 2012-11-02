@@ -67,7 +67,7 @@ $config = array(
         ),
 
         'db' => array(
-            'connectionString' => 'mysql:host=localhost;dbname=cms',
+            'connectionString' => 'mysql:host=localhost;dbname=datxanh',
             //'schemaCachingDuration' => 3600,
             'emulatePrepare' => true,
             'username' => 'root',
