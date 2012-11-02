@@ -101,8 +101,9 @@ class MenusLanguage extends CActiveRecord {
 
     //Back end - add
     public function saveRecord($id, $model) {
-        $url = Urls::model()->getPatternByType($model['menu_url_content_page']);
-        foreach (Yii::app()->controller->listLanguage as $key => $value) {
+        //$url = Urls::model()->getPatternByType($model['menu_url_content_page']);
+        $url = Links::model()->getLinkLanguage($model['menu_url_content_page']);
+        foreach (Yii::app()->controller->listLanguage as $key) {
             if ($model['menu_type'] == 1) {
                 $this->executeRecord($id, $key, $model['menu_name' . $key], isset($url[$key]) ? $url[$key] : null, $model['menu_description' . $key]);
             } else {

@@ -88,7 +88,7 @@ class Links extends CActiveRecord {
         ));
     }
 
-    /*public function getLink($module, $lang) {
+    public function getLink($module, $lang) {
         $command = Yii::app()->db->createCommand('SELECT link_id FROM ' . $this->tableName() . ' WHERE module_id=:module AND language_id=:lang');
         $command->bindParam(":module", $module, PDO::PARAM_STR);
         $command->bindParam(":lang", $lang, PDO::PARAM_STR);
@@ -101,7 +101,7 @@ class Links extends CActiveRecord {
         $command->bindParam(":link", $link, PDO::PARAM_STR);
         $command->bindParam(":lang", $lang, PDO::PARAM_STR);
         return $command->queryScalar();
-    }*/
+    }
 
     //Back end - Add item
     public function addItems($id, $dataOld, $data) {

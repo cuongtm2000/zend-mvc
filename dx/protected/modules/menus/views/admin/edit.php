@@ -2,7 +2,7 @@
     <fieldset>
         <legend>Config menu</legend>
         <?php echo $form->errorSummary($model, ''); ?>
-        <?php foreach($this->listLanguage as $key => $lang):?>
+        <?php foreach($this->listLanguage as $key):?>
             <p class="clear">
                 <?php echo $form->labelEx($model, 'menu_name'.$key) ?>
                 <?php echo $form->textField($model, 'menu_name'.$key, array('class'=>'txt-large-x')); ?>
@@ -20,7 +20,7 @@
             <?php echo $form->labelEx($model, 'menu_url_content_page') ?>
             <?php echo $form->dropDownList($model, 'menu_url_content_page', Module::model()->listModuleByLang()); ?>
         </p>
-        <?php foreach($this->listLanguage as $key => $lang):?>
+        <?php foreach($this->listLanguage as $key):?>
         <p class="clear" id="url<?php echo $key?>">
             <?php echo $form->labelEx($model, 'menu_url'.$key) ?>
             <?php echo $form->textField($model, 'menu_url'.$key, array('class'=>'txt-large-x')); ?>
@@ -30,7 +30,7 @@
             <?php echo $form->labelEx($model, 'menu_target') ?>
             <?php echo $form->dropDownList($model, 'menu_target', array('_blank' => 'New page', '' => 'Current page'), array('class' => 'select-110')); ?>
         </p>
-        <?php foreach($this->listLanguage as $key => $lang):?>
+        <?php foreach($this->listLanguage as $key):?>
         <p class="clear" id="description<?php echo $key?>">
             <?php echo $form->labelEx($model, 'menu_description'.$key) ?>
             <?php echo $form->textArea($model, 'menu_description'.$key, array('rows' => 5, 'cols' => 20)); ?>
