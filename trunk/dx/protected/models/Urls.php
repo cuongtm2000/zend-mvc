@@ -116,6 +116,7 @@ class Urls extends CActiveRecord {
         return $command->queryScalar();
     }
 
+    //coi lai, rat co the ko sai nua
     public function getPatternByType($module) {
         $data = array();
         $command = Yii::app()->db->createCommand('SELECT url_pattern, hoiit_languages_language_id FROM ' . $this->tableName() . ' WHERE url_type=1 AND hoiit_modules_module_id=:module');

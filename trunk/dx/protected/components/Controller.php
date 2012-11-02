@@ -35,7 +35,8 @@ class Controller extends CController {
     }
 
     public function setUrlModule($module = null) {
-        return $this->setLangUrl() . '/' . Urls::model()->getPatternModule(($module) ? $module : $this->module->id);
+        //return $this->setLangUrl() . '/' . Urls::model()->getPatternModule(($module) ? $module : $this->module->id);
+        return $this->setLangUrl() . '/' . Links::model()->getLink(($module) ? $module : $this->module->id, Yii::app()->language);
     }
 
     public function setDescription($value = null) {
