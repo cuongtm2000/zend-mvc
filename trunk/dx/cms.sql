@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 3.5.0
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 02, 2012 at 03:07 AM
--- Server version: 5.5.16
--- PHP Version: 5.3.8
+-- Generation Time: Nov 03, 2012 at 12:22 AM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `cms`
+-- Database: `datxanh`
 --
 
 -- --------------------------------------------------------
@@ -260,7 +260,7 @@ INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_url`, `module_
 ('contact', 'Danh sách|Cấu hình', 'contact|contact/config', 2, 1, 1),
 ('counterSession', 'CounterSession', NULL, 4, 0, 0),
 ('default', 'Default', NULL, 1, 1, 1),
-('lands', 'Danh mục|Danh sách|Cấu hình', 'lands/cat|lands|lands/config', 3, 1, 1),
+('lands', 'Danh mục|Danh sách|Cấu hình|Thành viên', 'lands/cat|lands|lands/config|lands/member', 3, 1, 1),
 ('news', 'Danh mục|Danh sách|Cấu hình', 'news/cat|news|news/config', 4, 1, 1),
 ('poll', 'Danh sách', 'poll', 7, 1, 1),
 ('products', 'Danh mục|Danh sách|Cấu hình', 'products/cat|products|products/config', 3, 1, 1),
@@ -364,7 +364,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_advs` (
   `click` int(11) NOT NULL DEFAULT '0',
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -409,7 +409,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_contacts` (
   `hot` tinyint(1) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -447,7 +447,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('vuwcqiy31', 1351821826);
+('wjznl1b5q', 1351877788);
 
 -- --------------------------------------------------------
 
@@ -467,11 +467,249 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_value` (
 
 INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
 ('max_visit_day', 1351810800),
-('max_visit_value', 1),
+('max_visit_value', 4),
 ('time_start_today', 1351810800),
-('today_visited', 1),
-('total_visited', 1),
+('today_visited', 4),
+('total_visited', 4),
 ('yesterday_visited', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_lands`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_lands` (
+  `record_id` int(11) NOT NULL DEFAULT '0',
+  `postdate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `pic_thumb` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `pic_full` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `pic_desc` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `record_order` int(11) DEFAULT NULL,
+  `price` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
+  `hot` tinyint(1) NOT NULL DEFAULT '0',
+  `specials` tinyint(1) DEFAULT NULL,
+  `contact_name` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
+  `contact_tel` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
+  `hoiit_module_item_type_type_id` int(11) NOT NULL,
+  `hoiit_module_lands_provinces_province_id` int(11) NOT NULL,
+  `username` varchar(45) NOT NULL,
+  `hits` int(11) NOT NULL,
+  `keys` varchar(45) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `fk_cat_id` (`hoiit_module_item_cat_cat_id`),
+  KEY `hoiit_module_item_type_type_id` (`hoiit_module_item_type_type_id`),
+  KEY `hoiit_module_lands_provinces_province_id` (`hoiit_module_lands_provinces_province_id`),
+  KEY `username` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_lands_cat`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_lands_cat` (
+  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_parent_id` int(11) NOT NULL DEFAULT '0',
+  `cat_created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `pic_thumb` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `pic_desc` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
+  `cat_hot` tinyint(1) DEFAULT NULL,
+  `cat_order` int(11) DEFAULT NULL,
+  `cat_extra1` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `cat_extra2` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `hoiit_module_lands_cat`
+--
+
+INSERT INTO `hoiit_module_lands_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
+(4, 0, '0000-00-00 00:00:00', '', NULL, 0, 4, NULL, NULL, 1),
+(5, 0, '0000-00-00 00:00:00', '', NULL, 0, 5, NULL, NULL, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_lands_cat_languages`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_lands_cat_languages` (
+  `cat_id` int(11) NOT NULL,
+  `language_id` varchar(2) CHARACTER SET utf8 NOT NULL,
+  `cat_title` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `preview` text CHARACTER SET utf8,
+  `tag` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `description` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`cat_id`,`language_id`),
+  UNIQUE KEY `cat_id` (`cat_id`),
+  KEY `language_id` (`language_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `hoiit_module_lands_cat_languages`
+--
+
+INSERT INTO `hoiit_module_lands_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
+(4, 'vi', 'Căn hộ', '', 'can-ho', ''),
+(5, 'vi', 'Đất nền', '', 'dat-nen', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_lands_languages`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_lands_languages` (
+  `record_id` int(11) NOT NULL,
+  `language_id` varchar(2) CHARACTER SET utf8 NOT NULL,
+  `title` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `preview` text NOT NULL,
+  `content` text CHARACTER SET utf8 NOT NULL,
+  `tag` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `description` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`record_id`,`language_id`),
+  KEY `language_id` (`language_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_lands_provinces`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_lands_provinces` (
+  `province_id` int(11) NOT NULL AUTO_INCREMENT,
+  `province_name` varchar(45) NOT NULL,
+  PRIMARY KEY (`province_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=64 ;
+
+--
+-- Dumping data for table `hoiit_module_lands_provinces`
+--
+
+INSERT INTO `hoiit_module_lands_provinces` (`province_id`, `province_name`) VALUES
+(1, 'An Giang'),
+(2, 'Bà rịa - Vũng tàu'),
+(3, 'Bạc Liêu'),
+(4, 'Bắc Cạn'),
+(5, 'Bắc Giang'),
+(6, 'Bắc Ninh'),
+(7, 'Bến Tre'),
+(8, 'Bình Dương'),
+(9, 'Bình Định'),
+(10, 'Bình Phước'),
+(11, 'Bình Thuận'),
+(12, 'Cà Mau'),
+(13, 'Cao Bằng'),
+(14, 'Cần Thơ'),
+(15, 'Đà  Nẵng'),
+(16, 'Đăk Lăk'),
+(17, 'Đắk Nông'),
+(18, 'Điện Biên'),
+(19, 'Đồng Nai'),
+(20, 'Đồng Tháp'),
+(21, 'Gia Lai'),
+(22, 'Hà Giang'),
+(23, 'Hà Nam'),
+(24, 'Hà Nội'),
+(25, 'Hà Tĩnh'),
+(26, 'Hải Dương'),
+(27, 'Hải Phòng'),
+(28, 'Hậu Giang'),
+(29, 'Hòa Bình'),
+(30, 'Thành phố Hồ Chí Minh'),
+(31, 'Hưng Yên'),
+(32, 'Khánh Hoà'),
+(33, 'Kiên Giang'),
+(34, 'Kon Tum'),
+(35, 'Lai Châu'),
+(36, 'Lạng Sơn'),
+(37, 'Lào Cai'),
+(38, 'Lâm Đồng'),
+(39, 'Long An'),
+(40, 'Nam Định'),
+(41, 'Nghệ An'),
+(42, 'Ninh Bình'),
+(43, 'Ninh Thuận'),
+(44, 'Phú Thọ'),
+(45, 'Phú Yên'),
+(46, 'Quảng Bình'),
+(47, 'Quảng Nam'),
+(48, 'Quảng Ngãi'),
+(49, 'Quảng Ninh'),
+(50, 'Quảng Trị'),
+(51, 'Sóc Trăng'),
+(52, 'Sơn La'),
+(53, 'Tây Ninh'),
+(54, 'Thái Bình'),
+(55, 'Thái Nguyên'),
+(56, 'Thanh Hoá'),
+(57, 'Thừa Thiên-Huế'),
+(58, 'Tiền Giang'),
+(59, 'Trà Vinh'),
+(60, 'Tuyên Quang'),
+(61, 'Vĩnh Long'),
+(62, 'Vĩnh Phúc'),
+(63, 'Yên Bái');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_lands_type`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_lands_type` (
+  `type_id` int(11) NOT NULL AUTO_INCREMENT,
+  `type_name` varchar(45) NOT NULL,
+  `type_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `type_order` int(11) NOT NULL,
+  `type_enable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`type_id`),
+  UNIQUE KEY `type_order_2` (`type_order`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `hoiit_module_lands_type`
+--
+
+INSERT INTO `hoiit_module_lands_type` (`type_id`, `type_name`, `type_created`, `type_order`, `type_enable`) VALUES
+(1, 'Mua bán', '0000-00-00 00:00:00', 2, 1),
+(2, 'Cho thuê', '0000-00-00 00:00:00', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_lands_users`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_lands_users` (
+  `username` varchar(45) CHARACTER SET latin1 NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `fullname` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `phone` int(11) NOT NULL,
+  `province` int(11) NOT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `sexual` varchar(10) DEFAULT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`username`),
+  KEY `province` (`province`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_lands_users`
+--
+
+INSERT INTO `hoiit_module_lands_users` (`username`, `password`, `fullname`, `email`, `phone`, `province`, `address`, `sexual`, `date_created`, `enable`) VALUES
+('ninh', '453e41d218e071ccfb2d1c99ce23906a', 'ninh', 'khangninh2005@yahoo.com', 2147483647, 19, '', NULL, '2012-11-02 16:58:43', 1),
+('ninh1', '453e41d218e071ccfb2d1c99ce23906a', 'dong nai', 'khangninh2005@yahoo.com', 2147483647, 15, '', 'Nam', '2012-11-02 17:12:08', 1);
 
 -- --------------------------------------------------------
 
@@ -727,7 +965,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products` (
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_hoiit_module_products_hoiit_module_products_cat1` (`hoiit_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -747,7 +985,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_products_cat` (
   `cat_extra2` varchar(100) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1141,6 +1379,35 @@ ALTER TABLE `hoiit_module_about_languages`
 ALTER TABLE `hoiit_module_contacts_languages`
   ADD CONSTRAINT `fk_hoiit_module_contacts_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_hoiit_module_contacts_has_hoiit_languages_hoiit_module_con1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_contacts` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `hoiit_module_lands`
+--
+ALTER TABLE `hoiit_module_lands`
+  ADD CONSTRAINT `hoiit_module_lands_ibfk_1` FOREIGN KEY (`hoiit_module_item_cat_cat_id`) REFERENCES `hoiit_module_lands_cat` (`cat_id`),
+  ADD CONSTRAINT `hoiit_module_lands_ibfk_2` FOREIGN KEY (`hoiit_module_item_type_type_id`) REFERENCES `hoiit_module_lands_type` (`type_id`),
+  ADD CONSTRAINT `hoiit_module_lands_ibfk_3` FOREIGN KEY (`hoiit_module_lands_provinces_province_id`) REFERENCES `hoiit_module_lands_provinces` (`province_id`),
+  ADD CONSTRAINT `hoiit_module_lands_ibfk_4` FOREIGN KEY (`username`) REFERENCES `hoiit_module_lands_users` (`username`);
+
+--
+-- Constraints for table `hoiit_module_lands_cat_languages`
+--
+ALTER TABLE `hoiit_module_lands_cat_languages`
+  ADD CONSTRAINT `hoiit_module_lands_cat_languages_ibfk_1` FOREIGN KEY (`cat_id`) REFERENCES `hoiit_module_lands_cat` (`cat_id`),
+  ADD CONSTRAINT `hoiit_module_lands_cat_languages_ibfk_3` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`);
+
+--
+-- Constraints for table `hoiit_module_lands_languages`
+--
+ALTER TABLE `hoiit_module_lands_languages`
+  ADD CONSTRAINT `hoiit_module_lands_languages_ibfk_1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_lands` (`record_id`),
+  ADD CONSTRAINT `hoiit_module_lands_languages_ibfk_3` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`);
+
+--
+-- Constraints for table `hoiit_module_lands_users`
+--
+ALTER TABLE `hoiit_module_lands_users`
+  ADD CONSTRAINT `hoiit_module_lands_users_ibfk_1` FOREIGN KEY (`province`) REFERENCES `hoiit_module_lands_provinces` (`province_id`);
 
 --
 -- Constraints for table `hoiit_module_menus_languages`

@@ -79,8 +79,6 @@ class Lands extends CActiveRecord {
      */
     public function attributeLabels() {
         return array(
-            'record_id' => 'Record',
-            'postdate' => 'Postdate',
             'pic_thumb' => 'Pic Thumb',
             'pic_full' => 'Pic Full',
             'pic_desc' => 'Pic Desc',
@@ -88,12 +86,8 @@ class Lands extends CActiveRecord {
             'unit' => 'Unit',
             'hot' => 'Hot',
             'specials' => 'Specials',
-            'field1' => 'Field1',
-            'field2' => 'Field2',
-            'field3' => 'Field3',
-            'field4' => 'Field4',
-            'enable' => 'Enable',
-            'hoiit_module_item_cat_cat_id' => 'Hoiit Module Item Cat Cat',
+ 
+            'hoiit_module_item_cat_cat_id' => 'Loại bất động sản',
         );
     }
 
