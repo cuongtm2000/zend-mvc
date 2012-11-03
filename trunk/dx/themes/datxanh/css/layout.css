@@ -5,20 +5,17 @@ body {margin:0;padding:10px 0 0 0;background:#fff url(../images/bg.png) no-repea
 a{text-decoration:none; color:#720E3B}
 a:hover{color:#000;}
 
-/*layout*/
 #wrapper {margin:auto; width:940px}
-
-/*Logo*/
 #logo{margin-bottom:5px}
 
 /* Nav ( Menu ) */
 #nav{list-style:none;padding:0;margin:0 0 10px 0;float:right;text-align:right}
 #nav li{float:left}
-#nav li a{color:#fff;padding:0 10px;display:block;font-size:14px;font-weight:bold}
+#nav li a{color:#fff;padding:0 10px;display:block;font-size:14px;font-weight:bold; text-transform: uppercase}
 #nav li a:hover{color:#F90}
 #nav .selected a{color:#F90}
-#nav .none-line{background:none}
-#nav .none-line a{padding:0 0 0 10px}
+#nav .last{background:none}
+#nav .last a{padding:0 0 0 10px}
 
 /*Banner*/
 .bgbanner{border:5px solid #E7E7E9;margin-bottom:20px}
@@ -74,7 +71,6 @@ a:hover{color:#000;}
 
 .video{margin-bottom:20px}
 
-/*bg-adv adv left*/
 #adv-all{position:relative}
 #adv1{margin:0;padding:0;list-style:none;position:absolute; left:0;top:0}
 #adv2{position:absolute; top:0;right:0;margin:0;padding:0;}
@@ -152,13 +148,14 @@ a:hover{color:#000;}
 
 /*   Page New  */
 .panel-items{list-style: none;text-align:justify;margin:0;padding:0}
-.panel-items li{padding:15px;margin-bottom:10px;}.panel-items p{margin:0;line-height:normal}
+.panel-items li{padding:15px;margin-bottom:10px}
+.panel-items p{margin:0;line-height:normal}
 .panel-items .alt{background:#F1F1F1}
 .frame-img{float:left;margin:0 8px 0 0;border:3px solid #ccc}
 .title-items-news{margin:0 0 5px 0;font-size:10pt;font-weight:bold}
 .title-items-news a{color:#208FFF}
 .title-items-news a:hover{color:#F90}
-.button-detail{background:url(../images/bton-detail.png) no-repeat;width:35px;height:28px;float:right}
+.detail{float: right}
 
 /*** panel-items-related tin tuc index***/
 .panel-items-related{padding:0;margin:0}

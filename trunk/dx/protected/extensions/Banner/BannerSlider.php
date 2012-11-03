@@ -14,11 +14,11 @@ class BannerSlider extends CWidget {
         if ($items) {
             $this->registerClientScript();
 
-            echo '<div class="bgbanner"><ul id="' . $this->id . '" class="slider">';
+            echo '<ul id="' . $this->id . '" class="slider">';
             foreach ($items as $value) {
                 echo '<li class="slider-item"><a href="' . $value['banner_link'] . '" title="' . $value['banner_name'] . '"><img src="' . Yii::app()->baseUrl . Yii::getPathOfAlias('filePathUpload') . '/image/banner/' . $value['banner_picture'] . '" alt="' . $value['banner_name'] . '" /></a></li>';
             }
-            echo '</ul> </div>';
+            echo '</ul>';
         } else if ($this->default_banner) {
             echo '<img src="' . Yii::app()->theme->baseUrl . '/images/banner.jpg" alt="Banner" />';
         }

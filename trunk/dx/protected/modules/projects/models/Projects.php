@@ -119,9 +119,35 @@ class Projects extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
+	
+	//Front end - Get record_id by tag
+    public function getIDByTag($tag) {
+        $criteria = new CDbCriteria();
+        $criteria->with = array(__CLASS__ . 'Language');
+        $criteria->condition = 'enable=1 AND language_id=:lang AND tag=:tag';
+        $criteria->params = array(':lang' => Yii::app()->language, ':tag' => $tag);
+
+        $this->_model = $this->find($criteria);
+        if ($this->_model === null) {
+            throw new CHttpException(404, 'The requested page does not exist.');
+        }
+        return $this->_model;
+    }
+	
+	//Front end - list Item other
+    public function listItemOther($id, $cid) {
+        //$cid = $this->loadEdit($id);
+
+        $criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'record_id !=:id AND enable = 1 AND hoiit_module_item_cat_cat_id=:cid';
+        $criteria->params = array(':id' => $id, ':cid' => $cid);
+        $criteria->limit = 5;
+        return $this->findAll($criteria);
+    }
 
     //Front end - get detail item
-    public function detailItem($tag) {
+    /*public function detailItem($tag) {
         $id = ProjectsLanguage::model()->getIDByTag($tag);
         $criteria = new CDbCriteria();
         $criteria->condition = 'enable=1';
@@ -132,7 +158,7 @@ class Projects extends CActiveRecord {
             throw new CHttpException(404, 'The requested page does not exist.');
         }
         return $this->_model;
-    }
+    }*/
 
     public function ListFirst() {
         $criteria = new CDbCriteria();

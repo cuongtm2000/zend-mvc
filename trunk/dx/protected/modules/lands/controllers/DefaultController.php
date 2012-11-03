@@ -3,6 +3,7 @@
 class DefaultController extends Controller {
 
     public function actionIndex() {
+        $this->layout = '//layouts/column-lands';
         $model_class = ucfirst($this->module->id) . 'Cat';
         $model = new $model_class;
 
@@ -19,8 +20,7 @@ class DefaultController extends Controller {
 
     public function actionView($id) {
         Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/scroll.css');
-        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/jquery.fancy
-                    box.css');
+        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/jquery.fancybox.css');
 
         Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jcarousellite_1.0.1.js');
         Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/scroller.js');
@@ -79,7 +79,7 @@ class DefaultController extends Controller {
             Yii::app()->user->setFlash('message', 'Successful registration.');
         }
 
-        $this->render( 'login', array('model' => $model));
+        $this->render('login', array('model' => $model));
     }
 
     public function actionLogout() {
