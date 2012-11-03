@@ -32,6 +32,12 @@ $config = array(
             'allowAutoLogin' => true,
             'loginUrl' => array('login')
         ),
+		'memberLands' => array(
+            'class' => 'CWebUser',
+            'allowAutoLogin' => true,
+            'loginUrl' => array('lands/login'),
+            'stateKeyPrefix' => 'memberLands',
+        ),
 
         /*'cache' => array(
             'class' => 'CDbCache',

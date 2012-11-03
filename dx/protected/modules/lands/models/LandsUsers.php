@@ -78,7 +78,7 @@ class LandsUsers extends CActiveRecord {
             $this->fullname = $purifier->purify(strtolower($this->fullname));
             $this->phone = $purifier->purify(strtolower($this->phone));
             $this->address = $purifier->purify(strtolower($this->address));
-            $this->password = md5($this->password);
+            $this->password = md5(md5($this->password));
         } else {
             //$this->username = Yii::app()->user->name;            
         }

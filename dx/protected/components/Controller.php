@@ -43,7 +43,7 @@ class Controller extends CController {
         if ($value) {
             $this->description = $value;
         } else {
-            $this->description = MenusLanguage::model()->getDescriptionByUrl(Urls::model()->getPatternModule($this->module->id));
+            $this->description = MenusLanguage::model()->getDescriptionByUrl(Links::model()->getLink($this->module->id, Yii::app()->language));
         }
     }
 

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.0
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 03, 2012 at 12:22 AM
--- Server version: 5.5.8
--- PHP Version: 5.3.5
+-- Generation Time: Nov 03, 2012 at 08:50 AM
+-- Server version: 5.5.16
+-- PHP Version: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -44,14 +44,14 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('adv_bottom_width', '222', NULL, 'adv'),
 ('adv_center_height', '222', NULL, 'adv'),
 ('adv_center_width', '222', NULL, 'adv'),
-('adv_left_height', '222', NULL, 'adv'),
+('adv_left_height', '500', NULL, 'adv'),
 ('adv_left_width', '222', NULL, 'adv'),
-('adv_right_height', '222', NULL, 'adv'),
+('adv_right_height', '500', NULL, 'adv'),
 ('adv_right_width', '222', NULL, 'adv'),
 ('adv_top_height', '222', NULL, 'adv'),
 ('adv_top_width', '222', NULL, 'adv'),
-('banner_height', '270', NULL, 'banner'),
-('banner_width', '930', NULL, 'banner'),
+('banner_height', '184', NULL, 'banner'),
+('banner_width', '940', NULL, 'banner'),
 ('contact_email_received', 'thanhansoft@gmail.com', NULL, 'contact'),
 ('contact_host', 'smtp.gmail.com', NULL, 'contact'),
 ('contact_password', 'assas', NULL, 'contact'),
@@ -76,14 +76,14 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('products_width_desc', '520', NULL, 'products'),
 ('products_width_full', '520', NULL, 'products'),
 ('products_width_thumb', '220', NULL, 'products'),
-('projects_cat_height_thumb', '200', NULL, 'projects'),
-('projects_cat_width_thumb', '200', NULL, 'projects'),
-('projects_height_thumb', '200', NULL, 'projects'),
-('projects_num_item_cat', '3', NULL, 'projects'),
-('projects_num_item_hot', '7', '', 'projects'),
-('projects_num_item_index', '3', NULL, 'projects'),
+('projects_cat_height_thumb', '165', NULL, 'projects'),
+('projects_cat_width_thumb', '165', NULL, 'projects'),
+('projects_height_thumb', '165', NULL, 'projects'),
+('projects_num_item_cat', '5', NULL, 'projects'),
+('projects_num_item_hot', '7', NULL, 'projects'),
+('projects_num_item_index', '5', NULL, 'projects'),
 ('projects_num_item_new', '7', NULL, 'projects'),
-('projects_width_thumb', '200', NULL, 'projects');
+('projects_width_thumb', '165', NULL, 'projects');
 
 -- --------------------------------------------------------
 
@@ -193,6 +193,7 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('no_record', 'Không tồn tại mẫu tin', 0, 'vi'),
 ('order', 'Order', 1, 'en'),
 ('order', 'Thứ tự', 1, 'vi'),
+('other', 'khác', 0, 'vi'),
 ('poll', 'Bình chọn', 0, 'en'),
 ('poll', 'Bình chọn', 0, 'vi'),
 ('products', 'Products', 0, 'en'),
@@ -320,7 +321,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about` (
   `field2` varchar(100) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `hoiit_module_about`
+--
+
+INSERT INTO `hoiit_module_about` (`record_id`, `pic_thumb`, `created`, `record_order`, `hot`, `field1`, `field2`, `enable`) VALUES
+(1, NULL, '2012-11-03 07:18:09', 1, 0, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -343,6 +351,13 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
   KEY `fk_hoiit_about_has_hoiit_languages_hoiit_about1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `hoiit_module_about_languages`
+--
+
+INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
+(1, 'vi', 'Giới thiệu đất xanh', '<p>Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p>Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p>Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p>Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p>Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p>Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p>Trân trọng,</p>', 'gioi-thieu-dat-xanh', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh', 5, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -364,7 +379,15 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_advs` (
   `click` int(11) NOT NULL DEFAULT '0',
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `hoiit_module_advs`
+--
+
+INSERT INTO `hoiit_module_advs` (`record_id`, `title`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `click`, `enable`) VALUES
+(1, 'Quảng cáo trái', 'quang-cao-trai.jpg', '', '2012-11-03 01:53:13', '2012-11-02 17:00:00', '2012-11-30 17:00:00', 0, 1, 'left', '_bank', 0, 1),
+(2, 'Quảng cáo trái', 'quang-cao-trai-4.jpg', '', '2012-11-03 02:00:36', '2012-11-02 17:00:00', '2012-12-07 17:00:00', 0, 2, 'left', '_bank', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -384,7 +407,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_banners` (
   `module_id` varchar(30) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`banner_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=62 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=63 ;
 
 --
 -- Dumping data for table `hoiit_module_banners`
@@ -392,9 +415,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_banners` (
 
 INSERT INTO `hoiit_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_picture`, `banner_link`, `banner_order`, `banner_type`, `banner_click`, `module_id`, `enable`) VALUES
 (58, '2012-08-07 09:42:19', '', NULL, NULL, NULL, 'logo', 0, NULL, 1),
-(59, '2012-11-01 08:18:52', 'banner1', 'banner1.jpg', '', 1, 'banner', 0, 'default', 1),
-(60, '2012-11-01 08:18:59', 'banner2', 'banner2-7.jpg', '', 2, 'banner', 0, 'default', 1),
-(61, '2012-11-01 08:19:06', 'banner3', 'banner3-2.jpg', '', 3, 'banner', 0, 'default', 1);
+(62, '2012-11-03 03:22:46', 'Banner dự án', 'banner-du-an.jpg', '', 1, 'banner', 0, 'default', 1);
 
 -- --------------------------------------------------------
 
@@ -447,7 +468,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('wjznl1b5q', 1351877788);
+('lv15b7nui', 1351926499);
 
 -- --------------------------------------------------------
 
@@ -468,10 +489,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_value` (
 INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
 ('max_visit_day', 1351810800),
 ('max_visit_value', 4),
-('time_start_today', 1351810800),
+('time_start_today', 1351897200),
 ('today_visited', 4),
-('total_visited', 4),
-('yesterday_visited', 0);
+('total_visited', 8),
+('yesterday_visited', 4);
 
 -- --------------------------------------------------------
 
@@ -763,7 +784,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus_languages` (
 
 INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name`, `menu_url`, `menu_description`) VALUES
 (35, 'vi', 'Trang chủ', 'trang-chu', 'Mo ta'),
-(36, 'vi', 'Dự án', 'du-an', 'Mo ta'),
+(36, 'vi', 'Dự án', 'du-an', 'Mo ta dự án'),
 (37, 'vi', 'Tin tức', 'tin-tuc', 'Tin tức'),
 (38, 'vi', 'Giới thiệu', 'gioi-thieu', ''),
 (39, 'vi', 'Liên hệ', 'lien-he', ''),
@@ -1049,14 +1070,15 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects` (
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_hoiit_module_pro_hoiit_module_pro_cat_1` (`hoiit_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `hoiit_module_projects`
 --
 
 INSERT INTO `hoiit_module_projects` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
-(4, '2012-11-01 08:12:31', '', 'ban-nha-cap-4-desc-1.jpg', 4, 0, NULL, '', '', NULL, NULL, 1, 1);
+(4, '2012-11-01 08:12:31', '', 'ban-nha-cap-4-desc-1.jpg', 4, 0, NULL, '', '', NULL, NULL, 1, 2),
+(5, '2012-11-02 23:51:33', NULL, 'ban-nha-cap-3-desc-1.png|ban-nha-cap-3-desc-2.png', 5, 0, NULL, 'ban-nha-cap-3-slide-1.png', 'http://www.youtube.com/watch?v=IXywPCS-sFo', NULL, NULL, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -1142,7 +1164,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects_languages` (
 --
 
 INSERT INTO `hoiit_module_projects_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `detail`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(4, 'vi', 'Bán nhà cấp 4', '<p>Thong tin chi tiet can xem truoc</p>\r\n<p><img src="/datxanh/public/userfiles/image/image6.jpg" alt="" width="700" height="350" /></p>\r\n<p>Thong tin chi tiet can xem truoc</p>', '<p>Phần nội dung nhà ở can thiet de biet</p>', '<p><img src="/datxanh/public/userfiles/image/image4.jpg" alt="" width="700" height="350" /></p>\r\n<p>so do vi tri</p>', 'ban-nha-cap-4', '', 0, NULL, NULL);
+(4, 'vi', 'Bán nhà cấp 4', '<p>Thong tin chi tiet can xem truoc</p>\r\n<p>Thong tin chi tiet can xem truoc</p>', '<p>Phần nội dung nhà ở can thiet de biet</p>', '<p><img src="/datxanh/public/userfiles/image/image4.jpg" alt="" width="700" height="350" /></p>\r\n<p>so do vi tri</p>', 'ban-nha-cap-4', '', 0, NULL, NULL),
+(5, 'vi', 'Bán nhà cấp 3', '<p>Bán nhà cấp 3 Bán nhà cấp 3 Bán nhà cấp 3</p>', '<p>Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3</p>', '<p>Bán nhà cấp 3 Bán nhà cấp 3</p>', 'ban-nha-cap-3', '', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1202,7 +1225,12 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('left', 1, '1', 'news', NULL, NULL, 'menu_news'),
 ('left', 2, '1', 'news', NULL, NULL, 'adv_left'),
 ('right', 3, '1', 'news', NULL, NULL, 'adv_right'),
-('left', 1, '1', 'projects', NULL, NULL, 'menu_projects');
+('footer', 1, '1', 'projects', NULL, NULL, 'counter_session'),
+('left', 2, '1', 'projects', NULL, NULL, 'menu_projects'),
+('left', 3, '1', 'projects', NULL, NULL, 'adv_left'),
+('footer', 1, '1', 'contact', NULL, NULL, 'counter_session'),
+('left', 2, '1', 'contact', NULL, NULL, 'menu_projects'),
+('left', 3, '1', 'contact', NULL, NULL, 'list_support');
 
 -- --------------------------------------------------------
 
@@ -1224,10 +1252,10 @@ INSERT INTO `hoiit_settings` (`setting_name`, `setting_value`) VALUES
 ('default_language', 'vi'),
 ('description', 'Description'),
 ('hotline', ''),
-('keywords', 'Keywords'),
+('keywords', 'Kinh doanh bất động sản, Tư vấn - môi giới bất động sản, tư vấn đầu tư, xây dựng, trang trí nội thất, lập dự án đầu tư, chuẩn bị mặt bằng'),
 ('num_language', 'vi'),
 ('slogan', 'Thế giới đồ chơi cho khỉ'),
-('title', 'Welcome to YiiProject');
+('title', 'Đất xanh hoàn cầu');
 
 -- --------------------------------------------------------
 
@@ -1295,8 +1323,10 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('<products:(san-pham)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'products/default/view', 'urlSuffix=>.html', 0, 0, 'products', 'vi'),
 ('<products:(san-pham)>/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'products/default/cats', '', 1, 0, 'products', 'vi'),
 ('<projects:(du-an)>', 'projects/default/index', '', 4, 1, 'projects', 'vi'),
-('<projects:(du-an)>/<cid:[-a-z0-9]+>', 'projects/default/cats', '', 3, 0, 'projects', 'vi'),
-('<projects:(du-an)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'projects/default/view', 'urlSuffix=>.html', 0, 0, 'projects', 'vi'),
+('<projects:(du-an)>/<cid:[-a-z0-9]+>', 'projects/default/cats', '', 2, 0, 'projects', 'vi'),
+('<projects:(du-an)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'projects/default/view', 'urlSuffix=>.html', 5, 0, 'projects', 'vi'),
+('<projects:(du-an)>/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'projects/default/cats', '', 1, 0, 'projects', 'vi'),
+('<projects:(du-an)>/trang/<page:\\d+>', 'projects/default/index', '', 3, 1, 'projects', 'vi'),
 ('about-us', 'about/default/index', '', 2, 1, 'about', 'en'),
 ('contact', 'contact/default/index', '', 0, 1, 'contact', 'en'),
 ('gioi-thieu', 'about/default/index', '', 2, 1, 'about', 'vi'),
@@ -1305,7 +1335,6 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('lien-he', 'contact/default/index', '', 1, 1, 'contact', 'vi'),
 ('news', 'news/default/index', '', 5, 1, 'news', 'en'),
 ('products', 'products/default/index', '', 4, 1, 'products', 'en'),
-('projects', 'projects/default/index', '', 5, 1, 'projects', 'en'),
 ('san-giao-dich', 'lands/default/index', '', 4, 1, 'lands', 'en'),
 ('trang-chu', 'default/default/index', NULL, NULL, 1, 'default', 'vi');
 

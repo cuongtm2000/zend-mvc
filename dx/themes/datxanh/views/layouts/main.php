@@ -19,8 +19,8 @@
 	$(document).ready(function(){
 		if ($("#banner").length==0)
 		{
-			$("#heading").addClass("banner-none");	
-			
+			$("#heading").addClass("banner-none");
+
 		}
 	});
 </script>
@@ -32,7 +32,7 @@
 <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
 
 <script type="text/javascript">
-jQuery(document).ready(function() {
+/*$(document).ready(function() {
    jQuery('#mycarousel').jcarousel({
     	wrap: 'circular',
 		//auto:true,
@@ -46,7 +46,7 @@ jQuery(document).ready(function() {
         speed: 300,
 		scroll:2,
     });
-});
+});*/
 
 </script>
 </head>
@@ -60,7 +60,7 @@ jQuery(document).ready(function() {
 	<div id="heading"></div>
 	<div id="content">
         <?php echo $content; ?>
-		  <div class="clear"></div>
+		<div class="clear"></div>
 	</div><!--End content-->
 </div><!--End wrapper-->
 <div id="bg-footer">
@@ -72,10 +72,8 @@ jQuery(document).ready(function() {
             <p>ĐT:(08) 35 114 1114</p>
         </div>
         <div class="statistics">
-			<?php if ($this->getPosition('footer')): ?>
-				<?php $this->setPosition('footer');?>
-			<?php endif ?>
-            <p>Phát triển bởi <a href="" title="">Dos.vn</a></p>
+		    <?php $this->getPosition('footer');?>
+            <p>Phát triển bởi <a href="http://dos.vn" title="Dos.vn">Dos.vn</a></p>
         </div> <div class="clear"></div>
     </div><!--End footer-->
 </div> <!--End bg footer-->

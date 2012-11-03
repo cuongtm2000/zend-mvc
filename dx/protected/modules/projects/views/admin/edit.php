@@ -190,6 +190,11 @@
 		
 		<div class="col1"><?php echo $form->labelEx($model, 'pic_thumb') ?></div>
 		<div class="col2">
+            <?php if ($model->pic_thumb): ?>
+                <div class="img-marginb5"><img src="<?php echo Yii::app()->request->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/'.$this->module->id.'/'.$model->pic_thumb ?>" alt="Picture" />
+                    <?php echo $form->checkBox($model, 'remove_pic_thumb') ?><?php echo $form->labelEx($model, 'remove_pic_thumb', array('class' => 'remove')) ?>
+                </div>
+            <?php endif; ?>
 			<?php echo $form->fileField($model, 'pic_thumb', array('class' => 'fileupload')); ?>
 		</div>
 		<div class="clear space"></div>  
