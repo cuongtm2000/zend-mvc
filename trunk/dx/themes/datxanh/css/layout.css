@@ -127,10 +127,9 @@ a:hover{color:#000;}
 #column-3{float:right; width:231px}
 
 /* Form login */
-.login{margin-bottom:20px}
+.login{margin-bottom:20px;background:#F1F1F3;padding:12px 0 4px 15px;border:1px solid #ccc}
 .login p{margin:0 0 5px 0;color:#5d5b5c;font-size:10pt}
 .login input{border:1px solid #AAAAAA;padding:4px; width:190px;margin-bottom:8px}
-.panel-login{background:#F1F1F3;padding:12px 0 4px 15px;border:1px solid #ccc}
 .text-button{text-align:center}
 .login .button-login{border:none;background:#F58220;color:#fff;padding:0;cursor:pointer;height:28px; width:100px; line-height:28px;font-weight:bold; font-size:10pt}
 
@@ -239,5 +238,4 @@ tbody tr td {padding : 6px 5px; background : #fff; color : #111}
 .img-post img{width:47px}
 .address{width:70px;text-align:center;color:#990505}
 
-
-
+#mycarousel img{width: 95px}

@@ -1,6 +1,10 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id]); ?>
-<?php $this->pageTitle = $this->lang[$this->module->id];
-$this->setDescription() ?>
+<?php $this->pageTitle = $this->lang[$this->module->id]; $this->setDescription() ?>
+<?php
+    Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/tab.css');
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/tab-sub-right.js');
+?>
+
 <div class="main-all-product">
     <h2 class="title-right"><?php echo $this->lang['cat_title'] . ' ' . strtolower($this->lang[$this->module->id]) ?></h2>
         <?php if ($items): ?>

@@ -116,6 +116,13 @@ class NewsCat extends CActiveRecord {
         ));
     }
 
+    public function listCatFirst() {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'cat_order DESC, cat_created DESC';
+        $criteria->condition = 'cat_parent_id=0 AND cat_enable=1';
+        return $this->findAll($criteria);
+    }
+
     public function listItem($cid = 0) {
         $criteria = new CDbCriteria();
         $criteria->order = 'cat_order DESC, cat_created DESC';
@@ -146,7 +153,7 @@ class NewsCat extends CActiveRecord {
     }
 
     private function menuRecursive($parent_id, $data, $res = '', $sep = '', $subTag = 'ul', $subTagItem = 'li') {
-        $tmp='';
+        $tmp = '';
         foreach ($data as $v) {
             if ($v['cat_parent_id'] == $parent_id) {
                 $re = $sep . '<' . $subTagItem . '>' . CHtml::link($v->NewsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $v->NewsCatLanguage[Yii::app()->language]['tag']), array('title' => $v->NewsCatLanguage[Yii::app()->language]['cat_title']));
@@ -154,7 +161,7 @@ class NewsCat extends CActiveRecord {
                 $tmp .= '</' . $subTagItem . '>';
             }
         }
-        $res.=($tmp!= '')?'<'.$subTag.'>'.$tmp.'</'.$subTag.'>':'';
+        $res .= ($tmp != '') ? '<' . $subTag . '>' . $tmp . '</' . $subTag . '>' : '';
         return $res;
     }
 

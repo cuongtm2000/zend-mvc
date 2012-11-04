@@ -28,11 +28,19 @@ class BannerSlider extends CWidget {
         $dir = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'source';
         $this->baseUrl = Yii::app()->getAssetManager()->publish($dir);
 
+        if (Yii::app()->controller->module->id == 'default') {
+            $width = Config::getValue('banner_width_default');
+            $height = Config::getValue('banner_height_default');
+        } else {
+            $width = Config::getValue('banner_width');
+            $height = Config::getValue('banner_height');
+        }
+
         $cs = Yii::app()->clientScript;
         $cs->registerCssFile($this->baseUrl . '/advanced-slider-base.css');
         $cs->registerScriptFile($this->baseUrl . '/jquery.advancedSlider.min.js');
         $cs->registerScriptFile($this->baseUrl . '/excanvas.compiled-ie.js');
         $cs->registerScriptFile($this->baseUrl . '/jquery.sider.banner.js');
-        $cs->registerScript('config', "$(document).ready(function(){runbanner(".Config::getValue('banner_width').",".Config::getValue('banner_height').");});", CClientScript::POS_HEAD);
+        $cs->registerScript('config', "$(document).ready(function(){runbanner(".$width.",".$height.");});", CClientScript::POS_HEAD);
     }
 }

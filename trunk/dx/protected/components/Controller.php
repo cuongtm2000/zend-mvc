@@ -15,7 +15,7 @@ class Controller extends CController {
         Yii::app()->theme = Templates::model()->getTemplateDefault(); //Setup template
         if (file_exists(dirname(Yii::app()->basePath) . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . Yii::app()->theme->name . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . 'layouts' . DIRECTORY_SEPARATOR . 'column-default.php')) {
             $this->layout = '//layouts/column-default';
-        }else{
+        } else {
             $this->layout = null;
         }
 
@@ -57,16 +57,27 @@ class Controller extends CController {
             } else {
                 $data[$value['function_value']] = $this->widget('ext.' . $value['function_class'])->$value['function_call']();
             }
-            if (file_exists(dirname(Yii::app()->basePath) . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . Yii::app()->theme->name . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . $value['hoiit_modules_module_id'] . DIRECTORY_SEPARATOR . $value['function_value'] . '.php')) {
-                //If exist file in themes
-                $this->renderPartial('//' . $value['hoiit_modules_module_id'] . '/' . $value['function_value'], $data);
-            } else if (file_exists(Yii::app()->basePath . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . $value['hoiit_modules_module_id'] . DIRECTORY_SEPARATOR . $value['function_value'] . '.php')) {
-                //User file in view protected
-                $this->renderPartial('//' . $value['hoiit_modules_module_id'] . '/' . $value['function_value'], $data);
+
+            if ($value['action_id']) {
+                if (($this->id == $value['controller_id']) && ($this->action->id == $value['action_id'])) {
+                    $this->parseView($value['function_value'], $value['hoiit_modules_module_id'], $data);
+                }
             } else {
-                //Use file in module
-                $this->renderPartial('application.modules.' . $value['hoiit_modules_module_id'] . '.views.' . $value['function_value'], $data);
+                $this->parseView($value['function_value'], $value['hoiit_modules_module_id'], $data);
             }
+        }
+    }
+
+    private function parseView($value, $module, $data) {
+        if (file_exists(dirname(Yii::app()->basePath) . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . Yii::app()->theme->name . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . $module . DIRECTORY_SEPARATOR . $value . '.php')) {
+            //If exist file in themes
+            $this->renderPartial('//' . $module . '/' . $value, $data);
+        } else if (file_exists(Yii::app()->basePath . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . $module . DIRECTORY_SEPARATOR . $value . '.php')) {
+            //User file in view protected
+            $this->renderPartial('//' . $module . '/' . $value, $data);
+        } else {
+            //Use file in module
+            $this->renderPartial('application.modules.' . $module . '.views.' . $value, $data);
         }
     }
 }

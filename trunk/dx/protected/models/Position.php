@@ -99,7 +99,7 @@ class Position extends CActiveRecord {
     }
 
     public function setPosition($position, $page) {
-        $command = Yii::app()->db->createCommand('SELECT function_value, function_name, function_class, function_call, hoiit_modules_module_id, module_type FROM ' . $this->tableName() . ', hoiit_functions, hoiit_modules WHERE ' . $this->tableName() . '.hoiit_functions_function_value = hoiit_functions.function_value AND hoiit_functions.hoiit_modules_module_id = hoiit_modules.module_id AND pos_id =:pos AND ' . $this->tableName() . '.module_id =:module AND pos_activated = 1 ORDER BY pos_sort ASC');
+        $command = Yii::app()->db->createCommand('SELECT function_value, function_name, function_class, function_call, hoiit_modules_module_id, module_type, action_id, controller_id FROM ' . $this->tableName() . ', hoiit_functions, hoiit_modules WHERE ' . $this->tableName() . '.hoiit_functions_function_value = hoiit_functions.function_value AND hoiit_functions.hoiit_modules_module_id = hoiit_modules.module_id AND pos_id =:pos AND ' . $this->tableName() . '.module_id =:module AND pos_activated = 1 ORDER BY pos_sort ASC');
         $command->bindParam(":pos", $position, PDO::PARAM_STR);
         $command->bindParam(":module", $page, PDO::PARAM_STR);
         return $command->queryAll();
@@ -112,7 +112,7 @@ class Position extends CActiveRecord {
 
     //Back end - Function, Position by Page
     public function getFuncByModule($page) {
-        $command = Yii::app()->db->createCommand('SELECT pos_id, hoiit_functions_function_value FROM ' . $this->tableName() . ' WHERE module_id=:module ORDER BY pos_id ASC, pos_sort ASC');
+        $command = Yii::app()->db->createCommand('SELECT pos_id, action_id, controller_id, hoiit_functions_function_value FROM ' . $this->tableName() . ' WHERE module_id=:module ORDER BY pos_id ASC, pos_sort ASC');
         $command->bindParam(":module", $page, PDO::PARAM_STR);
         return $command->queryAll();
     }
@@ -121,6 +121,8 @@ class Position extends CActiveRecord {
     public function addItem($id, $data = NULL) {
         $function = $data->getPost('function', '');
         $position = $data->getPost('position', '');
+        $controller_id = $data->getPost('controller_id', '');
+        $action_id = $data->getPost('action_id', '');
         $delete = $data->getPost('delete', '');
         $function = array_unique($function); //Removes duplicate values from an array
 
@@ -128,7 +130,7 @@ class Position extends CActiveRecord {
         $i = 1;
         foreach ($function as $key => $value) {
             if (!(isset($delete[$key]) && $delete[$key] == 1)) {
-                $this->insertItem($position[$key], $i, $id, $function[$key]);
+                $this->insertItem($position[$key], $i, $id, $action_id[$key], $controller_id[$key], $function[$key]);
                 $i++;
             }
         }
@@ -141,11 +143,13 @@ class Position extends CActiveRecord {
     }
 
     //Back end - insert item
-    private function insertItem($pos_id, $pos_sort, $module_id, $function_value) {
-        $command = Yii::app()->db->createCommand('INSERT INTO ' . $this->tableName() . ' (pos_id, pos_sort, pos_activated, module_id, hoiit_functions_function_value) VALUES (:pos_id, :pos_sort, 1, :module_id, :function_value)');
+    private function insertItem($pos_id, $pos_sort, $module_id, $action_id, $controller_id, $function_value) {
+        $command = Yii::app()->db->createCommand('INSERT INTO ' . $this->tableName() . ' (pos_id, pos_sort, pos_activated, module_id, action_id, controller_id, hoiit_functions_function_value) VALUES (:pos_id, :pos_sort, 1, :module_id, :action_id, :controller_id, :function_value)');
         $command->bindParam(":pos_id", $pos_id, PDO::PARAM_STR);
         $command->bindParam(":pos_sort", $pos_sort, PDO::PARAM_INT);
         $command->bindParam(":module_id", $module_id, PDO::PARAM_STR);
+        $command->bindParam(":action_id", $action_id, PDO::PARAM_STR);
+        $command->bindParam(":controller_id", $controller_id, PDO::PARAM_STR);
         $command->bindParam(":function_value", $function_value, PDO::PARAM_STR);
         $command->execute();
     }

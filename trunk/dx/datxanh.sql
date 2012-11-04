@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 03, 2012 at 08:50 AM
+-- Generation Time: Nov 04, 2012 at 10:03 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -47,11 +47,13 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('adv_left_height', '500', NULL, 'adv'),
 ('adv_left_width', '222', NULL, 'adv'),
 ('adv_right_height', '500', NULL, 'adv'),
-('adv_right_width', '222', NULL, 'adv'),
+('adv_right_width', '230', NULL, 'adv'),
 ('adv_top_height', '222', NULL, 'adv'),
 ('adv_top_width', '222', NULL, 'adv'),
 ('banner_height', '184', NULL, 'banner'),
+('banner_height_default', '270', NULL, 'banner'),
 ('banner_width', '940', NULL, 'banner'),
+('banner_width_default', '940', NULL, 'banner'),
 ('contact_email_received', 'thanhansoft@gmail.com', NULL, 'contact'),
 ('contact_host', 'smtp.gmail.com', NULL, 'contact'),
 ('contact_password', 'assas', NULL, 'contact'),
@@ -78,12 +80,12 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('products_width_thumb', '220', NULL, 'products'),
 ('projects_cat_height_thumb', '165', NULL, 'projects'),
 ('projects_cat_width_thumb', '165', NULL, 'projects'),
-('projects_height_thumb', '165', NULL, 'projects'),
+('projects_height_thumb', '300', NULL, 'projects'),
 ('projects_num_item_cat', '5', NULL, 'projects'),
 ('projects_num_item_hot', '7', NULL, 'projects'),
 ('projects_num_item_index', '5', NULL, 'projects'),
 ('projects_num_item_new', '7', NULL, 'projects'),
-('projects_width_thumb', '165', NULL, 'projects');
+('projects_width_thumb', '300', NULL, 'projects');
 
 -- --------------------------------------------------------
 
@@ -110,6 +112,7 @@ INSERT INTO `hoiit_functions` (`function_value`, `function_name`, `function_clas
 ('adv_left', 'Adv', '', 'listItemsLeft', 'adv'),
 ('adv_right', 'Adv', '', 'listItemsRight', 'adv'),
 ('counter_session', 'CounterSession', 'CounterSession.Counter', 'publishAssets', 'counterSession'),
+('lands_search', 'Lands', '', 'searchLands', 'lands'),
 ('list_support', 'Support', '', 'listItem', 'support'),
 ('menu_about', 'About', '', 'listItem', 'about'),
 ('menu_news', 'NewsCat', '', 'listItem', 'news'),
@@ -118,7 +121,9 @@ INSERT INTO `hoiit_functions` (`function_value`, `function_name`, `function_clas
 ('news_hot', 'News', '', 'listItemsHot', 'news'),
 ('news_list_first', 'News', '', 'ListFirst', 'news'),
 ('news_new', 'News', '', 'listItemsNew', 'news'),
-('new_poll', 'Poll', '', 'getFirstItem', 'poll');
+('new_poll', 'Poll', '', 'getFirstItem', 'poll'),
+('projects_hot', 'Projects', '', 'listItemsHot', 'projects'),
+('projects_new', 'Projects', '', 'listItemsNew', 'projects');
 
 -- --------------------------------------------------------
 
@@ -187,7 +192,9 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('edit', 'Chỉnh sửa', 0, 'vi'),
 ('hidden', 'Hidden', 1, 'en'),
 ('hidden', 'Ẩn', 1, 'vi'),
+('hot', 'nổi bật', 0, 'vi'),
 ('lands', 'Sàn giao dịch', 0, 'vi'),
+('new', 'mới', 0, 'vi'),
 ('news', 'News', 0, 'en'),
 ('news', 'Tin tức & sự kiện', 0, 'vi'),
 ('no_record', 'Không tồn tại mẫu tin', 0, 'vi'),
@@ -356,7 +363,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
 --
 
 INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(1, 'vi', 'Giới thiệu đất xanh', '<p>Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p>Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p>Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p>Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p>Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p>Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p>Trân trọng,</p>', 'gioi-thieu-dat-xanh', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh', 5, NULL, NULL);
+(1, 'vi', 'Giới thiệu đất xanh', '<p>Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p>Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p>Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p>Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p>Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p>Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p>Trân trọng,</p>', 'gioi-thieu-dat-xanh', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh', 20, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -379,7 +386,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_advs` (
   `click` int(11) NOT NULL DEFAULT '0',
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `hoiit_module_advs`
@@ -387,7 +394,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_advs` (
 
 INSERT INTO `hoiit_module_advs` (`record_id`, `title`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `click`, `enable`) VALUES
 (1, 'Quảng cáo trái', 'quang-cao-trai.jpg', '', '2012-11-03 01:53:13', '2012-11-02 17:00:00', '2012-11-30 17:00:00', 0, 1, 'left', '_bank', 0, 1),
-(2, 'Quảng cáo trái', 'quang-cao-trai-4.jpg', '', '2012-11-03 02:00:36', '2012-11-02 17:00:00', '2012-12-07 17:00:00', 0, 2, 'left', '_bank', 0, 1);
+(2, 'Quảng cáo trái', 'quang-cao-trai-4.jpg', '', '2012-11-03 02:00:36', '2012-11-02 17:00:00', '2012-12-07 17:00:00', 0, 2, 'left', '_bank', 0, 1),
+(3, 'Quảng cáo bên phải', 'quang-cao-ben-phai.jpg', '', '2012-11-03 09:28:47', '2012-11-02 17:00:00', '2012-11-30 17:00:00', 0, 3, 'right', '_bank', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -468,7 +476,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('lv15b7nui', 1351926499);
+('8drhx6vgj', 1352019769);
 
 -- --------------------------------------------------------
 
@@ -487,12 +495,12 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_value` (
 --
 
 INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
-('max_visit_day', 1351810800),
-('max_visit_value', 4),
-('time_start_today', 1351897200),
-('today_visited', 4),
-('total_visited', 8),
-('yesterday_visited', 4);
+('max_visit_day', 1351897200),
+('max_visit_value', 6),
+('time_start_today', 1351983600),
+('today_visited', 2),
+('total_visited', 12),
+('yesterday_visited', 6);
 
 -- --------------------------------------------------------
 
@@ -729,7 +737,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_lands_users` (
 --
 
 INSERT INTO `hoiit_module_lands_users` (`username`, `password`, `fullname`, `email`, `phone`, `province`, `address`, `sexual`, `date_created`, `enable`) VALUES
-('ninh', '453e41d218e071ccfb2d1c99ce23906a', 'ninh', 'khangninh2005@yahoo.com', 2147483647, 19, '', NULL, '2012-11-02 16:58:43', 1),
+('ninh', '14e1b600b1fd579f47433b88e8d85291', 'ninh', 'khangninh2005@yahoo.com', 2147483647, 19, '', NULL, '2012-11-02 16:58:43', 1),
 ('ninh1', '453e41d218e071ccfb2d1c99ce23906a', 'dong nai', 'khangninh2005@yahoo.com', 2147483647, 15, '', 'Nam', '2012-11-02 17:12:08', 1);
 
 -- --------------------------------------------------------
@@ -812,7 +820,15 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news` (
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_hoiit_module_news_hoiit_module_news_cat_1` (`hoiit_module_item_cat_cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `hoiit_module_news`
+--
+
+INSERT INTO `hoiit_module_news` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
+(1, '2012-11-04 06:49:02', 'sadas.jpg', NULL, 2, 0, NULL, NULL, NULL, NULL, NULL, 1, 2),
+(2, '2012-11-04 06:59:27', '', NULL, 1, 0, NULL, NULL, NULL, NULL, NULL, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -832,7 +848,15 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_cat` (
   `cat_extra2` varchar(100) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `hoiit_module_news_cat`
+--
+
+INSERT INTO `hoiit_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
+(1, 0, '2012-11-04 06:29:09', '', NULL, 0, 1, NULL, NULL, 1),
+(2, 0, '2012-11-04 06:29:16', '', NULL, 0, 2, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -851,6 +875,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_cat_languages` (
   KEY `fk_hoiit_module_news_cat_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_news_cat_has_hoiit_languages_hoiit_module_ne1` (`cat_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_news_cat_languages`
+--
+
+INSERT INTO `hoiit_module_news_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
+(1, 'vi', 'Tin thị trường', '', 'tin-thi-truong', ''),
+(2, 'vi', 'Tiêu điểm', '', 'tieu-diem', '');
 
 -- --------------------------------------------------------
 
@@ -873,6 +905,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_languages` (
   KEY `fk_hoiit_module_news_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_news_has_hoiit_languages_hoiit_module_news1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_news_languages`
+--
+
+INSERT INTO `hoiit_module_news_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
+(1, 'vi', 'sadas', '<p>dasdsa</p>', '<p>asdasdasd</p>', 'sadas', 'asdasdasd', 0, NULL, NULL),
+(2, 'vi', 'ssaassasasa', '<p>asasasssasasa</p>', '<p>assasa</p>', 'ssaassasasa', 'saassasa', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1077,8 +1117,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects` (
 --
 
 INSERT INTO `hoiit_module_projects` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
-(4, '2012-11-01 08:12:31', '', 'ban-nha-cap-4-desc-1.jpg', 4, 0, NULL, '', '', NULL, NULL, 1, 2),
-(5, '2012-11-02 23:51:33', NULL, 'ban-nha-cap-3-desc-1.png|ban-nha-cap-3-desc-2.png', 5, 0, NULL, 'ban-nha-cap-3-slide-1.png', 'http://www.youtube.com/watch?v=IXywPCS-sFo', NULL, NULL, 1, 2);
+(4, '2012-11-01 08:12:31', 'ban-nha-cap-4.jpg', 'ban-nha-cap-4-desc-1.jpg', 4, 1, NULL, '', '', NULL, NULL, 1, 2),
+(5, '2012-11-02 23:51:33', 'ban-nha-cap-3.jpg', 'ban-nha-cap-3-desc-1.png|ban-nha-cap-3-desc-2.png', 5, 0, NULL, 'ban-nha-cap-3-slide-1.png', 'http://www.youtube.com/watch?v=IXywPCS-sFo', NULL, NULL, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -1215,22 +1255,25 @@ CREATE TABLE IF NOT EXISTS `hoiit_positions` (
 INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id`, `action_id`, `controller_id`, `hoiit_functions_function_value`) VALUES
 ('right', 1, '1', 'poll', NULL, NULL, 'adv_right'),
 ('left', 2, '1', 'poll', NULL, NULL, 'list_support'),
-('footer', 1, '1', 'default', NULL, NULL, 'counter_session'),
-('right', 2, '1', 'default', NULL, NULL, 'news_hot'),
-('right', 3, '1', 'default', NULL, NULL, 'news_new'),
 ('left', 1, '1', 'about', NULL, NULL, 'menu_about'),
 ('left', 1, '1', 'products', NULL, NULL, 'list_support'),
 ('left', 2, '1', 'products', NULL, NULL, 'adv_left'),
 ('right', 3, '1', 'products', NULL, NULL, 'adv_right'),
-('left', 1, '1', 'news', NULL, NULL, 'menu_news'),
-('left', 2, '1', 'news', NULL, NULL, 'adv_left'),
-('right', 3, '1', 'news', NULL, NULL, 'adv_right'),
 ('footer', 1, '1', 'projects', NULL, NULL, 'counter_session'),
 ('left', 2, '1', 'projects', NULL, NULL, 'menu_projects'),
 ('left', 3, '1', 'projects', NULL, NULL, 'adv_left'),
 ('footer', 1, '1', 'contact', NULL, NULL, 'counter_session'),
 ('left', 2, '1', 'contact', NULL, NULL, 'menu_projects'),
-('left', 3, '1', 'contact', NULL, NULL, 'list_support');
+('left', 3, '1', 'contact', NULL, NULL, 'list_support'),
+('center', 1, '1', 'lands', '', '', 'projects_hot'),
+('left', 2, '1', 'lands', '', '', 'lands_search'),
+('center', 1, '1', 'default', '', '', 'projects_new'),
+('footer', 2, '1', 'default', '', '', 'counter_session'),
+('left', 3, '1', 'default', '', '', 'lands_search'),
+('left', 4, '1', 'default', '', '', 'adv_left'),
+('right', 5, '1', 'default', '', '', 'news_new'),
+('left', 1, '1', 'news', '', '', 'menu_news'),
+('left', 2, '1', 'news', '', '', 'adv_left');
 
 -- --------------------------------------------------------
 

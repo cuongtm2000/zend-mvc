@@ -153,12 +153,24 @@ class News extends CActiveRecord {
     }
 
     public function listItemsNew() {
-        $criteria = new CDbCriteria();
+        return NewsCat::model()->listCatFirst();
+
+        /*$criteria = new CDbCriteria();
         //$criteria->with = array(__CLASS__ . 'Language');
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable = 1';
         $criteria->limit = Config::getValue('news_num_item_new');
 
+        return $this->findAll($criteria);*/
+    }
+
+    //Front end - list Item by Cat homepage
+    public function listItemByCatHome($cid) {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'enable=1 AND hoiit_module_item_cat_cat_id=:cid';
+        $criteria->params = array(':cid' => $cid);
+        $criteria->limit = 5;
         return $this->findAll($criteria);
     }
 

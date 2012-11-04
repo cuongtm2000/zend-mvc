@@ -9,53 +9,31 @@
 <link rel="SHORTCUT ICON" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/x-icon" />
 <link rel="icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" type="image/gif" />
 
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dosvn.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/dos.vn.css" media="screen"/>
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-1.8.2.min.js"></script>
 
 <title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->setting['title']) ? ' - '.CHtml::encode($this->setting['title']) : '' ?></title>
 <meta name="keywords" content="<?php echo CHtml::encode($this->setting['keywords']) ?>" />
 <meta name="description" content="<?php echo CHtml::encode($this->description) ?>" />
 <script type="text/javascript">
-	$(document).ready(function(){
+	/*$(document).ready(function(){
 		if ($("#banner").length==0)
 		{
 			$("#heading").addClass("banner-none");
 
 		}
-	});
+	});*/
 </script>
 <!--[if lt IE 8]>
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/ie6.css" />
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="css/ie6.css" />
-<link rel="stylesheet" type="text/css" href="css/skin.css" />
-<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
-
-<script type="text/javascript">
-/*$(document).ready(function() {
-   jQuery('#mycarousel').jcarousel({
-    	wrap: 'circular',
-		//auto:true,
-        speed: 100,
-		scroll: 3,
-    });
-	
-	jQuery('#mycarousel_3').jcarousel({
-    	wrap: 'circular',
-		auto:4,
-        speed: 300,
-		scroll:2,
-    });
-});*/
-
-</script>
 </head>
 <body>
 <div id="wrapper">
     <div id="logo"><a href="<?php echo Yii::app()->baseUrl.$this->setLangUrl()?>" title="Logo Yii Project"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo Yii Project" /></a></div>
     <?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel', array('lastItemCssClass' => 'last'));?><div class="clear"></div>
 
-	<?php $this->widget('ext.Banner.BannerSlider');?> <div class="clear"></div>
+	<?php $this->widget('ext.Banner.BannerSlider', array('default_banner' => true));?> <div class="clear"></div>
 	
 	<div id="heading"></div>
 	<div id="content">
@@ -73,7 +51,7 @@
         </div>
         <div class="statistics">
 		    <?php $this->getPosition('footer');?>
-            <p>Phát triển bởi <a href="http://dos.vn" title="Dos.vn">Dos.vn</a></p>
+            <p>Phát triển bởi <a href="http://dos.vn" title="Dos.vn" target="_blank">Dos.vn</a></p>
         </div> <div class="clear"></div>
     </div><!--End footer-->
 </div> <!--End bg footer-->
