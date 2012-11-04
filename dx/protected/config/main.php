@@ -35,7 +35,7 @@ $config = array(
 		'memberLands' => array(
             'class' => 'CWebUser',
             'allowAutoLogin' => true,
-            'loginUrl' => array('lands/login'),
+            'loginUrl' => array('lands/default/login'),
             'stateKeyPrefix' => 'memberLands',
         ),
 

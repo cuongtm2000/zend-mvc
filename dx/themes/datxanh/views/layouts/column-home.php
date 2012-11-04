@@ -1,17 +1,13 @@
 <?php $this->beginContent('//layouts/main'); ?>
-<?php if ($this->getPosition('left')): ?>
-<div id="left-content-home">
-	<?php $this->setPosition('left');?>
-</div>
-<?php endif ?>
-<div id="center-content">
-    <?php echo $content; ?>
-     <?php if ($this->getPosition('center')) {$this->setPosition('center');}?>
-</div><!--End right content-->
+    <div id="left-content-home">
+        <?php $this->getPosition('left');?>
+    </div>
+    <div id="center-content">
+        <?php echo $content; ?>
+         <?php $this->getPosition('center')?>
+    </div><!--End right content-->
 
-<?php if ($this->getPosition('right')): ?>
-<div id="right-content-home">
-    <?php $this->setPosition('right');?>
-</div> <!--End colum3-->
-<?php endif ?>
+    <div id="right-content-home">
+        <?php $this->getPosition('right');?>
+    </div> <!--End colum3-->
 <?php $this->endContent(); ?>

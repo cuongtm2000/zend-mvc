@@ -61,7 +61,7 @@ class DefaultController extends Controller {
     }
 
     public function actionLogin() {
-        if (Yii::app()->session['logged'])
+        /*if (Yii::app()->session['logged'])
             $this->redirect(Yii::app()->user->returnUrl);
 
         $model = new LoginForm;
@@ -79,12 +79,24 @@ class DefaultController extends Controller {
             Yii::app()->user->setFlash('message', 'Successful registration.');
         }
 
+        $this->render('login', array('model' => $model));     */
+
+        $model = new LandsLoginForm();
+        if (isset($_POST['LandsLoginForm'])) {
+            $model->attributes = $_POST['LandsLoginForm'];
+            if ($model->validate() && $model->login()) {
+                $this->redirect(Yii::app()->memberLands->returnUrl);
+            }
+        }
         $this->render('login', array('model' => $model));
     }
 
-    public function actionLogout() {
-        Yii::app()->user->logout();
-        $this->redirect(Yii::app()->homeUrl);
+    public function actionSearch(){
+
     }
 
+    public function actionLogout() {
+        Yii::app()->memberLands->logout();
+        $this->redirect(Yii::app()->homeUrl);
+    }
 }

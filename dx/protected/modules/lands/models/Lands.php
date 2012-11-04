@@ -122,6 +122,10 @@ class Lands extends CActiveRecord {
         ));
     }
 
+    public function searchLands(){
+
+    }
+
     //Front end - get detail item
     public function detailItem($tag) {
         $id = LandsLanguage::model()->getIDByTag($tag);

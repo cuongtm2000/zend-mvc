@@ -128,14 +128,30 @@ class Banner extends CActiveRecord {
             if ($_FILES[__CLASS__]['name']['banner_picture']) {
                 Yii::import('ext.SimpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $this->banner_picture = $file->processUpload($_FILES[__CLASS__]['name']['banner_picture'], $_FILES[__CLASS__]['tmp_name']['banner_picture'], Config::getValue('banner_width'), Config::getValue('banner_height'), '/image/' . strtolower(__CLASS__), $this->banner_name);
+
+                if ($this->module_id == 'default') {
+                    $width = Config::getValue('banner_width_default');
+                    $height = Config::getValue('banner_height_default');
+                } else {
+                    $width = Config::getValue('banner_width');
+                    $height = Config::getValue('banner_height');
+                }
+                $this->banner_picture = $file->processUpload($_FILES[__CLASS__]['name']['banner_picture'], $_FILES[__CLASS__]['tmp_name']['banner_picture'], $width, $height, '/image/' . strtolower(__CLASS__), $this->banner_name);
             }
         } else {
             //check file old and upload
             if ($_FILES[__CLASS__]['name']['banner_picture']) {
                 Yii::import('ext.SimpleImage.CSimpleImage');
                 $file = new CSimpleImage();
-                $this->banner_picture = $file->processUpload($_FILES[__CLASS__]['name']['banner_picture'], $_FILES[__CLASS__]['tmp_name']['banner_picture'], Config::getValue('banner_width'), Config::getValue('banner_height'), '/image/' . strtolower(__CLASS__), $this->banner_name, $this->_oldImage);
+
+                if ($this->module_id == 'default') {
+                    $width = Config::getValue('banner_width_default');
+                    $height = Config::getValue('banner_height_default');
+                } else {
+                    $width = Config::getValue('banner_width');
+                    $height = Config::getValue('banner_height');
+                }
+                $this->banner_picture = $file->processUpload($_FILES[__CLASS__]['name']['banner_picture'], $_FILES[__CLASS__]['tmp_name']['banner_picture'], $width, $height, '/image/' . strtolower(__CLASS__), $this->banner_name, $this->_oldImage);
             } else {
                 $this->banner_picture = $this->_oldImage;
             }

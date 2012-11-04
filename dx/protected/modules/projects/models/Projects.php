@@ -178,7 +178,6 @@ class Projects extends CActiveRecord {
 
     public function listItemsNew() {
         $criteria = new CDbCriteria();
-        //$criteria->with = array(__CLASS__ . 'Language');
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable = 1';
         $criteria->limit = Config::getValue('projects_num_item_new');
