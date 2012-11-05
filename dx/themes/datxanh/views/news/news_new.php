@@ -21,8 +21,8 @@
                         <?php echo CHtml::link(CHtml::image(Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/news/'.$items[0]['pic_thumb'], $items[0]->NewsLanguage[Yii::app()->language]['title']), array($this->setUrlModule('news').'/'.$items[0]->NewsCat->NewsCatLanguage[Yii::app()->language]['tag'].'/'.$items[0]->NewsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$items[0]->NewsLanguage[Yii::app()->language]['title'])); ?>
                     <?php endif?>
                     <h4>
-                        <?php echo CHtml::link($items[0]->NewsLanguage[Yii::app()->language]['title'], array($this->setUrlModule('news').'/'.$items[0]->NewsCat->NewsCatLanguage[Yii::app()->language]['tag'].'/'.$items[0]->NewsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$items[0]->NewsLanguage[Yii::app()->language]['title'])); ?>
-                        <span>(<?php echo date('d/m/Y', strtotime($items[0]['postdate']))?></span>
+                        <?php echo CHtml::link($items[0]->NewsLanguage[Yii::app()->language]['title'].' '.'<span>('.date('d/m/Y', strtotime($items[0]['postdate'])).')</span>', array($this->setUrlModule('news').'/'.$items[0]->NewsCat->NewsCatLanguage[Yii::app()->language]['tag'].'/'.$items[0]->NewsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$items[0]->NewsLanguage[Yii::app()->language]['title'])); ?>
+                        
                     </h4>
                     <?php echo $items[0]->NewsLanguage[Yii::app()->language]['preview']?>
                 </li>
@@ -30,8 +30,7 @@
                 <?php $k=0; foreach($items as $item):?>
                     <?php if($k==1):?>
                         <li>
-                            <?php echo CHtml::link($item->NewsLanguage[Yii::app()->language]['title'], array($this->setUrlModule('news').'/'.$items[0]->NewsCat->NewsCatLanguage[Yii::app()->language]['tag'].'/'.$item->NewsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$item->NewsLanguage[Yii::app()->language]['title'])); ?>
-                            <span>(<?php echo date('d/m/Y', strtotime($item['postdate']))?></span>
+                            <?php echo CHtml::link($item->NewsLanguage[Yii::app()->language]['title'].' '.'<span>('.date('d/m/Y', strtotime($item['postdate'])).')</span>', array($this->setUrlModule('news').'/'.$items[0]->NewsCat->NewsCatLanguage[Yii::app()->language]['tag'].'/'.$item->NewsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$item->NewsLanguage[Yii::app()->language]['title'])); ?>
                         </li>
                     <?php endif?>
                 <?php $k++; endforeach?>

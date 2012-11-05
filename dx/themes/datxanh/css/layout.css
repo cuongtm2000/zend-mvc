@@ -18,13 +18,13 @@ a:hover{color:#000;}
 #nav .last a{padding:0 0 0 10px}
 
 /*Banner*/
-.bgbanner{border:5px solid #E7E7E9;margin-bottom:20px}
+#bgbanner{border:5px solid #E7E7E9;margin-bottom:20px}
 .banner-none-2{border:none}
 
 
 /*Content*/
 #content{margin-bottom:15px}
-.banner-none{background:url(../images/banner-none.jpg) no-repeat; height:184px}
+.banner-none{}
 .partners{margin:10px 0}
  
 /**  Title box   **/
@@ -69,6 +69,9 @@ a:hover{color:#000;}
 .sub-cat li ul li{margin:8px 0}
 .sub-cat li ul li a{background:url(../images/bull.png) no-repeat left 5px;font-weight:normal}
 
+.support{list-style:none;margin:0 0 20px 0;padding:0;text-align:center}
+.support li {line-height:1.5em}.support li p{margin:0} .support li img{margin-bottom:8px}
+
 .video{margin-bottom:20px}
 
 #adv-all{position:relative}
@@ -94,8 +97,8 @@ a:hover{color:#000;}
 
 /*** product****/
 .main-all-product{padding:5px 2px;margin: 0 0 10px 0}
-.all-product{margin:0;padding:0;list-style:none}
-.product{width:165px;text-align:center;padding:10px 0; border:1px solid #ccc;margin:0 0 15px 0;display:inline-block; vertical-align:top;}
+.list-item, .list-item-cat{margin:0;padding:0;list-style:none}
+.list-item li, .list-item-cat li{width:165px;text-align:center;padding:10px 0; border:1px solid #ccc;margin:0 0 15px 0;display:inline-block; vertical-align:top;}
 .tent-product{padding:0 5px}
 .product-img{height:121px; width:165px;display:table-cell;vertical-align:middle}
 .title-product{ font-size:10pt;margin:10px 0 0 0;font-weight:bold;padding:0}
@@ -180,13 +183,14 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 
 /*** Frame title company  ***/
 #frame-info-contact{margin: 0 0 15px 0}
-.frame-contact label{color:#555; margin:0;font-weight:bold;width:100px;float:left}
+.frame-contact label{color:#555; margin:0;font-weight:bold}
 .frame-contact{list-style:none;margin:15px 0 10px 0;padding:0}
 .frame-contact li{padding:4px 0}
 .frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;border-radius:3px;-moz-border-radius: 3px; -webkit-border-radius: 3px}
 .frame-contact textarea{border:1px solid #ddd; width:350px;border-radius:3px;-moz-border-radius: 3px; -webkit-border-radius:3px}
-.frame-contact span{color:#F00;margin:0 5px 0 0}
-.frame-contact .button-submit{margin:10px 0 5px 30px;background:url(../images/button.gif) no-repeat;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
+.frame-contact span{color:#F00;margin:0 5px 0 0} .frame-contact p{margin:0}
+.left-contact{float:left;width:350px}
+.frame-contact .button-submit{margin:10px 0 5px 30px;background:#02C0FA;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
 .frame-contact .button-submit{margin:10px 10px 5px 0}
 /****  End page contact     *****/
 

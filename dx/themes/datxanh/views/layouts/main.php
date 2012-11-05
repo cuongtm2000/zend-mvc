@@ -35,7 +35,6 @@
 
 	<?php $this->widget('ext.Banner.BannerSlider', array('default_banner' => true));?> <div class="clear"></div>
 	
-	<div id="heading"></div>
 	<div id="content">
         <?php echo $content; ?>
 		<div class="clear"></div>
