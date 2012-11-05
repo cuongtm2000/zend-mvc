@@ -10,10 +10,17 @@
 	<p style="background: blue"><?php echo $item['field2']?></p>
 </div>
 
-<h4 class="title-item-other"><?php echo $this->lang[$this->module->id] . ' ' . $this->lang['other'] ?></h4>
+<?php if($items_other):?>
+    <h4 class="title-item-other"><?php echo $this->lang[$this->module->id] . ' ' . $this->lang['other'] ?></h4>
+    <ul class="panel-items-other">
+        <?php foreach($items_other as $value):?>
+            <li><?php echo CHtml::link($value->ProjectsLanguage[Yii::app()->language]['title'], array($this->setUrlModule('projects').'/'.$value->ProjectsCat->ProjectsCatLanguage[Yii::app()->language]['tag'].'/'.$value->ProjectsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$value->ProjectsLanguage[Yii::app()->language]['title'])); ?></li>
+        <?php endforeach?>
+    </ul>
 
-<ul class="panel-items-other">
-	<?php foreach($items_other as $value):?>
-		<li><?php echo CHtml::link($value->ProjectsLanguage[Yii::app()->language]['title'], array($this->setUrlModule('projects').'/'.$value->ProjectsCat->ProjectsCatLanguage[Yii::app()->language]['tag'].'/'.$value->ProjectsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$value->ProjectsLanguage[Yii::app()->language]['title'])); ?></li>
-	<?php endforeach?>
-</ul>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".panel-items-other li:odd").addClass("alt");
+        });
+    </script>
+<?php endif?>
