@@ -2,10 +2,10 @@
 -- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Nov 05, 2012 at 08:53 AM
--- Server version: 5.5.16
--- PHP Version: 5.3.8
+-- Host: 127.0.0.1
+-- Generation Time: Nov 05, 2012 at 09:54 AM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -516,7 +516,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('vohlm831g', 1352101994);
+('t64w89kxj', 1352105656);
 
 -- --------------------------------------------------------
 
@@ -538,8 +538,8 @@ INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
 ('max_visit_day', 1351897200),
 ('max_visit_value', 6),
 ('time_start_today', 1352070000),
-('today_visited', 3),
-('total_visited', 15),
+('today_visited', 5),
+('total_visited', 17),
 ('yesterday_visited', 2);
 
 -- --------------------------------------------------------
@@ -1268,7 +1268,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects` (
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_hoiit_module_pro_hoiit_module_pro_cat_1` (`hoiit_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `hoiit_module_projects`
@@ -1276,7 +1276,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects` (
 
 INSERT INTO `hoiit_module_projects` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
 (4, '2012-11-01 08:12:31', 'ban-nha-cap-4.jpg', 'ban-nha-cap-4-desc-1.jpg', 4, 1, NULL, '', '', NULL, NULL, 1, 2),
-(5, '2012-11-02 23:51:33', 'ban-nha-cap-3.jpg', 'ban-nha-cap-3-desc-1.png|ban-nha-cap-3-desc-2.png', 5, 0, NULL, 'ban-nha-cap-3-slide-1.png', 'http://www.youtube.com/watch?v=IXywPCS-sFo', NULL, NULL, 1, 2);
+(5, '2012-11-02 23:51:33', 'ban-nha-cap-3.jpg', 'ban-nha-cap-3-desc-1-6.jpg', 5, 1, NULL, 'ban-nha-cap-3-slide-1.png', 'http://www.youtube.com/watch?v=IXywPCS-sFo', NULL, NULL, 1, 2),
+(6, '2012-11-05 08:16:33', 'nha-biet-thu.jpg', NULL, 6, 1, NULL, NULL, '', NULL, NULL, 1, 2),
+(7, '2012-11-05 08:49:13', 'nha-moi-cao-cap.jpg', NULL, 7, 1, NULL, NULL, '', NULL, NULL, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -1363,7 +1365,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects_languages` (
 
 INSERT INTO `hoiit_module_projects_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `detail`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
 (4, 'vi', 'Bán nhà cấp 4', '<p>Thong tin chi tiet can xem truoc</p>\r\n<p>Thong tin chi tiet can xem truoc</p>', '<p>Phần nội dung nhà ở can thiet de biet</p>', '<p><img src="/datxanh/public/userfiles/image/projects/ban-nha-cap-4.jpg" alt="" width="300" height="191" /></p>\r\n<p>so do vi tri</p>', 'ban-nha-cap-4', '', 0, NULL, NULL),
-(5, 'vi', 'Bán nhà cấp 3', '<p>Bán nhà cấp 3 Bán nhà cấp 3 Bán nhà cấp 3</p>', '<p>Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3</p>', '<p>Bán nhà cấp 3 Bán nhà cấp 3</p>', 'ban-nha-cap-3', '', 0, NULL, NULL);
+(5, 'vi', 'Bán nhà cấp 3', '<p>Bán nhà cấp 3 Bán nhà cấp 3 Bán nhà cấp 3</p>', '<p>Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3</p>', '<p>Bán nhà cấp 3 Bán nhà cấp 3</p>', 'ban-nha-cap-3', '', 0, NULL, NULL),
+(6, 'vi', 'Nha biet thu', '', '<p>thong tin thong quan</p>', '<p>dang cap nhat</p>', 'nha-biet-thu', '', 0, NULL, NULL),
+(7, 'vi', 'Nha moi cao cap', '', '<p>dsfsfdsf </p>', '<p>dasdasd addsa</p>', 'nha-moi-cao-cap', '', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 

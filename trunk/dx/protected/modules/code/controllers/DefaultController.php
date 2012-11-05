@@ -3,6 +3,7 @@
 class DefaultController extends Controller {
 
     public function actionIndex() {
+		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/images/skin.css');
         $this->render('index', array('items' => Code::model()->listItem()));
     }
 

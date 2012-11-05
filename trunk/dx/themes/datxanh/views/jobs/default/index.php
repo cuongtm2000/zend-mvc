@@ -1,9 +1,9 @@
+
 <?php $this->breadcrumbs = array($this->lang[$this->module->id]); ?>
 <?php $this->pageTitle = $this->lang[$this->module->id]; $this->setDescription()?>
 
     <?php if($listItemIndex['models']):?>
 	<h2 class="title-box"><span><?php echo CHtml::encode($this->lang['jobs'])?><span></h2>
-	<div class="frame-tent-right">
 	<ul class="panel-items">
 		<?php foreach($listItemIndex['models'] as $value):?>
         <li>
@@ -20,10 +20,9 @@
         <?php endforeach?>
     </ul> <div class="clear"></div>
     <?php $this->widget('CLinkPager', array('pages' => $listItemIndex['pages'], 'header'=>'', 'lastPageLabel'=>'Last', 'nextPageLabel'=>'Next', 'firstPageLabel'=>'First', 'prevPageLabel'=>'Prev', 'htmlOptions'=>array('class'=>'paging')))?> <div class="clear"></div>
-    </div>
 	<script type="text/javascript">
         $(document).ready(function(){
-            $(".panel-items li:odd").addClass("alt");
+            $(".panel-items li:even").addClass("alt");
         });
     </script>
     <?php else:?>

@@ -11,16 +11,16 @@ a:hover{color:#000;}
 /* Nav ( Menu ) */
 #nav{list-style:none;padding:0;margin:0 0 10px 0;float:right;text-align:right}
 #nav li{float:left}
-#nav li a{color:#fff;padding:0 10px;display:block;font-size:14px;font-weight:bold; text-transform: uppercase}
+#nav li a{color:#fff;padding:0 10px;background:url(../images/nav-line.jpg)no-repeat right;display:block;font-size:14px;font-weight:bold; text-transform: uppercase}
 #nav li a:hover{color:#F90}
 #nav .selected a{color:#F90}
-#nav .last{background:none}
+#nav .last a{background:none}
+#nav li ul{display:none}
 #nav .last a{padding:0 0 0 10px}
 
 /*Banner*/
 #bgbanner{border:5px solid #E7E7E9;margin-bottom:20px}
 .banner-none-2{border:none}
-
 
 /*Content*/
 #content{margin-bottom:15px}
@@ -120,9 +120,9 @@ a:hover{color:#000;}
 .title-project span{padding-left:20px}
 .sub-project{list-style:none;padding:10px 0 0 20px;margin:0}
 .sub-project li{display:inline-block;margin:0 13px 15px 0; width:90px;height:45px;line-height:45px;font-size:11pt;font-weight:bold; text-align:center}
-.red{background:#f00}
-.oranges{background:#F58220}
-.blue{background:#029CD8}
+.da-giao-dich,.red{background:#f00}
+.da-dat-cho,.oranges{background:#F58220}
+.chua-giao-dich,.blue{background:#029CD8}
 .guide {margin:20px 0}
 .guide b{padding:7px 40px;margin-right:7px}
 .guide span{margin-right:15px;font-size:10pt;font-weight:bold}
@@ -152,7 +152,7 @@ a:hover{color:#000;}
 .panel-items{list-style: none;text-align:justify;margin:0;padding:0}
 .panel-items li{padding:15px;margin-bottom:10px}
 .panel-items p{margin:0;line-height:normal}
-.panel-items .alt{background:#F1F1F1}
+.panel-items .alt,.panel-items-other .alt{background:#F1F1F1}
 .frame-img{float:left;margin:0 8px 0 0;border:3px solid #ccc}
 .title-items-news{margin:0 0 5px 0;font-size:10pt;font-weight:bold}
 .title-items-news a{color:#208FFF}
@@ -169,8 +169,8 @@ a:hover{color:#000;}
 /**  panel-items-other tin tuc khac **/
 .title-item-other{margin:40px 0 10px;font-size:11pt;color:#50493C;font-weight:bold}
 .panel-items-other{margin:0;padding:0;list-style:none}
-.panel-items-other li{list-style:square;color:#0D2364;margin-bottom:5px; margin-left:30px}
-.panel-items-other li a{color:#0D2364;margin:0 0 0 -6px; display:block}
+.panel-items-other li{margin-bottom:5px;padding-left:5px}
+.panel-items-other li a{background:url(../images/ico-other.png) no-repeat left 8px;color:#0D2364;padding:2px 5px 2px 12px;display:block}
 .panel-items-other li a:hover{color:#FF6600}
 
 /* paging */

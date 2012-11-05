@@ -2,7 +2,6 @@
 <?php $this->pageTitle = $info_cat['cat_title'] . ' - ' . $this->lang[$this->module->id]; $this->setDescription($info_cat['description'])?>
     <?php if($items['models']):?>
     <h2 class="title-right"><span><?php echo $info_cat['cat_title']?></span></h2>
-	<div class="frame-tent-right">
 	<ul class="panel-items">
 		<?php foreach($items['models'] as $value):?>
         <li>
@@ -19,10 +18,9 @@
         <?php endforeach?>
     </ul>  <div class="clear"></div>
     <?php $this->widget('CLinkPager', array('pages' => $items['pages'], 'header'=>'', 'lastPageLabel'=>'Last', 'nextPageLabel'=>'Next', 'firstPageLabel'=>'First', 'prevPageLabel'=>'Prev', 'htmlOptions'=>array('class'=>'paging')))?> <div class="clear"></div>
-	</div>
     <script type="text/javascript">
         $(document).ready(function(){
-            $(".panel-items li:odd").addClass("alt");
+            $(".panel-items li:even").addClass("alt");
         });
     </script>
     <?php else:?>
