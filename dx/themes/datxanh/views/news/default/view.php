@@ -14,7 +14,7 @@
 	
     <script type="text/javascript">
         $(document).ready(function(){
-            $(".panel-items-other li:odd").addClass("alt");
+            $(".panel-items-other li:even").addClass("alt");
         });
     </script>
 <?php endif?>
