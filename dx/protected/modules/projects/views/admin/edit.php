@@ -125,6 +125,18 @@
 
 				<div id="tab2" class="tab_content">
 					<p class="rows"><a href="#" id="add-rows">Thêm hình ảnh Mặt bằng</a></p>
+					
+					<?php if ($model->pic_desc): ?>
+						<?php $str = explode('|', $model->pic_desc); ?>
+						<?php foreach ($str as $value): ?>
+							<div class="col1"><?php echo $form->labelEx($model, 'pic_desc') ?></div>
+							<div class="col2">
+								<a class="nyroModal" href="<?php echo Yii::app()->request->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/'.$this->module->id.'/'.$value ?>">Xem ảnh lớn</a>
+								<label class="remove"><input type="checkbox" value="<?php echo $value ?>" name="<?php echo get_class($model)?>[remove_pic_desc][]" /> Remove</label>
+							</div>
+							<div class="clear space"></div>
+						<?php endforeach; ?>
+					<?php endif; ?>
 				</div>
 				
 				<div id="tab3" class="tab_content">
@@ -177,6 +189,18 @@
 				
 				<div id="tab4" class="tab_content">
 					<p class="pic_slide"><a href="#" id="pic_slide">Thêm hình ảnh</a></p>
+					
+					<?php if ($model->pic_slide): ?>
+						<?php $str = explode('|', $model->pic_slide); ?>
+						<?php foreach ($str as $value): ?>
+							<div class="col1"><?php echo $form->labelEx($model, 'pic_slide') ?></div>
+							<div class="col2">
+								<a class="nyroModal" href="<?php echo Yii::app()->request->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/'.$this->module->id.'/'.$value ?>">Xem ảnh lớn</a>
+								<label class="remove"><input type="checkbox" value="<?php echo $value ?>" name="<?php echo get_class($model)?>[remove_pic_desc][]" /> Remove</label>
+							</div>
+							<div class="clear space"></div>
+						<?php endforeach; ?>
+					<?php endif; ?>
 				</div>
 				<div id="tab5" class="tab_content">
 					<div class="col1"><?php echo $form->labelEx($model, 'video_youtube') ?></div>
