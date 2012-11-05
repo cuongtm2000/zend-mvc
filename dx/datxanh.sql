@@ -2,10 +2,10 @@
 -- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 05, 2012 at 03:11 AM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
+-- Host: localhost
+-- Generation Time: Nov 05, 2012 at 04:17 AM
+-- Server version: 5.5.16
+-- PHP Version: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -505,34 +505,118 @@ INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `hoiit_module_jobs`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_jobs` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `postdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `pic_desc` varchar(500) DEFAULT NULL,
+  `record_order` int(11) DEFAULT NULL,
+  `hot` tinyint(1) NOT NULL DEFAULT '0',
+  `specials` tinyint(1) DEFAULT NULL,
+  `field1` varchar(45) DEFAULT NULL,
+  `field2` varchar(45) DEFAULT NULL,
+  `field3` varchar(45) DEFAULT NULL,
+  `field4` varchar(45) DEFAULT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `fk_hoiit_module_jobs_hoiit_module_jobs_cat_1` (`hoiit_module_item_cat_cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_jobs_cat`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_jobs_cat` (
+  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_parent_id` int(11) NOT NULL DEFAULT '0',
+  `cat_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `pic_desc` varchar(200) DEFAULT NULL,
+  `cat_hot` tinyint(1) DEFAULT NULL,
+  `cat_order` int(11) DEFAULT NULL,
+  `cat_extra1` varchar(100) DEFAULT NULL,
+  `cat_extra2` varchar(100) DEFAULT NULL,
+  `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_jobs_cat_languages`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_jobs_cat_languages` (
+  `cat_id` int(11) NOT NULL,
+  `language_id` varchar(2) NOT NULL,
+  `cat_title` varchar(100) NOT NULL,
+  `preview` text,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`cat_id`,`language_id`),
+  KEY `fk_hoiit_module_jobs_cat_has_hoiit_languages_hoiit_languages1` (`language_id`),
+  KEY `fk_hoiit_module_jobs_cat_has_hoiit_languages_hoiit_module_ne1` (`cat_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_jobs_languages`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_jobs_languages` (
+  `record_id` int(11) NOT NULL,
+  `language_id` varchar(2) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `preview` text,
+  `content` text NOT NULL,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `hit` int(11) NOT NULL DEFAULT '0',
+  `extra_field1` varchar(100) DEFAULT NULL,
+  `extra_field2` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`record_id`,`language_id`),
+  KEY `fk_hoiit_module_jobs_has_hoiit_languages_hoiit_languages1` (`language_id`),
+  KEY `fk_hoiit_module_jobs_has_hoiit_languages_hoiit_module_jobs1` (`record_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `hoiit_module_lands`
 --
 
 CREATE TABLE IF NOT EXISTS `hoiit_module_lands` (
   `record_id` int(11) NOT NULL DEFAULT '0',
   `postdate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `pic_thumb` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
-  `pic_full` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
-  `pic_desc` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `pic_full` varchar(100) DEFAULT NULL,
+  `pic_desc` varchar(500) DEFAULT NULL,
   `record_order` int(11) DEFAULT NULL,
-  `price` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
+  `price` varchar(45) DEFAULT NULL,
   `hot` tinyint(1) NOT NULL DEFAULT '0',
   `specials` tinyint(1) DEFAULT NULL,
-  `contact_name` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
-  `contact_tel` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
+  `contact_name` varchar(45) DEFAULT NULL,
+  `contact_tel` varchar(45) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   `hoiit_module_item_type_type_id` int(11) NOT NULL,
   `hoiit_module_lands_provinces_province_id` int(11) NOT NULL,
-  `username` varchar(45) NOT NULL,
+  `username` varchar(45) CHARACTER SET latin1 NOT NULL,
   `hits` int(11) NOT NULL,
-  `keys` varchar(45) NOT NULL,
+  `keys` varchar(45) CHARACTER SET latin1 NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_cat_id` (`hoiit_module_item_cat_cat_id`),
   KEY `hoiit_module_item_type_type_id` (`hoiit_module_item_type_type_id`),
   KEY `hoiit_module_lands_provinces_province_id` (`hoiit_module_lands_provinces_province_id`),
   KEY `username` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -544,15 +628,15 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_lands_cat` (
   `cat_id` int(11) NOT NULL AUTO_INCREMENT,
   `cat_parent_id` int(11) NOT NULL DEFAULT '0',
   `cat_created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `pic_thumb` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
-  `pic_desc` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `pic_desc` varchar(200) DEFAULT NULL,
   `cat_hot` tinyint(1) DEFAULT NULL,
   `cat_order` int(11) DEFAULT NULL,
-  `cat_extra1` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
-  `cat_extra2` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `cat_extra1` varchar(100) DEFAULT NULL,
+  `cat_extra2` varchar(100) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `hoiit_module_lands_cat`
@@ -570,15 +654,15 @@ INSERT INTO `hoiit_module_lands_cat` (`cat_id`, `cat_parent_id`, `cat_created`, 
 
 CREATE TABLE IF NOT EXISTS `hoiit_module_lands_cat_languages` (
   `cat_id` int(11) NOT NULL,
-  `language_id` varchar(2) CHARACTER SET utf8 NOT NULL,
-  `cat_title` varchar(100) CHARACTER SET utf8 NOT NULL,
-  `preview` text CHARACTER SET utf8,
-  `tag` varchar(100) CHARACTER SET utf8 NOT NULL,
-  `description` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
+  `language_id` varchar(2) NOT NULL,
+  `cat_title` varchar(100) NOT NULL,
+  `preview` text,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`cat_id`,`language_id`),
   UNIQUE KEY `cat_id` (`cat_id`),
   KEY `language_id` (`language_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `hoiit_module_lands_cat_languages`
@@ -596,15 +680,15 @@ INSERT INTO `hoiit_module_lands_cat_languages` (`cat_id`, `language_id`, `cat_ti
 
 CREATE TABLE IF NOT EXISTS `hoiit_module_lands_languages` (
   `record_id` int(11) NOT NULL,
-  `language_id` varchar(2) CHARACTER SET utf8 NOT NULL,
-  `title` varchar(100) CHARACTER SET utf8 NOT NULL,
-  `preview` text NOT NULL,
-  `content` text CHARACTER SET utf8 NOT NULL,
-  `tag` varchar(100) CHARACTER SET utf8 NOT NULL,
-  `description` varchar(250) CHARACTER SET utf8 DEFAULT NULL,
+  `language_id` varchar(2) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `preview` text CHARACTER SET latin1 NOT NULL,
+  `content` text NOT NULL,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`record_id`,`language_id`),
   KEY `language_id` (`language_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -695,13 +779,13 @@ INSERT INTO `hoiit_module_lands_provinces` (`province_id`, `province_name`) VALU
 
 CREATE TABLE IF NOT EXISTS `hoiit_module_lands_type` (
   `type_id` int(11) NOT NULL AUTO_INCREMENT,
-  `type_name` varchar(45) NOT NULL,
+  `type_name` varchar(45) CHARACTER SET latin1 NOT NULL,
   `type_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `type_order` int(11) NOT NULL,
   `type_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`type_id`),
   UNIQUE KEY `type_order_2` (`type_order`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `hoiit_module_lands_type`
@@ -1451,6 +1535,26 @@ ALTER TABLE `hoiit_module_about_languages`
 ALTER TABLE `hoiit_module_contacts_languages`
   ADD CONSTRAINT `fk_hoiit_module_contacts_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_hoiit_module_contacts_has_hoiit_languages_hoiit_module_con1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_contacts` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `hoiit_module_jobs`
+--
+ALTER TABLE `hoiit_module_jobs`
+  ADD CONSTRAINT `fk_hoiit_module_jobs_hoiit_module_jobs_cat_1` FOREIGN KEY (`hoiit_module_item_cat_cat_id`) REFERENCES `hoiit_module_jobs_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `hoiit_module_jobs_cat_languages`
+--
+ALTER TABLE `hoiit_module_jobs_cat_languages`
+  ADD CONSTRAINT `fk_hoiit_module_jobs_cat__has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_hoiit_module_jobs_cat__has_hoiit_languages_hoiit_module_ne1` FOREIGN KEY (`cat_id`) REFERENCES `hoiit_module_jobs_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `hoiit_module_jobs_languages`
+--
+ALTER TABLE `hoiit_module_jobs_languages`
+  ADD CONSTRAINT `fk_hoiit_module_jobs_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_hoiit_module_jobs_has_hoiit_languages_hoiit_module_jobs1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_jobs` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `hoiit_module_lands`
