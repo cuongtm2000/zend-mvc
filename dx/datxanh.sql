@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 05, 2012 at 04:17 AM
+-- Generation Time: Nov 05, 2012 at 04:19 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -193,6 +193,7 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('hidden', 'Hidden', 1, 'en'),
 ('hidden', 'Ẩn', 1, 'vi'),
 ('hot', 'nổi bật', 0, 'vi'),
+('jobs', 'Tuyển dụng', 0, 'vi'),
 ('lands', 'Sàn giao dịch', 0, 'vi'),
 ('new', 'mới', 0, 'vi'),
 ('news', 'News', 0, 'en'),
@@ -268,6 +269,7 @@ INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_url`, `module_
 ('contact', 'Danh sách|Cấu hình', 'contact|contact/config', 2, 1, 1),
 ('counterSession', 'CounterSession', NULL, 4, 0, 0),
 ('default', 'Default', NULL, 1, 1, 1),
+('jobs', 'Danh mục|Danh sách|Cấu hình', 'jobs/cat|jobs|jobs/config', 4, 1, 1),
 ('lands', 'Danh mục|Danh sách|Cấu hình|Thành viên', 'lands/cat|lands|lands/config|lands/member', 3, 1, 1),
 ('news', 'Danh mục|Danh sách|Cấu hình', 'news/cat|news|news/config', 4, 1, 1),
 ('poll', 'Danh sách', 'poll', 7, 1, 1),
