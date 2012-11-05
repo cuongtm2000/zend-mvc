@@ -136,6 +136,19 @@ class News extends CActiveRecord {
         return $this->_model;
     }
 
+	//Front end - list Item other
+    public function listItemOther($id, $cid) {
+        //$cid = $this->loadEdit($id);
+
+        $criteria = new CDbCriteria();
+        $criteria->with = array(__CLASS__ . 'Cat');
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'record_id !=:id AND enable = 1 AND hoiit_module_item_cat_cat_id=:cid AND hoiit_users_user_id=:user';
+        $criteria->params = array(':id' => $id, ':cid' => $cid, ':user' => Yii::app()->session['subDomain']);
+        $criteria->limit = Config::getValue('news_num_item_other');
+        return $this->findAll($criteria);
+    }	
+	
     public function ListFirst() {
         $criteria = new CDbCriteria();
         $criteria->order = 'record_order DESC, postdate DESC';

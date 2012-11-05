@@ -29,6 +29,6 @@
         <option value="">5 tỷ - 10 tỷ</option>
         <option value="">&lt;=10 tỷ</option>
     </select>
-    <input type="submit" value="Tìm kiếm" name="submit" />
+    <input class="button-search" type="submit" value="Tìm kiếm" name="submit" />
     <p>3030 Bất động sản đang giao dịch</p>
 </form>

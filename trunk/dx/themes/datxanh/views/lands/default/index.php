@@ -5,7 +5,7 @@
     Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/tab-sub-right.js');
 ?>
 
-<h2 class="title-right"><?php echo $this->lang['cat_title'] . ' ' . strtolower($this->lang[$this->module->id]) ?></h2>
+<h2 class="title-box"><span><?php echo $this->lang['cat_title'] . ' ' . strtolower($this->lang[$this->module->id]) ?></span></h2>
 	<?php if ($items): ?>
 	<ul class="list-item">
 		<?php foreach ($items as $value): ?>
