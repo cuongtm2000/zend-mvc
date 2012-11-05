@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 05, 2012 at 04:40 AM
+-- Generation Time: Nov 05, 2012 at 08:53 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -188,6 +188,7 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('cancel', 'Hủy bỏ', 1, 'vi'),
 ('cat_title', 'Cat title', 0, 'en'),
 ('cat_title', 'Danh mục', 0, 'vi'),
+('code', 'Quản lý sản phẩm', 0, 'vi'),
 ('contact', 'Contact', 0, 'en'),
 ('contact', 'Liên hệ', 0, 'vi'),
 ('counterSession', 'Thống kê truy cập', 0, 'vi'),
@@ -275,6 +276,7 @@ INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_url`, `module_
 ('about', 'Danh sách', 'about', 2, 1, 1),
 ('adv', 'Danh sách|Cấu hình', 'adv|adv/config', 5, 1, 0),
 ('banner', 'Danh sách Banner|Danh sách Logo|Cấu hình', 'banner|banner/logo|banner/config', 6, 1, 0),
+('code', 'Danh sách', 'code', 2, 1, 1),
 ('contact', 'Danh sách|Cấu hình', 'contact|contact/config', 2, 1, 1),
 ('counterSession', 'CounterSession', NULL, 4, 0, 0),
 ('default', 'Default', NULL, 1, 1, 1),
@@ -319,6 +321,7 @@ INSERT INTO `hoiit_modules_links` (`link_id`, `module_id`, `language_id`) VALUES
 ('gioi-thieu', 'about', 'vi'),
 ('khao-sat-y-kien', 'poll', 'vi'),
 ('lien-he', 'contact', 'vi'),
+('quan-ly-san-pham', 'code', 'vi'),
 ('san-giao-dich', 'lands', 'vi'),
 ('san-pham', 'products', 'vi'),
 ('tin-tuc', 'news', 'vi'),
@@ -376,7 +379,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
 --
 
 INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(1, 'vi', 'Giới thiệu đất xanh', '<p>Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p>Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p>Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p>Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p>Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p>Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p>Trân trọng,</p>', 'gioi-thieu-dat-xanh', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh', 26, NULL, NULL);
+(1, 'vi', 'Giới thiệu đất xanh', '<p>Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p>Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p>Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p>Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p>Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p>Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p>Trân trọng,</p>', 'gioi-thieu-dat-xanh', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh', 28, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -441,6 +444,30 @@ INSERT INTO `hoiit_module_banners` (`banner_id`, `banner_date`, `banner_name`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `hoiit_module_code`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_code` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `record_order` int(11) DEFAULT NULL,
+  `record_type` varchar(45) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`record_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `hoiit_module_code`
+--
+
+INSERT INTO `hoiit_module_code` (`record_id`, `title`, `created`, `record_order`, `record_type`) VALUES
+(5, 'A1', '2012-11-05 07:21:41', 1, 'da-giao-dich'),
+(6, 'A2', '2012-11-05 07:21:47', 2, 'da-dat-cho'),
+(7, 'A3', '2012-11-05 07:21:56', 3, 'chua-giao-dich');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `hoiit_module_contacts`
 --
 
@@ -489,7 +516,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('mv3o97h2x', 1352086809);
+('vohlm831g', 1352101994);
 
 -- --------------------------------------------------------
 
@@ -511,8 +538,8 @@ INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
 ('max_visit_day', 1351897200),
 ('max_visit_value', 6),
 ('time_start_today', 1352070000),
-('today_visited', 2),
-('total_visited', 14),
+('today_visited', 3),
+('total_visited', 15),
 ('yesterday_visited', 2);
 
 -- --------------------------------------------------------
@@ -882,7 +909,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus` (
   `menu_homepage` tinyint(1) NOT NULL DEFAULT '0',
   `menu_activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=42 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=43 ;
 
 --
 -- Dumping data for table `hoiit_module_menus`
@@ -893,9 +920,10 @@ INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_type`, `menu_tar
 (36, 0, 1, '', 38, 0, 1),
 (37, 0, 1, '', 2, 0, 1),
 (38, 0, 1, '', 3, 0, 1),
-(39, 0, 1, '', 41, 0, 1),
+(39, 0, 1, '', 42, 0, 1),
 (40, 0, 1, '', 39, 0, 1),
-(41, 0, 1, '', 40, 0, 1);
+(41, 0, 1, '', 40, 0, 1),
+(42, 0, 1, '', 41, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -925,7 +953,8 @@ INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name
 (38, 'vi', 'Giới thiệu', 'gioi-thieu', ''),
 (39, 'vi', 'Liên hệ', 'lien-he', ''),
 (40, 'vi', 'Sàn giao dịch', 'san-giao-dich', ''),
-(41, 'vi', 'Tuyển dụng', 'tuyen-dung', 'Mô tả tuyển dụng');
+(41, 'vi', 'Tuyển dụng', 'tuyen-dung', 'Mô tả tuyển dụng'),
+(42, 'vi', 'Quản lý sản phẩm', 'quan-ly-san-pham', '');
 
 -- --------------------------------------------------------
 
@@ -1403,7 +1432,9 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('right', 5, '1', 'default', '', '', 'news_new'),
 ('left', 1, '1', 'news', '', '', 'menu_news'),
 ('left', 2, '1', 'news', '', '', 'adv_left'),
-('left', 1, '1', 'jobs', '', '', 'menu_jobs');
+('left', 1, '1', 'jobs', '', '', 'menu_jobs'),
+('footer', 1, '1', 'code', '', '', 'counter_session'),
+('left', 2, '1', 'code', '', '', 'projects_hot');
 
 -- --------------------------------------------------------
 
@@ -1513,6 +1544,7 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('lien-he', 'contact/default/index', '', 1, 1, 'contact', 'vi'),
 ('news', 'news/default/index', '', 5, 1, 'news', 'en'),
 ('products', 'products/default/index', '', 4, 1, 'products', 'en'),
+('quan-ly-san-pham', 'code/default/index', '', 0, 0, 'code', 'vi'),
 ('san-giao-dich', 'lands/default/index', '', 4, 1, 'lands', 'en'),
 ('trang-chu', 'default/default/index', NULL, NULL, 1, 'default', 'vi');
 
