@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 05, 2012 at 04:19 AM
+-- Generation Time: Nov 05, 2012 at 04:40 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -60,6 +60,14 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('contact_port', '465', NULL, 'contact'),
 ('contact_send_mail_smtp', '1', NULL, 'contact'),
 ('contact_username', 'thanhansoft', NULL, 'contact'),
+('jobs_cat_height_thumb', '200', NULL, 'jobs'),
+('jobs_cat_width_thumb', '200', NULL, 'jobs'),
+('jobs_height_thumb', '200', NULL, 'jobs'),
+('jobs_num_item_cat', '3', NULL, 'jobs'),
+('jobs_num_item_hot', '7', '', 'jobs'),
+('jobs_num_item_index', '3', NULL, 'jobs'),
+('jobs_num_item_new', '7', NULL, 'jobs'),
+('jobs_width_thumb', '200', NULL, 'jobs'),
 ('logo_height', '114', NULL, 'banner'),
 ('logo_width', '403', NULL, 'banner'),
 ('news_cat_height_thumb', '200', NULL, 'news'),
@@ -115,6 +123,7 @@ INSERT INTO `hoiit_functions` (`function_value`, `function_name`, `function_clas
 ('lands_search', 'Lands', '', 'searchLands', 'lands'),
 ('list_support', 'Support', '', 'listItem', 'support'),
 ('menu_about', 'About', '', 'listItem', 'about'),
+('menu_jobs', 'JobsCat', '', 'listItem', 'jobs'),
 ('menu_news', 'NewsCat', '', 'listItem', 'news'),
 ('menu_products', 'ProductsCat', '', 'listItem', 'products'),
 ('menu_projects', 'ProjectsCat', '', 'listItem', 'projects'),
@@ -301,6 +310,7 @@ INSERT INTO `hoiit_modules_links` (`link_id`, `module_id`, `language_id`) VALUES
 ('contact', 'contact', 'en'),
 ('exchange', 'lands', 'en'),
 ('home-page', 'default', 'en'),
+('jobs', 'jobs', 'en'),
 ('news', 'news', 'en'),
 ('poll', 'poll', 'en'),
 ('products', 'products', 'en'),
@@ -312,7 +322,8 @@ INSERT INTO `hoiit_modules_links` (`link_id`, `module_id`, `language_id`) VALUES
 ('san-giao-dich', 'lands', 'vi'),
 ('san-pham', 'products', 'vi'),
 ('tin-tuc', 'news', 'vi'),
-('trang-chu', 'default', 'vi');
+('trang-chu', 'default', 'vi'),
+('tuyen-dung', 'jobs', 'vi');
 
 -- --------------------------------------------------------
 
@@ -478,7 +489,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('9irm6qkxd', 1352077842);
+('mv3o97h2x', 1352086809);
 
 -- --------------------------------------------------------
 
@@ -500,8 +511,8 @@ INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
 ('max_visit_day', 1351897200),
 ('max_visit_value', 6),
 ('time_start_today', 1352070000),
-('today_visited', 1),
-('total_visited', 13),
+('today_visited', 2),
+('total_visited', 14),
 ('yesterday_visited', 2);
 
 -- --------------------------------------------------------
@@ -526,7 +537,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_jobs` (
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_hoiit_module_jobs_hoiit_module_jobs_cat_1` (`hoiit_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `hoiit_module_jobs`
+--
+
+INSERT INTO `hoiit_module_jobs` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
+(4, '2012-11-05 03:30:05', '', NULL, 4, 0, NULL, NULL, NULL, NULL, NULL, 1, 4);
 
 -- --------------------------------------------------------
 
@@ -546,7 +564,15 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_jobs_cat` (
   `cat_extra2` varchar(100) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `hoiit_module_jobs_cat`
+--
+
+INSERT INTO `hoiit_module_jobs_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
+(3, 0, '2012-11-05 03:29:04', '', NULL, 0, 3, NULL, NULL, 1),
+(4, 0, '2012-11-05 03:29:11', '', NULL, 0, 4, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -565,6 +591,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_jobs_cat_languages` (
   KEY `fk_hoiit_module_jobs_cat_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_jobs_cat_has_hoiit_languages_hoiit_module_ne1` (`cat_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_jobs_cat_languages`
+--
+
+INSERT INTO `hoiit_module_jobs_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
+(3, 'vi', 'asaas', '', 'asaas', 'asaasas'),
+(4, 'vi', 'asas', '', 'asas', 'assa');
 
 -- --------------------------------------------------------
 
@@ -587,6 +621,13 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_jobs_languages` (
   KEY `fk_hoiit_module_jobs_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_jobs_has_hoiit_languages_hoiit_module_jobs1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_jobs_languages`
+--
+
+INSERT INTO `hoiit_module_jobs_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
+(4, 'vi', 'sasasa', '<p>asassasa</p>', '<p>saassasa</p>', 'sasasa', '', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -841,7 +882,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus` (
   `menu_homepage` tinyint(1) NOT NULL DEFAULT '0',
   `menu_activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=41 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=42 ;
 
 --
 -- Dumping data for table `hoiit_module_menus`
@@ -852,8 +893,9 @@ INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_type`, `menu_tar
 (36, 0, 1, '', 38, 0, 1),
 (37, 0, 1, '', 2, 0, 1),
 (38, 0, 1, '', 3, 0, 1),
-(39, 0, 1, '', 40, 0, 1),
-(40, 0, 1, '', 39, 0, 1);
+(39, 0, 1, '', 41, 0, 1),
+(40, 0, 1, '', 39, 0, 1),
+(41, 0, 1, '', 40, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -882,7 +924,8 @@ INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name
 (37, 'vi', 'Tin tức', 'tin-tuc', 'Tin tức'),
 (38, 'vi', 'Giới thiệu', 'gioi-thieu', ''),
 (39, 'vi', 'Liên hệ', 'lien-he', ''),
-(40, 'vi', 'Sàn giao dịch', 'san-giao-dich', '');
+(40, 'vi', 'Sàn giao dịch', 'san-giao-dich', ''),
+(41, 'vi', 'Tuyển dụng', 'tuyen-dung', 'Mô tả tuyển dụng');
 
 -- --------------------------------------------------------
 
@@ -1359,7 +1402,8 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('left', 4, '1', 'default', '', '', 'adv_left'),
 ('right', 5, '1', 'default', '', '', 'news_new'),
 ('left', 1, '1', 'news', '', '', 'menu_news'),
-('left', 2, '1', 'news', '', '', 'adv_left');
+('left', 2, '1', 'news', '', '', 'adv_left'),
+('left', 1, '1', 'jobs', '', '', 'menu_jobs');
 
 -- --------------------------------------------------------
 
@@ -1437,6 +1481,11 @@ CREATE TABLE IF NOT EXISTS `hoiit_urls` (
 --
 
 INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `url_type`, `hoiit_modules_module_id`, `hoiit_languages_language_id`) VALUES
+('<jobs:(tuyen-dung)>', 'jobs/default/index', '', 4, 1, 'jobs', 'vi'),
+('<jobs:(tuyen-dung)>/<cid:[-a-z0-9]+>', 'jobs/default/cats', '', 3, 0, 'jobs', 'vi'),
+('<jobs:(tuyen-dung)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'jobs/default/view', 'urlSuffix=>.html', 0, 0, 'jobs', 'vi'),
+('<jobs:(tuyen-dung)>/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'jobs/default/cats', '', 2, 0, 'jobs', 'vi'),
+('<jobs:(tuyen-dung)>/trang/<page:\\d+>', 'jobs/default/index', '', 1, 0, 'jobs', 'vi'),
 ('<lands:(san-giao-dich)>', 'lands/default/index', '', 3, 1, 'lands', 'vi'),
 ('<lands:(san-giao-dich)>/<cid:[-a-z0-9]+>', 'lands/default/cats', '', 2, 0, 'lands', 'vi'),
 ('<lands:(san-giao-dich)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'lands/default/view', 'urlSuffix=>.html', 0, 0, 'lands', 'vi'),
