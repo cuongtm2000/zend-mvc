@@ -26,16 +26,24 @@
 		
 		<div id="tab3" class="tab_content">
 			<div class="ground">
-			<?php $values = explode('|', $item['pic_desc']); foreach($values as $value):?>
-				<a href="<?php echo Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/projects/'.'/'. $value ?>" title="<?php echo $value?>"><img src="<?php echo Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/projects/'.'/'. $value ?>" alt="<?php echo $value?>" /></a>
-			<?php endforeach ;?>
+			<?php if($item['pic_desc']):?>
+				<?php $values = explode('|', $item['pic_desc']); foreach($values as $value):?>
+					<a href="<?php echo Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/projects/'.$value ?>" title="<?php echo $value?>"><img src="<?php echo Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/projects/'. $value ?>" alt="<?php echo $value?>" /></a>
+				<?php endforeach ;?>
+			<?php else:?>
+				Đang cập nhật...
+			<?php endif?>
 			</div>
 		</div>
 		
 		<div id="tab4" class="tab_content">
+			<?php if($item['field1']):?>
 				<?php $values = explode('|', $item['field1']); foreach($values as $value):?>
-					<img src="<?php echo Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/projects/'.'/'. $value ?>" alt="<?php echo $value?>" />
+					<img src="<?php echo Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/projects/'. $value ?>" alt="<?php echo $value?>" />
 				<?php endforeach ;?>
+			<?php else:?>
+				Đang cập nhật...
+			<?php endif?>
 		</div>
 		
 		<div id="tab5" class="tab_content">

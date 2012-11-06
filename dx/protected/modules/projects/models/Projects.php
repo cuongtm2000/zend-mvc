@@ -254,8 +254,8 @@ class Projects extends CActiveRecord {
 
         $item = $this::model()->find('record_id=:id', array(':id' => $id));
         Common::removePic($item->pic_thumb, '/image/' . strtolower(__CLASS__)); // remove pic_thumb
-        Common::removePic($item->pic_desc, '/image/' . strtolower(__CLASS__)); // remove pic_thumb
-        Common::removePic($item->field1, '/image/' . strtolower(__CLASS__)); // remove pic_thumb
+        Common::removePic($item->pic_desc, '/image/' . strtolower(__CLASS__), 1);
+        Common::removePic($item->field1, '/image/' . strtolower(__CLASS__), 1);
         $this->findByPk($id)->delete(); //delete record_id
     }
 
@@ -384,7 +384,7 @@ class Projects extends CActiveRecord {
 
             //upload pic_desc
             if (isset($_FILES[__CLASS__ . 'Form']['name']['pic_desc'])) {
-                $uploaded = $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_desc'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_desc'], Config::getValue('products_width_desc'), Config::getValue('products_height_desc'), Yii::getPathOfAlias('filePathUpload') . '/image/' . '/' . strtolower(__CLASS__) . '/', $model['title' . Yii::app()->params['default_language']].'-desc-');
+                $uploaded = $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_desc'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_desc'], Config::getValue('projects_width_desc'), Config::getValue('projects_height_desc'), Yii::getPathOfAlias('filePathUpload') . '/image/' . '/' . strtolower(__CLASS__) . '/', $model['title' . Yii::app()->params['default_language']].'-desc-');
                 $pic_desc = ($item->pic_desc) ? explode('|', $item->pic_desc) : array();
                 //push value
                 foreach ($uploaded as $value) {
@@ -393,9 +393,9 @@ class Projects extends CActiveRecord {
                 $item->pic_desc = implode("|", $pic_desc);
             }
 
-            //upload pic_desc
+            //upload pic_slide
             if (isset($_FILES[__CLASS__ . 'Form']['name']['pic_slide'])) {
-                $uploaded = $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_slide'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_slide'], Config::getValue('products_width_desc'), Config::getValue('products_height_desc'), Yii::getPathOfAlias('filePathUpload') . '/image/' . '/' . strtolower(__CLASS__) . '/', $model['title' . Yii::app()->params['default_language']].'-slide-');
+                $uploaded = $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_slide'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_slide'], Config::getValue('projects_width_desc'), Config::getValue('projects_height_desc'), Yii::getPathOfAlias('filePathUpload') . '/image/' . '/' . strtolower(__CLASS__) . '/', $model['title' . Yii::app()->params['default_language']].'-slide-');
                 $pic_slide = ($item->field1) ? explode('|', $item->field1) : array();
                 //push value
                 foreach ($uploaded as $value) {

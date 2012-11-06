@@ -2,10 +2,10 @@
 -- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 06, 2012 at 06:42 AM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
+-- Host: localhost
+-- Generation Time: Nov 06, 2012 at 08:53 AM
+-- Server version: 5.5.16
+-- PHP Version: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -96,11 +96,13 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('products_width_thumb', '220', NULL, 'products'),
 ('projects_cat_height_thumb', '165', NULL, 'projects'),
 ('projects_cat_width_thumb', '165', NULL, 'projects'),
+('projects_height_desc', '700', NULL, 'projects'),
 ('projects_height_thumb', '300', NULL, 'projects'),
 ('projects_num_item_cat', '5', NULL, 'projects'),
 ('projects_num_item_hot', '7', NULL, 'projects'),
 ('projects_num_item_index', '5', NULL, 'projects'),
 ('projects_num_item_new', '7', NULL, 'projects'),
+('projects_width_desc', '520', NULL, 'projects'),
 ('projects_width_thumb', '300', NULL, 'projects');
 
 -- --------------------------------------------------------
@@ -531,7 +533,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('s95dx4vtf', 1352173996);
+('ejqsmt5hl', 1352186917);
 
 -- --------------------------------------------------------
 
@@ -550,11 +552,11 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_value` (
 --
 
 INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
-('max_visit_day', 1351897200),
-('max_visit_value', 6),
+('max_visit_day', 1352156400),
+('max_visit_value', 7),
 ('time_start_today', 1352156400),
-('today_visited', 6),
-('total_visited', 23),
+('today_visited', 7),
+('total_visited', 24),
 ('yesterday_visited', 5);
 
 -- --------------------------------------------------------
@@ -1283,14 +1285,15 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects` (
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_hoiit_module_pro_hoiit_module_pro_cat_1` (`hoiit_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `hoiit_module_projects`
 --
 
 INSERT INTO `hoiit_module_projects` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
-(9, '2012-11-06 03:52:49', 'nha-biet-thu.JPG', '', 9, 1, NULL, 'nha-biet-thu-slide-1.jpg|nha-biet-thu-slide-2.JPG', 'http://www.youtube.com/watch?v=tUYxfKC_ErQ', NULL, NULL, 1, 2);
+(11, '2012-11-06 07:02:45', 'sad.png', '', 11, 1, NULL, 'sad-slide-1.png', 'http://www.youtube.com/watch?v=IXywPCS-sFo', NULL, NULL, 1, 2),
+(12, '2012-11-06 07:18:49', '', NULL, 12, 0, NULL, NULL, '', NULL, NULL, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -1376,7 +1379,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects_languages` (
 --
 
 INSERT INTO `hoiit_module_projects_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `detail`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(9, 'vi', 'Nha biet thu', '<p>xem truoc</p>', '<p>noi dung can biet</p>', '<p>so do vitri thuan loi</p>', 'nha-biet-thu', 'dang cap nhat', 0, NULL, NULL);
+(11, 'vi', 'sad', '<p>asdsadasd</p>', '<p>Thong tin tong quan</p>', '<p>So do vi tri</p>', 'sad', 'Mo ta', 0, NULL, NULL),
+(12, 'vi', 'asd', '<p>asdasdasd</p>', '<p>asdasdasd</p>', '<p>asdasdasdasd</p>', 'asd', 'asdasdasd', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
