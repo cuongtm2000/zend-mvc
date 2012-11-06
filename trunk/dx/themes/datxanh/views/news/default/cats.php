@@ -13,7 +13,8 @@
             <h2 class="title-items-news">
                 <?php echo CHtml::link($value->NewsLanguage[Yii::app()->language]['title'], array($this->setUrlModule('news').'/'.$value->NewsCat->NewsCatLanguage[Yii::app()->language]['tag'].'/'.$value->NewsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$value->NewsLanguage[Yii::app()->language]['title'])); ?>
             </h2>
-            <?php echo $value->NewsLanguage[Yii::app()->language]['preview'] ?> <div class="clear"></div>
+            <?php echo $value->NewsLanguage[Yii::app()->language]['preview'] ?>
+			<a href="<?php echo Yii::app()->baseUrl.$this->setUrlModule('news').'/'.$value->NewsCat->NewsCatLanguage[Yii::app()->language]['tag'].'/'.$value->NewsLanguage[Yii::app()->language]['tag'].'.html'?>" title="Chi tiết"><img class="detail" src="<?php echo Yii::app()->theme->baseUrl?>/images/button-detail.png" alt="Chi tiết" /></a>		<div class="clear"></div>
         </li>
         <?php endforeach?>
     </ul> 

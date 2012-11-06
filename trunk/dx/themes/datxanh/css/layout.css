@@ -187,9 +187,9 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .frame-contact{list-style:none;margin:15px 0 10px 0;padding:0}
 .frame-contact li{padding:4px 0}
 .frame-contact input{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #ddd;border-radius:3px;-moz-border-radius: 3px; -webkit-border-radius: 3px}
-.frame-contact textarea{border:1px solid #ddd; width:350px;border-radius:3px;-moz-border-radius: 3px; -webkit-border-radius:3px}
+.frame-contact textarea{border:1px solid #ddd; width:400px;border-radius:3px;-moz-border-radius: 3px; -webkit-border-radius:3px}
 .frame-contact span{color:#F00;margin:0 5px 0 0} .frame-contact p{margin:0}
-.left-contact{float:left;width:350px}
+.left-contact{float:left;width:270px}
 .frame-contact .button-submit{margin:10px 0 5px 30px;background:#02C0FA;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
 .frame-contact .button-submit{margin:10px 10px 5px 0}
 /****  End page contact     *****/
