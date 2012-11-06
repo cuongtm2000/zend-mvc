@@ -135,9 +135,31 @@ class AdminController extends BackEndController {
         }
         $this->render('member', LandsUsers::model()->listUsernames());
     }
+    
+    public function actionViewuser($id) {
+        $this->render('viewuser', LandsUsers::model()->findByPk($id));
+    }
+    public function actionEdituser($id) {
+        $model=LandsUsers::model()->findByPk($id);
+        $provice_class = new Provinces();
+        
+        if(isset($_POST['LandsUsers']))
+        {
+            $model->attributes=$_POST['LandsUsers'];
+            if($model->save())
+                $this->redirect(array('viewuser','id'=>$model->username));
+        }
+
+        $this->render('edituser',array(
+            'model'=>$model,
+            'listProvices' => $provice_class->listProvince(),
+        ));
+    }
+    
+    
     public function actionAdd() {
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/config.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/public/plugin/tiny_mce/config.js');
 
         $model_class = ucfirst($this->module->id);
         $model_cat_class = $model_class . 'Cat';
