@@ -370,7 +370,7 @@ class Projects extends CActiveRecord {
             //remove pic_slide
             if (isset($model->remove_pic_slide)) {
                 $str = explode('|', $item->field1);
-                foreach ($model->remove_pic_desc as $value) {
+                foreach ($model->remove_pic_slide as $value) {
                     Common::removePic($value, '/image/' . strtolower(__CLASS__));
                     unset($str[array_search($value, $str)]);
                 }
