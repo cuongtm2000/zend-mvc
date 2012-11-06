@@ -29,7 +29,7 @@ class ProjectsForm extends CFormModel {
 
     public function rules() {
         return array(
-            array('hoiit_module_item_cat_cat_id, titlevi, contentvi, detailvi, tagvi', 'required'),
+            array('hoiit_module_item_cat_cat_id, titlevi, contentvi, tagvi', 'required'),
             array('hot, enable', 'numerical', 'integerOnly' => true),
             array('pic_thumb, pic_desc, pic_slide', 'file', 'types' => 'gif,png,jpg,jpeg,icon', 'allowEmpty' => true, 'maxSize' => 1024 * 1024 * 5),
             array('pic_thumb, titlevi, titleen, tagvi, tagen', 'length', 'max' => 100),
