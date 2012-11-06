@@ -32,9 +32,9 @@ class LandsUsers extends CActiveRecord {
     public function rules() {
         return array(
             array('username', 'unique'),
-            array('username, password,password2, fullname, email, phone, province', 'required'),
+            array('username, password,password2, fullname, email, phone,address ,province', 'required', 'on' => 'register'),
             array('phone, province', 'numerical', 'integerOnly' => true),
-            array('password', 'compare', 'compareAttribute' => 'password2', 'message' => "{attribute} không trùng nhau."),
+            array('password', 'compare', 'compareAttribute' => 'password2', 'message' => "{attribute} không trùng nhau.",'on' => 'register'),
             array('username, fullname, email', 'length', 'max' => 45),
             array('password', 'length', 'max' => 32),
             array('username,password', 'length', 'min' => '6', 'message' => "{attribute} quá ngắn (tối thiểu là  {min} ký tự)."),
@@ -66,6 +66,8 @@ class LandsUsers extends CActiveRecord {
             'province' => 'Tỉnh thành',
             'address' => 'Địa chỉ',
             'sexual' => 'Giới tính',
+            'date_created' => 'Ngày đăng ký',
+            
         );
     }
 

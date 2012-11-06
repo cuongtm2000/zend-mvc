@@ -1,7 +1,6 @@
 <form name="frm" id="frm" action="" method="post">
     <input type="hidden" name="factive" value="" />
 
-
     <table>
         <thead>
             <tr>
@@ -10,6 +9,7 @@
                 <th>Họ tên</th>
                 <th>Tỉnh/thành</th>
                 <th>Số ĐT</th>
+                <th>Email</th>
                 <th>Thao tác</th>
             </tr>
         </thead>
@@ -27,9 +27,11 @@
                     <tr<?php echo $rowclass ?>>
                         <td><input type="checkbox" name="ids[]" value="<?php echo $value->username ?>" /></td>
 
-                        <td><?php echo CHtml::link($value->username, array('edituser', 'id' => $value->username)) ?></td>
+                        <td><?php echo CHtml::link($value->username, array('viewuser', 'id' => $value->username)) ?></td>
                         <td><?php echo $value->fullname  ?></td>
                         <td><?php echo $value->province0['province_name']?></td>
+                        <td><?php echo $value->phone ?></td>
+                        <td><?php echo $value->email ?></td>
                         <td><?php echo CHtml::link($this->lang['edit'], array('edit', 'id' => $value->username)) ?></td>
                     </tr>
                     <?php $i++;

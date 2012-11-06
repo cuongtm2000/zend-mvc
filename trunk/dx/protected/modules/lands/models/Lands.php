@@ -54,10 +54,10 @@ class Lands extends CActiveRecord {
             array('record_order, hot, specials, enable, hoiit_module_item_cat_cat_id', 'numerical', 'integerOnly' => true),
             array('pic_thumb, pic_full', 'length', 'max' => 100),
             array('pic_desc', 'length', 'max' => 500),
-            array('unit, field1, field2, field3, field4', 'length', 'max' => 45),
+            array('price, field1, field2, field3, field4', 'length', 'max' => 45),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('record_id, postdate, pic_thumb, pic_full, pic_desc, record_order, unit, hot, specials, field1, field2, field3, field4, enable, hoiit_module_item_cat_cat_id', 'safe', 'on' => 'search'),
+            array('record_id, postdate, pic_thumb, pic_full, pic_desc, record_order, price, hot, specials, field1, field2, field3, field4, enable, hoiit_module_item_cat_cat_id', 'safe', 'on' => 'search'),
         );
     }
 
@@ -83,7 +83,7 @@ class Lands extends CActiveRecord {
             'pic_full' => 'Pic Full',
             'pic_desc' => 'Pic Desc',
             'record_order' => 'Record Order',
-            'unit' => 'Unit',
+            'price' => 'Giá:',
             'hot' => 'Hot',
             'specials' => 'Specials',
  
@@ -107,7 +107,7 @@ class Lands extends CActiveRecord {
         $criteria->compare('pic_full', $this->pic_full, true);
         $criteria->compare('pic_desc', $this->pic_desc, true);
         $criteria->compare('record_order', $this->record_order);
-        $criteria->compare('unit', $this->unit, true);
+        $criteria->compare('price', $this->price, true);
         $criteria->compare('hot', $this->hot);
         $criteria->compare('specials', $this->specials);
         $criteria->compare('field1', $this->field1, true);
@@ -259,7 +259,7 @@ class Lands extends CActiveRecord {
     //Back end - save
     public function saveRecord($model, $id = null) {
         if (Yii::app()->controller->action->id == 'add') {
-            $this->unit = $model->unit;
+            $this->price = $model->price;
             $this->hot = $model->hot;
             $this->enable = $model->enable;
             $this->hoiit_module_item_cat_cat_id = $model->hoiit_module_item_cat_cat_id;
@@ -278,7 +278,7 @@ class Lands extends CActiveRecord {
             $this->updateByPk($id, array('record_order' => $id));
         } else {
             $item = $this->findByPk($id);
-            $item->unit = $model->unit;
+            $item->price = $model->price;
             $item->hot = $model->hot;
             $item->enable = $model->enable;
             $item->hoiit_module_item_cat_cat_id = $model->hoiit_module_item_cat_cat_id;
@@ -326,7 +326,7 @@ class Lands extends CActiveRecord {
 
     //Back end - Get record to Edit
     public function loadEdit($id) {
-        $command = Yii::app()->db->createCommand('SELECT pic_thumb, pic_full, pic_desc, unit, hot, enable, hoiit_module_item_cat_cat_id FROM ' . $this->tableName() . ' WHERE record_id=:id');
+        $command = Yii::app()->db->createCommand('SELECT pic_thumb, pic_full, pic_desc, price, hot, enable, hoiit_module_item_cat_cat_id FROM ' . $this->tableName() . ' WHERE record_id=:id');
         $command->bindParam(":id", $id, PDO::PARAM_INT);
         return $command->queryRow();
     }
