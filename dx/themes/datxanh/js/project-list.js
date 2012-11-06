@@ -1,8 +1,8 @@
-$(document).ready(function() {
-    $('#project_list').jcarousel({
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
         vertical: true,
 		speed:300,
-        scroll: 1,
-		auto:2,
+        scroll: 1
+
     });
 });	

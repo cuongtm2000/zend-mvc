@@ -39,21 +39,15 @@
 		</div>
 		
 		<div id="tab5" class="tab_content">
-			<div class="info-video">
+			<div class="clear info-video">
+				
 				<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/embed-flash.js"></script>
-				<script type="text/javascript">embedyoutube('<?php echo $item['field2']?>',400,300);</script>
+				<script type="text/javascript">embedyoutube('<?php echo $item['field2']?>',500,315);</script>
 				
 			</div>
 		</div>
 	</div> <div class="clear"></div>
 </div>
-<!--<div class="frame-tent-right">
-	<p style="background: red"><?php echo $item->ProjectsLanguage[Yii::app()->language]['content']?></p>
-	<p style="background: blue"><?php echo $item->ProjectsLanguage[Yii::app()->language]['detail']?></p>
-	<p style="background: blue"><?php echo $item['pic_desc']?></p>
-	<p style="background: blue"><?php echo $item['field1']?></p>
-	<p style="background: blue"><?php echo $item['field2']?></p>
-</div>-->
 
 <?php if($items_other):?>
     <h4 class="title-item-other"><?php echo $this->lang[$this->module->id] . ' ' . $this->lang['other'] ?></h4>

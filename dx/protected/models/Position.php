@@ -107,7 +107,7 @@ class Position extends CActiveRecord {
 
     //Back end - Data position
     public function dataPosition() {
-        return array('header', 'left', 'center', 'right', 'footer');
+        return array('header', 'left', 'center', 'right', 'bottom', 'footer');
     }
 
     //Back end - Function, Position by Page
