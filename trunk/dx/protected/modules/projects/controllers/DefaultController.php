@@ -2,6 +2,7 @@
 
 class DefaultController extends Controller {
     public function actionIndex() {
+		Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/skin.css');
         $model_class = ucfirst($this->module->id);
         $model = new $model_class();
 

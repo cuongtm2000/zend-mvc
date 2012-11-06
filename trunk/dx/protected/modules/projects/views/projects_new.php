@@ -30,7 +30,7 @@ $(document).ready(function() {
         <p><?php echo CHtml::link($projects_new[0]->ProjectsLanguage[Yii::app()->language]['title'], array($this->setUrlModule('projects').'/'.$projects_new[0]->ProjectsCat->ProjectsCatLanguage[Yii::app()->language]['tag'].'/'.$projects_new[0]->ProjectsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$projects_new[0]->ProjectsLanguage[Yii::app()->language]['title'])); ?></p>
     </div>
     <div class="jcarousel-project">
-        <ul id="mycarousel" class="jcarousel-skin-tango">
+        <ul id="mycarousel" class="jcarousel-skin-tango project-new">
             <?php foreach($projects_new as $value):?>
                 <li>
                     <?php if($value['pic_thumb']):?>

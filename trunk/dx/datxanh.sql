@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 05, 2012 at 09:54 AM
+-- Generation Time: Nov 06, 2012 at 06:42 AM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -40,8 +40,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_configs` (
 --
 
 INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoiit_modules_module_id`) VALUES
-('adv_bottom_height', '222', NULL, 'adv'),
-('adv_bottom_width', '222', NULL, 'adv'),
+('adv_bottom_height', '61', NULL, 'adv'),
+('adv_bottom_width', '64', NULL, 'adv'),
 ('adv_center_height', '222', NULL, 'adv'),
 ('adv_center_width', '222', NULL, 'adv'),
 ('adv_left_height', '500', NULL, 'adv'),
@@ -68,6 +68,14 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('jobs_num_item_index', '3', NULL, 'jobs'),
 ('jobs_num_item_new', '7', NULL, 'jobs'),
 ('jobs_width_thumb', '200', NULL, 'jobs'),
+('lands_cat_height_thumb', '200', NULL, 'lands'),
+('lands_cat_width_thumb', '165', NULL, 'lands'),
+('lands_height_desc', '700', NULL, 'lands'),
+('lands_height_full', '500', NULL, 'lands'),
+('lands_height_thumb', '300', NULL, 'lands'),
+('lands_width_desc', '500', NULL, 'lands'),
+('lands_width_full', '500', NULL, 'lands'),
+('lands_width_thumb', '300', NULL, 'lands'),
 ('logo_height', '114', NULL, 'banner'),
 ('logo_width', '403', NULL, 'banner'),
 ('news_cat_height_thumb', '200', NULL, 'news'),
@@ -117,6 +125,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_functions` (
 
 INSERT INTO `hoiit_functions` (`function_value`, `function_name`, `function_class`, `function_call`, `hoiit_modules_module_id`) VALUES
 ('about_home', 'About', '', 'firstHotRecord', 'about'),
+('adv_bottom', 'Adv', '', 'listItemsBottom', 'adv'),
 ('adv_left', 'Adv', '', 'listItemsLeft', 'adv'),
 ('adv_right', 'Adv', '', 'listItemsRight', 'adv'),
 ('counter_session', 'CounterSession', 'CounterSession.Counter', 'publishAssets', 'counterSession'),
@@ -132,6 +141,7 @@ INSERT INTO `hoiit_functions` (`function_value`, `function_name`, `function_clas
 ('news_new', 'News', '', 'listItemsNew', 'news'),
 ('new_poll', 'Poll', '', 'getFirstItem', 'poll'),
 ('projects_hot', 'Projects', '', 'listItemsHot', 'projects'),
+('projects_hot_horizontal', 'Projects', '', 'listItemsHot', 'projects'),
 ('projects_new', 'Projects', '', 'listItemsNew', 'projects');
 
 -- --------------------------------------------------------
@@ -212,6 +222,8 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('order', 'Order', 1, 'en'),
 ('order', 'Thứ tự', 1, 'vi'),
 ('other', 'khác', 0, 'vi'),
+('partners', 'Partners', 1, 'en'),
+('partners', 'Đối tác tiêu biểu', 0, 'vi'),
 ('poll', 'Bình chọn', 0, 'en'),
 ('poll', 'Bình chọn', 0, 'vi'),
 ('products', 'Products', 0, 'en'),
@@ -379,7 +391,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
 --
 
 INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(1, 'vi', 'Giới thiệu đất xanh', '<p>Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p>Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p>Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p>Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p>Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p>Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p>Trân trọng,</p>', 'gioi-thieu-dat-xanh', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh', 28, NULL, NULL);
+(1, 'vi', 'Giới thiệu đất xanh', '<p>Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p>Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p>Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p>Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p>Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p>Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p>Trân trọng,</p>', 'gioi-thieu-dat-xanh', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh', 33, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -402,7 +414,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_advs` (
   `click` int(11) NOT NULL DEFAULT '0',
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `hoiit_module_advs`
@@ -411,7 +423,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_advs` (
 INSERT INTO `hoiit_module_advs` (`record_id`, `title`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `click`, `enable`) VALUES
 (1, 'Quảng cáo trái', 'quang-cao-trai.jpg', '', '2012-11-03 01:53:13', '2012-11-02 17:00:00', '2012-11-30 17:00:00', 0, 1, 'left', '_bank', 0, 1),
 (2, 'Quảng cáo trái', 'quang-cao-trai-4.jpg', '', '2012-11-03 02:00:36', '2012-11-02 17:00:00', '2012-12-07 17:00:00', 0, 2, 'left', '_bank', 0, 1),
-(3, 'Quảng cáo bên phải', 'quang-cao-ben-phai.jpg', '', '2012-11-03 09:28:47', '2012-11-02 17:00:00', '2012-11-30 17:00:00', 0, 3, 'right', '_bank', 0, 1);
+(3, 'Quảng cáo bên phải', 'quang-cao-ben-phai.jpg', '', '2012-11-03 09:28:47', '2012-11-02 17:00:00', '2012-11-30 17:00:00', 0, 3, 'right', '_bank', 0, 1),
+(4, 'viet a bank', 'viet-a-bank.png', '', '2012-11-06 02:54:53', '2012-11-05 16:00:00', '2012-12-27 16:00:00', 0, 4, 'bottom', '_bank', 0, 1),
+(5, 'vietcom bank', 'vietcom-bank.png', '', '2012-11-06 02:55:15', '2012-11-05 16:00:00', '2012-12-25 16:00:00', 0, 5, 'bottom', '_bank', 0, 1),
+(6, 'azbank', 'azbank.png', '', '2012-11-06 02:55:30', '2012-11-05 16:00:00', '2012-11-29 16:00:00', 0, 6, 'bottom', '_bank', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -516,7 +531,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('t64w89kxj', 1352105656);
+('s95dx4vtf', 1352173996);
 
 -- --------------------------------------------------------
 
@@ -537,10 +552,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_value` (
 INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
 ('max_visit_day', 1351897200),
 ('max_visit_value', 6),
-('time_start_today', 1352070000),
-('today_visited', 5),
-('total_visited', 17),
-('yesterday_visited', 2);
+('time_start_today', 1352156400),
+('today_visited', 6),
+('total_visited', 23),
+('yesterday_visited', 5);
 
 -- --------------------------------------------------------
 
@@ -985,8 +1000,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news` (
 --
 
 INSERT INTO `hoiit_module_news` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
-(1, '2012-11-04 06:49:02', 'sadas.jpg', NULL, 2, 0, NULL, NULL, NULL, NULL, NULL, 1, 2),
-(2, '2012-11-04 06:59:27', '', NULL, 1, 0, NULL, NULL, NULL, NULL, NULL, 1, 2);
+(1, '2012-11-04 06:49:02', 'at-xanh-phan-phoi-doc-quyen-du-an-sunset-sanato.jpg', NULL, 2, 0, NULL, NULL, NULL, NULL, NULL, 1, 2),
+(2, '2012-11-04 06:59:27', 'von-ngoai-duong-nhu-ngung-chay-vao-chung-khoan-viet-nam.jpg', NULL, 1, 0, NULL, NULL, NULL, NULL, NULL, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -1069,8 +1084,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_languages` (
 --
 
 INSERT INTO `hoiit_module_news_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(1, 'vi', 'sadas', '<p>dasdsa</p>', '<p>asdasdasd</p>', 'sadas', 'asdasdasd', 0, NULL, NULL),
-(2, 'vi', 'ssaassasasa', '<p>asasasssasasa</p>', '<p>assasa</p>', 'ssaassasasa', 'saassasa', 0, NULL, NULL);
+(1, 'vi', 'Đất Xanh phân phối độc quyền dự án Sunset Sanato', '<p>Đồng Tháp, ngày 19/10/2012, Công ty Cổ phần Dịch vụ và Xây dựng Địa ốc Đất Xanh Tây Nam, đại diện cho Tập Đoàn Đất Xanh đã ký hợp đồng với Chủ đầu tư - Công ty Cổ phần 99 Núi và chính thức trở thành nhà phân phối độc quyền dự án Sunset Sanato.</p>', '<p>Đồng Tháp, ngày 19/10/2012, Công ty Cổ phần Dịch vụ và Xây dựng Địa ốc Đất Xanh Tây Nam, đại diện cho Tập Đoàn Đất Xanh đã ký hợp đồng với Chủ đầu tư - Công ty Cổ phần 99 Núi và chính thức trở thành nhà phân phối độc quyền dự án Sunset Sanato.</p>\r\n<p>ký kết hợp đồng phân phối độc quyền dự án Sunset Sanato diễn ra thành công tốt đẹp với sự hiện diện của lãnh đạo Tập đoàn Đất Xanh, Công ty Cổ phần 99 Núi và hơn 200 khách mời tham dự là lãnh đạo Công ty TNHH MTV Thương Mại Dầu Khí Đồng Tháp (Petimex), quý phóng viên báo/đài và đông đảo quý khách hàng tiềm năng quan tâm đến dự án. Ngoài ra, sự kiện còn có sự tham dự đặc biệt của Ông Lê Minh Hoan - Chủ tịch UBND Tỉnh Đồng Tháp và lãnh đạo cấp cao thuộc các Sở, Ban, Ngành của tỉnh.</p>', 'dat-xanh-phan-phoi-doc-quyen-du-an-sunset-sanato', 'asdasdasd', 0, NULL, NULL),
+(2, 'vi', 'Vốn ngoại dường như ngừng chảy vào chứng khoán Việt Nam', '', '<p>Ông đang quan tâm nhất điều gì về kinh tế Việt Nam? Tôi hỏi một nhà đầu tư đến từ Mỹ, bên lề Hội nghị Kết nối đầu tư 2012 tổ chức tuần rồi ở TP.HCM. "Sự thật", ông nói. "Khi tôi sang Việt Nam thì khách hàng của tôi đặt ra 2 câu hỏi: Nếu tôi bỏ vốn vào Việt Nam thì liệu có gặp vấn đề gì khi rút tiền về không? Tôi có thể tin vào những con số tôi đọc trên báo về kinh tế Việt Nam hay không?".</p>\r\n<p>Sau hơn một ngày tham gia hội nghị, tôi tìm lại ông ở hành lang. Ông có tìm thấy điều ông muốn không? Không, mà là có. Tại vì các thông tin tôi cũng như các nhà đầu tư khác cần không có đủ trong các câu trả lời, nhưng có thể thấy một phần vấn đề của chúng ta. Đó là tiền đâu? Tiền đâu để rót vào thị trường tài chính và thị trường bất động sản? Không phải riêng nhà đầu tư từ Mỹ, câu hỏi này được hơn 200 đại biểu đến hội nghị để tìm câu trả lời.</p>\r\n<p>Dòng vốn dường như đã ngừng chảy vào thị trường Việt Nam. Tổng giám đốc Công ty chứng khoán Bản Việt Tô Hải nói rằng, các nhà đầu tư gián tiếp đã chần chừ trong việc bỏ vốn, cụ thể từ đầu năm đến nay đầu tư của khối này chững lại. Và ông thừa nhận, thực tế hầu hết nhà đầu tư nước ngoài vào thị trường tài chính Việt Nam cho đến lúc này đã không thành công.</p>\r\n<p>Vụ trưởng Vụ Phát triển thị trường, Ủy ban Chứng khoán Nhà nước Nguyễn Sơn nói, hiện các dự án bất động sản, tài nguyên khoáng sản hay ngân hàng tài chính có nhu cầu vốn rất lớn. Nhiều doanh nghiệp đang tìm kiếm cơ hội thu hút vốn trong và ngoài nước. Nhu cầu huy động vốn quốc tế là bài toán đặt ra đối với Việt Nam hiện nay, đặc biệt đối với dự án tốt. "Sự khó khăn trong tiếp cận vốn tôi cho rằng sẽ phải đến hết 2013", ông Sơn nói.</p>', 'von-ngoai-duong-nhu-ngung-chay-vao-chung-khoan-viet-nam', 'saassasa', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1268,17 +1283,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects` (
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_hoiit_module_pro_hoiit_module_pro_cat_1` (`hoiit_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `hoiit_module_projects`
 --
 
 INSERT INTO `hoiit_module_projects` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
-(4, '2012-11-01 08:12:31', 'ban-nha-cap-4.jpg', 'ban-nha-cap-4-desc-1.jpg', 4, 1, NULL, '', '', NULL, NULL, 1, 2),
-(5, '2012-11-02 23:51:33', 'ban-nha-cap-3.jpg', 'ban-nha-cap-3-desc-1-6.jpg', 5, 1, NULL, 'ban-nha-cap-3-slide-1.png', 'http://www.youtube.com/watch?v=IXywPCS-sFo', NULL, NULL, 1, 2),
-(6, '2012-11-05 08:16:33', 'nha-biet-thu.jpg', NULL, 6, 1, NULL, NULL, '', NULL, NULL, 1, 2),
-(7, '2012-11-05 08:49:13', 'nha-moi-cao-cap.jpg', NULL, 7, 1, NULL, NULL, '', NULL, NULL, 1, 2);
+(9, '2012-11-06 03:52:49', 'nha-biet-thu.JPG', '', 9, 1, NULL, 'nha-biet-thu-slide-1.jpg|nha-biet-thu-slide-2.JPG', 'http://www.youtube.com/watch?v=tUYxfKC_ErQ', NULL, NULL, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -1364,10 +1376,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects_languages` (
 --
 
 INSERT INTO `hoiit_module_projects_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `detail`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(4, 'vi', 'Bán nhà cấp 4', '<p>Thong tin chi tiet can xem truoc</p>\r\n<p>Thong tin chi tiet can xem truoc</p>', '<p>Phần nội dung nhà ở can thiet de biet</p>', '<p><img src="/datxanh/public/userfiles/image/projects/ban-nha-cap-4.jpg" alt="" width="300" height="191" /></p>\r\n<p>so do vi tri</p>', 'ban-nha-cap-4', '', 0, NULL, NULL),
-(5, 'vi', 'Bán nhà cấp 3', '<p>Bán nhà cấp 3 Bán nhà cấp 3 Bán nhà cấp 3</p>', '<p>Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3Bán nhà cấp 3 Bán nhà cấp 3</p>', '<p>Bán nhà cấp 3 Bán nhà cấp 3</p>', 'ban-nha-cap-3', '', 0, NULL, NULL),
-(6, 'vi', 'Nha biet thu', '', '<p>thong tin thong quan</p>', '<p>dang cap nhat</p>', 'nha-biet-thu', '', 0, NULL, NULL),
-(7, 'vi', 'Nha moi cao cap', '', '<p>dsfsfdsf </p>', '<p>dasdasd addsa</p>', 'nha-moi-cao-cap', '', 0, NULL, NULL);
+(9, 'vi', 'Nha biet thu', '<p>xem truoc</p>', '<p>noi dung can biet</p>', '<p>so do vitri thuan loi</p>', 'nha-biet-thu', 'dang cap nhat', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1427,18 +1436,19 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('footer', 1, '1', 'contact', NULL, NULL, 'counter_session'),
 ('left', 2, '1', 'contact', NULL, NULL, 'menu_projects'),
 ('left', 3, '1', 'contact', NULL, NULL, 'list_support'),
-('center', 1, '1', 'lands', '', '', 'projects_hot'),
-('left', 2, '1', 'lands', '', '', 'lands_search'),
-('center', 1, '1', 'default', '', '', 'projects_new'),
-('footer', 2, '1', 'default', '', '', 'counter_session'),
-('left', 3, '1', 'default', '', '', 'lands_search'),
-('left', 4, '1', 'default', '', '', 'adv_left'),
-('right', 5, '1', 'default', '', '', 'news_new'),
 ('left', 1, '1', 'news', '', '', 'menu_news'),
 ('left', 2, '1', 'news', '', '', 'adv_left'),
 ('left', 1, '1', 'jobs', '', '', 'menu_jobs'),
 ('footer', 1, '1', 'code', '', '', 'counter_session'),
-('left', 2, '1', 'code', '', '', 'projects_hot');
+('left', 2, '1', 'code', '', '', 'projects_hot'),
+('left', 1, '1', 'lands', '', '', 'lands_search'),
+('center', 2, '1', 'lands', '', '', 'projects_hot_horizontal'),
+('bottom', 1, '1', 'default', '', '', 'adv_bottom'),
+('center', 2, '1', 'default', '', '', 'projects_new'),
+('footer', 3, '1', 'default', '', '', 'counter_session'),
+('left', 4, '1', 'default', '', '', 'lands_search'),
+('left', 5, '1', 'default', '', '', 'adv_left'),
+('right', 6, '1', 'default', '', '', 'news_new');
 
 -- --------------------------------------------------------
 

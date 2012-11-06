@@ -15,15 +15,7 @@
 <title><?php echo CHtml::encode($this->pageTitle); ?><?php echo ($this->setting['title']) ? ' - '.CHtml::encode($this->setting['title']) : '' ?></title>
 <meta name="keywords" content="<?php echo CHtml::encode($this->setting['keywords']) ?>" />
 <meta name="description" content="<?php echo CHtml::encode($this->description) ?>" />
-<script type="text/javascript">
-	/*$(document).ready(function(){
-		if ($("#banner").length==0)
-		{
-			$("#heading").addClass("banner-none");
 
-		}
-	});*/
-</script>
 <!--[if lt IE 8]>
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/ie6.css" />
 <![endif]-->
@@ -39,6 +31,7 @@
         <?php echo $content; ?>
 		<div class="clear"></div>
 	</div><!--End content-->
+	<?php $this->getPosition('bottom');?>
 </div><!--End wrapper-->
 <div id="bg-footer">
     <div id="footer">

@@ -3,14 +3,13 @@
         <?php $this->getPosition('left');?>
 
         <div class="video">
-            <a href="http://www.youtube.com/watch?v=UWMqa8Ev44g&feature=related" title="PSY- GANGNAM STYLE - Official" rel="prettyPhoto"><img src="images/video-2.jpg" alt="" /></a>
+            <a href="http://www.youtube.com/watch?v=UWMqa8Ev44g&feature=related" title="PSY- GANGNAM STYLE - Official" rel="prettyPhoto"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/video-2.jpg" alt="" /></a>
             <script type="text/javascript">$(document).ready(function () {$(".video a[rel^='prettyPhoto']").prettyPhoto();});</script>
         </div>
     </div><!--End left content-->
     <div id="right-content">
         <?php $this->getPosition('center');?>
-        <?php echo $content?>
-
+        <?php echo $content ?>
         <div class="infotab">
             <ul class="tabs tabs-2">
                 <li><a href="#tab1">Mua bán</a></li>
@@ -59,7 +58,7 @@
                         </tr>
                         </tbody>
                     </table>
-                    <ul class="paging paging-none" id="yw0">
+                    <ul id="yw0" class="paging paging-none">
                         <li class="first hidden"><a href="/san-pham/thiet-bi-ve-sinh">Đầu tiên</a></li>
                         <li class="previous hidden"><a href="/san-pham/thiet-bi-ve-sinh">Lùi</a></li>
                         <li class="page selected"><a href="/san-pham/thiet-bi-ve-sinh">1</a></li>
