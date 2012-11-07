@@ -258,3 +258,41 @@ tbody tr td {padding : 6px 5px; background : #fff; color : #111}
 .address{width:70px;text-align:center;color:#990505}
 
 .project-new img{width:95px;height:65px}
+
+/* dang tin */
+select{border:1px solid #ccc; padding:3px; cursor:pointer; -moz-border-radius: 3px; -webkit-border-radius: 3px; width:208px}
+legend{color:#0066CC; font-weight:bold; font-size:11pt}
+fieldset{padding:15px; border : 1px solid #E4E3E3; background:#F9F9FB; -moz-border-radius:3px; -webkit-border-radius:3px; margin:5px}
+fieldset p{clear: both; margin: 5px auto}
+fieldset p.item{background : #eee; padding: 5px 0}
+fieldset label{float:left; width:110px; padding:3px}
+fieldset#col-130 label{width:130px}
+fieldset label.remove{float: none}
+fieldset input.login {cursor:pointer; padding: 3px 7px; color:#fff; border:1px solid #ccc; background:#3A6AAD; -moz-border-radius: 3px; -webkit-border-radius: 3px; display:inline; margin-right:6px}
+fieldset input.login:hover, .login-a:hover{background:#5184D2}
+fieldset textarea{-moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; width:60%; padding:1px 3px}
+fieldset .fileupload{width:32%}
+fieldset .login-a {cursor:pointer; color:#fff; border:1px solid #ccc; background:#3A6AAD; -moz-border-radius: 3px; -webkit-border-radius: 3px; display:inline; margin-right:6px; padding:3px 18px 4px 18px}
+fieldset .login-a:hover{text-decoration:none}
+
+fieldset .txt-small{width:100px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
+fieldset .txt-very-tiny{width:22px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
+fieldset .txt-large{width:220px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
+
+fieldset .txt-very-large{width:200px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
+
+fieldset .reset-label{float: none; cursor: pointer}
+
+span.required, .errorMessage{color: red;}
+
+
+.col1{float: left; width:110px}
+.col2{float: right; width:510px}
+
+.post-land{padding:10px;margin:0 0 10px 0;width:98% !important}
+.add-rows{color:#3186C7}
+.space{height: 8px;}
+.radio label{float: none; cursor: pointer;}
+p.radio{margin: 6px 0}
+p.radio label.p-label{width: 110px; float: left; margin-top: -5px}
+.readme{color: #555; font-style: italic;}
