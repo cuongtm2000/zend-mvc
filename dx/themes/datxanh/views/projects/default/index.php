@@ -2,6 +2,7 @@
 <?php $this->pageTitle = $this->lang[$this->module->id]; $this->setDescription()?>
 
 <?php if($listItemIndex['models']):?>
+<h2 class="title-box"><span><?php echo $this->lang[$this->module->id]?></span></h2>
     <ul class="panel-items">
         <?php foreach($listItemIndex['models'] as $value):?>
         <li>
@@ -20,8 +21,8 @@
         <?php endforeach?>
     </ul>
     <script type="text/javascript">
-        $(document).ready(function(){
-            $(".panel-items li:even").addClass("alt");
+        jQuery(document).ready(function(){
+            jQuery(".panel-items li:even").addClass("alt");
         });
     </script>
     <?php $this->widget('CLinkPager', array('pages' => $listItemIndex['pages'], 'header'=>'', 'lastPageLabel'=>'<img src="'.Yii::app()->theme->baseUrl.'/images/last-paging.png" alt="last" />', 'nextPageLabel'=>'<img src="'.Yii::app()->theme->baseUrl.'/images/next-paging.png" alt="next" />', 'firstPageLabel'=>'Đầu tiên', 'prevPageLabel'=>'Lùi', 'htmlOptions'=>array('class'=>'paging')))?>
