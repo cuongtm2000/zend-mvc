@@ -125,13 +125,12 @@ class AdminController extends BackEndController {
         $this->render('index', $model->listItemAdmin());
     }
     public function actionMember() {
-        $model_class = ucfirst($this->module->id);
-        $model = new $model_class;
-
+        $model = new LandsUsers();
         //Submit
         if (Yii::app()->request->getIsPostRequest()) {
             $model->activeItem(Yii::app()->request);
-            $this->refresh();
+         //   $this->refresh();
+             
         }
         $this->render('member', LandsUsers::model()->listUsernames());
     }
@@ -145,9 +144,8 @@ class AdminController extends BackEndController {
         
         if(isset($_POST['LandsUsers']))
         {
-            $model->attributes=$_POST['LandsUsers'];
-            if($model->save())
-                $this->redirect(array('viewuser','id'=>$model->username));
+            $model->updateUser($_POST['LandsUsers']);
+            $this->redirect(array('viewuser','id'=>$model->username));
         }
 
         $this->render('edituser',array(
@@ -158,7 +156,7 @@ class AdminController extends BackEndController {
     
     
     public function actionAdd() {
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
+      /*  Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
         Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/public/plugin/tiny_mce/config.js');
 
         $model_class = ucfirst($this->module->id);
@@ -185,7 +183,7 @@ class AdminController extends BackEndController {
             'listItemsCat' => $model_cat->listCats(),
             'listItemsType' => $model_type->listTypes(),
             'listProvices' => $provice_class->listProvince(),
-        ));
+        ));*/
     }
 
     public function actionEdit($id) {
@@ -210,7 +208,7 @@ class AdminController extends BackEndController {
         $model_form['pic_thumb'] = $model_data['pic_thumb'];
         $model_form['pic_full'] = $model_data['pic_full'];
         $model_form['pic_desc'] = $model_data['pic_desc'];
-        $model_form['unit'] = $model_data['unit'];
+        $model_form['price'] = $model_data['price'];
         $model_form['hot'] = $model_data['hot'];
         $model_form['enable'] = $model_data['enable'];
         $model_form['hoiit_module_item_cat_cat_id'] = $model_data['hoiit_module_item_cat_cat_id'];

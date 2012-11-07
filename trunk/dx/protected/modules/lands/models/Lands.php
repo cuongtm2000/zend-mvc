@@ -4,21 +4,6 @@
  * This is the model class for table "hoiit_module_lands".
  *
  * The followings are the available columns in table 'hoiit_module_lands':
- * @property integer $record_id
- * @property string $postdate
- * @property string $pic_thumb
- * @property string $pic_full
- * @property string $pic_desc
- * @property integer $record_order
- * @property string $unit
- * @property integer $hot
- * @property integer $specials
- * @property string $field1
- * @property string $field2
- * @property string $field3
- * @property string $field4
- * @property integer $enable
- * @property integer $hoiit_module_item_cat_cat_id
  *
  * The followings are the available model relations:
  * @property HoiitModuleLandsCat $hoiitModuleItemCatCat
@@ -50,14 +35,14 @@ class Lands extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('hoiit_module_item_cat_cat_id', 'required'),
+             array('hoiit_module_item_cat_cat_id, hoiit_module_item_type_type_id, hoiit_module_lands_provinces_province_id, username, contact_name, contact_tel', 'required'),
             array('record_order, hot, specials, enable, hoiit_module_item_cat_cat_id', 'numerical', 'integerOnly' => true),
             array('pic_thumb, pic_full', 'length', 'max' => 100),
             array('pic_desc', 'length', 'max' => 500),
-            array('price, field1, field2, field3, field4', 'length', 'max' => 45),
+            array('price', 'length', 'max' => 45),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('record_id, postdate, pic_thumb, pic_full, pic_desc, record_order, price, hot, specials, field1, field2, field3, field4, enable, hoiit_module_item_cat_cat_id', 'safe', 'on' => 'search'),
+            array('record_id, postdate, pic_thumb, pic_full, pic_desc, record_order, price, hot, specials, enable, hoiit_module_item_cat_cat_id', 'safe', 'on' => 'search'),
         );
     }
 
@@ -71,6 +56,11 @@ class Lands extends CActiveRecord {
             'LandsCat' => array(self::BELONGS_TO, 'LandsCat', 'hoiit_module_item_cat_cat_id'),
             //'Language' => array(self::MANY_MANY, 'Language', 'hoiit_module_lands_languages(record_id, language_id)'),
             'LandsLanguage' => array(self::HAS_MANY, 'LandsLanguage', 'record_id', 'index' => 'language_id'),
+            
+            'LandsType' => array(self::BELONGS_TO, 'LandsType', 'hoiit_module_item_type_type_id'),
+            'LandsProvinces' => array(self::BELONGS_TO, 'Provinces', 'hoiit_module_lands_provinces_province_id'), 
+            'username0' => array(self::BELONGS_TO, 'ModuleLandsUsers', 'username'),
+            
         );
     }
 
@@ -86,7 +76,6 @@ class Lands extends CActiveRecord {
             'price' => 'Giá:',
             'hot' => 'Hot',
             'specials' => 'Specials',
- 
             'hoiit_module_item_cat_cat_id' => 'Loại bất động sản',
         );
     }
@@ -110,10 +99,6 @@ class Lands extends CActiveRecord {
         $criteria->compare('price', $this->price, true);
         $criteria->compare('hot', $this->hot);
         $criteria->compare('specials', $this->specials);
-        $criteria->compare('field1', $this->field1, true);
-        $criteria->compare('field2', $this->field2, true);
-        $criteria->compare('field3', $this->field3, true);
-        $criteria->compare('field4', $this->field4, true);
         $criteria->compare('enable', $this->enable);
         $criteria->compare('hoiit_module_item_cat_cat_id', $this->hoiit_module_item_cat_cat_id);
 
@@ -258,12 +243,17 @@ class Lands extends CActiveRecord {
 
     //Back end - save
     public function saveRecord($model, $id = null) {
+        
         if (Yii::app()->controller->action->id == 'add') {
             $this->price = $model->price;
             $this->hot = $model->hot;
-            $this->enable = $model->enable;
             $this->hoiit_module_item_cat_cat_id = $model->hoiit_module_item_cat_cat_id;
-
+            $this->hoiit_module_item_type_type_id = $model->hoiit_module_item_type_type_id;
+            $this->contact_name = $model->contact_name;
+            $this->contact_tel = $model->contact_tel;
+            $this->hoiit_module_lands_provinces_province_id = $model->hoiit_module_lands_provinces_province_id;
+            $this->keys = $model->keys;
+            $this->username=Yii::app()->memberLands->id;
             //upload picture thumb
             Yii::import('ext.SimpleImage.CSimpleImage');
             $file = new CSimpleImage();
@@ -275,6 +265,7 @@ class Lands extends CActiveRecord {
 
             $this->save();
             $id = $this->record_id;
+         //   var_dump($this);
             $this->updateByPk($id, array('record_order' => $id));
         } else {
             $item = $this->findByPk($id);
@@ -321,7 +312,8 @@ class Lands extends CActiveRecord {
 
             $item->save();
         }
-        LandsLanguage::model()->saveRecord($id, $model);
+        
+       LandsLanguage::model()->saveRecord($id, $model);
     }
 
     //Back end - Get record to Edit

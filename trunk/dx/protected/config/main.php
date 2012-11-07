@@ -66,7 +66,8 @@ $config = array(
 
                 //admin rules
                 'admin/<action:(rank|logout)>' => 'admin/<action>',
-                'admin/<module:\w+>/<action:\w+>/<id:\d+>' => '<module>/admin/<action>',
+                'admin/<module:\w+>/<action:\w+>/<id:\w+>' => '<module>/admin/<action>',
+              //  'admin/<module:\w+>/<action:\w+>/<username:\w>' => '<module>/admin/<action>',
                 'admin/<module:\w+>/<action:\w+>' => '<module>/admin/<action>',
                 'admin/<module:\w+>' => '<module>/admin',
             ),

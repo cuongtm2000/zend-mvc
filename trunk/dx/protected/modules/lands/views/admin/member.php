@@ -1,6 +1,5 @@
 <form name="frm" id="frm" action="" method="post">
     <input type="hidden" name="factive" value="" />
-
     <table>
         <thead>
             <tr>
@@ -11,6 +10,7 @@
                 <th>Số ĐT</th>
                 <th>Email</th>
                 <th>Thao tác</th>
+                <th>Số tin đã đăng</th>
             </tr>
         </thead>
         <tbody>
@@ -32,7 +32,8 @@
                         <td><?php echo $value->province0['province_name']?></td>
                         <td><?php echo $value->phone ?></td>
                         <td><?php echo $value->email ?></td>
-                        <td><?php echo CHtml::link($this->lang['edit'], array('edit', 'id' => $value->username)) ?></td>
+                        <td><?php echo CHtml::link($this->lang['edit'], array('edituser', 'id' => $value->username)) ?></td>
+                        <td><?php echo CHtml::link(count($value->moduleLands), array('listpost', 'id' => $value->username)) ?></td>
                     </tr>
                     <?php $i++;
                 endforeach; ?>
