@@ -24,6 +24,7 @@ class LandsForm extends CFormModel {
     public $remove_pic_full;
     public $remove_pic_desc;
 
+    public $keys;
     public $price;
     public $contact_name;
     public $contact_tel;
@@ -34,13 +35,13 @@ class LandsForm extends CFormModel {
     
     public function rules() {
         return array(
-            array('hoiit_module_item_cat_cat_id, titlevi, contentvi, tagvi', 'required'),
+            array('hoiit_module_item_cat_cat_id, titlevi,hoiit_module_item_type_type_id, contentvi, ,tagvi,hoiit_module_lands_provinces_province_id,contact_name,price,contact_tel, ', 'required'),
             array('hot, enable', 'numerical', 'integerOnly' => true),
             array('pic_thumb, pic_full, titlevi, titleen, tagvi, tagen', 'length', 'max' => 100),
             array('descriptionvi, descriptionen', 'length', 'max' => 250),
             array('pic_desc', 'length', 'max' => 500),
             //array('unit', 'length', 'max' => 45),
-            array('pic_thumb, pic_full, pic_desc, unit, previewvi, previewen, contentvi, contenten, remove_pic_thumb, remove_pic_full, remove_pic_desc', 'safe')
+            array('pic_thumb, pic_full, pic_desc, price, previewvi, previewen, contentvi, contenten, remove_pic_thumb, remove_pic_full, remove_pic_desc', 'safe')
         );
     }
 

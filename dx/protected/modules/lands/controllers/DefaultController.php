@@ -99,4 +99,41 @@ class DefaultController extends Controller {
         Yii::app()->memberLands->logout();
         $this->redirect(Yii::app()->homeUrl);
     }
+    
+     public function actionAdd() {
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/public/plugin/tiny_mce/config.js');
+
+        $model_class = ucfirst($this->module->id);
+        $model_cat_class = $model_class . 'Cat';
+        $model_form_class = $model_class . 'Form';
+        $model_type_class = $model_class . 'Type';
+        $model = new $model_class;
+        $model_cat = new $model_cat_class;
+        $model_form = new $model_form_class;
+        
+        $model_form->contact_name=Yii::app()->memberLands->id;
+        
+        
+        $model_type = new $model_type_class;
+        $provice_class = new Provinces();
+        
+        if (isset($_POST[$model_form_class])) {
+            $model_form->attributes = $_POST[$model_form_class];
+
+            if ($model_form->validate()) {
+                $model->saveRecord($model_form);
+                $this->redirect(array('index'));
+            }
+        }
+
+        $this->render('add', array(
+            'model' => $model_form, 
+            'listItemsCat' => $model_cat->listCats(),
+            'listItemsType' => $model_type->listTypes(),
+            'listProvices' => $provice_class->listProvince(),
+        ));
+    }
+    
+    
 }

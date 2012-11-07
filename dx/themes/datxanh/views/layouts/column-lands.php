@@ -123,15 +123,25 @@
 
     </div><!--End center-content-->
     <div id="column-3">
-        <h4 class="title-box"><span>Đăng nhập</span></h4>
+    <?php if(!Yii::app()->memberLands->id):?>
+         <h4 class="title-box"><span>Đăng nhập</span></h4>
         <form class="login" action="lands/default/login" method="post">
             <p><label for="LandsLoginForm_username">Username</label></p>
             <input type="text" name="LandsLoginForm[username]" id="LandsLoginForm_username" value="" />
             <p><label for="LandsLoginForm_password">Mật khẩu</label></p>
             <input type="password" name="LandsLoginForm[password]" id="LandsLoginForm_password" value="" />
             <p class="text-button"><input class="button-login" type="submit" value="Đăng Nhập" name="login"/></p>
+            <a href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/dang-ky"><b>Đăng ký</b></a>
         </form>
+    <?php else:?>
+         <h4 class="title-box"><span>Quản lý</span></h4>
+         <a href="<?php echo Yii::app()->baseUrl ?>/lands/default/add"><b>Đăng tin</b></a><br />
+         <a href="<?php echo Yii::app()->baseUrl ?>/lands/default/listpost"><b>Tin đã đăng</b></a> <br />
+         <a href="<?php echo Yii::app()->baseUrl ?>/lands/default/logout"><b>Đăng xuất</b></a><br />
 
-        <?php $this->getPosition('right');?>
+    <?php endif ?>
+
+        <?php $this->getPosition('right');        ?>
+
     </div> <!--End colum3--> <div class="clear"></div>
 <?php $this->endContent(); ?>

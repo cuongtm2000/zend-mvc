@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 3.5.0
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 06, 2012 at 08:53 AM
--- Server version: 5.5.16
--- PHP Version: 5.3.8
+-- Generation Time: Nov 07, 2012 at 05:26 AM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -533,7 +533,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('ejqsmt5hl', 1352186917);
+('10btny6fx', 1352262229),
+('kr4ytfxun', 1352261661);
 
 -- --------------------------------------------------------
 
@@ -554,10 +555,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_value` (
 INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
 ('max_visit_day', 1352156400),
 ('max_visit_value', 7),
-('time_start_today', 1352156400),
-('today_visited', 7),
-('total_visited', 24),
-('yesterday_visited', 5);
+('time_start_today', 1352242800),
+('today_visited', 2),
+('total_visited', 26),
+('yesterday_visited', 7);
 
 -- --------------------------------------------------------
 
@@ -680,8 +681,8 @@ INSERT INTO `hoiit_module_jobs_languages` (`record_id`, `language_id`, `title`, 
 --
 
 CREATE TABLE IF NOT EXISTS `hoiit_module_lands` (
-  `record_id` int(11) NOT NULL DEFAULT '0',
-  `postdate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `postdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `pic_thumb` varchar(100) DEFAULT NULL,
   `pic_full` varchar(100) DEFAULT NULL,
   `pic_desc` varchar(500) DEFAULT NULL,
@@ -703,7 +704,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_lands` (
   KEY `hoiit_module_item_type_type_id` (`hoiit_module_item_type_type_id`),
   KEY `hoiit_module_lands_provinces_province_id` (`hoiit_module_lands_provinces_province_id`),
   KEY `username` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `hoiit_module_lands`
+--
+
+INSERT INTO `hoiit_module_lands` (`record_id`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `record_order`, `price`, `hot`, `specials`, `contact_name`, `contact_tel`, `enable`, `hoiit_module_item_cat_cat_id`, `hoiit_module_item_type_type_id`, `hoiit_module_lands_provinces_province_id`, `username`, `hits`, `keys`) VALUES
+(1, '2012-11-07 04:24:31', '', '', NULL, 1, 'cxd', 0, NULL, 'ninh1', 'adfgj', 1, 5, 2, 5, 'ninh1', 0, '');
 
 -- --------------------------------------------------------
 
@@ -776,6 +784,13 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_lands_languages` (
   PRIMARY KEY (`record_id`,`language_id`),
   KEY `language_id` (`language_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_lands_languages`
+--
+
+INSERT INTO `hoiit_module_lands_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`) VALUES
+(1, 'vi', 'xZZfxghjkje', '', '<p>zhd:fkhdfighfjdhljbnxvn bk;sop</p>\r\n<p>0fejodkfmn</p>', 'xzzfxghjkje', '');
 
 -- --------------------------------------------------------
 
@@ -909,7 +924,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_lands_users` (
 
 INSERT INTO `hoiit_module_lands_users` (`username`, `password`, `fullname`, `email`, `phone`, `province`, `address`, `sexual`, `date_created`, `enable`) VALUES
 ('ninh', '14e1b600b1fd579f47433b88e8d85291', 'ninh', 'khangninh2005@yahoo.com', 2147483647, 19, '', NULL, '2012-11-02 16:58:43', 1),
-('ninh1', '453e41d218e071ccfb2d1c99ce23906a', 'dong nai', 'khangninh2005@yahoo.com', 2147483647, 15, '', 'Nam', '2012-11-02 17:12:08', 1);
+('ninh1', 'b2c3bb7394dcc0307e6fb6119e416e44', 'dong nai', 'khangninh2005@yahoo.com', 2147483647, 15, '', 'Nam', '2012-11-02 17:12:08', 1);
 
 -- --------------------------------------------------------
 
