@@ -61,25 +61,25 @@ class DefaultController extends Controller {
     }
 
     public function actionLogin() {
-        /*if (Yii::app()->session['logged'])
-            $this->redirect(Yii::app()->user->returnUrl);
+        /* if (Yii::app()->session['logged'])
+          $this->redirect(Yii::app()->user->returnUrl);
 
-        $model = new LoginForm;
-        if (isset($_POST['LoginForm'])) {
-            $model->attributes = $_POST['LoginForm'];
-            if ($model->validate() && $model->login()) {
-                $_SESSION['KCFINDER'] = array();
-                $_SESSION['KCFINDER']['disabled'] = false;
-                $_SESSION['KCFINDER']['uploadURL'] = Yii::app()->baseUrl . '/public/userfiles/image/' . Yii::app()->user->id;
-                Yii::app()->session['logged'] = 1; //session for ckfinder logged
-                Yii::app()->session['user'] = Yii::app()->user->id; //session for ckfinder subdomain
-                $this->redirect(Yii::app()->user->returnUrl);
-            }
-        } elseif (Yii::app()->session['activated']) {
-            Yii::app()->user->setFlash('message', 'Successful registration.');
-        }
+          $model = new LoginForm;
+          if (isset($_POST['LoginForm'])) {
+          $model->attributes = $_POST['LoginForm'];
+          if ($model->validate() && $model->login()) {
+          $_SESSION['KCFINDER'] = array();
+          $_SESSION['KCFINDER']['disabled'] = false;
+          $_SESSION['KCFINDER']['uploadURL'] = Yii::app()->baseUrl . '/public/userfiles/image/' . Yii::app()->user->id;
+          Yii::app()->session['logged'] = 1; //session for ckfinder logged
+          Yii::app()->session['user'] = Yii::app()->user->id; //session for ckfinder subdomain
+          $this->redirect(Yii::app()->user->returnUrl);
+          }
+          } elseif (Yii::app()->session['activated']) {
+          Yii::app()->user->setFlash('message', 'Successful registration.');
+          }
 
-        $this->render('login', array('model' => $model));     */
+          $this->render('login', array('model' => $model)); */
 
         $model = new LandsLoginForm();
         if (isset($_POST['LandsLoginForm'])) {
@@ -91,16 +91,16 @@ class DefaultController extends Controller {
         $this->render('login', array('model' => $model));
     }
 
-    public function actionSearch(){
-
+    public function actionSearch() {
+        
     }
 
     public function actionLogout() {
         Yii::app()->memberLands->logout();
         $this->redirect(Yii::app()->homeUrl);
     }
-    
-     public function actionAdd() {
+
+    public function actionAdd() {
         Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
         Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . '/public/plugin/tiny_mce/config.js');
 
@@ -111,13 +111,13 @@ class DefaultController extends Controller {
         $model = new $model_class;
         $model_cat = new $model_cat_class;
         $model_form = new $model_form_class;
-        
-        $model_form->contact_name=Yii::app()->memberLands->id;
-        
-        
+
+        $model_form->contact_name = Yii::app()->memberLands->id;
+
+
         $model_type = new $model_type_class;
         $provice_class = new Provinces();
-        
+
         if (isset($_POST[$model_form_class])) {
             $model_form->attributes = $_POST[$model_form_class];
 
@@ -128,12 +128,84 @@ class DefaultController extends Controller {
         }
 
         $this->render('add', array(
-            'model' => $model_form, 
+            'model' => $model_form,
             'listItemsCat' => $model_cat->listCats(),
             'listItemsType' => $model_type->listTypes(),
             'listProvices' => $provice_class->listProvince(),
         ));
     }
     
+    public function actionEdit($id) {
+               Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/tiny_mce.js');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . '/public/plugin/tiny_mce/config.js');
+
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.nyromodal.custom.min.js');
+        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/nyromodal.css');
+        Yii::app()->clientScript->registerScript('', "$(function() { $('.nyroModal').nyroModal();});", CClientScript::POS_READY);
+
+        $model_class = ucfirst($this->module->id);
+        $model_cat_class = $model_class . 'Cat';
+        $model_form_class = $model_class . 'Form';
+        $model_language_class = $model_class . 'Language';
+        $model_type_class = $model_class . 'Type';
+        $model = new $model_class;
+        $model_cat = new $model_cat_class;
+        $model_form = new $model_form_class;
+        $model_language = new $model_language_class();
+
+        $model_type = new $model_type_class;
+        $provice_class = new Provinces();
+        
+        //Load Edit
+        $model_data = $model->loadEdit($id);
+        $model_form['pic_thumb'] = $model_data['pic_thumb'];
+        $model_form['pic_full'] = $model_data['pic_full'];
+        $model_form['pic_desc'] = $model_data['pic_desc'];
+        $model_form['price'] = $model_data['price'];
+        $model_form['hot'] = $model_data['hot'];
+        $model_form['enable'] = $model_data['enable'];
+        $model_form['hoiit_module_item_cat_cat_id'] = $model_data['hoiit_module_item_cat_cat_id'];
+        $model_form['hoiit_module_item_type_type_id'] = $model_data['hoiit_module_item_type_type_id'];
+        $model_form['hoiit_module_lands_provinces_province_id'] = $model_data['hoiit_module_lands_provinces_province_id'];
+        $model_form['contact_name'] = $model_data['contact_name'];
+        $model_form['contact_tel'] = $model_data['contact_tel'];
+
+        $model_language_data = $model_language->loadEdit($id);
+        foreach ($model_language_data as $value) {
+            $model_form['title' . $value['language_id']] = $value['title'];
+            $model_form['preview' . $value['language_id']] = $value['preview'];
+            $model_form['content' . $value['language_id']] = $value['content'];
+            $model_form['tag' . $value['language_id']] = $value['tag'];
+            $model_form['description' . $value['language_id']] = $value['description'];
+        }
+
+        if (isset($_POST[$model_form_class])) {
+            $model_form->attributes = $_POST[$model_form_class];
+            if ($model_form->validate()) {
+                $model->saveRecord($model_form, $id);
+                $this->redirect(array('listpost'));
+            }
+        }
+
+        $this->render('edit', array(
+            'model' => $model_form, 
+            'listItemsCat' => $model_cat->listCats(),
+            'listItemsType' => $model_type->listTypes(),
+            'listProvices' => $provice_class->listProvince(),
+            ));
+    }
     
+    public function actionListpost() {
+        $model_class = ucfirst($this->module->id);
+        $model = new $model_class;
+
+        //Submit
+        if (Yii::app()->request->getIsPostRequest()) {
+            $model->activeItem(Yii::app()->request);
+            $this->refresh();
+        }
+
+        $this->render('listpost', $model->listItemUser());
+    }
+
 }

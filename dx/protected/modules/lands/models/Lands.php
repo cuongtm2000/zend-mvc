@@ -169,6 +169,25 @@ class Lands extends CActiveRecord {
         return array('models' => $this->findAll($criteria), 'pages' => $pages);
     }
 
+        //Back end - List item admin
+    public function listItemUser() {
+        $criteria = new CDbCriteria();
+        //$criteria->with = array('Language', 'LandsLanguage');
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition='username =:user';
+        $criteria->params=array(":user"=>Yii::app()->memberLands->id);
+        
+        $count = $this->count($criteria);
+
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = 15;
+        $pages->applyLimit($criteria);
+
+        return array('models' => $this->findAll($criteria), 'pages' => $pages);
+    }
+    
+    
     //Back end - Delete Record
     private function deleteRecord($id) {
         LandsLanguage::model()->deleteRecord($id);
@@ -269,10 +288,14 @@ class Lands extends CActiveRecord {
             $this->updateByPk($id, array('record_order' => $id));
         } else {
             $item = $this->findByPk($id);
-            $item->price = $model->price;
-            $item->hot = $model->hot;
-            $item->enable = $model->enable;
-            $item->hoiit_module_item_cat_cat_id = $model->hoiit_module_item_cat_cat_id;
+            $this->price = $model->price;
+            $this->hot = $model->hot;
+            $this->hoiit_module_item_cat_cat_id = $model->hoiit_module_item_cat_cat_id;
+            $this->hoiit_module_item_type_type_id = $model->hoiit_module_item_type_type_id;
+            $this->contact_name = $model->contact_name;
+            $this->contact_tel = $model->contact_tel;
+            $this->hoiit_module_lands_provinces_province_id = $model->hoiit_module_lands_provinces_province_id;
+            $this->keys = $model->keys;
 
             //remove pic_thumb
             if (isset($model->remove_pic_thumb) && $model->remove_pic_thumb == 1) {
@@ -318,9 +341,10 @@ class Lands extends CActiveRecord {
 
     //Back end - Get record to Edit
     public function loadEdit($id) {
-        $command = Yii::app()->db->createCommand('SELECT pic_thumb, pic_full, pic_desc, price, hot, enable, hoiit_module_item_cat_cat_id FROM ' . $this->tableName() . ' WHERE record_id=:id');
-        $command->bindParam(":id", $id, PDO::PARAM_INT);
-        return $command->queryRow();
+       // $command = Yii::app()->db->createCommand('SELECT pic_thumb, pic_full, pic_desc, price, hot, enable, hoiit_module_item_cat_cat_id FROM ' . $this->tableName() . ' WHERE record_id=:id');
+        //$command->bindParam(":id", $id, PDO::PARAM_INT);
+        //return $command->queryRow();
+        return $this->findByPk($id);
     }
 
     //Back end - Get ID by Cat
