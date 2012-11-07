@@ -1,11 +1,10 @@
 
-<div class="frame-product-info">
-    <h1 class="title-right"><span>Đăng ký thành viên</span></h1>
+    <h2 class="title-box"><span>Đăng ký thành viên</span></h2>
     <?php $form = $this->beginWidget('CActiveForm', array('id' => 'user-form', 'enableAjaxValidation' => false, 'htmlOptions' => array('enctype' => 'multipart/form-data', 'class' => 'form-all'))); ?>
 
     <p class="note">Dấu <span class="required">*</span> là những thông tin bắt buộc nhập liệu.</p>
     <?php echo $form->errorSummary($model, ''); ?>
-    <ul class="bt-frm-login">
+    <ul class="bt-frm-register">
         <li class="row">
             <?php echo $form->labelEx($model, 'username'); ?>
             <?php echo $form->textField($model, 'username', array('size' => 45, 'maxlength' => 45)); ?>
@@ -62,4 +61,3 @@
         </li>
     </ul>
     <?php $this->endWidget(); ?>
-</div>
