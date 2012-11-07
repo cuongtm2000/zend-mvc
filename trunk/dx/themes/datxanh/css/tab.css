@@ -26,6 +26,7 @@ ul.tabs-2 li.active a{background:#029CD8}
 .sub-new-home{margin:0;padding:10px 10px;list-style:none}
 .sub-new-home li{list-style:disc;margin-left:15px;color:#4690CB;margin-bottom:5px}
 .sub-new-home li a{margin-left:-5px;color:#4D4D4D;display:block} .sub-new-home li a span{color:#18B7EF}
+.sub-new-home li a:hover{color:#F58220}
 
 .sub-new-home .first-new{margin:0;margin-bottom:10px;list-style:none;color:#000}
 .first-new img{float:left;margin:0 10px 5px 0;width:106px;border:1px solid #4690CB} .first-new h4{padding:0;margin:0 0 5px 0} 

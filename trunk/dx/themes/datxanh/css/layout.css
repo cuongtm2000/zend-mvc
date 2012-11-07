@@ -39,6 +39,21 @@ a:hover{color:#000;}
 /* form-search */
 .form-search{background:#F1F1F3;padding:12px 0 12px 12px;color:#444;margin-bottom:20px} .form-search p{font-weight:bold;margin:0}
 .form-search select{width:190px;color:#444;border:1px solid #aaa;padding:3px 2px; cursor:pointer;margin-bottom:10px}
+.text-button{text-align:center}
+.button-search{margin-bottom:10px; border:none;background:#F58220;color:#fff;padding:0;cursor:pointer;height:25px; width:100px; line-height:25px;font-weight:bold; font-size:10pt}
+
+/* login */
+.bt-frm-login{list-style:none;margin:0;padding:0}
+.bt-frm-login label{width:100px;float:left}
+.bt-frm-login .remember{float:none}
+.bt-frm-login .remember-check{width:auto}
+.bt-frm-login span{color:#f00}
+.login{margin-bottom:20px;background:#F1F1F3;padding:12px 0 4px 15px;border:1px solid #ccc}
+.login p{margin:0 0 5px 0;color:#5d5b5c;font-size:10pt}
+.login input{border:1px solid #AAAAAA;padding:4px; width:190px;margin-bottom:8px}
+.text-button{text-align:center}
+.login .button-login-2{border:none;background:#F58220;color:#fff;padding:0;cursor:pointer;height:28px; width:100px; line-height:28px;font-weight:bold; font-size:10pt}
+
 
 .adv-product{list-style:none;margin:0;padding:0}
 .adv-product li{margin-bottom:3px}

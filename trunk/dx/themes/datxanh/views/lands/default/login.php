@@ -1,7 +1,7 @@
 <?php $form = $this->beginWidget('CActiveForm', array('id' => 'frm', 'enableAjaxValidation' => true, 'enableClientValidation' => true, 'htmlOptions' => array('class' => 'form-all'))); ?>
 <fieldset>
     <?php echo $form->errorSummary($model, ''); ?>
-    <ul class="bt-frm-login">
+    <ul class="bt-frm-login login">
         <li><?php echo $form->labelEx($model, 'username') ?>
             <?php echo $form->textField($model, 'username', array('class' => 'small-input')); ?>
         </li>
@@ -16,7 +16,7 @@
         </li>
         <li>
             <label>&nbsp;</label>
-            <?php echo CHtml::submitButton(' Đăng nhập ', array('name' => 'submit')); ?>
+            <?php echo CHtml::submitButton(' Đăng nhập ', array('name' => 'submit','class' => 'button-login-2')); ?>
         </li>
     </ul>
 </fieldset>
