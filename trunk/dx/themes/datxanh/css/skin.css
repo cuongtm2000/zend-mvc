@@ -14,14 +14,14 @@
 /**
  *  Horizontal Buttons
  */
- /*.frame-mycarousel{clear:both;position:relative}
-.jcarousel-skin-tango .jcarousel-next-horizontal{position:absolute; right:130px; bottom:-20px; z-index:4;width: 15px;height: 15px;cursor: pointer;background: transparent url(../images/next.png) no-repeat 0 0;}
+ .frame-mycarousel{clear:both;position:relative}
+/*.jcarousel-skin-tango .jcarousel-next-horizontal{position:absolute; right:130px; bottom:-20px; z-index:4;width: 15px;height: 15px;cursor: pointer;background: transparent url(../images/next.png) no-repeat 0 0;}
 
-.jcarousel-skin-tango .jcarousel-prev-horizontal{position:absolute; left:130px; bottom:-20px;z-index:4;width:15px;height:15px;cursor: pointer;background: transparent url(../images/prev.png) no-repeat 0 0;}*/
+.jcarousel-skin-tango .jcarousel-prev-horizontal{position:absolute; left:130px; bottom:-20px;z-index:4;width:15px;height:15px;cursor: pointer;background: transparent url(../images/prev.png) no-repeat 0 0;}
+*/
+.jcarousel-skin-tango .jcarousel-next-horizontal{position:absolute; right:130px; bottom:-20px; z-index:4;width: 15px;height: 15px;cursor: pointer;background: transparent url(../images/next-new.png) no-repeat 0 0;}
 
-/*jcarousel-skin-tango .jcarousel-next-horizontal{position:absolute; right:10px; bottom:0; z-index:4;width: 15px;height: 15px;cursor: pointer;background: transparent url(../images/next.png) no-repeat 0 0;}
-
-.jcarousel-skin-tango .jcarousel-prev-horizontal{position:absolute; left:10px; bottom:0;z-index:4;width:15px;height:15px;cursor: pointer;background: transparent url(../images/prev.png) no-repeat 0 0;}*/
+.jcarousel-skin-tango .jcarousel-prev-horizontal{position:absolute; left:130px; bottom:-20px;z-index:4;width:15px;height:15px;cursor: pointer;background: transparent url(../images/prev-new.png) no-repeat 0 0;}
 
 /** jcarousel 3   **/
 .jcarousel-skin-tango3 .jcarousel-container {margin:0;padding:0}

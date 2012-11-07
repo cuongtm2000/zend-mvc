@@ -133,8 +133,8 @@ a:hover{color:#000;}
 
 .title-project{background:#029CD8;color:#fff;font-size:11pt;margin:0;padding:8px 0}
 .title-project span{padding-left:20px}
-.sub-project{list-style:none;padding:10px 0 0 20px;margin:0}
-.sub-project li{display:inline-block;margin:0 13px 15px 0; width:90px;height:45px;line-height:45px;font-size:11pt;font-weight:bold; text-align:center}
+.sub-project{list-style:none;padding:15px 0 0 10px;margin:0}
+.sub-project li{display:inline-block;margin:0 12px 15px 0; width:90px;height:45px;line-height:45px;font-size:11pt;font-weight:bold; text-align:center}
 .da-giao-dich,.red{background:#f00}
 .da-dat-cho,.oranges{background:#F58220}
 .chua-giao-dich,.blue{background:#029CD8}
@@ -167,7 +167,7 @@ a:hover{color:#000;}
 .panel-items{list-style: none;text-align:justify;margin:0;padding:0}
 .panel-items li{padding:15px;margin-bottom:10px}
 .panel-items p{margin:0;line-height:normal}
-.panel-items .alt,.panel-items-other .alt{background:#F1F1F1}
+.panel-items .alt, .panel-items-other .alt{background:#F1F1F1}
 .frame-img{float:left;margin:0 8px 0 0;border:3px solid #ccc}
 .title-items-news{margin:0 0 5px 0;font-size:10pt;font-weight:bold}
 .title-items-news a{color:#208FFF}
@@ -257,4 +257,4 @@ tbody tr td {padding : 6px 5px; background : #fff; color : #111}
 .img-post img{width:47px}
 .address{width:70px;text-align:center;color:#990505}
 
-.project-new img{width: 95px}
+.project-new img{width:95px;height:65px}

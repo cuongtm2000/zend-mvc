@@ -26,9 +26,10 @@
     <?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel', array('lastItemCssClass' => 'last'));?><div class="clear"></div>
 
 	<?php $this->widget('ext.Banner.BannerSlider', array('default_banner' => true));?> <div class="clear"></div>
-	
+
 	<div id="content">
-        <?php echo $content; ?>
+	
+	   <?php echo $content; ?>
 		<div class="clear"></div>
 	</div><!--End content-->
 	<?php $this->getPosition('bottom');?>

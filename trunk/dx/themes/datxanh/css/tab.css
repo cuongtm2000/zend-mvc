@@ -33,7 +33,7 @@ ul.tabs-2 li.active a{background:#029CD8}
 .sub-new-home .first-new a{margin:0;color:#3287c7;font-size:9pt}
 
 /* project-info */
-.project-info{padding:10px;background:#F1F1F1;border:none}
+.project-info{padding:10px;background:#F1F1F1;border:none;width:97%}
 .project-info p{margin:0;margin-bottom:12px;line-height:1.6em}
 .ground,.info-video{text-align:center}
 .ground img{border:2px solid #C0C0C0}
