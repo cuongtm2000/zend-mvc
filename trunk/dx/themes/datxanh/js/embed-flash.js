@@ -17,9 +17,16 @@ function embedyoutube(Embpath,Embwidth,Embheight){
 
 	var flashCode = '<iframe width="'+Embwidth+'" height="'+Embheight+'" src="http://www.youtube.com/embed/'+videoid[1]+'" frameborder="0" allowfullscreen></iframe>';
     document.write(flashCode) ;
-	
-	
-	
-  }
+}
+function embedyoutube2(Embpath,Embwidth,Embheight){
+	var url = Embpath;
+	var videoid = url.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
+	//alert(videoid[1]);
 
+	var flashCode = '<iframe width="'+Embwidth+'" height="'+Embheight+'" data="http://player.longtailvideo.com/player.swf"  src="http://www.youtube.com/embed/'+videoid[1]+'" frameborder="0" allowfullscreen></iframe>';
+    document.write(flashCode) ;
+}
+
+
+ 
 
