@@ -7,7 +7,11 @@ a:hover{color:#000;}
 
 #wrapper {margin:auto; width:940px}
 #logo{margin-bottom:5px}
+.position-post{position:relative}
+.list-product{position:absolute;top:-90px;right:0}
+.list-product a{color:#fff;padding-left:15px} .list-product img{margin-right:5px;position:relative;top:2px}
 
+.list-product-link a{color:#0175be} .list-product-link a:hover{color:#f90}
 /* Nav ( Menu ) */
 #nav{list-style:none;padding:0;margin:0 0 10px 0;float:right;text-align:right}
 #nav li{float:left}
@@ -24,6 +28,7 @@ a:hover{color:#000;}
 
 /*Content*/
 #content{margin-bottom:15px}
+.column-land{padding-top:20px}
 .banner-none{}
 .partners{margin:10px 0}
  
@@ -55,6 +60,7 @@ a:hover{color:#000;}
 .button-register{color:#3186C7} .button-register:hover{color:#f90}
 .login .button-login-2{border:none;background:#F58220;color:#fff;padding:0;cursor:pointer;height:28px; width:100px; line-height:28px;font-weight:bold; font-size:10pt}
 
+.list-product{color:#3186C7;padding-bottom:5px}
 
 .adv-product{list-style:none;margin:0;padding:0}
 .adv-product li{margin-bottom:3px}

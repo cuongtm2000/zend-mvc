@@ -1,4 +1,5 @@
 <?php $this->beginContent('//layouts/main'); ?>
+<div class="column-land">
     <div id="left-content-home">
         <?php $this->getPosition('left');?>
 
@@ -134,14 +135,17 @@
             <a class="button-register" href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/dang-ky"><b>Đăng ký tài khoản</b></a>
         </form>
     <?php else:?>
-         <h4 class="title-box"><span>Quản lý</span></h4>
-         <a href="<?php echo Yii::app()->baseUrl ?>/lands/default/add"><b>Đăng tin</b></a><br />
+         <h4 class="title-box"><span>Quản lý sản phẩm</span></h4>
+         <div class="list-product-link">
+		 <a href="<?php echo Yii::app()->baseUrl ?>/lands/default/add"><b>Đăng tin</b></a><br />
          <a href="<?php echo Yii::app()->baseUrl ?>/lands/default/listpost"><b>Tin đã đăng</b></a> <br />
          <a href="<?php echo Yii::app()->baseUrl ?>/lands/default/logout"><b>Đăng xuất</b></a><br />
+		 </div>
 
     <?php endif ?>
 
         <?php $this->getPosition('right');        ?>
 
     </div> <!--End colum3--> <div class="clear"></div>
+</div>
 <?php $this->endContent(); ?>
