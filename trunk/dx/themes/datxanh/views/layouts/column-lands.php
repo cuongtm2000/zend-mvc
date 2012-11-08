@@ -125,13 +125,13 @@
     <div id="column-3">
     <?php if(!Yii::app()->memberLands->id):?>
          <h4 class="title-box"><span>Đăng nhập</span></h4>
-        <form class="login" action="lands/default/login" method="post">
+        <form class="login" action="san-giao-dich/dang-nhap" method="post">
             <p><label for="LandsLoginForm_username">Username</label></p>
             <input type="text" name="LandsLoginForm[username]" id="LandsLoginForm_username" value="" />
             <p><label for="LandsLoginForm_password">Mật khẩu</label></p>
             <input type="password" name="LandsLoginForm[password]" id="LandsLoginForm_password" value="" />
             <p class="text-button"><input class="button-login" type="submit" value="Đăng Nhập" name="login"/></p>
-            Bạn chưa có tài khoản vui lòng click để <a class="button-register" href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/dang-ky"><b>Đăng ký</b></a> tài khoản
+            <a class="button-register" href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/dang-ky"><b>Đăng ký tài khoản</b></a>
         </form>
     <?php else:?>
          <h4 class="title-box"><span>Quản lý</span></h4>
