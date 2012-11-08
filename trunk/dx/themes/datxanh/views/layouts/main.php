@@ -24,22 +24,17 @@
 <div id="wrapper">
     <div id="logo"><a href="<?php echo Yii::app()->baseUrl.$this->setLangUrl()?>" title="Logo Yii Project"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo Yii Project" /></a></div>
 	<?php if(!Yii::app()->memberLands->id):?>
-         <h4 class="title-box"><span>Đăng nhập</span></h4>
-        <form class="login" action="san-giao-dich/dang-nhap" method="post">
-            <p><label for="LandsLoginForm_username">Username</label></p>
-            <input type="text" name="LandsLoginForm[username]" id="LandsLoginForm_username" value="" />
-            <p><label for="LandsLoginForm_password">Mật khẩu</label></p>
-            <input type="password" name="LandsLoginForm[password]" id="LandsLoginForm_password" value="" />
-            <p class="text-button"><input class="button-login" type="submit" value="Đăng Nhập" name="login"/></p>
-            <a class="button-register" href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/dang-ky"><b>Đăng ký tài khoản</b></a>
-        </form>
+        <div class="position-form">
+			<a href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/dang-ky"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-register.png" alt="dang tin" /><b>Đăng ký tài khoản</b></a>
+			<a href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/dang-nhap"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-login.png" alt="dang tin" /><b>Đăng nhập</b></a>
+		</div> <div class="clear"></div>
     <?php else:?>
 		<div class="position-post">
-			 <div class="list-product"><a href="<?php echo Yii::app()->baseUrl ?>/lands/default/add"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-register.png" alt="dang tin" /><b>Đăng tin</b></a>
-			 <a href="<?php echo Yii::app()->baseUrl ?>/lands/default/listpost"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-login.png" alt="dang tin" /><b>Tin đã đăng</b></a> 
-			 <a href="<?php echo Yii::app()->baseUrl ?>/lands/default/logout"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-login.png" alt="dang tin" /><b>Đăng xuất</b></a>
+			 <div class="list-product"><a href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/dang-tin"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-register.png" alt="dang tin" /><b>Đăng tin</b></a>
+			 <a href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/danh-sach-tin-dang"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-login.png" alt="dang tin" /><b>Tin đã đăng</b></a> 
+			 <a href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/thoat"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-login.png" alt="dang tin" /><b>Đăng xuất</b></a>
 			 </div>
-		 </div> <div class="clear"></div>
+		 </div>
     <?php endif ?>
 	
     <?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel', array('lastItemCssClass' => 'last'));?><div class="clear"></div>
