@@ -1,6 +1,4 @@
 <h4 class="title-box"><span>Tìm kiếm</span></h4>
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/corner.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/corner-config.js"></script>
 <form class="form-search" action="lands/default/search" name="search" method="post">
     <select name="provinces">
         <option value="0">Khu vực / tỉnh</option>
