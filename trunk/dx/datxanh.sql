@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.0
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 07, 2012 at 05:26 AM
--- Server version: 5.5.8
--- PHP Version: 5.3.5
+-- Generation Time: Nov 08, 2012 at 04:25 AM
+-- Server version: 5.5.16
+-- PHP Version: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -393,7 +393,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
 --
 
 INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(1, 'vi', 'Giới thiệu đất xanh', '<p>Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p>Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p>Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p>Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p>Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p>Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p>Trân trọng,</p>', 'gioi-thieu-dat-xanh', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh', 33, NULL, NULL);
+(1, 'vi', 'Giới thiệu đất xanh', '<p>Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p>Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p>Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p>Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p>Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p>Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p>Trân trọng,</p>', 'gioi-thieu-dat-xanh', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh', 35, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -533,8 +533,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('10btny6fx', 1352262229),
-('kr4ytfxun', 1352261661);
+('04b29klwx', 1352344361);
 
 -- --------------------------------------------------------
 
@@ -555,10 +554,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_value` (
 INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
 ('max_visit_day', 1352156400),
 ('max_visit_value', 7),
-('time_start_today', 1352242800),
+('time_start_today', 1352329200),
 ('today_visited', 2),
-('total_visited', 26),
-('yesterday_visited', 7);
+('total_visited', 28),
+('yesterday_visited', 2);
 
 -- --------------------------------------------------------
 
@@ -1550,10 +1549,15 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('<jobs:(tuyen-dung)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'jobs/default/view', 'urlSuffix=>.html', 0, 0, 'jobs', 'vi'),
 ('<jobs:(tuyen-dung)>/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'jobs/default/cats', '', 2, 0, 'jobs', 'vi'),
 ('<jobs:(tuyen-dung)>/trang/<page:\\d+>', 'jobs/default/index', '', 1, 0, 'jobs', 'vi'),
-('<lands:(san-giao-dich)>', 'lands/default/index', '', 3, 1, 'lands', 'vi'),
-('<lands:(san-giao-dich)>/<cid:[-a-z0-9]+>', 'lands/default/cats', '', 2, 0, 'lands', 'vi'),
-('<lands:(san-giao-dich)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'lands/default/view', 'urlSuffix=>.html', 0, 0, 'lands', 'vi'),
-('<lands:(san-giao-dich)>/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'lands/default/cats', '', 1, 0, 'lands', 'vi'),
+('<lands:(san-giao-dich)>', 'lands/default/index', '', 4, 1, 'lands', 'vi'),
+('<lands:(san-giao-dich)>/<cid:[-a-z0-9]+>', 'lands/default/cats', '', 3, 0, 'lands', 'vi'),
+('<lands:(san-giao-dich)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'lands/default/view', 'urlSuffix=>.html', 5, 0, 'lands', 'vi'),
+('<lands:(san-giao-dich)>/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'lands/default/cats', '', 2, 0, 'lands', 'vi'),
+('<lands:(san-giao-dich)>/dang-ky', 'lands/default/register', '', 1, 0, 'lands', 'vi'),
+('<lands:(san-giao-dich)>/dang-nhap', 'lands/default/login', '', 1, 0, 'lands', 'vi'),
+('<lands:(san-giao-dich)>/dang-tin', 'lands/default/add', '', 1, 0, 'lands', 'vi'),
+('<lands:(san-giao-dich)>/danh-sach-tin-dang', 'lands/default/listpost', '', 1, 0, 'lands', 'vi'),
+('<lands:(san-giao-dich)>/thoat', 'lands/default/logout', '', 1, 0, 'lands', 'vi'),
 ('<lang:[a-z]{2}>/about-us/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 0, 0, 'about', 'en'),
 ('<news:(tin-tuc)>', 'news/default/index', '', 4, 1, 'news', 'vi'),
 ('<news:(tin-tuc)>/<cid:[-a-z0-9]+>', 'news/default/cats', '', 3, 0, 'news', 'vi'),
@@ -1578,7 +1582,6 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('news', 'news/default/index', '', 5, 1, 'news', 'en'),
 ('products', 'products/default/index', '', 4, 1, 'products', 'en'),
 ('quan-ly-san-pham', 'code/default/index', '', 0, 0, 'code', 'vi'),
-('san-giao-dich', 'lands/default/index', '', 4, 1, 'lands', 'en'),
 ('trang-chu', 'default/default/index', NULL, NULL, 1, 'default', 'vi');
 
 -- --------------------------------------------------------
