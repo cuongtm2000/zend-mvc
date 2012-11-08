@@ -15,16 +15,6 @@
         <?php echo CHtml::link($value->ProjectsLanguage[Yii::app()->language]['title'], array($this->setUrlModule('projects').'/'.$value->ProjectsCat->ProjectsCatLanguage[Yii::app()->language]['tag'].'/'.$value->ProjectsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$value->ProjectsLanguage[Yii::app()->language]['title'])); ?>
     </li>
     <?php endforeach?>
-<!--    <li><img src="http://localhost/datxanh/public/userfiles/image/projects/ban-nha-cap-3.jpg" alt="" /></li>
-    <li><img src="http://localhost/datxanh/public/userfiles/image/projects/du-an-moi-nhat.jpg" alt="" /></li>
-    <li><img src="http://localhost/datxanh/public/userfiles/image/projects/nha-biet-thu.jpg" alt="" /></li>
-    <li><img src="http://localhost/datxanh/public/userfiles/image/projects/nha-moi-cao-cap.jpg" alt="" /></li>
-    <li><img src="http://localhost/datxanh/public/userfiles/image/projects/ban-nha-cap-4.jpg" alt="" /></li>
-    <li><img src="http://static.flickr.com/66/199481236_dc98b5abb3_s.jpg" alt="" /></li>
-    <li><img src="http://static.flickr.com/75/199481072_b4a0d09597_s.jpg" alt="" /></li>
-    <li><img src="http://static.flickr.com/57/199481087_33ae73a8de_s.jpg" alt="" /></li>
-    <li><img src="http://static.flickr.com/77/199481108_4359e6b971_s.jpg" alt="" /></li>-->
-
 </ul>
 
 <?php endif?>
