@@ -2,10 +2,10 @@
 -- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Nov 08, 2012 at 04:25 AM
--- Server version: 5.5.16
--- PHP Version: 5.3.8
+-- Host: 127.0.0.1
+-- Generation Time: Nov 08, 2012 at 06:33 AM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -103,7 +103,11 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('projects_num_item_index', '5', NULL, 'projects'),
 ('projects_num_item_new', '7', NULL, 'projects'),
 ('projects_width_desc', '520', NULL, 'projects'),
-('projects_width_thumb', '300', NULL, 'projects');
+('projects_width_thumb', '300', NULL, 'projects'),
+('video_cat_height_thumb', '200', NULL, 'video'),
+('video_cat_width_thumb', '200', NULL, 'video'),
+('video_height_thumb', '220', NULL, 'video'),
+('video_width_thumb', '220', NULL, 'video');
 
 -- --------------------------------------------------------
 
@@ -144,7 +148,8 @@ INSERT INTO `hoiit_functions` (`function_value`, `function_name`, `function_clas
 ('new_poll', 'Poll', '', 'getFirstItem', 'poll'),
 ('projects_hot', 'Projects', '', 'listItemsHot', 'projects'),
 ('projects_hot_horizontal', 'Projects', '', 'listItemsHot', 'projects'),
-('projects_new', 'Projects', '', 'listItemsNew', 'projects');
+('projects_new', 'Projects', '', 'listItemsNew', 'projects'),
+('video_hot', 'Video', '', 'itemHot', 'video');
 
 -- --------------------------------------------------------
 
@@ -242,6 +247,7 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('synchronous', 'Đồng bộ', 1, 'vi'),
 ('title', 'Title', 1, 'en'),
 ('title', 'Tiêu đề', 1, 'vi'),
+('video', 'Video', 0, 'vi'),
 ('view', 'View', 1, 'en'),
 ('view', 'Lượt xem', 1, 'vi');
 
@@ -300,7 +306,8 @@ INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_url`, `module_
 ('poll', 'Danh sách', 'poll', 7, 1, 1),
 ('products', 'Danh mục|Danh sách|Cấu hình', 'products/cat|products|products/config', 3, 1, 1),
 ('projects', 'Danh mục|Danh sách|Cấu hình', 'projects/cat|projects|projects/config', 4, 1, 1),
-('support', 'Danh sách', 'support', 6, 1, 0);
+('support', 'Danh sách', 'support', 6, 1, 0),
+('video', 'Danh mục|Danh sách|Cấu hình', 'video/cat|video|video/config', 3, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -393,7 +400,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
 --
 
 INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(1, 'vi', 'Giới thiệu đất xanh', '<p>Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p>Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p>Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p>Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p>Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p>Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p>Trân trọng,</p>', 'gioi-thieu-dat-xanh', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh', 35, NULL, NULL);
+(1, 'vi', 'Giới thiệu đất xanh', '<p>Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p>Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p>Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p>Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p>Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p>Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p>Trân trọng,</p>', 'gioi-thieu-dat-xanh', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh', 79, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -533,7 +540,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('04b29klwx', 1352344361);
+('c2eo4qy1i', 1352352790);
 
 -- --------------------------------------------------------
 
@@ -555,8 +562,8 @@ INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
 ('max_visit_day', 1352156400),
 ('max_visit_value', 7),
 ('time_start_today', 1352329200),
-('today_visited', 2),
-('total_visited', 28),
+('today_visited', 3),
+('total_visited', 29),
 ('yesterday_visited', 2);
 
 -- --------------------------------------------------------
@@ -1423,6 +1430,120 @@ INSERT INTO `hoiit_module_supports` (`support_id`, `support_name`, `support_phon
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `hoiit_module_video`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_video` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `postdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `pic_full` varchar(100) DEFAULT NULL,
+  `pic_desc` varchar(500) DEFAULT NULL,
+  `record_order` int(11) DEFAULT NULL,
+  `unit` varchar(45) DEFAULT NULL,
+  `hot` tinyint(1) NOT NULL DEFAULT '0',
+  `specials` tinyint(1) DEFAULT NULL,
+  `field1` varchar(45) DEFAULT NULL,
+  `field2` varchar(45) DEFAULT NULL,
+  `field3` varchar(45) DEFAULT NULL,
+  `field4` varchar(45) DEFAULT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `fk_hoiit_module_video_hoiit_module_video_cat1` (`hoiit_module_item_cat_cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `hoiit_module_video`
+--
+
+INSERT INTO `hoiit_module_video` (`record_id`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `record_order`, `unit`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
+(7, '2012-11-08 03:21:27', 'noi-bat-thumb.jpg', NULL, NULL, 7, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_video_cat`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_video_cat` (
+  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_parent_id` int(11) NOT NULL DEFAULT '0',
+  `cat_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `pic_desc` varchar(200) DEFAULT NULL,
+  `cat_hot` tinyint(1) DEFAULT NULL,
+  `cat_order` int(11) DEFAULT NULL,
+  `cat_extra1` varchar(100) DEFAULT NULL,
+  `cat_extra2` varchar(100) DEFAULT NULL,
+  `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `hoiit_module_video_cat`
+--
+
+INSERT INTO `hoiit_module_video_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
+(1, 0, '2012-11-08 02:45:32', 'video-moi-nhat.jpg', NULL, 0, 1, NULL, NULL, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_video_cat_languages`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_video_cat_languages` (
+  `cat_id` int(11) NOT NULL,
+  `language_id` varchar(2) NOT NULL,
+  `cat_title` varchar(100) NOT NULL,
+  `preview` text,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`cat_id`,`language_id`),
+  KEY `fk_hoiit_module_video_cat_has_hoiit_languages_hoiit_langua1` (`language_id`),
+  KEY `fk_hoiit_module_video_cat_has_hoiit_languages_hoiit_module1` (`cat_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_video_cat_languages`
+--
+
+INSERT INTO `hoiit_module_video_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
+(1, 'vi', 'Video moi nhat', '', 'video-moi-nhat', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_video_languages`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_video_languages` (
+  `record_id` int(11) NOT NULL,
+  `language_id` varchar(2) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `preview` text,
+  `content` text NOT NULL,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `hit` int(11) NOT NULL,
+  `extra_field1` varchar(100) DEFAULT NULL,
+  `extra_field2` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`record_id`,`language_id`),
+  KEY `fk_hoiit_module_video_has_hoiit_languages_hoiit_languages1` (`language_id`),
+  KEY `fk_hoiit_module_video_has_hoiit_languages_hoiit_module_pro1` (`record_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_video_languages`
+--
+
+INSERT INTO `hoiit_module_video_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
+(7, 'vi', 'noi bat', NULL, '', '', NULL, 0, 'http://www.youtube.com/watch?v=TGveQ0_OqBo', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `hoiit_positions`
 --
 
@@ -1444,7 +1565,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_positions` (
 INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id`, `action_id`, `controller_id`, `hoiit_functions_function_value`) VALUES
 ('right', 1, '1', 'poll', NULL, NULL, 'adv_right'),
 ('left', 2, '1', 'poll', NULL, NULL, 'list_support'),
-('left', 1, '1', 'about', NULL, NULL, 'menu_about'),
 ('left', 1, '1', 'products', NULL, NULL, 'list_support'),
 ('left', 2, '1', 'products', NULL, NULL, 'adv_left'),
 ('right', 3, '1', 'products', NULL, NULL, 'adv_right'),
@@ -1466,7 +1586,9 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('footer', 3, '1', 'default', '', '', 'counter_session'),
 ('left', 4, '1', 'default', '', '', 'lands_search'),
 ('left', 5, '1', 'default', '', '', 'adv_left'),
-('right', 6, '1', 'default', '', '', 'news_new');
+('right', 6, '1', 'default', '', '', 'news_new'),
+('left', 1, '1', 'about', '', '', 'menu_about'),
+('left', 2, '1', 'about', '', '', 'video_hot');
 
 -- --------------------------------------------------------
 
@@ -1776,6 +1898,26 @@ ALTER TABLE `hoiit_module_projects_cat_languages`
 ALTER TABLE `hoiit_module_projects_languages`
   ADD CONSTRAINT `fk_hoiit_module_pro_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_hoiit_module_pro_has_hoiit_languages_hoiit_module_pro1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_projects` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `hoiit_module_video`
+--
+ALTER TABLE `hoiit_module_video`
+  ADD CONSTRAINT `fk_hoiit_module_video_hoiit_module_video_cat1` FOREIGN KEY (`hoiit_module_item_cat_cat_id`) REFERENCES `hoiit_module_video_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `hoiit_module_video_cat_languages`
+--
+ALTER TABLE `hoiit_module_video_cat_languages`
+  ADD CONSTRAINT `fk_hoiit_module_video_cat_has_hoiit_languages_hoiit_langua1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_hoiit_module_video_cat_has_hoiit_languages_hoiit_module1` FOREIGN KEY (`cat_id`) REFERENCES `hoiit_module_video_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `hoiit_module_video_languages`
+--
+ALTER TABLE `hoiit_module_video_languages`
+  ADD CONSTRAINT `fk_hoiit_module_video_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_hoiit_module_video_has_hoiit_languages_hoiit_module_pro1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_video` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `hoiit_positions`
