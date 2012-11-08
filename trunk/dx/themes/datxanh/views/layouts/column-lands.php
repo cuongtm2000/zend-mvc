@@ -131,7 +131,7 @@
             <p><label for="LandsLoginForm_password">Mật khẩu</label></p>
             <input type="password" name="LandsLoginForm[password]" id="LandsLoginForm_password" value="" />
             <p class="text-button"><input class="button-login" type="submit" value="Đăng Nhập" name="login"/></p>
-            <a href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/dang-ky"><b>Đăng ký</b></a>
+            Bạn chưa có tài khoản vui lòng click để <a class="button-register" href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/dang-ky"><b>Đăng ký</b></a> tài khoản
         </form>
     <?php else:?>
          <h4 class="title-box"><span>Quản lý</span></h4>
