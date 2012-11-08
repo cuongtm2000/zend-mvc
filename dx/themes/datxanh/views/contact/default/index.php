@@ -1,14 +1,11 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id]); ?>
 <?php $this->pageTitle = $this->lang[$this->module->id]; $this->setDescription($item['description'])?>
-<?php
-    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/corner.js');
-    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/corner-config.js');
-?>
+
 <?php if(Yii::app()->user->hasFlash('contactSuccess')): ?>
 	<h4 class="title-box"><span>Contact success</span></h4>
 	<p><?php echo Yii::app()->user->getFlash('contactSuccess'); ?></p>
 <?php else: ?>
-	<h4 class="title-box"><span><?php echo $item['title']?></span></h4>
+	<h4 class="title-box"><span><?php echo ($item) ? $item['title'] : $this->lang[$this->module->id] ?></span></h4>
 	<div class="frame-tent-right"><?php echo $item['content']?>
 		<?php $form = $this->beginWidget('CActiveForm', array('id'=>'frm', 'enableAjaxValidation'=>true, 'enableClientValidation' =>true));?>
 			<?php echo $form->errorSummary($model, ''); ?>

@@ -318,3 +318,6 @@ p.radio label.p-label{width: 110px; float: left; margin-top: -5px}
 .control-button input:hover{color: #333}
 .control-button a{padding-right:15px;color:#3186C7}
 
+.red,.oranges,.blue,.chua-giao-dich,.da-giao-dich,.da-dat-cho{border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px}
+ul.tabs-2 li a,ul.tab_project li a{border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0}
+.button-login,.button-search,.button-submit{border-radius:6px;-webkit-border-radius:6px;-moz-border-radius:6px}

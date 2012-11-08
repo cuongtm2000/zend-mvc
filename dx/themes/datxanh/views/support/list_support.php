@@ -1,13 +1,5 @@
 <?php if(isset($list_support)) :?>
-    <script type="text/javascript">
-        function checkStatus(id, nick, type){
-            if(type=='yahoo'){
-                document.getElementById(id).src='http://mail.opi.yahoo.com/online?u='+nick+'&amp;m=g&amp;t=2';
-            }else{
-                document.getElementById(id).src='http://mystatus.skype.com/bigclassic/'+nick;
-            }
-        }
-    </script>
+
 <h4 class="title-left"><span><?php echo $this->lang['support'] ?></span></h4>
 <ul class="support frame-leftcontent">
    <?php foreach($list_support as $key => $value): ?>
@@ -32,5 +24,4 @@
         <?php endif; ?>
     <?php endforeach; ?>
 </ul>
-<div class="bd-bt-left"></div>
 <?php endif; ?>
