@@ -27,12 +27,12 @@
 	<li>
 		<div class="tent-product">
 			<div class="product-img">
-				<?php echo CHtml::link(($item['pic_thumb']) ? '<img src="'.Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/lands/'.$item['pic_thumb'].'" alt="'.$item->LandsLanguage[Yii::app()->language]['title'].'" />' : '<img src="'.Yii::app()->theme->baseUrl.'/images/no-product.jpg" alt="'.$item->LandsLanguage[Yii::app()->language]['title'].'" />', array($this->setLangUrl().'/san-giao-dich/'.$item->ProductsCat->LandsCatLanguage[Yii::app()->language]['tag'].'/'.$item->LandsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$item->LandsLanguage[Yii::app()->language]['title'])); ?>
+				<?php echo CHtml::link(($item['pic_thumb']) ? '<img src="'.Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/lands/'.$item['pic_thumb'].'" alt="'.$item->LandsLanguage[Yii::app()->language]['title'].'" />' : '<img src="'.Yii::app()->theme->baseUrl.'/images/no-product.jpg" alt="'.$item->LandsLanguage[Yii::app()->language]['title'].'" />', array($this->setLangUrl().'/san-giao-dich/'.$item->LandsCat->LandsCatLanguage[Yii::app()->language]['tag'].'/'.$item->LandsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$item->LandsLanguage[Yii::app()->language]['title'])); ?>
 			</div>
 			<h2 class="title-product">
-				<?php echo CHtml::link($item->LandsLanguage[Yii::app()->language]['title'], array($this->setLangUrl().'/san-giao-dich/'.$item->ProductsCat->LandsCatLanguage[Yii::app()->language]['tag'].'/'.$item->LandsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$item->LandsLanguage[Yii::app()->language]['title'])); ?>
+				<?php echo CHtml::link($item->LandsLanguage[Yii::app()->language]['title'], array($this->setLangUrl().'/san-giao-dich/'.$item->LandsCat->LandsCatLanguage[Yii::app()->language]['tag'].'/'.$item->LandsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$item->LandsLanguage[Yii::app()->language]['title'])); ?>
 			</h2>
-			<?php echo ($item['unit']) ? '<p class="price">'.$item['unit'].'</p>' : ''?>
+			<?php echo ($item['price']) ? '<p class="price">'.$item['price'].'</p>' : ''?>
 		</div>
 	</li>
 	<?php endforeach; ?>

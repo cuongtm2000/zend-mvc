@@ -14,8 +14,11 @@ class DefaultController extends Controller {
         $model_class = ucfirst($this->module->id) . 'Cat';
         $model = new $model_class;
 
-        $info_cat = ProductsCatLanguage::model()->findCatByTag($cid);
-        $this->render('cats', array('info_cat' => $info_cat, 'sub_cats' => $model->listItem($info_cat['cat_id']), 'items' => Products::model()->listItemByCat($info_cat['cat_id'])));
+        $info_cat = LandsCatLanguage::model()->findCatByTag($cid);
+        $this->render('cats', array(
+            'info_cat' => $info_cat, 
+            'sub_cats' => $model->listItem($info_cat['cat_id']), 
+            'items' => Lands::model()->listItemByCat($info_cat['cat_id'])));
     }
 
     public function actionView($id) {
