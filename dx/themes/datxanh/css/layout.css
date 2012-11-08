@@ -9,9 +9,12 @@ a:hover{color:#000;}
 #logo{margin-bottom:5px}
 .position-post{position:relative}
 .list-product{position:absolute;top:-90px;right:0}
-.list-product a{color:#fff;padding-left:15px} .list-product img{margin-right:5px;position:relative;top:2px}
-
+.list-product a,.position-form a{color:#fff;padding-left:15px} .list-product img,.position-form img{margin-right:5px;position:relative;top:1px}
+.list-product a:hover,.position-form a:hover{color:#f90}
 .list-product-link a{color:#0175be} .list-product-link a:hover{color:#f90}
+
+.position-form{position:relative;top:-90px;right:0;float:right}
+
 /* Nav ( Menu ) */
 #nav{list-style:none;padding:0;margin:0 0 10px 0;float:right;text-align:right}
 #nav li{float:left}
