@@ -18,14 +18,10 @@ class DefaultController extends Controller {
     }
 
     public function actionIndex() {
-		var_dump(Yii::app()->memberLands);
-        $this->render('index', array('items' => Code::model()->listItem()));
+		if(Yii::app()->memberLands->user_role == 'staff'){
+			$this->render('index', array('items' => Code::model()->listItem()));
+		}else{
+			$this->render('error');
+		}
     }
-
-    /*public function actionView($id) {
-        $model_class = ucfirst($this->module->id) . 'Language';
-
-        $this->render('view', array('item' => $model_class::model()->detailRecord($id)));
-    }*/
-
 }
