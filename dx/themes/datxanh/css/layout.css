@@ -131,7 +131,7 @@ a:hover{color:#000;}
 
 /***    Page product-info     ****/
 .main-land-info p{line-height:1.6em}
-.content-info{background:#F1F1F1;padding:5px}
+.content-info{background:#F1F1F1;padding:5px 10px}
 .view{font-size: 10pt} .view span{font-weight:bold}
 .title-info-land{background:#EAEAEA;color:#3070BB;padding:5px 10px;margin:0;font-size: 18px;font-weight: normal;}
 .title-info{font-size:11pt;margin:10px 0}
@@ -139,10 +139,6 @@ a:hover{color:#000;}
 .price-info{color:#991B1E;margin:0} .price-info span{font-size: 12pt}
 .main-land-info .contact-info{color:#0151AF;font-size:11pt;margin:0 0 5px 0;line-height: normal;}
 .title-contact img{position:relative;top:6px;margin-right: 8px}
-.black{margin:0 !important; font-size:10pt;text-align:right !important}
-.black a{color:#000;background:url(../images/bull-1.gif) no-repeat left 5px;cursor:pointer; padding:0 0 0 10px}
-.black a:hover{background:url(../images/bull.gif) no-repeat left 5px;color:#ED2121}
-
 
 .title-project{background:#029CD8;color:#fff;font-size:11pt;margin:0;padding:8px 0}
 .title-project span{padding-left:20px}
