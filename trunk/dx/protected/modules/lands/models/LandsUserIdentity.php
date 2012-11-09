@@ -13,6 +13,8 @@ class LandsUserIdentity extends CUserIdentity {
         } else { // Okay!
             $this->errorCode = self::ERROR_NONE;
             $this->_id = $user->username;
+			// Store the role in a session:
+            //$this->setState('role', $user->role);
         }
         return !$this->errorCode;
     }
