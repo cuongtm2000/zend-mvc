@@ -33,8 +33,7 @@ class LandsType extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            //'Language' => array(self::MANY_MANY, 'Language', 'hoiit_module_lands_cat_languages(cat_id, language_id)'),
-            //'LandsCatLanguage' => array(self::HAS_MANY, 'LandsCatLanguage', 'cat_id', 'index' => 'language_id'),
+            'moduleLands' => array(self::HAS_MANY, 'Lands', 'hoiit_module_item_type_type_id'),
         );
     }
 

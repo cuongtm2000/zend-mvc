@@ -94,10 +94,6 @@ class DefaultController extends Controller {
         $this->render('login', array('model' => $model));
     }
 
-    public function actionSearch() {
-        
-    }
-
     public function actionLogout() {
         Yii::app()->memberLands->logout();
         $this->redirect(Yii::app()->homeUrl);
@@ -210,5 +206,16 @@ class DefaultController extends Controller {
 
         $this->render('listpost', $model->listItemUser());
     }
+    public function actionSearch() {
+        $model_class = ucfirst($this->module->id);
+        $model = new $model_class;
+       // $data=NULL;
+        //Submit
+       // if (Yii::app()->request->getIsPostRequest()) {
+     //       $data=$model->search(Yii::app()->request);
+      //  }
 
+        $this->render('search', array('data'=>$model->search(Yii::app()->request)));
+        
+    }
 }
