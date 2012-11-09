@@ -8,7 +8,7 @@ a:hover{color:#000;}
 #wrapper {margin:auto; width:940px}
 #logo{margin-bottom:5px}
 .position-post{position:relative}
-.list-product{position:absolute;top:-90px;right:0}
+.list-product{position:absolute;top:-90px;right:0;color:#fff}
 .list-product a,.position-form a{color:#fff;padding-left:15px} .list-product img,.position-form img{margin-right:5px;position:relative;top:1px}
 .list-product a:hover,.position-form a:hover{color:#f90}
 .list-product-link a{color:#0175be} .list-product-link a:hover{color:#f90}
@@ -62,8 +62,6 @@ a:hover{color:#000;}
 .text-button{text-align:center}
 .button-register{color:#3186C7} .button-register:hover{color:#f90}
 .login .button-login-2{border:none;background:#F58220;color:#fff;padding:0;cursor:pointer;height:28px; width:100px; line-height:28px;font-weight:bold; font-size:10pt}
-
-.list-product{color:#3186C7;padding-bottom:5px}
 
 .adv-product{list-style:none;margin:0;padding:0}
 .adv-product li{margin-bottom:3px}
@@ -276,6 +274,12 @@ tbody tr td {padding : 6px 5px; background : #fff; color : #111}
 .project-new img{width:95px;height:65px}
 
 /* dang tin */
+.table-listpost{border:1px solid #ccc;font-size:1.1em}
+.table-listpost a{color:#000}
+tbody tr.alt td {background : #eee}
+tbody tr.blue td{background: #5184D2; color : #fff}
+tbody tr.blue td a{color : #fff}
+
 select{border:1px solid #ccc; padding:3px; cursor:pointer; -moz-border-radius: 3px; -webkit-border-radius: 3px; width:208px}
 legend{color:#0066CC; font-weight:bold; font-size:11pt}
 fieldset{padding:15px; border : 1px solid #E4E3E3; background:#F9F9FB; -moz-border-radius:3px; -webkit-border-radius:3px; margin:5px}
@@ -294,19 +298,15 @@ fieldset .login-a:hover{text-decoration:none}
 fieldset .txt-small{width:100px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
 fieldset .txt-very-tiny{width:22px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
 fieldset .txt-large{width:220px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
-
-fieldset .txt-very-large{width:200px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
-
+fieldset .txt-very-large{width:305px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border:1px solid #ccc; padding:3px;}
 fieldset .reset-label{float: none; cursor: pointer}
 
 span.required, .errorMessage{color: red;}
-
-
 .col1{float: left; width:110px}
 .col2{float: right; width:510px}
 
 .post-land{padding:10px;margin:0 0 10px 0;width:98% !important}
-.add-rows{color:#3186C7}
+.nyroModal,#add-rows{color:#3186C7}
 .space{height: 8px;}
 .radio label{float: none; cursor: pointer;}
 p.radio{margin: 6px 0}
@@ -321,3 +321,7 @@ p.radio label.p-label{width: 110px; float: left; margin-top: -5px}
 .red,.oranges,.blue,.chua-giao-dich,.da-giao-dich,.da-dat-cho{border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px}
 ul.tabs-2 li a,ul.tab_project li a{border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0}
 .button-login,.button-search,.button-submit{border-radius:6px;-webkit-border-radius:6px;-moz-border-radius:6px}
+
+.link-add{background:#E1E3EC;width:90px;height:90px;text-align:center;border-radius:6px;-webkit-border-radius:6px;-moz-border-radius:6px;margin-bottom:10px}
+.link-add img{margin:7px 0}
+.link-add a{color:#333;font-weight:bold;display:block} .link-add p{margin:0} .link-add a:hover{color:#f90}
