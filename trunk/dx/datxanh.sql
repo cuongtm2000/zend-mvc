@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 09, 2012 at 08:09 AM
+-- Generation Time: Nov 09, 2012 at 08:50 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -535,9 +535,11 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('4pdsot0jb', 1352443989),
-('84tehujy0', 1352443651),
-('pe6gh82j7', 1352444974);
+('gidxyqu01', 1352446497),
+('k2f7bv4xo', 1352446954),
+('oa5b8l40v', 1352446922),
+('syhng7vql', 1352446933),
+('tcejuf3aq', 1352446876);
 
 -- --------------------------------------------------------
 
@@ -556,11 +558,11 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_value` (
 --
 
 INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
-('max_visit_day', 1352156400),
-('max_visit_value', 7),
+('max_visit_day', 1352415600),
+('max_visit_value', 12),
 ('time_start_today', 1352415600),
-('today_visited', 7),
-('total_visited', 35),
+('today_visited', 12),
+('total_visited', 40),
 ('yesterday_visited', 2);
 
 -- --------------------------------------------------------
@@ -690,7 +692,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_lands` (
   `pic_full` varchar(100) DEFAULT NULL,
   `pic_desc` varchar(500) DEFAULT NULL,
   `record_order` int(11) DEFAULT NULL,
-  `price` varchar(45) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
   `hot` tinyint(1) NOT NULL DEFAULT '0',
   `specials` tinyint(1) DEFAULT NULL,
   `contact_name` varchar(45) DEFAULT NULL,
@@ -708,17 +710,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_lands` (
   KEY `hoiit_module_lands_provinces_province_id` (`hoiit_module_lands_provinces_province_id`),
   KEY `username` (`username`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
-
---
--- Dumping data for table `hoiit_module_lands`
---
-
-INSERT INTO `hoiit_module_lands` (`record_id`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `record_order`, `price`, `hot`, `specials`, `contact_name`, `contact_tel`, `enable`, `hoiit_module_item_cat_cat_id`, `hoiit_module_item_type_type_id`, `hoiit_module_lands_provinces_province_id`, `username`, `hits`, `keys`) VALUES
-(1, '2012-11-07 04:24:31', '', '', NULL, 1, 'cxd', 0, NULL, 'ninh1', 'adfgj', 1, 5, 2, 5, 'ninh1', 0, ''),
-(2, '2012-11-09 04:14:29', '', '', NULL, 2, '123456', 0, NULL, 'thanhan', '0929123456', 1, 4, 1, 19, 'thanhan', 0, ''),
-(3, '2012-11-09 04:16:02', '', '', NULL, 3, '123456', 0, NULL, 'thanhan', '0929123456', 1, 5, 2, 5, 'thanhan', 0, ''),
-(4, '2012-11-09 04:17:02', 'asdsadsa-thumb.gif', 'asdsadsa.jpg', 'asdsadsa1.jpg', 4, '123456', 0, NULL, 'thanhan', '0929123456', 1, 5, 2, 5, 'thanhan', 0, ''),
-(5, '2012-11-09 05:21:56', '', '', 'sddsd1.jpg', 5, '123456', 0, NULL, 'thanhan', '0929123456', 1, 5, 2, 5, 'thanhan', 0, '');
 
 -- --------------------------------------------------------
 
@@ -791,17 +782,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_lands_languages` (
   PRIMARY KEY (`record_id`,`language_id`),
   KEY `language_id` (`language_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_lands_languages`
---
-
-INSERT INTO `hoiit_module_lands_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`) VALUES
-(1, 'vi', 'xZZfxghjkje', '', '<p>zhd:fkhdfighfjdhljbnxvn bk;sop</p>\r\n<p>0fejodkfmn</p>', 'xzzfxghjkje', ''),
-(2, 'vi', 'Thanhasnfot là so em', '<p>Thong tin dang</p>', '<p>Can ban chi tiet</p>', 'thanhasnfot-la-so-em', 'Mo ta tu kgo'),
-(3, 'vi', 'asdasdsad', '<p>asdasdasdasdsaasd</p>', '<p>asdasdsadasd</p>', 'asdasdsad', 'adsda'),
-(4, 'vi', 'asdsadsa', '<p>asdasdsa</p>', '<p>asdasd</p>', 'asdsadsa', 'asdasd'),
-(5, 'vi', 'sddsd', '<p>sdsd</p>', '<p>dsds</p>', 'sddsd', '');
 
 -- --------------------------------------------------------
 
@@ -935,9 +915,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_lands_users` (
 --
 
 INSERT INTO `hoiit_module_lands_users` (`username`, `password`, `fullname`, `email`, `phone`, `province`, `address`, `sexual`, `date_created`, `user_role`, `enable`) VALUES
-('ninh', '14e1b600b1fd579f47433b88e8d85291', 'ninh', 'khangninh2005@yahoo.com', 2147483647, 19, '', NULL, '2012-11-02 16:58:43', 'user', 1),
-('ninh1', 'b2c3bb7394dcc0307e6fb6119e416e44', 'dong nai', 'khangninh2005@yahoo.com', 2147483647, 15, '', 'Nam', '2012-11-02 17:12:08', '', 1),
-('thanhan', '14e1b600b1fd579f47433b88e8d85291', 'Nguyễn Thành An', 'thanhansoft@gmail.com', 929001001, 15, 'Dong nai', 'Nam', '2012-11-09 04:10:37', 'staff', 1);
+('thanhansoft', 'cf874b7edfbc56e93223838850fd16dd', 'An', 'thanhansoft@gmail.com', 929001001, 7, 'Biên Hoa - Đồng Nai', 'Nữ', '2012-11-09 07:32:10', 'staff', 1);
 
 -- --------------------------------------------------------
 

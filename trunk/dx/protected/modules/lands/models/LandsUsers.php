@@ -32,7 +32,7 @@ class LandsUsers extends CActiveRecord {
     public function rules() {
         return array(
             array('username', 'unique'),
-            array('username, password,password2, fullname, email, phone,address ,province, user_role', 'required', 'on' => 'register'),
+            array('username, password,password2, fullname, email, phone,address ,province', 'required', 'on' => 'register'),
             array('phone, province', 'numerical', 'integerOnly' => true),
             array('password', 'compare', 'compareAttribute' => 'password2', 'message' => "{attribute} không trùng nhau.", 'on' => 'register'),
             array('username, fullname, email, user_role', 'length', 'max' => 45),
@@ -152,14 +152,11 @@ class LandsUsers extends CActiveRecord {
     }
 
     private function deleteRecord($user) {
-        /* Yii::app()->getModule('products');
-          Products::model()->deleteAll('dos_username= \'' . $user . '\'');
-
-          Username::model()->findByPk($user)->delete();
-
-          //delete forder
-          $file = new Files();
-          $file->deleteFolderUser(YiiBase::getPathOfAlias('webroot') . '/public/userfiles/images/' . $user); */
+		$items = Lands::model()->findAll('username=:user', array(':user' => $user));
+		foreach($items as $value){
+			Lands::model()->deleteRecord($value['record_id']);
+		}
+		$this->findByPk($user)->delete(); //delete username
     }
 
     private function updateShowHidden($activated, $username) {

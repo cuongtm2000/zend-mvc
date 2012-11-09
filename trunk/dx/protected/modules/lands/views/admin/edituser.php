@@ -57,13 +57,14 @@
 
     <div class="row">
         <?php echo $form->labelEx($model, 'sexual'); ?>
-        <?php
-        $d = array('Chưa rõ', 'Nam', 'Nữ');
-        echo $form->dropDownList($model, 'sexual', array_combine($d, $d));
-        ?>
+        <?php echo $form->dropDownList($model, 'sexual', array_combine(array('Chưa rõ', 'Nam', 'Nữ'), array('Chưa rõ', 'Nam', 'Nữ')));?>
     </div>
 
-
+	<div class="row">
+        <?php echo $form->labelEx($model, 'user_role'); ?>
+        <?php echo $form->dropDownList($model, 'user_role', array_combine(array('user', 'staff'), array('Thành viên', 'Nhân viên')));?>
+    </div>
+	
     <div class="row buttons">
 <?php echo CHtml::submitButton('Chỉnh sửa'); ?>
     </div>
