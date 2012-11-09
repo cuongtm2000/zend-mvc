@@ -1,44 +1,44 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id] => array($this->setUrlModule()), $info_cat['cat_title']); ?>
 <?php $this->pageTitle = $info_cat['cat_title'] . ' - ' . $this->lang[$this->module->id]; $this->setDescription($info_cat['description'])?>
-<?php if($sub_cats):?>
 
-<h2 class="title-box"><span>Danh muc con</span></h2>
-<ul class="list-item-cat">
-	<?php foreach($sub_cats as $value): ?>
-		<li>
-			<div class="tent-product">
-				<div class="product-img">
-					<?php echo CHtml::link(($value['pic_thumb']) ? '<img src="'.Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/landsCat/'.$value['pic_thumb'].'" alt="'.$value->LandsCatLanguage[Yii::app()->language]['cat_title'].'" />' : '<img src="'.Yii::app()->theme->baseUrl.'/images/no-product.jpg" alt="'.$value->LandsCatLanguage[Yii::app()->language]['cat_title'].'" />', array($this->setLangUrl().'/san-giao-dich/'.$value->LandsCatLanguage[Yii::app()->language]['tag']), array('title'=>$value->LandsCatLanguage[Yii::app()->language]['cat_title'])); ?>
-				</div>
-				<h2 class="title-product">
-					<?php echo CHtml::link($value->LandsCatLanguage[Yii::app()->language]['cat_title'], array($this->setLangUrl().'/san-giao-dich/'.$value->LandsCatLanguage[Yii::app()->language]['tag']), array('title'=>$value->LandsCatLanguage[Yii::app()->language]['cat_title'])); ?>
-				</h2>
+<?php
+	Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/tab.css');
+	Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/tab-sub-right.js');
+?>
+
+<h1 class="title-left"><span><?php echo $info_cat['cat_title']?></span></h1>
+<div class="infotab">
+	<ul class="tabs tabs-2">
+		<?php $type_list = LandsType::model()->listTypes(); $i=1; foreach($type_list as $value):?>
+			<li><a href="#tab<?php echo $i?>"><?php echo $value['type_name'] ?></a></li>
+		<?php $i++; endforeach?>
+	</ul>
+
+	<div class="tab_container tab-transaction">
+		<?php $type_list = LandsType::model()->listTypes(); $i=1; foreach($type_list as $value):?>
+			<div id="tab<?php echo $i?>" class="tab_content">
+				<table class="table-transaction">
+					<?php $items = Lands::model()->listItemByCat($info_cat['cat_id'], $value['type_id']);?>
+					<?php if($items['models']):?>
+						<?php foreach($items['models'] as $item):?>
+						<tr>
+							<td class="img-post">
+								<?php echo CHtml::link(CHtml::image(($item['pic_thumb']) ? Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/lands/'.$item['pic_thumb'] : Yii::app()->theme->baseUrl.'/images/no-images.jpg', $item->LandsLanguage[Yii::app()->language]['title']), array($this->setUrlModule('lands').'/'.$item->LandsCat->LandsCatLanguage[Yii::app()->language]['tag'].'/'.$item->LandsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$item->LandsLanguage[Yii::app()->language]['title'])); ?>
+							</td>
+							<td class="link-post">
+								<?php echo CHtml::link($item->LandsLanguage[Yii::app()->language]['title'], array($this->setUrlModule('lands').'/'.$item->LandsCat->LandsCatLanguage[Yii::app()->language]['tag'].'/'.$item->LandsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$item->LandsLanguage[Yii::app()->language]['title'])); ?>
+							</td>
+							<td class="address"><?php echo $item->LandsProvinces['province_name']?></td>
+							<td class="date-posted"><?php echo date('d/m/Y', strtotime($item['postdate']))?></td>
+						</tr>
+						<?php endforeach?>
+					<?php else:?>
+						<tr><td>Danh mục này chưa có bản tin</td></tr>
+					<?php endif?>
+				</table>
+				<?php $this->widget('CLinkPager', array('pages' => $items['pages'], 'header'=>'', 'lastPageLabel'=>Yii::t('user', 'last'), 'nextPageLabel'=>Yii::t('user', 'next'), 'firstPageLabel'=>Yii::t('user', 'first'), 'prevPageLabel'=>Yii::t('user', 'prev'), 'htmlOptions'=>array('class'=>'paging')))?>
 			</div>
-		</li>
-	<?php endforeach; ?>
-</ul><!--End All products--> <div class="clear"></div>
-<?php endif?>
-
-
-<?php if($items['models']):?>
-<h2 class="title-box"><span><?php echo $info_cat['cat_title']?></span></h2>
-<ul class="list-item">
-	<?php foreach($items['models'] as $item): ?>
-	<li>
-		<div class="tent-product">
-			<div class="product-img">
-				<?php echo CHtml::link(($item['pic_thumb']) ? '<img src="'.Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/lands/'.$item['pic_thumb'].'" alt="'.$item->LandsLanguage[Yii::app()->language]['title'].'" />' : '<img src="'.Yii::app()->theme->baseUrl.'/images/no-product.jpg" alt="'.$item->LandsLanguage[Yii::app()->language]['title'].'" />', array($this->setLangUrl().'/san-giao-dich/'.$item->LandsCat->LandsCatLanguage[Yii::app()->language]['tag'].'/'.$item->LandsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$item->LandsLanguage[Yii::app()->language]['title'])); ?>
-			</div>
-			<h2 class="title-product">
-				<?php echo CHtml::link($item->LandsLanguage[Yii::app()->language]['title'], array($this->setLangUrl().'/san-giao-dich/'.$item->LandsCat->LandsCatLanguage[Yii::app()->language]['tag'].'/'.$item->LandsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$item->LandsLanguage[Yii::app()->language]['title'])); ?>
-			</h2>
-			<?php echo ($item['price']) ? '<p class="price">'.$item['price'].'</p>' : ''?>
+		<?php $i++; endforeach?>
 		</div>
-	</li>
-	<?php endforeach; ?>
-</ul><!--End All products-->
-<?php $this->widget('CLinkPager', array('pages' => $items['pages'], 'header'=>'', 'lastPageLabel'=>Yii::t('user', 'last'), 'nextPageLabel'=>Yii::t('user', 'next'), 'firstPageLabel'=>Yii::t('user', 'first'), 'prevPageLabel'=>Yii::t('user', 'prev'), 'htmlOptions'=>array('class'=>'paging')))?>
-<?php else:?>
-	Khong ton tai mau tin
-<?php endif?>
-<div class="clear"></div>
+	</div>
+</div>
