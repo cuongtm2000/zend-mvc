@@ -59,10 +59,10 @@
                 <li class="product">
                     <div class="tent-product">
                         <div class="product-img">
-                            <?php echo CHtml::link(($value['pic_thumb']) ? '<img src="' . Yii::app()->baseUrl . Yii::getPathOfAlias('filePathUpload') . '/image/Lands/' . $value['pic_thumb'] . '" alt="' . $value->ProductsLanguage[Yii::app()->language]['title'] . '" />' : '<img src="' . Yii::app()->theme->baseUrl . '/images/no-Lands-cat.jpg" alt="' . $value->LandsLanguage[Yii::app()->language]['title'] . '" />', array($this->setLangUrl() . '/san-pham/' . $value->ProductsCat->ProductsCatLanguage[Yii::app()->language]['tag'] . '/' . $value->LandsLanguage[Yii::app()->language]['tag'] . '.html'), array('title' => $value->LandsLanguage[Yii::app()->language]['title'])); ?>
+                            <?php echo CHtml::link(($value['pic_thumb']) ? '<img src="' . Yii::app()->baseUrl . Yii::getPathOfAlias('filePathUpload') . '/image/Lands/' . $value['pic_thumb'] . '" alt="' . $value->LandsLanguage[Yii::app()->language]['title'] . '" />' : '<img src="' . Yii::app()->theme->baseUrl . '/images/no-Lands-cat.jpg" alt="' . $value->LandsLanguage[Yii::app()->language]['title'] . '" />', array($this->setLangUrl() . '/san-pham/' . $value->LandsCat->LandsCatLanguage[Yii::app()->language]['tag'] . '/' . $value->LandsLanguage[Yii::app()->language]['tag'] . '.html'), array('title' => $value->LandsLanguage[Yii::app()->language]['title'])); ?>
                         </div>
                         <h3 class="title-pro">
-                <?php echo CHtml::link($value->ProductsLanguage[Yii::app()->language]['title'], array($this->setLangUrl() . '/san-pham/' . $value->ProductsCat->ProductsCatLanguage[Yii::app()->language]['tag'] . '/' . $item->ProductsLanguage[Yii::app()->language]['tag'] . '.html'), array('title' => $value->ProductsLanguage[Yii::app()->language]['title'])); ?>
+                <?php echo CHtml::link($value->LandsLanguage[Yii::app()->language]['title'], array($this->setLangUrl() . '/san-pham/' . $value->LandsCat->LandsCatLanguage[Yii::app()->language]['tag'] . '/' . $item->LandsLanguage[Yii::app()->language]['tag'] . '.html'), array('title' => $value->LandsLanguage[Yii::app()->language]['title'])); ?>
                         </h3>
                     </div>
                 </li>
