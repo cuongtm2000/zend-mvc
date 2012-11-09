@@ -266,12 +266,15 @@ tbody tr td {padding : 6px 5px; background : #fff; color : #111}
 
 /** table-transaction **/
 .table-transaction a{color:#4d4d4d;display:block} .table-transaction a:hover{color:#005BAB}
-.table-transaction tbody tr td{border-bottom:1px solid #029CD8}
+.table-transaction tbody tr td {border-bottom:1px solid #029CD8}
 .date-posted,.img-post{width:50px;text-align:center} .date-posted,.address{color:#005BAB;font-weight:bold}
 .img-post img{width:47px}
-.address{width:70px;text-align:center;color:#990505}
 
+.img-other,.img-other img{width:75px}
+.address{width:70px;text-align:center;color:#990505}
 .project-new img{width:95px;height:65px}
+
+.table-transaction-other{margin:30px 0 10px; border:1px solid #029CD8; border-bottom:none}
 
 /* dang tin */
 .table-listpost{border:1px solid #ccc;font-size:1.1em}

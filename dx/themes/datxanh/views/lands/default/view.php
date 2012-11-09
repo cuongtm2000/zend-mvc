@@ -57,5 +57,29 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/p
     <div class="content-info"><?php echo $item->LandsLanguage[Yii::app()->language]['content'] ?></div>
 </div> <!--frame-pro-info-->
 
+<?php if($other_items): ?>
+<table class="table-transaction table-transaction-other">
+     <?php foreach($other_items as $value):?>
+    <tr>
+        <td class="img-other">
+            <?php echo CHtml::link(CHtml::image(($value['pic_thumb']) ? Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/lands/'.$value['pic_thumb'] : Yii::app()->theme->baseUrl.'/images/no-images.jpg', $value->LandsLanguage[Yii::app()->language]['title']), array($this->setUrlModule('lands').'/'.$value->LandsCat->LandsCatLanguage[Yii::app()->language]['tag'].'/'.$value->LandsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$value->LandsLanguage[Yii::app()->language]['title'])); ?>
+        </td>
+        <td class="link-post">
+            <?php echo CHtml::link($value->LandsLanguage[Yii::app()->language]['title'], array($this->setUrlModule('lands').'/'.$value->LandsCat->LandsCatLanguage[Yii::app()->language]['tag'].'/'.$value->LandsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$value->LandsLanguage[Yii::app()->language]['title'])); ?>
+        </td>
+        <td class="address"><?php echo $value->LandsProvinces['province_name']?></td>
+        <td class="date-posted"><?php echo date('d/m/Y', strtotime($value['postdate']))?></td>
+    </tr>
+    <?php endforeach?>
+</table>
+<?php endif?>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".table-transaction-other li:odd").addClass("alt");
+    });
+</script>
+
 
 
