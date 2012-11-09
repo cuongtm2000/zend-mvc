@@ -1,7 +1,12 @@
 <?php
 Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/product.scroll.css');
 Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/product.fancybox.css');
-Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/products.js');
+Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/product.jcarousellite_1.0.1.js');
+Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/product.scroller.js');
+Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/product.fancybox.js');
+Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/product.scroll-1.4.2-min.js');
+Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/product.serialScroll-1.2.2-min.js');
+Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/product-config.js');
 ?>
 <h2 class="title-info-land"><span><?php echo $item->LandsLanguage[Yii::app()->language]['title'] ?></span></h2>
 <div class="main-land-info">
