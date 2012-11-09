@@ -75,9 +75,10 @@ a:hover{color:#000;}
 
 .sub-trading{list-style:none;margin:0 0 20px 0;padding:0}
 .sub-trading li{margin-bottom:5px;border-bottom:1px solid #ccc;padding-bottom:5px}
-.sub-trading li img{float:left;margin-right:10px}
-.panel-tranding{height:35px;display:table-cell;vertical-align:middle}
+.sub-trading li img{float:left;margin-right:10px;width:55px;height: 35px}
+.panel-tranding{height:35px;line-height:35px; overflow:hidden;}
 .sub-trading .panel-tranding a{color:#444;font-size:10pt;display:block}
+.sub-trading .panel-tranding a:hover{color:#0175BE}
 
 /**  end page home **/
 
@@ -128,12 +129,16 @@ a:hover{color:#000;}
 .title-product a{color:#444}
 .title-product a:hover{color:#f90}
 
-.button-pro{margin:0;margin-top:12px;margin-bottom:5px}
-.button-detail{background:url(../images/bton-detail.gif) no-repeat;color:#fff;padding:2px 14px;font-weight:bold;margin:0 0px 0 0}
-.button-order{background:url(../images/bton-order.gif) no-repeat;color:#fff;padding:2px 12px;font-weight:bold}
-.button-pro a:hover{color:#fff}
-
 /***    Page product-info     ****/
+.main-land-info p{line-height:1.6em}
+.content-info{background:#F1F1F1;padding:5px}
+.view{font-size: 10pt} .view span{font-weight:bold}
+.title-info-land{background:#EAEAEA;color:#3070BB;padding:5px 10px;margin:0;font-size: 18px;font-weight: normal;}
+.title-info{font-size:11pt;margin:10px 0}
+.title-contact{font-size: 11pt;color:#f48320;margin:0 0 15px 0;padding:0}
+.price-info{color:#991B1E;margin:0} .price-info span{font-size: 12pt}
+.frame-pro-info .contact-info{color:#0151AF;font-size:11pt;margin:0 0 5px 0;line-height: normal;}
+.title-contact img{position:relative;top:6px;margin-right: 8px}
 .black{margin:0 !important; font-size:10pt;text-align:right !important}
 .black a{color:#000;background:url(../images/bull-1.gif) no-repeat left 5px;cursor:pointer; padding:0 0 0 10px}
 .black a:hover{background:url(../images/bull.gif) no-repeat left 5px;color:#ED2121}
@@ -222,7 +227,6 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .bt-frm-register label {width:150px;float:left}
 .bt-frm-register select{width:230px;margin:0}
 .bt-frm-register .singin{margin:0}
-
 
 /*Footer*/
 #bg-footer{background:#00AEEF; min-width:940px}
