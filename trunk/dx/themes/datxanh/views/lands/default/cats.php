@@ -21,7 +21,7 @@
 
 
 <?php if($items['models']):?>
-<h2 class="title-box"><span>Sản phẩm danh muc này</span></h2>
+<h2 class="title-box"><span><?php echo $info_cat['cat_title']?></span></h2>
 <ul class="list-item">
 	<?php foreach($items['models'] as $item): ?>
 	<li>

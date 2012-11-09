@@ -4,10 +4,8 @@ class DefaultController extends Controller {
 
     public function actionIndex() {
         $this->layout = '//layouts/column-lands';
-        $model_class = ucfirst($this->module->id) . 'Cat';
-        $model = new $model_class;
 
-        $this->render('index', array('items' => $model->listItem()));
+        $this->render('index');
     }
 
     public function actionCats($cid, $page = 0) {

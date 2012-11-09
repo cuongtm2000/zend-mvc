@@ -107,6 +107,25 @@ class Lands extends CActiveRecord {
         
     }
 	
+	//Front end - list Item by Type
+    public function listItemByType($type) {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'enable=1 AND hoiit_module_item_type_type_id=:type';
+        $criteria->params = array(':type' => $type);
+		$criteria->limit = Config::getValue('lands_num_item_index');
+		
+		return $this->findAll($criteria);
+
+        /*$count = $this->count($criteria);
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = 2;
+        $pages->applyLimit($criteria);
+
+        return array('models' => $this->findAll($criteria), 'pages' => $pages);*/
+    }
+	
 	//Front end - list item new
     public function listItemsNew() {
         $criteria = new CDbCriteria();
