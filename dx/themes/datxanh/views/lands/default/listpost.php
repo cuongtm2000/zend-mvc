@@ -1,7 +1,9 @@
 <form name="frm" id="frm" action="" method="post">
-	<a href="<?php echo Yii::app()->baseUrl?>/san-giao-dich/dang-tin" title="Đăng tin">Đăng tin</a>
+	<div class="link-add"><a href="<?php echo Yii::app()->baseUrl?>/san-giao-dich/dang-tin" title="Đăng tin">
+	<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/add.png" /><p>Đăng tin</p>
+	</a></div>
     <input type="hidden" name="factive" value="" />
-	<table>
+	<table class="table-listpost">
     	<thead>
     		<tr>
     			<th class="txt15"><input onclick="javascript: select_switch(this.checked);" type="checkbox" name="checkall" /></th>
@@ -60,5 +62,6 @@
                 });
             }
         });
+		("tbody tr").addClass("alt");
     });
 </script>

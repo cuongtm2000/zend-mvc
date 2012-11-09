@@ -1,14 +1,6 @@
 
 <?php var_dump($item); ?>
 
-
-
-
-
-
-
-
-
 <div class="frame-panel">
     <h2 class="title-box"><span><?php echo $item->LandsLanguage[Yii::app()->language]['title'] ?></span></h2>
     <div class="frame-pro-info">
