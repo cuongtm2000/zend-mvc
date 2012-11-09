@@ -38,7 +38,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/p
                 </div><!--END Slide show Jquery Lightbox-->
             </div>
         </div>
-        <div class="right-info">
+        <div>
             <?php echo $item->LandsLanguage[Yii::app()->language]['preview'] ?>
             <p class="price-info"><strong>Giá: <span><?php echo $item['price'] ?></span></strong></p>
             <p class="view">Số lần xem: <span><?php echo $item['hits']?></span></p>

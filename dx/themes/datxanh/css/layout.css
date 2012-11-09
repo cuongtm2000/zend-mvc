@@ -137,12 +137,12 @@ a:hover{color:#000;}
 .title-info{font-size:11pt;margin:10px 0}
 .title-contact{font-size: 11pt;color:#f48320;margin:0 0 15px 0;padding:0}
 .price-info{color:#991B1E;margin:0} .price-info span{font-size: 12pt}
-.frame-pro-info .contact-info{color:#0151AF;font-size:11pt;margin:0 0 5px 0;line-height: normal;}
+.main-land-info .contact-info{color:#0151AF;font-size:11pt;margin:0 0 5px 0;line-height: normal;}
 .title-contact img{position:relative;top:6px;margin-right: 8px}
 .black{margin:0 !important; font-size:10pt;text-align:right !important}
 .black a{color:#000;background:url(../images/bull-1.gif) no-repeat left 5px;cursor:pointer; padding:0 0 0 10px}
 .black a:hover{background:url(../images/bull.gif) no-repeat left 5px;color:#ED2121}
-.frame-img-info img{margin:0 !important;border:2px solid #D1D1D1;padding:2px;-webkit-border-radius:3px;-moz-border-radius:3px}
+
 
 .title-project{background:#029CD8;color:#fff;font-size:11pt;margin:0;padding:8px 0}
 .title-project span{padding-left:20px}
