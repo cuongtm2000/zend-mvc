@@ -384,7 +384,7 @@ class Projects extends CActiveRecord {
 
             //upload pic_desc
             if (isset($_FILES[__CLASS__ . 'Form']['name']['pic_desc'])) {
-                $uploaded = $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_desc'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_desc'], Config::getValue('projects_width_desc'), Config::getValue('projects_height_desc'), Yii::getPathOfAlias('filePathUpload') . '/image/' . '/' . strtolower(__CLASS__) . '/', $model['title' . Yii::app()->params['default_language']].'-desc-');
+                $uploaded = $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_desc'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_desc'], Config::getValue('projects_width_desc'), Config::getValue('projects_height_desc'), Yii::getPathOfAlias('filePathUpload') . '/image/' . strtolower(__CLASS__) . '/', $model['title' . Yii::app()->params['default_language']].'-desc-');
                 $pic_desc = ($item->pic_desc) ? explode('|', $item->pic_desc) : array();
                 //push value
                 foreach ($uploaded as $value) {
@@ -395,7 +395,7 @@ class Projects extends CActiveRecord {
 
             //upload pic_slide
             if (isset($_FILES[__CLASS__ . 'Form']['name']['pic_slide'])) {
-                $uploaded = $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_slide'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_slide'], Config::getValue('projects_width_desc'), Config::getValue('projects_height_desc'), Yii::getPathOfAlias('filePathUpload') . '/image/' . '/' . strtolower(__CLASS__) . '/', $model['title' . Yii::app()->params['default_language']].'-slide-');
+                $uploaded = $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_slide'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_slide'], Config::getValue('projects_width_desc'), Config::getValue('projects_height_desc'), Yii::getPathOfAlias('filePathUpload') . '/image/' . strtolower(__CLASS__) . '/', $model['title' . Yii::app()->params['default_language']].'-slide-');
                 $pic_slide = ($item->field1) ? explode('|', $item->field1) : array();
                 //push value
                 foreach ($uploaded as $value) {
