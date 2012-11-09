@@ -9,14 +9,8 @@ class DefaultController extends Controller {
     }
 
     public function actionCats($cid, $page = 0) {
-        $model_class = ucfirst($this->module->id) . 'Cat';
-        $model = new $model_class;
-
         $info_cat = LandsCatLanguage::model()->findCatByTag($cid);
-        $this->render('cats', array(
-            'info_cat' => $info_cat, 
-            'sub_cats' => $model->listItem($info_cat['cat_id']), 
-            'items' => Lands::model()->listItemByCat($info_cat['cat_id'])));
+        $this->render('cats', array('info_cat' => $info_cat));
     }
 
     public function actionView($id) {

@@ -163,11 +163,11 @@ class Lands extends CActiveRecord {
     }
 
     //Front end - list Item by Cat
-    public function listItemByCat($cid) {
+    public function listItemByCat($cid, $type) {
         $criteria = new CDbCriteria();
         $criteria->order = 'record_order DESC, postdate DESC';
-        $criteria->condition = 'enable=1 AND hoiit_module_item_cat_cat_id=:cid';
-        $criteria->params = array(':cid' => $cid);
+        $criteria->condition = 'enable=1 AND hoiit_module_item_cat_cat_id=:cid AND hoiit_module_item_type_type_id=:type';
+        $criteria->params = array(':cid' => $cid, ':type' => $type);
 
         $count = $this->count($criteria);
 
