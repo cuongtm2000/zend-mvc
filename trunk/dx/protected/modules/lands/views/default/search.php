@@ -14,7 +14,7 @@
                     <h2 class="title-pro">
                     <?php echo CHtml::link($item->LandsLanguage[Yii::app()->language]['title'], array($this->setLangUrl() . '/san-giao-dich/' . $item->LandsCat->LandsCatLanguage[Yii::app()->language]['tag'] . '/' . $item->LandsLanguage[Yii::app()->language]['tag'] . '.html'), array('title' => $item->LandsLanguage[Yii::app()->language]['title'])); ?>
                     </h2>
-        <?php echo ($item['price']) ? '<p class="price">' . $item['price'] . '</p>' : '' ?>
+        <?php echo ($item['price']) ? '<p class="price">' . number_format($item['price'],0,',','.') . '</p>' : '' ?>
                     <p class="bton-cart"><a href="product-info.html" class="add-to-cart" title="Add to Cart"><span>Add to Cart</span></a></p>
                 </div>
             </li>

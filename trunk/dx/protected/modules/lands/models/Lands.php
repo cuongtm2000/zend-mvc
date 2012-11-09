@@ -10,6 +10,7 @@
  * @property HoiitLanguages[] $hoiitLanguages
  */
 class Lands extends CActiveRecord {
+
     private $_model;
 
     /**
@@ -35,7 +36,7 @@ class Lands extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-             array('hoiit_module_item_cat_cat_id, hoiit_module_item_type_type_id, hoiit_module_lands_provinces_province_id, username, contact_name, contact_tel', 'required'),
+            array('hoiit_module_item_cat_cat_id, hoiit_module_item_type_type_id, hoiit_module_lands_provinces_province_id, username, contact_name, contact_tel', 'required'),
             array('record_order, hot, specials, enable, hoiit_module_item_cat_cat_id', 'numerical', 'integerOnly' => true),
             array('pic_thumb, pic_full', 'length', 'max' => 100),
             array('pic_desc', 'length', 'max' => 500),
@@ -56,11 +57,9 @@ class Lands extends CActiveRecord {
             'LandsCat' => array(self::BELONGS_TO, 'LandsCat', 'hoiit_module_item_cat_cat_id'),
             //'Language' => array(self::MANY_MANY, 'Language', 'hoiit_module_lands_languages(record_id, language_id)'),
             'LandsLanguage' => array(self::HAS_MANY, 'LandsLanguage', 'record_id', 'index' => 'language_id'),
-            
             'LandsType' => array(self::BELONGS_TO, 'LandsType', 'hoiit_module_item_type_type_id'),
-            'LandsProvinces' => array(self::BELONGS_TO, 'Provinces', 'hoiit_module_lands_provinces_province_id'), 
+            'LandsProvinces' => array(self::BELONGS_TO, 'Provinces', 'hoiit_module_lands_provinces_province_id'),
             'username0' => array(self::BELONGS_TO, 'ModuleLandsUsers', 'username'),
-            
         );
     }
 
@@ -84,20 +83,28 @@ class Lands extends CActiveRecord {
      * Retrieves a list of models based on the current search/filter conditions.
      * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
      */
-    public function search() {
+    public function search($data) {
 
         $criteria = new CDbCriteria;
-       // $criteria->compare('price', $this->price, true);
-        
-        $criteria->compare('hoiit_module_item_cat_cat_id', $this->hoiit_module_item_cat_cat_id);
-        $criteria->compare('hoiit_module_lands_provinces_province_id', $this->hoiit_module_lands_provinces_province_id);
-        $criteria->compare('hoiit_module_item_type_type_id', $this->hoiit_module_item_type_type_id);
+        //     var_dump( $data);
+        if (isset($data['price']) && $data['price'] != '') {
+            $p = explode('-', $data['price']);
+            $criteria->compare('price', '>= ' . $p[0] . '000000');
+            $criteria->compare('price', '< ' . $p[1] . '000000');
+        }
 
+        if (isset($data['cats']))
+            $criteria->compare('hoiit_module_item_cat_cat_id', $data['cats']);
+        if (isset($data['provinces']))
+            $criteria->compare('hoiit_module_lands_provinces_province_id', $data['provinces']);
+        if (isset($data['types']))
+            $criteria->compare('hoiit_module_item_type_type_id', $data['types']);
+        //var_dump($criteria);
         return $this->findAll($criteria);
     }
 
-    public function searchLands(){
-
+    public function searchLands() {
+        
     }
 	
 	//Front end - list item new
@@ -169,14 +176,14 @@ class Lands extends CActiveRecord {
         return array('models' => $this->findAll($criteria), 'pages' => $pages);
     }
 
-        //Back end - List item admin
+    //Back end - List item admin
     public function listItemUser() {
         $criteria = new CDbCriteria();
         //$criteria->with = array('Language', 'LandsLanguage');
         $criteria->order = 'record_order DESC, postdate DESC';
-        $criteria->condition='username =:user';
-        $criteria->params=array(":user"=>Yii::app()->memberLands->id);
-        
+        $criteria->condition = 'username =:user';
+        $criteria->params = array(":user" => Yii::app()->memberLands->id);
+
         $count = $this->count($criteria);
 
         // elements per page
@@ -186,8 +193,7 @@ class Lands extends CActiveRecord {
 
         return array('models' => $this->findAll($criteria), 'pages' => $pages);
     }
-    
-    
+
     //Back end - Delete Record
     private function deleteRecord($id) {
         LandsLanguage::model()->deleteRecord($id);
@@ -262,7 +268,7 @@ class Lands extends CActiveRecord {
 
     //Back end - save
     public function saveRecord($model, $id = null) {
-        
+
         if (Yii::app()->controller->action->id == 'add') {
             $this->price = $model->price;
             $this->hot = $model->hot;
@@ -272,19 +278,19 @@ class Lands extends CActiveRecord {
             $this->contact_tel = $model->contact_tel;
             $this->hoiit_module_lands_provinces_province_id = $model->hoiit_module_lands_provinces_province_id;
             $this->keys = $model->keys;
-            $this->username=Yii::app()->memberLands->id;
+            $this->username = Yii::app()->memberLands->id;
             //upload picture thumb
             Yii::import('ext.SimpleImage.CSimpleImage');
             $file = new CSimpleImage();
             $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('lands_width_thumb'), Config::getValue('lands_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']] . '-thumb');
             $this->pic_full = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_full'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_full'], Config::getValue('lands_width_full'), Config::getValue('lands_height_full'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]);
             if (isset($_FILES[__CLASS__ . 'Form']['name']['pic_desc'])) {
-                $this->pic_desc = implode("|", $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_desc'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_desc'], Config::getValue('lands_width_desc'), Config::getValue('lands_height_desc'), Yii::getPathOfAlias('filePathUpload').'/image/' . lcfirst(__CLASS__).'/', $model['title' . Yii::app()->controller->setting['default_language']]));
+                $this->pic_desc = implode("|", $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_desc'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_desc'], Config::getValue('lands_width_desc'), Config::getValue('lands_height_desc'), Yii::getPathOfAlias('filePathUpload') . '/image/' . lcfirst(__CLASS__) . '/', $model['title' . Yii::app()->controller->setting['default_language']]));
             }
 
             $this->save();
             $id = $this->record_id;
-         //   var_dump($this);
+            //   var_dump($this);
             $this->updateByPk($id, array('record_order' => $id));
         } else {
             $item = $this->findByPk($id);
@@ -324,7 +330,7 @@ class Lands extends CActiveRecord {
             $item->pic_full = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_full'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_full'], Config::getValue('lands_width_full'), Config::getValue('lands_height_full'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']], $item->pic_full);
             //upload pic_desc
             if (isset($_FILES[__CLASS__ . 'Form']['name']['pic_desc'])) {
-                $uploaded = $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_desc'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_desc'], Config::getValue('lands_width_desc'), Config::getValue('lands_height_desc'), Yii::getPathOfAlias('filePathUpload').'/image/' . lcfirst(__CLASS__).'/', $model['title' . Yii::app()->controller->setting['default_language']]);
+                $uploaded = $file->uploadMulti($_FILES[__CLASS__ . 'Form']['name']['pic_desc'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_desc'], Config::getValue('lands_width_desc'), Config::getValue('lands_height_desc'), Yii::getPathOfAlias('filePathUpload') . '/image/' . lcfirst(__CLASS__) . '/', $model['title' . Yii::app()->controller->setting['default_language']]);
                 $pic_desc = ($item->pic_desc) ? explode('|', $item->pic_desc) : array();
                 //push value
                 foreach ($uploaded as $value) {
@@ -335,13 +341,13 @@ class Lands extends CActiveRecord {
 
             $item->save();
         }
-        
-       LandsLanguage::model()->saveRecord($id, $model);
+
+        LandsLanguage::model()->saveRecord($id, $model);
     }
 
     //Back end - Get record to Edit
     public function loadEdit($id) {
-       // $command = Yii::app()->db->createCommand('SELECT pic_thumb, pic_full, pic_desc, price, hot, enable, hoiit_module_item_cat_cat_id FROM ' . $this->tableName() . ' WHERE record_id=:id');
+        // $command = Yii::app()->db->createCommand('SELECT pic_thumb, pic_full, pic_desc, price, hot, enable, hoiit_module_item_cat_cat_id FROM ' . $this->tableName() . ' WHERE record_id=:id');
         //$command->bindParam(":id", $id, PDO::PARAM_INT);
         //return $command->queryRow();
         return $this->findByPk($id);
@@ -392,4 +398,5 @@ class Lands extends CActiveRecord {
         }
         $cat->deleteRecord($id);
     }
+
 }

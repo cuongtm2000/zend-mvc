@@ -1,5 +1,5 @@
 <h4 class="title-box"><span>Tìm kiếm</span></h4>
-<form class="form-search" action="lands/default/search" name="search" method="post">
+<form class="form-search" action="<?php echo Yii::app()->baseUrl ?>lands/default/search" name="search" method="post">
     <select name="provinces">
         <option value="0">Khu vực / tỉnh</option>
         <option value="1">An Giang</option>
