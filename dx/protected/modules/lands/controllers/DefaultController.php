@@ -215,7 +215,7 @@ class DefaultController extends Controller {
      //       $data=$model->search(Yii::app()->request);
       //  }
 
-        $this->render('search', array('data'=>$model->search(Yii::app()->request)));
+        $this->render('search', array('data'=>$model->search($_POST)));
         
     }
 }
