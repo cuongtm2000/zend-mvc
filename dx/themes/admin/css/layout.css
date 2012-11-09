@@ -233,3 +233,5 @@ ul#list-template li label, #scrollbar ul li p input{cursor:pointer}
 .icon-hover img{margin:10px 0 5px 0}
 .icon-hover a{background-color: #fff; background-position: -30px; display: block; float: left; height: 97px; width: 108px; color: #565656; vertical-align: middle;	text-decoration: none;	border: 1px solid #ddd;	margin:0 10px 15px 16px;text-align:center; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; -webkit-transition-property: background-position, -webkit-border-bottom-left-radius, -webkit-box-shadow; -moz-transition-property: background-position, -moz-border-radius-bottomleft, -moz-box-shadow; -webkit-transition-duration: 0.8s; -moz-transition-duration: 0.8s}
 .icon-hover a:hover{background-position: 0; -webkit-border-bottom-left-radius: 50% 20px; -moz-border-radius-bottomleft: 50% 20px; border-bottom-left-radius: 50% 20px; -webkit-box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25); -moz-box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25); box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25); position: relative; z-index: 10;}
+
+.user-red{color: red; font-weight:bold}

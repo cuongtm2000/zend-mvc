@@ -35,7 +35,7 @@ $config = array(
 		'memberLands' => array(
             'class' => 'CWebUser',
             'allowAutoLogin' => true,
-            'loginUrl' => array('lands/default/login'),
+            'loginUrl' => array('san-giao-dich/dang-nhap'),
             'stateKeyPrefix' => 'memberLands',
         ),
 

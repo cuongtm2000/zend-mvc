@@ -195,7 +195,7 @@ class Lands extends CActiveRecord {
     }
 
     //Back end - Delete Record
-    private function deleteRecord($id) {
+    public function deleteRecord($id) {
         LandsLanguage::model()->deleteRecord($id);
 
         $item = $this::model()->find('record_id=:id', array(':id' => $id));

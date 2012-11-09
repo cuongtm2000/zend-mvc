@@ -4,36 +4,31 @@
         <thead>
             <tr>
                 <th class="txt15"><input onclick="javascript: select_switch(this.checked);" type="checkbox" name="checkall" /></th>
-                <th class="txt60">Tên đăng nhập</th>
+                <th class="txt60">Username</th>
                 <th>Họ tên</th>
                 <th>Tỉnh/thành</th>
                 <th>Số ĐT</th>
-                <th>Email</th>
+                <th>Loại User</th>
+				<th>Số tin đăng</th>
                 <th>Thao tác</th>
-                <th>Số tin đã đăng</th>
             </tr>
         </thead>
         <tbody>
             <?php if ($models): ?>
-                <?php $i = 1;
-                foreach ($models as $value): ?>
+                <?php $i = 1; foreach ($models as $value): ?>
                     <?php
-                    if ($value->enable == 0) {
-                        $rowclass = ' class="disable"';
-                    } else {
-                        $rowclass = ($i % 2 == 0) ? '' : ' class="alt"';
-                    }
+						$rowClass = ($value->enable == 0) ? ' class="disable"' : (($i % 2 == 0) ? '' : ' class="alt"');
+						$type = ($value->user_role=='user') ? 'Thành viên' : '<span class="user-red">Nhân viên</span>';
                     ?>
-                    <tr<?php echo $rowclass ?>>
+                    <tr<?php echo $rowClass ?>>
                         <td><input type="checkbox" name="ids[]" value="<?php echo $value->username ?>" /></td>
-
-                        <td><?php echo CHtml::link($value->username, array('viewuser', 'id' => $value->username)) ?></td>
+                        <td><?php echo CHtml::link('<strong>'.$value->username.'</strong>', array('viewuser', 'id' => $value->username)) ?></td>
                         <td><?php echo $value->fullname  ?></td>
                         <td><?php echo $value->province0['province_name']?></td>
                         <td><?php echo $value->phone ?></td>
-                        <td><?php echo $value->email ?></td>
+                        <td><?php echo $type ?></td>
+						<td><?php echo CHtml::link(count($value->moduleLands), array('listpost', 'id' => $value->username)) ?></td>
                         <td><?php echo CHtml::link($this->lang['edit'], array('edituser', 'id' => $value->username)) ?></td>
-                        <td><?php echo CHtml::link(count($value->moduleLands), array('listpost', 'id' => $value->username)) ?></td>
                     </tr>
                     <?php $i++;
                 endforeach; ?>

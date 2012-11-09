@@ -28,6 +28,10 @@
     <b><?php echo CHtml::encode($data->getAttributeLabel('sexual')); ?>:</b>
     <?php echo CHtml::encode($data->sexual); ?>
     <br />
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('user_role')); ?>:</b>
+    <?php echo CHtml::encode($data->user_role); ?>
+    <br />
 
     <b><?php echo CHtml::encode($data->getAttributeLabel('date_created')); ?>:</b>
     <?php echo CHtml::encode($data->date_created); ?>

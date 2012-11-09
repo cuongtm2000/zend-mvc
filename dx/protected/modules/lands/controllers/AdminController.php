@@ -129,7 +129,7 @@ class AdminController extends BackEndController {
         //Submit
         if (Yii::app()->request->getIsPostRequest()) {
             $model->activeItem(Yii::app()->request);
-         //   $this->refresh();
+            $this->refresh();
              
         }
         $this->render('member', LandsUsers::model()->listUsernames());
