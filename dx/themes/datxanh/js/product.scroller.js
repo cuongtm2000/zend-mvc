@@ -1,6 +1,6 @@
 $(function() {
-    $(".anyClass").jcarousel({
-        btnNext: ".jcarousel-next, .nextsmall",
-        btnPrev: ".jcarousel-prev, .prevsmall"
+    $(".anyClass").jCarouselLite({
+        btnNext: ".next, .nextsmall",
+        btnPrev: ".prev, .prevsmall"
     });
 });
