@@ -1,5 +1,5 @@
-
 <form name="frm" id="frm" action="" method="post">
+	<a href="<?php echo Yii::app()->baseUrl?>/san-giao-dich/dang-tin" title="Đăng tin">Đăng tin</a>
     <input type="hidden" name="factive" value="" />
 	<table>
     	<thead>

@@ -156,7 +156,7 @@
 				</div>
 				
 				<div id="tab5" class="tab_content">
-					 <p class="rows"><a href="#" class="add-rows">Hinh mô tả</a></p>
+					 <p id="rows"><a href="#" id="add-rows">Hình mô tả</a></p>
 				</div>
 			</div>
 		</div>
@@ -214,7 +214,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $("#add-rows").click(function(){
-                $(".rows").before('<div class="col1">Hinh mo ta</div><div class="col2"><input type="file" name="<?php echo get_class($model) ?>[pic_desc][]" size="40%" /></div><div class="clear space"></div>');
+                $("#rows").before('<div class="col1">Hình mô tả</div><div class="col2"><input type="file" name="<?php echo get_class($model) ?>[pic_desc][]" size="40%" /></div><div class="clear space"></div>');
                 return false;
             });
         });

@@ -1,12 +1,13 @@
+<!--
+	Các file này ko cần bắt buộc chọn, Nếu rỗng thì bỏ qua khỏi query
+-->
 <h4 class="title-box"><span>Tìm kiếm</span></h4>
 <form class="form-search" action="lands/default/search" name="search" method="post">
     <select name="provinces">
-        <option value="0">Khu vực / tỉnh</option>
-        <option value="1">An Giang</option>
-        <option value="2">Bình Dương</option>
-        <option value="3">Đồng Nai</option>
-        <option value="4">Hồ Chí Minh</option>
-        <option value="5">Hà Nội</option>
+		<option value="0">Khu vực / tỉnh</option>
+		<?php $provinces_list = Provinces::model()->listProvince(); foreach($provinces_list as $value):?>
+			<option value="<?php echo $value['province_id']?>"><?php echo $value['province_name']?></option>
+		<?php endforeach?>
     </select>
     <select name="">
         <option value="0">Loại bật động sản</option>

@@ -30,9 +30,11 @@
 		</div> <div class="clear"></div>
     <?php else:?>
 		<div class="position-post">
-			 <div class="list-product"><a href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/dang-tin"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-register.png" alt="dang tin" /><b>Đăng tin</b></a>
-			 <a href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/danh-sach-tin-dang"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-login.png" alt="dang tin" /><b>Tin đã đăng</b></a> 
-			 <a href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/thoat"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-login.png" alt="dang tin" /><b>Đăng xuất</b></a>
+			 <div class="list-product">
+				Chào <strong><?php echo Yii::app()->memberLands->id?></strong>
+				<a href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/dang-tin"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-register.png" alt="dang tin" /><b>Đăng tin</b></a>
+				<a href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/danh-sach-tin-dang"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-login.png" alt="dang tin" /><b>Tin đã đăng</b></a> 
+				<a href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/thoat"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-login.png" alt="dang tin" /><b>Đăng xuất</b></a>
 			 </div>
 		 </div>
     <?php endif ?>

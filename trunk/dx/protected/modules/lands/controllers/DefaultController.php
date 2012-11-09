@@ -47,7 +47,7 @@ class DefaultController extends Controller {
             $model->attributes = $_POST['LandsUsers']; //var_dump($_POST['LandsUsers']);
             if ($model->save()) {
                 Yii::app()->session['reg_success'] = true;
-                $this->redirect(Yii::app()->baseUrl . '/dang-ky/thanh-cong');
+                $this->redirect(Yii::app()->baseUrl . '/san-giao-dich/dang-ky-thanh-cong');
             }
         }
         $this->render('register', array(
@@ -58,7 +58,7 @@ class DefaultController extends Controller {
 
     public function actionSuccess() {
         if (!Yii::app()->session['reg_success']) {
-            $this->redirect(Yii::app()->request->baseUrl . '/dang-ky');
+            $this->redirect(Yii::app()->baseUrl . '/san-giao-dich/dang-ky');
         }
         $this->render('success');
     }
@@ -122,7 +122,7 @@ class DefaultController extends Controller {
 
             if ($model_form->validate()) {
                 $model->saveRecord($model_form);
-                $this->redirect(array('index'));
+                $this->redirect(Yii::app()->baseUrl . '/san-giao-dich/danh-sach-tin-dang');
             }
         }
 
@@ -182,7 +182,7 @@ class DefaultController extends Controller {
             $model_form->attributes = $_POST[$model_form_class];
             if ($model_form->validate()) {
                 $model->saveRecord($model_form, $id);
-                $this->redirect(array('listpost'));
+                $this->redirect(Yii::app()->baseUrl . '/san-giao-dich/danh-sach-tin-dang');
             }
         }
 
