@@ -31,6 +31,6 @@
 				</table>
 			</div>
 		<?php $i++; endforeach?>
-		</div>
+	</div>
 	</div>
 </div>
