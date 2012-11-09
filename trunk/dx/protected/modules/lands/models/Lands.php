@@ -85,26 +85,15 @@ class Lands extends CActiveRecord {
      * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
      */
     public function search() {
-        // Warning: Please modify the following code to remove attributes that
-        // should not be searched.
 
         $criteria = new CDbCriteria;
-
-        $criteria->compare('record_id', $this->record_id);
-        $criteria->compare('postdate', $this->postdate, true);
-        $criteria->compare('pic_thumb', $this->pic_thumb, true);
-        $criteria->compare('pic_full', $this->pic_full, true);
-        $criteria->compare('pic_desc', $this->pic_desc, true);
-        $criteria->compare('record_order', $this->record_order);
-        $criteria->compare('price', $this->price, true);
-        $criteria->compare('hot', $this->hot);
-        $criteria->compare('specials', $this->specials);
-        $criteria->compare('enable', $this->enable);
+       // $criteria->compare('price', $this->price, true);
+        
         $criteria->compare('hoiit_module_item_cat_cat_id', $this->hoiit_module_item_cat_cat_id);
+        $criteria->compare('hoiit_module_lands_provinces_province_id', $this->hoiit_module_lands_provinces_province_id);
+        $criteria->compare('hoiit_module_item_type_type_id', $this->hoiit_module_item_type_type_id);
 
-        return new CActiveDataProvider($this, array(
-            'criteria' => $criteria,
-        ));
+        return $this->findAll($criteria);
     }
 
     public function searchLands(){

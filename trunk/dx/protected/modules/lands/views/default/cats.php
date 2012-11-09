@@ -33,7 +33,7 @@ $this->setDescription($info_cat['description']) ?>
                     <h2 class="title-pro">
                     <?php echo CHtml::link($item->LandsLanguage[Yii::app()->language]['title'], array($this->setLangUrl() . '/san-giao-dich/' . $item->LandsCat->LandsCatLanguage[Yii::app()->language]['tag'] . '/' . $item->LandsLanguage[Yii::app()->language]['tag'] . '.html'), array('title' => $item->LandsLanguage[Yii::app()->language]['title'])); ?>
                     </h2>
-        <?php echo ($item['unit']) ? '<p class="price">' . $item['unit'] . '</p>' : '' ?>
+        <?php echo ($item['price']) ? '<p class="price">' . $item['price'] . '</p>' : '' ?>
                     <p class="bton-cart"><a href="product-info.html" class="add-to-cart" title="Add to Cart"><span>Add to Cart</span></a></p>
                 </div>
             </li>
