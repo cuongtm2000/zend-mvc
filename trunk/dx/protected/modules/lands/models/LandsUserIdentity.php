@@ -14,7 +14,7 @@ class LandsUserIdentity extends CUserIdentity {
             $this->errorCode = self::ERROR_NONE;
             $this->_id = $user->username;
 			// Store the role in a session:
-            //$this->setState('role', $user->role);
+            $this->setState('user_role', $user->user_role);
         }
         return !$this->errorCode;
     }

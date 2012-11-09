@@ -32,16 +32,16 @@ class LandsUsers extends CActiveRecord {
     public function rules() {
         return array(
             array('username', 'unique'),
-            array('username, password,password2, fullname, email, phone,address ,province', 'required', 'on' => 'register'),
+            array('username, password,password2, fullname, email, phone,address ,province, user_role', 'required', 'on' => 'register'),
             array('phone, province', 'numerical', 'integerOnly' => true),
             array('password', 'compare', 'compareAttribute' => 'password2', 'message' => "{attribute} không trùng nhau.", 'on' => 'register'),
-            array('username, fullname, email', 'length', 'max' => 45),
+            array('username, fullname, email, user_role', 'length', 'max' => 45),
             array('password', 'length', 'max' => 32),
             array('username,password', 'length', 'min' => '6', 'message' => "{attribute} quá ngắn (tối thiểu là  {min} ký tự)."),
             array('sexual', 'length', 'max' => 10),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('username, password, fullname, email, phone, province, address, sexual, date_created', 'safe', 'on' => 'search'),
+            array('username, password, fullname, email, phone, province, address, sexual, date_created, user_role', 'safe', 'on' => 'search'),
         );
     }
 
@@ -80,6 +80,7 @@ class LandsUsers extends CActiveRecord {
             $this->phone = $purifier->purify($this->phone);
             $this->address = $purifier->purify($this->address);
             $this->password = md5(md5($this->password));
+            $this->user_role = 'user';
         } else {
             //$this->username = Yii::app()->user->name;            
         }
