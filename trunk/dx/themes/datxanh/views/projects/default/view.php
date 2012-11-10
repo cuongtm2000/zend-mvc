@@ -54,6 +54,7 @@
 		</div>
 		
 		<div id="tab4" class="tab_content">
+			<?php if($item['field1']):?>
 			<div id="galleriffic">
 				<div class="content">
 					<div class="slideshow-container">
@@ -64,22 +65,29 @@
 				<div class="navigation-container">
 					<div id="thumbs" class="navigation">
 						<ul class="thumbs noscript">
-							<?php if($item['field1']):?>
+							
 								  <?php $values = explode('|', $item['field1']);$i=0; foreach($values as $value):?>
 									<li><a class="thumb" name="<?php echo $i?>" href="<?php echo Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/projects/'. $value ?>" title="#<?php echo $i?>"><img src="<?php echo Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/projects/'. $value ?>" alt="#<?php echo $i?>" /></a></li>
 								<?php $i++;endforeach ;?>
-							<?php endif?>
+							
 							
 						</ul>
 					</div>
 				</div>
 			</div>	
+			<?php else:?>
+				Ðang cập nhật...
+			<?php endif?>
 		</div>
 		
 		<div id="tab5" class="tab_content">
 			<div class="clear info-video">
+			<?php if($item['field2']):?>
 				<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/embed-flash.js"></script>
 				<script type="text/javascript">embedyoutube('<?php echo $item['field2']?>',500,315);</script>
+			<?php else:?>
+				Ðang cập nhật...
+			<?php endif?>	
 			</div>
 		</div>
 	</div> <div class="clear"></div>
