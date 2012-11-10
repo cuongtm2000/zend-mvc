@@ -10,7 +10,7 @@
     </select>
     
     <select name="types">
-        <option value="">-- Loại bật động sản --</option>
+        <option value="">-- Loại bất động sản --</option>
 		<?php if(LandsCat::model()->listCats()):?>
         <?php $cat_list = LandsCat::model()->listCats();
         foreach ($cat_list as $value): ?>

@@ -1,1 +1,0 @@
-<div class="box">	<?php if($item):?>		<h3 class="title-panel"><?php echo $item['title']?></h3>		<?php echo $item['content']?>		<?php var_dump($item)?>	<?php endif?></div>
