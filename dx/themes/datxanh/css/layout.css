@@ -86,8 +86,8 @@ a:hover{color:#000;}
 #left-content{float:left; width:231px;padding-top:20px}
 
 /*Sub sản phẩm SGS*/
-.sub-cat{list-style:none;margin:0 0 20px 0;padding:0 0 5px 15px}
-.sub-cat li a{font-weight:bold;display:block;color:#0175BE;background:url(../images/bull.png) no-repeat left 5px; padding:2px 0 2px 15px}
+.sub-cat{list-style:none;margin:0 0 20px 0;padding:0 0 5px 10px}
+.sub-cat li a{font-weight:bold;display:block;color:#0175BE;background:url(../images/bull.png) no-repeat left 5px; padding:2px 0 2px 12px}
 .sub-cat li a:hover{color:#F5821F}
 .sub-cat li ul{list-style:none;padding:0 0 0 15px}
 .sub-cat li ul li{margin:8px 0}

@@ -1,7 +1,7 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id] => array($this->setUrlModule()), $info_cat['cat_title']); ?>
 <?php $this->pageTitle = $info_cat['cat_title'] . ' - ' . $this->lang[$this->module->id]; $this->setDescription($info_cat['description'])?>
     <?php if($items['models']):?>
-    <h2 class="title-right"><span><?php echo $info_cat['cat_title']?></span></h2>
+    <h2 class="title-box"><span><?php echo $info_cat['cat_title']?></span></h2>
 	<ul class="panel-items">
 		<?php foreach($items['models'] as $value):?>
         <li>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2012 at 02:45 AM
+-- Generation Time: Nov 10, 2012 at 03:34 AM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -80,14 +80,14 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('lands_width_thumb', '300', NULL, 'lands'),
 ('logo_height', '114', NULL, 'banner'),
 ('logo_width', '403', NULL, 'banner'),
-('news_cat_height_thumb', '200', NULL, 'news'),
-('news_cat_width_thumb', '200', NULL, 'news'),
-('news_height_thumb', '200', NULL, 'news'),
+('news_cat_height_thumb', '100', NULL, 'news'),
+('news_cat_width_thumb', '150', NULL, 'news'),
+('news_height_thumb', '100', NULL, 'news'),
 ('news_num_item_cat', '3', NULL, 'news'),
-('news_num_item_hot', '7', '', 'news'),
+('news_num_item_hot', '7', NULL, 'news'),
 ('news_num_item_index', '3', NULL, 'news'),
 ('news_num_item_new', '7', NULL, 'news'),
-('news_width_thumb', '200', NULL, 'news'),
+('news_width_thumb', '150', NULL, 'news'),
 ('products_cat_height_thumb', '200', NULL, 'products'),
 ('products_cat_width_thumb', '200', NULL, 'products'),
 ('products_height_desc', '700', NULL, 'products'),
@@ -99,13 +99,13 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('projects_cat_height_thumb', '165', NULL, 'projects'),
 ('projects_cat_width_thumb', '165', NULL, 'projects'),
 ('projects_height_desc', '700', NULL, 'projects'),
-('projects_height_thumb', '300', NULL, 'projects'),
+('projects_height_thumb', '125', NULL, 'projects'),
 ('projects_num_item_cat', '5', NULL, 'projects'),
 ('projects_num_item_hot', '7', NULL, 'projects'),
 ('projects_num_item_index', '5', NULL, 'projects'),
 ('projects_num_item_new', '7', NULL, 'projects'),
 ('projects_width_desc', '520', NULL, 'projects'),
-('projects_width_thumb', '300', NULL, 'projects'),
+('projects_width_thumb', '165', NULL, 'projects'),
 ('video_cat_height_thumb', '200', NULL, 'video'),
 ('video_cat_width_thumb', '200', NULL, 'video'),
 ('video_height_thumb', '220', NULL, 'video'),
@@ -369,7 +369,15 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about` (
   `field2` varchar(100) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `hoiit_module_about`
+--
+
+INSERT INTO `hoiit_module_about` (`record_id`, `pic_thumb`, `created`, `record_order`, `hot`, `field1`, `field2`, `enable`) VALUES
+(2, NULL, '2012-11-10 01:53:41', 2, 0, NULL, NULL, 1),
+(3, NULL, '2012-11-10 01:54:55', 1, 0, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -391,6 +399,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
   KEY `fk_hoiit_about_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_about_has_hoiit_languages_hoiit_about1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_about_languages`
+--
+
+INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
+(2, 'vi', 'Thông điệp của chủ tịch HĐQT', '<p>Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những “Sản phẩm tốt nhất – Dịch vụ tốt nhất” , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p>Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p>Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p>Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p>Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p>Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p>Trân trọng,</p>', 'thong-diep-cua-chu-tich-hdqt', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những “Sản phẩm tốt nhất – Dịch vụ tốt nhất” , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.', 2, NULL, NULL),
+(3, 'vi', 'Tầm nhìn, sứ mệnh, giá trị cốt lõi', '<p><strong>1. Tầm Nhìn</strong><br />Trở thành một tập đoàn đa ngành nghề, đa sở hữu và đa quốc gia.</p>\r\n<p><strong>2. Sứ Mệnh</strong><br />Đất Xanh hoạt động nhằm cung cấp sản phẩm chất lượng và dịch vụ thương mại tốt nhất, tạo ra giá trị gia tăng cho khách hàng, lợi ích cho nhà đầu tư, cổ đông. Không ngừng nâng cao mức sống cho nhân viên đem lại giá trị lợi ích cho các cổ đông, đóng góp tích cực cho công đồng, góp phần vào sự phát triển kinh tế xã hội của đất nước</p>\r\n<p><strong>3. Giá Trị Cốt Lõi</strong><br />- Sản phẩm hoàn hảo<br />- Dịch vụ hoàn hảo<br />- Chuyên nghiệp - Sáng tạo - Hiệu quả<br />- Đoàn kết và tạo môi trường làm việc thân thiện</p>\r\n<p><strong>4. Triết Lý Kinh Doanh</strong><br />- Luôn thấu hiểu, tạo niềm tin và gìn giữ uy tín với Khách hàng, đối tác và cổ đông<br />- Liên tục đổi mới nhằm đáp ứng tốt nhất nhu cầu của Khách hàng<br />- Thông tin minh bạch kịp thời, chia sẻ thành công cùng Khách hàng, đối tác và cổ đông</p>', 'tam-nhin-su-menh-gia-tri-cot-loi', 'Tầm nhìn, sứ mệnh, giá trị cốt lõi', 3, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -508,7 +524,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('aw3uyqhpz', 1352509443);
+('2tkfze96m', 1352513458),
+('um5er8n46', 1352514854);
 
 -- --------------------------------------------------------
 
@@ -530,8 +547,8 @@ INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
 ('max_visit_day', 1352415600),
 ('max_visit_value', 13),
 ('time_start_today', 1352502000),
-('today_visited', 1),
-('total_visited', 42),
+('today_visited', 4),
+('total_visited', 45),
 ('yesterday_visited', 13);
 
 -- --------------------------------------------------------
@@ -556,7 +573,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_jobs` (
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_hoiit_module_jobs_hoiit_module_jobs_cat_1` (`hoiit_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `hoiit_module_jobs`
+--
+
+INSERT INTO `hoiit_module_jobs` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
+(5, '2012-11-10 02:17:13', 'chinh-sach-nhan-su.JPG', NULL, 5, 0, NULL, NULL, NULL, NULL, NULL, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -576,7 +600,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_jobs_cat` (
   `cat_extra2` varchar(100) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `hoiit_module_jobs_cat`
+--
+
+INSERT INTO `hoiit_module_jobs_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
+(5, 0, '2012-11-10 02:14:57', '', NULL, 0, 5, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -595,6 +626,13 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_jobs_cat_languages` (
   KEY `fk_hoiit_module_jobs_cat_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_jobs_cat_has_hoiit_languages_hoiit_module_ne1` (`cat_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_jobs_cat_languages`
+--
+
+INSERT INTO `hoiit_module_jobs_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
+(5, 'vi', 'Chính sách tuyển dụng', '', 'chinh-sach-tuyen-dung', '');
 
 -- --------------------------------------------------------
 
@@ -617,6 +655,13 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_jobs_languages` (
   KEY `fk_hoiit_module_jobs_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_jobs_has_hoiit_languages_hoiit_module_jobs1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_jobs_languages`
+--
+
+INSERT INTO `hoiit_module_jobs_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
+(5, 'vi', 'Chính sách nhân sự', '<p>Chính sách nhân sự đất xanh hoàn cầu</p>', '<p>1. Đào tạo và phát triển<br />Đào tạo và phát triển là phương châm của Đất Xanh nhằm tạo ra những nhân tài, những nhà quản lý tài ba.<br />Những ngày đầu đến với Đất Xanh, bạn sẽ được tham gia vào lớp huấn luyện hội nhập cùng những giảng viên là Ban lãnh đạo của Tập đoàn.<br />Bên cạnh đó Tập đoàn còn tổ chức các lớp nâng cao kỹ năng nghề nghiệp được tổ chức theo định kỳ trong và ngoài nước nhằm bổ sung và nâng cao chuyên môn cho nhân viên và đào tạo cán bộ quản lý kế thừa.</p>\r\n<p>2. Môi trường làm việc Trẻ - Năng động</p>\r\n<p>Chúng tôi không ngừng cải thiện môi trường làm việc, điều kiện làm việc để tạo sự thoái mái nhất cho CBNV khi làm việc tại Đất Xanh</p>\r\n<p>Khi bạn đến với Đất Xanh bạn sẽ ngạc nhiên về một đội ngũ trẻ - năng động – nhiệt huyết – tự tin và đặc biệt rất hòa đồng và thân thiện.</p>\r\n<p>3. Tăng lương và khen thưởng:</p>\r\n<p>Tăng lương: Định kỳ xét tăng lương theo định kỳ 6 tháng/lần. Tỷ lệ xét tăng lương dựa trên hiệu quả làm việc của 6 tháng liền kề.<br />Khen thưởng: Thưởng tháng lương thứ 13 luôn luôn đứng đầu so với các Công ty cùng ngành nghề; thưởng theo thành tích công tác hàng tháng và đột xuất theo kết quả làm việc. Ngoài ra, thưởng định kỳ các dịp lễ, tết: Tết dương lịch, Lễ độc lập, Lễ quốc khánh 2/9,…</p>\r\n<p>4. Phúc lợi ngoài lương:</p>\r\n<p><br />1. Đào tạo và phát triển<br />Đào tạo và phát triển là phương châm của Đất Xanh nhằm tạo ra những nhân tài, những nhà quản lý tài ba.<br />Những ngày đầu đến với Đất Xanh, bạn sẽ được tham gia vào lớp huấn luyện hội nhập cùng những giảng viên là Ban lãnh đạo của Tập đoàn.<br />Bên cạnh đó Tập đoàn còn tổ chức các lớp nâng cao kỹ năng nghề nghiệp được tổ chức theo định kỳ trong và ngoài nước nhằm bổ sung và nâng cao chuyên môn cho nhân viên và đào tạo cán bộ quản lý kế thừa.</p>\r\n<p>2. Môi trường làm việc Trẻ - Năng động</p>\r\n<p>Chúng tôi không ngừng cải thiện môi trường làm việc, điều kiện làm việc để tạo sự thoái mái nhất cho CBNV khi làm việc tại Đất Xanh</p>\r\n<p>Khi bạn đến với Đất Xanh bạn sẽ ngạc nhiên về một đội ngũ trẻ - năng động – nhiệt huyết – tự tin và đặc biệt rất hòa đồng và thân thiện.</p>\r\n<p>3. Tăng lương và khen thưởng:</p>\r\n<p>Tăng lương: Định kỳ xét tăng lương theo định kỳ 6 tháng/lần. Tỷ lệ xét tăng lương dựa trên hiệu quả làm việc của 6 tháng liền kề.<br />Khen thưởng: Thưởng tháng lương thứ 13 luôn luôn đứng đầu so với các Công ty cùng ngành nghề; thưởng theo thành tích công tác hàng tháng và đột xuất theo kết quả làm việc. Ngoài ra, thưởng định kỳ các dịp lễ, tết: Tết dương lịch, Lễ độc lập, Lễ quốc khánh 2/9,…</p>\r\n<p>4. Phúc lợi ngoài lương:</p>\r\n<p>Ngoài khoản thu nhập từ tiền lương, chúng tôi còn có các trợ cấp, ưu đãi và tặng quà cho CBNV như sau:<br />Tặng quà Tết nguyên đán; tết trung thu; Nhân viên Nữ vào ngày Quốc tế Phụ Nữ 8/3, 20/10; Ngày Quốc tế thiếu nhi 1/6 (cho con của CBNV: từ 1 tuổi đến 15 tuổi, không giới hạn số con)<br />Ngoài ra, các nhân viên còn được phụ cấp thêm tiền ăn trưa, chi phí gởi xe và tùy theo cấp bậc nhân viên còn có các khoản phụ cấp như: chi phí điện thoại di động, máy điện thoại di động, công tác phí, chi phí đi lại</p>\r\n<p>Nhằm ổn định đời sống, yên tâm công tác và gắn bó lâu dài của CBNV với Tập Đoàn. Mục tiêu của chính sách phúc lợi đảm bảo lợi ích xứng đáng hài hòa tùy theo khả năng đóng góp của CBNV với Tập Đoàn.</p>\r\n<p>Hỗ trợ nhà ở: Mua nhà của Tập Đoàn với giá có thể giảm đến 15% so với giá bán của thị trường. CBNV chỉ phải trả trước 50% giá trị căn nhà theo tiến độ xây dựng, 50% còn lại trả góp trong vòng 5 năm kể từ ngày nhận nhà mà không phải trả lãi suất.</p>\r\n<p>Tặng nhà: Dành cho những CBNV có nhiều thành tích, có sự gắn bó lâu dài với Tập Đoàn.<br />Thưởng cổ phiếu cho CBNV: Dành cho những CBNV có nhiều thành tích, có sự gắn bó lâu dài với Tập Đoàn.<br />Cung cấp các dịch vụ thể thao miễn phí hàng tuần cho CBNV và thường xuyên tổ chức các cuộc tranh tài về thể thao để CBNV giao lưu và rèn luyện sức khỏe.</p>\r\n<p>5. Du lịch:</p>\r\n<p>Chính sách du lịch trong nước và ngoài nước: 1-2 lần/năm, tùy theo từng thời điểm kinh doanh của Tập Đoàn.</p>\r\n<p>6. Chia sẻ trách nhiệm với xã hội</p>\r\n<p>Tinh thần nhân ái với tất cả mọi người trong một cộng đồng xã hội. Điều làm nên phẩm chất của một con người là tấm lòng yêu thương cao thượng. Hãy thể hiện là một con người của một xã hội hiện đại với những hoạt động xã hội nhằm tạo thêm niềm vui cho tất cả mọi người khốn khó quanh ta. Phẩm chất đạo đức quí giá này được Đất Xanh trân trọng và đó cũng là một trong những giá trị mà chúng tôi mong muốn cho từng các thành viên trong Đại gia đình Đất Xanh.</p>', 'chinh-sach-nhan-su', 'Chính sách nhân sự đất xanh hoàn cầu', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -917,7 +962,15 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news` (
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_hoiit_module_news_hoiit_module_news_cat_1` (`hoiit_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `hoiit_module_news`
+--
+
+INSERT INTO `hoiit_module_news` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
+(3, '2012-11-10 01:59:46', 'bianfishco-co-tong-giam-doc-moi.jpg', NULL, 3, 0, NULL, NULL, NULL, NULL, NULL, 1, 3),
+(4, '2012-11-10 02:13:34', 'hoa-khoi-at-xanh-2012-tu-tin-de-toa-sang.jpg', NULL, 4, 0, NULL, NULL, NULL, NULL, NULL, 1, 4);
 
 -- --------------------------------------------------------
 
@@ -937,7 +990,15 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_cat` (
   `cat_extra2` varchar(100) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `hoiit_module_news_cat`
+--
+
+INSERT INTO `hoiit_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
+(3, 0, '2012-11-10 01:57:08', '', NULL, 0, 4, NULL, NULL, 1),
+(4, 0, '2012-11-10 01:57:17', '', NULL, 0, 3, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -956,6 +1017,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_cat_languages` (
   KEY `fk_hoiit_module_news_cat_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_news_cat_has_hoiit_languages_hoiit_module_ne1` (`cat_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_news_cat_languages`
+--
+
+INSERT INTO `hoiit_module_news_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
+(3, 'vi', 'Tin thị trường', '', 'tin-thi-truong', 'Tin thị trường'),
+(4, 'vi', 'Tin tiêu điểm', '', 'tin-tieu-diem', 'Tin tiêu điểm');
 
 -- --------------------------------------------------------
 
@@ -978,6 +1047,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_languages` (
   KEY `fk_hoiit_module_news_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_news_has_hoiit_languages_hoiit_module_news1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_news_languages`
+--
+
+INSERT INTO `hoiit_module_news_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
+(3, 'vi', 'Bianfishco có tổng giám đốc mới', '<p>(ĐTCK) Ngày 7/11, HĐQT CTCP Thủy sản Bình An (Bianfishco) đã có nghị quyết bổ nhiệm ông Nguyễn Tất Thắng làm Tổng giám đốc Công ty.</p>', '<p><strong>(ĐTCK) Ngày 7/11, HĐQT CTCP Thủy sản Bình An (Bianfishco) đã có nghị quyết bổ nhiệm ông Nguyễn Tất Thắng làm Tổng giám đốc Công ty.</strong></p>\r\n<p style="text-align:center;"><strong><img src="/datxanh/public/userfiles/image/2012110907ba.jpg" alt="" width="620" height="337" /><br /></strong></p>\r\n<p>Sinh năm 1960, ông Nguyễn Tất Thắng có nhiều năm quản lý, điều hành các doanh nghiệp sản xuất quy mô lớn.<br />Ngày 7/11/2012, Bianfishco tiếp tục trả nợ nông dân, nâng tổng số tiền trả nợ chi trả lên hơn 178 tỷ đồng, tương ứng 75% tổng số nợ nông dân. Hoạt động của Bianfishco đang dần hồi sinh, đi vào ổn định. Các hộ nông dân nuôi cá đã tin tưởng và tiếp tục cung cấp nguyên liệu đầu vào cho Bianfishco.</p>\r\n<p>Sau đại hội cổ đông ngày 17/10, một tuần sau ông Trần Văn Trí (áo xanh đậm) từ nhiệm Tổng giám đốc, giao quyền điều hành Công ty Bình An cho bầu Hiển (cầm micro). Hiện Công ty Bình An đã có Tổng giám đốc mới. Ảnh: Vnexpress</p>\r\n<p>Trong tháng 10/2012, lần đầu tiên Bianfishco trực tiếp mua cá tra với số lượng lớn để chế biến đông lạnh xuất khẩu. Hợp đồng ký kết lên đến 700 tấn cá tra nguyên liệu, đáp ứng nguồn nguyên liệu chế biến theo các đơn đặt hàng của đối tác ngoại.</p>\r\n<p>Hiện Nhà máy đang chế biến với công suất 2 container/ngày, phục vụ 70 đơn hàng xuất khẩu đã ký kết với các khách hàng ở thị trường Mỹ, Trung Đông, châu Âu, dự kiến, đến 31/12/2012 sẽ xuất khẩu 300 container vào các thị trường trên.</p>\r\n<p>Bên cạnh thị trường xuất khẩu, Bianfishco chú trọng phát triển thị trường tiêu thụ trong nước. Đây là hướng đi mới nhằm đa dạng hóa thị trường, tăng nguồn thu cho Bianfishco.</p>', 'bianfishco-co-tong-giam-doc-moi', 'Bên cạnh thị trường xuất khẩu, Bianfishco chú trọng phát triển thị trường tiêu thụ trong nước. Đây là hướng đi mới nhằm đa dạng hóa thị trường, tăng nguồn thu cho Bianfishco.', 0, NULL, NULL),
+(4, 'vi', 'Hoa khôi Đất Xanh 2012: Tự tin để tỏa sáng', '<p>Vừa qua, Tập đoàn Đất Xanh đã tổ chức vòng sơ tuyển cuộc thi Hoa khôi Đất Xanh 2012 với chủ đề “Tự tin để tỏa sáng”</p>', '<p>Vừa qua, Tập đoàn Đất Xanh đã tổ chức vòng sơ tuyển cuộc thi Hoa khôi Đất Xanh 2012 với chủ đề “Tự tin để tỏa sáng”. Vòng thi sơ tuyển đã quy tụ được hơn 25 thí sinh thuộc các đơn vị thành viên và đông đảo cổ động viên tham gia cổ vũ cho các thí sinh. Tham gia chấm thi vòng sơ tuyển có bà Phạm Thị Minh Hiếu, Giám đốc sàn 27 Đinh Bộ Lĩnh, Ông Thạch Mạnh Sang, Giám đốc Nhân sự Tập đoàn Đất Xanh và Ông Lê Vĩnh Lữ, giám đốc Marketing Tập đoàn Đất Xanh.</p>', 'hoa-khoi-dat-xanh-2012-tu-tin-de-toa-sang', 'Vừa qua, Tập đoàn Đất Xanh đã tổ chức vòng sơ tuyển cuộc thi Hoa khôi Đất Xanh 2012 với chủ đề “Tự tin để tỏa sáng”', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1175,7 +1252,16 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects` (
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_hoiit_module_pro_hoiit_module_pro_cat_1` (`hoiit_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+
+--
+-- Dumping data for table `hoiit_module_projects`
+--
+
+INSERT INTO `hoiit_module_projects` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
+(13, '2012-11-10 02:21:15', 'sunview-3-apartment.jpg', NULL, 13, 0, NULL, NULL, '', NULL, NULL, 1, 4),
+(14, '2012-11-10 02:27:36', 'gold-hill.jpg', 'gold-hill-desc-1.jpg|gold-hill-desc-2.jpg|gold-hill-desc-3.jpg', 14, 0, NULL, 'gold-hill-slide-1.jpg|gold-hill-slide-2.jpg|gold-hill-slide-3.jpg|gold-hill-slide-4.jpg|gold-hill-slide-5.jpg|gold-hill-slide-6.jpg', 'http://youtu.be/mFcHOQq5gDA', NULL, NULL, 1, 4),
+(15, '2012-11-10 02:34:09', 'ph-gia-hng-apartment.jpg', 'ph-gia-hng-apartment--desc-1.jpg|ph-gia-hng-apartment--desc-2.jpg|ph-gia-hng-apartment--desc-3.jpg|ph-gia-hng-apartment--desc-4.jpg|ph-gia-hng-apartment--desc-5.jpg', 15, 0, NULL, 'ph-gia-hng-apartment--slide-1.jpg|ph-gia-hng-apartment--slide-2.jpg|ph-gia-hng-apartment--slide-3.jpg', 'http://youtu.be/ey-7fIRaXQI', NULL, NULL, 1, 4);
 
 -- --------------------------------------------------------
 
@@ -1195,7 +1281,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects_cat` (
   `cat_extra2` varchar(100) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `hoiit_module_projects_cat`
+--
+
+INSERT INTO `hoiit_module_projects_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
+(4, 0, '2012-11-10 02:18:39', 'du-an-lam-chu-dau-tu.jpg', NULL, 0, 4, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -1214,6 +1307,13 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects_cat_languages` (
   KEY `fk_hoiit_module_pro_cat_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_pro_cat_has_hoiit_languages_hoiit_module_ne1` (`cat_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_projects_cat_languages`
+--
+
+INSERT INTO `hoiit_module_projects_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
+(4, 'vi', 'Dự án làm chủ đầu tư', '', 'du-an-lam-chu-dau-tu', 'Dự án làm chủ đầu tư');
 
 -- --------------------------------------------------------
 
@@ -1237,6 +1337,15 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects_languages` (
   KEY `fk_hoiit_module_pro_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_pro_has_hoiit_languages_hoiit_module_pro1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_projects_languages`
+--
+
+INSERT INTO `hoiit_module_projects_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `detail`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
+(13, 'vi', 'Sunview 3 Apartment', '<p>Sunview 3 - Khu thương mại tại tầng 1 cung cấp tổ hợp mua sắm cho gia đình bạn. Hơn thế nữa, hồ bơi, nhà trẻ, phòng tập thể thao….cùng hơn 4000m2 khuôn viên đất công viên và giao thông nội khu tạo nên tiện ích hiếm có ở một dự án cao ốc nội thành.</p>', '<p>Diện tích đất: 6400m2<br />Diện tích sàn xây dựng: 43,332 m2<br />Mật độ xây dựng 46,5%<br />Gồm 3 block có 619 căn hộ</p>\r\n<p>Diện tích căn hộ từ: 45 m2 – 81m2Khu thương mại tại tầng 1 cung cấp tổ hợp mua sắm cho gia đình bạn. Hơn thế nữa, nhà trẻ, phòng tập thể thao….cùng hơn 4000m2 khuôn viên đất công viên và giao thông nội khu tạo nên tiện ích hiếm có ở một dự án cao ốc nội thành.</p>\r\n<p>Căn hộ SUNVIEW 3 được thiết kế tầng hầm với 5,423 m2 rộng thoáng đủ sức chứa các loại xe hơi và xe gắn máy của cư dân.<br />Hệ thống quản lý chuyên nghiệp. Thang máy ngoại nhập tốc độ cao. Thiết bị phòng cháy chữa cháy đạt tiêu chuẩn. Hệ thống thông gió và điều hòa không khí được trang bị cho cả tòa nhà. Hệ thống xử lý rác thải khoa học.<br />Hệ thống cáp truyền hình, internet, điện thoại được lắp đặt sẵn tại các căn hộ.<br />An ninh tòa nhà được đảm bảo 24/24 bởi đội ngũ nhân viên chuyên nghiệp và tận tình.</p>\r\n<p>PHONG CÁCH SỐNG:</p>\r\n<p>Lấy cảm hứng từ vầng hào quang rực rỡ và nguồn nặng lượng sống bất diệt của mặt trời, chung cư SUNVIEW 3 có lối thiết kế sang trọng, mang đậm phong cách hiện đại và năng động của đảo quốc Singapore.<br />Các căn hộ đều có tính riêng biệt về không gian nhờsự khéo léo trong bố trí các cửa sổ và ban công.<br />Không gian thông thoáng với chiều cao thoải mái tới 3,3m và khoảng không gian cộng thêm ở cửa sổ để các căn hộ đều được tận dụng tối đa ánh sáng tự nhiên. Thiết bị nội thất trong căn hộ là sản phẩm chất lượng cao và kiểu dáng sang trọng, khiến chủ nhân<br />luôn có cảm giác hài lòng nhất.</p>\r\n<p>THÔNG TIN LIÊN HỆ :</p>\r\n<p>08.35 114 114<br />08.37 113 113<br />08.62 98 98 98<br />08.38 266 366<br />08.62 52 52 52<br />08. 39 80 79 79<br />0933 674 114</p>', '<p>VỊ TRÍ ĐẮC ĐỊA:</p>\r\n<p>Tọa lạc tại trung tâm hành chính Quận Gò Vấp,TP. Hồ Chí Minh. Dự án SUNVIEW 3 nằm trong khu dân cư hiện hữu, hệ thống giao thông thuận lợi và kết nối nhanh chóng đến: Trung tâm văn hóa thể dục thể thao Gò Vấp, siêu thị Big C, trường ĐH Hồng Bàng, ĐH Công nghiệp TP.HCM, công viên Làng Hoa, sân bay Tân Sơn Nhất, trường mẫu giáo, tiểu học, trung học Nguyễn Công Trứ, bệnh viện quốc tế Hồng Đức, Vũ Anh,...</p>\r\n<p style="text-align:center;"><img src="/datxanh/public/userfiles/image/sodo.jpg" alt="" width="508" height="513" /></p>\r\n<p style="text-align:left;"> </p>', 'sunview-3-apartment', 'Sunview 3 - Khu thương mại tại tầng 1 cung cấp tổ hợp mua sắm cho gia đình bạn. Hơn thế nữa, hồ bơi, nhà trẻ, phòng tập thể thao….cùng hơn 4000m2 khuôn viên đất công viên và giao thông nội khu tạo nên tiện ích hiếm có ở một dự án cao ốc nội thành.', 0, NULL, NULL),
+(14, 'vi', 'Gold Hill', '<p>Tọa lạc tại trung tâm thị trấn Trảng Bom, Dự án Gold Hill thừa hưởng được các lợi thế từ vùng quy hoạch mang lại. Nằm liền kề sân Gofl Đồng Nai rộng 260ha và Hồ Sông Mây với 360ha mặt nước, điều hòa không khí cho cả khu vực.</p>', '<p style="text-align:center;"><strong>GOLD HILL - Nơi chốn bình yên, bến đổ hạnh phúc</strong></p>\r\n<p>Gold Hill tọa lạc tại đường Ngô Quyền, thị trấn Trảng Bom, tỉnh Đồng Nai. Tổng diện tích dự án là 26,5 ha.<br />Trong đó:<br />Nhà liên kế TM: 23.11%<br />Nhà liên kế vườn: 18.38% (*)<br />Biệt thự song lập : 13.18%<br />Biệt thự đơn lập: 7.44%<br />Công viên cây xanh: 6.75%<br />Các công trình công cộng: 6.25%<br />Đất giao thông nội bộ: 24.89%</p>\r\n<p>(*) Khu nhà liên kế vườn được định vị cao cấp, thiết kế bởi các vật liệu thân thiện môi trường, đầy đủ trang thiết bị hiện đại và bố trí giữa những mảng xanh công viên, thảm cỏ dịu mát.</p>\r\n<p>Dự án Gold Hill có vị trí chiến lược, nằm trong khu đô thị vệ tinh kiểu mẫu, là cửa ngõ phía Đông Tp. Biên Hòa, kết nối giao thông thuận tiện tới Tp.HCM và các tỉnh lân cận.</p>\r\n<p>Trong năm 2012, Tập Đoàn Đất Xanh đã tập trung và kiến tạo Khu Đô thị Gold Hill trở thành tâm điểm của chiến lược phát triển đô thị Trảng Bom lên thị xã trong tương lai của tỉnh Đồng Nai.</p>\r\n<p>Website dự án: WWW.GOLDHILL.VN<br />Hotline: 0938. 11. 06. 06</p>', '<p>Tọa lạc tại trung tâm thị trấn Trảng Bom, Dự án Gold Hill thừa hưởng được các lợi thế từ vùng quy hoạch mang lại.<br />Nằm liền kề sân Gofl Đồng Nai rộng 260ha và Hồ Sông Mây với 360ha mặt nước, điều hòa không khí cho cả khu vực.<br />Gold Hill có vị trí vô cùng thuận tiện về giao thông khi cách quốc lộ 1A 700m, cách Tp. Biên Hòa 8km, cách Tp. HCM 45km.<br />Hơn nữa, Gold Hill nằm trong khu vực và cách dự án trọng điểm như đường cao tốc Tp. Hồ Chí Minh - Long<br />Thành - Dầu Giây – 12km, sân bay quốc tế Long Thành - 13km, đường vành đai 4 khoảng 6km.<br />Xung quanh dự án, đầy đủ các tiện ích hiện hữu như: trường THPT Thống Nhất A là trường điểm của huyện, các trường THPT tư thục như: THPT Trần Đại Nghĩa, THPT Trần Quốc Tuấn, THPT Văn Lang; UBND huyện Trảng<br />Bom; Bệnh viện đa khoa Trảng Bom; Trung tâm TDTT; Khu thương mại dịch vụ; Nhà hàng; Spa; Ngân hàng,…</p>', 'gold-hill', 'Tọa lạc tại trung tâm thị trấn Trảng Bom, Dự án Gold Hill thừa hưởng được các lợi thế từ vùng quy hoạch mang lại. Nằm liền kề sân Gofl Đồng Nai rộng 260ha và Hồ Sông Mây với 360ha mặt nước, điều hòa không khí cho cả khu vực.', 0, NULL, NULL),
+(15, 'vi', 'PHÚ GIA HƯNG APARTMENT', '<p>Tọa lạc gần trung tâm Quận Gò Vấp, liền kề với khu dân cư hiện hữu, Phú Gia Hưng Apartment có một vị trí đắc địa, giao thông thuận tiện và đầy đủ các tiện ích xung quanh.</p>', '<p>Tổng Quan Dự Án</p>\r\n<p>- Tổng diện tích dự án: 4.533,1m2<br />- Diện tích đất xây dựng: 1. 414 m2<br />- Mật độ xây dựng: 31%<br />- Các công trình công cộng và cây xanh : 69%<br />- Tổng diện tích sàn xây dựng: 23.562,2 m2<br />- Quy mô: 1 khối nhà cao 14 tầng + 1 tầng lửng + 1 tầng hầm<br />- Tổng số căn hộ: 234 căn hộ<br />- Địa điểm : Phường 15 – Quận Gò Vấp - TP.HCM.<br />- Chủ đầu tư: Công ty Hà Thuận Hùng – Thành viên của Dat Xanh Corporation</p>', '<p>Sơ đồ vị trí dự án</p>\r\n<p>Tọa lạc gần trung tâm Quận Gò Vấp, liền kề với khu dân cư hiện hữu, Phú Gia Hưng Apartment có một vị trí đắc địa, giao thông thuận tiện và đầy đủ các tiện ích xung quanh</p>\r\n<p style="text-align:center;"><img src="/datxanh/public/userfiles/image/VITRI_550.jpg" alt="" width="550" height="390" /></p>\r\n<p>Vị trí chiến lược</p>\r\n<p>- Tọa lạc gần trung tâm Quận Gò Vấp.<br />- Liền kề khu quy hoạch Sài Gòn Coop.<br />- Cách bệnh viện đa khoa Gò Vấp 500m.<br />- Cách trung tâm văn hóa Quận Gò Vấp 1km.<br />- Cách siêu thị Big C, siêu thị Coop Mart và nhà sách Văn Lang khoảng 1km.<br />- Cách nhà thiếu nhi Quận Gò Vấp 1,5km.<br />- Cách trường đại học Hồng Bàng 2km.<br />- Cách bệnh viện đa khoa quốc tế Vũ Anh 2km.<br />- Cách sân bay Tân Sơn Nhất khoảng 3km<br />- Cách trung tâm Quận 1 khoảng 6km.</p>\r\n<p style="text-align:center;"><img src="/datxanh/public/userfiles/image/VITRICHIENLUOC.jpg" alt="" width="550" height="390" /></p>', 'phu-gia-hung-apartment', '', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
