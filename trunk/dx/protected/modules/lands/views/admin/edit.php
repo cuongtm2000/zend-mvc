@@ -113,9 +113,9 @@
 	<div class="clear space"></div>
 	<?php endforeach; ?>
 
-    <div class="col1"><?php echo $form->labelEx($model, 'unit') ?></div>
+    <div class="col1"><?php echo $form->labelEx($model, 'price') ?></div>
     <div class="col2">
-        <?php echo $form->textField($model, 'unit', array('class' => 'txt-very-large')); ?>
+        <?php echo $form->textField($model, 'price', array('class' => 'txt-very-large')); ?>
     </div>
     <div class="clear space"></div>
 
