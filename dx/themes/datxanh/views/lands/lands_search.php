@@ -11,18 +11,22 @@
     
     <select name="types">
         <option value="">-- Loại bật động sản --</option>
+		<?php if(LandsCat::model()->listCats()):?>
         <?php $cat_list = LandsCat::model()->listCats();
         foreach ($cat_list as $value): ?>
             <option value="<?php echo $value['cat_id'] ?>"><?php echo $value['cat_title'] ?></option>
         <?php endforeach ?>
+		<?php endif;?>
    
     </select>
     <select name="types">
         <option value="">-- Nhu cầu --</option>
+		<?php if(LandsType::model()->listTypes()):?>
         <?php $type_list = LandsType::model()->listTypes();
         foreach ($type_list as $value): ?>
             <option value="<?php echo $value['type_id'] ?>"><?php echo $value['type_name'] ?></option>
         <?php endforeach ?>
+		<?php endif;?>
     </select>
     <select name="price">
         <option value="">-- Mức giá --</option>

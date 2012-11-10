@@ -2,10 +2,10 @@
 -- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Nov 10, 2012 at 02:58 AM
--- Server version: 5.5.16
--- PHP Version: 5.3.8
+-- Host: 127.0.0.1
+-- Generation Time: Nov 10, 2012 at 02:45 AM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -54,12 +54,12 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('banner_height_default', '270', NULL, 'banner'),
 ('banner_width', '940', NULL, 'banner'),
 ('banner_width_default', '930', NULL, 'banner'),
-('contact_email_received', 'thanhansoft@gmail.com', NULL, 'contact'),
+('contact_email_received', 'datxanhhoancau@gmail.com', NULL, 'contact'),
 ('contact_host', 'smtp.gmail.com', NULL, 'contact'),
 ('contact_password', 'assas', NULL, 'contact'),
 ('contact_port', '465', NULL, 'contact'),
 ('contact_send_mail_smtp', '1', NULL, 'contact'),
-('contact_username', 'thanhansoft', NULL, 'contact'),
+('contact_username', 'datxanhhoancau', NULL, 'contact'),
 ('jobs_cat_height_thumb', '200', NULL, 'jobs'),
 ('jobs_cat_width_thumb', '200', NULL, 'jobs'),
 ('jobs_height_thumb', '200', NULL, 'jobs'),
@@ -105,7 +105,11 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('projects_num_item_index', '5', NULL, 'projects'),
 ('projects_num_item_new', '7', NULL, 'projects'),
 ('projects_width_desc', '520', NULL, 'projects'),
-('projects_width_thumb', '300', NULL, 'projects');
+('projects_width_thumb', '300', NULL, 'projects'),
+('video_cat_height_thumb', '200', NULL, 'video'),
+('video_cat_width_thumb', '200', NULL, 'video'),
+('video_height_thumb', '220', NULL, 'video'),
+('video_width_thumb', '220', NULL, 'video');
 
 -- --------------------------------------------------------
 
@@ -148,7 +152,8 @@ INSERT INTO `hoiit_functions` (`function_value`, `function_name`, `function_clas
 ('new_poll', 'Poll', '', 'getFirstItem', 'poll'),
 ('projects_hot', 'Projects', '', 'listItemsHot', 'projects'),
 ('projects_hot_horizontal', 'Projects', '', 'listItemsHot', 'projects'),
-('projects_new', 'Projects', '', 'listItemsNew', 'projects');
+('projects_new', 'Projects', '', 'listItemsNew', 'projects'),
+('video_hot', 'Video', '', 'itemHot', 'video');
 
 -- --------------------------------------------------------
 
@@ -246,6 +251,7 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('synchronous', 'Đồng bộ', 1, 'vi'),
 ('title', 'Title', 1, 'en'),
 ('title', 'Tiêu đề', 1, 'vi'),
+('video', 'Video', 0, 'vi'),
 ('view', 'View', 1, 'en'),
 ('view', 'Lượt xem', 1, 'vi');
 
@@ -304,7 +310,8 @@ INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_url`, `module_
 ('poll', 'Danh sách', 'poll', 7, 1, 1),
 ('products', 'Danh mục|Danh sách|Cấu hình', 'products/cat|products|products/config', 3, 1, 1),
 ('projects', 'Danh mục|Danh sách|Cấu hình', 'projects/cat|projects|projects/config', 4, 1, 1),
-('support', 'Danh sách', 'support', 6, 1, 0);
+('support', 'Danh sách', 'support', 6, 1, 0),
+('video', 'Danh mục|Danh sách|Cấu hình', 'video/cat|video|video/config', 3, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -364,13 +371,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about` (
   PRIMARY KEY (`record_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
---
--- Dumping data for table `hoiit_module_about`
---
-
-INSERT INTO `hoiit_module_about` (`record_id`, `pic_thumb`, `created`, `record_order`, `hot`, `field1`, `field2`, `enable`) VALUES
-(1, NULL, '2012-11-03 07:18:09', 1, 0, NULL, NULL, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -391,13 +391,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
   KEY `fk_hoiit_about_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_about_has_hoiit_languages_hoiit_about1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_about_languages`
---
-
-INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(1, 'vi', 'Giới thiệu đất xanh', '<p>Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p>Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p>Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p>Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p>Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p>Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p>Trân trọng,</p>', 'gioi-thieu-dat-xanh', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những "Sản phẩm tốt nhất – Dịch vụ tốt nhất" , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh', 47, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -421,18 +414,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_advs` (
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
-
---
--- Dumping data for table `hoiit_module_advs`
---
-
-INSERT INTO `hoiit_module_advs` (`record_id`, `title`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `click`, `enable`) VALUES
-(1, 'Quảng cáo trái', 'quang-cao-trai.jpg', '', '2012-11-03 01:53:13', '2012-11-02 17:00:00', '2012-11-30 17:00:00', 0, 1, 'left', '_bank', 0, 1),
-(2, 'Quảng cáo trái', 'quang-cao-trai-4.jpg', '', '2012-11-03 02:00:36', '2012-11-02 17:00:00', '2012-12-07 17:00:00', 0, 2, 'left', '_bank', 0, 1),
-(3, 'Quảng cáo bên phải', 'quang-cao-ben-phai.jpg', '', '2012-11-03 09:28:47', '2012-11-02 17:00:00', '2012-11-30 17:00:00', 0, 3, 'right', '_bank', 0, 1),
-(4, 'viet a bank', 'viet-a-bank.png', '', '2012-11-06 02:54:53', '2012-11-05 16:00:00', '2012-12-27 16:00:00', 0, 4, 'bottom', '_bank', 0, 1),
-(5, 'vietcom bank', 'vietcom-bank.png', '', '2012-11-06 02:55:15', '2012-11-05 16:00:00', '2012-12-25 16:00:00', 0, 5, 'bottom', '_bank', 0, 1),
-(6, 'azbank', 'azbank.png', '', '2012-11-06 02:55:30', '2012-11-05 16:00:00', '2012-11-29 16:00:00', 0, 6, 'bottom', '_bank', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -459,8 +440,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_banners` (
 --
 
 INSERT INTO `hoiit_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_picture`, `banner_link`, `banner_order`, `banner_type`, `banner_click`, `module_id`, `enable`) VALUES
-(58, '2012-08-07 09:42:19', '', NULL, NULL, NULL, 'logo', 0, NULL, 1),
-(62, '2012-11-03 03:22:46', 'Banner dự án', 'banner-du-an.jpg', '', 1, 'banner', 0, 'default', 1);
+(58, '2012-08-07 09:42:19', '', NULL, NULL, NULL, 'logo', 0, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -476,15 +456,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_code` (
   `record_type` varchar(45) NOT NULL DEFAULT '0',
   PRIMARY KEY (`record_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
-
---
--- Dumping data for table `hoiit_module_code`
---
-
-INSERT INTO `hoiit_module_code` (`record_id`, `title`, `created`, `record_order`, `record_type`) VALUES
-(5, 'A1', '2012-11-05 07:21:41', 1, 'da-giao-dich'),
-(6, 'A2', '2012-11-05 07:21:47', 2, 'da-dat-cho'),
-(7, 'A3', '2012-11-05 07:21:56', 3, 'chua-giao-dich');
 
 -- --------------------------------------------------------
 
@@ -537,7 +508,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('0f5pwyr7i', 1352466237);
+('aw3uyqhpz', 1352509443);
 
 -- --------------------------------------------------------
 
@@ -558,10 +529,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_value` (
 INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
 ('max_visit_day', 1352415600),
 ('max_visit_value', 13),
-('time_start_today', 1352415600),
-('today_visited', 13),
-('total_visited', 41),
-('yesterday_visited', 2);
+('time_start_today', 1352502000),
+('today_visited', 1),
+('total_visited', 42),
+('yesterday_visited', 13);
 
 -- --------------------------------------------------------
 
@@ -587,13 +558,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_jobs` (
   KEY `fk_hoiit_module_jobs_hoiit_module_jobs_cat_1` (`hoiit_module_item_cat_cat_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
---
--- Dumping data for table `hoiit_module_jobs`
---
-
-INSERT INTO `hoiit_module_jobs` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
-(4, '2012-11-05 03:30:05', '', NULL, 4, 0, NULL, NULL, NULL, NULL, NULL, 1, 4);
-
 -- --------------------------------------------------------
 
 --
@@ -614,14 +578,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_jobs_cat` (
   PRIMARY KEY (`cat_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
---
--- Dumping data for table `hoiit_module_jobs_cat`
---
-
-INSERT INTO `hoiit_module_jobs_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
-(3, 0, '2012-11-05 03:29:04', '', NULL, 0, 3, NULL, NULL, 1),
-(4, 0, '2012-11-05 03:29:11', '', NULL, 0, 4, NULL, NULL, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -639,14 +595,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_jobs_cat_languages` (
   KEY `fk_hoiit_module_jobs_cat_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_jobs_cat_has_hoiit_languages_hoiit_module_ne1` (`cat_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_jobs_cat_languages`
---
-
-INSERT INTO `hoiit_module_jobs_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
-(3, 'vi', 'asaas', '', 'asaas', 'asaasas'),
-(4, 'vi', 'asas', '', 'asas', 'assa');
 
 -- --------------------------------------------------------
 
@@ -669,13 +617,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_jobs_languages` (
   KEY `fk_hoiit_module_jobs_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_jobs_has_hoiit_languages_hoiit_module_jobs1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_jobs_languages`
---
-
-INSERT INTO `hoiit_module_jobs_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(4, 'vi', 'sasasa', '<p>asassasa</p>', '<p>saassasa</p>', 'sasasa', '', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -709,14 +650,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_lands` (
   KEY `username` (`username`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
---
--- Dumping data for table `hoiit_module_lands`
---
-
-INSERT INTO `hoiit_module_lands` (`record_id`, `postdate`, `pic_thumb`, `pic_full`, `pic_desc`, `record_order`, `price`, `hot`, `specials`, `contact_name`, `contact_tel`, `enable`, `hoiit_module_item_cat_cat_id`, `hoiit_module_item_type_type_id`, `hoiit_module_lands_provinces_province_id`, `username`, `hits`, `keys`) VALUES
-(6, '2012-11-09 08:09:03', 'can-mua-nha-thumb.jpg', 'can-mua-nha.jpg', 'can-mua-nha1.gif|can-mua-nha2.jpg', 6, 123456, 0, NULL, 'thanhansoft', '0929123456', 1, 4, 2, 19, 'thanhansoft', 0, ''),
-(7, '2012-11-09 08:10:40', '', '', 'tin-can-mua-nha-dat-nen1.jpg|tin-can-mua-nha-dat-nen2.jpg', 7, 123456789, 0, NULL, 'thanhansoft', '0929123456', 1, 5, 1, 3, 'thanhansoft', 0, '');
-
 -- --------------------------------------------------------
 
 --
@@ -737,16 +670,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_lands_cat` (
   PRIMARY KEY (`cat_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
---
--- Dumping data for table `hoiit_module_lands_cat`
---
-
-INSERT INTO `hoiit_module_lands_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
-(4, 0, '0000-00-00 00:00:00', '', NULL, 0, 4, NULL, NULL, 1),
-(5, 0, '0000-00-00 00:00:00', '', NULL, 0, 3, NULL, NULL, 1),
-(6, 0, '0000-00-00 00:00:00', '', NULL, 0, 2, NULL, NULL, 1),
-(7, 0, '0000-00-00 00:00:00', '', NULL, 0, 1, NULL, NULL, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -765,16 +688,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_lands_cat_languages` (
   KEY `language_id` (`language_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `hoiit_module_lands_cat_languages`
---
-
-INSERT INTO `hoiit_module_lands_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
-(4, 'vi', 'Căn hộ', '', 'can-ho', ''),
-(5, 'vi', 'Đất nền', '', 'dat-nen', ''),
-(6, 'vi', 'Nghĩ dưỡng', '', 'nghi-duong', ''),
-(7, 'vi', 'BĐS khác', '', 'bds-khac', '');
-
 -- --------------------------------------------------------
 
 --
@@ -792,14 +705,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_lands_languages` (
   PRIMARY KEY (`record_id`,`language_id`),
   KEY `language_id` (`language_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_lands_languages`
---
-
-INSERT INTO `hoiit_module_lands_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`) VALUES
-(6, 'vi', 'Cần mua nhà', '<p>Thong tin nha dat</p>', '<p>Mo ta chi tiet</p>', 'can-mua-nha', 'Mo ta từ khóa'),
-(7, 'vi', 'Tin Cần mua nhà đất nền', '<p>asdas</p>', '<p>sadasd</p>', 'tin-can-mua-nha-dat-nen', 'Mo ta');
 
 -- --------------------------------------------------------
 
@@ -928,13 +833,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_lands_users` (
   KEY `province` (`province`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `hoiit_module_lands_users`
---
-
-INSERT INTO `hoiit_module_lands_users` (`username`, `password`, `fullname`, `email`, `phone`, `province`, `address`, `sexual`, `date_created`, `user_role`, `enable`) VALUES
-('thanhansoft', 'cf874b7edfbc56e93223838850fd16dd', 'An', 'thanhansoft@gmail.com', 929001001, 7, 'Biên Hoa - Đồng Nai', 'Nữ', '2012-11-09 07:32:10', 'staff', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -1021,14 +919,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news` (
   KEY `fk_hoiit_module_news_hoiit_module_news_cat_1` (`hoiit_module_item_cat_cat_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
---
--- Dumping data for table `hoiit_module_news`
---
-
-INSERT INTO `hoiit_module_news` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
-(1, '2012-11-04 06:49:02', 'at-xanh-phan-phoi-doc-quyen-du-an-sunset-sanato.jpg', NULL, 2, 0, NULL, NULL, NULL, NULL, NULL, 1, 2),
-(2, '2012-11-04 06:59:27', 'von-ngoai-duong-nhu-ngung-chay-vao-chung-khoan-viet-nam.jpg', NULL, 1, 0, NULL, NULL, NULL, NULL, NULL, 1, 2);
-
 -- --------------------------------------------------------
 
 --
@@ -1049,14 +939,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_cat` (
   PRIMARY KEY (`cat_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
---
--- Dumping data for table `hoiit_module_news_cat`
---
-
-INSERT INTO `hoiit_module_news_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
-(1, 0, '2012-11-04 06:29:09', '', NULL, 0, 1, NULL, NULL, 1),
-(2, 0, '2012-11-04 06:29:16', '', NULL, 0, 2, NULL, NULL, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -1074,14 +956,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_cat_languages` (
   KEY `fk_hoiit_module_news_cat_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_news_cat_has_hoiit_languages_hoiit_module_ne1` (`cat_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_news_cat_languages`
---
-
-INSERT INTO `hoiit_module_news_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
-(1, 'vi', 'Tin thị trường', '', 'tin-thi-truong', ''),
-(2, 'vi', 'Tiêu điểm', '', 'tieu-diem', '');
 
 -- --------------------------------------------------------
 
@@ -1104,14 +978,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_languages` (
   KEY `fk_hoiit_module_news_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_news_has_hoiit_languages_hoiit_module_news1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_news_languages`
---
-
-INSERT INTO `hoiit_module_news_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(1, 'vi', 'Đất Xanh phân phối độc quyền dự án Sunset Sanato', '<p>Đồng Tháp, ngày 19/10/2012, Công ty Cổ phần Dịch vụ và Xây dựng Địa ốc Đất Xanh Tây Nam, đại diện cho Tập Đoàn Đất Xanh đã ký hợp đồng với Chủ đầu tư - Công ty Cổ phần 99 Núi và chính thức trở thành nhà phân phối độc quyền dự án Sunset Sanato.</p>', '<p>Đồng Tháp, ngày 19/10/2012, Công ty Cổ phần Dịch vụ và Xây dựng Địa ốc Đất Xanh Tây Nam, đại diện cho Tập Đoàn Đất Xanh đã ký hợp đồng với Chủ đầu tư - Công ty Cổ phần 99 Núi và chính thức trở thành nhà phân phối độc quyền dự án Sunset Sanato.</p>\r\n<p>ký kết hợp đồng phân phối độc quyền dự án Sunset Sanato diễn ra thành công tốt đẹp với sự hiện diện của lãnh đạo Tập đoàn Đất Xanh, Công ty Cổ phần 99 Núi và hơn 200 khách mời tham dự là lãnh đạo Công ty TNHH MTV Thương Mại Dầu Khí Đồng Tháp (Petimex), quý phóng viên báo/đài và đông đảo quý khách hàng tiềm năng quan tâm đến dự án. Ngoài ra, sự kiện còn có sự tham dự đặc biệt của Ông Lê Minh Hoan - Chủ tịch UBND Tỉnh Đồng Tháp và lãnh đạo cấp cao thuộc các Sở, Ban, Ngành của tỉnh.</p>', 'dat-xanh-phan-phoi-doc-quyen-du-an-sunset-sanato', 'asdasdasd', 0, NULL, NULL),
-(2, 'vi', 'Vốn ngoại dường như ngừng chảy vào chứng khoán Việt Nam', '', '<p>Ông đang quan tâm nhất điều gì về kinh tế Việt Nam? Tôi hỏi một nhà đầu tư đến từ Mỹ, bên lề Hội nghị Kết nối đầu tư 2012 tổ chức tuần rồi ở TP.HCM. "Sự thật", ông nói. "Khi tôi sang Việt Nam thì khách hàng của tôi đặt ra 2 câu hỏi: Nếu tôi bỏ vốn vào Việt Nam thì liệu có gặp vấn đề gì khi rút tiền về không? Tôi có thể tin vào những con số tôi đọc trên báo về kinh tế Việt Nam hay không?".</p>\r\n<p>Sau hơn một ngày tham gia hội nghị, tôi tìm lại ông ở hành lang. Ông có tìm thấy điều ông muốn không? Không, mà là có. Tại vì các thông tin tôi cũng như các nhà đầu tư khác cần không có đủ trong các câu trả lời, nhưng có thể thấy một phần vấn đề của chúng ta. Đó là tiền đâu? Tiền đâu để rót vào thị trường tài chính và thị trường bất động sản? Không phải riêng nhà đầu tư từ Mỹ, câu hỏi này được hơn 200 đại biểu đến hội nghị để tìm câu trả lời.</p>\r\n<p>Dòng vốn dường như đã ngừng chảy vào thị trường Việt Nam. Tổng giám đốc Công ty chứng khoán Bản Việt Tô Hải nói rằng, các nhà đầu tư gián tiếp đã chần chừ trong việc bỏ vốn, cụ thể từ đầu năm đến nay đầu tư của khối này chững lại. Và ông thừa nhận, thực tế hầu hết nhà đầu tư nước ngoài vào thị trường tài chính Việt Nam cho đến lúc này đã không thành công.</p>\r\n<p>Vụ trưởng Vụ Phát triển thị trường, Ủy ban Chứng khoán Nhà nước Nguyễn Sơn nói, hiện các dự án bất động sản, tài nguyên khoáng sản hay ngân hàng tài chính có nhu cầu vốn rất lớn. Nhiều doanh nghiệp đang tìm kiếm cơ hội thu hút vốn trong và ngoài nước. Nhu cầu huy động vốn quốc tế là bài toán đặt ra đối với Việt Nam hiện nay, đặc biệt đối với dự án tốt. "Sự khó khăn trong tiếp cận vốn tôi cho rằng sẽ phải đến hết 2013", ông Sơn nói.</p>', 'von-ngoai-duong-nhu-ngung-chay-vao-chung-khoan-viet-nam', 'saassasa', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1311,14 +1177,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects` (
   KEY `fk_hoiit_module_pro_hoiit_module_pro_cat_1` (`hoiit_module_item_cat_cat_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
---
--- Dumping data for table `hoiit_module_projects`
---
-
-INSERT INTO `hoiit_module_projects` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
-(11, '2012-11-06 07:02:45', 'sad.png', '', 11, 1, NULL, 'sad-slide-1.png', 'http://www.youtube.com/watch?v=IXywPCS-sFo', NULL, NULL, 1, 2),
-(12, '2012-11-06 07:18:49', '', NULL, 12, 0, NULL, NULL, '', NULL, NULL, 1, 2);
-
 -- --------------------------------------------------------
 
 --
@@ -1339,15 +1197,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects_cat` (
   PRIMARY KEY (`cat_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
---
--- Dumping data for table `hoiit_module_projects_cat`
---
-
-INSERT INTO `hoiit_module_projects_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
-(1, 0, '2012-11-01 05:33:52', '', NULL, 0, 1, NULL, NULL, 1),
-(2, 0, '2012-11-02 01:39:03', '', NULL, 0, 2, NULL, NULL, 1),
-(3, 1, '2012-11-02 01:39:59', '', NULL, 0, 3, NULL, NULL, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -1365,15 +1214,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects_cat_languages` (
   KEY `fk_hoiit_module_pro_cat_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_pro_cat_has_hoiit_languages_hoiit_module_ne1` (`cat_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_projects_cat_languages`
---
-
-INSERT INTO `hoiit_module_projects_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
-(1, 'vi', 'Dự án', '', 'du-an', ''),
-(2, 'vi', 'Dự án bự', '', 'du-an-bu', ''),
-(3, 'vi', 'Dự án con', '', 'du-an-con', '');
 
 -- --------------------------------------------------------
 
@@ -1398,14 +1238,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects_languages` (
   KEY `fk_hoiit_module_pro_has_hoiit_languages_hoiit_module_pro1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `hoiit_module_projects_languages`
---
-
-INSERT INTO `hoiit_module_projects_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `detail`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(11, 'vi', 'sad', '<p>asdsadasd</p>', '<p>Thong tin tong quan</p>', '<p>So do vi tri</p>', 'sad', 'Mo ta', 0, NULL, NULL),
-(12, 'vi', 'asd', '<p>asdasdasd</p>', '<p>asdasdasd</p>', '<p>asdasdasdasd</p>', 'asd', 'asdasdasd', 0, NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -1427,8 +1259,94 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_supports` (
 --
 
 INSERT INTO `hoiit_module_supports` (`support_id`, `support_name`, `support_phone`, `support_value`, `support_order`, `support_type`) VALUES
-(24, 'An', '0929001001', 'thanhansoft', 1, 'yahoo'),
+(24, 'An', '0929001001', 'datxanhhoancau', 1, 'yahoo'),
 (25, 'Nguyễn An', '0929001001', 'grouplaptrinh', 2, 'skype');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_video`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_video` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `postdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `pic_full` varchar(100) DEFAULT NULL,
+  `pic_desc` varchar(500) DEFAULT NULL,
+  `record_order` int(11) DEFAULT NULL,
+  `unit` varchar(45) DEFAULT NULL,
+  `hot` tinyint(1) NOT NULL DEFAULT '0',
+  `specials` tinyint(1) DEFAULT NULL,
+  `field1` varchar(45) DEFAULT NULL,
+  `field2` varchar(45) DEFAULT NULL,
+  `field3` varchar(45) DEFAULT NULL,
+  `field4` varchar(45) DEFAULT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `fk_hoiit_module_video_hoiit_module_video_cat1` (`hoiit_module_item_cat_cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_video_cat`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_video_cat` (
+  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_parent_id` int(11) NOT NULL DEFAULT '0',
+  `cat_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `pic_desc` varchar(200) DEFAULT NULL,
+  `cat_hot` tinyint(1) DEFAULT NULL,
+  `cat_order` int(11) DEFAULT NULL,
+  `cat_extra1` varchar(100) DEFAULT NULL,
+  `cat_extra2` varchar(100) DEFAULT NULL,
+  `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_video_cat_languages`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_video_cat_languages` (
+  `cat_id` int(11) NOT NULL,
+  `language_id` varchar(2) NOT NULL,
+  `cat_title` varchar(100) NOT NULL,
+  `preview` text,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`cat_id`,`language_id`),
+  KEY `fk_hoiit_module_video_cat_has_hoiit_languages_hoiit_langua1` (`language_id`),
+  KEY `fk_hoiit_module_video_cat_has_hoiit_languages_hoiit_module1` (`cat_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_video_languages`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_video_languages` (
+  `record_id` int(11) NOT NULL,
+  `language_id` varchar(2) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `preview` text,
+  `content` text NOT NULL,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `hit` int(11) NOT NULL,
+  `extra_field1` varchar(100) DEFAULT NULL,
+  `extra_field2` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`record_id`,`language_id`),
+  KEY `fk_hoiit_module_video_has_hoiit_languages_hoiit_languages1` (`language_id`),
+  KEY `fk_hoiit_module_video_has_hoiit_languages_hoiit_module_pro1` (`record_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1625,7 +1543,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_users` (
 --
 
 INSERT INTO `hoiit_users` (`user_id`, `user_email`, `user_pass`, `user_picture`, `user_display`, `user_registered`, `user_lastvisit`, `user_activation_key`, `user_enable`, `hoiit_groups_group_id`) VALUES
-('thanhansoft', 'thanhansoft@gmail.com', '14e1b600b1fd579f47433b88e8d85291', NULL, 'Thanhansoft', '2012-07-03 15:49:55', '2012-07-03 15:49:55', NULL, 1, 'administrator');
+('datxanhhoancau', 'datxanhhoancau@gmail.com', '14e1b600b1fd579f47433b88e8d85291', NULL, 'datxanhhoancau', '2012-07-03 15:49:55', '2012-07-03 15:49:55', NULL, 1, 'administrator');
 
 --
 -- Constraints for dumped tables
@@ -1791,6 +1709,26 @@ ALTER TABLE `hoiit_module_projects_cat_languages`
 ALTER TABLE `hoiit_module_projects_languages`
   ADD CONSTRAINT `fk_hoiit_module_pro_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_hoiit_module_pro_has_hoiit_languages_hoiit_module_pro1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_projects` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `hoiit_module_video`
+--
+ALTER TABLE `hoiit_module_video`
+  ADD CONSTRAINT `fk_hoiit_module_video_hoiit_module_video_cat1` FOREIGN KEY (`hoiit_module_item_cat_cat_id`) REFERENCES `hoiit_module_video_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `hoiit_module_video_cat_languages`
+--
+ALTER TABLE `hoiit_module_video_cat_languages`
+  ADD CONSTRAINT `fk_hoiit_module_video_cat_has_hoiit_languages_hoiit_langua1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_hoiit_module_video_cat_has_hoiit_languages_hoiit_module1` FOREIGN KEY (`cat_id`) REFERENCES `hoiit_module_video_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `hoiit_module_video_languages`
+--
+ALTER TABLE `hoiit_module_video_languages`
+  ADD CONSTRAINT `fk_hoiit_module_video_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_hoiit_module_video_has_hoiit_languages_hoiit_module_pro1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_video` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `hoiit_positions`
