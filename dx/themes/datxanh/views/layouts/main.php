@@ -22,7 +22,7 @@
 </head>
 <body>
 <div id="wrapper">
-    <div id="logo"><a href="<?php echo Yii::app()->baseUrl.$this->setLangUrl()?>" title="Logo Yii Project"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo Yii Project" /></a></div>
+    <div id="logo"><a href="<?php echo Yii::app()->baseUrl?>/" title="Logo Yii Project"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo Yii Project" /></a></div>
 	<?php if(!Yii::app()->memberLands->id):?>
         <div class="position-form">
 			<a href="<?php echo Yii::app()->baseUrl ?>/san-giao-dich/dang-ky"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-register.png" alt="dang tin" /><b>Đăng ký tài khoản</b></a>
