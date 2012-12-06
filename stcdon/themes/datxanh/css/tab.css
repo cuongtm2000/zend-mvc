@@ -1,0 +1,43 @@
+/*Tab Detail */
+.infotab{}
+
+ul.tabs { margin: 0;padding: 0;float: left;height:25px;width: 100%;}
+ul.tabs li {float:left;margin:0 3px 0 0;padding:0;height:25px;line-height:25px;overflow: hidden;position: relative;top:1px}
+ul.tabs li a {text-decoration: none;color: #000;display: block;font-size: 1.2em;border: 1px solid #ccc;background:#fff;padding: 0 10px;outline: none;}
+ul.tabs li:hover{border:none}
+ul.tabs li a:hover{background:#3186C7;color:#fff} 
+ul.tabs li.active{border:none}   
+ul.tabs li.active a{background:#3186C7;color:#fff}
+
+ul.tab_project{border-bottom:2px solid #2099D2;padding-bottom:1px}
+ul.tab_project li{margin-right:1px}
+ul.tab_project li a{border:none;background:url(../images/project-tab.png) repeat-x;color:#fff;border:1px solid #F1F1F1}
+ul.tab_project li a:hover,ul.tab_project li.active a{border:1px solid #2099D2;background:url(../images/project-tab-hover.png) repeat-x;color:#146EAC}
+
+ul.tabs-2{height:30px}
+ul.tabs-2 li{top:0;height:30px; line-height:30px}
+ul.tabs-2 li a{border:none;background:#91E0FF;color:#fff;padding:0 25px 0 8px}
+ul.tabs-2 li a:hover{background:#029CD8}
+ul.tabs-2 li.active a{background:#029CD8}
+
+.tab_container {border: 1px solid #ccc;clear: both;float:left; width: 100%}
+.tab-transaction{border:3px solid #029CD8;width:99%}
+.tab_content p{line-height:1.3em;margin:0;}
+.sub-new-home{margin:0;padding:10px 10px;list-style:none}
+.sub-new-home li{list-style:disc;margin-left:15px;color:#4690CB;margin-bottom:5px}
+.sub-new-home li a{margin-left:-5px;color:#4D4D4D;display:block} .sub-new-home li a span{color:#18B7EF}
+.sub-new-home li a:hover{color:#F58220}
+
+.sub-new-home .first-new{margin:0;margin-bottom:10px;list-style:none;color:#000}
+.first-new img{float:left;margin:0 10px 5px 0;width:106px;border:1px solid #4690CB} .first-new h4{padding:0;margin:0 0 5px 0} 
+.sub-new-home .first-new a{margin:0;color:#3287c7;font-size:9pt}
+
+/* project-info */
+.project-info{padding:10px;background:#F1F1F1;border:none;width:97%}
+.project-info p{margin:0;margin-bottom:12px;line-height:1.6em}
+.ground,.info-video{text-align:center}
+.ground img{border:2px solid #C0C0C0}
+.ground img:hover{border:2px solid #808080}
+
+
+
