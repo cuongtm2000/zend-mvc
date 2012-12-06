@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2012 at 10:28 AM
+-- Generation Time: Dec 06, 2012 at 10:34 AM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -140,7 +140,7 @@ INSERT INTO `hoiit_functions` (`function_value`, `function_name`, `function_clas
 ('document_new', 'Document', '', 'listItemsNew', 'document'),
 ('list_support', 'Support', '', 'listItem', 'support'),
 ('menu_about', 'About', '', 'listItem', 'about'),
-('menu_document', 'DocumentCat', '', 'listItem', 'news'),
+('menu_document', 'DocumentCat', '', 'listItem', 'document'),
 ('menu_document_index', 'DocumentsCat', '', 'listItem', 'document'),
 ('menu_jobs', 'JobsCat', '', 'listItem', 'jobs'),
 ('menu_news', 'NewsCat', '', 'listItem', 'news'),
@@ -511,7 +511,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('fm70wplt3', 1354786036);
+('fm70wplt3', 1354786485);
 
 -- --------------------------------------------------------
 
@@ -734,7 +734,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus` (
   `menu_homepage` tinyint(1) NOT NULL DEFAULT '0',
   `menu_activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=48 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=49 ;
 
 --
 -- Dumping data for table `hoiit_module_menus`
@@ -747,7 +747,8 @@ INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_type`, `menu_tar
 (38, 0, 1, '', 2, 0, 1),
 (41, 0, 1, '', 40, 0, 1),
 (42, 42, 1, '', 41, 0, 1),
-(45, 0, 1, '', 47, 0, 1);
+(45, 0, 1, '', 47, 0, 1),
+(48, 0, 1, '', 48, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -777,7 +778,8 @@ INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name
 (38, 'vi', 'Giới thiệu', 'gioi-thieu', ''),
 (41, 'vi', 'Văn bản mới ban hành', 'van-ban-moi-ban-hanh', 'Mô tả Văn bản mới ban hành'),
 (42, 'vi', 'Quản lý sản phẩm', 'quan-ly-san-pham', ''),
-(45, 'vi', 'Liên hệ', 'lien-he', 'Liên hệ');
+(45, 'vi', 'Liên hệ', 'lien-he', 'Liên hệ'),
+(48, 'vi', 'Tài liệu chuyên ngành', 'tai-lieu-chuyen-nganh', '');
 
 -- --------------------------------------------------------
 
@@ -1329,7 +1331,10 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('center', 1, '1', 'news', 'index', '', 'menu_new_index'),
 ('footer', 2, '1', 'news', '', '', 'counter_session'),
 ('left', 3, '1', 'news', '', '', 'menu_news'),
-('left', 4, '1', 'news', '', '', 'adv_left');
+('left', 4, '1', 'news', '', '', 'adv_left'),
+('left', 1, '1', 'document', '', '', 'menu_document'),
+('footer', 2, '1', 'document', '', '', 'counter_session'),
+('left', 3, '1', 'document', '', '', 'adv_left');
 
 -- --------------------------------------------------------
 
