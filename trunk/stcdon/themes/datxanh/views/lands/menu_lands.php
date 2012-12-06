@@ -1,0 +1,2 @@
+<h4 class="title-left"><span><?php echo $this->lang['lands']?></span></h4>
+<?php echo LandsCat::model()->makeMenu($menu_lands, Yii::app()->request->getQuery('cid'), '<ul class="sub-cat frame-leftcontent">', '</ul>');?>
