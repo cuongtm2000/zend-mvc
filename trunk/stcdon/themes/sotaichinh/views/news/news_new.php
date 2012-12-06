@@ -8,8 +8,8 @@
 <div class="infotab">
     <ul class="tabs">
         <?php $i=1; foreach($news_new as $value):?>
-            <li><a href="#tab<?php echo $i?>"><?php echo $value->NewsCatLanguage[Yii::app()->language]['cat_title']?></a></li>
-        <?php $i++; endforeach?>
+			<li><a href="#tab<?php echo $i?>"><?php echo $value->NewsCatLanguage[Yii::app()->language]['cat_title']?></a></li>
+		<?php $i++; endforeach?>
     </ul>
 
     <div class="tab_container">

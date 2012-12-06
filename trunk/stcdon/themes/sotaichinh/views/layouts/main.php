@@ -60,11 +60,10 @@
 		</ul>
 		<div class="footer-tent">
 			<div class="copyright">
-				<p>&copy; 2012 Bản quyền thuộc Sở Tài Chính tỉnh Cà Mau </p>
-				<p>Địa chỉ : 120 Phan Ngọc Hiển, Phường 5, TP.Cà Mau </p>
-				<p>Điện thoại: 07803 831330 – Fax: 07803 835311 - Email: <a href="mailto:stccamau@mof.gov.vn" >stccamau@mof.gov.vn</a> </p>
+				<p>&copy; 2012 Bản quyền thuộc Sở Tài Chính tỉnh Đồng Nai </p>
+				<p>Địa chỉ : Số 42 đường Cách Mạng Tháng 8, phường Quang Vinh, Thành phố Biên Hoà , tỉnh Đồng Nai </p>
+				<p>Điện thoại: 0613. 847778; Fax: 0613. 847433 - Email: <a href="mailto:stcdongnai@mof.gov.vn" >stcdongnai@mof.gov.vn</a> </p>
 				<p>&reg; Ghi rõ nguồn "Website Sở Tài Chính tỉnh Cà Mau" khi phát lại thông tin từ website này.</p>				
-				<p class="develop">Phát triển trên nền gWeb 2.0 <a href="http://dos.vn" target="_blank" title="Dos.vn">Dos.vn</a></p>
 			</div>
 			<?php $this->getPosition('footer');?>
 			<div class="clear"></div>

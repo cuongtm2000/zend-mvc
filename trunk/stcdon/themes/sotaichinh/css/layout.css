@@ -52,9 +52,12 @@ a{text-decoration:none; color:#720E3B} a:hover{color:#000;}
 
 .sub-cat{list-style:none;padding:0 5px 5px;margin:0}
 .sub-cat li{border-bottom:1px dashed #0D4571;padding:3px 0}
-.sub-cat li a{font-size:11px;color:#12558A;display:block;padding:5px 0}
-.sub-cat li a span{background:url(../images/icon_sub.gif) no-repeat left 4px;padding-left:15px}
-.sub-cat li a:hover{color:#fff;background:#199aff}
+.sub-cat li a{background:url(../images/bull.jpg) no-repeat left 8px;font-size:11px;color:#12558A;display:block;padding:5px 0 5px 10px}
+.sub-cat li a:hover{color:#199aff}
+
+.sub-cat li ul{list-style:none;padding:0 0 5px 10px;margin:0}
+.sub-cat li ul li{border:none;padding:0} 
+.sub-cat li ul li a{color:#444;background:url(../images/icon_sub.gif) no-repeat left 8px;padding-left:12px}
 
 /*Ho tro ky thuat*/
 .support{list-style:none;margin:0;padding:5px 3px 0 10px;text-align:center}
