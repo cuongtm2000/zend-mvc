@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2012 at 10:34 AM
+-- Generation Time: Dec 06, 2012 at 10:40 AM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -511,7 +511,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('fm70wplt3', 1354786485);
+('fm70wplt3', 1354786825);
 
 -- --------------------------------------------------------
 
@@ -559,7 +559,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_document` (
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_hoiit_module_document_hoiit_module_document_cat_1` (`hoiit_module_item_cat_cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
+
+--
+-- Dumping data for table `hoiit_module_document`
+--
+
+INSERT INTO `hoiit_module_document` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
+(22, '2012-12-06 09:36:16', 'hoc-test.jpg', NULL, 22, 0, NULL, NULL, NULL, NULL, NULL, 1, 7);
 
 -- --------------------------------------------------------
 
@@ -579,7 +586,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_document_cat` (
   `cat_extra2` varchar(100) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `hoiit_module_document_cat`
+--
+
+INSERT INTO `hoiit_module_document_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
+(7, 0, '2012-12-06 09:35:48', 'tai-lieu-hoc.JPG', NULL, 0, 7, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -598,6 +612,13 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_document_cat_languages` (
   KEY `fk_hoiit_module_docu_cat_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_docu_cat_has_hoiit_languages_hoiit_module_ne1` (`cat_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_document_cat_languages`
+--
+
+INSERT INTO `hoiit_module_document_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
+(7, 'vi', 'Tài liệu học', '', 'tai-lieu-hoc', 'menu_document');
 
 -- --------------------------------------------------------
 
@@ -620,6 +641,13 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_document_languages` (
   KEY `fk_hoiit_module_docu_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_docu_has_hoiit_languages_hoiit_module_docu1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_document_languages`
+--
+
+INSERT INTO `hoiit_module_document_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
+(22, 'vi', 'Học test', '<p>Học test</p>', '<p>Học test</p>', 'hoc-test', 'Học test', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
