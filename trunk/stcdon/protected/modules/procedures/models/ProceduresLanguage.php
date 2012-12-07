@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "hoiit_module_document_languages".
+ * This is the model class for table "hoiit_module_procedures_languages".
  *
- * The followings are the available columns in table 'hoiit_module_news_languages':
+ * The followings are the available columns in table 'hoiit_module_procedures_languages':
  * @property integer $record_id
  * @property string $language_id
  * @property string $title
@@ -15,11 +15,11 @@
  * @property string $extra_field1
  * @property string $extra_field2
  */
-class DocumentLanguage extends CActiveRecord {
+class ProceduresLanguage extends CActiveRecord {
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
-     * @return DocumentLanguage the static model class
+     * @return ProceduresLanguage the static model class
      */
     public static function model($className = __CLASS__) {
         return parent::model($className);
@@ -29,7 +29,7 @@ class DocumentLanguage extends CActiveRecord {
      * @return string the associated database table name
      */
     public function tableName() {
-        return 'hoiit_module_document_languages';
+        return 'hoiit_module_procedures_languages';
     }
 
     /**

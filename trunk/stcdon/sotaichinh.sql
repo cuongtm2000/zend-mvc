@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2012 at 10:40 AM
+-- Generation Time: Dec 07, 2012 at 10:05 AM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -86,6 +86,14 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('news_num_item_index', '3', NULL, 'news'),
 ('news_num_item_new', '7', NULL, 'news'),
 ('news_width_thumb', '150', NULL, 'news'),
+('procedures_cat_height_thumb', '100', NULL, 'procedures'),
+('procedures_cat_width_thumb', '150', NULL, 'procedures'),
+('procedures_height_thumb', '100', NULL, 'procedures'),
+('procedures_num_item_cat', '5', NULL, 'procedures'),
+('procedures_num_item_hot', '7', NULL, 'procedures'),
+('procedures_num_item_index', '3', NULL, 'procedures'),
+('procedures_num_item_new', '7', NULL, 'procedures'),
+('procedures_width_thumb', '150', NULL, 'procedures'),
 ('products_cat_height_thumb', '200', NULL, 'products'),
 ('products_cat_width_thumb', '200', NULL, 'products'),
 ('products_height_desc', '700', NULL, 'products'),
@@ -135,22 +143,20 @@ INSERT INTO `hoiit_functions` (`function_value`, `function_name`, `function_clas
 ('adv_left', 'Adv', '', 'listItemsLeft', 'adv'),
 ('adv_right', 'Adv', '', 'listItemsRight', 'adv'),
 ('counter_session', 'CounterSession', 'CounterSession.Counter', 'publishAssets', 'counterSession'),
-('document_hot', 'Document', '', 'listItemsHot', 'document'),
-('document_list_first', 'Document', '', 'ListFirst', 'document'),
 ('document_new', 'Document', '', 'listItemsNew', 'document'),
 ('list_support', 'Support', '', 'listItem', 'support'),
 ('menu_about', 'About', '', 'listItem', 'about'),
-('menu_document', 'DocumentCat', '', 'listItem', 'document'),
-('menu_document_index', 'DocumentsCat', '', 'listItem', 'document'),
 ('menu_jobs', 'JobsCat', '', 'listItem', 'jobs'),
 ('menu_news', 'NewsCat', '', 'listItem', 'news'),
 ('menu_new_index', 'NewsCat', '', 'listItem', 'news'),
+('menu_procedures', 'ProceduresCat', '', 'listItem', 'Procedures'),
 ('menu_products', 'ProductsCat', '', 'listItem', 'products'),
 ('menu_projects', 'ProjectsCat', '', 'listItem', 'projects'),
 ('news_hot', 'News', '', 'listItemsHot', 'news'),
 ('news_list_first', 'News', '', 'ListFirst', 'news'),
 ('news_new', 'News', '', 'listItemsNew', 'news'),
 ('new_poll', 'Poll', '', 'getFirstItem', 'poll'),
+('procedures_new', 'Procedures', '', 'listItemsNew', 'Procedures'),
 ('projects_hot', 'Projects', '', 'listItemsHot', 'projects'),
 ('projects_hot_horizontal', 'Projects', '', 'listItemsHot', 'projects'),
 ('projects_new', 'Projects', '', 'listItemsNew', 'projects'),
@@ -237,6 +243,7 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('partners', 'Đối tác', 0, 'vi'),
 ('poll', 'Bình chọn', 0, 'en'),
 ('poll', 'Bình chọn', 0, 'vi'),
+('procedures', 'Thủ tục hành chính', 0, 'vi'),
 ('products', 'Products', 0, 'en'),
 ('products', 'Sản phẩm', 0, 'vi'),
 ('projects', 'Projects', 0, 'en'),
@@ -307,6 +314,7 @@ INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_url`, `module_
 ('jobs', 'Danh mục|Danh sách|Cấu hình', 'jobs/cat|jobs|jobs/config', 4, 1, 1),
 ('news', 'Danh mục|Danh sách|Cấu hình', 'news/cat|news|news/config', 4, 1, 1),
 ('poll', 'Danh sách', 'poll', 7, 1, 1),
+('procedures', 'Danh mục|Danh sách|Cấu hình', 'procedures/cat|procedures|procedures/config', 4, 1, 1),
 ('products', 'Danh mục|Danh sách|Cấu hình', 'products/cat|products|products/config', 3, 1, 1),
 ('projects', 'Danh mục|Danh sách|Cấu hình', 'projects/cat|projects|projects/config', 4, 1, 1),
 ('support', 'Danh sách', 'support', 6, 1, 0),
@@ -346,6 +354,7 @@ INSERT INTO `hoiit_modules_links` (`link_id`, `module_id`, `language_id`) VALUES
 ('san-pham', 'products', 'vi'),
 ('tai-lieu-chuyen-nganh', 'document', 'vi'),
 ('thanh-tuu-dinh-huong', 'projects', 'vi'),
+('thu-tuc-hanh-chinh', 'procedures', 'vi'),
 ('tin-tuc', 'news', 'vi'),
 ('trang-chu', 'default', 'vi'),
 ('van-ban-moi-ban-hanh', 'jobs', 'vi');
@@ -511,7 +520,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('fm70wplt3', 1354786825);
+('bdgmw2ckh', 1354870617);
 
 -- --------------------------------------------------------
 
@@ -532,10 +541,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_value` (
 INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
 ('max_visit_day', 1354579200),
 ('max_visit_value', 167),
-('time_start_today', 1354748400),
+('time_start_today', 1354834800),
 ('today_visited', 2),
-('total_visited', 1349),
-('yesterday_visited', 48);
+('total_visited', 1351),
+('yesterday_visited', 2);
 
 -- --------------------------------------------------------
 
@@ -762,7 +771,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus` (
   `menu_homepage` tinyint(1) NOT NULL DEFAULT '0',
   `menu_activated` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=49 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=50 ;
 
 --
 -- Dumping data for table `hoiit_module_menus`
@@ -775,8 +784,9 @@ INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_type`, `menu_tar
 (38, 0, 1, '', 2, 0, 1),
 (41, 0, 1, '', 40, 0, 1),
 (42, 42, 1, '', 41, 0, 1),
-(45, 0, 1, '', 47, 0, 1),
-(48, 0, 1, '', 48, 0, 1);
+(45, 0, 1, '', 49, 0, 1),
+(48, 0, 1, '', 47, 0, 1),
+(49, 0, 1, '', 48, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -807,7 +817,8 @@ INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name
 (41, 'vi', 'Văn bản mới ban hành', 'van-ban-moi-ban-hanh', 'Mô tả Văn bản mới ban hành'),
 (42, 'vi', 'Quản lý sản phẩm', 'quan-ly-san-pham', ''),
 (45, 'vi', 'Liên hệ', 'lien-he', 'Liên hệ'),
-(48, 'vi', 'Tài liệu chuyên ngành', 'tai-lieu-chuyen-nganh', '');
+(48, 'vi', 'Tài liệu chuyên ngành', 'tai-lieu-chuyen-nganh', ''),
+(49, 'vi', 'Thủ tục hành chính', 'thu-tuc-hanh-chinh', 'Thủ tục hành chính');
 
 -- --------------------------------------------------------
 
@@ -867,7 +878,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_news_cat` (
   `cat_extra2` varchar(100) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `hoiit_module_news_cat`
@@ -1033,6 +1044,118 @@ INSERT INTO `hoiit_module_poll_rows` (`id`, `answer`, `url`, `num_vote`, `vote_i
 (4, 'Tìm kiếm Google', '', 1, 2),
 (5, 'Khác', '', 0, 2),
 (6, 'Người thân giới thiệu', '', 0, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_procedures`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_procedures` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `postdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `pic_desc` varchar(500) DEFAULT NULL,
+  `record_order` int(11) DEFAULT NULL,
+  `hot` tinyint(1) NOT NULL DEFAULT '0',
+  `specials` tinyint(1) DEFAULT NULL,
+  `field1` varchar(45) DEFAULT NULL,
+  `field2` varchar(45) DEFAULT NULL,
+  `field3` varchar(45) DEFAULT NULL,
+  `field4` varchar(45) DEFAULT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '1',
+  `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `fk_hoiit_module_proc_hoiit_module_proc_cat_1` (`hoiit_module_item_cat_cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
+
+--
+-- Dumping data for table `hoiit_module_procedures`
+--
+
+INSERT INTO `hoiit_module_procedures` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
+(22, '2012-12-07 07:49:47', '', NULL, 22, 0, NULL, NULL, NULL, NULL, NULL, 1, 7);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_procedures_cat`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_procedures_cat` (
+  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_parent_id` int(11) NOT NULL DEFAULT '0',
+  `cat_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `pic_desc` varchar(200) DEFAULT NULL,
+  `cat_hot` tinyint(1) DEFAULT NULL,
+  `cat_order` int(11) DEFAULT NULL,
+  `cat_extra1` varchar(100) DEFAULT NULL,
+  `cat_extra2` varchar(100) DEFAULT NULL,
+  `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`cat_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `hoiit_module_procedures_cat`
+--
+
+INSERT INTO `hoiit_module_procedures_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
+(7, 0, '2012-12-07 07:49:30', '', NULL, 0, 7, NULL, NULL, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_procedures_cat_languages`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_procedures_cat_languages` (
+  `cat_id` int(11) NOT NULL,
+  `language_id` varchar(2) NOT NULL,
+  `cat_title` varchar(100) NOT NULL,
+  `preview` text,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`cat_id`,`language_id`),
+  KEY `fk_hoiit_module_proc_cat_has_hoiit_languages_hoiit_languages1` (`language_id`),
+  KEY `fk_hoiit_module_proc_cat_has_hoiit_languages_hoiit_module_ne1` (`cat_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_procedures_cat_languages`
+--
+
+INSERT INTO `hoiit_module_procedures_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
+(7, 'vi', 'Thu tuc hanh chinh', '', 'thu-tuc-hanh-chinh', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_procedures_languages`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_procedures_languages` (
+  `record_id` int(11) NOT NULL,
+  `language_id` varchar(2) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `preview` text,
+  `content` text NOT NULL,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `hit` int(11) NOT NULL DEFAULT '0',
+  `extra_field1` varchar(100) DEFAULT NULL,
+  `extra_field2` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`record_id`,`language_id`),
+  KEY `fk_hoiit_module_proc_has_hoiit_languages_hoiit_languages1` (`language_id`),
+  KEY `fk_hoiit_module_proc_has_hoiit_languages_hoiit_module_proc1` (`record_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_procedures_languages`
+--
+
+INSERT INTO `hoiit_module_procedures_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
+(22, 'vi', '33_Thẩm định Dự toán chi ngân sách', '<p>33_Thẩm định Dự toán chi ngân sách</p>', '<p>33_Thẩm định Dự toán chi ngân sách</p>', '33tham-dinh-du-toan-chi-ngan-sach', '33_Thẩm định Dự toán chi ngân sách', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1360,9 +1483,12 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('footer', 2, '1', 'news', '', '', 'counter_session'),
 ('left', 3, '1', 'news', '', '', 'menu_news'),
 ('left', 4, '1', 'news', '', '', 'adv_left'),
-('left', 1, '1', 'document', '', '', 'menu_document'),
-('footer', 2, '1', 'document', '', '', 'counter_session'),
-('left', 3, '1', 'document', '', '', 'adv_left');
+('left', 1, '1', 'procedures', '', '', 'menu_procedures'),
+('footer', 2, '1', 'procedures', '', '', 'counter_session'),
+('center', 1, '1', 'document', '', '', 'news_new'),
+('center', 2, '1', 'document', '', '', 'document_new'),
+('footer', 3, '1', 'document', '', '', 'counter_session'),
+('left', 4, '1', 'document', '', '', 'adv_left');
 
 -- --------------------------------------------------------
 
@@ -1454,6 +1580,11 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('<news:(tin-tuc)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'news/default/view', 'urlSuffix=>.html', 6, 0, 'news', 'vi'),
 ('<news:(tin-tuc)>/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'news/default/cats', '', 2, 0, 'news', 'vi'),
 ('<news:(tin-tuc)>/trang/<page:\\d+>', 'news/default/index', '', 4, 0, 'news', 'vi'),
+('<procedures:(thu-tuc-hanh-chinh)>', 'procedures/default/index', '', 5, 1, 'procedures', 'vi'),
+('<procedures:(thu-tuc-hanh-chinh)>/<cid:[-a-z0-9]+>', 'procedures/default/cats', '', 3, 0, 'procedures', 'vi'),
+('<procedures:(thu-tuc-hanh-chinh)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'procedures/default/view', 'urlSuffix=>.html', 6, 0, 'procedures', 'vi'),
+('<procedures:(thu-tuc-hanh-chinh)>/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'procedures/default/cats', '', 2, 0, 'procedures', 'vi'),
+('<procedures:(thu-tuc-hanh-chinh)>/trang/<page:\\d+>', 'procedures/default/index', '', 4, 0, 'procedures', 'vi'),
 ('<products:(san-pham)>', 'products/default/index', '', 3, 1, 'products', 'vi'),
 ('<products:(san-pham)>/<cid:[-a-z0-9]+>', 'products/default/cats', '', 2, 0, 'products', 'vi'),
 ('<products:(san-pham)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'products/default/view', 'urlSuffix=>.html', 0, 0, 'products', 'vi'),
@@ -1617,6 +1748,26 @@ ALTER TABLE `hoiit_module_poll_rows`
   ADD CONSTRAINT `hoiit_module_poll_rows_ibfk_1` FOREIGN KEY (`vote_id`) REFERENCES `hoiit_module_poll` (`record_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `hoiit_module_procedures`
+--
+ALTER TABLE `hoiit_module_procedures`
+  ADD CONSTRAINT `fk_hoiit_module_proc_hoiit_module_proc_cat_1` FOREIGN KEY (`hoiit_module_item_cat_cat_id`) REFERENCES `hoiit_module_procedures_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `hoiit_module_procedures_cat_languages`
+--
+ALTER TABLE `hoiit_module_procedures_cat_languages`
+  ADD CONSTRAINT `fk_hoiit_module_proc_cat__has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_hoiit_module_proc_cat__has_hoiit_languages_hoiit_module_ne1` FOREIGN KEY (`cat_id`) REFERENCES `hoiit_module_procedures_cat` (`cat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `hoiit_module_procedures_languages`
+--
+ALTER TABLE `hoiit_module_procedures_languages`
+  ADD CONSTRAINT `fk_hoiit_module_proc_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_hoiit_module_proc_has_hoiit_languages_hoiit_module_proc1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_procedures` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
 -- Constraints for table `hoiit_module_products`
 --
 ALTER TABLE `hoiit_module_products`
@@ -1675,25 +1826,6 @@ ALTER TABLE `hoiit_module_video_cat_languages`
 ALTER TABLE `hoiit_module_video_languages`
   ADD CONSTRAINT `fk_hoiit_module_video_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_hoiit_module_video_has_hoiit_languages_hoiit_module_pro1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_video` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `hoiit_positions`
---
-ALTER TABLE `hoiit_positions`
-  ADD CONSTRAINT `fk_hoiit_positions_hoiit_functions1` FOREIGN KEY (`hoiit_functions_function_value`) REFERENCES `hoiit_functions` (`function_value`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `hoiit_urls`
---
-ALTER TABLE `hoiit_urls`
-  ADD CONSTRAINT `fk_hoiit_urls_hoiit_languages1` FOREIGN KEY (`hoiit_languages_language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_hoiit_urls_hoiit_modules1` FOREIGN KEY (`hoiit_modules_module_id`) REFERENCES `hoiit_modules` (`module_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `hoiit_users`
---
-ALTER TABLE `hoiit_users`
-  ADD CONSTRAINT `fk_hoiit_users_hoiit_groups1` FOREIGN KEY (`hoiit_groups_group_id`) REFERENCES `hoiit_groups` (`group_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
