@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "hoiit_module_document".
+ * This is the model class for table "hoiit_module_procedures".
  *
- * The followings are the available columns in table 'hoiit_module_document':
+ * The followings are the available columns in table 'hoiit_module_procedures':
  * @property integer $record_id
  * @property string $postdate
  * @property string $pic_thumb
@@ -19,16 +19,16 @@
  * @property integer $hoiit_module_item_cat_cat_id
  *
  * The followings are the available model relations:
- * @property HoiitModuledocumentCat $hoiitModuleItemCatCat
+ * @property HoiitModuleproceduresCat $hoiitModuleItemCatCat
  * @property HoiitLanguages[] $hoiitLanguages
  */
-class Document extends CActiveRecord {
+class Procedures extends CActiveRecord {
     private $_model;
 
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
-     * @return Document the static model class
+     * @return Procedures the static model class
      */
     public static function model($className = __CLASS__) {
         return parent::model($className);
@@ -38,7 +38,7 @@ class Document extends CActiveRecord {
      * @return string the associated database table name
      */
     public function tableName() {
-        return 'hoiit_module_document';
+        return 'hoiit_module_procedures';
     }
 
     /**
@@ -66,9 +66,9 @@ class Document extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'DocumentCat' => array(self::BELONGS_TO, 'DocumentCat', 'hoiit_module_item_cat_cat_id'),
-            'Language' => array(self::MANY_MANY, 'Language', 'hoiit_module_document_languages(record_id, language_id)'),
-            'DocumentLanguage' => array(self::HAS_MANY, 'DocumentLanguage', 'record_id', 'index' => 'language_id'),
+            'ProceduresCat' => array(self::BELONGS_TO, 'ProceduresCat', 'hoiit_module_item_cat_cat_id'),
+            'Language' => array(self::MANY_MANY, 'Language', 'hoiit_module_procedures_languages(record_id, language_id)'),
+            'ProceduresLanguage' => array(self::HAS_MANY, 'ProceduresLanguage', 'record_id', 'index' => 'language_id'),
         );
     }
 
@@ -150,7 +150,7 @@ class Document extends CActiveRecord {
 
     //Front end - get detail item
     /*public function detailItem($tag) {
-        $id = DocumentLanguage::model()->getIDByTag($tag);
+        $id = ProceduresLanguage::model()->getIDByTag($tag);
         $criteria = new CDbCriteria();
         $criteria->condition = 'enable=1';
 
@@ -171,7 +171,7 @@ class Document extends CActiveRecord {
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'record_id !=:id AND enable = 1 AND hoiit_module_item_cat_cat_id=:cid AND hoiit_users_user_id=:user';
         $criteria->params = array(':id' => $id, ':cid' => $cid, ':user' => Yii::app()->session['subDomain']);
-        $criteria->limit = Config::getValue('document_num_item_other');
+        $criteria->limit = Config::getValue('procedures_num_item_other');
         return $this->findAll($criteria);
     }*/
 
@@ -192,13 +192,13 @@ class Document extends CActiveRecord {
     }
 
     public function listItemsNew() {
-        return DocumentCat::model()->listCatFirst();
+        return ProceduresCat::model()->listCatFirst();
 
         /*$criteria = new CDbCriteria();
         //$criteria->with = array(__CLASS__ . 'Language');
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable = 1';
-        $criteria->limit = Config::getValue('document_num_item_new');
+        $criteria->limit = Config::getValue('procedures_num_item_new');
 
         return $this->findAll($criteria);*/
     }
@@ -227,7 +227,7 @@ class Document extends CActiveRecord {
         //$criteria->with = array(__CLASS__ . 'Language');
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'hot = 1 AND enable = 1';
-        $criteria->limit = Config::getValue('document_num_item_hot');
+        $criteria->limit = Config::getValue('procedures_num_item_hot');
 
         return $this->findAll($criteria);
     }
@@ -240,7 +240,7 @@ class Document extends CActiveRecord {
 
         // elements per page
         $pages = new CPagination($count);
-        $pages->pageSize = Config::getValue('document_num_item_index');
+        $pages->pageSize = Config::getValue('procedures_num_item_index');
         $pages->applyLimit($criteria);
 
         return array('models' => $this->findAll($criteria), 'pages' => $pages);
@@ -257,7 +257,7 @@ class Document extends CActiveRecord {
 
         // elements per page
         $pages = new CPagination($count);
-        $pages->pageSize = Config::getValue('document_num_item_cat');
+        $pages->pageSize = Config::getValue('procedures_num_item_cat');
         $pages->applyLimit($criteria);
 
         return array('models' => $this->findAll($criteria), 'pages' => $pages);
@@ -266,7 +266,7 @@ class Document extends CActiveRecord {
     //Back end - List item admin
     public function listItemAdmin() {
         $criteria = new CDbCriteria();
-        //$criteria->with = array('Language', 'DocumentLanguage');
+        //$criteria->with = array('Language', 'NewsLanguage');
         $criteria->order = 'record_order DESC, postdate DESC';
 
         $count = $this->count($criteria);
@@ -288,7 +288,7 @@ class Document extends CActiveRecord {
 
     //Back end - Delete Record
     private function deleteRecord($id) {
-        DocumentLanguage::model()->deleteRecord($id);
+        ProceduresLanguage::model()->deleteRecord($id);
 
         $item = $this::model()->find('record_id=:id', array(':id' => $id));
         Common::removePic($item->pic_thumb, '/image/' . strtolower(__CLASS__)); // remove pic_thumb
@@ -366,7 +366,7 @@ class Document extends CActiveRecord {
             //upload picture thumb
             Yii::import('ext.SimpleImage.CSimpleImage');
             $file = new CSimpleImage();
-            $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('document_width_thumb'), Config::getValue('document_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]);
+            $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('procedures_width_thumb'), Config::getValue('procedures_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']]);
 
             $this->save();
             $id = $this->record_id;
@@ -386,11 +386,11 @@ class Document extends CActiveRecord {
             //upload picture
             Yii::import('ext.SimpleImage.CSimpleImage');
             $file = new CSimpleImage();
-            $item->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('document_width_thumb'), Config::getValue('document_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']], $item->pic_thumb);
+            $item->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('procedures_width_thumb'), Config::getValue('procedures_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['title' . Yii::app()->controller->setting['default_language']], $item->pic_thumb);
 
             $item->save();
         }
-        DocumentLanguage::model()->saveRecord($id, $model);
+        ProceduresLanguage::model()->saveRecord($id, $model);
     }
 
     //Back end - Get record to Edit
@@ -431,7 +431,7 @@ class Document extends CActiveRecord {
             }
         }
         //move all sub cat to new cat parent
-        $cat = new DocumentCat();
+        $cat = new ProceduresCat();
         if ($data->getPost('delcat') == 'move') {
             $cat->findcatParent($id, $data->getPost('movetocat'));
         } elseif ($data->getPost('delcat') == 'del') {

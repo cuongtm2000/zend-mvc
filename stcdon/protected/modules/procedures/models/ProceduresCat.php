@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "hoiit_module_document_cat".
+ * This is the model class for table "hoiit_module_procedures_cat".
  *
- * The followings are the available columns in table 'hoiit_module_document_cat':
+ * The followings are the available columns in table 'hoiit_module_procedures_cat':
  * @property integer $cat_id
  * @property integer $cat_parent_id
  * @property string $cat_created
@@ -16,10 +16,10 @@
  * @property integer $cat_enable
  *
  * The followings are the available model relations:
- * @property HoiitModuleNews[] $hoiitModuleNews
+ * @property HoiitModuleProcedures[] $hoiitModuleProcedures
  * @property HoiitLanguages[] $hoiitLanguages
  */
-class DocumentCat extends CActiveRecord {
+class ProceduresCat extends CActiveRecord {
     private $_data;
     private $_rows;
     private $_rowsize;
@@ -30,7 +30,7 @@ class DocumentCat extends CActiveRecord {
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
-     * @return DocumentCat the static model class
+     * @return ProceduresCat the static model class
      */
     public static function model($className = __CLASS__) {
         return parent::model($className);
@@ -40,7 +40,7 @@ class DocumentCat extends CActiveRecord {
      * @return string the associated database table name
      */
     public function tableName() {
-        return 'hoiit_module_document_cat';
+        return 'hoiit_module_procedures_cat';
     }
 
     /**
@@ -67,8 +67,8 @@ class DocumentCat extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'Language' => array(self::MANY_MANY, 'Language', 'hoiit_module_document_cat_languages(cat_id, language_id)'),
-            'DocumentCatLanguage' => array(self::HAS_MANY, 'DocumentCatLanguage', 'cat_id', 'index' => 'language_id'),
+            'Language' => array(self::MANY_MANY, 'Language', 'hoiit_module_procedures_cat_languages(cat_id, language_id)'),
+            'ProceduresCatLanguage' => array(self::HAS_MANY, 'ProceduresCatLanguage', 'cat_id', 'index' => 'language_id'),
         );
     }
 
@@ -142,7 +142,7 @@ class DocumentCat extends CActiveRecord {
 
         foreach ($data as $value) {
             if ($value['cat_parent_id'] == 0) {
-                $str .= '<' . $tag . '>' . CHtml::link($value->DocumentCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $value->DocumentCatLanguage[Yii::app()->language]['tag']), array('title' => $value->DocumentCatLanguage[Yii::app()->language]['cat_title']));
+                $str .= '<' . $tag . '>' . CHtml::link($value->ProceduresCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $value->ProceduresCatLanguage[Yii::app()->language]['tag']), array('title' => $value->ProceduresCatLanguage[Yii::app()->language]['cat_title']));
                 if ($value['cat_id'] == $root_find) {
                     $str .= $this->menuRecursive($value['cat_id'], $data, '', '', $subTag, $subTagItem);
                 }
@@ -156,7 +156,7 @@ class DocumentCat extends CActiveRecord {
         $tmp = '';
         foreach ($data as $v) {
             if ($v['cat_parent_id'] == $parent_id) {
-                $re = $sep . '<' . $subTagItem . '>' . CHtml::link($v->DocumentCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $v->DocumentCatLanguage[Yii::app()->language]['tag']), array('title' => $v->DocumentCatLanguage[Yii::app()->language]['cat_title']));
+                $re = $sep . '<' . $subTagItem . '>' . CHtml::link($v->ProceduresCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $v->ProceduresCatLanguage[Yii::app()->language]['tag']), array('title' => $v->ProceduresCatLanguage[Yii::app()->language]['cat_title']));
                 $tmp .= $this->menuRecursive($v['cat_id'], $data, $re, $sep . '');
                 $tmp .= '</' . $subTagItem . '>';
             }
@@ -166,7 +166,7 @@ class DocumentCat extends CActiveRecord {
     }
 
     private function findCatID($tag) {
-        $cat_id = DocumentCatLanguage::model()->findCatByTag($tag);
+        $cat_id = ProceduresCatLanguage::model()->findCatByTag($tag);
         $temp = $cat_id['cat_id'];
         $result = -1;
 
@@ -209,7 +209,7 @@ class DocumentCat extends CActiveRecord {
 
         foreach ($this->_rows as $key => $value) {
             if ($value['cat_parent_id'] == 0) {
-                $this->_data[] = array('cat_id' => $value['cat_id'], 'cat_parent_id' => $value['cat_parent_id'], 'tag' => $value->DocumentCatLanguage[Yii::app()->language]['tag'], 'cat_title_prefix' => $prefix . $value->DocumentCatLanguage[Yii::app()->language]['cat_title'], 'cat_title' => $value->DocumentCatLanguage[Yii::app()->language]['cat_title'], 'cat_enable' => $value['cat_enable']);
+                $this->_data[] = array('cat_id' => $value['cat_id'], 'cat_parent_id' => $value['cat_parent_id'], 'tag' => $value->ProceduresCatLanguage[Yii::app()->language]['tag'], 'cat_title_prefix' => $prefix . $value->ProceduresCatLanguage[Yii::app()->language]['cat_title'], 'cat_title' => $value->ProceduresCatLanguage[Yii::app()->language]['cat_title'], 'cat_enable' => $value['cat_enable']);
                 $this->loopItem($key, $prefix);
             }
         }
@@ -219,7 +219,7 @@ class DocumentCat extends CActiveRecord {
     private function loopItem($i, $prefix, $tab = '|-- ') {
         for ($j = 0; $j < $this->_rowsize; $j++) {
             if ($this->_rows[$j]['cat_parent_id'] == $this->_rows[$i]['cat_id']) {
-                $this->_data[] = array('cat_id' => $this->_rows[$j]['cat_id'], 'cat_parent_id' => $this->_rows[$j]['cat_parent_id'], 'tag' => $this->_rows[$j]->DocumentCatLanguage[Yii::app()->language]['tag'], 'cat_title_prefix' => $prefix . $tab . $this->_rows[$j]->DocumentCatLanguage[Yii::app()->language]['cat_title'], 'cat_title' => $this->_rows[$j]->DocumentCatLanguage[Yii::app()->language]['cat_title'], 'cat_enable' => $this->_rows[$j]['cat_enable']);
+                $this->_data[] = array('cat_id' => $this->_rows[$j]['cat_id'], 'cat_parent_id' => $this->_rows[$j]['cat_parent_id'], 'tag' => $this->_rows[$j]->ProceduresCatLanguage[Yii::app()->language]['tag'], 'cat_title_prefix' => $prefix . $tab . $this->_rows[$j]->ProceduresCatLanguage[Yii::app()->language]['cat_title'], 'cat_title' => $this->_rows[$j]->ProceduresCatLanguage[Yii::app()->language]['cat_title'], 'cat_enable' => $this->_rows[$j]['cat_enable']);
                 $this->loopItem($j, $prefix, $tab . '|-- ');
             }
         }
@@ -275,7 +275,7 @@ class DocumentCat extends CActiveRecord {
             //upload picture
             Yii::import('ext.SimpleImage.CSimpleImage');
             $file = new CSimpleImage();
-            $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('document_cat_width_thumb'), Config::getValue('document_cat_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']]);
+            $this->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('procedures_cat_width_thumb'), Config::getValue('procedures_cat_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']]);
 
             $this->save();
             $id = $this->cat_id;
@@ -294,11 +294,11 @@ class DocumentCat extends CActiveRecord {
             //upload picture
             Yii::import('ext.SimpleImage.CSimpleImage');
             $file = new CSimpleImage();
-            $item->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('document_cat_width_thumb'), Config::getValue('document_cat_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']], $item->pic_thumb);
+            $item->pic_thumb = $file->processUpload($_FILES[__CLASS__ . 'Form']['name']['pic_thumb'], $_FILES[__CLASS__ . 'Form']['tmp_name']['pic_thumb'], Config::getValue('procedures_cat_width_thumb'), Config::getValue('procedures_cat_height_thumb'), '/image/' . lcfirst(__CLASS__), $model['cat_title' . Yii::app()->controller->setting['default_language']], $item->pic_thumb);
 
             $item->save();
         }
-        DocumentCatLanguage::model()->saveRecord($id, $model);
+        ProceduresCatLanguage::model()->saveRecord($id, $model);
     }
 
     //Back end - Get record to Edit
@@ -361,7 +361,7 @@ class DocumentCat extends CActiveRecord {
         $result = $this->getIdByParentId($id);
         foreach ($result as $value) {
             $this->_sub_cat_num++;
-            $this->_sub_num_item += Document::model()->count('hoiit_module_item_cat_cat_id=:cat_id', array(':cat_id' => $value['cat_id']));
+            $this->_sub_num_item += Procedures::model()->count('hoiit_module_item_cat_cat_id=:cat_id', array(':cat_id' => $value['cat_id']));
             $this->loopCat($value['cat_id']);
         }
     }
@@ -378,7 +378,7 @@ class DocumentCat extends CActiveRecord {
     public function loopDelItemtoCat($cat_id) {
         $result = $this->getIdByParentId($cat_id);
         foreach ($result as $value) {
-            Document::model()->deleteItembyCat($value['cat_id']);
+            Procedures::model()->deleteItembyCat($value['cat_id']);
             $this->loopDelItemtoCat($value['cat_id']);
         }
     }
@@ -387,7 +387,7 @@ class DocumentCat extends CActiveRecord {
     public function loopMoveItemtoCat($cat_id, $cat_id_new) {
         $result = $this->getIdByParentId($cat_id);
         foreach ($result as $value) {
-            Document::model()->updateByPk($value['cat_id'], array('hoiit_module_item_cat_cat_id' => $cat_id_new));
+            Procedures::model()->updateByPk($value['cat_id'], array('hoiit_module_item_cat_cat_id' => $cat_id_new));
             $this->loopMoveItemtoCat($value['cat_id'], $cat_id_new);
         }
     }
@@ -403,7 +403,7 @@ class DocumentCat extends CActiveRecord {
 
     //Back end - Delete Record
     public function deleteRecord($id) {
-        DocumentCatLanguage::model()->deleteRecord($id);
+        ProceduresCatLanguage::model()->deleteRecord($id);
 
         $item = $this->find('cat_id=:id', array(':id' => $id));
         Common::removePic($item->pic_thumb, '/image/' . lcfirst(__CLASS__)); // remove pic_thumb
