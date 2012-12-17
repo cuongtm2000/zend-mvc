@@ -43,8 +43,13 @@
             });
         </script>
 		<div class="position-icon">
-			<a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-register.png" alt="dang tin" /><b>Đăng ký</b></a>
-			<a href=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-login.png" alt="dang tin" /><b>Đăng nhập</b></a>	
+			<?php if(!Yii::app()->memberProducts->id):?>
+				<a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-register.png" alt="dang tin" /><b>Đăng ký</b></a>
+				<a href=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-login.png" alt="dang tin" /><b>Đăng nhập</b></a>	
+			<?php else:?>
+				Chào <strong><?php echo Yii::app()->memberProducts->id?></strong>
+				<a href="<?php echo Yii::app()->baseUrl ?>/products/login/logout"><b>Đăng xuất</b></a>
+			<?php endif?>
 		</div> <div class="clear"></div>
     </div>
 </div> <!--End header-top-->
