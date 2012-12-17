@@ -63,7 +63,7 @@
 	</div> <!--End header-->
     <div class="headerexten">
         <div class="bg-title-cat">
-            <h2 class="title-cat">DANH MỤC SẢN PHẨM</h2>
+            <h2 class="title-cat"><a href="<?php echo Yii::app()->baseUrl ?>/san-pham" title=""><?php echo $this->lang['cat_title'].' '.$this->lang['products']?></a></h2>
         </div>
 		<?php $this->getPosition('top')?>
         <div class="clear"></div>
