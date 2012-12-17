@@ -1,0 +1,3 @@
+.sub-cat li{padding:3px 0}
+.sub-cat li a{display:inherit}
+.list-item li, .list-item-index li,.list-item-dead li{float:left;margin:0 7px 10px 0}
