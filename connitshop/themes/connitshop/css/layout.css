@@ -140,7 +140,7 @@ a{text-decoration:none; color:#720E3B} a:hover{color:#000;}
 .price-dead{font-size:18px;color:#D10000;margin:20px 0 0;position:relative} .view{position:absolute;top:-5px;right:0}
 
 .row-info{margin: 0 0 15px 0}
-.right-info{}
+.bton-cart a{color:#fff;background: #95C001;font-weight:bold;padding: 4px 15px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px}
 .title-info{margin:0 0 10px 0;color: #fff}
 .title-info span{background: #444444;padding:3px 10px}
 .price-info{color:#3F3F3F;margin:0 0 10px 0;font-size: 10pt}
@@ -192,10 +192,11 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .bt-frm-register select{width:230px;margin:0}
 
 /* login */
+.bt-frm-register .select-radio{width:auto;margin-right:2px;position:relative;top:2px}
+.bt-frm-register li span label{float:none;width: auto}
 .bt-frm-register label{width:120px}
 .bt-frm-register .remember{float:none;font-weight:normal;margin-left:5px}
 .bt-frm-register .remember-check{width:auto}
-
 
 /*Footer*/
 #footer{background:#403D36;border-top:3px solid #94BB10;color:#fff}

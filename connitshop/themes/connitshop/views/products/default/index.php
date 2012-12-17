@@ -16,6 +16,19 @@
         <?php endif?>
     <?php endforeach; ?>
 </ul>
+<script type="text/javascript">
+    var column =  '<?php echo Config::getValue('products_column_index')?>';
+    var width = $('.list-item-index').innerWidth();
+    var item_width = ((width/column)-30.5);
+    var item_height = '<?php echo Config::getValue('products_height_thumb')?>';
+    $('.list-item-index li').width(item_width);
+    $('.list-item-index li .product-img').width(item_width).height(item_height);
+    $('.list-item-index li:nth-child('+column+'n)').addClass('last-item-index');
+
+    /*var item_height = '<?php echo Config::getValue('products_height_thumb')?>';
+        $('.list-item-index li .product-img').height(item_height);
+        $(".list-item-index li:nth-child(5n)").addClass("last-item-index");*/
+</script>
 <?php else:?>
     Khong ton tai mau tin
-<?php endif;?><div class="clear"></div>
+<?php endif;?>

@@ -44,8 +44,8 @@
         </script>
 		<div class="position-icon">
 			<?php if(!Yii::app()->memberProducts->id):?>
-				<a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-register.png" alt="dang tin" /><b>Đăng ký</b></a>
-				<a href=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-login.png" alt="dang tin" /><b>Đăng nhập</b></a>	
+				<a href="<?php echo Yii::app()->baseUrl ?>/san-pham/dang-ky" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-register.png" alt="Đăng ký" /><b>Đăng ký</b></a>
+				<a href="<?php echo Yii::app()->baseUrl ?>/san-pham/dang-nhap"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-login.png" alt="Đăng nhập" /><b>Đăng nhập</b></a>
 			<?php else:?>
 				Chào <strong><?php echo Yii::app()->memberProducts->id?></strong>
 				<a href="<?php echo Yii::app()->baseUrl ?>/products/login/logout"><b>Đăng xuất</b></a>
@@ -68,7 +68,7 @@
 		<?php $this->getPosition('top')?>
         <div class="clear"></div>
     </div> <!--End headerexten-->
-    <?php echo $content; ?>
+    <?php echo $content ;?>
 </div><!--End wrapper-->
 <div id="footer">
     <div class="main-page copyright">
