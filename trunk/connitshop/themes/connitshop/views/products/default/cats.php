@@ -32,7 +32,16 @@
     </li>
     <?php endforeach; ?>
 </ul> <div class="clear"></div>
-<?php $this->widget('CLinkPager', array('pages' => $items['pages'], 'header'=>'', 'lastPageLabel'=>Yii::t('user', 'last'), 'nextPageLabel'=>Yii::t('user', 'next'), 'firstPageLabel'=>Yii::t('user', 'first'), 'prevPageLabel'=>Yii::t('user', 'prev'), 'htmlOptions'=>array('class'=>'paging')))?> <div class="clear"></div>
+    <?php $this->widget('CLinkPager', array('pages' => $items['pages'], 'header'=>'', 'lastPageLabel'=>Yii::t('user', 'last'), 'nextPageLabel'=>Yii::t('user', 'next'), 'firstPageLabel'=>Yii::t('user', 'first'), 'prevPageLabel'=>Yii::t('user', 'prev'), 'htmlOptions'=>array('class'=>'paging')))?> <div class="clear"></div>
+    <script type="text/javascript">
+        var column =  '<?php echo Config::getValue('products_column')?>';
+        var width = $('.list-item').width();
+        var item_width = (width/column-20);
+        var item_height = '<?php echo Config::getValue('products_height_thumb')?>';
+        $('.list-item li').width(item_width);
+        $('.list-item li .product-img').width(item_width).height(item_height);
+        $('.list-item li:nth-child('+column+'n)').addClass('last-item');
+    </script>
 <?php else:?>
     Khong ton tai mau tin
 <?php endif?>

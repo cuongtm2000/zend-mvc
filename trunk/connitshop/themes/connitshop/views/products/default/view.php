@@ -44,7 +44,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/p
             <p class="price-info"><strong>Giá: <span><?php echo $item['unit']?></span></strong></p>
             <h4 class="title-info"><span>Mô tả sơ lược</span></h4>
             <?php echo $item->ProductsLanguage[Yii::app()->language]['preview']?>
-            <p class="bton-cart"><a href="" class="add-to-cart" title="Add to Cart"><span>Đặt hàng</span></a></p>
+            <p class="bton-cart"><?php echo CHtml::link($this->lang['add_cart'], Yii::app()->baseUrl.$this->setUrlModule('products').'/dat-hang/'.$item->ProductsLanguage[Yii::app()->language]['tag'], array('class' => 'button-order', 'title' => $this->lang['add_cart']))?></p>
         </div> <div class="clear"></div>
     </div>
     <?php endif; ?>
