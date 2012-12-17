@@ -33,4 +33,11 @@ class DefaultController extends Controller {
         $data['other_items'] = $model->listOtherItems($data['item']['record_id'], $data['item']['hoiit_module_item_cat_cat_id']);
         $this->render('view', $data);
     }
+	
+	 public function actionHots() {
+        $model_class = ucfirst($this->module->id);
+        $model = new $model_class;
+
+        $this->render('hots', array('items_hot' => $model->listItemHots()));
+    }
 }
