@@ -1,2 +1,1 @@
-<h4 class="title-left"><span><?php echo $this->lang['products']?></span></h4>
-<?php echo ProductsCat::model()->makeMenu($menu_products, Yii::app()->request->getQuery('cid'), '<ul class="sub-cat frame-leftcontent">', '</ul><div class="bd-bt-left"></div>');?>
+<?php echo ProductsCat::model()->makeMenu($menu_products, Yii::app()->request->getQuery('cid'), '<ul class="nav-left">', '</ul>');?>

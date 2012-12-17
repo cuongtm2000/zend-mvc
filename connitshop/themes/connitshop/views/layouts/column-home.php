@@ -1,6 +1,7 @@
 <?php $this->beginContent('//layouts/main'); ?>
     <div class="main-slider">
-        <ul class="nav-left">
+        <?php $this->getPosition('left')?>
+        <!--<ul class="nav-left">
             <li><a href="" title="">Hàng mới về <img class="new-img" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/new.png" alt="new" /></a></li>
             <li><a href="" title="">Khuyến mãi</a></li>
             <li><a href="" title="">Mua sắm gia đình</a>
@@ -15,7 +16,7 @@
             <li><a href="" title="">Bé trai</a></li>
             <li><a href="" title="">Thời trang nữ</a></li>
             <li><a href="" title="">Thời trang nam</a></li>
-        </ul>
+        </ul>-->
         <script type="text/javascript">
             $(".nav-left li:first").addClass("first-item");
         </script>
