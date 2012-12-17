@@ -38,6 +38,12 @@ $config = array(
             'loginUrl' => array('san-giao-dich/dang-nhap'),
             'stateKeyPrefix' => 'memberLands',
         ),*/
+		'memberProducts' => array(
+            'class' => 'CWebUser',
+            'allowAutoLogin' => true,
+            'loginUrl' => array('san-pham/dang-nhap'),
+            'stateKeyPrefix' => 'memberProducts',
+        ),
 
         /*'cache' => array(
             'class' => 'CDbCache',
