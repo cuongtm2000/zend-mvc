@@ -1,4 +1,4 @@
-
+<?php if($menu_new_index):?>
 <?php foreach($menu_new_index as $value):?>
 	<h2 class="title-right"><span><?php echo $value->NewsCatLanguage[Yii::app()->language]['cat_title']?></span></h2>
 		<?php $items = News::model()->listItemByCatIndex($value['cat_id']); ?>
@@ -27,3 +27,4 @@
 			</ul>
 		</div>
 <?php endforeach?>
+<?php endif;?>
