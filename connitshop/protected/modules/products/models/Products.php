@@ -164,6 +164,21 @@ class Products extends CActiveRecord {
 
         return $this->findAll($criteria);
     }
+	
+	//Front end - list Item by Hot
+    public function listItemHots() {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'hot = 1 AND enable=1';
+
+        $count = $this->count($criteria);
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = 2;
+        $pages->applyLimit($criteria);
+
+        return array('models' => $this->findAll($criteria), 'pages' => $pages);
+    }
 
 	//Front end - list Item by Cat
     public function listItemByCatIndex($cid) {

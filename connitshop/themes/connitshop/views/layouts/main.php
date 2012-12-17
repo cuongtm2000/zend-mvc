@@ -60,22 +60,8 @@
         <div class="bg-title-cat">
             <h2 class="title-cat">DANH MỤC SẢN PHẨM</h2>
         </div>
-        <div class="bg-ticker">
-            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/new-item.jpg" alt="" />
-            <div class='Tickerwrap'>
-                <div class='Tickeritem'>
-                    <div id='newrun' style='float:left; width:680px;'>
-                        <ul id='js-news' class='js-hidden'>
-                            <li class='news-item'><a href=''>Lịch sự kiện Tavinet tại Hà Nội từ 5/12/2012 đến 7/12/2012 </a></li>
-                            <li class='news-item'><a href=''>LỊCH HỘI THẢO - ĐÀO TẠO TAVINET TPHCM THÁNG 12/2012</a></li>
-                            <li class='news-item'><a href=''>Lịch sự kiện Tavinet tại Hà Nội từ 20/11/2012 đến 24/11/2012 </a></li>
-                            <li class='news-item'><a href=''>Lịch sự kiện Tavinet tại Hà Nội từ 13/11/2012 đến 17/11/2012 </a></li>
-                            <li class='news-item'><a href=''>LỊCH HỘI THẢO - ĐÀO TẠO TAVINET TPHCM THÁNG 11/2012</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div> <!--End Tickerwrap-->
-        </div> <div class="clear"></div>
+		<?php $this->getPosition('top')?>
+        <div class="clear"></div>
     </div> <!--End headerexten-->
     <?php echo $content; ?>
 </div><!--End wrapper-->
