@@ -107,7 +107,7 @@ a{text-decoration:none; color:#720E3B} a:hover{color:#000;}
 .title-right,.title-view{margin:0 0 10px 0;font-size:15px;padding:0 0 3px;color:#222;font-weight:bold;border-bottom:2px solid #EBEBEB}
 .title-view{color:#444;font-size:12pt;border:none} .title-view span{font-size:11px;font-weight:normal}
 .title-right b{font-size:9pt;padding:0 5px;position:relative;top:-2px} .date{padding-left:10px}
-.ico-view{text-align:right;border-bottom:1px solid #9A9A9A;padding-bottom:8px} .ico-view a{color:#444;margin-left:8px;font-size:11px} .ico-view img{margin-right:3px;position:relative;top:4px}
+.ico-view{text-align:right;padding-bottom:8px} .ico-view a{color:#444;margin-left:8px;font-size:11px} .ico-view img{margin-right:3px;position:relative;top:4px}
 
 .breadcrumbs{color:#007424;font-weight:bold;margin:0 0 10px 0;line-height:1.6em}
 .breadcrumbs b{padding:0 4px 0 6px;color:#1E8DDE;position:relative;top:-1px}
@@ -139,11 +139,6 @@ a{text-decoration:none; color:#720E3B} a:hover{color:#000;}
 .title-deal{font-size:18px;font-weight:normal;margin:10px 0 0;padding:0} .title-deal a{color:#222}
 .price-dead{font-size:18px;color:#D10000;margin:20px 0 0;position:relative} .view{position:absolute;top:-5px;right:0}
 
-/***    Page product-info     ****/
-.frame-pro-info{border:1px solid #6DA400;padding:5px;margin: 0 0 15px 0}
-.title-pro-order{color:#333; font-size:14px; font-weight:bold;margin:0 0 10px 0;border-bottom:1px solid #ccc;padding:0 0 10px 0}
-.title-pro-order span{padding:0 0 0 10px}
-
 .row-info{margin: 0 0 15px 0}
 .right-info{}
 .title-info{margin:0 0 10px 0;color: #fff}
@@ -165,6 +160,7 @@ a{text-decoration:none; color:#720E3B} a:hover{color:#000;}
 .title-items-news a:hover{color:#000}
 
 /**  panel-items-other tin tuc khac **/
+.main-other{border-top:1px solid #9A9A9A}
 .title-item-other{margin:15px 0 10px;font-size:11pt;color:#444;font-weight:bold}
 .items-other{margin:0;padding:0 0 0 10px;list-style:none}
 .items-other li{color:#0D2364;padding:3px 0}

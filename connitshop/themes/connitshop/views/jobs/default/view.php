@@ -11,6 +11,7 @@
     </div>
 
     <?php if($items_other):?>
+    <div class="main-other">
     <h4 class="title-item-other"><?php echo $this->lang[$this->module->id] . ' ' . $this->lang['other'] ?></h4>
     <ul class="items-other">
         <?php foreach($items_other as $value):?>
@@ -22,6 +23,7 @@
             $(".items-other li:even").addClass("alt");
         });
     </script>
+    </div>
     <?php endif?>
 </div>
 
