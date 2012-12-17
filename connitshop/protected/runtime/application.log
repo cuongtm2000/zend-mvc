@@ -1,0 +1,1074 @@
+2012/12/17 01:35:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:35:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:35:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/scroller.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/scroller.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/de-be-trai.html
+---
+2012/12/17 01:35:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jcarousellite_1.0.1.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jcarousellite_1.0.1.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/de-be-trai.html
+---
+2012/12/17 01:35:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jquery.scroll-1.4.2-min.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jquery.scroll-1.4.2-min.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/de-be-trai.html
+---
+2012/12/17 01:35:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/css/jquery.fancybox.css".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/css/jquery.fancybox.css
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/de-be-trai.html
+---
+2012/12/17 01:35:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/css/scroll.css".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/css/scroll.css
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/de-be-trai.html
+---
+2012/12/17 01:35:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jquery.fancybox.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jquery.fancybox.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/de-be-trai.html
+---
+2012/12/17 01:35:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jquery.serialScroll-1.2.2-min.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jquery.serialScroll-1.2.2-min.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/de-be-trai.html
+---
+2012/12/17 01:35:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/product.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/product.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/de-be-trai.html
+---
+2012/12/17 01:35:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/ajax-loader.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/ajax-loader.gif
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/de-be-trai.html
+---
+2012/12/17 01:35:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/prev.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/prev.gif
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/de-be-trai.html
+---
+2012/12/17 01:35:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/next.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/next.gif
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/de-be-trai.html
+---
+2012/12/17 01:35:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:35:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:35:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:35:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:36:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:36:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:36:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:36:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:37:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:37:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:38:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:38:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:40:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:40:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:40:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/css/jquery.fancybox.css".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/css/jquery.fancybox.css
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 01:40:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jcarousellite_1.0.1.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jcarousellite_1.0.1.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 01:40:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/css/scroll.css".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/css/scroll.css
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 01:40:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jquery.fancybox.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jquery.fancybox.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 01:40:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/scroller.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/scroller.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 01:40:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jquery.scroll-1.4.2-min.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jquery.scroll-1.4.2-min.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 01:40:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/product.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/product.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 01:40:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jquery.serialScroll-1.2.2-min.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jquery.serialScroll-1.2.2-min.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 01:40:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/next.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/next.gif
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 01:40:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/ajax-loader.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/ajax-loader.gif
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 01:40:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/prev.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/prev.gif
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 01:40:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:40:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:41:12 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\connitshop\protected\controllers\AdminController.php:13)
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(6264): AdminController->runAction()
+#1 C:\xampp\php\library\framework\yiilite.php(6273): CFilterChain->run()
+#2 C:\xampp\php\library\framework\yiilite.php(3711): CAccessControlFilter->filter()
+#3 C:\xampp\php\library\framework\yiilite.php(6306): AdminController->filterAccessControl()
+#4 C:\xampp\php\library\framework\yiilite.php(6261): CInlineFilter->filter()
+#5 C:\xampp\php\library\framework\yiilite.php(3323): CFilterChain->run()
+#6 C:\xampp\php\library\framework\yiilite.php(3308): AdminController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\yiilite.php(1699): AdminController->run()
+#8 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\connitshop\index.php(11): CWebApplication->run()
+REQUEST_URI=/connitshop/admin/rank
+2012/12/17 01:42:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:42:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:45:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:45:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:45:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jcarousellite_1.0.1.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jcarousellite_1.0.1.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:45:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/css/jquery.fancybox.css".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/css/jquery.fancybox.css
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:45:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/scroller.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/scroller.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:45:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/css/scroll.css".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/css/scroll.css
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:45:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jquery.fancybox.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jquery.fancybox.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:45:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jquery.scroll-1.4.2-min.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jquery.scroll-1.4.2-min.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:45:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/product.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/product.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:45:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jquery.serialScroll-1.2.2-min.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jquery.serialScroll-1.2.2-min.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:45:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/prev.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/prev.gif
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:45:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/next.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/next.gif
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:45:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/ajax-loader.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/ajax-loader.gif
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:45:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:45:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:47:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jquery.fancybox.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jquery.fancybox.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:47:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/css/scroll.css".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/css/scroll.css
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:47:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/css/jquery.fancybox.css".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/css/jquery.fancybox.css
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:47:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/scroller.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/scroller.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:47:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jcarousellite_1.0.1.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jcarousellite_1.0.1.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:47:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jquery.scroll-1.4.2-min.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jquery.scroll-1.4.2-min.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:47:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jquery.serialScroll-1.2.2-min.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jquery.serialScroll-1.2.2-min.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:47:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/product.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/product.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:47:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/ajax-loader.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/ajax-loader.gif
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:47:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/prev.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/prev.gif
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:47:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/next.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/next.gif
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-3.html
+---
+2012/12/17 01:47:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:47:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:47:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:47:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:48:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/quote.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/quote.gif
+HTTP_REFERER=http://localhost/connitshop/gioi-thieu/lich-su-hinh-thanh-va-phat-trien.html
+---
+2012/12/17 01:48:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/print.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/print.gif
+HTTP_REFERER=http://localhost/connitshop/gioi-thieu/lich-su-hinh-thanh-va-phat-trien.html
+---
+2012/12/17 01:48:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/mail.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/mail.gif
+HTTP_REFERER=http://localhost/connitshop/gioi-thieu/lich-su-hinh-thanh-va-phat-trien.html
+---
+2012/12/17 01:48:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:48:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:48:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/quote.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/quote.gif
+HTTP_REFERER=http://localhost/connitshop/gioi-thieu/thong-diep-cua-chu-tich-hdqt.html
+---
+2012/12/17 01:48:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/mail.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/mail.gif
+HTTP_REFERER=http://localhost/connitshop/gioi-thieu/thong-diep-cua-chu-tich-hdqt.html
+---
+2012/12/17 01:48:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/print.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/print.gif
+HTTP_REFERER=http://localhost/connitshop/gioi-thieu/thong-diep-cua-chu-tich-hdqt.html
+---
+2012/12/17 01:48:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:48:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:48:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/quote.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/quote.gif
+HTTP_REFERER=http://localhost/connitshop/gioi-thieu/lich-su-hinh-thanh-va-phat-trien.html
+---
+2012/12/17 01:48:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/mail.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/mail.gif
+HTTP_REFERER=http://localhost/connitshop/gioi-thieu/lich-su-hinh-thanh-va-phat-trien.html
+---
+2012/12/17 01:48:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/print.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/print.gif
+HTTP_REFERER=http://localhost/connitshop/gioi-thieu/lich-su-hinh-thanh-va-phat-trien.html
+---
+2012/12/17 01:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:49:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:49:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:50:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:50:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:51:01 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\connitshop\protected\controllers\AdminController.php:13)
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(6264): AdminController->runAction()
+#1 C:\xampp\php\library\framework\yiilite.php(6273): CFilterChain->run()
+#2 C:\xampp\php\library\framework\yiilite.php(3711): CAccessControlFilter->filter()
+#3 C:\xampp\php\library\framework\yiilite.php(6306): AdminController->filterAccessControl()
+#4 C:\xampp\php\library\framework\yiilite.php(6261): CInlineFilter->filter()
+#5 C:\xampp\php\library\framework\yiilite.php(3323): CFilterChain->run()
+#6 C:\xampp\php\library\framework\yiilite.php(3308): AdminController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\yiilite.php(1699): AdminController->run()
+#8 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\connitshop\index.php(11): CWebApplication->run()
+REQUEST_URI=/connitshop/admin/rank
+2012/12/17 01:52:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:52:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:58:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/css/scroll.css".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/css/scroll.css
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/nguyen-bo.html
+---
+2012/12/17 01:58:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jcarousellite_1.0.1.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jcarousellite_1.0.1.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/nguyen-bo.html
+---
+2012/12/17 01:58:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jquery.fancybox.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jquery.fancybox.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/nguyen-bo.html
+---
+2012/12/17 01:58:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jquery.scroll-1.4.2-min.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jquery.scroll-1.4.2-min.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/nguyen-bo.html
+---
+2012/12/17 01:58:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jquery.serialScroll-1.2.2-min.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jquery.serialScroll-1.2.2-min.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/nguyen-bo.html
+---
+2012/12/17 01:58:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/scroller.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/scroller.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/nguyen-bo.html
+---
+2012/12/17 01:58:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/css/jquery.fancybox.css".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/css/jquery.fancybox.css
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/nguyen-bo.html
+---
+2012/12/17 01:58:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/product.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/product.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/nguyen-bo.html
+---
+2012/12/17 01:58:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/ajax-loader.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/ajax-loader.gif
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/nguyen-bo.html
+---
+2012/12/17 01:58:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/prev.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/prev.gif
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/nguyen-bo.html
+---
+2012/12/17 01:58:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/next.gif".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/next.gif
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-trai/nguyen-bo.html
+---
+2012/12/17 01:58:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:58:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:58:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 01:58:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 02:00:15 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\connitshop\protected\controllers\AdminController.php:13)
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(6264): AdminController->runAction()
+#1 C:\xampp\php\library\framework\yiilite.php(6273): CFilterChain->run()
+#2 C:\xampp\php\library\framework\yiilite.php(3711): CAccessControlFilter->filter()
+#3 C:\xampp\php\library\framework\yiilite.php(6306): AdminController->filterAccessControl()
+#4 C:\xampp\php\library\framework\yiilite.php(6261): CInlineFilter->filter()
+#5 C:\xampp\php\library\framework\yiilite.php(3323): CFilterChain->run()
+#6 C:\xampp\php\library\framework\yiilite.php(3308): AdminController->runActionWithFilters()
+#7 C:\xampp\php\library\framework\yiilite.php(1699): AdminController->run()
+#8 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController()
+#9 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\connitshop\index.php(11): CWebApplication->run()
+REQUEST_URI=/connitshop/admin/rank
+2012/12/17 02:07:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jquery.fancybox.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jquery.fancybox.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 02:07:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/css/scroll.css".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/css/scroll.css
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 02:07:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/scroller.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/scroller.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 02:07:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jquery.scroll-1.4.2-min.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jquery.scroll-1.4.2-min.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 02:07:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/css/jquery.fancybox.css".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/css/jquery.fancybox.css
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 02:07:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jcarousellite_1.0.1.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jcarousellite_1.0.1.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 02:07:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/jquery.serialScroll-1.2.2-min.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/jquery.serialScroll-1.2.2-min.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 02:07:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/js/product.js".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/js/product.js
+HTTP_REFERER=http://localhost/connitshop/san-pham/be-gai/bo-be-gai-1.html
+---
+2012/12/17 02:08:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 02:08:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 02:08:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---
+2012/12/17 02:08:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/connitshop/images/favicon.ico".' in C:\xampp\php\library\framework\yiilite.php:1703
+Stack trace:
+#0 C:\xampp\php\library\framework\yiilite.php(1619): CWebApplication->runController('themes/connitsh...')
+#1 C:\xampp\php\library\framework\yiilite.php(1144): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\connitshop\index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/connitshop/themes/connitshop/images/favicon.ico
+---

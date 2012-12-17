@@ -1,0 +1,138 @@
+/* Ticker Styling */
+.Tickerwrap{padding-top:3px}
+.ticker-wrapper.has-js {
+	padding: 0px;
+	display: block;
+	font-size: 0.75em;	width:670px;
+}
+.ticker {
+	width: 640px;
+	height: 23px;
+	display: block;
+	position: relative;
+	overflow: hidden;
+
+}
+.ticker-title {
+	padding-top: 9px;	
+	font-weight: bold;
+	/*background-color: #EBEBEB;*/
+	text-transform: uppercase;
+}
+.ticker-content {
+	margin: 0px;
+	padding-top: 3px;
+	position: absolute;	
+	font-weight: bold;
+	background-color: #EBEBEB;
+	overflow: hidden;
+	white-space: nowrap;
+	line-height: 1.2em;font-size:12px;
+}
+.ticker-content a {
+	color:#333;
+
+	
+}
+.ticker-content a:hover {
+	text-decoration: underline;	
+	
+}
+.ticker-swipe {
+	padding-top: 9px;
+	position: absolute;
+	top: 0px;
+	background-color: #EBEBEB;
+	display: block;
+	width: 735px;
+	height: 23px; 
+}
+.ticker-swipe span {
+	margin-left: 1px;
+	background-color: #EBEBEB;
+	border-bottom: 1px solid #1F527B;
+	height: 12px;
+	width: 7px;
+	display: block;float:left;
+}
+.ticker-controls {
+	padding:8px 0 0;margin:0;
+	list-style:none;
+	float: right !important;
+}
+.ticker-controls li {
+	padding: 0px;
+	margin-left: 5px;
+	float: left;
+	cursor: pointer;
+	height: 9px;
+	width: 9px;
+	display: block;
+}
+/*
+.ticker-controls li.jnt-play-pause {
+	background-image: url('../images/controls.png');
+	background-position: 32px 16px;
+}*/
+.ticker-controls li.jnt-play-pause.over {
+	
+}
+.ticker-controls li.jnt-play-pause.down {
+
+}
+/*
+.ticker-controls li.jnt-play-pause.paused {
+	background-image: url('../images/controls.png');	
+	background-position: 48px 16px;
+}*/
+.ticker-controls li.jnt-play-pause.paused.over {
+
+}
+.ticker-controls li.jnt-play-pause.paused.down {
+
+}
+.ticker-controls li.jnt-prev {
+	background-image: url(../images/icon_pre_Active.jpg);
+	
+}
+.ticker-controls li.jnt-prev.over {
+
+}
+.ticker-controls li.jnt-prev.down {
+
+}
+.ticker-controls li.jnt-next {
+	background-image: url(../images/icon_next_Active.jpg);	
+	/*background-position: 16px 16px;	*/
+}
+.ticker-controls li.jnt-next.over {
+	
+}
+.ticker-controls li.jnt-next.down {	
+	
+}
+.js-hidden {
+	display: none;
+}
+.no-js-news {
+	padding: 10px 0px 0px 45px; 
+
+}
+.left .ticker-swipe {
+
+}
+.left .ticker-controls, .left .ticker-content, .left .ticker-title, .left .ticker {
+    float: left;
+}
+.left .ticker-controls {
+
+}
+.right .ticker-swipe {
+
+}
+.right .ticker-controls, .right .ticker-content, .right .ticker-title, .right .ticker {
+    float: right;
+}
+.right .ticker-controls {
+    padding-right: 6px;
+}

@@ -153,6 +153,28 @@ class Products extends CActiveRecord {
         return $this->findAll($criteria);
     }
 
+    //Front end - list item new
+    public function listItemsNew() {
+        $criteria = new CDbCriteria();
+        $criteria->with = array(__CLASS__ . 'Cat');
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'enable = 1';
+        $criteria->params = array(':user' => Yii::app()->session['subDomain']);
+        $criteria->limit = Config::getValue('products_num_item_new');
+
+        return $this->findAll($criteria);
+    }
+
+	//Front end - list Item by Cat
+    public function listItemByCatIndex($cid) {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'enable=1 AND hoiit_module_item_cat_cat_id=:cid';
+        $criteria->params = array(':cid' => $cid);
+		$criteria->limit = 5;
+        return $this->findAll($criteria);	
+    }
+	
     //Front end - list Item by Cat
     public function listItemByCat($cid) {
         $criteria = new CDbCriteria();

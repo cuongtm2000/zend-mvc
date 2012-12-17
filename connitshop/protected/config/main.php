@@ -3,7 +3,7 @@
 Yii::setPathOfAlias('filePathUpload', '/public/userfiles');
 $config = array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-    'name' => 'Datxanhhoancau.com.vn',
+    'name' => 'Connitshop.com',
     'defaultController' => 'default',
 
     // preloading 'log' component
@@ -17,14 +17,14 @@ $config = array(
 
     //'modules' => require(dirname(__FILE__) . '/LoadModules.php'),
 
-    'modules' => array(
+    /*'modules' => array(
         'gii' => array(
             'class' => 'system.gii.GiiModule',
             'password' => '123',
             // If removed, Gii defaults to localhost only. Edit carefully to taste.
             'ipFilters' => array('127.0.0.1', '::1'),
         ),
-    ),
+    ),*/
 
     'components' => array(
         'user' => array(
@@ -32,12 +32,12 @@ $config = array(
             'allowAutoLogin' => true,
             'loginUrl' => array('login')
         ),
-		'memberLands' => array(
+		/*'memberLands' => array(
             'class' => 'CWebUser',
             'allowAutoLogin' => true,
             'loginUrl' => array('san-giao-dich/dang-nhap'),
             'stateKeyPrefix' => 'memberLands',
-        ),
+        ),*/
 
         /*'cache' => array(
             'class' => 'CDbCache',
@@ -74,7 +74,7 @@ $config = array(
         ),
 
         'db' => array(
-            'connectionString' => 'mysql:host=localhost;dbname=sotaichinh',
+            'connectionString' => 'mysql:host=localhost;dbname=connit',
             //'schemaCachingDuration' => 3600,
             'emulatePrepare' => true,
             'username' => 'root',
@@ -111,17 +111,4 @@ $config = array(
 );
 
 require(dirname(__FILE__) . '/LoadModules.php');
-
-/*$modules_dir = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR;
-$handle = opendir($modules_dir);
-while (false !== ($file = readdir($handle))) {
-    if ($file != "." && $file != ".." && is_dir($modules_dir . $file)) {
-        $path = $modules_dir . $file . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'main.php';
-        if (file_exists($path)) {
-            $config = CMap::mergeArray($config, require($path));
-        }
-    }
-}
-closedir($handle);*/
-
 return $config;
