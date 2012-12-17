@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2012 at 10:06 AM
+-- Generation Time: Dec 17, 2012 at 10:24 AM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -95,6 +95,7 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('products_height_full', '700', NULL, 'products'),
 ('products_height_thumb', '150', NULL, 'products'),
 ('products_num_item_cat', '4', NULL, 'products'),
+('products_num_item_deal', '2', NULL, 'products'),
 ('products_num_item_new', '15', NULL, 'products'),
 ('products_num_item_other', '4', NULL, 'products'),
 ('products_width_desc', '520', NULL, 'products'),
@@ -222,6 +223,7 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('counterSession', 'Thống kê truy cập', 0, 'vi'),
 ('create_date', 'Created date', 1, 'en'),
 ('create_date', 'Ngày tạo', 1, 'vi'),
+('deal', 'Khuyến mãi', 0, 'vi'),
 ('default', 'Home page', 0, 'en'),
 ('default', 'Trang chủ', 0, 'vi'),
 ('delete', 'Delete', 1, 'en'),
@@ -1089,11 +1091,11 @@ INSERT INTO `hoiit_module_products` (`record_id`, `postdate`, `pic_thumb`, `pic_
 (1, '2012-12-14 07:54:57', 'de-be-trai-thumb.JPG', 'de-be-trai.jpg', NULL, 1, '180000', 0, NULL, NULL, NULL, NULL, NULL, 1, 2),
 (2, '2012-12-14 08:04:34', 'nguyen-bo-thumb.JPG', 'nguyen-bo.jpg', NULL, 2, '30000', 0, NULL, NULL, NULL, NULL, NULL, 1, 2),
 (3, '2012-12-14 08:04:51', 'do-moi-thumb.JPG', 'do-moi.JPG', NULL, 3, '17000', 0, NULL, NULL, NULL, NULL, NULL, 1, 2),
-(4, '2012-12-14 08:06:04', 'bo-do-4-thumb.jpg', 'bo-do-4.jpg', NULL, 4, '150000', 0, NULL, NULL, NULL, NULL, NULL, 1, 2),
-(5, '2012-12-14 08:10:57', 'bo-5-thumb.jpg', 'bo-5.jpg', NULL, 5, '180000', 0, NULL, NULL, NULL, NULL, NULL, 1, 2),
-(6, '2012-12-14 08:34:19', 'bo-be-gai-1-thumb.jpg', 'bo-be-gai-1.jpg', NULL, 6, '16.000 đ', 0, NULL, NULL, NULL, NULL, NULL, 1, 1),
-(7, '2012-12-14 08:34:49', 'bo-be-gai-2-thumb.jpg', 'bo-be-gai-2.jpg', NULL, 7, '28 000 Đ', 0, NULL, NULL, NULL, NULL, NULL, 1, 1),
-(8, '2012-12-14 08:35:23', 'bo-be-gai-3-thumb.png', 'bo-be-gai-3.png', NULL, 8, '27.000 Đ', 0, NULL, NULL, NULL, NULL, NULL, 1, 1);
+(4, '2012-12-14 08:06:04', 'bo-do-4-thumb.jpg', 'bo-do-4.jpg', NULL, 4, '150000', 1, NULL, NULL, NULL, NULL, NULL, 1, 2),
+(5, '2012-12-14 08:10:57', 'bo-5-thumb.jpg', 'bo-5.jpg', NULL, 5, '180000', 1, NULL, NULL, NULL, NULL, NULL, 1, 2),
+(6, '2012-12-14 08:34:19', 'bo-be-gai-1-thumb.jpg', 'bo-be-gai-1.jpg', NULL, 6, '16.000 đ', 1, NULL, NULL, NULL, NULL, NULL, 1, 1),
+(7, '2012-12-14 08:34:49', 'bo-be-gai-2-thumb.jpg', 'bo-be-gai-2.jpg', NULL, 7, '28 000 Đ', 1, NULL, NULL, NULL, NULL, NULL, 1, 1),
+(8, '2012-12-14 08:35:23', 'bo-be-gai-3-thumb.png', 'bo-be-gai-3.png', NULL, 8, '27.000 Đ', 1, NULL, NULL, NULL, NULL, NULL, 1, 1);
 
 -- --------------------------------------------------------
 

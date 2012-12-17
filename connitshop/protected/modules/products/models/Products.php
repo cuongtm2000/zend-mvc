@@ -174,7 +174,7 @@ class Products extends CActiveRecord {
         $count = $this->count($criteria);
         // elements per page
         $pages = new CPagination($count);
-        $pages->pageSize = 2;
+        $pages->pageSize = Config::getValue('products_num_item_deal');;
         $pages->applyLimit($criteria);
 
         return array('models' => $this->findAll($criteria), 'pages' => $pages);
