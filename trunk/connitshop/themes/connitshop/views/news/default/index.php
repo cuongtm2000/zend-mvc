@@ -1,9 +1,8 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id]); ?>
 <?php $this->pageTitle = $this->lang[$this->module->id]; $this->setDescription()?>
-	
+
+<h2 class="title-box"><span><?php echo CHtml::encode($this->lang['news'])?></span></h2>
 <?php if($listItemIndex['models']):?>
-<h2 class="title-right"><span><?php echo CHtml::encode($this->lang['news'])?></span></h2>
-<div class="main-list-item">
 	<ul class="panel-items">
 		<?php foreach($listItemIndex['models'] as $value):?>
 		<li>
@@ -21,12 +20,11 @@
 		<?php endforeach?>
 	</ul> <div class="clear"></div>
 	<?php $this->widget('CLinkPager', array('pages' => $listItemIndex['pages'], 'header'=>'', 'lastPageLabel'=>'Last', 'nextPageLabel'=>'Next', 'firstPageLabel'=>'First', 'prevPageLabel'=>'Prev', 'htmlOptions'=>array('class'=>'paging')))?> <div class="clear"></div>
-</div>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$(".panel-items li:odd").addClass("alt");
-	});
-</script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".panel-items li:odd").addClass("alt");
+        });
+    </script>
 <?php else:?>
-	khong co mau tin
+    <div class="frame-tent-right">khong co mau tin</div>
 <?php endif?>

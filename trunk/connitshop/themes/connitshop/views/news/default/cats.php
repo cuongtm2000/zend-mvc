@@ -1,8 +1,7 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id] => array($this->setUrlModule()), $info_cat['cat_title']); ?>
 <?php $this->pageTitle = $info_cat['cat_title'] . ' - ' . $this->lang[$this->module->id]; $this->setDescription($info_cat['description'])?>
     <?php if($items['models']):?>
-    <h2 class="title-right"><span><?php echo $this->lang[$this->module->id] .' <b>'.'&raquo;'.'</b>'.' '.$info_cat['cat_title'] ?></span></h2>
-	<div class="main-list-item">
+    <h2 class="title-box"><span><?php echo $this->lang[$this->module->id] .' <b>'.'&raquo;'.'</b>'.' '.$info_cat['cat_title'] ?></span></h2>
 	<ul class="panel-items">
 		<?php foreach($items['models'] as $value):?>
         <li>
@@ -20,12 +19,12 @@
         <?php endforeach?>
     </ul> 
 	<?php $this->widget('CLinkPager', array('pages' => $items['pages'], 'header'=>'', 'lastPageLabel'=>'Last', 'nextPageLabel'=>'Next', 'firstPageLabel'=>'First', 'prevPageLabel'=>'Prev', 'htmlOptions'=>array('class'=>'paging')))?> <div class="clear"></div>
-	</div>
     <script type="text/javascript">
         $(document).ready(function(){
             $(".panel-items li:even").addClass("alt");
         });
     </script>
     <?php else:?>
-        khong co mau tin
+        <h2 class="title-box"><span><?php echo $this->lang[$this->module->id] .' <b>'.'&raquo;'.'</b>'.' '.$info_cat['cat_title'] ?></span></h2>
+        <div class="frame-tent-right">khong co mau tin</div>
     <?php endif;?>

@@ -29,11 +29,19 @@
 		<div class="header-top-left"><span>TP. HỒ CHÍ MINH</span></div>
 		<ul class="nav-top">
 			<li><a href="<?php echo Yii::app()->baseUrl ?>/gioi-thieu" title="">Giới thiệu</a></li>
-			<li><a href="" title="">Câu hỏi thường gặp</a></li>
+			<li><a href="<?php echo Yii::app()->baseUrl ?>/cau-hoi-thuong-gap" title="">Câu hỏi thường gặp</a></li>
 			<li><a href="" title="">Chính sách bản sỉ</a></li>
-			<li><a href="<?php echo Yii::app()->baseUrl ?>/tin-tuc" title="">Sự kiện hot</a></li>
+			<li><a href="<?php echo Yii::app()->baseUrl ?>/su-kien-hot" title="">Sự kiện hot</a></li>
             <li class="none-line"><a href="<?php echo Yii::app()->baseUrl ?>/lien-he" title="">Liên hệ</a></li>
 		</ul>
+        <script type="text/javascript">
+            $(".nav-top li").each(function(){
+                var myUrl = $(this).find('a').attr('href');
+                if(myUrl == window.location.pathname){
+                    $(this).addClass('selected');
+                }
+            });
+        </script>
 		<div class="position-icon">
 			<a href="" title=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-register.png" alt="dang tin" /><b>Đăng ký</b></a>
 			<a href=""><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon-login.png" alt="dang tin" /><b>Đăng nhập</b></a>	
@@ -43,19 +51,7 @@
 <div id="wrapper">
 	<div id="header">
 		<div id="logo"><?php $this->widget('ext.Logo.LogoStatic')?></div>
-        <ul class="support">
-            <li>
-                <p>Tư vấn</p>
-                <p>Mr Sang: 0902 308 590</p>
-                <a href="ymsgr:sendIM?groupitsoft&amp;m=Xin chào, tôi muốn hỏi về sản phẩm - dịch vụ của công ty bạn" title="Chat groupitsoft"><img src="http://mail.opi.yahoo.com/online?u=groupitsoft&amp;m=g&amp;t=2" border="0" alt="groupitsoft" /></a>
-            </li>
-            <li>
-                <p>Tư vấn</p>
-                <p>Mr Thơ: 0902 308 590</p>														
-                <p><a href="ymsgr:sendIM?groupitsoft&amp;m=Xin chào, tôi muốn hỏi về sản phẩm - dịch vụ của công ty bạn" title="Chat groupitsoft"><img src="http://mail.opi.yahoo.com/online?u=groupitsoft&amp;m=g&amp;t=2" border="0" alt="groupitsoft" /></a></p>
-                <p><a href="skype:thaibao61?call"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/sky.png"  alt="My status" /></a></p>
-            </li>
-        </ul>
+        <?php $this->getPosition('header')?>
         <div class="shop-cart">
         	<a href="" title="">Giỏ hàng <span>(0)</span></a>
         </div>		<div class="clear"></div>

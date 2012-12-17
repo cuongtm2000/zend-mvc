@@ -1,28 +1,27 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id] => array($this->setUrlModule()), $cat_title = $item->JobsCat->JobsCatLanguage[Yii::app()->language]['cat_title'] => array($this->setUrlModule().'/'.$item->JobsCat->JobsCatLanguage[Yii::app()->language]['tag']), $title = $item->JobsLanguage[Yii::app()->language]['title']); ?>
 <?php $this->pageTitle = $title . ' - ' . $cat_title; $this->setDescription($item->JobsLanguage[Yii::app()->language]['description']) ?>
-	<h2 class="title-box"><span><?php echo $title?></span></h2>
-	<div class="frame-tent-right"><?php echo $item->JobsLanguage[Yii::app()->language]['content']?>
-		<div class="ico-view">
-			<a href="http://www.facebook.com/sharer.php?u=datxanhhoancau.com.vn<?php echo $this->setUrlModule().'/'.$item->JobsCat->JobsCatLanguage[Yii::app()->language]['tag'].'/'.$item->JobsLanguage[Yii::app()->language]['tag'].'.html' ?>" target="_blank"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/facebook.png" alt="Chia sẻ qua Facebook" title="Chia sẻ qua Facebook">Facebook</a>
-			<a href="http://twitter.com/home?status=datxanhhoancau.com.vn<?php echo $this->setUrlModule().'/'.$item->JobsCat->JobsCatLanguage[Yii::app()->language]['tag'].'/'.$item->JobsLanguage[Yii::app()->language]['tag'].'.html' ?>" target="_blank"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/tweet.png" alt="Chi sẻ qua Twitter" title="Chi sẻ qua Twitter">Twitter</a>
-			<a href="http://www.google.com/bookmarks/mark?op=edit&amp;bkmk=datxanhhoancau.com.vn<?php echo $this->setUrlModule().'/'.$item->JobsCat->JobsCatLanguage[Yii::app()->language]['tag'].'/'.$item->JobsLanguage[Yii::app()->language]['tag'].'.html' ?>" target="_blank"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/google.png" alt="Chi sẻ qua Google Bookmarks" title="Chi sẻ qua Google Bookmarks">Google</a>
-			<a href="JavaScript:window.print();" target="_self"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon_prin.png" alt="In trang này" title="In trang này">Print</a>
-			<a href="javascript:history.back();"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon_undo.png" alt="Quay lại" title="Quay lại">Quay lại</a>
-			<a href="javascript:scroll(0,0)"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/icon_top.png" alt="Đầu trang" title="Đầu trang">Đầu trang</a>
-		</div>
-	</div>
 
-	<?php if($items_other):?>
-	<h4 class="title-item-other"><?php echo $this->lang[$this->module->id] . ' ' . $this->lang['other'] ?></h4>
-	<ul class="panel-items-other">
+<h2 class="title-box"><span><?php echo $this->lang[$this->module->id]?> <b>&raquo;</b> <?php echo $item->JobsCat->JobsCatLanguage[Yii::app()->language]['cat_title']?> </span></h2>
+<div class="frame-tent-right">
+    <h2 class="title-view"><?php echo $title?><span class="date">( <?php echo date('d/m/Y', strtotime($item['postdate']))?> )</span></h2>
+    <?php echo $item->JobsLanguage[Yii::app()->language]['content']?>
+    <div class="ico-view">
+        <a href="javascript:history.back();"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/undo.gif" alt="Quay lại" title="Quay lại" />Quay lại</a>
+        <a href="javascript:scroll(0,0)"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/arrow-up.gif" alt="Đầu trang" title="Đầu trang" />Đầu trang</a>
+    </div>
+
+    <?php if($items_other):?>
+    <h4 class="title-item-other"><?php echo $this->lang[$this->module->id] . ' ' . $this->lang['other'] ?></h4>
+    <ul class="items-other">
         <?php foreach($items_other as $value):?>
-            <li><?php echo CHtml::link($value->JobsLanguage[Yii::app()->language]['title'], array($this->setUrlModule('jobs').'/'.$value->JobsCat->JobsCatLanguage[Yii::app()->language]['tag'].'/'.$value->JobsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$value->JobsLanguage[Yii::app()->language]['title'])); ?></li>
+        <li><?php echo CHtml::link($value->JobsLanguage[Yii::app()->language]['title'].' '.'<span>('.date('d/m/Y', strtotime($value['postdate'])).')</span>', array($this->setUrlModule('jobs').'/'.$value->JobsCat->JobsCatLanguage[Yii::app()->language]['tag'].'/'.$value->JobsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$value->JobsLanguage[Yii::app()->language]['title'])); ?></li>
         <?php endforeach?>
-	</ul>
-	
+    </ul>
     <script type="text/javascript">
         $(document).ready(function(){
-            $(".panel-items-other li:even").addClass("alt");
+            $(".items-other li:even").addClass("alt");
         });
     </script>
-<?php endif?>
+    <?php endif?>
+</div>
+

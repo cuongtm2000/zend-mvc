@@ -1,10 +1,9 @@
-
 -- phpMyAdmin SQL Dump
 -- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2012 at 10:59 AM
+-- Generation Time: Dec 17, 2012 at 05:08 AM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -12,6 +11,10 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `connit`
@@ -57,14 +60,14 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('contact_port', '465', NULL, 'contact'),
 ('contact_send_mail_smtp', '1', NULL, 'contact'),
 ('contact_username', 'datxanhhoancau', NULL, 'contact'),
-('jobs_cat_height_thumb', '200', NULL, 'jobs'),
-('jobs_cat_width_thumb', '200', NULL, 'jobs'),
-('jobs_height_thumb', '200', NULL, 'jobs'),
+('jobs_cat_height_thumb', '110', NULL, 'jobs'),
+('jobs_cat_width_thumb', '110', NULL, 'jobs'),
+('jobs_height_thumb', '110', NULL, 'jobs'),
 ('jobs_num_item_cat', '3', NULL, 'jobs'),
-('jobs_num_item_hot', '7', '', 'jobs'),
+('jobs_num_item_hot', '7', NULL, 'jobs'),
 ('jobs_num_item_index', '3', NULL, 'jobs'),
 ('jobs_num_item_new', '7', NULL, 'jobs'),
-('jobs_width_thumb', '200', NULL, 'jobs'),
+('jobs_width_thumb', '110', NULL, 'jobs'),
 ('logo_height', '114', NULL, 'banner'),
 ('logo_width', '403', NULL, 'banner'),
 ('news_cat_height_thumb', '100', NULL, 'news'),
@@ -85,7 +88,7 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('procedures_width_thumb', '150', NULL, 'procedures'),
 ('products_cat_height_thumb', '150', NULL, 'products'),
 ('products_cat_width_thumb', '150', NULL, 'products'),
-('products_column', '5', NULL, 'products'),
+('products_column', '4', NULL, 'products'),
 ('products_column_cat', '3', NULL, 'products'),
 ('products_column_index', '5', NULL, 'products'),
 ('products_height_desc', '700', NULL, 'products'),
@@ -93,7 +96,7 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('products_height_thumb', '150', NULL, 'products'),
 ('products_num_item_cat', '3', NULL, 'products'),
 ('products_num_item_new', '15', NULL, 'products'),
-('products_num_item_other', '3', NULL, 'products'),
+('products_num_item_other', '4', NULL, 'products'),
 ('products_width_desc', '520', NULL, 'products'),
 ('products_width_full', '520', NULL, 'products'),
 ('products_width_thumb', '150', NULL, 'products'),
@@ -226,10 +229,10 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('hidden', 'Hidden', 1, 'en'),
 ('hidden', 'Ẩn', 1, 'vi'),
 ('hot', 'nổi bật', 0, 'vi'),
-('jobs', 'Văn bản mới ban hành', 0, 'vi'),
+('jobs', 'Câu hỏi thường gặp', 0, 'vi'),
 ('new', 'mới nhất', 0, 'vi'),
 ('news', 'News', 0, 'en'),
-('news', 'Tin tức & sự kiện', 0, 'vi'),
+('news', 'Sự kiện hot', 0, 'vi'),
 ('no_record', 'Không tồn tại mẫu tin', 0, 'vi'),
 ('order', 'Order', 1, 'en'),
 ('order', 'Thứ tự', 1, 'vi'),
@@ -243,6 +246,7 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('products', 'Sản phẩm', 0, 'vi'),
 ('projects', 'Projects', 0, 'en'),
 ('projects', 'Thành tự và định hướng', 0, 'vi'),
+('services', 'Chính sách bán sỉ', 0, 'vi'),
 ('show', 'Show', 1, 'en'),
 ('show', 'Hiển thị', 1, 'vi'),
 ('sort', 'Sort', 1, 'en'),
@@ -311,6 +315,7 @@ INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_url`, `module_
 ('procedures', 'Danh mục|Danh sách|Cấu hình', 'procedures/cat|procedures|procedures/config', 4, 1, 1),
 ('products', 'Danh mục|Danh sách|Cấu hình', 'products/cat|products|products/config', 3, 1, 1),
 ('projects', 'Danh mục|Danh sách|Cấu hình', 'projects/cat|projects|projects/config', 4, 1, 1),
+('services', 'Danh sách|Cấu hình', 'services|services/config', 4, 1, 1),
 ('support', 'Danh sách', 'support', 6, 1, 0),
 ('video', 'Danh mục|Danh sách|Cấu hình', 'video/cat|video|video/config', 3, 1, 1);
 
@@ -342,15 +347,16 @@ INSERT INTO `hoiit_modules_links` (`link_id`, `module_id`, `language_id`) VALUES
 ('poll', 'poll', 'en'),
 ('products', 'products', 'en'),
 ('projects', 'projects', 'en'),
+('cau-hoi-thuong-gap', 'jobs', 'vi'),
+('chinh-sach-ban-si', 'services', 'vi'),
 ('gioi-thieu', 'about', 'vi'),
 ('khao-sat-y-kien', 'poll', 'vi'),
 ('lien-he', 'contact', 'vi'),
 ('san-pham', 'products', 'vi'),
+('su-kien-hot', 'news', 'vi'),
 ('thanh-tuu-dinh-huong', 'projects', 'vi'),
 ('thu-tuc-hanh-chinh', 'procedures', 'vi'),
-('tin-tuc', 'news', 'vi'),
-('trang-chu', 'default', 'vi'),
-('van-ban-moi-ban-hanh', 'jobs', 'vi');
+('trang-chu', 'default', 'vi');
 
 -- --------------------------------------------------------
 
@@ -405,9 +411,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
 --
 
 INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(2, 'vi', 'Thông điệp của chủ tịch HĐQT', '<p style="text-align:justify;"><br />Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những “Sản phẩm tốt nhất – Dịch vụ tốt nhất” , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p style="text-align:justify;">Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p style="text-align:justify;">Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p style="text-align:justify;">Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p style="text-align:justify;">Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p style="text-align:justify;">Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p style="text-align:justify;">Trân trọng,</p>\r\n<p style="text-align:right;"> <strong>Chủ Tịch Hội Đồng Quản Trị</strong></p>\r\n<p style="text-align:right;"><strong>LƯƠNG TRÍ THÌN</strong></p>', 'thong-diep-cua-chu-tich-hdqt', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những “Sản phẩm tốt nhất – Dịch vụ tốt nhất” , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.', 283, NULL, NULL),
+(2, 'vi', 'Thông điệp của chủ tịch HĐQT', '<p style="text-align:justify;"><br />Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những “Sản phẩm tốt nhất – Dịch vụ tốt nhất” , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p style="text-align:justify;">Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p style="text-align:justify;">Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p style="text-align:justify;">Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p style="text-align:justify;">Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p style="text-align:justify;">Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p style="text-align:justify;">Trân trọng,</p>\r\n<p style="text-align:right;"> <strong>Chủ Tịch Hội Đồng Quản Trị</strong></p>\r\n<p style="text-align:right;"><strong>LƯƠNG TRÍ THÌN</strong></p>', 'thong-diep-cua-chu-tich-hdqt', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những “Sản phẩm tốt nhất – Dịch vụ tốt nhất” , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.', 310, NULL, NULL),
 (3, 'vi', 'Công ty cổ phần Đất Xanh Hoàn Cầu', '<p><strong>                                   CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN ĐẤT XANH HOÀN CẦU</strong></p>\r\n<p><span style="font-size:12pt;"><strong>C</strong></span>ông ty cổ phần đầu tư và phát triển Đất Xanh Hoàn Cầu thành lập 15/01/2010, nhằm mục tiêu kế thừa và phát triển những thành tựu mà Tổng công ty Đất Xanh đã đạt được trong suốt thời gian qua, luôn lấy lợi ích khách hàng làm mục tiêu phấn đấu và phát triển.</p>', 'cong-ty-co-phan-dat-xanh-hoan-cau', 'Tầm nhìn, sứ mệnh, giá trị cốt lõi', 97, NULL, NULL),
-(4, 'vi', 'Lịch sử hình thành và phát triển', '<p style="text-align:justify;"><strong>Năm 2003:</strong></p>\n<p style="text-align:justify;">- Thành lập công ty TNHH Dịch Vụ và Xây dựng Địa ốc Đất Xanh với vốn điều lệ ban đầu là 0,8 tỷ đồng và 10 nhân viên.<br />- Thời gian này, Đất Xanh chuyên về hoạt động môi giới các dự án Bất động sản.</p>\n<p style="text-align:justify;"><strong>Năm 2004 :</strong></p>\n<p style="text-align:justify;">- Thành lập chi nhánh Đất Xanh đầu tiên tại Quận 7</p>\n<p style="text-align:justify;"><strong>Năm 2005:</strong></p>\n<p style="text-align:justify;">- Thành lập chi nhánh Đất Xanh tại Quận Thủ Đức<br />- Phát triển mô hình siêu thị căn hộ chung cư đầu tiên tại Việt Nam.</p>\n<p style="text-align:justify;"><strong>Năm 2006:</strong></p>\n<p style="text-align:justify;">- Thành lập chi nhánh Đất Xanh tại Mỹ Phước - Bình Dương.<br />- Hình thành phương thức bán hàng mới (phương thức bán hàng tập trung), tiên phong trong vấn đề minh bạch hóa thông tin sản phẩm Bất động sản. Các dự án do Đất Xanh phân phối gây được tiếng vang lớn trên thị trường. Đất Xanh dần chiếm lĩnh toàn bộ thị trường Bất động sản Bình Dương.</p>\n<p style="text-align:justify;"><strong>Năm 2007:</strong></p>\n<p style="text-align:justify;">- Thành lập Công ty Cổ phần Đầu tư Đất Xanh<br />- Đất Xanh Chuyển đổi thành công ty cổ phần, tiếp tục thành lập chi nhánh Đất Xanh tại Trung Tâm Bình Dương (TX Thủ Dầu Một) .<br />- Bằng kinh nghiệm vững chắc về phân phối, quản lý, phát triển dự án Bất động sản, đội ngũ nhân sự chuyên nghiệp – tài năng cùng với sự gia tăng tiềm lực về tài chính...Đất Xanh chính thức mở rộng hoạt động sang lĩnh vực đầu tư. Hàng loạt dự án qui mô lớn có diện tích hàng trăm ha với số vốn đầu tư lên đến hàng ngàn tỷ đồng do Đất Xanh làm chủ và hợp tác đầu tư như: Khu đô thị Dịch vụ - Du lịch – Sinh thái Giang Điền, Khu đô thị Thung Lũng Xanh, The Morning Star Plaza, Phú Gia Hưng Apartment, Sunview Apartmentđược khách hàng đón nhận nồng nhiệt bởi uy tín và chất lượng của sản phẩm. Hoạt động đầu tư đóng vai trò chủ lực trong chiến lược kinh doanh của Đất Xanh.</p>\n<p style="text-align:justify;"><strong>Năm 2008:</strong></p>\n<p style="text-align:justify;">- Thành lập Chi Nhánh Đất Xanh tại Đồng Nai.<br />- Phát triển thị trường BDS tại Đồng Nai và BRVT</p>\n<p style="text-align:justify;"><strong>Năm 2009:</strong></p>\n<p style="text-align:justify;">- Mua lại công Ty TNHH Hà Thuận Hùng<br />- Thành lập Công Ty Cổ Phần Đất Xanh Tây Bắc<br />- Chuyển đổi các chi nhánh lên công ty cổ phần.<br />- Ngày 22/12/2009 cổ phiếu của công ty Cổ phần Dịch vụ và Xây dựng Địa ốc Đất Xanh với mã số DXG chính thức niêm yết trên sàn giao dịch chứng khoán TP.HCM đưa công ty Đất Xanh trở thành công ty đại chúng.<br />- Tái cấu trúc mô hình Tổng công ty</p>\n<p style="text-align:justify;"><strong>Năm 2010 :</strong></p>\n<p style="text-align:justify;">- Thành lập công ty cổ phần Đất Xanh miền Bắc<br />- Thành lập công ty cổ phần BDS Long Điền<br />- Đất Xanh trở thành công ty Bất động sản có hệ thống phân phối mạnh nhất Việt Nam với gần 20 chi nhánh, công ty thành viên, công ty liên kết, công ty liên doanh, hoạt động tại tất cả các khu vực giao dịch địa ốc sôi động.<br />- Tiến hành triển khai một chương trình toàn diện về Phát triển nguồn nhân lực, cơ sở vật chất, tài chính....Mọi hoạt động của công ty đều được tin học hóa bằng các phần mềm hiện đại cho phép nhà quản lý tối ưu hoá quy trình hoạt động doanh nghiệp theo tiêu chuẩn quốc tế, tạo điều kiện thuận lợi trong giao dịch sản phẩm, tiết kiệm thời gian và chi phí cho khách hàng...<br />- Đất Xanh khởi công xây dựng Khu đô thị Thương Mai- Dịch Vụ- Du Lịch Suối Son với quy mô 117 ha tại Đồng Nai ...<br />- Mở rộng hoạt động kinh doanh sang các lĩnh vực : Xây dựng, Đầu tư tài chính, sản xuất vật liệu xây dựng..</p>\n<p style="text-align:justify;"><strong>Năm 2011:</strong></p>\n<p style="text-align:justify;">- Tái cơ cấu Đất Xanh lên mô hình tập đoàn Đất Xanh (DXG)<br />- Thành lập Công ty cổ phần Đất Xanh miền Trung<br />- Thành lập Tổng công ty Đất Xanh Đầu tư (DXI)<br />- Thành lập Tổng công ty Đất Xanh Dịch vụ (DXS)<br />- Thành lập Tổng công ty Đất Xanh Xây dựng (DXC)<br />- Tiếp tục phát huy thế mạnh trong lĩnh vực đầu tư Bất động sản, triển khai đầu tư hàng loạt các dự án ở những vị trí chiến lược trên toàn quốc (Arisen, Bình Dương Riverside, Khu đô thị Paradise, Biên Hòa Tower ...), mở rộng phạm vi địa bàn, hình thức đầu tư, liên kết với các đối tác, cung cấp những sản phẩm Bất động sản đa dạng có chất lượng cao, cùng những tiện ích hiện đại...nhằm đáp ứng kịp thời nhu cầu an cư và đầu tư của khách hàng.<br />- Phát triển thị trường BDS Australia.</p>\n<p style="text-align:justify;"><em> </em></p>\n<p style="text-align:justify;"><em>Trải qua 8 năm hình thành và phát triển, đến nay tổng số vốn kinh doanh của Đất Xanh đã đạt hơn 3.000 tỉ đồng với trên 1.500 nhân viên và hơn 20 công ty thành viên, liên kết...</em><br /><em>Bằng sự nỗ lực không ngừng, Đất Xanh không dừng lại ở những thành công đã đạt được mà tiếp tục tiến về phía trước, chinh phục những đỉnh cao mới.</em></p>', 'lich-su-hinh-thanh-va-phat-trien', 'Lịch sử hình thành và phát triển\nBằng sự nỗ lực không ngừng, Đất Xanh không dừng lại ở những thành công đã đạt được mà tiếp tục tiến về phía trước, chinh phục những đỉnh cao mới.', 31, NULL, NULL);
+(4, 'vi', 'Lịch sử hình thành và phát triển', '<p style="text-align:justify;"><strong>Năm 2003:</strong></p>\n<p style="text-align:justify;">- Thành lập công ty TNHH Dịch Vụ và Xây dựng Địa ốc Đất Xanh với vốn điều lệ ban đầu là 0,8 tỷ đồng và 10 nhân viên.<br />- Thời gian này, Đất Xanh chuyên về hoạt động môi giới các dự án Bất động sản.</p>\n<p style="text-align:justify;"><strong>Năm 2004 :</strong></p>\n<p style="text-align:justify;">- Thành lập chi nhánh Đất Xanh đầu tiên tại Quận 7</p>\n<p style="text-align:justify;"><strong>Năm 2005:</strong></p>\n<p style="text-align:justify;">- Thành lập chi nhánh Đất Xanh tại Quận Thủ Đức<br />- Phát triển mô hình siêu thị căn hộ chung cư đầu tiên tại Việt Nam.</p>\n<p style="text-align:justify;"><strong>Năm 2006:</strong></p>\n<p style="text-align:justify;">- Thành lập chi nhánh Đất Xanh tại Mỹ Phước - Bình Dương.<br />- Hình thành phương thức bán hàng mới (phương thức bán hàng tập trung), tiên phong trong vấn đề minh bạch hóa thông tin sản phẩm Bất động sản. Các dự án do Đất Xanh phân phối gây được tiếng vang lớn trên thị trường. Đất Xanh dần chiếm lĩnh toàn bộ thị trường Bất động sản Bình Dương.</p>\n<p style="text-align:justify;"><strong>Năm 2007:</strong></p>\n<p style="text-align:justify;">- Thành lập Công ty Cổ phần Đầu tư Đất Xanh<br />- Đất Xanh Chuyển đổi thành công ty cổ phần, tiếp tục thành lập chi nhánh Đất Xanh tại Trung Tâm Bình Dương (TX Thủ Dầu Một) .<br />- Bằng kinh nghiệm vững chắc về phân phối, quản lý, phát triển dự án Bất động sản, đội ngũ nhân sự chuyên nghiệp – tài năng cùng với sự gia tăng tiềm lực về tài chính...Đất Xanh chính thức mở rộng hoạt động sang lĩnh vực đầu tư. Hàng loạt dự án qui mô lớn có diện tích hàng trăm ha với số vốn đầu tư lên đến hàng ngàn tỷ đồng do Đất Xanh làm chủ và hợp tác đầu tư như: Khu đô thị Dịch vụ - Du lịch – Sinh thái Giang Điền, Khu đô thị Thung Lũng Xanh, The Morning Star Plaza, Phú Gia Hưng Apartment, Sunview Apartmentđược khách hàng đón nhận nồng nhiệt bởi uy tín và chất lượng của sản phẩm. Hoạt động đầu tư đóng vai trò chủ lực trong chiến lược kinh doanh của Đất Xanh.</p>\n<p style="text-align:justify;"><strong>Năm 2008:</strong></p>\n<p style="text-align:justify;">- Thành lập Chi Nhánh Đất Xanh tại Đồng Nai.<br />- Phát triển thị trường BDS tại Đồng Nai và BRVT</p>\n<p style="text-align:justify;"><strong>Năm 2009:</strong></p>\n<p style="text-align:justify;">- Mua lại công Ty TNHH Hà Thuận Hùng<br />- Thành lập Công Ty Cổ Phần Đất Xanh Tây Bắc<br />- Chuyển đổi các chi nhánh lên công ty cổ phần.<br />- Ngày 22/12/2009 cổ phiếu của công ty Cổ phần Dịch vụ và Xây dựng Địa ốc Đất Xanh với mã số DXG chính thức niêm yết trên sàn giao dịch chứng khoán TP.HCM đưa công ty Đất Xanh trở thành công ty đại chúng.<br />- Tái cấu trúc mô hình Tổng công ty</p>\n<p style="text-align:justify;"><strong>Năm 2010 :</strong></p>\n<p style="text-align:justify;">- Thành lập công ty cổ phần Đất Xanh miền Bắc<br />- Thành lập công ty cổ phần BDS Long Điền<br />- Đất Xanh trở thành công ty Bất động sản có hệ thống phân phối mạnh nhất Việt Nam với gần 20 chi nhánh, công ty thành viên, công ty liên kết, công ty liên doanh, hoạt động tại tất cả các khu vực giao dịch địa ốc sôi động.<br />- Tiến hành triển khai một chương trình toàn diện về Phát triển nguồn nhân lực, cơ sở vật chất, tài chính....Mọi hoạt động của công ty đều được tin học hóa bằng các phần mềm hiện đại cho phép nhà quản lý tối ưu hoá quy trình hoạt động doanh nghiệp theo tiêu chuẩn quốc tế, tạo điều kiện thuận lợi trong giao dịch sản phẩm, tiết kiệm thời gian và chi phí cho khách hàng...<br />- Đất Xanh khởi công xây dựng Khu đô thị Thương Mai- Dịch Vụ- Du Lịch Suối Son với quy mô 117 ha tại Đồng Nai ...<br />- Mở rộng hoạt động kinh doanh sang các lĩnh vực : Xây dựng, Đầu tư tài chính, sản xuất vật liệu xây dựng..</p>\n<p style="text-align:justify;"><strong>Năm 2011:</strong></p>\n<p style="text-align:justify;">- Tái cơ cấu Đất Xanh lên mô hình tập đoàn Đất Xanh (DXG)<br />- Thành lập Công ty cổ phần Đất Xanh miền Trung<br />- Thành lập Tổng công ty Đất Xanh Đầu tư (DXI)<br />- Thành lập Tổng công ty Đất Xanh Dịch vụ (DXS)<br />- Thành lập Tổng công ty Đất Xanh Xây dựng (DXC)<br />- Tiếp tục phát huy thế mạnh trong lĩnh vực đầu tư Bất động sản, triển khai đầu tư hàng loạt các dự án ở những vị trí chiến lược trên toàn quốc (Arisen, Bình Dương Riverside, Khu đô thị Paradise, Biên Hòa Tower ...), mở rộng phạm vi địa bàn, hình thức đầu tư, liên kết với các đối tác, cung cấp những sản phẩm Bất động sản đa dạng có chất lượng cao, cùng những tiện ích hiện đại...nhằm đáp ứng kịp thời nhu cầu an cư và đầu tư của khách hàng.<br />- Phát triển thị trường BDS Australia.</p>\n<p style="text-align:justify;"><em> </em></p>\n<p style="text-align:justify;"><em>Trải qua 8 năm hình thành và phát triển, đến nay tổng số vốn kinh doanh của Đất Xanh đã đạt hơn 3.000 tỉ đồng với trên 1.500 nhân viên và hơn 20 công ty thành viên, liên kết...</em><br /><em>Bằng sự nỗ lực không ngừng, Đất Xanh không dừng lại ở những thành công đã đạt được mà tiếp tục tiến về phía trước, chinh phục những đỉnh cao mới.</em></p>', 'lich-su-hinh-thanh-va-phat-trien', 'Lịch sử hình thành và phát triển\nBằng sự nỗ lực không ngừng, Đất Xanh không dừng lại ở những thành công đã đạt được mà tiếp tục tiến về phía trước, chinh phục những đỉnh cao mới.', 35, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -430,7 +436,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_advs` (
   `click` int(11) NOT NULL DEFAULT '0',
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `hoiit_module_advs`
+--
+
+INSERT INTO `hoiit_module_advs` (`record_id`, `title`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `click`, `enable`) VALUES
+(1, 'Quang cao', 'quang-cao.jpg', '', '2012-12-17 03:26:27', '2012-12-16 17:00:00', '2013-01-27 17:00:00', 0, 1, 'left', '_bank', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -475,7 +488,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_contacts` (
   `hot` tinyint(1) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `hoiit_module_contacts`
+--
+
+INSERT INTO `hoiit_module_contacts` (`record_id`, `created`, `record_order`, `hot`, `enable`) VALUES
+(1, '2012-12-17 03:12:38', 1, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -496,6 +516,13 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_contacts_languages` (
   KEY `fk_hoiit_module_contacts_has_hoiit_languages_hoiit_module_con1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `hoiit_module_contacts_languages`
+--
+
+INSERT INTO `hoiit_module_contacts_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`) VALUES
+(1, 'vi', 'Liên hệ với chúng tôi', '<p>Địa chỉ : 171/3 Trần Kế Xương, P.7, Q.Phú Nhuận, Thành Phố Hồ Chí Minh<br />Điện thoại : 0909 529 386 - 0937 060 290<br />Email: Connitshop@gmail.com - Website: Connitshop.com</p>', 'lien-he-voi-chung-toi', 'Địa chỉ : 171/3 Trần Kế Xương, P.7, Q.Phú Nhuận, Thành Phố Hồ Chí Minh\r\nĐiện thoại : 0909 529 386 - 0937 060 290\r\nEmail: Connitshop@gmail.com - Website: Connitshop.com', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -513,7 +540,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('35pxzdoi2', 1355467791);
+('g6s4kiad1', 1355715403);
 
 -- --------------------------------------------------------
 
@@ -534,9 +561,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_value` (
 INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
 ('max_visit_day', 1354579200),
 ('max_visit_value', 167),
-('time_start_today', 1355439600),
-('today_visited', 2),
-('total_visited', 1353),
+('time_start_today', 1355698800),
+('today_visited', 1),
+('total_visited', 1354),
 ('yesterday_visited', 2);
 
 -- --------------------------------------------------------
@@ -561,7 +588,15 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_jobs` (
   `hoiit_module_item_cat_cat_id` int(11) NOT NULL,
   PRIMARY KEY (`record_id`),
   KEY `fk_hoiit_module_jobs_hoiit_module_jobs_cat_1` (`hoiit_module_item_cat_cat_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `hoiit_module_jobs`
+--
+
+INSERT INTO `hoiit_module_jobs` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
+(1, '2012-12-17 02:46:18', 'cau-hoi-1.jpg', NULL, 1, 0, NULL, NULL, NULL, NULL, NULL, 1, 2),
+(2, '2012-12-17 02:49:54', 'tin-lien-quan.jpg', NULL, 2, 0, NULL, NULL, NULL, NULL, NULL, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -581,14 +616,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_jobs_cat` (
   `cat_extra2` varchar(100) DEFAULT NULL,
   `cat_enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `hoiit_module_jobs_cat`
 --
 
 INSERT INTO `hoiit_module_jobs_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
-(1, 0, '2012-12-06 07:00:07', '', NULL, 0, 1, NULL, NULL, 1);
+(2, 0, '2012-12-17 02:27:40', '', NULL, 0, 2, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -613,7 +648,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_jobs_cat_languages` (
 --
 
 INSERT INTO `hoiit_module_jobs_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
-(1, 'vi', 'Văn bản mới ban hành', '', 'van-ban-moi-ban-hanh', '');
+(2, 'vi', 'Câu hỏi mới', '', 'cau-hoi-moi', '');
 
 -- --------------------------------------------------------
 
@@ -636,6 +671,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_jobs_languages` (
   KEY `fk_hoiit_module_jobs_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_jobs_has_hoiit_languages_hoiit_module_jobs1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hoiit_module_jobs_languages`
+--
+
+INSERT INTO `hoiit_module_jobs_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
+(1, 'vi', 'Câu hỏi 1', '<p>Câu hỏi 1</p>', '<p>Câu hỏi 1</p>', 'cau-hoi-1', '', 0, NULL, NULL),
+(2, 'vi', 'Tin lien quan', '<p>view</p>', '<p>viewgfdgf</p>', 'tin-lien-quan', 'dggf', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -693,9 +736,9 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus_languages` (
 INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name`, `menu_url`, `menu_description`) VALUES
 (35, 'vi', 'Trang chủ', 'trang-chu', 'Kinh doanh bất động sản, Tư vấn - môi giới bất động sản, tư vấn đầu tư, xây dựng, trang trí nội thất, lập dự án đầu tư, chuẩn bị mặt bằng'),
 (36, 'vi', 'Sản phẩm', 'san-pham', 'Sản phẩm'),
-(37, 'vi', 'Tin tức', 'tin-tuc', 'Tin tức'),
+(37, 'vi', 'Tin tức', 'su-kien-hot', 'Tin tức'),
 (38, 'vi', 'Giới thiệu', 'gioi-thieu', ''),
-(41, 'vi', 'Văn bản mới ban hành', 'van-ban-moi-ban-hanh', 'Mô tả Văn bản mới ban hành'),
+(41, 'vi', 'Văn bản mới ban hành', 'cau-hoi-thuong-gap', 'Mô tả Văn bản mới ban hành'),
 (42, 'vi', 'Quản lý sản phẩm', 'quan-ly-san-pham', ''),
 (45, 'vi', 'Liên hệ', 'lien-he', 'Liên hệ'),
 (48, 'vi', 'Tài liệu chuyên ngành', 'tai-lieu-chuyen-nganh', ''),
@@ -950,13 +993,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_procedures` (
   KEY `fk_hoiit_module_proc_hoiit_module_proc_cat_1` (`hoiit_module_item_cat_cat_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
 
---
--- Dumping data for table `hoiit_module_procedures`
---
-
-INSERT INTO `hoiit_module_procedures` (`record_id`, `postdate`, `pic_thumb`, `pic_desc`, `record_order`, `hot`, `specials`, `field1`, `field2`, `field3`, `field4`, `enable`, `hoiit_module_item_cat_cat_id`) VALUES
-(22, '2012-12-07 07:49:47', '', NULL, 22, 0, NULL, NULL, NULL, NULL, NULL, 1, 7);
-
 -- --------------------------------------------------------
 
 --
@@ -977,13 +1013,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_procedures_cat` (
   PRIMARY KEY (`cat_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
---
--- Dumping data for table `hoiit_module_procedures_cat`
---
-
-INSERT INTO `hoiit_module_procedures_cat` (`cat_id`, `cat_parent_id`, `cat_created`, `pic_thumb`, `pic_desc`, `cat_hot`, `cat_order`, `cat_extra1`, `cat_extra2`, `cat_enable`) VALUES
-(7, 0, '2012-12-07 07:49:30', '', NULL, 0, 7, NULL, NULL, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -1001,13 +1030,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_procedures_cat_languages` (
   KEY `fk_hoiit_module_proc_cat_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_proc_cat_has_hoiit_languages_hoiit_module_ne1` (`cat_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_procedures_cat_languages`
---
-
-INSERT INTO `hoiit_module_procedures_cat_languages` (`cat_id`, `language_id`, `cat_title`, `preview`, `tag`, `description`) VALUES
-(7, 'vi', 'Thu tuc hanh chinh', '', 'thu-tuc-hanh-chinh', '');
 
 -- --------------------------------------------------------
 
@@ -1030,13 +1052,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_procedures_languages` (
   KEY `fk_hoiit_module_proc_has_hoiit_languages_hoiit_languages1` (`language_id`),
   KEY `fk_hoiit_module_proc_has_hoiit_languages_hoiit_module_proc1` (`record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `hoiit_module_procedures_languages`
---
-
-INSERT INTO `hoiit_module_procedures_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(22, 'vi', '33_Thẩm định Dự toán chi ngân sách', '<p>33_Thẩm định Dự toán chi ngân sách</p>', '<p>33_Thẩm định Dự toán chi ngân sách</p>', '33tham-dinh-du-toan-chi-ngan-sach', '33_Thẩm định Dự toán chi ngân sách', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1256,6 +1271,46 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_projects_languages` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `hoiit_module_services`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_services` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `pic_thumb` varchar(100) DEFAULT NULL,
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `record_order` int(11) DEFAULT NULL,
+  `hot` tinyint(1) NOT NULL DEFAULT '0',
+  `field1` varchar(100) DEFAULT NULL,
+  `field2` varchar(100) DEFAULT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`record_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoiit_module_services_languages`
+--
+
+CREATE TABLE IF NOT EXISTS `hoiit_module_services_languages` (
+  `record_id` int(11) NOT NULL,
+  `language_id` varchar(2) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `preview` text,
+  `content` text NOT NULL,
+  `tag` varchar(100) NOT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `hit` int(11) NOT NULL DEFAULT '0',
+  `extra_field1` varchar(100) DEFAULT NULL,
+  `extra_field2` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`record_id`,`language_id`),
+  KEY `fk_hoiit_services_languages_hoiit_languages1` (`language_id`),
+  KEY `fk_hoiit_services_languages_hoiit_services1` (`record_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `hoiit_module_supports`
 --
 
@@ -1393,7 +1448,6 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('footer', 1, '1', 'projects', NULL, NULL, 'counter_session'),
 ('left', 2, '1', 'projects', NULL, NULL, 'menu_projects'),
 ('left', 3, '1', 'projects', NULL, NULL, 'adv_left'),
-('left', 1, '1', 'jobs', '', '', 'menu_jobs'),
 ('center', 1, '1', 'news', 'index', '', 'menu_new_index'),
 ('footer', 2, '1', 'news', '', '', 'counter_session'),
 ('left', 3, '1', 'news', '', '', 'menu_news'),
@@ -1401,10 +1455,15 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('left', 1, '1', 'procedures', '', '', 'menu_procedures'),
 ('footer', 2, '1', 'procedures', '', '', 'counter_session'),
 ('left', 1, '1', 'contact', '', '', 'menu_products'),
-('center', 1, '1', 'default', '', '', 'products_new'),
-('center', 2, '1', 'default', '', '', 'products_new_index'),
 ('left', 1, '1', 'about', '', '', 'menu_about'),
-('left', 2, '1', 'about', '', '', 'adv_left');
+('left', 2, '1', 'about', '', '', 'adv_left'),
+('left', 1, '1', 'default', '', '', 'menu_products'),
+('center', 2, '1', 'default', '', '', 'products_new'),
+('center', 3, '1', 'default', '', '', 'products_new_index'),
+('header', 4, '1', 'default', '', '', 'list_support'),
+('left', 1, '1', 'jobs', '', '', 'menu_jobs'),
+('left', 2, '1', 'jobs', '', '', 'adv_left'),
+('left', 3, '1', 'jobs', '', '', 'counter_session');
 
 -- --------------------------------------------------------
 
@@ -1480,17 +1539,17 @@ CREATE TABLE IF NOT EXISTS `hoiit_urls` (
 --
 
 INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `url_type`, `hoiit_modules_module_id`, `hoiit_languages_language_id`) VALUES
-('<jobs:(van-ban-moi-ban-hanh)>', 'jobs/default/index', '', 4, 1, 'jobs', 'vi'),
-('<jobs:(van-ban-moi-ban-hanh)>/<cid:[-a-z0-9]+>', 'jobs/default/cats', '', 3, 0, 'jobs', 'vi'),
-('<jobs:(van-ban-moi-ban-hanh)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'jobs/default/view', 'urlSuffix=>.html', 0, 0, 'jobs', 'vi'),
-('<jobs:(van-ban-moi-ban-hanh)>/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'jobs/default/cats', '', 2, 0, 'jobs', 'vi'),
-('<jobs:(van-ban-moi-ban-hanh)>/trang/<page:\\d+>', 'jobs/default/index', '', 1, 0, 'jobs', 'vi'),
+('<jobs:(cau-hoi-thuong-gap)>', 'jobs/default/index', '', 4, 1, 'jobs', 'vi'),
+('<jobs:(cau-hoi-thuong-gap)>/<cid:[-a-z0-9]+>', 'jobs/default/cats', '', 3, 0, 'jobs', 'vi'),
+('<jobs:(cau-hoi-thuong-gap)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'jobs/default/view', 'urlSuffix=>.html', 0, 0, 'jobs', 'vi'),
+('<jobs:(cau-hoi-thuong-gap)>/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'jobs/default/cats', '', 2, 0, 'jobs', 'vi'),
+('<jobs:(cau-hoi-thuong-gap)>/trang/<page:\\d+>', 'jobs/default/index', '', 1, 0, 'jobs', 'vi'),
 ('<lang:[a-z]{2}>/about-us/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 0, 0, 'about', 'en'),
-('<news:(tin-tuc)>', 'news/default/index', '', 5, 1, 'news', 'vi'),
-('<news:(tin-tuc)>/<cid:[-a-z0-9]+>', 'news/default/cats', '', 3, 0, 'news', 'vi'),
-('<news:(tin-tuc)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'news/default/view', 'urlSuffix=>.html', 6, 0, 'news', 'vi'),
-('<news:(tin-tuc)>/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'news/default/cats', '', 2, 0, 'news', 'vi'),
-('<news:(tin-tuc)>/trang/<page:\\d+>', 'news/default/index', '', 4, 0, 'news', 'vi'),
+('<news:(su-kien-hot)>', 'news/default/index', '', 5, 1, 'news', 'vi'),
+('<news:(su-kien-hot)>/<cid:[-a-z0-9]+>', 'news/default/cats', '', 3, 0, 'news', 'vi'),
+('<news:(su-kien-hot)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'news/default/view', 'urlSuffix=>.html', 6, 0, 'news', 'vi'),
+('<news:(su-kien-hot)>/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'news/default/cats', '', 2, 0, 'news', 'vi'),
+('<news:(su-kien-hot)>/trang/<page:\\d+>', 'news/default/index', '', 4, 0, 'news', 'vi'),
 ('<procedures:(thu-tuc-hanh-chinh)>', 'procedures/default/index', '', 5, 1, 'procedures', 'vi'),
 ('<procedures:(thu-tuc-hanh-chinh)>/<cid:[-a-z0-9]+>', 'procedures/default/cats', '', 3, 0, 'procedures', 'vi'),
 ('<procedures:(thu-tuc-hanh-chinh)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'procedures/default/view', 'urlSuffix=>.html', 6, 0, 'procedures', 'vi'),
@@ -1505,6 +1564,8 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('<projects:(thanh-tuu-dinh-huong)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'projects/default/view', 'urlSuffix=>.html', 5, 0, 'projects', 'vi'),
 ('<projects:(thanh-tuu-dinh-huong)>/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'projects/default/cats', '', 1, 0, 'projects', 'vi'),
 ('<projects:(thanh-tuu-dinh-huong)>/trang/<page:\\d+>', 'projects/default/index', '', 3, 1, 'projects', 'vi'),
+('<services:(chinh-sach-ban-si)>', 'services/default/index', '', 4, 1, 'services', 'vi'),
+('<services:(chinh-sach-ban-si)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'services/default/view', 'urlSuffix=>.html', 0, 0, 'jobs', 'vi'),
 ('about-us', 'about/default/index', '', 2, 1, 'about', 'en'),
 ('contact', 'contact/default/index', '', 0, 1, 'contact', 'en'),
 ('gioi-thieu', 'about/default/index', '', 2, 1, 'about', 'vi'),
@@ -1699,6 +1760,13 @@ ALTER TABLE `hoiit_module_projects_languages`
   ADD CONSTRAINT `fk_hoiit_module_pro_has_hoiit_languages_hoiit_module_pro1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_projects` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
+-- Constraints for table `hoiit_module_services_languages`
+--
+ALTER TABLE `hoiit_module_services_languages`
+  ADD CONSTRAINT `fk_hoiit_services_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_hoiit_services_languages_hoiit_services1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_services` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
 -- Constraints for table `hoiit_module_video`
 --
 ALTER TABLE `hoiit_module_video`
@@ -1717,3 +1785,7 @@ ALTER TABLE `hoiit_module_video_cat_languages`
 ALTER TABLE `hoiit_module_video_languages`
   ADD CONSTRAINT `fk_hoiit_module_video_has_hoiit_languages_hoiit_languages1` FOREIGN KEY (`language_id`) REFERENCES `hoiit_languages` (`language_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_hoiit_module_video_has_hoiit_languages_hoiit_module_pro1` FOREIGN KEY (`record_id`) REFERENCES `hoiit_module_video` (`record_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

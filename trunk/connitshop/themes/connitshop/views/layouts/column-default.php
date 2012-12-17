@@ -7,6 +7,14 @@
     <div id="content">
         <div id="left-content">
             <?php $this->getPosition('left');?>
+            <script type="text/javascript">
+                $(".sub-cat li,.sub-new li").each(function(){
+                    var myUrl = $(this).find('a').attr('href');
+                    if(myUrl == window.location.pathname){
+                        $(this).addClass('selected');
+                    }
+                });
+            </script>
         </div>
         <div id="right-content">
             <div class="main-right-content">

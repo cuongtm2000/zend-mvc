@@ -1,7 +1,7 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id] => array($this->setUrlModule()), $cat_title = $item->NewsCat->NewsCatLanguage[Yii::app()->language]['cat_title'] => array($this->setUrlModule().'/'.$item->NewsCat->NewsCatLanguage[Yii::app()->language]['tag']), $title = $item->NewsLanguage[Yii::app()->language]['title']); ?>
 <?php $this->pageTitle = $title . ' - ' . $cat_title; $this->setDescription($item->NewsLanguage[Yii::app()->language]['description']) ?>
 
-<h2 class="title-right"><span><?php echo $this->lang[$this->module->id]?> <b>&raquo;</b> <?php echo $item->NewsCat->NewsCatLanguage[Yii::app()->language]['cat_title']?> </span></h2>
+<h2 class="title-box"><span><?php echo $this->lang[$this->module->id]?> <b>&raquo;</b> <?php echo $item->NewsCat->NewsCatLanguage[Yii::app()->language]['cat_title']?> </span></h2>
 <div class="frame-tent-right">
 	<h2 class="title-view"><?php echo $title ?>  <span class="date">( <?php echo date('d/m/Y', strtotime($item['postdate']))?> )</span></h2>
 	<?php echo $item->NewsLanguage[Yii::app()->language]['content']?>
