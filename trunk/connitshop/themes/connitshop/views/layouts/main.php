@@ -30,7 +30,7 @@
 		<ul class="nav-top">
 			<li><a href="<?php echo Yii::app()->baseUrl ?>/gioi-thieu" title="">Giới thiệu</a></li>
 			<li><a href="<?php echo Yii::app()->baseUrl ?>/cau-hoi-thuong-gap" title="">Câu hỏi thường gặp</a></li>
-			<li><a href="" title="">Chính sách bản sỉ</a></li>
+			<li><a href="<?php echo Yii::app()->baseUrl ?>/chinh-sach-ban-si" title="">Chính sách bản sỉ</a></li>
 			<li><a href="<?php echo Yii::app()->baseUrl ?>/su-kien-hot" title="">Sự kiện hot</a></li>
             <li class="none-line"><a href="<?php echo Yii::app()->baseUrl ?>/lien-he" title="">Liên hệ</a></li>
 		</ul>
