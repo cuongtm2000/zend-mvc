@@ -60,7 +60,7 @@ class DefaultController extends Controller {
         $this->render('hots', array('items_hot' => $model->listItemHots()));
     }
 	
-	public function actionNewPage() {
+	public function actionNewpage() {
         $model_class = ucfirst($this->module->id);
         $model = new $model_class;
 
