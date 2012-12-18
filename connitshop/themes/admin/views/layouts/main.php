@@ -80,7 +80,7 @@
 		<div class="catmenu">
 			<ul class="menu-li">
 				<?php foreach($this->listModule as $value):?>
-					<?php if(($value['module_id'] != '') && ($value['module_id'] != 'code')):?>
+					<?php if(($value['module_id'] != '') && ($value['module_id'] != 'code') && ($value['module_id'] != 'procedures')):?>
 					<li><a class="headerbar" href="" title="<?php echo CHtml::encode($this->lang[$value['module_id']])?>"><?php echo CHtml::encode($this->lang[$value['module_id']])?></a>
 						<ul class="submenu">
 							<?php $urls = explode('|', $value['module_url']); $title = explode('|', $value['module_title']); $i = 0; foreach ($urls as $url): ?>

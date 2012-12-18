@@ -135,9 +135,9 @@ class ProductsCat extends CActiveRecord {
         foreach ($data as $value) {
             if ($value['cat_parent_id'] == 0) {
                 $str .= '<' . $tag . '>' . CHtml::link($value->ProductsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule('products') . '/' . $value->ProductsCatLanguage[Yii::app()->language]['tag']), array('title' => $value->ProductsCatLanguage[Yii::app()->language]['cat_title']));
-                if ($value['cat_id'] == $root_find) {
+                //if ($value['cat_id'] == $root_find) {
                     $str .= $this->menuRecursive($value['cat_id'], $data, '', '', $subTag, $subTagItem);
-                }
+                //}
                 $str .= '</' . $tag . '>';
             }
         }
