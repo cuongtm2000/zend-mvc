@@ -58,7 +58,7 @@
 		<div id="logo"><?php $this->widget('ext.Logo.LogoStatic')?></div>
         <?php $this->getPosition('header')?>
         <div class="shop-cart">
-        	<a href="" title="">Giỏ hàng <span>(0)</span></a>
+        	<a href="<?php echo Yii::app()->baseUrl?>/san-pham/gio-hang" title="Giỏ hàng">Giỏ hàng <span>(<?php echo count(Yii::app()->session['cart'])?>)</span></a>
         </div>		<div class="clear"></div>
 	</div> <!--End header-->
     <div class="headerexten">
