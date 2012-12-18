@@ -160,13 +160,28 @@ class Products extends CActiveRecord {
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable = 1';
         $criteria->params = array(':user' => Yii::app()->session['subDomain']);
-        $criteria->limit = Config::getValue('products_num_item_new');
+        $criteria->limit = Config::getValue('products_num_item_new_index');
 
         return $this->findAll($criteria);
     }
 	
+	//Front end - list Item by Dealhome
+    public function listItemsDealhome() {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'specials = 1 AND enable=1';
+
+        $count = $this->count($criteria);
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = Config::getValue('products_num_item_deal_index');
+        $pages->applyLimit($criteria);
+
+        return array('models' => $this->findAll($criteria), 'pages' => $pages);
+    }
+	
 	 //Front end - list item newPage
-    public function listItemsNewPage() {
+    public function listItemsNewpage() {
         $criteria = new CDbCriteria();
         $criteria->order = 'record_order DESC, postdate DESC';
         $criteria->condition = 'enable=1';
@@ -174,18 +189,17 @@ class Products extends CActiveRecord {
         $count = $this->count($criteria);
         // elements per page
         $pages = new CPagination($count);
-        //$pages->pageSize = Config::getValue('products_num_item_deal');
-        $pages->pageSize = 4;
+        $pages->pageSize = Config::getValue('products_num_item_new');
         $pages->applyLimit($criteria);
 
         return array('models' => $this->findAll($criteria), 'pages' => $pages);
     }
 	
-	//Front end - list Item by Hot
-    public function listItemHots() {
+	//Front end - list Item by Specials
+    public function listItemDeals() {
         $criteria = new CDbCriteria();
         $criteria->order = 'record_order DESC, postdate DESC';
-        $criteria->condition = 'hot = 1 AND enable=1';
+        $criteria->condition = 'specials = 1 AND enable=1';
 
         $count = $this->count($criteria);
         // elements per page
