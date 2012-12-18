@@ -316,6 +316,7 @@ class Products extends CActiveRecord {
         if (Yii::app()->controller->action->id == 'add') {
             $this->unit = $model->unit;
             $this->hot = $model->hot;
+            $this->specials = $model->specials;
             $this->enable = $model->enable;
             $this->hoiit_module_item_cat_cat_id = $model->hoiit_module_item_cat_cat_id;
 
@@ -335,6 +336,7 @@ class Products extends CActiveRecord {
             $item = $this->findByPk($id);
             $item->unit = $model->unit;
             $item->hot = $model->hot;
+            $item->specials = $model->specials;
             $item->enable = $model->enable;
             $item->hoiit_module_item_cat_cat_id = $model->hoiit_module_item_cat_cat_id;
 
@@ -381,7 +383,7 @@ class Products extends CActiveRecord {
 
     //Back end - Get record to Edit
     public function loadEdit($id) {
-        $command = Yii::app()->db->createCommand('SELECT pic_thumb, pic_full, pic_desc, unit, hot, enable, hoiit_module_item_cat_cat_id FROM ' . $this->tableName() . ' WHERE record_id=:id');
+        $command = Yii::app()->db->createCommand('SELECT pic_thumb, pic_full, pic_desc, unit, hot, specials, enable, hoiit_module_item_cat_cat_id FROM ' . $this->tableName() . ' WHERE record_id=:id');
         $command->bindParam(":id", $id, PDO::PARAM_INT);
         return $command->queryRow();
     }

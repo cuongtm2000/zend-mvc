@@ -6,6 +6,7 @@ class ProductsForm extends CFormModel {
     public $pic_desc;
     public $unit;
     public $hot = 0;
+    public $specials = 0;
     public $enable = 1;
     public $hoiit_module_item_cat_cat_id;
 
@@ -27,7 +28,7 @@ class ProductsForm extends CFormModel {
     public function rules() {
         return array(
             array('hoiit_module_item_cat_cat_id, titlevi, contentvi, tagvi', 'required'),
-            array('hot, enable', 'numerical', 'integerOnly' => true),
+            array('hot, specials, enable', 'numerical', 'integerOnly' => true),
             array('pic_thumb, pic_full, titlevi, titleen, tagvi, tagen', 'length', 'max' => 100),
             array('descriptionvi, descriptionen', 'length', 'max' => 250),
             array('pic_desc', 'length', 'max' => 500),
