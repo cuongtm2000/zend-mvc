@@ -115,11 +115,11 @@ a{text-decoration:none; color:#720E3B} a:hover{color:#000;}
 .breadcrumbs a:hover{color:#007424}
 
 /***** Product    *****/
-.list-item,.list-item-cat,.list-item-index{list-style:none;margin:0 0 15px;padding:5px;background:#EBEBEB}
+.list-item,.list-item-cat,.list-item-index, .list-item-index-new{list-style:none;margin:0 0 15px;padding:5px;background:#EBEBEB}
 .list-item-index{padding:8px}
 
-.list-item li,.list-item-index li, .list-item-cat li{width:165px;text-align:center;padding:5px;margin:0 10px 10px 0; display:inline-block; vertical-align:top;background:#fff}
-.list-item-index li{margin:0 10px 0 0;width:160px;padding:10px}
+.list-item li,.list-item-index li, .list-item-cat li, .list-item-index-new li{width:165px;text-align:center;padding:5px;margin:0 10px 10px 0; display:inline-block; vertical-align:top;background:#fff}
+.list-item-index li ,.list-item-index-new li{margin:0 10px 0 0;width:160px;padding:10px}
 
 .list-item li.last-item,.list-item-cat li.last-item{margin:0 0 10px!important} .list-item-index li.last-item-index{margin:0 !important}
 
@@ -139,8 +139,7 @@ a{text-decoration:none; color:#720E3B} a:hover{color:#000;}
 .title-deal{font-size:18px;font-weight:normal;margin:10px 0 0;padding:0} .title-deal a{color:#222}
 .price-dead{font-size:18px;color:#D10000;margin:20px 0 0;position:relative} .view{position:absolute;top:-5px;right:0}
 
-.row-info{margin: 0 0 15px 0}
-.bton-cart a{color:#fff;background: #95C001;font-weight:bold;padding: 4px 15px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px}
+.row-info{margin: 0 0 15px 0} .bton-cart{text-align:center}
 .title-info{margin:0 0 10px 0;color: #fff}
 .title-info span{background: #444444;padding:3px 10px}
 .price-info{color:#3F3F3F;margin:0 0 10px 0;font-size: 10pt}
