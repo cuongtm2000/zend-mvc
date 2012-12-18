@@ -172,6 +172,7 @@ class AdminController extends BackEndController {
         $model_form['pic_desc'] = $model_data['pic_desc'];
         $model_form['unit'] = $model_data['unit'];
         $model_form['hot'] = $model_data['hot'];
+        $model_form['specials'] = $model_data['specials'];
         $model_form['enable'] = $model_data['enable'];
         $model_form['hoiit_module_item_cat_cat_id'] = $model_data['hoiit_module_item_cat_cat_id'];
 
