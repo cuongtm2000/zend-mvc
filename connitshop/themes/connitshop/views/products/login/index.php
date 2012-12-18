@@ -14,6 +14,6 @@
         <?php echo $form->label($model, 'rememberMe',array('class'=>'remember')); ?>
 	</li>
 	<li><label>&nbsp;</label>
-		<?php echo CHtml::submitButton('Register', array('name'=>'submit', 'title'=>'Register','class'=>'singin')); ?></li>
+		<?php echo CHtml::submitButton('Login', array('name'=>'submit', 'title'=>'Login','class'=>'singin')); ?></li>
 	</ul>
 <?php $this->endWidget();?>

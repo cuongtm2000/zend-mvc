@@ -1,7 +1,7 @@
 <?php $this->breadcrumbs = array($this->lang[$this->module->id]); ?>
 <?php $this->pageTitle = $this->lang[$this->module->id]; $this->setDescription()?>
 
-<h2 class="title-box"><span><?php echo CHtml::encode($this->lang['jobs'])?><span></h2>
+<h2 class="title-box"><span><?php echo CHtml::encode($this->lang['jobs'])?></span></h2>
     <?php if($listItemIndex['models']):?>
         <ul class="panel-items">
             <?php foreach($listItemIndex['models'] as $value):?>
