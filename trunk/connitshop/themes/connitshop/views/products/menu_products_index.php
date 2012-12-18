@@ -1,0 +1,1 @@
+<?php echo ProductsCat::model()->makeMenu($menu_products_index, Yii::app()->request->getQuery('cid'), '<ul class="nav-left">', '</ul>');?>

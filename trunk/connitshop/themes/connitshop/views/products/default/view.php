@@ -9,7 +9,10 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/j
 Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.serialScroll-1.2.2-min.js');
 Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/product.js');
 ?>
-<h2 class="title-right"><span><?php echo $item->ProductsLanguage[Yii::app()->language]['title']?></span></h2>
+<?php $this->breadcrumbs = array($this->lang[$this->module->id] => array($this->setUrlModule()), $cat_title = $item->ProductsCat->ProductsCatLanguage[Yii::app()->language]['cat_title'] => array($this->setUrlModule().'/'.$item->ProductsCat->ProductsCatLanguage[Yii::app()->language]['tag']), $title = $item->ProductsLanguage[Yii::app()->language]['title']); ?>
+<?php $this->pageTitle = $title . ' - ' . $cat_title; $this->setDescription($item->ProductsLanguage[Yii::app()->language]['description']) ?>
+
+<h2 class="title-box"><span><?php echo $item->ProductsLanguage[Yii::app()->language]['title']?></span></h2>
 <div class="frame-pro-info">
     <?php if($item['pic_full']): ?>
     <div class="row-info">
@@ -43,13 +46,13 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/p
         <div class="right-info">
             <p class="price-info"><strong>Giá: <span><?php echo $item['unit']?></span></strong></p>
             <h4 class="title-info"><span>Mô tả sơ lược</span></h4>
-            <?php echo $item->ProductsLanguage[Yii::app()->language]['preview']?>
-            <p class="bton-cart"><?php echo CHtml::link($this->lang['add_cart'], Yii::app()->baseUrl.$this->setUrlModule('products').'/dat-hang/'.$item->ProductsLanguage[Yii::app()->language]['tag'], array('class' => 'button-order', 'title' => $this->lang['add_cart']))?></p>
+            <?php echo $item->ProductsLanguage[Yii::app()->language]['preview']?>            
         </div> <div class="clear"></div>
     </div>
     <?php endif; ?>
     <h4 class="title-info"><span>Thông tin chi tiết</span></h4>
     <?php echo $item->ProductsLanguage[Yii::app()->language]['content']?>
+	<p class="bton-cart"><a href="<?php echo Yii::app()->baseUrl.$this->setUrlModule('products').'/dat-hang/'.$item->ProductsLanguage[Yii::app()->language]['tag'] ?>"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/btn_buy.png" alt="btn_buy" /></a>	
     <p class="black"><a href="javascript: history.go(-1)" title="Trở lại" >Trở lại</a></p>
 </div> <!--frame-pro-info-->
 

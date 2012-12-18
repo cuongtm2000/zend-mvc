@@ -63,7 +63,7 @@
 	</div> <!--End header-->
     <div class="headerexten">
         <div class="bg-title-cat">
-            <h2 class="title-cat"><a href="<?php echo Yii::app()->baseUrl ?>/san-pham" title=""><?php echo $this->lang['cat_title'].' '.$this->lang['products']?></a></h2>
+            <h2 class="title-cat"><a href="<?php echo Yii::app()->baseUrl ?>/san-pham" title=""><?php echo $this->lang['cat_title'].' '.strtolower($this->lang['products'])?></a></h2>
         </div>
 		<?php $this->getPosition('top')?>
         <div class="clear"></div>
@@ -72,10 +72,10 @@
 </div><!--End wrapper-->
 <div id="footer">
     <div class="main-page copyright">
-        <p><strong>Copyright &copy; 2012 ConnitShop. All rights reserved.</strong></p>
-        <p> Địa chỉ : 171/3 Trần Kế Xương, P.7, Q.Phú Nhuận, Thành Phố Hồ Chí Minh</p>
-        <p>Điện thoại : 0909 529 386 - 0937 060 290</p>
-        <p>Email: <a href="mailto:connitshop@gmail.com" >Connitshop@gmail.com</a> - Website: <a href="http://connitshop.com">Connitshop.com</a></p>
+        <p><strong><?php echo $this->lang['copyright']?></strong></p>
+        <p><?php echo $this->lang['address']?></p>
+        <p><?php echo $this->lang['phone']?></p>
+        <p>Email: <a href="mailto:<?php echo $this->lang['email']?>" ><?php echo $this->lang['email']?></a> - Website: <a href="http://connitshop.com">Connitshop.com</a></p>
     </div>
 </div><!--End Footer-->
 </body>
