@@ -2,8 +2,8 @@
 #pb-right-column {width:290px;float:left;margin-right:10px}
 
 /* product img */
-#image-block {width:290px;height:254px;}
-#image-block img#bigpic {width:290px;height:254px;cursor:pointer;border:1px solid #ececec}
+#image-block {width:290px;height:300px;}
+#image-block img#bigpic {width:290px;height:300px;cursor:pointer;border:1px solid #ececec}
 #image-block img#bigpic.jqzoom {cursor:crosshair}
 
 /* views block */

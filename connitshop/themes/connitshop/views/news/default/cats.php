@@ -26,5 +26,5 @@
     </script>
     <?php else:?>
         <h2 class="title-box"><span><?php echo $this->lang[$this->module->id] .' <b>'.'&raquo;'.'</b>'.' '.$info_cat['cat_title'] ?></span></h2>
-        <div class="frame-tent-right">khong co mau tin</div>
+        <div class="frame-tent-right">Đang cập nhật</div>
     <?php endif;?>

@@ -87,11 +87,12 @@ a{text-decoration:none; color:#720E3B} a:hover{color:#000;}
 /*Category*/
 .sub-cat{list-style:none;margin:0 0 15px 0;padding:5px 5px 5px 10px;background:#EBEBEB;border-radius:0 0 2px 2px;-webkit-border-radius:0 0 2px 2px;-moz-border-radius:0 0 2px 2px}
 .sub-cat li a{color:#444;display:block;font-weight:bold;padding:5px 2px 5px 10px;background:url(../images/bg_arrow.png) no-repeat left 7px}
-.sub-cat li a:hover{color:#92CA33}
+.sub-cat li a:hover,.sub-cat li.selected ul li a:hover{color:#92CA33}
 .sub-cat li ul{padding:0 0 0 10px;list-style:none;margin:0}
 .sub-cat li ul li{ font-weight:normal} .sub-cat li ul li a{font-weight:normal;color:#05acea;padding:2px 2px 2px 10px;background:url(../images/bull-1.jpg) no-repeat left 7px}
 
 .sub-cat li.selected a{color:#007424}
+.sub-cat li.selected ul li a{color:#05acea} 
 
 /*Thong ke truy cap*/
 .statistics{list-style:none;margin:0 0 15px;padding:5px 3px 2px 10px;background:#EBEBEB}
@@ -120,13 +121,13 @@ a{text-decoration:none; color:#720E3B} a:hover{color:#000;}
 
 .list-item li,.list-item-index li, .list-item-cat li, .list-item-index-new li{width:165px;text-align:center;padding:5px;margin:0 10px 10px 0; display:inline-block; vertical-align:top;background:#fff}
 .list-item-index li ,.list-item-index-new li{margin:0 10px 0 0;width:160px;padding:10px}
-
+.item-deals li{text-align:left}
 .list-item li.last-item,.list-item-cat li.last-item{margin:0 0 10px!important} .list-item-index li.last-item-index{margin:0 !important}
 
 .product-img{width:180px;display:table-cell;vertical-align:middle;text-align:center}
 .product-img img{border:1px solid #818181;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px}
 .product-img img:hover{border:1px solid #94BB10}
-.price{color:#f00;margin:5px 0 0}
+.price{color:#f00;margin:5px 0 0;font-weight:bold}
 .title-product{font-size:10pt;margin:5px 0 0;padding:0; font-weight:normal}
 .title-product a{color:#673b03}
 .title-product a:hover{color:#92C000}
@@ -136,8 +137,9 @@ a{text-decoration:none; color:#720E3B} a:hover{color:#000;}
 .list-item-dead li .product-img{width:230px}
 .list-item-dead li.last-item-dead{margin:0 !important}
 .mid-item-dead{padding:0 10px}
-.title-deal{font-size:18px;font-weight:normal;margin:10px 0 0;padding:0} .title-deal a{color:#222}
-.price-dead{font-size:18px;color:#D10000;margin:20px 0 0;position:relative} .view{position:absolute;top:-5px;right:0}
+.title-deal{font-size:16px;font-weight:normal;margin:10px 0 0;padding:0;text-align:center} .title-deal a{color:#222} .title-deal a:hover{color:#D10000}
+.position-deal{position:relative;margin:20px 0 0}
+.price-deal{font-size:16px;color:#D10000;margin:0;font-weight:bold} .view{position:absolute;top:-5px;right:0}
 
 .row-info{margin: 0 0 15px 0} .bton-cart{text-align:center}
 .title-info{margin:0 0 10px 0;color: #fff}

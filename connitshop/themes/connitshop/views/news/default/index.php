@@ -26,5 +26,6 @@
         });
     </script>
 <?php else:?>
-    <div class="frame-tent-right">khong co mau tin</div>
+	<h2 class="title-box"><span><?php echo CHtml::encode($this->lang['news'])?></span></h2>
+    <div class="frame-tent-right">Đang cập nhật</div>
 <?php endif?>
