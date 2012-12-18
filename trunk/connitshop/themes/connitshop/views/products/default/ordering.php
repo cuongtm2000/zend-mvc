@@ -1,8 +1,10 @@
+<?php $this->breadcrumbs = array($this->lang[$this->module->id] => array($this->setUrlModule()), Yii::t('main', 'products.purchase.shopping')); ?>
+<?php $this->pageTitle = Yii::t('main', 'products.purchase.shopping'); $this->setDescription(Yii::t('main', 'products.purchase.shopping'))?>
 <?php if(Yii::app()->user->hasFlash('contactSuccess')): ?>
     <?php echo Yii::app()->user->getFlash('contactSuccess'); ?>
 <?php else: ?>
-    <div class="main-all-product">
-        <h2 class="title-right"><span><?php echo Yii::t('main', 'products.purchase.shopping')?></span></h2>
+<h2 class="title-right"><span><?php echo Yii::t('main', 'products.purchase.shopping')?></span></h2>
+	<div class="frame-tent-right">
          <table class="form_order" cellspacing="0" cellpadding="5" width="100%">
                 <thead>
                     <tr align="center">
@@ -36,7 +38,7 @@
             <h3 class="title-right"><span><?php echo Yii::t('main', 'personal-shopping-cart')?></span></h3>
             <div class="panel-form-cart">
                  <?php $form = $this->beginWidget('CActiveForm', array('id' => 'user-form', 'enableAjaxValidation' => false, 'htmlOptions' => array('class' => 'form-all'))); ?>
-                    <p class="note">Vui lòng</p>
+                    <p class="note">Vui lòng điền đầy đủ thông tin dưới mẫu sau</p>
                     <?php echo $form->errorSummary($model, ''); ?>
                     <ul class="form-contact">
                         <li>

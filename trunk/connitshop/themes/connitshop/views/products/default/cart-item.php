@@ -1,5 +1,7 @@
-<div class="main-all-product">
-    <h2 class="title-right"><span><?php echo Yii::t('main', 'shopping-cart')?></span></h2>
+<?php $this->breadcrumbs = array($this->lang[$this->module->id] => array($this->setUrlModule()), Yii::t('main', 'shopping-cart')); ?>
+<?php $this->pageTitle = Yii::t('main', 'shopping-cart'); $this->setDescription(Yii::t('main', 'shopping-cart'))?>
+<h2 class="title-right"><span><?php echo Yii::t('main', 'shopping-cart')?></span></h2>
+<div class="frame-tent-right">
     <form name="order" action="" method="post" >
         <table class="form_order" cellspacing="0" cellpadding="5" width="100%">
             <thead>
@@ -31,7 +33,7 @@
                 <?php endif?>
             </tbody>
         </table>
-        <div class="panel-order">
+        <div class="panel_order">
             <input type="submit" value="<?php echo Yii::t('main', 'products.purchase.shopping')?>" title="<?php echo Yii::t('main', 'products.purchase.shopping')?>" class="btn_order" />
             <a href="javascript:history.back()" class="btn_order" title="<?php echo Yii::t('main', 'products.continue.shopping')?>"><?php echo Yii::t('main', 'products.continue.shopping')?></a>
             <a href="<?php echo Yii::app()->baseUrl?>/san-pham/xoa-gio-hang" class="btn_order" title="<?php echo Yii::t('main', 'products.delete-cart')?>"><?php echo Yii::t('main', 'products.delete-cart')?></a>
