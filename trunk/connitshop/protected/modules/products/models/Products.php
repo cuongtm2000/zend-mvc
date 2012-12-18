@@ -415,4 +415,17 @@ class Products extends CActiveRecord {
         }
         $cat->deleteRecord($id);
     }
+	
+	//Front end - shopping cart
+    public function ItemsOrder($data = array()) {
+        if (empty($data)) {
+            return;
+        }
+        $ids = implode(',', array_keys($data));
+
+        $criteria = new CDbCriteria();
+        $criteria->with = array(__CLASS__ . 'Cat');
+        $criteria->condition = 'enable = 1 AND record_id IN(' . $ids . ')';
+        return $this->findAll($criteria);
+    }
 }

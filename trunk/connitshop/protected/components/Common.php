@@ -100,4 +100,18 @@ class Common {
             return true;
         }
     }
+
+    public static function getPrice($price) {
+        $str = '';
+        if (is_numeric($price)) {
+            $str = number_format($price, 0, '', '.');
+        } else {
+            if ($price) {
+                $str = $price;
+            } else {
+                $str = Yii::app()->controller->lang['contact'];
+            }
+        }
+        return $str;
+    }
 }
