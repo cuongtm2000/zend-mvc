@@ -165,6 +165,22 @@ class Products extends CActiveRecord {
         return $this->findAll($criteria);
     }
 	
+	 //Front end - list item newPage
+    public function listItemsNewPage() {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'record_order DESC, postdate DESC';
+        $criteria->condition = 'enable=1';
+
+        $count = $this->count($criteria);
+        // elements per page
+        $pages = new CPagination($count);
+        //$pages->pageSize = Config::getValue('products_num_item_deal');
+        $pages->pageSize = 4;
+        $pages->applyLimit($criteria);
+
+        return array('models' => $this->findAll($criteria), 'pages' => $pages);
+    }
+	
 	//Front end - list Item by Hot
     public function listItemHots() {
         $criteria = new CDbCriteria();
@@ -174,7 +190,7 @@ class Products extends CActiveRecord {
         $count = $this->count($criteria);
         // elements per page
         $pages = new CPagination($count);
-        $pages->pageSize = Config::getValue('products_num_item_deal');;
+        $pages->pageSize = Config::getValue('products_num_item_deal');
         $pages->applyLimit($criteria);
 
         return array('models' => $this->findAll($criteria), 'pages' => $pages);

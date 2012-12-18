@@ -60,6 +60,13 @@ class DefaultController extends Controller {
         $this->render('hots', array('items_hot' => $model->listItemHots()));
     }
 	
+	public function actionNewPage() {
+        $model_class = ucfirst($this->module->id);
+        $model = new $model_class;
+
+        $this->render('newpage', array('items_new' => $model->listItemsNewPage()));
+    }
+	
 	public function actionOrder($id) {
         $id = ProductsLanguage::model()->getIDByTag($id);
         $cart = Yii::app()->session['cart'];
