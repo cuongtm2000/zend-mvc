@@ -1,6 +1,4 @@
-<!--<?php
-	var_dump($items_hot['models']);	
-?>-->
+
 <h2 class="title-box"><span><?php echo $this->lang['deal']?></span></h2>
 <?php if($items_hot):?>
 <ul class="list-item">
