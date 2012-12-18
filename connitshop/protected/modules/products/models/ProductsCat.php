@@ -128,7 +128,7 @@ class ProductsCat extends CActiveRecord {
     }
 
     //Front end - make menu multi level
-    public function makeMenu($data, $cat_id, $strOpen = '<ul>', $strClose = '</ul>', $tag = 'li', $subTag = 'ul', $subTagItem = 'li') {
+    public function makeMenuIndex($data, $cat_id, $strOpen = '<ul>', $strClose = '</ul>', $tag = 'li', $subTag = 'ul', $subTagItem = 'li') {
         $str = null;
         $root_find = $this->findCatID($cat_id);
 
@@ -141,9 +141,26 @@ class ProductsCat extends CActiveRecord {
                 $str .= '</' . $tag . '>';
             }
         }
-        return $strOpen .'<li>test</li>'. $str . $strClose;
+        return $strOpen .'<li><a href="san-pham/hang-moi-ve">Hàng mới về <img src="'.Yii::app()->theme->baseUrl.'/images/new.png" /></a></li>'.'<li><a href="san-pham/khuyen-mai">Khuyến mãi</a></li>'. $str . $strClose;
     }
+	
+	 //Front end - make menu multi level
+    public function makeMenu($data, $cat_id, $strOpen = '<ul>', $strClose = '</ul>', $tag = 'li', $subTag = 'ul', $subTagItem = 'li') {
+        $str = null;
+        $root_find = $this->findCatID($cat_id);
 
+        foreach ($data as $value) {
+            if ($value['cat_parent_id'] == 0) {
+                $str .= '<' . $tag . '>' . CHtml::link($value->ProductsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule('products') . '/' . $value->ProductsCatLanguage[Yii::app()->language]['tag']), array('title' => $value->ProductsCatLanguage[Yii::app()->language]['cat_title']));
+                if ($value['cat_id'] == $root_find) {
+                    $str .= $this->menuRecursive($value['cat_id'], $data, '', '', $subTag, $subTagItem);
+                }
+                $str .= '</' . $tag . '>';
+            }
+        }
+        return $strOpen . $str . $strClose;
+    }
+	
     private function menuRecursive($parent_id, $data, $res = '', $sep = '', $subTag = 'ul', $subTagItem = 'li') {
         $tmp='';
         foreach ($data as $v) {

@@ -53,11 +53,18 @@ class DefaultController extends Controller {
         $this->render('view', $data);
     }
 	
-	 public function actionHots() {
+	public function actionHots() {
         $model_class = ucfirst($this->module->id);
         $model = new $model_class;
 
         $this->render('hots', array('items_hot' => $model->listItemHots()));
+    }
+	
+	public function actionDeals() {
+        $model_class = ucfirst($this->module->id);
+        $model = new $model_class;
+
+        $this->render('deals', array('items_deals' => $model->listItemDeals()));
     }
 	
 	public function actionNewpage() {
