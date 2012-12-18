@@ -141,7 +141,7 @@ class ProductsCat extends CActiveRecord {
                 $str .= '</' . $tag . '>';
             }
         }
-        return $strOpen . $str . $strClose;
+        return $strOpen .'<li>test</li>'. $str . $strClose;
     }
 
     private function menuRecursive($parent_id, $data, $res = '', $sep = '', $subTag = 'ul', $subTagItem = 'li') {
