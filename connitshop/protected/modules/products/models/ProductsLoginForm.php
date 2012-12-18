@@ -57,7 +57,7 @@ class ProductsLoginForm extends CFormModel {
         }
         if ($this->_identity->errorCode === ProductsUserIdentity::ERROR_NONE) {
             $duration = $this->rememberMe ? 3600 * 24 * 30 : 0; // 30 days
-            Yii::app()->user->login($this->_identity, $duration);
+            Yii::app()->memberProducts->login($this->_identity, $duration);
             return true;
         }
         else

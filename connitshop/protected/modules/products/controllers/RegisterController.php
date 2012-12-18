@@ -9,7 +9,7 @@ class RegisterController extends Controller {
             $model->attributes = $_POST[$model_class];
             if ($model->validate()) {
                 $model->save();
-                $this->redirect(Yii::app()->user->returnUrl);
+                $this->redirect(Yii::app()->memberProducts->returnUrl);
             }
         }
 

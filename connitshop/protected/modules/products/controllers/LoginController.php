@@ -8,7 +8,7 @@ class LoginController extends Controller {
 		if (isset($_POST[$model_class])) {
             $model->attributes = $_POST[$model_class];
             if ($model->validate() && $model->login()){
-                $this->redirect(Yii::app()->user->returnUrl);
+                $this->redirect(Yii::app()->memberProducts->returnUrl);
             }
         }
 		

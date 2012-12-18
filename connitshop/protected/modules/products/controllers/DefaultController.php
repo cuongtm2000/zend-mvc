@@ -1,6 +1,25 @@
 <?php
 
 class DefaultController extends Controller {
+	 public function filters() {
+        return array(
+            'adminAccess',
+        );
+    }
+
+    public function filterAdminAccess($filterChain) {
+        if ($filterChain->action->id == 'ordering' && Yii::app()->memberProducts->isGuest) {
+				Yii::app()->memberProducts->loginRequired();
+        }
+        else {
+            $filterChain->run();
+        }
+		
+		//$filterChain->run();
+		
+		//Yii::app()->memberProducts->loginRequired();
+    }
+	
     public function actionIndex() {
         $model_class = ucfirst($this->module->id) . 'Cat';
         $model = new $model_class;
