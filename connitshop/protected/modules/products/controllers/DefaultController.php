@@ -112,16 +112,16 @@ class DefaultController extends Controller {
                     $num_of_dates = $cart[$v['record_id']];
                     $total_item = $price * $num_of_dates;
                     $total += $total_item;
-$html = 'test';
-                    //$html .= '<tr align="center"><td>' . $v['title'] . ' - ' . $v['ProductsCat']['cat_title'] . '</td><td>' . Common::getPrice($price) . '</td><td>' . $num_of_dates . '</td><td>' . Common::getPrice($total_item) . '</td></tr>';
+
+                    $html .= '<tr align="center"><td>' . $v->ProductsLanguage[Yii::app()->language]['title'] . ' - ' . $v->ProductsCat->ProductsCatLanguage[Yii::app()->language]['cat_title'] . '</td><td>' . Common::getPrice($price) . '</td><td>' . $num_of_dates . '</td><td>' . Common::getPrice($total_item) . '</td></tr>';
                 }
                 $html .= '<tr><td colspan="3" style="padding:5px; text-align: right">Tổng cộng: </td><td align="center"><strong>' . Common::getPrice($total) . ' VND</strong></td></tr>';
                 $html .= '</tbody></table>';
                 $html .= '<br />Cảm ơn đã sử dụng dịch vụ công ty chúng tôi<br />--<br/>Dos.vn';
 
-                Yii::import('ext.Phpmailer.JPhpMailer');
-                $mail = new JPhpMailer;
-                $mail->sendMailSmtp('noreply@thuonghoi.com', $username['user_email'], 'Dos.vn', $username['user_id'], 'Liên hệ từ web: ' . Yii::app()->session['subdomain'] . '.dos.vn', $html, 1, $cartform['email'], $cartform['fullname'], 'smtp.gmail.com', 'noreply@thuonghoi.com', 'hhrbpnuwsbfaryyd');
+                Yii::import('application.extensions.Phpmailer.JPhpMailer');
+                $mail = new JPhpMailer();
+                //$mail->sendMailSmtp('noreply@thuonghoi.com', $username['user_email'], 'Dos.vn', $username['user_id'], 'Liên hệ từ website', $html, 1, $cartform['email'], $cartform['fullname']);
                       
                 Yii::app()->user->setFlash('contactSuccess', 'Lien he thanh cong');
                 $this->refresh();

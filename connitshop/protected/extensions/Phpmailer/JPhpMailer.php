@@ -31,11 +31,11 @@ class JPhpMailer extends PHPMailer {
     public function sendMailSmtp($from, $to, $namefrom, $nameto, $subject, $content, $type = 0, $addreplyto = '', $reply_name = '', $host, $user, $pass) {
         $this->IsSMTP();
         $this->SMTPSecure = 'ssl';
-        $this->Host = $host;
+        $this->Host = 'smtp.googlemail.com';
         $this->Port = 465;
         $this->SMTPAuth = true;
-        $this->Username = $user;
-        $this->Password = $pass;
+        $this->Username = 'noreply@thuonghoi.com';
+        $this->Password = 'hhrbpnuwsbfaryyd';
         $this->Subject = $subject;
         $this->AltBody = 'To view the message, please use an HTML compatible email viewer!';
         $this->MsgHTML($content);
