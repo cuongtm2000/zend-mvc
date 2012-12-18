@@ -6,16 +6,16 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/a
 ?>
 <?php if($products_new):?>
     <div class="main-produt-new">
-    <h2 class="title-box-new"><span><?php echo $this->lang['products'] . ' ' . $this->lang['new']?></span> <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/new.png" alt="new" /></h2>
+    <h2 class="title-box"><span><?php echo $this->lang['products'] . ' ' . $this->lang['new']?></span> <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/new.png" alt="new" /></h2>
 		<ul id="mycarousel" class="list-item-index-new jcarousel-skin-tango">
 			<?php foreach($products_new as $item): ?>
 				<li>
                     <div class="product-img">
                         <?php echo CHtml::link(($item['pic_thumb']) ? '<img src="'.Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/products/'.$item['pic_thumb'].'" alt="'.$item->ProductsLanguage[Yii::app()->language]['title'].'" />' : '<img src="'.Yii::app()->theme->baseUrl.'/images/no-products-cat.jpg" alt="'.$item->ProductsLanguage[Yii::app()->language]['title'].'" />', array($this->setLangUrl().'/san-pham/'.$item->ProductsCat->ProductsCatLanguage[Yii::app()->language]['tag'].'/'.$item->ProductsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$item->ProductsLanguage[Yii::app()->language]['title'])); ?>
                     </div>
-					<h2 class="title-product">
+					<h4 class="title-product">
 						<?php echo CHtml::link($item->ProductsLanguage[Yii::app()->language]['title'], array($this->setUrlModule('products').'/'.$item->ProductsCat->ProductsCatLanguage[Yii::app()->language]['tag'].'/'.$item->ProductsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$item->ProductsLanguage[Yii::app()->language]['title'])); ?>
-					</h2>
+					</h4>
 					<?php echo ($item['unit']) ? '<p class="price">'.$item['unit'].'</p>' : ''?>
 				</li>
 			<?php endforeach; ?>
