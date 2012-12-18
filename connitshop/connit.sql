@@ -2,10 +2,10 @@
 -- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 17, 2012 at 10:34 AM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
+-- Host: localhost
+-- Generation Time: Dec 18, 2012 at 02:37 AM
+-- Server version: 5.5.16
+-- PHP Version: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -467,7 +467,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_banners` (
   `module_id` varchar(30) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`banner_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=81 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=83 ;
 
 --
 -- Dumping data for table `hoiit_module_banners`
@@ -475,9 +475,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_banners` (
 
 INSERT INTO `hoiit_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_picture`, `banner_link`, `banner_order`, `banner_type`, `banner_click`, `module_id`, `enable`) VALUES
 (58, '2012-08-07 09:42:19', '', NULL, NULL, NULL, 'logo', 0, NULL, 1),
-(73, '2012-11-10 08:13:04', 'home-4', 'home-4.png', '', 11, 'banner', 0, 'default', 1),
-(77, '2012-11-10 08:16:09', 'home-8', 'home-8.png', '', 10, 'banner', 0, 'default', 1),
-(80, '2012-11-26 09:06:59', 'Căn hộ 4s riverside linh đông', 'can-ho-4s-riverside-linh-dong.jpg', 'http://datxanhhoancau.com.vn/du-an/du-an-can-ho/can-ho-4s-riverside-linh-dong.html', 12, 'banner', 0, 'default', 1);
+(81, '2012-12-18 00:14:52', 'Banner', 'banner.jpg', '', 1, 'banner', 0, 'default', 1),
+(82, '2012-12-18 00:15:37', 'Merry christmas', 'merry-christmas.jpg', '', 2, 'banner', 0, 'default', 1);
 
 -- --------------------------------------------------------
 
@@ -544,7 +543,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('1m4tevqai', 1355736813);
+('82mpv1qus', 1355789966);
 
 -- --------------------------------------------------------
 
@@ -565,10 +564,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_value` (
 INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
 ('max_visit_day', 1354579200),
 ('max_visit_value', 167),
-('time_start_today', 1355698800),
-('today_visited', 3),
-('total_visited', 1356),
-('yesterday_visited', 2);
+('time_start_today', 1355785200),
+('today_visited', 1),
+('total_visited', 1357),
+('yesterday_visited', 3);
 
 -- --------------------------------------------------------
 
@@ -1364,7 +1363,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_services_languages` (
 --
 
 INSERT INTO `hoiit_module_services_languages` (`record_id`, `language_id`, `title`, `preview`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(18, 'vi', 'Chinh sách bán sỉ', NULL, '<p>gfdhghgh sfgg fdgfg gfgf</p>', 'chinh-sach-ban-si', 'hgfhgfhfg dgf', 19, NULL, NULL);
+(18, 'vi', 'Chinh sách bán sỉ', NULL, '<p>gfdhghgh sfgg fdgfg gfgf</p>', 'chinh-sach-ban-si', 'hgfhgfhfg dgf', 20, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1627,13 +1626,17 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('<procedures:(thu-tuc-hanh-chinh)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'procedures/default/view', 'urlSuffix=>.html', 6, 0, 'procedures', 'vi'),
 ('<procedures:(thu-tuc-hanh-chinh)>/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'procedures/default/cats', '', 2, 0, 'procedures', 'vi'),
 ('<procedures:(thu-tuc-hanh-chinh)>/trang/<page:\\d+>', 'procedures/default/index', '', 4, 0, 'procedures', 'vi'),
-('<products:(san-pham)>', 'products/default/index', '', 4, 1, 'products', 'vi'),
-('<products:(san-pham)>/<cid:[-a-z0-9]+>', 'products/default/cats', '', 3, 0, 'products', 'vi'),
-('<products:(san-pham)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'products/default/view', 'urlSuffix=>.html', 0, 0, 'products', 'vi'),
+('<products:(san-pham)>', 'products/default/index', '', 10, 1, 'products', 'vi'),
+('<products:(san-pham)>/<cid:[-a-z0-9]+>', 'products/default/cats', '', 9, 0, 'products', 'vi'),
+('<products:(san-pham)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'products/default/view', 'urlSuffix=>.html', 11, 0, 'products', 'vi'),
 ('<products:(san-pham)>/<cid:[-a-z0-9]+>/trang/<page:\\d+>', 'products/default/cats', '', 1, 0, 'products', 'vi'),
-('<products:(san-pham)>/dang-ky', 'products/register/index', NULL, 2, 0, 'products', 'vi'),
-('<products:(san-pham)>/dang-nhap', 'products/login/index', NULL, 2, 0, 'products', 'vi'),
-('<products:(san-pham)>/khuyen-mai', 'products/default/hots', NULL, 2, 0, 'products', 'vi'),
+('<products:(san-pham)>/dang-ky', 'products/register/index', NULL, 3, 0, 'products', 'vi'),
+('<products:(san-pham)>/dang-nhap', 'products/login/index', NULL, 5, 0, 'products', 'vi'),
+('<products:(san-pham)>/dat-hang/<id:[-a-z0-9]+>', 'products/default/order', NULL, 2, 0, 'products', 'vi'),
+('<products:(san-pham)>/gio-hang', 'products/default/cartitem', NULL, 4, 0, 'products', 'vi'),
+('<products:(san-pham)>/khuyen-mai', 'products/default/hots', NULL, 6, 0, 'products', 'vi'),
+('<products:(san-pham)>/thong-tin-dat-hang', 'products/default/ordering', NULL, 8, 0, 'products', 'vi'),
+('<products:(san-pham)>/xoa-gio-hang', 'products/default/delallcart', NULL, 7, 0, 'products', 'vi'),
 ('<projects:(thanh-tuu-dinh-huong)>', 'projects/default/index', '', 4, 1, 'projects', 'vi'),
 ('<projects:(thanh-tuu-dinh-huong)>/<cid:[-a-z0-9]+>', 'projects/default/cats', '', 2, 0, 'projects', 'vi'),
 ('<projects:(thanh-tuu-dinh-huong)>/<cid:[-a-z0-9]+>/<id:[-a-z0-9]+>', 'projects/default/view', 'urlSuffix=>.html', 5, 0, 'projects', 'vi'),
@@ -1647,7 +1650,7 @@ INSERT INTO `hoiit_urls` (`url_pattern`, `url_route`, `url_param`, `url_sort`, `
 ('gioi-thieu/<id:[-a-z0-9]+>', 'about/default/view', 'urlSuffix=>.html', 1, 0, 'about', 'vi'),
 ('home-page', 'default/default/index', NULL, NULL, 1, 'default', 'en'),
 ('lien-he', 'contact/default/index', '', 1, 1, 'contact', 'vi'),
-('products', 'products/default/index', '', 5, 1, 'products', 'en'),
+('products', 'products/default/index', '', 12, 1, 'products', 'en'),
 ('trang-chu', 'default/default/index', NULL, NULL, 1, 'default', 'vi');
 
 -- --------------------------------------------------------
@@ -1676,7 +1679,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_users` (
 --
 
 INSERT INTO `hoiit_users` (`user_id`, `user_email`, `user_pass`, `user_picture`, `user_display`, `user_registered`, `user_lastvisit`, `user_activation_key`, `user_enable`, `hoiit_groups_group_id`) VALUES
-('connit', 'connit@gmail.com', '14e1b600b1fd579f47433b88e8d85291', NULL, 'connit', '2012-07-03 15:49:55', '2012-07-03 15:49:55', NULL, 1, 'administrator');
+('connit', 'thanhansoft@gmail.com', '14e1b600b1fd579f47433b88e8d85291', NULL, 'connit', '2012-07-03 15:49:55', '2012-07-03 15:49:55', NULL, 1, 'administrator');
 
 --
 -- Constraints for dumped tables
