@@ -134,7 +134,7 @@ class ProductsCat extends CActiveRecord {
 
         foreach ($data as $value) {
             if ($value['cat_parent_id'] == 0) {
-                $str .= '<' . $tag . '>' . CHtml::link($value->ProductsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $value->ProductsCatLanguage[Yii::app()->language]['tag']), array('title' => $value->ProductsCatLanguage[Yii::app()->language]['cat_title']));
+                $str .= '<' . $tag . '>' . CHtml::link($value->ProductsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule('products') . '/' . $value->ProductsCatLanguage[Yii::app()->language]['tag']), array('title' => $value->ProductsCatLanguage[Yii::app()->language]['cat_title']));
                 if ($value['cat_id'] == $root_find) {
                     $str .= $this->menuRecursive($value['cat_id'], $data, '', '', $subTag, $subTagItem);
                 }
@@ -148,7 +148,7 @@ class ProductsCat extends CActiveRecord {
         $tmp='';
         foreach ($data as $v) {
             if ($v['cat_parent_id'] == $parent_id) {
-                $re = $sep . '<' . $subTagItem . '>' . CHtml::link($v->ProductsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule() . '/' . $v->ProductsCatLanguage[Yii::app()->language]['tag']), array('title' => $v->ProductsCatLanguage[Yii::app()->language]['cat_title']));
+                $re = $sep . '<' . $subTagItem . '>' . CHtml::link($v->ProductsCatLanguage[Yii::app()->language]['cat_title'], array(Yii::app()->controller->setUrlModule('products') . '/' . $v->ProductsCatLanguage[Yii::app()->language]['tag']), array('title' => $v->ProductsCatLanguage[Yii::app()->language]['cat_title']));
                 $tmp .= $this->menuRecursive($v['cat_id'], $data, $re, $sep . '');
                 $tmp .= '</' . $subTagItem . '>';
             }
