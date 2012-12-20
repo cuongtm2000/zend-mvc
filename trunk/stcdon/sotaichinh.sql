@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 3.5.0
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 07, 2012 at 10:05 AM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
+-- Host: localhost
+-- Generation Time: Dec 20, 2012 at 03:56 AM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -44,22 +44,22 @@ INSERT INTO `hoiit_configs` (`config_name`, `config_value`, `config_desc`, `hoii
 ('adv_bottom_width', '64', NULL, 'adv'),
 ('adv_center_height', '222', NULL, 'adv'),
 ('adv_center_width', '222', NULL, 'adv'),
-('adv_left_height', '500', NULL, 'adv'),
+('adv_left_height', '97', NULL, 'adv'),
 ('adv_left_width', '195', NULL, 'adv'),
 ('adv_right_height', '500', NULL, 'adv'),
 ('adv_right_width', '230', NULL, 'adv'),
 ('adv_top_height', '222', NULL, 'adv'),
 ('adv_top_width', '222', NULL, 'adv'),
-('banner_height', '265', NULL, 'banner'),
+('banner_height', '180', NULL, 'banner'),
 ('banner_height_default', '265', NULL, 'banner'),
 ('banner_width', '480', NULL, 'banner'),
 ('banner_width_default', '480', NULL, 'banner'),
-('contact_email_received', 'datxanhhoancau@gmail.com', NULL, 'contact'),
+('contact_email_received', 'stc@dongnai.gov.vn', NULL, 'contact'),
 ('contact_host', 'smtp.gmail.com', NULL, 'contact'),
 ('contact_password', 'assas', NULL, 'contact'),
 ('contact_port', '465', NULL, 'contact'),
 ('contact_send_mail_smtp', '1', NULL, 'contact'),
-('contact_username', 'datxanhhoancau', NULL, 'contact'),
+('contact_username', 'stc', NULL, 'contact'),
 ('document_cat_height_thumb', '100', NULL, 'document'),
 ('document_cat_width_thumb', '150', NULL, 'document'),
 ('document_height_thumb', '100', NULL, 'document'),
@@ -209,7 +209,7 @@ INSERT INTO `hoiit_langs` (`lang_id`, `lang_name`, `lang_admin`, `hoiit_language
 ('add_new', 'Thêm mới', 1, 'vi'),
 ('add_row', 'Thêm dòng', 1, 'vi'),
 ('adv', 'Adv', 0, 'en'),
-('adv', 'Quảng cáo', 0, 'vi'),
+('adv', 'Liên kết website', 0, 'vi'),
 ('banner', 'Banner', 1, 'en'),
 ('banner', 'Banner', 1, 'vi'),
 ('cancel', 'Cancel', 1, 'en'),
@@ -307,7 +307,7 @@ INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_url`, `module_
 ('about', 'Danh sách', 'about', 2, 1, 1),
 ('adv', 'Danh sách|Cấu hình', 'adv|adv/config', 5, 1, 0),
 ('banner', 'Danh sách Banner|Danh sách Logo|Cấu hình', 'banner|banner/logo|banner/config', 6, 1, 0),
-('contact', 'Danh sách|Cấu hình', 'contact|contact/config', 2, 1, 1),
+('contact', 'Danh sách|Cấu hình', 'contact|contact/config', 100, 1, 1),
 ('counterSession', 'CounterSession', NULL, 4, 0, 0),
 ('default', 'Default', NULL, 1, 1, 1),
 ('document', 'Danh mục|Danh sách|Cấu hình', 'document/cat|document|document/config', 4, 1, 1),
@@ -318,7 +318,7 @@ INSERT INTO `hoiit_modules` (`module_id`, `module_title`, `module_url`, `module_
 ('products', 'Danh mục|Danh sách|Cấu hình', 'products/cat|products|products/config', 3, 1, 1),
 ('projects', 'Danh mục|Danh sách|Cấu hình', 'projects/cat|projects|projects/config', 4, 1, 1),
 ('support', 'Danh sách', 'support', 6, 1, 0),
-('video', 'Danh mục|Danh sách|Cấu hình', 'video/cat|video|video/config', 3, 1, 1);
+('video', 'Danh mục|Danh sách|Cấu hình', 'video/cat|video|video/config', 90, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -412,7 +412,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
 --
 
 INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(2, 'vi', 'Thông điệp của chủ tịch HĐQT', '<p style="text-align:justify;"><br />Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những “Sản phẩm tốt nhất – Dịch vụ tốt nhất” , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p style="text-align:justify;">Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p style="text-align:justify;">Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p style="text-align:justify;">Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p style="text-align:justify;">Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p style="text-align:justify;">Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p style="text-align:justify;">Trân trọng,</p>\r\n<p style="text-align:right;"> <strong>Chủ Tịch Hội Đồng Quản Trị</strong></p>\r\n<p style="text-align:right;"><strong>LƯƠNG TRÍ THÌN</strong></p>', 'thong-diep-cua-chu-tich-hdqt', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những “Sản phẩm tốt nhất – Dịch vụ tốt nhất” , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.', 273, NULL, NULL),
+(2, 'vi', 'Thông điệp của chủ tịch HĐQT', '<p style="text-align:justify;"><br />Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những “Sản phẩm tốt nhất – Dịch vụ tốt nhất” , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p style="text-align:justify;">Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p style="text-align:justify;">Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p style="text-align:justify;">Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p style="text-align:justify;">Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p style="text-align:justify;">Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p style="text-align:justify;">Trân trọng,</p>\r\n<p style="text-align:right;"> <strong>Chủ Tịch Hội Đồng Quản Trị</strong></p>\r\n<p style="text-align:right;"><strong>LƯƠNG TRÍ THÌN</strong></p>', 'thong-diep-cua-chu-tich-hdqt', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những “Sản phẩm tốt nhất – Dịch vụ tốt nhất” , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.', 276, NULL, NULL),
 (3, 'vi', 'Công ty cổ phần Đất Xanh Hoàn Cầu', '<p><strong>                                   CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN ĐẤT XANH HOÀN CẦU</strong></p>\r\n<p><span style="font-size:12pt;"><strong>C</strong></span>ông ty cổ phần đầu tư và phát triển Đất Xanh Hoàn Cầu thành lập 15/01/2010, nhằm mục tiêu kế thừa và phát triển những thành tựu mà Tổng công ty Đất Xanh đã đạt được trong suốt thời gian qua, luôn lấy lợi ích khách hàng làm mục tiêu phấn đấu và phát triển.</p>\r\n<p><img src="/sotaichinh/public/userfiles/image/109.JPG" alt="" width="640" height="480" /></p>', 'cong-ty-co-phan-dat-xanh-hoan-cau', 'Tầm nhìn, sứ mệnh, giá trị cốt lõi', 97, NULL, NULL),
 (4, 'vi', 'Lịch sử hình thành và phát triển', '<p style="text-align:justify;"><strong>Năm 2003:</strong></p>\n<p style="text-align:justify;">- Thành lập công ty TNHH Dịch Vụ và Xây dựng Địa ốc Đất Xanh với vốn điều lệ ban đầu là 0,8 tỷ đồng và 10 nhân viên.<br />- Thời gian này, Đất Xanh chuyên về hoạt động môi giới các dự án Bất động sản.</p>\n<p style="text-align:justify;"><strong>Năm 2004 :</strong></p>\n<p style="text-align:justify;">- Thành lập chi nhánh Đất Xanh đầu tiên tại Quận 7</p>\n<p style="text-align:justify;"><strong>Năm 2005:</strong></p>\n<p style="text-align:justify;">- Thành lập chi nhánh Đất Xanh tại Quận Thủ Đức<br />- Phát triển mô hình siêu thị căn hộ chung cư đầu tiên tại Việt Nam.</p>\n<p style="text-align:justify;"><strong>Năm 2006:</strong></p>\n<p style="text-align:justify;">- Thành lập chi nhánh Đất Xanh tại Mỹ Phước - Bình Dương.<br />- Hình thành phương thức bán hàng mới (phương thức bán hàng tập trung), tiên phong trong vấn đề minh bạch hóa thông tin sản phẩm Bất động sản. Các dự án do Đất Xanh phân phối gây được tiếng vang lớn trên thị trường. Đất Xanh dần chiếm lĩnh toàn bộ thị trường Bất động sản Bình Dương.</p>\n<p style="text-align:justify;"><strong>Năm 2007:</strong></p>\n<p style="text-align:justify;">- Thành lập Công ty Cổ phần Đầu tư Đất Xanh<br />- Đất Xanh Chuyển đổi thành công ty cổ phần, tiếp tục thành lập chi nhánh Đất Xanh tại Trung Tâm Bình Dương (TX Thủ Dầu Một) .<br />- Bằng kinh nghiệm vững chắc về phân phối, quản lý, phát triển dự án Bất động sản, đội ngũ nhân sự chuyên nghiệp – tài năng cùng với sự gia tăng tiềm lực về tài chính...Đất Xanh chính thức mở rộng hoạt động sang lĩnh vực đầu tư. Hàng loạt dự án qui mô lớn có diện tích hàng trăm ha với số vốn đầu tư lên đến hàng ngàn tỷ đồng do Đất Xanh làm chủ và hợp tác đầu tư như: Khu đô thị Dịch vụ - Du lịch – Sinh thái Giang Điền, Khu đô thị Thung Lũng Xanh, The Morning Star Plaza, Phú Gia Hưng Apartment, Sunview Apartmentđược khách hàng đón nhận nồng nhiệt bởi uy tín và chất lượng của sản phẩm. Hoạt động đầu tư đóng vai trò chủ lực trong chiến lược kinh doanh của Đất Xanh.</p>\n<p style="text-align:justify;"><strong>Năm 2008:</strong></p>\n<p style="text-align:justify;">- Thành lập Chi Nhánh Đất Xanh tại Đồng Nai.<br />- Phát triển thị trường BDS tại Đồng Nai và BRVT</p>\n<p style="text-align:justify;"><strong>Năm 2009:</strong></p>\n<p style="text-align:justify;">- Mua lại công Ty TNHH Hà Thuận Hùng<br />- Thành lập Công Ty Cổ Phần Đất Xanh Tây Bắc<br />- Chuyển đổi các chi nhánh lên công ty cổ phần.<br />- Ngày 22/12/2009 cổ phiếu của công ty Cổ phần Dịch vụ và Xây dựng Địa ốc Đất Xanh với mã số DXG chính thức niêm yết trên sàn giao dịch chứng khoán TP.HCM đưa công ty Đất Xanh trở thành công ty đại chúng.<br />- Tái cấu trúc mô hình Tổng công ty</p>\n<p style="text-align:justify;"><strong>Năm 2010 :</strong></p>\n<p style="text-align:justify;">- Thành lập công ty cổ phần Đất Xanh miền Bắc<br />- Thành lập công ty cổ phần BDS Long Điền<br />- Đất Xanh trở thành công ty Bất động sản có hệ thống phân phối mạnh nhất Việt Nam với gần 20 chi nhánh, công ty thành viên, công ty liên kết, công ty liên doanh, hoạt động tại tất cả các khu vực giao dịch địa ốc sôi động.<br />- Tiến hành triển khai một chương trình toàn diện về Phát triển nguồn nhân lực, cơ sở vật chất, tài chính....Mọi hoạt động của công ty đều được tin học hóa bằng các phần mềm hiện đại cho phép nhà quản lý tối ưu hoá quy trình hoạt động doanh nghiệp theo tiêu chuẩn quốc tế, tạo điều kiện thuận lợi trong giao dịch sản phẩm, tiết kiệm thời gian và chi phí cho khách hàng...<br />- Đất Xanh khởi công xây dựng Khu đô thị Thương Mai- Dịch Vụ- Du Lịch Suối Son với quy mô 117 ha tại Đồng Nai ...<br />- Mở rộng hoạt động kinh doanh sang các lĩnh vực : Xây dựng, Đầu tư tài chính, sản xuất vật liệu xây dựng..</p>\n<p style="text-align:justify;"><strong>Năm 2011:</strong></p>\n<p style="text-align:justify;">- Tái cơ cấu Đất Xanh lên mô hình tập đoàn Đất Xanh (DXG)<br />- Thành lập Công ty cổ phần Đất Xanh miền Trung<br />- Thành lập Tổng công ty Đất Xanh Đầu tư (DXI)<br />- Thành lập Tổng công ty Đất Xanh Dịch vụ (DXS)<br />- Thành lập Tổng công ty Đất Xanh Xây dựng (DXC)<br />- Tiếp tục phát huy thế mạnh trong lĩnh vực đầu tư Bất động sản, triển khai đầu tư hàng loạt các dự án ở những vị trí chiến lược trên toàn quốc (Arisen, Bình Dương Riverside, Khu đô thị Paradise, Biên Hòa Tower ...), mở rộng phạm vi địa bàn, hình thức đầu tư, liên kết với các đối tác, cung cấp những sản phẩm Bất động sản đa dạng có chất lượng cao, cùng những tiện ích hiện đại...nhằm đáp ứng kịp thời nhu cầu an cư và đầu tư của khách hàng.<br />- Phát triển thị trường BDS Australia.</p>\n<p style="text-align:justify;"><em> </em></p>\n<p style="text-align:justify;"><em>Trải qua 8 năm hình thành và phát triển, đến nay tổng số vốn kinh doanh của Đất Xanh đã đạt hơn 3.000 tỉ đồng với trên 1.500 nhân viên và hơn 20 công ty thành viên, liên kết...</em><br /><em>Bằng sự nỗ lực không ngừng, Đất Xanh không dừng lại ở những thành công đã đạt được mà tiếp tục tiến về phía trước, chinh phục những đỉnh cao mới.</em></p>', 'lich-su-hinh-thanh-va-phat-trien', 'Lịch sử hình thành và phát triển\nBằng sự nỗ lực không ngừng, Đất Xanh không dừng lại ở những thành công đã đạt được mà tiếp tục tiến về phía trước, chinh phục những đỉnh cao mới.', 31, NULL, NULL);
 
@@ -437,7 +437,14 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_advs` (
   `click` int(11) NOT NULL DEFAULT '0',
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `hoiit_module_advs`
+--
+
+INSERT INTO `hoiit_module_advs` (`record_id`, `title`, `pic_thumb`, `url`, `create_date`, `start_date`, `end_date`, `hits`, `record_order`, `position`, `type`, `click`, `enable`) VALUES
+(1, 'Thư điện tử tỉnh Đồng Nai', 'th-ien-tu-tinh-ong-nai.jpg', 'http://mail.dongnai.gov.vn', '2012-12-19 02:28:27', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 1, 'left', '_bank', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -457,7 +464,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_banners` (
   `module_id` varchar(30) DEFAULT NULL,
   `enable` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`banner_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=81 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=83 ;
 
 --
 -- Dumping data for table `hoiit_module_banners`
@@ -465,9 +472,8 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_banners` (
 
 INSERT INTO `hoiit_module_banners` (`banner_id`, `banner_date`, `banner_name`, `banner_picture`, `banner_link`, `banner_order`, `banner_type`, `banner_click`, `module_id`, `enable`) VALUES
 (58, '2012-08-07 09:42:19', '', NULL, NULL, NULL, 'logo', 0, NULL, 1),
-(73, '2012-11-10 08:13:04', 'home-4', 'home-4.png', '', 11, 'banner', 0, 'default', 1),
-(77, '2012-11-10 08:16:09', 'home-8', 'home-8.png', '', 10, 'banner', 0, 'default', 1),
-(80, '2012-11-26 09:06:59', 'Căn hộ 4s riverside linh đông', 'can-ho-4s-riverside-linh-dong.jpg', 'http://datxanhhoancau.com.vn/du-an/du-an-can-ho/can-ho-4s-riverside-linh-dong.html', 12, 'banner', 0, 'default', 1);
+(81, '2012-12-19 02:52:04', 'Hình cơ quan', 'hnh-c-quan.JPG', '', 1, 'banner', 0, 'default', 1),
+(82, '2012-12-19 03:39:27', 'Hình cơ quan2', 'hnh-c-quan2.JPG', '', 2, 'banner', 0, 'default', 1);
 
 -- --------------------------------------------------------
 
@@ -520,7 +526,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('bdgmw2ckh', 1354870617);
+('tx0p2mgcz', 1355889496);
 
 -- --------------------------------------------------------
 
@@ -541,10 +547,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_value` (
 INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
 ('max_visit_day', 1354579200),
 ('max_visit_value', 167),
-('time_start_today', 1354834800),
-('today_visited', 2),
-('total_visited', 1351),
-('yesterday_visited', 2);
+('time_start_today', 1355871600),
+('today_visited', 0),
+('total_visited', 1352),
+('yesterday_visited', 1);
 
 -- --------------------------------------------------------
 
@@ -778,8 +784,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus` (
 --
 
 INSERT INTO `hoiit_module_menus` (`menu_id`, `parent_id`, `menu_type`, `menu_target`, `menu_sort`, `menu_homepage`, `menu_activated`) VALUES
-(35, 0, 1, '', 1, 1, 1),
-(36, 0, 1, '', 38, 0, 1),
+(36, 37, 1, '', 38, 0, 1),
 (37, 0, 1, '', 3, 0, 1),
 (38, 0, 1, '', 2, 0, 1),
 (41, 0, 1, '', 40, 0, 1),
@@ -810,7 +815,6 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_menus_languages` (
 --
 
 INSERT INTO `hoiit_module_menus_languages` (`menu_id`, `language_id`, `menu_name`, `menu_url`, `menu_description`) VALUES
-(35, 'vi', 'Trang chủ', 'trang-chu', 'Kinh doanh bất động sản, Tư vấn - môi giới bất động sản, tư vấn đầu tư, xây dựng, trang trí nội thất, lập dự án đầu tư, chuẩn bị mặt bằng'),
 (36, 'vi', 'Thành tựu và định hướng', 'thanh-tuu-dinh-huong', 'Mo ta dự án'),
 (37, 'vi', 'Tin tức', 'tin-tuc', 'Tin tức'),
 (38, 'vi', 'Giới thiệu', 'gioi-thieu', ''),
@@ -1007,15 +1011,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_poll` (
   `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `enable` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`record_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
-
---
--- Dumping data for table `hoiit_module_poll`
---
-
-INSERT INTO `hoiit_module_poll` (`record_id`, `question`, `begin_date`, `end_date`, `record_order`, `create_date`, `enable`) VALUES
-(2, 'Bạn biết đến Đất Xanh Hoàn Cầu qua nguồn nào', 1344297600, 1376697599, 1, '2012-08-08 02:06:57', 1),
-(3, 'Bạn biết đến Đất Xanh Hoàn Cầu qua nguồn nào?', 1353024000, 1416614399, 2, '2012-11-24 06:35:23', 0);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1031,19 +1027,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_poll_rows` (
   `vote_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `vote_id` (`vote_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
-
---
--- Dumping data for table `hoiit_module_poll_rows`
---
-
-INSERT INTO `hoiit_module_poll_rows` (`id`, `answer`, `url`, `num_vote`, `vote_id`) VALUES
-(1, 'Người thân giới thiệu', '', 1, 2),
-(2, 'Tờ rơi, banner ngoài trời', '', 1, 2),
-(3, 'trang web khác', '', 3, 2),
-(4, 'Tìm kiếm Google', '', 1, 2),
-(5, 'Khác', '', 0, 2),
-(6, 'Người thân giới thiệu', '', 0, 3);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1342,15 +1326,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_supports` (
   `support_order` smallint(6) DEFAULT '0',
   `support_type` varchar(45) NOT NULL,
   PRIMARY KEY (`support_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
-
---
--- Dumping data for table `hoiit_module_supports`
---
-
-INSERT INTO `hoiit_module_supports` (`support_id`, `support_name`, `support_phone`, `support_value`, `support_order`, `support_type`) VALUES
-(28, 'An', '0929001001', 'datxanhhoancau', 1, 'yahoo'),
-(29, 'Nguyễn An', '0929001001', 'grouplaptrinh', 2, 'skype');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1510,10 +1486,10 @@ INSERT INTO `hoiit_settings` (`setting_name`, `setting_value`) VALUES
 ('default_language', 'vi'),
 ('description', 'Description'),
 ('hotline', ''),
-('keywords', 'Kinh doanh bất động sản, Tư vấn - môi giới bất động sản, tư vấn đầu tư, lập dự án đầu tư, phát triển dự án, căn hộ thành phố, đất nền dự án'),
+('keywords', 'Sở Tài chính Đồng Nai'),
 ('num_language', 'vi'),
 ('slogan', 'Thế giới đồ chơi cho khỉ'),
-('title', 'Đất xanh hoàn cầu');
+('title', 'Sở Tài chính Đồng Nai');
 
 -- --------------------------------------------------------
 
