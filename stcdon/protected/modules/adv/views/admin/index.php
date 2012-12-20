@@ -7,8 +7,8 @@
     			<th class="txt15"><input onclick="javascript: select_switch(this.checked);" type="checkbox" name="checkall" /></th>
     			<th class="txt60">Thứ tự</th>
     			<th>Tên quảng cáo</th>
-    	        <th>Ngày bắt đầu</th>
-                <th>Ngày kết thúc</th>
+    	        <!--th>Ngày bắt đầu</th>
+                <th>Ngày kết thúc</th-->
                 <th>Vị trí</th>
                 <th>Loại</th>
     			<th>Thao tác</th>
@@ -18,7 +18,7 @@
             <?php if($models): ?>
                 <?php $i=1; foreach($models as $value): ?>
                     <?php
-                        if($value['start_date']>date("Y-m-d H:i:s")){
+                     /*   if($value['start_date']>date("Y-m-d H:i:s")){
                             $start_date = ' green';
                         }else{
                             $start_date = '';
@@ -27,19 +27,19 @@
                             $end_date = ' red';
                         }else{
                             $end_date = '';
-                        }
+                        }*/
                         if($value['enable'] == 0){
-            	    		$rowclass = ' class="disable'.$end_date.$start_date.'"';
+            	    		$rowclass = ' class="disable'.'"';
             	    	}else{
-            	        	$rowclass = ($i%2==0) ? ' class="none'.$end_date.$start_date.'"' : ' class="alt'.$end_date.$start_date.'"';
+            	        	$rowclass = ($i%2==0) ? ' class="none'.$end_date.$start_date.'"' : ' class="alt'.'"';
             	    	}
                     ?>
                     <tr<?php echo $rowclass ?>>
                         <td><input type="checkbox" name="ids[]" value="<?php echo $value['record_id'] ?>" /></td>
                         <td><input type="text" name="orders[<?php echo $value['record_id'] ?>]" maxlength="3" class="txt-sort" value="<?php echo $value['record_order'] ?>" /></td>
                         <td><a href="<?php echo Yii::app()->request->baseUrl ?>/<?php echo $this->module->getName() ?>/<?php echo $this->ID ?>/edit/id/<?php echo $value['record_id'] ?>"><?php echo $value['title'] ?></a></td>
-                        <td><?php echo date('d-m-Y', strtotime($value['start_date'])) ?></td>
-                        <td><?php echo date('d-m-Y', strtotime($value['end_date'])) ?></td>
+                        <!--td><?php echo date('d-m-Y', strtotime($value['start_date'])) ?></td>
+                        <td><?php echo date('d-m-Y', strtotime($value['end_date'])) ?></td-->
                         <td><?php echo $value['position'] ?></td>
                         <td><?php echo ($value['type']=='_bank') ? 'Trang mới' : 'Hiện tại' ?></td>
                         <td><a href="<?php echo Yii::app()->request->baseUrl ?>/<?php echo $this->module->getName() ?>/<?php echo $this->ID ?>/edit/id/<?php echo $value['record_id'] ?>" title="Chỉnh sửa">Chỉnh sửa</a></td>

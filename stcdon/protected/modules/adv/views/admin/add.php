@@ -33,7 +33,7 @@
         </div>
         <div class="clear space"></div>
 
-    <div class="col1"><?php echo $form->labelEx($model, 'start_date', array('for' => 'start_date')) ?></div>
+    <!-- div class="col1"><?php echo $form->labelEx($model, 'start_date', array('for' => 'start_date')) ?></div>
     <div class="col2">
         <?php echo $form->textField($model, 'start_date', array('class'=>'txt-very-large', 'id'=>'start_date')); ?>
         <span class="readme">(dd-mm-YYYY)</span>
@@ -45,7 +45,7 @@
         <?php echo $form->textField($model, 'end_date', array('class'=>'txt-very-large', 'id'=>'end_date')); ?>
         <span class="readme">(dd-mm-YYYY)</span>
     </div>
-    <div class="clear space"></div>
+    <div class="clear space"></div-->
 
     <div class="col1"><?php echo $form->labelEx($model, 'enable', array('for'=>get_class($model).'_enable_0')) ?></div>
         <div class="col2 radio">

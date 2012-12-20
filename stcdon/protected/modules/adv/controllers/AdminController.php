@@ -1,6 +1,7 @@
 <?php
 
 class AdminController extends BackEndController {
+
     public function actionIndex() {
         $model_class = ucfirst($this->module->id);
         $model = new $model_class();
@@ -14,19 +15,16 @@ class AdminController extends BackEndController {
     }
 
     public function actionAdd() {
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery-ui-1.8.14.custom.min.js');
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.ui.datepicker-vi.js');
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.datepicker.config.js');
-        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/jquery-ui-1.8.14.custom.css');
+//        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery-ui-1.8.14.custom.min.js');
+//        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.ui.datepicker-vi.js');
+//        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.datepicker.config.js');
+//        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/jquery-ui-1.8.14.custom.css');
 
         $model_class = ucfirst($this->module->id);
         $model = new $model_class('add');
-        //$model->setScenario('add');
-        //$model->scenario = 'register';
 
         if (isset($_POST[$model_class])) {
             $model->attributes = $_POST[$model_class];
-
             if ($model->validate()) {
                 $model->save();
                 $this->redirect(array('index'));
@@ -60,12 +58,13 @@ class AdminController extends BackEndController {
 
         $this->render('edit', array('model' => $model));
     }
-	
-	public function actionConfig() {
-		if (Yii::app()->request->getIsPostRequest()) {
+
+    public function actionConfig() {
+        if (Yii::app()->request->getIsPostRequest()) {
             Config::model()->addItem($this->module->id, Yii::app()->request);
             $this->refresh();
         }
-		$this->render('config', array('items' => Config::model()->getNameValue($this->module->id)));
-	}
+        $this->render('config', array('items' => Config::model()->getNameValue($this->module->id)));
+    }
+
 }

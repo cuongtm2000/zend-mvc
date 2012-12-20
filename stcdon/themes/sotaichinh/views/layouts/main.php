@@ -29,7 +29,6 @@
         <ul class="nav-top">
             <li><a href="/sotaichinh" title="">Trang chủ</a></li>
             <li><a href="/sotaichinh/lien-he" title="">Liên hệ</a></li>
-            <li><a href="" title="">Hộp thư điện tử</a></li>
             <li class="last-top"><a href="" title="">Liên kết website</a></li>
         </ul> <div class="clear"></div>
     </div>
@@ -62,8 +61,8 @@
 			<div class="copyright">
 				<p>&copy; 2012 Bản quyền thuộc Sở Tài Chính tỉnh Đồng Nai </p>
 				<p>Địa chỉ : Số 42 đường Cách Mạng Tháng 8, phường Quang Vinh, Thành phố Biên Hoà , tỉnh Đồng Nai </p>
-				<p>Điện thoại: 0613. 847778; Fax: 0613. 847433 - Email: <a href="mailto:stcdongnai@mof.gov.vn" >stcdongnai@mof.gov.vn</a> </p>
-				<p>&reg; Ghi rõ nguồn "Website Sở Tài Chính tỉnh Cà Mau" khi phát lại thông tin từ website này.</p>				
+				<p>Điện thoại: 0613. 847778; Fax: 0613. 847433 - Email: <a href="mailto:stc@dongnai.gov.vn" >stc@dongnai.gov.vn</a> </p>
+				<p>&reg; Ghi rõ nguồn "Website Sở Tài Chính tỉnh Đồng Nai" khi phát lại thông tin từ website này.</p>				
 			</div>
 			<?php $this->getPosition('footer');?>
 			<div class="clear"></div>

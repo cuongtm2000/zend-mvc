@@ -1,23 +1,5 @@
 <?php
 
-/**
- * This is the model class for table "hoiit_module_advs".
- *
- * The followings are the available columns in table 'hoiit_module_advs':
- * @property integer $record_id
- * @property string $title
- * @property string $pic_thumb
- * @property string $url
- * @property string $create_date
- * @property string $start_date
- * @property string $end_date
- * @property integer $hits
- * @property integer $record_order
- * @property string $position
- * @property string $type
- * @property integer $click
- * @property integer $enable
- */
 class Adv extends CActiveRecord {
     private $_model;
     private $_oldImageThumb;
@@ -54,8 +36,8 @@ class Adv extends CActiveRecord {
             array('url', 'url'),
             array('position, type', 'length', 'max' => 45),
             array('start_date, end_date', 'safe'),
-            array('start_date, end_date', 'type', 'type' => 'date', 'message' => '{attribute}: is not a date!', 'dateFormat' => 'dd-MM-yyyy'),
-            array('start_date', 'compareDateRange', 'type' => 'date', 'message' => '{attribute}: is not a date!', 'dateFormat' => 'dd-MM-yyyy'),
+            //array('start_date, end_date', 'type', 'type' => 'date', 'message' => '{attribute}: is not a date!', 'dateFormat' => 'dd-MM-yyyy'),
+           // array('start_date', 'compareDateRange', 'type' => 'date', 'message' => '{attribute}: is not a date!', 'dateFormat' => 'dd-MM-yyyy'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
             array('record_id, title, pic_thumb, url, create_date, start_date, end_date, hits, record_order, position, type, click, enable', 'safe', 'on' => 'search'),
@@ -193,7 +175,7 @@ class Adv extends CActiveRecord {
      * @return mixed
      */
     private function listItemsPosition($position) {
-        $command = Yii::app()->db->createCommand('SELECT record_id, title, pic_thumb, url, type FROM ' . $this->tableName() . ' WHERE start_date <= NOW() AND end_date >= NOW() AND position=:position AND enable=1 ORDER BY record_order DESC, create_date DESC');
+        $command = Yii::app()->db->createCommand('SELECT record_id, title, pic_thumb, url, type FROM ' . $this->tableName() . ' WHERE  position=:position AND enable=1 ORDER BY record_order DESC, create_date DESC');
         $command->bindParam(':position', $position, PDO::PARAM_STR);
         return $command->queryAll();
     }
