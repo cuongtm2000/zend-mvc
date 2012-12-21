@@ -47,7 +47,7 @@ a{text-decoration:none; color:#720E3B} a:hover{color:#000;}
 
 /*Left content*/
 #left-content{float:left;width:195px;margin-right:5px}
-.title-left{color:#fff;margin:5px 5px 0;background:#199aff url(../images/icon-nav.png) no-repeat 0 9px;padding:6px 0}
+.title-left{color:#fff;margin:5px 5px 0;background:#199aff url(../images/icon-nav.png) no-repeat 2px 9px;padding:6px 0}
 .title-left span{padding:0 3px 0 15px}
 
 .sub-cat{list-style:none;padding:0 5px 5px;margin:0}
@@ -64,10 +64,16 @@ a{text-decoration:none; color:#720E3B} a:hover{color:#000;}
 .support li {color:#477D04;font-weight:bold;line-height:1.5em;} .support li  p{margin:0}
 .support li img{margin-bottom:8px}
 
+/*Thong ke truy cap*/
+.statistics{list-style:none;margin:0;padding:0 5px 5px;border:1px solid #fff}
+.statistics li {background:url(../images/bull.jpg) no-repeat left 8px;color:#12558A; line-height:1.75em;padding-left:10px}
+
 /*bg-adv adv left*/
 .bg-adv{list-style:none;margin:0;padding:0;text-align:center}
 .bg-adv li{border:1px solid #ccc;margin-bottom:5px}
 .bg-adv li.last-item-adv{margin:0}
+
+.web-link{text-align:center;padding:5px} .web-link select{width:183px;border:1px solid #ccc}
 
 /*Right content*/
 #right-content{float:left;width:490px;border:1px solid #ccc;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px}
@@ -162,10 +168,6 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 .footer-tent{background:#002A54;padding:10px 8px}
 .copyright{float:left;width:720px;color:#fff;padding:0 0;line-height:1.5em;}
 .copyright a{color:#F5E25A; font-size:10pt}
-
-/*Thong ke truy cap*/
-.statistics{float:right;width:165px;list-style:none;margin:0;padding:5px 0;border:1px solid #fff}
-.statistics li {color:#fff; line-height:1.75em;padding-left:10px}
 
 /* Error */
 .errorSummary{border: 1px solid #FA8C1E; padding:2px 0;margin:10px 0 5px 0;border-radius:2px; -moz-border-radius: 2px; -webkit-border-radius: 2px}
