@@ -55,9 +55,18 @@ a{text-decoration:none; color:#720E3B} a:hover{color:#000;}
 .sub-cat li a{background:url(../images/bull.jpg) no-repeat left 8px;font-size:11px;color:#12558A;display:block;padding:5px 0 5px 10px}
 .sub-cat li a:hover{color:#199aff}
 
-.sub-cat li ul{list-style:none;padding:0 0 5px 10px;margin:0}
+.sub-cat li ul{list-style:none;padding:0 0 5px 10px;margin:0;background: #E1E3EC}
 .sub-cat li ul li{border:none;padding:0} 
 .sub-cat li ul li a{color:#444;background:url(../images/icon_sub.gif) no-repeat left 8px;padding-left:12px}
+/*
+ul.menu-li{list-style:none; margin:5px 0 5px 0; padding:0}
+ul.menu-li li{padding:0;cursor:pointer}
+ul.menu-li li a:hover{background: #5184D2; color:#fff; text-decoration:none;-moz-border-radius: 1px; -webkit-border-radius: 1px}
+ul.menu-li li a{padding:4px 5px;font-weight:bold; display:block; font-size: 10pt;}
+ul.menu-li li ul{margin: 0; padding: 2px 0; background: #E1E3EC}
+ul.menu-li li ul li{padding:2px 0;background: none; margin-left: 30px}
+ul.menu-li li ul li a{color:#002E5C; padding:3px 0; font-size: 9pt;}
+ul.menu-li li ul li a:hover{;-moz-border-radius: 2px; -webkit-border-radius: 2px}*/
 
 /*Ho tro ky thuat*/
 .support{list-style:none;margin:0;padding:5px 3px 0 10px;text-align:center}
