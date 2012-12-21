@@ -23,7 +23,7 @@
     </head>
     <body>
         <div id="header">
-            <div class="logo"><a href="<?php echo Yii::app()->request->baseUrl ?>/admin"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo1.png" alt="Logo" /></a> <strong>Webadmin</strong></div>
+            <div class="logo"><a href="<?php echo Yii::app()->request->baseUrl ?>/admin"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo.png" alt="Logo" /></a> <strong>Webadmin</strong></div>
             <div class="frmlogged">
                 Chào <strong><?php echo Yii::app()->user->name ?></strong>
                 <a href="<?php echo Yii::app()->homeUrl ?>" target="_blank" title="Website">Website</a>

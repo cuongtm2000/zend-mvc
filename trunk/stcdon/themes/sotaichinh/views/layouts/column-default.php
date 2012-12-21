@@ -9,12 +9,18 @@ $this->widget('zii.widgets.CBreadcrumbs', array(
 <div id="left-content">
     <div class="main-box">
         <h4 class="title-left"><span>Sở Tài chính Đồng Nai</span></h4>
-        <ul class="sub-cat frame-leftcontent">
+        <ul class="sub-cat">
             <li>
                 <a title="Tin thị trường BĐS" href="/yii/stcdon/trang-chu/tin-thi-truong-bds">Tin thị trường BĐS</a>
             </li>
             <li>
                 <a title="Tin tiêu điểm" href="/yii/stcdon/trang-chu/tin-tieu-diem">Tin tiêu điểm</a>
+				<ul>
+					<li><a title="Tin tiêu điểm" href="/yii/stcdon/trang-chu/tin-tieu-diem">Tin tiêu điểm 1</a></li>
+					<li><a title="Tin tiêu điểm" href="/yii/stcdon/trang-chu/tin-tieu-diem">Tin tiêu điểm 2</a></li>
+					<li><a title="Tin tiêu điểm" href="/yii/stcdon/trang-chu/tin-tieu-diem">Tin tiêu điểm 3</a></li>
+					<li><a title="Tin tiêu điểm" href="/yii/stcdon/trang-chu/tin-tieu-diem">Tin tiêu điểm 4</a></li>
+				</ul>
             </li>
         </ul>	
     </div>
