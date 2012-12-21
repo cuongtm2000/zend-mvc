@@ -41,9 +41,9 @@
 		<?php $this->widget('ext.Logo.LogoStatic')?>
 		<!--<img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/banner.jpg" alt="so tai chinh" />-->
 	</div>
-	<div class="line-header">
-		<?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel', array('lastItemCssClass' => 'last', 'linkLabelWrapper' => 'span' ));?><div class="clear"></div>
-	</div>
+	
+	<?php $this->widget('ext.MenuMultiLevel.MenuMultiLevel', array('lastItemCssClass' => 'last', 'linkLabelWrapper' => 'span' ));?> <div class="clear"></div>
+	
 
 	<div class="main-wrapper">    
 		<div id="content">

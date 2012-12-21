@@ -11,10 +11,10 @@
                 <?php echo CHtml::link(CHtml::image(Yii::app()->baseUrl.Yii::getPathOfAlias('filePathUpload').'/image/news/'.$value['pic_thumb'], $value->NewsLanguage[Yii::app()->language]['title']) , array($this->setUrlModule('news').'/'.$value->NewsCat->NewsCatLanguage[Yii::app()->language]['tag'].'/'.$value->NewsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$value->NewsLanguage[Yii::app()->language]['title'])); ?>
             </div>
             <?php endif?>
-            <h2 class="title-items-news">
+            <h3>
                 <?php echo CHtml::link($value->NewsLanguage[Yii::app()->language]['title'], array($this->setUrlModule('news').'/'.$value->NewsCat->NewsCatLanguage[Yii::app()->language]['tag'].'/'.$value->NewsLanguage[Yii::app()->language]['tag'].'.html'), array('title'=>$value->NewsLanguage[Yii::app()->language]['title'])); ?>
-            </h2>
-            <?php echo $value->NewsLanguage[Yii::app()->language]['preview'] ?>
+            </h3>
+            <?php echo $value->NewsLanguage[Yii::app()->language]['preview'] ?> <div class="clear"></div>
         </li>
         <?php endforeach?>
     </ul> 
@@ -22,7 +22,8 @@
 	</div>
     <script type="text/javascript">
         $(document).ready(function(){
-            $(".panel-items li:even").addClass("alt");
+            $(".panel-items li:odd").addClass("odd");
+			$(".main-list-item:last").addClass("last-list-item");
         });
     </script>
     <?php else:?>
