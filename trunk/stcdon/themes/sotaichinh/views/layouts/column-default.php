@@ -7,23 +7,44 @@ $this->widget('zii.widgets.CBreadcrumbs', array(
 ));
 ?>
 <div id="left-content">
-    <div class="main-box">
-        <h4 class="title-left"><span>Sở Tài chính Đồng Nai</span></h4>
-        <ul class="sub-cat">
-            <li>
-                <a title="Tin thị trường BĐS" href="/yii/stcdon/trang-chu/tin-thi-truong-bds">Tin thị trường BĐS</a>
-            </li>
-            <li>
-                <a title="Tin tiêu điểm" href="/yii/stcdon/trang-chu/tin-tieu-diem">Tin tiêu điểm</a>
-				<ul>
-					<li><a title="Tin tiêu điểm" href="/yii/stcdon/trang-chu/tin-tieu-diem">Tin tiêu điểm 1</a></li>
-					<li><a title="Tin tiêu điểm" href="/yii/stcdon/trang-chu/tin-tieu-diem">Tin tiêu điểm 2</a></li>
-					<li><a title="Tin tiêu điểm" href="/yii/stcdon/trang-chu/tin-tieu-diem">Tin tiêu điểm 3</a></li>
-					<li><a title="Tin tiêu điểm" href="/yii/stcdon/trang-chu/tin-tieu-diem">Tin tiêu điểm 4</a></li>
+	<div class="main-box">
+		<h4 class="title-left"><span>Sở Tài chính Đồng Nai</span></h4>
+		<ul class="sub-cat">
+			<li><a class="headerbar" href="" title="Giới thiệu">Giới thiệu</a>
+				<ul class="submenu">
+					<li><a href="/sotaichinh/admin/about">Danh sách</a></li>
 				</ul>
-            </li>
-        </ul>	
-    </div>
+			</li>
+			<li><a class="headerbar" href="" title="Thành tự và định hướng">Thành tự và định hướng</a>
+				<ul class="submenu">
+					<li><a href="/sotaichinh/admin/projects/cat">Danh mục</a></li>
+					<li><a href="/sotaichinh/admin/projects">Danh sách</a></li>
+					<li><a href="/sotaichinh/admin/projects/config">Cấu hình</a></li>
+				</ul>
+			</li>
+			<li><a class="headerbar" href="" title="Thủ tục hành chính">Thủ tục hành chính</a>
+				<ul class="submenu">
+					<li><a href="/sotaichinh/admin/procedures/cat">Danh mục</a></li>
+					<li><a href="/sotaichinh/admin/procedures">Danh sách</a></li>
+					<li><a href="/sotaichinh/admin/procedures/config">Cấu hình</a></li>
+				</ul>
+			</li>
+			<li><a class="headerbar" href="" title="Tin tức &amp; sự kiện">Tin tức &amp; sự kiện</a>
+				<ul class="submenu">
+					<li><a href="/sotaichinh/admin/news/cat">Danh mục</a></li>
+					<li><a href="/sotaichinh/admin/news">Danh sách</a></li>
+					<li><a href="/sotaichinh/admin/news/config">Cấu hình</a></li>
+				</ul>
+			</li>
+			<li><a class="headerbar" href="" title="Văn bản mới ban hành">Văn bản mới ban hành</a>
+				<ul class="submenu">
+					<li><a href="/sotaichinh/admin/jobs/cat">Danh mục</a></li>
+					<li><a href="/sotaichinh/admin/jobs">Danh sách</a></li>
+					<li><a href="/sotaichinh/admin/jobs/config">Cấu hình</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
     <?php $this->getPosition('left'); ?>
 	<div class="main-box">
 		<h4 class="title-left"><span>Liên kế website</span></h4>
