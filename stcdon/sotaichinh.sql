@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.0
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Dec 20, 2012 at 03:56 AM
--- Server version: 5.5.8
--- PHP Version: 5.3.5
+-- Host: 127.0.0.1
+-- Generation Time: Dec 21, 2012 at 09:14 AM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -412,7 +412,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_about_languages` (
 --
 
 INSERT INTO `hoiit_module_about_languages` (`record_id`, `language_id`, `title`, `content`, `tag`, `description`, `hit`, `extra_field1`, `extra_field2`) VALUES
-(2, 'vi', 'Thông điệp của chủ tịch HĐQT', '<p style="text-align:justify;"><br />Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những “Sản phẩm tốt nhất – Dịch vụ tốt nhất” , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p style="text-align:justify;">Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p style="text-align:justify;">Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p style="text-align:justify;">Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p style="text-align:justify;">Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p style="text-align:justify;">Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p style="text-align:justify;">Trân trọng,</p>\r\n<p style="text-align:right;"> <strong>Chủ Tịch Hội Đồng Quản Trị</strong></p>\r\n<p style="text-align:right;"><strong>LƯƠNG TRÍ THÌN</strong></p>', 'thong-diep-cua-chu-tich-hdqt', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những “Sản phẩm tốt nhất – Dịch vụ tốt nhất” , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.', 276, NULL, NULL),
+(2, 'vi', 'Thông điệp của chủ tịch HĐQT', '<p style="text-align:justify;"><br />Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những “Sản phẩm tốt nhất – Dịch vụ tốt nhất” , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.</p>\r\n<p style="text-align:justify;">Trải qua hàng loạt những biến động của thị trường, Đất Xanh vẫn luôn đứng vững và phát triển, khẳng định vị thế của mình trên thị trường bất động sản Việt Nam, giữ vững niềm tin trong tâm trí khách hàng và các đối tác.</p>\r\n<p style="text-align:justify;">Với chiến lược đa ngành nghề, đa sở hữu và đa quốc gia theo xu thế chung về hội nhập và cạnh tranh toàn cầu, đáp ứng tốt nhất sự thay đổi , vận hành và phát triển nền kinh tế toàn cầu. Với chiến lược này Đất Xanh chủ trương liên doanh, liên kết , hợp tác với các tổ chức Tài Chính, Ngân hàng, Công Nghệ, Nhân Lực ...nhằm tối ưu hóa sức cạnh tranh trên thị trường.</p>\r\n<p style="text-align:justify;">Với đội ngũ lãnh đạo và nhân viên trẻ, năng động, chuyên nghiệp được đào tạo bài bản và không ngừng nâng cấp và thử thách cùng sự tin tưởng của quý đối tác , quý khách hàng và các cổ đông, Chúng tôi tin chắc rằng Đất Xanh có đủ cơ sở để đạt những mục tiêu mà chiến lược đã đề ra .</p>\r\n<p style="text-align:justify;">Đất Xanh dần trở thành một trong những tập đoàn kinh tế hàng đầu Việt Nam và vươn ra thế giới trong một tương lai gần nhất .</p>\r\n<p style="text-align:justify;">Đất Xanh cam kết sẽ tiếp tục mang đến cho Qúy khách hàng những sản phẩm tốt nhất – Dịch vụ tốt nhất, Quý đối tác và Các cổ đông nhiều lợi ích hơn nữa, tiếp tục đồng hành cùng Qúy khách hàng, Quý đối tác và Các cổ đông trong những chặng đường phát triển tiếp theo .</p>\r\n<p style="text-align:justify;">Trân trọng,</p>\r\n<p style="text-align:right;"> <strong>Chủ Tịch Hội Đồng Quản Trị</strong></p>\r\n<p style="text-align:right;"><strong>LƯƠNG TRÍ THÌN</strong></p>', 'thong-diep-cua-chu-tich-hdqt', 'Ngay từ khi thành lập, Đất Xanh đã đặt ra phương châm hoạt động: luôn mang đến cho khách hàng những “Sản phẩm tốt nhất – Dịch vụ tốt nhất” , không ngừng sáng tạo, kiên định, nỗ lực trong mọi hoàn cảnh.', 301, NULL, NULL),
 (3, 'vi', 'Công ty cổ phần Đất Xanh Hoàn Cầu', '<p><strong>                                   CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN ĐẤT XANH HOÀN CẦU</strong></p>\r\n<p><span style="font-size:12pt;"><strong>C</strong></span>ông ty cổ phần đầu tư và phát triển Đất Xanh Hoàn Cầu thành lập 15/01/2010, nhằm mục tiêu kế thừa và phát triển những thành tựu mà Tổng công ty Đất Xanh đã đạt được trong suốt thời gian qua, luôn lấy lợi ích khách hàng làm mục tiêu phấn đấu và phát triển.</p>\r\n<p><img src="/sotaichinh/public/userfiles/image/109.JPG" alt="" width="640" height="480" /></p>', 'cong-ty-co-phan-dat-xanh-hoan-cau', 'Tầm nhìn, sứ mệnh, giá trị cốt lõi', 97, NULL, NULL),
 (4, 'vi', 'Lịch sử hình thành và phát triển', '<p style="text-align:justify;"><strong>Năm 2003:</strong></p>\n<p style="text-align:justify;">- Thành lập công ty TNHH Dịch Vụ và Xây dựng Địa ốc Đất Xanh với vốn điều lệ ban đầu là 0,8 tỷ đồng và 10 nhân viên.<br />- Thời gian này, Đất Xanh chuyên về hoạt động môi giới các dự án Bất động sản.</p>\n<p style="text-align:justify;"><strong>Năm 2004 :</strong></p>\n<p style="text-align:justify;">- Thành lập chi nhánh Đất Xanh đầu tiên tại Quận 7</p>\n<p style="text-align:justify;"><strong>Năm 2005:</strong></p>\n<p style="text-align:justify;">- Thành lập chi nhánh Đất Xanh tại Quận Thủ Đức<br />- Phát triển mô hình siêu thị căn hộ chung cư đầu tiên tại Việt Nam.</p>\n<p style="text-align:justify;"><strong>Năm 2006:</strong></p>\n<p style="text-align:justify;">- Thành lập chi nhánh Đất Xanh tại Mỹ Phước - Bình Dương.<br />- Hình thành phương thức bán hàng mới (phương thức bán hàng tập trung), tiên phong trong vấn đề minh bạch hóa thông tin sản phẩm Bất động sản. Các dự án do Đất Xanh phân phối gây được tiếng vang lớn trên thị trường. Đất Xanh dần chiếm lĩnh toàn bộ thị trường Bất động sản Bình Dương.</p>\n<p style="text-align:justify;"><strong>Năm 2007:</strong></p>\n<p style="text-align:justify;">- Thành lập Công ty Cổ phần Đầu tư Đất Xanh<br />- Đất Xanh Chuyển đổi thành công ty cổ phần, tiếp tục thành lập chi nhánh Đất Xanh tại Trung Tâm Bình Dương (TX Thủ Dầu Một) .<br />- Bằng kinh nghiệm vững chắc về phân phối, quản lý, phát triển dự án Bất động sản, đội ngũ nhân sự chuyên nghiệp – tài năng cùng với sự gia tăng tiềm lực về tài chính...Đất Xanh chính thức mở rộng hoạt động sang lĩnh vực đầu tư. Hàng loạt dự án qui mô lớn có diện tích hàng trăm ha với số vốn đầu tư lên đến hàng ngàn tỷ đồng do Đất Xanh làm chủ và hợp tác đầu tư như: Khu đô thị Dịch vụ - Du lịch – Sinh thái Giang Điền, Khu đô thị Thung Lũng Xanh, The Morning Star Plaza, Phú Gia Hưng Apartment, Sunview Apartmentđược khách hàng đón nhận nồng nhiệt bởi uy tín và chất lượng của sản phẩm. Hoạt động đầu tư đóng vai trò chủ lực trong chiến lược kinh doanh của Đất Xanh.</p>\n<p style="text-align:justify;"><strong>Năm 2008:</strong></p>\n<p style="text-align:justify;">- Thành lập Chi Nhánh Đất Xanh tại Đồng Nai.<br />- Phát triển thị trường BDS tại Đồng Nai và BRVT</p>\n<p style="text-align:justify;"><strong>Năm 2009:</strong></p>\n<p style="text-align:justify;">- Mua lại công Ty TNHH Hà Thuận Hùng<br />- Thành lập Công Ty Cổ Phần Đất Xanh Tây Bắc<br />- Chuyển đổi các chi nhánh lên công ty cổ phần.<br />- Ngày 22/12/2009 cổ phiếu của công ty Cổ phần Dịch vụ và Xây dựng Địa ốc Đất Xanh với mã số DXG chính thức niêm yết trên sàn giao dịch chứng khoán TP.HCM đưa công ty Đất Xanh trở thành công ty đại chúng.<br />- Tái cấu trúc mô hình Tổng công ty</p>\n<p style="text-align:justify;"><strong>Năm 2010 :</strong></p>\n<p style="text-align:justify;">- Thành lập công ty cổ phần Đất Xanh miền Bắc<br />- Thành lập công ty cổ phần BDS Long Điền<br />- Đất Xanh trở thành công ty Bất động sản có hệ thống phân phối mạnh nhất Việt Nam với gần 20 chi nhánh, công ty thành viên, công ty liên kết, công ty liên doanh, hoạt động tại tất cả các khu vực giao dịch địa ốc sôi động.<br />- Tiến hành triển khai một chương trình toàn diện về Phát triển nguồn nhân lực, cơ sở vật chất, tài chính....Mọi hoạt động của công ty đều được tin học hóa bằng các phần mềm hiện đại cho phép nhà quản lý tối ưu hoá quy trình hoạt động doanh nghiệp theo tiêu chuẩn quốc tế, tạo điều kiện thuận lợi trong giao dịch sản phẩm, tiết kiệm thời gian và chi phí cho khách hàng...<br />- Đất Xanh khởi công xây dựng Khu đô thị Thương Mai- Dịch Vụ- Du Lịch Suối Son với quy mô 117 ha tại Đồng Nai ...<br />- Mở rộng hoạt động kinh doanh sang các lĩnh vực : Xây dựng, Đầu tư tài chính, sản xuất vật liệu xây dựng..</p>\n<p style="text-align:justify;"><strong>Năm 2011:</strong></p>\n<p style="text-align:justify;">- Tái cơ cấu Đất Xanh lên mô hình tập đoàn Đất Xanh (DXG)<br />- Thành lập Công ty cổ phần Đất Xanh miền Trung<br />- Thành lập Tổng công ty Đất Xanh Đầu tư (DXI)<br />- Thành lập Tổng công ty Đất Xanh Dịch vụ (DXS)<br />- Thành lập Tổng công ty Đất Xanh Xây dựng (DXC)<br />- Tiếp tục phát huy thế mạnh trong lĩnh vực đầu tư Bất động sản, triển khai đầu tư hàng loạt các dự án ở những vị trí chiến lược trên toàn quốc (Arisen, Bình Dương Riverside, Khu đô thị Paradise, Biên Hòa Tower ...), mở rộng phạm vi địa bàn, hình thức đầu tư, liên kết với các đối tác, cung cấp những sản phẩm Bất động sản đa dạng có chất lượng cao, cùng những tiện ích hiện đại...nhằm đáp ứng kịp thời nhu cầu an cư và đầu tư của khách hàng.<br />- Phát triển thị trường BDS Australia.</p>\n<p style="text-align:justify;"><em> </em></p>\n<p style="text-align:justify;"><em>Trải qua 8 năm hình thành và phát triển, đến nay tổng số vốn kinh doanh của Đất Xanh đã đạt hơn 3.000 tỉ đồng với trên 1.500 nhân viên và hơn 20 công ty thành viên, liên kết...</em><br /><em>Bằng sự nỗ lực không ngừng, Đất Xanh không dừng lại ở những thành công đã đạt được mà tiếp tục tiến về phía trước, chinh phục những đỉnh cao mới.</em></p>', 'lich-su-hinh-thanh-va-phat-trien', 'Lịch sử hình thành và phát triển\nBằng sự nỗ lực không ngừng, Đất Xanh không dừng lại ở những thành công đã đạt được mà tiếp tục tiến về phía trước, chinh phục những đỉnh cao mới.', 31, NULL, NULL);
 
@@ -526,7 +526,7 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_session` (
 --
 
 INSERT INTO `hoiit_module_counter_session` (`session_id`, `session_time`) VALUES
-('tx0p2mgcz', 1355889496);
+('9yxipaqtb', 1356077439);
 
 -- --------------------------------------------------------
 
@@ -547,10 +547,10 @@ CREATE TABLE IF NOT EXISTS `hoiit_module_counter_value` (
 INSERT INTO `hoiit_module_counter_value` (`save_name`, `save_value`) VALUES
 ('max_visit_day', 1354579200),
 ('max_visit_value', 167),
-('time_start_today', 1355871600),
-('today_visited', 0),
-('total_visited', 1352),
-('yesterday_visited', 1);
+('time_start_today', 1356044400),
+('today_visited', 1),
+('total_visited', 1353),
+('yesterday_visited', 0);
 
 -- --------------------------------------------------------
 
@@ -1441,30 +1441,21 @@ INSERT INTO `hoiit_positions` (`pos_id`, `pos_sort`, `pos_activated`, `module_id
 ('left', 1, '1', 'products', NULL, NULL, 'list_support'),
 ('left', 2, '1', 'products', NULL, NULL, 'adv_left'),
 ('right', 3, '1', 'products', NULL, NULL, 'adv_right'),
-('footer', 1, '1', 'projects', NULL, NULL, 'counter_session'),
-('left', 2, '1', 'projects', NULL, NULL, 'menu_projects'),
-('left', 3, '1', 'projects', NULL, NULL, 'adv_left'),
 ('left', 1, '1', 'jobs', '', '', 'menu_jobs'),
-('footer', 1, '1', 'contact', '', '', 'counter_session'),
-('left', 2, '1', 'contact', '', '', 'menu_projects'),
-('footer', 1, '1', 'about', '', '', 'counter_session'),
-('left', 2, '1', 'about', '', '', 'menu_about'),
-('left', 3, '1', 'about', '', '', 'adv_left'),
-('left', 1, '1', 'default', '', '', 'menu_news'),
-('center', 2, '1', 'default', '', '', 'menu_new_index'),
-('footer', 3, '1', 'default', '', '', 'counter_session'),
-('left', 4, '1', 'default', '', '', 'adv_left'),
+('center', 1, '1', 'default', '', '', 'menu_new_index'),
+('left', 2, '1', 'default', '', '', 'menu_news'),
+('left', 3, '1', 'default', '', '', 'adv_left'),
+('left', 4, '1', 'default', '', '', 'counter_session'),
 ('right', 5, '1', 'default', '', '', 'news_new'),
-('center', 1, '1', 'news', 'index', '', 'menu_new_index'),
-('footer', 2, '1', 'news', '', '', 'counter_session'),
-('left', 3, '1', 'news', '', '', 'menu_news'),
-('left', 4, '1', 'news', '', '', 'adv_left'),
+('left', 1, '1', 'news', '', '', 'menu_news'),
+('left', 2, '1', 'news', '', '', 'adv_left'),
+('left', 1, '1', 'about', '', '', 'menu_about'),
+('left', 2, '1', 'about', '', '', 'adv_left'),
+('left', 1, '1', 'projects', '', '', 'menu_projects'),
+('left', 2, '1', 'projects', '', '', 'adv_left'),
 ('left', 1, '1', 'procedures', '', '', 'menu_procedures'),
-('footer', 2, '1', 'procedures', '', '', 'counter_session'),
-('center', 1, '1', 'document', '', '', 'news_new'),
-('center', 2, '1', 'document', '', '', 'document_new'),
-('footer', 3, '1', 'document', '', '', 'counter_session'),
-('left', 4, '1', 'document', '', '', 'adv_left');
+('left', 1, '1', 'document', '', '', 'adv_left'),
+('left', 1, '1', 'contact', '', '', 'menu_projects');
 
 -- --------------------------------------------------------
 

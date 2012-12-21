@@ -14,7 +14,7 @@ a{text-decoration:none; color:#720E3B} a:hover{color:#000;}
 .nav-top li a:hover{color:#0D4571}
 .nav-top li.last-top{margin:0} .nav-top li.last-top a{padding:0;background:none}
 
-.line-header{background:#0082E7}
+.line-header{}
 
 .top-page{text-align:center}
 #logo{}
@@ -22,12 +22,12 @@ a{text-decoration:none; color:#720E3B} a:hover{color:#000;}
 .slogan{margin-bottom:17px}
 
 /* Nav ( Menu ) */
-#nav{list-style:none;margin:0;padding:0}
-#nav li{float:left;}
-#nav li a{color:#fff;background:url(../images/bkg-pipe2.gif) no-repeat right;font-weight:bold;display:block;padding:10px 10px}
+#nav{list-style:none;float:left;width:949px;margin:0;padding:3px 0 0;background:url(../images/bg-nav.gif) repeat-x;}
+#nav li{float:left;margin-right:4px}
+#nav li a{color:#fff;font-weight:bold;display:block;padding:5px 10px}
 #nav li a:hover{color:#F5E25A}
-#nav .last a{background:none;padding:10px 0 10px 7px}
-#nav li.selected a{color:#F5E25A}
+#nav .last a{background:none;padding:5px 0 5px 7px}
+#nav li.selected a{background:#fff;color:#0C76DF;border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0}
 
 #nav li ul{display:none}
 /** Banner **/
@@ -88,6 +88,7 @@ ul.menu-li li ul li a:hover{;-moz-border-radius: 2px; -webkit-border-radius: 2px
 #right-content{float:left;width:490px;border:1px solid #ccc;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px}
 .main-right-content{padding:5px}
 .main-view,.main-list-item{border:1px solid #369BF6;border-top:none;margin-bottom:10px;padding:5px}
+.main-list-item.last-list-item{margin:0 !important}
 
 .main-view p{text-align:justify;line-height:1.6em}
 .ico-view{text-align:right;border-bottom:1px solid #9A9A9A;padding-bottom:8px} .ico-view a{color:#444;margin-left:8px;font-size:11px} .ico-view img{margin-right:3px;position:relative;top:4px}
@@ -113,9 +114,10 @@ ul.menu-li li ul li a:hover{;-moz-border-radius: 2px; -webkit-border-radius: 2px
 .panel-items{list-style: none;text-align:justify;margin:0;padding:0}
 .panel-items li{clear:both;display:block;margin-bottom:25px;color:#373737} .panel-items p{margin:0;line-height:1.3em;font-family:Arial, Helvetica, sans-serif}
 .panel-items img{float:left;border:1px solid #369BF6;width:130px;height:69px;margin:0 10px 4px 0}
-.title-items-news{margin:0 0 7px 0;font-size:10pt;font-weight:bold}
-.title-items-news a{color:#0D4571;display:block}
-.title-items-news a:hover{color:#007424}
+.panel-items li.odd{background:#f5f5f5}
+.panel-items h3{margin:0 0 7px 0;font-size:10pt;font-weight:bold}
+.panel-items h3 a{color:#0D4571;display:block}
+.panel-items h3 a:hover{color:#007424}
 
 /***  sub-new   ***/
 .sub-new{list-style:none;margin:0;padding:5px 5px}
