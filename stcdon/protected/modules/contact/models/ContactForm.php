@@ -1,6 +1,7 @@
 <?php
 
 class ContactForm extends CFormModel {
+
     public $titlevi;
     public $titleen;
     public $contentvi;
@@ -24,6 +25,13 @@ class ContactForm extends CFormModel {
 
     public function attributeLabels() {
         return array(
+            'fullname' => 'Họ và tên',
+            'company' => Yii::t('user', 'company'),
+            'address' => Yii::t('user', 'address'),
+            'email' => Yii::t('user', 'email'),
+            'phone' => Yii::t('user', 'phone'),
+            'content' => Yii::t('user', 'content'),
         );
     }
+
 }

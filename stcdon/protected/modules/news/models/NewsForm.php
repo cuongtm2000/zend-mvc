@@ -32,6 +32,19 @@ class NewsForm extends CFormModel {
 
     public function attributeLabels() {
         return array(
+            'record_id' => 'Record',
+            'previewvi' => 'Thông tin mô tả',
+            'pic_thumb' => 'Pic Thumb',
+            'pic_desc' => 'Pic Desc',
+            'record_order' => 'Record Order',
+            'hot' => 'Hot',
+            'specials' => 'Specials',
+            'field1' => 'Field1',
+            'field2' => 'Field2',
+            'field3' => 'Field3',
+            'field4' => 'Field4',
+            'enable' => 'Enable',
+            'hoiit_module_item_cat_cat_id' => 'Danh mục',
         );
     }
 }

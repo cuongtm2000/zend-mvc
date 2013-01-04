@@ -89,7 +89,7 @@ class News extends CActiveRecord {
             'field3' => 'Field3',
             'field4' => 'Field4',
             'enable' => 'Enable',
-            'hoiit_module_item_cat_cat_id' => 'Hoiit Module Item Cat Cat',
+            'hoiit_module_item_cat_cat_id' => 'Danh mục',
         );
     }
 
@@ -131,8 +131,10 @@ class News extends CActiveRecord {
 
         $this->_model = $this->find($criteria);
         if ($this->_model === null) {
+             
             throw new CHttpException(404, 'The requested page does not exist.');
         }
+        NewsLanguage::model()->updateCounters(array('hit' => 1), 'record_id=:id AND language_id=:lang', array(':id' => $this->_model->record_id, ':lang' => Yii::app()->language));
         return $this->_model;
     }
 
