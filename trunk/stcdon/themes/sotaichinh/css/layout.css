@@ -155,10 +155,10 @@ ul.paging .page a:hover, ul.paging .previous a:hover, ul.paging .first a:hover, 
 
 /** Form lien he  **/
 .form-contact{list-style:none;margin:0 0 10px 0;padding:0}
-.form-contact label{color:#555; margin:0 ;font-weight:bold;width:70px; float:left}
+.form-contact label{color:#555; margin:0 ;font-weight:bold;width:100px; float:left}
 .form-contact li{padding:4px 0; margin:0 }
 .form-contact input, .form-contact textarea{ margin:0 20px 0 0; padding:3px;width:220px; border:1px solid #0D4571;border-radius:3px;-moz-border-radius: 3px;-webkit-border-radius:3px}
-.form-contact textarea{width:350px}
+.form-contact textarea{width:300px}
 .form-contact span{color:#F00;margin:0 5px 0 0}
 .form-contact .button-submit{margin:10px 0 5px 30px;background:#0D4571;color:#fff; height:28px;text-align:center; cursor:pointer;width:70px;border:none;font-weight:bold}
 .form-contact .button-submit{margin:10px 10px 5px 0}
