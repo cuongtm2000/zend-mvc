@@ -78,8 +78,8 @@ ul.menu-li li ul li a:hover{;-moz-border-radius: 2px; -webkit-border-radius: 2px
 .statistics li {background:url(../images/bull.jpg) no-repeat left 8px;color:#12558A; line-height:1.75em;padding-left:10px}
 
 /*bg-adv adv left*/
-.bg-adv{list-style:none;margin:0;padding:0;text-align:center}
-.bg-adv li{border:1px solid #ccc;margin-bottom:5px}
+.bg-adv{list-style:none;margin:0;padding:5px 0;text-align:center}
+.bg-adv li{margin-bottom:5px}
 .bg-adv li.last-item-adv{margin:0}
 
 .web-link{text-align:center;padding:5px} .web-link select{width:183px;border:1px solid #ccc}
