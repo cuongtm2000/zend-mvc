@@ -26,7 +26,6 @@ a{text-decoration:none; color:#720E3B} a:hover{color:#000;}
 #nav li{float:left;margin-right:4px}
 #nav li a{color:#fff;font-weight:bold;display:block;padding:5px 10px}
 #nav li a:hover{color:#F5E25A}
-#nav .last a{background:none;padding:5px 0 5px 7px}
 #nav li.selected a{background:#fff;color:#0C76DF;border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0}
 
 #nav li ul{display:none}
