@@ -77,6 +77,17 @@ $this->widget('zii.widgets.CBreadcrumbs', array(
 
 <div id="column-3">
     <?php $this->getPosition('right'); ?>
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/simplyscroll.verticall.css" />
+	<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.simplyscroll.vertical.js"></script>
+	<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/verticall-config.js"></script>
+	
+	<div class="main-box">
+		<h4 class="title-list"><span>Tin vắn</span></h4>
+		<ul id="scroller" class="typical-product">
+			<li> * Ngày 04/5/2012, Đảng ủy sở Tài chính Cà Mau phối hợp với Ban Tuyên giáo Đảng ủy Dân chính đảng tổ chức Hội nghị Quán triệt Nghị quyết hội nghị Trung ương 4 khóa XI về "một số vấn đề cấp bách về xây dựng Đảng hiện nay".</li>
+			<li>   *Nhân kỷ niệm 82 năm ngày thành lập Hội Liên hiệp phụ nữ Việt Nam (20/10/1930-20/10/2012), sáng ngày 19/10/2012, Sở Tài chính Cà Mau tổ chức buổi họp mặt thân mật chị em phụ nữ là cán bộ công chức đang công tác tại cơ quan nhằm ôn lại truyền thống tốt đẹp của người phụ nữ Việt Nam.</li>
+		</ul>
+	</div>
 </div> <!--End colum3-->
 
 <?php $this->endContent(); ?>
