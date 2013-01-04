@@ -27,10 +27,10 @@
             <div class="frmlogged">
                 Chào <strong><?php echo Yii::app()->user->name ?></strong>
                 <a href="<?php echo Yii::app()->homeUrl ?>" target="_blank" title="Website">Website</a>
-                <a href="#" title="Hộp thư">Hộp thư (0)</a>
+                <!-- a href="#" title="Hộp thư">Hộp thư (0)</a -->
                 <a href="<?php echo Yii::app()->request->baseUrl ?>/admin/logout" title="Thoát">Thoát</a>
             </div>
-            <div class="lang"><a href="<?php echo Yii::app()->request->baseUrl ?>/admin" title="Viet nam"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/vn.gif" alt="Viet nam" /></a> <a href="<?php echo Yii::app()->request->baseUrl ?>/en/admin" title="English"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/en.gif" alt="English" /></a></div>
+            <div class="lang"><a href="<?php echo Yii::app()->request->baseUrl ?>/admin" title="Viet nam"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/vn.gif" alt="Viet nam" /></a> <!-- a href="<?php echo Yii::app()->request->baseUrl ?>/en/admin" title="English"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/en.gif" alt="English" /></a --></div>
         </div>
         <?php
         $this->widget('zii.widgets.CMenu', array(
@@ -52,7 +52,7 @@
         ?> <div class="clear"></div>
         <div class="paddinglr10">
             <div class="menu-bar">
-<?php if ($this->id == 'account'): ?>
+                <?php if ($this->id == 'account'): ?>
                     <div class="catmenu">
                         <ul class="menu-li">
                             <li><a class="headerbar" href="#">Tài khoản của tôi</a>
@@ -63,8 +63,8 @@
                             </li>
                         </ul>
                     </div>
-<?php endif; ?>
-<?php if ($this->id == 'configs'): ?>
+                <?php endif; ?>
+                <?php if ($this->id == 'configs'): ?>
                     <div class="catmenu">
                         <ul class="menu-li">
                             <li><a class="headerbar" href="#">Cài đặt &amp; cấu hình</a>
@@ -78,24 +78,27 @@
                             </li>
                         </ul>
                     </div>
-                        <?php endif; ?>
+                <?php endif; ?>
                 <div class="catmenu">
                     <ul class="menu-li">
                         <?php foreach ($this->listModule as $value): ?>
-                            <?php $lock=array('products','support'); ?>
-                            <?php if (!in_array($value['module_id'],$lock) && ($value['module_id'] != 'code')): ?>
+                            <?php $lock = array('products', 'support', 'procedures', 'projects', 'jobs'); ?>
+                            <?php if (!in_array($value['module_id'], $lock) && ($value['module_id'] != 'code')): ?>
                                 <li><a class="headerbar" href="" title="<?php echo CHtml::encode($this->lang[$value['module_id']]) ?>"><?php echo CHtml::encode($this->lang[$value['module_id']]) ?></a>
                                     <ul class="submenu">
-                                        <?php $urls = explode('|', $value['module_url']);
+                                        <?php
+                                        $urls = explode('|', $value['module_url']);
                                         $title = explode('|', $value['module_title']);
                                         $i = 0;
-                                        foreach ($urls as $url): ?>
+                                        foreach ($urls as $url):
+                                            ?>
                                             <li><a href="<?php echo Yii::app()->request->baseUrl . '/admin/' . $url ?>"><?php echo $title[$i] ?></a></li>
             <?php $i++;
-        endforeach; ?>
+        endforeach;
+        ?>
                                     </ul>
                                 </li>
-                    <?php endif ?>
+    <?php endif ?>
 <?php endforeach ?>
                     </ul>
                 </div>

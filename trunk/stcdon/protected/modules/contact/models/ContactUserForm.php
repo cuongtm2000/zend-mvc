@@ -17,15 +17,15 @@ class ContactUserForm extends CFormModel {
         );
     }
 
-    /*public function attributeLabels() {
+    public function attributeLabels() {
         return array(
-            'fullname' => Yii::t('user', 'fullname'),
-            'company' => Yii::t('user', 'company'),
-            'address' => Yii::t('user', 'address'),
-            'email' => Yii::t('user', 'email'),
-            'phone' => Yii::t('user', 'phone'),
-            'content' => Yii::t('user', 'content'),
+            'fullname' => "Họ và tên",
+            'company' => 'Tổ chức/đơn vị',
+            'address' =>'Địa chỉ',
+            'email' => 'Email',
+            'phone' => 'Số ĐT',
+            'content' =>'Nội dung',
         );
-    }*/
+    }
 
 }

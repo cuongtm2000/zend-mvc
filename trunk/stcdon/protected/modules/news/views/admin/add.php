@@ -59,7 +59,7 @@
 					 //theme_advanced_statusbar_location : "bottom",
 					 theme_advanced_resizing : true,
 					 width : "100%",
-					 height: "300"
+					 height: "150"
 				 });
 			</script>
 		</div>
