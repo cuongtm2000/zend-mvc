@@ -100,7 +100,14 @@ class Lands extends CActiveRecord {
         if (isset($data['types']))
             $criteria->compare('hoiit_module_item_type_type_id', $data['types']);
         //var_dump($criteria);
-        return $this->findAll($criteria);
+        //return $this->findAll($criteria);
+		$count = $this->count($criteria);
+        // elements per page
+        $pages = new CPagination($count);
+        $pages->pageSize = 1;
+        $pages->applyLimit($criteria);
+
+        return array('models' => $this->findAll($criteria), 'pages' => $pages);
     }
 
     public function searchLands() {
